@@ -1,5 +1,5 @@
 ---
-title: A Gentle Review to MUSIC 270
+title: MUSIC 270 - Music Theory 1
 layout: toc
 parent: Fall 2019
 ---
