@@ -1,7 +1,7 @@
 remote_theme: pmarsceill/just-the-docs
 
 
-title: Markdown Lecture Notes
+title: MD Lecture Notes
 baseurl: "/mdf"
 url: "https://notes.sibeliusp.com"
 permalink: pretty
