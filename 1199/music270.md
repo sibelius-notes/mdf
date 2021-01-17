@@ -4,24 +4,8 @@ layout: toc
 parent: Fall 2019
 ---
 
-These notes are created during Fall 2019. Here is a VexTab example:
+Note that this page has removed all vextab scores. Check [here](https://notes.sibeliusp.com/markdown/1199/music270_review/) for the one with vextab.
 
-<div class="vex-tabdiv"
-    width=680 scale=1.0
-    editor_width=680 editor_height=330>options space=20
-    tabstave
-    notation=true
-    key=A time=4/4
-
-    notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
-    notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :h p5/4
-    text :w, |#segno, ,|, :hd, , #tr
-
-
-    options space=25
-</div>
-
-which is extremely fantastic for rendering music score in html.
 
 # Musical Density: Triads, Seventh Chords, and Texture
 
@@ -357,28 +341,6 @@ E: Doninant
 A: Submediant
 B: Leading Note
 ```
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w
-    notes C/4
-    notes D/4
-    notes E/4
-    notes F/4
-    notes G/4
-    notes A/4
-    notes B/4
-    notes C/5
-
-    text :w,.-1, Tonic,Supertonic,Mediant,Subdominant,Dominant,Submediant,Leading tone
-
-</div>
-
 **Degrees of the minor scale**:
 
 ```
@@ -390,28 +352,6 @@ E: Dominant
 F: Submediant
 G: Subtonic
 ```
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w
-    notes A/4
-    notes B/4
-    notes C/5
-    notes D/5
-    notes E/5
-    notes F/5
-    notes G/5
-    notes A/5    
-
-    text :w,.-1, Tonic,Supertonic,Mediant,Subdominant,Dominant,Submediant,Subtonic
-
-</div>
 
 
 Alternations to the minor mode: melodic/harmonic minor
@@ -512,292 +452,20 @@ For the present, we will limit our vocabulary to twelve **melodic figures** comm
 
 **Neighbor motion** and **prime embelishment** elaborate the interval of a unison (prime).
 
-Neighbor motion (N):
 
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w A-A/4 |
-    notes :h A-G-A/4 | A-B-A/4
-
-</div>
-
-Prime embellishment (PEM):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w A-A/4 |
-    notes :h A/4-C/5-A/4 | A-F-A/4
-
-
-</div>
 
 The **échappée**, the ***skip-step***, and the **doubleskip** elaborate the interval of a second.
 
-Échappée (E):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w C/5-B/4 |
-    notes :h C/5-D/5-B/4 =|| :w B/4-C/5 | :h B/4-A/4-C/5 =||
-
-
-</div>
-
-Skip-step (SS):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w C/5-B/4 |
-    notes :h C/5-A/4-B/4 =|| :w B/4-C/5 | :h B/4-D/5-C/5 =||
-
-
-</div>
-
-Doubleskip (DS):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w C/5-B/4 |
-    notes :h C/5-G/4-B/4 | C/5-E/5-B/4 =|| :w B/4-C/5 | :h B/4-E/5-C/5 | B-G/4-C/5 =||
-
-
-</div>
-
 **Passing motion**, the **skip-step**, and the **broken chord** elaborate the interval of a third.
-
-Passing (P):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w A/4-C/5 |
-    notes :h A/4-B/4-C/5 =|| :w C/5-A/4 | :h C/5-B/4-A/4 =||
-
-
-</div>
-
-Skip-step (SS):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w A/4-C/5 |
-    notes :h A/4-D/5-C/5 =|| :w C/5-A/4 | :h C/5-B/4-A/4 =||
-
-
-</div>
-
-Broken chord (BC):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w A/4-C/5 |
-    notes :h A/4-E/5-C/5 | A-F/4-C/5 =|| :w C/5-A/4 | :h C/5-F/4-A/4 | C-E/5-A/4 =||
-
-
-</div>
-
 
 The **cambiata**, **incomplete passing motion**, the **skip-step**, and the **broken chord** elaborate the interval of a fourth.
 
-Cambiata (C):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w D/5-A/4 |
-    notes :h D/5-C/5-A/4 =|| :w A/4-D/5 | :h A/5-B/4-D/4 =||
-
-
-</div>
-
-Incomplete passing (IP):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w D/5-A/4 |
-    notes :h D/5-B/4-A/4 =|| :w A/4-D/5 | :h A/4-C/5-D/5 =||
-
-
-</div>
-
-Skip-step (SS):
-
-
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w D/5-A/4 |
-    notes :h D/5-G/4-A/4 =|| :w A/4-D/5 | :h A/4-E/5-D/5 =||
-
-
-</div>
-
-Broken chord (BC):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w D/5-A/4 |
-    notes :h D/5-F/4-A/4 | D/5-F/5-A/4 =|| :w A/4-D/5 | :h A/4-F/5-D/5 | A/4-F/4-D/5 =||
-
-
-</div>
 
 **Arpeggigation** and the **skip-step** elaborate the interval of a fifth. **Arpeggigation** elaborates the interval of a sixth.
 
-Two additional figures available to our paraphrasing are the **anticipation** and the **repetition**. Their usefulness in the elementary rhythm of duple paraphrase is slight because they do not enhance the melody's contour. We will limit the repetition to one or two occurences within the line and hold the anticipation to a possible apperance at the final cadence.
-
-Arpeggigation (ARP):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w G/4-D/5 |
-    notes :h G/4-B/4-D/5 =|| :w D/5-G/4 | :h D/5-B/4-G/4 =||
+Two additional figures available to our paraphrasing are the **anticipation** and the **repetition**. Their usefulness in the elementary rhythm of duple paraphrase is slight because they do not enhance the melody's contour. We will limit the repetition to one or two occurrences within the line and hold the anticipation to a possible apperance at the final cadence.
 
 
-</div>
-
-Skip-step (SS):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w G/4-D/5 |
-    notes :h G/4-E/5-D/5 =|| :w D/5-G/4 | :h D/5-F/4-G/4 =||
-
-
-</div>
-
-Arpeggigation (ARP):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w E/5-G/4 |
-    notes :h E/5-C/5-G/4 | E/5-B/4-G/4 =|| :w G/4-E/5 | :h G/4-B/4-E/5 | G/4-C/5-E/5 =||
-
-
-</div>
-
-
-Anticipation (ANT):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :h A/4 :w G/4 =||
-    notes :h A/4 G/4 | :w G/4 =|=
-
-
-</div>
-
-Direct-note repetition (REP):
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-
-    notes :w D/5  C/5 |
-    notes :h D-D-C/5
-
-
-</div>
-
-Note (from 2020-Nov-28): I made several typos above. Below I used trinket.io to make it playable and hopefully error-free.
 
 
 <iframe src="https://trinket.io/embed/music/5d98da7b36" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -824,101 +492,13 @@ The half rest in duple paraphrase acts as an emphatic punctuation of definite du
 
 ### Phrase Cadences
 
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true
-    tablature=false
-    clef=alto
-
-    notes :w D/4-C/4-A/3-B/3-C/4-E/4
-
-</div>
 
 
-Four phrase cadences are available to duple paraphrase. A phrase can close on an undecorated cantus tone by notating it as a whole note followed by a luftpause,
+Four phrase cadences are available to duple paraphrase. A phrase can close on an undecorated cantus tone by notating it as a whole note followed by a luftpause.
 
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true    
-    time=2/2
-    tablature=false
-    clef=alto
-
-    notes :h D/4-E/4 | C/4-B/3 | A/3-G/3 | B/3-D/4 |
-    notes :w C/4 |
-    notes :h E-G/4 |
-    text :w,.3,.font=courier-24-, , , , , , &#8217;
-
-
-
-</div>
-
-as a half note followed by a half rest,
-
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true    
-    time=2/2
-    tablature=false
-    clef=alto
-
-    notes :h D/4-E/4 | C/4-B/3 | A/3-G/3 | B/3-D/4 |
-    notes :h C/4 ## |
-    notes :h E-G/4 |
-
-</div>
-
-
-and as a whole note followed by a half rest.
-
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true    
-    time=2/2
-    tablature=false
-    clef=alto
-
-    notes :h D/4-E/4 | C/4-B/3 | A/3-G/3 | B/3-D/4 |
-    notes :w C/4 |
-    notes :h ## E/4 |
-
-
-</div>
 
 Any melodic figure can be "broken" with a luftpause to create phrase closure at mid-measure.
 
-<div class="vex-tabdiv">
-
-options space=20  width=750
-
-    tabstave
-    notation=true    
-    time=2/2
-    tablature=false
-    clef=alto
-
-    notes :h D/4-E/4 | C/4-B/3 | A/3-G/3 | B/3-D/4 |
-    notes :h C/4 F/4 |
-    notes :h E-G/4 |
-    text :w,.3,.font=courier-24-, , , ,&#x2063;
-    text :h,.3,.font=courier-24-, &#x2063;, &#8217;
-
-
-
-</div>
 
 
 When either of these last two cadence patterns occurs, the succeeding phrase will open on a measure's second beat. This introductory tone is called an **[anacrusis](http://terms.naer.edu.tw/detail/1293487/?index=3)**, a Greek word meaning "to push back" -- that is, the opening of the succeeding phrase is "pushed back" to the preceding half note.
