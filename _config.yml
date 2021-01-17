@@ -1,1 +1,13 @@
-theme: jekyll-theme-cayman
+remote_theme: pmarsceill/just-the-docs
+
+
+title: Markdown Lecture Notes
+baseurl: "/mdf"
+url: "https://notes.sibeliusp.com"
+permalink: pretty
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+color_scheme: loo
+footer_content: "Copyright &copy; 2017-2021 Sibelius Peng."
