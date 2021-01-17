@@ -14,6 +14,7 @@ And I’ll see you again in Part B.
 ## Part B: Our First Scene
 This is the music written specifically for the scene. The film has already been chopped and the composer was writing music while watching the film on fold. The composer has synchronized the music they have written to what goes on within the scene. Watch the scene with the sound off. Then listen to the music with the sound on. VIDEO EXAMPLE 1-Apollo 13.
 
+{% include video.html style="true" path="/vid/Video Example 1-Apollo 13.mp4" %}
 
 The first part shows the wife of one of the astronauts in a hotel. She is nervous cause her husband is going to the moon. She's scared that he's never come back. While she's in the shower, the wedding ring slides off her finger and goes down the drain. It manifests the wife's fear of losing her husband. No music during shower scene. Why?
 - Small, intimate scene. Music would risk over-dramatizing.
@@ -128,6 +129,7 @@ Most film music will fall somewhere between two extremes:
 -	On-screen action, framing, editing, sound design.
 
 Example:  The Return of the King (2004) Composer: Howard Shore   
+{% include video.html path="/vid/LOTR.mp4" %}
 
 **Harmony**: vertically
 -	Difficult to describe without musical training.
@@ -324,6 +326,7 @@ The Jazz Singer (1927), first talking  motion picture.
 - primarily silent, with several minutes of synchronized sound through Vitaphone.
 - most of the score is compiled or adapted.
 
+{% include video.html path="/vid/The Jazz Singer.mp4" %}
 
 Quite astonishing for the audience at that time. Big gap before the dialogue, and after, which is because the projectionist needs to switch the records. Also notice how stilted the dialogue is. No script writers, the actor is improvising, sound films do not exist. Barely no camera motion: cameras were noisy. Also, the actor cannot move very far because of the position of the mic. Moreover, the actor is not really playing the piano.
 
@@ -373,16 +376,19 @@ The turning point (1933): King Kong. Selling point, on the highest building. Ear
 
 **VE4 King Kong – The Fog**
 
+{% include video.html path="/vid/King Kong-The Fog.mp4" %}
 
 between consonant and dissonant, mystery. Music used to indicate a transition from the normal world to the realm of the supernatural. Arrives at island, music shifts: view of the beach – Kong’s theme in an early distant form – lack of distinction between diegetic and none-diegetic music.
 
 **VE5 King Kong – The Dance**
 
+{% include video.html path="/vid/King Kong - The Dance.mp4" %}
 
 Music for the ceremonial dance uses a full orchestra, yet only drums are visible on film. Broadway influence to Max Steiner in this scene. Also, we see “[mickey mousing](https://en.wikipedia.org/wiki/Mickey_Mousing)” with the chief’s walk down the steps, tuba and low basses perfectly synchronized.
 
 Another example of Max Steiner. **VE6: The Informer – Opening**
 
+{% include video.html path="/vid/The Informer - Opening.mp4" %}
 
 Folk-influenced theme for Gypo. Jazz-Influenced theme for Katie. Musical quotes – ‘Rule Britannia’. Won Academy award for “Best Original Score”.
 
