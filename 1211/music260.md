@@ -1,6 +1,6 @@
 ---
 title: MUSIC 260 - Symphony
-layout: default
+layout: toc
 parent: Winter 2021
 ---
 To be updated...

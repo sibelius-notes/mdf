@@ -1,6 +1,6 @@
 ---
 title: MUSIC 255 - Romantic
-layout: default
+layout: toc
 parent: Fall 2020
 ---
 # Overview

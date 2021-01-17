@@ -1,6 +1,6 @@
 ---
 title: MUSIC 261 - Opera
-layout: default
+layout: toc
 parent: Fall 2020
 ---
 To be updated...

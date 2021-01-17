@@ -1,6 +1,6 @@
 ---
 title: MUSIC 254 - Baroque and Classical music
-layout: default
+layout: toc
 parent: Winter 2020
 ---
 # Baroque Era

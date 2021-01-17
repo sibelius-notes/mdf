@@ -1,6 +1,6 @@
 ---
 title: MUSIC 111 - Fundamentals of Music Theory
-layout: default
+layout: toc
 parent: Fall 2020
 ---
 # Week 1

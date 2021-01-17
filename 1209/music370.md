@@ -1,6 +1,6 @@
 ---
 title: MUSIC 370 - Music Theory 3
-layout: default
+layout: toc
 parent: Fall 2020
 ---
 The notes below are quite incomplete...

@@ -1,6 +1,6 @@
 ---
 title: MUSIC 140 - Popular music
-layout: default
+layout: toc
 parent: Spring 2020
 ---
 # Lecture 1

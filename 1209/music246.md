@@ -1,6 +1,6 @@
 ---
 title: MUSIC 246 - Music in films
-layout: default
+layout: toc
 parent: Fall 2020
 ---
 # Lecture 1
