@@ -10,6 +10,7 @@ From [baidu](https://baike.baidu.com/item/%E7%9F%BF%E5%BA%8A):
 
 From [wiki](https://en.wikipedia.org/wiki/Pyrite):
 > The mineral pyrite  or iron pyrite, also known as fool's gold, is an iron sulfide with the chemical formula FeS2 (iron(II) disulfide). Pyrite is considered the most common of the sulfide minerals.
+
 # Lec 2
 
 ## Resources
