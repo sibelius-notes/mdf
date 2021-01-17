@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
+<p align="center"><span>{{ page.title }}</span></p>
 {%- assign words = content | number_of_words -%}
 {%- if words >= 360 -%}
-<p><em>Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
+<p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
 {%- endif -%}
-{{ content }}
 
-<div id="side-toc-title">On this page:</div>
 {%- include tocc.html html=content toc_min=1 toc_max=2 -%}
+
+<hr>
+
+{{ content }}
