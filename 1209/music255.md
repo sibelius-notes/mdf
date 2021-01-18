@@ -1,5 +1,5 @@
 ---
-title: MUSIC 255 - Romantic
+title: MUSIC 255 - The Romantic Century
 layout: toc
 parent: Fall 2020
 ---
