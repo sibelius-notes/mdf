@@ -345,10 +345,7 @@ Let's talk about how the change to sound alters the approach to make motion pict
     - Small number of the 20,000 theaters equipped for sound.
     - end of 1929 almost 1000 theatres equipped for sound.
     - by 1935 the transition is complete.
-    - See examples from *Singin' In The Rain* which describes issues with filming and exhibition.
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/OTFCctdiS04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YMzV96LV6Cc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    - See examples from *Singin' In The Rain* which describes issues with filming and exhibition. [(3/8) from Movieclips](https://youtu.be/OTFCctdiS04), [(4/8)](https://youtu.be/YMzV96LV6Cc)
 4. **Industry Reorganization**. The costs become higher for sound films so film industries are looking for ways to save money: All aspects of production are departmentalized – directors, actors, and musicians are put under contract – Leads to the STUDIO SYSTEM. Cost and control. Conglomeration: larger companies buy smaller. *The "Big" Five*: MGM, Paramount, Warner Brothers, 20<sup>th</sup> Century Fox (1935), and RKO. *The “Little” 3* – Universal, Colombia, and United Artists. Both of them have bought everything they need to produce a film, but the "big" five owns distribution network and exhibition locations. Issue: monopoly when controlling all three: production, distribution, exhibition.
 
 ## Max Steiner
