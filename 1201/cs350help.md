@@ -4,6 +4,8 @@ layout: toc
 parent: Winter 2020
 ---
 ... Also, check my [miscellaneous notes](../cs350/)
+
+Note that the assignment questions might change near future. So this help page will not update accordingly for obvious reasons...
 # Basics
 ## Installing and Configuring OS/161
 From [*Installing OS/161 in the student.cs Computing Environment*](https://www.student.cs.uwaterloo.ca/~cs350/common/Install161.html).
