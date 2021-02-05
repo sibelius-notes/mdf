@@ -2,6 +2,7 @@
 title: MUSIC 370 - Music Theory 3
 layout: toc
 parent: Fall 2020
+prof: Karen Sunabacka
 ---
 The notes below are quite incomplete...
 # Week 1

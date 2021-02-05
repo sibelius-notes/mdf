@@ -2,6 +2,7 @@
 title: MUSIC 111 - Fundamentals of Music Theory
 layout: toc
 parent: Fall 2020
+prof: Karen Sunabacka
 ---
 # Week 1
 Notating Rhythm

@@ -2,6 +2,7 @@
 title: MUSIC 332 - Aesthetics of Music
 layout: toc
 parent: Winter 2021
+prof: Laura Gray
 ---
 # What is the "Aesthetics of Music"?
 ## What is aesthetics?

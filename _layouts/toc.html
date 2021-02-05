@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<p align="center"><span style="font-family: 'Caveat', cursive;">{{ page.title }}</span></p>
+<p align="center"><span style="font-size: 150%;font-family: 'Caveat', cursive;">{{ page.title }}</span></p>
+{%- if {{ page.prof }} -%}<p align="center"><span style="font-family: 'Caveat', cursive;">{{ page.prof }}</span></p>{%- endif -%}
 {%- assign words = content | number_of_words -%}
 {%- if words >= 180 -%}
 <p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>

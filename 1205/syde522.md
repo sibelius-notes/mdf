@@ -2,6 +2,7 @@
 title: SYDE 522 - Machine Intelligence
 layout: toc
 parent: Spring 2020
+prof: Hamid R. Tizhoosh
 ---
 # Lecture 1
 Objectives of this course:

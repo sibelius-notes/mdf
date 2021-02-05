@@ -2,6 +2,7 @@
 title: CS 350 - Operating Systems (help page)
 layout: toc
 parent: Winter 2020
+prof: Lesley Istead
 ---
 ... Also, check my [miscellaneous notes](../cs350/)
 

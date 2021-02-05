@@ -2,6 +2,7 @@
 title: MUSIC 256 - Music Since 1900
 layout: toc
 parent: Winter 2021
+prof: Laura Gray
 ---
 # The Era & its Music
 Music Since 1900. What is this era?

@@ -2,6 +2,7 @@
 title: MUSIC 254 - Baroque and Classical music
 layout: toc
 parent: Winter 2020
+prof: Laura Gray
 ---
 # Baroque Era
 * end of 16c to mid 18c

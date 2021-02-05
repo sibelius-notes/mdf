@@ -2,6 +2,7 @@
 title: MUSIC 260 - Symphony
 layout: toc
 parent: Winter 2021
+prof: Laura Gray
 ---
 # What is a Symphony Anyway?
 Langford, A History of the Symphony, p. 238: A basic definition:

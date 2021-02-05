@@ -2,6 +2,7 @@
 title: MUSIC 261 - Opera
 layout: toc
 parent: Fall 2020
+prof: Laura Gray
 ---
 # Elements of Opera
 ## What is Opera?
@@ -37,7 +38,7 @@ costumes & action
 operas start with words before one note is
 written:
 
-**Libretto**: (“little book”): 
+**Libretto**: (“little book”):
 - The words or text of an opera
 - dramatic text + scene instructions for an opera
 - Normally written by someone else (librettist) to be
@@ -60,7 +61,7 @@ character
 - Features repetition of text & music
     - usually in patterned form
 
-### Examples of arias 
+### Examples of arias
 Monteverdi, L’Orfeo (1607), “Vi Ricorda”:
 - Orpheus expressing his happiness thanks to his bride, Eurydice
 - Strophic: same music with different words (verses)
@@ -77,7 +78,7 @@ Mozart, Don Giovanni (1787), “Batti, Batti” (Zerlina)
 - Flowing cello accompaniment
 - Zerlina switches to a meter in 3s at the end (lilting dance rhythm)
 
-## Recitative 
+## Recitative
 Recitative: reciting style, sung declamation
 - Halfway between singing and speaking
 - fits natural accents, rhythm, pace & inflections of words

@@ -2,6 +2,7 @@
 title: MUSIC 371 - Music Theory 4
 layout: toc
 parent: Winter 2021
+prof: Karen Sunabacka
 ---
 # The Twilight of the Tonal System
 The end of Tonality - da da daaaaa.

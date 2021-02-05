@@ -2,6 +2,7 @@
 title: MUSIC 110 - Music in Cultural Contexts
 layout: toc
 parent: Winter 2020
+prof: Maisie Sum, Kate Steiner
 ---
 # Lec 1 - Jan 7th
 Introductions

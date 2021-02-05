@@ -2,8 +2,8 @@
 title: HLTH 344 - Qualitative Methods for Health Research
 layout: toc
 parent: Winter 2020
+prof: Mark S. Dolson
 ---
-Taught by [Mark S. Dolson](https://uwaterloo.ca/anthropology/people-profiles/mark-s-dolson).
 
 # Lec 1
 

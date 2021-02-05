@@ -2,6 +2,7 @@
 title: MUSIC 246 - Music in films
 layout: toc
 parent: Fall 2020
+prof: Simon Wood
 ---
 # Lecture 1
 ## Part A: Welcome To The Show!

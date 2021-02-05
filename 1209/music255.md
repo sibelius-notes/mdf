@@ -2,6 +2,7 @@
 title: MUSIC 255 - The Romantic Century
 layout: toc
 parent: Fall 2020
+prof: Laura Gray
 ---
 # Overview
 The Romantic Period

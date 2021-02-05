@@ -2,6 +2,7 @@
 title: EASIA 202R - Chinese Culture and Society
 layout: toc
 parent: Spring 2018
+prof: Huaping Zhuang
 ---
 # Quick Facts
 (Pictures not included for this section)

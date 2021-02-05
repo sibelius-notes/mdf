@@ -2,6 +2,7 @@
 title: MUSIC 271 - Music Theory 2
 layout: toc
 parent: Winter 2020
+prof: Karen Sunabacka
 ---
 # § 12: Tonic Confirmation
 Review from [music 270](/music/270).

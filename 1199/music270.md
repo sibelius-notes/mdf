@@ -2,9 +2,10 @@
 title: MUSIC 270 - Music Theory 1
 layout: toc
 parent: Fall 2019
+prof: Terry Paynter
 ---
 
-Note that this page has removed all vextab scores. Check [here](https://notes.sibeliusp.com/markdown/1199/music270_review/) for the one with vextab.
+Note that this page has removed all vextab scores due to rendering issues... This set of notes is meant to review the material and it is not taken during the class.
 
 
 # Musical Density: Triads, Seventh Chords, and Texture

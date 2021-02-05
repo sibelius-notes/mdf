@@ -2,8 +2,8 @@
 title: EARTH 471 - Mineral Deposits
 layout: toc
 parent: Winter 2020
+prof: Chris Yakymchuk
 ---
-Taught by [Chris Yakymchuk](https://uwaterloo.ca/earth-environmental-sciences/people-profiles/chris-yakymchuk).
 
 From [baidu](https://baike.baidu.com/item/%E7%9F%BF%E5%BA%8A):
 > 矿床(mineral deposit)是指在地壳中由地质作用形成的，其所含有用矿物资源的数量和质量，在一定的经济技术条件下能被开采利用的综合地质体。一个矿床至少由一个矿体组成，也可以由两个或多个，甚至十几个乃至上百个矿体组成。由地质作用形成的、有开采利用价值的有用矿物的聚集地。包括地质的和经济的双重含义。矿床是地质作用的产物，但又与一般的岩石不同，它具有经济价值。矿床的概念随经济技术的发展而变化。19世纪时，含铜高于0.5%的铜矿床才有开采价值，随着科技进步和采矿加工成本的降低，含铜0.4%的铜矿床已被大量开采。

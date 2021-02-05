@@ -2,6 +2,7 @@
 title: MUSIC 140 - Popular music
 layout: toc
 parent: Spring 2020
+prof: Simon Wood
 ---
 # Lecture 1
 ## Part A
