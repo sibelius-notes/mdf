@@ -1,5 +1,5 @@
 ---
-title: NTEG 251 - Creative Thinking
+title: INTEG 251 - Creative Thinking
 layout: toc
 parent: Fall 2020
 prof: Vanessa Schweizer
