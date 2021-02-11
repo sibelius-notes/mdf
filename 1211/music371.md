@@ -41,39 +41,14 @@ Some random excerpts from the article...
 This entire field has sometimes been called *Musikwissenschaft*, the science of music, or musicology.
 
 ## 10. The Baroque period.
-In the first half of the 17th century musical practice caught up with the aesthetic ideals proclaimed in the second half of the previous century and practical theory caught up with improvised practice.
-
-unprepared or improperly prepared suspensions, unprepared diminished 5ths and 7ths, false relations, difficult melodic intervals, incorrect part-writing after a flat or sharp, abuse of note-against-note chordal style, and other departures from the learned manner of writing counterpoint.
-
-prima pratica continued to be applied in composition.
-
-Another improvisatory practice that was annexed by written theory is that of florid elaboration, embellishment and variation on a written line or harmonic scheme.
-
-Accompanying from a bass was also probably an unwritten practice for many years before a basso continuo with figures was first printed in the score of Emilio de’ Cavalieri’s Rappresentatione di Anima, et di Corpo (1600). Thoroughbass theory.
 
 Rameau marked a return to naturalism and rationalism after the pragmatic theory of the thoroughbass. By arithmetic manipulation of the ratios representing the primary division of the string, he was able to generate the primary major triad.
 
 ## 11. The Classical–Romantic period.
 Johann Philip Kirnberger (Die Kunst des reinen Satzes in der Musick, 1774–9) accepted many of Rameau’s ideas, such as inversion, but he gave more importance to melodic functions.
 
-François-Joseph Fétis retained the main lines of Rameau’s method, which he consecrated as ‘the laws of tonality’. But he rejected mathematical and acoustical foundations for harmony, convinced by his study of history that the rules of composition were dictated not by nature but by feelings, needs and tastes of men in a given time and place.
-
-Another theorist who put aside natural explanations was Moritz Hauptmann in Die Natur der Harmonik und Metrik (1853). Disturbed by explanations founded on the harmonic series because of its potentially infinite and all-inclusive nature – containing as it does both dissonant and consonant members – he preferred to construct a purely autonomous musical system by means of Hegelian logic.
-
-A return to natural theory is marked by Hermann von Helmholtz in *Die Lehre von den Tonempfindungen als physiologische Grundlage für die Theorie der Musik* (1863), which laid the foundation for modern physical and physiological acoustics.
-
-The physicist Arthur von Oettingen (Harmoniesystem in dualer Entwicklung, 1866), influenced by both Hauptmann and Helmholtz, sought a theoretical system in which the minor chord was granted the same status as the major chord rather than deriving from higher overtones or arising as a variant of the major chord or being explained in some other non-systematic way. His new system, relying on acoustics and mathematics, was founded on the opposition of ‘being’ and ‘having’.
-
-In appropriating Oettingen’s dual system, Hugo Riemann revisited a notion briefly considered but rejected by Rameau (1737).
-In *Musikalische Syntaxis* (1877) he took the mirror worlds of tonic and phonic, which had been derived by different means from the one familiar harmonic series, a stage further by envisioning two harmonic series, mirror images of one another: overtones and undertones.
-
-Long in gestation, the system was unveiled in a practical manual entitled *Vereinfachte Harmonielehre* (‘Harmony simplified’) (1893, Eng. trans., 1896), with the essential statement: ‘There are only three kinds of tonal functions … namely tonic, dominant and subdominant. In the change of these functions lies the essence of modulation’ (p.9).
 
 ## 14. 20th century & 15. New theoretical paradigms, 1980-2000.
 The most crucial force in 20th-century theory was not Wagner’s chromaticism, Debussy’s non-functional harmony or Schoenberg’s 12-note system, but the historical perspective that made it inconceivable to try to explain music, past, present and future, by a single universal theory. Many 20th-century theories are deliberately limited in their applicability.
-
-The most formidable challenge that music theory has had to confront is to explain aleatory, electronic and colouristic music that exploits broad sound gestures rather than formal devices. It is apparent that informational, psychological, physiological, statistical, acoustical and even sociological approaches must figure prominently in theorizing concerning much new music.
-
-A healthy trend is the recognition that music theory cannot be shielded from historical considerations, that analysis of structure divorced from stylistic, historical and sociological contexts falsifies the music it aims to describe. It is being recognized that only a multi-dimensional and pluralistic attack on the musical object can reveal its true nature and unique qualities.
 
 The final part of this theory itself spawned a new line of enquiry known as ‘Neo-Riemannian theory’, which goes back to Lewin's first article on the topic (JMT, 1982).

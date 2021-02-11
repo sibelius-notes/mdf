@@ -1,5 +1,5 @@
 ---
-title: MUSIC 246 - Music in films
+title: "MUSIC 246 - Soundtracks: Music in films"
 layout: toc
 parent: Fall 2020
 prof: Simon Wood
@@ -391,3 +391,6 @@ Another example of Max Steiner. **VE6: The Informer – Opening**
 Folk-influenced theme for Gypo. Jazz-Influenced theme for Katie. Musical quotes – ‘Rule Britannia’. Won Academy award for “Best Original Score”.
 
 Then he moved to Warner Brothers. 300+ film scores.
+
+# Lecture 5
+## Part A
