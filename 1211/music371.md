@@ -260,3 +260,23 @@ Allen Forte’s Structure
 of Atonal Music.
 
 Prime form of a set, then look up its Forte Label as well as its ICV.
+
+Every time we see an "Z" in the label, for example, 4-Z29, it means its IVC is shared with another a pitchclass set.
+
+## Subset
+Sometimes pitch-class sets that do not belong to the same set class may be related to
+each other by sharing common subsets, just as C7 and Cadd6 are closely related because
+they have the C major triad in common.
+
+**literal subset**: literally the same pitch class. **nonliteral subsets**, related by transposition or inversion, but
+do not literally share the same three pitch classes.
+
+A special kind of subset is the **scalar subset**, which is a subset that is derived from
+a particular scale type.
+
+## Aggregates
+The term aggregate is used to refer to any such statement (all 12 pitch classes be
+heard within a fairly short period) of all 12 pitch
+classes, without regard to order or duplication.
+
+Check [here](http://www.robertkelleyphd.com/atnltrms.htm) for a list of Post-Functional Theory Terminology.
