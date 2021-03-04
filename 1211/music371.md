@@ -78,14 +78,54 @@ As we shall see, Forte’s system of pitch-class sets reduces the number of comb
 or PCI
 
 Number for each note name (C=0):
-| Note name     | Pitch class     |  Note name     | Pitch class     |
-| :------------- | :------------- |  :------------- | :------------- |
-|C | 0 (or 12) |F#/Gb | 6 |
-|C#/Db | 1 |G | 7 |
-|D | 2 |G#/Ab | 8 |
-|D#/Eb | 3 |A | 9 |
-|E | 4 |A#/Bb | 10 |
-|F | 5 |B | 11 |
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Note name</th>
+<th style="text-align: left;">Pitch class</th>
+<th style="text-align: left;">Note name</th>
+<th style="text-align: left;">Pitch class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">0 (or 12)</td>
+<td style="text-align: left;">F#/Gb</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">C#/Db</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">G</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">G#/Ab</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">D#/Eb</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">A#/Bb</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">11</td>
+</tr>
+</tbody>
+</table>
 
 | PCI | Traditional Label | PCI | Traditional Label |
 | :------------- | :------------- |  :------------- | :------------- |
@@ -155,14 +195,47 @@ Consider a set (example 9-17 in the textbook).
 ![there should be a image...](/mdf/pics/9-17.png)
 
 The table below demonstrates the procedure:
-| From | Up to     | IC |
-| :----: | :----: | :--: |
-| G  |  Ab | 1 |
-| G  |  B  | 4 |
-| G  |  C# | 6 |
-| Ab |  B  | 3 |
-| Ab |  C# | 5 |
-| B  |  C# | 2 |
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">From</th>
+<th style="text-align: center;">Up to</th>
+<th style="text-align: center;">IC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">Ab</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">C#</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ab</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ab</td>
+<td style="text-align: center;">C#</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C#</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
 
 It contains exactly one occurrence of each IC. This information is usually presented in the form of an **interval-class vector** (or ICV). So for this set, because
 it contains one of each IC, has an ICV of <111111>.
