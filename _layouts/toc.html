@@ -7,9 +7,12 @@ layout: default
 {%- if words >= 180 -%}
 <p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
 {%- endif -%}
-
+<details open markdown="block">
+    <summary>
+      Table of contents
+    </summary> 
 {%- include tocc.html html=content toc_min=1 toc_max=2 -%}
-
+</details>
 <hr>
 
 {{ content }}
