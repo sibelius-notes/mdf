@@ -133,7 +133,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav" style="display: none;">
             <ol class="breadcrumb-nav-list">
               {% if page.grand_parent %}
                 <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
