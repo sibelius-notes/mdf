@@ -41,10 +41,10 @@ The purpose of classification is to simplify data through creating groupings of 
 **Number of Classes**: Convention is to have more than 3 classes, but typically not more than 7.
 
 **Classification Method**
-- unclassified data: represents each data value as a distinct colour
-- equal interval method:  data is divided up into "buckets" of equal size
-- quantile (equal count) classification method: how the data is actually distributed before constructing class boundaries.
-- natural breaks classification method: arranges class limits to correspond with breaks or low points in the data distribution. The goal: maximize diff between classes, while minimizing diff within a class.
-- unique values classification: the map maker based on some external criteria
+- **unclassified data**: represents each data value as a distinct colour
+- **equal interval method**:  data is divided up into "buckets" of equal size
+- **quantile (equal count) classification method**: how the data is actually distributed before constructing class boundaries.
+- **natural breaks classification method**: arranges class limits to correspond with breaks or low points in the data distribution. The goal: maximize diff between classes, while minimizing diff within a class.
+- **unique values classification**: the map maker based on some external criteria
 
 **Limitations of Choropleth Maps**: Appropriate classification, Choice of geographic unit of analysis, Comparing sizes of units, Using choropleth techniques improperly.
