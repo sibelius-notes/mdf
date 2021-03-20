@@ -26,7 +26,7 @@ Choropleth maps use a sequence of colour shades to represent categories of data 
 ## Overview of Choropleth Mapping
 A choropleth map represents data not as individual points (such as the graduated symbol map), but aggregated to a given spatial unit, such as a municipality, census division, province, state, or nation.
 
-In class, we examine [How long will YOU live? Startling map reveals dramatic differences in life expectancy across the globe (and why you should move to Monaco)](https://www.dailymail.co.uk/news/article-2240855/How-does-nation-rank-world-map-life-expectancy.html): Figure 1 is the table in typical format. Then [A world map of average life expectancy by country. How does your nation rank?](https://io9.gizmodo.com/a-world-map-of-average-life-expectancy-by-country-how-5964093): Figure 2 is a world map. The color and classification in this map allow the reader have a better visualization.
+In class, we examine [How long will YOU live?](https://www.dailymail.co.uk/news/article-2240855/How-does-nation-rank-world-map-life-expectancy.html): Figure 1 is the table in typical format. Then [How does your nation rank?](https://io9.gizmodo.com/a-world-map-of-average-life-expectancy-by-country-how-5964093): Figure 2 is a world map. The color and classification in this map allow the reader have a better visualization.
 
 Recall in week 7: *Level of measurement*: nominal, ordinal, interval, or ratio level. So for different types of data, we use different colour scheme. Three main colour schemes are:
 - **Qualitative**: nominal level.
