@@ -20,7 +20,10 @@ layout: default
 </div>
 
 <script>
-    $(document).ready(function(){
-      $('#real-content a').attr('target', '_blank').attr('title','This link will open in a new window.');
-    });
+    window.onload = function(){
+      var anchors = document.getElementById('real-content').getElementsByTagName('a');
+      for (var i=0; i<anchors.length; i++){
+        anchors[i].setAttribute('target', '_blank');
+      }
+    }
 </script>
