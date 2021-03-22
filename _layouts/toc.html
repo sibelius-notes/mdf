@@ -8,11 +8,17 @@ layout: default
 <p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
 {%- endif -%}
 <details open markdown="block">
-    <summary class="text-delta"> 
-        Table of contents 
+    <summary class="text-delta">
+        Table of contents
     </summary>
 {%- include tocc.html html=content toc_min=1 toc_max=2 -%}
 </details>
 <hr>
 
-{{ content }}
+<div id="real-content">
+    {{ content }}
+</div>
+
+<script>
+    $('#real-content a').attr('target', '_blank').attr('title','This link will open in a new window.');
+</script>
