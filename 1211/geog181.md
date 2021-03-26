@@ -13,7 +13,7 @@ do asst 1
 # Week 7: Mapping Quantitative Data
 
 ## Describing Spatial Data
-**Level of measurement**: whether data is collected at a nominal, ordinal, interval, or ratio level
+**Level of measurement**:
 - **Nominal**: or categorical. Only named, but no relationship to other categories.
 - **Ordinal**: can be ordered or ranked.
 - **Interval**: the distance between values is meaningful. From [questionpro](https://www.questionpro.com/blog/interval-data/): "Interval data, also called an integer, is defined as a data type which is measured along a scale, in which each point is placed at equal distance from one another."
@@ -24,27 +24,45 @@ do asst 1
 Choropleth maps use a sequence of colour shades to represent categories of data for a given area of geography.
 
 ## Overview of Choropleth Mapping
-A choropleth map represents data not as individual points (such as the graduated symbol map), but aggregated to a given spatial unit, such as a municipality, census division, province, state, or nation.
+A choropleth map represents data not as individual points.
 
-In class, we examine [How long will YOU live?](https://www.dailymail.co.uk/news/article-2240855/How-does-nation-rank-world-map-life-expectancy.html): Figure 1 is the table in typical format. Then [How does your nation rank?](https://io9.gizmodo.com/a-world-map-of-average-life-expectancy-by-country-how-5964093): Figure 2 is a world map. The color and classification in this map allow the reader have a better visualization.
+In class, we examine [How long will YOU live?](https://www.dailymail.co.uk/news/article-2240855/How-does-nation-rank-world-map-life-expectancy.html). Then [How does your nation rank?](https://io9.gizmodo.com/a-world-map-of-average-life-expectancy-by-country-how-5964093).
 
-Recall in week 7: *Level of measurement*: nominal, ordinal, interval, or ratio level. So for different types of data, we use different colour scheme. Three main colour schemes are:
-- **Qualitative**: nominal level.
-- **Sequential**: ordinal, interval, or ratio levels. Sequential categories.
-- **Diverging**: ordinal, interval, or ratio levels. Sequential categories. Two different colour hues, to represent values around a midpoint.
+Three main colour schemes are:
+- **Qualitative**.
+- **Sequential**.
+- **Diverging**.
 
-Nominal data (qualitative or categorical data) can’t be represented using a sequential colour scheme!
+
 
 ## Selecting a Data Classification Method
 The purpose of classification is to simplify data through creating groupings of similar data points.
 
-**Number of Classes**: Convention is to have more than 3 classes, but typically not more than 7.
-
 **Classification Method**
-- **unclassified data**: represents each data value as a distinct colour
-- **equal interval method**:  data is divided up into "buckets" of equal size
-- **quantile (equal count) classification method**: how the data is actually distributed before constructing class boundaries.
-- **natural breaks classification method**: arranges class limits to correspond with breaks or low points in the data distribution. The goal: maximize diff between classes, while minimizing diff within a class.
-- **unique values classification**: the map maker based on some external criteria
+- **unclassified data**.
+- **equal interval method**.
+- **quantile (equal count) classification method**.
+- **natural breaks classification method**.
+- **unique values classification**.
 
-**Limitations of Choropleth Maps**: Appropriate classification, Choice of geographic unit of analysis, Comparing sizes of units, Using choropleth techniques improperly.
+
+
+# Week 9: Mapping Terrain
+## Topographic Maps and Symbols
+**Topographic maps**: show a selection of features on the land surface. Use symbols to display both the height and contours of the land itself (e.g., hills, valleys), land cover (e.g., forest, swamp), and built structures on top of the land (e.g., buildings, schools, roads).
+
+## Representing Continuous Surfaces
+Contours represent lines of equal elevation and are produced by connecting locations of known height. Selecting a contour interval can depend largely on the type of terrain depicted and how quickly the elevation changes.
+
+Type of Contours
+- **Index contours** - bold contour lines, numbered with interval.
+- **Intermediate contours** - not labelled, but respect contour interval.
+- **Supplementary contours** - show gradual changes in elevation, usually 1/2 of contour interval. Shown as dashed lines in flat areas.
+- **Depression contours** – pits. Use hatched lines to show slope direction of depression.
+
+## Landscape Visualization
+The visualization of landscape through drawing techniques has become somewhat of a relic of traditional paper cartography.
+- hachuring: [wiki](https://zh.wikipedia.org/wiki/%E6%99%95%E6%BB%83%E6%B3%95)
+- addition of lines, shading, and hachuring
+- Hill shading
+- 3-D Approaches to Visualizing Terrain
