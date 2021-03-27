@@ -14,8 +14,8 @@ do asst 1
 
 ## Describing Spatial Data
 **Level of measurement**:
-- **Nominal**: or categorical. Only named, but no relationship to other categories.
-- **Ordinal**: can be ordered or ranked.
+- **Nominal**: or categorical.
+- **Ordinal**.
 - **Interval**: the distance between values is meaningful. From [questionpro](https://www.questionpro.com/blog/interval-data/): "Interval data, also called an integer, is defined as a data type which is measured along a scale, in which each point is placed at equal distance from one another."
 - **Ratio**: a quantified difference between values with an absolute zero point. An example from [small arms survey](http://www.smallarmssurvey.org/gbav).
 
@@ -49,16 +49,14 @@ The purpose of classification is to simplify data through creating groupings of 
 
 # Week 9: Mapping Terrain
 ## Topographic Maps and Symbols
-**Topographic maps**: show a selection of features on the land surface. Use symbols to display both the height and contours of the land itself (e.g., hills, valleys), land cover (e.g., forest, swamp), and built structures on top of the land (e.g., buildings, schools, roads).
+**Topographic maps**: show a selection of features on the land surface.
 
 ## Representing Continuous Surfaces
-Contours represent lines of equal elevation and are produced by connecting locations of known height. Selecting a contour interval can depend largely on the type of terrain depicted and how quickly the elevation changes.
-
 Type of Contours
-- **Index contours** - bold contour lines, numbered with interval.
-- **Intermediate contours** - not labelled, but respect contour interval.
-- **Supplementary contours** - show gradual changes in elevation, usually 1/2 of contour interval. Shown as dashed lines in flat areas.
-- **Depression contours** – pits. Use hatched lines to show slope direction of depression.
+- **Index contours**
+- **Intermediate contours**
+- **Supplementary contours**
+- **Depression contours**
 
 ## Landscape Visualization
 The visualization of landscape through drawing techniques has become somewhat of a relic of traditional paper cartography.
