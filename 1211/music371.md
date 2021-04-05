@@ -280,3 +280,22 @@ heard within a fairly short period) of all 12 pitch
 classes, without regard to order or duplication.
 
 Check [here](http://www.robertkelleyphd.com/atnltrms.htm) for a list of Post-Functional Theory Terminology.
+
+# Balinese Music
+The notes are (roughly) C#,  D, E, G#, A.
+
+## Core melody and melody
+
+layout in the video
+```
+gong cycle        polo        core melody
+beat keeper       sangsih     melody
+```
+
+melody: cannot have the same note repeated twice
+- First option: anticipate target note with the one lower neighbour note
+- second option: anticipate target note with the one higher neighbour note
+- also we can mix: one higher one lower
+
+## Interlocking
+Polo interlocking anticipating the melody. Sangsih is based on polo.
