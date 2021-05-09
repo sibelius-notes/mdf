@@ -16,45 +16,34 @@ Readings:
 # What is Music Theory?
 Readings: Palisca, Claude V. & Ian D. Bent, “[Theory, theorists](https://musictheory.tistory.com/entry/Theory-theorists-in-music)” from *Grove Music Online.*
 
-Some random excerpts from the article...
+[Schenkerian Analysis 1. Introduction](https://youtu.be/Y6R5C4iy1Qg)
 
-## Preface & Intro
-- Theory is now understood as principally the study of the structure of music:  melody, rhythm, counterpoint, harmony and form.
-- A body of theory exists also about other aspects of music, such as composition, performance, orchestration, ornamentation, improvisation and electronic sound production.
-- disparate: Boethius,  Giovanni Maria Artusi, Francesco Gasparini,  Heinrich Schenker.
-
-## Definitions
-- Theory its Greek root theōria, from verb  theōreō: inspect, look at, behold, observe, contemplate, consider
-- Etymologically, act of contemplation
-- Aristides Quintilianus created a plan about CE 300: Theoretical (Natural, Artificial) & Practical (Creative, Executive)
-- Modern version:
-    - Theoretical
-        - Scientific
-        - Technical: parameters
-        - Critical
-    - Practical
-        - Creative
-        - Pedagogical
-        - Executive
-        - Functional
-
-This entire field has sometimes been called *Musikwissenschaft*, the science of music, or musicology.
-
-## 10. The Baroque period.
-
-Rameau marked a return to naturalism and rationalism after the pragmatic theory of the thoroughbass. By arithmetic manipulation of the ratios representing the primary division of the string, he was able to generate the primary major triad.
-
-## 11. The Classical–Romantic period.
-Johann Philip Kirnberger (Die Kunst des reinen Satzes in der Musick, 1774–9) accepted many of Rameau’s ideas, such as inversion, but he gave more importance to melodic functions.
-
-
-## 14. 20th century & 15. New theoretical paradigms, 1980-2000.
-The most crucial force in 20th-century theory was not Wagner’s chromaticism, Debussy’s non-functional harmony or Schoenberg’s 12-note system, but the historical perspective that made it inconceivable to try to explain music, past, present and future, by a single universal theory. Many 20th-century theories are deliberately limited in their applicability.
-
-The final part of this theory itself spawned a new line of enquiry known as ‘Neo-Riemannian theory’, which goes back to Lewin's first article on the topic (JMT, 1982).
 
 # Jazz Music Theory
-to be updated later...
+Check [www.gershwin.com](www.gershwin.com)
+
+## Modes
+Major keys
+
+| :--------- | :------ |
+| Ionian      | I       |
+| Dorian | II |
+| Phrygian | III |
+| Lydian | IV |
+| MIxo Lydian | V |
+| Aeolian | VI |
+| Locrian | VII |
+
+Relative minor keys
+
+| :--------- | :------ |
+| Aeolian      | I       |
+| Locrian | II |
+| Ionian | III |
+| Dorian | IV |
+| Phrygian | V |
+| Lydian | VI |
+| MIxo Lydian | VII |
 
 # Nonserial Atonality
 This is based on the chapter 9 of Kostka.
@@ -281,6 +270,13 @@ classes, without regard to order or duplication.
 
 Check [here](http://www.robertkelleyphd.com/atnltrms.htm) for a list of Post-Functional Theory Terminology.
 
+# Serialism (The 12-Tone Row)
+Chapter 10 of Kostka
+
+12tone videos:
+- [Twelve Tone Composition](https://youtu.be/YifVP91wPiI)
+- [The Twelve Tone Matrix Reloaded](https://youtu.be/tLkYu2iNsRs)
+
 # Balinese Music
 The notes are (roughly) C#,  D, E, G#, A.
 
@@ -299,3 +295,8 @@ melody: cannot have the same note repeated twice
 
 ## Interlocking
 Polo interlocking anticipating the melody. Sangsih is based on polo.
+
+# Neo-Riemannian Theory
+- [wiki](https://en.wikipedia.org/wiki/Neo-Riemannian_theory)
+- [Introduction to Neo-Riemannian Theory](https://youtu.be/-RRJdy0yriw)
+- [What The Heck Is Neo-Riemannian Analysis?](https://youtu.be/_VxN4rnOpho)
