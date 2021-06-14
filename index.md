@@ -21,7 +21,7 @@ Check the table of contents to get started. This website currently contains all 
 {% endfor %}
 
 ## Statistics
-- Number of courses: {{ noc }}
+- Number of course posts: {{ noc }}
 - Word count: {{ total }}
 
 Last updated: {% include ts.html %}
