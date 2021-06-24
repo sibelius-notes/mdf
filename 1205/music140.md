@@ -595,7 +595,7 @@ Each part is precise. Electric cellos, early type of synthesizer: theremin. And 
 ## Part A: The New Frontier / Skiffle
 The US was in desperate need of something to distract itself. Particularly the young people. And The Beatles came along at exactly that moment. Now why did they need this distraction?
 
-![]("/pics/140/jfk.jpg)
+![](/pics/140/jfk.jpg)
 
 In fact Kennedy remains the youngest man elected to the office of president of the US. He was also Catholic. There was a subtle systematic bias against Catholic. Optimism with Kennedy  (Camelot). Round table, everyone is equal. Kennedy is open to all ideas. This vision that he put forward of nation building was given a name: "The New Frontier". Optimistic future.
 
@@ -615,11 +615,11 @@ According to mythology, John Lennon was a leader of a Skiffle group called the Q
 The Beatles played for American troops in Hamburg, Germany. Playing Rock 'n' Roll, R&B covers. When they are not in Germany, they had a spot in Liverpool, The Cavern Club.
 
 
-![]("/pics/140/rocker.jpg")
+![](/pics/140/rocker.jpg)
 
 In this period, they don't have any original songs recorded. It was all through live performances. Because of this, they come to the attention of a music journalist: Brian Epstein. He went to the club and quite surprised on what he saw. They were rough around the edges, swearing, drinking, smoking, but in Epstein own words: they had personal charm, an undeniable charisma. Then he becomes the manager of The Beatles. He starts off by significantly changing on Beatles' image. They are engaging but the look frightens people, intimidates older generations.
 
-![]("/pics/140/change.jpg")
+![](/pics/140/change.jpg)
 
 Epstein spends the first half of 1962 on trying to get The Beatles a recording contract. He was turned down by every record label in England. In fact, he receives a letter from Dick Rowe, a representative of Decca Records in England. He was historically remembered as The Man Who Turned Down The Beatles. Everyone turns down because there was a feeling that the interest in guitar bass popular music was passing.
 Furthermore, in 1963, once The Beatles becomes famous, Dick finds them and said to them: I am sorry for you... Who would you recommend for me to sign? The Beatles tells him: probably the band Rolling stones. Then he signs the band, which is the second most important band of the British invasion.
@@ -711,7 +711,7 @@ March of 1966. The Beatles have done interviews in major British newspaper. They
 ## Part A: The Beatles (Part 2)
 In February, 1967, they release a most remarkable song, “Strawberry Fields Forever”. [Music video](https://www.youtube.com/watch?v=HtUH9z_Oey8). The next album, June 1967 – “Sgt. Pepper’s Lonely Hearts Club Band”. It is the most influential album ever released. It marked the pinnacle of what The Beatles has been working towards through this middle period of Help, Rubber soul and Revolver. They were clearly pushing away from the idea of the individual songs being the focus of their work to a larger collection of songs.
 
-![]("/pics/140/sgt.png")
+![](/pics/140/sgt.png)
 
 Front cover: wild art, all sorts of important historic figures that surrounds the Beatles. Back cover: first time, album cover include the lyrics for every song. Listen to the final track: The Beatles “A Day In The Life” (From Sgt. Pepper’s Lonely Hearts Club Band). As the song starts, you can hear the end of the previous song. If you listen to the song carefully, you realize there are two songs here, two incomplete songs: first one by John, middle section by Paul, then transition to John's song. We can see two styles diverge.
 
@@ -744,7 +744,7 @@ Remember we are still in post-war era. Then we see young English musicians learn
 Waters becomes a primary influence on a generation of British musicians:  
 Fleetwood Mac, Cream, Eric Clapton, Led Zepplin, The Rolling Stones. Brian Jones puts the Rolling Stones together. He is deeply passionate fan of R&B. Thus he wants to put a band together in a tribute way. Debut at the Marquee Club: July, 1962. The name of the band came from a song by Muddy Waters, "Like a Rolling Stone". In April 1963, they are approached by a young man, Andrew Loog Oldham, who wants to be their manager. Then there comes a myth: Andrew suggests them not to follow the Beatles, instead be dangerous and rough, no smiles.
 
-![]("/pics/140/rolling.jpg")
+![](/pics/140/rolling.jpg)
 
 1963-1964: All singles are covers (Chuck Berry, Buddy Holly, Willie Dixon)
 
