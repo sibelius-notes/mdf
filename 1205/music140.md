@@ -1159,10 +1159,10 @@ We found the founders Lou Reed and John Cale were quite knowledgable musicians. 
 - Attempt to realistically express the impact of drug addiction
 - Simple musical structure - two chords
 
+![](https://upload.wikimedia.org/wikipedia/commons/d/da/CBGB_club_facade.jpg)
 
 <font size="-5"><i>By <a href="https://en.wikipedia.org/wiki/User:Adicarlo" class="extiw" title="en:User:Adicarlo">Adicarlo</a> at the <a href="https://en.wikipedia.org/wiki/" class="extiw" title="w:">English language Wikipedia</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1729803">Link</a></i></font>
 
-<br>
 
 By early 1970s, the New York Punk scene had developed a center. The most important club was called CBGBs (Country, Blue Grass and Blues) in NYC. One hand, some bands are of strong art influence, The Talking Heads. Other might have Rock 'n' Roll approach, Blondie. The idea is the song should not be pretentious.
 
