@@ -6,6 +6,8 @@ layout: default
 {%- assign words = content | number_of_words -%}
 {%- if words >= 180 -%}
 <p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
+{% else %}
+<p><em style="color:gray;font-size:12px">Estimated reading time: less than 1 minute</em></p>
 {%- endif -%}
 <details open markdown="block">
     <summary class="text-delta">
