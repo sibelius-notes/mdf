@@ -52,3 +52,15 @@ established through nontraditional means.
 
 pitch center by assertion: reiteration, return, pedal point, ostinato, accent, formal placement, register, and similar
 techniques to draw a listener’s attention to a particular pitch class.
+
+- tertian pitch-centricity: chords built on 3rds
+- nontertian pitch-centricity: avoid such sonorities
+
+Polytonality: similar to polychord. bitonal: polytonal music with two tonal centers.
+
+[Pandiatonicism](https://musictheory.pugetsound.edu/mt21c/Pandiatonicism.html): uses only the tones of some diatonic scale but does not rely on
+traditional harmonic progressions and dissonance treatment.
+
+Atonality was a development even more radical than that of the various sorts of pitch-centricity
+used in post-tonal music.
+
