@@ -10,6 +10,8 @@ Check the table of contents to get started. This website currently contains all 
 
 **Disclaimer**: Most of these notes are written in their entirety by me, Sibelius Peng, while attending lectures at the University of Waterloo. I have no intentions of violating any UW policies and will gladly honour takedown notices produced by an authorized UW representative. They are by no means authoritative so use at your own peril.
 
+Now I am working on MUSIC 261.
+
 {% assign total = 0 %}
 {% assign noc = 0 %}
 {% for post in site.pages %}
@@ -24,4 +26,3 @@ Check the table of contents to get started. This website currently contains all 
 - Number of course posts: {{ noc }}
 - Word count: {{ total }}
 
-Last updated: {% include ts.html %}
