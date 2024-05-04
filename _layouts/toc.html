@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<p align="center"><span style="font-size: 150%; font-family: 'Caveat', cursive;">{{ page.title }}</span></p>
+{% if page.prof %}<p align="center"><span style="font-family: 'Caveat', cursive;">{{ page.prof }}</span></p>{% endif %}
+{%- assign words = content | number_of_words -%}
+{%- if words >= 180 -%}
+<p><em style="color:gray;font-size:12px">Estimated reading time: {{ words | divided_by:180 }} minutes</em></p>
+{% else %}
+<p><em style="color:gray;font-size:12px">Estimated reading time: less than 1 minute</em></p>
+{%- endif -%}
+<details open markdown="block">
+    <summary class="text-delta">
+        Table of contents
+    </summary>
+{%- include tocc.html html=content toc_min=1 toc_max=2 -%}
+</details>
+<hr>
+
+<div id="real-content">
+    {{ content }}
+</div>
+
+<script>
+    window.onload = function(){
+      var anchors = document.getElementById('real-content').getElementsByTagName('a');
+      for (var i=0; i<anchors.length; i++){
+          if (anchors[i].className !== "anchor-heading") {
+              anchors[i].setAttribute('target', '_blank');
+              anchors[i].setAttribute('title', 'this link will be opened in a new tab');
+          }
+      }
+    }
+</script>

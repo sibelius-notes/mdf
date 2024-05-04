@@ -1,0 +1,9 @@
+#!/bin/bash
+msg="$*"
+name=$(hostname)
+
+git pull
+date +"%Y-%m-%d %H:%M" > _includes/ts.html
+git add *
+git commit -m "$name: $msg"
+git push
