@@ -2,8 +2,8 @@ remote_theme: pmarsceill/just-the-docs
 
 
 title: MD Lecture Notes
-baseurl: "/mdf"
-url: "https://notes.sibeliusp.com"
+baseurl: ""
+url: "https://mdf.sibeliusp.com"
 permalink: pretty
 
 back_to_top: true
