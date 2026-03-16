@@ -1638,3 +1638,56 @@ This single scene contains continuous music with recitative and orchestra; a ran
 Despite Gershwin's credentials, or perhaps because of them, *Porgy and Bess* remains a deeply problematic work. His intentions were clearly operatic — the subtitle, the orchestral writing, the use of leitmotifs, the insistence on operatically trained Black singers — and the music is undeniably powerful. But the work carries an inescapable history: it is an opera about Black Americans created by white artists, filled with stereotypes that coexist alongside moments of genuine depth and beauty. Every time it is performed, the performers and the audience must confront that history anew. Even the Metropolitan Opera's recent productions have prompted Black performers to question whether they feel affirmed and recognized. As Naomi Andre has observed, it is a product of its original time — the early 1930s, during the Depression and Jim Crow — but it has encountered continual resistance from that day to the present, as race relations in the United States remain complicated.
 
 Opera is visceral. As a multimedia art form, it is extraordinarily powerful in its emotional impact, and it deals with the human condition — with humanity and human beings in all their foibles, imperfections, and passions. *Porgy and Bess*, like *Peter Grimes*, refuses to let us look away from difficult truths. That is what opera does at its best.
+
+
+# Appendix: Guest Session — Life in Opera
+
+*A conversation with Adrian Kramer (tenor) and Lucia Cesaroni (soprano), recorded via Zoom during the Fall 2020 term.*
+
+During the course, Dr. Gray arranged a live video session with two professional opera singers — **Adrian Kramer**, a tenor, and **Lucia Cesaroni**, a soprano — both based internationally and performing on stages across North America and Europe. The session took the form of a Q&A with students, covering the realities of life as a working opera singer. What follows is a synthesis of their conversation.
+
+## How They Got into Opera
+
+Adrian and Lucia arrived at opera from opposite directions. Adrian comes from a deeply musical family — both sides. His parents met singing in the Ontario Youth Choir in its first year. Uncles, aunts, cousins, siblings — all musicians, professional and amateur. There was, as he put it, "no way we wouldn't be involved in music." His obvious strengths were in music and singing, and by early high school he knew that post-secondary music was his path.
+
+Lucia's story is the reverse. She comes from a family of entrepreneurs and business people. Her father emigrated from Italy, so there was a cultural tradition of opera, and her parents took her to the ballet and then the opera as a child — but they were not musicians themselves. Her path into opera came through theatre: a strong drama department in high school led to community theatre, which led to musicals. She was belting as a mezzo in high school productions with no formal training when a teacher from the Royal Conservatory heard her and said, "Come have lessons with me. I think you should be pursuing this seriously."
+
+Both emphasized the same advice: figure out what you love to do — what does not feel like work — and be honest with yourself about it.
+
+## The Realities of a Career in Opera
+
+The conversation took place during the COVID-19 pandemic, and both singers spoke candidly about its impact. Adrian had seven opera contracts in the United States deferred — an entire 2021 season pushed to 2021–22, leaving a completely empty calendar. The experience was depressing, but ultimately reaffirming: "There isn't anything else I want to be doing."
+
+They were frank about the economics. Opera is a diminishing industry compared to fifty or a hundred years ago. The craft demands real dedication and a certain level of talent, and the career requires being just as committed to your "brand," your professional connections, and your presence as to the work of learning to sing. As Adrian put it: "You better really want to do it."
+
+## Breaking into the International Stage
+
+For Canadian singers, a full-time professional performing career almost certainly means leaving Canada. Adrian and Lucia are based in New York (and were speaking from Berlin, where they had auditions). There are simply too many singers and too few Canadian companies and orchestras to sustain a career domestically.
+
+The key to breaking into the American and European markets, they explained, is summer programs — festivals like Tanglewood, Ravinia, Aspen, and the Music Academy of the West. These programs allow young musicians to meet teachers, coaches, and international peers, and often serve as pathways to graduate school placements and professional connections. The application process is time-consuming, but the networking is invaluable.
+
+## Voice Types and the Fach System
+
+A student asked about voice classification, and Adrian — who transitioned from baritone to tenor — had strong views. The German **Fach** system categorizes voices into specific types (lyric tenor, dramatic soprano, etc.) for casting purposes, but Adrian sees it as "trying to make science out of something that's a little bit more of a fluid art." His own **passaggio** — the transition point between chest voice and upper range — falls right between the typical baritone and tenor zones. Learning to sing as a tenor actually made him a better and healthier singer overall.
+
+Lucia noted that women cross Fach boundaries more frequently — she has performed *Carmen* one night with a soprano in the title role and the next night with a mezzo. Both singers argued for greater imagination in casting: listening to the individual artist rather than plugging voices into predetermined categories.
+
+## Diversity in Opera
+
+Asked about diversity in the opera industry, both singers acknowledged that opera has historically been a European genre with significant barriers to access. But they pointed to hopeful developments: in Canada, a growing movement to tell Indigenous stories through opera, with Indigenous singers and instrumentalists involved in productions. In Germany, a vital Turkish-German community producing opera singers. And remarkably, in China and South Korea, opera is a fast-growing industry — more opera houses are being built in China than anywhere else in the world.
+
+The fundamental issue, they argued, is access and education. In North America, the arts are often treated as frivolous in secondary education. If young people in certain communities are never exposed to classical music, how will they know they are good at it or that they love it? In countries like Germany, France, South Korea, and China, performing arts education is available in elementary schools regardless of economic background — and the results show.
+
+## Emotion vs. Technique on Stage
+
+A student asked how performers handle the emotional intensity of opera without it overwhelming their technical execution. Both singers stressed that opera is not method acting. It is closer to the classical Shakespearean tradition: the performer finds a real and authentic emotional place from which to communicate, but must maintain what Adrian called "the third eye" — a constant awareness of technique. Directors often encourage singers to fully commit to the emotion at least once in rehearsal, creating a sensory memory they can then dial back for performance.
+
+Lucia shared a piece of advice from a coach that stayed with her: "Never forget that great music doesn't need your help." The music itself carries enormous emotional power. The performer's job is to serve it — with both heart and technique — not to overwhelm it.
+
+## Singing in Different Languages
+
+Asked about language preferences, the two singers again illustrated their differences. Adrian prefers singing in German, English, and French — the vocal writing in German opera suits his instrument, and the way high notes are approached differs significantly from Italian repertoire. Lucia, whose family is Italian and who grew up speaking the language, finds Italian the most natural fit. As she explained, biology plays a role: your internal acoustical structure helps determine what style of music and what language you sing best in.
+
+## A Challenge to Students
+
+Adrian closed with a challenge to the students: next time there is a Q&A session, ask your question with your voice rather than typing in the chat. "It's a tiny, zero-stakes, low-low-low-stakes game," he said. "It's an opportunity to practice being a performer. We have to practice the skill of standing in front of people and showing a teeny little bit of who we are." Dr. Gray added that she wanted people to feel comfortable either way — but the point stood as a reminder that the skills of performance extend well beyond the stage.
