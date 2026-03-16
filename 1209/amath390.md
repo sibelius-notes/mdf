@@ -73,7 +73,7 @@ The advantage of the second representation (1.10) is that it is clear that the s
 
 The frequency of the wave corresponds to **pitch** of an audible sound, while the amplitude of the wave corresponds to **loudness**. A difference in phase of two waves (an example is shown in Figure 1.1(a)) is not audible. The frequency of <span>&#92;(&#92;sin(&#92;omega t)&#92;)</span> is <span>&#92;(&#92;omega&#92;)</span> rad/s, or <span>&#92;(&#92;frac{&#92;omega}{2&#92;pi}&#92;)</span> Hz.
 
-![Graphs showing the effect of changing the frequency and wavelength of a sine function: (a) sin(t), (b) sin(3t), (c) sin(3t+1)](/pics/390/390-ch1-sine-waves-2.png)
+![Graphs showing the effect of changing the frequency and wavelength of a sine function: (a) sin(t), (b) sin(3t), (c) sin(3t+1)](/pics/390/fig-sine-waves.png)
 
 Differential equations of the form
 
@@ -81,7 +81,7 @@ Differential equations of the form
 
 (where <span>&#92;(A&#92;)</span>, <span>&#92;(B&#92;)</span>, <span>&#92;(C&#92;)</span> are constants) are called **linear homogeneous second-order ordinary differential equations**. Equation (1.1) is an example of this.
 
-For linear differential equations, the **Principle of Superposition** states that if <span>&#92;(y_1&#92;)</span> and <span>&#92;(y_2&#92;)</span> are both solutions to some linear homogeneous differential equation, then <span>&#92;(y(t) = c_1 y_1(t) + c_2 y_2(t)&#92;)</span> is also a solution to the equation, where <span>&#92;(c_1&#92;)</span> and <span>&#92;(c_2&#92;)</span> are arbitrary constants. This can be verified by substitution. For example, given that <span>&#92;(y_1(t) = &#92;sin(t)&#92;)</span> and <span>&#92;(y_2(t) = &#92;cos(t)&#92;)</span> are both solutions to the differential equation <span>&#92;(y''(t) = -y(t)&#92;)</span>, then
+For linear differential equations, the **Principle of Superposition** states that if <span>&#92;(y&#95;1&#92;)</span> and <span>&#92;(y&#95;2&#92;)</span> are both solutions to some linear homogeneous differential equation, then <span>&#92;(y(t) = c&#95;1 y&#95;1(t) + c&#95;2 y&#95;2(t)&#92;)</span> is also a solution to the equation, where <span>&#92;(c&#95;1&#92;)</span> and <span>&#92;(c&#95;2&#92;)</span> are arbitrary constants. This can be verified by substitution. For example, given that <span>&#92;(y&#95;1(t) = &#92;sin(t)&#92;)</span> and <span>&#92;(y&#95;2(t) = &#92;cos(t)&#92;)</span> are both solutions to the differential equation <span>&#92;(y''(t) = -y(t)&#92;)</span>, then
 
 <span>&#92;[y(t) = A&#92;sin(t) + B&#92;cos(t) &#92;tag{1.12}&#92;]</span>
 
@@ -89,13 +89,13 @@ is also a solution.
 
 ## Beats
 
-Consider two waves with the same phase and amplitude, but different frequencies <span>&#92;(&#92;omega_2 > &#92;omega_1&#92;)</span>:
+Consider two waves with the same phase and amplitude, but different frequencies <span>&#92;(&#92;omega&#95;2 > &#92;omega&#95;1&#92;)</span>:
 
-<span>&#92;[y(t) = &#92;sin(&#92;omega_1 t) + &#92;sin(&#92;omega_2 t). &#92;tag{1.13}&#92;]</span>
+<span>&#92;[y(t) = &#92;sin(&#92;omega&#95;1 t) + &#92;sin(&#92;omega&#95;2 t). &#92;tag{1.13}&#92;]</span>
 
 Define
 
-<span>&#92;[&#92;bar{&#92;omega} = &#92;frac{1}{2}(&#92;omega_2 + &#92;omega_1), &#92;quad &#92;Delta = &#92;frac{1}{2}(&#92;omega_2 - &#92;omega_1), &#92;tag{1.14}&#92;]</span>
+<span>&#92;[&#92;bar{&#92;omega} = &#92;frac{1}{2}(&#92;omega&#95;2 + &#92;omega&#95;1), &#92;quad &#92;Delta = &#92;frac{1}{2}(&#92;omega&#95;2 - &#92;omega&#95;1), &#92;tag{1.14}&#92;]</span>
 
 and use the sum formula (1.5) to write
 
@@ -106,17 +106,13 @@ y(t) &= &#92;sin(&#92;bar{&#92;omega}t - &#92;Delta t) + &#92;sin(&#92;bar{&#92;
 
 If <span>&#92;(&#92;Delta&#92;)</span> is small, this looks like a sine wave with frequency <span>&#92;(&#92;frac{&#92;bar{&#92;omega}}{2&#92;pi}&#92;)</span> Hz, with a periodic amplitude given by a slow cosine wave. The word **beat** refers to a periodic fluctuation in the amplitude of a wave. Thus, when two waves of slightly different frequencies are superimposed, beats are produced.
 
-Formally, the frequency of the beats produced by the superposition of two waves <span>&#92;(&#92;sin(&#92;omega_1 t)&#92;)</span> and <span>&#92;(&#92;sin(&#92;omega_2 t)&#92;)</span> is <span>&#92;(&#92;Delta&#92;)</span>. However, since it is the amplitude of the envelope that is heard, and this has frequency
+Formally, the frequency of the beats produced by the superposition of two waves <span>&#92;(&#92;sin(&#92;omega&#95;1 t)&#92;)</span> and <span>&#92;(&#92;sin(&#92;omega&#95;2 t)&#92;)</span> is <span>&#92;(&#92;Delta&#92;)</span>. However, since it is the amplitude of the envelope that is heard, and this has frequency
 
-<span>&#92;[&#92;omega_{&#92;text{beats}} = &#92;omega_2 - &#92;omega_1. &#92;tag{1.15}&#92;]</span>
+<span>&#92;[&#92;omega&#95;{&#92;text{beats}} = &#92;omega&#95;2 - &#92;omega&#95;1. &#92;tag{1.15}&#92;]</span>
 
 This is known as the **beat frequency**.
 
-![440Hz + 442Hz — slow beats with 2Hz beat frequency](/pics/390/390-ch1-beats-440-442.png)
-
-![440Hz + 443Hz — faster beats with 3Hz beat frequency](/pics/390/390-ch1-beats-440-443.png)
-
-![440Hz + 448Hz — rapid beats with 8Hz beat frequency](/pics/390/390-ch1-beats-440-448.png)
+![Beats produced by superposition of two sine waves with slightly different frequencies. Top: slow beats (Δω = 2). Middle: faster beats (Δω = 6). Bottom: rapid beats (Δω = 16). Red dashed lines show the envelope ±2cos(Δt).](/pics/390/fig-beats.png)
 
 ## Damping
 
@@ -133,7 +129,7 @@ y(t) &= e^{-&#92;xi&#92;omega t}&#92;left(A&#92;cos&#92;left(&#92;sqrt{1-&#92;xi
 
 where <span>&#92;(A&#92;)</span>, <span>&#92;(B&#92;)</span> (or equivalently <span>&#92;(C&#92;)</span>, <span>&#92;(&#92;phi&#92;)</span>) are determined by initial conditions. The damped solution has a decaying amplitude, and a slightly lower frequency. With <span>&#92;(&#92;xi = 0.05&#92;)</span>, frequency is 99.8% of the undamped frequency. If <span>&#92;(&#92;xi = 0.2&#92;)</span>, it's 98%. Since we are typically concerned only with frequency, and damping only slightly affects frequency, we will not generally include damping in the analysis.
 
-![Damped oscillations with frequency ω = 3, damping parameter ξ = 0.05. The green and blue curves show the envelope of the oscillations. Below: comparison of damped and undamped oscillations.](/pics/390/390-ch1-damping-7.png)
+![Damped oscillations with frequency ω = 3, damping parameter ξ = 0.05. The green dashed curves show the envelope ±e^{-ξωt}. Below: comparison of damped and undamped oscillations.](/pics/390/fig-damping.png)
 
 ## Forced Harmonic Motion
 
@@ -149,11 +145,11 @@ for some constant <span>&#92;(F&#92;)</span> and frequency <span>&#92;(&#92;alph
 
 The forcing adds a term in the solution of equation (1.18) of the form
 
-<span>&#92;[y_p(t) = a&#92;sin(&#92;alpha t) + b&#92;cos(&#92;alpha t). &#92;tag{1.19}&#92;]</span>
+<span>&#92;[y&#95;p(t) = a&#92;sin(&#92;alpha t) + b&#92;cos(&#92;alpha t). &#92;tag{1.19}&#92;]</span>
 
 Substituting this into the left-hand-side of (1.18) yields the expressions
 
-<span>&#92;[&#92;underbrace{(-a&#92;alpha^2 - 2&#92;xi&#92;omega&#92;alpha b + &#92;omega^2 a)}_{F}&#92;sin(&#92;alpha t) + &#92;underbrace{(-b&#92;alpha^2 - 2&#92;xi&#92;omega&#92;alpha a + &#92;omega^2 b)}_{0}&#92;cos(&#92;alpha t). &#92;tag{1.20}&#92;]</span>
+<span>&#92;[&#92;underbrace{(-a&#92;alpha^2 - 2&#92;xi&#92;omega&#92;alpha b + &#92;omega^2 a)}&#95;{F}&#92;sin(&#92;alpha t) + &#92;underbrace{(-b&#92;alpha^2 - 2&#92;xi&#92;omega&#92;alpha a + &#92;omega^2 b)}&#95;{0}&#92;cos(&#92;alpha t). &#92;tag{1.20}&#92;]</span>
 
 For this to equal the right-hand-side of (1.18),
 
@@ -166,22 +162,22 @@ If <span>&#92;(&#92;alpha &#92;neq &#92;omega&#92;)</span> or <span>&#92;(&#92;x
 
 <span>&#92;[a = &#92;frac{(&#92;omega^2 - &#92;alpha^2)F}{(&#92;omega^2 - &#92;alpha^2)^2 + (2&#92;xi&#92;omega&#92;alpha)^2}, &#92;quad b = &#92;frac{-(2&#92;xi&#92;omega&#92;alpha)F}{(&#92;omega^2 - &#92;alpha^2)^2 + (2&#92;xi&#92;omega&#92;alpha)^2}. &#92;tag{1.21}&#92;]</span>
 
-Writing <span>&#92;(&#92;omega_0 = &#92;sqrt{1 - &#92;xi^2}&#92;,&#92;omega&#92;)</span>, any solution to (1.18) is of the form
+Writing <span>&#92;(&#92;omega&#95;0 = &#92;sqrt{1 - &#92;xi^2}&#92;,&#92;omega&#92;)</span>, any solution to (1.18) is of the form
 
 <span>&#92;[&#92;begin{aligned}
-y(t) &= e^{-&#92;xi&#92;omega t}(A&#92;sin(&#92;omega_0 t) + B&#92;cos(&#92;omega_0 t)) + a&#92;sin(&#92;alpha t) + b&#92;cos(&#92;alpha t) &#92;&#92;
-&= e^{-&#92;xi&#92;omega t}C&#92;sin(&#92;omega_0 t + &#92;phi) + M&#92;sin(&#92;alpha t + &#92;phi_f).
+y(t) &= e^{-&#92;xi&#92;omega t}(A&#92;sin(&#92;omega&#95;0 t) + B&#92;cos(&#92;omega&#95;0 t)) + a&#92;sin(&#92;alpha t) + b&#92;cos(&#92;alpha t) &#92;&#92;
+&= e^{-&#92;xi&#92;omega t}C&#92;sin(&#92;omega&#95;0 t + &#92;phi) + M&#92;sin(&#92;alpha t + &#92;phi&#95;f).
 &#92;end{aligned}&#92;]</span>
 
-where <span>&#92;(M&#92;)</span> and <span>&#92;(&#92;phi_f&#92;)</span> are determined by the forcing function parameters <span>&#92;(F&#92;)</span> and <span>&#92;(&#92;alpha&#92;)</span>:
+where <span>&#92;(M&#92;)</span> and <span>&#92;(&#92;phi&#95;f&#92;)</span> are determined by the forcing function parameters <span>&#92;(F&#92;)</span> and <span>&#92;(&#92;alpha&#92;)</span>:
 
 <span>&#92;[M = &#92;sqrt{a^2 + b^2} = &#92;frac{F}{&#92;sqrt{(&#92;omega^2 - &#92;alpha^2)^2 + (2&#92;xi&#92;omega&#92;alpha)^2}}.&#92;]</span>
 
-The constants <span>&#92;(C&#92;)</span> and <span>&#92;(&#92;phi&#92;)</span> (or <span>&#92;(A&#92;)</span> and <span>&#92;(B&#92;)</span>) are determined by the initial conditions. Note that as <span>&#92;(t &#92;to &#92;infty&#92;)</span>, <span>&#92;(y(t) &#92;to M&#92;sin(&#92;alpha t + &#92;phi_f)&#92;)</span>.
+The constants <span>&#92;(C&#92;)</span> and <span>&#92;(&#92;phi&#92;)</span> (or <span>&#92;(A&#92;)</span> and <span>&#92;(B&#92;)</span>) are determined by the initial conditions. Note that as <span>&#92;(t &#92;to &#92;infty&#92;)</span>, <span>&#92;(y(t) &#92;to M&#92;sin(&#92;alpha t + &#92;phi&#95;f)&#92;)</span>.
 
-The response is the sum of two waves: a decaying wave at the natural frequency <span>&#92;(&#92;omega_0&#92;)</span>, and a persistent wave at the forcing frequency <span>&#92;(&#92;alpha&#92;)</span>. Thus, in steady-state, once the effect of the initial conditions has dissipated,
+The response is the sum of two waves: a decaying wave at the natural frequency <span>&#92;(&#92;omega&#95;0&#92;)</span>, and a persistent wave at the forcing frequency <span>&#92;(&#92;alpha&#92;)</span>. Thus, in steady-state, once the effect of the initial conditions has dissipated,
 
-<span>&#92;[y(t) = M&#92;sin(&#92;alpha t + &#92;phi_f),&#92;]</span>
+<span>&#92;[y(t) = M&#92;sin(&#92;alpha t + &#92;phi&#95;f),&#92;]</span>
 
 where
 
@@ -189,19 +185,17 @@ where
 
 The value of <span>&#92;(M&#92;)</span> is the magnitude of the steady-state oscillations. The magnitude increases as the forcing frequency <span>&#92;(&#92;alpha&#92;)</span> approaches the natural frequency <span>&#92;(&#92;omega&#92;)</span>, and the peak is larger for lightly damped systems. A vibrating system that is forced at a frequency close to the natural frequency is said to be in **resonance**. There are many instances of resonance; a famous example is a singer breaking a wine glass with their voice, another is Nuclear Magnetic Resonance.
 
-![Magnitude M of the steady-state response of a forced oscillator with ω = 100Hz, ξ = 0.1 (blue) and ξ = 0.01 (red). The magnitude increases as the forcing frequency α approaches the natural frequency ω.](/pics/390/390-ch1-resonance-8.png)
+![Magnitude M of the steady-state response of a forced oscillator with ω = 100 rad/s, ξ = 0.1 (blue) and ξ = 0.01 (red). The magnitude increases as the forcing frequency α approaches the natural frequency ω.](/pics/390/fig-resonance.png)
 
 # Chapter 2: Stringed Instruments
 
 The sound in many musical instruments, for instance guitars and violins, and also pianos, is produced by vibrating strings. In all these instruments a string is stretched and fixed at each end. The sound is produced by plucking, strumming, or striking the string.
 
-![Baroque violin](/pics/390/390-ch2-baroque-violin.png)
-
 ## The Dynamics of a Stretched Spring
 
 Consider a string illustrated in Figure 2.2. Let <span>&#92;(u(x,t)&#92;)</span> indicate the deflection from the rest position at position <span>&#92;(x&#92;)</span> along the string and time <span>&#92;(t&#92;)</span>. (Set the deflection <span>&#92;(u = 0&#92;)</span> when the string is not stretched by strumming, striking, etc.) Assume constant tension force <span>&#92;(&#92;tau&#92;)</span>, density <span>&#92;(&#92;rho&#92;)</span>, uniform cross-sectional area <span>&#92;(A&#92;)</span>, and small deflections <span>&#92;(u(x,t)&#92;)</span>.
 
-![Small section of string showing tension τ, angle θ(x), and deflection u(x,t)](/pics/390/390-ch2-string-diagram.png)
+![Small section of string showing tension τ, angle θ(x), and deflection u(x,t)](/pics/390/fig-string-diagram.png)
 
 Consider a small section of string of length <span>&#92;(&#92;Delta x&#92;)</span>. It has mass <span>&#92;(m = &#92;rho A &#92;Delta x&#92;)</span> and acceleration <span>&#92;(a = &#92;frac{&#92;partial^2 u(x,t)}{&#92;partial t^2}&#92;)</span>. In this case, the function <span>&#92;(u&#92;)</span> depends on both <span>&#92;(t&#92;)</span> and <span>&#92;(x&#92;)</span>. The notation <span>&#92;(&#92;frac{&#92;partial u}{&#92;partial t}&#92;)</span> means take the derivative of <span>&#92;(u&#92;)</span> with respect to <span>&#92;(t&#92;)</span>, regarding <span>&#92;(x&#92;)</span> as constant; and similarly for <span>&#92;(&#92;frac{&#92;partial u}{&#92;partial x}&#92;)</span>. Assume the only force on the stretched string is tension. The vertical component of the force due to tension is
 
@@ -274,57 +268,57 @@ From the boundary condition at <span>&#92;(x = 0&#92;)</span>, <span>&#92;(A = 0
 
 The equation (2.7) will have non-trivial solutions that satisfy the boundary conditions only if
 
-<span>&#92;[&#92;lambda_k = &#92;left(&#92;frac{&#92;pi k}{&#92;ell}&#92;right)^2, &#92;quad k = 1, 2, &#92;ldots&#92;]</span>
+<span>&#92;[&#92;lambda&#95;k = &#92;left(&#92;frac{&#92;pi k}{&#92;ell}&#92;right)^2, &#92;quad k = 1, 2, &#92;ldots&#92;]</span>
 
-The values <span>&#92;(-&#92;lambda_k = -&#92;left(&#92;frac{&#92;pi k}{&#92;ell}&#92;right)^2&#92;)</span> are called **eigenvalues**, and the corresponding
+The values <span>&#92;(-&#92;lambda&#95;k = -&#92;left(&#92;frac{&#92;pi k}{&#92;ell}&#92;right)^2&#92;)</span> are called **eigenvalues**, and the corresponding
 
-<span>&#92;[M_k(x) = &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
+<span>&#92;[M&#95;k(x) = &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
 
-are called **eigenfunctions**. Any constant multiple of <span>&#92;(M_k&#92;)</span> will also be a solution; the constant is set here to 1 for simplicity.
+are called **eigenfunctions**. Any constant multiple of <span>&#92;(M&#95;k&#92;)</span> will also be a solution; the constant is set here to 1 for simplicity.
 
 The differential equation for <span>&#92;(N&#92;)</span> (2.8) has solutions
 
-<span>&#92;[N(t) = A_k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B_k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;]</span>
+<span>&#92;[N(t) = A&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;]</span>
 
-for constants <span>&#92;(A_k&#92;)</span>, <span>&#92;(B_k&#92;)</span>.
+for constants <span>&#92;(A&#95;k&#92;)</span>, <span>&#92;(B&#95;k&#92;)</span>.
 
 From the calculations, each function of the form
 
-<span>&#92;[u_k(x,t) = &#92;left[A_k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B_k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
+<span>&#92;[u&#95;k(x,t) = &#92;left[A&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
 
 solves the wave equation and satisfies the boundary conditions. Since the wave equation is a linear equation, any sum of such terms also gives us a solution of the wave equation (2.2):
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty}&#92;left[A_k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B_k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right) &#92;tag{2.9}&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}&#92;left[A&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right) &#92;tag{2.9}&#92;]</span>
 
 solves the wave equation and satisfies the boundary conditions <span>&#92;(u(0,t) = 0&#92;)</span>, <span>&#92;(u(&#92;ell,t) = 0&#92;)</span>.
 
-In order for <span>&#92;(u&#92;)</span> to be a solution, constants <span>&#92;(A_k&#92;)</span>, <span>&#92;(B_k&#92;)</span> are needed so that the initial conditions (2.4) are satisfied. The constants <span>&#92;(A_k&#92;)</span> and <span>&#92;(B_k&#92;)</span> in (2.9) need to be chosen so that the initial conditions are satisfied:
+In order for <span>&#92;(u&#92;)</span> to be a solution, constants <span>&#92;(A&#95;k&#92;)</span>, <span>&#92;(B&#95;k&#92;)</span> are needed so that the initial conditions (2.4) are satisfied. The constants <span>&#92;(A&#95;k&#92;)</span> and <span>&#92;(B&#95;k&#92;)</span> in (2.9) need to be chosen so that the initial conditions are satisfied:
 
-<span>&#92;[u(x,0) = f(x) = &#92;sum_{k=1}^{&#92;infty} A_k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right),&#92;]</span>
+<span>&#92;[u(x,0) = f(x) = &#92;sum&#95;{k=1}^{&#92;infty} A&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right),&#92;]</span>
 
-<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,0) = g(x) = &#92;sum_{k=1}^{&#92;infty} &#92;frac{c&#92;pi k}{&#92;ell} B_k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
+<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,0) = g(x) = &#92;sum&#95;{k=1}^{&#92;infty} &#92;frac{c&#92;pi k}{&#92;ell} B&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
 
 For initial conditions that are a finite linear combination of functions of the form <span>&#92;(&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;)</span>, this is straightforward. But to include more general initial conditions, arbitrary initial conditions such as the hat function need to be written as a sum of sine functions. It is not clear that this is possible.
 
-The eigenfunctions <span>&#92;(&#92;phi_k(x) = &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;)</span> are **orthogonal**:
+The eigenfunctions <span>&#92;(&#92;phi&#95;k(x) = &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;)</span> are **orthogonal**:
 
-<span>&#92;[&#92;int_0^{&#92;ell} &#92;phi_j(x)&#92;phi_k(x)&#92;,dx = &#92;begin{cases} &#92;frac{&#92;ell}{2} & j = k &#92;&#92; 0 & j &#92;neq k &#92;end{cases}.&#92;]</span>
+<span>&#92;[&#92;int&#95;0^{&#92;ell} &#92;phi&#95;j(x)&#92;phi&#95;k(x)&#92;,dx = &#92;begin{cases} &#92;frac{&#92;ell}{2} & j = k &#92;&#92; 0 & j &#92;neq k &#92;end{cases}.&#92;]</span>
 
 Thus multiply each side of
 
-<span>&#92;[f(x) = &#92;sum_{k=1}^{&#92;infty} A_k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
+<span>&#92;[f(x) = &#92;sum&#95;{k=1}^{&#92;infty} A&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
 
-by <span>&#92;(&#92;phi_j&#92;)</span> and integrate over <span>&#92;([0, &#92;ell]&#92;)</span> to obtain
+by <span>&#92;(&#92;phi&#95;j&#92;)</span> and integrate over <span>&#92;([0, &#92;ell]&#92;)</span> to obtain
 
-<span>&#92;[&#92;int_0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = A_j &#92;frac{&#92;ell}{2}&#92;]</span>
+<span>&#92;[&#92;int&#95;0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = A&#95;j &#92;frac{&#92;ell}{2}&#92;]</span>
 
 and so
 
-<span>&#92;[A_j = &#92;frac{2}{&#92;ell}&#92;int_0^{&#92;ell} f(x)&#92;sin&#92;left(j&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx. &#92;tag{2.10}&#92;]</span>
+<span>&#92;[A&#95;j = &#92;frac{2}{&#92;ell}&#92;int&#95;0^{&#92;ell} f(x)&#92;sin&#92;left(j&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx. &#92;tag{2.10}&#92;]</span>
 
 The series
 
-<span>&#92;[&#92;sum_{k=1}^{&#92;infty} A_k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right) &#92;tag{2.11}&#92;]</span>
+<span>&#92;[&#92;sum&#95;{k=1}^{&#92;infty} A&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right) &#92;tag{2.11}&#92;]</span>
 
 is the **Fourier sine series** for <span>&#92;(f&#92;)</span>.
 
@@ -332,58 +326,58 @@ is the **Fourier sine series** for <span>&#92;(f&#92;)</span>.
 
 Define the partial sums of the Fourier series of <span>&#92;(f&#92;)</span>:
 
-<span>&#92;[&#92;tilde{f}_N(t) = &#92;sum_{n=-N}^{N} A_k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
+<span>&#92;[&#92;tilde{f}&#95;N(t) = &#92;sum&#95;{n=-N}^{N} A&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
 
-where <span>&#92;(A_k&#92;)</span> are determined by (2.10).
+where <span>&#92;(A&#95;k&#92;)</span> are determined by (2.10).
 
 **Theorem 2.** *If <span>&#92;(f&#92;)</span> is piecewise smooth on <span>&#92;([0, &#92;ell]&#92;)</span> then at all points <span>&#92;(x &#92;in (0, &#92;ell)&#92;)</span> where <span>&#92;(f&#92;)</span> is continuous*
 
-<span>&#92;[&#92;lim_{N &#92;to &#92;infty} &#92;tilde{f}_N(x) = f(x).&#92;]</span>
+<span>&#92;[&#92;lim&#95;{N &#92;to &#92;infty} &#92;tilde{f}&#95;N(x) = f(x).&#92;]</span>
 
-*If <span>&#92;(f&#92;)</span> is not continuous at a point <span>&#92;(x_0&#92;)</span> then <span>&#92;(&#92;tilde{f}_N(x_0) &#92;to &#92;frac{f(x_0^-) + f(x_0^+)}{2}&#92;)</span>. Also,*
+*If <span>&#92;(f&#92;)</span> is not continuous at a point <span>&#92;(x&#95;0&#92;)</span> then <span>&#92;(&#92;tilde{f}&#95;N(x&#95;0) &#92;to &#92;frac{f(x&#95;0^-) + f(x&#95;0^+)}{2}&#92;)</span>. Also,*
 
-<span>&#92;[&#92;lim_{N &#92;to &#92;infty}&#92;int_0^{&#92;ell}|f(x) - &#92;tilde{f}_N(x)|^2&#92;,dx = 0.&#92;]</span>
+<span>&#92;[&#92;lim&#95;{N &#92;to &#92;infty}&#92;int&#95;0^{&#92;ell}|f(x) - &#92;tilde{f}&#95;N(x)|^2&#92;,dx = 0.&#92;]</span>
 
-Thus, for piecewise smooth functions, the Fourier series equals the function in the above sense. Also, the corresponding choices of coefficients <span>&#92;(A_k&#92;)</span>, <span>&#92;(B_k&#92;)</span> yield a function where the infinite sum (2.9) solves the wave equation. Thus, this method yields a solution to the wave equation satisfying boundary and initial conditions. This approach to solving a partial differential equation is known as the **Method of Separation of Variables**.
+Thus, for piecewise smooth functions, the Fourier series equals the function in the above sense. Also, the corresponding choices of coefficients <span>&#92;(A&#95;k&#92;)</span>, <span>&#92;(B&#95;k&#92;)</span> yield a function where the infinite sum (2.9) solves the wave equation. Thus, this method yields a solution to the wave equation satisfying boundary and initial conditions. This approach to solving a partial differential equation is known as the **Method of Separation of Variables**.
 
 **Example.** Calculate the Fourier sine series for <span>&#92;(f(x) = x&#92;)</span> on <span>&#92;([0, L]&#92;)</span>.
 
 The coefficients of the sine series for <span>&#92;(f(x)&#92;)</span> are
 
 <span>&#92;[&#92;begin{aligned}
-&#92;frac{L}{2}B_k &= &#92;int_0^L f(x)&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;,dx &#92;&#92;
-&= &#92;int_0^L x&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;,dx &#92;&#92;
-&= &#92;frac{L}{&#92;pi^2 k^2}&#92;left[L&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right) - k&#92;pi x&#92;cos&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;right]_0^L &#92;&#92;
-&= &#92;frac{L^2}{&#92;pi^2 k^2}&#92;left(&#92;underbrace{&#92;sin(k&#92;pi)}_{=0} - k&#92;pi&#92;underbrace{&#92;cos(k&#92;pi)}_{=(-1)^k}&#92;right) &#92;&#92;
+&#92;frac{L}{2}B&#95;k &= &#92;int&#95;0^L f(x)&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;,dx &#92;&#92;
+&= &#92;int&#95;0^L x&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;,dx &#92;&#92;
+&= &#92;frac{L}{&#92;pi^2 k^2}&#92;left[L&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right) - k&#92;pi x&#92;cos&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right)&#92;right]&#95;0^L &#92;&#92;
+&= &#92;frac{L^2}{&#92;pi^2 k^2}&#92;left(&#92;underbrace{&#92;sin(k&#92;pi)}&#95;{=0} - k&#92;pi&#92;underbrace{&#92;cos(k&#92;pi)}&#95;{=(-1)^k}&#92;right) &#92;&#92;
 &= &#92;frac{L^2}{&#92;pi^2 k^2}(-k&#92;pi)(-1)^k &#92;&#92;
 &= &#92;frac{L^2}{k&#92;pi}(-1)^{k+1}.
 &#92;end{aligned}&#92;]</span>
 
 Therefore,
 
-<span>&#92;[f(x) = &#92;frac{2L}{&#92;pi}&#92;sum_{n=1}^{&#92;infty}&#92;frac{(-1)^{k+1}}{k}&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right). &#92;tag{2.12}&#92;]</span>
+<span>&#92;[f(x) = &#92;frac{2L}{&#92;pi}&#92;sum&#95;{n=1}^{&#92;infty}&#92;frac{(-1)^{k+1}}{k}&#92;sin&#92;left(&#92;frac{k&#92;pi x}{L}&#92;right). &#92;tag{2.12}&#92;]</span>
 
 **Example:** Consider a **hat function** such as shown in Figure 2.3:
 
-<span>&#92;[f(x) = &#92;begin{cases} &#92;frac{x}{x_0} & 0 &#92;leq x < x_0 &#92;&#92; &#92;frac{&#92;ell - x}{&#92;ell - x_0} & x_0 &#92;leq x &#92;leq &#92;ell &#92;end{cases} &#92;tag{2.13}&#92;]</span>
+<span>&#92;[f(x) = &#92;begin{cases} &#92;frac{x}{x&#95;0} & 0 &#92;leq x < x&#95;0 &#92;&#92; &#92;frac{&#92;ell - x}{&#92;ell - x&#95;0} & x&#95;0 &#92;leq x &#92;leq &#92;ell &#92;end{cases} &#92;tag{2.13}&#92;]</span>
 
-The coefficients <span>&#92;(A_k&#92;)</span> in its Fourier sine series
+The coefficients <span>&#92;(A&#95;k&#92;)</span> in its Fourier sine series
 
-<span>&#92;[f(x) = &#92;sum_{k=1}^{&#92;infty} A_k &#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)&#92;]</span>
+<span>&#92;[f(x) = &#92;sum&#95;{k=1}^{&#92;infty} A&#95;k &#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)&#92;]</span>
 
 are, using the formula (2.10),
 
-<span>&#92;[A_k = &#92;frac{2}{&#92;ell}&#92;int_0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = &#92;frac{2&#92;ell^2}{&#92;pi^2 x_0(&#92;ell - x_0)}&#92;frac{&#92;sin&#92;left(k&#92;pi&#92;frac{x_0}{&#92;ell}&#92;right)}{k^2}. &#92;tag{2.14}&#92;]</span>
+<span>&#92;[A&#95;k = &#92;frac{2}{&#92;ell}&#92;int&#95;0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = &#92;frac{2&#92;ell^2}{&#92;pi^2 x&#95;0(&#92;ell - x&#95;0)}&#92;frac{&#92;sin&#92;left(k&#92;pi&#92;frac{x&#95;0}{&#92;ell}&#92;right)}{k^2}. &#92;tag{2.14}&#92;]</span>
 
 ## Summary and Some Vocabulary
 
 Using the above model, the deflection <span>&#92;(u(x,t)&#92;)</span> of a stretched string, fixed at each end, is
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty}&#92;underbrace{&#92;left[A_k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B_k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]}_{u_k(x,t)}&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right). &#92;tag{2.15}&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}&#92;underbrace{&#92;left[A&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]}&#95;{u&#95;k(x,t)}&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right). &#92;tag{2.15}&#92;]</span>
 
-The coefficients <span>&#92;(A_k&#92;)</span> and <span>&#92;(B_k&#92;)</span> are chosen so that the correct initial position and velocity is obtained.
+The coefficients <span>&#92;(A&#95;k&#92;)</span> and <span>&#92;(B&#95;k&#92;)</span> are chosen so that the correct initial position and velocity is obtained.
 
-The individual terms <span>&#92;(u_k&#92;)</span> are called the **modes of vibration** or **modes** of the response. Sometimes, just the spatial part
+The individual terms <span>&#92;(u&#95;k&#92;)</span> are called the **modes of vibration** or **modes** of the response. Sometimes, just the spatial part
 
 <span>&#92;[&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right)&#92;]</span>
 
@@ -391,34 +385,31 @@ is referred to as a mode. (Context indicates whether the transient behaviour or 
 
 The solution (2.15) shows that the sound of a vibrating string is the sum of multiple (in theory infinite) frequencies. The lowest frequency in the response is called the **fundamental frequency**. For a stretched string this is <span>&#92;(&#92;frac{&#92;pi c}{&#92;ell}&#92;)</span> rad/s or <span>&#92;(&#92;frac{&#92;pi c}{2&#92;pi&#92;ell}&#92;)</span> Hz. The frequencies above the fundamental frequency are called **overtones**. Note that the individual frequencies in the response are all integer multiples of the lowest frequency. These overtones are called **harmonics**.
 
-![Spectrogram of a guitar string showing harmonics as evenly spaced horizontal bands](/pics/390/390-ch2-spectrogram-07.png)
+![Schematic spectrogram of a guitar string showing harmonics as evenly spaced horizontal bands at integer multiples of the fundamental frequency f₀](/pics/390/fig-harmonics-guitar.png)
 
 ## Harmonics of Piano and Harpsichord
 
 The harmonics of the harpsichord and piano will be compared. The sound in both instruments is produced by vibrations in strings. However, in a harpsichord the string is plucked while in a piano the string is struck. Although the two instruments look superficially quite similar, the sound is quite different. Let's examine the mathematics of this.
 
-![A harpsichord made in the Flemish style (top) and a modern concert grand piano (bottom)](/pics/390/390-ch2-harpsichord.png)
-
-![Inside of a grand piano](/pics/390/390-ch2-piano-inside.png)
 
 ### Harpsichord
 
 When one of the keys on the harpsichord's keyboard is depressed, a mechanism protecting the string pops up, a device plucks the string, and then the mechanism falls back so that the string is only plucked once per keyboard strike. Therefore, the initial position of the string is described by the **hat function**
 
-<span>&#92;[f(x) = &#92;begin{cases} &#92;frac{x}{x_0} & 0 &#92;leq x < x_0 &#92;&#92; &#92;frac{&#92;ell - x}{&#92;ell - x_0} & x_0 &#92;leq x &#92;leq &#92;ell &#92;end{cases} &#92;tag{2.16}&#92;]</span>
+<span>&#92;[f(x) = &#92;begin{cases} &#92;frac{x}{x&#95;0} & 0 &#92;leq x < x&#95;0 &#92;&#92; &#92;frac{&#92;ell - x}{&#92;ell - x&#95;0} & x&#95;0 &#92;leq x &#92;leq &#92;ell &#92;end{cases} &#92;tag{2.16}&#92;]</span>
 
 <span>&#92;(f(x)&#92;)</span>, shown in Figure 2.3, while the string has a zero initial velocity. The coefficients of the Fourier sine series of <span>&#92;(f(x)&#92;)</span> were calculated above (see (2.14)) as
 
-<span>&#92;[A_k = &#92;frac{2}{&#92;ell}&#92;int_0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = &#92;frac{2&#92;ell^2}{&#92;pi^2 x_0(&#92;ell - x_0)}&#92;frac{&#92;sin&#92;left(k&#92;pi&#92;frac{x_0}{&#92;ell}&#92;right)}{k^2}.&#92;]</span>
+<span>&#92;[A&#95;k = &#92;frac{2}{&#92;ell}&#92;int&#95;0^{&#92;ell} f(x)&#92;sin&#92;left(k&#92;pi&#92;frac{x}{&#92;ell}&#92;right)dx = &#92;frac{2&#92;ell^2}{&#92;pi^2 x&#95;0(&#92;ell - x&#95;0)}&#92;frac{&#92;sin&#92;left(k&#92;pi&#92;frac{x&#95;0}{&#92;ell}&#92;right)}{k^2}.&#92;]</span>
 
 Thus, with initial conditions <span>&#92;(u(x,0) = f(x)&#92;)</span> and <span>&#92;(&#92;frac{&#92;partial u}{&#92;partial x}(x,0) = 0&#92;)</span>, the deflection of a string (see (2.15)) is
 
-<span>&#92;[u_p(x,t) = &#92;sum_{k=1}^{&#92;infty} A_k &#92;cos&#92;left(&#92;frac{k&#92;pi ct}{&#92;ell}&#92;right)&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right). &#92;tag{2.17}&#92;]</span>
+<span>&#92;[u&#95;p(x,t) = &#92;sum&#95;{k=1}^{&#92;infty} A&#95;k &#92;cos&#92;left(&#92;frac{k&#92;pi ct}{&#92;ell}&#92;right)&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right). &#92;tag{2.17}&#92;]</span>
 
-Since the coefficients <span>&#92;(A_k&#92;)</span> depend on the point <span>&#92;(x_0&#92;)</span> at which the string is plucked, this implies that the sound of a plucked stringed instrument (guitar, harp, harpsichord, and others) depends heavily on the position at which the string is plucked. This is why some harpsichords employ a mechanism (called a stop) to pluck the strings at different lengths away from the keyboard. This changes the sound of the instrument. Notice in particular that if <span>&#92;(x_0 = &#92;frac{&#92;ell}{2}&#92;)</span>,
+Since the coefficients <span>&#92;(A&#95;k&#92;)</span> depend on the point <span>&#92;(x&#95;0&#92;)</span> at which the string is plucked, this implies that the sound of a plucked stringed instrument (guitar, harp, harpsichord, and others) depends heavily on the position at which the string is plucked. This is why some harpsichords employ a mechanism (called a stop) to pluck the strings at different lengths away from the keyboard. This changes the sound of the instrument. Notice in particular that if <span>&#92;(x&#95;0 = &#92;frac{&#92;ell}{2}&#92;)</span>,
 
 <span>&#92;[&#92;begin{aligned}
-A_{2k} &= &#92;frac{2L^2}{&#92;pi^2 x_0(L - x_0)}&#92;frac{&#92;sin&#92;left(&#92;frac{(2k)&#92;pi x_0}{L}&#92;right)}{(2k)^2} &#92;&#92;
+A&#95;{2k} &= &#92;frac{2L^2}{&#92;pi^2 x&#95;0(L - x&#95;0)}&#92;frac{&#92;sin&#92;left(&#92;frac{(2k)&#92;pi x&#95;0}{L}&#92;right)}{(2k)^2} &#92;&#92;
 &= &#92;frac{2L^2}{&#92;pi^2 &#92;frac{L}{2}(L - &#92;frac{L}{2})}&#92;frac{&#92;sin&#92;left(&#92;frac{(2k)&#92;pi&#92;frac{L}{2}}{L}&#92;right)}{(2k)^2} &#92;&#92;
 &= &#92;frac{2}{&#92;pi^2}&#92;frac{&#92;sin(k&#92;pi)}{k^2} &#92;&#92;
 &= 0,
@@ -430,83 +421,83 @@ since <span>&#92;(&#92;sin(k&#92;pi) = 0&#92;)</span> for <span>&#92;(k &#92;in 
 
 In a piano, the taut string lies flat, and a hammer strikes the string when a key is depressed. From this, we gather that the initial position of the string is zero, but when the hammer strikes the string, its initial velocity is non-zero. When the string is struck by the hammer, the graph of its initial velocity takes the shape of the hat function <span>&#92;(f(x)&#92;)</span> shown in Figure 2.3 and defined in (2.16).
 
-Since the initial position is the zero function, <span>&#92;(A_k = 0&#92;)</span> for all <span>&#92;(k&#92;)</span> in the expression for the deflections (2.15). Term-by-term differentiation of (2.15) yields
+Since the initial position is the zero function, <span>&#92;(A&#95;k = 0&#92;)</span> for all <span>&#92;(k&#92;)</span> in the expression for the deflections (2.15). Term-by-term differentiation of (2.15) yields
 
-<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,t) = &#92;sum_{k=1}^{&#92;infty}&#92;frac{&#92;pi k c}{&#92;ell}&#92;left[-A_k&#92;sin&#92;left(&#92;frac{&#92;pi k ct}{&#92;ell}&#92;right) + B_k&#92;cos&#92;left(&#92;frac{&#92;pi k ct}{&#92;ell}&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right).&#92;]</span>
+<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}&#92;frac{&#92;pi k c}{&#92;ell}&#92;left[-A&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k ct}{&#92;ell}&#92;right) + B&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k ct}{&#92;ell}&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right).&#92;]</span>
 
-and since <span>&#92;(A_k = 0&#92;)</span>,
+and since <span>&#92;(A&#95;k = 0&#92;)</span>,
 
-<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,0) = f(x) = &#92;sum_{k=1}^{&#92;infty}&#92;frac{&#92;pi k c}{&#92;ell}B_k&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right). &#92;tag{2.18}&#92;]</span>
+<span>&#92;[&#92;frac{&#92;partial u}{&#92;partial t}(x,0) = f(x) = &#92;sum&#95;{k=1}^{&#92;infty}&#92;frac{&#92;pi k c}{&#92;ell}B&#95;k&#92;sin&#92;left(&#92;frac{k&#92;pi x}{&#92;ell}&#92;right). &#92;tag{2.18}&#92;]</span>
 
-Solving for <span>&#92;(B_k&#92;)</span> and using the Fourier series for the hat function calculated in (2.14),
+Solving for <span>&#92;(B&#95;k&#92;)</span> and using the Fourier series for the hat function calculated in (2.14),
 
 <span>&#92;[&#92;begin{aligned}
-B_k &= A_k &#92;frac{&#92;ell}{&#92;pi k c} &#92;&#92;
-&= &#92;frac{2&#92;ell^3}{&#92;pi^3 c x_0(&#92;ell - x_0)}&#92;frac{&#92;sin&#92;left(&#92;frac{k&#92;pi x_0}{&#92;ell}&#92;right)}{k^3}.
+B&#95;k &= A&#95;k &#92;frac{&#92;ell}{&#92;pi k c} &#92;&#92;
+&= &#92;frac{2&#92;ell^3}{&#92;pi^3 c x&#95;0(&#92;ell - x&#95;0)}&#92;frac{&#92;sin&#92;left(&#92;frac{k&#92;pi x&#95;0}{&#92;ell}&#92;right)}{k^3}.
 &#92;end{aligned}&#92;]</span>
 
 Thus, with initial conditions <span>&#92;(u(x,0) = 0&#92;)</span> and <span>&#92;(&#92;frac{&#92;partial u}{&#92;partial x}(x,0) = f(x)&#92;)</span>, the deflection of a string (see (2.15)) is
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty} B_k &#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty} B&#95;k &#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
 
 ### Comparison
 
-The Fourier coefficients <span>&#92;(A_k&#92;)</span> of the harpsichord vanish as <span>&#92;(A_k &#92;propto &#92;frac{1}{k^2}&#92;)</span>, while the piano's harmonics vanish as <span>&#92;(B_k &#92;propto &#92;frac{1}{k^3}&#92;)</span>. This says that the harpsichord retains more of its higher harmonics than the piano, hence contributing to the vast difference in tone between the two string instruments, simply because of how the strings are sounded (plucked vs struck).
+The Fourier coefficients <span>&#92;(A&#95;k&#92;)</span> of the harpsichord vanish as <span>&#92;(A&#95;k &#92;propto &#92;frac{1}{k^2}&#92;)</span>, while the piano's harmonics vanish as <span>&#92;(B&#95;k &#92;propto &#92;frac{1}{k^3}&#92;)</span>. This says that the harpsichord retains more of its higher harmonics than the piano, hence contributing to the vast difference in tone between the two string instruments, simply because of how the strings are sounded (plucked vs struck).
 
 ## Modes of Vibration
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty}&#92;left[A_k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B_k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}&#92;left[A&#95;k&#92;cos&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right) + B&#95;k&#92;sin&#92;left(&#92;frac{&#92;pi k c}{&#92;ell}t&#92;right)&#92;right]&#92;sin&#92;left(&#92;frac{&#92;pi k}{&#92;ell}x&#92;right).&#92;]</span>
 
-The individual terms <span>&#92;(u_k&#92;)</span> are the **modes of vibration** of the response. For a vibrating string with fixed ends, each mode of vibration is
+The individual terms <span>&#92;(u&#95;k&#92;)</span> are the **modes of vibration** of the response. For a vibrating string with fixed ends, each mode of vibration is
 
-<span>&#92;[u_k(x,t) = (A_k&#92;cos(&#92;omega_k t) + B_k&#92;sin(&#92;omega_k t))&#92;sin&#92;left(&#92;frac{&#92;omega_k}{c}x&#92;right)&#92;]</span>
+<span>&#92;[u&#95;k(x,t) = (A&#95;k&#92;cos(&#92;omega&#95;k t) + B&#95;k&#92;sin(&#92;omega&#95;k t))&#92;sin&#92;left(&#92;frac{&#92;omega&#95;k}{c}x&#92;right)&#92;]</span>
 
 Defining
 
-<span>&#92;[M_k = &#92;sqrt{A_k^2 + B_k^2}, &#92;quad &#92;sin&#92;phi_k = &#92;frac{A_k}{&#92;sqrt{A_k^2 + B_k^2}}, &#92;quad &#92;cos&#92;phi_k = &#92;frac{B_k}{&#92;sqrt{A_k^2 + B_k^2}},&#92;]</span>
+<span>&#92;[M&#95;k = &#92;sqrt{A&#95;k^2 + B&#95;k^2}, &#92;quad &#92;sin&#92;phi&#95;k = &#92;frac{A&#95;k}{&#92;sqrt{A&#95;k^2 + B&#95;k^2}}, &#92;quad &#92;cos&#92;phi&#95;k = &#92;frac{B&#95;k}{&#92;sqrt{A&#95;k^2 + B&#95;k^2}},&#92;]</span>
 
-<span>&#92;[u_k(x,t) = M_k&#92;sin(&#92;omega_k t + &#92;phi_k)&#92;sin&#92;left(&#92;frac{&#92;omega_k}{c}x&#92;right)&#92;]</span>
+<span>&#92;[u&#95;k(x,t) = M&#95;k&#92;sin(&#92;omega&#95;k t + &#92;phi&#95;k)&#92;sin&#92;left(&#92;frac{&#92;omega&#95;k}{c}x&#92;right)&#92;]</span>
 
 The maximum amplitude of each mode is constant with time. The **mode shapes** for a vibrating string where deflection <span>&#92;(u = 0&#92;)</span> at each end are
 
-<span>&#92;[&#92;sin&#92;left(&#92;frac{&#92;omega_k}{c}x&#92;right).&#92;]</span>
+<span>&#92;[&#92;sin&#92;left(&#92;frac{&#92;omega&#95;k}{c}x&#92;right).&#92;]</span>
 
 In a vibrating string, for each mode of vibration beyond the first mode, there are point(s) <span>&#92;(0 < x < &#92;ell&#92;)</span> where the deflection is 0 at all time. Such points are called **nodes**. The first seven modes are illustrated in Figure 2.8.
 
-![The first seven modes of the vibrating string of length ℓ, showing nodes at L/2, L/3, L/4, etc.](/pics/390/390-ch2-modes-diagram.png)
+![The first seven mode shapes sin(kπx/ℓ) of the vibrating string, with nodes marked as dots](/pics/390/fig-modes.png)
 
 # Chapter 3: Wind Instruments
 
 The sound in many instruments, such as the clarinet and flute, is made by blowing air into the instrument. Here we consider models where the instrument can be treated as a cylinder much longer than it is wide, so that only one space dimension needs to be considered. This assumption is reasonable for clarinets and flutes.
 
-Consider particles at position <span>&#92;(x&#92;)</span> when undisturbed and denote displacement from the "usual" location <span>&#92;(x&#92;)</span> by <span>&#92;(u(x,t)&#92;)</span>. (Think of a slinky.) Denote similarly pressure <span>&#92;(P(x,t)&#92;)</span>, density <span>&#92;(&#92;rho(x,t)&#92;)</span>. Let <span>&#92;(P_0 = 0&#92;)</span> be the pressure of the undisturbed air and <span>&#92;(&#92;rho_0&#92;)</span> the density. Assume that only motion in the <span>&#92;(x&#92;)</span>-direction is present; then from Newton's Law on a section <span>&#92;([x, x + &#92;Delta x]&#92;)</span>, letting cross-sectional area be <span>&#92;(A&#92;)</span>,
+Consider particles at position <span>&#92;(x&#92;)</span> when undisturbed and denote displacement from the "usual" location <span>&#92;(x&#92;)</span> by <span>&#92;(u(x,t)&#92;)</span>. (Think of a slinky.) Denote similarly pressure <span>&#92;(P(x,t)&#92;)</span>, density <span>&#92;(&#92;rho(x,t)&#92;)</span>. Let <span>&#92;(P&#95;0 = 0&#92;)</span> be the pressure of the undisturbed air and <span>&#92;(&#92;rho&#95;0&#92;)</span> the density. Assume that only motion in the <span>&#92;(x&#92;)</span>-direction is present; then from Newton's Law on a section <span>&#92;([x, x + &#92;Delta x]&#92;)</span>, letting cross-sectional area be <span>&#92;(A&#92;)</span>,
 
 <span>&#92;[&#92;begin{aligned}
 ma &= F &#92;&#92;
-&#92;rho_0 A(x)&#92;Delta x &#92;frac{&#92;partial^2 u}{&#92;partial t^2} &= A(x)P(x,t) - A(x + &#92;Delta x)P(x + &#92;Delta x, t)
+&#92;rho&#95;0 A(x)&#92;Delta x &#92;frac{&#92;partial^2 u}{&#92;partial t^2} &= A(x)P(x,t) - A(x + &#92;Delta x)P(x + &#92;Delta x, t)
 &#92;end{aligned}&#92;]</span>
 
 Assume cross-sectional area <span>&#92;(A&#92;)</span> is constant and divide through by <span>&#92;(A&#92;Delta x&#92;)</span>:
 
-<span>&#92;[&#92;rho_0 &#92;frac{&#92;partial^2 u}{&#92;partial t^2} = -&#92;frac{P(x + &#92;Delta x, t) - P(x,t)}{&#92;Delta x}.&#92;]</span>
+<span>&#92;[&#92;rho&#95;0 &#92;frac{&#92;partial^2 u}{&#92;partial t^2} = -&#92;frac{P(x + &#92;Delta x, t) - P(x,t)}{&#92;Delta x}.&#92;]</span>
 
 Taking the limit as <span>&#92;(&#92;Delta x &#92;to 0&#92;)</span> yields
 
-<span>&#92;[&#92;rho_0 &#92;frac{&#92;partial^2 u}{&#92;partial t^2} = -&#92;frac{&#92;partial P(x,t)}{&#92;partial x}. &#92;tag{3.1}&#92;]</span>
+<span>&#92;[&#92;rho&#95;0 &#92;frac{&#92;partial^2 u}{&#92;partial t^2} = -&#92;frac{&#92;partial P(x,t)}{&#92;partial x}. &#92;tag{3.1}&#92;]</span>
 
-An equation in only one variable is needed. Write <span>&#92;(P'(&#92;rho) = &#92;frac{&#92;partial P}{&#92;partial &#92;rho}&#92;)</span>. Then the linear approximation to <span>&#92;(P&#92;)</span> as a function of <span>&#92;(&#92;rho&#92;)</span> is, recalling that <span>&#92;(P(&#92;rho_0) = P_0 = 0&#92;)</span>,
+An equation in only one variable is needed. Write <span>&#92;(P'(&#92;rho) = &#92;frac{&#92;partial P}{&#92;partial &#92;rho}&#92;)</span>. Then the linear approximation to <span>&#92;(P&#92;)</span> as a function of <span>&#92;(&#92;rho&#92;)</span> is, recalling that <span>&#92;(P(&#92;rho&#95;0) = P&#95;0 = 0&#92;)</span>,
 
-<span>&#92;[P(&#92;rho) &#92;approx P'(&#92;rho_0)(&#92;rho - &#92;rho_0). &#92;tag{3.2}&#92;]</span>
+<span>&#92;[P(&#92;rho) &#92;approx P'(&#92;rho&#95;0)(&#92;rho - &#92;rho&#95;0). &#92;tag{3.2}&#92;]</span>
 
 Also, since <span>&#92;(&#92;rho = &#92;frac{&#92;text{Mass}}{&#92;text{Volume}}&#92;)</span>,
 
-<span>&#92;[&#92;rho(x,t) = &#92;frac{&#92;rho_0 A&#92;Delta x}{A(x + &#92;Delta x + u(x+&#92;Delta x, t) - (x + u(x,t)))} = &#92;frac{&#92;rho_0}{1 + &#92;frac{u(x+&#92;Delta x,t) - u(x,t)}{&#92;Delta x}}.&#92;]</span>
+<span>&#92;[&#92;rho(x,t) = &#92;frac{&#92;rho&#95;0 A&#92;Delta x}{A(x + &#92;Delta x + u(x+&#92;Delta x, t) - (x + u(x,t)))} = &#92;frac{&#92;rho&#95;0}{1 + &#92;frac{u(x+&#92;Delta x,t) - u(x,t)}{&#92;Delta x}}.&#92;]</span>
 
-Taking the limit as <span>&#92;(&#92;Delta x &#92;to 0&#92;)</span>, <span>&#92;(&#92;rho(x,t) = &#92;rho_0(1 + &#92;frac{&#92;partial u}{&#92;partial x})^{-1} &#92;approx &#92;rho_0(1 - &#92;frac{&#92;partial u}{&#92;partial x})&#92;)</span>. Substituting into (3.2) yields
+Taking the limit as <span>&#92;(&#92;Delta x &#92;to 0&#92;)</span>, <span>&#92;(&#92;rho(x,t) = &#92;rho&#95;0(1 + &#92;frac{&#92;partial u}{&#92;partial x})^{-1} &#92;approx &#92;rho&#95;0(1 - &#92;frac{&#92;partial u}{&#92;partial x})&#92;)</span>. Substituting into (3.2) yields
 
-<span>&#92;[P(x,t) &#92;approx -P'(&#92;rho_0)&#92;rho_0 &#92;frac{&#92;partial u}{&#92;partial x}. &#92;tag{3.3}&#92;]</span>
+<span>&#92;[P(x,t) &#92;approx -P'(&#92;rho&#95;0)&#92;rho&#95;0 &#92;frac{&#92;partial u}{&#92;partial x}. &#92;tag{3.3}&#92;]</span>
 
-Substitute (3.3) into (3.1) to obtain, after dividing by <span>&#92;(&#92;rho_0&#92;)</span> and defining <span>&#92;(c^2 = P'(&#92;rho_0)&#92;)</span>,
+Substitute (3.3) into (3.1) to obtain, after dividing by <span>&#92;(&#92;rho&#95;0&#92;)</span> and defining <span>&#92;(c^2 = P'(&#92;rho&#95;0)&#92;)</span>,
 
 <span>&#92;[&#92;frac{&#92;partial^2 u(x,t)}{&#92;partial t^2} = c^2 &#92;frac{&#92;partial^2 u(x,t)}{&#92;partial x^2}. &#92;tag{3.4}&#92;]</span>
 
@@ -516,7 +507,7 @@ The constant <span>&#92;(c&#92;)</span> in equation (3.4) is the **speed of soun
 
 ## Flute
 
-A flute is essentially a long open tube with constant cross-sectional area, so equation (3.4) applies. Both ends are open, so the pressure <span>&#92;(P(x,t) = P_0 = 0&#92;)</span> at the ends. Using (3.3) this yields the boundary conditions, for a flute of length <span>&#92;(&#92;ell&#92;)</span>,
+A flute is essentially a long open tube with constant cross-sectional area, so equation (3.4) applies. Both ends are open, so the pressure <span>&#92;(P(x,t) = P&#95;0 = 0&#92;)</span> at the ends. Using (3.3) this yields the boundary conditions, for a flute of length <span>&#92;(&#92;ell&#92;)</span>,
 
 <span>&#92;[&#92;frac{&#92;partial u}{&#92;partial x}(0,t) = 0, &#92;quad &#92;frac{&#92;partial u}{&#92;partial x}(&#92;ell,t) = 0. &#92;tag{3.5}&#92;]</span>
 
@@ -524,19 +515,19 @@ Since (3.4) is the same equation as studied previously for a vibrating string, t
 
 <span>&#92;[&#92;frac{N''(t)}{c^2 N(t)} = &#92;frac{M''(x)}{M(x)} = -&#92;lambda.&#92;]</span>
 
-This yields the differential equation <span>&#92;(M''(x) + &#92;lambda M(x) = 0&#92;)</span>, and so with arbitrary constants <span>&#92;(c_1&#92;)</span>, <span>&#92;(c_2&#92;)</span>,
+This yields the differential equation <span>&#92;(M''(x) + &#92;lambda M(x) = 0&#92;)</span>, and so with arbitrary constants <span>&#92;(c&#95;1&#92;)</span>, <span>&#92;(c&#95;2&#92;)</span>,
 
-<span>&#92;[M(x) = c_1&#92;cos(&#92;sqrt{&#92;lambda}&#92;,x) + c_2&#92;sin(&#92;sqrt{&#92;lambda}&#92;,x).&#92;]</span>
+<span>&#92;[M(x) = c&#95;1&#92;cos(&#92;sqrt{&#92;lambda}&#92;,x) + c&#95;2&#92;sin(&#92;sqrt{&#92;lambda}&#92;,x).&#92;]</span>
 
-But to satisfy the boundary conditions (3.5), <span>&#92;(M'(0) = 0&#92;)</span> and <span>&#92;(M'(&#92;ell) = 0&#92;)</span>, so <span>&#92;(c_2 = 0&#92;)</span> and <span>&#92;(&#92;sqrt{&#92;lambda}&#92;,&#92;ell = k&#92;pi&#92;)</span> for <span>&#92;(k = 0, 1, 2, &#92;ldots&#92;)</span> Thus
+But to satisfy the boundary conditions (3.5), <span>&#92;(M'(0) = 0&#92;)</span> and <span>&#92;(M'(&#92;ell) = 0&#92;)</span>, so <span>&#92;(c&#95;2 = 0&#92;)</span> and <span>&#92;(&#92;sqrt{&#92;lambda}&#92;,&#92;ell = k&#92;pi&#92;)</span> for <span>&#92;(k = 0, 1, 2, &#92;ldots&#92;)</span> Thus
 
-<span>&#92;[M(x) = c_1&#92;cos&#92;left(&#92;frac{k&#92;pi}{&#92;ell}x&#92;right).&#92;]</span>
+<span>&#92;[M(x) = c&#95;1&#92;cos&#92;left(&#92;frac{k&#92;pi}{&#92;ell}x&#92;right).&#92;]</span>
 
-Defining <span>&#92;(&#92;omega_k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;)</span>, the time equation <span>&#92;(N''(t) + &#92;omega_k^2 N(t) = 0&#92;)</span> has general solution <span>&#92;(N(t) = A_k&#92;cos(&#92;omega_k t) + B_k&#92;sin(&#92;omega_k t)&#92;)</span>. The full solution is
+Defining <span>&#92;(&#92;omega&#95;k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;)</span>, the time equation <span>&#92;(N''(t) + &#92;omega&#95;k^2 N(t) = 0&#92;)</span> has general solution <span>&#92;(N(t) = A&#95;k&#92;cos(&#92;omega&#95;k t) + B&#95;k&#92;sin(&#92;omega&#95;k t)&#92;)</span>. The full solution is
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty}(A_k&#92;cos(&#92;omega_k t) + B_k&#92;sin(&#92;omega_k t))&#92;cos&#92;left(&#92;frac{&#92;omega_k}{c}x&#92;right), &#92;quad &#92;omega_k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}(A&#95;k&#92;cos(&#92;omega&#95;k t) + B&#95;k&#92;sin(&#92;omega&#95;k t))&#92;cos&#92;left(&#92;frac{&#92;omega&#95;k}{c}x&#92;right), &#92;quad &#92;omega&#95;k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;]</span>
 
-where <span>&#92;(A_k&#92;)</span>, <span>&#92;(B_k&#92;)</span> are chosen so initial conditions are satisfied. The **fundamental frequency** is the lowest frequency present:
+where <span>&#92;(A&#95;k&#92;)</span>, <span>&#92;(B&#95;k&#92;)</span> are chosen so initial conditions are satisfied. The **fundamental frequency** is the lowest frequency present:
 
 <span>&#92;[&#92;frac{&#92;pi c}{&#92;ell} &#92;text{ rad/s}, &#92;quad &#92;frac{c}{2&#92;ell} &#92;text{ Hz}.&#92;]</span>
 
@@ -552,9 +543,9 @@ Length clearly corresponds to pitch. The errors, which are more significant for 
 
 Different notes can be produced by opening and covering various holes, thus changing the effective length of the instrument. This is the case for many woodwind instruments, such as oboe, clarinet, saxophone, and flute. On the flute and many other instruments, different notes are also produced, without changing the fingering, by exciting various overtones or resonant frequencies of the instrument.
 
-The analysis predicts that the frequencies <span>&#92;(&#92;omega_k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;)</span> are present. Writing the fundamental at <span>&#92;(&#92;omega_1&#92;)</span>, the overtones are integer multiples of the fundamental:
+The analysis predicts that the frequencies <span>&#92;(&#92;omega&#95;k = &#92;frac{k&#92;pi c}{&#92;ell}&#92;)</span> are present. Writing the fundamental at <span>&#92;(&#92;omega&#95;1&#92;)</span>, the overtones are integer multiples of the fundamental:
 
-<span>&#92;[&#92;omega_2 = 2&#92;omega_1, &#92;quad &#92;omega_3 = 3&#92;omega_1, &#92;ldots&#92;]</span>
+<span>&#92;[&#92;omega&#95;2 = 2&#92;omega&#95;1, &#92;quad &#92;omega&#95;3 = 3&#92;omega&#95;1, &#92;ldots&#92;]</span>
 
 Overtones that occur as integer multiples of the fundamental are also called **harmonics**.
 
@@ -574,17 +565,17 @@ Sound is produced by vibration of the reed against the mouthpiece and pressure a
 
 Separation of variables again is used to solve the wave equation, but now the spatial function <span>&#92;(M&#92;)</span> must satisfy <span>&#92;(M''(x) + &#92;lambda M(x) = 0&#92;)</span> with <span>&#92;(M(0) = 0&#92;)</span>, <span>&#92;(M'(&#92;ell) = 0&#92;)</span>. Solving yields
 
-<span>&#92;[M(x) = c_2&#92;sin(&#92;sqrt{&#92;lambda_k}&#92;,x)&#92;]</span>
+<span>&#92;[M(x) = c&#95;2&#92;sin(&#92;sqrt{&#92;lambda&#95;k}&#92;,x)&#92;]</span>
 
-where <span>&#92;(&#92;sqrt{&#92;lambda_k} = (k - &#92;frac{1}{2})&#92;frac{&#92;pi}{&#92;ell} = &#92;frac{(2k-1)&#92;pi}{2&#92;ell}&#92;)</span>, <span>&#92;(k = 1, 2, &#92;ldots&#92;)</span> so that <span>&#92;(M'(&#92;ell) = 0&#92;)</span>.
+where <span>&#92;(&#92;sqrt{&#92;lambda&#95;k} = (k - &#92;frac{1}{2})&#92;frac{&#92;pi}{&#92;ell} = &#92;frac{(2k-1)&#92;pi}{2&#92;ell}&#92;)</span>, <span>&#92;(k = 1, 2, &#92;ldots&#92;)</span> so that <span>&#92;(M'(&#92;ell) = 0&#92;)</span>.
 
-Defining <span>&#92;(&#92;omega_k = &#92;sqrt{&#92;lambda_k}&#92;,c = &#92;frac{(2k-1)&#92;pi c}{2&#92;ell}&#92;)</span>, the solution is
+Defining <span>&#92;(&#92;omega&#95;k = &#92;sqrt{&#92;lambda&#95;k}&#92;,c = &#92;frac{(2k-1)&#92;pi c}{2&#92;ell}&#92;)</span>, the solution is
 
-<span>&#92;[u(x,t) = &#92;sum_{k=1}^{&#92;infty}(A_k&#92;cos(&#92;omega_k t) + B_k&#92;sin(&#92;omega_k t))&#92;sin&#92;left(&#92;frac{&#92;omega_k}{c}x&#92;right)&#92;]</span>
+<span>&#92;[u(x,t) = &#92;sum&#95;{k=1}^{&#92;infty}(A&#95;k&#92;cos(&#92;omega&#95;k t) + B&#95;k&#92;sin(&#92;omega&#95;k t))&#92;sin&#92;left(&#92;frac{&#92;omega&#95;k}{c}x&#92;right)&#92;]</span>
 
 The predicted fundamental frequency is
 
-<span>&#92;[&#92;omega_1 = &#92;sqrt{&#92;lambda_1}&#92;,c = &#92;frac{&#92;pi c}{2&#92;ell} = &#92;frac{c}{4&#92;ell} &#92;text{ Hz}&#92;]</span>
+<span>&#92;[&#92;omega&#95;1 = &#92;sqrt{&#92;lambda&#95;1}&#92;,c = &#92;frac{&#92;pi c}{2&#92;ell} = &#92;frac{c}{4&#92;ell} &#92;text{ Hz}&#92;]</span>
 
 | Instrument | Length (m) | Theo. pitch (Hz) | Actual pitch (Hz) |
 |---|---|---|---|
@@ -598,13 +589,13 @@ Two key observations:
 - The fundamental of the tube with one end closed is half that of the open tube, as predicted by theory.
 - The clarinet is about the same length as a flute but the fundamental frequency is nearly half that of a flute.
 
-The analysis predicts that the frequencies <span>&#92;(&#92;omega_k = &#92;frac{(2k-1)c}{4&#92;ell}&#92;)</span> are present. Writing the fundamental at <span>&#92;(&#92;omega_1 = &#92;frac{c}{4&#92;ell}&#92;)</span>:
+The analysis predicts that the frequencies <span>&#92;(&#92;omega&#95;k = &#92;frac{(2k-1)c}{4&#92;ell}&#92;)</span> are present. Writing the fundamental at <span>&#92;(&#92;omega&#95;1 = &#92;frac{c}{4&#92;ell}&#92;)</span>:
 
-<span>&#92;[&#92;omega_2 = 3&#92;omega_1, &#92;quad &#92;omega_3 = 5&#92;omega_1, &#92;ldots&#92;]</span>
+<span>&#92;[&#92;omega&#95;2 = 3&#92;omega&#95;1, &#92;quad &#92;omega&#95;3 = 5&#92;omega&#95;1, &#92;ldots&#92;]</span>
 
 Although these overtones are harmonics, **only the odd harmonics are present**. This is reflected in the spectrogram of a clarinet.
 
-![Spectrogram of note A4 (440Hz) on a clarinet. The first overtone occurs at 3 times the fundamental, as predicted by the theory.](/pics/390/390-ch3-clarinet-spectrogram-a4-6.png)
+![Schematic spectrogram of clarinet A4 (440Hz) showing only odd harmonics present. Even harmonics (2f₀, 4f₀, 6f₀) are absent, as predicted by the closed-open tube theory.](/pics/390/fig-harmonics-clarinet.png)
 
 ## Vocabulary
 
@@ -669,7 +660,7 @@ Since there are 3 variables, try <span>&#92;(u(r, &#92;theta, t) = R(r)&#92;Thet
 
 since <span>&#92;(t&#92;)</span>, <span>&#92;(r&#92;)</span>, <span>&#92;(&#92;theta&#92;)</span> are independent. This gives <span>&#92;(T'' + c^2&#92;lambda^2 T = 0&#92;)</span>, the same oscillator equation obtained previously, so
 
-<span>&#92;[T(t) = A_n&#92;cos(c&#92;lambda t) + B_n&#92;sin(c&#92;lambda t).&#92;]</span>
+<span>&#92;[T(t) = A&#95;n&#92;cos(c&#92;lambda t) + B&#95;n&#92;sin(c&#92;lambda t).&#92;]</span>
 
 Rearranging (4.1),
 
@@ -685,37 +676,37 @@ The equation for <span>&#92;(&#92;Theta&#92;)</span> is the oscillator equation.
 
 ## Bessel Functions
 
-The equation for <span>&#92;(R&#92;)</span> is a new differential equation. Any solution has the form, for constants <span>&#92;(D_n&#92;)</span>, <span>&#92;(E_n&#92;)</span>,
+The equation for <span>&#92;(R&#92;)</span> is a new differential equation. Any solution has the form, for constants <span>&#92;(D&#95;n&#92;)</span>, <span>&#92;(E&#95;n&#92;)</span>,
 
-<span>&#92;[R(r) = D_n J_n(&#92;lambda r) + E_n Y_n(&#92;lambda r)&#92;]</span>
+<span>&#92;[R(r) = D&#95;n J&#95;n(&#92;lambda r) + E&#95;n Y&#95;n(&#92;lambda r)&#92;]</span>
 
-where <span>&#92;(J_n&#92;)</span>, <span>&#92;(Y_n&#92;)</span> are <span>&#92;(n&#92;)</span>th-order **Bessel functions** of the first and second kind respectively. Since the Bessel functions of the second kind <span>&#92;(Y_n&#92;)</span> are unbounded at <span>&#92;(r = 0&#92;)</span>, <span>&#92;(E_n = 0&#92;)</span> for all <span>&#92;(n&#92;)</span> and
+where <span>&#92;(J&#95;n&#92;)</span>, <span>&#92;(Y&#95;n&#92;)</span> are <span>&#92;(n&#92;)</span>th-order **Bessel functions** of the first and second kind respectively. Since the Bessel functions of the second kind <span>&#92;(Y&#95;n&#92;)</span> are unbounded at <span>&#92;(r = 0&#92;)</span>, <span>&#92;(E&#95;n = 0&#92;)</span> for all <span>&#92;(n&#92;)</span> and
 
-<span>&#92;[R(r) = D_n J_n(&#92;lambda r).&#92;]</span>
+<span>&#92;[R(r) = D&#95;n J&#95;n(&#92;lambda r).&#92;]</span>
 
-The boundary conditions also imply <span>&#92;(R(a) = 0 = J_n(&#92;lambda a)&#92;)</span>.
+The boundary conditions also imply <span>&#92;(R(a) = 0 = J&#95;n(&#92;lambda a)&#92;)</span>.
 
-For each <span>&#92;(n&#92;)</span>, <span>&#92;(J_n&#92;)</span> has an infinite number of zeros. This yields the values of <span>&#92;(&#92;lambda_{n,m}&#92;)</span>, <span>&#92;(m = 1, 2, &#92;ldots&#92;)</span> The zeros of the Bessel functions <span>&#92;(J_n&#92;)</span> have some important properties:
+For each <span>&#92;(n&#92;)</span>, <span>&#92;(J&#95;n&#92;)</span> has an infinite number of zeros. This yields the values of <span>&#92;(&#92;lambda&#95;{n,m}&#92;)</span>, <span>&#92;(m = 1, 2, &#92;ldots&#92;)</span> The zeros of the Bessel functions <span>&#92;(J&#95;n&#92;)</span> have some important properties:
 
-- Each <span>&#92;(J_n&#92;)</span> has an infinite number of zeros, approaching infinity.
-- Except for <span>&#92;(r = 0&#92;)</span>, <span>&#92;(J_n&#92;)</span> and <span>&#92;(J_m&#92;)</span>, <span>&#92;(n &#92;neq m&#92;)</span>, have no zeros in common.
+- Each <span>&#92;(J&#95;n&#92;)</span> has an infinite number of zeros, approaching infinity.
+- Except for <span>&#92;(r = 0&#92;)</span>, <span>&#92;(J&#95;n&#92;)</span> and <span>&#92;(J&#95;m&#92;)</span>, <span>&#92;(n &#92;neq m&#92;)</span>, have no zeros in common.
 - **The zeros are not evenly spaced.**
 
-![Bessel functions J₀, J₁, J₂ of the first kind (top) and Y₀, Y₁, Y₂ of the second kind (bottom)](/pics/390/390-ch4-bessel-5.png)
+![Bessel functions J₀, J₁, J₂ of the first kind (top) and Y₀, Y₁, Y₂ of the second kind (bottom)](/pics/390/fig-bessel.png)
 
 ## Solution for the Drum
 
 Assuming zero initial velocity, the deflections <span>&#92;(u&#92;)</span> of a stretched round membrane are
 
-<span>&#92;[u(r,&#92;theta,t) = &#92;sum_{m=1}^{&#92;infty}&#92;sum_{n=0}^{&#92;infty}(A_{nm}&#92;cos(n&#92;theta) + B_{nm}&#92;sin(n&#92;theta))J_n(&#92;lambda_{n,m}r)&#92;cos(c&#92;lambda_{n,m}t)&#92;]</span>
+<span>&#92;[u(r,&#92;theta,t) = &#92;sum&#95;{m=1}^{&#92;infty}&#92;sum&#95;{n=0}^{&#92;infty}(A&#95;{nm}&#92;cos(n&#92;theta) + B&#95;{nm}&#92;sin(n&#92;theta))J&#95;n(&#92;lambda&#95;{n,m}r)&#92;cos(c&#92;lambda&#95;{n,m}t)&#92;]</span>
 
-where <span>&#92;(&#92;lambda_{n,m}&#92;)</span> are such that <span>&#92;(J_n(&#92;lambda_{n,m}a) = 0&#92;)</span>.
+where <span>&#92;(&#92;lambda&#95;{n,m}&#92;)</span> are such that <span>&#92;(J&#95;n(&#92;lambda&#95;{n,m}a) = 0&#92;)</span>.
 
-The natural frequencies of vibration are <span>&#92;(c&#92;lambda_{n,m}&#92;)</span> where <span>&#92;(&#92;lambda_{n,m}&#92;)</span> are zeros of <span>&#92;(J_n&#92;)</span>. **Because the zeros of <span>&#92;(J_n&#92;)</span> are not evenly spaced, a round drum has overtones, but they are not harmonics.** This is why drums do not produce a clear sense of pitch in the same way that stringed or wind instruments do.
+The natural frequencies of vibration are <span>&#92;(c&#92;lambda&#95;{n,m}&#92;)</span> where <span>&#92;(&#92;lambda&#95;{n,m}&#92;)</span> are zeros of <span>&#92;(J&#95;n&#92;)</span>. **Because the zeros of <span>&#92;(J&#95;n&#92;)</span> are not evenly spaced, a round drum has overtones, but they are not harmonics.** This is why drums do not produce a clear sense of pitch in the same way that stringed or wind instruments do.
 
 The **mode shape** — the spatial part of the response for the mode <span>&#92;((n, m)&#92;)</span> — is of the form
 
-<span>&#92;[&#92;cos(n&#92;theta)J_n(&#92;lambda_{n,m}r).&#92;]</span>
+<span>&#92;[&#92;cos(n&#92;theta)J&#95;n(&#92;lambda&#95;{n,m}r).&#92;]</span>
 
 Some mode shapes depend only on <span>&#92;(&#92;theta&#92;)</span>, some only on <span>&#92;(r&#92;)</span>, most on both. Except for the first mode, each mode has **nodal lines** or curves where the deflection is always zero. These nodal lines are called **Chladni patterns**.
 
@@ -773,13 +764,13 @@ This has non-trivial solutions only if the determinant is zero:
 
 ## Natural Frequencies
 
-The natural frequencies predicted by this model are <span>&#92;(&#92;omega_j = &#92;kappa_j^2 c&#92;)</span> where <span>&#92;(&#92;kappa_j&#92;)</span> solves (5.5). Now,
+The natural frequencies predicted by this model are <span>&#92;(&#92;omega&#95;j = &#92;kappa&#95;j^2 c&#92;)</span> where <span>&#92;(&#92;kappa&#95;j&#92;)</span> solves (5.5). Now,
 
 <span>&#92;[1 + &#92;cos z&#92;cosh z = 1 + &#92;frac{1}{2}&#92;cos z(e^z + e^{-z})&#92;]</span>
 
 and so for large <span>&#92;(z&#92;)</span>, <span>&#92;(1 + &#92;cos z&#92;cosh z &#92;approx &#92;frac{1}{2}(&#92;cos z)e^z&#92;)</span>. Thus, the zeros of <span>&#92;(1 + &#92;cos z&#92;cosh z&#92;)</span> approach those of <span>&#92;(&#92;cos z&#92;)</span> and so
 
-<span>&#92;[&#92;kappa_j &#92;approx &#92;frac{(2j-1)&#92;pi}{2}.&#92;]</span>
+<span>&#92;[&#92;kappa&#95;j &#92;approx &#92;frac{(2j-1)&#92;pi}{2}.&#92;]</span>
 
 | Natural frequencies | Harmonic approximation |
 |---|---|
@@ -800,15 +791,15 @@ The first five chapters of this course developed mathematical models for familie
 
 Consider the first-order differential equation with a forcing function <span>&#92;(u&#92;)</span>:
 
-<span>&#92;[&#92;dot{z}(t) = -az(t) + bu(t), &#92;quad a > 0, &#92;quad z(0) = z_o. &#92;tag{6.1}&#92;]</span>
+<span>&#92;[&#92;dot{z}(t) = -az(t) + bu(t), &#92;quad a > 0, &#92;quad z(0) = z&#95;o. &#92;tag{6.1}&#92;]</span>
 
 This describes a number of physical situations. For instance, <span>&#92;(z&#92;)</span> can be the temperature of a well-mixed tank and <span>&#92;(u&#92;)</span> is the heat added or removed. The solution to this differential equation is
 
-<span>&#92;[z(t) = e^{-at}z_o + &#92;int_0^t e^{-a(t-&#92;tau)}bu(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
+<span>&#92;[z(t) = e^{-at}z&#95;o + &#92;int&#95;0^t e^{-a(t-&#92;tau)}bu(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
 
 For large time, the initial condition decays and
 
-<span>&#92;[&#92;lim_{t&#92;to&#92;infty} z(t) = &#92;int_0^t e^{-a(t-&#92;tau)}bu(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
+<span>&#92;[&#92;lim&#95;{t&#92;to&#92;infty} z(t) = &#92;int&#95;0^t e^{-a(t-&#92;tau)}bu(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
 
 The response for large time is entirely due to the forcing function. This is called the **steady-state response**.
 
@@ -822,15 +813,15 @@ It follows that
 
 With the complex exponential input <span>&#92;(u(t) = e^{i&#92;omega t}&#92;)</span>, the solution becomes
 
-<span>&#92;[z(t) = e^{-at}z_o + &#92;frac{-be^{-at}}{a + i&#92;omega} + &#92;frac{be^{i&#92;omega t}}{a + i&#92;omega}.&#92;]</span>
+<span>&#92;[z(t) = e^{-at}z&#95;o + &#92;frac{-be^{-at}}{a + i&#92;omega} + &#92;frac{be^{i&#92;omega t}}{a + i&#92;omega}.&#92;]</span>
 
 As <span>&#92;(t &#92;to &#92;infty&#92;)</span>, the first two terms become insignificant. The steady-state response is
 
-<span>&#92;[z_{ss}(t) = &#92;frac{be^{i&#92;omega t}}{a + i&#92;omega}. &#92;tag{6.2}&#92;]</span>
+<span>&#92;[z&#95;{ss}(t) = &#92;frac{be^{i&#92;omega t}}{a + i&#92;omega}. &#92;tag{6.2}&#92;]</span>
 
 Note that the magnitude of this response is
 
-<span>&#92;[|z_{ss}(t)| = &#92;frac{b}{&#92;sqrt{a^2 + &#92;omega^2}}.&#92;]</span>
+<span>&#92;[|z&#95;{ss}(t)| = &#92;frac{b}{&#92;sqrt{a^2 + &#92;omega^2}}.&#92;]</span>
 
 Since <span>&#92;(&#92;cos(&#92;omega t) = &#92;text{Re}&#92;,e^{i&#92;omega t}&#92;)</span>, the steady-state response to a cosine forcing is the real part of (6.2). This works out to
 
@@ -844,7 +835,7 @@ For small forcing frequencies, the **phase shift** <span>&#92;(&#92;phi &#92;app
 
 More generally, defining <span>&#92;(f(t) = e^{-at}b&#92;)</span>, the steady-state response to a forcing function <span>&#92;(u&#92;)</span> is described by the convolution
 
-<span>&#92;[&#92;int_0^t f(t - &#92;tau)u(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
+<span>&#92;[&#92;int&#95;0^t f(t - &#92;tau)u(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
 
 This generalizes to systems of ordinary differential equations and also systems modelled by partial differential equations, such as a vibrating string or pressure waves.
 
@@ -852,31 +843,31 @@ This generalizes to systems of ordinary differential equations and also systems 
 
 Let <span>&#92;(f&#92;)</span> now be the impulse response of some system so that the effect of an input <span>&#92;(u&#92;)</span> on some quantity <span>&#92;(y&#92;)</span> is described by, for large <span>&#92;(t&#92;)</span> or with zero initial condition,
 
-<span>&#92;[y(t) = &#92;int_0^t f(t-&#92;tau)u(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
+<span>&#92;[y(t) = &#92;int&#95;0^t f(t-&#92;tau)u(&#92;tau)&#92;,d&#92;tau.&#92;]</span>
 
 If <span>&#92;(u(t) = e^{i&#92;omega t}&#92;)</span>, then
 
-<span>&#92;[y(t) = &#92;int_0^t f(&#92;tau)e^{i&#92;omega(t-&#92;tau)}&#92;,d&#92;tau = e^{i&#92;omega t}&#92;int_0^t f(&#92;tau)e^{-i&#92;omega&#92;tau}&#92;,d&#92;tau &#92;approx e^{i&#92;omega t}&#92;int_{-&#92;infty}^{&#92;infty} f(&#92;tau)e^{-i&#92;omega&#92;tau}&#92;,d&#92;tau.&#92;]</span>
+<span>&#92;[y(t) = &#92;int&#95;0^t f(&#92;tau)e^{i&#92;omega(t-&#92;tau)}&#92;,d&#92;tau = e^{i&#92;omega t}&#92;int&#95;0^t f(&#92;tau)e^{-i&#92;omega&#92;tau}&#92;,d&#92;tau &#92;approx e^{i&#92;omega t}&#92;int&#95;{-&#92;infty}^{&#92;infty} f(&#92;tau)e^{-i&#92;omega&#92;tau}&#92;,d&#92;tau.&#92;]</span>
 
 With frequency <span>&#92;(&#92;omega = 2&#92;pi&#92;nu&#92;)</span> where <span>&#92;(&#92;nu&#92;)</span> is the frequency in Hertz, defining
 
-<span>&#92;[&#92;hat{f}(&#92;nu) = &#92;int_{-&#92;infty}^{&#92;infty} f(&#92;tau)e^{-i2&#92;pi&#92;nu&#92;tau}&#92;,d&#92;tau,&#92;]</span>
+<span>&#92;[&#92;hat{f}(&#92;nu) = &#92;int&#95;{-&#92;infty}^{&#92;infty} f(&#92;tau)e^{-i2&#92;pi&#92;nu&#92;tau}&#92;,d&#92;tau,&#92;]</span>
 
 the steady-state response can be rewritten as <span>&#92;(y(t) = &#92;hat{f}(&#92;nu)e^{i2&#92;pi&#92;nu t}&#92;)</span>. The function <span>&#92;(&#92;hat{f}(&#92;nu)&#92;)</span> is the frequency response, or equivalently, the **Fourier transform**.
 
 The Fourier transform of a real (or complex)-valued function <span>&#92;(f&#92;)</span> of a real variable <span>&#92;(t&#92;)</span> is defined as
 
-<span>&#92;[&#92;hat{f}(&#92;nu) = &#92;int_{-&#92;infty}^{&#92;infty} f(t)e^{-2&#92;pi i&#92;nu t}&#92;,dt &#92;tag{6.3}&#92;]</span>
+<span>&#92;[&#92;hat{f}(&#92;nu) = &#92;int&#95;{-&#92;infty}^{&#92;infty} f(t)e^{-2&#92;pi i&#92;nu t}&#92;,dt &#92;tag{6.3}&#92;]</span>
 
 for any function for which the integral is well-defined. There are many slightly different definitions of the Fourier transform; they vary in their handling of constants but are fundamentally all equivalent.
 
-Clearly the Fourier transform of any function that is only non-zero on a bounded interval and integrable on that interval is well-defined. In fact, if <span>&#92;(&#92;int_{-&#92;infty}^{&#92;infty}|f(t)|&#92;,dt < &#92;infty&#92;)</span>, the Fourier transform is defined.
+Clearly the Fourier transform of any function that is only non-zero on a bounded interval and integrable on that interval is well-defined. In fact, if <span>&#92;(&#92;int&#95;{-&#92;infty}^{&#92;infty}|f(t)|&#92;,dt < &#92;infty&#92;)</span>, the Fourier transform is defined.
 
 Conversely, a function of <span>&#92;(t&#92;)</span> can be uniquely constructed from the Fourier transform, or frequency response.
 
 **Theorem (Inverse Fourier Transform).** Let <span>&#92;(f&#92;)</span> be a piecewise smooth function that is also integrable on <span>&#92;((-&#92;infty, &#92;infty)&#92;)</span>. At points where <span>&#92;(f&#92;)</span> is continuous,
 
-<span>&#92;[f(t) = &#92;int_{-&#92;infty}^{&#92;infty}&#92;hat{f}(&#92;nu)e^{2&#92;pi i&#92;nu t}&#92;,d&#92;nu. &#92;tag{6.4}&#92;]</span>
+<span>&#92;[f(t) = &#92;int&#95;{-&#92;infty}^{&#92;infty}&#92;hat{f}(&#92;nu)e^{2&#92;pi i&#92;nu t}&#92;,d&#92;nu. &#92;tag{6.4}&#92;]</span>
 
 At discontinuities, the value of the above integral is the average of the right and left limits of <span>&#92;(f&#92;)</span>.
 
@@ -892,45 +883,45 @@ In practice, the frequency response of a signal or sound <span>&#92;(f(t)&#92;)<
 
 Then <span>&#92;(f&#92;)</span> can be recovered exactly from its samples, provided that the sampling rate <span>&#92;(N > 2&#92;sigma&#92;)</span>. In this case, defining <span>&#92;(T = &#92;frac{1}{N}&#92;)</span>,
 
-<span>&#92;[f(t) = &#92;sum_{n=-&#92;infty}^{&#92;infty} Tf(nT)&#92;frac{&#92;sin(2&#92;pi&#92;sigma(t - nT))}{&#92;pi(t - nT)}. &#92;tag{6.5}&#92;]</span>
+<span>&#92;[f(t) = &#92;sum&#95;{n=-&#92;infty}^{&#92;infty} Tf(nT)&#92;frac{&#92;sin(2&#92;pi&#92;sigma(t - nT))}{&#92;pi(t - nT)}. &#92;tag{6.5}&#92;]</span>
 
 If sound is sampled at a rate less than the Nyquist rate, a phenomenon called **aliasing** occurs where frequencies beyond half the sampling rate get distorted into the lower band and the sound is not correctly reconstructed.
 
 ## Connection between Fourier Series and Fourier Transform
 
-There is a close connection between Fourier series and Fourier transforms. Consider a real-valued function <span>&#92;(f(t)&#92;)</span> with, for some fundamental frequency <span>&#92;(&#92;omega_0&#92;)</span> (rad/s), the Fourier series
+There is a close connection between Fourier series and Fourier transforms. Consider a real-valued function <span>&#92;(f(t)&#92;)</span> with, for some fundamental frequency <span>&#92;(&#92;omega&#95;0&#92;)</span> (rad/s), the Fourier series
 
-<span>&#92;[&#92;tilde{f}(t) = a_0 + &#92;sum_{n=1}^{&#92;infty}(a_n&#92;cos(n&#92;omega_0 t) + b_n&#92;sin(n&#92;omega_0 t)). &#92;tag{6.6}&#92;]</span>
+<span>&#92;[&#92;tilde{f}(t) = a&#95;0 + &#92;sum&#95;{n=1}^{&#92;infty}(a&#95;n&#92;cos(n&#92;omega&#95;0 t) + b&#95;n&#92;sin(n&#92;omega&#95;0 t)). &#92;tag{6.6}&#92;]</span>
 
-The individual terms are called **harmonics**. The period of <span>&#92;(&#92;tilde{f}&#92;)</span> is <span>&#92;(T = &#92;frac{2&#92;pi}{&#92;omega_0}&#92;)</span>. The fundamental frequency in Hz is <span>&#92;(&#92;frac{&#92;omega_0}{2&#92;pi}&#92;)</span> or <span>&#92;(&#92;frac{1}{T}&#92;)</span>. Series of this form occurred when solving the wave equation for the response of vibrating strings and wind instruments.
+The individual terms are called **harmonics**. The period of <span>&#92;(&#92;tilde{f}&#92;)</span> is <span>&#92;(T = &#92;frac{2&#92;pi}{&#92;omega&#95;0}&#92;)</span>. The fundamental frequency in Hz is <span>&#92;(&#92;frac{&#92;omega&#95;0}{2&#92;pi}&#92;)</span> or <span>&#92;(&#92;frac{1}{T}&#92;)</span>. Series of this form occurred when solving the wave equation for the response of vibrating strings and wind instruments.
 
-It is convenient to use the exponential form of the Fourier series. Defining <span>&#92;(c_n = &#92;frac{a_n - ib_n}{2}&#92;)</span> and <span>&#92;(c_{-n} = &#92;frac{a_n + ib_n}{2}&#92;)</span>,
+It is convenient to use the exponential form of the Fourier series. Defining <span>&#92;(c&#95;n = &#92;frac{a&#95;n - ib&#95;n}{2}&#92;)</span> and <span>&#92;(c&#95;{-n} = &#92;frac{a&#95;n + ib&#95;n}{2}&#92;)</span>,
 
-<span>&#92;[&#92;tilde{f}(t) = &#92;sum_{n=-&#92;infty}^{&#92;infty} c_n e^{in&#92;omega_0 t}. &#92;tag{6.7}&#92;]</span>
+<span>&#92;[&#92;tilde{f}(t) = &#92;sum&#95;{n=-&#92;infty}^{&#92;infty} c&#95;n e^{in&#92;omega&#95;0 t}. &#92;tag{6.7}&#92;]</span>
 
-Multiplying both sides by <span>&#92;(e^{-im&#92;omega_0 t}&#92;)</span> and integrating over one period yields
+Multiplying both sides by <span>&#92;(e^{-im&#92;omega&#95;0 t}&#92;)</span> and integrating over one period yields
 
-<span>&#92;[c_m = &#92;frac{1}{T}&#92;int_{-T/2}^{T/2}&#92;tilde{f}(t)e^{-im&#92;omega_0 t}&#92;,dt. &#92;tag{6.8}&#92;]</span>
+<span>&#92;[c&#95;m = &#92;frac{1}{T}&#92;int&#95;{-T/2}^{T/2}&#92;tilde{f}(t)e^{-im&#92;omega&#95;0 t}&#92;,dt. &#92;tag{6.8}&#92;]</span>
 
-Consider now a function <span>&#92;(f(t)&#92;)</span> defined on the whole real line. If <span>&#92;(f&#92;)</span> is periodic with period <span>&#92;(T&#92;)</span>, then a Fourier series can be defined that equals <span>&#92;(f&#92;)</span>. However, many functions are not periodic. Consider the function on some interval <span>&#92;([-&#92;frac{T}{2}, &#92;frac{T}{2}]&#92;)</span> and use this to define the Fourier series. The corresponding Fourier series <span>&#92;(&#92;tilde{f}_T&#92;)</span> will have period <span>&#92;(T&#92;)</span>. It will equal <span>&#92;(f&#92;)</span> on that interval, but not generally outside it. Defining the integral
+Consider now a function <span>&#92;(f(t)&#92;)</span> defined on the whole real line. If <span>&#92;(f&#92;)</span> is periodic with period <span>&#92;(T&#92;)</span>, then a Fourier series can be defined that equals <span>&#92;(f&#92;)</span>. However, many functions are not periodic. Consider the function on some interval <span>&#92;([-&#92;frac{T}{2}, &#92;frac{T}{2}]&#92;)</span> and use this to define the Fourier series. The corresponding Fourier series <span>&#92;(&#92;tilde{f}&#95;T&#92;)</span> will have period <span>&#92;(T&#92;)</span>. It will equal <span>&#92;(f&#92;)</span> on that interval, but not generally outside it. Defining the integral
 
-<span>&#92;[&#92;hat{f}(&#92;omega) = &#92;int_{-T/2}^{T/2} f(t)e^{-i2&#92;pi&#92;omega t}&#92;,dt,&#92;]</span>
+<span>&#92;[&#92;hat{f}(&#92;omega) = &#92;int&#95;{-T/2}^{T/2} f(t)e^{-i2&#92;pi&#92;omega t}&#92;,dt,&#92;]</span>
 
-the Fourier coefficients can be written <span>&#92;(c_n = &#92;frac{1}{T}&#92;hat{f}(&#92;frac{n}{T})&#92;)</span>. Substituting into (6.7),
+the Fourier coefficients can be written <span>&#92;(c&#95;n = &#92;frac{1}{T}&#92;hat{f}(&#92;frac{n}{T})&#92;)</span>. Substituting into (6.7),
 
-<span>&#92;[&#92;tilde{f}_T(t) = &#92;frac{1}{T}&#92;sum_{n=-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{n}{T}&#92;right)e^{-i2&#92;pi&#92;frac{n}{T}t}.&#92;]</span>
+<span>&#92;[&#92;tilde{f}&#95;T(t) = &#92;frac{1}{T}&#92;sum&#95;{n=-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{n}{T}&#92;right)e^{-i2&#92;pi&#92;frac{n}{T}t}.&#92;]</span>
 
 Defining <span>&#92;(&#92;Delta = &#92;frac{2&#92;pi}{T}&#92;)</span>, this can be rewritten as
 
-<span>&#92;[&#92;tilde{f}_T(t) = &#92;frac{1}{2&#92;pi}&#92;sum_{n=-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{1}{2&#92;pi}n&#92;Delta&#92;right)e^{-in&#92;Delta t}&#92;Delta.&#92;]</span>
+<span>&#92;[&#92;tilde{f}&#95;T(t) = &#92;frac{1}{2&#92;pi}&#92;sum&#95;{n=-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{1}{2&#92;pi}n&#92;Delta&#92;right)e^{-in&#92;Delta t}&#92;Delta.&#92;]</span>
 
 This is a Riemann sum. Taking <span>&#92;(&#92;Delta &#92;to 0&#92;)</span> (or equivalently, <span>&#92;(T &#92;to &#92;infty&#92;)</span>) yields
 
-<span>&#92;[&#92;frac{1}{2&#92;pi}&#92;int_{-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{1}{2&#92;pi}&#92;omega&#92;right)e^{i&#92;omega t}&#92;,d&#92;omega.&#92;]</span>
+<span>&#92;[&#92;frac{1}{2&#92;pi}&#92;int&#95;{-&#92;infty}^{&#92;infty}&#92;hat{f}&#92;left(&#92;frac{1}{2&#92;pi}&#92;omega&#92;right)e^{i&#92;omega t}&#92;,d&#92;omega.&#92;]</span>
 
 Defining <span>&#92;(&#92;nu = &#92;frac{1}{2&#92;pi}&#92;omega&#92;)</span>, a change of variables leads to
 
-<span>&#92;[f(t) = &#92;int_{-&#92;infty}^{&#92;infty}&#92;hat{f}(&#92;nu)e^{2&#92;pi i&#92;nu t}&#92;,d&#92;nu,&#92;]</span>
+<span>&#92;[f(t) = &#92;int&#95;{-&#92;infty}^{&#92;infty}&#92;hat{f}(&#92;nu)e^{2&#92;pi i&#92;nu t}&#92;,d&#92;nu,&#92;]</span>
 
 where <span>&#92;(&#92;hat{f}&#92;)</span> is calculated as the integral in (6.3) as <span>&#92;(T &#92;to &#92;infty&#92;)</span>. This is exactly the Fourier transform (or frequency response), and the above equation is the inverse relationship. In other words, the Fourier transform arises naturally as the limiting case of the Fourier series when the period is taken to infinity.
 
@@ -1046,9 +1037,9 @@ To compare tuning systems precisely, define a logarithmic measurement of frequen
 
 If <span>&#92;(r > 1&#92;)</span> is a frequency ratio in relation to the tonic, its value in cents <span>&#92;(c&#92;)</span> is
 
-<span>&#92;[c = 1200&#92;log_2 r.&#92;]</span>
+<span>&#92;[c = 1200&#92;log&#95;2 r.&#92;]</span>
 
-The perfect fifth is <span>&#92;(1200&#92;log_2(&#92;frac{3}{2}) &#92;approx 702&#92;)</span> cents.
+The perfect fifth is <span>&#92;(1200&#92;log&#95;2(&#92;frac{3}{2}) &#92;approx 702&#92;)</span> cents.
 
 | Note | Perfect Ratio | Just (cents) | Equal (cents) |
 |---|---|---|---|
@@ -1073,7 +1064,7 @@ The scales discussed thus far -- Pythagorean, just, meantone, and equal-tempered
 
 Traditional Chinese music used flutes of various materials (pan flutes and recorders), stringed instruments, and bells. The numbers 3 (heaven) and 2 (earth) held special significance, so the ratio <span>&#92;(&#92;frac{3}{2}&#92;)</span> was considered to "harmonize as perfectly as heaven and earth." There was a connection in ancient Chinese and ancient Greek music to mathematics, astronomy, and spirit -- 12 months in the year corresponding to 12 notes in the scale, and 5 elements corresponding to 5 notes in the pentatonic scale.
 
-The construction of the Chinese 12-tone scale, described in the *Lu shih ch'un ch'iu* (240 BC), was based on lengths of a bamboo tube. Starting with tubes of length between <span>&#92;(&#92;ell&#92;)</span> and <span>&#92;(&#92;frac{1}{2}&#92;ell&#92;)</span>, the procedure is as follows: multiply the length by <span>&#92;(&#92;frac{2}{3}&#92;)</span> to get <span>&#92;(&#92;ell_1 = &#92;frac{2}{3}&#92;ell&#92;)</span>. Repeat: <span>&#92;(&#92;frac{2}{3}&#92;ell_1 = &#92;frac{4}{9}&#92;ell&#92;)</span>, which is too short, so double the length to get <span>&#92;(&#92;ell_2 = &#92;frac{8}{9}&#92;ell&#92;)</span>. Continue: <span>&#92;(&#92;ell_3 = &#92;frac{2}{3}&#92;ell_2 = &#92;frac{16}{27}&#92;ell&#92;)</span>, then <span>&#92;(&#92;frac{2}{3}&#92;ell_3 = &#92;frac{32}{81}&#92;ell&#92;)</span>, too short, so <span>&#92;(&#92;ell_4 = &#92;frac{64}{81}&#92;ell&#92;)</span>. This process is repeated, multiplying by <span>&#92;(&#92;frac{2}{3}&#92;)</span> each time and doubling the length if necessary to keep between <span>&#92;(&#92;ell&#92;)</span> and <span>&#92;(&#92;frac{1}{2}&#92;ell&#92;)</span>. Including the octave (<span>&#92;(&#92;frac{1}{2}&#92;)</span>), this produces 12 tubes and notes, called **lu**. The lu are a set of notes from which scales were constructed.
+The construction of the Chinese 12-tone scale, described in the *Lu shih ch'un ch'iu* (240 BC), was based on lengths of a bamboo tube. Starting with tubes of length between <span>&#92;(&#92;ell&#92;)</span> and <span>&#92;(&#92;frac{1}{2}&#92;ell&#92;)</span>, the procedure is as follows: multiply the length by <span>&#92;(&#92;frac{2}{3}&#92;)</span> to get <span>&#92;(&#92;ell&#95;1 = &#92;frac{2}{3}&#92;ell&#92;)</span>. Repeat: <span>&#92;(&#92;frac{2}{3}&#92;ell&#95;1 = &#92;frac{4}{9}&#92;ell&#92;)</span>, which is too short, so double the length to get <span>&#92;(&#92;ell&#95;2 = &#92;frac{8}{9}&#92;ell&#92;)</span>. Continue: <span>&#92;(&#92;ell&#95;3 = &#92;frac{2}{3}&#92;ell&#95;2 = &#92;frac{16}{27}&#92;ell&#92;)</span>, then <span>&#92;(&#92;frac{2}{3}&#92;ell&#95;3 = &#92;frac{32}{81}&#92;ell&#92;)</span>, too short, so <span>&#92;(&#92;ell&#95;4 = &#92;frac{64}{81}&#92;ell&#92;)</span>. This process is repeated, multiplying by <span>&#92;(&#92;frac{2}{3}&#92;)</span> each time and doubling the length if necessary to keep between <span>&#92;(&#92;ell&#92;)</span> and <span>&#92;(&#92;frac{1}{2}&#92;ell&#92;)</span>. Including the octave (<span>&#92;(&#92;frac{1}{2}&#92;)</span>), this produces 12 tubes and notes, called **lu**. The lu are a set of notes from which scales were constructed.
 
 Equal temperament was developed in China slightly before its appearance in Europe but never became popular. Possible reasons include the lack of a "spiritual dimension" to equally-spaced intervals and the perceived blandness of transposition, as well as the absence of keyboard instruments.
 
@@ -1146,15 +1137,15 @@ The "harmonic intervals" in this system form two series analogous to the third a
 
 <span>&#92;[&#92;frac{7}{3}, &#92;quad 7, &#92;quad &#92;frac{35}{3}, &#92;quad &#92;frac{49}{3}, &#92;quad 21, &#92;quad &#92;frac{77}{3}, &#92;quad &#92;ldots &#92;quad &#92;text{("fifth")}&#92;]</span>
 
-The important intervals are <span>&#92;(&#92;frac{5}{3}&#92;)</span> and <span>&#92;(&#92;frac{7}{3}&#92;)</span>. For an equally tempered tritave scale, we want <span>&#92;(q&#92;)</span> such that <span>&#92;(3^{m_1/q} &#92;approx &#92;frac{5}{3}&#92;)</span> and <span>&#92;(3^{m_2/q} &#92;approx &#92;frac{7}{3}&#92;)</span> for integers <span>&#92;(m_1, m_2&#92;)</span>. The value <span>&#92;(q = 13&#92;)</span> works well. This is the **Bohlen-Pierce scale**: a 13-tone equal-tempered tritave. A number of pieces have been composed and performed in this system.
+The important intervals are <span>&#92;(&#92;frac{5}{3}&#92;)</span> and <span>&#92;(&#92;frac{7}{3}&#92;)</span>. For an equally tempered tritave scale, we want <span>&#92;(q&#92;)</span> such that <span>&#92;(3^{m&#95;1/q} &#92;approx &#92;frac{5}{3}&#92;)</span> and <span>&#92;(3^{m&#95;2/q} &#92;approx &#92;frac{7}{3}&#92;)</span> for integers <span>&#92;(m&#95;1, m&#95;2&#92;)</span>. The value <span>&#92;(q = 13&#92;)</span> works well. This is the **Bohlen-Pierce scale**: a 13-tone equal-tempered tritave. A number of pieces have been composed and performed in this system.
 
 ## Dissonance and Consonance Theory
 
 Most "definitions" of consonance are quite vague. There is a mathematical theory of consonance that dates back to at least Helmholtz's work in the late 1800s. The basic idea is that sine waves of close frequency will lead to beats and a sensation of "roughness" that is unpleasant.
 
-One simple measure of **dissonance** for a sine wave of frequency <span>&#92;(f_1&#92;)</span> compared to another with frequency <span>&#92;(f_2&#92;)</span> at the same amplitude is
+One simple measure of **dissonance** for a sine wave of frequency <span>&#92;(f&#95;1&#92;)</span> compared to another with frequency <span>&#92;(f&#95;2&#92;)</span> at the same amplitude is
 
-<span>&#92;[&#92;text{dissonance} = e^{-3.5|f_1 - f_2|} - e^{-5.75|f_1 - f_2|}.&#92;]</span>
+<span>&#92;[&#92;text{dissonance} = e^{-3.5|f&#95;1 - f&#95;2|} - e^{-5.75|f&#95;1 - f&#95;2|}.&#92;]</span>
 
 For two instruments playing different notes, one adds up the dissonance contribution of each overtone, weighted by their amplitude. The resulting **dissonance curve** shows minima at just intervals -- precisely the ratios that sound most consonant. This result is very similar to the dissonance curve for two violins created by Helmholtz.
 
