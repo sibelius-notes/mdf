@@ -4,6 +4,24 @@ layout: toc
 parent: Winter 2021
 prof: Laura Gray
 ---
+<style>
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1em 0;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
 # Lesson 1: What is a Symphony?
 
 ## A Definition
@@ -52,7 +70,9 @@ This distribution is standard. Woodwinds at the top, brass in the middle, percus
 
 The score also gives us the key signature, time signature, and tempo indication (*Allegro con brio*). And one delightful detail: this whole symphony starts with a rest. It is not *da-da-da-daaa* but rather *rest*-da-da-da-*daaa*.
 
-[Beethoven, Symphony No. 5, Mvt. I — score with audio](https://www.youtube.com/watch?v=NWEVKyEwi4A)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/NWEVKyEwi4A?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Beethoven, Symphony No. 5, Mvt. I — score with audio*
 
 ## Instruments of the Orchestra
 
@@ -60,7 +80,9 @@ The score also gives us the key signature, time signature, and tempo indication 
 
 The conductor stands at the front, often on a podium. The strings are positioned toward the front — there are proportionally more string players than wind, brass, or percussion players, but strings are quieter, so proximity to the audience helps balance the sound. Sometimes the violas and cellos swap positions, but strings are always in front. The woodwinds sit in the center behind the violas, the brass instruments behind them, and percussion at the back.
 
-Philharmonia Orchestra [video guide to the instruments of the orchestra](https://www.youtube.com/playlist?list=PLqR22EoucCyccs5J639SCefaM7mD9dMSz)
+Philharmonia Orchestra — video guide to the instruments of the orchestra:
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/videoseries?list=PLqR22EoucCyccs5J639SCefaM7mD9dMSz" frameborder="0" allowfullscreen></iframe></div>
 
 
 # Lesson 2: Origins of the Symphony
@@ -352,7 +374,9 @@ The exposition presents contrasting themes, but all three are constructed from *
 
 A fugue-like section appears before the second theme. But it is the **coda** (m.356) that is truly extraordinary: a **five-voice fugato** — like a miniature fugue, presenting themes in counterpoint. Beginning at m.372, each voice introduces all the motives in turn, passed from cello to viola to violin II to violin I to bass. Galant-style ideas appear in perfectly strict fugue — a **reconciliation between the learned and the galant styles** that defined the century. One theme (b) is left out of the fugato and functions as a return to symphonic style (m.402).
 
-[Mozart, Symphony No. 40 in G minor — London Mozart Players](https://www.youtube.com/watch?v=CJkUpFWAIm4)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/CJkUpFWAIm4?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Mozart, Symphony No. 40 in G minor — London Mozart Players*
 
 ## Mozart's Legacy
 
@@ -391,7 +415,9 @@ Perhaps the most famous symphony ever written, the Fifth is built almost entirel
 
 <p align="center">♪ <i>Beethoven, Symphony No. 5 — I. Allegro con brio</i> ♪</p>
 
-[Beethoven, Symphony No. 5 — score with audio](https://www.youtube.com/watch?v=NWEVKyEwi4A)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/NWEVKyEwi4A?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Beethoven, Symphony No. 5 — score with audio*
 
 **Movement I** (Sonata form, C minor): The four-note motif permeates every aspect of the movement — it appears in the primary theme, the transition, and even the second theme's accompaniment. The development is extensive and dramatic. The recapitulation includes a brief oboe cadenza — an unprecedented moment of individual expression within the orchestral texture.
 
@@ -488,7 +514,9 @@ The symphony has **five movements** (like Beethoven's Pastoral Symphony No. 6), 
 
 **Movement V, "Dream of a Witches' Sabbath"**: The most radical movement. The idée fixe returns as a grotesque, distorted caricature in the E-flat clarinet — the beloved transformed into a cackling witch. Church bells toll a funeral knell. The **Dies irae** ("Day of Wrath") — a well-known Catholic chant from the Mass for the Dead — is quoted, first in tubas and bassoons, then in faster diminution. A witches' round dance begins with fugal entries and offbeat accents. Strings play **col legno** (striking with the wood of the bow rather than the hair). The Dies irae and the round dance combine in a terrifying climax.
 
-[Berlioz, Symphonie fantastique — complete performance](https://youtu.be/5HgqPpjIH5c)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/5HgqPpjIH5c?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Berlioz, Symphonie fantastique — complete performance*
 
 
 # Lesson 10: Liszt and the Symphonic Poem
@@ -556,7 +584,9 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 
 **Movement IV**: Slow introduction in C minor – sonata movement in C major. The horns usher in C major in the slow introduction. The exposition begins with a main theme that is a direct reference to the "Ode to Joy" from Beethoven's Ninth Symphony — Brahms deliberately inviting the comparison. The journey from C minor to C major parallels Beethoven's Fifth.
 
-[Brahms, Symphony No. 1 — IV. Adagio–Allegro non troppo](https://youtu.be/EGRqIGOAPcE?t=1980)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/EGRqIGOAPcE?rel=0&start=1980" frameborder="0" allowfullscreen></iframe></div>
+
+*Brahms, Symphony No. 1 — IV. Adagio–Allegro non troppo*
 
 
 # Lesson 12: Dvořák and Nationalism
@@ -585,7 +615,9 @@ Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream sym
 
 **Movement IV** (ABA form — not sonata form): A short fanfare introduces variations on a theme in G major. Section B has two themes, one folklike and one more developed. Dvořák also wrote five programmatic overtures, eight tone poems on Czech literary subjects, Slavonic Dances and Rhapsodies, and a Czech Suite — nationalist works seeking his own voice while retaining elements of the Germanic tradition.
 
-[Dvořák, Symphony No. 8 — complete](https://youtu.be/6O2-nNMdSU0)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/6O2-nNMdSU0?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Dvořák, Symphony No. 8 — complete*
 
 
 # Lesson 13: Tchaikovsky
@@ -614,9 +646,13 @@ Composed during stressful personal circumstances, this symphony was supported by
 
 **Movement IV** (Allegro con fuoco, F major): Opens with fiery 16<sup>th</sup>-note scales in strings and winds in unison. The main theme quotes the Russian folk song **"In the Field Stood a Birch Tree"** in A minor. A contrasting folklike theme alternates with variations of the two themes, interrupted by the opening figure. The "fate" motive returns at the end.
 
-[Tchaikovsky, Symphony No. 4 — "fate" motive return at 42:20](https://youtu.be/KqV0RGR3Oh8?t=2540)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/KqV0RGR3Oh8?rel=0&start=2540" frameborder="0" allowfullscreen></iframe></div>
 
-["In the Field Stood a Birch Tree" — folk song](https://www.youtube.com/watch?v=ZNl4kOp9mMk)
+*Tchaikovsky, Symphony No. 4 — "fate" motive return at 42:20*
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/ZNl4kOp9mMk?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*"In the Field Stood a Birch Tree" — folk song*
 
 
 # Lesson 14: Mahler
@@ -643,7 +679,9 @@ The symphony went through multiple versions: first performed in Budapest in 1889
 
 **Movement IV (originally V), "From Purgatory to Paradise"**: An unorthodox sonata form depicting the hero's struggle between purgatory and paradise. The main theme relates to Theme 6 from the first movement. Themes 2 and 3 represent paradise. The development introduces three new bold, heroic themes alongside the three from the exposition, creating a conflict between paradise and purgatory themes. The symphony concludes with heroic triumph — what Langford describes as "statement of conflict, interaction, dramatic outcome."
 
-[Mahler, Symphony No. 1 — complete](https://youtu.be/cQFjDBFXN7g)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/cQFjDBFXN7g?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Mahler, Symphony No. 1 — complete*
 
 
 # Lesson 15: Elgar and the Modern Symphony
@@ -674,7 +712,9 @@ The symphony is in **cyclic form** — the introduction's "**Nobilmente**" (nobl
 
 An article written a few weeks after the premiere addressed England's reputation as "The Land Without Music." Elgar's symphony was expected to point the direction for the future of symphonic form — it became a testing ground on which the essence of the symphony in the modern era was contested. The debate centered on program music versus absolute music. The article suggested Elgar fell short of fully resolving the tension but may prove significant to future symphonists.
 
-[Elgar, Symphony No. 1 — complete](https://youtu.be/DUbZTGJnS1U)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/DUbZTGJnS1U?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Elgar, Symphony No. 1 — complete*
 
 
 # Lesson 16: Sibelius
@@ -701,7 +741,9 @@ The development repeats these motives in order with slight modifications — not
 
 This approach is similar to Schumann's Fourth Symphony — a superficial similarity to a multi-movement symphony, but all thematic material grows organically from the opening motives. Sibelius was nationalist in his symphonic poems but universal in his symphonies — traditional genre, modernized to create something new.
 
-[Sibelius, Symphony No. 5 — complete](https://youtu.be/nkzrSZKA4cM)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/nkzrSZKA4cM?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Sibelius, Symphony No. 5 — complete*
 
 
 # Lesson 17: Prokofiev and Neoclassicism
@@ -736,7 +778,9 @@ The "Classical Symphony" as a neoclassical work:
 
 **Movement IV** (D major, Molto vivace, sonata form): A rather standard sonata form with Theme 1 developed through the exposition, Theme 2 in the dominant, a short development, and a regular recapitulation.
 
-[Prokofiev, Classical Symphony — complete](https://youtu.be/3eGcFsdnY7I)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/3eGcFsdnY7I?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Prokofiev, Classical Symphony — complete*
 
 
 # Lesson 18: Shostakovich
@@ -761,14 +805,22 @@ The withdrawn Fourth Symphony is enormous in scale, with an extremely large orch
 
 **Movement I** (Allegretto poco moderato – Presto, sonata form): An alarm-like opening leads to a brutal march as the first theme. The second theme emerges through several attempts in the bassoons with interjections from the basses. The development section features a **parody of theme 1** (a banal polka) and a return of the opening alarm. The recapitulation presents themes in reverse order, with the first theme sounding defeated.
 
-[Shostakovich, Symphony No. 4 — II, second theme at 7:20](https://youtu.be/SUv68X_yRSo?t=440)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=440" frameborder="0" allowfullscreen></iframe></div>
 
-[Development section at 10:00](https://youtu.be/SUv68X_yRSo?t=600)
+*Shostakovich, Symphony No. 4 — II, second theme at 7:20*
 
-[Return of opening alarm at 19:09](https://youtu.be/SUv68X_yRSo?t=1149)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=600" frameborder="0" allowfullscreen></iframe></div>
+
+*Development section at 10:00*
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=1149" frameborder="0" allowfullscreen></iframe></div>
+
+*Return of opening alarm at 19:09*
 
 **Movement II** (8-minute scherzo): A **Ländler**-style dance in straightforward ABAB form. Opens with a solo for violas. Ends with clock-like percussion.
 
 **Movement III** (Largo – Allegro): Very large and deliberately difficult to analyze — defying conventional formal categories. A funeral march in the bassoon (derived from Mahler's First Symphony?) gives way to rhapsodic passages. Two codas conclude the work: first, a brass chorale that is festive, alluding to Stravinsky's "Gloria" from *Oedipus Rex*; then a pessimistic turn to C minor with allusions to Tchaikovsky and Mahler. The symphony ends with a C minor triad sustained for four minutes — one of the most extraordinary endings in the symphonic literature, a sound that simply refuses to resolve or depart, hanging in the air like a question that cannot be answered.
 
-[Shostakovich, Symphony No. 4 — complete](https://youtu.be/SUv68X_yRSo)
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+*Shostakovich, Symphony No. 4 — complete*
