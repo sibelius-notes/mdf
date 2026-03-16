@@ -44,7 +44,7 @@ This course is about music and movies and what happened when they put together.
 
 Textbook is like Google Earth view. Listening to lectures is like Google street view.
 
-And I’ll see you again in Part B.  
+And I'll see you again in Part B.  
 
 ## Part B: Our First Scene
 This is the music written specifically for the scene. The film has already been chopped and the composer was writing music while watching the film on fold. The composer has synchronized the music they have written to what goes on within the scene. Watch the scene with the sound off. Then listen to the music with the sound on. VIDEO EXAMPLE 1-Apollo 13.
@@ -52,7 +52,7 @@ This is the music written specifically for the scene. The film has already been 
 🎥 *Apollo 13* 🎥
 {: .vp }
 
-The first part of the scene shows the wife of one of the astronauts in a hotel room. She is nervous — her husband is going to the moon, and she is scared he may never come back. While she is in the shower, her wedding ring slides off her finger and disappears down the drain, a powerful visual metaphor for her fear of losing her husband. There is no music during the shower scene. Why not? First, it is a small, intimate moment — music would risk over-dramatizing it. Second, the silence leaves “space” for what follows: after this scene, music continues for several minutes straight through the launch sequence. Where music *isn’t* can be as important as where it is.
+The first part of the scene shows the wife of one of the astronauts in a hotel room. She is nervous — her husband is going to the moon, and she is scared he may never come back. While she is in the shower, her wedding ring slides off her finger and disappears down the drain, a powerful visual metaphor for her fear of losing her husband. There is no music during the shower scene. Why not? First, it is a small, intimate moment — music would risk over-dramatizing it. Second, the silence leaves "space" for what follows: after this scene, music continues for several minutes straight through the launch sequence. Where music *isn't* can be as important as where it is.
 
 Notice that James Horner leaves the music out of the shower scene so that when it comes in for the next scene, it carries more impact. If music plays constantly, eventually you stop listening to it — the breaks make the entries land harder. But the music does not start abruptly at the scene change. A bass note fades in while we are still in the shower scene, and then a snare drum triggers the transition into the Ready Room. The music prepares your brain for the scene change — without it, the cut would feel more abrupt.
 
@@ -64,7 +64,7 @@ Take any visual image, put any piece of music on it, and something will happen. 
 
 A brilliant real-world demonstration of this principle is *Mrs. Doubtfire* — compare the [original trailer](https://www.youtube.com/watch?v=PqxpC_jYncE) to this [fake horror re-cut trailer](https://www.youtube.com/watch?v=1Ckv_Dz-Sio). By recutting the scenes, adjusting the visual look, and completely changing the music and sound, someone on the internet has made a Robin Williams comedy appear to be a horror film. The effect will vary from viewer to viewer depending on background and experience, but when a director and composer sit down to decide what the music will do within a particular film, they want the audience to notice and feel specific things.
 
-But why is music there in the first place? The kind of film we focus on in this course is **narrative film** — it tells a story in a coherent, consistent manner. Central to this is the **suspension of disbelief**, essentially a contract you enter into with the filmmakers when you sit down to watch their film: “I will accept what what you show me is real.” You are watching *Harry Potter* — you accept that magic is real. You are watching *Star Wars* — you accept that aliens and space travel are real. The one thing the filmmaker cannot do is draw attention to the fact that what you are watching is not real. This can happen in small ways that internet sleuths love to catalogue: a cup on one side of a table that suddenly jumps to the other side, a bloodstain that vanishes and reappears, a microphone dropping briefly into frame, the reflection of a camera crew in a window, or an airplane crossing the sky behind a scene set in ancient Greece. Filmmakers go to enormous lengths to avoid these things.
+But why is music there in the first place? The kind of film we focus on in this course is **narrative film** — it tells a story in a coherent, consistent manner. Central to this is the **suspension of disbelief**, essentially a contract you enter into with the filmmakers when you sit down to watch their film: "I will accept what what you show me is real." You are watching *Harry Potter* — you accept that magic is real. You are watching *Star Wars* — you accept that aliens and space travel are real. The one thing the filmmaker cannot do is draw attention to the fact that what you are watching is not real. This can happen in small ways that internet sleuths love to catalogue: a cup on one side of a table that suddenly jumps to the other side, a bloodstain that vanishes and reappears, a microphone dropping briefly into frame, the reflection of a camera crew in a window, or an airplane crossing the sky behind a scene set in ancient Greece. Filmmakers go to enormous lengths to avoid these things.
 
 And yet, layered over this carefully constructed reality, we have music. We do not have background music in real life. How great would it be if we did? You walk into a room, see someone attractive, start to approach — and hear a soaring string melody. You have probably just met the person you are going to spend the rest of your life with. On the other hand, if you hear ominous low brass, you should probably not accept their dinner invitation. It would be wonderful, but we do not have music in real life. The characters in the film cannot hear the score, but we can. It is entirely artificial. So why does it not break the illusion? Because music does something so powerful for the viewing experience that audiences accept it without question — whatever music contributes is worth the risk of violating the suspension of disbelief. The question then becomes: what exactly does it do?
 
@@ -72,7 +72,7 @@ And yet, layered over this carefully constructed reality, we have music. We do n
 
 1. **Music can create a more convincing atmosphere of time and place** — conveying historical, cultural, or geographical settings, though always filtered through Western conventions.
 2. **Music can underline or create psychological refinements** — revealing the unspoken thoughts of a character or the unseen implications of a situation.
-3. **Music can provide a sense of continuity in a film** — the structure of music “smoothes over” the discontinuous, chaotic nature of film editing.
+3. **Music can provide a sense of continuity in a film** — the structure of music "smoothes over" the discontinuous, chaotic nature of film editing.
 4. **Music can provide the underpinning for the theatrical buildup of a scene and round it off with a sense of finality** — in other words, music can affect the pacing of a scene.
 
 To see these functions in action, consider two examples:
@@ -82,7 +82,7 @@ To see these functions in action, consider two examples:
 🎥 *Raiders of the Lost Ark* 🎥
 {: .vp }
 
-*Alien Resurrection* (1997), composed by John Frizzell, demonstrates Functions 2 and 4. The music reinforces the change from slow-moving dialogue to chaotic action, then slows the pace leading to the scene's conclusion (F4). It also “catches” Call's reaction upon hearing Ripley's name — foreshadowing the connection between them (F2).
+*Alien Resurrection* (1997), composed by John Frizzell, demonstrates Functions 2 and 4. The music reinforces the change from slow-moving dialogue to chaotic action, then slows the pace leading to the scene's conclusion (F4). It also "catches" Call's reaction upon hearing Ripley's name — foreshadowing the connection between them (F2).
 
 🎥 *Alien Resurrection* 🎥
 {: .vp }
@@ -95,19 +95,19 @@ How do we talk about what we hear in a film score? This lecture introduces the k
 
 **Diegesis** — the world of the narrative. All characters, events, and environments depicted, suggested, or described within the story.
 
-**Diegetic music** is music whose source exists within the diegesis — it is heard both by the characters and the audience. Also known as “source music,” “direct music,” or “foreground music,” its functions include establishing time and place, creating a sense of realism and immediacy, and offering ironic comment.
+**Diegetic music** is music whose source exists within the diegesis — it is heard both by the characters and the audience. Also known as "source music," "direct music," or "foreground music," its functions include establishing time and place, creating a sense of realism and immediacy, and offering ironic comment.
 
-**Nondiegetic music**, by contrast, is heard by the film audience only. It is typically referred to as the “score,” “underscore,” or “background music.” It is normally composed originally for the specific film, though it may also include preexisting music adapted for the purpose.
+**Nondiegetic music**, by contrast, is heard by the film audience only. It is typically referred to as the "score," "underscore," or "background music." It is normally composed originally for the specific film, though it may also include preexisting music adapted for the purpose.
 
 An important distinction: a **score** is music written specifically to accompany the film, usually composed after shooting is complete. A **soundtrack**, in popular usage, refers to a collection of preexisting songs assembled for a film.
 
 A nondiegetic score may use preexisting music *adapted* for the film. A famous example is *The Sting* (1973), which uses the ragtime music of Scott Joplin, adapted by Marvin Hamlisch:
 
-<div class=”embed-container”><iframe src=”https://www.youtube.com/embed/FCfflhAHbT0?rel=0” frameborder=”0” allowfullscreen></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/FCfflhAHbT0?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-A score may also include preexisting music used *without* adaptation. *Platoon* (1986), composed by Georges Delerue, famously incorporates Samuel Barber’s *Adagio for Strings* (1938) — a piece also used in *The Elephant Man* (1980) and *Sicko* (2007):
+A score may also include preexisting music used *without* adaptation. *Platoon* (1986), composed by Georges Delerue, famously incorporates Samuel Barber's *Adagio for Strings* (1938) — a piece also used in *The Elephant Man* (1980) and *Sicko* (2007):
 
-<div class=”embed-container”><iframe src=”https://www.youtube.com/embed/QEv3zzKyiFQ?rel=0” frameborder=”0” allowfullscreen></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/QEv3zzKyiFQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 When *all* the music in a film is preexisting and used without alteration, the result is called a **compiled score**. The most celebrated example is *2001: A Space Odyssey* (1968), compiled from the works of Richard Strauss, Johann Strauss, and others.
 
@@ -117,25 +117,25 @@ When evaluating a score, the first question is one of **style**: what type of mu
 
 *Restoration* (1995), composed by James Newton Howard, is set in the mid-1600s. The score is part original and part adapted, based on the work of Henry Purcell, an important composer of the period, and makes use of period instruments including the harpsichord:
 
-<div class=”embed-container”><iframe src=”https://www.youtube.com/embed/psna8iUfYWQ?rel=0” frameborder=”0” allowfullscreen></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/psna8iUfYWQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 *Local Hero* (1983), composed by Mark Knopfler, follows an urban American in a small Scottish village. The score blends folk and popular styles, with emphasis on the guitar. Knopfler developed melodies that evoke Anglo-Celtic folk music:
 
-<div class=”embed-container”><iframe src=”https://www.youtube.com/embed/KiNSCKtfVos?rel=0” frameborder=”0” allowfullscreen></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/KiNSCKtfVos?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 *The Godfather* (1972), composed by Nino Rota, follows the life of an organized crime family. Much of the instrumentation and melody draws on the folk music of Sicily. The solo brass is not military or heroic — it sounds mournful, tragic, and alone.
 
 ## Concept
 
-The next question is one of **concept**: is the music used in a consistent manner throughout the film? What is accompanied, and what is left without accompaniment? What “motivates” the music — action, characters, events, objects, flashbacks?
+The next question is one of **concept**: is the music used in a consistent manner throughout the film? What is accompanied, and what is left without accompaniment? What "motivates" the music — action, characters, events, objects, flashbacks?
 
-Most film music falls somewhere between two conceptual extremes. **Playing the drama** means the music attempts to reinforce primarily the emotional elements within the narrative. **Hitting the action** means the music accents visual events — car chases, physical comedy, and so on. This is the common approach to cartoon scoring, often called **”Mickey Mousing”** — a term for the tight synchronization of musical gestures to on-screen physical movements.
+Most film music falls somewhere between two conceptual extremes. **Playing the drama** means the music attempts to reinforce primarily the emotional elements within the narrative. **Hitting the action** means the music accents visual events — car chases, physical comedy, and so on. This is the common approach to cartoon scoring, often called **"Mickey Mousing"** — a term for the tight synchronization of musical gestures to on-screen physical movements.
 
 ## Musical Characteristics
 
 ### Melody or Theme
 
-**Melody** is considered the most recognizable musical element for Western ears. Do characters, objects, or situations have a particular melody associated with them? The technique of assigning recurring melodies to characters or ideas traces back to the German opera composer Richard Wagner and his concept of the **Leitmotiv** — a short musical phrase associated with a person, place, or idea. Melodies can be taken through variations to convey changes in a character’s inner state — thoughts, feelings, transformations. A useful rule of thumb: if a melody is smooth and easy to hum, it is likely associated with something positive in the film world. If it is angular and difficult, it probably signals danger or something undesirable — though this rule is quite generalized.
+**Melody** is considered the most recognizable musical element for Western ears. Do characters, objects, or situations have a particular melody associated with them? The technique of assigning recurring melodies to characters or ideas traces back to the German opera composer Richard Wagner and his concept of the **Leitmotiv** — a short musical phrase associated with a person, place, or idea. Melodies can be taken through variations to convey changes in a character's inner state — thoughts, feelings, transformations. A useful rule of thumb: if a melody is smooth and easy to hum, it is likely associated with something positive in the film world. If it is angular and difficult, it probably signals danger or something undesirable — though this rule is quite generalized.
 
 ### Tempo or Pulse
 
@@ -150,7 +150,7 @@ Most film music falls somewhere between two conceptual extremes. **Playing the d
 
 - Highly consonant: the *Main Theme* from *The Cider House Rules* (1999), composed by Rachel Portman
 - A blend of consonance and dissonance: *Yes* from *Meet Joe Black* (1998), composed by Thomas Newman
-- Highly dissonant: *Bishop’s Countdown* from *Aliens* (1986), composed by James Horner
+- Highly dissonant: *Bishop's Countdown* from *Aliens* (1986), composed by James Horner
 
 # Lecture 3: Technical Details and the Silent Era
 
@@ -161,17 +161,17 @@ of Film Production
     -	finalization of script and production design
     -	principle photography (主体拍摄): filming the actors, shooting various scenes.
 3.	Postproduction:
-    -	assembling and editing the “takes”
+    -	assembling and editing the "takes"
     -	completion and addition of visual and audio effects
     -	composition and addition of music
     -	normally, an original film score is one of the final elements to be created and added to the film.
     -	historically, schedule for the composition and recording of a score: 5 to 8 weeks on average. Although often still the case, effects-driven films often have longer post-production periods.
 
-Composer’s involvement varies based on working style and specifics of a given project.
+Composer's involvement varies based on working style and specifics of a given project.
 
 **Scripts**:
-    - can give composers a “head-start”
-    - research for “ethnic” or “historical” influences. Example: Hans Zimmer; The Last Samuri (2003)
+    - can give composers a "head-start"
+    - research for "ethnic" or "historical" influences. Example: Hans Zimmer; The Last Samuri (2003)
     - production of important source music is done at this point
     - in general, composing the score cannot be done on the basis of a script – why?
     - scripts can change significantly
@@ -184,7 +184,7 @@ Composer’s involvement varies based on working style and specifics of a given 
     - rough cut: closer to finished film, but still undergoing significant editing
     - fine or locked cut: most if not all editing completed. This is what the composer is really waiting for, because rough cut might not be accurate in time. Basic timings will not change.
     - most composers begin serious work at the fine cut phase
-    - concern that repeated viewings will alter the composer’s reaction
+    - concern that repeated viewings will alter the composer's reaction
     - timing of scenes
 
 **Spotting Session and Cue Sheets**: director, composer, music editor/music supervisor sit together, watch the films, discuss the placement of music, style of music.  Music editor takes careful notes, produces a "cue sheet"/"spotting notes". Cue: piece of music in the film. For example, music for the fight scene is a cue. In the cue sheet, we have cue number. Final category, notes, description for what the music is for, where the music goes.
@@ -194,17 +194,17 @@ Composer’s involvement varies based on working style and specifics of a given 
 Pic from [https://soundclass.weebly.com/6-spotting-for-sound-design.html](https://soundclass.weebly.com/6-spotting-for-sound-design.html)
 
 **[Temp Tracks](https://www.masterclass.com/articles/what-is-temp-music-in-film#what-is-temp-music-in-film)**:
-- “temporary” music added to film while still in production or early editing.
-- gives more “finished” feeling to work in progress.
-- often taken from other film scores, or “classical” music.
+- "temporary" music added to film while still in production or early editing.
+- gives more "finished" feeling to work in progress.
+- often taken from other film scores, or "classical" music.
 
 Composers are deeply divided on their view of temp tracks
-- offer insight into director’s thinking process.
-- BUT can influence the composer’s initial response.
-- director’s familiarity with temp track can be an obstacle.
+- offer insight into director's thinking process.
+- BUT can influence the composer's initial response.
+- director's familiarity with temp track can be an obstacle.
 
 **Composing**:
-- 5 to 8 weeks until “delivery” of finished score
+- 5 to 8 weeks until "delivery" of finished score
 - short timeline due to fixed release date
 - frequently exacerbated by production phase running overtime
 
@@ -217,22 +217,22 @@ Check [music 254](/music/254), [music 255](/music/255), [music 256](/music/256).
 
 Baroque Period (1600-1750)
 - Key Composers: Vivaldi, Handel, Bach.
-- Development of “Common Practice” – major/minor system of music theory.
+- Development of "Common Practice" – major/minor system of music theory.
 - Musical structures most important.
 - Even tempos, consistent textures, terraced dynamics.
-- Example: J.S. Bach, “Brandenburg Concerto No. 6” 3rd Movement (1721)
+- Example: J.S. Bach, "Brandenburg Concerto No. 6" 3rd Movement (1721)
 
 Classical Period (1730-1820)
 - Key Composers: Mozart, Hayden, Beethoven.
 - Greater focus on melody and emotion.
 - Expanding variety of tempo, texture and dynamics.
-- Example: W.A. Mozart, “Symphony No. 40” 1st Movement. (1788)
+- Example: W.A. Mozart, "Symphony No. 40" 1st Movement. (1788)
 
 Romantic Period (1800-1910)
 - Key Composers: Wagner, Tchaikovsky, Strauss.
 - Expression of emotion was most important.
 - Even greater range of tempo, texture and dynamics in service of emotion and narrative.
-- Example: R. Wagner, “The Magic Fire Music” from *Die Walkure* (1870)
+- Example: R. Wagner, "The Magic Fire Music" from *Die Walkure* (1870)
 
 
 
@@ -251,7 +251,7 @@ Thomas Edison:
 - Problem with synchronization: the current technology does not line up the sound and visual image. So recording would be appropriate.
 
 First Projected Films: The Lumiere Brothers, Paris December 28<sup>th</sup>, 1895.
-“[The Arrival of a Train](https://youtu.be/1dgLEDdFddk)”
+"[The Arrival of a Train](https://youtu.be/1dgLEDdFddk)"
 
 Reasons for musical accompaniment:
 1. Pragmatic: mechanical noise / mechanical problems
@@ -263,7 +263,7 @@ Three general approaches to music: originally composed, adaptations of classical
 
 **Venues**: Vaudeville Theatres. Live variety shows played in theatres. In the intermission, photoplays: short fragment in real life like one from the Lumiere Brothers. When the photoplays are on. Musical accompaniment provided by vaudeville orchestra: accompany for the show, and continue playing for the photoplays.  Very quickly, photoplays became the most popular part.
 
-1905 “Nickelodeons”, solely showed the movie.
+1905 "Nickelodeons", solely showed the movie.
 Music provided by piano, player piano, small ensemble or gramophone. Rarely the music has anything to do with the thing on screen.  It's very popular. 1907 – 3,000; 1910 – Over 10,000.
 
 ## The Shift To Narrative
@@ -271,11 +271,11 @@ George Melies: early experimenter with camera effects, [A Trip to the Moon](http
 
 1905-1910:
 - Narrative films become most important element - films become longer - plots become more complex.
-- Change in musical aesthetic from entertaining the audience to “playing the picture.” Music can support the drama and helping the audience to follow the plot. “Fitting” the picture or “Synchronizing”: align the music up.
+- Change in musical aesthetic from entertaining the audience to "playing the picture." Music can support the drama and helping the audience to follow the plot. "Fitting" the picture or "Synchronizing": align the music up.
 
-1910 – 1920s: film industry matures. The rise of Hollywood. Films become longer, more sophisticated. First of the “Movie Palaces” built, 1912. Larger Orchestras (under the stage, orchestra pit like opera) and Theatre Organs: massive electric organ, many sound effects.
+1910 – 1920s: film industry matures. The rise of Hollywood. Films become longer, more sophisticated. First of the "Movie Palaces" built, 1912. Larger Orchestras (under the stage, orchestra pit like opera) and Theatre Organs: massive electric organ, many sound effects.
 
-Some early attempts at creating original scores, but standard practice is either compilation of classical or popular music, or improvisation. 1909 – First attempt at “standardizing” musical accompaniment: Edison Film Company releases “musical suggestions” with each film. These were the first “Cue Sheets” with general scene-by-scene suggestions for musical accompaniment.
+Some early attempts at creating original scores, but standard practice is either compilation of classical or popular music, or improvisation. 1909 – First attempt at "standardizing" musical accompaniment: Edison Film Company releases "musical suggestions" with each film. These were the first "Cue Sheets" with general scene-by-scene suggestions for musical accompaniment.
 In 1912, Max Winkler (Carl Fischer Music) suggests specific pieces of music, with timings.
 Films would be shipped with the cue sheets, might also include music.
 But problems with parts getting lost, lots of musicians involved might not like/know the pieces suggested etc. Thus this not work quite well.
@@ -287,19 +287,19 @@ Trade papers: Motion Picture World, Moving Picture World
 - musical accompaniment should be continuous. Once the film starts, music should play all way through.
 - source music. For example, if the scene is dancing, the band should play appropriate music like waltz.
 - use of themes. How theme can represent a character or setting. Thematic transformation and letimotive from Wagner.
-- “good music” (classical music) to the masses
+- "good music" (classical music) to the masses
 
 By mid 1920s – no real change:
 - vast range of performing forces and skills
 - rural (local piano teachers/record players) or urban (see (semi)professional musicians playing music)
 - missing cue sheets and scores
-- issues of “control”
+- issues of "control"
 - thus completely not standardized
 
 An example: Birth of a Nation (1915). Composer/Adaptor: Joseph Carl Breil
 - remarkable influential film, becomes the norm of Hollywood films for decades in various aspects. Financial success. It is horribly racist even in 1915, huge controversy. About civil war.
-- D.W Griffith: Hollywood’s first “great” director
-- Carli Elinor – a music “fitter”
+- D.W Griffith: Hollywood's first "great" director
+- Carli Elinor – a music "fitter"
 - Breil, American born, European trained musician and composer
 - assembles a continuous score 2/3s similar to Elinor, but 1/3 original material written for the film.
 - Debut in March of 1915
@@ -329,7 +329,7 @@ Several competing systems emerge - the two primary approaches are:
 As we moved to mid 1920s, Vitaphone became popular: the audio quality is much better. In 1926, Warner Bros releases a feature length motion picture: Don Juan.
 - Recorded score primarily by William Axt, performed by the New York Philharmonic Orchestra.
 - Vitaphone – recorded music and some generalized sound effects. No dialog, still a silent film.
-- Also had a second score composed for “live” performance, because very few theatres have Vitaphone systems.
+- Also had a second score composed for "live" performance, because very few theatres have Vitaphone systems.
 - Even though no recorded dialogue, still big hit.
 
 *The Jazz Singer* (1927) is often called the first "talking" motion picture, though it is primarily a silent film with several minutes of synchronized sound through the Vitaphone system. Most of the score is compiled or adapted.
@@ -339,16 +339,16 @@ As we moved to mid 1920s, Vitaphone became popular: the audio quality is much be
 
 The effect was quite astonishing for audiences at the time. Notice the big gaps before and after the dialogue — the projectionist needed to switch the records. The dialogue itself is remarkably stilted: there were no script writers for sound, and the actor, Al Jolson, is essentially improvising. There is barely any camera motion because cameras were noisy and had to be enclosed in soundproof booths. The actor cannot move very far because of the fixed microphone position. And he is not really playing the piano.
 
-Thus still conventionally silent film. Nevertheless, a financial hit. It signaled the “beginning of the end” of the silent era. Sound on Disk has the early lead, but Sound on Film will become the standard by the early 1930s. Sound on Film has surpassed the audio quality of Vitaphone.
+Thus still conventionally silent film. Nevertheless, a financial hit. It signaled the "beginning of the end" of the silent era. Sound on Disk has the early lead, but Sound on Film will become the standard by the early 1930s. Sound on Film has surpassed the audio quality of Vitaphone.
 
 Now we enter the transition era, 1927 <span>&#92;(\to &#92;)</span> 1931 or 1932.
 Let's talk about how the change to sound alters the approach to make motion pictures.
-1. **Aesthetics**. E.g., how does one act in the featured films. In silent films, one attempted to be overly dramatic with facial expressions or gestures, because no lines. Now they can say lines, so these old ways of acting look silly. Issue for industry: actors need to retool their acting skill. Another issue is the voices: decent voice is not necessary for silent films. In sound films, some of their voices are completely inappropriate. Also, a debate: Many worried about using none-diegetic music: “Where does the music come from?”
+1. **Aesthetics**. E.g., how does one act in the featured films. In silent films, one attempted to be overly dramatic with facial expressions or gestures, because no lines. Now they can say lines, so these old ways of acting look silly. Issue for industry: actors need to retool their acting skill. Another issue is the voices: decent voice is not necessary for silent films. In sound films, some of their voices are completely inappropriate. Also, a debate: Many worried about using none-diegetic music: "Where does the music come from?"
 2. **Making films**.
     - all sound had to be recorded in real time. Postproduction does not happen straightaway.
     - musicians on set – balance of sound music and dialog. When actor is playing, musicians have to play the music.
     - cameras in large soundproof booths (because it is loud) – no movement.
-    - “sound stages” (expensive) are built to reduce/isolate outside noises
+    - "sound stages" (expensive) are built to reduce/isolate outside noises
 3. **Showing Films**. Exhibition.
     - Too many contesting sound systems. Vitaphone competes with sound on film system.
     - Small number of the 20,000 theaters equipped for sound.
@@ -361,32 +361,32 @@ Let's talk about how the change to sound alters the approach to make motion pict
 
 🎥 *Singin' in the Rain — Issues with Exhibition* 🎥
 {: .vp }
-4. **Industry Reorganization**. The costs become higher for sound films so film industries are looking for ways to save money: All aspects of production are departmentalized – directors, actors, and musicians are put under contract – Leads to the STUDIO SYSTEM. Cost and control. Conglomeration: larger companies buy smaller. *The "Big" Five*: MGM, Paramount, Warner Brothers, 20<sup>th</sup> Century Fox (1935), and RKO. *The “Little” 3* – Universal, Colombia, and United Artists. Both of them have bought everything they need to produce a film, but the "big" five owns distribution network and exhibition locations. Issue: monopoly when controlling all three: production, distribution, exhibition.
+4. **Industry Reorganization**. The costs become higher for sound films so film industries are looking for ways to save money: All aspects of production are departmentalized – directors, actors, and musicians are put under contract – Leads to the STUDIO SYSTEM. Cost and control. Conglomeration: larger companies buy smaller. *The "Big" Five*: MGM, Paramount, Warner Brothers, 20<sup>th</sup> Century Fox (1935), and RKO. *The "Little" 3* – Universal, Colombia, and United Artists. Both of them have bought everything they need to produce a film, but the "big" five owns distribution network and exhibition locations. Issue: monopoly when controlling all three: production, distribution, exhibition.
 
 ## Max Steiner (1888–1971)
 
 **Max Steiner** was born in 1888 in Vienna — the center of European classical music — at the very end of the Romantic era. His father owned a theatre, and Steiner was formally trained in the tradition of European classical music. A child prodigy, he was conducting in theatre by age twelve and touring as a conductor by sixteen. One of his teachers was Gustav Mahler. He wrote operettas beginning at age seventeen and also worked as a composer and conductor for the stage in England. Facing deportation during World War I — England was on one side, Austria on the other, and Steiner was Austrian — he came to the United States in 1914.
 
-Steiner worked on Broadway for fifteen years. In 1916, he composed a score for a silent film, *The Bondman*. He was invited to Hollywood in 1929 to work on *Rio Rita*. This was part of a larger trend: Hollywood was raiding Broadway for talent because many silent-era film actors had voices unsuitable for sound. Hollywood also needed writers who could craft dialogue, leading to a massive wave of films based on Broadway musicals. *Broadway Melody* (1929) was a huge success — its poster proudly advertised “talking, singing, dancing.”
+Steiner worked on Broadway for fifteen years. In 1916, he composed a score for a silent film, *The Bondman*. He was invited to Hollywood in 1929 to work on *Rio Rita*. This was part of a larger trend: Hollywood was raiding Broadway for talent because many silent-era film actors had voices unsuitable for sound. Hollywood also needed writers who could craft dialogue, leading to a massive wave of films based on Broadway musicals. *Broadway Melody* (1929) was a huge success — its poster proudly advertised "talking, singing, dancing."
 
-By 1930, however, there was still very little music in dramatic films. The prevailing worry was: “Where does the music come from?” — the concern that nondiegetic music would confuse the audience. *Cimarron* (1931), scored by Steiner, used quite a bit of source music and found innovative ways of approaching the score. David Selznick, a producer at RKO, recognized that more music might be good for dramatic films. In 1932, *Symphony of Six Million* and *Bird of Paradise* featured continuous orchestral music, and audiences responded positively.
+By 1930, however, there was still very little music in dramatic films. The prevailing worry was: "Where does the music come from?" — the concern that nondiegetic music would confuse the audience. *Cimarron* (1931), scored by Steiner, used quite a bit of source music and found innovative ways of approaching the score. David Selznick, a producer at RKO, recognized that more music might be good for dramatic films. In 1932, *Symphony of Six Million* and *Bird of Paradise* featured continuous orchestral music, and audiences responded positively.
 
 The turning point came in 1933 with *King Kong*. Early test audiences found the special effects laughable — they were laughing instead of screaming. The film had very little music. Afraid of losing money, the director convinced the studio to let Steiner write a full score. He composed it in just two weeks. This time, with music, the audience screamed.
 
 🎥 *King Kong — The Fog* 🎥
 {: .vp }
 
-The music hovers between consonance and dissonance, creating an atmosphere of mystery. It is used to indicate a transition from the normal world to the realm of the supernatural. As the ship arrives at the island, the music shifts: a view of the beach introduces Kong’s theme in an early, distant form. Notice the lack of distinction between diegetic and nondiegetic music — the score blurs the boundary between the sounds of the story world and the underscore.
+The music hovers between consonance and dissonance, creating an atmosphere of mystery. It is used to indicate a transition from the normal world to the realm of the supernatural. As the ship arrives at the island, the music shifts: a view of the beach introduces Kong's theme in an early, distant form. Notice the lack of distinction between diegetic and nondiegetic music — the score blurs the boundary between the sounds of the story world and the underscore.
 
 🎥 *King Kong — The Dance* 🎥
 {: .vp }
 
-The music for the ceremonial dance uses a full orchestra, yet only drums are visible on film — another instance of blurring the lines between diegetic and nondiegetic music. Steiner’s Broadway background is evident in this scene. We also see classic **”mickey mousing”** with the chief’s walk down the steps, where the tuba and low basses are perfectly synchronized to each footfall.
+The music for the ceremonial dance uses a full orchestra, yet only drums are visible on film — another instance of blurring the lines between diegetic and nondiegetic music. Steiner's Broadway background is evident in this scene. We also see classic **"mickey mousing"** with the chief's walk down the steps, where the tuba and low basses are perfectly synchronized to each footfall.
 
 🎥 *The Informer — Opening* 🎥
 {: .vp }
 
-*The Informer* (1935) is another key Steiner score. The opening features a folk-influenced theme for Gypo and a jazz-influenced theme for Katie. Listen for the musical quotation of “Rule Britannia.” The score won the Academy Award for Best Original Score.
+*The Informer* (1935) is another key Steiner score. The opening features a folk-influenced theme for Gypo and a jazz-influenced theme for Katie. Listen for the musical quotation of "Rule Britannia." The score won the Academy Award for Best Original Score.
 
 Steiner eventually moved to Warner Brothers, where he spent the bulk of his career as head of the music department (1937–1953). Other notable films include *Gone with the Wind* (1939), *Casablanca* (1942), and *A Summer Place* (1959). A legendary workaholic, Steiner contributed to over 300 film scores during his career before his death in 1971.
 
@@ -868,13 +868,13 @@ This scene also introduces an important concept: **minimalism**. Minimalism does
 
 **James Horner** was born in 1953 in Los Angeles, California. His father, **Harry Horner**, was a very well-respected set designer and art director in Hollywood who received two Academy Awards for his work. When James was still very young, his father moved the family to London to pursue more opportunities for his own film career, and while there James began to take music seriously, attending the prestigious **Royal College of Music**. When he was a teenager, the family returned to Los Angeles.
 
-Here we have an interesting irony: despite his father’s success in the film industry, James himself had no real interest in pursuing film music. By his own admission, he was one of those composers who viewed film composing as a lesser art form — if you were a really good composer, you would write “real” music, not second-rate music for films. He attended UCLA, pursuing studies to become a concert-hall composer, and was working on his doctorate in composition in the late 1970s when a friend who worked for the **American Film Institute** (AFI) asked him to write music for some short films. Horner was not interested at first, but his friend kept asking. When he finally agreed and saw his music accompanying a film in a theatre for the first time, he instantly fell in love with the idea. He was apparently in the middle of teaching a music theory course at UCLA, so he had to finish up the term, but when it ended he set off to establish himself as a film composer. Within a year he had his first major feature: *The Lady in Red* (1979), a gangster film set in the 1930s. He also did some work with the cult film director Roger Corman. But what really established him as a major force was *Star Trek II: The Wrath of Khan* (1982).
+Here we have an interesting irony: despite his father's success in the film industry, James himself had no real interest in pursuing film music. By his own admission, he was one of those composers who viewed film composing as a lesser art form — if you were a really good composer, you would write "real" music, not second-rate music for films. He attended UCLA, pursuing studies to become a concert-hall composer, and was working on his doctorate in composition in the late 1970s when a friend who worked for the **American Film Institute** (AFI) asked him to write music for some short films. Horner was not interested at first, but his friend kept asking. When he finally agreed and saw his music accompanying a film in a theatre for the first time, he instantly fell in love with the idea. He was apparently in the middle of teaching a music theory course at UCLA, so he had to finish up the term, but when it ended he set off to establish himself as a film composer. Within a year he had his first major feature: *The Lady in Red* (1979), a gangster film set in the 1930s. He also did some work with the cult film director Roger Corman. But what really established him as a major force was *Star Trek II: The Wrath of Khan* (1982).
 
-Through the eighties and nineties, Horner had a very impressive run of success with films such as *Aliens* (1986), *Field of Dreams* (1989), *Braveheart* (1995), and *Apollo 13* (1995). The score for *Aliens* is particularly notable because it was his first time working with director James Cameron — and the experience was something of a nightmare. Horner expected six weeks to do the score, but Cameron was still editing the film and was not ready for another three weeks, leaving Horner working under an extraordinarily tight time constraint. Once they reached the recording stage, Cameron did not like the score and wanted changes — but he was used to dealing with composers who used synthesizers, where re-recording was easy, and did not fully understand that once the orchestra was in the studio, that was pretty much it. Cameron ended up chopping up the score, moving pieces around, and bringing in music from other films. There was a famous exchange in which Horner said, “I do not have the time to write the score that this film needs,” to which Cameron reportedly replied, “Well, if you can’t, maybe I’ll hire someone who can.” Neither was happy — Horner described it as a nightmare, and Cameron to this day says he does not like the score. And yet, the score became one of the most used in temp tracks for years afterward, and one cue in particular — “Bishop’s Countdown” — has gone on to be used in more movie trailers than almost any other single piece of music.
+Through the eighties and nineties, Horner had a very impressive run of success with films such as *Aliens* (1986), *Field of Dreams* (1989), *Braveheart* (1995), and *Apollo 13* (1995). The score for *Aliens* is particularly notable because it was his first time working with director James Cameron — and the experience was something of a nightmare. Horner expected six weeks to do the score, but Cameron was still editing the film and was not ready for another three weeks, leaving Horner working under an extraordinarily tight time constraint. Once they reached the recording stage, Cameron did not like the score and wanted changes — but he was used to dealing with composers who used synthesizers, where re-recording was easy, and did not fully understand that once the orchestra was in the studio, that was pretty much it. Cameron ended up chopping up the score, moving pieces around, and bringing in music from other films. There was a famous exchange in which Horner said, "I do not have the time to write the score that this film needs," to which Cameron reportedly replied, "Well, if you can't, maybe I'll hire someone who can." Neither was happy — Horner described it as a nightmare, and Cameron to this day says he does not like the score. And yet, the score became one of the most used in temp tracks for years afterward, and one cue in particular — "Bishop's Countdown" — has gone on to be used in more movie trailers than almost any other single piece of music.
 
-The two eventually resolved their differences, and in 1997 Cameron asked Horner to score *Titanic*. Horner took the film’s main theme and, working with lyricist Will Jennings, wrote the movie song “My Heart Will Go On,” performed by Celine Dion. Interestingly, the song was the song no one wanted. Cameron did not want a movie song because he thought it would make his film too commercial. Dion did not want to sing it because she had already had a hit with a movie song for Disney. Even the producer-songwriter David Foster said that when he first heard the melody, he thought it was a terrible mistake — it sounded to him like they were going to put lyrics to the theme from *Jaws*. But the song became an extraordinary success, selling almost 20 million copies worldwide and remaining one of the best-selling singles by a female vocalist ever. Horner received two Academy Awards for *Titanic* — Best Original Score and Best Original Song — the only two he won, although he was nominated ten times. The original score recording went on to become, by many accounts, the best-selling orchestral album of all time, a position it won from Williams’ recording of the *Star Wars* score.
+The two eventually resolved their differences, and in 1997 Cameron asked Horner to score *Titanic*. Horner took the film's main theme and, working with lyricist Will Jennings, wrote the movie song "My Heart Will Go On," performed by Celine Dion. Interestingly, the song was the song no one wanted. Cameron did not want a movie song because he thought it would make his film too commercial. Dion did not want to sing it because she had already had a hit with a movie song for Disney. Even the producer-songwriter David Foster said that when he first heard the melody, he thought it was a terrible mistake — it sounded to him like they were going to put lyrics to the theme from *Jaws*. But the song became an extraordinary success, selling almost 20 million copies worldwide and remaining one of the best-selling singles by a female vocalist ever. Horner received two Academy Awards for *Titanic* — Best Original Score and Best Original Song — the only two he won, although he was nominated ten times. The original score recording went on to become, by many accounts, the best-selling orchestral album of all time, a position it won from Williams' recording of the *Star Wars* score.
 
-Horner’s characteristics: he was a strong melodic composer, though his melodies tended to be a little tighter and shorter than Williams’ long, extended Korngold-like lines. He typically worked with a conventional orchestra but was comfortable incorporating synthesizers and electronic sounds — unlike Williams, who rarely used electronics. He was adept at writing in contemporary popular styles, weaving in and out of pop with conventional orchestral writing. And he was exceptionally skilled at synchronizing music to visual elements such as scene and camera changes — not mickey mousing, but a close, precise alignment of musical gestures with cuts and transitions. All composers deal with the idea of **hitting the cut**, but Horner was remarkably good at writing music that could hit a whole series of cuts while still sounding smooth and flowing.
+Horner's characteristics: he was a strong melodic composer, though his melodies tended to be a little tighter and shorter than Williams' long, extended Korngold-like lines. He typically worked with a conventional orchestra but was comfortable incorporating synthesizers and electronic sounds — unlike Williams, who rarely used electronics. He was adept at writing in contemporary popular styles, weaving in and out of pop with conventional orchestral writing. And he was exceptionally skilled at synchronizing music to visual elements such as scene and camera changes — not mickey mousing, but a close, precise alignment of musical gestures with cuts and transitions. All composers deal with the idea of **hitting the cut**, but Horner was remarkably good at writing music that could hit a whole series of cuts while still sounding smooth and flowing.
 
 🎥 *Glory — The Battle* 🎥
 {: .vp }
@@ -885,25 +885,25 @@ Watch the opening sequence closely. After the title card and the first scene of 
 
 ### *Star Trek II: The Wrath of Khan* (1982)
 
-*Star Trek* was an American television series that ran for three seasons in the mid-to-late 1960s — in many ways typical of its time, with plywood sets and rubber-headed aliens. Its popularity really took off in the 1970s through syndication, in part because its stories were quite subtle and nuanced, doing what good science fiction does: taking contemporary social issues and recasting them in a future world. The show was also remarkably optimistic for the cynical sixties and seventies: the captain was American, but the navigator was Russian (at the peak of the Cold War), the pilot was Japanese (only twenty years after World War II), and the communications officer was an African-American woman — extraordinary in the midst of the civil rights movement and the beginnings of the women’s liberation movement.
+*Star Trek* was an American television series that ran for three seasons in the mid-to-late 1960s — in many ways typical of its time, with plywood sets and rubber-headed aliens. Its popularity really took off in the 1970s through syndication, in part because its stories were quite subtle and nuanced, doing what good science fiction does: taking contemporary social issues and recasting them in a future world. The show was also remarkably optimistic for the cynical sixties and seventies: the captain was American, but the navigator was Russian (at the peak of the Cold War), the pilot was Japanese (only twenty years after World War II), and the communications officer was an African-American woman — extraordinary in the midst of the civil rights movement and the beginnings of the women's liberation movement.
 
-The first film, *Star Trek: The Motion Picture* (1979), scored by Jerry Goldsmith, was ambitious and beautiful but very slow-moving and not a huge success. The studio was willing to gamble on a second film with a much tighter budget. There is a famous story: producer Harve Bennett was asked by the Paramount studio head if he could make a better film, and he said yes. Then the head asked, “Can you make a better film for less than forty-five f***ing million dollars?” Bennett reportedly replied, “I can make five movies for that much money.” The budget was set at eight million, later raised to twelve. Director Nicholas Meyer wanted to evoke the imagery of sailing ships at sea — the age of the great galleons — and this nautical sensibility would pervade everything from costume design to dialogue to the staging of the battles. Goldsmith was the first choice to score the sequel, but the reduced budget meant they could not afford him, which is how James Horner got the job.
+The first film, *Star Trek: The Motion Picture* (1979), scored by Jerry Goldsmith, was ambitious and beautiful but very slow-moving and not a huge success. The studio was willing to gamble on a second film with a much tighter budget. There is a famous story: producer Harve Bennett was asked by the Paramount studio head if he could make a better film, and he said yes. Then the head asked, "Can you make a better film for less than forty-five f***ing million dollars?" Bennett reportedly replied, "I can make five movies for that much money." The budget was set at eight million, later raised to twelve. Director Nicholas Meyer wanted to evoke the imagery of sailing ships at sea — the age of the great galleons — and this nautical sensibility would pervade everything from costume design to dialogue to the staging of the battles. Goldsmith was the first choice to score the sequel, but the reduced budget meant they could not afford him, which is how James Horner got the job.
 
-The score is primarily orchestral and tonal, with modernist elements and electronic instruments. The main title opens with a sustained note high in the violins, with synthesizers making rhythmic, almost ambient noise underneath — an example of Horner’s comfort with electronics. Then a trumpet fanfare: the opening line from the original television series theme, included deliberately to signal that this really is *Star Trek*. Horner’s main theme for Kirk and the Enterprise follows — beautiful undulating strings with a soaring melody over the top, something that would be in keeping with vast battleships with sails unfurled cutting a path through uncharted waters. But it is not a rousing heroic theme; it is much slower-moving, carrying a sense of uncertainty. Meyer wanted to humanize these characters, particularly Kirk. In the original series Kirk rarely made mistakes; now he is an admiral confined to a desk job, surrounded by antiques, getting older. His eyes are starting to fail, and whatever the twenty-third-century treatment is, Kirk cannot use it — he is allergic to it. Kirk is literally allergic to the future.
+The score is primarily orchestral and tonal, with modernist elements and electronic instruments. The main title opens with a sustained note high in the violins, with synthesizers making rhythmic, almost ambient noise underneath — an example of Horner's comfort with electronics. Then a trumpet fanfare: the opening line from the original television series theme, included deliberately to signal that this really is *Star Trek*. Horner's main theme for Kirk and the Enterprise follows — beautiful undulating strings with a soaring melody over the top, something that would be in keeping with vast battleships with sails unfurled cutting a path through uncharted waters. But it is not a rousing heroic theme; it is much slower-moving, carrying a sense of uncertainty. Meyer wanted to humanize these characters, particularly Kirk. In the original series Kirk rarely made mistakes; now he is an admiral confined to a desk job, surrounded by antiques, getting older. His eyes are starting to fail, and whatever the twenty-third-century treatment is, Kirk cannot use it — he is allergic to it. Kirk is literally allergic to the future.
 
-Khan’s theme is built from three notes clustered together — semitones, just like the theme for Norman Bates. No clear sense of major or minor, unpredictable in direction, reflecting a character whose only predictable quality is his anger. When Khan is first revealed, those three notes are very quiet, matching his calm, controlled exterior — watch for the moment, beautifully played by Ricardo Montalban, when you see just a glint behind his eyes as the anger and madness threaten to bubble to the surface before he gets it back under control. Later, those same three notes played aggressively become the embodiment of Khan’s anger unleashed.
+Khan's theme is built from three notes clustered together — semitones, just like the theme for Norman Bates. No clear sense of major or minor, unpredictable in direction, reflecting a character whose only predictable quality is his anger. When Khan is first revealed, those three notes are very quiet, matching his calm, controlled exterior — watch for the moment, beautifully played by Ricardo Montalban, when you see just a glint behind his eyes as the anger and madness threaten to bubble to the surface before he gets it back under control. Later, those same three notes played aggressively become the embodiment of Khan's anger unleashed.
 
 🎥 *Star Trek — Battle 1* 🎥
 {: .vp }
 
-Through this entire sequence, the battle between Kirk and Khan is also a battle between their two themes. As shots go back and forth between the two ships, the themes bounce back and forth — Kirk’s theme when we are on the Enterprise, Khan’s when we cut to the Reliant. Gradually Kirk’s theme dies away while Khan’s grows ever more dominant. Shots on the bridges are scored more quietly; exterior shots get grander, more spectacular articulations, almost always of Khan’s theme because Khan is in charge. The scene begins with the kind of bickering between McCoy and Spock that was very much part of the original series, and then Lieutenant Saavik (played by Kirstie Alley in her first big role) identifies the approaching ship as one of theirs — the Reliant. Playing against that identification entirely, we hear Khan’s theme, telling us Khan is on that ship while Kirk and his crew are completely unaware of their danger. Notice too that the battle is staged not like an airplane dogfight but like two galleons firing broadsides: the Reliant does not open fire until the Enterprise is right next to it, almost side by side, because that is how sailing ships fought. After almost four minutes of gradually building battle music, Kirk is informed he is being told to surrender. Horner brings the music to a stop. For the first time in over two and a half minutes, we hear Kirk’s theme — in a mournful, tragic version, thematic transformation mirroring Kirk’s shock.
+Through this entire sequence, the battle between Kirk and Khan is also a battle between their two themes. As shots go back and forth between the two ships, the themes bounce back and forth — Kirk's theme when we are on the Enterprise, Khan's when we cut to the Reliant. Gradually Kirk's theme dies away while Khan's grows ever more dominant. Shots on the bridges are scored more quietly; exterior shots get grander, more spectacular articulations, almost always of Khan's theme because Khan is in charge. The scene begins with the kind of bickering between McCoy and Spock that was very much part of the original series, and then Lieutenant Saavik (played by Kirstie Alley in her first big role) identifies the approaching ship as one of theirs — the Reliant. Playing against that identification entirely, we hear Khan's theme, telling us Khan is on that ship while Kirk and his crew are completely unaware of their danger. Notice too that the battle is staged not like an airplane dogfight but like two galleons firing broadsides: the Reliant does not open fire until the Enterprise is right next to it, almost side by side, because that is how sailing ships fought. After almost four minutes of gradually building battle music, Kirk is informed he is being told to surrender. Horner brings the music to a stop. For the first time in over two and a half minutes, we hear Kirk's theme — in a mournful, tragic version, thematic transformation mirroring Kirk's shock.
 
 🎥 *Star Trek — Battle 2* 🎥
 {: .vp }
 
-Kirk appeals to Khan, offering to give himself up if the crew of cadets can be spared. It seems all may be lost — but at 1:11, quiet, uncertain music enters with a precise, orderly rhythm, suggesting Kirk and the Enterprise rather than Khan’s drive for vengeance. At 1:32, an exterior shot — Horner catches it, the music jumping in intensity, sounding like Khan’s theme except it runs out of steam and trails off, suggesting Khan is no longer in the advantaged position he thinks he is. And then the pivotal moment: at exactly 2:00, Kirk puts on his glasses. That is when Horner brings back the Kirk theme. What that moment says is that Kirk needs to embrace who he is now — a flawed man, not the one from the series who would end up shirtless and running off with the alien after thwarting the bad guys. Now he is older; he has to think his way out rather than blast his way out. And what happens next is one of the best moments in the film: Khan suddenly realizes Kirk has outthought him and frantically tries to mount a defence before Kirk opens fire.
+Kirk appeals to Khan, offering to give himself up if the crew of cadets can be spared. It seems all may be lost — but at 1:11, quiet, uncertain music enters with a precise, orderly rhythm, suggesting Kirk and the Enterprise rather than Khan's drive for vengeance. At 1:32, an exterior shot — Horner catches it, the music jumping in intensity, sounding like Khan's theme except it runs out of steam and trails off, suggesting Khan is no longer in the advantaged position he thinks he is. And then the pivotal moment: at exactly 2:00, Kirk puts on his glasses. That is when Horner brings back the Kirk theme. What that moment says is that Kirk needs to embrace who he is now — a flawed man, not the one from the series who would end up shirtless and running off with the alien after thwarting the bad guys. Now he is older; he has to think his way out rather than blast his way out. And what happens next is one of the best moments in the film: Khan suddenly realizes Kirk has outthought him and frantically tries to mount a defence before Kirk opens fire.
 
-Horner went on to tremendous success, including *Avatar* (2009) for Cameron. In addition to composing, he had a great love of flying and was a licensed pilot with a small collection of airplanes. In 2015, apparently flying fairly low through some canyons, he lost control and crashed. He was sixty-one. At the time of his death, he had just finished work on the score for the remake of *The Magnificent Seven* (2016), starring Denzel Washington. The film was still in production, but Horner had worked out the main themes and done early demo work. When the film came out, the score was completed by a friend and colleague based on Horner’s sketches. That is considered to be his final score.
+Horner went on to tremendous success, including *Avatar* (2009) for Cameron. In addition to composing, he had a great love of flying and was a licensed pilot with a small collection of airplanes. In 2015, apparently flying fairly low through some canyons, he lost control and crashed. He was sixty-one. At the time of his death, he had just finished work on the score for the remake of *The Magnificent Seven* (2016), starring Denzel Washington. The film was still in production, but Horner had worked out the main themes and done early demo work. When the film came out, the score was completed by a friend and colleague based on Horner's sketches. That is considered to be his final score.
 
 # Lecture 11: Electronic Scores and Danny Elfman
 
