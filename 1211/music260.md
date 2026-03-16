@@ -44,7 +44,7 @@ Symphonies do have notes, and so it helps to understand how to read an orchestra
 
 Scores provide helpful information right at the beginning of a work. Consider the opening of Beethoven's *Symphony No. 5*, first movement:
 
-![Beethoven Symphony No. 5, opening score](/mdf/pics/260/260-1a-beethoven5-score.png)
+![Beethoven Symphony No. 5, opening score](/pics/260/260-1a-beethoven5-score.png)
 
 The instruments are listed in a particular order. At the top we find the woodwinds — two *flauti* (flutes), two *oboi* (oboes), two *clarinetti* (clarinets), and *fagotti* (bassoons). These are the Italian names; different publishers use different translations. Below them sit the brass: two horns in E-flat (because this is a C minor symphony, and the valveless horns of the period required an E-flat crook), and two *tromba* (trumpets). Then *timpani* (kettledrums) with their tuning noted. At the bottom, always, are the strings: violin I, violin II, viola, violoncello, and contrabass, in descending order.
 
@@ -56,7 +56,7 @@ The score also gives us the key signature, time signature, and tempo indication 
 
 ## Instruments of the Orchestra
 
-![Seating arrangement of a symphony orchestra](/mdf/pics/260/260-1a-orchestra-layout.png)
+![Seating arrangement of a symphony orchestra](/pics/260/260-1a-orchestra-layout.png)
 
 The conductor stands at the front, often on a podium. The strings are positioned toward the front — there are proportionally more string players than wind, brass, or percussion players, but strings are quieter, so proximity to the audience helps balance the sound. Sometimes the violas and cellos swap positions, but strings are always in front. The woodwinds sit in the center behind the violas, the brass instruments behind them, and percussion at the back.
 
@@ -106,7 +106,7 @@ The overture has three distinct sections that continue without a break: fast (0:
 
 The score does not have the standard orchestral arrangement we discussed: trumpets appear at the top instead of in the middle, winds often double the string parts rather than having independent lines, and the bassoon part is not even written out — it was simply assumed the instrument would play along with the **basso continuo** (harpsichord and bass instrument providing harmonic support). No clarinets — that came later.
 
-![Pergolesi, L'Olimpiade — manuscript score](/mdf/pics/260/260-1b-pergolesi-manuscript.png)
+![Pergolesi, L'Olimpiade — manuscript score](/pics/260/260-1b-pergolesi-manuscript.png)
 
 ## Sammartini and the Concert Symphony
 
@@ -116,7 +116,7 @@ The score does not have the standard orchestral arrangement we discussed: trumpe
 
 His orchestra in the 1730s was mainly strings; from about 1740 he added oboes and a horn. Like the opera overture, his symphonies have three movements (fast–slow–fast, the last in a dance meter), but these are now three *separate movements* rather than three sections within one continuous piece — an important expansion. Each movement is in **simple binary form**: the A section starts in the tonic, presents several musical ideas, and moves to the dominant by the end; then it is repeated. The B section often starts with material from the beginning, passes through several modulations, and returns to the tonic for the conclusion; it is also repeated.
 
-![Sammartini, Symphony in F — opening section](/mdf/pics/260/260-1b-sammartini-score.png)
+![Sammartini, Symphony in F — opening section](/pics/260/260-1b-sammartini-score.png)
 
 In Sammartini's Symphony in F, the first movement's opening section (exposition) is just 14 bars — compact, with two distinct themes. What we really see here are the roots of classical sonata form: a simplified version that the symphony would grow out of. This is binary form on the path to becoming something more.
 
@@ -137,7 +137,7 @@ The symphony expanded beyond Italy into Germany and Austria. One of the greatest
 - Advanced **sonata form** in the first movement with clearly contrasting themes: a principal theme, a secondary theme, and a closing theme in the exposition
 - Complicated the recapitulation: rather than returning to the first theme when the tonic comes back, Stamitz starts the recapitulation with the *second* theme in the tonic, then closes the movement with the first theme — reordering the return of themes
 
-![Stamitz, Symphony in D — themes](/mdf/pics/260/260-1b-stamitz-themes.png)
+![Stamitz, Symphony in D — themes](/pics/260/260-1b-stamitz-themes.png)
 
 <p align="center">♪ <i>Stamitz, Symphony in D, Op. 3, No. 2 — I. Allegro</i> ♪</p>
 
@@ -147,7 +147,7 @@ The remaining movements follow what became the norm for the rest of the Classica
 
 Since sonata form will be central to understanding every symphony we study, a quick review is essential.
 
-![Sonata form diagram](/mdf/pics/260/260-sonata-form-diagram.png)
+![Sonata form diagram](/pics/260/260-sonata-form-diagram.png)
 
 **Sonata form** is a two-part (binary) structure that became the standard first-movement form of classical symphonies, string quartets, and keyboard sonatas. The two sections are marked by repeat signs:
 
@@ -164,7 +164,7 @@ The key scheme is the crucial element: we start in the tonic, move away from it,
 
 ## Joseph Haydn (1732–1809)
 
-![Joseph Haydn](/mdf/pics/260/260-2a-haydn-portrait.jpeg)
+![Joseph Haydn](/pics/260/260-2a-haydn-portrait.jpeg)
 
 The most celebrated composer of his day, Joseph Haydn was essentially a servant of a noble family. He showed aptitude for music early, serving as a choirboy in Vienna where he sang and played harpsichord and violin. When his voice broke at 17, he was released from his chapel work and had to support himself. He eventually secured excellent patronages, the best being with the **Esterházy family** in 1761.
 
@@ -232,7 +232,7 @@ The recapitulation pauses on a diminished chord, and then a 17-bar **coda** driv
 
 **Movement II** (Minuet and Trio, E minor): Placed second rather than third — an unusual arrangement. The minuet uses counterpoint from the very first bar: a **canon at the octave** between the violins and the basses at a one-bar interval. It is more developed than most minuets, using material from the first part in the second part. The trio provides contrast in E major with a simpler two-part structure.
 
-![Canon at the octave — Haydn, Symphony No. 44, Minuet](/mdf/pics/260/260-2a-haydn44-canon.png)
+![Canon at the octave — Haydn, Symphony No. 44, Minuet](/pics/260/260-2a-haydn44-canon.png)
 
 **Movement III** (Adagio, E major): A gentle slow movement with muted strings (*con sordino*) in simple binary form — maximum contrast after the intensity of the first two movements.
 
@@ -295,9 +295,9 @@ Symphony No. 104 was Haydn's last symphony, composed in London and premiered at 
 
 ## Wolfgang Amadeus Mozart (1756–1791)
 
-![Mozart — unfinished portrait by Joseph Lange, c. 1789](/mdf/pics/260/260-3a-mozart-portrait.jpeg)
+![Mozart — unfinished portrait by Joseph Lange, c. 1789](/pics/260/260-3a-mozart-portrait.jpeg)
 
-![The three Mozarts making music c. 1763](/mdf/pics/260/260-3a-mozart-family.jpeg)
+![The three Mozarts making music c. 1763](/pics/260/260-3a-mozart-family.jpeg)
 
 Mozart was a child prodigy who received thorough training from his father Leopold. By age 5 he was an accomplished keyboard and violin player. Leopold toured Mozart and his older sister Nannerl throughout Europe, exposing the young Wolfgang to many musical styles — including the music of J.C. Bach in London in 1764. At age 6, performing for Empress Maria Theresa, the precocious boy leapt into her lap and kissed her on the cheek.
 
@@ -363,13 +363,13 @@ Mozart's late-style symphonies were highly complex. They were criticized by crit
 
 ## Ludwig van Beethoven (1770–1827)
 
-![Beethoven](/mdf/pics/260/260-4a-beethoven-portrait.jpg)
+![Beethoven](/pics/260/260-4a-beethoven-portrait.jpg)
 
 Beethoven represents the great transition from classicism to romanticism in symphonic music. We focus on his Symphony No. 3 ("Eroica") and Symphony No. 5 — works that fundamentally altered what a symphony could be.
 
 Beethoven took the classical model of Haydn and Mozart and made radical alterations: vastly expanded proportions, longer development sections, expanded orchestration, and a new conception of the symphony as a vehicle for personal expression. His nine symphonies became monuments, each pointing in a different direction. The *Eroica* was originally dedicated to Napoleon, whom Beethoven admired as an embodiment of Enlightenment ideals — until Napoleon crowned himself Emperor, at which point Beethoven famously scratched out the dedication.
 
-![Eroica title page](/mdf/pics/260/260-4a-eroica-title.jpeg)
+![Eroica title page](/pics/260/260-4a-eroica-title.jpeg)
 
 ## Symphony No. 3 in E-flat major, "Eroica" (1803)
 
@@ -408,7 +408,7 @@ Beethoven's symphonies cast a long shadow. Every subsequent composer had to reck
 
 ## Romanticism in Music
 
-![Schubert](/mdf/pics/260/260-5a-schubert-portrait.jpeg)
+![Schubert](/pics/260/260-5a-schubert-portrait.jpeg)
 
 **Romanticism** was a movement in the arts and literature originating in the late 18<sup>th</sup> century that emphasized inspiration, subjectivity, and the primacy of the individual. It contrasted with classicism by reacting against order and restraint, rejecting the purely rational. In music from the 1820s onward, Romanticism meant freedom from inherited forms and procedures. Its roots lay in late-18<sup>th</sup>-century literature and painting — Romantic novels by Goethe, painters like Henri Fuseli, and the philosophy of Jean-Jacques Rousseau. From Beethoven, Romantic composers inherited the idea of the unique message, personal style, and the composer as "artist."
 
@@ -435,7 +435,7 @@ Schubert also wrote the *Great* Symphony No. 9 in C major, a work of enormous pr
 
 ## Felix Mendelssohn (1809–1847)
 
-![Mendelssohn](/mdf/pics/260/260-5bc-mendelssohn-portrait.jpeg)
+![Mendelssohn](/pics/260/260-5bc-mendelssohn-portrait.jpeg)
 
 Mendelssohn was a child prodigy from a wealthy, cultured family. He was a brilliant pianist, conductor, and composer who helped revive interest in the music of J.S. Bach (conducting the *St. Matthew Passion* in 1829). He wrote five symphonies, including the *Italian* (No. 4 in A major) and the *Scottish* (No. 3 in A minor), both inspired by his travels.
 
@@ -443,7 +443,7 @@ Mendelssohn's symphonies are notable for their lyrical melodies, brilliant orche
 
 ## Robert Schumann (1810–1856)
 
-![Schumann](/mdf/pics/260/260-5bc-schumann-portrait.jpeg)
+![Schumann](/pics/260/260-5bc-schumann-portrait.jpeg)
 
 Schumann was primarily known as a piano composer and music critic before turning to orchestral music. He wrote four symphonies, all marked by Romantic expressiveness and innovative formal thinking.
 
@@ -458,7 +458,7 @@ Schumann's orchestration has sometimes been criticized as thick or heavy, but hi
 
 ## The 19<sup>th</sup>-Century Orchestra
 
-![Berlioz](/mdf/pics/260/260-6a-berlioz-portrait.jpeg)
+![Berlioz](/pics/260/260-6a-berlioz-portrait.jpeg)
 
 The 19<sup>th</sup>-century orchestra became central to public concert life. The number of orchestras increased significantly — some amateur, some professional. The **London Philharmonic** (founded 1813), the **New York Philharmonic** (1842), and the **Vienna Philharmonic** (1842) were among the professional orchestras established during this period. Most major cities in Europe and the Americas had orchestras providing regular concert series.
 
@@ -495,7 +495,7 @@ The symphony has **five movements** (like Beethoven's Pastoral Symphony No. 6), 
 
 ## Franz Liszt (1811–1886)
 
-![Liszt](/mdf/pics/260/260-6b-liszt-portrait.jpeg)
+![Liszt](/pics/260/260-6b-liszt-portrait.jpeg)
 
 Liszt had a career as a concert virtuoso that generated hysteria like a rock star. In 1848, he became court music director at Weimar, ceased touring, and turned to composing, conducting, and teaching. He made Weimar a center of new music, championing Wagner and Berlioz. He was a leading figure of the **"New German School"** — advocates of the "music of the future."
 
@@ -527,7 +527,7 @@ Liszt also wrote programmatic symphonies — the *Faust Symphony* (1854) and *Da
 
 ## The Dispute: Brahms versus Wagner
 
-![Brahms](/mdf/pics/260/260-7-brahms-portrait.jpg)
+![Brahms](/pics/260/260-7-brahms-portrait.jpg)
 
 By 1850, concerts increasingly focused on musical classics — the proportion of older works grew, fed by a new field of musicology that unearthed, published, and studied earlier music. The increasing supply of older repertory paradoxically posed problems for living composers: some created works in the Classical tradition (Brahms), while others saw Beethoven's legacy pointing in a different direction (Wagner).
 
@@ -563,7 +563,7 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 
 ## Nationalism in Music
 
-![Dvořák](/mdf/pics/260/260-8a-dvorak-portrait.jpeg)
+![Dvořák](/pics/260/260-8a-dvorak-portrait.jpeg)
 
 **Nationalism** in music emerged after the defeat of the Holy Roman Empire by Napoleon in 1806, fueled by Enlightenment ideals of freedom, justice, equality, and the importance of common people. Composers sought musical independence from Austro-German domination. Many nationalists avoided the symphony and large-scale forms altogether, preferring more flexible forms like the symphonic poem (Liszt) and programmatic titles.
 
@@ -592,7 +592,7 @@ Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream sym
 
 ## Nationalism in Russian Music
 
-![Tchaikovsky](/mdf/pics/260/260-8b-tchaikovsky-portrait.jpeg)
+![Tchaikovsky](/pics/260/260-8b-tchaikovsky-portrait.jpeg)
 
 Russia was a center of musical nationalism. Two main approaches emerged: the **nationalists** (who idealized Russia's distinctiveness) and the **internationalists** or "westernizers" (who adapted Western European models). This distinction played out in the rivalry between conservatories on the Western model and **"The Mighty Five"** (Balakirev, Borodin, Cui, Mussorgsky, Rimsky-Korsakov), who opposed Western academic training.
 
@@ -623,7 +623,7 @@ Composed during stressful personal circumstances, this symphony was supported by
 
 ## Gustav Mahler (1860–1911)
 
-![Mahler](/mdf/pics/260/260-9-mahler-portrait.png)
+![Mahler](/pics/260/260-9-mahler-portrait.png)
 
 Mahler was the leading Austro-German composer of symphonies after Brahms and Bruckner. His primary career was as a professional opera and orchestral conductor — from 1897 to 1907 he directed the **Vienna State Opera**. He composed mainly during summers, writing only songs and orchestral works: 9 symphonies (a 10<sup>th</sup> left unfinished), and 5 works for voice and orchestra. He revised works repeatedly, retouching orchestration throughout his life.
 
@@ -650,7 +650,7 @@ The symphony went through multiple versions: first performed in Budapest in 1889
 
 ## Sir Edward Elgar (1857–1934)
 
-![Elgar](/mdf/pics/260/260-10a-elgar-portrait.jpg)
+![Elgar](/pics/260/260-10a-elgar-portrait.jpg)
 
 Elgar is best known for *Pomp and Circumstance* (1901) and the *Enigma Variations* (1899), which brought him his first great success (the "Nimrod" variation remains one of the most beloved pieces in the orchestral repertoire).
 
@@ -681,7 +681,7 @@ An article written a few weeks after the premiere addressed England's reputation
 
 ## Jean Sibelius (1865–1957)
 
-![Sibelius](/mdf/pics/260/260-10b-sibelius-portrait.jpeg)
+![Sibelius](/pics/260/260-10b-sibelius-portrait.jpeg)
 
 Finland's leading composer, Sibelius became a Finnish patriot who sought to create a national style. His series of symphonic poems, including *Finlandia* (1899), established him as the nation's leading composer. He wrote seven symphonies (1899–1924), and his music was popular in Finland, Britain, and the United States. By the 1910s he was regarded as conservative, though he used techniques now seen as progressive. He stopped composing by the late 1920s, living another three decades in silence.
 
@@ -708,7 +708,7 @@ This approach is similar to Schumann's Fourth Symphony — a superficial similar
 
 ## Sergey Prokofiev (1891–1953)
 
-![Prokofiev](/mdf/pics/260/260-11a-prokofiev-portrait.jpeg)
+![Prokofiev](/pics/260/260-11a-prokofiev-portrait.jpeg)
 
 Prokofiev studied at the St. Petersburg Conservatory (1904–14) in piano, composition, and conducting, establishing himself as an avant-garde figure. After the Russian Revolution, he left for the USA, Germany, and Paris. In 1936 he returned to the USSR, and in 1948 was labelled a "formalist" and censured. He died on the same day as Stalin in 1953. He wrote seven symphonies, ballets (*Romeo and Juliet*, *Cinderella*), operas, and piano works.
 
@@ -743,7 +743,7 @@ The "Classical Symphony" as a neoclassical work:
 
 ## The Arts in the Soviet Union
 
-![Shostakovich](/mdf/pics/260/260-11b-shostakovich-portrait.jpg)
+![Shostakovich](/pics/260/260-11b-shostakovich-portrait.jpg)
 
 The Soviet government controlled all aspects of the arts. After the 1917 Revolution, musical institutions were nationalized and concert programming was strictly regulated. By 1923, two competing composers' organizations had been founded. In 1929, Stalin consolidated power and suppressed dissent, establishing the **Union of Soviet Composers** in 1933 to enforce unified cultural policy.
 
