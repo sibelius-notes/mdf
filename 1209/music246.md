@@ -20,6 +20,22 @@ prof: Simon Wood
   width: 100%;
   height: 100%;
 }
+.vp {
+  text-align: center;
+  padding: 0.6em 1em;
+  margin: 1.2em auto;
+  max-width: 80%;
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 6px;
+  color: #b8b8cc;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+}
+.vp em {
+  color: #e0d0ff;
+  font-style: italic;
+}
 </style>
 
 # Lecture 1: Introduction — Why Music?
@@ -33,7 +49,8 @@ And I’ll see you again in Part B.
 ## Part B: Our First Scene
 This is the music written specifically for the scene. The film has already been chopped and the composer was writing music while watching the film on fold. The composer has synchronized the music they have written to what goes on within the scene. Watch the scene with the sound off. Then listen to the music with the sound on. VIDEO EXAMPLE 1-Apollo 13.
 
-<p align=”center”>🎥 <i>Apollo 13</i> 🎥</p>
+🎥 *Apollo 13* 🎥
+{: .vp }
 
 The first part of the scene shows the wife of one of the astronauts in a hotel room. She is nervous — her husband is going to the moon, and she is scared he may never come back. While she is in the shower, her wedding ring slides off her finger and disappears down the drain, a powerful visual metaphor for her fear of losing her husband. There is no music during the shower scene. Why not? First, it is a small, intimate moment — music would risk over-dramatizing it. Second, the silence leaves “space” for what follows: after this scene, music continues for several minutes straight through the launch sequence. Where music *isn’t* can be as important as where it is.
 
@@ -62,11 +79,13 @@ To see these functions in action, consider two examples:
 
 *Raiders of the Lost Ark* (1981), composed by John Williams, demonstrates Functions 1, 3, and 4. During a rapid change of location from Tibet to Egypt, the music is continuous throughout (F3). A change in the note choice signals the shift in location upon arrival in Egypt (F1). When the action transitions to quiet dialogue, the music brings the action sequence to a close (F4).
 
-<p align=”center”>🎥 <i>Raiders of the Lost Ark</i> 🎥</p>
+🎥 *Raiders of the Lost Ark* 🎥
+{: .vp }
 
 *Alien Resurrection* (1997), composed by John Frizzell, demonstrates Functions 2 and 4. The music reinforces the change from slow-moving dialogue to chaotic action, then slows the pace leading to the scene's conclusion (F4). It also “catches” Call's reaction upon hearing Ripley's name — foreshadowing the connection between them (F2).
 
-<p align=”center”>🎥 <i>Alien Resurrection</i> 🎥</p>
+🎥 *Alien Resurrection* 🎥
+{: .vp }
 
 # Lecture 2: Evaluating a Score
 
@@ -122,7 +141,8 @@ Most film music falls somewhere between two conceptual extremes. **Playing the d
 
 **Tempo** refers to how fast the music unfolds — how quick is the beat? The speed of the music directly influences the perceived pace of the narrative, interacting with on-screen action, framing, editing, and sound design. Consider this example from *The Return of the King* (2003), composed by Howard Shore:
 
-<p align=”center”>🎥 <i>The Lord of the Rings — The Return of the King</i> 🎥</p>
+🎥 *The Lord of the Rings — The Return of the King* 🎥
+{: .vp }
 
 ### Harmony
 
@@ -314,7 +334,8 @@ As we moved to mid 1920s, Vitaphone became popular: the audio quality is much be
 
 *The Jazz Singer* (1927) is often called the first "talking" motion picture, though it is primarily a silent film with several minutes of synchronized sound through the Vitaphone system. Most of the score is compiled or adapted.
 
-> 🎥 *The Jazz Singer* 🎥
+🎥 *The Jazz Singer* 🎥
+{: .vp }
 
 The effect was quite astonishing for audiences at the time. Notice the big gaps before and after the dialogue — the projectionist needed to switch the records. The dialogue itself is remarkably stilted: there were no script writers for sound, and the actor, Al Jolson, is essentially improvising. There is barely any camera motion because cameras were noisy and had to be enclosed in soundproof booths. The actor cannot move very far because of the fixed microphone position. And he is not really playing the piano.
 
@@ -335,9 +356,11 @@ Let's talk about how the change to sound alters the approach to make motion pict
     - by 1935 the transition is complete.
     - The 1952 film *Singin' in the Rain* brilliantly satirizes the difficulties of this transition:
 
-> 🎥 *Singin' in the Rain — Issues with Filming* 🎥
+🎥 *Singin' in the Rain — Issues with Filming* 🎥
+{: .vp }
 
-> 🎥 *Singin' in the Rain — Issues with Exhibition* 🎥
+🎥 *Singin' in the Rain — Issues with Exhibition* 🎥
+{: .vp }
 4. **Industry Reorganization**. The costs become higher for sound films so film industries are looking for ways to save money: All aspects of production are departmentalized – directors, actors, and musicians are put under contract – Leads to the STUDIO SYSTEM. Cost and control. Conglomeration: larger companies buy smaller. *The "Big" Five*: MGM, Paramount, Warner Brothers, 20<sup>th</sup> Century Fox (1935), and RKO. *The “Little” 3* – Universal, Colombia, and United Artists. Both of them have bought everything they need to produce a film, but the "big" five owns distribution network and exhibition locations. Issue: monopoly when controlling all three: production, distribution, exhibition.
 
 ## Max Steiner (1888–1971)
@@ -350,15 +373,18 @@ By 1930, however, there was still very little music in dramatic films. The preva
 
 The turning point came in 1933 with *King Kong*. Early test audiences found the special effects laughable — they were laughing instead of screaming. The film had very little music. Afraid of losing money, the director convinced the studio to let Steiner write a full score. He composed it in just two weeks. This time, with music, the audience screamed.
 
-<p align=”center”>🎥 <i>King Kong — The Fog</i> 🎥</p>
+🎥 *King Kong — The Fog* 🎥
+{: .vp }
 
 The music hovers between consonance and dissonance, creating an atmosphere of mystery. It is used to indicate a transition from the normal world to the realm of the supernatural. As the ship arrives at the island, the music shifts: a view of the beach introduces Kong’s theme in an early, distant form. Notice the lack of distinction between diegetic and nondiegetic music — the score blurs the boundary between the sounds of the story world and the underscore.
 
-<p align=”center”>🎥 <i>King Kong — The Dance</i> 🎥</p>
+🎥 *King Kong — The Dance* 🎥
+{: .vp }
 
 The music for the ceremonial dance uses a full orchestra, yet only drums are visible on film — another instance of blurring the lines between diegetic and nondiegetic music. Steiner’s Broadway background is evident in this scene. We also see classic **”mickey mousing”** with the chief’s walk down the steps, where the tuba and low basses are perfectly synchronized to each footfall.
 
-<p align=”center”>🎥 <i>The Informer — Opening</i> 🎥</p>
+🎥 *The Informer — Opening* 🎥
+{: .vp }
 
 *The Informer* (1935) is another key Steiner score. The opening features a folk-influenced theme for Gypo and a jazz-influenced theme for Katie. Listen for the musical quotation of “Rule Britannia.” The score won the Academy Award for Best Original Score.
 
@@ -396,41 +422,50 @@ Korngold also developed a distinctive set of approaches for battle scenes: loud 
 
 Korngold also made use of the **overture** at the beginning of each film, presenting the main themes before the story begins — a practice borrowed directly from opera.
 
-> 🎥 *The Sea Hawk — Opening* 🎥
+🎥 *The Sea Hawk — Opening* 🎥
+{: .vp }
 
 The opening credits function as an overture in miniature, presenting a heroic theme (brass fanfare) followed by a love theme (strings), then returning to the heroic material. This A–B–A structure gives the audience an emotional roadmap for the film before a single scene has played.
 
-> 🎥 *The Sea Hawk — The Battle* 🎥
+🎥 *The Sea Hawk — The Battle* 🎥
+{: .vp }
 
 In the battle scene, Korngold **phrases the drama** — the music sets the mood and parallels the arc of the battle rather than hitting every individual action. Notice how the music drops under dialogue, hits the thrown knife precisely, then drops the pacing under the retreat. There is also a blending of source music and score when the retreat is sounded.
 
 ### *The Adventures of Robin Hood* (1938)
 
-> 🎥 *Robin Hood — Opening Credits* 🎥
+🎥 *Robin Hood — Opening Credits* 🎥
+{: .vp }
 
 The opening credits function as another overture, presenting three themes. The first two are based on a march rhythm — group activity, representing the Merry Men. The final theme is the love theme, characterized by soaring strings with a prominent sixth interval.
 
-> 🎥 *Robin Hood — Robin's Theme* 🎥
+🎥 *Robin Hood — Robin's Theme* 🎥
+{: .vp }
 
 Robin Hood's personal theme is short and fanfare-like — distinct from the Merry Men themes in the opening credits.
 
-> 🎥 *Robin Hood — Little John* 🎥
+🎥 *Robin Hood — Little John* 🎥
+{: .vp }
 
 The Merry Men theme is first heard when Little John joins the band, played on the French horn — an instrument with a long operatic association with the hunter or woodsman. The scene features a stylistic blend of source music and score, with the music "hitting the action" during the duel (played for comedy). Listen for the woodwind "water" theme, similar to many operatic water scenes. The scene concludes with a triumphant return of the Merry Men theme.
 
-> 🎥 *Robin Hood — Friar Tuck* 🎥
+🎥 *Robin Hood — Friar Tuck* 🎥
+{: .vp }
 
 The Friar Tuck scene follows a similar structure to the Little John scene. His initial theme is played primarily on bassoon and muted trumpet — instruments that convey a comic character. The sword fight reuses the same musical material as the Little John battle but with more excitement and energy. The woodwind "water" theme returns, and the scene again concludes with the Merry Men theme.
 
-> 🎥 *Robin Hood — Robin and Marion 1* 🎥
+🎥 *Robin Hood — Robin and Marion 1* 🎥
+{: .vp }
 
 When Marion first sees the Saxon refugees, a quiet variation of the peril theme underscores her growing awareness. During the dialogue between Marion and Robin, two themes alternate — the second being the love theme from the opening credits. The question is: which one is the "real" love theme — or are both?
 
-> 🎥 *Robin Hood — Robin and Marion 2* 🎥
+🎥 *Robin Hood — Robin and Marion 2* 🎥
+{: .vp }
 
 For the big romantic moment, Love Theme 1 receives its fullest statement — big strings, a moment of spectacle. Love Theme 2 follows in a quieter, more intimate setting on solo cello.
 
-> 🎥 *Robin Hood — King Richard* 🎥
+🎥 *Robin Hood — King Richard* 🎥
+{: .vp }
 
 Love Theme 2 (from the opening credits) receives its most dramatic statement with the reveal of King Richard — a brilliant thematic choice that elevates the emotional stakes of the scene.
 
@@ -462,7 +497,8 @@ Rózsa's score for *Double Indemnity* (1944) marked a turning point. The film is
 
 The score features short, unpredictable themes that are deliberately unsettling, with a greater use of **dissonance** and a move away from clear tonality. The little motive cannot be found in the major scale — that is part of why it sounds so unsettling, because we are not quite as familiar with the notes and not quite sure where they are going to go. When Paramount's head of music heard the score, he was quite horrified, complaining that it was anything but "attractive." Rózsa shot back that the film was about "ugly people doing vicious things to each other" and the music reflected precisely that. In a particularly telling moment during the argument, the studio head — intending it as an insult — described Rózsa's music as "Carnegie Hall music," essentially accusing him of making the score sound like contemporary concert music: edgier, nastier, more dissonant. He was not wrong, and that was precisely the point. Director Billy Wilder stood by Rózsa, and the music remained as the composer intended. The film was a hit, and the score received an Academy Award nomination.
 
-> 🎥 *Double Indemnity* 🎥
+🎥 *Double Indemnity* 🎥
+{: .vp }
 
 ### *Spellbound* and *The Lost Weekend* (1945)
 
@@ -472,11 +508,13 @@ The love theme from *Spellbound* — the music that opened this week's lecture �
 
 The theremin is a fascinating device. You play it by waving your hands at two antennas: one controls volume, the other controls pitch. In the hands of a skilled performer such as **Clara Rockmore**, you can get a remarkable level of control out of it. Its inventor, **Leon Theremin**, actually envisioned it as a serious artistic instrument — photographs show him standing before the theremin dressed and posed like a classical conductor. It never quite achieved that level of acceptance, but it did find a home in film scoring. In both *Spellbound* and *The Lost Weekend*, Rózsa uses the theremin to musically illustrate an unstable character — the amnesiac who may be a murderer, the alcoholic whose addiction is spiralling out of control. This was among the first important uses of an electronic instrument in a film score.
 
-> 🎥 *The Lost Weekend — Scene 1* 🎥
+🎥 *The Lost Weekend — Scene 1* 🎥
+{: .vp }
 
 In the first *Lost Weekend* scene, the writer Don Burnham has been to a local bar, where he told the bartender a story idea — not realizing the story is actually about himself. The bartender, who does not know this, says the character sounds like he would just end up killing himself. Burnham insists that is not how it ends, leaves the bar determined to write, and the music as he leaves is very positive, very upbeat, and very consonant. He sits at the typewriter and starts typing, and momentarily we get something almost like a love theme — a gentle French horn melody appears as we see the words "To Helen, with all my love" being typed. The music takes on a slightly comedic quality as he fumbles with his hat and gets the cigarette the wrong way around, then he stands, turns, and just before the two-minute mark he sees the empty bottle — and we hear the **alcoholism theme**, dark, threatening, and absolutely nothing to do with the major scale. First the orchestra plays it, then the theremin takes over as Burnham searches through his apartment, convinced he has hidden a bottle somewhere. His craving overtakes him as the music grows more and more intense. Think about what you are watching: a man basically having a temper tantrum in his apartment. From an outside perspective it is actually a rather pathetic scene. But the music is not playing that. The music is playing the struggle in his head, the monster of alcoholism slowly taking him over. There is a wonderful bit of subtle acting from **Ray Milland** — as he turns back from tearing apart his cupboard, his walk is subtly altered, almost as if he is not quite human anymore. Around the 3:45 mark, almost all the instruments fall away as he sees the matchbook for a nightclub. One of the only things still remaining is the theremin playing the alcoholism theme — everything else has dropped by the wayside and only the monster remains.
 
-> 🎥 *The Lost Weekend — Scene 2* 🎥
+🎥 *The Lost Weekend — Scene 2* 🎥
+{: .vp }
 
 The second scene is a continuation of where we left off and is a great example of a composer staying out of the way — and a brilliant use of source music to completely change the perception of a character. The very first thing we see is a piano player and singer in a nightclub, clearly establishing that what follows is diegetic music — a soft pop song, contemporary for 1945. Without Rózsa's score, we see Don Burnham as the world sees him: a pathetic figure who has lost control, not deserving of respect. He realizes he cannot pay his bill, spots a woman's purse, and painfully steals it — a scene that, with score, would have been dramatic and agonizing, but with only the pop song playing it feels small and humiliating. (There is also a fascinating period detail: a gentleman in the bathroom whose job is to polish shoes and hand out towels — a reminder that in 1945, the Civil Rights Movement was still ten to fifteen years away.) The best use of the source music comes when Burnham returns to the table and a voice says, "That's the man." The music stops. There is utter silence. It is so painfully embarrassing — you see the gentlemen behind him slowly stand up, all attention on him, and there is nothing to hide behind, not even music. Then, as they throw him out, the piano player starts up again and everyone sings along, laughing at him. The change from the previous scene is devastating: in that scene, Rózsa's music let us feel the power of the illness; here, the music is gone and we get no sense of how Burnham feels internally.
 
@@ -504,23 +542,27 @@ What followed has become one of the most famous personal stories in the history 
 
 *Laura* is a psychological thriller, a whodunit driven by motivations and misdirection — the very first thing you hear after the opening music is Waldo Lydecker saying, "I shall never forget the weekend Laura died." The score is **monothematic** — built almost entirely on a single theme — and has a distinctly non-European sound rooted in American popular music. The music does not drive the suspense so much as represent the ghost or the "ideal" of Laura, the woman everyone remembers but who is not there to speak for herself. It also provides crucial insight into the mind of Detective McPherson, who slowly becomes obsessed with this dead woman's image.
 
-> 🎥 *Laura — Opening Credits* 🎥
+🎥 *Laura — Opening Credits* 🎥
+{: .vp }
 
 The opening credits focus on the portrait of Laura — sophisticated, urban, almost unearthly. (The portrait has a great backstory: Preminger hated the original painting, so the studio had a photograph taken of actress Gene Tierney, blew it up to portrait size, and then sent it to the art department, where studio artists added very light traces of almost transparent oil paint to make the photograph look like a painting.) The musical theme is linked to Laura herself: orchestral, but with a distinctly pop/jazz influence. Even without music-theory knowledge, you can hear the difference: the chord structures have more in common with popular music than with classical music. Raksin is adding notes — major sevenths, ninths, thirteenths — that would be uncommon in a classical work but are standard in the jazz and pop vocabulary of the 1940s. Even the way some of the musicians play is drawn from popular-music technique: listen to how the trumpet player deliberately slides between notes rather than articulating them cleanly as they would in a classical performance. After the film was released, lyrics were written for Raksin's melody and the song became a major hit, recorded by numerous singers including Ella Fitzgerald — a reminder that before 1950, jazz and popular music were largely the same thing.
 
 The end of the credits does not resolve — the notes that sound like they should bring the theme to rest instead push us forward, propelling us into the diegesis. We enter a transitional space: Lydecker's **monologue** ("I shall never forget the weekend Laura died"), scored with a **pedal point** — a sustained bass note that simply refuses to move while the notes above it keep changing. Even if you are not consciously aware of it, the unchanging bass note creates a sense of anticipation: you keep wondering whether it will change, and it keeps not changing, drawing you forward into the story. The monologue is **metadiegetic**, existing on the boundary between the film world and the audience — not quite diegetic dialogue, not quite narration. The music ends precisely with the first actual line of diegetic dialogue — "Careful there, that stuff is priceless" — marking the transition into the narrative proper.
 
-> 🎥 *Laura — Lydecker's Story Part A* 🎥
+🎥 *Laura — Lydecker's Story Part A* 🎥
+{: .vp }
 
 The scene opens with an establishing shot of a restaurant, where a small band — accordion, piano, violinist — is playing Laura's theme as source music. The theme permeates almost every aspect of the film's world, a constant reminder of the absent Laura. When Lydecker begins to tell his story (around the 32-second mark), the visual narrative shifts to several years earlier, and the music seamlessly follows the transition: the little trio of diegetic musicians gives way to the full orchestra playing Laura's theme as non-diegetic score. We get our first good look at Laura, and an interesting detail that is lost on a contemporary audience: the clothing that Gene Tierney wears in this scene was deliberately chosen to be out of fashion and not terribly well fitted, presenting Laura as a somewhat naive, very young, innocent character who has just come to the city and has not yet figured herself out.
 
 When Laura reaches Lydecker's table (around the one-minute mark), her theme drops away and is replaced by a **waltz** — a dance counted in groupings of three. But "waltz" is also a word used to describe someone who just comes up to you in a confident or almost aggressive manner, and to describe people circling each other, sizing each other up. That is essentially what is happening: Laura is trying to ingratiate herself with Lydecker (she wants him to endorse a pen), and Lydecker is doing everything he can to rattle her. The actor Clifton Webb is brilliant here — watch all the little business with his lunch, picking things off his plate, adding sauces, never actually eating anything, conveying this sense of a character who is incredibly fussy and picky. Laura's theme returns around the three-minute mark, at precisely the moment she drops the act and says what she actually means — from Lydecker's perspective, at least, this is the moment we see the "real" Laura.
 
-> 🎥 *Laura — Lydecker's Story Part B* 🎥
+🎥 *Laura — Lydecker's Story Part B* 🎥
+{: .vp }
 
 The theme grows in complexity as Laura's career grows — all of it engineered by Lydecker, at least as far as he is concerned. But notice that Laura herself does not speak. There is even a line where Lydecker says she "listened more eloquently than speech" — a revealing and rather problematic statement from a man whose idea of the perfect woman is one who sits there and looks beautiful without trying to say anything. The montage relies on the music for continuity, with seamless transitions between source and score. Around the 50-second mark, as we cut back to the restaurant, you can hear the music move out of the orchestra and back into the little trio of musicians — though if you look closely at the candle on the table, it has burned down quite a bit, meaning they have been sitting there talking for some time and the band is still playing the same song.
 
-> 🎥 *Laura — The Apartment* 🎥
+🎥 *Laura — The Apartment* 🎥
+{: .vp }
 
 The apartment scene is the pivotal sequence that the entire first two-thirds of the film has been building toward. It is a classic film-noir setting: night, rain, the darkness and reflectiveness of the water creating interesting effects of light and shadow. McPherson arrives at Laura's apartment and notice how he interacts with the portrait — he looks at it, walks back and forth in front of it, but never stands directly in front of it. The portrait is often visible just over his shoulder, even out of focus, like the presence of Laura watching him.
 
@@ -552,7 +594,8 @@ His breakthrough came through a sympathetic director named Otto Preminger — th
 
 Bernstein's career recovery was aided by an unlikely connection. While making ends meet, he was working as a rehearsal pianist for a prestigious ballet company led by **Agnes de Mille**. She liked Bernstein and knew his troubles, and her brother happened to be the legendary director **Cecil B. DeMille**, who was making *The Ten Commandments* and needed a last-minute replacement composer. Agnes lobbied relentlessly, and Cecil eventually gave in. The story goes that at the end of their first meeting, DeMille told Bernstein: "I saw that Preminger movie you did with Sinatra — that was great. But if you write any music like that for my movie, I guarantee you will never work in this town again." Bernstein got the message. The music he wrote for *The Ten Commandments* sounded like something Korngold would have composed — a world away from the jazz of *The Man with the Golden Arm*, written barely a year apart. That contrast is the essence of **versatility**, the defining skill of successful film composers going forward. Bernstein went on to a remarkably successful career: fourteen Academy Award nominations, work on films such as *Ghostbusters*, *The Blues Brothers*, and *Airplane!* (all with director John Landis), and even the beloved theme for the National Geographic Society's television specials.
 
-> 🎥 *The Man with the Golden Arm* 🎥
+🎥 *The Man with the Golden Arm* 🎥
+{: .vp }
 
 ### Dimitri Tiomkin (1894–1979)
 
@@ -560,9 +603,11 @@ Bernstein's career recovery was aided by an unlikely connection. While making en
 
 His score for *High Noon* (1952) was groundbreaking. It is based on a popular song Tiomkin composed called "Do Not Forsake Me," which became a hit for singer Tex Ritter. The song was pre-released before the film, establishing the practice of the **"movie song"** as a marketing tool. Tiomkin received Academy Awards for both Best Score and Best Song. The score is notable for its high level of integration — the song melody is woven throughout the entire score.
 
-> 🎥 *High Noon — Opening Credits* 🎥
+🎥 *High Noon — Opening Credits* 🎥
+{: .vp }
 
-> 🎥 *High Noon — The Montage* 🎥
+🎥 *High Noon — The Montage* 🎥
+{: .vp }
 
 The montage scene demonstrates the synchronization of music with the ever-present clock and the use of Frank Miller's theme from the opening song.
 
@@ -578,9 +623,11 @@ The montage scene demonstrates the synchronization of music with the ever-presen
 
 Herrmann's approach was distinctive: he believed that the sound of a score depends fundamentally on **instrumentation**, and since film music is only required for a recording session — not for repeated live performance — there is no need to limit oneself to a standardized ensemble. For *The Day the Earth Stood Still* (1951), he assembled a unique set of instruments: violin, cello, and bass (all electric), two theremins, three electric organs, three vibraphones, two glockenspiels, two pianos, two harps, three trumpets, three trombones, and four tubas.
 
-> 🎥 *The Day the Earth Stood Still — Scene 1* 🎥
+🎥 *The Day the Earth Stood Still — Scene 1* 🎥
+{: .vp }
 
-> 🎥 *The Day the Earth Stood Still — Scene 2* 🎥
+🎥 *The Day the Earth Stood Still — Scene 2* 🎥
+{: .vp }
 
 ### The Hitchcock Collaboration
 
@@ -590,19 +637,23 @@ In 1955, Herrmann began his famous collaboration with Alfred Hitchcock, scoring 
 
 *Psycho* was made on a limited budget and shot in black and white. Herrmann matched this austerity with a strings-only score — a "black and white" score. He exploited the extraordinary variety of sounds a string section can produce. His cues tend to set a single mood rather than responding to moment-by-moment action. The overall mood is bleak, with little emotional warmth.
 
-> 🎥 *Psycho — The Money* 🎥
+🎥 *Psycho — The Money* 🎥
+{: .vp }
 
 A short, repetitive theme that fractures — quiet but unsettled, reflecting Marion's discomfort with the theft. It grows slightly in intensity as she decides to take the money.
 
-> 🎥 *Psycho — The Flight* 🎥
+🎥 *Psycho — The Flight* 🎥
+{: .vp }
 
 The music enters as Marion makes her escape. At first it seems to play her fear of being caught, but as her character transforms, the music shifts to play her descent to the "dark side."
 
-> 🎥 *Psycho — Norman* 🎥
+🎥 *Psycho — Norman* 🎥
+{: .vp }
 
 Two semitones form the basis of the scoring. Herrmann uses string **harmonics** — an ethereal, glassy sound — as Norman spies on Marion. There is no emotion in the music, only cold observation.
 
-> 🎥 *Psycho — The Shower* 🎥
+🎥 *Psycho — The Shower* 🎥
+{: .vp }
 
 There is no music until the attack begins. Then the strings "shriek" — there is no tonality, only pure sonic violence. As the murderer flees the scene, listen carefully: whose theme accompanies the escape?
 
@@ -620,13 +671,15 @@ The end of the studio system led to freelancing and the rise of independent prod
 
 Bernstein's score for *The Magnificent Seven* shows the influence of Aaron Copland — clear melodies with a folk song influence, strong rhythms with syncopation, and a sound that evokes the American West and American nationalism.
 
-> 🎥 *The Magnificent Seven* 🎥
+🎥 *The Magnificent Seven* 🎥
+{: .vp }
 
 ### Ennio Morricone (1928–2020)
 
 **Ennio Morricone** was born in Rome in 1928. He is best known for his association with Italian director Sergio Leone and the **"spaghetti western."** Over his career, Morricone amassed over 400 film credits spanning an extraordinary range of styles from popular music to the avant-garde. His score for *The Good, the Bad and the Ugly* (1966) makes innovative use of sound effects, voices, and electric guitars:
 
-> 🎥 *The Good, the Bad and the Ugly* 🎥
+🎥 *The Good, the Bad and the Ugly* 🎥
+{: .vp }
 
 His later work includes *The Mission* (1986), which blends Catholic texts and musical styles with indigenous musical elements and instruments.
 
@@ -634,7 +687,8 @@ His later work includes *The Mission* (1986), which blends Catholic texts and mu
 
 **John Barry** was a classical pianist and trumpet player who turned to pop music in his twenties. By the early 1960s, he was a well-known British pop musician. His big break came with *Dr. No* (1962) and the James Bond franchise. The origins of the iconic James Bond theme are disputed — Monty Norman is credited, but Barry's contribution led to a lawsuit. Barry composed the music for eleven Bond films and won five Academy Awards, including for *Born Free* (1966), *Out of Africa* (1985), and *Dances with Wolves* (1990). His style is defined by clear, tonal melodies with a strong pop influence.
 
-> 🎥 *Dr. No* 🎥
+🎥 *Dr. No* 🎥
+{: .vp }
 
 Notice that when James Bond enters the scene, his theme begins — but when he makes a phone call, the music fades out, because it had not been recorded to the timings of the picture.
 
@@ -644,11 +698,13 @@ In addition to the increasing impact of popular music, **atonality** was becomin
 
 Stanley Kubrick's *2001: A Space Odyssey* uses a compiled score drawn entirely from classical music, combining tonal late-Romantic music (Johann Strauss II's *The Blue Danube*) with atonal 20th-century works (György Ligeti). This was seen as a radical new approach to the relationship between music and film.
 
-> 🎥 *2001: A Space Odyssey — The Earth to the Moon* 🎥
+🎥 *2001: A Space Odyssey — The Earth to the Moon* 🎥
+{: .vp }
 
 The music accompanying humans is tonal — the graceful elegance of *The Blue Danube* waltz.
 
-> 🎥 *2001: A Space Odyssey — The Monolith* 🎥
+🎥 *2001: A Space Odyssey — The Monolith* 🎥
+{: .vp }
 
 The music depicting the alien intelligence is atonal — Ligeti's dense, unsettling clusters of sound.
 
@@ -662,11 +718,13 @@ The music depicting the alien intelligence is atonal — Ligeti's dense, unsettl
 
 Goldsmith's score for *Patton* is remarkably sparse — just over forty minutes of music for a film nearly three hours long. Goldsmith preferred less music rather than more; his approach was to assume every scene did not need music unless it could bring something substantial. The film reflects the late 1960s' growing irony about war — George S. Patton is portrayed as a complex, flawed man rather than a one-dimensional hero. Goldsmith builds the score around three contradictory aspects of Patton's personality. **Patton the general** — the war hero everyone sees — gets an upbeat military march. **Patton the Christian**, who believed God fought on the Allies' side, gets a hymn-like theme. And strangest of all, Patton believed in **reincarnation** — that whenever the world was in dire need, he would be reborn as a great military leader. Goldsmith represents this with three short trumpet notes put through an **electronic echo device**, creating a sense of the trumpet receding at great speed, evoking the image of looking down a long tunnel of history through which Patton has been called over and over to take up arms. This use of recording-studio processing to alter an instrument's sound after it has been played represents yet another expansion of the film composer's toolkit.
 
-> 🎥 *Patton — North Africa* 🎥
+🎥 *Patton — North Africa* 🎥
+{: .vp }
 
 In the North Africa scene, Patton and his aides visit the site of an ancient battle between the Romans and the Carthaginians. As they arrive, a modernist "sound cloud" fills the strings. When Patton steps out of the jeep, we hear the echoed trumpet. As he recounts the battle, a more developed version of the reincarnation theme enters low in the flutes, and when he says "two thousand years ago" the hymn theme appears — a Christian reference to the time of Christ. Then he says "I was here," and the echoed trumpets return. Goldsmith's music follows what the character is saying with remarkable precision, drawing on these musical reflections of Patton's contradictory personality.
 
-> 🎥 *Patton — Advance Through Europe* 🎥
+🎥 *Patton — Advance Through Europe* 🎥
+{: .vp }
 
 The montage blends all three themes: the march accompanies Patton and the advancing troops; the hymn theme accompanies his commanding officers watching the results — Patton as the answer to the Allies' prayers. Then the mood darkens sharply as we find ourselves in a German command centre, where an officer tallies the cost — thousands of wounded, missing, and killed. The reincarnation theme repeats and shifts in pitch, laying bare the true human cost. A grand restatement of the march as Patton rides at the head of his forces, then one final echo of the reincarnation theme as the German officer tallies even higher numbers.
 
@@ -676,23 +734,28 @@ Made in 1968, *Planet of the Apes* is very much a film of its time — rooted in
 
 Goldsmith's score renders all of this in sound. The instrumentation blends conventional orchestral instruments with elements like animal horns (not pitched instruments, but literally horns taken off animals and hollowed out), metal mixing bowls, and a **prepared piano** — a concept pioneered by modernist composer **John Cage**, in which objects such as metal, wood, paper, and plastic are inserted into the strings of a piano to change not the pitch but the timbre of each note, so that some ring, some buzz, and some are dead and muted. Musicians also use unusual techniques: playing their instruments without mouthpieces, playing just mouthpieces, operating the keys of brass and woodwind instruments without actually blowing air through them.
 
-> 🎥 *Planet of the Apes — The Crossing, Part 1* 🎥
+🎥 *Planet of the Apes — The Crossing, Part 1* 🎥
+{: .vp }
 
 The astronauts have crash-landed on a mysterious, highly radioactive planet and are crossing a desert in search of food and water. The music sounds random, almost chaotic — no melody you can latch onto, just recurring sounds such as a **thunder sheet** (a large piece of sheet metal scraped with a smaller piece of metal), string players plucking their instruments with the sound put through electronic echo, and bowed strings slowly pulling out of tune with each other to create an almost plaintive cry. All of these techniques are highly modernist, entirely atonal, and designed to give a real sense of loss and emptiness — these characters have no idea where they are going.
 
-> 🎥 *Planet of the Apes — The Crossing, Part 2* 🎥
+🎥 *Planet of the Apes — The Crossing, Part 2* 🎥
+{: .vp }
 
 Then the astronauts find their first plant, and one of them delivers a key line: "Where there's one, there's another — and another, and another." (This line will later be echoed by Dr. Zaius during an interrogation, convinced that a nest of humans is ready to invade.) Now the music restarts, but this time there is structure and order — because the characters have found hope. The phrases come in groups of three notes, four groups making twelve notes in total, followed by a thunder sheet transition, then another pattern of twelve. What Goldsmith is using here is the **twelve-tone technique** developed by **Arnold Schoenberg** in 1923. The technique involves creating a **tone row** — a specific ordering of all twelve chromatic pitches, each used once and only once — and treating all notes with equal importance, deliberately abandoning the major/minor tonality that had defined Western music for centuries. Once a tone row is established, the composer can generate variations: starting the row on a different note (**transposition**), playing the row backward (**retrograde**), or flipping the intervals upside down (**inversion**). The second set of twelve notes in this scene is an inverted version of the first row. Goldsmith uses this tone row throughout the entire film — it appears in the main titles, in The Crossing, and in many other cues, with the other instruments playing transposed, retrograde, and inverted variations. This is the first originally composed film score we encounter that is written entirely in a twelve-tone style, marking the point where the gradual trend toward modernism in film music has fully caught up with what was happening in the concert hall.
 
-> 🎥 *Planet of the Apes — The Takers* 🎥
+🎥 *Planet of the Apes — The Takers* 🎥
+{: .vp }
 
 The music for the astronauts is atonal but strongly organized, with a clear, even rhythm supported by snare drum. The music for the unseen "takers" is chaotic — chirping woodwinds and log drums create a more "primitive" sound.
 
-> 🎥 *Planet of the Apes — No Escape* 🎥
+🎥 *Planet of the Apes — No Escape* 🎥
+{: .vp }
 
 The score appears to be unrelentingly modernist, but there is one remarkable moment of tonal music — a single, fat consonant chord — reserved for just after Taylor speaks to the apes for the first time: "Take your stinking paws off me, you damn dirty ape!" For a moment the apes are speechless, and Goldsmith gives us the only point of musical resolution in the entire film. Throughout the vast majority of the story, Taylor is entirely at the mercy of others; this is the one moment where he has the upper hand, and Goldsmith places his one island of consonance precisely there.
 
-> 🎥 *Planet of the Apes — Final Scene* 🎥
+🎥 *Planet of the Apes — Final Scene* 🎥
+{: .vp }
 
 The famous ending is one of the finest in cinema history. Taylor rides off down the coastline toward apparent freedom, accompanied by the Crossing theme — which by this point in the film has become familiar enough to offer some comfort. Then he stumbles on the truth. And what does the music do? Nothing. There is no music at all. Goldsmith could have given us a massive restatement of the main theme as Taylor screams "Damn you all to hell!" — and frankly, that would have been a relief, because the music coming back would signal that this is just a film, you can go home, everything is fine. But we do not even get the modernist score we have gradually grown used to. All we hear is the sound of waves as the credits roll, and we are left feeling utterly defeated. That, of course, is the point. The film is trying to say: this is where we are going. If we do not stop doing all the stupid things we are doing, this may well be where we end up. It is one of the best examples in the history of film music of a composer's most powerful choice being to stay out entirely.
 
@@ -710,7 +773,8 @@ One of the things that limits the use of popular music in film is that songs car
 
 The popular music works so well because there is no real overarching narrative — just a series of small scenes, each lasting about three or four minutes (roughly the length of a pop song), and each scene gets its own particular track. In one scene, Kurt (played by Richard Dreyfuss, who would later play Hooper in *Jaws*) is driving around with his friends Steve and Laurie — and yes, Steve is a very young Ron Howard, before he becomes director Ron Howard. At a stoplight, Kurt notices a beautiful blonde woman in a car next to them who appears to mouth "I love you" through the window, and he becomes completely enamored, begging Steve to follow her. The song that begins playing is "Why Do Fools Fall in Love," a 1956 hit by Frankie Lymon and the Teenagers — the title and subject perfectly applicable to Kurt falling instantly in love with a woman he has never seen before. On one level the music functions as perfectly acceptable source music, reinforcing the diegesis of teenagers driving around in their cars in the early sixties listening to the radio. On another level, each song acts almost as a narrator or **Greek chorus** — an offstage commentator interpreting events and adding comments that the characters themselves are unaware of.
 
-> 🎥 *The Graduate* 🎥
+🎥 *The Graduate* 🎥
+{: .vp }
 
 We also see cases where popular music functions not merely as a soundtrack but to some extent as a score. An excellent example is *The Graduate* (1967), where the music is a series of songs by the folk-pop duo **Simon and Garfunkel** — the Simon being Paul Simon, who would go on to a tremendously successful solo career. Rather than keeping the songs as they would sound on a record or radio, many are altered or extended to fit the visual narrative, and the vocals are reserved for locations where they would not distract from dialogue. Near the end of the film, the character Benjamin — played by a very young Dustin Hoffman in one of his first big roles — is frantically trying to reach a church where his true love is about to marry another man. The accompanying song is "Mrs. Robinson," named after one of the main characters, but what we hear in the film is a more scaled-back version: just the guitars, no bass or drums, focused on the introductory riff. Notice how the guitar figures are timed so that we get a real emphasis on the moment Benjamin pulls up in the sports car and jumps out. The vocals drop out and the guitars get quieter so we can hear the dialogue at the gas station. There is even a little bit of hitting the action — as Benjamin smacks the table trying to find out where the church is, the guitar catches the smack, but because it is nowhere near as overt as what we heard in *The Man with the Golden Arm*, it simply serves to reinforce that single moment. Benjamin jumps back in the car and the guitars intensify, but then the car runs out of gas and the music starts to slow down — something you could not do if you were playing the pop song as a pop song. This is a film that bridges the gap between using a soundtrack and using a score.
 
@@ -740,15 +804,18 @@ The score itself is a blend of modernism and a return to the sound of Korngold �
 
 The theme's simplicity is its strength — it has no start, it has no end, much like the life of the shark itself. And the influence behind it is unmistakably modernist. In 1913, Russian composer **Igor Stravinsky** wrote music for a ballet called *The Rite of Spring*. When it was first performed in Paris, the story goes that it caused a riot — the audience was outraged, fistfights broke out (even in the orchestra, reportedly, while it was in the middle of playing), and Stravinsky hurriedly scooped up his sheet music and ducked out the back door before the police arrived. Williams alternates between two notes rather than keeping the note the same, but the feel is identical and the irregular accents are almost exactly the same — the influence of *The Rite of Spring* is unmistakable.
 
-> 🎥 *Jaws — The Fishermen* 🎥
+🎥 *Jaws — The Fishermen* 🎥
+{: .vp }
 
 In this scene, two fishermen have thrown a large hook baited with a roast beef off a pier in hopes of catching the shark from the safety of land. Rather than a point-of-view shot, Spielberg uses objects on the surface — first a floating tire, then the dock itself after it is torn away from land — as representations of the shark. The theme enters as the tire is pulled out to sea and grows in intensity as the dock is pulled away, then dies down as if the threat is passing. The chilling moment comes when the dock turns around — there is a wonderful sound effect of the wood creaking — and then it launches at high speed back toward the shore and the fishermen stranded in the water. Listen to how the theme picks up at the moment the dock starts coming back. The fading away of the music as the dock drifts in harmlessly tells us the danger has passed.
 
-> 🎥 *Jaws — He Made Me Do It* 🎥
+🎥 *Jaws — He Made Me Do It* 🎥
+{: .vp }
 
 By now a very clear pattern has emerged: we never get a good look at the shark; instead we get glimpses of shadows, objects on the water moving, or point-of-view shots from the shark's perspective — and through all of those, Williams' music. In this scene, all of the visual elements of a shark attack are present — the swimming, the splashing, the panic, an underwater point-of-view shot through dangling legs. But the one thing that is missing is the shark theme. In fact, there is music — a little polka band playing in a gazebo on the beach — which actually calls attention to the absence. The "attack" turns out to be two boys playing a practical joke. What this scene tells us is that the only thing you can genuinely trust to tell you the shark is real is the music. This is reinforced by the scene that follows: a young woman shouts "Shark!" and everyone assumes another prank, but you hear the music, and that tells the audience she is right. The music has become a kind of **security blanket** — if the shark is near, you hear the theme first.
 
-> 🎥 *Jaws — You're Gonna Need a Bigger Boat / The Barrels* 🎥
+🎥 *Jaws — You're Gonna Need a Bigger Boat / The Barrels* 🎥
+{: .vp }
 
 In the final third of the film, the three main characters have gone out onto the ocean — the home of the shark — aboard a boat called the Orca. And here the big payoff arrives: the shark appears without any musical warning whatsoever. For the entire film up to this point, the audience has depended on hearing the theme before the shark arrives. Now that security blanket is ripped away — the shark can appear at any moment without warning, significantly ramping up the fear. (There is also a great moment as Brody backs into the cabin and apparently improvises the now-iconic line, "You're going to need a bigger boat" — a phrase that became a cultural shorthand for being in over your head.) Then comes a complex sequence: the shark theme builds as the shark approaches the boat, but when the shark actually passes and we get our first good look at the creature (1:25), Williams drops the shark theme entirely for music far grander and more expressive. It is a moment of spectacle — the sweeping music represents not the murderous monster but an extraordinary creature, and the wonder, admiration, and fear of the men seeing their quarry for the first time.
 
@@ -780,15 +847,18 @@ Several composers rise to prominence during this period, really the first genera
 
 **Alan Silvestri** was born in 1950, making him by far the youngest composer discussed so far — a teenager in the new popular music world of rock and roll, growing up when groups like The Beatles and The Rolling Stones were at the height of their early careers. His most important formal music training came at the **Berklee College of Music** in Boston. We have talked about Juilliard as the leading institute for classical musicians; you can think of Berklee as essentially the Juilliard of contemporary popular and jazz music — just as reputable, just as hard to get into, with an alumni list that reads as a who's-who of popular music in North America, accounting for almost 300 Grammy Awards. After Berklee, Silvestri moved into film and television almost immediately. His most notable contribution through the seventies was the music for the television series *CHiPs*. Where he becomes established as a major film composer is the 1980s, working particularly with director Robert Zemeckis — a very long and fruitful collaboration including *Back to the Future* (1985), *Forrest Gump* (1994), *Cast Away* (2000), and *The Polar Express* (2004). His more recent work includes the *Avengers* franchise (he scored the original *Captain America* and three of the four Avengers films), *Ready Player One* (2018), and *The Witches* (2020).
 
-> 🎥 *Back to the Future — Scene 1* 🎥
+🎥 *Back to the Future — Scene 1* 🎥
+{: .vp }
 
 The score Silvestri writes for *Back to the Future* has a very high level of similarity with something like *Star Wars*. Clearly the films are not alike — *Back to the Future* is a comedy — but the approach taken with the music is that it does not play the comedy. The music plays the film seriously, and that is part of what makes it funny: very dramatic music for fairly absurd moments. It is not hard to imagine the film was temp-tracked with music from *Star Wars*. This is not plagiarism — it is how film music works. Directors have an idea of what they want, and it is up to the composer to get close to it. But Williams has become the new normal, and all through the 1980s there are meetings between directors and composers that start with "I really want this to sound like John Williams."
 
-> 🎥 *Back to the Future — Scene 2* 🎥
+🎥 *Back to the Future — Scene 2* 🎥
+{: .vp }
 
 When characters are in peril, the music turns highly rhythmic and modernist — intense, quite modernist-sounding music playing the sense of threat and danger. Then there is a wonderful moment when the scene cuts to Marty in the DeLorean: listen carefully and you hear the main theme, except now in true Williams/Korngold fashion it is almost battle music, with a driving rhythm and a thematic quote that says Marty is in danger because he cannot get the car started. Notice how fast the music shifts between tonal restatements of the main theme and modernist danger music as the scene cuts back and forth between Doc struggling with the cable and Marty in the car. There is a great moment where Doc accidentally pulls the cable out of its connector on the ground — the music plays up to it and then drops away for a reaction shot before cutting back to a snare drum driving the action along. The whole sequence is wonderfully put together.
 
-> 🎥 *Contact — OK to Go* 🎥
+🎥 *Contact — OK to Go* 🎥
+{: .vp }
 
 *Contact* (1997), also directed by Zemeckis, was based on a novel by the astrophysicist and science popularizer **Carl Sagan** — a fiction about what first contact with an alien intelligence might actually be like, envisioning not a giant spaceship but a radio communication from a distant star packed with extraordinary information, including instructions for building a device to open a wormhole. Despite this grand element, it was also a very personal story about a brilliant young woman, Ellie Arroway, who loses her father young and becomes an incredibly driven scientist with great difficulty making personal connections. For the main theme, Silvestri focuses on Ellie the person rather than the grand space narrative, turning once again to the influence of Williams and Aaron Copland to write a very simple, beautifully intimate tonal melody — the kind of **populist** theme that could easily be turned into a folk song. You could play it for someone and they would guess it was about a couple falling in love, not a scientist about to travel through a wormhole.
 
@@ -806,7 +876,8 @@ The two eventually resolved their differences, and in 1997 Cameron asked Horner 
 
 Horner’s characteristics: he was a strong melodic composer, though his melodies tended to be a little tighter and shorter than Williams’ long, extended Korngold-like lines. He typically worked with a conventional orchestra but was comfortable incorporating synthesizers and electronic sounds — unlike Williams, who rarely used electronics. He was adept at writing in contemporary popular styles, weaving in and out of pop with conventional orchestral writing. And he was exceptionally skilled at synchronizing music to visual elements such as scene and camera changes — not mickey mousing, but a close, precise alignment of musical gestures with cuts and transitions. All composers deal with the idea of **hitting the cut**, but Horner was remarkably good at writing music that could hit a whole series of cuts while still sounding smooth and flowing.
 
-> 🎥 *Glory — The Battle* 🎥
+🎥 *Glory — The Battle* 🎥
+{: .vp }
 
 *Glory* (1989) is set during the United States Civil War and follows a young, idealistic white officer named Robert Gould Shaw (played by Matthew Broderick), a real historical figure whose story was drawn largely from letters he wrote to his mother. Shaw believed strongly in the abolition of slavery and was given what he thought was the honour of leading the first all-Black regiment to serve in the Northern Army, only to find that there was virtually as much racism within the Northern army as in their enemies to the south.
 
@@ -822,11 +893,13 @@ The score is primarily orchestral and tonal, with modernist elements and electro
 
 Khan’s theme is built from three notes clustered together — semitones, just like the theme for Norman Bates. No clear sense of major or minor, unpredictable in direction, reflecting a character whose only predictable quality is his anger. When Khan is first revealed, those three notes are very quiet, matching his calm, controlled exterior — watch for the moment, beautifully played by Ricardo Montalban, when you see just a glint behind his eyes as the anger and madness threaten to bubble to the surface before he gets it back under control. Later, those same three notes played aggressively become the embodiment of Khan’s anger unleashed.
 
-> 🎥 *Star Trek — Battle 1* 🎥
+🎥 *Star Trek — Battle 1* 🎥
+{: .vp }
 
 Through this entire sequence, the battle between Kirk and Khan is also a battle between their two themes. As shots go back and forth between the two ships, the themes bounce back and forth — Kirk’s theme when we are on the Enterprise, Khan’s when we cut to the Reliant. Gradually Kirk’s theme dies away while Khan’s grows ever more dominant. Shots on the bridges are scored more quietly; exterior shots get grander, more spectacular articulations, almost always of Khan’s theme because Khan is in charge. The scene begins with the kind of bickering between McCoy and Spock that was very much part of the original series, and then Lieutenant Saavik (played by Kirstie Alley in her first big role) identifies the approaching ship as one of theirs — the Reliant. Playing against that identification entirely, we hear Khan’s theme, telling us Khan is on that ship while Kirk and his crew are completely unaware of their danger. Notice too that the battle is staged not like an airplane dogfight but like two galleons firing broadsides: the Reliant does not open fire until the Enterprise is right next to it, almost side by side, because that is how sailing ships fought. After almost four minutes of gradually building battle music, Kirk is informed he is being told to surrender. Horner brings the music to a stop. For the first time in over two and a half minutes, we hear Kirk’s theme — in a mournful, tragic version, thematic transformation mirroring Kirk’s shock.
 
-> 🎥 *Star Trek — Battle 2* 🎥
+🎥 *Star Trek — Battle 2* 🎥
+{: .vp }
 
 Kirk appeals to Khan, offering to give himself up if the crew of cadets can be spared. It seems all may be lost — but at 1:11, quiet, uncertain music enters with a precise, orderly rhythm, suggesting Kirk and the Enterprise rather than Khan’s drive for vengeance. At 1:32, an exterior shot — Horner catches it, the music jumping in intensity, sounding like Khan’s theme except it runs out of steam and trails off, suggesting Khan is no longer in the advantaged position he thinks he is. And then the pivotal moment: at exactly 2:00, Kirk puts on his glasses. That is when Horner brings back the Kirk theme. What that moment says is that Kirk needs to embrace who he is now — a flawed man, not the one from the series who would end up shirtless and running off with the alien after thwarting the bad guys. Now he is older; he has to think his way out rather than blast his way out. And what happens next is one of the best moments in the film: Khan suddenly realizes Kirk has outthought him and frantically tries to mount a defence before Kirk opens fire.
 
@@ -880,7 +953,8 @@ In 1981, he scored *Chariots of Fire*, a historical drama based on a group of Br
 
 The following year, Vangelis composed the score for *Blade Runner* (1982), directed by Ridley Scott. The film is science fiction but also very much a contemporary film noir, heavily influenced by the 1940s style discussed earlier in the course. The synthesizers create a lush, spacious sound — very slow-moving, atmospheric, and moody, with all sorts of different timbres functioning almost like the different sections of an orchestra:
 
-<p align="center">&#127909; <i>Blade Runner</i> &#127909;</p>
+🎥 *Blade Runner* 🎥
+{: .vp }
 
 ## Part B: Danny Elfman (1953– )
 
@@ -918,11 +992,13 @@ In this scene, a seance has gone horribly wrong and Lydia agrees to marry Beetle
 
 ### *Edward Scissorhands* (1990)
 
-<p align="center">&#127909; <i>Edward Scissorhands — House on the Hill</i> &#127909;</p>
+🎥 *Edward Scissorhands — House on the Hill* 🎥
+{: .vp }
 
 This scene demonstrates the mysterious, supernatural side of Elfman's work. Peg, an unsuccessful Avon Lady, is about to give up but decides to try the old house at the end of the road. At 0:00, there is no score but there is music: **source music** — badly played music on a cheap electronic organ coming from one of the nearby houses. It tells us something about this neighborhood. Peg is terribly frustrated, running out of hope, and then she realizes there is one house she has not visited — the mysterious house on the hill. The score begins as we see the house in Peg's rearview mirror. Notice the wonderful squeak as she turns the mirror, suggesting that her car is old and not terribly maintained — this is not a terribly successful woman. Holding the music off until the moment we see the house very clearly establishes the link between the house and the music: harp, bass clarinet, mysterious strings, all ominous. At 0:50, Edward's theme appears in an ominous variation with wordless choir — heavy percussion underneath and very snarling brass make what is normally a calm, reassuring theme sound much more like a warning, conveying the sense of a physical presence watching from inside the house. At 1:12, a significant shift marked by a **harp glissando**: the music moves into a waltz carried by the bell-like sound of a celeste. Compare this to the Dance of the Sugar Plum Fairy from Tchaikovsky's *The Nutcracker*: the musical influence is obvious, but there is a deeper connection that was quite deliberate. The story of *Edward Scissorhands* is about an artificial human built out of a machine that originally made cookies; the narrative of *The Nutcracker* involves the dream of a child in which toys come to life and do battle with an army of mice, and also features an army of gingerbread. A toy that comes to life, and gingerbread — a very solid connection to Edward Scissorhands. At 1:46, the dread briefly returns with the tolling of a bell — a slow rhythm of single strokes, often a symbol of death — while the harp comes in more prominently, often a symbol of the afterlife or the supernatural. At 2:00, Peg passes through the gate and the music shifts again: gone, at least for a moment, is the threat. Edward's theme returns in its gentlest statement, matching Peg's sense of awe and wonder as she looks upon this remarkable garden.
 
-<p align="center">&#127909; <i>Edward Scissorhands — Edward the Barber</i> &#127909;</p>
+🎥 *Edward Scissorhands — Edward the Barber* 🎥
+{: .vp }
 
 Now an example of the frantic, almost cartoonish side of Elfman. At 0:00, there is no music — only the sound of Edward's scissors and the hose in the background. Not having any music actually creates more tension: if the music sounded dramatic and frightening, we would know things are about to go badly; if it sounded positive, we would know it will end well. The absence of music ramps up the anticipation, and when it does finally arrive — not with the first dog but when we see the lineup outside Peg's garden, everyone bringing their dogs — it is just that much more effective. At 0:56, a frantic Danny Elfman polka, reinforcing the energy and anticipation of the neighbors queued up. At 1:12, as we focus on Joyce and Edward, the bass clarinet creeps in underneath the polka — one of those moments where Elfman buries something ominous beneath an otherwise optimistic texture. As Joyce lifts her dog, listen for the melody carried by strings doubled with a **saxophone** — an unusual combination that somehow sounds genuinely funny, with a lightness and tongue-in-cheek quality to it. At 1:57, the first big transition: Joyce has the idea that Edward should cut her hair. The rhythm stops, there is a sense of a build, and we move into a **tango** — a South American dance rhythm associated with sensuality and passion. What follows is almost a metaphor for a sex scene as Edward gently turns her head from side to side with the scissor blades, a deeply sensual melody playing over a tango rhythm. At 2:24, the music switches to a virtuosic solo violin over the orchestra — again that connection between the violin and the supernatural. Edward's eyes have an almost demonic intensity; the sexual metaphor continues with close-ups of Joyce's face and, in perhaps the least subtle moment in the whole scene, her toes literally curling. At 2:57, a return to the tango accompanies a montage of haircuts, with mickey mousing at 3:40 between the scissors and the low woodwinds. Finally, at 3:51, Edward prepares to cut Peg's hair and the tango undergoes **thematic transformation** into a beautifully gentle string arrangement. We have moved from sensuality into the world of genuine familial love — Peg has very clearly become Edward's mother figure.
 
