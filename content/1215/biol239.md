@@ -66,9 +66,9 @@ Mendel's **Law of Independent Assortment** states that the alleles of different 
 
 A **dihybrid cross** examines two genes simultaneously. Consider plants heterozygous for both seed shape (*R* round, dominant; *r* wrinkled, recessive) and seed color (*Y* yellow, dominant; *y* green, recessive). The F<sub>1</sub> double heterozygote *RrYy* can produce four types of gametes — *RY*, *Ry*, *rY*, and *ry* — each in equal frequency (1/4) if the genes are unlinked. Crossing two *RrYy* individuals produces the classic **9:3:3:1** phenotypic ratio in the F<sub>2</sub> generation:
 
-- 9/16 round, yellow (<span>&#92;( R\_Y\_ &#92;)</span>)
-- 3/16 round, green (<span>&#92;( R\_yy &#92;)</span>)
-- 3/16 wrinkled, yellow (<span>&#92;( rrY\_ &#92;)</span>)
+- 9/16 round, yellow (<span>&#92;( R\&#95;Y\&#95; &#92;)</span>)
+- 3/16 round, green (<span>&#92;( R\&#95;yy &#92;)</span>)
+- 3/16 wrinkled, yellow (<span>&#92;( rrY\&#95; &#92;)</span>)
 - 1/16 wrinkled, green (<span>&#92;( rryy &#92;)</span>)
 
 This ratio can also be derived by recognizing that under independent assortment, the dihybrid cross is simply the product of two independent monohybrid crosses: <span>&#92;( (3:1) \times (3:1) = 9:3:3:1 &#92;)</span>. Each individual's phenotype at one locus does not depend on its phenotype at the other.
@@ -320,9 +320,9 @@ To identify which gene is in the middle — an essential step before calculating
 
 Calculating map distances proceeds as follows for each interval:
 
-<span>&#92;[ \text{Map distance (region 1)} = \frac{SCO_1 + DCO}{\text{total offspring}} \times 100 \text{ map units} &#92;]</span>
+<span>&#92;[ \text{Map distance (region 1)} = \frac{SCO&#95;1 + DCO}{\text{total offspring}} \times 100 \text{ map units} &#92;]</span>
 
-<span>&#92;[ \text{Map distance (region 2)} = \frac{SCO_2 + DCO}{\text{total offspring}} \times 100 \text{ map units} &#92;]</span>
+<span>&#92;[ \text{Map distance (region 2)} = \frac{SCO&#95;2 + DCO}{\text{total offspring}} \times 100 \text{ map units} &#92;]</span>
 
 where *SCO<sub>1</sub>* and *SCO<sub>2</sub>* are the numbers of single-crossover offspring in each region and *DCO* is the number of double-crossover offspring. The double-crossover classes are added to each interval because, in a double crossover, one crossover occurred in each interval; these individuals are recombinants for both intervals but look like parentals when only the flanking genes are considered in a two-point analysis. The total map distance between the two flanking genes is the sum of the two interval distances, which is more accurate than a two-point estimate for the same pair.
 
@@ -340,7 +340,7 @@ To quantify interference, we first calculate the **coefficient of coincidence** 
 
 The expected frequency is the product of the recombination frequencies in the two intervals (applying the product law, assuming independence):
 
-<span>&#92;[ \text{expected DCO frequency} = RF_1 \times RF_2 &#92;]</span>
+<span>&#92;[ \text{expected DCO frequency} = RF&#95;1 \times RF&#95;2 &#92;]</span>
 
 **Interference** is then:
 
@@ -526,9 +526,9 @@ If mating is random, alleles pair by chance in the next generation. The expected
 
 Here <span>&#92;(p^2&#92;)</span> is the frequency of the homozygous dominant genotype, <span>&#92;(2pq&#92;)</span> is the frequency of the heterozygous genotype, and <span>&#92;(q^2&#92;)</span> is the frequency of the homozygous recessive genotype. This equation is not merely a mathematical curiosity; it is a direct translation of a Punnett square into population-level frequencies, obtained by treating the gamete pool as a large random-mating system. As long as Hardy-Weinberg conditions hold, these genotype frequencies will remain the same in every subsequent generation.
 
-Calculating allele frequencies from observed genotype data requires care because diploid individuals carry two alleles at each locus. If a sample contains <span>&#92;(N_{AA}&#92;)</span> homozygous dominant individuals, <span>&#92;(N_{Aa}&#92;)</span> heterozygotes, and <span>&#92;(N_{aa}&#92;)</span> homozygous recessive individuals, the frequency of the dominant allele is:
+Calculating allele frequencies from observed genotype data requires care because diploid individuals carry two alleles at each locus. If a sample contains <span>&#92;(N&#95;{AA}&#92;)</span> homozygous dominant individuals, <span>&#92;(N&#95;{Aa}&#92;)</span> heterozygotes, and <span>&#92;(N&#95;{aa}&#92;)</span> homozygous recessive individuals, the frequency of the dominant allele is:
 
-<span>&#92;[ p = \frac{2N_{AA} + N_{Aa}}{2(N_{AA} + N_{Aa} + N_{aa})} &#92;]</span>
+<span>&#92;[ p = \frac{2N&#95;{AA} + N&#95;{Aa}}{2(N&#95;{AA} + N&#95;{Aa} + N&#95;{aa})} &#92;]</span>
 
 The denominator is the total number of alleles in the sample (twice the number of individuals, because each diploid carries two). Heterozygotes contribute one copy of each allele, so only one of their two alleles is counted when tallying the dominant allele. Once <span>&#92;(p&#92;)</span> is calculated, <span>&#92;(q&#92;)</span &#62; follows immediately from <span>&#92;(q = 1 - p&#92;)</span>.
 

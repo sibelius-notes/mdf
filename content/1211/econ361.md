@@ -57,7 +57,7 @@ where <span>&#92;(FV&#92;)</span> is the future value, <span>&#92;(r&#92;)</span
 
 **Stage 7: Apply the NPV criterion.** The **net present value (NPV)** sums all discounted benefits and costs:
 
-<span>&#92;[ NPV = &#92;sum_{t=0}^{T} &#92;frac{B_t - C_t}{(1+r)^t} &#92;]</span>
+<span>&#92;[ NPV = &#92;sum&#95;{t=0}^{T} &#92;frac{B&#95;t - C&#95;t}{(1+r)^t} &#92;]</span>
 
 Accept the project if NPV > 0. Among mutually exclusive alternatives, choose the one with the highest NPV.
 
@@ -135,11 +135,11 @@ Who counts in a CBA is ultimately a political decision. CBA typically ignores im
 
 When the government imposes a tax, removes a subsidy, or builds infrastructure that changes market prices, it creates winners and losers among consumers. To measure the impact on consumer welfare, we use **consumer surplus (CS)** — the difference between what consumers are willing to pay and what they actually pay.
 
-Graphically, consumer surplus is the area below the demand curve and above the price line. When price rises from <span>&#92;(P_0&#92;)</span> to <span>&#92;(P_1&#92;)</span>, consumer surplus falls by a trapezoidal area. For small price changes, this loss can be approximated using the **demand elasticity formula**:
+Graphically, consumer surplus is the area below the demand curve and above the price line. When price rises from <span>&#92;(P&#95;0&#92;)</span> to <span>&#92;(P&#95;1&#92;)</span>, consumer surplus falls by a trapezoidal area. For small price changes, this loss can be approximated using the **demand elasticity formula**:
 
-<span>&#92;[ &#92;Delta CS &#92;approx -Q_0 &#92;cdot &#92;Delta P &#92;left(1 - &#92;frac{&#92;varepsilon_d &#92;cdot &#92;Delta P}{2 P_0}&#92;right) &#92;]</span>
+<span>&#92;[ &#92;Delta CS &#92;approx -Q&#95;0 &#92;cdot &#92;Delta P &#92;left(1 - &#92;frac{&#92;varepsilon&#95;d &#92;cdot &#92;Delta P}{2 P&#95;0}&#92;right) &#92;]</span>
 
-where <span>&#92;(Q_0&#92;)</span> is the initial quantity, <span>&#92;(\Delta P = P_1 - P_0&#92;)</span> is the price change, <span>&#92;(P_0&#92;)</span> is the initial price, and <span>&#92;(\varepsilon_d&#92;)</span> is the **own-price elasticity of demand** (expressed as a positive number for a downward-sloping demand curve).
+where <span>&#92;(Q&#95;0&#92;)</span> is the initial quantity, <span>&#92;(\Delta P = P&#95;1 - P&#95;0&#92;)</span> is the price change, <span>&#92;(P&#95;0&#92;)</span> is the initial price, and <span>&#92;(\varepsilon&#95;d&#92;)</span> is the **own-price elasticity of demand** (expressed as a positive number for a downward-sloping demand curve).
 
 This formula is handy because it allows analysts to estimate welfare changes without tracing out the entire demand curve — just the initial price, quantity, and an elasticity estimate (often borrowed from the empirical literature) are sufficient.
 
@@ -225,7 +225,7 @@ Two functional forms dominate applied work:
 
 **Linear demand**: <span>&#92;( Q = a + b \cdot P + c \cdot X &#92;)</span>, where <span>&#92;(X&#92;)</span> represents other demand-shifters (income, population, prices of substitutes). The price elasticity varies along a linear demand curve: it is large (in absolute value) at high prices and small at low prices.
 
-**Log-linear (constant elasticity) demand**: <span>&#92;( \ln Q = a + \varepsilon_d \cdot \ln P + \beta \cdot \ln X &#92;)</span>. The coefficient on <span>&#92;\ln P&#92;)</span> directly gives the price elasticity, which is constant across all price levels. This functional form is very convenient for applied work because elasticities are constant and the equation is linear in parameters (after log transformation).
+**Log-linear (constant elasticity) demand**: <span>&#92;( \ln Q = a + \varepsilon&#95;d \cdot \ln P + \beta \cdot \ln X &#92;)</span>. The coefficient on <span>&#92;\ln P&#92;)</span> directly gives the price elasticity, which is constant across all price levels. This functional form is very convenient for applied work because elasticities are constant and the equation is linear in parameters (after log transformation).
 
 Which functional form is "correct"? Neither, strictly speaking — they are both approximations. The choice should be guided by economic theory and empirical fit. For small price changes, both forms give similar results. For large changes, the choice can matter substantially.
 
@@ -243,7 +243,7 @@ When only two data points are available (perhaps a before/after comparison or a 
 
 Consider a simple example: suppose price rises from $2 to $3 and quantity falls from 100 to 80. The implied arc elasticity is:
 
-<span>&#92;[ &#92;varepsilon_d = &#92;frac{(80 - 100)/90}{(3 - 2)/2.5} = &#92;frac{-0.222}{0.400} &#92;approx -0.56 &#92;]</span>
+<span>&#92;[ &#92;varepsilon&#95;d = &#92;frac{(80 - 100)/90}{(3 - 2)/2.5} = &#92;frac{-0.222}{0.400} &#92;approx -0.56 &#92;]</span>
 
 (using the midpoint formula). A linear demand curve through these two points has slope <span>&#92;(-20&#92;)</span> and implies a different elasticity at other points. The choice of functional form matters for welfare analysis, especially if we wish to predict behaviour outside the range of observed data.
 
@@ -379,9 +379,9 @@ Equivalently, a future payment of <span>&#92;(FV&#92;)</span> received <span>&#9
 
 <span>&#92;[ PV = &#92;frac{FV}{(1 + r)^t} &#92;]</span>
 
-For a stream of annual payments <span>&#92;(B_t&#92;)</span> over <span>&#92;(T&#92;)</span> years, the NPV is:
+For a stream of annual payments <span>&#92;(B&#95;t&#92;)</span> over <span>&#92;(T&#92;)</span> years, the NPV is:
 
-<span>&#92;[ NPV = &#92;sum_{t=0}^{T} &#92;frac{B_t - C_t}{(1 + r)^t} &#92;]</span>
+<span>&#92;[ NPV = &#92;sum&#95;{t=0}^{T} &#92;frac{B&#95;t - C&#95;t}{(1 + r)^t} &#92;]</span>
 
 ### Annuities and Perpetuities
 
@@ -481,9 +481,9 @@ This distinction matters enormously for policy. Treating genuine uncertainty as 
 
 ### Expected Value Analysis
 
-When probabilities are known, the standard decision criterion is **expected value (EV)**: the probability-weighted average of all possible outcomes. A project with outcomes <span>&#92;(V_i&#92;)</span> occurring with probabilities <span>&#92;(p_i&#92;)</span> has expected value:
+When probabilities are known, the standard decision criterion is **expected value (EV)**: the probability-weighted average of all possible outcomes. A project with outcomes <span>&#92;(V&#95;i&#92;)</span> occurring with probabilities <span>&#92;(p&#95;i&#92;)</span> has expected value:
 
-<span>&#92;[ EV = &#92;sum_i p_i &#92;cdot V_i &#92;]</span>
+<span>&#92;[ EV = &#92;sum&#95;i p&#95;i &#92;cdot V&#95;i &#92;]</span>
 
 An **expected net social benefit** criterion says: accept the project if the expected NSB is positive.
 
@@ -797,9 +797,9 @@ If <span>&#92;(U(Y)&#92;)</span> is the utility of income <span>&#92;(Y&#92;)</s
 
 A **social welfare function (SWF)** maps individual utility levels into a social welfare ranking. Different SWFs encode different distributional judgments:
 
-- **Utilitarian SWF**: <span>&#92;(W = \sum_i U_i&#92;)</span>. Sum individual utilities. With DMUI, this favours redistribution to low-income individuals, but does not fully prioritize equality.
-- **Rawlsian (Maximin) SWF**: <span>&#92;(W = \min_i U_i&#92;)</span>. Maximize the utility of the worst-off individual. This is extremely egalitarian.
-- **Iso-elastic SWF**: <span>&#92;(W = \sum_i \frac{U_i^{1-\sigma}}{1-\sigma}&#92;)</span>. A parameterized family; <span>&#92;\sigma = 0&#92;)</span> gives utilitarianism, <span>&#92;\sigma \to \infty&#92;)</span> approaches Rawls.
+- **Utilitarian SWF**: <span>&#92;(W = \sum&#95;i U&#95;i&#92;)</span>. Sum individual utilities. With DMUI, this favours redistribution to low-income individuals, but does not fully prioritize equality.
+- **Rawlsian (Maximin) SWF**: <span>&#92;(W = \min&#95;i U&#95;i&#92;)</span>. Maximize the utility of the worst-off individual. This is extremely egalitarian.
+- **Iso-elastic SWF**: <span>&#92;(W = \sum&#95;i \frac{U&#95;i^{1-\sigma}}{1-\sigma}&#92;)</span>. A parameterized family; <span>&#92;\sigma = 0&#92;)</span> gives utilitarianism, <span>&#92;\sigma \to \infty&#92;)</span> approaches Rawls.
 
 ---
 
@@ -809,9 +809,9 @@ A **social welfare function (SWF)** maps individual utility levels into a social
 
 Distributional weighting modifies the standard NPV formula to give greater weight to impacts on lower-income groups:
 
-<span>&#92;[ NPV_{weighted} = &#92;sum_j w_j &#92;cdot NPV_j &#92;]</span>
+<span>&#92;[ NPV&#95;{weighted} = &#92;sum&#95;j w&#95;j &#92;cdot NPV&#95;j &#92;]</span>
 
-where <span>&#92;(w_j&#92;)</span> is the distributional weight for group <span>&#92;(j&#92;)</span> and <span>&#92;(NPV_j&#92;)</span> is the (unweighted) net present value accruing to group <span>&#92;(j&#92;)</span>.
+where <span>&#92;(w&#95;j&#92;)</span> is the distributional weight for group <span>&#92;(j&#92;)</span> and <span>&#92;(NPV&#95;j&#92;)</span> is the (unweighted) net present value accruing to group <span>&#92;(j&#92;)</span>.
 
 The weights are typically set relative to a reference income group (often the average household): households with below-average income receive weights greater than 1, and households with above-average income receive weights less than 1.
 
@@ -841,9 +841,9 @@ where <span>&#92;\eta > 0&#92;)</span> is the **elasticity of marginal utility o
 
 <span>&#92;[ U'(Y) = Y^{-&#92;\eta} &#92;]</span>
 
-which decreases with income at a rate governed by <span>&#92;\eta&#92;)</span>. The distributional weight for a household with income <span>&#92;(Y_j&#92;)</span> relative to a reference income <span>&#92;(&#92;bar{Y}&#92;)</span> is:
+which decreases with income at a rate governed by <span>&#92;\eta&#92;)</span>. The distributional weight for a household with income <span>&#92;(Y&#95;j&#92;)</span> relative to a reference income <span>&#92;(&#92;bar{Y}&#92;)</span> is:
 
-<span>&#92;[ w_j = &#92;left(&#92;frac{&#92;bar{Y}}{Y_j}&#92;right)^{&#92;\eta} &#92;]</span>
+<span>&#92;[ w&#95;j = &#92;left(&#92;frac{&#92;bar{Y}}{Y&#95;j}&#92;right)^{&#92;\eta} &#92;]</span>
 
 ### The Value of η
 
@@ -881,7 +881,7 @@ where <span>&#92;(C&#92;)</span> is the cost and <span>&#92;(E&#92;)</span> is t
 
 When comparing two programs that both achieve positive effectiveness, the **incremental cost-effectiveness (ICE) ratio** measures the *additional* cost of additional effectiveness:
 
-<span>&#92;[ ICE = &#92;frac{C_2 - C_1}{E_2 - E_1} &#92;]</span>
+<span>&#92;[ ICE = &#92;frac{C&#95;2 - C&#95;1}{E&#95;2 - E&#95;1} &#92;]</span>
 
 where Program 2 is more effective (and more expensive) than Program 1. This answers: "Is it worth paying more for the better program?"
 

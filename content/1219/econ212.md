@@ -23,11 +23,11 @@ One defining feature of strategic games is that time is absent. All players choo
 
 The most famous example of a strategic game is the **prisoner's dilemma**. Two suspects are held in separate cells, unable to communicate. Police have enough evidence to convict each of a minor offense, but not a major one. If one suspect finks on the other, the fink goes free while the other is convicted of the major offense. If both fink, both are convicted of the major offense with a slightly reduced sentence for cooperating with police. If both stay quiet, each is convicted only of the minor offense.
 
-Formally, there are two players, Suspect 1 and Suspect 2, each choosing from {Quiet, Fink}. Denoting payoffs as <span>&#92;(u_i(ap_1, ap_2)&#92;)</span> for the payoff to player <span>&#92;(i&#92;)</span> when the action profile is <span>&#92;((ap_1, ap_2)&#92;)</span>, their preferences satisfy:
+Formally, there are two players, Suspect 1 and Suspect 2, each choosing from {Quiet, Fink}. Denoting payoffs as <span>&#92;(u&#95;i(ap&#95;1, ap&#95;2)&#92;)</span> for the payoff to player <span>&#92;(i&#92;)</span> when the action profile is <span>&#92;((ap&#95;1, ap&#95;2)&#92;)</span>, their preferences satisfy:
 
 <span>&#92;[&#92;begin{aligned}
-u_1(F,Q) &amp;> u_1(Q,Q) > u_1(F,F) > u_1(Q,F) &#92;&#92;
-u_2(Q,F) &amp;> u_2(Q,Q) > u_2(F,F) > u_2(F,Q)
+u&#95;1(F,Q) &amp;> u&#95;1(Q,Q) > u&#95;1(F,F) > u&#95;1(Q,F) &#92;&#92;
+u&#95;2(Q,F) &amp;> u&#95;2(Q,Q) > u&#95;2(F,F) > u&#95;2(F,Q)
 &#92;end{aligned}&#92;]</span>
 
 We represent these preferences compactly in a **payoff table**, where each cell shows the payoffs (Suspect 1, Suspect 2):
@@ -295,7 +295,7 @@ A striking example of game theory in the wild appeared on a British television s
   </tbody>
 </table>
 
-Is this a prisoner's dilemma? Almost — but not quite. In a true PD we need the strict inequality <span>&#92;(u_2(&#92;text{Steal}, &#92;text{Split}) > u_2(&#92;text{Steal}, &#92;text{Steal})&#92;)</span>. Here both cells yield £0 to the loser, so the strict inequality fails. In one famous episode, contestant Nick announced he would *definitely* steal — then promised to share his winnings with Ibrahim afterward. This unconventional declaration changed Ibrahim's rational calculation: if Nick will steal regardless, Ibrahim might as well split (both outcomes give £0, but splitting at least leaves room for Nick's promised post-game transfer). It worked — Ibrahim split, and Nick split too.
+Is this a prisoner's dilemma? Almost — but not quite. In a true PD we need the strict inequality <span>&#92;(u&#95;2(&#92;text{Steal}, &#92;text{Split}) > u&#95;2(&#92;text{Steal}, &#92;text{Steal})&#92;)</span>. Here both cells yield £0 to the loser, so the strict inequality fails. In one famous episode, contestant Nick announced he would *definitely* steal — then promised to share his winnings with Ibrahim afterward. This unconventional declaration changed Ibrahim's rational calculation: if Nick will steal regardless, Ibrahim might as well split (both outcomes give £0, but splitting at least leaves room for Nick's promised post-game transfer). It worked — Ibrahim split, and Nick split too.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/S0qjK3TWZE8?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -313,11 +313,11 @@ The key insight comes from thinking about equilibrium beliefs. Consider **Odd-Ev
 
 ## Definition
 
-The action profile <span>&#92;(a^*&#92;)</span> in a strategic game with ordinal preferences is a **Nash Equilibrium** if, for every player <span>&#92;(i&#92;)</span> and every action <span>&#92;(a_i&#92;)</span> of player <span>&#92;(i&#92;)</span>, the equilibrium profile is at least as good for player <span>&#92;(i&#92;)</span> as any unilateral deviation:
+The action profile <span>&#92;(a^&#42;&#92;)</span> in a strategic game with ordinal preferences is a **Nash Equilibrium** if, for every player <span>&#92;(i&#92;)</span> and every action <span>&#92;(a&#95;i&#92;)</span> of player <span>&#92;(i&#92;)</span>, the equilibrium profile is at least as good for player <span>&#92;(i&#92;)</span> as any unilateral deviation:
 
-<span>&#92;[u_i(a^*) &#92;geq u_i(a_i, a_{-i}^*) &#92;quad &#92;forall\ i &#92;in N, &#92;quad &#92;forall\ a_i &#92;in A_i&#92;]</span>
+<span>&#92;[u&#95;i(a^&#42;) &#92;geq u&#95;i(a&#95;i, a&#95;{-i}^&#42;) &#92;quad &#92;forall\ i &#92;in N, &#92;quad &#92;forall\ a&#95;i &#92;in A&#95;i&#92;]</span>
 
-where <span>&#92;(a_{-i}^*&#92;)</span> denotes the equilibrium actions of all players other than <span>&#92;(i&#92;)</span>, and <span>&#92;(N = &#92;{1, &#92;ldots, n&#92;}&#92;)</span> is the set of players. The notation <span>&#92;(a_{-i}&#92;)</span> always refers to "the action profile with player <span>&#92;(i&#92;)</span>'s action removed."
+where <span>&#92;(a&#95;{-i}^&#42;&#92;)</span> denotes the equilibrium actions of all players other than <span>&#92;(i&#92;)</span>, and <span>&#92;(N = &#92;{1, &#92;ldots, n&#92;}&#92;)</span> is the set of players. The notation <span>&#92;(a&#95;{-i}&#92;)</span> always refers to "the action profile with player <span>&#92;(i&#92;)</span>'s action removed."
 
 ## Why Nash Equilibrium?
 
@@ -343,51 +343,51 @@ One approach is to check every action profile and rule out those where some play
 
 ## Definition
 
-A player's **best response function** answers the question: given what the others are doing, what is my best action? Formally, for player <span>&#92;(i&#92;)</span>, the best response function <span>&#92;(B_i(a_{-i})&#92;)</span> maps each list of opponents' actions to the set of payoff-maximizing actions for player <span>&#92;(i&#92;)</span>:
+A player's **best response function** answers the question: given what the others are doing, what is my best action? Formally, for player <span>&#92;(i&#92;)</span>, the best response function <span>&#92;(B&#95;i(a&#95;{-i})&#92;)</span> maps each list of opponents' actions to the set of payoff-maximizing actions for player <span>&#92;(i&#92;)</span>:
 
-<span>&#92;[B_i(a_{-i}) = &#92;left&#92;{ a_i &#92;in A_i &#92;;\middle|\; u_i(a_i, a_{-i}) &#92;geq u_i(a_i', a_{-i}) &#92;quad &#92;forall\ a_i' &#92;in A_i &#92;right&#92;}&#92;]</span>
+<span>&#92;[B&#95;i(a&#95;{-i}) = &#92;left&#92;{ a&#95;i &#92;in A&#95;i &#92;;\middle|\; u&#95;i(a&#95;i, a&#95;{-i}) &#92;geq u&#95;i(a&#95;i', a&#95;{-i}) &#92;quad &#92;forall\ a&#95;i' &#92;in A&#95;i &#92;right&#92;}&#92;]</span>
 
-Each element of <span>&#92;(B_i(a_{-i})&#92;)</span> is a best response of player <span>&#92;(i&#92;)</span> to the opponents' action list <span>&#92;(a_{-i}&#92;)</span>: given that every other player chooses their action in <span>&#92;(a_{-i}&#92;)</span>, player <span>&#92;(i&#92;)</span> can do no better than to pick some element of <span>&#92;(B_i(a_{-i})&#92;)</span>.
+Each element of <span>&#92;(B&#95;i(a&#95;{-i})&#92;)</span> is a best response of player <span>&#92;(i&#92;)</span> to the opponents' action list <span>&#92;(a&#95;{-i}&#92;)</span>: given that every other player chooses their action in <span>&#92;(a&#95;{-i}&#92;)</span>, player <span>&#92;(i&#92;)</span> can do no better than to pick some element of <span>&#92;(B&#95;i(a&#95;{-i})&#92;)</span>.
 
 ## Nash Equilibrium via Best Responses
 
-The best response function gives a clean characterization of Nash Equilibrium. An action profile <span>&#92;(a^*&#92;)</span> is a Nash Equilibrium if and only if every player's action is a best response to the others':
+The best response function gives a clean characterization of Nash Equilibrium. An action profile <span>&#92;(a^&#42;&#92;)</span> is a Nash Equilibrium if and only if every player's action is a best response to the others':
 
-<span>&#92;[a_i^* &#92;in B_i(a_{-i}^*) &#92;quad &#92;forall\ i &#92;in N&#92;]</span>
+<span>&#92;[a&#95;i^&#42; &#92;in B&#95;i(a&#95;{-i}^&#42;) &#92;quad &#92;forall\ i &#92;in N&#92;]</span>
 
 This is exactly the NE definition restated: at equilibrium, no player can do better by deviating, which means each player is playing a best response. When each player has a *unique* best response to every action list, this becomes a system of <span>&#92;(n&#92;)</span> equations in <span>&#92;(n&#92;)</span> unknowns:
 
-<span>&#92;[a_i^* = b_i(a_{-i}^*) &#92;quad &#92;forall\ i &#92;in N&#92;]</span>
+<span>&#92;[a&#95;i^&#42; = b&#95;i(a&#95;{-i}^&#42;) &#92;quad &#92;forall\ i &#92;in N&#92;]</span>
 
-where <span>&#92;(b_i&#92;)</span> is the single-valued best response. Solving this system yields the Nash Equilibrium.
+where <span>&#92;(b&#95;i&#92;)</span> is the single-valued best response. Solving this system yields the Nash Equilibrium.
 
 **Geometrically**, the NE corresponds to the intersection of the players' best response functions. When two best response curves cross on a graph, each player is simultaneously best-responding to the other's action — and that is precisely the definition.
 
 ## The Two-Player Guessing Game
 
-In the two-player version of the 2/3-of-average game with action sets <span>&#92;(A_i = &#92;{1, 2, &#92;ldots, 10&#92;}&#92;)</span>, plotting the best response functions on a grid reveals their structure. Player 2's best response to any choice by Player 1 is the integer closest to two-thirds of that number, and vice versa. The two best response functions share a unique crossing point at <span>&#92;((1, 1)&#92;)</span> — the unique Nash Equilibrium. At any other action profile, at least one player has a profitable deviation downward, meaning the other intersection points are not Nash Equilibria.
+In the two-player version of the 2/3-of-average game with action sets <span>&#92;(A&#95;i = &#92;{1, 2, &#92;ldots, 10&#92;}&#92;)</span>, plotting the best response functions on a grid reveals their structure. Player 2's best response to any choice by Player 1 is the integer closest to two-thirds of that number, and vice versa. The two best response functions share a unique crossing point at <span>&#92;((1, 1)&#92;)</span> — the unique Nash Equilibrium. At any other action profile, at least one player has a profitable deviation downward, meaning the other intersection points are not Nash Equilibria.
 
 ## A Continuous Example: The Relationship Model
 
-Best response functions are especially powerful for games with continuous action sets, where we can use calculus. Consider two players each choosing an effort level <span>&#92;(a_i &#92;geq 0&#92;)</span> to invest in a relationship. Player <span>&#92;(i&#92;)</span>'s payoff is:
+Best response functions are especially powerful for games with continuous action sets, where we can use calculus. Consider two players each choosing an effort level <span>&#92;(a&#95;i &#92;geq 0&#92;)</span> to invest in a relationship. Player <span>&#92;(i&#92;)</span>'s payoff is:
 
-<span>&#92;[u_i(a_i, a_j) = a_i(c + a_j - a_i)&#92;]</span>
+<span>&#92;[u&#95;i(a&#95;i, a&#95;j) = a&#95;i(c + a&#95;j - a&#95;i)&#92;]</span>
 
-where <span>&#92;(c > 0&#92;)</span> is a parameter capturing the baseline value of the relationship. Two features stand out. First, there is **complementarity** between the players' efforts: a higher <span>&#92;(a_j&#92;)</span> increases the return to player <span>&#92;(i&#92;)</span>'s own effort — investing in a relationship matters more when your partner also invests. Second, the <span>&#92;(-a_i^2&#92;)</span> term introduces diminishing returns, ensuring an interior optimum exists.
+where <span>&#92;(c > 0&#92;)</span> is a parameter capturing the baseline value of the relationship. Two features stand out. First, there is **complementarity** between the players' efforts: a higher <span>&#92;(a&#95;j&#92;)</span> increases the return to player <span>&#92;(i&#92;)</span>'s own effort — investing in a relationship matters more when your partner also invests. Second, the <span>&#92;(-a&#95;i^2&#92;)</span> term introduces diminishing returns, ensuring an interior optimum exists.
 
-To find the best response, we maximize player <span>&#92;(i&#92;)</span>'s quadratic payoff over <span>&#92;(a_i&#92;)</span>. Since the payoff is concave in <span>&#92;(a_i&#92;)</span>, there is a unique maximum for any <span>&#92;(a_j&#92;)</span>:
+To find the best response, we maximize player <span>&#92;(i&#92;)</span>'s quadratic payoff over <span>&#92;(a&#95;i&#92;)</span>. Since the payoff is concave in <span>&#92;(a&#95;i&#92;)</span>, there is a unique maximum for any <span>&#92;(a&#95;j&#92;)</span>:
 
-<span>&#92;[b_i(a_j) = &#92;frac{1}{2}(c + a_j)&#92;]</span>
+<span>&#92;[b&#95;i(a&#95;j) = &#92;frac{1}{2}(c + a&#95;j)&#92;]</span>
 
 Both players have identical best response functions: optimal effort is half the sum of the baseline value and the partner's effort. This directly captures the complementarity — the harder your partner works, the harder you should work too.
 
 The Nash Equilibrium satisfies:
 
-<span>&#92;[a_1^* = &#92;frac{1}{2}(c + a_2^*) &#92;quad &#92;text{and} &#92;quad a_2^* = &#92;frac{1}{2}(c + a_1^*)&#92;]</span>
+<span>&#92;[a&#95;1^&#42; = &#92;frac{1}{2}(c + a&#95;2^&#42;) &#92;quad &#92;text{and} &#92;quad a&#95;2^&#42; = &#92;frac{1}{2}(c + a&#95;1^&#42;)&#92;]</span>
 
-By symmetry, suppose <span>&#92;(a_1^* = a_2^* = a^*&#92;)</span>. Substituting into either equation:
+By symmetry, suppose <span>&#92;(a&#95;1^&#42; = a&#95;2^&#42; = a^&#42;&#92;)</span>. Substituting into either equation:
 
-<span>&#92;[a^* = &#92;frac{1}{2}(c + a^*) &#92;implies 2a^* = c + a^* &#92;implies a^* = c&#92;]</span>
+<span>&#92;[a^&#42; = &#92;frac{1}{2}(c + a^&#42;) &#92;implies 2a^&#42; = c + a^&#42; &#92;implies a^&#42; = c&#92;]</span>
 
 The unique Nash Equilibrium is <span>&#92;((c, c)&#92;)</span> — both players exert effort equal to the baseline relationship value. The geometry confirms this: the two best response lines (each with slope <span>&#92;(\frac{1}{2}&#92;)</span> and intercept <span>&#92;(\frac{c}{2}&#92;)</span>) cross exactly at <span>&#92;((c, c)&#92;)</span>.
 
@@ -399,19 +399,19 @@ The unique Nash Equilibrium is <span>&#92;((c, c)&#92;)</span> — both players 
 
 Best response functions identify *optimal* actions. An equally useful idea identifies actions that are *never* optimal — actions a rational player would never choose, regardless of what the opponents do. Such actions are **strictly dominated**.
 
-Formally, in a strategic game, player <span>&#92;(i&#92;)</span>'s action <span>&#92;(a_i''&#92;)</span> **strictly dominates** action <span>&#92;(a_i'&#92;)</span> if:
+Formally, in a strategic game, player <span>&#92;(i&#92;)</span>'s action <span>&#92;(a&#95;i''&#92;)</span> **strictly dominates** action <span>&#92;(a&#95;i'&#92;)</span> if:
 
-<span>&#92;[u_i(a_i'', a_{-i}) > u_i(a_i', a_{-i}) &#92;quad &#92;forall\ a_{-i}&#92;]</span>
+<span>&#92;[u&#95;i(a&#95;i'', a&#95;{-i}) > u&#95;i(a&#95;i', a&#95;{-i}) &#92;quad &#92;forall\ a&#95;{-i}&#92;]</span>
 
-The action <span>&#92;(a_i'&#92;)</span> is then said to be **strictly dominated**. Since a strictly dominated action is never a best response to *any* action list, and Nash Equilibrium actions are always best responses to the opponents' NE actions, it follows immediately that **strictly dominated actions are never used in any Nash Equilibrium**. We can therefore safely delete them before searching for NE.
+The action <span>&#92;(a&#95;i'&#92;)</span> is then said to be **strictly dominated**. Since a strictly dominated action is never a best response to *any* action list, and Nash Equilibrium actions are always best responses to the opponents' NE actions, it follows immediately that **strictly dominated actions are never used in any Nash Equilibrium**. We can therefore safely delete them before searching for NE.
 
 More powerfully, we can iterate. After eliminating a strictly dominated action, the reduced game may reveal *new* dominated actions — actions that were not dominated in the original game but become so once certain opponent actions are removed. Continuing until no more eliminations are possible is called **Iterative Deletion of Dominated Strategies** (IDDS), or equivalently Iterated Elimination of Strictly Dominated Strategies (IESDS). Any Nash Equilibrium of the original game survives this process.
 
 ## Weak Domination
 
-**Weak domination** relaxes the strictness condition. Player <span>&#92;(i&#92;)</span>'s action <span>&#92;(a_i''&#92;)</span> **weakly dominates** action <span>&#92;(a_i'&#92;)</span> if:
+**Weak domination** relaxes the strictness condition. Player <span>&#92;(i&#92;)</span>'s action <span>&#92;(a&#95;i''&#92;)</span> **weakly dominates** action <span>&#92;(a&#95;i'&#92;)</span> if:
 
-<span>&#92;[u_i(a_i'', a_{-i}) &#92;geq u_i(a_i', a_{-i}) &#92;quad &#92;forall\ a_{-i}&#92;]</span>
+<span>&#92;[u&#95;i(a&#95;i'', a&#95;{-i}) &#92;geq u&#95;i(a&#95;i', a&#95;{-i}) &#92;quad &#92;forall\ a&#95;{-i}&#92;]</span>
 
 with at least one strict inequality. The key difference: **weakly dominated actions can appear in Nash Equilibria**, so we cannot simply discard them.
 
@@ -443,21 +443,21 @@ The **Cournot oligopoly game** involves <span>&#92;(n&#92;)</span> firms, each o
 
 The **players** are the <span>&#92;(n&#92;)</span> firms.
 
-The **actions** available to each firm <span>&#92;(i&#92;)</span> constitute the set of feasible output levels. Formally, firm <span>&#92;(i&#92;)</span> chooses a quantity <span>&#92;(q_i &#92;geq 0&#92;)</span>. Notice that <span>&#92;(q_i&#92;)</span> is a continuous variable: there is no requirement that output be a whole number. Think of firms producing grain or some other divisible commodity rather than discrete units like automobiles.
+The **actions** available to each firm <span>&#92;(i&#92;)</span> constitute the set of feasible output levels. Formally, firm <span>&#92;(i&#92;)</span> chooses a quantity <span>&#92;(q&#95;i &#92;geq 0&#92;)</span>. Notice that <span>&#92;(q&#95;i&#92;)</span> is a continuous variable: there is no requirement that output be a whole number. Think of firms producing grain or some other divisible commodity rather than discrete units like automobiles.
 
 The **preferences** of each firm are represented by its profit. Firms are assumed to be profit-maximizing, so each firm <span>&#92;(i&#92;)</span> has a payoff function equal to revenues minus costs:
 
-<span>&#92;[&#92;pi_i(q_1, &#92;ldots, q_n) = q_i &#92;, P(q_1 + &#92;cdots + q_n) - C_i(q_i)&#92;]</span>
+<span>&#92;[&#92;pi&#95;i(q&#95;1, &#92;ldots, q&#95;n) = q&#95;i &#92;, P(q&#95;1 + &#92;cdots + q&#95;n) - C&#95;i(q&#95;i)&#92;]</span>
 
-Here <span>&#92;(C_i(q_i)&#92;)</span> is the total cost function for firm <span>&#92;(i&#92;)</span>, which is increasing in <span>&#92;(q_i&#92;)</span> — the more you produce, the higher your costs. The term <span>&#92;(P(q_1 + &#92;cdots + q_n)&#92;)</span> is the **inverse demand function**, which gives the equilibrium market price as a function of the total quantity produced across all firms. We call it an inverse demand function because, while a conventional demand function tells us how much consumers will buy at a given price, this function inverts that relationship and tells us what price will prevail given total market output. Crucially, this price is decreasing in total output: the more all firms collectively produce, the lower the market price — as long as price remains above zero.
+Here <span>&#92;(C&#95;i(q&#95;i)&#92;)</span> is the total cost function for firm <span>&#92;(i&#92;)</span>, which is increasing in <span>&#92;(q&#95;i&#92;)</span> — the more you produce, the higher your costs. The term <span>&#92;(P(q&#95;1 + &#92;cdots + q&#95;n)&#92;)</span> is the **inverse demand function**, which gives the equilibrium market price as a function of the total quantity produced across all firms. We call it an inverse demand function because, while a conventional demand function tells us how much consumers will buy at a given price, this function inverts that relationship and tells us what price will prevail given total market output. Crucially, this price is decreasing in total output: the more all firms collectively produce, the lower the market price — as long as price remains above zero.
 
 The strategic tension in this model is immediate. Each firm wants to produce more output because that means more units to sell at the prevailing price. But when any single firm produces more, it floods the market, depresses the equilibrium price, and thereby hurts not only its own per-unit revenue but also the revenues of every other firm. This is the negative externality that lies at the heart of Cournot competition.
 
 ### The Specific Duopoly Case
 
-To make the model tractable, we work through a specific case in detail. We assume <span>&#92;(n = 2&#92;)</span>, so we have a **duopoly**. The cost function is linear with a constant **unit cost** <span>&#92;(c&#92;)</span>, so <span>&#92;(C_i(q_i) = c q_i&#92;)</span> for each firm. The inverse demand function is linear:
+To make the model tractable, we work through a specific case in detail. We assume <span>&#92;(n = 2&#92;)</span>, so we have a **duopoly**. The cost function is linear with a constant **unit cost** <span>&#92;(c&#92;)</span>, so <span>&#92;(C&#95;i(q&#95;i) = c q&#95;i&#92;)</span> for each firm. The inverse demand function is linear:
 
-<span>&#92;[P(q_1 + q_2) = &#92;begin{cases} &#92;alpha - q_1 - q_2 &amp;&#92;text{if } q_1 + q_2 &#92;leq &#92;alpha &#92;&#92; 0 &amp;&#92;text{if } q_1 + q_2 &gt; &#92;alpha &#92;end{cases}&#92;]</span>
+<span>&#92;[P(q&#95;1 + q&#95;2) = &#92;begin{cases} &#92;alpha - q&#95;1 - q&#95;2 &amp;&#92;text{if } q&#95;1 + q&#95;2 &#92;leq &#92;alpha &#92;&#92; 0 &amp;&#92;text{if } q&#95;1 + q&#95;2 &gt; &#92;alpha &#92;end{cases}&#92;]</span>
 
 The parameter <span>&#92;(&#92;alpha &gt; 0&#92;)</span> is the maximum price this market can sustain — the price at which consumers would demand nothing, so it is the intercept of the demand curve. We require <span>&#92;(c &gt; 0&#92;)</span> as a basic economic assumption, and we require <span>&#92;(c &lt; &#92;alpha&#92;)</span>. This second condition deserves a moment's explanation: if <span>&#92;(c &#92;geq &#92;alpha&#92;)</span>, the market price could never exceed the unit cost of production, and no firm would ever find it worthwhile to produce anything. The case <span>&#92;(c &lt; &#92;alpha&#92;)</span> is therefore the only situation worth analyzing.
 
@@ -465,53 +465,53 @@ The parameter <span>&#92;(&#92;alpha &gt; 0&#92;)</span> is the maximum price th
 
 Substituting the linear inverse demand and the unit cost into the profit function, firm <span>&#92;(i&#92;)</span>'s payoff is:
 
-<span>&#92;[&#92;pi_i(q_1, q_2) = &#92;begin{cases} q_i(&#92;alpha - c - q_1 - q_2) &amp;&#92;text{if } q_1 + q_2 &#92;leq &#92;alpha &#92;&#92; -c q_i &amp;&#92;text{if } q_1 + q_2 &gt; &#92;alpha &#92;end{cases}&#92;]</span>
+<span>&#92;[&#92;pi&#95;i(q&#95;1, q&#95;2) = &#92;begin{cases} q&#95;i(&#92;alpha - c - q&#95;1 - q&#95;2) &amp;&#92;text{if } q&#95;1 + q&#95;2 &#92;leq &#92;alpha &#92;&#92; -c q&#95;i &amp;&#92;text{if } q&#95;1 + q&#95;2 &gt; &#92;alpha &#92;end{cases}&#92;]</span>
 
-When total output exceeds <span>&#92;(&#92;alpha&#92;)</span>, the market price is zero and firm <span>&#92;(i&#92;)</span>'s only cash flow is the negative cost <span>&#92;(-c q_i&#92;)</span>. In that region the firm clearly maximizes its payoff by choosing <span>&#92;(q_i = 0&#92;)</span>. Since both firms would choose zero output there, neither will ever find it optimal to push output so high that it exceeds <span>&#92;(&#92;alpha&#92;)</span> in equilibrium. Our analysis therefore focuses on the interior case where <span>&#92;(q_1 + q_2 &#92;leq &#92;alpha&#92;)</span>, and we will verify that the equilibrium quantities we find do indeed satisfy this condition.
+When total output exceeds <span>&#92;(&#92;alpha&#92;)</span>, the market price is zero and firm <span>&#92;(i&#92;)</span>'s only cash flow is the negative cost <span>&#92;(-c q&#95;i&#92;)</span>. In that region the firm clearly maximizes its payoff by choosing <span>&#92;(q&#95;i = 0&#92;)</span>. Since both firms would choose zero output there, neither will ever find it optimal to push output so high that it exceeds <span>&#92;(&#92;alpha&#92;)</span> in equilibrium. Our analysis therefore focuses on the interior case where <span>&#92;(q&#95;1 + q&#95;2 &#92;leq &#92;alpha&#92;)</span>, and we will verify that the equilibrium quantities we find do indeed satisfy this condition.
 
 ## Deriving the Best Response Functions
 
 ### The Interior Solution
 
-To find each firm's best response, we proceed as follows. Firm 1 takes <span>&#92;(q_2&#92;)</span> as given — it cannot control what the other firm produces — and chooses <span>&#92;(q_1&#92;)</span> to maximize its profit. This profit function is quadratic in <span>&#92;(q_1&#92;)</span>:
+To find each firm's best response, we proceed as follows. Firm 1 takes <span>&#92;(q&#95;2&#92;)</span> as given — it cannot control what the other firm produces — and chooses <span>&#92;(q&#95;1&#92;)</span> to maximize its profit. This profit function is quadratic in <span>&#92;(q&#95;1&#92;)</span>:
 
-<span>&#92;[&#92;pi_1(q_1, q_2) = q_1(&#92;alpha - c - q_1 - q_2)&#92;]</span>
+<span>&#92;[&#92;pi&#95;1(q&#95;1, q&#95;2) = q&#95;1(&#92;alpha - c - q&#95;1 - q&#95;2)&#92;]</span>
 
-Taking the derivative with respect to <span>&#92;(q_1&#92;)</span> and setting it equal to zero gives the **first-order condition**:
+Taking the derivative with respect to <span>&#92;(q&#95;1&#92;)</span> and setting it equal to zero gives the **first-order condition**:
 
-<span>&#92;[&#92;frac{&#92;partial &#92;pi_1}{&#92;partial q_1} = &#92;alpha - c - 2q_1 - q_2 = 0&#92;]</span>
+<span>&#92;[&#92;frac{&#92;partial &#92;pi&#95;1}{&#92;partial q&#95;1} = &#92;alpha - c - 2q&#95;1 - q&#95;2 = 0&#92;]</span>
 
-Solving for <span>&#92;(q_1&#92;)</span>:
+Solving for <span>&#92;(q&#95;1&#92;)</span>:
 
-<span>&#92;[q_1 = &#92;frac{1}{2}(&#92;alpha - c - q_2)&#92;]</span>
+<span>&#92;[q&#95;1 = &#92;frac{1}{2}(&#92;alpha - c - q&#95;2)&#92;]</span>
 
-This is the interior solution. It says that firm 1's optimal output is decreasing in <span>&#92;(q_2&#92;)</span>: the more the rival produces, the less firm 1 wants to produce. This negative slope is the hallmark of **strategic substitutes** — quantities are strategic substitutes because each firm's best response calls for less of the good when its rival chooses more.
+This is the interior solution. It says that firm 1's optimal output is decreasing in <span>&#92;(q&#95;2&#92;)</span>: the more the rival produces, the less firm 1 wants to produce. This negative slope is the hallmark of **strategic substitutes** — quantities are strategic substitutes because each firm's best response calls for less of the good when its rival chooses more.
 
-For those uncomfortable with calculus, there is an equivalent way to arrive at the same expression. Since <span>&#92;(&#92;pi_1&#92;)</span> is a downward-opening quadratic in <span>&#92;(q_1&#92;)</span>, its maximum lies at the midpoint of its two roots (the values of <span>&#92;(q_1&#92;)</span> at which profit equals zero). Finding those roots and taking the midpoint yields exactly <span>&#92;(&#92;frac{1}{2}(&#92;alpha - c - q_2)&#92;)</span>.
+For those uncomfortable with calculus, there is an equivalent way to arrive at the same expression. Since <span>&#92;(&#92;pi&#95;1&#92;)</span> is a downward-opening quadratic in <span>&#92;(q&#95;1&#92;)</span>, its maximum lies at the midpoint of its two roots (the values of <span>&#92;(q&#95;1&#92;)</span> at which profit equals zero). Finding those roots and taking the midpoint yields exactly <span>&#92;(&#92;frac{1}{2}(&#92;alpha - c - q&#95;2)&#92;)</span>.
 
 ### The Corner Solution
 
-We must be careful, however. Quantities must be non-negative. If <span>&#92;(q_2&#92;)</span> is large enough that the formula above would give a negative number, it is no longer valid. Specifically, when <span>&#92;(q_2 &gt; &#92;alpha - c&#92;)</span>, the term <span>&#92;(&#92;alpha - c - q_2&#92;)</span> is negative. The profit function <span>&#92;(&#92;pi_1 = q_1(&#92;alpha - c - q_1 - q_2)&#92;)</span> then has a negative second factor for any positive <span>&#92;(q_1&#92;)</span>, making profit negative. Firm 1 is better off choosing <span>&#92;(q_1 = 0&#92;)</span> and earning zero rather than producing anything and incurring a loss.
+We must be careful, however. Quantities must be non-negative. If <span>&#92;(q&#95;2&#92;)</span> is large enough that the formula above would give a negative number, it is no longer valid. Specifically, when <span>&#92;(q&#95;2 &gt; &#92;alpha - c&#92;)</span>, the term <span>&#92;(&#92;alpha - c - q&#95;2&#92;)</span> is negative. The profit function <span>&#92;(&#92;pi&#95;1 = q&#95;1(&#92;alpha - c - q&#95;1 - q&#95;2)&#92;)</span> then has a negative second factor for any positive <span>&#92;(q&#95;1&#92;)</span>, making profit negative. Firm 1 is better off choosing <span>&#92;(q&#95;1 = 0&#92;)</span> and earning zero rather than producing anything and incurring a loss.
 
 ### The Complete Best Response Function
 
 Combining the interior and corner cases, firm 1's **best response function** is:
 
-<span>&#92;[b_1(q_2) = &#92;begin{cases} &#92;dfrac{1}{2}(&#92;alpha - c - q_2) &amp;&#92;text{if } q_2 &#92;leq &#92;alpha - c &#92;&#92;[6pt] 0 &amp;&#92;text{if } q_2 &gt; &#92;alpha - c &#92;end{cases}&#92;]</span>
+<span>&#92;[b&#95;1(q&#95;2) = &#92;begin{cases} &#92;dfrac{1}{2}(&#92;alpha - c - q&#95;2) &amp;&#92;text{if } q&#95;2 &#92;leq &#92;alpha - c &#92;&#92;[6pt] 0 &amp;&#92;text{if } q&#95;2 &gt; &#92;alpha - c &#92;end{cases}&#92;]</span>
 
 Because firm 2 has the same cost function, its best response function is obtained by symmetry — simply interchange the labels 1 and 2:
 
-<span>&#92;[b_2(q_1) = &#92;begin{cases} &#92;dfrac{1}{2}(&#92;alpha - c - q_1) &amp;&#92;text{if } q_1 &#92;leq &#92;alpha - c &#92;&#92;[6pt] 0 &amp;&#92;text{if } q_1 &gt; &#92;alpha - c &#92;end{cases}&#92;]</span>
+<span>&#92;[b&#95;2(q&#95;1) = &#92;begin{cases} &#92;dfrac{1}{2}(&#92;alpha - c - q&#95;1) &amp;&#92;text{if } q&#95;1 &#92;leq &#92;alpha - c &#92;&#92;[6pt] 0 &amp;&#92;text{if } q&#95;1 &gt; &#92;alpha - c &#92;end{cases}&#92;]</span>
 
 ## The Best Response Function Graph
 
 Before solving algebraically, it is worth drawing these functions, as the graph provides important geometric intuition and guards against errors that pure algebra might conceal.
 
-Place <span>&#92;(q_1&#92;)</span> on the horizontal axis and <span>&#92;(q_2&#92;)</span> on the vertical axis. Firm 1's best response function <span>&#92;(b_1(q_2)&#92;)</span> is drawn as a function of <span>&#92;(q_2&#92;)</span>, so it describes a downward-sloping line segment. When <span>&#92;(q_2 = 0&#92;)</span>, the best response is <span>&#92;(q_1 = &#92;frac{1}{2}(&#92;alpha - c)&#92;)</span>, which is the horizontal intercept of this line. When <span>&#92;(q_2 = &#92;alpha - c&#92;)</span>, the interior formula gives <span>&#92;(q_1 = 0&#92;)</span>, which is the point where the line meets the vertical axis. For values of <span>&#92;(q_2&#92;)</span> above <span>&#92;(&#92;alpha - c&#92;)</span>, the best response is zero, so the function runs along the vertical axis. Together these two segments — the downward-sloping interior piece and the flat portion along the axis — form the complete best response curve for firm 1.
+Place <span>&#92;(q&#95;1&#92;)</span> on the horizontal axis and <span>&#92;(q&#95;2&#92;)</span> on the vertical axis. Firm 1's best response function <span>&#92;(b&#95;1(q&#95;2)&#92;)</span> is drawn as a function of <span>&#92;(q&#95;2&#92;)</span>, so it describes a downward-sloping line segment. When <span>&#92;(q&#95;2 = 0&#92;)</span>, the best response is <span>&#92;(q&#95;1 = &#92;frac{1}{2}(&#92;alpha - c)&#92;)</span>, which is the horizontal intercept of this line. When <span>&#92;(q&#95;2 = &#92;alpha - c&#92;)</span>, the interior formula gives <span>&#92;(q&#95;1 = 0&#92;)</span>, which is the point where the line meets the vertical axis. For values of <span>&#92;(q&#95;2&#92;)</span> above <span>&#92;(&#92;alpha - c&#92;)</span>, the best response is zero, so the function runs along the vertical axis. Together these two segments — the downward-sloping interior piece and the flat portion along the axis — form the complete best response curve for firm 1.
 
-Firm 2's best response function <span>&#92;(b_2(q_1)&#92;)</span> is symmetric: it is also a downward-sloping line (with slope <span>&#92;(-&#92;frac{1}{2}&#92;)</span>) starting at <span>&#92;(q_2 = &#92;frac{1}{2}(&#92;alpha - c)&#92;)</span> when <span>&#92;(q_1 = 0&#92;)</span> and reaching zero when <span>&#92;(q_1 = &#92;alpha - c&#92;)</span>, beyond which it lies flat along the horizontal axis.
+Firm 2's best response function <span>&#92;(b&#95;2(q&#95;1)&#92;)</span> is symmetric: it is also a downward-sloping line (with slope <span>&#92;(-&#92;frac{1}{2}&#92;)</span>) starting at <span>&#92;(q&#95;2 = &#92;frac{1}{2}(&#92;alpha - c)&#92;)</span> when <span>&#92;(q&#95;1 = 0&#92;)</span> and reaching zero when <span>&#92;(q&#95;1 = &#92;alpha - c&#92;)</span>, beyond which it lies flat along the horizontal axis.
 
-The two interior segments intersect at a single point. That intersection is the Nash equilibrium, because it is the unique pair <span>&#92;((q_1, q_2)&#92;)</span> at which both firms are simultaneously best-responding to each other. Visually checking this is essential: with different cost structures across firms, the two curves could intersect on the axis portion rather than in the interior, leading to a corner equilibrium rather than the symmetric interior one we find here. Always drawing the graph prevents being misled by algebra alone.
+The two interior segments intersect at a single point. That intersection is the Nash equilibrium, because it is the unique pair <span>&#92;((q&#95;1, q&#95;2)&#92;)</span> at which both firms are simultaneously best-responding to each other. Visually checking this is essential: with different cost structures across firms, the two curves could intersect on the axis portion rather than in the interior, leading to a corner equilibrium rather than the symmetric interior one we find here. Always drawing the graph prevents being misled by algebra alone.
 
 ## Nash Equilibrium
 
@@ -519,23 +519,23 @@ The two interior segments intersect at a single point. That intersection is the 
 
 The Nash equilibrium is found by solving the two best response functions simultaneously. Setting each firm's output equal to its best response to the other's output:
 
-<span>&#92;[&#92;begin{aligned} q_1 &amp;= &#92;tfrac{1}{2}(&#92;alpha - c - q_2) &#92;&#92; q_2 &amp;= &#92;tfrac{1}{2}(&#92;alpha - c - q_1) &#92;end{aligned}&#92;]</span>
+<span>&#92;[&#92;begin{aligned} q&#95;1 &amp;= &#92;tfrac{1}{2}(&#92;alpha - c - q&#95;2) &#92;&#92; q&#95;2 &amp;= &#92;tfrac{1}{2}(&#92;alpha - c - q&#95;1) &#92;end{aligned}&#92;]</span>
 
-By the symmetry of the system, we can guess — and then verify — that <span>&#92;(q_1^* = q_2^*&#92;)</span>. Substituting <span>&#92;(q_2^* = q_1^*&#92;)</span> into the first equation:
+By the symmetry of the system, we can guess — and then verify — that <span>&#92;(q&#95;1^&#42; = q&#95;2^&#42;&#92;)</span>. Substituting <span>&#92;(q&#95;2^&#42; = q&#95;1^&#42;&#92;)</span> into the first equation:
 
-<span>&#92;[q_1^* = &#92;frac{1}{2}(&#92;alpha - c - q_1^*) &#92;implies &#92;frac{3}{2}q_1^* = &#92;frac{&#92;alpha - c}{2} &#92;implies q_1^* = &#92;frac{&#92;alpha - c}{3}&#92;]</span>
+<span>&#92;[q&#95;1^&#42; = &#92;frac{1}{2}(&#92;alpha - c - q&#95;1^&#42;) &#92;implies &#92;frac{3}{2}q&#95;1^&#42; = &#92;frac{&#92;alpha - c}{2} &#92;implies q&#95;1^&#42; = &#92;frac{&#92;alpha - c}{3}&#92;]</span>
 
 The unique **Nash equilibrium** of the linear Cournot duopoly is therefore the **symmetric Nash equilibrium**:
 
-<span>&#92;[(q_1^*, q_2^*) = &#92;left(&#92;frac{&#92;alpha - c}{3},&#92; &#92;frac{&#92;alpha - c}{3}&#92;right)&#92;]</span>
+<span>&#92;[(q&#95;1^&#42;, q&#95;2^&#42;) = &#92;left(&#92;frac{&#92;alpha - c}{3},&#92; &#92;frac{&#92;alpha - c}{3}&#92;right)&#92;]</span>
 
-We can now verify our earlier assumption: total output is <span>&#92;(q_1^* + q_2^* = &#92;&#92;frac{2}{3}(&#92;alpha - c)&#92;)</span>, which is less than <span>&#92;(&#92;alpha&#92;)</span> since <span>&#92;(c &gt; 0&#92;)</span>. The assumption <span>&#92;(q_1 + q_2 &#92;leq &#92;alpha&#92;)</span> is confirmed.
+We can now verify our earlier assumption: total output is <span>&#92;(q&#95;1^&#42; + q&#95;2^&#42; = &#92;&#92;frac{2}{3}(&#92;alpha - c)&#92;)</span>, which is less than <span>&#92;(&#92;alpha&#92;)</span> since <span>&#92;(c &gt; 0&#92;)</span>. The assumption <span>&#92;(q&#95;1 + q&#95;2 &#92;leq &#92;alpha&#92;)</span> is confirmed.
 
 ### Equilibrium Price
 
 With both firms producing <span>&#92;(&#92;&#92;frac{&#92;alpha - c}{3}&#92;)</span>, the equilibrium market price is:
 
-<span>&#92;[P^* = &#92;alpha - q_1^* - q_2^* = &#92;alpha - &#92;frac{2}{3}(&#92;alpha - c) = &#92;frac{&#92;alpha}{3} + &#92;frac{2c}{3}&#92;]</span>
+<span>&#92;[P^&#42; = &#92;alpha - q&#95;1^&#42; - q&#95;2^&#42; = &#92;alpha - &#92;frac{2}{3}(&#92;alpha - c) = &#92;frac{&#92;alpha}{3} + &#92;frac{2c}{3}&#92;]</span>
 
 This price is strictly positive (since <span>&#92;(c &gt; 0&#92;)</span> and <span>&#92;(&#92;alpha &gt; 0&#92;)</span>), confirming that we are in the valid region of the demand function.
 
@@ -565,7 +565,7 @@ This analysis explains precisely why competition authorities prohibit collusive 
 
 One of the most powerful applications of the Cournot model is to ask what happens to the equilibrium price as the number of competing firms grows. With <span>&#92;(n&#92;)</span> symmetric firms each facing a unit cost of <span>&#92;(c&#92;)</span> and the same linear inverse demand, the symmetric Nash equilibrium output per firm is <span>&#92;(&#92;&#92;frac{&#92;alpha - c}{n+1}&#92;)</span>, so the equilibrium price is:
 
-<span>&#92;[P^*(n) = &#92;frac{&#92;alpha + nc}{n+1}&#92;]</span>
+<span>&#92;[P^&#42;(n) = &#92;frac{&#92;alpha + nc}{n+1}&#92;]</span>
 
 As <span>&#92;(n &#92;to &#92;infty&#92;)</span>, this expression approaches <span>&#92;(c&#92;)</span>. In other words, as the number of firms in the industry grows without bound, the equilibrium price converges to the **marginal cost** of production. Firms will never sell goods below their cost — doing so would mean choosing to incur a loss — but with increasing competition they are driven ever closer to that lower bound.
 
@@ -575,9 +575,9 @@ This result is both intuitive and reassuring. More competition keeps prices low 
 
 The Cournot model turns out to capture something much more general than firms competing in a market. Notice that each firm's profit can be written in the form:
 
-<span>&#92;[&#92;pi_i = f_i(q_i,&#92; q_1 + q_2 + &#92;cdots + q_n)&#92;]</span>
+<span>&#92;[&#92;pi&#95;i = f&#95;i(q&#95;i,&#92; q&#95;1 + q&#95;2 + &#92;cdots + q&#95;n)&#92;]</span>
 
-where <span>&#92;(f_i&#92;)</span> is decreasing in its second argument. The payoff to any one player falls as the total aggregate action of all players rises, while each player controls only their own contribution to that aggregate. This structure captures any situation in which players compete to exploit a piece of **common property** whose value to each individual diminishes with total use.
+where <span>&#92;(f&#95;i&#92;)</span> is decreasing in its second argument. The payoff to any one player falls as the total aggregate action of all players rises, while each player controls only their own contribution to that aggregate. This structure captures any situation in which players compete to exploit a piece of **common property** whose value to each individual diminishes with total use.
 
 A classic example is a **village grazing field**. Imagine a community of farmers who share a common pasture. Each farmer decides how many sheep to put out to graze. The more sheep there are on the pasture in total, the less grass each sheep gets, the less weight each sheep gains, and the lower the value of the flock to any individual farmer. When a farmer adds one more sheep, she receives the full benefit of that additional sheep but imposes the cost of reduced grazing quality on every other farmer's flock. Just as in the Cournot game, each individual ignores the negative externality she inflicts on others, and as a result the commons is overused in equilibrium.
 
@@ -599,25 +599,25 @@ In many real-world industries this is in fact the more natural description of co
 
 ### Players, Actions, and Preferences
 
-Consider an industry with <span>&#92;(n&#92;)</span> firms. Firm <span>&#92;(i&#92;)</span> incurs a cost <span>&#92;(C_i(q_i)&#92;)</span> to produce <span>&#92;(q_i&#92;)</span> units, where <span>&#92;(C_i&#92;)</span> is an increasing function of output. The total quantity that consumers demand when the market price is <span>&#92;(p&#92;)</span> is given by the **demand function** <span>&#92;(D(p)&#92;)</span>, which is decreasing in <span>&#92;(p&#92;)</span> for all <span>&#92;(p&#92;)</span> at which demand is non-negative. Notice the contrast with Cournot: there we used an inverse demand function expressing price as a function of aggregate quantity; here we express quantity demanded as a function of price. The underlying relationship between price and quantity is the same — it is simply written in one direction versus the other.
+Consider an industry with <span>&#92;(n&#92;)</span> firms. Firm <span>&#92;(i&#92;)</span> incurs a cost <span>&#92;(C&#95;i(q&#95;i)&#92;)</span> to produce <span>&#92;(q&#95;i&#92;)</span> units, where <span>&#92;(C&#95;i&#92;)</span> is an increasing function of output. The total quantity that consumers demand when the market price is <span>&#92;(p&#92;)</span> is given by the **demand function** <span>&#92;(D(p)&#92;)</span>, which is decreasing in <span>&#92;(p&#92;)</span> for all <span>&#92;(p&#92;)</span> at which demand is non-negative. Notice the contrast with Cournot: there we used an inverse demand function expressing price as a function of aggregate quantity; here we express quantity demanded as a function of price. The underlying relationship between price and quantity is the same — it is simply written in one direction versus the other.
 
 Firms simultaneously announce prices. Consumers, observing all posted prices, purchase entirely from whichever firm has set the lowest price. If more than one firm ties for the lowest price, they share demand equally among themselves. Critically, once a firm sets a price it must satisfy whatever demand arrives at that price.
 
 Formalised as a strategic game:
 
 - **Players:** the <span>&#92;(n&#92;)</span> firms.
-- **Actions:** each firm <span>&#92;(i&#92;)</span> chooses a price <span>&#92;(p_i &#92;geq 0&#92;)</span>. Importantly, prices are treated as continuous — not restricted to whole cents — and this continuity assumption will matter when we derive best response functions.
-- **Preferences:** each firm's preferences are represented by its profit <span>&#92;(&#92;pi_i&#92;)</span>. If firm <span>&#92;(i&#92;)</span> is one of <span>&#92;(m&#92;)</span> firms that jointly set the lowest price, then each receives <span>&#92;(1/m&#92;)</span> of total demand and earns
+- **Actions:** each firm <span>&#92;(i&#92;)</span> chooses a price <span>&#92;(p&#95;i &#92;geq 0&#92;)</span>. Importantly, prices are treated as continuous — not restricted to whole cents — and this continuity assumption will matter when we derive best response functions.
+- **Preferences:** each firm's preferences are represented by its profit <span>&#92;(&#92;pi&#95;i&#92;)</span>. If firm <span>&#92;(i&#92;)</span> is one of <span>&#92;(m&#92;)</span> firms that jointly set the lowest price, then each receives <span>&#92;(1/m&#92;)</span> of total demand and earns
 
-<span>&#92;[ &#92;pi_i = p_i &#92;cdot &#92;frac{D(p_i)}{m} - C_i&#92;!\left(&#92;frac{D(p_i)}{m}&#92;right). &#92;]</span>
+<span>&#92;[ &#92;pi&#95;i = p&#95;i &#92;cdot &#92;frac{D(p&#95;i)}{m} - C&#95;i&#92;!\left(&#92;frac{D(p&#95;i)}{m}&#92;right). &#92;]</span>
 
-If some other firm has set a strictly lower price, firm <span>&#92;(i&#92;)</span> sells nothing and earns <span>&#92;(&#92;pi_i = 0&#92;)</span>.
+If some other firm has set a strictly lower price, firm <span>&#92;(i&#92;)</span> sells nothing and earns <span>&#92;(&#92;pi&#95;i = 0&#92;)</span>.
 
 ## A Tractable Example: Duopoly with Linear Demand and Constant Unit Cost
 
 ### Setup
 
-As with Cournot, a specific functional form makes the analysis concrete. Take <span>&#92;(n = 2&#92;)</span> firms. Each firm has a **constant unit cost** <span>&#92;(c > 0&#92;)</span>, so that <span>&#92;(C_i(q_i) = c &#92;, q_i&#92;)</span>. The demand function is linear:
+As with Cournot, a specific functional form makes the analysis concrete. Take <span>&#92;(n = 2&#92;)</span> firms. Each firm has a **constant unit cost** <span>&#92;(c > 0&#92;)</span>, so that <span>&#92;(C&#95;i(q&#95;i) = c &#92;, q&#95;i&#92;)</span>. The demand function is linear:
 
 <span>&#92;[ D(p) = &#92;begin{cases} &#92;alpha - p &amp; &#92;text{if } p &#92;leq &#92;alpha &#92;&#92; 0 &amp; &#92;text{if } p > &#92;alpha, &#92;end{cases} &#92;]</span>
 
@@ -627,9 +627,9 @@ where <span>&#92;(&#92;alpha > 0&#92;)</span> is the intercept of demand (the qu
 
 With two firms the profit for firm <span>&#92;(i&#92;)</span> (where <span>&#92;(j&#92;)</span> denotes the other firm) takes three forms depending on how the prices compare:
 
-<span>&#92;[ &#92;pi_i(p_1, p_2) = &#92;begin{cases} (p_i - c)(&#92;alpha - p_i) &amp; &#92;text{if } p_i &lt; p_j &#92;&#92; &#92;frac{1}{2}(p_i - c)(&#92;alpha - p_i) &amp; &#92;text{if } p_i = p_j &#92;&#92; 0 &amp; &#92;text{if } p_i > p_j. &#92;end{cases} &#92;]</span>
+<span>&#92;[ &#92;pi&#95;i(p&#95;1, p&#95;2) = &#92;begin{cases} (p&#95;i - c)(&#92;alpha - p&#95;i) &amp; &#92;text{if } p&#95;i &lt; p&#95;j &#92;&#92; &#92;frac{1}{2}(p&#95;i - c)(&#92;alpha - p&#95;i) &amp; &#92;text{if } p&#95;i = p&#95;j &#92;&#92; 0 &amp; &#92;text{if } p&#95;i > p&#95;j. &#92;end{cases} &#92;]</span>
 
-When firm <span>&#92;(i&#92;)</span> charges the strictly lower price it captures all demand <span>&#92;(&#92;alpha - p_i&#92;)</span> and earns <span>&#92;(p_i - c&#92;)</span> on each unit. When both prices are equal they split the market. When firm <span>&#92;(i&#92;)</span> charges more it is priced out entirely.
+When firm <span>&#92;(i&#92;)</span> charges the strictly lower price it captures all demand <span>&#92;(&#92;alpha - p&#95;i&#92;)</span> and earns <span>&#92;(p&#95;i - c&#92;)</span> on each unit. When both prices are equal they split the market. When firm <span>&#92;(i&#92;)</span> charges more it is priced out entirely.
 
 ### The Monopoly Price
 
@@ -641,63 +641,63 @@ No firm would ever voluntarily set a price above <span>&#92;(p^M&#92;)</span>, b
 
 ## Best Response Functions
 
-### Case 1: <span>&#92;(p_j &lt; c&#92;)</span>
+### Case 1: <span>&#92;(p&#95;j &lt; c&#92;)</span>
 
 Suppose the rival firm has set a price strictly below the common marginal cost. What should firm <span>&#92;(i&#92;)</span> do?
 
-- Setting <span>&#92;(p_i &lt; p_j&#92;)</span> means firm <span>&#92;(i&#92;)</span> captures the entire market but sells every unit at a price strictly below cost, yielding strictly negative profit.
-- Setting <span>&#92;(p_i = p_j&#92;)</span> still means selling at below cost — firm <span>&#92;(i&#92;)</span> earns half the market but still loses money on each unit, so profit is again negative.
-- Setting <span>&#92;(p_i > p_j&#92;)</span> means firm <span>&#92;(i&#92;)</span> sells nothing and earns exactly zero.
+- Setting <span>&#92;(p&#95;i &lt; p&#95;j&#92;)</span> means firm <span>&#92;(i&#92;)</span> captures the entire market but sells every unit at a price strictly below cost, yielding strictly negative profit.
+- Setting <span>&#92;(p&#95;i = p&#95;j&#92;)</span> still means selling at below cost — firm <span>&#92;(i&#92;)</span> earns half the market but still loses money on each unit, so profit is again negative.
+- Setting <span>&#92;(p&#95;i > p&#95;j&#92;)</span> means firm <span>&#92;(i&#92;)</span> sells nothing and earns exactly zero.
 
-Zero beats any negative number, so the best response here is to **lose the price war intentionally** — to set any price strictly above <span>&#92;(p_j&#92;)</span>:
+Zero beats any negative number, so the best response here is to **lose the price war intentionally** — to set any price strictly above <span>&#92;(p&#95;j&#92;)</span>:
 
-<span>&#92;[ B_i(p_j) = &#92;{p_i : p_i > p_j&#92;} &#92;quad &#92;text{if } p_j &lt; c. &#92;]</span>
+<span>&#92;[ B&#95;i(p&#95;j) = &#92;{p&#95;i : p&#95;i > p&#95;j&#92;} &#92;quad &#92;text{if } p&#95;j &lt; c. &#92;]</span>
 
-### Case 2: <span>&#92;(p_j = c&#92;)</span>
+### Case 2: <span>&#92;(p&#95;j = c&#92;)</span>
 
 Now suppose the rival prices exactly at marginal cost.
 
-- Setting <span>&#92;(p_i &lt; c&#92;)</span> means selling below cost, earning negative profit.
-- Setting <span>&#92;(p_i = c&#92;)</span> means splitting demand but earning zero margin per unit — profit is zero.
-- Setting <span>&#92;(p_i > c&#92;)</span> means being undercut, selling nothing — profit is again zero.
+- Setting <span>&#92;(p&#95;i &lt; c&#92;)</span> means selling below cost, earning negative profit.
+- Setting <span>&#92;(p&#95;i = c&#92;)</span> means splitting demand but earning zero margin per unit — profit is zero.
+- Setting <span>&#92;(p&#95;i > c&#92;)</span> means being undercut, selling nothing — profit is again zero.
 
-Both <span>&#92;(p_i = c&#92;)</span> and any <span>&#92;(p_i > c&#92;)</span> yield zero profit, which is the best achievable. The best response set is therefore all prices at or above <span>&#92;(c&#92;)</span>:
+Both <span>&#92;(p&#95;i = c&#92;)</span> and any <span>&#92;(p&#95;i > c&#92;)</span> yield zero profit, which is the best achievable. The best response set is therefore all prices at or above <span>&#92;(c&#92;)</span>:
 
-<span>&#92;[ B_i(p_j) = &#92;{p_i : p_i &#92;geq c&#92;} &#92;quad &#92;text{if } p_j = c. &#92;]</span>
+<span>&#92;[ B&#95;i(p&#95;j) = &#92;{p&#95;i : p&#95;i &#92;geq c&#92;} &#92;quad &#92;text{if } p&#95;j = c. &#92;]</span>
 
-### Case 3: <span>&#92;(c &lt; p_j &#92;leq p^M&#92;)</span>
+### Case 3: <span>&#92;(c &lt; p&#95;j &#92;leq p^M&#92;)</span>
 
-This is the most subtle case. The rival's price is above cost but no higher than the monopoly price. Any <span>&#92;(p_i&#92;)</span> in the open interval <span>&#92;((c, p_j)&#92;)</span> earns firm <span>&#92;(i&#92;)</span> a strictly positive profit — it captures the whole market at a price above cost. Moreover, this profit is increasing in <span>&#92;(p_i&#92;)</span> as <span>&#92;(p_i&#92;)</span> rises toward <span>&#92;(p_j&#92;)</span> (since we are still below the monopoly price and the per-unit margin is rising). At exactly <span>&#92;(p_i = p_j&#92;)</span> profit drops discontinuously: firm <span>&#92;(i&#92;)</span> now splits demand with the rival and earns only half the profit it would have earned by charging infinitesimally less. For any <span>&#92;(p_i > p_j&#92;)</span> profit collapses to zero.
+This is the most subtle case. The rival's price is above cost but no higher than the monopoly price. Any <span>&#92;(p&#95;i&#92;)</span> in the open interval <span>&#92;((c, p&#95;j)&#92;)</span> earns firm <span>&#92;(i&#92;)</span> a strictly positive profit — it captures the whole market at a price above cost. Moreover, this profit is increasing in <span>&#92;(p&#95;i&#92;)</span> as <span>&#92;(p&#95;i&#92;)</span> rises toward <span>&#92;(p&#95;j&#92;)</span> (since we are still below the monopoly price and the per-unit margin is rising). At exactly <span>&#92;(p&#95;i = p&#95;j&#92;)</span> profit drops discontinuously: firm <span>&#92;(i&#92;)</span> now splits demand with the rival and earns only half the profit it would have earned by charging infinitesimally less. For any <span>&#92;(p&#95;i > p&#95;j&#92;)</span> profit collapses to zero.
 
-The picture is of a profit function that climbs steadily as <span>&#92;(p_i&#92;)</span> approaches <span>&#92;(p_j&#92;)</span> from below, then drops sharply at <span>&#92;(p_j&#92;)</span>, then remains at zero. Firm <span>&#92;(i&#92;)</span> wants to get as close to <span>&#92;(p_j&#92;)</span> as possible without actually reaching it — but because prices are drawn from a continuum, there is no such closest point. For any candidate price <span>&#92;(p_j - &#92;varepsilon&#92;)</span> one can always find <span>&#92;(p_j - &#92;varepsilon/2&#92;)</span>, which is even better. Consequently, **the best response set is empty**:
+The picture is of a profit function that climbs steadily as <span>&#92;(p&#95;i&#92;)</span> approaches <span>&#92;(p&#95;j&#92;)</span> from below, then drops sharply at <span>&#92;(p&#95;j&#92;)</span>, then remains at zero. Firm <span>&#92;(i&#92;)</span> wants to get as close to <span>&#92;(p&#95;j&#92;)</span> as possible without actually reaching it — but because prices are drawn from a continuum, there is no such closest point. For any candidate price <span>&#92;(p&#95;j - &#92;varepsilon&#92;)</span> one can always find <span>&#92;(p&#95;j - &#92;varepsilon/2&#92;)</span>, which is even better. Consequently, **the best response set is empty**:
 
-<span>&#92;[ B_i(p_j) = &#92;emptyset &#92;quad &#92;text{if } c &lt; p_j &#92;leq p^M. &#92;]</span>
+<span>&#92;[ B&#95;i(p&#95;j) = &#92;emptyset &#92;quad &#92;text{if } c &lt; p&#95;j &#92;leq p^M. &#92;]</span>
 
-This empty best response would not arise if prices were restricted to a discrete grid (say, whole cents). In that discrete setting the best response would simply be to charge one cent below <span>&#92;(p_j&#92;)</span>. The textbook exercise 67.2 asks you to work through that case explicitly.
+This empty best response would not arise if prices were restricted to a discrete grid (say, whole cents). In that discrete setting the best response would simply be to charge one cent below <span>&#92;(p&#95;j&#92;)</span>. The textbook exercise 67.2 asks you to work through that case explicitly.
 
-### Case 4: <span>&#92;(p_j > p^M&#92;)</span>
+### Case 4: <span>&#92;(p&#95;j > p^M&#92;)</span>
 
 If the rival prices strictly above the monopoly price it has effectively removed itself from competition. Consumers will never buy from a firm charging above <span>&#92;(p^M&#92;)</span> when firm <span>&#92;(i&#92;)</span> can do better. From firm <span>&#92;(i&#92;)</span>'s perspective it is as though there is no rival at all. The profit-maximising response is simply to act as a monopolist and charge <span>&#92;(p^M&#92;)</span>:
 
-<span>&#92;[ B_i(p_j) = &#92;{p^M&#92;} &#92;quad &#92;text{if } p_j > p^M. &#92;]</span>
+<span>&#92;[ B&#95;i(p&#95;j) = &#92;{p^M&#92;} &#92;quad &#92;text{if } p&#95;j > p^M. &#92;]</span>
 
 ### Summary of the Best Response Function
 
 Combining the four cases:
 
-<span>&#92;[ B_i(p_j) = &#92;begin{cases} &#92;{p_i : p_i > p_j&#92;} &amp; &#92;text{if } p_j &lt; c &#92;&#92; &#92;{p_i : p_i &#92;geq c&#92;} &amp; &#92;text{if } p_j = c &#92;&#92; &#92;emptyset &amp; &#92;text{if } c &lt; p_j &#92;leq p^M &#92;&#92; &#92;{p^M&#92;} &amp; &#92;text{if } p_j > p^M. &#92;end{cases} &#92;]</span>
+<span>&#92;[ B&#95;i(p&#95;j) = &#92;begin{cases} &#92;{p&#95;i : p&#95;i > p&#95;j&#92;} &amp; &#92;text{if } p&#95;j &lt; c &#92;&#92; &#92;{p&#95;i : p&#95;i &#92;geq c&#92;} &amp; &#92;text{if } p&#95;j = c &#92;&#92; &#92;emptyset &amp; &#92;text{if } c &lt; p&#95;j &#92;leq p^M &#92;&#92; &#92;{p^M&#92;} &amp; &#92;text{if } p&#95;j > p^M. &#92;end{cases} &#92;]</span>
 
-Notice two distinctive features of this best response correspondence. For some values of <span>&#92;(p_j&#92;)</span> (cases 1 and 2) there are multiple best responses; for others (case 3) there is no best response at all. This is a set-valued, and in places empty-valued, correspondence — qualitatively different from the smooth best response functions encountered in Cournot.
+Notice two distinctive features of this best response correspondence. For some values of <span>&#92;(p&#95;j&#92;)</span> (cases 1 and 2) there are multiple best responses; for others (case 3) there is no best response at all. This is a set-valued, and in places empty-valued, correspondence — qualitatively different from the smooth best response functions encountered in Cournot.
 
 ## Finding the Nash Equilibrium via Best Response Functions
 
-A Nash equilibrium is a pair of prices <span>&#92;((p_1^*, p_2^*)&#92;)</span> such that each price is in the best response set to the other: <span>&#92;(p_1^* &#92;in B_1(p_2^*)&#92;)</span> and <span>&#92;(p_2^* &#92;in B_2(p_1^*)&#92;)</span>. Graphically, a Nash equilibrium lies at the intersection of the graphs of the two best response correspondences.
+A Nash equilibrium is a pair of prices <span>&#92;((p&#95;1^&#42;, p&#95;2^&#42;)&#92;)</span> such that each price is in the best response set to the other: <span>&#92;(p&#95;1^&#42; &#92;in B&#95;1(p&#95;2^&#42;)&#92;)</span> and <span>&#92;(p&#95;2^&#42; &#92;in B&#95;2(p&#95;1^&#42;)&#92;)</span>. Graphically, a Nash equilibrium lies at the intersection of the graphs of the two best response correspondences.
 
-When we superimpose the best response graph of firm 1 (plotting the best responses to each value of <span>&#92;(p_2&#92;)</span>) onto that of firm 2, the only point at which they intersect is the single point <span>&#92;((c, c)&#92;)</span>. For <span>&#92;(p_j&#92;)</span> below <span>&#92;(c&#92;)</span>, best responses exclude the 45-degree line (the equal-price diagonal); for <span>&#92;(p_j&#92;)</span> strictly between <span>&#92;(c&#92;)</span> and <span>&#92;(p^M&#92;)</span>, no best response exists at all. The graphs come together at exactly one point: both firms charging <span>&#92;(c&#92;)</span>.
+When we superimpose the best response graph of firm 1 (plotting the best responses to each value of <span>&#92;(p&#95;2&#92;)</span>) onto that of firm 2, the only point at which they intersect is the single point <span>&#92;((c, c)&#92;)</span>. For <span>&#92;(p&#95;j&#92;)</span> below <span>&#92;(c&#92;)</span>, best responses exclude the 45-degree line (the equal-price diagonal); for <span>&#92;(p&#95;j&#92;)</span> strictly between <span>&#92;(c&#92;)</span> and <span>&#92;(p^M&#92;)</span>, no best response exists at all. The graphs come together at exactly one point: both firms charging <span>&#92;(c&#92;)</span>.
 
 The **unique Nash equilibrium** of the Bertrand duopoly game is therefore:
 
-<span>&#92;[ (p_1^*, p_2^*) = (c, c). &#92;]</span>
+<span>&#92;[ (p&#95;1^&#42;, p&#95;2^&#42;) = (c, c). &#92;]</span>
 
 ## Verification by Profitable Deviation
 
@@ -714,13 +714,13 @@ Neither firm can do strictly better by changing its price unilaterally, confirmi
 
 ### Step 2: No Other Price Profile Is a Nash Equilibrium
 
-Every possible price profile <span>&#92;((p_1, p_2) &#92;neq (c, c)&#92;)</span> falls into one of three exhaustive cases.
+Every possible price profile <span>&#92;((p&#95;1, p&#95;2) &#92;neq (c, c)&#92;)</span> falls into one of three exhaustive cases.
 
-**Case A: At least one firm prices below cost.** If <span>&#92;(p_i &lt; c&#92;)</span> for some <span>&#92;(i&#92;)</span>, that firm earns negative profit (it either has the lowest price and sells at a loss, or ties for the lowest price and sells at a loss on its share). That firm can raise its price to <span>&#92;(c&#92;)</span> and guarantee zero profit — a strictly profitable deviation. So no such profile is a Nash equilibrium.
+**Case A: At least one firm prices below cost.** If <span>&#92;(p&#95;i &lt; c&#92;)</span> for some <span>&#92;(i&#92;)</span>, that firm earns negative profit (it either has the lowest price and sells at a loss, or ties for the lowest price and sells at a loss on its share). That firm can raise its price to <span>&#92;(c&#92;)</span> and guarantee zero profit — a strictly profitable deviation. So no such profile is a Nash equilibrium.
 
-**Case B: <span>&#92;(p_i = c&#92;)</span> and <span>&#92;(p_j > c&#92;)</span>.** Firm <span>&#92;(i&#92;)</span> is currently charging cost and earning zero profit. But if it raises its price slightly — to any value strictly between <span>&#92;(c&#92;)</span> and <span>&#92;(p_j&#92;)</span> — it still has the lower price, captures the entire market, and now earns a strictly positive margin on every unit. That is a profitable deviation, so this profile is not a Nash equilibrium.
+**Case B: <span>&#92;(p&#95;i = c&#92;)</span> and <span>&#92;(p&#95;j > c&#92;)</span>.** Firm <span>&#92;(i&#92;)</span> is currently charging cost and earning zero profit. But if it raises its price slightly — to any value strictly between <span>&#92;(c&#92;)</span> and <span>&#92;(p&#95;j&#92;)</span> — it still has the lower price, captures the entire market, and now earns a strictly positive margin on every unit. That is a profitable deviation, so this profile is not a Nash equilibrium.
 
-**Case C: Both firms price strictly above cost.** Without loss of generality suppose <span>&#92;(p_i &#92;geq p_j&#92;)</span>. Firm <span>&#92;(i&#92;)</span> is either tied for the high price or is the outright high-price firm; in either case it can do better. If <span>&#92;(p_j &lt; &#92;alpha&#92;)</span>, firm <span>&#92;(i&#92;)</span> can undercut by pricing just below <span>&#92;(p_j&#92;)</span>, capturing the whole market at a price well above cost and earning a large positive profit. If <span>&#92;(p_j &#92;geq &#92;alpha&#92;)</span>, demand is zero anyway, and firm <span>&#92;(i&#92;)</span> can profitably deviate to <span>&#92;(p^M&#92;)</span> which generates strictly positive profit. In either sub-case, a profitable deviation exists.
+**Case C: Both firms price strictly above cost.** Without loss of generality suppose <span>&#92;(p&#95;i &#92;geq p&#95;j&#92;)</span>. Firm <span>&#92;(i&#92;)</span> is either tied for the high price or is the outright high-price firm; in either case it can do better. If <span>&#92;(p&#95;j &lt; &#92;alpha&#92;)</span>, firm <span>&#92;(i&#92;)</span> can undercut by pricing just below <span>&#92;(p&#95;j&#92;)</span>, capturing the whole market at a price well above cost and earning a large positive profit. If <span>&#92;(p&#95;j &#92;geq &#92;alpha&#92;)</span>, demand is zero anyway, and firm <span>&#92;(i&#92;)</span> can profitably deviate to <span>&#92;(p^M&#92;)</span> which generates strictly positive profit. In either sub-case, a profitable deviation exists.
 
 Since every profile other than <span>&#92;((c, c)&#92;)</span> admits a profitable deviation for at least one firm, <span>&#92;((c, c)&#92;)</span> is the **unique Nash equilibrium** of the Bertrand game.
 
@@ -790,7 +790,7 @@ There is a **continuum of voters**, each with a **favourite position** — the p
 
 Each voter's distaste for any candidate's position is measured by the **distance** between that position and her own favourite position. She votes for whichever candidate has chosen the position closest to hers. If two candidates are equidistant from her favourite position, she splits her vote equally between them.
 
-This rule for vote allocation means that when two candidates choose positions <span>&#92;( x_1 &#92;)</span> and <span>&#92;( x_2 &#92;)</span>, with <span>&#92;( x_1 &lt; x_2 &#92;)</span>, every voter whose favourite position lies to the left of the midpoint <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;)</span> votes for candidate 1, and every voter whose favourite position lies to the right of that midpoint votes for candidate 2. With three candidates at positions <span>&#92;( x_1 &lt; x_2 &lt; x_3 &#92;)</span>, candidate 1 attracts voters to the left of <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;)</span>, candidate 2 attracts voters between <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x_2 + x_3) &#92;)</span>, and candidate 3 attracts voters to the right of <span>&#92;( &#92;frac{1}{2}(x_2 + x_3) &#92;)</span>.
+This rule for vote allocation means that when two candidates choose positions <span>&#92;( x&#95;1 &#92;)</span> and <span>&#92;( x&#95;2 &#92;)</span>, with <span>&#92;( x&#95;1 &lt; x&#95;2 &#92;)</span>, every voter whose favourite position lies to the left of the midpoint <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;)</span> votes for candidate 1, and every voter whose favourite position lies to the right of that midpoint votes for candidate 2. With three candidates at positions <span>&#92;( x&#95;1 &lt; x&#95;2 &lt; x&#95;3 &#92;)</span>, candidate 1 attracts voters to the left of <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;)</span>, candidate 2 attracts voters between <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x&#95;2 + x&#95;3) &#92;)</span>, and candidate 3 attracts voters to the right of <span>&#92;( &#92;frac{1}{2}(x&#95;2 + x&#95;3) &#92;)</span>.
 
 ### The Median Favourite Position
 
@@ -806,39 +806,39 @@ With the model formally defined, we now solve for the Nash equilibrium in the ca
 
 ### Method 1: Best Response Functions
 
-To find candidate 1's best response function, we fix candidate 2's position <span>&#92;( x_2 &#92;)</span> and ask what position maximizes candidate 1's payoff. There are three cases based on where <span>&#92;( x_2 &#92;)</span> falls relative to the median <span>&#92;( m &#92;)</span>.
+To find candidate 1's best response function, we fix candidate 2's position <span>&#92;( x&#95;2 &#92;)</span> and ask what position maximizes candidate 1's payoff. There are three cases based on where <span>&#92;( x&#95;2 &#92;)</span> falls relative to the median <span>&#92;( m &#92;)</span>.
 
-**Case 1: <span>&#92;( x_2 &lt; m &#92;)</span>.** Suppose candidate 2 has positioned herself strictly to the left of the median. If candidate 1 also positions to the left of <span>&#92;( x_2 &#92;)</span>, then candidate 2 attracts all voters to her right — a set that, since <span>&#92;( x_2 &lt; m &#92;)</span>, contains more than 50% of the electorate. Candidate 1 loses. On the other hand, if candidate 1 moves to the right of <span>&#92;( x_2 &#92;)</span>, she begins winning votes. She wins as long as the dividing midpoint <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;)</span> lies to the left of <span>&#92;( m &#92;)</span>, which means that candidate 1 holds a majority. The constraint for candidate 1 to win is:
+**Case 1: <span>&#92;( x&#95;2 &lt; m &#92;)</span>.** Suppose candidate 2 has positioned herself strictly to the left of the median. If candidate 1 also positions to the left of <span>&#92;( x&#95;2 &#92;)</span>, then candidate 2 attracts all voters to her right — a set that, since <span>&#92;( x&#95;2 &lt; m &#92;)</span>, contains more than 50% of the electorate. Candidate 1 loses. On the other hand, if candidate 1 moves to the right of <span>&#92;( x&#95;2 &#92;)</span>, she begins winning votes. She wins as long as the dividing midpoint <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;)</span> lies to the left of <span>&#92;( m &#92;)</span>, which means that candidate 1 holds a majority. The constraint for candidate 1 to win is:
 
-<span>&#92;[ &#92;frac{1}{2}(x_1 + x_2) &lt; m &#92;]</span>
+<span>&#92;[ &#92;frac{1}{2}(x&#95;1 + x&#95;2) &lt; m &#92;]</span>
 
-Rearranging, this requires <span>&#92;( x_1 &lt; 2m - x_2 &#92;)</span>. The point <span>&#92;( 2m - x_2 &#92;)</span> is the mirror image of <span>&#92;( x_2 &#92;)</span> reflected through <span>&#92;( m &#92;)</span>. Candidate 1's best response is therefore the open interval of all positions strictly between <span>&#92;( x_2 &#92;)</span> and <span>&#92;( 2m - x_2 &#92;)</span>:
+Rearranging, this requires <span>&#92;( x&#95;1 &lt; 2m - x&#95;2 &#92;)</span>. The point <span>&#92;( 2m - x&#95;2 &#92;)</span> is the mirror image of <span>&#92;( x&#95;2 &#92;)</span> reflected through <span>&#92;( m &#92;)</span>. Candidate 1's best response is therefore the open interval of all positions strictly between <span>&#92;( x&#95;2 &#92;)</span> and <span>&#92;( 2m - x&#95;2 &#92;)</span>:
 
-<span>&#92;[ B_1(x_2) = &#92;{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 &#92;} &#92;quad &#92;text{if } x_2 &lt; m &#92;]</span>
+<span>&#92;[ B&#95;1(x&#95;2) = &#92;{ x&#95;1 : x&#95;2 &lt; x&#95;1 &lt; 2m - x&#95;2 &#92;} &#92;quad &#92;text{if } x&#95;2 &lt; m &#92;]</span>
 
 Any position in this interval secures a win; any position outside it results in a loss or a tie.
 
-**Case 2: <span>&#92;( x_2 &gt; m &#92;)</span>.** This case is perfectly symmetric. Candidate 2 is now to the right of the median, so any position to the right of <span>&#92;( x_2 &#92;)</span> causes candidate 1 to lose. For candidate 1 to win, she must be to the left of <span>&#92;( x_2 &#92;)</span>, and the midpoint <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;)</span> must lie to the right of <span>&#92;( m &#92;)</span>, which requires <span>&#92;( x_1 &gt; 2m - x_2 &#92;)</span>. The best response is:
+**Case 2: <span>&#92;( x&#95;2 &gt; m &#92;)</span>.** This case is perfectly symmetric. Candidate 2 is now to the right of the median, so any position to the right of <span>&#92;( x&#95;2 &#92;)</span> causes candidate 1 to lose. For candidate 1 to win, she must be to the left of <span>&#92;( x&#95;2 &#92;)</span>, and the midpoint <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;)</span> must lie to the right of <span>&#92;( m &#92;)</span>, which requires <span>&#92;( x&#95;1 &gt; 2m - x&#95;2 &#92;)</span>. The best response is:
 
-<span>&#92;[ B_1(x_2) = &#92;{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 &#92;} &#92;quad &#92;text{if } x_2 &gt; m &#92;]</span>
+<span>&#92;[ B&#95;1(x&#95;2) = &#92;{ x&#95;1 : 2m - x&#95;2 &lt; x&#95;1 &lt; x&#95;2 &#92;} &#92;quad &#92;text{if } x&#95;2 &gt; m &#92;]</span>
 
-**Case 3: <span>&#92;( x_2 = m &#92;)</span>.** When candidate 2 sits exactly at the median, any deviation by candidate 1 to either side results in a loss. If candidate 1 moves to the right of <span>&#92;( m &#92;)</span>, the midpoint between the two positions lies to the right of <span>&#92;( m &#92;)</span>, meaning candidate 2 captures more than half the electorate. The same logic applies if candidate 1 moves to the left. The only option that does not result in a loss is to match candidate 2 exactly at <span>&#92;( m &#92;)</span>, which produces a tie. Since a tie is strictly better than a loss:
+**Case 3: <span>&#92;( x&#95;2 = m &#92;)</span>.** When candidate 2 sits exactly at the median, any deviation by candidate 1 to either side results in a loss. If candidate 1 moves to the right of <span>&#92;( m &#92;)</span>, the midpoint between the two positions lies to the right of <span>&#92;( m &#92;)</span>, meaning candidate 2 captures more than half the electorate. The same logic applies if candidate 1 moves to the left. The only option that does not result in a loss is to match candidate 2 exactly at <span>&#92;( m &#92;)</span>, which produces a tie. Since a tie is strictly better than a loss:
 
-<span>&#92;[ B_1(x_2) = &#92;{ m &#92;} &#92;quad &#92;text{if } x_2 = m &#92;]</span>
+<span>&#92;[ B&#95;1(x&#95;2) = &#92;{ m &#92;} &#92;quad &#92;text{if } x&#95;2 = m &#92;]</span>
 
 Putting the three cases together, candidate 1's complete best response function is:
 
-<span>&#92;[ B_1(x_2) = &#92;begin{cases} &#92;{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 &#92;} &amp;amp; &#92;text{if } x_2 &lt; m &#92;&#92; &#92;{ m &#92;} &amp;amp; &#92;text{if } x_2 = m &#92;&#92; &#92;{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 &#92;} &amp;amp; &#92;text{if } x_2 &gt; m &#92;end{cases} &#92;]</span>
+<span>&#92;[ B&#95;1(x&#95;2) = &#92;begin{cases} &#92;{ x&#95;1 : x&#95;2 &lt; x&#95;1 &lt; 2m - x&#95;2 &#92;} &amp;amp; &#92;text{if } x&#95;2 &lt; m &#92;&#92; &#92;{ m &#92;} &amp;amp; &#92;text{if } x&#95;2 = m &#92;&#92; &#92;{ x&#95;1 : 2m - x&#95;2 &lt; x&#95;1 &lt; x&#95;2 &#92;} &amp;amp; &#92;text{if } x&#95;2 &gt; m &#92;end{cases} &#92;]</span>
 
-Candidate 2 faces entirely symmetric incentives and has an identical best response function with the roles of <span>&#92;( x_1 &#92;)</span> and <span>&#92;( x_2 &#92;)</span> exchanged.
+Candidate 2 faces entirely symmetric incentives and has an identical best response function with the roles of <span>&#92;( x&#95;1 &#92;)</span> and <span>&#92;( x&#95;2 &#92;)</span> exchanged.
 
 ### Finding the Nash Equilibrium from Best Response Functions
 
-Graphing the two best response functions reveals two triangular regions in the <span>&#92;( (x_1, x_2) &#92;)</span> plane — one for <span>&#92;( x_2 &lt; m &#92;)</span> and one for <span>&#92;( x_2 &gt; m &#92;)</span> — along with the single point <span>&#92;( (m, m) &#92;)</span>. Crucially, because the best response sets are open (the boundary positions are excluded), the two triangular regions share no interior overlap with one another. The only point that lies in both players' best response sets simultaneously is the single point <span>&#92;( (m, m) &#92;)</span>.
+Graphing the two best response functions reveals two triangular regions in the <span>&#92;( (x&#95;1, x&#95;2) &#92;)</span> plane — one for <span>&#92;( x&#95;2 &lt; m &#92;)</span> and one for <span>&#92;( x&#95;2 &gt; m &#92;)</span> — along with the single point <span>&#92;( (m, m) &#92;)</span>. Crucially, because the best response sets are open (the boundary positions are excluded), the two triangular regions share no interior overlap with one another. The only point that lies in both players' best response sets simultaneously is the single point <span>&#92;( (m, m) &#92;)</span>.
 
 Superimposing the two best response functions, the game has a **unique Nash equilibrium** in which both candidates choose the voters' median position:
 
-<span>&#92;[ (x_1^*, x_2^*) = (m, m) &#92;]</span>
+<span>&#92;[ (x&#95;1^&#42;, x&#95;2^&#42;) = (m, m) &#92;]</span>
 
 ### Method 2: Direct Enumeration of Cases
 
@@ -846,13 +846,13 @@ An alternative — and in this instance, somewhat more transparent — approach 
 
 **Part 1: <span>&#92;( (m, m) &#92;)</span> is a Nash equilibrium.** When both candidates choose <span>&#92;( m &#92;)</span>, the outcome is a tie, with each candidate receiving 50% of the vote. If either candidate deviates by moving to the left of <span>&#92;( m &#92;)</span>, the midpoint between the two positions shifts left of <span>&#92;( m &#92;)</span>, and the candidate who remains at <span>&#92;( m &#92;)</span> captures more than half the electorate — the deviating candidate loses. By the symmetric argument, a deviation to the right of <span>&#92;( m &#92;)</span> also results in a loss. Since no profitable deviation exists, <span>&#92;( (m, m) &#92;)</span> is a Nash equilibrium.
 
-**Part 2: No other action profile is a Nash equilibrium.** Consider any profile <span>&#92;( (x_1, x_2) &#92;neq (m, m) &#92;)</span>. There are three exhaustive sub-cases.
+**Part 2: No other action profile is a Nash equilibrium.** Consider any profile <span>&#92;( (x&#95;1, x&#95;2) &#92;neq (m, m) &#92;)</span>. There are three exhaustive sub-cases.
 
-*Sub-case (a): <span>&#92;( x_1 = x_2 &#92;neq m &#92;)</span>.* Both candidates have chosen the same position, but not the median. The current outcome is a tie. Either candidate can deviate to <span>&#92;( m &#92;)</span>; after such a deviation the midpoint between <span>&#92;( m &#92;)</span> and the unchanged candidate's position is strictly between <span>&#92;( m &#92;)</span> and that position, so the deviating candidate captures more than 50% of the vote and wins outright. Winning is strictly better than tying. Therefore, this profile is not a Nash equilibrium.
+*Sub-case (a): <span>&#92;( x&#95;1 = x&#95;2 &#92;neq m &#92;)</span>.* Both candidates have chosen the same position, but not the median. The current outcome is a tie. Either candidate can deviate to <span>&#92;( m &#92;)</span>; after such a deviation the midpoint between <span>&#92;( m &#92;)</span> and the unchanged candidate's position is strictly between <span>&#92;( m &#92;)</span> and that position, so the deviating candidate captures more than 50% of the vote and wins outright. Winning is strictly better than tying. Therefore, this profile is not a Nash equilibrium.
 
-*Sub-case (b): <span>&#92;( x_1 &#92;neq x_2 &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) &#92;neq m &#92;)</span>.* The candidates are at different positions and the midpoint between them is not at the median. One candidate is therefore winning outright and the other is losing. The losing candidate can deviate to <span>&#92;( m &#92;)</span> and at minimum tie — which is strictly better than losing. This is a profitable deviation, so the profile is not a Nash equilibrium.
+*Sub-case (b): <span>&#92;( x&#95;1 &#92;neq x&#95;2 &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) &#92;neq m &#92;)</span>.* The candidates are at different positions and the midpoint between them is not at the median. One candidate is therefore winning outright and the other is losing. The losing candidate can deviate to <span>&#92;( m &#92;)</span> and at minimum tie — which is strictly better than losing. This is a profitable deviation, so the profile is not a Nash equilibrium.
 
-*Sub-case (c): <span>&#92;( x_1 &#92;neq x_2 &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x_1 + x_2) = m &#92;)</span>.* The candidates are at different positions but are symmetrically placed around the median, so they are currently tied. Either candidate can deviate to <span>&#92;( m &#92;)</span>; the deviating candidate then wins outright rather than tying, which is a profitable deviation. Therefore, this profile is also not a Nash equilibrium.
+*Sub-case (c): <span>&#92;( x&#95;1 &#92;neq x&#95;2 &#92;)</span> and <span>&#92;( &#92;frac{1}{2}(x&#95;1 + x&#95;2) = m &#92;)</span>.* The candidates are at different positions but are symmetrically placed around the median, so they are currently tied. Either candidate can deviate to <span>&#92;( m &#92;)</span>; the deviating candidate then wins outright rather than tying, which is a profitable deviation. Therefore, this profile is also not a Nash equilibrium.
 
 Since all three sub-cases exhaust the space of profiles other than <span>&#92;( (m, m) &#92;)</span>, and each contains a profitable deviation for at least one player, we conclude that <span>&#92;( (m, m) &#92;)</span> is the **unique Nash equilibrium** of Hotelling's model.
 
@@ -920,39 +920,39 @@ Different auction formats have different implications for both sides of the tran
 
 Throughout our formal analysis we adopt two working assumptions. First, every bidder knows their own **valuation** of the object — the maximum they would willingly pay to obtain it. Second, under the **private-value** model, every bidder also knows every other bidder's valuation exactly, giving the game perfect information. (The assumption of perfect information is relaxed in section 9.6 of the textbook, which introduces private and common value uncertainty.)
 
-We denote the number of bidders by <span>&#92;( n &#92;)</span> where <span>&#92;( n &#92;geq 2 &#92;)</span>, and we write <span>&#92;( v_i &#92;)</span> for the value player <span>&#92;( i &#92;)</span> attaches to the object. We label players so that valuations are strictly ordered:
+We denote the number of bidders by <span>&#92;( n &#92;)</span> where <span>&#92;( n &#92;geq 2 &#92;)</span>, and we write <span>&#92;( v&#95;i &#92;)</span> for the value player <span>&#92;( i &#92;)</span> attaches to the object. We label players so that valuations are strictly ordered:
 
-<span>&#92;[ v_1 > v_2 > v_3 > &#92;cdots > v_n > 0 &#92;]</span>
+<span>&#92;[ v&#95;1 > v&#95;2 > v&#95;3 > &#92;cdots > v&#95;n > 0 &#92;]</span>
 
-That is, player 1 is whoever values the object most, player 2 values it second most, and so on. If player <span>&#92;( i &#92;)</span> wins the object at price <span>&#92;( p &#92;)</span>, their payoff is <span>&#92;( v_i - p &#92;)</span>; if they lose, their payoff is zero. In the event of a tied highest bid, we break the tie in favor of the player with the smallest index — equivalently, the tied bidder who values the object most.
+That is, player 1 is whoever values the object most, player 2 values it second most, and so on. If player <span>&#92;( i &#92;)</span> wins the object at price <span>&#92;( p &#92;)</span>, their payoff is <span>&#92;( v&#95;i - p &#92;)</span>; if they lose, their payoff is zero. In the event of a tied highest bid, we break the tie in favor of the player with the smallest index — equivalently, the tied bidder who values the object most.
 
 ## The Second-Price Sealed-Bid Auction
 
 ### Formalizing the Game
 
-The second-price sealed-bid auction is a strategic game in which the **players** are the <span>&#92;( n &#92;)</span> bidders; the **actions** for each player are the set of non-negative real numbers (any bid is admissible); and **preferences** are determined as follows. Write <span>&#92;( b_i &#92;)</span> for player <span>&#92;( i &#92;)</span>'s bid and <span>&#92;( &#92;bar{b} &#92;)</span> for the highest bid submitted by any player other than <span>&#92;( i &#92;)</span>. Player <span>&#92;( i &#92;)</span> wins if either <span>&#92;( b_i > &#92;bar{b} &#92;)</span>, or <span>&#92;( b_i = &#92;bar{b} &#92;)</span> and player <span>&#92;( i &#92;)</span> has the smallest index among all tied bidders. The winner's payoff is <span>&#92;( v_i - &#92;bar{b} &#92;)</span>; every other player receives zero.
+The second-price sealed-bid auction is a strategic game in which the **players** are the <span>&#92;( n &#92;)</span> bidders; the **actions** for each player are the set of non-negative real numbers (any bid is admissible); and **preferences** are determined as follows. Write <span>&#92;( b&#95;i &#92;)</span> for player <span>&#92;( i &#92;)</span>'s bid and <span>&#92;( &#92;bar{b} &#92;)</span> for the highest bid submitted by any player other than <span>&#92;( i &#92;)</span>. Player <span>&#92;( i &#92;)</span> wins if either <span>&#92;( b&#95;i > &#92;bar{b} &#92;)</span>, or <span>&#92;( b&#95;i = &#92;bar{b} &#92;)</span> and player <span>&#92;( i &#92;)</span> has the smallest index among all tied bidders. The winner's payoff is <span>&#92;( v&#95;i - &#92;bar{b} &#92;)</span>; every other player receives zero.
 
 ### Nash Equilibria of the Second-Price Auction
 
-This game has many Nash Equilibria. A natural candidate is the profile where every player bids their own valuation: <span>&#92;( (b_1, &#92;ldots, b_n) = (v_1, &#92;ldots, v_n) &#92;)</span>. The outcome is that player 1 wins the object and pays <span>&#92;( v_2 &#92;)</span>, earning a payoff of <span>&#92;( v_1 - v_2 > 0 &#92;)</span>. Every other player earns zero.
+This game has many Nash Equilibria. A natural candidate is the profile where every player bids their own valuation: <span>&#92;( (b&#95;1, &#92;ldots, b&#95;n) = (v&#95;1, &#92;ldots, v&#95;n) &#92;)</span>. The outcome is that player 1 wins the object and pays <span>&#92;( v&#95;2 &#92;)</span>, earning a payoff of <span>&#92;( v&#95;1 - v&#95;2 > 0 &#92;)</span>. Every other player earns zero.
 
-Is this a Nash Equilibrium? We verify that no player can gain by deviating. Player 1 is currently winning with a positive payoff. If player 1 changes their bid to any amount at or above <span>&#92;( v_2 &#92;)</span>, the outcome is unchanged — they still win and still pay <span>&#92;( v_2 &#92;)</span>. If player 1 lowers their bid below <span>&#92;( v_2 &#92;)</span>, they lose and receive zero, which is strictly worse. So player 1 has no profitable deviation. For any other player <span>&#92;( j &#92;neq 1 &#92;)</span>: lowering or maintaining their bid at most <span>&#92;( v_1 &#92;)</span> leaves the outcome unchanged (player 1 still wins). If player <span>&#92;( j &#92;)</span> raises their bid above <span>&#92;( v_1 &#92;)</span>, they win, but the second-highest bid is then <span>&#92;( v_1 &#92;)</span>, and since <span>&#92;( v_j < v_1 &#92;)</span> for <span>&#92;( j &#92;neq 1 &#92;)</span>, their payoff would be <span>&#92;( v_j - v_1 < 0 &#92;)</span>. No profitable deviation exists, confirming this is a Nash Equilibrium.
+Is this a Nash Equilibrium? We verify that no player can gain by deviating. Player 1 is currently winning with a positive payoff. If player 1 changes their bid to any amount at or above <span>&#92;( v&#95;2 &#92;)</span>, the outcome is unchanged — they still win and still pay <span>&#92;( v&#95;2 &#92;)</span>. If player 1 lowers their bid below <span>&#92;( v&#95;2 &#92;)</span>, they lose and receive zero, which is strictly worse. So player 1 has no profitable deviation. For any other player <span>&#92;( j &#92;neq 1 &#92;)</span>: lowering or maintaining their bid at most <span>&#92;( v&#95;1 &#92;)</span> leaves the outcome unchanged (player 1 still wins). If player <span>&#92;( j &#92;)</span> raises their bid above <span>&#92;( v&#95;1 &#92;)</span>, they win, but the second-highest bid is then <span>&#92;( v&#95;1 &#92;)</span>, and since <span>&#92;( v_j < v_1 &#92;)</span> for <span>&#92;( j &#92;neq 1 &#92;)</span>, their payoff would be <span>&#92;( v_j - v_1 < 0 &#92;)</span>. No profitable deviation exists, confirming this is a Nash Equilibrium.
 
-Another Nash Equilibrium is <span>&#92;( (b_1, &#92;ldots, b_n) = (v_1, 0, &#92;ldots, 0) &#92;)</span>. Here player 1 bids their valuation and everyone else bids zero. Player 1 still wins, but the second-highest bid is zero, so player 1 pays nothing and earns <span>&#92;( v_1 &#92;)</span>. No player can profitably deviate: player 1's outcome is unchanged by any bid they submit (they always win against bids of zero, by the tie-breaking rule), and any other player who raises their bid above <span>&#92;( v_1 &#92;)</span> wins but earns a negative payoff <span>&#92;( v_j - v_1 < 0 &#92;)</span>.
+Another Nash Equilibrium is <span>&#92;( (b&#95;1, &#92;ldots, b&#95;n) = (v&#95;1, 0, &#92;ldots, 0) &#92;)</span>. Here player 1 bids their valuation and everyone else bids zero. Player 1 still wins, but the second-highest bid is zero, so player 1 pays nothing and earns <span>&#92;( v&#95;1 &#92;)</span>. No player can profitably deviate: player 1's outcome is unchanged by any bid they submit (they always win against bids of zero, by the tie-breaking rule), and any other player who raises their bid above <span>&#92;( v&#95;1 &#92;)</span> wins but earns a negative payoff <span>&#92;( v_j - v_1 < 0 &#92;)</span>.
 
-There is even a Nash Equilibrium where player 1 does **not** win. Consider <span>&#92;( (b_1, &#92;ldots, b_n) = (v_2, v_1, v_3, &#92;ldots, v_n) &#92;)</span>: player 2 bids <span>&#92;( v_1 &#92;)</span> and player 1 bids only <span>&#92;( v_2 &#92;)</span>. Player 2 wins but pays the second-highest bid, which is player 1's bid <span>&#92;( v_2 = b_1 &#92;)</span>, so player 2's payoff is <span>&#92;( v_2 - v_2 = 0 &#92;)</span>. Player 1 can raise their bid to <span>&#92;( v_1 &#92;)</span> or higher and win — but then the second price becomes <span>&#92;( v_1 &#92;)</span> and player 1 earns <span>&#92;( v_1 - v_1 = 0 &#92;)</span>, no better. Any other player who overbids above <span>&#92;( v_1 &#92;)</span> wins but earns a negative payoff. So this too is a Nash Equilibrium.
+There is even a Nash Equilibrium where player 1 does **not** win. Consider <span>&#92;( (b&#95;1, &#92;ldots, b&#95;n) = (v&#95;2, v&#95;1, v&#95;3, &#92;ldots, v&#95;n) &#92;)</span>: player 2 bids <span>&#92;( v&#95;1 &#92;)</span> and player 1 bids only <span>&#92;( v&#95;2 &#92;)</span>. Player 2 wins but pays the second-highest bid, which is player 1's bid <span>&#92;( v&#95;2 = b&#95;1 &#92;)</span>, so player 2's payoff is <span>&#92;( v&#95;2 - v&#95;2 = 0 &#92;)</span>. Player 1 can raise their bid to <span>&#92;( v&#95;1 &#92;)</span> or higher and win — but then the second price becomes <span>&#92;( v&#95;1 &#92;)</span> and player 1 earns <span>&#92;( v&#95;1 - v&#95;1 = 0 &#92;)</span>, no better. Any other player who overbids above <span>&#92;( v&#95;1 &#92;)</span> wins but earns a negative payoff. So this too is a Nash Equilibrium.
 
 ### Bidding Your Valuation Is a Dominant Strategy
 
-These examples reveal that the game has infinitely many Nash Equilibria, and some of them yield strange outcomes — player 1 losing, or everyone else bidding zero. The Nash Equilibrium concept alone does not select among them. What singles out the truthful equilibrium <span>&#92;( (v_1, &#92;ldots, v_n) &#92;)</span> is something stronger: **weak dominance**.
+These examples reveal that the game has infinitely many Nash Equilibria, and some of them yield strange outcomes — player 1 losing, or everyone else bidding zero. The Nash Equilibrium concept alone does not select among them. What singles out the truthful equilibrium <span>&#92;( (v&#95;1, &#92;ldots, v&#95;n) &#92;)</span> is something stronger: **weak dominance**.
 
-**Proposition.** In a second-price sealed-bid auction with perfect information, a player's bid equal to their valuation weakly dominates all other bids. That is, for any player <span>&#92;( i &#92;)</span> and any alternative bid <span>&#92;( b_i &#92;neq v_i &#92;)</span>, bidding <span>&#92;( v_i &#92;)</span> yields at least as high a payoff as <span>&#92;( b_i &#92;)</span> for every possible combination of other players' bids, and yields a strictly higher payoff for some combinations.
+**Proposition.** In a second-price sealed-bid auction with perfect information, a player's bid equal to their valuation weakly dominates all other bids. That is, for any player <span>&#92;( i &#92;)</span> and any alternative bid <span>&#92;( b&#95;i &#92;neq v&#95;i &#92;)</span>, bidding <span>&#92;( v&#95;i &#92;)</span> yields at least as high a payoff as <span>&#92;( b&#95;i &#92;)</span> for every possible combination of other players' bids, and yields a strictly higher payoff for some combinations.
 
-The intuition is clean. In a second-price auction, changing your bid affects whether you win or lose, but it does not change the price you pay if you win — that price is determined by someone else's bid. You want to win precisely when the highest of all other bids, <span>&#92;( &#92;bar{b} &#92;)</span>, is below your valuation <span>&#92;( v_i &#92;)</span> (winning is profitable), and you want to lose when <span>&#92;( &#92;bar{b} > v_i &#92;)</span> (winning would cost more than the object is worth to you). Bidding exactly <span>&#92;( v_i &#92;)</span> achieves this perfectly: you win whenever <span>&#92;( &#92;bar{b} < v_i &#92;)</span> and lose whenever <span>&#92;( &#92;bar{b} > v_i &#92;)</span>.
+The intuition is clean. In a second-price auction, changing your bid affects whether you win or lose, but it does not change the price you pay if you win — that price is determined by someone else's bid. You want to win precisely when the highest of all other bids, <span>&#92;( &#92;bar{b} &#92;)</span>, is below your valuation <span>&#92;( v&#95;i &#92;)</span> (winning is profitable), and you want to lose when <span>&#92;( &#92;bar{b} > v&#95;i &#92;)</span> (winning would cost more than the object is worth to you). Bidding exactly <span>&#92;( v&#95;i &#92;)</span> achieves this perfectly: you win whenever <span>&#92;( &#92;bar{b} < v_i &#92;)</span> and lose whenever <span>&#92;( &#92;bar{b} > v&#95;i &#92;)</span>.
 
-A bid <span>&#92;( b_i < v_i &#92;)</span> (underbidding) has no upside — it cannot reduce the price you pay when you win — but it has a specific downside: if <span>&#92;( b_i < &#92;bar{b} < v_i &#92;)</span>, you lose an auction you should have won at a price below your valuation. A bid <span>&#92;( b_i > v_i &#92;)</span> (overbidding) also has no upside over truthful bidding — if <span>&#92;( &#92;bar{b} < v_i &#92;)</span>, you win either way and pay the same price — but it has a specific downside: if <span>&#92;( v_i < &#92;bar{b} < b_i &#92;)</span>, you win at a price above your valuation and earn a negative payoff. In both cases, any departure from truthful bidding is weakly dominated.
+A bid <span>&#92;( b_i < v_i &#92;)</span> (underbidding) has no upside — it cannot reduce the price you pay when you win — but it has a specific downside: if <span>&#92;( b_i < &#92;bar{b} < v_i &#92;)</span>, you lose an auction you should have won at a price below your valuation. A bid <span>&#92;( b&#95;i > v&#95;i &#92;)</span> (overbidding) also has no upside over truthful bidding — if <span>&#92;( &#92;bar{b} < v_i &#92;)</span>, you win either way and pay the same price — but it has a specific downside: if <span>&#92;( v_i < &#92;bar{b} < b_i &#92;)</span>, you win at a price above your valuation and earn a negative payoff. In both cases, any departure from truthful bidding is weakly dominated.
 
-Because the dominant strategy for every player is to bid their valuation, the truthful Nash Equilibrium <span>&#92;( (v_1, &#92;ldots, v_n) &#92;)</span> is the only equilibrium in which no player uses a weakly dominated action. From the seller's perspective, this property is enormously useful: the bids submitted reveal every player's true valuation, providing perfect information about the demand side of the market. From the bidder's perspective, the strategy is trivially simple — just bid what the object is worth to you, and you are done.
+Because the dominant strategy for every player is to bid their valuation, the truthful Nash Equilibrium <span>&#92;( (v&#95;1, &#92;ldots, v&#95;n) &#92;)</span> is the only equilibrium in which no player uses a weakly dominated action. From the seller's perspective, this property is enormously useful: the bids submitted reveal every player's true valuation, providing perfect information about the demand side of the market. From the bidder's perspective, the strategy is trivially simple — just bid what the object is worth to you, and you are done.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/b70MWFITsd4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 *An English auction for the Salvator Mundi at Christie's — the ascending-price format whose strategic logic parallels the second-price sealed-bid auction.*
@@ -961,27 +961,27 @@ Because the dominant strategy for every player is to bid their valuation, the tr
 
 ### Why Truthful Bidding Fails
 
-In a **first-price sealed-bid auction** the winner pays their own bid, not someone else's. This single change destroys the dominant-strategy property of truthful bidding. If you bid your true valuation <span>&#92;( v_i &#92;)</span> and win, your payoff is <span>&#92;( v_i - v_i = 0 &#92;)</span> — you capture no surplus whatsoever. Every bidder therefore has an incentive to **shade their bid** downward: submit a bid strictly below their valuation in order to earn a positive payoff when they win. The question is how far to shade.
+In a **first-price sealed-bid auction** the winner pays their own bid, not someone else's. This single change destroys the dominant-strategy property of truthful bidding. If you bid your true valuation <span>&#92;( v&#95;i &#92;)</span> and win, your payoff is <span>&#92;( v&#95;i - v&#95;i = 0 &#92;)</span> — you capture no surplus whatsoever. Every bidder therefore has an incentive to **shade their bid** downward: submit a bid strictly below their valuation in order to earn a positive payoff when they win. The question is how far to shade.
 
 ### Nash Equilibrium with Symmetric Bidders
 
 To derive the Nash Equilibrium bid in the first-price auction we introduce a richer model. Suppose there are <span>&#92;( n &#92;)</span> bidders whose valuations are drawn independently and uniformly from the interval <span>&#92;[ 0, 1 &#92;]</span>. Each bidder knows their own valuation but not others'. We look for a **symmetric Nash Equilibrium** in which every bidder uses the same increasing bidding function <span>&#92;( b(v) &#92;)</span>.
 
-If all other bidders use the strategy <span>&#92;( b(v) &#92;)</span>, bidder <span>&#92;( i &#92;)</span> with valuation <span>&#92;( v_i &#92;)</span> who submits bid <span>&#92;( x &#92;)</span> wins if and only if <span>&#92;( x &#92;)</span> exceeds every other bidder's bid. Because the bidding function is increasing, this is equivalent to <span>&#92;( v_i &#92;)</span> being the highest valuation, which happens with probability <span>&#92;( x^{n-1} &#92;)</span> when <span>&#92;( x = b(v_i) &#92;)</span>. The expected payoff to bidder <span>&#92;( i &#92;)</span> from submitting bid <span>&#92;( x &#92;)</span> is:
+If all other bidders use the strategy <span>&#92;( b(v) &#92;)</span>, bidder <span>&#92;( i &#92;)</span> with valuation <span>&#92;( v&#95;i &#92;)</span> who submits bid <span>&#92;( x &#92;)</span> wins if and only if <span>&#92;( x &#92;)</span> exceeds every other bidder's bid. Because the bidding function is increasing, this is equivalent to <span>&#92;( v&#95;i &#92;)</span> being the highest valuation, which happens with probability <span>&#92;( x^{n-1} &#92;)</span> when <span>&#92;( x = b(v&#95;i) &#92;)</span>. The expected payoff to bidder <span>&#92;( i &#92;)</span> from submitting bid <span>&#92;( x &#92;)</span> is:
 
-<span>&#92;[ &#92;pi(x, v_i) = (v_i - x) &#92;cdot x^{n-1} &#92;]</span>
+<span>&#92;[ &#92;pi(x, v&#95;i) = (v&#95;i - x) &#92;cdot x^{n-1} &#92;]</span>
 
-Maximizing over <span>&#92;( x &#92;)</span> and imposing the equilibrium condition <span>&#92;( x = b(v_i) &#92;)</span> yields the first-order condition:
+Maximizing over <span>&#92;( x &#92;)</span> and imposing the equilibrium condition <span>&#92;( x = b(v&#95;i) &#92;)</span> yields the first-order condition:
 
-<span>&#92;[ &#92;frac{d&#92;pi}{dx} = x^{n-1} - (v_i - x)(n-1)x^{n-2} = 0 &#92;]</span>
+<span>&#92;[ &#92;frac{d&#92;pi}{dx} = x^{n-1} - (v&#95;i - x)(n-1)x^{n-2} = 0 &#92;]</span>
 
 Dividing through by <span>&#92;( x^{n-2} &#92;)</span> and rearranging:
 
-<span>&#92;[ x - (v_i - x)(n-1) = 0 &#92;implies x &#92;cdot n = v_i (n-1) &#92;implies x = &#92;frac{n-1}{n} v_i &#92;]</span>
+<span>&#92;[ x - (v&#95;i - x)(n-1) = 0 &#92;implies x &#92;cdot n = v&#95;i (n-1) &#92;implies x = &#92;frac{n-1}{n} v&#95;i &#92;]</span>
 
 The symmetric Nash Equilibrium bidding strategy is therefore:
 
-<span>&#92;[ b_i = &#92;frac{n-1}{n} \, v_i &#92;]</span>
+<span>&#92;[ b&#95;i = &#92;frac{n-1}{n} \, v&#95;i &#92;]</span>
 
 Every bidder shades their bid to a fraction <span>&#92;( (n-1)/n &#92;)</span> of their true valuation. As the number of bidders <span>&#92;( n &#92;)</span> grows, this fraction approaches 1 and bids converge toward true valuations — competition disciplines bid shading. With only two bidders (<span>&#92;( n = 2 &#92;)</span>), each bids exactly half their valuation. With ten bidders, each bids 90% of their valuation.
 
@@ -997,7 +997,7 @@ Revenue equivalence is a theoretical benchmark, not an empirical claim about all
 
 The private-value model assumes each bidder's valuation is independent of others'. This is appropriate for goods whose value is purely personal — a painting whose appeal depends entirely on the buyer's taste. But many goods have a **common value**: an underlying objective worth that is the same for all bidders, even though each bidder observes only a private, noisy signal of that value. Oil lease auctions are the canonical example: the oil in the ground is worth a fixed amount, but each oil company's geologists produce an independent estimate.
 
-In a common-value auction with <span>&#92;( n &#92;)</span> bidders, each bidder <span>&#92;( i &#92;)</span> observes a signal <span>&#92;( s_i = V + &#92;varepsilon_i &#92;)</span>, where <span>&#92;( V &#92;)</span> is the true common value and the errors <span>&#92;( &#92;varepsilon_i &#92;)</span> are independent with mean zero. If each bidder bids their observed signal, the winner is the bidder with the highest signal. But the highest signal is almost certainly an overestimate of the true value — the winner has drawn the most favorable error. This is the **winner's curse**: winning the auction is bad news, because it reveals that you were more optimistic than everyone else.
+In a common-value auction with <span>&#92;( n &#92;)</span> bidders, each bidder <span>&#92;( i &#92;)</span> observes a signal <span>&#92;( s&#95;i = V + &#92;varepsilon&#95;i &#92;)</span>, where <span>&#92;( V &#92;)</span> is the true common value and the errors <span>&#92;( &#92;varepsilon&#95;i &#92;)</span> are independent with mean zero. If each bidder bids their observed signal, the winner is the bidder with the highest signal. But the highest signal is almost certainly an overestimate of the true value — the winner has drawn the most favorable error. This is the **winner's curse**: winning the auction is bad news, because it reveals that you were more optimistic than everyone else.
 
 Rational bidders anticipate the winner's curse and adjust. They recognize that winning is informative: conditional on winning, the true value is almost surely below their signal. The correct response is to **shade the bid below the private signal**, with the discount proportional to the expected upward bias of the highest signal among <span>&#92;( n &#92;)</span> draws. With more bidders, the highest signal is more likely to be an extreme overestimate, so the rational discount grows larger.
 
@@ -1088,9 +1088,9 @@ To see why, consider two games. In both, the payoffs represent the ordinal ranki
 
 ## Von Neumann–Morgenstern Preferences and Bernoulli Payoffs
 
-To handle preferences over lotteries, we adopt the framework of **von Neumann–Morgenstern (vNM) preferences**. We say a player has vNM preferences if there exists a **Bernoulli payoff function** <span>&#92;( u_i &#92;)</span> over deterministic outcomes such that the player's preferences over lotteries are represented by the expected value of that function. Formally, given two lotteries <span>&#92;( P &#92;)</span> and <span>&#92;( Q &#92;)</span> that yield outcomes <span>&#92;( a_1, a_2, &#92;ldots, a_k &#92;)</span> with probabilities <span>&#92;( p_1, &#92;ldots, p_k &#92;)</span> and <span>&#92;( q_1, &#92;ldots, q_k &#92;)</span> respectively, player <span>&#92;( i &#92;)</span> prefers <span>&#92;( P &#92;)</span> to <span>&#92;( Q &#92;)</span> if and only if:
+To handle preferences over lotteries, we adopt the framework of **von Neumann–Morgenstern (vNM) preferences**. We say a player has vNM preferences if there exists a **Bernoulli payoff function** <span>&#92;( u&#95;i &#92;)</span> over deterministic outcomes such that the player's preferences over lotteries are represented by the expected value of that function. Formally, given two lotteries <span>&#92;( P &#92;)</span> and <span>&#92;( Q &#92;)</span> that yield outcomes <span>&#92;( a&#95;1, a&#95;2, &#92;ldots, a&#95;k &#92;)</span> with probabilities <span>&#92;( p&#95;1, &#92;ldots, p&#95;k &#92;)</span> and <span>&#92;( q&#95;1, &#92;ldots, q&#95;k &#92;)</span> respectively, player <span>&#92;( i &#92;)</span> prefers <span>&#92;( P &#92;)</span> to <span>&#92;( Q &#92;)</span> if and only if:
 
-<span>&#92;[ &#92;sum_{j} p_j \, u_i(a_j) \;&gt;\; &#92;sum_{j} q_j \, u_i(a_j) &#92;]</span>
+<span>&#92;[ &#92;sum&#95;{j} p&#95;j \, u&#95;i(a&#95;j) \;&gt;\; &#92;sum&#95;{j} q&#95;j \, u&#95;i(a&#95;j) &#92;]</span>
 
 In other words, the player simply computes the expected Bernoulli payoff of each lottery and chooses the higher one. This is the natural thing to do — it just requires that the numbers inside the payoff boxes carry cardinal meaning, not merely ordinal ranking.
 
@@ -1106,37 +1106,37 @@ A **strategic game with vNM preferences** has the same formal structure as befor
 
 **Definition.** A **mixed strategy** of player <span>&#92;( i &#92;)</span> in a strategic game is a probability distribution over that player's set of actions.
 
-We write <span>&#92;( &#92;alpha_i &#92;)</span> for player <span>&#92;( i &#92;)</span>'s mixed strategy, and <span>&#92;( &#92;alpha_i(a_i) &#92;)</span> for the probability that <span>&#92;( &#92;alpha_i &#92;)</span> assigns to action <span>&#92;( a_i &#92;)</span>. A **profile** of mixed strategies is denoted <span>&#92;( &#92;alpha = (&#92;alpha_1, &#92;alpha_2, &#92;ldots) &#92;)</span>, where each <span>&#92;( &#92;alpha_i &#92;)</span> is a probability distribution over <span>&#92;( A_i &#92;)</span>. Formally:
+We write <span>&#92;( &#92;alpha&#95;i &#92;)</span> for player <span>&#92;( i &#92;)</span>'s mixed strategy, and <span>&#92;( &#92;alpha&#95;i(a&#95;i) &#92;)</span> for the probability that <span>&#92;( &#92;alpha&#95;i &#92;)</span> assigns to action <span>&#92;( a&#95;i &#92;)</span>. A **profile** of mixed strategies is denoted <span>&#92;( &#92;alpha = (&#92;alpha&#95;1, &#92;alpha&#95;2, &#92;ldots) &#92;)</span>, where each <span>&#92;( &#92;alpha&#95;i &#92;)</span> is a probability distribution over <span>&#92;( A&#95;i &#92;)</span>. Formally:
 
-<span>&#92;[ &#92;alpha = &#92;bigl((&#92;alpha_1(a_1), &#92;alpha_1(a_2), &#92;ldots),\; (&#92;alpha_2(a_1), &#92;alpha_2(a_2), &#92;ldots),\; &#92;ldots&#92;bigr) &#92;]</span>
+<span>&#92;[ &#92;alpha = &#92;bigl((&#92;alpha&#95;1(a&#95;1), &#92;alpha&#95;1(a&#95;2), &#92;ldots),\; (&#92;alpha&#95;2(a&#95;1), &#92;alpha&#95;2(a&#95;2), &#92;ldots),\; &#92;ldots&#92;bigr) &#92;]</span>
 
 A mixed strategy that assigns probability 1 to a single action is called a **pure strategy**. The world we lived in before this chapter was the world of pure strategies — a special case of mixed strategies. By expanding to allow probability distributions over actions, we are strictly generalizing our earlier framework.
 
-For convenience, when a player has only two actions, we write a mixed strategy as an ordered pair of probabilities: <span>&#92;( &#92;alpha_1 = (p, 1-p) &#92;)</span> means Player 1 plays the first action with probability <span>&#92;( p &#92;)</span> and the second with probability <span>&#92;( 1 - p &#92;)</span>. In Matching Pennies, for example, the strategy where Player 1 plays each action with equal probability is written <span>&#92;( &#92;alpha_1 = ({&#92;textstyle&#92;frac{1}{2}}, {&#92;textstyle&#92;frac{1}{2}}) &#92;)</span>.
+For convenience, when a player has only two actions, we write a mixed strategy as an ordered pair of probabilities: <span>&#92;( &#92;alpha&#95;1 = (p, 1-p) &#92;)</span> means Player 1 plays the first action with probability <span>&#92;( p &#92;)</span> and the second with probability <span>&#92;( 1 - p &#92;)</span>. In Matching Pennies, for example, the strategy where Player 1 plays each action with equal probability is written <span>&#92;( &#92;alpha&#95;1 = ({&#92;textstyle&#92;frac{1}{2}}, {&#92;textstyle&#92;frac{1}{2}}) &#92;)</span>.
 
 ### Expected Payoffs Under Mixed Strategies
 
 Player <span>&#92;( i &#92;)</span>'s expected payoff to a mixed strategy profile <span>&#92;( &#92;alpha &#92;)</span> is:
 
-<span>&#92;[ U_i(&#92;alpha) \;=\; &#92;sum_{a_i &#92;in A_i} &#92;alpha_i(a_i) &#92;cdot E_i(a_i,\, &#92;alpha_{-i}) &#92;]</span>
+<span>&#92;[ U&#95;i(&#92;alpha) \;=\; &#92;sum&#95;{a&#95;i &#92;in A&#95;i} &#92;alpha&#95;i(a&#95;i) &#92;cdot E&#95;i(a&#95;i,\, &#92;alpha&#95;{-i}) &#92;]</span>
 
-where <span>&#92;( E_i(a_i, &#92;alpha_{-i}) &#92;)</span> is player <span>&#92;( i &#92;)</span>'s expected payoff when she plays the pure strategy <span>&#92;( a_i &#92;)</span> and the other players use their mixed strategies <span>&#92;( &#92;alpha_{-i} &#92;)</span>. This is a weighted average of the expected payoffs to each of her actions, with weights given by the probabilities in <span>&#92;( &#92;alpha_i &#92;)</span>. The critical observation is that player <span>&#92;( i &#92;)</span> does not control <span>&#92;( E_i(a_i, &#92;alpha_{-i}) &#92;)</span> — that depends on what others do. The only thing player <span>&#92;( i &#92;)</span> controls is the weight <span>&#92;( &#92;alpha_i(a_i) &#92;)</span> she places on each action.
+where <span>&#92;( E&#95;i(a&#95;i, &#92;alpha&#95;{-i}) &#92;)</span> is player <span>&#92;( i &#92;)</span>'s expected payoff when she plays the pure strategy <span>&#92;( a&#95;i &#92;)</span> and the other players use their mixed strategies <span>&#92;( &#92;alpha&#95;{-i} &#92;)</span>. This is a weighted average of the expected payoffs to each of her actions, with weights given by the probabilities in <span>&#92;( &#92;alpha&#95;i &#92;)</span>. The critical observation is that player <span>&#92;( i &#92;)</span> does not control <span>&#92;( E&#95;i(a&#95;i, &#92;alpha&#95;{-i}) &#92;)</span> — that depends on what others do. The only thing player <span>&#92;( i &#92;)</span> controls is the weight <span>&#92;( &#92;alpha&#95;i(a&#95;i) &#92;)</span> she places on each action.
 
 ## Mixed Strategy Nash Equilibrium
 
-**Definition.** A mixed strategy profile <span>&#92;( &#92;alpha^* &#92;)</span> in a strategic game with vNM preferences is a **mixed strategy Nash equilibrium (MSNE)** if for each player <span>&#92;( i &#92;)</span>:
+**Definition.** A mixed strategy profile <span>&#92;( &#92;alpha^&#42; &#92;)</span> in a strategic game with vNM preferences is a **mixed strategy Nash equilibrium (MSNE)** if for each player <span>&#92;( i &#92;)</span>:
 
-<span>&#92;[ U_i(&#92;alpha^*) \;&#92;geq\; U_i(&#92;alpha_i,\, &#92;alpha^*_{-i}) &#92;quad &#92;text{for every mixed strategy } &#92;alpha_i &#92;text{ of player } i &#92;]</span>
+<span>&#92;[ U&#95;i(&#92;alpha^&#42;) \;&#92;geq\; U&#95;i(&#92;alpha&#95;i,\, &#92;alpha^&#42;&#95;{-i}) &#92;quad &#92;text{for every mixed strategy } &#92;alpha&#95;i &#92;text{ of player } i &#92;]</span>
 
-where <span>&#92;( U_i(&#92;alpha) &#92;)</span> is player <span>&#92;( i &#92;)</span>'s expected payoff to the mixed strategy profile <span>&#92;( &#92;alpha &#92;)</span>.
+where <span>&#92;( U&#95;i(&#92;alpha) &#92;)</span> is player <span>&#92;( i &#92;)</span>'s expected payoff to the mixed strategy profile <span>&#92;( &#92;alpha &#92;)</span>.
 
 This is fundamentally the same idea as Nash equilibrium: given the strategies everyone else is playing, no player can make a strictly profitable deviation — not to any other mixed strategy, not to any pure strategy. A mixed strategy profile is a MSNE if and only if every player's mixed strategy is a best response to the others' mixed strategies.
 
-**Best response functions** extend naturally: <span>&#92;( B_i(&#92;alpha_{-i}) &#92;)</span> is the set of player <span>&#92;( i &#92;)</span>'s best mixed strategies when the others play <span>&#92;( &#92;alpha_{-i} &#92;)</span>. A mixed strategy profile <span>&#92;( &#92;alpha^* &#92;)</span> is a MSNE if and only if <span>&#92;( &#92;alpha_i^* &#92;in B_i(&#92;alpha_{-i}^*) &#92;)</span> for every player <span>&#92;( i &#92;)</span>.
+**Best response functions** extend naturally: <span>&#92;( B&#95;i(&#92;alpha&#95;{-i}) &#92;)</span> is the set of player <span>&#92;( i &#92;)</span>'s best mixed strategies when the others play <span>&#92;( &#92;alpha&#95;{-i} &#92;)</span>. A mixed strategy profile <span>&#92;( &#92;alpha^&#42; &#92;)</span> is a MSNE if and only if <span>&#92;( &#92;alpha&#95;i^&#42; &#92;in B&#95;i(&#92;alpha&#95;{-i}^&#42;) &#92;)</span> for every player <span>&#92;( i &#92;)</span>.
 
 ### A Key Observation About Mixing
 
-There is an important structural fact about best responses with mixed strategies: a mixed strategy <span>&#92;( &#92;alpha_i = (p, 1-p) &#92;)</span> with <span>&#92;( 0 &lt; p &lt; 1 &#92;)</span> is **never** the unique best response to any strategy of the opponents. Either it is not a best response at all, or all mixed strategies are equally good.
+There is an important structural fact about best responses with mixed strategies: a mixed strategy <span>&#92;( &#92;alpha&#95;i = (p, 1-p) &#92;)</span> with <span>&#92;( 0 &lt; p &lt; 1 &#92;)</span> is **never** the unique best response to any strategy of the opponents. Either it is not a best response at all, or all mixed strategies are equally good.
 
 Why? Suppose player <span>&#92;( i &#92;)</span> is mixing between two actions. Player <span>&#92;( i &#92;)</span>'s expected payoff is a weighted average of the expected payoffs to each of those actions. If one action yields a strictly higher expected payoff than the other, the player would be leaving value on the table by putting any probability on the inferior action — they should deviate to placing all weight on the better action. So mixing can only be optimal when both actions yield exactly the same expected payoff. But when both actions yield the same payoff, any mix is equally optimal; no particular mix is uniquely best. This means that a genuinely mixed strategy is always part of a continuum of equally good strategies, never uniquely optimal. This observation becomes the cornerstone of Proposition 116.2.
 
@@ -1144,12 +1144,12 @@ Why? Suppose player <span>&#92;( i &#92;)</span> is mixing between two actions. 
 
 The practical tool for both computing and verifying MSNE is the following result.
 
-**Proposition 116.2.** A mixed strategy profile <span>&#92;( &#92;alpha^* &#92;)</span> in a strategic game with vNM preferences in which each player has finitely many actions is a mixed strategy Nash equilibrium if and only if for each player <span>&#92;( i &#92;)</span>:
+**Proposition 116.2.** A mixed strategy profile <span>&#92;( &#92;alpha^&#42; &#92;)</span> in a strategic game with vNM preferences in which each player has finitely many actions is a mixed strategy Nash equilibrium if and only if for each player <span>&#92;( i &#92;)</span>:
 
-1. The expected payoff, given <span>&#92;( &#92;alpha^*_{-i} &#92;)</span>, to every action to which <span>&#92;( &#92;alpha^*_i &#92;)</span> assigns strictly positive probability is the same.
-2. The expected payoff, given <span>&#92;( &#92;alpha^*_{-i} &#92;)</span>, to every action to which <span>&#92;( &#92;alpha^*_i &#92;)</span> assigns zero probability is at most the expected payoff to any action to which <span>&#92;( &#92;alpha^*_i &#92;)</span> assigns strictly positive probability.
+1. The expected payoff, given <span>&#92;( &#92;alpha^&#42;&#95;{-i} &#92;)</span>, to every action to which <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span> assigns strictly positive probability is the same.
+2. The expected payoff, given <span>&#92;( &#92;alpha^&#42;&#95;{-i} &#92;)</span>, to every action to which <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span> assigns zero probability is at most the expected payoff to any action to which <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span> assigns strictly positive probability.
 
-This proposition is one of the most important results in the course. The two conditions together say: **every action in the support of** <span>&#92;( &#92;alpha^*_i &#92;)</span> **must yield the same expected payoff, and every action outside the support must yield no higher expected payoff.** In other words, the player must be indifferent among all the actions she is willing to play in equilibrium.
+This proposition is one of the most important results in the course. The two conditions together say: **every action in the support of** <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span> **must yield the same expected payoff, and every action outside the support must yield no higher expected payoff.** In other words, the player must be indifferent among all the actions she is willing to play in equilibrium.
 
 ### Derivation
 
@@ -1171,19 +1171,19 @@ Consider the mixed strategy profile <span>&#92;( &#92;alpha = ((\,0.4,\, 0.6\,),
 
 Let <span>&#92;( p &#92;)</span> denote the probability Player 1's mixed strategy assigns to Heads, and <span>&#92;( q &#92;)</span> the probability Player 2's mixed strategy assigns to Heads. Given Player 2's strategy, Player 1's expected payoffs are:
 
-<span>&#92;[ E_1(&#92;text{H},\, q) \;=\; q &#92;cdot 1 + (1-q) &#92;cdot (-1) \;=\; 2q - 1 &#92;]</span>
+<span>&#92;[ E&#95;1(&#92;text{H},\, q) \;=\; q &#92;cdot 1 + (1-q) &#92;cdot (-1) \;=\; 2q - 1 &#92;]</span>
 
-<span>&#92;[ E_1(&#92;text{T},\, q) \;=\; q &#92;cdot (-1) + (1-q) &#92;cdot 1 \;=\; 1 - 2q &#92;]</span>
+<span>&#92;[ E&#95;1(&#92;text{T},\, q) \;=\; q &#92;cdot (-1) + (1-q) &#92;cdot 1 \;=\; 1 - 2q &#92;]</span>
 
 Player 1 strictly prefers Heads when <span>&#92;( 2q - 1 > 1 - 2q &#92;)</span>, i.e., when <span>&#92;( q > {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>; strictly prefers Tails when <span>&#92;( q &lt; {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>; and is indifferent — willing to play any mix — when <span>&#92;( q = {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>. Therefore:
 
-<span>&#92;[ B_1(q) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } q &lt; {&#92;textstyle&#92;frac{1}{2}} &#92;\[4pt] (p,\, 1-p) &#92;text{ for all } 0 &#92;leq p &#92;leq 1 &amp; &#92;text{if } q = {&#92;textstyle&#92;frac{1}{2}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } q > {&#92;textstyle&#92;frac{1}{2}} &#92;end{cases} &#92;]</span>
+<span>&#92;[ B&#95;1(q) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } q &lt; {&#92;textstyle&#92;frac{1}{2}} &#92;\[4pt] (p,\, 1-p) &#92;text{ for all } 0 &#92;leq p &#92;leq 1 &amp; &#92;text{if } q = {&#92;textstyle&#92;frac{1}{2}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } q > {&#92;textstyle&#92;frac{1}{2}} &#92;end{cases} &#92;]</span>
 
-By symmetry, Player 2's best response function satisfies <span>&#92;( B_2(p) &#92;)</span>: play <span>&#92;( q = 0 &#92;)</span> (always Tails) when <span>&#92;( p > {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>, play <span>&#92;( q = 1 &#92;)</span> (always Heads) when <span>&#92;( p &lt; {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>, and mix freely when <span>&#92;( p = {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>.
+By symmetry, Player 2's best response function satisfies <span>&#92;( B&#95;2(p) &#92;)</span>: play <span>&#92;( q = 0 &#92;)</span> (always Tails) when <span>&#92;( p > {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>, play <span>&#92;( q = 1 &#92;)</span> (always Heads) when <span>&#92;( p &lt; {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>, and mix freely when <span>&#92;( p = {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>.
 
 When these two best response functions are plotted — with <span>&#92;( p &#92;)</span> on the horizontal axis and <span>&#92;( q &#92;)</span> on the vertical axis — they cross at exactly one point: <span>&#92;( p = {&#92;textstyle&#92;frac{1}{2}}, q = {&#92;textstyle&#92;frac{1}{2}} &#92;)</span>. This is the unique MSNE:
 
-<span>&#92;[ &#92;alpha^* \;=\; &#92;Bigl(&#92;Bigl({&#92;textstyle&#92;frac{1}{2}},\, {&#92;textstyle&#92;frac{1}{2}}&#92;Bigr),\; &#92;Bigl({&#92;textstyle&#92;frac{1}{2}},\, {&#92;textstyle&#92;frac{1}{2}}&#92;Bigr)&#92;Bigr) &#92;]</span>
+<span>&#92;[ &#92;alpha^&#42; \;=\; &#92;Bigl(&#92;Bigl({&#92;textstyle&#92;frac{1}{2}},\, {&#92;textstyle&#92;frac{1}{2}}&#92;Bigr),\; &#92;Bigl({&#92;textstyle&#92;frac{1}{2}},\, {&#92;textstyle&#92;frac{1}{2}}&#92;Bigr)&#92;Bigr) &#92;]</span>
 
 ### Example: Battle of the Sexes — Best Response Approach
 
@@ -1209,16 +1209,16 @@ Recall the **Battle of the Sexes (BoS)** game, in which a couple wants to go out
 
 Let <span>&#92;( p &#92;)</span> be the probability Player 1 plays B and <span>&#92;( q &#92;)</span> be the probability Player 2 plays B. Player 1's expected payoffs are:
 
-<span>&#92;[ E_1(B, q) = 2q + 0 &#92;cdot (1-q) = 2q &#92;]</span>
-<span>&#92;[ E_1(S, q) = 0 &#92;cdot q + 1 &#92;cdot (1-q) = 1 - q &#92;]</span>
+<span>&#92;[ E&#95;1(B, q) = 2q + 0 &#92;cdot (1-q) = 2q &#92;]</span>
+<span>&#92;[ E&#95;1(S, q) = 0 &#92;cdot q + 1 &#92;cdot (1-q) = 1 - q &#92;]</span>
 
 Player 1 is indifferent when <span>&#92;( 2q = 1 - q &#92;)</span>, giving <span>&#92;( q = {&#92;textstyle&#92;frac{1}{3}} &#92;)</span>. So:
 
-<span>&#92;[ B_1(q) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } q &lt; {&#92;textstyle&#92;frac{1}{3}} &#92;\[4pt] (p,\, 1-p) &#92;text{ for all } 0 &#92;leq p &#92;leq 1 &amp; &#92;text{if } q = {&#92;textstyle&#92;frac{1}{3}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } q > {&#92;textstyle&#92;frac{1}{3}} &#92;end{cases} &#92;]</span>
+<span>&#92;[ B&#95;1(q) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } q &lt; {&#92;textstyle&#92;frac{1}{3}} &#92;\[4pt] (p,\, 1-p) &#92;text{ for all } 0 &#92;leq p &#92;leq 1 &amp; &#92;text{if } q = {&#92;textstyle&#92;frac{1}{3}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } q > {&#92;textstyle&#92;frac{1}{3}} &#92;end{cases} &#92;]</span>
 
-For Player 2, <span>&#92;( E_2(B, p) = p &#92;)</span> and <span>&#92;( E_2(S, p) = 2(1-p) &#92;)</span>. Player 2 is indifferent when <span>&#92;( p = 2(1-p) &#92;)</span>, giving <span>&#92;( p = {&#92;textstyle&#92;frac{2}{3}} &#92;)</span>. So:
+For Player 2, <span>&#92;( E&#95;2(B, p) = p &#92;)</span> and <span>&#92;( E&#95;2(S, p) = 2(1-p) &#92;)</span>. Player 2 is indifferent when <span>&#92;( p = 2(1-p) &#92;)</span>, giving <span>&#92;( p = {&#92;textstyle&#92;frac{2}{3}} &#92;)</span>. So:
 
-<span>&#92;[ B_2(p) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } p &lt; {&#92;textstyle&#92;frac{2}{3}} &#92;\[4pt] (q,\, 1-q) &#92;text{ for all } 0 &#92;leq q &#92;leq 1 &amp; &#92;text{if } p = {&#92;textstyle&#92;frac{2}{3}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } p > {&#92;textstyle&#92;frac{2}{3}} &#92;end{cases} &#92;]</span>
+<span>&#92;[ B&#95;2(p) \;=\; &#92;begin{cases} (0, 1) &amp; &#92;text{if } p &lt; {&#92;textstyle&#92;frac{2}{3}} &#92;\[4pt] (q,\, 1-q) &#92;text{ for all } 0 &#92;leq q &#92;leq 1 &amp; &#92;text{if } p = {&#92;textstyle&#92;frac{2}{3}} &#92;\[4pt] (1, 0) &amp; &#92;text{if } p > {&#92;textstyle&#92;frac{2}{3}} &#92;end{cases} &#92;]</span>
 
 When plotted, the two best response functions cross at **three** points, giving three MSNE:
 
@@ -1238,7 +1238,7 @@ We look for a MSNE in which both players mix strictly between B and S, so that <
 
 **Step 1.** By Condition 1 of Proposition 116.2, Player 1 must be indifferent between B and S. Her expected payoffs are:
 
-<span>&#92;[ E_1(B, q) = 2q &#92;quad &#92;text{and} &#92;quad E_1(S, q) = 1 - q &#92;]</span>
+<span>&#92;[ E&#95;1(B, q) = 2q &#92;quad &#92;text{and} &#92;quad E&#95;1(S, q) = 1 - q &#92;]</span>
 
 Setting these equal:
 
@@ -1248,7 +1248,7 @@ So Player 2 must play B with probability <span>&#92;( &#92;frac{1}{3} &#92;)</sp
 
 **Step 2.** Player 2 must be indifferent between B and S. Her expected payoffs are:
 
-<span>&#92;[ E_2(B, p) = p &#92;quad &#92;text{and} &#92;quad E_2(S, p) = 2(1-p) &#92;]</span>
+<span>&#92;[ E&#95;2(B, p) = p &#92;quad &#92;text{and} &#92;quad E&#95;2(S, p) = 2(1-p) &#92;]</span>
 
 Setting these equal:
 
@@ -1258,7 +1258,7 @@ So Player 1 must play B with probability <span>&#92;( &#92;frac{2}{3} &#92;)</sp
 
 **Result.** The unique fully mixed MSNE is:
 
-<span>&#92;[ &#92;alpha^* \;=\; &#92;Bigl(&#92;Bigl({&#92;textstyle&#92;frac{2}{3}},\, {&#92;textstyle&#92;frac{1}{3}}&#92;Bigr),\; &#92;Bigl({&#92;textstyle&#92;frac{1}{3}},\, {&#92;textstyle&#92;frac{2}{3}}&#92;Bigr)&#92;Bigr) &#92;]</span>
+<span>&#92;[ &#92;alpha^&#42; \;=\; &#92;Bigl(&#92;Bigl({&#92;textstyle&#92;frac{2}{3}},\, {&#92;textstyle&#92;frac{1}{3}}&#92;Bigr),\; &#92;Bigl({&#92;textstyle&#92;frac{1}{3}},\, {&#92;textstyle&#92;frac{2}{3}}&#92;Bigr)&#92;Bigr) &#92;]</span>
 
 Combined with the two pure-strategy MSNE, there are exactly three MSNE in BoS.
 
@@ -1268,7 +1268,7 @@ There is a subtle but crucial point here that is worth emphasizing. In the fully
 
 ### Verifying a MSNE: A Three-Action Example
 
-Proposition 116.2 also works for verifying proposed MSNE in richer games. Consider whether <span>&#92;( &#92;alpha^* = (({&#92;textstyle&#92;frac{3}{4}}, 0, {&#92;textstyle&#92;frac{1}{4}}),\; (0, {&#92;textstyle&#92;frac{1}{3}}, {&#92;textstyle&#92;frac{2}{3}})) &#92;)</span> is a MSNE of:
+Proposition 116.2 also works for verifying proposed MSNE in richer games. Consider whether <span>&#92;( &#92;alpha^&#42; = (({&#92;textstyle&#92;frac{3}{4}}, 0, {&#92;textstyle&#92;frac{1}{4}}),\; (0, {&#92;textstyle&#92;frac{1}{3}}, {&#92;textstyle&#92;frac{2}{3}})) &#92;)</span> is a MSNE of:
 
 <table>
   <tr>
@@ -1297,17 +1297,17 @@ Proposition 116.2 also works for verifying proposed MSNE in richer games. Consid
   </tr>
 </table>
 
-Player 2 never plays L (<span>&#92;( &#92;alpha_2(L) = 0 &#92;)</span>), so Player 1's payoff in any column-L cell is irrelevant. Player 1's expected payoffs to each action, given Player 2's mix <span>&#92;( (0, &#92;frac{1}{3}, &#92;frac{2}{3}) &#92;)</span>:
+Player 2 never plays L (<span>&#92;( &#92;alpha&#95;2(L) = 0 &#92;)</span>), so Player 1's payoff in any column-L cell is irrelevant. Player 1's expected payoffs to each action, given Player 2's mix <span>&#92;( (0, &#92;frac{1}{3}, &#92;frac{2}{3}) &#92;)</span>:
 
-- <span>&#92;( E_1(T) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 3 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 1 = {&#92;textstyle&#92;frac{5}{3}} &#92;)</span>
-- <span>&#92;( E_1(M) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 0 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 2 = {&#92;textstyle&#92;frac{4}{3}} &#92;)</span>
-- <span>&#92;( E_1(B) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 5 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 0 = {&#92;textstyle&#92;frac{5}{3}} &#92;)</span>
+- <span>&#92;( E&#95;1(T) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 3 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 1 = {&#92;textstyle&#92;frac{5}{3}} &#92;)</span>
+- <span>&#92;( E&#95;1(M) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 0 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 2 = {&#92;textstyle&#92;frac{4}{3}} &#92;)</span>
+- <span>&#92;( E&#95;1(B) = {&#92;textstyle&#92;frac{1}{3}} &#92;cdot 5 + {&#92;textstyle&#92;frac{2}{3}} &#92;cdot 0 = {&#92;textstyle&#92;frac{5}{3}} &#92;)</span>
 
 **Condition 1 for Player 1:** Player 1 assigns positive probability to T and B (both <span>&#92;( > 0 &#92;)</span>). Both give expected payoff <span>&#92;( &#92;frac{5}{3} &#92;)</span>. ✓
 
-**Condition 2 for Player 1:** Player 1 assigns zero probability to M. <span>&#92;( E_1(M) = &#92;frac{4}{3} &#92;leq &#92;frac{5}{3} &#92;)</span>. ✓
+**Condition 2 for Player 1:** Player 1 assigns zero probability to M. <span>&#92;( E&#95;1(M) = &#92;frac{4}{3} &#92;leq &#92;frac{5}{3} &#92;)</span>. ✓
 
-Computing Player 2's expected payoffs to L, C, R given Player 1's mix <span>&#92;( (&#92;frac{3}{4}, 0, &#92;frac{1}{4}) &#92;)</span> yields <span>&#92;( E_2(L) = E_2(C) = E_2(R) = &#92;frac{5}{2} &#92;)</span> (all equal). Both conditions are satisfied for Player 2 as well. Therefore <span>&#92;( &#92;alpha^* &#92;)</span> is a MSNE.
+Computing Player 2's expected payoffs to L, C, R given Player 1's mix <span>&#92;( (&#92;frac{3}{4}, 0, &#92;frac{1}{4}) &#92;)</span> yields <span>&#92;( E&#95;2(L) = E&#95;2(C) = E&#95;2(R) = &#92;frac{5}{2} &#92;)</span> (all equal). Both conditions are satisfied for Player 2 as well. Therefore <span>&#92;( &#92;alpha^&#42; &#92;)</span> is a MSNE.
 
 Note that Player 2 is indifferent between all three actions including L, yet assigns zero probability to L. The second condition permits this — zero probability on an action is consistent with MSNE as long as that action is not strictly better than actions in the support.
 
@@ -1347,13 +1347,13 @@ A useful corollary concerns the number of MSNE: in generic finite games (where s
 
 The two pure-strategy Nash equilibria of BoS — (B, B) and (S, S) — also appeared as MSNE. This is no coincidence. There is a general correspondence between Nash equilibria in the pure-strategy world and MSNE in the mixed-strategy world.
 
-**Proposition 122.2 (Allowing Randomization).** Let <span>&#92;( a^* &#92;)</span> be a Nash equilibrium of a strategic game <span>&#92;( G &#92;)</span> with ordinal preferences. For each player <span>&#92;( i &#92;)</span>, let <span>&#92;( &#92;alpha^*_i &#92;)</span> be the pure strategy that assigns probability 1 to <span>&#92;( a^*_i &#92;)</span>. Then <span>&#92;( &#92;alpha^* &#92;)</span> is a MSNE of the corresponding game <span>&#92;( G' &#92;)</span> with vNM preferences.
+**Proposition 122.2 (Allowing Randomization).** Let <span>&#92;( a^&#42; &#92;)</span> be a Nash equilibrium of a strategic game <span>&#92;( G &#92;)</span> with ordinal preferences. For each player <span>&#92;( i &#92;)</span>, let <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span> be the pure strategy that assigns probability 1 to <span>&#92;( a^&#42;&#95;i &#92;)</span>. Then <span>&#92;( &#92;alpha^&#42; &#92;)</span> is a MSNE of the corresponding game <span>&#92;( G' &#92;)</span> with vNM preferences.
 
-The argument is immediate from Proposition 116.2. Since <span>&#92;( a^* &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>, no player has a pure strategy that beats <span>&#92;( a^*_i &#92;)</span> when others play <span>&#92;( a^*_{-i} &#92;)</span>. Condition 1 of Proposition 116.2 is satisfied trivially (each player puts positive probability on only one action). Condition 2 is satisfied because no pure strategy yields a strictly higher payoff — and since pure strategies include all the actions, this means no action outside the trivial support does better.
+The argument is immediate from Proposition 116.2. Since <span>&#92;( a^&#42; &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>, no player has a pure strategy that beats <span>&#92;( a^&#42;&#95;i &#92;)</span> when others play <span>&#92;( a^&#42;&#95;{-i} &#92;)</span>. Condition 1 of Proposition 116.2 is satisfied trivially (each player puts positive probability on only one action). Condition 2 is satisfied because no pure strategy yields a strictly higher payoff — and since pure strategies include all the actions, this means no action outside the trivial support does better.
 
-**Proposition 123.1 (Prohibiting Randomization).** Let <span>&#92;( &#92;alpha^* &#92;)</span> be a MSNE of <span>&#92;( G' &#92;)</span> in which each player's mixed strategy assigns probability 1 to a single action <span>&#92;( a^*_i &#92;)</span>. Then <span>&#92;( a^* &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>.
+**Proposition 123.1 (Prohibiting Randomization).** Let <span>&#92;( &#92;alpha^&#42; &#92;)</span> be a MSNE of <span>&#92;( G' &#92;)</span> in which each player's mixed strategy assigns probability 1 to a single action <span>&#92;( a^&#42;&#95;i &#92;)</span>. Then <span>&#92;( a^&#42; &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>.
 
-Since <span>&#92;( &#92;alpha^* &#92;)</span> is a MSNE of <span>&#92;( G' &#92;)</span>, no mixed strategy of player <span>&#92;( i &#92;)</span> gives a higher expected payoff than <span>&#92;( &#92;alpha^*_i &#92;)</span>. Pure strategies are a subset of mixed strategies, so in particular no pure strategy beats <span>&#92;( a^*_i &#92;)</span>. Hence <span>&#92;( a^* &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>.
+Since <span>&#92;( &#92;alpha^&#42; &#92;)</span> is a MSNE of <span>&#92;( G' &#92;)</span>, no mixed strategy of player <span>&#92;( i &#92;)</span> gives a higher expected payoff than <span>&#92;( &#92;alpha^&#42;&#95;i &#92;)</span>. Pure strategies are a subset of mixed strategies, so in particular no pure strategy beats <span>&#92;( a^&#42;&#95;i &#92;)</span>. Hence <span>&#92;( a^&#42; &#92;)</span> is a Nash equilibrium of <span>&#92;( G &#92;)</span>.
 
 Together, these propositions say that pure-strategy NE and MSNE in pure strategies are the same thing. When searching for all MSNE of a game, you can find the pure-strategy equilibria first (using the star method), then turn to the fully mixed ones using Proposition 116.2.
 
@@ -1361,11 +1361,11 @@ Together, these propositions say that pure-strategy NE and MSNE in pure strategi
 
 In earlier chapters we found that strictly dominated actions are never played in Nash equilibrium, which allowed us to simplify games through iterated elimination. The same principle applies — in an extended form — to MSNE.
 
-**Definition 120.1.** In a strategic game with vNM preferences, player <span>&#92;( i &#92;)</span>'s mixed strategy <span>&#92;( &#92;alpha_i &#92;)</span> **strictly dominates** her action <span>&#92;( a'_i &#92;)</span> if:
+**Definition 120.1.** In a strategic game with vNM preferences, player <span>&#92;( i &#92;)</span>'s mixed strategy <span>&#92;( &#92;alpha&#95;i &#92;)</span> **strictly dominates** her action <span>&#92;( a'&#95;i &#92;)</span> if:
 
-<span>&#92;[ U_i(&#92;alpha_i,\, a_{-i}) \;&gt;\; u_i(a'_i,\, a_{-i}) &#92;quad &#92;text{for every action list } a_{-i} &#92;]</span>
+<span>&#92;[ U&#95;i(&#92;alpha&#95;i,\, a&#95;{-i}) \;&gt;\; u&#95;i(a'&#95;i,\, a&#95;{-i}) &#92;quad &#92;text{for every action list } a&#95;{-i} &#92;]</span>
 
-We say that action <span>&#92;( a'_i &#92;)</span> is **strictly dominated** (by a mixed strategy).
+We say that action <span>&#92;( a'&#95;i &#92;)</span> is **strictly dominated** (by a mixed strategy).
 
 The key extension over earlier chapters is that an action may be strictly dominated by a mixed strategy even if no pure strategy dominates it. Consider the game:
 
@@ -1396,19 +1396,19 @@ None of M or B strictly dominates T as a pure strategy. But the mixed strategy t
 
 ### Why Dominated Actions Are Not Played in MSNE
 
-**Claim.** If action <span>&#92;( a'_i &#92;)</span> is strictly dominated by a mixed strategy <span>&#92;( &#92;alpha_i &#92;)</span>, then <span>&#92;( a'_i &#92;)</span> is not played with positive probability in any MSNE.
+**Claim.** If action <span>&#92;( a'&#95;i &#92;)</span> is strictly dominated by a mixed strategy <span>&#92;( &#92;alpha&#95;i &#92;)</span>, then <span>&#92;( a'&#95;i &#92;)</span> is not played with positive probability in any MSNE.
 
-**Argument.** Suppose the other players use mixed strategies <span>&#92;( &#92;alpha_{-i} &#92;)</span>. Player <span>&#92;( i &#92;)</span>'s expected payoff to using <span>&#92;( &#92;alpha_i &#92;)</span> is a weighted average of <span>&#92;( U_i(&#92;alpha_i, a_{-i}) &#92;)</span> as <span>&#92;( a_{-i} &#92;)</span> varies over all action profiles of the others, where the weights are given by the probability each <span>&#92;( a_{-i} &#92;)</span> occurs under <span>&#92;( &#92;alpha_{-i} &#92;)</span>. Similarly, player <span>&#92;( i &#92;)</span>'s expected payoff to using <span>&#92;( a'_i &#92;)</span> is a weighted average of <span>&#92;( u_i(a'_i, a_{-i}) &#92;)</span> with exactly the same weights. Since strict domination gives <span>&#92;( U_i(&#92;alpha_i, a_{-i}) > u_i(a'_i, a_{-i}) &#92;)</span> for every <span>&#92;( a_{-i} &#92;)</span>, and the weights are identical, the entire expected payoff to <span>&#92;( &#92;alpha_i &#92;)</span> exceeds that to <span>&#92;( a'_i &#92;)</span> for any <span>&#92;( &#92;alpha_{-i} &#92;)</span>. Therefore <span>&#92;( a'_i &#92;)</span> is never a best response and is never used with positive probability in any MSNE.
+**Argument.** Suppose the other players use mixed strategies <span>&#92;( &#92;alpha&#95;{-i} &#92;)</span>. Player <span>&#92;( i &#92;)</span>'s expected payoff to using <span>&#92;( &#92;alpha&#95;i &#92;)</span> is a weighted average of <span>&#92;( U&#95;i(&#92;alpha&#95;i, a&#95;{-i}) &#92;)</span> as <span>&#92;( a&#95;{-i} &#92;)</span> varies over all action profiles of the others, where the weights are given by the probability each <span>&#92;( a&#95;{-i} &#92;)</span> occurs under <span>&#92;( &#92;alpha&#95;{-i} &#92;)</span>. Similarly, player <span>&#92;( i &#92;)</span>'s expected payoff to using <span>&#92;( a'&#95;i &#92;)</span> is a weighted average of <span>&#92;( u&#95;i(a'&#95;i, a&#95;{-i}) &#92;)</span> with exactly the same weights. Since strict domination gives <span>&#92;( U&#95;i(&#92;alpha&#95;i, a&#95;{-i}) > u&#95;i(a'&#95;i, a&#95;{-i}) &#92;)</span> for every <span>&#92;( a&#95;{-i} &#92;)</span>, and the weights are identical, the entire expected payoff to <span>&#92;( &#92;alpha&#95;i &#92;)</span> exceeds that to <span>&#92;( a'&#95;i &#92;)</span> for any <span>&#92;( &#92;alpha&#95;{-i} &#92;)</span>. Therefore <span>&#92;( a'&#95;i &#92;)</span> is never a best response and is never used with positive probability in any MSNE.
 
 **Corollary.** A strictly dominated action can be eliminated before searching for MSNE, and this elimination can be applied **iteratively**: after removing one dominated action, a new action may become dominated in the reduced game, and can itself be removed. Any MSNE of the original game corresponds to a MSNE of the reduced game after iterated elimination of strictly dominated strategies — by pure or mixed strategies alike. This can dramatically simplify the computation.
 
 ## Weak Domination by Mixed Strategies
 
-**Definition.** Player <span>&#92;( i &#92;)</span>'s mixed strategy <span>&#92;( &#92;alpha_i &#92;)</span> **weakly dominates** her action <span>&#92;( a'_i &#92;)</span> if:
+**Definition.** Player <span>&#92;( i &#92;)</span>'s mixed strategy <span>&#92;( &#92;alpha&#95;i &#92;)</span> **weakly dominates** her action <span>&#92;( a'&#95;i &#92;)</span> if:
 
-<span>&#92;[ U_i(&#92;alpha_i,\, a_{-i}) \;&#92;geq\; u_i(a'_i,\, a_{-i}) &#92;quad &#92;text{for every } a_{-i} &#92;]</span>
+<span>&#92;[ U&#95;i(&#92;alpha&#95;i,\, a&#95;{-i}) \;&#92;geq\; u&#95;i(a'&#95;i,\, a&#95;{-i}) &#92;quad &#92;text{for every } a&#95;{-i} &#92;]</span>
 
-and additionally <span>&#92;( U_i(&#92;alpha_i, a_{-i}) > u_i(a'_i, a_{-i}) &#92;)</span> for at least one <span>&#92;( a_{-i} &#92;)</span>. Weak domination permits elimination in some contexts but requires more care: iterative elimination of weakly dominated strategies can remove equilibria, whereas iterative elimination of strictly dominated strategies never does.
+and additionally <span>&#92;( U&#95;i(&#92;alpha&#95;i, a&#95;{-i}) > u&#95;i(a'&#95;i, a&#95;{-i}) &#92;)</span> for at least one <span>&#92;( a&#95;{-i} &#92;)</span>. Weak domination permits elimination in some contexts but requires more care: iterative elimination of weakly dominated strategies can remove equilibria, whereas iterative elimination of strictly dominated strategies never does.
 
 ## Finding All MSNE in Practice
 
@@ -1539,7 +1539,7 @@ When the customer accepts, the dishonest expert earns the weighted average <span
 
 Expanding the left side: <span>&#92;(q&#92;pi + (1-r)&#92;pi - q(1-r)&#92;pi&#92;)</span>. Expanding the right side: <span>&#92;(qr&#92;pi + q(1-r)&#92;pi'&#92;)</span>. After simplification (terms involving <span>&#92;(qr&#92;pi&#92;)</span> cancel on both sides along with the non-<span>&#92;(q&#92;)</span> terms), we arrive at:
 
-<span>&#92;[ q^* = &#92;frac{&#92;pi}{&#92;pi'} &#92;]</span>
+<span>&#92;[ q^&#42; = &#92;frac{&#92;pi}{&#92;pi'} &#92;]</span>
 
 This is the equilibrium probability with which the customer must accept in order to keep the expert indifferent. Notice that it depends only on the expert's own profit parameters — not on the customer's costs or on <span>&#92;(r&#92;)</span>.
 
@@ -1553,33 +1553,33 @@ Her expected payoff to Rejecting is:
 
 Setting these equal and solving for <span>&#92;(p&#92;)</span> yields:
 
-<span>&#92;[ p^* = &#92;frac{E - [rE' + (1-r)I']}{(1-r)(E - I')} &#92;]</span>
+<span>&#92;[ p^&#42; = &#92;frac{E - [rE' + (1-r)I']}{(1-r)(E - I')} &#92;]</span>
 
-One can verify that this is positive whenever <span>&#92;(E &gt; rE' + (1-r)I'&#92;)</span> (our Case 2 assumption) and less than one whenever <span>&#92;(E &lt; E'&#92;)</span>, which holds by assumption. So <span>&#92;(p^* &#92;in (0,1)&#92;)</span> is a valid mixing probability.
+One can verify that this is positive whenever <span>&#92;(E &gt; rE' + (1-r)I'&#92;)</span> (our Case 2 assumption) and less than one whenever <span>&#92;(E &lt; E'&#92;)</span>, which holds by assumption. So <span>&#92;(p^&#42; &#92;in (0,1)&#92;)</span> is a valid mixing probability.
 
 **The unique MSNE.** When <span>&#92;(E &gt; rE' + (1-r)I'&#92;)</span>, there is a unique mixed strategy Nash equilibrium:
 
-<span>&#92;[ &#92;bigl((p^*,\, 1-p^*),\, (q^*,\, 1-q^*)&#92;bigr) &#92;]</span>
+<span>&#92;[ &#92;bigl((p^&#42;,\, 1-p^&#42;),\, (q^&#42;,\, 1-q^&#42;)&#92;bigr) &#92;]</span>
 
 where
 
-<span>&#92;[ p^* = &#92;frac{E - [rE' + (1-r)I']}{(1-r)(E - I')}, &#92;qquad q^* = &#92;frac{&#92;pi}{&#92;pi'} &#92;]</span>
+<span>&#92;[ p^&#42; = &#92;frac{E - [rE' + (1-r)I']}{(1-r)(E - I')}, &#92;qquad q^&#42; = &#92;frac{&#92;pi}{&#92;pi'} &#92;]</span>
 
-**The boundary case.** When <span>&#92;(E = rE' + (1-r)I'&#92;)</span>, the customer is exactly indifferent between Accept and Reject whenever the expert is dishonest. In this case, the best response functions overlap along a line segment, and there is a continuum of MSNE: all profiles <span>&#92;(((0,1),\,(q^*,\,1-q^*))&#92;)</span> with <span>&#92;(q^* &#92;in [&#92;pi/&#92;pi',\,1]&#92;)</span> are equilibria — the expert is always dishonest and the customer mixes with any acceptance probability above the threshold <span>&#92;(&#92;pi/&#92;pi'&#92;)</span>.
+**The boundary case.** When <span>&#92;(E = rE' + (1-r)I'&#92;)</span>, the customer is exactly indifferent between Accept and Reject whenever the expert is dishonest. In this case, the best response functions overlap along a line segment, and there is a continuum of MSNE: all profiles <span>&#92;(((0,1),\,(q^&#42;,\,1-q^&#42;))&#92;)</span> with <span>&#92;(q^&#42; &#92;in [&#92;pi/&#92;pi',\,1]&#92;)</span> are equilibria — the expert is always dishonest and the customer mixes with any acceptance probability above the threshold <span>&#92;(&#92;pi/&#92;pi'&#92;)</span>.
 
 ### Comparative Statics: Counterintuitive Predictions
 
 The payoff of game theory is not just finding equilibria but understanding how they respond to changes in the environment. The expert diagnosis MSNE delivers three predictions that violate naive intuition.
 
-**Major problems become less common (<span>&#92;(r&#92;)</span> falls).** One might expect that as major problems become rarer, a rational customer would trust the expert less — after all, any given "major" diagnosis is now more likely to be a lie. Intuition says the customer should reject more, so <span>&#92;(q^*&#92;)</span> should fall. But look at the formula: <span>&#92;(q^* = &#92;pi/&#92;pi'&#92;)</span> contains no <span>&#92;(r&#92;)</span>. The acceptance probability does not change at all. The resolution is that this partial reasoning ignores how the expert responds. To see what actually adjusts, rewrite <span>&#92;(p^*&#92;)</span> as:
+**Major problems become less common (<span>&#92;(r&#92;)</span> falls).** One might expect that as major problems become rarer, a rational customer would trust the expert less — after all, any given "major" diagnosis is now more likely to be a lie. Intuition says the customer should reject more, so <span>&#92;(q^&#42;&#92;)</span> should fall. But look at the formula: <span>&#92;(q^&#42; = &#92;pi/&#92;pi'&#92;)</span> contains no <span>&#92;(r&#92;)</span>. The acceptance probability does not change at all. The resolution is that this partial reasoning ignores how the expert responds. To see what actually adjusts, rewrite <span>&#92;(p^&#42;&#92;)</span> as:
 
-<span>&#92;[ p^* = 1 - &#92;frac{r(E' - E)}{(1-r)(E - I')} &#92;]</span>
+<span>&#92;[ p^&#42; = 1 - &#92;frac{r(E' - E)}{(1-r)(E - I')} &#92;]</span>
 
-As <span>&#92;(r&#92;)</span> falls, <span>&#92;(p^*&#92;)</span> rises — the expert becomes *more* honest. The mechanism: when major problems are rare, the customer has less at stake when rejecting (she is unlikely to be driving away from a truly dangerous repair). To keep the customer indifferent — a necessary condition for the customer to ever accept in equilibrium — the expert must compensate by being honest more often. A more honest expert is one with whom the customer is again willing to engage. The customer's strategy stays put; the expert's strategy adjusts.
+As <span>&#92;(r&#92;)</span> falls, <span>&#92;(p^&#42;&#92;)</span> rises — the expert becomes *more* honest. The mechanism: when major problems are rare, the customer has less at stake when rejecting (she is unlikely to be driving away from a truly dangerous repair). To keep the customer indifferent — a necessary condition for the customer to ever accept in equilibrium — the expert must compensate by being honest more often. A more honest expert is one with whom the customer is again willing to engage. The customer's strategy stays put; the expert's strategy adjusts.
 
-**Major repairs become less expensive (<span>&#92;(E&#92;)</span> falls).** Now one might expect the customer to accept more readily — a major repair is cheaper, so what is the harm? Again, <span>&#92;(q^*&#92;)</span> is unchanged. The formula for <span>&#92;(p^*&#92;)</span> shows that as <span>&#92;(E&#92;)</span> falls, <span>&#92;(p^*&#92;)</span> falls too — the expert becomes *less* honest. The mechanism: cheaper major repairs reduce the customer's cost of being deceived. She is willing to accept even if the expert is more likely to be lying. Sensing this, the expert takes advantage and becomes less scrupulous. The customer's indifference is restored not by any change in her strategy but by the deterioration of the expert's honesty. This is a striking result: **improving the affordability of a service can paradoxically increase the dishonesty of providers**.
+**Major repairs become less expensive (<span>&#92;(E&#92;)</span> falls).** Now one might expect the customer to accept more readily — a major repair is cheaper, so what is the harm? Again, <span>&#92;(q^&#42;&#92;)</span> is unchanged. The formula for <span>&#92;(p^&#42;&#92;)</span> shows that as <span>&#92;(E&#92;)</span> falls, <span>&#92;(p^&#42;&#92;)</span> falls too — the expert becomes *less* honest. The mechanism: cheaper major repairs reduce the customer's cost of being deceived. She is willing to accept even if the expert is more likely to be lying. Sensing this, the expert takes advantage and becomes less scrupulous. The customer's indifference is restored not by any change in her strategy but by the deterioration of the expert's honesty. This is a striking result: **improving the affordability of a service can paradoxically increase the dishonesty of providers**.
 
-**Gain from dishonesty falls (<span>&#92;(&#92;pi'&#92;)</span> falls).** Suppose regulators or professional norms reduce the premium that an expert can extract from a fraudulent major repair. One might expect experts to become more honest — the temptation has diminished. But <span>&#92;(p^*&#92;)</span> contains no <span>&#92;(&#92;pi'&#92;)</span>, so expert honesty is unchanged. What adjusts is <span>&#92;(q^* = &#92;pi/&#92;pi'&#92;)</span>: as <span>&#92;(&#92;pi'&#92;)</span> falls, <span>&#92;(q^*&#92;)</span> rises and the customer becomes *more accepting*. The intuition: with a smaller temptation, the expert is less attracted to dishonesty. For the expert to remain indifferent between honest and dishonest behavior, the customer must make dishonesty more profitable by accepting more often. Reducing the gain from fraud thus makes customers more credulous — the opposite of what you might hope for.
+**Gain from dishonesty falls (<span>&#92;(&#92;pi'&#92;)</span> falls).** Suppose regulators or professional norms reduce the premium that an expert can extract from a fraudulent major repair. One might expect experts to become more honest — the temptation has diminished. But <span>&#92;(p^&#42;&#92;)</span> contains no <span>&#92;(&#92;pi'&#92;)</span>, so expert honesty is unchanged. What adjusts is <span>&#92;(q^&#42; = &#92;pi/&#92;pi'&#92;)</span>: as <span>&#92;(&#92;pi'&#92;)</span> falls, <span>&#92;(q^&#42;&#92;)</span> rises and the customer becomes *more accepting*. The intuition: with a smaller temptation, the expert is less attracted to dishonesty. For the expert to remain indifferent between honest and dishonest behavior, the customer must make dishonesty more profitable by accepting more often. Reducing the gain from fraud thus makes customers more credulous — the opposite of what you might hope for.
 
 These three comparative statics share a common lesson. **In a mixed strategy Nash equilibrium, a player's mixing probability is determined by the opponent's payoffs, not their own.** Each player adjusts their strategy to keep the other player indifferent. Reasoning about one player's incentives in isolation — without accounting for the opponent's strategic response — consistently leads to wrong answers. The model forces us to think through both sides simultaneously.
 
@@ -1639,7 +1639,7 @@ Let <span>&#92;(q&#92;)</span> be the probability that the goalkeeper dives Left
 
 <span>&#92;[ 95 - 25q = 58 + 34q &#92;]</span>
 
-<span>&#92;[ 59q = 37 &#92;implies q^* = 62.7&#92;% &#92;]</span>
+<span>&#92;[ 59q = 37 &#92;implies q^&#42; = 62.7&#92;% &#92;]</span>
 
 Now let <span>&#92;(p&#92;)</span> be the probability that the kicker shoots Left. The goalkeeper mixes only if he is indifferent between diving Left and diving Right (where his payoffs are negatives of the kicker's):
 
@@ -1647,7 +1647,7 @@ Now let <span>&#92;(p&#92;)</span> be the probability that the kicker shoots Lef
 
 <span>&#92;[ -92 + 22p = -58 - 37p &#92;]</span>
 
-<span>&#92;[ 59p = 34 &#92;implies p^* = 57.6&#92;% &#92;]</span>
+<span>&#92;[ 59p = 34 &#92;implies p^&#42; = 57.6&#92;% &#92;]</span>
 
 The unique MSNE is: kicker shoots Left with probability 57.6% and Right with probability 42.4%; goalkeeper dives Left with probability 62.7% and Right with probability 37.3%.
 
@@ -1752,23 +1752,23 @@ Setting the two payoffs equal:
 
 This is the **equilibrium condition**: the probability that none of the other <span>&#92;(n-1&#92;)</span> people call must equal the ratio <span>&#92;(c/v&#92;)</span>. Solving for <span>&#92;(p&#92;)</span>:
 
-<span>&#92;[ p^* = 1 - &#92;left(&#92;frac{c}{v}&#92;right)^{1/(n-1)} &#92;]</span>
+<span>&#92;[ p^&#42; = 1 - &#92;left(&#92;frac{c}{v}&#92;right)^{1/(n-1)} &#92;]</span>
 
-Since <span>&#92;(0 &lt; c/v &lt; 1&#92;)</span>, we have <span>&#92;(0 &lt; (c/v)^{1/(n-1)} &lt; 1&#92;)</span>, so <span>&#92;(p^* &#92;in (0,1)&#92;)</span> — a valid mixing probability.
+Since <span>&#92;(0 &lt; c/v &lt; 1&#92;)</span>, we have <span>&#92;(0 &lt; (c/v)^{1/(n-1)} &lt; 1&#92;)</span>, so <span>&#92;(p^&#42; &#92;in (0,1)&#92;)</span> — a valid mixing probability.
 
 The symmetric MSNE is the strategy profile in which each of the <span>&#92;(n&#92;)</span> people calls with probability:
 
-<span>&#92;[ p^* = 1 - &#92;left(&#92;frac{c}{v}&#92;right)^{1/(n-1)} &#92;]</span>
+<span>&#92;[ p^&#42; = 1 - &#92;left(&#92;frac{c}{v}&#92;right)^{1/(n-1)} &#92;]</span>
 
 ### The Bystander Effect: Equilibrium and Group Size
 
-How does the equilibrium change as the number of witnesses <span>&#92;(n&#92;)</span> grows? As <span>&#92;(n&#92;)</span> increases, the exponent <span>&#92;(1/(n-1)&#92;)</span> decreases toward zero. Since <span>&#92;(c/v &lt; 1&#92;)</span>, raising a number smaller than 1 to a smaller exponent brings it closer to 1. Therefore <span>&#92;((c/v)^{1/(n-1)}&#92;)</span> increases toward 1, and <span>&#92;(p^* = 1 - (c/v)^{1/(n-1)}&#92;)</span> decreases toward 0. **Each individual is less likely to call as the group grows.** This is the first dimension of the bystander effect.
+How does the equilibrium change as the number of witnesses <span>&#92;(n&#92;)</span> grows? As <span>&#92;(n&#92;)</span> increases, the exponent <span>&#92;(1/(n-1)&#92;)</span> decreases toward zero. Since <span>&#92;(c/v &lt; 1&#92;)</span>, raising a number smaller than 1 to a smaller exponent brings it closer to 1. Therefore <span>&#92;((c/v)^{1/(n-1)}&#92;)</span> increases toward 1, and <span>&#92;(p^&#42; = 1 - (c/v)^{1/(n-1)}&#92;)</span> decreases toward 0. **Each individual is less likely to call as the group grows.** This is the first dimension of the bystander effect.
 
 But is the *overall* probability that the crime gets reported higher or lower with more witnesses? One might hope that even if each individual is less likely to call, having more individuals compensates. The equilibrium calculation shows otherwise.
 
 The probability that **no one** calls is:
 
-<span>&#92;[ &#92;Pr[&#92;text{no one calls}] = (1-p^*)^n = &#92;left(&#92;frac{c}{v}&#92;right)^{n/(n-1)} &#92;]</span>
+<span>&#92;[ &#92;Pr[&#92;text{no one calls}] = (1-p^&#42;)^n = &#92;left(&#92;frac{c}{v}&#92;right)^{n/(n-1)} &#92;]</span>
 
 Note that <span>&#92;(n/(n-1)&#92;)</span> is a decreasing function of <span>&#92;(n&#92;)</span>: it starts at 2 when <span>&#92;(n=2&#92;)</span> and decreases toward 1 as <span>&#92;(n &#92;to &#92;infty&#92;)</span>. Since <span>&#92;(c/v &lt; 1&#92;)</span>, raising it to a smaller exponent makes it larger. Therefore:
 
@@ -1778,7 +1778,7 @@ Note that <span>&#92;(n/(n-1)&#92;)</span> is a decreasing function of <span>&#9
 
 ### Interpretation
 
-Two interpretations of the symmetric MSNE are possible. One interpretation is that each individual genuinely randomizes — flipping an internal coin with bias <span>&#92;(p^*&#92;)</span> every time they witness a crime. A perhaps more natural interpretation is that <span>&#92;(p^*&#92;)</span> is the **fraction of the population** that would call given their particular personal costs and values. In a large population, some people have low <span>&#92;(c/v&#92;)</span> ratios and almost always call; others have high ratios and almost never do. The equilibrium <span>&#92;(p^*&#92;)</span> describes the average behavior of this population.
+Two interpretations of the symmetric MSNE are possible. One interpretation is that each individual genuinely randomizes — flipping an internal coin with bias <span>&#92;(p^&#42;&#92;)</span> every time they witness a crime. A perhaps more natural interpretation is that <span>&#92;(p^&#42;&#92;)</span> is the **fraction of the population** that would call given their particular personal costs and values. In a large population, some people have low <span>&#92;(c/v&#92;)</span> ratios and almost always call; others have high ratios and almost never do. The equilibrium <span>&#92;(p^&#42;&#92;)</span> describes the average behavior of this population.
 
 Social psychologists have proposed three mechanisms for the bystander effect: **diffusion of responsibility** (each person feels less morally obligated when others are present), **audience inhibition** (fear of embarrassment if it turns out not to be an emergency), and **social influence** (inferring from others' inaction that intervention is unnecessary). Game theory suggests a fourth mechanism — **strategic free-riding** — that operates even when all of these psychological factors are absent. The bystander effect is a prediction of rational equilibrium behavior, and that makes it robust across a wide range of settings and motivations.
 
@@ -1808,7 +1808,7 @@ The player function <span>&#92;( P &#92;)</span> tells us who moves after any gi
 
 To make sure a set of sequences can legitimately represent the terminal histories of a game, exactly one restriction is needed: no sequence in the set may be a proper subhistory of another sequence in the set. This ensures that choosing action <span>&#92;( A &#92;)</span> cannot simultaneously end the game and leave room for further play.
 
-For a sequence <span>&#92;( (a_1, a_2, &#92;ldots, a_k) &#92;)</span>, its subhistories are the empty history <span>&#92;( &#92;emptyset &#92;)</span> and all sequences of the form <span>&#92;( (a_1, a_2, &#92;ldots, a_m) &#92;)</span> for <span>&#92;( 1 &#92;leq m &#92;leq k &#92;)</span>. Any subhistory not equal to the full sequence is a proper subhistory. So if <span>&#92;( (A, D, F) &#92;)</span> is a terminal history, none of <span>&#92;( &#92;emptyset &#92;)</span>, <span>&#92;( (A) &#92;)</span>, or <span>&#92;( (A, D) &#92;)</span> may itself be a terminal history.
+For a sequence <span>&#92;( (a&#95;1, a&#95;2, &#92;ldots, a&#95;k) &#92;)</span>, its subhistories are the empty history <span>&#92;( &#92;emptyset &#92;)</span> and all sequences of the form <span>&#92;( (a&#95;1, a&#95;2, &#92;ldots, a&#95;m) &#92;)</span> for <span>&#92;( 1 &#92;leq m &#92;leq k &#92;)</span>. Any subhistory not equal to the full sequence is a proper subhistory. So if <span>&#92;( (A, D, F) &#92;)</span> is a terminal history, none of <span>&#92;( &#92;emptyset &#92;)</span>, <span>&#92;( (A) &#92;)</span>, or <span>&#92;( (A, D) &#92;)</span> may itself be a terminal history.
 
 ### The Entry Game
 
@@ -1845,13 +1845,13 @@ The **outcome** <span>&#92;( O(s) &#92;)</span> of a strategy profile <span>&#92
 
 ### Adapting the Definition
 
-We adapt the definition of Nash equilibrium from strategic games to extensive games in a natural way. A strategy profile <span>&#92;( s^* &#92;)</span> is a **Nash equilibrium** of an extensive game with perfect information if, for every player <span>&#92;( i &#92;)</span> and every strategy <span>&#92;( r_i &#92;)</span> of player <span>&#92;( i &#92;)</span>, the outcome generated by <span>&#92;( s^* &#92;)</span> is at least as good for player <span>&#92;( i &#92;)</span> as the outcome generated when player <span>&#92;( i &#92;)</span> deviates to <span>&#92;( r_i &#92;)</span> and everyone else remains at <span>&#92;( s^* &#92;)</span>.
+We adapt the definition of Nash equilibrium from strategic games to extensive games in a natural way. A strategy profile <span>&#92;( s^&#42; &#92;)</span> is a **Nash equilibrium** of an extensive game with perfect information if, for every player <span>&#92;( i &#92;)</span> and every strategy <span>&#92;( r&#95;i &#92;)</span> of player <span>&#92;( i &#92;)</span>, the outcome generated by <span>&#92;( s^&#42; &#92;)</span> is at least as good for player <span>&#92;( i &#92;)</span> as the outcome generated when player <span>&#92;( i &#92;)</span> deviates to <span>&#92;( r&#95;i &#92;)</span> and everyone else remains at <span>&#92;( s^&#42; &#92;)</span>.
 
-**Definition 161.2.** The strategy profile <span>&#92;( s^* &#92;)</span> in an extensive game with perfect information is a Nash equilibrium if, for every player <span>&#92;( i &#92;)</span> and every strategy <span>&#92;( r_i &#92;)</span> of player <span>&#92;( i &#92;)</span>:
+**Definition 161.2.** The strategy profile <span>&#92;( s^&#42; &#92;)</span> in an extensive game with perfect information is a Nash equilibrium if, for every player <span>&#92;( i &#92;)</span> and every strategy <span>&#92;( r&#95;i &#92;)</span> of player <span>&#92;( i &#92;)</span>:
 
-<span>&#92;[ u_i\!&#92;left(O(s^*)&#92;right) \;&#92;geq\; u_i\!&#92;left(O(r_i,\, s^*_{-i})&#92;right) &#92;]</span>
+<span>&#92;[ u&#95;i\!&#92;left(O(s^&#42;)&#92;right) \;&#92;geq\; u&#95;i\!&#92;left(O(r&#95;i,\, s^&#42;&#95;{-i})&#92;right) &#92;]</span>
 
-where <span>&#92;( u_i &#92;)</span> is a payoff function representing player <span>&#92;( i &#92;)</span>'s preferences over terminal histories and <span>&#92;( O(&#92;cdot) &#92;)</span> is the outcome function. In other words, no player can make a profitable deviation, given the other players' strategies.
+where <span>&#92;( u&#95;i &#92;)</span> is a payoff function representing player <span>&#92;( i &#92;)</span>'s preferences over terminal histories and <span>&#92;( O(&#92;cdot) &#92;)</span> is the outcome function. In other words, no player can make a profitable deviation, given the other players' strategies.
 
 ### The Strategic Form of an Extensive Game
 
@@ -1937,17 +1937,17 @@ Two important notes. First, the subgame following the **empty history** <span>&#
 
 For the five-terminal-history game introduced in Section 1 (with player function <span>&#92;( P(&#92;emptyset)=1 &#92;)</span>, <span>&#92;( P(A)=2 &#92;)</span>, <span>&#92;( P(A,D)=1 &#92;)</span>, <span>&#92;( P(B)=2 &#92;)</span>), there are four nonterminal histories — <span>&#92;( &#92;emptyset &#92;)</span>, <span>&#92;( (A) &#92;)</span>, <span>&#92;( (A,D) &#92;)</span>, <span>&#92;( (B) &#92;)</span> — and therefore four subgames.
 
-### The Notation <span>&#92;( O_h(s) &#92;)</span>
+### The Notation <span>&#92;( O&#95;h(s) &#92;)</span>
 
-Before stating the formal definition, we introduce notation for the outcome of a strategy profile within a subgame. Let <span>&#92;( h &#92;)</span> be a history (not necessarily on the path generated by <span>&#92;( s &#92;)</span>) and let <span>&#92;( s &#92;)</span> be a strategy profile. Suppose history <span>&#92;( h &#92;)</span> occurs and the players thereafter follow <span>&#92;( s &#92;)</span>. Denote by <span>&#92;( O_h(s) &#92;)</span> the resulting terminal history: it consists of <span>&#92;( h &#92;)</span> followed by the path generated by <span>&#92;( s &#92;)</span> in the subgame <span>&#92;( &#92;Gamma(h) &#92;)</span>. Note that <span>&#92;( O_&#92;emptyset(s) = O(s) &#92;)</span>.
+Before stating the formal definition, we introduce notation for the outcome of a strategy profile within a subgame. Let <span>&#92;( h &#92;)</span> be a history (not necessarily on the path generated by <span>&#92;( s &#92;)</span>) and let <span>&#92;( s &#92;)</span> be a strategy profile. Suppose history <span>&#92;( h &#92;)</span> occurs and the players thereafter follow <span>&#92;( s &#92;)</span>. Denote by <span>&#92;( O&#95;h(s) &#92;)</span> the resulting terminal history: it consists of <span>&#92;( h &#92;)</span> followed by the path generated by <span>&#92;( s &#92;)</span> in the subgame <span>&#92;( &#92;Gamma(h) &#92;)</span>. Note that <span>&#92;( O&#95;&#92;emptyset(s) = O(s) &#92;)</span>.
 
 ### Formal Definition of SPE
 
-**Definition 166.1.** The strategy profile <span>&#92;( s^* &#92;)</span> in an extensive game with perfect information is a **subgame perfect equilibrium (SPE)** if, for every player <span>&#92;( i &#92;)</span>, every history <span>&#92;( h &#92;)</span> after which it is player <span>&#92;( i &#92;)</span>'s turn to move, and every strategy <span>&#92;( r_i &#92;)</span> of player <span>&#92;( i &#92;)</span>:
+**Definition 166.1.** The strategy profile <span>&#92;( s^&#42; &#92;)</span> in an extensive game with perfect information is a **subgame perfect equilibrium (SPE)** if, for every player <span>&#92;( i &#92;)</span>, every history <span>&#92;( h &#92;)</span> after which it is player <span>&#92;( i &#92;)</span>'s turn to move, and every strategy <span>&#92;( r&#95;i &#92;)</span> of player <span>&#92;( i &#92;)</span>:
 
-<span>&#92;[ u_i\!&#92;left(O_h(s^*)&#92;right) \;&#92;geq\; u_i\!&#92;left(O_h(r_i,\, s^*_{-i})&#92;right) &#92;]</span>
+<span>&#92;[ u&#95;i\!&#92;left(O&#95;h(s^&#42;)&#92;right) \;&#92;geq\; u&#95;i\!&#92;left(O&#95;h(r&#95;i,\, s^&#42;&#95;{-i})&#92;right) &#92;]</span>
 
-In plain language: in every subgame, the player who moves first at the start of that subgame cannot profitably deviate from <span>&#92;( s^* &#92;)</span>, given that all other players adhere to <span>&#92;( s^* &#92;)</span>. Crucially, this must hold in every subgame — not only in subgames that are actually reached under <span>&#92;( s^* &#92;)</span>.
+In plain language: in every subgame, the player who moves first at the start of that subgame cannot profitably deviate from <span>&#92;( s^&#42; &#92;)</span>, given that all other players adhere to <span>&#92;( s^&#42; &#92;)</span>. Crucially, this must hold in every subgame — not only in subgames that are actually reached under <span>&#92;( s^&#42; &#92;)</span>.
 
 A practical implication for checking SPE: you only need to verify that the player who **moves first** in each subgame is acting optimally. Players who move second, third, and so on in a given subgame are themselves moving first in smaller subgames that will be checked separately.
 
@@ -2077,9 +2077,9 @@ This example illustrates the general rule: whenever backward induction reveals a
 
 ## Section 5: The One-Deviation Property
 
-A powerful tool for verifying SPE in more complex games (including infinite-horizon games where backward induction cannot be applied directly) is the **one-deviation property**. It states that a strategy profile <span>&#92;( s^* &#92;)</span> is a subgame perfect equilibrium if and only if no player can profitably deviate at any single history while following <span>&#92;( s^* &#92;)</span> everywhere else — including everywhere else in the continuation after that history.
+A powerful tool for verifying SPE in more complex games (including infinite-horizon games where backward induction cannot be applied directly) is the **one-deviation property**. It states that a strategy profile <span>&#92;( s^&#42; &#92;)</span> is a subgame perfect equilibrium if and only if no player can profitably deviate at any single history while following <span>&#92;( s^&#42; &#92;)</span> everywhere else — including everywhere else in the continuation after that history.
 
-More precisely: <span>&#92;( s^* &#92;)</span> is an SPE if and only if there is no player <span>&#92;( i &#92;)</span> and no history <span>&#92;( h &#92;)</span> after which it is player <span>&#92;( i &#92;)</span>'s turn to move such that player <span>&#92;( i &#92;)</span> can gain by choosing a different action at <span>&#92;( h &#92;)</span> alone — while adhering to <span>&#92;( s^*_i &#92;)</span> at all subsequent histories and while all other players follow <span>&#92;( s^*_{-i} &#92;)</span>.
+More precisely: <span>&#92;( s^&#42; &#92;)</span> is an SPE if and only if there is no player <span>&#92;( i &#92;)</span> and no history <span>&#92;( h &#92;)</span> after which it is player <span>&#92;( i &#92;)</span>'s turn to move such that player <span>&#92;( i &#92;)</span> can gain by choosing a different action at <span>&#92;( h &#92;)</span> alone — while adhering to <span>&#92;( s^&#42;&#95;i &#92;)</span> at all subsequent histories and while all other players follow <span>&#92;( s^&#42;&#95;{-i} &#92;)</span>.
 
 The value of the one-deviation property is that it reduces the SPE verification problem to a collection of local, one-step deviations. Rather than comparing a player's strategy in a subgame against every possible alternative strategy in that subgame (which can be a vast set), it suffices to check that no single-action deviation is profitable at any individual history. This makes the property particularly useful when strategies must be verified in infinite-horizon settings, where "every alternative strategy" is an uncountably infinite object.
 
@@ -2103,33 +2103,33 @@ The **Nash equilibrium** concept carries over directly via the strategic form: t
 
 Cournot's model assumes firms set quantities simultaneously. In many markets, one firm commits first — perhaps through public announcements, capacity investments, or simply by being an incumbent. The **Stackelberg model** captures this sequential structure: Firm 1 (the leader) chooses its output first, then Firm 2 (the follower) observes Firm 1's output and responds.
 
-This is the Cournot game played as an extensive game. The player function is <span>&#92;(P(&#92;emptyset) = 1&#92;)</span> and <span>&#92;(P(q_1) = 2&#92;)</span> for all <span>&#92;(q_1 &#92;geq 0&#92;)</span>. Firm 1's strategy is simply an output level <span>&#92;(q_1&#92;)</span>. Firm 2's strategy is a function <span>&#92;(b_2 : &#92;mathbb{R}_+ &#92;to &#92;mathbb{R}_+&#92;)</span> mapping any possible Firm 1 output to Firm 2's response.
+This is the Cournot game played as an extensive game. The player function is <span>&#92;(P(&#92;emptyset) = 1&#92;)</span> and <span>&#92;(P(q&#95;1) = 2&#92;)</span> for all <span>&#92;(q&#95;1 &#92;geq 0&#92;)</span>. Firm 1's strategy is simply an output level <span>&#92;(q&#95;1&#92;)</span>. Firm 2's strategy is a function <span>&#92;(b&#95;2 : &#92;mathbb{R}&#95;+ &#92;to &#92;mathbb{R}&#95;+&#92;)</span> mapping any possible Firm 1 output to Firm 2's response.
 
 The game has a finite horizon; we find the SPE by backward induction.
 
 ## Firm 2's Best Response
 
-In the subgame following history <span>&#92;(q_1&#92;)</span>, Firm 2 maximizes its profit:
+In the subgame following history <span>&#92;(q&#95;1&#92;)</span>, Firm 2 maximizes its profit:
 
-<span>&#92;[&#92;pi_2(q_1, q_2) = q_2(&#92;alpha - c - q_1 - q_2)&#92;]</span>
+<span>&#92;[&#92;pi&#95;2(q&#95;1, q&#95;2) = q&#95;2(&#92;alpha - c - q&#95;1 - q&#95;2)&#92;]</span>
 
 This is exactly the Cournot best response problem. The solution is:
 
-<span>&#92;[b_2(q_1) = &#92;frac{1}{2}(&#92;alpha - c - q_1) &#92;quad &#92;text{for } q_1 &#92;leq &#92;alpha - c&#92;]</span>
+<span>&#92;[b&#95;2(q&#95;1) = &#92;frac{1}{2}(&#92;alpha - c - q&#95;1) &#92;quad &#92;text{for } q&#95;1 &#92;leq &#92;alpha - c&#92;]</span>
 
-In any SPE, Firm 2's strategy is this function <span>&#92;(b_2&#92;)</span>.
+In any SPE, Firm 2's strategy is this function <span>&#92;(b&#95;2&#92;)</span>.
 
 ## Firm 1's Optimal Output
 
-Given that Firm 2 will use strategy <span>&#92;(b_2&#92;)</span>, Firm 1 substitutes to find its own optimal output. Firm 1's effective profit is:
+Given that Firm 2 will use strategy <span>&#92;(b&#95;2&#92;)</span>, Firm 1 substitutes to find its own optimal output. Firm 1's effective profit is:
 
-<span>&#92;[&#92;pi_1 = q_1 &#92;cdot (&#92;alpha - c - q_1 - b_2(q_1)) = q_1&#92;left(&#92;alpha - c - q_1 - &#92;frac{&#92;alpha - c - q_1}{2}&#92;right) = &#92;frac{1}{2}q_1(&#92;alpha - c - q_1)&#92;]</span>
+<span>&#92;[&#92;pi&#95;1 = q&#95;1 &#92;cdot (&#92;alpha - c - q&#95;1 - b&#95;2(q&#95;1)) = q&#95;1&#92;left(&#92;alpha - c - q&#95;1 - &#92;frac{&#92;alpha - c - q&#95;1}{2}&#92;right) = &#92;frac{1}{2}q&#95;1(&#92;alpha - c - q&#95;1)&#92;]</span>
 
-Maximizing over <span>&#92;(q_1&#92;)</span>:
+Maximizing over <span>&#92;(q&#95;1&#92;)</span>:
 
-<span>&#92;[&#92;frac{d&#92;pi_1}{dq_1} = &#92;frac{1}{2}(&#92;alpha - c - 2q_1) = 0 &#92;implies q_1^* = &#92;frac{1}{2}(&#92;alpha - c)&#92;]</span>
+<span>&#92;[&#92;frac{d&#92;pi&#95;1}{dq&#95;1} = &#92;frac{1}{2}(&#92;alpha - c - 2q&#95;1) = 0 &#92;implies q&#95;1^&#42; = &#92;frac{1}{2}(&#92;alpha - c)&#92;]</span>
 
-Firm 2 then produces <span>&#92;(q_2^* = b_2(q_1^*) = &#92;frac{1}{4}(&#92;alpha - c)&#92;)</span>.
+Firm 2 then produces <span>&#92;(q&#95;2^&#42; = b&#95;2(q&#95;1^&#42;) = &#92;frac{1}{4}(&#92;alpha - c)&#92;)</span>.
 
 ## Comparing Cournot and Stackelberg
 
@@ -2167,7 +2167,7 @@ The leader produces more and earns more; the follower produces less and earns le
 
 ## Commitment Value
 
-Crucially, in the Stackelberg SPE, Firm 1 is not playing a best response to Firm 2's equilibrium output <span>&#92;(q_2^*&#92;)</span>. The Cournot best response to <span>&#92;(q_2^* = &#92;frac{1}{4}(&#92;alpha-c)&#92;)</span> would call for Firm 1 to produce <span>&#92;(b_1(q_2^*) = &#92;frac{3}{8}(&#92;alpha-c)&#92;)</span>, less than <span>&#92;(q_1^* = &#92;frac{1}{2}(&#92;alpha-c)&#92;)</span>. Why does Firm 1 overproduce? Because it is playing a best response not to Firm 2's equilibrium *output*, but to Firm 2's equilibrium *strategy* <span>&#92;(b_2&#92;)</span>. Firm 1 knows that any increase in its output will cause Firm 2 to reduce its output. The value of moving first comes entirely from the ability to **commit**: Firm 1's output choice in period 1 cannot be revised after Firm 2 responds.
+Crucially, in the Stackelberg SPE, Firm 1 is not playing a best response to Firm 2's equilibrium output <span>&#92;(q&#95;2^&#42;&#92;)</span>. The Cournot best response to <span>&#92;(q&#95;2^&#42; = &#92;frac{1}{4}(&#92;alpha-c)&#92;)</span> would call for Firm 1 to produce <span>&#92;(b&#95;1(q&#95;2^&#42;) = &#92;frac{3}{8}(&#92;alpha-c)&#92;)</span>, less than <span>&#92;(q&#95;1^&#42; = &#92;frac{1}{2}(&#92;alpha-c)&#92;)</span>. Why does Firm 1 overproduce? Because it is playing a best response not to Firm 2's equilibrium *output*, but to Firm 2's equilibrium *strategy* <span>&#92;(b&#95;2&#92;)</span>. Firm 1 knows that any increase in its output will cause Firm 2 to reduce its output. The value of moving first comes entirely from the ability to **commit**: Firm 1's output choice in period 1 cannot be revised after Firm 2 responds.
 
 If Firm 1 could freely revise its output after seeing Firm 2's response, the game would collapse to Cournot — the first-stage choice would be irrelevant. The first-mover advantage is generated by *credible commitment*.
 
@@ -2226,9 +2226,9 @@ Despite this divergence between theory and experiment, the ultimatum game remain
 
 The ultimatum game teaches us that the ability to make a credible take-it-or-leave-it offer is enormously valuable. This has a disturbing implication when one party must invest *before* the pie is divided.
 
-Consider an ultimatum game that is preceded by a stage in which Player 2 takes an action that affects the size <span>&#92;( c &#92;)</span> of the pie subsequently divided. Player 2 can exert **low effort**, producing a small pie of size <span>&#92;( c_L &#92;)</span>, or **high effort**, producing a large pie of size <span>&#92;( c_H &#92;)</span>. Because effort is costly, Player 2's payoff is <span>&#92;( x - L &#92;)</span> if she chooses low effort and <span>&#92;( x - H &#92;)</span> if she chooses high effort, where <span>&#92;( H > L &#92;)</span> and <span>&#92;( x &#92;)</span> is whatever she receives from Player 1's offer. After Player 2 commits to an effort level, Player 1 observes this choice and then proposes how to divide the resulting pie. Player 2 can then accept or reject exactly as in the ultimatum game.
+Consider an ultimatum game that is preceded by a stage in which Player 2 takes an action that affects the size <span>&#92;( c &#92;)</span> of the pie subsequently divided. Player 2 can exert **low effort**, producing a small pie of size <span>&#92;( c&#95;L &#92;)</span>, or **high effort**, producing a large pie of size <span>&#92;( c&#95;H &#92;)</span>. Because effort is costly, Player 2's payoff is <span>&#92;( x - L &#92;)</span> if she chooses low effort and <span>&#92;( x - H &#92;)</span> if she chooses high effort, where <span>&#92;( H > L &#92;)</span> and <span>&#92;( x &#92;)</span> is whatever she receives from Player 1's offer. After Player 2 commits to an effort level, Player 1 observes this choice and then proposes how to divide the resulting pie. Player 2 can then accept or reject exactly as in the ultimatum game.
 
-The game tree branches first on Player 2's effort choice (L or H), then on Player 1's offer (any <span>&#92;( x &#92;)</span> between zero and <span>&#92;( c_L &#92;)</span> or <span>&#92;( c_H &#92;)</span> as appropriate), and finally on Player 2's accept/reject decision. This game is infinitely wide, since Player 1 can make any offer on a continuum, but it has a finite horizon of length three, so backward induction applies.
+The game tree branches first on Player 2's effort choice (L or H), then on Player 1's offer (any <span>&#92;( x &#92;)</span> between zero and <span>&#92;( c&#95;L &#92;)</span> or <span>&#92;( c&#95;H &#92;)</span> as appropriate), and finally on Player 2's accept/reject decision. This game is infinitely wide, since Player 1 can make any offer on a continuum, but it has a finite horizon of length three, so backward induction applies.
 
 ### Backward Induction
 
@@ -2242,7 +2242,7 @@ The **unique SPE of the holdup game** is: Player 1 offers zero after both the hi
 
 ### Why This Is Economically Dismal
 
-This result is troubling for two distinct reasons. It is distributively unfair — Player 2 bears all the costs while Player 1 captures all the surplus — but it is also **inefficient**. Even in cases where it would be socially optimal for Player 2 to exert high effort, she will not do so, because she anticipates that once the effort is sunk, Player 1 can extract all the gains. The result holds even when <span>&#92;( c_H &#92;)</span> is vastly larger than <span>&#92;( c_L &#92;)</span> and the cost difference between high and low effort is only a tiny <span>&#92;( &#92;epsilon &#92;)</span>. The economy loses all those gains simply because of the bargaining structure.
+This result is troubling for two distinct reasons. It is distributively unfair — Player 2 bears all the costs while Player 1 captures all the surplus — but it is also **inefficient**. Even in cases where it would be socially optimal for Player 2 to exert high effort, she will not do so, because she anticipates that once the effort is sunk, Player 1 can extract all the gains. The result holds even when <span>&#92;( c&#95;H &#92;)</span> is vastly larger than <span>&#92;( c&#95;L &#92;)</span> and the cost difference between high and low effort is only a tiny <span>&#92;( &#92;epsilon &#92;)</span>. The economy loses all those gains simply because of the bargaining structure.
 
 Nor does the problem require such an extreme split. Even if the pie is divided fifty-fifty, a player who must invest knowing that half the benefits will accrue to her counterpart may underinvest or not invest at all. The **holdup problem** — the general phenomenon of underinvestment driven by the fear of expropriation after costs are sunk — is one of the most important concepts in economics. It explains reluctance to invest in relationship-specific assets without contractual protection, problems in joint ventures and long-term supplier relationships, and difficulties in employment relationships when workers must acquire firm-specific skills.
 
@@ -2268,24 +2268,24 @@ Without discounting the answer is no. Consider a two-period game: Player 1 propo
 
 ### Adding Time Discounting
 
-The key ingredient for a balanced outcome is **time discounting**. Receiving the pie next period is worth less than receiving it today. Formally, Player <span>&#92;( i &#92;)</span> has a **discount factor** <span>&#92;( &#92;delta_i &#92;in (0, 1) &#92;)</span>: she regards obtaining a payoff of 1 after a one-period delay as equivalent to obtaining <span>&#92;( &#92;delta_i &#92;)</span> today. A smaller <span>&#92;( &#92;delta_i &#92;)</span> means greater impatience. We normalise the pie to size 1, so a **proposal** is a pair <span>&#92;( x = (x_1, x_2) &#92;)</span> with <span>&#92;( x_1 + x_2 = 1 &#92;)</span> and <span>&#92;( x_i &#92;geq 0 &#92;)</span>.
+The key ingredient for a balanced outcome is **time discounting**. Receiving the pie next period is worth less than receiving it today. Formally, Player <span>&#92;( i &#92;)</span> has a **discount factor** <span>&#92;( &#92;delta&#95;i &#92;in (0, 1) &#92;)</span>: she regards obtaining a payoff of 1 after a one-period delay as equivalent to obtaining <span>&#92;( &#92;delta&#95;i &#92;)</span> today. A smaller <span>&#92;( &#92;delta&#95;i &#92;)</span> means greater impatience. We normalise the pie to size 1, so a **proposal** is a pair <span>&#92;( x = (x&#95;1, x&#95;2) &#92;)</span> with <span>&#92;( x&#95;1 + x&#95;2 = 1 &#92;)</span> and <span>&#92;( x&#95;i &#92;geq 0 &#92;)</span>.
 
-**Two periods with discounting.** Player 1 proposes in Period 1; if rejected, Player 2 proposes in Period 2; if rejected again, both get zero, but now Period 2 payoffs are discounted. In Period 2, Player 2 is again the ultimatum-maker and proposes <span>&#92;( y = (0, 1) &#92;)</span>, keeping the whole pie. From the perspective of Period 1, this proposal is worth <span>&#92;( (&#92;delta_1 &#92;cdot 0,\, &#92;delta_2 &#92;cdot 1) = (0, &#92;delta_2) &#92;)</span> to the two players. Player 2 will therefore only accept Player 1's Period-1 offer if she receives at least <span>&#92;( &#92;delta_2 &#92;)</span>. Player 1 optimally offers exactly <span>&#92;( &#92;delta_2 &#92;)</span> to Player 2, keeping <span>&#92;( 1 - &#92;delta_2 &#92;)</span> for herself. The SPE outcome is the proposal <span>&#92;[ x = (1 - &#92;delta_2,\; &#92;delta_2), &#92;]</span> which Player 2 accepts in Period 1. Player 2's impatience — the fact that she discounts the future — is what gives Player 1 a strictly positive payoff. Player 2's threat to reject is only credible if she is offered less than <span>&#92;( &#92;delta_2 &#92;)</span>, so Player 1 never needs to offer more.
+**Two periods with discounting.** Player 1 proposes in Period 1; if rejected, Player 2 proposes in Period 2; if rejected again, both get zero, but now Period 2 payoffs are discounted. In Period 2, Player 2 is again the ultimatum-maker and proposes <span>&#92;( y = (0, 1) &#92;)</span>, keeping the whole pie. From the perspective of Period 1, this proposal is worth <span>&#92;( (&#92;delta&#95;1 &#92;cdot 0,\, &#92;delta&#95;2 &#92;cdot 1) = (0, &#92;delta&#95;2) &#92;)</span> to the two players. Player 2 will therefore only accept Player 1's Period-1 offer if she receives at least <span>&#92;( &#92;delta&#95;2 &#92;)</span>. Player 1 optimally offers exactly <span>&#92;( &#92;delta&#95;2 &#92;)</span> to Player 2, keeping <span>&#92;( 1 - &#92;delta&#95;2 &#92;)</span> for herself. The SPE outcome is the proposal <span>&#92;[ x = (1 - &#92;delta&#95;2,\; &#92;delta&#95;2), &#92;]</span> which Player 2 accepts in Period 1. Player 2's impatience — the fact that she discounts the future — is what gives Player 1 a strictly positive payoff. Player 2's threat to reject is only credible if she is offered less than <span>&#92;( &#92;delta&#95;2 &#92;)</span>, so Player 1 never needs to offer more.
 
-**Three periods with discounting.** Now Player 1 proposes in Period 1, Player 2 counter-proposes in Period 2 if rejected, and Player 1 counter-proposes in Period 3 if rejected again. Any subgame starting in Period 2 is a two-period discounted bargaining game with Player 2 as first proposer, which we have just solved. In that subgame, Player 2 offers <span>&#92;( (&#92;delta_1, 1 - &#92;delta_1) &#92;)</span> and Player 1 accepts. From the perspective of Period 1, if Player 1's opening offer is rejected, the continuation payoffs are <span>&#92;( (&#92;delta_1^2,\; &#92;delta_2(1-&#92;delta_1)) &#92;)</span>. Player 2 will accept Player 1's Period-1 offer only if it gives her at least <span>&#92;( &#92;delta_2(1 - &#92;delta_1) &#92;)</span>. Player 1 therefore offers exactly that, keeping <span>&#92;[ x_1 = 1 - &#92;delta_2(1 - &#92;delta_1). &#92;]</span> The three-period SPE outcome is <span>&#92;( x = (1 - &#92;delta_2(1-&#92;delta_1),\; &#92;delta_2(1-&#92;delta_1)) &#92;)</span>.
+**Three periods with discounting.** Now Player 1 proposes in Period 1, Player 2 counter-proposes in Period 2 if rejected, and Player 1 counter-proposes in Period 3 if rejected again. Any subgame starting in Period 2 is a two-period discounted bargaining game with Player 2 as first proposer, which we have just solved. In that subgame, Player 2 offers <span>&#92;( (&#92;delta&#95;1, 1 - &#92;delta&#95;1) &#92;)</span> and Player 1 accepts. From the perspective of Period 1, if Player 1's opening offer is rejected, the continuation payoffs are <span>&#92;( (&#92;delta&#95;1^2,\; &#92;delta&#95;2(1-&#92;delta&#95;1)) &#92;)</span>. Player 2 will accept Player 1's Period-1 offer only if it gives her at least <span>&#92;( &#92;delta&#95;2(1 - &#92;delta&#95;1) &#92;)</span>. Player 1 therefore offers exactly that, keeping <span>&#92;[ x&#95;1 = 1 - &#92;delta&#95;2(1 - &#92;delta&#95;1). &#92;]</span> The three-period SPE outcome is <span>&#92;( x = (1 - &#92;delta&#95;2(1-&#92;delta&#95;1),\; &#92;delta&#95;2(1-&#92;delta&#95;1)) &#92;)</span>.
 
 ### The Pattern as Periods Increase
 
-Extending this backward induction to <span>&#92;( n &#92;)</span> periods generates a recursive pattern in Player 2's equilibrium payoff. The table below, reproduced from the slides for the two discount-factor cases <span>&#92;( &#92;delta_1 = &#92;delta_2 = 0.9 &#92;)</span> and <span>&#92;( &#92;delta_1 = &#92;delta_2 = 0.5 &#92;)</span>, illustrates the convergence.
+Extending this backward induction to <span>&#92;( n &#92;)</span> periods generates a recursive pattern in Player 2's equilibrium payoff. The table below, reproduced from the slides for the two discount-factor cases <span>&#92;( &#92;delta&#95;1 = &#92;delta&#95;2 = 0.9 &#92;)</span> and <span>&#92;( &#92;delta&#95;1 = &#92;delta&#95;2 = 0.5 &#92;)</span>, illustrates the convergence.
 
 | <span>&#92;( n &#92;)</span> | Player 2 payoff (formula) | <span>&#92;( &#92;delta=0.9 &#92;)</span> | <span>&#92;( &#92;delta=0.5 &#92;)</span> |
 |---|---|---|---|
 | 1 | <span>&#92;( 0 &#92;)</span> | 0 | 0 |
-| 2 | <span>&#92;( &#92;delta_2 &#92;)</span> | 0.9 | 0.5 |
-| 3 | <span>&#92;( &#92;delta_2(1-&#92;delta_1) &#92;)</span> | 0.09 | 0.25 |
-| 4 | <span>&#92;( &#92;delta_2(1-&#92;delta_1(1-&#92;delta_2)) &#92;)</span> | 0.819 | 0.375 |
-| 5 | <span>&#92;( &#92;delta_2(1-&#92;delta_1(1-&#92;delta_2(1-&#92;delta_1))) &#92;)</span> | 0.181 | 0.281 |
-| 6 | <span>&#92;( &#92;delta_2(1-&#92;delta_1(1-&#92;delta_2(1-&#92;delta_1(1-&#92;delta_2)))) &#92;)</span> | 0.753 | 0.344 |
+| 2 | <span>&#92;( &#92;delta&#95;2 &#92;)</span> | 0.9 | 0.5 |
+| 3 | <span>&#92;( &#92;delta&#95;2(1-&#92;delta&#95;1) &#92;)</span> | 0.09 | 0.25 |
+| 4 | <span>&#92;( &#92;delta&#95;2(1-&#92;delta&#95;1(1-&#92;delta&#95;2)) &#92;)</span> | 0.819 | 0.375 |
+| 5 | <span>&#92;( &#92;delta&#95;2(1-&#92;delta&#95;1(1-&#92;delta&#95;2(1-&#92;delta&#95;1))) &#92;)</span> | 0.181 | 0.281 |
+| 6 | <span>&#92;( &#92;delta&#95;2(1-&#92;delta&#95;1(1-&#92;delta&#95;2(1-&#92;delta&#95;1(1-&#92;delta&#95;2)))) &#92;)</span> | 0.753 | 0.344 |
 
 Two trends are visible. First, the player who makes the last offer still benefits — Player 2's payoff oscillates depending on whether the final period belongs to her. Second, and crucially, this last-offer advantage **shrinks** as the number of rounds increases. With <span>&#92;( &#92;delta = 0.9 &#92;)</span> the oscillations are wild and slow to converge, while with <span>&#92;( &#92;delta = 0.5 &#92;)</span> they dampen faster. As <span>&#92;( n &#92;to &#92;infty &#92;)</span>, the payoffs converge to a limit that no longer depends on who has the last offer — and that limit is precisely what the infinite-horizon model delivers.
 
@@ -2301,11 +2301,11 @@ The **Bargaining Game of Alternating Offers**, developed by Ariel Rubinstein (an
 
 **Players:** two people, Player 1 and Player 2.
 
-**Terminal histories:** any sequence of the form <span>&#92;( (x^1, N, x^2, N, &#92;ldots, x^t, Y) &#92;)</span> for <span>&#92;( t &#92;geq 1 &#92;)</span>, where each <span>&#92;( x^r = (x^r_1, x^r_2) &#92;)</span> is a division of the pie (two numbers summing to 1), together with the infinite sequence <span>&#92;( (x^1, N, x^2, N, x^3, N, &#92;ldots) &#92;)</span> of perpetual disagreement.
+**Terminal histories:** any sequence of the form <span>&#92;( (x^1, N, x^2, N, &#92;ldots, x^t, Y) &#92;)</span> for <span>&#92;( t &#92;geq 1 &#92;)</span>, where each <span>&#92;( x^r = (x^r&#95;1, x^r&#95;2) &#92;)</span> is a division of the pie (two numbers summing to 1), together with the infinite sequence <span>&#92;( (x^1, N, x^2, N, x^3, N, &#92;ldots) &#92;)</span> of perpetual disagreement.
 
 **Player function:** <span>&#92;( P(&#92;emptyset) = 1 &#92;)</span> (Player 1 opens). After the history <span>&#92;( (x^1, N, &#92;ldots, x^t) &#92;)</span>, it is Player 1's turn to respond if <span>&#92;( t &#92;)</span> is even and Player 2's turn if <span>&#92;( t &#92;)</span> is odd. After a rejection appended to such a history, the same assignment determines who makes the next proposal.
 
-**Preferences:** if agreement <span>&#92;( x^t &#92;)</span> is reached in period <span>&#92;( t &#92;)</span>, player <span>&#92;( i &#92;)</span> receives <span>&#92;( &#92;delta_i^{t-1} x_i^t &#92;)</span>, where <span>&#92;( &#92;delta_i &#92;in (0,1) &#92;)</span> is her discount factor. The infinite disagreement history gives both players a payoff of zero, since the discount factors drive any delayed payoff to zero in the limit.
+**Preferences:** if agreement <span>&#92;( x^t &#92;)</span> is reached in period <span>&#92;( t &#92;)</span>, player <span>&#92;( i &#92;)</span> receives <span>&#92;( &#92;delta&#95;i^{t-1} x&#95;i^t &#92;)</span>, where <span>&#92;( &#92;delta&#95;i &#92;in (0,1) &#92;)</span> is her discount factor. The infinite disagreement history gives both players a payoff of zero, since the discount factors drive any delayed payoff to zero in the limit.
 
 ### Why Backward Induction Fails
 
@@ -2315,48 +2315,48 @@ We cannot apply backward induction here: the game has no finite horizon, no last
 
 The key structural feature of this game is that it is **stationary**: every subgame that begins with Player 1 making a proposal is identical to every other such subgame (same players, same terminal histories, same player function, same preferences). The same holds for all subgames beginning with Player 2's proposal, and for all subgames beginning with a response to a given offer. Because the game looks the same every time a player is in the same situation, it is reasonable to conjecture that the SPE involves players using **stationary strategies** — always making the same proposal when it is their turn to propose, and always applying the same acceptance cutoff when it is their turn to respond.
 
-A stationary strategy for Player 1 is therefore specified by two objects: the proposal <span>&#92;( x^* = (x_1^*, x_2^*) &#92;)</span> that she always makes, and the cutoff <span>&#92;( y_1^* &#92;)</span> such that she accepts any offer <span>&#92;( y &#92;)</span> from Player 2 if and only if <span>&#92;( y_1 &#92;geq y_1^* &#92;)</span>. Similarly, Player 2's stationary strategy is specified by the proposal <span>&#92;( y^* = (y_1^*, y_2^*) &#92;)</span> she always makes and the cutoff <span>&#92;( x_2^* &#92;)</span> such that she accepts <span>&#92;( x &#92;)</span> if and only if <span>&#92;( x_2 &#92;geq x_2^* &#92;)</span>.
+A stationary strategy for Player 1 is therefore specified by two objects: the proposal <span>&#92;( x^&#42; = (x&#95;1^&#42;, x&#95;2^&#42;) &#92;)</span> that she always makes, and the cutoff <span>&#92;( y&#95;1^&#42; &#92;)</span> such that she accepts any offer <span>&#92;( y &#92;)</span> from Player 2 if and only if <span>&#92;( y&#95;1 &#92;geq y&#95;1^&#42; &#92;)</span>. Similarly, Player 2's stationary strategy is specified by the proposal <span>&#92;( y^&#42; = (y&#95;1^&#42;, y&#95;2^&#42;) &#92;)</span> she always makes and the cutoff <span>&#92;( x&#95;2^&#42; &#92;)</span> such that she accepts <span>&#92;( x &#92;)</span> if and only if <span>&#92;( x&#95;2 &#92;geq x&#95;2^&#42; &#92;)</span>.
 
 ### Deriving the Equilibrium
 
 From finite-horizon games we know that in every SPE, every proposal is accepted immediately. We conjecture the same holds here, which means the proposer never offers more than the other player's cutoff — offering strictly more would be leaving money on the table. This pins down:
 
-<span>&#92;[ x_2^* = w_2^* &#92;quad &#92;text{and} &#92;quad z_1^* = y_1^*, &#92;]</span>
+<span>&#92;[ x&#95;2^&#42; = w&#95;2^&#42; &#92;quad &#92;text{and} &#92;quad z&#95;1^&#42; = y&#95;1^&#42;, &#92;]</span>
 
-where <span>&#92;( w_2^* &#92;)</span> is Player 2's acceptance cutoff and <span>&#92;( z_1^* &#92;)</span> is the share Player 2 offers to Player 1. After substituting, we need to find only <span>&#92;( x_1^*, x_2^*, y_1^*, y_2^* &#92;)</span>.
+where <span>&#92;( w&#95;2^&#42; &#92;)</span> is Player 2's acceptance cutoff and <span>&#92;( z&#95;1^&#42; &#92;)</span> is the share Player 2 offers to Player 1. After substituting, we need to find only <span>&#92;( x&#95;1^&#42;, x&#95;2^&#42;, y&#95;1^&#42;, y&#95;2^&#42; &#92;)</span>.
 
-Consider the **subgame starting with Player 2 responding** to Player 1's proposal <span>&#92;( x &#92;)</span>. If Player 2 rejects, her stationary strategy calls for her to propose <span>&#92;( y^* &#92;)</span>, which Player 1 accepts (since what Player 2 offers Player 1 exactly equals Player 1's cutoff <span>&#92;( y_1^* &#92;)</span>). So rejecting yields Player 2 a payoff of <span>&#92;( y_2^* &#92;)</span>, but with a one-period delay, worth <span>&#92;( &#92;delta_2 y_2^* &#92;)</span> today. Player 2 will reject if offered less than <span>&#92;( &#92;delta_2 y_2^* &#92;)</span>. For Player 1 to optimally offer exactly Player 2's cutoff:
+Consider the **subgame starting with Player 2 responding** to Player 1's proposal <span>&#92;( x &#92;)</span>. If Player 2 rejects, her stationary strategy calls for her to propose <span>&#92;( y^&#42; &#92;)</span>, which Player 1 accepts (since what Player 2 offers Player 1 exactly equals Player 1's cutoff <span>&#92;( y&#95;1^&#42; &#92;)</span>). So rejecting yields Player 2 a payoff of <span>&#92;( y&#95;2^&#42; &#92;)</span>, but with a one-period delay, worth <span>&#92;( &#92;delta&#95;2 y&#95;2^&#42; &#92;)</span> today. Player 2 will reject if offered less than <span>&#92;( &#92;delta&#95;2 y&#95;2^&#42; &#92;)</span>. For Player 1 to optimally offer exactly Player 2's cutoff:
 
-<span>&#92;[ x_2^* = &#92;delta_2 y_2^*. &#92;]</span>
+<span>&#92;[ x&#95;2^&#42; = &#92;delta&#95;2 y&#95;2^&#42;. &#92;]</span>
 
-By a symmetric argument, considering the **subgame starting with Player 1 responding** to Player 2's proposal, Player 1 will reject if offered less than <span>&#92;( &#92;delta_1 x_1^* &#92;)</span> (the discounted value of what Player 1 gets next period after Player 2 rejects and the game continues with Player 1 proposing). Player 2 therefore offers exactly:
+By a symmetric argument, considering the **subgame starting with Player 1 responding** to Player 2's proposal, Player 1 will reject if offered less than <span>&#92;( &#92;delta&#95;1 x&#95;1^&#42; &#92;)</span> (the discounted value of what Player 1 gets next period after Player 2 rejects and the game continues with Player 1 proposing). Player 2 therefore offers exactly:
 
-<span>&#92;[ y_1^* = &#92;delta_1 x_1^*. &#92;]</span>
+<span>&#92;[ y&#95;1^&#42; = &#92;delta&#95;1 x&#95;1^&#42;. &#92;]</span>
 
 We now have **four equations in four unknowns**:
 
 <span>&#92;[
 &#92;begin{aligned}
-x_2^* &amp;= &#92;delta_2\, y_2^* &#92;\
-y_1^* &amp;= &#92;delta_1\, x_1^* &#92;\
-x_1^* + x_2^* &amp;= 1 &#92;\
-y_1^* + y_2^* &amp;= 1
+x&#95;2^&#42; &amp;= &#92;delta&#95;2\, y&#95;2^&#42; &#92;\
+y&#95;1^&#42; &amp;= &#92;delta&#95;1\, x&#95;1^&#42; &#92;\
+x&#95;1^&#42; + x&#95;2^&#42; &amp;= 1 &#92;\
+y&#95;1^&#42; + y&#95;2^&#42; &amp;= 1
 &#92;end{aligned}
 &#92;]</span>
 
 Solving these simultaneously yields the unique solution:
 
 <span>&#92;[
-x_1^* = &#92;frac{1 - &#92;delta_2}{1 - &#92;delta_1&#92;delta_2}, &#92;qquad x_2^* = &#92;frac{&#92;delta_2(1-&#92;delta_1)}{1-&#92;delta_1&#92;delta_2},
+x&#95;1^&#42; = &#92;frac{1 - &#92;delta&#95;2}{1 - &#92;delta&#95;1&#92;delta&#95;2}, &#92;qquad x&#95;2^&#42; = &#92;frac{&#92;delta&#95;2(1-&#92;delta&#95;1)}{1-&#92;delta&#95;1&#92;delta&#95;2},
 &#92;]</span>
 
 and correspondingly:
 
 <span>&#92;[
-y_1^* = &#92;frac{&#92;delta_1(1-&#92;delta_2)}{1-&#92;delta_1&#92;delta_2}, &#92;qquad y_2^* = &#92;frac{1 - &#92;delta_1}{1 - &#92;delta_1&#92;delta_2}.
+y&#95;1^&#42; = &#92;frac{&#92;delta&#95;1(1-&#92;delta&#95;2)}{1-&#92;delta&#95;1&#92;delta&#95;2}, &#92;qquad y&#95;2^&#42; = &#92;frac{1 - &#92;delta&#95;1}{1 - &#92;delta&#95;1&#92;delta&#95;2}.
 &#92;]</span>
 
-**Proposition 471.3.** *The bargaining game of alternating offers has a unique subgame perfect equilibrium. In it, Player 1 always proposes <span>&#92;( x^* &#92;)</span> and accepts any offer <span>&#92;( y &#92;)</span> such that <span>&#92;( y_1 &#92;geq y_1^* &#92;)</span>; Player 2 always proposes <span>&#92;( y^* &#92;)</span> and accepts any offer <span>&#92;( x &#92;)</span> such that <span>&#92;( x_2 &#92;geq x_2^* &#92;)</span>, where <span>&#92;( x^* &#92;)</span> and <span>&#92;( y^* &#92;)</span> are as given above.*
+**Proposition 471.3.** *The bargaining game of alternating offers has a unique subgame perfect equilibrium. In it, Player 1 always proposes <span>&#92;( x^&#42; &#92;)</span> and accepts any offer <span>&#92;( y &#92;)</span> such that <span>&#92;( y&#95;1 &#92;geq y&#95;1^&#42; &#92;)</span>; Player 2 always proposes <span>&#92;( y^&#42; &#92;)</span> and accepts any offer <span>&#92;( x &#92;)</span> such that <span>&#92;( x&#95;2 &#92;geq x&#95;2^&#42; &#92;)</span>, where <span>&#92;( x^&#42; &#92;)</span> and <span>&#92;( y^&#42; &#92;)</span> are as given above.*
 
 ---
 
@@ -2364,7 +2364,7 @@ y_1^* = &#92;frac{&#92;delta_1(1-&#92;delta_2)}{1-&#92;delta_1&#92;delta_2}, &#9
 
 ### The Tool
 
-We arrived at Proposition 471.3 through a series of educated guesses — stationarity, immediate acceptance, exact indifference offers. We now need to verify that the resulting strategy profile <span>&#92;( s^* &#92;)</span> is indeed a subgame perfect equilibrium. The tool for this is the **one-deviation property (ODP)**.
+We arrived at Proposition 471.3 through a series of educated guesses — stationarity, immediate acceptance, exact indifference offers. We now need to verify that the resulting strategy profile <span>&#92;( s^&#42; &#92;)</span> is indeed a subgame perfect equilibrium. The tool for this is the **one-deviation property (ODP)**.
 
 **Definition.** A strategy profile satisfies the one-deviation property if no player can increase her payoff by changing her action at the start of any subgame in which she is the first mover, given the other player's strategies and the rest of her own strategy.
 
@@ -2385,41 +2385,41 @@ For <span>&#92;( C&#92;text{-}E&#92;text{-}G &#92;)</span> to satisfy the ODP, w
 
 For <span>&#92;( C&#92;text{-}E&#92;text{-}G &#92;)</span> to be a SPE, we additionally need that no multi-step deviation is profitable, including switching to D-F-H (requiring <span>&#92;( w &#92;geq z &#92;)</span>). But the ODP conditions already give us <span>&#92;( w &#92;geq y &#92;)</span> and <span>&#92;( y &#92;geq z &#92;)</span>, which together imply <span>&#92;( w &#92;geq z &#92;)</span>. The single-deviation conditions cascade into multi-deviation conditions — that is why ODP implies SPE.
 
-### Verifying <span>&#92;( s^* &#92;)</span> in the Bargaining Game
+### Verifying <span>&#92;( s^&#42; &#92;)</span> in the Bargaining Game
 
 The bargaining game has exactly **four types of subgames**, and we must verify the ODP in each.
 
-**Type 1: Player 1 making an offer.** Under <span>&#92;( s^* &#92;)</span>, Player 1 proposes <span>&#92;( x^* &#92;)</span>, Player 2 accepts (since <span>&#92;( x_2^* &#92;)</span> equals Player 2's cutoff), and Player 1 gets <span>&#92;( x_1^* &#92;)</span>. Could Player 1 deviate profitably?
+**Type 1: Player 1 making an offer.** Under <span>&#92;( s^&#42; &#92;)</span>, Player 1 proposes <span>&#92;( x^&#42; &#92;)</span>, Player 2 accepts (since <span>&#92;( x&#95;2^&#42; &#92;)</span> equals Player 2's cutoff), and Player 1 gets <span>&#92;( x&#95;1^&#42; &#92;)</span>. Could Player 1 deviate profitably?
 
-- If Player 1 offers Player 2 *more* than <span>&#92;( x_2^* &#92;)</span>: Player 2 still accepts, but Player 1 receives less than <span>&#92;( x_1^* &#92;)</span>. Not profitable.
-- If Player 1 offers Player 2 *less* than <span>&#92;( x_2^* &#92;)</span>: Player 2 rejects (below her cutoff), then proposes <span>&#92;( y^* &#92;)</span> per her strategy, and Player 1 accepts (since <span>&#92;( y_1^* &#92;)</span> equals Player 1's cutoff). Player 1 then receives <span>&#92;( y_1^* &#92;)</span> one period later, worth <span>&#92;( &#92;delta_1 y_1^* &#92;)</span> today. One can verify from the solution equations that <span>&#92;( &#92;delta_1 y_1^* < x_1^* &#92;)</span>. Not profitable.
+- If Player 1 offers Player 2 *more* than <span>&#92;( x&#95;2^&#42; &#92;)</span>: Player 2 still accepts, but Player 1 receives less than <span>&#92;( x&#95;1^&#42; &#92;)</span>. Not profitable.
+- If Player 1 offers Player 2 *less* than <span>&#92;( x&#95;2^&#42; &#92;)</span>: Player 2 rejects (below her cutoff), then proposes <span>&#92;( y^&#42; &#92;)</span> per her strategy, and Player 1 accepts (since <span>&#92;( y&#95;1^&#42; &#92;)</span> equals Player 1's cutoff). Player 1 then receives <span>&#92;( y&#95;1^&#42; &#92;)</span> one period later, worth <span>&#92;( &#92;delta&#95;1 y&#95;1^&#42; &#92;)</span> today. One can verify from the solution equations that <span>&#92;( &#92;delta_1 y_1^* < x_1^* &#92;)</span>. Not profitable.
 
-**Type 2: Player 2 making an offer.** By a symmetric argument, under <span>&#92;( s^* &#92;)</span> Player 2 gets <span>&#92;( y_2^* &#92;)</span>. Offering Player 1 more gives Player 2 less; offering Player 1 less leads Player 1 to reject, propose <span>&#92;( x^* &#92;)</span>, Player 2 accepts, and Player 2 gets <span>&#92;( &#92;delta_2 x_2^* &#92;)</span>, which is less than <span>&#92;( y_2^* &#92;)</span> by the solution equations. Neither deviation is profitable.
+**Type 2: Player 2 making an offer.** By a symmetric argument, under <span>&#92;( s^&#42; &#92;)</span> Player 2 gets <span>&#92;( y&#95;2^&#42; &#92;)</span>. Offering Player 1 more gives Player 2 less; offering Player 1 less leads Player 1 to reject, propose <span>&#92;( x^&#42; &#92;)</span>, Player 2 accepts, and Player 2 gets <span>&#92;( &#92;delta&#95;2 x&#95;2^&#42; &#92;)</span>, which is less than <span>&#92;( y&#95;2^&#42; &#92;)</span> by the solution equations. Neither deviation is profitable.
 
-**Type 3: Player 1 responding to an offer <span>&#92;( (y_1, y_2) &#92;)</span>.** Under <span>&#92;( s^* &#92;)</span>, Player 1 applies the cutoff <span>&#92;( y_1^* &#92;)</span>. Her payoff is at least <span>&#92;( y_1^* &#92;)</span> under this rule: if she accepts it is because she is getting at least <span>&#92;( y_1^* &#92;)</span>; if she rejects, she proposes <span>&#92;( x^* &#92;)</span> next period, Player 2 accepts, and she gets <span>&#92;( &#92;delta_1 x_1^* = y_1^* &#92;)</span>. Could deviating help?
+**Type 3: Player 1 responding to an offer <span>&#92;( (y&#95;1, y&#95;2) &#92;)</span>.** Under <span>&#92;( s^&#42; &#92;)</span>, Player 1 applies the cutoff <span>&#92;( y&#95;1^&#42; &#92;)</span>. Her payoff is at least <span>&#92;( y&#95;1^&#42; &#92;)</span> under this rule: if she accepts it is because she is getting at least <span>&#92;( y&#95;1^&#42; &#92;)</span>; if she rejects, she proposes <span>&#92;( x^&#42; &#92;)</span> next period, Player 2 accepts, and she gets <span>&#92;( &#92;delta&#95;1 x&#95;1^&#42; = y&#95;1^&#42; &#92;)</span>. Could deviating help?
 
-- If Player 1 *raises* her cutoff and rejects some <span>&#92;( y_1 &#92;geq y_1^* &#92;)</span>: she then proposes <span>&#92;( x^* &#92;)</span>, gets <span>&#92;( &#92;delta_1 x_1^* = y_1^* &#92;)</span>, which is no more than <span>&#92;( y_1 &#92;)</span>. Not profitable (weakly worse).
-- If Player 1 *lowers* her cutoff and accepts some <span>&#92;( y_1 < y_1^* &#92;)</span>: she gets less than <span>&#92;( y_1^* &#92;)</span>, which is less than what rejecting would give her. Not profitable.
+- If Player 1 *raises* her cutoff and rejects some <span>&#92;( y&#95;1 &#92;geq y&#95;1^&#42; &#92;)</span>: she then proposes <span>&#92;( x^&#42; &#92;)</span>, gets <span>&#92;( &#92;delta&#95;1 x&#95;1^&#42; = y&#95;1^&#42; &#92;)</span>, which is no more than <span>&#92;( y&#95;1 &#92;)</span>. Not profitable (weakly worse).
+- If Player 1 *lowers* her cutoff and accepts some <span>&#92;( y_1 < y_1^* &#92;)</span>: she gets less than <span>&#92;( y&#95;1^&#42; &#92;)</span>, which is less than what rejecting would give her. Not profitable.
 
-**Type 4: Player 2 responding to an offer <span>&#92;( (x_1, x_2) &#92;)</span>.** By the same argument with <span>&#92;( x_2^* &#92;)</span> and <span>&#92;( &#92;delta_2 y_2^* = x_2^* &#92;)</span>: raising the cutoff and rejecting some <span>&#92;( x_2 &#92;geq x_2^* &#92;)</span> gives Player 2 at most <span>&#92;( &#92;delta_2 y_2^* = x_2^* &#92;leq x_2 &#92;)</span> (not profitable); accepting some <span>&#92;( x_2 < x_2^* &#92;)</span> gives less than <span>&#92;( x_2^* &#92;)</span> (not profitable).
+**Type 4: Player 2 responding to an offer <span>&#92;( (x&#95;1, x&#95;2) &#92;)</span>.** By the same argument with <span>&#92;( x&#95;2^&#42; &#92;)</span> and <span>&#92;( &#92;delta&#95;2 y&#95;2^&#42; = x&#95;2^&#42; &#92;)</span>: raising the cutoff and rejecting some <span>&#92;( x&#95;2 &#92;geq x&#95;2^&#42; &#92;)</span> gives Player 2 at most <span>&#92;( &#92;delta&#95;2 y&#95;2^&#42; = x&#95;2^&#42; &#92;leq x&#95;2 &#92;)</span> (not profitable); accepting some <span>&#92;( x_2 < x_2^* &#92;)</span> gives less than <span>&#92;( x&#95;2^&#42; &#92;)</span> (not profitable).
 
-In all four subgame types, the first mover cannot increase her payoff by a single deviation. The ODP is satisfied. By Propositions 438.1 and 439.2, <span>&#92;( s^* &#92;)</span> is a **subgame perfect equilibrium**. (Proving uniqueness — that no non-stationary SPE exists — is beyond the scope of this course.)
+In all four subgame types, the first mover cannot increase her payoff by a single deviation. The ODP is satisfied. By Propositions 438.1 and 439.2, <span>&#92;( s^&#42; &#92;)</span> is a **subgame perfect equilibrium**. (Proving uniqueness — that no non-stationary SPE exists — is beyond the scope of this course.)
 
 ### Properties of the Equilibrium
 
-The SPE <span>&#92;( s^* &#92;)</span> has three notable properties.
+The SPE <span>&#92;( s^&#42; &#92;)</span> has three notable properties.
 
 **Efficiency.** Player 2 accepts Player 1's very first offer. No delay occurs, no pie is wasted through discounting. This makes sense given perfect information: both players know exactly what the equilibrium outcome will be, so there is no reason to delay and lose value. Perfect information does not always guarantee efficiency (see Exercise 473.2 on constant-cost delay), but it does here.
 
-**Patience is power.** Fix <span>&#92;( &#92;delta_2 &#92;)</span> and increase <span>&#92;( &#92;delta_1 &#92;)</span> toward 1. Looking at the formula for <span>&#92;( x_1^* &#92;)</span>, Player 1's share increases. As <span>&#92;( &#92;delta_1 &#92;to 1 &#92;)</span>, <span>&#92;( x_1^* &#92;to 1 &#92;)</span>: a perfectly patient Player 1 gets the entire pie. The intuition is clear — a player who can wait indefinitely without caring about delay can credibly threaten to hold out forever, forcing the impatient opponent to capitulate. Both players are perfectly informed and recognise this, so agreement is immediate but on terms extremely favourable to the patient player.
+**Patience is power.** Fix <span>&#92;( &#92;delta&#95;2 &#92;)</span> and increase <span>&#92;( &#92;delta&#95;1 &#92;)</span> toward 1. Looking at the formula for <span>&#92;( x&#95;1^&#42; &#92;)</span>, Player 1's share increases. As <span>&#92;( &#92;delta&#95;1 &#92;to 1 &#92;)</span>, <span>&#92;( x&#95;1^&#42; &#92;to 1 &#92;)</span>: a perfectly patient Player 1 gets the entire pie. The intuition is clear — a player who can wait indefinitely without caring about delay can credibly threaten to hold out forever, forcing the impatient opponent to capitulate. Both players are perfectly informed and recognise this, so agreement is immediate but on terms extremely favourable to the patient player.
 
-**First-mover advantage vanishes with patience.** Suppose both players are equally patient: <span>&#92;( &#92;delta_1 = &#92;delta_2 = &#92;delta &#92;)</span>. Then the only asymmetry is that Player 1 moves first. Substituting into the formula:
+**First-mover advantage vanishes with patience.** Suppose both players are equally patient: <span>&#92;( &#92;delta&#95;1 = &#92;delta&#95;2 = &#92;delta &#92;)</span>. Then the only asymmetry is that Player 1 moves first. Substituting into the formula:
 
 <span>&#92;[
-x_1^* = &#92;frac{1 - &#92;delta}{1 - &#92;delta^2} = &#92;frac{1 - &#92;delta}{(1-&#92;delta)(1+&#92;delta)} = &#92;frac{1}{1+&#92;delta}.
+x&#95;1^&#42; = &#92;frac{1 - &#92;delta}{1 - &#92;delta^2} = &#92;frac{1 - &#92;delta}{(1-&#92;delta)(1+&#92;delta)} = &#92;frac{1}{1+&#92;delta}.
 &#92;]</span>
 
-Since <span>&#92;( &#92;delta < 1 &#92;)</span>, we have <span>&#92;( x_1^* = 1/(1+&#92;delta) > 1/2 &#92;)</span>: Player 1 gets strictly more than half. Player 1's advantage stems entirely from the fact that Player 2 is impatient — Player 2 would rather accept a slightly unfavourable offer today than wait a period to make her own proposal. As <span>&#92;( &#92;delta &#92;to 1 &#92;)</span>, <span>&#92;( x_1^* &#92;to 1/2 &#92;)</span>: the first-mover advantage disappears and the outcome converges to a perfectly equal split. When neither player cares about delay, the only remaining asymmetry — who moves first — becomes irrelevant.
+Since <span>&#92;( &#92;delta < 1 &#92;)</span>, we have <span>&#92;( x&#95;1^&#42; = 1/(1+&#92;delta) > 1/2 &#92;)</span>: Player 1 gets strictly more than half. Player 1's advantage stems entirely from the fact that Player 2 is impatient — Player 2 would rather accept a slightly unfavourable offer today than wait a period to make her own proposal. As <span>&#92;( &#92;delta &#92;to 1 &#92;)</span>, <span>&#92;( x&#95;1^&#42; &#92;to 1/2 &#92;)</span>: the first-mover advantage disappears and the outcome converges to a perfectly equal split. When neither player cares about delay, the only remaining asymmetry — who moves first — becomes irrelevant.
 
 This model, known as the Rubinstein bargaining model, is both theoretically elegant and practically useful. Before entering any bargaining session, the framework tells you how much to expect, which parameters (your own patience, your counterpart's patience, the bargaining protocol) matter, and how to change the game if you do not like the predicted outcome. After this chapter, that analysis should be within your reach.
 
@@ -2445,13 +2445,13 @@ In a repeated game players receive a payoff in each period. A dollar (or a unit 
 
 ### Discounted Sum and Discounted Average
 
-Given a stream of payoffs <span>&#92;( (v_1, v_2, v_3, &#92;ldots) &#92;)</span>, the **discounted sum** is
+Given a stream of payoffs <span>&#92;( (v&#95;1, v&#95;2, v&#95;3, &#92;ldots) &#92;)</span>, the **discounted sum** is
 
-<span>&#92;[ &#92;sum_{t=1}^{&#92;infty} &#92;delta^{t-1} v_t &#92;]</span>
+<span>&#92;[ &#92;sum&#95;{t=1}^{&#92;infty} &#92;delta^{t-1} v&#95;t &#92;]</span>
 
-This is the present value of the entire payoff stream. Because sums grow without bound as the game goes on, it is often more convenient to work with the **discounted average payoff**, defined as the constant per-period payoff that the player would need to receive in order to be indifferent between that constant stream and the original stream. If a player receives the constant value <span>&#92;( c &#92;)</span> in every period, her discounted sum is <span>&#92;( c &#92;sum_{t=0}^{&#92;infty} &#92;delta^t = c/(1-&#92;delta) &#92;)</span>. Setting this equal to the discounted sum of the original stream and solving for <span>&#92;( c &#92;)</span> gives:
+This is the present value of the entire payoff stream. Because sums grow without bound as the game goes on, it is often more convenient to work with the **discounted average payoff**, defined as the constant per-period payoff that the player would need to receive in order to be indifferent between that constant stream and the original stream. If a player receives the constant value <span>&#92;( c &#92;)</span> in every period, her discounted sum is <span>&#92;( c &#92;sum&#95;{t=0}^{&#92;infty} &#92;delta^t = c/(1-&#92;delta) &#92;)</span>. Setting this equal to the discounted sum of the original stream and solving for <span>&#92;( c &#92;)</span> gives:
 
-<span>&#92;[ &#92;text{Discounted average} = (1-&#92;delta) &#92;sum_{t=0}^{&#92;infty} &#92;delta^t v_{t+1} &#92;]</span>
+<span>&#92;[ &#92;text{Discounted average} = (1-&#92;delta) &#92;sum&#95;{t=0}^{&#92;infty} &#92;delta^t v&#95;{t+1} &#92;]</span>
 
 The factor <span>&#92;( (1-&#92;delta) &#92;)</span> normalises the expression so that a constant stream of value <span>&#92;( v &#92;)</span> in every period has a discounted average of exactly <span>&#92;( v &#92;)</span>. This makes discounted averages directly comparable to one-shot payoffs, which is why they are the natural measure of welfare in repeated games. Throughout this chapter we assume all players share the same discount factor <span>&#92;( &#92;delta &#92;)</span>.
 
@@ -2459,11 +2459,11 @@ The factor <span>&#92;( (1-&#92;delta) &#92;)</span> normalises the expression s
 
 One formula will be used repeatedly. For <span>&#92;( &#92;delta &#92;in (0,1) &#92;)</span>:
 
-<span>&#92;[ &#92;sum_{t=0}^{&#92;infty} &#92;delta^t = &#92;frac{1}{1-&#92;delta} &#92;]</span>
+<span>&#92;[ &#92;sum&#95;{t=0}^{&#92;infty} &#92;delta^t = &#92;frac{1}{1-&#92;delta} &#92;]</span>
 
 A related formula handles finite sums. For any non-negative integer <span>&#92;( T &#92;)</span>:
 
-<span>&#92;[ &#92;sum_{t=0}^{T} &#92;delta^t = &#92;frac{1 - &#92;delta^{T+1}}{1 - &#92;delta} &#92;]</span>
+<span>&#92;[ &#92;sum&#95;{t=0}^{T} &#92;delta^t = &#92;frac{1 - &#92;delta^{T+1}}{1 - &#92;delta} &#92;]</span>
 
 These two results are workhorses of the analysis that follows.
 
@@ -2636,7 +2636,7 @@ These are the two extreme deviations; any mixture of them is also possible, but 
 
 <span>&#92;[ (1-&#92;delta) &#92;cdot &#92;frac{3}{1-&#92;delta^2} = &#92;frac{3(1-&#92;delta)}{(1-&#92;delta)(1+&#92;delta)} = &#92;frac{3}{1+&#92;delta} &#92;]</span>
 
-(Here we used the fact that <span>&#92;( &#92;sum_{t=0}^{&#92;infty} &#92;delta^{2t} = 1/(1-&#92;delta^2) &#92;)</span>.)
+(Here we used the fact that <span>&#92;( &#92;sum&#95;{t=0}^{&#92;infty} &#92;delta^{2t} = 1/(1-&#92;delta^2) &#92;)</span>.)
 
 **Always D deviation:** The discounted average of <span>&#92;( (3, 1, 1, 1, &#92;ldots) &#92;)</span> is:
 
@@ -2652,7 +2652,7 @@ Both conditions simplify to <span>&#92;( &#92;delta &#92;geq &#92;frac{1}{2} &#9
 
 We have now found several Nash Equilibria that produce the cooperative outcome (C, C) in every period. What it took was removing the finite horizon. Once we allow the game to go on indefinitely — or equivalently, once players face uncertainty about when the game ends — the threat of future punishment becomes a credible and effective enforcer of cooperation.
 
-> **A note on interpretation.** An infinitely repeated game is not the only way to reach these results. Suppose the game ends after each period with probability <span>&#92;( 1-p &#92;)</span>, and with probability <span>&#92;( p &#92;)</span> it continues for another period. A player with per-period discount factor <span>&#92;( &#92;delta_0 &#92;)</span> now effectively discounts the future by <span>&#92;( &#92;delta = p &#92;delta_0 &#92;)</span>, since future payoffs are both discounted and stochastic. The mathematics is identical to the infinitely repeated game with discount factor <span>&#92;( &#92;delta &#92;)</span>. In the classroom Prisoner's Dilemma experiment run alongside this course, each period ended with 10% probability, making it equivalent to an infinitely repeated game with <span>&#92;( &#92;delta = 0.9 &#92;)</span>.
+> **A note on interpretation.** An infinitely repeated game is not the only way to reach these results. Suppose the game ends after each period with probability <span>&#92;( 1-p &#92;)</span>, and with probability <span>&#92;( p &#92;)</span> it continues for another period. A player with per-period discount factor <span>&#92;( &#92;delta&#95;0 &#92;)</span> now effectively discounts the future by <span>&#92;( &#92;delta = p &#92;delta&#95;0 &#92;)</span>, since future payoffs are both discounted and stochastic. The mathematics is identical to the infinitely repeated game with discount factor <span>&#92;( &#92;delta &#92;)</span>. In the classroom Prisoner's Dilemma experiment run alongside this course, each period ended with 10% probability, making it equivalent to an infinitely repeated game with <span>&#92;( &#92;delta = 0.9 &#92;)</span>.
 
 ---
 
@@ -2662,17 +2662,17 @@ We have now found several Nash Equilibria that produce the cooperative outcome (
 
 Up to now, every Nash Equilibrium we constructed has generated either (D, D) every period — discounted average payoffs of (1, 1) — or (C, C) every period — discounted average payoffs of (2, 2). Are these the only possibilities? The Folk Theorem says no: when players are sufficiently patient, almost any pair of individually rational payoffs can be sustained as a Nash Equilibrium of the infinitely repeated game.
 
-The set of **feasible payoff pairs** consists of all pairs <span>&#92;( (x_1, x_2) &#92;)</span> that can be generated by some (possibly correlated or randomised) choice of action profiles in the stage game. In the Prisoner's Dilemma with payoffs (C,C)→(2,2), (C,D)→(0,3), (D,C)→(3,0), (D,D)→(1,1), the feasible set is the convex hull of these four points — a quadrilateral with vertices at (2,2), (0,3), (3,0), and (1,1).
+The set of **feasible payoff pairs** consists of all pairs <span>&#92;( (x&#95;1, x&#95;2) &#92;)</span> that can be generated by some (possibly correlated or randomised) choice of action profiles in the stage game. In the Prisoner's Dilemma with payoffs (C,C)→(2,2), (C,D)→(0,3), (D,C)→(3,0), (D,D)→(1,1), the feasible set is the convex hull of these four points — a quadrilateral with vertices at (2,2), (0,3), (3,0), and (1,1).
 
-The individual rationality constraint is that each player must receive at least what she can guarantee herself regardless of the other's play, which in the Prisoner's Dilemma is the payoff from always defecting: <span>&#92;( u_i(D,D) = 1 &#92;)</span> for each player <span>&#92;( i &#92;)</span>. The set of **individually rational feasible payoffs** is the portion of the feasible set lying strictly above 1 for each player.
+The individual rationality constraint is that each player must receive at least what she can guarantee herself regardless of the other's play, which in the Prisoner's Dilemma is the payoff from always defecting: <span>&#92;( u&#95;i(D,D) = 1 &#92;)</span> for each player <span>&#92;( i &#92;)</span>. The set of **individually rational feasible payoffs** is the portion of the feasible set lying strictly above 1 for each player.
 
 ### The Nash Folk Theorem
 
 **Nash Folk Theorem:** Let <span>&#92;( G &#92;)</span> be a Prisoner's Dilemma. Then:
 
-1. The discounted average payoff of each player in any Nash Equilibrium of the infinitely repeated game is at least <span>&#92;( u_i(D,D) &#92;)</span>.
+1. The discounted average payoff of each player in any Nash Equilibrium of the infinitely repeated game is at least <span>&#92;( u&#95;i(D,D) &#92;)</span>.
 
-2. Let <span>&#92;( (x_1, x_2) &#92;)</span> be a feasible pair of payoffs in <span>&#92;( G &#92;)</span> for which <span>&#92;( x_i > u_i(D,D) &#92;)</span> for each player <span>&#92;( i &#92;)</span>. For <span>&#92;( &#92;delta &#92;)</span> sufficiently close to 1, the infinitely repeated game of <span>&#92;( G &#92;)</span> has a Nash Equilibrium in which the discounted average payoffs are <span>&#92;( (x_1, x_2) &#92;)</span>.
+2. Let <span>&#92;( (x&#95;1, x&#95;2) &#92;)</span> be a feasible pair of payoffs in <span>&#92;( G &#92;)</span> for which <span>&#92;( x&#95;i > u&#95;i(D,D) &#92;)</span> for each player <span>&#92;( i &#92;)</span>. For <span>&#92;( &#92;delta &#92;)</span> sufficiently close to 1, the infinitely repeated game of <span>&#92;( G &#92;)</span> has a Nash Equilibrium in which the discounted average payoffs are <span>&#92;( (x&#95;1, x&#95;2) &#92;)</span>.
 
 Part 1 says that Nash Equilibrium payoffs must be individually rational — no player will accept less than their minmax payoff. Part 2 says that every individually rational feasible payoff pair can be achieved. Together they characterise *exactly* which payoff pairs are achievable as Nash Equilibrium discounted average payoffs when players are sufficiently patient.
 

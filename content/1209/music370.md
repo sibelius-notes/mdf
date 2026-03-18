@@ -120,9 +120,9 @@ Soprano: Once you hit the final tonic with ties, just stay on that.
 Not tonicize, but intensify this motion to the dominant.
 
 soprano: 8 7 8. bass: b6 5 1. Then introduce third voice, #4, which is A4 above the bass. Then fourth voice:
-- double the third: Italian <span>&#92;(^6_3 &#92;)</span>
-- enters on <span>&#92;(\hat 2 &#92;)</span>, French <span>&#92;(^4_3 &#92;)</span>
-- perfect fifth above the bass (<span>&#92;(\hat 3 &#92;)</span> in minor, <span>&#92;(\flat \hat 3 &#92;)</span> in major), German <span>&#92;(^6_5 &#92;)</span>. Note the unavoidable parallel fifth as 3<span>&#92;(\to &#92;)</span>2.
+- double the third: Italian <span>&#92;(^6&#95;3 &#92;)</span>
+- enters on <span>&#92;(\hat 2 &#92;)</span>, French <span>&#92;(^4&#95;3 &#92;)</span>
+- perfect fifth above the bass (<span>&#92;(\hat 3 &#92;)</span> in minor, <span>&#92;(\flat \hat 3 &#92;)</span> in major), German <span>&#92;(^6&#95;5 &#92;)</span>. Note the unavoidable parallel fifth as 3<span>&#92;(\to &#92;)</span>2.
 
 Italian 63
 <iframe src="https://trinket.io/embed/music/bf903fcb32?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -137,11 +137,11 @@ It has always to resolve to dominant, but doesn't always have to be on the stron
 
 These are embellishing chords, not pre-dominant, not elaborate.
 
-Interpolated <span>&#92;(C _ 4 ^ 6 &#92;)</span>:
+Interpolated <span>&#92;(C &#95; 4 ^ 6 &#92;)</span>:
 - Major: <span>&#92;(\flat 3\to \natural 3 \to 2 \to 1 \text{ or } 3 &#92;)</span>
 - Minor: no change on 3 since 3 has been flatted
 
-Ex 24.18 The enharmonic German <span>&#92;(^6_5 &#92;)</span>, only in major.
+Ex 24.18 The enharmonic German <span>&#92;(^6&#95;5 &#92;)</span>, only in major.
 
 Ex 24.27 Noncadential A6
 
@@ -194,7 +194,7 @@ Example 25.26, could on strong beat. In minor, <span>&#92;(\flat \hat 3\to \flat
 
 <iframe src="https://trinket.io/embed/music/16971e938e?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Ex 25.30: could use CT before <span>&#92;(C_4^6 &#92;)</span>
+Ex 25.30: could use CT before <span>&#92;(C&#95;4^6 &#92;)</span>
 
 Ex 25.31: pre-cadential dominant <span>&#92;(\to &#92;)</span> CT <span>&#92;(\to &#92;)</span> C6/4
 
@@ -205,7 +205,7 @@ Authentic Cadence ends on <span>&#92;(\hat 3 &#92;)</span> in romantic century. 
 Plagal cadence: Soprano <span>&#92;(\hat 1 \to \hat 4\to \hat 3 &#92;)</span>
 
 IV I cadence. Ex 25.12: 4-1 close in the bass, 1-2-3 passing motion on soprano. 1 is elided, 2 moves back to occupy the strong beat, and 3 is raised to create the Picardy third characteristic  of this cadence.
-Resulting chord is called **plagal <span>&#92;(^6_5 &#92;)</span>**.
+Resulting chord is called **plagal <span>&#92;(^6&#95;5 &#92;)</span>**.
 
 <iframe src="https://trinket.io/embed/music/2c82bb8b85?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
@@ -278,13 +278,13 @@ Ex 28.12: The minor Neapolitan 6.
 ##  The Stable Six-four chord
 Chapter 12: Passing 64, Cadential 64. Chapter 22: Neighbor, Pedal, Arp 64. [Some refreshers](http://www.musictheoryteacher.com/pb/wp_94176fc5/wp_94176fc5.html)
 
-The applied dominant that introduces this chord confirms the chordal fourth as a local tonic, permitting the stable <span>&#92;(^6_4 &#92;)</span> to function harmonically as a consonant chord. In a major key, the stable <span>&#92;(^6_4 &#92;)</span> will occasionally sound as a modally borrowed subdominant.
+The applied dominant that introduces this chord confirms the chordal fourth as a local tonic, permitting the stable <span>&#92;(^6&#95;4 &#92;)</span> to function harmonically as a consonant chord. In a major key, the stable <span>&#92;(^6&#95;4 &#92;)</span> will occasionally sound as a modally borrowed subdominant.
 
-Ex 28.20 (score from [IMSLP](https://imslp.org/wiki/Special:ReverseLookup/37922)): mm. 2 is Nbr <span>&#92;(^6_4 &#92;)</span>, mm. 6 is Stable <span>&#92;(^6_4 &#92;)</span>
+Ex 28.20 (score from [IMSLP](https://imslp.org/wiki/Special:ReverseLookup/37922)): mm. 2 is Nbr <span>&#92;(^6&#95;4 &#92;)</span>, mm. 6 is Stable <span>&#92;(^6&#95;4 &#92;)</span>
 
 ![]("/pics/ex2820.png")
 
-Ex 28.21: Reinterpreting the passing <span>&#92;(^6_4 &#92;)</span>
+Ex 28.21: Reinterpreting the passing <span>&#92;(^6&#95;4 &#92;)</span>
 
 <iframe src="https://trinket.io/embed/music/991f9d95f6" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 

@@ -145,7 +145,7 @@ AI = Operation intelligently on data to extract the relationship between in- and
 2. high variance
 
 ## PCA
-<span>&#92;(x' &#92;)</span> passes through the "mean" and delivers max variance when samples are projected into it. Process is repeated until we find <span>&#92;(n &#92;)</span> such axes <span>&#92;(\langle x_1,x_2,\ldots,x_n\rangle &#92;)</span>. intelligent: <span>&#92;(x\in \mathbb R^d \implies n \ll d &#92;)</span>.
+<span>&#92;(x' &#92;)</span> passes through the "mean" and delivers max variance when samples are projected into it. Process is repeated until we find <span>&#92;(n &#92;)</span> such axes <span>&#92;(\langle x&#95;1,x&#95;2,\ldots,x&#95;n\rangle &#92;)</span>. intelligent: <span>&#92;(x\in \mathbb R^d \implies n \ll d &#92;)</span>.
 
 Principal Component Analysis (PCA) is the algorithm to find orthogonal axes that diagonalize the covariance matrix. What does this mean?
 
@@ -162,9 +162,9 @@ Covariance matrix
 = \mathbb E \left[ (x_ i - \mu _ i) (x _ j - \mu _ j) \right]
 &#92;]
 </span>
-where <span>&#92;(\mu _ i = \mathbb E[ x _ i], \mu _ j = \mathbb E[ x _ j] &#92;)</span>.
+where <span>&#92;(\mu &#95; i = \mathbb E[ x &#95; i], \mu &#95; j = \mathbb E[ x &#95; j] &#92;)</span>.
 
-Are <span>&#92;(x_i &#92;)</span> and <span>&#92;(x_j &#92;)</span> changing together? (correlated)
+Are <span>&#92;(x&#95;i &#92;)</span> and <span>&#92;(x&#95;j &#92;)</span> changing together? (correlated)
 
 Generalization of Covariance: <span>&#92;(\Sigma = E[(\boldsymbol x - E[\boldsymbol x]) (\boldsymbol x - E[\boldsymbol x])^T  ] &#92;)</span>
 
@@ -174,17 +174,17 @@ main features selection. Which components (=features) are important to keep?
 - Significance = variance.
 - Intelligence = recognizing the significance
 
-Staring point is a file with a table: where the columns: <span>&#92;(x_ 1, x_ 2,\ldots &#92;)</span> are features and rows: (1, 2, 3, ...) are observations.
+Staring point is a file with a table: where the columns: <span>&#92;(x&#95; 1, x&#95; 2,\ldots &#92;)</span> are features and rows: (1, 2, 3, ...) are observations.
 
 Covariance matrix <span>&#92;(C = E[ x x^T] &#92;)</span>
 
-Diagonalizing <span>&#92;(C &#92;)</span> using a suitable orthogonal transformation matrix <span>&#92;(A &#92;)</span> by obtaining <span>&#92;(N &#92;)</span> orthogonal "special vectors" <span>&#92;(u_ i &#92;)</span> with "special parameters" <span>&#92;(\lambda _ i &#92;)</span>
+Diagonalizing <span>&#92;(C &#92;)</span> using a suitable orthogonal transformation matrix <span>&#92;(A &#92;)</span> by obtaining <span>&#92;(N &#92;)</span> orthogonal "special vectors" <span>&#92;(u&#95; i &#92;)</span> with "special parameters" <span>&#92;(\lambda &#95; i &#92;)</span>
 
 ![there should be a image...](https://blog.bioturing.com/wp-content/uploads/2018/11/Blog_pca_6b.png)
 
 [src](https://blog.bioturing.com/2018/06/14/principal-component-analysis-explained-simply/)
 
-Principal components: <span>&#92;(\lambda_ 1 &#92;)</span> most important, <span>&#92;(\lambda _  N &#92;)</span> least important. Pick <span>&#92;(N' \ll N &#92;)</span>, so-called dimensionality reduction.
+Principal components: <span>&#92;(\lambda&#95; 1 &#92;)</span> most important, <span>&#92;(\lambda &#95;  N &#92;)</span> least important. Pick <span>&#92;(N' \ll N &#92;)</span>, so-called dimensionality reduction.
 
 PCA is
 - a linear transformation
@@ -242,8 +242,8 @@ You will see that this is not always desirable.
 # Lecture 4
 ## LDA
 linear discriminant analysis (operates of feature subspace, linear method, supervised)
-- Data <span>&#92;(\langle x _ 1,\ldots,x _ n \rangle &#92;)</span>
-- <span>&#92;(N _ 1 (N _ 2) &#92;)</span> samples belonging to class <span>&#92;(C_1 (C _ 2) &#92;)</span>
+- Data <span>&#92;(\langle x &#95; 1,\ldots,x &#95; n \rangle &#92;)</span>
+- <span>&#92;(N &#95; 1 (N &#95; 2) &#92;)</span> samples belonging to class <span>&#92;(C&#95;1 (C &#95; 2) &#92;)</span>
 - Find a line that maximizes the class separation
 
 ![there should be a image...](https://sebastianraschka.com/images/blog/2014/linear-discriminant-analysis/lda_1.png)
@@ -255,19 +255,19 @@ linear discriminant analysis (operates of feature subspace, linear method, super
 - Mean vector
 
 <span>&#92;[
-    \mu _ i = {1\over N _ i }\sum _ {x\in C _ i} x, \quad \tilde \mu _ i = { 1\over N _ i}\sum _ {y\in C _ i }y = w^T \mu _ i
+    \mu &#95; i = {1\over N &#95; i }\sum &#95; {x\in C &#95; i} x, \quad \tilde \mu &#95; i = { 1\over N &#95; i}\sum &#95; {y\in C &#95; i }y = w^T \mu &#95; i
 &#92;]</span>
 
-- Driving force for separation: <span>&#92;(\operatorname{argmax}_ w &#124;\tilde \mu _ 1 - \tilde \mu _ 2 &#124; &#92;)</span>
+- Driving force for separation: <span>&#92;(\operatorname{argmax}&#95; w &#124;\tilde \mu &#95; 1 - \tilde \mu &#95; 2 &#124; &#92;)</span>
 - But we are ignoring the **variability inside** classes
 
 Fisher's Approach: Normalize the distance (difference) between the means by intra-class scatter.
 
-scatter = variance: <span>&#92;(\tilde s _ i ^ 2 = \sum _ {y\in C _ i} (y - \tilde \mu _ i)^2 &#92;)</span>
+scatter = variance: <span>&#92;(\tilde s &#95; i ^ 2 = \sum &#95; {y\in C &#95; i} (y - \tilde \mu &#95; i)^2 &#92;)</span>
 
-intra-class scatter <span>&#92;(\tilde s _ 1^2 + \tilde s _ 2^2 &#92;)</span>
+intra-class scatter <span>&#92;(\tilde s &#95; 1^2 + \tilde s &#95; 2^2 &#92;)</span>
 
-Fisher Linear Discriminant: <span>&#92;(\dfrac {&#124; \tilde \mu _ 1-\tilde\mu _ 2 &#124;^2} {\tilde s _ 1^2 + \tilde s _ 2^2} &#92;)</span>. To be maximized!
+Fisher Linear Discriminant: <span>&#92;(\dfrac {&#124; \tilde \mu &#95; 1-\tilde\mu &#95; 2 &#124;^2} {\tilde s &#95; 1^2 + \tilde s &#95; 2^2} &#92;)</span>. To be maximized!
 
 ## t-SNE
 t-Distributed stochastic neighbor embeddings.
@@ -276,14 +276,14 @@ t-Distributed stochastic neighbor embeddings.
 
 t-SNE does not use any norm (=distance metric). It uses Kullback-Leibler Divergence. Given two probability distributions <span>&#92;(p,q &#92;)</span>, the KL divergence  measures the distance
 <span>&#92;[
-    D(p\&#124;q)= \sum _ {x\in X} p(x)\log {p(x)\over q(x)}
+    D(p\&#124;q)= \sum &#95; {x\in X} p(x)\log {p(x)\over q(x)}
 &#92;]</span>
 However, <span>&#92;(D (p \&#124; q) \ne D(q \&#124; p) &#92;)</span>. Therefore, KL divergence is not a metric!
 
 Relation to entropy <span>&#92;(H(X) &#92;)</span>.
 
-<span>&#92;[H(X)=\sum _ {x\in X}p(x)\log {1\over p(x)}
-= \log N - D(\underbrace{p(x)} _ {\text{true dist'n}} \&#124; p _ U(x))
+<span>&#92;[H(X)=\sum &#95; {x\in X}p(x)\log {1\over p(x)}
+= \log N - D(\underbrace{p(x)} &#95; {\text{true dist'n}} \&#124; p &#95; U(x))
 &#92;]</span>
 where <span>&#92;(U &#92;)</span>: uniform.
 
@@ -296,7 +296,7 @@ Challenge: perplexing!
 t-SNE minimizes the sum of KL divergences over all data points using a gradient descent method.
 
 <span>&#92;[
-    Objective = \sum _ i D(P _ i \&#124; Q  _ i) = \sum _ i \sum _ j p _ {j &#124; i} \log { p _ {j &#124; i}\over q _ {j &#124; i}}
+    Objective = \sum &#95; i D(P &#95; i \&#124; Q  &#95; i) = \sum &#95; i \sum &#95; j p &#95; {j &#124; i} \log { p &#95; {j &#124; i}\over q &#95; {j &#124; i}}
 &#92;]</span>
 
 ![there should be a image...](/pics/522/pq.png)
@@ -323,7 +323,7 @@ Example: Harris Corner Detection
 
 For SIFT, you get many feature vectors of length 128. Thus
 <span>&#92;[
-    Image = \bigcup _ {i=1} ^ { n \text{ key points}} v _ i
+    Image = \bigcup &#95; {i=1} ^ { n \text{ key points}} v &#95; i
 &#92;]</span>
 Challenge:
 - Data is too large
@@ -335,26 +335,26 @@ Solution: embedding/pooling/encoding
 
 ##  Fisher Vectors
 
-We have our dataset: <span>&#92;(X = &#92;left&#92;{ x _ t &#124; t = 1,\ldots, T &#92;right&#92;} &#92;)</span>. And <span>&#92;(u _ \lambda &#92;)</span> = probability density function which models the generative process of elements of <span>&#92;(X &#92;)</span>. And we have <span>&#92;(\lambda \in \mathbb R^M &#92;)</span> which are parameters of <span>&#92;(u_ \lambda &#92;)</span>
+We have our dataset: <span>&#92;(X = &#92;left&#92;{ x &#95; t &#124; t = 1,\ldots, T &#92;right&#92;} &#92;)</span>. And <span>&#92;(u &#95; \lambda &#92;)</span> = probability density function which models the generative process of elements of <span>&#92;(X &#92;)</span>. And we have <span>&#92;(\lambda \in \mathbb R^M &#92;)</span> which are parameters of <span>&#92;(u&#95; \lambda &#92;)</span>
 
-In statistics, the "score function" is the gradient (partial derivative) w.r.t. parameter <span>&#92;(\lambda &#92;)</span> of the natural log of the likelihood function. Score function <span>&#92;(= \nabla _ \lambda \log u_ \lambda (X) = \nabla _ \lambda \log P(x | u _ \lambda) &#92;)</span>
+In statistics, the "score function" is the gradient (partial derivative) w.r.t. parameter <span>&#92;(\lambda &#92;)</span> of the natural log of the likelihood function. Score function <span>&#92;(= \nabla &#95; \lambda \log u&#95; \lambda (X) = \nabla &#95; \lambda \log P(x | u &#95; \lambda) &#92;)</span>
 
 Let <span>&#92;(X &#92;)</span> be the set of D-dimensional local descriptors extracted from an image (e.g. SIFT)
 
 <span>&#92;[
-    g _ \lambda^X = \sum _ {t=1}^T L _ \lambda \nabla _ \lambda \log u _ \lambda (x _ t)
+    g &#95; \lambda^X = \sum &#95; {t=1}^T L &#95; \lambda \nabla &#95; \lambda \log u &#95; \lambda (x &#95; t)
 &#92;]</span>
 This is called Fisher Vector. Fisher Vector is a sum of normalized gradients statistics computed for each descriptor (= feature vector). The operation
 <span>&#92;[
-    x _ t \to f _ {FK}(x _ t) = L _ \lambda \nabla _ \lambda \log u _ \lambda ( x _ t)
+    x &#95; t \to f &#95; {FK}(x &#95; t) = L &#95; \lambda \nabla &#95; \lambda \log u &#95; \lambda ( x &#95; t)
 &#92;]</span>
-is an embedding of local descriptors <span>&#92;(x _ t &#92;)</span> in a higher dimensional space which is easier for classifier.
+is an embedding of local descriptors <span>&#92;(x &#95; t &#92;)</span> in a higher dimensional space which is easier for classifier.
 
-<span>&#92;(L _ \lambda &#92;)</span>: Cholesky Decomposition
+<span>&#92;(L &#95; \lambda &#92;)</span>: Cholesky Decomposition
 <span>&#92;[
-    F _ \lambda ^{-1} = L _ \lambda ^ T L _ \lambda, \qquad K _ {FK}(X,Y) = G _ \lambda ^{X^T} F _ \lambda G _ \lambda ^{X}
+    F &#95; \lambda ^{-1} = L &#95; \lambda ^ T L &#95; \lambda, \qquad K &#95; {FK}(X,Y) = G &#95; \lambda ^{X^T} F &#95; \lambda G &#95; \lambda ^{X}
 &#92;]</span>
-where <span>&#92;(K _ {FK} &#92;)</span> is the Fisher Kernel.
+where <span>&#92;(K &#95; {FK} &#92;)</span> is the Fisher Kernel.
 
 ## VLAD
 Vector for locally aggregated descriptors
@@ -372,20 +372,20 @@ Given an image <span>&#92;(I &#92;)</span>, divide it into small cell/windows of
 - redundancy
 - noise
 
-**General Approach**: Build a codebook (dictionary) <span>&#92;(C = &#92;left&#92;{ c _ 1,\ldots,c _ n &#92;right&#92;} &#92;)</span> from <span>&#92;(m\gg n &#92;)</span> feature vectors (vectorized visual words)
+**General Approach**: Build a codebook (dictionary) <span>&#92;(C = &#92;left&#92;{ c &#95; 1,\ldots,c &#95; n &#92;right&#92;} &#92;)</span> from <span>&#92;(m\gg n &#92;)</span> feature vectors (vectorized visual words)
 
-**Idea**: Use a clustering algorithm like k-means. (<span>&#92;(C _ i &#92;)</span>) is the centre of <span>&#92;(n &#92;)</span> classes found in the data.
+**Idea**: Use a clustering algorithm like k-means. (<span>&#92;(C &#95; i &#92;)</span>) is the centre of <span>&#92;(n &#92;)</span> classes found in the data.
 
-**Core Idea of VLAD**: Accumulate, for each visual word <span>&#92;(C _ i &#92;)</span>, the difference of the vectors <span>&#92;(X &#92;)</span> assigned to <span>&#92;(C _ i &#92;)</span>, <span>&#92;(X - C _ i &#92;)</span>, i.e., distribution of data w.r.t. the class centers.
+**Core Idea of VLAD**: Accumulate, for each visual word <span>&#92;(C &#95; i &#92;)</span>, the difference of the vectors <span>&#92;(X &#92;)</span> assigned to <span>&#92;(C &#95; i &#92;)</span>, <span>&#92;(X - C &#95; i &#92;)</span>, i.e., distribution of data w.r.t. the class centers.
 
 <span>&#92;[
-    V _ {i,j}=\sum _ {NN(X)=C_i} X _ j - C _ {i,j}
+    V &#95; {i,j}=\sum &#95; {NN(X)=C&#95;i} X &#95; j - C &#95; {i,j}
 &#92;]</span>
-Here NN is the nearest neighbor. <span>&#92;(X _ j &#92;)</span> is the <span>&#92;(j &#92;)</span>-th component of descriptor. <span>&#92;(C _ {i,j} &#92;)</span> is the corresponding center
+Here NN is the nearest neighbor. <span>&#92;(X &#95; j &#92;)</span> is the <span>&#92;(j &#92;)</span>-th component of descriptor. <span>&#92;(C &#95; {i,j} &#92;)</span> is the corresponding center
 
-Here we do a <span>&#92;(L _ 2 &#92;)</span> normalization.
+Here we do a <span>&#92;(L &#95; 2 &#92;)</span> normalization.
 <span>&#92;(
-    V : = {V\over \&#124; V\&#124; _ 2}
+    V : = {V\over \&#124; V\&#124; &#95; 2}
 &#92;)</span>
 
 Final Chain
@@ -404,13 +404,13 @@ First factor to make sure that is good enough is to have target/objective functi
 - fitness (maximize)
 - punishment (minimize)
 
-Given the entire data <span>&#92;(X = &#92;left&#92;{ x _ t &#92;right&#92;} &#92;)</span>
+Given the entire data <span>&#92;(X = &#92;left&#92;{ x &#95; t &#92;right&#92;} &#92;)</span>
 
 ![there should be a image...](/pics/522/super.png)
 
 Given the set of all hypotheses <span>&#92;(H &#92;)</span> (set of all possible solutions), find <span>&#92;(h\in H &#92;)</span> such that
 <span>&#92;[
-    \sum _ {x _ t\in X} (x _ t^* - x _ t ^ d) = \epsilon \to 0
+    \sum &#95; {x &#95; t\in X} (x &#95; t^&#42; - x &#95; t ^ d) = \epsilon \to 0
 &#92;]</span>
 which is supervised. This constitutes a good fit for the model <span>&#92;(h &#92;)</span> into <span>&#92;(X &#92;)</span>. Any concern?
 
@@ -434,12 +434,12 @@ n-fold cross validation: vert expensive, suitable for small data.
 
 Model complexity = <span>&#92;(&#124;P &#124; &#92;)</span> where <span>&#92;(P &#92;)</span> is the set of parameters of <span>&#92;(h\in H &#92;)</span>. Occam's Razor: Keep it simple! = Regularization
 <span>&#92;[
-    \min \left( \underbrace{\sum _ {x _ t\in X} (x _ t^* - x _ t^d)} _ {\text{lowest error}} + \underbrace{&#124;P &#124;} _ {\text{smallest solution}}\right)
+    \min \left( \underbrace{\sum &#95; {x &#95; t\in X} (x &#95; t^&#42; - x &#95; t^d)} &#95; {\text{lowest error}} + \underbrace{&#124;P &#124;} &#95; {\text{smallest solution}}\right)
 &#92;]</span>
 
 Augmented error function:
 <span>&#92;[
-    E' = E _ {total} + \underbrace{\lambda \cdot \text{model complexity}} _ {\substack {\text{penalized complex}&#92;&#92; \text{solutions with} &#92;&#92;
+    E' = E &#95; {total} + \underbrace{\lambda \cdot \text{model complexity}} &#95; {\substack {\text{penalized complex}&#92;&#92; \text{solutions with} &#92;&#92;
     \text{large variance}}}
 &#92;]</span>
 
@@ -481,11 +481,11 @@ We start with K-means algorithm: find the centroids (prototypes)(means) of K clu
 
 Similarity grouping happens via distance measurement. So objective (error):
 <span>&#92;[
-    E = \sum _ {k=1} ^K \sum _{x\in C _ k} \&#124;x-m _ k\&#124; _ 2
+    E = \sum &#95; {k=1} ^K \sum &#95;{x\in C &#95; k} \&#124;x-m &#95; k\&#124; &#95; 2
 &#92;]</span>
-where <span>&#92;(m _ k &#92;)</span> is the centroid of <span>&#92;(k &#92;)</span>-th cluster. Minimize the sum of squared errors to its prototype in each cluster.
+where <span>&#92;(m &#95; k &#92;)</span> is the centroid of <span>&#92;(k &#92;)</span>-th cluster. Minimize the sum of squared errors to its prototype in each cluster.
 
-When you do the update, centroids are the average of all <span>&#92;(x\in C _ k &#92;)</span> for <span>&#92;(k \in &#92;left&#92;{ 1,2,\ldots, K &#92;right&#92;} &#92;)</span>. Stopping:
+When you do the update, centroids are the average of all <span>&#92;(x\in C &#95; k &#92;)</span> for <span>&#92;(k \in &#92;left&#92;{ 1,2,\ldots, K &#92;right&#92;} &#92;)</span>. Stopping:
 1. after some iterations
 2. when centroids don't change anymore
 3. when few/no data points change cluster
@@ -515,32 +515,32 @@ Goals:
 
 Basically SOM is constrained K-means.
 
-Given input <span>&#92;(X &#92;)</span>, find the <span>&#92;(i &#92;)</span>-th unit with closest weight vector by competition. <span>&#92;(w _ i ^T x &#92;)</span> will be maximum.
+Given input <span>&#92;(X &#92;)</span>, find the <span>&#92;(i &#92;)</span>-th unit with closest weight vector by competition. <span>&#92;(w &#95; i ^T x &#92;)</span> will be maximum.
 
-For each unit <span>&#92;(j &#92;)</span> in the neighborhood <span>&#92;(N(i) &#92;)</span> of the winning neuron <span>&#92;(i &#92;)</span>, we update the weights of <span>&#92;(j &#92;)</span>(<span>&#92;(w _ j &#92;)</span>)
+For each unit <span>&#92;(j &#92;)</span> in the neighborhood <span>&#92;(N(i) &#92;)</span> of the winning neuron <span>&#92;(i &#92;)</span>, we update the weights of <span>&#92;(j &#92;)</span>(<span>&#92;(w &#95; j &#92;)</span>)
 
 Weights outside of <span>&#92;(N(i) &#92;)</span> are not updated
 
 SOM has 3 stages: 1. competition. 2. collaboration: concept of neighborhood. 3. Weight update.
 
-Competition: find the most similar unit: <span>&#92;(i(x) = \operatorname{argmax} _ j \&#124; x - w _ j \&#124; _ 2 &#92;)</span>, where <span>&#92;(j=1,\ldots,m; &#92;)</span> <span>&#92;(m &#92;)</span> = # of units.
+Competition: find the most similar unit: <span>&#92;(i(x) = \operatorname{argmax} &#95; j \&#124; x - w &#95; j \&#124; &#95; 2 &#92;)</span>, where <span>&#92;(j=1,\ldots,m; &#92;)</span> <span>&#92;(m &#92;)</span> = # of units.
 
-Collaboration: Use the lateral distance <span>&#92;(d _ {ij} &#92;)</span> between the winner unit <span>&#92;(i &#92;)</span> and unit <span>&#92;(j &#92;)</span>
+Collaboration: Use the lateral distance <span>&#92;(d &#95; {ij} &#92;)</span> between the winner unit <span>&#92;(i &#92;)</span> and unit <span>&#92;(j &#92;)</span>
 <span>&#92;[
-    h _ {ij} (d _ {ij}) = \exp \left(- {d _ {ij}^2\over 2\sigma^2}\right)
+    h &#95; {ij} (d &#95; {ij}) = \exp \left(- {d &#95; {ij}^2\over 2\sigma^2}\right)
 &#92;]</span>
 
 ![there should be a image...](/pics/522/gauss.png)
 
 Weight updates:
 <span>&#92;[
-    W _ j (n+1)= W _ j(n) + \Delta W _ j
+    W &#95; j (n+1)= W &#95; j(n) + \Delta W &#95; j
 &#92;]</span>
-where <span>&#92;(\Delta W _ j = \underbrace{\eta y_ j } _ {\text{Hebb's Rule}} - \underbrace{g(y _ j) w _ j}_{\text {Forgetting rule}} &#92;)</span>. So complete formula for update:
+where <span>&#92;(\Delta W &#95; j = \underbrace{\eta y&#95; j } &#95; {\text{Hebb's Rule}} - \underbrace{g(y &#95; j) w &#95; j}&#95;{\text {Forgetting rule}} &#92;)</span>. So complete formula for update:
 <span>&#92;[
-    W _ j (n+1)= W _ j(n) + \eta (n) h _ {ij(x)}(n)[x-w _ j(n)]
+    W &#95; j (n+1)= W &#95; j(n) + \eta (n) h &#95; {ij(x)}(n)[x-w &#95; j(n)]
 &#92;]</span>
-where <span>&#92;(\eta(n) = \eta _ 0\exp(- {n\over T _ 2}) &#92;)</span>
+where <span>&#92;(\eta(n) = \eta &#95; 0\exp(- {n\over T &#95; 2}) &#92;)</span>
 
 Convergence: many iterations! (e.g., several thousands times the number of units)
 
@@ -560,33 +560,33 @@ SVM
 
 ![there should be a image...](/pics/522/svm.png)
 
-Assumption: classes <span>&#92;(\in &#92;left&#92;{ \oplus, \ominus &#92;right&#92;} &#92;)</span>. And <span>&#92;(w\cdot x _ \oplus + b \ge 1, w\cdot x _ \ominus + b \le -1 &#92;)</span>
+Assumption: classes <span>&#92;(\in &#92;left&#92;{ \oplus, \ominus &#92;right&#92;} &#92;)</span>. And <span>&#92;(w\cdot x &#95; \oplus + b \ge 1, w\cdot x &#95; \ominus + b \le -1 &#92;)</span>
 
-Also introduce a dummy variable: <span>&#92;(y _ i = &#92;begin{cases}
+Also introduce a dummy variable: <span>&#92;(y &#95; i = &#92;begin{cases}
 +1 & &#92;text{for }\oplus  &#92;&#92;
   -1 & &#92;text{for } \ominus
 &#92;end{cases} &#92;)</span>. Thus for all <span>&#92;(\oplus, \ominus &#92;)</span>,
-<span>&#92;[y _ i (w\cdot w + b)-1\ge 0 &#92;]</span>
+<span>&#92;[y &#95; i (w\cdot w + b)-1\ge 0 &#92;]</span>
 Best classification: the largest margin!
 
 <span>&#92;[
     &#92;begin{aligned}
-    (x _ \oplus - x _ \ominus) \cdot {w\over \&#124; w\&#124;} = {(1-b)+(1+b)\over \&#124; w\&#124;} = {2\over \&#124; w\&#124;}
+    (x &#95; \oplus - x &#95; \ominus) \cdot {w\over \&#124; w\&#124;} = {(1-b)+(1+b)\over \&#124; w\&#124;} = {2\over \&#124; w\&#124;}
     &#92;end{aligned}
 &#92;]</span>
 So we want maximize <span>&#92;({1\over \&#124; w\&#124;} &#92;)</span>, then minimize <span>&#92;({\&#124; w\&#124;} &#92;)</span>.
 
-So our problem: <span>&#92;(\min \&#124; w\&#124; \quad \text{subject to }\quad y _ i(w\cdot x _ i + b)-1\ge 0 &#92;)</span>.
+So our problem: <span>&#92;(\min \&#124; w\&#124; \quad \text{subject to }\quad y &#95; i(w\cdot x &#95; i + b)-1\ge 0 &#92;)</span>.
 
-Lagrange Multipliers: <span>&#92;(L = {1\over 2} \&#124;w\&#124;^2 - \sum \alpha _ i[ y _ i (w\cdot x _ i + b) - 1] &#92;)</span>
+Lagrange Multipliers: <span>&#92;(L = {1\over 2} \&#124;w\&#124;^2 - \sum \alpha &#95; i[ y &#95; i (w\cdot x &#95; i + b) - 1] &#92;)</span>
 
-Derivatives are zero, then we get <span>&#92;(w=\sum _ i \alpha _ i y _ i x _ i &#92;)</span>, and <span>&#92;(\sum \alpha _ i y _ i = 0 &#92;)</span>. Sub <span>&#92;(w &#92;)</span> in <span>&#92;(L &#92;)</span>, we get after simplification:
+Derivatives are zero, then we get <span>&#92;(w=\sum &#95; i \alpha &#95; i y &#95; i x &#95; i &#92;)</span>, and <span>&#92;(\sum \alpha &#95; i y &#95; i = 0 &#92;)</span>. Sub <span>&#92;(w &#92;)</span> in <span>&#92;(L &#92;)</span>, we get after simplification:
 <span>&#92;[
-    L =\sum \alpha _ i - {1\over 2}\sum \sum \underbrace{ \alpha _ j y _ i y _ j} _ {\text{scalars}} \underbrace{x _ i \cdot x _ k} _ {\text{dot product}}
+    L =\sum \alpha &#95; i - {1\over 2}\sum \sum \underbrace{ \alpha &#95; j y &#95; i y &#95; j} &#95; {\text{scalars}} \underbrace{x &#95; i \cdot x &#95; k} &#95; {\text{dot product}}
 &#92;]</span>
 Minimize this via quadratic optimization! Then how to classify?
 <span>&#92;[
-    \sum \alpha _ i y _ i x _ i\cdot \underbrace{u} _ {\text{new data}} + b &#92;begin{cases}
+    \sum \alpha &#95; i y &#95; i x &#95; i\cdot \underbrace{u} &#95; {\text{new data}} + b &#92;begin{cases}
      \ge 0 &\implies \oplus  &#92;&#92;
       &#92;text{otherwise} & \implies\ominus
     &#92;end{cases}
@@ -596,7 +596,7 @@ SVM only works for binary, linearly separable problems.
 XOR is a non-linear problem, however, we can do transformations.
 ![there should be a image...](/pics/522/xor.png)
 
-Trick! Assume <span>&#92;(T(x) &#92;)</span> is a transform that moves <span>&#92;(x &#92;)</span> to higher dimensions and making linear separation possible, then we have to calculate <span>&#92;(T(x _ i)\cdot T(u) &#92;)</span>. But these would be difficult! If we had a function <span>&#92;(K (x_ i , x _ j)&#92;)</span> such that <span>&#92;(K (x _ i, x _ j) = T(x _ i)\cdot T( x _ j) &#92;)</span>, then we won't need <span>&#92;(T &#92;)</span>. All we need is a "Kernel" function <span>&#92;(K &#92;)</span>. We do not need <span>&#92;(T(x) &#92;)</span>! We just need to get <span>&#92;(T (x _ i) \cdot T(x _ j) &#92;)</span>, and **not** <span>&#92;(T(x _ i) &#92;)</span> and <span>&#92;(T(x _ j) &#92;)</span> individually. This is called **The Kernel Trick**.
+Trick! Assume <span>&#92;(T(x) &#92;)</span> is a transform that moves <span>&#92;(x &#92;)</span> to higher dimensions and making linear separation possible, then we have to calculate <span>&#92;(T(x &#95; i)\cdot T(u) &#92;)</span>. But these would be difficult! If we had a function <span>&#92;(K (x&#95; i , x &#95; j)&#92;)</span> such that <span>&#92;(K (x &#95; i, x &#95; j) = T(x &#95; i)\cdot T( x &#95; j) &#92;)</span>, then we won't need <span>&#92;(T &#92;)</span>. All we need is a "Kernel" function <span>&#92;(K &#92;)</span>. We do not need <span>&#92;(T(x) &#92;)</span>! We just need to get <span>&#92;(T (x &#95; i) \cdot T(x &#95; j) &#92;)</span>, and **not** <span>&#92;(T(x &#95; i) &#92;)</span> and <span>&#92;(T(x &#95; j) &#92;)</span> individually. This is called **The Kernel Trick**.
 
 Popular kernels:
 - <span>&#92;(K(u,v) = (u\cdot v+1)^n &#92;)</span>
@@ -611,27 +611,27 @@ Desirable:
 2. High intra-class homogeneity
 
 Define "index of validity" that uses:
-1. sum-of-squares within cluster (SSW) = <span>&#92;(\sum _ {i=1}^N \&#124;x _ i - C _ {p _ i}\&#124;^2 &#92;)</span>, where we have <span>&#92;(N &#92;)</span> data points, and <span>&#92;(C _ {p _ i} &#92;)</span> is class prototype for the <span>&#92;(i &#92;)</span>-th data isntance <span>&#92;(x _ i  &#92;)</span>
-2. sum-of-squares between clusters (SSB) = <span>&#92;(\sum _ {i=1}^M n _ i\&#124;c _ i - \bar x \&#124;^2 &#92;)</span>, where we have <span>&#92;(M &#92;)</span> clusters, <span>&#92;(n _ i &#92;)</span> is the number of elements in cluster, <span>&#92;(c _ i &#92;)</span> is the current class mean. and <span>&#92;(\bar x &#92;)</span> is mean of means.
+1. sum-of-squares within cluster (SSW) = <span>&#92;(\sum &#95; {i=1}^N \&#124;x &#95; i - C &#95; {p &#95; i}\&#124;^2 &#92;)</span>, where we have <span>&#92;(N &#92;)</span> data points, and <span>&#92;(C &#95; {p &#95; i} &#92;)</span> is class prototype for the <span>&#92;(i &#92;)</span>-th data isntance <span>&#92;(x &#95; i  &#92;)</span>
+2. sum-of-squares between clusters (SSB) = <span>&#92;(\sum &#95; {i=1}^M n &#95; i\&#124;c &#95; i - \bar x \&#124;^2 &#92;)</span>, where we have <span>&#92;(M &#92;)</span> clusters, <span>&#92;(n &#95; i &#92;)</span> is the number of elements in cluster, <span>&#92;(c &#95; i &#92;)</span> is the current class mean. and <span>&#92;(\bar x &#92;)</span> is mean of means.
 
 SSW and SSB are part of ANOVA (analysis of variance).
 
 Other cluster validity measures:
-- Calinski-Harbusz Index <span>&#92;(CH = \dfrac{SSB / (M-1)}{SSW/(N_M)} &#92;)</span>
-- Hartigen Index <span>&#92;(H = \left(\dfrac{SSW _ M}{SSW _ {M+1}}-1\right)(N-M-1) &#92;)</span> or <span>&#92;(H = \log _ 2 \dfrac{SSB}{SSW} &#92;)</span>
+- Calinski-Harbusz Index <span>&#92;(CH = \dfrac{SSB / (M-1)}{SSW/(N&#95;M)} &#92;)</span>
+- Hartigen Index <span>&#92;(H = \left(\dfrac{SSW &#95; M}{SSW &#95; {M+1}}-1\right)(N-M-1) &#92;)</span> or <span>&#92;(H = \log &#95; 2 \dfrac{SSB}{SSW} &#92;)</span>
 - Dunn's Index
 <span>&#92;[
     D = {
-\min _ {i=1} ^M \min _ {j=i+1}^M d(c _ i,c _ j) \over
-        \max _ {k=1} ^M diam(c _ k)
+\min &#95; {i=1} ^M \min &#95; {j=i+1}^M d(c &#95; i,c &#95; j) \over
+        \max &#95; {k=1} ^M diam(c &#95; k)
     }
 &#92;]</span>
-where <span>&#92;(d (c _ i,c _ j)= \min _ {x\in c _ i,x'\in c _ j}\&#124;x-x'\&#124;^2 &#92;)</span>, and <span>&#92;(diam(c _ k) = \max _ {x,x'\in c _ k}\&#124;x-x'\&#124;^2 &#92;)</span>
-- WB Index <span>&#92;(WB _ M = M\cdot {SSW\over SSB} &#92;)</span>
+where <span>&#92;(d (c &#95; i,c &#95; j)= \min &#95; {x\in c &#95; i,x'\in c &#95; j}\&#124;x-x'\&#124;^2 &#92;)</span>, and <span>&#92;(diam(c &#95; k) = \max &#95; {x,x'\in c &#95; k}\&#124;x-x'\&#124;^2 &#92;)</span>
+- WB Index <span>&#92;(WB &#95; M = M\cdot {SSW\over SSB} &#92;)</span>
 
-We have other problems: We made a big assumption: <span>&#92;(x _ i\in C _ k &#92;)</span> and <span>&#92;(x _ i\notin C _ j \quad \forall j\ne k &#92;)</span>. This is hard/dual/crisp clustering.
+We have other problems: We made a big assumption: <span>&#92;(x &#95; i\in C &#95; k &#92;)</span> and <span>&#92;(x &#95; i\notin C &#95; j \quad \forall j\ne k &#92;)</span>. This is hard/dual/crisp clustering.
 <span>&#92;[
-    \mu _ k (x _ i)\in &#92;left&#92;{ 0,1 &#92;right&#92;} \implies \mu _ k(x _ i)\notin [0,1]
+    \mu &#95; k (x &#95; i)\in &#92;left&#92;{ 0,1 &#92;right&#92;} \implies \mu &#95; k(x &#95; i)\notin [0,1]
 &#92;]</span>
 
 AI deals with imperfect info.
@@ -640,7 +640,7 @@ AI deals with imperfect info.
 ## A bit of Set theory
 <span>&#92;(X = &#92;left&#92;{ x &#92;right&#92;} &#92;)</span> universe of discourse
 
-characteristic function of <span>&#92;(A: f _ A(x)=&#92;begin{cases}
+characteristic function of <span>&#92;(A: f &#95; A(x)=&#92;begin{cases}
 1 & &#92;text{if }x\in A  &#92;&#92;
 0   & &#92;text{otherwise}
 &#92;end{cases} &#92;)</span>
@@ -650,14 +650,14 @@ Logical Laws:
 2. The Law of Excluded Middle: <span>&#92;(A\cup \bar A =X &#92;)</span>
 
 ## Fuzzy Sets
-<span>&#92;(A = &#92;left&#92;{ (x,\mu _ A(x)) &#124; x\in X, \mu _ A(x)\in [0,1] &#92;right&#92;} &#92;)</span>
-or we write <span>&#92;(A = \int _ X {\mu _ A(x)\over X} &#92;)</span>
+<span>&#92;(A = &#92;left&#92;{ (x,\mu &#95; A(x)) &#124; x\in X, \mu &#95; A(x)\in [0,1] &#92;right&#92;} &#92;)</span>
+or we write <span>&#92;(A = \int &#95; X {\mu &#95; A(x)\over X} &#92;)</span>
 
 Simple example: <span>&#92;(X=&#92;left&#92;{ 1,2,\ldots,7 &#92;right&#92;} &#92;)</span>, and we define <span>&#92;(A =  &#92;)</span> "set of neighbors of 4"
 
-<span>&#92;(A _ {crisp} = &#92;left&#92;{ 3,4,5 &#92;right&#92;} &#92;)</span> whereas
+<span>&#92;(A &#95; {crisp} = &#92;left&#92;{ 3,4,5 &#92;right&#92;} &#92;)</span> whereas
 <span>&#92;[
-    A _ {Fuzzy} = &#92;left&#92;{
+    A &#95; {Fuzzy} = &#92;left&#92;{
 {0.3\over 1}, {0.7\over 2}, {1\over 3}, {1\over 4}, {1\over 5}, {0.7\over 6}, {0.3\over 7}
      &#92;right&#92;}
 &#92;]</span>
@@ -668,7 +668,7 @@ Membership is similarity, intensity, probability, approximation, compatibility.
 How do we measure fuzziness?
 
 <span>&#92;[
-    \gamma = \text{fuzziness} = {1\over N}\sum_ i \min (\mu _ A(x _ i), 1 - \mu _ A( x _ i))
+    \gamma = \text{fuzziness} = {1\over N}\sum&#95; i \min (\mu &#95; A(x &#95; i), 1 - \mu &#95; A( x &#95; i))
 &#92;]</span>
 
 ![there should be a image...](/pics/522/fuzziness.png)
@@ -678,18 +678,18 @@ FCM
 1. Initialize (# of clusters <span>&#92;(M &#92;)</span>, fuzzifier <span>&#92;(m &#92;)</span>, membership function <span>&#92;(\mu &#92;)</span>)
 2. Cluster Centers
 <span>&#92;[
-    C _ i = {
-        \sum _ {k=1}^n (\mu _ {ik})^m x _ k\over
-        \sum _ {k=1}^n (\mu _ {ik})^m
+    C &#95; i = {
+        \sum &#95; {k=1}^n (\mu &#95; {ik})^m x &#95; k\over
+        \sum &#95; {k=1}^n (\mu &#95; {ik})^m
     }
 &#92;]</span>
 3. Update Memberships
 <span>&#92;[
-    \mu _ {ik} = {1\over
-\sum _ {j=1}^M \left(d _ {ik}\over d _ {jk}\right)^{2\over m-1}
+    \mu &#95; {ik} = {1\over
+\sum &#95; {j=1}^M \left(d &#95; {ik}\over d &#95; {jk}\right)^{2\over m-1}
     }
 &#92;]</span>
 4. Stopping criterion
 <span>&#92;[
-    \&#124; \underbrace{U^{current}} _ {\text{Fuzzy Partition}} - U^{before}\&#124;
+    \&#124; \underbrace{U^{current}} &#95; {\text{Fuzzy Partition}} - U^{before}\&#124;
 &#92;]</span>

@@ -99,7 +99,7 @@ In D minor:
     2. Add an elaborative chord
     3. Add a tonicizing chord
 
-Between Cadential Predominant (<span>&#92;(\text{C} _ 4^6 &#92;)</span> or V) and Dom, can use II (major only), II<sup>6</sup>, II<sup>7</sup>, <span>&#92;(\text{II} _ 5^6 &#92;)</span>, IV, IV<sup>6</sup>, IV<sup>7</sup>
+Between Cadential Predominant (<span>&#92;(\text{C} &#95; 4^6 &#92;)</span> or V) and Dom, can use II (major only), II<sup>6</sup>, II<sup>7</sup>, <span>&#92;(\text{II} &#95; 5^6 &#92;)</span>, IV, IV<sup>6</sup>, IV<sup>7</sup>
 
 From Final V to I
 1. a 4-3 SUS
