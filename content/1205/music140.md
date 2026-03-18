@@ -100,7 +100,6 @@ Now it is with race that we are going to be concerned primarily this week, becau
 If you are looking for a date of the birth of popular music In North America, a good candidate would be 1619: beginning of one of the darkest chapters in this history of western culture. 1619: first time ever, slaves kidnapped from their homes (West Africa) were sold into bandage on continental North America. This event has profound effect on history. Slavery lasted about 250 yrs. They are no longer considered human. They were themselves personal possessions. And yet, they managed to bring with them some sense of their culture/storytelling/music. And it is that west African origin that would become the core of structuring the sound of African American music culture. Let's listen to an example: “Old Alabama” 1947.
 
 <p align="center">&#9834; <i>music playing</i> &#9834;</p>
-![there should be a image...](/pics/slave.jpg)
 
 
 First question: is the recording actually by slaves? No, cause recording tech didn't appear until late 1800. Slavery ended in 1865, so it's impossible to these two to line up. The recording is about a prison gang such as a picture above. 7 am in the morning, a group of African American chopping a large tree that has fallen after a storm. The knocking sound is the swinging of the axes.
@@ -195,7 +194,6 @@ These recordings were aimed primarily at African American audiences. This is the
 ## Part A: Of Radio And Records
 We start in 1877 with the invention of **mechanical reproduction**. In 1877, Thomas Edison invents the phonograph (gramophone), a device that encodes the sound. The cylinder is the core. Patterns are recorded in the cylinder, and sound would come back from the cylinder by pulling the playback arm.
 
-![there should be a image...](/pics/140/cyl.png)
 
 People didn't use this right way to record music. Edison didn't see this machine as for arts, but for business, speeches. The cylinder made up of wax is fragile. In fact, playing them back worn them out. In 1887, transition from cylinder to disks begins. Sheet music industry was still by far away the main part of the recorded music industry. In fact, the first record made of songs were largely made to promote sheet music. In 1910, disks become dominant medium. In early 1910s, disk speed is standardized 78 rpm.
 
@@ -363,7 +361,6 @@ He was born in 1935, born in Tupelo, Mississippi, which is not too far from Memp
 
 Then he discovered Elvis Presley. Two problems with myths. First of all, there's nothing to do with biology in terms of how you sound. The way people develop their sound is entirely social. And there's one other problem, Sam claimed that he didn't said it.
 
-![there should be a image...](/pics/140/elvis.jpg)
 
 Then in Spring 1954, starts recording with Scotty Moore (Guitar) and Bill Black (Bass). They first thought he will probably record country and western since he is white and recording in Memphis. And he does not write songs and he is a wonderful song stylists. However, these are not working all that well. Then they take a break. Then during that break, he picks up the guitar and starts playing a R&B song: “That’s Alright Mamma”. Sam hears and thinks he could do it.
 
@@ -406,7 +403,6 @@ Another person, Colonel Tom Parker, promoter, manager. Early 1956, he takes over
 - Elvis dies August 16th, 1977, age 42
 
 ## Part B: Chuck Berry
-![there should be a image...](/pics/140/chuck.jpg)
 
 picture from [wiki](https://en.wikipedia.org/wiki/Chuck_Berry#/media/File:Chuck_Berry_1957.jpg).
 
@@ -464,7 +460,6 @@ Music industry is going up very rapidly and is being driven largely by Rock 'n' 
 - Payola Hearings (bribery). Federal government organizes some serious investigations, looking into whether DJ who plays Rock 'n' Roll is being bribed. And answer is yes, that's how music industry works.
 - The person who came under most fire: Alan Freed.
 
-![there should be a image...](/pics/140/alan.jpg)
 
 This destroys his career. He ended up dying in few years, largely from the stress of being constantly sued by the government.
 
@@ -513,7 +508,6 @@ This song fits in to the new model because its lyrics were appropriate for teena
 
 Most of the newer artists did not write songs because of the division of labour – where were they coming from? TPA needs a new generation of songwriters in the division of labour system, but sounds like Rock 'n' Roll. Many came from The Brill Building.
 
-![there should be a image...](/pics/140/brill.jpg)
 
 -	Don Kirshaner / Al Nevins. Aldon Music is a company within the Brill Building.
 -	Pop music – Tin Pan Alley approach.
@@ -521,13 +515,11 @@ Most of the newer artists did not write songs because of the division of labour 
 ## Part B: Technology and the Rise of the Producer
 We have to go back to dying days of WWII. Nazi Germany has some smart scientists. Some American engineers have one job: to find abandoned Nazi technology and bring it back to the US. In 1945, a young man, Sergeant Jack Mullin, walks in to an abandoned radio station of Western Germany and discover something that alliance suspected Nazi developed but not for sure. They found the **Magnetophon**.
 
-![there should be a image...](/pics/140/Magnetophon.jpg)
 
 It's a reel to reel tape. Jack immediately found out the application of it is entertainment industry. Obviously, records has been quite a while. But for radio, all performance is live, because records is not a completely dependable medium. 1948, Bing Crosby give one of the first commercially produced reel-to-reel tape recorders to Les Paul. It lowers the cost of opening recording studio, not wasting so many records any more.
 
 Les Paul (1915-2009). Obsessed in sounds. Popular guitarist – known for developing the "Solid Body" electric guitar. Solid guitar with amplifier has more sustainable sound.
 
-![there should be a image...](/pics/140/log.jpg)
 
 Les Paul with “The Log.”
 
@@ -535,7 +527,6 @@ Wishes to create recordings by layering performances. Impossible to do with reco
 
 Assists in the development of the “multitrack” tape recorder.
 
-![there should be a image...](/pics/140/multi.jpg)
 
 Example of a more recent multitrack recorder. This is a 16-Track Multitrack recorder from the 1970s.
 
@@ -567,7 +558,6 @@ This is The Beach Boys - "Surfin' USA". This sounds quite a bit different. We he
 
 <p align="center">&#9834; <i>music playing</i> &#9834;</p>
 
-![there should be a image...](/pics/140/venture.jpg)
 
 Self-contained bands: write own songs. The man kneeling down is holding electric bass, two men back electric guitar.
 
@@ -593,7 +583,6 @@ Each part is precise. Electric cellos, early type of synthesizer: theremin. And 
 ## Part A: The New Frontier / Skiffle
 The US was in desperate need of something to distract itself. Particularly the young people. And The Beatles came along at exactly that moment. Now why did they need this distraction?
 
-![](/pics/140/jfk.jpg)
 
 In fact Kennedy remains the youngest man elected to the office of president of the US. He was also Catholic. There was a subtle systematic bias against Catholic. Optimism with Kennedy  (Camelot). Round table, everyone is equal. Kennedy is open to all ideas. This vision that he put forward of nation building was given a name: "The New Frontier". Optimistic future.
 
@@ -613,11 +602,9 @@ According to mythology, John Lennon was a leader of a Skiffle group called the Q
 The Beatles played for American troops in Hamburg, Germany. Playing Rock 'n' Roll, R&B covers. When they are not in Germany, they had a spot in Liverpool, The Cavern Club.
 
 
-![](/pics/140/rocker.jpg)
 
 In this period, they don't have any original songs recorded. It was all through live performances. Because of this, they come to the attention of a music journalist: Brian Epstein. He went to the club and quite surprised on what he saw. They were rough around the edges, swearing, drinking, smoking, but in Epstein own words: they had personal charm, an undeniable charisma. Then he becomes the manager of The Beatles. He starts off by significantly changing on Beatles' image. They are engaging but the look frightens people, intimidates older generations.
 
-![](/pics/140/change.jpg)
 
 Epstein spends the first half of 1962 on trying to get The Beatles a recording contract. He was turned down by every record label in England. In fact, he receives a letter from Dick Rowe, a representative of Decca Records in England. He was historically remembered as The Man Who Turned Down The Beatles. Everyone turns down because there was a feeling that the interest in guitar bass popular music was passing.
 Furthermore, in 1963, once The Beatles becomes famous, Dick finds them and said to them: I am sorry for you... Who would you recommend for me to sign? The Beatles tells him: probably the band Rolling stones. Then he signs the band, which is the second most important band of the British invasion.
@@ -676,17 +663,14 @@ Also Paul has learnt all sorts of things like non-European cultures from him. Al
 
 By this point in their career, John and Paul have written hundreds of songs together. Every song carried the credit of these two. They wrote everything together. John and Paul are starting to write on their own, pursue their own interest in their composition. The band is going to two separate directions. Unfortunately, this will eventually result in demise of the band. We see this change take place over  a remarkably short period of time.
 
-![there should be a image...](/pics/140/help.jpg)
 
 August '65. Yesterday in the Help album.
 
-![there should be a image...](/pics/140/rubber.jpg)
 
 Dec ’65 – “Rubber Soul”. Even the album cover suggests the things are changing. Album cover until then has two purposes: protect and promote the record. The image slightly distorted, skewed. The songs like "Nowhere Man".
 
 <p align="center">&#9834; <i>music playing</i> &#9834;</p>
 
-![there should be a image...](/pics/140/revolver.jpg)
 
 August ’66 – “Revolver”. They abandoned the idea of group photograph. Very last track on the album: “Tomorrow Never Knows”.
 
@@ -709,7 +693,6 @@ March of 1966. The Beatles have done interviews in major British newspaper. They
 ## Part A: The Beatles (Part 2)
 In February, 1967, they release a most remarkable song, “Strawberry Fields Forever”. [Music video](https://www.youtube.com/watch?v=HtUH9z_Oey8). The next album, June 1967 – “Sgt. Pepper’s Lonely Hearts Club Band”. It is the most influential album ever released. It marked the pinnacle of what The Beatles has been working towards through this middle period of Help, Rubber soul and Revolver. They were clearly pushing away from the idea of the individual songs being the focus of their work to a larger collection of songs.
 
-![](/pics/140/sgt.png)
 
 Front cover: wild art, all sorts of important historic figures that surrounds the Beatles. Back cover: first time, album cover include the lyrics for every song. Listen to the final track: The Beatles “A Day In The Life” (From Sgt. Pepper’s Lonely Hearts Club Band). As the song starts, you can hear the end of the previous song. If you listen to the song carefully, you realize there are two songs here, two incomplete songs: first one by John, middle section by Paul, then transition to John's song. We can see two styles diverge.
 
@@ -742,7 +725,6 @@ Remember we are still in post-war era. Then we see young English musicians learn
 Waters becomes a primary influence on a generation of British musicians:  
 Fleetwood Mac, Cream, Eric Clapton, Led Zepplin, The Rolling Stones. Brian Jones puts the Rolling Stones together. He is deeply passionate fan of R&B. Thus he wants to put a band together in a tribute way. Debut at the Marquee Club: July, 1962. The name of the band came from a song by Muddy Waters, "Like a Rolling Stone". In April 1963, they are approached by a young man, Andrew Loog Oldham, who wants to be their manager. Then there comes a myth: Andrew suggests them not to follow the Beatles, instead be dangerous and rough, no smiles.
 
-![](/pics/140/rolling.jpg)
 
 1963-1964: All singles are covers (Chuck Berry, Buddy Holly, Willie Dixon)
 
@@ -835,7 +817,6 @@ Sound and Production Practice
 This brings us back to the sign on the door: Hitsville USA. That's because Berry Gordy focuses on hits. As we are going to see, that's very different from the philosophy that was taken in another major center for soul music: Stax - Memphis.
 
 ## Part B: Stax
-![there should be a image...](/pics/140/st-ax.jpg)
 
 Started by a brother and sister team, Jim <b>St</b>ewart and Estelle <b>Ax</b>ton. Formed in 1959 – Satellite Records (Stax, 1961). Things done differently in Stax. Like Motown, Stax uses house band in many recordings. The band: Booker T and the M.G.s.
 
