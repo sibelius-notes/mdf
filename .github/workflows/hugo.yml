@@ -40,7 +40,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Hugo
         env:
-          HUGO_CACHEDIR: hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/Toronto
           BASE_URL: "${{ steps.pages.outputs.base_url }}/"
