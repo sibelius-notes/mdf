@@ -454,7 +454,6 @@ and for Capoeira...
     - string, coin, gourd, stick, rattle
 
 
-![Pictures from Emily Gao](/pics/three_parts.PNG)
 
 3. According to your text, what is the origin of Capoeira?
     - A dance form that enslaved Africans brought with tme to Brazil. (They evolved to a martial arts, want to disguise the martial art for European. So it's not true.)
@@ -1013,7 +1012,6 @@ This the idea behind the final actual music that we hear. This linear process is
 In Antioch Stemma: there is no straight linear process here. ... Antioch rev. by Lowel Mason. But he also says "this reminds me of Handel", then Handel's "Lift up ye gates". Also Baroque Style. Various Antioch styles spread out here. And final version "Joy to the World". Also in some work today, we have some contemporary language associated to it.
 
 
-![](/pics/antioch.png)
 
 In other words, these methods help us understand the printed work.
 
@@ -1448,7 +1446,6 @@ evening prayer service. It is to celebrate and remember this even Mary's assumpt
 
 [youtube link](https://youtu.be/ENa8voNRYec?t=26)
 
-![](/pics/plainchant.png)
 
 If you look at the last few lines, the last two lines only contain three words: and the flower her son, doesn't seem to mean anything on its own. But the melody associated with it became a kind of symbol of Mary's devine importance. So even just quoting that melody, not the text, could immediately symbolize on its own. Mary as queen of heaven.
 
@@ -1489,7 +1486,6 @@ love. What shall I do? It is the end, the end, whatever anyone says, I will love
 
 Put that all together, we have four different parts sung at the same time. Here is the modern version of this piece.
 
-![](/pics/motet-layer.png)
 
 - Plainchant in the bottom part. moves slightly slower.
 - Pastourelle in the part above (motetus)

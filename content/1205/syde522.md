@@ -64,7 +64,6 @@ Lecture Topics:
 
 All these is approximation: you have a black box \(f(x) \), some \(x \) goes in and some \(y \) goes out. \(f \) is unknown. The simplest approach is regression.
 
-![there should be a image...](/pics/522/AI.svg)
 
 *What is intelligence?*
 
@@ -79,7 +78,6 @@ All these is approximation: you have a black box \(f(x) \), some \(x \) goes in 
 
 *Can we measure intelligence?*
 
-![there should be a image...](/pics/522/tguess.svg)
 
 # Lecture 2
 Check [this paper](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
@@ -224,7 +222,6 @@ Applications of PCA
 
 A meaningful chain:
 
-![there should be a image...](/pics/522/chain.svg)
 
 You will see that this is not always desirable.
 
@@ -250,7 +247,6 @@ linear discriminant analysis (operates of feature subspace, linear method, super
 
 [src](https://sebastianraschka.com/Articles/2014_python_lda.html)
 
-![there should be a image...](/pics/522/wtx.png)
 - Define a good separation measure
 - Mean vector
 
@@ -299,7 +295,6 @@ t-SNE minimizes the sum of KL divergences over all data points using a gradient 
     Objective = \sum _ i D(P _ i \&#124; Q  _ i) = \sum _ i \sum _ j p _ {j &#124; i} \log { p _ {j &#124; i}\over q _ {j &#124; i}}
 \]
 
-![there should be a image...](/pics/522/pq.png)
 
 # Lecture 5
 We'll start by saying: AI is vision! Intelligence is to recognize people/scenes/objects/patters/...
@@ -361,7 +356,6 @@ Vector for locally aggregated descriptors
 
 How to recognize images? Bag of Visual Words (BoVW)
 
-![there should be a image...](/pics/522/vword.png)
 
 Given an image \(I \), divide it into small cell/windows of size \(n \times n \) (i.e. 16x16). We vectorize visual words for convenient calculations.
 
@@ -389,7 +383,6 @@ Here we do a \(L _ 2 \) normalization.
 \)
 
 Final Chain
-![there should be a image...](/pics/522/finalchain.png)
 
 # Lecture 6
 How to validate AI algorithms? [How do I use Turing Test in practice?]
@@ -406,7 +399,6 @@ First factor to make sure that is good enough is to have target/objective functi
 
 Given the entire data \(X = \left\{ x _ t \right\} \)
 
-![there should be a image...](/pics/522/super.png)
 
 Given the set of all hypotheses \(H \) (set of all possible solutions), find \(h\in H \) such that
 \[
@@ -415,18 +407,15 @@ Given the set of all hypotheses \(H \) (set of all possible solutions), find \(h
 which is supervised. This constitutes a good fit for the model \(h \) into \(X \). Any concern?
 
 **Scenario #1**: you have your complex data and simple solution, then you train. It does not converge. Problem is big/non-linear/non-stationary. Solution (hypothesis) is not capable of capturing the complexity.
-![there should be a image...](/pics/522/scen1.png)
 
 **Scenario #2**: Problem is small/linear/stationary. Solution is too big such that is completely owns the problem. h is memorizing X.
 
-![there should be a image...](/pics/522/scen2.png)
 
 What is the ultimate sign that the algorithm has really learned? It can generalize the inherent X-Y relationship to "unseen" data.
 
 Validation = test for generalization. Idea: keep one part of data for testing. But this may not be reliable! The split may be lucky/unfortunate. So we have K-fold partition.
 
 Random Sampling, K-fold cross validation:
-![there should be a image...](/pics/522/randomsamp.png)
 
 But all this would work if we had a lot of data. What if we don't? We use Leave-one-Out validation.
 
@@ -456,7 +445,6 @@ Other methods:
 - Structural risk minimization
 - Minimum description length
 
-![there should be a image...](/pics/522/smallbig.png)
 
 # Lecture 7 - Clustering
 
@@ -477,7 +465,6 @@ We start with K-means algorithm: find the centroids (prototypes)(means) of K clu
 2. Assign each data point to its closest cluster K
 3. Update the centroids
 
-![there should be a image...](/pics/522/centroid.png)
 
 Similarity grouping happens via distance measurement. So objective (error):
 \[
@@ -495,18 +482,15 @@ Problems of K-means:
 2. Outlier sensitive
 3. Hard clustering
 
-![there should be a image...](/pics/522/hard-cluster.png)
 
 Clustering is unsupervised learning.
 
 ## SOM
 Use processing units (neurons) to place centroids on an adjustable map: Self-Organizing Maps (SOM). Hypothesis: The model self-organizes based on learning rules and interactions. Processing units maintain proximity relationships as they grow. This is so-called Kohonen Map.
 
-![there should be a image...](/pics/522/SOM.png)
 The input is connected with each unit (neuron) of a lattice (map).
 
 Concept of neighborhood:
-![there should be a image...](/pics/522/nbr.png)
 
 Goals:
 - find weight values such that adjacent units have similar values.
@@ -530,7 +514,6 @@ Collaboration: Use the lateral distance \(d _ {ij} \) between the winner unit \(
     h _ {ij} (d _ {ij}) = \exp \left(- {d _ {ij}^2\over 2\sigma^2}\right)
 \]
 
-![there should be a image...](/pics/522/gauss.png)
 
 Weight updates:
 \[
@@ -558,7 +541,6 @@ Classification: Intelligence is to distinguish things.
 ## Support Vector Machines
 SVM
 
-![there should be a image...](/pics/522/svm.png)
 
 Assumption: classes \(\in \left\{ \oplus, \ominus \right\} \). And \(w\cdot x _ \oplus + b \ge 1, w\cdot x _ \ominus + b \le -1 \)
 
@@ -594,7 +576,6 @@ Minimize this via quadratic optimization! Then how to classify?
 SVM only works for binary, linearly separable problems.
 
 XOR is a non-linear problem, however, we can do transformations.
-![there should be a image...](/pics/522/xor.png)
 
 Trick! Assume \(T(x) \) is a transform that moves \(x \) to higher dimensions and making linear separation possible, then we have to calculate \(T(x _ i)\cdot T(u) \). But these would be difficult! If we had a function \(K (x_ i , x _ j)\) such that \(K (x _ i, x _ j) = T(x _ i)\cdot T( x _ j) \), then we won't need \(T \). All we need is a "Kernel" function \(K \). We do not need \(T(x) \)! We just need to get \(T (x _ i) \cdot T(x _ j) \), and **not** \(T(x _ i) \) and \(T(x _ j) \) individually. This is called **The Kernel Trick**.
 
@@ -636,7 +617,6 @@ We have other problems: We made a big assumption: \(x _ i\in C _ k \) and \(x _ 
 
 AI deals with imperfect info.
 
-![there should be a image...](/pics/522/imperfect.png)
 ## A bit of Set theory
 \(X = \left\{ x \right\} \) universe of discourse
 
@@ -663,7 +643,6 @@ Simple example: \(X=\left\{ 1,2,\ldots,7 \right\} \), and we define \(A =  \) "s
 \]
 Membership is similarity, intensity, probability, approximation, compatibility.
 
-![there should be a image...](/pics/522/fuzzy.png)
 
 How do we measure fuzziness?
 
@@ -671,7 +650,6 @@ How do we measure fuzziness?
     \gamma = \text{fuzziness} = {1\over N}\sum_ i \min (\mu _ A(x _ i), 1 - \mu _ A( x _ i))
 \]
 
-![there should be a image...](/pics/522/fuzziness.png)
 
 ## Fuzzy C-Means
 FCM

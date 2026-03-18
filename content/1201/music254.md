@@ -1326,7 +1326,6 @@ Finally, Mozart!! Two pieces today
 
 **Quick Review of Sonata Form**
 
-![](/pics/sonata-form.png)
 
 Wolfgang Amadeus Mozart (Austrian composer, 1756-1791)
 - Child prodigy:
@@ -1346,7 +1345,6 @@ Wolfgang Amadeus Mozart (Austrian composer, 1756-1791)
 ### Piano Sonata No. 12 in F Major, 1st movement K.332
 The piano Sonata first movement is in Sonata form. It uses many contrasting styles: recognizable to contemporary audience.
 
-![](/pics/k332.png)
 
 #### Exposition
 **First theme group (1T): m. 1:** Song-like melody over broken-chord accompaniment
@@ -1376,13 +1374,9 @@ Now let's look at the score, 3 distinct styles of music in theme 1
 
 transition: “storm & stress” style: sudden change to minor, forte, dissonance
 
-![](/pics/k332-1.png)
 
-![](/pics/k332-2.png)
 
-![](/pics/k332-3.png)
 
-![](/pics/k332-4.png)
 
 ### Piano concerto no. 23 in A Major, K488 1st movement
 1786
@@ -1402,7 +1396,6 @@ why.”
 
 ritornello form & sonata form hybrid
 
-![](/pics/k488.png)
 
 - 1T = 1st theme		
 - Tr = transition
@@ -1446,7 +1439,6 @@ G.B. Sammartini (ca. 1700-1775)
 
 mm. 1-8: 5 ideas: hammered octaves, rising scales, repeated melodic idea, rushing scales, rising arpeggios over ♪♪ bass  
 
-![](/pics/sammartini.png)
 
 ## Stamitz: Sinfonia in E-flat, Op. 11, No. 3,  I
 Johann Stamitz (1717-1757)
@@ -1477,18 +1469,15 @@ Now let's take a look at some features:
 
 **1st theme group: 3 different ideas**
 
-![](/pics/stamitz-theme1.png)
 
 **“Mannheim crescendo” Transition section**
 
-![](/pics/stamitz-trans.png)
 
 **2nd theme:**
 - In dominant key (B flat)
 - 2 oboes
 - More lyrical than 1st
 
-![](/pics/stamitz-theme2.png)
 
 ## Joseph Haydn (1732–1809)
 - **Most celebrated composer of his day**
@@ -1543,9 +1532,7 @@ G major
 - variety & strong contrasts but unified
 - Harmony: as expected but witty touches
 
-![](/pics/haydn88mov1.png)
 
-![](/pics/ex233.png)
 
 ### Movement 2
 D major
@@ -1555,11 +1542,9 @@ D major
     - m.41: interruption: loud tremolos (strings) + trumpets & drums
 - elements of variations, rondo, and rounded binary form
 
-![](/pics/haydn88mov2.png)
 
 Symphony No. 88, Movement 2: contrasting material, m.41 (2:04)
 
-![](/pics/haydnmov2m41.png)
 
 ### Movement 3
 G major
@@ -1580,12 +1565,10 @@ Let's take a look at the score.
 - Grace notes on upbeats
 - 2nd phrase 6 bars long
 
-![](/pics/haydnmov3-1.png)
 
 - Lighter texture
 - Drones: like bagpipes
 
-![](/pics/haydnmov3-2.png)
 
 ### Movement 4
 G major
@@ -1595,7 +1578,6 @@ G major
 - A is rounded binary (1st presented with repeats)
     - Theme a modulates G -> B minor
 
-![](/pics/haydn88mov4.png)
 
 ## Mozart, Symphony No. 41 in C Major (Jupiter), K. 551: Finale (IV)
 - 1788
@@ -1620,11 +1602,9 @@ G major
     - Many imitative and fugato passages
     - Displaying contrapuntal prowess within clear sonata form
 
-![](/pics/jupiter-theme1.png)
 
 Mozart, Symphony 41, IV – form
 
-![](/pics/mozart41form.png)
 
 **CODA (m. 356):**
 - 5-voice fugato:
@@ -1637,13 +1617,9 @@ Mozart, Symphony 41, IV – form
 
 Coda form: counterpoint
 
-![](/pics/mozart-coda.png)
 
-![](/pics/ex239.png)
 
-![](/pics/mozart41-1.png)
 
-![](/pics/mozart41-2.png)
 
 # Classical Chamber Music
 Haydn, Op. 33, no. 2 “The Joke”
@@ -1686,7 +1662,6 @@ form: 4 movements: Sonata Cycle:
 - **Episodes (B & C)**: modulate to nearby keys
     - provide contrast but develop figures from theme
 
-![](/pics/ex231.png)
 
 “The Joke”, finale (Presto), 1781
 
@@ -1706,7 +1681,6 @@ m.1              M.36       m.72        m.107       m.141   m.148
     - Dramatic build-up before return of A (m72 & m 141): let down
     - Rests at end of movement, opening material used for ending (see score below)
 
-![](/pics/ex232.png)
 
 # Classical Opera
 Mozart, *Don Giovanni*,1787
