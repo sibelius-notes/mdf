@@ -1,5 +1,5 @@
 ---
-title: ECON 392
+title: "ECON 392: Strategic Situations and Welfare Economics"
 layout: toc
 parent: Fall 2021
 prof: Ahmet Ozkardas

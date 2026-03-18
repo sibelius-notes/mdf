@@ -1,0 +1,5 @@
+// Disable expand/collapse toggle on parent nav items.
+// Children are shown only when the parent is active (current section).
+.nav-list .nav-list-item > .nav-list-expander {
+  display: none;
+}

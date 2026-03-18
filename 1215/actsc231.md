@@ -110,7 +110,6 @@ giving the accumulation function <span>&#92;(a(t) = 1/(1-dt)&#92;)</span>, which
 
 so <span>&#92;(a(t) = (1-d)^{-t}&#92;)</span>. This is simply compound interest reparameterized using the effective rate of discount. There is no structural difference between compound interest and compound discount — they are two descriptions of the same exponential accumulation.
 
-![Compound discount example](/pics/231/231-m1l5-compound-discount-example.jpg)
 
 **Worked Example: Simple vs. Compound Discount.** Accumulate $3,500 for 5 years at discount rate <span>&#92;(d = 4.5\%&#92;)</span>. Under *simple discount*: <span>&#92;(A = 3500/(1 - 0.045 \times 5) = 3500/0.775 = \$4{,}516.13&#92;)</span>. Under *compound discount*: <span>&#92;(A = 3500(1-0.045)^{-5} = \$4{,}406.07&#92;)</span>. Simple discount gives a higher accumulated value because the effective interest rate is increasing over time.
 
@@ -273,13 +272,11 @@ The **accumulated value** (at the time of the last payment) uses <span>&#92;(s_{
 
 <span>&#92;[ s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n = \frac{(1+i)^n - 1}{i}, \quad i \ne 0 &#92;]</span>
 
-![Annuity-immediate introduction](/pics/231/231-m2l2-annuity-immediate-intro.jpg)
 
 For a payment amount of $R, multiply each formula by $R. The key equation linking PV and AV is:
 
 <span>&#92;[ s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n &#92;]</span>
 
-![Worked example: calculating withdrawals](/pics/231/231-m2l2-calculating-withdrawals.jpg)
 
 **Worked Example: Counting Payments Carefully.** On July 10, 2010, Susan buys an annuity paying $1,000 every 3 months, with the first payment on October 10, 2010, and the final payment on April 10, 2019, priced at <span>&#92;(i^{(4)} = 5.2\%&#92;)</span>. How much does she pay?
 
@@ -323,7 +320,6 @@ When the first payment is not exactly one full period away, adjust the perpetuit
 
 (discount the perpetuity-immediate value back <span>&#92;(k-1&#92;)</span> periods to today).
 
-![Perpetuity example: calculating perpetual payments](/pics/231/231-m2l4-perpetual-payments.jpg)
 
 **Worked Example: Endowment Fund with Several Perpetuity Variants.** Emily donates $100,000 to establish annual scholarships, invested at <span>&#92;(i = 8\%&#92;)</span>.
 
@@ -343,9 +339,7 @@ An **<span>&#92;(m&#92;)</span>-year deferred, <span>&#92;(n&#92;)</span>-year a
 
 The second formula interprets the deferred annuity as the difference of two annuities starting now. A similarly useful identity: the value of an annuity <span>&#92;(m&#92;)</span> periods after its last payment is <span>&#92;((1+i)^m s_{\overline{n}|} = s_{\overline{m+n}|} - s_{\overline{m}|}&#92;)</span>.
 
-![Deferred annuity introduction](/pics/231/231-m2l5-deferred-annuity-intro.jpg)
 
-![Deferred annuity example](/pics/231/231-m2l5-deferred-annuity-example.png)
 
 ## Lesson 6: Nonlevel Annuities
 
@@ -390,7 +384,6 @@ This is called the **P–Q formula**. For an annuity-due, multiply by <span>&#92
 
 <span>&#92;[ (Ia)_{\overline{n}|} = \frac{\ddot{a}_{\overline{n}|} - nv^n}{i} &#92;]</span>
 
-![Arithmetic increasing annuity](/pics/231/231-m2l8-arithmetic-annuity-intro.png)
 
 **Worked Example: P–Q Formula in Practice.** Olga buys a 5-year increasing annuity: $2 at end of month 1, $4 at end of month 2, …, increasing by $2 each month. Nominal rate 9% compounded quarterly. First convert to a monthly rate: <span>&#92;(j = (1 + 0.09/4)^{1/3} - 1 = 0.744444\%&#92;)</span> per month (store all digits). With <span>&#92;(P = 2&#92;)</span>, <span>&#92;(Q = 2&#92;)</span>, <span>&#92;(n = 60&#92;)</span> months:
 <span>&#92;[ X = 2 a_{\overline{60}|j} + \frac{2}{j}\left(a_{\overline{60}|j} - 60v^{60}\right) = \$2{,}729.21 &#92;]</span>
@@ -427,7 +420,6 @@ For an annuity-immediate with target value <span>&#92;(FV&#92;)</span>:
 
 <span>&#92;[ n = \frac{-\ln(1 - L \cdot i / R)}{\ln(1+i)} \quad \text{(present value)} &#92;]</span>
 
-![Term of annuity example](/pics/231/231-m2l10-term-annuity-example.jpg)
 
 **Worked Example: Finding the Term and Smaller Final Payment.** You borrow $10,000 repaid by level end-of-year payments of $1,000 at <span>&#92;(i = 4\%&#92;)</span>. Find the number of full payments and the smaller final payment.
 
@@ -873,7 +865,6 @@ Using a Taylor expansion, the **approximate relative price change** when the yie
 
 The duration term gives the linear (first-order) change; convexity adds a positive second-order correction. This means that for a given duration, higher convexity is preferred — the bond loses less when rates rise and gains more when rates fall.
 
-![Bond price sensitivity](/pics/231/231-m6l3-price-sensitivity.jpg)
 
 **Risk implication:** Among bonds with the same duration, a **zero-coupon bond** has the highest sensitivity to interest rates (and least convexity relative to its duration), while high-coupon bonds are less sensitive.
 
