@@ -305,7 +305,7 @@ The effect was quite astonishing for audiences at the time. Notice the big gaps 
 
 Thus still conventionally silent film. Nevertheless, a financial hit. It signaled the "beginning of the end" of the silent era. Sound on Disk has the early lead, but Sound on Film will become the standard by the early 1930s. Sound on Film has surpassed the audio quality of Vitaphone.
 
-Now we enter the transition era, 1927 <span>&#92;(\to &#92;)</span> 1931 or 1932.
+Now we enter the transition era, 1927 \(\to \) 1931 or 1932.
 Let's talk about how the change to sound alters the approach to make motion pictures.
 1. **Aesthetics**. E.g., how does one act in the featured films. In silent films, one attempted to be overly dramatic with facial expressions or gestures, because no lines. Now they can say lines, so these old ways of acting look silly. Issue for industry: actors need to retool their acting skill. Another issue is the voices: decent voice is not necessary for silent films. In sound films, some of their voices are completely inappropriate. Also, a debate: Many worried about using none-diegetic music: "Where does the music come from?"
 2. **Making films**.

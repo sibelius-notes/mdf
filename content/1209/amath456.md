@@ -9,74 +9,74 @@ prof: "Kirsten Morris"
 
 ### 1.1 Optimization in One Dimension
 
-Every optimization problem requires two things: a cost function to minimize, and a domain over which to search. Starting in one dimension, consider a real-valued function <span>&#92;(J : &#92;mathbb{R} &#92;to &#92;mathbb{R}&#92;)</span> and a subdomain <span>&#92;(D = [a, b] &#92;subseteq &#92;mathbb{R}&#92;)</span>. The goal is to find <span>&#92;(\min&#95;{y \in D} J(y)&#92;)</span>.
+Every optimization problem requires two things: a cost function to minimize, and a domain over which to search. Starting in one dimension, consider a real-valued function \(J : \mathbb{R} \to \mathbb{R}\) and a subdomain \(D = [a, b] \subseteq \mathbb{R}\). The goal is to find \(\min_{y \in D} J(y)\).
 
-**Definition 1.1 (Global minimum).** A point <span>&#92;(y^&#42; \in D&#92;)</span> *minimizes* <span>&#92;(J&#92;)</span> over <span>&#92;(D&#92;)</span> if <span>&#92;(J(y^&#42;) \leq J(y)&#92;)</span> for all <span>&#92;(y \in D&#92;)</span>. It is a *local minimum* if there exists <span>&#92;(\epsilon > 0&#92;)</span> such that <span>&#92;(J(y^&#42;) \leq J(y)&#92;)</span> for all <span>&#92;(y \in B&#95;\epsilon(y^&#42;)&#92;)</span>.
+**Definition 1.1 (Global minimum).** A point \(y^* \in D\) *minimizes* \(J\) over \(D\) if \(J(y^*) \leq J(y)\) for all \(y \in D\). It is a *local minimum* if there exists \(\epsilon > 0\) such that \(J(y^*) \leq J(y)\) for all \(y \in B_\epsilon(y^*)\).
 
-The derivative of <span>&#92;(J&#92;)</span> at a point <span>&#92;(y&#92;)</span> is defined as the limit <span>&#92;(J'(y) = \lim&#95;{v \to 0} \frac{J(y+v) - J(y)}{v}&#92;)</span>, when it exists.
+The derivative of \(J\) at a point \(y\) is defined as the limit \(J'(y) = \lim_{v \to 0} \frac{J(y+v) - J(y)}{v}\), when it exists.
 
-**Theorem 1.4 (Necessary condition).** If <span>&#92;(J&#92;)</span> is differentiable and <span>&#92;(y^&#42; \in U&#92;)</span> (interior of <span>&#92;(D&#92;)</span>) is a local minimum, then <span>&#92;(J'(y^&#42;) = 0&#92;)</span>.
+**Theorem 1.4 (Necessary condition).** If \(J\) is differentiable and \(y^* \in U\) (interior of \(D\) is a local minimum, then \(J'(y^*) = 0\).
 
-The proof considers small perturbations <span>&#92;(v > 0&#92;)</span> and <span>&#92;(v < 0&#92;)</span> separately: for <span>&#92;(v > 0&#92;)</span>, <span>&#92;(\frac{J(y^&#42;+v) - J(y^&#42;)}{v} \geq 0&#92;)</span>, which gives <span>&#92;(J'(y^&#42;) \geq 0&#92;)</span> in the limit; for <span>&#92;(v < 0&#92;)</span>, the inequality flips to give <span>&#92;(J'(y^&#42;) \leq 0&#92;)</span>. Together, <span>&#92;(J'(y^&#42;) = 0&#92;)</span>. The converse is not true in general.
+The proof considers small perturbations \(v > 0\) and \(v < 0\) separately: for \(v > 0\), \(\frac{J(y^*+v) - J(y^*)}{v} \geq 0\), which gives \(J'(y^*) \geq 0\) in the limit; for \(v < 0\), the inequality flips to give \(J'(y^*) \leq 0\). Together, \(J'(y^*) = 0\). The converse is not true in general.
 
 ### 1.2 Optimization in R<sup>n</sup>
 
-For functions <span>&#92;(J : &#92;mathbb{R}^n \to &#92;mathbb{R}&#92;)</span>, differentiability at <span>&#92;(y^&#42; \in D&#92;)</span> means there exists a gradient vector <span>&#92;(&#92;nabla J(y^&#42;)&#92;)</span> such that
+For functions \(J : \mathbb{R}^n \to \mathbb{R}\), differentiability at \(y^* \in D\) means there exists a gradient vector \(\nabla J(y^*)\) such that
 
-<span>&#92;[J(y^&#42; + v) = J(y^&#42;) + &#92;nabla J(y^&#42;) &#92;cdot v + R(y^&#42;, v)&#92;]</span>
+\[J(y^* + v) = J(y^*) + \nabla J(y^*) \cdot v + R(y^*, v)\]
 
-with <span>&#92;(\lim&#95;{&#92;|v&#92;| \to 0} &#92;frac{&#92;|R(y^&#42;, v)&#92;|}{&#92;|v&#92;|} = 0&#92;)</span>.
+with \(\lim_{\|v\| \to 0} \frac{\|R(y^*, v)\|}{\|v\|} = 0\).
 
 A weaker notion is the **directional derivative** (Definition 1.7):
 
-<span>&#92;[&#92;delta J(y; v) = &#92;lim&#95;{&#92;epsilon &#92;to 0} &#92;frac{J(y + &#92;epsilon v) - J(y)}{&#92;epsilon}&#92;]</span>
+\[\delta J(y; v) = \lim_{\epsilon \to 0} \frac{J(y + \epsilon v) - J(y)}{\epsilon}\]
 
-when the limit exists. For differentiable <span>&#92;(J&#92;)</span>, the directional derivative equals <span>&#92;(&#92;nabla J(y) &#92;cdot v&#92;)</span>.
+when the limit exists. For differentiable \(J\), the directional derivative equals \(\nabla J(y) \cdot v\).
 
-**Theorem 1.10 (Gradient condition).** If <span>&#92;(J&#92;)</span> is differentiable and <span>&#92;(y^o&#92;)</span> is a local minimum, then <span>&#92;(&#92;nabla J(y^o) = 0&#92;)</span>. The proof mirrors the one-dimensional argument: non-negativity of the directional derivative in direction <span>&#92;(v&#92;)</span> and in direction <span>&#92;(-v&#92;)</span> forces <span>&#92;(&#92;nabla J(y^o) &#92;cdot v = 0&#92;)</span> for all <span>&#92;(v&#92;)</span>.
+**Theorem 1.10 (Gradient condition).** If \(J\) is differentiable and \(y^o\) is a local minimum, then \(\nabla J(y^o) = 0\). The proof mirrors the one-dimensional argument: non-negativity of the directional derivative in direction \(v\) and in direction \(-v\) forces \(\nabla J(y^o) \cdot v = 0\) for all \(v\).
 
-**Definition 1.11 (Stationary point).** A point <span>&#92;(y^&#42;&#92;)</span> is a **stationary point** of <span>&#92;(J&#92;)</span> if <span>&#92;(&#92;delta J(y^&#42;; v) = 0&#92;)</span> for all admissible directions <span>&#92;(v&#92;)</span>. For differentiable functions this is equivalent to <span>&#92;(&#92;nabla J(y^&#42;) = 0&#92;)</span>.
+**Definition 1.11 (Stationary point).** A point \(y^*\) is a **stationary point** of \(J\) if \(\delta J(y^*; v) = 0\) for all admissible directions \(v\). For differentiable functions this is equivalent to \(\nabla J(y^*) = 0\).
 
 ### 1.3 Convexity in R<sup>n</sup>
 
-**Definition 1.12 (Convex set).** A set <span>&#92;(D &#92;subseteq &#92;mathbb{R}^n&#92;)</span> is **convex** if for any two points <span>&#92;(x, y &#92;in D&#92;)</span> and <span>&#92;(0 < &#92;alpha < 1&#92;)</span>, the point <span>&#92;(&#92;alpha x + (1-&#92;alpha)y &#92;in D&#92;)</span>. Geometrically, the straight line segment between any two points lies entirely within the set.
+**Definition 1.12 (Convex set).** A set \(D \subseteq \mathbb{R}^n\) is **convex** if for any two points \(x, y \in D\) and \(0 < \alpha < 1\), the point \(\alpha x + (1-\alpha)y \in D\). Geometrically, the straight line segment between any two points lies entirely within the set.
 
-**Definition 1.13 (Convex function).** A function <span>&#92;(J : &#92;mathbb{R}^n &#92;to &#92;mathbb{R}&#92;)</span> is **convex** on <span>&#92;(D&#92;)</span> if for all <span>&#92;(a, b &#92;in D&#92;)</span> and <span>&#92;(0 < &#92;alpha < 1&#92;)</span>,
+**Definition 1.13 (Convex function).** A function \(J : \mathbb{R}^n \to \mathbb{R}\) is **convex** on \(D\) if for all \(a, b \in D\) and \(0 < \alpha < 1\),
 
-<span>&#92;[J(a + &#92;alpha(b - a)) &#92;leq &#92;alpha J(b) + (1 - &#92;alpha) J(a).&#92;]</span>
+\[J(a + \alpha(b - a)) \leq \alpha J(b) + (1 - \alpha) J(a).\]
 
-Strict inequality defines **strict convexity**. The epigraph characterization is equivalent: <span>&#92;(J&#92;)</span> is convex if and only if the set of points above its graph, <span>&#92;(\text{epi}\,J = &#92;{(x, y) : y &#92;geq J(x)&#92;}&#92;)</span>, is convex.
+Strict inequality defines **strict convexity**. The epigraph characterization is equivalent: \(J\) is convex if and only if the set of points above its graph, \(\text{epi}\,J = \{(x, y) : y \geq J(x)\}\), is convex.
 
 The power of convexity is captured in the following:
 
-**Theorem 1.16.** If <span>&#92;(J&#92;)</span> is convex on <span>&#92;(D&#92;)</span>, then every stationary point in the interior of <span>&#92;(D&#92;)</span> minimizes <span>&#92;(J&#92;)</span> globally on <span>&#92;(D&#92;)</span>.
+**Theorem 1.16.** If \(J\) is convex on \(D\), then every stationary point in the interior of \(D\) minimizes \(J\) globally on \(D\).
 
 This theorem eliminates the need to check second-order conditions or compare multiple critical points; a single stationary point of a convex function is automatically the global minimum.
 
 For differentiable convex functions, **Theorem 1.15** provides an equivalent characterization:
 
-<span>&#92;[J(y + v) &#92;geq J(y) + &#92;nabla J(y) &#92;cdot v &#92;quad &#92;text{for all } y, y+v &#92;in D.&#92;]</span>
+\[J(y + v) \geq J(y) + \nabla J(y) \cdot v \quad \text{for all } y, y+v \in D.\]
 
 Geometrically: a convex function always lies above its tangent plane.
 
 ### 1.4 Second-Derivative Test for Convexity
 
-For smooth enough functions, the **Hessian matrix** <span>&#92;(H&#95;J(y) = &#92;left[&#92;\frac{&#92;partial^2 J}{&#92;\partial y&#95;i &#92;\partial y&#95;j}&#92;right]&#92;)</span> characterizes convexity:
+For smooth enough functions, the **Hessian matrix** \(H_J(y) = \left[\frac{\partial^2 J}{\partial y_i \partial y_j}\right]\) characterizes convexity:
 
-**Theorem 1.21.** A twice continuously differentiable function <span>&#92;(f&#92;)</span> on a convex set <span>&#92;(D &#92;subseteq &#92;mathbb{R}^n&#92;)</span> is (strictly) convex if and only if the Hessian is positive semi-definite (positive definite) at each point in <span>&#92;(D&#92;)</span>.
+**Theorem 1.21.** A twice continuously differentiable function \(f\) on a convex set \(D \subseteq \mathbb{R}^n\) is (strictly) convex if and only if the Hessian is positive semi-definite (positive definite) at each point in \(D\).
 
-**Definition 1.20.** A symmetric matrix <span>&#92;(M &#92;in &#92;mathbb{R}^{n&#92;times n}&#92;)</span> is:
-- **Positive semi-definite** if <span>&#92;(x^T M x &#92;geq 0&#92;)</span> for all <span>&#92;(x&#92;)</span>;
-- **Positive definite** if also <span>&#92;(x^T M x = 0 &#92;Rightarrow x = 0&#92;)</span>;
-- **Negative (semi-)definite** if <span>&#92;(-M&#92;)</span> is positive (semi-)definite;
-- **Indefinite** if <span>&#92;(x^T M x&#92;)</span> takes both positive and negative values.
+**Definition 1.20.** A symmetric matrix \(M \in \mathbb{R}^{n\times n}\) is:
+- **Positive semi-definite** if \(x^T M x \geq 0\) for all \(x\);
+- **Positive definite** if also \(x^T M x = 0 \Rightarrow x = 0\);
+- **Negative (semi-)definite** if \(-M\) is positive (semi-)definite;
+- **Indefinite** if \(x^T M x\) takes both positive and negative values.
 
-**Theorem 1.23 (Second-order test).** At a critical point <span>&#92;(a&#92;)</span> of <span>&#92;(f &#92;in C^2(D)&#92;)</span>:
-- If <span>&#92;(H&#95;f(a)&#92;)</span> is positive definite, <span>&#92;(a&#92;)</span> is a local minimum.
-- If <span>&#92;(H&#95;f(a)&#92;)</span> is negative definite, <span>&#92;(a&#92;)</span> is a local maximum.
-- If <span>&#92;(H&#95;f(a)&#92;)</span> is indefinite, <span>&#92;(a&#92;)</span> is a saddle point.
+**Theorem 1.23 (Second-order test).** At a critical point \(a\) of \(f \in C^2(D)\):
+- If \(H_f(a)\) is positive definite, \(a\) is a local minimum.
+- If \(H_f(a)\) is negative definite, \(a\) is a local maximum.
+- If \(H_f(a)\) is indefinite, \(a\) is a saddle point.
 
-If <span>&#92;(H&#95;f&#92;)</span> is only semi-definite at the critical point, no conclusion can be drawn from the Hessian alone—further analysis is required.
+If \(H_f\) is only semi-definite at the critical point, no conclusion can be drawn from the Hessian alone—further analysis is required.
 
 ---
 
@@ -84,49 +84,49 @@ If <span>&#92;(H&#95;f&#92;)</span> is only semi-definite at the critical point,
 
 ### 2.1 Linear Spaces and Functionals
 
-To extend optimization from vectors to functions, the framework must generalize from <span>&#92;(&#92;mathbb{R}^n&#92;)</span> to infinite-dimensional spaces. The concept of a real linear space provides the foundation.
+To extend optimization from vectors to functions, the framework must generalize from \(\mathbb{R}^n\) to infinite-dimensional spaces. The concept of a real linear space provides the foundation.
 
-**Definition 2.1 (Real linear space).** A set <span>&#92;(Y&#92;)</span> with operations of addition and scalar multiplication (by real numbers) is a **real linear space** if it satisfies the standard axioms: closure under both operations, commutativity and associativity of addition, existence of a zero element and additive inverses, distributivity, and a scalar identity. Classical examples include <span>&#92;(&#92;mathbb{R}^n&#92;)</span> itself, the space <span>&#92;(M&#95;{m &#92;times n}(&#92;mathbb{R})&#92;)</span> of real matrices, and the function space <span>&#92;(C[a,b]&#92;)</span> of continuous real-valued functions on <span>&#92;([a,b]&#92;)</span>.
+**Definition 2.1 (Real linear space).** A set \(Y\) with operations of addition and scalar multiplication (by real numbers) is a **real linear space** if it satisfies the standard axioms: closure under both operations, commutativity and associativity of addition, existence of a zero element and additive inverses, distributivity, and a scalar identity. Classical examples include \(\mathbb{R}^n\) itself, the space \(M_{m \times n}(\mathbb{R})\) of real matrices, and the function space \(C[a,b]\) of continuous real-valued functions on \([a,b]\).
 
-**Definition 2.5 (Functional).** A **functional** is an operator <span>&#92;(J : Y &#92;to &#92;mathbb{R}&#92;)</span> where <span>&#92;(Y&#92;)</span> is a linear space. The problems studied in this course take the form <span>&#92;(\min&#95;{y \in D} J(y)&#92;)</span> where <span>&#92;(D &#92;subseteq Y&#92;)</span>.
+**Definition 2.5 (Functional).** A **functional** is an operator \(J : Y \to \mathbb{R}\) where \(Y\) is a linear space. The problems studied in this course take the form \(\min_{y \in D} J(y)\) where \(D \subseteq Y\).
 
-A key example is the arc-length functional <span>&#92;(J(y) = &#92;int&#95;0^5 &#92;sqrt{1 + y'(x)^2}\, dx&#92;)</span> on <span>&#92;(C^1[0,5]&#92;)</span>, which measures the length of the curve <span>&#92;(y(x)&#92;)</span>.
+A key example is the arc-length functional \(J(y) = \int_0^5 \sqrt{1 + y'(x)^2}\, dx\) on \(C^1[0,5]\), which measures the length of the curve \(y(x)\).
 
 ### 2.2 Geodesics on a Sphere
 
-A geodesic on a sphere of radius <span>&#92;(R&#92;)</span> is the curve of shortest length joining two points on the surface. Parametrizing by <span>&#92;(\phi&#92;)</span> (latitude) and <span>&#92;(\theta&#92;)</span> (longitude), the length functional is
+A geodesic on a sphere of radius \(R\) is the curve of shortest length joining two points on the surface. Parametrizing by \(\phi\) (latitude) and \(\theta\) (longitude), the length functional is
 
-<span>&#92;[J(&#92;phi, &#92;theta) = R &#92;int&#95;0^1 &#92;sqrt{&#92;sin^2(&#92;phi(t))&#92;\dot{&#92;theta}(t)^2 + &#92;\dot{&#92;phi}(t)^2}\,dt.&#92;]</span>
+\[J(\phi, \theta) = R \int_0^1 \sqrt{\sin^2(\phi(t))\dot{\theta}(t)^2 + \dot{\phi}(t)^2}\,dt.\]
 
-By orienting the sphere so that one point is at the north pole and both points share the same meridian, the problem simplifies dramatically. Setting <span>&#92;(\theta(t) = \theta&#95;B&#92;)</span> (constant), any smooth <span>&#92;(\phi&#92;)</span> connecting the two latitudes achieves the minimum length <span>&#92;(R\phi&#95;B&#92;)</span>. This is a **great circle** arc, confirming that geodesics on spheres are arcs of great circles.
+By orienting the sphere so that one point is at the north pole and both points share the same meridian, the problem simplifies dramatically. Setting \(\theta(t) = \theta_B\) (constant), any smooth \(\phi\) connecting the two latitudes achieves the minimum length \(R\phi_B\). This is a **great circle** arc, confirming that geodesics on spheres are arcs of great circles.
 
 ### 2.3 The Gateaux Derivative
 
 The analogue of the directional derivative in a linear space is the **Gateaux derivative**.
 
-**Definition 2.7.** For <span>&#92;(J : D &#92;subseteq Y &#92;to &#92;mathbb{R}&#92;)</span> and <span>&#92;(y, v &#92;in D&#92;)</span>, the **Gateaux derivative** (or **variation**) is
+**Definition 2.7.** For \(J : D \subseteq Y \to \mathbb{R}\) and \(y, v \in D\), the **Gateaux derivative** (or **variation**) is
 
-<span>&#92;[&#92;delta J(y; v) = &#92;lim&#95;{&#92;epsilon &#92;to 0} &#92;frac{J(y + &#92;epsilon v) - J(y)}{&#92;\epsilon},&#92;]</span>
+\[\delta J(y; v) = \lim_{\epsilon \to 0} \frac{J(y + \epsilon v) - J(y)}{\epsilon},\]
 
-when it exists. If <span>&#92;(\frac{&#92;\partial}{&#92;\partial &#92;\epsilon} J(y + &#92;\epsilon v)&#92;)</span> exists and is continuous at <span>&#92;(\epsilon = 0&#92;)</span>, it can be computed as
+when it exists. If \(\frac{\partial}{\partial \epsilon} J(y + \epsilon v)\) exists and is continuous at \(\epsilon = 0\), it can be computed as
 
-<span>&#92;[&#92;delta J(y; v) = &#92;left.&#92;\frac{&#92;\partial}{&#92;\partial &#92;\epsilon} J(y + &#92;\epsilon v)&#92;\right|&#95;{&#92;\epsilon = 0}.&#92;]</span>
+\[\delta J(y; v) = \left.\frac{\partial}{\partial \epsilon} J(y + \epsilon v)\right|_{\epsilon = 0}.\]
 
-For the arc-length functional <span>&#92;(J(y) = &#92;int&#95;0^5 &#92;sqrt{1 + (y')^2}\,dx&#92;)</span>, this formula gives
+For the arc-length functional \(J(y) = \int_0^5 \sqrt{1 + (y')^2}\,dx\), this formula gives
 
-<span>&#92;[&#92;delta J(y; v) = &#92;int&#95;0^5 2y'(x)v'(x)\,dx.&#92;]</span>
+\[\delta J(y; v) = \int_0^5 2y'(x)v'(x)\,dx.\]
 
 ### 2.4 Convex Functionals
 
-The definitions and key theorems from <span>&#92;(&#92;mathbb{R}^n&#92;)</span> carry over verbatim to general linear spaces.
+The definitions and key theorems from \(\mathbb{R}^n\) carry over verbatim to general linear spaces.
 
-**Definition 2.11 (Convex functional).** <span>&#92;(J : Y &#92;to &#92;mathbb{R}&#92;)</span> is **convex** on <span>&#92;(D &#92;subseteq Y&#92;)</span> if for all <span>&#92;(y, x &#92;in D&#92;)</span> and <span>&#92;(0 < &#92;alpha < 1&#92;)</span>,
+**Definition 2.11 (Convex functional).** \(J : Y \to \mathbb{R}\) is **convex** on \(D \subseteq Y\) if for all \(y, x \in D\) and \(0 < \alpha < 1\),
 
-<span>&#92;[J(y + &#92;alpha(x - y)) &#92;leq &#92;alpha J(x) + (1 - &#92;alpha)J(y).&#92;]</span>
+\[J(y + \alpha(x - y)) \leq \alpha J(x) + (1 - \alpha)J(y).\]
 
-**Definition 2.14 (Stationary point of a functional).** If <span>&#92;(&#92;delta J(y^&#42;; v) = 0&#92;)</span> for all admissible variations <span>&#92;(v&#92;)</span>, then <span>&#92;(y^&#42;&#92;)</span> is a **stationary point** of <span>&#92;(J&#92;)</span>.
+**Definition 2.14 (Stationary point of a functional).** If \(\delta J(y^*; v) = 0\) for all admissible variations \(v\), then \(y^*\) is a **stationary point** of \(J\).
 
-**Proposition 2.15.** If <span>&#92;(J&#92;)</span> is convex on <span>&#92;(D&#92;)</span>, then every stationary point <span>&#92;(y&#95;0 \in D&#92;)</span> minimizes <span>&#92;(J&#92;)</span> on <span>&#92;(D&#92;)</span>. If <span>&#92;(J&#92;)</span> is strictly convex, the minimizing element is unique. This is the infinite-dimensional analogue of Theorem 1.16 and is proved identically: convexity implies <span>&#92;(J(y) \geq J(y&#95;0) + &#92;delta J(y&#95;0; y - y&#95;0) = J(y&#95;0)&#92;)</span> for all <span>&#92;(y \in D&#92;)</span>.
+**Proposition 2.15.** If \(J\) is convex on \(D\), then every stationary point \(y_0 \in D\) minimizes \(J\) on \(D\). If \(J\) is strictly convex, the minimizing element is unique. This is the infinite-dimensional analogue of Theorem 1.16 and is proved identically: convexity implies \(J(y) \geq J(y_0) + \delta J(y_0; y - y_0) = J(y_0)\) for all \(y \in D\).
 
 ---
 
@@ -136,73 +136,73 @@ The definitions and key theorems from <span>&#92;(&#92;mathbb{R}^n&#92;)</span> 
 
 Consider the fundamental class of functionals of the form
 
-<span>&#92;[J(y) = &#92;int&#95;a^b f(x, y(x), y'(x))\,dx,&#92;]</span>
+\[J(y) = \int_a^b f(x, y(x), y'(x))\,dx,\]
 
-where <span>&#92;(f : &#92;mathbb{R}^3 &#92;to &#92;mathbb{R}&#92;)</span>. The function <span>&#92;(f&#92;)</span> is called the **Lagrangian** (in honour of Lagrange's contributions). Many classical problems — geodesics, brachistochrone, minimal surfaces — take this form.
+where \(f : \mathbb{R}^3 \to \mathbb{R}\). The function \(f\) is called the **Lagrangian** (in honour of Lagrange's contributions). Many classical problems — geodesics, brachistochrone, minimal surfaces — take this form.
 
-**Theorem 3.1 (Gateaux derivative of J).** Assuming <span>&#92;(f, f&#95;y, f&#95;z&#92;)</span> are continuous on <span>&#92;([a,b] &#92;\times D&#92;)</span> (where <span>&#92;(z = y'&#92;)</span>), the Gateaux derivative is
+**Theorem 3.1 (Gateaux derivative of J).** Assuming \(f, f_y, f_z\) are continuous on \([a,b] \times D\) (where \(z = y'\), the Gateaux derivative is
 
-<span>&#92;[&#92;delta J(y; v) = &#92;int&#95;a^b &#92;left[f&#95;y(x, y, y')v(x) + f&#95;z(x, y, y')v'(x)&#92;\right]dx.&#92;]</span>
+\[\delta J(y; v) = \int_a^b \left[f_y(x, y, y')v(x) + f_z(x, y, y')v'(x)\right]dx.\]
 
-For stationary functions over the set <span>&#92;(D = &#92;{y &#92;in C^1[a,b] : y(a) = y&#95;a,\, y(b) = y&#95;b&#92;}&#92;)</span>, admissible variations must satisfy <span>&#92;(v(a) = v(b) = 0&#92;)</span>.
+For stationary functions over the set \(D = \{y \in C^1[a,b] : y(a) = y_a,\, y(b) = y_b\}\), admissible variations must satisfy \(v(a) = v(b) = 0\).
 
 Integrating by parts on the second term and using the boundary conditions, the Gateaux derivative becomes
 
-<span>&#92;[&#92;delta J(y; v) = &#92;int&#95;a^b &#92;left[f&#95;y[y(x)] - &#92;\frac{d}{dx}f&#95;z[y(x)]&#92;\right]v(x)\,dx.&#92;]</span>
+\[\delta J(y; v) = \int_a^b \left[f_y[y(x)] - \frac{d}{dx}f_z[y(x)]\right]v(x)\,dx.\]
 
-**Theorem 3.5 (Euler–Lagrange).** A function <span>&#92;(y&#92;)</span> is a stationary function of <span>&#92;(J&#92;)</span> on <span>&#92;(D&#92;)</span> *if and only if* it satisfies the **Euler–Lagrange equation**:
+**Theorem 3.5 (Euler–Lagrange).** A function \(y\) is a stationary function of \(J\) on \(D\) *if and only if* it satisfies the **Euler–Lagrange equation**:
 
-<span>&#92;[&#92;\frac{d}{dx} f&#95;z[y(x)] = f&#95;y[y(x)].&#92;]</span>
+\[\frac{d}{dx} f_z[y(x)] = f_y[y(x)].\]
 
-The "if" direction (Proposition 3.2) follows immediately from the integration-by-parts computation above. The "only if" direction requires the **du Bois-Reymond Lemma** and Lemma 3.4, which together show that any function making <span>&#92;(&#92;delta J(y; v) = 0&#92;)</span> for all admissible <span>&#92;(v&#92;)</span> must satisfy the Euler–Lagrange equation.
+The "if" direction (Proposition 3.2) follows immediately from the integration-by-parts computation above. The "only if" direction requires the **du Bois-Reymond Lemma** and Lemma 3.4, which together show that any function making \(\delta J(y; v) = 0\) for all admissible \(v\) must satisfy the Euler–Lagrange equation.
 
-**Lemma 3.3 (du Bois-Reymond).** If <span>&#92;(h &#92;in C[a,b]&#92;)</span> and <span>&#92;(&#92;int&#95;a^b h(x)v'(x)\,dx = 0&#92;)</span> for all <span>&#92;(v &#92;in A&#92;)</span>, then <span>&#92;(h&#92;)</span> is constant on <span>&#92;([a,b]&#92;)</span>.
+**Lemma 3.3 (du Bois-Reymond).** If \(h \in C[a,b]\) and \(\int_a^b h(x)v'(x)\,dx = 0\) for all \(v \in A\), then \(h\) is constant on \([a,b]\).
 
 ### 3.2 Simplifications
 
-If <span>&#92;(f&#92;)</span> is missing one of its arguments, the Euler–Lagrange equation simplifies considerably:
+If \(f\) is missing one of its arguments, the Euler–Lagrange equation simplifies considerably:
 
-1. **<span>&#92;(f&#92;)</span> independent of <span>&#92;(y'&#92;)</span>:** The equation becomes <span>&#92;(f&#95;y = 0&#92;)</span>, an algebraic equation rather than a differential equation.
+1. **\(f\) independent of \(y'\):** The equation becomes \(f_y = 0\), an algebraic equation rather than a differential equation.
 
-2. **<span>&#92;(f&#92;)</span> independent of <span>&#92;(y&#92;)</span>:** <span>&#92;(f&#95;y = 0&#92;)</span>, so the equation becomes <span>&#92;(\frac{d}{dx}f&#95;z = 0&#92;)</span>, or <span>&#92;(f&#95;z = c&#92;)</span> (constant). This first integral is easier to solve.
+2. **\(f\) independent of \(y\):** \(f_y = 0\), so the equation becomes \(\frac{d}{dx}f_z = 0\), or \(f_z = c\) (constant). This first integral is easier to solve.
 
-3. **<span>&#92;(f&#92;)</span> independent of <span>&#92;(x&#92;)</span> (Beltrami identity):** If <span>&#92;(y &#92;in C^2[a,b]&#92;)</span>, any stationary function satisfies
+3. **\(f\) independent of \(x\) (Beltrami identity):** If \(y \in C^2[a,b]\), any stationary function satisfies
 
-<span>&#92;[f(y, y') - y' f&#95;z(y, y') = &#92;text{constant}.&#92;]</span>
+\[f(y, y') - y' f_z(y, y') = \text{constant}.\]
 
 This is a **first-order** equation, significantly easier to solve than the general second-order Euler–Lagrange equation.
 
 ### 3.3 Pointwise Convexity
 
-**Definition 3.10.** The function <span>&#92;(f : &#92;mathbb{R}^3 &#92;to &#92;mathbb{R}&#92;)</span> is **pointwise convex** on <span>&#92;(S&#92;)</span> if <span>&#92;(f, f&#95;y, f&#95;z&#92;)</span> are continuous and
+**Definition 3.10.** The function \(f : \mathbb{R}^3 \to \mathbb{R}\) is **pointwise convex** on \(S\) if \(f, f_y, f_z\) are continuous and
 
-<span>&#92;[f(x, y+v, z+w) - f(x, y, z) - f&#95;y v - f&#95;z w &#92;\geq 0&#92;]</span>
+\[f(x, y+v, z+w) - f(x, y, z) - f_y v - f_z w \geq 0\]
 
-for all perturbations <span>&#92;((v, w)&#92;)</span>. Note that <span>&#92;(x&#92;)</span> is held fixed, so a convex function is also pointwise convex, but not necessarily vice versa.
+for all perturbations \((v, w)\). Note that \(x\) is held fixed, so a convex function is also pointwise convex, but not necessarily vice versa.
 
-**Theorem 3.13.** If <span>&#92;(f&#92;)</span> is pointwise convex, then the functional <span>&#92;(J(y) = &#92;int&#95;a^b f[y]\,dx&#92;)</span> is convex on <span>&#92;(D = &#92;{y &#92;in C^1[a,b] : y(a) = y&#95;a,\, y(b) = y&#95;b, (y(x), y'(x)) &#92;in D&#92;}&#92;)</span>. Strict pointwise convexity gives strict convexity of <span>&#92;(J&#92;)</span>.
+**Theorem 3.13.** If \(f\) is pointwise convex, then the functional \(J(y) = \int_a^b f[y]\,dx\) is convex on \(D = \{y \in C^1[a,b] : y(a) = y_a,\, y(b) = y_b, (y(x), y'(x)) \in D\}\). Strict pointwise convexity gives strict convexity of \(J\).
 
-**Proposition 3.15.** If <span>&#92;(f = f(x, z)&#92;)</span> (independent of <span>&#92;(y&#92;)</span>) and <span>&#92;(f&#95;{zz}(x, z) > 0&#92;)</span> for all <span>&#92;(x&#92;)</span>, then <span>&#92;(J&#92;)</span> is strictly convex. The proof uses Taylor's remainder theorem to show <span>&#92;(f(x, z+w) > f(x,z) + f&#95;z(x,z)w&#92;)</span>.
+**Proposition 3.15.** If \(f = f(x, z)\) (independent of \(y\) and \(f_{zz}(x, z) > 0\) for all \(x\), then \(J\) is strictly convex. The proof uses Taylor's remainder theorem to show \(f(x, z+w) > f(x,z) + f_z(x,z)w\).
 
 ### 3.4 The Brachistochrone Problem
 
 The **brachistochrone** asks: what path minimizes the travel time for a bead sliding under gravity (frictionlessly) between two points? This historical problem, solved by Bernoulli in 1696, was the founding problem of the calculus of variations.
 
-Reversing the standard coordinate system so that <span>&#92;(x&#92;)</span> is vertical and <span>&#92;(y&#92;)</span> horizontal, conservation of energy gives <span>&#92;(v = &#92;sqrt{2gx}&#92;)</span>, and the travel time functional becomes
+Reversing the standard coordinate system so that \(x\) is vertical and \(y\) horizontal, conservation of energy gives \(v = \sqrt{2gx}\), and the travel time functional becomes
 
-<span>&#92;[T(y) = &#92;int&#95;0^a &#92;\frac{&#92;\sqrt{1 + (y'(x))^2}}{&#92;\sqrt{2gx}}\,dx.&#92;]</span>
+\[T(y) = \int_0^a \frac{\sqrt{1 + (y'(x))^2}}{\sqrt{2gx}}\,dx.\]
 
-Since <span>&#92;(f&#95;{zz}(x,z) = &#92;\frac{1}{(2gx)^{1/2}(1+z^2)^{3/2}} > 0&#92;)</span> for <span>&#92;(x > 0&#92;)</span>, Proposition 3.15 implies <span>&#92;(T&#92;)</span> is strictly convex, so the unique stationary function minimizes <span>&#92;(T&#92;)</span>.
+Since \(f_{zz}(x,z) = \frac{1}{(2gx)^{1/2}(1+z^2)^{3/2}} > 0\) for \(x > 0\), Proposition 3.15 implies \(T\) is strictly convex, so the unique stationary function minimizes \(T\).
 
-Since <span>&#92;(f&#92;)</span> is independent of <span>&#92;(y&#92;)</span>, the Euler–Lagrange equation reduces to <span>&#92;(f&#95;z = c&#92;)</span>:
+Since \(f\) is independent of \(y\), the Euler–Lagrange equation reduces to \(f_z = c\):
 
-<span>&#92;[&#92;\frac{y'}{&#92;\sqrt{x}&#92;\sqrt{1+(y')^2}} = c.&#92;]</span>
+\[\frac{y'}{\sqrt{x}\sqrt{1+(y')^2}} = c.\]
 
-Solving this via the substitution <span>&#92;(x(&#92;\theta) = &#92;\frac{k^2}{2}(1 - &#92;\cos &#92;\theta)&#92;)</span> leads to the parametric solution
+Solving this via the substitution \(x(\theta) = \frac{k^2}{2}(1 - \cos \theta)\) leads to the parametric solution
 
-<span>&#92;[x(&#92;\theta) = &#92;\frac{k^2}{2}(1-&#92;\cos&#92;\theta), &#92;&#92;quad y(&#92;\theta) = &#92;\frac{k^2}{2}(&#92;\theta - &#92;\sin&#92;\theta).&#92;]</span>
+\[x(\theta) = \frac{k^2}{2}(1-\cos\theta), \quad y(\theta) = \frac{k^2}{2}(\theta - \sin\theta).\]
 
-This curve is a **cycloid** — the path traced by a point on the rim of a rolling circle. The constant <span>&#92;(k&#92;)</span> is determined by the endpoint <span>&#92;((a, b)&#92;)</span>.
+This curve is a **cycloid** — the path traced by a point on the rim of a rolling circle. The constant \(k\) is determined by the endpoint \((a, b)\).
 
 ---
 
@@ -210,47 +210,47 @@ This curve is a **cycloid** — the path traced by a point on the rim of a rolli
 
 ### 4.1 Natural Boundary Conditions
 
-When not all boundary conditions are prescribed, the variational problem determines the missing conditions automatically. Suppose <span>&#92;(y(a) = y&#95;a&#92;)</span> is fixed but <span>&#92;(y(b)&#92;)</span> is free. Admissible variations satisfy <span>&#92;(v(a) = 0&#92;)</span> but <span>&#92;(v(b)&#92;)</span> is free. Integration by parts on <span>&#92;(&#92;\delta J(y;v)&#92;)</span> yields a boundary term <span>&#92;(f&#95;z[y(b)]v(b)&#92;)</span> in addition to the Euler–Lagrange integral.
+When not all boundary conditions are prescribed, the variational problem determines the missing conditions automatically. Suppose \(y(a) = y_a\) is fixed but \(y(b)\) is free. Admissible variations satisfy \(v(a) = 0\) but \(v(b)\) is free. Integration by parts on \(\delta J(y;v)\) yields a boundary term \(f_z[y(b)]v(b)\) in addition to the Euler–Lagrange integral.
 
-**Theorem 4.2.** A function <span>&#92;(y&#92;)</span> is stationary for <span>&#92;(J&#92;)</span> on <span>&#92;(D&#95;1 = &#92;{y &#92;in C^1[a,b] : y(a) = y&#95;a&#92;}&#92;)</span> if and only if it satisfies the Euler–Lagrange equation *and* the **natural boundary condition**
+**Theorem 4.2.** A function \(y\) is stationary for \(J\) on \(D_1 = \{y \in C^1[a,b] : y(a) = y_a\}\) if and only if it satisfies the Euler–Lagrange equation *and* the **natural boundary condition**
 
-<span>&#92;[f&#95;z[y(b)] = 0.&#92;]</span>
+\[f_z[y(b)] = 0.\]
 
-**Example 4.3 (Steady-state temperature).** A bar of length <span>&#92;(L&#92;)</span> with one end fixed at <span>&#92;(y(0) = 100&#92;)</span> and the other free minimizes <span>&#92;(U(y) = k &#92;int&#95;0^L (y')^2\,dx&#92;)</span>. The natural boundary condition <span>&#92;(f&#95;z[y(L)] = 2ky'(L) = 0&#92;)</span> means no heat flux at the free end. Together with the Euler–Lagrange equation <span>&#92;(y'' = 0&#92;)</span>, the unique solution is <span>&#92;(y(x) = 100&#92;)</span> (constant temperature).
+**Example 4.3 (Steady-state temperature).** A bar of length \(L\) with one end fixed at \(y(0) = 100\) and the other free minimizes \(U(y) = k \int_0^L (y')^2\,dx\). The natural boundary condition \(f_z[y(L)] = 2ky'(L) = 0\) means no heat flux at the free end. Together with the Euler–Lagrange equation \(y'' = 0\), the unique solution is \(y(x) = 100\) (constant temperature).
 
-If neither endpoint is specified (Theorem 4.4), the natural boundary conditions become <span>&#92;(f&#95;z[y(a)] = f&#95;z[y(b)] = 0&#92;)</span>, and the minimizing function is unique up to an additive constant when <span>&#92;(f&#92;)</span> is strictly pointwise convex.
+If neither endpoint is specified (Theorem 4.4), the natural boundary conditions become \(f_z[y(a)] = f_z[y(b)] = 0\), and the minimizing function is unique up to an additive constant when \(f\) is strictly pointwise convex.
 
 ### 4.2 Variable Endpoint Problems and Transversality
 
-When the endpoint <span>&#92;(b&#92;)</span> is free and <span>&#92;(y(b)&#92;)</span> must lie on a given curve <span>&#92;(&#92;\varphi(x)&#92;)</span>, both the function and the endpoint vary. Introducing the **conjugate momentum** <span>&#92;(p[y(x)] = f&#95;z[y(x)]&#92;)</span> and the **Hamiltonian** <span>&#92;(H[y(x)] = -f[y(x)] + y'(x)f&#95;z[y(x)]&#92;)</span>, the stationarity condition yields:
+When the endpoint \(b\) is free and \(y(b)\) must lie on a given curve \(\varphi(x)\), both the function and the endpoint vary. Introducing the **conjugate momentum** \(p[y(x)] = f_z[y(x)]\) and the **Hamiltonian** \(H[y(x)] = -f[y(x)] + y'(x)f_z[y(x)]\), the stationarity condition yields:
 
 **Theorem 4.7 (Transversality condition).** A stationary function satisfies the Euler–Lagrange equation and the **transversality condition**
 
-<span>&#92;[H[y(b)] = p[y(b)]&#92;\varphi'(b),&#92;]</span>
+\[H[y(b)] = p[y(b)]\varphi'(b),\]
 
-i.e., <span>&#92;(-f[y(b)] + y'(b)f&#95;z[y(b)] = f&#95;z[y(b)]&#92;\varphi'(b)&#92;)</span>. Geometrically, this means the optimal curve meets the target curve <span>&#92;(&#92;\varphi&#92;)</span> **perpendicularly** in the appropriate metric.
+i.e., \(-f[y(b)] + y'(b)f_z[y(b)] = f_z[y(b)]\varphi'(b)\). Geometrically, this means the optimal curve meets the target curve \(\varphi\) **perpendicularly** in the appropriate metric.
 
 For the brachistochrone landing on a curve, this condition implies the cycloid is orthogonal to the landing curve at the point of contact.
 
 ### 4.3 Higher-Order Derivatives
 
-Some physical problems involve second derivatives. The potential energy of a beam under load <span>&#92;(p(x)&#92;)</span> and small deflection <span>&#92;(y(x)&#92;)</span> is
+Some physical problems involve second derivatives. The potential energy of a beam under load \(p(x)\) and small deflection \(y(x)\) is
 
-<span>&#92;[U(y) = &#92;int&#95;0^L &#92;\frac{&#92;\mu}{2}(y''(x))^2 - p(x)y(x)\,dx.&#92;]</span>
+\[U(y) = \int_0^L \frac{\mu}{2}(y''(x))^2 - p(x)y(x)\,dx.\]
 
-For functionals <span>&#92;(J(y) = &#92;int&#95;a^b f(x, y, y', y'')\,dx&#92;)</span> with fully specified boundary conditions, integration by parts twice yields the **generalized Euler–Lagrange equation**:
+For functionals \(J(y) = \int_a^b f(x, y, y', y'')\,dx\) with fully specified boundary conditions, integration by parts twice yields the **generalized Euler–Lagrange equation**:
 
-<span>&#92;[f&#95;y[y] - &#92;\frac{d}{dx}f&#95;z[y] + &#92;\frac{d^2}{dx^2}f&#95;w[y] = 0&#92;]</span>
+\[f_y[y] - \frac{d}{dx}f_z[y] + \frac{d^2}{dx^2}f_w[y] = 0\]
 
-where <span>&#92;(z = y', w = y''&#92;)</span>. For the beam problem with both ends clamped, this gives <span>&#92;(&#92;\mu y'''' = p(x)&#92;)</span>, which under uniform load <span>&#92;(p = &#92;\mu F&#92;)</span> integrates to <span>&#92;(y(x) = &#92;\frac{F}{24}x^2(x-L)^2&#92;)</span>.
+where \(z = y', w = y''\). For the beam problem with both ends clamped, this gives \(\mu y'''' = p(x)\), which under uniform load \(p = \mu F\) integrates to \(y(x) = \frac{F}{24}x^2(x-L)^2\).
 
 ### 4.4 Broken Extremals (Weierstrass–Erdmann Conditions)
 
-In some problems, no smooth stationary function exists and the minimum is achieved by **piecewise smooth** functions (functions in <span>&#92;(&#92;\hat{C}^1[a,b]&#92;)</span> with finitely many corners). By treating a corner <span>&#92;(c&#92;)</span> as a variable endpoint lying on an arbitrary curve, one derives the **Weierstrass–Erdmann corner conditions**: at any corner, both
+In some problems, no smooth stationary function exists and the minimum is achieved by **piecewise smooth** functions (functions in \(\hat{C}^1[a,b]\) with finitely many corners). By treating a corner \(c\) as a variable endpoint lying on an arbitrary curve, one derives the **Weierstrass–Erdmann corner conditions**: at any corner, both
 
-<span>&#92;[p[y(c^-)] = p[y(c^+)] &#92;quad &#92;text{and} &#92;quad H[y(c^-)] = H[y(c^+)]&#92;]</span>
+\[p[y(c^-)] = p[y(c^+)] \quad \text{and} \quad H[y(c^-)] = H[y(c^+)]\]
 
-must hold. That is, the conjugate momentum <span>&#92;(f&#95;z&#92;)</span> and the Hamiltonian <span>&#92;(H = -f + y'f&#95;z&#92;)</span> are both continuous at corners, even though <span>&#92;(y'&#92;)</span> is not. A necessary condition for a corner to exist is that <span>&#92;(f&#95;{zz} = 0&#92;)</span> at some point.
+must hold. That is, the conjugate momentum \(f_z\) and the Hamiltonian \(H = -f + y'f_z\) are both continuous at corners, even though \(y'\) is not. A necessary condition for a corner to exist is that \(f_{zz} = 0\) at some point.
 
 ---
 
@@ -264,63 +264,63 @@ The success of the calculus of variations in solving mechanical problems like th
 
 **Definition 5.2 (Action integral).** The **action integral** is
 
-<span>&#92;[A(y) = &#92;int&#95;a^b L(t, y, &#92;\dot{y})\,dt,&#92;]</span>
+\[A(y) = \int_a^b L(t, y, \dot{y})\,dt,\]
 
-where the **Lagrangian** <span>&#92;(L = T - U&#92;)</span> is the difference between kinetic energy <span>&#92;(T&#92;)</span> and potential energy <span>&#92;(U&#92;)</span>.
+where the **Lagrangian** \(L = T - U\) is the difference between kinetic energy \(T\) and potential energy \(U\).
 
-**Hamilton's Principle of Stationary Action.** Between fixed times <span>&#92;(a&#92;)</span> and <span>&#92;(b&#92;)</span>, a physical system moves along the trajectory that makes the action integral *stationary* over all admissible trajectories.
+**Hamilton's Principle of Stationary Action.** Between fixed times \(a\) and \(b\), a physical system moves along the trajectory that makes the action integral *stationary* over all admissible trajectories.
 
 ### 5.2 Newton's Laws from Hamilton's Principle
 
-**Example 5.3 (Cart).** For a cart of mass <span>&#92;(m&#92;)</span> with potential energy <span>&#92;(U(y)&#92;)</span>, the Lagrangian is <span>&#92;(L = &#92;\frac{1}{2}m&#92;\dot{y}^2 - U(y)&#92;)</span>. The Euler–Lagrange equation <span>&#92;(L&#95;y - &#92;\frac{d}{dt}L&#95;{&#92;\dot{y}} = 0&#92;)</span> gives <span>&#92;(-U&#95;y - m&#92;\ddot{y} = 0&#92;)</span>, i.e., <span>&#92;(m&#92;\ddot{y} = -U&#95;y&#92;)</span>. Since <span>&#92;(-U&#95;y&#92;)</span> is the force on the cart, this is **Newton's Second Law**, <span>&#92;(F = ma&#92;)</span>.
+**Example 5.3 (Cart).** For a cart of mass \(m\) with potential energy \(U(y)\), the Lagrangian is \(L = \frac{1}{2}m\dot{y}^2 - U(y)\). The Euler–Lagrange equation \(L_y - \frac{d}{dt}L_{\dot{y}} = 0\) gives \(-U_y - m\ddot{y} = 0\), i.e., \(m\ddot{y} = -U_y\). Since \(-U_y\) is the force on the cart, this is **Newton's Second Law**, \(F = ma\).
 
-**Example 5.4 (Spring-mass).** With <span>&#92;(T = &#92;\frac{1}{2}m&#92;\dot{y}^2&#92;)</span> and <span>&#92;(U = &#92;\frac{1}{2}ky^2&#92;)</span>, the Euler–Lagrange equation yields <span>&#92;(m&#92;\ddot{y} = -ky&#92;)</span>, the familiar harmonic oscillator equation.
+**Example 5.4 (Spring-mass).** With \(T = \frac{1}{2}m\dot{y}^2\) and \(U = \frac{1}{2}ky^2\), the Euler–Lagrange equation yields \(m\ddot{y} = -ky\), the familiar harmonic oscillator equation.
 
 ### 5.3 Multi-Variable Euler–Lagrange and Conservation of the Hamiltonian
 
-When the system has multiple degrees of freedom, <span>&#92;(y = (y&#95;1, &#92;ldots, y&#95;n)&#92;)</span>, stationarity of the action requires an Euler–Lagrange equation for each component:
+When the system has multiple degrees of freedom, \(y = (y_1, \ldots, y_n)\), stationarity of the action requires an Euler–Lagrange equation for each component:
 
-**Theorem 5.5.** A function <span>&#92;(y &#92;in (C^1[a,b])^n&#92;)</span> is stationary for <span>&#92;(J&#92;)</span> if and only if
+**Theorem 5.5.** A function \(y \in (C^1[a,b])^n\) is stationary for \(J\) if and only if
 
-<span>&#92;[f&#95;{y&#95;i}[y(x)] - &#92;\frac{d}{dx}f&#95;{z&#95;i}[y(x)] = 0, &#92;quad i = 1, &#92;ldots, n.&#92;]</span>
+\[f_{y_i}[y(x)] - \frac{d}{dx}f_{z_i}[y(x)] = 0, \quad i = 1, \ldots, n.\]
 
-When <span>&#92;(L&#92;)</span> does not depend explicitly on time, energy is conserved:
+When \(L\) does not depend explicitly on time, energy is conserved:
 
-**Theorem 5.6 (Conservation of the Hamiltonian).** If <span>&#92;(L&#92;)</span> is independent of <span>&#92;(t&#92;)</span>, then the **Hamiltonian**
+**Theorem 5.6 (Conservation of the Hamiltonian).** If \(L\) is independent of \(t\), then the **Hamiltonian**
 
-<span>&#92;[H = -L + &#92;sum&#95;{i=1}^n &#92;\dot{y}&#95;i L&#95;{&#92;\dot{y}&#95;i}&#92;]</span>
+\[H = -L + \sum_{i=1}^n \dot{y}_i L_{\dot{y}_i}\]
 
 is constant along stationary trajectories. This is the law of conservation of energy.
 
 ### 5.4 Generalized Coordinates
 
-A key advantage of Lagrangian mechanics is the freedom to use any convenient coordinate system. **Generalized coordinates** are an independent minimal set <span>&#92;(q = (q&#95;1, &#92;ldots, q&#95;n)&#92;)</span> describing the system configuration.
+A key advantage of Lagrangian mechanics is the freedom to use any convenient coordinate system. **Generalized coordinates** are an independent minimal set \(q = (q_1, \ldots, q_n)\) describing the system configuration.
 
-**Example 5.8 (Pendulum).** In Cartesian coordinates, a pendulum of length <span>&#92;(\ell&#92;)</span> has constraint <span>&#92;(x^2 + y^2 = \ell^2&#92;)</span>. Using the angle <span>&#92;(\theta&#92;)</span> as a single generalized coordinate: <span>&#92;(T = &#92;\frac{1}{2}m&#92;\ell^2&#92;\dot{&#92;\theta}^2&#92;)</span>, <span>&#92;(U = -mg&#92;\ell&#92;\cos&#92;\theta&#92;)</span>, and the Euler–Lagrange equation gives
+**Example 5.8 (Pendulum).** In Cartesian coordinates, a pendulum of length \(\ell\) has constraint \(x^2 + y^2 = \ell^2\). Using the angle \(\theta\) as a single generalized coordinate: \(T = \frac{1}{2}m\ell^2\dot{\theta}^2\), \(U = -mg\ell\cos\theta\), and the Euler–Lagrange equation gives
 
-<span>&#92;[&#92;\ddot{&#92;\theta} = -&#92;\frac{g}{&#92;\ell}&#92;\sin&#92;\theta.&#92;]</span>
+\[\ddot{\theta} = -\frac{g}{\ell}\sin\theta.\]
 
-**Example 5.10 (Spring-pendulum).** A mass on a spring of length <span>&#92;(r&#92;)</span> at angle <span>&#92;(\theta&#92;)</span> from vertical uses generalized coordinates <span>&#92;((r, &#92;\theta)&#92;)</span>. The Lagrangian is
+**Example 5.10 (Spring-pendulum).** A mass on a spring of length \(r\) at angle \(\theta\) from vertical uses generalized coordinates \((r, \theta)\). The Lagrangian is
 
-<span>&#92;[L = &#92;\frac{1}{2}m(&#92;\dot{r}^2 + r^2&#92;\dot{&#92;\theta}^2) - &#92;\frac{1}{2}k(r-r&#95;0)^2 + mg(r&#95;0 - r&#92;\cos&#92;\theta),&#92;]</span>
+\[L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - \frac{1}{2}k(r-r_0)^2 + mg(r_0 - r\cos\theta),\]
 
-yielding the coupled equations <span>&#92;(&#92;\ddot{r} - &#92;\dot{&#92;\theta}^2 r = -&#92;\frac{k}{m}(r-r&#95;0) + g&#92;\cos&#92;\theta&#92;)</span> and <span>&#92;(2&#92;\dot{r}&#92;\dot{&#92;\theta} + r&#92;\ddot{&#92;\theta} = -g&#92;\sin&#92;\theta&#92;)</span>.
+yielding the coupled equations \(\ddot{r} - \dot{\theta}^2 r = -\frac{k}{m}(r-r_0) + g\cos\theta\) and \(2\dot{r}\dot{\theta} + r\ddot{\theta} = -g\sin\theta\).
 
-**Hamilton's Principle (Revised).** Between fixed times, a physical system follows the generalized trajectory <span>&#92;(q &#92;in (C^1[a,b])^n&#92;)</span> that makes stationary the action <span>&#92;(A(q) = &#92;int&#95;a^b L(t, q, &#92;\dot{q})\,dt&#92;)</span>.
+**Hamilton's Principle (Revised).** Between fixed times, a physical system follows the generalized trajectory \(q \in (C^1[a,b])^n\) that makes stationary the action \(A(q) = \int_a^b L(t, q, \dot{q})\,dt\).
 
 ### 5.5 Kepler's Laws from Hamilton's Principle
 
-For two bodies with gravitational potential <span>&#92;(U = -k/r&#92;)</span> in polar coordinates <span>&#92;((r, &#92;\theta)&#92;)</span>, the Lagrangian is
+For two bodies with gravitational potential \(U = -k/r\) in polar coordinates \((r, \theta)\), the Lagrangian is
 
-<span>&#92;[L(r, &#92;\theta) = &#92;\frac{1}{2}m(&#92;\dot{r}^2 + r^2&#92;\dot{&#92;\theta}^2) + &#92;\frac{k}{r}.&#92;]</span>
+\[L(r, \theta) = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) + \frac{k}{r}.\]
 
-The Euler–Lagrange equation for <span>&#92;(&#92;\theta&#92;)</span> gives <span>&#92;(&#92;\frac{d}{dt}(mr^2&#92;\dot{&#92;\theta}) = 0&#92;)</span>, i.e., **angular momentum is conserved** — from which equal areas are swept in equal times (**Kepler's Second Law**).
+The Euler–Lagrange equation for \(\theta\) gives \(\frac{d}{dt}(mr^2\dot{\theta}) = 0\), i.e., **angular momentum is conserved** — from which equal areas are swept in equal times (**Kepler's Second Law**).
 
-Combining with conservation of the Hamiltonian and solving the resulting separable ODE for <span>&#92;(r(&#92;\theta)&#92;)</span) leads to the conic section
+Combining with conservation of the Hamiltonian and solving the resulting separable ODE for \(r(\theta)\) leads to the conic section
 
-<span>&#92;[r(&#92;\theta) = &#92;\frac{c}{1 + &#92;\varepsilon &#92;\cos(&#92;\theta - &#92;\theta&#95;0)},&#92;]</span>
+\[r(\theta) = \frac{c}{1 + \varepsilon \cos(\theta - \theta_0)},\]
 
-where <span>&#92;(&#92;\varepsilon < 1&#92;)</span> gives an ellipse — **Kepler's First Law**. The period-axis relationship <span>&#92;(T^2 &#92;\propto a^3&#92;)</span> follows from the area formula — **Kepler's Third Law**.
+where \(\varepsilon < 1\) gives an ellipse — **Kepler's First Law**. The period-axis relationship \(T^2 \propto a^3\) follows from the area formula — **Kepler's Third Law**.
 
 ---
 
@@ -328,39 +328,39 @@ where <span>&#92;(&#92;\varepsilon < 1&#92;)</span> gives an ellipse — **Keple
 
 ### 6.1 Canonical Equations
 
-Hamilton's Principle yields <span>&#92;(n&#92;)</span> coupled second-order ODEs. A standard technique converts these to <span>&#92;(2n&#92;)</span> first-order equations using **canonical variables**.
+Hamilton's Principle yields \(n\) coupled second-order ODEs. A standard technique converts these to \(2n\) first-order equations using **canonical variables**.
 
-Define the **canonical momenta** <span>&#92;(p&#95;i = L&#95;{&#92;\dot{q}&#95;i}&#92;)</span>. For the general case with Lagrangian <span>&#92;(L = &#92;\frac{1}{2}&#92;\dot{q}^T A(q)&#92;\dot{q} - U(t,q)&#92;)</span> where <span>&#92;(A&#92;)</span> is positive definite:
+Define the **canonical momenta** \(p_i = L_{\dot{q}_i}\). For the general case with Lagrangian \(L = \frac{1}{2}\dot{q}^T A(q)\dot{q} - U(t,q)\) where \(A\) is positive definite:
 
-Writing <span>&#92;(p = A(q)&#92;\dot{q}&#92;)</span> (so <span>&#92;(&#92;\dot{q} = A^{-1}p&#92;)</span>), the **Hamiltonian** expressed in terms of <span>&#92;((q, p)&#92;)</span> is
+Writing \(p = A(q)\dot{q}\) (so \(\dot{q} = A^{-1}p\), the **Hamiltonian** expressed in terms of \((q, p)\) is
 
-<span>&#92;[H(t, q, p) = &#92;\sum&#95;i p&#95;i &#92;\dot{q}&#95;i - L = &#92;\frac{1}{2}p^T A^{-1}(q)p + U(t, q).&#92;]</span>
+\[H(t, q, p) = \sum_i p_i \dot{q}_i - L = \frac{1}{2}p^T A^{-1}(q)p + U(t, q).\]
 
 The **canonical equations of motion** (Hamilton's equations) are then:
 
-<span>&#92;[&#92;\dot{q}&#95;i = &#92;\frac{&#92;\partial H}{&#92;\partial p&#95;i}, &#92;&#92;quad &#92;\dot{p}&#95;i = -&#92;\frac{&#92;\partial H}{&#92;\partial q&#95;i}, &#92;&#92;quad i = 1, &#92;ldots, n.&#92;]</span>
+\[\dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q_i}, \quad i = 1, \ldots, n.\]
 
-Note the elegant symmetry: the equations for <span>&#92;(q&#92;)</span> and <span>&#92;(p&#92;)</span> differ only by a sign. This structure is central to the connection with optimal control theory.
+Note the elegant symmetry: the equations for \(q\) and \(p\) differ only by a sign. This structure is central to the connection with optimal control theory.
 
-**Example 6.1 (Pendulum).** With <span>&#92;(L = &#92;\frac{1}{2}m&#92;\ell^2&#92;\dot{&#92;\theta}^2 - mg&#92;\ell(1-&#92;\cos&#92;\theta)&#92;)</span> and <span>&#92;(p = m&#92;\ell^2&#92;\dot{&#92;\theta}&#92;)</span), the Hamiltonian is <span>&#92;(H = &#92;\frac{p^2}{2m&#92;\ell^2} + mg&#92;\ell(1-&#92;\cos&#92;\theta)&#92;)</span>. The canonical equations reproduce the pendulum ODE.
+**Example 6.1 (Pendulum).** With \(L = \frac{1}{2}m\ell^2\dot{\theta}^2 - mg\ell(1-\cos\theta)\) and \(p = m\ell^2\dot{\theta}\), the Hamiltonian is \(H = \frac{p^2}{2m\ell^2} + mg\ell(1-\cos\theta)\). The canonical equations reproduce the pendulum ODE.
 
 ### 6.2 Multiple Spatial Variables
 
 Hamilton's Principle extends to problems where the unknown function depends on multiple variables. For a functional
 
-<span>&#92;[J(y) = &#92;int&#95;D f(&#92;\tilde{x}, y(&#92;\tilde{x}), &#92;\nabla y(&#92;\tilde{x}))\,d&#92;\tilde{x}&#92;]</span>
+\[J(y) = \int_D f(\tilde{x}, y(\tilde{x}), \nabla y(\tilde{x}))\,d\tilde{x}\]
 
-over a bounded domain <span>&#92;(D &#92;subseteq &#92;mathbb{R}^n&#92;)</span> with fixed boundary values, the Divergence Theorem (the multi-dimensional integration by parts) gives:
+over a bounded domain \(D \subseteq \mathbb{R}^n\) with fixed boundary values, the Divergence Theorem (the multi-dimensional integration by parts) gives:
 
 **Euler–Lagrange PDE:**
 
-<span>&#92;[f&#95;y[y(&#92;\tilde{x})] - &#92;\nabla &#92;\cdot f&#95;{&#92;\nabla y}[y(&#92;\tilde{x})] = 0.&#92;]</span>
+\[f_y[y(\tilde{x})] - \nabla \cdot f_{\nabla y}[y(\tilde{x})] = 0.\]
 
-**Example 6.4.** The potential energy <span>&#92;(U(y) = &#92;\frac{k}{2}&#92;\int&#95;D |&#92;\nabla y|^2\,d&#92;\tilde{x}&#92;)</span> (thermal diffusion) is minimized when <span>&#92;(&#92;\nabla^2 y = 0&#92;)</span> — **Laplace's equation**.
+**Example 6.4.** The potential energy \(U(y) = \frac{k}{2}\int_D |\nabla y|^2\,d\tilde{x}\) (thermal diffusion) is minimized when \(\nabla^2 y = 0\) — **Laplace's equation**.
 
-For a vibrating string with both spatial and temporal dependence, the action functional <span>&#92;(A(y) = &#92;\int&#95;a^b &#92;\int&#95;0^&#92;\ell &#92;\frac{1}{2}&#92;\rho y&#95;t^2 - &#92;\frac{1}{2}&#92;\tau y&#95;x^2\,dx\,dt&#92;)</span> (linearized approximation) yields the **wave equation**:
+For a vibrating string with both spatial and temporal dependence, the action functional \(A(y) = \int_a^b \int_0^\ell \frac{1}{2}\rho y_t^2 - \frac{1}{2}\tau y_x^2\,dx\,dt\) (linearized approximation) yields the **wave equation**:
 
-<span>&#92;[&#92;\rho &#92;\frac{&#92;\partial^2 y}{&#92;\partial t^2} = &#92;\tau &#92;\frac{&#92;\partial^2 y}{&#92;\partial x^2}.&#92;]</span>
+\[\rho \frac{\partial^2 y}{\partial t^2} = \tau \frac{\partial^2 y}{\partial x^2}.\]
 
 ---
 
@@ -372,17 +372,17 @@ Convexity has been central to our analysis: for a convex functional, every stati
 
 ### 7.2 Minimum Surface of Revolution
 
-Find a curve joining two points so that the surface formed by revolving it around the <span>&#92;(x&#92;)</span>-axis has minimal area. Normalizing the left endpoint to <span>&#92;((0,1)&#92;)</span> and the right to <span>&#92;((x&#95;1, y&#95;1)&#92;)</span>, the cost is
+Find a curve joining two points so that the surface formed by revolving it around the \(x\)-axis has minimal area. Normalizing the left endpoint to \((0,1)\) and the right to \((x_1, y_1)\), the cost is
 
-<span>&#92;[J(y) = 2&#92;\pi &#92;\int&#95;0^{x&#95;1} y(x)&#92;\sqrt{1 + (y'(x))^2}\,dx.&#92;]</span>
+\[J(y) = 2\pi \int_0^{x_1} y(x)\sqrt{1 + (y'(x))^2}\,dx.\]
 
-Since <span>&#92;(f = 2&#92;\pi y&#92;\sqrt{1+z^2}&#92;)</span> is independent of <span>&#92;(x&#92;)</span>, the Beltrami identity gives <span>&#92;(f - y'f&#95;z = c&#92;)</span>, simplifying to
+Since \(f = 2\pi y\sqrt{1+z^2}\) is independent of \(x\), the Beltrami identity gives \(f - y'f_z = c\), simplifying to
 
-<span>&#92;[&#92;\frac{dy}{dx} = &#92;\sqrt{&#92;\frac{y^2 - c^2}{c^2}}.&#92;]</span>
+\[\frac{dy}{dx} = \sqrt{\frac{y^2 - c^2}{c^2}}.\]
 
-This separable equation integrates to a **catenary** <span>&#92;(y(x) = c &#92;\cosh&#92;!\left(&#92;\frac{x+d}{c}&#92;\right)&#92;)</span>.
+This separable equation integrates to a **catenary** \(y(x) = c \cosh\!\left(\frac{x+d}{c}\right)\).
 
-Imposing <span>&#92;(y(0) = 1&#92;)</span> and <span>&#92;(y(x&#95;1) = y&#95;1&#92;)</span> leads to a transcendental equation for the constants. The striking result is that for any given endpoint, there may be **two solutions, one, or none** — unlike previous problems which always had a unique solution. When two exist, one (with <span>&#92;(d > 0&#92;)</span>) is a local minimum; the other is a saddle point. When none exist (when <span>&#92;(x&#95;1&#92;)</span> is large relative to <span>&#92;(y&#95;1&#92;)</span>), no smooth minimizer exists: the infimum is approached by a sequence of functions converging to two disconnected disks, known as the **Goldschmidt discontinuous solution**.
+Imposing \(y(0) = 1\) and \(y(x_1) = y_1\) leads to a transcendental equation for the constants. The striking result is that for any given endpoint, there may be **two solutions, one, or none** — unlike previous problems which always had a unique solution. When two exist, one (with \(d > 0\) is a local minimum; the other is a saddle point. When none exist (when \(x_1\) is large relative to \(y_1\), no smooth minimizer exists: the infimum is approached by a sequence of functions converging to two disconnected disks, known as the **Goldschmidt discontinuous solution**.
 
 ---
 
@@ -390,31 +390,31 @@ Imposing <span>&#92;(y(0) = 1&#92;)</span> and <span>&#92;(y(x&#95;1) = y&#95;1&
 
 ### 8.1 Integral Constraints
 
-Consider minimizing <span>&#92;(J(y) = &#92;int&#95;a^b f[y]\,dx&#92;)</span> subject to an **integral constraint** <span>&#92;(G(y) = &#92;int&#95;a^b g[y]\,dx = c&#92;)</span>. By analogy with Lagrange multipliers in finite dimensions, introduce the **augmented functional**
+Consider minimizing \(J(y) = \int_a^b f[y]\,dx\) subject to an **integral constraint** \(G(y) = \int_a^b g[y]\,dx = c\). By analogy with Lagrange multipliers in finite dimensions, introduce the **augmented functional**
 
-<span>&#92;(&#92;\tilde{J}(y) = &#92;int&#95;a^b &#92;(f[y] + &#92;\lambda g[y]&#92;)\,dx&#92;)</span>
+\(\tilde{J}(y) = \int_a^b \(f[y] + \lambda g[y]\)\,dx\)
 
-for some constant <span>&#92;(\lambda&#92;)</span>. The multiplier theorem (Theorem 8.2) guarantees that a minimizer <span>&#92;(y&#95;o&#92;)</span> of <span>&#92;(&#92;\tilde{J}&#92;)</span> minimizes <span>&#92;(J&#92;)</span> subject to the constraint, with <span>&#92;(\lambda&#92;)</span> determined by the constraint <span>&#92;(G(y&#95;o) = c&#92;)</span>.
+for some constant \(\lambda\). The multiplier theorem (Theorem 8.2) guarantees that a minimizer \(y_o\) of \(\tilde{J}\) minimizes \(J\) subject to the constraint, with \(\lambda\) determined by the constraint \(G(y_o) = c\).
 
 The corresponding Euler–Lagrange equation for the augmented problem is
 
-<span>&#92;[&#92;\frac{d}{dx}(f + &#92;\lambda g)&#95;z[y] = (f + &#92;\lambda g)&#95;y[y],&#92;]</span>
+\[\frac{d}{dx}(f + \lambda g)_z[y] = (f + \lambda g)_y[y],\]
 
-which has three constants: two integration constants and <span>&#92;(\lambda&#92;)</span>, determined by the two boundary conditions and the constraint.
+which has three constants: two integration constants and \(\lambda\), determined by the two boundary conditions and the constraint.
 
-**Example 8.6 (Simplified Dido's Problem).** Minimize <span>&#92;(&#92;int&#95;{-1}^1 y\,dx&#92;)</span> over curves with <span>&#92;(y(-1) = y(1) = 0&#92;)</span> and length <span>&#92;(\int&#95;{-1}^1&#92;\sqrt{1+(y')^2}\,dx = &#92;\pi&#92;)</span>. The augmented Lagrangian is <span>&#92;(&#92;tilde{f} = y + &#92;\lambda&#92;\sqrt{1+(y')^2}&#92;)</span>. The Beltrami identity and parametric analysis yield the stationary functions <span>&#92;(x = &#92;\sin&#92;\theta, y = -&#92;\cos&#92;\theta&#92;)</span> and its reflection — both are **semicircles**. The one below the axis is the minimum of the augmented problem, confirming that among curves of fixed length with endpoints on the <span>&#92;(x&#92;)</span>-axis, the semicircle encloses maximum area — the classical **isoperimetric inequality**.
+**Example 8.6 (Simplified Dido's Problem).** Minimize \(\int_{-1}^1 y\,dx\) over curves with \(y(-1) = y(1) = 0\) and length \(\int_{-1}^1\sqrt{1+(y')^2}\,dx = \pi\). The augmented Lagrangian is \(\tilde{f} = y + \lambda\sqrt{1+(y')^2}\). The Beltrami identity and parametric analysis yield the stationary functions \(x = \sin\theta, y = -\cos\theta\) and its reflection — both are **semicircles**. The one below the axis is the minimum of the augmented problem, confirming that among curves of fixed length with endpoints on the \(x\)-axis, the semicircle encloses maximum area — the classical **isoperimetric inequality**.
 
-**Example 8.7 (General Dido's Problem).** For a straight shore, the curve of fixed length <span>&#92;(L&#92;)</span> enclosing maximum inland area is a **semicircle of radius** <span>&#92;(b = L/&#92;\pi&#92;)</span>. The natural boundary conditions at the free endpoints (where the curve meets the shore) combine with the Beltrami identity to select the circular arc.
+**Example 8.7 (General Dido's Problem).** For a straight shore, the curve of fixed length \(L\) enclosing maximum inland area is a **semicircle of radius** \(b = L/\pi\). The natural boundary conditions at the free endpoints (where the curve meets the shore) combine with the Beltrami identity to select the circular arc.
 
 ### 8.2 Non-Integral Constraints and Optimal Control
 
-The most important class of constrained problems involves a **differential equation constraint**. With independent variable <span>&#92;(t&#92;)</span> and additional function <span>&#92;(u(t)&#92;)</span> (the **control**), the problem is:
+The most important class of constrained problems involves a **differential equation constraint**. With independent variable \(t\) and additional function \(u(t)\) (the **control**), the problem is:
 
-**Minimize** <span>&#92;\(J(y,u) = &#92;int_0^T f(t, y, u)\,dt&#92;\)</span> **subject to** <span>&#92;\(&#92;\dot{y}(t) = g(t, y, u)&#92;\)</span>.
+**Minimize** \(J(y,u) = \int_0^T f(t, y, u)\,dt\\) **subject to** \(\dot{y}(t) = g(t, y, u)\\).
 
-The function <span>&#92;(y&#92;)</span> is the **state**, determined by the ODE given <span>&#92;(u&#92;)</span>. The function <span>&#92;(u&#92;)</span> is the **control**, freely chosen to minimize the cost. This is the central formulation of **optimal control theory**.
+The function \(y\) is the **state**, determined by the ODE given \(u\). The function \(u\) is the **control**, freely chosen to minimize the cost. This is the central formulation of **optimal control theory**.
 
-**Example 8.9 (Energy-optimal control of a rigid body).** Move a body from <span>&#92;((w(0), &#92;\dot{w}(0)) = (w&#95;0, 0)&#92;)</span> to rest <span>&#92;((w(T), &#92;\dot{w}(T)) = (0, 0)&#92;)</span> while minimizing <span>&#92;(&#92;int&#95;0^T u^2\,dt&#92;)</span> subject to <span>&#92;(&#92;\ddot{w} = u&#92;)</span>. Setting <span>&#92;(y&#95;1 = w, y&#95;2 = &#92;\dot{w}&#92;)</span> and substituting <span>&#92;(u = &#92;\ddot{w}&#92;)</span> into the Euler–Lagrange equation for <span>&#92;(J(w) = &#92;int_0^T &#92;\ddot{w}^2\,dt&#92;)</span) gives <span>&#92;(w^{(4)} = 0&#92;)</span>, so <span>&#92;(w(t) = &#92;\frac{a}{6}t^3 + &#92;\frac{b}{2}t^2&#92;)</span>. Boundary conditions determine <span>&#92;(a&#92;)</span> and <span>&#92;(b&#92;)</span>, and the optimal control is the linear ramp <span>&#92;(u(t) = at + b&#92;)</span>.
+**Example 8.9 (Energy-optimal control of a rigid body).** Move a body from \((w(0), \dot{w}(0)) = (w_0, 0)\) to rest \((w(T), \dot{w}(T)) = (0, 0)\) while minimizing \(\int_0^T u^2\,dt\) subject to \(\ddot{w} = u\). Setting \(y_1 = w, y_2 = \dot{w}\) and substituting \(u = \ddot{w}\) into the Euler–Lagrange equation for \(J(w) = \int_0^T \ddot{w}^2\,dt\) gives \(w^{(4)} = 0\), so \(w(t) = \frac{a}{6}t^3 + \frac{b}{2}t^2\). Boundary conditions determine \(a\) and \(b\), and the optimal control is the linear ramp \(u(t) = at + b\).
 
 ---
 
@@ -424,35 +424,35 @@ The function <span>&#92;(y&#92;)</span> is the **state**, determined by the ODE 
 
 The general optimal control problem is to minimize
 
-<span>&#92;[J(y, u) = &#92;int&#95;0^T f(t, y, u)\,dt&#92;]</span>
+\[J(y, u) = \int_0^T f(t, y, u)\,dt\]
 
-subject to <span>&#92;(&#92;\dot{y} = g(t, y, u)&#92;)</span> and boundary conditions on <span>&#92;(y&#92;)</span>. Introducing a vector of **Lagrange multiplier functions** (the **adjoint variables** or **costates**) <span>&#92;(p(t) &#92;in &#92;mathbb{R}^n&#92;)</span>, form the **augmented cost**
+subject to \(\dot{y} = g(t, y, u)\) and boundary conditions on \(y\). Introducing a vector of **Lagrange multiplier functions** (the **adjoint variables** or **costates**) \(p(t) \in \mathbb{R}^n\), form the **augmented cost**
 
-<span>&#92;[&#92;\tilde{J}(y, u, p) = &#92;int&#95;0^T &#92;&#92;[f(t, y, u) + p(t)^T(&#92;\dot{y}(t) - g(t, y, u))&#92;&#92;]\,dt.&#92;]</span>
+\[\tilde{J}(y, u, p) = \int_0^T \left[f(t, y, u) + p(t)^T(\dot{y}(t) - g(t, y, u))\right]\,dt.\]
 
-**Theorem 9.1 (Optimality equations).** A triple <span>&#92;((y, u, p)&#92;)</span> is stationary for <span>&#92;(&#92;\tilde{J}&#92;)</span> if and only if:
+**Theorem 9.1 (Optimality equations).** A triple \((y, u, p)\) is stationary for \(\tilde{J}\) if and only if:
 
-<span>&#92;[&#92;\dot{p} = f&#95;y^T - g&#95;y^T p &#92;&#92;quad &#92;text{(adjoint equation)},&#92;]</span>
-<span>&#92;[&#92;\dot{y} = g(t, y, u) &#92;&#92;quad &#92;text{(state equation)},&#92;]</span>
-<span>&#92;[f&#95;u^T - p^T g&#95;u = 0 &#92;&#92;quad &#92;text{(optimality condition)}.&#92;]</span>
+\[\dot{p} = f_y^T - g_y^T p \quad \text{(adjoint equation)},\]
+\[\dot{y} = g(t, y, u) \quad \text{(state equation)},\]
+\[f_u^T - p^T g_u = 0 \quad \text{(optimality condition)}.\]
 
-If only <span>&#92;(y(0) = y&#95;0&#92;)</span> is specified (free final state), the adjoint boundary condition is <span>&#92;(p(T) = 0&#92;)</span>.
+If only \(y(0) = y_0\) is specified (free final state), the adjoint boundary condition is \(p(T) = 0\).
 
 ### 9.2 The Hamiltonian Reformulation
 
 Define the **control Hamiltonian**
 
-<span>&#92;[H(t, y, p, u) = f(t, y, u) + p^T g(t, y, u).&#92;]</span>
+\[H(t, y, p, u) = f(t, y, u) + p^T g(t, y, u).\]
 
 The three optimality equations take the elegant **canonical form**:
 
-<span>&#92;[&#92;\dot{p}&#95;i = -&#92;\frac{&#92;\partial H}{&#92;\partial y&#95;i}, &#92;&#92;quad &#92;\dot{y}&#95;i = &#92;\frac{&#92;\partial H}{&#92;\partial p&#95;i}, &#92;&#92;quad &#92;\frac{&#92;\partial H}{&#92;\partial u&#95;j} = 0.&#92;]</span>
+\[\dot{p}_i = -\frac{\partial H}{\partial y_i}, \quad \dot{y}_i = \frac{\partial H}{\partial p_i}, \quad \frac{\partial H}{\partial u_j} = 0.\]
 
-These are strikingly similar to Hamilton's canonical equations from mechanics. The third equation, <span>&#92;(H&#95;u = 0&#92;)</span>, says that the optimal control makes the Hamiltonian stationary with respect to <span>&#92;(u&#92;)</span>.
+These are strikingly similar to Hamilton's canonical equations from mechanics. The third equation, \(H_u = 0\), says that the optimal control makes the Hamiltonian stationary with respect to \(u\).
 
-**Example 9.5.** For the system <span>&#92;(&#92;\dot{y} = -y + u&#92;)</span> with cost <span>&#92;(&#92;\int&#95;0^T &#92;\frac{1}{2}u^2\,dt&#92;)</span>, boundary conditions <span>&#92;(y(0) = 1, y(T) = 2&#92;)</span>: the Hamiltonian is <span>&#92;(H = &#92;\frac{1}{2}u^2 + p(-y+u)&#92;)</span>. The adjoint equation gives <span>&#92;(&#92;\dot{p} = p&#92;)</span>, so <span>&#92;(p(t) = ce^t&#92;)</span>. The condition <span>&#92;(H&#95;u = u + p = 0&#92;)</span> gives the optimal control <span>&#92;(u^o(t) = -p(t) = -ce^t&#92;)</span>. Substituting into the state equation and applying boundary conditions determines <span>&#92;(c&#92;)</span>.
+**Example 9.5.** For the system \(\dot{y} = -y + u\) with cost \(\int_0^T \frac{1}{2}u^2\,dt\), boundary conditions \(y(0) = 1, y(T) = 2\): the Hamiltonian is \(H = \frac{1}{2}u^2 + p(-y+u)\). The adjoint equation gives \(\dot{p} = p\), so \(p(t) = ce^t\). The condition \(H_u = u + p = 0\) gives the optimal control \(u^o(t) = -p(t) = -ce^t\). Substituting into the state equation and applying boundary conditions determines \(c\).
 
-**Theorem 9.9.** The Hamiltonian <span>&#92;(H&#92;)</span> is pointwise convex in <span>&#92;((y, u)&#92;)</span> if and only if <span>&#92;(&#92;\tilde{f}&#92;)</span> is pointwise convex. In particular, if <span>&#92;(f&#92;)</span> is convex and <span>&#92;(g&#92;)</span> is linear, then <span>&#92;(H&#92;)</span> is convex, and every solution of the optimality equations provides a global minimum.
+**Theorem 9.9.** The Hamiltonian \(H\) is pointwise convex in \((y, u)\) if and only if \(\tilde{f}\) is pointwise convex. In particular, if \(f\) is convex and \(g\) is linear, then \(H\) is convex, and every solution of the optimality equations provides a global minimum.
 
 ---
 
@@ -460,45 +460,45 @@ These are strikingly similar to Hamilton's canonical equations from mechanics. T
 
 ### 10.1 The Limitation of Unconstrained Controls
 
-When the Hamiltonian is linear in <span>&#92;(u&#92;)</span>, the condition <span>&#92;(H&#95;u = 0&#92;)</span> gives no information about the optimal control. This arises naturally in **minimum-time problems** where the cost is simply <span>&#92;(&#92;int&#95;0^T dt&#92;)</span> with <span>&#92;(f = 1&#92;)</span>. The fundamental resolution is to explicitly constrain the control to a closed set <span>&#92;(U&#92;)</span> and replace stationarity with *maximization* of the Hamiltonian over <span>&#92;(U&#92;)</span>.
+When the Hamiltonian is linear in \(u\), the condition \(H_u = 0\) gives no information about the optimal control. This arises naturally in **minimum-time problems** where the cost is simply \(\int_0^T dt\) with \(f = 1\). The fundamental resolution is to explicitly constrain the control to a closed set \(U\) and replace stationarity with *maximization* of the Hamiltonian over \(U\).
 
 ### 10.2 Pontryagin's Maximum Principle
 
-**Theorem 10.2 (Pontryagin's Maximum Principle, PMP).** Consider minimizing <span>&#92;(J(y, u) = &#92;int&#95;0^T f(t, y, u)\,dt&#92;)</span> subject to <span>&#92;(&#92;\dot{y} = g(t, y, u)&#92;)</span> with <span>&#92;(u(t) &#92;in U &#92;subseteq &#92;mathbb{R}^m&#92;)</span> (U closed). If <span>&#92;(u^o, y^o&#92;)</span> are optimal, there exists an adjoint function <span>&#92;(p(t)&#92;)</span> satisfying
+**Theorem 10.2 (Pontryagin's Maximum Principle, PMP).** Consider minimizing \(J(y, u) = \int_0^T f(t, y, u)\,dt\) subject to \(\dot{y} = g(t, y, u)\) with \(u(t) \in U \subseteq \mathbb{R}^m\) (U closed). If \(u^o, y^o\) are optimal, there exists an adjoint function \(p(t)\) satisfying
 
-<span>&#92;[&#92;\dot{p}&#95;i = -&#92;\frac{&#92;\partial H}{&#92;\partial y&#95;i},&#92;]</span>
+\[\dot{p}_i = -\frac{\partial H}{\partial y_i},\]
 
 with Hamiltonian
 
-<span>&#92;[H(t, y, p, u) = p^o f(t, y, u) + &#92;sum&#95;{i=1}^n p&#95;i(t)g&#95;i(t, y, u),&#92;]</span>
+\[H(t, y, p, u) = p^o f(t, y, u) + \sum_{i=1}^n p_i(t)g_i(t, y, u),\]
 
-such that <span>&#92;((p^o, p(t)) &#92;neq (0, 0)&#92;)</span> for all <span>&#92;(t&#92;)</span>, and <span>&#92;(H&#92;)</span> is **maximized** with respect to <span>&#92;(u&#92;)</span> at <span>&#92;(u^o(t)&#92;)</span> for every <span>&#92;(t&#92;)</span>.
+such that \((p^o, p(t)) \neq (0, 0)\) for all \(t\), and \(H\) is **maximized** with respect to \(u\) at \(u^o(t)\) for every \(t\).
 
-For non-degenerate problems, <span>&#92;(p^o = 1&#92;)</span>, recovering <span>&#92;(H = f + p^T g&#92;)</span>. When <span>&#92;(H&#92;)</span> is convex (Corollary 10.3), every solution of the PMP equations provides a global minimum.
+For non-degenerate problems, \(p^o = 1\), recovering \(H = f + p^T g\). When \(H\) is convex (Corollary 10.3), every solution of the PMP equations provides a global minimum.
 
-The PMP provides *necessary* conditions. It was introduced to handle cases where the optimality condition <span>&#92;(H&#95;u = 0&#92;)</span> fails — particularly when <span>&#92;(u&#92;)</span> is constrained or <span>&#92;(H&#92;)</span> is linear in <span>&#92;(u&#92;)</span>.
+The PMP provides *necessary* conditions. It was introduced to handle cases where the optimality condition \(H_u = 0\) fails — particularly when \(u\) is constrained or \(H\) is linear in \(u\).
 
 ### 10.3 Time-Optimal Control
 
-**Example 10.6 (First-order system).** Minimize time to drive <span>&#92;(&#92;\dot{y} = u&#92;)</span> from <span>&#92;(y(0) = 1&#92;)</span> to <span>&#92;(y(T) = 0&#92;)</span> with <span>&#92;(|u| &#92;\leq M&#92;)</span>. The Hamiltonian is <span>&#92;(H = -1 + pu&#92;)</span>. Maximizing over <span>&#92;(u&#92;)</span): <span>&#92;(u^o = M&#92;\,&#92;\text{sgn}(p)&#92;)</span>. The adjoint equation <span>&#92;(&#92;\dot{p} = 0&#92;)</span> gives constant <span>&#92;(p&#92;)</span>, so <span>&#92;(u^o = &#92;\pm M&#92;)</span> throughout. Starting from <span>&#92;(y(0) = 1 > 0&#92;)</span), the optimal strategy is <span>&#92;(u^o = -M&#92;)</span>, reaching zero in time <span>&#92;(T = 1/M&#92;)</span>.
+**Example 10.6 (First-order system).** Minimize time to drive \(\dot{y} = u\) from \(y(0) = 1\) to \(y(T) = 0\) with \(|u| \leq M\). The Hamiltonian is \(H = -1 + pu\). Maximizing over \(u\): \(u^o = M\\,\text{sgn}(p)\). The adjoint equation \(\dot{p} = 0\) gives constant \(p\), so \(u^o = \pm M\) throughout. Starting from \(y(0) = 1 > 0\), the optimal strategy is \(u^o = -M\), reaching zero in time \(T = 1/M\).
 
-**Example 10.7 (Double integrator).** Minimize time to drive <span>&#92;(&#92;\ddot{w} = u&#92;)</span> with <span>&#92;(|u| &#92;\leq 1&#92;)</span> to <span>&#92;((w(T), &#92;\dot{w}(T)) = (0,0)&#92;)</span>. With <span>&#92;((y&#95;1, y&#95;2) = (w, &#92;\dot{w})&#92;)</span>, the Hamiltonian is <span>&#92;(H = -1 + p&#95;1 y&#95;2 + p&#95;2 u&#92;)</span>. The optimal control <span>&#92;(u^o = &#92;\text{sgn}(p&#95;2)&#92;)</span>; since <span>&#92;(p&#95;2(t) = at + b&#92;)</span> is linear, there is at most one switch. The **switching curve** <span>&#92;(y&#95;1 = &#92;\pm&#92;\frac{1}{2}y&#95;2^2&#92;)</span> (with sign depending on <span>&#92;(y&#95;2&#92;)</span>) divides the phase plane: the optimal control is <span>&#92;(-1&#92;)</span> above and <span>&#92;(+1&#92;)</span> below. For <span>&#92;((y&#95;1(0), y&#95;2(0)) = (1, 0)&#92;)</span>, the optimal control is <span>&#92;(u = -1&#92;)</span> until <span>&#92;(t = 1&#92;)</span>, then <span>&#92;(u = +1&#92;)</span>, reaching the origin at <span>&#92;(T = 2&#92;)</span>.
+**Example 10.7 (Double integrator).** Minimize time to drive \(\ddot{w} = u\) with \(|u| \leq 1\) to \((w(T), \dot{w}(T)) = (0,0)\). With \((y_1, y_2) = (w, \dot{w})\), the Hamiltonian is \(H = -1 + p_1 y_2 + p_2 u\). The optimal control \(u^o = \text{sgn}(p_2)\); since \(p_2(t) = at + b\) is linear, there is at most one switch. The **switching curve** \(y_1 = \pm\frac{1}{2}y_2^2\) (with sign depending on \(y_2\) divides the phase plane: the optimal control is \(-1\) above and \(+1\) below. For \((y_1(0), y_2(0)) = (1, 0)\), the optimal control is \(u = -1\) until \(t = 1\), then \(u = +1\), reaching the origin at \(T = 2\).
 
 ### 10.4 Bang-Bang Control
 
-When <span>&#92;(H&#92;)</span> is linear in <span>&#92;(u&#92;)</span) and <span>&#92;(U = [M&#95;1, M&#95;2]&#92;)</span>, the optimal control always takes the extreme values:
+When \(H\) is linear in \(u\) and \(U = [M_1, M_2]\), the optimal control always takes the extreme values:
 
-<span>&#92;[u^o_k(t) = &#92;begin{cases} M_1 & &#92;text{if } p(t)^T B_k < 0, \&#92;&#92; M_2 & &#92;text{if } p(t)^T B_k > 0. &#92;end{cases}&#92;]</span>
+\[u^o_k(t) = \begin{cases} M_1 & \text{if } p(t)^T B_k < 0, \\\ M_2 & \text{if } p(t)^T B_k > 0. \end{cases}\]
 
 Such a control is called **bang-bang**.
 
-**Theorem 10.8.** For the linear time-optimal problem <span>&#92;(&#92;\dot{y} = Ay + Bu&#92;)</span>, if the vectors <span>&#92;(B&#95;k, AB&#95;k, &#92;ldots, A^{n-1}B&#95;k&#92;)</span> are linearly independent, then the optimal control <span>&#92;(u^o&#95;k&#92;)</span> is bang-bang.
+**Theorem 10.8.** For the linear time-optimal problem \(\dot{y} = Ay + Bu\), if the vectors \(B_k, AB_k, \ldots, A^{n-1}B_k\) are linearly independent, then the optimal control \(u^o_k\) is bang-bang.
 
-**Theorem 10.9.** If all eigenvalues of <span>&#92;(A&#92;)</span> are **real**, the bang-bang control has at most <span>&#92;(n-1&#92;)</span> switches. If eigenvalues are complex, switches can occur arbitrarily often (as in the harmonic oscillator).
+**Theorem 10.9.** If all eigenvalues of \(A\) are **real**, the bang-bang control has at most \(n-1\) switches. If eigenvalues are complex, switches can occur arbitrarily often (as in the harmonic oscillator).
 
-*Proof sketch:* The switching function <span>&#92;(\sigma(t) = p(t)^T B&#95;k&#92;)</span> satisfies <span>&#92;(&#92;\sigma(t) = &#92;\sum&#95;j &#92;\alpha&#95;j e^{&#92;\lambda&#95;j t}&#92;)</span> (a sum of <span>&#92;(n&#92;)</span> exponentials). Lemma 10.10 shows that a sum of <span>&#92;(n&#92;)</span> exponentials with distinct real exponents has at most <span>&#92;(n-1&#92;)</span> zeros, bounding the number of switches.
+*Proof sketch:* The switching function \(\sigma(t) = p(t)^T B_k\) satisfies \(\sigma(t) = \sum_j \alpha_j e^{\lambda_j t}\) (a sum of \(n\) exponentials). Lemma 10.10 shows that a sum of \(n\) exponentials with distinct real exponents has at most \(n-1\) zeros, bounding the number of switches.
 
-**Example 10.11 (Harmonic oscillator).** For <span>&#92;(&#92;\ddot{w} + w = u&#92;)</span> with <span>&#92;(|u| &#92;\leq 1&#92;)</span>, the eigenvalues of <span>&#92;(A&#92;)</span> are <span>&#92;(\pm i&#92;)</span> (complex), so there is no bound on switches. The adjoint <span>&#92;(p_2(t) = M&#92;\cos(t + &#92;\phi)&#92;)</span) leads to switches at intervals of <span>&#92;(\pi&#92;)</span). Optimal trajectories follow arcs of circles centered at <span>&#92;((\pm 1, 0)&#92;)</span> in the phase plane, switching direction at the switching curve (a series of semicircles in the second and fourth quadrants).
+**Example 10.11 (Harmonic oscillator).** For \(\ddot{w} + w = u\) with \(|u| \leq 1\), the eigenvalues of \(A\) are \(\pm i\) (complex), so there is no bound on switches. The adjoint \(p_2(t) = M\cos(t + \phi)\) leads to switches at intervals of \(\pi\). Optimal trajectories follow arcs of circles centered at \((\pm 1, 0)\) in the phase plane, switching direction at the switching curve (a series of semicircles in the second and fourth quadrants).
 
 ---
 
@@ -510,84 +510,84 @@ The **Linear Quadratic Regulator (LQR)** is the most important solved problem in
 
 Consider the linear time-invariant system
 
-<span>&#92;[&#92;\dot{y}(t) = Ay(t) + Bu(t), &#92;quad y(0) = y&#95;0,&#92;]</span>
+\[\dot{y}(t) = Ay(t) + Bu(t), \quad y(0) = y_0,\]
 
-with <span>&#92;(A &#92;\in &#92;mathbb{R}^{n&#92;\times n}&#92;)</span>, <span>&#92;(B &#92;\in &#92;mathbb{R}^{n &#92;\times m}&#92;)</span>. The **quadratic cost**
+with \(A \in \mathbb{R}^{n\times n}\), \(B \in \mathbb{R}^{n \times m}\). The **quadratic cost**
 
-<span>&#92;[J(u; T) = &#92;int&#95;0^T &#92;[y(t)^T Q y(t) + u(t)^T R u(t)&#92;]\,dt&#92;]</span>
+\[J(u; T) = \int_0^T \left[y(t)^T Q y(t) + u(t)^T R u(t)\right]\,dt\]
 
-penalizes both state deviation and control effort, where <span>&#92;(Q = C^T C &#92;\geq 0&#92;)</span> and <span>&#92;(R = E^T E > 0&#92;)</span> are symmetric weighting matrices.
+penalizes both state deviation and control effort, where \(Q = C^T C \geq 0\) and \(R = E^T E > 0\) are symmetric weighting matrices.
 
-Applying the optimality equations (Theorem 9.1) and defining <span>&#92;(z = -p/2&#92;)</span>, the optimal control is
+Applying the optimality equations (Theorem 9.1) and defining \(z = -p/2\), the optimal control is
 
-<span>&#92;[u^o(t) = -R^{-1} B^T z(t)&#92;]</span>
+\[u^o(t) = -R^{-1} B^T z(t)\]
 
-where <span>&#92;(z&#92;)</span> satisfies <span>&#92;(&#92;\dot{z} = -A^T z - Qy&#92;)</span> with <span>&#92;(z(T) = 0&#92;)</span>. The difficulty is that <span>&#92;(z(t)&#92;)</span) depends on future state values. The key insight is to express the adjoint as a linear function of the current state.
+where \(z\) satisfies \(\dot{z} = -A^T z - Qy\) with \(z(T) = 0\). The difficulty is that \(z(t)\) depends on future state values. The key insight is to express the adjoint as a linear function of the current state.
 
-**Theorem 11.3 (Differential Riccati Equation).** Define <span>&#92;(P(t; T)&#92;)</span> by <span>&#92;(z(t) = P(t;T)y^o(t)&#92;)</span>. Then <span>&#92;(P(t;T)&#92;)</span> satisfies the **Differential Riccati Equation (DRE)**:
+**Theorem 11.3 (Differential Riccati Equation).** Define \(P(t; T)\) by \(z(t) = P(t;T)y^o(t)\). Then \(P(t;T)\) satisfies the **Differential Riccati Equation (DRE)**:
 
-<span>&#92;[&#92;\dot{P}(t;T) + A^T P + P A - P B R^{-1} B^T P + Q = 0, &#92;quad P(T;T) = 0,&#92;]</span>
+\[\dot{P}(t;T) + A^T P + P A - P B R^{-1} B^T P + Q = 0, \quad P(T;T) = 0,\]
 
 and the **optimal feedback control** is
 
-<span>&#92;[u^o(t) = -R^{-1} B^T P(t;T) y^o(t).&#92;]</span>
+\[u^o(t) = -R^{-1} B^T P(t;T) y^o(t).\]
 
-The **minimum cost** is <span>&#92;(J(u^o; T) = y&#95;0^T P(0;T) y&#95;0&#92;)</span>. Furthermore, <span>&#92;(0 &#92;\leq P(0;T) < &#92;\infty&#92;)</span> for all <span>&#92;(T&#92;)</span>.
+The **minimum cost** is \(J(u^o; T) = y_0^T P(0;T) y_0\). Furthermore, \(0 \leq P(0;T) < \infty\) for all \(T\).
 
-The DRE is solved **backward in time** from <span>&#92;(P(T;T) = 0&#92;)</span> to <span>&#92;(P(0;T)&#92;)</span>. The optimal control is a **linear state feedback** law — the control at each time depends only on the current state, not on future states. This closed-loop structure makes the controller self-correcting and practical to implement.
+The DRE is solved **backward in time** from \(P(T;T) = 0\) to \(P(0;T)\). The optimal control is a **linear state feedback** law — the control at each time depends only on the current state, not on future states. This closed-loop structure makes the controller self-correcting and practical to implement.
 
 ### 11.2 Infinite-Horizon LQR and the Algebraic Riccati Equation
 
 The **infinite-horizon LQR** problem seeks to minimize
 
-<span>&#92;[J = &#92;int&#95;0^{&#92;\infty} &#92;[x(t)^T Q x(t) + u(t)^T R u(t)&#92;]\,dt&#92;]</span>
+\[J = \int_0^{\infty} \left[x(t)^T Q x(t) + u(t)^T R u(t)\right]\,dt\]
 
-subject to <span>&#92;(&#92;\dot{x} = Ax + Bu&#92;)</span>, where the goal is to **stabilize** the system (drive <span>&#92;(x(t) &#92;to 0&#92;)</span> as <span>&#92;(t &#92;to &#92;\infty&#92;)</span>).
+subject to \(\dot{x} = Ax + Bu\), where the goal is to **stabilize** the system (drive \(x(t) \to 0\) as \(t \to \infty\).
 
-**Lemma 11.1.** For any symmetric matrix <span>&#92;(P&#92;)</span>, the functional <span>&#92;(V(x(&#92;\cdot), u(&#92;\cdot)) = -&#92;int&#95;0^&#92;\infty [(Ax+Bu)^T Px + x^T P(Ax+Bu)]\,dt&#92;)</span> depends only on <span>&#92;(x&#95;0 = x(0)&#92;)</span> (provided <span>&#92;(x(t) &#92;to 0&#92;)</span>), with value <span>&#92;(V = x&#95;0^T P x&#95;0&#92;)</span>.
+**Lemma 11.1.** For any symmetric matrix \(P\), the functional \(V(x(\cdot), u(\cdot)) = -\int_0^\infty [(Ax+Bu)^T Px + x^T P(Ax+Bu)]\,dt\) depends only on \(x_0 = x(0)\) (provided \(x(t) \to 0\), with value \(V = x_0^T P x_0\).
 
 The trick is to **complete the square** in the cost. Writing the cost as
 
-<span>&#92;[J = V + &#92;int&#95;0^&#92;\infty &#92;[x^T(A^T P + PA + Q)x + u^T Ru + 2u^T B^T Px&#92;]\,dt,&#92;]</span>
+\[J = V + \int_0^\infty \left[x^T(A^T P + PA + Q)x + u^T Ru + 2u^T B^T Px\right]\,dt,\]
 
-and noting that <span>&#92;(u^T Ru + 2u^T B^T Px = (u - Kx)^T R(u-Kx) - (Kx)^T R(Kx)&#92;)</span> with <span>&#92;(K = -R^{-1}B^T P&#92;)</span>, we get
+and noting that \(u^T Ru + 2u^T B^T Px = (u - Kx)^T R(u-Kx) - (Kx)^T R(Kx)\) with \(K = -R^{-1}B^T P\), we get
 
-<span>&#92;[J = x&#95;0^T P x&#95;0 + &#92;int&#95;0^&#92;\infty &#92;[x^T(A^T P + PA + Q - PBR^{-1}B^T P)x + (u - Kx)^T R(u-Kx)&#92;]\,dt.&#92;]</span>
+\[J = x_0^T P x_0 + \int_0^\infty \left[x^T(A^T P + PA + Q - PBR^{-1}B^T P)x + (u - Kx)^T R(u-Kx)\right]\,dt.\]
 
-If <span>&#92;(P&#92;)</span> satisfies the **Algebraic Riccati Equation (ARE)**:
+If \(P\) satisfies the **Algebraic Riccati Equation (ARE)**:
 
-<span>&#92;[A^T P + PA + Q - PBR^{-1}B^T P = 0,&#92;]</span>
+\[A^T P + PA + Q - PBR^{-1}B^T P = 0,\]
 
-and <span>&#92;(A - BR^{-1}B^T P&#92;)</span> is **Hurwitz** (all eigenvalues with negative real parts), then the cost reduces to <span>&#92;(J = x&#95;0^T P x&#95;0&#92;)</span> with the feedback law <span>&#92;(u = Kx&#92;)</span>, and this is optimal among all stabilizing controllers.
+and \(A - BR^{-1}B^T P\) is **Hurwitz** (all eigenvalues with negative real parts), then the cost reduces to \(J = x_0^T P x_0\) with the feedback law \(u = Kx\), and this is optimal among all stabilizing controllers.
 
-**Theorem 11.2.** Suppose the ARE admits a symmetric positive semi-definite solution <span>&#92;(P&#92;)</span> such that <span>&#92;(A - BR^{-1}B^T P&#92;)</span> is Hurwitz. Then the feedback law <span>&#92;(u = Kx = -R^{-1}B^T Px&#92;)</span> stabilizes the system and minimizes the LQR cost, with optimal cost <span>&#92;(J^&#42; = x&#95;0^T P x&#95;0&#92;)</span>.
+**Theorem 11.2.** Suppose the ARE admits a symmetric positive semi-definite solution \(P\) such that \(A - BR^{-1}B^T P\) is Hurwitz. Then the feedback law \(u = Kx = -R^{-1}B^T Px\) stabilizes the system and minimizes the LQR cost, with optimal cost \(J^* = x_0^T P x_0\).
 
-The ARE is the equilibrium condition of the DRE: <span>&#92;(\dot{P} = 0&#92;)</span>. Under appropriate conditions (stabilizability and detectability), the DRE solution <span>&#92;(P(t; T)&#92;)</span> converges as <span>&#92;(T &#92;to &#92;\infty&#92;)</span> to the stabilizing solution of the ARE.
+The ARE is the equilibrium condition of the DRE: \(\dot{P} = 0\). Under appropriate conditions (stabilizability and detectability), the DRE solution \(P(t; T)\) converges as \(T \to \infty\) to the stabilizing solution of the ARE.
 
-**Example 11.3.** For <span>&#92;(x' = u&#92;)</span> with cost <span>&#92;(J = &#92;int&#95;0^&#92;\infty u^2\,dt&#92;)</span>: the ARE is <span>&#92;(-P^2 = 0&#92;)</span>, so <span>&#92;(P = 0&#92;)</span> and <span>&#92;(u = 0&#92;)</span>. This is not stabilizing (the uncontrolled system is neutrally stable, not asymptotically stable). Any stabilizing control <span>&#92;(u = -&#92;\varepsilon x&#92;)</span> gives cost <span>&#92;(&#92;\frac{&#92;\varepsilon x&#95;0^2}{2} &#92;to 0&#92;)</span> as <span>&#92;(\varepsilon &#92;to 0&#92;)</span>, but the infimum is not attained by a stabilizing controller.
+**Example 11.3.** For \(x' = u\) with cost \(J = \int_0^\infty u^2\,dt\): the ARE is \(-P^2 = 0\), so \(P = 0\) and \(u = 0\). This is not stabilizing (the uncontrolled system is neutrally stable, not asymptotically stable). Any stabilizing control \(u = -\varepsilon x\) gives cost \(\frac{\varepsilon x_0^2}{2} \to 0\) as \(\varepsilon \to 0\), but the infimum is not attained by a stabilizing controller.
 
-**Example 11.4.** For <span>&#92;(x' = x + u&#92;)</span> with cost <span>&#92;(&#92;int&#95;0^&#92;\infty u^2\,dt&#92;)</span>: the ARE is <span>&#92;(2P - P^2 = 0&#92;)</span>, giving <span>&#92;(P = 0&#92;)</span> (not stabilizing) or <span>&#92;(P = 2&#92;)</span> (stabilizing). The optimal control <span>&#92;(u = -2x&#92;)</span> gives closed-loop system <span>&#92;(x' = -x&#92;)</span> and optimal cost <span>&#92;(J^&#42; = 2x&#95;0^2&#92;)</span>.
+**Example 11.4.** For \(x' = x + u\) with cost \(\int_0^\infty u^2\,dt\): the ARE is \(2P - P^2 = 0\), giving \(P = 0\) (not stabilizing) or \(P = 2\) (stabilizing). The optimal control \(u = -2x\) gives closed-loop system \(x' = -x\) and optimal cost \(J^* = 2x_0^2\).
 
-**Example 11.5 (Double integrator).** For <span>&#92;(y'' = u&#92;)</span> with output <span>&#92;(y = x&#95;1&#92;)</span>, written as
+**Example 11.5 (Double integrator).** For \(y'' = u\) with output \(y = x_1\), written as
 
-<span>&#92;[A = &#92;begin{pmatrix} 0 & 1 \&#92;&#92; 0 & 0 &#92;end{pmatrix}, &#92;&#92;quad B = &#92;begin{pmatrix} 0 \&#92;&#92; 1 &#92;end{pmatrix}, &#92;&#92;quad Q = &#92;begin{pmatrix} 1 & 0 \&#92;&#92; 0 & 0 &#92;end{pmatrix}, &#92;&#92;quad R = r > 0,&#92;]</span>
+\[A = \begin{pmatrix} 0 & 1 \\\ 0 & 0 \end{pmatrix}, \quad B = \begin{pmatrix} 0 \\\ 1 \end{pmatrix}, \quad Q = \begin{pmatrix} 1 & 0 \\\ 0 & 0 \end{pmatrix}, \quad R = r > 0,\]
 
-the ARE can be solved manually. Setting <span>&#92;(P = &#92;begin{pmatrix} p&#95;1 & p&#95;2 \&#92;&#92; p&#95;2 & p&#95;3 &#92;end{pmatrix}&#92;)</span>, the three scalar equations yield
+the ARE can be solved manually. Setting \(P = \begin{pmatrix} p_1 & p_2 \\\ p_2 & p_3 \end{pmatrix}\), the three scalar equations yield
 
-<span>&#92;[p&#95;2 = &#92;\sqrt{r}, &#92;&#92;quad p&#95;1 = &#92;\frac{1}{r}p&#95;2 p&#95;3 = (2r)^{1/4}&#92;\sqrt{r}&#92;^{1/2}, &#92;&#92;quad p&#95;3 = (2r)^{3/4},&#92;]</span>
+\[p_2 = \sqrt{r}, \quad p_1 = \frac{1}{r}p_2 p_3 = (2r)^{1/4}\sqrt{r}\^{1/2}, \quad p_3 = (2r)^{3/4},\]
 
-and the optimal gain <span>&#92;(K = -R^{-1}B^T P = -&#92;\frac{1}{r}[p&#95;2 \;\; p&#95;3] = -[r^{-1/2}, (2/r)^{1/4} r^{-3/4}]&#92;)</span>. The closed-loop characteristic polynomial <span>&#92;(s^2 + (2/r)^{1/4}s + 1/&#92;\sqrt{r} = 0&#92;)</span> has both roots with negative real parts, confirming asymptotic stability.
+and the optimal gain \(K = -R^{-1}B^T P = -\frac{1}{r}[p_2 \;\; p_3] = -[r^{-1/2}, (2/r)^{1/4} r^{-3/4}]\). The closed-loop characteristic polynomial \(s^2 + (2/r)^{1/4}s + 1/\sqrt{r} = 0\) has both roots with negative real parts, confirming asymptotic stability.
 
 ### 11.3 Summary of the LQR Design Procedure
 
 | Step | Action |
 |------|--------|
-| 1 | Formulate system <span>&#92;(\dot{x} = Ax + Bu&#92;)</span> and choose weighting matrices <span>&#92;(Q &#92;\geq 0&#92;)</span>, <span>&#92;(R > 0&#92;)</span> |
-| 2 | Solve the ARE <span>&#92;(A^T P + PA + Q - PBR^{-1}B^T P = 0&#92;)</span> for the symmetric positive semi-definite solution <span>&#92;(P&#92;)</span> |
-| 3 | Compute feedback gain <span>&#92;(K = -R^{-1}B^T P&#92;)</span> |
-| 4 | Implement <span>&#92;(u(t) = Kx(t)&#92;)</span> — this stabilizes the system with cost <span>&#92;(J^&#42; = x&#95;0^T P x&#95;0&#92;)</span> |
+| 1 | Formulate system \(\dot{x} = Ax + Bu\) and choose weighting matrices \(Q \geq 0\), \(R > 0\) |
+| 2 | Solve the ARE \(A^T P + PA + Q - PBR^{-1}B^T P = 0\) for the symmetric positive semi-definite solution \(P\) |
+| 3 | Compute feedback gain \(K = -R^{-1}B^T P\) |
+| 4 | Implement \(u(t) = Kx(t)\) — this stabilizes the system with cost \(J^* = x_0^T P x_0\) |
 
-In MATLAB, the optimal gain is returned by `lqr(A, B, Q, R)`. The choice of <span>&#92;(Q&#92;)</span> and <span>&#92;(R&#92;)</span> is a design decision reflecting the trade-off between state regulation performance and control effort.
+In MATLAB, the optimal gain is returned by `lqr(A, B, Q, R)`. The choice of \(Q\) and \(R\) is a design decision reflecting the trade-off between state regulation performance and control effort.
 
 ---
 

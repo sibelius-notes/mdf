@@ -9,6 +9,11 @@ title = "MD Lecture Notes"
     [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
         block = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]']]
+        inline = [['\(', '\)']]
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 2

@@ -60,276 +60,276 @@ Random variables (rvs) represent the randomness of insurance loss events. This c
 
 ### 2.1 Discrete Random Variables
 
-A **discrete rv** takes a finite or countable number of values. The **probability mass function (pmf)** of a discrete rv <span>&#92;(X&#92;)</span> taking values <span>&#92;(\{x&#95;i\}&#95;{i \in \mathbb{N}}&#92;)</span> is:
+A **discrete rv** takes a finite or countable number of values. The **probability mass function (pmf)** of a discrete rv \(X\) taking values \(\{x_i\}_{i \in \mathbb{N}}\) is:
 
-<span>&#92;[ p&#95;i = P(X = x&#95;i), \quad i \in \mathbb{N}. &#92;]</span>
+\[ p_i = P(X = x_i), \quad i \in \mathbb{N}. \]
 
 The **cumulative distribution function (cdf)** is:
 
-<span>&#92;[ F(x) = P(X \leq x) = \sum&#95;{i \in \mathbb{N}} p&#95;i \mathbf{1}(x&#95;i \leq x), \quad x \in \mathbb{R}, &#92;]</span>
+\[ F(x) = P(X \leq x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}(x_i \leq x), \quad x \in \mathbb{R}, \]
 
-and the <span>&#92;(k&#92;)</span>**th raw moment** is <span>&#92;(E[X^k] = \sum&#95;{i \in \mathbb{N}} (x&#95;i)^k p&#95;i&#92;)</span>.
+and the \(k\)**th raw moment** is \(E[X^k] = \sum_{i \in \mathbb{N}} (x_i)^k p_i\).
 
 For a discrete rv taking only nonnegative integer values, the **probability generating function (pgf)** is:
 
-<span>&#92;[ G(z) := E\left[z^X\right] = \sum&#95;{i \in \mathbb{N}} z^i p&#95;i = p&#95;0 + zp&#95;1 + z^2 p&#95;2 + \cdots &#92;]</span>
+\[ G(z) := E\left[z^X\right] = \sum_{i \in \mathbb{N}} z^i p_i = p_0 + zp_1 + z^2 p_2 + \cdots \]
 
 Differentiating repeatedly yields:
 
-<span>&#92;[ G^{(n)}(z) = E\left[X(X-1)\cdots(X-n+1)z^{X-n}\right] &#92;]</span>
+\[ G^{(n)}(z) = E\left[X(X-1)\cdots(X-n+1)z^{X-n}\right] \]
 
-so the pmf can be recovered from the pgf via <span>&#92;(p&#95;n = G^{(n)}(0)/n!&#92;)</span>, and the pgf **uniquely determines** the distribution. The **factorial moments** are:
+so the pmf can be recovered from the pgf via \(p_n = G^{(n)}(0)/n!\), and the pgf **uniquely determines** the distribution. The **factorial moments** are:
 
-<span>&#92;[ E[X(X-1)\cdots(X-n+1)] = G^{(n)}(1) &#92;]</span>
+\[ E[X(X-1)\cdots(X-n+1)] = G^{(n)}(1) \]
 
-In particular: <span>&#92;(E[X] = G'(1)&#92;)</span> and <span>&#92;(\text{Var}(X) = G''(1) + G'(1) - G'(1)^2&#92;)</span>.
+In particular: \(E[X] = G'(1)\) and \(\text{Var}(X) = G''(1) + G'(1) - G'(1)^2\).
 
-**Example 1.** Let <span>&#92;(p&#95;0 = 0.5, p&#95;1 = 0.4, p&#95;2 = 0.1&#92;)</span>. Then the pgf is <span>&#92;(G(z) = 0.5 + 0.4z + 0.1z^2&#92;)</span>.
+**Example 1.** Let \(p_0 = 0.5, p_1 = 0.4, p_2 = 0.1\). Then the pgf is \(G(z) = 0.5 + 0.4z + 0.1z^2\).
 
 ### 2.2 Continuous Random Variables
 
-A **continuous rv** takes values on a continuum, so <span>&#92;(P(X = x) = 0&#92;)</span> for each <span>&#92;(x&#92;)</span>. Its cdf is:
+A **continuous rv** takes values on a continuum, so \(P(X = x) = 0\) for each \(x\). Its cdf is:
 
-<span>&#92;[ F(x) = P(X \leq x) = \int&#95;{-\infty}^{x} f(y)\, dy &#92;]</span>
+\[ F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y)\, dy \]
 
-where <span>&#92;(f&#92;)</span> is the **probability density function (pdf)**, satisfying <span>&#92;(f(x) = \frac{d}{dx}F(x)&#92;)</span>. The <span>&#92;(k&#92;)</span>th raw moment is <span>&#92;(E[X^k] = \int&#95;{-\infty}^{\infty} x^k f(x)\, dx&#92;)</span>.
+where \(f\) is the **probability density function (pdf)**, satisfying \(f(x) = \frac{d}{dx}F(x)\). The \(k\)th raw moment is \(E[X^k] = \int_{-\infty}^{\infty} x^k f(x)\, dx\).
 
 The **moment generating function (mgf)** is:
 
-<span>&#92;[ M(t) := E\left[e^{tX}\right] = \int&#95;{-\infty}^{\infty} e^{tx} f(x)\, dx &#92;]</span>
+\[ M(t) := E\left[e^{tX}\right] = \int_{-\infty}^{\infty} e^{tx} f(x)\, dx \]
 
-and <span>&#92;(E[X^k] = M^{(k)}(0)&#92;)</span>. The mgf uniquely characterizes the probability distribution.
+and \(E[X^k] = M^{(k)}(0)\). The mgf uniquely characterizes the probability distribution.
 
-**Example 2.** For <span>&#92;(X \sim \text{EXP}(0.1)&#92;)</span> with pdf <span>&#92;(f(x) = 0.1e^{-0.1x}&#92;)</span>, <span>&#92;(x > 0&#92;)</span>:
+**Example 2.** For \(X \sim \text{EXP}(0.1)\) with pdf \(f(x) = 0.1e^{-0.1x}\), \(x > 0\):
 
-<span>&#92;[ F(x) = 1 - e^{-0.1x}, \quad M(t) = \frac{0.1}{0.1 - t}, \quad t < 0.1. &#92;]</span>
+\[ F(x) = 1 - e^{-0.1x}, \quad M(t) = \frac{0.1}{0.1 - t}, \quad t < 0.1. \]
 
 ### 2.3 Mixed Random Variables
 
 A **mixed rv** has both discrete and continuous components. These arise naturally when modelling payment amounts after policy adjustments — for example, a policy with a deductible produces a mixed payment rv with a probability mass at 0 (when the loss falls below the deductible).
 
-Let <span>&#92;(\{x&#95;i\}&#95;{i \in \mathbb{N}}&#92;)</span> be discrete mass points with <span>&#92;(P(X = x&#95;i) = p&#95;i&#92;)</span>, and let <span>&#92;(f&#92;)</span> be a pdf on each interval between mass points. The cdf is:
+Let \(\{x_i\}_{i \in \mathbb{N}}\) be discrete mass points with \(P(X = x_i) = p_i\), and let \(f\) be a pdf on each interval between mass points. The cdf is:
 
-<span>&#92;[ F(x) = \sum&#95;{i \in \mathbb{N}} p&#95;i \mathbf{1}&#95;{\{x&#95;i \leq x\}} + \sum&#95;{i \in \mathbb{N}} \int&#95;{x&#95;i}^{x&#95;{i+1}} f(y)\mathbf{1}&#95;{\{y \leq x\}}\, dy &#92;]</span>
+\[ F(x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}_{\{x_i \leq x\}} + \sum_{i \in \mathbb{N}} \int_{x_i}^{x_{i+1}} f(y)\mathbf{1}_{\{y \leq x\}}\, dy \]
 
-and the <span>&#92;(k&#92;)</span>th moment is <span>&#92;(E[X^k] = \sum&#95;{i} x&#95;i^k p&#95;i + \sum&#95;{i} \int&#95;{x&#95;i}^{x&#95;{i+1}} x^k f(x)\, dx&#92;)</span>.
+and the \(k\)th moment is \(E[X^k] = \sum_{i} x_i^k p_i + \sum_{i} \int_{x_i}^{x_{i+1}} x^k f(x)\, dx\).
 
-**Example 3.** Suppose a payment amount has probability mass <span>&#92;(p&#92;)</span> at 0 and is otherwise continuous with pdf <span>&#92;(f&#92;)</span> over <span>&#92;((0, \infty)&#92;)</span>. Then the cdf is <span>&#92;(F(x) = p + \int&#95;0^x f(t)\, dt&#92;)</span> for <span>&#92;(x \geq 0&#92;)</span>, the <span>&#92;(k&#92;)</span>th moment is <span>&#92;(\int&#95;0^\infty x^k f(x)\, dx&#92;)</span>, and we require <span>&#92;(p + \int&#95;0^\infty f(x)\, dx = 1&#92;)</span>.
+**Example 3.** Suppose a payment amount has probability mass \(p\) at 0 and is otherwise continuous with pdf \(f\) over \((0, \infty)\). Then the cdf is \(F(x) = p + \int_0^x f(t)\, dt\) for \(x \geq 0\), the \(k\)th moment is \(\int_0^\infty x^k f(x)\, dx\), and we require \(p + \int_0^\infty f(x)\, dx = 1\).
 
 ---
 
 ## Chapter 3: Frequency Distributions
 
-This chapter studies the rv that counts the number of claims arising from a portfolio of insurance policies over a given period. A **counting rv** (or **counting distribution**) takes nonnegative integer values. We let <span>&#92;(N&#92;)</span> denote a counting rv with pmf <span>&#92;(p&#95;n = P(N = n)&#92;)</span> and pgf <span>&#92;(G(z) = E[z^N] = \sum&#95;{n=0}^\infty z^n p&#95;n&#92;)</span>.
+This chapter studies the rv that counts the number of claims arising from a portfolio of insurance policies over a given period. A **counting rv** (or **counting distribution**) takes nonnegative integer values. We let \(N\) denote a counting rv with pmf \(p_n = P(N = n)\) and pgf \(G(z) = E[z^N] = \sum_{n=0}^\infty z^n p_n\).
 
 ### 3.1 Common Frequency Distributions
 
 #### 3.1.1 Poisson Distribution
 
-A rv <span>&#92;(N \sim \text{POI}(\lambda)&#92;)</span> (with <span>&#92;(\lambda > 0&#92;)</span>) has pmf:
+A rv \(N \sim \text{POI}(\lambda)\) (with \(\lambda > 0\) has pmf:
 
-<span>&#92;[ p&#95;n = \frac{\lambda^n e^{-\lambda}}{n!}, \quad n = 0, 1, 2, \ldots &#92;]</span>
+\[ p_n = \frac{\lambda^n e^{-\lambda}}{n!}, \quad n = 0, 1, 2, \ldots \]
 
-Its pgf is <span>&#92;(G(z) = e^{\lambda(z-1)}&#92;)</span>, giving <span>&#92;(E[N] = \lambda&#92;)</span> and <span>&#92;(\text{Var}(N) = \lambda&#92;)</span>. The **equal mean and variance** (<span>&#92;(E[N] = \text{Var}(N)&#92;)</span>) is the key diagnostic for the Poisson in model selection.
+Its pgf is \(G(z) = e^{\lambda(z-1)}\), giving \(E[N] = \lambda\) and \(\text{Var}(N) = \lambda\). The **equal mean and variance** (\(E[N] = \text{Var}(N)\) is the key diagnostic for the Poisson in model selection.
 
-**Closure under convolution.** If <span>&#92;(N&#95;1, \ldots, N&#95;k&#92;)</span> are independent with <span>&#92;(N&#95;i \sim \text{POI}(\lambda&#95;i)&#92;)</span>, then:
+**Closure under convolution.** If \(N_1, \ldots, N_k\) are independent with \(N_i \sim \text{POI}(\lambda_i)\), then:
 
-<span>&#92;[ N = \sum&#95;{i=1}^k N&#95;i \sim \text{POI}\!\left(\sum&#95;{i=1}^k \lambda&#95;i\right) &#92;]</span>
+\[ N = \sum_{i=1}^k N_i \sim \text{POI}\!\left(\sum_{i=1}^k \lambda_i\right) \]
 
-*Proof.* The pgf of <span>&#92;(N&#92;)</span> is <span>&#92;(\prod&#95;i e^{\lambda&#95;i(z-1)} = e^{(\sum&#95;i \lambda&#95;i)(z-1)}&#92;)</span>, which is the pgf of <span>&#92;(\text{POI}(\sum \lambda&#95;i)&#92;)</span>. By pgf uniqueness, the result follows.
+*Proof.* The pgf of \(N\) is \(\prod_i e^{\lambda_i(z-1)} = e^{(\sum_i \lambda_i)(z-1)}\), which is the pgf of \(\text{POI}(\sum \lambda_i)\). By pgf uniqueness, the result follows.
 
-**Thinning property.** If <span>&#92;(N \sim \text{POI}(\lambda)&#92;)</span> counts events and each event is independently Type <span>&#92;(i&#92;)</span> with probability <span>&#92;(p&#95;i&#92;)</span>, then the count of Type <span>&#92;(i&#92;)</span> events <span>&#92;(N&#95;i \sim \text{POI}(\lambda p&#95;i)&#92;)</span>, and <span>&#92;(N&#95;1, \ldots, N&#95;k&#92;)</span> are mutually independent.
+**Thinning property.** If \(N \sim \text{POI}(\lambda)\) counts events and each event is independently Type \(i\) with probability \(p_i\), then the count of Type \(i\) events \(N_i \sim \text{POI}(\lambda p_i)\), and \(N_1, \ldots, N_k\) are mutually independent.
 
 #### 3.1.2 Binomial Distribution
 
-A rv <span>&#92;(N \sim \text{BIN}(q, m)&#92;)</span> (with <span>&#92;(m \in \mathbb{Z}&#95;+&#92;)</span>, <span>&#92;(q \in (0,1)&#92;)</span>) has pmf:
+A rv \(N \sim \text{BIN}(q, m)\) (with \(m \in \mathbb{Z}_+\), \(q \in (0,1)\) has pmf:
 
-<span>&#92;[ p&#95;n = \binom{m}{n} q^n (1-q)^{m-n}, \quad n = 0, 1, \ldots, m &#92;]</span>
+\[ p_n = \binom{m}{n} q^n (1-q)^{m-n}, \quad n = 0, 1, \ldots, m \]
 
-The finite support implies a maximum possible claim count. Its pgf is <span>&#92;(G(z) = (1 - q + qz)^m&#92;)</span>, giving <span>&#92;(E[N] = mq&#92;)</span> and <span>&#92;(\text{Var}(N) = mq(1-q)&#92;)</span>. Note <span>&#92;(E[N] > \text{Var}(N)&#92;)</span>.
+The finite support implies a maximum possible claim count. Its pgf is \(G(z) = (1 - q + qz)^m\), giving \(E[N] = mq\) and \(\text{Var}(N) = mq(1-q)\). Note \(E[N] > \text{Var}(N)\).
 
-If <span>&#92;(N&#95;i \sim \text{BIN}(q, m&#95;i)&#92;)</span> independently, then <span>&#92;(\sum&#95;i N&#95;i \sim \text{BIN}(q, \sum&#95;i m&#95;i)&#92;)</span>. When <span>&#92;(m = 1&#92;)</span>, the Binomial reduces to the **Bernoulli distribution**.
+If \(N_i \sim \text{BIN}(q, m_i)\) independently, then \(\sum_i N_i \sim \text{BIN}(q, \sum_i m_i)\). When \(m = 1\), the Binomial reduces to the **Bernoulli distribution**.
 
 #### 3.1.3 Negative Binomial Distribution
 
-A rv <span>&#92;(N \sim \text{NB}(\beta, r)&#92;)</span> (with <span>&#92;(\beta > 0&#92;)</span>, <span>&#92;(r > 0&#92;)</span>) has pmf:
+A rv \(N \sim \text{NB}(\beta, r)\) (with \(\beta > 0\), \(r > 0\) has pmf:
 
-<span>&#92;[ p&#95;n = \binom{n+r-1}{n} \left(\frac{1}{1+\beta}\right)^r \left(\frac{\beta}{1+\beta}\right)^n, \quad n = 0, 1, \ldots &#92;]</span>
+\[ p_n = \binom{n+r-1}{n} \left(\frac{1}{1+\beta}\right)^r \left(\frac{\beta}{1+\beta}\right)^n, \quad n = 0, 1, \ldots \]
 
-using the generalized binomial coefficient <span>&#92;(\binom{x}{n} = \frac{\Gamma(x+1)}{n!\,\Gamma(x-n+1)}&#92;)</span>. Its pgf is <span>&#92;(G(z) = (1 + \beta - \beta z)^{-r}&#92;)</span>, giving <span>&#92;(E[N] = r\beta&#92;)</span> and <span>&#92;(\text{Var}(N) = r\beta(1+\beta)&#92;)</span>. Note <span>&#92;(E[N] < \text{Var}(N)&#92;)</span>.
+using the generalized binomial coefficient \(\binom{x}{n} = \frac{\Gamma(x+1)}{n!\,\Gamma(x-n+1)}\). Its pgf is \(G(z) = (1 + \beta - \beta z)^{-r}\), giving \(E[N] = r\beta\) and \(\text{Var}(N) = r\beta(1+\beta)\). Note \(E[N] < \text{Var}(N)\).
 
-If <span>&#92;(N&#95;i \sim \text{NB}(\beta, r&#95;i)&#92;)</span> independently, then <span>&#92;(\sum&#95;i N&#95;i \sim \text{NB}(\beta, \sum&#95;i r&#95;i)&#92;)</span>. When <span>&#92;(r = 1&#92;)</span>, this reduces to the **geometric distribution** <span>&#92;(\text{GEO}(\beta)&#92;)</span> with cdf <span>&#92;(F(k) = 1 - \left(\frac{\beta}{1+\beta}\right)^{k+1}&#92;)</span>.
+If \(N_i \sim \text{NB}(\beta, r_i)\) independently, then \(\sum_i N_i \sim \text{NB}(\beta, \sum_i r_i)\). When \(r = 1\), this reduces to the **geometric distribution** \(\text{GEO}(\beta)\) with cdf \(F(k) = 1 - \left(\frac{\beta}{1+\beta}\right)^{k+1}\).
 
 ### 3.2 The (a, b, 0) Class
 
-**Definition.** A counting rv <span>&#92;(N&#92;)</span> belongs to the **(a, b, 0) class** if there exist constants <span>&#92;(a, b&#92;)</span> such that:
+**Definition.** A counting rv \(N\) belongs to the **(a, b, 0) class** if there exist constants \(a, b\) such that:
 
-<span>&#92;[ p&#95;n = \left(a + \frac{b}{n}\right) p&#95;{n-1}, \quad n = 1, 2, \ldots &#92;]</span>
+\[ p_n = \left(a + \frac{b}{n}\right) p_{n-1}, \quad n = 1, 2, \ldots \]
 
 The Poisson, Binomial, and Negative Binomial are the **only** members of this class. Their parameters are:
 
-| Distribution | <span>&#92;(a&#92;)</span> | <span>&#92;(b&#92;)</span> | <span>&#92;(p&#95;0&#92;)</span> |
+| Distribution | \(a\) | \(b\) | \(p_0\) |
 |---|---|---|---|
-| <span>&#92;(\text{POI}(\lambda)&#92;)</span> | <span>&#92;(0&#92;)</span> | <span>&#92;(\lambda&#92;)</span> | <span>&#92;(e^{-\lambda}&#92;)</span> |
-| <span>&#92;(\text{BIN}(q, m)&#92;)</span> | <span>&#92;(-\frac{q}{1-q}&#92;)</span> | <span>&#92;((m+1)\frac{q}{1-q}&#92;)</span> | <span>&#92;((1-q)^m&#92;)</span> |
-| <span>&#92;(\text{NB}(\beta, r)&#92;)</span> | <span>&#92;(\frac{\beta}{1+\beta}&#92;)</span> | <span>&#92;((r-1)\frac{\beta}{1+\beta}&#92;)</span> | <span>&#92;((1+\beta)^{-r}&#92;)</span> |
+| \(\text{POI}(\lambda)\) | \(0\) | \(\lambda\) | \(e^{-\lambda}\) |
+| \(\text{BIN}(q, m)\) | \(-\frac{q}{1-q}\) | \((m+1)\frac{q}{1-q}\) | \((1-q)^m\) |
+| \(\text{NB}(\beta, r)\) | \(\frac{\beta}{1+\beta}\) | \((r-1)\frac{\beta}{1+\beta}\) | \((1+\beta)^{-r}\) |
 
-**Example 9.** For <span>&#92;(N \sim \text{POI}(\lambda)&#92;)</span>: <span>&#92;(\frac{p&#95;n}{p&#95;{n-1}} = \frac{\lambda}{n}&#92;)</span>, so <span>&#92;(a = 0&#92;)</span>, <span>&#92;(b = \lambda&#92;)</span>.
+**Example 9.** For \(N \sim \text{POI}(\lambda)\): \(\frac{p_n}{p_{n-1}} = \frac{\lambda}{n}\), so \(a = 0\), \(b = \lambda\).
 
-**Example 12.** If <span>&#92;(N \sim \text{GEO}(\beta)&#92;)</span> is an (a, b, 0) member with <span>&#92;(a = 0.75&#92;)</span>, then <span>&#92;(\frac{\beta}{1+\beta} = 0.75&#92;)</span> giving <span>&#92;(\beta = 3&#92;)</span>, so <span>&#92;(p&#95;2 = \frac{1}{4}\left(\frac{3}{4}\right)^2 \approx 0.1406&#92;)</span>.
+**Example 12.** If \(N \sim \text{GEO}(\beta)\) is an (a, b, 0) member with \(a = 0.75\), then \(\frac{\beta}{1+\beta} = 0.75\) giving \(\beta = 3\), so \(p_2 = \frac{1}{4}\left(\frac{3}{4}\right)^2 \approx 0.1406\).
 
 ### 3.3 Compounding Distributions
 
-For two counting rvs <span>&#92;(K&#92;)</span> (primary) and <span>&#92;(M&#92;)</span> (secondary), the **compound rv** is:
+For two counting rvs \(K\) (primary) and \(M\) (secondary), the **compound rv** is:
 
-<span>&#92;[ N = \begin{cases} \sum&#95;{i=1}^K M&#95;i, & K > 0, \\ 0, & K = 0, \end{cases} &#92;]</span>
+\[ N = \begin{cases} \sum_{i=1}^K M_i, & K > 0, \\ 0, & K = 0, \end{cases} \]
 
-where the <span>&#92;(M&#95;i&#92;)</span> are iid copies of <span>&#92;(M&#92;)</span>, independent of <span>&#92;(K&#92;)</span>. The pgf of <span>&#92;(N&#92;)</span> is:
+where the \(M_i\) are iid copies of \(M\), independent of \(K\). The pgf of \(N\) is:
 
-<span>&#92;[ G(z) = C(D(z)), &#92;]</span>
+\[ G(z) = C(D(z)), \]
 
 i.e., the pgf of the primary evaluated at the pgf of the secondary. The mean and variance are:
 
-<span>&#92;[ E[N] = E[K]\,E[M], \qquad \text{Var}(N) = E[K]\,\text{Var}(M) + E[M]^2\,\text{Var}(K). &#92;]</span>
+\[ E[N] = E[K]\,E[M], \qquad \text{Var}(N) = E[K]\,\text{Var}(M) + E[M]^2\,\text{Var}(K). \]
 
-*In loss modelling,* <span>&#92;(K&#92;)</span> might represent the number of accidents and <span>&#92;(M&#95;i&#92;)</span> the number of claims from the <span>&#92;(i&#92;)</span>th accident.
+*In loss modelling,* \(K\) might represent the number of accidents and \(M_i\) the number of claims from the \(i\)th accident.
 
 #### Computing the pmf
 
 Three methods are available:
 
-**1. Pmf method.** <span>&#92;(p&#95;0 = C(d&#95;0)&#92;)</span> and for <span>&#92;(n \geq 1&#92;)</span>: <span>&#92;(p&#95;n = \sum&#95;{k=1}^\infty d&#95;n^{&#42;k}\, c&#95;k&#92;)</span> where <span>&#92;(d&#95;n^{&#42;k} = P(M&#95;1 + \cdots + M&#95;k = n)&#92;)</span>.
+**1. Pmf method.** \(p_0 = C(d_0)\) and for \(n \geq 1\): \(p_n = \sum_{k=1}^\infty d_n^{*k}\, c_k\) where \(d_n^{*k} = P(M_1 + \cdots + M_k = n)\).
 
-**2. Pgf method.** Compute <span>&#92;(G(z) = C(D(z))&#92;)</span>, expand as a power series, and read off coefficients.
+**2. Pgf method.** Compute \(G(z) = C(D(z))\), expand as a power series, and read off coefficients.
 
-**3. Panjer's recursion.** If <span>&#92;(K&#92;)</span> is an (a, b, 0) member:
+**3. Panjer's recursion.** If \(K\) is an (a, b, 0) member:
 
-<span>&#92;[ p&#95;n = \frac{1}{1 - a\,d&#95;0} \sum&#95;{j=1}^n \left(a + \frac{b\,j}{n}\right) d&#95;j\, p&#95;{n-1-j+1}, \quad n \geq 1, &#92;]</span>
+\[ p_n = \frac{1}{1 - a\,d_0} \sum_{j=1}^n \left(a + \frac{b\,j}{n}\right) d_j\, p_{n-1-j+1}, \quad n \geq 1, \]
 
-with <span>&#92;(p&#95;0 = C(d&#95;0)&#92;)</span>. This avoids the expensive convolution in the pmf method.
+with \(p_0 = C(d_0)\). This avoids the expensive convolution in the pmf method.
 
-**Example 18.** If <span>&#92;(K \sim \text{POI}(\lambda)&#92;)</span> and <span>&#92;(M \sim \text{BIN}(q,1)&#92;)</span> (Bernoulli), then <span>&#92;(G(z) = e^{\lambda q(z-1)}&#92;)</span>, so <span>&#92;(N \sim \text{POI}(\lambda q)&#92;)</span>.
+**Example 18.** If \(K \sim \text{POI}(\lambda)\) and \(M \sim \text{BIN}(q,1)\) (Bernoulli), then \(G(z) = e^{\lambda q(z-1)}\), so \(N \sim \text{POI}(\lambda q)\).
 
 ### 3.4 Effect of Policy Adjustments on Frequency
 
-Under a policy with ordinary deductible <span>&#92;(d&#92;)</span>, not every loss results in a payment. Define <span>&#92;(\alpha = P(\text{loss results in non-zero payment})&#92;)</span>. If <span>&#92;(N&#92;)</span> is the number of losses and <span>&#92;(M&#92;)</span> the number of non-zero payments, then <span>&#92;(M&#92;)</span> is a compound rv with primary <span>&#92;(N&#92;)</span> and secondary Bernoulli(<span>&#92;(\alpha&#92;)</span>), giving pgf <span>&#92;(H(z) = P(1 - \alpha + \alpha z)&#92;)</span>.
+Under a policy with ordinary deductible \(d\), not every loss results in a payment. Define \(\alpha = P(\text{loss results in non-zero payment})\). If \(N\) is the number of losses and \(M\) the number of non-zero payments, then \(M\) is a compound rv with primary \(N\) and secondary Bernoulli(\(\alpha\), giving pgf \(H(z) = P(1 - \alpha + \alpha z)\).
 
 **Key results:**
 
 | Loss distribution | Payment distribution |
 |---|---|
-| <span>&#92;(N \sim \text{POI}(\lambda)&#92;)</span> | <span>&#92;(M \sim \text{POI}(\alpha\lambda)&#92;)</span> |
-| <span>&#92;(N \sim \text{BIN}(q, m)&#92;)</span> | <span>&#92;(M \sim \text{BIN}(\alpha q, m)&#92;)</span> |
-| <span>&#92;(N \sim \text{NB}(\beta, r)&#92;)</span> | <span>&#92;(M \sim \text{NB}(\alpha\beta, r)&#92;)</span> |
+| \(N \sim \text{POI}(\lambda)\) | \(M \sim \text{POI}(\alpha\lambda)\) |
+| \(N \sim \text{BIN}(q, m)\) | \(M \sim \text{BIN}(\alpha q, m)\) |
+| \(N \sim \text{NB}(\beta, r)\) | \(M \sim \text{NB}(\alpha\beta, r)\) |
 
 All three distributions stay within the same parametric family after thinning, which is a useful property for model consistency.
 
 ### 3.5 Estimation of Frequency Distributions
 
-Since insurers only observe losses that result in non-zero payments, estimation uses **payment data**. Let <span>&#92;(z&#95;k&#92;)</span> be the number of times <span>&#92;(k&#92;)</span> payments are observed. The **log-likelihood** for the compound payment rv <span>&#92;(M&#92;)</span> with pmf <span>&#92;(\{p&#95;k\}&#92;)</span> is:
+Since insurers only observe losses that result in non-zero payments, estimation uses **payment data**. Let \(z_k\) be the number of times \(k\) payments are observed. The **log-likelihood** for the compound payment rv \(M\) with pmf \(\{p_k\}\) is:
 
-<span>&#92;[ \ell = \sum&#95;{k=0}^\infty z&#95;k \ln p&#95;k &#92;]</span>
+\[ \ell = \sum_{k=0}^\infty z_k \ln p_k \]
 
-**Example 20.** If <span>&#92;(N \sim \text{POI}(\lambda)&#92;)</span> and payment probability is <span>&#92;(\alpha&#92;)</span>, then <span>&#92;(M \sim \text{POI}(\alpha\lambda)&#92;)</span>. The MLE of <span>&#92;(\lambda&#92;)</span> is:
+**Example 20.** If \(N \sim \text{POI}(\lambda)\) and payment probability is \(\alpha\), then \(M \sim \text{POI}(\alpha\lambda)\). The MLE of \(\lambda\) is:
 
-<span>&#92;[ \hat{\lambda} = \frac{1}{\alpha} \cdot \frac{\sum&#95;{k=0}^\infty k\, n&#95;k}{n} = \frac{\bar{k}}{\alpha} &#92;]</span>
+\[ \hat{\lambda} = \frac{1}{\alpha} \cdot \frac{\sum_{k=0}^\infty k\, n_k}{n} = \frac{\bar{k}}{\alpha} \]
 
-where <span>&#92;(n = \sum&#95;k n&#95;k&#92;)</span> is the total number of observations and <span>&#92;(\bar{k}&#92;)</span> is the sample mean of payment counts.
+where \(n = \sum_k n_k\) is the total number of observations and \(\bar{k}\) is the sample mean of payment counts.
 
 ---
 
 ## Chapter 4: Severity Distributions
 
-The **severity model** describes the size of each individual claim/payment. The **ground-up loss** rv is denoted <span>&#92;(X&#92;)</span>; the insurer's actual payment after policy adjustments differs from <span>&#92;(X&#92;)</span>.
+The **severity model** describes the size of each individual claim/payment. The **ground-up loss** rv is denoted \(X\); the insurer's actual payment after policy adjustments differs from \(X\).
 
 ### 4.1 Nonparametric Approach
 
-The **empirical distribution function (edf)** assigns probability <span>&#92;(1/n&#92;)</span> to each data point in a sample of size <span>&#92;(n&#92;)</span>:
+The **empirical distribution function (edf)** assigns probability \(1/n\) to each data point in a sample of size \(n\):
 
-<span>&#92;[ \hat{F}&#95;n(x) = \frac{1}{n} \sum&#95;{i=1}^n \mathbf{1}&#95;{\{X&#95;i \leq x\}} &#92;]</span>
+\[ \hat{F}_n(x) = \frac{1}{n} \sum_{i=1}^n \mathbf{1}_{\{X_i \leq x\}} \]
 
-**Example 22.** For losses {30, 80, 80, 150, 150, 150, 200, 300}, the edf assigns <span>&#92;(P(X = 30) = 1/8&#92;)</span>, <span>&#92;(P(X = 80) = 1/4&#92;)</span>, etc.
+**Example 22.** For losses {30, 80, 80, 150, 150, 150, 200, 300}, the edf assigns \(P(X = 30) = 1/8\), \(P(X = 80) = 1/4\), etc.
 
 ### 4.2 Common Severity Distributions
 
 Several parametric families are used for ground-up losses:
 
-- **Exponential** <span>&#92;(\text{EXP}(\theta)&#92;)</span>: pdf <span>&#92;(f(x) = \frac{1}{\theta}e^{-x/\theta}&#92;)</span>, mean <span>&#92;(\theta&#92;)</span>, variance <span>&#92;(\theta^2&#92;)</span>
-- **Gamma** <span>&#92;(\text{GAM}(\alpha, \theta)&#92;)</span>: includes Erlang as a special case (<span>&#92;(\alpha \in \mathbb{Z}&#95;+&#92;)</span>)
-- **Pareto** <span>&#92;(\text{PAR}(\alpha, \theta)&#92;)</span>: heavy-tailed; survival function <span>&#92;(\bar{F}(x) = \left(\frac{\theta}{x+\theta}\right)^\alpha&#92;)</span>
-- **Lognormal** <span>&#92;(\text{LOGN}(\mu, \sigma)&#92;)</span>: <span>&#92;(X = e^Y&#92;)</span> where <span>&#92;(Y \sim N(\mu, \sigma^2)&#92;)</span>
+- **Exponential** \(\text{EXP}(\theta)\): pdf \(f(x) = \frac{1}{\theta}e^{-x/\theta}\), mean \(\theta\), variance \(\theta^2\)
+- **Gamma** \(\text{GAM}(\alpha, \theta)\): includes Erlang as a special case (\(\alpha \in \mathbb{Z}_+\)
+- **Pareto** \(\text{PAR}(\alpha, \theta)\): heavy-tailed; survival function \(\bar{F}(x) = \left(\frac{\theta}{x+\theta}\right)^\alpha\)
+- **Lognormal** \(\text{LOGN}(\mu, \sigma)\): \(X = e^Y\) where \(Y \sim N(\mu, \sigma^2)\)
 - **Weibull**, **Burr**, and others
 
 An important property is the **limited expected value**:
 
-<span>&#92;[ E[X \wedge u] = \int&#95;0^u \bar{F}(x)\, dx &#92;]</span>
+\[ E[X \wedge u] = \int_0^u \bar{F}(x)\, dx \]
 
-where <span>&#92;(X \wedge u = \min(X, u)&#92;)</span>. More generally, the <span>&#92;(k&#92;)</span>th moment of the limited rv is:
+where \(X \wedge u = \min(X, u)\). More generally, the \(k\)th moment of the limited rv is:
 
-<span>&#92;[ E\left[(X \wedge u)^k\right] = k\int&#95;0^u x^{k-1}\bar{F}(x)\, dx &#92;]</span>
+\[ E\left[(X \wedge u)^k\right] = k\int_0^u x^{k-1}\bar{F}(x)\, dx \]
 
 ### 4.3 Constructing New Distributions
 
 New distributions can be constructed from existing ones via:
 
-- **Scaling:** if <span>&#92;(X \sim \text{EXP}(\theta)&#92;)</span> then <span>&#92;(cX \sim \text{EXP}(c\theta)&#92;)</span> (exponential is a **scale distribution**)
-- **Power transformations:** if <span>&#92;(Y = X^{1/\tau}&#92;)</span>, the resulting distribution has a modified shape
-- **Lognormal:** if <span>&#92;(X \sim N(\mu, \sigma^2)&#92;)</span>, then <span>&#92;(Y = e^X \sim \text{LOGN}(\mu, \sigma)&#92;)</span>
+- **Scaling:** if \(X \sim \text{EXP}(\theta)\) then \(cX \sim \text{EXP}(c\theta)\) (exponential is a **scale distribution**)
+- **Power transformations:** if \(Y = X^{1/\tau}\), the resulting distribution has a modified shape
+- **Lognormal:** if \(X \sim N(\mu, \sigma^2)\), then \(Y = e^X \sim \text{LOGN}(\mu, \sigma)\)
 
 ### 4.4 Policy Adjustments
 
 Three standard adjustments affect the payment amount:
 
-- **Ordinary deductible** <span>&#92;(d&#92;)</span>: insurer pays <span>&#92;((X - d)&#95;+&#92;)</span>
-- **Policy limit** <span>&#92;(u&#92;)</span>: insurer pays at most <span>&#92;(u&#92;)</span>
-- **Coinsurance factor** <span>&#92;(\alpha \in (0,1]&#92;)</span>: insurer pays fraction <span>&#92;(\alpha&#92;)</span> of each dollar
+- **Ordinary deductible** \(d\): insurer pays \((X - d)_+\)
+- **Policy limit** \(u\): insurer pays at most \(u\)
+- **Coinsurance factor** \(\alpha \in (0,1]\): insurer pays fraction \(\alpha\) of each dollar
 
 The **amount paid per loss** under all three adjustments is:
 
-<span>&#92;[ Y^L = \alpha\left[(X \wedge u) - d\right]&#95;+ &#92;]</span>
+\[ Y^L = \alpha\left[(X \wedge u) - d\right]_+ \]
 
 The **amount paid per payment** (conditional on a non-zero payment) is:
 
-<span>&#92;[ Y^P = Y^L \mid Y^L > 0 &#92;]</span>
+\[ Y^P = Y^L \mid Y^L > 0 \]
 
-**Proposition 32.** The cdf of <span>&#92;(Y^P&#92;)</span> is:
+**Proposition 32.** The cdf of \(Y^P\) is:
 
-<span>&#92;[ F_{Y^P}(y) = \frac{F\!\left(\frac{y}{\alpha} + d\right) - F(d)}{1 - F(d)}, \quad 0 \leq y < \alpha(u-d) &#92;]</span>
+\[ F_{Y^P}(y) = \frac{F\!\left(\frac{y}{\alpha} + d\right) - F(d)}{1 - F(d)}, \quad 0 \leq y < \alpha(u-d) \]
 
 and the expected amount paid per payment satisfies:
 
-<span>&#92;[ E[Y^P] = \frac{E[Y^L]}{1 - F(d)} &#92;]</span>
+\[ E[Y^P] = \frac{E[Y^L]}{1 - F(d)} \]
 
-**Proposition 33.** For a nonnegative rv <span>&#92;(Y&#92;)</span> with survival function <span>&#92;(\bar{F}&#95;Y&#92;)</span>:
+**Proposition 33.** For a nonnegative rv \(Y\) with survival function \(\bar{F}_Y\):
 
-<span>&#92;[ E[Y] = \int&#95;0^\infty \bar{F}&#95;Y(y)\, dy &#92;]</span>
+\[ E[Y] = \int_0^\infty \bar{F}_Y(y)\, dy \]
 
 #### Loss Elimination Ratio
 
 The **loss elimination ratio (LER)** measures the proportion of expected loss eliminated by policy adjustments:
 
-<span>&#92;[ \text{LER} = 1 - \frac{E[Y^L]}{E[X]} &#92;]</span>
+\[ \text{LER} = 1 - \frac{E[Y^L]}{E[X]} \]
 
-For a policy with only an ordinary deductible <span>&#92;(d&#92;)</span>: <span>&#92;(\text{LER} = \frac{E[X \wedge d]}{E[X]}&#92;)</span>.
+For a policy with only an ordinary deductible \(d\): \(\text{LER} = \frac{E[X \wedge d]}{E[X]}\).
 
-**Example 37.** For <span>&#92;(X \sim \text{PAR}(2, 1000)&#92;)</span> with <span>&#92;(\bar{F}(x) = \left(\frac{1000}{x+1000}\right)^2&#92;)</span>, setting <span>&#92;(\text{LER} = 0.2&#92;)</span> gives <span>&#92;(\frac{d}{d+1000} = 0.2&#92;)</span>, so <span>&#92;(d = 250&#92;)</span>.
+**Example 37.** For \(X \sim \text{PAR}(2, 1000)\) with \(\bar{F}(x) = \left(\frac{1000}{x+1000}\right)^2\), setting \(\text{LER} = 0.2\) gives \(\frac{d}{d+1000} = 0.2\), so \(d = 250\).
 
 ### 4.5 Estimation of Severity Distributions
 
-Estimating parameters for the ground-up loss <span>&#92;(X&#92;)</span> is complicated because the insurer's data is **truncated from below** (losses below <span>&#92;(d&#92;)</span> are not reported) and **censored from above** (losses above <span>&#92;(u&#92;)</span> are recorded only as the maximum payment).
+Estimating parameters for the ground-up loss \(X\) is complicated because the insurer's data is **truncated from below** (losses below \(d\) are not reported) and **censored from above** (losses above \(u\) are recorded only as the maximum payment).
 
 The likelihood contribution for each observation is:
 
-- **Non-maximum payments** <span>&#92;(y \in (0, \alpha(u-d))&#92;)</span>: <span>&#92;(\frac{\frac{1}{\alpha} f\!\left(\frac{y}{\alpha} + d\right)}{1 - F(d)}&#92;)</span>
-- **Maximum payment** <span>&#92;(y = \alpha(u-d)&#92;)</span>: <span>&#92;(\frac{1 - F(u)}{1 - F(d)}&#92;)</span>
+- **Non-maximum payments** \(y \in (0, \alpha(u-d))\): \(\frac{\frac{1}{\alpha} f\!\left(\frac{y}{\alpha} + d\right)}{1 - F(d)}\)
+- **Maximum payment** \(y = \alpha(u-d)\): \(\frac{1 - F(u)}{1 - F(d)}\)
 
-**Example 38.** Policy with limit 100, deductible 10, coinsurance 0.9. Payment data: 1.8, 15.3, 73.8, 81, 81 (where 81 is the maximum payment). For <span>&#92;(X \sim \text{EXP}(\theta)&#92;)</span>, the MLE is <span>&#92;(\hat{\theta} = 281/3 \approx 93.67&#92;)</span>.
+**Example 38.** Policy with limit 100, deductible 10, coinsurance 0.9. Payment data: 1.8, 15.3, 73.8, 81, 81 (where 81 is the maximum payment). For \(X \sim \text{EXP}(\theta)\), the MLE is \(\hat{\theta} = 281/3 \approx 93.67\).
 
-For **grouped data** in payment intervals <span>&#92;((c&#95;{i-1}, c&#95;i]&#92;)</span> with counts <span>&#92;(n&#95;i&#92;)</span>:
+For **grouped data** in payment intervals \((c_{i-1}, c_i]\) with counts \(n_i\):
 
-<span>&#92;[ L = \prod&#95;{i=1}^n \left[\frac{F\!\left(\frac{c&#95;i}{\alpha} + d\right) - F\!\left(\frac{c&#95;{i-1}}{\alpha} + d\right)}{1 - F(d)}\right]^{n&#95;i} &#92;]</span>
+\[ L = \prod_{i=1}^n \left[\frac{F\!\left(\frac{c_i}{\alpha} + d\right) - F\!\left(\frac{c_{i-1}}{\alpha} + d\right)}{1 - F(d)}\right]^{n_i} \]
 
-**Example 39.** Policy limit 1100, deductible 100, coinsurance 80%. Payment intervals (0, 400], (400, 800], and maximum 800. For <span>&#92;(X \sim \text{EXP}(\theta)&#92;)</span>, solving <span>&#92;(\frac{d\ell}{d\theta} = 0&#92;)</span> yields <span>&#92;(\hat{\theta} = \frac{500}{-\ln(2/3)} \approx 1233.15&#92;)</span>.
+**Example 39.** Policy limit 1100, deductible 100, coinsurance 80%. Payment intervals (0, 400], (400, 800], and maximum 800. For \(X \sim \text{EXP}(\theta)\), solving \(\frac{d\ell}{d\theta} = 0\) yields \(\hat{\theta} = \frac{500}{-\ln(2/3)} \approx 1233.15\).
 
 ---
 
@@ -339,77 +339,77 @@ For **grouped data** in payment intervals <span>&#92;((c&#95;{i-1}, c&#95;i]&#92
 
 The **aggregate loss** is the compound rv:
 
-<span>&#92;[ S = \begin{cases} \sum&#95;{i=1}^N X&#95;i, & N > 0, \\ 0, & N = 0, \end{cases} &#92;]</span>
+\[ S = \begin{cases} \sum_{i=1}^N X_i, & N > 0, \\ 0, & N = 0, \end{cases} \]
 
-where <span>&#92;(N&#92;)</span> is the frequency rv and <span>&#92;(X&#95;i&#92;)</span> are iid severity rvs. Equivalently, the **aggregate payment** can be expressed as a compound rv using either (N, <span>&#92;(Y^L&#92;)</span>) or (M, <span>&#92;(Y^P&#92;)</span>) as the (primary, secondary) pair.
+where \(N\) is the frequency rv and \(X_i\) are iid severity rvs. Equivalently, the **aggregate payment** can be expressed as a compound rv using either (N, \(Y^L\) or (M, \(Y^P\) as the (primary, secondary) pair.
 
 ### 5.2 Distributional Properties
 
-Treating <span>&#92;(S&#92;)</span> as a general compound rv with primary <span>&#92;(K&#92;)</span> (pgf <span>&#92;(C(z)&#92;)</span>) and secondary <span>&#92;(Z&#92;)</span> (mgf <span>&#92;(\tilde{G}(t)&#92;)</span>):
+Treating \(S\) as a general compound rv with primary \(K\) (pgf \(C(z)\) and secondary \(Z\) (mgf \(\tilde{G}(t)\):
 
 **CDF:**
-<span>&#92;[ P(S \leq x) = c&#95;0 + \sum&#95;{k=1}^\infty c&#95;k G^{&#42;k}(x) &#92;]</span>
+\[ P(S \leq x) = c_0 + \sum_{k=1}^\infty c_k G^{*k}(x) \]
 
-where <span>&#92;(G^{&#42;k}(x) = P(Z&#95;1 + \cdots + Z&#95;k \leq x)&#92;)</span> is the <span>&#92;(k&#92;)</span>-fold convolution.
+where \(G^{*k}(x) = P(Z_1 + \cdots + Z_k \leq x)\) is the \(k\)-fold convolution.
 
 **MGF:**
-<span>&#92;[ E\!\left[e^{tS}\right] = C\!\left(\tilde{G}(t)\right) &#92;]</span>
+\[ E\!\left[e^{tS}\right] = C\!\left(\tilde{G}(t)\right) \]
 
 **Mean and variance:**
-<span>&#92;[ E[S] = E[K]\,E[Z], \qquad \text{Var}(S) = E[K]\,\text{Var}(Z) + E[Z]^2\,\text{Var}(K) &#92;]</span>
+\[ E[S] = E[K]\,E[Z], \qquad \text{Var}(S) = E[K]\,\text{Var}(Z) + E[Z]^2\,\text{Var}(K) \]
 
-**Example 40.** If <span>&#92;(Z \sim \text{EXP}(\theta)&#92;)</span>, then <span>&#92;(G^{&#42;k}&#92;)</span> is the cdf of an Erlang<span>&#92;((k, \theta)&#92;)</span> rv, allowing an explicit closed-form for <span>&#92;(P(S \leq x)&#92;)</span>.
+**Example 40.** If \(Z \sim \text{EXP}(\theta)\), then \(G^{*k}\) is the cdf of an Erlang\((k, \theta)\) rv, allowing an explicit closed-form for \(P(S \leq x)\).
 
-**Example 41.** For <span>&#92;(K \sim \text{GEO}(\beta)&#92;)</span> and <span>&#92;(Z \sim \text{EXP}(\theta)&#92;)</span>, the mgf of <span>&#92;(S&#92;)</span> simplifies to <span>&#92;(\frac{1 - \theta t}{1 - (1+\beta)\theta t}&#92;)</span>, which corresponds to a **mixed rv** with probability mass <span>&#92;(\frac{1}{1+\beta}&#92;)</span> at 0 and exponential density with rate <span>&#92;(\frac{1}{(1+\beta)\theta}&#92;)</span> for <span>&#92;(x > 0&#92;)</span>. The cdf is:
+**Example 41.** For \(K \sim \text{GEO}(\beta)\) and \(Z \sim \text{EXP}(\theta)\), the mgf of \(S\) simplifies to \(\frac{1 - \theta t}{1 - (1+\beta)\theta t}\), which corresponds to a **mixed rv** with probability mass \(\frac{1}{1+\beta}\) at 0 and exponential density with rate \(\frac{1}{(1+\beta)\theta}\) for \(x > 0\). The cdf is:
 
-<span>&#92;[ P(S \leq s) = 1 - \frac{\beta}{1+\beta} e^{-\frac{s}{(1+\beta)\theta}}, \quad s \geq 0 &#92;]</span>
+\[ P(S \leq s) = 1 - \frac{\beta}{1+\beta} e^{-\frac{s}{(1+\beta)\theta}}, \quad s \geq 0 \]
 
 ### 5.3 Approximation Methods
 
-In general, closed-form expressions for <span>&#92;(P(S \leq x)&#92;)</span> are rare. Two approximation methods are widely used.
+In general, closed-form expressions for \(P(S \leq x)\) are rare. Two approximation methods are widely used.
 
 #### 5.3.1 Normal Approximation
 
-Approximate <span>&#92;(\frac{S - E[S]}{\sqrt{\text{Var}(S)}} \approx N(0,1)&#92;)</span>, so:
+Approximate \(\frac{S - E[S]}{\sqrt{\text{Var}(S)}} \approx N(0,1)\), so:
 
-<span>&#92;[ P(S \leq s) \approx \Phi\!\left(\frac{s - E[S]}{\sqrt{\text{Var}(S)}}\right) &#92;]</span>
+\[ P(S \leq s) \approx \Phi\!\left(\frac{s - E[S]}{\sqrt{\text{Var}(S)}}\right) \]
 
-This approximation is good when <span>&#92;(\lambda&#92;)</span> is large (Poisson), <span>&#92;(m&#92;)</span> is large (Binomial), or <span>&#92;(r&#92;)</span> is large (Negative Binomial). **Caution:** the normal approximation may underestimate the right tail of <span>&#92;(S&#92;)</span>, which is dangerous from a risk management standpoint.
+This approximation is good when \(\lambda\) is large (Poisson), \(m\) is large (Binomial), or \(r\) is large (Negative Binomial). **Caution:** the normal approximation may underestimate the right tail of \(S\), which is dangerous from a risk management standpoint.
 
-**Example 42.** <span>&#92;(K \sim \text{POI}(50)&#92;)</span>, <span>&#92;(Z \sim \text{EXP}(2)&#92;)</span>. Then <span>&#92;(E[S] = 100&#92;)</span>, <span>&#92;(\text{Var}(S) = 400&#92;)</span>. The 95th percentile is approximately <span>&#92;(1.645\sqrt{400} + 100 = 132.9&#92;)</span>.
+**Example 42.** \(K \sim \text{POI}(50)\), \(Z \sim \text{EXP}(2)\). Then \(E[S] = 100\), \(\text{Var}(S) = 400\). The 95th percentile is approximately \(1.645\sqrt{400} + 100 = 132.9\).
 
 #### 5.3.2 Method of Rounding (Discretization)
 
-**Discretize** <span>&#92;(Z&#92;)</span> to a discrete rv <span>&#92;(Z^&#42;&#92;)</span> on multiples of span <span>&#92;(h > 0&#92;)</span>:
+**Discretize** \(Z\) to a discrete rv \(Z^*\) on multiples of span \(h > 0\):
 
-<span>&#92;[ g&#95;0 = G\!\left(\frac{h}{2}\right), \qquad g&#95;k = G\!\left(kh + \frac{h}{2}\right) - G\!\left(kh - \frac{h}{2}\right), \quad k \geq 1 &#92;]</span>
+\[ g_0 = G\!\left(\frac{h}{2}\right), \qquad g_k = G\!\left(kh + \frac{h}{2}\right) - G\!\left(kh - \frac{h}{2}\right), \quad k \geq 1 \]
 
-Then use Panjer's recursion on the discretized distribution to obtain the pmf of <span>&#92;(S^&#42; \approx S&#92;)</span>. The approximation improves as <span>&#92;(h \to 0&#92;)</span>.
+Then use Panjer's recursion on the discretized distribution to obtain the pmf of \(S^* \approx S\). The approximation improves as \(h \to 0\).
 
-**Example 43.** <span>&#92;(K \sim \text{POI}(3)&#92;)</span>, <span>&#92;(Z \sim \text{PAR}(4, 10)&#92;)</span>, span <span>&#92;(h = 2.5&#92;)</span>. The discretized probabilities are <span>&#92;(g&#95;0 \approx 0.3757&#92;)</span>, <span>&#92;(g&#95;1 \approx 0.3445&#92;)</span>, <span>&#92;(g&#95;2 \approx 0.1364&#92;)</span>. Panjer's recursion then gives <span>&#92;(P(S^&#42; = 0) \approx 0.1537&#92;)</span>, <span>&#92;(P(S^&#42; = 2.5) \approx 0.1588&#92;)</span>, <span>&#92;(P(S^&#42; = 5) \approx 0.1450&#92;)</span>.
+**Example 43.** \(K \sim \text{POI}(3)\), \(Z \sim \text{PAR}(4, 10)\), span \(h = 2.5\). The discretized probabilities are \(g_0 \approx 0.3757\), \(g_1 \approx 0.3445\), \(g_2 \approx 0.1364\). Panjer's recursion then gives \(P(S^* = 0) \approx 0.1537\), \(P(S^* = 2.5) \approx 0.1588\), \(P(S^* = 5) \approx 0.1450\).
 
-For aggregate **payment** approximation, it is recommended to discretize <span>&#92;(Y^P&#92;)</span> rather than <span>&#92;(Y^L&#92;)</span> for better accuracy (Example 44).
+For aggregate **payment** approximation, it is recommended to discretize \(Y^P\) rather than \(Y^L\) for better accuracy (Example 44).
 
 ### 5.4 Introduction to Reinsurance
 
 **Reinsurance** is insurance purchased by an insurer (the **cedant**) from a reinsurer. Two common treaties:
 
-- **Quota share:** reinsurer pays fraction <span>&#92;(\kappa&#92;)</span> of aggregate payment <span>&#92;(S&#92;)</span>; premium is <span>&#92;((1+\theta)E[\kappa S]&#92;)</span>
-- **Stop-loss:** insurer pays <span>&#92;(\min(S, \xi)&#92;)</span>; reinsurer pays <span>&#92;((S - \xi)&#95;+&#92;)</span>, effectively capping the insurer's liability
+- **Quota share:** reinsurer pays fraction \(\kappa\) of aggregate payment \(S\); premium is \((1+\theta)E[\kappa S]\)
+- **Stop-loss:** insurer pays \(\min(S, \xi)\); reinsurer pays \((S - \xi)_+\), effectively capping the insurer's liability
 
 The **net stop-loss premium** (expected reinsurer payment) is:
 
-<span>&#92;[ E[I&#95;\xi] = E[(S-\xi)&#95;+] = \int&#95;\xi^\infty P(S > x)\, dx &#92;]</span>
+\[ E[I_\xi] = E[(S-\xi)_+] = \int_\xi^\infty P(S > x)\, dx \]
 
-For integer-valued <span>&#92;(S&#92;)</span>, the stop-loss premium satisfies the recursion:
+For integer-valued \(S\), the stop-loss premium satisfies the recursion:
 
-<span>&#92;[ E[I&#95;{\xi+1}] = E[I&#95;\xi] - P(S > \xi), \quad \xi \in \mathbb{N} &#92;]</span>
+\[ E[I_{\xi+1}] = E[I_\xi] - P(S > \xi), \quad \xi \in \mathbb{N} \]
 
-with starting point <span>&#92;(E[I&#95;0] = E[S]&#92;)</span>.
+with starting point \(E[I_0] = E[S]\).
 
-**Example 45.** <span>&#92;(S&#92;)</span> compound Poisson with <span>&#92;(\lambda = 2.5&#92;)</span>, <span>&#92;(g&#95;1 = 0.8&#92;)</span>, <span>&#92;(g&#95;2 = 0.2&#92;)</span>. Then <span>&#92;(E[S] = 3&#92;)</span>, <span>&#92;(P(S = 0) = e^{-2.5}&#92;)</span>, <span>&#92;(P(S = 1) = 2.5(0.8)e^{-2.5} \approx 0.1642&#92;)</span>. Applying the recursion:
+**Example 45.** \(S\) compound Poisson with \(\lambda = 2.5\), \(g_1 = 0.8\), \(g_2 = 0.2\). Then \(E[S] = 3\), \(P(S = 0) = e^{-2.5}\), \(P(S = 1) = 2.5(0.8)e^{-2.5} \approx 0.1642\). Applying the recursion:
 
-<span>&#92;[ E[I&#95;2] \approx 3 - (1 - e^{-2.5}) - 0.1642 \approx 1.3284 &#92;]</span>
+\[ E[I_2] \approx 3 - (1 - e^{-2.5}) - 0.1642 \approx 1.3284 \]
 
 ---
 
@@ -441,13 +441,13 @@ The **chain-ladder method** (also called the **loss development triangle method*
 |--------|-------------|
 | **Average method** | Arithmetic mean of all link ratios in the column |
 | **Five-year average** | Arithmetic mean of the 5 most recent link ratios |
-| **Volume-weighted average** | Sum of DY<span>&#92;((i+1)&#92;)</span> entries divided by sum of DY<span>&#92;(i&#92;)</span> entries across all AYs |
+| **Volume-weighted average** | Sum of DY\((i+1)\) entries divided by sum of DY\(i\) entries across all AYs |
 
 **Step 4.** Project each incomplete AY's cumulative payments forward by multiplying by the selected development factors.
 
 **Step 5.** The **IBNR (Incurred But Not Reported) reserve** for each AY is:
 
-<span>&#92;[ \text{Reserve}&#95;{AY} = \text{Projected Ultimate} - \text{Current Cumulative} &#92;]</span>
+\[ \text{Reserve}_{AY} = \text{Projected Ultimate} - \text{Current Cumulative} \]
 
 **Example 46.** (Numerical example with full development triangle and three averaging methods, leading to projected ultimates and IBNR reserves for each accident year.)
 
@@ -455,7 +455,7 @@ The **chain-ladder method** (also called the **loss development triangle method*
 
 The **expected loss ratio (ELR) method** projects the ultimate loss using an a priori expected loss ratio:
 
-<span>&#92;[ \text{Ultimate Loss}&#95;{AY} = \text{Earned Premium}&#95;{AY} \times \text{ELR} &#92;]</span>
+\[ \text{Ultimate Loss}_{AY} = \text{Earned Premium}_{AY} \times \text{ELR} \]
 
 The reserve for each AY is the projected ultimate minus current cumulative payments. This method is most useful for immature accident years where there is little development history.
 
@@ -463,19 +463,19 @@ The reserve for each AY is the projected ultimate minus current cumulative payme
 
 The **Bornhuetter-Ferguson (BF) method** blends the chain-ladder and expected loss ratio methods. It is particularly useful for immature accident years where the chain-ladder may over-react to sparse early data.
 
-For accident year <span>&#92;(i&#92;)</span> currently at development year <span>&#92;(j&#92;)</span>:
+For accident year \(i\) currently at development year \(j\):
 
-<span>&#92;[ \text{Ultimate}&#95;{i} = C&#95;{ij} + (1 - 1/f&#95;j) \times \text{Expected Ultimate}&#95;{i} &#92;]</span>
+\[ \text{Ultimate}_{i} = C_{ij} + (1 - 1/f_j) \times \text{Expected Ultimate}_{i} \]
 
 where:
-- <span>&#92;(C&#95;{ij}&#92;)</span> is the current cumulative paid loss
-- <span>&#92;(f&#95;j&#92;)</span> is the **tail factor** (product of all remaining development factors from DY<span>&#92;(j&#92;)</span> to ultimate)
-- <span>&#92;((1 - 1/f&#95;j)&#92;)</span> is the **percent unreported** (the fraction of ultimate losses yet to emerge)
+- \(C_{ij}\) is the current cumulative paid loss
+- \(f_j\) is the **tail factor** (product of all remaining development factors from DY\(j\) to ultimate)
+- \((1 - 1/f_j)\) is the **percent unreported** (the fraction of ultimate losses yet to emerge)
 - Expected Ultimate = Earned Premium × ELR
 
-The BF reserve for AY <span>&#92;(i&#92;)</span> is:
+The BF reserve for AY \(i\) is:
 
-<span>&#92;[ \text{Reserve}&#95;{i} = (1 - 1/f&#95;j) \times \text{Expected Ultimate}&#95;{i} &#92;]</span>
+\[ \text{Reserve}_{i} = (1 - 1/f_j) \times \text{Expected Ultimate}_{i} \]
 
 This interpretation is intuitive: the reserve equals the expected unreported losses, where "unreported" is estimated from the tail factor rather than from actual data.
 

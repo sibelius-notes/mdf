@@ -71,21 +71,21 @@ Primary mixture on major keys/ minor keys.
 Tonicization represent the broadest application of chromatics in major-minor tonality. But chromaticism need not always serve the interests of tonicization: we can intensify the harmonic events in a major-key or minor-key by introducing chords borrowed from the parallel mode. This process is called **primary mixture**.
 
 ## PM in Major
-lowering <span>&#92;(\hat 6 &#92;)</span> (and <span>&#92;(\hat 3 &#92;)</span>)
+lowering \(\hat 6 \) (and \(\hat 3 \)
 
 Pre-dominant chords, mixture in tonic prolongation, plagal cadence
 
 <iframe src="https://trinket.io/embed/music/b13167b34e?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## PM in minor
-Picardy third: raise <span>&#92;(\hat 3 &#92;)</span> in the cadential I
+Picardy third: raise \(\hat 3 \) in the cadential I
 
-When the Phrygian and minor modes are notated on the same tonic, their tonic patterns differ only in respect to the placement of their second degrees. **Phrygian II chord** can be introduced in a minor key by lowering <span>&#92;(\hat 2 &#92;)</span>. The Phrygian II appears most often as a sixth chord in minor, where it is commonly called a **Neapolitan 6th**. We frequently meet the Neapolitan 6th as a pre-dominant chord.
+When the Phrygian and minor modes are notated on the same tonic, their tonic patterns differ only in respect to the placement of their second degrees. **Phrygian II chord** can be introduced in a minor key by lowering \(\hat 2 \). The Phrygian II appears most often as a sixth chord in minor, where it is commonly called a **Neapolitan 6th**. We frequently meet the Neapolitan 6th as a pre-dominant chord.
 
 Example: N6
 <iframe src="https://trinket.io/embed/music/8d95d17acc?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-The Phrygian II (the root-position chord) rarely appears as a pre-dominant harmony, owing to the discordant tritone leap in bass from <span>&#92;(\flat \hat 2\to\hat 5 &#92;)</span> (the dominant root). However, the Phrygian II can be introduced to enrich prolongations of minor chords in both modes.
+The Phrygian II (the root-position chord) rarely appears as a pre-dominant harmony, owing to the discordant tritone leap in bass from \(\flat \hat 2\to\hat 5 \) (the dominant root). However, the Phrygian II can be introduced to enrich prolongations of minor chords in both modes.
 
 ## homophony with PM
 
@@ -120,9 +120,9 @@ Soprano: Once you hit the final tonic with ties, just stay on that.
 Not tonicize, but intensify this motion to the dominant.
 
 soprano: 8 7 8. bass: b6 5 1. Then introduce third voice, #4, which is A4 above the bass. Then fourth voice:
-- double the third: Italian <span>&#92;(^6&#95;3 &#92;)</span>
-- enters on <span>&#92;(\hat 2 &#92;)</span>, French <span>&#92;(^4&#95;3 &#92;)</span>
-- perfect fifth above the bass (<span>&#92;(\hat 3 &#92;)</span> in minor, <span>&#92;(\flat \hat 3 &#92;)</span> in major), German <span>&#92;(^6&#95;5 &#92;)</span>. Note the unavoidable parallel fifth as 3<span>&#92;(\to &#92;)</span>2.
+- double the third: Italian \(^6_3 \)
+- enters on \(\hat 2 \), French \(^4_3 \)
+- perfect fifth above the bass (\(\hat 3 \) in minor, \(\flat \hat 3 \) in major), German \(^6_5 \). Note the unavoidable parallel fifth as 3\(\to \)2.
 
 Italian 63
 <iframe src="https://trinket.io/embed/music/bf903fcb32?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -137,11 +137,11 @@ It has always to resolve to dominant, but doesn't always have to be on the stron
 
 These are embellishing chords, not pre-dominant, not elaborate.
 
-Interpolated <span>&#92;(C &#95; 4 ^ 6 &#92;)</span>:
-- Major: <span>&#92;(\flat 3\to \natural 3 \to 2 \to 1 \text{ or } 3 &#92;)</span>
+Interpolated \(C _ 4 ^ 6 \):
+- Major: \(\flat 3\to \natural 3 \to 2 \to 1 \text{ or } 3 \)
 - Minor: no change on 3 since 3 has been flatted
 
-Ex 24.18 The enharmonic German <span>&#92;(^6&#95;5 &#92;)</span>, only in major.
+Ex 24.18 The enharmonic German \(^6_5 \), only in major.
 
 Ex 24.27 Noncadential A6
 
@@ -152,13 +152,13 @@ only works in major key.
 
 <iframe src="https://trinket.io/embed/music/f663a50f14?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Ex 24.29: CT is creating chromatism to chordal 3rd (<span>&#92;(\hat 7 &#92;)</span>), chordal 5th (<span>&#92;(\hat 2 &#92;)</span>): <span>&#92;(\sharp \hat 6\to \hat 7, \sharp \hat 1 \to \hat 2 &#92;)</span>.
+Ex 24.29: CT is creating chromatism to chordal 3rd (\(\hat 7 \), chordal 5th (\(\hat 2 \): \(\sharp \hat 6\to \hat 7, \sharp \hat 1 \to \hat 2 \).
 
-In summary for CT<span>&#92;(^\circ &#92;)</span>7 voice leading is:
-- <span>&#92;(\sharp 6 \to 7 &#92;)</span>
-- <span>&#92;(\sharp 1 \to 2 &#92;)</span>
-- <span>&#92;(5\to 5 &#92;)</span> (the common tone!)
-- <span>&#92;(3\to 2 &#92;)</span> for V and V<sup>6</sup> or <span>&#92;(3\to 4 &#92;)</span> for V<sup>7</sup> and all inversions
+In summary for CT\(^\circ \)7 voice leading is:
+- \(\sharp 6 \to 7 \)
+- \(\sharp 1 \to 2 \)
+- \(5\to 5 \) (the common tone!)
+- \(3\to 2 \) for V and V<sup>6</sup> or \(3\to 4 \) for V<sup>7</sup> and all inversions
 
 ## T3A-05
 Step 1: correct homophony from chapter 19.
@@ -173,39 +173,39 @@ Step 5: Fill in the inner voices, and make sure the voice leading works and is p
 
 # §25: Intensifying the Tonic
 ## The Augmented Dominant
-Only available in major. Better to use on a weak beat, cause might create A2 in the voice leading. <span>&#92;(\hat 2 \to \sharp \hat 2 \to \hat 3 &#92;)</span>. Can have a triad, or have augmented dominant 7th.
+Only available in major. Better to use on a weak beat, cause might create A2 in the voice leading. \(\hat 2 \to \sharp \hat 2 \to \hat 3 \). Can have a triad, or have augmented dominant 7th.
 
 <iframe src="https://trinket.io/embed/music/04a3528ab7?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## The Diminished Dominant 4-3
-Can be used in both major or minor. Start with V<sup>7</sup> chord in second inversion, and find <span>&#92;(\hat 2 &#92;)</span> in bass, then <span>&#92;(\hat 2 \to \flat \hat 2 \to \hat 1 &#92;)</span>. Best done in weak beat.
+Can be used in both major or minor. Start with V<sup>7</sup> chord in second inversion, and find \(\hat 2 \) in bass, then \(\hat 2 \to \flat \hat 2 \to \hat 1 \). Best done in weak beat.
 
 <iframe src="https://trinket.io/embed/music/6c4776c680?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Example 25.26, could on strong beat. In minor, <span>&#92;(\flat \hat 3\to \flat \hat 2 \to \hat 1 &#92;)</span>.
+Example 25.26, could on strong beat. In minor, \(\flat \hat 3\to \flat \hat 2 \to \hat 1 \).
 
 
 
 ## CTdim7 to I, I6 and C6/4
-- <span>&#92;(\hat 5 \to \sharp \hat 4 \to \hat 5 &#92;)</span>
-- <span>&#92;(\hat 5 \to \hat 6 \to \hat 5 &#92;)</span> or <span>&#92;(\hat 3 \to \hat 6 \to \hat 5 &#92;)</span> or <span>&#92;(\hat 1\to \hat 6\to \hat 5 &#92;)</span>
-- <span>&#92;(\hat 3\to \hat \sharp \hat 2\to \hat 3 &#92;)</span>
-- <span>&#92;(\hat 1 \to \hat 1&#92;)</span> (common tone)
+- \(\hat 5 \to \sharp \hat 4 \to \hat 5 \)
+- \(\hat 5 \to \hat 6 \to \hat 5 \) or \(\hat 3 \to \hat 6 \to \hat 5 \) or \(\hat 1\to \hat 6\to \hat 5 \)
+- \(\hat 3\to \hat \sharp \hat 2\to \hat 3 \)
+- \(\hat 1 \to \hat 1\) (common tone)
 
 <iframe src="https://trinket.io/embed/music/16971e938e?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Ex 25.30: could use CT before <span>&#92;(C&#95;4^6 &#92;)</span>
+Ex 25.30: could use CT before \(C_4^6 \)
 
-Ex 25.31: pre-cadential dominant <span>&#92;(\to &#92;)</span> CT <span>&#92;(\to &#92;)</span> C6/4
+Ex 25.31: pre-cadential dominant \(\to \) CT \(\to \) C6/4
 
 ## The extended Authentic Cadence
-Authentic Cadence ends on <span>&#92;(\hat 3 &#92;)</span> in romantic century. <span>&#92;(\hat 4\to \hat 3 &#92;)</span> or <span>&#92;(\hat 2\to \hat 3 &#92;)</span> in soprano.
+Authentic Cadence ends on \(\hat 3 \) in romantic century. \(\hat 4\to \hat 3 \) or \(\hat 2\to \hat 3 \) in soprano.
 
 ## The plagal 6-5
-Plagal cadence: Soprano <span>&#92;(\hat 1 \to \hat 4\to \hat 3 &#92;)</span>
+Plagal cadence: Soprano \(\hat 1 \to \hat 4\to \hat 3 \)
 
 IV I cadence. Ex 25.12: 4-1 close in the bass, 1-2-3 passing motion on soprano. 1 is elided, 2 moves back to occupy the strong beat, and 3 is raised to create the Picardy third characteristic  of this cadence.
-Resulting chord is called **plagal <span>&#92;(^6&#95;5 &#92;)</span>**.
+Resulting chord is called **plagal \(^6_5 \)**.
 
 <iframe src="https://trinket.io/embed/music/2c82bb8b85?outputOnly=true&start=result" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
@@ -250,11 +250,11 @@ In chapter 23, we met the process of primary mixture: combine a key's major and 
 
 || Primary Mixture | Secondary Mixture     |
 |:-| :------------- | :------------- |
-|Major | <span>&#92;(\flat \hat 6 &#92;)</span>: II, IV <br> <span>&#92;(\flat \hat 3 &#92;)</span>: I<br> <span>&#92;(\flat \hat 6, \flat \hat 3 &#92;)</span>: VI<br> (borrowed from minor)  | <span>&#92;(\sharp \hat 5 &#92;): iii becomes III</span> <br> <span>&#92;(\sharp \hat 1 &#92;)</span>: vi becomes VI     |
-|minor| <span>&#92;(\flat \hat 2 &#92;)</span>: II Phrygian or N<sup>6</sup><br> <span>&#92;(\sharp \hat 3 &#92;)</span>: I <br> <span>&#92;(\sharp \hat 6 &#92;)</span>: IV, II <br> <span>&#92;(\sharp \hat 6, \sharp \hat 3 &#92;)</span>: VI | <span>&#92;(\flat \hat 4 &#92;)</span>: bII becomes bii <br> <span>&#92;(\flat \hat 1 &#92;)</span>: VI becomes vi |
+|Major | \(\flat \hat 6 \): II, IV <br> \(\flat \hat 3 \): I<br> \(\flat \hat 6, \flat \hat 3 \): VI<br> (borrowed from minor)  | \(\sharp \hat 5 \): iii becomes III <br> \(\sharp \hat 1 \): vi becomes VI     |
+|minor| \(\flat \hat 2 \): II Phrygian or N<sup>6</sup><br> \(\sharp \hat 3 \): I <br> \(\sharp \hat 6 \): IV, II <br> \(\sharp \hat 6, \sharp \hat 3 \): VI | \(\flat \hat 4 \): bII becomes bii <br> \(\flat \hat 1 \): VI becomes vi |
 
 ## Secondary Mixture in Major
-Raising <span>&#92;(\hat 5 &#92;)</span> in a major key will alter the chordal third of III, converting the chord's quality from minor to major.
+Raising \(\hat 5 \) in a major key will alter the chordal third of III, converting the chord's quality from minor to major.
 
 Example 28.4: When VI follows major III.
 
@@ -262,7 +262,7 @@ Example 28.4: When VI follows major III.
 
 Ex 28.7: When major VI is prolonged, then it must be tonicized to the prolongation. Secondary mixture is a bit jarring than PM because it doesn't borrow from another mode.
 
-Ex 28.9: When II follows major VI. We need to make sure voice leading works: <span>&#92;(\sharp \hat 1\to \hat 2 &#92;)</span>
+Ex 28.9: When II follows major VI. We need to make sure voice leading works: \(\sharp \hat 1\to \hat 2 \)
 ## Secondary Mixture in Minor
 
 Ex 28.10 (a): Not a prolongation. It's minor VI which embellishes I.
@@ -271,20 +271,20 @@ Ex 28.10 (a): Not a prolongation. It's minor VI which embellishes I.
 Ex 28.10 (b): Subdominant prolongation, minor mode IV<sup>6</sup>
 <iframe src="https://trinket.io/embed/music/851f186043" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Ex 28.11: Enharmonic resolution, going from elaborative SM to dominant: <span>&#92;(\flat \hat 1 \to (\sharp)\hat 7 &#92;)</span>
+Ex 28.11: Enharmonic resolution, going from elaborative SM to dominant: \(\flat \hat 1 \to (\sharp)\hat 7 \)
 
 Ex 28.12: The minor Neapolitan 6.
 
 ##  The Stable Six-four chord
 Chapter 12: Passing 64, Cadential 64. Chapter 22: Neighbor, Pedal, Arp 64. [Some refreshers](http://www.musictheoryteacher.com/pb/wp_94176fc5/wp_94176fc5.html)
 
-The applied dominant that introduces this chord confirms the chordal fourth as a local tonic, permitting the stable <span>&#92;(^6&#95;4 &#92;)</span> to function harmonically as a consonant chord. In a major key, the stable <span>&#92;(^6&#95;4 &#92;)</span> will occasionally sound as a modally borrowed subdominant.
+The applied dominant that introduces this chord confirms the chordal fourth as a local tonic, permitting the stable \(^6_4 \) to function harmonically as a consonant chord. In a major key, the stable \(^6_4 \) will occasionally sound as a modally borrowed subdominant.
 
-Ex 28.20 (score from [IMSLP](https://imslp.org/wiki/Special:ReverseLookup/37922)): mm. 2 is Nbr <span>&#92;(^6&#95;4 &#92;)</span>, mm. 6 is Stable <span>&#92;(^6&#95;4 &#92;)</span>
+Ex 28.20 (score from [IMSLP](https://imslp.org/wiki/Special:ReverseLookup/37922)): mm. 2 is Nbr \(^6_4 \), mm. 6 is Stable \(^6_4 \)
 
 ![]("/pics/ex2820.png")
 
-Ex 28.21: Reinterpreting the passing <span>&#92;(^6&#95;4 &#92;)</span>
+Ex 28.21: Reinterpreting the passing \(^6_4 \)
 
 <iframe src="https://trinket.io/embed/music/991f9d95f6" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
@@ -345,7 +345,7 @@ Period 2
 - The retransition acts as a connective link leading from the B section to a
 varied reprise of the A section
 - The retransition is four to six measures long and begins anywhere and
-ends on <span>&#92;( \hat 2,\hat 4 &#92;)</span> or <span>&#92;( \hat 7 &#92;)</span> to accommodate the dominant.
+ends on \( \hat 2,\hat 4 \) or \( \hat 7 \) to accommodate the dominant.
 
 ## The CODA
 - The romance closes in a coda, the counterpart to the introduction (but
@@ -353,7 +353,7 @@ the coda is much longer!)
 - The coda is four to six measures long and is a cadential pedal
 extension.
 - The tonic chord will occupy the first and final measures and the bass
-will sound <span>&#92;( \hat 1 &#92;)</span> through the coda
+will sound \( \hat 1 \) through the coda
 
 ## The reprise
 - The reprise typically features an elaboration of the primary theme (the cantilena)

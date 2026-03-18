@@ -15,33 +15,33 @@ These notes follow the Fall 2020 offering of PMath 451/651 (Measure and Integrat
 
 #### The Basic Definition
 
-The course opens with a precise combinatorial structure that organizes the sets we want to measure. An **algebra of sets** over a non-empty set <span>&#92;(X&#92;)</span> is a collection <span>&#92;({\mathcal A} \subseteq 2^X&#92;)</span> satisfying three axioms:
+The course opens with a precise combinatorial structure that organizes the sets we want to measure. An **algebra of sets** over a non-empty set \(X\) is a collection \({\mathcal A} \subseteq 2^X\) satisfying three axioms:
 
-- **(AS1)** <span>&#92;(\emptyset \in {\mathcal A}&#92;)</span>.
-- **(AS2)** <span>&#92;(A \in {\mathcal A} \Rightarrow X \setminus A \in {\mathcal A}&#92;)</span>.
-- **(AS3)** <span>&#92;(A, B \in {\mathcal A} \Rightarrow A \cup B \in {\mathcal A}&#92;)</span>.
+- **(AS1)** \(\emptyset \in {\mathcal A}\).
+- **(AS2)** \(A \in {\mathcal A} \Rightarrow X \setminus A \in {\mathcal A}\).
+- **(AS3)** \(A, B \in {\mathcal A} \Rightarrow A \cup B \in {\mathcal A}\).
 
-From these three conditions one derives the closure of <span>&#92;({\mathcal A}&#92;)</span> under finite unions, finite intersections, and set-differences. A pair <span>&#92;((X, {\mathcal A})&#92;)</span> where <span>&#92;({\mathcal A}&#92;)</span> is an algebra is called an **algebra of sets** (or **algebraic space**).
+From these three conditions one derives the closure of \({\mathcal A}\) under finite unions, finite intersections, and set-differences. A pair \((X, {\mathcal A})\) where \({\mathcal A}\) is an algebra is called an **algebra of sets** (or **algebraic space**).
 
 **Proposition 1.3.** Every algebra of sets is closed under finite intersections and under set differences.
 
-*Proof sketch.* For intersections, use De Morgan: <span>&#92;(A \cap B = X \setminus ((X \setminus A) \cup (X \setminus B))&#92;)</span>. Since AS2 and AS3 are given, the result follows. For set differences, write <span>&#92;(A \setminus B = A \cap (X \setminus B)&#92;)</span>.
+*Proof sketch.* For intersections, use De Morgan: \(A \cap B = X \setminus ((X \setminus A) \cup (X \setminus B))\). Since AS2 and AS3 are given, the result follows. For set differences, write \(A \setminus B = A \cap (X \setminus B)\).
 
 #### Semi-Algebras
 
-A less structured cousin is a **semi-algebra**, a collection <span>&#92;({\mathcal S} \subseteq 2^X&#92;)</span> satisfying:
+A less structured cousin is a **semi-algebra**, a collection \({\mathcal S} \subseteq 2^X\) satisfying:
 
-- **(Semi-AS1)** <span>&#92;(\emptyset \in {\mathcal S}&#92;)</span>.
-- **(Semi-AS2)** For every <span>&#92;(A \in {\mathcal S}&#92;)</span>, the complement <span>&#92;(X \setminus A&#92;)</span> can be written as a finite disjoint union of elements of <span>&#92;({\mathcal S}&#92;)</span>.
-- **(Semi-AS3)** <span>&#92;({\mathcal S}&#92;)</span> is closed under finite intersections.
+- **(Semi-AS1)** \(\emptyset \in {\mathcal S}\).
+- **(Semi-AS2)** For every \(A \in {\mathcal S}\), the complement \(X \setminus A\) can be written as a finite disjoint union of elements of \({\mathcal S}\).
+- **(Semi-AS3)** \({\mathcal S}\) is closed under finite intersections.
 
-The canonical example is the collection <span>&#92;({\mathcal E}&#92;)</span> of half-open intervals <span>&#92;([a, b) \subseteq {\mathbb R}&#92;)</span> together with <span>&#92;(\emptyset&#92;)</span> and <span>&#92;({\mathbb R}&#92;)</span>. Semi-algebras are important because they arise naturally in product spaces (measurable rectangles form a semi-algebra) and because there is a clean mechanism for extending additive functions defined on a semi-algebra to the full algebra it generates.
+The canonical example is the collection \({\mathcal E}\) of half-open intervals \([a, b) \subseteq {\mathbb R}\) together with \(\emptyset\) and \({\mathbb R}\). Semi-algebras are important because they arise naturally in product spaces (measurable rectangles form a semi-algebra) and because there is a clean mechanism for extending additive functions defined on a semi-algebra to the full algebra it generates.
 
-**Proposition 1.7. (Semi-algebra trick.)** Let <span>&#92;({\mathcal S}&#92;)</span> be a semi-algebra on <span>&#92;(X&#92;)</span>. Then the collection of all finite disjoint unions of sets from <span>&#92;({\mathcal S}&#92;)</span> is already an algebra. Equivalently, <span>&#92;(\mathrm{Alg}({\mathcal S}&#92;)</span>, the smallest algebra containing <span>&#92;({\mathcal S}&#92;)</span>, consists precisely of such finite disjoint unions.
+**Proposition 1.7. (Semi-algebra trick.)** Let \({\mathcal S}\) be a semi-algebra on \(X\). Then the collection of all finite disjoint unions of sets from \({\mathcal S}\) is already an algebra. Equivalently, \(\mathrm{Alg}({\mathcal S}\), the smallest algebra containing \({\mathcal S}\), consists precisely of such finite disjoint unions.
 
 #### Generated Algebras
 
-For any collection <span>&#92;({\mathcal C} \subseteq 2^X&#92;)</span>, the **algebra generated by <span>&#92;({\mathcal C}&#92;)</span>**, denoted <span>&#92;\mathrm{Alg}({\mathcal C})&#92;)</span>, is the intersection of all algebras containing <span>&#92;({\mathcal C}&#92;)</span>. This intersection is non-empty because <span>&#92;(2^X&#92;)</span> is itself an algebra. **Proposition 1.9** confirms that this intersection is again an algebra, and **Definition 1.10** makes the notation official.
+For any collection \({\mathcal C} \subseteq 2^X\), the **algebra generated by \({\mathcal C}\)**, denoted \mathrm{Alg}({\mathcal C})\), is the intersection of all algebras containing \({\mathcal C}\). This intersection is non-empty because \(2^X\) is itself an algebra. **Proposition 1.9** confirms that this intersection is again an algebra, and **Definition 1.10** makes the notation official.
 
 ---
 
@@ -49,22 +49,22 @@ For any collection <span>&#92;({\mathcal C} \subseteq 2^X&#92;)</span>, the **al
 
 #### Additive Set-Functions
 
-Given an algebra <span>&#92;((X, {\mathcal A})&#92;)</span>, a function <span>&#92;(\mu : {\mathcal A} \to [0,\infty]&#92;)</span> is called **additive** (or **finitely additive**) if it satisfies:
+Given an algebra \((X, {\mathcal A})\), a function \(\mu : {\mathcal A} \to [0,\infty]\) is called **additive** (or **finitely additive**) if it satisfies:
 
-- **(Add1)** <span>&#92;(\mu(\emptyset) = 0&#92;)</span>.
-- **(Add2)** For every finite family of pairwise disjoint sets <span>&#92;(A&#95;1, \ldots, A&#95;k \in {\mathcal A}&#92;)</span> with <span>&#92;(A&#95;1 \cup \cdots \cup A&#95;k \in {\mathcal A}&#92;)</span>, we have <span>&#92;(\mu(A&#95;1 \cup \cdots \cup A&#95;k) = \mu(A&#95;1) + \cdots + \mu(A&#95;k)&#92;)</span>.
+- **(Add1)** \(\mu(\emptyset) = 0\).
+- **(Add2)** For every finite family of pairwise disjoint sets \(A_1, \ldots, A_k \in {\mathcal A}\) with \(A_1 \cup \cdots \cup A_k \in {\mathcal A}\), we have \(\mu(A_1 \cup \cdots \cup A_k) = \mu(A_1) + \cdots + \mu(A_k)\).
 
-**Proposition 2.4** records the basic consequences: an additive set-function is monotone (if <span>&#92;(A \subseteq B&#92;)</span> then <span>&#92;(\mu(A) \le \mu(B)&#92;)</span>), sub-additive over finite collections, and satisfies the inclusion-exclusion identity <span>&#92;(\mu(A \cup B) = \mu(A) + \mu(B) - \mu(A \cap B)&#92;)</span> when all quantities are finite.
+**Proposition 2.4** records the basic consequences: an additive set-function is monotone (if \(A \subseteq B\) then \(\mu(A) \le \mu(B)\), sub-additive over finite collections, and satisfies the inclusion-exclusion identity \(\mu(A \cup B) = \mu(A) + \mu(B) - \mu(A \cap B)\) when all quantities are finite.
 
-Two fundamental examples are the **counting measure** on a countable set <span>&#92;(X&#92;)</span> (which counts the number of elements of any subset) and the **Dirac measure** <span>&#92;(\delta&#95;x&#92;)</span> concentrated at a point <span>&#92;(x&#95;0 \in X&#92;)</span>, which assigns 1 to any set containing <span>&#92;(x&#95;0&#92;)</span> and 0 to all others.
+Two fundamental examples are the **counting measure** on a countable set \(X\) (which counts the number of elements of any subset) and the **Dirac measure** \(\delta_x\) concentrated at a point \(x_0 \in X\), which assigns 1 to any set containing \(x_0\) and 0 to all others.
 
 #### The Semi-Algebra Extension Trick
 
-An important theme is that additive functions defined on small collections can be extended. **Definition 2.8** introduces the notion of **respecting decompositions**: a function <span>&#92;(\mu&#95;o : {\mathcal S} \to [0,\infty]&#92;)</span> defined on a semi-algebra respects decompositions if whenever <span>&#92;(S = S&#95;1 \cup \cdots \cup S&#95;k&#92;)</span> is a finite disjoint union in <span>&#92;({\mathcal S}&#92;)</span> with <span>&#92;(S \in {\mathcal S}&#92;)</span>, then <span>&#92;(\mu&#95;o(S) = \sum&#95;{i=1}^k \mu&#95;o(S&#95;i)&#92;)</span>.
+An important theme is that additive functions defined on small collections can be extended. **Definition 2.8** introduces the notion of **respecting decompositions**: a function \(\mu_o : {\mathcal S} \to [0,\infty]\) defined on a semi-algebra respects decompositions if whenever \(S = S_1 \cup \cdots \cup S_k\) is a finite disjoint union in \({\mathcal S}\) with \(S \in {\mathcal S}\), then \(\mu_o(S) = \sum_{i=1}^k \mu_o(S_i)\).
 
-**Lemma 2.9** shows that any function respecting decompositions on a semi-algebra <span>&#92;({\mathcal S}&#92;)</span> admits a unique extension to an additive function on <span>&#92;(\mathrm{Alg}({\mathcal S})&#92;)</span>. **Proposition 2.10** packages this: any such <span>&#92;(\mu&#95;o&#92;)</span> extends uniquely to <span>&#92;(\rho&#95;o : \mathrm{Alg}({\mathcal S}) \to [0,\infty)&#92;)</span> that is finitely additive.
+**Lemma 2.9** shows that any function respecting decompositions on a semi-algebra \({\mathcal S}\) admits a unique extension to an additive function on \(\mathrm{Alg}({\mathcal S})\). **Proposition 2.10** packages this: any such \(\mu_o\) extends uniquely to \(\rho_o : \mathrm{Alg}({\mathcal S}) \to [0,\infty)\) that is finitely additive.
 
-The Lebesgue measure on <span>&#92;({\mathbb R}&#92;)</span> begins to take shape here: one defines <span>&#92;(\lambda([a,b)) = b - a&#92;)</span> on the semi-algebra <span>&#92;({\mathcal E}&#92;)</span> of half-open intervals, verifies this respects decompositions, and then extends to <span>&#92;(\mathrm{Alg}({\mathcal E})&#92;)</span>.
+The Lebesgue measure on \({\mathbb R}\) begins to take shape here: one defines \(\lambda([a,b)) = b - a\) on the semi-algebra \({\mathcal E}\) of half-open intervals, verifies this respects decompositions, and then extends to \(\mathrm{Alg}({\mathcal E})\).
 
 ---
 
@@ -74,17 +74,17 @@ The Lebesgue measure on <span>&#92;({\mathbb R}&#92;)</span> begins to take shap
 
 #### Sigma-Algebras
 
-To handle countable operations — essential for all limiting arguments in analysis — we need the stronger notion of a **sigma-algebra**. A collection <span>&#92;({\mathcal M} \subseteq 2^X&#92;)</span> is a sigma-algebra if it is an algebra that is additionally closed under countable unions:
+To handle countable operations — essential for all limiting arguments in analysis — we need the stronger notion of a **sigma-algebra**. A collection \({\mathcal M} \subseteq 2^X\) is a sigma-algebra if it is an algebra that is additionally closed under countable unions:
 
-- **(Sigma-AS3)** If <span>&#92;((A&#95;n)&#95;{n=1}^\infty&#92;)</span> is any sequence of sets in <span>&#92;({\mathcal M}&#92;)</span>, then <span>&#92;(\bigcup&#95;{n=1}^\infty A&#95;n \in {\mathcal M}&#92;)</span>.
+- **(Sigma-AS3)** If \((A_n)_{n=1}^\infty\) is any sequence of sets in \({\mathcal M}\), then \(\bigcup_{n=1}^\infty A_n \in {\mathcal M}\).
 
-A pair <span>&#92;((X, {\mathcal M})&#92;)</span> is called a **measurable space**.
+A pair \((X, {\mathcal M})\) is called a **measurable space**.
 
-**Definition 3.4.** A **positive measure** on <span>&#92;((X, {\mathcal M})&#92;)</span> is a function <span>&#92;(\mu : {\mathcal M} \to [0, \infty]&#92;)</span> satisfying <span>&#92;(\mu(\emptyset) = 0&#92;)</span> and countable additivity: whenever <span>&#92;((A&#95;n)&#95;{n=1}^\infty&#92;)</span> is a pairwise disjoint sequence in <span>&#92;({\mathcal M}&#92;)</span>,
-<span>&#92;[
-\mu\!\left(\bigcup&#95;{n=1}^\infty A&#95;n\right) = \sum&#95;{n=1}^\infty \mu(A&#95;n).
-&#92;]</span>
-A triple <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span> is called a **measure space**.
+**Definition 3.4.** A **positive measure** on \((X, {\mathcal M})\) is a function \(\mu : {\mathcal M} \to [0, \infty]\) satisfying \(\mu(\emptyset) = 0\) and countable additivity: whenever \((A_n)_{n=1}^\infty\) is a pairwise disjoint sequence in \({\mathcal M}\),
+\[
+\mu\!\left(\bigcup_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \mu(A_n).
+\]
+A triple \((X, {\mathcal M}, \mu)\) is called a **measure space**.
 
 **Proposition 3.5** draws from countable additivity the same basic consequences derived earlier for additive functions: monotonicity, finite sub-additivity, and countable sub-additivity.
 
@@ -92,15 +92,15 @@ A triple <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span> is called a **measure s
 
 Two central propositions capture the "continuity" of a positive measure.
 
-**Proposition 3.7. (Increasing chains.)** If <span>&#92;((A&#95;n)&#95;{n=1}^\infty&#92;)</span> is an increasing chain (i.e., <span>&#92;(A&#95;1 \subseteq A&#95;2 \subseteq \cdots&#92;)</span>) of sets in <span>&#92;({\mathcal M}&#92;)</span>, then
-<span>&#92;[
-\mu\!\left(\bigcup&#95;{n=1}^\infty A&#95;n\right) = \lim&#95;{n\to\infty} \mu(A&#95;n).
-&#92;]</span>
-*Proof.* Write the union as a telescope: <span>&#92;(\bigcup&#95;n A&#95;n = A&#95;1 \cup (A&#95;2 \setminus A&#95;1) \cup (A&#95;3 \setminus A&#95;2) \cup \cdots&#92;)</span>, a disjoint union. Countable additivity gives the result.
+**Proposition 3.7. (Increasing chains.)** If \((A_n)_{n=1}^\infty\) is an increasing chain (i.e., \(A_1 \subseteq A_2 \subseteq \cdots\) of sets in \({\mathcal M}\), then
+\[
+\mu\!\left(\bigcup_{n=1}^\infty A_n\right) = \lim_{n\to\infty} \mu(A_n).
+\]
+*Proof.* Write the union as a telescope: \(\bigcup_n A_n = A_1 \cup (A_2 \setminus A_1) \cup (A_3 \setminus A_2) \cup \cdots\), a disjoint union. Countable additivity gives the result.
 
-**Proposition 3.9. (Decreasing chains.)** If <span>&#92;((A&#95;n)&#95;{n=1}^\infty&#92;)</span> is a decreasing chain in <span>&#92;({\mathcal M}&#92;)</span> and <span>&#92;(\mu(A_1) < \infty&#92;)</span>, then <span>&#92;(\mu\!\left(\bigcap&#95;{n=1}^\infty A&#95;n\right) = \lim&#95;{n\to\infty} \mu(A&#95;n)&#92;)</span>. The hypothesis <span>&#92;(\mu(A_1) < \infty&#92;)</span> is essential: without it the result fails (consider <span>&#92;(A&#95;n = [n, \infty)&#92;)</span> under Lebesgue measure).
+**Proposition 3.9. (Decreasing chains.)** If \((A_n)_{n=1}^\infty\) is a decreasing chain in \({\mathcal M}\) and \(\mu(A_1) < \infty\), then \(\mu\!\left(\bigcap_{n=1}^\infty A_n\right) = \lim_{n\to\infty} \mu(A_n)\). The hypothesis \(\mu(A_1) < \infty\) is essential: without it the result fails (consider \(A_n = [n, \infty)\) under Lebesgue measure).
 
-**Example 3.10. (Borel-Cantelli.)** Let <span>&#92;((A&#95;n)&#92;)</span> be sets in <span>&#92;({\mathcal M}&#92;)</span> with <span>&#92;(\sum_{n=1}^\infty \mu(A_n) < \infty&#92;)</span>. Then the set of points lying in infinitely many <span>&#92;(A&#95;n&#92;)</span>, namely <span>&#92;(\limsup&#95;n A&#95;n = \bigcap&#95;{N=1}^\infty \bigcup&#95;{n=N}^\infty A&#95;n&#92;)</span>, has <span>&#92;(\mu&#92;)</span>-measure zero. This follows from the decreasing-chain continuity applied to the tail sets <span>&#92;(C&#95;N = \bigcup&#95;{n=N}^\infty A&#95;n&#92;)</span>, whose measures tend to zero by the convergence of the series.
+**Example 3.10. (Borel-Cantelli.)** Let \((A_n)\) be sets in \({\mathcal M}\) with \(\sum_{n=1}^\infty \mu(A_n) < \infty\). Then the set of points lying in infinitely many \(A_n\), namely \(\limsup_n A_n = \bigcap_{N=1}^\infty \bigcup_{n=N}^\infty A_n\), has \(\mu\)-measure zero. This follows from the decreasing-chain continuity applied to the tail sets \(C_N = \bigcup_{n=N}^\infty A_n\), whose measures tend to zero by the convergence of the series.
 
 ---
 
@@ -108,20 +108,20 @@ Two central propositions capture the "continuity" of a positive measure.
 
 #### The Borel Sigma-Algebra
 
-For a metric space <span>&#92;((X, d)&#92;)</span>, the **Borel sigma-algebra** <span>&#92;({\mathcal B}&#95;X&#92;)</span> is the sigma-algebra generated by the open sets of <span>&#92;(X&#92;)</span>. In particular, <span>&#92;({\mathcal B}&#95;{\mathbb R}&#92;)</span> is generated by any of the following: all open sets, all closed sets, all open intervals, all half-open intervals <span>&#92;([a,b)&#92;)</span>.
+For a metric space \((X, d)\), the **Borel sigma-algebra** \({\mathcal B}_X\) is the sigma-algebra generated by the open sets of \(X\). In particular, \({\mathcal B}_{\mathbb R}\) is generated by any of the following: all open sets, all closed sets, all open intervals, all half-open intervals \([a,b)\).
 
 #### Lebesgue-Stieltjes Measures
 
-**Definition 4.10.** A **Lebesgue-Stieltjes measure** on <span>&#92;({\mathbb R}&#92;)</span> is a positive measure <span>&#92;(\mu : {\mathcal B}&#95;{\mathbb R} \to [0,\infty]&#92;)</span> that assigns finite measure to every bounded interval.
+**Definition 4.10.** A **Lebesgue-Stieltjes measure** on \({\mathbb R}\) is a positive measure \(\mu : {\mathcal B}_{\mathbb R} \to [0,\infty]\) that assigns finite measure to every bounded interval.
 
-Given such a measure, one defines its **associated centred function** <span>&#92;(G&#95;\mu : {\mathbb R} \to {\mathbb R}&#92;)</span>:
-<span>&#92;[
+Given such a measure, one defines its **associated centred function** \(G_\mu : {\mathbb R} \to {\mathbb R}\):
+\[
 G_\mu(x) = \begin{cases} \mu((0, x]) & \text{if } x > 0, \\ 0 & \text{if } x = 0, \\ -\mu((x, 0]) & \text{if } x < 0. \end{cases}
-&#92;]</span>
+\]
 
-**Proposition/Definition 4.12** establishes that <span>&#92;(G&#95;\mu&#92;)</span> is increasing and **cadlag** (right-continuous with left limits), and that <span>&#92;(G&#95;\mu&#92;)</span> uniquely determines <span>&#92;(\mu&#92;)</span> via the formula <span>&#92;(\mu((a,b]) = G&#95;\mu(b) - G&#95;\mu(a)&#92;)</span>. Conversely, every increasing cadlag function <span>&#92;(G&#92;)</span> with <span>&#92;(G(0) = 0&#92;)</span> arises in this way.
+**Proposition/Definition 4.12** establishes that \(G_\mu\) is increasing and **cadlag** (right-continuous with left limits), and that \(G_\mu\) uniquely determines \(\mu\) via the formula \(\mu((a,b]) = G_\mu(b) - G_\mu(a)\). Conversely, every increasing cadlag function \(G\) with \(G(0) = 0\) arises in this way.
 
-**Remark 4.14.** The connection to cumulative distribution functions in probability: if <span>&#92;(X&#92;)</span> is a real-valued random variable with CDF <span>&#92;(F&#92;)</span>, the formula <span>&#92;(\mu((a,b]) = F(b) - F(a)&#92;)</span> defines the distribution measure of <span>&#92;(X&#92;)</span>. This is a Lebesgue-Stieltjes measure, and <span>&#92;(G&#95;\mu = F - F(0)&#92;)</span>.
+**Remark 4.14.** The connection to cumulative distribution functions in probability: if \(X\) is a real-valued random variable with CDF \(F\), the formula \(\mu((a,b]) = F(b) - F(a)\) defines the distribution measure of \(X\). This is a Lebesgue-Stieltjes measure, and \(G_\mu = F - F(0)\).
 
 ---
 
@@ -129,23 +129,23 @@ G_\mu(x) = \begin{cases} \mu((0, x]) & \text{if } x > 0, \\ 0 & \text{if } x = 0
 
 #### π-Systems and Dynkin's Consequence
 
-**Definition 5.2.** A **π-system** is a collection <span>&#92;({\mathcal P} \subseteq 2^X&#92;)</span> closed under finite intersections.
+**Definition 5.2.** A **π-system** is a collection \({\mathcal P} \subseteq 2^X\) closed under finite intersections.
 
-**Proposition 5.4. (Dynkin's π-λ consequence.)** Let <span>&#92;(\mu, \nu&#92;)</span> be positive measures on <span>&#92;((X, {\mathcal M})&#92;)</span> and let <span>&#92;({\mathcal P} \subseteq {\mathcal M}&#92;)</span> be a π-system. Suppose:
-1. <span>&#92;(\mu(P) = \nu(P)&#92;)</span> for all <span>&#92;(P \in {\mathcal P}&#92;)</span>.
-2. There exists an exhausting sequence <span>&#92;((P&#95;n) \subseteq {\mathcal P}&#92;)</span> with <span>&#92;(P&#95;n \nearrow X&#92;)</span> and <span>&#92;(\mu(P_n) < \infty&#92;)</span> for all <span>&#92;(n&#92;)</span>.
+**Proposition 5.4. (Dynkin's π-λ consequence.)** Let \(\mu, \nu\) be positive measures on \((X, {\mathcal M})\) and let \({\mathcal P} \subseteq {\mathcal M}\) be a π-system. Suppose:
+1. \(\mu(P) = \nu(P)\) for all \(P \in {\mathcal P}\).
+2. There exists an exhausting sequence \((P_n) \subseteq {\mathcal P}\) with \(P_n \nearrow X\) and \(\mu(P_n) < \infty\) for all \(n\).
 
-Then <span>&#92;(\mu = \nu&#92;)</span> on all of <span>&#92;({\mathcal M} = \sigma\text{-Alg}({\mathcal P})&#92;)</span>.
+Then \(\mu = \nu\) on all of \({\mathcal M} = \sigma\text{-Alg}({\mathcal P})\).
 
-**Corollary 5.5.** A Lebesgue-Stieltjes measure <span>&#92;(\mu&#92;)</span> is uniquely determined by its centred function <span>&#92;(G&#95;\mu&#92;)</span>, since two measures agreeing on the π-system of half-open intervals and on all bounded intervals must agree on all Borel sets.
+**Corollary 5.5.** A Lebesgue-Stieltjes measure \(\mu\) is uniquely determined by its centred function \(G_\mu\), since two measures agreeing on the π-system of half-open intervals and on all bounded intervals must agree on all Borel sets.
 
 #### Pre-Measures and the Carathéodory Extension Theorem
 
-**Definition 5.8.** Let <span>&#92;({\mathcal U}&#92;)</span> be an algebra on <span>&#92;(X&#92;)</span>. An additive function <span>&#92;(\rho&#95;o : {\mathcal U} \to [0,\infty]&#92;)</span> is called a **pre-measure** if it is countably additive whenever a countable disjoint union of sets in <span>&#92;({\mathcal U}&#92;)</span> falls in <span>&#92;({\mathcal U}&#92;)</span> — condition **(Pre-Sigma-Add)**.
+**Definition 5.8.** Let \({\mathcal U}\) be an algebra on \(X\). An additive function \(\rho_o : {\mathcal U} \to [0,\infty]\) is called a **pre-measure** if it is countably additive whenever a countable disjoint union of sets in \({\mathcal U}\) falls in \({\mathcal U}\) — condition **(Pre-Sigma-Add)**.
 
-**Theorem 5.10. (Carathéodory Extension Theorem.)** Let <span>&#92;(\rho&#95;o : {\mathcal U} \to [0,\infty]&#92;)</span> be a pre-measure on an algebra <span>&#92;({\mathcal U}&#92;)</span>. Then there exists a positive measure <span>&#92;(\rho : \sigma\text{-Alg}({\mathcal U}) \to [0,\infty]&#92;)</span> extending <span>&#92;(\rho&#95;o&#92;)</span>. If <span>&#92;(\rho&#95;o&#92;)</span> is sigma-finite (i.e., <span>&#92;(X = \bigcup&#95;n U&#95;n&#92;)</span> with <span>&#92;(\rho_o(U_n) < \infty&#92;)</span>), then this extension is unique.
+**Theorem 5.10. (Carathéodory Extension Theorem.)** Let \(\rho_o : {\mathcal U} \to [0,\infty]\) be a pre-measure on an algebra \({\mathcal U}\). Then there exists a positive measure \(\rho : \sigma\text{-Alg}({\mathcal U}) \to [0,\infty]\) extending \(\rho_o\). If \(\rho_o\) is sigma-finite (i.e., \(X = \bigcup_n U_n\) with \(\rho_o(U_n) < \infty\), then this extension is unique.
 
-**Corollary 5.12.** Every increasing cadlag function <span>&#92;(G : {\mathbb R} \to {\mathbb R}&#92;)</span> with <span>&#92;(G(0) = 0&#92;)</span> determines a unique Lebesgue-Stieltjes measure satisfying <span>&#92;(\mu((a,b]) = G(b) - G(a)&#92;)</span>. In the special case <span>&#92;(G(x) = x&#92;)</span>, we get the **Lebesgue measure** <span>&#92;(\mu&#95;{\mathrm{Leb}}&#92;)</span>.
+**Corollary 5.12.** Every increasing cadlag function \(G : {\mathbb R} \to {\mathbb R}\) with \(G(0) = 0\) determines a unique Lebesgue-Stieltjes measure satisfying \(\mu((a,b]) = G(b) - G(a)\). In the special case \(G(x) = x\), we get the **Lebesgue measure** \(\mu_{\mathrm{Leb}}\).
 
 ---
 
@@ -153,21 +153,21 @@ Then <span>&#92;(\mu = \nu&#92;)</span> on all of <span>&#92;({\mathcal M} = \si
 
 The proof of Theorem 5.10 introduces the powerful tool of **outer measures**.
 
-**Definition 6.4.** An **outer measure** on <span>&#92;(X&#92;)</span> is a function <span>&#92;(\mu^&#42; : 2^X \to [0,\infty]&#92;)</span> satisfying:
-- <span>&#92;(\mu^&#42;(\emptyset) = 0&#92;)</span>.
-- Monotonicity: <span>&#92;(A \subseteq B \Rightarrow \mu^&#42;(A) \le \mu^&#42;(B)&#92;)</span>.
-- Countable sub-additivity: <span>&#92;(\mu^&#42;(\bigcup&#95;n A&#95;n) \le \sum&#95;n \mu^&#42;(A&#95;n)&#92;)</span>.
+**Definition 6.4.** An **outer measure** on \(X\) is a function \(\mu^* : 2^X \to [0,\infty]\) satisfying:
+- \(\mu^*(\emptyset) = 0\).
+- Monotonicity: \(A \subseteq B \Rightarrow \mu^*(A) \le \mu^*(B)\).
+- Countable sub-additivity: \(\mu^*(\bigcup_n A_n) \le \sum_n \mu^*(A_n)\).
 
-Note that an outer measure is defined on *all* subsets of <span>&#92;(X&#92;)</span>, not just measurable ones.
+Note that an outer measure is defined on *all* subsets of \(X\), not just measurable ones.
 
-**The construction.** Given a pre-measure <span>&#92;(\rho&#95;o&#92;)</span> on an algebra <span>&#92;({\mathcal U}&#92;)</span>, define for any <span>&#92;(A \subseteq X&#92;)</span>:
-<span>&#92;[
-\mu^&#42;(A) = \inf\!\left\{\sum&#95;{n=1}^\infty \rho&#95;o(U&#95;n) : U&#95;n \in {\mathcal U},\; A \subseteq \bigcup&#95;{n=1}^\infty U&#95;n\right\}.
-&#92;]</span>
+**The construction.** Given a pre-measure \(\rho_o\) on an algebra \({\mathcal U}\), define for any \(A \subseteq X\):
+\[
+\mu^*(A) = \inf\!\left\{\sum_{n=1}^\infty \rho_o(U_n) : U_n \in {\mathcal U},\; A \subseteq \bigcup_{n=1}^\infty U_n\right\}.
+\]
 
-**Proposition 6.5** verifies this is an outer measure. The "overshoot-and-trim" idea in the proof shows that we can always find efficient covers. **Lemma 6.7** shows that <span>&#92;(\mu^&#42;(U) = \rho&#95;o(U)&#92;)</span> for every <span>&#92;(U \in {\mathcal U}&#92;)</span> (the outer measure agrees with the pre-measure on the algebra). **Lemma 6.8** establishes, via the **Carathéodory measurability criterion**, that the collection of <span>&#92;(\mu^&#42;&#92;)</span>-measurable sets forms a sigma-algebra containing <span>&#92;({\mathcal U}&#92;)</span>, and that <span>&#92;(\mu^&#42;&#92;)</span> restricted to this sigma-algebra is a positive measure extending <span>&#92;(\rho&#95;o&#92;)</span>.
+**Proposition 6.5** verifies this is an outer measure. The "overshoot-and-trim" idea in the proof shows that we can always find efficient covers. **Lemma 6.7** shows that \(\mu^*(U) = \rho_o(U)\) for every \(U \in {\mathcal U}\) (the outer measure agrees with the pre-measure on the algebra). **Lemma 6.8** establishes, via the **Carathéodory measurability criterion**, that the collection of \(\mu^*\)-measurable sets forms a sigma-algebra containing \({\mathcal U}\), and that \(\mu^*\) restricted to this sigma-algebra is a positive measure extending \(\rho_o\).
 
-**Theorem 6.9** (recasting Theorem 5.10 with uniqueness): if additionally <span>&#92;(\rho&#95;o&#92;)</span> is sigma-finite, any two extensions of <span>&#92;(\rho&#95;o&#92;)</span> to <span>&#92;(\sigma\text{-Alg}({\mathcal U})&#92;)</span> must agree. Uniqueness is proved by Dynkin's π-λ theorem applied to the π-system <span>&#92;({\mathcal U}&#92;)</span>.
+**Theorem 6.9** (recasting Theorem 5.10 with uniqueness): if additionally \(\rho_o\) is sigma-finite, any two extensions of \(\rho_o\) to \(\sigma\text{-Alg}({\mathcal U})\) must agree. Uniqueness is proved by Dynkin's π-λ theorem applied to the π-system \({\mathcal U}\).
 
 ---
 
@@ -177,25 +177,25 @@ Note that an outer measure is defined on *all* subsets of <span>&#92;(X&#92;)</s
 
 #### The Definition and Basic Structure
 
-**Definition 7.1.** Let <span>&#92;((X, {\mathcal M})&#92;)</span> be a measurable space. A function <span>&#92;(f : X \to {\mathbb R}&#92;)</span> is **measurable** (with respect to <span>&#92;({\mathcal M}&#92;)</span> and the Borel sigma-algebra <span>&#92;({\mathcal B}&#95;{\mathbb R}&#92;)</span>) if
-<span>&#92;[
-f^{-1}(B) \in {\mathcal M} \text{ for every } B \in {\mathcal B}&#95;{\mathbb R}.
-&#92;]</span>
-More generally, one says <span>&#92;(f&#92;)</span> is <span>&#92;({\mathcal M}/{\mathcal N}&#92;)</span>-measurable if <span>&#92;(f^{-1}(N) \in {\mathcal M}&#92;)</span> for all <span>&#92;(N \in {\mathcal N}&#92;)</span>.
+**Definition 7.1.** Let \((X, {\mathcal M})\) be a measurable space. A function \(f : X \to {\mathbb R}\) is **measurable** (with respect to \({\mathcal M}\) and the Borel sigma-algebra \({\mathcal B}_{\mathbb R}\) if
+\[
+f^{-1}(B) \in {\mathcal M} \text{ for every } B \in {\mathcal B}_{\mathbb R}.
+\]
+More generally, one says \(f\) is \({\mathcal M}/{\mathcal N}\)-measurable if \(f^{-1}(N) \in {\mathcal M}\) for all \(N \in {\mathcal N}\).
 
-**Notation 7.3.** The space of all measurable functions from <span>&#92;((X, {\mathcal M})&#92;)</span> to <span>&#92;({\mathbb R}&#92;)</span> is denoted <span>&#92;(\mathrm{Bor}(X, {\mathbb R})&#92;)</span>, or more carefully <span>&#92;(\mathrm{Bor}(X, {\mathcal M}, {\mathbb R})&#92;)</span>.
+**Notation 7.3.** The space of all measurable functions from \((X, {\mathcal M})\) to \({\mathbb R}\) is denoted \(\mathrm{Bor}(X, {\mathbb R})\), or more carefully \(\mathrm{Bor}(X, {\mathcal M}, {\mathbb R})\).
 
 #### Four Tools for Proving Measurability
 
 The course develops four practical tools for establishing that a function is measurable.
 
-**Tool 1 (Proposition 7.4 — composition).** If <span>&#92;(f : X \to Y&#92;)</span> is <span>&#92;({\mathcal M}/{\mathcal N}&#92;)</span>-measurable and <span>&#92;(g : Y \to Z&#92;)</span> is <span>&#92;({\mathcal N}/{\mathcal P}&#92;)</span>-measurable, then <span>&#92;(g \circ f&#92;)</span> is <span>&#92;({\mathcal M}/{\mathcal P}&#92;)</span>-measurable.
+**Tool 1 (Proposition 7.4 — composition).** If \(f : X \to Y\) is \({\mathcal M}/{\mathcal N}\)-measurable and \(g : Y \to Z\) is \({\mathcal N}/{\mathcal P}\)-measurable, then \(g \circ f\) is \({\mathcal M}/{\mathcal P}\)-measurable.
 
-**Tool 2 (Proposition 7.5 — generator criterion).** If <span>&#92;({\mathcal N} = \sigma\text{-Alg}({\mathcal C})&#92;)</span>, then <span>&#92;(f : X \to Y&#92;)</span> is <span>&#92;({\mathcal M}/{\mathcal N}&#92;)</span>-measurable if and only if <span>&#92;(f^{-1}(C) \in {\mathcal M}&#92;)</span> for every <span>&#92;(C \in {\mathcal C}&#92;)</span>. For real-valued functions, it suffices to check preimages of half-infinite intervals <span>&#92;((-\infty, c)&#92;)</span>, or <span>&#92;((-\infty, c]&#92;)</span>, or <span>&#92;((c, \infty)&#92;)</span>.
+**Tool 2 (Proposition 7.5 — generator criterion).** If \({\mathcal N} = \sigma\text{-Alg}({\mathcal C})\), then \(f : X \to Y\) is \({\mathcal M}/{\mathcal N}\)-measurable if and only if \(f^{-1}(C) \in {\mathcal M}\) for every \(C \in {\mathcal C}\). For real-valued functions, it suffices to check preimages of half-infinite intervals \((-\infty, c)\), or \((-\infty, c]\), or \((c, \infty)\).
 
-**Tool 3.** Pointwise algebraic operations preserve measurability: if <span>&#92;(f, g \in \mathrm{Bor}(X, {\mathbb R})&#92;)</span> then so are <span>&#92;(f + g&#92;)</span>, <span>&#92;(fg&#92;)</span>, <span>&#92;(|f|&#92;)</span>, <span>&#92;(\max(f,g)&#92;)</span>, <span>&#92;(\min(f,g)&#92;)</span>, and <span>&#92;(\lambda f&#92;)</span> for <span>&#92;(\lambda \in {\mathbb R}&#92;)</span>.
+**Tool 3.** Pointwise algebraic operations preserve measurability: if \(f, g \in \mathrm{Bor}(X, {\mathbb R})\) then so are \(f + g\), \(fg\), \(|f|\), \(\max(f,g)\), \(\min(f,g)\), and \(\lambda f\) for \(\lambda \in {\mathbb R}\).
 
-**Proposition 7.10** makes this precise: <span>&#92;(\mathrm{Bor}(X, {\mathbb R})&#92;)</span> is simultaneously an algebra of functions (under pointwise addition and multiplication) and a **lattice** (under pointwise max and min).
+**Proposition 7.10** makes this precise: \(\mathrm{Bor}(X, {\mathbb R})\) is simultaneously an algebra of functions (under pointwise addition and multiplication) and a **lattice** (under pointwise max and min).
 
 ---
 
@@ -203,19 +203,19 @@ The course develops four practical tools for establishing that a function is mea
 
 #### Stability Under Pointwise Limits
 
-**Tool 4 (Proposition 8.3).** The pointwise limit of a sequence of measurable functions is measurable: if <span>&#92;(f&#95;n \in \mathrm{Bor}(X, {\mathbb R})&#92;)</span> for all <span>&#92;(n&#92;)</span> and <span>&#92;(f(x) = \lim&#95;{n\to\infty} f&#95;n(x)&#92;)</span> exists for every <span>&#92;(x \in X&#92;)</span>, then <span>&#92;(f \in \mathrm{Bor}(X, {\mathbb R})&#92;)</span>.
+**Tool 4 (Proposition 8.3).** The pointwise limit of a sequence of measurable functions is measurable: if \(f_n \in \mathrm{Bor}(X, {\mathbb R})\) for all \(n\) and \(f(x) = \lim_{n\to\infty} f_n(x)\) exists for every \(x \in X\), then \(f \in \mathrm{Bor}(X, {\mathbb R})\).
 
-The key observation is that sets like <span>&#92;(\{x : \limsup&#95;n f&#95;n(x) > c\}&#92;)</span> can be expressed in terms of countable unions and intersections of the measurable sets <span>&#92;(\{x : f&#95;n(x) > c\}&#92;)</span>.
+The key observation is that sets like \(\{x : \limsup_n f_n(x) > c\}\) can be expressed in terms of countable unions and intersections of the measurable sets \(\{x : f_n(x) > c\}\).
 
-**Proposition 8.5** extends this: <span>&#92;(\sup&#95;n f&#95;n&#92;)</span>, <span>&#92;(\inf&#95;n f&#95;n&#92;)</span>, <span>&#92;(\limsup&#95;n f&#95;n&#92;)</span>, and <span>&#92;(\liminf&#95;n f&#95;n&#92;)</span> all lie in <span>&#92;(\mathrm{Bor}(X, {\mathbb R})&#92;)</span) (or in the extended real-valued version) whenever each <span>&#92;(f&#95;n&#92;)</span> does.
+**Proposition 8.5** extends this: \(\sup_n f_n\), \(\inf_n f_n\), \(\limsup_n f_n\), and \(\liminf_n f_n\) all lie in \(\mathrm{Bor}(X, {\mathbb R})\) (or in the extended real-valued version) whenever each \(f_n\) does.
 
 #### Simple Functions
 
-**Definition 8.8.** A **simple function** is a measurable function <span>&#92;(s : X \to {\mathbb R}&#92;)</span> that takes only finitely many values. Any simple function can be written as <span>&#92;(s = \sum&#95;{i=1}^k c&#95;i \chi&#95;{A&#95;i}&#92;)</span> where <span>&#92;(A&#95;1, \ldots, A&#95;k&#92;)</span> are pairwise disjoint measurable sets covering <span>&#92;(X&#92;)</span>, and <span>&#92;(c&#95;1, \ldots, c&#95;k \in {\mathbb R}&#92;)</span>.
+**Definition 8.8.** A **simple function** is a measurable function \(s : X \to {\mathbb R}\) that takes only finitely many values. Any simple function can be written as \(s = \sum_{i=1}^k c_i \chi_{A_i}\) where \(A_1, \ldots, A_k\) are pairwise disjoint measurable sets covering \(X\), and \(c_1, \ldots, c_k \in {\mathbb R}\).
 
-**Proposition 8.10. (Binning/approximation.)** Every <span>&#92;(f \in \mathrm{Bor}^+(X, {\mathbb R})&#92;)</span> (non-negative measurable function) can be approximated from below by simple functions: there exist simple functions <span>&#92;(s&#95;1 \le s&#95;2 \le \cdots \le f&#92;)</span> with <span>&#92;(s&#95;n(x) \nearrow f(x)&#92;)</span> for every <span>&#92;(x \in X&#92;)</span>.
+**Proposition 8.10. (Binning/approximation.)** Every \(f \in \mathrm{Bor}^+(X, {\mathbb R})\) (non-negative measurable function) can be approximated from below by simple functions: there exist simple functions \(s_1 \le s_2 \le \cdots \le f\) with \(s_n(x) \nearrow f(x)\) for every \(x \in X\).
 
-*Construction.* For each <span>&#92;(n \in {\mathbb N}&#92;)</span>, define the **binning** function by setting <span>&#92;(s&#95;n(x) = k/2^n&#92;)</span> when <span>&#92;(f(x) \in [k/2^n, (k+1)/2^n)&#92;)</span> for <span>&#92;(k = 0, 1, \ldots, n \cdot 2^n - 1&#92;)</span>, and <span>&#92;(s&#95;n(x) = n&#92;)</span> when <span>&#92;(f(x) \ge n&#92;)</span>. Each <span>&#92;(s&#95;n&#92;)</span> is measurable, and the sequence increases to <span>&#92;(f&#92;)</span> pointwise.
+*Construction.* For each \(n \in {\mathbb N}\), define the **binning** function by setting \(s_n(x) = k/2^n\) when \(f(x) \in [k/2^n, (k+1)/2^n)\) for \(k = 0, 1, \ldots, n \cdot 2^n - 1\), and \(s_n(x) = n\) when \(f(x) \ge n\). Each \(s_n\) is measurable, and the sequence increases to \(f\) pointwise.
 
 ---
 
@@ -227,29 +227,29 @@ The key observation is that sets like <span>&#92;(\{x : \limsup&#95;n f&#95;n(x)
 
 Integration is developed in two stages. First, we define the integral for non-negative measurable functions; then we extend to signed integrable functions.
 
-Let <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span> be a measure space. We write <span>&#92;(\mathrm{Bor}^+(X, {\mathbb R})&#92;)</span> for the collection of non-negative measurable functions (including those that take the value <span>&#92;(+\infty&#92;)</span>).
+Let \((X, {\mathcal M}, \mu)\) be a measure space. We write \(\mathrm{Bor}^+(X, {\mathbb R})\) for the collection of non-negative measurable functions (including those that take the value \(+\infty\).
 
 #### The L⁺ Functional on Simple Functions
 
-**Definition 9.3.** For a non-negative simple function <span>&#92;(s = \sum&#95;{i=1}^k c&#95;i \chi&#95;{A&#95;i}&#92;)</span> with the <span>&#92;(A&#95;i&#92;)</span> disjoint and covering <span>&#92;(X&#92;)</span>, define:
-<span>&#92;[
-L^+&#95;s(s) := \sum&#95;{i=1}^k c&#95;i \cdot \mu(A&#95;i) \in [0,\infty].
-&#92;]</span>
-This does not depend on which canonical form is chosen for <span>&#92;(s&#92;)</span>.
+**Definition 9.3.** For a non-negative simple function \(s = \sum_{i=1}^k c_i \chi_{A_i}\) with the \(A_i\) disjoint and covering \(X\), define:
+\[
+L^+_s(s) := \sum_{i=1}^k c_i \cdot \mu(A_i) \in [0,\infty].
+\]
+This does not depend on which canonical form is chosen for \(s\).
 
-**Lemma 9.5** and **Proposition 9.6** establish that <span>&#92;(L^+&#95;s&#92;)</span> is:
-- **Monotone**: <span>&#92;(s \le t \Rightarrow L^+&#95;s(s) \le L^+&#95;s(t)&#92;)</span>.
-- **Positively homogeneous**: <span>&#92;(L^+&#95;s(\lambda s) = \lambda L^+&#95;s(s)&#92;)</span> for <span>&#92;(\lambda \ge 0&#92;)</span>.
-- **Additive**: <span>&#92;(L^+&#95;s(s + t) = L^+&#95;s(s) + L^+&#95;s(t)&#92;)</span>.
+**Lemma 9.5** and **Proposition 9.6** establish that \(L^+_s\) is:
+- **Monotone**: \(s \le t \Rightarrow L^+_s(s) \le L^+_s(t)\).
+- **Positively homogeneous**: \(L^+_s(\lambda s) = \lambda L^+_s(s)\) for \(\lambda \ge 0\).
+- **Additive**: \(L^+_s(s + t) = L^+_s(s) + L^+_s(t)\).
 
 #### Extension to All of L⁺
 
-**Definition 9.9.** For a general <span>&#92;(f \in \mathrm{Bor}^+(X, {\mathbb R})&#92;)</span>, define:
-<span>&#92;[
-L^+(f) := \sup\!\left\{ L^+&#95;s(s) : s \text{ simple}, 0 \le s \le f \right\} \in [0,\infty].
-&#92;]</span>
+**Definition 9.9.** For a general \(f \in \mathrm{Bor}^+(X, {\mathbb R})\), define:
+\[
+L^+(f) := \sup\!\left\{ L^+_s(s) : s \text{ simple}, 0 \le s \le f \right\} \in [0,\infty].
+\]
 
-**Proposition 9.10** confirms that this extension preserves monotonicity and positive homogeneity, and agrees with <span>&#92;(L^+&#95;s&#92;)</span> on simple functions. Moreover, if <span>&#92;(f = 0&#92;)</span> a.e.-<span>&#92;(\mu&#92;)</span> then <span>&#92;(L^+(f) = 0&#92;)</span>, even if <span>&#92;(f&#92;)</span> is not identically zero.
+**Proposition 9.10** confirms that this extension preserves monotonicity and positive homogeneity, and agrees with \(L^+_s\) on simple functions. Moreover, if \(f = 0\) a.e.-\(\mu\) then \(L^+(f) = 0\), even if \(f\) is not identically zero.
 
 ---
 
@@ -257,21 +257,21 @@ L^+(f) := \sup\!\left\{ L^+&#95;s(s) : s \text{ simple}, 0 \le s \le f \right\} 
 
 #### Statement and Proof
 
-**Theorem 10.4. (Monotone Convergence Theorem / MCT.)** Let <span>&#92;((f&#95;n)&#95;{n=1}^\infty&#92;)</span> be an increasing sequence in <span>&#92;(\mathrm{Bor}^+(X, {\mathbb R})&#92;)</span> with pointwise limit <span>&#92;(f = \lim&#95;n f&#95;n&#92;)</span>. Then:
-<span>&#92;[
-L^+(f) = \lim&#95;{n\to\infty} L^+(f&#95;n).
-&#92;]</span>
+**Theorem 10.4. (Monotone Convergence Theorem / MCT.)** Let \((f_n)_{n=1}^\infty\) be an increasing sequence in \(\mathrm{Bor}^+(X, {\mathbb R})\) with pointwise limit \(f = \lim_n f_n\). Then:
+\[
+L^+(f) = \lim_{n\to\infty} L^+(f_n).
+\]
 
 Equivalently (using the standard integral notation),
-<span>&#92;[
-\int&#95;X f\, d\mu = \lim&#95;{n\to\infty} \int&#95;X f&#95;n\, d\mu.
-&#92;]</span>
+\[
+\int_X f\, d\mu = \lim_{n\to\infty} \int_X f_n\, d\mu.
+\]
 
-The proof proceeds in two steps. The inequality <span>&#92;(L^+(f) \ge \lim&#95;n L^+(f&#95;n)&#92;)</span> is easy: since <span>&#92;(f \ge f&#95;n&#92;)</span> for all <span>&#92;(n&#92;)</span>, monotonicity gives <span>&#92;(L^+(f) \ge L^+(f&#95;n)&#92;)</span> for all <span>&#92;(n&#92;)</span). The reverse inequality requires a clever bootstrapping argument.
+The proof proceeds in two steps. The inequality \(L^+(f) \ge \lim_n L^+(f_n)\) is easy: since \(f \ge f_n\) for all \(n\), monotonicity gives \(L^+(f) \ge L^+(f_n)\) for all \(n\). The reverse inequality requires a clever bootstrapping argument.
 
-**Lemma 10.10** establishes the key step: if <span>&#92;(f&#95;n \nearrow f&#92;)</span> and <span>&#92;(s&#92;)</span> is any simple function with <span>&#92;(0 \le s \le f&#92;)</span>, then for any <span>&#92;(0 < \varepsilon < 1&#92;)</span> the sets <span>&#92;(B&#95;n = \{x : f&#95;n(x) \ge (1-\varepsilon) s(x)\}&#92;)</span> form an increasing chain with union <span>&#92;(X&#92;)</span>. From this one deduces that <span>&#92;(L^+(f&#95;n) \ge (1-\varepsilon) L^+&#95;s(s)&#92;)</span> eventually, and since <span>&#92;(\varepsilon&#92;)</span> is arbitrary, <span>&#92;(\lim&#95;n L^+(f&#95;n) \ge L^+&#95;s(s)&#92;)</span>. Taking the supremum over <span>&#92;(s&#92;)</span) gives the result.
+**Lemma 10.10** establishes the key step: if \(f_n \nearrow f\) and \(s\) is any simple function with \(0 \le s \le f\), then for any \(0 < \varepsilon < 1\) the sets \(B_n = \{x : f_n(x) \ge (1-\varepsilon) s(x)\}\) form an increasing chain with union \(X\). From this one deduces that \(L^+(f_n) \ge (1-\varepsilon) L^+_s(s)\) eventually, and since \(\varepsilon\) is arbitrary, \(\lim_n L^+(f_n) \ge L^+_s(s)\). Taking the supremum over \(s\) gives the result.
 
-The MCT makes <span>&#92;(L^+&#92;)</span> additive on all of <span>&#92;(\mathrm{Bor}^+(X,{\mathbb R})&#92;)</span> — **Proposition 10.8** — because we can approximate any two non-negative measurable functions by increasing sequences of simple functions and pass to the limit.
+The MCT makes \(L^+\) additive on all of \(\mathrm{Bor}^+(X,{\mathbb R})\) — **Proposition 10.8** — because we can approximate any two non-negative measurable functions by increasing sequences of simple functions and pass to the limit.
 
 ---
 
@@ -279,28 +279,28 @@ The MCT makes <span>&#92;(L^+&#92;)</span> additive on all of <span>&#92;(\mathr
 
 #### Positive and Negative Parts
 
-For any <span>&#92;(f \in \mathrm{Bor}(X, {\mathbb R})&#92;)</span), define the positive and negative parts:
-<span>&#92;[
+For any \(f \in \mathrm{Bor}(X, {\mathbb R})\), define the positive and negative parts:
+\[
 f^+(x) = \max(f(x), 0), \qquad f^-(x) = \max(-f(x), 0).
-&#92;]</span>
-Both <span>&#92;(f^+&#92;)</span> and <span>&#92;(f^-&#92;)</span> lie in <span>&#92;(\mathrm{Bor}^+(X, {\mathbb R})&#92;)</span>, and <span>&#92;(f = f^+ - f^-&#92;)</span>, <span>&#92;(|f| = f^+ + f^-&#92;)</span>.
+\]
+Both \(f^+\) and \(f^-\) lie in \(\mathrm{Bor}^+(X, {\mathbb R})\), and \(f = f^+ - f^-\), \(|f| = f^+ + f^-\).
 
 #### Integrable Functions
 
-**Definition 11.3.** A function <span>&#92;(f \in \mathrm{Bor}(X, {\mathbb R})&#92;)</span> is called **integrable** (or in <span>&#92;(L^1(\mu)&#92;)</span>) if both <span>&#92;(L^+(f^+) < \infty&#92;)</span> and <span>&#92;(L^+(f^-) < \infty&#92;)</span>, equivalently if <span>&#92;(L^+(|f|) < \infty&#92;)</span>.
+**Definition 11.3.** A function \(f \in \mathrm{Bor}(X, {\mathbb R})\) is called **integrable** (or in \(L^1(\mu)\) if both \(L^+(f^+) < \infty\) and \(L^+(f^-) < \infty\), equivalently if \(L^+(|f|) < \infty\).
 
-**Definition/Theorem 11.6. (The integral functional.)** For <span>&#92;(f \in L^1(\mu)&#92;)</span> define:
-<span>&#92;[
-L(f) = \int&#95;X f\, d\mu := L^+(f^+) - L^+(f^-) \in {\mathbb R}.
-&#92;]</span>
+**Definition/Theorem 11.6. (The integral functional.)** For \(f \in L^1(\mu)\) define:
+\[
+L(f) = \int_X f\, d\mu := L^+(f^+) - L^+(f^-) \in {\mathbb R}.
+\]
 
-The functional <span>&#92;(L : L^1(\mu) \to {\mathbb R}&#92;)</span> is **linear**: <span>&#92;(L(f + g) = L(f) + L(g)&#92;)</span> and <span>&#92;(L(\lambda f) = \lambda L(f)&#92;)</span> for <span>&#92;(\lambda \in {\mathbb R}&#92;)</span>. Linearity is proved by carefully handling the positive and negative parts of sums.
+The functional \(L : L^1(\mu) \to {\mathbb R}\) is **linear**: \(L(f + g) = L(f) + L(g)\) and \(L(\lambda f) = \lambda L(f)\) for \(\lambda \in {\mathbb R}\). Linearity is proved by carefully handling the positive and negative parts of sums.
 
-**Proposition 11.7.** <span>&#92;(|L(f)| \le L(|f|) = \int&#95;X |f|\, d\mu&#92;)</span>.
+**Proposition 11.7.** \(|L(f)| \le L(|f|) = \int_X |f|\, d\mu\).
 
-The standard notation also includes integrals over subsets: <span>&#92;(\int&#95;A f\, d\mu := L(f \chi&#95;A)&#92;)</span> for <span>&#92;(A \in {\mathcal M}&#92;)</span>.
+The standard notation also includes integrals over subsets: \(\int_A f\, d\mu := L(f \chi_A)\) for \(A \in {\mathcal M}\).
 
-**Almost-everywhere equality.** If <span>&#92;(f = g&#92;)</span> a.e.-<span>&#92;(\mu&#92;)</span> (i.e., <span>&#92;(\mu(\{x : f(x) \ne g(x)\}) = 0&#92;)</span>), then <span>&#92;(\int f\, d\mu = \int g\, d\mu&#92;)</span>.
+**Almost-everywhere equality.** If \(f = g\) a.e.-\(\mu\) (i.e., \(\mu(\{x : f(x) \ne g(x)\}) = 0\), then \(\int f\, d\mu = \int g\, d\mu\).
 
 ---
 
@@ -308,25 +308,25 @@ The standard notation also includes integrals over subsets: <span>&#92;(\int&#95
 
 #### Reverse MCT and the Dominated Convergence Theorem
 
-**Theorem 12.1. (Lebesgue Dominated Convergence Theorem / LDCT.)** Suppose <span>&#92;((f&#95;n)&#92;)</span> is a sequence in <span>&#92;(L^1(\mu)&#92;)</span> with <span>&#92;(f&#95;n \to f&#92;)</span> pointwise, and suppose there exists a **dominating function** <span>&#92;(g \in L^1(\mu)&#92;)</span> with <span>&#92;(|f&#95;n| \le g&#92;)</span> for all <span>&#92;(n&#92;)</span). Then <span>&#92;(f \in L^1(\mu)&#92;)</span> and:
-<span>&#92;[
-\lim&#95;{n\to\infty} \int&#95;X f&#95;n\, d\mu = \int&#95;X f\, d\mu.
-&#92;]</span>
+**Theorem 12.1. (Lebesgue Dominated Convergence Theorem / LDCT.)** Suppose \((f_n)\) is a sequence in \(L^1(\mu)\) with \(f_n \to f\) pointwise, and suppose there exists a **dominating function** \(g \in L^1(\mu)\) with \(|f_n| \le g\) for all \(n\). Then \(f \in L^1(\mu)\) and:
+\[
+\lim_{n\to\infty} \int_X f_n\, d\mu = \int_X f\, d\mu.
+\]
 
-**Theorem 12.3** gives a sharper formulation: <span>&#92;(\lim&#95;{n\to\infty} \int |f&#95;n - f|\, d\mu = 0&#92;)</span> under the same hypotheses, which is the statement of convergence in <span>&#92;(L^1&#92;)</span>.
+**Theorem 12.3** gives a sharper formulation: \(\lim_{n\to\infty} \int |f_n - f|\, d\mu = 0\) under the same hypotheses, which is the statement of convergence in \(L^1\).
 
-The proof uses the **reverse MCT** (**Lemma 12.5**): if <span>&#92;((h&#95;n)&#92;)</span> is a decreasing sequence in <span>&#92;(\mathrm{Bor}^+(X,{\mathbb R})&#92;)</span> with <span>&#92;(L^+(h_1) < \infty&#92;)</span> and <span>&#92;(h&#95;n \searrow h&#92;)</span>, then <span>&#92;(L^+(h&#95;n) \to L^+(h)&#92;)</span>. This follows from the MCT applied to the differences <span>&#92;(h&#95;1 - h&#95;n \nearrow h&#95;1 - h&#92;)</span>.
+The proof uses the **reverse MCT** (**Lemma 12.5**): if \((h_n)\) is a decreasing sequence in \(\mathrm{Bor}^+(X,{\mathbb R})\) with \(L^+(h_1) < \infty\) and \(h_n \searrow h\), then \(L^+(h_n) \to L^+(h)\). This follows from the MCT applied to the differences \(h_1 - h_n \nearrow h_1 - h\).
 
 #### Fatou's Lemma
 
-The **Trick of Fatou** (**Proposition 12.7**): if <span>&#92;((f&#95;n)&#92;)</span> is a sequence in <span>&#92;(\mathrm{Bor}^+(X,{\mathbb R})&#92;)</span>, then:
-<span>&#92;[
-L^+\!\left(\liminf&#95;{n\to\infty} f&#95;n\right) \le \liminf&#95;{n\to\infty} L^+(f&#95;n).
-&#92;]</span>
+The **Trick of Fatou** (**Proposition 12.7**): if \((f_n)\) is a sequence in \(\mathrm{Bor}^+(X,{\mathbb R})\), then:
+\[
+L^+\!\left(\liminf_{n\to\infty} f_n\right) \le \liminf_{n\to\infty} L^+(f_n).
+\]
 
-This is deduced from the MCT applied to the infimum tails <span>&#92;(\inf&#95;{k \ge n} f&#95;k \nearrow \liminf f&#95;n&#92;)</span>, combined with monotonicity.
+This is deduced from the MCT applied to the infimum tails \(\inf_{k \ge n} f_k \nearrow \liminf f_n\), combined with monotonicity.
 
-**Proposition 12.8. (Fatou's Lemma.)** The same inequality holds: <span>&#92;(\int \liminf f&#95;n\, d\mu \le \liminf \int f&#95;n\, d\mu&#92;)</span>. The moral: the integral of a limit is at most the limit of the integrals, but not necessarily equal (equality requires extra domination, as in LDCT).
+**Proposition 12.8. (Fatou's Lemma.)** The same inequality holds: \(\int \liminf f_n\, d\mu \le \liminf \int f_n\, d\mu\). The moral: the integral of a limit is at most the limit of the integrals, but not necessarily equal (equality requires extra domination, as in LDCT).
 
 ---
 
@@ -336,37 +336,37 @@ This is deduced from the MCT applied to the infimum tails <span>&#92;(\inf&#95;{
 
 #### The Lᵖ Spaces
 
-**Definition 13.1.** For <span>&#92;(1 \le p < \infty&#92;)</span>, define:
-<span>&#92;[
+**Definition 13.1.** For \(1 \le p < \infty\), define:
+\[
 L^p(\mu) := \left\{ f \in \mathrm{Bor}(X, {\mathbb R}) : \int_X |f|^p\, d\mu < \infty \right\},
-&#92;]</span>
-and equip it with the **Lᵖ seminorm** <span>&#92;(\|f\|&#95;p := \left(\int |f|^p\, d\mu\right)^{1/p}&#92;)</span>. For <span>&#92;(p = \infty&#92;)</span>, one uses the essential supremum: <span>&#92;(\|f\|&#95;\infty := \inf\{M : |f| \le M \text{ a.e.-}\mu\}&#92;)</span>.
+\]
+and equip it with the **Lᵖ seminorm** \(\|f\|_p := \left(\int |f|^p\, d\mu\right)^{1/p}\). For \(p = \infty\), one uses the essential supremum: \(\|f\|_\infty := \inf\{M : |f| \le M \text{ a.e.-}\mu\}\).
 
-**Proposition 13.3.** <span>&#92;(L^p(\mu)&#92;)</span> is a linear subspace of <span>&#92;(\mathrm{Bor}(X, {\mathbb R})&#92;)</span). The proof that <span>&#92;(f + g \in L^p&#92;)</span> whenever <span>&#92;(f, g \in L^p&#92;)</span> uses the pointwise inequality <span>&#92;(|f + g|^p \le 2^p(|f|^p + |g|^p)&#92;)</span>.
+**Proposition 13.3.** \(L^p(\mu)\) is a linear subspace of \(\mathrm{Bor}(X, {\mathbb R})\). The proof that \(f + g \in L^p\) whenever \(f, g \in L^p\) uses the pointwise inequality \(|f + g|^p \le 2^p(|f|^p + |g|^p)\).
 
 #### Hölder's Inequality
 
-**Conjugate exponents**: <span>&#92;(p&#92;)</span> and <span>&#92;(q&#92;)</span> are **conjugate** if <span>&#92;(1/p + 1/q = 1&#92;)</span> (with the convention <span>&#92;(1/\infty = 0&#92;)</span>, so 1 and ∞ are conjugate).
+**Conjugate exponents**: \(p\) and \(q\) are **conjugate** if \(1/p + 1/q = 1\) (with the convention \(1/\infty = 0\), so 1 and ∞ are conjugate).
 
-**Proposition 13.6. (Hölder's Inequality.)** For conjugate exponents <span>&#92;(p, q&#92;)</span>, and functions <span>&#92;(f \in L^p(\mu)&#92;)</span>, <span>&#92;(g \in L^q(\mu)&#92;)</span>:
-<span>&#92;[
-\int&#95;X |fg|\, d\mu \le \|f\|&#95;p \cdot \|g\|&#95;q.
-&#92;]</span>
+**Proposition 13.6. (Hölder's Inequality.)** For conjugate exponents \(p, q\), and functions \(f \in L^p(\mu)\), \(g \in L^q(\mu)\):
+\[
+\int_X |fg|\, d\mu \le \|f\|_p \cdot \|g\|_q.
+\]
 
-*Proof.* By the **Young inequality** <span>&#92;(ab \le a^p/p + b^q/q&#92;)</span> (for <span>&#92;(a, b \ge 0&#92;)</span>), applied to <span>&#92;(a = |f(x)|/\|f\|&#95;p&#92;)</span> and <span>&#92;(b = |g(x)|/\|g\|&#95;q&#92;)</span>, integrating over <span>&#92;(X&#92;)</span> gives the result.
+*Proof.* By the **Young inequality** \(ab \le a^p/p + b^q/q\) (for \(a, b \ge 0\), applied to \(a = |f(x)|/\|f\|_p\) and \(b = |g(x)|/\|g\|_q\), integrating over \(X\) gives the result.
 
-For <span>&#92;(p = q = 2&#92;)</span>, Hölder's inequality becomes the **Cauchy-Schwarz inequality**: <span>&#92;(\int |fg|\, d\mu \le \|f\|&#95;2 \|g\|&#95;2&#92;)</span>.
+For \(p = q = 2\), Hölder's inequality becomes the **Cauchy-Schwarz inequality**: \(\int |fg|\, d\mu \le \|f\|_2 \|g\|_2\).
 
 #### Minkowski's Inequality
 
-**Proposition 13.7. (Minkowski's Inequality.)** For <span>&#92;(f, g \in L^p(\mu)&#92;)</span> with <span>&#92;(1 \le p \le \infty&#92;)</span>:
-<span>&#92;[
-\|f + g\|&#95;p \le \|f\|&#95;p + \|g\|&#95;p.
-&#92;]</span>
+**Proposition 13.7. (Minkowski's Inequality.)** For \(f, g \in L^p(\mu)\) with \(1 \le p \le \infty\):
+\[
+\|f + g\|_p \le \|f\|_p + \|g\|_p.
+\]
 
-This is the triangle inequality for <span>&#92;(\|\cdot\|_p&#92;)</span). The proof for <span>&#92;(1 < p < \infty&#92;)</span> uses Hölder: write <span>&#92;(|f+g|^p = |f+g| \cdot |f+g|^{p-1} \le (|f|+|g|)|f+g|^{p-1}&#92;)</span>, apply Hölder with exponents <span>&#92;(p&#92;)</span> and <span>&#92;(q&#92;)</span>, and simplify using <span>&#92;((p-1)q = p&#92;)</span>.
+This is the triangle inequality for \(\|\cdot\|_p\). The proof for \(1 < p < \infty\) uses Hölder: write \(|f+g|^p = |f+g| \cdot |f+g|^{p-1} \le (|f|+|g|)|f+g|^{p-1}\), apply Hölder with exponents \(p\) and \(q\), and simplify using \((p-1)q = p\).
 
-**The quotient space.** Since <span>&#92;(\|f\|&#95;p = 0&#92;)</span> whenever <span>&#92;(f = 0&#92;)</span> a.e.-<span>&#92;(\mu&#92;)</span>, the natural norm space is the quotient <span>&#92;({\mathcal L}^p(\mu) = L^p(\mu) / \!\sim&#92;)</span> where <span>&#92;(f \sim g \Leftrightarrow f = g&#92;)</span> a.e. By mild abuse of notation, both the quotient and the function space are written <span>&#92;(L^p(\mu)&#92;)</span>.
+**The quotient space.** Since \(\|f\|_p = 0\) whenever \(f = 0\) a.e.-\(\mu\), the natural norm space is the quotient \({\mathcal L}^p(\mu) = L^p(\mu) / \!\sim\) where \(f \sim g \Leftrightarrow f = g\) a.e. By mild abuse of notation, both the quotient and the function space are written \(L^p(\mu)\).
 
 ---
 
@@ -376,25 +376,25 @@ This is the triangle inequality for <span>&#92;(\|\cdot\|_p&#92;)</span). The pr
 
 A normed space is a **Banach space** if every Cauchy sequence converges.
 
-**The key mechanism** (**Lemma 14.8**): given a Cauchy sequence <span>&#92;((f&#95;n)&#92;)</span> in <span>&#92;(L^p(\mu)&#92;)</span>, one can extract a subsequence <span>&#92;((f&#95;{n&#95;k})&#92;)</span> with <span>&#92;(\|f&#95;{n&#95;{k+1}} - f&#95;{n&#95;k}\|&#95;p \le 1/2^k&#92;)</span>. The telescoping sums <span>&#92;(F&#95;N = \sum&#95;{k=1}^N |f&#95;{n&#95;{k+1}} - f&#95;{n&#95;k}|&#92;)</span> form an increasing sequence in <span>&#92;(\mathrm{Bor}^+(X,{\mathbb R})&#92;)</span> with bounded <span>&#92;(L^p&#92;)</span> norms (by Minkowski), so by MCT their pointwise limit <span>&#92;(F = \sum&#95;{k=1}^\infty |f&#95;{n&#95;{k+1}} - f&#95;{n&#95;k}|&#92;)</span> lies in <span>&#92;(L^p&#92;)</span>. Wherever <span>&#92;(F < \infty&#92;)</span> (which is a.e.), the telescoping series converges absolutely, defining a limit function <span>&#92;(f&#92;)</span>.
+**The key mechanism** (**Lemma 14.8**): given a Cauchy sequence \((f_n)\) in \(L^p(\mu)\), one can extract a subsequence \((f_{n_k})\) with \(\|f_{n_{k+1}} - f_{n_k}\|_p \le 1/2^k\). The telescoping sums \(F_N = \sum_{k=1}^N |f_{n_{k+1}} - f_{n_k}|\) form an increasing sequence in \(\mathrm{Bor}^+(X,{\mathbb R})\) with bounded \(L^p\) norms (by Minkowski), so by MCT their pointwise limit \(F = \sum_{k=1}^\infty |f_{n_{k+1}} - f_{n_k}|\) lies in \(L^p\). Wherever \(F < \infty\) (which is a.e.), the telescoping series converges absolutely, defining a limit function \(f\).
 
-**Proposition 14.9. (Riesz-Fischer.)** <span>&#92;(L^p(\mu)&#92;)</span> is a Banach space for all <span>&#92;(1 \le p \le \infty&#92;)</span>.
+**Proposition 14.9. (Riesz-Fischer.)** \(L^p(\mu)\) is a Banach space for all \(1 \le p \le \infty\).
 
-**Corollary 14.10.** Every Cauchy sequence in <span>&#92;(L^p&#92;)</span> has a subsequence converging pointwise a.e.-<span>&#92;(\mu&#92;)</span>.
+**Corollary 14.10.** Every Cauchy sequence in \(L^p\) has a subsequence converging pointwise a.e.-\(\mu\).
 
-**Corollary 14.11.** Every norm-convergent series <span>&#92;(\sum&#95;{k=1}^\infty f&#95;k&#92;)</span> in <span>&#92;(L^p&#92;)</span) converges pointwise a.e. and in <span>&#92;(L^p&#92;)</span> norm.
+**Corollary 14.11.** Every norm-convergent series \(\sum_{k=1}^\infty f_k\) in \(L^p\) converges pointwise a.e. and in \(L^p\) norm.
 
 #### Modes of Convergence
 
-Three modes of convergence are compared for sequences in <span>&#92;(L^p&#92;)</span>.
+Three modes of convergence are compared for sequences in \(L^p\).
 
-**Definition 14.12.** A sequence <span>&#92;((f&#95;n)&#92;)</span> converges **almost everywhere** (a.e.) to <span>&#92;(f&#92;)</span> if <span>&#92;(\mu(\{x : f&#95;n(x) \not\to f(x)\}) = 0&#92;)</span>.
+**Definition 14.12.** A sequence \((f_n)\) converges **almost everywhere** (a.e.) to \(f\) if \(\mu(\{x : f_n(x) \not\to f(x)\}) = 0\).
 
-**Definition 14.13.** <span>&#92;((f&#95;n)&#92;)</span> converges **in Lᵖ** to <span>&#92;(f&#92;)</span> if <span>&#92;(\|f&#95;n - f\|&#95;p \to 0&#92;)</span>.
+**Definition 14.13.** \((f_n)\) converges **in Lᵖ** to \(f\) if \(\|f_n - f\|_p \to 0\).
 
-**Definition 14.14.** <span>&#92;((f&#95;n)&#92;)</span> converges **in probability** (or in measure) to <span>&#92;(f&#92;)</span> if for every <span>&#92;(\varepsilon > 0&#92;)</span>: <span>&#92;(\mu(\{x : |f&#95;n(x) - f(x)| \ge \varepsilon\}) \to 0&#92;)</span> as <span>&#92;(n \to \infty&#92;)</span>.
+**Definition 14.14.** \((f_n)\) converges **in probability** (or in measure) to \(f\) if for every \(\varepsilon > 0\): \(\mu(\{x : |f_n(x) - f(x)| \ge \varepsilon\}) \to 0\) as \(n \to \infty\).
 
-**Proposition 14.15** records the implications: Lᵖ convergence implies convergence in probability (by Markov's inequality); a.e. convergence with a dominating function in <span>&#92;(L^p&#92;)</span> implies Lᵖ convergence (by LDCT). Neither a.e. convergence nor convergence in probability generally implies the other, but a.e. convergence along a subsequence is guaranteed from convergence in probability.
+**Proposition 14.15** records the implications: Lᵖ convergence implies convergence in probability (by Markov's inequality); a.e. convergence with a dominating function in \(L^p\) implies Lᵖ convergence (by LDCT). Neither a.e. convergence nor convergence in probability generally implies the other, but a.e. convergence along a subsequence is guaranteed from convergence in probability.
 
 ---
 
@@ -402,29 +402,29 @@ Three modes of convergence are compared for sequences in <span>&#92;(L^p&#92;)</
 
 #### Inner Product Structure of L²
 
-**Proposition/Definition 15.2.** On <span>&#92;(L^2(\mu)&#92;)</span), define the inner product:
-<span>&#92;[
-\langle f, g \rangle := \int&#95;X f(x)\, g(x)\, d\mu(x).
-&#92;]</span>
-This is well-defined by Cauchy-Schwarz and makes <span>&#92;(L^2(\mu)&#92;)</span> into an inner product space. The associated norm is <span>&#92;(\|f\|&#95;2 = \langle f, f \rangle^{1/2}&#92;)</span>, and since <span>&#92;(L^2&#92;)</span> is complete (by Riesz-Fischer), it is a **Hilbert space**.
+**Proposition/Definition 15.2.** On \(L^2(\mu)\), define the inner product:
+\[
+\langle f, g \rangle := \int_X f(x)\, g(x)\, d\mu(x).
+\]
+This is well-defined by Cauchy-Schwarz and makes \(L^2(\mu)\) into an inner product space. The associated norm is \(\|f\|_2 = \langle f, f \rangle^{1/2}\), and since \(L^2\) is complete (by Riesz-Fischer), it is a **Hilbert space**.
 
-**Proposition 15.5. (Cauchy-Schwarz.)** <span>&#92;(|\langle f, g \rangle| \le \|f\|&#95;2 \|g\|&#95;2&#92;)</span>, which is Hölder for <span>&#92;(p = q = 2&#92;)</span>.
+**Proposition 15.5. (Cauchy-Schwarz.)** \(|\langle f, g \rangle| \le \|f\|_2 \|g\|_2\), which is Hölder for \(p = q = 2\).
 
 #### Bounded Linear Functionals
 
-**Definition 15.4.** A linear map <span>&#92;(\Phi : L^2(\mu) \to {\mathbb R}&#92;)</span> is **bounded** if there exists <span>&#92;(C > 0&#92;)</span> such that <span>&#92;(|\Phi(f)| \le C \|f\|&#95;2&#92;)</span> for all <span>&#92;(f \in L^2(\mu)&#92;)</span). The smallest such <span>&#92;(C&#92;)</span> is the operator norm <span>&#92;(\|\Phi\|&#92;)</span>.
+**Definition 15.4.** A linear map \(\Phi : L^2(\mu) \to {\mathbb R}\) is **bounded** if there exists \(C > 0\) such that \(|\Phi(f)| \le C \|f\|_2\) for all \(f \in L^2(\mu)\). The smallest such \(C\) is the operator norm \(\|\Phi\|\).
 
-For any <span>&#92;(h \in L^2(\mu)&#92;)</span>, the map <span>&#92;(\Phi&#95;h : f \mapsto \langle f, h \rangle&#92;)</span> is a bounded linear functional with <span>&#92;(\|\Phi_h\| = \|h\|_2&#92;)</span). The Riesz representation theorem says all bounded linear functionals arise this way.
+For any \(h \in L^2(\mu)\), the map \(\Phi_h : f \mapsto \langle f, h \rangle\) is a bounded linear functional with \(\|\Phi_h\| = \|h\|_2\). The Riesz representation theorem says all bounded linear functionals arise this way.
 
 #### Riesz Representation Theorem for L²
 
-**Theorem 15.6 / 15.9. (Riesz Representation.)** Every bounded linear functional <span>&#92;(\Phi : L^2(\mu) \to {\mathbb R}&#92;)</span> is of the form <span>&#92;(\Phi(f) = \langle f, h \rangle&#92;)</span> for a unique <span>&#92;(h \in L^2(\mu)&#92;)</span>.
+**Theorem 15.6 / 15.9. (Riesz Representation.)** Every bounded linear functional \(\Phi : L^2(\mu) \to {\mathbb R}\) is of the form \(\Phi(f) = \langle f, h \rangle\) for a unique \(h \in L^2(\mu)\).
 
-*Proof sketch.* The key is the **projection onto a closed convex set**: for any bounded linear functional <span>&#92;(\Phi&#92;)</span>, let <span>&#92;(K = \ker(\Phi)&#92;)</span>, a closed subspace of <span>&#92;(L^2&#92;)</span>. If <span>&#92;(\Phi \ne 0&#92;)</span>, choose <span>&#92;(g \notin K&#92;)</span) and consider the decomposition <span>&#92;(g = g&#95;K + g&#95;\perp&#92;)</span> where <span>&#92;(g&#95;K \in K&#92;)</span> is the projection.
+*Proof sketch.* The key is the **projection onto a closed convex set**: for any bounded linear functional \(\Phi\), let \(K = \ker(\Phi)\), a closed subspace of \(L^2\). If \(\Phi \ne 0\), choose \(g \notin K\) and consider the decomposition \(g = g_K + g_\perp\) where \(g_K \in K\) is the projection.
 
-**Lemma 15.11** establishes the projection existence: for any closed convex <span>&#92;(C&#92;)</span> in a Hilbert space, there is a unique closest point in <span>&#92;(C&#92;)</span> to any given point. **Lemma 15.12** shows that the projection onto a closed *subspace* is characterized by the orthogonality condition <span>&#92;(\langle f - f&#95;K, k \rangle = 0&#92;)</span> for all <span>&#92;(k \in K&#92;)</span>.
+**Lemma 15.11** establishes the projection existence: for any closed convex \(C\) in a Hilbert space, there is a unique closest point in \(C\) to any given point. **Lemma 15.12** shows that the projection onto a closed *subspace* is characterized by the orthogonality condition \(\langle f - f_K, k \rangle = 0\) for all \(k \in K\).
 
-The **parallelogram law** (**Lemma 15.10**) — <span>&#92;(\|f+g\|^2 + \|f-g\|^2 = 2\|f\|^2 + 2\|g\|^2&#92;)</span> — plays a key role in establishing the uniqueness of closest-point projections.
+The **parallelogram law** (**Lemma 15.10**) — \(\|f+g\|^2 + \|f-g\|^2 = 2\|f\|^2 + 2\|g\|^2\) — plays a key role in establishing the uniqueness of closest-point projections.
 
 ---
 
@@ -434,23 +434,23 @@ The **parallelogram law** (**Lemma 15.10**) — <span>&#92;(\|f+g\|^2 + \|f-g\|^
 
 #### Linear Combinations and Ordering of Measures
 
-**Definition 16.1.** Let <span>&#92;((X, {\mathcal M})&#92;)</span> be a measurable space and <span>&#92;(\mu, \nu : {\mathcal M} \to [0,\infty]&#92;)</span> positive measures. The **linear combination** <span>&#92;(\alpha\mu + \beta\nu&#92;)</span> for <span>&#92;(\alpha, \beta \ge 0&#92;)</span) is again a positive measure, defined pointwise: <span>&#92;((\alpha\mu + \beta\nu)(A) = \alpha \mu(A) + \beta \nu(A)&#92;)</span>.
+**Definition 16.1.** Let \((X, {\mathcal M})\) be a measurable space and \(\mu, \nu : {\mathcal M} \to [0,\infty]\) positive measures. The **linear combination** \(\alpha\mu + \beta\nu\) for \(\alpha, \beta \ge 0\) is again a positive measure, defined pointwise: \((\alpha\mu + \beta\nu)(A) = \alpha \mu(A) + \beta \nu(A)\).
 
-**Definition 16.3.** We write <span>&#92;(\nu \le \mu&#92;)</span) to mean <span>&#92;(\nu(A) \le \mu(A)&#92;)</span> for all <span>&#92;(A \in {\mathcal M}&#92;)</span>. This defines a partial order on positive measures.
+**Definition 16.3.** We write \(\nu \le \mu\) to mean \(\nu(A) \le \mu(A)\) for all \(A \in {\mathcal M}\). This defines a partial order on positive measures.
 
 #### Density Integration and the Radon-Nikodym Preliminary Version
 
-**Remark 16.5/16.6.** If <span>&#92;(\mu&#92;)</span> is a positive measure and <span>&#92;(h \in \mathrm{Bor}^+(X,{\mathbb R})&#92;)</span>, one defines a new measure <span>&#92;(\nu&#92;)</span> by the formula <span>&#92;(d\nu(x) = h(x)\, d\mu(x)&#92;)</span>, meaning:
-<span>&#92;[
-\nu(A) = \int&#95;A h\, d\mu = \int&#95;X \chi&#95;A(x)\, h(x)\, d\mu(x), \quad \forall A \in {\mathcal M}.
-&#92;]</span>
-The function <span>&#92;(h&#92;)</span> is called the **density** of <span>&#92;(\nu&#92;)</span> with respect to <span>&#92;(\mu&#92;)</span).
+**Remark 16.5/16.6.** If \(\mu\) is a positive measure and \(h \in \mathrm{Bor}^+(X,{\mathbb R})\), one defines a new measure \(\nu\) by the formula \(d\nu(x) = h(x)\, d\mu(x)\), meaning:
+\[
+\nu(A) = \int_A h\, d\mu = \int_X \chi_A(x)\, h(x)\, d\mu(x), \quad \forall A \in {\mathcal M}.
+\]
+The function \(h\) is called the **density** of \(\nu\) with respect to \(\mu\).
 
-**Lemma 16.7.** If <span>&#92;(d\nu = h\, d\mu&#92;)</span> with <span>&#92;(0 \le h(x) \le 1&#92;)</span> for all <span>&#92;(x&#92;)</span>, then <span>&#92;(\nu \le \mu&#92;)</span>.
+**Lemma 16.7.** If \(d\nu = h\, d\mu\) with \(0 \le h(x) \le 1\) for all \(x\), then \(\nu \le \mu\).
 
-**Theorem 16.11. (Preliminary Radon-Nikodym.)** Let <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span> be a finite measure space and <span>&#92;(\nu : {\mathcal M} \to [0,\infty)&#92;)</span> a finite positive measure with <span>&#92;(\nu \le \mu&#92;)</span>. Then there exists a density <span>&#92;(h \in \mathrm{Bor}^+(X,{\mathbb R})&#92;)</span> with <span>&#92;(0 \le h(x) \le 1&#92;)</span> for all <span>&#92;(x&#92;)</span>, such that <span>&#92;(d\nu(x) = h(x)\, d\mu(x)&#92;)</span>.
+**Theorem 16.11. (Preliminary Radon-Nikodym.)** Let \((X, {\mathcal M}, \mu)\) be a finite measure space and \(\nu : {\mathcal M} \to [0,\infty)\) a finite positive measure with \(\nu \le \mu\). Then there exists a density \(h \in \mathrm{Bor}^+(X,{\mathbb R})\) with \(0 \le h(x) \le 1\) for all \(x\), such that \(d\nu(x) = h(x)\, d\mu(x)\).
 
-*Proof.* Since <span>&#92;(\nu \le \mu&#92;)</span>, any <span>&#92;(f \in L^2(\mu)&#92;)</span> satisfies <span>&#92;(\|f\|&#95;{L^2(\nu)} \le \|f\|&#95;{L^2(\mu)}&#92;)</span>. The map <span>&#92;(\Phi(f) = \int&#95;X f\, d\nu&#92;)</span> is therefore a bounded linear functional on <span>&#92;(L^2(\mu)&#92;)</span>. By the Riesz Representation Theorem, there exists <span>&#92;(h \in L^2(\mu)&#92;)</span) with <span>&#92;(\Phi(f) = \int&#95;X f\, h\, d\mu&#92;)</span> for all <span>&#92;(f \in L^2(\mu)&#92;)</span). Choosing <span>&#92;(f = \chi_A&#92;)</span) gives <span>&#92;(\nu(A) = \int_A h\, d\mu&#92;)</span). One then argues that <span>&#92;(0 \le h(x) \le 1&#92;)</span> a.e.-<span>&#92;(\mu&#92;)</span> by testing against indicator functions of the sets <span>&#92;(\{h < 0\}&#92;)</span> and <span>&#92;(\{h > 1\}&#92;)</span>.
+*Proof.* Since \(\nu \le \mu\), any \(f \in L^2(\mu)\) satisfies \(\|f\|_{L^2(\nu)} \le \|f\|_{L^2(\mu)}\). The map \(\Phi(f) = \int_X f\, d\nu\) is therefore a bounded linear functional on \(L^2(\mu)\). By the Riesz Representation Theorem, there exists \(h \in L^2(\mu)\) with \(\Phi(f) = \int_X f\, h\, d\mu\) for all \(f \in L^2(\mu)\). Choosing \(f = \chi_A\) gives \(\nu(A) = \int_A h\, d\mu\). One then argues that \(0 \le h(x) \le 1\) a.e.-\(\mu\) by testing against indicator functions of the sets \(\{h < 0\}\) and \(\{h > 1\}\).
 
 ---
 
@@ -458,41 +458,41 @@ The function <span>&#92;(h&#92;)</span> is called the **density** of <span>&#92;
 
 #### Absolute Continuity
 
-**Definition 17.1.** A positive measure <span>&#92;(\nu&#92;)</span> on <span>&#92;((X, {\mathcal M})&#92;)</span> is **absolutely continuous** with respect to <span>&#92;(\mu&#92;)</span>, written <span>&#92;(\nu \ll \mu&#92;)</span>, if:
-<span>&#92;[
+**Definition 17.1.** A positive measure \(\nu\) on \((X, {\mathcal M})\) is **absolutely continuous** with respect to \(\mu\), written \(\nu \ll \mu\), if:
+\[
 \mu(A) = 0 \Rightarrow \nu(A) = 0, \quad \forall A \in {\mathcal M}.
-&#92;]</span>
+\]
 
-**Example 17.2.** If <span>&#92;(d\nu = h\, d\mu&#92;)</span> for some density <span>&#92;(h \in \mathrm{Bor}^+(X,{\mathbb R})&#92;)</span>, then <span>&#92;(\nu \ll \mu&#92;)</span>. Indeed, if <span>&#92;(\mu(A) = 0&#92;)</span> then <span>&#92;(\int&#95;A h\, d\mu = 0&#92;)</span>.
+**Example 17.2.** If \(d\nu = h\, d\mu\) for some density \(h \in \mathrm{Bor}^+(X,{\mathbb R})\), then \(\nu \ll \mu\). Indeed, if \(\mu(A) = 0\) then \(\int_A h\, d\mu = 0\).
 
-The word "continuity" is justified by **Proposition 17.3**: if <span>&#92;(\nu(X) < \infty&#92;)</span>, then <span>&#92;(\nu \ll \mu&#92;)</span> if and only if for every <span>&#92;(\varepsilon > 0&#92;)</span> there exists <span>&#92;(\delta > 0&#92;)</span> such that <span>&#92;(\mu(A) < \delta \Rightarrow \nu(A) < \varepsilon&#92;)</span>. The proof of <span>&#92;((\Rightarrow)&#92;)</span> is a beautiful contradiction argument using bad sets and Borel-Cantelli (the same tail-set technique as the original Borel-Cantelli). The finiteness of <span>&#92;(\nu&#92;)</span> is essential for the decreasing chain argument.
+The word "continuity" is justified by **Proposition 17.3**: if \(\nu(X) < \infty\), then \(\nu \ll \mu\) if and only if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that \(\mu(A) < \delta \Rightarrow \nu(A) < \varepsilon\). The proof of \((\Rightarrow)\) is a beautiful contradiction argument using bad sets and Borel-Cantelli (the same tail-set technique as the original Borel-Cantelli). The finiteness of \(\nu\) is essential for the decreasing chain argument.
 
-**Remark 17.4** gives a counterexample showing that <span>&#92;(\nu(X) < \infty&#92;)</span> is necessary: the counting measure and the <span>&#92;(1/2^n&#92;)</span>-weighted measure on <span>&#92;({\mathbb N}&#92;)</span) demonstrate that absolute continuity does not imply the <span>&#92;(\varepsilon&#92;)</span>-<span>&#92;(\delta&#92;)</span> condition for infinite <span>&#92;(\nu&#92;)</span>.
+**Remark 17.4** gives a counterexample showing that \(\nu(X) < \infty\) is necessary: the counting measure and the \(1/2^n\)-weighted measure on \({\mathbb N}\) demonstrate that absolute continuity does not imply the \(\varepsilon\)-\(\delta\) condition for infinite \(\nu\).
 
 #### The Full Radon-Nikodym Theorem
 
-**Theorem 17.5. (Radon-Nikodym for finite measures.)** Let <span>&#92;(\mu, \nu : {\mathcal M} \to [0,\infty)&#92;)</span> be finite positive measures with <span>&#92;(\nu \ll \mu&#92;)</span>. Then there exists a density <span>&#92;(h \in \mathrm{Bor}^+(X,{\mathbb R}) \cap L^1(\mu)&#92;)</span> such that <span>&#92;(d\nu(x) = h(x)\, d\mu(x)&#92;)</span>.
+**Theorem 17.5. (Radon-Nikodym for finite measures.)** Let \(\mu, \nu : {\mathcal M} \to [0,\infty)\) be finite positive measures with \(\nu \ll \mu\). Then there exists a density \(h \in \mathrm{Bor}^+(X,{\mathbb R}) \cap L^1(\mu)\) such that \(d\nu(x) = h(x)\, d\mu(x)\).
 
 #### The Connecting Function
 
-**Proposition/Definition 17.9.** Given any two finite positive measures <span>&#92;(\mu, \nu&#92;)</span> (no relation assumed), there exists a **connecting function** <span>&#92;(g \in \mathrm{Bor}(X,{\mathbb R})&#92;)</span> with <span>&#92;(0 \le g(x) \le 1&#92;)</span> such that:
-<span>&#92;[
-\int&#95;X f\, g\, d\mu = \int&#95;X f\,(1-g)\, d\nu, \quad \forall f \text{ bounded, } f \in \mathrm{Bor}^+(X,{\mathbb R}).
-&#92;]</span>
+**Proposition/Definition 17.9.** Given any two finite positive measures \(\mu, \nu\) (no relation assumed), there exists a **connecting function** \(g \in \mathrm{Bor}(X,{\mathbb R})\) with \(0 \le g(x) \le 1\) such that:
+\[
+\int_X f\, g\, d\mu = \int_X f\,(1-g)\, d\nu, \quad \forall f \text{ bounded, } f \in \mathrm{Bor}^+(X,{\mathbb R}).
+\]
 
-*Proof.* Let <span>&#92;(\rho = \mu + \nu&#92;)</span). Since <span>&#92;(\nu \le \rho&#92;)</span), Theorem 16.11 provides a density <span>&#92;(g&#92;)</span) with <span>&#92;(d\nu = g\, d\rho&#92;)</span). Writing <span>&#92;(d\rho = d\mu + d\nu&#92;)</span) and substituting, the connecting equation (17.1) follows by cancellation.
+*Proof.* Let \(\rho = \mu + \nu\). Since \(\nu \le \rho\), Theorem 16.11 provides a density \(g\) with \(d\nu = g\, d\rho\). Writing \(d\rho = d\mu + d\nu\) and substituting, the connecting equation (17.1) follows by cancellation.
 
-**Lemma 17.10.** If <span>&#92;(N = \{x : g(x) = 1\}&#92;)</span>, then <span>&#92;(\mu(N) = 0&#92;)</span>. (Take <span>&#92;(f = \chi&#95;N&#92;)</span> in the connecting equation.)
+**Lemma 17.10.** If \(N = \{x : g(x) = 1\}\), then \(\mu(N) = 0\). (Take \(f = \chi_N\) in the connecting equation.)
 
 #### Proofs of Radon-Nikodym and Lebesgue Decomposition
 
-*Proof of Theorem 17.5.* Let <span>&#92;(g&#92;)</span) be a connecting function, <span>&#92;(N = \{g = 1\}&#92;)</span). Since <span>&#92;(\mu(N) = 0&#92;)</span) and <span>&#92;(\nu \ll \mu&#92;)</span), we also have <span>&#92;(\nu(N) = 0&#92;)</span). Modify <span>&#92;(g&#92;)</span) to <span>&#92;(\tilde g = g \cdot (1 - \chi_N)&#92;)</span), ensuring <span>&#92;(0 \le \tilde g < 1&#92;)</span) everywhere. Set <span>&#92;(h = \tilde g / (1 - \tilde g)&#92;)</span). For any <span>&#92;(A \in {\mathcal M}&#92;)</span), approximate <span>&#92;(\chi_A / (1 - \tilde g)&#92;)</span) by the partial sums <span>&#92;(f_n = \chi_A (1 + \tilde g + \cdots + \tilde g^n)&#92;)</span), apply the connecting equation to each <span>&#92;(f_n&#92;)</span), and pass to the limit via the MCT. The result is <span>&#92;(\nu(A) = \int_A h\, d\mu&#92;)</span).
+*Proof of Theorem 17.5.* Let \(g\) be a connecting function, \(N = \{g = 1\}\). Since \(\mu(N) = 0\) and \(\nu \ll \mu\), we also have \(\nu(N) = 0\). Modify \(g\) to \(\tilde g = g \cdot (1 - \chi_N)\), ensuring \(0 \le \tilde g < 1\) everywhere. Set \(h = \tilde g / (1 - \tilde g)\). For any \(A \in {\mathcal M}\), approximate \(\chi_A / (1 - \tilde g)\) by the partial sums \(f_n = \chi_A (1 + \tilde g + \cdots + \tilde g^n)\), apply the connecting equation to each \(f_n\), and pass to the limit via the MCT. The result is \(\nu(A) = \int_A h\, d\mu\).
 
-**Definition 17.6.** We say <span>&#92;(\mu&#92;)</span) is **concentrated on** a set <span>&#92;(P \in {\mathcal M}&#92;)</span) if <span>&#92;(\mu(X \setminus P) = 0&#92;)</span). Two measures are **mutually singular**, written <span>&#92;(\mu \perp \nu&#92;)</span), if there exist disjoint <span>&#92;(P, Q \in {\mathcal M}&#92;)</span) with <span>&#92;(\mu&#92;)</span) concentrated on <span>&#92;(P&#92;)</span) and <span>&#92;(\nu&#92;)</span) concentrated on <span>&#92;(Q&#92;)</span).
+**Definition 17.6.** We say \(\mu\) is **concentrated on** a set \(P \in {\mathcal M}\) if \(\mu(X \setminus P) = 0\). Two measures are **mutually singular**, written \(\mu \perp \nu\), if there exist disjoint \(P, Q \in {\mathcal M}\) with \(\mu\) concentrated on \(P\) and \(\nu\) concentrated on \(Q\).
 
-**Theorem 17.7. (Lebesgue Decomposition.)** Any finite positive measure <span>&#92;(\nu&#92;)</span) on a finite measure space <span>&#92;((X,{\mathcal M},\mu)&#92;)</span) decomposes uniquely as <span>&#92;(\nu = \nu_1 + \nu_2&#92;)</span) where <span>&#92;(\nu_1 \ll \mu&#92;)</span) and <span>&#92;(\nu_2 \perp \mu&#92;)</span).
+**Theorem 17.7. (Lebesgue Decomposition.)** Any finite positive measure \(\nu\) on a finite measure space \((X,{\mathcal M},\mu)\) decomposes uniquely as \(\nu = \nu_1 + \nu_2\) where \(\nu_1 \ll \mu\) and \(\nu_2 \perp \mu\).
 
-*Proof.* From the connecting function <span>&#92;(g&#92;)</span), set <span>&#92;(N = \{g=1\}&#92;)</span), then <span>&#92;(\nu_1(A) = \nu(A \cap (X \setminus N))&#92;)</span) and <span>&#92;(\nu_2(A) = \nu(A \cap N)&#92;)</span). The set <span>&#92;(\mu(N) = 0&#92;)</span) ensures <span>&#92;(\nu_1 \ll \mu&#92;)</span) (via Exercise 17.11), and the construction forces <span>&#92;(\nu_2 \perp \mu&#92;)</span) (since <span>&#92;(\mu&#92;)</span) is concentrated on <span>&#92;(X \setminus N&#92;)</span) and <span>&#92;(\nu_2&#92;)</span) on <span>&#92;(N&#92;)</span)).
+*Proof.* From the connecting function \(g\), set \(N = \{g=1\}\), then \(\nu_1(A) = \nu(A \cap (X \setminus N))\) and \(\nu_2(A) = \nu(A \cap N)\). The set \(\mu(N) = 0\) ensures \(\nu_1 \ll \mu\) (via Exercise 17.11), and the construction forces \(\nu_2 \perp \mu\) (since \(\mu\) is concentrated on \(X \setminus N\) and \(\nu_2\) on \(N\)).
 
 ---
 
@@ -502,31 +502,31 @@ The word "continuity" is justified by **Proposition 17.3**: if <span>&#92;(\nu(X
 
 #### The Product Measurable Space
 
-**Definition 18.1.** Given measurable spaces <span>&#92;((X, {\mathcal M})&#92;)</span) and <span>&#92;((Y, {\mathcal N})&#92;)</span), a **measurable rectangle** is any set of the form <span>&#92;(A \times B&#92;)</span) with <span>&#92;(A \in {\mathcal M}&#92;)</span), <span>&#92;(B \in {\mathcal N}&#92;)</span). The **product sigma-algebra** is:
-<span>&#92;[
+**Definition 18.1.** Given measurable spaces \((X, {\mathcal M})\) and \((Y, {\mathcal N})\), a **measurable rectangle** is any set of the form \(A \times B\) with \(A \in {\mathcal M}\), \(B \in {\mathcal N}\). The **product sigma-algebra** is:
+\[
 {\mathcal M} \times {\mathcal N} := \sigma\text{-Alg}(\{A \times B : A \in {\mathcal M},\, B \in {\mathcal N}\}).
-&#92;]</span>
+\]
 
-**Proposition 18.3.** The collection <span>&#92;({\mathcal R}&#92;)</span) of measurable rectangles is a **semi-algebra** on <span>&#92;(X \times Y&#92;)</span).
+**Proposition 18.3.** The collection \({\mathcal R}\) of measurable rectangles is a **semi-algebra** on \(X \times Y\).
 
-*Proof.* (Semi-AS1) and (Semi-AS3) are clear. For (Semi-AS2): the complement <span>&#92;((X \times Y) \setminus (A \times B) = ((X \setminus A) \times Y) \cup (A \times (Y \setminus B))&#92;)</span), a disjoint union of two rectangles.
+*Proof.* (Semi-AS1) and (Semi-AS3) are clear. For (Semi-AS2): the complement \((X \times Y) \setminus (A \times B) = ((X \setminus A) \times Y) \cup (A \times (Y \setminus B))\), a disjoint union of two rectangles.
 
-**Notation 18.4.** Let <span>&#92;({\mathcal U} = \mathrm{Alg}({\mathcal R})&#92;)</span), the algebra generated by the semi-algebra of rectangles. By Proposition 1.7, every set in <span>&#92;({\mathcal U}&#92;)</span) is a finite disjoint union of measurable rectangles.
+**Notation 18.4.** Let \({\mathcal U} = \mathrm{Alg}({\mathcal R})\), the algebra generated by the semi-algebra of rectangles. By Proposition 1.7, every set in \({\mathcal U}\) is a finite disjoint union of measurable rectangles.
 
 #### Existence of the Product Measure
 
-**Theorem 18.6.** Let <span>&#92;(\mu : {\mathcal M} \to [0,\infty)&#92;)</span) and <span>&#92;(\nu : {\mathcal N} \to [0,\infty)&#92;)</span) be finite positive measures. There exists a unique positive measure <span>&#92;(\mu \times \nu : {\mathcal M} \times {\mathcal N} \to [0,\infty)&#92;)</span) satisfying:
-<span>&#92;[
+**Theorem 18.6.** Let \(\mu : {\mathcal M} \to [0,\infty)\) and \(\nu : {\mathcal N} \to [0,\infty)\) be finite positive measures. There exists a unique positive measure \(\mu \times \nu : {\mathcal M} \times {\mathcal N} \to [0,\infty)\) satisfying:
+\[
 (\mu \times \nu)(A \times B) = \mu(A) \cdot \nu(B), \quad \forall A \in {\mathcal M},\, B \in {\mathcal N}.
-&#92;]</span>
+\]
 
-*Strategy.* Apply the Carathéodory extension theorem (Theorem 5.10) to a pre-measure <span>&#92;(\rho_o : {\mathcal U} \to [0,\infty)&#92;)</span) and use Dynkin for uniqueness.
+*Strategy.* Apply the Carathéodory extension theorem (Theorem 5.10) to a pre-measure \(\rho_o : {\mathcal U} \to [0,\infty)\) and use Dynkin for uniqueness.
 
-**Step 1 — The set-function on the semi-algebra.** Define <span>&#92;(\rho_{oo} : {\mathcal R} \to [0,\infty)&#92;)</span) by <span>&#92;(\rho_{oo}(A \times B) = \mu(A)\nu(B)&#92;)</span). **Lemma 18.9** is the technical heart: if <span>&#92;(A \times B = \bigsqcup_{i=1}^\infty A_i \times B_i&#92;)</span), then the function <span>&#92;(y \mapsto \sum_{i=1}^n \mu(A_i)\chi_{B_i}(y)&#92;)</span) increases pointwise to <span>&#92;(y \mapsto \mu(A)\chi_B(y)&#92;)</span) — this is a non-trivial set-theoretic puzzle whose solution relies on a delicate slice argument. **Proposition 18.10** then shows <span>&#92;(\rho_{oo}&#92;)</span) respects decompositions (using the MCT to handle the infinite series). By Proposition 2.10, <span>&#92;(\rho_{oo}&#92;)</span) extends to a finitely additive <span>&#92;(\rho_o : {\mathcal U} \to [0,\infty)&#92;)</span).
+**Step 1 — The set-function on the semi-algebra.** Define \(\rho_{oo} : {\mathcal R} \to [0,\infty)\) by \(\rho_{oo}(A \times B) = \mu(A)\nu(B)\). **Lemma 18.9** is the technical heart: if \(A \times B = \bigsqcup_{i=1}^\infty A_i \times B_i\), then the function \(y \mapsto \sum_{i=1}^n \mu(A_i)\chi_{B_i}(y)\) increases pointwise to \(y \mapsto \mu(A)\chi_B(y)\) — this is a non-trivial set-theoretic puzzle whose solution relies on a delicate slice argument. **Proposition 18.10** then shows \(\rho_{oo}\) respects decompositions (using the MCT to handle the infinite series). By Proposition 2.10, \(\rho_{oo}\) extends to a finitely additive \(\rho_o : {\mathcal U} \to [0,\infty)\).
 
-**Step 2 — Pre-measure property.** **Lemma 18.12** and **Proposition 18.13** confirm <span>&#92;(\rho_o&#92;)</span) is a pre-measure by bootstrapping from Proposition 18.10 through the structure of <span>&#92;({\mathcal U}&#92;)</span) as finite disjoint unions of rectangles.
+**Step 2 — Pre-measure property.** **Lemma 18.12** and **Proposition 18.13** confirm \(\rho_o\) is a pre-measure by bootstrapping from Proposition 18.10 through the structure of \({\mathcal U}\) as finite disjoint unions of rectangles.
 
-**Proof of Theorem 18.6.** Apply Carathéodory to <span>&#92;(\rho_o&#92;)</span) to get <span>&#92;(\mu \times \nu&#92;)</span). Uniqueness follows from Dynkin since <span>&#92;({\mathcal R}&#92;)</span) is a π-system generating <span>&#92;({\mathcal M} \times {\mathcal N}&#92;)</span).
+**Proof of Theorem 18.6.** Apply Carathéodory to \(\rho_o\) to get \(\mu \times \nu\). Uniqueness follows from Dynkin since \({\mathcal R}\) is a π-system generating \({\mathcal M} \times {\mathcal N}\).
 
 ---
 
@@ -534,41 +534,41 @@ The word "continuity" is justified by **Proposition 17.3**: if <span>&#92;(\nu(X
 
 #### Slices of Sets and Functions
 
-**Notation 19.2.** For <span>&#92;(E \subseteq X \times Y&#92;)</span) and <span>&#92;(f : X \times Y \to {\mathbb R}&#92;)</span):
-- The **vertical slice** at <span>&#92;(x \in X&#92;)</span): <span>&#92;(E_{[x]} = \{y \in Y : (x,y) \in E\}&#92;)</span), and <span>&#92;(f_{[x]}(y) = f(x,y)&#92;)</span).
-- The **horizontal slice** at <span>&#92;(y \in Y&#92;)</span): <span>&#92;(E^{[y]} = \{x \in X : (x,y) \in E\}&#92;)</span), and <span>&#92;(f^{[y]}(x) = f(x,y)&#92;)</span).
+**Notation 19.2.** For \(E \subseteq X \times Y\) and \(f : X \times Y \to {\mathbb R}\):
+- The **vertical slice** at \(x \in X\): \(E_{[x]} = \{y \in Y : (x,y) \in E\}\), and \(f_{[x]}(y) = f(x,y)\).
+- The **horizontal slice** at \(y \in Y\): \(E^{[y]} = \{x \in X : (x,y) \in E\}\), and \(f^{[y]}(x) = f(x,y)\).
 
-**Proposition 19.3.** Slicing preserves measurability: if <span>&#92;(E \in {\mathcal M} \times {\mathcal N}&#92;)</span) then <span>&#92;(E_{[x]} \in {\mathcal N}&#92;)</span) for all <span>&#92;(x&#92;)</span), and <span>&#92;(E^{[y]} \in {\mathcal M}&#92;)</span) for all <span>&#92;(y&#92;)</span). Similarly for functions in <span>&#92;(\mathrm{Bor}(X \times Y, {\mathbb R})&#92;)</span).
+**Proposition 19.3.** Slicing preserves measurability: if \(E \in {\mathcal M} \times {\mathcal N}\) then \(E_{[x]} \in {\mathcal N}\) for all \(x\), and \(E^{[y]} \in {\mathcal M}\) for all \(y\). Similarly for functions in \(\mathrm{Bor}(X \times Y, {\mathbb R})\).
 
-*Proof.* The embedding maps <span>&#92;(V_x : y \mapsto (x,y)&#92;)</span) and <span>&#92;(H_y : x \mapsto (x,y)&#92;)</span) are measurable (by the generator criterion, Tool 2, applied to the semi-algebra <span>&#92;({\mathcal R}&#92;)</span)). Slices are preimages under these maps.
+*Proof.* The embedding maps \(V_x : y \mapsto (x,y)\) and \(H_y : x \mapsto (x,y)\) are measurable (by the generator criterion, Tool 2, applied to the semi-algebra \({\mathcal R}\)). Slices are preimages under these maps.
 
 #### Computing µ×ν by Slicing
 
-**Proposition 19.5.** Let <span>&#92;(E \in {\mathcal M} \times {\mathcal N}&#92;)</span). Then the functions <span>&#92;(x \mapsto \nu(E_{[x]})&#92;)</span) and <span>&#92;(y \mapsto \mu(E^{[y]})&#92;)</span) are both measurable and non-negative, and:
-<span>&#92;[
-(\mu \times \nu)(E) = \int&#95;X \nu(E&#95;{[x]})\, d\mu(x) = \int&#95;Y \mu(E^{[y]})\, d\nu(y).
-&#92;]</span>
+**Proposition 19.5.** Let \(E \in {\mathcal M} \times {\mathcal N}\). Then the functions \(x \mapsto \nu(E_{[x]})\) and \(y \mapsto \mu(E^{[y]})\) are both measurable and non-negative, and:
+\[
+(\mu \times \nu)(E) = \int_X \nu(E_{[x]})\, d\mu(x) = \int_Y \mu(E^{[y]})\, d\nu(y).
+\]
 
-The proof proceeds via **Dynkin's π-λ theorem** applied to the collection of "good" sets <span>&#92;({\mathcal G}&#92;)</span) for which the statement holds (**Lemma 19.8**). The collection <span>&#92;({\mathcal G}&#92;)</span) is stable under complements (I), finite disjoint unions (II), and increasing chains (III) — making it a **λ-system**. Since <span>&#92;({\mathcal G}&#92;)</span) contains all measurable rectangles (**Lemma 19.9**) and <span>&#92;({\mathcal R}&#92;)</span) is a π-system, **Lemma 19.11** (Dynkin's π-λ theorem in λ-system form) gives <span>&#92;({\mathcal G} \supseteq \sigma\text{-Alg}({\mathcal R}) = {\mathcal M} \times {\mathcal N}&#92;)</span).
+The proof proceeds via **Dynkin's π-λ theorem** applied to the collection of "good" sets \({\mathcal G}\) for which the statement holds (**Lemma 19.8**). The collection \({\mathcal G}\) is stable under complements (I), finite disjoint unions (II), and increasing chains (III) — making it a **λ-system**. Since \({\mathcal G}\) contains all measurable rectangles (**Lemma 19.9**) and \({\mathcal R}\) is a π-system, **Lemma 19.11** (Dynkin's π-λ theorem in λ-system form) gives \({\mathcal G} \supseteq \sigma\text{-Alg}({\mathcal R}) = {\mathcal M} \times {\mathcal N}\).
 
-**Exercise 19.7** shows a beautiful application of this slicing technique: if <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span) is a probability space and <span>&#92;(f \in \mathrm{Bor}^+(X,{\mathbb R})&#92;)</span) is bounded by <span>&#92;(c&#92;)</span), then:
-<span>&#92;[
-\int&#95;X f\, d\mu = \int&#95;0^c \mu(\{f \ge t\})\, dt.
-&#92;]</span>
-This converts an abstract integral into a classical Lebesgue integral, and follows by evaluating <span>&#92;((\mu \times \lambda_{\mathrm{Leb}})(\{(x,t) : f(x) \ge t\})&#92;)</span) two ways.
+**Exercise 19.7** shows a beautiful application of this slicing technique: if \((X, {\mathcal M}, \mu)\) is a probability space and \(f \in \mathrm{Bor}^+(X,{\mathbb R})\) is bounded by \(c\), then:
+\[
+\int_X f\, d\mu = \int_0^c \mu(\{f \ge t\})\, dt.
+\]
+This converts an abstract integral into a classical Lebesgue integral, and follows by evaluating \((\mu \times \lambda_{\mathrm{Leb}})(\{(x,t) : f(x) \ge t\})\) two ways.
 
 #### Theorem of Tonelli (Finite, Bounded Case)
 
-**Theorem 19.12. (Tonelli.)** Let <span>&#92;(\mu, \nu&#92;)</span) be finite measures and <span>&#92;(f \in \mathrm{Bor}^+(X \times Y, {\mathbb R})&#92;)</span) bounded. Then:
-<span>&#92;[
-\int&#95;{X \times Y} f(x,y)\, d(\mu \times \nu)(x,y) = \int&#95;X\!\!\left(\int&#95;Y f(x,y)\, d\nu(y)\right) d\mu(x) = \int&#95;Y\!\!\left(\int&#95;X f(x,y)\, d\mu(x)\right) d\nu(y).
-&#92;]</span>
+**Theorem 19.12. (Tonelli.)** Let \(\mu, \nu\) be finite measures and \(f \in \mathrm{Bor}^+(X \times Y, {\mathbb R})\) bounded. Then:
+\[
+\int_{X \times Y} f(x,y)\, d(\mu \times \nu)(x,y) = \int_X\!\!\left(\int_Y f(x,y)\, d\nu(y)\right) d\mu(x) = \int_Y\!\!\left(\int_X f(x,y)\, d\mu(x)\right) d\nu(y).
+\]
 
-*Proof sketch.* The collection <span>&#92;({\mathcal F}&#92;)</span) of functions for which (19.7) holds contains all indicator functions of measurable rectangles (by Lemma 19.9) and is stable under:
+*Proof sketch.* The collection \({\mathcal F}\) of functions for which (19.7) holds contains all indicator functions of measurable rectangles (by Lemma 19.9) and is stable under:
 - Pointwise limits of increasing sequences (by MCT).
 - Linear combinations with non-negative coefficients.
 
-By bootstrapping from indicator functions to simple functions and then to general bounded <span>&#92;(\mathrm{Bor}^+&#92;)</span) functions, one concludes <span>&#92;({\mathcal F} = \mathrm{Bor}^+(X \times Y, {\mathbb R})&#92;)</span).
+By bootstrapping from indicator functions to simple functions and then to general bounded \(\mathrm{Bor}^+\) functions, one concludes \({\mathcal F} = \mathrm{Bor}^+(X \times Y, {\mathbb R})\).
 
 ---
 
@@ -576,57 +576,57 @@ By bootstrapping from indicator functions to simple functions and then to genera
 
 #### Sigma-Finite Measure Spaces
 
-**Definition 20.1.** A measure space <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span) is **sigma-finite** if there exists an increasing chain <span>&#92;(U_1 \subseteq U_2 \subseteq \cdots&#92;)</span) of sets from <span>&#92;({\mathcal M}&#92;)</span) with <span>&#92;(\bigcup_n U_n = X&#92;)</span) and <span>&#92;(\mu(U_n) < \infty&#92;)</span) for all <span>&#92;(n&#92;)</span). Such a sequence is called an **exhausting chain of sets of finite measure**.
+**Definition 20.1.** A measure space \((X, {\mathcal M}, \mu)\) is **sigma-finite** if there exists an increasing chain \(U_1 \subseteq U_2 \subseteq \cdots\) of sets from \({\mathcal M}\) with \(\bigcup_n U_n = X\) and \(\mu(U_n) < \infty\) for all \(n\). Such a sequence is called an **exhausting chain of sets of finite measure**.
 
-Every finite measure space is sigma-finite (take <span>&#92;(U_n = X&#92;)</span)). The Lebesgue measure space <span>&#92;(({\mathbb R}, {\mathcal B}_{\mathbb R}, \mu_{\mathrm{Leb}})&#92;)</span) is sigma-finite with <span>&#92;(U_n = [-n, n]&#92;)</span).
+Every finite measure space is sigma-finite (take \(U_n = X\)). The Lebesgue measure space \(({\mathbb R}, {\mathcal B}_{\mathbb R}, \mu_{\mathrm{Leb}})\) is sigma-finite with \(U_n = [-n, n]\).
 
 #### From Finite to Sigma-Finite
 
-**Notation 20.4.** If <span>&#92;(Z \in {\mathcal M}&#92;)</span), the **restriction** of <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span) to <span>&#92;(Z&#92;)</span) is the measure space <span>&#92;((Z, {\mathcal M}{\downarrow}_Z, \mu{\downarrow}_Z)&#92;)</span) where <span>&#92;({\mathcal M}{\downarrow}_Z = \{A \in {\mathcal M} : A \subseteq Z\}&#92;)</span).
+**Notation 20.4.** If \(Z \in {\mathcal M}\), the **restriction** of \((X, {\mathcal M}, \mu)\) to \(Z\) is the measure space \((Z, {\mathcal M}{\downarrow}_Z, \mu{\downarrow}_Z)\) where \({\mathcal M}{\downarrow}_Z = \{A \in {\mathcal M} : A \subseteq Z\}\).
 
-**Proposition 20.5. (Coherent family mechanism.)** Suppose <span>&#92;((Z_n)&#92;)</span) exhausts <span>&#92;(Z&#92;)</span) with increasing chain, and we have finite measures <span>&#92;(\rho_n : {\mathcal P}_n \to [0,\infty)&#92;)</span) satisfying the **coherence condition** <span>&#92;(\rho_{n+1}|_{\mathcal P_n} = \rho_n&#92;)</span). Then there is a unique sigma-finite measure <span>&#92;(\rho : {\mathcal P} \to [0,\infty]&#92;)</span) extending all <span>&#92;(\rho_n&#92;)</span), given by <span>&#92;(\rho(E) = \lim&#95;{n\to\infty} \rho&#95;n(E \cap Z&#95;n)&#92;)</span>.
+**Proposition 20.5. (Coherent family mechanism.)** Suppose \((Z_n)\) exhausts \(Z\) with increasing chain, and we have finite measures \(\rho_n : {\mathcal P}_n \to [0,\infty)\) satisfying the **coherence condition** \(\rho_{n+1}|_{\mathcal P_n} = \rho_n\). Then there is a unique sigma-finite measure \(\rho : {\mathcal P} \to [0,\infty]\) extending all \(\rho_n\), given by \(\rho(E) = \lim_{n\to\infty} \rho_n(E \cap Z_n)\).
 
 #### The Product Measure for Sigma-Finite Spaces
 
-**Theorem 20.7.** Let <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span) and <span>&#92;((Y, {\mathcal N}, \nu)&#92;)</span) be sigma-finite measure spaces. There exists a unique sigma-finite positive measure <span>&#92;(\mu \times \nu : {\mathcal M} \times {\mathcal N} \to [0,\infty]&#92;)</span) satisfying <span>&#92;((\mu \times \nu)(A \times B) = \mu(A)\nu(B)&#92;)</span) for all <span>&#92;(A \in {\mathcal M}&#92;)</span), <span>&#92;(B \in {\mathcal N}&#92;)</span) (using <span>&#92;(0 \cdot \infty = 0&#92;)</span)).
+**Theorem 20.7.** Let \((X, {\mathcal M}, \mu)\) and \((Y, {\mathcal N}, \nu)\) be sigma-finite measure spaces. There exists a unique sigma-finite positive measure \(\mu \times \nu : {\mathcal M} \times {\mathcal N} \to [0,\infty]\) satisfying \((\mu \times \nu)(A \times B) = \mu(A)\nu(B)\) for all \(A \in {\mathcal M}\), \(B \in {\mathcal N}\) (using \(0 \cdot \infty = 0\)).
 
-*Proof outline.* **Uniqueness** follows from Dynkin's theorem (Proposition 5.4) using the exhausting chain <span>&#92;((U_n \times V_n)&#92;)</span). **Existence** is constructed by applying Theorem 18.6 to the finite restrictions <span>&#92;(\mu{\downarrow}_{U_n}&#92;)</span) and <span>&#92;(\nu{\downarrow}_{V_n}&#92;)</span), producing finite measures <span>&#92;(\rho_n&#92;)</span) on <span>&#92;(({\mathcal M} \times {\mathcal N}){\downarrow}_{U_n \times V_n}&#92;)</span). Coherence holds by Exercise 20.6 (the restriction of the product sigma-algebra to a sub-rectangle is the product of the restricted sigma-algebras). Proposition 20.5 then assembles these into the sigma-finite product measure.
+*Proof outline.* **Uniqueness** follows from Dynkin's theorem (Proposition 5.4) using the exhausting chain \((U_n \times V_n)\). **Existence** is constructed by applying Theorem 18.6 to the finite restrictions \(\mu{\downarrow}_{U_n}\) and \(\nu{\downarrow}_{V_n}\), producing finite measures \(\rho_n\) on \(({\mathcal M} \times {\mathcal N}){\downarrow}_{U_n \times V_n}\). Coherence holds by Exercise 20.6 (the restriction of the product sigma-algebra to a sub-rectangle is the product of the restricted sigma-algebras). Proposition 20.5 then assembles these into the sigma-finite product measure.
 
 #### Theorem of Tonelli — Sigma-Finite Version
 
-**Theorem 20.8. (Tonelli, sigma-finite.)** Let <span>&#92;(f \in \mathrm{Bor}^+(X \times Y, {\mathbb R})&#92;)</span) (possibly taking value <span>&#92;(\infty&#92;)</span)). Let <span>&#92;(T = \{x \in X : \int_Y f_{[x]}\, d\nu = \infty\}&#92;)</span). Then:
+**Theorem 20.8. (Tonelli, sigma-finite.)** Let \(f \in \mathrm{Bor}^+(X \times Y, {\mathbb R})\) (possibly taking value \(\infty\)). Let \(T = \{x \in X : \int_Y f_{[x]}\, d\nu = \infty\}\). Then:
 
-1. <span>&#92;(T \in {\mathcal M}&#92;)</span).
-2. If <span>&#92;(\mu(T) > 0&#92;)</span), then <span>&#92;(\int_{X \times Y} f\, d(\mu \times \nu) = \infty&#92;)</span).
-3. If <span>&#92;(\mu(T) = 0&#92;)</span), define <span>&#92;(F(x) = \int_Y f_{[x]}\, d\nu&#92;)</span) for <span>&#92;(x \notin T&#92;)</span) and <span>&#92;(F(x) = 0&#92;)</span) for <span>&#92;(x \in T&#92;)</span). Then <span>&#92;(F \in \mathrm{Bor}^+(X,{\mathbb R})&#92;)</span) and:
-<span>&#92;[
-\int&#95;X F(x)\, d\mu(x) = \int&#95;{X \times Y} f(x,y)\, d(\mu \times \nu)(x,y).
-&#92;]</span>
+1. \(T \in {\mathcal M}\).
+2. If \(\mu(T) > 0\), then \(\int_{X \times Y} f\, d(\mu \times \nu) = \infty\).
+3. If \(\mu(T) = 0\), define \(F(x) = \int_Y f_{[x]}\, d\nu\) for \(x \notin T\) and \(F(x) = 0\) for \(x \in T\). Then \(F \in \mathrm{Bor}^+(X,{\mathbb R})\) and:
+\[
+\int_X F(x)\, d\mu(x) = \int_{X \times Y} f(x,y)\, d(\mu \times \nu)(x,y).
+\]
 
-*Proof outline.* Approximate <span>&#92;(f&#92;)</span) by an increasing sequence <span>&#92;((f_n)&#92;)</span) of bounded functions supported on <span>&#92;(U_n \times V_n&#92;)</span), apply the finite version of Tonelli (Theorem 19.12) to each <span>&#92;(f_n&#92;)</span), and pass to the limit by MCT.
+*Proof outline.* Approximate \(f\) by an increasing sequence \((f_n)\) of bounded functions supported on \(U_n \times V_n\), apply the finite version of Tonelli (Theorem 19.12) to each \(f_n\), and pass to the limit by MCT.
 
 #### Theorem of Fubini
 
-**Definition 20.9. (Iterated integral.)** For <span>&#92;(f \in \mathrm{Bor}(X \times Y, {\mathbb R})&#92;)</span), the **iterated integral** "integrate first <span>&#92;(y&#92;)</span), then <span>&#92;(x&#92;)</span)" is:
-<span>&#92;[
-\iint f(x,y)\, d\nu(y)\, d\mu(x) := \int&#95;X\!\!\left(\int&#95;Y f&#95;{[x]}(y)\, d\nu(y)\right) d\mu(x),
-&#92;]</span>
-provided the inner integral exists for a.e.-<span>&#92;(\mu&#92;)</span) value of <span>&#92;(x&#92;)</span) and the outer integral then converges. The definition is independent of the choice of null set <span>&#92;(W&#92;)</span) where the inner integral may fail.
+**Definition 20.9. (Iterated integral.)** For \(f \in \mathrm{Bor}(X \times Y, {\mathbb R})\), the **iterated integral** "integrate first \(y\), then \(x\)" is:
+\[
+\iint f(x,y)\, d\nu(y)\, d\mu(x) := \int_X\!\!\left(\int_Y f_{[x]}(y)\, d\nu(y)\right) d\mu(x),
+\]
+provided the inner integral exists for a.e.-\(\mu\) value of \(x\) and the outer integral then converges. The definition is independent of the choice of null set \(W\) where the inner integral may fail.
 
-**Remark 20.11.** The iterated integral may exist in one order but not the other, and they may differ if both exist — pathologies are possible without an integrability hypothesis on <span>&#92;(f&#92;)</span). Fubini rules this out.
+**Remark 20.11.** The iterated integral may exist in one order but not the other, and they may differ if both exist — pathologies are possible without an integrability hypothesis on \(f\). Fubini rules this out.
 
-**Theorem 20.12. (Fubini.)** Let <span>&#92;(f \in L^1(\mu \times \nu)&#92;)</span). Then both iterated integrals exist and equal the double integral:
-<span>&#92;[
-\iint f(x,y)\, d\nu(y)\, d\mu(x) = \int&#95;{X \times Y} f\, d(\mu \times \nu) = \iint f(x,y)\, d\mu(x)\, d\nu(y).
-&#92;]</span>
+**Theorem 20.12. (Fubini.)** Let \(f \in L^1(\mu \times \nu)\). Then both iterated integrals exist and equal the double integral:
+\[
+\iint f(x,y)\, d\nu(y)\, d\mu(x) = \int_{X \times Y} f\, d(\mu \times \nu) = \iint f(x,y)\, d\mu(x)\, d\nu(y).
+\]
 
-*Proof.* Write <span>&#92;(f = f^+ - f^-&#92;)</span). Since <span>&#92;(f \in L^1&#92;)</span), both <span>&#92;(\int f^\pm\, d(\mu \times \nu) < \infty&#92;)</span). Apply Tonelli's Theorem 20.8 to <span>&#92;(f^+&#92;)</span) and <span>&#92;(f^-&#92;)</span) separately (finite integral forces us into case 3 of Tonelli), then subtract.
+*Proof.* Write \(f = f^+ - f^-\). Since \(f \in L^1\), both \(\int f^\pm\, d(\mu \times \nu) < \infty\). Apply Tonelli's Theorem 20.8 to \(f^+\) and \(f^-\) separately (finite integral forces us into case 3 of Tonelli), then subtract.
 
-**Remark 20.13. (Warning.)** The converse of Fubini is false: iterated integrals can exist and be equal without <span>&#92;(f \in L^1(\mu \times \nu)&#92;)</span). When using Fubini to swap integration order, one must first verify integrability — usually done by applying Tonelli to <span>&#92;(|f|&#92;)</span):
-<span>&#92;[
-\int&#95;{X \times Y} |f|\, d(\mu \times \nu) = \iint |f(x,y)|\, d\nu(y)\, d\mu(x).
-&#92;]</span>
-If this iterated integral is finite, then <span>&#92;(f \in L^1(\mu \times \nu)&#92;)</span) and Fubini applies.
+**Remark 20.13. (Warning.)** The converse of Fubini is false: iterated integrals can exist and be equal without \(f \in L^1(\mu \times \nu)\). When using Fubini to swap integration order, one must first verify integrability — usually done by applying Tonelli to \(|f|\):
+\[
+\int_{X \times Y} |f|\, d(\mu \times \nu) = \iint |f(x,y)|\, d\nu(y)\, d\mu(x).
+\]
+If this iterated integral is finite, then \(f \in L^1(\mu \times \nu)\) and Fubini applies.
 
 ---
 
@@ -636,14 +636,14 @@ If this iterated integral is finite, then <span>&#92;(f \in L^1(\mu \times \nu)&
 |---------|-----------|--------------|
 | **Carathéodory Extension** | Pre-measure on algebra extends to sigma-algebra; unique if sigma-finite | Lectures 5–6 |
 | **Dynkin's π-λ Theorem** | A λ-system containing a π-system contains the generated sigma-algebra | Lecture 5, used throughout |
-| **Monotone Convergence (MCT)** | <span>&#92;(f_n \nearrow f \Rightarrow \int f_n \nearrow \int f&#92;)</span) | Lecture 10 |
-| **Fatou's Lemma** | <span>&#92;(\int \liminf f_n \le \liminf \int f_n&#92;)</span) | Lecture 12 |
+| **Monotone Convergence (MCT)** | \(f_n \nearrow f \Rightarrow \int f_n \nearrow \int f\) | Lecture 10 |
+| **Fatou's Lemma** | \(\int \liminf f_n \le \liminf \int f_n\) | Lecture 12 |
 | **LDCT** | Dominated pointwise convergence implies L¹ convergence | Lecture 12 |
-| **Hölder's Inequality** | <span>&#92;(\int |fg| \le \|f\|_p \|g\|_q&#92;)</span) for conjugate <span>&#92;(p,q&#92;)</span) | Lecture 13 |
-| **Minkowski's Inequality** | <span>&#92;(\|f+g\|_p \le \|f\|_p + \|g\|_p&#92;)</span) | Lecture 13 |
-| **Riesz-Fischer** | <span>&#92;(L^p(\mu)&#92;)</span) is a Banach space for <span>&#92;(1 \le p \le \infty&#92;)</span) | Lecture 14 |
-| **Riesz Representation (L²)** | Every bounded linear functional on <span>&#92;(L^2&#92;)</span) is an inner product | Lecture 15 |
-| **Radon-Nikodym** | <span>&#92;(\nu \ll \mu&#92;)</span) (finite) <span>&#92;\Rightarrow&#92;)</span) <span>&#92;(d\nu = h\, d\mu&#92;)</span) for some density <span>&#92;(h&#92;)</span) | Lectures 16–17 |
-| **Lebesgue Decomposition** | Any finite <span>&#92;(\nu = \nu_1 + \nu_2&#92;)</span) with <span>&#92;(\nu_1 \ll \mu&#92;)</span), <span>&#92;(\nu_2 \perp \mu&#92;)</span) | Lecture 17 |
+| **Hölder's Inequality** | \(\int |fg| \le \|f\|_p \|g\|_q\) for conjugate \(p,q\) | Lecture 13 |
+| **Minkowski's Inequality** | \(\|f+g\|_p \le \|f\|_p + \|g\|_p\) | Lecture 13 |
+| **Riesz-Fischer** | \(L^p(\mu)\) is a Banach space for \(1 \le p \le \infty\) | Lecture 14 |
+| **Riesz Representation (L²)** | Every bounded linear functional on \(L^2\) is an inner product | Lecture 15 |
+| **Radon-Nikodym** | \(\nu \ll \mu\) (finite) \Rightarrow\) \(d\nu = h\, d\mu\) for some density \(h\) | Lectures 16–17 |
+| **Lebesgue Decomposition** | Any finite \(\nu = \nu_1 + \nu_2\) with \(\nu_1 \ll \mu\), \(\nu_2 \perp \mu\) | Lecture 17 |
 | **Tonelli** | Non-negative function: iterated integrals equal product integral | Lectures 19–20 |
-| **Fubini** | <span>&#92;(L^1&#92;)</span) function: iterated integrals exist, equal, and equal product integral | Lecture 20 |
+| **Fubini** | \(L^1\) function: iterated integrals exist, equal, and equal product integral | Lecture 20 |

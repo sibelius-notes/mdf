@@ -188,7 +188,7 @@ To copy
 - count \# of arguments: copy in each of the addresses of the array and checking how many do you have before NULL
 - Then copy in each arg string
 
-You need to allocate memory for pointer array and the strings, strings take memeory. You can use `strlen`, but remember it doesn't include NULL terminator. OR you could assume a total length &#92;(\le &#92;) 128 bytes.
+You need to allocate memory for pointer array and the strings, strings take memeory. You can use `strlen`, but remember it doesn't include NULL terminator. OR you could assume a total length \(\le \) 128 bytes.
 
 We need to take all these args copied into the kernel, and put then onto the stack of new user program. But it's not sufficient to arbitrarily dump things. There are some conventions to dictate the things have to live on the stack so the new program knows where to find the parameters. True in OS/161 and modern OS. These arguments must go onto the stack with a particular byte alignment.
 

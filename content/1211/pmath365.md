@@ -5,195 +5,195 @@ prof: "Spiro Karigiannis"
 
 # PMATH 365: Differential Geometry
 
-This course develops the classical theory of curves and surfaces, leading to the Gauss-Bonnet theorem, then generalizes this geometry to submanifolds of <span>&#92;(&#92;mathbb{R}^n&#92;)</span> using the language of differential forms and tensor algebras.
+This course develops the classical theory of curves and surfaces, leading to the Gauss-Bonnet theorem, then generalizes this geometry to submanifolds of \(\mathbb{R}^n\) using the language of differential forms and tensor algebras.
 
 ---
 
 ## Chapter 1: Curves
 
-### Curves in <span>&#92;(&#92;mathbb{R}^n&#92;)</span>
+### Curves in \(\mathbb{R}^n\)
 
-A **parametrized curve** in <span>&#92;(&#92;mathbb{R}^n&#92;)</span> is a continuous map <span>&#92;(&#92;alpha : I &#92;subseteq &#92;mathbb{R} &#92;to &#92;mathbb{R}^n&#92;)</span> where <span>&#92;(I&#92;)</span> is a nonempty interval. Writing <span>&#92;(&#92;alpha(t) = (x&#95;1(t), x&#95;2(t), &#92;ldots, x&#95;n(t))&#92;)</span>, we say <span>&#92;(&#92;alpha&#92;)</span> is **<span>&#92;(C^k&#92;)</span>** when all derivatives up to order <span>&#92;(k&#92;)</span> exist and are continuous, **smooth** or **<span>&#92;(C^&#92;infty&#92;)</span>** when it is <span>&#92;(C^k&#92;)</span> for all <span>&#92;(k&#92;)</span>, and **regular** when it is <span>&#92;(C^1&#92;)</span> with <span>&#92;(&#92;alpha'(t) &#92;neq 0&#92;)</span> for all <span>&#92;(t &#92;in I&#92;)</span>. Unless otherwise stated, all curves are assumed smooth and regular.
+A **parametrized curve** in \(\mathbb{R}^n\) is a continuous map \(\alpha : I \subseteq \mathbb{R} \to \mathbb{R}^n\) where \(I\) is a nonempty interval. Writing \(\alpha(t) = (x_1(t), x_2(t), \ldots, x_n(t))\), we say \(\alpha\) is **\(C^k\)** when all derivatives up to order \(k\) exist and are continuous, **smooth** or **\(C^\infty\)** when it is \(C^k\) for all \(k\), and **regular** when it is \(C^1\) with \(\alpha'(t) \neq 0\) for all \(t \in I\). Unless otherwise stated, all curves are assumed smooth and regular.
 
-The tangent vector <span>&#92;(&#92;alpha'(a)&#92;)</span> exists at any point where <span>&#92;(&#92;alpha&#92;)</span> is differentiable, and regularity guarantees this tangent vector is always nonzero. A curve that fails regularity may cross itself or have corners: the curve <span>&#92;(&#92;alpha(t) = (t, |t|)&#92;)</span> has no derivative at <span>&#92;(t=0&#92;)</span>, the curve <span>&#92;(&#92;beta(t) = (t^3, t^2)&#92;)</span> has <span>&#92;(&#92;beta'(0) = 0&#92;)</span>, and the curve <span>&#92;(&#92;gamma(t) = (t, t^2 &#92;sin(1/t))&#92;)</span> for <span>&#92;(t &#92;neq 0&#92;)</span> with <span>&#92;(&#92;gamma(0)=0&#92;)</span> is differentiable but not <span>&#92;(C^1&#92;)</span>.
+The tangent vector \(\alpha'(a)\) exists at any point where \(\alpha\) is differentiable, and regularity guarantees this tangent vector is always nonzero. A curve that fails regularity may cross itself or have corners: the curve \(\alpha(t) = (t, |t|)\) has no derivative at \(t=0\), the curve \(\beta(t) = (t^3, t^2)\) has \(\beta'(0) = 0\), and the curve \(\gamma(t) = (t, t^2 \sin(1/t))\) for \(t \neq 0\) with \(\gamma(0)=0\) is differentiable but not \(C^1\).
 
-**Theorem 1.3** (Local Injectivity): Every regular curve in <span>&#92;(&#92;mathbb{R}^n&#92;)</span> is locally injective.
+**Theorem 1.3** (Local Injectivity): Every regular curve in \(\mathbb{R}^n\) is locally injective.
 
-*Proof.* Let <span>&#92;(a &#92;in I&#92;)</span>. Since <span>&#92;(&#92;alpha'(a) &#92;neq 0&#92;)</span>, some coordinate function satisfies <span>&#92;(x&#95;k'(a) &#92;neq 0&#92;)</span>, say <span>&#92;(x&#95;k'(a) > 0&#92;)</span>. By continuity of <span>&#92;(x&#95;k'&#92;)</span>, there exists <span>&#92;(&#92;delta > 0&#92;)</span> such that <span>&#92;(x&#95;k'(t) > 0&#92;)</span> for <span>&#92;(|t-a| < &#92;delta&#92;)</span>. Thus <span>&#92;(x&#95;k&#92;)</span> is strictly increasing on <span>&#92;((a-&#92;delta, a+&#92;delta)&#92;)</span>, making <span>&#92;(&#92;alpha&#92;)</span> injective there. <span>&#92;(&#92;square&#92;)</span>
+*Proof.* Let \(a \in I\). Since \(\alpha'(a) \neq 0\), some coordinate function satisfies \(x_k'(a) \neq 0\), say \(x_k'(a) > 0\). By continuity of \(x_k'\), there exists \(\delta > 0\) such that \(x_k'(t) > 0\) for \(|t-a| < \delta\). Thus \(x_k\) is strictly increasing on \((a-\delta, a+\delta)\), making \(\alpha\) injective there. \(\square\)
 
-Regularity is not necessary for global injectivity (the three non-regular examples above are all globally injective). Conversely, regular curves can fail to be globally injective: the alpha curve <span>&#92;(&#92;alpha(t) = (t^2-1, t(t^2-1))&#92;)</span> crosses itself at the origin.
+Regularity is not necessary for global injectivity (the three non-regular examples above are all globally injective). Conversely, regular curves can fail to be globally injective: the alpha curve \(\alpha(t) = (t^2-1, t(t^2-1))\) crosses itself at the origin.
 
-The **length** of a curve <span>&#92;(&#92;alpha : [a,b] &#92;to &#92;mathbb{R}^n&#92;)</span> is defined as the supremum of lengths of all piecewise linear approximations:
-<span>&#92;[
-L = L_&#92;alpha[a,b] = &#92;sup &#92;left&#92;{ &#92;sum_{j=1}^p |&#92;alpha(t_j) - &#92;alpha(t_{j-1})| &#92;,&#92;Big|&#92;, a = t_0 < t_1 < &#92;cdots < t_p = b &#92;right&#92;}.
-&#92;]</span>
+The **length** of a curve \(\alpha : [a,b] \to \mathbb{R}^n\) is defined as the supremum of lengths of all piecewise linear approximations:
+\[
+L = L_\alpha[a,b] = \sup \left\{ \sum_{j=1}^p |\alpha(t_j) - \alpha(t_{j-1})| \,\Big|\, a = t_0 < t_1 < \cdots < t_p = b \right\}.
+\]
 
-**Theorem 1.8** (Arclength Formula): For a regular curve <span>&#92;(&#92;alpha : [a,b] &#92;to &#92;mathbb{R}^n&#92;)</span>,
-<span>&#92;[
-L = L&#95;&#92;alpha[a,b] = &#92;int&#95;a^b |&#92;alpha'(t)|&#92;, dt.
-&#92;]</span>
+**Theorem 1.8** (Arclength Formula): For a regular curve \(\alpha : [a,b] \to \mathbb{R}^n\),
+\[
+L = L_\alpha[a,b] = \int_a^b |\alpha'(t)|\, dt.
+\]
 
-*Proof.* The proof proceeds by showing the supremum of the piecewise linear sums <span>&#92;(L(&#92;alpha, P)&#92;)</span> and the Riemann sums <span>&#92;(S(&#92;alpha, P)&#92;)</span> for <span>&#92;(&#92;int |&#92;alpha'|&#92;)</span> both approximate the same limit. Given <span>&#92;(&#92;epsilon > 0&#92;)</span>, by uniform continuity of each <span>&#92;(x&#95;k'&#92;)</span> and Riemann integrability of <span>&#92;(|&#92;alpha'|&#92;)</span>, one finds a partition <span>&#92;(P&#92;)</span> fine enough that <span>&#92;(L - L(&#92;alpha,P) < &#92;epsilon/3&#92;)</span>, <span>&#92;(|&#92;int |&#92;alpha'| - S(&#92;alpha,P)| < &#92;epsilon/3&#92;)</span>, and <span>&#92;(|L(&#92;alpha,P) - S(&#92;alpha,P)| < &#92;epsilon/3&#92;)</span>, yielding <span>&#92;(|L - &#92;int |&#92;alpha'|| < &#92;epsilon&#92;)</span>. <span>&#92;(&#92;square&#92;)</span>
+*Proof.* The proof proceeds by showing the supremum of the piecewise linear sums \(L(\alpha, P)\) and the Riemann sums \(S(\alpha, P)\) for \(\int |\alpha'|\) both approximate the same limit. Given \(\epsilon > 0\), by uniform continuity of each \(x_k'\) and Riemann integrability of \(|\alpha'|\), one finds a partition \(P\) fine enough that \(L - L(\alpha,P) < \epsilon/3\), \(|\int |\alpha'| - S(\alpha,P)| < \epsilon/3\), and \(|L(\alpha,P) - S(\alpha,P)| < \epsilon/3\), yielding \(|L - \int |\alpha'|| < \epsilon\). \(\square\)
 
-A **reparametrization** of <span>&#92;(&#92;alpha&#92;)</span> is a curve <span>&#92;(&#92;beta(s) = &#92;alpha(t(s))&#92;)</span> where <span>&#92;(s : I &#92;to J&#92;)</span> is a homeomorphism. When <span>&#92;(s'(t) &#92;neq 0&#92;)</span> for all <span>&#92;(t&#92;)</span>, the reparametrization is **regular**; it **preserves direction** when <span>&#92;(s'(t) > 0&#92;)</span> and **reverses direction** when <span>&#92;(s'(t) < 0&#92;)</span>. We say <span>&#92;(&#92;beta&#92;)</span> is **parametrized by arclength** when <span>&#92;(|&#92;beta'(s)| = 1&#92;)</span> for all <span>&#92;(s&#92;)</span>.
+A **reparametrization** of \(\alpha\) is a curve \(\beta(s) = \alpha(t(s))\) where \(s : I \to J\) is a homeomorphism. When \(s'(t) \neq 0\) for all \(t\), the reparametrization is **regular**; it **preserves direction** when \(s'(t) > 0\) and **reverses direction** when \(s'(t) < 0\). We say \(\beta\) is **parametrized by arclength** when \(|\beta'(s)| = 1\) for all \(s\).
 
 **Theorem 1.11**: Every regular curve can be reparametrized by arclength using a regular direction-preserving change of coordinates.
 
-*Proof.* Fix <span>&#92;(a &#92;in I&#92;)</span> and define <span>&#92;(s(t) = &#92;int&#95;a^t |&#92;alpha'(r)|&#92;, dr&#92;)</span>. Then <span>&#92;(s'(t) = |&#92;alpha'(t)| > 0&#92;)</span>, so <span>&#92;(s&#92;)</span> is regular and strictly increasing. Its inverse satisfies <span>&#92;(t'(s) = 1/|&#92;alpha'(t)|&#92;)</span>, and the reparametrized curve <span>&#92;(&#92;beta(s) = &#92;alpha(t(s))&#92;)</span> has <span>&#92;(|&#92;beta'(s)| = |&#92;alpha'(t(s))| &#92;cdot t'(s) = 1&#92;)</span>. <span>&#92;(&#92;square&#92;)</span>
+*Proof.* Fix \(a \in I\) and define \(s(t) = \int_a^t |\alpha'(r)|\, dr\). Then \(s'(t) = |\alpha'(t)| > 0\), so \(s\) is regular and strictly increasing. Its inverse satisfies \(t'(s) = 1/|\alpha'(t)|\), and the reparametrized curve \(\beta(s) = \alpha(t(s))\) has \(|\beta'(s)| = |\alpha'(t(s))| \cdot t'(s) = 1\). \(\square\)
 
-### Curves in <span>&#92;(&#92;mathbb{R}^2&#92;)</span>
+### Curves in \(\mathbb{R}^2\)
 
-Let <span>&#92;(&#92;beta : J &#92;to &#92;mathbb{R}^2&#92;)</span> be a smooth regular curve parametrized by arclength. For a vector <span>&#92;(u = (x,y)&#92;)</span>, write <span>&#92;(u^&#92;times = (-y, x)&#92;)</span>. The **unit tangent vector** and **unit normal vector** are
-<span>&#92;[
-T(s) = T&#95;&#92;beta(s) = &#92;beta'(s), &#92;qquad N(s) = N&#95;&#92;beta(s) = T(s)^&#92;times.
-&#92;]</span>
-Since <span>&#92;(|T(s)|=1&#92;)</span>, differentiating gives <span>&#92;(T'(s) &#92;perp T(s)&#92;)</span>, so <span>&#92;(T'(s) = k(s) N(s)&#92;)</span> for some scalar. The **signed curvature** is the real number <span>&#92;(k(s) = k&#95;&#92;beta(s)&#92;)</span> defined by
-<span>&#92;[
-&#92;beta''(s) = k(s) N(s).
-&#92;]</span>
-The **scalar curvature** is <span>&#92;(&#92;kappa(s) = |k(s)| = |&#92;beta''(s)|&#92;)</span>. For an arbitrary regular curve <span>&#92;(&#92;alpha : I &#92;to &#92;mathbb{R}^2&#92;)</span>, one first reparametrizes by arclength and then defines <span>&#92;(T, N, k, &#92;kappa&#92;)</span> in terms of the reparametrized curve.
+Let \(\beta : J \to \mathbb{R}^2\) be a smooth regular curve parametrized by arclength. For a vector \(u = (x,y)\), write \(u^\times = (-y, x)\). The **unit tangent vector** and **unit normal vector** are
+\[
+T(s) = T_\beta(s) = \beta'(s), \qquad N(s) = N_\beta(s) = T(s)^\times.
+\]
+Since \(|T(s)|=1\), differentiating gives \(T'(s) \perp T(s)\), so \(T'(s) = k(s) N(s)\) for some scalar. The **signed curvature** is the real number \(k(s) = k_\beta(s)\) defined by
+\[
+\beta''(s) = k(s) N(s).
+\]
+The **scalar curvature** is \(\kappa(s) = |k(s)| = |\beta''(s)|\). For an arbitrary regular curve \(\alpha : I \to \mathbb{R}^2\), one first reparametrizes by arclength and then defines \(T, N, k, \kappa\) in terms of the reparametrized curve.
 
-**Theorem 1.14** (Curvature Formulas): For a smooth regular curve <span>&#92;(&#92;alpha : I &#92;to &#92;mathbb{R}^2&#92;)</span> with <span>&#92;(&#92;alpha' = (x', y')&#92;)</span>,
-<span>&#92;[
-k = k&#95;&#92;alpha = &#92;frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}, &#92;qquad &#92;kappa = |k&#95;&#92;alpha| = &#92;frac{|x'y'' - y'x''|}{(x'^2+y'^2)^{3/2}}.
-&#92;]</span>
+**Theorem 1.14** (Curvature Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^2\) with \(\alpha' = (x', y')\),
+\[
+k = k_\alpha = \frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}, \qquad \kappa = |k_\alpha| = \frac{|x'y'' - y'x''|}{(x'^2+y'^2)^{3/2}}.
+\]
 
-The **osculating circle** of <span>&#92;(&#92;beta&#92;)</span> at <span>&#92;(s&#95;0&#92;)</span> is the circle through <span>&#92;(&#92;beta(s&#95;0)&#92;)</span> with center <span>&#92;(&#92;beta(s&#95;0) + &#92;frac{1}{k(s&#95;0)} N(s&#95;0)&#92;)</span> (when <span>&#92;(k(s&#95;0) &#92;neq 0&#92;)</span>) and radius <span>&#92;(1/|k(s&#95;0)|&#92;)</span>. It is the best-fit circle to the curve at that point.
+The **osculating circle** of \(\beta\) at \(s_0\) is the circle through \(\beta(s_0)\) with center \(\beta(s_0) + \frac{1}{k(s_0)} N(s_0)\) (when \(k(s_0) \neq 0\) and radius \(1/|k(s_0)|\). It is the best-fit circle to the curve at that point.
 
-**Theorem 1.17** (Polar Coordinates for Plane Curves): Let <span>&#92;(&#92;beta : J &#92;to &#92;mathbb{R}^2&#92;)</span> be a smooth regular curve with <span>&#92;(|&#92;beta'(s)| = 1&#92;)</span>. There exists a smooth function <span>&#92;(&#92;theta : J &#92;to &#92;mathbb{R}&#92;)</span>, unique up to adding an integer multiple of <span>&#92;(2&#92;pi&#92;)</span>, such that
-<span>&#92;[
-&#92;beta'(s) = (&#92;cos&#92;theta(s),&#92; &#92;sin&#92;theta(s)).
-&#92;]</span>
-In this case <span>&#92;(&#92;theta'(s) = k(s)&#92;)</span>.
+**Theorem 1.17** (Polar Coordinates for Plane Curves): Let \(\beta : J \to \mathbb{R}^2\) be a smooth regular curve with \(|\beta'(s)| = 1\). There exists a smooth function \(\theta : J \to \mathbb{R}\), unique up to adding an integer multiple of \(2\pi\), such that
+\[
+\beta'(s) = (\cos\theta(s),\ \sin\theta(s)).
+\]
+In this case \(\theta'(s) = k(s)\).
 
-For a closed curve <span>&#92;(&#92;alpha : [0, L] &#92;to &#92;mathbb{R}^2&#92;)</span> (with <span>&#92;(&#92;alpha(0)=&#92;alpha(L)&#92;)</span>), the **winding number** <span>&#92;(w(&#92;alpha, p)&#92;)</span> around a point <span>&#92;(p&#92;)</span> not on the curve counts how many times the curve winds around <span>&#92;(p&#92;)</span>. The **turning number** (or rotation number) is
-<span>&#92;[
-n(&#92;alpha) = &#92;frac{1}{2&#92;pi}&#92;int&#95;0^L k(s)&#92;, ds = &#92;frac{&#92;theta(L) - &#92;theta(0)}{2&#92;pi},
-&#92;]</span>
-the total turning of the tangent vector divided by <span>&#92;(2&#92;pi&#92;)</span>.
+For a closed curve \(\alpha : [0, L] \to \mathbb{R}^2\) (with \(\alpha(0)=\alpha(L)\), the **winding number** \(w(\alpha, p)\) around a point \(p\) not on the curve counts how many times the curve winds around \(p\). The **turning number** (or rotation number) is
+\[
+n(\alpha) = \frac{1}{2\pi}\int_0^L k(s)\, ds = \frac{\theta(L) - \theta(0)}{2\pi},
+\]
+the total turning of the tangent vector divided by \(2\pi\).
 
-**Theorem 1.19** (Turning Number Theorem): For a smooth closed regular curve in <span>&#92;(&#92;mathbb{R}^2&#92;)</span> that does not self-intersect, the turning number is <span>&#92;(&#92;pm 1&#92;)</span>.
+**Theorem 1.19** (Turning Number Theorem): For a smooth closed regular curve in \(\mathbb{R}^2\) that does not self-intersect, the turning number is \(\pm 1\).
 
-**Theorem 1.20** (Fundamental Theorem for Plane Curves): Given a smooth function <span>&#92;(k : J &#92;to &#92;mathbb{R}&#92;)</span> and a point <span>&#92;(p &#92;in &#92;mathbb{R}^2&#92;)</span>, a unit vector <span>&#92;(A &#92;in &#92;mathbb{R}^2&#92;)</span>, and <span>&#92;(s&#95;0 &#92;in J&#92;)</span>, there exists a unique smooth regular curve <span>&#92;(&#92;beta : J &#92;to &#92;mathbb{R}^2&#92;)</span> parametrized by arclength with <span>&#92;(&#92;beta(s&#95;0)=p&#92;)</span>, <span>&#92;(&#92;beta'(s&#95;0)=A&#92;)</span>, and signed curvature <span>&#92;(k&#95;&#92;beta = k&#92;)</span>.
+**Theorem 1.20** (Fundamental Theorem for Plane Curves): Given a smooth function \(k : J \to \mathbb{R}\) and a point \(p \in \mathbb{R}^2\), a unit vector \(A \in \mathbb{R}^2\), and \(s_0 \in J\), there exists a unique smooth regular curve \(\beta : J \to \mathbb{R}^2\) parametrized by arclength with \(\beta(s_0)=p\), \(\beta'(s_0)=A\), and signed curvature \(k_\beta = k\).
 
-*Proof sketch.* By the Polar Coordinates Theorem, define <span>&#92;(&#92;theta(s) = &#92;theta&#95;0 + &#92;int&#95;{s&#95;0}^s k(r)&#92;,dr&#92;)</span> where <span>&#92;(&#92;theta&#95;0&#92;)</span> is chosen so that <span>&#92;(A = (&#92;cos&#92;theta&#95;0, &#92;sin&#92;theta&#95;0)&#92;)</span>, then set <span>&#92;(&#92;beta(s) = p + &#92;int&#95;{s&#95;0}^s (&#92;cos&#92;theta(r), &#92;sin&#92;theta(r))&#92;,dr&#92;)</span>.
+*Proof sketch.* By the Polar Coordinates Theorem, define \(\theta(s) = \theta_0 + \int_{s_0}^s k(r)\,dr\) where \(\theta_0\) is chosen so that \(A = (\cos\theta_0, \sin\theta_0)\), then set \(\beta(s) = p + \int_{s_0}^s (\cos\theta(r), \sin\theta(r))\,dr\).
 
-### Curves in <span>&#92;(&#92;mathbb{R}^3&#92;)</span>
+### Curves in \(\mathbb{R}^3\)
 
-For a smooth regular curve <span>&#92;(&#92;beta : J &#92;to &#92;mathbb{R}^3&#92;)</span> parametrized by arclength, the **unit tangent vector** is <span>&#92;(T = &#92;beta'&#92;)</span>. Since <span>&#92;(|T| = 1&#92;)</span>, we have <span>&#92;(T' &#92;perp T&#92;)</span>. When <span>&#92;(T'(s) &#92;neq 0&#92;)</span>, the **principal normal vector** is <span>&#92;(P = T'/|T'|&#92;)</span> and the **curvature** is <span>&#92;(&#92;kappa = |T'| = |&#92;beta''|&#92;)</span>. The **binormal vector** is <span>&#92;(B = T &#92;times P&#92;)</span>, giving a positively oriented orthonormal frame <span>&#92;(&#92;{T, P, B&#92;}&#92;)</span> at each point.
+For a smooth regular curve \(\beta : J \to \mathbb{R}^3\) parametrized by arclength, the **unit tangent vector** is \(T = \beta'\). Since \(|T| = 1\), we have \(T' \perp T\). When \(T'(s) \neq 0\), the **principal normal vector** is \(P = T'/|T'|\) and the **curvature** is \(\kappa = |T'| = |\beta''|\). The **binormal vector** is \(B = T \times P\), giving a positively oriented orthonormal frame \(\{T, P, B\}\) at each point.
 
-The **torsion** <span>&#92;(&#92;tau = &#92;tau&#95;&#92;beta&#92;)</span> is defined by <span>&#92;(B' = -&#92;tau P&#92;)</span>. (One can show <span>&#92;(B' &#92;perp T&#92;)</span> and <span>&#92;(B' &#92;perp B&#92;)</span>, so <span>&#92;(B'&#92;)</span> is indeed a multiple of <span>&#92;(P&#92;)</span>.) The resulting **Frenet-Serret formulas** are:
-<span>&#92;[
-T' = &#92;kappa P, &#92;qquad P' = -&#92;kappa T + &#92;tau B, &#92;qquad B' = -&#92;tau P.
-&#92;]</span>
+The **torsion** \(\tau = \tau_\beta\) is defined by \(B' = -\tau P\). (One can show \(B' \perp T\) and \(B' \perp B\), so \(B'\) is indeed a multiple of \(P\).) The resulting **Frenet-Serret formulas** are:
+\[
+T' = \kappa P, \qquad P' = -\kappa T + \tau B, \qquad B' = -\tau P.
+\]
 
-The curvature <span>&#92;(&#92;kappa&#92;)</span> measures the rate at which the curve bends away from a straight line, while the torsion <span>&#92;(&#92;tau&#92;)</span> measures how the curve twists out of the osculating plane spanned by <span>&#92;(T&#92;)</span> and <span>&#92;(P&#92;)</span>. A curve lies in a plane if and only if <span>&#92;(&#92;tau &#92;equiv 0&#92;)</span>.
+The curvature \(\kappa\) measures the rate at which the curve bends away from a straight line, while the torsion \(\tau\) measures how the curve twists out of the osculating plane spanned by \(T\) and \(P\). A curve lies in a plane if and only if \(\tau \equiv 0\).
 
-**Theorem 1.24** (Curvature and Torsion Formulas): For a smooth regular curve <span>&#92;(&#92;alpha : I &#92;to &#92;mathbb{R}^3&#92;)</span>,
-<span>&#92;[
-&#92;kappa = &#92;frac{|&#92;alpha' &#92;times &#92;alpha''|}{|&#92;alpha'|^3}, &#92;qquad &#92;tau = &#92;frac{(&#92;alpha' &#92;times &#92;alpha'') &#92;cdot &#92;alpha'''}{|&#92;alpha' &#92;times &#92;alpha''|^2}.
-&#92;]</span>
+**Theorem 1.24** (Curvature and Torsion Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^3\),
+\[
+\kappa = \frac{|\alpha' \times \alpha''|}{|\alpha'|^3}, \qquad \tau = \frac{(\alpha' \times \alpha'') \cdot \alpha'''}{|\alpha' \times \alpha''|^2}.
+\]
 
-**Theorem 1.27** (Fundamental Theorem for Space Curves): Given smooth functions <span>&#92;(&#92;kappa, &#92;tau : J &#92;to &#92;mathbb{R}&#92;)</span> with <span>&#92;(&#92;kappa(s) > 0&#92;)</span> for all <span>&#92;(s&#92;)</span>, a point <span>&#92;(p &#92;in &#92;mathbb{R}^3&#92;)</span>, and a positively oriented orthonormal basis <span>&#92;(&#92;{A, B, C&#92;}&#92;)</span> of <span>&#92;(&#92;mathbb{R}^3&#92;)</span>, there exists a unique smooth curve <span>&#92;(&#92;beta : J &#92;to &#92;mathbb{R}^3&#92;)</span> parametrized by arclength such that <span>&#92;(&#92;beta(s&#95;0) = p&#92;)</span>, <span>&#92;((T(s&#95;0), P(s&#95;0), B(s&#95;0)) = (A, B, C)&#92;)</span>, and the curvature and torsion of <span>&#92;(&#92;beta&#92;)</span> are <span>&#92;(&#92;kappa&#92;)</span> and <span>&#92;(&#92;tau&#92;)</span>.
+**Theorem 1.27** (Fundamental Theorem for Space Curves): Given smooth functions \(\kappa, \tau : J \to \mathbb{R}\) with \(\kappa(s) > 0\) for all \(s\), a point \(p \in \mathbb{R}^3\), and a positively oriented orthonormal basis \(\{A, B, C\}\) of \(\mathbb{R}^3\), there exists a unique smooth curve \(\beta : J \to \mathbb{R}^3\) parametrized by arclength such that \(\beta(s_0) = p\), \((T(s_0), P(s_0), B(s_0)) = (A, B, C)\), and the curvature and torsion of \(\beta\) are \(\kappa\) and \(\tau\).
 
-*Proof sketch.* The Frenet-Serret equations form a system of ODEs <span>&#92;(&#92;frac{d}{ds}(T,P,B) = (T,P,B) M&#92;)</span> for a skew-symmetric matrix <span>&#92;(M&#92;)</span> depending on <span>&#92;(&#92;kappa&#92;)</span> and <span>&#92;(&#92;tau&#92;)</span>. Existence and uniqueness of solutions with prescribed initial conditions follows from the standard ODE theorem. One then verifies the solution maintains the orthonormality of the frame.
+*Proof sketch.* The Frenet-Serret equations form a system of ODEs \(\frac{d}{ds}(T,P,B) = (T,P,B) M\) for a skew-symmetric matrix \(M\) depending on \(\kappa\) and \(\tau\). Existence and uniqueness of solutions with prescribed initial conditions follows from the standard ODE theorem. One then verifies the solution maintains the orthonormality of the frame.
 
 ---
 
 ## Chapter 2: Surfaces
 
-### Surfaces in <span>&#92;(&#92;mathbb{R}^n&#92;)</span>
+### Surfaces in \(\mathbb{R}^n\)
 
-A **(local parametrized) surface** in <span>&#92;(&#92;mathbb{R}^n&#92;)</span> is a continuous map <span>&#92;(&#92;sigma : U &#92;subseteq &#92;mathbb{R}^2 &#92;to &#92;mathbb{R}^n&#92;)</span> where <span>&#92;(U&#92;)</span> is an open set. The surface is **regular** when <span>&#92;(&#92;sigma&#92;)</span> is <span>&#92;(C^1&#92;)</span> and its derivative (Jacobian) matrix <span>&#92;(D&#92;sigma = (&#92;sigma&#95;u, &#92;sigma&#95;v)&#92;)</span> has rank 2, meaning the column vectors <span>&#92;(&#92;sigma&#95;u = &#92;partial&#92;sigma/&#92;partial u&#92;)</span> and <span>&#92;(&#92;sigma&#95;v = &#92;partial&#92;sigma/&#92;partial v&#92;)</span> are linearly independent at every point. The **tangent plane** to <span>&#92;(&#92;sigma&#92;)</span> at <span>&#92;((a,b)&#92;)</span> is the plane through <span>&#92;(&#92;sigma(a,b)&#92;)</span> parallel to <span>&#92;(&#92;sigma&#95;u(a,b)&#92;)</span> and <span>&#92;(&#92;sigma&#95;v(a,b)&#92;)</span>.
+A **(local parametrized) surface** in \(\mathbb{R}^n\) is a continuous map \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^n\) where \(U\) is an open set. The surface is **regular** when \(\sigma\) is \(C^1\) and its derivative (Jacobian) matrix \(D\sigma = (\sigma_u, \sigma_v)\) has rank 2, meaning the column vectors \(\sigma_u = \partial\sigma/\partial u\) and \(\sigma_v = \partial\sigma/\partial v\) are linearly independent at every point. The **tangent plane** to \(\sigma\) at \((a,b)\) is the plane through \(\sigma(a,b)\) parallel to \(\sigma_u(a,b)\) and \(\sigma_v(a,b)\).
 
 Standard examples include:
-- The **graph** of <span>&#92;(f: U &#92;to &#92;mathbb{R}&#92;)</span> via <span>&#92;(&#92;sigma(u,v) = (u,v,f(u,v))&#92;)</span>, always regular since <span>&#92;(D&#92;sigma&#92;)</span> has rank 2.
-- The **sphere** <span>&#92;(&#92;rho(&#92;phi,&#92;theta) = r(&#92;sin&#92;phi&#92;cos&#92;theta, &#92;sin&#92;phi&#92;sin&#92;theta, &#92;cos&#92;phi)&#92;)</span>, regular when <span>&#92;(&#92;sin&#92;phi &#92;neq 0&#92;)</span>.
-- The **torus** <span>&#92;(&#92;sigma(&#92;theta,&#92;phi) = ((R+r&#92;cos&#92;phi)&#92;cos&#92;theta, (R+r&#92;cos&#92;phi)&#92;sin&#92;theta, r&#92;sin&#92;phi)&#92;)</span>, regular everywhere for <span>&#92;(0 < r < R&#92;)</span>.
+- The **graph** of \(f: U \to \mathbb{R}\) via \(\sigma(u,v) = (u,v,f(u,v))\), always regular since \(D\sigma\) has rank 2.
+- The **sphere** \(\rho(\phi,\theta) = r(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)\), regular when \(\sin\phi \neq 0\).
+- The **torus** \(\sigma(\theta,\phi) = ((R+r\cos\phi)\cos\theta, (R+r\cos\phi)\sin\theta, r\sin\phi)\), regular everywhere for \(0 < r < R\).
 
-A **Riemannian metric** on <span>&#92;(U &#92;subseteq &#92;mathbb{R}^n&#92;)</span> is a smooth map <span>&#92;(g : U &#92;to M&#95;{n&#92;times n}(&#92;mathbb{R})&#92;)</span> where <span>&#92;(g(p)&#92;)</span> is positive-definite symmetric at every <span>&#92;(p&#92;)</span>. The **first fundamental form** of a smooth regular surface <span>&#92;(&#92;sigma&#92;)</span> is
-<span>&#92;[
-g = g&#95;&#92;sigma = D&#92;sigma^T D&#92;sigma = &#92;begin{pmatrix} &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;u & &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;v \\ &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;v & &#92;sigma&#95;v &#92;cdot &#92;sigma&#95;v &#92;end{pmatrix}.
-&#92;]</span>
-Traditionally one writes <span>&#92;(E = g&#95;{11} = &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;u&#92;)</span>, <span>&#92;(F = g&#95;{12} = &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;v&#92;)</span>, <span>&#92;(G = g&#95;{22} = &#92;sigma&#95;v &#92;cdot &#92;sigma&#95;v&#92;)</span>. This is positive-definite (since <span>&#92;(&#92;sigma&#95;u&#92;)</span> and <span>&#92;(&#92;sigma&#95;v&#92;)</span> are linearly independent), so it defines an inner product <span>&#92;(&#92;langle X, Y &#92;rangle = Y^T g X&#92;)</span> on <span>&#92;(&#92;mathbb{R}^2&#92;)</span>.
+A **Riemannian metric** on \(U \subseteq \mathbb{R}^n\) is a smooth map \(g : U \to M_{n\times n}(\mathbb{R})\) where \(g(p)\) is positive-definite symmetric at every \(p\). The **first fundamental form** of a smooth regular surface \(\sigma\) is
+\[
+g = g_\sigma = D\sigma^T D\sigma = \begin{pmatrix} \sigma_u \cdot \sigma_u & \sigma_u \cdot \sigma_v \\ \sigma_u \cdot \sigma_v & \sigma_v \cdot \sigma_v \end{pmatrix}.
+\]
+Traditionally one writes \(E = g_{11} = \sigma_u \cdot \sigma_u\), \(F = g_{12} = \sigma_u \cdot \sigma_v\), \(G = g_{22} = \sigma_v \cdot \sigma_v\). This is positive-definite (since \(\sigma_u\) and \(\sigma_v\) are linearly independent), so it defines an inner product \(\langle X, Y \rangle = Y^T g X\) on \(\mathbb{R}^2\).
 
-The length of a curve <span>&#92;(&#92;gamma(t) = &#92;sigma(&#92;alpha(t))&#92;)</span> lying on the surface is
-<span>&#92;[
-L&#95;&#92;gamma[a,b] = &#92;int&#95;a^b &#92;sqrt{&#92;alpha'(t)^T g(&#92;alpha(t)) &#92;alpha'(t)}&#92;, dt,
-&#92;]</span>
-and the angle between two curves on the surface through a point <span>&#92;(p&#92;)</span> is computed using the inner product <span>&#92;(&#92;langle X, Y &#92;rangle = Y^T g(p) X&#92;)</span>.
+The length of a curve \(\gamma(t) = \sigma(\alpha(t))\) lying on the surface is
+\[
+L_\gamma[a,b] = \int_a^b \sqrt{\alpha'(t)^T g(\alpha(t)) \alpha'(t)}\, dt,
+\]
+and the angle between two curves on the surface through a point \(p\) is computed using the inner product \(\langle X, Y \rangle = Y^T g(p) X\).
 
-The **area** of the surface over a Jordan region <span>&#92;(R &#92;subseteq U&#92;)</span> is motivated by approximating <span>&#92;(\sigma(R)&#92;)</span> by infinitesimal parallelograms: each small patch at <span>&#92;((u,v)&#92;)</span> has area approximately <span>&#92;(\sqrt{\det g}\, du\,dv&#92;)</span>, giving
-<span>&#92;[
-A&#95;&#92;sigma(R) = &#92;iint&#95;R &#92;sqrt{&#92;det g(u,v)}&#92;, du&#92;, dv.
-&#92;]</span>
-More generally, for a continuous function <span>&#92;(f : U &#92;to &#92;mathbb{R}&#92;)</span>, we write <span>&#92;(dA = &#92;sqrt{&#92;det g}&#92;, du&#92;, dv&#92;)</span> and define <span>&#92;(&#92;iint&#95;R f&#92;, dA = &#92;iint&#95;R f(u,v)&#92;\sqrt{&#92;\det g}&#92;\,du&#92;\,dv&#92;)</span>.
+The **area** of the surface over a Jordan region \(R \subseteq U\) is motivated by approximating \(\sigma(R)\) by infinitesimal parallelograms: each small patch at \((u,v)\) has area approximately \(\sqrt{\det g}\, du\,dv\), giving
+\[
+A_\sigma(R) = \iint_R \sqrt{\det g(u,v)}\, du\, dv.
+\]
+More generally, for a continuous function \(f : U \to \mathbb{R}\), we write \(dA = \sqrt{\det g}\, du\, dv\) and define \(\iint_R f\, dA = \iint_R f(u,v)\sqrt{\det g}\\,du\\,dv\).
 
-**Theorem 2.12** (Change of Coordinates): Under a smooth regular change of coordinates <span>&#92;(&#92;phi: U &#92;to V&#92;)</span> with inverse <span>&#92;(&#92;psi = &#92;phi^{-1}&#92;)</span>, the surface <span>&#92;(&#92;rho = &#92;sigma &#92;circ &#92;psi&#92;)</span> satisfies <span>&#92;(g&#95;&#92;rho(q) = D&#92;psi(q)^T g&#95;&#92;sigma(p) D&#92;psi(q)&#92;)</span> and <span>&#92;(A&#95;&#92;rho(&#92;phi(R)) = A&#95;&#92;sigma(R)&#92;)</span>. That is, area is intrinsic and independent of the parametrization chosen.
+**Theorem 2.12** (Change of Coordinates): Under a smooth regular change of coordinates \(\phi: U \to V\) with inverse \(\psi = \phi^{-1}\), the surface \(\rho = \sigma \circ \psi\) satisfies \(g_\rho(q) = D\psi(q)^T g_\sigma(p) D\psi(q)\) and \(A_\rho(\phi(R)) = A_\sigma(R)\). That is, area is intrinsic and independent of the parametrization chosen.
 
-### Surfaces in <span>&#92;(&#92;mathbb{R}^3&#92;)</span>
+### Surfaces in \(\mathbb{R}^3\)
 
-For a smooth regular surface <span>&#92;(&#92;sigma : U &#92;subseteq &#92;mathbb{R}^2 &#92;to &#92;mathbb{R}^3&#92;)</span>, since <span>&#92;(D&#92;sigma&#92;)</span> has rank 2 we have <span>&#92;(&#92;sigma&#95;u &#92;times &#92;sigma&#95;v &#92;neq 0&#92;)</span>. The **unit normal vector** and **Gauss map** are
-<span>&#92;[
-n = n&#95;&#92;sigma = &#92;frac{&#92;sigma&#95;u &#92;times &#92;sigma&#95;v}{|&#92;sigma&#95;u &#92;times &#92;sigma&#95;v|} : U &#92;to S^2 &#92;subseteq &#92;mathbb{R}^3.
-&#92;]</span>
+For a smooth regular surface \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^3\), since \(D\sigma\) has rank 2 we have \(\sigma_u \times \sigma_v \neq 0\). The **unit normal vector** and **Gauss map** are
+\[
+n = n_\sigma = \frac{\sigma_u \times \sigma_v}{|\sigma_u \times \sigma_v|} : U \to S^2 \subseteq \mathbb{R}^3.
+\]
 
-Given a point <span>&#92;(p &#92;in U&#92;)</span> and a nonzero vector <span>&#92;(A &#92;in &#92;mathbb{R}^2&#92;)</span>, the **(directional) curvature** <span>&#92;(k&#95;&#92;sigma(p)(A)&#92;)</span> is defined by taking any regular curve <span>&#92;(&#92;alpha&#92;)</span> with <span>&#92;(&#92;alpha(0)=p&#92;)</span>, <span>&#92;(&#92;alpha'(0)=A&#92;)</span>, letting <span>&#92;(&#92;gamma = &#92;sigma &#92;circ &#92;alpha&#92;)</span> and reparametrizing by arclength to get <span>&#92;(&#92;delta&#92;)</span>, then setting <span>&#92;(k&#95;&#92;sigma(p)(A) = &#92;delta''(0) &#92;cdot N(0)&#92;)</span> where <span>&#92;(N(s) = n(&#92;alpha(t(s)))&#92;)</span>.
+Given a point \(p \in U\) and a nonzero vector \(A \in \mathbb{R}^2\), the **(directional) curvature** \(k_\sigma(p)(A)\) is defined by taking any regular curve \(\alpha\) with \(\alpha(0)=p\), \(\alpha'(0)=A\), letting \(\gamma = \sigma \circ \alpha\) and reparametrizing by arclength to get \(\delta\), then setting \(k_\sigma(p)(A) = \delta''(0) \cdot N(0)\) where \(N(s) = n(\alpha(t(s)))\).
 
-**Theorem 2.14** (Directional Curvature): The curvature <span>&#92;(k&#95;&#92;sigma(p)(A)&#92;)</span> depends only on <span>&#92;(\sigma&#92;)</span>, <span>&#92;(p&#92;)</span>, and the direction of <span>&#92;(A&#92;)</span>, and is given by
-<span>&#92;[
-k&#95;&#92;sigma(p)(A) = &#92;frac{A^T h(p) A}{A^T g(p) A}
-&#92;]</span>
-where <span>&#92;(g = D&#92;sigma^T D&#92;sigma&#92;)</span> is the first fundamental form and <span>&#92;(h = -Dn^T D&#92;sigma&#92;)</span> is the **second fundamental form**.
+**Theorem 2.14** (Directional Curvature): The curvature \(k_\sigma(p)(A)\) depends only on \(\sigma\), \(p\), and the direction of \(A\), and is given by
+\[
+k_\sigma(p)(A) = \frac{A^T h(p) A}{A^T g(p) A}
+\]
+where \(g = D\sigma^T D\sigma\) is the first fundamental form and \(h = -Dn^T D\sigma\) is the **second fundamental form**.
 
-The entries of <span>&#92;(h&#92;)</span> can be computed as
-<span>&#92;[
-h = &#92;begin{pmatrix} &#92;sigma&#95;{uu} &#92;cdot n & &#92;sigma&#95;{uv} &#92;cdot n \\ &#92;sigma&#95;{uv} &#92;cdot n & &#92;sigma&#95;{vv} &#92;cdot n &#92;end{pmatrix}
-&#92;]</span>
-using the identities <span>&#92;(&#92;sigma&#95;{uu} &#92;cdot n = -&#92;sigma&#95;u &#92;cdot n&#95;u&#92;)</span> etc. (obtained by differentiating <span>&#92;(&#92;sigma&#95;u &#92;cdot n = 0&#92;)</span>). Traditionally one writes <span>&#92;(L = h&#95;{11}&#92;)</span>, <span>&#92;(M = h&#95;{12}&#92;)</span>, <span>&#92;(N = h&#95;{22}&#92;)</span>.
+The entries of \(h\) can be computed as
+\[
+h = \begin{pmatrix} \sigma_{uu} \cdot n & \sigma_{uv} \cdot n \\ \sigma_{uv} \cdot n & \sigma_{vv} \cdot n \end{pmatrix}
+\]
+using the identities \(\sigma_{uu} \cdot n = -\sigma_u \cdot n_u\) etc. (obtained by differentiating \(\sigma_u \cdot n = 0\). Traditionally one writes \(L = h_{11}\), \(M = h_{12}\), \(N = h_{22}\).
 
-*Proof of Theorem 2.14.* Since <span>&#92;(\delta'&#92;)</span> lies in the tangent plane, <span>&#92;(\delta' \cdot N = 0&#92;)</span>. Differentiating: <span>&#92;(\delta'' \cdot N = -\delta' \cdot N'&#92;)</span>. Computing <span>&#92;(\delta' = D\sigma(\alpha') / |D\sigma\alpha'|&#92;)</span> and <span>&#92;(N' = Dn(\alpha')/|D\sigma\alpha'|&#92;)</span>, one obtains <span>&#92;(k = -(\delta' \cdot N') = -(A^T Dn^T D\sigma A)/(A^T D\sigma^T D\sigma A) = A^T h A / A^T g A&#92;)</span>. <span>&#92;(&#92;square&#92;)</span>
+*Proof of Theorem 2.14.* Since \(\delta'\) lies in the tangent plane, \(\delta' \cdot N = 0\). Differentiating: \(\delta'' \cdot N = -\delta' \cdot N'\). Computing \(\delta' = D\sigma(\alpha') / |D\sigma\alpha'|\) and \(N' = Dn(\alpha')/|D\sigma\alpha'|\), one obtains \(k = -(\delta' \cdot N') = -(A^T Dn^T D\sigma A)/(A^T D\sigma^T D\sigma A) = A^T h A / A^T g A\). \(\square\)
 
-The directional curvature depends only on the direction of <span>&#92;(A&#92;)</span>, so <span>&#92;(k&#95;&#92;sigma(p)&#92;)</span> defines a function on the projective line <span>&#92;(&#92;mathbb{P}^1(&#92;mathbb{R})&#92;)</span> of directions. Under a positive change of coordinates, the unit normal is preserved (<span>&#92;(n&#95;&#92;rho = n&#95;&#92;sigma&#92;)</span>), the second fundamental form transforms as <span>&#92;(h&#95;&#92;rho(q) = D&#92;psi(q)^T h&#95;&#92;sigma(p) D&#92;psi(q)&#92;)</span>, and the directional curvature is invariant.
+The directional curvature depends only on the direction of \(A\), so \(k_\sigma(p)\) defines a function on the projective line \(\mathbb{P}^1(\mathbb{R})\) of directions. Under a positive change of coordinates, the unit normal is preserved (\(n_\rho = n_\sigma\), the second fundamental form transforms as \(h_\rho(q) = D\psi(q)^T h_\sigma(p) D\psi(q)\), and the directional curvature is invariant.
 
-**Theorem 2.18** (Principal Curvature Directions): For <span>&#92;(p &#92;in U&#92;)</span>, the directional curvature <span>&#92;(k&#95;&#92;sigma(p)(A)&#92;)</span> attains its maximum <span>&#92;(k&#95;1&#92;)</span> and minimum <span>&#92;(k&#95;2&#92;)</span> in two directions orthogonal with respect to <span>&#92;(g(p)&#92;)</span>. These extreme values are the **principal curvatures**, the eigenvalues of <span>&#92;(g(p)^{-1} h(p)&#92;)</span>, occurring in the **principal directions** (eigenvectors). The principal curvatures are the roots of <span>&#92;(&#92;det(h(p) - k&#92; g(p)) = 0&#92;)</span>.
+**Theorem 2.18** (Principal Curvature Directions): For \(p \in U\), the directional curvature \(k_\sigma(p)(A)\) attains its maximum \(k_1\) and minimum \(k_2\) in two directions orthogonal with respect to \(g(p)\). These extreme values are the **principal curvatures**, the eigenvalues of \(g(p)^{-1} h(p)\), occurring in the **principal directions** (eigenvectors). The principal curvatures are the roots of \(\det(h(p) - k\ g(p)) = 0\).
 
 The **mean curvature** and **Gaussian curvature** are
-<span>&#92;[
-H = &#92;tfrac{1}{2}(k&#95;1 + k&#95;2) = &#92;tfrac{1}{2}&#92;operatorname{tr}(g^{-1}h), &#92;qquad K = k&#95;1 k&#95;2 = &#92;frac{&#92;det h}{&#92;det g}.
-&#92;]</span>
+\[
+H = \tfrac{1}{2}(k_1 + k_2) = \tfrac{1}{2}\operatorname{tr}(g^{-1}h), \qquad K = k_1 k_2 = \frac{\det h}{\det g}.
+\]
 
-**Theorem 2.20** (Gauss-Weingarten Equations): For a smooth regular surface in <span>&#92;(&#92;mathbb{R}^3&#92;)</span>,
-<span>&#92;[
-&#92;begin{pmatrix} &#92;sigma&#95;{uu} \\ &#92;sigma&#95;{uv} \\ &#92;sigma&#95;{vv} \\ n&#95;u \\ n&#95;v &#92;end{pmatrix} = &#92;begin{pmatrix} &#92;Gamma^1&#95;{11} & &#92;Gamma^2&#95;{11} & h&#95;{11} \\ &#92;Gamma^1&#95;{12} & &#92;Gamma^2&#95;{12} & h&#95;{12} \\ &#92;Gamma^1&#95;{22} & &#92;Gamma^2&#95;{22} & h&#95;{22} \\ b^1&#95;1 & b^2&#95;1 & 0 \\ b^1&#95;2 & b^2&#95;2 & 0 &#92;end{pmatrix} &#92;begin{pmatrix} &#92;sigma&#95;u \\ &#92;sigma&#95;v \\ n &#92;end{pmatrix}
-&#92;]</span>
-where <span>&#92;(b = -g^{-1}h&#92;)</span> (the **Weingarten map**) and the **Christoffel symbols** are given by
-<span>&#92;[
-&#92;begin{pmatrix} &#92;Gamma^1&#95;{11} & &#92;Gamma^1&#95;{12} & &#92;Gamma^1&#95;{22} \\ &#92;Gamma^2&#95;{11} & &#92;Gamma^2&#95;{12} & &#92;Gamma^2&#95;{22} &#92;end{pmatrix} = &#92;tfrac{1}{2} g^{-1} &#92;begin{pmatrix} (g&#95;{11})&#95;u & (g&#95;{11})&#95;v & 2(g&#95;{12})&#95;v - (g&#95;{22})&#95;u \\ 2(g&#95;{12})&#95;u - (g&#95;{11})&#95;v & (g&#95;{22})&#95;u & (g&#95;{22})&#95;v &#92;end{pmatrix}.
-&#92;]</span>
+**Theorem 2.20** (Gauss-Weingarten Equations): For a smooth regular surface in \(\mathbb{R}^3\),
+\[
+\begin{pmatrix} \sigma_{uu} \\ \sigma_{uv} \\ \sigma_{vv} \\ n_u \\ n_v \end{pmatrix} = \begin{pmatrix} \Gamma^1_{11} & \Gamma^2_{11} & h_{11} \\ \Gamma^1_{12} & \Gamma^2_{12} & h_{12} \\ \Gamma^1_{22} & \Gamma^2_{22} & h_{22} \\ b^1_1 & b^2_1 & 0 \\ b^1_2 & b^2_2 & 0 \end{pmatrix} \begin{pmatrix} \sigma_u \\ \sigma_v \\ n \end{pmatrix}
+\]
+where \(b = -g^{-1}h\) (the **Weingarten map**) and the **Christoffel symbols** are given by
+\[
+\begin{pmatrix} \Gamma^1_{11} & \Gamma^1_{12} & \Gamma^1_{22} \\ \Gamma^2_{11} & \Gamma^2_{12} & \Gamma^2_{22} \end{pmatrix} = \tfrac{1}{2} g^{-1} \begin{pmatrix} (g_{11})_u & (g_{11})_v & 2(g_{12})_v - (g_{22})_u \\ 2(g_{12})_u - (g_{11})_v & (g_{22})_u & (g_{22})_v \end{pmatrix}.
+\]
 
-The proof determines all entries by taking dot products with <span>&#92;(&#92;sigma&#95;u&#92;)</span>, <span>&#92;(&#92;sigma&#95;v&#92;)</span>, and <span>&#92;(n&#92;)</span>, using e.g. <span>&#92;(&#92;sigma&#95;{uu} &#92;cdot &#92;sigma&#95;u = &#92;frac{1}{2}(g&#95;{11})&#95;u&#92;)</span> (from differentiating <span>&#92;(g&#95;{11} = &#92;sigma&#95;u &#92;cdot &#92;sigma&#95;u&#92;)</span>).
+The proof determines all entries by taking dot products with \(\sigma_u\), \(\sigma_v\), and \(n\), using e.g. \(\sigma_{uu} \cdot \sigma_u = \frac{1}{2}(g_{11})_u\) (from differentiating \(g_{11} = \sigma_u \cdot \sigma_u\).
 
-**Theorem 2.22** (Gauss-Codazzi Equations): The entries of <span>&#92;(g&#92;)</span> and <span>&#92;(h&#92;)</span> satisfy the **Codazzi equations**:
-<span>&#92;[
-(h&#95;{11})&#95;v - (h&#95;{12})&#95;u = h&#95;{11}&#92;Gamma^1&#95;{12} + h&#95;{12}(&#92;Gamma^2&#95;{12} - &#92;Gamma^1&#95;{11}) - h&#95;{22}&#92;Gamma^2&#95;{11},
-&#92;]</span>
-<span>&#92;[
-(h&#95;{12})&#95;v - (h&#95;{22})&#95;u = h&#95;{11}&#92;Gamma^1&#95;{22} + h&#95;{12}(&#92;Gamma^2&#95;{22} - &#92;Gamma^1&#95;{12}) - h&#95;{22}&#92;Gamma^2&#95;{12},
-&#92;]</span>
-and the **Gauss equations** (expressing <span>&#92;(K &#92;det g&#92;)</span> in terms of <span>&#92;(g&#92;)</span> and its derivatives):
-<span>&#92;[
-g&#95;{11} K = (&#92;Gamma^2&#95;{11})&#95;v - (&#92;Gamma^2&#95;{12})&#95;u + &#92;Gamma^2&#95;{11}&#92;Gamma^2&#95;{22} + &#92;Gamma^1&#95;{11}&#92;Gamma^2&#95;{12} - &#92;Gamma^1&#95;{12}&#92;Gamma^2&#95;{11} - (&#92;Gamma^2&#95;{12})^2,
-&#92;]</span>
-and two further equations for <span>&#92;(g&#95;{12} K&#92;)</span> and <span>&#92;(g&#95;{22} K&#92;)</span>.
+**Theorem 2.22** (Gauss-Codazzi Equations): The entries of \(g\) and \(h\) satisfy the **Codazzi equations**:
+\[
+(h_{11})_v - (h_{12})_u = h_{11}\Gamma^1_{12} + h_{12}(\Gamma^2_{12} - \Gamma^1_{11}) - h_{22}\Gamma^2_{11},
+\]
+\[
+(h_{12})_v - (h_{22})_u = h_{11}\Gamma^1_{22} + h_{12}(\Gamma^2_{22} - \Gamma^1_{12}) - h_{22}\Gamma^2_{12},
+\]
+and the **Gauss equations** (expressing \(K \det g\) in terms of \(g\) and its derivatives):
+\[
+g_{11} K = (\Gamma^2_{11})_v - (\Gamma^2_{12})_u + \Gamma^2_{11}\Gamma^2_{22} + \Gamma^1_{11}\Gamma^2_{12} - \Gamma^1_{12}\Gamma^2_{11} - (\Gamma^2_{12})^2,
+\]
+and two further equations for \(g_{12} K\) and \(g_{22} K\).
 
-These compatibility equations arise from requiring <span>&#92;(&#92;sigma&#95;{uuv} = &#92;sigma&#95;{uvu}&#92;)</span> and <span>&#92;(&#92;sigma&#95;{vvu} = &#92;sigma&#95;{vuv}&#92;)</span>, then expanding using the Gauss-Weingarten equations and equating coefficients of <span>&#92;(&#92;sigma&#95;u&#92;)</span>, <span>&#92;(&#92;sigma&#95;v&#92;)</span>, and <span>&#92;(n&#92;)</span>.
+These compatibility equations arise from requiring \(\sigma_{uuv} = \sigma_{uvu}\) and \(\sigma_{vvu} = \sigma_{vuv}\), then expanding using the Gauss-Weingarten equations and equating coefficients of \(\sigma_u\), \(\sigma_v\), and \(n\).
 
-**Theorem 2.23** (Theorema Egregium): For a smooth regular surface in <span>&#92;(&#92;mathbb{R}^3&#92;)</span>, the Gaussian curvature <span>&#92;(K = &#92;det h / &#92;\det g&#92;)</span> can be expressed entirely in terms of the first fundamental form <span>&#92;(g&#92;)</span> and its derivatives. In particular, <span>&#92;(K&#92;)</span> is an **intrinsic** property: it is preserved under isometries (maps that preserve the Riemannian metric).
+**Theorem 2.23** (Theorema Egregium): For a smooth regular surface in \(\mathbb{R}^3\), the Gaussian curvature \(K = \det h / \det g\) can be expressed entirely in terms of the first fundamental form \(g\) and its derivatives. In particular, \(K\) is an **intrinsic** property: it is preserved under isometries (maps that preserve the Riemannian metric).
 
-This is Gauss's "remarkable theorem": even though <span>&#92;(K&#92;)</span> is defined using <span>&#92;(h&#92;)</span> (which depends on the embedding in <span>&#92;(&#92;mathbb{R}^3&#92;)</span>), it turns out to depend only on the intrinsic geometry. As a consequence, a flat rectangle and a cylinder (which is obtained by bending a rectangle without stretching) have the same Gaussian curvature <span>&#92;(K=0&#92;)</span> at every point, while the mean curvature changes (<span>&#92;(H=0&#92;)</span> vs. <span>&#92;(H = 1/(2r)&#92;)</span>).
+This is Gauss's "remarkable theorem": even though \(K\) is defined using \(h\) (which depends on the embedding in \(\mathbb{R}^3\), it turns out to depend only on the intrinsic geometry. As a consequence, a flat rectangle and a cylinder (which is obtained by bending a rectangle without stretching) have the same Gaussian curvature \(K=0\) at every point, while the mean curvature changes (\(H=0\) vs. \(H = 1/(2r)\).
 
-**Theorem 2.24** (Bonnet's Theorem / Fundamental Theorem for Surfaces): Given a connected open set <span>&#92;(U &#92;subseteq &#92;mathbb{R}^2&#92;)</span>, smooth functions <span>&#92;(g&#95;{11}, g&#95;{12}, g&#95;{22}, h&#95;{11}, h&#95;{12}, h&#95;{22} : U &#92;to &#92;mathbb{R}&#92;)</span> with <span>&#92;(g&#95;{11} > 0&#92;)</span> and <span>&#92;(g&#95;{11}g&#95;{22} - g&#95;{12}^2 > 0&#92;)</span>, satisfying all the Gauss-Codazzi equations, and given initial data <span>&#92;(p &#92;in &#92;mathbb{R}^3&#92;)</span> and orthogonal unit vectors <span>&#92;(A, B &#92;in &#92;mathbb{R}^3&#92;)</span>, there exists a unique smooth surface <span>&#92;(&#92;sigma : U &#92;to &#92;mathbb{R}^3&#92;)</span> with these fundamental forms satisfying <span>&#92;(&#92;sigma(0)=p&#92;)</span>, <span>&#92;(&#92;sigma&#95;u(0) &#92;in &#92;operatorname{Span}&#92;{A&#92;}&#92;)</span>, <span>&#92;(&#92;sigma&#95;v(0) &#92;in &#92;operatorname{Span}&#92;{A,B&#92;}&#92;)</span>. Bonnet's theorem says a surface is determined up to rigid motion by its two fundamental forms, provided the Gauss-Codazzi compatibility conditions hold.
+**Theorem 2.24** (Bonnet's Theorem / Fundamental Theorem for Surfaces): Given a connected open set \(U \subseteq \mathbb{R}^2\), smooth functions \(g_{11}, g_{12}, g_{22}, h_{11}, h_{12}, h_{22} : U \to \mathbb{R}\) with \(g_{11} > 0\) and \(g_{11}g_{22} - g_{12}^2 > 0\), satisfying all the Gauss-Codazzi equations, and given initial data \(p \in \mathbb{R}^3\) and orthogonal unit vectors \(A, B \in \mathbb{R}^3\), there exists a unique smooth surface \(\sigma : U \to \mathbb{R}^3\) with these fundamental forms satisfying \(\sigma(0)=p\), \(\sigma_u(0) \in \operatorname{Span}\{A\}\), \(\sigma_v(0) \in \operatorname{Span}\{A,B\}\). Bonnet's theorem says a surface is determined up to rigid motion by its two fundamental forms, provided the Gauss-Codazzi compatibility conditions hold.
 
 ---
 
@@ -201,207 +201,207 @@ This is Gauss's "remarkable theorem": even though <span>&#92;(K&#92;)</span> is 
 
 ### Geodesic Curvature and Geodesics
 
-Let <span>&#92;(&#92;sigma : U &#92;subseteq &#92;mathbb{R}^2 &#92;to &#92;mathbb{R}^3&#92;)</span> be a smooth regular surface, let <span>&#92;(&#92;alpha : I &#92;to U&#92;)</span> be a smooth regular curve, and let <span>&#92;(&#92;gamma(t) = &#92;sigma(&#92;alpha(t))&#92;)</span>. Reparametrize <span>&#92;(&#92;gamma&#92;)</span> by arclength to get <span>&#92;(&#92;\beta(s) = &#92;\alpha(t(s))&#92;)</span> and <span>&#92;(&#92;\delta(s) = &#92;\gamma(t(s))&#92;)</span>. Set <span>&#92;(T(s) = &#92;delta'(s)&#92;)</span>, <span>&#92;(N(s) = n(&#92;beta(s))&#92;)</span>, and <span>&#92;(M(s) = N(s) &#92;times T(s)&#92;)</span>. Then <span>&#92;(\{T, M, N\}&#92;)</span> is a positive oriented orthonormal basis for <span>&#92;(&#92;mathbb{R}^3&#92;)</span> with <span>&#92;(T&#92;)</span> and <span>&#92;(M&#92;)</span> spanning the tangent plane.
+Let \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^3\) be a smooth regular surface, let \(\alpha : I \to U\) be a smooth regular curve, and let \(\gamma(t) = \sigma(\alpha(t))\). Reparametrize \(\gamma\) by arclength to get \(\beta(s) = \alpha(t(s))\) and \(\delta(s) = \gamma(t(s))\). Set \(T(s) = \delta'(s)\), \(N(s) = n(\beta(s))\), and \(M(s) = N(s) \times T(s)\). Then \(\{T, M, N\}\) is a positive oriented orthonormal basis for \(\mathbb{R}^3\) with \(T\) and \(M\) spanning the tangent plane.
 
-Since <span>&#92;(&#92;\delta&#92;)</span> is arclength-parametrized, <span>&#92;(&#92;\delta'' &#92;\perp &#92;\delta'&#92;)</span>, so <span>&#92;(&#92;\delta''(s)&#92;)</span> lies in the span of <span>&#92;(N&#92;)</span> and <span>&#92;(M&#92;)</span>:
-<span>&#92;[
-&#92;delta'' = (&#92;delta'' &#92;cdot N) N + (&#92;delta'' &#92;cdot M) M.
-&#92;]</span>
-The normal component <span>&#92;(&#92;\delta'' &#92;\cdot N&#92;)</span> is the directional curvature studied in Chapter 2; it depends only on the surface and direction, not the shape of the curve. The tangential component defines the **geodesic curvature**:
-<span>&#92;[
-k&#95;g = k&#95;g(s) = k&#95;g(&#92;beta)(s) = &#92;delta''(s) &#92;\cdot M(s).
-&#92;]</span>
-For the original curve <span>&#92;(&#92;\alpha&#92;)</span> we set <span>&#92;(k&#95;g(&#92;\alpha)(t) = k&#95;g(&#92;\beta)(s(t))&#92;)</span>.
+Since \(\delta\) is arclength-parametrized, \(\delta'' \perp \delta'\), so \(\delta''(s)\) lies in the span of \(N\) and \(M\):
+\[
+\delta'' = (\delta'' \cdot N) N + (\delta'' \cdot M) M.
+\]
+The normal component \(\delta'' \cdot N\) is the directional curvature studied in Chapter 2; it depends only on the surface and direction, not the shape of the curve. The tangential component defines the **geodesic curvature**:
+\[
+k_g = k_g(s) = k_g(\beta)(s) = \delta''(s) \cdot M(s).
+\]
+For the original curve \(\alpha\) we set \(k_g(\alpha)(t) = k_g(\beta)(s(t))\).
 
-**Theorem 3.2** (Geodesic Curvature is Intrinsic): Writing <span>&#92;(&#92;\beta(s) = (u(s), v(s))&#92;)</span>,
-<span>&#92;[
-k&#95;g = &#92;\sqrt{&#92;\det g} &#92;\left[ &#92;\left(v'' + &#92;\Gamma^2&#95;{11}(u')^2 + 2&#92;\Gamma^2&#95;{12} u'v' + &#92;\Gamma^2&#95;{22}(v')^2&#92;\right) u' - &#92;\left(u'' + &#92;\Gamma^1&#95;{11}(u')^2 + 2&#92;\Gamma^1&#95;{12} u'v' + &#92;\Gamma^1&#95;{22}(v')^2&#92;\right) v' &#92;\right].
-&#92;]</span>
-Since this formula involves only <span>&#92;(g&#92;)</span> and its derivatives (via the Christoffel symbols), <span>&#92;(k&#95;g&#92;)</span> is intrinsic — it can be computed from the Riemannian metric alone without knowing how the surface sits in <span>&#92;(&#92;\mathbb{R}^3&#92;)</span>.
+**Theorem 3.2** (Geodesic Curvature is Intrinsic): Writing \(\beta(s) = (u(s), v(s))\),
+\[
+k_g = \sqrt{\det g} \left[ \left(v'' + \Gamma^2_{11}(u')^2 + 2\Gamma^2_{12} u'v' + \Gamma^2_{22}(v')^2\right) u' - \left(u'' + \Gamma^1_{11}(u')^2 + 2\Gamma^1_{12} u'v' + \Gamma^1_{22}(v')^2\right) v' \right].
+\]
+Since this formula involves only \(g\) and its derivatives (via the Christoffel symbols), \(k_g\) is intrinsic — it can be computed from the Riemannian metric alone without knowing how the surface sits in \(\mathbb{R}^3\).
 
-*Proof.* Using <span>&#92;(&#92;\delta'&#92;)</span> and <span>&#92;(&#92;\delta''&#92;)</span> from the Gauss-Weingarten equations and the formula <span>&#92;(k&#95;g = &#92;\det(&#92;\delta', &#92;\delta'', N)&#92;)</span>, one notes that <span>&#92;(&#92;\det(&#92;\sigma&#95;u, &#92;\sigma&#95;v, n) = &#92;\sqrt{&#92;\det g}&#92;)</span>. The normal component <span>&#92;(n(&#92;\cdot)&#92;)</span> drops out, yielding the intrinsic formula. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Using \(\delta'\) and \(\delta''\) from the Gauss-Weingarten equations and the formula \(k_g = \det(\delta', \delta'', N)\), one notes that \(\det(\sigma_u, \sigma_v, n) = \sqrt{\det g}\). The normal component \(n(\cdot)\) drops out, yielding the intrinsic formula. \(\square\)
 
 #### Geodesics via the Calculus of Variations
 
-A **geodesic** is intended to be a curve of locally minimum arclength. The energy of a curve <span>&#92;(&#92;\delta(s) = &#92;\sigma(&#92;\beta(s))&#92;)</span> over <span>&#92;([a,b]&#92;)</span> is
-<span>&#92;[
-E&#95;&#92;\delta[a,b] = &#92;\int&#95;a^b |&#92;\delta'(s)|^2&#92;\, ds = &#92;\int&#95;a^b &#92;\beta'(s)^T g(&#92;\beta(s)) &#92;\beta'(s)&#92;\, ds.
-&#92;]</span>
-By the Cauchy-Schwarz inequality, <span>&#92;(L^2 &#92;\leq (b-a) E&#92;)</span>, with equality when <span>&#92;(|&#92;\delta'|&#92;)</span> is constant. So minimizing arclength among arclength-parametrized curves is equivalent to minimizing energy.
+A **geodesic** is intended to be a curve of locally minimum arclength. The energy of a curve \(\delta(s) = \sigma(\beta(s))\) over \([a,b]\) is
+\[
+E_\delta[a,b] = \int_a^b |\delta'(s)|^2\\, ds = \int_a^b \beta'(s)^T g(\beta(s)) \beta'(s)\\, ds.
+\]
+By the Cauchy-Schwarz inequality, \(L^2 \leq (b-a) E\), with equality when \(|\delta'|\) is constant. So minimizing arclength among arclength-parametrized curves is equivalent to minimizing energy.
 
-To minimize the energy functional with Lagrangian <span>&#92;(L = g&#95;{11}(u')^2 + 2g&#95;{12}u'v' + g&#95;{22}(v')^2&#92;)</span>, one applies the **Euler-Lagrange equations**:
-<span>&#92;[
-&#92;\frac{&#92;\partial L}{&#92;\partial u} - &#92;\frac{d}{ds}&#92;\frac{&#92;\partial L}{&#92;\partial u'} = 0, &#92;qquad &#92;\frac{&#92;\partial L}{&#92;\partial v} - &#92;\frac{d}{ds}&#92;\frac{&#92;\partial L}{&#92;\partial v'} = 0.
-&#92;]</span>
+To minimize the energy functional with Lagrangian \(L = g_{11}(u')^2 + 2g_{12}u'v' + g_{22}(v')^2\), one applies the **Euler-Lagrange equations**:
+\[
+\frac{\partial L}{\partial u} - \frac{d}{ds}\frac{\partial L}{\partial u'} = 0, \qquad \frac{\partial L}{\partial v} - \frac{d}{ds}\frac{\partial L}{\partial v'} = 0.
+\]
 These reduce to the **geodesic equations**:
-<span>&#92;[
-u'' + &#92;\Gamma^1&#95;{11}(u')^2 + 2&#92;\Gamma^1&#95;{12} u'v' + &#92;\Gamma^1&#95;{22}(v')^2 = 0,
-&#92;]</span>
-<span>&#92;[
-v'' + &#92;\Gamma^2&#95;{11}(u')^2 + 2&#92;\Gamma^2&#95;{12} u'v' + &#92;\Gamma^2&#95;{22}(v')^2 = 0.
-&#92;]</span>
+\[
+u'' + \Gamma^1_{11}(u')^2 + 2\Gamma^1_{12} u'v' + \Gamma^1_{22}(v')^2 = 0,
+\]
+\[
+v'' + \Gamma^2_{11}(u')^2 + 2\Gamma^2_{12} u'v' + \Gamma^2_{22}(v')^2 = 0.
+\]
 
-**Definition 3.4**: A **geodesic** on <span>&#92;(&#92;\sigma&#92;)</span> is a smooth regular curve <span>&#92;(&#92;\beta : I &#92;to U&#92;)</span>, parametrized by arclength with respect to <span>&#92;(g&#92;)</span>, satisfying the geodesic equations.
+**Definition 3.4**: A **geodesic** on \(\sigma\) is a smooth regular curve \(\beta : I \to U\), parametrized by arclength with respect to \(g\), satisfying the geodesic equations.
 
-**Theorem 3.5**: For a smooth regular curve <span>&#92;(&#92;\beta&#92;)</span> on <span>&#92;(&#92;\sigma&#92;)</span> with <span>&#92;(&#92;\delta = &#92;\sigma &#92;\circ &#92;\beta&#92;)</span>:
-1. <span>&#92;(&#92;\delta''(s) &#92;\parallel N(s)&#92;)</span> for all <span>&#92;(s&#92;)</span> if and only if <span>&#92;(&#92;\beta&#92;)</span> satisfies the geodesic equations, in which case <span>&#92;(|&#92;\delta'|&#92;)</span> is constant.
-2. When <span>&#92;(|&#92;\delta'(s)| = 1&#92;)</span>, <span>&#92;(&#92;\beta&#92;)</span> is a geodesic if and only if <span>&#92;(k&#95;g &#92;\equiv 0&#92;)</span>.
+**Theorem 3.5**: For a smooth regular curve \(\beta\) on \(\sigma\) with \(\delta = \sigma \circ \beta\):
+1. \(\delta''(s) \parallel N(s)\) for all \(s\) if and only if \(\beta\) satisfies the geodesic equations, in which case \(|\delta'|\) is constant.
+2. When \(|\delta'(s)| = 1\), \(\beta\) is a geodesic if and only if \(k_g \equiv 0\).
 
-In other words, a geodesic is a curve for which the acceleration <span>&#92;(&#92;\delta''&#92;)</span> is always normal to the surface — there is no tangential acceleration, so the curve "travels as straight as possible" on the surface.
+In other words, a geodesic is a curve for which the acceleration \(\delta''\) is always normal to the surface — there is no tangential acceleration, so the curve "travels as straight as possible" on the surface.
 
-**Corollary 3.6**: Given a point <span>&#92;(p &#92;in U&#92;)</span> and a unit vector <span>&#92;(A &#92;in &#92;\mathbb{R}^2&#92;)</span>, there exists a unique geodesic <span>&#92;(&#92;\beta : I &#92;to U&#92;)</span> with <span>&#92;(&#92;\beta(0) = p&#92;)</span> and <span>&#92;(&#92;\beta'(0)/|&#92;\beta'(0)| = A&#92;)</span>, defined on the maximal interval <span>&#92;(I&#92;)</span> for which <span>&#92;(&#92;\beta(s) &#92;\in U&#92;)</span>. This follows directly from the existence and uniqueness theorem for ODEs applied to the geodesic equations.
+**Corollary 3.6**: Given a point \(p \in U\) and a unit vector \(A \in \mathbb{R}^2\), there exists a unique geodesic \(\beta : I \to U\) with \(\beta(0) = p\) and \(\beta'(0)/|\beta'(0)| = A\), defined on the maximal interval \(I\) for which \(\beta(s) \in U\). This follows directly from the existence and uniqueness theorem for ODEs applied to the geodesic equations.
 
 ### Orthogonal Coordinates
 
-**Theorem 3.7** (Orthogonal Coordinates): For every point <span>&#92;(p &#92;\in U&#92;)</span> there exists a neighborhood <span>&#92;(U&#95;p &#92;\subseteq U&#92;)</span> of <span>&#92;(p&#92;)</span> and a smooth regular change of coordinates <span>&#92;(&#92;\phi : U&#95;p &#92;\to V&#95;p&#92;)</span> such that the reparametrized surface <span>&#92;(&#92;\rho = &#92;\sigma &#92;\circ &#92;\phi^{-1}&#92;)</span> has diagonal first fundamental form <span>&#92;(g&#95;&#92;\rho(s,t) = &#92;\operatorname{diag}(g&#95;{11}, g&#95;{22})&#92;)</span> everywhere in <span>&#92;(V&#95;p&#92;)</span>.
+**Theorem 3.7** (Orthogonal Coordinates): For every point \(p \in U\) there exists a neighborhood \(U_p \subseteq U\) of \(p\) and a smooth regular change of coordinates \(\phi : U_p \to V_p\) such that the reparametrized surface \(\rho = \sigma \circ \phi^{-1}\) has diagonal first fundamental form \(g_\rho(s,t) = \operatorname{diag}(g_{11}, g_{22})\) everywhere in \(V_p\).
 
-When the coordinates are orthogonal (i.e., <span>&#92;(g&#95;{12} = F = 0&#92;)</span>), geometric quantities simplify greatly. In fact, Gauss proved a stronger result: **isothermal coordinates** exist locally around any point, where <span>&#92;(g&#95;&#92;\rho&#92;)</span> is a scalar multiple of the identity.
+When the coordinates are orthogonal (i.e., \(g_{12} = F = 0\), geometric quantities simplify greatly. In fact, Gauss proved a stronger result: **isothermal coordinates** exist locally around any point, where \(g_\rho\) is a scalar multiple of the identity.
 
-**Theorem 3.10** (Gaussian Curvature in Orthogonal Coordinates): When <span>&#92;(g&#92;)</span> is diagonal,
-<span>&#92;[
-K = &#92;\frac{-1}{2&#92;\sqrt{g&#95;{11}g&#95;{22}}} &#92;\left[ &#92;\frac{&#92;\partial}{&#92;\partial u}&#92;\frac{(g&#95;{22})&#95;u}{&#92;\sqrt{g&#95;{11}g&#95;{22}}} + &#92;\frac{&#92;\partial}{&#92;\partial v}&#92;\frac{(g&#95;{11})&#95;v}{&#92;\sqrt{g&#95;{11}g&#95;{22}}} &#92;\right].
-&#92;]</span>
+**Theorem 3.10** (Gaussian Curvature in Orthogonal Coordinates): When \(g\) is diagonal,
+\[
+K = \frac{-1}{2\sqrt{g_{11}g_{22}}} \left[ \frac{\partial}{\partial u}\frac{(g_{22})_u}{\sqrt{g_{11}g_{22}}} + \frac{\partial}{\partial v}\frac{(g_{11})_v}{\sqrt{g_{11}g_{22}}} \right].
+\]
 
-**Theorem 3.11** (Geodesic Curvature of Coordinate Lines): When <span>&#92;(g&#92;)</span> is diagonal, the geodesic curvatures of the coordinate lines <span>&#92;(v = b&#92;)</span> and <span>&#92;(u = a&#92;)</span> (parametrized by arclength) are
-<span>&#92;[
-k&#95;1 = k&#95;g^{v=b} = -&#92;\frac{(g&#95;{11})&#95;v}{2&#92;\sqrt{g&#95;{11}g&#95;{22}}}, &#92;qquad k&#95;2 = k&#95;g^{u=a} = &#92;\frac{(g&#95;{22})&#95;u}{2&#92;\sqrt{g&#95;{22}g&#95;{11}}}.
-&#92;]</span>
+**Theorem 3.11** (Geodesic Curvature of Coordinate Lines): When \(g\) is diagonal, the geodesic curvatures of the coordinate lines \(v = b\) and \(u = a\) (parametrized by arclength) are
+\[
+k_1 = k_g^{v=b} = -\frac{(g_{11})_v}{2\sqrt{g_{11}g_{22}}}, \qquad k_2 = k_g^{u=a} = \frac{(g_{22})_u}{2\sqrt{g_{22}g_{11}}}.
+\]
 
-**Note 3.12**: When <span>&#92;(g&#92;)</span> is diagonal and <span>&#92;(|&#92;\delta'(s)|=1&#92;)</span>, we can write
-<span>&#92;[
-&#92;\delta'(s) = &#92;\cos&#92;\theta(s)&#92;\,&#92;\frac{&#92;\sigma&#95;u(&#92;\beta(s))}{|&#92;\sigma&#95;u(&#92;\beta(s))|} + &#92;\sin&#92;\theta(s)&#92;\,&#92;\frac{&#92;\sigma&#95;v(&#92;\beta(s))}{|&#92;\sigma&#95;v(&#92;\beta(s))|}
-&#92;]</span>
-for a smooth function <span>&#92;(&#92;\theta(s)&#92;)</span> (unique up to <span>&#92;(2&#92;\pi&#92;)</span>). This <span>&#92;(&#92;\theta&#92;)</span> measures the angle from the <span>&#92;(&#92;\sigma&#95;u&#92;)</span>-direction to the tangent vector in the tangent plane.
+**Note 3.12**: When \(g\) is diagonal and \(|\delta'(s)|=1\), we can write
+\[
+\delta'(s) = \cos\theta(s)\\,\frac{\sigma_u(\beta(s))}{|\sigma_u(\beta(s))|} + \sin\theta(s)\\,\frac{\sigma_v(\beta(s))}{|\sigma_v(\beta(s))|}
+\]
+for a smooth function \(\theta(s)\) (unique up to \(2\pi\). This \(\theta\) measures the angle from the \(\sigma_u\)-direction to the tangent vector in the tangent plane.
 
 **Theorem 3.13** (Geodesic Curvature in Orthogonal Coordinates): With notation as above:
-1. Writing <span>&#92;(&#92;\beta(s) = (u(s), v(s))&#92;)</span>, we have <span>&#92;(&#92;\cos&#92;\theta = &#92;\sqrt{g&#95;{11}}&#92;\, u'&#92;)</span> and <span>&#92;(&#92;\sin&#92;\theta = &#92;\sqrt{g&#95;{22}}&#92;\, v'&#92;)</span>.
+1. Writing \(\beta(s) = (u(s), v(s))\), we have \(\cos\theta = \sqrt{g_{11}}\\, u'\) and \(\sin\theta = \sqrt{g_{22}}\\, v'\).
 2. The geodesic curvature satisfies
-<span>&#92;[
-k&#95;g = &#92;\theta' + k&#95;1 &#92;\cos&#92;\theta + k&#95;2 &#92;\sin&#92;\theta.
-&#92;]</span>
+\[
+k_g = \theta' + k_1 \cos\theta + k_2 \sin\theta.
+\]
 
-This elegant formula decomposes the geodesic curvature into the rate of change of the angle (<span>&#92;(&#92;\theta'&#92;)</span>) plus the curvature contributions from the coordinate lines.
+This elegant formula decomposes the geodesic curvature into the rate of change of the angle (\(\theta'\) plus the curvature contributions from the coordinate lines.
 
 ### Green's Theorem
 
-**Theorem 3.14** (Green's Theorem): Let <span>&#92;(&#92;\Delta = &#92;\{(x,y) : x &#92;\geq 0, y &#92;\geq 0, x+y &#92;\leq 1&#92;}&#92;)</span> be the standard triangle, and let <span>&#92;(&#92;\phi : U &#92;\to V&#92;)</span> be a smooth regular positive change of coordinates containing <span>&#92;(&#92;\Delta &#92;\subseteq V&#92;)</span> with inverse <span>&#92;(&#92;\psi = &#92;\phi^{-1}&#92;)</span>. Let <span>&#92;(R = &#92;\psi(&#92;\Delta)&#92;)</span> and let <span>&#92;(&#92;\alpha&#95;1, &#92;\alpha&#95;2, &#92;\alpha&#95;3&#92;)</span> be its edges. For any smooth <span>&#92;(F = (P,Q) : U &#92;\to &#92;\mathbb{R}^2&#92;)</span>,
-<span>&#92;[
-&#92;\iint&#95;R &#92;\left(&#92;\frac{&#92;\partial Q}{&#92;\partial u} - &#92;\frac{&#92;\partial P}{&#92;\partial v}&#92;\right) du&#92;\, dv = &#92;\sum&#95;{j=1}^3 &#92;\int&#95;0^1 F(&#92;\alpha&#95;j(t)) &#92;\cdot &#92;\alpha&#95;j'(t)&#92;\, dt.
-&#92;]</span>
+**Theorem 3.14** (Green's Theorem): Let \(\Delta = \\{(x,y) : x \geq 0, y \geq 0, x+y \leq 1\}\) be the standard triangle, and let \(\phi : U \to V\) be a smooth regular positive change of coordinates containing \(\Delta \subseteq V\) with inverse \(\psi = \phi^{-1}\). Let \(R = \psi(\Delta)\) and let \(\alpha_1, \alpha_2, \alpha_3\) be its edges. For any smooth \(F = (P,Q) : U \to \mathbb{R}^2\),
+\[
+\iint_R \left(\frac{\partial Q}{\partial u} - \frac{\partial P}{\partial v}\right) du\\, dv = \sum_{j=1}^3 \int_0^1 F(\alpha_j(t)) \cdot \alpha_j'(t)\\, dt.
+\]
 
-*Proof.* Set <span>&#92;(G(x,y) = D&#92;\psi(x,y)^T F(&#92;\psi(x,y))&#92;)</span>. By the change of variables formula, <span>&#92;(&#92;\iint&#95;R (Q&#95;u - P&#95;v)&#92;\,du&#92;\,dv = &#92;\iint&#95;&#92;\Delta (M&#95;x - L&#95;y)&#92;\,dx&#92;\,dy&#92;)</span> where <span>&#92;((L,M) = G&#92;)</span>. The latter equals <span>&#92;(&#92;\sum&#95;j &#92;\int&#95;0^1 G(&#92;\delta&#95;j) &#92;\cdot &#92;\delta&#95;j'&#92;\,dt&#92;)</span> by direct computation on the triangle <span>&#92;(&#92;\Delta&#92;)</span> using iterated integrals, and each boundary integral for <span>&#92;(G&#92;)</span> matches the corresponding one for <span>&#92;(F&#92;)</span> under the change of coordinates. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Set \(G(x,y) = D\psi(x,y)^T F(\psi(x,y))\). By the change of variables formula, \(\iint_R (Q_u - P_v)\\,du\\,dv = \iint_\Delta (M_x - L_y)\\,dx\\,dy\) where \((L,M) = G\). The latter equals \(\sum_j \int_0^1 G(\delta_j) \cdot \delta_j'\\,dt\) by direct computation on the triangle \(\Delta\) using iterated integrals, and each boundary integral for \(G\) matches the corresponding one for \(F\) under the change of coordinates. \(\square\)
 
 ### The Gauss-Bonnet Formula
 
-For a surface <span>&#92;(&#92;\sigma : U &#92;\to &#92;\mathbb{R}^3&#92;)</span>, a region <span>&#92;(R &#92;\subseteq U&#92;)</span>, and a curve <span>&#92;(&#92;\alpha : [a,b] &#92;\to U&#92;)</span>, we define the integrals
-<span>&#92;[
-&#92;\int&#95;&#92;\alpha k&#95;g&#92;\,dL = &#92;\int&#95;a^b k&#95;g(&#92;\alpha)(t)&#92;\,|&#92;\gamma'(t)|&#92;\,dt, &#92;qquad &#92;\iint&#95;R K&#92;\,dA = &#92;\iint&#95;R K&#95;&#92;\sigma(u,v)&#92;\sqrt{&#92;\det g}&#92;\,du&#92;\,dv.
-&#92;]</span>
+For a surface \(\sigma : U \to \mathbb{R}^3\), a region \(R \subseteq U\), and a curve \(\alpha : [a,b] \to U\), we define the integrals
+\[
+\int_\alpha k_g\\,dL = \int_a^b k_g(\alpha)(t)\\,|\gamma'(t)|\\,dt, \qquad \iint_R K\\,dA = \iint_R K_\sigma(u,v)\sqrt{\det g}\\,du\\,dv.
+\]
 These are invariant under changes of parametrization (with appropriate sign adjustments).
 
-**Theorem 3.17** (Gauss-Bonnet Formula in Orthogonal Coordinates): Let <span>&#92;(&#92;\sigma : U &#92;\to &#92;\mathbb{R}^3&#92;)</span> with diagonal <span>&#92;(g&#92;)</span>, and let <span>&#92;(&#92;\psi : &#92;\Delta &#92;\to R &#92;\subseteq U&#92;)</span> be a smooth regular positive change of coordinates. With <span>&#92;(&#92;\alpha&#95;j&#92;)</span> the three edges of <span>&#92;(R&#92;)</span> and <span>&#92;(&#92;\Delta&#92;\theta&#95;j = &#92;\theta&#95;j(1) - &#92;\theta&#95;j(0)&#92;)</span> the total angle change along each edge,
-<span>&#92;[
-&#92;\iint&#95;R K&#92;\,dA + &#92;\sum&#95;{j=1}^3 &#92;\int&#95;{&#92;\alpha&#95;j} k&#95;g&#92;\,dL = &#92;\sum&#95;{j=1}^3 &#92;\Delta&#92;\theta&#95;j.
-&#92;]</span>
+**Theorem 3.17** (Gauss-Bonnet Formula in Orthogonal Coordinates): Let \(\sigma : U \to \mathbb{R}^3\) with diagonal \(g\), and let \(\psi : \Delta \to R \subseteq U\) be a smooth regular positive change of coordinates. With \(\alpha_j\) the three edges of \(R\) and \(\Delta\theta_j = \theta_j(1) - \theta_j(0)\) the total angle change along each edge,
+\[
+\iint_R K\\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\,dL = \sum_{j=1}^3 \Delta\theta_j.
+\]
 
-*Proof.* Using Theorem 3.13, each geodesic curvature integral decomposes as <span>&#92;(&#92;\int k&#95;g&#92;\,dL = &#92;\Delta&#92;\theta&#95;j + &#92;\int&#95;0^1 F(&#92;\alpha&#95;j) &#92;\cdot &#92;\alpha&#95;j'&#92;\,dt&#92;)</span> where <span>&#92;(F = (P,Q)&#92;)</span> with <span>&#92;(P = -(g&#95;{11})&#95;v/(2&#92;\sqrt{g&#95;{11}g&#95;{22}})&#92;)</span> and <span>&#92;(Q = (g&#95;{22})&#95;u/(2&#92;\sqrt{g&#95;{11}g&#95;{22}})&#92;)</span>. By Green's Theorem, <span>&#92;(&#92;\sum&#95;j &#92;\int F &#92;\cdot &#92;\alpha&#95;j'&#92;\,dt = &#92;\iint&#95;R (Q&#95;u - P&#95;v)&#92;\,du&#92;\,dv = -&#92;\iint&#95;R K&#92;\,dA&#92;)</span> by Theorem 3.10. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Using Theorem 3.13, each geodesic curvature integral decomposes as \(\int k_g\\,dL = \Delta\theta_j + \int_0^1 F(\alpha_j) \cdot \alpha_j'\\,dt\) where \(F = (P,Q)\) with \(P = -(g_{11})_v/(2\sqrt{g_{11}g_{22}})\) and \(Q = (g_{22})_u/(2\sqrt{g_{11}g_{22}})\). By Green's Theorem, \(\sum_j \int F \cdot \alpha_j'\\,dt = \iint_R (Q_u - P_v)\\,du\\,dv = -\iint_R K\\,dA\) by Theorem 3.10. \(\square\)
 
-**Note 3.18**: If <span>&#92;(&#92;\epsilon&#95;1, &#92;\epsilon&#95;2, &#92;\epsilon&#95;3 &#92;\in [0,&#92;\pi]&#92;)</span> are the **external angles** at the vertices of <span>&#92;(&#92;\sigma(R)&#92;)</span> (the angles between consecutive edge tangent vectors), then one can show (by approximation arguments) that <span>&#92;(&#92;\sum&#95;j &#92;\Delta&#92;\theta&#95;j + &#92;\sum&#95;j &#92;\epsilon&#95;j = 2&#92;\pi&#92;)</span>. This yields the classical form:
-<span>&#92;[
-&#92;\iint&#95;R K&#92;\,dA + &#92;\sum&#95;{j=1}^3 &#92;\int&#95;{&#92;\alpha&#95;j} k&#95;g&#92;\,dL + &#92;\sum&#95;{j=1}^3 &#92;\epsilon&#95;j = 2&#92;\pi.
-&#92;]</span>
+**Note 3.18**: If \(\epsilon_1, \epsilon_2, \epsilon_3 \in [0,\pi]\) are the **external angles** at the vertices of \(\sigma(R)\) (the angles between consecutive edge tangent vectors), then one can show (by approximation arguments) that \(\sum_j \Delta\theta_j + \sum_j \epsilon_j = 2\pi\). This yields the classical form:
+\[
+\iint_R K\\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
+\]
 
-**Theorem 3.20** (Gauss-Bonnet Formula, General): Let <span>&#92;(U &#92;\subseteq &#92;\mathbb{R}^2&#92;)</span> be open with the standard triangle <span>&#92;(&#92;\Delta = &#92;\{u,v &#92;\geq 0, u+v &#92;\leq 1&#92;}&#92;\subseteq U&#92;)</span>, and let <span>&#92;(&#92;\sigma : U &#92;\to &#92;\mathbb{R}^3&#92;)</span> be smooth and regular. Let <span>&#92;(&#92;\epsilon&#95;1, &#92;\epsilon&#95;2, &#92;\epsilon&#95;3&#92;)</span> be the external angles of <span>&#92;(&#92;\sigma(&#92;\Delta)&#92;)</span> at its three vertices. Then:
-<span>&#92;[
-&#92;\iint&#95;&#92;\Delta K&#95;&#92;\sigma&#92;\, dA + &#92;\sum&#95;{j=1}^3 &#92;\int&#95;{&#92;\alpha&#95;j} k&#95;g&#92;\, dL + &#92;\sum&#95;{j=1}^3 &#92;\epsilon&#95;j = 2&#92;\pi.
-&#92;]</span>
+**Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \\{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
+\[
+\iint_\Delta K_\sigma\\, dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\, dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
+\]
 
-This formula holds without assuming orthogonal coordinates, because every point has a neighborhood with orthogonal coordinates (Theorem 3.7), and one can subdivide <span>&#92;(&#92;\Delta&#92;)</span> into small triangles each contained in such a neighborhood, apply Theorem 3.17 to each, and add — with interior boundary terms canceling.
+This formula holds without assuming orthogonal coordinates, because every point has a neighborhood with orthogonal coordinates (Theorem 3.7), and one can subdivide \(\Delta\) into small triangles each contained in such a neighborhood, apply Theorem 3.17 to each, and add — with interior boundary terms canceling.
 
 ### Global Gauss-Bonnet Theorem
 
-**Definition 3.22**: A **smooth regular global surface** (or smooth regular 2-dimensional submanifold) in <span>&#92;(&#92;\mathbb{R}^n&#92;)</span> is a set <span>&#92;(S &#92;\subseteq &#92;\mathbb{R}^n&#92;)</span> covered by smooth regular homeomorphisms <span>&#92;(&#92;\sigma : U&#95;&#92;\sigma &#92;\to S &#92;\cap W&#95;&#92;\sigma&#92;)</span> (the **coordinate charts**) such that whenever two charts overlap, the transition map is smooth and regular. The collection of charts is an **atlas** for <span>&#92;(S&#92;)</span>.
+**Definition 3.22**: A **smooth regular global surface** (or smooth regular 2-dimensional submanifold) in \(\mathbb{R}^n\) is a set \(S \subseteq \mathbb{R}^n\) covered by smooth regular homeomorphisms \(\sigma : U_\sigma \to S \cap W_\sigma\) (the **coordinate charts**) such that whenever two charts overlap, the transition map is smooth and regular. The collection of charts is an **atlas** for \(S\).
 
-**Definition 3.23**: A **smooth regular triangulated surface** in <span>&#92;(&#92;\mathbb{R}^3&#92;)</span> is a global surface <span>&#92;(S&#92;)</span> together with a finite atlas <span>&#92;(&#92;\{&#92;\sigma&#95;1, &#92;\ldots, &#92;\sigma&#95;n&#92;}&#92;)</span> where each <span>&#92;(&#92;\sigma&#95;i : U&#95;i &#92;\to S &#92;\cap W&#95;i&#92;)</span> has <span>&#92;(&#92;\Delta &#92;\subseteq U&#95;i&#92;)</span>, the triangles <span>&#92;(&#92;\sigma&#95;i(&#92;\Delta)&#92;)</span> cover <span>&#92;(S&#92;)</span> with disjoint interiors, and edges are joined in matched pairs. The **Euler characteristic** is
-<span>&#92;[
-&#92;\chi = V - E + F
-&#92;]</span>
-where <span>&#92;(V&#92;)</span>, <span>&#92;(E&#92;)</span>, <span>&#92;(F&#92;)</span> are the numbers of vertices, edges, and faces of the triangulation.
+**Definition 3.23**: A **smooth regular triangulated surface** in \(\mathbb{R}^3\) is a global surface \(S\) together with a finite atlas \(\\{\sigma_1, \ldots, \sigma_n\}\) where each \(\sigma_i : U_i \to S \cap W_i\) has \(\Delta \subseteq U_i\), the triangles \(\sigma_i(\Delta)\) cover \(S\) with disjoint interiors, and edges are joined in matched pairs. The **Euler characteristic** is
+\[
+\chi = V - E + F
+\]
+where \(V\), \(E\), \(F\) are the numbers of vertices, edges, and faces of the triangulation.
 
-**Theorem 3.24** (Gauss-Bonnet Theorem): For a smooth regular triangulated surface <span>&#92;(S &#92;\subseteq &#92;\mathbb{R}^3&#92;)</span> with triangulation <span>&#92;(&#92;{&#92;\sigma&#95;1, &#92;\ldots, &#92;\sigma&#95;n&#92;}&#92;)</span>,
-<span>&#92;[
-&#92;\iint&#95;S K&#92;\, dA = &#92;\sum&#95;{i=1}^n &#92;\iint&#95;&#92;\Delta K&#95;{&#92;\sigma&#95;i}&#92;\, dA = 2&#92;\pi&#92;\chi.
-&#92;]</span>
+**Theorem 3.24** (Gauss-Bonnet Theorem): For a smooth regular triangulated surface \(S \subseteq \mathbb{R}^3\) with triangulation \(\{\sigma_1, \ldots, \sigma_n\}\),
+\[
+\iint_S K\\, dA = \sum_{i=1}^n \iint_\Delta K_{\sigma_i}\\, dA = 2\pi\chi.
+\]
 
-*Proof.* Apply the Gauss-Bonnet Formula to each triangle. When edges are joined in pairs, the geodesic curvature integrals cancel (by the change-of-coordinates theorem for <span>&#92;(k&#95;g&#92;)</span>). Let <span>&#92;(&#92;\epsilon&#95;{i,j}&#92;)</span> and <span>&#92;(&#92;\phi&#95;{i,j} = &#92;\pi - &#92;\epsilon&#95;{i,j}&#92;)</span> be the external and internal angles of triangle <span>&#92;(i&#92;)</span> at vertex <span>&#92;(j&#92;)</span>. Since <span>&#92;(F=n&#92;)</span>, <span>&#92;(E = 3n/2&#92;)</span>, and the sum of internal angles at each vertex is <span>&#92;(2&#92;\pi&#92;)</span>, one obtains <span>&#92;(&#92;\sum K&#92;\,dA = 2&#92;\pi n - &#92;\sum&#95;{i,j} &#92;\epsilon&#95;{i,j} = 2&#92;\pi F - 2&#92;\pi E + 2&#92;\pi V = 2&#92;\pi&#92;\chi&#92;)</span>. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Apply the Gauss-Bonnet Formula to each triangle. When edges are joined in pairs, the geodesic curvature integrals cancel (by the change-of-coordinates theorem for \(k_g\). Let \(\epsilon_{i,j}\) and \(\phi_{i,j} = \pi - \epsilon_{i,j}\) be the external and internal angles of triangle \(i\) at vertex \(j\). Since \(F=n\), \(E = 3n/2\), and the sum of internal angles at each vertex is \(2\pi\), one obtains \(\sum K\\,dA = 2\pi n - \sum_{i,j} \epsilon_{i,j} = 2\pi F - 2\pi E + 2\pi V = 2\pi\chi\). \(\square\)
 
-**Remark 3.25**: Since <span>&#92;(K&#95;S(p) = K&#95;&#92;\sigma(u,v)&#92;)</span> when <span>&#92;(&#92;\sigma(u,v)=p&#92;)</span> (and this is independent of the chart chosen), the total curvature <span>&#92;(&#92;\iint&#95;S K&#92;\,dA&#92;)</span> is well-defined and independent of triangulation. In particular, the Euler characteristic <span>&#92;(&#92;\chi(S)&#92;)</span> is a topological invariant. For a sphere, <span>&#92;(&#92;\chi = 2&#92;)</span> and <span>&#92;(&#92;\iint K&#92;\,dA = 4&#92;\pi&#92;)</span>; for a torus, <span>&#92;(&#92;\chi = 0&#92;)</span> and <span>&#92;(&#92;\iint K&#92;\,dA = 0&#92;)</span>. The Gauss-Bonnet theorem is remarkable because it relates a purely geometric quantity (total curvature, involving second derivatives of the surface) to a purely topological one (the Euler characteristic, which counts vertices minus edges plus faces in any triangulation).
+**Remark 3.25**: Since \(K_S(p) = K_\sigma(u,v)\) when \(\sigma(u,v)=p\) (and this is independent of the chart chosen), the total curvature \(\iint_S K\\,dA\) is well-defined and independent of triangulation. In particular, the Euler characteristic \(\chi(S)\) is a topological invariant. For a sphere, \(\chi = 2\) and \(\iint K\\,dA = 4\pi\); for a torus, \(\chi = 0\) and \(\iint K\\,dA = 0\). The Gauss-Bonnet theorem is remarkable because it relates a purely geometric quantity (total curvature, involving second derivatives of the surface) to a purely topological one (the Euler characteristic, which counts vertices minus edges plus faces in any triangulation).
 
 ---
 
-## Chapter 4: Submanifolds of <span>&#92;(&#92;mathbb{R}^n&#92;)</span>
+## Chapter 4: Submanifolds of \(\mathbb{R}^n\)
 
 ### Smooth Maps and Regularity
 
-A smooth map <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^m &#92;\to &#92;\mathbb{R}^n&#92;)</span> (where <span>&#92;(U&#92;)</span> is open) is called **regular** (or an **immersion**) when its Jacobian matrix <span>&#92;(Df&#92;)</span> is injective at every point, i.e., the columns of <span>&#92;(Df(u)&#92;)</span> are linearly independent for all <span>&#92;(u &#92;\in U&#92;)</span>. This extends the regularity conditions used for curves (<span>&#92;(m=1&#92;)</span>) and surfaces (<span>&#92;(m=2&#92;)</span>) to maps of any dimension.
+A smooth map \(f : U \subseteq \mathbb{R}^m \to \mathbb{R}^n\) (where \(U\) is open) is called **regular** (or an **immersion**) when its Jacobian matrix \(Df\) is injective at every point, i.e., the columns of \(Df(u)\) are linearly independent for all \(u \in U\). This extends the regularity conditions used for curves (\(m=1\) and surfaces (\(m=2\) to maps of any dimension.
 
 ### Submanifolds
 
-**Definition 4.2–4.3**: A set <span>&#92;(M &#92;\subseteq &#92;\mathbb{R}^n&#92;)</span> is an **<span>&#92;(m&#92;)</span>-dimensional smooth regular submanifold** when, near every point <span>&#92;(p &#92;\in M&#92;)</span>, it is locally equal to the graph of a smooth function of <span>&#92;(m&#92;)</span> of the <span>&#92;(n&#92;)</span> coordinates in terms of the remaining <span>&#92;(n-m&#92;)</span>.
+**Definition 4.2–4.3**: A set \(M \subseteq \mathbb{R}^n\) is an **\(m\)-dimensional smooth regular submanifold** when, near every point \(p \in M\), it is locally equal to the graph of a smooth function of \(m\) of the \(n\) coordinates in terms of the remaining \(n-m\).
 
-Graphs of smooth functions, open sets in <span>&#92;(&#92;\mathbb{R}^m&#92;)</span>, and the unit sphere <span>&#92;(S^{n-1} = &#92;{x &#92;\in &#92;\mathbb{R}^n : |x| = 1&#92;}&#92;)</span> are all examples of submanifolds.
+Graphs of smooth functions, open sets in \(\mathbb{R}^m\), and the unit sphere \(S^{n-1} = \{x \in \mathbb{R}^n : |x| = 1\}\) are all examples of submanifolds.
 
 ### The Inverse Function Theorem
 
-**Theorem 4.6** (Inverse Function Theorem): Let <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^n &#92;\to &#92;\mathbb{R}^n&#92;)</span> with <span>&#92;(U&#92;)</span> open and <span>&#92;(a &#92;\in U&#92;)</span>. If <span>&#92;(f&#92;)</span> is <span>&#92;(C^1&#92;)</span> and <span>&#92;(Df(a)&#92;)</span> is invertible, then there exists an open set <span>&#92;(U&#95;0 &#92;\subseteq U&#92;)</span> with <span>&#92;(a &#92;\in U&#95;0&#92;)</span> such that <span>&#92;(V&#95;0 = f(U&#95;0)&#92;)</span> is open, <span>&#92;(f : U&#95;0 &#92;\to V&#95;0&#92;)</span> is bijective, and <span>&#92;(g = f^{-1} : V&#95;0 &#92;\to U&#95;0&#92;)</span> is <span>&#92;(C^1&#92;)</span> with <span>&#92;(Dg(f(a)) = Df(a)^{-1}&#92;)</span>. If <span>&#92;(f&#92;)</span> is <span>&#92;(C^k&#92;)</span> (or <span>&#92;(C^&#92;\infty&#92;)</span>) then so is <span>&#92;(f^{-1}&#92;)</span>.
+**Theorem 4.6** (Inverse Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) with \(U\) open and \(a \in U\). If \(f\) is \(C^1\) and \(Df(a)\) is invertible, then there exists an open set \(U_0 \subseteq U\) with \(a \in U_0\) such that \(V_0 = f(U_0)\) is open, \(f : U_0 \to V_0\) is bijective, and \(g = f^{-1} : V_0 \to U_0\) is \(C^1\) with \(Dg(f(a)) = Df(a)^{-1}\). If \(f\) is \(C^k\) (or \(C^\infty\) then so is \(f^{-1}\).
 
 (A complete proof appears in Appendix 1. The idea is a contraction mapping argument in Banach space.)
 
 ### The Implicit and Parametric Function Theorems
 
-**Theorem 4.7** (Implicit Function Theorem): Let <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^n &#92;\to &#92;\mathbb{R}^&#92;ell&#92;)</span> be <span>&#92;(C^1&#92;)</span> with <span>&#92;(Df(p)&#92;)</span> of rank <span>&#92;(\ell&#92;)</span>. Setting <span>&#92;(c = f(p)&#92;)</span>, the level set <span>&#92;(f^{-1}(c)&#92;)</span> is locally the graph of a <span>&#92;(C^1&#92;)</span> function near <span>&#92;(p&#92;)</span>.
+**Theorem 4.7** (Implicit Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^\ell\) be \(C^1\) with \(Df(p)\) of rank \(\ell\). Setting \(c = f(p)\), the level set \(f^{-1}(c)\) is locally the graph of a \(C^1\) function near \(p\).
 
-*Proof.* Reorder variables so that the last <span>&#92;(\ell&#92;)</span> columns of <span>&#92;(Df(p)&#92;)</span> form an invertible <span>&#92;(\ell &#92;\times &#92;\ell&#92;)</span> matrix. Write <span>&#92;(f(x,y)&#92;)</span> with <span>&#92;(x &#92;\in &#92;\mathbb{R}^{n-\ell}&#92;)</span> and <span>&#92;(y &#92;\in &#92;\mathbb{R}^&#92;\ell&#92;)</span> with <span>&#92;(\partial z/\partial y&#92;)</span> invertible. Define <span>&#92;(F(x,y) = (x, f(x,y))&#92;)</span>; then <span>&#92;(DF(p)&#92;)</span> is invertible, so the IFT applies. The inverse <span>&#92;(G(w,z) = (w, g(w,z))&#92;)</span> satisfies <span>&#92;(f^{-1}(c) = &#92;\{(x, g(x,c))&#92;}&#92;)</span> locally. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Reorder variables so that the last \(\ell\) columns of \(Df(p)\) form an invertible \(\ell \times \ell\) matrix. Write \(f(x,y)\) with \(x \in \mathbb{R}^{n-\ell}\) and \(y \in \mathbb{R}^\ell\) with \(\partial z/\partial y\) invertible. Define \(F(x,y) = (x, f(x,y))\); then \(DF(p)\) is invertible, so the IFT applies. The inverse \(G(w,z) = (w, g(w,z))\) satisfies \(f^{-1}(c) = \\{(x, g(x,c))\}\) locally. \(\square\)
 
-**Corollary 4.8** (Implicit Description of Submanifolds): If <span>&#92;(f : U &#92;\to &#92;\mathbb{R}^&#92;\ell&#92;)</span> is smooth with <span>&#92;(\operatorname{rank} Df(x) = &#92;\ell&#92;)</span> for all <span>&#92;(x &#92;\in U&#92;)</span>, then <span>&#92;(f^{-1}(c)&#92;)</span> is a smooth <span>&#92;((n-&#92;\ell)&#92;)</span>-dimensional submanifold for every <span>&#92;(c&#92;)</span> in the range. For example, <span>&#92;(S^{n-1} = f^{-1}(1)&#92;)</span> for <span>&#92;(f(x) = |x|^2&#92;)</span>, which has <span>&#92;(Df(x) = 2x^T&#92;)</span> of rank 1 everywhere on <span>&#92;(S^{n-1}&#92;)</span>.
+**Corollary 4.8** (Implicit Description of Submanifolds): If \(f : U \to \mathbb{R}^\ell\) is smooth with \(\operatorname{rank} Df(x) = \ell\) for all \(x \in U\), then \(f^{-1}(c)\) is a smooth \((n-\ell)\)-dimensional submanifold for every \(c\) in the range. For example, \(S^{n-1} = f^{-1}(1)\) for \(f(x) = |x|^2\), which has \(Df(x) = 2x^T\) of rank 1 everywhere on \(S^{n-1}\).
 
-**Theorem 4.10** (Parametric Function Theorem): Let <span>&#92;(\sigma : U &#92;\subseteq &#92;\mathbb{R}^m &#92;\to &#92;\mathbb{R}^n&#92;)</span> be <span>&#92;(C^1&#92;)</span> with <span>&#92;(D\sigma(a)&#92;)</span> of rank <span>&#92;(m&#92;)</span>. Then there is an open <span>&#92;(U&#95;0 &#92;\subseteq U&#92;)</span> with <span>&#92;(a &#92;\in U&#95;0&#92;)</span> such that <span>&#92;(\sigma(U&#95;0)&#92;)</span> equals the graph of a <span>&#92;(C^1&#92;)</span> function and <span>&#92;(\sigma : U&#95;0 &#92;\to \sigma(U&#95;0)&#92;)</span> is a homeomorphism.
+**Theorem 4.10** (Parametric Function Theorem): Let \(\sigma : U \subseteq \mathbb{R}^m \to \mathbb{R}^n\) be \(C^1\) with \(D\sigma(a)\) of rank \(m\). Then there is an open \(U_0 \subseteq U\) with \(a \in U_0\) such that \(\sigma(U_0)\) equals the graph of a \(C^1\) function and \(\sigma : U_0 \to \sigma(U_0)\) is a homeomorphism.
 
-**Corollary 4.11** (Parametric Description): An <span>&#92;(m&#92;)</span>-dimensional smooth regular submanifold <span>&#92;(M &#92;\subseteq &#92;\mathbb{R}^n&#92;)</span> is a set covered by smooth regular homeomorphisms <span>&#92;(\sigma : U &#92;\to V &#92;\subseteq M&#92;)</span> (with <span>&#92;(U &#92;\subseteq &#92;\mathbb{R}^m&#92;)</span> open). The collection of all such maps is an **atlas** for <span>&#92;(M&#92;)</span>, and each map is a **coordinate chart**. When two charts overlap, the transition map <span>&#92;(\rho^{-1}\sigma&#92;)</span> is a smooth regular change of coordinates (Theorem 4.15).
+**Corollary 4.11** (Parametric Description): An \(m\)-dimensional smooth regular submanifold \(M \subseteq \mathbb{R}^n\) is a set covered by smooth regular homeomorphisms \(\sigma : U \to V \subseteq M\) (with \(U \subseteq \mathbb{R}^m\) open). The collection of all such maps is an **atlas** for \(M\), and each map is a **coordinate chart**. When two charts overlap, the transition map \(\rho^{-1}\sigma\) is a smooth regular change of coordinates (Theorem 4.15).
 
-An important subtlety: the homeomorphism condition on <span>&#92;(\sigma&#92;)</span> is essential. The alpha curve <span>&#92;(\alpha(t) = (t^2-1, t(t^2-1))&#92;)</span> is regular and locally injective but not a homeomorphism onto its image near the self-intersection, and the image is not a manifold.
+An important subtlety: the homeomorphism condition on \(\sigma\) is essential. The alpha curve \(\alpha(t) = (t^2-1, t(t^2-1))\) is regular and locally injective but not a homeomorphism onto its image near the self-intersection, and the image is not a manifold.
 
 ### Smooth Maps Between Manifolds
 
-Let <span>&#92;(M &#92;\subseteq &#92;\mathbb{R}^k&#92;)</span> and <span>&#92;(N &#92;\subseteq &#92;\mathbb{R}^\ell&#92;)</span> be smooth submanifolds. A map <span>&#92;(f : M &#92;\to N&#92;)</span> is **smooth** when <span>&#92;(\rho^{-1} f \sigma&#92;)</span> is smooth for every chart <span>&#92;(\sigma&#92;)</span> on <span>&#92;(M&#92;)</span> and every chart <span>&#92;(\rho&#92;)</span> on <span>&#92;(N&#92;)</span>. A **diffeomorphism** is a bijective smooth map with smooth inverse. The dimension of a submanifold is well-defined (since if two charts overlap, the transition map must be square, forcing <span>&#92;(m = \ell&#92;)</span>). Composites of smooth maps are smooth.
+Let \(M \subseteq \mathbb{R}^k\) and \(N \subseteq \mathbb{R}^\ell\) be smooth submanifolds. A map \(f : M \to N\) is **smooth** when \(\rho^{-1} f \sigma\) is smooth for every chart \(\sigma\) on \(M\) and every chart \(\rho\) on \(N\). A **diffeomorphism** is a bijective smooth map with smooth inverse. The dimension of a submanifold is well-defined (since if two charts overlap, the transition map must be square, forcing \(m = \ell\). Composites of smooth maps are smooth.
 
 ### Tangent Spaces and Vector Fields
 
-**Definition 4.30**: The **tangent space** <span>&#92;(T&#95;p M&#92;)</span> at <span>&#92;(p &#92;\in M&#92;)</span> is the set of all tangent vectors <span>&#92;(\gamma'(0)&#92;)</span> for smooth curves <span>&#92;(\gamma : J &#92;\to M&#92;)</span> with <span>&#92;(\gamma(0) = p&#92;)</span>. For any chart <span>&#92;(\sigma&#92;)</span> with <span>&#92;(\sigma(a) = p&#92;)</span>,
-<span>&#92;[
-T&#95;p M = &#92;\operatorname{Range} D\sigma(a).
-&#92;]</span>
-This is an <span>&#92;(m&#92;)</span>-dimensional subspace of <span>&#92;(&#92;\mathbb{R}^n&#92;)</span>, and <span>&#92;(D\sigma(a)&#92;)</span> is an isomorphism from <span>&#92;(&#92;\mathbb{R}^m&#92;)</span> to <span>&#92;(T&#95;p M&#92;)</span>.
+**Definition 4.30**: The **tangent space** \(T_p M\) at \(p \in M\) is the set of all tangent vectors \(\gamma'(0)\) for smooth curves \(\gamma : J \to M\) with \(\gamma(0) = p\). For any chart \(\sigma\) with \(\sigma(a) = p\),
+\[
+T_p M = \operatorname{Range} D\sigma(a).
+\]
+This is an \(m\)-dimensional subspace of \(\mathbb{R}^n\), and \(D\sigma(a)\) is an isomorphism from \(\mathbb{R}^m\) to \(T_p M\).
 
-For example, <span>&#92;(T&#95;p S^{n-1} = \{p\}^\perp = \ker(p^T)&#92;)</span>, the hyperplane perpendicular to <span>&#92;(p&#92;)</span>.
+For example, \(T_p S^{n-1} = \{p\}^\perp = \ker(p^T)\), the hyperplane perpendicular to \(p\).
 
-A tangent vector <span>&#92;(X&#95;p &#92;\in T&#95;p M&#92;)</span> acts as a **directional derivative operator**: for any smooth <span>&#92;(f : M &#92;\to &#92;\mathbb{R}&#92;)</span>,
-<span>&#92;[
-X&#95;p(f) = &#92;\frac{d}{dt}&#92;\Big|&#95;{t=0} f(\gamma(t))
-&#92;]</span>
-for any smooth <span>&#92;(\gamma&#92;)</span> with <span>&#92;(\gamma(0) = p&#92;)</span>, <span>&#92;(\gamma'(0) = X&#95;p&#92;)</span>. In local coordinates <span>&#92;(\sigma&#92;)</span>, <span>&#92;(X&#95;p(f) = D(f \circ \sigma)(a) \cdot A&#92;)</span> where <span>&#92;(D\sigma(a) A = X&#95;p&#92;)</span>.
+A tangent vector \(X_p \in T_p M\) acts as a **directional derivative operator**: for any smooth \(f : M \to \mathbb{R}\),
+\[
+X_p(f) = \frac{d}{dt}\Big|_{t=0} f(\gamma(t))
+\]
+for any smooth \(\gamma\) with \(\gamma(0) = p\), \(\gamma'(0) = X_p\). In local coordinates \(\sigma\), \(X_p(f) = D(f \circ \sigma)(a) \cdot A\) where \(D\sigma(a) A = X_p\).
 
-A **vector field** on <span>&#92;(M&#92;)</span> is a smooth assignment <span>&#92;(p &#92;\mapsto X&#95;p &#92;\in T&#95;p M&#92;)</span>; in local coordinates <span>&#92;(\sigma&#92;)</span>, it corresponds to a smooth map <span>&#92;(A&#95;\sigma : U&#95;\sigma &#92;\to &#92;\mathbb{R}^m&#92;)</span> with <span>&#92;(X(\sigma(u)) = D\sigma(u) A&#95;\sigma(u)&#92;)</span>.
+A **vector field** on \(M\) is a smooth assignment \(p \mapsto X_p \in T_p M\); in local coordinates \(\sigma\), it corresponds to a smooth map \(A_\sigma : U_\sigma \to \mathbb{R}^m\) with \(X(\sigma(u)) = D\sigma(u) A_\sigma(u)\).
 
-The **pushforward** of a vector <span>&#92;(X&#95;p &#92;\in T&#95;p M&#92;)</span> by a smooth map <span>&#92;(f : M &#92;\to N&#92;)</span> is
-<span>&#92;[
-f&#95;&#42; X&#95;p = &#92;\frac{d}{dt}&#92;\Big|&#95;{t=0} f(\gamma(t)) &#92;\in T&#95;{f(p)} N.
-&#92;]</span>
-In local coordinates, <span>&#92;(f&#95;&#42; X&#95;p = D(f \circ \sigma)(a) A&#95;\sigma&#92;)</span>.
+The **pushforward** of a vector \(X_p \in T_p M\) by a smooth map \(f : M \to N\) is
+\[
+f_* X_p = \frac{d}{dt}\Big|_{t=0} f(\gamma(t)) \in T_{f(p)} N.
+\]
+In local coordinates, \(f_* X_p = D(f \circ \sigma)(a) A_\sigma\).
 
 ### The Riemannian Metric on Manifolds
 
-**Definition 4.45**: For a chart <span>&#92;(\sigma : U&#95;\sigma &#92;\to M&#92;)</span>, the **Riemannian metric** is <span>&#92;(g&#95;\sigma(u) = D\sigma(u)^T D\sigma(u)&#92;)</span>, giving an inner product on <span>&#92;(T&#95;u U&#95;\sigma = &#92;\mathbb{R}^m&#92;)</span>. This is consistent across charts: if <span>&#92;(\rho = \sigma \circ \psi&#92;)</span> then <span>&#92;(g&#95;\rho = D\psi^T g&#95;\sigma D\psi&#92;)</span>. The length of a curve on <span>&#92;(M&#92;)</span> and integrals of functions over <span>&#92;(M&#92;)</span> are computed using this metric, and are independent of the chart chosen.
+**Definition 4.45**: For a chart \(\sigma : U_\sigma \to M\), the **Riemannian metric** is \(g_\sigma(u) = D\sigma(u)^T D\sigma(u)\), giving an inner product on \(T_u U_\sigma = \mathbb{R}^m\). This is consistent across charts: if \(\rho = \sigma \circ \psi\) then \(g_\rho = D\psi^T g_\sigma D\psi\). The length of a curve on \(M\) and integrals of functions over \(M\) are computed using this metric, and are independent of the chart chosen.
 
 ---
 
@@ -409,99 +409,99 @@ In local coordinates, <span>&#92;(f&#95;&#42; X&#95;p = D(f \circ \sigma)(a) A&#
 
 ### Line Integrals and Flux Integrals
 
-The **line integral** of a smooth map <span>&#92;(F : U &#92;\subseteq &#92;\mathbb{R}^n &#92;\to &#92;\mathbb{R}^n&#92;)</span> along a curve <span>&#92;(\alpha : [a,b] &#92;\to U&#92;)</span> is
-<span>&#92;[
-&#92;\int&#95;\alpha F &#92;\cdot dL = &#92;\int&#95;a^b F(\alpha(t)) &#92;\cdot \alpha'(t)&#92;\, dt.
-&#92;]</span>
-The **flux integral** of <span>&#92;(F : U &#92;\subseteq &#92;\mathbb{R}^2 &#92;\to &#92;\mathbb{R}^2&#92;)</span> through a curve <span>&#92;(\alpha : [a,b] &#92;\to U&#92;)</span> is
-<span>&#92;[
-&#92;\int&#95;\alpha F &#92;\cdot dN = &#92;\int&#95;a^b F(\alpha(t)) &#92;\cdot \alpha'(t)^\times&#92;\, dt
-&#92;]</span>
-where <span>&#92;(v^\times = (-v&#95;2, v&#95;1)&#92;)</span>. These are the basic examples of integrating a 1-form along a curve.
+The **line integral** of a smooth map \(F : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) along a curve \(\alpha : [a,b] \to U\) is
+\[
+\int_\alpha F \cdot dL = \int_a^b F(\alpha(t)) \cdot \alpha'(t)\\, dt.
+\]
+The **flux integral** of \(F : U \subseteq \mathbb{R}^2 \to \mathbb{R}^2\) through a curve \(\alpha : [a,b] \to U\) is
+\[
+\int_\alpha F \cdot dN = \int_a^b F(\alpha(t)) \cdot \alpha'(t)^\times\\, dt
+\]
+where \(v^\times = (-v_2, v_1)\). These are the basic examples of integrating a 1-form along a curve.
 
 ### Differential Forms
 
-A **smooth <span>&#92;(k&#92;)</span>-form** on an open set <span>&#92;(U &#92;\subseteq &#92;\mathbb{R}^m&#92;)</span> is a smooth map <span>&#92;(\omega : U &#92;\to \Lambda^k(&#92;\mathbb{R}^m)&#92;)</span>, i.e., a smooth assignment of an alternating <span>&#92;(k&#92;)</span>-multilinear function to each point. In coordinates it has the form
-<span>&#92;[
-&#92;\omega = &#92;\sum&#95;{I} a&#95;I(u)&#92;\, du&#95;I
-&#92;]</span>
-where the sum is over increasing multi-indices <span>&#92;(I = (i_1 < i_2 < &#92;\cdots < i_k)&#92;)</span>, and <span>&#92;(du&#95;I = du&#95;{i&#95;1} &#92;\wedge &#92;\cdots &#92;\wedge du&#95;{i&#95;k}&#92;)</span>. A smooth 0-form is just a smooth function.
+A **smooth \(k\)-form** on an open set \(U \subseteq \mathbb{R}^m\) is a smooth map \(\omega : U \to \Lambda^k(\mathbb{R}^m)\), i.e., a smooth assignment of an alternating \(k\)-multilinear function to each point. In coordinates it has the form
+\[
+\omega = \sum_{I} a_I(u)\\, du_I
+\]
+where the sum is over increasing multi-indices \(I = (i_1 < i_2 < \cdots < i_k)\), and \(du_I = du_{i_1} \wedge \cdots \wedge du_{i_k}\). A smooth 0-form is just a smooth function.
 
-The **integral** of a smooth <span>&#92;(k&#92;)</span>-form <span>&#92;(\omega&#92;)</span> over a smooth regular <span>&#92;(k&#92;)</span>-surface <span>&#92;(\sigma : U&#95;0 &#92;\subseteq &#92;\mathbb{R}^k &#92;\to &#92;\mathbb{R}^m&#92;)</span> on a region <span>&#92;(R &#92;\subseteq U&#95;0&#92;)</span> is
-<span>&#92;[
-&#92;\int&#95;\sigma \omega = &#92;\int&#95;R &#92;\omega(\sigma(u))&#92;\big(D\sigma(u) e&#95;1, &#92;\ldots, D\sigma(u) e&#95;k&#92;\big)&#92;\, du&#95;1 &#92;\cdots du&#95;k.
-&#92;]</span>
+The **integral** of a smooth \(k\)-form \(\omega\) over a smooth regular \(k\)-surface \(\sigma : U_0 \subseteq \mathbb{R}^k \to \mathbb{R}^m\) on a region \(R \subseteq U_0\) is
+\[
+\int_\sigma \omega = \int_R \omega(\sigma(u))\big(D\sigma(u) e_1, \ldots, D\sigma(u) e_k\big)\\, du_1 \cdots du_k.
+\]
 
 ### The Wedge Product and Exterior Derivative
 
-The **wedge product** of a <span>&#92;(j&#92;)</span>-form <span>&#92;(\alpha&#92;)</span> and a <span>&#92;(k&#92;)</span>-form <span>&#92;(\beta&#92;)</span> is the <span>&#92;((j+k)&#92;)</span>-form <span>&#92;(\alpha &#92;\wedge \beta&#92;)</span>, characterized by anti-commutativity:
-<span>&#92;[
-\alpha &#92;\wedge \beta = (-1)^{jk} \beta &#92;\wedge \alpha.
-&#92;]</span>
+The **wedge product** of a \(j\)-form \(\alpha\) and a \(k\)-form \(\beta\) is the \((j+k)\)-form \(\alpha \wedge \beta\), characterized by anti-commutativity:
+\[
+\alpha \wedge \beta = (-1)^{jk} \beta \wedge \alpha.
+\]
 
-The **exterior derivative** <span>&#92;(d&#92;)</span> sends smooth <span>&#92;(k&#92;)</span>-forms to smooth <span>&#92;((k+1)&#92;)</span>-forms. For a 0-form <span>&#92;(f&#92;)</span>, <span>&#92;(df = \sum&#95;i \frac{\partial f}{\partial u&#95;i} du&#95;i&#92;)</span>. For a <span>&#92;(k&#92;)</span>-form <span>&#92;(\omega = \sum&#95;I a&#95;I du&#95;I&#92;)</span>,
-<span>&#92;[
-d\omega = &#92;\sum&#95;I da&#95;I &#92;\wedge du&#95;I = &#92;\sum&#95;I &#92;\sum&#95;j &#92;\frac{\partial a&#95;I}{\partial u&#95;j} du&#95;j &#92;\wedge du&#95;I.
-&#92;]</span>
-The key property is <span>&#92;(d^2 = 0&#92;)</span> (i.e., <span>&#92;(d(d\omega) = 0&#92;)</span> for any smooth form).
+The **exterior derivative** \(d\) sends smooth \(k\)-forms to smooth \((k+1)\)-forms. For a 0-form \(f\), \(df = \sum_i \frac{\partial f}{\partial u_i} du_i\). For a \(k\)-form \(\omega = \sum_I a_I du_I\),
+\[
+d\omega = \sum_I da_I \wedge du_I = \sum_I \sum_j \frac{\partial a_I}{\partial u_j} du_j \wedge du_I.
+\]
+The key property is \(d^2 = 0\) (i.e., \(d(d\omega) = 0\) for any smooth form).
 
-The classical vector calculus operations are special cases of <span>&#92;(d&#92;)</span> in <span>&#92;(&#92;\mathbb{R}^3&#92;)</span>: the gradient of a function is <span>&#92;(d&#92;)</span> on 0-forms, the curl corresponds to <span>&#92;(d&#92;)</span> on 1-forms, and the divergence corresponds to <span>&#92;(d&#92;)</span> on 2-forms.
+The classical vector calculus operations are special cases of \(d\) in \(\mathbb{R}^3\): the gradient of a function is \(d\) on 0-forms, the curl corresponds to \(d\) on 1-forms, and the divergence corresponds to \(d\) on 2-forms.
 
 ### Stokes-Type Theorems
 
 The following classical theorems are all special cases of a single unified theorem:
 
-**Conservative Field Theorem**: <span>&#92;(\int&#95;\alpha dF = F(\alpha(b)) - F(\alpha(a))&#92;)</span> for smooth <span>&#92;(F&#92;)</span> and curve <span>&#92;(\alpha&#92;)</span>.
+**Conservative Field Theorem**: \(\int_\alpha dF = F(\alpha(b)) - F(\alpha(a))\) for smooth \(F\) and curve \(\alpha\).
 
-**Green's Theorem**: For <span>&#92;(F = (P,Q)&#92;)</span> on a region <span>&#92;(R &#92;\subseteq &#92;\mathbb{R}^2&#92;)</span> with positively-oriented boundary <span>&#92;(\partial R&#92;)</span>:
-<span>&#92;[
-&#92;\iint&#95;R &#92;\left(&#92;\frac{\partial Q}{\partial x} - &#92;\frac{\partial P}{\partial y}&#92;\right) dA = &#92;\oint&#95;{\partial R} P&#92;\,dx + Q&#92;\,dy.
-&#92;]</span>
+**Green's Theorem**: For \(F = (P,Q)\) on a region \(R \subseteq \mathbb{R}^2\) with positively-oriented boundary \(\partial R\):
+\[
+\iint_R \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA = \oint_{\partial R} P\\,dx + Q\\,dy.
+\]
 
-**Divergence Theorem**: For <span>&#92;(F : U &#92;\subseteq &#92;\mathbb{R}^3 &#92;\to &#92;\mathbb{R}^3&#92;)</span> on a region <span>&#92;(W&#92;)</span> with boundary surface <span>&#92;(\partial W&#92;)</span>:
-<span>&#92;[
-&#92;\iiint&#95;W &#92;\operatorname{div} F&#92;\, dV = &#92;\oiint&#95;{\partial W} F &#92;\cdot dA.
-&#92;]</span>
+**Divergence Theorem**: For \(F : U \subseteq \mathbb{R}^3 \to \mathbb{R}^3\) on a region \(W\) with boundary surface \(\partial W\):
+\[
+\iiint_W \operatorname{div} F\\, dV = \oiint_{\partial W} F \cdot dA.
+\]
 
-**Stokes' Theorem**: For a surface <span>&#92;(\Sigma&#92;)</span> in <span>&#92;(&#92;\mathbb{R}^3&#92;)</span> with boundary curve <span>&#92;(\partial\Sigma&#92;)</span>:
-<span>&#92;(
-&#92;\iint&#95;\Sigma &#92;(\nabla &#92;\times F) &#92;\cdot dA = &#92;\oint&#95;{\partial \Sigma} F &#92;\cdot dL.
-&#92;)</span>
+**Stokes' Theorem**: For a surface \(\Sigma\) in \(\mathbb{R}^3\) with boundary curve \(\partial\Sigma\):
+\(
+\iint_\Sigma \(\nabla \times F) \cdot dA = \oint_{\partial \Sigma} F \cdot dL.
+\)
 
 ### Simplices, Chains, and the Boundary Operator
 
-The standard <span>&#92;(k&#92;)</span>-**simplex** is <span>&#92;(\Delta^k = &#92;\{(t&#95;1, &#92;\ldots, t&#95;k) : t&#95;i &#92;\geq 0,&#92; \sum t&#95;i &#92;\leq 1&#92;}&#92;)</span>. A smooth <span>&#92;(k&#92;)</span>-**surface** on <span>&#92;(\Delta^k&#92;)</span> is a smooth map <span>&#92;(\sigma : \Delta^k &#92;\to U &#92;\subseteq &#92;\mathbb{R}^m&#92;)</span> whose restriction to the interior is regular. A <span>&#92;(k&#92;)</span>-**chain** is a formal finite <span>&#92;(&#92;\mathbb{Z}&#92;)</span>-linear combination of <span>&#92;(k&#92;)</span>-surfaces. The **boundary** <span>&#92;(\partial\sigma&#92;)</span> is the alternating sum of the <span>&#92;((k-1)&#92;)</span>-dimensional faces of <span>&#92;(\sigma&#92;)</span>:
-<span>&#92;[
-\partial \sigma = &#92;\sum&#95;{j=0}^k (-1)^j \sigma &#92;\circ F&#95;j
-&#92;]</span>
-where <span>&#92;(F&#95;j&#92;)</span> maps <span>&#92;(\Delta^{k-1}&#92;)</span> to the <span>&#92;(j^{&#92;\text{th}}&#92;)</span> face of <span>&#92;(\Delta^k&#92;)</span>. The key identity is <span>&#92;(\partial^2 = 0&#92;)</span>.
+The standard \(k\)-**simplex** is \(\Delta^k = \\{(t_1, \ldots, t_k) : t_i \geq 0,\ \sum t_i \leq 1\}\). A smooth \(k\)-**surface** on \(\Delta^k\) is a smooth map \(\sigma : \Delta^k \to U \subseteq \mathbb{R}^m\) whose restriction to the interior is regular. A \(k\)-**chain** is a formal finite \(\mathbb{Z}\)-linear combination of \(k\)-surfaces. The **boundary** \(\partial\sigma\) is the alternating sum of the \((k-1)\)-dimensional faces of \(\sigma\):
+\[
+\partial \sigma = \sum_{j=0}^k (-1)^j \sigma \circ F_j
+\]
+where \(F_j\) maps \(\Delta^{k-1}\) to the \(j^{\text{th}}\) face of \(\Delta^k\). The key identity is \(\partial^2 = 0\).
 
-**Theorem 5** (Stokes' Theorem for Chains in <span>&#92;(&#92;\mathbb{R}^m&#92;)</span>): For a smooth <span>&#92;(k&#92;)</span>-surface <span>&#92;(\sigma&#92;)</span> on <span>&#92;(\Delta^k&#92;)</span> and a smooth <span>&#92;((k-1)&#92;)</span>-form <span>&#92;(\omega&#92;)</span> on an open neighborhood of the image,
-<span>&#92;[
-&#92;\int&#95;\sigma d\omega = &#92;\int&#95;{\partial \sigma} \omega.
-&#92;]</span>
+**Theorem 5** (Stokes' Theorem for Chains in \(\mathbb{R}^m\): For a smooth \(k\)-surface \(\sigma\) on \(\Delta^k\) and a smooth \((k-1)\)-form \(\omega\) on an open neighborhood of the image,
+\[
+\int_\sigma d\omega = \int_{\partial \sigma} \omega.
+\]
 
-*Proof sketch.* By linearity, one reduces to the case <span>&#92;(\omega = a\, du&#95;1 &#92;\wedge &#92;\cdots &#92;\wedge &#92;\widehat{du&#95;j} &#92;\wedge &#92;\cdots &#92;\wedge du&#95;k&#92;)</span>. Applying the fundamental theorem of calculus in the <span>&#92;(j&#92;)</span>-th variable and summing with signs gives the result, with boundary face integrals accounting for the sign pattern via the Cauchy-Binet formula.
+*Proof sketch.* By linearity, one reduces to the case \(\omega = a\, du_1 \wedge \cdots \wedge \widehat{du_j} \wedge \cdots \wedge du_k\). Applying the fundamental theorem of calculus in the \(j\)-th variable and summing with signs gives the result, with boundary face integrals accounting for the sign pattern via the Cauchy-Binet formula.
 
 ### Pullback
 
-The **pullback** of a smooth <span>&#92;(k&#92;)</span>-form <span>&#92;(\beta&#92;)</span> on <span>&#92;(V&#92;)</span> by a smooth map <span>&#92;(f : U &#92;\to V&#92;)</span> is the <span>&#92;(k&#92;)</span>-form <span>&#92;(f^&#42;\beta&#92;)</span> on <span>&#92;(U&#92;)</span> defined by
-<span>&#92;[
-(f^&#42;\beta)&#95;u(v&#95;1, &#92;\ldots, v&#95;k) = \beta&#95;{f(u)}(Df(u)v&#95;1, &#92;\ldots, Df(u)v&#95;k).
-&#92;]</span>
-In coordinates, if <span>&#92;(\beta = \sum&#95;I b&#95;I dy&#95;I&#92;)</span> then <span>&#92;(f^&#42;\beta = \sum&#95;I (b&#95;I &#92;\circ f) d(f&#95;{i&#95;1}) &#92;\wedge &#92;\cdots &#92;\wedge d(f&#95;{i&#95;k})&#92;)</span>. Pullback is natural: <span>&#92;(f^&#42;(d\omega) = d(f^&#42;\omega)&#92;)</span> and <span>&#92;(f^&#42;(\alpha &#92;\wedge \beta) = f^&#42;\alpha &#92;\wedge f^&#42;\beta&#92;)</span>.
+The **pullback** of a smooth \(k\)-form \(\beta\) on \(V\) by a smooth map \(f : U \to V\) is the \(k\)-form \(f^*\beta\) on \(U\) defined by
+\[
+(f^*\beta)_u(v_1, \ldots, v_k) = \beta_{f(u)}(Df(u)v_1, \ldots, Df(u)v_k).
+\]
+In coordinates, if \(\beta = \sum_I b_I dy_I\) then \(f^*\beta = \sum_I (b_I \circ f) d(f_{i_1}) \wedge \cdots \wedge d(f_{i_k})\). Pullback is natural: \(f^*(d\omega) = d(f^*\omega)\) and \(f^*(\alpha \wedge \beta) = f^*\alpha \wedge f^*\beta\).
 
-**Theorem 5.35** (Pullback Formulas): Let <span>&#92;(\sigma : U&#95;0 &#92;\to &#92;\mathbb{R}^m&#92;)</span> be a <span>&#92;(k&#92;)</span>-surface and <span>&#92;(f : U &#92;\to V&#92;)</span> smooth. Then
-<span>&#92;[
-&#92;\int&#95;{f &#92;\circ \sigma} \omega = &#92;\int&#95;\sigma f^&#42;\omega, &#92;qquad &#92;\int&#95;\sigma f^&#42;\omega = &#92;\int&#95;{f&#95;&#42;\sigma} \omega.
-&#92;]</span>
+**Theorem 5.35** (Pullback Formulas): Let \(\sigma : U_0 \to \mathbb{R}^m\) be a \(k\)-surface and \(f : U \to V\) smooth. Then
+\[
+\int_{f \circ \sigma} \omega = \int_\sigma f^*\omega, \qquad \int_\sigma f^*\omega = \int_{f_*\sigma} \omega.
+\]
 
 ### Stokes' Theorem on Submanifolds
 
-For a smooth <span>&#92;(k&#92;)</span>-form <span>&#92;(\omega&#92;)</span> defined on an open set containing a smooth regular <span>&#92;((k-1)&#92;)</span>-dimensional submanifold <span>&#92;(M &#92;\subseteq &#92;\mathbb{R}^m&#92;)</span> with boundary <span>&#92;(\partial M&#92;)</span>,
-<span>&#92;[
-&#92;\int&#95;M d\omega = &#92;\int&#95;{\partial M} \omega.
-&#92;]</span>
+For a smooth \(k\)-form \(\omega\) defined on an open set containing a smooth regular \((k-1)\)-dimensional submanifold \(M \subseteq \mathbb{R}^m\) with boundary \(\partial M\),
+\[
+\int_M d\omega = \int_{\partial M} \omega.
+\]
 This unifies all the classical theorems: they are all instances of "the integral of the exterior derivative equals the integral on the boundary."
 
 ---
@@ -510,44 +510,44 @@ This unifies all the classical theorems: they are all instances of "the integral
 
 ### Dual Spaces and Multilinear Maps
 
-For a finite-dimensional vector space <span>&#92;(U&#92;)</span> over a field <span>&#92;(F&#92;)</span>, the **dual space** is <span>&#92;(U^&#42; = &#92;\operatorname{Hom}(U, F)&#92;)</span>, the space of linear functions <span>&#92;(f : U &#92;\to F&#92;)</span>. If <span>&#92;(&#92;\{e&#95;i&#92;}&#92;)</span> is a basis for <span>&#92;(U&#92;)</span>, the **dual basis** <span>&#92;(&#92;\{e&#95;i^&#42;&#92;}&#92;)</span> is defined by <span>&#92;(e&#95;i^&#42;(e&#95;j) = \delta&#95;{ij}&#92;)</span>. We have <span>&#92;(\dim U^&#42; = \dim U&#92;)</span> and the natural isomorphism <span>&#92;(U &#92;\cong (U^&#42;)^&#42;&#92;)</span>.
+For a finite-dimensional vector space \(U\) over a field \(F\), the **dual space** is \(U^* = \operatorname{Hom}(U, F)\), the space of linear functions \(f : U \to F\). If \(\\{e_i\}\) is a basis for \(U\), the **dual basis** \(\\{e_i^*\}\) is defined by \(e_i^*(e_j) = \delta_{ij}\). We have \(\dim U^* = \dim U\) and the natural isomorphism \(U \cong (U^*)^*\).
 
-More generally, a **multilinear map** (or **tensor**) of type <span>&#92;((k)&#92;)</span> on <span>&#92;(U&#92;)</span> is a map <span>&#92;(T : U^k &#92;\to F&#92;)</span> that is linear in each argument separately. The space of all such tensors is written <span>&#92;(T^k(U) = (U^&#42;)^{\otimes k}&#92;)</span>.
+More generally, a **multilinear map** (or **tensor**) of type \((k)\) on \(U\) is a map \(T : U^k \to F\) that is linear in each argument separately. The space of all such tensors is written \(T^k(U) = (U^*)^{\otimes k}\).
 
 ### Tensor, Symmetric, and Exterior Algebras
 
-**Definition**: For vector spaces <span>&#92;(U&#95;1, &#92;\ldots, U&#95;k&#92;)</span>, the **tensor product** <span>&#92;(U&#95;1 &#92;\otimes &#92;\cdots &#92;\otimes U&#95;k&#92;)</span> is the vector space generated by symbols <span>&#92;(u&#95;1 &#92;\otimes &#92;\cdots &#92;\otimes u&#95;k&#92;)</span> subject to multilinearity relations. The **tensor algebra** is <span>&#92;(TU = &#92;\bigoplus&#95;{k=0}^\infty T^k U&#92;)</span> with product given by tensor product.
+**Definition**: For vector spaces \(U_1, \ldots, U_k\), the **tensor product** \(U_1 \otimes \cdots \otimes U_k\) is the vector space generated by symbols \(u_1 \otimes \cdots \otimes u_k\) subject to multilinearity relations. The **tensor algebra** is \(TU = \bigoplus_{k=0}^\infty T^k U\) with product given by tensor product.
 
-The space of **symmetric <span>&#92;(k&#92;)</span>-forms** <span>&#92;(S^k U&#92;)</span> consists of tensors symmetric under permutation of arguments, and the space of **alternating <span>&#92;(k&#92;)</span>-forms** (or <span>&#92;(k&#92;)</span>-covectors) is <span>&#92;(\Lambda^k U&#92;)</span>, consisting of tensors that change sign under any transposition of two arguments. The exterior (wedge) product makes <span>&#92;(\Lambda U = \bigoplus&#95;{k=0}^\infty \Lambda^k U&#92;)</span> into the **exterior algebra**.
+The space of **symmetric \(k\)-forms** \(S^k U\) consists of tensors symmetric under permutation of arguments, and the space of **alternating \(k\)-forms** (or \(k\)-covectors) is \(\Lambda^k U\), consisting of tensors that change sign under any transposition of two arguments. The exterior (wedge) product makes \(\Lambda U = \bigoplus_{k=0}^\infty \Lambda^k U\) into the **exterior algebra**.
 
-When <span>&#92;(&#92;\{e&#95;1, &#92;\ldots, e&#95;n&#92;}&#92;)</span> is a basis for <span>&#92;(U&#92;)</span>:
-- <span>&#92;(T^k U&#92;)</span> has basis <span>&#92;(&#92;\{e&#95;{i&#95;1}^&#42; &#92;\otimes &#92;\cdots &#92;\otimes e&#95;{i&#95;k}^&#42;&#92;}&#92;)</span>, dimension <span>&#92;(n^k&#92;)</span>.
-- <span>&#92;(S^k U&#92;)</span> has dimension <span>&#92;(\binom{n+k-1}{k}&#92;)</span>.
-- <span>&#92;(\Lambda^k U&#92;)</span> has basis <span>&#92;(&#92;\{e_{i_1}^* &#92;\wedge &#92;\cdots &#92;\wedge e_{i_k}^* : i_1 < i_2 < &#92;\cdots < i_k&#92;}&#92;)</span>, dimension <span>&#92;(\binom{n}{k}&#92;)</span>.
+When \(\\{e_1, \ldots, e_n\}\) is a basis for \(U\):
+- \(T^k U\) has basis \(\\{e_{i_1}^* \otimes \cdots \otimes e_{i_k}^*\}\), dimension \(n^k\).
+- \(S^k U\) has dimension \(\binom{n+k-1}{k}\).
+- \(\Lambda^k U\) has basis \(\\{e_{i_1}^* \wedge \cdots \wedge e_{i_k}^* : i_1 < i_2 < \cdots < i_k\}\), dimension \(\binom{n}{k}\).
 
 ### The Cotangent Space and Coordinate Bases
 
-For a smooth submanifold <span>&#92;(M &#92;\subseteq &#92;\mathbb{R}^n&#92;)</span> with chart <span>&#92;(\sigma : U &#92;\to M&#92;)</span> and <span>&#92;(\sigma(a) = p&#92;)</span>, the **cotangent space** at <span>&#92;(p&#92;)</span> is the dual space <span>&#92;(T&#95;p^&#42; M = (T&#95;p M)^&#42;&#92;)</span>.
+For a smooth submanifold \(M \subseteq \mathbb{R}^n\) with chart \(\sigma : U \to M\) and \(\sigma(a) = p\), the **cotangent space** at \(p\) is the dual space \(T_p^* M = (T_p M)^*\).
 
-The standard coordinates <span>&#92;((u&#95;1, &#92;\ldots, u&#95;m)&#92;)</span> on <span>&#92;(U&#92;)</span> provide:
-- **Coordinate tangent vectors** <span>&#92;(&#92;\partial/\partial u&#95;i|&#95;p = D\sigma(a) e&#95;i &#92;\in T&#95;p M&#92;)</span> (a basis for <span>&#92;(T&#95;p M&#92;)</span>).
-- **Coordinate 1-forms** <span>&#92;(du&#95;i|&#95;p &#92;\in T&#95;p^&#42; M&#92;)</span> (the dual basis), defined by <span>&#92;(du&#95;i(\partial/\partial u&#95;j) = \delta&#95;{ij}&#92;)</span>.
+The standard coordinates \((u_1, \ldots, u_m)\) on \(U\) provide:
+- **Coordinate tangent vectors** \(\partial/\partial u_i|_p = D\sigma(a) e_i \in T_p M\) (a basis for \(T_p M\).
+- **Coordinate 1-forms** \(du_i|_p \in T_p^* M\) (the dual basis), defined by \(du_i(\partial/\partial u_j) = \delta_{ij}\).
 
-Under a change of coordinates <span>&#92;(\phi&#92;)</span>, the tangent vectors transform covariantly (<span>&#92;(\partial/\partial u&#95;i = \sum&#95;j (\partial v&#95;j/\partial u&#95;i) \partial/\partial v&#95;j&#92;)</span>) and the 1-forms transform contravariantly (<span>&#92;(du&#95;i = \sum&#95;j (\partial u&#95;i/\partial v&#95;j) dv&#95;j&#92;)</span>).
+Under a change of coordinates \(\phi\), the tangent vectors transform covariantly (\(\partial/\partial u_i = \sum_j (\partial v_j/\partial u_i) \partial/\partial v_j\) and the 1-forms transform contravariantly (\(du_i = \sum_j (\partial u_i/\partial v_j) dv_j\).
 
-For a multi-index <span>&#92;(I = (i_1 < &#92;\cdots < i_k)&#92;)</span>, the forms <span>&#92;(du&#95;I = du&#95;{i&#95;1} &#92;\wedge &#92;\cdots &#92;\wedge du&#95;{i&#95;k}&#92;)</span> form a basis for <span>&#92;(\Lambda^k T&#95;p^&#42; M&#92;)</span>.
+For a multi-index \(I = (i_1 < \cdots < i_k)\), the forms \(du_I = du_{i_1} \wedge \cdots \wedge du_{i_k}\) form a basis for \(\Lambda^k T_p^* M\).
 
 ### Smooth Differential Forms on Manifolds
 
-A **smooth <span>&#92;(k&#92;)</span>-form on <span>&#92;(M&#92;)</span>** is a smooth assignment <span>&#92;(p &#92;\mapsto \omega&#95;p &#92;\in \Lambda^k T&#95;p^&#42; M&#92;)</span>. In local coordinates <span>&#92;(\sigma&#92;)</span>, this has the form <span>&#92;(\omega = \sum&#95;I a&#95;I(u) du&#95;I&#92;)</span> for smooth coefficient functions <span>&#92;(a&#95;I&#92;)</span>. This definition is consistent with and equivalent to the one in Chapter 5.
+A **smooth \(k\)-form on \(M\)** is a smooth assignment \(p \mapsto \omega_p \in \Lambda^k T_p^* M\). In local coordinates \(\sigma\), this has the form \(\omega = \sum_I a_I(u) du_I\) for smooth coefficient functions \(a_I\). This definition is consistent with and equivalent to the one in Chapter 5.
 
 ### Pullback in the Algebraic Framework
 
-For a smooth map <span>&#92;(f : M &#92;\to N&#92;)</span>, the **pullback** <span>&#92;(f^&#42; : \Lambda^k T&#95;{f(p)}^&#42; N &#92;\to \Lambda^k T&#95;p^&#42; M&#92;)</span> is defined by
-<span>&#92;[
-(f^&#42;\omega)&#95;p(v&#95;1, &#92;\ldots, v&#95;k) = \omega&#95;{f(p)}(f&#95;&#42; v&#95;1, &#92;\ldots, f&#95;&#42; v&#95;k).
-&#92;]</span>
-This is compatible with the exterior derivative: <span>&#92;(f^&#42;(d\omega) = d(f^&#42;\omega)&#92;)</span>. The definitions of smooth <span>&#92;(k&#92;)</span>-forms and their exterior derivatives given in this chapter via the algebraic framework are consistent with the definitions given in Chapter 5 via coordinate formulas. The algebraic approach makes the coordinate-independence manifest.
+For a smooth map \(f : M \to N\), the **pullback** \(f^* : \Lambda^k T_{f(p)}^* N \to \Lambda^k T_p^* M\) is defined by
+\[
+(f^*\omega)_p(v_1, \ldots, v_k) = \omega_{f(p)}(f_* v_1, \ldots, f_* v_k).
+\]
+This is compatible with the exterior derivative: \(f^*(d\omega) = d(f^*\omega)\). The definitions of smooth \(k\)-forms and their exterior derivatives given in this chapter via the algebraic framework are consistent with the definitions given in Chapter 5 via coordinate formulas. The algebraic approach makes the coordinate-independence manifest.
 
 ---
 
@@ -555,49 +555,49 @@ This is compatible with the exterior derivative: <span>&#92;(f^&#42;(d\omega) = 
 
 ### Differentiability
 
-**Definition A1.1**: A function <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^m &#92;\to &#92;\mathbb{R}^n&#92;)</span> is **differentiable** at <span>&#92;(a &#92;\in U&#92;)</span> if there exists a matrix <span>&#92;(A &#92;\in M&#95;{n &#92;\times m}(&#92;\mathbb{R})&#92;)</span> such that
-<span>&#92;[
-&#92;\lim&#95;{h &#92;\to 0} &#92;\frac{|f(a+h) - f(a) - Ah|}{|h|} = 0.
-&#92;]</span>
-When it exists, this matrix <span>&#92;(A&#92;)</span> is unique and equals the Jacobian matrix <span>&#92;(Df(a)&#92;)</span>. If <span>&#92;(f&#92;)</span> is differentiable at <span>&#92;(a&#92;)</span> then <span>&#92;(f&#92;)</span> is continuous at <span>&#92;(a&#92;)</span>. The Jacobian matrix satisfies <span>&#92;(Df(a)&#95;{ij} = \partial x&#95;i/\partial u&#95;j(a)&#92;)</span>. One key bound is: for any matrix <span>&#92;(A&#92;)</span>,
-<span>&#92;[
-|Ah| &#92;\leq &#92;\|A&#92;\| &#92;\cdot |h| &#92;&#92;quad &#92;\text{where} &#92;&#92;quad &#92;\|A&#92;\|^2 &#92;\leq n &#92;\sum&#95;{i,j} A&#95;{ij}^2.
-&#92;]</span>
+**Definition A1.1**: A function \(f : U \subseteq \mathbb{R}^m \to \mathbb{R}^n\) is **differentiable** at \(a \in U\) if there exists a matrix \(A \in M_{n \times m}(\mathbb{R})\) such that
+\[
+\lim_{h \to 0} \frac{|f(a+h) - f(a) - Ah|}{|h|} = 0.
+\]
+When it exists, this matrix \(A\) is unique and equals the Jacobian matrix \(Df(a)\). If \(f\) is differentiable at \(a\) then \(f\) is continuous at \(a\). The Jacobian matrix satisfies \(Df(a)_{ij} = \partial x_i/\partial u_j(a)\). One key bound is: for any matrix \(A\),
+\[
+|Ah| \leq \\|A\\| \cdot |h| \quad \text{where} \quad \\|A\\|^2 \leq n \sum_{i,j} A_{ij}^2.
+\]
 
-**Theorem A1.3** (Chain Rule): Let <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^m &#92;\to &#92;\mathbb{R}^k&#92;)</span> be differentiable at <span>&#92;(a&#92;)</span> and <span>&#92;(g : V &#92;\subseteq &#92;\mathbb{R}^k &#92;\to &#92;\mathbb{R}^n&#92;)</span> be differentiable at <span>&#92;(f(a)&#92;)</span>. Then <span>&#92;(g &#92;\circ f&#92;)</span> is differentiable at <span>&#92;(a&#92;)</span> with
-<span>&#92;[
-D(g &#92;\circ f)(a) = Dg(f(a)) &#92;\cdot Df(a).
-&#92;]</span>
+**Theorem A1.3** (Chain Rule): Let \(f : U \subseteq \mathbb{R}^m \to \mathbb{R}^k\) be differentiable at \(a\) and \(g : V \subseteq \mathbb{R}^k \to \mathbb{R}^n\) be differentiable at \(f(a)\). Then \(g \circ f\) is differentiable at \(a\) with
+\[
+D(g \circ f)(a) = Dg(f(a)) \cdot Df(a).
+\]
 
-The directional derivative of <span>&#92;(f&#92;)</span> at <span>&#92;(a&#92;)</span> in direction <span>&#92;(v&#92;)</span> is <span>&#92;(D&#95;v f(a) = Df(a) v&#92;)</span>. If <span>&#92;(f&#92;)</span> is <span>&#92;(C^1&#92;)</span> (all partial derivatives exist and are continuous) then <span>&#92;(f&#92;)</span> is differentiable.
+The directional derivative of \(f\) at \(a\) in direction \(v\) is \(D_v f(a) = Df(a) v\). If \(f\) is \(C^1\) (all partial derivatives exist and are continuous) then \(f\) is differentiable.
 
-**Mean Value Theorem**: If <span>&#92;(f : U &#92;\to &#92;\mathbb{R}^n&#92;)</span> is differentiable on the line segment <span>&#92;([a, a+h] &#92;\subseteq U&#92;)</span>, then <span>&#92;(|f(a+h) - f(a)| &#92;\leq \sup&#95;{0 &#92;\leq t &#92;\leq 1} &#92;\|Df(a+th)&#92;\| &#92;\cdot |h|&#92;)</span>.
+**Mean Value Theorem**: If \(f : U \to \mathbb{R}^n\) is differentiable on the line segment \([a, a+h] \subseteq U\), then \(|f(a+h) - f(a)| \leq \sup_{0 \leq t \leq 1} \\|Df(a+th)\\| \cdot |h|\).
 
-**Corollary** (Vanishing Derivative): If <span>&#92;(U&#92;)</span> is connected and <span>&#92;(Df &#92;\equiv 0&#92;)</span>, then <span>&#92;(f&#92;)</span> is constant.
+**Corollary** (Vanishing Derivative): If \(U\) is connected and \(Df \equiv 0\), then \(f\) is constant.
 
 ### The Inverse Function Theorem: Full Proof
 
-**Theorem A1.6** (Inverse Function Theorem): Let <span>&#92;(f : U &#92;\subseteq &#92;\mathbb{R}^n &#92;\to &#92;\mathbb{R}^n&#92;)</span> be <span>&#92;(C^1&#92;)</span> with <span>&#92;(Df(a)&#92;)</span> invertible.
+**Theorem A1.6** (Inverse Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be \(C^1\) with \(Df(a)\) invertible.
 
 The proof proceeds via eight claims:
 
-*Claim 1.* There exists <span>&#92;(r > 0&#92;)</span> such that <span>&#92;(Df(x)&#92;)</span> is invertible for all <span>&#92;(x &#92;\in B(a,r)&#92;)</span> and <span>&#92;(&#92;\|Df(x)^{-1}&#92;\| &#92;\leq 2&#92;\|Df(a)^{-1}&#92;\|&#92;)</span>. (By continuity of <span>&#92;(Df&#92;)</span>.)
+*Claim 1.* There exists \(r > 0\) such that \(Df(x)\) is invertible for all \(x \in B(a,r)\) and \(\\|Df(x)^{-1}\\| \leq 2\\|Df(a)^{-1}\\|\). (By continuity of \(Df\).)
 
-*Claim 2.* For the map <span>&#92;(g(x) = x - Df(a)^{-1}(f(x) - y)&#92;)</span>, we have <span>&#92;(&#92;\|Dg(x)&#92;\| &#92;\leq 1/2&#92;)</span> for <span>&#92;(x &#92;\in B(a,r)&#92;)</span>.
+*Claim 2.* For the map \(g(x) = x - Df(a)^{-1}(f(x) - y)\), we have \(\\|Dg(x)\\| \leq 1/2\) for \(x \in B(a,r)\).
 
-*Claim 3.* <span>&#92;(g&#92;)</span> is a contraction: <span>&#92;(|g(x&#95;1) - g(x&#95;2)| &#92;\leq \frac{1}{2}|x&#95;1 - x&#95;2|&#92;)</span> for <span>&#92;(x&#95;1, x&#95;2 &#92;\in B(a,r)&#92;)</span>.
+*Claim 3.* \(g\) is a contraction: \(|g(x_1) - g(x_2)| \leq \frac{1}{2}|x_1 - x_2|\) for \(x_1, x_2 \in B(a,r)\).
 
-*Claim 4.* For each <span>&#92;(y &#92;\in B(f(a), \delta)&#92;)</span> (for suitable <span>&#92;(\delta&#92;)</span>), the equation <span>&#92;(f(x) = y&#92;)</span> has a unique solution <span>&#92;(x &#92;\in B(a,r)&#92;)</span>, obtained as the fixed point of the contraction <span>&#92;(g&#92;)</span>.
+*Claim 4.* For each \(y \in B(f(a), \delta)\) (for suitable \(\delta\), the equation \(f(x) = y\) has a unique solution \(x \in B(a,r)\), obtained as the fixed point of the contraction \(g\).
 
-*Claim 5.* Setting <span>&#92;(h = f^{-1}: B(f(a),\delta) &#92;\to B(a,r)&#92;)</span>, the map <span>&#92;(h&#92;)</span> is continuous.
+*Claim 5.* Setting \(h = f^{-1}: B(f(a),\delta) \to B(a,r)\), the map \(h\) is continuous.
 
-*Claim 6.* <span>&#92;(h&#92;)</span> is differentiable with <span>&#92;(Dh(y) = Df(h(y))^{-1}&#92;)</span>.
+*Claim 6.* \(h\) is differentiable with \(Dh(y) = Df(h(y))^{-1}\).
 
-*Claims 7–8.* <span>&#92;(h&#92;)</span> is <span>&#92;(C^1&#92;)</span>, and if <span>&#92;(f&#92;)</span> is <span>&#92;(C^k&#92;)</span> then <span>&#92;(h&#92;)</span> is <span>&#92;(C^k&#92;)</span> (by induction using the formula <span>&#92;(Dh(y) = Df(h(y))^{-1}&#92;)</span> and the cofactor formula for matrix inverses).
+*Claims 7–8.* \(h\) is \(C^1\), and if \(f\) is \(C^k\) then \(h\) is \(C^k\) (by induction using the formula \(Dh(y) = Df(h(y))^{-1}\) and the cofactor formula for matrix inverses).
 
 ### The Parametric and Implicit Function Theorems
 
-**Parametric Function Theorem** (Appendix version): Same as Theorem 4.10. When <span>&#92;(D\sigma(a)&#92;)</span> has rank <span>&#92;(m&#92;)</span>, the top <span>&#92;(m &#92;\times m&#92;)</span> submatrix of <span>&#92;(D\sigma(a)&#92;)</span> (after reordering) is invertible. Apply the IFT to the first <span>&#92;(m&#92;)</span> components to invert locally, then express the remaining components as a function of the first <span>&#92;(m&#92;)</span>.
+**Parametric Function Theorem** (Appendix version): Same as Theorem 4.10. When \(D\sigma(a)\) has rank \(m\), the top \(m \times m\) submatrix of \(D\sigma(a)\) (after reordering) is invertible. Apply the IFT to the first \(m\) components to invert locally, then express the remaining components as a function of the first \(m\).
 
 **Implicit Function Theorem** (Appendix version): Same as Theorem 4.7. Reduce to the Parametric Function Theorem by showing the level set is locally the graph of a smooth function via the IFT.
 
@@ -607,76 +607,76 @@ The proof proceeds via eight claims:
 
 ### Parallelotopes and Volume
 
-**Definition A2.1**: Given vectors <span>&#92;(u&#95;1, &#92;\ldots, u&#95;k &#92;\in &#92;\mathbb{R}^n&#92;)</span>, the **parallelotope** is
-<span>&#92;[
-P(u&#95;1, &#92;\ldots, u&#95;k) = &#92;\left&#92;\{ &#92;\sum&#95;{i=1}^k t&#95;i u&#95;i : 0 &#92;\leq t&#95;i &#92;\leq 1 &#92;\right&#92;}.
-&#92;]</span>
-Its volume is defined recursively by <span>&#92;(V(u&#95;1) = |u&#95;1|&#92;)</span> and
-<span>&#92;[
-V(u&#95;1, &#92;\ldots, u&#95;k) = V(u&#95;1, &#92;\ldots, u&#95;{k-1}) &#92;\cdot |&#92;\operatorname{Proj}&#95;{U^\perp} u&#95;k|
-&#92;]</span>
-where <span>&#92;(U = &#92;\operatorname{Span}&#92;\{u&#95;1, &#92;\ldots, u&#95;{k-1}&#92;}&#92;)</span>.
+**Definition A2.1**: Given vectors \(u_1, \ldots, u_k \in \mathbb{R}^n\), the **parallelotope** is
+\[
+P(u_1, \ldots, u_k) = \left\\{ \sum_{i=1}^k t_i u_i : 0 \leq t_i \leq 1 \right\}.
+\]
+Its volume is defined recursively by \(V(u_1) = |u_1|\) and
+\[
+V(u_1, \ldots, u_k) = V(u_1, \ldots, u_{k-1}) \cdot |\operatorname{Proj}_{U^\perp} u_k|
+\]
+where \(U = \operatorname{Span}\\{u_1, \ldots, u_{k-1}\}\).
 
-**Theorem A2.2**: For <span>&#92;(A = (u&#95;1, &#92;\ldots, u&#95;k) &#92;\in M&#95;{n &#92;\times k}(&#92;\mathbb{R})&#92;)</span>,
-<span>&#92;[
-V(u&#95;1, &#92;\ldots, u&#95;k) = &#92;\sqrt{&#92;\det(A^T A)}.
-&#92;]</span>
+**Theorem A2.2**: For \(A = (u_1, \ldots, u_k) \in M_{n \times k}(\mathbb{R})\),
+\[
+V(u_1, \ldots, u_k) = \sqrt{\det(A^T A)}.
+\]
 
-*Proof.* Induction on <span>&#92;(k&#92;)</span>. The base case <span>&#92;(k=1&#92;)</span> is clear. For the inductive step, write <span>&#92;(B = (A, u&#95;k) = (A, v+w)&#92;)</span> where <span>&#92;(v = &#92;\operatorname{Proj}&#95;U u&#95;k &#92;\in &#92;\operatorname{Col}(A)&#92;)</span> and <span>&#92;(w = u&#95;k - v &#92;\in U^\perp = &#92;\operatorname{Null}(A^T)&#92;)</span>. Since <span>&#92;(v &#92;\in &#92;\operatorname{Col}(A)&#92;)</span>, adding it to the last column is an elementary operation not changing the determinant, so <span>&#92;(\det(B^T B) = \det((A,w)^T(A,w))&#92;)</span>. Using <span>&#92;(A^T w = 0&#92;)</span>:
-<span>&#92;[
-&#92;\det(B^T B) = &#92;\det&#92;\begin{pmatrix} A^T A & 0 \\ 0 & |w|^2 &#92;\end{pmatrix} = &#92;\det(A^T A) &#92;\cdot |w|^2.
-&#92;]</span>
-Taking square roots: <span>&#92;(\sqrt{\det(B^T B)} = \sqrt{\det(A^T A)} &#92;\cdot |w| = V(u&#95;1,&#92;\ldots,u&#95;{k-1}) &#92;\cdot |w| = V(u&#95;1,&#92;\ldots,u&#95;k)&#92;)</span>. <span>&#92;(&#92;\square&#92;)</span>
+*Proof.* Induction on \(k\). The base case \(k=1\) is clear. For the inductive step, write \(B = (A, u_k) = (A, v+w)\) where \(v = \operatorname{Proj}_U u_k \in \operatorname{Col}(A)\) and \(w = u_k - v \in U^\perp = \operatorname{Null}(A^T)\). Since \(v \in \operatorname{Col}(A)\), adding it to the last column is an elementary operation not changing the determinant, so \(\det(B^T B) = \det((A,w)^T(A,w))\). Using \(A^T w = 0\):
+\[
+\det(B^T B) = \det\begin{pmatrix} A^T A & 0 \\ 0 & |w|^2 \end{pmatrix} = \det(A^T A) \cdot |w|^2.
+\]
+Taking square roots: \(\sqrt{\det(B^T B)} = \sqrt{\det(A^T A)} \cdot |w| = V(u_1,\ldots,u_{k-1}) \cdot |w| = V(u_1,\ldots,u_k)\). \(\square\)
 
-In the special case <span>&#92;(k = n&#92;)</span>, <span>&#92;(\det(A^T A) = (\det A)^2&#92;)</span>, so <span>&#92;(V = |\det A|&#92;)</span>. For a simplex <span>&#92;([a&#95;0, &#92;\ldots, a&#95;k]&#92;)</span> with <span>&#92;(u&#95;i = a&#95;i - a&#95;0&#92;)</span>, the volume is <span>&#92;(\frac{1}{k!} V(u&#95;1, &#92;\ldots, u&#95;k) = \frac{1}{k!}\sqrt{\det(A^T A)}&#92;)</span>.
+In the special case \(k = n\), \(\det(A^T A) = (\det A)^2\), so \(V = |\det A|\). For a simplex \([a_0, \ldots, a_k]\) with \(u_i = a_i - a_0\), the volume is \(\frac{1}{k!} V(u_1, \ldots, u_k) = \frac{1}{k!}\sqrt{\det(A^T A)}\).
 
 ### The Generalized Cross Product
 
-**Definition A2.5**: For <span>&#92;(n &#92;\geq 2&#92;)</span> and a field <span>&#92;(F&#92;)</span>, the **cross product** is the map <span>&#92;(X : M&#95;{n &#92;\times (n-1)}(F) &#92;\to F^n&#92;)</span> defined by: for <span>&#92;(A = (u&#95;1, &#92;\ldots, u&#95;{n-1})&#92;)</span>,
-<span>&#92;[
-X(A)&#95;j = (-1)^{n+j} &#92;\det A(j)
-&#92;]</span>
-where <span>&#92;(A(j)&#92;)</span> is <span>&#92;(A&#92;)</span> with the <span>&#92;(j&#92;)</span>-th row removed. In <span>&#92;(F^2&#92;)</span> we write <span>&#92;(X(u) = u^\times = (-u&#95;2, u&#95;1)&#92;)</span>; in <span>&#92;(F^3&#92;)</span> we write <span>&#92;(X(u,v) = u &#92;\times v&#92;)</span>, recovering the usual cross product:
-<span>&#92;[
-u &#92;\times v = (u&#95;2 v&#95;3 - u&#95;3 v&#95;2,&#92;\; u&#95;3 v&#95;1 - u&#95;1 v&#95;3,&#92;\; u&#95;1 v&#95;2 - u&#95;2 v&#95;1).
-&#92;]</span>
+**Definition A2.5**: For \(n \geq 2\) and a field \(F\), the **cross product** is the map \(X : M_{n \times (n-1)}(F) \to F^n\) defined by: for \(A = (u_1, \ldots, u_{n-1})\),
+\[
+X(A)_j = (-1)^{n+j} \det A(j)
+\]
+where \(A(j)\) is \(A\) with the \(j\)-th row removed. In \(F^2\) we write \(X(u) = u^\times = (-u_2, u_1)\); in \(F^3\) we write \(X(u,v) = u \times v\), recovering the usual cross product:
+\[
+u \times v = (u_2 v_3 - u_3 v_2,\\; u_3 v_1 - u_1 v_3,\\; u_1 v_2 - u_2 v_1).
+\]
 
-Since the determinant is <span>&#92;((n-1)&#92;)</span>-linear and alternating, the cross product is also **<span>&#92;((n-1)&#92;)</span>-linear and alternating**.
+Since the determinant is \((n-1)\)-linear and alternating, the cross product is also **\((n-1)\)-linear and alternating**.
 
-**Theorem A2.9** (Properties of the Cross Product): For <span>&#92;(u&#95;1, &#92;\ldots, u&#95;{n-1}, v&#95;1, &#92;\ldots, v&#95;{n-1}, w &#92;\in &#92;\mathbb{R}^n&#92;)</span> and <span>&#92;(A = (u&#95;1, &#92;\ldots, u&#95;{n-1}), B = (v&#95;1, &#92;\ldots, v&#95;{n-1}) &#92;\in M&#95;{n &#92;\times (n-1)}&#92;)</span>:
+**Theorem A2.9** (Properties of the Cross Product): For \(u_1, \ldots, u_{n-1}, v_1, \ldots, v_{n-1}, w \in \mathbb{R}^n\) and \(A = (u_1, \ldots, u_{n-1}), B = (v_1, \ldots, v_{n-1}) \in M_{n \times (n-1)}\):
 
-1. **Dot product formula**: <span>&#92;(X(u&#95;1, &#92;\ldots, u&#95;{n-1}) &#92;\cdot w = &#92;\det(u&#95;1, &#92;\ldots, u&#95;{n-1}, w)&#92;)</span>.
-2. **Orthogonality**: <span>&#92;(X(u&#95;1, &#92;\ldots, u&#95;{n-1}) &#92;\cdot u&#95;k = 0&#92;)</span> for each <span>&#92;(1 &#92;\leq k < n&#92;)</span>.
-3. **Zero iff dependent**: <span>&#92;(X(u&#95;1, &#92;\ldots, u&#95;{n-1}) = 0&#92;)</span> iff <span>&#92;(\{u&#95;1, &#92;\ldots, u&#95;{n-1}&#92;}&#92;)</span> is linearly dependent.
-4. **Positive orientation**: When <span>&#92;(w = X(u&#95;1, &#92;\ldots, u&#95;{n-1}) &#92;\neq 0&#92;)</span>, the <span>&#92;(n&#92;)</span>-tuple <span>&#92;((u&#95;1, &#92;\ldots, u&#95;{n-1}, w)&#92;)</span> is a positively oriented basis for <span>&#92;(&#92;\mathbb{R}^n&#92;)</span>.
-5. **Volume formula**: <span>&#92;(|X(u&#95;1, &#92;\ldots, u&#95;{n-1})| = V(u&#95;1, &#92;\ldots, u&#95;{n-1})&#92;)</span>.
-6. **Generalized Binet formula**: <span>&#92;(X(u&#95;1,&#92;\ldots,u&#95;{n-1}) &#92;\cdot X(v&#95;1,&#92;\ldots,v&#95;{n-1}) = &#92;\det(B^T A)&#92;)</span>.
+1. **Dot product formula**: \(X(u_1, \ldots, u_{n-1}) \cdot w = \det(u_1, \ldots, u_{n-1}, w)\).
+2. **Orthogonality**: \(X(u_1, \ldots, u_{n-1}) \cdot u_k = 0\) for each \(1 \leq k < n\).
+3. **Zero iff dependent**: \(X(u_1, \ldots, u_{n-1}) = 0\) iff \(\{u_1, \ldots, u_{n-1}\}\) is linearly dependent.
+4. **Positive orientation**: When \(w = X(u_1, \ldots, u_{n-1}) \neq 0\), the \(n\)-tuple \((u_1, \ldots, u_{n-1}, w)\) is a positively oriented basis for \(\mathbb{R}^n\).
+5. **Volume formula**: \(|X(u_1, \ldots, u_{n-1})| = V(u_1, \ldots, u_{n-1})\).
+6. **Generalized Binet formula**: \(X(u_1,\ldots,u_{n-1}) \cdot X(v_1,\ldots,v_{n-1}) = \det(B^T A)\).
 7. **Iterated cross product**:
-<span>&#92;[
-X&#92;\big(u&#95;1,&#92;\ldots,u&#95;{n-2}, X(v&#95;1,&#92;\ldots,v&#95;{n-1})&#92;\big) = &#92;\sum&#95;{i=1}^{n-1} (-1)^{n+i} &#92;\det&#92;\big((B^T A)^{(i)}&#92;\big) v&#95;i
-&#92;]</span>
-where <span>&#92;((B^T A)^{(i)}&#92;)</span> denotes <span>&#92;(B^T A&#92;)</span> with the <span>&#92;(i&#92;)</span>-th row removed.
+\[
+X\big(u_1,\ldots,u_{n-2}, X(v_1,\ldots,v_{n-1})\big) = \sum_{i=1}^{n-1} (-1)^{n+i} \det\big((B^T A)^{(i)}\big) v_i
+\]
+where \((B^T A)^{(i)}\) denotes \(B^T A\) with the \(i\)-th row removed.
 
-*Proof of Property 1.* From <span>&#92;(X(A)&#95;j = (-1)^{n+j} \det A(j)&#92;)</span>,
-<span>&#92;[
-X(A) &#92;\cdot w = &#92;\sum&#95;{j=1}^n (-1)^{n+j} &#92;\det A(j) w&#95;j = &#92;\det(u&#95;1, &#92;\ldots, u&#95;{n-1}, w)
-&#92;]</span>
-by cofactor expansion along the last column. Property 2 follows since <span>&#92;(\det&#92;)</span> with a repeated column is zero.
+*Proof of Property 1.* From \(X(A)_j = (-1)^{n+j} \det A(j)\),
+\[
+X(A) \cdot w = \sum_{j=1}^n (-1)^{n+j} \det A(j) w_j = \det(u_1, \ldots, u_{n-1}, w)
+\]
+by cofactor expansion along the last column. Property 2 follows since \(\det\) with a repeated column is zero.
 
-*Proof of Property 6.* Let <span>&#92;(x = X(A)&#92;)</span> and <span>&#92;(y = X(B)&#92;)</span>. By Property 1, <span>&#92;(x &#92;\cdot y = \det(A,y)&#92;)</span> and <span>&#92;(x &#92;\cdot y = \det(B,x)&#92;)</span>. By Properties 1 and 2, <span>&#92;(A^T x = 0 = B^T y&#92;)</span>. Then:
-<span>&#92;[
-(x &#92;\cdot y)^2 = &#92;\det(A,y)&#92;\det(B,x) = &#92;\det&#92;\begin{pmatrix} B^T A & B^T y \\ x^T A & x^T y &#92;\end{pmatrix} = &#92;\det&#92;\begin{pmatrix} B^T A & 0 \\ 0 & x &#92;\cdot y &#92;\end{pmatrix} = (x &#92;\cdot y) &#92;\det(B^T A).
-&#92;]</span>
-When <span>&#92;(x &#92;\cdot y &#92;\neq 0&#92;)</span>, divide to get <span>&#92;(x &#92;\cdot y = \det(B^T A)&#92;)</span>. When <span>&#92;(x &#92;\cdot y = 0&#92;)</span>, one shows directly that <span>&#92;(\det(B^T A) = 0&#92;)</span> as well (either <span>&#92;(x=0&#92;)</span> or <span>&#92;(y=0&#92;)</span> gives rank deficiency, or <span>&#92;(y &#92;\in &#92;\operatorname{Col}(A)&#92;\cap &#92;\operatorname{Null}(B^T)&#92;)</span> gives a nonzero vector in the kernel of <span>&#92;(B^T A&#92;)</span>). Alternatively, both sides are polynomials in the entries of the vectors and unique factorization completes the argument.
+*Proof of Property 6.* Let \(x = X(A)\) and \(y = X(B)\). By Property 1, \(x \cdot y = \det(A,y)\) and \(x \cdot y = \det(B,x)\). By Properties 1 and 2, \(A^T x = 0 = B^T y\). Then:
+\[
+(x \cdot y)^2 = \det(A,y)\det(B,x) = \det\begin{pmatrix} B^T A & B^T y \\ x^T A & x^T y \end{pmatrix} = \det\begin{pmatrix} B^T A & 0 \\ 0 & x \cdot y \end{pmatrix} = (x \cdot y) \det(B^T A).
+\]
+When \(x \cdot y \neq 0\), divide to get \(x \cdot y = \det(B^T A)\). When \(x \cdot y = 0\), one shows directly that \(\det(B^T A) = 0\) as well (either \(x=0\) or \(y=0\) gives rank deficiency, or \(y \in \operatorname{Col}(A)\cap \operatorname{Null}(B^T)\) gives a nonzero vector in the kernel of \(B^T A\). Alternatively, both sides are polynomials in the entries of the vectors and unique factorization completes the argument.
 
 ### Change of Variables Formula
 
-**Theorem**: For invertible <span>&#92;(P &#92;\in M&#95;n(&#92;\mathbb{R})&#92;)</span> and <span>&#92;(A &#92;\in M&#95;{n &#92;\times (n-1)}(&#92;\mathbb{R})&#92;)</span>,
-<span>&#92;[
+**Theorem**: For invertible \(P \in M_n(\mathbb{R})\) and \(A \in M_{n \times (n-1)}(\mathbb{R})\),
+\[
 P^T X(PA) = (\det P) X(A).
-&#92;]</span>
+\]
 
-*Proof.* The <span>&#92;(i&#92;)</span>-th entry of <span>&#92;(P^T X(PA)&#92;)</span> is <span>&#92;(v&#95;i^T X(PA) = \det(PA, v&#95;i)&#92;)</span> where <span>&#92;(v&#95;i&#92;)</span> is the <span>&#92;(i&#92;)</span>-th column of <span>&#92;(P&#92;)</span>. Expanding via cofactors and using the cofactor identity <span>&#92;(\operatorname{Cof}(P) P = \det(P) I&#92;)</span>, one shows that the <span>&#92;(i&#92;)</span>-th entry equals <span>&#92;((\det P) X(A)&#95;i&#92;)</span>. Both sides are polynomials in the entries, so the identity extends by continuity to all <span>&#92;(P&#92;)</span> (including non-invertible ones). Replacing <span>&#92;(P&#92;)</span> by <span>&#92;(P^T&#92;)</span> yields the equivalent form <span>&#92;(P X(P^T A) = (\det P) X(A)&#92;)</span>.
+*Proof.* The \(i\)-th entry of \(P^T X(PA)\) is \(v_i^T X(PA) = \det(PA, v_i)\) where \(v_i\) is the \(i\)-th column of \(P\). Expanding via cofactors and using the cofactor identity \(\operatorname{Cof}(P) P = \det(P) I\), one shows that the \(i\)-th entry equals \((\det P) X(A)_i\). Both sides are polynomials in the entries, so the identity extends by continuity to all \(P\) (including non-invertible ones). Replacing \(P\) by \(P^T\) yields the equivalent form \(P X(P^T A) = (\det P) X(A)\).
 
-This change of variables formula is used in the proof of Property 7 above: one expresses <span>&#92;(X(A,y)&#92;)</span> in terms of the basis <span>&#92;(\{v&#95;1,&#92;\ldots,v&#95;{n-1},y\}&#92;)</span> using the matrix <span>&#92;(P = (B, y)&#92;)</span> (whose determinant is <span>&#92;(|y|^2&#92;)</span> by Property 1) and then applies the change of variables formula.
+This change of variables formula is used in the proof of Property 7 above: one expresses \(X(A,y)\) in terms of the basis \(\{v_1,\ldots,v_{n-1},y\}\) using the matrix \(P = (B, y)\) (whose determinant is \(|y|^2\) by Property 1) and then applies the change of variables formula.
 

@@ -164,9 +164,9 @@ Other features:
 The blues tells you specifically which chords to use. Now some examples of blues...
 
 This music appears some time in the 1890s. Taking shape in the beginning of 1900s. Nevertheless, first rural blues recordings made during the 1920s. Why? Essentially, it was not recorded because the recording industry is controlled by urban middle class whites. They are interested in recording pop music, and music aimed at middle class white audiences. Frankly, many of them did not think the culture of African Americans was worth recording. First example of country blues: “Travelin’ Blues” Blind Willie McTell (1929).
-> Mr. Engineer, let a man ride this line.	<span style="color:red">a</span> <br>
-Mr. Engineer, let a poor man ride this line.	<span style="color:red">a</span><br>
-I wouldn’t mind it fella’, but you know this train ain’t mine. 	<span style="color:red">b</span>
+> Mr. Engineer, let a man ride this line.	<span style="color:red">a <br>
+Mr. Engineer, let a poor man ride this line.	<span style="color:red">a<br>
+I wouldn’t mind it fella’, but you know this train ain’t mine. 	<span style="color:red">b
 
 This is a professional performance, since Blind Willie McTell is make a living by doing this. But in a way of he is a transitional figure, he is lacking self-consciousness: he is not looking for a way to make his performance stand out.
 
@@ -264,7 +264,7 @@ He is a legend, and soft voice, good piano player. Though he is African American
 
 Lovely song. These songs are beautiful. Not designed to get people excited, but to be calm, entertainment. Probably lots of people wanted in the year following WWII. There was something new following the end of the war: huge upswing in the number of children born, baby boomers, massive number in the number of young people.
 
-At the end of 1940s, music industry changed the name: race music <span>&#92;(\Rightarrow &#92;)</span> rhythm and blues. Still cold for African American audiences, but at least it is not so overly racist. Then Hillbilly, which is a bit derogatory, <span>&#92;(\Rightarrow &#92;)</span> country and western.
+At the end of 1940s, music industry changed the name: race music \(\Rightarrow \) rhythm and blues. Still cold for African American audiences, but at least it is not so overly racist. Then Hillbilly, which is a bit derogatory, \(\Rightarrow \) country and western.
 
 When we look at the popularity chart through the late 1940s, or early 1950s. We see crossover hits: song generally appears in rhythm and blues chart or country and western chart, then it becomes very popular. And at some point, it will cross over, and appear in the pop chart.
 
@@ -1110,7 +1110,7 @@ In no particular order, and all from the UK.
 
 <p align="center">&#9834; <i>music playing</i> &#9834;</p>
 
-Is this hard rock or hard metal, or somewhere in the middle? Lyrics that focus on alienation, futility of the war <span>&#92;(\implies &#92;)</span> heavy metal. Also numerous little instrumental sections, starts off slow then fast, changes in tempo <span>&#92;(\implies &#92;)</span> heavy metal. This band in particular leans back towards the hard rock end is in the sound of Ozzy's voice: quite distinct, typical from other singers, much clearer, far less distortion, more nasal tone.
+Is this hard rock or hard metal, or somewhere in the middle? Lyrics that focus on alienation, futility of the war \(\implies \) heavy metal. Also numerous little instrumental sections, starts off slow then fast, changes in tempo \(\implies \) heavy metal. This band in particular leans back towards the hard rock end is in the sound of Ozzy's voice: quite distinct, typical from other singers, much clearer, far less distortion, more nasal tone.
 
 **Deep Purple**, also from England. Jon Lord uses electric organ. It is one of the few other instruments in this style, primarily we are looking for electric bass/guitar/drums vocalist, not any acoustic instruments. Why electric organ? First electric, can be plugged into an amplifier, then distortion. Let's listen to an example:  “Highway Star” (1972 – from the album *Machine Head*).
 

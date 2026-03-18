@@ -733,7 +733,7 @@ Dominant seventh.
 ### VII<sup>6</sup> Chord
 When the bass carries scale degree \\(\hat2\\), however, VII<sup>6</sup> can stand in place of \\(V_3^4\\).
 
-As a chord of dominant function, VII<sup>6</sup> in a minor key must include the leading tone (raise \\(\hat 7\\)).
+As a chord of dominant function, VII<sup>6</sup> in a minor key must include the leading tone (raise \\(\hat 7\\).
 
 ### Role of 7 and 4
 
@@ -792,7 +792,7 @@ The resolution of 2 and 7 will in some cases be avoided, however, to gain a comp
 In tonal harmony, the force of the authentic cadence expands to include the *third-from-last* beat. In four instances, 2-2-1, 7-9-8, 9-7-8, and 5-7-8, the soprano can be harmonized with the V - V<sup>7</sup> extension.
 
 ### Cadential 6/4
-In two instances, 8-7-8 and 3-2-1, the cadential dominant can be decorated by a proceding 6/4 chord. This chord is called **cadential 6/4** (\\(\mathbf C_4^6\\)).
+In two instances, 8-7-8 and 3-2-1, the cadential dominant can be decorated by a proceding 6/4 chord. This chord is called **cadential 6/4** (\\(\mathbf C_4^6\\).
 
 [More explanation](https://www.harmony.org.uk/book/voice_leading/cadential_6_4.htm) and [more](https://medium.com/@michaelkaulkin/name-that-chord-the-confusing-world-of-the-cadential-6-4-df58dd6a86cc).
 

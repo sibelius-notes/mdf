@@ -527,7 +527,7 @@ DTMs are *long and sparse*: vocabularies may contain tens of thousands of terms,
 
 **TF-IDF (Term Frequency–Inverse Document Frequency)** weights words to emphasize those that are informative about a particular document relative to the rest of the corpus. Words that appear frequently across *all* documents (like "the") get down-weighted; words that appear frequently in *one* document but rarely elsewhere get up-weighted.
 
-<span>\[ \text{TF-IDF}(w, d) = \text{TF}(w, d) \times \log\left(\frac{N}{\text{DF}(w)}\right) \]</span>
+\[ \text{TF-IDF}(w, d) = \text{TF}(w, d) \times \log\left(\frac{N}{\text{DF}(w)}\right) \]
 
 where *N* is the total number of documents and DF(*w*) is the number of documents containing word *w*.
 
@@ -558,7 +558,7 @@ X_lsa = svd.fit_transform(dtm)
 
 **Cosine similarity** measures the similarity between two document vectors regardless of document length:
 
-<span>\[ \text{cosine}(A, B) = \frac{A \cdot B}{\|A\| \|B\|} \]</span>
+\[ \text{cosine}(A, B) = \frac{A \cdot B}{\|A\| \|B\|} \]
 
 Values near 1 indicate high similarity; values near 0 indicate near-orthogonality (very different content).
 
@@ -635,7 +635,7 @@ partition = community_louvain.best_partition(G)
 
 **Betweenness centrality** counts how often a node lies on the shortest path between all other pairs of nodes. High betweenness = broker position = ability to control information flow.
 
-<span>\[ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} \]</span>
+\[ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} \]
 
 **Eigenvector centrality** gives higher scores to nodes connected to other high-scoring nodes. Being connected to important nodes matters, not just having many connections. Google's PageRank is a variant of eigenvector centrality.
 
@@ -770,13 +770,13 @@ A very high R² on training data (e.g., 0.80) may indicate overfitting. The cros
 
 **Ridge regression** adds an L2 regularization penalty that shrinks coefficient magnitudes, reducing overfitting:
 
-<span>\[ J(\theta) = \text{MSE}(\theta) + \alpha \sum_{j=1}^{n} \theta_j^2 \]</span>
+\[ J(\theta) = \text{MSE}(\theta) + \alpha \sum_{j=1}^{n} \theta_j^2 \]
 
 **Lasso regression** uses an L1 penalty that forces some coefficients to exactly zero, performing automatic feature selection.
 
 **Logistic regression** predicts binary outcomes. Instead of a continuous prediction, it models the log-odds of the positive class as a linear function of the features. The output is a probability between 0 and 1:
 
-<span>\[ P(y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}} \]</span>
+\[ P(y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}} \]
 
 ### Tree-Based Methods
 
@@ -831,7 +831,7 @@ Training adjusts the network's *weights* to minimize a **loss function** that me
 
 **Gradient descent** updates weights in the direction that reduces loss:
 
-<span>\[ w \leftarrow w - \eta \frac{\partial L}{\partial w} \]</span>
+\[ w \leftarrow w - \eta \frac{\partial L}{\partial w} \]
 
 where *η* is the **learning rate**. Too large: training is unstable. Too small: training is slow.
 
@@ -915,12 +915,12 @@ These goals are not mutually exclusive — the best work in computational social
 
 **Bayesian statistics** treats probability as a degree of belief, updated in light of evidence. *Parameters* are random variables with probability distributions; data is fixed. This is formalized in **Bayes' theorem**:
 
-<span>\[ P(\theta \mid D) = \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)} \]</span>
+\[ P(\theta \mid D) = \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)} \]
 
-- <span>\(P(\theta)\)</span> — **prior:** belief about parameters *before* seeing data
-- <span>\(P(D \mid \theta)\)</span> — **likelihood:** probability of data given parameters
-- <span>\(P(\theta \mid D)\)</span> — **posterior:** updated belief about parameters *after* seeing data
-- <span>\(P(D)\)</span> — **evidence (marginal likelihood):** normalizing constant
+- \(P(\theta)\) — **prior:** belief about parameters *before* seeing data
+- \(P(D \mid \theta)\) — **likelihood:** probability of data given parameters
+- \(P(\theta \mid D)\) — **posterior:** updated belief about parameters *after* seeing data
+- \(P(D)\) — **evidence (marginal likelihood):** normalizing constant
 
 Bayesian inference replaces point estimates with full **posterior distributions**, which naturally express uncertainty.
 
@@ -948,7 +948,7 @@ Bayesian inference replaces point estimates with full **posterior distributions*
 **Joint probability** P(A, B): probability of both A and B occurring.
 **Conditional probability** P(A | B): probability of A, given that B has occurred.
 
-<span>\[ P(A \mid B) = \frac{P(A, B)}{P(B)} \]</span>
+\[ P(A \mid B) = \frac{P(A, B)}{P(B)} \]
 
 ### Approximate Posterior Inference: MCMC
 
@@ -972,21 +972,21 @@ The **Metropolis-Hastings algorithm** proposes a candidate parameter value, then
 
 Bayesian regression embeds a familiar linear model inside a probabilistic framework, replacing point estimates with full posterior distributions over all parameters. The model is specified layer by layer using the "What's that?" game:
 
-<span>\[
+\[
 \text{Wealth}_i \sim \text{Normal}(\mu_i, \sigma)
-\]</span>
-<span>\[
+\]
+\[
 \mu_i = \alpha + \beta \cdot \text{Latitude}_i
-\]</span>
-<span>\[
+\]
+\[
 \alpha \sim \text{Normal}(0, 10)
-\]</span>
-<span>\[
+\]
+\[
 \beta \sim \text{Normal}(0, 10)
-\]</span>
-<span>\[
+\]
+\[
 \sigma \sim \text{Exponential}(1)
-\]</span>
+\]
 
 Every unobserved quantity (α, β, σ) requires a **prior distribution**. Choose priors that are:
 - Consistent with the domain (σ must be positive → Exponential or HalfNormal)
@@ -1042,18 +1042,18 @@ Standard linear regression assumes all observations come from the same underlyin
 - **No pooling:** separate models for each group, ignores information from other groups
 - **Partial pooling:** group-level estimates informed by the overall distribution
 
-<span>\[
+\[
 \text{VotingRate}_{i,s} \sim \text{Normal}(\mu_{i,s}, \sigma)
-\]</span>
-<span>\[
+\]
+\[
 \mu_{i,s} = \alpha_s + \beta \cdot \text{Spending}_{i,s}
-\]</span>
-<span>\[
+\]
+\[
 \alpha_s \sim \text{Normal}(\bar{\alpha}, \tau_\alpha)
-\]</span>
-<span>\[
+\]
+\[
 \bar{\alpha} \sim \text{Normal}(0, 10), \quad \tau_\alpha \sim \text{Exponential}(1)
-\]</span>
+\]
 
 Each state gets its own intercept α_s, but these intercepts are drawn from a shared Normal distribution with estimated mean and standard deviation. The model simultaneously estimates the group-level variation and the within-group effects.
 

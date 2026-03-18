@@ -48,9 +48,9 @@ Also the Universal Transverse Mercator (UTM) projection
 Note the difference between accuracy and precision; error and uncertainty.
 
 We can use math to find the extent of distortion on a location:
-<span>&#92;[
+\[
 \large \text {Scale factor} = {\text {Local Scale} \over \text {Principal Scale}}
-&#92;]</span>
+\]
 
 # Week 6: Principles of Map Design
 The process of cartographic abstraction is supported by a number of map design techniques.

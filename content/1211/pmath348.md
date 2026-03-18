@@ -5,17 +5,17 @@ prof: "Yu-Ru Liu"
 
 ## Introduction: Why Galois Theory?
 
-The central question motivating this course is an old one: given a polynomial equation, can its roots be expressed using only the arithmetic operations of addition, subtraction, multiplication, and division together with the extraction of <span>&#92;(n&#92;)</span>th roots? An expression built from these five operations is called a **radical**. The quadratic formula shows that every quadratic equation is solvable by radicals, and analogous formulas — Cardano's formula for cubics and Ferrari's method for quartics — show the same is true for degrees three and four. The natural question is whether such a formula exists for degree five.
+The central question motivating this course is an old one: given a polynomial equation, can its roots be expressed using only the arithmetic operations of addition, subtraction, multiplication, and division together with the extraction of \(n\)th roots? An expression built from these five operations is called a **radical**. The quadratic formula shows that every quadratic equation is solvable by radicals, and analogous formulas — Cardano's formula for cubics and Ferrari's method for quartics — show the same is true for degrees three and four. The natural question is whether such a formula exists for degree five.
 
-By changing variables, any cubic can be reduced to the depressed form <span>&#92;(x^3 + px = q&#92;)</span>, and through the independent work of del Ferro, Tartaglia, and Fontana — with the solution published by Cardano in *Ars Magna* — the solution is
+By changing variables, any cubic can be reduced to the depressed form \(x^3 + px = q\), and through the independent work of del Ferro, Tartaglia, and Fontana — with the solution published by Cardano in *Ars Magna* — the solution is
 
-<span>&#92;[ x = &#92;sqrt[3]{&#92;frac{q}{2} + &#92;sqrt{&#92;frac{p^3}{27} + &#92;frac{q^2}{4}}} + &#92;sqrt[3]{&#92;frac{q}{2} - &#92;sqrt{&#92;frac{p^3}{27} + &#92;frac{q^2}{4}}} &#92;]</span>
+\[ x = \sqrt[3]{\frac{q}{2} + \sqrt{\frac{p^3}{27} + \frac{q^2}{4}}} + \sqrt[3]{\frac{q}{2} - \sqrt{\frac{p^3}{27} + \frac{q^2}{4}}} \]
 
 Ferrari extended this to quartic equations by reducing them to cubics. Since radical solutions exist for degrees up to four, it is natural to seek one for degree five. However, attempts by Euler, Bézout, and Lagrange all failed. Lagrange noticed that the roots of equations of degree at most four are preserved under certain permutations, but this property fails for quintics — a first hint that something fundamentally different happens at degree five. In 1799, Ruffini gave a 500-page proof of insolvability, though with a gap. In 1824, Abel filled the gap and completed the **Abel-Ruffini theorem**: the general quintic is not solvable by radicals.
 
 But this raises a sharper question: given a *specific* polynomial of degree five, is it solvable by radicals? Galois theory answers this by reversing the question: *suppose* a radical solution exists — what must the polynomial look like?
 
-The Galois approach proceeds in two steps. Given a root <span>&#92;(&#92;alpha&#92;)</span> of a polynomial, we first pass from the element <span>&#92;(&#92;alpha&#92;)</span> to the **field** <span>&#92;(&#92;mathbb{Q}(&#92;alpha)&#92;)</span>, the smallest field containing <span>&#92;(&#92;mathbb{Q}&#92;)</span> and <span>&#92;(&#92;alpha&#92;)</span>. A field has far more algebraic structure than a single element, but our knowledge of <span>&#92;(&#92;mathbb{Q}(&#92;alpha)&#92;)</span> is still limited — for instance, we may not know how many intermediate fields <span>&#92;(E&#92;)</span> sit between <span>&#92;(&#92;mathbb{Q}&#92;)</span> and <span>&#92;(&#92;mathbb{Q}(&#92;alpha)&#92;)</span>. We then take the second step: we associate <span>&#92;(&#92;mathbb{Q}(&#92;alpha)&#92;)</span> to a **group**, specifically the automorphism group <span>&#92;(&#92;text{Aut}&#95;{&#92;mathbb{Q}}(&#92;mathbb{Q}(&#92;alpha))&#92;)</span> consisting of all field isomorphisms from <span>&#92;(&#92;mathbb{Q}(&#92;alpha)&#92;)</span> to itself that fix every element of <span>&#92;(&#92;mathbb{Q}&#92;)</span>. When <span>&#92;(&#92;alpha&#92;)</span> is algebraic, this group is finite. The fundamental theorem of Galois theory then establishes a perfect correspondence between intermediate fields and subgroups of this automorphism group. The infinite problem of classifying field extensions is thus transformed into the finite problem of classifying subgroups of a group — and this simplification makes many ancient puzzles tractable.
+The Galois approach proceeds in two steps. Given a root \(\alpha\) of a polynomial, we first pass from the element \(\alpha\) to the **field** \(\mathbb{Q}(\alpha)\), the smallest field containing \(\mathbb{Q}\) and \(\alpha\). A field has far more algebraic structure than a single element, but our knowledge of \(\mathbb{Q}(\alpha)\) is still limited — for instance, we may not know how many intermediate fields \(E\) sit between \(\mathbb{Q}\) and \(\mathbb{Q}(\alpha)\). We then take the second step: we associate \(\mathbb{Q}(\alpha)\) to a **group**, specifically the automorphism group \(\text{Aut}_{\mathbb{Q}}(\mathbb{Q}(\alpha))\) consisting of all field isomorphisms from \(\mathbb{Q}(\alpha)\) to itself that fix every element of \(\mathbb{Q}\). When \(\alpha\) is algebraic, this group is finite. The fundamental theorem of Galois theory then establishes a perfect correspondence between intermediate fields and subgroups of this automorphism group. The infinite problem of classifying field extensions is thus transformed into the finite problem of classifying subgroups of a group — and this simplification makes many ancient puzzles tractable.
 
 In the words of Prof. Liu: *Galois theory is an interplay between fields and groups. It transforms an infinite field question into a finite group problem. Welcome to PMATH 348 — a journey between finiteness and infiniteness.*
 
@@ -27,39 +27,39 @@ This chapter reviews the ring theory needed throughout the course and proves Eis
 
 ### 1.1 Review of Ring Theory
 
-A **commutative ring with 1** (or simply **ring** in this course) is a set <span>&#92;(R&#92;)</span> with addition and multiplication such that <span>&#92;((R,+)&#92;)</span> is an abelian group with identity <span>&#92;(0&#92;)</span>, multiplication is commutative and associative with identity <span>&#92;(1&#92;)</span>, and the distributive law holds. A **field** is a ring in which every non-zero element has a multiplicative inverse. An **integral domain** is a ring in which the product of two non-zero elements is non-zero.
+A **commutative ring with 1** (or simply **ring** in this course) is a set \(R\) with addition and multiplication such that \((R,+)\) is an abelian group with identity \(0\), multiplication is commutative and associative with identity \(1\), and the distributive law holds. A **field** is a ring in which every non-zero element has a multiplicative inverse. An **integral domain** is a ring in which the product of two non-zero elements is non-zero.
 
 <div class="example">
-<strong>Example.</strong> The integers <span>&#92;(&#92;mathbb{Z}&#92;)</span> form an integral domain. The rationals <span>&#92;(&#92;mathbb{Q}&#92;)</span>, reals <span>&#92;(&#92;mathbb{R}&#92;)</span>, complex numbers <span>&#92;(&#92;mathbb{C}&#92;)</span>, and integers modulo a prime <span>&#92;(&#92;mathbb{Z}&#95;p&#92;)</span> are all fields.
+<strong>Example.</strong> The integers \(\mathbb{Z}\) form an integral domain. The rationals \(\mathbb{Q}\), reals \(\mathbb{R}\), complex numbers \(\mathbb{C}\), and integers modulo a prime \(\mathbb{Z}_p\) are all fields.
 </div>
 
-A key observation is that the only ideals of a field <span>&#92;(F&#92;)</span> are <span>&#92;(&#92;{0&#92;}&#92;)</span> and <span>&#92;(F&#92;)</span> itself. Consequently, if <span>&#92;(&#92;phi: F &#92;to S&#92;)</span> is a ring homomorphism from a field to a ring, then <span>&#92;(&#92;phi&#92;)</span> is either injective or identically zero. An integral domain <span>&#92;(R&#92;)</span> is a **principal ideal domain (PID)** if every ideal is generated by a single element.
+A key observation is that the only ideals of a field \(F\) are \(\{0\}\) and \(F\) itself. Consequently, if \(\phi: F \to S\) is a ring homomorphism from a field to a ring, then \(\phi\) is either injective or identically zero. An integral domain \(R\) is a **principal ideal domain (PID)** if every ideal is generated by a single element.
 
-The polynomial ring <span>&#92;(F[x]&#92;)</span> and the integers <span>&#92;(&#92;mathbb{Z}&#92;)</span> are closely parallel. Both are PIDs. The units of <span>&#92;(&#92;mathbb{Z}&#92;)</span> are <span>&#92;(&#92;{&#92;pm 1&#92;}&#92;)</span>, while the units of <span>&#92;(F[x]&#92;)</span> are the non-zero constants <span>&#92;(F^&#42; = F &#92;setminus &#92;{0&#92;}&#92;)</span>. The equivalence classes of non-zero elements modulo units are the positive integers in <span>&#92;(&#92;mathbb{Z}&#92;)</span> and the monic polynomials in <span>&#92;(F[x]&#92;)</span>. The field of fractions of <span>&#92;(&#92;mathbb{Z}&#92;)</span> is <span>&#92;(&#92;mathbb{Q}&#92;)</span>, and the field of fractions of <span>&#92;(F[x]&#92;)</span> is the **field of rational functions** <span>&#92;(F(x) = &#92;{f(x)/g(x) : f,g &#92;in F[x],\, g &#92;neq 0&#92;}&#92;)</span>.
+The polynomial ring \(F[x]\) and the integers \(\mathbb{Z}\) are closely parallel. Both are PIDs. The units of \(\mathbb{Z}\) are \(\{\pm 1\}\), while the units of \(F[x]\) are the non-zero constants \(F^* = F \setminus \{0\}\). The equivalence classes of non-zero elements modulo units are the positive integers in \(\mathbb{Z}\) and the monic polynomials in \(F[x]\). The field of fractions of \(\mathbb{Z}\) is \(\mathbb{Q}\), and the field of fractions of \(F[x]\) is the **field of rational functions** \(F(x) = \{f(x)/g(x) : f,g \in F[x],\, g \neq 0\}\).
 
-For the quotient ring <span>&#92;(R/I&#92;)</span>, elements have the form <span>&#92;(r + I&#92;)</span> with addition and multiplication inherited from <span>&#92;(R&#92;)</span>. For <span>&#92;(n &#92;in &#92;mathbb{Z}&#92;)</span>, we have <span>&#92;(&#92;mathbb{Z}/&#92;langle n &#92;rangle = &#92;{0, 1, &#92;ldots, |n|-1&#92;}&#92;)</span>. The quotient <span>&#92;(R/I&#92;)</span> is a domain if and only if <span>&#92;(I&#92;)</span> is a prime ideal, and a field if and only if <span>&#92;(I&#92;)</span> is a maximal ideal.
+For the quotient ring \(R/I\), elements have the form \(r + I\) with addition and multiplication inherited from \(R\). For \(n \in \mathbb{Z}\), we have \(\mathbb{Z}/\langle n \rangle = \{0, 1, \ldots, |n|-1\}\). The quotient \(R/I\) is a domain if and only if \(I\) is a prime ideal, and a field if and only if \(I\) is a maximal ideal.
 
 ### 1.2 Gauss's Lemma and Eisenstein's Criterion
 
-A polynomial <span>&#92;(f(x) &#92;in R[x]&#92;)</span> is **irreducible** over <span>&#92;(R&#92;)</span> if it is non-constant and cannot be written as a product of two polynomials of lower degree in <span>&#92;(R[x]&#92;)</span>.
+A polynomial \(f(x) \in R[x]\) is **irreducible** over \(R\) if it is non-constant and cannot be written as a product of two polynomials of lower degree in \(R[x]\).
 
 <div class="theorem">
-<strong>Theorem (Gauss's Lemma).</strong> Let <span>&#92;(f(x) &#92;in &#92;mathbb{Z}[x]&#92;)</span> with <span>&#92;(&#92;deg(f) &#92;geq 1&#92;)</span>. If <span>&#92;(f(x)&#92;)</span> is irreducible in <span>&#92;(&#92;mathbb{Z}[x]&#92;)</span>, then it is irreducible in <span>&#92;(&#92;mathbb{Q}[x]&#92;)</span>.
+<strong>Theorem (Gauss's Lemma).</strong> Let \(f(x) \in \mathbb{Z}[x]\) with \(\deg(f) \geq 1\). If \(f(x)\) is irreducible in \(\mathbb{Z}[x]\), then it is irreducible in \(\mathbb{Q}[x]\).
 </div>
 
 <div class="theorem">
-<strong>Theorem (Eisenstein's Criterion).</strong> Let <span>&#92;(f(x) = a&#95;n x^n + a&#95;{n-1} x^{n-1} + &#92;cdots + a&#95;0 &#92;in &#92;mathbb{Z}[x]&#92;)</span> and let <span>&#92;(p&#92;)</span> be a prime. If
-- <span>&#92;(p &#92;nmid a&#95;n&#92;)</span>,
-- <span>&#92;(p &#92;mid a&#95;i&#92;)</span> for all <span>&#92;(0 &#92;leq i &#92;leq n-1&#92;)</span>, and
-- <span>&#92;(p^2 &#92;nmid a&#95;0&#92;)</span>,
+<strong>Theorem (Eisenstein's Criterion).</strong> Let \(f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \mathbb{Z}[x]\) and let \(p\) be a prime. If
+- \(p \nmid a_n\),
+- \(p \mid a_i\) for all \(0 \leq i \leq n-1\), and
+- \(p^2 \nmid a_0\),
 
-then <span>&#92;(f(x)&#92;)</span> is irreducible in <span>&#92;(&#92;mathbb{Q}[x]&#92;)</span>.
+then \(f(x)\) is irreducible in \(\mathbb{Q}[x]\).
 </div>
 
-To sketch the proof: map <span>&#92;(f(x)&#92;)</span> to <span>&#92;(&#92;bar{f}(x) &#92;in &#92;mathbb{Z}&#95;p[x]&#92;)</span> by reducing coefficients modulo <span>&#92;(p&#92;)</span>. By the conditions on coefficients, <span>&#92;(&#92;bar{f}(x) = &#92;bar{a}&#95;n x^n&#92;)</span> — only the leading term survives. If <span>&#92;(f(x)&#92;)</span> were reducible in <span>&#92;(&#92;mathbb{Q}[x]&#92;)</span>, an application of Gauss's Lemma would force <span>&#92;(p^2 &#92;mid a&#95;0&#92;)</span>, contradicting the hypothesis. Eisenstein's criterion generalises to unique factorization domains.
+To sketch the proof: map \(f(x)\) to \(\bar{f}(x) \in \mathbb{Z}_p[x]\) by reducing coefficients modulo \(p\). By the conditions on coefficients, \(\bar{f}(x) = \bar{a}_n x^n\) — only the leading term survives. If \(f(x)\) were reducible in \(\mathbb{Q}[x]\), an application of Gauss's Lemma would force \(p^2 \mid a_0\), contradicting the hypothesis. Eisenstein's criterion generalises to unique factorization domains.
 
 <div class="example">
-<strong>Example.</strong> The polynomial <span>&#92;(f(x) = x^4 + x^3 + x^2 + x + 1 &#92;in &#92;mathbb{Q}[x]&#92;)</span> (the 5th cyclotomic polynomial) is irreducible. Setting <span>&#92;(g(x) = f(x+1)&#92;)</span> and applying Eisenstein with <span>&#92;(p = 5&#92;)</span> shows <span>&#92;(g(x)&#92;)</span> is irreducible, hence so is <span>&#92;(f(x)&#92;)</span>.
+<strong>Example.</strong> The polynomial \(f(x) = x^4 + x^3 + x^2 + x + 1 \in \mathbb{Q}[x]\) (the 5th cyclotomic polynomial) is irreducible. Setting \(g(x) = f(x+1)\) and applying Eisenstein with \(p = 5\) shows \(g(x)\) is irreducible, hence so is \(f(x)\).
 </div>
 
 ---
@@ -71,61 +71,61 @@ This chapter develops the theory of field extensions, with particular focus on d
 ### 2.1 Degree of Extensions
 
 <div class="definition">
-<strong>Definition.</strong> If <span>&#92;(E&#92;)</span> is a field containing another field <span>&#92;(F&#92;)</span>, we say <span>&#92;(E&#92;)</span> is a <strong>field extension</strong> of <span>&#92;(F&#92;)</span>, written <span>&#92;(E/F&#92;)</span>. (This notation does not denote a quotient ring — fields have only trivial ideals.)
+<strong>Definition.</strong> If \(E\) is a field containing another field \(F\), we say \(E\) is a <strong>field extension</strong> of \(F\), written \(E/F\). (This notation does not denote a quotient ring — fields have only trivial ideals.)
 </div>
 
-If <span>&#92;(E/F&#92;)</span> is a field extension, we can view <span>&#92;(E&#92;)</span> as a vector space over <span>&#92;(F&#92;)</span>, where addition is that of <span>&#92;(E&#92;)</span> and scalar multiplication is the restriction of multiplication in <span>&#92;(E&#92;)</span> to <span>&#92;(F &#92;times E&#92;)</span>.
+If \(E/F\) is a field extension, we can view \(E\) as a vector space over \(F\), where addition is that of \(E\) and scalar multiplication is the restriction of multiplication in \(E\) to \(F \times E\).
 
 <div class="definition">
-<strong>Definition.</strong> The <strong>degree</strong> of <span>&#92;(E/F&#92;)</span>, written <span>&#92;([E:F]&#92;)</span>, is the dimension of <span>&#92;(E&#92;)</span> as an <span>&#92;(F&#92;)</span>-vector space. If <span>&#92;([E:F] < &#92;infty&#92;)</span>, we say <span>&#92;(E/F&#92;)</span> is a <strong>finite extension</strong>; otherwise an <strong>infinite extension</strong>.
+<strong>Definition.</strong> The <strong>degree</strong> of \(E/F\), written \([E:F]\), is the dimension of \(E\) as an \(F\)-vector space. If \([E:F] < \infty\), we say \(E/F\) is a <strong>finite extension</strong>; otherwise an <strong>infinite extension</strong>.
 </div>
 
 <div class="example">
-<strong>Example.</strong> <span>&#92;([&#92;mathbb{C}:&#92;mathbb{R}] = 2&#92;)</span>, since <span>&#92;(&#92;mathbb{C} &#92;cong &#92;mathbb{R} + &#92;mathbb{R}i&#92;)</span>. On the other hand, <span>&#92;([F(x):F] = &#92;infty&#92;)</span> since <span>&#92;(&#92;{1, x, x^2, &#92;ldots&#92;}&#92;)</span> are linearly independent over <span>&#92;(F&#92;)</span>.
+<strong>Example.</strong> \([\mathbb{C}:\mathbb{R}] = 2\), since \(\mathbb{C} \cong \mathbb{R} + \mathbb{R}i\). On the other hand, \([F(x):F] = \infty\) since \(\{1, x, x^2, \ldots\}\) are linearly independent over \(F\).
 </div>
 
 <div class="theorem">
-<strong>Theorem 2.1.1 (Tower Law).</strong> If <span>&#92;(E/K&#92;)</span> and <span>&#92;(K/F&#92;)</span> are finite extensions, then <span>&#92;(E/F&#92;)</span> is finite and <span>&#92;[[E:F] = [E:K] &#92;cdot [K:F].&#92;]</span> In particular, <span>&#92;([K:F]&#92;)</span> divides <span>&#92;([E:F]&#92;)</span> whenever <span>&#92;(K&#92;)</span> is intermediate.
+<strong>Theorem 2.1.1 (Tower Law).</strong> If \(E/K\) and \(K/F\) are finite extensions, then \(E/F\) is finite and \[[E:F] = [E:K] \cdot [K:F].\] In particular, \([K:F]\) divides \([E:F]\) whenever \(K\) is intermediate.
 </div>
 
-*Proof sketch.* Suppose <span>&#92;([E:K] = m&#92;)</span> and <span>&#92;([K:F] = n&#92;)</span>, with bases <span>&#92;(&#92;{a&#95;1, &#92;ldots, a&#95;m&#92;}&#92;)</span> for <span>&#92;(E/K&#92;)</span> and <span>&#92;(&#92;{b&#95;1, &#92;ldots, b&#95;n&#92;}&#92;)</span> for <span>&#92;(K/F&#92;)</span>. One verifies that <span>&#92;(&#92;{a&#95;i b&#95;j : 1 &#92;leq i &#92;leq m,&#92; 1 &#92;leq j &#92;leq n&#92;}&#92;)</span> is a basis of <span>&#92;(E/F&#92;)</span>, giving <span>&#92;([E:F] = mn&#92;)</span>. ∎
+*Proof sketch.* Suppose \([E:K] = m\) and \([K:F] = n\), with bases \(\{a_1, \ldots, a_m\}\) for \(E/K\) and \(\{b_1, \ldots, b_n\}\) for \(K/F\). One verifies that \(\{a_i b_j : 1 \leq i \leq m,\ 1 \leq j \leq n\}\) is a basis of \(E/F\), giving \([E:F] = mn\). ∎
 
 ### 2.2 Algebraic and Transcendental Extensions
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension and <span>&#92;(&#92;alpha &#92;in E&#92;)</span>. We say <span>&#92;(&#92;alpha&#92;)</span> is <strong>algebraic over</strong> <span>&#92;(F&#92;)</span> if there exists a non-zero <span>&#92;(f(x) &#92;in F[x]&#92;)</span> with <span>&#92;(f(&#92;alpha) = 0&#92;)</span>. Otherwise <span>&#92;(&#92;alpha&#92;)</span> is <strong>transcendental over</strong> <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> Let \(E/F\) be a field extension and \(\alpha \in E\). We say \(\alpha\) is <strong>algebraic over</strong> \(F\) if there exists a non-zero \(f(x) \in F[x]\) with \(f(\alpha) = 0\). Otherwise \(\alpha\) is <strong>transcendental over</strong> \(F\).
 </div>
 
 <div class="example">
-<strong>Example.</strong> The numbers <span>&#92;(&#92;sqrt{2}&#92;)</span> and <span>&#92;(&#92;sqrt[3]{2} + &#92;sqrt{2}&#92;)</span> are algebraic over <span>&#92;(&#92;mathbb{Q}&#92;)</span>. The numbers <span>&#92;(e&#92;)</span> (Hermite, 1873) and <span>&#92;(&#92;pi&#92;)</span> (Lindemann, 1882) are transcendental over <span>&#92;(&#92;mathbb{Q}&#92;)</span>.
+<strong>Example.</strong> The numbers \(\sqrt{2}\) and \(\sqrt[3]{2} + \sqrt{2}\) are algebraic over \(\mathbb{Q}\). The numbers \(e\) (Hermite, 1873) and \(\pi\) (Lindemann, 1882) are transcendental over \(\mathbb{Q}\).
 </div>
 
-We also use the notion of an **<span>&#92;(F&#92;)</span>-homomorphism**: given rings <span>&#92;(R, R&#95;1&#92;)</span> both containing <span>&#92;(F&#92;)</span>, a ring homomorphism <span>&#92;(&#92;psi: R &#92;to R&#95;1&#92;)</span> is an <span>&#92;(F&#92;)</span>-homomorphism if its restriction to <span>&#92;(F&#92;)</span> is the identity map.
+We also use the notion of an **\(F\)-homomorphism**: given rings \(R, R_1\) both containing \(F\), a ring homomorphism \(\psi: R \to R_1\) is an \(F\)-homomorphism if its restriction to \(F\) is the identity map.
 
 <div class="theorem">
-<strong>Theorem 2.2.1.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension and <span>&#92;(&#92;alpha &#92;in E&#92;)</span> transcendental over <span>&#92;(F&#92;)</span>. Then <span>&#92;(F[&#92;alpha] &#92;cong F[x]&#92;)</span> and <span>&#92;(F(&#92;alpha) &#92;cong F(x)&#92;)</span>. In particular, <span>&#92;(F[&#92;alpha] &#92;neq F(&#92;alpha)&#92;)</span>.
+<strong>Theorem 2.2.1.</strong> Let \(E/F\) be a field extension and \(\alpha \in E\) transcendental over \(F\). Then \(F[\alpha] \cong F[x]\) and \(F(\alpha) \cong F(x)\). In particular, \(F[\alpha] \neq F(\alpha)\).
 </div>
 
-*Proof sketch.* The <span>&#92;(F&#92;)</span>-homomorphism <span>&#92;(&#92;psi: F(x) &#92;to F(&#92;alpha)&#92;)</span> mapping <span>&#92;(f(x)/g(x) &#92;mapsto f(&#92;alpha)/g(&#92;alpha)&#92;)</span> is well-defined because <span>&#92;(&#92;alpha&#92;)</span> is transcendental (so <span>&#92;(g(&#92;alpha) &#92;neq 0&#92;)</span> for <span>&#92;(g &#92;neq 0&#92;)</span>). One shows it is an isomorphism. ∎
+*Proof sketch.* The \(F\)-homomorphism \(\psi: F(x) \to F(\alpha)\) mapping \(f(x)/g(x) \mapsto f(\alpha)/g(\alpha)\) is well-defined because \(\alpha\) is transcendental (so \(g(\alpha) \neq 0\) for \(g \neq 0\). One shows it is an isomorphism. ∎
 
 <div class="theorem">
-<strong>Theorem 2.2.2.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension and <span>&#92;(&#92;alpha &#92;in E&#92;)</span> algebraic over <span>&#92;(F&#92;)</span>. Then there exists a unique monic irreducible polynomial <span>&#92;(p(x) &#92;in F[x]&#92;)</span> such that <span>&#92;[F[x]/&#92;langle p(x) &#92;rangle &#92;cong F[&#92;alpha] = F(&#92;alpha).&#92;]</span> The polynomial <span>&#92;(p(x)&#92;)</span> is called the <strong>minimal polynomial of <span>&#92;(&#92;alpha&#92;)</span> over <span>&#92;(F&#92;)</span></strong>.
+<strong>Theorem 2.2.2.</strong> Let \(E/F\) be a field extension and \(\alpha \in E\) algebraic over \(F\). Then there exists a unique monic irreducible polynomial \(p(x) \in F[x]\) such that \[F[x]/\langle p(x) \rangle \cong F[\alpha] = F(\alpha).\] The polynomial \(p(x)\) is called the <strong>minimal polynomial of \(\alpha\) over \(F\)</strong>.
 </div>
 
-*Proof sketch.* Consider the <span>&#92;(F&#92;)</span>-homomorphism <span>&#92;(&#92;psi: F[x] &#92;to F(&#92;alpha)&#92;)</span> mapping <span>&#92;(x &#92;mapsto &#92;alpha&#92;)</span>. Since <span>&#92;(&#92;alpha&#92;)</span> is algebraic, <span>&#92;(&#92;ker(&#92;psi) &#92;neq 0&#92;)</span>. Since <span>&#92;(F[x]/\ker(&#92;psi) &#92;cong &#92;text{Im}(&#92;psi)&#92;)</span> is a subring of a field, <span>&#92;(\ker(&#92;psi)&#92;)</span> is a prime ideal. Since <span>&#92;(F[x]&#92;)</span> is a PID, the kernel is generated by an irreducible polynomial <span>&#92;(p(x)&#92;)</span>; taking <span>&#92;(p(x)&#92;)</span> monic ensures uniqueness. ∎
+*Proof sketch.* Consider the \(F\)-homomorphism \(\psi: F[x] \to F(\alpha)\) mapping \(x \mapsto \alpha\). Since \(\alpha\) is algebraic, \(\ker(\psi) \neq 0\). Since \(F[x]/\ker(\psi) \cong \text{Im}(\psi)\) is a subring of a field, \(\ker(\psi)\) is a prime ideal. Since \(F[x]\) is a PID, the kernel is generated by an irreducible polynomial \(p(x)\); taking \(p(x)\) monic ensures uniqueness. ∎
 
-**Corollary.** If <span>&#92;(p(x)&#92;)</span> is the minimal polynomial of <span>&#92;(&#92;alpha&#92;)</span> over <span>&#92;(F&#92;)</span> with <span>&#92;(&#92;deg(p) = n&#92;)</span>, then <span>&#92;([F(&#92;alpha):F] = n&#92;)</span>. This explains why the degree of <span>&#92;(F(&#92;alpha)/F&#92;)</span> equals the degree of the minimal polynomial — and why we call the vector space dimension the "degree" of the extension.
+**Corollary.** If \(p(x)\) is the minimal polynomial of \(\alpha\) over \(F\) with \(\deg(p) = n\), then \([F(\alpha):F] = n\). This explains why the degree of \(F(\alpha)/F\) equals the degree of the minimal polynomial — and why we call the vector space dimension the "degree" of the extension.
 
-Furthermore, if <span>&#92;(E/F&#92;)</span> is a finite extension, then by induction there exist <span>&#92;(&#92;alpha&#95;1, &#92;ldots, &#92;alpha&#95;n &#92;in E&#92;)</span> such that <span>&#92;(E = F(&#92;alpha&#95;1, &#92;ldots, &#92;alpha&#95;n)&#92;)</span>, and every finite extension is a tower of simple extensions. A field extension <span>&#92;(E/F&#92;)</span> is **algebraic** if every element of <span>&#92;(E&#92;)</span> is algebraic over <span>&#92;(F&#92;)</span>; it is **transcendental** otherwise.
+Furthermore, if \(E/F\) is a finite extension, then by induction there exist \(\alpha_1, \ldots, \alpha_n \in E\) such that \(E = F(\alpha_1, \ldots, \alpha_n)\), and every finite extension is a tower of simple extensions. A field extension \(E/F\) is **algebraic** if every element of \(E\) is algebraic over \(F\); it is **transcendental** otherwise.
 
 <div class="theorem">
 <strong>Theorem.</strong> Every finite extension is algebraic.
 </div>
 
-*Proof sketch.* If <span>&#92;([E:F] = n&#92;)</span> and <span>&#92;(&#92;alpha &#92;in E&#92;)</span>, then the <span>&#92;(n+1&#92;)</span> elements <span>&#92;(1, &#92;alpha, &#92;alpha^2, &#92;ldots, &#92;alpha^n&#92;)</span> cannot be linearly independent over <span>&#92;(F&#92;)</span>, so there exist coefficients giving a polynomial with <span>&#92;(&#92;alpha&#92;)</span> as a root. ∎
+*Proof sketch.* If \([E:F] = n\) and \(\alpha \in E\), then the \(n+1\) elements \(1, \alpha, \alpha^2, \ldots, \alpha^n\) cannot be linearly independent over \(F\), so there exist coefficients giving a polynomial with \(\alpha\) as a root. ∎
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension. The <strong>algebraic closure of <span>&#92;(F&#92;)</span> in <span>&#92;(E&#92;)</span></strong> is <span>&#92;(L = &#92;{&#92;alpha &#92;in E : &#92;alpha &#92;text{ is algebraic over } F&#92;}&#92;)</span>. One can show <span>&#92;(L&#92;)</span> is a subfield of <span>&#92;(E&#92;)</span>. A field <span>&#92;(F&#92;)</span> is <strong>algebraically closed</strong> if every algebraic extension of <span>&#92;(F&#92;)</span> equals <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> Let \(E/F\) be a field extension. The <strong>algebraic closure of \(F\) in \(E\)</strong> is \(L = \{\alpha \in E : \alpha \text{ is algebraic over } F\}\). One can show \(L\) is a subfield of \(E\). A field \(F\) is <strong>algebraically closed</strong> if every algebraic extension of \(F\) equals \(F\).
 </div>
 
 ---
@@ -137,50 +137,50 @@ This chapter introduces splitting fields — the natural home for all roots of a
 ### 3.1 Splitting Fields: Definitions and Existence
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension and <span>&#92;(f(x) &#92;in F[x]&#92;)</span>. We say <span>&#92;(f(x)&#92;)</span> <strong>splits over</strong> <span>&#92;(E&#92;)</span> if <span>&#92;(E&#92;)</span> contains all roots of <span>&#92;(f(x)&#92;)</span>, i.e., <span>&#92;(f(x) = a(x - &#92;alpha&#95;1)(x - &#92;alpha&#95;2) &#92;cdots (x - &#92;alpha&#95;n)&#92;)</span> with all <span>&#92;(&#92;alpha&#95;i &#92;in E&#92;)</span>.
+<strong>Definition.</strong> Let \(E/F\) be a field extension and \(f(x) \in F[x]\). We say \(f(x)\) <strong>splits over</strong> \(E\) if \(E\) contains all roots of \(f(x)\), i.e., \(f(x) = a(x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_n)\) with all \(\alpha_i \in E\).
 </div>
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(&#92;tilde{E}/F&#92;)</span> be a field extension and <span>&#92;(f(x) &#92;in F[x]&#92;)</span>. A field <span>&#92;(E&#92;)</span> with <span>&#92;(F &#92;subseteq E &#92;subseteq &#92;tilde{E}&#92;)</span> is a <strong>splitting field of <span>&#92;(f(x)&#92;)</span> in <span>&#92;(&#92;tilde{E}&#92;)</span></strong> if <span>&#92;(f(x)&#92;)</span> splits over <span>&#92;(E&#92;)</span> but over no proper subfield of <span>&#92;(E&#92;)</span> containing <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> Let \(\tilde{E}/F\) be a field extension and \(f(x) \in F[x]\). A field \(E\) with \(F \subseteq E \subseteq \tilde{E}\) is a <strong>splitting field of \(f(x)\) in \(\tilde{E}\)</strong> if \(f(x)\) splits over \(E\) but over no proper subfield of \(E\) containing \(F\).
 </div>
 
 To prove existence, we first need to find a field extension containing at least one root of a given irreducible polynomial.
 
 <div class="theorem">
-<strong>Theorem (Kronecker's Construction).</strong> Let <span>&#92;(p(x) &#92;in F[x]&#92;)</span> be irreducible. Then <span>&#92;(E = F[x]/&#92;langle p(x) &#92;rangle&#92;)</span> is a field containing <span>&#92;(F&#92;)</span> and a root <span>&#92;(&#92;alpha = x + &#92;langle p(x) &#92;rangle&#92;)</span> of <span>&#92;(p(x)&#92;)</span>.
+<strong>Theorem (Kronecker's Construction).</strong> Let \(p(x) \in F[x]\) be irreducible. Then \(E = F[x]/\langle p(x) \rangle\) is a field containing \(F\) and a root \(\alpha = x + \langle p(x) \rangle\) of \(p(x)\).
 </div>
 
-*Proof sketch.* Since <span>&#92;(p(x)&#92;)</span> is irreducible, the ideal <span>&#92;(I = &#92;langle p(x) &#92;rangle&#92;)</span> is maximal, so <span>&#92;(E = F[x]/I&#92;)</span> is a field. The map <span>&#92;(a &#92;mapsto a + I&#92;)</span> is an injective ring homomorphism from <span>&#92;(F&#92;)</span> to <span>&#92;(E&#92;)</span>, so <span>&#92;(F&#92;)</span> embeds as a subfield. Since <span>&#92;(I = &#92;langle p(x) &#92;rangle&#92;)</span>, the element <span>&#92;(&#92;alpha = x + I&#92;)</span> satisfies <span>&#92;(p(&#92;alpha) = 0&#92;)</span>. ∎
+*Proof sketch.* Since \(p(x)\) is irreducible, the ideal \(I = \langle p(x) \rangle\) is maximal, so \(E = F[x]/I\) is a field. The map \(a \mapsto a + I\) is an injective ring homomorphism from \(F\) to \(E\), so \(F\) embeds as a subfield. Since \(I = \langle p(x) \rangle\), the element \(\alpha = x + I\) satisfies \(p(\alpha) = 0\). ∎
 
 By applying Kronecker's theorem repeatedly (inductively), we obtain:
 
 <div class="theorem">
-<strong>Theorem (Kronecker, 1887).</strong> For any <span>&#92;(f(x) &#92;in F[x]&#92;)</span>, there exists a field extension <span>&#92;(E/F&#92;)</span> such that <span>&#92;(f(x)&#92;)</span> splits over <span>&#92;(E&#92;)</span).
+<strong>Theorem (Kronecker, 1887).</strong> For any \(f(x) \in F[x]\), there exists a field extension \(E/F\) such that \(f(x)\) splits over \(E\).
 </div>
 
-**Corollary.** Every polynomial <span>&#92;(f(x) &#92;in F[x]&#92;)</span> has a splitting field, which is a finite extension of <span>&#92;(F&#92;)</span>. Explicitly, if <span>&#92;(&#92;alpha&#95;1, &#92;ldots, &#92;alpha&#95;n&#92;)</span> are the roots of <span>&#92;(f(x)&#92;)</span> in some extension, then <span>&#92;(F(&#92;alpha&#95;1, &#92;ldots, &#92;alpha&#95;n)&#92;)</span> is the splitting field.
+**Corollary.** Every polynomial \(f(x) \in F[x]\) has a splitting field, which is a finite extension of \(F\). Explicitly, if \(\alpha_1, \ldots, \alpha_n\) are the roots of \(f(x)\) in some extension, then \(F(\alpha_1, \ldots, \alpha_n)\) is the splitting field.
 
 ### 3.2 Uniqueness of Splitting Fields
 
 To prove uniqueness, we need to understand how field isomorphisms extend to polynomial rings.
 
 <div class="definition">
-<strong>Definition.</strong> If <span>&#92;(&#92;phi: R &#92;to R&#95;1&#92;)</span> is a ring homomorphism, the unique ring homomorphism <span>&#92;(&#92;Phi: R[x] &#92;to R&#95;1[x]&#92;)</span> satisfying <span>&#92;(&#92;Phi|&#95;R = &#92;phi&#92;)</span> and <span>&#92;(&#92;Phi(x) = x&#92;)</span> is said to <strong>extend</strong> <span>&#92;(&#92;phi&#92;)</span>.
+<strong>Definition.</strong> If \(\phi: R \to R_1\) is a ring homomorphism, the unique ring homomorphism \(\Phi: R[x] \to R_1[x]\) satisfying \(\Phi|_R = \phi\) and \(\Phi(x) = x\) is said to <strong>extend</strong> \(\phi\).
 </div>
 
 <div class="theorem">
-<strong>Theorem 3.2.1.</strong> Let <span>&#92;(&#92;phi: F &#92;to F&#95;1&#92;)</span> be a field isomorphism, <span>&#92;(f(x) &#92;in F[x]&#92;)</span>, and <span>&#92;(&#92;Phi: F[x] &#92;to F&#95;1[x]&#92;)</span> the extension of <span>&#92;(&#92;phi&#92;)</span>. Let <span>&#92;(f&#95;1(x) = &#92;Phi(f(x))&#92;)</span>. If <span>&#92;(E/F&#92;)</span> and <span>&#92;(E&#95;1/F&#95;1&#92;)</span> are splitting fields of <span>&#92;(f(x)&#92;)</span> and <span>&#92;(f&#95;1(x)&#92;)</span> respectively, then <span>&#92;(E &#92;cong E&#95;1&#92;)</span>.
+<strong>Theorem 3.2.1.</strong> Let \(\phi: F \to F_1\) be a field isomorphism, \(f(x) \in F[x]\), and \(\Phi: F[x] \to F_1[x]\) the extension of \(\phi\). Let \(f_1(x) = \Phi(f(x))\). If \(E/F\) and \(E_1/F_1\) are splitting fields of \(f(x)\) and \(f_1(x)\) respectively, then \(E \cong E_1\).
 </div>
 
-**Corollary (Uniqueness).** Taking <span>&#92;(&#92;phi = &#92;text{id}&#95;F&#92;)</span>, any two splitting fields of <span>&#92;(f(x) &#92;in F[x]&#92;)</span> over <span>&#92;(F&#92;)</span> are <span>&#92;(F&#92;)</span>-isomorphic.
+**Corollary (Uniqueness).** Taking \(\phi = \text{id}_F\), any two splitting fields of \(f(x) \in F[x]\) over \(F\) are \(F\)-isomorphic.
 
 ### 3.3 Degree of Splitting Fields
 
 <div class="theorem">
-<strong>Theorem 3.3.1.</strong> If <span>&#92;(f(x) &#92;in F[x]&#92;)</span> has degree <span>&#92;(n&#92;)</span> and <span>&#92;(E/F&#92;)</span> is its splitting field, then <span>&#92;([E:F]&#92;)</span> divides <span>&#92;(n!&#92;)</span>.
+<strong>Theorem 3.3.1.</strong> If \(f(x) \in F[x]\) has degree \(n\) and \(E/F\) is its splitting field, then \([E:F]\) divides \(n!\).
 </div>
 
-*Proof sketch.* By induction on <span>&#92;(n = &#92;deg(f)&#92;)</span>. If <span>&#92;(f(x)&#92;)</span> is irreducible and <span>&#92;(&#92;alpha &#92;in E&#92;)</span> is a root, then <span>&#92;([F(&#92;alpha):F] = n&#92;)</span>. The splitting field of <span>&#92;(f(x)/(x - &#92;alpha)&#92;)</span> over <span>&#92;(F(&#92;alpha)&#92;)</span> has degree dividing <span>&#92;((n-1)!&#92;)</span> by induction, so <span>&#92;([E:F] = n &#92;cdot [E:F(&#92;alpha)]&#92;)</span> divides <span>&#92;(n!&#92;)</span>. If <span>&#92;(f = gh&#92;)</span> with <span>&#92;(&#92;deg(g) = m&#92;)</span> and <span>&#92;(&#92;deg(h) = k&#92;)</span> where <span>&#92;(m + k = n&#92;)</span>, then <span>&#92;([E:F]&#92;)</span> divides <span>&#92;(m! &#92;cdot k!&#92;)</span>, which divides <span>&#92;(n!&#92;)</span>. ∎
+*Proof sketch.* By induction on \(n = \deg(f)\). If \(f(x)\) is irreducible and \(\alpha \in E\) is a root, then \([F(\alpha):F] = n\). The splitting field of \(f(x)/(x - \alpha)\) over \(F(\alpha)\) has degree dividing \((n-1)!\) by induction, so \([E:F] = n \cdot [E:F(\alpha)]\) divides \(n!\). If \(f = gh\) with \(\deg(g) = m\) and \(\deg(h) = k\) where \(m + k = n\), then \([E:F]\) divides \(m! \cdot k!\), which divides \(n!\). ∎
 
 ---
 
@@ -191,58 +191,58 @@ This chapter introduces the characteristic of a field, prime fields, derivatives
 ### 4.1 Prime Fields and Characteristic
 
 <div class="definition">
-<strong>Definition.</strong> Given a field <span>&#92;(F&#92;)</span>, its <strong>prime field</strong> is the intersection of all subfields of <span>&#92;(F&#92;)</span>. The <strong>characteristic</strong> of <span>&#92;(F&#92;)</span>, written <span>&#92;(&#92;text{ch}(F)&#92;)</span>, is defined as follows: if the prime field is <span>&#92;(&#92;mathbb{Q}&#92;)</span>, then <span>&#92;(&#92;text{ch}(F) = 0&#92;)</span>; if the prime field is <span>&#92;(&#92;mathbb{Z}&#95;p&#92;)</span> for a prime <span>&#92;(p&#92;)</span>, then <span>&#92;(&#92;text{ch}(F) = p&#92;)</span>.
+<strong>Definition.</strong> Given a field \(F\), its <strong>prime field</strong> is the intersection of all subfields of \(F\). The <strong>characteristic</strong> of \(F\), written \(\text{ch}(F)\), is defined as follows: if the prime field is \(\mathbb{Q}\), then \(\text{ch}(F) = 0\); if the prime field is \(\mathbb{Z}_p\) for a prime \(p\), then \(\text{ch}(F) = p\).
 </div>
 
 <div class="theorem">
-<strong>Theorem.</strong> There are only two types of prime fields: either <span>&#92;(&#92;mathbb{Q}&#92;)</span> or <span>&#92;(&#92;mathbb{Z}&#95;p&#92;)</span> for a prime <span>&#92;(p&#92;)</span>.
+<strong>Theorem.</strong> There are only two types of prime fields: either \(\mathbb{Q}\) or \(\mathbb{Z}_p\) for a prime \(p\).
 </div>
 
-*Proof sketch.* Let <span>&#92;(F&#95;1&#92;)</span> be a subfield of <span>&#92;(F&#92;)</span>. Consider the ring map <span>&#92;(&#92;chi: &#92;mathbb{Z} &#92;to F&#95;1&#92;)</span> sending <span>&#92;(n &#92;mapsto n &#92;cdot 1&#95;{F&#95;1}&#92;)</span>. The image is a subring of a field, hence an integral domain, so <span>&#92;(I = &#92;ker(&#92;chi)&#92;)</span> is a prime ideal of <span>&#92;(&#92;mathbb{Z}&#92;)</span>. If <span>&#92;(I = 0&#92;)</span>, then <span>&#92;(&#92;mathbb{Z} &#92;hookrightarrow F&#95;1&#92;)</span> and <span>&#92;(&#92;mathbb{Q} &#92;subseteq F&#95;1&#92;)</span>. If <span>&#92;(I = &#92;langle p &#92;rangle&#92;)</span> for a prime <span>&#92;(p&#92;)</span>, then <span>&#92;(&#92;mathbb{Z}&#95;p &#92;subseteq F&#95;1&#92;)</span>. ∎
+*Proof sketch.* Let \(F_1\) be a subfield of \(F\). Consider the ring map \(\chi: \mathbb{Z} \to F_1\) sending \(n \mapsto n \cdot 1_{F_1}\). The image is a subring of a field, hence an integral domain, so \(I = \ker(\chi)\) is a prime ideal of \(\mathbb{Z}\). If \(I = 0\), then \(\mathbb{Z} \hookrightarrow F_1\) and \(\mathbb{Q} \subseteq F_1\). If \(I = \langle p \rangle\) for a prime \(p\), then \(\mathbb{Z}_p \subseteq F_1\). ∎
 
 ### 4.2 Derivatives and Repeated Roots
 
-Taking formal derivatives is straightforward in characteristic zero, but behaves differently in characteristic <span>&#92;(p&#92;)</span>.
+Taking formal derivatives is straightforward in characteristic zero, but behaves differently in characteristic \(p\).
 
 <div class="theorem">
-<strong>Theorem.</strong> Let <span>&#92;(F&#92;)</span> be a field and <span>&#92;(f(x) &#92;in F[x]&#92;)</span>.
-- If <span>&#92;(&#92;text{ch}(F) = 0&#92;)</span>, then <span>&#92;(f'(x) = 0&#92;)</span> if and only if <span>&#92;(f(x)&#92;)</span> is a constant.
-- If <span>&#92;(&#92;text{ch}(F) = p&#92;)</span>, then <span>&#92;(f'(x) = 0&#92;)</span> if and only if <span>&#92;(f(x) = g(x^p)&#92;)</span> for some <span>&#92;(g(x) &#92;in F[x]&#92;)</span>.
+<strong>Theorem.</strong> Let \(F\) be a field and \(f(x) \in F[x]\).
+- If \(\text{ch}(F) = 0\), then \(f'(x) = 0\) if and only if \(f(x)\) is a constant.
+- If \(\text{ch}(F) = p\), then \(f'(x) = 0\) if and only if \(f(x) = g(x^p)\) for some \(g(x) \in F[x]\).
 </div>
 
-The key is that <span>&#92;((ax^n)' = nax^{n-1}&#92;)</span>: in characteristic <span>&#92;(p&#92;)</span>, the term <span>&#92;(nax^{n-1}&#92;)</span> vanishes precisely when <span>&#92;(p &#92;mid n&#92;)</span>, which means <span>&#92;(f(x)&#92;)</span> involves only powers <span>&#92;(x^p, x^{2p}, &#92;ldots&#92;)</span> — that is, <span>&#92;(f(x) = g(x^p)&#92;)</span>.
+The key is that \((ax^n)' = nax^{n-1}\): in characteristic \(p\), the term \(nax^{n-1}\) vanishes precisely when \(p \mid n\), which means \(f(x)\) involves only powers \(x^p, x^{2p}, \ldots\) — that is, \(f(x) = g(x^p)\).
 
-An element <span>&#92;(&#92;alpha&#92;)</span> in an extension field is a **repeated root** of <span>&#92;(f(x)&#92;)</span> if <span>&#92;(f(x) = (x - &#92;alpha)^2 g(x)&#92;)</span> for some <span>&#92;(g(x)&#92;)</span>.
+An element \(\alpha\) in an extension field is a **repeated root** of \(f(x)\) if \(f(x) = (x - \alpha)^2 g(x)\) for some \(g(x)\).
 
 <div class="theorem">
-<strong>Theorem.</strong> <span>&#92;(&#92;alpha&#92;)</span> is a repeated root of <span>&#92;(f(x)&#92;)</span> if and only if <span>&#92;((x - &#92;alpha) &#92;mid &#92;gcd(f, f')&#92;)</span>. Consequently, <span>&#92;(f(x)&#92;)</span> has no repeated root in any extension of <span>&#92;(F&#92;)</span> if and only if <span>&#92;(&#92;gcd(f, f') = 1&#92;)</span>.
+<strong>Theorem.</strong> \(\alpha\) is a repeated root of \(f(x)\) if and only if \((x - \alpha) \mid \gcd(f, f')\). Consequently, \(f(x)\) has no repeated root in any extension of \(F\) if and only if \(\gcd(f, f') = 1\).
 </div>
 
-Note the important distinction: the condition of having a repeated root depends on which extension we work in, but the gcd condition involves only polynomials over <span>&#92;(F&#92;)</span>.
+Note the important distinction: the condition of having a repeated root depends on which extension we work in, but the gcd condition involves only polynomials over \(F\).
 
 ### 4.3 Finite Fields
 
 <div class="theorem">
-<strong>Theorem.</strong> If <span>&#92;(F&#92;)</span> is a finite field, then its prime field is <span>&#92;(&#92;mathbb{Z}&#95;p&#92;)</span> for some prime <span>&#92;(p&#92;)</span>, and <span>&#92;(|F| = p^n&#92;)</span> for some positive integer <span>&#92;(n&#92;)</span>. Moreover, <span>&#92;(F&#92;)</span> is the splitting field of <span>&#92;(x^{p^n} - x&#92;)</span> over <span>&#92;(&#92;mathbb{Z}&#95;p&#92;)</span>.
+<strong>Theorem.</strong> If \(F\) is a finite field, then its prime field is \(\mathbb{Z}_p\) for some prime \(p\), and \(|F| = p^n\) for some positive integer \(n\). Moreover, \(F\) is the splitting field of \(x^{p^n} - x\) over \(\mathbb{Z}_p\).
 </div>
 
-*Proof sketch.* The multiplicative group <span>&#92;(F^&#42; = F &#92;setminus &#92;{0&#92;}&#92;)</span> has order <span>&#92;(p^n - 1&#92;)</span>. One can show <span>&#92;(F^&#42;&#92;)</span> is cyclic, so every <span>&#92;(a &#92;in F^&#42;&#92;)</span> satisfies <span>&#92;(a^{p^n - 1} = 1&#92;)</span>, meaning every element of <span>&#92;(F&#92;)</span> is a root of <span>&#92;(x^{p^n} - x&#92;)</span>. ∎
+*Proof sketch.* The multiplicative group \(F^* = F \setminus \{0\}\) has order \(p^n - 1\). One can show \(F^*\) is cyclic, so every \(a \in F^*\) satisfies \(a^{p^n - 1} = 1\), meaning every element of \(F\) is a root of \(x^{p^n} - x\). ∎
 
 <div class="theorem">
-<strong>Theorem (Moore).</strong> Any two finite fields of order <span>&#92;(p^n&#92;)</span> are isomorphic. We denote this unique field by <span>&#92;(&#92;mathbb{F}&#95;{p^n}&#92;)</span>.
+<strong>Theorem (Moore).</strong> Any two finite fields of order \(p^n\) are isomorphic. We denote this unique field by \(\mathbb{F}_{p^n}\).
 </div>
 
 ### 4.4 Separable Polynomials
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(F&#92;)</span> be a field and <span>&#92;(f(x) &#92;in F[x]&#92;)</span> non-zero.
-- If <span>&#92;(f(x)&#92;)</span> is irreducible and has no repeated root in any extension of <span>&#92;(F&#92;)</span>, we say <span>&#92;(f(x)&#92;)</span> is <strong>separable</strong>.
+<strong>Definition.</strong> Let \(F\) be a field and \(f(x) \in F[x]\) non-zero.
+- If \(f(x)\) is irreducible and has no repeated root in any extension of \(F\), we say \(f(x)\) is <strong>separable</strong>.
 - A general polynomial is separable if all its irreducible factors are separable.
-- A field <span>&#92;(F&#92;)</span> is <strong>perfect</strong> if all polynomials in <span>&#92;(F[x]&#92;)</span> are separable.
+- A field \(F\) is <strong>perfect</strong> if all polynomials in \(F[x]\) are separable.
 </div>
 
 <div class="theorem">
-<strong>Theorem.</strong> Every field of characteristic zero is perfect. If <span>&#92;(F&#92;)</span> has characteristic <span>&#92;(p&#92;)</span> and <span>&#92;(F^p = &#92;{a^p : a &#92;in F&#92;} = F&#92;)</span>, then <span>&#92;(F&#92;)</span> is perfect. In particular, finite fields are perfect.
+<strong>Theorem.</strong> Every field of characteristic zero is perfect. If \(F\) has characteristic \(p\) and \(F^p = \{a^p : a \in F\} = F\), then \(F\) is perfect. In particular, finite fields are perfect.
 </div>
 
 ---
@@ -253,41 +253,41 @@ This chapter develops the group theory needed for Galois theory, culminating in 
 
 ### 5.1 Group Actions and the Class Equation
 
-Let <span>&#92;(G&#92;)</span> be a group acting on a set <span>&#92;(S&#92;)</span>. For <span>&#92;(x &#92;in S&#92;)</span>:
-- The **orbit** of <span>&#92;(x&#92;)</span> is <span>&#92;(Gx = &#92;{gx : g &#92;in G&#92;}&#92;)</span>.
-- The **stabiliser** of <span>&#92;(x&#92;)</span> is <span>&#92;(G&#95;x = &#92;{g &#92;in G : gx = x&#92;}&#92;)</span>, which is a subgroup of <span>&#92;(G&#92;)</span>.
+Let \(G\) be a group acting on a set \(S\). For \(x \in S\):
+- The **orbit** of \(x\) is \(Gx = \{gx : g \in G\}\).
+- The **stabiliser** of \(x\) is \(G_x = \{g \in G : gx = x\}\), which is a subgroup of \(G\).
 
-When <span>&#92;(G&#92;)</span> acts on itself by conjugation (i.e., <span>&#92;(g &#92;cdot x = gxg^{-1}&#92;)</span>), the stabiliser of <span>&#92;(x&#92;)</span> is the **centraliser** <span>&#92;(C&#95;G(x) = &#92;{g &#92;in G : gx = xg&#92;}&#92;)</span>. The orbit <span>&#92;(Gx&#92;)</span> is a singleton precisely when <span>&#92;(x&#92;)</span> is in the **centre** <span>&#92;(Z(G)&#92;)</span>.
+When \(G\) acts on itself by conjugation (i.e., \(g \cdot x = gxg^{-1}\), the stabiliser of \(x\) is the **centraliser** \(C_G(x) = \{g \in G : gx = xg\}\). The orbit \(Gx\) is a singleton precisely when \(x\) is in the **centre** \(Z(G)\).
 
 <div class="theorem">
-<strong>Theorem (Class Equation).</strong> For a finite group <span>&#92;(G&#92;)</span>,
-<span>&#92;[ |G| = |Z(G)| + &#92;sum&#95;i [G : C&#95;G(x&#95;i)] &#92;]</span>
-where the sum runs over representatives <span>&#92;(x&#95;i&#92;)</span> of conjugacy classes with more than one element.
+<strong>Theorem (Class Equation).</strong> For a finite group \(G\),
+\[ |G| = |Z(G)| + \sum_i [G : C_G(x_i)] \]
+where the sum runs over representatives \(x_i\) of conjugacy classes with more than one element.
 </div>
 
 <div class="theorem">
-<strong>Theorem (Cauchy).</strong> If a prime <span>&#92;(p&#92;)</span> divides <span>&#92;(|G|&#92;)</span>, then <span>&#92;(G&#92;)</span> contains an element of order <span>&#92;(p&#92;)</span>.
+<strong>Theorem (Cauchy).</strong> If a prime \(p\) divides \(|G|\), then \(G\) contains an element of order \(p\).
 </div>
 
 ### 5.2 Sylow Theorems
 
-A **<span>&#92;(p&#92;)</span>-group** is a group in which every element has order a power of <span>&#92;(p&#92;)</span>. By Cauchy's theorem, a finite group is a <span>&#92;(p&#92;)</span>-group if and only if its order is a power of <span>&#92;(p&#92;)</span>. If <span>&#92;(H&#92;)</span> is a subgroup of <span>&#92;(G&#92;)</span>, the **normaliser of <span>&#92;(H&#92;)</span> in <span>&#92;(G&#92;)</span>** is <span>&#92;(N&#95;G(H) = &#92;{g &#92;in G : gHg^{-1} = H&#92;}&#92;)</span>. Note that <span>&#92;(H &#92;trianglelefteq N&#95;G(H)&#92;)</span>.
+A **\(p\)-group** is a group in which every element has order a power of \(p\). By Cauchy's theorem, a finite group is a \(p\)-group if and only if its order is a power of \(p\). If \(H\) is a subgroup of \(G\), the **normaliser of \(H\) in \(G\)** is \(N_G(H) = \{g \in G : gHg^{-1} = H\}\). Note that \(H \trianglelefteq N_G(H)\).
 
 <div class="theorem">
-<strong>Theorem (First Sylow Theorem).</strong> Let <span>&#92;(G&#92;)</span> be a group of order <span>&#92;(p^n m&#92;)</span> with <span>&#92;(\gcd(p, m) = 1&#92;)</span>. Then <span>&#92;(G&#92;)</span> contains a subgroup of order <span>&#92;(p^i&#92;)</span> for all <span>&#92;(1 &#92;leq i &#92;leq n&#92;)</span>. Moreover, every subgroup of order <span>&#92;(p^i&#92;)</span> is normal in some subgroup of order <span>&#92;(p^{i+1}&#92;)</span>.
+<strong>Theorem (First Sylow Theorem).</strong> Let \(G\) be a group of order \(p^n m\) with \(\gcd(p, m) = 1\). Then \(G\) contains a subgroup of order \(p^i\) for all \(1 \leq i \leq n\). Moreover, every subgroup of order \(p^i\) is normal in some subgroup of order \(p^{i+1}\).
 </div>
 
-A **Sylow <span>&#92;(p&#92;)</span>-subgroup** of <span>&#92;(G&#92;)</span> is a maximal <span>&#92;(p&#92;)</span>-subgroup. By the first Sylow theorem, if <span>&#92;(|G| = p^n m&#92;)</span> with <span>&#92;(\gcd(p,m) = 1&#92;)</span>, then every Sylow <span>&#92;(p&#92;)</span>-subgroup has order exactly <span>&#92;(p^n&#92;)</span>.
+A **Sylow \(p\)-subgroup** of \(G\) is a maximal \(p\)-subgroup. By the first Sylow theorem, if \(|G| = p^n m\) with \(\gcd(p,m) = 1\), then every Sylow \(p\)-subgroup has order exactly \(p^n\).
 
 <div class="theorem">
-<strong>Theorem (Second Sylow Theorem).</strong> Any two Sylow <span>&#92;(p&#92;)</span>-subgroups of <span>&#92;(G&#92;)</span> are conjugate.
+<strong>Theorem (Second Sylow Theorem).</strong> Any two Sylow \(p\)-subgroups of \(G\) are conjugate.
 </div>
 
 <div class="theorem">
-<strong>Theorem (Third Sylow Theorem).</strong> The number <span>&#92;(n&#95;p&#92;)</span> of Sylow <span>&#92;(p&#92;)</span>-subgroups of <span>&#92;(G&#92;)</span> satisfies <span>&#92;(n&#95;p &#92;mid |G|&#92;)</span> and <span>&#92;(n&#95;p &#92;equiv 1 &#92;pmod{p}&#92;)</span>.
+<strong>Theorem (Third Sylow Theorem).</strong> The number \(n_p\) of Sylow \(p\)-subgroups of \(G\) satisfies \(n_p \mid |G|\) and \(n_p \equiv 1 \pmod{p}\).
 </div>
 
-*Proof sketch of Third Sylow.* Let <span>&#92;(S&#92;)</span> be the set of all Sylow <span>&#92;(p&#92;)</span>-subgroups and <span>&#92;(P &#92;in S&#92;)</span>. By the second theorem, <span>&#92;(|S| = [G : N&#95;G(P)]&#92;)</span>, which divides <span>&#92;(|G|&#92;)</span>. Let <span>&#92;(P&#92;)</span> act on <span>&#92;(S&#92;)</span> by conjugation; orbits of size 1 correspond to elements of <span>&#92;(S&#92;)</span> normalised by <span>&#92;(P&#92;)</span>. One shows the only such element is <span>&#92;(P&#92;)</span> itself, giving <span>&#92;(|S| &#92;equiv 1 &#92;pmod{p}&#92;)</span>. ∎
+*Proof sketch of Third Sylow.* Let \(S\) be the set of all Sylow \(p\)-subgroups and \(P \in S\). By the second theorem, \(|S| = [G : N_G(P)]\), which divides \(|G|\). Let \(P\) act on \(S\) by conjugation; orbits of size 1 correspond to elements of \(S\) normalised by \(P\). One shows the only such element is \(P\) itself, giving \(|S| \equiv 1 \pmod{p}\). ∎
 
 ---
 
@@ -298,23 +298,23 @@ This chapter introduces solvable groups, which are the group-theoretic key to un
 ### 6.1 Definition and Basic Properties
 
 <div class="definition">
-<strong>Definition.</strong> A group <span>&#92;(G&#92;)</span> is <strong>solvable</strong> if there exists a tower
-<span>&#92;[ G = G&#95;0 &#92;trianglerighteq G&#95;1 &#92;trianglerighteq G&#95;2 &#92;trianglerighteq &#92;cdots &#92;trianglerighteq G&#95;m = &#92;{1&#92;} &#92;]</span>
-with each <span>&#92;(G&#95;{i+1} &#92;trianglelefteq G&#95;i&#92;)</span> and each quotient <span>&#92;(G&#95;i/G&#95;{i+1}&#92;)</span> abelian.
+<strong>Definition.</strong> A group \(G\) is <strong>solvable</strong> if there exists a tower
+\[ G = G_0 \trianglerighteq G_1 \trianglerighteq G_2 \trianglerighteq \cdots \trianglerighteq G_m = \{1\} \]
+with each \(G_{i+1} \trianglelefteq G_i\) and each quotient \(G_i/G_{i+1}\) abelian.
 </div>
 
 <div class="theorem">
-<strong>Theorem 6.0.1.</strong> Let <span>&#92;(G&#92;)</span> be a solvable group. Then:
-1. Every subgroup <span>&#92;(H&#92;)</span> of <span>&#92;(G&#92;)</span> is solvable.
-2. For any normal subgroup <span>&#92;(N &#92;trianglelefteq G&#92;)</span>, the quotient group <span>&#92;(G/N&#92;)</span> is solvable.
+<strong>Theorem 6.0.1.</strong> Let \(G\) be a solvable group. Then:
+1. Every subgroup \(H\) of \(G\) is solvable.
+2. For any normal subgroup \(N \trianglelefteq G\), the quotient group \(G/N\) is solvable.
 </div>
 
-*Proof of (1).* Let <span>&#92;(H&#95;i = H &#92;cap G&#95;i&#92;)</span>. Then <span>&#92;(H = H&#95;0 &#92;trianglerighteq H&#95;1 &#92;trianglerighteq &#92;cdots &#92;trianglerighteq H&#95;m = &#92;{1&#92;}&#92;)</span>, and by the second isomorphism theorem <span>&#92;(H&#95;i/H&#95;{i+1} &#92;hookrightarrow G&#95;i/G&#95;{i+1}&#92;)</span>, which is abelian.
+*Proof of (1).* Let \(H_i = H \cap G_i\). Then \(H = H_0 \trianglerighteq H_1 \trianglerighteq \cdots \trianglerighteq H_m = \{1\}\), and by the second isomorphism theorem \(H_i/H_{i+1} \hookrightarrow G_i/G_{i+1}\), which is abelian.
 
-*Proof of (2).* Consider the expanded tower <span>&#92;(G&#95;0 N &#92;trianglerighteq G&#95;1 N &#92;trianglerighteq &#92;cdots &#92;trianglerighteq G&#95;m N = N&#92;)</span>. Taking quotients by <span>&#92;(N&#92;)</span> and applying the second and third isomorphism theorems shows each factor is abelian. ∎
+*Proof of (2).* Consider the expanded tower \(G_0 N \trianglerighteq G_1 N \trianglerighteq \cdots \trianglerighteq G_m N = N\). Taking quotients by \(N\) and applying the second and third isomorphism theorems shows each factor is abelian. ∎
 
 <div class="theorem">
-<strong>Theorem 6.0.2.</strong> Let <span>&#92;(N &#92;trianglelefteq G&#92;)</span>. If both <span>&#92;(N&#92;)</span> and <span>&#92;(G/N&#92;)</span> are solvable, then <span>&#92;(G&#92;)</span> is solvable. In particular, a direct product of finitely many solvable groups is solvable.
+<strong>Theorem 6.0.2.</strong> Let \(N \trianglelefteq G\). If both \(N\) and \(G/N\) are solvable, then \(G\) is solvable. In particular, a direct product of finitely many solvable groups is solvable.
 </div>
 
 <div class="corollary">
@@ -324,10 +324,10 @@ with each <span>&#92;(G&#95;{i+1} &#92;trianglelefteq G&#95;i&#92;)</span> and e
 ### 6.2 Simple Groups and Failure of Solvability
 
 <div class="definition">
-<strong>Definition.</strong> A group <span>&#92;(G&#92;)</span> is <strong>simple</strong> if it is non-trivial and has no normal subgroups other than <span>&#92;(&#92;{1&#92;}&#92;)</span> and <span>&#92;(G&#92;)</span> itself.
+<strong>Definition.</strong> A group \(G\) is <strong>simple</strong> if it is non-trivial and has no normal subgroups other than \(\{1\}\) and \(G\) itself.
 </div>
 
-The alternating group <span>&#92;(A&#95;5&#92;)</span> is simple. Since the only possible tower for <span>&#92;(A&#95;5&#92;)</span> is <span>&#92;(A&#95;5 &#92;trianglerighteq &#92;{1&#92;}&#92;)</span>, and <span>&#92;(A&#95;5/&#92;{1&#92;} &#92;cong A&#95;5&#92;)</span> is not abelian, <span>&#92;(A&#95;5&#92;)</span> is not solvable. By Theorem 6.0.1, <span>&#92;(S&#95;5&#92;)</span> is not solvable either (since <span>&#92;(A&#95;5 &#92;leq S&#95;5&#92;)</span>). More generally, <span>&#92;(S&#95;n&#92;)</span> is not solvable for all <span>&#92;(n &#92;geq 5&#92;)</span>, since each such <span>&#92;(S&#95;n&#92;)</span> contains a copy of <span>&#92;(A&#95;5&#92;)</span>.
+The alternating group \(A_5\) is simple. Since the only possible tower for \(A_5\) is \(A_5 \trianglerighteq \{1\}\), and \(A_5/\{1\} \cong A_5\) is not abelian, \(A_5\) is not solvable. By Theorem 6.0.1, \(S_5\) is not solvable either (since \(A_5 \leq S_5\). More generally, \(S_n\) is not solvable for all \(n \geq 5\), since each such \(S_n\) contains a copy of \(A_5\).
 
 This connection between the symmetric group and solvability is precisely what makes the Abel-Ruffini theorem work.
 
@@ -340,42 +340,42 @@ This chapter associates a group to each field extension: the group of field auto
 ### 7.1 Automorphism Groups
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension. An <strong><span>&#92;(F&#92;)</span>-automorphism of <span>&#92;(E&#92;)</span></strong> is a field automorphism <span>&#92;(&#92;psi: E &#92;to E&#92;)</span> that fixes every element of <span>&#92;(F&#92;)</span> (i.e., <span>&#92;(&#92;psi|&#95;F = &#92;\text{id}&#95;F&#92;)</span>). The set of all such automorphisms, under composition, forms the <strong>automorphism group</strong> <span>&#92;(&#92;\text{Aut}&#95;F(E)&#92;)</span>.
+<strong>Definition.</strong> Let \(E/F\) be a field extension. An <strong>\(F\)-automorphism of \(E\)</strong> is a field automorphism \(\psi: E \to E\) that fixes every element of \(F\) (i.e., \(\psi|_F = \text{id}_F\). The set of all such automorphisms, under composition, forms the <strong>automorphism group</strong> \(\text{Aut}_F(E)\).
 </div>
 
 Two fundamental lemmas govern these automorphisms:
 
-**Lemma 7.1.1.** If <span>&#92;(&#92;\psi &#92;in &#92;\text{Aut}&#95;F(E)&#92;)</span> and <span>&#92;(&#92;\alpha &#92;in E&#92;)</span> is a root of <span>&#92;(f(x) &#92;in F[x]&#92;)</span>, then <span>&#92;(&#92;\psi(&#92;\alpha)&#92;)</span> is also a root of <span>&#92;(f(x)&#92;)</span>. (Automorphisms permute the roots of polynomials with coefficients in the base field.)
+**Lemma 7.1.1.** If \(\psi \in \text{Aut}_F(E)\) and \(\alpha \in E\) is a root of \(f(x) \in F[x]\), then \(\psi(\alpha)\) is also a root of \(f(x)\). (Automorphisms permute the roots of polynomials with coefficients in the base field.)
 
-**Lemma 7.1.2.** If <span>&#92;(E = F(&#92;\alpha&#95;1, &#92;\ldots, &#92;\alpha&#95;n)&#92;)</span> and two maps <span>&#92;(&#92;\psi&#95;1, &#92;\psi&#95;2 &#92;in &#92;\text{Aut}&#95;F(E)&#92;)</span> agree on each generator <span>&#92;(&#92;\alpha&#95;i&#92;)</span>, then <span>&#92;(&#92;\psi&#95;1 = &#92;\psi&#95;2&#92;)</span>.
+**Lemma 7.1.2.** If \(E = F(\alpha_1, \ldots, \alpha_n)\) and two maps \(\psi_1, \psi_2 \in \text{Aut}_F(E)\) agree on each generator \(\alpha_i\), then \(\psi_1 = \psi_2\).
 
 <div class="theorem">
-<strong>Theorem 7.1.3.</strong> If <span>&#92;(E/F&#92;)</span> is a finite extension, then <span>&#92;(&#92;\text{Aut}&#95;F(E)&#92;)</span> is finite.
+<strong>Theorem 7.1.3.</strong> If \(E/F\) is a finite extension, then \(\text{Aut}_F(E)\) is finite.
 </div>
 
-*Proof sketch.* Since <span>&#92;(E/F&#92;)</span> is finite, write <span>&#92;(E = F(&#92;\alpha&#95;1, &#92;\ldots, &#92;\alpha&#95;n)&#92;)</span>. Any <span>&#92;(&#92;\psi &#92;in &#92;\text{Aut}&#95;F(E)&#92;)</span> is determined by where it sends each <span>&#92;(&#92;\alpha&#95;i&#92;)</span>. By Lemma 7.1.1, each <span>&#92;(&#92;\psi(&#92;\alpha&#95;i)&#92;)</span> is a root of the minimal polynomial of <span>&#92;(&#92;\alpha&#95;i&#92;)</span>, giving finitely many choices. So <span>&#92;(|\text{Aut}_F(E)| < &#92;\infty&#92;)</span>. ∎
+*Proof sketch.* Since \(E/F\) is finite, write \(E = F(\alpha_1, \ldots, \alpha_n)\). Any \(\psi \in \text{Aut}_F(E)\) is determined by where it sends each \(\alpha_i\). By Lemma 7.1.1, each \(\psi(\alpha_i)\) is a root of the minimal polynomial of \(\alpha_i\), giving finitely many choices. So \(|\text{Aut}_F(E)| < \infty\). ∎
 
 ### 7.2 Automorphism Groups of Splitting Fields
 
 <div class="definition">
-<strong>Definition.</strong> The <strong>automorphism group of <span>&#92;(f(x)&#92;)</span> over <span>&#92;(F&#92;)</span></strong> is <span>&#92;(\text{Aut}&#95;F(E)&#92;)</span>, where <span>&#92;(E&#92;)</span> is the splitting field of <span>&#92;(f(x)&#92;)</span> over <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> The <strong>automorphism group of \(f(x)\) over \(F\)</strong> is \(\text{Aut}_F(E)\), where \(E\) is the splitting field of \(f(x)\) over \(F\).
 </div>
 
 <div class="theorem">
-<strong>Theorem 7.2.1 and 7.2.2.</strong> Let <span>&#92;(E/F&#92;)</span> be the splitting field of <span>&#92;(f(x) &#92;in F[x]&#92;)</span> with <span>&#92;(n&#92;)</span> distinct roots. Then <span>&#92;(\text{Aut}&#95;F(E)&#92;)</span> is isomorphic to a subgroup of the symmetric group <span>&#92;(S&#95;n&#92;)</span>. Moreover, <span>&#92;(|\text{Aut}&#95;F(E)| &#92;leq [E:F]&#92;)</span>, with equality if and only if <span>&#92;(f(x)&#92;)</span> is separable.
+<strong>Theorem 7.2.1 and 7.2.2.</strong> Let \(E/F\) be the splitting field of \(f(x) \in F[x]\) with \(n\) distinct roots. Then \(\text{Aut}_F(E)\) is isomorphic to a subgroup of the symmetric group \(S_n\). Moreover, \(|\text{Aut}_F(E)| \leq [E:F]\), with equality if and only if \(f(x)\) is separable.
 </div>
 
 ### 7.3 Fixed Fields
 
 <div class="definition">
-<strong>Definition.</strong> Let <span>&#92;(E/F&#92;)</span> be a field extension and <span>&#92;(G &#92;leq &#92;\text{Aut}&#95;F(E)&#92;)</span>. The <strong>fixed field of <span>&#92;(G&#92;)</span></strong> is <span>&#92;[E^G = &#92;{&#92;\alpha &#92;in E : &#92;\psi(&#92;\alpha) = &#92;\alpha &#92;\text{ for all } &#92;\psi &#92;in G&#92;}.&#92;]</span>
+<strong>Definition.</strong> Let \(E/F\) be a field extension and \(G \leq \text{Aut}_F(E)\). The <strong>fixed field of \(G\)</strong> is \[E^G = \{\alpha \in E : \psi(\alpha) = \alpha \text{ for all } \psi \in G\}.\]
 </div>
 
 <div class="theorem">
-<strong>Theorem 7.3.1.</strong> If <span>&#92;(f(x) &#92;in F[x]&#92;)</span> is separable with splitting field <span>&#92;(E/F&#92;)</span>, and <span>&#92;(G = &#92;\text{Aut}&#95;F(E)&#92;)</span>, then <span>&#92;(E^G = F&#92;)</span>.
+<strong>Theorem 7.3.1.</strong> If \(f(x) \in F[x]\) is separable with splitting field \(E/F\), and \(G = \text{Aut}_F(E)\), then \(E^G = F\).
 </div>
 
-*Proof sketch.* Let <span>&#92;(L = E^G&#92;)</span>. By definition of <span>&#92;(L&#92;)</span>, every <span>&#92;(F&#92;)</span>-automorphism of <span>&#92;(E&#92;)</span> also fixes <span>&#92;(L&#92;)</span>, so <span>&#92;(\text{Aut}&#95;L(E) = \text{Aut}&#95;F(E)&#92;)</span>. Since <span>&#92;(f(x)&#92;)</span> is separable, <span>&#92;(|\text{Aut}&#95;F(E)| = [E:F]&#92;)</span> and <span>&#92;(|\text{Aut}&#95;L(E)| = [E:L]&#92;)</span>. Thus <span>&#92;([E:F] = [E:L]&#92;)</span>, and since <span>&#92;(F &#92;subseteq L&#92;)</span>, we get <span>&#92;(L = F&#92;)</span>. ∎
+*Proof sketch.* Let \(L = E^G\). By definition of \(L\), every \(F\)-automorphism of \(E\) also fixes \(L\), so \(\text{Aut}_L(E) = \text{Aut}_F(E)\). Since \(f(x)\) is separable, \(|\text{Aut}_F(E)| = [E:F]\) and \(|\text{Aut}_L(E)| = [E:L]\). Thus \([E:F] = [E:L]\), and since \(F \subseteq L\), we get \(L = F\). ∎
 
 ---
 
@@ -386,54 +386,54 @@ These two properties together define Galois extensions, which are the central ob
 ### 8.1 Separable Extensions
 
 <div class="definition">
-<strong>Definition.</strong> An algebraic extension <span>&#92;(E/F&#92;)</span> is <strong>separable</strong> if the minimal polynomial of every <span>&#92;(&#92;\alpha &#92;in E&#92;)</span> is a separable polynomial over <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> An algebraic extension \(E/F\) is <strong>separable</strong> if the minimal polynomial of every \(\alpha \in E\) is a separable polynomial over \(F\).
 </div>
 
 <div class="theorem">
-<strong>Theorem 8.1.1.</strong> If <span>&#92;(E/F&#92;)</span> is the splitting field of a separable polynomial, then <span>&#92;(E/F&#92;)</span> is separable.
+<strong>Theorem 8.1.1.</strong> If \(E/F\) is the splitting field of a separable polynomial, then \(E/F\) is separable.
 </div>
 
-*Proof sketch.* For <span>&#92;(&#92;\alpha &#92;in E&#92;)</span> with minimal polynomial <span>&#92;(p(x)&#92;)</span>, consider the distinct roots <span>&#92;(&#92;\alpha&#95;1 = &#92;\alpha, &#92;\alpha&#95;2, &#92;\ldots, &#92;\alpha&#95;n&#92;)</span> of <span>&#92;(p(x)&#92;)</span> in <span>&#92;(E&#92;)</span> and set <span>&#92;(&#92;\tilde{p}(x) = &#92;prod&#95;{i=1}^n (x - &#92;\alpha&#95;i)&#92;)</span>. By Theorem 7.3.1, the coefficients of <span>&#92;(&#92;\tilde{p}(x)&#92;)</span> lie in <span>&#92;(F&#92;)</span>, and so <span>&#92;(&#92;\tilde{p}(x) = p(x)&#92;)</span>. Thus <span>&#92;(p(x)&#92;)</span> has distinct roots and is separable. ∎
+*Proof sketch.* For \(\alpha \in E\) with minimal polynomial \(p(x)\), consider the distinct roots \(\alpha_1 = \alpha, \alpha_2, \ldots, \alpha_n\) of \(p(x)\) in \(E\) and set \(\tilde{p}(x) = \prod_{i=1}^n (x - \alpha_i)\). By Theorem 7.3.1, the coefficients of \(\tilde{p}(x)\) lie in \(F\), and so \(\tilde{p}(x) = p(x)\). Thus \(p(x)\) has distinct roots and is separable. ∎
 
 ### 8.2 The Primitive Element Theorem
 
 <div class="definition">
-<strong>Definition.</strong> A <strong>simple extension</strong> is a field extension <span>&#92;(E/F&#92;)</span> of the form <span>&#92;(E = F(&#92;\gamma)&#92;)</span>. The element <span>&#92;(&#92;\gamma&#92;)</span> is called a <strong>primitive element</strong> of <span>&#92;(E/F&#92;)</span>.
+<strong>Definition.</strong> A <strong>simple extension</strong> is a field extension \(E/F\) of the form \(E = F(\gamma)\). The element \(\gamma\) is called a <strong>primitive element</strong> of \(E/F\).
 </div>
 
 <div class="theorem">
 <strong>Theorem 8.1.4 (Primitive Element Theorem).</strong> Every finite separable extension is simple.
 </div>
 
-*Proof sketch.* Assume <span>&#92;(F&#92;)</span> is infinite (the finite field case is handled separately). It suffices to show that any extension generated by two algebraic elements is simple. Let <span>&#92;(E = F(&#92;\alpha, &#92;\beta)&#92;)</span> with minimal polynomials <span>&#92;(a(x)&#92;)</span> and <span>&#92;(b(x)&#92;)</span>. Choose <span>&#92;(&#92;\lambda &#92;in F&#92;)</span> such that <span>&#92;(&#92;\lambda &#92;neq (&#92;\tilde{&#92;\alpha} - &#92;\alpha)/(&#92;\beta - &#92;\tilde{&#92;\beta})&#92;)</span> for all roots <span>&#92;(&#92;\tilde{&#92;\alpha}&#92;)</span> of <span>&#92;(a(x)&#92;)</span> and all roots <span>&#92;(&#92;\tilde{&#92;\beta} &#92;neq &#92;\beta&#92;)</span> of <span>&#92;(b(x)&#92;)</span>. Then <span>&#92;(F(&#92;\alpha, &#92;\beta) = F(&#92;\alpha + &#92;\lambda &#92;\beta)&#92;)</span>. The condition on <span>&#92;(&#92;\lambda&#92;)</span> can always be satisfied since <span>&#92;(F&#92;)</span> is infinite and there are only finitely many excluded values. ∎
+*Proof sketch.* Assume \(F\) is infinite (the finite field case is handled separately). It suffices to show that any extension generated by two algebraic elements is simple. Let \(E = F(\alpha, \beta)\) with minimal polynomials \(a(x)\) and \(b(x)\). Choose \(\lambda \in F\) such that \(\lambda \neq (\tilde{\alpha} - \alpha)/(\beta - \tilde{\beta})\) for all roots \(\tilde{\alpha}\) of \(a(x)\) and all roots \(\tilde{\beta} \neq \beta\) of \(b(x)\). Then \(F(\alpha, \beta) = F(\alpha + \lambda \beta)\). The condition on \(\lambda\) can always be satisfied since \(F\) is infinite and there are only finitely many excluded values. ∎
 
 ### 8.3 Normal Extensions
 
 <div class="definition">
-<strong>Definition.</strong> An algebraic extension <span>&#92;(E/F&#92;)</span> is <strong>normal</strong> if for every irreducible <span>&#92;(p(x) &#92;in F[x]&#92;)</span>, either <span>&#92;(p(x)&#92;)</span> has no root in <span>&#92;(E&#92;)</span>, or <span>&#92;(p(x)&#92;)</span> has all its roots in <span>&#92;(E&#92;)</span>.
+<strong>Definition.</strong> An algebraic extension \(E/F\) is <strong>normal</strong> if for every irreducible \(p(x) \in F[x]\), either \(p(x)\) has no root in \(E\), or \(p(x)\) has all its roots in \(E\).
 </div>
 
 <div class="theorem">
-<strong>Theorem 8.2.1.</strong> A finite extension <span>&#92;(E/F&#92;)</span> is normal if and only if it is the splitting field of some polynomial in <span>&#92;(F[x]&#92;)</span>.
+<strong>Theorem 8.2.1.</strong> A finite extension \(E/F\) is normal if and only if it is the splitting field of some polynomial in \(F[x]\).
 </div>
 
-*Forward direction.* If <span>&#92;(E = F(&#92;\alpha&#95;1, &#92;\ldots, &#92;\alpha&#95;n)&#92;)</span> and <span>&#92;(p&#95;i(x)&#92;)</span> is the minimal polynomial of <span>&#92;(&#92;\alpha&#95;i&#92;)</span>, then <span>&#92;(E&#92;)</span> is the splitting field of <span>&#92;(p&#95;1(x) &#92;cdots p&#95;n(x)&#92;)</span>.
+*Forward direction.* If \(E = F(\alpha_1, \ldots, \alpha_n)\) and \(p_i(x)\) is the minimal polynomial of \(\alpha_i\), then \(E\) is the splitting field of \(p_1(x) \cdots p_n(x)\).
 
-*Backward direction.* Let <span>&#92;(E/F&#92;)</span> be the splitting field of <span>&#92;(f(x)&#92;)</span>, and <span>&#92;(p(x) &#92;in F[x]&#92;)</span> irreducible with root <span>&#92;(&#92;\alpha&#95;1 &#92;in E&#92;)</span>. For any other root <span>&#92;(&#92;\alpha&#95;2 &#92;neq &#92;\alpha&#95;1&#92;)</span> in the splitting field of <span>&#92;(p(x)&#92;)</span> over <span>&#92;(E&#92;)</span>, Theorem 3.2.1 gives an automorphism <span>&#92;(&#92;\psi&#92;)</span> of the splitting field mapping <span>&#92;(&#92;\alpha&#95;1 &#92;mapsto &#92;\alpha&#95;2&#92;)</span>. Since <span>&#92;(&#92;\psi(E) = E&#92;)</span>, we get <span>&#92;(&#92;\alpha&#95;2 &#92;in E&#92;)</span>. ∎
+*Backward direction.* Let \(E/F\) be the splitting field of \(f(x)\), and \(p(x) \in F[x]\) irreducible with root \(\alpha_1 \in E\). For any other root \(\alpha_2 \neq \alpha_1\) in the splitting field of \(p(x)\) over \(E\), Theorem 3.2.1 gives an automorphism \(\psi\) of the splitting field mapping \(\alpha_1 \mapsto \alpha_2\). Since \(\psi(E) = E\), we get \(\alpha_2 \in E\). ∎
 
 <div class="definition">
-<strong>Definition.</strong> Two elements <span>&#92;(&#92;\alpha, &#92;\beta &#92;in E&#92;)</span> are <strong>conjugate over <span>&#92;(F&#92;)</span></strong> if there exists <span>&#92;(&#92;\psi &#92;in &#92;\text{Aut}&#95;F(E)&#92;)</span> with <span>&#92;(&#92;\psi(&#92;\alpha) = &#92;\beta&#92;)</span> — equivalently, if <span>&#92;(&#92;\alpha&#92;)</span> and <span>&#92;(&#92;\beta&#92;)</span> have the same minimal polynomial over <span>&#92;(F&#92;)</span>.
+<strong>Definition.</strong> Two elements \(\alpha, \beta \in E\) are <strong>conjugate over \(F\)</strong> if there exists \(\psi \in \text{Aut}_F(E)\) with \(\psi(\alpha) = \beta\) — equivalently, if \(\alpha\) and \(\beta\) have the same minimal polynomial over \(F\).
 </div>
 
 <div class="definition">
-<strong>Definition.</strong> A <strong>normal closure</strong> of a finite extension <span>&#92;(E/F&#92;)</span> is a normal extension <span>&#92;(N/F&#92;)</span> containing <span>&#92;(E&#92;)</span> that is minimal with this property.
+<strong>Definition.</strong> A <strong>normal closure</strong> of a finite extension \(E/F\) is a normal extension \(N/F\) containing \(E\) that is minimal with this property.
 </div>
 
 <div class="theorem">
-<strong>Theorem.</strong> Every finite extension <span>&#92;(E/F&#92;)</span> has a normal closure <span>&#92;(N/F&#92;)</span>, unique up to <span>&#92;(E&#92;)</span>-isomorphism.
+<strong>Theorem.</strong> Every finite extension \(E/F\) has a normal closure \(N/F\), unique up to \(E\)-isomorphism.
 </div>
 
-*Proof.* Let <span>&#92;(E = F(&#92;\alpha&#95;1, &#92;\ldots, &#92;\alpha&#95;n)&#92;)</span> with minimal polynomial <span>&#92;(p&#95;i(x)&#92;)</span> for <span>&#92;(&#92;\alpha&#95;i&#92;)</span>. Take <span>&#92;(N&#92;)</span> to be the splitting field of <span>&#92;(p&#95;1(x) &#92;\cdots p&#95;n(x)&#92;)</span> over <span>&#92;(E&#92;)</span>. ∎
+*Proof.* Let \(E = F(\alpha_1, \ldots, \alpha_n)\) with minimal polynomial \(p_i(x)\) for \(\alpha_i\). Take \(N\) to be the splitting field of \(p_1(x) \cdots p_n(x)\) over \(E\). ∎
 
 ---
 
@@ -444,53 +444,53 @@ This chapter is the heart of the course: the definition of Galois extensions, Ar
 ### 9.1 Galois Extensions
 
 <div class="definition">
-<strong>Definition.</strong> A field extension <span>&#92;(E/F&#92;)</span> is a <strong>Galois extension</strong> if it is both separable and normal. In this case, the automorphism group <span>&#92;(\text{Aut}&#95;F(E)&#92;)</span> is called the <strong>Galois group</strong> of <span>&#92;(E/F&#92;)</span>, written <span>&#92;(\text{Gal}&#95;F(E)&#92;)</span>.
+<strong>Definition.</strong> A field extension \(E/F\) is a <strong>Galois extension</strong> if it is both separable and normal. In this case, the automorphism group \(\text{Aut}_F(E)\) is called the <strong>Galois group</strong> of \(E/F\), written \(\text{Gal}_F(E)\).
 </div>
 
-By Theorems 8.1.1 and 8.2.1, a finite Galois extension is equivalent to the splitting field of a separable polynomial. If <span>&#92;(f(x)&#92;)</span> has degree <span>&#92;(n&#92;)</span>, then <span>&#92;(\text{Gal}&#95;F(E) &#92;leq S&#95;n&#92;)</span> and <span>&#92;(|\text{Gal}&#95;F(E)| = [E:F]&#92;)</span>.
+By Theorems 8.1.1 and 8.2.1, a finite Galois extension is equivalent to the splitting field of a separable polynomial. If \(f(x)\) has degree \(n\), then \(\text{Gal}_F(E) \leq S_n\) and \(|\text{Gal}_F(E)| = [E:F]\).
 
 ### 9.2 Artin's Theorem
 
 <div class="theorem">
-<strong>Theorem 9.1.1 (E. Artin).</strong> Let <span>&#92;(E&#92;)</span> be a field and <span>&#92;(G&#92;)</span> a finite subgroup of <span>&#92;(\text{Aut}(E)&#92;)</span>. Let <span>&#92;(E^G = &#92;{&#92;\alpha &#92;in E : &#92;\psi(&#92;\alpha) = &#92;\alpha &#92;\text{ for all } &#92;\psi &#92;in G&#92;}&#92;)</span>. Then <span>&#92;(E/E^G&#92;)</span> is a finite Galois extension and <span>&#92;[\text{Gal}&#95;{E^G}(E) = G, &#92;quad [E : E^G] = |G|.&#92;]</span>
+<strong>Theorem 9.1.1 (E. Artin).</strong> Let \(E\) be a field and \(G\) a finite subgroup of \(\text{Aut}(E)\). Let \(E^G = \{\alpha \in E : \psi(\alpha) = \alpha \text{ for all } \psi \in G\}\). Then \(E/E^G\) is a finite Galois extension and \[\text{Gal}_{E^G}(E) = G, \quad [E : E^G] = |G|.\]
 </div>
 
-*Proof sketch.* Let <span>&#92;(n = |G|&#92;)</span> and <span>&#92;(F = E^G&#92;)</span>. For any <span>&#92;(&#92;\alpha &#92;in E&#92;)</span>, consider its <span>&#92;(G&#92;)</span>-orbit <span>&#92;(&#92;\alpha&#95;1 = &#92;\alpha, &#92;\alpha&#95;2, &#92;\ldots, &#92;\alpha&#95;m&#92;)</span>. Set <span>&#92;(f(x) = &#92;prod&#95;{i=1}^m (x - &#92;\alpha&#95;i)&#92;)</span>. Since every <span>&#92;(&#92;\psi &#92;in G&#92;)</span> permutes the <span>&#92;(&#92;\alpha&#95;i&#92;)</span>'s, the coefficients of <span>&#92;(f(x)&#92;)</span> are symmetric in the <span>&#92;(&#92;\alpha&#95;i&#92;)</span>'s, hence fixed by all of <span>&#92;(G&#92;)</span> and so lie in <span>&#92;(F&#92;)</span>. One shows <span>&#92;(f(x)&#92;)</span> is the minimal polynomial of <span>&#92;(&#92;\alpha&#92;)</span> over <span>&#92;(F&#92;)</span> — it is separable and splits over <span>&#92;(E&#92;)</span>, so <span>&#92;(E/F&#92;)</span> is Galois. The bound <span>&#92;([E:F] &#92;leq n&#92;)</span> follows from a linear algebra argument: if <span>&#92;([E:F] > n&#92;)</span>, we could find a linear dependence contradicting the minimality hypothesis. Combined with <span>&#92;(|G| &#92;leq |\text{Gal}&#95;F(E)| = [E:F] &#92;leq n = |G|&#92;)</span>, we get equality throughout. ∎
+*Proof sketch.* Let \(n = |G|\) and \(F = E^G\). For any \(\alpha \in E\), consider its \(G\)-orbit \(\alpha_1 = \alpha, \alpha_2, \ldots, \alpha_m\). Set \(f(x) = \prod_{i=1}^m (x - \alpha_i)\). Since every \(\psi \in G\) permutes the \(\alpha_i\)'s, the coefficients of \(f(x)\) are symmetric in the \(\alpha_i\)'s, hence fixed by all of \(G\) and so lie in \(F\). One shows \(f(x)\) is the minimal polynomial of \(\alpha\) over \(F\) — it is separable and splits over \(E\), so \(E/F\) is Galois. The bound \([E:F] \leq n\) follows from a linear algebra argument: if \([E:F] > n\), we could find a linear dependence contradicting the minimality hypothesis. Combined with \(|G| \leq |\text{Gal}_F(E)| = [E:F] \leq n = |G|\), we get equality throughout. ∎
 
 <div class="remark">
-<strong>Remark.</strong> The symmetric functions example shows this beautifully: if <span>&#92;(E = F(t&#95;1, &#92;\ldots, t&#95;n)&#92;)</span> is the rational function field in <span>&#92;(n&#92;)</span> variables, and <span>&#92;(G = S&#95;n&#92;)</span> acts by permuting variables, then <span>&#92;(E^G = F(s&#95;1, &#92;\ldots, s&#95;n)&#92;)</span> where <span>&#92;(s&#95;1, &#92;\ldots, s&#95;n&#92;)</span> are the elementary symmetric polynomials.
+<strong>Remark.</strong> The symmetric functions example shows this beautifully: if \(E = F(t_1, \ldots, t_n)\) is the rational function field in \(n\) variables, and \(G = S_n\) acts by permuting variables, then \(E^G = F(s_1, \ldots, s_n)\) where \(s_1, \ldots, s_n\) are the elementary symmetric polynomials.
 </div>
 
 ### 9.3 The Fundamental Theorem of Galois Theory
 
 <div class="theorem">
-<strong>Theorem 9.2.1 (Fundamental Theorem of Galois Theory).</strong> Let <span>&#92;(E/F&#92;)</span> be a finite Galois extension with Galois group <span>&#92;(G = &#92;\text{Gal}&#95;F(E)&#92;)</span>. There is an order-reversing bijection between the set of intermediate fields <span>&#92;(\text{Int}(E/F)&#92;)</span> and the set of subgroups <span>&#92;(\text{Sub}(G)&#92;)</span>:
-<span>&#92;[ &#92;\text{Int}(E/F) &#92;longleftrightarrow &#92;\text{Sub}(G) &#92;]</span>
-given by <span>&#92;(L &#92;mapsto L^&#42; := &#92;\text{Gal}&#95;L(E)&#92;)</span> and <span>&#92;(H &#92;\mapsto H^&#42; := E^H&#92;)</span>. These maps are inverse to each other, and they reverse inclusions: <span>&#92;(L&#95;1 &#92;\subseteq L&#95;2&#92;)</span> if and only if <span>&#92;(L&#95;2^&#42; &#92;\subseteq L&#95;1^&#42;&#92;)</span>.
+<strong>Theorem 9.2.1 (Fundamental Theorem of Galois Theory).</strong> Let \(E/F\) be a finite Galois extension with Galois group \(G = \text{Gal}_F(E)\). There is an order-reversing bijection between the set of intermediate fields \(\text{Int}(E/F)\) and the set of subgroups \(\text{Sub}(G)\):
+\[ \text{Int}(E/F) \longleftrightarrow \text{Sub}(G) \]
+given by \(L \mapsto L^* := \text{Gal}_L(E)\) and \(H \mapsto H^* := E^H\). These maps are inverse to each other, and they reverse inclusions: \(L_1 \subseteq L_2\) if and only if \(L_2^* \subseteq L_1^*\).
 
-Moreover, <span>&#92;([E:L] = |L^&#42;|&#92;)</span> and <span>&#92;([L:F] = [G:L^&#42;]&#92;)</span>.
+Moreover, \([E:L] = |L^*|\) and \([L:F] = [G:L^*]\).
 </div>
 
-*Proof.* The maps are mutually inverse: if <span>&#92;(L &#92;in &#92;\text{Int}(E/F)&#92;)</span>, then <span>&#92;((L^&#42;)^&#42; = E^{\text{Gal}&#95;L(E)} = L&#92;)</span> by Theorem 7.3.1. If <span>&#92;(H &#92;in &#92;\text{Sub}(G)&#92;)</span>, then <span>&#92;((H^&#42;)^&#42; = &#92;\text{Gal}&#95;{E^H}(E) = H&#92;)</span> by Artin's theorem. ∎
+*Proof.* The maps are mutually inverse: if \(L \in \text{Int}(E/F)\), then \((L^*)^* = E^{\text{Gal}_L(E)} = L\) by Theorem 7.3.1. If \(H \in \text{Sub}(G)\), then \((H^*)^* = \text{Gal}_{E^H}(E) = H\) by Artin's theorem. ∎
 
 The correspondence can be visualised as an inverted diagram:
 
 | Intermediate fields (include ↑ = contain more) | Subgroups (include ↑ = larger group) |
 |---|---|
-| <span>&#92;(E&#92;)</span> (top) | <span>&#92;(&#92;\{1&#92;}&#92;)</span> (bottom) |
-| <span>&#92;(L&#92;)</span> | <span>&#92;(L^&#42; = &#92;\text{Gal}&#95;L(E)&#92;)</span> |
-| <span>&#92;(F&#92;)</span> (bottom) | <span>&#92;(G&#92;)</span> (top) |
+| \(E\) (top) | \(\\{1\}\) (bottom) |
+| \(L\) | \(L^* = \text{Gal}_L(E)\) |
+| \(F\) (bottom) | \(G\) (top) |
 
 <div class="theorem">
-<strong>Theorem 9.2.3.</strong> Under the Galois correspondence, the extension <span>&#92;(L/F&#92;)</span> is Galois if and only if <span>&#92;(L^&#42;&#92;)</span> is a normal subgroup of <span>&#92;(G&#92;)</span>. In this case, <span>&#92;[\text{Gal}&#95;F(L) &#92;\cong G/L^&#42;.&#92;]</span>
+<strong>Theorem 9.2.3.</strong> Under the Galois correspondence, the extension \(L/F\) is Galois if and only if \(L^*\) is a normal subgroup of \(G\). In this case, \[\text{Gal}_F(L) \cong G/L^*.\]
 </div>
 
-*Proof.* One shows: <span>&#92;(L/F&#92;)</span> is normal <span>&#92;(&#92;\Leftrightarrow&#92;)</span> <span>&#92;(&#92;\psi(L) = L&#92;)</span> for all <span>&#92;(&#92;\psi &#92;in G&#92;)</span> <span>&#92;(&#92;\Leftrightarrow&#92;)</span> <span>&#92;(&#92;\psi \text{Gal}&#95;L(E) &#92;\psi^{-1} = &#92;\text{Gal}&#95;L(E)&#92;)</span> for all <span>&#92;(&#92;\psi &#92;in G&#92;)</span> <span>&#92;(&#92;\Leftrightarrow&#92;)</span> <span>&#92;(L^&#42; &#92;trianglelefteq G&#92;)</span>. The restriction map <span>&#92;(G &#92;to &#92;\text{Gal}&#95;F(L)&#92;)</span>, <span>&#92;(&#92;\psi &#92;mapsto &#92;\psi|&#95;L&#92;)</span>, is surjective with kernel <span>&#92;(L^&#42;&#92;)</span>. ∎
+*Proof.* One shows: \(L/F\) is normal \(\Leftrightarrow\) \(\psi(L) = L\) for all \(\psi \in G\) \(\Leftrightarrow\) \(\psi \text{Gal}_L(E) \psi^{-1} = \text{Gal}_L(E)\) for all \(\psi \in G\) \(\Leftrightarrow\) \(L^* \trianglelefteq G\). The restriction map \(G \to \text{Gal}_F(L)\), \(\psi \mapsto \psi|_L\), is surjective with kernel \(L^*\). ∎
 
 <div class="example">
-<strong>Example.</strong> Let <span>&#92;(E&#92;)</span> be the splitting field of <span>&#92;(x^5 - 7&#92;)</span> over <span>&#92;(&#92;\mathbb{Q}&#92;)</span>. Then <span>&#92;(E = &#92;\mathbb{Q}(&#92;\alpha, &#92;\zeta&#95;5)&#92;)</span> where <span>&#92;(&#92;\alpha = &#92;\sqrt[5]{7}&#92;)</span> and <span>&#92;(&#92;\zeta&#95;5 = e^{2&#92;\pi i/5}&#92;)</span>. Since <span>&#92;([&#92;\mathbb{Q}(&#92;\alpha):&#92;\mathbb{Q}] = 5&#92;)</span> and <span>&#92;([&#92;\mathbb{Q}(&#92;\zeta&#95;5):&#92;\mathbb{Q}] = 4&#92;)</span>, we get <span>&#92;([E:&#92;\mathbb{Q}] = 20&#92;)</span>. The Galois group <span>&#92;(G = &#92;\text{Gal}&#95;{&#92;\mathbb{Q}}(E)&#92;)</span> has order 20 and is generated by
-<span>&#92;[ &#92;\sigma: &#92;\alpha &#92;mapsto &#92;\alpha&#92;\zeta&#95;5,\; &#92;\zeta&#95;5 &#92;mapsto &#92;\zeta&#95;5 &#92;qquad &#92;&#92; &#92;\tau: &#92;\alpha &#92;mapsto &#92;\alpha,\; &#92;\zeta&#95;5 &#92;mapsto &#92;\zeta&#95;5^2 &#92;]</span>
-with the relation <span>&#92;(&#92;\tau&#92;\sigma = &#92;\sigma^2&#92;\tau&#92;)</span>. The Sylow theorems show there is a unique Sylow 5-subgroup <span>&#92;(&#92;\langle &#92;\sigma &#92;rangle &#92;\cong &#92;\mathbb{Z}&#95;5&#92;)</span> (normal in <span>&#92;(G&#92;)</span>) and five Sylow 2-subgroups.
+<strong>Example.</strong> Let \(E\) be the splitting field of \(x^5 - 7\) over \(\mathbb{Q}\). Then \(E = \mathbb{Q}(\alpha, \zeta_5)\) where \(\alpha = \sqrt[5]{7}\) and \(\zeta_5 = e^{2\pi i/5}\). Since \([\mathbb{Q}(\alpha):\mathbb{Q}] = 5\) and \([\mathbb{Q}(\zeta_5):\mathbb{Q}] = 4\), we get \([E:\mathbb{Q}] = 20\). The Galois group \(G = \text{Gal}_{\mathbb{Q}}(E)\) has order 20 and is generated by
+\[ \sigma: \alpha \mapsto \alpha\zeta_5,\; \zeta_5 \mapsto \zeta_5 \qquad \\ \tau: \alpha \mapsto \alpha,\; \zeta_5 \mapsto \zeta_5^2 \]
+with the relation \(\tau\sigma = \sigma^2\tau\). The Sylow theorems show there is a unique Sylow 5-subgroup \(\langle \sigma \rangle \cong \mathbb{Z}_5\) (normal in \(G\) and five Sylow 2-subgroups.
 </div>
 
 ---
@@ -502,84 +502,84 @@ Cyclic extensions — Galois extensions with cyclic Galois group — are the bui
 ### 10.1 Dedekind's Lemma
 
 <div class="theorem">
-<strong>Lemma 10.0.1 (Dedekind's Lemma).</strong> Let <span>&#92;(K&#92;)</span> and <span>&#92;(L&#92;)</span> be fields and <span>&#92;(&#92;\psi&#95;1, &#92;\ldots, &#92;\psi&#95;n: L &#92;to K&#92;)</span> distinct homomorphisms. If <span>&#92;(c&#95;i &#92;in K&#92;)</span> satisfy <span>&#92;[c&#95;1 &#92;\psi&#95;1(&#92;\alpha) + c&#95;2 &#92;\psi&#95;2(&#92;\alpha) + &#92;\cdots + c&#95;n &#92;\psi&#95;n(&#92;\alpha) = 0 &#92;quad &#92;\forall &#92;\alpha &#92;in L,&#92;]</span> then <span>&#92;(c&#95;1 = c&#95;2 = &#92;\cdots = c&#95;n = 0&#92;)</span>.
+<strong>Lemma 10.0.1 (Dedekind's Lemma).</strong> Let \(K\) and \(L\) be fields and \(\psi_1, \ldots, \psi_n: L \to K\) distinct homomorphisms. If \(c_i \in K\) satisfy \[c_1 \psi_1(\alpha) + c_2 \psi_2(\alpha) + \cdots + c_n \psi_n(\alpha) = 0 \quad \forall \alpha \in L,\] then \(c_1 = c_2 = \cdots = c_n = 0\).
 </div>
 
 In other words: distinct field homomorphisms are linearly independent over any field. This is the key tool in proving that cyclic extensions are generated by elements whose powers lie in the base field.
 
-*Proof sketch.* Suppose the minimal number of non-zero <span>&#92;(c&#95;i&#92;)</span> giving a relation is <span>&#92;(m &#92;geq 2&#92;)</span>. Choose <span>&#92;(&#92;\beta &#92;in L&#92;)</span> with <span>&#92;(&#92;\psi&#95;1(&#92;\beta) &#92;neq &#92;\psi&#95;2(&#92;\beta)&#92;)</span>. By substituting <span>&#92;(&#92;\alpha &#92;beta&#92;)</span> and dividing by <span>&#92;(&#92;\psi&#95;1(&#92;\beta)&#92;)</span>, one obtains a shorter relation — a contradiction with minimality of <span>&#92;(m&#92;)</span>. ∎
+*Proof sketch.* Suppose the minimal number of non-zero \(c_i\) giving a relation is \(m \geq 2\). Choose \(\beta \in L\) with \(\psi_1(\beta) \neq \psi_2(\beta)\). By substituting \(\alpha \beta\) and dividing by \(\psi_1(\beta)\), one obtains a shorter relation — a contradiction with minimality of \(m\). ∎
 
 ### 10.2 Kummer Theory: Cyclic Extensions by Radicals
 
 <div class="theorem">
-<strong>Theorem 10.0.2 (Kummer Theory).</strong> Let <span>&#92;(F&#92;)</span> be a field, <span>&#92;(n &#92;in &#92;\mathbb{N}&#92;)</span>, and assume <span>&#92;(&#92;\text{ch}(F) = 0&#92;)</span> or <span>&#92;(\gcd(&#92;\text{ch}(F), n) = 1&#92;)</span>. Assume further that <span>&#92;(x^n - 1&#92;)</span> splits over <span>&#92;(F&#92;)</span> (so <span>&#92;(F&#92;)</span> contains all <span>&#92;(n&#92;)</span>th roots of unity).
-1. If <span>&#92;(E/F&#92;)</span> is a cyclic Galois extension of degree <span>&#92;(n&#92;)</span>, then <span>&#92;(E = F(&#92;\alpha)&#92;)</span> for some <span>&#92;(&#92;\alpha &#92;in E&#92;)</span> with <span>&#92;(&#92;\alpha^n &#92;in F&#92;)</span>.
-2. If <span>&#92;(E = F(&#92;\alpha)&#92;)</span> with <span>&#92;(&#92;\alpha^n &#92;in F&#92;)</span>, then <span>&#92;(E/F&#92;)</span> is a cyclic extension of degree <span>&#92;(d&#92;)</span> dividing <span>&#92;(n&#92;)</span>.
+<strong>Theorem 10.0.2 (Kummer Theory).</strong> Let \(F\) be a field, \(n \in \mathbb{N}\), and assume \(\text{ch}(F) = 0\) or \(\gcd(\text{ch}(F), n) = 1\). Assume further that \(x^n - 1\) splits over \(F\) (so \(F\) contains all \(n\)th roots of unity).
+1. If \(E/F\) is a cyclic Galois extension of degree \(n\), then \(E = F(\alpha)\) for some \(\alpha \in E\) with \(\alpha^n \in F\).
+2. If \(E = F(\alpha)\) with \(\alpha^n \in F\), then \(E/F\) is a cyclic extension of degree \(d\) dividing \(n\).
 </div>
 
-*Proof sketch of (1).* Let <span>&#92;(G = &#92;\text{Gal}&#95;F(E) = &#92;\langle &#92;\sigma &#92;rangle &#92;\cong &#92;\mathbb{Z}&#95;n&#92;)</span> and let <span>&#92;(&#92;\zeta&#95;n &#92;in F&#92;)</span> be a primitive <span>&#92;(n&#92;)</span>th root of unity. Apply Dedekind's Lemma with <span>&#92;(&#92;\psi&#95;i = &#92;\sigma^{i-1}&#92;)</span> and <span>&#92;(c&#95;i = &#92;\zeta&#95;n^{1-i}&#92;)</span>: since these are non-zero, there exists <span>&#92;(u &#92;in E&#92;)</span> with
-<span>&#92;[&#92;\alpha = u + &#92;\zeta&#95;n^{-1}&#92;\sigma(u) + &#92;\zeta&#95;n^{-2}&#92;\sigma^2(u) + &#92;\cdots + &#92;\zeta&#95;n^{-(n-1)}&#92;\sigma^{n-1}(u) &#92;neq 0.&#92;]</span>
-One checks <span>&#92;(&#92;\sigma(&#92;\alpha) = &#92;\zeta&#95;n &#92;\alpha&#92;)</span>, so <span>&#92;(&#92;\alpha, &#92;\alpha&#92;\zeta&#95;n, &#92;\ldots, &#92;\alpha&#92;\zeta&#95;n^{n-1}&#92;)</span> are the conjugates of <span>&#92;(&#92;\alpha&#92;)</span>. Their product gives <span>&#92;(&#92;\alpha^n &#92;in F&#92;)</span> and <span>&#92;(E = F(&#92;\alpha)&#92;)</span>. ∎
+*Proof sketch of (1).* Let \(G = \text{Gal}_F(E) = \langle \sigma \rangle \cong \mathbb{Z}_n\) and let \(\zeta_n \in F\) be a primitive \(n\)th root of unity. Apply Dedekind's Lemma with \(\psi_i = \sigma^{i-1}\) and \(c_i = \zeta_n^{1-i}\): since these are non-zero, there exists \(u \in E\) with
+\[\alpha = u + \zeta_n^{-1}\sigma(u) + \zeta_n^{-2}\sigma^2(u) + \cdots + \zeta_n^{-(n-1)}\sigma^{n-1}(u) \neq 0.\]
+One checks \(\sigma(\alpha) = \zeta_n \alpha\), so \(\alpha, \alpha\zeta_n, \ldots, \alpha\zeta_n^{n-1}\) are the conjugates of \(\alpha\). Their product gives \(\alpha^n \in F\) and \(E = F(\alpha)\). ∎
 
 ### 10.3 Cyclic Extensions in Characteristic p
 
 When the degree equals the characteristic, a different criterion applies.
 
 <div class="theorem">
-<strong>Theorem (Artin-Schreier).</strong> Let <span>&#92;(F&#92;)</span> be a field of characteristic <span>&#92;(p&#92;)</span>. Then:
-- If <span>&#92;(x^p - x - a &#92;in F[x]&#92;)</span> is irreducible, its splitting field <span>&#92;(E/F&#92;)</span> is a cyclic extension of degree <span>&#92;(p&#92;)</span>.
-- If <span>&#92;(E/F&#92;)</span> is a cyclic extension of degree <span>&#92;(p&#92;)</span>, then <span>&#92;(E&#92;)</span> is the splitting field of some irreducible <span>&#92;(x^p - x - a &#92;in F[x]&#92;)</span>.
+<strong>Theorem (Artin-Schreier).</strong> Let \(F\) be a field of characteristic \(p\). Then:
+- If \(x^p - x - a \in F[x]\) is irreducible, its splitting field \(E/F\) is a cyclic extension of degree \(p\).
+- If \(E/F\) is a cyclic extension of degree \(p\), then \(E\) is the splitting field of some irreducible \(x^p - x - a \in F[x]\).
 </div>
 
 ---
 
 ## Chapter 11: Solvability by Radicals and the Abel-Ruffini Theorem
 
-This final chapter brings together all the preceding theory to prove the Abel-Ruffini theorem: the general polynomial of degree <span>&#92;(&#92;geq 5&#92;)</span> is not solvable by radicals.
+This final chapter brings together all the preceding theory to prove the Abel-Ruffini theorem: the general polynomial of degree \(\geq 5\) is not solvable by radicals.
 
 ### 11.1 Radical Extensions
 
 <div class="definition">
-<strong>Definition.</strong> A finite extension <span>&#92;(E/F&#92;)</span> is <strong>radical</strong> if there exists a tower
-<span>&#92;[ F = F&#95;0 &#92;subseteq F&#95;1 &#92;subseteq F&#95;2 &#92;subseteq &#92;\cdots &#92;subseteq F&#95;m = E &#92;]</span>
-such that <span>&#92;(F&#95;i = F&#95;{i-1}(&#92;\alpha&#95;i)&#92;)</span> and <span>&#92;(&#92;\alpha&#95;i^{d&#95;i} &#92;in F&#95;{i-1}&#92;)</span> for some <span>&#92;(d&#95;i &#92;in &#92;\mathbb{N}&#92;)</span>, for each <span>&#92;(1 &#92;leq i &#92;leq m&#92;)</span>.
+<strong>Definition.</strong> A finite extension \(E/F\) is <strong>radical</strong> if there exists a tower
+\[ F = F_0 \subseteq F_1 \subseteq F_2 \subseteq \cdots \subseteq F_m = E \]
+such that \(F_i = F_{i-1}(\alpha_i)\) and \(\alpha_i^{d_i} \in F_{i-1}\) for some \(d_i \in \mathbb{N}\), for each \(1 \leq i \leq m\).
 
-A polynomial <span>&#92;(f(x) &#92;in F[x]&#92;)</span> is <strong>solvable by radicals</strong> if it splits over some radical extension of <span>&#92;(F&#92;)</span>.
+A polynomial \(f(x) \in F[x]\) is <strong>solvable by radicals</strong> if it splits over some radical extension of \(F\).
 </div>
 
 <div class="lemma">
-<strong>Lemma 11.1.1.</strong> If <span>&#92;(E/F&#92;)</span> is a finite separable radical extension, then its normal closure <span>&#92;(N/F&#92;)</span> is also radical. In particular, when studying solvability of separable polynomials by radicals, we may assume the radical extension is Galois.
+<strong>Lemma 11.1.1.</strong> If \(E/F\) is a finite separable radical extension, then its normal closure \(N/F\) is also radical. In particular, when studying solvability of separable polynomials by radicals, we may assume the radical extension is Galois.
 </div>
 
 ### 11.2 Solvability by Radicals ↔ Solvable Galois Group
 
 <div class="theorem">
-<strong>Theorem 11.2.2.</strong> Let <span>&#92;(F&#92;)</span> be a field of characteristic zero and <span>&#92;(f(x) &#92;in F[x]&#92;)</span> separable. Then <span>&#92;(f(x)&#92;)</span> is solvable by radicals if and only if its Galois group <span>&#92;(\text{Gal}(f) = &#92;\text{Gal}&#95;F(E)&#92;)</span> (where <span>&#92;(E&#92;)</span> is the splitting field) is solvable.
+<strong>Theorem 11.2.2.</strong> Let \(F\) be a field of characteristic zero and \(f(x) \in F[x]\) separable. Then \(f(x)\) is solvable by radicals if and only if its Galois group \(\text{Gal}(f) = \text{Gal}_F(E)\) (where \(E\) is the splitting field) is solvable.
 </div>
 
-*Proof sketch (<span>&#92;(&#92;\Rightarrow&#92;)</span>).* Suppose <span>&#92;(f(x)&#92;)</span> splits over a radical extension with tower <span>&#92;(F = F&#95;0 &#92;\subseteq &#92;\cdots &#92;\subseteq F&#95;m&#92;)</span>. Let <span>&#92;(n = &#92;\prod d&#95;i&#92;)</span>. Adjoin a primitive <span>&#92;(n&#92;)</span>th root of unity <span>&#92;(&#92;\zeta&#95;n&#92;)</span> by forming <span>&#92;(L = E(&#92;\zeta&#95;n)&#92;)</span>. Setting <span>&#92;(K = F(&#92;\zeta&#95;n)&#92;)</span> and <span>&#92;(K&#95;i = F&#95;i(&#92;\zeta&#95;n)&#92;)</span>, the Kummer theorem (Theorem 10.0.2) shows each <span>&#92;(K&#95;i/K&#95;{i-1}&#92;)</span> is cyclic. The Galois group <span>&#92;(G = &#92;\text{Gal}&#95;F(L)&#92;)</span> then has a tower with abelian quotients:
-<span>&#92;[ G &#92;trianglerighteq &#92;\text{Gal}&#95;{K&#95;0}(L) &#92;\trianglerighteq &#92;\text{Gal}&#95;{K&#95;1}(L) &#92;\trianglerighteq &#92;\cdots &#92;\trianglerighteq &#92;\text{Gal}&#95;{K&#95;m}(L) = &#92;\{1&#92;\}. &#92;]</span>
-Since each successive quotient is cyclic (by Theorem 9.2.3), <span>&#92;(G&#92;)</span> is solvable. Since <span>&#92;(\text{Gal}(f)&#92;)</span> is a quotient of the solvable group <span>&#92;(G&#92;)</span>, it is solvable.
+*Proof sketch (\(\Rightarrow\).* Suppose \(f(x)\) splits over a radical extension with tower \(F = F_0 \subseteq \cdots \subseteq F_m\). Let \(n = \prod d_i\). Adjoin a primitive \(n\)th root of unity \(\zeta_n\) by forming \(L = E(\zeta_n)\). Setting \(K = F(\zeta_n)\) and \(K_i = F_i(\zeta_n)\), the Kummer theorem (Theorem 10.0.2) shows each \(K_i/K_{i-1}\) is cyclic. The Galois group \(G = \text{Gal}_F(L)\) then has a tower with abelian quotients:
+\[ G \trianglerighteq \text{Gal}_{K_0}(L) \trianglerighteq \text{Gal}_{K_1}(L) \trianglerighteq \cdots \trianglerighteq \text{Gal}_{K_m}(L) = \\{1\\}. \]
+Since each successive quotient is cyclic (by Theorem 9.2.3), \(G\) is solvable. Since \(\text{Gal}(f)\) is a quotient of the solvable group \(G\), it is solvable.
 
-*Proof sketch (<span>&#92;(&#92;\Leftarrow&#92;)</span>).* If <span>&#92;(\text{Gal}(f)&#92;)</span> is solvable, adjoin <span>&#92;(&#92;\zeta&#95;n&#92;)</span> where <span>&#92;(n = |\text{Gal}(f)|&#92;)</span>. The solvability tower of <span>&#92;\text{Gal}(L/K)&#92;)</span> (which is a subgroup of <span>&#92;\text{Gal}(f)&#92;)</span>) gives, via Kummer theory, a corresponding radical tower: each cyclic step <span>&#92;(H&#95;{i-1}/H&#95;i &#92;\cong C&#95;{d&#95;i}&#92;)</span> contributes a field extension <span>&#92;(K&#95;i = K&#95;{i-1}(&#92;\alpha&#95;i)&#92;)</span> with <span>&#92;(&#92;\alpha&#95;i^{d&#95;i} &#92;in K&#95;{i-1}&#92;)</span>. ∎
+*Proof sketch (\(\Leftarrow\).* If \(\text{Gal}(f)\) is solvable, adjoin \(\zeta_n\) where \(n = |\text{Gal}(f)|\). The solvability tower of \text{Gal}(L/K)\) (which is a subgroup of \text{Gal}(f)\) gives, via Kummer theory, a corresponding radical tower: each cyclic step \(H_{i-1}/H_i \cong C_{d_i}\) contributes a field extension \(K_i = K_{i-1}(\alpha_i)\) with \(\alpha_i^{d_i} \in K_{i-1}\). ∎
 
 ### 11.3 The Abel-Ruffini Theorem
 
 <div class="proposition">
-<strong>Proposition 11.2.3.</strong> Let <span>&#92;(f(x) &#92;in &#92;\mathbb{Q}[x]&#92;)</span> be irreducible of prime degree <span>&#92;(p&#92;)</span>. If <span>&#92;(f(x)&#92;)</span> has exactly two non-real complex roots, then <span>&#92;(\text{Gal}(f) &#92;\cong S&#95;p&#92;)</span>.
+<strong>Proposition 11.2.3.</strong> Let \(f(x) \in \mathbb{Q}[x]\) be irreducible of prime degree \(p\). If \(f(x)\) has exactly two non-real complex roots, then \(\text{Gal}(f) \cong S_p\).
 </div>
 
-*Proof.* Since <span>&#92;(S&#95;p&#92;)</span> is generated by a 2-cycle and a <span>&#92;(p&#92;)</span>-cycle, it suffices to find both in <span>&#92;(\text{Gal}(f) &#92;\leq S&#95;p&#92;)</span>. Since <span>&#92;(f(x)&#92;)</span> is irreducible of degree <span>&#92;(p&#92;)</span>, we have <span>&#92;(p &#92;\mid |\text{Gal}(f)|&#92;)</span>, so by Cauchy's theorem there exists a <span>&#92;(p&#92;)</span>-cycle. The complex conjugation map <span>&#92;(a + bi &#92;\mapsto a - bi&#92;)</span> interchanges the two non-real roots and fixes all real roots — this is a 2-cycle in <span>&#92;(\text{Gal}(f)&#92;)</span>. ∎
+*Proof.* Since \(S_p\) is generated by a 2-cycle and a \(p\)-cycle, it suffices to find both in \(\text{Gal}(f) \leq S_p\). Since \(f(x)\) is irreducible of degree \(p\), we have \(p \mid |\text{Gal}(f)|\), so by Cauchy's theorem there exists a \(p\)-cycle. The complex conjugation map \(a + bi \mapsto a - bi\) interchanges the two non-real roots and fixes all real roots — this is a 2-cycle in \(\text{Gal}(f)\). ∎
 
 <div class="example">
-<strong>Example.</strong> Let <span>&#92;(f(x) = x^5 + 2x^3 - 24x - 2 &#92;in &#92;\mathbb{Q}[x]&#92;)</span>. By Eisenstein with <span>&#92;(p = 2&#92;)</span>, <span>&#92;(f&#92;)</span> is irreducible. Evaluating: <span>&#92;(f(-1) = 19 > 0&#92;)</span> and <span>&#92;(f(1) = -23 < 0&#92;)</span>, and <span>&#92;(f(x) &#92;to +&#92;\infty&#92;)</span> as <span>&#92;(x &#92;to +&#92;\infty&#92;)</span> and <span>&#92;(-&#92;\infty&#92;)</span> as <span>&#92;(x &#92;to -&#92;\infty&#92;)</span>, so <span>&#92;(f&#92;)</span> has at least 3 real roots. Writing <span>&#92;(&#92;\sum &#92;\alpha&#95;i = 0&#92;)</span> (no <span>&#92;(x^4&#92;)</span> term) and <span>&#92;(&#92;\sum_{i < j} &#92;\alpha_i&#92;\alpha_j = 2&#92;)</span>, we compute <span>&#92;(&#92;sum &#92;\alpha_i^2 = (&#92;\sum &#92;\alpha_i)^2 - 2&#92;\sum_{i<j}&#92;\alpha_i&#92;\alpha_j = -4 < 0&#92;)</span>, which forces the existence of non-real roots. So <span>&#92;(f&#92;)</span> has exactly 3 real and 2 non-real roots. By Proposition 11.2.3, <span>&#92;(\text{Gal}(f) &#92;\cong S&#95;5&#92;)</span>. Since <span>&#92;(S&#95;5&#92;)</span> is not solvable, <span>&#92;(f(x)&#92;)</span> is not solvable by radicals.
+<strong>Example.</strong> Let \(f(x) = x^5 + 2x^3 - 24x - 2 \in \mathbb{Q}[x]\). By Eisenstein with \(p = 2\), \(f\) is irreducible. Evaluating: \(f(-1) = 19 > 0\) and \(f(1) = -23 < 0\), and \(f(x) \to +\infty\) as \(x \to +\infty\) and \(-\infty\) as \(x \to -\infty\), so \(f\) has at least 3 real roots. Writing \(\sum \alpha_i = 0\) (no \(x^4\) term) and \(\sum_{i < j} \alpha_i\alpha_j = 2\), we compute \(\sum \alpha_i^2 = (\sum \alpha_i)^2 - 2\sum_{i<j}\alpha_i\alpha_j = -4 < 0\), which forces the existence of non-real roots. So \(f\) has exactly 3 real and 2 non-real roots. By Proposition 11.2.3, \(\text{Gal}(f) \cong S_5\). Since \(S_5\) is not solvable, \(f(x)\) is not solvable by radicals.
 </div>
 
 <div class="theorem">
-<strong>Theorem (Abel-Ruffini).</strong> A general polynomial <span>&#92;(f(x)&#92;)</span> of degree <span>&#92;(n &#92;geq 5&#92;)</span> is not solvable by radicals.
+<strong>Theorem (Abel-Ruffini).</strong> A general polynomial \(f(x)\) of degree \(n \geq 5\) is not solvable by radicals.
 </div>
 
-*Proof.* For each <span>&#92;(n &#92;geq 5&#92;)</span>, one can construct an irreducible polynomial of degree <span>&#92;(n&#92;)</span> over <span>&#92;(&#92;\mathbb{Q}&#92;)</span> with exactly two non-real roots. (For prime degree, use Proposition 11.2.3 to get Galois group <span>&#92;(S&#95;n&#92;)</span>.) Since <span>&#92;(S&#95;n&#92;)</span> is not solvable for <span>&#92;(n &#92;geq 5&#92;)</span> (it contains <span>&#92;(A&#95;5&#92;)</span>, which is simple and non-abelian), Theorem 11.2.2 implies the polynomial is not solvable by radicals. ∎
+*Proof.* For each \(n \geq 5\), one can construct an irreducible polynomial of degree \(n\) over \(\mathbb{Q}\) with exactly two non-real roots. (For prime degree, use Proposition 11.2.3 to get Galois group \(S_n\).) Since \(S_n\) is not solvable for \(n \geq 5\) (it contains \(A_5\), which is simple and non-abelian), Theorem 11.2.2 implies the polynomial is not solvable by radicals. ∎
 
 ---
 
@@ -587,12 +587,12 @@ Since each successive quotient is cyclic (by Theorem 9.2.3), <span>&#92;(G&#92;)
 
 Galois theory establishes a dictionary between two worlds:
 
-| Field extensions of <span>&#92;(E/F&#92;)</span> | Subgroups of <span>&#92;(\text{Gal}&#95;F(E)&#92;)</span> |
+| Field extensions of \(E/F\) | Subgroups of \(\text{Gal}_F(E)\) |
 |---|---|
-| Intermediate field <span>&#92;(L&#92;)</span> | Subgroup <span>&#92;(L^&#42; = &#92;\text{Gal}&#95;L(E)&#92;)</span> |
+| Intermediate field \(L\) | Subgroup \(L^* = \text{Gal}_L(E)\) |
 | Larger field = more elements | Smaller group = fewer symmetries |
-| <span>&#92;([L:F] = [G : L^&#42;]&#92;)</span> | Index equals degree |
-| <span>&#92;(L/F&#92;)</span> Galois | <span>&#92;(L^&#42; &#92;trianglelefteq G&#92;)</span> |
-| <span>&#92;(\text{Gal}&#95;F(L) &#92;\cong G/L^&#42;&#92;)</span> | Quotient group = Galois group of subextension |
+| \([L:F] = [G : L^*]\) | Index equals degree |
+| \(L/F\) Galois | \(L^* \trianglelefteq G\) |
+| \(\text{Gal}_F(L) \cong G/L^*\) | Quotient group = Galois group of subextension |
 
-The culminating application: a polynomial is solvable by radicals if and only if its Galois group is a solvable group. Since <span>&#92;(S&#95;n&#92;)</span> is not solvable for <span>&#92;(n &#92;geq 5&#92;)</span> — because it contains the non-solvable simple group <span>&#92;(A&#95;5&#92;)</span> — there exist quintic polynomials whose Galois group is all of <span>&#92;(S&#95;5&#92;)</span>, and these cannot be solved by any combination of arithmetic operations and root extractions. This resolves a question that occupied mathematicians for over two centuries.
+The culminating application: a polynomial is solvable by radicals if and only if its Galois group is a solvable group. Since \(S_n\) is not solvable for \(n \geq 5\) — because it contains the non-solvable simple group \(A_5\) — there exist quintic polynomials whose Galois group is all of \(S_5\), and these cannot be solved by any combination of arithmetic operations and root extractions. This resolves a question that occupied mathematicians for over two centuries.
