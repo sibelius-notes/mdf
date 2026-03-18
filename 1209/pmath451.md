@@ -605,7 +605,7 @@ Every finite measure space is sigma-finite (take <span>&#92;(U_n = X&#92;)</span
 
 **Notation 20.4.** If <span>&#92;(Z \in {\mathcal M}&#92;)</span), the **restriction** of <span>&#92;((X, {\mathcal M}, \mu)&#92;)</span) to <span>&#92;(Z&#92;)</span) is the measure space <span>&#92;((Z, {\mathcal M}{\downarrow}_Z, \mu{\downarrow}_Z)&#92;)</span) where <span>&#92;({\mathcal M}{\downarrow}_Z = \{A \in {\mathcal M} : A \subseteq Z\}&#92;)</span).
 
-**Proposition 20.5. (Coherent family mechanism.)** Suppose <span>&#92;((Z_n)&#92;)</span) exhausts <span>&#92;(Z&#92;)</span) with increasing chain, and we have finite measures <span>&#92;(\rho_n : {\mathcal P}_n \to [0,\infty)&#92;)</span) satisfying the **coherence condition** <span>&#92;(\rho_{n+1}|_{{\mathcal P}_n} = \rho_n&#92;)</span). Then there is a unique sigma-finite measure <span>&#92;(\rho : {\mathcal P} \to [0,\infty]&#92;)</span) extending all <span>&#92;(\rho_n&#92;)</span), given by <span>&#92;(\rho(E) = \lim_{n\to\infty} \rho_n(E \cap Z_n)&#92;)</span>.
+{% raw %}**Proposition 20.5. (Coherent family mechanism.)** Suppose <span>&#92;((Z_n)&#92;)</span) exhausts <span>&#92;(Z&#92;)</span) with increasing chain, and we have finite measures <span>&#92;(\rho_n : {\mathcal P}_n \to [0,\infty)&#92;)</span) satisfying the **coherence condition** <span>&#92;(\rho_{n+1}|_{{\mathcal P}_n} = \rho_n&#92;)</span). Then there is a unique sigma-finite measure <span>&#92;(\rho : {\mathcal P} \to [0,\infty]&#92;)</span) extending all <span>&#92;(\rho_n&#92;)</span), given by <span>&#92;(\rho(E) = \lim_{n\to\infty} \rho_n(E \cap Z_n)&#92;)</span>.{% endraw %}
 
 #### The Product Measure for Sigma-Finite Spaces
 
