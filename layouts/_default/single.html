@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="course-page">
+  <header class="course-header">
+    <h1 class="course-title caveat">{{ .Title }}</h1>
+    {{ with .Params.prof }}<p class="course-prof caveat">{{ . }}</p>{{ end }}
+    {{ $words := .WordCount }}
+    {{ $minutes := div $words 180 }}
+    <p class="reading-time">Estimated reading time: {{ if ge $minutes 1 }}{{ $minutes }} minutes{{ else }}less than 1 minute{{ end }}</p>
+  </header>
+
+  <details open class="toc-details">
+    <summary>Table of contents</summary>
+    {{ .TableOfContents }}
+  </details>
+
+  <hr>
+
+  <div class="course-content">
+    {{ .Content }}
+  </div>
+
+  <a href="#" class="back-to-top">Back to top</a>
+</article>
+{{ end }}

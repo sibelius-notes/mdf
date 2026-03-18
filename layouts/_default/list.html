@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ if .IsHome }}
+    {{ $courseCount := 0 }}
+    {{ $wordCount := 0 }}
+    {{ range .Site.Sections }}
+      {{ range .Pages }}
+        {{ $courseCount = add $courseCount 1 }}
+        {{ $wordCount = add $wordCount .WordCount }}
+      {{ end }}
+    {{ end }}
+    <h2>Statistics</h2>
+    <ul>
+      <li>Number of course posts: {{ $courseCount }}</li>
+      <li>Word count: {{ $wordCount }}</li>
+    </ul>
+  {{ else }}
+    {{/* Term listing page */}}
+    <div class="course-grid">
+    {{ range .Pages.ByTitle }}
+      <a href="{{ .RelPermalink }}" class="course-card">
+        <span class="course-code">{{ .Title }}</span>
+        {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+        <span class="course-words">{{ .WordCount | lang.FormatNumber 0 }} words</span>
+      </a>
+    {{ end }}
+    </div>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,150 @@
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="site-title">MD Lecture Notes</a>
+    <button id="theme-toggle" aria-label="Toggle dark/light theme">
+      <span class="icon-sun">☀</span><span class="icon-moon">☽</span>
+    </button>
+  </div>
+  <ul class="nav-list">
+    {{ $currentSection := "" }}
+    {{ with .FirstSection }}{{ with .File }}{{ $currentSection = .ContentBaseName }}{{ end }}{{ end }}
+    {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
+    <li>
+      <a href="{{ .RelPermalink }}"{{ if and .File (eq .File.ContentBaseName $currentSection) }} class="active"{{ end }}>
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  <div class="sidebar-search">
+    <div class="search-wrapper">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search notes...">
+    </div>
+  </div>
+</nav>
+<div id="search-overlay" class="search-overlay hidden">
+  <div class="search-overlay-header">
+    <span>Search results</span>
+    <button id="search-close" aria-label="Close search">✕</button>
+  </div>
+  <div id="search-results"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var overlay = document.getElementById('search-overlay');
+  var resultsEl = document.getElementById('search-results');
+  var closeBtn = document.getElementById('search-close');
+  var fuse = null;
+
+  fetch('/index.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      fuse = new Fuse(data, {
+        keys: [
+          { name: 'title', weight: 3 },
+          { name: 'prof', weight: 1 },
+          { name: 'content', weight: 1 }
+        ],
+        threshold: 0.3,
+        ignoreLocation: true,
+        minMatchCharLength: 2
+      });
+    });
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(doSearch, 200);
+  });
+
+  input.addEventListener('focus', function() {
+    if (input.value.trim().length >= 2) overlay.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', function() {
+    overlay.classList.add('hidden');
+    input.value = '';
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      overlay.classList.add('hidden');
+      input.blur();
+    }
+  });
+
+  function doSearch() {
+    var query = input.value.trim();
+    resultsEl.textContent = '';
+    if (!fuse || query.length < 2) {
+      overlay.classList.add('hidden');
+      return;
+    }
+    overlay.classList.remove('hidden');
+
+    var results = fuse.search(query, { limit: 20 });
+    if (results.length === 0) {
+      var noRes = document.createElement('p');
+      noRes.className = 'no-results';
+      noRes.textContent = 'No results found.';
+      resultsEl.appendChild(noRes);
+      return;
+    }
+
+    results.forEach(function(r) {
+      var item = r.item;
+      var link = document.createElement('a');
+      link.href = item.url;
+      link.className = 'search-result';
+
+      var titleSpan = document.createElement('span');
+      titleSpan.className = 'sr-title';
+      titleSpan.textContent = item.title;
+      link.appendChild(titleSpan);
+
+      var metaSpan = document.createElement('span');
+      metaSpan.className = 'sr-meta';
+      metaSpan.textContent = item.term + (item.prof ? ' \u00b7 ' + item.prof : '');
+      link.appendChild(metaSpan);
+
+      var snippet = getSnippet(item.content, query);
+      if (snippet) {
+        var snippetSpan = document.createElement('span');
+        snippetSpan.className = 'sr-snippet';
+        snippetSpan.appendChild(highlightText(snippet, query));
+        link.appendChild(snippetSpan);
+      }
+
+      resultsEl.appendChild(link);
+    });
+  }
+
+  function highlightText(text, query) {
+    var frag = document.createDocumentFragment();
+    var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+    var parts = text.split(re);
+    parts.forEach(function(part) {
+      if (part.toLowerCase() === query.toLowerCase()) {
+        var mark = document.createElement('mark');
+        mark.textContent = part;
+        frag.appendChild(mark);
+      } else {
+        frag.appendChild(document.createTextNode(part));
+      }
+    });
+    return frag;
+  }
+
+  function getSnippet(text, query) {
+    if (!text) return '';
+    var idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return '';
+    var start = Math.max(0, idx - 50);
+    var end = Math.min(text.length, idx + query.length + 100);
+    return (start > 0 ? '...' : '') + text.substring(start, end) + (end < text.length ? '...' : '');
+  }
+})();
+</script>

@@ -1,0 +1,22 @@
+baseURL = "https://mdf.sibeliusp.com/"
+languageCode = "en-us"
+title = "MD Lecture Notes"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 2
+    ordered = false
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[params]
+  author = "Sibelius Peng"
+  description = "Markdown lecture notes from the University of Waterloo"

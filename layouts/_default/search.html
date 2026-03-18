@@ -1,0 +1,89 @@
+{{ define "main" }}
+<article class="search-page">
+  <h1>Search</h1>
+  <input type="text" id="search-input" placeholder="Search all course notes..." autofocus>
+  <div id="search-results"></div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var resultsEl = document.getElementById('search-results');
+  var fuse = null;
+
+  fetch('/index.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      fuse = new Fuse(data, {
+        keys: [
+          { name: 'title', weight: 3 },
+          { name: 'prof', weight: 1 },
+          { name: 'content', weight: 1 }
+        ],
+        threshold: 0.3,
+        ignoreLocation: true,
+        includeMatches: true,
+        minMatchCharLength: 2
+      });
+    });
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(doSearch, 200);
+  });
+
+  function doSearch() {
+    var query = input.value.trim();
+    resultsEl.textContent = '';
+    if (!fuse || query.length < 2) return;
+
+    var results = fuse.search(query, { limit: 30 });
+    if (results.length === 0) {
+      var noRes = document.createElement('p');
+      noRes.className = 'no-results';
+      noRes.textContent = 'No results found.';
+      resultsEl.appendChild(noRes);
+      return;
+    }
+
+    results.forEach(function(r) {
+      var item = r.item;
+      var link = document.createElement('a');
+      link.href = item.url;
+      link.className = 'search-result';
+
+      var titleSpan = document.createElement('span');
+      titleSpan.className = 'sr-title';
+      titleSpan.textContent = item.title;
+      link.appendChild(titleSpan);
+
+      var metaSpan = document.createElement('span');
+      metaSpan.className = 'sr-meta';
+      metaSpan.textContent = item.term + (item.prof ? ' · ' + item.prof : '');
+      link.appendChild(metaSpan);
+
+      var snippet = getSnippet(item.content, query);
+      if (snippet) {
+        var snippetSpan = document.createElement('span');
+        snippetSpan.className = 'sr-snippet';
+        snippetSpan.textContent = snippet;
+        link.appendChild(snippetSpan);
+      }
+
+      resultsEl.appendChild(link);
+    });
+  }
+
+  function getSnippet(text, query) {
+    if (!text) return '';
+    var idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return '';
+    var start = Math.max(0, idx - 60);
+    var end = Math.min(text.length, idx + query.length + 120);
+    return (start > 0 ? '...' : '') + text.substring(start, end) + (end < text.length ? '...' : '');
+  }
+})();
+</script>
+{{ end }}
