@@ -184,9 +184,9 @@ We have constructed \(\omega\) and observed that it satisfies the induction prin
 *(d) either \(n = 0\) or \(0 \in n\);*
 *(e) if \(y \in n\) then either \(S(y) \in n\) or \(S(y) = n\).*
 
-*Proof of (a).* Let \(J = \{n \in \omega : n \subseteq \omega\}\) (those natural numbers that are subsets of \(\omega\). We check \(J\) is inductive. Base case: \(0 = \emptyset \subseteq \omega\) since the empty set is a subset of every set, so \(0 \in J\). Inductive step: suppose \(n \in J\), so \(n \subseteq \omega\) and \(n \in \omega\). Then \(S(n) = n \cup \\{n\}\): its elements are either elements of \(n\) (which are in \(\omega\) since \(n \subseteq \omega\) or equal to \(n\) itself (which is in \(\omega\). So \(S(n) \subseteq \omega\), i.e., \(S(n) \in J\). By induction, \(J = \omega\). \(\square\)
+*Proof of (a).* Let \(J = \{n \in \omega : n \subseteq \omega\}\) (those natural numbers that are subsets of \(\omega\). We check \(J\) is inductive. Base case: \(0 = \emptyset \subseteq \omega\) since the empty set is a subset of every set, so \(0 \in J\). Inductive step: suppose \(n \in J\), so \(n \subseteq \omega\) and \(n \in \omega\). Then \(S(n) = n \cup \{n\}\): its elements are either elements of \(n\) (which are in \(\omega\) since \(n \subseteq \omega\) or equal to \(n\) itself (which is in \(\omega\). So \(S(n) \subseteq \omega\), i.e., \(S(n) \in J\). By induction, \(J = \omega\). \(\square\)
 
-*Proof of (b).* Let \(J = \{n \in \omega : \forall x \in n,\, x \subseteq n\}\). Base case: \(0\) satisfies the condition vacuously. Inductive step: suppose \(n \in J\) and let \(x \in S(n) = n \cup \\{n\}\). Either \(x = n\), in which case \(x = n \subseteq S(n)\) (since \(n \subseteq S(n)\) by construction); or \(x \in n\), in which case \(x \subseteq n\) (since \(n \in J\) and \(n \subseteq S(n)\), so \(x \subseteq S(n)\). Thus \(S(n) \in J\), and by induction \(J = \omega\). \(\square\)
+*Proof of (b).* Let \(J = \{n \in \omega : \forall x \in n,\, x \subseteq n\}\). Base case: \(0\) satisfies the condition vacuously. Inductive step: suppose \(n \in J\) and let \(x \in S(n) = n \cup \{n\}\). Either \(x = n\), in which case \(x = n \subseteq S(n)\) (since \(n \subseteq S(n)\) by construction); or \(x \in n\), in which case \(x \subseteq n\) (since \(n \in J\) and \(n \subseteq S(n)\), so \(x \subseteq S(n)\). Thus \(S(n) \in J\), and by induction \(J = \omega\). \(\square\)
 
 Parts (c), (d), and (e) are all proved by similar induction arguments, which the professor sketches in lecture and which have full details in the written notes.
 
@@ -222,7 +222,7 @@ Linear ordering alone is not enough — what we really want, and what enables tr
 \[J = \{n \in \omega : S(n) \cap X = \emptyset\}\]
 by bounded separation. We show \(J\) is inductive, hence \(J = \omega\), and then derive that \(X = \emptyset\).
 
-*Base case*: \(0 \in J\). If not, then \(S(0) \cap X \neq \emptyset\). But \(S(0) = 1 = \\{0\}\), so \(0 \in X\). By Lemma 1.12(d), every natural number either is \(0\) or contains \(0\), so \(0\) is membership-least in all of \(\omega\), and hence membership-least in \(X\) — contradicting our assumption.
+*Base case*: \(0 \in J\). If not, then \(S(0) \cap X \neq \emptyset\). But \(S(0) = 1 = \{0\}\), so \(0 \in X\). By Lemma 1.12(d), every natural number either is \(0\) or contains \(0\), so \(0\) is membership-least in all of \(\omega\), and hence membership-least in \(X\) — contradicting our assumption.
 
 *Inductive step*: suppose \(n \in J\), i.e., \(S(n) \cap X = \emptyset\). We want \(S(S(n)) \cap X = \emptyset\). An element of \(S(S(n))\) is either in \(S(n)\) or equals \(S(n)\). By hypothesis no element of \(S(n)\) is in \(X\). If \(S(n) \in X\), then since every element of \(S(n)\) is outside \(X\), the element \(S(n)\) would be membership-least in \(X\) — a contradiction. So \(S(n) \notin X\) and \(S(S(n)) \cap X = \emptyset\), giving \(S(n) \in J\).
 
@@ -283,7 +283,7 @@ The following propositions collect the essential structural facts. Their proofs 
 **Proposition 1.17.**
 *(a) Every member of an ordinal is an ordinal.*
 *(b) No ordinal is a member of itself.*
-*(c) If \(\alpha \in \mathrm{Ord}\), then its **successor** \(S(\alpha) := \alpha \cup \\{\alpha\}\) is an ordinal.*
+*(c) If \(\alpha \in \mathrm{Ord}\), then its **successor** \(S(\alpha) := \alpha \cup \{\alpha\}\) is an ordinal.*
 *(d) The intersection of two ordinals is an ordinal.*
 
 **Proposition 1.18.**

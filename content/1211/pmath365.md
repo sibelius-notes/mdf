@@ -284,7 +284,7 @@ This elegant formula decomposes the geodesic curvature into the rate of change o
 
 ### Green's Theorem
 
-**Theorem 3.14** (Green's Theorem): Let \(\Delta = \\{(x,y) : x \geq 0, y \geq 0, x+y \leq 1\}\) be the standard triangle, and let \(\phi : U \to V\) be a smooth regular positive change of coordinates containing \(\Delta \subseteq V\) with inverse \(\psi = \phi^{-1}\). Let \(R = \psi(\Delta)\) and let \(\alpha_1, \alpha_2, \alpha_3\) be its edges. For any smooth \(F = (P,Q) : U \to \mathbb{R}^2\),
+**Theorem 3.14** (Green's Theorem): Let \(\Delta = \{(x,y) : x \geq 0, y \geq 0, x+y \leq 1\}\) be the standard triangle, and let \(\phi : U \to V\) be a smooth regular positive change of coordinates containing \(\Delta \subseteq V\) with inverse \(\psi = \phi^{-1}\). Let \(R = \psi(\Delta)\) and let \(\alpha_1, \alpha_2, \alpha_3\) be its edges. For any smooth \(F = (P,Q) : U \to \mathbb{R}^2\),
 \[
 \iint_R \left(\frac{\partial Q}{\partial u} - \frac{\partial P}{\partial v}\right) du\\, dv = \sum_{j=1}^3 \int_0^1 F(\alpha_j(t)) \cdot \alpha_j'(t)\\, dt.
 \]
@@ -311,7 +311,7 @@ These are invariant under changes of parametrization (with appropriate sign adju
 \iint_R K\\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
 
-**Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \\{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
+**Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
 \[
 \iint_\Delta K_\sigma\\, dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\, dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
@@ -322,7 +322,7 @@ This formula holds without assuming orthogonal coordinates, because every point 
 
 **Definition 3.22**: A **smooth regular global surface** (or smooth regular 2-dimensional submanifold) in \(\mathbb{R}^n\) is a set \(S \subseteq \mathbb{R}^n\) covered by smooth regular homeomorphisms \(\sigma : U_\sigma \to S \cap W_\sigma\) (the **coordinate charts**) such that whenever two charts overlap, the transition map is smooth and regular. The collection of charts is an **atlas** for \(S\).
 
-**Definition 3.23**: A **smooth regular triangulated surface** in \(\mathbb{R}^3\) is a global surface \(S\) together with a finite atlas \(\\{\sigma_1, \ldots, \sigma_n\}\) where each \(\sigma_i : U_i \to S \cap W_i\) has \(\Delta \subseteq U_i\), the triangles \(\sigma_i(\Delta)\) cover \(S\) with disjoint interiors, and edges are joined in matched pairs. The **Euler characteristic** is
+**Definition 3.23**: A **smooth regular triangulated surface** in \(\mathbb{R}^3\) is a global surface \(S\) together with a finite atlas \(\{\sigma_1, \ldots, \sigma_n\}\) where each \(\sigma_i : U_i \to S \cap W_i\) has \(\Delta \subseteq U_i\), the triangles \(\sigma_i(\Delta)\) cover \(S\) with disjoint interiors, and edges are joined in matched pairs. The **Euler characteristic** is
 \[
 \chi = V - E + F
 \]
@@ -361,7 +361,7 @@ Graphs of smooth functions, open sets in \(\mathbb{R}^m\), and the unit sphere \
 
 **Theorem 4.7** (Implicit Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^\ell\) be \(C^1\) with \(Df(p)\) of rank \(\ell\). Setting \(c = f(p)\), the level set \(f^{-1}(c)\) is locally the graph of a \(C^1\) function near \(p\).
 
-*Proof.* Reorder variables so that the last \(\ell\) columns of \(Df(p)\) form an invertible \(\ell \times \ell\) matrix. Write \(f(x,y)\) with \(x \in \mathbb{R}^{n-\ell}\) and \(y \in \mathbb{R}^\ell\) with \(\partial z/\partial y\) invertible. Define \(F(x,y) = (x, f(x,y))\); then \(DF(p)\) is invertible, so the IFT applies. The inverse \(G(w,z) = (w, g(w,z))\) satisfies \(f^{-1}(c) = \\{(x, g(x,c))\}\) locally. \(\square\)
+*Proof.* Reorder variables so that the last \(\ell\) columns of \(Df(p)\) form an invertible \(\ell \times \ell\) matrix. Write \(f(x,y)\) with \(x \in \mathbb{R}^{n-\ell}\) and \(y \in \mathbb{R}^\ell\) with \(\partial z/\partial y\) invertible. Define \(F(x,y) = (x, f(x,y))\); then \(DF(p)\) is invertible, so the IFT applies. The inverse \(G(w,z) = (w, g(w,z))\) satisfies \(f^{-1}(c) = \{(x, g(x,c))\}\) locally. \(\square\)
 
 **Corollary 4.8** (Implicit Description of Submanifolds): If \(f : U \to \mathbb{R}^\ell\) is smooth with \(\operatorname{rank} Df(x) = \ell\) for all \(x \in U\), then \(f^{-1}(c)\) is a smooth \((n-\ell)\)-dimensional submanifold for every \(c\) in the range. For example, \(S^{n-1} = f^{-1}(1)\) for \(f(x) = |x|^2\), which has \(Df(x) = 2x^T\) of rank 1 everywhere on \(S^{n-1}\).
 
@@ -470,7 +470,7 @@ The following classical theorems are all special cases of a single unified theor
 
 ### Simplices, Chains, and the Boundary Operator
 
-The standard \(k\)-**simplex** is \(\Delta^k = \\{(t_1, \ldots, t_k) : t_i \geq 0,\ \sum t_i \leq 1\}\). A smooth \(k\)-**surface** on \(\Delta^k\) is a smooth map \(\sigma : \Delta^k \to U \subseteq \mathbb{R}^m\) whose restriction to the interior is regular. A \(k\)-**chain** is a formal finite \(\mathbb{Z}\)-linear combination of \(k\)-surfaces. The **boundary** \(\partial\sigma\) is the alternating sum of the \((k-1)\)-dimensional faces of \(\sigma\):
+The standard \(k\)-**simplex** is \(\Delta^k = \{(t_1, \ldots, t_k) : t_i \geq 0,\ \sum t_i \leq 1\}\). A smooth \(k\)-**surface** on \(\Delta^k\) is a smooth map \(\sigma : \Delta^k \to U \subseteq \mathbb{R}^m\) whose restriction to the interior is regular. A \(k\)-**chain** is a formal finite \(\mathbb{Z}\)-linear combination of \(k\)-surfaces. The **boundary** \(\partial\sigma\) is the alternating sum of the \((k-1)\)-dimensional faces of \(\sigma\):
 \[
 \partial \sigma = \sum_{j=0}^k (-1)^j \sigma \circ F_j
 \]
@@ -510,7 +510,7 @@ This unifies all the classical theorems: they are all instances of "the integral
 
 ### Dual Spaces and Multilinear Maps
 
-For a finite-dimensional vector space \(U\) over a field \(F\), the **dual space** is \(U^* = \operatorname{Hom}(U, F)\), the space of linear functions \(f : U \to F\). If \(\\{e_i\}\) is a basis for \(U\), the **dual basis** \(\\{e_i^*\}\) is defined by \(e_i^*(e_j) = \delta_{ij}\). We have \(\dim U^* = \dim U\) and the natural isomorphism \(U \cong (U^*)^*\).
+For a finite-dimensional vector space \(U\) over a field \(F\), the **dual space** is \(U^* = \operatorname{Hom}(U, F)\), the space of linear functions \(f : U \to F\). If \(\{e_i\}\) is a basis for \(U\), the **dual basis** \(\{e_i^*\}\) is defined by \(e_i^*(e_j) = \delta_{ij}\). We have \(\dim U^* = \dim U\) and the natural isomorphism \(U \cong (U^*)^*\).
 
 More generally, a **multilinear map** (or **tensor**) of type \((k)\) on \(U\) is a map \(T : U^k \to F\) that is linear in each argument separately. The space of all such tensors is written \(T^k(U) = (U^*)^{\otimes k}\).
 
@@ -520,10 +520,10 @@ More generally, a **multilinear map** (or **tensor**) of type \((k)\) on \(U\) i
 
 The space of **symmetric \(k\)-forms** \(S^k U\) consists of tensors symmetric under permutation of arguments, and the space of **alternating \(k\)-forms** (or \(k\)-covectors) is \(\Lambda^k U\), consisting of tensors that change sign under any transposition of two arguments. The exterior (wedge) product makes \(\Lambda U = \bigoplus_{k=0}^\infty \Lambda^k U\) into the **exterior algebra**.
 
-When \(\\{e_1, \ldots, e_n\}\) is a basis for \(U\):
-- \(T^k U\) has basis \(\\{e_{i_1}^* \otimes \cdots \otimes e_{i_k}^*\}\), dimension \(n^k\).
+When \(\{e_1, \ldots, e_n\}\) is a basis for \(U\):
+- \(T^k U\) has basis \(\{e_{i_1}^* \otimes \cdots \otimes e_{i_k}^*\}\), dimension \(n^k\).
 - \(S^k U\) has dimension \(\binom{n+k-1}{k}\).
-- \(\Lambda^k U\) has basis \(\\{e_{i_1}^* \wedge \cdots \wedge e_{i_k}^* : i_1 < i_2 < \cdots < i_k\}\), dimension \(\binom{n}{k}\).
+- \(\Lambda^k U\) has basis \(\{e_{i_1}^* \wedge \cdots \wedge e_{i_k}^* : i_1 < i_2 < \cdots < i_k\}\), dimension \(\binom{n}{k}\).
 
 ### The Cotangent Space and Coordinate Bases
 
@@ -609,13 +609,13 @@ The proof proceeds via eight claims:
 
 **Definition A2.1**: Given vectors \(u_1, \ldots, u_k \in \mathbb{R}^n\), the **parallelotope** is
 \[
-P(u_1, \ldots, u_k) = \left\\{ \sum_{i=1}^k t_i u_i : 0 \leq t_i \leq 1 \right\}.
+P(u_1, \ldots, u_k) = \left\{ \sum_{i=1}^k t_i u_i : 0 \leq t_i \leq 1 \right\}.
 \]
 Its volume is defined recursively by \(V(u_1) = |u_1|\) and
 \[
 V(u_1, \ldots, u_k) = V(u_1, \ldots, u_{k-1}) \cdot |\operatorname{Proj}_{U^\perp} u_k|
 \]
-where \(U = \operatorname{Span}\\{u_1, \ldots, u_{k-1}\}\).
+where \(U = \operatorname{Span}\{u_1, \ldots, u_{k-1}\}\).
 
 **Theorem A2.2**: For \(A = (u_1, \ldots, u_k) \in M_{n \times k}(\mathbb{R})\),
 \[

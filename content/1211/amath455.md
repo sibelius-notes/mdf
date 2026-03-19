@@ -2520,7 +2520,7 @@ Loop shaping is an iterative procedure. One typically begins with the Bode plot 
 
 A profound constraint on what feedback can achieve is captured by Bode's integral formula.
 
-**Theorem 20.2 (Bode's integral formula).** Assume that the loop transfer function \(L(s)\) of a feedback system goes to zero faster than \(1/s\) as \(s \to \infty\). Let \(S\) be the sensitivity function and let \\{p_k\}\) be the right-half-plane poles of \(L\). Then
+**Theorem 20.2 (Bode's integral formula).** Assume that the loop transfer function \(L(s)\) of a feedback system goes to zero faster than \(1/s\) as \(s \to \infty\). Let \(S\) be the sensitivity function and let \\(\{p_k\}\)\) be the right-half-plane poles of \(L\). Then
 
 \[ \int_0^\infty \log|S(j\omega)|\,d\omega = \int_0^\infty \log\frac{1}{|1+L(j\omega)|}\,d\omega = \pi\sum_k p_k. \]
 

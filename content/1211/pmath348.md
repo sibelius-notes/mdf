@@ -477,7 +477,7 @@ The correspondence can be visualised as an inverted diagram:
 
 | Intermediate fields (include ↑ = contain more) | Subgroups (include ↑ = larger group) |
 |---|---|
-| \(E\) (top) | \(\\{1\}\) (bottom) |
+| \(E\) (top) | \(\{1\}\) (bottom) |
 | \(L\) | \(L^* = \text{Gal}_L(E)\) |
 | \(F\) (bottom) | \(G\) (top) |
 
@@ -558,7 +558,7 @@ A polynomial \(f(x) \in F[x]\) is <strong>solvable by radicals</strong> if it sp
 </div>
 
 *Proof sketch (\(\Rightarrow\).* Suppose \(f(x)\) splits over a radical extension with tower \(F = F_0 \subseteq \cdots \subseteq F_m\). Let \(n = \prod d_i\). Adjoin a primitive \(n\)th root of unity \(\zeta_n\) by forming \(L = E(\zeta_n)\). Setting \(K = F(\zeta_n)\) and \(K_i = F_i(\zeta_n)\), the Kummer theorem (Theorem 10.0.2) shows each \(K_i/K_{i-1}\) is cyclic. The Galois group \(G = \text{Gal}_F(L)\) then has a tower with abelian quotients:
-\[ G \trianglerighteq \text{Gal}_{K_0}(L) \trianglerighteq \text{Gal}_{K_1}(L) \trianglerighteq \cdots \trianglerighteq \text{Gal}_{K_m}(L) = \\{1\\}. \]
+\[ G \trianglerighteq \text{Gal}_{K_0}(L) \trianglerighteq \text{Gal}_{K_1}(L) \trianglerighteq \cdots \trianglerighteq \text{Gal}_{K_m}(L) = \{1\}. \]
 Since each successive quotient is cyclic (by Theorem 9.2.3), \(G\) is solvable. Since \(\text{Gal}(f)\) is a quotient of the solvable group \(G\), it is solvable.
 
 *Proof sketch (\(\Leftarrow\).* If \(\text{Gal}(f)\) is solvable, adjoin \(\zeta_n\) where \(n = |\text{Gal}(f)|\). The solvability tower of \text{Gal}(L/K)\) (which is a subgroup of \text{Gal}(f)\) gives, via Kummer theory, a corresponding radical tower: each cyclic step \(H_{i-1}/H_i \cong C_{d_i}\) contributes a field extension \(K_i = K_{i-1}(\alpha_i)\) with \(\alpha_i^{d_i} \in K_{i-1}\). ∎
