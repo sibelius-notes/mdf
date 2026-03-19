@@ -41,7 +41,7 @@
 
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
@@ -170,6 +170,8 @@ body {
   border-radius: 8px;
   padding: 1rem 1.2rem;
   margin-bottom: 1.5rem;
+  overflow-x: hidden;
+  word-break: break-word;
 }
 .toc-details summary {
   cursor: pointer;
@@ -226,6 +228,8 @@ body {
   border-collapse: collapse;
   margin-bottom: 1rem;
   font-size: 0.92rem;
+  display: block;
+  overflow-x: auto;
 }
 .course-content th, .course-content td {
   border: 1px solid var(--border);
