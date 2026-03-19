@@ -1110,7 +1110,7 @@ At low frequencies \( \omega \ll a \), the gain is approximately \( 20\log(a/a) 
 
 where \( \omega_0 > 0 \) is the **natural frequency** and \( \zeta > 0 \) is the **damping ratio**. The gain and phase of the frequency response are
 
-\[ \text{gain (dB)} = 40\log\omega_0 - 10\log\\!\left(\omega^4 + 2\omega_0^2\omega^2(2\zeta^2 - 1) + \omega_0^4\right), \]
+\[ \text{gain (dB)} = 40\log\omega_0 - 10\log\!\left(\omega^4 + 2\omega_0^2\omega^2(2\zeta^2 - 1) + \omega_0^4\right), \]
 
 \[ \text{phase (deg)} = -\frac{180^\circ}{\pi}\arctan\frac{2\zeta\omega_0\,\omega}{\omega_0^2 - \omega^2}. \]
 

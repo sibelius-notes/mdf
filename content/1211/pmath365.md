@@ -127,7 +127,7 @@ The **area** of the surface over a Jordan region \(R \subseteq U\) is motivated 
 \[
 A_\sigma(R) = \iint_R \sqrt{\det g(u,v)}\, du\, dv.
 \]
-More generally, for a continuous function \(f : U \to \mathbb{R}\), we write \(dA = \sqrt{\det g}\, du\, dv\) and define \(\iint_R f\, dA = \iint_R f(u,v)\sqrt{\det g}\\,du\\,dv\).
+More generally, for a continuous function \(f : U \to \mathbb{R}\), we write \(dA = \sqrt{\det g}\, du\, dv\) and define \(\iint_R f\, dA = \iint_R f(u,v)\sqrt{\det g}\,du\,dv\).
 
 **Theorem 2.12** (Change of Coordinates): Under a smooth regular change of coordinates \(\phi: U \to V\) with inverse \(\psi = \phi^{-1}\), the surface \(\rho = \sigma \circ \psi\) satisfies \(g_\rho(q) = D\psi(q)^T g_\sigma(p) D\psi(q)\) and \(A_\rho(\phi(R)) = A_\sigma(R)\). That is, area is intrinsic and independent of the parametrization chosen.
 
@@ -225,7 +225,7 @@ Since this formula involves only \(g\) and its derivatives (via the Christoffel 
 
 A **geodesic** is intended to be a curve of locally minimum arclength. The energy of a curve \(\delta(s) = \sigma(\beta(s))\) over \([a,b]\) is
 \[
-E_\delta[a,b] = \int_a^b |\delta'(s)|^2\\, ds = \int_a^b \beta'(s)^T g(\beta(s)) \beta'(s)\\, ds.
+E_\delta[a,b] = \int_a^b |\delta'(s)|^2\, ds = \int_a^b \beta'(s)^T g(\beta(s)) \beta'(s)\, ds.
 \]
 By the Cauchy-Schwarz inequality, \(L^2 \leq (b-a) E\), with equality when \(|\delta'|\) is constant. So minimizing arclength among arclength-parametrized curves is equivalent to minimizing energy.
 
@@ -269,12 +269,12 @@ k_1 = k_g^{v=b} = -\frac{(g_{11})_v}{2\sqrt{g_{11}g_{22}}}, \qquad k_2 = k_g^{u=
 
 **Note 3.12**: When \(g\) is diagonal and \(|\delta'(s)|=1\), we can write
 \[
-\delta'(s) = \cos\theta(s)\\,\frac{\sigma_u(\beta(s))}{|\sigma_u(\beta(s))|} + \sin\theta(s)\\,\frac{\sigma_v(\beta(s))}{|\sigma_v(\beta(s))|}
+\delta'(s) = \cos\theta(s)\,\frac{\sigma_u(\beta(s))}{|\sigma_u(\beta(s))|} + \sin\theta(s)\,\frac{\sigma_v(\beta(s))}{|\sigma_v(\beta(s))|}
 \]
 for a smooth function \(\theta(s)\) (unique up to \(2\pi\). This \(\theta\) measures the angle from the \(\sigma_u\)-direction to the tangent vector in the tangent plane.
 
 **Theorem 3.13** (Geodesic Curvature in Orthogonal Coordinates): With notation as above:
-1. Writing \(\beta(s) = (u(s), v(s))\), we have \(\cos\theta = \sqrt{g_{11}}\\, u'\) and \(\sin\theta = \sqrt{g_{22}}\\, v'\).
+1. Writing \(\beta(s) = (u(s), v(s))\), we have \(\cos\theta = \sqrt{g_{11}}\, u'\) and \(\sin\theta = \sqrt{g_{22}}\, v'\).
 2. The geodesic curvature satisfies
 \[
 k_g = \theta' + k_1 \cos\theta + k_2 \sin\theta.
@@ -286,34 +286,34 @@ This elegant formula decomposes the geodesic curvature into the rate of change o
 
 **Theorem 3.14** (Green's Theorem): Let \(\Delta = \{(x,y) : x \geq 0, y \geq 0, x+y \leq 1\}\) be the standard triangle, and let \(\phi : U \to V\) be a smooth regular positive change of coordinates containing \(\Delta \subseteq V\) with inverse \(\psi = \phi^{-1}\). Let \(R = \psi(\Delta)\) and let \(\alpha_1, \alpha_2, \alpha_3\) be its edges. For any smooth \(F = (P,Q) : U \to \mathbb{R}^2\),
 \[
-\iint_R \left(\frac{\partial Q}{\partial u} - \frac{\partial P}{\partial v}\right) du\\, dv = \sum_{j=1}^3 \int_0^1 F(\alpha_j(t)) \cdot \alpha_j'(t)\\, dt.
+\iint_R \left(\frac{\partial Q}{\partial u} - \frac{\partial P}{\partial v}\right) du\, dv = \sum_{j=1}^3 \int_0^1 F(\alpha_j(t)) \cdot \alpha_j'(t)\, dt.
 \]
 
-*Proof.* Set \(G(x,y) = D\psi(x,y)^T F(\psi(x,y))\). By the change of variables formula, \(\iint_R (Q_u - P_v)\\,du\\,dv = \iint_\Delta (M_x - L_y)\\,dx\\,dy\) where \((L,M) = G\). The latter equals \(\sum_j \int_0^1 G(\delta_j) \cdot \delta_j'\\,dt\) by direct computation on the triangle \(\Delta\) using iterated integrals, and each boundary integral for \(G\) matches the corresponding one for \(F\) under the change of coordinates. \(\square\)
+*Proof.* Set \(G(x,y) = D\psi(x,y)^T F(\psi(x,y))\). By the change of variables formula, \(\iint_R (Q_u - P_v)\,du\,dv = \iint_\Delta (M_x - L_y)\,dx\,dy\) where \((L,M) = G\). The latter equals \(\sum_j \int_0^1 G(\delta_j) \cdot \delta_j'\,dt\) by direct computation on the triangle \(\Delta\) using iterated integrals, and each boundary integral for \(G\) matches the corresponding one for \(F\) under the change of coordinates. \(\square\)
 
 ### The Gauss-Bonnet Formula
 
 For a surface \(\sigma : U \to \mathbb{R}^3\), a region \(R \subseteq U\), and a curve \(\alpha : [a,b] \to U\), we define the integrals
 \[
-\int_\alpha k_g\\,dL = \int_a^b k_g(\alpha)(t)\\,|\gamma'(t)|\\,dt, \qquad \iint_R K\\,dA = \iint_R K_\sigma(u,v)\sqrt{\det g}\\,du\\,dv.
+\int_\alpha k_g\,dL = \int_a^b k_g(\alpha)(t)\,|\gamma'(t)|\,dt, \qquad \iint_R K\,dA = \iint_R K_\sigma(u,v)\sqrt{\det g}\,du\,dv.
 \]
 These are invariant under changes of parametrization (with appropriate sign adjustments).
 
 **Theorem 3.17** (Gauss-Bonnet Formula in Orthogonal Coordinates): Let \(\sigma : U \to \mathbb{R}^3\) with diagonal \(g\), and let \(\psi : \Delta \to R \subseteq U\) be a smooth regular positive change of coordinates. With \(\alpha_j\) the three edges of \(R\) and \(\Delta\theta_j = \theta_j(1) - \theta_j(0)\) the total angle change along each edge,
 \[
-\iint_R K\\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\,dL = \sum_{j=1}^3 \Delta\theta_j.
+\iint_R K\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\,dL = \sum_{j=1}^3 \Delta\theta_j.
 \]
 
-*Proof.* Using Theorem 3.13, each geodesic curvature integral decomposes as \(\int k_g\\,dL = \Delta\theta_j + \int_0^1 F(\alpha_j) \cdot \alpha_j'\\,dt\) where \(F = (P,Q)\) with \(P = -(g_{11})_v/(2\sqrt{g_{11}g_{22}})\) and \(Q = (g_{22})_u/(2\sqrt{g_{11}g_{22}})\). By Green's Theorem, \(\sum_j \int F \cdot \alpha_j'\\,dt = \iint_R (Q_u - P_v)\\,du\\,dv = -\iint_R K\\,dA\) by Theorem 3.10. \(\square\)
+*Proof.* Using Theorem 3.13, each geodesic curvature integral decomposes as \(\int k_g\,dL = \Delta\theta_j + \int_0^1 F(\alpha_j) \cdot \alpha_j'\,dt\) where \(F = (P,Q)\) with \(P = -(g_{11})_v/(2\sqrt{g_{11}g_{22}})\) and \(Q = (g_{22})_u/(2\sqrt{g_{11}g_{22}})\). By Green's Theorem, \(\sum_j \int F \cdot \alpha_j'\,dt = \iint_R (Q_u - P_v)\,du\,dv = -\iint_R K\,dA\) by Theorem 3.10. \(\square\)
 
 **Note 3.18**: If \(\epsilon_1, \epsilon_2, \epsilon_3 \in [0,\pi]\) are the **external angles** at the vertices of \(\sigma(R)\) (the angles between consecutive edge tangent vectors), then one can show (by approximation arguments) that \(\sum_j \Delta\theta_j + \sum_j \epsilon_j = 2\pi\). This yields the classical form:
 \[
-\iint_R K\\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
+\iint_R K\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
 
 **Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
 \[
-\iint_\Delta K_\sigma\\, dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\\, dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
+\iint_\Delta K_\sigma\, dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\, dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
 
 This formula holds without assuming orthogonal coordinates, because every point has a neighborhood with orthogonal coordinates (Theorem 3.7), and one can subdivide \(\Delta\) into small triangles each contained in such a neighborhood, apply Theorem 3.17 to each, and add — with interior boundary terms canceling.
@@ -330,12 +330,12 @@ where \(V\), \(E\), \(F\) are the numbers of vertices, edges, and faces of the t
 
 **Theorem 3.24** (Gauss-Bonnet Theorem): For a smooth regular triangulated surface \(S \subseteq \mathbb{R}^3\) with triangulation \(\{\sigma_1, \ldots, \sigma_n\}\),
 \[
-\iint_S K\\, dA = \sum_{i=1}^n \iint_\Delta K_{\sigma_i}\\, dA = 2\pi\chi.
+\iint_S K\, dA = \sum_{i=1}^n \iint_\Delta K_{\sigma_i}\, dA = 2\pi\chi.
 \]
 
-*Proof.* Apply the Gauss-Bonnet Formula to each triangle. When edges are joined in pairs, the geodesic curvature integrals cancel (by the change-of-coordinates theorem for \(k_g\). Let \(\epsilon_{i,j}\) and \(\phi_{i,j} = \pi - \epsilon_{i,j}\) be the external and internal angles of triangle \(i\) at vertex \(j\). Since \(F=n\), \(E = 3n/2\), and the sum of internal angles at each vertex is \(2\pi\), one obtains \(\sum K\\,dA = 2\pi n - \sum_{i,j} \epsilon_{i,j} = 2\pi F - 2\pi E + 2\pi V = 2\pi\chi\). \(\square\)
+*Proof.* Apply the Gauss-Bonnet Formula to each triangle. When edges are joined in pairs, the geodesic curvature integrals cancel (by the change-of-coordinates theorem for \(k_g\). Let \(\epsilon_{i,j}\) and \(\phi_{i,j} = \pi - \epsilon_{i,j}\) be the external and internal angles of triangle \(i\) at vertex \(j\). Since \(F=n\), \(E = 3n/2\), and the sum of internal angles at each vertex is \(2\pi\), one obtains \(\sum K\,dA = 2\pi n - \sum_{i,j} \epsilon_{i,j} = 2\pi F - 2\pi E + 2\pi V = 2\pi\chi\). \(\square\)
 
-**Remark 3.25**: Since \(K_S(p) = K_\sigma(u,v)\) when \(\sigma(u,v)=p\) (and this is independent of the chart chosen), the total curvature \(\iint_S K\\,dA\) is well-defined and independent of triangulation. In particular, the Euler characteristic \(\chi(S)\) is a topological invariant. For a sphere, \(\chi = 2\) and \(\iint K\\,dA = 4\pi\); for a torus, \(\chi = 0\) and \(\iint K\\,dA = 0\). The Gauss-Bonnet theorem is remarkable because it relates a purely geometric quantity (total curvature, involving second derivatives of the surface) to a purely topological one (the Euler characteristic, which counts vertices minus edges plus faces in any triangulation).
+**Remark 3.25**: Since \(K_S(p) = K_\sigma(u,v)\) when \(\sigma(u,v)=p\) (and this is independent of the chart chosen), the total curvature \(\iint_S K\,dA\) is well-defined and independent of triangulation. In particular, the Euler characteristic \(\chi(S)\) is a topological invariant. For a sphere, \(\chi = 2\) and \(\iint K\,dA = 4\pi\); for a torus, \(\chi = 0\) and \(\iint K\,dA = 0\). The Gauss-Bonnet theorem is remarkable because it relates a purely geometric quantity (total curvature, involving second derivatives of the surface) to a purely topological one (the Euler characteristic, which counts vertices minus edges plus faces in any triangulation).
 
 ---
 
@@ -411,11 +411,11 @@ In local coordinates, \(f_* X_p = D(f \circ \sigma)(a) A_\sigma\).
 
 The **line integral** of a smooth map \(F : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) along a curve \(\alpha : [a,b] \to U\) is
 \[
-\int_\alpha F \cdot dL = \int_a^b F(\alpha(t)) \cdot \alpha'(t)\\, dt.
+\int_\alpha F \cdot dL = \int_a^b F(\alpha(t)) \cdot \alpha'(t)\, dt.
 \]
 The **flux integral** of \(F : U \subseteq \mathbb{R}^2 \to \mathbb{R}^2\) through a curve \(\alpha : [a,b] \to U\) is
 \[
-\int_\alpha F \cdot dN = \int_a^b F(\alpha(t)) \cdot \alpha'(t)^\times\\, dt
+\int_\alpha F \cdot dN = \int_a^b F(\alpha(t)) \cdot \alpha'(t)^\times\, dt
 \]
 where \(v^\times = (-v_2, v_1)\). These are the basic examples of integrating a 1-form along a curve.
 
@@ -423,13 +423,13 @@ where \(v^\times = (-v_2, v_1)\). These are the basic examples of integrating a 
 
 A **smooth \(k\)-form** on an open set \(U \subseteq \mathbb{R}^m\) is a smooth map \(\omega : U \to \Lambda^k(\mathbb{R}^m)\), i.e., a smooth assignment of an alternating \(k\)-multilinear function to each point. In coordinates it has the form
 \[
-\omega = \sum_{I} a_I(u)\\, du_I
+\omega = \sum_{I} a_I(u)\, du_I
 \]
 where the sum is over increasing multi-indices \(I = (i_1 < i_2 < \cdots < i_k)\), and \(du_I = du_{i_1} \wedge \cdots \wedge du_{i_k}\). A smooth 0-form is just a smooth function.
 
 The **integral** of a smooth \(k\)-form \(\omega\) over a smooth regular \(k\)-surface \(\sigma : U_0 \subseteq \mathbb{R}^k \to \mathbb{R}^m\) on a region \(R \subseteq U_0\) is
 \[
-\int_\sigma \omega = \int_R \omega(\sigma(u))\big(D\sigma(u) e_1, \ldots, D\sigma(u) e_k\big)\\, du_1 \cdots du_k.
+\int_\sigma \omega = \int_R \omega(\sigma(u))\big(D\sigma(u) e_1, \ldots, D\sigma(u) e_k\big)\, du_1 \cdots du_k.
 \]
 
 ### The Wedge Product and Exterior Derivative
@@ -455,12 +455,12 @@ The following classical theorems are all special cases of a single unified theor
 
 **Green's Theorem**: For \(F = (P,Q)\) on a region \(R \subseteq \mathbb{R}^2\) with positively-oriented boundary \(\partial R\):
 \[
-\iint_R \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA = \oint_{\partial R} P\\,dx + Q\\,dy.
+\iint_R \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA = \oint_{\partial R} P\,dx + Q\,dy.
 \]
 
 **Divergence Theorem**: For \(F : U \subseteq \mathbb{R}^3 \to \mathbb{R}^3\) on a region \(W\) with boundary surface \(\partial W\):
 \[
-\iiint_W \operatorname{div} F\\, dV = \oiint_{\partial W} F \cdot dA.
+\iiint_W \operatorname{div} F\, dV = \oiint_{\partial W} F \cdot dA.
 \]
 
 **Stokes' Theorem**: For a surface \(\Sigma\) in \(\mathbb{R}^3\) with boundary curve \(\partial\Sigma\):
@@ -638,7 +638,7 @@ X(A)_j = (-1)^{n+j} \det A(j)
 \]
 where \(A(j)\) is \(A\) with the \(j\)-th row removed. In \(F^2\) we write \(X(u) = u^\times = (-u_2, u_1)\); in \(F^3\) we write \(X(u,v) = u \times v\), recovering the usual cross product:
 \[
-u \times v = (u_2 v_3 - u_3 v_2,\\; u_3 v_1 - u_1 v_3,\\; u_1 v_2 - u_2 v_1).
+u \times v = (u_2 v_3 - u_3 v_2,\; u_3 v_1 - u_1 v_3,\; u_1 v_2 - u_2 v_1).
 \]
 
 Since the determinant is \((n-1)\)-linear and alternating, the cross product is also **\((n-1)\)-linear and alternating**.

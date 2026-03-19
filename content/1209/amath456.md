@@ -480,7 +480,7 @@ The PMP provides *necessary* conditions. It was introduced to handle cases where
 
 ### 10.3 Time-Optimal Control
 
-**Example 10.6 (First-order system).** Minimize time to drive \(\dot{y} = u\) from \(y(0) = 1\) to \(y(T) = 0\) with \(|u| \leq M\). The Hamiltonian is \(H = -1 + pu\). Maximizing over \(u\): \(u^o = M\\,\text{sgn}(p)\). The adjoint equation \(\dot{p} = 0\) gives constant \(p\), so \(u^o = \pm M\) throughout. Starting from \(y(0) = 1 > 0\), the optimal strategy is \(u^o = -M\), reaching zero in time \(T = 1/M\).
+**Example 10.6 (First-order system).** Minimize time to drive \(\dot{y} = u\) from \(y(0) = 1\) to \(y(T) = 0\) with \(|u| \leq M\). The Hamiltonian is \(H = -1 + pu\). Maximizing over \(u\): \(u^o = M\,\text{sgn}(p)\). The adjoint equation \(\dot{p} = 0\) gives constant \(p\), so \(u^o = \pm M\) throughout. Starting from \(y(0) = 1 > 0\), the optimal strategy is \(u^o = -M\), reaching zero in time \(T = 1/M\).
 
 **Example 10.7 (Double integrator).** Minimize time to drive \(\ddot{w} = u\) with \(|u| \leq 1\) to \((w(T), \dot{w}(T)) = (0,0)\). With \((y_1, y_2) = (w, \dot{w})\), the Hamiltonian is \(H = -1 + p_1 y_2 + p_2 u\). The optimal control \(u^o = \text{sgn}(p_2)\); since \(p_2(t) = at + b\) is linear, there is at most one switch. The **switching curve** \(y_1 = \pm\frac{1}{2}y_2^2\) (with sign depending on \(y_2\) divides the phase plane: the optimal control is \(-1\) above and \(+1\) below. For \((y_1(0), y_2(0)) = (1, 0)\), the optimal control is \(u = -1\) until \(t = 1\), then \(u = +1\), reaching the origin at \(T = 2\).
 
