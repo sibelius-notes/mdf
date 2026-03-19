@@ -50,11 +50,11 @@ Before introducing more axioms, we must address a subtle constraint. Not just an
 
 Why is this constraint necessary? Consider the naive attempt to axiomatize the set of natural numbers by saying: \(t \in \mathbb{N}\) iff \(t = 0\) or \(t = 1\) or \(t = 2\) or \(\cdots\). The dots here represent an infinite disjunction — and that is not allowed. As we will see rigorously later in the model theory portion of the course, a definite condition is a **first-order formula** in the language \(\{\in, =\}\). For now we adopt a working definition:
 
-A **definite condition** is built up inductively from the **atomic conditions** \(x \in y\) and \(x = y\) by applying, in finitely many steps, the operations of **negation** (\(\neg P\), **conjunction** (\(P \wedge Q\), **disjunction** (\(P \vee Q\), **universal quantification** (\(\forall x,P\), and **existential quantification** (\(\exists x,P\).
+A **definite condition** is built up inductively from the **atomic conditions** \(x \in y\) and \(x = y\) by applying, in finitely many steps, the operations of **negation** (\(\neg P\)), **conjunction** (\(P \wedge Q\)), **disjunction** (\(P \vee Q\)), **universal quantification** (\(\forall x,P\)), and **existential quantification** (\(\exists x,P\)).
 
 The key phrase is *finitely many steps*. An infinite disjunction \(t = 0 \vee t = 1 \vee t = 2 \vee \cdots\) is therefore **not** a definite condition, no matter how natural it seems. This technical constraint prevents paradoxes, and it is exactly the constraint that motivates the subsequent axioms.
 
-We also note that *implication* \(P \Rightarrow Q\) is definite (it abbreviates \(\neg P \vee Q\), and *biconditional* \(P \leftrightarrow Q\) is definite as well. We can verify that all four axioms introduced so far — empty set, pair set, union set, extensionality — do indeed use only definite conditions, as the professor confirms at the start of Lecture 2.
+We also note that *implication* \(P \Rightarrow Q\) is definite (it abbreviates \(\neg P \vee Q\)), and *biconditional* \(P \leftrightarrow Q\) is definite as well. We can verify that all four axioms introduced so far — empty set, pair set, union set, extensionality — do indeed use only definite conditions, as the professor confirms at the start of Lecture 2.
 
 ---
 
