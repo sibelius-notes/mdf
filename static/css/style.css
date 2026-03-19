@@ -397,7 +397,7 @@ sup { font-size: 0.75em; }
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .layout { flex-direction: column; }
+  .layout { flex-direction: column; width: 100%; }
   .sidebar {
     width: 100%;
     height: auto;
@@ -408,7 +408,12 @@ sup { font-size: 0.75em; }
   }
   .nav-list { display: flex; flex-wrap: wrap; gap: 4px; }
   .nav-list a { padding: 4px 8px; font-size: 0.85rem; }
-  .content { padding: 1.5rem 1rem; }
+  .content { padding: 1rem 0.75rem; max-width: 100%; }
+  .course-header { text-align: left; }
+  .course-title { font-size: 1.3rem; }
+  .course-content h1 { font-size: 1.25rem; }
+  .course-content h2 { font-size: 1.1rem; }
+  .course-content h3 { font-size: 1rem; }
   .course-grid { grid-template-columns: 1fr; }
   .search-overlay { left: 0; padding: 1rem; }
 }
