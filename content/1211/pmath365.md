@@ -1,6 +1,6 @@
 ---
 title: "PMATH 365: Differential Geometry"
-prof: "Spiro Karigiannis"
+prof: "Stephen New"
 ---
 
 # PMATH 365: Differential Geometry

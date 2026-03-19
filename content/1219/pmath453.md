@@ -1,6 +1,6 @@
 ---
 title: "PMATH 453: Functional Analysis"
-prof: "N/A"
+prof: "Stephen New"
 ---
 
 # PMATH 453: Functional Analysis
