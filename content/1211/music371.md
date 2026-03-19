@@ -23,6 +23,7 @@ Check [www.gershwin.com](www.gershwin.com)
 ## Modes
 Major keys
 
+| Mode | Degree |
 | :--------- | :------ |
 | Ionian      | I       |
 | Dorian | II |
@@ -34,6 +35,7 @@ Major keys
 
 Relative minor keys
 
+| Mode | Degree |
 | :--------- | :------ |
 | Aeolian      | I       |
 | Locrian | II |
