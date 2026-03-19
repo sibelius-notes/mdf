@@ -155,8 +155,8 @@ Other features:
 - early Blues performers made use of “Floating pool of verse”
 
 
+| Bars | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 | :--- | :-- | :-- |:-- |:-- |:-- |:-- |:-- |:-- |:-- |:-- |:-- |:-- |
-| Bars | 1   | 2   | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 |
 | Chords | I |     |    |    | IV |    | I  |    |  V | IV | I  |    |
 | Lyrics | a |     |    |    | a |     |    |    |  b |   |   |    |
 
@@ -870,6 +870,7 @@ James Brown – Funk. Soul Brother \#1. In 1956, first hit, "Please, Please, Ple
 Pure Gospel influence. 12 bar blues. Becomes Brown’s biggest Pop hit (\#3) after “Papa’s Got a Brand New Bag.”
 
 
+| Section 1 | Section 2 | Bridge | Section 3 |
 | :------------- | :------------- | :-| :-|
 |12-bar blues	|12-bar blues	|4	bar break  <br> 8 bar bridge|	12 bar blues|
 |A |A |B |A|
