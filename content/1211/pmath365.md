@@ -11,11 +11,15 @@ This course develops the classical theory of curves and surfaces, leading to the
 
 ## Chapter 1: Curves
 
+The study of curves is the natural entry point into differential geometry: curves are one-dimensional, so the local geometry is governed by a single parameter, and yet they already exhibit rich structure — bending, twisting, and winding — that foreshadows everything to come. The central philosophy of the subject appears immediately: we want to identify properties that are genuinely geometric, meaning they do not depend on how we choose to parametrize the curve.
+
 ### Curves in \(\mathbb{R}^n\)
 
 A **parametrized curve** in \(\mathbb{R}^n\) is a continuous map \(\alpha : I \subseteq \mathbb{R} \to \mathbb{R}^n\) where \(I\) is a nonempty interval. Writing \(\alpha(t) = (x_1(t), x_2(t), \ldots, x_n(t))\), we say \(\alpha\) is **\(C^k\)** when all derivatives up to order \(k\) exist and are continuous, **smooth** or **\(C^\infty\)** when it is \(C^k\) for all \(k\), and **regular** when it is \(C^1\) with \(\alpha'(t) \neq 0\) for all \(t \in I\). Unless otherwise stated, all curves are assumed smooth and regular.
 
 The tangent vector \(\alpha'(a)\) exists at any point where \(\alpha\) is differentiable, and regularity guarantees this tangent vector is always nonzero. A curve that fails regularity may cross itself or have corners: the curve \(\alpha(t) = (t, |t|)\) has no derivative at \(t=0\), the curve \(\beta(t) = (t^3, t^2)\) has \(\beta'(0) = 0\), and the curve \(\gamma(t) = (t, t^2 \sin(1/t))\) for \(t \neq 0\) with \(\gamma(0)=0\) is differentiable but not \(C^1\).
+
+Regularity is a mild and very useful condition: it prevents cusps and ensures the curve has a well-defined tangent line at every point. The following theorem shows that regularity also forces the curve to be locally injective — it cannot immediately fold back on itself.
 
 **Theorem 1.3** (Local Injectivity): Every regular curve in \(\mathbb{R}^n\) is locally injective.
 
@@ -23,10 +27,14 @@ The tangent vector \(\alpha'(a)\) exists at any point where \(\alpha\) is differ
 
 Regularity is not necessary for global injectivity (the three non-regular examples above are all globally injective). Conversely, regular curves can fail to be globally injective: the alpha curve \(\alpha(t) = (t^2-1, t(t^2-1))\) crosses itself at the origin.
 
+Now that we understand smoothness and regularity, we turn to the most basic measurement we can make about a curve: its length. The natural definition comes from approximating the curve by inscribed polygonal paths and taking a supremum.
+
 The **length** of a curve \(\alpha : [a,b] \to \mathbb{R}^n\) is defined as the supremum of lengths of all piecewise linear approximations:
 \[
 L = L_\alpha[a,b] = \sup \left\{ \sum_{j=1}^p |\alpha(t_j) - \alpha(t_{j-1})| \,\Big|\, a = t_0 < t_1 < \cdots < t_p = b \right\}.
 \]
+
+For regular curves, this supremum is always finite and equals the familiar integral formula. This is a non-trivial fact: it says the polygonal approximations do converge, and they converge to the integral of the speed.
 
 **Theorem 1.8** (Arclength Formula): For a regular curve \(\alpha : [a,b] \to \mathbb{R}^n\),
 \[
@@ -35,13 +43,19 @@ L = L_\alpha[a,b] = \int_a^b |\alpha'(t)|\, dt.
 
 *Proof.* The proof proceeds by showing the supremum of the piecewise linear sums \(L(\alpha, P)\) and the Riemann sums \(S(\alpha, P)\) for \(\int |\alpha'|\) both approximate the same limit. Given \(\epsilon > 0\), by uniform continuity of each \(x_k'\) and Riemann integrability of \(|\alpha'|\), one finds a partition \(P\) fine enough that \(L - L(\alpha,P) < \epsilon/3\), \(|\int |\alpha'| - S(\alpha,P)| < \epsilon/3\), and \(|L(\alpha,P) - S(\alpha,P)| < \epsilon/3\), yielding \(|L - \int |\alpha'|| < \epsilon\). \(\square\)
 
+Length is a geometric property: it does not depend on how we parametrize the curve. Different parametrizations of the same geometric path give the same length, as long as we integrate the speed correctly. This leads to the idea of choosing a canonical parametrization — one where the speed is identically 1.
+
 A **reparametrization** of \(\alpha\) is a curve \(\beta(s) = \alpha(t(s))\) where \(s : I \to J\) is a homeomorphism. When \(s'(t) \neq 0\) for all \(t\), the reparametrization is **regular**; it **preserves direction** when \(s'(t) > 0\) and **reverses direction** when \(s'(t) < 0\). We say \(\beta\) is **parametrized by arclength** when \(|\beta'(s)| = 1\) for all \(s\).
 
 **Theorem 1.11**: Every regular curve can be reparametrized by arclength using a regular direction-preserving change of coordinates.
 
 *Proof.* Fix \(a \in I\) and define \(s(t) = \int_a^t |\alpha'(r)|\, dr\). Then \(s'(t) = |\alpha'(t)| > 0\), so \(s\) is regular and strictly increasing. Its inverse satisfies \(t'(s) = 1/|\alpha'(t)|\), and the reparametrized curve \(\beta(s) = \alpha(t(s))\) has \(|\beta'(s)| = |\alpha'(t(s))| \cdot t'(s) = 1\). \(\square\)
 
+Arclength parametrization is the "natural speed" — the parameter literally measures distance traveled along the curve. With this canonical choice available, we can define geometric quantities free of any speed-dependence.
+
 ### Curves in \(\mathbb{R}^2\)
+
+In the plane, a unit-speed curve has a distinguished orthonormal frame at each point — the tangent and the perpendicular normal — and we can measure how rapidly the curve turns. This turning rate, the signed curvature, is the single invariant that completely classifies plane curves up to rigid motion.
 
 Let \(\beta : J \to \mathbb{R}^2\) be a smooth regular curve parametrized by arclength. For a vector \(u = (x,y)\), write \(u^\times = (-y, x)\). The **unit tangent vector** and **unit normal vector** are
 \[
@@ -53,6 +67,8 @@ Since \(|T(s)|=1\), differentiating gives \(T'(s) \perp T(s)\), so \(T'(s) = k(s
 \]
 The **scalar curvature** is \(\kappa(s) = |k(s)| = |\beta''(s)|\). For an arbitrary regular curve \(\alpha : I \to \mathbb{R}^2\), one first reparametrizes by arclength and then defines \(T, N, k, \kappa\) in terms of the reparametrized curve.
 
+The sign of \(k\) encodes the direction of turning: positive curvature means the curve bends to the left (toward \(N\)), and negative curvature means it bends to the right. The magnitude \(\kappa\) measures how tightly the curve bends — a circle of radius \(r\) has constant curvature \(\kappa = 1/r\).
+
 **Theorem 1.14** (Curvature Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^2\) with \(\alpha' = (x', y')\),
 \[
 k = k_\alpha = \frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}, \qquad \kappa = |k_\alpha| = \frac{|x'y'' - y'x''|}{(x'^2+y'^2)^{3/2}}.
@@ -60,11 +76,15 @@ k = k_\alpha = \frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}, \qquad \kappa = |k_\al
 
 The **osculating circle** of \(\beta\) at \(s_0\) is the circle through \(\beta(s_0)\) with center \(\beta(s_0) + \frac{1}{k(s_0)} N(s_0)\) (when \(k(s_0) \neq 0\) and radius \(1/|k(s_0)|\). It is the best-fit circle to the curve at that point.
 
+The osculating circle captures the second-order behavior of the curve: it agrees with the curve to second order in the arclength parameter. A straight line has no osculating circle (or one of infinite radius), while a curve with very high curvature has a small, tightly fitting osculating circle.
+
 **Theorem 1.17** (Polar Coordinates for Plane Curves): Let \(\beta : J \to \mathbb{R}^2\) be a smooth regular curve with \(|\beta'(s)| = 1\). There exists a smooth function \(\theta : J \to \mathbb{R}\), unique up to adding an integer multiple of \(2\pi\), such that
 \[
 \beta'(s) = (\cos\theta(s),\ \sin\theta(s)).
 \]
 In this case \(\theta'(s) = k(s)\).
+
+This theorem is the key link between signed curvature and the global behavior of a closed curve: by integrating \(k\) around the curve we measure the total angle through which the tangent rotates.
 
 For a closed curve \(\alpha : [0, L] \to \mathbb{R}^2\) (with \(\alpha(0)=\alpha(L)\), the **winding number** \(w(\alpha, p)\) around a point \(p\) not on the curve counts how many times the curve winds around \(p\). The **turning number** (or rotation number) is
 \[
@@ -74,11 +94,17 @@ the total turning of the tangent vector divided by \(2\pi\).
 
 **Theorem 1.19** (Turning Number Theorem): For a smooth closed regular curve in \(\mathbb{R}^2\) that does not self-intersect, the turning number is \(\pm 1\).
 
+The turning number theorem is a beautiful early example of a topological constraint imposed on geometry: no matter how wildly a simple closed curve is drawn, the tangent always winds exactly once. The sign depends on the orientation of traversal.
+
 **Theorem 1.20** (Fundamental Theorem for Plane Curves): Given a smooth function \(k : J \to \mathbb{R}\) and a point \(p \in \mathbb{R}^2\), a unit vector \(A \in \mathbb{R}^2\), and \(s_0 \in J\), there exists a unique smooth regular curve \(\beta : J \to \mathbb{R}^2\) parametrized by arclength with \(\beta(s_0)=p\), \(\beta'(s_0)=A\), and signed curvature \(k_\beta = k\).
 
 *Proof sketch.* By the Polar Coordinates Theorem, define \(\theta(s) = \theta_0 + \int_{s_0}^s k(r)\,dr\) where \(\theta_0\) is chosen so that \(A = (\cos\theta_0, \sin\theta_0)\), then set \(\beta(s) = p + \int_{s_0}^s (\cos\theta(r), \sin\theta(r))\,dr\).
 
+This fundamental theorem is the plane-curve analogue of the basic existence-uniqueness theorem for ODEs: specifying the initial position, initial direction, and curvature function completely pins down the curve. It tells us that signed curvature is a complete invariant for plane curves — two unit-speed plane curves with the same curvature function and matching initial data are congruent.
+
 ### Curves in \(\mathbb{R}^3\)
+
+Moving from the plane to space introduces a new degree of freedom: a space curve can not only bend (as measured by curvature) but also twist out of any fixed plane. To capture this, we need a richer moving frame — the Frenet-Serret frame — and a second scalar invariant called torsion.
 
 For a smooth regular curve \(\beta : J \to \mathbb{R}^3\) parametrized by arclength, the **unit tangent vector** is \(T = \beta'\). Since \(|T| = 1\), we have \(T' \perp T\). When \(T'(s) \neq 0\), the **principal normal vector** is \(P = T'/|T'|\) and the **curvature** is \(\kappa = |T'| = |\beta''|\). The **binormal vector** is \(B = T \times P\), giving a positively oriented orthonormal frame \(\{T, P, B\}\) at each point.
 
@@ -89,6 +115,8 @@ T' = \kappa P, \qquad P' = -\kappa T + \tau B, \qquad B' = -\tau P.
 
 The curvature \(\kappa\) measures the rate at which the curve bends away from a straight line, while the torsion \(\tau\) measures how the curve twists out of the osculating plane spanned by \(T\) and \(P\). A curve lies in a plane if and only if \(\tau \equiv 0\).
 
+The Frenet-Serret formulas express the derivatives of the frame in terms of the frame itself. Geometrically: \(T' = \kappa P\) says the tangent turns toward the principal normal at rate \(\kappa\); \(B' = -\tau P\) says the binormal rotates toward the principal normal at rate \(\tau\), measuring how the osculating plane tilts. A helix, for instance, has constant positive curvature and constant nonzero torsion, capturing its uniform spiral character.
+
 **Theorem 1.24** (Curvature and Torsion Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^3\),
 \[
 \kappa = \frac{|\alpha' \times \alpha''|}{|\alpha'|^3}, \qquad \tau = \frac{(\alpha' \times \alpha'') \cdot \alpha'''}{|\alpha' \times \alpha''|^2}.
@@ -98,9 +126,13 @@ The curvature \(\kappa\) measures the rate at which the curve bends away from a 
 
 *Proof sketch.* The Frenet-Serret equations form a system of ODEs \(\frac{d}{ds}(T,P,B) = (T,P,B) M\) for a skew-symmetric matrix \(M\) depending on \(\kappa\) and \(\tau\). Existence and uniqueness of solutions with prescribed initial conditions follows from the standard ODE theorem. One then verifies the solution maintains the orthonormality of the frame.
 
+Just as for plane curves, the pair \((\kappa, \tau)\) is a complete set of invariants for space curves: two unit-speed space curves with \(\kappa > 0\) and the same curvature and torsion functions are congruent via a rigid motion. This closes the local theory of curves and prepares us to turn to the richer and more challenging world of surfaces.
+
 ---
 
 ## Chapter 2: Surfaces
+
+Having understood curves, we now step up one dimension. A surface in \(\mathbb{R}^3\) is a two-dimensional geometric object, locally parametrized by two variables. The central question is the same as for curves: what are the intrinsic geometric invariants of a surface? The answer here is deeper and more surprising — Gauss's Theorema Egregium tells us that Gaussian curvature is intrinsic even though it seems to depend on how the surface sits in space.
 
 ### Surfaces in \(\mathbb{R}^n\)
 
@@ -110,6 +142,8 @@ Standard examples include:
 - The **graph** of \(f: U \to \mathbb{R}\) via \(\sigma(u,v) = (u,v,f(u,v))\), always regular since \(D\sigma\) has rank 2.
 - The **sphere** \(\rho(\phi,\theta) = r(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)\), regular when \(\sin\phi \neq 0\).
 - The **torus** \(\sigma(\theta,\phi) = ((R+r\cos\phi)\cos\theta, (R+r\cos\phi)\sin\theta, r\sin\phi)\), regular everywhere for \(0 < r < R\).
+
+To measure lengths and angles on the surface — to do intrinsic geometry — we pull back the ambient Euclidean metric through the parametrization. This gives the first fundamental form, which encodes all measurements that can be made by a flat creature living on the surface.
 
 A **Riemannian metric** on \(U \subseteq \mathbb{R}^n\) is a smooth map \(g : U \to M_{n\times n}(\mathbb{R})\) where \(g(p)\) is positive-definite symmetric at every \(p\). The **first fundamental form** of a smooth regular surface \(\sigma\) is
 \[
@@ -133,6 +167,8 @@ More generally, for a continuous function \(f : U \to \mathbb{R}\), we write \(d
 
 ### Surfaces in \(\mathbb{R}^3\)
 
+When a surface sits in \(\mathbb{R}^3\), we gain access to the unit normal vector, which allows us to measure how the surface bends in the ambient space. The second fundamental form captures this extrinsic bending, leading to the notions of principal, mean, and Gaussian curvature.
+
 For a smooth regular surface \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^3\), since \(D\sigma\) has rank 2 we have \(\sigma_u \times \sigma_v \neq 0\). The **unit normal vector** and **Gauss map** are
 \[
 n = n_\sigma = \frac{\sigma_u \times \sigma_v}{|\sigma_u \times \sigma_v|} : U \to S^2 \subseteq \mathbb{R}^3.
@@ -145,6 +181,8 @@ Given a point \(p \in U\) and a nonzero vector \(A \in \mathbb{R}^2\), the **(di
 k_\sigma(p)(A) = \frac{A^T h(p) A}{A^T g(p) A}
 \]
 where \(g = D\sigma^T D\sigma\) is the first fundamental form and \(h = -Dn^T D\sigma\) is the **second fundamental form**.
+
+The formula \(A^T h A / A^T g A\) is a generalized Rayleigh quotient. Its maximum and minimum over all directions \(A\) are the eigenvalues of the matrix \(g^{-1}h\), and the extremizing directions are the principal directions of curvature — the directions in which the surface bends most and least steeply.
 
 The entries of \(h\) can be computed as
 \[
@@ -163,6 +201,8 @@ The **mean curvature** and **Gaussian curvature** are
 H = \tfrac{1}{2}(k_1 + k_2) = \tfrac{1}{2}\operatorname{tr}(g^{-1}h), \qquad K = k_1 k_2 = \frac{\det h}{\det g}.
 \]
 
+Mean curvature \(H\) measures the average bending in all directions; minimal surfaces (soap films) satisfy \(H = 0\). Gaussian curvature \(K\) is the product of the principal curvatures and is positive when the surface curves the same way in all directions (like a sphere or ellipsoid), zero when it is flat in at least one direction (like a cylinder or cone), and negative when it saddles (like a hyperbolic paraboloid). The Gaussian curvature turns out to have a much deeper significance, which we will reveal with the Theorema Egregium.
+
 **Theorem 2.20** (Gauss-Weingarten Equations): For a smooth regular surface in \(\mathbb{R}^3\),
 \[
 \begin{pmatrix} \sigma_{uu} \\ \sigma_{uv} \\ \sigma_{vv} \\ n_u \\ n_v \end{pmatrix} = \begin{pmatrix} \Gamma^1_{11} & \Gamma^2_{11} & h_{11} \\ \Gamma^1_{12} & \Gamma^2_{12} & h_{12} \\ \Gamma^1_{22} & \Gamma^2_{22} & h_{22} \\ b^1_1 & b^2_1 & 0 \\ b^1_2 & b^2_2 & 0 \end{pmatrix} \begin{pmatrix} \sigma_u \\ \sigma_v \\ n \end{pmatrix}
@@ -173,6 +213,8 @@ where \(b = -g^{-1}h\) (the **Weingarten map**) and the **Christoffel symbols** 
 \]
 
 The proof determines all entries by taking dot products with \(\sigma_u\), \(\sigma_v\), and \(n\), using e.g. \(\sigma_{uu} \cdot \sigma_u = \frac{1}{2}(g_{11})_u\) (from differentiating \(g_{11} = \sigma_u \cdot \sigma_u\).
+
+The Gauss-Weingarten equations express every second partial derivative of the surface in terms of the moving frame \(\{\sigma_u, \sigma_v, n\}\). Crucially, the coefficients \(\Gamma^k_{ij}\) depend only on \(g\) and its first derivatives — not on the embedding. These will play the role of "correction terms" when we differentiate vector fields on the surface, and they are the building blocks of the intrinsic geometry.
 
 **Theorem 2.22** (Gauss-Codazzi Equations): The entries of \(g\) and \(h\) satisfy the **Codazzi equations**:
 \[
@@ -189,15 +231,21 @@ and two further equations for \(g_{12} K\) and \(g_{22} K\).
 
 These compatibility equations arise from requiring \(\sigma_{uuv} = \sigma_{uvu}\) and \(\sigma_{vvu} = \sigma_{vuv}\), then expanding using the Gauss-Weingarten equations and equating coefficients of \(\sigma_u\), \(\sigma_v\), and \(n\).
 
+The Gauss equations are remarkable: although \(K = \det h / \det g\) involves the second fundamental form \(h\) (which encodes the extrinsic embedding), the right-hand side of the Gauss equations involves only \(g\) and its derivatives. This is not a coincidence; it is the precise content of the Theorema Egregium.
+
 **Theorem 2.23** (Theorema Egregium): For a smooth regular surface in \(\mathbb{R}^3\), the Gaussian curvature \(K = \det h / \det g\) can be expressed entirely in terms of the first fundamental form \(g\) and its derivatives. In particular, \(K\) is an **intrinsic** property: it is preserved under isometries (maps that preserve the Riemannian metric).
 
 This is Gauss's "remarkable theorem": even though \(K\) is defined using \(h\) (which depends on the embedding in \(\mathbb{R}^3\), it turns out to depend only on the intrinsic geometry. As a consequence, a flat rectangle and a cylinder (which is obtained by bending a rectangle without stretching) have the same Gaussian curvature \(K=0\) at every point, while the mean curvature changes (\(H=0\) vs. \(H = 1/(2r)\).
 
 **Theorem 2.24** (Bonnet's Theorem / Fundamental Theorem for Surfaces): Given a connected open set \(U \subseteq \mathbb{R}^2\), smooth functions \(g_{11}, g_{12}, g_{22}, h_{11}, h_{12}, h_{22} : U \to \mathbb{R}\) with \(g_{11} > 0\) and \(g_{11}g_{22} - g_{12}^2 > 0\), satisfying all the Gauss-Codazzi equations, and given initial data \(p \in \mathbb{R}^3\) and orthogonal unit vectors \(A, B \in \mathbb{R}^3\), there exists a unique smooth surface \(\sigma : U \to \mathbb{R}^3\) with these fundamental forms satisfying \(\sigma(0)=p\), \(\sigma_u(0) \in \operatorname{Span}\{A\}\), \(\sigma_v(0) \in \operatorname{Span}\{A,B\}\). Bonnet's theorem says a surface is determined up to rigid motion by its two fundamental forms, provided the Gauss-Codazzi compatibility conditions hold.
 
+Bonnet's theorem is the surface analogue of the fundamental theorem for curves: just as a space curve is determined up to rigid motion by its curvature and torsion functions, a surface is determined up to rigid motion by \(g\) and \(h\) — provided the Gauss-Codazzi equations are satisfied, which are precisely the integrability conditions guaranteeing the Gauss-Weingarten system has a solution.
+
 ---
 
 ## Chapter 3: Geodesic Curvature and the Gauss-Bonnet Theorem
+
+With the local theory of surfaces in hand, we now develop the tools needed to prove one of the most beautiful theorems in all of mathematics: the Gauss-Bonnet theorem. The strategy is to define geodesic curvature (the intrinsic bending of a curve on a surface), identify geodesics as the "straightest possible" paths, and then use Green's theorem to assemble local curvature information into global topological information.
 
 ### Geodesic Curvature and Geodesics
 
@@ -212,6 +260,8 @@ The normal component \(\delta'' \cdot N\) is the directional curvature studied i
 k_g = k_g(s) = k_g(\beta)(s) = \delta''(s) \cdot M(s).
 \]
 For the original curve \(\alpha\) we set \(k_g(\alpha)(t) = k_g(\beta)(s(t))\).
+
+Geodesic curvature measures how much the curve bends within the surface itself, independently of how the surface is curved in space. A geodesic — the surface analogue of a straight line — has zero geodesic curvature: it bends only as much as the surface forces it to.
 
 **Theorem 3.2** (Geodesic Curvature is Intrinsic): Writing \(\beta(s) = (u(s), v(s))\),
 \[
@@ -228,6 +278,8 @@ A **geodesic** is intended to be a curve of locally minimum arclength. The energ
 E_\delta[a,b] = \int_a^b |\delta'(s)|^2\, ds = \int_a^b \beta'(s)^T g(\beta(s)) \beta'(s)\, ds.
 \]
 By the Cauchy-Schwarz inequality, \(L^2 \leq (b-a) E\), with equality when \(|\delta'|\) is constant. So minimizing arclength among arclength-parametrized curves is equivalent to minimizing energy.
+
+Minimizing the energy functional is the right approach because the energy functional is smoother to work with analytically. The Euler-Lagrange equations for the energy give a clean second-order ODE system — the geodesic equations — whose solutions exist and are unique by the standard ODE existence theorem.
 
 To minimize the energy functional with Lagrangian \(L = g_{11}(u')^2 + 2g_{12}u'v' + g_{22}(v')^2\), one applies the **Euler-Lagrange equations**:
 \[
@@ -253,6 +305,8 @@ In other words, a geodesic is a curve for which the acceleration \(\delta''\) is
 
 ### Orthogonal Coordinates
 
+Working with arbitrary coordinates makes many formulas cumbersome. A key simplification comes from choosing coordinates in which the coordinate lines are perpendicular — orthogonal coordinates — so that the metric takes diagonal form. Such coordinates always exist locally, and in them the formulas for Gaussian curvature and geodesic curvature become much more transparent.
+
 **Theorem 3.7** (Orthogonal Coordinates): For every point \(p \in U\) there exists a neighborhood \(U_p \subseteq U\) of \(p\) and a smooth regular change of coordinates \(\phi : U_p \to V_p\) such that the reparametrized surface \(\rho = \sigma \circ \phi^{-1}\) has diagonal first fundamental form \(g_\rho(s,t) = \operatorname{diag}(g_{11}, g_{22})\) everywhere in \(V_p\).
 
 When the coordinates are orthogonal (i.e., \(g_{12} = F = 0\), geometric quantities simplify greatly. In fact, Gauss proved a stronger result: **isothermal coordinates** exist locally around any point, where \(g_\rho\) is a scalar multiple of the identity.
@@ -261,6 +315,8 @@ When the coordinates are orthogonal (i.e., \(g_{12} = F = 0\), geometric quantit
 \[
 K = \frac{-1}{2\sqrt{g_{11}g_{22}}} \left[ \frac{\partial}{\partial u}\frac{(g_{22})_u}{\sqrt{g_{11}g_{22}}} + \frac{\partial}{\partial v}\frac{(g_{11})_v}{\sqrt{g_{11}g_{22}}} \right].
 \]
+
+This formula makes the intrinsic nature of \(K\) transparent: the right-hand side depends only on the metric coefficients \(g_{11}\) and \(g_{22}\) and their derivatives, with no reference to the second fundamental form.
 
 **Theorem 3.11** (Geodesic Curvature of Coordinate Lines): When \(g\) is diagonal, the geodesic curvatures of the coordinate lines \(v = b\) and \(u = a\) (parametrized by arclength) are
 \[
@@ -284,6 +340,8 @@ This elegant formula decomposes the geodesic curvature into the rate of change o
 
 ### Green's Theorem
 
+Before proving the Gauss-Bonnet formula, we need a version of Green's theorem adapted to curved coordinate systems. The following theorem gives the change-of-variables form that will feed directly into the Gauss-Bonnet argument.
+
 **Theorem 3.14** (Green's Theorem): Let \(\Delta = \{(x,y) : x \geq 0, y \geq 0, x+y \leq 1\}\) be the standard triangle, and let \(\phi : U \to V\) be a smooth regular positive change of coordinates containing \(\Delta \subseteq V\) with inverse \(\psi = \phi^{-1}\). Let \(R = \psi(\Delta)\) and let \(\alpha_1, \alpha_2, \alpha_3\) be its edges. For any smooth \(F = (P,Q) : U \to \mathbb{R}^2\),
 \[
 \iint_R \left(\frac{\partial Q}{\partial u} - \frac{\partial P}{\partial v}\right) du\, dv = \sum_{j=1}^3 \int_0^1 F(\alpha_j(t)) \cdot \alpha_j'(t)\, dt.
@@ -292,6 +350,8 @@ This elegant formula decomposes the geodesic curvature into the rate of change o
 *Proof.* Set \(G(x,y) = D\psi(x,y)^T F(\psi(x,y))\). By the change of variables formula, \(\iint_R (Q_u - P_v)\,du\,dv = \iint_\Delta (M_x - L_y)\,dx\,dy\) where \((L,M) = G\). The latter equals \(\sum_j \int_0^1 G(\delta_j) \cdot \delta_j'\,dt\) by direct computation on the triangle \(\Delta\) using iterated integrals, and each boundary integral for \(G\) matches the corresponding one for \(F\) under the change of coordinates. \(\square\)
 
 ### The Gauss-Bonnet Formula
+
+We now have all the ingredients to prove the local Gauss-Bonnet formula for a geodesic triangle. The key insight is that the Gaussian curvature integral over a triangular region and the geodesic curvature integrals along its edges together exactly account for the total angular turning around the boundary — with the discrepancy from \(2\pi\) being absorbed by the exterior angles at the vertices.
 
 For a surface \(\sigma : U \to \mathbb{R}^3\), a region \(R \subseteq U\), and a curve \(\alpha : [a,b] \to U\), we define the integrals
 \[
@@ -311,6 +371,8 @@ These are invariant under changes of parametrization (with appropriate sign adju
 \iint_R K\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
 
+The formula in Note 3.18 generalizes the elementary angle-sum theorem for triangles: a flat triangle (\(K = 0\)) with geodesic sides (\(k_g = 0\)) has exterior angles summing to \(2\pi\), i.e., interior angles summing to \(\pi\). On a positively curved surface like a sphere, the integral \(\iint K\,dA > 0\) so the angle sum exceeds \(\pi\) — a spherical triangle has angle sum greater than \(\pi\), with the excess equal to the area (up to a normalization constant).
+
 **Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
 \[
 \iint_\Delta K_\sigma\, dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\, dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
@@ -319,6 +381,8 @@ These are invariant under changes of parametrization (with appropriate sign adju
 This formula holds without assuming orthogonal coordinates, because every point has a neighborhood with orthogonal coordinates (Theorem 3.7), and one can subdivide \(\Delta\) into small triangles each contained in such a neighborhood, apply Theorem 3.17 to each, and add — with interior boundary terms canceling.
 
 ### Global Gauss-Bonnet Theorem
+
+The local Gauss-Bonnet formula holds for a single triangular patch. The global theorem assembles these local pieces by triangulating a closed surface: when we sum the formula over all triangles, the geodesic curvature integrals along shared edges cancel, the external angle sums at vertices contribute \(2\pi V\) in total, and what remains is a purely topological quantity — the Euler characteristic.
 
 **Definition 3.22**: A **smooth regular global surface** (or smooth regular 2-dimensional submanifold) in \(\mathbb{R}^n\) is a set \(S \subseteq \mathbb{R}^n\) covered by smooth regular homeomorphisms \(\sigma : U_\sigma \to S \cap W_\sigma\) (the **coordinate charts**) such that whenever two charts overlap, the transition map is smooth and regular. The collection of charts is an **atlas** for \(S\).
 
@@ -341,6 +405,8 @@ where \(V\), \(E\), \(F\) are the numbers of vertices, edges, and faces of the t
 
 ## Chapter 4: Submanifolds of \(\mathbb{R}^n\)
 
+Having thoroughly developed the geometry of surfaces in \(\mathbb{R}^3\), we now generalize. The theory of submanifolds of \(\mathbb{R}^n\) is the natural setting that encompasses both curves and surfaces as special cases and extends the same ideas to higher dimensions. The key analytical tools — the inverse function theorem and its corollaries — guarantee that the local theory of submanifolds reduces to that of open subsets of Euclidean space.
+
 ### Smooth Maps and Regularity
 
 A smooth map \(f : U \subseteq \mathbb{R}^m \to \mathbb{R}^n\) (where \(U\) is open) is called **regular** (or an **immersion**) when its Jacobian matrix \(Df\) is injective at every point, i.e., the columns of \(Df(u)\) are linearly independent for all \(u \in U\). This extends the regularity conditions used for curves (\(m=1\) and surfaces (\(m=2\) to maps of any dimension.
@@ -353,11 +419,15 @@ Graphs of smooth functions, open sets in \(\mathbb{R}^m\), and the unit sphere \
 
 ### The Inverse Function Theorem
 
+The inverse function theorem is the engine that drives the entire theory of smooth manifolds. It tells us that an invertible first-order approximation (the Jacobian) implies the existence of a local smooth inverse, thereby allowing us to treat smooth submanifolds like open subsets of Euclidean space in small enough neighborhoods.
+
 **Theorem 4.6** (Inverse Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) with \(U\) open and \(a \in U\). If \(f\) is \(C^1\) and \(Df(a)\) is invertible, then there exists an open set \(U_0 \subseteq U\) with \(a \in U_0\) such that \(V_0 = f(U_0)\) is open, \(f : U_0 \to V_0\) is bijective, and \(g = f^{-1} : V_0 \to U_0\) is \(C^1\) with \(Dg(f(a)) = Df(a)^{-1}\). If \(f\) is \(C^k\) (or \(C^\infty\) then so is \(f^{-1}\).
 
 (A complete proof appears in Appendix 1. The idea is a contraction mapping argument in Banach space.)
 
 ### The Implicit and Parametric Function Theorems
+
+From the inverse function theorem, one derives two fundamental tools for describing submanifolds: the implicit function theorem (describing them as level sets of smooth maps) and the parametric function theorem (describing them via smooth parametrizations). Together, these two perspectives — equations and coordinates — are complementary and underlie all of the local theory.
 
 **Theorem 4.7** (Implicit Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^\ell\) be \(C^1\) with \(Df(p)\) of rank \(\ell\). Setting \(c = f(p)\), the level set \(f^{-1}(c)\) is locally the graph of a \(C^1\) function near \(p\).
 
@@ -376,6 +446,8 @@ An important subtlety: the homeomorphism condition on \(\sigma\) is essential. T
 Let \(M \subseteq \mathbb{R}^k\) and \(N \subseteq \mathbb{R}^\ell\) be smooth submanifolds. A map \(f : M \to N\) is **smooth** when \(\rho^{-1} f \sigma\) is smooth for every chart \(\sigma\) on \(M\) and every chart \(\rho\) on \(N\). A **diffeomorphism** is a bijective smooth map with smooth inverse. The dimension of a submanifold is well-defined (since if two charts overlap, the transition map must be square, forcing \(m = \ell\). Composites of smooth maps are smooth.
 
 ### Tangent Spaces and Vector Fields
+
+Now that we have a coordinate-free notion of a submanifold, we can develop calculus on it. The tangent space at a point is the correct linear approximation to the manifold, and it is the domain in which directional derivatives and vector fields live. The following definition captures this intrinsically, without privileging any particular chart.
 
 **Definition 4.30**: The **tangent space** \(T_p M\) at \(p \in M\) is the set of all tangent vectors \(\gamma'(0)\) for smooth curves \(\gamma : J \to M\) with \(\gamma(0) = p\). For any chart \(\sigma\) with \(\sigma(a) = p\),
 \[
@@ -401,11 +473,15 @@ In local coordinates, \(f_* X_p = D(f \circ \sigma)(a) A_\sigma\).
 
 ### The Riemannian Metric on Manifolds
 
+Just as we pulled back the ambient Euclidean metric to get the first fundamental form of a surface, we can equip any smooth submanifold of \(\mathbb{R}^n\) with an induced Riemannian metric. This metric is the fundamental data for doing intrinsic geometry on the manifold, and it is consistent across all coordinate charts by construction.
+
 **Definition 4.45**: For a chart \(\sigma : U_\sigma \to M\), the **Riemannian metric** is \(g_\sigma(u) = D\sigma(u)^T D\sigma(u)\), giving an inner product on \(T_u U_\sigma = \mathbb{R}^m\). This is consistent across charts: if \(\rho = \sigma \circ \psi\) then \(g_\rho = D\psi^T g_\sigma D\psi\). The length of a curve on \(M\) and integrals of functions over \(M\) are computed using this metric, and are independent of the chart chosen.
 
 ---
 
 ## Chapter 5: Integration of Differential Forms
+
+We have so far been using integrals in a somewhat ad hoc manner — integrating functions along curves, over surfaces, and so on. Differential forms provide the correct, coordinate-free framework for all of these integration operations, and the exterior derivative unifies the gradient, curl, and divergence into a single operator \(d\). The payoff is Stokes' theorem in its fully general form, of which all classical integral theorems are special cases.
 
 ### Line Integrals and Flux Integrals
 
@@ -427,6 +503,8 @@ A **smooth \(k\)-form** on an open set \(U \subseteq \mathbb{R}^m\) is a smooth 
 \]
 where the sum is over increasing multi-indices \(I = (i_1 < i_2 < \cdots < i_k)\), and \(du_I = du_{i_1} \wedge \cdots \wedge du_{i_k}\). A smooth 0-form is just a smooth function.
 
+The antisymmetry of \(k\)-forms — they change sign under transposition of any two arguments — is what makes them the right objects to integrate over oriented domains: when you reverse orientation, the sign of the integral flips.
+
 The **integral** of a smooth \(k\)-form \(\omega\) over a smooth regular \(k\)-surface \(\sigma : U_0 \subseteq \mathbb{R}^k \to \mathbb{R}^m\) on a region \(R \subseteq U_0\) is
 \[
 \int_\sigma \omega = \int_R \omega(\sigma(u))\big(D\sigma(u) e_1, \ldots, D\sigma(u) e_k\big)\, du_1 \cdots du_k.
@@ -444,6 +522,8 @@ The **exterior derivative** \(d\) sends smooth \(k\)-forms to smooth \((k+1)\)-f
 d\omega = \sum_I da_I \wedge du_I = \sum_I \sum_j \frac{\partial a_I}{\partial u_j} du_j \wedge du_I.
 \]
 The key property is \(d^2 = 0\) (i.e., \(d(d\omega) = 0\) for any smooth form).
+
+The identity \(d^2 = 0\) is the algebraic shadow of the commutativity of mixed partial derivatives. It encodes all the classical identities: \(\operatorname{curl}(\operatorname{grad} f) = 0\) and \(\operatorname{div}(\operatorname{curl} F) = 0\) are both instances of \(d^2 = 0\) in \(\mathbb{R}^3\).
 
 The classical vector calculus operations are special cases of \(d\) in \(\mathbb{R}^3\): the gradient of a function is \(d\) on 0-forms, the curl corresponds to \(d\) on 1-forms, and the divergence corresponds to \(d\) on 2-forms.
 
@@ -470,6 +550,8 @@ The following classical theorems are all special cases of a single unified theor
 
 ### Simplices, Chains, and the Boundary Operator
 
+To state the general Stokes' theorem, we need a systematic way to describe the domains of integration and their boundaries. Simplices and chains provide this combinatorial bookkeeping, with the boundary operator \(\partial\) satisfying \(\partial^2 = 0\) — a purely combinatorial identity that is dual to the analytic identity \(d^2 = 0\). This duality is the heart of de Rham cohomology.
+
 The standard \(k\)-**simplex** is \(\Delta^k = \{(t_1, \ldots, t_k) : t_i \geq 0,\ \sum t_i \leq 1\}\). A smooth \(k\)-**surface** on \(\Delta^k\) is a smooth map \(\sigma : \Delta^k \to U \subseteq \mathbb{R}^m\) whose restriction to the interior is regular. A \(k\)-**chain** is a formal finite \(\mathbb{Z}\)-linear combination of \(k\)-surfaces. The **boundary** \(\partial\sigma\) is the alternating sum of the \((k-1)\)-dimensional faces of \(\sigma\):
 \[
 \partial \sigma = \sum_{j=0}^k (-1)^j \sigma \circ F_j
@@ -491,6 +573,8 @@ The **pullback** of a smooth \(k\)-form \(\beta\) on \(V\) by a smooth map \(f :
 \]
 In coordinates, if \(\beta = \sum_I b_I dy_I\) then \(f^*\beta = \sum_I (b_I \circ f) d(f_{i_1}) \wedge \cdots \wedge d(f_{i_k})\). Pullback is natural: \(f^*(d\omega) = d(f^*\omega)\) and \(f^*(\alpha \wedge \beta) = f^*\alpha \wedge f^*\beta\).
 
+Pullback is the operation that makes differential forms coordinate-independent: when you change coordinates, forms transform via pullback, and the naturality \(f^* \circ d = d \circ f^*\) means the exterior derivative does not depend on which coordinates you use to compute it.
+
 **Theorem 5.35** (Pullback Formulas): Let \(\sigma : U_0 \to \mathbb{R}^m\) be a \(k\)-surface and \(f : U \to V\) smooth. Then
 \[
 \int_{f \circ \sigma} \omega = \int_\sigma f^*\omega, \qquad \int_\sigma f^*\omega = \int_{f_*\sigma} \omega.
@@ -508,6 +592,8 @@ This unifies all the classical theorems: they are all instances of "the integral
 
 ## Chapter 6: Tensor Algebras and Differential Forms
 
+Chapter 5 developed differential forms in a concrete, coordinate-based way. This final chapter provides the coordinate-free algebraic foundation: tensor algebras, exterior algebras, and the abstract cotangent bundle. This perspective makes the coordinate-independence of differential forms manifest and sets up the machinery used in modern differential geometry and mathematical physics.
+
 ### Dual Spaces and Multilinear Maps
 
 For a finite-dimensional vector space \(U\) over a field \(F\), the **dual space** is \(U^* = \operatorname{Hom}(U, F)\), the space of linear functions \(f : U \to F\). If \(\{e_i\}\) is a basis for \(U\), the **dual basis** \(\{e_i^*\}\) is defined by \(e_i^*(e_j) = \delta_{ij}\). We have \(\dim U^* = \dim U\) and the natural isomorphism \(U \cong (U^*)^*\).
@@ -524,6 +610,8 @@ When \(\{e_1, \ldots, e_n\}\) is a basis for \(U\):
 - \(T^k U\) has basis \(\{e_{i_1}^* \otimes \cdots \otimes e_{i_k}^*\}\), dimension \(n^k\).
 - \(S^k U\) has dimension \(\binom{n+k-1}{k}\).
 - \(\Lambda^k U\) has basis \(\{e_{i_1}^* \wedge \cdots \wedge e_{i_k}^* : i_1 < i_2 < \cdots < i_k\}\), dimension \(\binom{n}{k}\).
+
+The dimension formula \(\dim \Lambda^k U = \binom{n}{k}\) has a familiar consequence: \(\Lambda^n U\) is one-dimensional, spanned by \(e_1^* \wedge \cdots \wedge e_n^*\). A \(k\)-covector is zero if any two of its arguments are equal, so an \(n\)-covector on \(\mathbb{R}^n\) is essentially a determinant — which is precisely why integration of \(n\)-forms recovers the usual change-of-variables formula.
 
 ### The Cotangent Space and Coordinate Bases
 
@@ -553,6 +641,8 @@ This is compatible with the exterior derivative: \(f^*(d\omega) = d(f^*\omega)\)
 
 ## Appendix 1: Review of Differentiation
 
+This appendix collects the analytic foundations that underlie the entire course. The definition of differentiability used here — through the linear approximation error — is the right one for functions between Euclidean spaces of arbitrary dimension, and the inverse function theorem, whose proof occupies most of the appendix, is the key result that makes the local theory of submanifolds work.
+
 ### Differentiability
 
 **Definition A1.1**: A function \(f : U \subseteq \mathbb{R}^m \to \mathbb{R}^n\) is **differentiable** at \(a \in U\) if there exists a matrix \(A \in M_{n \times m}(\mathbb{R})\) such that
@@ -576,6 +666,8 @@ The directional derivative of \(f\) at \(a\) in direction \(v\) is \(D_v f(a) = 
 **Corollary** (Vanishing Derivative): If \(U\) is connected and \(Df \equiv 0\), then \(f\) is constant.
 
 ### The Inverse Function Theorem: Full Proof
+
+The proof of the inverse function theorem proceeds by constructing the local inverse as the fixed point of a contraction mapping. The key estimate is that if \(Df(a)\) is invertible and \(Df\) is continuous, then \(Df(x)\) is invertible and controlled in a small enough ball around \(a\), making a certain auxiliary map contractive.
 
 **Theorem A1.6** (Inverse Function Theorem): Let \(f : U \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be \(C^1\) with \(Df(a)\) invertible.
 
@@ -605,6 +697,8 @@ The proof proceeds via eight claims:
 
 ## Appendix 2: The Generalized Cross Product
 
+The cross product in \(\mathbb{R}^3\) is familiar from multivariable calculus: it produces a vector orthogonal to two given vectors, with magnitude equal to the area of the parallelogram they span. This appendix develops the correct generalization to \(\mathbb{R}^n\): given \(n-1\) vectors in \(\mathbb{R}^n\), there is a unique (up to sign) vector orthogonal to all of them, whose magnitude equals the volume of the parallelotope they span.
+
 ### Parallelotopes and Volume
 
 **Definition A2.1**: Given vectors \(u_1, \ldots, u_k \in \mathbb{R}^n\), the **parallelotope** is
@@ -629,6 +723,8 @@ V(u_1, \ldots, u_k) = \sqrt{\det(A^T A)}.
 Taking square roots: \(\sqrt{\det(B^T B)} = \sqrt{\det(A^T A)} \cdot |w| = V(u_1,\ldots,u_{k-1}) \cdot |w| = V(u_1,\ldots,u_k)\). \(\square\)
 
 In the special case \(k = n\), \(\det(A^T A) = (\det A)^2\), so \(V = |\det A|\). For a simplex \([a_0, \ldots, a_k]\) with \(u_i = a_i - a_0\), the volume is \(\frac{1}{k!} V(u_1, \ldots, u_k) = \frac{1}{k!}\sqrt{\det(A^T A)}\).
+
+The formula \(V = \sqrt{\det(A^T A)}\) is exactly what appears in the area element \(dA = \sqrt{\det g}\, du\, dv\) for surfaces, since \(g = D\sigma^T D\sigma\) and \(\sqrt{\det g} = V(\sigma_u, \sigma_v)\). This is not a coincidence: area on a surface is the volume of infinitesimal parallelograms spanned by the partial derivatives.
 
 ### The Generalized Cross Product
 
@@ -679,4 +775,3 @@ P^T X(PA) = (\det P) X(A).
 *Proof.* The \(i\)-th entry of \(P^T X(PA)\) is \(v_i^T X(PA) = \det(PA, v_i)\) where \(v_i\) is the \(i\)-th column of \(P\). Expanding via cofactors and using the cofactor identity \(\operatorname{Cof}(P) P = \det(P) I\), one shows that the \(i\)-th entry equals \((\det P) X(A)_i\). Both sides are polynomials in the entries, so the identity extends by continuity to all \(P\) (including non-invertible ones). Replacing \(P\) by \(P^T\) yields the equivalent form \(P X(P^T A) = (\det P) X(A)\).
 
 This change of variables formula is used in the proof of Property 7 above: one expresses \(X(A,y)\) in terms of the basis \(\{v_1,\ldots,v_{n-1},y\}\) using the matrix \(P = (B, y)\) (whose determinant is \(|y|^2\) by Property 1) and then applies the change of variables formula.
-
