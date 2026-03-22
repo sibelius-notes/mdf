@@ -1023,6 +1023,117 @@ P(N(s) = m \mid N(t) = n) = \frac{P(N(s) = m)\,P(N(t) - N(s) = n-m)}{P(N(t) = n)
 \]
 Using the Poisson PMFs and the independent increments property, after simplification (the exponential terms cancel), one obtains the Binomial PMF with parameters \(n\) and \(s/t\).
 
+### Conditional Distribution of Individual Arrival Times
+
+**Theorem 4.5** tells us about the *count* \(N(s)\) given \(N(t)=n\). A deeper question is: given that exactly one or \(n\) arrivals occurred in \([0,t]\), *where* in the interval did they occur? The next two theorems answer this.
+
+<div class="theorem">
+<strong>Theorem 4.6.</strong> Let \(\{N(t)\}_{t \geq 0}\) be a Poisson process with rate \(\lambda\). Given \(N(t) = 1\), the first arrival time satisfies
+\[
+S_1 \mid N(t) = 1 \;\sim\; \text{Uniform}(0, t).
+\]
+</div>
+
+*Proof.* Let \(G(s) = P(S_1 \leq s \mid N(t) = 1)\) for \(0 \leq s \leq t\). Applying the definition of conditional probability and the independent increments property:
+\[
+G(s)
+= \frac{P(S_1 \leq s,\; N(t) = 1)}{P(N(t) = 1)}
+= \frac{P(N(s) = 1)\,P(N(t) - N(s) = 0)}{P(N(t) = 1)}.
+\]
+Substituting the Poisson PMF (with means \(\lambda s\), \(\lambda(t-s)\), and \(\lambda t\) respectively):
+\[
+G(s) = \frac{(\lambda s\, e^{-\lambda s})(e^{-\lambda(t-s)})}{\lambda t\, e^{-\lambda t}}
+= \frac{\lambda s\, e^{-\lambda t}}{\lambda t\, e^{-\lambda t}} = \frac{s}{t}.
+\]
+Since \(s/t\) is the CDF of \(\text{Uniform}(0,t)\), the result follows. \(\square\)
+
+**Intuition.** The result says that, conditional on exactly one event occurring in \([0,t]\), the event time is uniformly scattered throughout the interval — the Poisson process has no preferred location.
+
+#### Order Statistics Background
+
+To state the generalisation, we need a brief introduction to **order statistics**.
+
+<div class="definition">
+<strong>Order statistics.</strong> Given \(n\) i.i.d. continuous RVs \(Y_1, Y_2, \ldots, Y_n\) with common CDF \(F\) and PDF \(f\), the <strong>order statistics</strong> \(Y_{(1)} \leq Y_{(2)} \leq \cdots \leq Y_{(n)}\) are defined by sorting: \(Y_{(k)}\) is the \(k\)-th smallest value among \(Y_1, \ldots, Y_n\).
+</div>
+
+**Joint PDF of order statistics.** The joint PDF of \((Y_{(1)}, Y_{(2)}, \ldots, Y_{(n)})\) is
+\[
+g(y_1, y_2, \ldots, y_n) = n!\, f(y_1)\, f(y_2) \cdots f(y_n),
+\qquad 0 < y_1 < y_2 < \cdots < y_n.
+\]
+The factor \(n!\) accounts for the number of ways to assign \(n\) unordered observations to the \(n\) ordered slots.
+
+**Uniform case.** If \(Y_i \sim \text{Uniform}(0,t)\), then \(f(y) = 1/t\) and the joint PDF simplifies to
+\[
+g(y_1, \ldots, y_n) = \frac{n!}{t^n}, \qquad 0 < y_1 < y_2 < \cdots < y_n < t.
+\]
+The marginal PDF of the \(i\)-th order statistic \(Y_{(i)}\) is
+\[
+g_{(i)}(y) = \frac{n!}{(i-1)!\,(n-i)!} \cdot \frac{y^{i-1}(t-y)^{n-i}}{t^n}, \qquad 0 < y < t,
+\]
+which is a scaled Beta distribution.
+
+<div class="theorem">
+<strong>Theorem 4.7 (Arrival times as uniform order statistics).</strong> For a Poisson process with rate \(\lambda\), given \(N(t) = n\), the conditional joint distribution of the \(n\) arrival times \((S_1, S_2, \ldots, S_n)\) equals the joint distribution of the \(n\) order statistics from \(n\) i.i.d. \(\text{Uniform}(0,t)\) random variables. In particular, the conditional joint PDF is
+\[
+f(s_1, \ldots, s_n \mid N(t) = n) = \frac{n!}{t^n}, \qquad 0 < s_1 < s_2 < \cdots < s_n < t.
+\]
+</div>
+
+*Proof.* Fix \(0 < s_1 < s_2 < \cdots < s_n < t\). By the independent increments property, the events that exactly one arrival falls in each of the intervals \((0,s_1]\), \((s_1,s_2]\), \ldots, \((s_{n-1},s_n]\), and zero arrivals fall in \((s_n,t]\), are mutually independent. Therefore:
+\[
+P\!\left(\bigcap_{k=1}^n \{N(s_{k-1}, s_k) = 1\} \cap \{N(s_n, t) = 0\}\right)
+= \prod_{k=1}^n \Bigl[\lambda(s_k - s_{k-1})\, e^{-\lambda(s_k - s_{k-1})}\Bigr] \cdot e^{-\lambda(t-s_n)},
+\]
+where \(s_0 = 0\). The product of exponentials collapses to \(e^{-\lambda t}\) (since the exponents sum to \(\lambda t\)), giving:
+\[
+= \lambda^n \prod_{k=1}^n (s_k - s_{k-1}) \cdot e^{-\lambda t}.
+\]
+Dividing by \(P(N(t) = n) = (\lambda t)^n e^{-\lambda t}/n!\) and differentiating with respect to each \(s_k\) yields the conditional joint PDF:
+\[
+f(s_1, \ldots, s_n \mid N(t) = n) = \frac{\lambda^n\, e^{-\lambda t}}{(\lambda t)^n e^{-\lambda t}/n!} \cdot \frac{\partial^n}{\partial s_1 \cdots \partial s_n}\!\left[\prod_{k=1}^n (s_k - s_{k-1})\right] = \frac{n!}{t^n}. \quad \square
+\]
+
+**Remark.** The remarkable conclusion is that, given \(n\) events have occurred by time \(t\), the event locations are *completely uninformative* about the Poisson rate \(\lambda\) — they are simply \(n\) i.i.d. uniform points placed on \([0,t]\) and then sorted. Theorem 4.6 is the special case \(n = 1\).
+
+#### Applications of Theorem 4.7
+
+**Example 4.A (Discounted total revenue).** Cars arrive to a toll bridge according to a Poisson process with rate \(\lambda\). Each car pays \$1 upon arrival. Let \(\alpha > 0\) be a continuous discount rate, so the present value at time 0 of a payment made at time \(s\) is \(e^{-\alpha s}\). Define the total discounted revenue by time \(t\):
+\[
+T = \sum_{i=1}^{N(t)} e^{-\alpha S_i}.
+\]
+
+*Finding \(E[T]\).* Condition on \(N(t) = n\). By Theorem 4.7, the \(S_i\) given \(N(t)=n\) are distributed as \(n\) i.i.d. \(\text{Uniform}(0,t)\) variables (up to ordering). Since \(\sum e^{-\alpha s_i}\) is invariant under permutation:
+\[
+E[T \mid N(t) = n] = n\, E[e^{-\alpha U}], \qquad U \sim \text{Uniform}(0,t).
+\]
+Computing the expectation: \(E[e^{-\alpha U}] = \int_0^t e^{-\alpha u}/t\, du = (1 - e^{-\alpha t})/(\alpha t)\). By the law of total expectation:
+\[
+\boxed{E[T] = E[N(t)]\, E[e^{-\alpha U}] = \lambda t \cdot \frac{1 - e^{-\alpha t}}{\alpha t} = \frac{\lambda(1 - e^{-\alpha t})}{\alpha}.}
+\]
+
+*Finding \(\text{Var}(T)\).* Let \(B = (1-e^{-\alpha t})/(\alpha t)\) and \(D = (1-e^{-2\alpha t})/(2\alpha t)\). Since \(Y_1,\ldots,Y_n\) are i.i.d. Uniform\((0,t)\):
+\[
+\text{Var}(T \mid N(t) = n) = n\, \text{Var}(e^{-\alpha U}) = n(D - B^2).
+\]
+Applying the conditional variance formula (Theorem 2.3) and using \(E[N(t)] = \text{Var}(N(t)) = \lambda t\):
+\[
+\text{Var}(T) = E[N(t)](D - B^2) + B^2\,\text{Var}(N(t)) = \lambda t\, D = \frac{\lambda(1-e^{-2\alpha t})}{2\alpha}.
+\]
+
+**Example 4.B (Satellite launches).** Satellites are launched according to a Poisson process at rate \(\lambda = 3\) per year. Given that exactly 2 launches occurred in the past year (\(t = 1\)), find the probability that the first launch was within the first 5 months and the second launch was before the final 2 months.
+
+In terms of years: we want \(P(S_1 \leq 5/12,\; S_2 \leq 5/6 \mid N(1) = 2)\).
+
+By Theorem 4.7, \((S_1, S_2) \mid N(1) = 2\) has joint PDF \(g(s_1, s_2) = 2!/1^2 = 2\) on \(0 < s_1 < s_2 < 1\). Integrating over the relevant region:
+\[
+P(S_1 \leq {\textstyle\tfrac{5}{12}},\; S_2 \leq {\textstyle\tfrac{5}{6}} \mid N(1) = 2)
+= \int_0^{5/12} \int_{s_1}^{5/6} 2\, ds_2\, ds_1
+= \int_0^{5/12} 2\!\left(\tfrac{5}{6} - s_1\right) ds_1.
+\]
+Evaluating: \(= 2\!\left[\tfrac{5}{6}s_1 - \tfrac{s_1^2}{2}\right]_0^{5/12} = 2\!\left(\tfrac{25}{72} - \tfrac{25}{288}\right) = 2 \cdot \tfrac{75}{288} = \dfrac{25}{48} \approx 0.521\).
+
 ### Superposition and Thinning
 
 **Superposition.** If \(N_1(t) \sim \text{Poisson}(\lambda_1)\) and \(N_2(t) \sim \text{Poisson}(\lambda_2)\) are independent, then \(N_1(t) + N_2(t) \sim \text{Poisson}(\lambda_1 + \lambda_2)\).
@@ -1106,6 +1217,8 @@ The following table summarises the major results from each chapter.
 | 4 | Memoryless uniqueness | Exponential is the unique continuous memoryless distribution. |
 | 4 | Theorem 4.4 | Inter-arrival times of a Poisson process are iid \(\text{Exp}(\lambda)\). |
 | 4 | Theorem 4.5 | Given \(N(t)=n\), the earlier count \(N(s)\) is \(\text{Binomial}(n, s/t)\). |
+| 4 | Theorem 4.6 | Given \(N(t)=1\), the first arrival time \(S_1 \sim \text{Uniform}(0,t)\). |
+| 4 | Theorem 4.7 | Given \(N(t)=n\), the joint distribution of \((S_1,\ldots,S_n)\) equals that of \(n\) order statistics from i.i.d. \(\text{Uniform}(0,t)\); conditional joint PDF \(= n!/t^n\). |
 | 4 | Theorem 4.8 | Non-homogeneous Poisson process: events in \((s_1, s_1+s_2]\) are Poisson with mean \(\int_{s_1}^{s_1+s_2}\lambda(\tau)d\tau\). |
 
 ---
