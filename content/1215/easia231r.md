@@ -379,23 +379,3 @@ The following artists are referenced in the syllabus as possible subjects for re
 
 **Joseph Kosuth** (b. 1945, United States) — American conceptual artist and theorist. *One and Three Chairs* and the *Art as Idea as Idea* series are his landmark works. His theoretical essay "Art after Philosophy" (1969) is one of the founding documents of Conceptual Art.
 
----
-
-# Course Assessment Summary
-
-The course has no final examination. Assessment is distributed across projects, writing, and participation in recognition of the fact that studio art education is not well served by high-stakes summative testing. The course is designed so that no single component carries so much weight that a poor performance in one area can sink an otherwise strong student: the largest single component is 20%, and five distinct components are at 15% or lower. This structure rewards consistency and sustained engagement over the term rather than performance in a single high-pressure moment.
-
-The grading structure reflects the course's hybrid identity as simultaneously a history and theory course and a studio practice course. **Project 1** (20%), based on Islamic calligraphy, asks students to engage with the formal and spiritual dimensions of Arabic script through direct making. **Project 2** (20%), based on East Asian calligraphy, extends that engagement into the Chinese and Japanese ink traditions. **Project 3** (10%), based on conceptual art, asks students to use language as the primary medium of a contemporary art work.
-
-The **research essay** (15%, due Week 11) asks students to analyze a contemporary artist's calligraphic or text-based work in relation to one of the course's assigned readings. The essay is 1,000–1,500 words and is evaluated on the clarity and depth of analysis rather than on formal essay structure; students are invited to consider blog formats or other creative approaches if these serve their argument better than a traditional thesis-body-conclusion structure. Artists suggested in the syllabus include Neshat, Xu Bing, Hassan, Holzer, On Kawara, and Ruscha, among others. The essay can take a creative, blog-like format rather than a traditional academic structure, and is evaluated on the clarity and depth of analysis.
-
-**Reading reflections** (15%) are two-paragraph informal responses to each week's assigned reading, submitted before the synchronous class session. They are evaluated not on summary but on personal engagement with the material — on what the student finds interesting, puzzling, or resonant in the text, and on the quality of the discussion question they generate.
-
-**Participation** (15%) comprises forum discussion (10%) — responding meaningfully to five classmates' reflection questions each week — and calligraphy practice postings (5%), in which students upload images of their calligraphic exercises to the class discussion forum.
-
-**Student presentations** (5%) are five-minute presentations on a calligraphic or text-based artwork, or on an instance of text-as-image encountered in everyday life. The example the instructor offers is Tim Hortons in Arabic script — a logo that communicates its identity regardless of whether the viewer can read the text, because the visual form of the brand has become image.
-
-The presentation option inviting students to find text-as-image in everyday life is pedagogically significant: it asks students to transfer the conceptual frameworks of the course to their own environment and experience. Finding a moment in which text functions beyond its semantic content — in graffiti, in a storefront sign, in the design of a food label, in a social media post — requires genuinely internalizing the course's central distinction between writing that is read and writing that is seen. The accumulated presentations across the term produce, week by week, a growing visual archive of this phenomenon as it appears in the world outside the art institution.
-
-
-<!-- Notes compiled from lecture transcript (May 12, 2021 synchronous session), course syllabus, and assigned readings. Course offered Spring 2021, term 1215, Renison University College, University of Waterloo. -->

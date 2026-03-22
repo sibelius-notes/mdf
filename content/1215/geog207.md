@@ -531,25 +531,6 @@ Professor Catherine Potvin was featured in the Week 4 expert segment on human im
 
 Dr. Peter Berry was featured in the Week 7 expert segment on climate change and human health, including the expanding range of vector-borne diseases and heat mortality under warming scenarios.
 
----
-
-# Assignments and Assessment
-
-## Grade Breakdown
-
-The course is assessed across four components. **Quizzes (40%)** are weekly online quizzes administered through the LEARN platform, testing comprehension of that week's lecture content and readings. **Discussion Activities** (contributing toward the Discussion Summary Assignment) require students to post initial answers to discussion prompts in small groups (Red or Blue) and then continue conversation across both groups. The **Discussion Summary Assignment (20%)** is submitted three times across the term (one per module), in which students synthesise and reflect on the most important ideas from their discussion forum contributions during that module's weeks. **Assignment 1: Climate Change Impacts and Adaptation at the Community Scale (20%)** requires students to apply concepts from Modules 1 and 2 to a real Canadian community, analysing climate exposure, vulnerability, and potential adaptation strategies. **Assignment 2: Emissions and Mitigation at the Community Scale (20%)** applies Module 3 content to a community, assessing its greenhouse gas emission profile and identifying mitigation opportunities.
-
-## Assignment 1: Climate Change Impacts and Adaptation at the Community Scale
-
-This assignment asks students to work at the intersection of science and policy, using a real Canadian municipality or community as a case study. Students are expected to (1) identify the key climate hazards the community faces based on current and projected climate data, (2) assess the community's vulnerability using the exposure–sensitivity–adaptive capacity framework introduced in Week 8, (3) describe existing adaptation initiatives if any, and (4) propose and justify additional adaptation strategies. The assignment rewards both technical understanding of climate impacts and the ability to communicate findings clearly to a non-specialist audience — a deliberate emphasis in a course designed to hone science communication skills.
-
-## Discussion Summary Assignments
-
-The three Discussion Summary Assignments mark the end of each module and serve as structured reflection exercises. Module 1 (due end of Week 6) covers Weeks 1–5 on climate science. Module 2 (due end of Week 9 / start of Week 10) covers Weeks 6–9 on impacts and vulnerability. Module 3 (due end of Week 12) covers Weeks 10–12 on responses, governance, and transformation. In each, students are asked to review their discussion forum contributions, identify the ideas they found most intellectually generative or challenging, and synthesise them into coherent arguments. This process encourages metacognitive reflection — not merely what students learned but how their thinking changed over the module — and develops the habit of revisiting and refining initial reactions to complex material.
-
-## Assignment 2: Emissions and Mitigation at the Community Scale
-
-Building on the mitigation content of Module 3, Assignment 2 examines a community's contribution to greenhouse gas emissions. Students typically obtain community-level greenhouse gas inventory data (where available from municipal governments), identify the dominant emission sources by sector (buildings, transportation, waste, industry), evaluate existing mitigation policies and programmes, and propose additional mitigation actions using the concepts of supply-side and demand-side mitigation, stabilisation wedges, and the barriers framework developed in Weeks 10–11.
 
 ---
 

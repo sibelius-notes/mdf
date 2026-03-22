@@ -363,25 +363,6 @@ Critical theories in global governance — Marxist, feminist, and postcolonial a
 
 What these critical approaches share is a commitment to the **transformative** potential of global governance scholarship: the idea that understanding how global governance works is not merely an academic exercise but a contribution to the project of making it more just, more inclusive, and more accountable.
 
----
-
-# Course Assessment Overview
-
-The course at the University of Waterloo (Spring 2021, Term 1215) was structured around the following assessments:
-
-**Lecture Participation (5%)** took the form of pass/fail lecture activities and reflections associated with each lecture segment, as well as mini-debate reflections for debates in which the student was not a participant.
-
-**Reading Discussion Postings (10%)** required students to write discussion posts of at least 500 words before class for at least five weeks out of eleven, reflecting on and synthesizing that week's assigned readings. The purpose was to ensure engagement with the literature prior to synchronous sessions.
-
-**Debate (15%)** involved a structured debate on a course topic, conducted either live during Thursday class time or asynchronously via Flipgrid video submission. Students could debate one-on-one or two-on-two depending on the composition of that week's debate group.
-
-**Personal Reflection on Debate (15%)** was a five-page written reflection on the debate topic, providing preparation before and analysis after the debate event.
-
-**Take-Home Midterm (20%)** was distributed on June 14 and due June 21, covering the course material from Weeks 1 through 5.
-
-**Final Project Proposal (5%)** was a proposal of no more than two pages, due July 9, indicating whether the student was pursuing a policy brief or a research paper and outlining the proposed topic and potential sources.
-
-**Final Paper or Policy Brief (30%)** was the capstone assignment, due August 11. A policy brief was approximately ten pages; a research paper was fifteen to twenty pages. The paper required a sustained argument; the brief required a policy recommendation.
 
 ---
 
