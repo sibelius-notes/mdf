@@ -1,5 +1,5 @@
 ---
-title: "ECON 212 - Introduction to Game Theory"
+title: "ECON 212: Introduction to Game Theory"
 prof: "Joel Blit"
 ---
 

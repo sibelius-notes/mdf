@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 332 - Aesthetics of Music"
+title: "MUSIC 332: Aesthetics of Music"
 prof: "Laura Gray"
 ---
 # What is the "Aesthetics of Music"?

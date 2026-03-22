@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 370 - Music Theory 3"
+title: "MUSIC 370: Music Theory 3"
 prof: "Karen Sunabacka"
 ---
 The notes below are quite incomplete...

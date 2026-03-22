@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 100 - Introduction to Music"
+title: "MUSIC 100: Introduction to Music"
 prof: "John Brownell"
 ---
 

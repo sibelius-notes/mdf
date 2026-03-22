@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 254 - Baroque and Classical music"
+title: "MUSIC 254: Baroque and Classical music"
 prof: "Laura Gray"
 ---
 # Baroque Era

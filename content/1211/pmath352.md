@@ -1,5 +1,5 @@
 ---
-title: "PMATH 352 — Complex Analysis"
+title: "PMATH 352: Complex Analysis"
 prof: "Ruxandra Moraru"
 ---
 

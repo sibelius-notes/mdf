@@ -1,5 +1,5 @@
 ---
-title: "STAT 444 - Statistical Learning / Nonparametric Regression"
+title: "STAT 444: Statistical Learning / Nonparametric Regression"
 prof: "Reza Ramezan"
 ---
 

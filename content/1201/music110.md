@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 110 - Music in Cultural Contexts"
+title: "MUSIC 110: Music in Cultural Contexts"
 prof: "Maisie Sum, Kate Steiner"
 ---
 # Lec 1 - Jan 7th

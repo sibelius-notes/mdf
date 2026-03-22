@@ -1,5 +1,5 @@
 ---
-title: "PMATH 464 — Introduction to Algebraic Geometry"
+title: "PMATH 464: Introduction to Algebraic Geometry"
 prof: "Prof. David McKinnon"
 ---
 

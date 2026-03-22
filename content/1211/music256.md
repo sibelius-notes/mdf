@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 256 - Music Since 1900"
+title: "MUSIC 256: Music Since 1900"
 prof: "Laura Gray"
 ---
 # Lesson 1a: The Era and Its Music

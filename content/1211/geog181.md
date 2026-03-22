@@ -1,5 +1,5 @@
 ---
-title: "GEOG 181 - Designing Effective Maps"
+title: "GEOG 181: Designing Effective Maps"
 prof: "Weikai Tan"
 ---
 # Week 1: An Introduction to Maps

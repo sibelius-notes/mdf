@@ -1,5 +1,5 @@
 ---
-title: "AMATH 455/655 - Control Theory"
+title: "AMATH 455/655: Control Theory"
 prof: "Jun Liu"
 ---
 ## Week 1: Introduction and State-Space Models

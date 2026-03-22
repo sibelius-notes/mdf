@@ -1,5 +1,5 @@
 ---
-title: "ACTSC 445/845 - Quantitative Enterprise Risk Management"
+title: "ACTSC 445/845: Quantitative Enterprise Risk Management"
 prof: "Fan Yang"
 ---
 

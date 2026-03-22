@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 261 - Opera"
+title: "MUSIC 261: Opera"
 prof: "Laura Gray"
 ---
 # Lesson 1: Elements of Opera

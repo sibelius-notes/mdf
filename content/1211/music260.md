@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 260 - Symphony"
+title: "MUSIC 260: Symphony"
 prof: "Laura Gray"
 ---
 # Lesson 1: What is a Symphony?

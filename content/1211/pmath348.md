@@ -1,5 +1,5 @@
 ---
-title: "PMATH 348 — Fields and Galois Theory"
+title: "PMATH 348: Fields and Galois Theory"
 prof: "Yu-Ru Liu"
 ---
 

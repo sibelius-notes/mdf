@@ -1,5 +1,5 @@
 ---
-title: "SYDE 522 - Machine Intelligence"
+title: "SYDE 522: Machine Intelligence"
 prof: "Hamid R. Tizhoosh"
 ---
 # Lecture 1

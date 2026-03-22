@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 270 - Music Theory 1"
+title: "MUSIC 270: Music Theory 1"
 prof: "Terry Paynter"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "GEOG 219 — Pandemic Geographies"
+title: "GEOG 219: Pandemic Geographies"
 prof: "Unknown"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "CS 350 - Operating Systems (help page)"
+title: "CS 350: Operating Systems (help page)"
 prof: "Lesley Istead"
 ---
 ... Also, check my [miscellaneous notes](../cs350/)

@@ -1,5 +1,5 @@
 ---
-title: "ANTH 204 – Biological Anthropology"
+title: "ANTH 204: Biological Anthropology"
 prof: "Dr. Alexis Dolphin"
 ---
 

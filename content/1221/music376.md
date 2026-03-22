@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 376 - Composition Seminar"
+title: "MUSIC 376: Composition Seminar"
 prof: "Karen Sunabacka"
 ---
 

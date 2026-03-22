@@ -1,5 +1,5 @@
 ---
-title: "BIOL 239 — Genetics"
+title: "BIOL 239: Genetics"
 prof: "Christine Dupont"
 ---
 

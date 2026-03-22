@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 246 - Soundtracks: Music in films"
+title: "MUSIC 246: Soundtracks: Music in films"
 prof: "Simon Wood"
 ---
 # Lecture 1: Introduction — Why Music?

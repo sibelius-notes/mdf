@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 371 - Music Theory 4"
+title: "MUSIC 371: Music Theory 4"
 prof: "Karen Sunabacka"
 ---
 # The Twilight of the Tonal System

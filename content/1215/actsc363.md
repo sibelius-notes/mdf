@@ -1,5 +1,5 @@
 ---
-title: "ACTSC 363 — Loss Models"
+title: "ACTSC 363: Loss Models"
 prof: "Mirabelle Huynh"
 ---
 

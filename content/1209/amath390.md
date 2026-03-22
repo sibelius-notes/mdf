@@ -1,5 +1,5 @@
 ---
-title: "AMATH 390 - Mathematics and Music"
+title: "AMATH 390: Mathematics and Music"
 prof: "K.A. Morris"
 ---
 # Chapter 1: Harmonic Motion

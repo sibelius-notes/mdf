@@ -1,5 +1,5 @@
 ---
-title: "FINE 130 — Introduction to Digital Imaging"
+title: "FINE 130: Introduction to Digital Imaging"
 prof: "Natalie Hunter"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "MUSIC 140 - Popular music"
+title: "MUSIC 140: Popular music"
 prof: "Simon Wood"
 ---
 # Lecture 1
