@@ -2,7 +2,7 @@
 title: "CS 350: Operating Systems (help page)"
 prof: "Lesley Istead"
 ---
-... Also, check my [miscellaneous notes](../cs350/)
+... Also, check my [miscellaneous notes](/1201/cs350) and the [Spring 2021 notes](/1215/cs350).
 
 Note that the assignment questions might change near future. So this help page will not update accordingly for obvious reasons...
 # Basics
