@@ -1,4 +1,4 @@
 ---
 title: "Fall 2018"
-nav_order: 2
+nav_order: 4
 ---
