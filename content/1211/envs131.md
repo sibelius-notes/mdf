@@ -1,26 +1,6 @@
 ---
 title: "ENVS 131: Communication for Environmental Professions"
-prof: "James (surname not confirmed in transcripts)"
----
-
-# Lecture 1: Course Overview and Specifications Grading
-
-ENVS 131 is a course on **communication for environmental professions**, not a traditional environmental studies survey. The premise is that regardless of which environmental career a student pursues — journalism, advocacy, policy, business, academia, or activism — the ability to communicate effectively will determine professional success. The course takes this seriously by structuring every assignment around a real communication form used in professional practice.
-
-The most unusual feature of the course is its **specifications grading** system. Rather than accumulating percentage points on tests and papers, students select a **grade pathway** at the outset of the term. Each pathway has a list of required deliverables; to earn the target grade, a student must complete all of the requirements at a pass standard, which is benchmarked at the B/B+ level. Partial completion of the pathway earns a partial grade.
-
-<div class="definition">
-**Specifications grading** is a competency-based assessment model in which assignments are evaluated as pass/fail rather than on a percentage scale. The "specifications" are the stated criteria a submission must meet. A student who does not meet specifications can usually revise and resubmit. The model emphasizes mastery over accumulation — a student who eventually meets all specifications for an A pathway earns an A, regardless of how many attempts were required.
-</div>
-
-The grade pathways offered in this course are **A+, A, B, C, and D**. The A and A+ pathways require all of the lower pathway deliverables plus additional high-stakes components: the A pathway requires a **pitch competition** entry (either the Concept 5K or the Climate Innovation Discovery Stream), and the A+ pathway requires additional tasks on top of that. The pitch components are connected to real University of Waterloo entrepreneurship programs and have their own external deadlines that students must track alongside the course deadlines.
-
-Core assignments include a **professional email**, a **press release**, an **environmental comic**, a **bubble burst** (a clarity-of-thinking exercise), a **campus or community engagement plan** with an activity log, and a **business letter**. The engagement component requires students to connect with an environmental organization at UW or in the broader community — options mentioned in course include The Radical (a Faculty of Environment newsletter), Invigorate (the annual Faculty of Environment festival), and Fossil Free UW (a fossil fuel divestment advocacy campaign).
-
-Submission in this course initially used **PebblePad**, a digital portfolio system, but the course migrated to the **Learn** learning management system around the fifth week. For most assignments after that transition, Learn is the authoritative submission platform. The exception is resubmissions of earlier work (the community engagement plan Part A and the email), which must be resubmitted to PebblePad because grading infrastructure for those had already been set up there. Students were advised to allow at least two weeks for grading and regrading given the size of the course.
-
-The course uses universal pandemic accommodations, consistent with UW's Winter 2021 policies: all lectures are recorded, tutorials are held virtually over MS Teams, and late penalties are waived under certain circumstances. The professor emphasized that these accommodations were designed to reduce inequities in a term when students were in radically different home environments and time zones.
-
+prof: "James"
 ---
 
 # Lecture 2: Foundations of Rhetoric and Strategic Communication

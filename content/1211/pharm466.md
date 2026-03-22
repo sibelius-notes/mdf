@@ -335,14 +335,6 @@ The care of older adults across the frailty spectrum requires a growing, geriatr
 
 *Coordinator: Prof. Colleen Maxwell, PHARM 491 Seminars in Pharmacy 3, Winter 2021*
 
-### Course Overview
-
-PHARM 491 Seminars in Pharmacy 3 is a seminar series coordinated by Prof. Colleen Maxwell for fourth-year pharmacy students in the final term before entering practice. The course brings expert guest speakers to address **emerging therapeutic issues**, evolving **clinical guidelines**, and **therapeutic care for specific populations** — areas that may not have received extensive coverage in the preceding four years of coursework, or where recent developments demand updated knowledge.
-
-The Winter 2021 cohort was taught entirely in virtual format due to the COVID-19 pandemic, with most sessions pre-recorded and posted on LEARN, and some delivered live via MS Teams. Discussion boards for each speaker were established to allow asynchronous question submission. The schedule included sessions on: neonatal and pediatric hot topics (Dr. Carla Finlader); therapeutics in COVID-19 (Rita Dami); therapeutic developments in respiratory diseases (**Angie Shaw**, Registered Respiratory Therapist, St. Mary's Hospital, Kitchener); transgender health and therapeutics (Dr. Mike LePoi); medical assistance in dying/MAID (Karen Cameron); infectious diseases and antibiotics (Dr. Brett Barrett); and continuing education and the five-year plan (Dr. Rosemary Killeen and guest alumna **Megan Shippey Quinlan**).
-
----
-
 ## Topic: Therapeutic Developments in Respiratory Diseases
 
 *Presenter: Angie Shaw, Registered Respiratory Therapist and Certified Respiratory Educator, Airway Clinic, St. Mary's Hospital, Kitchener (January 28, 2021)*

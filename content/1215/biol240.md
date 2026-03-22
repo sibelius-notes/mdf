@@ -6,14 +6,6 @@ institution: "University of Waterloo"
 textbook: "Wessner, Dupont, Charles, Neufeld. Microbiology, 3rd ed. Wiley, 2020."
 ---
 
-# Course Overview
-
-**BIOL 240: Fundamentals of Microbiology** is an introductory survey of the microbial world, delivered in a fully asynchronous online format during Spring 2021. The course is structured around ten weekly modules, each assessed by a timed quiz, with the best eleven of twelve quiz scores comprising the entire course grade. There is no final examination. Lecture content is distributed as written readings and short video lectures rather than traditional synchronous sessions; students are expected to work through all posted material each week and to consult the required textbook for additional depth and alternative explanations.
-
-The overarching theme of the course is that **microorganisms** are everywhere and that they shape virtually every aspect of life on Earth. From the oxygen in the atmosphere to the fermented foods on our tables, from the cycling of carbon and nitrogen in ecosystems to the infections that threaten human health, microbes are indispensable actors. The course begins with foundational concepts — who first saw microorganisms, what they look like, and how they are classified — before moving into progressively more mechanistic territory covering metabolism, genetics, and regulation. Later modules broaden the perspective to encompass fungi, environmental microbiology, and the large-scale genomic methods used to study microbial communities.
-
----
-
 # Module 1: The Microbial World
 
 ## 1.1 What Is Microbiology?

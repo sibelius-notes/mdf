@@ -5,16 +5,6 @@ term: "1215 (Spring 2021)"
 institution: "University of Waterloo, Department of Geography and Environmental Management"
 ---
 
-# Course Overview
-
-GEOG 207 is an interdisciplinary introduction to climate change covering its scientific foundations, historical context, projected impacts on natural and human systems, and the two primary societal responses: adaptation and mitigation. The course is structured across three modules spanning twelve weeks. Module 1 (Weeks 1–5) covers the physical science of climate. Module 2 (Weeks 6–9) examines impacts and vulnerability. Module 3 (Weeks 10–12) explores responses, governance, and sustainability transformations.
-
-The course was designed by Dr. Sarah Burch, an Associate Professor and Canada Research Chair in the Department of Geography and Environmental Management at the University of Waterloo. The Spring 2021 online delivery was instructed by Jack Virgin, a PhD candidate in the same department whose research focuses on climate modelling and the role of clouds in determining climate sensitivity.
-
-A central intellectual premise of the course is that climate change must be understood through multiple lenses simultaneously: the scientific lens that reveals altered ecosystems and approaching tipping points; the ethical lens that raises questions about the right to develop and the obligation not to harm others; and the political lens that shapes collective responses. The course textbook is Burch, S. L. and Harris, S. E., *Understanding Climate Change: Science, Policy, and Practice* (University of Toronto Press, 2014).
-
----
-
 # Week 1: Introduction
 
 ## The Anthropocene

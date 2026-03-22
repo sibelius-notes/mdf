@@ -9,8 +9,6 @@ The organizing question of the course is deceptively simple: **who were the Gree
 
 ---
 
-# Course Overview
-
 ## What Is Classical Studies?
 
 <div class="definition"><strong>Classical Studies (Classics):</strong> the interdisciplinary academic study of the civilizations of ancient Greece and Rome, drawing on literary texts, material culture, archaeology, art history, philosophy, and history to reconstruct and interpret the ancient world and its legacies.</div>
@@ -26,46 +24,6 @@ The primary source anthology for this course is Paul MacKendrick and Herbert How
 The **Self vs. Other** framework is the course's spine. It shapes not only the selection of topics but the way each topic is approached. Week by week, the course examines a different axis of Greek identity construction: man against the gods (Week 2), Greeks against Trojans (Week 3), Greeks against foreign peoples encountered in colonization (Week 4), Athenians against Spartans (Weeks 5 and 6), Greeks against Persians (Weeks 7 and 8), Athenians against each other during civil war (Week 9), Greeks as spectacle and competitive community at the Olympics (Week 10), Greeks against Macedonians (Week 11), and finally Greeks against Romans — and the question of who absorbs whom (Week 12).
 
 The framework draws on a strand of modern scholarship influenced by anthropology and postcolonial theory, which emphasizes that identity is never self-evident or given but is always performed, contested, and constructed in relation to what it excludes. Applying this lens to ancient Greece is productive precisely because the Greeks were so explicit about the boundaries they drew: their language encoded the distinction between **Hellenes** and **barbaroi** (non-Greek-speakers), between **polites** (citizen) and **xenos** (foreigner/stranger), between **eleutherios** (free) and **doulos** (slave).
-
-## Course Topics: The Full Syllabus Roadmap
-
-The twelve-week schedule covers the following topics, providing a comprehensive overview of Greek society from the Bronze Age through the Roman conquest:
-
-**Week 1** (May 10–14): Introduction — Who Were the Greeks? Geography of Greece; timeline of Greek history. Reading: *Classics in Translation*, "Greek Culture: An Essay," pp. 3–12.
-
-**Week 2** (May 17–21): Greek Religion — Myths of Gods and Men. Definitions of religion and myth; Hesiod; the cosmos; Homeric Hymns; Greek polytheism; the Olympians; dactylic and didactic poetry; cosmology and etiological myths. Reading: *Classics in Translation*, Homeric Hymn to Hermes, pp. 81–87.
-
-**Week 3** (May 24–28): Homer's *Iliad* — Greece and Troy. Homer and Homeric society; epic poetry; Greeks vs. Trojans; Achilles vs. Hector; excavating Homer's Troy. Reading: *Classics in Translation*, Homer's *Iliad*, pp. 13–48.
-
-**Week 4** (May 31–Jun 4): Homer's *Odyssey* — Greeks and Others. Greek colonization; overseas adventures; encountering new peoples; **xenia** (the sacred law of hospitality). Reading: *Classics in Translation*, Homer's *Odyssey*, pp. 49–80.
-
-**Week 5** (Jun 7–11): Ancient Sparta — Spartans as Greek Others? The "Spartan Mirage"; governance and laws; Lycurgus; war and the Spartiates; Leonidas; Spartan women. Reading: Xenophon, *The Polity of the Spartans*.
-
-**Week 6** (Jun 14–18, Test 1): Ancient Athens — Athenians as Ideal Greeks? Early Athens; the rise of democracy; reforms of Solon and Cleisthenes; laws of Pericles; citizenship and the citizen man; ancient vs. modern democracy; architecture of the Acropolis. Reading: *Classics in Translation*, *The Constitution of Athens*, pp. 223–230.
-
-**Week 7** (Jun 21–25, Assignment 1 due): Herodotus — The Persian Wars. Foreign enemies in Greece; Greeks and Persians; characterizing the Other; representing Persians on vase painting. Reading: *Classics in Translation*, Herodotus' *Histories*, pp. 111–130.
-
-**Week 8** (Jun 28–Jul 2): Greek Drama — Aeschylus. Greek drama and stagecraft; re-enacting war on the Greek stage; public response; the Greek theatre and the City Dionysia. Reading: Aeschylus, *The Persians*.
-
-**Week 9** (Jul 5–9): Thucydides — The Peloponnesian War. Greeks fighting Greeks; Athens vs. Sparta; the Sophists and Socrates. Reading: *Classics in Translation*, Thucydides' *Histories*, pp. 231–263; Plato, *The Life and Character of Socrates*, pp. 319–328.
-
-**Week 10** (Jul 12–16): Greek Sports — The Olympics. Athletic competitions; spectacle and festivals; Olympia; victory prizes; **arete** (excellence); representing Olympic sports in sculpture and vase painting. Reading: *The Olympic Games, Sources* (posted on LEARN).
-
-**Week 11** (Jul 19–23, Assignment 2 due): Demosthenes — Greeks and Macedonians. Philip of Macedon; Alexander the Great; **Hellenization**; Greeks and "civilized" Persians. Reading: *Classics in Translation*, Demosthenes, pp. 286–296; Plutarch, *Life of Alexander*.
-
-**Week 12** (Jul 26–30, Test 2): Hellenism and the Rise of Rome. Cultural interactions; Greece ruled by Rome, Rome ruled by Greece; Virgil's *Aeneid*. Reading: Virgil's *Aeneid*, Books 1–4.
-
-## Assessment Structure
-
-Assessment is divided into three components. **Online Assignments** (20% total, 10% each) require students to write approximately 1,000-word comparative essays analyzing a character or event from ancient Greek society by placing an ancient primary source in dialogue with a modern reproduction — a film, podcast, or play. Assignment 1 asks students to compare the characterization of the Persians in Aeschylus's *The Persians* with their portrayal in Zack Snyder's film *300*. Assignment 2 asks students to compare Plutarch's *Life of Alexander* with Oliver Stone's film *Alexander*. Both assignments must be properly cited using **Chicago Manual of Style** format (the citation guide is available in the course materials) and will be screened through Turnitin for plagiarism. Deadlines are June 24 and July 22, 2021; no late work is accepted.
-
-**Online Term Tests** (40% total, 20% each) are 1.5-hour closed-book assessments available for approximately 24 hours on their due dates (June 17 and July 29), consisting of randomized multiple choice, fill-in-the-blank, true/false, and short answer questions. Students are expected to complete them from memory without any aids.
-
-The **Take-Home Exam** (40%) is a 2.5-hour cumulative exam on August 9, 2021, available from 10:00 am to 1:00 pm. It consists of short and long answer analysis questions based on the full term's lectures and readings. Like the tests, it is closed-book and must be completed independently.
-
-The University of Waterloo's standard grading scheme applies: 90–100 is A+, representing "strong evidence of original thinking; good organization; capacity to analyze and synthesize; superior grasp of subject matter." The threshold for passing (D) is 50–52%.
-
----
 
 # Week 1: Welcome and Introduction
 

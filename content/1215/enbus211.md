@@ -3,16 +3,6 @@ title: "ENBUS 211: Principles of Marketing for Sustainability"
 prof: "Sadaf Abasian"
 ---
 
-# Course Overview
-
-ENBUS 211: Principles of Marketing for Sustainability Professionals is a twelve-week, eleven-module course offered through the School of Environment, Enterprise and Development at the University of Waterloo. The course was developed by Jennifer Lynes Murray and is delivered in a fully online format through LEARN. Its central premise is that marketing and sustainability are not opposing forces but are, in fact, deeply intertwined — and that understanding conventional marketing principles is a prerequisite for any sustainability professional who wants to persuade organizations, consumers, or communities to change their behaviour.
-
-The course focuses on **business-to-consumer (B2C) marketing**, meaning it examines how firms communicate with, persuade, and serve end consumers rather than other businesses. This distinction matters because the motivations, decision processes, and communication channels relevant to B2C contexts differ substantially from those relevant to B2B relationships. Students are asked to select one organization and apply course frameworks to that organization across four worksheets, culminating in an elevator pitch and a final set of written recommendations.
-
-By the end of the course, students should be able to understand and explain core marketing concepts and issues (particularly the **marketing mix**), describe current and historical green marketing trends, explain key behaviour change theories for motivating consumers toward sustainable options, apply strategies and tools that address green marketing trends, analyze course teachings as applied to a specific organization, evaluate marketing strategies through case studies, and create a concise pitch related to selling a marketing strategy.
-
----
-
 # Module 1: Introduction to Green Marketing and Social Accountability
 
 ## What Is Marketing?

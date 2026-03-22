@@ -3,14 +3,6 @@ title: "HIST 205/REC 202: Sport, Race, and Society"
 prof: ""
 ---
 
-# Course Overview
-
-HIST 205/REC 202 examines the intersections of sport, race, gender, identity, and social power in modern society. Rather than delivering traditional lectures, the course uses an innovative podcast-based format: each week focuses on a specific podcast from *The Curve with Christopher* or a student-produced podcast exploring a particular topic, supplemented by scholarly notes and primary readings. Students produce their own podcasts as the major assignment, combining historical research with contemporary analysis of how sport both reflects and shapes the societies in which it is embedded.
-
-The course takes seriously the premise that sport is not a neutral space — that athletic arenas, outdoor recreation areas, and sports media are deeply shaped by histories of race, colonialism, and gender politics. By examining cases from hockey to hurling, from the Negro Leagues to Naomi Osaka, the course builds analytical fluency in identifying how structural inequalities manifest in athletic contexts and what it means for athletes to become symbols of social movements.
-
----
-
 # Topic 1: Critical Race Theory and Black Feminist Thought
 
 **Critical Race Theory (CRT)** is a scholarly framework that emerged in legal academia in the late 1970s and 1980s to analyze how race and racism are embedded in social institutions, laws, and everyday practices. CRT challenges the assumption that racial inequality is primarily a matter of individual prejudice, arguing instead that structural and systemic factors — including seemingly neutral policies and practices — produce and reproduce racial hierarchy. In the context of sport, CRT directs attention to who owns teams, who coaches, who gets recruited, how athletes of color are covered in media, and what happens when Black athletes speak out about injustice.
