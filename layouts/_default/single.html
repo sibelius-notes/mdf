@@ -5,7 +5,7 @@
     {{ with .Params.prof }}<p class="course-prof caveat">{{ . }}</p>{{ end }}
     {{ $words := .WordCount }}
     {{ $minutes := div $words 180 }}
-    <p class="reading-time">Estimated reading time: {{ if lt $minutes 1 }}less than 1 minute{{ else if ge $minutes 60 }}{{ div $minutes 60 }} hr {{ mod $minutes 60 }} min{{ else }}{{ $minutes }} minutes{{ end }}</p>
+    <p class="reading-time">Estimated reading time: {{ if lt $minutes 1 }}less than 1 minute{{ else if ge $minutes 60 }}{{ $hrs := div $minutes 60 }}{{ $mins := mod $minutes 60 }}{{ $hrs }} hr{{ if $mins }} {{ $mins }} min{{ end }}{{ else }}{{ $minutes }} minutes{{ end }}</p>
   </header>
 
   <details open class="toc-details">
