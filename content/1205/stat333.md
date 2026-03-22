@@ -169,7 +169,7 @@ The **covariance** satisfies \(\text{Cov}(X,Y) = E[XY] - E[X]E[Y]\) and \(\text{
 ### Moment-Generating Functions
 
 <div class="definition">
-The **moment-generating function** (MGF) of an RV \(X\) is defined as
+The <strong>moment-generating function</strong> (MGF) of an RV \(X\) is defined as
 \[
 \phi_X(t) = E\!\left[e^{tX}\right],
 \]
@@ -224,7 +224,7 @@ and joint moments are recovered via \(E[X^m Y^n] = \frac{\partial^{m+n}}{\partia
 ### Theorem 1.1 — MGF of a Sum
 
 <div class="definition">
-**Theorem 1.1.** If \(X_1, X_2, \ldots, X_n\) are independent RVs with respective MGFs \(\phi_{X_i}(t)\), and \(T = X_1 + X_2 + \cdots + X_n\), then
+<strong>Theorem 1.1.</strong> If \(X_1, X_2, \ldots, X_n\) are independent RVs with respective MGFs \(\phi_{X_i}(t)\), and \(T = X_1 + X_2 + \cdots + X_n\), then
 \[
 \phi_T(t) = \prod_{i=1}^{n} \phi_{X_i}(t).
 \]
@@ -242,7 +242,7 @@ and joint moments are recovered via \(E[X^m Y^n] = \frac{\partial^{m+n}}{\partia
 ## 1.5 The Strong Law of Large Numbers
 
 <div class="definition">
-**Strong Law of Large Numbers.** If \(X_1, X_2, \ldots\) are iid with common (finite) mean \(\mu\), then
+<strong>Strong Law of Large Numbers.</strong> If \(X_1, X_2, \ldots\) are iid with common (finite) mean \(\mu\), then
 \[
 \bar{X}_n = \frac{X_1 + X_2 + \cdots + X_n}{n} \;\xrightarrow{\text{a.s.}}\; \mu \quad \text{as } n \to \infty.
 \]
@@ -261,7 +261,7 @@ The purpose of this chapter is to develop deep fluency with conditioning, becaus
 ### Jointly Discrete Case
 
 <div class="definition">
-Given two discrete RVs \(X_1\) and \(X_2\) with joint PMF \(p(x_1, x_2)\), the **conditional PMF** of \(X_1\) given \(X_2 = x_2\) is
+Given two discrete RVs \(X_1\) and \(X_2\) with joint PMF \(p(x_1, x_2)\), the <strong>conditional PMF</strong> of \(X_1\) given \(X_2 = x_2\) is
 \[
 p_{X_1 \mid X_2}(x_1 \mid x_2) = \frac{p(x_1, x_2)}{p_{X_2}(x_2)}, \qquad p_{X_2}(x_2) > 0.
 \]
@@ -331,7 +331,7 @@ The conditional PDF of \(X \mid (Y = 0)\) is \(f(x \mid 0) = 2(1-x)\) on \((0,1)
 ## 2.2 Conditional Expectation
 
 <div class="definition">
-The **conditional mean** of \(X_1\) given \(X_2 = x_2\) is
+The <strong>conditional mean</strong> of \(X_1\) given \(X_2 = x_2\) is
 \[
 E[X_1 \mid X_2 = x_2] = \sum_{x_1} x_1\, p_{X_1 \mid X_2}(x_1 \mid x_2)
 \quad (\text{discrete}),
@@ -347,7 +347,7 @@ E[aX_1 + bX_2 \mid X_3 = x_3] = a\, E[X_1 \mid X_3 = x_3] + b\, E[X_2 \mid X_3 =
 ### Conditional Variance
 
 <div class="definition">
-The **conditional variance** of \(X_1\) given \(X_2 = x_2\) is
+The <strong>conditional variance</strong> of \(X_1\) given \(X_2 = x_2\) is
 \[
 \text{Var}(X_1 \mid X_2 = x_2) = E[X_1^2 \mid X_2 = x_2] - \bigl(E[X_1 \mid X_2 = x_2]\bigr)^2.
 \]
@@ -360,7 +360,7 @@ This formula (Theorem 2.1) mirrors the ordinary variance formula with conditiona
 A crucial insight is that \(E[g(X_1) \mid X_2 = x_2]\), which is a function of \(x_2\), becomes a **random variable** when \(x_2\) is replaced by the random \(X_2\). We write \(E[g(X_1) \mid X_2]\) for this random variable.
 
 <div class="definition">
-**Theorem 2.2 (Law of Total Expectation).** For any two RVs \(X\) and \(Y\),
+<strong>Theorem 2.2 (Law of Total Expectation).</strong> For any two RVs \(X\) and \(Y\),
 \[
 E[g(X)] = E\!\bigl[E[g(X) \mid Y]\bigr].
 \]
@@ -401,7 +401,7 @@ This elegant result will reappear prominently in Chapter 4.
 ## 2.4 The Conditional Variance Formula and Random Sums
 
 <div class="definition">
-**Theorem 2.3 (Conditional Variance Formula).** For any RVs \(X\) and \(Y\),
+<strong>Theorem 2.3 (Conditional Variance Formula).</strong> For any RVs \(X\) and \(Y\),
 \[
 \text{Var}(X) = E[\text{Var}(X \mid Y)] + \text{Var}(E[X \mid Y]).
 \]
@@ -469,15 +469,15 @@ This beautiful closed form — a geometric series — is obtained purely through
 ### Stochastic Processes
 
 <div class="definition">
-A **stochastic process** is a family of random variables \(\{X_t : t \in \mathcal{T}\}\) indexed by a set \(\mathcal{T}\). The set \(\mathcal{T}\) is the **index set**, usually interpreted as time. When \(\mathcal{T}\) is discrete (e.g., \(\mathcal{T} = \{0, 1, 2, \ldots\}\)), the process is a **discrete-time stochastic process**, denoted \(\{X_n\}_{n \geq 0}\).
+A <strong>stochastic process</strong> is a family of random variables \(\{X_t : t \in \mathcal{T}\}\) indexed by a set \(\mathcal{T}\). The set \(\mathcal{T}\) is the <strong>index set</strong>, usually interpreted as time. When \(\mathcal{T}\) is discrete (e.g., \(\mathcal{T} = \{0, 1, 2, \ldots\}\)), the process is a <strong>discrete-time stochastic process</strong>, denoted \(\{X_n\}_{n \geq 0}\).
 </div>
 
 ### The Markov Property
 
 <div class="definition">
-A discrete-time stochastic process \(\{X_n\}_{n \geq 0}\) is a **discrete-time Markov chain** (DTMC) if:
+A discrete-time stochastic process \(\{X_n\}_{n \geq 0}\) is a <strong>discrete-time Markov chain</strong> (DTMC) if:
 1. Each \(X_n\) is a discrete RV taking values in the state space \(S \subseteq \{0, 1, 2, \ldots\}\).
-2. The **Markov property** holds: for all \(n \geq 0\) and states \(x_0, \ldots, x_{n+1} \in S\),
+2. The <strong>Markov property</strong> holds: for all \(n \geq 0\) and states \(x_0, \ldots, x_{n+1} \in S\),
 \[
 P(X_{n+1} = x_{n+1} \mid X_n = x_n, X_{n-1} = x_{n-1}, \ldots, X_0 = x_0)
 = P(X_{n+1} = x_{n+1} \mid X_n = x_n).
@@ -510,7 +510,7 @@ A matrix with non-negative entries whose rows all sum to 1 is called a **stochas
 ### \(n\)-Step Transition Probabilities and the Chapman–Kolmogorov Equations
 
 <div class="definition">
-The **\(n\)-step transition probability** is
+The <strong>\(n\)-step transition probability</strong> is
 \[
 p_{ij}^{(n)} = P(X_{n+m} = j \mid X_m = i),
 \]
@@ -539,11 +539,11 @@ A DTMC is completely characterized by its one-step TPM \(P\) and initial distrib
 ### Communication Classes and Irreducibility
 
 <div class="definition">
-State \(j\) is **accessible** from state \(i\) (written \(i \to j\)) if there exists \(n \geq 0\) such that \(p_{ij}^{(n)} > 0\).
+State \(j\) is <strong>accessible</strong> from state \(i\) (written \(i \to j\)) if there exists \(n \geq 0\) such that \(p_{ij}^{(n)} > 0\).
 
-States \(i\) and \(j\) **communicate** (written \(i \leftrightarrow j\)) if both \(i \to j\) and \(j \to i\).
+States \(i\) and \(j\) <strong>communicate</strong> (written \(i \leftrightarrow j\)) if both \(i \to j\) and \(j \to i\).
 
-A DTMC is **irreducible** if all states communicate (i.e., there is only one communication class).
+A DTMC is <strong>irreducible</strong> if all states communicate (i.e., there is only one communication class).
 </div>
 
 Communication is an equivalence relation (reflexive, symmetric, transitive), so it partitions the state space into **communication classes**. A practical tool for finding classes is the **state transition diagram**, where a directed arrow connects \(i\) to \(j\) whenever \(p_{ij} > 0\).
@@ -562,11 +562,11 @@ A DTMC is completely characterised by its one-step TPM \(P\) and the initial con
 ### Periodicity
 
 <div class="definition">
-The **period** of state \(i\) is
+The <strong>period</strong> of state \(i\) is
 \[
 d(i) = \gcd\!\bigl\{n \geq 1 : p_{ii}^{(n)} > 0\bigr\}.
 \]
-State \(i\) is **aperiodic** if \(d(i) = 1\), and the chain is aperiodic if all states are.
+State \(i\) is <strong>aperiodic</strong> if \(d(i) = 1\), and the chain is aperiodic if all states are.
 </div>
 
 <div class="theorem">
@@ -582,11 +582,11 @@ If a state \(i\) has \(p_{ii} > 0\), then \(1 \in \{n : p_{ii}^{(n)} > 0\}\), so
 ## 3.2 Transience and Recurrence
 
 <div class="definition">
-The **first-passage probability** from \(i\) to \(j\) at time \(n\) is
+The <strong>first-passage probability</strong> from \(i\) to \(j\) at time \(n\) is
 \[
 f_{ij}^{(n)} = P(X_n = j,\; X_k \neq j \text{ for } k=1,\ldots,n-1 \mid X_0 = i).
 \]
-The **total first-passage probability** (probability of ever visiting \(j\) from \(i\)) is
+The <strong>total first-passage probability</strong> (probability of ever visiting \(j\) from \(i\)) is
 \[
 f_{ij} = \sum_{n=1}^{\infty} f_{ij}^{(n)}.
 \]
@@ -604,9 +604,9 @@ f_{ij}^{(n)} = p_{ij}^{(n)} - \sum_{k=1}^{n-1} f_{ij}^{(k)}\, p_{jj}^{(n-k)}, \q
 with \(f_{ij}^{(1)} = p_{ij}\).
 
 <div class="definition">
-State \(i\) is **recurrent** if \(f_{ii} = 1\) (the chain returns to \(i\) with probability 1).
+State \(i\) is <strong>recurrent</strong> if \(f_{ii} = 1\) (the chain returns to \(i\) with probability 1).
 
-State \(i\) is **transient** if \(f_{ii} < 1\) (there is positive probability of never returning).
+State \(i\) is <strong>transient</strong> if \(f_{ii} < 1\) (there is positive probability of never returning).
 </div>
 
 An equivalent characterisation using the expected number of returns \(M_i = \sum_{n=1}^\infty \mathbf{1}[X_n = i]\) (counting visits to \(i\), not including time 0):
@@ -867,7 +867,7 @@ f_{i,i} = 1 - \frac{1}{S_{i,i}}.
 ## 4.1 The Exponential Distribution — Key Properties
 
 <div class="definition">
-A random variable \(X\) has an **exponential distribution** with rate parameter \(\lambda > 0\), written \(X \sim \text{Exp}(\lambda)\), if its PDF is
+A random variable \(X\) has an <strong>exponential distribution</strong> with rate parameter \(\lambda > 0\), written \(X \sim \text{Exp}(\lambda)\), if its PDF is
 \[
 f(x) = \lambda e^{-\lambda x}, \quad x > 0.
 \]
@@ -968,7 +968,7 @@ P(X_1 < X_2 < \cdots < X_n) = \prod_{i=1}^{n-1} \frac{\lambda_i}{\lambda_i + \la
 ### Counting Processes
 
 <div class="definition">
-A **counting process** \(\{N(t) : t \geq 0\}\) satisfies:
+A <strong>counting process</strong> \(\{N(t) : t \geq 0\}\) satisfies:
 1. \(N(0) = 0\).
 2. \(N(t) \in \{0, 1, 2, \ldots\}\) for all \(t \geq 0\).
 3. \(N(t)\) is non-decreasing: \(s < t \Rightarrow N(s) \leq N(t)\).
@@ -980,7 +980,7 @@ A counting process has **independent increments** if, for non-overlapping interv
 ### Definition of the Poisson Process
 
 <div class="definition">
-A counting process \(\{N(t)\}_{t \geq 0}\) is a **Poisson process** with rate \(\lambda > 0\) if:
+A counting process \(\{N(t)\}_{t \geq 0}\) is a <strong>Poisson process</strong> with rate \(\lambda > 0\) if:
 1. \(N(0) = 0\).
 2. The process has independent and stationary increments.
 3. For small \(h > 0\): \(P(N(h) = 1) = \lambda h + o(h)\) and \(P(N(h) \geq 2) = o(h)\).
@@ -1040,9 +1040,9 @@ Given two independent Poisson processes with arrival times \(S_n^{(1)}\) and \(S
 The standard Poisson process assumes a **constant** arrival rate \(\lambda\). In many real-world scenarios (customer arrivals, traffic flow, etc.), the rate varies with time.
 
 <div class="definition">
-A **non-homogeneous (non-stationary) Poisson process** \(\{N(t)\}_{t \geq 0}\) with rate function \(\lambda(t)\) satisfies:
+A <strong>non-homogeneous (non-stationary) Poisson process</strong> \(\{N(t)\}_{t \geq 0}\) with rate function \(\lambda(t)\) satisfies:
 1. \(N(0) = 0\).
-2. Independent increments (but **not** stationary increments).
+2. Independent increments (but <strong>not</strong> stationary increments).
 3. For small \(h > 0\): \(P(N(t+h) - N(t) = 1) = \lambda(t)h + o(h)\) and \(P(N(t+h) - N(t) \geq 2) = o(h)\).
 </div>
 
@@ -1061,7 +1061,7 @@ with initial condition \(\phi_u(s_1, 0) = 1\). The solution is \(\phi_u(s_1, s_2
 ### 4.4.2 The Compound Poisson Process
 
 <div class="definition">
-A **compound Poisson process** is a process of the form
+A <strong>compound Poisson process</strong> is a process of the form
 \[
 X(t) = \sum_{i=1}^{N(t)} Y_i,
 \]

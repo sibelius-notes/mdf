@@ -261,7 +261,7 @@ To collect all pages of results, use a `while` loop that checks the total number
 
 When data is not available through an API, researchers can **scrape** it directly from websites by parsing their HTML source code. The golden rule: study the source code before writing any scraping code.
 
-**HTML basics:** Websites are built with HTML tags. `<h1>` is a top-level heading; `<p>` is a paragraph; `<a href="url">` is a link; `<div id="name">` and `<span class="name">` are containers. The **Document Object Model (DOM)** is the tree structure of these elements.
+<strong>HTML basics:</strong> Websites are built with HTML tags. `<h1>` is a top-level heading; `<p>` is a paragraph; `<a href="url">` is a link; `<div id="name">` and `<span class="name">` are containers. The <strong>Document Object Model (DOM)</strong> is the tree structure of these elements.
 
 The Python `BeautifulSoup` package parses HTML:
 
@@ -297,7 +297,7 @@ while len(scraped) < target_records:
     current_number += 1
 ```
 
-**Ethical and legal considerations:** Always check a website's Terms of Service before scraping. Do not scrape at a rate that could overwhelm the server (be a good digital citizen). Academic researchers should apply the same ethical standards they use for observational fieldwork: just because data is technically accessible does not mean it is ethically appropriate to collect. There is no single agreed-upon standard, but a useful heuristic is to treat only clearly public content as fair game, and to limit collection to what is genuinely needed.
+<strong>Ethical and legal considerations:</strong> Always check a website's Terms of Service before scraping. Do not scrape at a rate that could overwhelm the server (be a good digital citizen). Academic researchers should apply the same ethical standards they use for observational fieldwork: just because data is technically accessible does not mean it is ethically appropriate to collect. There is no single agreed-upon standard, but a useful heuristic is to treat only clearly public content as fair game, and to limit collection to what is genuinely needed.
 
 ---
 
@@ -305,7 +305,7 @@ while len(scraped) < target_records:
 
 ### Working with Pandas
 
-**Pandas** is the foundational Python package for working with structured (tabular) data. It provides two main data structures: the **Series** (a one-dimensional labeled array) and the **DataFrame** (a two-dimensional table with labeled rows and columns). Pandas is built on top of **NumPy**, a lower-level package for efficient numerical computation.
+<strong>Pandas</strong> is the foundational Python package for working with structured (tabular) data. It provides two main data structures: the <strong>Series</strong> (a one-dimensional labeled array) and the <strong>DataFrame</strong> (a two-dimensional table with labeled rows and columns). Pandas is built on top of <strong>NumPy</strong>, a lower-level package for efficient numerical computation.
 
 ```python
 import pandas as pd
@@ -325,14 +325,14 @@ df.shape                    # (rows, columns)
 
 ### Selecting and Filtering
 
-**Selecting columns** returns a Series (single column) or DataFrame (multiple columns):
+<strong>Selecting columns</strong> returns a Series (single column) or DataFrame (multiple columns):
 
 ```python
 df["country_name"]                          # Series
 df[["country_name", "v2x_polyarchy"]]       # DataFrame
 ```
 
-**Filtering rows** uses boolean conditions:
+<strong>Filtering rows</strong> uses boolean conditions:
 
 ```python
 democracies = df[df["v2x_polyarchy"] > 0.7]
@@ -367,13 +367,13 @@ monthly = df.resample("M", on="date")["value"].sum()
 
 ### Combining DataFrames
 
-**Concatenation** stacks DataFrames vertically (rows) or horizontally (columns):
+<strong>Concatenation</strong> stacks DataFrames vertically (rows) or horizontally (columns):
 
 ```python
 combined = pd.concat([df_2018, df_2019, df_2020], ignore_index=True)
 ```
 
-**Merging** joins DataFrames on shared keys:
+<strong>Merging</strong> joins DataFrames on shared keys:
 
 ```python
 merged = pd.merge(vdem_df, freedom_house_df,
@@ -383,7 +383,7 @@ merged = pd.merge(vdem_df, freedom_house_df,
 
 ### Record Linkage
 
-**Record linkage** is the process of connecting records from different datasets that refer to the same entity (e.g., the same country or person). This is enormously powerful but also fraught: different datasets use different names for the same entity ("United States" vs. "USA" vs. "US"), and imprecise matching can introduce serious errors. Always validate linked records carefully.
+<strong>Record linkage</strong> is the process of connecting records from different datasets that refer to the same entity (e.g., the same country or person). This is enormously powerful but also fraught: different datasets use different names for the same entity ("United States" vs. "USA" vs. "US"), and imprecise matching can introduce serious errors. Always validate linked records carefully.
 
 ---
 
@@ -391,18 +391,18 @@ merged = pd.merge(vdem_df, freedom_house_df,
 
 ### Box's Loop and Iterative Research Workflows
 
-Good data analysis is not linear. George Box famously said that "all models are wrong, but some are useful," and the iterative research workflow known as **Box's Loop** formalizes this: you move repeatedly between data, exploratory analysis, model specification, model critique, and model revision. Exploratory Data Analysis (EDA) is not a preliminary step before "real" analysis; it is intimately woven into the entire modeling process.
+Good data analysis is not linear. George Box famously said that "all models are wrong, but some are useful," and the iterative research workflow known as <strong>Box's Loop</strong> formalizes this: you move repeatedly between data, exploratory analysis, model specification, model critique, and model revision. Exploratory Data Analysis (EDA) is not a preliminary step before "real" analysis; it is intimately woven into the entire modeling process.
 
 ### Principles of Effective Data Visualization
 
 Effective visualizations communicate the structure of data clearly and honestly. A few guiding principles:
 
-1. **Match the visualization to the data type.** Histograms for distributions; scatter plots for relationships between continuous variables; bar charts for categorical comparisons; line plots for time series.
-2. **Reduce chartjunk.** Decorative elements that don't encode data (3D effects, heavy grid lines, gratuitous color) distract from the message.
-3. **Use color purposefully.** Color can distinguish categories (qualitative palette) or represent a gradient (sequential/diverging palette).
-4. **Label everything.** Axes, units, and titles should be self-explanatory.
+1. <strong>Match the visualization to the data type.</strong> Histograms for distributions; scatter plots for relationships between continuous variables; bar charts for categorical comparisons; line plots for time series.
+2. <strong>Reduce chartjunk.</strong> Decorative elements that don't encode data (3D effects, heavy grid lines, gratuitous color) distract from the message.
+3. <strong>Use color purposefully.</strong> Color can distinguish categories (qualitative palette) or represent a gradient (sequential/diverging palette).
+4. <strong>Label everything.</strong> Axes, units, and titles should be self-explanatory.
 
-Python's **Seaborn** library (built on top of Matplotlib) provides high-level functions for attractive statistical visualizations:
+Python's <strong>Seaborn</strong> library (built on top of Matplotlib) provides high-level functions for attractive statistical visualizations:
 
 ```python
 import seaborn as sns
@@ -426,22 +426,22 @@ plt.show()
 
 ### Latent Variables and the Curse of Dimensionality
 
-Many concepts in social science are **latent variables** — abstract constructs that cannot be directly observed. Political ideology, social capital, well-being, deliberative democracy: we cannot measure these directly. Instead, we measure their *dimensions* (indicator variables) and combine them into estimates of the latent construct.
+Many concepts in social science are <strong>latent variables</strong> — abstract constructs that cannot be directly observed. Political ideology, social capital, well-being, deliberative democracy: we cannot measure these directly. Instead, we measure their *dimensions* (indicator variables) and combine them into estimates of the latent construct.
 
-The **curse of dimensionality** refers to the proliferation of problems that arise as the number of variables in a dataset grows. With many variables, the data becomes sparse (observations are spread thin across the high-dimensional space), many statistical models require exponentially more data to work well, and the risk of spurious correlations increases. Dimensionality reduction mitigates these problems.
+The <strong>curse of dimensionality</strong> refers to the proliferation of problems that arise as the number of variables in a dataset grows. With many variables, the data becomes sparse (observations are spread thin across the high-dimensional space), many statistical models require exponentially more data to work well, and the risk of spurious correlations increases. Dimensionality reduction mitigates these problems.
 
 ### Exploratory Factor Analysis (EFA)
 
-**Exploratory Factor Analysis** is a theory-driven approach to measuring latent variables. Given a set of indicator variables (e.g., items on a political ideology survey), EFA estimates the underlying factors that account for the correlations among those items. The key steps are:
-1. **Specification:** Define the latent construct and its measurable dimensions.
-2. **Measurement model:** Fit a factor model that links indicators to latent factors.
-3. **Validation:** Assess reliability (e.g., Cronbach's alpha) and validity (confirmatory factor analysis).
+<strong>Exploratory Factor Analysis</strong> is a theory-driven approach to measuring latent variables. Given a set of indicator variables (e.g., items on a political ideology survey), EFA estimates the underlying factors that account for the correlations among those items. The key steps are:
+1. <strong>Specification:</strong> Define the latent construct and its measurable dimensions.
+2. <strong>Measurement model:</strong> Fit a factor model that links indicators to latent factors.
+3. <strong>Validation:</strong> Assess reliability (e.g., Cronbach's alpha) and validity (confirmatory factor analysis).
 
 EFA is appropriate when the researcher has *theoretical* reasons to believe certain variables cluster together into a latent construct.
 
 ### Principal Component Analysis (PCA)
 
-**Principal Component Analysis (PCA)** is a data-driven method for dimensionality reduction. Rather than starting from theory, PCA finds the directions of maximum variance in the data and projects observations onto a lower-dimensional subspace. The first principal component (PC1) captures the most variance; PC2 captures the most residual variance, and so on.
+<strong>Principal Component Analysis (PCA)</strong> is a data-driven method for dimensionality reduction. Rather than starting from theory, PCA finds the directions of maximum variance in the data and projects observations onto a lower-dimensional subspace. The first principal component (PC1) captures the most variance; PC2 captures the most residual variance, and so on.
 
 PCA is appropriate when:
 - You have a high-dimensional dataset and want to reduce it to a manageable number of features.
@@ -477,16 +477,16 @@ K-means clustering can then be applied to the PCA-reduced data to identify group
 
 ### Text Analysis Pipelines and Workflows
 
-Text analysis in computational social science is not a single method but a *pipeline* of interconnected steps: data collection, cleaning and normalization, quantitative representation, exploratory analysis, and modeling. The key insight is that exploration and modeling are iterative — you move back and forth between the data and your models. At every stage, **close reading** of actual texts is essential. Computers identify patterns; humans interpret and evaluate those patterns.
+Text analysis in computational social science is not a single method but a *pipeline* of interconnected steps: data collection, cleaning and normalization, quantitative representation, exploratory analysis, and modeling. The key insight is that exploration and modeling are iterative — you move back and forth between the data and your models. At every stage, <strong>close reading</strong> of actual texts is essential. Computers identify patterns; humans interpret and evaluate those patterns.
 
-**Computational Grounded Theory** (Nelson 2017) formalizes this human-computer collaboration into three steps:
-1. **Pattern detection:** Use computational methods (topic models, clustering, SVD) to discover latent themes.
-2. **Guided deep reading:** Systematically read texts representative of discovered patterns to develop interpretive understanding.
-3. **Pattern confirmation:** Operationalize the interpretive insights as a supervised classification task and validate computationally.
+<strong>Computational Grounded Theory</strong> (Nelson 2017) formalizes this human-computer collaboration into three steps:
+1. <strong>Pattern detection:</strong> Use computational methods (topic models, clustering, SVD) to discover latent themes.
+2. <strong>Guided deep reading:</strong> Systematically read texts representative of discovered patterns to develop interpretive understanding.
+3. <strong>Pattern confirmation:</strong> Operationalize the interpretive insights as a supervised classification task and validate computationally.
 
 ### Natural Language Processing with spaCy
 
-**spaCy** is the standard Python package for NLP tasks. Loading a language model creates a processing pipeline:
+<strong>spaCy</strong> is the standard Python package for NLP tasks. Loading a language model creates a processing pipeline:
 
 ```python
 import spacy
@@ -497,19 +497,19 @@ abstract = "The explosion of digital data is revolutionizing..."
 doc = nlp(abstract)
 ```
 
-spaCy represents text as nested objects: the **Doc** (full text), **Tokens** (individual words/punctuation), and **Spans** (contiguous sequences). Key token attributes:
+spaCy represents text as nested objects: the <strong>Doc</strong> (full text), <strong>Tokens</strong> (individual words/punctuation), and <strong>Spans</strong> (contiguous sequences). Key token attributes:
 - `token.text` — raw surface form
 - `token.lemma_` — lemmatized form (base word)
 - `token.pos_` — part-of-speech (NOUN, VERB, ADJ, etc.)
 - `token.is_stop` — whether it's a stop word
 - `token.is_punct` — whether it's punctuation
 
-**Normalization** reduces vocabulary size and improves downstream analysis:
+<strong>Normalization</strong> reduces vocabulary size and improves downstream analysis:
 - *Lemmatization* maps inflected forms to their base: "running" → "run", "studies" → "study"
 - *Stemming* strips suffixes heuristically; lemmatization is generally preferred
 - Removing stop words (common words like "the", "and") reduces noise
 
-**Part-of-speech filtering** allows you to extract only content words:
+<strong>Part-of-speech filtering</strong> allows you to extract only content words:
 
 ```python
 lemmas = [tok.lemma_ for tok in doc
@@ -521,11 +521,11 @@ Subject-verb-object triplets (`doc.noun_chunks`, `token.dep_`) provide compact s
 
 ### Document-Term Matrices and Bag of Words
 
-The **bag-of-words** representation ignores word order and treats a document as a collection of word frequencies. The **Document-Term Matrix (DTM)** encodes these counts for an entire corpus: rows are documents, columns are vocabulary terms, and cells contain term frequencies (or weights).
+The <strong>bag-of-words</strong> representation ignores word order and treats a document as a collection of word frequencies. The <strong>Document-Term Matrix (DTM)</strong> encodes these counts for an entire corpus: rows are documents, columns are vocabulary terms, and cells contain term frequencies (or weights).
 
 DTMs are *long and sparse*: vocabularies may contain tens of thousands of terms, but each individual document uses only a small fraction, so most cells are zero.
 
-**TF-IDF (Term Frequency–Inverse Document Frequency)** weights words to emphasize those that are informative about a particular document relative to the rest of the corpus. Words that appear frequently across *all* documents (like "the") get down-weighted; words that appear frequently in *one* document but rarely elsewhere get up-weighted.
+<strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong> weights words to emphasize those that are informative about a particular document relative to the rest of the corpus. Words that appear frequently across *all* documents (like "the") get down-weighted; words that appear frequently in *one* document but rarely elsewhere get up-weighted.
 
 \[ \text{TF-IDF}(w, d) = \text{TF}(w, d) \times \log\left(\frac{N}{\text{DF}(w)}\right) \]
 
@@ -547,7 +547,7 @@ feature_names = vectorizer.get_feature_names_out()
 
 ### Singular Value Decomposition and Latent Semantic Analysis
 
-**Latent Semantic Analysis (LSA)** uses Singular Value Decomposition (SVD) to project documents into a lower-dimensional *latent semantic space*, where documents that use similar words (even if they don't share exact terms) are represented as nearby vectors. SVD is the text-analysis analog of PCA.
+<strong>Latent Semantic Analysis (LSA)</strong> uses Singular Value Decomposition (SVD) to project documents into a lower-dimensional *latent semantic space*, where documents that use similar words (even if they don't share exact terms) are represented as nearby vectors. SVD is the text-analysis analog of PCA.
 
 ```python
 from sklearn.decomposition import TruncatedSVD
@@ -556,7 +556,7 @@ svd = TruncatedSVD(n_components=50, random_state=42)
 X_lsa = svd.fit_transform(dtm)
 ```
 
-**Cosine similarity** measures the similarity between two document vectors regardless of document length:
+<strong>Cosine similarity</strong> measures the similarity between two document vectors regardless of document length:
 
 \[ \text{cosine}(A, B) = \frac{A \cdot B}{\|A\| \|B\|} \]
 
@@ -568,28 +568,28 @@ Values near 1 indicate high similarity; values near 0 indicate near-orthogonalit
 
 ### Social Networks and Relational Thinking
 
-Traditional quantitative social science focuses on the *attributes* of independent individuals — their income, education, attitudes. **Social network analysis** (SNA) focuses instead on *relationships* between entities and how those relationships structure social outcomes. The core insight is that your position in a social network — who you know, how you are connected to others — affects what resources you can access, what information you receive, and how much influence you have.
+Traditional quantitative social science focuses on the *attributes* of independent individuals — their income, education, attitudes. <strong>Social network analysis</strong> (SNA) focuses instead on *relationships* between entities and how those relationships structure social outcomes. The core insight is that your position in a social network — who you know, how you are connected to others — affects what resources you can access, what information you receive, and how much influence you have.
 
 Network analysis distinguishes four ways of conceptualizing social ties:
-1. **Affective ties / sentiment:** patterns of liking, trust, or hostility
-2. **Access and opportunity structures:** resource flows (information, support, capital)
-3. **Socially constructed role relations:** durable positions (boss/employee, parent/child)
-4. **Behavioral interactions:** observed acts (co-presence, email, collaboration)
+1. <strong>Affective ties / sentiment:</strong> patterns of liking, trust, or hostility
+2. <strong>Access and opportunity structures:</strong> resource flows (information, support, capital)
+3. <strong>Socially constructed role relations:</strong> durable positions (boss/employee, parent/child)
+4. <strong>Behavioral interactions:</strong> observed acts (co-presence, email, collaboration)
 
 Each conceptualization implies different data collection strategies and analytical concerns.
 
 ### Network Data Structures
 
-**Nodes** (vertices) represent entities (people, organizations, countries). **Edges** (links, ties) represent relationships. Networks can be:
+<strong>Nodes</strong> (vertices) represent entities (people, organizations, countries). <strong>Edges</strong> (links, ties) represent relationships. Networks can be:
 
-- **Directed** (edges have a source and target: A→B) or **undirected** (edges are symmetric: A–B)
-- **Weighted** (edges carry a numeric weight, e.g., interaction frequency) or **unweighted**
-- **Signed** (edges can be positive or negative) or **unsigned**
-- **Unipartite** (one type of node) or **bipartite** (two types of node, e.g., people and events)
+- <strong>Directed</strong> (edges have a source and target: A→B) or <strong>undirected</strong> (edges are symmetric: A–B)
+- <strong>Weighted</strong> (edges carry a numeric weight, e.g., interaction frequency) or <strong>unweighted</strong>
+- <strong>Signed</strong> (edges can be positive or negative) or <strong>unsigned</strong>
+- <strong>Unipartite</strong> (one type of node) or <strong>bipartite</strong> (two types of node, e.g., people and events)
 
-In modern practice, network data is stored as **edgelists** and **nodelists** in CSV files. An edgelist has at minimum two columns (source, target); additional columns encode edge attributes. A nodelist has one row per node with node attribute data.
+In modern practice, network data is stored as <strong>edgelists</strong> and <strong>nodelists</strong> in CSV files. An edgelist has at minimum two columns (source, target); additional columns encode edge attributes. A nodelist has one row per node with node attribute data.
 
-**NetworkX** is the standard Python package for network analysis:
+<strong>NetworkX</strong> is the standard Python package for network analysis:
 
 ```python
 import networkx as nx
@@ -604,21 +604,21 @@ print(nx.info(G))
 
 ### Walk Structure and Network Flow
 
-A **walk** is any sequence of adjacent nodes and edges. A **trail** is a walk where edges do not repeat. A **path** is a walk where *nodes* do not repeat. A **cycle** is a closed path (starts and ends at the same node). The **length** of a walk/path is the number of edges it traverses.
+A <strong>walk</strong> is any sequence of adjacent nodes and edges. A <strong>trail</strong> is a walk where edges do not repeat. A <strong>path</strong> is a walk where *nodes* do not repeat. A <strong>cycle</strong> is a closed path (starts and ends at the same node). The <strong>length</strong> of a walk/path is the number of edges it traverses.
 
-If there exists a path between two nodes, they are **reachable** from each other. The **shortest path** between two nodes is the path of minimum length. Most social network analysis involves reasoning about how contagions — information, resources, diseases — can flow along walks and paths through a network.
+If there exists a path between two nodes, they are <strong>reachable</strong> from each other. The <strong>shortest path</strong> between two nodes is the path of minimum length. Most social network analysis involves reasoning about how contagions — information, resources, diseases — can flow along walks and paths through a network.
 
 ### Community Detection and Cohesive Subgroups
 
-Networks often decompose into internally dense, externally sparse groups called **communities** or **cohesive subgroups**. These can be detected by several approaches:
+Networks often decompose into internally dense, externally sparse groups called <strong>communities</strong> or <strong>cohesive subgroups</strong>. These can be detected by several approaches:
 
-**Bottom-up approaches:**
-- **k-clique communities:** Build communities from overlapping cliques of size ≥ *k*. Allows nodes to belong to multiple communities.
-- **Louvain / Leiden community detection:** Optimize **modularity** — the difference between observed edge density within communities and the expected density under a random graph model. Leiden is an improvement on Louvain that avoids poorly connected communities.
+<strong>Bottom-up approaches:</strong>
+- <strong>k-clique communities:</strong> Build communities from overlapping cliques of size ≥ *k*. Allows nodes to belong to multiple communities.
+- <strong>Louvain / Leiden community detection:</strong> Optimize <strong>modularity</strong> — the difference between observed edge density within communities and the expected density under a random graph model. Leiden is an improvement on Louvain that avoids poorly connected communities.
 
-**Top-down approaches:**
-- **k-core decomposition:** The *k*-core is the largest subgraph in which every node has at least *k* neighbors within that subgraph. Progressively removing lower-degree nodes reveals the core structure.
-- **k-component analysis:** Finds maximally connected subgraphs where removing fewer than *k* nodes cannot disconnect them (structural cohesion).
+<strong>Top-down approaches:</strong>
+- <strong>k-core decomposition:</strong> The *k*-core is the largest subgraph in which every node has at least *k* neighbors within that subgraph. Progressively removing lower-degree nodes reveals the core structure.
+- <strong>k-component analysis:</strong> Finds maximally connected subgraphs where removing fewer than *k* nodes cannot disconnect them (structural cohesion).
 
 ```python
 import community as community_louvain  # python-louvain
@@ -629,17 +629,17 @@ partition = community_louvain.best_partition(G)
 
 ### Centrality Analysis
 
-**Centrality** measures quantify a node's importance, influence, or power in the network. Each measure operationalizes a different theoretical conception of centrality:
+<strong>Centrality</strong> measures quantify a node's importance, influence, or power in the network. Each measure operationalizes a different theoretical conception of centrality:
 
-**Degree centrality** counts direct connections. A node with many ties is "popular" or "active." In directed networks, distinguish in-degree (ties received) from out-degree (ties sent).
+<strong>Degree centrality</strong> counts direct connections. A node with many ties is "popular" or "active." In directed networks, distinguish in-degree (ties received) from out-degree (ties sent).
 
-**Betweenness centrality** counts how often a node lies on the shortest path between all other pairs of nodes. High betweenness = broker position = ability to control information flow.
+<strong>Betweenness centrality</strong> counts how often a node lies on the shortest path between all other pairs of nodes. High betweenness = broker position = ability to control information flow.
 
 \[ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} \]
 
-**Eigenvector centrality** gives higher scores to nodes connected to other high-scoring nodes. Being connected to important nodes matters, not just having many connections. Google's PageRank is a variant of eigenvector centrality.
+<strong>Eigenvector centrality</strong> gives higher scores to nodes connected to other high-scoring nodes. Being connected to important nodes matters, not just having many connections. Google's PageRank is a variant of eigenvector centrality.
 
-**Bonacich power centrality** distinguishes situations where connection to powerful others is beneficial (positive beta) versus situations where connection to powerful others is dangerous (negative beta, e.g., dependency relations).
+<strong>Bonacich power centrality</strong> distinguishes situations where connection to powerful others is beneficial (positive beta) versus situations where connection to powerful others is dangerous (negative beta, e.g., dependency relations).
 
 ```python
 degree_centrality = nx.degree_centrality(G)
@@ -655,11 +655,11 @@ Always interpret centrality measures in relation to the *type of relationship* e
 
 ### Simple Contagions and Network Epidemic Models
 
-A **simple contagion** spreads through a network by any single contact: a pathogen, a piece of information, a rumor. The key feature is that exposure to one infected neighbor is sufficient to become "infected."
+A <strong>simple contagion</strong> spreads through a network by any single contact: a pathogen, a piece of information, a rumor. The key feature is that exposure to one infected neighbor is sufficient to become "infected."
 
-The classic epidemic model is **SIR**: every node can be Susceptible, Infected, or Recovered/Removed. Traditional SIR models use differential equations that assume random mixing (every individual is equally likely to contact every other). Network-based SIR models are more realistic: they restrict spread to observed edges, meaning that network structure (density, clustering, presence of hubs) profoundly shapes epidemic outcomes.
+The classic epidemic model is <strong>SIR</strong>: every node can be Susceptible, Infected, or Recovered/Removed. Traditional SIR models use differential equations that assume random mixing (every individual is equally likely to contact every other). Network-based SIR models are more realistic: they restrict spread to observed edges, meaning that network structure (density, clustering, presence of hubs) profoundly shapes epidemic outcomes.
 
-**NDlib** is the Python package for agent-based epidemic simulations on networks:
+<strong>NDlib</strong> is the Python package for agent-based epidemic simulations on networks:
 
 ```python
 import ndlib.models.ModelConfig as mc
@@ -679,24 +679,24 @@ Running many simulations and aggregating results (averaging across stochastic re
 
 ### Complex Contagions
 
-Using the analogy of infectious disease to describe the spread of *behaviors* and *beliefs* is a "highly-consequential mistake" (McLevey). Unlike simple contagions, **complex contagions** require reinforcement from *multiple independent* sources before adoption. Adopting a risky or socially deviant behavior (quitting a job to join a protest, converting to a new religion, embracing a radical political ideology) requires social proof from multiple independent contacts, not just a single exposure.
+Using the analogy of infectious disease to describe the spread of *behaviors* and *beliefs* is a "highly-consequential mistake" (McLevey). Unlike simple contagions, <strong>complex contagions</strong> require reinforcement from *multiple independent* sources before adoption. Adopting a risky or socially deviant behavior (quitting a job to join a protest, converting to a new religion, embracing a radical political ideology) requires social proof from multiple independent contacts, not just a single exposure.
 
 Complex contagions spread more slowly and via different network pathways than simple ones:
 
-- Simple contagions spread fastest through **weak ties** (bridges between densely connected clusters), because these weak ties carry the contagion to new communities quickly.
-- Complex contagions spread fastest through **wide bridges** — cohesive clusters with many redundant connections — because confirmation from multiple independent sources is needed.
+- Simple contagions spread fastest through <strong>weak ties</strong> (bridges between densely connected clusters), because these weak ties carry the contagion to new communities quickly.
+- Complex contagions spread fastest through <strong>wide bridges</strong> — cohesive clusters with many redundant connections — because confirmation from multiple independent sources is needed.
 
-**Threshold models** capture complex contagion dynamics: a node adopts a behavior when the fraction of its neighbors who have already adopted exceeds some threshold *θ*. NDlib implements various threshold models including the Watts threshold model.
+<strong>Threshold models</strong> capture complex contagion dynamics: a node adopts a behavior when the fraction of its neighbors who have already adopted exceeds some threshold *θ*. NDlib implements various threshold models including the Watts threshold model.
 
 ### Research Ethics, Politics, and Practices in Computational Social Science
 
 Computational social science involves power that our ethical standards have not yet fully caught up with. The rapid development of computational methods has outpaced the development of ethical norms and guidelines. McLevey argues forcefully that researchers must be *proactive* rather than reactive — anticipating potential harms before they materialize, rather than scrambling to address them after the fact.
 
-**Informed consent** presents new challenges. Social media data is technically public, but users cannot reasonably anticipate all the ways their data will be combined, analyzed, and interpreted. The ability to **re-identify** nominally anonymized data is greater than most people realize: in the famous AOL search log leak of 2006, a New York Times reporter identified a specific individual from their search history within days. Researchers can de-anonymize individuals without realizing it by linking multiple datasets.
+<strong>Informed consent</strong> presents new challenges. Social media data is technically public, but users cannot reasonably anticipate all the ways their data will be combined, analyzed, and interpreted. The ability to <strong>re-identify</strong> nominally anonymized data is greater than most people realize: in the famous AOL search log leak of 2006, a New York Times reporter identified a specific individual from their search history within days. Researchers can de-anonymize individuals without realizing it by linking multiple datasets.
 
-**Algorithmic bias** occurs when machine learning models trained on biased data encode and amplify existing social inequalities. Training data reflects the social world with all its biases; models trained on this data can systematically disadvantage already-marginalized groups (in hiring algorithms, loan approval, criminal recidivism prediction, facial recognition). The harm done by biased systems is often invisible to the people who built them.
+<strong>Algorithmic bias</strong> occurs when machine learning models trained on biased data encode and amplify existing social inequalities. Training data reflects the social world with all its biases; models trained on this data can systematically disadvantage already-marginalized groups (in hiring algorithms, loan approval, criminal recidivism prediction, facial recognition). The harm done by biased systems is often invisible to the people who built them.
 
-**The "I won't build it" list** (Rachael Tatman) is a practical ethical framework: articulate explicitly what types of systems you will and will not build, before the pressure to build them arises. Normalizing explicit refusal — as a professional norm, not just personal preference — raises the cost of building harmful systems.
+<strong>The "I won't build it" list</strong> (Rachael Tatman) is a practical ethical framework: articulate explicitly what types of systems you will and will not build, before the pressure to build them arises. Normalizing explicit refusal — as a professional norm, not just personal preference — raises the cost of building harmful systems.
 
 Making your normative values explicit and visible in your research is not a sign of bias; it produces better, more transparent, and more accountable science.
 
@@ -706,15 +706,15 @@ Making your normative values explicit and visible in your research is not a sign
 
 ### Overview of Machine Learning Paradigms
 
-**Machine learning** is the study of algorithms that improve their performance through experience (data). The field is organized around three major paradigms:
+<strong>Machine learning</strong> is the study of algorithms that improve their performance through experience (data). The field is organized around three major paradigms:
 
-**Symbolic learning** draws inspiration from rules-based reasoning, abstraction, and analogy. Models learn explicit rules or boundaries (decision trees, linear regression, k-nearest neighbors). These models tend to be interpretable — you can inspect the rules or coefficients — but may struggle with complex, unstructured data.
+<strong>Symbolic learning</strong> draws inspiration from rules-based reasoning, abstraction, and analogy. Models learn explicit rules or boundaries (decision trees, linear regression, k-nearest neighbors). These models tend to be interpretable — you can inspect the rules or coefficients — but may struggle with complex, unstructured data.
 
-**Connectionist learning** draws inspiration from biological neural networks. Complex networks of artificial neurons are arranged in layers and learn distributed representations of data. Neural networks are extremely powerful but opaque ("black box") and require large amounts of data.
+<strong>Connectionist learning</strong> draws inspiration from biological neural networks. Complex networks of artificial neurons are arranged in layers and learn distributed representations of data. Neural networks are extremely powerful but opaque ("black box") and require large amounts of data.
 
-**Probabilistic machine learning** is closest to classical statistics. Models encode uncertainty explicitly through probability distributions. Bayesian models belong here. They are highly interpretable and principled but computationally demanding.
+<strong>Probabilistic machine learning</strong> is closest to classical statistics. Models encode uncertainty explicitly through probability distributions. Bayesian models belong here. They are highly interpretable and principled but computationally demanding.
 
-**Supervised vs. unsupervised learning:**
+<strong>Supervised vs. unsupervised learning:</strong>
 - *Supervised* learning trains on labeled data (each observation has a known outcome). Goal: predict the outcome for new observations. Examples: regression, classification.
 - *Unsupervised* learning finds structure in unlabeled data. Examples: clustering, dimensionality reduction, topic modeling.
 
@@ -722,10 +722,10 @@ Making your normative values explicit and visible in your research is not a sign
 
 All supervised learning follows a standard workflow:
 
-1. **Split data** into training and test sets.
-2. **Train** the model on the training set.
-3. **Evaluate** performance on the held-out test set.
-4. **Report** metrics honestly — metrics computed on training data are inflated.
+1. <strong>Split data</strong> into training and test sets.
+2. <strong>Train</strong> the model on the training set.
+3. <strong>Evaluate</strong> performance on the held-out test set.
+4. <strong>Report</strong> metrics honestly — metrics computed on training data are inflated.
 
 The train-test split prevents the model from simply memorizing the data rather than learning generalizable patterns:
 
@@ -743,7 +743,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ### Cross-Validation
 
-A single train-test split may produce misleading results if the data happens to be ordered or clustered. **k-fold cross-validation** addresses this by repeatedly splitting the data: the dataset is divided into *k* equally-sized folds, and the model is trained and evaluated *k* times, each time holding out one fold for validation. The *k* evaluation scores are then examined together, or averaged.
+A single train-test split may produce misleading results if the data happens to be ordered or clustered. <strong>k-fold cross-validation</strong> addresses this by repeatedly splitting the data: the dataset is divided into *k* equally-sized folds, and the model is trained and evaluated *k* times, each time holding out one fold for validation. The *k* evaluation scores are then examined together, or averaged.
 
 `ShuffleSplit` randomizes the order of observations before folding, improving stability:
 
@@ -756,7 +756,7 @@ cv_scores = cross_val_score(model, X_train, y_train, cv=shuffle_split)
 
 ### Linear and Logistic Regression
 
-**Ordinary Least Squares (OLS)** regression finds the hyperplane (coefficients) that minimizes mean squared error between predicted and observed values. The R² score measures the proportion of variance explained (0 = no explanatory power; 1 = perfect fit).
+<strong>Ordinary Least Squares (OLS)</strong> regression finds the hyperplane (coefficients) that minimizes mean squared error between predicted and observed values. The R² score measures the proportion of variance explained (0 = no explanatory power; 1 = perfect fit).
 
 ```python
 from sklearn.linear_model import LinearRegression
@@ -768,38 +768,38 @@ print("R²:", ols.score(X_train, y_train))
 
 A very high R² on training data (e.g., 0.80) may indicate overfitting. The cross-validated score is more informative.
 
-**Ridge regression** adds an L2 regularization penalty that shrinks coefficient magnitudes, reducing overfitting:
+<strong>Ridge regression</strong> adds an L2 regularization penalty that shrinks coefficient magnitudes, reducing overfitting:
 
 \[ J(\theta) = \text{MSE}(\theta) + \alpha \sum_{j=1}^{n} \theta_j^2 \]
 
-**Lasso regression** uses an L1 penalty that forces some coefficients to exactly zero, performing automatic feature selection.
+<strong>Lasso regression</strong> uses an L1 penalty that forces some coefficients to exactly zero, performing automatic feature selection.
 
-**Logistic regression** predicts binary outcomes. Instead of a continuous prediction, it models the log-odds of the positive class as a linear function of the features. The output is a probability between 0 and 1:
+<strong>Logistic regression</strong> predicts binary outcomes. Instead of a continuous prediction, it models the log-odds of the positive class as a linear function of the features. The output is a probability between 0 and 1:
 
 \[ P(y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}} \]
 
 ### Tree-Based Methods
 
-**Decision trees** learn a hierarchy of binary splits on feature values that partition the data into increasingly homogeneous groups. At each node, the algorithm selects the feature and threshold that best separates the classes.
+<strong>Decision trees</strong> learn a hierarchy of binary splits on feature values that partition the data into increasingly homogeneous groups. At each node, the algorithm selects the feature and threshold that best separates the classes.
 
-Decision trees are prone to **overfitting** — a deep tree can perfectly classify training data by memorizing it. Pruning (limiting tree depth) mitigates this.
+Decision trees are prone to <strong>overfitting</strong> — a deep tree can perfectly classify training data by memorizing it. Pruning (limiting tree depth) mitigates this.
 
-**Random forests** aggregate many decision trees trained on bootstrapped subsamples of the data and random subsets of features. The predictions are averaged (regression) or voted (classification). The ensemble is much more stable and accurate than any individual tree.
+<strong>Random forests</strong> aggregate many decision trees trained on bootstrapped subsamples of the data and random subsets of features. The predictions are averaged (regression) or voted (classification). The ensemble is much more stable and accurate than any individual tree.
 
-**Gradient Boosted Machines (GBMs)** (XGBoost, LightGBM) train trees sequentially, each one correcting the errors of the previous. GBMs often achieve the best performance among non-neural methods on structured data.
+<strong>Gradient Boosted Machines (GBMs)</strong> (XGBoost, LightGBM) train trees sequentially, each one correcting the errors of the previous. GBMs often achieve the best performance among non-neural methods on structured data.
 
 ### Model Evaluation Metrics
 
-For regression: **MSE** (mean squared error), **RMSE** (root MSE), **R²**.
+For regression: <strong>MSE</strong> (mean squared error), <strong>RMSE</strong> (root MSE), <strong>R²</strong>.
 
 For classification:
-- **Accuracy:** fraction correctly classified (misleading when classes are imbalanced)
-- **Precision:** of predicted positives, how many are truly positive
-- **Recall (sensitivity):** of true positives, how many were correctly predicted
-- **F1 score:** harmonic mean of precision and recall
-- **Confusion matrix:** full breakdown of true positives, false positives, true negatives, false negatives
+- <strong>Accuracy:</strong> fraction correctly classified (misleading when classes are imbalanced)
+- <strong>Precision:</strong> of predicted positives, how many are truly positive
+- <strong>Recall (sensitivity):</strong> of true positives, how many were correctly predicted
+- <strong>F1 score:</strong> harmonic mean of precision and recall
+- <strong>Confusion matrix:</strong> full breakdown of true positives, false positives, true negatives, false negatives
 
-The **ROC curve** plots true positive rate vs. false positive rate as the classification threshold varies; the **AUC** (area under the curve) summarizes this as a single number (1 = perfect; 0.5 = random).
+The <strong>ROC curve</strong> plots true positive rate vs. false positive rate as the classification threshold varies; the <strong>AUC</strong> (area under the curve) summarizes this as a single number (1 = perfect; 0.5 = random).
 
 ---
 
@@ -807,49 +807,49 @@ The **ROC curve** plots true positive rate vs. false positive rate as the classi
 
 ### From Perceptrons to Deep Networks
 
-The history of neural networks begins with the **perceptron** (Rosenblatt 1957), a single artificial neuron that takes a weighted sum of its inputs, applies a step function, and outputs a binary prediction. The perceptron is the simplest model in the connectionist paradigm and provides the conceptual foundation for more complex architectures.
+The history of neural networks begins with the <strong>perceptron</strong> (Rosenblatt 1957), a single artificial neuron that takes a weighted sum of its inputs, applies a step function, and outputs a binary prediction. The perceptron is the simplest model in the connectionist paradigm and provides the conceptual foundation for more complex architectures.
 
-A **multilayer perceptron (MLP)** stacks multiple layers of neurons:
-1. **Input layer:** raw feature values enter here; each unit represents one feature
-2. **Hidden layers:** intermediate representations; each unit takes a weighted sum of the previous layer's activations and applies an activation function
-3. **Output layer:** final prediction; for classification, typically uses softmax to produce a probability distribution over classes
+A <strong>multilayer perceptron (MLP)</strong> stacks multiple layers of neurons:
+1. <strong>Input layer:</strong> raw feature values enter here; each unit represents one feature
+2. <strong>Hidden layers:</strong> intermediate representations; each unit takes a weighted sum of the previous layer's activations and applies an activation function
+3. <strong>Output layer:</strong> final prediction; for classification, typically uses softmax to produce a probability distribution over classes
 
-The **activation function** introduces non-linearity, allowing the network to learn complex decision boundaries. Common choices:
-- **ReLU (Rectified Linear Unit):** max(0, *x*). Simple, fast, avoids vanishing gradient. Standard for hidden layers.
-- **Sigmoid:** squashes output to (0, 1). Used in binary output layers.
-- **Softmax:** normalizes outputs to sum to 1. Used in multi-class output layers.
+The <strong>activation function</strong> introduces non-linearity, allowing the network to learn complex decision boundaries. Common choices:
+- <strong>ReLU (Rectified Linear Unit):</strong> max(0, *x*). Simple, fast, avoids vanishing gradient. Standard for hidden layers.
+- <strong>Sigmoid:</strong> squashes output to (0, 1). Used in binary output layers.
+- <strong>Softmax:</strong> normalizes outputs to sum to 1. Used in multi-class output layers.
 
 ### Training Neural Networks
 
-Training adjusts the network's *weights* to minimize a **loss function** that measures prediction error:
-- **Mean squared error** for regression
-- **Cross-entropy loss** for classification
+Training adjusts the network's *weights* to minimize a <strong>loss function</strong> that measures prediction error:
+- <strong>Mean squared error</strong> for regression
+- <strong>Cross-entropy loss</strong> for classification
 
-**Forward propagation:** an input passes through the network layer by layer, producing a prediction.
+<strong>Forward propagation:</strong> an input passes through the network layer by layer, producing a prediction.
 
-**Backpropagation:** the error signal flows backward through the network, computing the gradient of the loss with respect to each weight using the chain rule.
+<strong>Backpropagation:</strong> the error signal flows backward through the network, computing the gradient of the loss with respect to each weight using the chain rule.
 
-**Gradient descent** updates weights in the direction that reduces loss:
+<strong>Gradient descent</strong> updates weights in the direction that reduces loss:
 
 \[ w \leftarrow w - \eta \frac{\partial L}{\partial w} \]
 
-where *η* is the **learning rate**. Too large: training is unstable. Too small: training is slow.
+where *η* is the <strong>learning rate</strong>. Too large: training is unstable. Too small: training is slow.
 
-**Stochastic gradient descent (SGD)** computes gradients on small random **batches** of training data, making each update noisier but faster.
+<strong>Stochastic gradient descent (SGD)</strong> computes gradients on small random <strong>batches</strong> of training data, making each update noisier but faster.
 
 ### Overfitting and Regularization
 
 Neural networks with many parameters easily overfit: they memorize training data rather than learning generalizable patterns. The signature of overfitting is that training loss decreases while validation loss increases (or stagnates).
 
 Strategies to combat overfitting:
-- **Reduce model size:** fewer layers or neurons
-- **Dropout:** randomly zero out a fraction of activations during training, forcing the network to learn redundant representations
-- **Early stopping:** stop training when validation loss stops improving
-- **Weight decay (L2 regularization):** penalize large weights
+- <strong>Reduce model size:</strong> fewer layers or neurons
+- <strong>Dropout:</strong> randomly zero out a fraction of activations during training, forcing the network to learn redundant representations
+- <strong>Early stopping:</strong> stop training when validation loss stops improving
+- <strong>Weight decay (L2 regularization):</strong> penalize large weights
 
 ### Building Neural Networks with Keras and TensorFlow
 
-**TensorFlow** is Google's tensor-processing library; **Keras** is its high-level Python API. The typical workflow:
+<strong>TensorFlow</strong> is Google's tensor-processing library; <strong>Keras</strong> is its high-level Python API. The typical workflow:
 
 ```python
 import tensorflow as tf
@@ -884,15 +884,15 @@ history = model.fit(
 model.evaluate(X_test, y_test)
 ```
 
-**Learning curves** (plotting training and validation loss over epochs) are the primary diagnostic tool. A **confusion matrix** shows per-class performance.
+<strong>Learning curves</strong> (plotting training and validation loss over epochs) are the primary diagnostic tool. A <strong>confusion matrix</strong> shows per-class performance.
 
 ### Advanced Architectures (Overview)
 
-**Convolutional Neural Networks (CNNs)** apply learned filters across spatial or sequential data (images, audio). They dramatically reduce parameter count compared to fully-connected networks by sharing filter weights across positions.
+<strong>Convolutional Neural Networks (CNNs)</strong> apply learned filters across spatial or sequential data (images, audio). They dramatically reduce parameter count compared to fully-connected networks by sharing filter weights across positions.
 
-**Recurrent Neural Networks (RNNs)** and **LSTMs** process sequences by maintaining hidden state that carries information from earlier timesteps. Largely superseded by Transformers for NLP tasks.
+<strong>Recurrent Neural Networks (RNNs)</strong> and <strong>LSTMs</strong> process sequences by maintaining hidden state that carries information from earlier timesteps. Largely superseded by Transformers for NLP tasks.
 
-**Transformer models** (BERT, GPT, etc.) use attention mechanisms to relate every position in a sequence to every other, enabling long-range dependency modeling. They are the foundation of modern NLP.
+<strong>Transformer models</strong> (BERT, GPT, etc.) use attention mechanisms to relate every position in a sequence to every other, enabling long-range dependency modeling. They are the foundation of modern NLP.
 
 Ethical concerns for deep learning include encoded biases, lack of interpretability, amplification of surveillance capabilities, and the concentration of resources required for training large models.
 
@@ -904,65 +904,65 @@ Ethical concerns for deep learning include encoded biases, lack of interpretabil
 
 Statistical models and machine learning models are different tools for different goals:
 
-- **Inference** (statistics): understand the relationship between variables; estimate parameters with uncertainty; test hypotheses. Prioritizes interpretability and calibrated uncertainty.
-- **Prediction** (machine learning): accurately predict outcomes for new observations. Prioritizes predictive accuracy, sometimes at the cost of interpretability.
+- <strong>Inference</strong> (statistics): understand the relationship between variables; estimate parameters with uncertainty; test hypotheses. Prioritizes interpretability and calibrated uncertainty.
+- <strong>Prediction</strong> (machine learning): accurately predict outcomes for new observations. Prioritizes predictive accuracy, sometimes at the cost of interpretability.
 
 These goals are not mutually exclusive — the best work in computational social science often uses both. A good pipeline might use unsupervised ML for exploration, followed by a statistical model for inference.
 
 ### Frequentist vs. Bayesian Interpretations of Probability
 
-**Frequentist statistics** interprets probability as the long-run frequency of an event across many repetitions of an experiment. Parameters are fixed (not random); data is random. Uncertainty is expressed through confidence intervals and p-values.
+<strong>Frequentist statistics</strong> interprets probability as the long-run frequency of an event across many repetitions of an experiment. Parameters are fixed (not random); data is random. Uncertainty is expressed through confidence intervals and p-values.
 
-**Bayesian statistics** treats probability as a degree of belief, updated in light of evidence. *Parameters* are random variables with probability distributions; data is fixed. This is formalized in **Bayes' theorem**:
+<strong>Bayesian statistics</strong> treats probability as a degree of belief, updated in light of evidence. *Parameters* are random variables with probability distributions; data is fixed. This is formalized in <strong>Bayes' theorem</strong>:
 
 \[ P(\theta \mid D) = \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)} \]
 
-- \(P(\theta)\) — **prior:** belief about parameters *before* seeing data
-- \(P(D \mid \theta)\) — **likelihood:** probability of data given parameters
-- \(P(\theta \mid D)\) — **posterior:** updated belief about parameters *after* seeing data
-- \(P(D)\) — **evidence (marginal likelihood):** normalizing constant
+- \(P(\theta)\) — <strong>prior:</strong> belief about parameters *before* seeing data
+- \(P(D \mid \theta)\) — <strong>likelihood:</strong> probability of data given parameters
+- \(P(\theta \mid D)\) — <strong>posterior:</strong> updated belief about parameters *after* seeing data
+- \(P(D)\) — <strong>evidence (marginal likelihood):</strong> normalizing constant
 
-Bayesian inference replaces point estimates with full **posterior distributions**, which naturally express uncertainty.
+Bayesian inference replaces point estimates with full <strong>posterior distributions</strong>, which naturally express uncertainty.
 
 ### Discriminative vs. Generative Models
 
-**Discriminative models** learn the boundary between classes: they model P(y | x), the conditional probability of the output given the input. Logistic regression and neural classifiers are discriminative.
+<strong>Discriminative models</strong> learn the boundary between classes: they model P(y | x), the conditional probability of the output given the input. Logistic regression and neural classifiers are discriminative.
 
-**Generative models** learn the joint distribution P(x, y) — how the data was generated. They can generate new synthetic data. Bayesian hierarchical models and latent Dirichlet allocation (LDA) are generative.
+<strong>Generative models</strong> learn the joint distribution P(x, y) — how the data was generated. They can generate new synthetic data. Bayesian hierarchical models and latent Dirichlet allocation (LDA) are generative.
 
 ### Probability Theory Primer
 
-**Random variables** represent quantities that can take different values according to a probability distribution.
+<strong>Random variables</strong> represent quantities that can take different values according to a probability distribution.
 
-**Discrete distributions** assign probability to countable outcomes:
-- **Bernoulli(p):** a single trial with probability *p* of success
-- **Binomial(n, p):** number of successes in *n* independent Bernoulli trials
-- **Poisson(λ):** number of events in a fixed interval when events occur at rate λ
+<strong>Discrete distributions</strong> assign probability to countable outcomes:
+- <strong>Bernoulli(p):</strong> a single trial with probability *p* of success
+- <strong>Binomial(n, p):</strong> number of successes in *n* independent Bernoulli trials
+- <strong>Poisson(λ):</strong> number of events in a fixed interval when events occur at rate λ
 
-**Continuous distributions** assign probability density:
-- **Normal(μ, σ):** the bell curve; arises from the Central Limit Theorem
-- **Exponential(λ):** time until first event in a Poisson process; always positive
-- **Beta(α, β):** constrained to (0, 1); useful for probabilities and proportions
+<strong>Continuous distributions</strong> assign probability density:
+- <strong>Normal(μ, σ):</strong> the bell curve; arises from the Central Limit Theorem
+- <strong>Exponential(λ):</strong> time until first event in a Poisson process; always positive
+- <strong>Beta(α, β):</strong> constrained to (0, 1); useful for probabilities and proportions
 
-**Marginal probability** P(A): probability of A, ignoring everything else.
-**Joint probability** P(A, B): probability of both A and B occurring.
-**Conditional probability** P(A | B): probability of A, given that B has occurred.
+<strong>Marginal probability</strong> P(A): probability of A, ignoring everything else.
+<strong>Joint probability</strong> P(A, B): probability of both A and B occurring.
+<strong>Conditional probability</strong> P(A | B): probability of A, given that B has occurred.
 
 \[ P(A \mid B) = \frac{P(A, B)}{P(B)} \]
 
 ### Approximate Posterior Inference: MCMC
 
-Computing the posterior analytically is usually impossible for complex models. **Markov Chain Monte Carlo (MCMC)** methods approximate the posterior by sampling from it.
+Computing the posterior analytically is usually impossible for complex models. <strong>Markov Chain Monte Carlo (MCMC)</strong> methods approximate the posterior by sampling from it.
 
-A **Markov Chain** is a sequence of states where transitions depend only on the current state ("memoryless"). Markov chains converge to a stationary distribution — which we set to be our target posterior.
+A <strong>Markov Chain</strong> is a sequence of states where transitions depend only on the current state ("memoryless"). Markov chains converge to a stationary distribution — which we set to be our target posterior.
 
-The **Metropolis-Hastings algorithm** proposes a candidate parameter value, then accepts or rejects it based on the ratio of the posterior probabilities at the candidate and current positions. This biased random walk eventually visits regions of parameter space proportional to their posterior probability.
+The <strong>Metropolis-Hastings algorithm</strong> proposes a candidate parameter value, then accepts or rejects it based on the ratio of the posterior probabilities at the candidate and current positions. This biased random walk eventually visits regions of parameter space proportional to their posterior probability.
 
-**Hamiltonian Monte Carlo (HMC)** is more efficient: it uses gradient information (from backpropagation through the model) to guide proposals using physics-inspired momentum. The No-U-Turn Sampler (NUTS) is an adaptive variant of HMC that avoids wasted computation from U-turns. PyMC3 uses NUTS by default.
+<strong>Hamiltonian Monte Carlo (HMC)</strong> is more efficient: it uses gradient information (from backpropagation through the model) to guide proposals using physics-inspired momentum. The No-U-Turn Sampler (NUTS) is an adaptive variant of HMC that avoids wasted computation from U-turns. PyMC3 uses NUTS by default.
 
-**Variational inference** is an alternative to MCMC: it approximates the posterior with a simpler, analytically tractable distribution by minimizing the KL divergence between them. Faster than MCMC but less accurate.
+<strong>Variational inference</strong> is an alternative to MCMC: it approximates the posterior with a simpler, analytically tractable distribution by minimizing the KL divergence between them. Faster than MCMC but less accurate.
 
-**Diagnosing MCMC:** The **trace plot** shows sampled parameter values over iterations. Healthy chains look like "fuzzy caterpillars" — mixing well across parameter space with no trends. A chain that drifts or gets "stuck" indicates a problem. Run multiple chains from different starting points and check that they converge to the same distribution.
+<strong>Diagnosing MCMC:</strong> The <strong>trace plot</strong> shows sampled parameter values over iterations. Healthy chains look like "fuzzy caterpillars" — mixing well across parameter space with no trends. A chain that drifts or gets "stuck" indicates a problem. Run multiple chains from different starting points and check that they converge to the same distribution.
 
 ---
 
@@ -988,15 +988,15 @@ Bayesian regression embeds a familiar linear model inside a probabilistic framew
 \sigma \sim \text{Exponential}(1)
 \]
 
-Every unobserved quantity (α, β, σ) requires a **prior distribution**. Choose priors that are:
+Every unobserved quantity (α, β, σ) requires a <strong>prior distribution</strong>. Choose priors that are:
 - Consistent with the domain (σ must be positive → Exponential or HalfNormal)
 - Not unnecessarily restrictive (don't assign zero probability to plausible values)
 
-**Prior predictive checks** simulate outcomes from the prior before seeing data, allowing you to assess whether your priors produce plausible values. If your priors imply that negative wealth is possible for equatorial countries, revise them.
+<strong>Prior predictive checks</strong> simulate outcomes from the prior before seeing data, allowing you to assess whether your priors produce plausible values. If your priors imply that negative wealth is possible for equatorial countries, revise them.
 
 ### Implementing Bayesian Regression with PyMC3
 
-**PyMC3** uses Python's context manager (`with`) to define a probabilistic model:
+<strong>PyMC3</strong> uses Python's context manager (`with`) to define a probabilistic model:
 
 ```python
 import pymc3 as pm
@@ -1020,10 +1020,10 @@ with pm.Model() as linear_model:
 
 ### Interpreting the Posterior
 
-The posterior gives a **distribution** over plausible parameter values, not a single number. Key summaries:
+The posterior gives a <strong>distribution</strong> over plausible parameter values, not a single number. Key summaries:
 
-- **HDI (Highest Density Interval):** the narrowest interval containing X% of posterior probability. More interpretable than frequentist confidence intervals because it directly expresses probability about parameters.
-- **Posterior predictive check:** simulate new data from the posterior and compare to observed data. Does the model produce data that looks like reality?
+- <strong>HDI (Highest Density Interval):</strong> the narrowest interval containing X% of posterior probability. More interpretable than frequentist confidence intervals because it directly expresses probability about parameters.
+- <strong>Posterior predictive check:</strong> simulate new data from the posterior and compare to observed data. Does the model produce data that looks like reality?
 
 ```python
 with linear_model:
@@ -1036,11 +1036,11 @@ az.plot_ppc(az.from_pymc3(trace, posterior_predictive=ppc))
 
 Standard linear regression assumes all observations come from the same underlying process with the same coefficients. This is often unrealistic for social science data: voters in different states may respond differently to the same predictor; students in different schools may have different baselines.
 
-**Hierarchical models** allow parameters to vary across groups, constrained by a shared hyperprior. This is a form of **partial pooling** — a middle ground between:
+<strong>Hierarchical models</strong> allow parameters to vary across groups, constrained by a shared hyperprior. This is a form of <strong>partial pooling</strong> — a middle ground between:
 
-- **Complete pooling:** one model for everyone, ignores group differences
-- **No pooling:** separate models for each group, ignores information from other groups
-- **Partial pooling:** group-level estimates informed by the overall distribution
+- <strong>Complete pooling:</strong> one model for everyone, ignores group differences
+- <strong>No pooling:</strong> separate models for each group, ignores information from other groups
+- <strong>Partial pooling:</strong> group-level estimates informed by the overall distribution
 
 \[
 \text{VotingRate}_{i,s} \sim \text{Normal}(\mu_{i,s}, \sigma)
@@ -1081,9 +1081,9 @@ with pm.Model() as hierarchical_model:
     trace = pm.sample(2000, tune=1000, target_accept=0.95)
 ```
 
-**Non-centered parameterization** (as above) separates the group-level offset from the hyperparameters, which often improves MCMC mixing in hierarchical models.
+<strong>Non-centered parameterization</strong> (as above) separates the group-level offset from the hyperparameters, which often improves MCMC mixing in hierarchical models.
 
-The posterior trace plot for a hierarchical model shows one chain per parameter. Healthy traces mix well and are stationary. The **forest plot** from ArviZ compares posterior estimates across groups, giving an immediate visual summary of group-level heterogeneity.
+The posterior trace plot for a hierarchical model shows one chain per parameter. Healthy traces mix well and are stationary. The <strong>forest plot</strong> from ArviZ compares posterior estimates across groups, giving an immediate visual summary of group-level heterogeneity.
 
 ---
 

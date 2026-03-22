@@ -375,9 +375,9 @@ And then use Appendix A to find the exact probability corresponding to that z-sc
 
 Statistical decisions involve a binary choice: reject the null hypothesis, or fail to reject it. Because this decision is based on probabilistic evidence rather than certainty, two types of mistakes are possible.
 
-<div class="definition"><strong>Type I error (false positive):</strong> Rejecting the null hypothesis when it is actually true. The probability of committing a Type I error is controlled by the analyst through the choice of **significance level** (\(\alpha\)), typically set at 0.05 or 0.01. A significance level of 0.05 means we are willing to accept a 5% chance of incorrectly rejecting a true null hypothesis.</div>
+<div class="definition"><strong>Type I error (false positive):</strong> Rejecting the null hypothesis when it is actually true. The probability of committing a Type I error is controlled by the analyst through the choice of <strong>significance level</strong> (\(\alpha\)), typically set at 0.05 or 0.01. A significance level of 0.05 means we are willing to accept a 5% chance of incorrectly rejecting a true null hypothesis.</div>
 
-<div class="definition"><strong>Type II error (false negative):</strong> Failing to reject the null hypothesis when it is actually false. The probability of a Type II error is denoted \(\beta\). The **power** of a test is \(1 - \beta\), representing the probability of correctly detecting a real effect.</div>
+<div class="definition"><strong>Type II error (false negative):</strong> Failing to reject the null hypothesis when it is actually false. The probability of a Type II error is denoted \(\beta\). The <strong>power</strong> of a test is \(1 - \beta\), representing the probability of correctly detecting a real effect.</div>
 
 There is an inherent trade-off between the two: reducing \(\alpha\) (being more conservative about rejecting the null) increases \(\beta\) (more likely to miss a real effect). In practice, the conventional significance levels of 0.05 and 0.01 represent a balance between these concerns that has become standard across social and business sciences.
 

@@ -14,7 +14,7 @@ Complex analysis studies functions \( f: D \subseteq \mathbb{C} \to \mathbb{C} \
 Before we can speak about complex functions, limits, or differentiability, we need a precise language for describing subsets of \( \mathbb{C} \). The following definitions build up the topological vocabulary — open sets, boundary, and connectedness — that will appear throughout the course. The key notion to keep in mind is that of a *domain*: a connected open set is the natural setting for doing analysis.
 
 <div class="definition" markdown="1">
-**Definition 1.2.1 (Open Disc).** For \( z_0 \in \mathbb{C} \) and \( r > 0 \), the *open disc* of radius \( r \) centred at \( z_0 \) is
+<strong>Definition 1.2.1 (Open Disc).</strong> For \( z_0 \in \mathbb{C} \) and \( r > 0 \), the *open disc* of radius \( r \) centred at \( z_0 \) is
 \[ D(z_0, r) = \{ z \in \mathbb{C} : |z - z_0| < r \}. \]
 The *closed disc* is \( \overline{D}(z_0, r) = \{ z : |z - z_0| \leq r \} \).
 </div>
@@ -22,17 +22,17 @@ The *closed disc* is \( \overline{D}(z_0, r) = \{ z : |z - z_0| \leq r \} \).
 The open disc is the basic building block of the topology on \( \mathbb{C} \). A set is open precisely when every point has some disc around it that stays inside the set.
 
 <div class="definition" markdown="1">
-**Definition 1.2.2 (Interior Point, Open Set).** A point \( z_0 \in S \subseteq \mathbb{C} \) is an *interior point* of \( S \) if there exists \( r > 0 \) with \( D(z_0, r) \subseteq S \). The set \( S \) is *open* if every point is an interior point.
+<strong>Definition 1.2.2 (Interior Point, Open Set).</strong> A point \( z_0 \in S \subseteq \mathbb{C} \) is an *interior point* of \( S \) if there exists \( r > 0 \) with \( D(z_0, r) \subseteq S \). The set \( S \) is *open* if every point is an interior point.
 </div>
 
 <div class="definition" markdown="1">
-**Definition 1.2.3 (Closed Set, Boundary).** A set \( S \) is *closed* if \( \mathbb{C} \setminus S \) is open. A point \( z_0 \) is a *boundary point* of \( S \) if every disc \( D(z_0, r) \) meets both \( S \) and \( \mathbb{C} \setminus S \). The boundary \( \partial S \) is the set of all boundary points.
+<strong>Definition 1.2.3 (Closed Set, Boundary).</strong> A set \( S \) is *closed* if \( \mathbb{C} \setminus S \) is open. A point \( z_0 \) is a *boundary point* of \( S \) if every disc \( D(z_0, r) \) meets both \( S \) and \( \mathbb{C} \setminus S \). The boundary \( \partial S \) is the set of all boundary points.
 </div>
 
 Connectedness captures the idea that a set cannot be split into two separate pieces. For the purposes of complex analysis, working on a domain — a connected open set — ensures that a function defined locally near one point can, in principle, be extended to the entire region without ambiguity.
 
 <div class="definition" markdown="1">
-**Definition 1.2.4 (Connected Set, Domain).** A set \( S \subseteq \mathbb{C} \) is *connected* if it cannot be written as a union of two disjoint nonempty open subsets. A *domain* is a connected open subset of \( \mathbb{C} \). A domain is *simply connected* if it has no holes (every closed curve in the domain is contractible to a point within it).
+<strong>Definition 1.2.4 (Connected Set, Domain).</strong> A set \( S \subseteq \mathbb{C} \) is *connected* if it cannot be written as a union of two disjoint nonempty open subsets. A *domain* is a connected open subset of \( \mathbb{C} \). A domain is *simply connected* if it has no holes (every closed curve in the domain is contractible to a point within it).
 </div>
 
 Simple connectivity is more subtle: it rules out domains with "holes," like a punctured disc or an annulus. This distinction turns out to be decisive for complex integration — Cauchy's theorem holds on simply connected domains precisely because there are no holes for residues to hide in.
@@ -42,22 +42,22 @@ Simple connectivity is more subtle: it rules out domains with "holes," like a pu
 With the notion of a domain in hand, we can now make precise what it means for a curve to lie within it. Curves are the paths along which we will integrate complex functions, so we need careful definitions of smoothness and length. The Jordan Curve Theorem, stated below, is a fundamental geometric fact: a simple closed curve divides the plane into exactly an inside and an outside.
 
 <div class="definition" markdown="1">
-**Definition 1.3.1 (Parametrized Curve).** A *parametrized curve* is a continuous map \( \gamma: [a,b] \to \mathbb{C} \). Writing \( \gamma(t) = x(t) + iy(t) \), the curve is *smooth* if \( x'(t), y'(t) \) exist, are continuous, and \( \gamma'(t) = x'(t) + iy'(t) \neq 0 \) for all \( t \). It is *piecewise smooth* if \( [a,b] \) can be subdivided into finitely many subintervals on each of which it is smooth.
+<strong>Definition 1.3.1 (Parametrized Curve).</strong> A *parametrized curve* is a continuous map \( \gamma: [a,b] \to \mathbb{C} \). Writing \( \gamma(t) = x(t) + iy(t) \), the curve is *smooth* if \( x'(t), y'(t) \) exist, are continuous, and \( \gamma'(t) = x'(t) + iy'(t) \neq 0 \) for all \( t \). It is *piecewise smooth* if \( [a,b] \) can be subdivided into finitely many subintervals on each of which it is smooth.
 </div>
 
 <div class="definition" markdown="1">
-**Definition 1.3.2 (Closed and Jordan Curves).** A curve is *closed* if \( \gamma(a) = \gamma(b) \). A *Jordan curve* (simple closed curve) is a closed curve injective on \( [a,b) \). The *Jordan Curve Theorem* states that a Jordan curve divides \( \mathbb{C} \) into exactly two regions (the interior and exterior), and the interior is a simply connected domain.
+<strong>Definition 1.3.2 (Closed and Jordan Curves).</strong> A curve is *closed* if \( \gamma(a) = \gamma(b) \). A *Jordan curve* (simple closed curve) is a closed curve injective on \( [a,b) \). The *Jordan Curve Theorem* states that a Jordan curve divides \( \mathbb{C} \) into exactly two regions (the interior and exterior), and the interior is a simply connected domain.
 </div>
 
 The non-self-intersection condition in the Jordan Curve Theorem is essential: it guarantees a well-defined "inside." Once we have a Jordan domain, Green's theorem applies, giving the first connection between line integrals around the boundary and double integrals over the interior.
 
 <div class="definition" markdown="1">
-**Definition 1.3.3 (Arclength).** The *arclength* of a piecewise smooth curve \( \gamma \) is
+<strong>Definition 1.3.3 (Arclength).</strong> The *arclength* of a piecewise smooth curve \( \gamma \) is
 \[ \ell(\gamma) = \int_a^b |\gamma'(t)|\, dt = \int_a^b \sqrt{x'(t)^2 + y'(t)^2}\, dt. \]
 </div>
 
 <div class="definition" markdown="1">
-**Definition 1.3.4 (Jordan Domain).** A *Jordan domain* is a bounded connected open set \( \Omega \subseteq \mathbb{C} \) whose boundary \( \partial\Omega \) is a Jordan curve.
+<strong>Definition 1.3.4 (Jordan Domain).</strong> A *Jordan domain* is a bounded connected open set \( \Omega \subseteq \mathbb{C} \) whose boundary \( \partial\Omega \) is a Jordan curve.
 </div>
 
 ## 1.4 Line Integrals
@@ -65,12 +65,12 @@ The non-self-intersection condition in the Jordan Curve Theorem is essential: it
 Line integrals allow us to integrate a vector field along a curve, measuring the total work done as we traverse the path. Their basic properties — linearity, orientation reversal, and concatenation — are the same as in multivariable calculus. The key additional fact, independence of path for gradient fields, previews the role that antiderivatives will play in complex integration.
 
 <div class="definition" markdown="1">
-**Definition 1.4.1 (Line Integral of a Vector Field).** Let \( \mathbf{F} = (P, Q) \) be a continuous vector field on a domain \( D \) and \( \gamma: [a,b] \to D \) a piecewise smooth curve. The *line integral* of \( \mathbf{F} \) along \( \gamma \) is
+<strong>Definition 1.4.1 (Line Integral of a Vector Field).</strong> Let \( \mathbf{F} = (P, Q) \) be a continuous vector field on a domain \( D \) and \( \gamma: [a,b] \to D \) a piecewise smooth curve. The *line integral* of \( \mathbf{F} \) along \( \gamma \) is
 \[ \int_\gamma \mathbf{F} \cdot d\mathbf{s} = \int_\gamma P\, dx + Q\, dy = \int_a^b \bigl[P(\gamma(t)) x'(t) + Q(\gamma(t)) y'(t)\bigr]\, dt. \]
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 1.4.2 (Properties of Line Integrals).** For piecewise smooth curves:
+<strong>Proposition 1.4.2 (Properties of Line Integrals).</strong> For piecewise smooth curves:
 1. *Linearity* in \( \mathbf{F} \).
 2. *Reverse orientation*: \( \int_{-\gamma} \mathbf{F}\cdot d\mathbf{s} = -\int_\gamma \mathbf{F}\cdot d\mathbf{s} \).
 3. *Concatenation*: \( \int_{\gamma_1 + \gamma_2} = \int_{\gamma_1} + \int_{\gamma_2} \).
@@ -78,7 +78,7 @@ Line integrals allow us to integrate a vector field along a curve, measuring the
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 1.4.3 (Independence of Path / Fundamental Theorem).** If \( \mathbf{F} = \nabla u \) is a gradient vector field on a domain \( D \), then for any piecewise smooth curve \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \),
+<strong>Theorem 1.4.3 (Independence of Path / Fundamental Theorem).</strong> If \( \mathbf{F} = \nabla u \) is a gradient vector field on a domain \( D \), then for any piecewise smooth curve \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \),
 \[ \int_\gamma \mathbf{F} \cdot d\mathbf{s} = u(z_1) - u(z_0). \]
 In particular, the integral around any closed curve is zero.
 </div>
@@ -88,16 +88,16 @@ In particular, the integral around any closed curve is zero.
 Green's theorem is the engine that drives the early results of complex analysis. It converts a line integral around a boundary into a double integral over the enclosed region, a trade that will prove extremely powerful when the integrand satisfies additional constraints (like the Cauchy–Riemann equations).
 
 <div class="theorem" markdown="1">
-**Theorem 1.5.1 (Green's Theorem).** Let \( \Omega \) be a Jordan domain with piecewise smooth boundary \( \partial\Omega \) oriented counterclockwise. If \( P, Q \in C^1(\overline{\Omega}) \), then
+<strong>Theorem 1.5.1 (Green's Theorem).</strong> Let \( \Omega \) be a Jordan domain with piecewise smooth boundary \( \partial\Omega \) oriented counterclockwise. If \( P, Q \in C^1(\overline{\Omega}) \), then
 \[ \oint_{\partial\Omega} P\, dx + Q\, dy = \iint_\Omega \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA. \]
 </div>
 
 <div class="corollary" markdown="1">
-**Corollary 1.5.2 (Area Formula).** \( \text{Area}(\Omega) = \dfrac{1}{2} \oint_{\partial\Omega} x\, dy - y\, dx. \]
+<strong>Corollary 1.5.2 (Area Formula).</strong> \( \text{Area}(\Omega) = \dfrac{1}{2} \oint_{\partial\Omega} x\, dy - y\, dx. \]
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 1.5.3 (Bump Principle).** Let \( \mathbf{F} = (P,Q) \in C^1(D) \). Then \( \mathbf{F} \) is irrotational (\( Q_x = P_y \) on \( D \) if and only if \( \int_\gamma \mathbf{F}\cdot d\mathbf{s} = 0 \) for every piecewise smooth closed curve \( \gamma \) in \( D \).
+<strong>Proposition 1.5.3 (Bump Principle).</strong> Let \( \mathbf{F} = (P,Q) \in C^1(D) \). Then \( \mathbf{F} \) is irrotational (\( Q_x = P_y \) on \( D \) if and only if \( \int_\gamma \mathbf{F}\cdot d\mathbf{s} = 0 \) for every piecewise smooth closed curve \( \gamma \) in \( D \).
 </div>
 
 The Bump Principle is really a prototype of Cauchy's theorem: it says that an irrotational field (one satisfying a first-order PDE condition) integrates to zero around every closed loop. When we reach Chapter 6, the Cauchy–Riemann equations will play the role of the irrotationality condition for complex-valued functions.
@@ -109,12 +109,12 @@ Harmonic functions — solutions to Laplace's equation \( \Delta u = 0 \) — ap
 ## 2.1 Definition and Examples
 
 <div class="definition" markdown="1">
-**Definition 2.1.1 (Harmonic Function).** A function \( u: D \to \mathbb{R} \) of class \( C^2 \) on a domain \( D \subseteq \mathbb{R}^2 \) is *harmonic* if
+<strong>Definition 2.1.1 (Harmonic Function).</strong> A function \( u: D \to \mathbb{R} \) of class \( C^2 \) on a domain \( D \subseteq \mathbb{R}^2 \) is *harmonic* if
 \[ \Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0. \]
 </div>
 
 <div class="example" markdown="1">
-**Example 2.1.2.**
+<strong>Example 2.1.2.</strong>
 - \( u = x^2 - y^2 \): \( \Delta u = 2 - 2 = 0 \). Harmonic.
 - \( u = e^x \cos y \): \( u_{xx} = e^x\cos y \), \( u_{yy} = -e^x\cos y \), so \( \Delta u = 0 \). Harmonic.
 - \( u = x^2 + y^2 \): \( \Delta u = 4 \neq 0 \). Not harmonic.
@@ -126,7 +126,7 @@ Harmonic functions — solutions to Laplace's equation \( \Delta u = 0 \) — ap
 The Inside-Outside Theorem (also known as Gauss's divergence theorem in two dimensions) relates the normal derivative of \( u \) on the boundary of a region to the Laplacian of \( u \) in the interior. For a harmonic function, the Laplacian vanishes, so the total outward flux through any closed curve is exactly zero.
 
 <div class="theorem" markdown="1">
-**Theorem 2.2.1 (Inside-Outside Theorem).** Let \( \Omega \) be a Jordan domain with piecewise smooth boundary, and let \( u \in C^2(\overline{\Omega}) \). Then
+<strong>Theorem 2.2.1 (Inside-Outside Theorem).</strong> Let \( \Omega \) be a Jordan domain with piecewise smooth boundary, and let \( u \in C^2(\overline{\Omega}) \). Then
 \[ \oint_{\partial\Omega} \frac{\partial u}{\partial \mathbf{n}}\, ds = \iint_\Omega \Delta u\, dA, \]
 where \( \mathbf{n} \) is the outward unit normal and \( \frac{\partial u}{\partial \mathbf{n}} = \nabla u \cdot \mathbf{n} \) is the normal derivative.
 </div>
@@ -136,7 +136,7 @@ where \( \mathbf{n} \) is the outward unit normal and \( \frac{\partial u}{\part
 </div>
 
 <div class="corollary" markdown="1">
-**Corollary 2.2.2.** If \( u \) is harmonic on \( \overline{\Omega} \), then \( \oint_{\partial\Omega} \frac{\partial u}{\partial \mathbf{n}}\, ds = 0 \).
+<strong>Corollary 2.2.2.</strong> If \( u \) is harmonic on \( \overline{\Omega} \), then \( \oint_{\partial\Omega} \frac{\partial u}{\partial \mathbf{n}}\, ds = 0 \).
 </div>
 
 ## 2.3 Mean Value Theorems
@@ -144,12 +144,12 @@ where \( \mathbf{n} \) is the outward unit normal and \( \frac{\partial u}{\part
 The mean value property is perhaps the most characteristic feature of harmonic functions, and later of analytic functions. It says that the value at a point is completely determined by the average on any surrounding circle — the function cannot have "local surprises." This rigidity is what makes the maximum principle possible.
 
 <div class="definition" markdown="1">
-**Definition 2.3.1 (Scalar Line Integral).** For a continuous function \( f \) and piecewise smooth curve \( \gamma: [a,b] \to \mathbb{C} \),
+<strong>Definition 2.3.1 (Scalar Line Integral).</strong> For a continuous function \( f \) and piecewise smooth curve \( \gamma: [a,b] \to \mathbb{C} \),
 \[ \int_\gamma f\, ds = \int_a^b f(\gamma(t)) |\gamma'(t)|\, dt. \]
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 2.3.2 (Circumferential Mean Value Theorem).** Let \( u \) be harmonic on a domain \( D \) and suppose \( \overline{D}(z_0, r) \subseteq D \). Then
+<strong>Theorem 2.3.2 (Circumferential Mean Value Theorem).</strong> Let \( u \) be harmonic on a domain \( D \) and suppose \( \overline{D}(z_0, r) \subseteq D \). Then
 \[ u(z_0) = \frac{1}{2\pi} \int_0^{2\pi} u(z_0 + re^{i\theta})\, d\theta. \]
 That is, the value at the centre equals the average value on any circle.
 </div>
@@ -161,7 +161,7 @@ So \( \varphi \) is constant. Since \( \lim_{\rho \to 0} \varphi(\rho) = u(z_0) 
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 2.3.3 (Solid Mean Value Theorem).** Under the same hypotheses,
+<strong>Theorem 2.3.3 (Solid Mean Value Theorem).</strong> Under the same hypotheses,
 \[ u(z_0) = \frac{1}{\pi r^2} \iint_{D(z_0,r)} u\, dA. \]
 </div>
 
@@ -176,7 +176,7 @@ Left side: \( u(z_0) \cdot \pi r^2 \). Right side: \( \iint_{D(z_0,r)} u\, dA \)
 The maximum principle is a striking rigidity result: a non-constant harmonic function cannot achieve its maximum value at an interior point. Geometrically, this means the "surface" \( z = u(x,y) \) has no interior peaks or valleys — it is shaped like a stretched membrane with no slack spots. In practice, it gives powerful uniqueness results for boundary value problems.
 
 <div class="theorem" markdown="1">
-**Theorem 2.4.1 (Maximum Principle for Harmonic Functions).** Let \( u \) be harmonic on a domain \( D \).
+<strong>Theorem 2.4.1 (Maximum Principle for Harmonic Functions).</strong> Let \( u \) be harmonic on a domain \( D \).
 1. *(Local version)* If \( u \) attains a local maximum or minimum at any interior point, then \( u \) is constant on \( D \).
 2. *(Global version)* If \( D \) is bounded and \( u \) extends continuously to \( \partial D \), then
 \[ \max_{\overline{D}} u = \max_{\partial D} u \quad \text{and} \quad \min_{\overline{D}} u = \min_{\partial D} u. \]
@@ -191,7 +191,7 @@ The maximum principle is a striking rigidity result: a non-constant harmonic fun
 While the maximum principle controls when a harmonic function is constant, Harnack's inequality gives quantitative control: it bounds how much a non-negative harmonic function can vary within a disc in terms of its value at the centre. The two-sided estimate shows that values on a concentric circle are confined to a multiplicative window that shrinks to \( \{u(z_0)\} \) as the radius of the circle shrinks to zero.
 
 <div class="theorem" markdown="1">
-**Theorem 2.5.1 (Harnack's Inequality).** Let \( u \) be harmonic and non-negative on \( D(z_0, R) \). For any \( z \) with \( |z - z_0| = r < R \),
+<strong>Theorem 2.5.1 (Harnack's Inequality).</strong> Let \( u \) be harmonic and non-negative on \( D(z_0, R) \). For any \( z \) with \( |z - z_0| = r < R \),
 \[ \frac{R-r}{R+r} u(z_0) \leq u(z) \leq \frac{R+r}{R-r} u(z_0). \]
 </div>
 
@@ -206,7 +206,7 @@ Since \( \frac{R-r}{R+r} \leq \frac{R^2 - r^2}{R^2 - 2Rr\cos\alpha + r^2} \leq \
 As a first glimpse of the theme that will pervade the course, Harnack's inequality implies that bounded harmonic functions on the entire plane must be constant. This is the harmonic analogue of Liouville's theorem for analytic functions, which we will prove more elegantly in Chapter 6 using the Cauchy integral formula.
 
 <div class="theorem" markdown="1">
-**Theorem 2.6.1 (Liouville for Harmonic Functions).** If \( u: \mathbb{R}^2 \to \mathbb{R} \) is harmonic and bounded, then \( u \) is constant.
+<strong>Theorem 2.6.1 (Liouville for Harmonic Functions).</strong> If \( u: \mathbb{R}^2 \to \mathbb{R} \) is harmonic and bounded, then \( u \) is constant.
 </div>
 
 <div class="proof" markdown="1">
@@ -220,13 +220,13 @@ The machinery of Chapters 1 and 2 was entirely real. We now introduce the algebr
 ## 3.1 The Complex Field
 
 <div class="definition" markdown="1">
-**Definition 3.1.1 (Complex Numbers).** The *complex numbers* \( \mathbb{C} \) are pairs \( (x, y) \in \mathbb{R}^2 \) with componentwise addition and multiplication defined by
+<strong>Definition 3.1.1 (Complex Numbers).</strong> The *complex numbers* \( \mathbb{C} \) are pairs \( (x, y) \in \mathbb{R}^2 \) with componentwise addition and multiplication defined by
 \[ (x_1, y_1)(x_2, y_2) = (x_1 x_2 - y_1 y_2,\; x_1 y_2 + x_2 y_1). \]
 Writing \( z = x + iy \) with \( i = (0,1) \), we have \( i^2 = -1 \). Complex numbers form a field under these operations.
 </div>
 
 <div class="definition" markdown="1">
-**Definition 3.1.2 (Modulus, Argument, Conjugate).** For \( z = x + iy \):
+<strong>Definition 3.1.2 (Modulus, Argument, Conjugate).</strong> For \( z = x + iy \):
 - *Real and imaginary parts*: \( \operatorname{Re}(z) = x \), \( \operatorname{Im}(z) = y \)
 - *Modulus* (absolute value): \( |z| = \sqrt{x^2 + y^2} \)
 - *Complex conjugate*: \( \bar{z} = x - iy \)
@@ -237,7 +237,7 @@ Writing \( z = x + iy \) with \( i = (0,1) \), we have \( i^2 = -1 \). Complex n
 The polar form \( z = re^{i\theta} \) shows that multiplication in \( \mathbb{C} \) combines magnitudes and adds angles: \( zw = rse^{i(\theta + \phi)} \). This geometric interpretation — multiplication is a simultaneous scaling and rotation — is at the heart of why analytic functions preserve angles (conformality).
 
 <div class="proposition" markdown="1">
-**Proposition 3.1.3 (Algebraic Properties).** For \( z, w \in \mathbb{C} \):
+<strong>Proposition 3.1.3 (Algebraic Properties).</strong> For \( z, w \in \mathbb{C} \):
 1. \( z\bar{z} = |z|^2 \), so \( z^{-1} = \bar{z}/|z|^2 \)
 2. \( |zw| = |z||w| \), \( \overline{zw} = \bar{z}\bar{w} \)
 3. Triangle inequality: \( |z + w| \leq |z| + |w| \)
@@ -251,11 +251,11 @@ The polar form \( z = re^{i\theta} \) shows that multiplication in \( \mathbb{C}
 Limits of complex functions reduce to simultaneous limits of the real and imaginary parts. This means all the standard rules from real analysis carry over without change. The important point is that a limit in \( \mathbb{C} \) requires \( z \to z_0 \) from all directions in the plane simultaneously — a much stronger condition than a one-dimensional limit, and the source of the rigidity that characterises complex differentiability.
 
 <div class="definition" markdown="1">
-**Definition 3.2.1 (Limit).** For \( f: D \to \mathbb{C} \) and \( z_0 \) a limit point of \( D \), we write \( \lim_{z\to z_0} f(z) = L \) if: for every \( \varepsilon > 0 \) there exists \( \delta > 0 \) such that \( 0 < |z - z_0| < \delta \) implies \( |f(z) - L| < \varepsilon \).
+<strong>Definition 3.2.1 (Limit).</strong> For \( f: D \to \mathbb{C} \) and \( z_0 \) a limit point of \( D \), we write \( \lim_{z\to z_0} f(z) = L \) if: for every \( \varepsilon > 0 \) there exists \( \delta > 0 \) such that \( 0 < |z - z_0| < \delta \) implies \( |f(z) - L| < \varepsilon \).
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 3.2.2.** Writing \( f = u + iv \) and \( L = a + ib \): \( \lim_{z\to z_0} f(z) = L \) if and only if \( \lim_{(x,y)\to(x_0,y_0)} u = a \) and \( \lim_{(x,y)\to(x_0,y_0)} v = b \). Hence all limit laws from real analysis hold for complex limits.
+<strong>Proposition 3.2.2.</strong> Writing \( f = u + iv \) and \( L = a + ib \): \( \lim_{z\to z_0} f(z) = L \) if and only if \( \lim_{(x,y)\to(x_0,y_0)} u = a \) and \( \lim_{(x,y)\to(x_0,y_0)} v = b \). Hence all limit laws from real analysis hold for complex limits.
 </div>
 
 # Chapter 4: Analytic Functions
@@ -265,7 +265,7 @@ This chapter is where the subject begins in earnest. The central observation is 
 ## 4.1 Complex Differentiability
 
 <div class="definition" markdown="1">
-**Definition 4.1.1 (Complex Derivative).** Let \( f: D \to \mathbb{C} \) on an open set \( D \). The *complex derivative* of \( f \) at \( z_0 \in D \) is
+<strong>Definition 4.1.1 (Complex Derivative).</strong> Let \( f: D \to \mathbb{C} \) on an open set \( D \). The *complex derivative* of \( f \) at \( z_0 \in D \) is
 \[ f'(z_0) = \lim_{h \to 0} \frac{f(z_0 + h) - f(z_0)}{h}, \quad h \in \mathbb{C} \setminus \{0\}. \]
 If this limit exists, \( f \) is *differentiable* (or *holomorphic*) at \( z_0 \).
 </div>
@@ -273,11 +273,11 @@ If this limit exists, \( f \) is *differentiable* (or *holomorphic*) at \( z_0 \
 The subtlety here is that \( h \) approaches zero in the complex plane, so the difference quotient must have the same limiting value regardless of the direction of approach. This forces a compatibility condition on the partial derivatives — the Cauchy–Riemann equations — that two real functions \( u \) and \( v \) must jointly satisfy.
 
 <div class="definition" markdown="1">
-**Definition 4.1.2 (Analytic / Holomorphic Function).** A function \( f: D \to \mathbb{C} \) is *analytic* (or *holomorphic*) on \( D \) if it is differentiable at every point of \( D \). An *entire* function is analytic on all of \( \mathbb{C} \).
+<strong>Definition 4.1.2 (Analytic / Holomorphic Function).</strong> A function \( f: D \to \mathbb{C} \) is *analytic* (or *holomorphic*) on \( D \) if it is differentiable at every point of \( D \). An *entire* function is analytic on all of \( \mathbb{C} \).
 </div>
 
 <div class="note" markdown="1">
-**Note.** Complex differentiability is far more restrictive than real differentiability. The limit \( h \to 0 \) must be the same regardless of the direction from which \( h \) approaches 0 in the complex plane. This rigidity is captured by the Cauchy–Riemann equations.
+<strong>Note.</strong> Complex differentiability is far more restrictive than real differentiability. The limit \( h \to 0 \) must be the same regardless of the direction from which \( h \) approaches 0 in the complex plane. This rigidity is captured by the Cauchy–Riemann equations.
 </div>
 
 ## 4.2 Cauchy–Riemann Equations
@@ -285,7 +285,7 @@ The subtlety here is that \( h \) approaches zero in the complex plane, so the d
 The Cauchy–Riemann equations (CRE) are the analytic expression of the geometric fact that multiplication by \( f'(z_0) \) is a conformal linear map: it scales by \( |f'(z_0)| \) and rotates by \( \arg f'(z_0) \). The Jacobian matrix of \( f \) viewed as a real map \( \mathbb{R}^2 \to \mathbb{R}^2 \) must be a scalar multiple of a rotation matrix — the CRE capture exactly this constraint.
 
 <div class="theorem" markdown="1">
-**Theorem 4.2.1 (CR Equations — Necessary Condition).** If \( f = u + iv \) is differentiable at \( z_0 = x_0 + iy_0 \), then the partial derivatives \( u_x, u_y, v_x, v_y \) all exist at \( (x_0, y_0) \) and satisfy the *Cauchy–Riemann equations* (CRE):
+<strong>Theorem 4.2.1 (CR Equations — Necessary Condition).</strong> If \( f = u + iv \) is differentiable at \( z_0 = x_0 + iy_0 \), then the partial derivatives \( u_x, u_y, v_x, v_y \) all exist at \( (x_0, y_0) \) and satisfy the *Cauchy–Riemann equations* (CRE):
 \[ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}. \]
 Moreover, \( f'(z_0) = u_x(x_0, y_0) + iv_x(x_0, y_0) \).
 </div>
@@ -301,7 +301,7 @@ Equating: \( u_x = v_y \) and \( v_x = -u_y \). \( \square \)
 The CRE are necessary but not sufficient on their own — differentiability of \( u \) and \( v \) is also needed. The sufficient condition below shows that continuous partial derivatives satisfying the CRE are exactly enough to guarantee analyticity.
 
 <div class="theorem" markdown="1">
-**Theorem 4.2.2 (CR Equations — Sufficient Condition).** Let \( f = u + iv \) be defined on an open set \( D \). If \( u \) and \( v \) have continuous partial derivatives satisfying the CRE on \( D \), then \( f \) is analytic on \( D \).
+<strong>Theorem 4.2.2 (CR Equations — Sufficient Condition).</strong> Let \( f = u + iv \) be defined on an open set \( D \). If \( u \) and \( v \) have continuous partial derivatives satisfying the CRE on \( D \), then \( f \) is analytic on \( D \).
 </div>
 
 <div class="proof" markdown="1">
@@ -315,7 +315,7 @@ where \( h = h_1 + ih_2 \). Using the CRE, the Jacobian matrix is \( \begin{pmat
 The algebra of analytic functions is exactly what one would expect from the formal differentiation rules. More striking is the connection with harmonic functions: both components of an analytic function are automatically harmonic. This gives a powerful method for producing harmonic functions and solving Laplace's equation — just take the real or imaginary part of any analytic function.
 
 <div class="proposition" markdown="1">
-**Proposition 4.3.1 (Algebra of Analytic Functions).** Let \( f, g \) be analytic on \( D \).
+<strong>Proposition 4.3.1 (Algebra of Analytic Functions).</strong> Let \( f, g \) be analytic on \( D \).
 1. \( f \pm g \) and \( fg \) are analytic on \( D \), and \( f/g \) is analytic on \( \{g \neq 0\} \).
 2. *Chain rule*: if \( g \) is analytic on \( f(D) \), then \( (g \circ f)' = (g' \circ f)\cdot f' \).
 3. *Constant criterion*: if \( f' = 0 \) on a domain \( D \), then \( f \) is constant.
@@ -323,7 +323,7 @@ The algebra of analytic functions is exactly what one would expect from the form
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 4.3.2 (Analytic Functions and Harmonic Functions).** If \( f = u + iv \) is analytic on a domain \( D \) and \( u, v \in C^2(D) \), then both \( u \) and \( v \) are harmonic on \( D \).
+<strong>Proposition 4.3.2 (Analytic Functions and Harmonic Functions).</strong> If \( f = u + iv \) is analytic on a domain \( D \) and \( u, v \in C^2(D) \), then both \( u \) and \( v \) are harmonic on \( D \).
 </div>
 
 <div class="proof" markdown="1">
@@ -333,11 +333,11 @@ The algebra of analytic functions is exactly what one would expect from the form
 The converse question — given a harmonic function \( u \), can we find an analytic \( f = u + iv \)? — leads to the notion of a harmonic conjugate. The answer is yes on simply connected domains, and the construction uses path integrals in exactly the same way as the Poincaré lemma for gradient fields.
 
 <div class="definition" markdown="1">
-**Definition 4.3.3 (Harmonic Conjugate).** If \( u \) is harmonic on \( D \), a *harmonic conjugate* of \( u \) is a harmonic function \( v \) on \( D \) such that \( f = u + iv \) is analytic. A harmonic conjugate, if it exists, is unique up to an additive constant.
+<strong>Definition 4.3.3 (Harmonic Conjugate).</strong> If \( u \) is harmonic on \( D \), a *harmonic conjugate* of \( u \) is a harmonic function \( v \) on \( D \) such that \( f = u + iv \) is analytic. A harmonic conjugate, if it exists, is unique up to an additive constant.
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 4.3.4 (Existence of Harmonic Conjugate — Poincaré Lemma).** If \( u \) is harmonic on a simply connected domain \( D \), then \( u \) has a harmonic conjugate \( v \) on \( D \).
+<strong>Theorem 4.3.4 (Existence of Harmonic Conjugate — Poincaré Lemma).</strong> If \( u \) is harmonic on a simply connected domain \( D \), then \( u \) has a harmonic conjugate \( v \) on \( D \).
 </div>
 
 <div class="proof" markdown="1">
@@ -355,13 +355,13 @@ Having established the framework of analytic functions, we now build up the stan
 ## 5.1 The Exponential Function
 
 <div class="definition" markdown="1">
-**Definition 5.1.1 (Complex Exponential).** For \( z = x + iy \), define
+<strong>Definition 5.1.1 (Complex Exponential).</strong> For \( z = x + iy \), define
 \[ e^z = e^x(\cos y + i\sin y). \]
 This extends the real exponential. It is entire with \( (e^z)' = e^z \) and satisfies \( e^{z+w} = e^z e^w \) for all \( z, w \in \mathbb{C} \). Note \( |e^z| = e^x \) and \( e^z \) is periodic with period \( 2\pi i \).
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 5.1.2 (Euler's Formula).** \( e^{i\theta} = \cos\theta + i\sin\theta \). In particular, \( e^{i\pi} = -1 \) (Euler's identity).
+<strong>Proposition 5.1.2 (Euler's Formula).</strong> \( e^{i\theta} = \cos\theta + i\sin\theta \). In particular, \( e^{i\pi} = -1 \) (Euler's identity).
 </div>
 
 ## 5.2 Trigonometric and Hyperbolic Functions
@@ -369,7 +369,7 @@ This extends the real exponential. It is entire with \( (e^z)' = e^z \) and sati
 The complex trigonometric functions are defined via the exponential, which shows they are entire functions and clarifies their relationship with the hyperbolic functions. Notably, \( \sin z \) and \( \cos z \) are no longer bounded on \( \mathbb{C} \) — the familiar \( |\sin x| \leq 1 \) fails completely in the complex setting, another illustration of how complex analysis differs from its real counterpart.
 
 <div class="definition" markdown="1">
-**Definition 5.2.1.** Define
+<strong>Definition 5.2.1.</strong> Define
 \[ \cos z = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin z = \frac{e^{iz} - e^{-iz}}{2i}, \]
 \[ \cosh z = \frac{e^z + e^{-z}}{2}, \quad \sinh z = \frac{e^z - e^{-z}}{2}. \]
 These are entire. Key identities: \( \cos^2 z + \sin^2 z = 1 \), \( \cosh^2 z - \sinh^2 z = 1 \), \( \cos(iz) = \cosh z \), \( \sin(iz) = i\sinh z \).
@@ -380,42 +380,42 @@ These are entire. Key identities: \( \cos^2 z + \sin^2 z = 1 \), \( \cosh^2 z - 
 The complex logarithm is the inverse of \( e^z \), but since \( e^z \) is periodic with period \( 2\pi i \), the inverse is not unique: there are infinitely many logarithms of any nonzero complex number, differing by integer multiples of \( 2\pi i \). Choosing a single-valued branch requires cutting the plane along a ray to prevent the argument from winding all the way around the origin.
 
 <div class="definition" markdown="1">
-**Definition 5.3.1 (Complex Logarithm).** For \( z \neq 0 \), any \( w \) with \( e^w = z \) is a *logarithm* of \( z \). Writing \( z = re^{i\theta} \), all logarithms are
+<strong>Definition 5.3.1 (Complex Logarithm).</strong> For \( z \neq 0 \), any \( w \) with \( e^w = z \) is a *logarithm* of \( z \). Writing \( z = re^{i\theta} \), all logarithms are
 \[ \log z = \ln r + i(\theta + 2\pi k), \quad k \in \mathbb{Z}. \]
 The *principal logarithm* on \( D^* = \mathbb{C} \setminus (-\infty, 0] \) is
 \[ \operatorname{Log}(z) = \ln|z| + i\operatorname{Arg}(z). \]
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 5.3.2.** \( \operatorname{Log}: D^* \to \mathbb{C} \) is analytic with \( (\operatorname{Log}\, z)' = 1/z \). It is not analytic across the branch cut \( (-\infty, 0] \).
+<strong>Proposition 5.3.2.</strong> \( \operatorname{Log}: D^* \to \mathbb{C} \) is analytic with \( (\operatorname{Log}\, z)' = 1/z \). It is not analytic across the branch cut \( (-\infty, 0] \).
 </div>
 
 The branch cut is not an intrinsic feature of the logarithm — it is an artifact of our choice to make the function single-valued. By moving the cut to a different ray, we get a different branch, analytic on a different domain. The common analytic core is the fact that \( \log z \) is locally well-defined and satisfies \( (\log z)' = 1/z \) everywhere except at \( 0 \).
 
 <div class="definition" markdown="1">
-**Definition 5.3.3 (Branch of the Logarithm).** For any \( \tau \in \mathbb{R} \), define \( \arg_\tau(z) \in (\tau, \tau + 2\pi) \) as the unique argument in that range. The *branch*
+<strong>Definition 5.3.3 (Branch of the Logarithm).</strong> For any \( \tau \in \mathbb{R} \), define \( \arg_\tau(z) \in (\tau, \tau + 2\pi) \) as the unique argument in that range. The *branch*
 \[ L_\tau(z) = \ln|z| + i\arg_\tau(z) \]
 is analytic on \( \mathbb{C} \) minus the ray \( \{re^{i\tau} : r \geq 0\} \). Note \( \operatorname{Log} = L_{-\pi} \).
 </div>
 
 <div class="note" markdown="1">
-**Note.** The harmonic conjugate of \( \operatorname{Arg}(z) \) on \( D^* \) is \( \ln|z| \), since \( \operatorname{Log}\, z = \ln|z| + i\operatorname{Arg}(z) \) is analytic. This shows \( \operatorname{Arg} \) is harmonic on \( D^* \).
+<strong>Note.</strong> The harmonic conjugate of \( \operatorname{Arg}(z) \) on \( D^* \) is \( \ln|z| \), since \( \operatorname{Log}\, z = \ln|z| + i\operatorname{Arg}(z) \) is analytic. This shows \( \operatorname{Arg} \) is harmonic on \( D^* \).
 </div>
 
 ## 5.4 Complex Powers
 
 <div class="definition" markdown="1">
-**Definition 5.4.1 (Complex Power).** For \( \alpha \in \mathbb{C} \) and \( z \neq 0 \), define \( z^\alpha = e^{\alpha\log z} \). Since \( \log z \) is multi-valued, so is \( z^\alpha \) in general. The *principal value* is \( \operatorname{p.v.}\, z^\alpha = e^{\alpha\operatorname{Log}\, z} \).
+<strong>Definition 5.4.1 (Complex Power).</strong> For \( \alpha \in \mathbb{C} \) and \( z \neq 0 \), define \( z^\alpha = e^{\alpha\log z} \). Since \( \log z \) is multi-valued, so is \( z^\alpha \) in general. The *principal value* is \( \operatorname{p.v.}\, z^\alpha = e^{\alpha\operatorname{Log}\, z} \).
 </div>
 
 <div class="example" markdown="1">
-**Example 5.4.2 (n-th Roots).** The \( n \)-th roots of \( z = re^{i\theta} \) are
+<strong>Example 5.4.2 (n-th Roots).</strong> The \( n \)-th roots of \( z = re^{i\theta} \) are
 \[ z^{1/n} = r^{1/n} e^{i(\theta + 2\pi k)/n}, \quad k = 0, 1, \ldots, n-1. \]
 These are \( n \) equally spaced points on a circle of radius \( r^{1/n} \).
 </div>
 
 <div class="example" markdown="1">
-**Example 5.4.3.** \( i^i = e^{i\operatorname{Log}(i)} = e^{i\cdot i\pi/2} = e^{-\pi/2} \approx 0.2079 \). Surprisingly, a purely imaginary power of a purely imaginary number is real.
+<strong>Example 5.4.3.</strong> \( i^i = e^{i\operatorname{Log}(i)} = e^{i\cdot i\pi/2} = e^{-\pi/2} \approx 0.2079 \). Surprisingly, a purely imaginary power of a purely imaginary number is real.
 </div>
 
 # Chapter 6: Complex Integration
@@ -425,20 +425,20 @@ This chapter is the heart of the course. We define contour integrals — integra
 ## 6.1 Contour Integrals
 
 <div class="definition" markdown="1">
-**Definition 6.1.1 (Contour Integral).** Let \( \gamma: [a,b] \to \mathbb{C} \) be piecewise smooth and \( f: \operatorname{Im}(\gamma) \to \mathbb{C} \) continuous. The *contour integral* is
+<strong>Definition 6.1.1 (Contour Integral).</strong> Let \( \gamma: [a,b] \to \mathbb{C} \) be piecewise smooth and \( f: \operatorname{Im}(\gamma) \to \mathbb{C} \) continuous. The *contour integral* is
 \[ \int_\gamma f(z)\, dz = \int_a^b f(\gamma(t))\gamma'(t)\, dt. \]
 Writing \( f = u + iv \) and \( dz = dx + i\, dy \): \( \int_\gamma f\, dz = \int_\gamma u\, dx - v\, dy + i\int_\gamma v\, dx + u\, dy \).
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 6.1.2 (ML-Inequality).** If \( |f(z)| \leq M \) for all \( z \in \operatorname{Im}(\gamma) \) and \( \ell(\gamma) = L \), then
+<strong>Proposition 6.1.2 (ML-Inequality).</strong> If \( |f(z)| \leq M \) for all \( z \in \operatorname{Im}(\gamma) \) and \( \ell(\gamma) = L \), then
 \[ \left|\int_\gamma f(z)\, dz\right| \leq ML. \]
 </div>
 
 The ML-inequality is the workhorse estimate of the theory. It will be used repeatedly to show that integrals over "large" arcs (like the semicircle in the residue calculation for real integrals) vanish as the radius tends to infinity.
 
 <div class="example" markdown="1">
-**Example 6.1.3.** Compute \( \oint_{|z|=r} \frac{1}{z}\, dz \). Parametrize: \( \gamma(t) = re^{it} \), \( t \in [0, 2\pi] \), \( \gamma'(t) = ire^{it} \).
+<strong>Example 6.1.3.</strong> Compute \( \oint_{|z|=r} \frac{1}{z}\, dz \). Parametrize: \( \gamma(t) = re^{it} \), \( t \in [0, 2\pi] \), \( \gamma'(t) = ire^{it} \).
 \[ \oint_{|z|=r} \frac{1}{z}\, dz = \int_0^{2\pi} \frac{1}{re^{it}} \cdot ire^{it}\, dt = \int_0^{2\pi} i\, dt = 2\pi i. \]
 More generally, \( \oint_{|z-z_0|=r} (z-z_0)^n\, dz = \begin{cases} 2\pi i & n = -1 \\ 0 & n \neq -1 \end{cases} \).
 </div>
@@ -450,12 +450,12 @@ This calculation is fundamental: it explains why the coefficient \( c_{-1} \) in
 The antiderivative theorem is the complex analogue of the Fundamental Theorem of Calculus. Its equivalence with path independence and the vanishing of all closed-loop integrals is the same as in vector calculus — but in the complex setting, analyticity alone (via Cauchy's theorem) will force this to hold automatically on simply connected domains.
 
 <div class="theorem" markdown="1">
-**Theorem 6.2.1 (Antiderivative Theorem).** Let \( f \) be analytic on a domain \( D \) with antiderivative \( F \) (so \( F' = f \). Then for any piecewise smooth \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \):
+<strong>Theorem 6.2.1 (Antiderivative Theorem).</strong> Let \( f \) be analytic on a domain \( D \) with antiderivative \( F \) (so \( F' = f \). Then for any piecewise smooth \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \):
 \[ \int_\gamma f(z)\, dz = F(z_1) - F(z_0). \]
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 6.2.2 (Characterization of Antiderivative Existence).** For a continuous function \( f \) on a domain \( D \), the following are equivalent:
+<strong>Theorem 6.2.2 (Characterization of Antiderivative Existence).</strong> For a continuous function \( f \) on a domain \( D \), the following are equivalent:
 1. \( f \) has an antiderivative on \( D \).
 2. \( \int_\gamma f\, dz \) depends only on the endpoints of \( \gamma \).
 3. \( \oint_\gamma f\, dz = 0 \) for every closed piecewise smooth curve \( \gamma \) in \( D \).
@@ -466,7 +466,7 @@ The antiderivative theorem is the complex analogue of the Fundamental Theorem of
 Cauchy's theorem is the central result of complex analysis. Its statement is deceptively simple — the integral of an analytic function around any closed curve in a simply connected domain is zero — but its consequences are far-reaching. The proof uses Green's theorem together with the Cauchy–Riemann equations, revealing that the curl of \( (u, -v) \) and of \( (v, u) \) both vanish precisely because \( f \) is analytic. The Goursat improvement shows that even continuity of \( f' \) is unnecessary — analyticity alone suffices.
 
 <div class="theorem" markdown="1">
-**Theorem 6.3.1 (Cauchy's Integral Theorem).** Let \( f \) be analytic on a simply connected domain \( D \). Then for any closed piecewise smooth curve \( \gamma \) in \( D \),
+<strong>Theorem 6.3.1 (Cauchy's Integral Theorem).</strong> Let \( f \) be analytic on a simply connected domain \( D \). Then for any closed piecewise smooth curve \( \gamma \) in \( D \),
 \[ \oint_\gamma f(z)\, dz = 0. \]
 </div>
 
@@ -477,11 +477,11 @@ using the CRE. \( \square \)
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 6.3.2 (Cauchy–Goursat Theorem).** The same conclusion holds even without assuming \( f' \) is continuous: analyticity alone suffices.
+<strong>Theorem 6.3.2 (Cauchy–Goursat Theorem).</strong> The same conclusion holds even without assuming \( f' \) is continuous: analyticity alone suffices.
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 6.3.3 (Deformation Principle).** If \( f \) is analytic on a domain \( D \) and \( \gamma_0, \gamma_1 \) are homotopic closed curves in \( D \) (one can be continuously deformed into the other within \( D \), then
+<strong>Theorem 6.3.3 (Deformation Principle).</strong> If \( f \) is analytic on a domain \( D \) and \( \gamma_0, \gamma_1 \) are homotopic closed curves in \( D \) (one can be continuously deformed into the other within \( D \), then
 \[ \oint_{\gamma_0} f\, dz = \oint_{\gamma_1} f\, dz. \]
 </div>
 
@@ -492,7 +492,7 @@ The Deformation Principle makes topology visible in analysis. Two curves contrib
 Cauchy's Integral Formula (CIF) is genuinely surprising: it says the value of an analytic function at any interior point is completely determined by its values on any surrounding curve. This is the opposite of what happens for a general continuous function — knowing boundary values does not pin down interior values unless the function satisfies a PDE. For analytic functions, the PDE is the Cauchy–Riemann system, and the CIF is its solution operator.
 
 <div class="theorem" markdown="1">
-**Theorem 6.4.1 (Cauchy's Integral Formula — CIF).** Let \( f \) be analytic on a domain \( D \) and let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing a simply connected region in \( D \). For any \( z_0 \) inside \( \gamma \):
+<strong>Theorem 6.4.1 (Cauchy's Integral Formula — CIF).</strong> Let \( f \) be analytic on a domain \( D \) and let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing a simply connected region in \( D \). For any \( z_0 \) inside \( \gamma \):
 \[ f(z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - z_0}\, dz. \]
 </div>
 
@@ -505,7 +505,7 @@ The first integral is \( f(z_0) \) by Example 6.1.3. For \( E_\varepsilon \): si
 Differentiating the CIF with respect to the parameter \( z_0 \) yields an equally remarkable corollary: every analytic function is automatically infinitely differentiable, with all higher derivatives also given by contour integrals. There is no analogue of this in real analysis — a once-differentiable function on \( \mathbb{R} \) need not be twice differentiable. The rigid structure of complex differentiability enforces infinite smoothness for free.
 
 <div class="theorem" markdown="1">
-**Theorem 6.4.2 (Higher Derivatives Formula).** Under the same hypotheses, \( f \) has complex derivatives of all orders, and
+<strong>Theorem 6.4.2 (Higher Derivatives Formula).</strong> Under the same hypotheses, \( f \) has complex derivatives of all orders, and
 \[ f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z-z_0)^{n+1}}\, dz. \]
 </div>
 
@@ -518,7 +518,7 @@ Differentiating the CIF with respect to the parameter \( z_0 \) yields an equall
 The consequences of the CIF come quickly and are far stronger than anything available in real analysis. Liouville's theorem (a bounded entire function is constant) follows in a few lines from the derivative estimate. From Liouville, the Fundamental Theorem of Algebra is immediate — a result whose purely algebraic content is proved here by an analytic route, illustrating the cross-domain power of complex analysis.
 
 <div class="theorem" markdown="1">
-**Theorem 6.5.1 (Liouville's Theorem).** Every bounded entire function is constant.
+<strong>Theorem 6.5.1 (Liouville's Theorem).</strong> Every bounded entire function is constant.
 </div>
 
 <div class="proof" markdown="1">
@@ -528,7 +528,7 @@ So \( f' = 0 \), hence \( f \) is constant. \( \square \)
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 6.5.2 (Fundamental Theorem of Algebra).** Every non-constant polynomial \( p(z) \in \mathbb{C}[z] \) has at least one root in \( \mathbb{C} \). Consequently, every degree-\( n \) polynomial factors completely: \( p(z) = a(z-z_1)^{m_1}\cdots(z-z_k)^{m_k} \) with \( \sum m_j = n \).
+<strong>Theorem 6.5.2 (Fundamental Theorem of Algebra).</strong> Every non-constant polynomial \( p(z) \in \mathbb{C}[z] \) has at least one root in \( \mathbb{C} \). Consequently, every degree-\( n \) polynomial factors completely: \( p(z) = a(z-z_1)^{m_1}\cdots(z-z_k)^{m_k} \) with \( \sum m_j = n \).
 </div>
 
 <div class="proof" markdown="1">
@@ -538,7 +538,7 @@ So \( f' = 0 \), hence \( f \) is constant. \( \square \)
 Morera's theorem is the converse of Cauchy's theorem: if a continuous function has zero integral around every triangular contour, it must be analytic. It provides a useful criterion for passing analyticity through limits and is often applied together with the Weierstrass M-test to show that uniform limits of analytic functions are analytic.
 
 <div class="theorem" markdown="1">
-**Theorem 6.5.3 (Morera's Theorem).** Let \( f \) be continuous on a domain \( D \). If \( \oint_T f\, dz = 0 \) for every triangular contour \( T \) in \( D \), then \( f \) is analytic on \( D \).
+<strong>Theorem 6.5.3 (Morera's Theorem).</strong> Let \( f \) be continuous on a domain \( D \). If \( \oint_T f\, dz = 0 \) for every triangular contour \( T \) in \( D \), then \( f \) is analytic on \( D \).
 </div>
 
 # Chapter 7: Series Representations
@@ -548,33 +548,33 @@ One of the deepest consequences of Cauchy's theorem is that every analytic funct
 ## 7.1 Sequences and Series
 
 <div class="definition" markdown="1">
-**Definition 7.1.1 (Convergence).** A series \( \sum_{n=0}^\infty a_n \) of complex numbers *converges absolutely* if \( \sum |a_n| < \infty \). Absolute convergence implies convergence.
+<strong>Definition 7.1.1 (Convergence).</strong> A series \( \sum_{n=0}^\infty a_n \) of complex numbers *converges absolutely* if \( \sum |a_n| < \infty \). Absolute convergence implies convergence.
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 7.1.2 (Ratio Test).** If \( L = \lim_{n\to\infty} |a_{n+1}/a_n| \) exists, then \( \sum a_n \) converges absolutely if \( L < 1 \) and diverges if \( L > 1 \). At \( L = 1 \) the test is inconclusive.
+<strong>Theorem 7.1.2 (Ratio Test).</strong> If \( L = \lim_{n\to\infty} |a_{n+1}/a_n| \) exists, then \( \sum a_n \) converges absolutely if \( L < 1 \) and diverges if \( L > 1 \). At \( L = 1 \) the test is inconclusive.
 </div>
 
 <div class="definition" markdown="1">
-**Definition 7.1.3 (Uniform Convergence).** A series \( \sum f_n \) of functions *converges uniformly* to \( f \) on \( S \) if \( \sup_{z \in S}|S_N(z) - f(z)| \to 0 \) as \( N \to \infty \).
+<strong>Definition 7.1.3 (Uniform Convergence).</strong> A series \( \sum f_n \) of functions *converges uniformly* to \( f \) on \( S \) if \( \sup_{z \in S}|S_N(z) - f(z)| \to 0 \) as \( N \to \infty \).
 </div>
 
 Uniform convergence is critical because it allows interchange of limits with integrals and derivatives. The Weierstrass M-test is the standard tool for establishing uniform convergence, and its conclusion — that a uniformly convergent series of analytic functions is analytic — is the key reason power series within their disc of convergence define analytic functions.
 
 <div class="theorem" markdown="1">
-**Theorem 7.1.4 (Weierstrass M-Test).** If \( |f_n(z)| \leq M_n \) for all \( z \in S \) and \( \sum M_n < \infty \), then \( \sum f_n \) converges uniformly and absolutely on \( S \). Moreover, if each \( f_n \) is continuous, the limit is continuous; if each \( f_n \) is analytic, the limit is analytic.
+<strong>Theorem 7.1.4 (Weierstrass M-Test).</strong> If \( |f_n(z)| \leq M_n \) for all \( z \in S \) and \( \sum M_n < \infty \), then \( \sum f_n \) converges uniformly and absolutely on \( S \). Moreover, if each \( f_n \) is continuous, the limit is continuous; if each \( f_n \) is analytic, the limit is analytic.
 </div>
 
 ## 7.2 Power Series
 
 <div class="definition" markdown="1">
-**Definition 7.2.1 (Power Series and Radius of Convergence).** A *power series* centred at \( z_0 \) is \( \sum_{n=0}^\infty c_n(z-z_0)^n \). The *radius of convergence* is
+<strong>Definition 7.2.1 (Power Series and Radius of Convergence).</strong> A *power series* centred at \( z_0 \) is \( \sum_{n=0}^\infty c_n(z-z_0)^n \). The *radius of convergence* is
 \[ R = \frac{1}{\limsup_{n\to\infty} |c_n|^{1/n}} \in [0, +\infty]. \]
 The series converges absolutely on \( D(z_0, R) \), diverges for \( |z-z_0| > R \), and converges uniformly on any compact subset of \( D(z_0,R) \).
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 7.2.2 (Analyticity of Power Series).** A power series \( f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n \) with radius of convergence \( R > 0 \) is analytic on \( D(z_0, R) \) with
+<strong>Theorem 7.2.2 (Analyticity of Power Series).</strong> A power series \( f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n \) with radius of convergence \( R > 0 \) is analytic on \( D(z_0, R) \) with
 \[ f'(z) = \sum_{n=1}^\infty nc_n(z-z_0)^{n-1}, \]
 and this series also has radius of convergence \( R \). Moreover, the series can be integrated term by term on any curve in \( D(z_0, R) \).
 </div>
@@ -584,7 +584,7 @@ and this series also has radius of convergence \( R \). Moreover, the series can
 Taylor's theorem in the complex setting is sharper than its real counterpart in a decisive way: the Taylor series of an analytic function converges on the *largest disc around \( z_0 \) that avoids singularities*, and it converges to the function. There is no such guarantee in real analysis — smooth functions can have Taylor series with radius of convergence zero, or series that converge but not to the function. Complex analyticity and power-series representability are exactly equivalent.
 
 <div class="theorem" markdown="1">
-**Theorem 7.3.1 (Taylor's Theorem).** Let \( f \) be analytic on \( D(z_0, R) \). Then \( f \) equals its Taylor series on this disc:
+<strong>Theorem 7.3.1 (Taylor's Theorem).</strong> Let \( f \) be analytic on \( D(z_0, R) \). Then \( f \) equals its Taylor series on this disc:
 \[ f(z) = \sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n. \]
 The radius of convergence of this series is at least \( R \) (and equals the distance from \( z_0 \) to the nearest singularity of \( f \).
 </div>
@@ -596,7 +596,7 @@ Write \( \frac{1}{w-z} = \frac{1}{(w-z_0)(1-(z-z_0)/(w-z_0))} = \sum_{n=0}^\inft
 </div>
 
 <div class="example" markdown="1">
-**Example 7.3.2 (Standard Taylor Series).**
+<strong>Example 7.3.2 (Standard Taylor Series).</strong>
 - \( e^z = \sum_{n=0}^\infty \frac{z^n}{n!} \), \( R = \infty \)
 - \( \sin z = \sum_{n=0}^\infty \frac{(-1)^n z^{2n+1}}{(2n+1)!} \), \( R = \infty \)
 - \( \cos z = \sum_{n=0}^\infty \frac{(-1)^n z^{2n}}{(2n)!} \), \( R = \infty \)
@@ -605,7 +605,7 @@ Write \( \frac{1}{w-z} = \frac{1}{(w-z_0)(1-(z-z_0)/(w-z_0))} = \sum_{n=0}^\inft
 </div>
 
 <div class="example" markdown="1">
-**Example 7.3.3.** Find the Taylor series of \( f(z) = e^{3z^2} \) at \( z_0 = 0 \).
+<strong>Example 7.3.3.</strong> Find the Taylor series of \( f(z) = e^{3z^2} \) at \( z_0 = 0 \).
 
 Substitute \( z \mapsto 3z^2 \) in the series for \( e^z \):
 \[ e^{3z^2} = \sum_{n=0}^\infty \frac{(3z^2)^n}{n!} = \sum_{n=0}^\infty \frac{3^n z^{2n}}{n!} = 1 + 3z^2 + \frac{9}{2}z^4 + \frac{9}{2}z^6 + \cdots \]
@@ -613,7 +613,7 @@ with radius of convergence \( R = \infty \).
 </div>
 
 <div class="example" markdown="1">
-**Example 7.3.4.** Find the Taylor series of \( \operatorname{Log}\, z \) at \( z_0 = 2 \).
+<strong>Example 7.3.4.</strong> Find the Taylor series of \( \operatorname{Log}\, z \) at \( z_0 = 2 \).
 
 \[ \operatorname{Log}\, z = \operatorname{Log}\, 2 + \operatorname{Log}(1 + (z-2)/2) = \operatorname{Log}\, 2 + \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\left(\frac{z-2}{2}\right)^n \]
 with radius of convergence \( R = 2 \) (distance from \( z_0 = 2 \) to the nearest singularity at \( z = 0 \).
@@ -624,15 +624,15 @@ with radius of convergence \( R = 2 \) (distance from \( z_0 = 2 \) to the neare
 The theory of zeros of analytic functions has no real analogue. In complex analysis, the zeros of a non-trivial analytic function are always isolated — they cannot accumulate in the domain. This isolation, combined with the Identity Theorem, means that two analytic functions agreeing on any set with a limit point must agree everywhere. This is an extremely powerful rigidity principle: an analytic function is determined by its values on any convergent sequence within its domain of analyticity.
 
 <div class="definition" markdown="1">
-**Definition 7.4.1 (Order of a Zero).** A point \( z_0 \) is a *zero of order* \( m \geq 1 \) of \( f \) if \( f(z_0) = f'(z_0) = \cdots = f^{(m-1)}(z_0) = 0 \) but \( f^{(m)}(z_0) \neq 0 \). Equivalently, \( f(z) = (z-z_0)^m g(z) \) with \( g \) analytic and \( g(z_0) \neq 0 \). A simple zero has order 1.
+<strong>Definition 7.4.1 (Order of a Zero).</strong> A point \( z_0 \) is a *zero of order* \( m \geq 1 \) of \( f \) if \( f(z_0) = f'(z_0) = \cdots = f^{(m-1)}(z_0) = 0 \) but \( f^{(m)}(z_0) \neq 0 \). Equivalently, \( f(z) = (z-z_0)^m g(z) \) with \( g \) analytic and \( g(z_0) \neq 0 \). A simple zero has order 1.
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 7.4.2 (Isolated Zeros).** If \( f \) is analytic on a domain \( D \) and not identically zero, then the zeros of \( f \) are isolated: for each zero \( z_0 \) there exists \( r > 0 \) with \( f(z) \neq 0 \) for \( 0 < |z-z_0| < r \).
+<strong>Theorem 7.4.2 (Isolated Zeros).</strong> If \( f \) is analytic on a domain \( D \) and not identically zero, then the zeros of \( f \) are isolated: for each zero \( z_0 \) there exists \( r > 0 \) with \( f(z) \neq 0 \) for \( 0 < |z-z_0| < r \).
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 7.4.3 (Identity Theorem).** Let \( f, g \) be analytic on a domain \( D \). If \( f = g \) on a set \( S \subseteq D \) having a limit point in \( D \), then \( f = g \) on all of \( D \).
+<strong>Theorem 7.4.3 (Identity Theorem).</strong> Let \( f, g \) be analytic on a domain \( D \). If \( f = g \) on a set \( S \subseteq D \) having a limit point in \( D \), then \( f = g \) on all of \( D \).
 </div>
 
 <div class="proof" markdown="1">
@@ -646,25 +646,25 @@ Taylor series describe an analytic function near a point where it is well-behave
 ## 8.1 Laurent Series
 
 <div class="theorem" markdown="1">
-**Theorem 8.1.1 (Laurent Series Theorem).** Let \( f \) be analytic on the annulus \( A = A(z_0; r, R) = \{z : r < |z-z_0| < R\} \) (with \( 0 \leq r < R \leq \infty \). Then \( f \) has a unique *Laurent series representation*:
+<strong>Theorem 8.1.1 (Laurent Series Theorem).</strong> Let \( f \) be analytic on the annulus \( A = A(z_0; r, R) = \{z : r < |z-z_0| < R\} \) (with \( 0 \leq r < R \leq \infty \). Then \( f \) has a unique *Laurent series representation*:
 \[ f(z) = \sum_{n=-\infty}^\infty c_n(z-z_0)^n = \sum_{n=0}^\infty c_n(z-z_0)^n + \sum_{n=1}^\infty \frac{c_{-n}}{(z-z_0)^n}, \]
 converging absolutely and uniformly on compact subsets of \( A \), where for any \( \rho \in (r, R) \):
 \[ c_n = \frac{1}{2\pi i}\oint_{|z-z_0|=\rho} \frac{f(z)}{(z-z_0)^{n+1}}\, dz. \]
 </div>
 
 <div class="definition" markdown="1">
-**Definition 8.1.2 (Principal Part).** In the Laurent expansion, the *principal part* is \( \sum_{n=1}^\infty c_{-n}(z-z_0)^{-n} \) (the negative-power terms) and the *analytic part* is \( \sum_{n=0}^\infty c_n(z-z_0)^n \).
+<strong>Definition 8.1.2 (Principal Part).</strong> In the Laurent expansion, the *principal part* is \( \sum_{n=1}^\infty c_{-n}(z-z_0)^{-n} \) (the negative-power terms) and the *analytic part* is \( \sum_{n=0}^\infty c_n(z-z_0)^n \).
 </div>
 
 <div class="example" markdown="1">
-**Example 8.1.3.** Find all Laurent series of \( f(z) = \frac{1}{z(z-1)} \).
+<strong>Example 8.1.3.</strong> Find all Laurent series of \( f(z) = \frac{1}{z(z-1)} \).
 
 The singularities are at \( z = 0 \) and \( z = 1 \). Three annular regions:
 
-**(a) \( 0 < |z| < 1 \):** Use partial fractions \( f = -\frac{1}{z} + \frac{1}{z-1} = -\frac{1}{z} - \frac{1}{1-z} \):
+<strong>(a) \( 0 < |z| < 1 \):</strong> Use partial fractions \( f = -\frac{1}{z} + \frac{1}{z-1} = -\frac{1}{z} - \frac{1}{1-z} \):
 \[ f(z) = -\frac{1}{z} - \sum_{n=0}^\infty z^n = -z^{-1} - 1 - z - z^2 - \cdots \]
 
-**(b) \( 1 < |z| < \infty \):** \( \frac{1}{z-1} = \frac{1}{z}\cdot\frac{1}{1-1/z} = \frac{1}{z}\sum_{n=0}^\infty z^{-n} \):
+<strong>(b) \( 1 < |z| < \infty \):</strong> \( \frac{1}{z-1} = \frac{1}{z}\cdot\frac{1}{1-1/z} = \frac{1}{z}\sum_{n=0}^\infty z^{-n} \):
 \[ f(z) = -\frac{1}{z} + \frac{1}{z}\sum_{n=0}^\infty \frac{1}{z^n} = \sum_{n=0}^\infty \frac{1}{z^{n+2}} = z^{-2} + z^{-3} + \cdots \]
 </div>
 
@@ -673,20 +673,20 @@ The singularities are at \( z = 0 \) and \( z = 1 \). Three annular regions:
 The Laurent expansion gives a complete classification of isolated singularities. The three cases — removable, pole, and essential — behave completely differently near the singular point, and this classification is what makes the Residue Theorem possible: only poles contribute non-trivially to contour integrals.
 
 <div class="definition" markdown="1">
-**Definition 8.2.1 (Isolated Singularity).** If \( f \) is analytic on \( A(z_0; 0, R) \) but not at \( z_0 \) itself, \( z_0 \) is an *isolated singularity*. Classify by the Laurent principal part:
-- **Removable singularity**: principal part is 0 (all \( c_n = 0 \) for \( n < 0 \). Then \( \lim_{z\to z_0} f(z) \) exists finitely.
-- **Pole of order \( m \)**: \( c_{-m} \neq 0 \) and \( c_n = 0 \) for \( n < -m \). Then \( \lim_{z\to z_0} |f(z)| = \infty \).
-- **Essential singularity**: infinitely many nonzero \( c_n \) with \( n < 0 \).
+<strong>Definition 8.2.1 (Isolated Singularity).</strong> If \( f \) is analytic on \( A(z_0; 0, R) \) but not at \( z_0 \) itself, \( z_0 \) is an *isolated singularity*. Classify by the Laurent principal part:
+- <strong>Removable singularity</strong>: principal part is 0 (all \( c_n = 0 \) for \( n < 0 \). Then \( \lim_{z\to z_0} f(z) \) exists finitely.
+- <strong>Pole of order \( m \)</strong>: \( c_{-m} \neq 0 \) and \( c_n = 0 \) for \( n < -m \). Then \( \lim_{z\to z_0} |f(z)| = \infty \).
+- <strong>Essential singularity</strong>: infinitely many nonzero \( c_n \) with \( n < 0 \).
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 8.2.2 (Riemann's Removability Criterion).** The isolated singularity \( z_0 \) of \( f \) is removable if and only if \( f \) is bounded in some punctured disc \( 0 < |z - z_0| < \delta \) (equivalently, if \( \lim_{z\to z_0}(z-z_0)f(z) = 0 \).
+<strong>Theorem 8.2.2 (Riemann's Removability Criterion).</strong> The isolated singularity \( z_0 \) of \( f \) is removable if and only if \( f \) is bounded in some punctured disc \( 0 < |z - z_0| < \delta \) (equivalently, if \( \lim_{z\to z_0}(z-z_0)f(z) = 0 \).
 </div>
 
 The behavior near an essential singularity is wild beyond anything a pole can produce. Casorati–Weierstrass says the function comes arbitrarily close to every complex value in any punctured neighborhood — geometrically, the image of any small punctured disc is dense in \( \mathbb{C} \). Picard's theorem strengthens this to say the function actually takes every value with at most one exception, but the proof is deeper.
 
 <div class="theorem" markdown="1">
-**Theorem 8.2.3 (Casorati–Weierstrass).** Near an essential singularity \( z_0 \), the image of any punctured disc \( D(z_0,r)\setminus\{z_0\} \) is dense in \( \mathbb{C} \). (The stronger Picard's Great Theorem states the image omits at most one value.)
+<strong>Theorem 8.2.3 (Casorati–Weierstrass).</strong> Near an essential singularity \( z_0 \), the image of any punctured disc \( D(z_0,r)\setminus\{z_0\} \) is dense in \( \mathbb{C} \). (The stronger Picard's Great Theorem states the image omits at most one value.)
 </div>
 
 # Chapter 9: The Residue Theorem
@@ -698,7 +698,7 @@ The Residue Theorem is the payoff of everything built so far. It converts a cont
 The residue is the single coefficient \( c_{-1} \) in the Laurent expansion. From Example 6.1.3, it is the only Laurent coefficient that contributes to a contour integral. Everything else either has an antiderivative (positive powers) or integrates to zero (negative powers other than \( -1 \)).
 
 <div class="definition" markdown="1">
-**Definition 9.1.1 (Residue).** The *residue* of \( f \) at an isolated singularity \( z_0 \) is
+<strong>Definition 9.1.1 (Residue).</strong> The *residue* of \( f \) at an isolated singularity \( z_0 \) is
 \[ \operatorname{Res}(f, z_0) = c_{-1} = \frac{1}{2\pi i}\oint_{C_\varepsilon} f(z)\, dz \]
 where \( C_\varepsilon \) is any small circle around \( z_0 \).
 </div>
@@ -706,7 +706,7 @@ where \( C_\varepsilon \) is any small circle around \( z_0 \).
 In practice, computing residues by expanding Laurent series is often unnecessary. The formulas below handle the most common cases — simple poles and poles of finite order — purely algebraically.
 
 <div class="proposition" markdown="1">
-**Proposition 9.1.2 (Computing Residues).**
+<strong>Proposition 9.1.2 (Computing Residues).</strong>
 1. *Simple pole*: \( \operatorname{Res}(f, z_0) = \lim_{z\to z_0}(z-z_0)f(z) \).
 2. *Simple pole of \( g/h \)*: if \( g(z_0) \neq 0 \), \( h(z_0) = 0 \), \( h'(z_0) \neq 0 \), then \( \operatorname{Res}(g/h, z_0) = g(z_0)/h'(z_0) \).
 3. *Pole of order \( m \)*:
@@ -714,7 +714,7 @@ In practice, computing residues by expanding Laurent series is often unnecessary
 </div>
 
 <div class="example" markdown="1">
-**Example 9.1.3.** Compute \( \operatorname{Res}\!\left(\frac{z^2}{(z-1)^2(z+2)}, 1\right) \).
+<strong>Example 9.1.3.</strong> Compute \( \operatorname{Res}\!\left(\frac{z^2}{(z-1)^2(z+2)}, 1\right) \).
 
 Pole of order 2 at \( z = 1 \):
 \[ \operatorname{Res} = \lim_{z\to 1}\frac{d}{dz}\left[\frac{z^2}{z+2}\right] = \lim_{z\to 1}\frac{2z(z+2) - z^2}{(z+2)^2} = \frac{2\cdot 3 - 1}{9} = \frac{5}{9}. \]
@@ -723,7 +723,7 @@ Pole of order 2 at \( z = 1 \):
 ## 9.2 The Residue Theorem
 
 <div class="theorem" markdown="1">
-**Theorem 9.2.1 (Residue Theorem).** Let \( f \) be analytic on a domain \( D \) except at finitely many isolated singularities \( z_1, \ldots, z_k \). Let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing all the singularities (and with its interior in \( D \). Then
+<strong>Theorem 9.2.1 (Residue Theorem).</strong> Let \( f \) be analytic on a domain \( D \) except at finitely many isolated singularities \( z_1, \ldots, z_k \). Let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing all the singularities (and with its interior in \( D \). Then
 \[ \oint_\gamma f(z)\, dz = 2\pi i \sum_{j=1}^k \operatorname{Res}(f, z_j). \]
 </div>
 
@@ -737,18 +737,18 @@ The Residue Theorem is remarkable for what it ignores: the shape of the contour,
 ## 9.3 Applications to Real Integrals
 
 <div class="example" markdown="1">
-**Example 9.3.1 (Rational Functions).** To evaluate \( \int_{-\infty}^\infty P(x)/Q(x)\, dx \) where \( \deg Q \geq \deg P + 2 \) and \( Q \) has no real roots: integrate over a semicircular contour in the upper half-plane. As \( R \to \infty \), the semicircle contributes 0 (ML-inequality). Thus
+<strong>Example 9.3.1 (Rational Functions).</strong> To evaluate \( \int_{-\infty}^\infty P(x)/Q(x)\, dx \) where \( \deg Q \geq \deg P + 2 \) and \( Q \) has no real roots: integrate over a semicircular contour in the upper half-plane. As \( R \to \infty \), the semicircle contributes 0 (ML-inequality). Thus
 \[ \int_{-\infty}^\infty \frac{P(x)}{Q(x)}\, dx = 2\pi i \sum_{\operatorname{Im}(z_j) > 0} \operatorname{Res}\!\left(\frac{P}{Q}, z_j\right). \]
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 9.3.2 (Jordan's Lemma).** Let \( f \) be analytic for \( \operatorname{Im}(z) \geq 0, |z| \geq R_0 \), with \( \max_{|z|=R, \operatorname{Im}(z)\geq 0}|f(z)| \to 0 \) as \( R \to \infty \). Then for \( \lambda > 0 \):
+<strong>Proposition 9.3.2 (Jordan's Lemma).</strong> Let \( f \) be analytic for \( \operatorname{Im}(z) \geq 0, |z| \geq R_0 \), with \( \max_{|z|=R, \operatorname{Im}(z)\geq 0}|f(z)| \to 0 \) as \( R \to \infty \). Then for \( \lambda > 0 \):
 \[ \lim_{R\to\infty} \int_{\Gamma_R} f(z)e^{i\lambda z}\, dz = 0 \]
 where \( \Gamma_R \) is the upper semicircle of radius \( R \). This enables evaluation of \( \int_{-\infty}^\infty f(x)\sin(\lambda x)\, dx \) and \( \int_{-\infty}^\infty f(x)\cos(\lambda x)\, dx \).
 </div>
 
 <div class="example" markdown="1">
-**Example 9.3.3 (Trigonometric Integrals).** To evaluate \( \int_0^{2\pi} R(\cos\theta, \sin\theta)\, d\theta \), substitute \( z = e^{i\theta} \):
+<strong>Example 9.3.3 (Trigonometric Integrals).</strong> To evaluate \( \int_0^{2\pi} R(\cos\theta, \sin\theta)\, d\theta \), substitute \( z = e^{i\theta} \):
 \[ \cos\theta = \frac{z + z^{-1}}{2}, \quad \sin\theta = \frac{z - z^{-1}}{2i}, \quad d\theta = \frac{dz}{iz}. \]
 The integral becomes \( \oint_{|z|=1} (\cdots)\, dz \), evaluated by the Residue Theorem.
 </div>
@@ -758,7 +758,7 @@ The integral becomes \( \oint_{|z|=1} (\cdots)\, dz \), evaluated by the Residue
 The Argument Principle links a contour integral to a topological quantity: the number of zeros minus the number of poles counts how many times the image curve \( f \circ \gamma \) winds around the origin. This "winding number" interpretation shows that counting zeros and poles is a global, topological operation — an analytic function cannot change its number of zeros discontinuously as parameters vary, and Rouché's theorem makes this precise.
 
 <div class="theorem" markdown="1">
-**Theorem 9.4.1 (Argument Principle).** Let \( f \) be meromorphic on a domain containing a simple closed curve \( \gamma \) and its interior, with no zeros or poles on \( \gamma \). Then
+<strong>Theorem 9.4.1 (Argument Principle).</strong> Let \( f \) be meromorphic on a domain containing a simple closed curve \( \gamma \) and its interior, with no zeros or poles on \( \gamma \). Then
 \[ \frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\, dz = Z - P \]
 where \( Z \) = number of zeros (counted with multiplicity) and \( P \) = number of poles (counted with order) inside \( \gamma \). The left side equals the winding number \( n(f\circ\gamma, 0) \).
 </div>
@@ -768,11 +768,11 @@ where \( Z \) = number of zeros (counted with multiplicity) and \( P \) = number
 </div>
 
 <div class="theorem" markdown="1">
-**Theorem 9.4.2 (Rouché's Theorem).** Let \( f, g \) be analytic inside and on a simple closed curve \( \gamma \). If \( |f(z) - g(z)| < |f(z)| \) for all \( z \in \gamma \), then \( f \) and \( g \) have the same number of zeros inside \( \gamma \) (counted with multiplicity).
+<strong>Theorem 9.4.2 (Rouché's Theorem).</strong> Let \( f, g \) be analytic inside and on a simple closed curve \( \gamma \). If \( |f(z) - g(z)| < |f(z)| \) for all \( z \in \gamma \), then \( f \) and \( g \) have the same number of zeros inside \( \gamma \) (counted with multiplicity).
 </div>
 
 <div class="example" markdown="1">
-**Example 9.4.3.** Show all roots of \( z^7 - 4z^3 + z - 1 = 0 \) lie in \( D(0,2) \).
+<strong>Example 9.4.3.</strong> Show all roots of \( z^7 - 4z^3 + z - 1 = 0 \) lie in \( D(0,2) \).
 
 Let \( f(z) = -4z^3 \) and \( g(z) = z^7 - 4z^3 + z - 1 \). On \( |z| = 2 \):
 \[ |f(z) - g(z)| = |z^7 + z - 1| \leq 128 + 2 + 1 = 131, \quad |f(z)| = 4\cdot 8 = 32. \]
@@ -788,13 +788,13 @@ Conformal mappings are the geometric objects of complex analysis. An analytic fu
 ## 10.1 Conformal Maps
 
 <div class="definition" markdown="1">
-**Definition 10.1.1 (Conformal Map).** An analytic function \( f \) is *conformal* at \( z_0 \) if \( f'(z_0) \neq 0 \). A conformal map preserves angles between curves at \( z_0 \) (both magnitude and orientation). A *conformal bijection* is an analytic bijection \( f: D \to D' \) whose inverse is also analytic (i.e., a *biholomorphism*).
+<strong>Definition 10.1.1 (Conformal Map).</strong> An analytic function \( f \) is *conformal* at \( z_0 \) if \( f'(z_0) \neq 0 \). A conformal map preserves angles between curves at \( z_0 \) (both magnitude and orientation). A *conformal bijection* is an analytic bijection \( f: D \to D' \) whose inverse is also analytic (i.e., a *biholomorphism*).
 </div>
 
 Why does \( f'(z_0) \neq 0 \) imply angle preservation? Because locally, \( f \) looks like multiplication by the complex number \( f'(z_0) \), which is a rotation by \( \arg f'(z_0) \) composed with a scaling by \( |f'(z_0)| \). Rotations and scalings preserve angles, so the differential of \( f \) at \( z_0 \) preserves angles. At a point where \( f'(z_0) = 0 \), angles are multiplied by the order of the zero, leading to angle-multiplying maps rather than angle-preserving ones.
 
 <div class="theorem" markdown="1">
-**Theorem 10.1.2 (Open Mapping Theorem).** A non-constant analytic function on a domain \( D \) maps open sets to open sets.
+<strong>Theorem 10.1.2 (Open Mapping Theorem).</strong> A non-constant analytic function on a domain \( D \) maps open sets to open sets.
 </div>
 
 <div class="proof" markdown="1">
@@ -802,7 +802,7 @@ Why does \( f'(z_0) \neq 0 \) imply angle preservation? Because locally, \( f \)
 </div>
 
 <div class="corollary" markdown="1">
-**Corollary 10.1.3 (Maximum Modulus Principle).** If \( f \) is analytic on a domain \( D \) and \( |f| \) attains a local maximum, then \( f \) is constant. If \( D \) is bounded and \( f \) extends continuously to \( \partial D \), then \( \max_{\overline{D}} |f| = \max_{\partial D} |f| \).
+<strong>Corollary 10.1.3 (Maximum Modulus Principle).</strong> If \( f \) is analytic on a domain \( D \) and \( |f| \) attains a local maximum, then \( f \) is constant. If \( D \) is bounded and \( f \) extends continuously to \( \partial D \), then \( \max_{\overline{D}} |f| = \max_{\partial D} |f| \).
 </div>
 
 The Maximum Modulus Principle is the analytic counterpart of the harmonic maximum principle from Chapter 2. The proof here — via the Open Mapping Theorem — is purely complex-analytic and more elegant. Together these principles say that the "size" of an analytic function is controlled by its boundary behavior; functions cannot have hidden interior maxima.
@@ -810,7 +810,7 @@ The Maximum Modulus Principle is the analytic counterpart of the harmonic maximu
 ## 10.2 Elementary Mappings
 
 <div class="proposition" markdown="1">
-**Proposition 10.2.1 (Elementary Conformal Maps).**
+<strong>Proposition 10.2.1 (Elementary Conformal Maps).</strong>
 - *Translations*: \( z \mapsto z + b \) — maps discs to discs.
 - *Rotations*: \( z \mapsto e^{i\theta}z \) — rotates by angle \( \theta \).
 - *Magnifications*: \( z \mapsto rz \) (\( r > 0 \) — scales by \( r \).
@@ -824,13 +824,13 @@ The Maximum Modulus Principle is the analytic counterpart of the harmonic maximu
 Möbius transformations (also called linear fractional transformations) are the simplest non-trivial conformal bijections of the Riemann sphere. Their remarkable property — that they send circles and lines to circles and lines — makes them indispensable for mapping between standard domains (half-planes, discs, sectors). The cross-ratio, preserved under all Möbius transformations, is the invariant that uniquely characterises them.
 
 <div class="definition" markdown="1">
-**Definition 10.3.1 (Möbius Transformation / LFT).** A *Möbius transformation* is
+<strong>Definition 10.3.1 (Möbius Transformation / LFT).</strong> A *Möbius transformation* is
 \[ T(z) = \frac{az + b}{cz + d}, \quad ad - bc \neq 0. \]
 These are conformal bijections of the Riemann sphere \( \hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\} \) (with \( T(\infty) = a/c \) if \( c \neq 0 \) and \( T(-d/c) = \infty \).
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 10.3.2 (Properties of Möbius Transformations).**
+<strong>Proposition 10.3.2 (Properties of Möbius Transformations).</strong>
 1. The Möbius transformations form a group under composition, isomorphic to \( PGL(2,\mathbb{C}) \).
 2. Every LFT is a composition of translations, dilations, and the inversion \( z \mapsto 1/z \).
 3. LFTs map *circles and lines* to circles and lines (viewing lines as circles through \( \infty \).
@@ -839,13 +839,13 @@ These are conformal bijections of the Riemann sphere \( \hat{\mathbb{C}} = \math
 </div>
 
 <div class="example" markdown="1">
-**Example 10.3.3 (Upper Half-Plane to Disc).** The LFT
+<strong>Example 10.3.3 (Upper Half-Plane to Disc).</strong> The LFT
 \[ f(z) = \frac{z - i}{z + i} \]
 maps the upper half-plane \( \{z: \operatorname{Im}(z) > 0\} \) conformally onto the unit disc \( \mathbb{D} \), with \( f(i) = 0 \) and \( f(\mathbb{R}) = \partial\mathbb{D} \).
 </div>
 
 <div class="example" markdown="1">
-**Example 10.3.4 (Disc Automorphisms).** Every conformal bijection of \( \mathbb{D} \) onto itself is
+<strong>Example 10.3.4 (Disc Automorphisms).</strong> Every conformal bijection of \( \mathbb{D} \) onto itself is
 \[ f(z) = e^{i\theta}\frac{z - a}{1 - \bar{a}z}, \quad a \in \mathbb{D},\; \theta \in \mathbb{R}. \]
 </div>
 
@@ -854,11 +854,11 @@ maps the upper half-plane \( \{z: \operatorname{Im}(z) > 0\} \) conformally onto
 The Riemann Mapping Theorem is one of the most powerful existence theorems in mathematics. It asserts that every simply connected proper subdomain of \( \mathbb{C} \) is conformally equivalent to the unit disc — regardless of its shape. A square, a half-plane, a triangle, a star-shaped domain — all are conformally the same. The theorem is non-constructive, but it underpins the strategy of solving problems on complicated domains by first mapping to the disc.
 
 <div class="theorem" markdown="1">
-**Theorem 10.4.1 (Riemann Mapping Theorem).** Let \( D \subsetneq \mathbb{C} \) be a simply connected domain. Then there exists a conformal bijection \( f: D \xrightarrow{\sim} \mathbb{D} \). Moreover, fixing any \( z_0 \in D \), there is a unique such \( f \) with \( f(z_0) = 0 \) and \( f'(z_0) > 0 \).
+<strong>Theorem 10.4.1 (Riemann Mapping Theorem).</strong> Let \( D \subsetneq \mathbb{C} \) be a simply connected domain. Then there exists a conformal bijection \( f: D \xrightarrow{\sim} \mathbb{D} \). Moreover, fixing any \( z_0 \in D \), there is a unique such \( f \) with \( f(z_0) = 0 \) and \( f'(z_0) > 0 \).
 </div>
 
 <div class="note" markdown="1">
-**Note.** The proof is non-constructive, using a normal families argument (Montel's theorem). The theorem says every non-trivial simply connected domain is conformally equivalent to the disc — a remarkable rigidity result. The theorem fails for \( D = \mathbb{C} \) itself (by Liouville's theorem, no bounded entire bijection exists).
+<strong>Note.</strong> The proof is non-constructive, using a normal families argument (Montel's theorem). The theorem says every non-trivial simply connected domain is conformally equivalent to the disc — a remarkable rigidity result. The theorem fails for \( D = \mathbb{C} \) itself (by Liouville's theorem, no bounded entire bijection exists).
 </div>
 
 ## 10.5 The Dirichlet Problem
@@ -866,11 +866,11 @@ The Riemann Mapping Theorem is one of the most powerful existence theorems in ma
 One of the most important applications of conformal mapping is to boundary value problems for Laplace's equation. The Dirichlet problem asks: given boundary data on \( \partial D \), find a harmonic function in \( D \) with those boundary values. On the disc, the explicit Poisson integral formula solves this completely. The Riemann Mapping Theorem then solves the problem on any simply connected domain by pulling back through a conformal equivalence.
 
 <div class="definition" markdown="1">
-**Definition 10.5.1 (Dirichlet Problem).** Given a domain \( D \) and continuous boundary data \( h: \partial D \to \mathbb{R} \), find a function \( u: \overline{D} \to \mathbb{R} \) harmonic on \( D \) and continuous on \( \overline{D} \) with \( u|_{\partial D} = h \).
+<strong>Definition 10.5.1 (Dirichlet Problem).</strong> Given a domain \( D \) and continuous boundary data \( h: \partial D \to \mathbb{R} \), find a function \( u: \overline{D} \to \mathbb{R} \) harmonic on \( D \) and continuous on \( \overline{D} \) with \( u|_{\partial D} = h \).
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 10.5.2 (Solution via Conformal Mapping).** For a simply connected domain \( D \):
+<strong>Proposition 10.5.2 (Solution via Conformal Mapping).</strong> For a simply connected domain \( D \):
 1. Map \( D \) conformally to \( \mathbb{D} \) via \( \phi: D \to \mathbb{D} \).
 2. Transport boundary data: \( \tilde{h} = h \circ \phi^{-1} \).
 3. Solve on the disc using the Poisson integral: \( \tilde{u}(re^{i\theta}) = \frac{1}{2\pi}\int_0^{2\pi}\frac{1-r^2}{1-2r\cos(\theta-t)+r^2}\tilde{h}(e^{it})\, dt \).
@@ -885,21 +885,21 @@ The final chapter addresses a question that emerges naturally from the Identity 
 ## 11.1 Direct Analytic Continuation
 
 <div class="definition" markdown="1">
-**Definition 11.1.1 (Direct Analytic Continuation).** Let \( f_1 \) be analytic on a domain \( D_1 \). A *direct analytic continuation* of \( (f_1, D_1) \) to a domain \( D_2 \) (with \( D_1 \cap D_2 \) nonempty and connected) is a function \( f_2 \) analytic on \( D_2 \) with \( f_1 = f_2 \) on \( D_1 \cap D_2 \). By the Identity Theorem, the continuation is unique.
+<strong>Definition 11.1.1 (Direct Analytic Continuation).</strong> Let \( f_1 \) be analytic on a domain \( D_1 \). A *direct analytic continuation* of \( (f_1, D_1) \) to a domain \( D_2 \) (with \( D_1 \cap D_2 \) nonempty and connected) is a function \( f_2 \) analytic on \( D_2 \) with \( f_1 = f_2 \) on \( D_1 \cap D_2 \). By the Identity Theorem, the continuation is unique.
 </div>
 
 <div class="proposition" markdown="1">
-**Proposition 11.1.2 (Weierstrass Method).** A *chain of continuations* along a path \( \gamma \) from \( z_0 \) to \( z_1 \) is a finite sequence of discs \( D_0, D_1, \ldots, D_n \) with centres on \( \gamma \) and analytic functions \( f_k: D_k \to \mathbb{C} \) such that \( f_k = f_{k+1} \) on \( D_k \cap D_{k+1} \neq \emptyset \) for each \( k \). By uniqueness, the final element \( f_n \) depends only on the homotopy class of \( \gamma \) in the domain of definition.
+<strong>Proposition 11.1.2 (Weierstrass Method).</strong> A *chain of continuations* along a path \( \gamma \) from \( z_0 \) to \( z_1 \) is a finite sequence of discs \( D_0, D_1, \ldots, D_n \) with centres on \( \gamma \) and analytic functions \( f_k: D_k \to \mathbb{C} \) such that \( f_k = f_{k+1} \) on \( D_k \cap D_{k+1} \neq \emptyset \) for each \( k \). By uniqueness, the final element \( f_n \) depends only on the homotopy class of \( \gamma \) in the domain of definition.
 </div>
 
 <div class="example" markdown="1">
-**Example 11.1.3.** The power series \( f(z) = \sum_{n=0}^\infty z^n \) converges on \( D(0,1) \) to \( 1/(1-z) \). The function \( 1/(1-z) \) is the unique analytic continuation of \( f \) to \( \mathbb{C}\setminus\{1\} \). The singularity at \( z = 1 \) is a *natural boundary point*: the original series cannot be continued across it.
+<strong>Example 11.1.3.</strong> The power series \( f(z) = \sum_{n=0}^\infty z^n \) converges on \( D(0,1) \) to \( 1/(1-z) \). The function \( 1/(1-z) \) is the unique analytic continuation of \( f \) to \( \mathbb{C}\setminus\{1\} \). The singularity at \( z = 1 \) is a *natural boundary point*: the original series cannot be continued across it.
 </div>
 
 ## 11.2 Monodromy Theorem
 
 <div class="theorem" markdown="1">
-**Theorem 11.2.1 (Monodromy Theorem).** Let \( D \) be a simply connected domain and let \( f \) be analytic near some \( z_0 \in D \). If \( f \) can be analytically continued along every path in \( D \) starting at \( z_0 \), then these continuations define a single-valued analytic function on all of \( D \).
+<strong>Theorem 11.2.1 (Monodromy Theorem).</strong> Let \( D \) be a simply connected domain and let \( f \) be analytic near some \( z_0 \in D \). If \( f \) can be analytically continued along every path in \( D \) starting at \( z_0 \), then these continuations define a single-valued analytic function on all of \( D \).
 </div>
 
 <div class="proof" markdown="1">
@@ -909,7 +909,7 @@ The final chapter addresses a question that emerges naturally from the Identity 
 The Monodromy Theorem explains in precise terms why branch cuts exist. The logarithm \( \log z \) can be continued along any path in \( \mathbb{C}^* \), but \( \mathbb{C}^* \) is not simply connected: a loop that winds once around the origin belongs to a non-trivial homotopy class, and continuation along such a loop changes the value by \( 2\pi i \). Simple connectivity is exactly the topological condition that prevents this from happening.
 
 <div class="corollary" markdown="1">
-**Corollary 11.2.2.** The complex logarithm \( \log z \) cannot be analytically continued to a single-valued function on all of \( \mathbb{C}^* \), because \( \mathbb{C}^* \) is not simply connected: continuation around a loop encircling 0 changes the value by \( 2\pi i \). On any simply connected subdomain of \( \mathbb{C}^* \), however, a single-valued branch exists (by the Poincaré Lemma).
+<strong>Corollary 11.2.2.</strong> The complex logarithm \( \log z \) cannot be analytically continued to a single-valued function on all of \( \mathbb{C}^* \), because \( \mathbb{C}^* \) is not simply connected: continuation around a loop encircling 0 changes the value by \( 2\pi i \). On any simply connected subdomain of \( \mathbb{C}^* \), however, a single-valued branch exists (by the Poincaré Lemma).
 </div>
 
 ## 11.3 Riemann Surfaces
@@ -917,12 +917,12 @@ The Monodromy Theorem explains in precise terms why branch cuts exist. The logar
 The multi-valuedness of \( \log z \) and of algebraic functions is not a pathology — it is geometry. A Riemann surface is a space on which a multi-valued function becomes single-valued by "unfolding" the sheets of the multi-valuedness. This is the natural home for functions like \( \log z \), \( z^{1/n} \), and the roots of polynomial equations, and it connects complex analysis to algebraic geometry and topology.
 
 <div class="definition" markdown="1">
-**Definition 11.3.1 (Riemann Surface of \( \log z \).** Since \( \log z \) is multi-valued on \( \mathbb{C}^* \), we construct its *Riemann surface* \( \mathcal{R} \) as an infinitely-sheeted cover:
+<strong>Definition 11.3.1 (Riemann Surface of \( \log z \).</strong> Since \( \log z \) is multi-valued on \( \mathbb{C}^* \), we construct its *Riemann surface* \( \mathcal{R} \) as an infinitely-sheeted cover:
 - Take countably many copies \( S_k \) (\( k \in \mathbb{Z} \) of \( \mathbb{C}^* \), each slit along \( (-\infty, 0) \).
 - Glue the upper edge of the slit in \( S_k \) to the lower edge of the slit in \( S_{k+1} \).
 - On the resulting surface, define \( \log z = \ln|z| + i\theta \) where \( \theta \in (2\pi k - \pi, 2\pi k + \pi) \) on sheet \( S_k \). This is a single-valued analytic function on \( \mathcal{R} \).
 </div>
 
 <div class="note" markdown="1">
-**Note.** More generally, for algebraic functions \( w \) satisfying \( P(z, w) = 0 \) (a polynomial relation), one constructs a compact Riemann surface on which \( w \) becomes single-valued. The theory of Riemann surfaces connects complex analysis to topology (via genus and Euler characteristic) and algebraic geometry.
+<strong>Note.</strong> More generally, for algebraic functions \( w \) satisfying \( P(z, w) = 0 \) (a polynomial relation), one constructs a compact Riemann surface on which \( w \) becomes single-valued. The theory of Riemann surfaces connects complex analysis to topology (via genus and Euler characteristic) and algebraic geometry.
 </div>

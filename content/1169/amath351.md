@@ -324,7 +324,7 @@ Notice that \( a_0 \) and \( a_1 \) are the two free parameters — they corresp
 \[
 (n+2)(n+1)a_{n+2} = a_{n-1}, \qquad n \geq 1,
 \]
-with \( a_2 = 0 \). Setting \( a_0 = 1 \), \( a_1 = 0 \) gives one solution; setting \( a_0 = 0 \), \( a_1 = 1 \) gives another. These are the **Airy functions** \( \mathrm{Ai}(x) \) and \( \mathrm{Bi}(x) \).
+with \( a_2 = 0 \). Setting \( a_0 = 1 \), \( a_1 = 0 \) gives one solution; setting \( a_0 = 0 \), \( a_1 = 1 \) gives another. These are the <strong>Airy functions</strong> \( \mathrm{Ai}(x) \) and \( \mathrm{Bi}(x) \).
 </div>
 
 <div class="example"><strong>Example (The equation \( y'' + 2x^2 y' + xy = 0 \)).</strong> With \( P(x) = 2x^2 \) and \( Q(x) = x \), both polynomial, we substitute \( y = \sum a_n x^n \). The resulting recurrence (allowing coefficients with negative index to be zero) gives
@@ -776,7 +776,7 @@ The classification can be summarised in the \( (\tau, \Delta) \)-plane. The para
 \[
 A = \begin{pmatrix}0 & 1 \\ -\omega^2 & 0\end{pmatrix}, \qquad \tau = 0, \quad \Delta = \omega^2 > 0.
 \]
-The eigenvalues are purely imaginary: \( \lambda = \pm i\omega \). The origin is a **centre**, and the orbits are ellipses in the \( (x_1, x_2) \) phase plane. Adding damping (\( \tau < 0 \)) converts the centre to a stable spiral — the orbits spiral inward to the origin.
+The eigenvalues are purely imaginary: \( \lambda = \pm i\omega \). The origin is a <strong>centre</strong>, and the orbits are ellipses in the \( (x_1, x_2) \) phase plane. Adding damping (\( \tau < 0 \)) converts the centre to a stable spiral — the orbits spiral inward to the origin.
 </div>
 
 ## Stable and Unstable Subspaces
@@ -1141,7 +1141,7 @@ Partial sums satisfy the **Bessel inequality**: \( \sum_{n=1}^{N} c_n^2 N_n \leq
 \[
 N_n = \int_0^\pi \sin^2 nx\,dx = \frac{\pi}{2}.
 \]
-The expansion becomes the **Fourier sine series**:
+The expansion becomes the <strong>Fourier sine series</strong>:
 \[
 f(x) = \sum_{n=1}^{\infty} c_n \sin nx, \qquad c_n = \frac{2}{\pi}\int_0^\pi f(x)\sin nx\,dx.
 \]

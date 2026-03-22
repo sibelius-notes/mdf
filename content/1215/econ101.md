@@ -42,7 +42,7 @@ Economic reasoning centres on five themes related to choice:
 
 **Choice and change.** Preferences evolve over time. Society once consumed media on VHS cassettes; it now uses streaming services. Changing circumstances shift choices.
 
-**Choice and opportunity cost.** <div class="definition"><strong>Opportunity cost:</strong> the highest-valued alternative forgone when a choice is made. Nothing is free — "there is no such thing as a free lunch." </div> For example, the opportunity cost of attending university includes not only tuition and books but also forgone wages and forgone leisure time. Because university graduates earn substantially more over their lifetimes, the benefits typically outweigh these costs — but the costs are real.
+<strong>Choice and opportunity cost.</strong> <div class="definition"><strong>Opportunity cost:</strong> the highest-valued alternative forgone when a choice is made. Nothing is free — "there is no such thing as a free lunch." </div> For example, the opportunity cost of attending university includes not only tuition and books but also forgone wages and forgone leisure time. Because university graduates earn substantially more over their lifetimes, the benefits typically outweigh these costs — but the costs are real.
 
 **Choice at the margin.** Rational decision-makers compare **marginal benefit** (the additional benefit from one more unit of an activity) against **marginal cost** (the additional cost of one more unit). If \(MB > MC\), the activity should be expanded; if \(MB < MC\), it should be reduced; optimality occurs where \(MB = MC\). This marginal analysis — not averaging — governs real economic decisions.
 
