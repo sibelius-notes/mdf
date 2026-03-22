@@ -24,10 +24,10 @@ To make this study mathematically precise, we employ **mathematical models**. Th
 
 A control system of the form
 
-\[\begin{aligned}
+\[\begin{align}
 x'(t) &= A(t)x(t) + B(t)u(t), \tag{1.1a} \\
 y(t) &= C(t)x(t) + D(t)u(t), \tag{1.1b}
-\end{aligned}\]
+\end{align}\]
 
 is called a **linear time-varying (LTV) system**. Here \(x(t) \in \mathbb{R}^n\), \(u(t) \in \mathbb{R}^k\), and \(y(t) \in \mathbb{R}^m\) are called the **state**, **input**, and **output** of the system, respectively. The coefficient matrices \(A(t) \in \mathbb{R}^{n \times n}\), \(B(t) \in \mathbb{R}^{n \times k}\), \(C(t) \in \mathbb{R}^{m \times n}\), and \(D(t) \in \mathbb{R}^{m \times k}\) are time-varying. The integer \(n\) is called the **dimension** or **order** of the state space.
 
@@ -35,17 +35,17 @@ is called a **linear time-varying (LTV) system**. Here \(x(t) \in \mathbb{R}^n\)
 
 A special and especially important case arises when all coefficient matrices are constant. An **linear time-invariant (LTI) system** has the form
 
-\[\begin{aligned}
+\[\begin{align}
 x'(t) &= Ax(t) + Bu(t), \tag{1.2a} \\
 y(t) &= Cx(t) + Du(t), \tag{1.2b}
-\end{aligned}\]
+\end{align}\]
 
 where \(A\), \(B\), \(C\), \(D\) are constant matrices of appropriate dimensions. We often write the system in the compact form
 
-\[\begin{aligned}
+\[\begin{align}
 x' &= Ax + Bu, \tag{1.3a} \\
 y &= Cx + Du, \tag{1.3b}
-\end{aligned}\]
+\end{align}\]
 
 or simply denote it by the quadruple \((A, B, C, D)\). LTI systems will be our primary focus throughout the course.
 
@@ -53,10 +53,10 @@ or simply denote it by the quadruple \((A, B, C, D)\). LTI systems will be our p
 
 More generally, a continuous-time control system can be described by a system of ordinary differential equations with inputs and outputs of the form
 
-\[\begin{aligned}
+\[\begin{align}
 x' &= f(x, u), \tag{1.4a} \\
 y &= h(x, u), \tag{1.4b}
-\end{aligned}\]
+\end{align}\]
 
 where \(x \in \mathbb{R}^n\) is the state, \(u \in \mathbb{R}^k\) the input, \(y \in \mathbb{R}^m\) the output, and
 
@@ -81,7 +81,7 @@ where the coefficient matrices are the Jacobians of \(f\) and \(h\) evaluated al
 
 Here \(\frac{\partial f}{\partial x}\) denotes the **Jacobian matrix** of \(f\) with respect to \(x\), defined entry-wise by
 
-\[\frac{\partial f}{\partial x} = \left(\frac{\partial f_i}{\partial x_j}\right) = \begin{bmatrix} \frac{\partial f_1}{\partial x_1} &amp; \cdots &amp; \frac{\partial f_1}{\partial x_n} \\ \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial f_n}{\partial x_1} &amp; \cdots &amp; \frac{\partial f_n}{\partial x_n} \end{bmatrix}.\]
+\[\frac{\partial f}{\partial x} = \left(\frac{\partial f_i}{\partial x_j}\right) = \begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_n}{\partial x_1} & \cdots & \frac{\partial f_n}{\partial x_n} \end{bmatrix}.\]
 
 The Jacobians \(\frac{\partial f}{\partial u}\), \(\frac{\partial h}{\partial x}\), and \(\frac{\partial h}{\partial u}\) are similarly defined.
 
@@ -184,7 +184,7 @@ The formula (2.1a) has a natural interpretation: the first term \(e^{At}x_0\) is
 
 #### Computing Matrix Exponentials
 
-Given \(A \in \mathbb{R}^{n \times n}\), how does one compute \(e^{At}\) in practice? For numerical work, one uses a computer algebra system. For example, the following MATLAB script computes \(e^{At}\) symbolically for \(A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\):
+Given \(A \in \mathbb{R}^{n \times n}\), how does one compute \(e^{At}\) in practice? For numerical work, one uses a computer algebra system. For example, the following MATLAB script computes \(e^{At}\) symbolically for \(A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\):
 
 ```matlab
 A = [1 1; 0 1];
@@ -194,23 +194,23 @@ Q = expm(A*t);
 
 The result is
 
-\[e^{At} = \begin{bmatrix} e^t &amp; te^t \\ 0 &amp; e^t \end{bmatrix}.\]
+\[e^{At} = \begin{bmatrix} e^t & te^t \\ 0 & e^t \end{bmatrix}.\]
 
 How to compute matrix exponentials analytically is an important theoretical question. A general and systematic approach uses the **Jordan normal form**. Every square matrix \(A\) is similar to a block diagonal matrix
 
-\[J = \begin{bmatrix} J_1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; J_2 &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; \ddots &amp; 0 \\ 0 &amp; \cdots &amp; 0 &amp; J_k \end{bmatrix},\]
+\[J = \begin{bmatrix} J_1 & 0 & \cdots & 0 \\ 0 & J_2 & \ddots & \vdots \\ \vdots & \ddots & \ddots & 0 \\ 0 & \cdots & 0 & J_k \end{bmatrix},\]
 
 where each **Jordan block** \(J_i\) is a \(k_i \times k_i\) upper-bidiagonal matrix of the form
 
-\[J_i = \begin{bmatrix} \lambda_i &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; \lambda_i &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; 0 \\ 0 &amp; \ddots &amp; \ddots &amp; \lambda_i &amp; 1 \\ 0 &amp; 0 &amp; \cdots &amp; 0 &amp; \lambda_i \end{bmatrix}_{k_i \times k_i},\]
+\[J_i = \begin{bmatrix} \lambda_i & 1 & 0 & \cdots & 0 \\ 0 & \lambda_i & \ddots & \ddots & \vdots \\ \vdots & \ddots & \ddots & \ddots & 0 \\ 0 & \ddots & \ddots & \lambda_i & 1 \\ 0 & 0 & \cdots & 0 & \lambda_i \end{bmatrix}_{k_i \times k_i},\]
 
 and \(\lambda_i\) is a (possibly complex) eigenvalue of \(A\). The exponential of the full Jordan form is block diagonal:
 
-\[e^{Jt} = \begin{bmatrix} e^{J_1 t} &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; e^{J_2 t} &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; \ddots &amp; 0 \\ 0 &amp; \cdots &amp; 0 &amp; e^{J_p t} \end{bmatrix},\]
+\[e^{Jt} = \begin{bmatrix} e^{J_1 t} & 0 & \cdots & 0 \\ 0 & e^{J_2 t} & \ddots & \vdots \\ \vdots & \ddots & \ddots & 0 \\ 0 & \cdots & 0 & e^{J_p t} \end{bmatrix},\]
 
 and the exponential of a single Jordan block is given explicitly by
 
-\[e^{J_i t} = e^{\lambda_i t} \begin{bmatrix} 1 &amp; t &amp; \frac{t^2}{2!} &amp; \cdots &amp; \frac{t^{k_i-1}}{(k_i-1)!} \\ 0 &amp; 1 &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \frac{t^2}{2!} \\ 0 &amp; \ddots &amp; \ddots &amp; 1 &amp; t \\ 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \end{bmatrix}.\]
+\[e^{J_i t} = e^{\lambda_i t} \begin{bmatrix} 1 & t & \frac{t^2}{2!} & \cdots & \frac{t^{k_i-1}}{(k_i-1)!} \\ 0 & 1 & \ddots & \ddots & \vdots \\ \vdots & \ddots & \ddots & \ddots & \frac{t^2}{2!} \\ 0 & \ddots & \ddots & 1 & t \\ 0 & 0 & \cdots & 0 & 1 \end{bmatrix}.\]
 
 The procedure for computing \(e^{At}\) is thus as follows. First, find an invertible matrix \(P\) such that \(P^{-1}AP = J\) is in Jordan normal form. Second, compute \(e^{Jt}\) using the block formula above. Third, use Proposition 2.1(3) to obtain \(e^{At} = P e^{Jt} P^{-1}\).
 
@@ -262,13 +262,13 @@ The following theorem provides four equivalent characterizations of controllabil
 
 *(3) (**Kalman's rank condition**) The **controllability matrix***
 
-\[\mathcal{C}(A,B) = \begin{bmatrix} B &amp; AB &amp; \cdots &amp; A^{n-1}B \end{bmatrix}\]
+\[\mathcal{C}(A,B) = \begin{bmatrix} B & AB & \cdots & A^{n-1}B \end{bmatrix}\]
 
 *has rank \(n\) (i.e., full row rank).*
 
 *(4) (**Popov-Belevitch-Hautus test**) The matrix*
 
-\[\begin{bmatrix} A - \lambda I &amp; B \end{bmatrix}\]
+\[\begin{bmatrix} A - \lambda I & B \end{bmatrix}\]
 
 *has rank \(n\) for every \(\lambda \in \mathbb{C}\).*
 
@@ -342,15 +342,15 @@ and in particular \(v^T [B\ AB\ \cdots\ A^{n-1}B] = 0\), so the controllability 
 
 **Example 3.5.** Consider the LTI system
 
-\[x' = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} x + \begin{bmatrix} 1 \\ 1 \end{bmatrix} u.\]
+\[x' = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} x + \begin{bmatrix} 1 \\ 1 \end{bmatrix} u.\]
 
 The controllability matrix is
 
-\[\mathcal{C}(A,B) = \begin{bmatrix} B &amp; AB \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix},\]
+\[\mathcal{C}(A,B) = \begin{bmatrix} B & AB \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix},\]
 
 which has rank 1. Hence \((A, B)\) is not controllable. We can confirm this with the PBH test. The eigenvalues of \(A\) are \(\lambda = -1\) and \(\lambda = 1\). For \(\lambda = -1\),
 
-\[\mathrm{rank}[A - \lambda I \quad B] = \mathrm{rank}\begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 \end{bmatrix} = 1 < 2.\]
+\[\mathrm{rank}[A - \lambda I \quad B] = \mathrm{rank}\begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix} = 1 < 2.\]
 
 The matrix fails to have full rank, confirming that \((A,B)\) is not controllable.
 
@@ -360,11 +360,11 @@ The matrix fails to have full rank, confirming that \((A,B)\) is not controllabl
 
 Introducing the state vector \(x = (x_1, x_2, x_3, x_4)^T = (y_1, \dot{y}_1, y_2, \dot{y}_2)^T\), the system takes the form \(x' = Ax + Bu\) with
 
-\[A = \begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 2 &amp; 0 &amp; -2 &amp; 0 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 &amp; 0 \\ 1 &amp; 0 \\ 0 &amp; 0 \\ 0 &amp; 2 \end{bmatrix}.\]
+\[A = \begin{bmatrix} 0 & 1 & 0 & 0 \\ -1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 2 & 0 & -2 & 0 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 & 0 \\ 1 & 0 \\ 0 & 0 \\ 0 & 2 \end{bmatrix}.\]
 
 The controllability matrix \(\mathcal{C}(A,B) = [B\ AB\ A^2B\ A^3B]\) is the \(4 \times 8\) matrix
 
-\[\mathcal{C}(A,B) = \begin{bmatrix} 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; 2 \\ 1 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 &amp; 2 &amp; -4 \\ 0 &amp; 2 &amp; 0 &amp; 0 &amp; 2 &amp; -4 &amp; 0 &amp; 0 \end{bmatrix}.\]
+\[\mathcal{C}(A,B) = \begin{bmatrix} 0 & 0 & 1 & 0 & 0 & 0 & -1 & 2 \\ 1 & 0 & 0 & 0 & -1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 2 & 0 & 0 & 2 & -4 \\ 0 & 2 & 0 & 0 & 2 & -4 & 0 & 0 \end{bmatrix}.\]
 
 This matrix has rank 4, so \((A,B)\) is controllable. When both carts are independently actuated, the system can be steered to any desired configuration.
 
@@ -387,9 +387,9 @@ We obtain the transformed LTI system \((PAP^{-1}, PB)\).
 *Proof.* Observe that
 
 \[\begin{aligned}
-\mathcal{C}(PAP^{-1}, PB) &= \begin{bmatrix} PB &amp; PAP^{-1} \cdot PB &amp; \cdots &amp; (PAP^{-1})^{n-1} PB \end{bmatrix} \\
-&= \begin{bmatrix} PB &amp; PAB &amp; \cdots &amp; PA^{n-1}B \end{bmatrix} \\
-&= P\begin{bmatrix} B &amp; AB &amp; \cdots &amp; A^{n-1}B \end{bmatrix} = P\,\mathcal{C}(A,B).
+\mathcal{C}(PAP^{-1}, PB) &= \begin{bmatrix} PB & PAP^{-1} \cdot PB & \cdots & (PAP^{-1})^{n-1} PB \end{bmatrix} \\
+&= \begin{bmatrix} PB & PAB & \cdots & PA^{n-1}B \end{bmatrix} \\
+&= P\begin{bmatrix} B & AB & \cdots & A^{n-1}B \end{bmatrix} = P\,\mathcal{C}(A,B).
 \end{aligned}\]
 
 Since \(P\) is non-singular, left-multiplying by \(P\) does not change the rank. The conclusion follows from Kalman's rank condition. \(\square\)
@@ -404,26 +404,26 @@ Suppose \((A,B)\) is not controllable, so the controllability matrix \(\mathcal{
 
 A key structural observation is that the image of the controllability matrix is invariant under \(A\): that is, \(A \cdot \mathrm{Im}(\mathcal{C}(A,B)) \subseteq \mathrm{Im}(\mathcal{C}(A,B))\). This follows from the Cayley-Hamilton theorem, since every column of \(A^n B\) lies in the span of the columns of \([B\ AB\ \cdots\ A^{n-1}B]\). Consequently, in the new coordinates, \(PAP^{-1}\) and \(PB\) take the block forms
 
-\[PAP^{-1} = \begin{pmatrix} A_c &amp; A_{12} \\ 0 &amp; A_u \end{pmatrix}, \qquad PB = \begin{pmatrix} B_c \\ 0 \end{pmatrix}, \tag{4.1, 4.2}\]
+\[PAP^{-1} = \begin{pmatrix} A_c & A_{12} \\ 0 & A_u \end{pmatrix}, \qquad PB = \begin{pmatrix} B_c \\ 0 \end{pmatrix}, \tag{4.1, 4.2}\]
 
 where \(A_c \in \mathbb{R}^{n_1 \times n_1}\) and \(B_c \in \mathbb{R}^{n_1 \times k}\). Writing the new state as \(z = (z_1^T, z_2^T)^T\) with \(z_1 \in \mathbb{R}^{n_1}\) and \(z_2 \in \mathbb{R}^{n-n_1}\), the system in the new coordinates becomes
 
-\[\begin{aligned}
+\[\begin{align}
 z_1' &= A_c z_1 + A_{12} z_2 + B_c u, \tag{4.3a} \\
 z_2' &= A_u z_2. \tag{4.3b}
-\end{aligned}\]
+\end{align}\]
 
 The subsystem (4.3b) evolves autonomously, entirely independent of the input \(u\). No matter what control is applied, \(z_2\) cannot be influenced. The subsystem (4.3a) is driven by the input, and the pair \((A_c, B_c)\) is called the **controllable part** of \((A,B)\).
 
 We claim that \((A_c, B_c)\) is itself controllable. To see this, compute the controllability matrix of \((PAP^{-1}, PB)\) using the block structure:
 
-\[\mathcal{C}(PAP^{-1}, PB) = \begin{bmatrix} B_c &amp; A_c B_c &amp; A_c^2 B_c &amp; \cdots &amp; A_c^{n-1}B_c \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \end{bmatrix}.\]
+\[\mathcal{C}(PAP^{-1}, PB) = \begin{bmatrix} B_c & A_c B_c & A_c^2 B_c & \cdots & A_c^{n-1}B_c \\ 0 & 0 & 0 & \cdots & 0 \end{bmatrix}.\]
 
 This matrix clearly has the same rank as \(\mathcal{C}(A_c, B_c) = [B_c\ A_c B_c\ \cdots\ A_c^{n_1-1}B_c]\). By Remark 4.9, the rank of \(\mathcal{C}(PAP^{-1}, PB)\) equals the rank of \(\mathcal{C}(A,B)\), which is \(n_1\). Therefore \(\mathcal{C}(A_c, B_c)\) has rank \(n_1\), which is full row rank for a system of dimension \(n_1\). By Kalman's rank condition, \((A_c, B_c)\) is controllable.
 
 **Theorem 4.10** (Controllable Decomposition). *If \((A,B)\) is not controllable, then there exists a non-singular matrix \(P\) such that*
 
-\[PAP^{-1} = \begin{bmatrix} A_c &amp; A_{12} \\ 0 &amp; A_u \end{bmatrix}, \qquad PB = \begin{bmatrix} B_c \\ 0 \end{bmatrix},\]
+\[PAP^{-1} = \begin{bmatrix} A_c & A_{12} \\ 0 & A_u \end{bmatrix}, \qquad PB = \begin{bmatrix} B_c \\ 0 \end{bmatrix},\]
 
 *where \((A_c, B_c)\) is controllable (provided \(n_1 > 0\).*
 
@@ -431,11 +431,11 @@ This matrix clearly has the same rank as \(\mathcal{C}(A_c, B_c) = [B_c\ A_c B_c
 
 **Example 4.11.** Consider the LTI system
 
-\[x' = \begin{bmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \end{bmatrix} x + \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} u.\]
+\[x' = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} x + \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ 0 & 1 \end{bmatrix} u.\]
 
 The controllability matrix is
 
-\[\mathcal{C}(A,B) = \begin{bmatrix} B &amp; AB &amp; A^2B \end{bmatrix} = \begin{bmatrix} 0 &amp; 1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 \end{bmatrix},\]
+\[\mathcal{C}(A,B) = \begin{bmatrix} B & AB & A^2B \end{bmatrix} = \begin{bmatrix} 0 & 1 & 1 & 1 & 2 & 1 \\ 1 & 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 1 & 2 & 1 \end{bmatrix},\]
 
 which has rank 2. Hence \((A,B)\) is not controllable. To find the controllable decomposition, pick two linearly independent columns of \(\mathcal{C}(A,B)\) spanning its column space and one additional vector:
 
@@ -443,13 +443,13 @@ which has rank 2. Hence \((A,B)\) is not controllable. To find the controllable 
 
 Then
 
-\[P^{-1} = \begin{bmatrix} 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \end{bmatrix} \implies P = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -1 \end{bmatrix}.\]
+\[P^{-1} = \begin{bmatrix} 0 & 1 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \implies P = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & -1 \end{bmatrix}.\]
 
 Computing the transformed matrices,
 
-\[PAP^{-1} = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}, \qquad PB = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}.\]
+\[PAP^{-1} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \qquad PB = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}.\]
 
-The controllable part is \((A_c, B_c) = \left(\begin{bmatrix}1 &amp; 0 \\ 1 &amp; 1\end{bmatrix}, \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}\right)\), and it is straightforward to verify that this pair is indeed controllable by checking that its controllability matrix has rank 2.
+The controllable part is \((A_c, B_c) = \left(\begin{bmatrix}1 & 0 \\ 1 & 1\end{bmatrix}, \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\right)\), and it is straightforward to verify that this pair is indeed controllable by checking that its controllability matrix has rank 2.
 
 #### Proof of the PBH Test
 
@@ -457,13 +457,13 @@ We can now prove the PBH test, restated here for completeness.
 
 **Theorem 4.12** (PBH Test). *Let \(A \in \mathbb{R}^{n \times n}\) and \(B \in \mathbb{R}^{n \times k}\). The pair \((A,B)\) is controllable if and only if*
 
-\[\mathrm{rank}\begin{bmatrix} A - \lambda I &amp; B \end{bmatrix} = n \qquad \text{for all } \lambda \in \mathbb{C}.\]
+\[\mathrm{rank}\begin{bmatrix} A - \lambda I & B \end{bmatrix} = n \qquad \text{for all } \lambda \in \mathbb{C}.\]
 
 *Proof.* We prove both directions.
 
 **(\(\Rightarrow\) contrapositive):** Suppose \([A - \lambda I\ \ B]\) does not have full rank for some \(\lambda \in \mathbb{C}\). Then there exists a nonzero complex vector \(v\) such that
 
-\[v^T [A - \lambda I \quad B] = \begin{bmatrix} v^T A - \lambda v^T &amp; v^T B \end{bmatrix} = 0,\]
+\[v^T [A - \lambda I \quad B] = \begin{bmatrix} v^T A - \lambda v^T & v^T B \end{bmatrix} = 0,\]
 
 so \(v^T A = \lambda v^T\) (meaning \(v\) is a **left eigenvector** of \(A\) with eigenvalue \(\lambda\) and \(v^T B = 0\). It follows that
 
@@ -473,15 +473,15 @@ so \(v^T [B\ AB\ \cdots\ A^{n-1}B] = 0\). The controllability matrix fails to ha
 
 **(\(\Leftarrow\) contrapositive):** Now suppose \((A,B)\) is not controllable. By the Controllable Decomposition Theorem (Theorem 4.10), there exists a non-singular \(P\) such that
 
-\[PAP^{-1} = \begin{bmatrix} A_c &amp; A_{12} \\ 0 &amp; A_u \end{bmatrix}, \qquad PB = \begin{bmatrix} B_c \\ 0 \end{bmatrix}.\]
+\[PAP^{-1} = \begin{bmatrix} A_c & A_{12} \\ 0 & A_u \end{bmatrix}, \qquad PB = \begin{bmatrix} B_c \\ 0 \end{bmatrix}.\]
 
 Let \(\lambda\) be an eigenvalue of \(A_u\) and let \(v^T\) be the corresponding left eigenvector, so \(v^T A_u = \lambda v^T\). Then
 
-\[\begin{bmatrix} 0 &amp; v^T \end{bmatrix} \begin{bmatrix} PAP^{-1} - \lambda I &amp; PB \end{bmatrix} = \begin{bmatrix} 0 &amp; v^T \end{bmatrix} \begin{bmatrix} A_c - \lambda I_{n_1} &amp; A_{12} &amp; B_c \\ 0 &amp; A_u - \lambda I_{n-n_1} &amp; 0 \end{bmatrix} = \begin{bmatrix} 0 &amp; v^T A_u - \lambda v^T &amp; 0 \end{bmatrix} = 0.\]
+\[\begin{bmatrix} 0 & v^T \end{bmatrix} \begin{bmatrix} PAP^{-1} - \lambda I & PB \end{bmatrix} = \begin{bmatrix} 0 & v^T \end{bmatrix} \begin{bmatrix} A_c - \lambda I_{n_1} & A_{12} & B_c \\ 0 & A_u - \lambda I_{n-n_1} & 0 \end{bmatrix} = \begin{bmatrix} 0 & v^T A_u - \lambda v^T & 0 \end{bmatrix} = 0.\]
 
 Setting \(w = [0\ v^T] P\), we have \(w \neq 0\) and
 
-\[w [A - \lambda I \quad B] = \begin{bmatrix} 0 &amp; v^T \end{bmatrix} P [A - \lambda I \quad B] = \begin{bmatrix} 0 &amp; v^T \end{bmatrix} [PAP^{-1} - \lambda I \quad PB] P_{\mathrm{aug}} = 0,\]
+\[w [A - \lambda I \quad B] = \begin{bmatrix} 0 & v^T \end{bmatrix} P [A - \lambda I \quad B] = \begin{bmatrix} 0 & v^T \end{bmatrix} [PAP^{-1} - \lambda I \quad PB] P_{\mathrm{aug}} = 0,\]
 
 where the last step uses the block calculation above (right-multiplying \([PAP^{-1} - \lambda I\quad PB]\) by \(P\) in the state part). Hence \(\mathrm{rank}[A - \lambda I\ \ B] < n\). The proof is complete. \(\square\)
 
@@ -620,7 +620,7 @@ has rank \( n_1 < n \). Let \( v_1, \ldots, v_{n_1} \) be \( n_1 \) linearly ind
 
 is invertible. Under the state transformation \( z = Px \), the LTI system \( (A, B, C, D) \) becomes
 
-\[\begin{aligned}
+\[\begin{align}
 z'(t) &= PAP^{-1}z(t) + PBu(t) \\
 y(t) &= CP^{-1}z(t) + Du(t),
 \end{aligned}\tag{5.1}\]
@@ -671,12 +671,12 @@ Consider a signal \( x : [0, \infty) \to \mathbb{R}^n \). The **Laplace transfor
 
 where \( s \) is a complex variable. The Laplace transform thus maps a time-domain signal to a function of the complex variable \( s \). Several standard pairs are frequently used:
 
-\[\begin{aligned}
+\[\begin{align}
 \mathcal{L}[t^k] &= \frac{k!}{s^{k+1}}, \quad k = 0, 1, 2, \ldots \\
 \mathcal{L}[e^{at}] &= \frac{1}{s-a} \\
 \mathcal{L}[\sin(\omega t)] &= \frac{\omega}{s^2 + \omega^2} \\
 \mathcal{L}[\cos(\omega t)] &= \frac{s}{s^2 + \omega^2}.
-\end{aligned}\]
+\end{align}\]
 
 The transform of derivatives, which is the key property for analyzing differential equations, is given by
 
@@ -1700,9 +1700,9 @@ x' = Ax + Bu = Ax + BK\hat{x} = Ax + BK(x + e) = (A + BK)x + BKe.
 
 Combining this with the error dynamics \( e' = (A + LC)e \) from (13.4), the closed-loop system is
 
-\[\begin{aligned}
+\[\begin{align}
 \begin{bmatrix} x' \\ e' \end{bmatrix} = \begin{bmatrix} A + BK & BK \\ 0 & A + LC \end{bmatrix} \begin{bmatrix} x \\ e \end{bmatrix}. \tag{13.6}
-\end{aligned}\]
+\end{align}\]
 
 Because the closed-loop matrix is block upper triangular, its characteristic polynomial factors as the product of the characteristic polynomials of the two diagonal blocks. This observation is the content of the following fundamental theorem.
 
