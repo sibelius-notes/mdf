@@ -1,5 +1,5 @@
 ---
-title: "PMATH 450"
+title: "PMATH 450: Lebesgue Integration and Fourier Analysis"
 prof: "Stephen New"
 ---
 
