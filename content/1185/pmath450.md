@@ -9,6 +9,87 @@ These notes cover PMATH 450 (Spring 2018), taught by Prof. Stephen New. The cour
 
 ---
 
+> These notes are primarily based on Prof. Stephen New's lectures (Spring 2018). Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Katherine Hare, Spring 2020).
+
+---
+
+# Chapter 0: Foundations (Set Theory and Order)
+
+Before developing measure theory, it is worth collecting the foundational tools from set theory that appear throughout the course. The Axiom of Choice and its equivalents — Zorn's Lemma and the Well-Ordering Principle — are invoked at several key points: in the construction of a Vitali non-measurable set, in the existence of a Hilbert basis for every inner product space, and in the construction of a basis for every vector space.
+
+## Partial Orders and Chains
+
+<div class="definition">
+
+<strong>Definition 0.1 (Partial Order).</strong> A relation \(\leq\) on a set \(S\) is a <em>partial order</em> if it is (i) reflexive: \(x \leq x\); (ii) antisymmetric: \(x \leq y\) and \(y \leq x\) imply \(x = y\); (iii) transitive: \(x \leq y\) and \(y \leq z\) imply \(x \leq z\). A set with a partial order is a <em>poset</em>.
+
+</div>
+
+<div class="definition">
+
+<strong>Definition 0.2 (Total Order, Well-Order).</strong> A partial order is a <em>total order</em> if every two elements are comparable: for all \(x, y \in S\), either \(x \leq y\) or \(y \leq x\). A poset is <em>well-ordered</em> if every non-empty subset has a smallest element: for every \(\emptyset \neq T \subseteq S\) there is \(x \in T\) with \(x \leq y\) for all \(y \in T\).
+
+</div>
+
+<div class="definition">
+
+<strong>Definition 0.3 (Chain, Upper Bound, Maximal Element).</strong> A <em>chain</em> in a poset \((S, \leq)\) is a totally ordered subset. An <em>upper bound</em> for \(T \subseteq S\) is \(s \in S\) with \(s \geq t\) for all \(t \in T\). An element \(s \in S\) is <em>maximal</em> if \(x \geq s\) implies \(x = s\).
+
+</div>
+
+Note that maximal elements need not be unique in a partially ordered set, since not all elements need be comparable.
+
+## The Axiom of Choice and Its Equivalents
+
+<div class="theorem">
+
+<strong>Axiom 0.4 (Axiom of Choice).</strong> Let \(\mathcal{F} = \{A_\lambda : \lambda \in \Lambda\}\) be a non-empty collection of non-empty sets. Then there exists a function \(f : \Lambda \to \bigcup_{\lambda \in \Lambda} A_\lambda\) such that \(f(\lambda) \in A_\lambda\) for each \(\lambda \in \Lambda\).
+
+</div>
+
+In other words, one can simultaneously choose one element from each set in any non-empty collection of non-empty sets. This principle seems intuitively reasonable, but it is independent of the other axioms of set theory (ZF) and has striking consequences that feel paradoxical — including the existence of non-measurable sets.
+
+<div class="lemma">
+
+<strong>Lemma 0.5 (Zorn's Lemma).</strong> Let \((S, \leq)\) be a non-empty poset in which every chain has an upper bound in \(S\). Then \(S\) has a maximal element.
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 0.6 (Well-Ordering Principle).</strong> Every set can be well-ordered. That is, for any set \(X\), there exists a total order on \(X\) such that every non-empty subset has a smallest element.
+
+</div>
+
+These three statements — the Axiom of Choice, Zorn's Lemma, and the Well-Ordering Principle — are all equivalent, and each implies the others within ZF set theory. The equivalences are proved using transfinite induction. In practice, Zorn's Lemma is often the most convenient form to apply.
+
+<div class="theorem">
+
+<strong>Theorem 0.7 (Equivalence).</strong> The following are equivalent:
+1. The Axiom of Choice.
+2. Zorn's Lemma.
+3. The Well-Ordering Principle.
+
+</div>
+
+## Application: Every Vector Space Has a Basis
+
+As a first application of Zorn's Lemma, we prove that every vector space — even an infinite-dimensional one — admits a (Hamel) basis. This result is surprising because it is not constructive: one cannot in general write down an explicit basis.
+
+<div class="theorem">
+
+<strong>Theorem 0.8.</strong> Every vector space \(V\) has a basis (a linearly independent spanning set).
+
+</div>
+
+*Proof.* Let \(\mathcal{S} = \{I \subseteq V : I \text{ is linearly independent}\}\), ordered by inclusion. Let \(\mathcal{C} \subseteq \mathcal{S}\) be an arbitrary chain and define \(Y = \bigcup_{W \in \mathcal{C}} W\). Clearly \(W \subseteq Y\) for all \(W \in \mathcal{C}\), so it suffices to show \(Y \in \mathcal{S}\). Let \(x_1, \ldots, x_n \in Y\) and suppose \(\sum_i \alpha_i x_i = 0\). Each \(x_i\) belongs to some \(W_i \in \mathcal{C}\), and since \(\mathcal{C}\) is totally ordered, the finite collection \(\{W_1, \ldots, W_n\}\) has a maximum \(W^*\). Then \(x_i \in W^* \in \mathcal{S}\) for all \(i\), so the linear independence of \(W^*\) forces \(\alpha_i = 0\) for all \(i\). Thus \(Y\) is linearly independent.
+
+By Zorn's Lemma, \(\mathcal{S}\) has a maximal element \(M\). We claim \(M\) spans \(V\): if not, there is \(x \in V \setminus \operatorname{span} M\), making \(M \cup \{x\}\) a strictly larger linearly independent set, contradicting maximality. \(\square\)
+
+This proof is a template for many applications of Zorn's Lemma in functional analysis: define a poset of "partial" objects ordered by extension, show every chain has an upper bound (their union), invoke Zorn to get a maximal object, and show maximality forces the desired global property.
+
+---
+
 # Chapter 1: Lebesgue Measure
 
 The Lebesgue theory begins by assigning a "size" — a measure — to subsets of \(\mathbb{R}\) in a way that extends the familiar notion of length for intervals, is countably additive, and is well-behaved under limits. The classical **Jordan content** fails for countable sets; the Lebesgue measure fixes this by allowing countably infinite covers.
@@ -394,6 +475,110 @@ Separability is essential for Fourier analysis: in a separable Hilbert space, on
 
 ---
 
+# Chapter 3.5: Egoroff's Theorem, Lusin's Theorem, and Fubini's Theorem
+
+This interlude collects three fundamental results that round out the theory of measurable functions and integration. Littlewood's three principles — (1) every measurable set is nearly a finite union of intervals, (2) every measurable function is nearly continuous, and (3) every pointwise convergent sequence of measurable functions is nearly uniformly convergent — motivate all three theorems. These results are indispensable for later chapters: Lusin's theorem gives the density of continuous functions in \(L^p\), and Fubini's theorem allows us to compute double integrals by iterated integration.
+
+## Egoroff's Theorem
+
+Pointwise convergence and uniform convergence are very different in general: a sequence of functions can converge pointwise everywhere without converging uniformly. Egoroff's theorem says that on a set of finite measure, pointwise convergence is "nearly" uniform — we can remove a small exceptional set and get uniform convergence on the rest. This is Littlewood's third principle made precise.
+
+<div class="theorem">
+
+<strong>Theorem 3.5.1 (Egoroff).</strong> Let \(E\) be a measurable set with \(\lambda(E) < \infty\). Let \((f_n)\) be a sequence of measurable real-valued functions on \(E\) that converges pointwise on \(E\) to a real-valued function \(f\). Then for every \(\varepsilon > 0\) there is a closed set \(F \subseteq E\) such that
+\[
+f_n \to f \text{ uniformly on } F \quad \text{and} \quad \lambda(E \setminus F) < \varepsilon.
+\]
+
+</div>
+
+Egoroff's theorem is remarkable: pointwise convergence, which a priori gives no uniform control, becomes uniform after discarding a set of arbitrarily small measure. The finite measure hypothesis is essential — the result fails on all of \(\mathbb{R}\) (consider \(f_n = \chi_{[n,n+1]}\)). The proof proceeds by noting that for each \(k\), the sets \(A_{n,k} = \{x \in E : |f_m(x) - f(x)| \geq 1/k \text{ for some } m \geq n\}\) decrease to the empty set as \(n \to \infty\), and continuity of measure allows us to choose \(n_k\) so that \(\lambda(A_{n_k, k}) < \varepsilon/2^k\); the union of these exceptional sets has measure less than \(\varepsilon\).
+
+## Lusin's Theorem
+
+While Egoroff's theorem addresses convergence, Lusin's theorem addresses the structure of a single measurable function. A measurable function need not be continuous — think of the Dirichlet function — but Lusin's theorem says it is continuous on most of its domain.
+
+<div class="lemma">
+
+<strong>Lemma 3.5.2.</strong> Let \(f : [a,b] \to \mathbb{R}\) be measurable and \(\varepsilon > 0\). There exists a continuous function \(h : [a,b] \to \mathbb{R}\) such that
+\[
+\lambda\{x \in [a,b] : |f(x) - h(x)| \geq \varepsilon\} < \varepsilon.
+\]
+Furthermore, if \(m \leq f \leq M\) on \([a,b]\), then \(h\) can be chosen with \(m \leq h \leq M\).
+
+</div>
+
+*Proof sketch (five steps).* (I) Show there is a large \(N\) with \(\lambda\{|f| \geq N\} < \varepsilon/3\), using downward continuity of measure. (II) Approximate \(f\) (on the set \(\{|f| < N\}\)) by a simple function \(\phi\) with \(|\phi - f| < \varepsilon\) pointwise. (III) Approximate the simple function \(\phi\) by a step function \(g\) that agrees with \(\phi\) except on a set of measure at most \(\varepsilon/3\). (IV) Approximate the step function \(g\) by a continuous function \(h\) that agrees with \(g\) except on a set of measure at most \(\varepsilon/3\), by making \(h\) piecewise linear in small neighborhoods of the jump points. (V) Combine the three exceptional sets (each of measure \(\leq \varepsilon/3\)) to get total measure \(\leq \varepsilon\). \(\square\)
+
+<div class="theorem">
+
+<strong>Theorem 3.5.3 (Lusin).</strong> For \(1 \leq p < \infty\), the continuous functions \(C[a,b]\) are dense in \(L^p[a,b]\). However, \(C[a,b]\) is <em>not</em> dense in \(L^\infty[a,b]\).
+
+</div>
+
+*Proof (density for \(p < \infty\)).* By Lemma 3.5.2, for any measurable \(f\) and any \(\delta > 0\), we can find a continuous \(h\) with \(|f - h| < \delta\) outside an exceptional set \(A\) of measure \(\delta\). Estimating \(\|f - h\|_p^p\) by splitting over \(A\) and \(A^c\) shows \(\|f - h\|_p \to 0\) as \(\delta \to 0\). For unbounded \(f\), first truncate: \(f_n = f \cdot \chi_{\{|f| \leq n\}}\) is bounded, \(f_n \to f\) a.e., and DCT gives \(\|f_n - f\|_p \to 0\).
+
+*Failure for \(p = \infty\).* Consider \(f = \chi_{[a,(a+b)/2)} - \chi_{[(a+b)/2,b]}\). Any \(g\) equal to \(f\) a.e. is discontinuous (a sequential-continuity argument shows both limits from the left and right at the midpoint must equal the same value, contradicting the values on both sides). Since \(C[a,b]\) is closed in \(L^\infty\) (uniform limits of continuous functions are continuous), no sequence from \(C[a,b]\) can converge to \(f\) in \(L^\infty\). \(\square\)
+
+Lusin's theorem has the following important corollaries.
+
+<div class="theorem">
+
+<strong>Corollary 3.5.4.</strong> The polynomials are dense in \(L^p[0,1]\) for \(1 \leq p < \infty\).
+
+</div>
+
+*Proof.* Approximate \(f \in L^p[0,1]\) by a continuous function \(g\) (Lusin), then apply the Weierstrass approximation theorem to approximate \(g\) uniformly by a polynomial. Since \(\lambda[0,1] = 1\), the \(L^p\) norm is bounded by the sup norm. \(\square\)
+
+<div class="theorem">
+
+<strong>Corollary 3.5.5.</strong> \(L^p[0,1]\) is separable for \(1 \leq p < \infty\), but \(L^\infty[0,1]\) is not separable.
+
+</div>
+
+## Fubini's Theorem
+
+Fubini's theorem answers the fundamental question: when can a double integral be computed as an iterated integral? It is one of the most used results in all of analysis, appearing throughout the rest of the course in proofs about convolution, the Hilbert transform, and \(L^p\) norms.
+
+<div class="definition">
+
+<strong>Definition 3.5.6 (Borel Sets in \(\mathbb{R}^2\)).</strong> A Borel set in \(\mathbb{R}^2\) is any element of the \(\sigma\)-algebra generated by the open sets in \(\mathbb{R}^2\). A function \(f : \mathbb{R}^2 \to \mathbb{R}\) is Borel measurable if \(f^{-1}(U)\) is a Borel set for every open \(U \subseteq \mathbb{R}\).
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 3.5.7 (Fubini).</strong> Suppose \(f : \mathbb{R}^2 \to \mathbb{R}\) is Borel measurable and satisfies
+\[
+\int_{\mathbb{R}} \int_{\mathbb{R}} |f(x,y)| \, dx \, dy < \infty.
+\]
+Then:
+1. For almost every \(x\), the function \(y \mapsto f(x,y)\) is integrable.
+2. For almost every \(y\), the function \(x \mapsto f(x,y)\) is integrable.
+3. The iterated integrals are equal:
+\[
+\int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dy\right) dx = \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dx\right) dy.
+\]
+Both iterated integrals equal the double integral \(\iint_{\mathbb{R}^2} f \, d(\lambda \times \lambda)\).
+
+</div>
+
+The absolute integrability hypothesis \(\iint |f| < \infty\) is crucial: without it, the iterated integrals may exist but disagree (consider \(f(x,y) = (x^2-y^2)/(x^2+y^2)^2\) on \([0,1]^2\)). The companion theorem, Tonelli's theorem, removes the integrability hypothesis for non-negative functions.
+
+<div class="theorem">
+
+<strong>Theorem 3.5.8 (Tonelli).</strong> If \(f : \mathbb{R}^2 \to [0,\infty]\) is Borel measurable and non-negative, then
+\[
+\int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dy\right) dx = \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dx\right) dy = \iint_{\mathbb{R}^2} f \, d(\lambda \times \lambda)
+\]
+(allowing \(+\infty\)).
+
+</div>
+
+In practice, one typically applies Tonelli's theorem to \(|f|\) first to verify the integrability hypothesis, then applies Fubini's theorem to \(f\) itself to exchange order of integration. Fubini's theorem is used repeatedly in the Fourier analysis chapters: for instance, in proving that the convolution \(f * g\) is well-defined and bounded, and in the \(L^p\) norm formula used in the Hilbert transform argument.
+
+---
+
 # Chapter 4: Hilbert Spaces
 
 A **Hilbert space** is a complete inner-product space. The additional structure of an inner product — beyond what a Banach space provides — allows a rich geometry: orthogonal projections, orthonormal bases, and Parseval's identity. The chief example is \(L^2(A)\).
@@ -636,3 +821,260 @@ u(x,t) = \sum_{n=1}^\infty \sin(nx)(A_n \cos nct + B_n \sin nct),
 where \(A_n\) are the Fourier sine coefficients of \(g\) and \(ncB_n\) are those of \(h\).
 
 The vibrating string is one of the historical motivating problems for Fourier analysis. Each term \(\sin(nx)\cos(nct)\) represents a standing wave — a pure vibrational mode — and the general solution is a superposition of all these modes. The Fourier coefficients of the initial displacement and velocity determine how much energy is initially in each mode, and the modes evolve independently in time. This is the essence of why Fourier analysis is so powerful for partial differential equations.
+
+---
+
+# Chapter 6: Convergence of Fourier Series
+
+The preceding chapters established that every \(f \in L^2(\mathbb{T})\) has a Fourier series converging to \(f\) in the \(L^2\) norm. But what can we say about pointwise convergence? Uniform convergence? Convergence in \(L^p\) for other values of \(p\)? This chapter addresses all three questions, revealing a rich and sometimes surprising landscape.
+
+## Convolution and Summability Kernels
+
+Before addressing convergence, we develop the algebraic framework. The convolution of two functions on the circle is defined by averaging translations of one function against the other. This operation is commutative and associative, and its Fourier transform is the pointwise product of the Fourier transforms — making it a fundamental tool.
+
+<div class="definition">
+
+<strong>Definition 6.1 (Convolution on \(\mathbb{T}\)).</strong> For \(f, g \in L^1(\mathbb{T})\), the <em>convolution</em> is
+\[
+(f * g)(x) = \frac{1}{2\pi} \int_\mathbb{T} f(t)\, g(x - t) \, dt.
+\]
+
+</div>
+
+The partial sum operator can be expressed as convolution: \(S_N(f)(x) = (f * D_N)(x)\), where \(D_N\) is the Dirichlet kernel. Similarly, the Cesàro mean is \(\sigma_N(f)(x) = (f * F_N)(x)\), where \(F_N\) is the Fejér kernel.
+
+<div class="theorem">
+
+<strong>Proposition 6.2.</strong> For \(f, g \in L^1(\mathbb{T})\):
+1. \(f * g = g * f\) (commutativity).
+2. \(\|f * g\|_1 \leq \|f\|_1 \|g\|_1\).
+3. \(\widehat{f * g}(n) = \hat{f}(n)\hat{g}(n)\) for all \(n \in \mathbb{Z}\).
+4. If \(f \in L^\infty, g \in L^1\), then \(f * g \in L^\infty\) with \(\|f*g\|_\infty \leq \|f\|_\infty \|g\|_1\).
+
+</div>
+
+The multiplicativity \(\widehat{f*g}(n) = \hat{f}(n)\hat{g}(n)\) is proved using Fubini's theorem. It implies that convolution makes \(L^1(\mathbb{T})\) a commutative Banach algebra. However, \(L^1(\mathbb{T})\) has no identity for convolution: any candidate identity \(g\) would need \(\hat{g}(n) = 1\) for all \(n\), contradicting the Riemann–Lebesgue lemma. The Fejér kernels serve as approximate identities.
+
+<div class="definition">
+
+<strong>Definition 6.3 (Summability Kernel).</strong> A sequence \((K_n)_{n \geq 1} \subseteq L^1(\mathbb{T})\) is a <em>summability kernel</em> (bounded approximate identity) if:
+1. \(\hat{K}_n(0) = \frac{1}{2\pi}\int_\mathbb{T} K_n(t)\,dt = 1\) for all \(n\).
+2. There is a constant \(M\) with \(\frac{1}{2\pi}\int_\mathbb{T} |K_n(t)|\,dt \leq M\) for all \(n\).
+3. For every \(0 < \delta < \pi\): \(\lim_{n \to \infty} \int_\delta^{2\pi-\delta} |K_n(t)|\,dt = 0\).
+
+A summability kernel is <em>positive</em> if additionally \(K_n \geq 0\), in which case condition (2) follows from (1).
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 6.4 (Summability Kernels Converge Uniformly).</strong> Let \(f \in C(\mathbb{T})\) and let \((K_n)\) be a summability kernel. Then \(K_n * f \to f\) uniformly.
+
+</div>
+
+*Proof.* Using \(\frac{1}{2\pi}\int K_n = 1\), write \(K_n * f(x) - f(x) = \frac{1}{2\pi}\int K_n(t)[f(x-t) - f(x)]\,dt\). Given \(\varepsilon > 0\), use uniform continuity of \(f\) to find \(\delta > 0\) so \(|t| \leq \delta \Rightarrow |f(x-t)-f(x)| \leq \varepsilon/M\). Split the integral into \([-\delta,\delta]\) and \([\delta, 2\pi-\delta]\). The first piece is at most \(\varepsilon\) by condition (2); the second is at most \(2\|f\|_\infty \cdot \frac{1}{2\pi}\int_\delta^{2\pi-\delta}|K_n| \to 0\) by condition (3). \(\square\)
+
+<div class="theorem">
+
+<strong>Theorem 6.5 (Fejér Kernel is a Positive Summability Kernel).</strong> The Fejér kernel
+\[
+F_N(t) = \sum_{n=-N}^{N} \left(1 - \frac{|n|}{N+1}\right) e^{int} = \frac{1}{N+1}\left(\frac{\sin\frac{(N+1)t}{2}}{\sin\frac{t}{2}}\right)^2
+\]
+is a positive summability kernel. Consequently \(\sigma_N(f) = F_N * f \to f\) uniformly for all \(f \in C(\mathbb{T})\), and \(\|F_N * f - f\|_1 \to 0\) for all \(f \in L^1(\mathbb{T})\).
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 6.6 (\(L^1\) Convergence of Summability Kernels).</strong> For \(f \in L^p(\mathbb{T})\) with \(1 \leq p < \infty\) and \((K_n)\) a summability kernel, \(\|K_n * f - f\|_p \to 0\).
+
+</div>
+
+*Proof.* Approximate \(f\) in \(L^1\) by some \(g \in C(\mathbb{T})\) with \(\|f - g\|_1 < \varepsilon/M\). Then \(\|K_n * f - f\|_1 \leq \|K_n * (f-g)\|_1 + \|K_n * g - g\|_1 + \|g-f\|_1 \leq M\|f-g\|_1 + \|K_n*g-g\|_\infty + \|f-g\|_1 \to 0\). \(\square\)
+
+<div class="theorem">
+
+<strong>Theorem 6.7 (Uniqueness of Fourier Coefficients).</strong> If \(f \in L^1(\mathbb{T})\) and \(\hat{f}(n) = 0\) for all \(n \in \mathbb{Z}\), then \(f = 0\) almost everywhere.
+
+</div>
+
+*Proof.* Since \(\hat{f}(n) = 0\) for all \(n\), we have \(\sigma_N(f) = \sum_{n=-N}^N (1-|n|/(N+1))\hat{f}(n)e^{inx} = 0\) for all \(N\). But \(\sigma_N(f) \to f\) in \(L^1\), so \(f = 0\) a.e. \(\square\)
+
+## The Dirichlet Kernel and Divergence of Fourier Series
+
+The partial sums \(S_N(f)(x) = \frac{1}{2\pi}\int f(t) D_N(x-t)\,dt\) involve the Dirichlet kernel
+\[
+D_N(t) = \sum_{n=-N}^N e^{int} = \frac{\sin((N+\tfrac{1}{2})t)}{\sin(t/2)}.
+\]
+The key fact is that \(\|D_N\|_1 \sim C\log N\), which grows without bound. This growth is the source of divergence phenomena.
+
+<div class="theorem">
+
+<strong>Theorem 6.8 (Divergent Fourier Series — Functional Analysis Proof).</strong> There exists a continuous function \(f \in C(\mathbb{T})\) whose Fourier series diverges at some point.
+
+</div>
+
+*Proof.* Define bounded linear functionals \(T_N : C(\mathbb{T}) \to \mathbb{C}\) by \(T_N(f) = S_N(f)(0) = \frac{1}{2\pi}\int f(t) D_N(t)\,dt\). Then \(\|T_N\|_{\mathrm{op}} \leq \|D_N\|_1\). In fact \(\|T_N\|_{\mathrm{op}} \geq \frac{1}{2}\|D_N\|_1\): one constructs a sequence \(g_n \in C(\mathbb{T})\) with \(\|g_n\|_\infty = 1\) approximating \(\operatorname{sgn}(D_N)\) closely enough that \(|S_N(g_N)(0)| \geq \frac{1}{2}\|D_N\|_1 \geq C\log N \to \infty\). By the Uniform Boundedness Principle, since \(\sup_N \|T_N\|_{\mathrm{op}} = \infty\), there exists \(f \in C(\mathbb{T})\) such that \(\sup_N |S_N(f)(0)| = \infty\) — i.e., the Fourier series diverges at 0. \(\square\)
+
+## Explicit Divergent Construction
+
+The functional analysis argument is non-constructive. We now give an explicit continuous function whose Fourier series diverges at 0, following Felix Zhou's Ch. 12 construction.
+
+<div class="theorem">
+
+<strong>Theorem 6.9 (Explicit Divergent Construction).</strong> There exists \(f \in C(\mathbb{T})\) such that \(\sup_N |S_N(f)(0)| = \infty\).
+
+</div>
+
+*Construction.* Starting from the sequence \(g_n \in C(\mathbb{T})\) with \(\|g_n\|_\infty = 1\) and \(|S_n(g_n)(0)| \geq \frac{1}{2}\|D_n\|_1 \geq C\log n\), define trigonometric polynomial building blocks
+\[
+f_n := \sigma_{2n^2}(g_n) = F_{2n^2} * g_n,
+\]
+where \(F_k\) is the \(k\)-th Fejér kernel. Then \(f_n\) is a trigonometric polynomial of degree at most \(2n^2\), \(\|f_n\|_\infty \leq 1\), and one checks:
+\[
+|S_n(f_n)(0)| \geq |S_n(g_n)(0)| - 1 \geq C'\log n
+\]
+for some constant \(C' > 0\) and all sufficiently large \(n\). Set \(n_k = 2^{3^k}\) and define
+\[
+f(t) = \sum_{k=1}^\infty \frac{1}{k^2} f_{n_k}(n_k t).
+\]
+Since \(\|f_{n_k}\|_\infty \leq 1\), the Weierstrass \(M\)-test gives \(f \in C(\mathbb{T})\). Let \(G_k(t) = f_{n_k}(n_k t)\); the Fourier coefficients of \(G_k\) are supported on \(n_k \mathbb{Z}\), so for \(N < n_k\) the partial sum \(S_N(G_k)\) is the constant \(\hat{G}_k(0) = \hat{f}_{n_k}(0)\).
+
+*Proof of divergence.* For \(k \geq M+1\), we have \(n_M^2 < n_k\), so \(S_{n_M^2}(G_k)(t) = \hat{G}_k(0)\). For \(k \leq M-1\), \(G_k\) is a trigonometric polynomial of degree at most \(2n_k^3 < n_M^2\), so \(S_{n_M^2}(G_k) = G_k\). By linearity:
+\[
+S_{n_M^2}(f)(0) = \sum_{k=1}^{M-1} \frac{G_k(0)}{k^2} + \frac{S_{n_M}(f_{n_M})(0)}{M^2} + \sum_{k=M+1}^\infty \frac{\hat{f}_{n_k}(0)}{k^2}.
+\]
+Since \(|G_k(0)| \leq 1\) and \(|\hat{f}_{n_k}(0)| \leq 1\), the first and third sums are bounded by \(\sum 1/k^2 < \infty\). The middle term satisfies \(|S_{n_M}(f_{n_M})(0)|/M^2 \geq C'\log(n_M)/M^2 = C' \cdot 3^M\log 2 / M^2 \to \infty\). Therefore \(|S_{n_M^2}(f)(0)| \to \infty\). \(\square\)
+
+## Pointwise Convergence for Regular Functions
+
+Despite the existence of divergent Fourier series for continuous functions, there are many classes of functions for which pointwise convergence is guaranteed.
+
+<div class="theorem">
+
+<strong>Theorem 6.10 (Pointwise Convergence at Differentiable Points).</strong> Let \(f \in L^1(\mathbb{T})\) be differentiable at \(a \in \mathbb{T}\). Then \(S_n(f)(a) \to f(a)\).
+
+</div>
+
+*Proof.* Using \(\frac{1}{2\pi}\int D_n = 1\), write \(S_n(f)(a) - f(a) = \frac{1}{2\pi}\int [f(a-t) - f(a)] D_n(t)\,dt = \frac{1}{2\pi}\int g(t)\sin(n+\tfrac{1}{2})t\,dt\), where \(g(t) = (f(a-t)-f(a))/\sin(t/2)\). Since \(f\) is differentiable at \(a\), \(g(t) \to -2f'(a)\) as \(t \to 0\), and one shows \(g \in L^1(\mathbb{T})\). The Riemann–Lebesgue lemma then gives \(\int g(t)\sin(n+\tfrac{1}{2})t\,dt \to 0\). \(\square\)
+
+<div class="definition">
+
+<strong>Definition 6.11 (Lipschitz Condition).</strong> We say \(f\) satisfies a <em>Lipschitz condition of order \(\alpha \geq 0\)</em> at \(a\) (written \(f \in \mathrm{Lip}_\alpha\) at \(a\)) if there exist constants \(C, \delta > 0\) such that \(|f(a-t) - f(a)| \leq C|t|^\alpha\) for all \(|t| \leq \delta\).
+
+</div>
+
+<div class="theorem">
+
+<strong>Proposition 6.12.</strong> If \(f\) is differentiable at \(a\), then \(f \in \mathrm{Lip}_1\) at \(a\). If \(f \in L^1(\mathbb{T})\) and \(f \in \mathrm{Lip}_\alpha\) at \(a\) for some \(\alpha > 0\), then \(S_n(f)(a) \to f(a)\).
+
+</div>
+
+<div class="theorem">
+
+<strong>Proposition 6.13.</strong> If \(f \in L^1(\mathbb{T})\) is continuous at \(a\) and has right and left hand derivatives at \(a\), then \(S_n(f)(a) \to f(a)\).
+
+</div>
+
+## Pointwise Convergence for Discontinuous Functions
+
+<div class="theorem">
+
+<strong>Theorem 6.14 (Jordan's Theorem).</strong> Suppose \(f \in L^1(\mathbb{T})\) has a jump discontinuity at \(a\), i.e., both one-sided limits \(f(a^+) = \lim_{t \to 0^+} f(a+t)\) and \(f(a^-) = \lim_{t \to 0^+} f(a-t)\) exist, and there are constants \(c, \delta > 0\) such that
+\[
+|f(a+t) - f(a^+)| \leq c|t|, \quad |f(a-t) - f(a^-)| \leq c|t| \quad \text{for all } 0 < t < \delta.
+\]
+Then
+\[
+S_n(f)(a) \to \frac{f(a^+) + f(a^-)}{2}.
+\]
+
+</div>
+
+The limit is the average of the left and right limits — a beautiful geometric fact. At a point of continuity, this gives \(S_n(f)(a) \to f(a)\).
+
+<div class="theorem">
+
+<strong>Theorem 6.15 (Hardy–Tauberian Theorem).</strong> Let \(f \in L^1(\mathbb{T})\) and suppose there is a constant \(c\) such that \(|\hat{f}(n)| \leq c/|n|\) for all \(n \neq 0\). Then the sequence \((S_n(f)(a))_n\) converges if and only if the Cesàro means \((\sigma_n(f)(a))_n\) converge. Moreover, if \((\sigma_n(f))_n\) converges on some interval, then so does \((S_n(f))_n\) on that interval.
+
+</div>
+
+The condition \(|\hat{f}(n)| = O(1/|n|)\) is satisfied for all functions of bounded variation, in particular for all piecewise Lipschitz functions. The Hardy–Tauberian theorem thus gives a powerful tool for upgrading Cesàro convergence (which Fejér's theorem provides for functions with one-sided limits) to genuine partial-sum convergence.
+
+## The Hilbert Transform and \(L^p\) Convergence
+
+The deepest convergence result is that Fourier series converge in \(L^p\) norm for all \(1 < p < \infty\). The key is the Hilbert transform, which encodes the asymmetry between positive and negative frequencies.
+
+<div class="definition">
+
+<strong>Definition 6.16 (Hilbert Transform on Trigonometric Polynomials).</strong> For a trigonometric polynomial \(f \in \mathrm{Trig}(\mathbb{T})\), the <em>Hilbert transform</em> \(H(f)\) is defined by
+\[
+\widehat{H(f)}(n) = (-i)\operatorname{sgn}(n)\hat{f}(n),
+\]
+where \(\operatorname{sgn}(n) = 1\) for \(n > 0\), \(\operatorname{sgn}(0) = 0\), and \(\operatorname{sgn}(n) = -1\) for \(n < 0\). Explicitly,
+\[
+H(f)(t) = \sum_{j=1}^\infty (-i)\hat{f}(j)e^{ijt} + \sum_{j=-\infty}^{-1} (i)\hat{f}(j)e^{ijt} = 2\operatorname{Im}\left(\sum_{j=1}^\infty \hat{f}(j)e^{ijt}\right).
+\]
+
+</div>
+
+The Hilbert transform multiplies positive Fourier modes by \(-i\) and negative Fourier modes by \(i\). Since \(H\) is linear and orthonormal in Fourier space, Parseval's theorem immediately gives \(\|H(f)\|_2 \leq \|f\|_2\) — so \(H\) extends to a bounded operator \(H : L^2(\mathbb{T}) \to L^2(\mathbb{T})\).
+
+<div class="theorem">
+
+<strong>Proposition 6.17.</strong> For any trigonometric polynomial \(f\),
+\[
+f + iH(f) = \hat{f}(0) + 2\sum_{j=1}^\infty \hat{f}(j)e^{ijt}.
+\]
+The partial sums satisfy
+\[
+S_{N-1}(f) = \frac{-1}{2i}\left[e^{-iNt}H(e^{iNt}f) - e^{iNt}H(e^{-iNt}f)\right] + \text{(boundary terms)}.
+\]
+Consequently, if \(H : L^p \to L^p\) is bounded, then \(\|S_N(f)\|_p \leq (1 + \|H\|_{\mathrm{op}})\|f\|_p\) for all \(f \in L^p\).
+
+</div>
+
+<div class="lemma">
+
+<strong>Lemma 6.18.</strong> The Fourier partial sums converge in \(L^p\) norm (\(\|S_N(f) - f\|_p \to 0\) for all \(f \in L^p\)) if and only if there is a constant \(C\) such that \(\|S_N(f)\|_p \leq C\|f\|_p\) for all \(N\) and all \(f \in L^p\).
+
+</div>
+
+*Proof.* (\(\Rightarrow\)) If \(S_N(f) \to f\) in \(L^p\), then \(\sup_N \|S_N(f)\|_p < \infty\) for each \(f\), and the Uniform Boundedness Principle gives a uniform constant \(C\). (\(\Leftarrow\)) If the uniform bound holds, then for any \(f \in L^p\) and \(\varepsilon > 0\), choose a trigonometric polynomial \(p\) with \(\|f - p\|_p < \varepsilon/(C+1)\). Then \(\|S_N(f) - f\|_p \leq \|S_N(f-p)\|_p + \|S_N(p) - p\|_p + \|p - f\|_p \leq (C+1)\|f-p\|_p + \|S_N(p) - p\|_p\). For \(N \geq \deg(p)\), the middle term vanishes. \(\square\)
+
+<div class="theorem">
+
+<strong>Theorem 6.19 (Hilbert Transform Bounded on \(L^{2k}\)).</strong> For every positive integer \(k\), there is a constant \(C_k\) such that \(\|H(f)\|_{2k} \leq C_k\|f\|_{2k}\) for all \(f \in L^{2k}(\mathbb{T})\).
+
+</div>
+
+*Proof.* Without loss of generality assume \(\hat{f}(0) = 0\) and \(f\) is real-valued. Then \(f + iH(f) = 2\sum_{j=1}^\infty \hat{f}(j)e^{ijt}\), so \(\int_\mathbb{T} (f+iHf)^{2k} = 0\) (all Fourier coefficients of the \(2k\)-th power are positive-frequency). Taking the real part and expanding via the binomial theorem yields
+\[
+\int_\mathbb{T} |Hf|^{2k} \leq \sum_{m=1}^k \binom{2k}{2m} \int_\mathbb{T} |f|^{2m}|Hf|^{2k-2m}.
+\]
+An application of Hölder's inequality with exponents \(k/m\) and \(k/(k-m)\), followed by algebraic manipulation, shows that \(R_k = \|Hf\|_{2k}/\|f\|_{2k}\) satisfies \(R_k^2 \leq 2^{2k}\), giving the desired bound \(C_k = 2^k\). \(\square\)
+
+<div class="theorem">
+
+<strong>Theorem 6.20 (Hilbert Transform Bounded on \(L^p\), \(1 < p < \infty\)).</strong> For every \(1 < p < \infty\), there is a constant \(C_p\) such that \(\|H(f)\|_p \leq C_p\|f\|_p\) for all \(f \in L^p(\mathbb{T})\).
+
+</div>
+
+*Proof.* For \(p = 2k\) this is Theorem 6.19. For \(p > 2\): choose integer \(k\) with \(p < 2k\). Decompose \(f = f_\alpha + f^\alpha\) where \(f_\alpha = f \cdot \chi_{\{|f| < \alpha/2\}}\) and \(f^\alpha = f \cdot \chi_{\{|f| \geq \alpha/2\}}\). Apply the \(L^{2k}\) bound to \(f_\alpha\) and the \(L^2\) bound to \(f^\alpha\) to get weak-type estimates on the level sets \(\{|Hf| > \alpha\}\). Then use the \(L^p\) norm formula \(\|Hf\|_p^p = p\int_0^\infty \alpha^{p-1}m\{|Hf| > \alpha\}\,d\alpha\) (proved via Fubini), and integrate to obtain \(\|Hf\|_p^p \leq C(p)\|f\|_p^p\).
+
+For \(1 < p < 2\): use the adjoint argument. Define \(H^*\) by \(\int H^*(f)\bar{g} = \int f\overline{H(g)}\) for all \(g \in L^q\) (\(q\) the conjugate exponent). One computes \(\widehat{H^*(f)}(n) = i\operatorname{sgn}(n)\hat{f}(n) = -\widehat{H(f)}(n)\), so \(H^* = -H\), and \(\|H^*\|_{\mathrm{op}, L^p \to L^p} = \|H\|_{\mathrm{op}, L^q \to L^q}\), which is finite since \(q > 2\). \(\square\)
+
+<div class="theorem">
+
+<strong>Corollary 6.21 (\(L^p\) Convergence of Fourier Series).</strong> For every \(1 < p < \infty\) and every \(f \in L^p(\mathbb{T})\),
+\[
+\|S_N(f) - f\|_p \to 0 \quad \text{as } N \to \infty.
+\]
+
+</div>
+
+*Proof.* By Proposition 6.17, \(\|S_N(f)\|_p \leq (1 + \|H\|_{\mathrm{op}})\|f\|_p\). Lemma 6.18 then gives the convergence. \(\square\)
+
+This is one of the deepest results in classical Fourier analysis. It fails at the endpoints \(p = 1\) and \(p = \infty\): the divergence construction of Section 6.2 shows that even for continuous functions (a subset of both \(L^\infty\) and \(L^1\)), Fourier partial sums need not converge pointwise. The special structure of \(L^p\) for \(1 < p < \infty\) — specifically, the reflexivity that allows the adjoint argument — is what makes the result possible.
+
+The boundedness of the Hilbert transform on \(L^p\) is a cornerstone of harmonic analysis, with applications far beyond Fourier series: it appears in the theory of singular integral operators, complex analysis (the Hilbert transform is the boundary value of the conjugate harmonic function), and the study of \(H^p\) Hardy spaces.

@@ -3,6 +3,8 @@ title: "PMATH 453: Functional Analysis"
 prof: "Stephen New"
 ---
 
+> These notes are primarily based on Prof. Stephen New's lectures. Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Laurent Marcoux, Fall 2021).
+
 # PMATH 453: Functional Analysis
 
 Functional analysis is the branch of mathematics concerned with infinite-dimensional vector spaces equipped with analytic structure — norms, inner products, and topologies — together with the linear maps between them. This course develops the three pillars of classical functional analysis: Hilbert space theory (orthogonal decomposition, spectral theory), Banach space theory (the Hahn-Banach theorem, open mapping theorem, closed graph theorem), and general topology (weak topologies, compactness, the Banach-Alaoglu theorem). The prerequisite material from real analysis (PMATH 351) and measure theory (PMATH 450) is reviewed in Chapter 0.
@@ -153,6 +155,52 @@ Note that only \( p = 2 \) yields a Hilbert space among the \( \ell^p \) and \( 
 
 **Example 1.19 (Spaces of Continuous Functions).** Let \( X \) be a metric space. Let \( F_b(X) \) be the space of bounded functions \( f : X \to \mathbb{F} \), and \( C_b(X) \) the space of bounded continuous functions. Both are Banach spaces under the **supremum norm** \( \|f\|_\infty = \sup\{|f(x)| \mid x \in X\} \). When \( X \) is compact, \( C(X) = C_b(X) \) is a Banach space. For \( a < b \), \( C[a,b] \) is separable by the Weierstrass Polynomial Approximation Theorem.
 
+## Additional Examples and Constructions
+
+The following examples from Felix Zhou's notes (Marcoux, Fall 2021) enrich the picture of normed linear spaces and Banach spaces with constructions that appear throughout the course.
+
+<div class="example">
+<strong>Example 1.A (The spaces \( c_0 \) and \( c_{00} \)).</strong> Let \( c_{00}(\mathbb{K}) \) denote the set of finitely-supported sequences in \( \mathbb{K} \). Under the sup norm \( \|x\|_\infty = \sup_n |x_n| \), this is a normed linear space but is <em>not</em> complete. The space \( c_0(\mathbb{K}) \) of sequences converging to \( 0 \), also under \( \|\cdot\|_\infty \), is a complete normed linear space (a Banach space). Moreover, \( c_{00} \) is a dense linear manifold in \( c_0 \) but not a closed subspace.
+</div>
+
+We distinguish between <em>linear manifolds</em> (vector subspaces that may not be closed) and <em>subspaces</em> (closed linear manifolds). The distinction matters: \( c_{00} \) is a linear manifold of \( c_0 \) but not a subspace, since it is not closed.
+
+<div class="example">
+<strong>Example 1.B (The disc algebra).</strong> Let \( \mathbb{D} \subseteq \mathbb{C} \) be the open unit disc and \( \mathbb{T} = \partial \mathbb{D} \) its boundary. The <strong>disc algebra</strong> is
+\[
+A(\mathbb{D}) := \{ f \in C(\overline{\mathbb{D}}) : f \text{ is holomorphic on } \mathbb{D} \}
+\]
+equipped with \( \|f\|_\infty := \sup_{z \in \overline{\mathbb{D}}} |f(z)| \). This is a Banach space and is closed under multiplication, making it a Banach algebra. By the Maximum Modulus Principle, the restriction map \( \Gamma : A(\mathbb{D}) \to C(\mathbb{T}) \), \( \Gamma(f) = f|_{\mathbb{T}} \), is isometric, so we identify \( A(\mathbb{D}) \) with the subalgebra of \( C(\mathbb{T}) \) of functions extending holomorphically to \( \mathbb{D} \).
+</div>
+
+<div class="example">
+<strong>Example 1.C (Weighted \( \ell^2 \) space).</strong> Fix a sequence of positive reals \( (r_n)_{n \geq 1} \). Define
+\[
+\ell^2_{(r_n)} := \left\{ (x_n)_{n \geq 1} \in \mathbb{K}^\mathbb{N} : \sum_{n \geq 1} r_n |x_n|^2 < \infty \right\}
+\]
+with inner product \( \langle x, y \rangle = \sum_{n \geq 1} r_n x_n \overline{y_n} \). This is a Hilbert space. The standard \( \ell^2 \) corresponds to \( r_n = 1 \) for all \( n \).
+</div>
+
+<div class="definition">
+<strong>Definition 1.D (\( \ell^p \)-direct sum and \( \ell^\infty \)-direct sum).</strong> Let \( (X_n, \|\cdot\|_n)_{n \geq 1} \) be a countable family of Banach spaces and \( X = \prod_n X_n \). For \( 1 \leq p < \infty \), the <strong>\( \ell^p \)-direct sum</strong> is
+\[
+\bigoplus_p X_n := \left\{ (x_n) \in X : \|(x_n)\|_p := \left(\sum_n \|x_n\|_n^p\right)^{1/p} < \infty \right\},
+\]
+and the <strong>\( \ell^\infty \)-direct sum</strong> is
+\[
+\bigoplus_\infty X_n := \left\{ (x_n) \in X : \|(x_n)\|_\infty := \sup_n \|x_n\|_n < \infty \right\}.
+\]
+The <strong>\( c_0 \)-direct sum</strong> is \( \bigoplus_0 X_n := \{(x_n) \in X : \lim_n \|x_n\|_n = 0\} \) with the sup norm. Each of these is a Banach space.
+</div>
+
+Direct sums are essential for building new Banach spaces from old ones and appear in the structure theory of compact operators and in decompositions of the spectral theorem.
+
+<div class="proposition">
+<strong>Proposition 1.E (Characterization of completeness via series).</strong> A normed linear space \( (X, \|\cdot\|) \) is a Banach space if and only if every absolutely summable sequence in \( X \) is summable: whenever \( \sum_{n=1}^\infty \|x_n\| < \infty \), the series \( \sum_{n=1}^\infty x_n \) converges in \( X \).
+</div>
+
+This criterion is often more convenient in practice than verifying Cauchy sequences directly: one constructs a candidate sum from the absolutely convergent series and checks convergence.
+
 ## Bounded Linear Operators
 
 The morphisms between normed spaces are the bounded linear operators. Theorem 1.26 below clarifies why "bounded" is the correct notion: for linear maps, continuity at any single point is equivalent to global Lipschitz continuity, which in turn is equivalent to the operator norm being finite. This tight equivalence is special to linear maps and fails for general nonlinear maps.
@@ -196,6 +244,31 @@ The dual space \( U^* \) of bounded linear functionals on \( U \) is one of the 
 **Definition 1.27.** The **(continuous) dual space** of a normed linear space \( U \) is
 \[ U^* = B(U, \mathbb{F}) = \{ f : U \to \mathbb{F} \mid f \text{ is linear with } \|f\| < \infty \}. \]
 By Theorem 1.23, \( U^* \) is always a Banach space.
+
+### Schauder Bases and the Canonical Embedding
+
+A Schauder basis is the Banach-space analogue of a countable orthonormal basis in a Hilbert space: every element is a unique norm-convergent series expansion. Unlike Hilbert bases (which require an inner product), Schauder bases work in any separable Banach space, though their existence in general is more subtle.
+
+<div class="definition">
+<strong>Definition 1.F (Schauder Basis).</strong> A sequence \( \{e_n\}_{n \geq 1} \) in a Banach space \( X \) is a <strong>Schauder basis</strong> if every \( x \in X \) can be uniquely written as a norm-convergent series
+\[
+x = \sum_{n=1}^\infty x_n e_n, \quad x_n \in \mathbb{K}.
+\]
+</div>
+
+<div class="example">
+<strong>Example 1.G.</strong> The standard unit vectors \( \{e_n\}_{n \geq 1} \) (where \( e_n \) has a \( 1 \) in position \( n \) and \( 0 \) elsewhere) form a Schauder basis for \( c_0 \) and for \( \ell^p \), \( 1 \leq p < \infty \). There also exists a Schauder basis for \( (C[0,1], \mathbb{R}) \) (discovered by Schauder), though its description is considerably more involved.
+</div>
+
+<div class="example">
+<strong>Example 1.H (Dual of \( c_0 \)).</strong> The space \( c_0^* \) is isometrically isomorphic to \( \ell^1(\mathbb{N}) \) via the map \( \Theta : \ell^1 \to c_0^* \), \( \Theta(z) = \varphi_z \), where \( \varphi_z(x) = \sum_{n \geq 1} x_n z_n \).
+</div>
+
+<div class="definition">
+<strong>Definition 1.I (Canonical embedding and reflexivity).</strong> Let \( X \) be a normed linear space. For \( z \in X \), define \( \hat{z} : X^* \to \mathbb{K} \) by \( \hat{z}(x^*) = x^*(z) \). The map \( J : X \to X^{**} \), \( J(z) = \hat{z} \), is the <strong>canonical embedding</strong> of \( X \) into its double dual. The map \( J \) is a linear isometry (after the Hahn-Banach Theorem is established). If \( J \) is surjective (an isometric bijection onto \( X^{**} \)), then \( X \) is called <strong>reflexive</strong>.
+</div>
+
+Reflexivity is a powerful structural property: reflexive Banach spaces have weakly compact unit balls (by the Banach-Alaoglu Theorem), which enables many compactness arguments. The spaces \( \ell^p \) for \( 1 < p < \infty \) are reflexive; \( \ell^1 \), \( \ell^\infty \), and \( c_0 \) are not.
 
 **Theorem 1.28 (Riesz Representation for \( \ell^p \).** Let \( p, q \in [1,\infty] \) with \( \frac{1}{p} + \frac{1}{q} = 1 \).
 1. The map \( F : \ell^q \to (\ell^p)^* \) given by \( F(b)(a) = \sum_{k=1}^\infty a_k b_k \) is well-defined, linear, injective, and norm-preserving.
@@ -638,6 +711,63 @@ A topology \( \mathcal{S} \) is **coarser** than \( \mathcal{T} \) (and \( \math
 
 A **basis** for a topology on \( X \) is a collection \( \mathcal{B} \) with: (1) \( X = \bigcup \mathcal{B} \); (2) for all \( U, V \in \mathcal{B} \) and \( a \in U \cap V \), there exists \( W \in \mathcal{B} \) with \( a \in W \subseteq U \cap V \).
 
+### Neighbourhood Systems and Bases
+
+<div class="definition">
+<strong>Definition 4.1a (Neighbourhood).</strong> Let \( (X, \mathcal{T}) \) be a topological space and \( x \in X \). A set \( U \subseteq X \) is a <strong>neighbourhood</strong> of \( x \) if there exists some open \( G \in \mathcal{T} \) with \( x \in G \subseteq U \). The <strong>neighbourhood system</strong> at \( x \) is \( \mathcal{U}_x := \{ U \subseteq X : U \text{ is a neighbourhood of } x \} \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 4.1b (Properties of neighbourhood systems).</strong> Let \( (X, \mathcal{T}) \) be a topological space and \( x \in X \). Then:
+<ol>
+<li>\( U \in \mathcal{U}_x \) implies \( x \in U \).</li>
+<li>\( U, V \in \mathcal{U}_x \) implies \( U \cap V \in \mathcal{U}_x \).</li>
+<li>For all \( U \in \mathcal{U}_x \), there exists \( V \in \mathcal{U}_x \) such that \( U \in \mathcal{U}_y \) for all \( y \in V \).</li>
+<li>\( U \in \mathcal{U}_x \) and \( U \subseteq V \) implies \( V \in \mathcal{U}_x \).</li>
+<li>\( G \subseteq X \) is open if and only if \( G \) contains a neighbourhood of each of its points.</li>
+</ol>
+Conversely, given collections \( \mathcal{U}_x \) for each \( x \in X \) satisfying (1)–(4), defining open sets via (5) yields a topology on \( X \) whose neighbourhood system at \( x \) is exactly \( \mathcal{U}_x \).
+</div>
+
+<div class="definition">
+<strong>Definition 4.1c (Neighbourhood base).</strong> Let \( (X, \mathcal{T}) \) be a topological space. A collection \( \mathcal{B}_x \subseteq \mathcal{U}_x \) is a <strong>neighbourhood base</strong> at \( x \) if for every \( U \in \mathcal{U}_x \) there exists \( B \in \mathcal{B}_x \) with \( B \subseteq U \). Elements of \( \mathcal{B}_x \) are called <strong>basic neighbourhoods</strong> of \( x \).
+
+A <strong>subbase</strong> for \( \mathcal{T} \) is a collection \( \mathcal{S} \subseteq \mathcal{T} \) such that the set of all finite intersections of elements of \( \mathcal{S} \) forms a base for \( \mathcal{T} \). Any collection \( \mathcal{C} \subseteq 2^X \) serves as a subbase for some topology on \( X \), called the <strong>topology generated by</strong> \( \mathcal{C} \).
+</div>
+
+In a metric space \( (X, d) \), the open balls \( \{V_r(x) : r > 0\} \) form a neighbourhood base at each \( x \); equivalently, any sequence \( r_n \to 0 \) gives \( \mathcal{B}_x = \{V_{r_n}(x) : n \geq 1\} \) as a countable neighbourhood base. This is the content of the first-countability axiom satisfied by all metric spaces.
+
+### Separation Axioms
+
+<div class="definition">
+<strong>Definition 4.1d (Separation axioms).</strong> Let \( (X, \mathcal{T}) \) be a topological space.
+<ul>
+<li><strong>\( T_0 \)</strong>: For every \( x \neq y \in X \), either there is a neighbourhood \( U \in \mathcal{U}_x \) with \( y \notin U \), or a neighbourhood \( V \in \mathcal{U}_y \) with \( x \notin V \).</li>
+<li><strong>\( T_1 \)</strong>: For every \( x \neq y \in X \), there exist \( U \in \mathcal{U}_x \) with \( y \notin U \) and \( V \in \mathcal{U}_y \) with \( x \notin V \). Equivalently, every singleton \( \{x\} \) is closed.</li>
+<li><strong>\( T_2 \) (Hausdorff)</strong>: For every \( x \neq y \in X \), there exist disjoint \( U \in \mathcal{U}_x \) and \( V \in \mathcal{U}_y \).</li>
+<li><strong>Regular</strong>: Whenever \( F \subseteq X \) is closed and \( x \notin F \), the sets \( F \) and \( \{x\} \) can be separated by disjoint open sets.</li>
+<li><strong>Normal</strong>: Whenever \( F_1, F_2 \subseteq X \) are disjoint closed sets, they can be separated by disjoint open sets.</li>
+<li><strong>\( T_3 \)</strong>: \( T_1 \) and regular.</li>
+<li><strong>\( T_4 \)</strong>: \( T_1 \) and normal.</li>
+</ul>
+</div>
+
+<div class="theorem">
+<strong>Theorem 4.1e.</strong> Every metric space equipped with the metric topology is \( T_4 \).
+</div>
+
+**Proof.** Given disjoint closed \( F_1, F_2 \subseteq X \), define \( g : X \to \mathbb{R} \) by \( g(x) = d(x, F_1) - d(x, F_2) \). Then \( F_1 \subseteq g^{-1}(-\infty, 0) \) and \( F_2 \subseteq g^{-1}(0, \infty) \), and these are disjoint open sets. \( \square \)
+
+<div class="theorem">
+<strong>Theorem 4.1f.</strong> Every compact Hausdorff topological space is \( T_3 \) and \( T_4 \).
+</div>
+
+**Proof sketch.** Let \( x \notin F \subseteq X \) closed. For every \( y \in F \), find disjoint open \( U_y \ni x \) and \( V_y \ni y \). Then \( F \subseteq \bigcup_{y \in F} V_y \) is an open cover of the compact set \( F \), so extract a finite subcover \( \{V_{y_1}, \ldots, V_{y_n}\} \). Then \( x \in \bigcap_i U_{y_i} \) and \( F \subseteq \bigcup_i V_{y_i} \) are disjoint open sets. The \( T_4 \) argument is similar. \( \square \)
+
+<div class="proposition">
+<strong>Proposition 4.1g.</strong> Every compact metric space is separable.
+</div>
+
 A basis simplifies the description of a topology: instead of specifying all open sets, we specify a collection of "basic" open sets and take all unions of finite intersections. In metric spaces the open balls form a natural basis, and this motivates the definition of a general topological basis.
 
 **Theorem 4.2.** Let \( \mathcal{B} \) be a basis generating topology \( \mathcal{T} \). Then \( A \in \mathcal{T} \) iff for every \( a \in A \) there exists \( U \in \mathcal{B} \) with \( a \in U \subseteq A \), equivalently iff \( A \) is a union of elements of \( \mathcal{B} \).
@@ -714,7 +844,23 @@ The coarser product topology differs from the finer **box topology** (which allo
 
 Sequences are insufficient to describe convergence and closure in general topological spaces — only in spaces satisfying the first countability axiom (every point has a countable neighborhood basis, which metric spaces do) do sequences determine the topology. In the weak\( ^* \) topology on an infinite-dimensional dual space, sequences are not enough. Nets provide the correct generalization: they are indexed by directed sets rather than by \( \mathbb{N} \), and they characterize both closure (Theorem 4.34) and continuity (Theorem 4.35) in full generality.
 
-**Definition 4.32.** A **directed set** is a set \( K \) with a binary relation \( \leq \) that is reflexive, transitive, and directed (for all \( a, b \) there exists \( c \) with \( a \leq c \) and \( b \leq c \). A **net** in a topological space \( X \) is an indexed family \( (x_k)_{k \in K} \) where \( K \) is directed. A net **converges** to \( a \in X \) when for every open \( U \ni a \) there exists \( m \in K \) such that \( k \geq m \implies x_k \in U \).
+**Definition 4.32.** A **directed set** is a set \( K \) with a binary relation \( \leq \) that is reflexive, transitive, and directed (for all \( a, b \) there exists \( c \) with \( a \leq c \) and \( b \leq c \)). A **net** in a topological space \( X \) is an indexed family \( (x_k)_{k \in K} \) where \( K \) is directed. A net **converges** to \( a \in X \) when for every open \( U \ni a \) there exists \( m \in K \) such that \( k \geq m \implies x_k \in U \).
+
+<div class="example">
+<strong>Example 4.32a (Examples of directed sets and nets).</strong>
+<ul>
+<li>The natural numbers \( \mathbb{N} \) under the usual \( \leq \) form a directed set, so every sequence is a net.</li>
+<li>For a topological space \( X \) and \( x \in X \), the neighbourhood system \( \mathcal{U}_x \) directed by \( U_1 \leq U_2 \iff U_2 \subseteq U_1 \) is a directed set. Choosing any \( x_U \in U \) for each \( U \in \mathcal{U}_x \) gives a net \( (x_U)_{U \in \mathcal{U}_x} \) converging to \( x \).</li>
+<li>The power set \( 2^X \) under inclusion is a directed set.</li>
+</ul>
+A subsequence is a subnet, but a subnet need not be a sequence since its domain need not be countable.
+</div>
+
+<div class="definition">
+<strong>Definition 4.32b (Subnet).</strong> Let \( \varphi : M \to \Lambda \) be a function between directed sets. We say \( \varphi \) is <strong>increasing</strong> if \( \mu_1 \leq \mu_2 \implies \varphi(\mu_1) \leq \varphi(\mu_2) \), and <strong>cofinal</strong> if for each \( \lambda \in \Lambda \) there exists \( \mu \in M \) with \( \lambda \leq \varphi(\mu) \). A <strong>subnet</strong> of a net \( P : \Lambda \to X \) is a composition \( P \circ \varphi \) where \( \varphi : M \to \Lambda \) is increasing and cofinal. We write \( (x_{\varphi(\mu)})_{\mu \in M} \).
+</div>
+
+The Hausdorff property can be characterized entirely in terms of net convergence: a topological space \( X \) is Hausdorff if and only if every net in \( X \) has at most one limit.
 
 **Theorem 4.34.** Let \( X \) be a topological space, \( A \subseteq X \), \( a \in X \). Then \( a \in \overline{A} \) iff there is a net \( (x_k) \) in \( A \) with \( x_k \to a \).
 
@@ -766,4 +912,624 @@ Every normed space carries at least three natural locally convex topologies: the
 1. If \( A \) is open, there exists \( 0 \neq f \in U^* \) and \( c \in \mathbb{R} \) with \( f(x) < c \leq f(y) \) for all \( x \in A \), \( y \in B \).
 2. If \( U \) is locally convex, \( A \) is compact, and \( B \) is closed, there exists \( 0 \neq f \in U^* \) and \( c \in \mathbb{R} \) with \( f(x) < c < f(y) \) for all \( x \in A \), \( y \in B \).
 
-This geometric version of the Hahn-Banach Theorem provides the foundation for convex analysis and duality theory in functional analysis. Part (1) follows from Theorem 3.20 combined with Note 4.49 (which ensures the open set \( A \) is contained in its core). Part (2) uses local convexity to thicken \( A \) slightly and separate it from \( B \) with strict inequalities on both sides.
+---
+
+# Chapter 5: Topological Vector Spaces
+
+Topological vector spaces (TVS) provide the most general setting in which linear algebra and topology coexist harmoniously. Every normed space is a TVS, but the category is much broader: it includes spaces equipped with families of seminorms (locally convex spaces), spaces of distributions, and the weak and weak\( ^* \) topologies on Banach spaces. The key structural results of this chapter are the uniqueness of the topology on finite-dimensional TVS and the equivalence of local compactness with finite dimensionality.
+
+## Topological Vector Spaces: Definitions and Basic Properties
+
+<div class="definition">
+<strong>Definition 5.1 (Compatible topology).</strong> Let \( W \) be a vector space over \( \mathbb{K} \) and \( \mathcal{T} \) a topology on \( W \). We say \( \mathcal{T} \) is <strong>compatible</strong> with the vector space structure if the maps \( \sigma : W \times W \to W \), \( (x,y) \mapsto x+y \), and \( \mu : \mathbb{K} \times W \to W \), \( (k,x) \mapsto kx \), are continuous (where \( W \times W \) and \( \mathbb{K} \times W \) carry the respective product topologies).
+</div>
+
+<div class="definition">
+<strong>Definition 5.2 (Topological vector space).</strong> A <strong>topological vector space (TVS)</strong> is a pair \( (W, \mathcal{T}) \) where \( W \) is a vector space over \( \mathbb{K} \) equipped with a compatible Hausdorff topology \( \mathcal{T} \).
+</div>
+
+Every normed linear space is a TVS under the norm topology. Less obvious examples include the weak topology and the weak\( ^* \) topology on the dual of a Banach space, which are TVS topologies but not (in general) norm topologies.
+
+<div class="proposition">
+<strong>Proposition 5.3 (Neighbourhoods of 0 are absorbing).</strong> Let \( (V, \mathcal{T}) \) be a topological vector space. If \( U \in \mathcal{U}_0 \) is any neighbourhood of \( 0 \), then
+\[V = \bigcup_{n \geq 1} nU.\]
+</div>
+
+This says that every neighbourhood of \( 0 \) in a TVS is <em>absorbing</em>: scaling it by large integers covers the whole space. The proof uses the continuity of scalar multiplication: for any \( x \in V \), the map \( t \mapsto tx \) is continuous, so \( tx \in U \) for small enough \( t > 0 \), which means \( x \in nU \) for large enough \( n \).
+
+<div class="definition">
+<strong>Definition 5.4 (Balanced set).</strong> A set \( N \subseteq V \) in a TVS is <strong>balanced</strong> if \( kN \subseteq N \) for all \( k \in \mathbb{K} \) with \( |k| \leq 1 \).
+</div>
+
+The open ball of radius \( \delta \) in any normed linear space is a balanced neighbourhood of \( 0 \).
+
+<div class="proposition">
+<strong>Proposition 5.5.</strong> Every neighbourhood of \( 0 \) in a topological vector space contains a balanced open neighbourhood of \( 0 \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 5.6.</strong> Let \( (V, \mathcal{T}) \) be a TVS and \( Y \) a linear manifold in \( V \). Then: (a) \( Y \) is a TVS with the relative topology; (b) \( \overline{Y} \) is a closed subspace of \( V \). Moreover, if \( C \subseteq V \) is convex then so is \( \overline{C} \), and if \( E \subseteq V \) is balanced then so is \( \overline{E} \).
+</div>
+
+<div class="definition">
+<strong>Definition 5.7 (Cauchy net and completeness in a TVS).</strong> Let \( (V, \mathcal{T}) \) be a TVS and \( (x_\lambda)_\lambda \) a net in \( V \). The net is <strong>Cauchy</strong> if for every \( U \in \mathcal{U}_0 \) there exists \( \lambda_0 \) such that \( \lambda_1, \lambda_2 \geq \lambda_0 \implies x_{\lambda_1} - x_{\lambda_2} \in U \). A subset \( K \subseteq V \) is <strong>Cauchy complete</strong> if every Cauchy net in \( K \) converges to some element of \( K \).
+</div>
+
+In a normed linear space, Cauchy nets and Cauchy sequences coincide on bounded sets, so the TVS notion of completeness recovers the familiar Banach space completeness.
+
+## Quotient Topological Vector Spaces
+
+<div class="proposition">
+<strong>Proposition 5.8 (Quotient TVS).</strong> Let \( (V, \mathcal{T}) \) be a TVS and \( W \subseteq V \) a closed subspace. Equip \( V/W \) with the quotient topology (a set \( G \subseteq V/W \) is open iff \( q^{-1}(G) \) is open in \( V \)). Then \( V/W \) is a TVS, the canonical quotient map \( q : V \to V/W \) is continuous and open (maps open sets to open sets), and \( V/W \) is Hausdorff.
+</div>
+
+## Finite-Dimensional Topological Vector Spaces
+
+The next theorem is one of the most elegant results in TVS theory: every finite-dimensional TVS over \( \mathbb{K} \) is homeomorphic to \( \mathbb{K}^n \). This says that no matter how strange the topology looks, as long as it is Hausdorff and compatible with the vector space structure, it must agree with the standard Euclidean topology in finite dimensions.
+
+<div class="lemma">
+<strong>Lemma 5.9.</strong> Let \( (V, \mathcal{T}) \) be a one-dimensional TVS over \( \mathbb{K} \) with basis \( \{e\} \). The map \( \tau : \mathbb{K} \to V \), \( k \mapsto ke \), is a homeomorphism.
+</div>
+
+<div class="proposition">
+<strong>Proposition 5.10.</strong> Let \( n \in \mathbb{Z}^+ \) and \( (V, \mathcal{T}) \) an \( n \)-dimensional TVS over \( \mathbb{K} \) with basis \( \{e_1, \ldots, e_n\} \). The map \( \tau : \mathbb{K}^n \to V \) given by \( (k_1, \ldots, k_n) \mapsto \sum_j k_j e_j \) is a homeomorphism.
+</div>
+
+<div class="corollary">
+<strong>Corollary 5.11.</strong> There is a unique topology on any finite-dimensional vector space \( V \) making it a TVS. In particular, any two norms on a finite-dimensional vector space are equivalent.
+</div>
+
+<div class="corollary">
+<strong>Corollary 5.12.</strong> Every finite-dimensional linear manifold of a TVS is closed.
+</div>
+
+## Local Compactness
+
+<div class="definition">
+<strong>Definition 5.13 (Local compactness).</strong> A topological space \( (X, \mathcal{T}) \) is <strong>locally compact</strong> if each point \( x \in X \) has a neighbourhood base consisting of compact sets.
+</div>
+
+The space \( \mathbb{K}^n \) is locally compact: the closed balls around any point form a compact neighbourhood base. The following theorem shows this is the only locally compact TVS.
+
+<div class="theorem">
+<strong>Theorem 5.14.</strong> A topological vector space \( (V, \mathcal{T}) \) is locally compact if and only if \( V \) is finite-dimensional.
+</div>
+
+The proof of the non-trivial direction uses the following: if \( V \) is locally compact, choose a compact neighbourhood \( K \) of \( 0 \). Find a smaller open neighbourhood \( N \) with \( N + N \subseteq K \). By compactness, \( K \subseteq \{x_1, \ldots, x_r\} + N \) for finitely many \( x_i \). Let \( M = \operatorname{Span}\{x_1, \ldots, x_r\} \). Repeated scaling shows \( V = M \), hence \( V \) is finite-dimensional.
+
+<div class="corollary">
+<strong>Corollary 5.15.</strong> The closed unit ball of a normed linear space \( X \) is compact if and only if \( X \) is finite-dimensional.
+</div>
+
+## Uniform Continuity and Extension in TVS
+
+<div class="definition">
+<strong>Definition 5.16 (Uniform continuity in TVS).</strong> Let \( (V, \mathcal{T}_V) \) and \( (W, \mathcal{T}_W) \) be TVS. A map \( f : V \to W \) is <strong>uniformly continuous</strong> if for every \( U \in \mathcal{U}_0^W \) there exists \( N \in \mathcal{U}_0^V \) such that \( x - y \in N \implies f(x) - f(y) \in U \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 5.17.</strong> Let \( T : V \to W \) be linear. The following are equivalent: (a) \( T \) is continuous at some \( x_0 \in V \); (b) \( T \) is uniformly continuous on \( V \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 5.18.</strong> If \( \dim V < \infty \) and \( T : V \to W \) is linear, then \( T \) is continuous.
+</div>
+
+<div class="proposition">
+<strong>Proposition 5.19 (Extension by continuity).</strong> Suppose \( W \) is Cauchy complete. If \( X \subseteq V \) is a linear manifold and \( T_0 : X \to W \) is continuous and linear, then \( T_0 \) extends to a unique continuous linear map \( T : \overline{X} \to W \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 5.20.</strong> If \( X, Y \) are Banach spaces and \( M \subseteq X \) is a linear manifold, then any bounded \( T_0 : M \to Y \) extends to a bounded linear map \( T : \overline{M} \to Y \) with \( \|T\| = \|T_0\| \).
+</div>
+
+---
+
+# Chapter 6: Seminorms and Locally Convex Spaces
+
+Locally convex spaces are topological vector spaces whose topology is generated by a family of seminorms. This is a rich class that includes all Banach spaces, all Hilbert spaces, and all the weak and weak\( ^* \) topologies encountered in duality theory. The key feature of locally convex spaces is that the Hahn-Banach extension and separation theorems hold in their strongest forms, making them the natural domain for functional-analytic duality.
+
+## Seminorms and the Locally Convex Topology
+
+<div class="definition">
+<strong>Definition 6.1 (Seminorm).</strong> Let \( V \) be a vector space over \( \mathbb{K} \). A <strong>seminorm</strong> on \( V \) is a map \( p : V \to \mathbb{R} \) satisfying: (i) \( p(x) \geq 0 \) for all \( x \); (ii) \( p(\lambda x) = |\lambda| p(x) \) for all \( x \in V \), \( \lambda \in \mathbb{K} \); (iii) \( p(x+y) \leq p(x) + p(y) \) for all \( x, y \in V \). A seminorm satisfying \( p(x) = 0 \implies x = 0 \) is a norm.
+</div>
+
+Note that the triangle inequality implies \( |p(x) - p(z)| \leq p(z - x) \) for any seminorm \( p \), so seminorms are always Lipschitz continuous once they are continuous at a single point.
+
+<div class="example">
+<strong>Example 6.2.</strong> Let \( V = C([0,1], \mathbb{C}) \). For each \( t \in [0,1] \), the map \( p_t : V \to \mathbb{R} \), \( p_t(f) = |f(t)| \), is a seminorm. The family \( \{p_t : t \in [0,1] \cap \mathbb{Q}\} \) is a <em>separating</em> family of seminorms (see Definition 6.6 below).
+</div>
+
+<div class="definition">
+<strong>Definition 6.3 (Minkowski functional on TVS).</strong> Let \( W \) be a TVS and \( E \in \mathcal{U}_0 \) a convex neighbourhood of \( 0 \). The <strong>Minkowski (gauge) functional</strong> of \( E \) is
+\[p_E(x) := \inf\{r > 0 : x \in rE\}.\]
+</div>
+
+<div class="proposition">
+<strong>Proposition 6.4.</strong> Let \( W \) be a TVS and \( E \in \mathcal{U}_0 \) convex. Then: (a) \( p_E \) is a sublinear functional; (b) if \( E \) is open, then \( E = \{w \in W : p_E(w) < 1\} \); (c) if \( E \) is balanced, then \( p_E \) is a seminorm.
+</div>
+
+<div class="proposition">
+<strong>Proposition 6.5.</strong> Let \( W \) be a TVS and \( p \) a seminorm on \( W \). The following are equivalent: (a) \( p \) is continuous on \( W \); (b) there exists \( U \in \mathcal{U}_0^W \) on which \( p \) is bounded above.
+</div>
+
+<div class="definition">
+<strong>Definition 6.6 (Separating family of seminorms).</strong> A family \( \Gamma \) of seminorms on a vector space \( W \) is <strong>separating</strong> if for every \( 0 \neq x \in W \) there exists \( p \in \Gamma \) with \( p(x) \neq 0 \).
+</div>
+
+<div class="definition">
+<strong>Definition 6.7 (Locally convex topology).</strong> A topology \( \mathcal{T} \) on a TVS \( W \) is <strong>locally convex</strong> if it admits a base of convex sets. We call \( (W, \mathcal{T}) \) a <strong>locally convex (topological vector) space</strong>. Any locally convex space admits a neighbourhood base at \( 0 \) consisting of balanced, open, convex sets.
+</div>
+
+<div class="theorem">
+<strong>Theorem 6.8.</strong> If \( \Gamma \) is a separating family of seminorms on a vector space \( W \), then
+\[\mathcal{B} := \{N(x, F, \varepsilon) : x \in W, \varepsilon > 0, F \subseteq \Gamma \text{ finite}\},\]
+where \( N(x, F, \varepsilon) = \{y \in W : p(x-y) < \varepsilon \text{ for all } p \in F\} \), is a base for a locally convex topology \( \mathcal{T} \) on \( W \) in which each \( p \in \Gamma \) is continuous. Conversely, every locally convex topology is generated by some separating family of seminorms (Theorem 6.9).
+</div>
+
+<div class="proposition">
+<strong>Proposition 6.10.</strong> Let \( V \) be a vector space with separating family of seminorms \( \Gamma \) generating the locally convex topology \( \mathcal{T} \). A net \( (x_\lambda)_\lambda \) in \( V \) converges to \( x \in V \) in \( (V, \mathcal{T}) \) if and only if \( \lim_\lambda p(x - x_\lambda) = 0 \) for all \( p \in \Gamma \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 6.11.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a closed subspace. Then \( V/W \) is also a locally convex space in the quotient topology.
+</div>
+
+## Strong and Weak Operator Topologies
+
+The bounded operators \( B(H) \) on a Hilbert space \( H \) carry not just the operator norm topology but two important coarser locally convex topologies. These arise naturally in the theory of von Neumann algebras and in the spectral theorem for unbounded operators.
+
+<div class="definition">
+<strong>Definition 6.12 (Strong Operator Topology).</strong> For each \( x \in H \), let \( p_x : B(H) \to \mathbb{R} \) be the seminorm \( p_x(T) = \|Tx\| \). The family \( \Gamma_\mathrm{SOT} = \{p_x : x \in H\} \) is separating. The locally convex topology generated by \( \Gamma_\mathrm{SOT} \) is called the <strong>strong operator topology (SOT)</strong> on \( B(H) \). A net \( (T_\lambda) \) converges to \( T \) in SOT if and only if \( \|T_\lambda x - Tx\| \to 0 \) for all \( x \in H \) (pointwise convergence of operators). A neighbourhood base for SOT at \( T \in B(H) \) is
+\[\{N(T, \{x_1,\ldots,x_m\}, \varepsilon) : m \geq 1, x_i \in H, \varepsilon > 0\},\]
+where \( N(T, F, \varepsilon) = \{R \in B(H) : \|Rx_i - Tx_i\| < \varepsilon, \, i \in [m]\} \).
+</div>
+
+<div class="definition">
+<strong>Definition 6.13 (Weak Operator Topology).</strong> For each \( (x, y) \in H \times H \), let \( q_{x,y} : B(H) \to \mathbb{R} \) be the seminorm \( q_{x,y}(T) = |\langle Tx, y \rangle| \). The locally convex topology generated by \( \Gamma_\mathrm{WOT} = \{q_{x,y} : (x,y) \in H \times H\} \) is called the <strong>weak operator topology (WOT)</strong> on \( B(H) \). A net \( (T_\lambda) \) converges to \( T \) in WOT if and only if \( \langle T_\lambda x, y \rangle \to \langle Tx, y \rangle \) for all \( x, y \in H \). The three topologies on \( B(H) \) satisfy: norm topology \( \supseteq \) SOT \( \supseteq \) WOT.
+</div>
+
+<div class="proposition">
+<strong>Proposition 6.14.</strong> Let \( T : V \to W \) be a linear map between locally convex spaces with separating seminorm families \( \Gamma_V \) and \( \Gamma_W \). The following are equivalent: (a) \( T \) is continuous; (b) for every \( q \in \Gamma_W \), there exist \( \kappa > 0 \) and \( p_1, \ldots, p_m \in \Gamma_V \) with \( q(Tx) \leq \kappa \max_i p_i(x) \) for all \( x \in V \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 6.15.</strong> A linear functional \( f \) on a locally convex space \( (V, \mathcal{T}) \) is continuous if and only if there exists a continuous seminorm \( p \) on \( V \) such that \( |f(x)| \leq p(x) \) for all \( x \in V \).
+</div>
+
+---
+
+# Chapter 7: The Hahn-Banach Theorem
+
+The Hahn-Banach Theorem is one of the cornerstones of functional analysis. In its analytic form it allows extension of linear functionals; in its geometric form it separates disjoint convex sets by hyperplanes. Both forms are essential tools throughout the subject.
+
+## Linear Functionals and Hyperplanes
+
+<div class="definition">
+<strong>Definition 7.1 (Algebraic and topological duals).</strong> Let \( W \) be a vector space over \( \mathbb{K} \). The <strong>algebraic dual</strong> \( W^\# \) is the vector space of all linear functionals \( f : W \to \mathbb{K} \). If \( W \) is a TVS, the <strong>topological dual</strong> \( W^* \) is the subspace of continuous linear functionals. The two coincide when \( W \) is finite-dimensional.
+</div>
+
+<div class="example">
+<strong>Example 7.2.</strong> The map \( f(x) = \sum_{n \geq 1} x_n \) on \( c_{00}(\mathbb{K}) \) (finitely supported sequences under the sup norm) is an unbounded, hence discontinuous, linear functional. This shows \( W^\# \supsetneq W^* \) in general.
+</div>
+
+<div class="lemma">
+<strong>Lemma 7.3 (Complexification of real functionals).</strong> Let \( V \) be a vector space over \( \mathbb{C} \).
+<ol>
+<li>If \( f : V \to \mathbb{R} \) is \( \mathbb{R} \)-linear, then \( f_\mathbb{C}(x) := f(x) - if(ix) \) is a \( \mathbb{C} \)-linear functional with \( \operatorname{Re} f_\mathbb{C} = f \).</li>
+<li>If \( g : V \to \mathbb{C} \) is \( \mathbb{C} \)-linear and \( f = \operatorname{Re} g \), then \( g = f_\mathbb{C} \).</li>
+<li>If \( p \) is a \( \mathbb{C} \)-seminorm and \( |f(x)| \leq p(x) \) for all \( x \), then \( |f_\mathbb{C}(x)| \leq p(x) \) for all \( x \).</li>
+<li>If \( V \) is a normed space, then \( \|f\| = \|f_\mathbb{C}\| \).</li>
+</ol>
+</div>
+
+<div class="definition">
+<strong>Definition 7.4 (Hyperplane).</strong> A <strong>hyperplane</strong> \( M \) in a vector space \( V \) is a linear manifold with \( \dim(V/M) = 1 \). Every nonzero \( \varphi \in V^\# \) has kernel \( M = \ker \varphi \) which is a hyperplane; conversely every hyperplane arises as a kernel of some linear functional.
+</div>
+
+<div class="proposition">
+<strong>Proposition 7.5.</strong> If \( (V, \mathcal{T}) \) is a TVS and \( M \subseteq V \) is a hyperplane, then either \( M \) is closed or \( M \) is dense in \( V \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 7.6.</strong> Let \( V \) be a TVS and \( \rho \in V^\# \). The following are equivalent: (a) \( \rho \) is continuous on \( V \) (i.e., \( \rho \in V^* \)); (b) \( \ker \rho \) is closed.
+</div>
+
+<div class="proposition">
+<strong>Proposition 7.7.</strong> Let \( V \) be a vector space and \( f \in V^\# \).
+<ol>
+<li>If \( g \in V^\# \) and \( g|_{\ker f} = 0 \), then \( g = kf \) for some \( k \in \mathbb{K} \).</li>
+<li>If \( g, f_1, \ldots, f_N \in V^\# \) and \( g(x) = 0 \) for all \( x \in \bigcap_{j=1}^N \ker f_j \), then \( g \in \operatorname{Span}\{f_1, \ldots, f_N\} \).</li>
+</ol>
+</div>
+
+## The Extension Theorems
+
+The classical Hahn-Banach theorems extend dominated or bounded linear functionals from subspaces to the whole space, preserving the domination or the norm.
+
+<div class="theorem">
+<strong>Theorem 7.8 (Hahn-Banach I — real sublinear domination).</strong> Let \( V \) be a vector space over \( \mathbb{R} \) and \( p : V \to \mathbb{R} \) a sublinear functional. If \( M \subseteq V \) is a linear manifold and \( f : M \to \mathbb{R} \) is linear with \( f(m) \leq p(m) \) for all \( m \in M \), then there exists a linear \( g : V \to \mathbb{R} \) with \( g|_M = f \) and \( g(x) \leq p(x) \) for all \( x \in V \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.9 (Hahn-Banach II — seminorm domination over \( \mathbb{K} \)).</strong> Let \( V \) be a vector space over \( \mathbb{K} \), \( M \subseteq V \) a linear manifold, and \( p : V \to \mathbb{R} \) a seminorm. If \( f : M \to \mathbb{K} \) is linear with \( |f(m)| \leq p(m) \) for all \( m \in M \), then there exists a linear \( g : V \to \mathbb{K} \) with \( g|_M = f \) and \( |g(x)| \leq p(x) \) for all \( x \in V \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.10 (Hahn-Banach III — norm-preserving extension).</strong> Let \( (X, \|\cdot\|) \) be a normed linear space, \( M \subseteq X \) a linear manifold, and \( f \in M^* \). There exists \( g \in X^* \) with \( g|_M = f \) and \( \|g\| = \|f\| \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 7.11 (Extension in locally convex spaces).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a linear manifold. Then every \( f \in W^* \) extends to some \( g \in V^* \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 7.12.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space.
+<ol>
+<li>For any linearly independent \( \{x_j : j \in [m]\} \subseteq V \) and any scalars \( \{k_j\} \), there exists \( g \in V^* \) with \( g(x_j) = k_j \) for all \( j \).</li>
+<li>For every \( 0 \neq y \in V \), there exists \( g \in V^* \) with \( g(y) \neq 0 \).</li>
+</ol>
+</div>
+
+<div class="proposition">
+<strong>Proposition 7.13.</strong> Every finite-dimensional subspace of a locally convex space \( (V, \mathcal{T}) \) is topologically complemented.
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.14.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a linear manifold. Then
+\[\overline{W} = \bigcap \{ \ker f : f \in V^*, \; W \subseteq \ker f \}.\]
+In particular: (a) \( W \) is dense iff \( f \in V^* \) and \( f|_W = 0 \) implies \( f = 0 \); (b) the canonical embedding \( J : X \to X^{**} \) is an isometry (so \( \|x\| = \sup\{|x^*(x)| : x^* \in X^*, \|x^*\| \leq 1\} \)).
+</div>
+
+<div class="corollary">
+<strong>Corollary 7.15.</strong> Let \( (X, \|\cdot\|) \) be a normed linear space and \( Y \subseteq X \) a closed subspace. For any \( z \in X \setminus Y \), setting \( d = d(z, Y) \), there exists \( x^* \in X^* \) with \( \|x^*\| = 1 \), \( x^*|_Y = 0 \), and \( x^*(z) = d \).
+</div>
+
+## The Separation Theorems
+
+<div class="proposition">
+<strong>Proposition 7.16.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( \emptyset \neq G \subseteq V \) open, convex, with \( 0 \notin G \). There exists a closed hyperplane \( M \subseteq V \) with \( G \cap M = \emptyset \).
+</div>
+
+<div class="definition">
+<strong>Definition 7.17 (Half-spaces and separation).</strong> In a real TVS \( (V, \mathcal{T}) \), an <strong>open half-space</strong> is \( \{x \in V : f(x) > k\} \) for some \( 0 \neq f \in V^* \) and \( k \in \mathbb{R} \). Sets \( A, B \subseteq V \) are <strong>separated</strong> if there are closed half-spaces \( S_A, S_B \) with \( A \subseteq S_A \), \( B \subseteq S_B \), and \( S_A \cap S_B \) a closed affine hyperplane. They are <strong>strictly separated</strong> if there are disjoint open half-spaces.
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.18 (Hahn-Banach IV — separation of open convex sets).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( A, B \subseteq V \) nonempty, disjoint, open, and convex. Then \( A \) and \( B \) are strictly separated: there exists a continuous linear \( f : V \to \mathbb{R} \) (or \( \mathbb{C} \) with \( \operatorname{Re} f \) separating) and \( k \in \mathbb{R} \) with \( \operatorname{Re} f(a) > k > \operatorname{Re} f(b) \) for all \( a \in A \), \( b \in B \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.19 (Hahn-Banach IV — strict separation with compact/closed sets).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( A, B \subseteq V \) nonempty, disjoint, closed, and convex, with \( B \) compact. There exist \( \alpha > \beta \in \mathbb{R} \) and a continuous \( f \in V^* \) with \( \operatorname{Re} f(a) \geq \alpha > \beta \geq \operatorname{Re} f(b) \) for all \( a \in A \), \( b \in B \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 7.20.</strong> In a locally convex space, the closed convex hull of any nonempty set \( A \) is the intersection of all closed half-spaces containing \( A \).
+</div>
+
+---
+
+# Chapter 8: Weak Topologies and Dual Spaces
+
+This chapter develops the theory of weak topologies in the context of Banach spaces, establishing the key results on reflexivity, weak compactness, and the annihilator calculus. The Banach-Alaoglu Theorem (proved in Chapter 4) is the foundation; here we draw its algebraic and metrizability consequences.
+
+## Dual Pairs and the Weak\( ^* \) Topology
+
+<div class="definition">
+<strong>Definition 8.1 (Dual pair).</strong> A <strong>dual pair</strong> is a pair \( (V, L) \) where \( V \) is a vector space and \( L \subseteq V^\# \) is a separating linear manifold of functionals.
+</div>
+
+For a locally convex space \( (V, \mathcal{T}) \), the pair \( (V, V^*) \) is a dual pair. The weak topology \( \sigma(V, V^*) \) is the coarsest topology making every \( f \in V^* \) continuous; a net \( (x_\lambda) \) converges weakly to \( x \) iff \( f(x_\lambda) \to f(x) \) for all \( f \in V^* \). It follows that \( \sigma(V, V^*) \subseteq \mathcal{T} \), so norm convergence implies weak convergence.
+
+<div class="definition">
+<strong>Definition 8.2 (Weak\( ^* \) topology).</strong> For a locally convex space \( (V, \mathcal{T}) \) and its dual \( V^* \), identify each \( x \in V \) with the functional \( \hat{x} : V^* \to \mathbb{K} \), \( \hat{x}(\rho) = \rho(x) \). The pair \( (V^*, \hat{V}) \) is a dual pair, and the <strong>weak\( ^* \) topology</strong> \( \sigma(V^*, \hat{V}) \) on \( V^* \) is the coarsest topology making each \( \hat{x} \) continuous. A net \( (\rho_\lambda) \) converges weak\( ^* \) to \( \rho \) iff \( \rho_\lambda(x) \to \rho(x) \) for every \( x \in V \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.3.</strong> Let \( (V, L) \) be a dual pair. The continuous linear functionals on \( (V, \sigma(V,L)) \) are exactly the elements of \( L \). That is, \( (V, \sigma(V, L))^* = L \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.4.</strong> Let \( C \) be a convex subset of a locally convex space \( (V, \mathcal{T}) \). The closure of \( C \) in \( \mathcal{T} \) coincides with its weak closure in \( \sigma(V, V^*) \).
+</div>
+
+This is a profound result: for convex sets, norm closure and weak closure agree. This is because closed convex sets are precisely the intersections of closed half-spaces, and half-spaces are defined by continuous linear functionals.
+
+## Uniform Boundedness, Banach-Steinhaus, and Goldstein
+
+<div class="theorem">
+<strong>Theorem 8.5 (Uniform Boundedness Principle — general form).</strong> Let \( (X, d) \) be a complete metric space and \( H \subseteq C(X, \mathbb{K}) \) a nonempty family of continuous functions such that \( \sup_{h \in H} |h(x)| < \infty \) for each \( x \in X \). Then there exists an open set \( G \subseteq X \) and a constant \( M > 0 \) with \( |h(x)| \leq M \) for all \( h \in H \), \( x \in G \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 8.6 (Uniform Boundedness for Banach spaces).</strong> Let \( X, Y \) be Banach spaces and \( \mathcal{A} \subseteq B(X, Y) \) such that \( \sup_{T \in \mathcal{A}} \|Tx\| < \infty \) for each \( x \in X \). Then \( \sup_{T \in \mathcal{A}} \|T\| < \infty \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 8.7.</strong> Let \( X \) be a Banach space. (a) A set \( S \subseteq X \) is bounded iff \( \sup_{s \in S} |x^*(s)| < \infty \) for all \( x^* \in X^* \). (b) A set \( G \subseteq X^* \) is bounded iff \( \sup_{s^* \in G} |s^*(x)| < \infty \) for all \( x \in X \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.8 (Banach-Steinhaus).</strong> Let \( X, Y \) be Banach spaces and \( (T_n)_{n \geq 1} \subseteq B(X,Y) \) such that for every \( x \in X \) the limit \( T x := \lim_n T_n x \) exists in \( Y \). Then: (a) \( \sup_n \|T_n\| < \infty \); (b) \( T \in B(X,Y) \); (c) \( \|T\| \leq \liminf_n \|T_n\| \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 8.9.</strong> If \( (x_n)_n \) converges weakly to \( x \) in a Banach space \( X \), then \( \sup_n \|x_n\| < \infty \) and \( \|x\| \leq \liminf_n \|x_n\| \). Similarly if \( (y_n^*)_n \to y^* \) in the weak\( ^* \) topology on \( X^* \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.10 (Goldstein's Theorem).</strong> Let \( X \) be a Banach space and \( J : X \to X^{**} \) the canonical embedding. Then \( J(X_1) \) is weak\( ^* \)-dense in \( X_1^{**} \) (where \( X_1, X_1^{**} \) denote the respective closed unit balls). Consequently, \( J(X) \) is weak\( ^* \)-dense in \( X^{**} \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 8.11 (Reflexivity and weak compactness).</strong> Let \( X \) be a Banach space. The following are equivalent: (a) \( X \) is reflexive; (b) the unit ball \( X_1 \) is weakly compact.
+</div>
+
+## Metrizability of the Dual Unit Ball
+
+Although weak and weak\( ^* \) topologies are not metrizable in general, their restrictions to bounded sets can be.
+
+<div class="theorem">
+<strong>Theorem 8.12.</strong> Let \( X \) be a Banach space. Then \( X_1^* \) is weak\( ^* \)-metrizable if and only if \( X \) is separable.
+</div>
+
+<div class="corollary">
+<strong>Corollary 8.13.</strong> If \( X \) is a separable Banach space, then \( X_1^* \) is separable in the weak\( ^* \) topology (in fact sequentially compact and compact).
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.14.</strong> Let \( X \) be a Banach space. Then \( X_1 \) is weakly metrizable if and only if \( X^* \) is separable.
+</div>
+
+## Annihilators and Quotient Duals
+
+<div class="definition">
+<strong>Definition 8.15 (Annihilator and pre-annihilator).</strong> Let \( X \) be a Banach space, \( M \subseteq X \), \( N \subseteq X^* \). The <strong>annihilator</strong> of \( M \) is
+\[M^\perp = \{x^* \in X^* : x^*(m) = 0 \text{ for all } m \in M\}.\]
+The <strong>pre-annihilator</strong> of \( N \) is
+\[{}^\perp N = \{x \in X : n^*(x) = 0 \text{ for all } n^* \in N\}.\]
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.16.</strong> Let \( X \) be a Banach space and \( M \subseteq X \) a closed subspace. Let \( q : X \to X/M \) be the canonical quotient map. Then the map \( \Theta : (X/M)^* \to M^\perp \), \( \xi \mapsto \xi \circ q \), is an isometric isomorphism of Banach spaces.
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.17.</strong> Let \( X \) be a Banach space and \( M \subseteq X \) a closed subspace. The map \( \Theta : X^*/M^\perp \to M^* \), \( x^* + M^\perp \mapsto x^*|_M \), is an isometric isomorphism.
+</div>
+
+<div class="theorem">
+<strong>Theorem 8.18 (Riesz Representation for \( C_0(X)^* \)).</strong> Let \( X \) be a locally compact Hausdorff space and \( \mathcal{M}(X) \) the space of \( \mathbb{K} \)-valued finite regular Borel measures on \( X \) with the total variation norm \( \|\mu\| = |\mu|(X) \). The map \( \Theta : \mathcal{M}(X) \to C_0(X, \mathbb{K})^* \), \( \mu \mapsto \beta_\mu \) where \( \beta_\mu(f) = \int_X f \, d\mu \), is an isometric linear isomorphism.
+</div>
+
+<div class="corollary">
+<strong>Corollary 8.19 (Banach-Alaoglu consequences).</strong>
+<ol>
+<li>Every Banach space \( X \) is isometrically isomorphic to a subspace of \( (C(L, \mathbb{K}), \|\cdot\|_\infty) \) for some compact Hausdorff space \( L \).</li>
+<li>If \( A \subseteq X^* \) is weak\( ^* \)-closed and bounded, then \( A \) is weak\( ^* \)-compact.</li>
+</ol>
+</div>
+
+---
+
+# Chapter 9: Extremal Points
+
+The Krein-Milman Theorem is the capstone result connecting convexity theory with the structure of compact convex sets in locally convex spaces. It asserts that every compact convex set is the closed convex hull of its extreme points — those points that cannot be expressed as a proper convex combination of other points in the set. This has profound applications in optimization, operator algebras, and mathematical physics.
+
+## Extreme Points and Faces
+
+<div class="definition">
+<strong>Definition 9.1 (Extreme point).</strong> Let \( V \) be a vector space and \( C \subseteq V \) a convex subset. A point \( e \in C \) is an <strong>extreme point</strong> of \( C \) if whenever \( x, y \in C \) and \( e = tx + (1-t)y \) for some \( t \in (0,1) \), then \( x = y = e \). The set of all extreme points of \( C \) is denoted \( \operatorname{Ext}(C) \).
+</div>
+
+<div class="example">
+<strong>Example 9.2.</strong> In \( B(\mathbb{C}^n) \), the state space \( \mathcal{S}(B(\mathbb{C}^n)) \) — the set of positive, norm-one linear functionals — is a compact convex subset of \( B(\mathbb{C}^n)^* \). Its extreme points are the <em>pure states</em>. The normalized trace functional \( T \mapsto \frac{1}{n} \sum_{k=1}^n \langle Te_k, e_k \rangle \) is a positive state of norm one.
+</div>
+
+<div class="definition">
+<strong>Definition 9.3 (Face).</strong> Let \( C \subseteq V \) be a nonempty convex set. A nonempty convex subset \( F \subseteq C \) is a <strong>face</strong> of \( C \) if whenever \( x, y \in C \) and \( tx + (1-t)y \in F \) for some \( t \in (0,1) \), then \( x, y \in F \). The singleton \( \{e\} \) is a face of \( C \) iff \( e \in \operatorname{Ext}(C) \).
+</div>
+
+<div class="lemma">
+<strong>Lemma 9.4.</strong> Let \( C \subseteq V \) be convex and \( F \subseteq C \) a face. If \( \{x_j : j \in [n]\} \subseteq C \) and \( x = \sum_{j=1}^n t_j x_j \) is a convex combination with \( x \in F \) and all \( t_j \in (0,1) \), then \( x_j \in F \) for all \( j \).
+</div>
+
+<div class="lemma">
+<strong>Lemma 9.5.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( K \subseteq V \) nonempty, compact, and convex. For any \( \rho \in V^* \), the set
+\[F := \{x \in K : \operatorname{Re} \rho(x) = \sup_{w \in K} \operatorname{Re} \rho(w)\}\]
+is a nonempty, compact face of \( K \).
+</div>
+
+<div class="lemma">
+<strong>Lemma 9.6.</strong> Every nonempty, compact, convex subset of a locally convex space has at least one extreme point: \( \operatorname{Ext}(K) \neq \emptyset \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 9.7 (Krein-Milman).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( K \subseteq V \) nonempty, compact, and convex. Then
+\[K = \overline{\operatorname{conv}}(\operatorname{Ext}(K)),\]
+the closed convex hull of the extreme points of \( K \).
+</div>
+
+The Krein-Milman Theorem is proved by the repeated application of Lemma 9.5: any continuous linear functional attains its supremum on a face, and Zorn's Lemma produces a minimal face, which must be a singleton extreme point. The full statement then follows from the Hahn-Banach separation theorems.
+
+<div class="corollary">
+<strong>Corollary 9.8.</strong> For any \( \rho \in V^* \), there exists \( e \in \operatorname{Ext}(K) \) such that \( \operatorname{Re} \rho(w) \leq \operatorname{Re} \rho(e) \) for all \( w \in K \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 9.9.</strong> Let \( X \) be a Banach space and \( A \subseteq X^* \) weak\( ^* \)-closed and bounded. Then \( A \) is weak\( ^* \)-compact. If \( A \) is also convex, then \( A = \overline{\operatorname{conv}}^{w^*}(\operatorname{Ext}(A)) \).
+</div>
+
+---
+
+# Chapter 10: Named Theorems
+
+This chapter collects the structural theorems of Banach space theory — the Open Mapping Theorem, Closed Graph Theorem, and their consequences for complemented subspaces and idempotent operators. These results, together with the Hahn-Banach Theorem and the Uniform Boundedness Principle, form the classical core of functional analysis.
+
+## The Open Mapping and Closed Graph Theorems (Marcoux's Formulation)
+
+<div class="lemma">
+<strong>Lemma 10.1.</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \). If \( Y_{1/2} \subseteq \overline{T(X_m)} \) for some \( m \geq 1 \), then \( Y_1 \subseteq T(X_{2m}) \) (where \( X_r \) denotes the ball of radius \( r \)).
+</div>
+
+<div class="theorem">
+<strong>Theorem 10.2 (Open Mapping Theorem).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \) surjective. Then \( T \) is an open map: it sends open sets to open sets.
+</div>
+
+<div class="corollary">
+<strong>Corollary 10.3 (Inverse Mapping Theorem).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \) bijective. Then \( T^{-1} \) is continuous, so \( T \) is a homeomorphism of Banach spaces.
+</div>
+
+<div class="corollary">
+<strong>Corollary 10.4 (Closed Graph Theorem).</strong> Let \( X, Y \) be Banach spaces and \( T : X \to Y \) linear. If the graph \( \mathcal{G}(T) = \{(x, Tx) : x \in X\} \) is closed in \( X \oplus_1 Y \), then \( T \) is continuous. Equivalently: (a) \( \mathcal{G}(T) \) is closed; (b) \( T \) is continuous; (c) if \( \lim_n x_n = 0 \) and \( \lim_n Tx_n = y \), then \( y = 0 \).
+</div>
+
+## Complemented Subspaces and Projections
+
+The following results give a clean algebraic characterization of topological complementation in Banach spaces via bounded idempotents.
+
+<div class="lemma">
+<strong>Lemma 10.5.</strong> Two closed subspaces \( Y, Z \) of a Banach space \( X \) topologically complement each other if and only if the map \( \iota : Y \oplus_1 Z \to X \), \( (y,z) \mapsto y+z \), is a homeomorphism of Banach spaces.
+</div>
+
+<div class="proposition">
+<strong>Proposition 10.6.</strong> Let \( X \) be a Banach space and \( Y, Z \) topologically complementary subspaces. For each \( x \in X \), write \( x = y_x + z_x \) uniquely with \( y_x \in Y \), \( z_x \in Z \). Define \( E : X \to Y \) by \( Ex = y_x \). Then:
+<ol>
+<li>\( E \) is a continuous linear map with \( E^2 = E \), \( \operatorname{Im} E = Y \), and \( \ker E = Z \).</li>
+<li>Conversely, if \( E \in B(X) \) satisfies \( E^2 = E \), then \( \operatorname{Im} E \) and \( \ker E \) are topologically complementary closed subspaces.</li>
+</ol>
+A subspace \( Y \) of \( X \) is topologically complemented if and only if it is the range of a bounded idempotent in \( B(X) \).
+</div>
+
+---
+
+# Chapter 11: Operator Theory
+
+This chapter develops the theory of compact operators on Banach and Hilbert spaces, culminating in the Spectral Theorem for compact normal operators (which subsumes and strengthens the self-adjoint case developed in Chapter 2).
+
+## The Banach Space Adjoint
+
+For a bounded operator between Banach spaces, the adjoint acts on the dual spaces. Unlike the Hilbert space adjoint (which lands in the same space), the Banach space adjoint is a map between the dual spaces.
+
+<div class="definition">
+<strong>Definition 11.1 (Banach space adjoint).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \). For \( y^* \in Y^* \), the map \( x \mapsto y^*(Tx) \) defines an element \( T^* y^* \in X^* \). The <strong>Banach space adjoint</strong> of \( T \) is the map \( T^* : Y^* \to X^* \), \( T^* y^*(x) = y^*(Tx) \). We have \( \|T^*\| = \|T\| \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.2.</strong> Let \( X, Y, Z \) be Banach spaces, \( S, T \in B(X,Y) \), and \( R \in B(Y,Z) \). Then \( (k_1 S + k_2 T)^* = k_1 S^* + k_2 T^* \) and \( (R \circ T)^* = T^* \circ R^* \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.3.</strong> Let \( X \) be an \( n \)-dimensional Banach space with Hamel basis \( E = \{e_i : i \in [n]\} \) and let \( [A] = [a_{ij}] \) be the matrix of \( A \in B(X) \) relative to \( E \). The matrix of the Banach space adjoint \( A^* \) relative to the dual basis \( E^* \) is the transpose \( [A]^T = [a_{ji}] \).
+</div>
+
+The Hilbert space adjoint defined in Chapter 2 is related: for \( T \in B(H) \) with \( H \) a Hilbert space, identifying \( H \cong H^* \) via the Riesz Representation Theorem converts the Banach space adjoint \( T^* : H^* \to H^* \) into the Hilbert space adjoint \( T^* : H \to H \).
+
+<div class="theorem">
+<strong>Theorem 11.4.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (T^*)^* = T \), \( \|T\| = \|T^*\| \), and \( \|T^* T\| = \|T\|^2 \) (the \( C^* \)-equation). A norm-closed subalgebra of \( B(H) \) that is closed under the adjoint operation is a <strong>concrete \( C^* \)-algebra</strong>.
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.5.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (\operatorname{Im} T)^\perp = \ker T^* \). Consequently: (a) \( \overline{\operatorname{Im} T} = (\ker T^*)^\perp \); (b) \( \operatorname{Im} T \) is not dense in \( H \) iff \( \ker T^* \neq \{0\} \).
+</div>
+
+## Compact Operators on Banach Spaces
+
+<div class="definition">
+<strong>Definition 11.6 (Compact operator).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X,Y) \). We say \( T \) is <strong>compact</strong> if \( T(X_1) \) (the image of the closed unit ball) is compact in \( Y \). The space of compact operators from \( X \) to \( Y \) is denoted \( K(X, Y) \); we write \( K(X) = K(X,X) \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.7.</strong> Let \( T \in B(X, Y) \). The following are equivalent:
+<ol>
+<li>\( T \) is compact.</li>
+<li>\( T(F) \) is compact in \( Y \) for every bounded \( F \subseteq X \).</li>
+<li>Every bounded sequence \( (x_n) \) in \( X \) has a subsequence such that \( (Tx_{n_k}) \) converges in \( Y \).</li>
+<li>\( T(X_1) \) is totally bounded in \( Y \).</li>
+</ol>
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.8.</strong> Let \( X, Y \) be Banach spaces. Then \( K(X,Y) \) is a closed subspace of \( B(X,Y) \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.9 (Ideal property).</strong> Let \( M, X, Y, Z \) be Banach spaces, \( R \in B(M, X) \), \( K \in K(X, Y) \), and \( T \in B(Y, Z) \). Then \( TK \in K(X, Z) \) and \( KR \in K(M, Y) \). In particular, \( K(X) \) is a closed two-sided ideal in \( B(X) \).
+</div>
+
+<div class="definition">
+<strong>Definition 11.10 (Finite rank operator).</strong> An operator \( F \in B(X, Y) \) is <strong>finite rank</strong> if \( \dim F(X) < \infty \). The set of finite rank operators is denoted \( \mathcal{F}(X, Y) \subseteq K(X, Y) \).
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.11.</strong>
+<ol>
+<li>Every finite rank operator is compact: \( \mathcal{F}(X,Y) \subseteq K(X,Y) \).</li>
+<li>For a Banach space \( X \): \( K(X) = B(X) \) iff \( X \) is finite-dimensional.</li>
+<li>If \( K \in K(X,Y) \), the image \( K(X) \) is closed in \( Y \) iff \( \dim K(X) < \infty \).</li>
+</ol>
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.12 (Compactness passes to adjoint).</strong> If \( X, Y \) are Banach spaces and \( K \in K(X, Y) \), then \( K^* \in K(Y^*, X^*) \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.13 (Compact operators on Hilbert spaces).</strong> For \( K \in B(H) \) where \( H \) is a Hilbert space, the following are equivalent:
+<ol>
+<li>\( K \) is compact.</li>
+<li>\( K^* \) is compact.</li>
+<li>There exists a sequence \( (F_n)_{n \geq 1} \subseteq \mathcal{F}(H) \) of finite rank operators such that \( K = \lim_n F_n \) in operator norm.</li>
+</ol>
+</div>
+
+## Normal Operators and the Spectral Theorem
+
+<div class="definition">
+<strong>Definition 11.14 (Normal, self-adjoint, unitary).</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). We say \( T \) is:
+<ul>
+<li><strong>Normal</strong> if \( TT^* = T^*T \).</li>
+<li><strong>Self-adjoint</strong> if \( T^* = T \).</li>
+<li><strong>Unitary</strong> if \( T^*T = TT^* = I \).</li>
+</ul>
+Every self-adjoint operator is normal. The adjoint operation \( * : B(H) \to B(H) \) satisfies: \( (\alpha A)^* = \bar\alpha A^* \), \( (A+B)^* = A^* + B^* \), \( (AB)^* = B^*A^* \), \( (A^*)^* = A \).
+</div>
+
+<div class="definition">
+<strong>Definition 11.15 (Reducing subspace).</strong> A closed subspace \( M \subseteq H \) is <strong>invariant</strong> for \( T \in B(H) \) if \( TM \subseteq M \). It is <strong>reducing</strong> for \( T \) if \( M \) is invariant for both \( T \) and \( T^* \). When \( M \) reduces \( T \), we have the decomposition \( T = T_1 \oplus T_4 \) (as a block diagonal) with respect to \( H = M \oplus M^\perp \); \( T \) is compact iff both \( T_1, T_4 \) are compact; \( T \) is normal iff both \( T_1, T_4 \) are normal.
+</div>
+
+<div class="proposition">
+<strong>Proposition 11.16.</strong> Let \( N \in B(H) \) be normal. Then:
+<ol>
+<li>\( \|Nx\| = \|N^*x\| \) for all \( x \in H \).</li>
+<li>For any polynomial \( p(x,y) \) in two non-commuting variables and \( \alpha \in \mathbb{C} \), the kernel \( \ker(p(N, N^*) - \alpha I) \) is a reducing subspace for \( N \).</li>
+<li>If \( \alpha \neq \beta \), then \( \ker(N - \alpha I) \perp \ker(N - \beta I) \).</li>
+</ol>
+</div>
+
+<div class="definition">
+<strong>Definition 11.17 (Spectrum).</strong> Let \( X \) be a complex Banach space and \( T \in B(X) \). The <strong>spectrum</strong> of \( T \) is \( \sigma(T) = \{\alpha \in \mathbb{K} : (T - \alpha I) \text{ is not invertible in } B(X)\} \). The <strong>point spectrum</strong> \( \sigma_p(T) \) is the set of eigenvalues of \( T \). We always have \( \sigma_p(T) \subseteq \sigma(T) \).
+</div>
+
+For compact operators, the spectrum is almost entirely point spectrum:
+
+If \( T \) is compact, then \( \sigma(T) = \sigma_p(T) \cup \{0\} \). For every \( \varepsilon > 0 \), the set \( \sigma(T) \cap \{z \in \mathbb{C} : |z| > \varepsilon\} \) is finite. Every nonzero eigenvalue has \( \dim \ker(T - \alpha I) < \infty \). Thus the nonzero eigenvalues form a sequence converging to \( 0 \).
+
+<div class="theorem">
+<strong>Theorem 11.18 (Decomposition for compact normal operators).</strong> Let \( H \) be a complex Hilbert space and \( N \in B(H) \) compact and normal. If \( \sigma_p(N) = \{\alpha_n : n \in \Omega\} \), then
+\[H = \bigoplus_{n \in \Omega} \ker(N - \alpha_n I).\]
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.19 (Spectral Theorem for Compact Normal Operators).</strong> Let \( H \) be a Hilbert space and \( N \in B(H) \) a compact normal operator. Let \( \{\alpha_n : n \in \Omega\} \) be the distinct nonzero eigenvalues of \( N \) and \( P_n \) the orthogonal projection onto \( M_n := \ker(N - \alpha_n I) \) for each \( n \in \Omega \). Then \( P_n P_m = 0 \) for \( n \neq m \) and
+\[N = \sum_{n \in \Omega} \alpha_n P_n,\]
+where the series converges in operator norm. Each \( M_n \) is finite-dimensional, \( |\alpha_n| \to 0 \), and the eigenvalues accumulate only at \( 0 \).
+</div>
+
+<div class="corollary">
+<strong>Corollary 11.20.</strong> Let \( H \) be a Hilbert space and \( N \in B(H) \) a compact normal operator. There exists an orthonormal basis \( \{e_\alpha\}_{\alpha \in \Lambda} \) for \( H \) such that each \( e_\alpha \) is an eigenvector for \( N \).
+</div>
+
+The Spectral Theorem for compact normal operators encompasses the self-adjoint case (Chapter 2) as a special case where all eigenvalues are real. For normal operators, the eigenvalues may be complex, but the eigenspaces for distinct eigenvalues are still orthogonal (Proposition 11.16(3)), and the operator is still completely determined by its spectral data \( \{(\alpha_n, P_n)\} \). This result is the infinite-dimensional analogue of the finite-dimensional theorem that every normal matrix is unitarily diagonalizable.
