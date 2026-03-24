@@ -3,8 +3,6 @@ title: "ECON 361: Cost-Benefit Analysis"
 prof: "University of Waterloo"
 ---
 
-# ECON 361: Cost-Benefit Analysis
-
 ---
 
 # Module 1: The Logic of Cost-Benefit Analysis

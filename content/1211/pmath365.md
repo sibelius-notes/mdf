@@ -3,8 +3,6 @@ title: "PMATH 365: Differential Geometry"
 prof: "Stephen New"
 ---
 
-# PMATH 365: Differential Geometry
-
 This course develops the classical theory of curves and surfaces, leading to the Gauss-Bonnet theorem, then generalizes this geometry to submanifolds of \(\mathbb{R}^n\) using the language of differential forms and tensor algebras.
 
 ---

@@ -3,8 +3,6 @@ title: "HIST 216: History of Information"
 prof: "Course Author(s), University of Waterloo"
 ---
 
-# HIST 216: History of Information
-
 This course traces the history of information and communication technology from the invention of the printing press to the modern Web. It explores how each new medium—from moveable type to the telegraph, the telephone, the internet, and the World Wide Web—transformed society, reshaped culture, and created new possibilities and new dangers for the organization and sharing of knowledge.
 
 

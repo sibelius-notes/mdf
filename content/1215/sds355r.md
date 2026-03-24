@@ -2,8 +2,6 @@
 title: "SDS 355R: Resilience and Social Support"
 ---
 
-# SDS 355R: Resilience and Social Support
-
 **University of Waterloo — Spring 2021**
 **Instructor:** Dr. Jim Perretta
 

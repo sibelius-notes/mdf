@@ -5,8 +5,6 @@ prof: "Stephen New"
 
 > These notes are primarily based on Prof. Stephen New's lectures. Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Laurent Marcoux, Fall 2021).
 
-# PMATH 453: Functional Analysis
-
 Functional analysis is the branch of mathematics concerned with infinite-dimensional vector spaces equipped with analytic structure — norms, inner products, and topologies — together with the linear maps between them. This course develops the three pillars of classical functional analysis: Hilbert space theory (orthogonal decomposition, spectral theory), Banach space theory (the Hahn-Banach theorem, open mapping theorem, closed graph theorem), and general topology (weak topologies, compactness, the Banach-Alaoglu theorem). The prerequisite material from real analysis (PMATH 351) and measure theory (PMATH 450) is reviewed in Chapter 0.
 
 ---

@@ -3,8 +3,6 @@ title: "PMATH 450: Lebesgue Integration and Fourier Analysis"
 prof: "Stephen New"
 ---
 
-# PMATH 450: Lebesgue Integration and Fourier Analysis
-
 These notes cover PMATH 450 (Spring 2018), taught by Prof. Stephen New. The course develops the Lebesgue theory of integration on the real line, culminating in the \(L^p\) spaces, Hilbert space theory, and Fourier analysis. The primary source is Prof. New's own typed lecture notes; Chapter 5 on Fourier series draws from Calvin Kent's student notes, since Prof. New deferred that material to the textbook (*Real Analysis* by Bruckner, Bruckner, and Thomson, §§15.1–15.5, 15.11).
 
 ---
