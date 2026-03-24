@@ -3,11 +3,11 @@ title: "PHIL 251: Metaphysics and Epistemology"
 prof: "Gerry Callaghan"
 ---
 
-# Week 1: The World of Universals
+# The World of Universals
 
 *Reading: Bertrand Russell, "The World of Universals" and "On Our Knowledge of Universals," chapters from* The Problems of Philosophy
 
-## Lecture 1: Introducing Universals
+## Introducing Universals
 
 ### What Are Universals, and Why Do They Matter?
 
@@ -33,7 +33,7 @@ This insight led Plato to his **Theory of Forms** (sometimes misleadingly called
 
 ---
 
-## Lecture 2: Universals — Further Details and Arguments
+## Universals — Further Details and Arguments
 
 ### Types of Universals
 
@@ -61,7 +61,7 @@ Russell's counter-argument is elegant: the nominalist still cannot avoid univers
 
 ---
 
-## Lecture 3: Knowledge of Universals
+## Knowledge of Universals
 
 ### Empirical Knowledge and the Puzzle It Creates
 
@@ -91,7 +91,7 @@ Russell's answer is that **all a priori knowledge deals exclusively with relatio
 
 ---
 
-## Lecture 4: Reflecting Critically on Universals
+## Reflecting Critically on Universals
 
 ### Russell's Realism
 
@@ -121,11 +121,11 @@ Perhaps the most honest conclusion is that the debate between realism and concep
 
 ---
 
-# Week 2: The Nature of Causation
+# The Nature of Causation
 
 *Readings: David Hume, selections from* Treatise of Human Nature *(1738); G.E.M. (Elizabeth) Anscombe, "Causality and Determination"*
 
-## Lecture 1: What Is a Cause?
+## What Is a Cause?
 
 ### The Importance of Causality
 
@@ -155,7 +155,7 @@ The third and most philosophically significant element is **necessary connection
 
 ---
 
-## Lecture 2: The Search for Necessary Connection
+## The Search for Necessary Connection
 
 ### The Empiricist Challenge
 
@@ -183,7 +183,7 @@ These two definitions position Hume in the broader metaphysical landscape in an 
 
 ---
 
-## Lecture 3: Causal Laws and Causal Necessity
+## Causal Laws and Causal Necessity
 
 ### Hume's Legacy
 
@@ -209,7 +209,7 @@ Anscombe also questions whether successful causal generalizations even have the 
 
 ---
 
-## Lecture 4: Reflecting Critically on Causality
+## Reflecting Critically on Causality
 
 ### Sharpening the Debate
 
@@ -235,11 +235,11 @@ The debate ultimately turns on a deep question: do we perceive causality in indi
 
 ---
 
-# Week 3: Freedom and Causation
+# Freedom and Causation
 
 *Reading: Richard Taylor, "Freedom and Determinism," from* Metaphysics
 
-## Lecture 1: The Problem of Freedom and Determinism
+## The Problem of Freedom and Determinism
 
 ### What Is Determinism?
 
@@ -269,7 +269,7 @@ These two data are so familiar, so woven into our ordinary practical self-unders
 
 ---
 
-## Lecture 2: Soft Determinism — A Compatibilist Approach
+## Soft Determinism — A Compatibilist Approach
 
 ### The Compatibilist Strategy
 
@@ -299,7 +299,7 @@ Taylor's second objection is that soft determinism fails to accommodate the two 
 
 ---
 
-## Lecture 3: Soft Determinism vs. The Agency Theory
+## Soft Determinism vs. The Agency Theory
 
 ### Taylor's Agency Theory
 
@@ -321,7 +321,7 @@ The agency theory's chief virtue is that it accommodates the two data naturally.
 
 ---
 
-## Lecture 4: Evaluating the Debate
+## Evaluating the Debate
 
 ### What Can Be Said for the Agency Theory?
 
@@ -352,9 +352,9 @@ If we adopt Anscombe's view, the world might be full of causal relations among e
 In the end, the debate between soft determinism and the agency theory illuminates a profound tension in how we understand ourselves: are we nodes in a causal network that extends infinitely back in time, or are we genuine originators capable of introducing something new into the world? The answer has implications not only for metaphysics but for ethics, law, and the entire framework within which we hold each other responsible for our actions.
 
 
-# Week 4: The Search for Selves
+# The Search for Selves
 
-## Lecture 1: Identity and Diversity
+## Identity and Diversity
 
 ### Setting Up the Problem
 
@@ -386,7 +386,7 @@ This principle, applied consistently, leads to an uncomfortable conclusion: sinc
 
 ---
 
-## Lecture 2: Personal Identity
+## Personal Identity
 
 ### Category-Relativity in Practice
 
@@ -416,7 +416,7 @@ Locke is not entirely troubled by these consequences. He notes that personhood i
 
 ---
 
-## Lecture 3: Memory and the Underlying Self
+## Memory and the Underlying Self
 
 ### Reid's Critique of Locke
 
@@ -442,7 +442,7 @@ A possible modification of Locke's view that avoids Reid's specific objection is
 
 ---
 
-## Lecture 4: The Relational Self
+## The Relational Self
 
 ### Baier's Naturalist (Relational) View
 
@@ -470,9 +470,9 @@ Finally, we might ask: are you satisfied that your personhood is mainly constitu
 
 ---
 
-# Week 5: Minds and Bodies
+# Minds and Bodies
 
-## Lecture 1: The Mind-Body Problem
+## The Mind-Body Problem
 
 ### What the Problem Is
 
@@ -514,7 +514,7 @@ This argument has been deeply influential, but it invites a pointed objection: d
 
 ---
 
-## Lecture 2: Dualist Puzzles and Mind-Brain Identity
+## Dualist Puzzles and Mind-Brain Identity
 
 ### The Interaction Problem
 
@@ -540,7 +540,7 @@ This view is a form of **reductionism**: mental states reduce to physical states
 
 ---
 
-## Lecture 3: Pros and Cons of Mind-Brain Identity
+## Pros and Cons of Mind-Brain Identity
 
 ### Solving the Interaction Problem
 
@@ -570,7 +570,7 @@ The analogy to money is instructive: money cannot be defined by the material it 
 
 ---
 
-## Lecture 4: The Problem of Consciousness
+## The Problem of Consciousness
 
 ### Functionalism and Artificial Intelligence
 
@@ -609,9 +609,9 @@ The debate remains open, but it forces physicalists to confront what has become 
 
 ---
 
-# Week 6: Skepticism and Perceptual Knowledge
+# Skepticism and Perceptual Knowledge
 
-## Lecture 1: The Problem of Perceptual Knowledge
+## The Problem of Perceptual Knowledge
 
 ### What Is Epistemology?
 
@@ -639,7 +639,7 @@ Whether this argument is decisive turns on whether we accept Descartes's standar
 
 ---
 
-## Lecture 2: Skepticism About the External World
+## Skepticism About the External World
 
 ### The Evil Genius Argument
 
@@ -667,7 +667,7 @@ The problem, then, is a **gap**: our ordinary conception of objects attributes t
 
 ---
 
-## Lecture 3: More Skepticism and an Answer to the Skeptic
+## More Skepticism and an Answer to the Skeptic
 
 ### Hume's Arguments Against External Objects
 
@@ -699,7 +699,7 @@ Russell concludes: "Since this belief does not lead to any difficulties, but on 
 
 ---
 
-## Lecture 4: Evaluating the Debate
+## Evaluating the Debate
 
 ### Russell's Partial Agreement and Divergence
 
@@ -729,9 +729,9 @@ The choice of standard is not arbitrary. But it is worth reflecting that Descart
 *PHIL 251: Metaphysics and Epistemology, University of Waterloo, Spring 2021*
 
 
-# Week 7: Knowledge Beyond Perception
+# Knowledge Beyond Perception
 
-## Lecture 1: Knowing What We Don't Perceive
+## Knowing What We Don't Perceive
 
 ### From Perception to Inference
 
@@ -755,7 +755,7 @@ This question is **the problem of induction**: the problem of how to justify con
 
 ---
 
-## Lecture 2: Hume's Problem of Induction
+## Hume's Problem of Induction
 
 ### Causation and Experience
 
@@ -779,7 +779,7 @@ This move is significant: Hume effectively replaces the traditional philosophica
 
 ---
 
-## Lecture 3: Foster's Response — The Nomological-Explanatory Solution
+## Foster's Response — The Nomological-Explanatory Solution
 
 ### Setting Up the Solution
 
@@ -801,7 +801,7 @@ The crucial advantage over Hume is that, on Foster's account, the step from past
 
 ---
 
-## Lecture 4: Evaluating the Induction Debate
+## Evaluating the Induction Debate
 
 ### Ayer's Objection and Foster's Reply
 
@@ -825,9 +825,9 @@ Despite these concerns, Foster's view captures something genuinely important: it
 
 ---
 
-# Week 8: Naturalizing Epistemology
+# Naturalizing Epistemology
 
-## Lecture 1: Logical Empiricism — Bridging the Gap
+## Logical Empiricism — Bridging the Gap
 
 ### The Justification Gap
 
@@ -845,7 +845,7 @@ The broader philosophical context of this program is the **Verificationist theor
 
 ---
 
-## Lecture 2: Quine's Naturalized Epistemology
+## Quine's Naturalized Epistemology
 
 ### Quine's Critique of Logical Empiricism
 
@@ -871,7 +871,7 @@ His response is to concede the circularity while denying that it is vicious. The
 
 ---
 
-## Lecture 3: Kim's Critique of Naturalized Epistemology
+## Kim's Critique of Naturalized Epistemology
 
 ### The Centrality of Justification
 
@@ -889,7 +889,7 @@ A related complaint concerns the concept of an evidential relation. Kim grants t
 
 ---
 
-## Lecture 4: Evaluating Naturalized Epistemology
+## Evaluating Naturalized Epistemology
 
 ### Advantages and Disadvantages
 
@@ -903,9 +903,9 @@ The lectures end the week with a genuinely open question: might there be a way t
 
 ---
 
-# Week 9: The Analysis of Knowledge
+# The Analysis of Knowledge
 
-## Lecture 1: The Traditional Analysis of Knowledge
+## The Traditional Analysis of Knowledge
 
 ### What a Philosophical Analysis Does
 
@@ -925,7 +925,7 @@ This is a crucial limitation. The tripartite analysis does not by itself resolve
 
 ---
 
-## Lecture 2: Gettier's Challenge to the Traditional Analysis
+## Gettier's Challenge to the Traditional Analysis
 
 ### A Short Paper, a Major Revolution
 
@@ -949,7 +949,7 @@ These cases reveal a structural problem with the traditional analysis: it does n
 
 ---
 
-## Lecture 3: Goldman's Causal Theory of Knowing
+## Goldman's Causal Theory of Knowing
 
 ### Diagnosing the Gettier Problem
 
@@ -977,7 +977,7 @@ Goldman also accommodates what he calls **Pattern II cases**, where the fact tha
 
 ---
 
-## Lecture 4: Externalism, Naturalism, and the Causal Theory
+## Externalism, Naturalism, and the Causal Theory
 
 ### Internalism and Externalism
 
@@ -1006,9 +1006,9 @@ As Goldman himself reflects at the close of his paper: "The question of whether 
 *End of Week 7–9 Notes*
 
 
-# Week 10: The Structure of Knowledge
+# The Structure of Knowledge
 
-## Lecture 1: Two Pictures of How Knowledge is Structured
+## Two Pictures of How Knowledge is Structured
 
 ### Why Structure Matters
 
@@ -1042,7 +1042,7 @@ Laurence Bonjour, whose *The Structure of Empirical Knowledge* is the week's pri
 
 ---
 
-## Lecture 2: Coherentism versus Foundationalism
+## Coherentism versus Foundationalism
 
 ### Bonjour's Critique of Moderate Foundationalism
 
@@ -1070,7 +1070,7 @@ Bonjour also distinguishes between **local** and **global** justification. At th
 
 ---
 
-## Lecture 3: A Defense of Foundationalism — Perceptual Beliefs and Alston
+## A Defense of Foundationalism — Perceptual Beliefs and Alston
 
 ### The Special Status of Perceptual Beliefs
 
@@ -1098,7 +1098,7 @@ This example leads Alston to a crucial distinction that he develops in the follo
 
 ---
 
-## Lecture 4: Evaluating the Debate — Externalism and the Regress
+## Evaluating the Debate — Externalism and the Regress
 
 ### The Alston–Bonjour Contrast
 
@@ -1124,9 +1124,9 @@ Alston's defense of minimal foundationalism ultimately rests on the claim that t
 
 ---
 
-# Week 11: Socializing Epistemology
+# Socializing Epistemology
 
-## Lecture 1: The Social Scene of Epistemology
+## The Social Scene of Epistemology
 
 ### The Abstract Character of Traditional Epistemology
 
@@ -1152,7 +1152,7 @@ One might object that the problem is simply one of sexism among practitioners, n
 
 ---
 
-## Lecture 2: Suggestions for a Feminist Epistemology
+## Suggestions for a Feminist Epistemology
 
 ### What Feminist Epistemology Is — and Is Not
 
@@ -1190,7 +1190,7 @@ Finally, the mere identification of such standards is not itself epistemology. G
 
 ---
 
-## Lecture 3: Broadening the Social Perspective — Mills on Alternative Epistemologies
+## Broadening the Social Perspective — Mills on Alternative Epistemologies
 
 ### From Feminist Epistemology to Alternative Epistemologies
 
@@ -1214,7 +1214,7 @@ Mills is aware that alternative epistemologies can seem like a frontal assault o
 
 But Mills's own view is more nuanced. He sees alternative epistemologies as *complementary* to, rather than hostile toward, mainstream epistemology. In virtue of a shared humanity, there is a "universal zone" of common experience that makes traditional epistemological inquiry meaningful: the abstract problems of perception, memory, inference, and the Gettier puzzle do not disappear. Mainstream epistemology addresses what is common to human epistemic life. Alternative epistemologies take up what falls *outside* the trajectory of hegemonic groups — areas of experience, and hence areas of knowledge, that dominant groups systematically fail to encounter and therefore fail to theorize.
 
-## Lecture 4: The New and the Old in Epistemology
+## The New and the Old in Epistemology
 
 ### Objections: Relativism and the Problem of Internal Diversity
 
@@ -1228,9 +1228,9 @@ On relativism, Mills argues that the progressive articulation of different stand
 
 ---
 
-# Week 12: Socializing Metaphysics
+# Socializing Metaphysics
 
-## Lecture 1: Can Reality Be Socialized?
+## Can Reality Be Socialized?
 
 ### From Social Epistemology to Social Metaphysics
 
@@ -1270,7 +1270,7 @@ The central question that emerges from all of this is: is the category of *reali
 
 ---
 
-## Lecture 2: Reality, Construction, and Course Conclusion
+## Reality, Construction, and Course Conclusion
 
 ### Two Arguments for Radical Constructionism
 

@@ -3,7 +3,7 @@ title: "STAT 433: Applied Probability"
 prof: "Steve Drekic"
 ---
 
-# Lesson 1: Probability Review
+# Probability Review
 
 ## Probability Spaces
 
@@ -44,7 +44,7 @@ Key facts: (i) **Closure under linear maps**: \(A\mathbf{X} + \mathbf{b} \sim N(
 
 ---
 
-# Lesson 2: Simple Random Walk
+# Simple Random Walk
 
 ## Setup and Counting Sample Paths
 
@@ -142,7 +142,7 @@ There is roughly a 40% chance the walk spends almost all its time on one side.
 
 ---
 
-# Lesson 3: Generating Functions and Renewal Events
+# Generating Functions and Renewal Events
 
 ## Probability Generating Functions
 
@@ -213,7 +213,7 @@ The sequence oscillates but converges toward \(0.6\). ✓
 
 ---
 
-# Lesson 4: Branching Processes
+# Branching Processes
 
 ## Galton-Watson Process
 
@@ -250,7 +250,7 @@ The extinction probability \(\eta = P(\exists n : Z_n = 0)\) satisfies the fixed
 
 ---
 
-# Lesson 5: Discrete-Time Markov Chains — Definitions and Classification
+# Discrete-Time Markov Chains — Definitions and Classification
 
 ## The Markov Property
 
@@ -354,7 +354,7 @@ A 11.6% chance of ruin starting at \$5 with a \$10 goal, even with a favourable 
 
 ---
 
-# Lesson 6: Stationary Distributions and Limit Theorems
+# Stationary Distributions and Limit Theorems
 
 ## Stationary Distributions
 
@@ -418,7 +418,7 @@ For \(n = 5\): \(0.4^5 = 0.01024\), so the deviation from stationarity is about 
 
 ---
 
-# Lesson 7: Reversibility and Detailed Balance
+# Reversibility and Detailed Balance
 
 ## Time Reversal
 
@@ -472,7 +472,7 @@ Normalization: \(\pi_0(1 + 0.6 + 0.75 + 0.45) = 1 \Rightarrow \pi_0 = 1/2.8 \app
 
 ---
 
-# Lesson 8: Discrete Phase-Type Distributions
+# Discrete Phase-Type Distributions
 
 ## Definition and Setup
 
@@ -543,7 +543,7 @@ This is the **negative hypergeometric** / convolution of two geometrics. Note th
 
 ---
 
-# Lesson 9: The Poisson Process
+# The Poisson Process
 
 ## Definition and Derivation
 
@@ -594,7 +594,7 @@ Let \(N_R(t) \sim \text{Poisson}(6t)\) (retail) and \(N_B(t) \sim \text{Poisson}
 
 ---
 
-# Lesson 10: Continuous-Time Markov Chains — Generator and Equations
+# Continuous-Time Markov Chains — Generator and Equations
 
 ## Definition and Setup
 
@@ -668,7 +668,7 @@ Then \(P_{00}(t) = \sum_{n=0}^\infty \frac{(3t)^n e^{-3t}}{n!} \hat{p}_{00}^{(n)
 
 ---
 
-# Lesson 11: CTMC — Classification and Stationary Distributions
+# CTMC — Classification and Stationary Distributions
 
 ## Classification of States
 
@@ -729,7 +729,7 @@ where \(S_n\) is the \(n\)-th arrival epoch and \(X(S_n^-)\) is the system state
 
 ---
 
-# Lesson 12: Birth and Death Processes
+# Birth and Death Processes
 
 ## Setup
 
@@ -797,7 +797,7 @@ This always exists regardless of the traffic intensity \(\rho = \lambda/\mu\) �
 
 ---
 
-# Lesson 13: Continuous Phase-Type Distributions
+# Continuous Phase-Type Distributions
 
 ## Definition
 
@@ -849,7 +849,7 @@ When \(X\) is absorbed (at rate \(\mathbf{t}_0\)), it immediately starts the \(Y
 
 ---
 
-# Lesson 14: Queueing Theory
+# Queueing Theory
 
 ## Kendall Notation and Setup
 
@@ -926,7 +926,7 @@ For a G/M/1 queue (general arrivals, exponential service), the queue length embe
 
 ---
 
-# Lesson 15: Renewal Theory
+# Renewal Theory
 
 ## Renewal Processes
 
@@ -1019,7 +1019,7 @@ A process \(\{Y(t)\}\) is **regenerative** if there exist renewal times at which
 
 ---
 
-# Lesson 16: Markov Chain Monte Carlo
+# Markov Chain Monte Carlo
 
 ## Motivation
 
@@ -1085,7 +1085,7 @@ A larger spectral gap (further from 1) means faster mixing. Poor proposals (too 
 
 ---
 
-# Lesson 17: General Stochastic Processes
+# General Stochastic Processes
 
 ## Finite-Dimensional Distributions
 
@@ -1131,7 +1131,7 @@ A **martingale** satisfies \(E[M(t) \mid \mathcal{F}_s] = M(s)\) for \(s \leq t\
 
 ---
 
-# Lesson 18: Brownian Motion
+# Brownian Motion
 
 ## Definition and Construction
 

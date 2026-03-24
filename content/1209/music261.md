@@ -2,7 +2,7 @@
 title: "MUSIC 261: Opera"
 prof: "Laura Gray"
 ---
-# Lesson 1: Elements of Opera
+# Elements of Opera
 
 Readings:
 - Sacher, *Opera: A Listener's Guide*, Chapter 1, pp. 3–10 ("The Nature of the Beast")
@@ -106,7 +106,7 @@ The **chorus** is a group of singers representing group identity, as opposed to 
 *Handel, "Glory to God" from Messiah*
 
 
-# Lesson 2: The Birth of Opera — Monteverdi, *L'Orfeo* (1607)
+# The Birth of Opera — Monteverdi, *L'Orfeo* (1607)
 
 Readings:
 - Gardiner, John Eliot. "Monteverdi's Orfeo: 'a Brilliant and Compelling Fable to the Inalienable Power of Music.'" *The Guardian*, August 3, 2015.
@@ -257,7 +257,7 @@ Each stanza features different instrumental combinations in the ritornellos and 
 The brilliant singing does not work on Charon directly — but it lulls him to sleep, and Orpheus rows himself across. He then switches to the acting style: "Give me back my beloved!" He manages to persuade Proserpina, and Pluto grants him passage — on the condition that he must not look back at Eurydice as they ascend.
 
 
-# Lesson 3: Baroque Opera — Handel, *Giulio Cesare in Egitto* (1724)
+# Baroque Opera — Handel, *Giulio Cesare in Egitto* (1724)
 
 Readings:
 - Parakilas, James. "Opera on Classical Subjects: Handel and Italian Opera." In *The Story of Opera*, 177–182. New York: W.W. Norton, 2013.
@@ -367,7 +367,7 @@ This is another **da capo aria** (A B A'), set in C minor. The music is perpetua
 *Handel, "L'angue offeso" from Giulio Cesare — aria with score*
 
 
-# Lesson 4: The Intermezzo — Pergolesi, *La serva padrona* (1733)
+# The Intermezzo — Pergolesi, *La serva padrona* (1733)
 
 Readings:
 - Lazarevich, Gordana. "Serva padrona, La." *Grove Music Online*. 2002.
@@ -454,7 +454,7 @@ What followed was the **Querelle des Bouffons** — the "War of the Comic Actors
 Between 1752 and 1754, the Italian troupe performed fourteen works in Paris, six of which contained Pergolesi's music. His name had become so famous that other composers attached it to their own compositions for the name recognition alone. *La serva padrona* became a model of comic opera in the later 18<sup>th</sup> century: its contrasts and mixing of serious and comic styles, its servants outwitting masters, its invitation to laugh at Uberto's expense. Without it, operas like Mozart's *Don Giovanni* — with its buffo servant, its chameleon protagonist, and its dazzling mixture of styles — would scarcely be conceivable.
 
 
-# Lesson 5: Mozart, *Don Giovanni* (1787)
+# Mozart, *Don Giovanni* (1787)
 
 Readings:
 - Parakilas, James. *The Story of Opera*, 243–46. New York: W.W. Norton, 2013.
@@ -581,7 +581,7 @@ The process that unfolds across this aria is remarkable: from somber to rapturou
 > 4. Forse un giorno il cielo ancora / One day, perhaps, heaven again
 > sentirà pietà di me. / will smile on me.
 
-# Lesson 6: Beethoven, *Fidelio* (1814)
+# Beethoven, *Fidelio* (1814)
 
 Readings:
 - Parakilas, James. *The Story of Opera*, 266–271. New York: W.W. Norton, 2013.
@@ -746,7 +746,7 @@ Robinson's analysis suggests that *Fidelio* reflects not so much the Revolution 
 The emphasis throughout is personal rather than political. The opera celebrates "moments of spiritual breakthrough" — Florestan's and Leonore's monologues — and the heroism of a devoted wife. Its subtitle might well be "The Triumph of Marital Love." And there is a haunting personal connection: in a letter to a friend from 1801, Beethoven wrote, "In the springtime of my life my happiness has flown from me... and I follow my inner drive; nothing can deter me." These words echo almost verbatim in the mouths of both Florestan and Leonore. Whether consciously or not, Beethoven appears to speak through his aristocratic protagonists — making *Fidelio* not merely an opera about political freedom, but a deeply personal statement of resolve in the face of suffering.
 
 
-# Lesson 7: Rossini, *Il barbiere di Siviglia* (1816)
+# Rossini, *Il barbiere di Siviglia* (1816)
 
 ## Gioachino Rossini (1792–1868)
 
@@ -880,7 +880,7 @@ After recitative (complete with the twanging harpsichord of basso continuo), the
 Here is the musical joke: the double-aria form is so ubiquitous, so expected, that the characters must complete the fast second movement before they can do anything else. They have taken too long singing the cabaletta, and now their escape route has vanished. The very conventions of Italian opera have trapped them on stage — a delicious meta-theatrical gag that rewards the audience's familiarity with the formula.
 
 
-# Lesson 8: Verdi, Rigoletto
+# Verdi, Rigoletto
 
 Readings:
 - Hudson, Elizabeth. "Gilda Seduced: A Tale Untold." *Cambridge Opera Journal* 4, no. 3 (1992): 229–51.
@@ -979,7 +979,7 @@ The Duke's aria "La donna è mobile" ("Woman is fickle") in Act III is one of th
 
 By the end of the opera, Gilda has changed profoundly. She knows that if she knocks on the assassin's door, she will take the knife instead of the Duke — and she makes that decision entirely on her own, apart from her father, apart from the Duke, apart from anyone. It is an act of agency from a character who has been dominated and silenced throughout the story. The loss of innocence is devastating, and the one spark in Rigoletto's life is extinguished. But in that final act, Gilda has become something far more than the sheltered girl of Act I.
 
-# Lesson 9: Wagner, Tristan und Isolde
+# Wagner, Tristan und Isolde
 
 Readings:
 - Moss, Stephen. "Why Wagner's *Tristan und Isolde* Is the Ultimate Opera." *The Guardian*, September 23, 2016.
@@ -1091,7 +1091,7 @@ The music that returns here is the theme from the Act II love duet — but now i
 
 Isolde collapses on Tristan's body and dies. The orchestra holds the B major chord — pure, radiant, and still. After an entire opera built on denial, deferral, and the agony of unfulfilled longing, this final resolution is shattering in its simplicity. Wagner proved that music could embody desire itself — and that only by relinquishing that desire could peace be found.
 
-# Lesson 10: Bizet, *Carmen*
+# Bizet, *Carmen*
 
 Readings:
 - McClary, Susan. "Images of Race, Class and Gender in Nineteenth-Century France." *Georges Bizet, Carmen*. Cambridge: Cambridge University Press, 1992. 29–43.
@@ -1258,7 +1258,7 @@ The offstage chorus signals the death of the bull — a dramatic parallel that i
 > *(throws himself upon Carmen's body)*
 > Ah! Carmen! My adored Carmen!
 
-# Lesson 11: Puccini, *Tosca*
+# Puccini, *Tosca*
 
 Readings:
 - "Tosca -- New Zealand Opera." OperaVision, July 29, 2020. (Read "The Story" and "Insights.")
@@ -1355,7 +1355,7 @@ The lyrical beauty of "Vissi d'arte" stands in stark contrast to Scarpia's non-l
 The action does not stop entirely with "Vissi d'arte." While Tosca agonizes, she realizes she must submit to Scarpia — yet while he is distracted writing the safe-conduct pass, she grabs a knife from the table. When he approaches, she stabs him. A distinct theme — the **murder theme** (sometimes called the "knife" theme) — frames this moment. It is in F-sharp minor, and F-sharp is one of the notes from Scarpia's whole-tone collection. The theme sounds before the murder, during it, and after — the orchestra announcing what is about to happen, and then confirming what has been done. The murder theme returns in Act III when Tosca tells Cavaradossi what she did, narrating the events and the killing. Even here, in this moment that should liberate the lovers, Scarpia's harmonic world cannot be escaped. He has already signed the real death warrant for Cavaradossi, and the bullets in the guns are not blanks. His betrayal reaches beyond the grave.
 
 
-# Lesson 12: Britten, *Peter Grimes* (1945)
+# Britten, *Peter Grimes* (1945)
 
 Readings:
 - Sacher, Jack. "Peter Grimes." In *Opera: A Listener's Guide*, 437–447. New York: Schirmer Books, 1997.
@@ -1507,7 +1507,7 @@ What makes this scene so devastating is the way Peter's shattered mind reassembl
 *Peter Grimes* leaves us with the mob mentality of the Borough clearly depicted as hypocritical, and with an anti-hero who is no innocent victim — a difficult, violent character whose actions have caused the deaths of two boys. The opera does not ask us to forgive Peter Grimes. It asks us to understand how a vicious society and a vicious individual feed off each other, and how the outsider — despised, despairing, and ultimately destroyed — carries a weight that belongs to everyone.
 
 
-# Lesson 13: Gershwin, *Porgy and Bess* (1935)
+# Gershwin, *Porgy and Bess* (1935)
 
 Readings:
 - Hendler, Micah. "Facing the Music: Is the Classical World Ready to Show that Black Voices Matter?" *Forbes Magazine*, June 19, 2020.

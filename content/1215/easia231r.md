@@ -3,7 +3,7 @@ title: "EASIA 231R: Calligraphy to Conceptual Art: Text as an Image in Islamic a
 prof: "Soheila Kolahdouz Esfahani"
 ---
 
-# Week 1: Course Introduction and Islamic Calligraphy — Foundations
+# Course Introduction and Islamic Calligraphy — Foundations
 
 ## The Course's Central Question
 
@@ -55,7 +55,7 @@ For the course's studio practice, students work with calligraphy markers — too
 
 ---
 
-# Week 2: Scripts and Styles of Arabic Calligraphy
+# Scripts and Styles of Arabic Calligraphy
 
 ## The Six Classical Scripts
 
@@ -95,7 +95,7 @@ The relationship between calligraphy and Islamic architecture also reveals a cru
 
 ---
 
-# Week 3: Islamic Calligraphy in Contemporary Art
+# Islamic Calligraphy in Contemporary Art
 
 ## The Contemporary Encounter with Tradition
 
@@ -123,7 +123,7 @@ Beyond individual artists, the course's contemporary art component draws on a br
 
 ---
 
-# Week 4: Taking a Line for a Walk — From the Abbasid Caliphate to Contemporary Art
+# Taking a Line for a Walk — From the Abbasid Caliphate to Contemporary Art
 
 ## Laura U. Marks and the History of the Abstract Line
 
@@ -149,7 +149,7 @@ Mahdaoui's position between Tunisia and Europe, between Arabic tradition and Wes
 
 ---
 
-# Week 5: Japanese Calligraphy Workshop — Shodo
+# Japanese Calligraphy Workshop — Shodo
 
 ## The Tradition of Shodo
 
@@ -171,7 +171,7 @@ The concept of **ensō** — the Zen circle drawn in a single, spontaneous brush
 
 ---
 
-# Week 6: Chinese Ink Art and the Written Word — East Asian Calligraphy
+# Chinese Ink Art and the Written Word — East Asian Calligraphy
 
 ## Maxwell K. Hearn and Ink Art
 
@@ -203,7 +203,7 @@ In the context of contemporary China, Yen examines how calligraphy continues to 
 
 ---
 
-# Week 7: East Asian Calligraphy in Contemporary Art — The Asian Dimensions of Postwar Abstraction
+# East Asian Calligraphy in Contemporary Art — The Asian Dimensions of Postwar Abstraction
 
 ## Bert Winther-Tamaki and the Pacific Exchange
 
@@ -235,7 +235,7 @@ Xu Bing's *Book from the Sky* (*Tianshu*, 1987–91) is a monumental installatio
 
 ---
 
-# Week 8: Project 3 Introduction and Conceptual Groundwork
+# Project 3 Introduction and Conceptual Groundwork
 
 ## The Written Word in the Context of Project Development
 
@@ -257,7 +257,7 @@ In Japanese shodo, both traditions are inherited and synthesized. The five stand
 
 ---
 
-# Week 9: Art as Idea as Idea — Conceptual Art and Language
+# Art as Idea as Idea — Conceptual Art and Language
 
 ## Simon Morley and Conceptual Words
 
@@ -293,7 +293,7 @@ Kosuth's theoretical essay "Art after Philosophy" (1969), published in *Studio I
 
 ---
 
-# Week 10: Creolization — Millennial Words and the Politics of Text
+# Creolization — Millennial Words and the Politics of Text
 
 ## Simon Morley on Words at the Turn of the Millennium
 
@@ -317,7 +317,7 @@ The broader argument of Morley's "Creolization" chapter is that artists working 
 
 ---
 
-# Week 11: Conceptual Art Workshop — Melika Hashemi
+# Conceptual Art Workshop — Melika Hashemi
 
 ## Guest Artist: Contemporary Conceptual Practice
 
@@ -329,7 +329,7 @@ By Week 11, students are also completing their research essays, which are due th
 
 ---
 
-# Week 12: Project 3 Critique and Course Synthesis
+# Project 3 Critique and Course Synthesis
 
 ## The Final Critique
 

@@ -3,9 +3,7 @@ title: "ECON 392: Strategic Situations and Welfare Economics"
 prof: "Ahmet Ozkardas"
 ---
 
-# ECON 392: Strategic Situations and Welfare Economics
-
-# Lecture 1: What is Game Theory?
+# What is Game Theory?
 
 Game theory is a discipline concerned with situations in which the outcome for one person depends not only on their own choices, but on the choices of others. Economics, sociology, psychology, and political science all study human behavior, but they often treat individuals in isolation — assuming that one person's decisions do not materially affect others. Game theory relaxes this assumption and focuses precisely on the **strategic interactions** that arise when people are interdependent.
 
@@ -41,7 +39,7 @@ The moment another player's decision enters the picture — when the outcome for
 
 ---
 
-# Lecture 2: Game Forms
+# Game Forms
 
 Games can be analyzed along two key dimensions: the **order of moves** (do players act simultaneously or sequentially?) and the **information** available to players when they act (does each player know what others have done?).
 
@@ -78,7 +76,7 @@ When players move sequentially but some payoffs or types are private information
 
 ---
 
-# Lecture 3: Strategic Form
+# Strategic Form
 
 ## Formal Definition
 
@@ -162,7 +160,7 @@ Both want to coordinate but have conflicting preferences over the outcome. Like 
 
 ---
 
-# Lecture 4: Dominance
+# Dominance
 
 ## Solution Concepts
 
@@ -233,7 +231,7 @@ Top is strictly dominated by both Middle and Bottom, so player 2 eliminates it f
 
 ---
 
-# Lecture 5: Nash Equilibrium
+# Nash Equilibrium
 
 ## Motivation
 
@@ -295,7 +293,7 @@ The unique Nash equilibrium is **(Confess, Confess)**, confirming what we found 
 
 ---
 
-# Lecture 6: Mixed Strategies
+# Mixed Strategies
 
 ## Introduction
 
@@ -354,7 +352,7 @@ These expressions capture the idea that payoffs depend multiplicatively on both 
 
 ---
 
-# Lecture 7: Mixed Strategy Nash Equilibria
+# Mixed Strategy Nash Equilibria
 
 ## Best Response Correspondences in Mixed Strategies
 
@@ -409,7 +407,7 @@ At the mixed equilibrium, player 1 (opera-preferring) plays Opera with probabili
 
 ---
 
-# Lecture 8: Nash Equilibrium in Continuous Action Spaces
+# Nash Equilibrium in Continuous Action Spaces
 
 ## Motivation
 
@@ -455,7 +453,7 @@ Solving the system: \( p_1^* = p_2^* = c \), and profits are \( \pi_1^* = \pi_2^
 
 ---
 
-# Lecture 9: Cournot Competition
+# Cournot Competition
 
 ## Introduction
 
@@ -523,7 +521,7 @@ As the number of Cournot competitors tends to infinity, the market converges to 
 
 ---
 
-# Lecture 10: Bertrand Competition
+# Bertrand Competition
 
 ## Introduction
 
@@ -558,7 +556,7 @@ This striking result — that **two competing firms are sufficient to achieve th
 
 ---
 
-# Lecture 11: Extensive Games
+# Extensive Games
 
 ## Motivation
 
@@ -604,7 +602,7 @@ This is why the strategy space grows rapidly: a player with \( k \) information 
 
 ---
 
-# Lecture 12: Extensive vs. Strategic Forms
+# Extensive vs. Strategic Forms
 
 ## Translating Extensive Games to Strategic Form
 
@@ -642,7 +640,7 @@ In the entry game's strategic form, (Out, F) is a Nash equilibrium: the entrant 
 
 ---
 
-# Lecture 13: Subgame Perfect Equilibrium
+# Subgame Perfect Equilibrium
 
 ## Backward Induction
 
@@ -688,7 +686,7 @@ This is a famous paradox: players would be collectively better off continuing fo
 
 ---
 
-# Lecture 14: Stackelberg Competition
+# Stackelberg Competition
 
 ## Sequential Moves with Continuous Actions
 
@@ -731,7 +729,7 @@ The intuition: by moving first and committing to a large quantity, the leader re
 
 ---
 
-# Lecture 15: Nash Bargaining
+# Nash Bargaining
 
 ## Bargaining Situations
 
@@ -781,7 +779,7 @@ FOC: \( (7 - u_1) - (u_1 - 1) = 0 \implies u_1^* = 4 \), and \( u_2^* = 6 \).
 
 ---
 
-# Lecture 16: Finite Horizon Sequential Bargaining
+# Finite Horizon Sequential Bargaining
 
 ## Sequential Bargaining
 
@@ -825,7 +823,7 @@ The first-mover advantage is **diluted** compared to the 1-period case, and the 
 
 ---
 
-# Lecture 17: Infinite Horizon Sequential Bargaining
+# Infinite Horizon Sequential Bargaining
 
 ## The Rubinstein Bargaining Model
 
@@ -866,7 +864,7 @@ Player A proposes this split in period 1, and player B accepts immediately.
 
 ---
 
-# Lecture 18: Voting Games
+# Voting Games
 
 ## Introduction
 

@@ -3,7 +3,7 @@ title: "MUSIC 370: Music Theory 3"
 prof: "Karen Sunabacka"
 ---
 The notes below are quite incomplete...
-# Week 1
+# Introduction: Course Tools and Voice Leading
 ## Intro to course
 Review of chapter 19: five steps
 - Analyzing the Soprano (REVIEW)

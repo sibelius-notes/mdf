@@ -7,9 +7,9 @@ prof: "Prof. David McKinnon"
 
 ---
 
-## Week 1: Algebraic Sets
+# Algebraic Sets
 
-### 1. What is Algebraic Geometry?
+## 1. What is Algebraic Geometry?
 
 Sophie Germain had it right: algebra is written geometry, and geometry is algebra in pictures. The great thing about geometry is that it is full of pictures — there is a physicality to it that makes it easier to guess what is going on, to guide one's intuition. Trouble is, it is often fiendishly difficult to actually *prove* that intuition. The pictures that so eloquently inspire you to understand the truth also conspire to conceal nuances and special cases.
 
@@ -19,7 +19,7 @@ Enter the genius of Germain. If you can somehow marry the two subjects of algebr
 
 In this course, we will be working over the complex numbers, and all the algebra we do will be with polynomials (and closely related beasts). The Geometry Things we talk about are also defined by polynomials.
 
-### 2. Algebraic Sets
+## 2. Algebraic Sets
 
 <div class="definition">
 <strong>Definition 2.1.</strong> Let \(n\) be a positive integer. <strong>Affine space</strong> \(\mathbb{A}^n\) is the set \(\mathbb{C}^n\).
@@ -87,9 +87,9 @@ The proof of the correspondence between prime ideals and irreducible sets is ele
 
 ---
 
-## Week 2: Polynomial Maps and Coordinate Rings
+# Polynomial Maps and Coordinate Rings
 
-### 1. Morphisms
+## 1. Morphisms
 
 These days, every time mathematicians start a new subject, they define the objects they are interested in, and then immediately define the *relationships* between them. For algebraic sets, those relationships are functions that preserve their algebraic structure.
 
@@ -105,7 +105,7 @@ For example, \(\phi : \mathbb{A}^1 \to \mathbb{A}^3\) given by \(\phi(t) = (t, t
 
 **Warning:** a polynomial map that is one-to-one and onto is *not* necessarily an isomorphism — you also need the inverse to be a polynomial map.
 
-### 2. Coordinate Rings
+## 2. Coordinate Rings
 
 The ideal of an algebraic set is not invariant under isomorphism. For example, the \(x\)-axis in \(\mathbb{A}^2\) has ideal \((y)\), while the \(x\)-axis in \(\mathbb{A}^3\) has ideal \((y, z)\) — but these are clearly isomorphic algebraic sets. We need something better.
 
@@ -123,7 +123,7 @@ The Nullstellensatz correspondence still works for coordinate rings:
 <strong>Theorem 1.4.</strong> There is a bijection between algebraic subsets of \(X\) and radical ideals of \(\Gamma(X)\). Under this correspondence, points correspond to maximal ideals, and irreducible subsets correspond to prime ideals.
 </div>
 
-### 3. Pullbacks
+## 3. Pullbacks
 
 Given a polynomial map \(\phi : X \to Y\), we can turn it into a homomorphism going *backwards*. If someone hands us a polynomial map \(f : Y \to \mathbb{A}^1\), we can compose to get \(f \circ \phi : X \to \mathbb{A}^1\).
 
@@ -152,9 +152,9 @@ This is the coup de grâce: two algebraic sets are isomorphic if and only if the
 
 ---
 
-## Week 3: Rational Functions and Local Rings
+# Rational Functions and Local Rings
 
-### 1. Varieties and Function Fields
+## 1. Varieties and Function Fields
 
 So far, our algebra has been limited to addition, subtraction, and multiplication. Time to add division. Division works better in rings without zero divisors — and recall from last week that \(\Gamma(X)\) is a domain if and only if \(X\) is irreducible.
 
@@ -188,7 +188,7 @@ A subtlety: even if one representation has a zero denominator, another might not
 <em>Proof.</em> For any representation \(f = a/b\), we have \(aq = bp\). Since \(q(P) = 0\), we get \((bp)(P) = 0\), and since \(p(P) \neq 0\), this forces \(b(P) = 0\). So every representation of \(f\) has a vanishing denominator at \(P\). ∎
 </div>
 
-### 2. Local Rings
+## 2. Local Rings
 
 <div class="definition">
 <strong>Definition 1.6.</strong> Let \(X\) be a variety, \(P \in X\). The <strong>local ring at \(P\)</strong> is:
@@ -200,9 +200,9 @@ The local ring captures all the information about a variety near a particular po
 
 ---
 
-## Week 4: Rational Maps and the Zariski Topology
+# Rational Maps and the Zariski Topology
 
-### 1. The Zariski Topology
+## 1. The Zariski Topology
 
 <div class="definition">
 <strong>Definition 0.1.</strong> Let \(V\) be an algebraic variety. A <strong>Zariski closed</strong> subset of \(V\) is an algebraic subset of \(V\). A subset \(U \subset V\) is <strong>Zariski open</strong> if \(V - U\) is Zariski closed.
@@ -210,7 +210,7 @@ The local ring captures all the information about a variety near a particular po
 
 The Zariski topology is named after Oscar Zariski, the great Russian-American mathematician who helped found algebraic geometry as a rigorous subject. **Beware:** it is a truly terrible topology, very far from Hausdorff. If two Zariski open sets are disjoint, then at least one of them is empty!
 
-### 2. Rational Maps
+## 2. Rational Maps
 
 <div class="definition">
 <strong>Definition 0.2.</strong> Let \(V\) and \(W\) be varieties. A <strong>rational map</strong> from \(V\) to \(W\) is a function \(f : U \to W\) for some nonempty Zariski open subset \(U \subset V\), such that for every point \(P \in U\), there are rational functions \(f_1, \ldots, f_r\) on \(V\), all defined at \(P\), with \(f(Q) = (f_1(Q), \ldots, f_r(Q))\) for all \(Q\) where these are defined. We write \(f : V \dashrightarrow W\) for rational maps.
@@ -240,9 +240,9 @@ An interesting consequence: for \(U = \mathbb{A}^2 - \{(0,0)\}\), we have \(\Gam
 
 ---
 
-## Week 5: Dimension and Smoothness
+# Dimension and Smoothness
 
-### 1. Dimension
+## 1. Dimension
 
 Defining the dimension of an algebraic set is a giant pain in the neck — so of course we do it.
 
@@ -262,7 +262,7 @@ By the Nullstellensatz, the dimension of \(V\) equals the Krull dimension of \(\
 
 **Example:** The twisted cubic \(C = V(y - x^2, z - x^3) \subset \mathbb{A}^3\) has dimension 1. We can demonstrate this by the chain \((1,1,1) \subsetneq C \subsetneq V(y-x^2) \subsetneq \mathbb{A}^3\), which must be maximal since \(\mathbb{A}^3\) has dimension 3.
 
-### 2. Smoothness
+## 2. Smoothness
 
 For a variety to admit local coordinates near a point \(P\), we need the tangent vectors to span a \(d\)-dimensional space (where \(d = \dim V\), with the gradients \(\nabla f_i(P)\) spanning an \((n-d)\)-dimensional perpendicular space.
 
@@ -288,7 +288,7 @@ In particular, the rank of the Jacobian matrix is independent of the choice of g
 
 ---
 
-## Week 6: The Zariski Tangent Space
+# The Zariski Tangent Space
 
 The row space of the Jacobian matrix is the span of the gradient vectors \(\nabla f_i(P)\), which is perpendicular to the null space of the Jacobian. This null space is isomorphic to \(\mathfrak{m}/\mathfrak{m}^2\).
 
@@ -309,9 +309,9 @@ where \(\mathfrak{M}\) denotes the ideal of \(D_{\mathfrak{m}}\) generated by \(
 
 ---
 
-## Week 7: Projective Space
+# Projective Space
 
-### 1. Motivation
+## 1. Motivation
 
 Consider the hyperbola \(V: xy = 1\) and the \(x\)-axis \(W\). The map \(f(x,y) = x\) is almost an isomorphism, but the inverse \(g(x,0) = (x, 1/x)\) is undefined at \(x = 0\). As \(x \to 0\), the curve \(V\) goes off to infinity. The missing point is *infinity* itself.
 
@@ -327,7 +327,7 @@ For \(\mathbb{P}^2\): the new points with \(z = 0\) form a copy of \(\mathbb{P}^
 
 The **standard open affine subsets** are \(U_i = \{[x_0 : \cdots : x_n] \mid x_i \neq 0\} \cong \mathbb{A}^n\), embedded by \((x_0, \ldots, \hat{x}_i, \ldots, x_n) \mapsto [x_0 : \cdots : x_{i-1} : 1 : x_{i+1} : \cdots : x_n]\).
 
-### 2. Projective Algebraic Sets
+## 2. Projective Algebraic Sets
 
 <div class="definition">
 <strong>Definition 1.2.</strong> An <strong>algebraic subset of \(\mathbb{P}^n\)</strong> is a subset \(X \subset \mathbb{P}^n\) such that for all \(i\), \(X \cap U_i\) is an algebraic subset of \(U_i \cong \mathbb{A}^n\).
@@ -363,7 +363,7 @@ where "RRH" stands for "relevant radical homogeneous". (The irrelevant ideal is 
 <strong>Theorem 1.8.</strong> A projective algebraic set \(V\) is irreducible if and only if \(I(V)\) is prime.
 </div>
 
-### 3. Projective Closure
+## 3. Projective Closure
 
 <div class="definition">
 <strong>Definition 1.9.</strong> Let \(V \subset \mathbb{A}^n\) be an affine algebraic set, viewed inside \(\mathbb{P}^n\). The <strong>projective closure</strong> of \(V\) is the intersection of all projective algebraic sets containing \(V\).
@@ -375,9 +375,9 @@ where "RRH" stands for "relevant radical homogeneous". (The irrelevant ideal is 
 
 ---
 
-## Week 8: Projective Morphisms and Curves
+# Projective Morphisms and Curves
 
-### 1. Projective Morphisms
+## 1. Projective Morphisms
 
 Defining projective morphisms requires care. An \((m+1)\)-tuple of homogeneous polynomials \([f_0 : \cdots : f_m]\) works *if* the polynomials all have the same degree and never simultaneously vanish on our variety. But different tuples might represent the same map.
 
@@ -397,7 +397,7 @@ The projective function field and local rings are defined by passing to affine p
 
 The **homogeneous coordinate ring** \(\mathbb{C}[X_0, \ldots, X_n]/I(V)\) is *not* an invariant of isomorphism for projective varieties. For example, the line \(S = 0\) in \(\mathbb{P}^2\) and the conic \(V(XY - Z^2) \subset \mathbb{P}^2\) are isomorphic projective varieties, but their homogeneous coordinate rings are \(\mathbb{C}[T,U]\) (a UFD) and \(\mathbb{C}[X,Y,Z]/(XY-Z^2)\) (not a UFD). So we abandon homogeneous coordinate rings and specialize.
 
-### 2. Curves
+## 2. Curves
 
 For the remainder of the course, we specialize to curves.
 
@@ -421,9 +421,9 @@ The prime geometric example is \(\mathbb{C}[t]_{(t)} = \{f(t)/g(t) \mid g(0) \ne
 
 ---
 
-## Week 9: DVRs and Maps of Curves
+# DVRs and Maps of Curves
 
-### 1. Structure of DVRs
+## 1. Structure of DVRs
 
 <div class="theorem">
 <strong>Theorem 1.1.</strong> Let \(D\) be a DVR with maximal ideal \(\mathfrak{m} = (t)\) and fraction field \(K\). Every ideal of \(D\) is of the form \((t^n)\) for some \(n \geq 0\). Every nonzero element \(x \in K\) can be written as \(x = u t^n\) for some unit \(u \in D^*\) and integer \(n \in \mathbb{Z}\). The integer \(n\) is called the <strong>order of vanishing</strong> of \(x\), written \(\text{ord}(x)\).
@@ -433,7 +433,7 @@ The prime geometric example is \(\mathbb{C}[t]_{(t)} = \{f(t)/g(t) \mid g(0) \ne
 <em>Proof.</em> For any nonzero \(y \in D\), write \(y = y_1 t\) if \(y\) is not a unit, then \(y_1 = y_2 t\) if \(y_1\) is not a unit, and so on. The chain \((y_1) \subset (y_2) \subset \cdots\) stabilizes (Noetherian), and stabilizing would require \(t\) to be a unit (contradiction), so some \(y_i\) must be a unit. Every ideal is then principal, generated by the element of smallest \(t\)-power. ∎
 </div>
 
-### 2. Rational Maps of Smooth Curves Extend
+## 2. Rational Maps of Smooth Curves Extend
 
 <div class="theorem">
 <strong>Theorem 1.2.</strong> Let \(C \subset \mathbb{P}^m\) be a smooth curve, and \(\phi : C \dashrightarrow \mathbb{P}^n\) a rational map. Then \(\phi\) is a morphism (i.e., defined at every point of \(C\).
@@ -443,7 +443,7 @@ The prime geometric example is \(\mathbb{C}[t]_{(t)} = \{f(t)/g(t) \mid g(0) \ne
 <em>Proof.</em> At any point \(P\), write \(\phi = [1 : u_1 t^{m_1} : \cdots : u_n t^{m_n}]\) using the DVR structure of \(\mathcal{O}_P(C)\). If any \(m_i < 0\), multiply all coordinates by \(t^{-\min_i m_i}\). The resulting tuple has no negative powers of \(t\), and the coordinate corresponding to the minimum is a unit (hence nonzero at \(P\). So \(\phi\) is defined at \(P\). This is, in the professor's words, "unbefrickinlievably awesome." ∎
 </div>
 
-### 3. Degree of a Map
+## 3. Degree of a Map
 
 <div class="definition">
 <strong>Definition 1.4.</strong> Let \(f : V \dashrightarrow W\) be a dominant rational map of algebraic varieties. The <strong>degree</strong> of \(f\) is the degree of the field extension \([K(V) : f^* K(W)]\).
@@ -467,9 +467,9 @@ where \(e_P\) denotes the ramification degree at \(P\).
 
 ---
 
-## Week 10: Divisors and Bézout's Theorem
+# Divisors and Bézout's Theorem
 
-### 1. Divisors
+## 1. Divisors
 
 Let \(C\) be a smooth projective curve.
 
@@ -491,7 +491,7 @@ Let \(C\) be a smooth projective curve.
 <em>Proof sketch.</em> A non-constant \(\zeta\) corresponds to a morphism \(\psi : C \to \mathbb{P}^1\) by \(\psi(P) = [f(P):g(P)]\) (homogenizing to match degrees). The divisors of zeros and poles are the preimages of \([1:0]\) and \([0:1]\) weighted by ramification degree — both equal \(\deg \psi\) by the Degree Formula. ∎
 </div>
 
-### 2. Bézout's Theorem
+## 2. Bézout's Theorem
 
 <div class="definition">
 <strong>Definition 1.4.</strong> Let \(f\) and \(g\) be two polynomials in \(\mathbb{C}[x,y]\) with no common irreducible component. The <strong>intersection multiplicity</strong> of \(f\) and \(g\) at a point \(P \in \mathbb{A}^2\) is:
@@ -511,9 +511,9 @@ and since \(\deg \text{div}^F(G)\) only depends on the degree of \(G\), we may t
 
 ---
 
-## Week 11: Linear Equivalence and the Picard Group
+# Linear Equivalence and the Picard Group
 
-### 1. Linear Equivalence
+## 1. Linear Equivalence
 
 If \(H\) and \(H'\) are hyperplanes in \(\mathbb{P}^n\), then \(\text{div}(H) - \text{div}(H') = \text{div}(H/H')\) is the divisor of a rational function. This motivates:
 
@@ -533,7 +533,7 @@ If \(H\) and \(H'\) are hyperplanes in \(\mathbb{P}^n\), then \(\text{div}(H) - 
 <strong>Theorems 1.5–1.7.</strong> Linear equivalence is an equivalence relation on divisors. It preserves degree: if \(D_1 \equiv D_2\) then \(\deg D_1 = \deg D_2\). The sum of linearly equivalent divisors is linearly equivalent to the sum of their equivalents.
 </div>
 
-### 2. The Picard Group
+## 2. The Picard Group
 
 <div class="definition">
 <strong>Definition 1.8.</strong> Let \(C \subset \mathbb{P}^n\) be a smooth curve. The <strong>degree</strong> of \(C\) is \(\deg \text{div}(H)\), where \(H\) is any hyperplane in \(\mathbb{P}^n\).
@@ -543,7 +543,7 @@ If \(H\) and \(H'\) are hyperplanes in \(\mathbb{P}^n\), then \(\text{div}(H) - 
 <strong>Definition 1.9.</strong> The <strong>Picard group</strong> \(\text{Pic}(C)\) of a smooth curve \(C\) is the group of linear equivalence classes of divisors under addition: \(\text{Pic}(C) = \{\text{divisors on } C\} / \{\text{divisors of rational functions}\}\). The subgroup of degree-zero classes is \(\text{Pic}^0(C)\).
 </div>
 
-### 3. The Linear Series \(L(D)\)
+## 3. The Linear Series \(L(D)\)
 
 <div class="definition">
 <strong>Definition 1.10.</strong> For a divisor \(D\) on a smooth curve \(C\), define:
@@ -567,9 +567,9 @@ whose image is the **rational normal curve** of degree \(d\).
 
 ---
 
-## Week 12: Elliptic Curves and the Group Law
+# Elliptic Curves and the Group Law
 
-### 1. Playing with Pic⁰(C)
+## 1. Playing with Pic⁰(C)
 
 Let \(C\) be a smooth curve and \(O \in C\) a chosen basepoint. Define a map:
 \[ \phi_C : C \to \text{Pic}^0(C), \quad P \mapsto |P - O| \]
@@ -583,7 +583,7 @@ For this to work, \(\phi_C\) must be bijective.
 <strong>Theorem 1.3.</strong> Let \(C\) be a smooth curve with two points \(P \equiv Q\) on it. Then \(C \cong \mathbb{P}^1\).
 </div>
 
-### 2. Smooth Plane Cubics
+## 2. Smooth Plane Cubics
 
 For degree 3, things get interesting. We put \(C\) into **Weierstrass form**: by coordinate changes (using a chosen point \(O\), the tangent line to \(O\), and the flex structure), any smooth plane cubic can be written as:
 \[ y^2 z + a_1 xyz + a_3 yz^2 = x^3 + a_2 x^2 z + a_4 xz^2 + a_6 z^3 \]
@@ -609,7 +609,7 @@ Using this lemma, we can show that any element of \(\text{Pic}^0(C)\) is equival
 
 Thus \(\phi_C : C \xrightarrow{\sim} \text{Pic}^0(C)\) is a bijection, and we can transport the group structure of \(\text{Pic}^0(C)\) to \(C\) itself.
 
-### 3. The Group Law on an Elliptic Curve
+## 3. The Group Law on an Elliptic Curve
 
 A smooth plane cubic equipped with a basepoint \(O\) is called an **elliptic curve**. The group law is geometric:
 
@@ -632,7 +632,7 @@ A smooth plane cubic equipped with a basepoint \(O\) is called an **elliptic cur
 
 ---
 
-## Summary: The Main Correspondences
+# Summary: The Main Correspondences
 
 The thread running through this course is a sequence of dualities between algebra and geometry:
 

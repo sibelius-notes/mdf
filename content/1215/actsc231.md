@@ -3,9 +3,9 @@ title: "ACTSC 231: Mathematics of Finance"
 prof: "Keith Freeland"
 ---
 
-# Module 1: Time Value of Money
+# Time Value of Money
 
-## Lesson 1: Accumulation and Amount Functions
+## Accumulation and Amount Functions
 
 Lenders are willing to lend money because the borrower pays them a fee called **interest**. The fundamental insight of financial mathematics is that money has different values at different times. A dollar today is worth more than a dollar in the future because today's dollar can be invested to earn interest. We describe this time value using two closely related functions.
 
@@ -17,7 +17,7 @@ The **interest earned** between times \(t_1\) and \(t_2\) is simply the change i
 
 **Example.** Given \(A(t) = 2t^2 + 3t + 10\), the principal is \(K = A(0) = 10\), so \(a(t) = A(t)/K = 0.2t^2 + 0.3t + 1\). The interest earned in the \(n\)-th year is \(A(n) - A(n-1) = 4n + 1\), a linearly increasing function — each year earns a dollar more in interest than the previous year.
 
-## Lesson 2: Simple Interest
+## Simple Interest
 
 Under **simple interest**, the accumulation function is linear:
 
@@ -31,7 +31,7 @@ A key feature of simple interest is that the annual interest earned is constant 
 
 **Worked Example: Three Simple Interest Methods.** Brad borrows $5,000 on October 14 at 8% simple interest, repaying on May 7. Under *exact simple interest* (denominator 365): count days from Oct 14 to May 7 as \(17 + 30 + 31 + 31 + 28 + 31 + 30 + 7 = 205\) days (assuming non-leap year), giving \(5000(1 + 0.08 \cdot 205/365) = \$5{,}224.66\). Under *Banker's rule* (exact days, denominator 360): \(5000(1 + 0.08 \cdot 205/360) = \$5{,}227.78\). Under *ordinary simple interest* (each month = 30 days, denominator 360): the numerator becomes \(30 - 14 + 30 + 30 + 30 + 30 + 30 + 30 + 7 = 203\), giving \(5000(1 + 0.08 \cdot 203/360) = \$5{,}225.56\). Banker's rule produces the highest repayment because more days of interest accrue per unit time.
 
-## Lesson 3: Compound Interest
+## Compound Interest
 
 Under **compound interest**, the accumulation function is exponential:
 
@@ -51,7 +51,7 @@ Moving money from time \(t_1\) to time \(t_2\) requires multiplying by the ratio
 
 The three conditions give \((1+i)^A = 2\), \((1+i)^B = 3/2\), \((1+i)^C = 5\). We need \((1+i)^N = 10/6\). Factor: \(10/6 = 5 \cdot (2/3) \cdot (1/2) = (1+i)^C \cdot (1+i)^{-B} \cdot (1+i)^{-A}\). Therefore \[\boxed{N = C - B - A}\]. The key technique is factoring the target ratio into pieces that match the given accumulation factors.
 
-## Lesson 4: Effective Rate of Interest and Discount
+## Effective Rate of Interest and Discount
 
 The **annual effective rate of interest** in the \(n\)-th year measures growth relative to the beginning-of-year balance:
 
@@ -75,7 +75,7 @@ For \(i_2\): the interest earned in year 2 is \(a(2) - a(1) = (0.04 + 0.06 + 1) 
 
 For \(d_4\): interest in year 4 is \(a(4) - a(3) = (0.16+0.12+1) - (0.09+0.09+1) = 1.28 - 1.18 = 0.10\), divided by \(a(4) = 1.28\). So \(d_4 = 0.10/1.28 \approx 7.813\%\).
 
-## Lesson 5: Simple Discount and Compound Discount
+## Simple Discount and Compound Discount
 
 **Simple discount** uses a linear present value (discount) function:
 
@@ -94,7 +94,7 @@ so \(a(t) = (1-d)^{-t}\). This is simply compound interest reparameterized using
 
 Comparing the effective annual rates: under simple discount, \(i_n = d/(1-dn)\), which grows with \(n\) — the rate is 4.71% in year 1, 4.95% in year 2, 5.81% in year 3, and so on. Under compound discount, the effective rate is constant at \(d/(1-d) = 0.045/0.955 \approx 4.71\%\) — identical to simple discount only for the first year.
 
-## Lesson 6: Current Value
+## Current Value
 
 The **current value** of a cash flow at any point in time is found by moving its value forward or backward using the accumulation or discount function. Under compound interest this is particularly clean: to move a value of \(X\) from time \(t_1\) to time \(t_2\), multiply by \((1+i)^{t_2 - t_1}\) regardless of whether \(t_2 > t_1\) (future) or \(t_2 < t_1\) (past).
 
@@ -104,7 +104,7 @@ Under simple interest or simple discount, the current value depends on the origi
 
 \[ 1350 \cdot \frac{1 + 0.06 \times 7}{1 + 0.06 \times 4.5} = \$1{,}509.45 \]
 
-## Lesson 7: Nominal Rates of Interest and Discount
+## Nominal Rates of Interest and Discount
 
 In practice, interest is often quoted as an **annual nominal rate** but compounded more frequently. The **annual nominal rate of interest compounded \(m\) times per year**, denoted \(i^{(m)}\), means that \(i^{(m)}/m\) is the effective rate per \(1/m\) of a year. The accumulation function becomes:
 
@@ -130,7 +130,7 @@ All these rates are equivalent — they produce the same accumulation.
 
 Convert both to annual effective rates. For (a): \(1 + i = (1 + 0.03/12)^{12} = 1.0304\), so \(i = 3.04\%\). For (b): \(1 + i = (1 - 0.03/12)^{-12} = 1.0305\), so \(i = 3.05\%\). The nominal discount rate of 3% compounded monthly corresponds to a *higher* effective rate than the nominal interest rate of 3% compounded monthly. An investor should prefer the discount rate option. This illustrates the ordering \(i^{(m)} > d^{(m)}\) for the same quoted number — the discount rate convention always represents a higher effective yield.
 
-## Lesson 8: Force of Interest
+## Force of Interest
 
 The **force of interest** is the instantaneous relative rate of change in the accumulation function:
 
@@ -165,7 +165,7 @@ Use \(\delta_t = \frac{d}{dt}\ln a(t)\). Take the natural log: \(\ln a(t) = 0.00
 
 First build \(a(t)\): \(a(t) = \exp\!\left(\int_0^t \frac{0.02}{1-0.01x}\,dx\right) = \exp(-2\ln(1-0.01t)) = (1-0.01t)^{-2}\). Move money from time 10 to time 4 using the ratio: \[ B_4 = 20{,}000 \cdot \frac{a(4)}{a(10)} = 20{,}000 \cdot \frac{(1-0.04)^{-2}}{(1-0.10)^{-2}} = 20{,}000 \cdot \left(\frac{0.9}{0.96}\right)^2 = \$17{,}578.13 \] The answer is less than $20,000 — as expected, since we are moving backward in time.
 
-## Lesson 9: Inflation and Real Rate of Interest
+## Inflation and Real Rate of Interest
 
 When prices change over time, we distinguish between the **nominal rate of interest** \(i\) and the **real rate of interest** \(\tilde{i}\). If prices grow according to an inflation rate \(r\), the real accumulation function is the nominal accumulation divided by the price index:
 
@@ -183,7 +183,7 @@ First convert the 8% semi-annual rate to an effective monthly rate: \(j_{\text{i
 \[ \tilde{j} = \frac{j_{\text{int}} - j_{\text{inf}}}{1 + j_{\text{inf}}} = \frac{0.655820\% - 0.25\%}{1.0025} = 0.4057\% \text{ per month} \]
 Annualizing: \(i^{(12)} = 12 \times 0.4057\% = 4.87\%\). This is plausible — with 8% nominal interest and 3% inflation, the real rate is roughly 5%.
 
-## Lesson 10: Equations of Value
+## Equations of Value
 
 An **equation of value** states that two sets of cash flows have the same value at some common reference date. The fundamental principle: if we accumulate (or discount) all cash flows to a common point in time using the same interest rate, equivalent cash flows have equal values.
 
@@ -201,7 +201,7 @@ Now find the semiannual nominal rate \(i^{(2)}\) such that the PV is $600. Writi
 
 **Worked Example: Equation of Value as a Quadratic.** Brent deposits $5,000 at time 0 and $3,000 at time 9 months. After 18 months his balance is $10,726.51. Find the annual nominal rate compounded monthly. Let \(j\) be the monthly effective rate; letting \(X = (1+j)^9\), the equation of value at 18 months is \(5000X^2 + 3000X = 10{,}726.51\). The positive root is \(X = 1.195093\), so \(j = 1.195093^{1/9} - 1 = 2.00\%\) per month, giving \(i^{(12)} = 24.00\%\).
 
-## Lesson 11: Net Present Value and Internal Rate of Return
+## Net Present Value and Internal Rate of Return
 
 The **net present value (NPV)** of an investment is the present value of all net cash flows (positive for inflows, negative for outflows):
 
@@ -217,7 +217,7 @@ For a simple loan (lend then receive repayments), the cash flows are initially n
 
 **Reinvestment:** The IRR can only be earned if all intermediate proceeds are reinvested at the IRR rate. If reinvestment occurs at a different rate \(j\), the actual yield will differ from the IRR.
 
-## Lesson 12: Time Value of Money Summary
+## Time Value of Money Summary
 
 The key relationships in this module are:
 
@@ -231,9 +231,9 @@ The key relationships in this module are:
 
 ---
 
-# Module 2: Annuities
+# Annuities
 
-## Lesson 1: Geometric Progressions
+## Geometric Progressions
 
 A **geometric progression** is a sequence where each term is a constant multiple of the previous: \(\{a, ar, ar^2, \ldots\}\). The sum of the first \(n\) terms is:
 
@@ -241,7 +241,7 @@ A **geometric progression** is a sequence where each term is a constant multiple
 
 This formula underlies virtually every annuity formula in this module. A regular series of level payments is an annuity; its present value is the sum of a geometric progression where each term is \(v = 1/(1+i)\) times the previous.
 
-## Lesson 2: Annuity-Immediate
+## Annuity-Immediate
 
 An **annuity-immediate** (also called an **ordinary annuity**) consists of payments of $1 at the *end* of each period for \(n\) periods. The **present value** (valued one period *before* the first payment) uses actuarial notation \(a_{\overline{n}|}\):
 
@@ -267,7 +267,7 @@ The total paid is $35,000 but the present value is much less because of discount
 
 *Step 1:* Accumulated value of first 8 deposits at end of year 2: \(925 \cdot s_{\overline{8}|0.25\%} = \$7{,}465.07\). *Step 2:* Grow this forward 32 quarters (8 more years) at 0.5%: \(7465.07 \times 1.005^{32} = \$8{,}756.85\). *Step 3:* Accumulated value of the remaining 32 deposits at end of year 10: \(925 \cdot s_{\overline{32}|0.5\%} = \$32{,}012.98\). *Total:* \(\$8{,}756.85 + \$32{,}012.98 = \$40{,}769.83\).
 
-## Lesson 3: Annuity-Due
+## Annuity-Due
 
 An **annuity-due** consists of payments at the *beginning* of each period. The **present value** (at the time of the first payment) uses \(\ddot{a}_{\overline{n}|}\):
 
@@ -283,7 +283,7 @@ The annuity-due and annuity-immediate are related by exactly one period of inter
 
 Intuitively, payments at the beginning of each period are each worth one period of interest more than the equivalent end-of-period payments.
 
-## Lesson 4: Perpetuities
+## Perpetuities
 
 A **perpetuity** is an annuity with infinitely many payments. The present value of a **perpetuity-immediate** (first payment in one period) is:
 
@@ -310,7 +310,7 @@ When the first payment is not exactly one full period away, adjust the perpetuit
 
 *(d) First payment in T years, scholarship $10,000:* The payments start at time \(T\). The present value is \(10{,}000 \cdot v^{T-1}/i = 100{,}000\), giving \(1.08^{T-1} = 1.35\), so \(T = 1 + \ln(1.35)/\ln(1.08) = 4.899\) years.
 
-## Lesson 5: Deferred Annuities
+## Deferred Annuities
 
 An **\(m\)-year deferred, \(n\)-year annuity-immediate** pays $R at the end of years \(m+1, m+2, \ldots, m+n\). The present value (at time 0) is:
 
@@ -320,7 +320,7 @@ The second formula interprets the deferred annuity as the difference of two annu
 
 
 
-## Lesson 6: Nonlevel Annuities
+## Nonlevel Annuities
 
 When payment amounts vary, we decompose them into a sum of level annuities or handle each period's rate separately. Two common techniques:
 
@@ -337,7 +337,7 @@ When payment amounts vary, we decompose them into a sum of level annuities or ha
 \[ PV = 400a_{\overline{60}|j} - 100a_{\overline{36}|j} - 100a_{\overline{24}|j} = \$13{,}559.94 \]
 Method 2 avoids deferred annuities and is often faster on a financial calculator.
 
-## Lesson 7: Payments in Geometric Progression
+## Payments in Geometric Progression
 
 When payments grow at a constant rate \(g\) per period, the first payment being $P, the present value (for a finite \(n\)-period annuity-immediate) is:
 
@@ -353,7 +353,7 @@ When \(n \to \infty\) and \(g < i\), this converges to the **Gordon growth model
 \[ PV = \frac{20000v\left(1-(1.05v)^{10}\right)}{1-1.05v} = \$180{,}867.50 \]
 Alternatively, observe that the real rate \(j^* = (i-g)/(1+g) = 0.01/1.05 \approx 0.9524\%\), and rewrite as \(PV = (20000/1.05) \cdot a_{\overline{10}|j^*}\) — this converts the growing annuity into a level annuity at the real rate, which is especially convenient with a financial calculator.
 
-## Lesson 8: Payments in Arithmetic Progression (P–Q Formula)
+## Payments in Arithmetic Progression (P–Q Formula)
 
 For an annuity-immediate where the first payment is $P and each subsequent payment increases by $Q, the present value is:
 
@@ -376,7 +376,7 @@ The positive root is \(i = (3 + \sqrt{9 + 4 \times 406.81 \times 2})/(2 \times 4
 
 **Example (ladder payments).** An annuity paying $n at end of year \(n\) for \(n = 1, 2, \ldots, 50\) and $(100−n) for \(n = 51, \ldots, 99\) has a neat closed form. Multiplying the PV by \(v\) and subtracting gives \(PV(1-v) = a_{\overline{50}|} - v^{50} a_{\overline{50}|}\), so \(PV = (1+i)(a_{\overline{50}|})^2\).
 
-## Lesson 9: Determining the Interest Rate
+## Determining the Interest Rate
 
 Given a present or accumulated value and a set of payments, finding the interest rate requires solving a polynomial equation. The **guess-and-check (bisection)** method works as follows: note whether the target is above or below the first guess, narrow the interval, and iterate. A financial calculator or spreadsheet solver handles this in practice.
 
@@ -386,7 +386,7 @@ For a loan with payment \(R\) and present value \(L\):
 
 Solve for \(i\) numerically.
 
-## Lesson 10: Term of an Annuity and Final Payment
+## Term of an Annuity and Final Payment
 
 When solving for the number of payments \(n\), the solution is typically non-integer. Two methods handle this:
 
@@ -410,7 +410,7 @@ A quick sanity check: \(n = 13.02\) is just 0.02 beyond 13, so we expect the fin
 \[ 20\ddot{s}_{\overline{6}|} \cdot 1.1^5 + X\ddot{s}_{\overline{3}|} \cdot 1.1^4 = 500 \]
 (The annuity-due accumulated value is placed one period after the last payment, then grown to time 10.) Solving: \(X = \$51.89\).
 
-## Lesson 11: Annuities Using a General Accumulation Function
+## Annuities Using a General Accumulation Function
 
 For a general accumulation function \(a(t)\) (not necessarily compound interest), the annuity formulas generalize as:
 
@@ -425,7 +425,7 @@ Let \(j = (1+i)^4 - 1\) be the 4-year effective rate. At year 40 there are 10 de
 The discount denominators cancel and the numerator factors as \([(1+j)^{10}-1]/[(1+j)^5-1] = (1+j)^5 + 1 = 5\), giving \((1+j)^5 = 4\). Now:
 \[ X = 100\ddot{s}_{\overline{10}|j} = 100 \cdot \frac{(1+j)^{10}-1}{1-(1+j)^{-1}} = 100 \cdot \frac{4^2 - 1}{1 - 4^{-1/5}} = \$6{,}194.72 \]
 
-## Lesson 12: Payment Frequency
+## Payment Frequency
 
 When the payment frequency does not match the interest conversion frequency, always convert the interest rate to match the payment frequency. If payments are \(k\) times per year and the given rate is \(i^{(m)}\), the effective rate per payment period is:
 
@@ -433,7 +433,7 @@ When the payment frequency does not match the interest conversion frequency, alw
 
 Then proceed with the standard annuity formulas using \(j\) as the rate per period and the total number of payments as \(n\).
 
-## Lesson 13: Continuous Annuities
+## Continuous Annuities
 
 As the payment frequency \(m \to \infty\), the present value of an annuity converges to the **continuous annuity** formula. An \(n\)-year annuity paying at a continuous rate of $1 per year has present value:
 
@@ -455,7 +455,7 @@ where \(\delta = \ln(1.04)\). Solving: \(X = 43{,}000\delta/(1 - 1.04^{-15.5}) =
 
 \[ 1600 = 150 \cdot \frac{1 - e^{-0.055n}}{0.055} \implies e^{-0.055n} = 1 - \frac{1600 \times 0.055}{150} = 0.4133 \implies n = 16.064 \text{ years} \]
 
-## Lesson 14: Continuously Varying Continuous Annuities
+## Continuously Varying Continuous Annuities
 
 For an annuity paying continuously at a *varying* rate \(r(t)\) per year at time \(t\), the present value is:
 
@@ -477,7 +477,7 @@ The accumulated value at time 10 is \(70k \cdot a(10) = 70k \cdot 17/7 = 170k = 
 
 \[ \frac{d}{di} a_{\overline{n}|} = -v\left(a_{\overline{n}|} + \frac{nv^n}{i}\right), \qquad \frac{d}{d\delta} \bar{a}_{\overline{n}|} = -\bar{(I\bar{a})}_{\overline{n}|}, \qquad \frac{d}{dn} \bar{a}_{\overline{n}|} = v^n, \qquad \frac{d}{dn} \bar{s}_{\overline{n}|} = e^{\delta n} \]
 
-## Lesson 15: Annuities Summary
+## Annuities Summary
 
 | Annuity Type | Present Value | Accumulated Value |
 |---|---|---|
@@ -494,9 +494,9 @@ Key relationship between due and immediate: \(\ddot{a}_{\overline{n}|} = (1+i) a
 
 ---
 
-# Module 3: Loans
+# Loans
 
-## Lesson 1: Outstanding Loan Balance
+## Outstanding Loan Balance
 
 Consider a loan of amount \(L\) repaid by \(n\) level payments of \(R\) at the end of each period with effective rate \(i\) per period. The initial condition is:
 
@@ -520,7 +520,7 @@ Both give the same answer when payments are exactly level. If payments are round
 
 The outstanding balance at end of year 6 via the **retrospective** method: \(B_6 = 20000(1.08)^6 - 2500s_{\overline{6}|8\%} = \$13{,}397.66\). Via the **prospective** method: \(B_6 = 2500a_{\overline{7}|8\%} + 706.57 \cdot 1.08^{-8} = \$13{,}397.66\). Both methods agree exactly.
 
-## Lesson 2: Amortization of a Debt
+## Amortization of a Debt
 
 Under the **amortization method**, each payment \(R\) splits into interest and principal portions. At time \(t\):
 
@@ -543,7 +543,7 @@ The complete amortization schedule:
 
 Total interest paid = \(nR - L\).
 
-## Lesson 3: Amortization Examples
+## Amortization Examples
 
 Given any two adjacent rows of an amortization table, the interest rate can be recovered. Since \(P_{t+1} = (1+i) P_t\):
 
@@ -557,7 +557,7 @@ These relationships allow reconstruction of a full amortization table from parti
 
 **Worked Example: Recovering Amortization Data from Two Balances.** A 4-year loan at \(i = 8\%\) with level end-of-year payments has outstanding balance $1,076.82 at end of year 2 and $559.12 at end of year 3. Since principal portions grow geometrically, the interest in year 3 is \(I_3 = 0.08 \times 1076.82 = 86.15\). The principal in year 3 is \(P_3 = B_2 - B_3 = 1076.82 - 559.12 = 517.70\). The payment is \(R = I_3 + P_3 = \$603.85\). Since \(P_t/(1+i) = P_{t-1}\), the principal at time 1 is \(P_1 = 517.70/1.08^2 = \$443.84\).
 
-## Lesson 4: Refinancing a Loan
+## Refinancing a Loan
 
 When interest rates fall, it may be worth **refinancing** — paying a penalty to break the existing loan and take out a new loan at the lower rate. The analysis compares:
 
@@ -572,7 +572,7 @@ If the new payment is lower, refinancing saves money. The total savings depend o
 
 Kenny can refinance at \(i^{(12)} = 8.4\%\) (\(j^* = 0.7\%\)/month) but must pay a 3-month payment penalty. New loan: \(L^* = 3013.76 + 3 \times 100.10 = \$3{,}314.06\). New payment over 36 remaining months: \(R^* = 3314.06/a_{\overline{36}|0.7\%} = \$104.46\). Since $104.46 > $100.10, **refinancing is not worthwhile** — the penalty outweighs the interest savings.
 
-## Lesson 5: Sinking Funds
+## Sinking Funds
 
 With the **sinking fund method**, the borrower pays only interest each period to the lender, then repays all principal in one lump sum at the end. To fund the final payment, the borrower makes regular deposits into a separate **sinking fund** earning rate \(j\):
 
@@ -588,7 +588,7 @@ When \(j = i\), this equals \(L/a_{\overline{n}|}\) — exactly the same as the 
 
 **Worked Example: Mutual Fund Interest into a Bank Account.** Betty invests $10,000 in a mutual fund earning 8%. She withdraws the $800 annual interest and deposits it in a bank account earning 4%. The mutual fund balance stays at $10,000 throughout (interest is removed, not reinvested). After 10 years, the bank account holds \(800 \cdot s_{\overline{10}|4\%} = \$9{,}604.89\). Total wealth: $10,000 + $9,604 = $19,604.
 
-## Lesson 6: Loans Summary
+## Loans Summary
 
 **Principal repaid between times \(t_1\) and \(t_2\):** \(B_{t_1} - B_{t_2}\)
 
@@ -598,9 +598,9 @@ When \(j = i\), this equals \(L/a_{\overline{n}|}\) — exactly the same as the 
 
 ---
 
-# Module 4: Bonds
+# Bonds
 
-## Lesson 1: Terminology and Basic Price Formula
+## Terminology and Basic Price Formula
 
 A **bond** is a loan where the borrower (issuer) promises to pay:
 - Periodic **coupons** of amount \(Fr\), where \(F\) is the **face value** (par value) and \(r\) is the **coupon rate** per period
@@ -616,7 +616,7 @@ This **basic bond price formula** contains five quantities: \(P, Fr, n, C, j\). 
 \[ P = 40a_{\overline{10}|j} + 45v^{10}a_{\overline{10}|j} + 50v^{20}a_{\overline{20}|j} + 1000v^{40} = \$968.72 \]
 Since the weighted average coupon rate (about 9.25%) is close to the yield (9.2%), the price is near par.
 
-## Lesson 2: Premium and Discount Pricing Formula
+## Premium and Discount Pricing Formula
 
 Using the identity \(v^n = 1 - ja_{\overline{n}|}\), the basic formula rewrites as the **premium/discount formula**:
 
@@ -634,7 +634,7 @@ From the premium/discount formula: \(1968 = 1200 + 1200(2i - i)a_{\overline{28}|
 \[ 1968 = 1200 + 1200(1 - v^{28}) \implies v^{28} = 0.36 \]
 At time 7 with 21 coupons remaining: \(B_7 = 1200 + 1200(1 - v^{21}) = 2400 - 1200 \times 0.36^{21/28} = \$1{,}842.29\). The key trick: the premium/discount formula absorbs the interest rate into \(v^n\), letting us solve without explicitly finding \(i\).
 
-## Lesson 3: Bond Amortization
+## Bond Amortization
 
 A bond is analogous to a loan from the bondholder's perspective. The **book value** at time \(t\) is the present value of remaining payments at the original yield:
 
@@ -650,7 +650,7 @@ Book value adjustments grow geometrically: \(P_{t+1} = (1+j) P_t\). For a **prem
 \[ B_6 = 800a_{\overline{4}|6\%} + 10000(1.06)^{-4} = \$10{,}693.02 \]
 The interest portion of the 7th coupon is \(I_7 = 0.06 \times 10{,}693.02 = \$641.58\). The remaining \(800 - 641.58 = \$158.42\) is the premium writedown (principal adjustment).
 
-## Lesson 4: Book Value Between Coupon Dates
+## Book Value Between Coupon Dates
 
 Between coupon dates, two price concepts apply:
 
@@ -679,11 +679,11 @@ Count days: June 1 to August 8 = 68 days; June 1 to December 1 = 183 days. The f
 
 **Clean price:** \(1094.17 - (68/183) \times 35 = \$1{,}081.16\).
 
-## Lesson 5: Determining the Yield Rate
+## Determining the Yield Rate
 
 When a bond is bought and then sold before maturity, the investor's yield over the holding period is found by solving for the rate that equates the purchase price to the present value of received cash flows (coupons plus sale proceeds). Use a financial calculator: enter PV (negative), payments, FV, and compute the rate.
 
-## Lesson 6: Callable Bonds
+## Callable Bonds
 
 A **callable bond** gives the issuer the right to redeem the bond early on specified dates, usually at slightly higher redemption values. This is analogous to a mortgage prepayment privilege.
 
@@ -695,7 +695,7 @@ When purchasing a callable bond to guarantee a minimum yield:
 
 For a **premium bond** (\(Fr > Cj\), the earlier call date typically produces the lower price (shorter annuity of the premium). For a **discount bond**, the later maturity date produces the lower price. When the call redemption value differs from the maturity redemption value, compute the price at every possible call/maturity date and take the minimum.
 
-## Lesson 7: Bonds Summary
+## Bonds Summary
 
 | Formula | Expression |
 |---------|-----------|
@@ -709,9 +709,9 @@ For a **premium bond** (\(Fr > Cj\), the earlier call date typically produces th
 
 ---
 
-# Module 5: General Cash Flows and Portfolios
+# General Cash Flows and Portfolios
 
-## Lesson 1a: Stock Dividend Model
+## Stock Dividend Model
 
 Corporations raise capital through bonds, **preferred stock**, and **common stock**. Bondholders have priority over preferred shareholders, who in turn have priority over common shareholders. The **dividend discount model** sets the stock price equal to the present value of all future dividends.
 
@@ -725,7 +725,7 @@ For **preferred stock** with fixed dividends of $D per period:
 
 where \(D_1\) is the next dividend. This is the **Gordon Growth Model**. Given the price and next dividend, the implied growth rate is \(g = i - D_1/P\).
 
-## Lesson 1b: Rates of Return
+## Rates of Return
 
 The **net present value** and **internal rate of return** from Module 1 generalize to arbitrary investment cash flows. An investment with net cash flows \(C_0, C_1, \ldots, C_n\) has:
 
@@ -735,7 +735,7 @@ The IRR is the solution to \(NPV(i) = 0\). Multiple IRRs can exist; the **unique
 
 **Technology note — Excel IRR and RATE functions.** `=IRR(range)` solves for the rate per period given arbitrary cash flows (positive and negative) in a column. `=RATE(nper, pmt, pv)` solves for the rate of a level annuity. Both return the effective rate *per period* — multiply by the number of periods per year to annualize as a nominal rate. The IRR function is more flexible (handles nonlevel cash flows); the RATE function is limited to level annuities but simpler to use. Both accept an optional guess argument to steer the solver.
 
-## Lesson 2: Dollar-Weighted Rate of Interest
+## Dollar-Weighted Rate of Interest
 
 For a fund with opening balance \(A\), closing balance \(B\), and net contributions \(C_{t_k}\) at times \(t_k \in (0,1)\), the **approximate dollar-weighted yield** over one year is:
 
@@ -749,7 +749,7 @@ Over a \(T\)-year period, the nominal rate approximation is:
 
 with annual effective rate \(i = (1 + jT)^{1/T} - 1\).
 
-## Lesson 3: Time-Weighted Rate of Interest
+## Time-Weighted Rate of Interest
 
 The **time-weighted yield** removes the effect of the timing of deposits and withdrawals, measuring the fund's performance independently of investor cash flows. Between consecutive contribution dates \(t_{k-1}\) and \(t_k\), the sub-period accumulation factor is:
 
@@ -761,7 +761,7 @@ The **time-weighted yield** removes the effect of the timing of deposits and wit
 
 **Key insight:** Dollar-weighted yield rewards (or penalizes) investors for the *timing* of their contributions. The time-weighted yield is a property of the fund manager, independent of when investors enter or exit.
 
-## Lesson 4: Term Structure of Interest Rates
+## Term Structure of Interest Rates
 
 The **yield curve** plots bond yields against time to maturity. A **zero-coupon bond** (strip bond) pays only a redemption amount at maturity. The **\(n\)-year spot rate** \(r_n\) is the annual effective yield on an \(n\)-year zero-coupon bond:
 
@@ -779,7 +779,7 @@ A coupon bond can be priced using spot rates by discounting each cash flow at it
 
 so \(f_{[n,n+m]} = \left(\frac{(1+r_{n+m})^{n+m}}{(1+r_n)^n}\right)^{1/m} - 1\).
 
-## Lesson 5: Summary
+## Summary
 
 | Concept | Formula |
 |---------|---------|
@@ -792,9 +792,9 @@ so \(f_{[n,n+m]} = \left(\frac{(1+r_{n+m})^{n+m}}{(1+r_n)^n}\right)^{1/m} - 1\).
 
 ---
 
-# Module 6: Duration, Convexity, and Immunization
+# Duration, Convexity, and Immunization
 
-## Lesson 1: Macaulay Duration
+## Macaulay Duration
 
 **Duration** measures the interest-rate sensitivity of a portfolio of cash flows. Intuitively, it is the weighted average time of payment, where the weights are the present values of each cash flow. For cash flows \(C_t\) at times \(t \ge 0\) with present value \(P(i) = \sum_t C_t v^t\), the **Macaulay duration** is:
 
@@ -814,7 +814,7 @@ For a **coupon bond**, use the P–Q formula to evaluate the numerator sum:
 
 \[ \sum_{t=1}^n t \cdot Fr \cdot v^t + n \cdot C v^n = Fr \cdot (Ia)_{\overline{n}|} + n C v^n = Fr \cdot \frac{\ddot{a}_{\overline{n}|} - nv^n}{i} + n C v^n \]
 
-## Lesson 2: Modified Duration
+## Modified Duration
 
 While Macaulay duration measures sensitivity to changes in \(\delta\) (force of interest), **modified duration** measures sensitivity to changes in the annual nominal rate \(i^{(m)}\):
 
@@ -828,7 +828,7 @@ For annual payments (\(m = 1\), we write \(D(i) = vD^{(\infty)}(i)\).
 
 **Interpretation:** If the yield increases by \(\varepsilon\) (in annual effective rate), the approximate percentage change in price is \(-D(i) \cdot \varepsilon\).
 
-## Lesson 3: Convexity
+## Convexity
 
 Duration provides a first-order approximation. The **convexity** captures the second-order (curvature) effect. The **Macaulay convexity** is:
 
@@ -847,7 +847,7 @@ The duration term gives the linear (first-order) change; convexity adds a positi
 
 **Risk implication:** Among bonds with the same duration, a **zero-coupon bond** has the highest sensitivity to interest rates (and least convexity relative to its duration), while high-coupon bonds are less sensitive.
 
-## Lesson 4: Asset-Liability Management and Immunization
+## Asset-Liability Management and Immunization
 
 **Asset-liability management** (ALM) balances a fund's inflows (assets) against its outflows (liabilities). Define:
 
@@ -871,7 +871,7 @@ In summation form (for annual cash flows):
 
 **Practical challenges:** Real yield curves are not flat (long-term rates differ from short-term rates), interest rate changes need not be parallel shifts, and future cash flows may be uncertain.
 
-## Lesson 5: Immunization Summary
+## Immunization Summary
 
 | Concept | Formula |
 |---------|---------|

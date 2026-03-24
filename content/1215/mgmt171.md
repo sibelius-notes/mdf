@@ -5,7 +5,7 @@ prof: "Predrag Rajsic"
 
 MGMT 171 is a practical introduction to personal finance and investment decision-making taught at the University of Waterloo (Spring 2021, remote delivery). The course is organized around the textbook *Personal Finance*, Fourth Canadian Edition, by Jeff Madura and Hardeep Singh Gill. The central goal is to help students develop a coherent financial plan for themselves by understanding the five interconnected components of personal finance: budgeting and tax planning, financing purchases, protecting assets and income, investing, and retirement and estate planning.
 
-# Lecture 1: Overview of a Financial Plan (Part 1)
+# Overview of a Financial Plan (Part 1)
 
 ## What Personal Finance Is
 
@@ -71,7 +71,7 @@ Financial advice carries ethical risks. Advisers may act in their own interest r
 
 ---
 
-# Lecture 2: Overview of a Financial Plan (Part 2)
+# Overview of a Financial Plan (Part 2)
 
 ## Developing Your Financial Plan: A Six-Step Process
 

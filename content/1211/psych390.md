@@ -3,11 +3,9 @@ title: "PSYCH 390: Research Methods in Memory"
 prof: ""
 ---
 
-# PSYCH 390: Research Methods in Memory
-
 ## Course Overview
 
-PSYCH 390 is a research methods course focused on the scientific study of human memory. The course uses Baddeley's *Memory* textbook (3rd edition) as its foundation, supplementing it with lectures, empirical demonstrations, and laboratory exercises using E-prime software. The lectures are delivered by Dr. Myra Fernandez at the University of Waterloo during the Winter 2021 term. The course covers both the architecture of memory systems and the practical factors — attention, organisation, meaning, context — that determine how well information is encoded and retrieved. Throughout, real-world applications in medicine, advertising, education, and healthy aging are used to illustrate how basic science matters.
+PSYCH 390 is a research methods course focused on the scientific study of human memory. The course covers both the architecture of memory systems and the practical factors — attention, organisation, meaning, context — that determine how well information is encoded and retrieved. Throughout, real-world applications in medicine, advertising, education, and healthy aging are used to illustrate how basic science matters.
 
 ---
 

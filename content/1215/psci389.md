@@ -5,7 +5,7 @@ term: "Spring 2021 (1215)"
 university: "University of Waterloo"
 ---
 
-# Week 1: Defining Global Governance
+# Defining Global Governance
 
 ## What Is Global Governance?
 
@@ -65,7 +65,7 @@ Global governance operates across multiple levels simultaneously. At the **trans
 
 ---
 
-# Week 2: History(s) of Global Governance
+# History(s) of Global Governance
 
 ## The Contested Origins of International Order
 
@@ -101,7 +101,7 @@ The lecture notes that states are "relatively new" actors in the international s
 
 ---
 
-# Week 3: Key Actors, Theories, and Concepts in Global Governance
+# Key Actors, Theories, and Concepts in Global Governance
 
 ## Power in International Politics
 
@@ -151,7 +151,7 @@ The BRICS dynamic illustrates a central tension in global governance: the tensio
 
 ---
 
-# Week 4: Key Actors Continued — Multilayered Governance and Non-State Actors
+# Key Actors Continued — Multilayered Governance and Non-State Actors
 
 ## Multilayered Global Governance
 
@@ -165,7 +165,7 @@ Simon Curtis's "Cities and Global Governance: State Failure or a New Global Orde
 
 ---
 
-# Week 5: Global Governance, Environment, and Climate Change
+# Global Governance, Environment, and Climate Change
 
 ## Climate Change as a Global Governance Problem
 
@@ -187,7 +187,7 @@ Michele Betsill and Harriet Bulkeley's "Cities and the Multilevel Governance of 
 
 ---
 
-# Week 7: Global Governance, Postcolonialism, and the Global South
+# Global Governance, Postcolonialism, and the Global South
 
 ## "Idea-Shift" and the Challenge to Western-Dominated Norms
 
@@ -205,7 +205,7 @@ For global governance scholarship, this means interrogating the institutional de
 
 ---
 
-# Week 8: Gendering Global Governance
+# Gendering Global Governance
 
 ## Feminist Approaches to Global Governance
 
@@ -217,7 +217,7 @@ Rai distinguishes between **"governance feminism"** — the incorporation of fem
 
 ---
 
-# Week 9: Global Governance and Health
+# Global Governance and Health
 
 ## Global Health Governance: A Conceptual Framework
 
@@ -239,7 +239,7 @@ The **COVID-19 pandemic**, though post-dating the 2021 course, is an acute illus
 
 ---
 
-# Week 10: Global Governance, Economics, and Labour
+# Global Governance, Economics, and Labour
 
 ## The World Bank as Global Governance Actor
 
@@ -267,7 +267,7 @@ Critics contest this claim on multiple grounds. The **anti-globalization movemen
 
 ---
 
-# Week 11: Global Governance and Security
+# Global Governance and Security
 
 ## Beyond the Liberal Peace
 
@@ -285,7 +285,7 @@ This question has direct implications for global governance. If China's rise pro
 
 ---
 
-# Week 12: Global Governance and Law, and the Future of Global Governance
+# Global Governance and Law, and the Future of Global Governance
 
 ## International Law and Global Governance
 

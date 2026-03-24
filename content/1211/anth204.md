@@ -3,7 +3,7 @@ title: "ANTH 204: Biological Anthropology"
 prof: "Dr. Alexis Dolphin"
 ---
 
-# Lecture 1: Introduction to Biological Anthropology
+# Introduction to Biological Anthropology
 
 ## What Is Anthropology?
 
@@ -33,7 +33,7 @@ A central theme in biological anthropology is the **biocultural approach**, whic
 
 ---
 
-# Lecture 2: Science
+# Science
 
 ## Chapter 2: The Scientific Method
 
@@ -55,7 +55,7 @@ Science is limited to questions about the natural world that can be addressed th
 
 ---
 
-# Lecture 3: History of Evolutionary Thought
+# History of Evolutionary Thought
 
 ## Pre-Darwinian Ideas
 
@@ -92,7 +92,7 @@ Natural selection can be observed in real time. A classic example is the **peppe
 
 ---
 
-# Lecture 4: Heredity and Genetics I
+# Heredity and Genetics I
 
 ## Chapter 3: The Basics of Heredity
 
@@ -114,7 +114,7 @@ Mendel discovered that inheritance follows predictable patterns. He proposed tha
 
 ---
 
-# Lecture 5: Heredity and Genetics II
+# Heredity and Genetics II
 
 ## DNA and Chromosomes
 
@@ -138,7 +138,7 @@ The information encoded in DNA is used to build proteins through a two-step proc
 
 ---
 
-# Lecture 6: Heredity and Genetics III
+# Heredity and Genetics III
 
 ## Beyond Mendel: Complex Inheritance
 
@@ -162,7 +162,7 @@ Most mutations are **neutral** — they have no effect on the organism's fitness
 
 ---
 
-# Lecture 7: Forces of Evolution I
+# Forces of Evolution I
 
 ## Chapter 4: Mechanisms of Evolution
 
@@ -180,7 +180,7 @@ Evolution is driven by four main forces, each operating at the population level.
 
 ---
 
-# Lecture 8: Forces of Evolution II
+# Forces of Evolution II
 
 ## Genetic Drift
 
@@ -206,7 +206,7 @@ In reality, no natural population meets all five conditions, so allele frequenci
 
 ---
 
-# Lecture 9: Species and Speciation
+# Species and Speciation
 
 ## What Is a Species?
 
@@ -222,7 +222,7 @@ The pace of evolutionary change has been debated. **Gradualism** holds that evol
 
 ---
 
-# Lecture 10: Primates I
+# Primates I
 
 ## Chapter 5: The Living Primates
 
@@ -257,7 +257,7 @@ The order Primates is divided into two major groups:
 
 ---
 
-# Lecture 11: Primates II
+# Primates II
 
 ## The Apes
 
@@ -283,7 +283,7 @@ Primates move through their environments in diverse ways:
 
 ---
 
-# Lecture 12: Primate Behaviour I
+# Primate Behaviour I
 
 ## Chapter 6: Primate Behaviour
 
@@ -310,7 +310,7 @@ In many species, males compete for dominance through physical contests, while fe
 
 ---
 
-# Lecture 13: Primate Behaviour II
+# Primate Behaviour II
 
 ## Communication
 
@@ -328,7 +328,7 @@ Primate reproductive strategies vary widely, but several patterns are common. Mo
 
 ---
 
-# Lecture 14: Primate Behaviour III
+# Primate Behaviour III
 
 ## Intelligence and Culture
 
@@ -342,7 +342,7 @@ Language experiments with great apes have shown that chimpanzees, bonobos, and g
 
 ---
 
-# Lecture 15: Primate Conservation
+# Primate Conservation
 
 ## Chapter 7: Primate Conservation (pp. 151–161)
 
@@ -358,7 +358,7 @@ Conservation efforts include habitat protection (national parks and reserves), a
 
 ---
 
-# Lecture 16: Primate Evolution and Proto-Hominins
+# Primate Evolution and Proto-Hominins
 
 ## Chapters 7 (151–161) and 9
 
@@ -398,7 +398,7 @@ The earliest proto-hominins are fragmentary and controversial:
 
 ---
 
-# Lecture 17: Early Hominins
+# Early Hominins
 
 ## The Australopithecines
 
@@ -428,7 +428,7 @@ The **grandmother hypothesis** proposes that human female longevity past reprodu
 
 ---
 
-# Lecture 18: Early *Homo*
+# Early *Homo*
 
 ## Chapter 10: The Genus *Homo*
 
@@ -452,7 +452,7 @@ Oldowan tools are simple **pebble tools and choppers** made of quartz, chert, an
 
 ---
 
-# Lecture 19: *Homo erectus*
+# *Homo erectus*
 
 ## Chapter 10 (continued)
 
@@ -494,7 +494,7 @@ The **Paleolithic** (Old Stone Age, 2.6 mya–10 kya) is divided into Lower (Old
 
 ---
 
-# Lecture 20: Neandertals
+# Neandertals
 
 ## Chapter 11
 
@@ -544,7 +544,7 @@ Ancient DNA (aDNA) analysis, pioneered by **Svante Pääbo** and colleagues, has
 
 ---
 
-# Lecture 21: Archaic Hominins and *Homo heidelbergensis*
+# Archaic Hominins and *Homo heidelbergensis*
 
 ## Emergence of Archaic Hominins
 
@@ -585,7 +585,7 @@ The **Denisovans** are known primarily from DNA extracted from a finger bone and
 
 ---
 
-# Lecture 22: Anatomically Modern *Homo sapiens*
+# Anatomically Modern *Homo sapiens*
 
 ## Chapter 12
 
@@ -638,7 +638,7 @@ Evidence of behavioural modernity includes:
 
 ---
 
-# Lecture 23: Contemporary Human Variation
+# Contemporary Human Variation
 
 ## Chapters 14 (pp. 331–337) and 13
 
@@ -684,7 +684,7 @@ This elegant trade-off — between UV protection and vitamin D synthesis — exp
 
 ---
 
-# Lecture 24: Race and Sex — Viewing Variation
+# Race and Sex — Viewing Variation
 
 ## Chapter 14 (continued)
 
@@ -736,7 +736,7 @@ Modern biology increasingly recognizes that sex is determined not just by chromo
 
 ---
 
-# Lecture 25: Bioarchaeology I
+# Bioarchaeology I
 
 ## Chapter 14 (pp. 331–337)
 
@@ -773,7 +773,7 @@ Bioarchaeologists can identify many diseases from skeletal remains:
 
 ---
 
-# Lecture 26: Bioarchaeology II
+# Bioarchaeology II
 
 ## Chapter 14 (pp. 337–345)
 

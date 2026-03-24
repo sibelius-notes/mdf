@@ -3,7 +3,7 @@ title: "ENVS 131: Communication for Environmental Professions"
 prof: "James"
 ---
 
-# Lecture 2: Foundations of Rhetoric and Strategic Communication
+# Foundations of Rhetoric and Strategic Communication
 
 The intellectual core of the course is **rhetoric** — the art of effective communication. The classical Greek tradition, traced through Aristotle, identifies three pillars of persuasive speech that remain foundational in contemporary communications theory.
 
@@ -37,7 +37,7 @@ The professor would return to FAST repeatedly throughout the course, treating it
 
 ---
 
-# Lecture 3: Academic Integrity, Email Feedback, and Active vs. Passive Voice
+# Academic Integrity, Email Feedback, and Active vs. Passive Voice
 
 A significant portion of the third session was devoted to **academic integrity**, treated not as a bureaucratic compliance issue but as an epistemological one. The professor framed citation not primarily as a way to avoid plagiarism charges but as a way to make knowledge traceable and therefore contestable. When a writer cites a source, they allow the reader to go back to the original, examine the methodology, evaluate the evidence, and decide whether the claim is well-supported. When a writer presents ideas without attribution, they remove this possibility.
 
@@ -63,7 +63,7 @@ A car commercial comparison exercise analyzed advertisements for the Chevrolet B
 
 ---
 
-# Lecture 4: Voice, Culture, Context, and the Press Release
+# Voice, Culture, Context, and the Press Release
 
 The discussion of active and passive voice continued with a deeper analysis of how **culture and context** function as rhetorical variables. Culture shapes what counts as credible, what counts as appropriate evidence, what emotional appeals will resonate, and even what sentence structures feel authoritative. Communicators who ignore cultural context produce messages that may be technically correct but functionally ineffective or even offensive.
 
@@ -89,7 +89,7 @@ Two guest speakers appeared in this session: **Michelle from The Radical**, whic
 
 ---
 
-# Lecture 5: Strategic Communications and the Environmental Comic
+# Strategic Communications and the Environmental Comic
 
 The course officially migrated from **PebblePad** to **Learn** as the primary submission platform at this point, while PebblePad remained open for reference and for resubmissions of earlier work.
 
@@ -131,7 +131,7 @@ The lecture introduced **strategic communications** as an umbrella concept encom
 
 ---
 
-# Lecture 6: Entrepreneurship, Advertising Types, and Strategic Channels
+# Entrepreneurship, Advertising Types, and Strategic Channels
 
 This lecture featured a guest speaker: **Carly from Concept**, the University of Waterloo's entrepreneurship accelerator program. Carly described the **Concept 5K** competition, in which student teams develop solutions to environmental or social problems and compete for $5,000 in seed funding. She also explained the **Climate Innovation Discovery Stream**, a specific track within the program that focuses on climate-related solutions. For students in the A or A+ pathway, participation in one of these programs serves as the pitch component of the course. Students were reminded that the external program deadlines operate independently of the course calendar and must be tracked separately.
 
@@ -197,7 +197,7 @@ The ideological dimension of effective advertising was summarized: advertisement
 
 ---
 
-# Lecture 8: The Environmental Comic Workshop and "Advertising at the Edge of the Apocalypse"
+# The Environmental Comic Workshop and "Advertising at the Edge of the Apocalypse"
 
 The lecture opened with a close analysis of a newspaper editorial cartoon about COVID-19 and Canada's long-term care crisis. In the cartoon, a figure representing the federal government stood watching a plant slowly wilt, muttering that "someone should water it." The joke turned on the fact that the government has both the resources and the regulatory capacity to address the problem but was instead treating it as someone else's responsibility. The analysis demonstrated several principles of effective environmental cartooning: it uses a single concrete metaphor (the wilting plant) to represent a complex structural problem; it makes an implicit argument about power and accountability; it does not need to explain itself; and it is both ironic and tragic.
 
@@ -331,7 +331,7 @@ The **pipeline debates** in Canada (the Trans Mountain Pipeline, the Coastal Gas
 
 ---
 
-# Lecture 22: Course Summary and Looking Forward
+# Course Summary and Looking Forward
 
 The final lecture was a review of the entire course, offered on April 13, 2021. The professor synthesized the through-line: every topic in the course — from the formatting of a business email to the critique of greenwashing ideology — was ultimately about **communication as power**. This is the through-line that connects the apparently disparate modules: FAST and rhetoric are tools for exercising communicative power effectively; greenwashing analysis, framing theory, and discourse analysis are tools for understanding and contesting communicative power when it is being used against the interests of environmental protection, social justice, and democratic accountability.
 

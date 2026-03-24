@@ -2,7 +2,7 @@
 title: "MUSIC 140: Popular music"
 prof: "Simon Wood"
 ---
-# Lecture 1
+# Post-War America and the Music Industry
 ## Part A
 some introduction. Welcome to the first lecture for music 140, spring 2020, pandemic version.
 You probably notice that these audio files are monophonic. That's deliberate because monophonic files are half of the size of the equivalent stereophonic files. We'll get to them eventually.
@@ -93,7 +93,7 @@ TPA is not just a place. It's a musical style, develops a specific way of writin
 Let's take a look at “Somewhere Over The Rainbow” (Arlen/Harburg, 1939), which is a great example of AABA.
 
 
-# Lecture 2
+# African American Music: From Slavery to the Blues
 Now it is with race that we are going to be concerned primarily this week, because we are going to look at is how the music of African Americans make it to North America, how it survive nightmare of slavery. To start with, the history of slavery.
 
 ## Part A: Slavery
@@ -190,7 +190,7 @@ Listen to his introduction. He starts off material that clearly derived from wha
 
 These recordings were aimed primarily at African American audiences. This is the beginning of what  we referred to last week as race music: music performed and recorded for black audiences.
 
-# Lecture 3
+# Radio, Records, and the Rise of Rhythm & Blues
 ## Part A: Of Radio And Records
 We start in 1877 with the invention of **mechanical reproduction**. In 1877, Thomas Edison invents the phonograph (gramophone), a device that encodes the sound. The cylinder is the core. Patterns are recorded in the cylinder, and sound would come back from the cylinder by pulling the playback arm.
 
@@ -310,7 +310,7 @@ Third style: **Chicago Electric Blues**. An example, Hoochie Coochie Man (1954, 
 
 Moral panic: thousands of white parents react negatively to the news that their children increasingly are being influenced by the culture of African Americans. And that is where we will pick up our story next week.
 
-# Lecture 4
+# Cover Versions and the Birth of Rock 'n' Roll
 ## Part A: Cover Versions
 Cover Versions: 1954 – 1956, “white” versions of “black” records. Cover versions were quite common at that time. But what makes this unique is the ways of cover versions were changed. Because when you compare then with the original R&B version, the cover version changes the things in a way that was clearly targeted at race. It reduces elements that associated with black culture, and "more appropriate" for middle class white culture. An example: “Tutti Frutti” Little Richard (Richard Wayne Penniman)
 - released late 1955 on Specialty Records (lyrics revised by Dorothy LaBostrie)
@@ -368,7 +368,7 @@ Then in Spring 1954, starts recording with Scotty Moore (Guitar) and Bill Black 
 
 This song is quite like R&B to the audience. So he was interviewed by [Dewey Phillips](https://en.wikipedia.org/wiki/Dewey_Phillips) and got Presley to reveal his race in an interview by asking which high school the 19-year-old singer attended (knowing that, because of segregation, his audience would readily know what race attended which schools) (from wiki).
 
-# Lecture 5
+# Elvis Presley, Chuck Berry, and the Golden Age of Rock
 ## Part A: Elvis Presley
 But record has two sides: A side, B side. They go straight back to studio, then start to work with the second song: “Blue Moon of Kentucky”. Originally country western, Bill Monroe, 1946 – Recording released in 1947. Scotty, Bill, Sam Phillips are going to work “Blue Moon of Kentucky” the way they worked that with 1954 “That’s Alright Mamma”. And try to shape it to something new: Rock 'n' Roll. First, they have a early version, not final version, only go once AABA, and you can hear Sam Phillips come into the room and talk to the band.
 
@@ -480,7 +480,7 @@ So then we get to late 1950s. **The Great Extinction** ends the careers of Rock 
 - Little Richard – October ’57, he takes himself out of the game of Rock 'n' Roll.  His sexuality and faith.
 - Buddy Holly – Dies in a plane crash, February ’59 – along with Ritchie Valens and “The Big Bopper” (JP Richardson)
 
-# Lecture 6
+# Producers, Technology, and Surf Music
 ## Part A: Return To Division Of Labour
 **The “In-between” Years (1959-1963)**: The end of the “Golden Age” of Rock and Roll, to the arrival of The Beatles (February, 1964)
 -	Major Labels recognize that Rock and Roll is not a fad
@@ -579,7 +579,7 @@ Now listen to the woo's in the background. Brian Wilson is the heart: write own 
 
 Each part is precise. Electric cellos, early type of synthesizer: theremin. And listen to the complexity in the background. Next week we are going to visit The Beatles who changes how albums are recorded. There are two artists that the Beatles respect and fear: Bob Dylan and Brian Wilson. The song writing and production approach that Brian was taking on Beach Boys' albums was a huge influence on Beatles. Unfortunately, the band depends entirely on Brian, and Brian suffers mental illness. Then decline in popularity through late 1960s.
 
-# Lecture 7
+# Skiffle, The Beatles, and the Road to Sgt. Pepper
 ## Part A: The New Frontier / Skiffle
 The US was in desperate need of something to distract itself. Particularly the young people. And The Beatles came along at exactly that moment. Now why did they need this distraction?
 
@@ -689,7 +689,7 @@ Why? cause screaming girls have not gone away.
 
 March of 1966. The Beatles have done interviews in major British newspaper. They have developed a level respect among most people, particularly John. John has a healthy respect for spiritual traditions. He said we are bigger than Jesus now. He didn't mean it literally. As on their way to the US, a quote is published taken out of the context: John Lennon "Beatles Bigger than Jesus". By the time plane landed, a protest has started. And then the Beatles decided that they had enough. The final show on tour, August 29th – Candlestick park in San Francisco. Then they made astonishing announcement: they were retiring from public performance. Instead, focus on the work in recording studio.
 
-# Lecture 8
+# The Beatles and the British Blues Revival
 ## Part A: The Beatles (Part 2)
 In February, 1967, they release a most remarkable song, “Strawberry Fields Forever”. [Music video](https://www.youtube.com/watch?v=HtUH9z_Oey8). The next album, June 1967 – “Sgt. Pepper’s Lonely Hearts Club Band”. It is the most influential album ever released. It marked the pinnacle of what The Beatles has been working towards through this middle period of Help, Rubber soul and Revolver. They were clearly pushing away from the idea of the individual songs being the focus of their work to a larger collection of songs.
 
@@ -765,7 +765,7 @@ In 1969, they released an album "Tommy". In 1973, “Quadrophenia”. They were 
 
 [The “Overture” from “Tommy”](https://www.youtube.com/watch?v=MKdusyjiuvY&list=PLBDDC70B0CEC14AF1&index=1)
 
-# Lecture 9
+# Soul, Motown, Stax, and Funk
 ## Part A: Intro To Soul / Motown
 All cultures are political. Not left/right wing, but in a more fundamental way, where power resides.
 
@@ -896,7 +896,7 @@ Idea of the community is still brought out. In his funk recordings, you hear him
 
 One final point, circular, repeats. And James brings the riffs back. Soul music, as we will see when we get into Hip Hop, with James Brown and transitions to funk, is the beginnings of return to the importance of riff-based music.
 
-# Lecture 10
+# The Folk Revival and Counter Culture
 ## Part A: The Folk Revival
 Counter culture.
 
@@ -1000,7 +1000,7 @@ When she comes in with lyrics, we first hear drug reference: *one pill makes you
 
 The structure of this song: keep introducing new ideas. The song starts quietly then becomes louder gradually, more intense. The end of the song is the most intense moment. It is described as crescendo. It's not a representation of naughty, it's representation of drug experience/drug rush.
 
-# Lecture 11
+# Counter Culture and Political Music
 ## Part A: Counter Culture
 Particularly in the counter culture, many different styles of music fit generally under this  umbrella of counter culture, this is because to a great extent, the counter culture was aesthetic philosophy. The west coast counter culture reaches its peak very much in the summer of 1967. It is remembered as the [summer of love](https://en.wikipedia.org/wiki/Summer_of_Love).
 
@@ -1122,7 +1122,7 @@ What was the big philosophical difference between counter culture and hard rock/
 
 Outro: (Don't Fear) The Reaper.
 
-# Lecture 12
+# Punk, Disco, and the Origins of Hip Hop
 ## Part A: Punk
 The Beatles and other bands put the idea of popular musicians to become actual "artist". The music industry is also growing at an extraordinary rate during mid to late 60s. The concerts are bigger, the albums are more elaborate. Many people like this stuff. But increasingly, there were few who felt that somehow our popular music is losing its way, and this leads us to a style, **punk**.
 

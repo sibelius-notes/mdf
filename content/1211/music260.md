@@ -2,7 +2,7 @@
 title: "MUSIC 260: Symphony"
 prof: "Laura Gray"
 ---
-# Lesson 1: What is a Symphony?
+# What is a Symphony?
 
 ## A Definition
 
@@ -65,7 +65,7 @@ Philharmonia Orchestra — video guide to the instruments of the orchestra:
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/videoseries?list=PLqR22EoucCyccs5J639SCefaM7mD9dMSz" frameborder="0" allowfullscreen></iframe></div>
 
 
-# Lesson 2: Origins of the Symphony
+# Origins of the Symphony
 
 ## The Enlightenment and the Rise of the Audience
 
@@ -162,7 +162,7 @@ Since sonata form will be central to understanding every symphony we study, a qu
 The key scheme is the crucial element: we start in the tonic, move away from it, and return. As we will see, different composers handle every aspect of this scheme differently — and those differences are what make the history of the symphony so fascinating.
 
 
-# Lesson 3: The Classical Symphony — Early Haydn
+# The Classical Symphony — Early Haydn
 
 ## Joseph Haydn (1732–1809)
 
@@ -252,7 +252,7 @@ Even in these early symphonies, we can see Haydn transforming the genre:
 At the end of the day, what is really most important is that this music is so vital and full of life, and still has much to offer us today. We will see how Haydn took it from this point in his later symphonies.
 
 
-# Lesson 4: The Classical Symphony — Later Haydn
+# The Classical Symphony — Later Haydn
 
 ## Haydn's International Success
 
@@ -293,7 +293,7 @@ Symphony No. 104 was Haydn's last symphony, composed in London and premiered at 
 **Movement IV** (Monothematic sonata form): The primary theme is based on a **Croatian folksong**, accompanied by a drone ("bagpipe") bass. Its intervals — fifths and major/minor seconds — echo the first movement's theme. The transition is also derived from those same intervals. The closing theme is the only unrelated material. The development and recapitulation are fairly standard, but the coda is expanded in length, making the conclusion more serious and weighty than the folk-song opening might suggest.
 
 
-# Lesson 5: Mozart and the Symphony
+# Mozart and the Symphony
 
 ## Wolfgang Amadeus Mozart (1756–1791)
 
@@ -363,7 +363,7 @@ A fugue-like section appears before the second theme. But it is the **coda** (m.
 Mozart's late-style symphonies were highly complex. They were criticized by critics, baffled audiences, and challenged orchestras who might have had only one rehearsal and needed to sight-read. But they marked a critical **transition in the symphonic genre**: "from utilitarian music to art music" — from a genre of little significance to a work on which composers labored carefully. The next stage would be Beethoven's treatment of the symphony.
 
 
-# Lesson 6: Classicism to Romanticism — Beethoven
+# Classicism to Romanticism — Beethoven
 
 ## Ludwig van Beethoven (1770–1827)
 
@@ -410,7 +410,7 @@ Perhaps the most famous symphony ever written, the Fifth is built almost entirel
 Beethoven's symphonies cast a long shadow. Every subsequent composer had to reckon with what he had done to the genre.
 
 
-# Lesson 7: Schubert and the Early Romantic Symphony
+# Schubert and the Early Romantic Symphony
 
 ## Romanticism in Music
 
@@ -437,7 +437,7 @@ Schubert's *Unfinished Symphony* has only two completed movements — one of mus
 Schubert also wrote the *Great* Symphony No. 9 in C major, a work of enormous proportions that looks forward to the expanded symphonies of Bruckner and Mahler. Its "heavenly lengths" (as Schumann described them) pushed the boundaries of what a symphony could contain.
 
 
-# Lesson 8: Mendelssohn and Schumann
+# Mendelssohn and Schumann
 
 ## Felix Mendelssohn (1809–1847)
 
@@ -460,7 +460,7 @@ Schumann was primarily known as a piano composer and music critic before turning
 Schumann's orchestration has sometimes been criticized as thick or heavy, but his formal innovations were profound. The idea of a symphony as a continuous, organic growth from a small seed of thematic material would become one of the most important concepts in late-Romantic symphonic thinking.
 
 
-# Lesson 9: Berlioz and the Program Symphony
+# Berlioz and the Program Symphony
 
 ## The 19<sup>th</sup>-Century Orchestra
 
@@ -499,7 +499,7 @@ The symphony has **five movements** (like Beethoven's Pastoral Symphony No. 6), 
 *Berlioz, Symphonie fantastique — complete performance*
 
 
-# Lesson 10: Liszt and the Symphonic Poem
+# Liszt and the Symphonic Poem
 
 ## Franz Liszt (1811–1886)
 
@@ -531,7 +531,7 @@ A slow introduction in C major presents a **3-note motive** that is transformed 
 Liszt also wrote programmatic symphonies — the *Faust Symphony* (1854) and *Dante Symphony* (1856) — but it was the symphonic poem that became his most influential contribution. Composers across Europe adopted the genre. His thematic transformation technique and chromatic harmonies helped form Wagner's style after 1854. Most significantly, Liszt challenged the legacy of Beethoven and impacted every symphonic composer for the rest of the 19<sup>th</sup> century.
 
 
-# Lesson 11: Brahms
+# Brahms
 
 ## The Dispute: Brahms versus Wagner
 
@@ -569,7 +569,7 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 *Brahms, Symphony No. 1 — IV. Adagio–Allegro non troppo*
 
 
-# Lesson 12: Dvořák and Nationalism
+# Dvořák and Nationalism
 
 ## Nationalism in Music
 
@@ -600,7 +600,7 @@ Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream sym
 *Dvořák, Symphony No. 8 — complete*
 
 
-# Lesson 13: Tchaikovsky
+# Tchaikovsky
 
 ## Nationalism in Russian Music
 
@@ -635,7 +635,7 @@ Composed during stressful personal circumstances, this symphony was supported by
 *"In the Field Stood a Birch Tree" — folk song*
 
 
-# Lesson 14: Mahler
+# Mahler
 
 ## Gustav Mahler (1860–1911)
 
@@ -664,7 +664,7 @@ The symphony went through multiple versions: first performed in Budapest in 1889
 *Mahler, Symphony No. 1 — complete*
 
 
-# Lesson 15: Elgar and the Modern Symphony
+# Elgar and the Modern Symphony
 
 ## Sir Edward Elgar (1857–1934)
 
@@ -697,7 +697,7 @@ An article written a few weeks after the premiere addressed England's reputation
 *Elgar, Symphony No. 1 — complete*
 
 
-# Lesson 16: Sibelius
+# Sibelius
 
 ## Jean Sibelius (1865–1957)
 
@@ -726,7 +726,7 @@ This approach is similar to Schumann's Fourth Symphony — a superficial similar
 *Sibelius, Symphony No. 5 — complete*
 
 
-# Lesson 17: Prokofiev and Neoclassicism
+# Prokofiev and Neoclassicism
 
 ## Sergey Prokofiev (1891–1953)
 
@@ -763,7 +763,7 @@ The "Classical Symphony" as a neoclassical work:
 *Prokofiev, Classical Symphony — complete*
 
 
-# Lesson 18: Shostakovich
+# Shostakovich
 
 ## The Arts in the Soviet Union
 

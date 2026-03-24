@@ -3,15 +3,13 @@ title: "ENBUS 375: Business and Environment"
 prof: ""
 ---
 
-# ENBUS 375: Fashion, Style & Sustainability
-
 **Instructor:** Dr. Jennifer Lynes, Associate Professor, School of Environment, Enterprise and Development (SEED), University of Waterloo. Office hours: Wednesdays 10:00 am to 12:00 pm.
 
-This course explores the idea of "fashion" — including trends in clothing, accessories, footwear and cosmetics — through a lens of sustainability. It is offered entirely online via LEARN (term 1215, Spring 2021). The course weaves together the history of consumer culture, the mechanics of the fashion industry, the environmental and social costs of how clothing is produced and discarded, and emerging alternatives ranging from ethical sourcing to the minimalist movement and circular economy design.
+This course explores the idea of "fashion" — including trends in clothing, accessories, footwear and cosmetics — through a lens of sustainability. The course weaves together the history of consumer culture, the mechanics of the fashion industry, the environmental and social costs of how clothing is produced and discarded, and emerging alternatives ranging from ethical sourcing to the minimalist movement and circular economy design.
 
 ---
 
-# Week 1: Looking Inward — What Is Fashion and What Is in Your Closet?
+# Looking Inward — What Is Fashion and What Is in Your Closet?
 
 ## Introduction to the Course
 
@@ -71,7 +69,7 @@ The pandemic thus simultaneously disrupted the fashion industry and accelerated 
 
 ---
 
-# Week 2: A Brief History of Consumerism
+# A Brief History of Consumerism
 
 ## Opening Frame: The Devil Wears Prada and Fashion's Invisible Hand
 
@@ -175,7 +173,7 @@ The Week 2 lecture closes with an image of the sculpture *The Way We Eat* (2001)
 
 ---
 
-# Week 2 (Supplementary): 20 Iconic Items That Changed Fashion History
+# 20 Iconic Items That Changed Fashion History
 
 As a companion to the history-of-consumption lecture, Week 2 also includes a slide presentation on twenty iconic fashion items, prepared by Dr. Lynes and Heather Brown, inspired by Federico Rocca's book *A Matter of Fashion: 20 Iconic Items That Changed the History of Style* (2013). The items selected include foundational garments and accessories whose histories illuminate broader themes of fashion, culture, industry, and sustainability.
 
@@ -203,7 +201,7 @@ As a companion to the history-of-consumption lecture, Week 2 also includes a sli
 
 ---
 
-# Week 3: Killer Fashion — The Monsters in Your Closet
+# Killer Fashion — The Monsters in Your Closet
 
 ## Fashion and Its Hidden Dangers
 
@@ -217,7 +215,7 @@ These historical examples are not merely curious antiquities. They raise contemp
 
 ---
 
-# Week 4: Fast Fashion vs. Sustainable Fashion
+# Fast Fashion vs. Sustainable Fashion
 
 ## The Rise of Fast Fashion
 
@@ -247,7 +245,7 @@ The tension between these dimensions is real: a garment can be environmentally s
 
 ---
 
-# Week 5: How Is Clothing Labelled?
+# How Is Clothing Labelled?
 
 ## The Proliferation of Eco-Labels
 
@@ -261,7 +259,7 @@ Key certification standards relevant to fashion include the **Global Organic Tex
 
 ---
 
-# Week 6: Textiles and Their Impact
+# Textiles and Their Impact
 
 ## The Environmental Profile of Major Fibers
 
@@ -281,7 +279,7 @@ After fiber, dyeing and finishing are the most environmentally intensive stages 
 
 ---
 
-# Week 7: Alternative Textiles and Bio-Based Innovation
+# Alternative Textiles and Bio-Based Innovation
 
 ## The Search for Sustainable Fibers
 
@@ -295,7 +293,7 @@ The course includes a guest podcast by **Amaryah DeGroot** on the challenges and
 
 ---
 
-# Week 8: Cosmetics and Their Impacts
+# Cosmetics and Their Impacts
 
 ## The Beauty Industry and Sustainability
 
@@ -307,7 +305,7 @@ The cosmetics and personal care industry is closely intertwined with the fashion
 
 ---
 
-# Week 9: Supply Chain Responsibility — A Circular Economy Perspective
+# Supply Chain Responsibility — A Circular Economy Perspective
 
 ## Understanding Fashion Supply Chains
 
@@ -327,7 +325,7 @@ The course features a guest podcast by **Prof. Komal Habib** on fashion and the 
 
 ---
 
-# Week 10: Re-imagining the Industry — Sustainable Design from the Ground Up
+# Re-imagining the Industry — Sustainable Design from the Ground Up
 
 ## Design as Intervention
 
@@ -341,7 +339,7 @@ The course includes a guest podcast from **Mikayla Wujec**, founder of **Alder A
 
 ---
 
-# Week 11: Re-Design Through the 6Rs
+# Re-Design Through the 6Rs
 
 ## The 6Rs Framework
 
@@ -365,7 +363,7 @@ The **"If I had $500"** assignment in this week challenges students to practice 
 
 ---
 
-# Week 12: Applying Sustainability Principles — Synthesis and Forward Thinking
+# Applying Sustainability Principles — Synthesis and Forward Thinking
 
 ## From Theory to Practice
 

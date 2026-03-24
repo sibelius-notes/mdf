@@ -19,7 +19,7 @@ Can we take a general aesthetics of art and apply it to music? There are certain
 This course takes a **chronological approach**, tracing how aestheticians and theorists build on — or react against — the work of their predecessors, shaped by the concerns, questions, and obsessions of their own time. The approach is broad, attending to the sociological, political, artistic, technological, and scientific tendencies in different periods that shape how people think about music and its meaning.
 
 
-# Lesson 1a: What Is the Aesthetics of Music?
+# What Is the Aesthetics of Music?
 
 ## Opening: A Question Worth Asking
 
@@ -98,7 +98,7 @@ None of the big questions have definitive answers. That is not a failure of the 
 So: what is music? We begin there, and we will return there, again and again, throughout the term.
 
 
-# Lesson 1b: Aesthetics of Antiquity
+# Aesthetics of Antiquity
 
 ![Relief of Apollo and Marsyas contest, Mantineia, 350-320 BCE](/pics/332/332-1b-apollo-marsyas-relief-mantineia.jpg)
 
@@ -207,7 +207,7 @@ These three thinkers gave Western musical thought most of its foundational vocab
 As you continue through this course, you will see these ideas returning in new forms — in medieval theory, in Renaissance humanism, in the debates of the Baroque era. The questions Pythagoras, Plato, and Aristotle were asking are, in important ways, still our questions. What does music do? Should it be free or regulated? Is it mathematics, ethics, therapy, or pleasure? Think about what struck you as most surprising or most familiar in these readings — that reaction is itself a form of musical self-knowledge.
 
 
-# Lesson 2a: Medieval Aesthetics of Music
+# Medieval Aesthetics of Music
 
 ## Boethius and the Inherited World
 
@@ -269,7 +269,7 @@ The *Scholia enchiriadis* also adds something Boethius did not emphasize: a rein
 
 ---
 
-# Lesson 2b: Renaissance Aesthetics
+# Renaissance Aesthetics
 
 ## A New World Begins
 
@@ -340,7 +340,7 @@ Tinctoris, writing in 1477, introduces a different answer: music is what you hea
 This is the fundamental shift of Renaissance music aesthetics, and it is why these four texts — Boethius, the *Scholia enchiriadis*, Tinctoris, and Glarean — form such a coherent intellectual sequence. They are not just four different authors with opinions about music. They mark the passage from a world in which music was a property of the cosmos to a world in which music was a property of human beings listening to each other.
 
 
-# Lesson 3a: Baroque Aesthetics
+# Baroque Aesthetics
 
 ## The Late Renaissance and the Question of Rules
 
@@ -389,7 +389,7 @@ Mattheson also helps us see that the Baroque period was not a monolith. Between 
 What connects Artusi's complaint, Monteverdi's defense, Descartes's physiology, and Mattheson's codification is a single underlying question: what is music's relationship to human emotion? The Baroque answer — that music is an art of emotional persuasion, rooted in rhetoric, grounded in the body, and aimed at moving the passions of the listener — shaped not just a period, but a way of thinking about what music can do that echoes far beyond the seventeenth and eighteenth centuries.
 
 
-# Lesson 3b: Classical Aesthetics
+# Classical Aesthetics
 
 ## The Classical Era in Music
 
@@ -436,7 +436,7 @@ The culmination of this British tradition comes, perhaps unexpectedly, from the 
 What began as a crisis — how to explain music without words — ended as a liberation. The aesthetic journey from imitation to expression to autonomy is one of the most consequential intellectual shifts in the history of Western music, and its effects are still with us every time we sit in a concert hall and listen to a symphony, a string quartet, or a sonata, expecting the music to speak for itself.
 
 
-# Lesson 4: Romantic Aesthetics of Music
+# Romantic Aesthetics of Music
 
 ## The Romantic Turn
 
@@ -571,7 +571,7 @@ Wagner translated these ideas into compositional practice and cultural program: 
 What resonates across all five thinkers, despite their disagreements, is the shared conviction that music matters — that it is not mere entertainment or agreeable sensation, but something that touches the deepest structures of human experience and perhaps of existence itself. The question they argue about is not whether music is important, but why.
 
 
-# Lesson 5: Early Twentieth Century — A New Sound and a New Aesthetic
+# Early Twentieth Century — A New Sound and a New Aesthetic
 
 ## Introduction: Dreamers Beyond the Tradition
 
@@ -668,7 +668,7 @@ In making this argument, Varèse enters a long-standing philosophical debate abo
 Together, these three figures mark a decisive turn. The tradition they inherited was not bankrupt to them in the way it might have seemed to a conservative critic: they knew it, loved parts of it, and argued with it seriously. But they each looked beyond it with a clarity and an urgency that would echo through the rest of the twentieth century — in Cage's exploration of noise as music, in electronic and computer music, in the entire subsequent history of music that asks: what counts as sound, and what counts as music, and who gets to decide?
 
 
-# Lesson 6a: The Second Viennese School
+# The Second Viennese School
 
 ## Vienna ca. 1900: A City of Scandal and Inwardness
 
@@ -785,7 +785,7 @@ Webern is emphatic that this process was not cold, cerebral, or mathematical. He
 Taken together, the writings of Schoenberg, Berg, and Webern form a remarkably coherent intellectual position. They share an unshakeable commitment to **unity, comprehensibility, and coherence** as the ultimate values of musical composition. They share a reading of Western music history as a progressive emancipation of dissonance, in which their own work is the natural culmination rather than a departure. And they share an awareness — sometimes anxious, sometimes defiant — that the audiences of their time were not always prepared to follow them. The Society for Private Music Performances was one institutional response to that gap; the twelve-tone system was the compositional one. In both cases, the goal was the same: to make music that could stand on its own, unified and self-sufficient, in the absence of the tonal framework that had sustained Western music for three centuries.
 
 
-# Lesson 6b: Music, Society, and the Culture Industry
+# Music, Society, and the Culture Industry
 
 What does it mean for a piece of music to be *honest*? Is a symphony less truthful because it sells well? Can a composer working in a tonal idiom in 1930 be taken seriously, or has history already rendered that choice a kind of lie? These are not rhetorical provocations — they are among the central questions that animate the two critics at the heart of this lesson: the German philosopher and sociologist **Theodor W. Adorno** and the British composer-critic **Constant Lambert**. Writing from very different positions and temperaments, both men arrived at a shared conviction: that the musical life of the early twentieth century was in serious trouble, that something essential had been lost or betrayed, and that the fashionable solutions on offer were making things worse. Their diagnoses, however, diverged in illuminating ways.
 
@@ -890,7 +890,7 @@ Adorno's answer is the more uncompromising: the historical logic of the material
 Whether one finds these arguments ultimately persuasive or not, they raise questions about musical value that no serious student of the aesthetics of music can afford to dismiss. And they point, together, toward a deeper claim: that music is not merely sound, but a form of historical testimony. What a composer chooses, how they choose it, and what they refuse — all of this speaks, whether they intend it to or not, about the world in which they are making music and the world they imagine when they imagine that music being heard.
 
 
-# Lesson 7: Post-War Directions and Debates — Cage, Boulez, Babbitt
+# Post-War Directions and Debates — Cage, Boulez, Babbitt
 
 ## The Post-War Musical Landscape
 
@@ -985,7 +985,7 @@ What unites all three is the seriousness with which they took the question of wh
 *Key works and texts for this lesson:* Pierre Boulez, "Schoenberg Is Dead" (1952; revised translation 1968); Boulez, *Structures Ia* for two pianos (1952); Milton Babbitt, "The Composer as Specialist" / "Who Cares If You Listen?" (*High Fidelity*, 1958); John Cage, "Experimental Music" (lecture, 1957); Cage, *4'33"* (1952), first performance by David Tudor, Maverick Concert Hall, Woodstock, New York, August 29, 1952.
 
 
-# Lesson 8: New Thoughts on Musical Expression
+# New Thoughts on Musical Expression
 
 ![Susanne Langer](/pics/332/332-8-susanne-langer-portrait-photo.png)
 
@@ -1028,7 +1028,7 @@ And so Langer arrives at her own definition of **significant form** as it applie
 This is why music moves us so powerfully and yet resists every attempt to say exactly what it means. Its significant forms have an ambivalence of content that words simply cannot have. A great piece of music can feel deeply true — true to something we recognize in our own experience — without our ever being able to pin down in a sentence what that truth is. For Langer, this is not a weakness of music but its unique and irreplaceable strength. Music does what no other art and no language can do: it gives us the forms of feeling themselves, rendered in sound, available for contemplation, and permanently open to new understanding.
 
 
-# Lesson 9: The New Musicology
+# The New Musicology
 
 ## Susan McClary and Feminist Musicology
 

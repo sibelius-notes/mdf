@@ -5,7 +5,7 @@ prof: "Raffi Budakian"
 
 # Unit 1: Foundations of Quantum Mechanics
 
-## Lecture 1: Introduction and Historical Background
+## Introduction and Historical Background
 
 Quantum mechanics grew out of the failures of classical physics in the late nineteenth and early twentieth centuries. Classical physics predicted a continuous distribution of energies for systems like blackbody radiation, but experiments showed discrete spectra. The photoelectric effect could not be explained by classical wave theory. These failures drove a revolution in how we understand the microscopic world.
 
@@ -17,7 +17,7 @@ The central theme of this course is the **Stern-Gerlach experiment**, which expo
 
 ---
 
-## Lecture 2: The Stern-Gerlach Experiment I
+## The Stern-Gerlach Experiment I
 
 ### The Physical Setup
 
@@ -73,7 +73,7 @@ where \(a\) and \(b\) are complex coefficients. You may also see \(|{+}\rangle =
 
 ---
 
-## Lecture 3: The Stern-Gerlach Experiment II — Quantum Interference
+## The Stern-Gerlach Experiment II — Quantum Interference
 
 ### Experiment 4: The Absence of "Which-Path" Information
 
@@ -119,7 +119,7 @@ The cross-term \(2a_1 a_2\cos(\phi_1 - \phi_2)\) is the **interference term**. I
 
 ---
 
-## Lecture 4: Quantum State Vectors and Hilbert Space
+## Quantum State Vectors and Hilbert Space
 
 ### Hilbert Space
 
@@ -175,7 +175,7 @@ The normalization constant \(C\) for a state \(|\psi\rangle = 3|{+}\rangle + 2i|
 
 ---
 
-## Lecture 5: Representation and Change of Basis
+## Representation and Change of Basis
 
 ### Eigenstates of \(S_x\)
 
@@ -211,7 +211,7 @@ U_{z\to x} = \frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1 \\ 1 & -1\end{pmatrix}
 
 ---
 
-## Lecture 6: Operators and the Spin Angular Momentum Matrices
+## Operators and the Spin Angular Momentum Matrices
 
 ### Postulates 2 and 3
 
@@ -243,7 +243,7 @@ Each Pauli matrix squares to the identity: \(\sigma_i^2 = \mathbf{1}\).
 
 ---
 
-## Lecture 7: Projection Operators and Postulate 5
+## Projection Operators and Postulate 5
 
 ### The Projection Operator
 
@@ -291,7 +291,7 @@ The completeness relation shows that not observing which path removes the \(x\)-
 
 ---
 
-## Lecture 8: The Bloch Sphere and Rotation Operators
+## The Bloch Sphere and Rotation Operators
 
 ### Arbitrary Spin-\(\frac{1}{2}\) States
 
@@ -341,7 +341,7 @@ A rotation by \(4\pi\) is needed to fully recover the original state. This **spi
 
 # Unit 2: Commutation Relations and the Uncertainty Principle
 
-## Lecture 9: Commutation Relations for Angular Momentum
+## Commutation Relations for Angular Momentum
 
 ### The Commutator
 
@@ -371,7 +371,7 @@ where \(\varepsilon_{123} = \varepsilon_{231} = \varepsilon_{312} = +1\) and \(\
 
 ---
 
-## Lecture 10: Expectation Values and RMS Uncertainty
+## Expectation Values and RMS Uncertainty
 
 ### The Expectation Value
 
@@ -397,7 +397,7 @@ For the states \(|{\pm}\rangle\): \(\Delta S_z = 0\) (definite outcome), but \(\
 
 ---
 
-## Lecture 11: The Uncertainty Principle
+## The Uncertainty Principle
 
 ### Statement
 
@@ -423,7 +423,7 @@ Indeed, \(\Delta S_x = \Delta S_y = \hbar/2\), so \(\Delta S_x\,\Delta S_y = \hb
 
 ---
 
-## Lecture 12: The Density Operator
+## The Density Operator
 
 ### Pure and Mixed Ensembles
 
@@ -440,7 +440,7 @@ The expectation value of any observable is \(\langle\hat{A}\rangle = \mathrm{Tr}
 
 # Unit 3: Time Evolution
 
-## Lecture 13: The Hamiltonian and the Schrödinger Equation
+## The Hamiltonian and the Schrödinger Equation
 
 ### Time Evolution Operator
 
@@ -480,7 +480,7 @@ with \(\omega_n = E_n/\hbar\). This oscillation frequency \(\omega_{21} = (E_2 -
 
 ---
 
-## Lecture 14: The Ammonia Molecule
+## The Ammonia Molecule
 
 The ammonia molecule NH\(_3\) provides a beautiful example of quantum dynamics arising from a superposition of energy eigenstates. The nitrogen atom can sit on either side of the plane of hydrogen atoms, giving two classical configurations \(|1\rangle\) and \(|2\rangle\).
 
@@ -534,7 +534,7 @@ At resonance, \(\Omega = \omega_1\) and \(P_{+\to -} = \sin^2(\omega_1 t/2)\), r
 
 # Unit 4: Wave Mechanics in Position Space
 
-## Lecture 18: Quantum Mechanics in the Position Basis
+## Quantum Mechanics in the Position Basis
 
 ### Extending to Infinite Dimensions
 
@@ -598,7 +598,7 @@ The action of a function of \(\hat{x}\) on a wavefunction is simple multiplicati
 
 ---
 
-## Lecture 19: The Momentum Operator
+## The Momentum Operator
 
 ### Momentum as Generator of Translation
 
@@ -644,7 +644,7 @@ There is no quantum state in which a particle simultaneously has definite positi
 
 ---
 
-## Lecture 20: The Infinite Square Well
+## The Infinite Square Well
 
 ### The Hamiltonian in Position Space
 
@@ -694,7 +694,7 @@ Several remarkable features:
 
 ---
 
-## Lecture 21: The Finite Square Well
+## The Finite Square Well
 
 For the **finite square well** \(V(x) = -V_0\) for \(-a < x < a\) (and \(0\) outside), the wavefunctions in the classically forbidden regions are now exponentially decaying rather than strictly zero:
 
@@ -708,7 +708,7 @@ The number of bound states (states with \(E < 0\)) is finite and depends on the 
 
 ---
 
-## Lecture 22: Time Evolution and Position-Momentum Uncertainty
+## Time Evolution and Position-Momentum Uncertainty
 
 ### Time Evolution in the Infinite Square Well
 
@@ -734,7 +734,7 @@ The product \(\Delta x\,\Delta p > \hbar/2\) for all \(n\), consistent with the 
 
 # Unit 5: The Quantum Harmonic Oscillator
 
-## Lecture 23: The Quantum Harmonic Oscillator I — Energy Spectrum
+## The Quantum Harmonic Oscillator I — Energy Spectrum
 
 ### The Harmonic Potential
 
@@ -792,7 +792,7 @@ The raising and lowering operators act as:
 
 ---
 
-## Lecture 24: The Quantum Harmonic Oscillator II — Eigenfunctions
+## The Quantum Harmonic Oscillator II — Eigenfunctions
 
 ### The Ground-State Wavefunction
 
@@ -836,7 +836,7 @@ The ground state saturates the uncertainty principle: \(\Delta x\,\Delta p = \hb
 
 ---
 
-## Lecture 25: The Quantum Harmonic Oscillator III — Classical Comparison
+## The Quantum Harmonic Oscillator III — Classical Comparison
 
 At large quantum numbers, the QHO probability density \(|\psi_n(x)|^2\) increasingly resembles the classical probability distribution: a particle spending more time where it moves slowly (near the turning points). This is the **correspondence principle** — quantum mechanics approaches classical mechanics in the limit of large quantum numbers.
 
@@ -846,7 +846,7 @@ Classically, the probability density is \(\rho(x) = 1/(\pi\sqrt{A^2 - x^2})\) fo
 
 # Unit 6: Free Particles and Wave Packets
 
-## Lecture 26: Free Particle Eigenstates
+## Free Particle Eigenstates
 
 For \(V(x) = 0\), the Schrödinger equation gives oscillatory solutions:
 
@@ -876,7 +876,7 @@ The wavefunction in position space and momentum space are related by the **Fouri
 
 ---
 
-## Lecture 27: The Wave Packet
+## The Wave Packet
 
 A **wave packet** is a superposition of momentum eigenstates that is localized in space:
 
@@ -906,7 +906,7 @@ For a free particle, \(\omega = \hbar k^2/(2m)\), so different momentum componen
 
 ---
 
-## Lecture 28: Examples — Wave Packets and the Delta-Function Potential
+## Examples — Wave Packets and the Delta-Function Potential
 
 ### Rectangular Wave Packet
 
@@ -932,7 +932,7 @@ and wavefunction \(\psi(x) = \sqrt{m\alpha/\hbar^2}\,e^{-m\alpha|x|/\hbar^2}\).
 
 # Unit 7: Scattering and Tunneling
 
-## Lecture 29: Scattering from Localized Potentials
+## Scattering from Localized Potentials
 
 For a particle with energy \(E > 0\) incident on a localized potential well or barrier, the wavefunction in each region has the general form:
 
@@ -958,13 +958,13 @@ T = \frac{4k_1^2 k_2^2}{4k_1^2 k_2^2 + (k_1^2 - k_2^2)^2\sin^2(2k_2 a)}
 
 ---
 
-## Lecture 30: Scattering Examples
+## Scattering Examples
 
 For a finite square well of depth 8 eV with 5 bound states, electrons are transmitted with unit probability (\(T = 1\)) at kinetic energy 13 eV. The resonance condition \(2k_2 a = n\pi\) occurs at energies \(E_n^{\mathrm{res}} = \hbar^2(n\pi)^2/(8ma^2) - V_0\). Complete transmission also occurs at higher resonance energies corresponding to higher \(n\).
 
 ---
 
-## Lecture 31: Tunneling
+## Tunneling
 
 ### Tunneling Through a Barrier
 
@@ -996,7 +996,7 @@ In an STM, a sharp metal tip is brought within a few angstroms of a conducting s
 
 # Unit 8: Entanglement and the Foundations of Quantum Mechanics
 
-## Lecture 32: The EPR Paradox and Bell Inequalities
+## The EPR Paradox and Bell Inequalities
 
 ### Einstein-Podolsky-Rosen Paradox
 

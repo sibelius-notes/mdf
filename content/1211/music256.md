@@ -2,7 +2,7 @@
 title: "MUSIC 256: Music Since 1900"
 prof: "Laura Gray"
 ---
-# Lesson 1a: The Era and Its Music
+# The Era and Its Music
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 31: pp. 755–63
@@ -53,7 +53,7 @@ Composers in this era had to compete for the concert stage with the established 
 
 ---
 
-# Lesson 1b: 19<sup>th</sup>-Century Precedents
+# 19<sup>th</sup>-Century Precedents
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 770–73
@@ -110,7 +110,7 @@ Rather than following conventional chord progressions, the harmonies move in **p
 
 ---
 
-# Lesson 2a: French Modernism I — Claude Debussy
+# French Modernism I — Claude Debussy
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 781–89
@@ -200,7 +200,7 @@ The form of "Nuages" is a typical three-part **ABA'** structure, but the effect 
 
 ---
 
-# Lesson 2b: French Modernism II — Maurice Ravel
+# French Modernism II — Maurice Ravel
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 787–89
@@ -260,7 +260,7 @@ The closing (m. 79) brings a return of the four-note pattern from the "Prélude 
 
 ---
 
-# Lesson 3a: The Russian Revolution I — Scriabin
+# The Russian Revolution I — Scriabin
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 794–97
@@ -319,7 +319,7 @@ Harmonic relationships are organized by **thirds** rather than by fifths (as in 
 
 ---
 
-# Lesson 3b: The Russian Revolution II — Stravinsky
+# The Russian Revolution II — Stravinsky
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 33: pp. 822–27
@@ -393,7 +393,7 @@ The techniques that contribute to the atmosphere of violence in *The Rite of Spr
 
 ---
 
-# Lesson 4a: The Viennese Revolution I — Arnold Schoenberg
+# The Viennese Revolution I — Arnold Schoenberg
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 33: pp. 804–16
@@ -536,7 +536,7 @@ The implications were significant: the relationship between performer and audien
 
 ---
 
-# Lesson 4b: The Viennese Revolution II — Berg and Webern
+# The Viennese Revolution II — Berg and Webern
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 33: pp. 816–22
@@ -641,7 +641,7 @@ Size does not matter. What makes Webern's Op. 21 a symphony is its intensity, it
 
 ---
 
-# Lesson 5a: Neoclassicism and Parody I — Erik Satie
+# Neoclassicism and Parody I — Erik Satie
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 799–803
@@ -715,7 +715,7 @@ Satie quotes **Parisian popular music** from the cabaret and café-concert world
 
 ---
 
-# Lesson 5b: Neoclassicism and Parody II — Stravinsky
+# Neoclassicism and Parody II — Stravinsky
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 33: pp. 827–32
@@ -775,7 +775,7 @@ The harmonic language of the *Octet* exemplifies what might be called **neotonal
 
 ---
 
-# Lesson 5c: Neoclassicism and Parody III — Milhaud
+# Neoclassicism and Parody III — Milhaud
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 35: pp. 869–76
@@ -811,7 +811,7 @@ The third section (mm. 46–59) returns to the tonic and combines and rearranges
 
 ---
 
-# Lesson 6a: Nationalism — Sibelius and Bartók
+# Nationalism — Sibelius and Bartók
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 32: pp. 797–99; Ch. 33: pp. 832–39
@@ -882,7 +882,7 @@ The piece brilliantly synthesizes Classical and peasant elements:
 
 ---
 
-# Lesson 6b: Music and Politics in the Soviet Union — Shostakovich
+# Music and Politics in the Soviet Union — Shostakovich
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 35: pp. 880–84
@@ -924,7 +924,7 @@ The movement's tone is deeply satirical: it outwardly conforms to the expectatio
 
 ---
 
-# Lesson 7a: American Originals I — Ives and Copland
+# American Originals I — Ives and Copland
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 33: pp. 839–47; Ch. 35: pp. 893–95
@@ -1005,7 +1005,7 @@ The **coda** (m. 288) brings the full ensemble over a slowly descending bass lin
 
 ---
 
-# Lesson 7b: American Originals II — Cowell and Crawford Seeger
+# American Originals II — Cowell and Crawford Seeger
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 35: pp. 887–92
@@ -1063,7 +1063,7 @@ The result is a systematic counterpoint of opposites: expanding against contract
 
 ---
 
-# Lesson 8: Postwar — Messiaen and Boulez
+# Postwar — Messiaen and Boulez
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 37: pp. 919–22, 925–32
@@ -1145,7 +1145,7 @@ Movement 6, "Bourreaux de solitude" ("Executioners of Solitude"), is in the seco
 
 ---
 
-# Lesson 9: John Cage — Indeterminacy and Chance
+# John Cage — Indeterminacy and Chance
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 37: pp. 934–41
@@ -1211,7 +1211,7 @@ The notation is proportional — a note's position in the bar corresponds to its
 
 ---
 
-# Lesson 10: New Sounds — Babbitt, Varèse, and Penderecki
+# New Sounds — Babbitt, Varèse, and Penderecki
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 37: pp. 941–49
@@ -1281,7 +1281,7 @@ The form is **ABA'**, delineated by timbres and articulations:
 
 ---
 
-# Lesson 11a: Minimalism — Steve Reich
+# Minimalism — Steve Reich
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 38: pp. 971–77
@@ -1323,7 +1323,7 @@ Two tape loops of this phrase are superimposed. Because one loop is slightly sho
 
 ---
 
-# Lesson 11b: Accessible Modernism — Pärt and Ligeti
+# Accessible Modernism — Pärt and Ligeti
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 38: pp. 978–79, 983–85
@@ -1384,7 +1384,7 @@ The piece has no definable form in the traditional sense — it unfolds as a ser
 
 ---
 
-# Lesson 12: World Interactions — Bright Sheng
+# World Interactions — Bright Sheng
 
 Readings:
 - Burkholder, Grout, and Palisca, *A History of Western Music*, Ch. 38: pp. 962–65

@@ -2,11 +2,11 @@
 title: "AMATH 455/655: Control Theory"
 prof: "Jun Liu"
 ---
-## Week 1: Introduction and State-Space Models
+# Introduction and State-Space Models
 
-### Lecture 1: Introduction and State-Space Models
+## Introduction and State-Space Models
 
-#### A Minimal Set of Notation
+### A Minimal Set of Notation
 
 Before entering the substance of the course, it is useful to fix notation. We denote by \(\mathbb{R}\) the set of real numbers, and by \(\mathbb{R}^n\) the \(n\)-dimensional Euclidean space. For a vector \(x \in \mathbb{R}^n\), the **Euclidean norm** (also called the \(L^2\) norm or 2-norm) is defined by
 
@@ -14,13 +14,13 @@ Before entering the substance of the course, it is useful to fix notation. We de
 
 We write \(\mathbb{R}^{n \times m}\) for the space of real matrices with \(n\) rows and \(m\) columns, and \(\mathbb{C}\) for the set of complex numbers, where the imaginary unit is denoted \(j\). The time derivative of a function \(x\) of time is written \(x'\); alternative notations include \(\frac{dx}{dt}\) and \(\dot{x}\). Transposes of a vector \(x\) and a matrix \(A\) are written \(x^T\) and \(A^T\), respectively.
 
-#### Introduction
+### Introduction
 
 Feedback is ubiquitous in nature and engineering. It is a fundamental principle that underpins the effects of influence and dependence throughout both biological and technological systems. It is perhaps not an exaggeration to say that living organisms would not exist without feedback, and that most if not all advanced technologies must rely on feedback to achieve their intended functionalities. Control theory can be seen as the systematic mathematical study of feedback.
 
 To make this study mathematically precise, we employ **mathematical models**. The models introduced in this course are the so-called **state-space models**, which are systems of ordinary differential equations equipped with inputs and outputs. Like ordinary differential equations, they may be classified as linear or nonlinear, and as time-varying or time-invariant.
 
-#### Linear Time-Varying (LTV) Systems
+### Linear Time-Varying (LTV) Systems
 
 A control system of the form
 
@@ -31,7 +31,7 @@ y(t) &= C(t)x(t) + D(t)u(t), \tag{1.1b}
 
 is called a **linear time-varying (LTV) system**. Here \(x(t) \in \mathbb{R}^n\), \(u(t) \in \mathbb{R}^k\), and \(y(t) \in \mathbb{R}^m\) are called the **state**, **input**, and **output** of the system, respectively. The coefficient matrices \(A(t) \in \mathbb{R}^{n \times n}\), \(B(t) \in \mathbb{R}^{n \times k}\), \(C(t) \in \mathbb{R}^{m \times n}\), and \(D(t) \in \mathbb{R}^{m \times k}\) are time-varying. The integer \(n\) is called the **dimension** or **order** of the state space.
 
-#### Linear Time-Invariant (LTI) Systems
+### Linear Time-Invariant (LTI) Systems
 
 A special and especially important case arises when all coefficient matrices are constant. An **linear time-invariant (LTI) system** has the form
 
@@ -49,7 +49,7 @@ y &= Cx + Du, \tag{1.3b}
 
 or simply denote it by the quadruple \((A, B, C, D)\). LTI systems will be our primary focus throughout the course.
 
-#### Nonlinear Systems
+### Nonlinear Systems
 
 More generally, a continuous-time control system can be described by a system of ordinary differential equations with inputs and outputs of the form
 
@@ -64,7 +64,7 @@ where \(x \in \mathbb{R}^n\) is the state, \(u \in \mathbb{R}^k\) the input, \(y
 
 are potentially nonlinear functions defining the **state equation** (1.4a) and the **output equation** (1.4b), respectively. We refer to system (1.4) as a **nonlinear system**. We typically assume that both \(f\) and \(h\) are sufficiently smooth, for instance continuously differentiable with respect to both variables. By input, state, and output signals we mean functions \(u(t)\), \(x(t)\), and \(y(t)\) satisfying equations (1.4a) and (1.4b).
 
-#### Linearization around a Trajectory
+### Linearization around a Trajectory
 
 A general nonlinear system can be difficult to analyze directly. A standard technique is **linearization**, which aims to approximate the behavior of the nonlinear system (1.4) in some neighborhood of a given solution. Let \((\bar{x}(t), \bar{u}(t))\) be a solution to (1.4), meaning this pair of functions satisfies the state equation. The linearization of (1.4) around the trajectory \((\bar{x}(t), \bar{u}(t))\) is the LTV system
 
@@ -85,7 +85,7 @@ Here \(\frac{\partial f}{\partial x}\) denotes the **Jacobian matrix** of \(f\) 
 
 The Jacobians \(\frac{\partial f}{\partial u}\), \(\frac{\partial h}{\partial x}\), and \(\frac{\partial h}{\partial u}\) are similarly defined.
 
-#### Linearization around an Equilibrium Point
+### Linearization around an Equilibrium Point
 
 A particularly important special case of the above is linearization around an **equilibrium point**. A pair of vectors \((x^*, u^*) \in \mathbb{R}^n \times \mathbb{R}^k\) is said to be an **equilibrium point (EP)** of the system (1.4) if \(f(x^*, u^*) = 0\). At an equilibrium, the state does not change if the input is held fixed at \(u^*\). The linearization of (1.4) around the equilibrium \((x^*, u^*)\) yields the LTI system
 
@@ -100,15 +100,15 @@ where the constant matrices are
 
 A large body of control theory is concerned with the analysis and design of controllers for stabilizing an otherwise unstable equilibrium — a classical example being the task of balancing an inverted pendulum with one's hand. Because an LTI system accurately captures the local behavior of a nonlinear system near an equilibrium point, the study of LTI systems is of central importance, and this course will primarily focus on them.
 
-#### Some Terminology
+### Some Terminology
 
 A control system of the form (1.2), (1.3), or (1.4) is called **single input (SI)** if \(k = 1\), that is, if \(u \in \mathbb{R}\), and **multiple input (MI)** if \(k > 1\). Similarly, it is **single output (SO)** if \(m = 1\) and **multiple output (MO)** if \(m > 1\). Using this terminology, a system with a single input and single output is called a **SISO system**, while a system with multiple inputs and multiple outputs is called a **MIMO system**.
 
 ---
 
-### Lecture 2: Matrix Exponential and Solutions to LTI Systems
+## Matrix Exponential and Solutions to LTI Systems
 
-#### The Matrix Exponential
+### The Matrix Exponential
 
 For a square matrix \(A \in \mathbb{R}^{n \times n}\), the **matrix exponential** of \(A\) is defined by the power series
 
@@ -138,7 +138,7 @@ It can be shown that this infinite series is well defined and converges element-
 
 Item (5) can be proved using Theorem 2.2 below (left as an exercise). Items (6) and (7) follow from (5) together with (1) and (2). \(\square\)
 
-#### The Fundamental Theorem for LTI Systems
+### The Fundamental Theorem for LTI Systems
 
 The preceding properties of the matrix exponential allow us to solve the unforced LTI system exactly.
 
@@ -164,7 +164,7 @@ By Proposition 2.1(1) and (2), we have \(z(0) = y(0) = x_0\) and
 
 It follows that \(z(t) = x_0\) is constant, and therefore \(y(t) = e^{At}x_0\) for all \(t \in I\). \(\square\)
 
-#### Solutions to LTI Systems with Input
+### Solutions to LTI Systems with Input
 
 When a control input is present, the solution is given by the **variation of constants** (or Duhamel) formula.
 
@@ -182,7 +182,7 @@ When a control input is present, the solution is given by the **variation of con
 
 The formula (2.1a) has a natural interpretation: the first term \(e^{At}x_0\) is the **free response**, describing how the initial state evolves under the unforced dynamics, while the integral term is the **forced response** (or convolution), capturing the effect of the input accumulated over time. In particular, the quantity \(Ce^{At}\) in (2.1b) is the **impulse response** of the output due to the initial state, and the kernel \(Ce^{A(t-\tau)}B\) is the **system's impulse response matrix**.
 
-#### Computing Matrix Exponentials
+### Computing Matrix Exponentials
 
 Given \(A \in \mathbb{R}^{n \times n}\), how does one compute \(e^{At}\) in practice? For numerical work, one uses a computer algebra system. For example, the following MATLAB script computes \(e^{At}\) symbolically for \(A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\):
 
@@ -214,7 +214,7 @@ and the exponential of a single Jordan block is given explicitly by
 
 The procedure for computing \(e^{At}\) is thus as follows. First, find an invertible matrix \(P\) such that \(P^{-1}AP = J\) is in Jordan normal form. Second, compute \(e^{Jt}\) using the block formula above. Third, use Proposition 2.1(3) to obtain \(e^{At} = P e^{Jt} P^{-1}\).
 
-#### Structure of the Matrix Exponential
+### Structure of the Matrix Exponential
 
 One important consequence of the Jordan normal form computation is the following structural result.
 
@@ -228,11 +228,11 @@ This corollary has profound implications for stability: the long-term behavior o
 
 ---
 
-## Week 2: Controllability
+# Controllability
 
-### Lecture 3: Controllability
+## Controllability
 
-#### The Controllability Question
+### The Controllability Question
 
 Consider the LTI system
 
@@ -246,7 +246,7 @@ which we denote simply by \((A, B)\), omitting the output equation for now. From
 
 **Definition 3.1.** The LTI system \((A, B)\) is said to be **controllable** if for any initial state \(x_0 \in \mathbb{R}^n\), any final state \(x_1 \in \mathbb{R}^n\), and any time \(t_1 > 0\), there exists an input \(u \colon [0, t_1] \to \mathbb{R}^k\) such that the solution satisfies \(x(0) = x_0\) and \(x(t_1) = x_1\).
 
-#### The Main Controllability Theorem
+### The Main Controllability Theorem
 
 The following theorem provides four equivalent characterizations of controllability, each offering a different perspective and practical utility.
 
@@ -334,11 +334,11 @@ for all \(t\). This shows \(W(t)\) is not positive definite for any \(t\).
 
 and in particular \(v^T [B\ AB\ \cdots\ A^{n-1}B] = 0\), so the controllability matrix has rank less than \(n\). The proof of the PBH test (statement (4)) is deferred to Lecture 4. \(\square\)
 
-#### The PBH Test in Practice
+### The PBH Test in Practice
 
 **Remark 3.4.** The Popov-Belevitch-Hautus test is commonly referred to as the **PBH test**. To apply it, one need only check \(\mathrm{rank}[A - \lambda I\ \ B] = n\) for eigenvalues \(\lambda\) of \(A\), because for any \(\lambda\) that is not an eigenvalue of \(A\), the matrix \(A - \lambda I\) is already invertible and hence has rank \(n\) on its own.
 
-#### Examples
+### Examples
 
 **Example 3.5.** Consider the LTI system
 
@@ -372,9 +372,9 @@ This matrix has rank 4, so \((A,B)\) is controllable. When both carts are indepe
 
 ---
 
-### Lecture 4: Controllability (continued)
+## Controllability (continued)
 
-#### Controllability under State Transformation
+### Controllability under State Transformation
 
 Before proving the PBH test, we establish that controllability is a property intrinsic to the system and not an artifact of the particular choice of state coordinates. Consider the **state transformation** \(z = Px\), where \(P \in \mathbb{R}^{n \times n}\) is a non-singular matrix. Differentiating and substituting the state equation,
 
@@ -396,7 +396,7 @@ Since \(P\) is non-singular, left-multiplying by \(P\) does not change the rank.
 
 **Remark 4.9.** The above proof also shows that \(\mathcal{C}(A,B)\) and \(\mathcal{C}(PAP^{-1}, PB)\) have the same rank for any non-singular \(P\).
 
-#### Controllable Decomposition
+### Controllable Decomposition
 
 When \((A,B)\) is not controllable, the state space can be decomposed into a part that is reachable by the input and a part that evolves freely and cannot be influenced. This decomposition is formalized as follows.
 
@@ -427,7 +427,7 @@ This matrix clearly has the same rank as \(\mathcal{C}(A_c, B_c) = [B_c\ A_c B_c
 
 *where \((A_c, B_c)\) is controllable (provided \(n_1 > 0\).*
 
-#### Example of Controllable Decomposition
+### Example of Controllable Decomposition
 
 **Example 4.11.** Consider the LTI system
 
@@ -451,7 +451,7 @@ Computing the transformed matrices,
 
 The controllable part is \((A_c, B_c) = \left(\begin{bmatrix}1 & 0 \\ 1 & 1\end{bmatrix}, \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\right)\), and it is straightforward to verify that this pair is indeed controllable by checking that its controllability matrix has rank 2.
 
-#### Proof of the PBH Test
+### Proof of the PBH Test
 
 We can now prove the PBH test, restated here for completeness.
 
@@ -486,9 +486,9 @@ Setting \(w = [0\ v^T] P\), we have \(w \neq 0\) and
 where the last step uses the block calculation above (right-multiplying \([PAP^{-1} - \lambda I\quad PB]\) by \(P\) in the state part). Hence \(\mathrm{rank}[A - \lambda I\ \ B] < n\). The proof is complete. \(\square\)
 
 The PBH test has an elegant interpretation: the system \((A,B)\) is uncontrollable if and only if there exists a left eigenvector of \(A\) that is orthogonal to the range of \(B\). In other words, if the input cannot excite some eigendirection of the dynamics, that mode is forever inaccessible to control.
-## Week 3: Observability and Transfer Functions
+# Observability and Transfer Functions
 
-### Lecture 5: Observability
+## Observability
 
 The preceding lectures established the theory of controllability, which concerns whether a system's state can be driven to any desired value by choosing an appropriate input. The complementary concept, **observability**, addresses the dual question: can the internal state of the system be reconstructed from external measurements? This is of central practical importance, since the state \( x(t) \) is often not directly accessible to measurement; only the output \( y(t) \) is observed.
 
@@ -520,7 +520,7 @@ y(t) &= Cx(t),
 
 and therefore observability of \( (A, B, C, D) \) depends only on the pair \( (A, C) \). We accordingly say that **the pair \( (A, C) \) is observable**.
 
-#### The Observability Gramian
+### The Observability Gramian
 
 The first characterization of observability uses an integral criterion analogous to the controllability Gramian.
 
@@ -556,7 +556,7 @@ The observability Gramian is structurally parallel to the controllability Gramia
 
 and the analogy between the two runs deeper than mere structural resemblance, as the next theorem reveals.
 
-#### Duality of Observability and Controllability
+### Duality of Observability and Controllability
 
 **Theorem 5.3 (Duality).** The pair \( (A, C) \) is observable if and only if the pair \( (A^T, C^T) \) is controllable.
 
@@ -572,7 +572,7 @@ the condition for observability of \( (A, C) \) is exactly the condition for con
 
 This elegant duality allows the rich theory of controllability to be immediately translated into results about observability, simply by transposing the relevant matrices.
 
-#### Equivalent Conditions for Observability
+### Equivalent Conditions for Observability
 
 **Theorem 5.4 (Observability — equivalent conditions).** The following statements are equivalent:
 
@@ -608,7 +608,7 @@ For this \( 3 \times 3 \) matrix to have rank 3, its determinant must be nonzero
 
 Hence \( (A, C) \) is observable if and only if \( c_1 c_2 c_3 \neq 0 \); in other words, all three output coefficients must be nonzero.
 
-#### Observable Decomposition
+### Observable Decomposition
 
 The duality between observability and controllability also produces an analog to the controllable decomposition. Suppose that \( (A, C) \) is not observable, so that the observability matrix
 
@@ -659,11 +659,11 @@ One can verify directly that this two-dimensional pair is observable.
 
 ---
 
-### Lecture 6: Transfer Functions
+## Transfer Functions
 
 The preceding lectures developed state-space methods for analyzing LTI systems, working entirely in the time domain. A complementary approach operates in the **frequency domain**, representing signals and systems in terms of their frequency content rather than their time-domain trajectories. The central tool for frequency-domain analysis is the **transfer function**, which we develop rigorously via the Laplace transform.
 
-#### Laplace Transforms
+### Laplace Transforms
 
 Consider a signal \( x : [0, \infty) \to \mathbb{R}^n \). The **Laplace transform** of \( x \) is defined by
 
@@ -687,7 +687,7 @@ The transform of derivatives, which is the key property for analyzing differenti
 
 The appearance of the initial condition \( x(0) \) in the first formula is crucial: it separates the effects of the initial state from the effects of the input signal.
 
-#### Laplace Transform of the LTI System
+### Laplace Transform of the LTI System
 
 Consider the LTI system \( (A, B, C, D) \):
 
@@ -715,7 +715,7 @@ The **zero-state response** captures the input-output relationship when the syst
 
 \[ \hat{y}(s) = \underbrace{[C(sI - A)^{-1}B + D]}_{\text{transfer function}}\hat{u}(s). \]
 
-#### Transfer Functions
+### Transfer Functions
 
 **Definition 6.7 (Transfer function).** The **transfer function** (matrix) of the LTI system \( (A, B, C, D) \) is defined by
 
@@ -757,7 +757,7 @@ Hence the transfer function of this higher-order scalar system is
 
 This example shows explicitly that the transfer function of a scalar system described by a linear ODE with constant coefficients is a rational function whose denominator degree equals the order of the equation.
 
-#### Impulse Response
+### Impulse Response
 
 The Laplace transform connects elegantly to a time-domain representation of the input-output map. Taking the inverse Laplace transform of \( \hat{y}(s) = G(s)\hat{u}(s) \) gives
 
@@ -785,7 +785,7 @@ y(t) &= C\int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau + Du(t) \\
 
 Since \( \hat{y}(s) = G(s)\hat{u}(s) \), it follows that \( \mathcal{L}[g(t)] = G(s) \): the transfer function is precisely the Laplace transform of the impulse response.
 
-#### Realizations of Transfer Functions
+### Realizations of Transfer Functions
 
 We have seen how to compute \( G(s) \) from a state-space model \( (A, B, C, D) \). The converse question — finding a state-space model for a prescribed transfer function — is equally important.
 
@@ -813,13 +813,13 @@ In other words, transfer functions are invariant under state transformation. The
 
 ---
 
-## Week 4: Realizations and Frequency Response
+# Realizations and Frequency Response
 
-### Lecture 7: Realizations of Transfer Functions
+## Realizations of Transfer Functions
 
 In the previous lecture we introduced the notion of a realization and observed that any proper rational function arises as the transfer function of some LTI system. This lecture develops that idea systematically. We characterize precisely which transfer functions are realizable, explain a canonical construction that produces a realization from any proper rational function, and then address the fundamental question of uniqueness: when are two realizations related by a state transformation?
 
-#### Proper Rational Functions and Realizability
+### Proper Rational Functions and Realizability
 
 **Definition 7.1.** A **rational function** is a ratio of two polynomials, \( r(s) = p(s)/q(s) \). It is called **strictly proper** if \( \deg(p) < \deg(q) \), and **proper** if \( \deg(p) \leq \deg(q) \). A rational function matrix is (strictly) proper if every entry is (strictly) proper.
 
@@ -897,7 +897,7 @@ The controllable canonical realization is
 
 \[ A = -I_{2\times 2} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}, \quad B = I_{2\times 2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \quad C = [-2 \;\; 1], \quad D = [2 \;\; 1]. \]
 
-#### Controllable and Observable Realizations
+### Controllable and Observable Realizations
 
 The controllable canonical realizations may not be the most compact realizations one can find. If a realization is not observable, one can apply observable decomposition to obtain a lower-dimensional system with the same transfer function.
 
@@ -923,7 +923,7 @@ The observable decomposition case is analogous. \( \square \)
 
 By Theorem 7.8, if a system is not controllable or not observable, one can always find a lower-dimensional system realizing the same transfer function through decomposition. This process terminates when a realization that is simultaneously controllable and observable is found, motivating the central concept below.
 
-#### Minimal Realization
+### Minimal Realization
 
 **Definition 7.9 (Minimal realization).** A realization of \( G(s) \) is called **minimal** if no other realization of \( G(s) \) has smaller state dimension.
 
@@ -1003,11 +1003,11 @@ This one-dimensional realization is both controllable and observable, hence mini
 
 ---
 
-### Lecture 8: Frequency Response and Bode Plots
+## Frequency Response and Bode Plots
 
 The **time response** of a control system describes how the output evolves in time for a given time-varying input. The **frequency response** is the complementary description: it characterizes how the steady-state output amplitude and phase depend on the frequency of a sinusoidal input. This frequency-domain perspective is indispensable for engineering analysis and design, because it provides an intuitive and graphically accessible summary of system behaviour across all frequencies simultaneously. We focus on SISO systems throughout.
 
-#### Frequency Response
+### Frequency Response
 
 Consider an exponential input of the form
 
@@ -1059,7 +1059,7 @@ For \( \omega = 1 \), the gain is \( M = 1/\sqrt{2} \approx 0.707 \) and the pha
 
 More generally, the frequency response provides comprehensive information about a system: a large gain \( |G(j\omega)| \) at a particular frequency \( \omega \) means the system amplifies sinusoidal inputs at that frequency, while a small gain means the system attenuates them.
 
-#### Bode Plots
+### Bode Plots
 
 The frequency response can be measured experimentally by sweeping through a range of frequencies \( \omega = \omega_1, \omega_2, \ldots, \omega_N \), applying a sinusoid at each frequency, waiting for the transient to die out, and measuring the steady-state amplitude ratio and phase shift. The result can be displayed in several ways. Plotting the real and imaginary parts of \( G(j\omega) \) as a curve in the complex plane as \( \omega \) varies is called a **Nyquist plot**. Plotting both the gain \( |G(j\omega)| \) and the phase \( \angle G(j\omega) \) as functions of \( \omega \) separately is called a **Bode plot**.
 
@@ -1126,13 +1126,13 @@ bode(G);
 ```
 
 The resulting Bode plot shows the characteristic resonance peak in the gain curve near \( \omega = 1 \) rad/s and the transition in the phase curve from \( 0^\circ \) to \( -180^\circ \).
-## Week 5: Poles, Zeros, and Internal Stability
+# Poles, Zeros, and Internal Stability
 
-### Lecture 9: Poles and Zeros
+## Poles and Zeros
 
 The input-output behavior of a linear control system is shaped, to a remarkable degree, by the locations of certain special points in the complex plane associated with its transfer function. These points — the **poles** and **zeros** — encode information about the system's natural frequencies, resonances, and the signals it can block. In this lecture we define poles and zeros precisely, relate them to the underlying state-space realization, and examine their influence on the step response.
 
-#### Poles and Zeros for a SISO Transfer Function
+### Poles and Zeros for a SISO Transfer Function
 
 **Definition 9.1 (Poles and zeros).** Consider a SISO transfer function written in the coprime form
 
@@ -1148,7 +1148,7 @@ This definition parallels the notion of poles and zeros from complex analysis. N
 
 There is a single zero at \(s = -1\) and two poles at \(s = \frac{-1 \pm j\sqrt{3}}{2}\). Tools such as `pzplot` or `pzmap` in MATLAB render these graphically: poles are indicated by a cross (\(\times\) and zeros by a circle (\(\circ\).
 
-#### Relationship with the Frequency Response
+### Relationship with the Frequency Response
 
 Any SISO transfer function can be factored as
 
@@ -1167,9 +1167,9 @@ Taking logarithms and arguments, we obtain
 
 In other words, both the magnitude and phase of the frequency response are completely determined by the pole-zero locations up to an overall gain constant. The geometric interpretation — each term is the angle or distance from \(j\omega\) to a specific pole or zero in the complex plane — provides an intuitive way to reason about Bode plots without explicit computation.
 
-#### Relationship with State-Space Realizations
+### Relationship with State-Space Realizations
 
-##### Poles Versus Eigenvalues
+#### Poles Versus Eigenvalues
 
 Let \((A, B, C, D)\) be a state-space realization of \(G(s)\). Recall that
 
@@ -1185,7 +1185,7 @@ It is possible for \(C\,\mathrm{adj}(sI-A)B + D\det(sI-A)\) and \(\det(sI-A)\) t
 
 The proof follows from the observation that if \((A_1, B_1, C_1, D_1)\) is a minimal realization, then its denominator has strictly smaller degree than \(\det(sI-A)\) whenever \((A, B, C, D)\) is non-minimal, so \(\det(sI-A)\) and \(C\,\mathrm{adj}(sI-A)B\) cannot be coprime in that case.
 
-##### Zeros Versus Invariant Zeros
+#### Zeros Versus Invariant Zeros
 
 Let \(u(t) = e^{st}u_0\) be an exponential input with \(u_0 \in \mathbb{R}\) and let \(s \neq \lambda(A)\) (i.e., \(s\) is not an eigenvalue of \(A\). A computation using the variation-of-parameters formula shows that if one chooses the initial condition \(x_0 = (sI - A)^{-1}Bu_0\), then
 
@@ -1224,7 +1224,7 @@ Hence this determinant vanishes, meaning the matrix loses rank and \(s\) is an i
 
 Because \(s_0\) is not an eigenvalue of \(A\), we can write \(x_0 = (s_0 I - A)^{-1}Bu_0\); in particular \(u_0 \neq 0\). Setting \(x(t) = e^{s_0 t}x_0\) and \(u(t) = e^{s_0 t}u_0\), the condition \(s_0 x_0 = Ax_0 + Bu_0\) ensures \(x'(t) = Ax(t) + Bu(t)\), and the condition \(Cx_0 + Du_0 = 0\) gives \(y(t) = 0\) for all \(t \geq 0\).
 
-#### Effects of Zeros and Poles on the Step Response
+### Effects of Zeros and Poles on the Step Response
 
 The **unit step response** is the output produced by the input \(u(t) = 1\) for \(t \geq 0\) and zero initial conditions. Its Laplace transform is \(\hat{u}(s) = 1/s\), so the step response in the frequency domain is \(\hat{y}(s) = G(s)/s\).
 
@@ -1266,11 +1266,11 @@ where \(y(t)\) is the original step response. Two cases arise. When \(a > 0\) (t
 
 ---
 
-### Lecture 10: Internal Stability
+## Internal Stability
 
 From this lecture onward the focus turns from modeling to the analysis and design of control systems. The most fundamental property a control system must possess is **stability**: loosely, the assurance that trajectories do not grow without bound. Among the several stability notions in the literature, we study here **internal stability**, which concerns the free evolution of the state under no external input.
 
-#### Definition of Internal Stability
+### Definition of Internal Stability
 
 **Definition 10.9.** An \(n \times n\) matrix \(A\) is said to be **Hurwitz** if \(\mathrm{Re}(\lambda) < 0\) for every eigenvalue \(\lambda\) of \(A\). Equivalently, all eigenvalues of \(A\) lie in the open left half of the complex plane, denoted \(\mathbb{C}^-\).
 
@@ -1296,7 +1296,7 @@ with eigenvalues
 
 One eigenvalue has positive real part, confirming that the upright equilibrium is internally unstable and requires active control to stabilize.
 
-#### The Internal Stability Theorem
+### The Internal Stability Theorem
 
 The following central result provides four equivalent characterizations of internal stability, connecting the spectral condition on \(A\) to the long-run behavior of solutions and to the existence of a quadratic Lyapunov function.
 
@@ -1368,13 +1368,13 @@ where the boundary term at infinity vanishes because \(A\) and \(A^T\) are both 
 
 ---
 
-## Week 6: Stabilizability and Stabilization
+# Stabilizability and Stabilization
 
-### Lecture 11: Stabilizability
+## Stabilizability
 
 Having established what internal stability means, a natural question arises: if a system is not internally stable, can we design a control input to drive all trajectories to zero? This question is not always answerable in the affirmative — the answer depends on a structural property of the pair \((A, B)\) called **stabilizability**.
 
-#### Definition and Basic Properties
+### Definition and Basic Properties
 
 Consider an LTI system \(x' = Ax + Bu\).
 
@@ -1390,7 +1390,7 @@ In other words, for every initial condition a control exists that asymptotically
 - If \(A\) is Hurwitz, then \((A, B)\) is stabilizable, because all trajectories decay to zero even under zero input.
 - Stabilizability is invariant under state transformation: if \(P\) is nonsingular, then \((A, B)\) is stabilizable if and only if \((PAP^{-1}, PB)\) is stabilizable.
 
-#### Equivalent Characterizations
+### Equivalent Characterizations
 
 The following theorem gives six equivalent ways to detect stabilizability, each illuminating a different facet of the concept.
 
@@ -1458,11 +1458,11 @@ Choosing \(k_1 < -1\) makes both diagonal entries negative, rendering \(A + BK\)
 
 ---
 
-### Lecture 12: Stabilization of Controllable Systems
+## Stabilization of Controllable Systems
 
 Theorem 11.3 tells us that a stabilizable system can be stabilized by a state feedback \(u = Kx\) making \(A + BK\) Hurwitz. For controllable systems, a much stronger result holds: not only can the closed-loop matrix be made Hurwitz, but its eigenvalues can be placed **anywhere** in the complex plane (subject to the conjugate-pair constraint). This lecture establishes that claim and provides a constructive proof via the **controllable canonical form**.
 
-#### Lyapunov Tests for Controllability and Stabilizability
+### Lyapunov Tests for Controllability and Stabilizability
 
 Before reaching the main theorem, we establish two Lyapunov-based characterizations that complete the proof of Theorem 11.3 and prepare the ground for eigenvalue placement.
 
@@ -1490,7 +1490,7 @@ Since \(A\) is Hurwitz the integral converges. Controllability of \((A, B)\) ens
 
 Since \(W\) is positive definite, \(v^*Wv > 0\). Hence \(\|B^Tv\|^2 > 0\), i.e., \(v \notin \ker(B^T)\). By Proposition 12.5, \((A, B)\) is controllable.
 
-#### Stabilization with Arbitrary Decay Rate
+### Stabilization with Arbitrary Decay Rate
 
 **Theorem 12.7 (Stabilization by state feedback for controllable systems).** The following statements are equivalent:
 
@@ -1521,7 +1521,7 @@ For any \(K\), the closed-loop matrix in the new coordinates is
 
 which is block upper triangular with \(A_u\) unchanged in the lower-right corner. The eigenvalues of \(A_u\) remain eigenvalues of \(A + BK\) and cannot be shifted, so statement (2) fails.
 
-#### The Lyapunov Test for Stabilizability (Completing Theorem 11.3)
+### The Lyapunov Test for Stabilizability (Completing Theorem 11.3)
 
 **Corollary 12.8 (Lyapunov test for stabilizability).** The pair \((A, B)\) is stabilizable if and only if there exists a positive definite matrix \(P\) such that
 
@@ -1537,7 +1537,7 @@ Then
 
 where \(A_1 = PAP^{-1}\) and \(B_1 = PB\). For \(\rho > 0\) chosen sufficiently small (completing the square in the off-diagonal blocks shows this is feasible), the right-hand side is negative definite, completing the proof.
 
-#### Eigenvalue Assignment by State Feedback
+### Eigenvalue Assignment by State Feedback
 
 Theorem 12.7 guarantees that a controllable system can be stabilized with eigenvalues pushed as far left as desired. The following theorem sharpens this to full freedom of eigenvalue placement.
 
@@ -1616,13 +1616,13 @@ Again targeting eigenvalues \(-1, -2 \pm j\) with characteristic polynomial \(\l
 Matching gives \(k_0 = -6, \; k_1 = -19, \; k_2 = -11\).
 
 **Remark 12.13.** For SISO systems, the gain matrix \(K\) for eigenvalue assignment is uniquely determined. In some textbooks the state feedback is written as \(u = -Kx\) rather than \(u = Kx\), leading to the closed-loop matrix \(A - BK\) instead of \(A + BK\). These are purely notational conventions and completely equivalent in content. Be aware that MATLAB's `place(A, B, P)` command uses the convention \(A - BK\) and returns \(K\) such that \(A - BK\) has eigenvalues listed in the vector `P`.
-## Week 7: Detectability and External Stability
+# Detectability and External Stability
 
-### Lecture 13: Detectability and Stabilization by Output Feedback
+## Detectability and Stabilization by Output Feedback
 
 In previous lectures we examined how state feedback of the form \( u = Kx \) can be used to stabilize a linear time-invariant (LTI) system. In many practical situations, however, it is impossible or prohibitively expensive to measure the full state vector. This lecture addresses how stabilization can still be achieved when only the output \( y \) is accessible, by coupling a state estimator — called an **observer** — with a state-feedback controller.
 
-#### Observers and the Estimation Error
+### Observers and the Estimation Error
 
 Suppose the governing state equation is \( x'(t) = Ax(t) + Bu(t) \) and we use it directly to build a copy of the dynamics:
 
@@ -1658,7 +1658,7 @@ e' = \hat{x}' - x' = A\hat{x} + Bu + L(\hat{y} - y) - (Ax + Bu) = (A + LC)e. \ta
 
 The estimation error converges to zero asymptotically if and only if \( A + LC \) is Hurwitz. The central question is therefore: can we find a matrix \( L \) such that \( A + LC \) has all eigenvalues strictly in the open left-half plane?
 
-#### Detectability
+### Detectability
 
 This question is precisely the dual of stabilizability. Recall that \( (A, B) \) is stabilizable if and only if there exists a matrix \( K \) such that \( A + BK \) is Hurwitz. By analogy we make the following definition.
 
@@ -1684,7 +1684,7 @@ This duality immediately transfers the algebraic characterizations of stabilizab
 
 The equivalence of these conditions follows by duality from the corresponding characterizations of stabilizability (via the PBH test and the Kalman decomposition). Condition 2 says that any mode which cannot be observed must at least be stable on its own. Condition 3 says that the only modes that can be "hidden" from the output — those for which the rank drops — must lie in the stable left-half plane.
 
-#### Stabilization by Output Feedback
+### Stabilization by Output Feedback
 
 With an observer in hand, we can construct a state-feedback law that uses the estimated state in place of the true state. Set
 
@@ -1742,17 +1742,17 @@ A + BK = \begin{bmatrix} 0 & 1 \\ k_1 & k_2 \end{bmatrix},
 
 with characteristic polynomial \( s^2 - k_2 s - k_1 \). Again any desired polynomial is achievable. The closed-loop system resulting from this procedure is called **observer-based dynamic output feedback**, because the output is processed via a dynamic state estimator rather than fed back directly.
 
-#### Static Output Feedback
+### Static Output Feedback
 
 A natural follow-up question is whether one can dispense with the dynamic observer entirely and use a **static output feedback** law \( u = KCx \), seeking a gain \( K \) such that \( A + BKC \) is Hurwitz. Remarkably, this question — known as the **stabilization by static output feedback problem** — remains one of the fundamental open problems in control theory. Its difficulty is believed to be rooted in deep combinatorial complexity; in particular, pole placement via static output feedback has been shown to be NP-hard in general.
 
 ---
 
-### Lecture 14: External Stability
+## External Stability
 
 The preceding lectures established a theory of **internal stability**: conditions on the system matrix \( A \) (or the poles of the state-space realization) that guarantee the free response decays to zero. We now turn to **external stability**, also called **input-output stability**, which characterizes how the magnitude of the output signal is bounded relative to the magnitude of the input signal when the initial conditions are set to zero. An externally stable system produces well-behaved outputs for all well-behaved inputs.
 
-#### Signal Norms and \( L^p \) Spaces
+### Signal Norms and \( L^p \) Spaces
 
 To make precise what "well-behaved" means, we assign norms to signals. First recall that the **\( p \)-norm** of a vector \( x \in \mathbb{R}^k \) is
 
@@ -1796,11 +1796,11 @@ for all input-output pairs \( u, y \) with zero initial condition.
 
 **Remark 14.11.** The constant \( \gamma \) is an upper bound on the **\( L^p \)-gain** of the system; the gain itself is the infimum of all such constants. For finite-dimensional LTI systems, all notions of \( L^p \)-stability (for different \( p \) turn out to be equivalent, although the corresponding gains may differ.
 
-#### BIBO Stability
+### BIBO Stability
 
 Because all \( L^p \)-stability notions are equivalent for LTI systems, we focus on the case \( p = \infty \), which yields **bounded-input, bounded-output (BIBO) stability**. A system is BIBO stable if every bounded input produces a bounded output (from zero initial conditions). The terminology "input-output stability" and "external stability" are used interchangeably with BIBO stability throughout this course.
 
-#### Time-Domain Conditions for BIBO Stability
+### Time-Domain Conditions for BIBO Stability
 
 Recall that the zero-state output is given by the convolution
 
@@ -1864,7 +1864,7 @@ Ce^{At}B = \begin{bmatrix} 1 & 1 \end{bmatrix} \begin{bmatrix} e^{2t} & 0 \\ 0 &
 
 Since \( e^{-t} \) is absolutely integrable, the system is BIBO stable by Theorem 14.12. However, the eigenvalue \( \lambda = 2 \) of \( A \) lies in the right-half plane, so the system is not internally stable. The unstable mode at \( s = 2 \) is hidden from the input-output map because of a structural pole-zero cancellation in the transfer function.
 
-#### Frequency-Domain Conditions for BIBO Stability
+### Frequency-Domain Conditions for BIBO Stability
 
 Taking the Laplace transform, the transfer matrix is
 
@@ -1890,13 +1890,13 @@ In a minimal realization there are no hidden pole-zero cancellations: every eige
 
 ---
 
-## Week 8: Closed-loop Stability and Nyquist Criterion
+# Closed-loop Stability and Nyquist Criterion
 
-### Lecture 15: Closed-loop Stability
+## Closed-loop Stability
 
 Having established the foundations of state-space analysis and design, we now shift to **frequency-domain** analysis. The central goal remains ensuring stability of the closed-loop system when a controller is placed in feedback around a plant.
 
-#### The Unity Feedback Configuration
+### The Unity Feedback Configuration
 
 Consider the standard unity feedback configuration in which a controller with transfer function \( C(s) \) is placed in series with a plant \( P(s) \). The exogenous signals driving the system are the **reference input** \( r \), the **plant disturbance** \( d \), and the **measurement noise** \( n \). The internal signals are:
 
@@ -1922,7 +1922,7 @@ y = \frac{PC}{1+PC}\, r + \frac{1}{1+PC}\, n + \frac{P}{1+PC}\, d.
 
 The transfer function from \( r \) to \( y \) is therefore \( G_{yr}(s) = \frac{PC}{1+PC} \), and as by-products we obtain \( G_{yn}(s) = \frac{1}{1+PC} \) and \( G_{yd}(s) = \frac{P}{1+PC} \).
 
-#### The Gang of Four
+### The Gang of Four
 
 By similar loop-tracing arguments, one can compute all transfer functions from \( (r, d, n) \) to every signal of interest \( (y, \eta, v, u, e) \). The full matrix of 15 transfer functions is actually determined by just four fundamental functions, sometimes called the **gang of four**:
 
@@ -1936,7 +1936,7 @@ By similar loop-tracing arguments, one can compute all transfer functions from \
 
 **Definition 15.2.** The system depicted in the unity feedback configuration is **closed-loop stable** if all four transfer functions \( S \), \( T \), \( PS \), and \( CS \) are BIBO stable, i.e., all their poles lie in the open left-half plane.
 
-#### The Characteristic Polynomial
+### The Characteristic Polynomial
 
 Let \( P(s) = n_p(s)/d_p(s) \) and \( C(s) = n_c(s)/d_c(s) \) where each pair is coprime. Define the **characteristic polynomial**
 
@@ -1957,7 +1957,7 @@ PS &= \frac{n_p d_c}{\kappa}, &\quad CS &= \frac{n_c d_p}{\kappa}.
 
 Let \( s_0 \) be a zero of \( \kappa \). If \( s_0 \) were not a pole of any of the four functions, then all four numerators would vanish at \( s_0 \), giving \( d_p(s_0)d_c(s_0) = 0 \), \( n_p(s_0)n_c(s_0) = 0 \), etc. But \( d_p(s_0) = 0 \) implies \( n_p(s_0) \neq 0 \) (by coprimeness), which forces \( n_c(s_0) = 0 \) and also \( d_c(s_0) = 0 \), contradicting the coprimeness of \( (n_c, d_c) \). The same contradiction arises from \( d_c(s_0) = 0 \). Hence \( s_0 \) must be a pole of at least one transfer function. \( \square \)
 
-#### PID and PI Controllers
+### PID and PI Controllers
 
 **Example 15.4 (PI Controller).** A **PID controller** in the time domain has the form
 
@@ -1985,7 +1985,7 @@ For a first-order plant \( P(s) = b/(s+a) \), the characteristic polynomial beco
 
 Provided \( b \neq 0 \), the coefficients \( k_p \) and \( k_i \) can be chosen to achieve any desired degree-2 characteristic polynomial.
 
-#### Routh–Hurwitz Stability Criterion
+### Routh–Hurwitz Stability Criterion
 
 The **Routh–Hurwitz criterion** provides an algebraic test — without computing roots explicitly — for whether all roots of a polynomial lie in the open LHP. Given a polynomial
 
@@ -2064,11 +2064,11 @@ All roots have negative real parts if and only if \( a_0 > 0 \), \( a_2 > 0 \), 
 
 ---
 
-### Lecture 16: Nyquist Criterion
+## Nyquist Criterion
 
 The Routh–Hurwitz criterion tells us whether the roots of the characteristic polynomial lie in the open LHP, but it offers limited geometric insight into why a system is unstable or how to modify the controller. The **Nyquist criterion** addresses this gap by providing a graphical tool that reveals the relationship between the loop transfer function and closed-loop stability.
 
-#### The Loop Transfer Function
+### The Loop Transfer Function
 
 Feedback can destabilize a system that would otherwise be stable in open loop. The **loop transfer function** captures the cumulative gain and phase accumulated by a signal traversing the entire feedback loop.
 
@@ -2084,7 +2084,7 @@ The loop transfer function has a clear physical interpretation: if the feedback 
 
 While the characteristic polynomial \( \kappa(s) = d_p d_c + n_p n_c \) can always be used to check stability, the loop transfer function provides the additional insight needed for loop-shaping design: one can visualize directly how modifying the controller bends the Nyquist plot of \( L \) away from the critical point.
 
-#### The Nyquist Contour and Nyquist Plot
+### The Nyquist Contour and Nyquist Plot
 
 **Definition 16.11 (Nyquist Contour).** The **Nyquist contour** \( \Gamma \) is a D-shaped contour enclosing the closed right-half plane of \( \mathbb{C} \), consisting of:
 
@@ -2098,7 +2098,7 @@ When \( L \) is strictly proper (degree of denominator exceeds degree of numerat
 
 **Example 16.13.** For the loop transfer function \( L(s) = \dfrac{1}{(s+1)^3} \), the Nyquist plot spirals from the point \( (1, 0) \) at \( \omega = 0 \), spiraling inward and clockwise as \( \omega \to \infty \). The critical point \( -1 \) is indicated with a marker. Nyquist plots can be generated in MATLAB with the command `nyquist(L)`.
 
-#### Cauchy's Argument Principle
+### Cauchy's Argument Principle
 
 The Nyquist stability criterion is a corollary of the following classical result from complex analysis.
 
@@ -2112,7 +2112,7 @@ where \( \Delta_\Gamma \) denotes the net change in argument as \( z \) traverse
 
 The key insight is that encirclements of the origin by the image of \( f \) count the net excess of zeros over poles inside the contour.
 
-#### The Nyquist Stability Criterion
+### The Nyquist Stability Criterion
 
 We apply Cauchy's argument principle with \( f(s) = 1 + L(s) \) and \( \Gamma \) the Nyquist contour, which encloses the entire closed right-half plane. The zeros of \( 1 + L(s) \) in the RHP are exactly the RHP closed-loop poles, and encirclements of the origin by the image of \( 1 + L(s) \) correspond to encirclements of \( -1 \) by the image of \( L(s) \).
 
@@ -2138,7 +2138,7 @@ Now apply Cauchy's argument principle to \( f(s) = 1 + L(s) \) on the Nyquist co
 
 (\( \Leftarrow \) Follows directly from Theorem 16.15. \( \square \)
 
-#### Applications of the Nyquist Criterion
+### Applications of the Nyquist Criterion
 
 **Example 16.17.** Consider \( P(s) = \frac{1}{s} \) and \( C(s) = \frac{s}{s+1} \), giving
 
@@ -2179,13 +2179,13 @@ P(s) = \frac{s+1}{s(s-1)}, \qquad C(s) = k,
 \]
 
 the loop transfer function is \( L(s) = \frac{k(s+1)}{s(s-1)} \). This has RHP poles at \( s = 1 \) (and a pole on the imaginary axis at \( s = 0 \), handled by an imaginary-axis indentation in the Nyquist contour). The Nyquist criterion can be applied by computing the number of counterclockwise encirclements of \( -1 \) as a function of \( k \) and comparing with \( P \) (the number of RHP poles, here \( P = 1 \). The range of \( k \) for which the counterclockwise encirclements equal 1 gives the stabilizing gains.
-## Week 9: Robust Stability and Asymptotic Tracking
+# Robust Stability and Asymptotic Tracking
 
-### Lecture 17: Robust Stability
+## Robust Stability
 
 A mathematical model is only an approximation to a real physical system. The gap between model and reality is captured by the notion of **modeling uncertainty**, which refers to approximation errors of all kinds. In this lecture we study **robust stability**, meaning stability that is guaranteed not merely for a single nominal plant but for an entire family of plants representing the range of possible modeling errors. Our treatment is confined to SISO transfer functions.
 
-#### Plant Uncertainty
+### Plant Uncertainty
 
 Uncertainties are broadly classified as **structured** or **unstructured**. Structured uncertainty arises when one or more physical parameters of the model are known only to within a bounded interval, so the set of all admissible plants can be described explicitly.
 
@@ -2203,7 +2203,7 @@ This kind of structured uncertainty is tractable: suppose we use a PI controller
 
 Applying the Routh–Hurwitz criterion, the necessary and sufficient conditions for stability are \(k > 0\), \(a > 0\), and \(\tfrac{k}{k+1} < a\). Therefore, for closed-loop stability to hold for every \(P \in \mathcal{P}\), we require \(a_{\min} > 0\) and \(\tfrac{k}{k+1} < a_{\min}\).
 
-#### Multiplicative Uncertainty
+### Multiplicative Uncertainty
 
 A general and widely used way to parameterise unstructured uncertainty is the **multiplicative uncertainty model**.
 
@@ -2231,7 +2231,7 @@ This shows that \(W_2(j\omega)\) bounds the relative error of the perturbed plan
 
 The left-hand side is minimised over the choice of \(a_0\) when \(a_0 = 5.05\), giving the constant weight \(W_2(s) = \tfrac{4.95}{5.05}\).
 
-#### Robust Stability Theorem for Multiplicative Uncertainty
+### Robust Stability Theorem for Multiplicative Uncertainty
 
 **Definition 17.4 (Robust stability).** A controller \(C\) is said to provide **robust stability** to a family of plants \(\mathcal{P}\) if it provides closed-loop stability to every plant in this family.
 
@@ -2259,7 +2259,7 @@ then the perturbed Nyquist plot cannot pass through or change its encirclement c
 
 The controller must also stabilise the nominal plant; the characteristic polynomial of the nominal closed loop gives the necessary condition \(k > 1\). The precise condition for robust stability is obtained by maximising the left-hand side with respect to \(\omega\) and requiring the result to remain below one.
 
-#### Additive Uncertainty
+### Additive Uncertainty
 
 A second fundamental model is **additive uncertainty**.
 
@@ -2285,9 +2285,9 @@ Again the nominal stability requirement gives \(k > 1\), and the exact robust-st
 
 ---
 
-### Lecture 18: Asymptotic Tracking
+## Asymptotic Tracking
 
-#### Tracking Error and the Sensitivity Function
+### Tracking Error and the Sensitivity Function
 
 Consider the SISO unity-feedback system with a feedforward filter \(F(s)\), feedback controller \(C(s)\), and plant \(P(s)\). External inputs are the reference \(r\), process disturbance \(d\), and measurement noise \(n\). For simplicity we set \(d = n = 0\). Recall that the transfer function from the reference \(r\) to the **tracking error** \(e = r - y\) is
 
@@ -2295,7 +2295,7 @@ Consider the SISO unity-feedback system with a feedforward filter \(F(s)\), feed
 
 the sensitivity function, where \(L(s) = P(s)C(s)\) is the loop transfer function. In practice we wish not merely to bound the tracking error but to drive it to zero asymptotically. This is the notion of **asymptotic tracking**: the requirement that \(\lim_{t \to \infty} e(t) = 0\) for the prescribed class of reference signals.
 
-#### The Final Value Theorem
+### The Final Value Theorem
 
 The main analytic tool for computing the **steady-state error** directly in the frequency domain, without first inverting the Laplace transform, is the Final Value Theorem.
 
@@ -2315,7 +2315,7 @@ The main analytic tool for computing the **steady-state error** directly in the 
 
 where we used \(s\int_T^\infty e^{-st}\,dt = e^{-sT} < 1\) for \(s,T > 0\). For any \(\varepsilon > 0\), choose \(T\) so that \(\sup_{t \geq T}|y(t)-\alpha| \leq \varepsilon/2\), then choose \(\delta > 0\) so that \(s\int_0^T |y(t)-\alpha|\,dt \leq \varepsilon/2\) for all \(|s| \leq \delta\). It follows that \(|s\hat{y}(s)-\alpha| \leq \varepsilon\), proving \(\lim_{s\to 0} s\hat{y}(s) = \alpha\).
 
-#### Step and Ramp Tracking
+### Step and Ramp Tracking
 
 Two prototypical reference signals are the **step** \(r(t) = c\) (for \(t \geq 0\) with Laplace transform \(\hat{r}(s) = c/s\), and the **ramp** \(r(t) = ct\) with \(\hat{r}(s) = c/s^2\).
 
@@ -2348,7 +2348,7 @@ Since \(S\) has two zeros at the origin, the system tracks both step and ramp in
 
 When \(k_i = 0\) (purely proportional control), the steady-state error cannot be eliminated unless \(P(0) = \infty\). The integral action of a PI controller forces a zero at \(s=0\) in \(S\), thereby guaranteeing zero steady-state error for step inputs.
 
-#### Tracking in State-Space Formulation
+### Tracking in State-Space Formulation
 
 The frequency-domain analysis of tracking has a clean counterpart in the state-space framework. Consider the LTI system
 
@@ -2388,7 +2388,7 @@ Design a state-feedback law \(u = r + Kx\) with \(K = [k_1\; k_2]\) so that (i) 
 
 To track a unit step (\(y_d = 1\), set \(r = [G_{yr}(0)]^{-1} \cdot 1 = 2\). Wait — more precisely, \(r = [G_{yr}(0)]^{-1}y_d = \tfrac{1}{2}\) since \(G_{yr}(0) = 2\).
 
-#### Asymptotic Tracking with Output Feedback
+### Asymptotic Tracking with Output Feedback
 
 The same principle applies when only the output is measured. Recall that a **state estimator** (observer) is constructed as
 
@@ -2415,13 +2415,13 @@ Design an output-feedback law \(u = r + K\hat{x}\) so that (i) the eigenvalues o
 
 ---
 
-## Week 10: PID Control and Frequency Domain Design
+# PID Control and Frequency Domain Design
 
-### Lecture 19: PID Control
+## PID Control
 
 Proportional–integral–derivative (PID) controllers are by far the most widely deployed controllers in industrial practice; it is estimated that more than 90% of all industrial control loops use PID feedback. In this lecture we introduce PID controller design and the effects of each individual gain on closed-loop performance.
 
-#### The PID Controller
+### The PID Controller
 
 Consider the standard unity-feedback loop with plant \(P(s)\) and controller \(C(s)\). A **PID controller** generates its control signal as
 
@@ -2433,7 +2433,7 @@ where \(k_P\), \(k_I\), and \(k_D\) are the **proportional**, **integral**, and 
 
 Note that this transfer function is not strictly proper (it is improper because of the derivative term). In practice the derivative term is always paired with a first-order low-pass filter to make the controller proper. In MATLAB, a PID controller can be created with the command `pid(kP, kI, kD)`.
 
-#### Effects of Each Gain
+### Effects of Each Gain
 
 The table below summarises the qualitative effects of independently increasing each gain. These are useful guidelines that hold in most cases but not universally.
 
@@ -2445,7 +2445,7 @@ The table below summarises the qualitative effects of independently increasing e
 
 Increasing \(k_P\) improves tracking speed and reduces steady-state error but at the cost of increased overshoot. The integral term \(k_I\) eliminates steady-state error (because it introduces a pole at the origin in \(C(s)\), forcing a zero of \(S(s)\) at the origin) but tends to slow the transient response. The derivative term \(k_D\) damps oscillations and reduces overshoot and settling time but has little influence on steady-state error.
 
-#### Design Example
+### Design Example
 
 **Example 19.1.** Consider the second-order plant
 
@@ -2477,13 +2477,13 @@ The integral gain eliminates the steady-state error. The proportional gain is re
 
 **Full PID control** (\(k_P = 200\), \(k_I = 170\), \(k_D = 30\). Combining all three terms yields a closed-loop system with no overshoot, fast rise time, and zero steady-state error. MATLAB's automatic tuning command `pidtune(P,'pid')` finds the gains \(k_P \approx 23.5\), \(k_I \approx 51\), \(k_D \approx 2.42\) for this plant.
 
-#### PID Design Procedure
+### PID Design Procedure
 
 A standard iterative procedure for PID design proceeds as follows. First, determine the control objectives from the open-loop step response, identifying deficiencies in rise time, overshoot, settling time, and steady-state error. Second, add proportional control and increase \(k_P\) to improve rise time. Third, add derivative control and increase \(k_D\) to reduce overshoot and settle the transient. Fourth, add integral control and tune \(k_I\) to eliminate steady-state error. Fifth, iterate on all three gains until the overall closed-loop response satisfies the specifications. Automated tuning methods exist, with MATLAB's `pidtune` being a convenient example.
 
 ---
 
-### Lecture 20: Frequency Domain Design
+## Frequency Domain Design
 
 In this lecture we develop a more systematic frequency-domain perspective on controller design. The starting point is the **gang of four**: the four closed-loop transfer functions
 
@@ -2496,7 +2496,7 @@ CS &= \frac{C}{1+PC} \quad \text{(noise sensitivity, from } n \text{ to } u\text
 
 which together characterise the closed-loop behaviour.
 
-#### Design Specifications
+### Design Specifications
 
 Three overarching requirements govern feedback design.
 
@@ -2506,7 +2506,7 @@ Three overarching requirements govern feedback design.
 
 **Performance.** Performance requirements capture how the system should respond to references, disturbances, and noise. To track a reference at frequency \(\omega\) with small error, \(|S(j\omega)|\) must be small at that frequency. In particular, for low-frequency tracking and load-disturbance rejection (the load sensitivity from disturbance \(d\) to output \(y\) is \(P/(1+PC)\), one requires \(|L(j\omega)|\) to be large at low frequencies. Conversely, measurement noise is typically concentrated at high frequencies; since the transfer function from noise \(n\) to control \(u\) is \(-C/(1+PC) = -T/P\) and the transfer function from noise to output is \(T\), one requires \(|T(j\omega)|\) — and hence \(|L(j\omega)|\) — to be small at high frequencies. Because \(S + T = 1\), these low-frequency and high-frequency requirements do not conflict with each other.
 
-#### Loop Shaping
+### Loop Shaping
 
 Motivated by the discussion above, the design goal can be summarised as making the loop gain \(|L(j\omega)|\) large at low frequencies (for disturbance rejection and tracking) and small at high frequencies (for noise rejection), with an appropriate crossover region that preserves adequate stability margins. This philosophy is called **loop shaping**. A convenient family of compensators is the lead–lag family
 
@@ -2516,7 +2516,7 @@ When \(a < b\) the compensator is a **lead compensator** (adds positive phase ne
 
 Loop shaping is an iterative procedure. One typically begins with the Bode plot of \(P(s)\) and attempts to shape \(L(s)\) by adding poles and zeros to the controller, evaluating each candidate controller against the full set of specifications.
 
-#### Bode's Integral Formula and Fundamental Limitations
+### Bode's Integral Formula and Fundamental Limitations
 
 A profound constraint on what feedback can achieve is captured by Bode's integral formula.
 
@@ -2534,13 +2534,13 @@ The X-29 aircraft provides a striking illustration. The X-29 has longitudinal dy
 
 ---
 
-## Week 11: Linear Quadratic Regulator
+# Linear Quadratic Regulator
 
-### Lecture 21: Linear Quadratic Regulator
+## Linear Quadratic Regulator
 
 The frequency-domain and PID methods studied so far rely heavily on physical intuition and iterative tuning. In this lecture and the next we turn to a systematic state-space optimisation approach: the **Linear Quadratic Regulator (LQR)**, which computes the optimal state-feedback gain by minimising a quadratic performance index.
 
-#### Problem Formulation
+### Problem Formulation
 
 Consider the linear time-invariant system
 
@@ -2552,7 +2552,7 @@ where \(x \in \mathbb{R}^n\) is the state and \(u \in \mathbb{R}^k\) is the cont
 
 where \(Q \in \mathbb{R}^{n\times n}\) and \(R \in \mathbb{R}^{k\times k}\) are symmetric **weighting matrices** with \(Q \geq 0\) (positive semi-definite) and \(R > 0\) (positive definite). The matrix \(Q\) penalises the state excursion and \(R\) penalises control effort; adjusting their relative magnitudes allows the designer to trade off performance against control cost.
 
-#### Completing the Square and the Algebraic Riccati Equation
+### Completing the Square and the Algebraic Riccati Equation
 
 The derivation of the optimal controller hinges on a lemma that allows the cost integral to be expressed in terms of the initial condition alone.
 
@@ -2605,7 +2605,7 @@ stabilises the system and minimises the LQR cost among all stabilising controlle
 
 Since \(A + BK = A - BR^{-1}B^T P\) is Hurwitz, \(u = Kx\) is stabilising. Since \(R > 0\), the integral is non-negative and vanishes precisely when \(u = Kx\).
 
-#### Existence, Uniqueness, and the Role of Stabilisability and Detectability
+### Existence, Uniqueness, and the Role of Stabilisability and Detectability
 
 Theorem 21.2 raises natural questions: when does the ARE (21.2) admit a symmetric positive-semi-definite solution \(P\), is that solution unique, and when is \(A - BR^{-1}B^T P\) Hurwitz? The answers require two structural conditions on the system matrices.
 
@@ -2641,7 +2641,7 @@ The closed-loop matrix \(A + BK\) has characteristic polynomial \(s^2 + \sqrt{2}
 
 ---
 
-#### Lecture 22: The Algebraic Riccati Equation — Existence and Uniqueness
+### The Algebraic Riccati Equation — Existence and Uniqueness
 
 In this lecture we investigate in detail the conditions under which the ARE (21.2) admits a stabilising solution and prove Theorem 21.3. The central tool is the **Hamiltonian matrix** associated with the LQR problem.
 
@@ -2655,7 +2655,7 @@ One can verify from the PBH test that \((A,B)\) is controllable and \((A,C)\) is
 
 With this \(P\), the matrix \(A - BR^{-1}B^T P\) is Hurwitz and the optimal gain is \(K = -(2+\sqrt{7})\; -1\).
 
-#### The Hamiltonian Matrix
+### The Hamiltonian Matrix
 
 **Definition.** The **Hamiltonian matrix** associated with the LQR problem is
 
@@ -2679,7 +2679,7 @@ for some matrix \(\mathcal{H}_-\). If this holds, then \(\mathcal{H}_- = A - BR^
 
 obtained by equating the first column on both sides of (22.4) after left-multiplying by \(\begin{bmatrix}I&0\P&I\end{bmatrix}^{-1} = \begin{bmatrix}I&0\\-P&I\end{bmatrix}\). Equation (22.5) states that the column space of \(\begin{bmatrix}I\P\end{bmatrix}\) is an \(n\)-dimensional invariant subspace of \(\mathcal{H}\).
 
-#### Symmetry, Positive Semi-definiteness, and Uniqueness of the Stabilising Solution
+### Symmetry, Positive Semi-definiteness, and Uniqueness of the Stabilising Solution
 
 Three fundamental properties of the stabilising solution of the ARE follow from Lemma 22.8.
 
@@ -2693,7 +2693,7 @@ Direct computation shows the left-hand side equals \(-P^T A + P^T BR^{-1}B^T P -
 
 **Uniqueness.** Let \(P_1\) and \(P_2\) both be stabilising solutions. By Lemma 22.8 each column space \(\operatorname{Im}\begin{bmatrix}I\P_i\end{bmatrix}\) is an \(n\)-dimensional invariant subspace of \(\mathcal{H}\), and because \(\mathcal{H}_-^{(i)} = A - BR^{-1}B^T P_i\) is Hurwitz, these are stable invariant subspaces. Identity (22.4) shows that \(\mathcal{H}\) is similar to a matrix with diagonal blocks \(\mathcal{H}_-\) and \(-A^T + PBR^{-1}B^T\), which are negatives of each other's transpose; hence \(\mathcal{H}\) has exactly \(n\) eigenvalues with negative real parts and \(n\) with positive real parts. The \(n\)-dimensional stable invariant subspace of \(\mathcal{H}\) is therefore unique, so \(\operatorname{Im}\begin{bmatrix}I\P_1\end{bmatrix} = \operatorname{Im}\begin{bmatrix}I\P_2\end{bmatrix}\), which implies \(P_1 = P_2\).
 
-#### Construction of the Stabilising Solution via the Stable Subspace
+### Construction of the Stabilising Solution via the Stable Subspace
 
 The preceding uniqueness argument suggests a constructive approach: find the stable invariant subspace of \(\mathcal{H}\) and extract \(P\) from it.
 
@@ -2703,7 +2703,7 @@ The preceding uniqueness argument suggests a constructive approach: find the sta
 
 The key step is showing that \(X\) is invertible. Suppose for contradiction that \(Xz = 0\) for some nonzero \(z\). The upper block of \(\mathcal{H}V = V\mathcal{H}_-\) gives \(AX - BR^{-1}B^T Y = X\mathcal{H}_-\). Multiplying by \(z\) and using \(X^TY = Y^TX\) (proved by an argument analogous to the symmetry proof above), together with the lower block equation \(-QX - A^T Y = Y\mathcal{H}_-\), one deduces via the PBH test that \((A,B)\) is not stabilisable — a contradiction. Hence \(X\) is invertible and one can set \(P = YX^{-1}\), which by Lemma 22.8 is a stabilising solution to the ARE.
 
-#### The Condition for No Imaginary-Axis Eigenvalues of \(\mathcal{H}\)
+### The Condition for No Imaginary-Axis Eigenvalues of \(\mathcal{H}\)
 
 **Lemma 22.10.** The Hamiltonian matrix \(\mathcal{H}\) has no eigenvalues on the imaginary axis if and only if \((A,B)\) is stabilisable and \((A,Q)\) is detectable.
 
@@ -2717,7 +2717,7 @@ and expanding the left-hand side using the definition of \(\mathcal{H}\) gives
 
 Since \(R > 0\) and \(Q \geq 0\), this forces \(Qx_1 = 0\) and \(B^T x_2 = 0\). Combined with the eigenvalue equation, the PBH test then shows that either \((A,Q)\) is not detectable or \((A^T,B^T)\) is not detectable (the latter being equivalent to \((A,B)\) not stabilisable). Conversely, if either condition fails, the PBH test provides an imaginary-axis eigenvector for \(\mathcal{H}\).
 
-#### Proof of Theorem 21.3
+### Proof of Theorem 21.3
 
 The proof of Theorem 21.3 now follows directly from Lemmas 22.9 and 22.10. Under the assumptions that \((A,B)\) is stabilisable and \((A,Q)\) is detectable, Lemma 22.10 guarantees that \(\mathcal{H}\) has no imaginary-axis eigenvalues. Lemma 22.9 then guarantees the existence, symmetry, and uniqueness of a stabilising solution \(P\) to the ARE. The positive semi-definiteness follows from Theorem 21.2. The converse (necessity of the two conditions) is immediate from Lemma 22.10.
 

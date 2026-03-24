@@ -3,9 +3,9 @@ title: "SDS 220R: Changing Concepts of Childhood"
 prof: "Dr. Kristina Llewellyn"
 ---
 
-# Week 1: Introduction — Studying Childhood Through a Socio-Historical Lens
+# Introduction — Studying Childhood Through a Socio-Historical Lens
 
-## Lecture 1.1: Introduction: The Socio-Historical Lens
+## Introduction: The Socio-Historical Lens
 
 SDS 220R examines childhood as a concept and the lives of children through a **socio-historical lens**. Childhood is sometimes perceived as natural and unchanging, but a historical understanding reveals that it is constructed daily and differently. Class, race, gender, sexuality, religion, and (dis)ability all shape how children and young people experience life. The course examines past childhoods in North America — primarily Canada — from the late nineteenth century to the present, as a way of gaining insight into the issues confronted by today's children and young people.
 
@@ -15,7 +15,7 @@ Social authorities' efforts to protect young people have both benefited and harm
 
 The course rejects a narrative of simple linear progress. Few children today labour in dangerous coal mines as they did in the late nineteenth century, yet children continue to work to support their families, and recent decades have in fact seen a **deregulation of child labour laws** in Canada. The course thus asks: who benefits and who is harmed by our conceptions of childhood over time?
 
-## Lecture 1.2: What It Means to Study Concepts of Childhood
+## What It Means to Study Concepts of Childhood
 
 To study changing concepts of childhood means three things:
 
@@ -25,15 +25,15 @@ Second, it is to **know that childhood is not innocent or apolitical**. Children
 
 Third, it is to **understand that childhood is not without agency**. Although we most often hear about childhood through adult voices, the experience of children and youth can be recovered directly through various sources or by reading sources with a child's perspective — what this course calls the **"knee-high view."** Hearing different children and youth voices over time challenges conceptions of what is "normal" and "abnormal" regarding work, family, school, and law.
 
-## Lecture 1.3: "Kids Today" and Class Discussion
+## "Kids Today" and Class Discussion
 
 The phrase "kids today" encodes a complaint that assumes contemporary concerns about youth are unprecedented. This course challenges that assumption. The anxieties adults express about children and youth — about their work ethic, their use of technology, their sexual behaviour, their political engagement — have deep historical roots. Knowing that past helps us understand our perceptions of children today and interrogate why certain ideas about youth circulate in particular historical moments. Every generation of adults has worried about the generation below it, and understanding that continuity changes how we read contemporary panics.
 
 ---
 
-# Week 2: The Welfare of Children and Youth in Canada's Past and Today
+# The Welfare of Children and Youth in Canada's Past and Today
 
-## Lecture 2.1: Theories of Childhood
+## Theories of Childhood
 
 **Philippe Ariès**, French historian and author of *Centuries of Childhood* (1962), is credited with founding the modern study of children and youth. Ariès joined the social history movement of the 1960s to examine the lives of common people. Examining European painting, he found that young people in pre-seventeenth-century art were depicted as small adults — dressed in adult clothing, with adult mannerisms. He argued that this was because the Catholic Church believed that by age seven children were old enough to reason and sin, attributes marking a passage into adulthood. Ariès went so far as to assert that parents in the Middle Ages did not love their children as modern parents do. His primary thesis is that childhood as a discrete stage of life only became an accepted part of family life over time with economic and social advancements.
 
@@ -43,7 +43,7 @@ Generally, scholars agree that childhood, as a prolonged stage in need of protec
 
 By the nineteenth century, upper-class Victorians accepted the idea that a carefree childhood needed protection from the harsh realities of life. **Charles Darwin's** *On the Origin of Species* (1859) influenced psychologists to believe that individual child development mirrored evolutionary science — a rise from primitive origins to Western civilization. **G. Stanley Hall**, credited with founding the study of adolescence, wrote in 1904 about the turmoil of the teenage years and the danger posed if parents did not help children mature into "civilized" adults. The transition from childhood to adulthood was therefore nothing that could be taken for granted as natural or unfacilitated.
 
-## Lecture 2.2: Care and Protection — A Brief History
+## Care and Protection — A Brief History
 
 The Western conception of childhood as innocent and delicate led to changes to protect children in North America, including compulsory schooling and limited work. Although few families could attain the romanticized notion of childhood, this ideal set the stage for the growth of the **child welfare movement** during the early twentieth century — what has become known as the **"Century of the Child."**
 
@@ -59,7 +59,7 @@ By the middle of the twentieth century, the world had endured two major wars. Th
 
 By the late 1980s, the international community recognized children's rights through the **UN Convention on the Rights of the Child** and the **Canadian Charter of Rights and Freedoms**, pressing the state and adult experts to give children a voice in their own future. However, as the neo-liberal era progressed and corporations gained more power than governments, market rule took over state policy. Funding for social services was drastically cut. Child welfare agencies returned to interventionist practices for those deemed "at risk" because of cost-effectiveness.
 
-## Lecture 2.3: Class Discussion — Whose Childhood?
+## Class Discussion — Whose Childhood?
 
 **Protection as central to childhood** has been, and continues to be, grossly unequal. Historian Kristine Alexander argues in "Childhood and Colonialism in Canadian History" (2016) that the history of childhood has been shaped by a "'social forgetting' of settler colonialism." The history of childhood has been written mostly about white young people through the lens of white child savers.
 
@@ -67,21 +67,21 @@ The Ontario Human Rights Commission's report *Interrupted Childhoods* documents 
 
 The central question animating this discussion is: who has benefited and who has been left behind by the sentimental construction of childhood?
 
-## Lecture 2.4: Reflection — The Knee-High View
+## Reflection — The Knee-High View
 
 The "knee-high view" is the methodological and ethical commitment of this course: to pursue a critical inquiry of past and present evidence about childhoods; to collect and examine primary sources using historical thinking concepts; and to analyze secondary sources that speak to the state of childhood. The goal is to hear the experiences of diverse children and, through that hearing, move toward a better foundation for the welfare of children today and in the future.
 
 ---
 
-# Week 3: Children and Youth in Families
+# Children and Youth in Families
 
-## Lecture 3.1: The Construct of Family
+## The Construct of Family
 
 Family has been the first line of defense in creating a stable future for the nation, functioning as the locus of economics (from family subsistence living on farms to the working-class family budget), socialization (including ethnic identity, gender roles, cultural capital, early literacy, and values), and child welfare (from shelter and food to affection and affirmation). These functions are not based on genetics but on the social relationships and bonds established within a family unit.
 
 Families, like childhood, are **not natural formations**. The definition of family is constructed historically and socially. The state — meaning government-supported policies and institutions — has had a central role in defining appropriate and inappropriate family formations and behaviours. At times, government has reinforced sexist, heterosexist, racist, and classist conceptions of family in the name of the "best interests of the child." At other times, the state's power has been used to support more inclusive conceptualizations of family.
 
-## Lecture 3.2: The Nuclear Family Ideal
+## The Nuclear Family Ideal
 
 There is an element of mass nostalgia about the family. Our historical consciousness tends to connect a happy and healthy family with the cisgender, hetero-normative, white settler, patriarchal, **nuclear family** — the husband as breadwinner, the wife as homemaker, and typically their two biological children. This image, typified by the television program *Leave It to Beaver* in the 1950s, is rooted in Christian doctrine that a man and woman marry for the purpose of raising children. Social authorities have affirmed this meaning of family throughout the twentieth century, from schooling to social science literature (Coontz, 1992).
 
@@ -93,7 +93,7 @@ So-called "experts" in health and psychology — from **Dr. Spock** in the 1950s
 
 As a video resource in the course (*Where Does the Nuclear Family Come From?*, Origin of Everything, Season 1 Episode 12) indicates, the nuclear family ideal is a colonial structure. Many diverse family structures exist, including among First Nations, Métis, and Inuit peoples in what we know as Canada today.
 
-## Lecture 3.3: Diverse Family Formations
+## Diverse Family Formations
 
 Greater awareness of diverse family formations is increasingly evident today: children of same-sex parent families frequently experience more egalitarian domesticity than children from cisgender, heterosexual parent families, including shared parenting and household work. Children of divorced parents may experience less stigma thanks to no-fault divorce laws and have greater support networks than previous generations.
 
@@ -106,7 +106,7 @@ Yet diverse families are not new. Families have always included working-class co
 
 Leslie Paris's article "The Strange Way We Lived" demonstrates how social, political, and legal transformations of the 1960s and 1970s — including **no-fault divorce legislation** — fundamentally reshaped the American family and childhood, rendering the family more porous and complex.
 
-## Lecture 3.4: The State and Family
+## The State and Family
 
 Former Prime Minister **Pierre Elliott Trudeau** famously said in the 1960s that "The state has no business in the nation's bedrooms," borrowing a phrase from a newspaper editorial that commented on his introduction of legislation reforming laws pertaining to divorce, abortion, and homosexuality (CBC Archives). But the state, or what is often referred to as the public sphere, has never been nor can it be separate from the private sphere of the family.
 
@@ -122,19 +122,19 @@ Perhaps the most sustained and catastrophic example of state intervention is the
 
 The legal concept of **"the best interest of the child"** has been used both to justify and to challenge state intervention in family life. As Baldassi, Boyd, and Kelly's article "Losing the Child in Child-Centered Legal Processes" demonstrates, courts have often used the best interest standard to impose narrow, heteronormative understandings of family in custody cases involving lesbian mothers, sperm donors, and reproductive technology, frequently erasing the child's own conception of family in favour of adult ideological commitments.
 
-## Lecture 3.5: Conclusions
+## Conclusions
 
 The primary conclusion to draw from this week is that family, and what that institution means for children, **changes for better and for worse**. Children will be lost within social transformations of family if we hold on to narrow ideologies. We need instead to be open to the redefinition of family over time and place to include the child's conception of family, a history of caregiving, cultural identity, and social relationships.
 
-## Lecture 3.6: Optional Primary Source — The Dionne Quints Museum
+## Optional Primary Source — The Dionne Quints Museum
 
 The digital archives of the **Dionne Quints Digitization Project** (North Bay Public Library, Dionne Quints Museum, 1996) preserve photographs, advertisements, newspaper clippings, and postcards documenting the lives of the quintuplets. These sources reveal the commodification of childhood: the quints were used to sell products from Bee Hive Golden Corn Syrup to Puretest Cod Liver Oil; their image appeared on music, postcards, and souvenirs of "Quintland." The primary sources collectively illustrate how the state and market together could dissolve the boundary between a family's private life and public spectacle, using childhood as an instrument of commercial and political power.
 
 ---
 
-# Week 4: Children and Youth in Schools and Institutions
+# Children and Youth in Schools and Institutions
 
-## Lecture 4.1: Concepts of Child Welfare
+## Concepts of Child Welfare
 
 The family has been the first line of defense for children's care. The pervasive ideology of **residual welfare** — the belief that state support should be a last resort, available only through rigorous means testing — held that one had to prove both destitution and moral worthiness to receive assistance. The result historically was a reliance on female unpaid labour: if mothers were unavailable, grandmothers and aunts stepped in. While male kin have a greater role in parenting today, we continue to see internationally the reliance on extended female kin for the care of children — from African grandmothers now caring for grandchildren orphaned by AIDS, to women withdrawing from the labour force during COVID-19 when in-person schooling stopped.
 
@@ -142,7 +142,7 @@ Early child welfare legislation made little distinction among **delinquent, depe
 
 For centuries this has pushed parents into inadequate or even dangerous childcare arrangements — women staying in violent partnerships for fear that social workers will remove their children; children left with inadequate supervision because mothers cannot afford proper care. When family could not care for needy children, **institutions** became the next stop.
 
-## Lecture 4.2: Key Institutions
+## Key Institutions
 
 Institutions developed because Canadians and their government became deeply suspicious of **outdoor relief** — the term for money given directly to families. Many believed such relief simply rewarded the poor. Institutions became a major feature in Canadian children's lives by the end of the nineteenth century when families were unable or considered unsuitable to raise certain children.
 
@@ -150,7 +150,7 @@ The state took a more active role in child welfare based on the assumption that 
 
 Institutions won increased support in the early twentieth century with the growth of social science. The professional training offered by social work, medical, and educational professionals provided scientific justification for more specialized services, including twenty-four-hour institutional care for children.
 
-## Lecture 4.3: Institutions for Vulnerable Children in Historical Perspective
+## Institutions for Vulnerable Children in Historical Perspective
 
 Before the late nineteenth century, most children in need of care were housed alongside adults in jails, hospitals, and poorhouses. These institutions "crowded the young and old, sick and healthy, the criminal and the merely unfortunate" (Strong-Boag, 2011: 41). In Nova Scotia, as early as 1785 needy boys and girls joined adults in a workhouse. Upper Canada (Ontario today) had workhouses called "houses of industry" until approximately 1900.
 
@@ -162,7 +162,7 @@ Early orphanages were selective about admissions: officials believed the offspri
 
 **Industrial schools** targeted children believed to be in danger of unsuitable conduct; **reform schools** were for children who had crossed the line to criminality. In 1875, Ottawa amended the Criminal Code to allow sentencing to provincial reformatories rather than federal penitentiaries for those aged sixteen and under. These schools (re)educated children as young as age five, usually of the poor, assumed to lack discipline and morality. While the transition to specialized sites for children's care may have been intended to protect children from adult harshness, they did not always succeed: adult-inflicted abuse, long-term stigmatization, and destructive peer cultures characterized many of these facilities.
 
-## Lecture 4.4: Public Education Systems
+## Public Education Systems
 
 The **British North America Act of 1867** established Canada as a nation and laid the framework for public schools as a provincial responsibility. Before this period, education was an informal process where one generation passed skills and values to the next; the most elite children received instruction from tutors or in private schools.
 
@@ -172,7 +172,7 @@ Schools would socialize the large group of young, male, semi-skilled workers, ma
 
 Canada's educational history has been defined by conflicts over which values and norms should be instilled in young people, particularly regarding **minority-language and religious rights**. The history of public schooling includes the segregation of Asian students in early twentieth-century British Columbia; colonial language used in school textbooks that persists today; corporal punishment inflicted by teachers; and the damaging effects of compulsory attendance for children who feel bullied. Throughout the twentieth century there have been calls for a radical change to public schooling practices.
 
-## Lecture 4.5: Indian Residential School System
+## Indian Residential School System
 
 Formal schooling had profoundly different implications for students of non-European ancestry. The **Indian Residential School System** provides the defining case study.
 
@@ -188,7 +188,7 @@ Well-being and education were compromised by abysmal food and accommodation, lit
 
 The last residential institution closed in **1996**. The **2008 apology** by Prime Minister Harper was long overdue. In **2015**, the **Truth and Reconciliation Commission of Canada** issued its final report on the history and legacy of residential schools with 94 Calls to Action. The TRC report stands as both a historical reckoning and a guide for reconciliation.
 
-## Lecture 4.6: Children with Disabilities
+## Children with Disabilities
 
 As Veronica Strong-Boag writes, the most forgotten of all the forgotten children have been those with disabilities. The concept of disability is defined by environmental accommodations, or lack thereof, so the identification of children as disabled depends on historical context.
 
@@ -202,7 +202,7 @@ The logic of institutionalizing Canadians defined as abnormal remained largely i
 
 "Young Canadians with disabilities remain, as in the past, the most likely to be institutionalized" (Strong-Boag, 2011: 60).
 
-## Lecture 4.7: Recent Changes to Children's Institutional Care
+## Recent Changes to Children's Institutional Care
 
 Changes to children's institutional care occurred after WWII in part because reformers asserted that **human rights** needed to take centre stage in Canada, particularly for the most disadvantaged. As mothers' allowances, widows' pensions, and other social security programs appeared in the twentieth century, more youngsters remained with family. Scandals surrounding orphanages, schools for the deaf, and residential schools further undermined the credibility of institutions.
 
@@ -212,9 +212,9 @@ Veronica Strong-Boag concludes in *Fostering Nation* that without an effective s
 
 ---
 
-# Week 5: Child Migration and Immigration
+# Child Migration and Immigration
 
-## Lecture 5.1: Child Migration
+## Child Migration
 
 Migration is the movement of people from one place to another. Children seem invisible in our common narratives of migration, even though they migrate with families and alone between and within countries. Children have always moved or been moved for various reasons: tragedy to their caregivers, escape from adults, or seeking opportunities to better their lives.
 
@@ -224,7 +224,7 @@ The plight of children who relocate, often forcefully, continues to be a major i
 
 Karen Dubinsky's scholarship examines how the age, race, gender, and disability identity of child migrants shape the stories adults tell about their movement — particularly around interracial and transracial adoption of Indigenous and Black children.
 
-## Lecture 5.2: Urbanization and Child Migration
+## Urbanization and Child Migration
 
 In the late nineteenth century, industrialization caused massive social transformation that affected families, schooling, and child welfare. Families moved from rural areas to cities where factories and jobs were located. According to Statistics Canada, the proportion of people living in rural areas in Canada has steadily declined since 1851, when nearly 9 in 10 Canadians lived in a rural area.
 
@@ -232,7 +232,7 @@ Cities did not have the infrastructure to support the rapidly growing dense popu
 
 One method was to transfer children to rural environments: boys were thought vulnerable to alcohol and gambling in the city, girls to prostitution. Reformers and the government depicted Canada's unspoiled frontier as healthy, complete with fresh air and family-oriented living (Valverde, 2008). It is not an accident that transplanting children with and without their families to less populated, rural areas assisted with national goals. The colonial government wanted settlement to mark territory with "desirable" white settlers, which occurred in concert with driving Indigenous peoples from their ancestral lands, including by starvation and force (Daschuk, 2013).
 
-## Lecture 5.3: Settlement in the West
+## Settlement in the West
 
 The Canadian government recruited families and their children to rural parts of Canada through immigration schemes. At the turn of the twentieth century, the **Laurier government**, through Minister of the Interior **Clifford Sifton**, attempted to recruit immigrants to the West with millions of pamphlets and posters. References to specific temperatures and harsh terrain were banned from publications to attract newcomers. Sifton famously described the ideal immigrant as "a stalwart peasant in a sheep-skin coat, born on the soil, whose forefathers have been farmers for ten generations, with a stout wife and a half dozen children." Under Sifton, immigration to Canada increased from 16,835 per year in 1896 to 141,465 in 1905.
 
@@ -242,7 +242,7 @@ To keep Chinese settlers out, the federal government created a **head tax**: ini
 
 Between 1901 and 1911, less than 1,500 Blacks entered Canada, mostly Oklahoma farmers coming to the West.
 
-## Lecture 5.4: Immigration and Eugenics
+## Immigration and Eugenics
 
 In 1910, the government implemented a new **Immigration Act** that barred immigrants from races deemed undesirable (Knowles, 1997). Immigration policies restricted access to Canada for certain children based on eugenics social philosophy. Child savers, usually white and middle-class, targeted the urban poor and believed that to "clean up the cities" of wandering, disorderly children, the "unfit" had to be prevented from breeding.
 
@@ -250,7 +250,7 @@ At its extreme, eugenics resulted in the **sterilization** of thousands of women
 
 Historian Marjory Harper argues that the **home children movement** was based on "an overt eugenics confidence that the future of Britain and its empire [Canada] could best be secured by the judicious transplantation of young people from debilitating urban environments before their constitutions had been irreparably damaged" (Harper, 1998: 48).
 
-## Lecture 5.5: Home Children
+## Home Children
 
 Between 1869 and the 1930s, over **100,000 children** were sent to Canada from Great Britain as part of the child migration movement. Such immigration was halted with WWI but resumed with large state support in the 1920s under the **Empire Settlement Act**. Immigration decreased with the Depression and finally ended with some British child evacuees arriving during WWII.
 
@@ -258,7 +258,7 @@ As Harper's research demonstrates, these young people were brought to Canada fro
 
 The Canadian government subsidized the transportation of these children because they provided workers-in-training or adoptees for suitable rural families. Critics on both sides pointed out that children and their families in Britain were often made false promises about wages and the type of homes they would be provided (Parr, 2000). Life for home children in Canada was often characterized by overwork, isolation, emotional deprivation, and exploitation.
 
-## Lecture 5.6: Immigration from WWII to Today
+## Immigration from WWII to Today
 
 Despite increased awareness of human rights and an official multiculturalism policy since the mid-twentieth century, Canada has been selective and even unwilling to assist certain child immigrants and their families.
 
@@ -270,15 +270,15 @@ Today Canada accepts few separated children, though unaccompanied minors do arri
 
 ---
 
-# Week 6: Working Children and Youth
+# Working Children and Youth
 
-## Lecture 6.1: Defining Child Labour
+## Defining Child Labour
 
 Prior to the 1800s, children were considered contributors to the family economy. This assumption lasted far longer for children of working-class homes, whose work often determined family survival. Only with the **sentimentality of "modern" childhood** that began to emerge in the nineteenth century was children's labour put into serious question.
 
 The **International Labour Organization (ILO)** estimated in 2016 that 168 million children worldwide were in child labour — almost 11% of the child population as a whole, and 85 million of those in hazardous work. The ILO distinguishes between child work and child labour: child labour is work that is mentally, physically, socially, or morally dangerous and harmful, and that interferes with schooling. It is a myth that child labour is only a problem for developing nations: there are hundreds of thousands of unlawfully employed children in North America, including exploited minors in unregulated sectors (garment sweatshops, agriculture, construction). World Vision Canada estimates that more than $3.7 billion in goods involving child labour entered Canada in 2019. The COVID-19 pandemic, which has worsened children's health, safety, and education on a global scale, has also worsened child labour.
 
-## Lecture 6.2: Industrialization
+## Industrialization
 
 Before industrialization, children's work was within and for the **family economy**: raising animals, tending crops, doing washing, caring for siblings. Girls mostly engaged in domestic-based work; boys worked in the fields. Children were also engaged in economic activities outside the homestead — young boys and girls catching and processing fish in Newfoundland, hundreds of boys working in coal mines in Cape Breton or Vancouver Island, boys selling newspapers on the streets of Montreal, girls providing domestic service.
 
@@ -286,13 +286,13 @@ The **Industrial Revolution of the 1860s** had significant implications for work
 
 Employers wanted children in their factories — even those under age ten — for their nimble fingers, low wages, and compliance. No longer under parental supervision, children were disciplined and abused within industries. Children's wages were also pooled with family income to survive rampant poverty and the increased costs of urban living.
 
-## Lecture 6.3: Child Labour Reform
+## Child Labour Reform
 
 Children's increasing presence in industries resulted in philanthropic groups and unionists advocating for regulations on child labour. At first, some reformers accused working-class parents of being irresponsible and forcing their children to work. Over time, most reformers turned their attention to the ills of capitalism as the source of the problem. Unions supported a **male breadwinner ideology** — the concept that the public, paid world of work should be the preserve of husbands and fathers. Social reformers, led by middle-class women (often part of the **first-wave feminist movement**), believed the best interests of the child was to be in school or at home with their mothers.
 
 The argument by unionists was that cheap labour by children, women, and male immigrants reduced the chance of white men ever receiving a fair wage. This logic reveals the class, gender, and racial politics underlying child labour reform: **child servants, often from poor and non-white populations, freed other children from work and for education**, thereby reproducing cycles of poverty and widening socio-economic and racial gaps.
 
-## Lecture 6.4: Legislation
+## Legislation
 
 Child savers — including first-wave feminists like **Nellie McClung** and the Famous Five, middle-class philanthropists like **J.J. Kelso**, male trade unionists, and entrepreneurs — tried to "save" children through fostering programs, philanthropic organizations, educational reforms, and government legislation.
 
@@ -300,13 +300,13 @@ Legislation regarding child labour was fast and furious during this era. All pro
 
 Unfortunately, legislation regarding work and schools was often **left unenforced**, with little attempt to regulate farm and domestic labour. The structural causes of children's labour were unaddressed. Mothers' Allowances during WWI and Family Allowances introduced during WWII were intended to shore up family income so children would not need to work, but government income supports proved insufficient. Interventions throughout the twentieth century overlooked the work of women and children and failed to provide systemic supports for equitable workforce participation.
 
-## Lecture 6.5: Child Labour Today
+## Child Labour Today
 
 The reading by McBride and Irwin, "Deregulating Child Labour in British Columbia" (*Lost Kids*, pp. 230–243), documents how neo-liberal economic policies from the 1980s onward have reversed decades of protective legislation. Rather than representing a relic of industrial capitalism, child labour in Canada has been actively re-enabled through legislative deregulation, particularly affecting youth in sectors like agriculture and retail. The balance and transition between school and work for young people continues to raise urgent questions about economic exploitation, educational access, and the definition of childhood itself.
 
 ---
 
-# Week 7: The Health of the Child and Nation
+# The Health of the Child and Nation
 
 ## Lecture 7.1–7.3: "Healthy" Little Bodies — From Early 1900s to the 1930s
 
@@ -318,7 +318,7 @@ The **pasteurization of milk** was a foundational reform. By the early twentieth
 
 The **school as a health institution** became central to this program. Medical inspections of schools were introduced across Canada in the early twentieth century. Children were weighed, measured, examined for head lice, dental hygiene, and signs of disease. This medicalization of the school body simultaneously provided genuine public health benefits and served as a surveillance apparatus that marked certain children — racialized, disabled, and working-class children — as deficient. As historian Mona Gleason demonstrates in her reading "Lost Voices, Lost Bodies?" medical practitioners' accounts of children's bodies in English Canada from 1900 to the 1940s reveal how thoroughly ideals of the healthy body were saturated with assumptions about race, class, and gender.
 
-## Lecture 7.4: Health Reforms — 1940s to 1960s
+## Health Reforms — 1940s to 1960s
 
 Health care emerged as a human right following the Second World War. Eugenics philosophy had quickly fallen out of favour in the face of the atrocities committed by the Nazi regime. All citizens living within a strong democratic nation like Canada deserved to be healthy.
 
@@ -328,7 +328,7 @@ Health curriculum in schools focused on citizenship lessons through personal dev
 
 The growing consumer industry of the postwar period provided grooming and hygiene products targeted to young people that promised good health. Housewives were directed to the latest domestic technology — the washing machine, the vacuum — to create a healthy and happy home. **Dr. Benjamin Spock's** *The Common Sense Book of Baby and Child Care* (1946) became the bible for proper mothering. Male psychologists had an unprecedented place in schools, testing and inspecting children for normal behaviour and appearance, and identifying potential deviants.
 
-## Lecture 7.5: Child Health — 1970s to Today
+## Child Health — 1970s to Today
 
 Children's health has received increasing medical attention over the course of the twentieth century, evident in how we explain child behaviour — public officials now seek psychological and physiological explanations for bullying and abuse, with systemic injustices receiving less attention. When Dr. Spock wrote post-WWII, issues from autism spectrum disorder to child obesity were not yet prominent concerns.
 
@@ -338,15 +338,15 @@ Frisby et al.'s article "Play Is Not a Frill" argues that private-public recreat
 
 ---
 
-# Week 8: Children's Rights and Social Policy
+# Children's Rights and Social Policy
 
-## Lecture 8.1: Defining Children's Rights
+## Defining Children's Rights
 
 Children's rights span civil, cultural, economic, social, and political rights. They can be crudely broken down into two types. **Protective rights** advocate for society to protect children from harm because of their dependency on adults (health, shelter). **Rights to autonomy** advocate for children as autonomous persons who will participate in community (education, voting).
 
 Given our conception of children as dependent and innocent, we most often discuss rights for young people in terms of protection *from* something. Far less often are children's rights discussed in terms of rights *to* something. This positions young people as **citizens-in-waiting** who need to learn responsibility to the state, rather than first benefiting from rights to which they are entitled. Children and youth rights need to be conceptualized in terms of both protection and autonomy (Kennelly & Llewellyn, 2011).
 
-## Lecture 8.2: The Development of a Children's Rights Movement
+## The Development of a Children's Rights Movement
 
 A movement for children's rights can be traced to late eighteenth-century ideas of natural and divine rights. **Thomas Spence** was one of the first modern philosophers to explicitly address the natural rights of children in *The Rights of Infants* (1796). In Canada, the children's rights movement emerged during the late nineteenth century, born out of the child saving movement. The earliest children's rights focused on labour and shelter: late nineteenth and early twentieth century laws limited the age and type of labour for children, created separate judicial systems for young people, and made school attendance compulsory.
 
@@ -356,17 +356,17 @@ Boys and girls growing up too fast during the Great War concerned adults around 
 
 The **Great Depression** (stock market crash of 1929 to approximately WWII) severely limited the focus on and money available for the children's rights movement. In Canada, a social safety net developed by the early 1940s: unemployment insurance and the **Family Allowances Act of 1945** — Canada's first universal welfare program, based on age and citizenship rather than income. But these measures failed to eliminate the exploitation of children or address the underlying causes of poverty.
 
-## Lecture 8.3: Children and the Holocaust
+## Children and the Holocaust
 
 World War II demonstrated how inadequate the protection of citizens — especially children — was under the League of Nations Covenant. **Millions of Jewish children** were murdered in concentration camps; others lived in constant fear. Children were uprooted from their communities and families to escape persecution and poverty.
 
 **Anne Frank**, a Jewish girl born in Germany, moved with her family to Amsterdam in 1933 when the Nazis gained power. The family went into hiding in 1942; Anne kept a diary between ages 13 and 15. The family was captured in 1944 and sent to concentration camps; Anne died of typhus. Her father, the only survivor, recovered the diary. One diary entry reads: *"I've reached the point where I hardly care whether I live or die. The world will keep on turning without me, and I can't do anything to change events anyway. I'll just let matters take their course and concentrate on studying and hope that everything will be all right in the end."*
 
-## Lecture 8.4: Japanese Children and WWII
+## Japanese Children and WWII
 
 War atrocities were inflicted upon children in Canada. In March 1941, Ottawa required all Japanese Canadians to register with the government, deeming them "enemy aliens." Japanese children were subject to curfews, employment bans, and other restrictions on civic life. By 1942, Prime Minister **Mackenzie King**, through **Order-in-Council P.C. 1486**, ordered the expulsion of all people of Japanese ancestry from the West Coast. More than 20,000 Japanese Canadians were removed from their homes, stripped of material possessions, and placed in shantytowns or government-built centres where they were malnourished and given limited schooling. Men were regularly separated from their wives and children to work in road labour camps. After the war, families had to choose between deportation to war-ravaged Japan or relocation east of the Rockies. Japanese Canadians would not receive compensation until 1988.
 
-## Lecture 8.5: Children's Rights and Reconstruction Politics
+## Children's Rights and Reconstruction Politics
 
 Historian **Dominique Marshall** argues that children's rights were a political tool used to distract the public from adult welfare issues during the reconstruction of the country following the war. Minimum levels of welfare and education were provided for children to channel popular hopes for increased economic and political democracy — adults were being dissuaded from making too many demands on the government.
 
@@ -374,7 +374,7 @@ The postwar period saw a broadening of democratic guarantees and the social welf
 
 Canadian policies followed international human rights movements. In 1948, the **United Nations Universal Declaration of Human Rights** was produced — paradoxically, despite a Canadian (**John Humphrey**) drafting the declaration, Canada initially abstained from the vote, arguing the declaration was too vague or imposing upon provincial jurisdiction. Canada was again a reluctant participant in the **UN Declaration of the Rights of the Child** in 1959.
 
-## Lecture 8.6: Children's Rights since the 1980s
+## Children's Rights since the 1980s
 
 According to Molly Ladd-Taylor's chapter "What Child Left Behind?", the children's rights movement's reliance on appealing to fear or sympathy for "hopeless" or "damaged" children has resulted in regression of children's rights in North America since the 1980s. Conservative politicians used images of hopeless childhood to demonize welfare mothers and roll back the social safety net. Constructed moral panics about drug-addicted Black mothers having "crack babies," Native American children suffering from fetal alcohol syndrome, and inner-city teenage gang members were used to prove a hopeless cycle of poverty — and to cut children's basic human rights provided by social services.
 
@@ -384,15 +384,15 @@ Yet, thirty years later, the gap between the rhetoric of children's rights and t
 
 ---
 
-# Week 9: "Bad Kids" in Conflict with the State
+# "Bad Kids" in Conflict with the State
 
-## Lecture 9.1: The Birth of Adolescence
+## The Birth of Adolescence
 
 By the 1920s, specialized attention for the young grew beyond early childhood years. **Adolescence** was a newly regarded stage of life warranting attention by burgeoning experts. As Cynthia Comacchio explains, the birth of the teenager came about following the First World War, when a generation of young people came of age during a period of unprecedented unrest: international violence, labour disputes (such as the **1919 Winnipeg General Strike**), and the decline of traditional social agents such as the family and church. Talk began of youth as a "lost generation" from the 1920s.
 
 Comacchio argues that "adolescence came to be regarded as a social problem primarily because its constituents were coming of age in the modern age" (Comacchio, 2009: 53). Adolescents were potential modernizing forces for the future, but also considered potential sources of disorder if not properly managed — inaugurating a generational divide within society that continues to this day.
 
-## Lecture 9.2: The Rise of the "Modern" Youth Problem
+## The Rise of the "Modern" Youth Problem
 
 **G. Stanley Hall** is credited with developing the term adolescence in his 1904 work *Adolescence*. Hall asserted that child development mirrored human evolution, characterizing childhood as the prehistoric stage and adolescence as the critical gap between primitive childhood and civilized adulthood. Normal adolescence was, for Hall, an episode of "physical and mental anarchy" brought about by the onset of biological puberty.
 
@@ -400,17 +400,17 @@ Comacchio argues that "adolescence came to be regarded as a social problem prima
 
 By the 1920s, sociologists were examining the social causes of youth problems. These experts diagnosed teenage angst as "**maladjustment**" — a catch-all phrase that had public resonance and justified the extensive work of adults to regulate young people's lives.
 
-## Lecture 9.3: Rebel Youth
+## Rebel Youth
 
 Class, race, and gender made some young people a greater "problem" than others. Hall argued that girls were in a perpetual state of adolescence compared to men naturally prepared for modern life. The 1920s **flapper** typified girls who resisted their "natural calling" by partaking in urban commercial amusement — dance halls, movies — and employment outside the home.
 
 If girls were depicted as promiscuous, boys were characterized by experts as more "naturally" violent. After the Second World War, the state mostly punished **Mexican American youth** (associated with the zoot suit riots) and **African American youth** (supposedly hardened criminals in black juke joints), while the media worried about rebel youth like **James Dean** (Bush, 2009: 78). The Zoot Suit Riots of 1943 in Los Angeles illustrated how anti-Mexican racism became encoded in the construction of youth criminality.
 
-## Lecture 9.4: Delinquent Boys and Girls
+## Delinquent Boys and Girls
 
 By the 1950s, adolescents were not merely a problem but potential **juvenile delinquents** and a source of moral panic. Bush argues that the face of delinquency after the Second World War was different than the interwar years. Particularly fearsome by the 1950s was the wholesome, suburban, white, middle-class youth turning bad through improper mothering or indulgent parents giving over to seedy popular culture. Like earlier generations, child experts deemed white, middle-class boys and girls redeemable with increased mental hygiene services, advice literature, and restoration of traditional family values. For other adolescents — racialized, poor — redemption would be hard pressed; they would fall under the purview of the juvenile justice system.
 
-## Lecture 9.5: Early Years of the "Juvenile Delinquent"
+## Early Years of the "Juvenile Delinquent"
 
 Youth crime existed before the development of the concept of adolescence. Before then, public authorities relied upon the family to correct and contain misbehaving children. When the family could not contain "bad kids," they were treated as small adults by the state — convicted children faced the same penalties as adult offenders, including incarceration, whipping, and even hanging. British common law did protect children under age seven with the **doli incapax** defence ("the incapacity to do wrong"), but this presumption was unevenly applied: working-class children were often presumed more dangerous and capable of knowing wrongdoing.
 
@@ -418,7 +418,7 @@ When the **Kingston Penitentiary** opened in 1835 as the first prison in Canada,
 
 With increasing faith in modern childhood (dependence, protection, delayed responsibility), child savers demanded penal reforms. **Elizabeth Fry** and **John Howard** were leaders in the early movement in England for humane prisons, and societies in their names continue today. Industrial and reform schools for children were used by the state as a solution to poverty, associated with immorality, and for discipline. By the late 1800s, most criminal activity by youth was minor — curfew infractions and truancy from school.
 
-## Lecture 9.6: A Separate Juvenile System
+## A Separate Juvenile System
 
 By the late 1800s, governments enacted legislation to develop a separate juvenile justice system:
 
@@ -432,7 +432,7 @@ The 1908 **Juvenile Delinquency Act** was the most notable: it defined delinquen
 
 The Act required provinces to set up courts, forbade incarceration of children with adults, provided probation officers, and stressed treatment not punishment. Courts had a wide range of options besides incarceration: Children's Aid Societies, foster homes, industrial schools, reformatories, and more. Although a separate justice system was created, justice continued to be uneven — the system failed to distinguish between neglected, dependent, and delinquent youth, and all were viewed as potentially dangerous.
 
-## Lecture 9.7: Uneven Justice for Young People
+## Uneven Justice for Young People
 
 Redress of youth crime in the early twentieth century moved away from punishment models. Individual diagnoses of "maladjustment" by the **mental hygiene movement** in the 1920s and the psychology profession in the 1940s ignored the structural causes of crime and the demographics of the population deemed juvenile delinquents — overwhelmingly racialized, urban poor youth.
 
@@ -440,7 +440,7 @@ William Bush's examination of the **Gatesville School for Boys** in Texas reveal
 
 Bush argues that the image of the wholesome, misguided, white, freckled-faced boy in need of professional mentoring erased the socio-economic context for juvenile delinquency and diverted attention from the actual population of juvenile delinquents. In locking up other people's children, he writes, we must recognize "the continuing gap between the promise of childhood's universality and that all too frequent reality of childhood denied" (Bush, 2009: 90).
 
-## Lecture 9.8: "Modern" Youth Justice?
+## "Modern" Youth Justice?
 
 By the 1980s, the rehabilitation rhetoric was subsumed by calls for **youth accountability**. In 1984, Parliament passed the **Young Offenders Act**, replacing the Juvenile Delinquents Act. The legislation shifted youth justice away from a social welfare approach toward making youth responsible for their actions, while acknowledging that youth have rights distinct from adults. The Act stressed that society should be protected from youth criminality and that incarceration should be avoided when possible.
 
@@ -452,21 +452,21 @@ Unfortunately, **the incarceration of marginalized youth, especially Black and I
 
 ---
 
-# Week 10: Gender, Sexuality, and Childhood
+# Gender, Sexuality, and Childhood
 
-## Lecture 10.1: "Normal" Youth
+## "Normal" Youth
 
 As Mary Louise Adams states in the readings for this week, teenagers were "particularly singled out as targets for intervention by adults, because if they were normal, the future would be normal too" (Adams, 2002: 290). Normal teenagers are classified as those young people who adopt dominant behavioural standards and participate in a national social consensus of "good" citizenship. Abnormal teenagers or "deviants" are classified as those who resist and/or seek to redefine social norms.
 
 As Mona Gleason explains in *Normalizing the Ideal* (1999), drawing on **Michel Foucault**: "Regulation or normalization represents socially and historically contingent processes whereby some behaviours and attitudes come to be labelled as normal and good while others come to be labelled as deviant and bad." Normalization is a **disciplinary power** that emerged in the nineteenth century to regulate citizens as society became more complex, occurring through military, factories, and asylums, and continuing today through social institutions (schools, church, media), social groups (peers, family), and social policies (recreation, labour regulations, correction services, welfare). Young people also have agency in defining normality — student protests of the 1960s or the establishment of popular culture trends demonstrate youth influences.
 
-## Lecture 10.2: "Normal" Youth Sexuality
+## "Normal" Youth Sexuality
 
 Sexuality has been the ground where fears about social change and the boundaries of normality for young people were most intensely contested. In twentieth-century North America, experts increasingly defined adolescence as a critical journey to sexual responsibility, which they correlated with the production of a cisgender, heteronormative family structure. Adams writes: "Sexual normality was not simply about sex: normal was about being middle class; it was about whiteness and not being 'ethnic'; it was about proper expressions of gender. As a concept, normality erased difference and limited the forms of sexual identity and expression available to young people" (Adams, 2002: 273).
 
 Although essentialist theories held that biology is destiny, fears persisted that young people were vulnerable and could be led astray. Adolescence was, according to most child psychologists, a normal process leading to differentiated masculinity and femininity and eventually heterosexuality. But outside threats to "natural" development had to be contained.
 
-## Lecture 10.3: Early Cold War Canada
+## Early Cold War Canada
 
 During the post-WWII period, Canadians searched for a sense of "normality." The recent Depression and Second World War had exposed society to mass war casualties, rampant poverty, and dramatic changes to gender relations. Following the war, Canadians feared continued upheaval with the threat of the atomic bomb and a possible third world war. The **Cold War** (1945–1989) pitted the Communist East (Soviet Union) against the Democratic West (US-centred).
 
@@ -476,7 +476,7 @@ The nuclear family took on an extremely important social and cultural meaning: i
 
 **LGBTQ2S+ people** were targeted as sexual subversives. Starting in the 1950s, the Canadian government characterized lesbian and gay individuals as engaging in immoral and illegal activities that could make them vulnerable to blackmail by communists — a threat to national security. One egregious attempt to identify lesbian and gay civil servants and soldiers was the **"Fruit Machine"** — a device intended to measure involuntary physiological responses to homoerotic imagery. The RCMP investigated and kept secret surveillance files on thousands of suspected lesbian and gay individuals, resulting in dismissals, forced resignations, stigmatization, and social exclusion. By the late 1960s, there were files on 9,000 individuals. After decades of activism, the government issued an **official apology in 2017** (Kinsman & Gentile, 2010; Levy, 2020).
 
-## Lecture 10.4: Morality and the Modern Teenager
+## Morality and the Modern Teenager
 
 Social authorities considered teenagers to be potential delinquents, drawing upon the idea that puberty was a vulnerable life stage for sexual confusion at best and deviancy at worst. Teenagers in the postwar period were considered of sound mental health if they sexually matured gradually through same-sex friendships, then opposite-sex romantic friendships (including "going steady" — a new form of dating), and finally marriage with traditional gender roles. The worry was that children were rushing the process, engaging in sexual relations prior to marriage.
 
@@ -486,13 +486,13 @@ At the end of the war, the Canadian government established the **Canadian Youth 
 
 Gleason and Adams in the readings also describe anxiety about boys remaining "mama's boys" and girls prioritizing careers over family, as well as boys and girls prioritizing same-sex relationships. Experts attributed such "maladjustment" to a lack of mothering during the war, over-mothering by women who returned home after the war, and the influence of immoral popular culture. The response was increased regulation by experts, particularly male psychologists, to provide proper socialization for teenagers.
 
-## Lecture 10.5: Psychological Persuasion and Sex Education
+## Psychological Persuasion and Sex Education
 
 **Dr. Marion Hilliard**, a prominent Canadian doctor who wrote advice columns on teenage sexuality for *Chatelaine* in the 1950s, argued that a strong sex drive for boys and girls was natural but that teenagers needed to learn to control and direct those urges. Girls, more so than boys, were responsible for safeguarding the moral compass of society.
 
 The postwar years saw an increasing number of boys and girls, as well as their mothers, attending **mental hygiene clinics** and being prescribed medicine or therapy for sexual and gender "abnormalities." Sex education films like *Molly Grows Up* and *Habit Patterns* circulated in schools to train teenagers in "normal" sexual and gender development. For girls, "normal" meant deferring sexual activity, prioritizing domesticity and marriage, and serving as the moral guardian of heterosexual relations. Boys' normality was measured by their embrace of competition, leadership, and future breadwinning.
 
-## Lecture 10.6: Popular Culture Regulation
+## Popular Culture Regulation
 
 Concerns about youth sexuality and delinquency extended to popular culture. Suggestive hip movements of **Elvis Presley**, the leather-jacketed **James Dean**, and the sheer blouse-wearing **Marilyn Monroe** caused alarm. Of greatest concern to politicians were **comic books**.
 
@@ -500,7 +500,7 @@ Historian Mary Louise Adams in *The Trouble with Normal* (1997) describes how co
 
 Fulton's justification came from American psychiatrist **Fredric Wertham**, who later published *Seduction of the Innocent* (1954). Wertham characterized comic book reading as a "bad sexual habit" that perversely stimulates children. He explicitly worried about "masturbation, sado-masochistic fantasies, homosexuality and homoeroticism, prostitution, and sex crime." Most notoriously, Wertham expressed particular concern about the "homoerotically tinged type of comic book" — arguing that **Batman** was "a wish dream of two homosexuals living together" — and depicted **Wonder Woman** as a lesbian in disguise, describing her as "the cruel, 'phallic' woman" who was "an undesirable ideal for girls, being the exact opposite of what girls are supposed to want to be."
 
-## Lecture 10.7: Troubling Normality
+## Troubling Normality
 
 Moral panics, media representations, and government legislation give us a window into adult desires for normative behaviour from young people, but they do not tell us exactly how teenagers acted daily in response. As sociologist Stephanie Coontz reminds us, *Leave It to Beaver* was not a documentary.
 
@@ -512,7 +512,7 @@ Contemporary examples of normative pressures on youth include the continued norm
 
 ---
 
-# Week 11: Race, Ethnicity, and Childhood
+# Race, Ethnicity, and Childhood
 
 Week 11 was designated a **research week** in the Spring 2021 course — no new lecture content was released, and students devoted their time to completing the "Changing Concepts of Childhood" final essay. The analytical threads regarding race, ethnicity, and childhood were woven throughout the preceding weeks.
 
@@ -532,9 +532,9 @@ The course as a whole demonstrates that **race and ethnicity have been decisive 
 
 ---
 
-# Week 12: Contemporary Issues and Conclusion
+# Contemporary Issues and Conclusion
 
-## Lecture 12.1: "Lost" Young People
+## "Lost" Young People
 
 We are all quite familiar with the numerous **warning signs** posted in communities to protect and regulate the privacy, health, and lives of young people. These signs indicate the primary change in the concept of childhood over the last century. Before the mid-1800s, children were considered small adults: young people worked in the familial economy, were susceptible to polio, and hanged for theft. As North America became more modern and complex, adults turned to the young to provide a stable future. Children were imbued with the hopes and fears of adults who encouraged — and at times forced — young people to be the "right" kind of citizen for the nation.
 
@@ -549,7 +549,7 @@ There are **no signs** prominently posted in our neighbourhoods asking us to wat
 
 While we must recognize the lack of comprehensive justice for all children and youth, it is equally critical to acknowledge, as this course has done throughout, the ways that **young people have resisted adult regulations and carved out powerful paths in their worlds**. Rather than being "lost," young people often know a better way forward than the adults around them.
 
-## Lecture 12.2: Learning into Actions
+## Learning into Actions
 
 Our underlying assumptions about childhood — created over time and in specific social contexts — shape policies and practices that have consequences for children's lives. **Who gets to be innocent and delay responsibility? Who, in contrast, is perceived as dangerous and forced to be independent?**
 
@@ -557,7 +557,7 @@ An understanding of childhood over time can transform into actions toward justic
 
 The course asks: Why is it important to know about changing concepts of childhood? How can this understanding lead to actions that improve children's lives? The critical historical lens developed throughout SDS 220R offers tools for interrogating the present — for seeing how contemporary panics about children and youth, contemporary child welfare policies, contemporary juvenile justice practices, and contemporary health disparities are all shaped by historical processes that can be understood, challenged, and changed.
 
-## Lecture 12.3: Thank You
+## Thank You
 
 *Dr. Llewellyn closes the course with an invitation to remember that childhood can be a time of pleasure, play, and happy memories — and to hold onto that as motivation for the difficult, necessary work of understanding and improving the conditions of children's lives.*
 

@@ -4,7 +4,7 @@ prof: "John Brownell"
 ---
 Introduction on course outline and (potential) course topics. Two kinds of researchers will be interested in this field (psychology of music): musicians interested in psychology, and psychologist interested in music. The professor belongs to the first kind :)
 
-# Lec 2 - Sept 13
+# Psychology of Music: Introduction and Areas of Intersection
 Bill Thompson considers three "abiding controversies" in the psychology of music.
 
 ## Music and Psych
@@ -21,7 +21,7 @@ There are 6 broad areas of intersection between music and psychology:
 ## Science
 What is sound? acoustical realities. Acoustics now a subfield of fluid dynamics. Musical sound is also pressure wave, but sth unique: tone, a sound that is dominated by a particular frequency. Note that pure tones do not exist in nature.
 
-# Lec 4 - Sept 21
+# Scales, Tonal Hierarchy, and the Origins of Music
 
 Scales: Pythagorean, equal temperament
 

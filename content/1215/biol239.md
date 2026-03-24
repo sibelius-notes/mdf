@@ -3,9 +3,7 @@ title: "BIOL 239: Genetics"
 prof: "Christine Dupont"
 ---
 
-# BIOL 239: Genetics — Module 01: Mendelian Genetics and Chromosomal Theory
-
-## Lesson: Introduction to the Course
+## Introduction to the Course
 
 Genetics is the study of heredity — how traits are transmitted from parents to offspring, how genes determine the characteristics of living organisms, and how genetic information varies within and among populations. The field traces its modern origins to a series of brilliant experiments conducted in the nineteenth and twentieth centuries, yet it remains one of the most rapidly evolving areas of contemporary biology. This course, BIOL 239 at the University of Waterloo, approaches genetics both mechanistically and conceptually: you will learn not merely what patterns of inheritance exist, but *why* they exist, grounding every principle in the molecular architecture of the chromosome and the mechanics of cell division.
 
@@ -15,7 +13,7 @@ As you progress through this module, you will encounter an expanding set of comp
 
 ---
 
-## Lesson: Artificial Selection
+## Artificial Selection
 
 The concept of genetic variation lying dormant in a population, waiting to be exposed by selection, is nowhere more compellingly demonstrated than in the history of animal and plant domestication. **Artificial selection** is the deliberate choice by humans of individuals with desired traits as the parents of the next generation. Over many generations, this process amplifies the frequency of alleles contributing to those traits while diminishing others, sculpting phenotypes far outside the range visible in wild ancestors.
 
@@ -27,7 +25,7 @@ The key insight from artificial selection is that it does not create new alleles
 
 ---
 
-## Lesson: Mendelian Genetics — Monohybrid Crosses
+## Mendelian Genetics — Monohybrid Crosses
 
 Gregor Mendel's experiments with the garden pea (*Pisum sativum*) succeeded where earlier hybridization studies had failed because he focused on discrete, easily scored traits and because he was remarkably systematic in his record-keeping and analysis. The traits he chose — seed shape, seed color, pod shape, pod color, flower color, flower position, and stem height — each existed in two clearly distinguishable forms, and each was controlled (as we now know) by a single gene with two alleles.
 
@@ -46,7 +44,7 @@ An organism's **genotype** is the actual allelic composition of its genome at th
 
 ---
 
-## Lesson: Law of Segregation and Probability
+## Law of Segregation and Probability
 
 The mechanistic explanation for Mendel's 3:1 ratio is the **Law of Segregation**: the two alleles of a gene separate from each other during the formation of gametes, so that each gamete receives only one allele. This law is a direct consequence of meiosis (discussed in detail in lessons 1i00 and 1j00): the two homologous chromosomes, each carrying one allele of a given gene, migrate to opposite poles during meiosis I, ensuring that the resulting gametes are haploid.
 
@@ -60,7 +58,7 @@ These two rules together allow calculation of the probabilities of any genotype 
 
 ---
 
-## Lesson: Dihybrid, Multihybrid, and Independent Assortment
+## Dihybrid, Multihybrid, and Independent Assortment
 
 Mendel's **Law of Independent Assortment** states that the alleles of different genes assort independently of one another during gamete formation. This law applies when two genes are located on different (non-homologous) chromosomes, so that the segregation of alleles at one locus has no influence on which allele is transmitted at the other locus.
 
@@ -79,7 +77,7 @@ The **branching diagram** (forked-line method) is an efficient alternative to la
 
 ---
 
-## Lesson: Incomplete Dominance and Codominance
+## Incomplete Dominance and Codominance
 
 Mendel's original crosses happened to involve genes exhibiting **complete dominance**, where one allele entirely masks the phenotypic contribution of the other. Many genes, however, do not behave this way. **Incomplete dominance** occurs when the heterozygote displays a phenotype intermediate between those of the two homozygotes. The classic example is flower color in snapdragons (*Antirrhinum majus*): crossing red-flowered (*C<sup>R</sup>C<sup>R</sup>*) and white-flowered (*C<sup>W</sup>C<sup>W</sup>*) plants produces pink-flowered F<sub>1</sub> offspring (*C<sup>R</sup>C<sup>W</sup>*). Neither allele is dominant; both contribute partially to the phenotype, and the heterozygote appears to be an intermediate. Selfing the pink F<sub>1</sub> produces an F<sub>2</sub> genotypic and phenotypic ratio of 1 red : 2 pink : 1 white — the phenotypic ratio is **1:2:1** rather than the 3:1 expected under complete dominance.
 
@@ -89,7 +87,7 @@ The distinction between incomplete dominance and codominance is often a matter o
 
 ---
 
-## Lesson: Multiple Alleles
+## Multiple Alleles
 
 Although a diploid organism can carry only two alleles at any given locus — one on each homolog — a gene can exist as many different allelic variants within a population. **Multiple alleles** at a locus arise because any nucleotide position in the gene can potentially mutate, generating a large number of distinct alleles that differ from one another and from the wild-type sequence.
 
@@ -110,7 +108,7 @@ Multiple alleles are also common in histocompatibility genes (the HLA loci in hu
 
 ---
 
-## Lesson: Pleiotropy
+## Pleiotropy
 
 The assumption that one gene controls one trait, while useful as a first approximation, is frequently violated. **Pleiotropy** occurs when a single gene affects two or more seemingly unrelated traits. Pleiotropy is the rule rather than the exception in biology, because most gene products participate in multiple biochemical or developmental pathways.
 
@@ -124,7 +122,7 @@ The molecular basis of pleiotropy is straightforward: if a gene encodes an enzym
 
 ---
 
-## Lesson: Multifactorial Inheritance
+## Multifactorial Inheritance
 
 Many traits of biological and medical interest do not fit simple Mendelian categories because they are influenced by alleles at multiple genes as well as by environmental factors. Such traits are described as **multifactorial** (or **polygenic** when the emphasis is on the multiple genetic contributors). Examples include human height, skin pigmentation, intelligence, susceptibility to common diseases like type 2 diabetes and heart disease, and most quantitative traits in livestock and crop plants.
 
@@ -140,7 +138,7 @@ When multiple genes each contribute additively to a continuously varying trait, 
 
 ---
 
-## Lesson: Other Factors Influencing Phenotype
+## Other Factors Influencing Phenotype
 
 Genotype does not uniquely determine phenotype in all cases. Several additional factors modify the relationship between gene and observable trait.
 
@@ -154,7 +152,7 @@ Genotype does not uniquely determine phenotype in all cases. Several additional 
 
 ---
 
-## Lesson: Pedigree Analysis
+## Pedigree Analysis
 
 A **pedigree** is a diagram representing the transmission of a trait through a family over multiple generations. Pedigree analysis allows geneticists to determine the mode of inheritance for a trait — whether it is autosomal dominant, autosomal recessive, X-linked dominant, or X-linked recessive — and to assign probable genotypes to individuals in the pedigree who are not directly affected but who may be carriers.
 
@@ -170,7 +168,7 @@ Working through a pedigree requires systematic logic: first, determine whether t
 
 ---
 
-## Lesson: Chromosomes
+## Chromosomes
 
 The physical basis for Mendel's laws resides in the chromosome — the long, linear DNA molecule packaged with proteins into the distinctive structures visible in the nucleus during cell division. Understanding chromosome structure is prerequisite to understanding both mitosis and meiosis, and therefore to understanding why alleles segregate and assort as they do.
 
@@ -182,7 +180,7 @@ A complete, ordered display of all the chromosomes in a cell, arranged by size a
 
 ---
 
-## Lesson: Mitosis
+## Mitosis
 
 **Mitosis** is the process of nuclear division that produces two daughter nuclei each containing the same number and genetic composition of chromosomes as the parent cell. It is the mechanism by which multicellular organisms grow and replace cells, and it underlies the proliferation of single-celled organisms. The result of mitosis (followed by cytokinesis) is two genetically identical daughter cells — clones of the parent.
 
@@ -194,7 +192,7 @@ The critical genetic outcome of mitosis is that each daughter cell receives one 
 
 ---
 
-## Lesson: Meiosis
+## Meiosis
 
 **Meiosis** is the specialized form of cell division that produces haploid gametes (or spores) from diploid progenitor cells. It involves two sequential division events — meiosis I and meiosis II — but only one round of DNA replication, so the net result is four cells each containing half the chromosomal number of the parent cell. It is during meiosis that Mendel's laws are mechanistically enacted: alleles segregate because homologs separate during meiosis I, and genes on different chromosomes assort independently because the orientation of each bivalent on the meiosis I spindle is random.
 
@@ -214,7 +212,7 @@ The differences between mitosis and meiosis are instructive. Meiosis has no S ph
 
 ---
 
-## Lesson: Proving the Chromosomal Theory
+## Proving the Chromosomal Theory
 
 The **chromosomal theory of inheritance** holds that genes are physically located on chromosomes, and that the behavior of chromosomes during meiosis directly explains Mendel's laws. Although Mendel published his results in 1866, their significance was not recognized until 1900, when his work was independently rediscovered by Correns, de Vries, and von Tschermak. At that same time, cytologists were observing chromosomal behavior during meiosis through the microscope, and it quickly became apparent that the behavior of chromosomes paralleled the behavior of Mendel's "factors" with remarkable precision. The formal articulation of the chromosomal theory is generally credited to Sutton and Boveri (1902–1903), but critical experimental proof was provided by Thomas Hunt Morgan's work with *Drosophila melanogaster*.
 
@@ -232,7 +230,7 @@ Sex determination systems vary across taxa. In mammals, the Y chromosome is sex-
 
 ---
 
-## Lesson: Aneuploidy
+## Aneuploidy
 
 **Aneuploidy** refers to a chromosomal number that is not an exact multiple of the haploid number — the presence of one or more extra chromosomes, or the absence of one or more chromosomes, from an otherwise diploid set. Aneuploidy arises from non-disjunction: the failure of homologous chromosomes to separate during meiosis I, or the failure of sister chromatids to separate during meiosis II (or during a mitotic division early in embryogenesis, which produces somatic mosaicism).
 
@@ -250,7 +248,7 @@ The frequency of trisomy 21 with maternal age reflects the biology of oogenesis:
 
 ---
 
-## Lesson: Euploidy
+## Euploidy
 
 **Euploidy** refers to chromosome numbers that are exact multiples of the haploid set: haploid (*n*), diploid (2*n*), triploid (3*n*), tetraploid (4*n*), and so on. Organisms with more than two complete sets of chromosomes are **polyploids**. Polyploidy is common in the plant kingdom — the majority of flowering plant species are polyploid, having undergone one or more rounds of genome doubling during their evolutionary history. Wheat (*Triticum aestivum*) is hexaploid (6*n* = 42), a product of hybridization events among three different grass species followed by chromosomal doubling. Many of our most important crop plants — cotton, potatoes, coffee, strawberries — are polyploids.
 
@@ -264,7 +262,7 @@ The mule (the offspring of a horse and donkey) provides a familiar example of a 
 
 ---
 
-## Lesson: Linkage and Recombination
+## Linkage and Recombination
 
 With the acceptance of the chromosomal theory of inheritance came a complication: organisms have far more genes than they have chromosomes, meaning that many genes must reside on the same chromosome. Two genes on the same chromosome do not assort independently — they are said to be **linked**. Linkage was first described systematically by Bateson, Saunders, and Punnett, who observed that certain pairs of genes in sweet peas produced F<sub>2</sub> ratios dramatically different from the expected 9:3:3:1. Instead of independent assortment, parental allele combinations were transmitted together far more often than chance would predict.
 
@@ -284,7 +282,7 @@ The worked examples in the linkage practice set illustrate both unlinked and lin
 
 ---
 
-## Lesson: Chi-Square Analysis
+## Chi-Square Analysis
 
 When the numbers in a cross are close to equal — neither clearly showing the large parental-class excess of linked genes nor the equal proportions of unlinked genes — a statistical test is required to determine whether the observed deviation from expectation is large enough to be meaningful or whether it could simply reflect random sampling variation. The **chi-square test** is the appropriate tool.
 
@@ -308,7 +306,7 @@ The chi-square test is applicable whenever observed and expected frequencies can
 
 ---
 
-## Lesson: Map Distances
+## Map Distances
 
 The quantitative connection between recombination frequency and physical position on the chromosome was formalized by Alfred Sturtevant, a student in Morgan's laboratory, who realized that recombination frequencies could serve as a measure of the relative distances between genes. He defined **one map unit** (also called one **centimorgan**, cM, in honor of Morgan) as equivalent to a 1% recombination frequency. This definition allows the construction of **genetic maps** showing the linear order of genes along a chromosome and the distances between them.
 
@@ -360,9 +358,9 @@ Recombination frequencies never exceed 50% in a single two-gene test, regardless
 
 ---
 
-# Module 02: Molecular Biology — DNA to Protein
+# Molecular Biology — DNA to Protein
 
-## Lesson: Properties of DNA
+## Properties of DNA
 
 Long before the double helix was drawn or the word "gene" was attached to a molecule, scientists understood that chromosomes carried heritable information. The **chromosomal theory of inheritance**, supported by microscopy and the tracking of X-linked traits such as white eyes in *Drosophila*, established that genes resided on chromosomes. Yet knowing *where* the information lived did not settle the question of *what chemical substance* encoded it. As late as the 1920s, the prevailing dogma held that proteins were the molecules of heredity: they were chemically diverse, found everywhere in the cell, and associated intimately with chromosomes. DNA, by contrast, was dismissed as structurally monotonous and therefore incapable of encoding the vast variety of traits observed in living organisms.
 
@@ -382,7 +380,7 @@ The resulting model is the **B-form double helix**: two polynucleotide strands w
 
 ---
 
-## Lesson: DNA Replication
+## DNA Replication
 
 The antiparallel complementarity of the double helix immediately suggested a mechanism for faithful copying: separate the two strands, use each as a template to synthesize its complement, and produce two identical daughter duplexes. This **semi-conservative** model was only one of three formally possible mechanisms. A **conservative** model would have the parental helix somehow templating an entirely new double helix while remaining intact. A **dispersive** model would fragment and redistribute parental DNA throughout both daughter molecules in patches. The three models were experimentally distinguished by **Matthew Meselson** and **Franklin Stahl** in a classic 1958 experiment using two stable isotopes of nitrogen.
 
@@ -404,7 +402,7 @@ Cells counteract telomere shortening using **telomerase**, a remarkable reverse 
 
 ---
 
-## Lesson: The Genetic Code
+## The Genetic Code
 
 With DNA confirmed as the hereditary material and its double-helical structure known, the next challenge was to understand how the sequence of nucleotides in DNA encodes the sequence of amino acids in proteins — the **central dogma** of molecular biology, which describes the flow of information as DNA → RNA → protein. The logic of coding presented an immediate arithmetic problem: only four distinct nucleotides exist in DNA, yet approximately 20 amino acids must be specified. A code using single nucleotides could specify only 4 amino acids; a doublet code could specify \( 4^2 = 16 \) — still insufficient. A **triplet code** yields \( 4^3 = 64 \) possible combinations, more than enough to encode 20 amino acids with capacity to spare. A triplet code was therefore hypothesized and eventually proven. Each three-nucleotide unit is called a **codon**, and the collection of all codon assignments constitutes the **genetic code**.
 
@@ -422,7 +420,7 @@ Although the genetic code is often described as universal, this characterization
 
 ---
 
-## Lesson: Transcription
+## Transcription
 
 Transcription is the process by which the information encoded in a DNA gene is copied into a complementary RNA molecule. Like DNA replication, it is carried out by a polymerase that adds nucleotides to a 3′ hydroxyl, running 5′ → 3′. Unlike DNA polymerase, however, **RNA polymerase** does not require a pre-existing primer: it can initiate synthesis de novo on a DNA template. The nucleotide uracil replaces thymine in RNA, so A–T base pairs in the DNA template are transcribed as A–U in the RNA product, while all other complementary relationships are preserved.
 
@@ -446,7 +444,7 @@ Introns are not mere evolutionary excess. Their existence enables **alternative 
 
 ---
 
-## Lesson: Translation
+## Translation
 
 Translation is the process by which the nucleotide sequence of an mRNA is decoded into the amino acid sequence of a polypeptide. Three classes of macromolecule collaborate: **messenger RNA (mRNA)** provides the sequence information; **transfer RNAs (tRNAs)** physically connect each codon to its cognate amino acid; and **ribosomes** provide the structural framework within which decoding and peptide bond formation occur.
 
@@ -472,7 +470,7 @@ Mutations anywhere in a gene's regulatory or coding sequences can affect the pro
 
 ## Module 03
 
-### Lesson: Restriction Enzymes
+### Restriction Enzymes
 
 The revolution in molecular biology that made it possible to transfer genetic information between species began with a single discovery: **restriction enzymes**, also called **restriction endonucleases**. To appreciate why these enzymes matter, consider the problem they solved. Before their discovery, there was no predictable, repeatable way to cut DNA at defined positions, combine fragments from different organisms, and produce new hybrid molecules. The restriction enzymes solved that problem with elegant chemical precision, and their discovery unlocked the entire field of molecular cloning.
 
@@ -490,7 +488,7 @@ One practical application of restriction digestion and gel electrophoresis is **
 
 ---
 
-### Lesson: Cloning
+### Cloning
 
 The word "cloning" encompasses several biological procedures, but **molecular cloning** refers specifically to the insertion of a DNA fragment of interest into a self-replicating genetic element and the propagation of that element inside a host cell. The result is an enormous number of identical copies of the original DNA fragment — a molecular photocopy made by a living cell. The first recombinant protein of medical significance produced by molecular cloning was human insulin, initially expressed in *E. coli* and now often produced in yeast. Before recombinant insulin, diabetic patients relied on insulin extracted and purified from pig or cow pancreases, a supply fraught with immunological complications and the ever-present risk of contamination. Molecular cloning eliminated those risks entirely.
 
@@ -510,7 +508,7 @@ A **cDNA library** differs fundamentally from a genomic library in that it repre
 
 ---
 
-### Lesson: Population Genetics and the Hardy-Weinberg Law
+### Population Genetics and the Hardy-Weinberg Law
 
 Understanding inheritance at the level of individual organisms, as Mendel did, is only part of the picture. A complete understanding of genetics requires examining how alleles behave across entire populations over many generations. **Population genetics** is the quantitative study of allele and genotype frequencies in populations and how those frequencies change — or remain constant — with time. The foundational mathematical framework for this discipline is the **Hardy-Weinberg law**, formulated independently in 1908 by the British mathematician G.H. Hardy and the German physician Wilhelm Weinberg.
 
@@ -538,7 +536,7 @@ The violations of Hardy-Weinberg assumptions are not rare special cases; they ar
 
 ---
 
-### Lesson: Gene Regulation in Eukaryotes
+### Gene Regulation in Eukaryotes
 
 The central dogma — DNA to RNA to protein — describes the flow of genetic information, but it does not explain how cells with identical DNA sequences can differentiate into liver cells, muscle cells, neurons, or skin cells, each expressing a completely different subset of genes. Gene regulation is the molecular machinery that answers this question. In bacteria the problem is relatively simple: the challenge is to respond rapidly to environmental signals such as the presence or absence of particular nutrients. In eukaryotes the challenge is far more complex: gene expression must be orchestrated through development, across tissue types, and in response to hormonal and environmental signals, all while maintaining the long-term cell-type identity that allows a liver cell to remain a liver cell across hundreds of rounds of division.
 
@@ -562,7 +560,7 @@ Transcription can also be suppressed in eukaryotes through **transcriptional rep
 
 ## Module 04
 
-### Lesson: Hardy-Weinberg Example Problem
+### Hardy-Weinberg Example Problem
 
 Working through a concrete example of Hardy-Weinberg equilibrium analysis illustrates how the mathematical framework is applied to real data. Consider a founding population of 2,500 individuals in which genetic testing reveals 2,452 individuals homozygous for the dominant allele (AA), 45 heterozygous individuals (Aa), and 3 individuals homozygous recessive (aa). The task is to calculate allele frequencies from this population, predict the genotype frequencies expected in the next generation under Hardy-Weinberg equilibrium, and determine whether the founding population was itself in equilibrium.
 
@@ -580,7 +578,7 @@ Comparing the observed (2,452 AA; 45 Aa; 3 aa) with the expected (approximately 
 
 ---
 
-### Lesson: Population Genetics and the Hardy-Weinberg Law (Continued)
+### Population Genetics and the Hardy-Weinberg Law (Continued)
 
 A concrete illustration of what can go wrong when Hardy-Weinberg assumptions are violated is the history of the island Tristan da Cunha, located in the South Atlantic Ocean between Africa and South America — one of the most remote permanently inhabited islands on Earth. In 1817, a Scottish settler named William Glass moved to the island with his family and a small group of companions. Over the following decades, the island's population grew through intermarriage among Glass's descendants, occasional shipwreck survivors, and a small number of migrants from the neighboring island of St. Helena, but the gene pool remained extremely limited and highly inbred.
 
@@ -594,7 +592,7 @@ The classic example of natural selection acting on allele frequencies is the **p
 
 ---
 
-### Lesson: Genes and Mutation
+### Genes and Mutation
 
 A **mutation** is a heritable change in DNA sequence. This definition is deliberately broad: it encompasses single nucleotide changes and large chromosomal rearrangements, changes within coding sequences and changes in regulatory regions, changes with profound phenotypic consequences and changes with no detectable effect at all. The majority of mutations that occur in any organism's lifetime are neutral — they do not affect fitness under current conditions. Many are simply never expressed, landing in the vast non-coding expanses of the eukaryotic genome. Some are beneficial, providing the raw material for adaptive evolution. Only occasionally are mutations clearly deleterious, and these receive disproportionate attention because of their medical significance. A **mutant allele** is defined operationally as any allele present at less than one percent frequency in a population; alleles above this threshold are conventionally called wild type even if they are harmful in homozygous condition.
 
@@ -608,7 +606,7 @@ The simplest category of mutations is **substitution mutations**, in which one b
 
 ---
 
-### Lesson: Mutation and Repair Processes
+### Mutation and Repair Processes
 
 Mutations arise from several distinct sources. DNA polymerase makes errors during replication, though at remarkably low frequency: the estimated error rate of DNA polymerase III, the main replication enzyme in *E. coli*, is approximately one mistake per billion nucleotides synthesized. This low error rate is achieved in part through the polymerase's intrinsic **proofreading** activity: a 3′-to-5′ exonuclease function that recognizes and excises a misincorporated nucleotide immediately after it is added, before the polymerase continues synthesis. Polymerases that lack this proofreading function accumulate errors at rates a thousand times higher than normal. Even with proofreading, however, occasional mistakes slip through, and additional repair systems exist to catch and correct them.
 
@@ -624,7 +622,7 @@ When DNA damage is too extensive to repair, or when the repair machinery itself 
 
 ---
 
-### Lesson: Chromosomal Rearrangements
+### Chromosomal Rearrangements
 
 While point mutations alter individual nucleotides or small numbers of base pairs, a distinct category of mutations involves large-scale rearrangements of chromosomal segments. These include deletions and duplications of chromosomal material, inversions of segments, translocations between chromosomes, and changes in ploidy. Because chromosomal rearrangements affect the dosage or configuration of many genes simultaneously, their consequences are typically more severe than those of single-gene mutations, though not always — some rearrangements have no phenotypic effect at all.
 
@@ -638,7 +636,7 @@ The red and green opsin genes deserve special mention because their high degree 
 
 ---
 
-### Lesson: Transposable Elements
+### Transposable Elements
 
 Nearly every genome that has been studied in detail — from the simplest bacteria to the human genome — is populated with **transposable elements (TEs)**: sequences of DNA that can move from one position to another within the genome, either by excising and reinserting themselves or by copying themselves and inserting the copies. In the human genome, transposable elements and their remnants account for at least 40 to 45 percent of total genomic sequence, and estimates including degraded derivatives push the figure higher. Hundreds of thousands of individual copies are present, accumulated over hundreds of millions of years of evolutionary history.
 
@@ -652,7 +650,7 @@ The two most abundant retrotransposon families in the human genome are the LINEs
 
 ---
 
-### Lesson: Clone Isolation and Analysis
+### Clone Isolation and Analysis
 
 Once a genomic or cDNA library has been constructed and transformed into *E. coli*, the problem becomes finding the single colony among thousands or tens of thousands that contains the gene or sequence of interest. The strategy exploits a fundamental property of nucleic acids: under appropriate conditions, single-stranded DNA or RNA molecules will hybridize — form hydrogen-bonded double-stranded structures — with complementary sequences. A short, labeled fragment of DNA or RNA with a sequence related to the target is called a **probe**. When a probe is allowed to hybridize to denatured, single-stranded DNA on a solid support, it will bind wherever its complementary sequence is present and report that location through its label, which might be radioactive (allowing detection by autoradiography) or fluorescent (allowing direct visualization).
 
@@ -662,7 +660,7 @@ Once a genomic or cDNA library has been constructed and transformed into *E. col
 
 ---
 
-### Lesson: Polymerase Chain Reaction (PCR)
+### Polymerase Chain Reaction (PCR)
 
 Developed in the mid-1980s by Kary Mullis, for which he received the Nobel Prize in Chemistry in 1993, the **polymerase chain reaction (PCR)** is a method for exponentially amplifying a specific DNA sequence directly in a test tube, without the need for cloning or living cells. Starting from a single copy of a target DNA sequence, PCR can generate a billion identical copies in two to three hours. The product is essentially pure: the amplified fragment vastly outnumbers all other sequences in the reaction, and it can be visualized directly on an agarose gel without the need for hybridization or radioactive probes.
 
@@ -676,7 +674,7 @@ Genotyping for clinical genetic testing combines PCR with subsequent analysis to
 
 ---
 
-### Lesson: DNA Sequencing and Genetic Testing
+### DNA Sequencing and Genetic Testing
 
 Detection of a gene by PCR or hybridization confirms its presence and approximate size, but it does not reveal the sequence. To know the precise nucleotide sequence of a gene — and therefore to identify specific mutations, compare alleles, or analyze protein-coding potential — **DNA sequencing** is required.
 
@@ -692,7 +690,7 @@ Modern automated sequencing uses fluorescently labeled ddNTPs, each with a diffe
 
 ## Module 05
 
-### Lesson: Cancer Genetics
+### Cancer Genetics
 
 Cancer is not a single disease. It is a large and heterogeneous collection of diseases, each defined by the particular cells of origin, the particular genes that have been mutated, and the particular way in which cellular growth control has been subverted. What all cancers share is a common underlying process: the accumulation of somatic mutations in genes that normally govern cell proliferation, DNA repair, and programmed cell death, leading to a clone of cells that grows in an uncontrolled, invasive, and ultimately lethal manner. Understanding cancer, therefore, is inseparable from understanding the molecular genetics of cell cycle control, DNA damage response, and tumor suppression.
 

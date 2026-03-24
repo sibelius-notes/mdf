@@ -7,7 +7,7 @@ These notes follow the Fall 2021 lectures of Professor N. Sri Namachchivaya for 
 
 ---
 
-# Lecture 1: Course Overview and Motivation
+# Course Overview and Motivation
 
 Applied stochastic processes arise whenever a deterministic model is insufficient because of inherent randomness in the system, uncertainty in initial conditions, or noise corrupting observations. Professor Namachchivaya opens the course by surveying five motivating contexts that will recur throughout the semester.
 
@@ -25,7 +25,7 @@ The course is organized in five parts: (1) review of probability and random vari
 
 ---
 
-# Lecture 2: Basic Probability — Foundations
+# Basic Probability — Foundations
 
 ## Probability Spaces
 
@@ -56,7 +56,7 @@ Both results follow from writing the limit set as a disjoint union and applying 
 
 ---
 
-# Lecture 3: Random Variables and Distributions
+# Random Variables and Distributions
 
 ## Random Variables
 
@@ -76,7 +76,7 @@ The **Binomial** distribution counts successes in \(n\) independent Bernoulli tr
 
 ---
 
-# Lecture 4: Distributions, Expectation, and Properties
+# Distributions, Expectation, and Properties
 
 ## Cumulative Distribution Function
 
@@ -98,7 +98,7 @@ The **law of the unconscious statistician** states \(E[g(X)] = \int g(x)\,p_X(x)
 
 ---
 
-# Lecture 5: Expectation, Moments, and Conditional Probability
+# Expectation, Moments, and Conditional Probability
 
 ## Characteristic Functions and Cumulants
 
@@ -127,7 +127,7 @@ This is the rescaled probability restricted to the event \(F\). Conditional prob
 
 ---
 
-# Lecture 6: Conditional Expectation and Bayes' Law
+# Conditional Expectation and Bayes' Law
 
 ## Bayes' Theorem and Total Probability
 
@@ -167,7 +167,7 @@ The exponential distribution is the unique continuous distribution with the memo
 
 ---
 
-# Lecture 7: Borel–Cantelli, Convergence Theorems, and Transformations
+# Borel–Cantelli, Convergence Theorems, and Transformations
 
 ## The Borel–Cantelli Lemmas
 
@@ -202,7 +202,7 @@ For a multivariate transformation \(\mathbf{Y} = g(\mathbf{X})\) in \(\mathbb{R}
 
 ---
 
-# Lecture 8: Four Modes of Convergence
+# Four Modes of Convergence
 
 Given a sequence of random variables \(X_1, X_2, \ldots\) and a target \(X\), four modes of convergence are defined and studied.
 
@@ -293,7 +293,7 @@ The error variance \(P_k\) decreases monotonically to zero as more observations 
 
 ---
 
-# Lecture 12: Random Processes — Definitions and Basics
+# Random Processes — Definitions and Basics
 
 ## Random Processes
 
@@ -315,7 +315,7 @@ The **Gambler's ruin** problem asks: starting with \(k\) dollars, playing agains
 
 ---
 
-# Lecture 13: Martingales in Discrete Time
+# Martingales in Discrete Time
 
 ## Definition and Examples
 
@@ -355,7 +355,7 @@ The optional stopping theorem is used to solve the Gambler's ruin: applying it t
 
 ---
 
-# Lecture 14: Markov and Wiener Processes
+# Markov and Wiener Processes
 
 ## Markov Processes
 
@@ -449,7 +449,7 @@ The time-reversed chain has transition probabilities \(q_{ij} = \pi_j p_{ji}/\pi
 
 ---
 
-# Lecture 18: Introduction to Random Oscillations
+# Introduction to Random Oscillations
 
 ## Damped Harmonic Oscillator with Random Forcing
 
@@ -472,7 +472,7 @@ and the stationary variance is \(C_{XX}(0) = \pi\Phi_0/(2\omega^3\beta)\). This 
 
 ---
 
-# Lecture 19: Discrete-Time Dynamical Systems and the Filtering Problem
+# Discrete-Time Dynamical Systems and the Filtering Problem
 
 ## State-Space Formulation
 
@@ -583,7 +583,7 @@ where \(\Sigma_t = E[(X_t - \pi_t)(X_t-\pi_t)^*]\) is the error covariance. The 
 
 ---
 
-# Lecture 24: Review and Synthesis
+# Review and Synthesis
 
 ## MMSE vs. Conditional Expectation
 

@@ -4,7 +4,7 @@ prof: "Warriner"
 term: "1215"
 ---
 
-# Pre-Lesson: Primer on Statistical Notation
+# Primer on Statistical Notation
 
 Before we dive into any actual statistics, let us address the elephant in the room — the one every new student drags into the lecture hall in the form of math anxiety. The instructor has heard it all: "I can't do math," "I've always been terrible at numbers," "I passed high school math but I honestly don't know how." After more than thirty years of teaching statistics to thousands of arts and business students at the University of Waterloo, the evidence is overwhelming: nearly every student admitted to a university program already possesses sufficient mathematical understanding to do well in ARTS 280. The rare failures are almost always a matter of falling behind on cumulative material, not a math skill deficit.
 
@@ -40,7 +40,7 @@ Sample statistics — quantities calculated from the data — use Roman letters:
 
 ---
 
-# Lesson 1: Why Statistics? Introduction to the Field
+# Why Statistics? Introduction to the Field
 
 ## Why Arts Students Need Statistics
 
@@ -92,7 +92,7 @@ The difference between discrete (nominal and ordinal) and continuous data is lik
 
 ---
 
-# Lesson 2: The Research Process, Descriptive Statistics, and Frequency Distributions
+# The Research Process, Descriptive Statistics, and Frequency Distributions
 
 ## Descriptive Statistics: An Overview
 
@@ -128,7 +128,7 @@ A **rate** standardizes a count relative to some base population, typically expr
 
 ---
 
-# Lesson 3: Central Tendency — The Four Moments of a Distribution
+# Central Tendency — The Four Moments of a Distribution
 
 ## The Moments of a Distribution
 
@@ -152,7 +152,7 @@ One important practical note: the mean is sensitive to **outliers** — extreme 
 
 ---
 
-# Lesson 4: Research Questions, Hypotheses, and Measurement
+# Research Questions, Hypotheses, and Measurement
 
 ## Hypotheses and Research Questions
 
@@ -174,7 +174,7 @@ Throughout the remainder of ARTS 280, measurement level will be the first questi
 
 ---
 
-# Lesson 5: Dispersion — Variance and Standard Deviation
+# Dispersion — Variance and Standard Deviation
 
 ## Why Dispersion Matters
 
@@ -210,7 +210,7 @@ For grouped data (where scores have been organized into class intervals), weight
 
 ---
 
-# Lesson 6: Graphical Displays for Continuous Data
+# Graphical Displays for Continuous Data
 
 ## Grouped Frequency Distributions and Histograms
 
@@ -232,7 +232,7 @@ The idealized shape underlying most of inferential statistics is the **normal di
 
 ---
 
-# Lesson 7: Rates, Ratios, and Percentage Change in Practice
+# Rates, Ratios, and Percentage Change in Practice
 
 The application of percentage change, ratios, and rates to real-world data illuminates how seemingly abstract formulas produce actionable insight. Using data from Canadian criminal offences (2008–2009), consider the question of how crime patterns shift across age groups.
 
@@ -244,7 +244,7 @@ The result is a large negative percentage, confirming that older adults commit s
 
 ---
 
-# Lesson 8: Z-Scores, Skewness, Percentiles, and Boxplots
+# Z-Scores, Skewness, Percentiles, and Boxplots
 
 ## Z-Scores and Standardization
 
@@ -280,7 +280,7 @@ A **boxplot** (box-and-whisker plot) provides a compact graphical summary using 
 
 ---
 
-# Lesson 9: Probability — The Bridge to Inference
+# Probability — The Bridge to Inference
 
 ## Why Probability?
 
@@ -306,7 +306,7 @@ The theorem is remarkable in requiring no assumptions about distributional shape
 
 ---
 
-# Lesson 10: The Normal Distribution and Exact Probabilities
+# The Normal Distribution and Exact Probabilities
 
 ## The Normal Distribution
 
@@ -326,7 +326,7 @@ Once a raw score has been converted to a z-score, Appendix A provides the exact 
 
 ---
 
-# Lesson 11: Sampling Distributions and the Central Limit Theorem
+# Sampling Distributions and the Central Limit Theorem
 
 ## The Sampling Problem
 
@@ -361,7 +361,7 @@ The standard error decreases as sample size increases — larger samples produce
 
 ---
 
-# Lesson 12: Probability Distributions and the Logic of Inference
+# Probability Distributions and the Logic of Inference
 
 ## From Empirical to Theoretical
 
@@ -389,7 +389,7 @@ The critical values for two-tailed tests at the 95% confidence level are \(z = \
 
 ---
 
-# Lesson 13: The Normal Distribution and Probabilities in Practice
+# The Normal Distribution and Probabilities in Practice
 
 ## Using Appendix A
 
@@ -429,7 +429,7 @@ It cannot be overstated: failing to reject the null hypothesis does not prove it
 
 ---
 
-# Lesson 16: Confidence Intervals
+# Confidence Intervals
 
 ## The Logic of Confidence Intervals
 
@@ -453,7 +453,7 @@ There is an important relationship between confidence and precision: widening th
 
 ---
 
-# Lesson 17: Z-Significance Tests
+# Z-Significance Tests
 
 ## Significance Tests for a Single Mean (Z-test)
 
@@ -531,7 +531,7 @@ where \(\bar{d}\) is the mean difference, \(s_d\) is the standard deviation of t
 
 ---
 
-# Lesson 20: One-Way ANOVA
+# One-Way ANOVA
 
 ## Comparing Three or More Groups
 

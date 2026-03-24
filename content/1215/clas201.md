@@ -3,7 +3,7 @@ title: "CLAS 201: Introduction to Classical Studies"
 prof: ""
 ---
 
-CLAS 201 at the University of Waterloo is officially titled *Ancient Greek Society* and is taught by Dr. Lisa Trentin, a specialist in the visual culture and social history of ancient Rome whose research has focused on marginalized bodies and the representation of identity, and who has excavated at Pompeii. The course runs asynchronously in the Summer 2021 term, with pre-recorded lecture videos, narrated PowerPoint slides, and weekly content posted on LEARN every Tuesday afternoon. Office hours are held Thursdays from 10:00 to 11:30 am via Zoom.
+CLAS 201 at the University of Waterloo is officially titled *Ancient Greek Society* and is taught by Dr. Lisa Trentin, a specialist in the visual culture and social history of ancient Rome whose research has focused on marginalized bodies and the representation of identity, and who has excavated at Pompeii.
 
 The organizing question of the course is deceptively simple: **who were the Greeks?** Answering it requires grappling with problems of identity, evidence, and legacy that are far from resolved. Greek civilization produced democracy, tragedy, systematic philosophy, and the Olympic Games. It also produced institutionalized slavery, the legal exclusion of women from political life, and the massacres of entire populations for strategic advantage. The course does not paper over this complexity. Instead, it uses the lens of **Self vs. Other** — the way the Greeks defined themselves against various categories of excluded or opposed groups — as its central analytical framework throughout all twelve weeks.
 
@@ -25,7 +25,7 @@ The **Self vs. Other** framework is the course's spine. It shapes not only the s
 
 The framework draws on a strand of modern scholarship influenced by anthropology and postcolonial theory, which emphasizes that identity is never self-evident or given but is always performed, contested, and constructed in relation to what it excludes. Applying this lens to ancient Greece is productive precisely because the Greeks were so explicit about the boundaries they drew: their language encoded the distinction between **Hellenes** and **barbaroi** (non-Greek-speakers), between **polites** (citizen) and **xenos** (foreigner/stranger), between **eleutherios** (free) and **doulos** (slave).
 
-# Week 1: Welcome and Introduction
+# Welcome and Introduction
 
 ## Week 1i — Welcome
 
@@ -37,7 +37,6 @@ The syllabus is described in the lecture as a "contract" for the course. Student
 
 <div class="definition"><strong>Asynchronous online delivery:</strong> a mode of course delivery in which there are no required real-time sessions; students access pre-recorded lectures, readings, and materials at times of their choosing within weekly windows, rather than attending class at a fixed hour.</div>
 
-The accessibility services available at the University of Waterloo (**AccessAbility Services**, located in Needles Hall 1401) are highlighted, as is the university's mental health support infrastructure — a particularly important note given that the course ran during the COVID-19 pandemic, when students faced unusual levels of stress and disruption.
 
 ## Week 1ii — Introduction: Who Were the Greeks?
 
@@ -119,7 +118,7 @@ Because the course is taught in English, students engage with ancient texts in t
 
 <div class="definition"><strong>Secondary source:</strong> modern scholarly work — a book, article, or review — that analyzes, interprets, or debates the significance of primary sources and historical events. For the course assignments, students are required to consult at least two scholarly secondary sources and cite them properly.</div>
 
-The required citation format for all written work in this course is the **Chicago Manual of Style** (Chicago MoS), which is the standard citation format in the humanities and classical studies in particular. Chicago style offers two systems: the **Notes-Bibliography** system (footnotes or endnotes paired with a bibliography), which is the format used in most classical scholarship, and the **Author-Date** system (in-text parenthetical citations with a reference list), more common in the social sciences. Classical studies assignments typically use the Notes-Bibliography system. The citation guide posted on LEARN provides worked examples.
+The required citation format for all written work in this course is the **Chicago Manual of Style** (Chicago MoS), which is the standard citation format in the humanities and classical studies in particular. Chicago style offers two systems: the **Notes-Bibliography** system (footnotes or endnotes paired with a bibliography), which is the format used in most classical scholarship, and the **Author-Date** system (in-text parenthetical citations with a reference list), more common in the social sciences. Classical studies assignments typically use the Notes-Bibliography system.
 
 ## Key Ancient Authors Featured in the Course
 

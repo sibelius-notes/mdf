@@ -3,11 +3,9 @@ title: "AMATH 456: Calculus of Variations and Optimal Control Theory"
 prof: "Kirsten Morris"
 ---
 
-# AMATH 456: Calculus of Variations and Optimal Control Theory
+# Optimization and Convexity in R<sup>n</sup>
 
-## Week 1: Optimization and Convexity in R<sup>n</sup>
-
-### 1.1 Optimization in One Dimension
+## 1.1 Optimization in One Dimension
 
 Every optimization problem requires two things: a cost function to minimize, and a domain over which to search. Starting in one dimension, consider a real-valued function \(J : \mathbb{R} \to \mathbb{R}\) and a subdomain \(D = [a, b] \subseteq \mathbb{R}\). The goal is to find \(\min_{y \in D} J(y)\).
 
@@ -19,7 +17,7 @@ The derivative of \(J\) at a point \(y\) is defined as the limit \(J'(y) = \lim_
 
 The proof considers small perturbations \(v > 0\) and \(v < 0\) separately: for \(v > 0\), \(\frac{J(y^*+v) - J(y^*)}{v} \geq 0\), which gives \(J'(y^*) \geq 0\) in the limit; for \(v < 0\), the inequality flips to give \(J'(y^*) \leq 0\). Together, \(J'(y^*) = 0\). The converse is not true in general.
 
-### 1.2 Optimization in R<sup>n</sup>
+## 1.2 Optimization in R<sup>n</sup>
 
 For functions \(J : \mathbb{R}^n \to \mathbb{R}\), differentiability at \(y^* \in D\) means there exists a gradient vector \(\nabla J(y^*)\) such that
 
@@ -37,7 +35,7 @@ when the limit exists. For differentiable \(J\), the directional derivative equa
 
 **Definition 1.11 (Stationary point).** A point \(y^*\) is a **stationary point** of \(J\) if \(\delta J(y^*; v) = 0\) for all admissible directions \(v\). For differentiable functions this is equivalent to \(\nabla J(y^*) = 0\).
 
-### 1.3 Convexity in R<sup>n</sup>
+## 1.3 Convexity in R<sup>n</sup>
 
 **Definition 1.12 (Convex set).** A set \(D \subseteq \mathbb{R}^n\) is **convex** if for any two points \(x, y \in D\) and \(0 < \alpha < 1\), the point \(\alpha x + (1-\alpha)y \in D\). Geometrically, the straight line segment between any two points lies entirely within the set.
 
@@ -59,7 +57,7 @@ For differentiable convex functions, **Theorem 1.15** provides an equivalent cha
 
 Geometrically: a convex function always lies above its tangent plane.
 
-### 1.4 Second-Derivative Test for Convexity
+## 1.4 Second-Derivative Test for Convexity
 
 For smooth enough functions, the **Hessian matrix** \(H_J(y) = \left[\frac{\partial^2 J}{\partial y_i \partial y_j}\right]\) characterizes convexity:
 
@@ -80,9 +78,9 @@ If \(H_f\) is only semi-definite at the critical point, no conclusion can be dra
 
 ---
 
-## Week 2: Calculus on Linear Spaces
+# Calculus on Linear Spaces
 
-### 2.1 Linear Spaces and Functionals
+## 2.1 Linear Spaces and Functionals
 
 To extend optimization from vectors to functions, the framework must generalize from \(\mathbb{R}^n\) to infinite-dimensional spaces. The concept of a real linear space provides the foundation.
 
@@ -92,7 +90,7 @@ To extend optimization from vectors to functions, the framework must generalize 
 
 A key example is the arc-length functional \(J(y) = \int_0^5 \sqrt{1 + y'(x)^2}\, dx\) on \(C^1[0,5]\), which measures the length of the curve \(y(x)\).
 
-### 2.2 Geodesics on a Sphere
+## 2.2 Geodesics on a Sphere
 
 A geodesic on a sphere of radius \(R\) is the curve of shortest length joining two points on the surface. Parametrizing by \(\phi\) (latitude) and \(\theta\) (longitude), the length functional is
 
@@ -100,7 +98,7 @@ A geodesic on a sphere of radius \(R\) is the curve of shortest length joining t
 
 By orienting the sphere so that one point is at the north pole and both points share the same meridian, the problem simplifies dramatically. Setting \(\theta(t) = \theta_B\) (constant), any smooth \(\phi\) connecting the two latitudes achieves the minimum length \(R\phi_B\). This is a **great circle** arc, confirming that geodesics on spheres are arcs of great circles.
 
-### 2.3 The Gateaux Derivative
+## 2.3 The Gateaux Derivative
 
 The analogue of the directional derivative in a linear space is the **Gateaux derivative**.
 
@@ -116,7 +114,7 @@ For the arc-length functional \(J(y) = \int_0^5 \sqrt{1 + (y')^2}\,dx\), this fo
 
 \[\delta J(y; v) = \int_0^5 2y'(x)v'(x)\,dx.\]
 
-### 2.4 Convex Functionals
+## 2.4 Convex Functionals
 
 The definitions and key theorems from \(\mathbb{R}^n\) carry over verbatim to general linear spaces.
 
@@ -130,9 +128,9 @@ The definitions and key theorems from \(\mathbb{R}^n\) carry over verbatim to ge
 
 ---
 
-## Week 3: The Euler–Lagrange Equation
+# The Euler–Lagrange Equation
 
-### 3.1 Derivation
+## 3.1 Derivation
 
 Consider the fundamental class of functionals of the form
 
@@ -158,7 +156,7 @@ The "if" direction (Proposition 3.2) follows immediately from the integration-by
 
 **Lemma 3.3 (du Bois-Reymond).** If \(h \in C[a,b]\) and \(\int_a^b h(x)v'(x)\,dx = 0\) for all \(v \in A\), then \(h\) is constant on \([a,b]\).
 
-### 3.2 Simplifications
+## 3.2 Simplifications
 
 If \(f\) is missing one of its arguments, the Euler–Lagrange equation simplifies considerably:
 
@@ -172,7 +170,7 @@ If \(f\) is missing one of its arguments, the Euler–Lagrange equation simplifi
 
 This is a **first-order** equation, significantly easier to solve than the general second-order Euler–Lagrange equation.
 
-### 3.3 Pointwise Convexity
+## 3.3 Pointwise Convexity
 
 **Definition 3.10.** The function \(f : \mathbb{R}^3 \to \mathbb{R}\) is **pointwise convex** on \(S\) if \(f, f_y, f_z\) are continuous and
 
@@ -184,7 +182,7 @@ for all perturbations \((v, w)\). Note that \(x\) is held fixed, so a convex fun
 
 **Proposition 3.15.** If \(f = f(x, z)\) (independent of \(y\) and \(f_{zz}(x, z) > 0\) for all \(x\), then \(J\) is strictly convex. The proof uses Taylor's remainder theorem to show \(f(x, z+w) > f(x,z) + f_z(x,z)w\).
 
-### 3.4 The Brachistochrone Problem
+## 3.4 The Brachistochrone Problem
 
 The **brachistochrone** asks: what path minimizes the travel time for a bead sliding under gravity (frictionlessly) between two points? This historical problem, solved by Bernoulli in 1696, was the founding problem of the calculus of variations.
 
@@ -206,9 +204,9 @@ This curve is a **cycloid** — the path traced by a point on the rim of a rolli
 
 ---
 
-## Week 4: Extensions and Generalizations
+# Extensions and Generalizations
 
-### 4.1 Natural Boundary Conditions
+## 4.1 Natural Boundary Conditions
 
 When not all boundary conditions are prescribed, the variational problem determines the missing conditions automatically. Suppose \(y(a) = y_a\) is fixed but \(y(b)\) is free. Admissible variations satisfy \(v(a) = 0\) but \(v(b)\) is free. Integration by parts on \(\delta J(y;v)\) yields a boundary term \(f_z[y(b)]v(b)\) in addition to the Euler–Lagrange integral.
 
@@ -220,7 +218,7 @@ When not all boundary conditions are prescribed, the variational problem determi
 
 If neither endpoint is specified (Theorem 4.4), the natural boundary conditions become \(f_z[y(a)] = f_z[y(b)] = 0\), and the minimizing function is unique up to an additive constant when \(f\) is strictly pointwise convex.
 
-### 4.2 Variable Endpoint Problems and Transversality
+## 4.2 Variable Endpoint Problems and Transversality
 
 When the endpoint \(b\) is free and \(y(b)\) must lie on a given curve \(\varphi(x)\), both the function and the endpoint vary. Introducing the **conjugate momentum** \(p[y(x)] = f_z[y(x)]\) and the **Hamiltonian** \(H[y(x)] = -f[y(x)] + y'(x)f_z[y(x)]\), the stationarity condition yields:
 
@@ -232,7 +230,7 @@ i.e., \(-f[y(b)] + y'(b)f_z[y(b)] = f_z[y(b)]\varphi'(b)\). Geometrically, this 
 
 For the brachistochrone landing on a curve, this condition implies the cycloid is orthogonal to the landing curve at the point of contact.
 
-### 4.3 Higher-Order Derivatives
+## 4.3 Higher-Order Derivatives
 
 Some physical problems involve second derivatives. The potential energy of a beam under load \(p(x)\) and small deflection \(y(x)\) is
 
@@ -244,7 +242,7 @@ For functionals \(J(y) = \int_a^b f(x, y, y', y'')\,dx\) with fully specified bo
 
 where \(z = y', w = y''\). For the beam problem with both ends clamped, this gives \(\mu y'''' = p(x)\), which under uniform load \(p = \mu F\) integrates to \(y(x) = \frac{F}{24}x^2(x-L)^2\).
 
-### 4.4 Broken Extremals (Weierstrass–Erdmann Conditions)
+## 4.4 Broken Extremals (Weierstrass–Erdmann Conditions)
 
 In some problems, no smooth stationary function exists and the minimum is achieved by **piecewise smooth** functions (functions in \(\hat{C}^1[a,b]\) with finitely many corners). By treating a corner \(c\) as a variable endpoint lying on an arbitrary curve, one derives the **Weierstrass–Erdmann corner conditions**: at any corner, both
 
@@ -254,9 +252,9 @@ must hold. That is, the conjugate momentum \(f_z\) and the Hamiltonian \(H = -f 
 
 ---
 
-## Week 5: Hamilton's Principle
+# Hamilton's Principle
 
-### 5.1 Background and Statement
+## 5.1 Background and Statement
 
 The success of the calculus of variations in solving mechanical problems like the brachistochrone inspired scientists to seek a variational principle governing the motion of all physical systems. Work of Lagrange, Euler, Poisson, and Hamilton culminated in **Hamilton's Principle**.
 
@@ -270,13 +268,13 @@ where the **Lagrangian** \(L = T - U\) is the difference between kinetic energy 
 
 **Hamilton's Principle of Stationary Action.** Between fixed times \(a\) and \(b\), a physical system moves along the trajectory that makes the action integral *stationary* over all admissible trajectories.
 
-### 5.2 Newton's Laws from Hamilton's Principle
+## 5.2 Newton's Laws from Hamilton's Principle
 
 **Example 5.3 (Cart).** For a cart of mass \(m\) with potential energy \(U(y)\), the Lagrangian is \(L = \frac{1}{2}m\dot{y}^2 - U(y)\). The Euler–Lagrange equation \(L_y - \frac{d}{dt}L_{\dot{y}} = 0\) gives \(-U_y - m\ddot{y} = 0\), i.e., \(m\ddot{y} = -U_y\). Since \(-U_y\) is the force on the cart, this is **Newton's Second Law**, \(F = ma\).
 
 **Example 5.4 (Spring-mass).** With \(T = \frac{1}{2}m\dot{y}^2\) and \(U = \frac{1}{2}ky^2\), the Euler–Lagrange equation yields \(m\ddot{y} = -ky\), the familiar harmonic oscillator equation.
 
-### 5.3 Multi-Variable Euler–Lagrange and Conservation of the Hamiltonian
+## 5.3 Multi-Variable Euler–Lagrange and Conservation of the Hamiltonian
 
 When the system has multiple degrees of freedom, \(y = (y_1, \ldots, y_n)\), stationarity of the action requires an Euler–Lagrange equation for each component:
 
@@ -292,7 +290,7 @@ When \(L\) does not depend explicitly on time, energy is conserved:
 
 is constant along stationary trajectories. This is the law of conservation of energy.
 
-### 5.4 Generalized Coordinates
+## 5.4 Generalized Coordinates
 
 A key advantage of Lagrangian mechanics is the freedom to use any convenient coordinate system. **Generalized coordinates** are an independent minimal set \(q = (q_1, \ldots, q_n)\) describing the system configuration.
 
@@ -308,7 +306,7 @@ yielding the coupled equations \(\ddot{r} - \dot{\theta}^2 r = -\frac{k}{m}(r-r_
 
 **Hamilton's Principle (Revised).** Between fixed times, a physical system follows the generalized trajectory \(q \in (C^1[a,b])^n\) that makes stationary the action \(A(q) = \int_a^b L(t, q, \dot{q})\,dt\).
 
-### 5.5 Kepler's Laws from Hamilton's Principle
+## 5.5 Kepler's Laws from Hamilton's Principle
 
 For two bodies with gravitational potential \(U = -k/r\) in polar coordinates \((r, \theta)\), the Lagrangian is
 
@@ -324,9 +322,9 @@ where \(\varepsilon < 1\) gives an ellipse — **Kepler's First Law**. The perio
 
 ---
 
-## Week 6: Hamilton's Principle (Continued)
+# Hamilton's Principle (Continued)
 
-### 6.1 Canonical Equations
+## 6.1 Canonical Equations
 
 Hamilton's Principle yields \(n\) coupled second-order ODEs. A standard technique converts these to \(2n\) first-order equations using **canonical variables**.
 
@@ -344,7 +342,7 @@ Note the elegant symmetry: the equations for \(q\) and \(p\) differ only by a si
 
 **Example 6.1 (Pendulum).** With \(L = \frac{1}{2}m\ell^2\dot{\theta}^2 - mg\ell(1-\cos\theta)\) and \(p = m\ell^2\dot{\theta}\), the Hamiltonian is \(H = \frac{p^2}{2m\ell^2} + mg\ell(1-\cos\theta)\). The canonical equations reproduce the pendulum ODE.
 
-### 6.2 Multiple Spatial Variables
+## 6.2 Multiple Spatial Variables
 
 Hamilton's Principle extends to problems where the unknown function depends on multiple variables. For a functional
 
@@ -364,13 +362,13 @@ For a vibrating string with both spatial and temporal dependence, the action fun
 
 ---
 
-## Week 7: Some Complexities
+# Some Complexities
 
-### 7.1 Lack of Convexity and Existence of Minima
+## 7.1 Lack of Convexity and Existence of Minima
 
 Convexity has been central to our analysis: for a convex functional, every stationary point is a global minimum. When convexity fails, a stationary function may be only a local minimum or even a saddle point. Moreover, the functional analogue of the Extreme Value Theorem requires compactness, which in infinite-dimensional function spaces is a much stronger requirement than mere closedness and boundedness. The following example illustrates both issues.
 
-### 7.2 Minimum Surface of Revolution
+## 7.2 Minimum Surface of Revolution
 
 Find a curve joining two points so that the surface formed by revolving it around the \(x\)-axis has minimal area. Normalizing the left endpoint to \((0,1)\) and the right to \((x_1, y_1)\), the cost is
 
@@ -386,9 +384,9 @@ Imposing \(y(0) = 1\) and \(y(x_1) = y_1\) leads to a transcendental equation fo
 
 ---
 
-## Week 8: Problems with Constraints
+# Problems with Constraints
 
-### 8.1 Integral Constraints
+## 8.1 Integral Constraints
 
 Consider minimizing \(J(y) = \int_a^b f[y]\,dx\) subject to an **integral constraint** \(G(y) = \int_a^b g[y]\,dx = c\). By analogy with Lagrange multipliers in finite dimensions, introduce the **augmented functional**
 
@@ -406,7 +404,7 @@ which has three constants: two integration constants and \(\lambda\), determined
 
 **Example 8.7 (General Dido's Problem).** For a straight shore, the curve of fixed length \(L\) enclosing maximum inland area is a **semicircle of radius** \(b = L/\pi\). The natural boundary conditions at the free endpoints (where the curve meets the shore) combine with the Beltrami identity to select the circular arc.
 
-### 8.2 Non-Integral Constraints and Optimal Control
+## 8.2 Non-Integral Constraints and Optimal Control
 
 The most important class of constrained problems involves a **differential equation constraint**. With independent variable \(t\) and additional function \(u(t)\) (the **control**), the problem is:
 
@@ -418,9 +416,9 @@ The function \(y\) is the **state**, determined by the ODE given \(u\). The func
 
 ---
 
-## Week 9: Introduction to Optimal Control
+# Introduction to Optimal Control
 
-### 9.1 The Augmented Problem
+## 9.1 The Augmented Problem
 
 The general optimal control problem is to minimize
 
@@ -438,7 +436,7 @@ subject to \(\dot{y} = g(t, y, u)\) and boundary conditions on \(y\). Introducin
 
 If only \(y(0) = y_0\) is specified (free final state), the adjoint boundary condition is \(p(T) = 0\).
 
-### 9.2 The Hamiltonian Reformulation
+## 9.2 The Hamiltonian Reformulation
 
 Define the **control Hamiltonian**
 
@@ -456,13 +454,13 @@ These are strikingly similar to Hamilton's canonical equations from mechanics. T
 
 ---
 
-## Week 10: Pontryagin's Maximum Principle
+# Pontryagin's Maximum Principle
 
-### 10.1 The Limitation of Unconstrained Controls
+## 10.1 The Limitation of Unconstrained Controls
 
 When the Hamiltonian is linear in \(u\), the condition \(H_u = 0\) gives no information about the optimal control. This arises naturally in **minimum-time problems** where the cost is simply \(\int_0^T dt\) with \(f = 1\). The fundamental resolution is to explicitly constrain the control to a closed set \(U\) and replace stationarity with *maximization* of the Hamiltonian over \(U\).
 
-### 10.2 Pontryagin's Maximum Principle
+## 10.2 Pontryagin's Maximum Principle
 
 **Theorem 10.2 (Pontryagin's Maximum Principle, PMP).** Consider minimizing \(J(y, u) = \int_0^T f(t, y, u)\,dt\) subject to \(\dot{y} = g(t, y, u)\) with \(u(t) \in U \subseteq \mathbb{R}^m\) (U closed). If \(u^o, y^o\) are optimal, there exists an adjoint function \(p(t)\) satisfying
 
@@ -478,13 +476,13 @@ For non-degenerate problems, \(p^o = 1\), recovering \(H = f + p^T g\). When \(H
 
 The PMP provides *necessary* conditions. It was introduced to handle cases where the optimality condition \(H_u = 0\) fails — particularly when \(u\) is constrained or \(H\) is linear in \(u\).
 
-### 10.3 Time-Optimal Control
+## 10.3 Time-Optimal Control
 
 **Example 10.6 (First-order system).** Minimize time to drive \(\dot{y} = u\) from \(y(0) = 1\) to \(y(T) = 0\) with \(|u| \leq M\). The Hamiltonian is \(H = -1 + pu\). Maximizing over \(u\): \(u^o = M\,\text{sgn}(p)\). The adjoint equation \(\dot{p} = 0\) gives constant \(p\), so \(u^o = \pm M\) throughout. Starting from \(y(0) = 1 > 0\), the optimal strategy is \(u^o = -M\), reaching zero in time \(T = 1/M\).
 
 **Example 10.7 (Double integrator).** Minimize time to drive \(\ddot{w} = u\) with \(|u| \leq 1\) to \((w(T), \dot{w}(T)) = (0,0)\). With \((y_1, y_2) = (w, \dot{w})\), the Hamiltonian is \(H = -1 + p_1 y_2 + p_2 u\). The optimal control \(u^o = \text{sgn}(p_2)\); since \(p_2(t) = at + b\) is linear, there is at most one switch. The **switching curve** \(y_1 = \pm\frac{1}{2}y_2^2\) (with sign depending on \(y_2\) divides the phase plane: the optimal control is \(-1\) above and \(+1\) below. For \((y_1(0), y_2(0)) = (1, 0)\), the optimal control is \(u = -1\) until \(t = 1\), then \(u = +1\), reaching the origin at \(T = 2\).
 
-### 10.4 Bang-Bang Control
+## 10.4 Bang-Bang Control
 
 When \(H\) is linear in \(u\) and \(U = [M_1, M_2]\), the optimal control always takes the extreme values:
 
@@ -502,9 +500,9 @@ Such a control is called **bang-bang**.
 
 ---
 
-## Week 11: Linear Quadratic Control
+# Linear Quadratic Control
 
-### 11.1 Finite-Time LQR
+## 11.1 Finite-Time LQR
 
 The **Linear Quadratic Regulator (LQR)** is the most important solved problem in optimal control. It combines linear dynamics with a quadratic cost, admitting a complete analytical solution.
 
@@ -536,7 +534,7 @@ The **minimum cost** is \(J(u^o; T) = y_0^T P(0;T) y_0\). Furthermore, \(0 \leq 
 
 The DRE is solved **backward in time** from \(P(T;T) = 0\) to \(P(0;T)\). The optimal control is a **linear state feedback** law — the control at each time depends only on the current state, not on future states. This closed-loop structure makes the controller self-correcting and practical to implement.
 
-### 11.2 Infinite-Horizon LQR and the Algebraic Riccati Equation
+## 11.2 Infinite-Horizon LQR and the Algebraic Riccati Equation
 
 The **infinite-horizon LQR** problem seeks to minimize
 
@@ -578,7 +576,7 @@ the ARE can be solved manually. Setting \(P = \begin{pmatrix} p_1 & p_2 \\\ p_2 
 
 and the optimal gain \(K = -R^{-1}B^T P = -\frac{1}{r}[p_2 \;\; p_3] = -[r^{-1/2}, (2/r)^{1/4} r^{-3/4}]\). The closed-loop characteristic polynomial \(s^2 + (2/r)^{1/4}s + 1/\sqrt{r} = 0\) has both roots with negative real parts, confirming asymptotic stability.
 
-### 11.3 Summary of the LQR Design Procedure
+## 11.3 Summary of the LQR Design Procedure
 
 | Step | Action |
 |------|--------|
@@ -591,7 +589,7 @@ In MATLAB, the optimal gain is returned by `lqr(A, B, Q, R)`. The choice of \(Q\
 
 ---
 
-## Course Summary
+# Course Summary
 
 This course developed the complete arc from finite-dimensional optimization to optimal control of dynamical systems:
 

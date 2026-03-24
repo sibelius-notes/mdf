@@ -872,14 +872,6 @@ Assignments, participation challenges, tests, and the final exam are delivered t
 - Many questions require specific formats (e.g., exponential notation to three significant figures). Read all instructions on each question carefully.
 - The **Mobius Gradebook** (found in the Online Assignments folder in your content tab) lets you review which questions you answered correctly or incorrectly and see instructor feedback after submission.
 - Assignment grades are pushed to the **Learn Gradebook** automatically (with up to a 5-minute delay after submission or resubmission).
-- Any assignment grade of 80% or higher is automatically treated as 100% when calculating the final grade (the adjustment is not reflected in the Learn Gradebook display but is applied when computing the final course grade).
-
-### Grade Adjustment Policy
-
-In this course, assignment grades of 80% and above are automatically treated as 100% in the final grade calculation. This means:
-- Achieving 80%+ on an assignment is fully equivalent to 100%.
-- There is no visible adjustment in the Learn Gradebook; the recalculation happens internally.
-- Retaking an assignment (if multiple attempts are allowed) to improve from below 80% to above 80% is worthwhile.
 
 ### Communication
 

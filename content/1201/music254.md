@@ -31,9 +31,6 @@ Bernini, David: motion, emotion
 
 CLASS CANCELLED THIS THURS JAN 9!
 
-# Lec 2 - Jan 9
-As said last time, the class is cancelled.
-
 # Music of the early Baroque: Characteristics of a New Era
 
 ## 3 streams in Baroque & 3 streams in Classical eras

@@ -73,7 +73,6 @@ Across the 13 modules of this course, Prof. Park introduces the following sites 
 
 The course unfolds across 13 weekly modules. Assessment is based on four online open-book quizzes, a midterm exam, a final exam, two sets of reflections, and a research assignment.
 
-**Quiz 1** (the course outline quiz) is the only quiz that can be redone; students must achieve at least 80% before the rest of the course content unlocks. All other quizzes and the exams cannot be repeated — be prepared before starting them.
 
 **Reflections** are written twice during the course. They require students to reflect in some way on what they've been learning; specific instructions are provided in each module.
 

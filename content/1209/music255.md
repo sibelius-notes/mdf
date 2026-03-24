@@ -32,7 +32,7 @@ Dreaming could turn into nightmares. The Romantics were obsessed with horror, th
 
 ---
 
-# Lesson 1a: Ludwig van Beethoven — Biography and Early Works
+# Ludwig van Beethoven — Biography and Early Works
 
 ## Some Biographical Information
 
@@ -88,7 +88,7 @@ The slow introduction provides a powerful structural contrast. It returns at the
 
 ---
 
-# Lesson 1b: Beethoven — Symphony No. 3, "Eroica"
+# Beethoven — Symphony No. 3, "Eroica"
 
 ## The Middle Period, 1802--1814
 
@@ -170,7 +170,7 @@ The **Pastoral Symphony**, No. 6 in F Major (1808), is quite different in charac
 
 ---
 
-# Lesson 1c: Beethoven — String Quartet, Op. 132
+# Beethoven — String Quartet, Op. 132
 
 ## The Late Period, 1815--1827
 
@@ -258,7 +258,7 @@ Perhaps most significantly, the idea of **self-expression** in music was forged 
 
 ---
 
-# Lesson 2a: Romantic Song — Schubert and Schumann
+# Romantic Song — Schubert and Schumann
 
 ## The Romantic Generation: Changing Social Circumstances
 
@@ -382,7 +382,7 @@ The principles that govern how music conveys the meaning of a text in Romantic a
 
 ---
 
-# Lesson 2b: Early Romantic Piano Music
+# Early Romantic Piano Music
 
 ## Music for Piano
 
@@ -454,7 +454,7 @@ The **form** of *December* consists of **two large sections**. The first (mm. 1-
 
 ---
 
-# Lesson 2c: Romantic Piano Music — Chopin and Liszt
+# Romantic Piano Music — Chopin and Liszt
 
 ## Fryderyk Chopin (1810--1849)
 
@@ -524,7 +524,7 @@ Regardless of how one interprets the form, the **key scheme is revolutionary**. 
 
 <p align="center">♪ <i>Liszt, Trois études de concert, No. 3: Un sospiro</i> ♪</p>
 
-# Lesson 3a: Romantic Choral Music — Mendelssohn
+# Romantic Choral Music — Mendelssohn
 
 ## Choral Music in the Nineteenth Century
 
@@ -616,7 +616,7 @@ The hymn takes on a **new meaning** in the context of *St. Paul*: rather than it
 
 ---
 
-# Lesson 3b: Romantic Chamber Music — Schubert and Schumann
+# Romantic Chamber Music — Schubert and Schumann
 
 ## Chamber Music in the Romantic Era
 
@@ -682,7 +682,7 @@ When the **A' section** returns, the opening material comes back in a modified f
 
 ---
 
-# Lesson 3c: The Romantic Program Symphony — Berlioz
+# The Romantic Program Symphony — Berlioz
 
 ## The Nineteenth-Century Orchestra
 
@@ -762,7 +762,7 @@ Comparing the idee fixe as it appears across all five movements — the transfor
 
 ---
 
-# Lesson 3d: Orchestral Music — Mendelssohn and Schumann
+# Orchestral Music — Mendelssohn and Schumann
 
 ## The Rise of the Classical Repertoire
 
@@ -842,7 +842,7 @@ The first half of the nineteenth century was a **paradoxical age**. A torrent of
 
 Few pieces attained a permanent place in the repertoire during their composer's own lifetime; some, like the works of Berlioz, had to wait until the twentieth century for full recognition of their revolutionary achievements. Mendelssohn's reputation suffered grievously from anti-Semitic attacks that distorted his legacy for generations. Schumann's symphonies were sometimes criticized for their orchestration, though their musical substance was never in doubt. Yet the music endures. What matters most, in the end, is not the taking of notes but the **listening** — and this is music that richly rewards it. These composers found ways to honor the Classical tradition while transforming it from within, creating works that speak with both the authority of inherited form and the passion of individual expression. Their achievement was to demonstrate that Romanticism and Classicism were not opposites but complements — that the deepest feelings could be expressed within the most rigorous structures, and that the structures themselves could be renewed and revitalized by the force of Romantic imagination.
 
-# Lesson 4a: Romantic Italian Opera — Rossini and *The Barber of Seville*
+# Romantic Italian Opera — Rossini and *The Barber of Seville*
 
 ## Gioachino Rossini (1792–1868): A Life in Opera
 
@@ -1037,7 +1037,7 @@ But the legacy was secure. Bellini had shown that Italian opera could be not onl
 
 ---
 
-# Lesson 4b: Opera in Germany — Weber and *Der Freischütz*
+# Opera in Germany — Weber and *Der Freischütz*
 
 ## Nationalism and Opera
 
@@ -1128,7 +1128,7 @@ Weber died of tuberculosis in 1826, far too young to see the full flowering of h
 
 ---
 
-# Lesson 5a: Wagner and *Tristan und Isolde*
+# Wagner and *Tristan und Isolde*
 
 ## Richard Wagner (1813--1883): Life and Controversy
 
@@ -1212,7 +1212,7 @@ The orchestra brings the entire work to resolution. The music of the Prelude ret
 
 ---
 
-# Lesson 5b: Verdi and *La Traviata*
+# Verdi and *La Traviata*
 
 ## Giuseppe Verdi (1813--1901): The Dominant Voice of Italian Opera
 
@@ -1274,7 +1274,7 @@ The main excerpt from *La traviata* comes from the final act, as Violetta lies d
 
 ---
 
-# Lesson 5c: Puccini and *Madama Butterfly*
+# Puccini and *Madama Butterfly*
 
 ## Italian Opera After Verdi
 
@@ -1332,7 +1332,7 @@ As a bonus, the celebrated Act II aria **"Un bel di"** ("One Fine Day") captures
 
 ---
 
-# Lesson 5d: Bizet and *Carmen*
+# Bizet and *Carmen*
 
 ## Georges Bizet (1838--1875) and the Genesis of *Carmen*
 
@@ -1408,7 +1408,7 @@ Carmen declares her love for Escamillo in a clear A major. The offstage **chorus
 
 ---
 
-# Lesson 5e: Musorgsky and *Boris Godunov*
+# Musorgsky and *Boris Godunov*
 
 ## Opera in Nineteenth-Century Russia
 
@@ -1454,7 +1454,7 @@ The Coronation Scene is one that truly must be watched, not merely heard. The vi
 
 <p align="center">&#9835; <i>Musorgsky, Boris Godunov -- Coronation Scene</i> &#9835;</p>
 
-# Lesson 6a: Brahms
+# Brahms
 
 ## Late Romanticism in German Musical Culture: Johannes Brahms
 
@@ -1556,7 +1556,7 @@ He developed subtle and complex techniques -- things that take a little study, a
 
 ---
 
-# Lesson 6b: Richard Strauss
+# Richard Strauss
 
 ## Late Romanticism in German Musical Culture: The Wagnerians and the New German School
 

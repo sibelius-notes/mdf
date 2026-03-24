@@ -3,7 +3,7 @@ title: "MUSIC 100: Introduction to Music"
 prof: "John Brownell"
 ---
 
-# Week 1: Introduction — What is Music?
+# Introduction — What is Music?
 
 ## Aims, Scope, and Method
 
@@ -102,7 +102,7 @@ Real musical works often mix all three textures. Handel's *Messiah: Hallelujah* 
 
 ---
 
-# Week 2: Form and Instruments
+# Form and Instruments
 
 ## Form
 
@@ -154,7 +154,7 @@ In **theme and variations** form, a recognizable theme is stated and then subjec
 
 ---
 
-# Week 3: The Medieval Period and the Beginning of the Renaissance
+# The Medieval Period and the Beginning of the Renaissance
 
 ## Medieval Music (476–c. 1450)
 
@@ -210,7 +210,7 @@ The **Reformation** (c. 1500, Luther's Protestant revolt) and the **Counter-Refo
 
 ---
 
-# Week 4: Renaissance Music in Depth
+# Renaissance Music in Depth
 
 ## Styles
 
@@ -252,7 +252,7 @@ Publishing created a thriving market for amateur music-making. Dance music circu
 
 ---
 
-# Week 5: The Baroque Period — Vocal Music
+# The Baroque Period — Vocal Music
 
 ## Historical Context (1600–1750)
 
@@ -304,7 +304,7 @@ A **cantata** is a work for vocalists with instrumental accompaniment, setting a
 
 ---
 
-# Week 6: Baroque Instrumental Music and Handel's Oratorio
+# Baroque Instrumental Music and Handel's Oratorio
 
 ## Orchestration and Instruments
 
@@ -355,7 +355,7 @@ The **fugue** is the highest form of polyphonic composition. It is built on a si
 
 ---
 
-# Week 7: The Classical Period
+# The Classical Period
 
 ## Historical Context (1750–c. 1800/1825)
 
@@ -404,7 +404,7 @@ His catalog uses **Köchel (K.) numbers** (compiled by Ludwig von Köchel). Oper
 
 ---
 
-# Week 8: Beethoven and the Turn to Romanticism
+# Beethoven and the Turn to Romanticism
 
 ## Ludwig van Beethoven (1770–1827)
 
@@ -469,7 +469,7 @@ Characteristics of Romantic music:
 
 ---
 
-# Week 9: Romantic Opera and Wagner
+# Romantic Opera and Wagner
 
 ## Opera in the Romantic Era
 
@@ -509,7 +509,7 @@ Wagner's **chromaticism** — constantly shifting tonal centres — is so extrem
 
 ---
 
-# Week 10: Romantic (Non-Opera) Music Continued
+# Romantic (Non-Opera) Music Continued
 
 ## Song and Lieder
 
@@ -563,7 +563,7 @@ Also worth noting from the Romantic era: Mussorgsky's *Pictures at an Exhibition
 
 ---
 
-# Week 11: The 20th Century — Impressionism, Primitivism, and the Rejection of Tonality
+# The 20th Century — Impressionism, Primitivism, and the Rejection of Tonality
 
 ## Overview
 
@@ -647,7 +647,7 @@ In Nazi Germany, music deemed "decadent," "Jewish," or "Negroid" (i.e., jazz) wa
 
 ---
 
-# Week 12: Blurring of the Boundaries
+# Blurring of the Boundaries
 
 ## The Fragmentation of Style
 

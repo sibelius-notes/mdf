@@ -2,7 +2,7 @@
 title: "MUSIC 110: Music in Cultural Contexts"
 prof: "Maisie Sum, Kate Steiner"
 ---
-# Lec 1 - Jan 7th
+# Course Introduction
 Introductions
 ## Calendar
 * IC: in class
@@ -15,12 +15,12 @@ The concert program must be handed with the assignment
 
 ## Group activity
 
-# Lec 2 - Jan 9th
+# Gamelan Workshop
 Gamelan Workshop.
 
 Gong
 
-# Lec 3 - Jan 14th
+# What is Music? A Tripartite Model
 Develop tools
 
 *Is Music a Universal Language?*
@@ -69,7 +69,7 @@ WILL BE ON TESTS!
 
 See listening response worksheet, which requires to be filled when listening the music. So we are required to memorize, understand and apply.
 
-# Lec 4 - Jan 16th
+# Rhythm, Instrument Classification, and Balinese Gamelan
 **HW - Listening**: twinkle twinkle little star
 
 truncate the phrase and find the beat.
@@ -122,7 +122,7 @@ One melody line shared by two people.
     - like one in upbeat, one in downbeat (onbeat).
     - sometimes it's hard for one person to play due to its complex patterns.
 
-# Lec 5 - Jan 21st
+# Balinese Gamelan: Kotekan, Social Context, and Gong Kebyar
 Review: Instrument Classification
 
 Leon Theremin: invented Theremin in 1920
@@ -220,7 +220,7 @@ Each group represents a particular region. Clap for sth good, boo (or throw toma
 
 The spirit of community and interction are highly valued in Bali. Ritual and musical activities are symbols of communal interdependence.
 
-# Lec 6 - Jan 23rd
+# Gamelan Performance: Transmission and Musical Roles
 ## Gamelan Performaces
 - Time: don't last all 7 days. last for an hour - 2 (tour performance). Live performance is changing now due to TV and social media.
 - Setting: always outdours. Dressed nicely, dressed in the same way.
@@ -257,7 +257,7 @@ unified musical expression.
 
 unison (not pitches): "The music and musicians must breathe together; they must *menjiwai gending*: feel the soul of the music as one" (Tenzer).
 
-# Lec 7 - Jan 28th
+# Case Study: Music of the BaAka People
 Now let's take a look at an example.
 
 *Ndraje Balendro, Initiation Song*. Horn Ensemble
@@ -312,7 +312,7 @@ An album: CAMEROON - Baka Pygmy Music (Field Recordings by Siha Arom and Patrick
 ### Learning Makala (with Michele Kisliuk)
 Seize the Dance
 
-# Lec 8 - Jan 30th
+# Case Study: Brazilian Capoeira and Inuit Throat Singing
 ## Review
 1. The BaAka people consitute one of many groups of:
     - Hunter and gatherers of the equatorial African forest
@@ -378,7 +378,7 @@ men hunt. women stay at home. They play this together: throat singing. People al
 - Traditional performance
 - new performance: modernized. Politically motivated.
 
-# Lec 9 - Feb 4th
+# Music in Everyday Life: Lullabies and Social Context
 continue from last class... Tanya Tagaq, her music is not traditional. Her music is open possiblities to ask about: where does the sound come from? So, she says that this is the way that people can learn more. Let's listen to *Demo by Inuit sisters Karin and Kathy Kettler (Northern Quebec, Canada)*.
 > From AlakskaDispatch.com. They are Inuit throat singner and drum dancer. Competition between girls while men in hunting. Half second off each other. Comes from voices, throats, breathing. Part of culture they from, very unique. Oral tradition, cannot learn from written down notes.
 
@@ -483,7 +483,7 @@ Examples:
 What are soem cross-cultural features of lullabies?
 - slow, calm, repetitive
 
-# Lec 10 - Feb 6th
+# Music in the Workday and Daily Life
 ## CASE STUDY I: Early life & Childhood - Lullabies
 What are soem cross-cultural features of lullabies? (recall from last class)
 - slow, calming, repetitive
@@ -590,7 +590,7 @@ According to Locke, the significance of musical analysis
 7. Training
 8. Intercultural Misunderstanding
 
-# Lec 11 - Feb 11st
+# Midterm Review
 ## Review, part 2
 
 *Mystery excerpts (not on Playlist) will be played.*
@@ -645,10 +645,10 @@ It's clearly gamelan.
     - stamping sound (work sounds)
     - polyrhythm
 
-# Lec 12 - Feb 13rd
+# Midterm Exam
 Test 1. Check my [review notes](https://notes.sibeliusp.com/pdfs/1201/mus110_unit1.pdf).
 
-# Lec 13 - Feb 25th
+# Western European Music: Is Music a Universal Language?
 Classical music is dead. ? The limit.
 
 **Defn**:
@@ -736,7 +736,7 @@ Ross, "A classical kid..."
 - Classical music maintains a distinct conversation that spans across generations and places
 - The invention of notation allows for the creation and transmission of long and complex music across centuries and continents
 
-# Lec 14 - Feb 27th
+# Defining Classical Music and the Classical Era Style
 ## Classical Music Image Search
 - Dead white male composers
 - Music notation
@@ -829,7 +829,7 @@ Other Terms for “Classical Music”
 - Concert Hall Music
 - ?
 
-# Lec 15 - Mar 3rd
+# The Classical Music Canon and Musicology Methods
 Canon
 
 Methods of Defining Classical Music Culturally
@@ -996,7 +996,7 @@ Depends on the context
 - Christmas at Rockefeller Center
     - To validate social institutions and religious rituals
 
-# Lec 16 - Mar 5th
+# Musical Authority and Igor Stravinsky
 **What does the music mean?**  Methods of studying
 
 Methods of Histrocial Music Study
@@ -1121,7 +1121,7 @@ and chorus
 - Compare musical and lyrical structure
 - Consider how the musical elements highlight the words
 
-# Lec 17 - Mar 10th
+# Methods of Music Analysis and Western Music History
 ## Methods of Historical Music Studies
 - Search for “The Musical Work” in the notational record
     - Traces the music in material form
@@ -1253,7 +1253,7 @@ If we listening for a story in the music, are we missing something?
 
 If there are no words, or even a melody, what do we listen for?
 
-# Lec 18 - Mar 12th
+# Vivaldi, Messiaen, and Music and Gender
 Pre-reading: [Structural Listening](https://www.theavidlistener.com/2014/10/structural-listening.html)
 
 Soundwalk. Listen to the sound in our surroundings.
@@ -1350,7 +1350,7 @@ The listener is ultimately the performer.
 
 > One week suspension...
 
-# Penultimate Lecture - Mar 24th
+# Medieval Music: Troubadour Song and the Motet
 Today we will be looking at women in the Medieval World.
 
 Historical Western Art Music Eras
@@ -1524,7 +1524,7 @@ Thus
         - Her own words of love and appreciation
 - The perfect woman is the origin and goal of love songs
 
-# FINAL Lecture - Mar 26th
+# Romantic Music, Classical Culture, and Diversity
 Romantic Music and Aesthetic Pleasure
 
 Objectives, two fold

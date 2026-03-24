@@ -2,7 +2,7 @@
 title: "SYDE 522: Machine Intelligence"
 prof: "Hamid R. Tizhoosh"
 ---
-# Lecture 1
+# Introduction to Artificial Intelligence
 Objectives of this course:
 - basic concepts of AI
 - different methods for function approximation
@@ -79,7 +79,7 @@ All these is approximation: you have a black box \(f(x) \), some \(x \) goes in 
 *Can we measure intelligence?*
 
 
-# Lecture 2
+# Philosophical Foundations and Dimensionality Reduction
 Check [this paper](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
 
 *Can machine think?*
@@ -166,7 +166,7 @@ Are \(x_i \) and \(x_j \) changing together? (correlated)
 
 Generalization of Covariance: \(\Sigma = E[(\boldsymbol x - E[\boldsymbol x]) (\boldsymbol x - E[\boldsymbol x])^T  ] \)
 
-# Lecture 3
+# Principal Component Analysis
 ## PCA
 main features selection. Which components (=features) are important to keep?
 - Significance = variance.
@@ -236,7 +236,7 @@ You will see that this is not always desirable.
 7. Recall phrase (unseen data)
 8. Compare against other methods
 
-# Lecture 4
+# Linear Discriminant Analysis and t-SNE
 ## LDA
 linear discriminant analysis (operates of feature subspace, linear method, supervised)
 - Data \(\langle x _ 1,\ldots,x _ n \rangle \)
@@ -296,7 +296,7 @@ t-SNE minimizes the sum of KL divergences over all data points using a gradient 
 \]
 
 
-# Lecture 5
+# Feature Encoding: Fisher Vectors and VLAD
 We'll start by saying: AI is vision! Intelligence is to recognize people/scenes/objects/patters/...
 - Face recognition
 - object recognition
@@ -384,7 +384,7 @@ Here we do a \(L _ 2 \) normalization.
 
 Final Chain
 
-# Lecture 6
+# Model Validation and Regularization
 How to validate AI algorithms? [How do I use Turing Test in practice?]
 - We get the data
 - We train our algorithms:
@@ -446,7 +446,7 @@ Other methods:
 - Minimum description length
 
 
-# Lecture 7 - Clustering
+# Clustering: K-means and Self-Organizing Maps
 
 idea: Intelligence is the capability of grouping similar objects. Clustering groups "unlabeled" data into "clusters" of similar inputs.
 
@@ -535,7 +535,7 @@ Problems:
 - convergence may take a long time
 - variable results
 
-# Lecture 8
+# Support Vector Machines
 Classification: Intelligence is to distinguish things.
 
 ## Support Vector Machines
@@ -583,7 +583,7 @@ Popular kernels:
 - \(K(u,v) = (u\cdot v+1)^n \)
 - \(K(u,v)=\exp(-{\&#124;u-v\&#124;\over \sigma}) \)
 
-# Lecture 9
+# Cluster Validity and Fuzzy Sets
 ## Cluster Validity
 How do we know the clusters are valid? or, at least, good enough?
 

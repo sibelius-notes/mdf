@@ -2,7 +2,7 @@
 title: "GEOG 181: Designing Effective Maps"
 prof: "Weikai Tan"
 ---
-# Week 1: An Introduction to Maps
+# An Introduction to Maps
 > "A map is any concrete or abstract representation of the features that occur on or near the surface of the earth or other celestial bodies."
 
 --  (Campbell, 1998)
@@ -13,7 +13,7 @@ prof: "Weikai Tan"
 
 Map can be classified in two big category: mental maps, and map based on collected data.
 
-# Week 2: History of Cartography
+# History of Cartography
 > "The science of making any map, embracing all phases of work from surveying to map printing”
 
 -- Cartographic Office of the United Nations Organization, 1949
@@ -26,14 +26,14 @@ Map can be classified in two big category: mental maps, and map based on collect
 
 --  British Cartographic Society (recent)
 
-# Week 3: Size and Shape of the Earth, Geographic Coordinates
+# Size and Shape of the Earth, Geographic Coordinates
  This uneven surface can be represented by a geoid.
 
 On the almost spherical Earth, we can specify a location using latitude, longitude, and elevation.
 
 We need a **datum** to determine  exact latitude and longitude at a point.
 
-# Week 4: Map Projections
+# Map Projections
 When we transfer features from the curved surface of the Earth onto a flat map, we are creating a map projection.
 
 [Why all world maps are wrong.](https://youtu.be/kIID5FDi2JQ)
@@ -44,7 +44,7 @@ conformal projections, azimuthal projections.
 
 Also the Universal Transverse Mercator (UTM) projection
 
-# Week 5: Issues Related to the Accuracy of Maps
+# Issues Related to the Accuracy of Maps
 Note the difference between accuracy and precision; error and uncertainty.
 
 We can use math to find the extent of distortion on a location:
@@ -52,14 +52,14 @@ We can use math to find the extent of distortion on a location:
 \large \text {Scale factor} = {\text {Local Scale} \over \text {Principal Scale}}
 \]
 
-# Week 6: Principles of Map Design
+# Principles of Map Design
 The process of cartographic abstraction is supported by a number of map design techniques.
 
 > “Cartographic representation is making the world understandable through systematic abstraction that retains the iconicity of space depicting space.”      
 
 -- MacEachren, A. M., & Kraak, M. J. (2001). Research challenges in geovisualization. Cartography and geographic information science, 28(1), 3-12.
 
-# Week 7: Mapping Quantitative Data
+# Mapping Quantitative Data
 
 ## Describing Spatial Data
 **Level of measurement**:
@@ -69,7 +69,7 @@ The process of cartographic abstraction is supported by a number of map design t
 - **Ratio**: a quantified difference between values with an absolute zero point. An example from [small arms survey](http://www.smallarmssurvey.org/gbav).
 
 
-# Week 8: Choropleth Maps and Classification
+# Choropleth Maps and Classification
 Choropleth maps use a sequence of colour shades to represent categories of data for a given area of geography.
 
 ## Overview of Choropleth Mapping
@@ -96,7 +96,7 @@ The purpose of classification is to simplify data through creating groupings of 
 
 
 
-# Week 9: Mapping Terrain
+# Mapping Terrain
 ## Topographic Maps and Symbols
 **Topographic maps**: show a selection of features on the land surface.
 
@@ -114,7 +114,7 @@ The visualization of landscape through drawing techniques has become somewhat of
 - Hill shading
 - 3-D Approaches to Visualizing Terrain
 
-# Week 10: Online Mapping and the Geoweb
+# Online Mapping and the Geoweb
 Some terms:
 - simple static maps
 - basic interactive maps
@@ -124,7 +124,7 @@ Some terms:
 Definition of Geoweb (Lake & Farley, 2007):
 > “Integrative, discoverable collection of geographically related web services and data that spans multiple jurisdictions and geographic regions”
 
-# Week 11: Maps and Society
+# Maps and Society
 Maps have power.
 
 Military applications. [Geospatial Revolution 1](https://youtu.be/LifkI7puN9A)
@@ -136,5 +136,5 @@ Public Participation GIS (PPGIS) can be considered as:
 
 [Geospatial Revolution 2](https://youtu.be/ChWj4yBmE0E)
 
-# Week 12: Future Directions in Mapping
+# Future Directions in Mapping
 After taking GEOG 181, one can take 281, 381, 481, which is GIS stream. Or 271, 371, 471, which is remote sensing stream. Or 310, 410, which is surveying stream.

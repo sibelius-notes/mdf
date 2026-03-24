@@ -5,7 +5,7 @@ term: "1215 (Spring 2021)"
 institution: "University of Waterloo, Department of Geography and Environmental Management"
 ---
 
-# Week 1: Introduction
+# Introduction
 
 ## The Anthropocene
 
@@ -29,7 +29,7 @@ From the outset, the course frames climate change not merely as an environmental
 
 ---
 
-# Week 2: Introduction to the Climate System
+# Introduction to the Climate System
 
 ## Weather versus Climate
 
@@ -69,7 +69,7 @@ The course's Week 2 module also explores why people disagree about climate chang
 
 ---
 
-# Week 3: The Earth and Energy
+# The Earth and Energy
 
 ## Electromagnetic Radiation and the Energy Balance
 
@@ -105,7 +105,7 @@ The practical implication of climate sensitivity is stark. Current CO₂ concent
 
 ---
 
-# Week 4: The Carbon Cycle
+# The Carbon Cycle
 
 ## Carbon Stocks in the Earth System
 
@@ -153,7 +153,7 @@ Global greenhouse gas emissions have risen sharply since industrialisation, with
 
 ---
 
-# Week 5: Past and Future Climate
+# Past and Future Climate
 
 ## Earth's Orbital History and Ice Ages
 
@@ -185,7 +185,7 @@ The IPCC has used several generations of scenarios to explore the range of plaus
 
 ---
 
-# Week 6: Impacts on Natural Systems
+# Impacts on Natural Systems
 
 ## Biodiversity and Ecosystem Services
 
@@ -233,7 +233,7 @@ Beyond habitat loss, sea-level rise produces multiple interacting impacts: inund
 
 ---
 
-# Week 7: Impacts on Humans
+# Impacts on Humans
 
 ## Climate and Human Civilisation
 
@@ -269,7 +269,7 @@ The health impacts of climate change are wide-ranging and mediated through multi
 
 ---
 
-# Week 8: Assessing Vulnerability
+# Assessing Vulnerability
 
 ## The Vulnerability Framework
 
@@ -301,7 +301,7 @@ The spatial and temporal distribution of climate change vulnerability raises pro
 
 ---
 
-# Week 9: Adaptation
+# Adaptation
 
 ## Defining Adaptation
 
@@ -347,7 +347,7 @@ The course identifies six categories of barriers that impede adaptation even whe
 
 ---
 
-# Week 10: Introduction to Mitigation
+# Introduction to Mitigation
 
 ## The Logic of Mitigation
 
@@ -391,7 +391,7 @@ The insight is that no single silver bullet is required; rather, a portfolio of 
 
 ---
 
-# Week 11: Politics, Policy and Governance
+# Politics, Policy and Governance
 
 ## Climate Change as a Global Commons Problem
 
@@ -453,7 +453,7 @@ This seemingly linear process is interrupted by multiple barriers at each stage.
 
 ---
 
-# Week 12: Sustainability Transformations — Linking Adaptation and Mitigation in Communities
+# Sustainability Transformations — Linking Adaptation and Mitigation in Communities
 
 ## The Transformation Imperative
 

@@ -2,7 +2,7 @@
 title: "MUSIC 246: Soundtracks: Music in films"
 prof: "Simon Wood"
 ---
-# Lecture 1: Introduction — Why Music?
+# Introduction — Why Music?
 ## Part A: Welcome To The Show!
 This course is about music and movies and what happened when they put together.
 
@@ -51,7 +51,7 @@ To see these functions in action, consider two examples:
 🎥 *Alien Resurrection* 🎥
 {.vp}
 
-# Lecture 2: Evaluating a Score
+# Evaluating a Score
 
 How do we talk about what we hear in a film score? This lecture introduces the key vocabulary and concepts for analyzing film music.
 
@@ -116,7 +116,7 @@ Most film music falls somewhere between two conceptual extremes. **Playing the d
 - A blend of consonance and dissonance: *Yes* from *Meet Joe Black* (1998), composed by Thomas Newman
 - Highly dissonant: *Bishop's Countdown* from *Aliens* (1986), composed by James Horner
 
-# Lecture 3: Technical Details and the Silent Era
+# Technical Details and the Silent Era
 
 ## Basic Timetable
 of Film Production
@@ -278,7 +278,7 @@ First, two completely different music to the same scene result in different perc
 
 This was the problem: music can be powerful for the film presentation, help the audience interpret  the film. No conceivable way to standardize the musical performance. So someone must come up with a way to record the sound and visual together, and play them back.
 
-# Lecture 4: The Birth of Sound and Max Steiner
+# The Birth of Sound and Max Steiner
 ## Transition to Sound
 Solution to the problems of musical accompaniment – recorded and synchronized sound.
 
@@ -354,7 +354,7 @@ The music for the ceremonial dance uses a full orchestra, yet only drums are vis
 
 Steiner eventually moved to Warner Brothers, where he spent the bulk of his career as head of the music department (1937–1953). Other notable films include *Gone with the Wind* (1939), *Casablanca* (1942), and *A Summer Place* (1959). A legendary workaholic, Steiner contributed to over 300 film scores during his career before his death in 1971.
 
-# Lecture 5: Erich Korngold and the 1930s
+# Erich Korngold and the 1930s
 
 ## Part A: The Émigré Composers
 
@@ -437,7 +437,7 @@ Love Theme 2 (from the opening credits) receives its most dramatic statement wit
 
 Korngold's approach to film scoring can be summarized in several key characteristics: a "Romantic" orchestral style with an operatic sensibility; extensive use of themes and thematic transformation; a preference for phrasing the drama rather than hitting individual actions; and limited, deliberate use of mickey mousing — reserved for comedy or key dramatic moments rather than applied indiscriminately.
 
-# Lecture 6: Film Noir and the 1940s
+# Film Noir and the 1940s
 
 ## Part A: Into the Darkness
 
@@ -538,7 +538,7 @@ This is the moment the music has been setting us up for since the film started. 
 
 This is a large part of what the film is actually about: the **objectification of women**. It is no accident that the murderer turns out to be Lydecker. Remember what the very first thing Lydecker says to McPherson is: "Careful there, that stuff is priceless." His house is full of valuable items he has collected. Laura was just another one. When he found out she was starting to see other men, he was not crushed by romantic jealousy — he was enraged because he saw Laura as property that he owned. Once Laura returns and the illusion is broken, Laura's theme largely disappears from the film. There is still music through the final third, but very little of it references Laura's theme, because now we realize that the character it represented was never real.
 
-# Lecture 7: The 1950s — New Technology, New Voices
+# The 1950s — New Technology, New Voices
 
 ## Part A: The End of the Studio System
 
@@ -623,7 +623,7 @@ There is no music until the attack begins. Then the strings "shriek" — there i
 
 Herrmann and Hitchcock parted company during the filming of *Torn Curtain* (1966). Bitter about the falling out, Herrmann moved to Europe, where he worked with François Truffaut on *Fahrenheit 451* (1966). His last score was for Martin Scorsese's *Taxi Driver* (1975). Herrmann is fundamentally a composer of the 20th century — his music embraces modernism, dissonance, and unconventional instrumentation in ways that expanded what film music could be.
 
-# Lecture 8: The 1960s — Versatility and Modernism
+# The 1960s — Versatility and Modernism
 
 ## Part A: A Turbulent Decade
 
@@ -723,7 +723,7 @@ The score appears to be unrelentingly modernist, but there is one remarkable mom
 
 The famous ending is one of the finest in cinema history. Taylor rides off down the coastline toward apparent freedom, accompanied by the Crossing theme — which by this point in the film has become familiar enough to offer some comfort. Then he stumbles on the truth. And what does the music do? Nothing. There is no music at all. Goldsmith could have given us a massive restatement of the main theme as Taylor screams "Damn you all to hell!" — and frankly, that would have been a relief, because the music coming back would signal that this is just a film, you can go home, everything is fine. But we do not even get the modernist score we have gradually grown used to. All we hear is the sound of waves as the credits roll, and we are left feeling utterly defeated. That, of course, is the point. The film is trying to say: this is where we are going. If we do not stop doing all the stupid things we are doing, this may well be where we end up. It is one of the best examples in the history of film music of a composer's most powerful choice being to stay out entirely.
 
-# Lecture 9: The 1970s — John Williams and the Return of the Orchestra
+# The 1970s — John Williams and the Return of the Orchestra
 
 ## Part A: Pop Scores and the Declining Orchestra
 
@@ -799,7 +799,7 @@ There are not enough superlatives to describe the career of John Williams. Over 
 
 And then, probably the thing that made the biggest impact: arrangements of Williams' music for **high school bands**. Almost everybody who comes out of a high school music program in the Western Hemisphere plays at least one adaptation of a Williams film score at some point. That, perhaps more than anything else, is why his fame has persevered so long and extended so far beyond the film world. His influence, along with that of Hans Zimmer (whom we will encounter later), makes him almost certainly the most influential composer in the history of the Hollywood film industry.
 
-# Lecture 10: The 1980s — Silvestri and Horner
+# The 1980s — Silvestri and Horner
 
 ## Part A: The Neo-Romantic Generation
 
@@ -869,7 +869,7 @@ Kirk appeals to Khan, offering to give himself up if the crew of cadets can be s
 
 Horner went on to tremendous success, including *Avatar* (2009) for Cameron. In addition to composing, he had a great love of flying and was a licensed pilot with a small collection of airplanes. In 2015, apparently flying fairly low through some canyons, he lost control and crashed. He was sixty-one. At the time of his death, he had just finished work on the score for the remake of *The Magnificent Seven* (2016), starring Denzel Washington. The film was still in production, but Horner had worked out the main themes and done early demo work. When the film came out, the score was completed by a friend and colleague based on Horner's sketches. That is considered to be his final score.
 
-# Lecture 11: Electronic Scores and Danny Elfman
+# Electronic Scores and Danny Elfman
 
 ## Part A: The Rise of Electronic Music in Film
 
@@ -968,7 +968,7 @@ Now an example of the frantic, almost cartoonish side of Elfman. At 0:00, there 
 
 Elfman is still working today. Among his later credits: the score for *Avengers: Age of Ultron* (the one Avengers film that Alan Silvestri did not score) and the music for the *Men in Black* franchise.
 
-# Lecture 12: Hans Zimmer and Current Trends
+# Hans Zimmer and Current Trends
 
 ## Part A: Hans Zimmer (1957– )
 

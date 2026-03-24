@@ -4,7 +4,7 @@ prof: "R. Moosa"
 ---
 # Part I: Set Theory
 
-## Lecture 1: First Axioms
+## First Axioms
 
 The opening question of this course is deceptively simple: what is a natural number? In ordinary mathematics the natural numbers — \(0, 1, 2, 3, \ldots\) — are taken for granted. You learn them in school, you use them to count finite sets, and you never really pause to ask why they exist. You might have constructed the rationals from the integers, the reals from the rationals, and so on, but the natural numbers themselves usually go without explanation. In set theory, we want *everything* to be explained; nothing should go without justification. So this course begins, somewhat unusually, by building the natural numbers from scratch.
 
@@ -58,7 +58,7 @@ We also note that *implication* \(P \Rightarrow Q\) is definite (it abbreviates 
 
 ---
 
-## Lecture 2a: Natural Numbers (Part 1)
+## Natural Numbers (Part 1)
 
 Returning to where we left off, we verify that the existential axioms stated in Lecture 1 all involve definite conditions. The **empty set axiom** asserts the existence of a set satisfying \(\neg \exists y(y \in \emptyset)\) — a negation of an existential, hence definite. The **pair set axiom** characterises \(\{x,y\}\) by: \(\forall t(t \in \{x,y\} \leftrightarrow t = x \vee t = y)\) — built from equality and membership by disjunction and quantification, hence definite. The **union set axiom** uses \(\exists y(y \in x \wedge t \in y)\) — also definite.
 
@@ -113,7 +113,7 @@ The **induction principle** follows immediately from the definition: if \(J \sub
 
 ---
 
-## Lecture 2b: Natural Numbers (Part 2)
+## Natural Numbers (Part 2)
 
 ### The Replacement Axiom
 
@@ -128,7 +128,7 @@ These eight axioms together constitute **Zermelo-Fraenkel set theory**, denoted 
 
 ---
 
-## Lecture 3: Classes and Definite Operations
+## Classes and Definite Operations
 
 ### Classes
 
@@ -171,7 +171,7 @@ With this language of classes and definite operations, the Replacement Axiom can
 
 ---
 
-## Lecture 4: Ordering the Natural Numbers
+## Ordering the Natural Numbers
 
 ### The Induction Principle in Action
 
@@ -210,7 +210,7 @@ The fact that *membership* is the ordering relation here is philosophically stri
 
 ---
 
-## Lecture 5a: Ordinals (Part 1)
+## Ordinals (Part 1)
 
 ### Well-Ordering \(\omega\)
 
@@ -256,7 +256,7 @@ We call the natural numbers the **finite ordinals**. The ordinal \(\omega\) is t
 
 ---
 
-## Lecture 5b: Ordinals (Part 2)
+## Ordinals (Part 2)
 
 ### Ordinal Subsets and a Key Lemma
 
@@ -308,7 +308,7 @@ Part (a) says the successor operation has no gaps: \(S(\alpha)\) is the *immedia
 The ordinal \(0 = \emptyset\) is a limit ordinal — vacuously, since there is no \(\beta\) such that \(0 = S(\beta)\). The natural numbers \(1, 2, 3, \ldots\) are all successor ordinals. The ordinal \(\omega\) is the smallest **infinite** limit ordinal: it has no immediate predecessor among the ordinals, and every finite ordinal is a proper initial segment of \(\omega\). Beyond \(\omega\) lie \(\omega + 1 = S(\omega)\), \(\omega + 2\), and so on — the transfinite ordinals that will occupy our next set of lectures.
 
 The central insight of Part I can be summarized as follows. We began with nothing but undefined notions of set and membership, introduced eight axioms motivated solely by the desire to construct the natural numbers, and have arrived at a rich and canonical hierarchy of well-ordered sets — the ordinals — that will serve as the backbone for all transfinite arithmetic to come.
-## Lecture 6: Ordering the Ordinals
+## Ordering the Ordinals
 
 Where were we? In the previous lecture the ordinals were introduced and defined: a set \(\alpha\) is an **ordinal** if every element of \(\alpha\) is a subset of \(\alpha\) (the *transitivity* condition), and the membership relation restricts to a strict well-ordering on \(\alpha\). The prototype was \(\omega\), the set of natural numbers, and we saw that these two conditions are modelled precisely on what \(\omega\) satisfies. Today we establish further properties of ordinals (Proposition 1.17 in the notes), culminating in the result that ordinals are *linearly ordered* by membership and that the class \(\mathrm{Ord}\) of all ordinals is itself a proper class.
 
@@ -332,7 +332,7 @@ The content of this proposition is profound: except for the defect of being a pr
 
 ---
 
-## Lecture 7a: Sups, Successors and Limits
+## Sups, Successors and Limits
 
 Recall from last time that membership well-orders the class of ordinals to the extent that makes sense: any *set* of ordinals is strictly well-ordered by \(\in\), and we write \(\alpha < \beta\)</span iff \(\alpha \in \beta\). Today we prove two further lemmas that will be indispensable: that \(S(\alpha)\) really is a "next" ordinal with nothing in between, that \(\bigcup E\) really is the *least upper bound*, and that every set of ordinals has a least ordinal *not* in it.
 
@@ -348,7 +348,7 @@ For part (c): the naive approach — taking the least element of the complement 
 
 ---
 
-## Lecture 7b: Transfinite Induction (continued)
+## Transfinite Induction (continued)
 
 The camera in the recording studio died mid-lecture, so this is the second part of Lecture 7. We are now ready to state and prove the central proof technique for the class of ordinals.
 
@@ -375,7 +375,7 @@ Transfinite induction gives us the tool to *prove* things about ordinals. The du
 
 ---
 
-## Lecture 8: Transfinite Recursion
+## Transfinite Recursion
 
 Today we prove the **Transfinite Recursion Theorem**, the companion to transfinite induction. Where induction lets us *prove* that all ordinals satisfy some property, recursion lets us *construct* a definite operation on \(\mathrm{Ord}\) satisfying a given recursive specification. This is significantly harder than induction; importantly, it is our first use of the Axiom of Replacement.
 
@@ -409,7 +409,7 @@ The second form is more concrete: to define a definite operation on ordinals, on
 
 ---
 
-## Lecture 9: Ordinal Arithmetic
+## Ordinal Arithmetic
 
 Last time we established transfinite recursion; today we put it to work. The goal is to extend the familiar arithmetic operations — addition, multiplication, exponentiation — from the natural numbers to all ordinals. The guiding principle in each case is the same: at successors we apply the natural "next step" rule, and at limit ordinals we take the supremum of all previously computed values.
 
@@ -456,7 +456,7 @@ All four parts are proved by transfinite induction. Note that right-cancellation
 
 ---
 
-## Lecture 10: Well-orderings and Ordinals
+## Well-orderings and Ordinals
 
 This is the beginning of the fourth week. Today we prove the central representation theorem: every strict well-ordering is isomorphic to a unique ordinal. This closes Part 1 of the chapter by connecting our set-theoretic development of ordinals to the more intuitive picture of ordinals as "order types of well-orderings."
 
@@ -497,7 +497,7 @@ This theorem brings Part 1 of the chapter to a close. We defined ordinals as a s
 ---
 # Part II: Cardinals and the Axiom of Choice
 
-## Lecture 11: Equinumerosity
+## Equinumerosity
 
 ### From Listing to Measuring
 
@@ -571,7 +571,7 @@ In particular, \(h(\omega)\) is an uncountable cardinal — the first one. But w
 
 ---
 
-## Lecture 12: Axiom of Choice
+## Axiom of Choice
 
 ### Why We Need a New Axiom
 
@@ -814,7 +814,7 @@ With this, the set theory component of the course draws to a close. The theory o
 ---
 # Part IV: First-order Logic and Model Theory
 
-## Lecture 16: Structures
+## Structures
 
 After reading week and Thanksgiving, we begin something entirely new. The first three parts of this course developed axiomatic set theory: ordinals, cardinals, transfinite induction, and cardinal arithmetic. We now turn to **model theory**, which is still part of mathematical logic, but a different part. As the professor put it at the start of lecture: model theory is a kind of *metamathematical* subject — it gives us a formal framework for studying mathematical objects that arise anywhere in mathematics. While we will occasionally use cardinal arithmetic and transfinite induction as tools (as one does in any area of mathematics), the model theory part of the course carries no direct logical dependence on the set theory part.
 
@@ -881,7 +881,7 @@ The reason for encoding scalar multiplication as a family of unary functions rat
 
 ---
 
-## Lecture 17: Embeddings
+## Embeddings
 
 ### The Syntax/Semantics Distinction in Practice
 
@@ -939,7 +939,7 @@ This is why the language of groups includes the unary negation symbol: if it wer
 
 ---
 
-## Lecture 18: Terms
+## Terms
 
 ### Why Formulas?
 
@@ -997,7 +997,7 @@ So atomic formulas express either that two terms are equal, or that a tuple of t
 
 ---
 
-## Lecture 19: Formulae
+## Formulae
 
 ### Building Formulas from Atomic Ones
 
@@ -1042,7 +1042,7 @@ These three classes will play a central role in Proposition 4.27 below.
 
 ---
 
-## Lecture 20: Truth
+## Truth
 
 ### Satisfaction and the Semantics of Formulas
 
@@ -1232,7 +1232,7 @@ Note how non-constructive this is: one ranges over all formulas and all tuples a
 
 ---
 
-## Lecture 23: Definable Sets and Parameters
+## Definable Sets and Parameters
 
 ### Naming Constants — the Language \(L_B\)
 
@@ -1346,7 +1346,7 @@ The contrast with the integers is instructive. In \((\mathbb{Z}, 0, 1, +, -, \ti
 
 ---
 
-## Lecture 25: Theories and Models
+## Theories and Models
 
 ### Two Faces of Model Theory
 

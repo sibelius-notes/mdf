@@ -3,7 +3,7 @@ title: "HIST 200: History and Film"
 prof: "David Schweitzer"
 ---
 
-# Lecture 1: Introduction — What Is History and Film?
+# Introduction — What Is History and Film?
 
 The relationship between history and film is richer, more contested, and more consequential than the short title of this course might suggest. History films have long attracted academic criticism for inaccuracy, yet there is no escaping the reality that blockbuster historical films — whether documentaries, dramas, or even comedies — increasingly shape popular understanding of the past. This is especially pronounced in the contemporary age of visual entertainment, where DVDs, television, and cinema have largely supplanted the written word as the primary vehicles through which ordinary people encounter the historical past. The controversies that regularly erupt over historical films are themselves evidence of the central role film plays in making history accessible in everyday life.
 
@@ -17,7 +17,7 @@ The learning objectives of this course are correspondingly broad. Students are i
 
 ---
 
-# Lecture 2: In the Beginning — The Birth of Movies
+# In the Beginning — The Birth of Movies
 
 ## The World of 1895
 
@@ -61,7 +61,7 @@ In Berlin (as Kitchener was then called), traveling movies arrived in November 1
 
 ---
 
-# Lecture 3: D.W. Griffith's *Birth of a Nation*
+# D.W. Griffith's *Birth of a Nation*
 
 ## The Film and Its Context
 
@@ -105,7 +105,7 @@ In 1918, Griffith argued that motion pictures would "revolutionize the way histo
 
 ---
 
-# Lecture 4: *Battleship Potemkin* as History, Propaganda, and Art
+# *Battleship Potemkin* as History, Propaganda, and Art
 
 ## Eisenstein and the Soviet Cinema
 
@@ -137,7 +137,7 @@ The central question the film poses for historians is one of purpose and effect:
 
 ---
 
-# Lecture 5: *The Jazz Singer*
+# *The Jazz Singer*
 
 ## The First Talkie and Its Star
 
@@ -175,7 +175,7 @@ Jack's romantic liaison with Mary Dale — a non-Jewish woman, the *shiksa* in Y
 
 ---
 
-# Lecture 6: *Triumph of the Will*
+# *Triumph of the Will*
 
 ## Riefenstahl, Goebbels, and the Nazi Film Apparatus
 
@@ -216,7 +216,7 @@ Riefenstahl was imprisoned by the Allies for four years after the war and was pe
 
 ---
 
-# Lecture 7: *Citizen Kane* — Depicting History or Making History?
+# *Citizen Kane* — Depicting History or Making History?
 
 ## The Film, Its Makers, and Its Subject
 
@@ -262,7 +262,7 @@ The fundamental historical question the film poses is whether it is best underst
 
 ---
 
-# Lecture 8: *Amazing Grace* — Political Perseverance
+# *Amazing Grace* — Political Perseverance
 
 ## Wilberforce, Abolition, and the Historical Background
 
@@ -295,7 +295,7 @@ These errors matter not because they undermine the film's core argument — the 
 
 ---
 
-# Lecture 9: *The Pianist*
+# *The Pianist*
 
 ## World War II and Cinema
 
