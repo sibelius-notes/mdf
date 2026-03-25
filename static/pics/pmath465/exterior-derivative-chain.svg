@@ -11,7 +11,7 @@
     <!-- Omega^0 -->
     <rect x="20" y="-15" width="70" height="30" rx="5" fill="#e8eef8" stroke="#335" stroke-width="1.5"/>
     <text x="55" y="5" text-anchor="middle" font-family="serif" font-size="14" fill="#223">
-      &Omega;<tspan font-size="10" baseline-shift="super">0</tspan>(<tspan font-style="italic">M</tspan>)
+      Ω<tspan font-size="10" baseline-shift="super">0</tspan>(<tspan font-style="italic">M</tspan>)
     </text>
 
     <!-- Arrow d -->
@@ -21,7 +21,7 @@
     <!-- Omega^1 -->
     <rect x="150" y="-15" width="70" height="30" rx="5" fill="#e8eef8" stroke="#335" stroke-width="1.5"/>
     <text x="185" y="5" text-anchor="middle" font-family="serif" font-size="14" fill="#223">
-      &Omega;<tspan font-size="10" baseline-shift="super">1</tspan>(<tspan font-style="italic">M</tspan>)
+      Ω<tspan font-size="10" baseline-shift="super">1</tspan>(<tspan font-style="italic">M</tspan>)
     </text>
 
     <!-- Arrow d -->
@@ -31,7 +31,7 @@
     <!-- Omega^2 -->
     <rect x="280" y="-15" width="70" height="30" rx="5" fill="#e8eef8" stroke="#335" stroke-width="1.5"/>
     <text x="315" y="5" text-anchor="middle" font-family="serif" font-size="14" fill="#223">
-      &Omega;<tspan font-size="10" baseline-shift="super">2</tspan>(<tspan font-style="italic">M</tspan>)
+      Ω<tspan font-size="10" baseline-shift="super">2</tspan>(<tspan font-style="italic">M</tspan>)
     </text>
 
     <!-- Arrow d -->
@@ -41,7 +41,7 @@
     <!-- Omega^3 -->
     <rect x="410" y="-15" width="70" height="30" rx="5" fill="#e8eef8" stroke="#335" stroke-width="1.5"/>
     <text x="445" y="5" text-anchor="middle" font-family="serif" font-size="14" fill="#223">
-      &Omega;<tspan font-size="10" baseline-shift="super">3</tspan>(<tspan font-style="italic">M</tspan>)
+      Ω<tspan font-size="10" baseline-shift="super">3</tspan>(<tspan font-style="italic">M</tspan>)
     </text>
 
     <!-- Arrow to dots -->
@@ -62,7 +62,7 @@
     <!-- Omega^0 -->
     <rect x="50" y="-12" width="55" height="26" rx="4" fill="#f0f7e8" stroke="#486" stroke-width="1.2"/>
     <text x="77" y="6" text-anchor="middle" font-family="serif" font-size="13" fill="#264">
-      &Omega;<tspan font-size="9" baseline-shift="super">0</tspan>
+      Ω<tspan font-size="9" baseline-shift="super">0</tspan>
     </text>
 
     <!-- Arrow grad -->
@@ -72,7 +72,7 @@
     <!-- Omega^1 -->
     <rect x="175" y="-12" width="55" height="26" rx="4" fill="#f0f7e8" stroke="#486" stroke-width="1.2"/>
     <text x="202" y="6" text-anchor="middle" font-family="serif" font-size="13" fill="#264">
-      &Omega;<tspan font-size="9" baseline-shift="super">1</tspan>
+      Ω<tspan font-size="9" baseline-shift="super">1</tspan>
     </text>
 
     <!-- Arrow curl -->
@@ -82,7 +82,7 @@
     <!-- Omega^2 -->
     <rect x="305" y="-12" width="55" height="26" rx="4" fill="#f0f7e8" stroke="#486" stroke-width="1.2"/>
     <text x="332" y="6" text-anchor="middle" font-family="serif" font-size="13" fill="#264">
-      &Omega;<tspan font-size="9" baseline-shift="super">2</tspan>
+      Ω<tspan font-size="9" baseline-shift="super">2</tspan>
     </text>
 
     <!-- Arrow div -->
@@ -92,7 +92,7 @@
     <!-- Omega^3 -->
     <rect x="430" y="-12" width="55" height="26" rx="4" fill="#f0f7e8" stroke="#486" stroke-width="1.2"/>
     <text x="457" y="6" text-anchor="middle" font-family="serif" font-size="13" fill="#264">
-      &Omega;<tspan font-size="9" baseline-shift="super">3</tspan>
+      Ω<tspan font-size="9" baseline-shift="super">3</tspan>
     </text>
   </g>
 

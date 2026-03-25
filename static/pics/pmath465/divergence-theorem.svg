@@ -57,14 +57,14 @@
   <line x1="150" y1="90" x2="132" y2="72" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
 
   <!-- Labels -->
-  <text x="240" y="200" text-anchor="middle" font-family="serif" font-size="18" fill="#445577">&Omega;</text>
-  <text x="420" y="200" font-family="serif" font-size="14" fill="#445577">&part;&Omega;</text>
+  <text x="240" y="200" text-anchor="middle" font-family="serif" font-size="18" fill="#445577">Ω</text>
+  <text x="420" y="200" font-family="serif" font-size="14" fill="#445577">∂Ω</text>
   <text x="245" y="35" font-family="serif" font-size="12" fill="#2266aa" font-weight="bold">n&#770;</text>
   <text x="280" y="185" font-family="serif" font-size="12" fill="#cc7733" font-style="italic">F</text>
 
   <!-- Equation -->
   <text x="250" y="372" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
-    &Int;&Int;&Int;<tspan font-size="11" baseline-shift="sub">&Omega;</tspan> &nabla;&middot;<tspan font-style="italic">F</tspan> <tspan font-style="italic">dV</tspan>  =  &Int;&Int;<tspan font-size="11" baseline-shift="sub">&part;&Omega;</tspan> <tspan font-style="italic">F</tspan>&middot;<tspan font-weight="bold">n&#770;</tspan> <tspan font-style="italic">dS</tspan>
+    ∫∫∫<tspan font-size="11" baseline-shift="sub">Ω</tspan> ∇·<tspan font-style="italic">F</tspan> <tspan font-style="italic">dV</tspan>  =  ∫∫<tspan font-size="11" baseline-shift="sub">∂Ω</tspan> <tspan font-style="italic">F</tspan>·<tspan font-weight="bold">n&#770;</tspan> <tspan font-style="italic">dS</tspan>
   </text>
   <text x="250" y="395" text-anchor="middle" font-family="serif" font-size="12" fill="#888">total divergence inside = net flux through boundary</text>
 </svg>

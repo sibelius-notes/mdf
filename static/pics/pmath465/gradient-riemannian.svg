@@ -65,10 +65,10 @@
 
   <!-- Musical isomorphism -->
   <text x="300" y="300" text-anchor="middle" font-family="serif" font-size="14" fill="#555">
-    grad <tspan font-style="italic">f</tspan> = (<tspan font-style="italic">df</tspan>)<tspan font-size="12" baseline-shift="super">&sharp;</tspan>
+    grad <tspan font-style="italic">f</tspan> = (<tspan font-style="italic">df</tspan>)<tspan font-size="12" baseline-shift="super">♯</tspan>
   </text>
   <text x="300" y="320" text-anchor="middle" font-family="serif" font-size="13" fill="#888">
-    &langle;grad <tspan font-style="italic">f</tspan>, <tspan font-style="italic">v</tspan>&rangle; = <tspan font-style="italic">df</tspan>(<tspan font-style="italic">v</tspan>)
+    ⟨grad <tspan font-style="italic">f</tspan>, <tspan font-style="italic">v</tspan>⟩ = <tspan font-style="italic">df</tspan>(<tspan font-style="italic">v</tspan>)
   </text>
   <text x="300" y="340" text-anchor="middle" font-family="serif" font-size="12" fill="#aaa">(metric duality)</text>
 </svg>

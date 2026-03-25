@@ -18,7 +18,7 @@
     <!-- Orientation arrow -->
     <path d="M 65,55 A 15,15 0 1,1 85,55" fill="none" stroke="#3355aa" stroke-width="1.5"/>
     <polygon points="85,55 82,48 89,50" fill="#3355aa"/>
-    <text x="75" y="115" text-anchor="middle" font-family="serif" font-size="16" font-style="italic" fill="#3355aa">&omega;</text>
+    <text x="75" y="115" text-anchor="middle" font-family="serif" font-size="16" font-style="italic" fill="#3355aa">ω</text>
     <text x="75" y="133" text-anchor="middle" font-family="serif" font-size="12" fill="#666">(2-form)</text>
   </g>
 
@@ -49,17 +49,17 @@
     <line x1="50" y1="25" x2="50" y2="42" stroke="#2255aa" stroke-width="1.2" marker-end="url(#arrB)"/>
 
     <text x="50" y="120" text-anchor="middle" font-family="serif" font-size="15" fill="#2255aa">
-      <tspan font-style="italic">&iota;</tspan><tspan font-size="11" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic"> &omega;</tspan>
+      <tspan font-style="italic">ι</tspan><tspan font-size="11" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic"> ω</tspan>
     </text>
     <text x="50" y="138" text-anchor="middle" font-family="serif" font-size="12" fill="#666">(1-form)</text>
   </g>
 
   <!-- Explanation -->
   <text x="225" y="270" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-    <tspan font-style="italic">&iota;</tspan><tspan font-size="10" baseline-shift="sub" font-style="italic">X</tspan> : &Omega;<tspan font-size="10" baseline-shift="super">k</tspan>(<tspan font-style="italic">M</tspan>) &rarr; &Omega;<tspan font-size="10" baseline-shift="super">k&minus;1</tspan>(<tspan font-style="italic">M</tspan>)
+    <tspan font-style="italic">ι</tspan><tspan font-size="10" baseline-shift="sub" font-style="italic">X</tspan> : Ω<tspan font-size="10" baseline-shift="super">k</tspan>(<tspan font-style="italic">M</tspan>) → Ω<tspan font-size="10" baseline-shift="super">k−1</tspan>(<tspan font-style="italic">M</tspan>)
   </text>
   <text x="225" y="295" text-anchor="middle" font-family="serif" font-size="13" fill="#555">
-    (<tspan font-style="italic">&iota;</tspan><tspan font-size="9" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic">&omega;</tspan>)(<tspan font-style="italic">Y</tspan>) = <tspan font-style="italic">&omega;</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>)
+    (<tspan font-style="italic">ι</tspan><tspan font-size="9" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic">ω</tspan>)(<tspan font-style="italic">Y</tspan>) = <tspan font-style="italic">ω</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>)
   </text>
   <text x="225" y="320" text-anchor="middle" font-family="serif" font-size="13" fill="#888">"plug <tspan font-style="italic">X</tspan> into the first slot"</text>
 </svg>

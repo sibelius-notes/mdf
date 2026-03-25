@@ -25,7 +25,7 @@
   <text x="120" y="310" text-anchor="middle" font-family="serif" font-size="13" fill="#333" font-weight="bold">Regular point</text>
   <text x="120" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555" font-style="italic">V</text>
   <text x="131" y="332" text-anchor="middle" font-family="serif" font-size="9" fill="#555" font-style="italic">p</text>
-  <text x="140" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555">&ne; 0</text>
+  <text x="140" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555">≠ 0</text>
 
   <!-- Divider -->
   <line x1="260" y1="50" x2="260" y2="310" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>

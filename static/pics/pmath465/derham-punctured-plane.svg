@@ -56,7 +56,7 @@
     <line x1="140" y1="265" x2="155" y2="285" stroke="#6644aa" stroke-width="1.2" marker-end="url(#pArr)"/>
   </g>
 
-  <text x="275" y="170" font-family="serif" font-size="14" fill="#6644aa" font-style="italic">d&theta;</text>
+  <text x="275" y="170" font-family="serif" font-size="14" fill="#6644aa" font-style="italic">dθ</text>
 
   <!-- Closed loop gamma around the origin -->
   <circle cx="225" cy="210" r="55" fill="none" stroke="#cc6622" stroke-width="2.5"/>
@@ -64,11 +64,11 @@
   <polygon points="170,208 170,200 176,204" fill="#cc6622"/>
   <polygon points="280,212 280,220 274,216" fill="#cc6622"/>
 
-  <text x="160" y="180" font-family="serif" font-size="15" font-style="italic" fill="#cc6622">&gamma;</text>
+  <text x="160" y="180" font-family="serif" font-size="15" font-style="italic" fill="#cc6622">γ</text>
 
   <!-- Integral label -->
   <text x="340" y="140" font-family="serif" font-size="14" fill="#cc6622">
-    &oint;<tspan font-size="10" baseline-shift="sub" font-style="italic">&gamma;</tspan> <tspan font-style="italic">d&theta;</tspan> = 2&pi;
+    ∮<tspan font-size="10" baseline-shift="sub" font-style="italic">γ</tspan> <tspan font-style="italic">dθ</tspan> = 2π
   </text>
 
   <!-- Title for the space -->
@@ -79,10 +79,10 @@
   <!-- Cohomology result -->
   <rect x="100" y="348" width="250" height="30" rx="5" fill="#f5f0fa" stroke="#6644aa" stroke-width="1.5"/>
   <text x="225" y="369" text-anchor="middle" font-family="serif" font-size="15" fill="#6644aa">
-    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super">1</tspan>(R<tspan font-size="10" baseline-shift="super">2</tspan> \ {0}) &cong; R
+    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super">1</tspan>(R<tspan font-size="10" baseline-shift="super">2</tspan> \ {0}) ≅ R
   </text>
 
   <text x="225" y="340" text-anchor="middle" font-family="serif" font-size="12" fill="#888">
-    [<tspan font-style="italic">d&theta;</tspan>] generates the first cohomology
+    [<tspan font-style="italic">dθ</tspan>] generates the first cohomology
   </text>
 </svg>

@@ -46,27 +46,27 @@
   <g transform="translate(350, 90)">
     <rect x="0" y="0" width="130" height="100" rx="8" fill="rgba(255,255,240,0.9)" stroke="#999" stroke-width="1"/>
     <text x="15" y="25" font-family="serif" font-size="15" fill="#333" font-style="italic">E</text>
-    <text x="30" y="25" font-family="serif" font-size="15" fill="#333"> = &sigma;</text>
+    <text x="30" y="25" font-family="serif" font-size="15" fill="#333"> = σ</text>
     <text x="67" y="30" font-family="serif" font-size="11" fill="#333">u</text>
-    <text x="75" y="25" font-family="serif" font-size="15" fill="#333"> &middot; &sigma;</text>
+    <text x="75" y="25" font-family="serif" font-size="15" fill="#333"> · σ</text>
     <text x="105" y="30" font-family="serif" font-size="11" fill="#333">u</text>
 
     <text x="15" y="52" font-family="serif" font-size="15" fill="#333" font-style="italic">F</text>
-    <text x="30" y="52" font-family="serif" font-size="15" fill="#333"> = &sigma;</text>
+    <text x="30" y="52" font-family="serif" font-size="15" fill="#333"> = σ</text>
     <text x="67" y="57" font-family="serif" font-size="11" fill="#333">u</text>
-    <text x="75" y="52" font-family="serif" font-size="15" fill="#333"> &middot; &sigma;</text>
+    <text x="75" y="52" font-family="serif" font-size="15" fill="#333"> · σ</text>
     <text x="105" y="57" font-family="serif" font-size="11" fill="#333">v</text>
 
     <text x="15" y="79" font-family="serif" font-size="15" fill="#333" font-style="italic">G</text>
-    <text x="30" y="79" font-family="serif" font-size="15" fill="#333"> = &sigma;</text>
+    <text x="30" y="79" font-family="serif" font-size="15" fill="#333"> = σ</text>
     <text x="67" y="84" font-family="serif" font-size="11" fill="#333">v</text>
-    <text x="75" y="79" font-family="serif" font-size="15" fill="#333"> &middot; &sigma;</text>
+    <text x="75" y="79" font-family="serif" font-size="15" fill="#333"> · σ</text>
     <text x="105" y="84" font-family="serif" font-size="11" fill="#333">v</text>
   </g>
 
   <!-- ds² formula -->
   <text x="250" y="320" font-family="serif" font-size="16" fill="#222" text-anchor="middle">
-    ds&sup2; = E du&sup2; + 2F du dv + G dv&sup2;
+    ds² = E du² + 2F du dv + G dv²
   </text>
 
   <!-- Label -->

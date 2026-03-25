@@ -12,7 +12,7 @@
     <line x1="90" y1="70" x2="190" y2="170" stroke="#2266cc" stroke-width="1.5"/>
     <line x1="110" y1="70" x2="210" y2="170" stroke="#2266cc" stroke-width="1.5"/>
   </g>
-  <text x="35" y="185" font-family="serif" font-size="16" font-style="italic" fill="#2266cc">&alpha;</text>
+  <text x="35" y="185" font-family="serif" font-size="16" font-style="italic" fill="#2266cc">α</text>
 
   <!-- Beta lines -->
   <g opacity="0.5">
@@ -21,7 +21,7 @@
     <line x1="30" y1="170" x2="210" y2="110" stroke="#cc3322" stroke-width="1.5"/>
     <line x1="30" y1="185" x2="210" y2="125" stroke="#cc3322" stroke-width="1.5"/>
   </g>
-  <text x="195" y="78" font-family="serif" font-size="16" font-style="italic" fill="#cc3322">&beta;</text>
+  <text x="195" y="78" font-family="serif" font-size="16" font-style="italic" fill="#cc3322">β</text>
 
   <!-- Oriented parallelogram for alpha wedge beta -->
   <g transform="translate(300, 100)">
@@ -45,7 +45,7 @@
     <line x1="0" y1="60" x2="60" y2="100" stroke="#cc3322" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
   </g>
   <text x="340" y="215" text-anchor="middle" font-family="serif" font-size="16" fill="#228833">
-    <tspan font-style="italic">&alpha;</tspan> &and; <tspan font-style="italic">&beta;</tspan>
+    <tspan font-style="italic">α</tspan> ∧ <tspan font-style="italic">β</tspan>
   </text>
   <text x="340" y="235" text-anchor="middle" font-family="serif" font-size="13" fill="#555">(oriented area element)</text>
 
@@ -56,14 +56,14 @@
     <line x1="5" y1="5" x2="85" y2="-25" stroke="#2266cc" stroke-width="2" stroke-dasharray="5,3"/>
     <polygon points="85,-25 75,-20 75,-28" fill="#2266cc"/>
     <text x="100" y="-5" font-family="serif" font-size="14" fill="#666">
-      <tspan font-style="italic">&alpha;</tspan> &and; <tspan font-style="italic">&alpha;</tspan> = 0
+      <tspan font-style="italic">α</tspan> ∧ <tspan font-style="italic">α</tspan> = 0
     </text>
     <text x="100" y="15" font-family="serif" font-size="12" fill="#888">(degenerate: no area)</text>
   </g>
 
   <!-- Antisymmetry note -->
   <text x="320" y="290" text-anchor="middle" font-family="serif" font-size="14" fill="#555">
-    <tspan font-style="italic">&alpha;</tspan> &and; <tspan font-style="italic">&beta;</tspan> = &minus;<tspan font-style="italic">&beta;</tspan> &and; <tspan font-style="italic">&alpha;</tspan>
+    <tspan font-style="italic">α</tspan> ∧ <tspan font-style="italic">β</tspan> = −<tspan font-style="italic">β</tspan> ∧ <tspan font-style="italic">α</tspan>
   </text>
   <text x="320" y="310" text-anchor="middle" font-family="serif" font-size="12" fill="#888">(antisymmetry)</text>
 </svg>

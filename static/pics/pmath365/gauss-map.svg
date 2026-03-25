@@ -33,7 +33,7 @@
     <text x="-75" y="-60" font-family="serif" font-size="14" fill="#6A0DAD" font-weight="bold">n</text>
 
     <!-- Surface label -->
-    <text x="-30" y="80" font-family="serif" font-size="16" fill="#4169E1" font-style="italic" font-weight="bold">&sigma;(U)</text>
+    <text x="-30" y="80" font-family="serif" font-size="16" fill="#4169E1" font-style="italic" font-weight="bold">σ(U)</text>
   </g>
 
   <!-- Arrow n (Gauss map) -->
@@ -72,5 +72,5 @@
   <line x1="120" y1="250" x2="410" y2="200" stroke="#999" stroke-width="1" stroke-dasharray="5,4"/>
 
   <!-- Formula -->
-  <text x="275" y="370" font-family="serif" font-size="15" fill="#333" text-anchor="middle">n : &sigma;(U) &rarr; S&sup2;,  n(p) = unit normal at p</text>
+  <text x="275" y="370" font-family="serif" font-size="15" fill="#333" text-anchor="middle">n : σ(U) → S²,  n(p) = unit normal at p</text>
 </svg>

@@ -16,7 +16,7 @@
   <g transform="translate(40, 55)">
     <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
     <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-      &Omega;<tspan font-size="10" baseline-shift="super">0</tspan>
+      Ω<tspan font-size="10" baseline-shift="super">0</tspan>
     </text>
     <!-- ker d (closed) in blue -->
     <rect x="5" y="5" width="60" height="80" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
@@ -34,7 +34,7 @@
   <g transform="translate(160, 55)">
     <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
     <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-      &Omega;<tspan font-size="10" baseline-shift="super">1</tspan>
+      Ω<tspan font-size="10" baseline-shift="super">1</tspan>
     </text>
     <!-- ker d (closed) in blue -->
     <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
@@ -60,7 +60,7 @@
   <g transform="translate(280, 55)">
     <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
     <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-      &Omega;<tspan font-size="10" baseline-shift="super">2</tspan>
+      Ω<tspan font-size="10" baseline-shift="super">2</tspan>
     </text>
     <!-- ker d (closed) in blue -->
     <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
@@ -86,7 +86,7 @@
   <g transform="translate(400, 55)">
     <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
     <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-      &Omega;<tspan font-size="10" baseline-shift="super">3</tspan>
+      Ω<tspan font-size="10" baseline-shift="super">3</tspan>
     </text>
     <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
     <rect x="10" y="10" width="50" height="40" rx="3" fill="rgba(220,80,80,0.2)" stroke="#cc4444" stroke-width="1" stroke-dasharray="3,2"/>
@@ -110,6 +110,6 @@
 
   <!-- Formula -->
   <text x="300" y="240" text-anchor="middle" font-family="serif" font-size="14" fill="#228833">
-    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan><tspan font-size="10" baseline-shift="sub">dR</tspan>(<tspan font-style="italic">M</tspan>) = ker <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan> / im <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k&minus;1</tspan>  =  {closed <tspan font-style="italic">k</tspan>-forms} / {exact <tspan font-style="italic">k</tspan>-forms}
+    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan><tspan font-size="10" baseline-shift="sub">dR</tspan>(<tspan font-style="italic">M</tspan>) = ker <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan> / im <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k−1</tspan>  =  {closed <tspan font-style="italic">k</tspan>-forms} / {exact <tspan font-style="italic">k</tspan>-forms}
   </text>
 </svg>

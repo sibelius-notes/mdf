@@ -35,7 +35,7 @@
 
     <!-- Osculating circle for kappa_1 (curving upward = positive) -->
     <circle cx="0" cy="-120" r="100" fill="none" stroke="#4169E1" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <text x="60" y="-100" font-family="serif" font-size="16" fill="#4169E1" font-weight="bold">&kappa;</text>
+    <text x="60" y="-100" font-family="serif" font-size="16" fill="#4169E1" font-weight="bold">κ</text>
     <text x="73" y="-95" font-family="serif" font-size="12" fill="#4169E1">1</text>
     <text x="82" y="-100" font-family="serif" font-size="16" fill="#4169E1"> &gt; 0</text>
 
@@ -44,7 +44,7 @@
 
     <!-- Osculating circle for kappa_2 (curving downward = negative) -->
     <circle cx="0" cy="60" r="80" fill="none" stroke="#CC0000" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <text x="-90" y="70" font-family="serif" font-size="16" fill="#CC0000" font-weight="bold">&kappa;</text>
+    <text x="-90" y="70" font-family="serif" font-size="16" fill="#CC0000" font-weight="bold">κ</text>
     <text x="-77" y="75" font-family="serif" font-size="12" fill="#CC0000">2</text>
     <text x="-68" y="70" font-family="serif" font-size="16" fill="#CC0000"> &lt; 0</text>
   </g>
@@ -55,9 +55,9 @@
 
   <!-- Gaussian curvature formula -->
   <g transform="translate(275, 375)">
-    <text x="0" y="0" font-family="serif" font-size="17" fill="#333" text-anchor="middle" font-weight="bold">K = &kappa;</text>
+    <text x="0" y="0" font-family="serif" font-size="17" fill="#333" text-anchor="middle" font-weight="bold">K = κ</text>
     <text x="33" y="5" font-family="serif" font-size="12" fill="#333">1</text>
-    <text x="42" y="0" font-family="serif" font-size="17" fill="#333" font-weight="bold">&kappa;</text>
+    <text x="42" y="0" font-family="serif" font-size="17" fill="#333" font-weight="bold">κ</text>
     <text x="55" y="5" font-family="serif" font-size="12" fill="#333">2</text>
     <text x="65" y="0" font-family="serif" font-size="17" fill="#C00" font-weight="bold"> &lt; 0</text>
     <text x="120" y="0" font-family="serif" font-size="14" fill="#666"> (saddle point)</text>

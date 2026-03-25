@@ -40,7 +40,7 @@
   <text x="290" y="115" font-family="serif" font-size="14" fill="#CC0000" font-weight="bold">non-geodesic</text>
   <text x="290" y="132" font-family="serif" font-size="13" fill="#CC0000" font-style="italic">k</text>
   <text x="298" y="137" font-family="serif" font-size="10" fill="#CC0000">g</text>
-  <text x="310" y="132" font-family="serif" font-size="13" fill="#CC0000"> &ne; 0</text>
+  <text x="310" y="132" font-family="serif" font-size="13" fill="#CC0000"> ≠ 0</text>
 
   <!-- Point p on non-geodesic -->
   <circle cx="320" cy="132" r="4" fill="#C00"/>
@@ -61,18 +61,18 @@
   <!-- delta'' decomposition -->
   <!-- delta'' vector -->
   <line x1="320" y1="132" x2="290" y2="80" stroke="#6A0DAD" stroke-width="2" marker-end="url(#arrPurple)" stroke-dasharray="5,3"/>
-  <text x="282" y="77" font-family="serif" font-size="14" fill="#6A0DAD" font-weight="bold">&delta;&prime;&prime;</text>
+  <text x="282" y="77" font-family="serif" font-size="14" fill="#6A0DAD" font-weight="bold">δ′′</text>
 
   <!-- Component labels box -->
   <g transform="translate(50, 270)">
     <rect x="0" y="0" width="400" height="55" rx="6" fill="rgba(255,255,240,0.95)" stroke="#999" stroke-width="1"/>
-    <text x="200" y="22" font-family="serif" font-size="15" fill="#333" text-anchor="middle">&delta;&prime;&prime; = &kappa;</text>
+    <text x="200" y="22" font-family="serif" font-size="15" fill="#333" text-anchor="middle">δ′′ = κ</text>
     <text x="227" y="27" font-family="serif" font-size="11" fill="#333">n</text>
     <text x="238" y="22" font-family="serif" font-size="15" fill="#4169E1" font-weight="bold">N</text>
     <text x="255" y="22" font-family="serif" font-size="15" fill="#333"> + k</text>
     <text x="280" y="27" font-family="serif" font-size="11" fill="#333">g</text>
     <text x="291" y="22" font-family="serif" font-size="15" fill="#CC6600" font-weight="bold">M</text>
-    <text x="200" y="44" font-family="serif" font-size="13" fill="#666" text-anchor="middle">normal component &kappa;</text>
+    <text x="200" y="44" font-family="serif" font-size="13" fill="#666" text-anchor="middle">normal component κ</text>
     <text x="265" y="49" font-family="serif" font-size="10" fill="#666">n</text>
     <text x="275" y="44" font-family="serif" font-size="13" fill="#666">,  tangential component k</text>
     <text x="392" y="49" font-family="serif" font-size="10" fill="#666">g</text>

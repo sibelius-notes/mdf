@@ -39,7 +39,7 @@
 
     <!-- Tangent vector delta' at p (tangent to great circle) -->
     <line x1="80" y1="-55" x2="45" y2="-95" stroke="#006600" stroke-width="2.5" marker-end="url(#arrGreen)"/>
-    <text x="30" y="-98" font-family="serif" font-size="15" fill="#006600" font-weight="bold">&delta;&prime;</text>
+    <text x="30" y="-98" font-family="serif" font-size="15" fill="#006600" font-weight="bold">δ′</text>
 
     <!-- Normal vector N at p (pointing outward from sphere) -->
     <line x1="80" y1="-55" x2="125" y2="-85" stroke="#4169E1" stroke-width="2.5" marker-end="url(#arrBlue)"/>
@@ -47,7 +47,7 @@
 
     <!-- Acceleration delta'' (pointing toward center, normal to surface) -->
     <line x1="80" y1="-55" x2="35" y2="-20" stroke="#8B0000" stroke-width="2.5" marker-end="url(#arrRed)"/>
-    <text x="15" y="-12" font-family="serif" font-size="15" fill="#8B0000" font-weight="bold">&delta;&prime;&prime;</text>
+    <text x="15" y="-12" font-family="serif" font-size="15" fill="#8B0000" font-weight="bold">δ′′</text>
 
     <!-- Center dot -->
     <circle cx="0" cy="0" r="3" fill="#333"/>
@@ -66,5 +66,5 @@
   <text x="365" y="342" font-family="serif" font-size="16" fill="#333" text-anchor="middle" font-style="italic">k</text>
   <text x="372" y="347" font-family="serif" font-size="11" fill="#333">g</text>
   <text x="390" y="342" font-family="serif" font-size="16" fill="#333"> = 0</text>
-  <text x="365" y="358" font-family="serif" font-size="12" fill="#666" text-anchor="middle">&delta;&prime;&prime; &perp; surface</text>
+  <text x="365" y="358" font-family="serif" font-size="12" fill="#666" text-anchor="middle">δ′′ ⊥ surface</text>
 </svg>

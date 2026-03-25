@@ -54,7 +54,7 @@
 
   <!-- Homotopy formula -->
   <text x="110" y="55" font-family="serif" font-size="13" fill="#555">
-    <tspan font-style="italic">H</tspan>(<tspan font-style="italic">x</tspan>,<tspan font-style="italic">t</tspan>) = (1&minus;<tspan font-style="italic">t</tspan>)<tspan font-style="italic">x</tspan><tspan font-size="9" baseline-shift="sub">0</tspan> + <tspan font-style="italic">tx</tspan>
+    <tspan font-style="italic">H</tspan>(<tspan font-style="italic">x</tspan>,<tspan font-style="italic">t</tspan>) = (1−<tspan font-style="italic">t</tspan>)<tspan font-style="italic">x</tspan><tspan font-size="9" baseline-shift="sub">0</tspan> + <tspan font-style="italic">tx</tspan>
   </text>
 
   <!-- Statement box -->
@@ -63,7 +63,7 @@
     On a star-shaped domain: every closed form is exact
   </text>
   <text x="250" y="332" text-anchor="middle" font-family="serif" font-size="14" fill="#336633" font-weight="bold">
-    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan>(<tspan font-style="italic">U</tspan>) = 0  for  <tspan font-style="italic">k</tspan> &ge; 1
+    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan>(<tspan font-style="italic">U</tspan>) = 0  for  <tspan font-style="italic">k</tspan> ≥ 1
   </text>
 
   <!-- t labels -->
