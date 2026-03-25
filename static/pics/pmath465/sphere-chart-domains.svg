@@ -40,7 +40,7 @@
   <text x="55" y="128" font-family="serif" font-size="12" fill="#cc2222">= S<tspan font-size="9" baseline-shift="super">2</tspan> \ {<tspan font-style="italic">S</tspan>}</text>
 
   <!-- Overlap label (purple) -->
-  <text x="55" y="210" font-family="serif" font-style="italic" font-size="14" fill="#7733aa">U<tspan font-size="10" baseline-shift="sub">N</tspan> &amp;#x2229; U<tspan font-size="10" baseline-shift="sub">S</tspan></text>
+  <text x="55" y="210" font-family="serif" font-style="italic" font-size="14" fill="#7733aa">U<tspan font-size="10" baseline-shift="sub">N</tspan> ∩ U<tspan font-size="10" baseline-shift="sub">S</tspan></text>
 
   <!-- Title -->
   <text x="225" y="25" font-family="serif" font-size="16" fill="#333" text-anchor="middle">Chart Domains on <tspan font-style="italic">S</tspan><tspan font-size="12" baseline-shift="super">2</tspan></text>

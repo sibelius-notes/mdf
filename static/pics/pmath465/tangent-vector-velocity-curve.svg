@@ -29,10 +29,10 @@
   <line x1="220" y1="175" x2="300" y2="148" stroke="#cc2222" stroke-width="2.5" marker-end="url(#arrowRed)"/>
 
   <!-- Label gamma'(0) -->
-  <text x="305" y="138" font-family="serif" font-style="italic" font-size="16" fill="#cc2222">&amp;#x03B3;&amp;#x2032;(0)</text>
+  <text x="305" y="138" font-family="serif" font-style="italic" font-size="16" fill="#cc2222">γ′(0)</text>
 
   <!-- Label gamma -->
-  <text x="100" y="245" font-family="serif" font-style="italic" font-size="18" fill="#2255aa">&amp;#x03B3;</text>
+  <text x="100" y="245" font-family="serif" font-style="italic" font-size="18" fill="#2255aa">γ</text>
 
   <!-- Small arrow showing direction along curve -->
   <path d="M 155 192 L 165 186" fill="none" stroke="#2255aa" stroke-width="1.5" marker-end="url(#arrBlue)"/>

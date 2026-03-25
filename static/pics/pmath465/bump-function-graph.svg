@@ -51,12 +51,12 @@
   <text x="230" y="28" font-family="serif" font-style="italic" font-size="16" fill="#333">y</text>
 
   <!-- Function label -->
-  <text x="330" y="55" font-family="serif" font-style="italic" font-size="18" fill="#2255aa">&amp;#x03C8;</text>
+  <text x="330" y="55" font-family="serif" font-style="italic" font-size="18" fill="#2255aa">ψ</text>
 
   <!-- psi=1 label -->
-  <text x="225" y="70" font-family="serif" font-size="13" fill="#555" text-anchor="middle"><tspan font-style="italic">&amp;#x03C8;</tspan> = 1</text>
+  <text x="225" y="70" font-family="serif" font-size="13" fill="#555" text-anchor="middle"><tspan font-style="italic">ψ</tspan> = 1</text>
 
   <!-- psi=0 labels -->
-  <text x="72" y="245" font-family="serif" font-size="12" fill="#888"><tspan font-style="italic">&amp;#x03C8;</tspan> = 0</text>
-  <text x="362" y="245" font-family="serif" font-size="12" fill="#888"><tspan font-style="italic">&amp;#x03C8;</tspan> = 0</text>
+  <text x="72" y="245" font-family="serif" font-size="12" fill="#888"><tspan font-style="italic">ψ</tspan> = 0</text>
+  <text x="362" y="245" font-family="serif" font-size="12" fill="#888"><tspan font-style="italic">ψ</tspan> = 0</text>
 </svg>

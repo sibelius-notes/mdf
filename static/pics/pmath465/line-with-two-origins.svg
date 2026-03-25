@@ -41,5 +41,5 @@
   <line x1="256" y1="96" x2="256" y2="154" stroke="#cc6600" stroke-width="1.5"/>
 
   <!-- Caption -->
-  <text x="250" y="225" font-family="serif" font-size="13" fill="#555" text-anchor="middle">Points <tspan font-style="italic">x</tspan> &amp;#x2260; 0 on <tspan font-style="italic">R</tspan><tspan font-size="10" baseline-shift="sub">1</tspan> and <tspan font-style="italic">R</tspan><tspan font-size="10" baseline-shift="sub">2</tspan> are identified; the two origins are distinct.</text>
+  <text x="250" y="225" font-family="serif" font-size="13" fill="#555" text-anchor="middle">Points <tspan font-style="italic">x</tspan> ≠ 0 on <tspan font-style="italic">R</tspan><tspan font-size="10" baseline-shift="sub">1</tspan> and <tspan font-style="italic">R</tspan><tspan font-size="10" baseline-shift="sub">2</tspan> are identified; the two origins are distinct.</text>
 </svg>

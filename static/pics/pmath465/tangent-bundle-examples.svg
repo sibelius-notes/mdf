@@ -11,7 +11,7 @@
   <line x1="300" y1="30" x2="300" y2="270" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
 
   <!-- (a) TS^1 = S^1 x R: Cylinder -->
-  <text x="150" y="25" font-family="serif" font-size="15" fill="#333" text-anchor="middle">(a) <tspan font-style="italic">TS</tspan><tspan font-size="11" baseline-shift="super">1</tspan> &amp;#x2245; <tspan font-style="italic">S</tspan><tspan font-size="11" baseline-shift="super">1</tspan> &amp;#x00D7; <tspan font-style="italic">R</tspan></text>
+  <text x="150" y="25" font-family="serif" font-size="15" fill="#333" text-anchor="middle">(a) <tspan font-style="italic">TS</tspan><tspan font-size="11" baseline-shift="super">1</tspan> ≅ <tspan font-style="italic">S</tspan><tspan font-size="11" baseline-shift="super">1</tspan> × <tspan font-style="italic">R</tspan></text>
 
   <!-- Cylinder - top ellipse -->
   <ellipse cx="150" cy="70" rx="80" ry="25" fill="none" stroke="#2255aa" stroke-width="2"/>

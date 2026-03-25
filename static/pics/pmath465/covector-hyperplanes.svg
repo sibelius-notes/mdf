@@ -36,10 +36,10 @@
   <text x="405" y="138" font-family="serif" font-style="italic" font-size="20" fill="#cc2222">v</text>
 
   <!-- omega label (on one of the planes) -->
-  <text x="195" y="50" font-family="serif" font-style="italic" font-size="20" fill="#2255aa">&amp;#x03C9;</text>
+  <text x="195" y="50" font-family="serif" font-style="italic" font-size="20" fill="#2255aa">ω</text>
 
   <!-- "level sets of omega" annotation -->
-  <text x="230" y="335" font-family="serif" font-size="13" fill="#2255aa" text-anchor="middle">level sets of <tspan font-style="italic">&amp;#x03C9;</tspan></text>
+  <text x="230" y="335" font-family="serif" font-size="13" fill="#2255aa" text-anchor="middle">level sets of <tspan font-style="italic">ω</tspan></text>
 
   <!-- Count pierced planes: mark the intersections -->
   <circle cx="104" cy="192" r="3" fill="#cc6600"/>
@@ -49,12 +49,12 @@
   <circle cx="344" cy="148" r="3" fill="#cc6600"/>
 
   <!-- omega(v) label with count -->
-  <text x="300" y="110" font-family="serif" font-size="16" fill="#333"><tspan font-style="italic">&amp;#x03C9;</tspan>(<tspan font-style="italic">v</tspan>) = 5</text>
+  <text x="300" y="110" font-family="serif" font-size="16" fill="#333"><tspan font-style="italic">ω</tspan>(<tspan font-style="italic">v</tspan>) = 5</text>
   <text x="300" y="128" font-family="serif" font-size="12" fill="#666">(planes pierced)</text>
 
   <!-- Annotation bracket showing the count -->
   <path d="M 295 115 L 284 145" fill="none" stroke="#999" stroke-width="1"/>
 
   <!-- omega in V* label -->
-  <text x="60" y="40" font-family="serif" font-size="16" fill="#333"><tspan font-style="italic">&amp;#x03C9;</tspan> &amp;#x2208; <tspan font-style="italic">V</tspan>*</text>
+  <text x="60" y="40" font-family="serif" font-size="16" fill="#333"><tspan font-style="italic">ω</tspan> ∈ <tspan font-style="italic">V</tspan>*</text>
 </svg>

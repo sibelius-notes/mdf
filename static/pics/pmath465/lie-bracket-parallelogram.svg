@@ -50,7 +50,7 @@
   <line x1="357" y1="104" x2="373" y2="100" stroke="#228833" stroke-width="3" marker-end="url(#aG)" stroke-dasharray="4,2"/>
 
   <!-- Gap label -->
-  <text x="390" y="70" font-family="serif" font-style="italic" font-size="16" fill="#228833">&amp;#x03B5;<tspan font-size="13" baseline-shift="super">2</tspan>[<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>]</text>
+  <text x="390" y="70" font-family="serif" font-style="italic" font-size="16" fill="#228833">ε<tspan font-size="13" baseline-shift="super">2</tspan>[<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>]</text>
   <path d="M 388 73 L 378 90" fill="none" stroke="#228833" stroke-width="1" marker-end="url(#aG)"/>
 
   <!-- Dashed "ideal" closing edges -->
@@ -61,6 +61,6 @@
   <text x="250" y="30" font-family="serif" font-size="16" fill="#333" text-anchor="middle">Lie Bracket: Failure of Flows to Commute</text>
 
   <!-- Epsilon labels on edges -->
-  <text x="185" y="293" font-family="serif" font-style="italic" font-size="13" fill="#555">&amp;#x03B5;</text>
-  <text x="118" y="235" font-family="serif" font-style="italic" font-size="13" fill="#555">&amp;#x03B5;</text>
+  <text x="185" y="293" font-family="serif" font-style="italic" font-size="13" fill="#555">ε</text>
+  <text x="118" y="235" font-family="serif" font-style="italic" font-size="13" fill="#555">ε</text>
 </svg>

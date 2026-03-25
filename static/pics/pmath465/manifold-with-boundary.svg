@@ -9,7 +9,7 @@
   <text x="200" y="175" font-family="serif" font-style="italic" font-size="22" fill="#333" text-anchor="middle">M</text>
 
   <!-- Boundary label dM -->
-  <text x="200" y="250" font-family="serif" font-size="18" fill="#cc2222" text-anchor="middle">&amp;#x2202;<tspan font-style="italic">M</tspan></text>
+  <text x="200" y="250" font-family="serif" font-size="18" fill="#cc2222" text-anchor="middle">∂<tspan font-style="italic">M</tspan></text>
 
   <!-- Neighborhood near boundary -->
   <rect x="160" y="200" width="80" height="40" fill="#ffe8b0" fill-opacity="0.5" stroke="#b8860b" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
