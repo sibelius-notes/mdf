@@ -2,7 +2,7 @@
   <rect width="500" height="400" fill="white"/>
 
   <!-- Title -->
-  <text x="250" y="28" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#333">Rank-2 Distribution on &#x211D;&#xB3;</text>
+  <text x="250" y="28" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#333">Rank-2 Distribution on ℝ³</text>
 
   <!-- 3D axes (light) -->
   <line x1="60" y1="340" x2="60" y2="60" stroke="#bbb" stroke-width="1"/>
@@ -12,7 +12,7 @@
   <!-- Plane 1 at point (120, 250) - blue-green -->
   <circle cx="120" cy="250" r="3" fill="#333"/>
   <polygon points="90,230 150,225 150,270 90,275" fill="rgba(70,160,200,0.3)" stroke="#4090b0" stroke-width="1.2"/>
-  <text x="125" y="290" font-family="serif" font-size="12" font-style="italic" fill="#4090b0">D<tspan font-size="9" dy="3">p&#x2081;</tspan></text>
+  <text x="125" y="290" font-family="serif" font-size="12" font-style="italic" fill="#4090b0">D<tspan font-size="9" dy="3">p₁</tspan></text>
 
   <!-- Plane 2 at point (200, 190) - orange -->
   <circle cx="200" cy="190" r="3" fill="#333"/>
@@ -40,10 +40,10 @@
 
   <!-- Labels -->
   <text x="250" y="375" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
-    Distribution <tspan font-style="italic">D</tspan>:   <tspan font-style="italic">D</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3"> &#x2282; </tspan><tspan font-style="italic">T</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3" font-style="italic">M</tspan>    (rank 2)
+    Distribution <tspan font-style="italic">D</tspan>:   <tspan font-style="italic">D</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3"> ⊂ </tspan><tspan font-style="italic">T</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3" font-style="italic">M</tspan>    (rank 2)
   </text>
 
   <!-- Label with arrow to a plane -->
   <line x1="420" y1="130" x2="345" y2="148" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="422" y="128" font-family="serif" font-size="13" font-style="italic" fill="#555">D<tspan font-size="9" dy="3">p</tspan><tspan dy="-3"> &#x2282; </tspan>T<tspan font-size="9" dy="3">p</tspan><tspan dy="-3">&#x211D;</tspan><tspan font-size="9" dy="-4">3</tspan></text>
+  <text x="422" y="128" font-family="serif" font-size="13" font-style="italic" fill="#555">D<tspan font-size="9" dy="3">p</tspan><tspan dy="-3"> ⊂ </tspan>T<tspan font-size="9" dy="3">p</tspan><tspan dy="-3">ℝ</tspan><tspan font-size="9" dy="-4">3</tspan></text>
 </svg>

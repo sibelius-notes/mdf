@@ -27,7 +27,7 @@
   <path d="M100,165 Q110,135 108,100 Q105,70 125,52" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.6"/>
   <!-- Label -->
   <text x="80" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">f</text>
-  <text x="80" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="80" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">∈ Ω</text>
   <text x="100" y="214" font-family="serif" font-size="10" fill="#333">0</text>
 
   <!-- ========== Panel (b): 1-form — stacked parallel planes ========== -->
@@ -40,8 +40,8 @@
   <line x1="230" y1="170" x2="240" y2="45" stroke="#c0392b" stroke-width="1.5"/>
   <polygon points="240,45 236,55 244,55" fill="#c0392b"/>
   <!-- Label -->
-  <text x="243" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03C9;</text>
-  <text x="243" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="243" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">ω</text>
+  <text x="243" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">∈ Ω</text>
   <text x="263" y="214" font-family="serif" font-size="10" fill="#333">1</text>
 
   <!-- ========== Panel (c): 2-form — flux tubes ========== -->
@@ -63,8 +63,8 @@
   <polygon points="430,80 426,90 434,90" fill="#c0392b"/>
 
   <!-- Label -->
-  <text x="406" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03B7;</text>
-  <text x="406" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="406" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">η</text>
+  <text x="406" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">∈ Ω</text>
   <text x="426" y="214" font-family="serif" font-size="10" fill="#333">2</text>
 
   <!-- ========== Panel (d): 3-form — density dots ========== -->
@@ -93,11 +93,11 @@
   <circle cx="585" cy="155" r="3" fill="#e67e22"/>
   <circle cx="610" cy="162" r="3" fill="#e67e22"/>
   <!-- Label -->
-  <text x="568" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03BC;</text>
-  <text x="568" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="568" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">μ</text>
+  <text x="568" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">∈ Ω</text>
   <text x="588" y="214" font-family="serif" font-size="10" fill="#333">3</text>
 
   <!-- Title -->
-  <text x="325" y="280" font-family="serif" font-size="14" fill="#333" text-anchor="middle">Differential forms in &#x211D;</text>
+  <text x="325" y="280" font-family="serif" font-size="14" fill="#333" text-anchor="middle">Differential forms in ℝ</text>
   <text x="405" y="274" font-family="serif" font-size="10" fill="#333">3</text>
 </svg>

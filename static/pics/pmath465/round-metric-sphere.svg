@@ -55,10 +55,10 @@
   <!-- ds^2 formula -->
   <text x="60" y="390" font-family="serif" font-style="italic" font-size="14" fill="#555">ds</text>
   <text x="75" y="386" font-family="serif" font-size="10" fill="#555">2</text>
-  <text x="85" y="390" font-family="serif" font-size="14" fill="#555">= d&#x3b8;</text>
+  <text x="85" y="390" font-family="serif" font-size="14" fill="#555">= dθ</text>
   <text x="115" y="386" font-family="serif" font-size="10" fill="#555">2</text>
   <text x="125" y="390" font-family="serif" font-size="14" fill="#555">+ sin</text>
   <text x="160" y="386" font-family="serif" font-size="10" fill="#555">2</text>
-  <text x="167" y="390" font-family="serif" font-style="italic" font-size="14" fill="#555">&#x3b8; d&#x3c6;</text>
+  <text x="167" y="390" font-family="serif" font-style="italic" font-size="14" fill="#555">θ dφ</text>
   <text x="198" y="386" font-family="serif" font-size="10" fill="#555">2</text>
 </svg>

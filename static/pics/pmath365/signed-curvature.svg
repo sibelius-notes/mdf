@@ -46,6 +46,6 @@
 
   <!-- Title -->
   <text x="250" y="278" font-family="serif" font-size="15" fill="#333" text-anchor="middle">
-    Signed curvature k = &#x3BA; (sign indicates bending direction)
+    Signed curvature k = κ (sign indicates bending direction)
   </text>
 </svg>

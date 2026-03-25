@@ -31,7 +31,7 @@
   <text x="275" y="200" font-family="serif" font-style="italic" font-size="24" fill="#333" text-anchor="middle">M</text>
 
   <!-- Label dω on M -->
-  <text x="340" y="170" font-family="serif" font-style="italic" font-size="16" fill="#2266AA">d&#x03C9;</text>
+  <text x="340" y="170" font-family="serif" font-style="italic" font-size="16" fill="#2266AA">dω</text>
 
   <!-- Boundary ∂M (elliptical curve at the base) -->
   <ellipse cx="275" cy="250" rx="155" ry="25" fill="none" stroke="#228B22" stroke-width="2.5"/>
@@ -47,10 +47,10 @@
   <line x1="125" y1="240" x2="122" y2="255" stroke="#228B22" stroke-width="2.5" marker-end="url(#stArrowG)"/>
 
   <!-- Label ∂M -->
-  <text x="448" y="260" font-family="serif" font-size="18" fill="#228B22">&#x2202;M</text>
+  <text x="448" y="260" font-family="serif" font-size="18" fill="#228B22">∂M</text>
 
   <!-- ω label on boundary -->
-  <text x="145" y="285" font-family="serif" font-style="italic" font-size="16" fill="#228B22">&#x03C9;</text>
+  <text x="145" y="285" font-family="serif" font-style="italic" font-size="16" fill="#228B22">ω</text>
 
   <!-- Orientation indicator on surface (upward normal) -->
   <line x1="275" y1="140" x2="275" y2="85" stroke="#2266AA" stroke-width="2" marker-end="url(#stArrow)"/>
@@ -59,14 +59,14 @@
   <!-- The theorem equation -->
   <rect x="100" y="310" width="350" height="50" rx="8" fill="#f5f5f0" stroke="#ccc" stroke-width="1"/>
   <text x="275" y="342" font-family="serif" font-size="20" fill="#333" text-anchor="middle">
-    <tspan>&#x222B;</tspan>
+    <tspan>∫</tspan>
     <tspan font-size="13" dy="5">M</tspan>
-    <tspan dy="-5"> d&#x03C9; = </tspan>
-    <tspan>&#x222B;</tspan>
-    <tspan font-size="13" dy="5">&#x2202;M</tspan>
-    <tspan dy="-5"> &#x03C9;</tspan>
+    <tspan dy="-5"> dω = </tspan>
+    <tspan>∫</tspan>
+    <tspan font-size="13" dy="5">∂M</tspan>
+    <tspan dy="-5"> ω</tspan>
   </text>
 
   <!-- Compact oriented note -->
-  <text x="275" y="383" font-family="serif" font-size="13" fill="#666" text-anchor="middle">M compact oriented manifold with boundary, &#x03C9; a (k-1)-form</text>
+  <text x="275" y="383" font-family="serif" font-size="13" fill="#666" text-anchor="middle">M compact oriented manifold with boundary, ω a (k-1)-form</text>
 </svg>

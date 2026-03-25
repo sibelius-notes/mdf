@@ -32,7 +32,7 @@
   <text x="300" y="22" text-anchor="middle" font-family="serif" font-size="18" font-style="italic" fill="#333">M</text>
   <text x="200" y="105" text-anchor="middle" font-family="serif" font-size="17" font-style="italic" fill="#2255aa">U</text>
   <text x="400" y="105" text-anchor="middle" font-family="serif" font-size="17" font-style="italic" fill="#aa3333">V</text>
-  <text x="300" y="105" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#663399">U&#x2229;V</text>
+  <text x="300" y="105" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#663399">U∩V</text>
 
   <!-- Separator -->
   <line x1="50" y1="185" x2="550" y2="185" stroke="#ccc" stroke-width="1"/>
@@ -41,7 +41,7 @@
   <text x="20" y="215" font-family="serif" font-size="13" fill="#333" font-weight="bold">Mayer-Vietoris sequence:</text>
 
   <!-- The sequence: → H^k(M) → H^k(U) ⊕ H^k(V) → H^k(U∩V) → H^{k+1}(M) → -->
-  <text x="30" y="265" font-family="serif" font-size="16" fill="#333">&#x2026;</text>
+  <text x="30" y="265" font-family="serif" font-size="16" fill="#333">…</text>
 
   <!-- Arrow -->
   <line x1="50" y1="261" x2="75" y2="261" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
@@ -67,7 +67,7 @@
   <text x="189" y="258" font-family="serif" font-size="16" fill="#2255aa">(</text>
   <text x="195" y="258" font-family="serif" font-size="16" font-style="italic" fill="#2255aa">U</text>
   <text x="207" y="258" font-family="serif" font-size="16" fill="#2255aa">)</text>
-  <text x="218" y="258" font-family="serif" font-size="16" fill="#333">&#x2295;</text>
+  <text x="218" y="258" font-family="serif" font-size="16" fill="#333">⊕</text>
   <text x="238" y="258" font-family="serif" font-size="16" font-style="italic" fill="#aa3333">H</text>
   <text x="249" y="253" font-family="serif" font-size="11" font-style="italic" fill="#aa3333">k</text>
   <text x="257" y="258" font-family="serif" font-size="16" fill="#aa3333">(</text>
@@ -82,7 +82,7 @@
   <text x="331" y="253" font-family="serif" font-size="11" font-style="italic" fill="#663399">k</text>
   <text x="339" y="258" font-family="serif" font-size="16" fill="#663399">(</text>
   <text x="345" y="258" font-family="serif" font-size="16" font-style="italic" fill="#663399">U</text>
-  <text x="357" y="258" font-family="serif" font-size="14" fill="#663399">&#x2229;</text>
+  <text x="357" y="258" font-family="serif" font-size="14" fill="#663399">∩</text>
   <text x="371" y="258" font-family="serif" font-size="16" font-style="italic" fill="#663399">V</text>
   <text x="382" y="258" font-family="serif" font-size="16" fill="#663399">)</text>
 
@@ -99,9 +99,9 @@
   <!-- Arrow -->
   <line x1="495" y1="261" x2="520" y2="261" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <text x="530" y="265" font-family="serif" font-size="16" fill="#333">&#x2026;</text>
+  <text x="530" y="265" font-family="serif" font-size="16" fill="#333">…</text>
 
   <!-- connecting map label -->
-  <text x="300" y="310" text-anchor="middle" font-family="serif" font-size="13" fill="#666">connecting homomorphism &#x03B4;*</text>
+  <text x="300" y="310" text-anchor="middle" font-family="serif" font-size="13" fill="#666">connecting homomorphism δ*</text>
   <path d="M 370 295 Q 410 280 408 265" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
 </svg>

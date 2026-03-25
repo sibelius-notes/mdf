@@ -59,7 +59,7 @@
 
   <!-- Unit speed condition -->
   <text x="275" y="285" font-family="serif" font-size="15" fill="#2266bb" text-anchor="middle">
-    |&#x3B2;'(s)| = 1
+    |β'(s)| = 1
   </text>
 
   <!-- Spacing annotations -->

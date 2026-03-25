@@ -88,6 +88,6 @@
   </g>
 
   <!-- Check and X marks -->
-  <text x="185" y="165" font-family="sans-serif" font-size="22" fill="#228B22" font-weight="bold">&#x2713;</text>
-  <text x="375" y="165" font-family="sans-serif" font-size="22" fill="#CC0000" font-weight="bold">&#x2717;</text>
+  <text x="185" y="165" font-family="sans-serif" font-size="22" fill="#228B22" font-weight="bold">✓</text>
+  <text x="375" y="165" font-family="sans-serif" font-size="22" fill="#CC0000" font-weight="bold">✗</text>
 </svg>

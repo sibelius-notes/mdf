@@ -38,20 +38,20 @@
   <line x1="290" y1="165" x2="290" y2="230" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
 
   <!-- Label ψ on the function graph -->
-  <text x="310" y="175" font-family="serif" font-style="italic" font-size="16" fill="#8e44ad">&#x03C8;</text>
+  <text x="310" y="175" font-family="serif" font-style="italic" font-size="16" fill="#8e44ad">ψ</text>
 
   <!-- ψ ≡ 1 annotation at flat top -->
-  <text x="195" y="65" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">&#x03C8;</text>
-  <text x="208" y="65" font-family="serif" font-size="13" fill="#8e44ad"> &#x2261; 1</text>
+  <text x="195" y="65" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">ψ</text>
+  <text x="208" y="65" font-family="serif" font-size="13" fill="#8e44ad"> ≡ 1</text>
 
   <!-- ψ ≡ 0 annotations at sides -->
-  <text x="60" y="215" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">&#x03C8;</text>
-  <text x="73" y="215" font-family="serif" font-size="13" fill="#8e44ad"> &#x2261; 0</text>
-  <text x="360" y="185" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">&#x03C8;</text>
-  <text x="373" y="185" font-family="serif" font-size="13" fill="#8e44ad"> &#x2261; 0</text>
+  <text x="60" y="215" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">ψ</text>
+  <text x="73" y="215" font-family="serif" font-size="13" fill="#8e44ad"> ≡ 0</text>
+  <text x="360" y="185" font-family="serif" font-style="italic" font-size="13" fill="#8e44ad">ψ</text>
+  <text x="373" y="185" font-family="serif" font-size="13" fill="#8e44ad"> ≡ 0</text>
 
   <!-- Subtitle -->
-  <text x="225" y="335" font-family="serif" font-size="14" fill="#555" text-anchor="middle">Bump function &#x03C8;: </text>
+  <text x="225" y="335" font-family="serif" font-size="14" fill="#555" text-anchor="middle">Bump function ψ: </text>
   <text x="320" y="335" font-family="serif" font-style="italic" font-size="14" fill="#555">M</text>
-  <text x="335" y="335" font-family="serif" font-size="14" fill="#555"> &#x2192; [0, 1]</text>
+  <text x="335" y="335" font-family="serif" font-size="14" fill="#555"> → [0, 1]</text>
 </svg>

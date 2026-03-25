@@ -41,7 +41,7 @@
   <path d="M 70 220 L 170 180 L 200 90 L 100 130 Z" fill="rgba(50,150,50,0.08)" stroke="none"/>
 
   <!-- ===== RIGHT: Torsion ≠ 0 ===== -->
-  <text x="375" y="55" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#cc3333">Torsion &#x2260; 0</text>
+  <text x="375" y="55" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#cc3333">Torsion ≠ 0</text>
 
   <!-- Point p -->
   <circle cx="310" cy="220" r="4" fill="#333"/>
@@ -88,9 +88,9 @@
     Torsion tensor:
   </text>
   <text x="250" y="360" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
-    <tspan font-style="italic">T</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>) = &#x2207;<tspan font-size="10" dy="3" font-style="italic">X</tspan><tspan dy="-3" font-style="italic"> Y</tspan> &#x2212; &#x2207;<tspan font-size="10" dy="3" font-style="italic">Y</tspan><tspan dy="-3" font-style="italic"> X</tspan> &#x2212; [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>]
+    <tspan font-style="italic">T</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>) = ∇<tspan font-size="10" dy="3" font-style="italic">X</tspan><tspan dy="-3" font-style="italic"> Y</tspan> − ∇<tspan font-size="10" dy="3" font-style="italic">Y</tspan><tspan dy="-3" font-style="italic"> X</tspan> − [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>]
   </text>
   <text x="250" y="378" text-anchor="middle" font-family="serif" font-size="12" fill="#666">
-    Levi-Civita: <tspan font-style="italic">T</tspan> &#x2261; 0 (symmetric connection)
+    Levi-Civita: <tspan font-style="italic">T</tspan> ≡ 0 (symmetric connection)
   </text>
 </svg>

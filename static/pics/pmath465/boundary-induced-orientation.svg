@@ -38,7 +38,7 @@
   </g>
 
   <!-- Label ∂M -->
-  <text x="440" y="140" font-family="serif" font-size="18" fill="#228B22">&#x2202;M</text>
+  <text x="440" y="140" font-family="serif" font-size="18" fill="#228B22">∂M</text>
 
   <!-- Outward normal vectors ν along boundary -->
   <!-- Normal at bottom -->
@@ -51,21 +51,21 @@
   <line x1="80" y1="180" x2="47" y2="180" stroke="#CC3333" stroke-width="2.5" marker-end="url(#biArrowRed)"/>
 
   <!-- ν labels -->
-  <text x="206" y="365" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">&#x03BD;</text>
-  <text x="458" y="205" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">&#x03BD;</text>
-  <text x="286" y="18" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">&#x03BD;</text>
-  <text x="30" y="185" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">&#x03BD;</text>
+  <text x="206" y="365" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">ν</text>
+  <text x="458" y="205" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">ν</text>
+  <text x="286" y="18" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">ν</text>
+  <text x="30" y="185" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">ν</text>
 
   <!-- Oriented frame near boundary (zoomed detail) -->
   <g transform="translate(350,270)">
     <!-- ν (outward normal, first vector) -->
     <line x1="0" y1="0" x2="35" y2="25" stroke="#CC3333" stroke-width="3" marker-end="url(#biArrowRed)"/>
-    <text x="38" y="35" font-family="serif" font-style="italic" font-size="14" fill="#CC3333">&#x03BD;</text>
+    <text x="38" y="35" font-family="serif" font-style="italic" font-size="14" fill="#CC3333">ν</text>
     <text x="50" y="37" font-family="serif" font-size="10" fill="#CC3333">(1st)</text>
 
     <!-- Tangent along ∂M (second vector) -->
     <line x1="0" y1="0" x2="-10" y2="35" stroke="#228B22" stroke-width="3" marker-end="url(#biArrowGreen)"/>
-    <text x="-30" y="45" font-family="serif" font-style="italic" font-size="14" fill="#228B22">&#x03C4;</text>
+    <text x="-30" y="45" font-family="serif" font-style="italic" font-size="14" fill="#228B22">τ</text>
     <text x="-18" y="47" font-family="serif" font-size="10" fill="#228B22">(2nd)</text>
 
     <!-- Small dot at origin -->

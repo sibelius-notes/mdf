@@ -46,7 +46,7 @@
   <text x="340" y="245" font-family="sans-serif" font-size="12" fill="#6644aa">(spanned by T, P)</text>
 
   <!-- B = T x P label -->
-  <text x="340" y="80" font-family="serif" font-size="13" fill="#2266bb">B = T &#xD7; P</text>
+  <text x="340" y="80" font-family="serif" font-size="13" fill="#2266bb">B = T × P</text>
 
   <!-- Title / Frame label -->
   <text x="250" y="380" font-family="serif" font-size="16" fill="#333" text-anchor="middle">

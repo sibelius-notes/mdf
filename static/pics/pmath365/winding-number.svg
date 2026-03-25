@@ -57,7 +57,7 @@
 
   <!-- Main label -->
   <text x="200" y="328" font-family="serif" font-size="17" fill="#333" text-anchor="middle">
-    w(&#x3B1;, p) = 2
+    w(α, p) = 2
   </text>
 
   <!-- Subtitle -->

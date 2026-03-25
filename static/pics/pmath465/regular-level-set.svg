@@ -49,7 +49,7 @@
 
   <!-- Gradient nabla F (perpendicular to tangent plane, pointing up-ish) -->
   <line x1="220" y1="200" x2="220" y2="120" stroke="#CC4444" stroke-width="2.5" marker-end="url(#rlsArr)"/>
-  <text x="225" y="115" font-family="serif" font-size="14" fill="#CC4444">&#x2207;F</text>
+  <text x="225" y="115" font-family="serif" font-size="14" fill="#CC4444">∇F</text>
 
   <!-- F arrow going to R on the right side -->
   <!-- Value line for R -->

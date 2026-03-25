@@ -33,12 +33,12 @@
   </defs>
 
   <!-- Labels -->
-  <text x="70" y="250" font-family="serif" font-style="italic" font-size="18" fill="#333">&#x3B1;</text>
+  <text x="70" y="250" font-family="serif" font-style="italic" font-size="18" fill="#333">α</text>
 
-  <text x="145" y="132" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">&#x3B1;'(t)</text>
+  <text x="145" y="132" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">α'(t)</text>
 
-  <text x="330" y="205" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">&#x3B1;'(t)</text>
+  <text x="330" y="205" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">α'(t)</text>
 
   <!-- Condition text -->
-  <text x="250" y="28" font-family="serif" font-style="italic" font-size="16" fill="#333" text-anchor="middle">Regular curve: &#x3B1;'(t) &#x2260; 0 for all t</text>
+  <text x="250" y="28" font-family="serif" font-style="italic" font-size="16" fill="#333" text-anchor="middle">Regular curve: α'(t) ≠ 0 for all t</text>
 </svg>

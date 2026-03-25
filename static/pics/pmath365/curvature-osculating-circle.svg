@@ -41,16 +41,16 @@
   <line x1="205" y1="228" x2="205" y2="122" stroke="#888" stroke-width="1.2" stroke-dasharray="4,3"/>
 
   <!-- 1/kappa label with dimension line -->
-  <text x="215" y="180" font-family="serif" font-size="14" fill="#888">1/&#x3BA;</text>
+  <text x="215" y="180" font-family="serif" font-size="14" fill="#888">1/κ</text>
 
   <!-- Curvature label -->
   <text x="310" y="55" font-family="serif" font-size="15" fill="#6644aa">osculating circle</text>
-  <text x="310" y="75" font-family="serif" font-size="14" fill="#6644aa">radius = 1/&#x3BA;</text>
+  <text x="310" y="75" font-family="serif" font-size="14" fill="#6644aa">radius = 1/κ</text>
 
   <!-- Arrow from label to circle -->
   <line x1="350" y1="80" x2="290" y2="105" stroke="#6644aa" stroke-width="1" marker-end="url(#arrowDim)"/>
 
   <!-- Kappa label -->
-  <text x="60" y="35" font-family="serif" font-size="16" fill="#333">Curvature &#x3BA; at p:</text>
+  <text x="60" y="35" font-family="serif" font-size="16" fill="#333">Curvature κ at p:</text>
   <text x="60" y="58" font-family="serif" font-size="15" fill="#333">circle fits curve to 2nd order</text>
 </svg>

@@ -41,7 +41,7 @@
 
   <!-- Bottom labels -->
   <text x="275" y="375" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
-    Integrable distribution: [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>] &#x2208; <tspan font-style="italic">D</tspan>  for all <tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan> &#x2208; &#x393;(<tspan font-style="italic">D</tspan>)
+    Integrable distribution: [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>] ∈ <tspan font-style="italic">D</tspan>  for all <tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan> ∈ Γ(<tspan font-style="italic">D</tspan>)
   </text>
   <text x="275" y="395" text-anchor="middle" font-family="serif" font-size="13" fill="#666">
     (Frobenius theorem)

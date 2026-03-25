@@ -40,7 +40,7 @@
   <!-- Gradient vector ∇f = 2p pointing radially outward -->
   <line x1="295" y1="140" x2="345" y2="100" stroke="#e74c3c" stroke-width="2.5"/>
   <polygon points="345,100 335,105 340,112" fill="#e74c3c"/>
-  <text x="348" y="95" font-family="serif" font-size="13" fill="#e74c3c">&#x2207;</text>
+  <text x="348" y="95" font-family="serif" font-size="13" fill="#e74c3c">∇</text>
   <text x="361" y="95" font-family="serif" font-style="italic" font-size="13" fill="#e74c3c">f</text>
   <text x="370" y="95" font-family="serif" font-size="13" fill="#e74c3c"> = 2</text>
   <text x="393" y="95" font-family="serif" font-style="italic" font-size="13" fill="#e74c3c">p</text>
@@ -59,7 +59,7 @@
   <text x="110" y="364" font-family="serif" font-size="11" fill="#2980b9">2</text>
   <text x="120" y="370" font-family="serif" font-size="15" fill="#2980b9"> = </text>
   <text x="145" y="370" font-family="serif" font-style="italic" font-size="15" fill="#2980b9">f</text>
-  <text x="153" y="363" font-family="serif" font-size="11" fill="#2980b9"> &#x207B;&#xB9;</text>
+  <text x="153" y="363" font-family="serif" font-size="11" fill="#2980b9"> ⁻¹</text>
   <text x="170" y="370" font-family="serif" font-size="15" fill="#2980b9">(1)</text>
 
   <!-- Label: T_pS² = ker(df_p) -->

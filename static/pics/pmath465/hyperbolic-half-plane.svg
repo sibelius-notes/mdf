@@ -15,7 +15,7 @@
 
   <!-- x-axis (ideal boundary) -->
   <line x1="30" y1="350" x2="470" y2="350" stroke="#333" stroke-width="2.5"/>
-  <text x="175" y="385" font-family="serif" font-size="14" fill="#333">ideal boundary at &#x221e;</text>
+  <text x="175" y="385" font-family="serif" font-size="14" fill="#333">ideal boundary at ∞</text>
 
   <!-- Geodesics: semicircles centered on x-axis -->
   <g clip-path="url(#halfPlane)">

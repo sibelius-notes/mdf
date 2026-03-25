@@ -78,7 +78,7 @@
   <circle cx="490" cy="200" r="3.5" fill="#222"/>
   <!-- Label for projection of P -->
   <text x="440" y="228" font-family="'Times New Roman', serif" font-size="15" font-style="italic" fill="#222">
-    <tspan font-style="italic">&#x03C3;</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">P</tspan><tspan font-size="13">)</tspan>
+    <tspan font-style="italic">σ</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">P</tspan><tspan font-size="13">)</tspan>
   </text>
 
   <!-- === Point Q on upper-left of sphere === -->
@@ -93,14 +93,14 @@
   <!-- Projection point sigma(Q) on R² plane -->
   <circle cx="33" cy="200" r="3.5" fill="#222"/>
   <text x="20" y="228" font-family="'Times New Roman', serif" font-size="15" font-style="italic" fill="#222">
-    <tspan font-style="italic">&#x03C3;</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">Q</tspan><tspan font-size="13">)</tspan>
+    <tspan font-style="italic">σ</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">Q</tspan><tspan font-size="13">)</tspan>
   </text>
 
   <!-- R² label on the right end -->
-  <text x="460" y="190" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">&#x211D;&#xB2;</text>
+  <text x="460" y="190" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">ℝ²</text>
 
   <!-- S² label near sphere -->
-  <text x="295" y="320" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">S&#xB2;</text>
+  <text x="295" y="320" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">S²</text>
 
   <!-- Small arrowhead on right end of R² line -->
   <polygon points="480,200 472,196 472,204" fill="#222"/>
