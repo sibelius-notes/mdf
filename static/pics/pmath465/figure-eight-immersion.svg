@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350">
+  <rect width="400" height="350" fill="white"/>
+  <defs>
+    <marker id="f8arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M 0,0 L 7,2.5 L 0,5" fill="none" stroke="#4477CC" stroke-width="1"/>
+    </marker>
+    <marker id="tangArr1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M 0,0 L 7,2.5 L 0,5" fill="none" stroke="#CC4444" stroke-width="1"/>
+    </marker>
+    <marker id="tangArr2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M 0,0 L 7,2.5 L 0,5" fill="none" stroke="#339944" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Figure-eight curve: gamma(t) = (sin 2t, sin t) -->
+  <!-- Upper loop (t from 0 to pi): goes right-up-left-down through origin -->
+  <!-- Lower loop (t from pi to 2pi): goes left-down-right-up through origin -->
+
+  <!-- Scale: x mapped to 200 + 130*sin(2t), y mapped to 175 - 130*sin(t) -->
+  <!-- The curve passes through (200,175) at t=0, pi, 2pi -->
+
+  <!-- Upper loop with direction arrows -->
+  <path d="M 200,175 C 260,175 330,85 200,45 C 70,85 140,175 200,175"
+        fill="none" stroke="#4477CC" stroke-width="2.5"/>
+
+  <!-- Lower loop with direction arrows -->
+  <path d="M 200,175 C 140,175 70,265 200,305 C 330,265 260,175 200,175"
+        fill="none" stroke="#4477CC" stroke-width="2.5"/>
+
+  <!-- Direction arrows on upper loop -->
+  <!-- Arrow at top-right going left -->
+  <line x1="240" y1="62" x2="225" y2="56" stroke="#4477CC" stroke-width="2" marker-end="url(#f8arr)"/>
+  <!-- Arrow at top-left going down -->
+  <line x1="145" y1="98" x2="152" y2="115" stroke="#4477CC" stroke-width="2" marker-end="url(#f8arr)"/>
+
+  <!-- Direction arrows on lower loop -->
+  <line x1="160" y1="288" x2="175" y2="294" stroke="#4477CC" stroke-width="2" marker-end="url(#f8arr)"/>
+  <line x1="255" y1="252" x2="248" y2="235" stroke="#4477CC" stroke-width="2" marker-end="url(#f8arr)"/>
+
+  <!-- Self-intersection point -->
+  <circle cx="200" cy="175" r="6" fill="white" stroke="#CC4444" stroke-width="2.5"/>
+
+  <!-- Tangent vector 1 at crossing (going up-right, from lower-left approach) -->
+  <!-- At t=0: gamma'(0) = (2cos0, cos0) = (2,1), normalize and scale -->
+  <line x1="200" y1="175" x2="260" y2="145" stroke="#CC4444" stroke-width="2.5" marker-end="url(#tangArr1)"/>
+
+  <!-- Tangent vector 2 at crossing (going up-left, from lower-right approach) -->
+  <!-- At t=pi: gamma'(pi) = (2cos2pi, cos pi) = (2,-1), but approaching from other side: (-2, 1) -->
+  <line x1="200" y1="175" x2="140" y2="145" stroke="#339944" stroke-width="2.5" marker-end="url(#tangArr2)"/>
+
+  <!-- Labels -->
+  <text x="265" y="140" font-family="serif" font-size="14" fill="#CC4444" font-style="italic">γ'(0)</text>
+  <text x="85" y="140" font-family="serif" font-size="14" fill="#339944" font-style="italic">γ'(π)</text>
+
+  <text x="210" y="195" font-family="serif" font-size="13" fill="#CC4444">crossing</text>
+
+  <!-- Parametrization -->
+  <text x="80" y="335" font-family="serif" font-size="15" fill="#333" font-style="italic">γ</text>
+  <text x="93" y="335" font-family="serif" font-size="15" fill="#333">(t) = (sin 2t, sin t)</text>
+</svg>

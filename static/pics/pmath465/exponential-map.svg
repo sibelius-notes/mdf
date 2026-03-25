@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- Left side: Tangent plane T_pM -->
+  <!-- Plane as parallelogram -->
+  <polygon points="20,120 150,80 200,200 70,240" fill="#f0f4ff" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Concentric circles on the plane -->
+  <ellipse cx="110" cy="160" rx="18" ry="10" fill="none" stroke="#4a90d9" stroke-width="1" stroke-dasharray="3,2"/>
+  <ellipse cx="110" cy="160" rx="36" ry="20" fill="none" stroke="#4a90d9" stroke-width="1" stroke-dasharray="3,2"/>
+  <ellipse cx="110" cy="160" rx="54" ry="30" fill="none" stroke="#4a90d9" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Rays from origin on plane -->
+  <line x1="110" y1="160" x2="155" y2="135" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="110" y1="160" x2="160" y2="170" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="110" y1="160" x2="130" y2="195" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="110" y1="160" x2="70" y2="185" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="110" y1="160" x2="65" y2="140" stroke="#c0392b" stroke-width="1.5"/>
+
+  <!-- Origin point p on plane -->
+  <circle cx="110" cy="160" r="3" fill="#333"/>
+
+  <!-- Vector v on plane -->
+  <line x1="110" y1="160" x2="148" y2="138" stroke="#e74c3c" stroke-width="2.5"/>
+  <polygon points="148,138 140,140 143,147" fill="#e74c3c"/>
+
+  <!-- Label v -->
+  <text x="150" y="130" font-family="serif" font-style="italic" font-size="16" fill="#c0392b">v</text>
+
+  <!-- Label T_pM -->
+  <text x="55" y="270" font-family="serif" font-style="italic" font-size="15" fill="#333">T</text>
+  <text x="66" y="274" font-family="serif" font-style="italic" font-size="11" fill="#333">p</text>
+  <text x="75" y="270" font-family="serif" font-style="italic" font-size="15" fill="#333">M</text>
+
+  <!-- Arrow exp_p -->
+  <line x1="210" y1="170" x2="280" y2="170" stroke="#333" stroke-width="2"/>
+  <polygon points="280,170 272,165 272,175" fill="#333"/>
+  <text x="220" y="158" font-family="serif" font-size="14" fill="#333">exp</text>
+  <text x="244" y="162" font-family="serif" font-style="italic" font-size="10" fill="#333">p</text>
+
+  <!-- Right side: Manifold M -->
+  <!-- Curved surface -->
+  <path d="M300,100 Q350,60 420,90 Q480,120 470,180 Q460,250 400,270 Q340,290 310,240 Q280,190 300,100Z" fill="#f5f0ff" stroke="#333" stroke-width="2"/>
+
+  <!-- Geodesic "circles" on manifold -->
+  <ellipse cx="380" cy="170" rx="15" ry="12" fill="none" stroke="#4a90d9" stroke-width="1" transform="rotate(-10,380,170)"/>
+  <ellipse cx="380" cy="170" rx="32" ry="25" fill="none" stroke="#4a90d9" stroke-width="1" transform="rotate(-10,380,170)"/>
+  <ellipse cx="380" cy="170" rx="52" ry="40" fill="none" stroke="#4a90d9" stroke-width="1" transform="rotate(-10,380,170)"/>
+
+  <!-- Geodesics from p on manifold (curved rays) -->
+  <path d="M380,170 Q400,140 425,125" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <path d="M380,170 Q410,165 435,175" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <path d="M380,170 Q395,195 410,215" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <path d="M380,170 Q355,190 340,210" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <path d="M380,170 Q355,150 340,135" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+
+  <!-- Point p on manifold -->
+  <circle cx="380" cy="170" r="3" fill="#333"/>
+  <text x="385" y="185" font-family="serif" font-style="italic" font-size="14" fill="#333">p</text>
+
+  <!-- exp_p(v) point -->
+  <circle cx="425" cy="125" r="3" fill="#e74c3c"/>
+
+  <!-- Label M -->
+  <text x="440" y="100" font-family="serif" font-style="italic" font-size="18" fill="#333">M</text>
+
+  <!-- Label exp_p(v) -->
+  <text x="300" y="320" font-family="serif" font-size="13" fill="#333">exp</text>
+  <text x="322" y="324" font-family="serif" font-style="italic" font-size="10" fill="#333">p</text>
+  <text x="330" y="320" font-family="serif" font-size="13" fill="#333">(</text>
+  <text x="336" y="320" font-family="serif" font-style="italic" font-size="13" fill="#333">v</text>
+  <text x="347" y="320" font-family="serif" font-size="13" fill="#333">) = </text>
+  <text x="370" y="320" font-family="serif" font-style="italic" font-size="13" fill="#333">&#x03B3;</text>
+  <text x="380" y="324" font-family="serif" font-style="italic" font-size="10" fill="#333">v</text>
+  <text x="388" y="320" font-family="serif" font-size="13" fill="#333">(1)</text>
+
+  <!-- Dashed line connecting v to exp(v) -->
+  <path d="M148,138 Q220,100 425,125" fill="none" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>

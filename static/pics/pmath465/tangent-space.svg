@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="380" viewBox="0 0 500 380">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#c0392b"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2980b9"/>
+    </marker>
+  </defs>
+
+  <rect width="500" height="380" fill="white"/>
+
+  <!-- Surface M: a smooth curved sheet -->
+  <path d="M 100,220 C 130,140 200,100 260,130 C 320,160 340,110 400,150 C 420,180 410,240 370,260 C 330,280 300,300 240,280 C 180,260 140,290 100,220 Z"
+        fill="#e8e8e8" stroke="#555" stroke-width="2" fill-opacity="0.6"/>
+
+  <!-- Shading lines on surface for curvature effect -->
+  <path d="M 140,200 C 170,170 220,155 260,165" stroke="#aaa" stroke-width="0.8" fill="none"/>
+  <path d="M 160,230 C 200,200 250,185 300,200" stroke="#aaa" stroke-width="0.8" fill="none"/>
+  <path d="M 180,255 C 220,235 280,225 340,240" stroke="#aaa" stroke-width="0.8" fill="none"/>
+
+  <!-- Tangent plane T_pM: a parallelogram at p -->
+  <polygon points="170,140 320,110 350,200 200,230"
+           fill="#aed6f1" fill-opacity="0.45" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- Point p on the surface -->
+  <circle cx="255" cy="172" r="5" fill="#c0392b" stroke="#8b0000" stroke-width="1.5"/>
+
+  <!-- Tangent vector v₁ -->
+  <line x1="255" y1="172" x2="340" y2="145" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+
+  <!-- Tangent vector v₂ -->
+  <line x1="255" y1="172" x2="295" y2="215" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+
+  <!-- Tangent vector v₃ (a combination direction) -->
+  <line x1="255" y1="172" x2="195" y2="155" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowhead2)"/>
+
+  <!-- Label: M -->
+  <text x="390" y="280" font-family="serif" font-size="22" font-style="italic" fill="#333">M</text>
+
+  <!-- Label: p -->
+  <text x="240" y="198" font-family="serif" font-size="18" font-style="italic" fill="#8b0000">p</text>
+
+  <!-- Label: T_pM -->
+  <text x="310" y="105" font-family="serif" font-size="18" fill="#2471a3">
+    <tspan font-style="italic">T</tspan><tspan font-size="13" dy="4">p</tspan><tspan font-size="18" dy="-4" font-style="italic">M</tspan>
+  </text>
+
+  <!-- Label: v₁ -->
+  <text x="342" y="138" font-family="serif" font-size="16" font-style="italic" fill="#c0392b">v<tspan font-size="12" dy="4">1</tspan></text>
+
+  <!-- Label: v₂ -->
+  <text x="300" y="232" font-family="serif" font-size="16" font-style="italic" fill="#c0392b">v<tspan font-size="12" dy="4">2</tspan></text>
+
+  <!-- Label: v₃ -->
+  <text x="155" y="148" font-family="serif" font-size="16" font-style="italic" fill="#2980b9">v<tspan font-size="12" dy="4">3</tspan></text>
+
+  <!-- Title -->
+  <text x="250" y="345" font-family="serif" font-size="18" fill="#333" text-anchor="middle">Tangent Space at a Point</text>
+</svg>

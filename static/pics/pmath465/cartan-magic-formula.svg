@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="250" viewBox="0 0 550 250">
+  <rect width="550" height="250" fill="white"/>
+
+  <!-- Central node: Ω^k -->
+  <rect x="210" y="90" width="80" height="40" rx="6" fill="#ebf5fb" stroke="#2980b9" stroke-width="2"/>
+  <text x="250" y="115" font-family="serif" font-size="16" fill="#333" text-anchor="middle">&#x03A9;</text>
+  <text x="262" y="106" font-family="serif" font-style="italic" font-size="12" fill="#333">k</text>
+
+  <!-- Top node: Ω^{k+1} -->
+  <rect x="210" y="10" width="80" height="40" rx="6" fill="#fef9e7" stroke="#e67e22" stroke-width="2"/>
+  <text x="245" y="35" font-family="serif" font-size="16" fill="#333" text-anchor="middle">&#x03A9;</text>
+  <text x="257" y="26" font-family="serif" font-style="italic" font-size="12" fill="#333">k+1</text>
+
+  <!-- Bottom node: Ω^{k-1} -->
+  <rect x="210" y="170" width="80" height="40" rx="6" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="245" y="195" font-family="serif" font-size="16" fill="#333" text-anchor="middle">&#x03A9;</text>
+  <text x="257" y="186" font-family="serif" font-style="italic" font-size="12" fill="#333">k&#x2212;1</text>
+
+  <!-- Right result: Ω^k -->
+  <rect x="420" y="90" width="80" height="40" rx="6" fill="#e8f8f5" stroke="#1abc9c" stroke-width="2"/>
+  <text x="460" y="115" font-family="serif" font-size="16" fill="#333" text-anchor="middle">&#x03A9;</text>
+  <text x="472" y="106" font-family="serif" font-style="italic" font-size="12" fill="#333">k</text>
+
+  <!-- Path 1: Ω^k → Ω^{k+1} via d (up-left) -->
+  <line x1="230" y1="90" x2="230" y2="50" stroke="#e67e22" stroke-width="2"/>
+  <polygon points="230,50 226,58 234,58" fill="#e67e22"/>
+  <text x="205" y="75" font-family="serif" font-style="italic" font-size="15" fill="#e67e22">d</text>
+  <text x="196" y="82" font-family="serif" font-size="10" fill="#888">(+1)</text>
+
+  <!-- Path 1 continued: Ω^{k+1} → Ω^k via ι_X (right from top) -->
+  <path d="M290,30 Q370,30 450,90" fill="none" stroke="#e67e22" stroke-width="2"/>
+  <polygon points="450,90 445,80 440,88" fill="#e67e22"/>
+  <text x="365" y="45" font-family="serif" font-style="italic" font-size="15" fill="#e67e22">&#x03B9;</text>
+  <text x="378" y="49" font-family="serif" font-style="italic" font-size="11" fill="#e67e22">X</text>
+  <text x="360" y="62" font-family="serif" font-size="10" fill="#888">(&#x2212;1)</text>
+
+  <!-- Path 2: Ω^k → Ω^{k-1} via ι_X (down-left) -->
+  <line x1="270" y1="130" x2="270" y2="170" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="270,170 266,162 274,162" fill="#c0392b"/>
+  <text x="278" y="155" font-family="serif" font-style="italic" font-size="15" fill="#c0392b">&#x03B9;</text>
+  <text x="291" y="159" font-family="serif" font-style="italic" font-size="11" fill="#c0392b">X</text>
+  <text x="300" y="155" font-family="serif" font-size="10" fill="#888">(&#x2212;1)</text>
+
+  <!-- Path 2 continued: Ω^{k-1} → Ω^k via d (right from bottom) -->
+  <path d="M290,190 Q370,190 450,130" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="450,130 445,132 440,124" fill="#c0392b"/>
+  <text x="370" y="185" font-family="serif" font-style="italic" font-size="15" fill="#c0392b">d</text>
+  <text x="365" y="200" font-family="serif" font-size="10" fill="#888">(+1)</text>
+
+  <!-- Plus sign between paths at the result -->
+  <text x="500" y="115" font-family="serif" font-size="20" fill="#333">= </text>
+
+  <!-- L_X box -->
+  <rect x="30" y="90" width="80" height="40" rx="6" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+  <text x="50" y="115" font-family="serif" font-style="italic" font-size="16" fill="#8e44ad">L</text>
+  <text x="62" y="119" font-family="serif" font-style="italic" font-size="11" fill="#8e44ad">X</text>
+  <text x="75" y="107" font-family="serif" font-size="10" fill="#888">(0)</text>
+
+  <!-- Arrow from L_X to the diagram -->
+  <line x1="110" y1="110" x2="208" y2="110" stroke="#8e44ad" stroke-width="2"/>
+  <polygon points="208,110 200,106 200,114" fill="#8e44ad"/>
+
+  <!-- Formula at bottom -->
+  <text x="275" y="240" font-family="serif" font-size="15" fill="#333" text-anchor="middle">
+    <tspan font-style="italic">L</tspan><tspan font-size="11" dy="3">X</tspan><tspan dy="-3"> = </tspan>
+    <tspan font-style="italic">&#x03B9;</tspan><tspan font-size="11" dy="3">X</tspan><tspan dy="-3"> &#x2218; </tspan>
+    <tspan font-style="italic">d</tspan><tspan> + </tspan>
+    <tspan font-style="italic">d</tspan><tspan> &#x2218; </tspan>
+    <tspan font-style="italic">&#x03B9;</tspan><tspan font-size="11" dy="3">X</tspan>
+  </text>
+</svg>

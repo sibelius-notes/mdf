@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="white"/>
+
+  <!-- V vector space -->
+  <g transform="translate(60,160)">
+    <line x1="0" y1="0" x2="0" y2="-100" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <line x1="0" y1="0" x2="50" y2="-30" stroke="#2266cc" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <text x="-15" y="-105" font-family="serif" font-style="italic" font-size="16" fill="#333">e₂</text>
+    <text x="52" y="-20" font-family="serif" font-style="italic" font-size="16" fill="#2266cc">v</text>
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <text x="62" y="5" font-family="serif" font-style="italic" font-size="16" fill="#333">e₁</text>
+    <text x="10" y="30" font-family="serif" font-style="italic" font-size="20" fill="#333" font-weight="bold">V</text>
+  </g>
+
+  <!-- W vector space -->
+  <g transform="translate(60,310)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <text x="62" y="5" font-family="serif" font-style="italic" font-size="16" fill="#333">f₁</text>
+    <line x1="0" y1="0" x2="40" y2="-25" stroke="#cc3333" stroke-width="2" marker-end="url(#arrowRed)"/>
+    <text x="42" y="-18" font-family="serif" font-style="italic" font-size="16" fill="#cc3333">w</text>
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <text x="-15" y="-42" font-family="serif" font-style="italic" font-size="16" fill="#333">f₂</text>
+    <text x="10" y="25" font-family="serif" font-style="italic" font-size="20" fill="#333" font-weight="bold">W</text>
+  </g>
+
+  <!-- Tensor symbol -->
+  <text x="140" y="200" font-family="serif" font-size="28" fill="#333">&#x2297;</text>
+
+  <!-- Arrow to tensor product -->
+  <line x1="165" y1="195" x2="195" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- V tensor W grid (rank-1 tensor v ⊗ w) -->
+  <g transform="translate(210,30)">
+    <text x="40" y="-5" font-family="serif" font-style="italic" font-size="18" fill="#333" font-weight="bold">V &#x2297; W</text>
+
+    <!-- Grid for rank-1 -->
+    <rect x="0" y="5" width="120" height="90" fill="none" stroke="#333" stroke-width="1.5"/>
+    <line x1="40" y1="5" x2="40" y2="95" stroke="#333" stroke-width="0.8"/>
+    <line x1="80" y1="5" x2="80" y2="95" stroke="#333" stroke-width="0.8"/>
+    <line x1="0" y1="35" x2="120" y2="35" stroke="#333" stroke-width="0.8"/>
+    <line x1="0" y1="65" x2="120" y2="65" stroke="#333" stroke-width="0.8"/>
+
+    <!-- Rank-1 entries (shading proportional) -->
+    <rect x="0" y="5" width="40" height="30" fill="#2266cc" opacity="0.15"/>
+    <rect x="40" y="5" width="40" height="30" fill="#2266cc" opacity="0.3"/>
+    <rect x="80" y="5" width="40" height="30" fill="#2266cc" opacity="0.1"/>
+    <rect x="0" y="35" width="40" height="30" fill="#2266cc" opacity="0.3"/>
+    <rect x="40" y="35" width="40" height="30" fill="#2266cc" opacity="0.6"/>
+    <rect x="80" y="35" width="40" height="30" fill="#2266cc" opacity="0.2"/>
+    <rect x="0" y="65" width="40" height="30" fill="#2266cc" opacity="0.05"/>
+    <rect x="40" y="65" width="40" height="30" fill="#2266cc" opacity="0.1"/>
+    <rect x="80" y="65" width="40" height="30" fill="#2266cc" opacity="0.03"/>
+
+    <text x="15" y="110" font-family="serif" font-style="italic" font-size="14" fill="#2266cc">v &#x2297; w</text>
+    <text x="5" y="125" font-family="serif" font-size="12" fill="#666">(rank 1)</text>
+  </g>
+
+  <!-- General tensor -->
+  <g transform="translate(360,30)">
+    <text x="10" y="-5" font-family="serif" font-size="14" fill="#333">General tensor</text>
+
+    <rect x="0" y="5" width="120" height="90" fill="none" stroke="#333" stroke-width="1.5"/>
+    <line x1="40" y1="5" x2="40" y2="95" stroke="#333" stroke-width="0.8"/>
+    <line x1="80" y1="5" x2="80" y2="95" stroke="#333" stroke-width="0.8"/>
+    <line x1="0" y1="35" x2="120" y2="35" stroke="#333" stroke-width="0.8"/>
+    <line x1="0" y1="65" x2="120" y2="65" stroke="#333" stroke-width="0.8"/>
+
+    <rect x="0" y="5" width="40" height="30" fill="#9933cc" opacity="0.4"/>
+    <rect x="40" y="5" width="40" height="30" fill="#9933cc" opacity="0.15"/>
+    <rect x="80" y="5" width="40" height="30" fill="#9933cc" opacity="0.55"/>
+    <rect x="0" y="35" width="40" height="30" fill="#9933cc" opacity="0.2"/>
+    <rect x="40" y="35" width="40" height="30" fill="#9933cc" opacity="0.7"/>
+    <rect x="80" y="35" width="40" height="30" fill="#9933cc" opacity="0.1"/>
+    <rect x="0" y="65" width="40" height="30" fill="#9933cc" opacity="0.6"/>
+    <rect x="40" y="65" width="40" height="30" fill="#9933cc" opacity="0.35"/>
+    <rect x="80" y="65" width="40" height="30" fill="#9933cc" opacity="0.45"/>
+
+    <text x="5" y="110" font-family="serif" font-size="12" fill="#9933cc">= v₁&#x2297;w₁ + v₂&#x2297;w₂</text>
+    <text x="15" y="125" font-family="serif" font-size="12" fill="#666">(rank &gt; 1)</text>
+  </g>
+
+  <!-- Equals sign between -->
+  <text x="345" y="75" font-family="serif" font-size="18" fill="#333">vs.</text>
+
+  <!-- Annotations -->
+  <text x="210" y="185" font-family="serif" font-size="13" fill="#555">Decomposable tensor: each row</text>
+  <text x="210" y="200" font-family="serif" font-size="13" fill="#555">proportional to every other row</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#333" stroke-width="1"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#2266cc" stroke-width="1"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#cc3333" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

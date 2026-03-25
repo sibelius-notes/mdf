@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="400" viewBox="0 0 450 400">
+  <rect width="450" height="400" fill="white"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#333">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#CC0000">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#4169E1">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#006600">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="225" y="28" font-family="serif" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Geodesic on a Sphere</text>
+
+  <!-- Sphere -->
+  <g transform="translate(210, 210)">
+    <!-- Sphere outline -->
+    <circle cx="0" cy="0" r="130" fill="rgba(100,149,237,0.08)" stroke="#4169E1" stroke-width="2.5"/>
+
+    <!-- Equator (dashed back half) -->
+    <ellipse cx="0" cy="0" rx="130" ry="35" fill="none" stroke="rgba(65,105,225,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Meridian -->
+    <ellipse cx="0" cy="0" rx="35" ry="130" fill="none" stroke="rgba(65,105,225,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Great circle (geodesic) - tilted -->
+    <ellipse cx="0" cy="0" rx="130" ry="50" transform="rotate(-25)" fill="none" stroke="#CC0000" stroke-width="3"/>
+
+    <!-- Point p on the geodesic -->
+    <circle cx="80" cy="-55" r="5" fill="#C00"/>
+    <text x="90" y="-60" font-family="serif" font-size="16" font-style="italic" fill="#C00" font-weight="bold">p</text>
+
+    <!-- Tangent vector delta' at p (tangent to great circle) -->
+    <line x1="80" y1="-55" x2="45" y2="-95" stroke="#006600" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+    <text x="30" y="-98" font-family="serif" font-size="15" fill="#006600" font-weight="bold">&delta;&prime;</text>
+
+    <!-- Normal vector N at p (pointing outward from sphere) -->
+    <line x1="80" y1="-55" x2="125" y2="-85" stroke="#4169E1" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+    <text x="130" y="-85" font-family="serif" font-size="16" fill="#4169E1" font-weight="bold">N</text>
+
+    <!-- Acceleration delta'' (pointing toward center, normal to surface) -->
+    <line x1="80" y1="-55" x2="35" y2="-20" stroke="#8B0000" stroke-width="2.5" marker-end="url(#arrRed)"/>
+    <text x="15" y="-12" font-family="serif" font-size="15" fill="#8B0000" font-weight="bold">&delta;&prime;&prime;</text>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="3" fill="#333"/>
+    <text x="5" y="15" font-family="serif" font-size="13" fill="#333">O</text>
+
+    <!-- Dashed line from p to center showing delta'' is radial -->
+    <line x1="80" y1="-55" x2="0" y2="0" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Geodesic label -->
+    <text x="-70" y="75" font-family="serif" font-size="15" fill="#CC0000" font-style="italic" font-weight="bold">geodesic</text>
+    <text x="-85" y="92" font-family="serif" font-size="14" fill="#CC0000">(great circle)</text>
+  </g>
+
+  <!-- k_g = 0 label -->
+  <rect x="300" y="325" width="130" height="40" rx="6" fill="rgba(255,255,240,0.95)" stroke="#999" stroke-width="1"/>
+  <text x="365" y="342" font-family="serif" font-size="16" fill="#333" text-anchor="middle" font-style="italic">k</text>
+  <text x="372" y="347" font-family="serif" font-size="11" fill="#333">g</text>
+  <text x="390" y="342" font-family="serif" font-size="16" fill="#333"> = 0</text>
+  <text x="365" y="358" font-family="serif" font-size="12" fill="#666" text-anchor="middle">&delta;&prime;&prime; &perp; surface</text>
+</svg>

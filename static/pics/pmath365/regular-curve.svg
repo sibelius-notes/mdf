@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <rect width="500" height="300" fill="white"/>
+
+  <!-- S-shaped curve -->
+  <path d="M 60,220 C 100,220 120,80 200,80 C 280,80 300,220 380,220 C 420,220 440,160 460,140"
+        fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tangent vector at point 1 (near start, going up-right) -->
+  <circle cx="105" cy="175" r="3.5" fill="#333"/>
+  <line x1="105" y1="175" x2="140" y2="140" stroke="#cc2222" stroke-width="2.2" marker-end="url(#arrowRed)"/>
+
+  <!-- Tangent vector at point 2 (near top, going right) -->
+  <circle cx="200" cy="80" r="3.5" fill="#333"/>
+  <line x1="200" y1="80" x2="245" y2="80" stroke="#cc2222" stroke-width="2.2" marker-end="url(#arrowRed)"/>
+
+  <!-- Tangent vector at point 3 (middle, going down-right) -->
+  <circle cx="290" cy="160" r="3.5" fill="#333"/>
+  <line x1="290" y1="160" x2="320" y2="195" stroke="#cc2222" stroke-width="2.2" marker-end="url(#arrowRed)"/>
+
+  <!-- Tangent vector at point 4 (near bottom, going right) -->
+  <circle cx="380" cy="220" r="3.5" fill="#333"/>
+  <line x1="380" y1="220" x2="420" y2="205" stroke="#cc2222" stroke-width="2.2" marker-end="url(#arrowRed)"/>
+
+  <!-- Tangent vector at point 5 (end region, going up-right) -->
+  <circle cx="445" cy="150" r="3.5" fill="#333"/>
+  <line x1="445" y1="150" x2="470" y2="130" stroke="#cc2222" stroke-width="2.2" marker-end="url(#arrowRed)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#cc2222"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text x="70" y="250" font-family="serif" font-style="italic" font-size="18" fill="#333">&#x3B1;</text>
+
+  <text x="145" y="132" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">&#x3B1;'(t)</text>
+
+  <text x="330" y="205" font-family="serif" font-style="italic" font-size="15" fill="#cc2222">&#x3B1;'(t)</text>
+
+  <!-- Condition text -->
+  <text x="250" y="28" font-family="serif" font-style="italic" font-size="16" fill="#333" text-anchor="middle">Regular curve: &#x3B1;'(t) &#x2260; 0 for all t</text>
+</svg>

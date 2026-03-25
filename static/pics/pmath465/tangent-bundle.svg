@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <defs>
+    <marker id="arrDown" markerWidth="7" markerHeight="5" refX="3.5" refY="5" orient="auto">
+      <polygon points="0 0, 7 0, 3.5 5" fill="#666"/>
+    </marker>
+    <marker id="arrG" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Base manifold M (a curve at the bottom) -->
+  <path d="M 60 320 C 120 290, 200 280, 280 290 C 360 300, 420 310, 460 300" fill="none" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Label M -->
+  <text x="470" y="305" font-family="serif" font-style="italic" font-size="20" fill="#333">M</text>
+
+  <!-- Fiber at point 1 (x~120) -->
+  <line x1="120" y1="100" x2="120" y2="300" stroke="#2266cc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="120" cy="300" r="4" fill="#333"/>
+  <!-- Tangent space shading -->
+  <rect x="108" y="100" width="24" height="200" fill="#2266cc" fill-opacity="0.08" rx="3"/>
+
+  <!-- Fiber at point 2 (x~210) -->
+  <line x1="210" y1="80" x2="210" y2="285" stroke="#2266cc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="210" cy="285" r="4" fill="#333"/>
+  <rect x="198" y="80" width="24" height="205" fill="#2266cc" fill-opacity="0.08" rx="3"/>
+
+  <!-- Fiber at point 3 (x~300) -->
+  <line x1="300" y1="90" x2="300" y2="290" stroke="#2266cc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="300" cy="290" r="4" fill="#333"/>
+  <rect x="288" y="90" width="24" height="200" fill="#2266cc" fill-opacity="0.08" rx="3"/>
+
+  <!-- Fiber at point 4 (x~390) -->
+  <line x1="390" y1="100" x2="390" y2="305" stroke="#2266cc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="390" cy="305" r="4" fill="#333"/>
+  <rect x="378" y="100" width="24" height="205" fill="#2266cc" fill-opacity="0.08" rx="3"/>
+
+  <!-- Total space envelope (connecting tops of fibers) -->
+  <path d="M 60 120 C 100 105, 150 90, 210 80 C 270 75, 340 85, 460 110" fill="none" stroke="#cc6600" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Connecting sides -->
+  <path d="M 60 120 L 60 320" fill="none" stroke="#cc6600" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5"/>
+  <path d="M 460 110 L 460 300" fill="none" stroke="#cc6600" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5"/>
+
+  <!-- TM label -->
+  <text x="40" y="110" font-family="serif" font-style="italic" font-size="20" fill="#cc6600">TM</text>
+
+  <!-- T_pM label on one fiber -->
+  <text x="220" y="160" font-family="serif" font-style="italic" font-size="15" fill="#2266cc">T<tspan font-size="11" baseline-shift="sub">p</tspan>M</text>
+
+  <!-- p label -->
+  <text x="215" y="278" font-family="serif" font-style="italic" font-size="15" fill="#333">p</text>
+
+  <!-- Projection arrow pi -->
+  <line x1="340" y1="180" x2="340" y2="265" stroke="#666" stroke-width="1.5" marker-end="url(#arrDown)"/>
+  <text x="350" y="230" font-family="serif" font-style="italic" font-size="18" fill="#666">&amp;#x03C0;</text>
+
+  <!-- Title-like annotation -->
+  <text x="250" y="30" font-family="serif" font-size="16" fill="#333" text-anchor="middle">Tangent Bundle as Fiber Bundle</text>
+</svg>

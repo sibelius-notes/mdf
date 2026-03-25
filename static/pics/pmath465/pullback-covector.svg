@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="350" viewBox="0 0 600 350">
+  <rect width="600" height="350" fill="white"/>
+  <defs>
+    <marker id="aBlk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+    <marker id="aRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#CC4444" stroke-width="1.2"/>
+    </marker>
+    <marker id="aBlu" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#4477CC" stroke-width="1.2"/>
+    </marker>
+    <marker id="aGrn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#339944" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Manifold M (left blob) -->
+  <ellipse cx="150" cy="180" rx="110" ry="120" fill="#f0f4ff" stroke="#333" stroke-width="2"/>
+  <text x="60" y="55" font-family="serif" font-size="22" font-style="italic" fill="#333">M</text>
+
+  <!-- Manifold N (right blob) -->
+  <ellipse cx="450" cy="180" rx="110" ry="120" fill="#fff4f0" stroke="#333" stroke-width="2"/>
+  <text x="520" y="55" font-family="serif" font-size="22" font-style="italic" fill="#333">N</text>
+
+  <!-- Point p in M -->
+  <circle cx="150" cy="180" r="5" fill="#CC4444"/>
+  <text x="135" y="210" font-family="serif" font-size="16" font-style="italic" fill="#CC4444">p</text>
+
+  <!-- Point F(p) in N -->
+  <circle cx="450" cy="180" r="5" fill="#CC4444"/>
+  <text x="425" y="210" font-family="serif" font-size="15" font-style="italic" fill="#CC4444">F(p)</text>
+
+  <!-- Map F: M -> N (top arrow) -->
+  <path d="M 260,130 L 340,130" stroke="#333" stroke-width="2" marker-end="url(#aBlk)"/>
+  <text x="285" y="120" font-family="serif" font-size="18" font-style="italic" fill="#333">F</text>
+
+  <!-- Pushforward F_* (tangent vectors, forward) -->
+  <path d="M 260,170 L 340,170" stroke="#339944" stroke-width="1.8" marker-end="url(#aGrn)"/>
+  <text x="278" y="165" font-family="serif" font-size="14" font-style="italic" fill="#339944">F</text>
+  <text x="289" y="165" font-family="serif" font-size="11" fill="#339944">*</text>
+  <text x="298" y="165" font-family="serif" font-size="12" fill="#339944">(tangent)</text>
+
+  <!-- Pullback F* (covectors, backward) -->
+  <path d="M 340,220 L 260,220" stroke="#4477CC" stroke-width="2" marker-end="url(#aBlu)"/>
+  <text x="278" y="245" font-family="serif" font-size="14" font-style="italic" fill="#4477CC">F*</text>
+  <text x="296" y="245" font-family="serif" font-size="12" fill="#4477CC">(covector)</text>
+
+  <!-- Covector omega at F(p) - small stack -->
+  <g transform="translate(450,180)">
+    <line x1="15" y1="-12" x2="15" y2="12" stroke="#CC8800" stroke-width="1.5"/>
+    <line x1="22" y1="-12" x2="22" y2="12" stroke="#CC8800" stroke-width="1.5"/>
+    <line x1="29" y1="-12" x2="29" y2="12" stroke="#CC8800" stroke-width="1.5"/>
+  </g>
+  <text x="490" y="175" font-family="serif" font-size="16" font-style="italic" fill="#CC8800">ω</text>
+
+  <!-- Pulled-back covector F*omega at p - small stack -->
+  <g transform="translate(80,170)">
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="7" y1="-12" x2="7" y2="12" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="14" y1="-12" x2="14" y2="12" stroke="#4477CC" stroke-width="1.5"/>
+  </g>
+  <text x="68" y="200" font-family="serif" font-size="15" font-style="italic" fill="#4477CC">F*ω</text>
+</svg>

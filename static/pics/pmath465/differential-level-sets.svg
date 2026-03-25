@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="350" viewBox="0 0 450 350">
+  <rect width="450" height="350" fill="white"/>
+  <defs>
+    <marker id="arrBlk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#CC4444" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#4477CC" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Level curves (elliptical contours) -->
+  <ellipse cx="200" cy="180" rx="40" ry="25" fill="none" stroke="#999" stroke-width="1.2"/>
+  <ellipse cx="200" cy="180" rx="80" ry="50" fill="none" stroke="#999" stroke-width="1.2"/>
+  <ellipse cx="200" cy="180" rx="120" ry="75" fill="none" stroke="#999" stroke-width="1.2"/>
+  <ellipse cx="200" cy="180" rx="160" ry="100" fill="none" stroke="#999" stroke-width="1.2"/>
+
+  <!-- Level curve labels -->
+  <text x="310" y="135" font-family="serif" font-size="13" fill="#777" font-style="italic">f = c</text>
+  <text x="260" y="155" font-family="serif" font-size="13" fill="#777" font-style="italic">f = c+1</text>
+  <text x="218" y="172" font-family="serif" font-size="13" fill="#777" font-style="italic">f = c+2</text>
+
+  <!-- Point p on a level curve -->
+  <circle cx="280" cy="180" r="5" fill="#CC4444"/>
+  <text x="288" y="178" font-family="serif" font-size="16" font-style="italic" fill="#CC4444">p</text>
+
+  <!-- Covector df_p shown as stack of parallel lines (perpendicular to contour) -->
+  <g transform="translate(280,180)">
+    <!-- Stack of small parallel lines representing covector -->
+    <line x1="15" y1="-8" x2="15" y2="8" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="22" y1="-8" x2="22" y2="8" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="29" y1="-8" x2="29" y2="8" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="36" y1="-8" x2="36" y2="8" stroke="#4477CC" stroke-width="1.5"/>
+    <line x1="43" y1="-8" x2="43" y2="8" stroke="#4477CC" stroke-width="1.5"/>
+  </g>
+
+  <!-- Label df_p -->
+  <text x="320" y="210" font-family="serif" font-size="15" fill="#4477CC" font-style="italic">df</text>
+  <text x="335" y="215" font-family="serif" font-size="11" fill="#4477CC" font-style="italic">p</text>
+
+  <!-- Gradient arrow (perpendicular to level curve, pointing outward) -->
+  <line x1="280" y1="180" x2="340" y2="180" stroke="#CC4444" stroke-width="2" marker-end="url(#arrRed)"/>
+  <text x="345" y="178" font-family="serif" font-size="14" fill="#CC4444">grad </text>
+  <text x="381" y="178" font-family="serif" font-size="14" fill="#CC4444" font-style="italic">f</text>
+
+  <!-- Function label -->
+  <text x="30" y="35" font-family="serif" font-size="18" fill="#333" font-style="italic">f : M → R</text>
+
+  <!-- df label -->
+  <text x="30" y="60" font-family="serif" font-size="16" fill="#4477CC" font-style="italic">df</text>
+  <text x="50" y="60" font-family="serif" font-size="16" fill="#333"> = covector field</text>
+</svg>

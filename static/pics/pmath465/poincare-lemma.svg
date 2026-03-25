@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350">
+  <rect width="500" height="350" fill="white"/>
+
+  <text x="250" y="25" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#222">Poincare Lemma</text>
+
+  <defs>
+    <marker id="plArr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#cc6622"/>
+    </marker>
+    <marker id="plArr2" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Star-shaped domain U -->
+  <path d="M 200,60 C 230,55 280,50 310,65 C 340,80 370,110 380,150
+           C 390,190 385,230 360,260 C 335,290 300,310 260,310
+           C 220,310 180,300 155,275 C 130,250 105,215 100,180
+           C 95,145 105,115 125,90 C 145,65 170,65 200,60 Z"
+        fill="rgba(220,200,160,0.25)" stroke="#886633" stroke-width="2"/>
+
+  <!-- Center point x0 -->
+  <circle cx="240" cy="180" r="4" fill="#cc3322"/>
+  <text x="248" y="175" font-family="serif" font-size="14" fill="#cc3322">
+    <tspan font-style="italic">x</tspan><tspan font-size="10" baseline-shift="sub">0</tspan>
+  </text>
+
+  <!-- Straight-line homotopy arrows from x0 to boundary points -->
+  <!-- Arrow 1 - top right -->
+  <line x1="240" y1="180" x2="320" y2="70" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 2 - right -->
+  <line x1="240" y1="180" x2="378" y2="155" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 3 - bottom right -->
+  <line x1="240" y1="180" x2="350" y2="268" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 4 - bottom -->
+  <line x1="240" y1="180" x2="250" y2="308" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 5 - bottom left -->
+  <line x1="240" y1="180" x2="148" y2="280" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 6 - left -->
+  <line x1="240" y1="180" x2="100" y2="185" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 7 - top left -->
+  <line x1="240" y1="180" x2="130" y2="92" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+  <!-- Arrow 8 - top -->
+  <line x1="240" y1="180" x2="218" y2="62" stroke="#cc6622" stroke-width="1.5" marker-end="url(#plArr)"/>
+
+  <!-- Intermediate dots on some arrows to show t parameter -->
+  <circle cx="267" cy="143" r="2" fill="#cc6622" opacity="0.5"/>
+  <circle cx="293" cy="107" r="2" fill="#cc6622" opacity="0.5"/>
+  <circle cx="286" cy="172" r="2" fill="#cc6622" opacity="0.5"/>
+  <circle cx="332" cy="164" r="2" fill="#cc6622" opacity="0.5"/>
+
+  <!-- Domain label -->
+  <text x="350" y="50" font-family="serif" font-size="16" fill="#886633" font-style="italic">U</text>
+
+  <!-- Homotopy formula -->
+  <text x="110" y="55" font-family="serif" font-size="13" fill="#555">
+    <tspan font-style="italic">H</tspan>(<tspan font-style="italic">x</tspan>,<tspan font-style="italic">t</tspan>) = (1&minus;<tspan font-style="italic">t</tspan>)<tspan font-style="italic">x</tspan><tspan font-size="9" baseline-shift="sub">0</tspan> + <tspan font-style="italic">tx</tspan>
+  </text>
+
+  <!-- Statement box -->
+  <rect x="50" y="295" width="400" height="45" rx="6" fill="#f0f5ee" stroke="#448844" stroke-width="1.5"/>
+  <text x="250" y="314" text-anchor="middle" font-family="serif" font-size="13" fill="#336633">
+    On a star-shaped domain: every closed form is exact
+  </text>
+  <text x="250" y="332" text-anchor="middle" font-family="serif" font-size="14" fill="#336633" font-weight="bold">
+    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan>(<tspan font-style="italic">U</tspan>) = 0  for  <tspan font-style="italic">k</tspan> &ge; 1
+  </text>
+
+  <!-- t labels -->
+  <text x="390" y="148" font-family="serif" font-size="11" fill="#cc6622" font-style="italic">t = 1</text>
+  <text x="255" y="200" font-family="serif" font-size="11" fill="#cc3322" font-style="italic">t = 0</text>
+</svg>

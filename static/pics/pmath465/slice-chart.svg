@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="white"/>
+  <defs>
+    <marker id="scArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Left side: M with S inside -->
+  <!-- M as a large region -->
+  <ellipse cx="130" cy="175" rx="110" ry="140" fill="#f5f5ff" stroke="#333" stroke-width="2"/>
+  <text x="15" y="45" font-family="serif" font-size="20" font-style="italic" fill="#333">M</text>
+
+  <!-- Submanifold S as a curve through M -->
+  <path d="M 50,260 Q 100,180 130,150 Q 160,120 200,80" fill="none" stroke="#4477CC" stroke-width="3"/>
+  <text x="205" y="78" font-family="serif" font-size="18" font-style="italic" fill="#4477CC">S</text>
+
+  <!-- Chart domain U (circle around intersection) -->
+  <circle cx="130" cy="175" r="55" fill="rgba(255,200,100,0.15)" stroke="#CC8800" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="90" y="135" font-family="serif" font-size="16" font-style="italic" fill="#CC8800">U</text>
+
+  <!-- S ∩ U highlighted part -->
+  <path d="M 97,215 Q 115,190 130,175 Q 145,160 163,135" fill="none" stroke="#CC4444" stroke-width="3"/>
+  <text x="155" y="215" font-family="serif" font-size="13" fill="#CC4444" font-style="italic">S ∩ U</text>
+
+  <!-- Arrow phi from U to R^n -->
+  <path d="M 195,175 Q 250,155 295,155" fill="none" stroke="#333" stroke-width="2" marker-end="url(#scArr)"/>
+  <text x="240" y="148" font-family="serif" font-size="18" font-style="italic" fill="#333">φ</text>
+
+  <!-- Right side: R^n coordinate space -->
+  <!-- Coordinate box -->
+  <rect x="310" y="50" width="170" height="250" fill="#fafafa" stroke="#999" stroke-width="1.5"/>
+  <text x="395" y="42" font-family="serif" font-size="16" fill="#888">R</text>
+  <text x="407" y="38" font-family="serif" font-size="12" fill="#888" baseline-shift="super">n</text>
+
+  <!-- Horizontal axis (x^1,...,x^k directions) -->
+  <line x1="320" y1="220" x2="470" y2="220" stroke="#aaa" stroke-width="1"/>
+
+  <!-- Vertical axis (x^{k+1},...,x^n directions) -->
+  <line x1="340" y1="60" x2="340" y2="290" stroke="#aaa" stroke-width="1"/>
+
+  <!-- The slice: horizontal line at x^{k+1}=...=x^n=0 -->
+  <line x1="320" y1="220" x2="470" y2="220" stroke="#CC4444" stroke-width="3"/>
+
+  <!-- Label the slice -->
+  <text x="350" y="245" font-family="serif" font-size="12" fill="#CC4444">x</text>
+  <text x="360" y="248" font-family="serif" font-size="9" fill="#CC4444" baseline-shift="super">k+1</text>
+  <text x="380" y="245" font-family="serif" font-size="12" fill="#CC4444"> = ... = x</text>
+  <text x="444" y="248" font-family="serif" font-size="9" fill="#CC4444" baseline-shift="super">n</text>
+  <text x="454" y="245" font-family="serif" font-size="12" fill="#CC4444"> = 0</text>
+
+  <!-- Image of U (shaded rectangle) -->
+  <rect x="330" y="140" width="130" height="100" fill="rgba(255,200,100,0.15)" stroke="#CC8800" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="420" y="155" font-family="serif" font-size="13" font-style="italic" fill="#CC8800">φ(U)</text>
+
+  <!-- The slice label -->
+  <text x="350" y="335" font-family="serif" font-size="14" fill="#CC4444" font-weight="bold">slice</text>
+
+  <!-- Axis labels -->
+  <text x="460" y="210" font-family="serif" font-size="12" fill="#888" font-style="italic">x</text>
+  <text x="470" y="213" font-family="serif" font-size="9" fill="#888" baseline-shift="super">1</text>
+  <text x="475" y="210" font-family="serif" font-size="12" fill="#888">,...,x</text>
+  <text x="324" y="65" font-family="serif" font-size="12" fill="#888" font-style="italic">x</text>
+  <text x="334" y="68" font-family="serif" font-size="9" fill="#888" baseline-shift="super">k+1</text>
+  <text x="352" y="65" font-family="serif" font-size="12" fill="#888">,...,x</text>
+  <text x="390" y="68" font-family="serif" font-size="9" fill="#888" baseline-shift="super">n</text>
+</svg>

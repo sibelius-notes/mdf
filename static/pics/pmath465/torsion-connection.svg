@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#333">Torsion of a Connection</text>
+
+  <!-- Separator -->
+  <line x1="250" y1="40" x2="250" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- ===== LEFT: Torsion-free (Levi-Civita) ===== -->
+  <text x="125" y="55" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#228833">Torsion-free</text>
+  <text x="125" y="72" text-anchor="middle" font-family="serif" font-size="12" fill="#666">(Levi-Civita)</text>
+
+  <!-- Point p -->
+  <circle cx="70" cy="220" r="4" fill="#333"/>
+  <text x="55" y="240" font-family="serif" font-size="14" font-style="italic" fill="#333">p</text>
+
+  <!-- Vector X from p -->
+  <line x1="70" y1="220" x2="170" y2="180" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="170,180 161,185 163,177" fill="#2255cc"/>
+  <text x="115" y="175" font-family="serif" font-size="14" font-style="italic" fill="#2255cc">X</text>
+
+  <!-- Vector Y from p -->
+  <line x1="70" y1="220" x2="100" y2="130" stroke="#cc3333" stroke-width="2.5"/>
+  <polygon points="100,130 95,140 103,139" fill="#cc3333"/>
+  <text x="78" y="145" font-family="serif" font-size="14" font-style="italic" fill="#cc3333">Y</text>
+
+  <!-- Transport Y along X: from tip of X, draw Y -->
+  <line x1="170" y1="180" x2="200" y2="90" stroke="#cc3333" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="200,90 195,100 203,99" fill="#cc3333" opacity="0.6"/>
+
+  <!-- Transport X along Y: from tip of Y, draw X -->
+  <line x1="100" y1="130" x2="200" y2="90" stroke="#2255cc" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="200,90 192,96 193,88" fill="#2255cc" opacity="0.6"/>
+
+  <!-- Tips meet! -->
+  <circle cx="200" cy="90" r="4" fill="#228833"/>
+  <text x="205" y="85" font-family="serif" font-size="12" fill="#228833">tips meet!</text>
+
+  <!-- Parallelogram outline -->
+  <path d="M 70 220 L 170 180 L 200 90 L 100 130 Z" fill="rgba(50,150,50,0.08)" stroke="none"/>
+
+  <!-- ===== RIGHT: Torsion ≠ 0 ===== -->
+  <text x="375" y="55" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#cc3333">Torsion &#x2260; 0</text>
+
+  <!-- Point p -->
+  <circle cx="310" cy="220" r="4" fill="#333"/>
+  <text x="295" y="240" font-family="serif" font-size="14" font-style="italic" fill="#333">p</text>
+
+  <!-- Vector X from p -->
+  <line x1="310" y1="220" x2="410" y2="180" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="410,180 401,185 403,177" fill="#2255cc"/>
+  <text x="355" y="175" font-family="serif" font-size="14" font-style="italic" fill="#2255cc">X</text>
+
+  <!-- Vector Y from p -->
+  <line x1="310" y1="220" x2="340" y2="130" stroke="#cc3333" stroke-width="2.5"/>
+  <polygon points="340,130 335,140 343,139" fill="#cc3333"/>
+  <text x="318" y="145" font-family="serif" font-size="14" font-style="italic" fill="#cc3333">Y</text>
+
+  <!-- Transport Y along X: from tip of X -->
+  <line x1="410" y1="180" x2="440" y2="95" stroke="#cc3333" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="440,95 435,105 443,104" fill="#cc3333" opacity="0.6"/>
+
+  <!-- Transport X along Y: from tip of Y (displaced!) -->
+  <line x1="340" y1="130" x2="425" y2="105" stroke="#2255cc" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="425,105 417,111 418,103" fill="#2255cc" opacity="0.6"/>
+
+  <!-- Gap! Tips don't meet -->
+  <circle cx="440" cy="95" r="3" fill="#cc6600"/>
+  <circle cx="425" cy="105" r="3" fill="#cc6600"/>
+
+  <!-- Torsion vector T(X,Y) -->
+  <line x1="425" y1="105" x2="440" y2="95" stroke="#cc6600" stroke-width="3"/>
+  <polygon points="440,95 433,99 435,93" fill="#cc6600"/>
+  <text x="442" y="85" font-family="serif" font-size="13" font-style="italic" fill="#cc6600">T</text>
+  <text x="452" y="85" font-family="serif" font-size="13" fill="#cc6600">(</text>
+  <text x="457" y="85" font-family="serif" font-size="13" font-style="italic" fill="#cc6600">X</text>
+  <text x="468" y="85" font-family="serif" font-size="13" fill="#cc6600">,</text>
+  <text x="474" y="85" font-family="serif" font-size="13" font-style="italic" fill="#cc6600">Y</text>
+  <text x="485" y="85" font-family="serif" font-size="13" fill="#cc6600">)</text>
+
+  <!-- Gap label -->
+  <text x="455" y="120" font-family="serif" font-size="11" fill="#cc6600">gap!</text>
+
+  <!-- Bottom formula -->
+  <rect x="60" y="310" width="380" height="75" rx="8" fill="#f8f8f4" stroke="#999" stroke-width="1"/>
+  <text x="250" y="335" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+    Torsion tensor:
+  </text>
+  <text x="250" y="360" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
+    <tspan font-style="italic">T</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>) = &#x2207;<tspan font-size="10" dy="3" font-style="italic">X</tspan><tspan dy="-3" font-style="italic"> Y</tspan> &#x2212; &#x2207;<tspan font-size="10" dy="3" font-style="italic">Y</tspan><tspan dy="-3" font-style="italic"> X</tspan> &#x2212; [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>]
+  </text>
+  <text x="250" y="378" text-anchor="middle" font-family="serif" font-size="12" fill="#666">
+    Levi-Civita: <tspan font-style="italic">T</tspan> &#x2261; 0 (symmetric connection)
+  </text>
+</svg>

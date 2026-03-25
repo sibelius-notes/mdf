@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="380" viewBox="0 0 500 380">
+  <rect width="500" height="380" fill="white"/>
+
+  <!-- Manifold background -->
+  <path d="M20,120 Q60,60 180,70 Q300,80 400,60 Q470,50 480,120 Q490,200 460,270 Q420,330 320,340 Q220,350 120,330 Q40,310 20,240 Q10,180 20,120Z" fill="#f5f0ff" stroke="#333" stroke-width="2"/>
+  <text x="455" y="300" font-family="serif" font-style="italic" font-size="18" fill="#333">M</text>
+
+  <!-- Point p -->
+  <circle cx="140" cy="200" r="4" fill="#333"/>
+  <text x="128" y="225" font-family="serif" font-style="italic" font-size="16" fill="#333">p</text>
+
+  <!-- Point Θ_t(p) -->
+  <circle cx="350" cy="170" r="4" fill="#333"/>
+  <text x="340" y="155" font-family="serif" font-size="14" fill="#333">&#x0398;</text>
+  <text x="354" y="159" font-family="serif" font-style="italic" font-size="10" fill="#333">t</text>
+  <text x="362" y="155" font-family="serif" font-size="14" fill="#333">(</text>
+  <text x="368" y="155" font-family="serif" font-style="italic" font-size="14" fill="#333">p</text>
+  <text x="378" y="155" font-family="serif" font-size="14" fill="#333">)</text>
+
+  <!-- Flow arrow from p to Θ_t(p) — vector field X -->
+  <path d="M148,198 Q200,175 250,172 Q300,169 342,170" fill="none" stroke="#2980b9" stroke-width="2"/>
+  <polygon points="342,170 334,166 334,174" fill="#2980b9"/>
+  <!-- X label along flow -->
+  <text x="230" y="163" font-family="serif" font-style="italic" font-size="16" fill="#2980b9">X</text>
+  <!-- Flow label -->
+  <text x="235" y="185" font-family="serif" font-size="12" fill="#2980b9">flow &#x0398;</text>
+  <text x="277" y="189" font-family="serif" font-style="italic" font-size="9" fill="#2980b9">t</text>
+
+  <!-- Form patch ω at Θ_t(p) -->
+  <path d="M320,140 L370,130 L385,165 L335,175Z" fill="#fdebd0" fill-opacity="0.7" stroke="#e67e22" stroke-width="1.5"/>
+  <!-- Small grid lines on form patch to suggest a form -->
+  <line x1="332" y1="138" x2="347" y2="168" stroke="#e67e22" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="345" y1="135" x2="360" y2="165" stroke="#e67e22" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="358" y1="132" x2="373" y2="162" stroke="#e67e22" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="325" y1="150" x2="380" y2="142" stroke="#e67e22" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="328" y1="160" x2="383" y2="152" stroke="#e67e22" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="390" y="148" font-family="serif" font-style="italic" font-size="14" fill="#e67e22">&#x03C9;</text>
+
+  <!-- Form patch (Θ_t)*ω pulled back to p -->
+  <path d="M110,170 L160,162 L175,197 L125,205Z" fill="#d5f5e3" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5"/>
+  <!-- Grid lines on pullback form -->
+  <line x1="122" y1="170" x2="137" y2="200" stroke="#27ae60" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="135" y1="167" x2="150" y2="197" stroke="#27ae60" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="148" y1="164" x2="163" y2="194" stroke="#27ae60" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="115" y1="182" x2="170" y2="174" stroke="#27ae60" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="118" y1="192" x2="173" y2="184" stroke="#27ae60" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Pullback arrow (curved, going back from Θ_t(p) neighborhood to p neighborhood) -->
+  <path d="M325,135 Q260,100 170,130 L165,158" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="165,158 160,150 168,150" fill="#8e44ad"/>
+  <text x="220" y="110" font-family="serif" font-size="13" fill="#8e44ad">(&#x0398;</text>
+  <text x="240" y="114" font-family="serif" font-style="italic" font-size="9" fill="#8e44ad">t</text>
+  <text x="248" y="110" font-family="serif" font-size="13" fill="#8e44ad">)*</text>
+
+  <!-- Label (Θ_t)*ω near p -->
+  <text x="72" y="167" font-family="serif" font-size="12" fill="#27ae60">(&#x0398;</text>
+  <text x="90" y="171" font-family="serif" font-style="italic" font-size="8" fill="#27ae60">t</text>
+  <text x="97" y="167" font-family="serif" font-size="12" fill="#27ae60">)*</text>
+  <text x="110" y="167" font-family="serif" font-style="italic" font-size="12" fill="#27ae60">&#x03C9;</text>
+
+  <!-- Formula at bottom -->
+  <text x="250" y="340" font-family="serif" font-size="15" fill="#333" text-anchor="middle">
+    <tspan font-style="italic">L</tspan><tspan font-size="11" dy="3">X</tspan><tspan dy="-3"> </tspan>
+    <tspan font-style="italic">&#x03C9;</tspan><tspan> = </tspan>
+  </text>
+  <text x="300" y="340" font-family="serif" font-size="15" fill="#333">d/d</text>
+  <text x="321" y="340" font-family="serif" font-style="italic" font-size="15" fill="#333">t</text>
+  <text x="330" y="345" font-family="serif" font-size="10" fill="#333">|</text>
+  <text x="333" y="350" font-family="serif" font-style="italic" font-size="10" fill="#333">t=0</text>
+  <text x="360" y="340" font-family="serif" font-size="15" fill="#333"> (&#x0398;</text>
+  <text x="385" y="344" font-family="serif" font-style="italic" font-size="10" fill="#333">t</text>
+  <text x="393" y="340" font-family="serif" font-size="15" fill="#333">)*</text>
+  <text x="407" y="340" font-family="serif" font-style="italic" font-size="15" fill="#333">&#x03C9;</text>
+
+  <!-- L_X ω label -->
+  <text x="70" y="245" font-family="serif" font-style="italic" font-size="15" fill="#8e44ad">L</text>
+  <text x="82" y="249" font-family="serif" font-style="italic" font-size="11" fill="#8e44ad">X</text>
+  <text x="95" y="245" font-family="serif" font-style="italic" font-size="15" fill="#8e44ad">&#x03C9;</text>
+  <text x="108" y="245" font-family="serif" font-size="13" fill="#8e44ad"> = rate of change</text>
+</svg>

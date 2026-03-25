@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="350" viewBox="0 0 550 350">
+  <rect width="550" height="350" fill="white"/>
+
+  <!-- Title -->
+  <text x="275" y="25" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#222">Regular vs Singular Points of a Vector Field</text>
+
+  <!-- Region boundary -->
+  <rect x="30" y="40" width="490" height="280" rx="15" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="50" y="60" font-family="serif" font-size="13" fill="#666" font-style="italic">M</text>
+
+  <!-- REGULAR POINT REGION (left side) — smooth parallel flow -->
+  <!-- Flow arrows - parallel-ish, slightly curving -->
+  <g stroke="#3366cc" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)">
+    <path d="M 60,100 C 90,95 130,95 170,100"/>
+    <path d="M 60,130 C 90,125 130,125 170,130"/>
+    <path d="M 60,160 C 90,155 130,155 170,160"/>
+    <path d="M 60,190 C 90,185 130,185 170,190"/>
+    <path d="M 60,220 C 90,215 130,215 170,220"/>
+    <path d="M 60,250 C 90,245 130,245 170,250"/>
+    <path d="M 60,280 C 90,275 130,275 170,280"/>
+  </g>
+
+  <!-- Regular point marker -->
+  <circle cx="120" cy="160" r="4" fill="#cc3333"/>
+  <text x="120" y="310" text-anchor="middle" font-family="serif" font-size="13" fill="#333" font-weight="bold">Regular point</text>
+  <text x="120" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555" font-style="italic">V</text>
+  <text x="131" y="332" text-anchor="middle" font-family="serif" font-size="9" fill="#555" font-style="italic">p</text>
+  <text x="140" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555">&ne; 0</text>
+
+  <!-- Divider -->
+  <line x1="260" y1="50" x2="260" y2="310" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- SINGULAR POINT REGION (right side) — converging/spiraling flow -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#3366cc" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#cc5533" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Singular point (center of spiral) -->
+  <circle cx="400" cy="180" r="4" fill="#cc3333"/>
+
+  <!-- Spiraling integral curves around singular point -->
+  <g stroke="#cc5533" stroke-width="1.6" fill="none" marker-end="url(#arrowRed)">
+    <!-- Spiral inward paths -->
+    <path d="M 310,100 C 330,90 370,80 420,100 C 460,115 470,150 450,180"/>
+    <path d="M 490,120 C 480,140 475,170 460,200 C 440,235 410,250 380,240"/>
+    <path d="M 470,270 C 440,280 400,280 370,260 C 340,240 330,210 345,185"/>
+    <path d="M 300,250 C 310,230 320,200 340,180 C 355,162 375,155 390,165"/>
+    <path d="M 290,170 C 310,150 340,130 370,130 C 395,130 415,145 410,170"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="400" y="310" text-anchor="middle" font-family="serif" font-size="13" fill="#333" font-weight="bold">Singular point</text>
+  <text x="400" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555">(</text>
+  <text x="407" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555" font-style="italic">V</text>
+  <text x="417" y="332" text-anchor="middle" font-family="serif" font-size="9" fill="#555" font-style="italic">p</text>
+  <text x="433" y="328" text-anchor="middle" font-family="serif" font-size="12" fill="#555">= 0)</text>
+</svg>

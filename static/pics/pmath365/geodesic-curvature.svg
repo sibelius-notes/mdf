@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="white"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#333">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#CC0000">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#4169E1">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#006600">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#CC6600">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#6A0DAD">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="250" y="28" font-family="serif" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Geodesic Curvature</text>
+
+  <!-- Curved surface background -->
+  <path d="M 30,180 C 60,100 170,70 270,100 C 370,130 450,110 480,160 C 480,240 420,290 350,280 C 250,270 120,300 30,180 Z" fill="rgba(100,149,237,0.08)" stroke="#4169E1" stroke-width="2"/>
+
+  <!-- (a) Geodesic curve (straight on surface) -->
+  <path d="M 80,200 C 120,170 180,155 240,160" fill="none" stroke="#006600" stroke-width="3"/>
+  <text x="100" y="225" font-family="serif" font-size="14" fill="#006600" font-weight="bold">geodesic</text>
+  <text x="100" y="242" font-family="serif" font-size="13" fill="#006600" font-style="italic">k</text>
+  <text x="108" y="247" font-family="serif" font-size="10" fill="#006600">g</text>
+  <text x="118" y="242" font-family="serif" font-size="13" fill="#006600"> = 0</text>
+
+  <!-- (b) Non-geodesic curve (curving on surface) -->
+  <path d="M 240,160 C 280,130 340,120 400,170" fill="none" stroke="#CC0000" stroke-width="3"/>
+  <text x="290" y="115" font-family="serif" font-size="14" fill="#CC0000" font-weight="bold">non-geodesic</text>
+  <text x="290" y="132" font-family="serif" font-size="13" fill="#CC0000" font-style="italic">k</text>
+  <text x="298" y="137" font-family="serif" font-size="10" fill="#CC0000">g</text>
+  <text x="310" y="132" font-family="serif" font-size="13" fill="#CC0000"> &ne; 0</text>
+
+  <!-- Point p on non-geodesic -->
+  <circle cx="320" cy="132" r="4" fill="#C00"/>
+  <text x="328" y="128" font-family="serif" font-size="14" fill="#C00" font-style="italic">p</text>
+
+  <!-- T: tangent vector -->
+  <line x1="320" y1="132" x2="370" y2="112" stroke="#006600" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <text x="375" y="108" font-family="serif" font-size="16" fill="#006600" font-weight="bold">T</text>
+
+  <!-- N: surface normal -->
+  <line x1="320" y1="132" x2="310" y2="72" stroke="#4169E1" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="298" y="65" font-family="serif" font-size="16" fill="#4169E1" font-weight="bold">N</text>
+
+  <!-- M: tangent normal (T x N direction, in tangent plane) -->
+  <line x1="320" y1="132" x2="275" y2="105" stroke="#CC6600" stroke-width="2.5" marker-end="url(#arrOrange)"/>
+  <text x="258" y="100" font-family="serif" font-size="16" fill="#CC6600" font-weight="bold">M</text>
+
+  <!-- delta'' decomposition -->
+  <!-- delta'' vector -->
+  <line x1="320" y1="132" x2="290" y2="80" stroke="#6A0DAD" stroke-width="2" marker-end="url(#arrPurple)" stroke-dasharray="5,3"/>
+  <text x="282" y="77" font-family="serif" font-size="14" fill="#6A0DAD" font-weight="bold">&delta;&prime;&prime;</text>
+
+  <!-- Component labels box -->
+  <g transform="translate(50, 270)">
+    <rect x="0" y="0" width="400" height="55" rx="6" fill="rgba(255,255,240,0.95)" stroke="#999" stroke-width="1"/>
+    <text x="200" y="22" font-family="serif" font-size="15" fill="#333" text-anchor="middle">&delta;&prime;&prime; = &kappa;</text>
+    <text x="227" y="27" font-family="serif" font-size="11" fill="#333">n</text>
+    <text x="238" y="22" font-family="serif" font-size="15" fill="#4169E1" font-weight="bold">N</text>
+    <text x="255" y="22" font-family="serif" font-size="15" fill="#333"> + k</text>
+    <text x="280" y="27" font-family="serif" font-size="11" fill="#333">g</text>
+    <text x="291" y="22" font-family="serif" font-size="15" fill="#CC6600" font-weight="bold">M</text>
+    <text x="200" y="44" font-family="serif" font-size="13" fill="#666" text-anchor="middle">normal component &kappa;</text>
+    <text x="265" y="49" font-family="serif" font-size="10" fill="#666">n</text>
+    <text x="275" y="44" font-family="serif" font-size="13" fill="#666">,  tangential component k</text>
+    <text x="392" y="49" font-family="serif" font-size="10" fill="#666">g</text>
+  </g>
+</svg>

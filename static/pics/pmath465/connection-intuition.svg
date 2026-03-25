@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- Curved surface -->
+  <path d="M 40 250 Q 100 140 200 160 Q 300 180 350 130 Q 400 80 460 150" fill="rgba(200,210,220,0.3)" stroke="#888" stroke-width="2"/>
+  <path d="M 40 250 Q 100 230 200 240 Q 300 250 350 220 Q 400 190 460 150" fill="rgba(200,210,220,0.3)" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Surface shading -->
+  <path d="M 40 250 Q 100 140 200 160 Q 300 180 350 130 Q 400 80 460 150 L 460 150 Q 400 190 350 220 Q 300 250 200 240 Q 100 230 40 250 Z" fill="rgba(180,200,220,0.2)" stroke="none"/>
+
+  <!-- Curve gamma on surface -->
+  <path d="M 120 195 Q 180 175 240 185 Q 300 195 360 155" fill="none" stroke="#cc6600" stroke-width="2.5"/>
+
+  <!-- Point p -->
+  <circle cx="120" cy="195" r="4" fill="#333"/>
+  <text x="105" y="220" font-family="serif" font-size="16" font-style="italic" fill="#333">p</text>
+
+  <!-- Point q -->
+  <circle cx="360" cy="155" r="4" fill="#333"/>
+  <text x="365" y="175" font-family="serif" font-size="16" font-style="italic" fill="#333">q</text>
+
+  <!-- Gamma label -->
+  <text x="235" y="210" font-family="serif" font-size="16" font-style="italic" fill="#cc6600">&#x03B3;</text>
+
+  <!-- Tangent plane at p (T_pM) -->
+  <polygon points="60,150 175,135 185,215 70,230" fill="rgba(100,160,220,0.2)" stroke="#4488cc" stroke-width="1.2"/>
+  <text x="58" y="142" font-family="serif" font-size="13" font-style="italic" fill="#4488cc">T<tspan font-size="9" dy="3">p</tspan><tspan dy="-3">M</tspan></text>
+
+  <!-- Vector v at p -->
+  <line x1="120" y1="195" x2="155" y2="155" stroke="#2255aa" stroke-width="2.5"/>
+  <polygon points="155,155 148,163 143,157" fill="#2255aa"/>
+  <text x="158" y="150" font-family="serif" font-size="15" font-style="italic" fill="#2255aa">v</text>
+
+  <!-- Tangent plane at q (T_qM) -->
+  <polygon points="310,100 420,92 425,175 315,183" fill="rgba(220,100,100,0.15)" stroke="#cc5555" stroke-width="1.2"/>
+  <text x="420" y="90" font-family="serif" font-size="13" font-style="italic" fill="#cc5555">T<tspan font-size="9" dy="3">q</tspan><tspan dy="-3">M</tspan></text>
+
+  <!-- Parallel-transported vector at q -->
+  <line x1="360" y1="155" x2="390" y2="115" stroke="#aa2255" stroke-width="2.5"/>
+  <polygon points="390,115 383,123 378,117" fill="#aa2255"/>
+  <text x="393" y="110" font-family="serif" font-size="13" font-style="italic" fill="#aa2255">&#x03A0;<tspan font-size="9" dy="3">&#x03B3;</tspan><tspan dy="-3">(</tspan><tspan font-style="italic">v</tspan>)</text>
+
+  <!-- Curved transport arrow along gamma -->
+  <path d="M 140 175 Q 200 145 250 155 Q 310 165 345 140" fill="none" stroke="#996600" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="345,140 338,147 336,140" fill="#996600"/>
+
+  <!-- Transport label -->
+  <text x="240" y="145" text-anchor="middle" font-family="serif" font-size="13" fill="#996600">parallel transport</text>
+
+  <!-- Bottom label -->
+  <rect x="80" y="300" width="340" height="80" rx="8" fill="#f8f8f4" stroke="#999" stroke-width="1"/>
+  <text x="250" y="325" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+    Connection &#x2207; defines parallel transport
+  </text>
+  <text x="250" y="348" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+    &#x03A0;<tspan font-size="10" dy="3" font-style="italic">&#x03B3;</tspan><tspan dy="-3"> : </tspan><tspan font-style="italic">T</tspan><tspan font-size="10" dy="3" font-style="italic">p</tspan><tspan dy="-3" font-style="italic">M</tspan> &#x2192; <tspan font-style="italic">T</tspan><tspan font-size="10" dy="3" font-style="italic">q</tspan><tspan dy="-3" font-style="italic">M</tspan>  (linear isomorphism)
+  </text>
+  <text x="250" y="370" text-anchor="middle" font-family="serif" font-size="13" fill="#666">
+    &#x2207;<tspan font-size="10" dy="3" font-style="italic">&#x03B3;'</tspan><tspan dy="-3" font-style="italic"> V</tspan> = 0  along &#x03B3;
+  </text>
+</svg>

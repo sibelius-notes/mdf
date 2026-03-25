@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="400" viewBox="0 0 550 400">
+  <rect width="550" height="400" fill="white"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#2255aa" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#cc3333" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#228833" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#8844aa" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <text x="275" y="25" text-anchor="middle" font-family="serif" font-size="15" font-weight="bold" fill="#222">Lie Derivative of a Vector Field</text>
+
+  <!-- Manifold surface -->
+  <path d="M 40,320 C 100,340 200,350 300,330 C 400,310 480,290 520,300" fill="none" stroke="#999" stroke-width="2"/>
+  <path d="M 40,320 C 80,280 150,250 300,230 C 420,215 480,240 520,300" fill="#f0f0f8" stroke="none" opacity="0.5"/>
+  <path d="M 40,320 C 80,280 150,250 300,230 C 420,215 480,240 520,300" fill="none" stroke="#999" stroke-width="1.5"/>
+  <text x="60" y="310" font-family="serif" font-size="16" fill="#666" font-style="italic">M</text>
+
+  <!-- Flow line of V through p -->
+  <path d="M 80,280 C 130,265 180,250 230,245 C 280,240 340,235 400,228 C 440,224 470,222 500,225" stroke="#2255aa" stroke-width="2.5" fill="none"/>
+  <text x="500" y="218" font-family="serif" font-size="13" fill="#2255aa" font-style="italic">flow of V</text>
+
+  <!-- Point p -->
+  <circle cx="170" cy="255" r="5" fill="#333"/>
+  <text x="160" y="280" font-family="serif" font-size="15" fill="#333" font-style="italic">p</text>
+
+  <!-- Point Theta_t(p) -->
+  <circle cx="400" cy="228" r="5" fill="#333"/>
+  <text x="380" y="215" font-family="serif" font-size="13" fill="#333">&Theta;</text>
+  <text x="393" y="219" font-family="serif" font-size="10" fill="#333" font-style="italic">t</text>
+  <text x="400" y="215" font-family="serif" font-size="13" fill="#333">(</text>
+  <text x="406" y="215" font-family="serif" font-size="13" fill="#333" font-style="italic">p</text>
+  <text x="415" y="215" font-family="serif" font-size="13" fill="#333">)</text>
+
+  <!-- V vector at p (tangent to flow) -->
+  <line x1="170" y1="255" x2="225" y2="247" stroke="#2255aa" stroke-width="2.5" marker-end="url(#arrB)"/>
+  <text x="195" y="240" font-family="serif" font-size="14" fill="#2255aa" font-style="italic" font-weight="bold">V</text>
+
+  <!-- W vector at Theta_t(p) -->
+  <line x1="400" y1="228" x2="420" y2="170" stroke="#cc3333" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="425" y="175" font-family="serif" font-size="14" fill="#cc3333" font-style="italic" font-weight="bold">W</text>
+  <text x="430" y="189" font-family="serif" font-size="10" fill="#cc3333">&Theta;</text>
+  <text x="442" y="193" font-family="serif" font-size="8" fill="#cc3333" font-style="italic">t</text>
+  <text x="447" y="189" font-family="serif" font-size="10" fill="#cc3333">(p)</text>
+
+  <!-- Pullback arrow (dashed, curved from Theta_t(p) back to p) -->
+  <path d="M 395,220 C 350,170 280,150 185,245" stroke="#8844aa" stroke-width="1.8" stroke-dasharray="6,4" fill="none" marker-end="url(#arrP)"/>
+  <text x="260" y="160" font-family="serif" font-size="12" fill="#8844aa">(&Theta;</text>
+  <text x="280" y="164" font-family="serif" font-size="9" fill="#8844aa">&minus;t</text>
+  <text x="293" y="160" font-family="serif" font-size="12" fill="#8844aa">)*</text>
+
+  <!-- Pulled-back W at p (the transported vector) -->
+  <line x1="170" y1="255" x2="200" y2="200" stroke="#8844aa" stroke-width="2.2" marker-end="url(#arrP)" stroke-dasharray="5,3"/>
+  <text x="130" y="210" font-family="serif" font-size="11" fill="#8844aa">(&Theta;</text>
+  <text x="152" y="214" font-family="serif" font-size="8" fill="#8844aa">&minus;t</text>
+  <text x="164" y="210" font-family="serif" font-size="11" fill="#8844aa">)*W</text>
+
+  <!-- W at p (original) -->
+  <line x1="170" y1="255" x2="185" y2="195" stroke="#228833" stroke-width="2.2" marker-end="url(#arrG)"/>
+  <text x="145" y="190" font-family="serif" font-size="13" fill="#228833" font-style="italic">W</text>
+  <text x="155" y="195" font-family="serif" font-size="9" fill="#228833" font-style="italic">p</text>
+
+  <!-- Difference bracket showing L_V W -->
+  <path d="M 188,195 L 203,198" stroke="#cc6600" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="205" y="120" font-family="serif" font-size="13" fill="#cc6600" font-weight="bold" font-style="italic">L</text>
+  <text x="213" y="124" font-family="serif" font-size="10" fill="#cc6600" font-style="italic">V</text>
+  <text x="222" y="120" font-family="serif" font-size="13" fill="#cc6600" font-style="italic"> W</text>
+  <text x="240" y="120" font-family="serif" font-size="12" fill="#cc6600"> = lim</text>
+  <text x="280" y="116" font-family="serif" font-size="9" fill="#cc6600">1</text>
+  <line x1="277" y1="119" x2="287" y2="119" stroke="#cc6600" stroke-width="0.8"/>
+  <text x="280" y="129" font-family="serif" font-size="9" fill="#cc6600" font-style="italic">t</text>
+  <text x="290" y="120" font-family="serif" font-size="11" fill="#cc6600">[(&Theta;</text>
+  <text x="318" y="124" font-family="serif" font-size="8" fill="#cc6600">&minus;t</text>
+  <text x="331" y="120" font-family="serif" font-size="11" fill="#cc6600">)*W &minus; W</text>
+  <text x="388" y="124" font-family="serif" font-size="8" fill="#cc6600">p</text>
+  <text x="395" y="120" font-family="serif" font-size="11" fill="#cc6600">]</text>
+
+  <!-- Theta_t label on flow -->
+  <text x="285" y="232" font-family="serif" font-size="14" fill="#2255aa">&Theta;</text>
+  <text x="299" y="236" font-family="serif" font-size="10" fill="#2255aa" font-style="italic">t</text>
+</svg>

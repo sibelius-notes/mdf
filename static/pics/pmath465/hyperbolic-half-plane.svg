@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+  <defs>
+    <clipPath id="halfPlane">
+      <rect x="30" y="30" width="440" height="320"/>
+    </clipPath>
+  </defs>
+
+  <!-- Upper half-plane background with gradient (darker near boundary) -->
+  <linearGradient id="hypGrad" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0%" stop-color="#ddeeff" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#f8fbff" stop-opacity="0.1"/>
+  </linearGradient>
+  <rect x="30" y="30" width="440" height="320" fill="url(#hypGrad)"/>
+
+  <!-- x-axis (ideal boundary) -->
+  <line x1="30" y1="350" x2="470" y2="350" stroke="#333" stroke-width="2.5"/>
+  <text x="175" y="385" font-family="serif" font-size="14" fill="#333">ideal boundary at &#x221e;</text>
+
+  <!-- Geodesics: semicircles centered on x-axis -->
+  <g clip-path="url(#halfPlane)">
+    <!-- Semicircle 1 -->
+    <path d="M100,350 A60,60 0 0,1 220,350" fill="none" stroke="#cc3333" stroke-width="2"/>
+    <!-- Semicircle 2 -->
+    <path d="M180,350 A90,90 0 0,1 360,350" fill="none" stroke="#cc3333" stroke-width="2"/>
+    <!-- Semicircle 3 -->
+    <path d="M300,350 A50,50 0 0,1 400,350" fill="none" stroke="#cc3333" stroke-width="2"/>
+    <!-- Semicircle 4 (large) -->
+    <path d="M60,350 A180,180 0 0,1 420,350" fill="none" stroke="#cc3333" stroke-width="1.5" opacity="0.6"/>
+    <!-- Vertical geodesic -->
+    <line x1="250" y1="350" x2="250" y2="30" stroke="#cc3333" stroke-width="2"/>
+    <!-- Another vertical -->
+    <line x1="130" y1="350" x2="130" y2="30" stroke="#cc3333" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Hyperbolic grid / equal-area regions near top -->
+  <g clip-path="url(#halfPlane)" opacity="0.35">
+    <!-- Horizontal horocycles (curves of constant y) -->
+    <line x1="30" y1="100" x2="470" y2="100" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="150" x2="470" y2="150" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="200" x2="470" y2="200" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="250" x2="470" y2="250" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="300" x2="470" y2="300" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="325" x2="470" y2="325" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="337" x2="470" y2="337" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="344" x2="470" y2="344" stroke="#2266cc" stroke-width="0.8"/>
+    <line x1="30" y1="347" x2="470" y2="347" stroke="#2266cc" stroke-width="0.8"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="40" y="55" font-family="serif" font-size="22" fill="#333" font-weight="bold">H</text>
+  <text x="57" y="50" font-family="serif" font-size="14" fill="#333">2</text>
+
+  <!-- Geodesic label -->
+  <text x="340" y="280" font-family="serif" font-size="13" fill="#cc3333">geodesics</text>
+
+  <!-- Metric formula -->
+  <text x="320" y="55" font-family="serif" font-style="italic" font-size="13" fill="#555">ds</text>
+  <text x="333" y="51" font-family="serif" font-size="9" fill="#555">2</text>
+  <text x="342" y="55" font-family="serif" font-size="13" fill="#555">= (dx</text>
+  <text x="372" y="51" font-family="serif" font-size="9" fill="#555">2</text>
+  <text x="379" y="55" font-family="serif" font-size="13" fill="#555">+ dy</text>
+  <text x="412" y="51" font-family="serif" font-size="9" fill="#555">2</text>
+  <text x="419" y="55" font-family="serif" font-size="13" fill="#555">)/y</text>
+  <text x="443" y="51" font-family="serif" font-size="9" fill="#555">2</text>
+
+  <!-- Arrow showing regions get smaller near boundary -->
+  <text x="40" y="390" font-family="serif" font-size="12" fill="#666">Equal hyperbolic areas shrink in Euclidean size near boundary</text>
+
+  <!-- y > 0 label -->
+  <text x="460" y="200" font-family="serif" font-style="italic" font-size="14" fill="#555">y &gt; 0</text>
+</svg>

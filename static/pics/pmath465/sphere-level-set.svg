@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="400" viewBox="0 0 450 400">
+  <rect width="450" height="400" fill="white"/>
+
+  <!-- R³ axes -->
+  <line x1="80" y1="350" x2="80" y2="50" stroke="#999" stroke-width="1"/>
+  <polygon points="80,50 76,60 84,60" fill="#999"/>
+  <text x="85" y="55" font-family="serif" font-style="italic" font-size="13" fill="#999">z</text>
+
+  <line x1="80" y1="350" x2="380" y2="350" stroke="#999" stroke-width="1"/>
+  <polygon points="380,350 370,346 370,354" fill="#999"/>
+  <text x="382" y="355" font-family="serif" font-style="italic" font-size="13" fill="#999">x</text>
+
+  <line x1="80" y1="350" x2="20" y2="390" stroke="#999" stroke-width="1"/>
+  <polygon points="20,390 30,384 27,393" fill="#999"/>
+  <text x="10" y="395" font-family="serif" font-style="italic" font-size="13" fill="#999">y</text>
+
+  <!-- Sphere S² -->
+  <ellipse cx="220" cy="210" rx="120" ry="120" fill="none" stroke="#2980b9" stroke-width="2.5"/>
+  <!-- Equator ellipse for 3D effect -->
+  <ellipse cx="220" cy="210" rx="120" ry="35" fill="none" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Vertical meridian -->
+  <ellipse cx="220" cy="210" rx="35" ry="120" fill="none" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Shading for 3D sphere effect -->
+  <defs>
+    <radialGradient id="sphereGrad" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#d6eaf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2980b9" stop-opacity="0.1"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="220" cy="210" rx="118" ry="118" fill="url(#sphereGrad)"/>
+
+  <!-- Point p on the sphere (upper right) -->
+  <circle cx="295" cy="140" r="4" fill="#c0392b"/>
+  <text x="302" y="135" font-family="serif" font-style="italic" font-size="15" fill="#c0392b">p</text>
+
+  <!-- Tangent plane at p (small parallelogram tangent to sphere) -->
+  <polygon points="255,100 335,105 335,175 255,170" fill="#e8f8e8" fill-opacity="0.5" stroke="#27ae60" stroke-width="1.5"/>
+
+  <!-- Gradient vector ∇f = 2p pointing radially outward -->
+  <line x1="295" y1="140" x2="345" y2="100" stroke="#e74c3c" stroke-width="2.5"/>
+  <polygon points="345,100 335,105 340,112" fill="#e74c3c"/>
+  <text x="348" y="95" font-family="serif" font-size="13" fill="#e74c3c">&#x2207;</text>
+  <text x="361" y="95" font-family="serif" font-style="italic" font-size="13" fill="#e74c3c">f</text>
+  <text x="370" y="95" font-family="serif" font-size="13" fill="#e74c3c"> = 2</text>
+  <text x="393" y="95" font-family="serif" font-style="italic" font-size="13" fill="#e74c3c">p</text>
+
+  <!-- Label T_pS² on the tangent plane -->
+  <text x="255" y="95" font-family="serif" font-style="italic" font-size="13" fill="#27ae60">T</text>
+  <text x="264" y="99" font-family="serif" font-style="italic" font-size="9" fill="#27ae60">p</text>
+  <text x="272" y="95" font-family="serif" font-style="italic" font-size="13" fill="#27ae60">S</text>
+  <text x="282" y="89" font-family="serif" font-size="10" fill="#27ae60">2</text>
+
+  <!-- Right angle indicator showing ∇f ⊥ T_pS² -->
+  <rect x="295" y="127" width="8" height="8" fill="none" stroke="#333" stroke-width="1" transform="rotate(-40,295,127)"/>
+
+  <!-- Label S² = f⁻¹(1) -->
+  <text x="100" y="370" font-family="serif" font-style="italic" font-size="15" fill="#2980b9">S</text>
+  <text x="110" y="364" font-family="serif" font-size="11" fill="#2980b9">2</text>
+  <text x="120" y="370" font-family="serif" font-size="15" fill="#2980b9"> = </text>
+  <text x="145" y="370" font-family="serif" font-style="italic" font-size="15" fill="#2980b9">f</text>
+  <text x="153" y="363" font-family="serif" font-size="11" fill="#2980b9"> &#x207B;&#xB9;</text>
+  <text x="170" y="370" font-family="serif" font-size="15" fill="#2980b9">(1)</text>
+
+  <!-- Label: T_pS² = ker(df_p) -->
+  <text x="210" y="370" font-family="serif" font-style="italic" font-size="13" fill="#27ae60">T</text>
+  <text x="220" y="374" font-family="serif" font-style="italic" font-size="9" fill="#27ae60">p</text>
+  <text x="228" y="370" font-family="serif" font-style="italic" font-size="13" fill="#27ae60">S</text>
+  <text x="238" y="364" font-family="serif" font-size="10" fill="#27ae60">2</text>
+  <text x="248" y="370" font-family="serif" font-size="13" fill="#333"> = ker(</text>
+  <text x="298" y="370" font-family="serif" font-style="italic" font-size="13" fill="#333">df</text>
+  <text x="315" y="374" font-family="serif" font-style="italic" font-size="9" fill="#333">p</text>
+  <text x="322" y="370" font-family="serif" font-size="13" fill="#333">)</text>
+</svg>

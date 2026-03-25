@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="300" viewBox="0 0 550 300">
+  <rect width="550" height="300" fill="white"/>
+
+  <!-- Top curve: arbitrary parametrization -->
+  <path d="M 60,90 C 120,30 200,30 260,70 C 320,110 380,110 460,60"
+        fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Unevenly spaced dots (arbitrary speed) -->
+  <circle cx="60" cy="90" r="4" fill="#cc7722"/>
+  <circle cx="80" cy="72" r="4" fill="#cc7722"/>
+  <circle cx="95" cy="58" r="4" fill="#cc7722"/>
+  <circle cx="105" cy="50" r="4" fill="#cc7722"/>
+  <circle cx="115" cy="44" r="4" fill="#cc7722"/>
+  <circle cx="122" cy="40" r="4" fill="#cc7722"/>
+  <!-- gap -->
+  <circle cx="200" cy="36" r="4" fill="#cc7722"/>
+  <circle cx="260" cy="70" r="4" fill="#cc7722"/>
+  <!-- cluster -->
+  <circle cx="310" cy="100" r="4" fill="#cc7722"/>
+  <circle cx="325" cy="105" r="4" fill="#cc7722"/>
+  <circle cx="340" cy="108" r="4" fill="#cc7722"/>
+  <!-- gap -->
+  <circle cx="420" cy="75" r="4" fill="#cc7722"/>
+  <circle cx="460" cy="60" r="4" fill="#cc7722"/>
+
+  <!-- Label top -->
+  <text x="490" y="55" font-family="sans-serif" font-size="13" fill="#cc7722" font-weight="bold">arbitrary</text>
+  <text x="490" y="72" font-family="sans-serif" font-size="13" fill="#cc7722" font-weight="bold">speed</text>
+  <text x="55" y="115" font-family="serif" font-style="italic" font-size="15" fill="#333">t</text>
+
+  <!-- Bracket annotations for uneven spacing -->
+  <text x="85" y="25" font-family="sans-serif" font-size="11" fill="#888">clustered</text>
+  <text x="230" y="25" font-family="sans-serif" font-size="11" fill="#888">spread out</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="150" x2="520" y2="150" stroke="#ccc" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Bottom curve: arclength parametrization (same shape) -->
+  <path d="M 60,230 C 120,170 200,170 260,210 C 320,250 380,250 460,200"
+        fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Evenly spaced dots (unit speed) -->
+  <circle cx="60" cy="230" r="4" fill="#2266bb"/>
+  <circle cx="100" cy="198" r="4" fill="#2266bb"/>
+  <circle cx="140" cy="178" r="4" fill="#2266bb"/>
+  <circle cx="180" cy="172" r="4" fill="#2266bb"/>
+  <circle cx="220" cy="183" r="4" fill="#2266bb"/>
+  <circle cx="260" cy="210" r="4" fill="#2266bb"/>
+  <circle cx="300" cy="235" r="4" fill="#2266bb"/>
+  <circle cx="340" cy="248" r="4" fill="#2266bb"/>
+  <circle cx="380" cy="248" r="4" fill="#2266bb"/>
+  <circle cx="420" cy="228" r="4" fill="#2266bb"/>
+  <circle cx="460" cy="200" r="4" fill="#2266bb"/>
+
+  <!-- Label bottom -->
+  <text x="490" y="195" font-family="sans-serif" font-size="13" fill="#2266bb" font-weight="bold">unit speed</text>
+  <text x="490" y="212" font-family="sans-serif" font-size="13" fill="#2266bb" font-weight="bold">(arclength)</text>
+  <text x="55" y="255" font-family="serif" font-style="italic" font-size="15" fill="#333">s</text>
+
+  <!-- Unit speed condition -->
+  <text x="275" y="285" font-family="serif" font-size="15" fill="#2266bb" text-anchor="middle">
+    |&#x3B2;'(s)| = 1
+  </text>
+
+  <!-- Spacing annotations -->
+  <text x="200" y="162" font-family="sans-serif" font-size="11" fill="#888">evenly spaced</text>
+</svg>

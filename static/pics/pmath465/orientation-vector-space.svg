@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <rect width="500" height="300" fill="white"/>
+
+  <!-- Same orientation (left side) -->
+  <g transform="translate(130,150)">
+    <!-- First basis e1, e2 -->
+    <line x1="0" y1="0" x2="70" y2="0" stroke="#228B22" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <line x1="0" y1="0" x2="0" y2="-70" stroke="#228B22" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <text x="75" y="5" font-family="serif" font-style="italic" font-size="16" fill="#228B22">e</text>
+    <text x="86" y="10" font-family="serif" font-size="11" fill="#228B22">1</text>
+    <text x="-20" y="-72" font-family="serif" font-style="italic" font-size="16" fill="#228B22">e</text>
+    <text x="-9" y="-67" font-family="serif" font-size="11" fill="#228B22">2</text>
+
+    <!-- Second basis e1', e2' (rotated ~30 degrees, same handedness) -->
+    <line x1="0" y1="0" x2="60" y2="-35" stroke="#006400" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowDarkGreen)"/>
+    <line x1="0" y1="0" x2="35" y2="-60" stroke="#006400" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowDarkGreen)"/>
+    <text x="63" y="-38" font-family="serif" font-style="italic" font-size="14" fill="#006400">e'</text>
+    <text x="76" y="-33" font-family="serif" font-size="10" fill="#006400">1</text>
+    <text x="38" y="-63" font-family="serif" font-style="italic" font-size="14" fill="#006400">e'</text>
+    <text x="51" y="-58" font-family="serif" font-size="10" fill="#006400">2</text>
+
+    <!-- Curved arrow showing same rotation sense -->
+    <path d="M 40,-5 Q 50,-25 35,-40" fill="none" stroke="#228B22" stroke-width="1.5" marker-end="url(#arrowSmallGreen)"/>
+  </g>
+
+  <!-- Label: same orientation -->
+  <text x="130" y="230" font-family="serif" font-size="15" fill="#228B22" text-anchor="middle">same orientation</text>
+  <text x="130" y="250" font-family="serif" font-size="13" fill="#228B22" text-anchor="middle">det(A) &gt; 0</text>
+
+  <!-- Opposite orientation (right side) -->
+  <g transform="translate(370,150)">
+    <!-- First basis e1, e2 -->
+    <line x1="0" y1="0" x2="70" y2="0" stroke="#CC3333" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <line x1="0" y1="0" x2="0" y2="-70" stroke="#CC3333" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <text x="75" y="5" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">e</text>
+    <text x="86" y="10" font-family="serif" font-size="11" fill="#CC3333">1</text>
+    <text x="-20" y="-72" font-family="serif" font-style="italic" font-size="16" fill="#CC3333">e</text>
+    <text x="-9" y="-67" font-family="serif" font-size="11" fill="#CC3333">2</text>
+
+    <!-- Second basis e1', e2' (reflected, opposite handedness) -->
+    <line x1="0" y1="0" x2="-60" y2="-35" stroke="#8B0000" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowDarkRed)"/>
+    <line x1="0" y1="0" x2="35" y2="-60" stroke="#8B0000" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowDarkRed)"/>
+    <text x="-82" y="-35" font-family="serif" font-style="italic" font-size="14" fill="#8B0000">e'</text>
+    <text x="-69" y="-30" font-family="serif" font-size="10" fill="#8B0000">1</text>
+    <text x="38" y="-63" font-family="serif" font-style="italic" font-size="14" fill="#8B0000">e'</text>
+    <text x="51" y="-58" font-family="serif" font-size="10" fill="#8B0000">2</text>
+
+    <!-- X mark showing reflection -->
+    <line x1="-15" y1="-15" x2="-25" y2="-25" stroke="#CC3333" stroke-width="2"/>
+    <line x1="-25" y1="-15" x2="-15" y2="-25" stroke="#CC3333" stroke-width="2"/>
+  </g>
+
+  <!-- Label: opposite orientation -->
+  <text x="370" y="230" font-family="serif" font-size="15" fill="#CC3333" text-anchor="middle">opposite orientation</text>
+  <text x="370" y="250" font-family="serif" font-size="13" fill="#CC3333" text-anchor="middle">det(A) &lt; 0</text>
+
+  <!-- Divider -->
+  <line x1="250" y1="40" x2="250" y2="270" stroke="#999" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Title -->
+  <text x="250" y="28" font-family="serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">Orientation of a Vector Space</text>
+
+  <!-- R^2 labels -->
+  <text x="130" y="55" font-family="serif" font-size="14" fill="#555" text-anchor="middle">in R</text>
+  <text x="147" y="48" font-family="serif" font-size="10" fill="#555">2</text>
+  <text x="370" y="55" font-family="serif" font-size="14" fill="#555" text-anchor="middle">in R</text>
+  <text x="387" y="48" font-family="serif" font-size="10" fill="#555">2</text>
+
+  <!-- Arrowhead definitions -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#228B22"/>
+    </marker>
+    <marker id="arrowDarkGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#006400"/>
+    </marker>
+    <marker id="arrowSmallGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#228B22"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#CC3333"/>
+    </marker>
+    <marker id="arrowDarkRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B0000"/>
+    </marker>
+  </defs>
+</svg>

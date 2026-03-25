@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+    </marker>
+    <marker id="curveArrow" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2266aa"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Light grid -->
+  <g stroke="#e8e8e8" stroke-width="0.5">
+    <line x1="50" y1="0" x2="50" y2="500"/><line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="150" y1="0" x2="150" y2="500"/><line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="250" y1="0" x2="250" y2="500"/><line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="350" y1="0" x2="350" y2="500"/><line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="0" y1="50" x2="500" y2="50"/><line x1="0" y1="100" x2="500" y2="100"/>
+    <line x1="0" y1="150" x2="500" y2="150"/><line x1="0" y1="200" x2="500" y2="200"/>
+    <line x1="0" y1="250" x2="500" y2="250"/><line x1="0" y1="300" x2="500" y2="300"/>
+    <line x1="0" y1="350" x2="500" y2="350"/><line x1="0" y1="400" x2="500" y2="400"/>
+    <line x1="0" y1="450" x2="500" y2="450"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="250" y1="20" x2="250" y2="480" stroke="#999" stroke-width="1"/>
+  <line x1="20" y1="250" x2="480" y2="250" stroke="#999" stroke-width="1"/>
+
+  <!-- Vector field arrows: V = -y d/dx + x d/dy -->
+  <!-- In SVG coords: center=(250,250), at grid point (cx+dx, cy-dy), arrow direction is (-dy_grid, -dx_grid) in SVG -->
+  <!-- For point (x,y) relative to origin: V = (-y, x), in SVG: (y_svg, -x_svg) mapped to arrow direction (y_rel, x_rel) -->
+  <!-- Actually: grid point at SVG (250+gx, 250-gy). Field V=(-gy, gx). In SVG coords direction is (gy, -gx) wait let me be careful. -->
+  <!-- Math coords: point (a,b), V=(-b, a). SVG point: (250+a, 250-b). SVG arrow direction: (-b, -a). -->
+  <!-- Scale arrows to length ~18 -->
+
+  <g stroke="#444" stroke-width="1.2" fill="none" marker-end="url(#arrowHead)">
+    <!-- Row: b=150 (SVG y=100) -->
+    <line x1="92" y1="103" x2="78" y2="117"/><!-- a=-150,b=150: V=(-150,−150)norm→(-1,-1) -->
+    <line x1="147" y1="96" x2="133" y2="103"/><!-- a=-100,b=150: V=(-150,-100)norm -->
+    <line x1="200" y1="93" x2="186" y2="96"/><!-- a=-50,b=150 -->
+    <line x1="300" y1="93" x2="314" y2="96"/><!-- a=50,b=150 -->
+    <line x1="353" y1="96" x2="367" y2="103"/><!-- a=100,b=150 -->
+    <line x1="408" y1="103" x2="422" y2="117"/><!-- a=150,b=150 -->
+
+    <!-- Row: b=100 (SVG y=150) -->
+    <line x1="96" y1="153" x2="83" y2="162"/>
+    <line x1="148" y1="147" x2="134" y2="150"/>
+    <line x1="199" y1="144" x2="186" y2="145"/>
+    <line x1="301" y1="144" x2="314" y2="145"/>
+    <line x1="352" y1="147" x2="366" y2="150"/>
+    <line x1="404" y1="153" x2="417" y2="162"/>
+
+    <!-- Row: b=50 (SVG y=200) -->
+    <line x1="97" y1="203" x2="87" y2="213"/>
+    <line x1="148" y1="198" x2="139" y2="205"/>
+    <line x1="199" y1="195" x2="193" y2="201"/>
+    <line x1="301" y1="195" x2="307" y2="201"/>
+    <line x1="352" y1="198" x2="361" y2="205"/>
+    <line x1="403" y1="203" x2="413" y2="213"/>
+
+    <!-- Row: b=0 (SVG y=250) — V=(-0, a) = (0,a), SVG direction=(0,-a) — purely vertical -->
+    <line x1="100" y1="253" x2="100" y2="268"/><!-- a=-150: V=(0,-150), SVG dir=(0,15) down -->
+    <line x1="150" y1="252" x2="150" y2="266"/>
+    <line x1="200" y1="252" x2="200" y2="264"/>
+    <line x1="300" y1="248" x2="300" y2="234"/><!-- a=50: V=(0,50), SVG dir=(0,-14) up -->
+    <line x1="350" y1="248" x2="350" y2="234"/>
+    <line x1="400" y1="247" x2="400" y2="232"/>
+
+    <!-- Row: b=-50 (SVG y=300) -->
+    <line x1="97" y1="297" x2="87" y2="287"/>
+    <line x1="148" y1="302" x2="139" y2="295"/>
+    <line x1="199" y1="305" x2="193" y2="299"/>
+    <line x1="301" y1="305" x2="307" y2="299"/>
+    <line x1="352" y1="302" x2="361" y2="295"/>
+    <line x1="403" y1="297" x2="413" y2="287"/>
+
+    <!-- Row: b=-100 (SVG y=350) -->
+    <line x1="96" y1="347" x2="83" y2="338"/>
+    <line x1="148" y1="353" x2="134" y2="350"/>
+    <line x1="199" y1="356" x2="186" y2="355"/>
+    <line x1="301" y1="356" x2="314" y2="355"/>
+    <line x1="352" y1="353" x2="366" y2="350"/>
+    <line x1="404" y1="347" x2="417" y2="338"/>
+
+    <!-- Row: b=-150 (SVG y=400) -->
+    <line x1="92" y1="397" x2="78" y2="383"/>
+    <line x1="147" y1="404" x2="133" y2="397"/>
+    <line x1="200" y1="407" x2="186" y2="404"/>
+    <line x1="300" y1="407" x2="314" y2="404"/>
+    <line x1="353" y1="404" x2="367" y2="397"/>
+    <line x1="408" y1="397" x2="422" y2="383"/>
+  </g>
+
+  <!-- Integral curves: concentric circles (counterclockwise) -->
+  <g fill="none" stroke="#2266aa" stroke-width="2">
+    <!-- Circle r=60 -->
+    <circle cx="250" cy="250" r="60" stroke-dasharray="none"/>
+    <!-- Circle r=110 -->
+    <circle cx="250" cy="250" r="110"/>
+    <!-- Circle r=160 -->
+    <circle cx="250" cy="250" r="160"/>
+  </g>
+
+  <!-- Directional arrows on integral curves (counterclockwise = in SVG: top goes right, right goes down, etc.) -->
+  <g fill="#2266aa">
+    <!-- r=60: arrow at top (250, 190), direction right (CCW in math = CW in SVG-y-flipped? No: CCW in math with y-up. In SVG y-down, CCW math = CW visually.) -->
+    <!-- V=(-y,x): at (0,r) → V=(-r,0) = left in math = left in SVG. So flow goes CCW visually too. -->
+    <!-- At top of circle (250, 190): math point (0, 60), V=(-60,0), SVG direction=(-60, 0) = left. But we want arrow on the curve going left at top = CCW. Let me place arrows. -->
+    <!-- At right of circle (310, 250): math (60,0), V=(0,60), SVG dir=(0,-60)=up -->
+    <polygon points="308,242 312,242 310,232" fill="#2266aa"/><!-- up arrow at right of r=60 -->
+    <polygon points="358,242 362,242 360,232" fill="#2266aa"/><!-- up arrow at right of r=110 -->
+    <polygon points="408,242 412,242 410,232" fill="#2266aa"/><!-- up arrow at right of r=160 -->
+
+    <!-- At top: going left -->
+    <polygon points="242,192 242,188 232,190" fill="#2266aa"/><!-- left arrow at top of r=60 -->
+    <polygon points="242,142 242,138 232,140" fill="#2266aa"/><!-- left arrow at top of r=110 -->
+    <polygon points="242,92 242,88 232,90" fill="#2266aa"/><!-- left arrow at top of r=160 -->
+
+    <!-- At left: going down -->
+    <polygon points="188,258 192,258 190,268" fill="#2266aa"/><!-- down arrow at left of r=60 -->
+    <polygon points="138,258 142,258 140,268" fill="#2266aa"/><!-- down arrow at left of r=110 -->
+    <polygon points="88,258 92,258 90,268" fill="#2266aa"/><!-- down arrow at left of r=160 -->
+  </g>
+
+  <!-- Singular point at origin -->
+  <circle cx="250" cy="250" r="4" fill="#cc3333" stroke="#881111" stroke-width="1"/>
+
+  <!-- Labels -->
+  <text x="18" y="24" font-family="serif" font-size="18" font-style="italic" fill="#333">V = -y ∂/∂x + x ∂/∂y</text>
+
+  <text x="345" y="145" font-family="serif" font-size="15" fill="#2266aa" font-style="italic">integral curves</text>
+
+  <text x="262" y="240" font-family="serif" font-size="13" fill="#cc3333">singular point</text>
+
+  <!-- R² label -->
+  <text x="450" y="488" font-family="serif" font-size="16" fill="#666">R²</text>
+</svg>

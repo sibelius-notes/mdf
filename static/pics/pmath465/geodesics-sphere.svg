@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="450" viewBox="0 0 450 450">
+  <defs>
+    <style>
+      text { font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', Georgia, serif; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#cc2222"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="450" height="450" fill="white"/>
+
+  <!-- Title -->
+  <text x="225" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#222">Geodesics on S²</text>
+
+  <!-- Sphere shading -->
+  <ellipse cx="225" cy="235" rx="150" ry="150" fill="#eef3ff" opacity="0.5"/>
+
+  <!-- Sphere outline -->
+  <ellipse cx="225" cy="235" rx="150" ry="150" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Equator (back, dashed) -->
+  <path d="M 75,235 Q 225,310 375,235" fill="none" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <!-- Equator (front) -->
+  <path d="M 75,235 Q 225,165 375,235" fill="none" stroke="#aaa" stroke-width="0.8"/>
+
+  <!-- === Great circle 1: tilted ellipse (greenish, background) === -->
+  <!-- A great circle tilted ~30 degrees -->
+  <ellipse cx="225" cy="235" rx="150" ry="60" transform="rotate(-25,225,235)"
+           fill="none" stroke="#88aacc" stroke-width="1" opacity="0.6"/>
+
+  <!-- === Great circle 2: another tilt === -->
+  <ellipse cx="225" cy="235" rx="150" ry="50" transform="rotate(35,225,235)"
+           fill="none" stroke="#88aacc" stroke-width="1" opacity="0.6"/>
+
+  <!-- === Great circle 3: near-vertical === -->
+  <ellipse cx="225" cy="235" rx="30" ry="150"
+           fill="none" stroke="#88aacc" stroke-width="1" opacity="0.6"/>
+
+  <!-- === Great circle 4: another orientation === -->
+  <ellipse cx="225" cy="235" rx="150" ry="40" transform="rotate(70,225,235)"
+           fill="none" stroke="#88aacc" stroke-width="1" opacity="0.6"/>
+
+  <!-- === HIGHLIGHTED great circle (the prominent one with arrow) === -->
+  <!-- A great circle tilted ~15 degrees, thicker, red -->
+  <ellipse cx="225" cy="235" rx="150" ry="55" transform="rotate(10,225,235)"
+           fill="none" stroke="#cc2222" stroke-width="2.5"/>
+
+  <!-- Direction arrow on the highlighted great circle -->
+  <!-- Place arrow at roughly the top-right of this ellipse -->
+  <line x1="345" y1="200" x2="365" y2="210" stroke="#cc2222" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- === Point p and geodesics from p === -->
+  <!-- Point p located on the front of the sphere -->
+  <circle cx="180" cy="175" r="4.5" fill="#222"/>
+  <text x="163" y="170" font-size="15" fill="#222" font-style="italic">p</text>
+
+  <!-- Geodesic rays from p (arcs on sphere surface) -->
+  <!-- Ray 1: upward-right -->
+  <path d="M 180,175 Q 220,120 280,100 Q 330,85 370,95"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="370,95 361,90 362,100" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Ray 2: rightward -->
+  <path d="M 180,175 Q 240,170 300,180 Q 345,192 370,215"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="370,215 363,207 360,217" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Ray 3: downward-right -->
+  <path d="M 180,175 Q 220,210 270,250 Q 310,280 350,300"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="350,300 345,290 340,300" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Ray 4: downward -->
+  <path d="M 180,175 Q 175,220 170,270 Q 165,310 168,345"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="168,345 163,336 173,336" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Ray 5: upper-left (goes to back, shorter visible portion) -->
+  <path d="M 180,175 Q 150,145 120,125 Q 100,115 85,112"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="85,112 93,108 92,118" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Ray 6: left-downward -->
+  <path d="M 180,175 Q 145,210 115,260 Q 95,295 85,325"
+        fill="none" stroke="#2255cc" stroke-width="1.8" opacity="0.85"/>
+  <polygon points="85,325 82,315 92,318" fill="#2255cc" opacity="0.85"/>
+
+  <!-- Labels -->
+  <text x="225" y="425" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Geodesics (Great Circles)</text>
+
+  <!-- Annotation for highlighted great circle -->
+  <text x="385" y="195" font-size="11" fill="#cc2222" font-style="italic">great</text>
+  <text x="385" y="208" font-size="11" fill="#cc2222" font-style="italic">circle</text>
+
+  <!-- Annotation for geodesics from p -->
+  <text x="30" y="400" font-size="11" fill="#2255cc">geodesics from </text>
+  <text x="128" y="400" font-size="12" fill="#2255cc" font-style="italic">p</text>
+
+  <!-- Explanatory note -->
+  <text x="225" y="444" text-anchor="middle" font-size="11" fill="#666">
+    On S², all geodesics are great circles (intersections with planes through the origin).
+  </text>
+</svg>

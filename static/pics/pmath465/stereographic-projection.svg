@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <defs>
+    <marker id="dot" viewBox="-3 -3 6 6" markerWidth="6" markerHeight="6" refX="0" refY="0">
+      <circle r="2.5" fill="#222"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- === Geometry ===
+       Sphere center: (190, 200), radius: 110
+       North pole N: (190, 90)
+       South pole S: (190, 310)
+       Equator: horizontal line at y=200
+       R² plane: y=200, extending right from sphere
+
+       Point P on sphere: angle -40° from top => roughly (190 + 110*sin(40°), 200 - 110*cos(40°))
+         sin(40°)≈0.643, cos(40°)≈0.766
+         P ≈ (190+70.7, 200-84.3) = (260.7, 115.7)
+
+       Line from N(190,90) through P(261,116) to R² plane (y=200):
+         parametric: (190 + t*(261-190), 90 + t*(116-90)) = (190+71t, 90+26t)
+         y=200 => 90+26t=200 => t=110/26 ≈ 4.231
+         x = 190 + 71*4.231 = 190 + 300.4 = 490.4
+         So projection hits at approximately (490, 200). That's far right — good.
+
+       Point Q on sphere: angle about 160° from top (lower-left quadrant)
+         Q at angle 160° from vertical: (190 + 110*sin(160°), 200 - 110*cos(160°))
+         sin(160°)≈0.342, cos(160°)≈-0.940
+         Q ≈ (190+37.6, 200+103.4) = (227.6, 303.4)
+
+         Line from N(190,90) through Q(227.6, 303.4):
+         parametric: (190 + t*37.6, 90 + t*213.4)
+         y=200 => 90+213.4t=200 => t=110/213.4≈0.5154
+         x=190+37.6*0.5154=190+19.4=209.4
+         Projection at (209, 200). That's close to center — let me pick a different Q.
+
+       Point Q: angle 70° from vertical on the left side:
+         Q at (190 - 110*sin(70°), 200 - 110*cos(70°))
+         sin(70°)≈0.940, cos(70°)≈0.342
+         Q ≈ (190-103.4, 200-37.6) = (86.6, 162.4)
+
+         Line from N(190,90) through Q(86.6, 162.4):
+         parametric: (190 + t*(-103.4), 90 + t*72.4)
+         y=200 => t=110/72.4≈1.519
+         x = 190 - 103.4*1.519 = 190 - 157.1 = 32.9
+         Projection at (33, 200). On the left. Good.
+  -->
+
+  <!-- R² plane line -->
+  <line x1="20" y1="200" x2="480" y2="200" stroke="#222" stroke-width="1.5"/>
+
+  <!-- Sphere (side view as circle) -->
+  <circle cx="190" cy="200" r="110" fill="none" stroke="#222" stroke-width="2.2"/>
+
+  <!-- North pole N -->
+  <circle cx="190" cy="90" r="3.5" fill="#222"/>
+  <text x="178" y="78" font-family="'Times New Roman', serif" font-size="18" font-style="italic" fill="#222" font-weight="bold">N</text>
+
+  <!-- South pole S (optional, small) -->
+  <circle cx="190" cy="310" r="3" fill="#888"/>
+  <text x="178" y="332" font-family="'Times New Roman', serif" font-size="15" font-style="italic" fill="#888">S</text>
+
+  <!-- Center of sphere O -->
+  <circle cx="190" cy="200" r="2" fill="#888"/>
+  <text x="170" y="218" font-family="'Times New Roman', serif" font-size="14" font-style="italic" fill="#888">O</text>
+
+  <!-- === Point P on upper-right of sphere === -->
+  <!-- P at angle 40° from vertical on right side -->
+  <circle cx="261" cy="116" r="3.5" fill="#222"/>
+  <text x="268" y="110" font-family="'Times New Roman', serif" font-size="17" font-style="italic" fill="#222" font-weight="bold">P</text>
+
+  <!-- Dashed line from N through P to projection on R² -->
+  <line x1="190" y1="90" x2="490" y2="200" stroke="#222" stroke-width="1.3" stroke-dasharray="6,4"/>
+
+  <!-- Projection point sigma(P) on R² plane -->
+  <circle cx="490" cy="200" r="3.5" fill="#222"/>
+  <!-- Label for projection of P -->
+  <text x="440" y="228" font-family="'Times New Roman', serif" font-size="15" font-style="italic" fill="#222">
+    <tspan font-style="italic">&#x03C3;</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">P</tspan><tspan font-size="13">)</tspan>
+  </text>
+
+  <!-- === Point Q on upper-left of sphere === -->
+  <!-- Q at angle 70° from vertical on left side: (86.6, 162.4) -->
+  <circle cx="87" cy="162" r="3.5" fill="#222"/>
+  <text x="60" y="155" font-family="'Times New Roman', serif" font-size="17" font-style="italic" fill="#222" font-weight="bold">Q</text>
+
+  <!-- Dashed line from N through Q to projection on R² -->
+  <!-- N=(190,90), projection at (33, 200) -->
+  <line x1="190" y1="90" x2="33" y2="200" stroke="#222" stroke-width="1.3" stroke-dasharray="6,4"/>
+
+  <!-- Projection point sigma(Q) on R² plane -->
+  <circle cx="33" cy="200" r="3.5" fill="#222"/>
+  <text x="20" y="228" font-family="'Times New Roman', serif" font-size="15" font-style="italic" fill="#222">
+    <tspan font-style="italic">&#x03C3;</tspan><tspan font-size="13">(</tspan><tspan font-style="italic">Q</tspan><tspan font-size="13">)</tspan>
+  </text>
+
+  <!-- R² label on the right end -->
+  <text x="460" y="190" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">&#x211D;&#xB2;</text>
+
+  <!-- S² label near sphere -->
+  <text x="295" y="320" font-family="'Times New Roman', serif" font-size="18" font-weight="bold" fill="#222">S&#xB2;</text>
+
+  <!-- Small arrowhead on right end of R² line -->
+  <polygon points="480,200 472,196 472,204" fill="#222"/>
+</svg>

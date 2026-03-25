@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="300" viewBox="0 0 650 300">
+  <rect width="650" height="300" fill="white"/>
+
+  <!-- Title -->
+  <text x="325" y="28" font-family="serif" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Gaussian Curvature Types</text>
+
+  <!-- Panel (a): K > 0, Elliptic (Sphere) -->
+  <g transform="translate(110, 150)">
+    <!-- Sphere -->
+    <circle cx="0" cy="0" r="70" fill="rgba(100,149,237,0.15)" stroke="#4169E1" stroke-width="2.5"/>
+    <ellipse cx="0" cy="0" rx="70" ry="18" fill="none" stroke="rgba(65,105,225,0.35)" stroke-width="1"/>
+    <ellipse cx="0" cy="0" rx="18" ry="70" fill="none" stroke="rgba(65,105,225,0.35)" stroke-width="1"/>
+
+    <!-- Point and normal indication -->
+    <circle cx="0" cy="-70" r="3" fill="#C00"/>
+
+    <!-- Curvature arrows (both curving same way) -->
+    <path d="M -30,-60 C -20,-80 20,-80 30,-60" fill="none" stroke="#CC0000" stroke-width="2"/>
+    <path d="M 0,-40 C -15,-65 15,-65 0,-40" fill="none" stroke="#CC0000" stroke-width="2" transform="rotate(90, 0, -55)"/>
+
+    <!-- Labels -->
+    <text x="0" y="95" font-family="serif" font-size="15" fill="#4169E1" text-anchor="middle" font-weight="bold">(a) K &gt; 0</text>
+    <text x="0" y="115" font-family="serif" font-size="13" fill="#333" text-anchor="middle" font-style="italic">elliptic point</text>
+  </g>
+
+  <!-- Panel (b): K = 0, Parabolic (Cylinder) -->
+  <g transform="translate(325, 150)">
+    <!-- Cylinder -->
+    <ellipse cx="0" cy="-65" rx="55" ry="15" fill="rgba(144,238,144,0.15)" stroke="#228B22" stroke-width="2"/>
+    <line x1="-55" y1="-65" x2="-55" y2="50" stroke="#228B22" stroke-width="2.5"/>
+    <line x1="55" y1="-65" x2="55" y2="50" stroke="#228B22" stroke-width="2.5"/>
+    <path d="M -55,50 C -55,65 -30,75 0,75 C 30,75 55,65 55,50" fill="none" stroke="#228B22" stroke-width="2.5"/>
+    <!-- Back half of bottom ellipse (dashed) -->
+    <path d="M -55,50 C -55,35 -30,25 0,25 C 30,25 55,35 55,50" fill="none" stroke="#228B22" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Surface fill -->
+    <path d="M -55,-65 L -55,50 C -55,65 -30,75 0,75 C 30,75 55,65 55,50 L 55,-65" fill="rgba(144,238,144,0.08)" stroke="none"/>
+
+    <!-- Point -->
+    <circle cx="40" cy="-10" r="3" fill="#C00"/>
+
+    <!-- Curvature indication: curved in one dir, flat in other -->
+    <path d="M 25,-10 C 35,-25 45,-25 55,-10" fill="none" stroke="#CC0000" stroke-width="2"/>
+
+    <!-- Labels -->
+    <text x="0" y="95" font-family="serif" font-size="15" fill="#228B22" text-anchor="middle" font-weight="bold">(b) K = 0</text>
+    <text x="0" y="115" font-family="serif" font-size="13" fill="#333" text-anchor="middle" font-style="italic">parabolic point</text>
+  </g>
+
+  <!-- Panel (c): K < 0, Hyperbolic (Saddle) -->
+  <g transform="translate(540, 150)">
+    <!-- Saddle surface -->
+    <path d="M -70,10 C -40,-50 -10,-60 0,-20 C 10,-60 40,-50 70,10" fill="none" stroke="#8B0000" stroke-width="2.5"/>
+    <path d="M -70,10 C -50,30 -25,40 0,35 C 25,40 50,30 70,10" fill="rgba(220,100,100,0.1)" stroke="#8B0000" stroke-width="2.5"/>
+
+    <!-- Cross curves -->
+    <path d="M 0,-60 C -10,-30 -10,10 0,35" fill="none" stroke="rgba(139,0,0,0.4)" stroke-width="1.5"/>
+    <path d="M -50,-15 C -20,-40 20,-40 50,-15" fill="none" stroke="rgba(139,0,0,0.4)" stroke-width="1.5"/>
+
+    <!-- Point -->
+    <circle cx="0" cy="-20" r="3" fill="#C00"/>
+
+    <!-- Labels -->
+    <text x="0" y="95" font-family="serif" font-size="15" fill="#8B0000" text-anchor="middle" font-weight="bold">(c) K &lt; 0</text>
+    <text x="0" y="115" font-family="serif" font-size="13" fill="#333" text-anchor="middle" font-style="italic">hyperbolic point</text>
+  </g>
+
+  <!-- Separators -->
+  <line x1="217" y1="50" x2="217" y2="250" stroke="#CCC" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="433" y1="50" x2="433" y2="250" stroke="#CCC" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>

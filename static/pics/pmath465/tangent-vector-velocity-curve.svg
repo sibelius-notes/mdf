@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="350" viewBox="0 0 450 350">
+  <rect width="450" height="350" fill="white"/>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#cc2222"/>
+    </marker>
+  </defs>
+
+  <!-- Curved surface M -->
+  <path d="M 40 200 C 80 100, 180 60, 250 80 C 320 100, 380 130, 420 180 C 430 200, 410 250, 350 270 C 280 290, 150 280, 80 250 C 50 240, 30 220, 40 200 Z" fill="#e8edf5" stroke="#333" stroke-width="2"/>
+
+  <!-- Surface label M -->
+  <text x="380" y="260" font-family="serif" font-style="italic" font-size="22" fill="#333">M</text>
+
+  <!-- Curve gamma on the surface -->
+  <path d="M 100 230 C 140 200, 170 170, 220 175 C 270 180, 310 210, 350 195" fill="none" stroke="#2255aa" stroke-width="2.5"/>
+
+  <!-- Point p on the curve -->
+  <circle cx="220" cy="175" r="4" fill="#333"/>
+
+  <!-- Label p -->
+  <text x="210" y="200" font-family="serif" font-style="italic" font-size="18" fill="#333">p</text>
+
+  <!-- Tangent plane (subtle parallelogram) -->
+  <path d="M 160 140 L 300 120 L 310 190 L 170 210 Z" fill="#ffe8b0" fill-opacity="0.25" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Tangent vector gamma'(0) as red arrow -->
+  <line x1="220" y1="175" x2="300" y2="148" stroke="#cc2222" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+
+  <!-- Label gamma'(0) -->
+  <text x="305" y="138" font-family="serif" font-style="italic" font-size="16" fill="#cc2222">&amp;#x03B3;&amp;#x2032;(0)</text>
+
+  <!-- Label gamma -->
+  <text x="100" y="245" font-family="serif" font-style="italic" font-size="18" fill="#2255aa">&amp;#x03B3;</text>
+
+  <!-- Small arrow showing direction along curve -->
+  <path d="M 155 192 L 165 186" fill="none" stroke="#2255aa" stroke-width="1.5" marker-end="url(#arrBlue)"/>
+
+  <defs>
+    <marker id="arrBlue" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#2255aa"/>
+    </marker>
+  </defs>
+</svg>

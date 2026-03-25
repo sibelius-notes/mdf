@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- Title -->
+  <text x="250" y="28" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#333">Rank-2 Distribution on &#x211D;&#xB3;</text>
+
+  <!-- 3D axes (light) -->
+  <line x1="60" y1="340" x2="60" y2="60" stroke="#bbb" stroke-width="1"/>
+  <line x1="60" y1="340" x2="420" y2="340" stroke="#bbb" stroke-width="1"/>
+  <line x1="60" y1="340" x2="20" y2="370" stroke="#bbb" stroke-width="1"/>
+
+  <!-- Plane 1 at point (120, 250) - blue-green -->
+  <circle cx="120" cy="250" r="3" fill="#333"/>
+  <polygon points="90,230 150,225 150,270 90,275" fill="rgba(70,160,200,0.3)" stroke="#4090b0" stroke-width="1.2"/>
+  <text x="125" y="290" font-family="serif" font-size="12" font-style="italic" fill="#4090b0">D<tspan font-size="9" dy="3">p&#x2081;</tspan></text>
+
+  <!-- Plane 2 at point (200, 190) - orange -->
+  <circle cx="200" cy="190" r="3" fill="#333"/>
+  <polygon points="165,168 235,172 238,212 168,208" fill="rgba(220,150,50,0.3)" stroke="#c08030" stroke-width="1.2"/>
+
+  <!-- Plane 3 at point (300, 150) - green -->
+  <circle cx="300" cy="150" r="3" fill="#333"/>
+  <polygon points="265,125 340,135 335,175 260,165" fill="rgba(80,180,100,0.3)" stroke="#50a060" stroke-width="1.2"/>
+
+  <!-- Plane 4 at point (250, 280) - pink -->
+  <circle cx="250" cy="280" r="3" fill="#333"/>
+  <polygon points="218,258 282,262 285,302 221,298" fill="rgba(200,100,140,0.3)" stroke="#c06488" stroke-width="1.2"/>
+
+  <!-- Plane 5 at point (370, 220) - purple -->
+  <circle cx="370" cy="220" r="3" fill="#333"/>
+  <polygon points="335,198 405,195 410,242 340,245" fill="rgba(140,100,200,0.3)" stroke="#8866cc" stroke-width="1.2"/>
+
+  <!-- Plane 6 at point (160, 130) - teal -->
+  <circle cx="160" cy="130" r="3" fill="#333"/>
+  <polygon points="130,110 192,115 188,150 126,145" fill="rgba(60,170,170,0.3)" stroke="#40a0a0" stroke-width="1.2"/>
+
+  <!-- Plane 7 at point (350, 310) - amber -->
+  <circle cx="350" cy="310" r="3" fill="#333"/>
+  <polygon points="318,290 382,294 385,332 321,328" fill="rgba(200,170,50,0.3)" stroke="#b09030" stroke-width="1.2"/>
+
+  <!-- Labels -->
+  <text x="250" y="375" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
+    Distribution <tspan font-style="italic">D</tspan>:   <tspan font-style="italic">D</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3"> &#x2282; </tspan><tspan font-style="italic">T</tspan><tspan font-size="10" dy="3">p</tspan><tspan dy="-3" font-style="italic">M</tspan>    (rank 2)
+  </text>
+
+  <!-- Label with arrow to a plane -->
+  <line x1="420" y1="130" x2="345" y2="148" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="422" y="128" font-family="serif" font-size="13" font-style="italic" fill="#555">D<tspan font-size="9" dy="3">p</tspan><tspan dy="-3"> &#x2282; </tspan>T<tspan font-size="9" dy="3">p</tspan><tspan dy="-3">&#x211D;</tspan><tspan font-size="9" dy="-4">3</tspan></text>
+</svg>

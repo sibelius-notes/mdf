@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="350" viewBox="0 0 450 350">
+  <rect width="450" height="350" fill="white"/>
+
+  <defs>
+    <marker id="vfArr" markerWidth="5" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 5 2, 0 4" fill="#2255aa"/>
+    </marker>
+  </defs>
+
+  <!-- Surface M - an elliptical blob -->
+  <ellipse cx="225" cy="185" rx="185" ry="140" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+  <!-- Smooth vector field arrows - dipole-like pattern -->
+  <!-- Row 1 (top area) -->
+  <line x1="120" y1="80" x2="140" y2="75" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="180" y1="70" x2="200" y2="68" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="240" y1="65" x2="260" y2="66" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="300" y1="75" x2="318" y2="80" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Row 2 -->
+  <line x1="80" y1="120" x2="100" y2="112" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="150" y1="110" x2="172" y2="105" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="220" y1="105" x2="242" y2="103" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="290" y1="108" x2="312" y2="110" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="350" y1="120" x2="368" y2="128" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Row 3 (middle) -->
+  <line x1="65" y1="165" x2="84" y2="155" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="130" y1="155" x2="152" y2="148" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="200" y1="150" x2="222" y2="147" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="270" y1="148" x2="292" y2="150" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="340" y1="155" x2="360" y2="162" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Row 4 -->
+  <line x1="60" y1="210" x2="78" y2="200" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="125" y1="200" x2="146" y2="195" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="195" y1="198" x2="217" y2="198" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="265" y1="198" x2="287" y2="202" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="335" y1="205" x2="354" y2="215" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Row 5 -->
+  <line x1="80" y1="250" x2="96" y2="242" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="145" y1="245" x2="166" y2="242" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="215" y1="243" x2="237" y2="245" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="285" y1="248" x2="305" y2="254" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="350" y1="250" x2="365" y2="260" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Row 6 (bottom) -->
+  <line x1="125" y1="285" x2="144" y2="284" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="195" y1="283" x2="215" y2="286" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="265" y1="288" x2="282" y2="294" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+  <line x1="330" y1="280" x2="342" y2="290" stroke="#2255aa" stroke-width="1.5" marker-end="url(#vfArr)"/>
+
+  <!-- Label -->
+  <text x="225" y="340" font-family="serif" font-size="16" fill="#333" text-anchor="middle">Smooth Vector Field on <tspan font-style="italic">M</tspan></text>
+</svg>

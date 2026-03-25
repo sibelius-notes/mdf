@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="400" viewBox="0 0 550 400">
+  <rect width="550" height="400" fill="white"/>
+
+  <!-- Title -->
+  <text x="275" y="28" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#333">Integrable Distribution = Foliation</text>
+
+  <!-- 3D box outline (wireframe) -->
+  <path d="M 80 350 L 80 100 L 300 50 L 470 50 L 470 300 L 250 350 Z" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="300" y1="50" x2="300" y2="300" stroke="#aaa" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="250" y1="350" x2="470" y2="300" stroke="#aaa" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Leaf 1 (bottom) -->
+  <path d="M 100 330 Q 200 310 280 300 Q 360 290 440 285 L 435 295 Q 350 305 270 315 Q 190 325 100 340 Z" fill="rgba(70,150,200,0.25)" stroke="#4090b0" stroke-width="1.5"/>
+
+  <!-- Leaf 2 -->
+  <path d="M 100 290 Q 200 265 280 255 Q 360 245 440 240 L 435 250 Q 350 260 270 270 Q 190 282 100 300 Z" fill="rgba(80,170,120,0.25)" stroke="#50a070" stroke-width="1.5"/>
+
+  <!-- Leaf 3 -->
+  <path d="M 95 250 Q 195 222 275 212 Q 355 202 435 197 L 430 207 Q 345 217 265 227 Q 185 238 95 260 Z" fill="rgba(200,150,60,0.25)" stroke="#c09030" stroke-width="1.5"/>
+
+  <!-- Leaf 4 -->
+  <path d="M 92 210 Q 192 180 272 170 Q 352 160 432 155 L 427 165 Q 342 175 262 185 Q 182 196 92 220 Z" fill="rgba(180,80,120,0.25)" stroke="#b05070" stroke-width="1.5"/>
+
+  <!-- Leaf 5 -->
+  <path d="M 88 170 Q 188 140 268 130 Q 348 120 428 115 L 423 125 Q 338 135 258 145 Q 178 156 88 180 Z" fill="rgba(130,100,190,0.25)" stroke="#8060b0" stroke-width="1.5"/>
+
+  <!-- Leaf 6 (top) -->
+  <path d="M 85 132 Q 185 102 265 92 Q 345 82 425 77 L 420 87 Q 335 97 255 107 Q 175 118 85 142 Z" fill="rgba(100,180,180,0.25)" stroke="#60a0a0" stroke-width="1.5"/>
+
+  <!-- "Leaf" label with arrow -->
+  <line x1="485" y1="200" x2="440" y2="200" stroke="#666" stroke-width="1"/>
+  <polygon points="442,197 435,200 442,203" fill="#666"/>
+  <text x="488" y="195" font-family="serif" font-size="14" fill="#333">leaf</text>
+  <text x="488" y="212" font-family="serif" font-size="12" fill="#666">(integral</text>
+  <text x="488" y="226" font-family="serif" font-size="12" fill="#666">submanifold)</text>
+
+  <!-- "Foliation" label -->
+  <line x1="55" y1="200" x2="88" y2="215" stroke="#666" stroke-width="1"/>
+  <polygon points="86,212 93,215 86,218" fill="#666"/>
+  <text x="15" y="190" font-family="serif" font-size="14" font-weight="bold" fill="#333">Foliation</text>
+
+  <!-- Bottom labels -->
+  <text x="275" y="375" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+    Integrable distribution: [<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>] &#x2208; <tspan font-style="italic">D</tspan>  for all <tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan> &#x2208; &#x393;(<tspan font-style="italic">D</tspan>)
+  </text>
+  <text x="275" y="395" text-anchor="middle" font-family="serif" font-size="13" fill="#666">
+    (Frobenius theorem)
+  </text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <defs>
+    <marker id="arrowFT" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#cc2222"/>
+    </marker>
+    <marker id="arrowFP" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#22aa44"/>
+    </marker>
+    <marker id="arrowFB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2266bb"/>
+    </marker>
+  </defs>
+
+  <!-- Helix (space curve in pseudo-3D) -->
+  <!-- Back portions (behind) -->
+  <path d="M 80,340 C 100,330 150,280 170,260" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="5,4"/>
+  <path d="M 170,260 C 200,230 230,220 250,230 C 280,245 290,280 280,290" fill="none" stroke="#333" stroke-width="2.5"/>
+  <path d="M 280,290 C 265,305 240,290 230,260" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="5,4"/>
+  <path d="M 230,260 C 215,220 230,180 260,170 C 290,160 320,180 330,210" fill="none" stroke="#333" stroke-width="2.5"/>
+  <path d="M 330,210 C 340,240 320,260 290,250" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="5,4"/>
+  <path d="M 290,250 C 270,245 265,210 280,180 C 295,150 330,130 360,120" fill="none" stroke="#333" stroke-width="2.5"/>
+  <path d="M 360,120 C 380,112 400,100 420,70" fill="none" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Osculating plane (semi-transparent parallelogram at the Frenet frame point) -->
+  <polygon points="220,130 340,100 380,200 260,230" fill="#6644aa" fill-opacity="0.1" stroke="#6644aa" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Point on curve where frame is shown -->
+  <circle cx="300" cy="170" r="4.5" fill="#333"/>
+
+  <!-- T vector (tangent, along curve, red) - pointing up-right along helix -->
+  <line x1="300" y1="170" x2="365" y2="130" stroke="#cc2222" stroke-width="2.8" marker-end="url(#arrowFT)"/>
+  <text x="370" y="125" font-family="serif" font-style="italic" font-size="20" fill="#cc2222" font-weight="bold">T</text>
+
+  <!-- P vector (principal normal, green) - pointing toward center of curvature (inward) -->
+  <line x1="300" y1="170" x2="250" y2="140" stroke="#22aa44" stroke-width="2.8" marker-end="url(#arrowFP)"/>
+  <text x="232" y="135" font-family="serif" font-style="italic" font-size="20" fill="#22aa44" font-weight="bold">P</text>
+
+  <!-- B vector (binormal, blue) - perpendicular to both T and P, pointing "up" out of osculating plane -->
+  <line x1="300" y1="170" x2="310" y2="100" stroke="#2266bb" stroke-width="2.8" marker-end="url(#arrowFB)"/>
+  <text x="314" y="93" font-family="serif" font-style="italic" font-size="20" fill="#2266bb" font-weight="bold">B</text>
+
+  <!-- Osculating plane label -->
+  <text x="330" y="228" font-family="sans-serif" font-size="13" fill="#6644aa">osculating plane</text>
+  <text x="340" y="245" font-family="sans-serif" font-size="12" fill="#6644aa">(spanned by T, P)</text>
+
+  <!-- B = T x P label -->
+  <text x="340" y="80" font-family="serif" font-size="13" fill="#2266bb">B = T &#xD7; P</text>
+
+  <!-- Title / Frame label -->
+  <text x="250" y="380" font-family="serif" font-size="16" fill="#333" text-anchor="middle">
+    Frenet-Serret frame {T, P, B}
+  </text>
+
+  <!-- Legend -->
+  <line x1="30" y1="30" x2="55" y2="30" stroke="#cc2222" stroke-width="2.5"/>
+  <text x="60" y="35" font-family="serif" font-size="13" fill="#cc2222">T (tangent)</text>
+
+  <line x1="30" y1="50" x2="55" y2="50" stroke="#22aa44" stroke-width="2.5"/>
+  <text x="60" y="55" font-family="serif" font-size="13" fill="#22aa44">P (principal normal)</text>
+
+  <line x1="30" y1="70" x2="55" y2="70" stroke="#2266bb" stroke-width="2.5"/>
+  <text x="60" y="75" font-family="serif" font-size="13" fill="#2266bb">B (binormal)</text>
+</svg>

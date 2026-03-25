@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <rect width="500" height="400" fill="white"/>
+
+  <text x="250" y="25" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#222">Divergence Theorem</text>
+
+  <defs>
+    <marker id="dArrR" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#cc4422"/>
+    </marker>
+    <marker id="dArrN" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#2266aa"/>
+    </marker>
+    <marker id="dArrF" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#cc7733"/>
+    </marker>
+  </defs>
+
+  <!-- Solid blob Omega (3D look with shading) -->
+  <ellipse cx="240" cy="195" rx="150" ry="120" fill="rgba(200,210,230,0.3)" stroke="none"/>
+  <path d="M 90,195 C 90,100 170,60 240,60 C 310,60 390,100 390,195 C 390,290 310,330 240,330 C 170,330 90,290 90,195 Z"
+        fill="rgba(180,200,230,0.25)" stroke="#445577" stroke-width="2"/>
+  <!-- 3D shading hint -->
+  <path d="M 130,195 C 130,230 170,260 240,260 C 310,260 350,230 350,195"
+        fill="none" stroke="#88aacc" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <path d="M 130,195 C 130,160 170,130 240,130 C 310,130 350,160 350,195"
+        fill="none" stroke="#88aacc" stroke-width="1" opacity="0.4"/>
+
+  <!-- Interior vector field F arrows spreading outward (positive divergence) -->
+  <g opacity="0.7">
+    <line x1="240" y1="195" x2="270" y2="170" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="210" y2="170" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="265" y2="220" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="215" y2="220" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="275" y2="195" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="205" y2="195" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="240" y2="165" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+    <line x1="240" y1="195" x2="240" y2="225" stroke="#cc7733" stroke-width="1.5" marker-end="url(#dArrF)"/>
+  </g>
+  <circle cx="240" cy="195" r="3" fill="#cc7733"/>
+
+  <!-- Outward normal vectors n on the surface -->
+  <!-- Top -->
+  <line x1="240" y1="60" x2="240" y2="38" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Top right -->
+  <line x1="330" y1="90" x2="348" y2="72" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Right -->
+  <line x1="390" y1="195" x2="415" y2="195" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Bottom right -->
+  <line x1="330" y1="300" x2="348" y2="318" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Bottom -->
+  <line x1="240" y1="330" x2="240" y2="352" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Bottom left -->
+  <line x1="150" y1="300" x2="132" y2="318" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Left -->
+  <line x1="90" y1="195" x2="65" y2="195" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+  <!-- Top left -->
+  <line x1="150" y1="90" x2="132" y2="72" stroke="#2266aa" stroke-width="2" marker-end="url(#dArrN)"/>
+
+  <!-- Labels -->
+  <text x="240" y="200" text-anchor="middle" font-family="serif" font-size="18" fill="#445577">&Omega;</text>
+  <text x="420" y="200" font-family="serif" font-size="14" fill="#445577">&part;&Omega;</text>
+  <text x="245" y="35" font-family="serif" font-size="12" fill="#2266aa" font-weight="bold">n&#770;</text>
+  <text x="280" y="185" font-family="serif" font-size="12" fill="#cc7733" font-style="italic">F</text>
+
+  <!-- Equation -->
+  <text x="250" y="372" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
+    &Int;&Int;&Int;<tspan font-size="11" baseline-shift="sub">&Omega;</tspan> &nabla;&middot;<tspan font-style="italic">F</tspan> <tspan font-style="italic">dV</tspan>  =  &Int;&Int;<tspan font-size="11" baseline-shift="sub">&part;&Omega;</tspan> <tspan font-style="italic">F</tspan>&middot;<tspan font-weight="bold">n&#770;</tspan> <tspan font-style="italic">dS</tspan>
+  </text>
+  <text x="250" y="395" text-anchor="middle" font-family="serif" font-size="12" fill="#888">total divergence inside = net flux through boundary</text>
+</svg>

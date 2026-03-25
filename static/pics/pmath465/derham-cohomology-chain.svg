@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250">
+  <rect width="600" height="250" fill="white"/>
+
+  <text x="300" y="25" text-anchor="middle" font-family="serif" font-size="17" font-weight="bold" fill="#222">de Rham Cohomology</text>
+
+  <defs>
+    <marker id="cArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- The chain: Omega^0 -> Omega^1 -> Omega^2 -> ... -->
+  <!-- Each Omega^k is a tall rectangle with shaded subspaces -->
+
+  <!-- Omega^0 -->
+  <g transform="translate(40, 55)">
+    <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
+    <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+      &Omega;<tspan font-size="10" baseline-shift="super">0</tspan>
+    </text>
+    <!-- ker d (closed) in blue -->
+    <rect x="5" y="5" width="60" height="80" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
+    <!-- im d (exact) in red — for 0-forms, im d = {constants} -->
+    <rect x="10" y="10" width="50" height="30" rx="3" fill="rgba(220,80,80,0.2)" stroke="#cc4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="35" y="30" text-anchor="middle" font-family="serif" font-size="9" fill="#cc4444">exact</text>
+    <text x="35" y="70" text-anchor="middle" font-family="serif" font-size="9" fill="#4477cc">closed</text>
+  </g>
+
+  <!-- Arrow d -->
+  <line x1="115" y1="115" x2="155" y2="115" stroke="#444" stroke-width="1.5" marker-end="url(#cArr)"/>
+  <text x="135" y="108" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#444">d</text>
+
+  <!-- Omega^1 -->
+  <g transform="translate(160, 55)">
+    <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
+    <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+      &Omega;<tspan font-size="10" baseline-shift="super">1</tspan>
+    </text>
+    <!-- ker d (closed) in blue -->
+    <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
+    <!-- im d (exact) in red -->
+    <rect x="10" y="10" width="50" height="40" rx="3" fill="rgba(220,80,80,0.2)" stroke="#cc4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="35" y="35" text-anchor="middle" font-family="serif" font-size="9" fill="#cc4444">exact</text>
+    <text x="35" y="72" text-anchor="middle" font-family="serif" font-size="9" fill="#4477cc">closed</text>
+
+    <!-- H^1 bracket -->
+    <line x1="72" y1="10" x2="78" y2="10" stroke="#228833" stroke-width="1.5"/>
+    <line x1="78" y1="10" x2="78" y2="90" stroke="#228833" stroke-width="1.5"/>
+    <line x1="72" y1="90" x2="78" y2="90" stroke="#228833" stroke-width="1.5"/>
+    <text x="90" y="55" text-anchor="start" font-family="serif" font-size="11" fill="#228833">
+      <tspan font-style="italic">H</tspan><tspan font-size="8" baseline-shift="super">1</tspan><tspan font-size="9" baseline-shift="sub">dR</tspan>
+    </text>
+  </g>
+
+  <!-- Arrow d -->
+  <line x1="235" y1="115" x2="275" y2="115" stroke="#444" stroke-width="1.5" marker-end="url(#cArr)"/>
+  <text x="255" y="108" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#444">d</text>
+
+  <!-- Omega^2 -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
+    <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+      &Omega;<tspan font-size="10" baseline-shift="super">2</tspan>
+    </text>
+    <!-- ker d (closed) in blue -->
+    <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
+    <!-- im d (exact) in red -->
+    <rect x="10" y="10" width="50" height="40" rx="3" fill="rgba(220,80,80,0.2)" stroke="#cc4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="35" y="35" text-anchor="middle" font-family="serif" font-size="9" fill="#cc4444">exact</text>
+    <text x="35" y="72" text-anchor="middle" font-family="serif" font-size="9" fill="#4477cc">closed</text>
+
+    <!-- H^2 bracket -->
+    <line x1="72" y1="10" x2="78" y2="10" stroke="#228833" stroke-width="1.5"/>
+    <line x1="78" y1="10" x2="78" y2="90" stroke="#228833" stroke-width="1.5"/>
+    <line x1="72" y1="90" x2="78" y2="90" stroke="#228833" stroke-width="1.5"/>
+    <text x="90" y="55" text-anchor="start" font-family="serif" font-size="11" fill="#228833">
+      <tspan font-style="italic">H</tspan><tspan font-size="8" baseline-shift="super">2</tspan><tspan font-size="9" baseline-shift="sub">dR</tspan>
+    </text>
+  </g>
+
+  <!-- Arrow d -->
+  <line x1="355" y1="115" x2="395" y2="115" stroke="#444" stroke-width="1.5" marker-end="url(#cArr)"/>
+  <text x="375" y="108" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#444">d</text>
+
+  <!-- Omega^3 ... -->
+  <g transform="translate(400, 55)">
+    <rect x="0" y="0" width="70" height="120" rx="4" fill="#f5f5f5" stroke="#555" stroke-width="1.5"/>
+    <text x="35" y="-8" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+      &Omega;<tspan font-size="10" baseline-shift="super">3</tspan>
+    </text>
+    <rect x="5" y="5" width="60" height="85" rx="3" fill="rgba(80,130,220,0.2)" stroke="#4477cc" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="10" y="10" width="50" height="40" rx="3" fill="rgba(220,80,80,0.2)" stroke="#cc4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="35" y="35" text-anchor="middle" font-family="serif" font-size="9" fill="#cc4444">exact</text>
+    <text x="35" y="72" text-anchor="middle" font-family="serif" font-size="9" fill="#4477cc">closed</text>
+  </g>
+
+  <!-- Arrow to dots -->
+  <line x1="475" y1="115" x2="510" y2="115" stroke="#444" stroke-width="1.5" marker-end="url(#cArr)"/>
+  <text x="493" y="108" text-anchor="middle" font-family="serif" font-size="14" font-style="italic" fill="#444">d</text>
+  <text x="535" y="120" text-anchor="middle" font-family="serif" font-size="20" fill="#444">...</text>
+
+  <!-- Legend -->
+  <g transform="translate(40, 200)">
+    <rect x="0" y="0" width="14" height="14" fill="rgba(80,130,220,0.3)" stroke="#4477cc" stroke-width="1"/>
+    <text x="20" y="12" font-family="serif" font-size="12" fill="#4477cc">ker <tspan font-style="italic">d</tspan> (closed forms)</text>
+
+    <rect x="170" y="0" width="14" height="14" fill="rgba(220,80,80,0.3)" stroke="#cc4444" stroke-width="1"/>
+    <text x="190" y="12" font-family="serif" font-size="12" fill="#cc4444">im <tspan font-style="italic">d</tspan> (exact forms)</text>
+  </g>
+
+  <!-- Formula -->
+  <text x="300" y="240" text-anchor="middle" font-family="serif" font-size="14" fill="#228833">
+    <tspan font-style="italic">H</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan><tspan font-size="10" baseline-shift="sub">dR</tspan>(<tspan font-style="italic">M</tspan>) = ker <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k</tspan> / im <tspan font-style="italic">d</tspan><tspan font-size="10" baseline-shift="super" font-style="italic">k&minus;1</tspan>  =  {closed <tspan font-style="italic">k</tspan>-forms} / {exact <tspan font-style="italic">k</tspan>-forms}
+  </text>
+</svg>

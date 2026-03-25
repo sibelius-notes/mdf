@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="280" viewBox="0 0 650 280">
+  <rect width="650" height="280" fill="white"/>
+
+  <!-- ===== Panel (a): K > 0 (Sphere) ===== -->
+  <rect x="10" y="5" width="200" height="270" rx="6" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="110" y="28" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#cc4444">K &gt; 0</text>
+  <text x="110" y="44" text-anchor="middle" font-family="serif" font-size="12" fill="#cc4444">positive curvature</text>
+
+  <!-- Sphere surface hint -->
+  <path d="M 30 220 Q 70 80 110 70 Q 150 80 190 220" fill="rgba(220,180,180,0.15)" stroke="#cc8888" stroke-width="1.5"/>
+
+  <!-- Two geodesics converging on sphere -->
+  <path d="M 45 210 Q 55 160 65 120 Q 75 90 95 68" fill="none" stroke="#2255cc" stroke-width="2.5"/>
+  <path d="M 85 210 Q 95 160 105 120 Q 115 90 118 72" fill="none" stroke="#2255cc" stroke-width="2.5"/>
+
+  <!-- Arrows at bottom showing initially parallel -->
+  <line x1="45" y1="230" x2="85" y2="230" stroke="#666" stroke-width="1"/>
+  <line x1="45" y1="226" x2="45" y2="234" stroke="#666" stroke-width="1"/>
+  <line x1="85" y1="226" x2="85" y2="234" stroke="#666" stroke-width="1"/>
+
+  <!-- Converging arrows -->
+  <polygon points="95,68 89,76 98,74" fill="#2255cc"/>
+  <polygon points="118,72 112,80 121,78" fill="#2255cc"/>
+
+  <text x="110" y="258" text-anchor="middle" font-family="serif" font-size="11" fill="#666">geodesics converge</text>
+
+  <!-- ===== Panel (b): K = 0 (Flat) ===== -->
+  <rect x="225" y="5" width="200" height="270" rx="6" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="325" y="28" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#448844">K = 0</text>
+  <text x="325" y="44" text-anchor="middle" font-family="serif" font-size="12" fill="#448844">zero curvature</text>
+
+  <!-- Flat surface hint -->
+  <path d="M 240 200 L 260 80 L 410 80 L 390 200 Z" fill="rgba(180,220,180,0.15)" stroke="#88cc88" stroke-width="1.5"/>
+
+  <!-- Two parallel geodesics (straight lines) -->
+  <line x1="290" y1="190" x2="290" y2="90" stroke="#2255cc" stroke-width="2.5"/>
+  <line x1="340" y1="190" x2="340" y2="90" stroke="#2255cc" stroke-width="2.5"/>
+
+  <!-- Arrows -->
+  <polygon points="290,90 286,100 294,100" fill="#2255cc"/>
+  <polygon points="340,90 336,100 344,100" fill="#2255cc"/>
+
+  <!-- Parallel indicators -->
+  <line x1="290" y1="210" x2="340" y2="210" stroke="#666" stroke-width="1"/>
+  <line x1="290" y1="206" x2="290" y2="214" stroke="#666" stroke-width="1"/>
+  <line x1="340" y1="206" x2="340" y2="214" stroke="#666" stroke-width="1"/>
+
+  <text x="325" y="258" text-anchor="middle" font-family="serif" font-size="11" fill="#666">geodesics stay parallel</text>
+
+  <!-- ===== Panel (c): K < 0 (Saddle) ===== -->
+  <rect x="440" y="5" width="200" height="270" rx="6" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="540" y="28" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#4444cc">K &lt; 0</text>
+  <text x="540" y="44" text-anchor="middle" font-family="serif" font-size="12" fill="#4444cc">negative curvature</text>
+
+  <!-- Saddle surface hint -->
+  <path d="M 460 140 Q 500 200 540 140 Q 580 80 620 140" fill="rgba(180,180,220,0.15)" stroke="#8888cc" stroke-width="1.5"/>
+  <path d="M 460 160 Q 500 100 540 160 Q 580 220 620 160" fill="rgba(180,180,220,0.1)" stroke="#8888cc" stroke-width="1"/>
+
+  <!-- Two geodesics diverging -->
+  <path d="M 520 210 Q 515 160 505 120 Q 495 90 475 65" fill="none" stroke="#2255cc" stroke-width="2.5"/>
+  <path d="M 545 210 Q 550 160 560 120 Q 570 90 590 65" fill="none" stroke="#2255cc" stroke-width="2.5"/>
+
+  <!-- Arrows -->
+  <polygon points="475,65 481,73 473,75" fill="#2255cc"/>
+  <polygon points="590,65 584,73 592,75" fill="#2255cc"/>
+
+  <!-- Initially parallel indicators -->
+  <line x1="520" y1="225" x2="545" y2="225" stroke="#666" stroke-width="1"/>
+  <line x1="520" y1="221" x2="520" y2="229" stroke="#666" stroke-width="1"/>
+  <line x1="545" y1="221" x2="545" y2="229" stroke="#666" stroke-width="1"/>
+
+  <text x="540" y="258" text-anchor="middle" font-family="serif" font-size="11" fill="#666">geodesics diverge</text>
+</svg>

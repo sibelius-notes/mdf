@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="350" viewBox="0 0 550 350">
+  <rect width="550" height="350" fill="white"/>
+  <defs>
+    <marker id="imArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0,0 L 8,3 L 0,6" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Target manifold N (larger, in background) -->
+  <ellipse cx="350" cy="175" rx="170" ry="140" fill="#f5f0ff" stroke="#333" stroke-width="2"/>
+  <text x="490" y="60" font-family="serif" font-size="22" font-style="italic" fill="#333">N</text>
+
+  <!-- Source manifold M (curve being immersed) - shown outside and mapping in -->
+  <path d="M 30,100 Q 50,170 30,240" fill="none" stroke="#4477CC" stroke-width="3"/>
+  <text x="15" y="85" font-family="serif" font-size="22" font-style="italic" fill="#4477CC">M</text>
+
+  <!-- Image of M inside N (the immersed curve) -->
+  <path d="M 250,80 Q 300,130 350,160 Q 400,190 420,250 Q 440,290 400,300"
+        fill="none" stroke="#4477CC" stroke-width="2.5"/>
+
+  <!-- F arrow from M to N -->
+  <path d="M 55,170 Q 120,140 230,130" fill="none" stroke="#333" stroke-width="2" marker-end="url(#imArr)"/>
+  <text x="130" y="125" font-family="serif" font-size="20" font-style="italic" fill="#333">F</text>
+
+  <!-- Points on M -->
+  <circle cx="30" cy="130" r="4" fill="#CC4444"/>
+  <circle cx="30" cy="200" r="4" fill="#CC4444"/>
+
+  <!-- Their images in N -->
+  <circle cx="280" cy="100" r="4" fill="#CC4444"/>
+  <circle cx="400" cy="220" r="4" fill="#CC4444"/>
+
+  <!-- Tangent lines at a point on M (1D) -->
+  <line x1="25" y1="115" x2="35" y2="145" stroke="#CC4444" stroke-width="1.5"/>
+
+  <!-- Tangent plane at image point (showing higher dim) -->
+  <line x1="265" y1="85" x2="295" y2="115" stroke="#CC4444" stroke-width="1.5"/>
+
+  <!-- Canonical form text -->
+  <text x="50" y="320" font-family="serif" font-size="14" fill="#666">(x</text>
+  <text x="64" y="324" font-family="serif" font-size="10" fill="#666" baseline-shift="super">1</text>
+  <text x="72" y="320" font-family="serif" font-size="14" fill="#666">,...,x</text>
+  <text x="112" y="324" font-family="serif" font-size="10" fill="#666" baseline-shift="super">m</text>
+  <text x="122" y="320" font-family="serif" font-size="14" fill="#666">) </text>
+  <text x="133" y="320" font-family="serif" font-size="16" fill="#666">&#x27FC;</text>
+  <text x="150" y="320" font-family="serif" font-size="14" fill="#666"> (x</text>
+  <text x="170" y="324" font-family="serif" font-size="10" fill="#666" baseline-shift="super">1</text>
+  <text x="178" y="320" font-family="serif" font-size="14" fill="#666">,...,x</text>
+  <text x="218" y="324" font-family="serif" font-size="10" fill="#666" baseline-shift="super">m</text>
+  <text x="228" y="320" font-family="serif" font-size="14" fill="#666">, 0,...,0)</text>
+
+  <!-- dim labels -->
+  <text x="15" y="270" font-family="serif" font-size="13" fill="#888">dim M = m</text>
+  <text x="400" y="335" font-family="serif" font-size="13" fill="#888">dim N = n &gt; m</text>
+</svg>

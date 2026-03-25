@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <rect width="500" height="400" fill="white"/>
+
+  <text x="250" y="25" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#222">Classical Stokes' Theorem</text>
+
+  <defs>
+    <marker id="sArr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#cc3322"/>
+    </marker>
+    <marker id="sArrB" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#2266cc"/>
+    </marker>
+    <marker id="sArrN" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#448844"/>
+    </marker>
+  </defs>
+
+  <!-- Surface Sigma as a curved cap -->
+  <path d="M 90,250 C 120,130 200,80 260,90 C 320,100 380,140 400,240"
+        fill="rgba(180,200,240,0.3)" stroke="none"/>
+  <!-- Fill the cap -->
+  <path d="M 90,250 C 120,130 200,80 260,90 C 320,100 380,140 400,240 C 350,265 300,275 250,270 C 200,265 140,260 90,250 Z"
+        fill="rgba(180,200,240,0.3)" stroke="none"/>
+
+  <!-- Surface mesh lines for 3D effect -->
+  <g stroke="#99aacc" stroke-width="0.7" opacity="0.4">
+    <path d="M 120,245 C 140,165 220,120 280,130 C 340,140 380,180 390,245" fill="none"/>
+    <path d="M 150,242 C 165,180 230,145 280,152 C 330,160 370,195 380,242" fill="none"/>
+    <path d="M 180,240 C 190,195 235,168 275,172 C 315,178 350,205 365,240" fill="none"/>
+    <!-- Vertical-ish lines -->
+    <path d="M 160,245 C 158,200 170,155 195,118" fill="none"/>
+    <path d="M 230,260 C 225,200 230,140 240,100" fill="none"/>
+    <path d="M 300,268 C 305,210 310,155 310,120" fill="none"/>
+    <path d="M 360,255 C 365,220 370,180 375,155" fill="none"/>
+  </g>
+
+  <!-- Boundary curve at the rim -->
+  <path d="M 90,250 C 140,260 200,270 250,270 C 300,270 350,262 400,240"
+        fill="none" stroke="#2266cc" stroke-width="2.5"/>
+  <!-- Close the rim with a slight dip to show perspective -->
+  <path d="M 90,250 C 130,275 200,285 250,283 C 300,281 360,270 400,240"
+        fill="none" stroke="#2266cc" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Boundary arrows (tangent F field along boundary) -->
+  <line x1="120" y1="256" x2="145" y2="260" stroke="#2266cc" stroke-width="2" marker-end="url(#sArrB)"/>
+  <line x1="200" y1="268" x2="225" y2="270" stroke="#2266cc" stroke-width="2" marker-end="url(#sArrB)"/>
+  <line x1="300" y1="269" x2="325" y2="266" stroke="#2266cc" stroke-width="2" marker-end="url(#sArrB)"/>
+  <line x1="370" y1="252" x2="388" y2="244" stroke="#2266cc" stroke-width="2" marker-end="url(#sArrB)"/>
+
+  <!-- Normal vectors on the surface -->
+  <line x1="170" y1="210" x2="155" y2="170" stroke="#448844" stroke-width="1.8" marker-end="url(#sArrN)"/>
+  <line x1="240" y1="175" x2="230" y2="132" stroke="#448844" stroke-width="1.8" marker-end="url(#sArrN)"/>
+  <line x1="310" y1="185" x2="305" y2="142" stroke="#448844" stroke-width="1.8" marker-end="url(#sArrN)"/>
+  <line x1="360" y1="215" x2="360" y2="175" stroke="#448844" stroke-width="1.8" marker-end="url(#sArrN)"/>
+
+  <!-- Curl F arrows through the surface -->
+  <line x1="200" y1="230" x2="185" y2="185" stroke="#cc3322" stroke-width="1.8" marker-end="url(#sArr)"/>
+  <line x1="275" y1="210" x2="265" y2="165" stroke="#cc3322" stroke-width="1.8" marker-end="url(#sArr)"/>
+  <line x1="340" y1="225" x2="335" y2="185" stroke="#cc3322" stroke-width="1.8" marker-end="url(#sArr)"/>
+
+  <!-- Labels -->
+  <text x="250" y="55" text-anchor="middle" font-family="serif" font-size="16" fill="#555">&Sigma;</text>
+  <text x="75" y="245" font-family="serif" font-size="14" fill="#2266cc">&part;&Sigma;</text>
+  <text x="140" y="162" font-family="serif" font-size="12" fill="#448844" font-weight="bold">n&#770;</text>
+  <text x="165" y="185" font-family="serif" font-size="12" fill="#cc3322">&nabla;&times;<tspan font-style="italic" font-weight="normal">F</tspan></text>
+  <text x="120" y="290" font-family="serif" font-size="12" fill="#2266cc" font-style="italic">F</text>
+
+  <!-- Equation -->
+  <text x="250" y="340" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
+    &Int;&Int;<tspan font-size="11" baseline-shift="sub">&Sigma;</tspan> (&nabla;&times;<tspan font-style="italic">F</tspan>)&middot;<tspan font-style="italic">d</tspan><tspan font-weight="bold">S</tspan>  =  &oint;<tspan font-size="11" baseline-shift="sub">&part;&Sigma;</tspan> <tspan font-style="italic">F</tspan>&middot;<tspan font-style="italic">d</tspan><tspan font-weight="bold">r</tspan>
+  </text>
+  <text x="250" y="365" text-anchor="middle" font-family="serif" font-size="12" fill="#888">flux of curl through surface = circulation around boundary</text>
+</svg>

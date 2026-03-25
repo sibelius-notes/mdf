@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 350" width="450" height="350">
+  <rect width="450" height="350" fill="white"/>
+
+  <text x="225" y="28" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#222">Interior Product (Contraction)</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#cc3322"/>
+    </marker>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2255aa"/>
+    </marker>
+  </defs>
+
+  <!-- 2-form omega as oriented parallelogram -->
+  <g transform="translate(60, 100)">
+    <polygon points="0,80 60,20 150,40 90,100" fill="rgba(100,120,200,0.2)" stroke="#3355aa" stroke-width="2"/>
+    <!-- Orientation arrow -->
+    <path d="M 65,55 A 15,15 0 1,1 85,55" fill="none" stroke="#3355aa" stroke-width="1.5"/>
+    <polygon points="85,55 82,48 89,50" fill="#3355aa"/>
+    <text x="75" y="115" text-anchor="middle" font-family="serif" font-size="16" font-style="italic" fill="#3355aa">&omega;</text>
+    <text x="75" y="133" text-anchor="middle" font-family="serif" font-size="12" fill="#666">(2-form)</text>
+  </g>
+
+  <!-- Vector X being inserted -->
+  <g transform="translate(120, 130)">
+    <line x1="80" y1="50" x2="25" y2="15" stroke="#cc3322" stroke-width="2.5" marker-end="url(#arr)"/>
+    <text x="90" y="60" font-family="serif" font-size="16" font-style="italic" fill="#cc3322">X</text>
+    <text x="90" y="78" font-family="serif" font-size="12" fill="#888">(vector)</text>
+  </g>
+
+  <!-- Big arrow showing the operation -->
+  <g transform="translate(225, 135)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#555" stroke-width="2.5"/>
+    <polygon points="50,0 42,-5 42,5" fill="#555"/>
+    <text x="25" y="-12" text-anchor="middle" font-family="serif" font-size="13" fill="#555">insert</text>
+  </g>
+
+  <!-- Result: 1-form as stacked lines -->
+  <g transform="translate(295, 85)">
+    <!-- Stack of hyperplane lines representing the 1-form -->
+    <line x1="0" y1="20" x2="100" y2="10" stroke="#2255aa" stroke-width="1.8"/>
+    <line x1="0" y1="40" x2="100" y2="30" stroke="#2255aa" stroke-width="1.8"/>
+    <line x1="0" y1="60" x2="100" y2="50" stroke="#2255aa" stroke-width="1.8"/>
+    <line x1="0" y1="80" x2="100" y2="70" stroke="#2255aa" stroke-width="1.8"/>
+    <line x1="0" y1="100" x2="100" y2="90" stroke="#2255aa" stroke-width="1.8"/>
+
+    <!-- Small arrows perpendicular to lines -->
+    <line x1="50" y1="25" x2="50" y2="42" stroke="#2255aa" stroke-width="1.2" marker-end="url(#arrB)"/>
+
+    <text x="50" y="120" text-anchor="middle" font-family="serif" font-size="15" fill="#2255aa">
+      <tspan font-style="italic">&iota;</tspan><tspan font-size="11" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic"> &omega;</tspan>
+    </text>
+    <text x="50" y="138" text-anchor="middle" font-family="serif" font-size="12" fill="#666">(1-form)</text>
+  </g>
+
+  <!-- Explanation -->
+  <text x="225" y="270" text-anchor="middle" font-family="serif" font-size="14" fill="#333">
+    <tspan font-style="italic">&iota;</tspan><tspan font-size="10" baseline-shift="sub" font-style="italic">X</tspan> : &Omega;<tspan font-size="10" baseline-shift="super">k</tspan>(<tspan font-style="italic">M</tspan>) &rarr; &Omega;<tspan font-size="10" baseline-shift="super">k&minus;1</tspan>(<tspan font-style="italic">M</tspan>)
+  </text>
+  <text x="225" y="295" text-anchor="middle" font-family="serif" font-size="13" fill="#555">
+    (<tspan font-style="italic">&iota;</tspan><tspan font-size="9" baseline-shift="sub" font-style="italic">X</tspan><tspan font-style="italic">&omega;</tspan>)(<tspan font-style="italic">Y</tspan>) = <tspan font-style="italic">&omega;</tspan>(<tspan font-style="italic">X</tspan>, <tspan font-style="italic">Y</tspan>)
+  </text>
+  <text x="225" y="320" text-anchor="middle" font-family="serif" font-size="13" fill="#888">"plug <tspan font-style="italic">X</tspan> into the first slot"</text>
+</svg>

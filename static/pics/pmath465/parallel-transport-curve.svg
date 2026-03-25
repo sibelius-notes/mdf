@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <rect width="500" height="400" fill="white"/>
+
+  <!-- Sphere -->
+  <circle cx="250" cy="200" r="150" fill="rgba(210,220,235,0.3)" stroke="#888" stroke-width="2"/>
+
+  <!-- Equator (ellipse for 3D effect) -->
+  <ellipse cx="250" cy="200" rx="150" ry="35" fill="none" stroke="#bbb" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- Meridian -->
+  <ellipse cx="250" cy="200" rx="35" ry="150" fill="none" stroke="#bbb" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- Curve gamma on the sphere (a great-circle arc from top-left down to right) -->
+  <path d="M 160 90 Q 140 140 150 180 Q 165 230 220 270 Q 280 310 350 280" fill="none" stroke="#cc6600" stroke-width="2.5"/>
+  <text x="130" y="80" font-family="serif" font-size="16" font-style="italic" fill="#cc6600">&#x03B3;</text>
+
+  <!-- Position 1: vector at start of curve -->
+  <circle cx="160" cy="90" r="3" fill="#333"/>
+  <line x1="160" y1="90" x2="195" y2="80" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="195,80 187,84 188,76" fill="#2255cc"/>
+
+  <!-- Position 2 -->
+  <circle cx="147" cy="145" r="3" fill="#333"/>
+  <line x1="147" y1="145" x2="182" y2="138" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="182,138 174,142 175,134" fill="#2255cc"/>
+
+  <!-- Position 3 -->
+  <circle cx="155" cy="200" r="3" fill="#333"/>
+  <line x1="155" y1="200" x2="188" y2="198" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="188,198 180,202 181,194" fill="#2255cc"/>
+
+  <!-- Position 4 -->
+  <circle cx="195" cy="252" r="3" fill="#333"/>
+  <line x1="195" y1="252" x2="225" y2="258" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="225,258 216,259 218,252" fill="#2255cc"/>
+
+  <!-- Position 5: vector at end of curve -->
+  <circle cx="280" cy="290" r="3" fill="#333"/>
+  <line x1="280" y1="290" x2="310" y2="300" stroke="#2255cc" stroke-width="2.5"/>
+  <polygon points="310,300 301,299 304,293" fill="#2255cc"/>
+
+  <!-- End point -->
+  <circle cx="350" cy="280" r="3" fill="#333"/>
+
+  <!-- V(t) label -->
+  <text x="400" y="150" font-family="serif" font-size="15" font-style="italic" fill="#2255cc">V</text>
+  <text x="411" y="155" font-family="serif" font-size="11" fill="#2255cc">(</text>
+  <text x="416" y="155" font-family="serif" font-size="11" font-style="italic" fill="#2255cc">t</text>
+  <text x="423" y="155" font-family="serif" font-size="11" fill="#2255cc">)</text>
+  <line x1="395" y1="155" x2="315" y2="200" stroke="#2255cc" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- Note about rotation -->
+  <text x="410" y="240" font-family="serif" font-size="11" fill="#666">vectors appear</text>
+  <text x="410" y="254" font-family="serif" font-size="11" fill="#666">to rotate in &#x211D;&#xB3;</text>
+  <text x="410" y="268" font-family="serif" font-size="11" fill="#666">but are parallel</text>
+  <text x="410" y="282" font-family="serif" font-size="11" fill="#666">intrinsically</text>
+
+  <!-- Bottom label box -->
+  <rect x="80" y="345" width="340" height="45" rx="8" fill="#f8f8f4" stroke="#999" stroke-width="1"/>
+  <text x="250" y="370" text-anchor="middle" font-family="serif" font-size="15" fill="#333">
+    &#x2207;<tspan font-size="10" dy="3" font-style="italic">&#x03B3;'</tspan><tspan dy="-3" font-style="italic"> V</tspan> = 0    (parallel transport equation)
+  </text>
+  <text x="250" y="385" text-anchor="middle" font-family="serif" font-size="11" fill="#888">on a sphere (Levi-Civita connection)</text>
+</svg>

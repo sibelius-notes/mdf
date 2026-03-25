@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="350" viewBox="0 0 550 350">
+  <rect width="550" height="350" fill="white"/>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#333">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#228B22">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#CC0000">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="275" y="28" font-family="serif" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Theorema Egregium</text>
+  <text x="275" y="50" font-family="serif" font-size="14" fill="#666" text-anchor="middle" font-style="italic">Isometries preserve Gaussian curvature</text>
+
+  <!-- (1) Flat sheet -->
+  <g transform="translate(85, 155)">
+    <!-- Flat rectangle with grid -->
+    <rect x="-60" y="-50" width="120" height="90" fill="rgba(200,200,255,0.2)" stroke="#4169E1" stroke-width="2"/>
+    <!-- Grid -->
+    <line x1="-20" y1="-50" x2="-20" y2="40" stroke="rgba(65,105,225,0.25)" stroke-width="1"/>
+    <line x1="20" y1="-50" x2="20" y2="40" stroke="rgba(65,105,225,0.25)" stroke-width="1"/>
+    <line x1="-60" y1="-15" x2="60" y2="-15" stroke="rgba(65,105,225,0.25)" stroke-width="1"/>
+    <line x1="-60" y1="15" x2="60" y2="15" stroke="rgba(65,105,225,0.25)" stroke-width="1"/>
+
+    <text x="0" y="65" font-family="serif" font-size="14" fill="#4169E1" text-anchor="middle" font-weight="bold">flat sheet</text>
+    <text x="0" y="82" font-family="serif" font-size="14" fill="#333" text-anchor="middle">K = 0</text>
+  </g>
+
+  <!-- Arrow: bending (no stretching) to cylinder -->
+  <g>
+    <path d="M 155,140 C 175,125 195,125 215,140" fill="none" stroke="#228B22" stroke-width="2" marker-end="url(#arrGreen)"/>
+    <text x="168" y="118" font-family="serif" font-size="11" fill="#228B22" font-weight="bold">bend</text>
+  </g>
+
+  <!-- (2) Cylinder -->
+  <g transform="translate(275, 155)">
+    <!-- Cylinder -->
+    <ellipse cx="0" cy="-50" rx="40" ry="12" fill="rgba(144,238,144,0.15)" stroke="#228B22" stroke-width="2"/>
+    <line x1="-40" y1="-50" x2="-40" y2="40" stroke="#228B22" stroke-width="2"/>
+    <line x1="40" y1="-50" x2="40" y2="40" stroke="#228B22" stroke-width="2"/>
+    <path d="M -40,40 C -40,52 -22,60 0,60 C 22,60 40,52 40,40" fill="none" stroke="#228B22" stroke-width="2"/>
+    <path d="M -40,40 C -40,28 -22,20 0,20 C 22,20 40,28 40,40" fill="none" stroke="#228B22" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Grid lines on cylinder -->
+    <path d="M -40,-15 C -40,-3 -22,5 0,5 C 22,5 40,-3 40,-15" fill="none" stroke="rgba(34,139,34,0.25)" stroke-width="1"/>
+    <line x1="-15" y1="-42" x2="-15" y2="55" stroke="rgba(34,139,34,0.25)" stroke-width="1"/>
+    <line x1="15" y1="-42" x2="15" y2="55" stroke="rgba(34,139,34,0.25)" stroke-width="1"/>
+
+    <text x="0" y="80" font-family="serif" font-size="14" fill="#228B22" text-anchor="middle" font-weight="bold">cylinder</text>
+    <text x="0" y="97" font-family="serif" font-size="14" fill="#333" text-anchor="middle">K = 0</text>
+  </g>
+
+  <!-- Arrow: stretching required to sphere -->
+  <g>
+    <path d="M 345,140 C 365,125 385,125 405,140" fill="none" stroke="#CC0000" stroke-width="2" marker-end="url(#arrRed)"/>
+    <text x="352" y="118" font-family="serif" font-size="11" fill="#CC0000" font-weight="bold">stretch</text>
+  </g>
+
+  <!-- (3) Sphere -->
+  <g transform="translate(465, 150)">
+    <circle cx="0" cy="0" r="55" fill="rgba(255,200,200,0.15)" stroke="#CC0000" stroke-width="2.5"/>
+    <ellipse cx="0" cy="0" rx="55" ry="14" fill="none" stroke="rgba(200,0,0,0.25)" stroke-width="1"/>
+    <ellipse cx="0" cy="0" rx="14" ry="55" fill="none" stroke="rgba(200,0,0,0.25)" stroke-width="1"/>
+
+    <!-- Stretch/tear marks -->
+    <line x1="30" y1="-35" x2="38" y2="-43" stroke="#CC0000" stroke-width="1.5"/>
+    <line x1="-30" y1="35" x2="-38" y2="43" stroke="#CC0000" stroke-width="1.5"/>
+
+    <text x="0" y="80" font-family="serif" font-size="14" fill="#CC0000" text-anchor="middle" font-weight="bold">sphere</text>
+    <text x="0" y="97" font-family="serif" font-size="14" fill="#333" text-anchor="middle">K &gt; 0</text>
+  </g>
+
+  <!-- Explanation boxes -->
+  <g transform="translate(275, 285)">
+    <rect x="-245" y="0" width="200" height="40" rx="6" fill="rgba(144,238,144,0.15)" stroke="#228B22" stroke-width="1.5"/>
+    <text x="-145" y="16" font-family="serif" font-size="12" fill="#228B22" text-anchor="middle" font-weight="bold">Bending without stretching:</text>
+    <text x="-145" y="32" font-family="serif" font-size="12" fill="#333" text-anchor="middle">K unchanged (isometry)</text>
+  </g>
+  <g transform="translate(275, 285)">
+    <rect x="55" y="0" width="200" height="40" rx="6" fill="rgba(255,200,200,0.2)" stroke="#CC0000" stroke-width="1.5"/>
+    <text x="155" y="16" font-family="serif" font-size="12" fill="#CC0000" text-anchor="middle" font-weight="bold">Stretching required:</text>
+    <text x="155" y="32" font-family="serif" font-size="12" fill="#333" text-anchor="middle">K changes (not an isometry)</text>
+  </g>
+
+  <!-- Check and X marks -->
+  <text x="185" y="165" font-family="sans-serif" font-size="22" fill="#228B22" font-weight="bold">&#x2713;</text>
+  <text x="375" y="165" font-family="sans-serif" font-size="22" fill="#CC0000" font-weight="bold">&#x2717;</text>
+</svg>

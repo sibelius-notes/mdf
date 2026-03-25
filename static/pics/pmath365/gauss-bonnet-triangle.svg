@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="400" viewBox="0 0 550 400">
+  <rect width="550" height="400" fill="white"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#333">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="275" y="28" font-family="serif" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Gauss-Bonnet for a Geodesic Triangle</text>
+
+  <!-- Sphere -->
+  <g transform="translate(190, 210)">
+    <!-- Sphere -->
+    <circle cx="0" cy="0" r="130" fill="rgba(100,149,237,0.08)" stroke="#4169E1" stroke-width="2"/>
+
+    <!-- Equator -->
+    <ellipse cx="0" cy="0" rx="130" ry="30" fill="none" stroke="rgba(65,105,225,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Geodesic triangle on sphere (three great circle arcs) -->
+    <!-- Side 1: bottom-left to bottom-right -->
+    <path d="M -60,50 C -30,80 30,80 60,50" fill="none" stroke="#CC0000" stroke-width="2.5"/>
+
+    <!-- Side 2: bottom-right to top -->
+    <path d="M 60,50 C 75,10 50,-50 10,-80" fill="none" stroke="#CC0000" stroke-width="2.5"/>
+
+    <!-- Side 3: top to bottom-left -->
+    <path d="M 10,-80 C -30,-55 -65,-10 -60,50" fill="none" stroke="#CC0000" stroke-width="2.5"/>
+
+    <!-- Shaded triangle region -->
+    <path d="M -60,50 C -30,80 30,80 60,50 C 75,10 50,-50 10,-80 C -30,-55 -65,-10 -60,50 Z" fill="rgba(255,100,100,0.15)" stroke="none"/>
+
+    <!-- Vertices -->
+    <circle cx="-60" cy="50" r="4" fill="#C00"/>
+    <circle cx="60" cy="50" r="4" fill="#C00"/>
+    <circle cx="10" cy="-80" r="4" fill="#C00"/>
+
+    <!-- Angle arcs -->
+    <!-- alpha_1 at bottom-left -->
+    <path d="M -48,42 C -45,50 -50,55 -55,48" fill="none" stroke="#006600" stroke-width="1.5"/>
+    <text x="-85" y="42" font-family="serif" font-size="15" fill="#006600" font-style="italic">&alpha;</text>
+    <text x="-74" y="47" font-family="serif" font-size="11" fill="#006600">1</text>
+
+    <!-- alpha_2 at bottom-right -->
+    <path d="M 52,42 C 50,50 55,55 60,48" fill="none" stroke="#006600" stroke-width="1.5"/>
+    <text x="70" y="42" font-family="serif" font-size="15" fill="#006600" font-style="italic">&alpha;</text>
+    <text x="81" y="47" font-family="serif" font-size="11" fill="#006600">2</text>
+
+    <!-- alpha_3 at top -->
+    <path d="M 5,-68 C 12,-72 15,-75 8,-78" fill="none" stroke="#006600" stroke-width="1.5"/>
+    <text x="20" y="-75" font-family="serif" font-size="15" fill="#006600" font-style="italic">&alpha;</text>
+    <text x="31" y="-70" font-family="serif" font-size="11" fill="#006600">3</text>
+
+    <!-- Region R label -->
+    <text x="-5" y="15" font-family="serif" font-size="18" fill="#CC0000" font-style="italic" font-weight="bold">R</text>
+  </g>
+
+  <!-- Angular excess formula box -->
+  <g transform="translate(345, 80)">
+    <rect x="0" y="0" width="195" height="115" rx="8" fill="rgba(255,255,240,0.95)" stroke="#999" stroke-width="1"/>
+    <text x="10" y="25" font-family="serif" font-size="14" fill="#333" font-weight="bold">Angular excess:</text>
+    <text x="15" y="52" font-family="serif" font-size="15" fill="#333">&alpha;</text>
+    <text x="25" y="57" font-family="serif" font-size="11" fill="#333">1</text>
+    <text x="33" y="52" font-family="serif" font-size="15" fill="#333"> + &alpha;</text>
+    <text x="62" y="57" font-family="serif" font-size="11" fill="#333">2</text>
+    <text x="70" y="52" font-family="serif" font-size="15" fill="#333"> + &alpha;</text>
+    <text x="99" y="57" font-family="serif" font-size="11" fill="#333">3</text>
+    <text x="108" y="52" font-family="serif" font-size="15" fill="#333"> &gt; &pi;</text>
+
+    <text x="15" y="80" font-family="serif" font-size="14" fill="#333">&Sigma; &alpha;</text>
+    <text x="38" y="85" font-family="serif" font-size="10" fill="#333">j</text>
+    <text x="47" y="80" font-family="serif" font-size="14" fill="#333"> &minus; &pi; = </text>
+    <text x="90" y="80" font-family="serif" font-size="14" fill="#4169E1" font-weight="bold">&int;&int;</text>
+    <text x="110" y="85" font-family="serif" font-size="10" fill="#4169E1">R</text>
+    <text x="120" y="80" font-family="serif" font-size="14" fill="#4169E1" font-weight="bold"> K dA</text>
+
+    <text x="15" y="105" font-family="serif" font-size="12" fill="#666">(K &gt; 0 on sphere)</text>
+  </g>
+
+  <!-- Full Gauss-Bonnet formula -->
+  <g transform="translate(275, 365)">
+    <text x="0" y="0" font-family="serif" font-size="15" fill="#222" text-anchor="middle" font-weight="bold">&int;&int;</text>
+    <text x="15" y="5" font-family="serif" font-size="10" fill="#222">R</text>
+    <text x="25" y="0" font-family="serif" font-size="15" fill="#222" font-weight="bold"> K dA + &Sigma; &int; k</text>
+    <text x="100" y="5" font-family="serif" font-size="10" fill="#222">g</text>
+    <text x="110" y="0" font-family="serif" font-size="15" fill="#222" font-weight="bold"> ds + &Sigma; &epsilon;</text>
+    <text x="172" y="5" font-family="serif" font-size="10" fill="#222">j</text>
+    <text x="183" y="0" font-family="serif" font-size="15" fill="#222" font-weight="bold"> = 2&pi;</text>
+  </g>
+
+  <!-- Note about geodesic sides -->
+  <text x="275" y="390" font-family="serif" font-size="12" fill="#666" text-anchor="middle">(for geodesic sides: k</text>
+  <text x="332" y="395" font-family="serif" font-size="9" fill="#666">g</text>
+  <text x="340" y="390" font-family="serif" font-size="12" fill="#666"> = 0, so &int; k</text>
+  <text x="386" y="395" font-family="serif" font-size="9" fill="#666">g</text>
+  <text x="394" y="390" font-family="serif" font-size="12" fill="#666"> ds = 0)</text>
+</svg>

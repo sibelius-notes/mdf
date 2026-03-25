@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      text { font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', Georgia, serif; }
+    </style>
+    <!-- Clipping for back half of sphere -->
+    <clipPath id="sphere-clip">
+      <ellipse cx="250" cy="260" rx="160" ry="160"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="white"/>
+
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">Parallel Transport on S²</text>
+
+  <!-- Sphere outline -->
+  <ellipse cx="250" cy="260" rx="160" ry="160" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Sphere shading - subtle gradient feel -->
+  <ellipse cx="250" cy="260" rx="160" ry="160" fill="#e8f0ff" opacity="0.4"/>
+
+  <!-- Back latitude lines (dashed) -->
+  <!-- Equator back half -->
+  <path d="M 90,260 Q 250,330 410,260" fill="none" stroke="#bbb" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- Latitude 45 back half -->
+  <path d="M 137,155 Q 250,200 363,155" fill="none" stroke="#ccc" stroke-width="0.6" stroke-dasharray="3,3"/>
+
+  <!-- Front latitude lines -->
+  <!-- Equator front half -->
+  <path d="M 90,260 Q 250,190 410,260" fill="none" stroke="#999" stroke-width="1"/>
+
+  <!-- Latitude ~30 degrees -->
+  <path d="M 137,155 Q 250,115 363,155" fill="none" stroke="#ccc" stroke-width="0.6"/>
+
+  <!-- Back meridian (dashed) - 0 degrees -->
+  <path d="M 250,100 Q 200,260 250,420" fill="none" stroke="#ccc" stroke-width="0.6" stroke-dasharray="3,3"/>
+
+  <!-- Front meridian - 0 degrees -->
+  <path d="M 250,100 Q 300,260 250,420" fill="none" stroke="#ccc" stroke-width="0.6"/>
+
+  <!-- Back meridian (dashed) - 90 degrees -->
+  <path d="M 250,100 Q 120,200 90,260" fill="none" stroke="#ccc" stroke-width="0.6" stroke-dasharray="3,3"/>
+
+  <!-- === TRIANGULAR PATH on the sphere === -->
+
+  <!-- Leg 1: North pole down meridian A to equator (front-facing meridian, right side) -->
+  <path d="M 250,100 Q 310,170 370,240 Q 395,265 410,260"
+        fill="none" stroke="#2255cc" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Leg 2: Along equator 90 degrees (front arc from right to front-center) -->
+  <path d="M 410,260 Q 370,230 250,220 Q 200,218 170,228"
+        fill="none" stroke="#2255cc" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Small arrow on equator path -->
+  <polygon points="185,225 170,228 178,237" fill="#2255cc"/>
+
+  <!-- Leg 3: Back up meridian B to north pole -->
+  <path d="M 170,228 Q 160,200 180,160 Q 210,120 250,100"
+        fill="none" stroke="#2255cc" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Arrow on leg 3 near top -->
+  <polygon points="225,112 250,100 238,118" fill="#2255cc"/>
+
+  <!-- North pole point -->
+  <circle cx="250" cy="100" r="4" fill="#222"/>
+  <text x="258" y="88" font-size="13" fill="#222">N</text>
+
+  <!-- === TANGENT VECTORS along the path === -->
+
+  <!-- Vector style: red for transported vector -->
+
+  <!-- V0: Initial vector at north pole (pointing "east" in tangent plane, say rightward) -->
+  <line x1="250" y1="100" x2="290" y2="100" stroke="#cc2222" stroke-width="2.5"/>
+  <polygon points="290,100 282,95 282,105" fill="#cc2222"/>
+  <text x="293" y="96" font-size="11" fill="#cc2222" font-style="italic">v₀</text>
+
+  <!-- V1: Vector partway down meridian A (still pointing "east" = tangent to latitude) -->
+  <line x1="340" y1="175" x2="365" y2="148" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <polygon points="365,148 355,149 360,158" fill="#cc2222" opacity="0.8"/>
+
+  <!-- V2: Vector at equator on meridian A (pointing along equator direction after transport) -->
+  <line x1="405" y1="257" x2="405" y2="220" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <polygon points="405,220 400,228 410,228" fill="#cc2222" opacity="0.8"/>
+
+  <!-- V3: Vector along equator midway (still pointing "north" after transport along equator) -->
+  <line x1="300" y1="222" x2="300" y2="185" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <polygon points="300,185 295,193 305,193" fill="#cc2222" opacity="0.8"/>
+
+  <!-- V4: Vector at equator on meridian B -->
+  <line x1="172" y1="228" x2="172" y2="192" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <polygon points="172,192 167,200 177,200" fill="#cc2222" opacity="0.8"/>
+
+  <!-- V5: Vector partway up meridian B (rotating as transported) -->
+  <line x1="195" y1="148" x2="220" y2="130" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <polygon points="220,130 212,130 215,139" fill="#cc2222" opacity="0.8"/>
+
+  <!-- V6: Final vector at north pole (rotated 90 degrees from initial!) -->
+  <line x1="250" y1="100" x2="250" y2="62" stroke="#e64400" stroke-width="2.5"/>
+  <polygon points="250,62 245,70 255,70" fill="#e64400"/>
+  <text x="255" y="60" font-size="11" fill="#e64400" font-style="italic">v₁</text>
+
+  <!-- Holonomy angle arc between v0 and v6 -->
+  <path d="M 275,100 A 25,25 0 0 0 250,75" fill="none" stroke="#e64400" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Holonomy angle label -->
+  <text x="278" y="82" font-size="12" fill="#e64400" font-style="italic">90°</text>
+
+  <!-- Labels -->
+  <text x="250" y="460" text-anchor="middle" font-size="15" fill="#2255cc" font-weight="bold">Parallel Transport</text>
+
+  <!-- Holonomy label with arrow -->
+  <text x="355" y="80" font-size="13" fill="#e64400" font-style="italic">holonomy angle</text>
+  <line x1="340" y1="82" x2="285" y2="86" stroke="#e64400" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Path label -->
+  <text x="420" y="200" font-size="11" fill="#2255cc">meridian</text>
+  <text x="290" y="210" font-size="11" fill="#2255cc">equator</text>
+
+  <!-- Explanatory note -->
+  <text x="250" y="485" text-anchor="middle" font-size="11" fill="#666">
+    A vector parallel-transported around a closed loop rotates by the enclosed solid angle.
+  </text>
+</svg>

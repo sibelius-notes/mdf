@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="400" viewBox="0 0 550 400">
+  <rect width="550" height="400" fill="white"/>
+  <defs>
+    <marker id="stArrow" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#2266AA"/>
+    </marker>
+    <marker id="stArrowG" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#228B22"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="275" y="28" font-family="serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">Stokes's Theorem</text>
+
+  <!-- Surface M (cap/dome shape) -->
+  <path d="M 120,250 Q 130,140 200,100 Q 275,60 350,100 Q 420,140 430,250" fill="#dde8f8" fill-opacity="0.5" stroke="#333" stroke-width="2"/>
+
+  <!-- Cross-hatching / form dω on M -->
+  <line x1="200" y1="150" x2="220" y2="130" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="240" y1="140" x2="260" y2="120" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="280" y1="130" x2="300" y2="110" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="320" y1="140" x2="340" y2="120" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="220" y1="180" x2="240" y2="160" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="270" y1="170" x2="290" y2="150" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="320" y1="180" x2="340" y2="160" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="210" x2="220" y2="190" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="260" y1="200" x2="280" y2="180" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+  <line x1="340" y1="210" x2="360" y2="190" stroke="#6688BB" stroke-width="1" opacity="0.4"/>
+
+  <!-- Label M -->
+  <text x="275" y="200" font-family="serif" font-style="italic" font-size="24" fill="#333" text-anchor="middle">M</text>
+
+  <!-- Label dω on M -->
+  <text x="340" y="170" font-family="serif" font-style="italic" font-size="16" fill="#2266AA">d&#x03C9;</text>
+
+  <!-- Boundary ∂M (elliptical curve at the base) -->
+  <ellipse cx="275" cy="250" rx="155" ry="25" fill="none" stroke="#228B22" stroke-width="2.5"/>
+
+  <!-- Orientation arrows on boundary (counterclockwise when viewed from above) -->
+  <!-- Bottom of ellipse going right -->
+  <line x1="240" y1="273" x2="270" y2="275" stroke="#228B22" stroke-width="2.5" marker-end="url(#stArrowG)"/>
+  <!-- Right side going up -->
+  <line x1="420" y1="255" x2="425" y2="245" stroke="#228B22" stroke-width="2.5" marker-end="url(#stArrowG)"/>
+  <!-- Top of ellipse going left -->
+  <line x1="310" y1="226" x2="280" y2="225" stroke="#228B22" stroke-width="2.5" marker-end="url(#stArrowG)"/>
+  <!-- Left side going down -->
+  <line x1="125" y1="240" x2="122" y2="255" stroke="#228B22" stroke-width="2.5" marker-end="url(#stArrowG)"/>
+
+  <!-- Label ∂M -->
+  <text x="448" y="260" font-family="serif" font-size="18" fill="#228B22">&#x2202;M</text>
+
+  <!-- ω label on boundary -->
+  <text x="145" y="285" font-family="serif" font-style="italic" font-size="16" fill="#228B22">&#x03C9;</text>
+
+  <!-- Orientation indicator on surface (upward normal) -->
+  <line x1="275" y1="140" x2="275" y2="85" stroke="#2266AA" stroke-width="2" marker-end="url(#stArrow)"/>
+  <text x="282" y="82" font-family="serif" font-style="italic" font-size="14" fill="#2266AA">n</text>
+
+  <!-- The theorem equation -->
+  <rect x="100" y="310" width="350" height="50" rx="8" fill="#f5f5f0" stroke="#ccc" stroke-width="1"/>
+  <text x="275" y="342" font-family="serif" font-size="20" fill="#333" text-anchor="middle">
+    <tspan>&#x222B;</tspan>
+    <tspan font-size="13" dy="5">M</tspan>
+    <tspan dy="-5"> d&#x03C9; = </tspan>
+    <tspan>&#x222B;</tspan>
+    <tspan font-size="13" dy="5">&#x2202;M</tspan>
+    <tspan dy="-5"> &#x03C9;</tspan>
+  </text>
+
+  <!-- Compact oriented note -->
+  <text x="275" y="383" font-family="serif" font-size="13" fill="#666" text-anchor="middle">M compact oriented manifold with boundary, &#x03C9; a (k-1)-form</text>
+</svg>

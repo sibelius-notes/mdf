@@ -17,6 +17,8 @@ A **parametrized curve** in \(\mathbb{R}^n\) is a continuous map \(\alpha : I \s
 
 The tangent vector \(\alpha'(a)\) exists at any point where \(\alpha\) is differentiable, and regularity guarantees this tangent vector is always nonzero. A curve that fails regularity may cross itself or have corners: the curve \(\alpha(t) = (t, |t|)\) has no derivative at \(t=0\), the curve \(\beta(t) = (t^3, t^2)\) has \(\beta'(0) = 0\), and the curve \(\gamma(t) = (t, t^2 \sin(1/t))\) for \(t \neq 0\) with \(\gamma(0)=0\) is differentiable but not \(C^1\).
 
+![A regular curve with tangent vectors shown at several points, illustrating that the tangent vector is always nonzero](/pics/pmath365/regular-curve.svg)
+
 Regularity is a mild and very useful condition: it prevents cusps and ensures the curve has a well-defined tangent line at every point. The following theorem shows that regularity also forces the curve to be locally injective — it cannot immediately fold back on itself.
 
 **Theorem 1.3** (Local Injectivity): Every regular curve in \(\mathbb{R}^n\) is locally injective.
@@ -49,6 +51,8 @@ A **reparametrization** of \(\alpha\) is a curve \(\beta(s) = \alpha(t(s))\) whe
 
 *Proof.* Fix \(a \in I\) and define \(s(t) = \int_a^t |\alpha'(r)|\, dr\). Then \(s'(t) = |\alpha'(t)| > 0\), so \(s\) is regular and strictly increasing. Its inverse satisfies \(t'(s) = 1/|\alpha'(t)|\), and the reparametrized curve \(\beta(s) = \alpha(t(s))\) has \(|\beta'(s)| = |\alpha'(t(s))| \cdot t'(s) = 1\). \(\square\)
 
+![A curve reparametrized by arclength, with equally spaced points showing unit-speed traversal](/pics/pmath365/arclength-parametrization.svg)
+
 Arclength parametrization is the "natural speed" — the parameter literally measures distance traveled along the curve. With this canonical choice available, we can define geometric quantities free of any speed-dependence.
 
 ### Curves in \(\mathbb{R}^2\)
@@ -67,12 +71,16 @@ The **scalar curvature** is \(\kappa(s) = |k(s)| = |\beta''(s)|\). For an arbitr
 
 The sign of \(k\) encodes the direction of turning: positive curvature means the curve bends to the left (toward \(N\)), and negative curvature means it bends to the right. The magnitude \(\kappa\) measures how tightly the curve bends — a circle of radius \(r\) has constant curvature \(\kappa = 1/r\).
 
+![Signed curvature: positive curvature bends left toward N, negative curvature bends right](/pics/pmath365/signed-curvature.svg)
+
 **Theorem 1.14** (Curvature Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^2\) with \(\alpha' = (x', y')\),
 \[
 k = k_\alpha = \frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}, \qquad \kappa = |k_\alpha| = \frac{|x'y'' - y'x''|}{(x'^2+y'^2)^{3/2}}.
 \]
 
 The **osculating circle** of \(\beta\) at \(s_0\) is the circle through \(\beta(s_0)\) with center \(\beta(s_0) + \frac{1}{k(s_0)} N(s_0)\) (when \(k(s_0) \neq 0\) and radius \(1/|k(s_0)|\). It is the best-fit circle to the curve at that point.
+
+![The osculating circle at a point on a curve, showing the center, radius 1/κ, and second-order contact](/pics/pmath365/curvature-osculating-circle.svg)
 
 The osculating circle captures the second-order behavior of the curve: it agrees with the curve to second order in the arclength parameter. A straight line has no osculating circle (or one of infinite radius), while a curve with very high curvature has a small, tightly fitting osculating circle.
 
@@ -90,7 +98,11 @@ n(\alpha) = \frac{1}{2\pi}\int_0^L k(s)\, ds = \frac{\theta(L) - \theta(0)}{2\pi
 \]
 the total turning of the tangent vector divided by \(2\pi\).
 
+![Winding number of a closed curve around a point, counting signed loops around p](/pics/pmath365/winding-number.svg)
+
 **Theorem 1.19** (Turning Number Theorem): For a smooth closed regular curve in \(\mathbb{R}^2\) that does not self-intersect, the turning number is \(\pm 1\).
+
+![The turning number of a simple closed curve: the tangent vector rotates exactly once around the circle](/pics/pmath365/turning-number.svg)
 
 The turning number theorem is a beautiful early example of a topological constraint imposed on geometry: no matter how wildly a simple closed curve is drawn, the tangent always winds exactly once. The sign depends on the orientation of traversal.
 
@@ -111,9 +123,13 @@ The **torsion** \(\tau = \tau_\beta\) is defined by \(B' = -\tau P\). (One can s
 T' = \kappa P, \qquad P' = -\kappa T + \tau B, \qquad B' = -\tau P.
 \]
 
+![The Frenet-Serret frame T, P, B moving along a space curve, with curvature and torsion indicated](/pics/pmath365/frenet-serret-frame.svg)
+
 The curvature \(\kappa\) measures the rate at which the curve bends away from a straight line, while the torsion \(\tau\) measures how the curve twists out of the osculating plane spanned by \(T\) and \(P\). A curve lies in a plane if and only if \(\tau \equiv 0\).
 
 The Frenet-Serret formulas express the derivatives of the frame in terms of the frame itself. Geometrically: \(T' = \kappa P\) says the tangent turns toward the principal normal at rate \(\kappa\); \(B' = -\tau P\) says the binormal rotates toward the principal normal at rate \(\tau\), measuring how the osculating plane tilts. A helix, for instance, has constant positive curvature and constant nonzero torsion, capturing its uniform spiral character.
+
+![A helix with constant curvature κ and constant torsion τ, showing its uniform spiral geometry](/pics/pmath365/helix-curvature-torsion.svg)
 
 **Theorem 1.24** (Curvature and Torsion Formulas): For a smooth regular curve \(\alpha : I \to \mathbb{R}^3\),
 \[
@@ -136,6 +152,8 @@ Having understood curves, we now step up one dimension. A surface in \(\mathbb{R
 
 A **(local parametrized) surface** in \(\mathbb{R}^n\) is a continuous map \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^n\) where \(U\) is an open set. The surface is **regular** when \(\sigma\) is \(C^1\) and its derivative (Jacobian) matrix \(D\sigma = (\sigma_u, \sigma_v)\) has rank 2, meaning the column vectors \(\sigma_u = \partial\sigma/\partial u\) and \(\sigma_v = \partial\sigma/\partial v\) are linearly independent at every point. The **tangent plane** to \(\sigma\) at \((a,b)\) is the plane through \(\sigma(a,b)\) parallel to \(\sigma_u(a,b)\) and \(\sigma_v(a,b)\).
 
+![A regular surface σ mapping from an open set U in R² into R³, with tangent plane spanned by σ_u and σ_v](/pics/pmath365/surface-parametrization.svg)
+
 Standard examples include:
 - The **graph** of \(f: U \to \mathbb{R}\) via \(\sigma(u,v) = (u,v,f(u,v))\), always regular since \(D\sigma\) has rank 2.
 - The **sphere** \(\rho(\phi,\theta) = r(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)\), regular when \(\sin\phi \neq 0\).
@@ -148,6 +166,8 @@ A **Riemannian metric** on \(U \subseteq \mathbb{R}^n\) is a smooth map \(g : U 
 g = g_\sigma = D\sigma^T D\sigma = \begin{pmatrix} \sigma_u \cdot \sigma_u & \sigma_u \cdot \sigma_v \\ \sigma_u \cdot \sigma_v & \sigma_v \cdot \sigma_v \end{pmatrix}.
 \]
 Traditionally one writes \(E = g_{11} = \sigma_u \cdot \sigma_u\), \(F = g_{12} = \sigma_u \cdot \sigma_v\), \(G = g_{22} = \sigma_v \cdot \sigma_v\). This is positive-definite (since \(\sigma_u\) and \(\sigma_v\) are linearly independent), so it defines an inner product \(\langle X, Y \rangle = Y^T g X\) on \(\mathbb{R}^2\).
+
+![The first fundamental form g = Dσ^T Dσ encoding lengths and angles on the surface](/pics/pmath365/first-fundamental-form.svg)
 
 The length of a curve \(\gamma(t) = \sigma(\alpha(t))\) lying on the surface is
 \[
@@ -172,6 +192,8 @@ For a smooth regular surface \(\sigma : U \subseteq \mathbb{R}^2 \to \mathbb{R}^
 n = n_\sigma = \frac{\sigma_u \times \sigma_v}{|\sigma_u \times \sigma_v|} : U \to S^2 \subseteq \mathbb{R}^3.
 \]
 
+![The Gauss map n sending each surface point to its unit normal on the unit sphere S²](/pics/pmath365/gauss-map.svg)
+
 Given a point \(p \in U\) and a nonzero vector \(A \in \mathbb{R}^2\), the **(directional) curvature** \(k_\sigma(p)(A)\) is defined by taking any regular curve \(\alpha\) with \(\alpha(0)=p\), \(\alpha'(0)=A\), letting \(\gamma = \sigma \circ \alpha\) and reparametrizing by arclength to get \(\delta\), then setting \(k_\sigma(p)(A) = \delta''(0) \cdot N(0)\) where \(N(s) = n(\alpha(t(s)))\).
 
 **Theorem 2.14** (Directional Curvature): The curvature \(k_\sigma(p)(A)\) depends only on \(\sigma\), \(p\), and the direction of \(A\), and is given by
@@ -194,10 +216,14 @@ The directional curvature depends only on the direction of \(A\), so \(k_\sigma(
 
 **Theorem 2.18** (Principal Curvature Directions): For \(p \in U\), the directional curvature \(k_\sigma(p)(A)\) attains its maximum \(k_1\) and minimum \(k_2\) in two directions orthogonal with respect to \(g(p)\). These extreme values are the **principal curvatures**, the eigenvalues of \(g(p)^{-1} h(p)\), occurring in the **principal directions** (eigenvectors). The principal curvatures are the roots of \(\det(h(p) - k\ g(p)) = 0\).
 
+![Principal curvatures k₁ and k₂ as maximum and minimum directional curvatures in orthogonal principal directions](/pics/pmath365/principal-curvatures.svg)
+
 The **mean curvature** and **Gaussian curvature** are
 \[
 H = \tfrac{1}{2}(k_1 + k_2) = \tfrac{1}{2}\operatorname{tr}(g^{-1}h), \qquad K = k_1 k_2 = \frac{\det h}{\det g}.
 \]
+
+![Three surface types: K > 0 (elliptic, sphere-like), K = 0 (parabolic, cylinder-like), K < 0 (hyperbolic, saddle-like)](/pics/pmath365/gaussian-curvature-types.svg)
 
 Mean curvature \(H\) measures the average bending in all directions; minimal surfaces (soap films) satisfy \(H = 0\). Gaussian curvature \(K\) is the product of the principal curvatures and is positive when the surface curves the same way in all directions (like a sphere or ellipsoid), zero when it is flat in at least one direction (like a cylinder or cone), and negative when it saddles (like a hyperbolic paraboloid). The Gaussian curvature turns out to have a much deeper significance, which we will reveal with the Theorema Egregium.
 
@@ -233,6 +259,8 @@ The Gauss equations are remarkable: although \(K = \det h / \det g\) involves th
 
 **Theorem 2.23** (Theorema Egregium): For a smooth regular surface in \(\mathbb{R}^3\), the Gaussian curvature \(K = \det h / \det g\) can be expressed entirely in terms of the first fundamental form \(g\) and its derivatives. In particular, \(K\) is an **intrinsic** property: it is preserved under isometries (maps that preserve the Riemannian metric).
 
+![Theorema Egregium: Gaussian curvature K depends only on the intrinsic metric g, not the embedding](/pics/pmath365/theorema-egregium.svg)
+
 This is Gauss's "remarkable theorem": even though \(K\) is defined using \(h\) (which depends on the embedding in \(\mathbb{R}^3\), it turns out to depend only on the intrinsic geometry. As a consequence, a flat rectangle and a cylinder (which is obtained by bending a rectangle without stretching) have the same Gaussian curvature \(K=0\) at every point, while the mean curvature changes (\(H=0\) vs. \(H = 1/(2r)\).
 
 **Theorem 2.24** (Bonnet's Theorem / Fundamental Theorem for Surfaces): Given a connected open set \(U \subseteq \mathbb{R}^2\), smooth functions \(g_{11}, g_{12}, g_{22}, h_{11}, h_{12}, h_{22} : U \to \mathbb{R}\) with \(g_{11} > 0\) and \(g_{11}g_{22} - g_{12}^2 > 0\), satisfying all the Gauss-Codazzi equations, and given initial data \(p \in \mathbb{R}^3\) and orthogonal unit vectors \(A, B \in \mathbb{R}^3\), there exists a unique smooth surface \(\sigma : U \to \mathbb{R}^3\) with these fundamental forms satisfying \(\sigma(0)=p\), \(\sigma_u(0) \in \operatorname{Span}\{A\}\), \(\sigma_v(0) \in \operatorname{Span}\{A,B\}\). Bonnet's theorem says a surface is determined up to rigid motion by its two fundamental forms, provided the Gauss-Codazzi compatibility conditions hold.
@@ -258,6 +286,8 @@ The normal component \(\delta'' \cdot N\) is the directional curvature studied i
 k_g = k_g(s) = k_g(\beta)(s) = \delta''(s) \cdot M(s).
 \]
 For the original curve \(\alpha\) we set \(k_g(\alpha)(t) = k_g(\beta)(s(t))\).
+
+![Geodesic curvature k_g: the tangential component of the curve's acceleration on the surface](/pics/pmath365/geodesic-curvature.svg)
 
 Geodesic curvature measures how much the curve bends within the surface itself, independently of how the surface is curved in space. A geodesic — the surface analogue of a straight line — has zero geodesic curvature: it bends only as much as the surface forces it to.
 
@@ -296,6 +326,8 @@ v'' + \Gamma^2_{11}(u')^2 + 2\Gamma^2_{12} u'v' + \Gamma^2_{22}(v')^2 = 0.
 **Theorem 3.5**: For a smooth regular curve \(\beta\) on \(\sigma\) with \(\delta = \sigma \circ \beta\):
 1. \(\delta''(s) \parallel N(s)\) for all \(s\) if and only if \(\beta\) satisfies the geodesic equations, in which case \(|\delta'|\) is constant.
 2. When \(|\delta'(s)| = 1\), \(\beta\) is a geodesic if and only if \(k_g \equiv 0\).
+
+![A geodesic on a sphere: a great circle, the shortest path between two points on the surface](/pics/pmath365/geodesic-on-sphere.svg)
 
 In other words, a geodesic is a curve for which the acceleration \(\delta''\) is always normal to the surface — there is no tangential acceleration, so the curve "travels as straight as possible" on the surface.
 
@@ -369,6 +401,8 @@ These are invariant under changes of parametrization (with appropriate sign adju
 \iint_R K\,dA + \sum_{j=1}^3 \int_{\alpha_j} k_g\,dL + \sum_{j=1}^3 \epsilon_j = 2\pi.
 \]
 
+![Gauss-Bonnet for a triangle: the integral of K over the region plus geodesic curvature along edges plus exterior angles equals 2π](/pics/pmath365/gauss-bonnet-triangle.svg)
+
 The formula in Note 3.18 generalizes the elementary angle-sum theorem for triangles: a flat triangle (\(K = 0\)) with geodesic sides (\(k_g = 0\)) has exterior angles summing to \(2\pi\), i.e., interior angles summing to \(\pi\). On a positively curved surface like a sphere, the integral \(\iint K\,dA > 0\) so the angle sum exceeds \(\pi\) — a spherical triangle has angle sum greater than \(\pi\), with the excess equal to the area (up to a normalization constant).
 
 **Theorem 3.20** (Gauss-Bonnet Formula, General): Let \(U \subseteq \mathbb{R}^2\) be open with the standard triangle \(\Delta = \{u,v \geq 0, u+v \leq 1\}\subseteq U\), and let \(\sigma : U \to \mathbb{R}^3\) be smooth and regular. Let \(\epsilon_1, \epsilon_2, \epsilon_3\) be the external angles of \(\sigma(\Delta)\) at its three vertices. Then:
@@ -394,6 +428,8 @@ where \(V\), \(E\), \(F\) are the numbers of vertices, edges, and faces of the t
 \[
 \iint_S K\, dA = \sum_{i=1}^n \iint_\Delta K_{\sigma_i}\, dA = 2\pi\chi.
 \]
+
+![Global Gauss-Bonnet theorem: total Gaussian curvature over a closed surface equals 2π times the Euler characteristic](/pics/pmath365/gauss-bonnet-global.svg)
 
 *Proof.* Apply the Gauss-Bonnet Formula to each triangle. When edges are joined in pairs, the geodesic curvature integrals cancel (by the change-of-coordinates theorem for \(k_g\). Let \(\epsilon_{i,j}\) and \(\phi_{i,j} = \pi - \epsilon_{i,j}\) be the external and internal angles of triangle \(i\) at vertex \(j\). Since \(F=n\), \(E = 3n/2\), and the sum of internal angles at each vertex is \(2\pi\), one obtains \(\sum K\,dA = 2\pi n - \sum_{i,j} \epsilon_{i,j} = 2\pi F - 2\pi E + 2\pi V = 2\pi\chi\). \(\square\)
 

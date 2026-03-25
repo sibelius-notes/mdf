@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350">
+  <rect width="400" height="350" fill="white"/>
+
+  <defs>
+    <marker id="arrowW" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Concentric reference circles (faint) suggesting winding -->
+  <circle cx="200" cy="170" r="30" fill="none" stroke="#ddd" stroke-width="1"/>
+  <circle cx="200" cy="170" r="60" fill="none" stroke="#ddd" stroke-width="1"/>
+  <circle cx="200" cy="170" r="90" fill="none" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Point p at center -->
+  <circle cx="200" cy="170" r="5" fill="#cc2222"/>
+  <text x="210" y="168" font-family="serif" font-style="italic" font-size="17" fill="#cc2222" font-weight="bold">p</text>
+
+  <!-- Curve winding around p twice -->
+  <!-- A figure-8-like double loop that winds around p twice in the same direction -->
+  <!-- Outer loop (first winding) -->
+  <path d="M 310,170
+           C 310,100 260,50 200,50
+           C 140,50 80,100 80,170
+           C 80,240 140,290 200,290
+           C 260,290 310,240 310,170"
+        fill="none" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Direction arrow on outer loop -->
+  <path d="M 200,50 L 195,50" stroke="#333" stroke-width="2" marker-end="url(#arrowW)"/>
+
+  <!-- Inner loop (second winding) - slightly offset to show it's a second wind -->
+  <path d="M 310,170
+           C 308,120 270,75 215,68
+           C 160,62 105,105 102,165
+           C 99,225 145,272 200,275
+           C 255,278 298,230 305,175"
+        fill="none" stroke="#5533aa" stroke-width="2.2" stroke-dasharray="8,4"/>
+
+  <!-- Direction arrow on inner loop -->
+  <path d="M 215,68 L 210,67" stroke="#5533aa" stroke-width="2" marker-end="url(#arrowW)"/>
+
+  <!-- Continuation mark showing the curve returns -->
+  <path d="M 305,175 C 304,173 308,171 310,170" fill="none" stroke="#5533aa" stroke-width="2.2"/>
+
+  <!-- "Loop 1" and "Loop 2" labels -->
+  <text x="45" y="168" font-family="sans-serif" font-size="12" fill="#333">loop 1</text>
+  <text x="45" y="185" font-family="sans-serif" font-size="12" fill="#5533aa">loop 2</text>
+
+  <!-- Winding count visualization - small numbered markers -->
+  <!-- Ray from p going right, crossing the curve -->
+  <line x1="200" y1="170" x2="340" y2="170" stroke="#cc2222" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- Crossing points on the ray -->
+  <circle cx="310" cy="170" r="3" fill="#cc2222" opacity="0.6"/>
+  <circle cx="305" cy="170" r="3" fill="#cc2222" opacity="0.6"/>
+
+  <!-- Main label -->
+  <text x="200" y="328" font-family="serif" font-size="17" fill="#333" text-anchor="middle">
+    w(&#x3B1;, p) = 2
+  </text>
+
+  <!-- Subtitle -->
+  <text x="200" y="20" font-family="serif" font-size="15" fill="#333" text-anchor="middle">
+    Winding number: curve loops around p twice
+  </text>
+</svg>

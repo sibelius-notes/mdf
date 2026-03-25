@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="white"/>
+  <defs>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2266AA"/>
+    </marker>
+    <marker id="arrR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#CC3333"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#228B22"/>
+    </marker>
+    <marker id="arrLoop" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="25" font-family="serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">Orientable vs Non-orientable Manifolds</text>
+
+  <!-- (a) Torus - Orientable -->
+  <g transform="translate(150,155)">
+    <!-- Torus shape using ellipses -->
+    <ellipse cx="0" cy="0" rx="95" ry="55" fill="none" stroke="#333" stroke-width="2"/>
+    <!-- Inner hole of torus -->
+    <ellipse cx="0" cy="0" rx="35" ry="15" fill="white" stroke="#333" stroke-width="1.5"/>
+    <!-- Top highlight arc -->
+    <path d="M -95,0 Q -95,-40 -35,-15" fill="none" stroke="#AAC" stroke-width="1" opacity="0.4"/>
+    <path d="M 35,-15 Q 95,-40 95,0" fill="none" stroke="#AAC" stroke-width="1" opacity="0.4"/>
+    <!-- Shading -->
+    <ellipse cx="0" cy="0" rx="95" ry="55" fill="#ddeeff" opacity="0.3"/>
+
+    <!-- Loop path (dashed) going around the torus -->
+    <path d="M 75,30 Q 95,55 50,45 Q 0,50 -50,45 Q -95,55 -75,30" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrLoop)"/>
+
+    <!-- Coordinate frame at start position (right side) -->
+    <g transform="translate(75,28)">
+      <line x1="0" y1="0" x2="15" y2="-8" stroke="#2266AA" stroke-width="2.5" marker-end="url(#arrB)"/>
+      <line x1="0" y1="0" x2="8" y2="15" stroke="#228B22" stroke-width="2.5" marker-end="url(#arrG)"/>
+    </g>
+
+    <!-- Coordinate frame at middle position -->
+    <g transform="translate(0,48)">
+      <line x1="0" y1="0" x2="15" y2="-5" stroke="#2266AA" stroke-width="2" marker-end="url(#arrB)"/>
+      <line x1="0" y1="0" x2="5" y2="15" stroke="#228B22" stroke-width="2" marker-end="url(#arrG)"/>
+    </g>
+
+    <!-- Coordinate frame at end position (left side, same orientation) -->
+    <g transform="translate(-73,28)">
+      <line x1="0" y1="0" x2="-15" y2="-8" stroke="#2266AA" stroke-width="2.5" marker-end="url(#arrB)"/>
+      <line x1="0" y1="0" x2="-8" y2="15" stroke="#228B22" stroke-width="2.5" marker-end="url(#arrG)"/>
+    </g>
+
+    <!-- Check mark -->
+    <path d="M -10,80 L -3,90 L 10,72" fill="none" stroke="#228B22" stroke-width="3"/>
+  </g>
+  <text x="150" y="265" font-family="serif" font-size="16" fill="#228B22" text-anchor="middle" font-weight="bold">(a) Orientable</text>
+  <text x="150" y="283" font-family="serif" font-size="13" fill="#555" text-anchor="middle">Torus T</text>
+  <text x="163" y="277" font-family="serif" font-size="10" fill="#555">2</text>
+
+  <!-- Divider -->
+  <line x1="300" y1="40" x2="300" y2="270" stroke="#999" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- (b) Möbius Band - Non-orientable -->
+  <g transform="translate(450,145)">
+    <!-- Möbius band shape -->
+    <path d="M -90,10 Q -90,-50 -40,-35 Q 0,-55 40,-35 Q 90,-50 90,10 Q 90,50 40,30 Q 0,55 -40,30 Q -90,50 -90,10 Z" fill="#ffeeee" fill-opacity="0.4" stroke="#333" stroke-width="2"/>
+    <!-- Twist indication -->
+    <path d="M 0,-42 Q 10,-20 0,0 Q -10,20 0,42" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Half-twist visual -->
+    <path d="M -10,-40 L 10,-38" stroke="#999" stroke-width="1"/>
+    <path d="M -10,40 L 10,38" stroke="#999" stroke-width="1"/>
+    <text x="15" y="-35" font-family="serif" font-size="10" fill="#999">twist</text>
+
+    <!-- Loop path (dashed) -->
+    <path d="M 70,20 Q 90,40 50,35 Q 0,48 -50,35 Q -90,40 -70,20" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrLoop)"/>
+
+    <!-- Coordinate frame at start (right side) -->
+    <g transform="translate(70,18)">
+      <line x1="0" y1="0" x2="15" y2="-8" stroke="#2266AA" stroke-width="2.5" marker-end="url(#arrB)"/>
+      <line x1="0" y1="0" x2="5" y2="15" stroke="#228B22" stroke-width="2.5" marker-end="url(#arrG)"/>
+    </g>
+
+    <!-- Coordinate frame at end (left side, FLIPPED) -->
+    <g transform="translate(-68,18)">
+      <line x1="0" y1="0" x2="-15" y2="-8" stroke="#CC3333" stroke-width="2.5" marker-end="url(#arrR)"/>
+      <line x1="0" y1="0" x2="-5" y2="-15" stroke="#CC3333" stroke-width="2.5" marker-end="url(#arrR)"/>
+    </g>
+
+    <!-- X mark showing reflection -->
+    <g transform="translate(-2,82)">
+      <line x1="-8" y1="-8" x2="8" y2="8" stroke="#CC3333" stroke-width="3"/>
+      <line x1="8" y1="-8" x2="-8" y2="8" stroke="#CC3333" stroke-width="3"/>
+    </g>
+
+    <!-- "reflected!" label -->
+    <text x="-68" y="-10" font-family="serif" font-size="11" fill="#CC3333" font-style="italic">reflected!</text>
+  </g>
+  <text x="450" y="265" font-family="serif" font-size="16" fill="#CC3333" text-anchor="middle" font-weight="bold">(b) Non-orientable</text>
+  <text x="450" y="283" font-family="serif" font-size="13" fill="#555" text-anchor="middle">Mobius band</text>
+</svg>

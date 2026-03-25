@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <rect width="500" height="300" fill="white"/>
+
+  <defs>
+    <marker id="arrowNs" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#2266bb"/>
+    </marker>
+  </defs>
+
+  <!-- Curve with varying curvature: bends left (k>0) then right (k<0) -->
+  <!-- k > 0 region (blue, bending left/toward N) -->
+  <path d="M 40,200 C 70,200 90,120 140,100 C 170,88 200,90 230,110"
+        fill="none" stroke="#2266bb" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- k < 0 region (red, bending right/away from N) -->
+  <path d="M 230,110 C 260,130 280,160 310,180 C 340,200 380,230 430,200 C 460,185 470,160 475,140"
+        fill="none" stroke="#cc2222" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Inflection point -->
+  <circle cx="230" cy="110" r="4" fill="#333"/>
+  <text x="218" y="100" font-family="serif" font-size="12" fill="#333">k = 0</text>
+
+  <!-- Normal vectors in k > 0 region (pointing left of travel direction) -->
+  <circle cx="110" cy="118" r="3" fill="#2266bb"/>
+  <line x1="110" y1="118" x2="85" y2="92" stroke="#2266bb" stroke-width="1.8" marker-end="url(#arrowNs)"/>
+
+  <circle cx="160" cy="92" r="3" fill="#2266bb"/>
+  <line x1="160" y1="92" x2="155" y2="60" stroke="#2266bb" stroke-width="1.8" marker-end="url(#arrowNs)"/>
+
+  <!-- Normal vectors in k < 0 region (curve bends away from N) -->
+  <circle cx="310" cy="180" r="3" fill="#cc2222"/>
+  <line x1="310" y1="180" x2="290" y2="155" stroke="#2266bb" stroke-width="1.8" marker-end="url(#arrowNs)"/>
+
+  <circle cx="400" cy="218" r="3" fill="#cc2222"/>
+  <line x1="400" y1="218" x2="380" y2="193" stroke="#2266bb" stroke-width="1.8" marker-end="url(#arrowNs)"/>
+
+  <!-- Labels -->
+  <text x="80" y="55" font-family="serif" font-size="18" fill="#2266bb" font-weight="bold">k &gt; 0</text>
+  <text x="60" y="75" font-family="serif" font-size="13" fill="#2266bb">bending toward N</text>
+
+  <text x="350" y="130" font-family="serif" font-size="18" fill="#cc2222" font-weight="bold">k &lt; 0</text>
+  <text x="330" y="150" font-family="serif" font-size="13" fill="#cc2222">bending away from N</text>
+
+  <!-- N label -->
+  <text x="65" y="88" font-family="serif" font-style="italic" font-size="15" fill="#2266bb" font-weight="bold">N</text>
+
+  <!-- Title -->
+  <text x="250" y="278" font-family="serif" font-size="15" fill="#333" text-anchor="middle">
+    Signed curvature k = &#x3BA; (sign indicates bending direction)
+  </text>
+</svg>

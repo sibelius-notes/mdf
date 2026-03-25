@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="white"/>
+
+  <!-- Left surface (M, g) -->
+  <path d="M30,80 Q80,40 160,60 Q210,75 220,130 Q230,190 180,220 Q120,250 60,210 Q20,180 30,80Z" fill="#e8f4fd" stroke="#333" stroke-width="2"/>
+
+  <!-- Triangle on M -->
+  <polygon points="80,120 160,100 130,180" fill="none" stroke="#2980b9" stroke-width="2"/>
+  <!-- Side labels a, b, c -->
+  <text x="115" y="100" font-family="serif" font-style="italic" font-size="14" fill="#2980b9">a</text>
+  <text x="150" y="150" font-family="serif" font-style="italic" font-size="14" fill="#2980b9">b</text>
+  <text x="88" y="162" font-family="serif" font-style="italic" font-size="14" fill="#2980b9">c</text>
+  <!-- Vertices -->
+  <circle cx="80" cy="120" r="2.5" fill="#333"/>
+  <circle cx="160" cy="100" r="2.5" fill="#333"/>
+  <circle cx="130" cy="180" r="2.5" fill="#333"/>
+
+  <!-- Label (M, g) -->
+  <text x="85" y="255" font-family="serif" font-size="16" fill="#333">(</text>
+  <text x="93" y="255" font-family="serif" font-style="italic" font-size="16" fill="#333">M</text>
+  <text x="110" y="255" font-family="serif" font-size="16" fill="#333">, </text>
+  <text x="122" y="255" font-family="serif" font-style="italic" font-size="16" fill="#333">g</text>
+  <text x="132" y="255" font-family="serif" font-size="16" fill="#333">)</text>
+
+  <!-- Arrow F -->
+  <line x1="240" y1="140" x2="340" y2="140" stroke="#333" stroke-width="2"/>
+  <polygon points="340,140 332,135 332,145" fill="#333"/>
+  <text x="278" y="130" font-family="serif" font-style="italic" font-size="18" fill="#333">F</text>
+
+  <!-- F*h = g below the arrow -->
+  <text x="258" y="170" font-family="serif" font-style="italic" font-size="14" fill="#c0392b">F</text>
+  <text x="268" y="170" font-family="serif" font-size="14" fill="#c0392b">*</text>
+  <text x="277" y="170" font-family="serif" font-style="italic" font-size="14" fill="#c0392b">h</text>
+  <text x="290" y="170" font-family="serif" font-size="14" fill="#c0392b"> = </text>
+  <text x="312" y="170" font-family="serif" font-style="italic" font-size="14" fill="#c0392b">g</text>
+
+  <!-- Right surface (N, h) — different shape -->
+  <path d="M370,70 Q430,30 500,60 Q560,90 560,150 Q560,210 500,240 Q430,270 380,230 Q340,200 350,140 Q355,90 370,70Z" fill="#fef5e7" stroke="#333" stroke-width="2"/>
+
+  <!-- Triangle on N (same side lengths) -->
+  <polygon points="400,120 480,110 450,185" fill="none" stroke="#e67e22" stroke-width="2"/>
+  <!-- Side labels a, b, c -->
+  <text x="435" y="105" font-family="serif" font-style="italic" font-size="14" fill="#e67e22">a</text>
+  <text x="472" y="158" font-family="serif" font-style="italic" font-size="14" fill="#e67e22">b</text>
+  <text x="410" y="165" font-family="serif" font-style="italic" font-size="14" fill="#e67e22">c</text>
+  <!-- Vertices -->
+  <circle cx="400" cy="120" r="2.5" fill="#333"/>
+  <circle cx="480" cy="110" r="2.5" fill="#333"/>
+  <circle cx="450" cy="185" r="2.5" fill="#333"/>
+
+  <!-- Label (N, h) -->
+  <text x="415" y="255" font-family="serif" font-size="16" fill="#333">(</text>
+  <text x="423" y="255" font-family="serif" font-style="italic" font-size="16" fill="#333">N</text>
+  <text x="438" y="255" font-family="serif" font-size="16" fill="#333">, </text>
+  <text x="450" y="255" font-family="serif" font-style="italic" font-size="16" fill="#333">h</text>
+  <text x="461" y="255" font-family="serif" font-size="16" fill="#333">)</text>
+
+  <!-- Dashed correspondence lines -->
+  <line x1="80" y1="120" x2="400" y2="120" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="160" y1="100" x2="480" y2="110" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="130" y1="180" x2="450" y2="185" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>

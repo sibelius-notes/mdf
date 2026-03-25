@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="300" viewBox="0 0 650 300">
+  <rect width="650" height="300" fill="white"/>
+
+  <!-- Panel borders -->
+  <line x1="162" y1="10" x2="162" y2="260" stroke="#ddd" stroke-width="1"/>
+  <line x1="325" y1="10" x2="325" y2="260" stroke="#ddd" stroke-width="1"/>
+  <line x1="487" y1="10" x2="487" y2="260" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Panel labels -->
+  <text x="65" y="25" font-family="serif" font-size="14" fill="#555" text-anchor="middle">(a)</text>
+  <text x="243" y="25" font-family="serif" font-size="14" fill="#555" text-anchor="middle">(b)</text>
+  <text x="406" y="25" font-family="serif" font-size="14" fill="#555" text-anchor="middle">(c)</text>
+  <text x="568" y="25" font-family="serif" font-size="14" fill="#555" text-anchor="middle">(d)</text>
+
+  <!-- ========== Panel (a): 0-form — scalar field color gradient ========== -->
+  <defs>
+    <linearGradient id="scalarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498db"/>
+      <stop offset="50%" stop-color="#f1c40f"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="50" width="120" height="120" rx="8" fill="url(#scalarGrad)" stroke="#333" stroke-width="1.5"/>
+  <!-- Contour lines -->
+  <path d="M35,155 Q55,130 45,100 Q38,75 55,55" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.6"/>
+  <path d="M65,160 Q80,130 75,95 Q70,65 90,50" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.6"/>
+  <path d="M100,165 Q110,135 108,100 Q105,70 125,52" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Label -->
+  <text x="80" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">f</text>
+  <text x="80" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="100" y="214" font-family="serif" font-size="10" fill="#333">0</text>
+
+  <!-- ========== Panel (b): 1-form — stacked parallel planes ========== -->
+  <!-- Stack of parallel slices -->
+  <path d="M185,160 L215,130 L285,130 L255,160 Z" fill="#d5f5e3" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5"/>
+  <path d="M185,135 L215,105 L285,105 L255,135 Z" fill="#abebc6" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5"/>
+  <path d="M185,110 L215,80 L285,80 L255,110 Z" fill="#82e0aa" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5"/>
+  <path d="M185,85 L215,55 L285,55 L255,85 Z" fill="#58d68d" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5"/>
+  <!-- Arrow piercing through planes -->
+  <line x1="230" y1="170" x2="240" y2="45" stroke="#c0392b" stroke-width="1.5"/>
+  <polygon points="240,45 236,55 244,55" fill="#c0392b"/>
+  <!-- Label -->
+  <text x="243" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03C9;</text>
+  <text x="243" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="263" y="214" font-family="serif" font-size="10" fill="#333">1</text>
+
+  <!-- ========== Panel (c): 2-form — flux tubes ========== -->
+  <!-- Tube 1 -->
+  <ellipse cx="380" cy="60" rx="15" ry="8" fill="none" stroke="#8e44ad" stroke-width="1.5"/>
+  <line x1="365" y1="60" x2="365" y2="160" stroke="#8e44ad" stroke-width="1.5"/>
+  <line x1="395" y1="60" x2="395" y2="160" stroke="#8e44ad" stroke-width="1.5"/>
+  <ellipse cx="380" cy="160" rx="15" ry="8" fill="#d7bde2" fill-opacity="0.4" stroke="#8e44ad" stroke-width="1.5"/>
+  <!-- Arrow inside tube -->
+  <line x1="380" y1="150" x2="380" y2="70" stroke="#c0392b" stroke-width="1.5"/>
+  <polygon points="380,70 376,80 384,80" fill="#c0392b"/>
+
+  <!-- Tube 2 -->
+  <ellipse cx="430" cy="70" rx="12" ry="6" fill="none" stroke="#8e44ad" stroke-width="1.5"/>
+  <line x1="418" y1="70" x2="418" y2="155" stroke="#8e44ad" stroke-width="1.5"/>
+  <line x1="442" y1="70" x2="442" y2="155" stroke="#8e44ad" stroke-width="1.5"/>
+  <ellipse cx="430" cy="155" rx="12" ry="6" fill="#d7bde2" fill-opacity="0.4" stroke="#8e44ad" stroke-width="1.5"/>
+  <line x1="430" y1="145" x2="430" y2="80" stroke="#c0392b" stroke-width="1.5"/>
+  <polygon points="430,80 426,90 434,90" fill="#c0392b"/>
+
+  <!-- Label -->
+  <text x="406" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03B7;</text>
+  <text x="406" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="426" y="214" font-family="serif" font-size="10" fill="#333">2</text>
+
+  <!-- ========== Panel (d): 3-form — density dots ========== -->
+  <rect x="505" y="50" width="120" height="120" rx="8" fill="#fef9e7" stroke="#333" stroke-width="1.5"/>
+  <!-- Scattered dots -->
+  <circle cx="520" cy="65" r="3" fill="#e67e22"/>
+  <circle cx="545" cy="72" r="3" fill="#e67e22"/>
+  <circle cx="570" cy="60" r="3" fill="#e67e22"/>
+  <circle cx="600" cy="68" r="3" fill="#e67e22"/>
+  <circle cx="515" cy="90" r="3" fill="#e67e22"/>
+  <circle cx="540" cy="95" r="3" fill="#e67e22"/>
+  <circle cx="565" cy="88" r="3" fill="#e67e22"/>
+  <circle cx="590" cy="92" r="3" fill="#e67e22"/>
+  <circle cx="612" cy="85" r="3" fill="#e67e22"/>
+  <circle cx="525" cy="115" r="3" fill="#e67e22"/>
+  <circle cx="550" cy="110" r="3" fill="#e67e22"/>
+  <circle cx="578" cy="118" r="3" fill="#e67e22"/>
+  <circle cx="605" cy="112" r="3" fill="#e67e22"/>
+  <circle cx="518" cy="140" r="3" fill="#e67e22"/>
+  <circle cx="542" cy="135" r="3" fill="#e67e22"/>
+  <circle cx="568" cy="142" r="3" fill="#e67e22"/>
+  <circle cx="595" cy="138" r="3" fill="#e67e22"/>
+  <circle cx="615" cy="145" r="3" fill="#e67e22"/>
+  <circle cx="530" cy="158" r="3" fill="#e67e22"/>
+  <circle cx="558" cy="160" r="3" fill="#e67e22"/>
+  <circle cx="585" cy="155" r="3" fill="#e67e22"/>
+  <circle cx="610" cy="162" r="3" fill="#e67e22"/>
+  <!-- Label -->
+  <text x="568" y="200" font-family="serif" font-style="italic" font-size="14" fill="#333" text-anchor="middle">&#x03BC;</text>
+  <text x="568" y="220" font-family="serif" font-size="13" fill="#333" text-anchor="middle">&#x2208; &#x03A9;</text>
+  <text x="588" y="214" font-family="serif" font-size="10" fill="#333">3</text>
+
+  <!-- Title -->
+  <text x="325" y="280" font-family="serif" font-size="14" fill="#333" text-anchor="middle">Differential forms in &#x211D;</text>
+  <text x="405" y="274" font-family="serif" font-size="10" fill="#333">3</text>
+</svg>
