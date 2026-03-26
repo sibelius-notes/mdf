@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" font-family="serif" font-size="14">
+  <!-- Background -->
+  <rect width="500" height="320" fill="none"/>
+
+  <!-- The plane R^n -->
+  <line x1="80" y1="220" x2="420" y2="220" stroke="#666" stroke-width="1.5"/>
+  <text x="430" y="224" fill="#666" font-style="italic">R^n</text>
+
+  <!-- The circle S^n -->
+  <circle cx="250" cy="170" r="80" fill="none" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- North pole p -->
+  <circle cx="250" cy="90" r="4" fill="#dc2626"/>
+  <text x="258" y="85" fill="#dc2626" font-weight="bold">p</text>
+  <text x="220" y="75" fill="#dc2626" font-size="12">(north pole)</text>
+
+  <!-- South pole -->
+  <circle cx="250" cy="250" r="3" fill="#2563eb"/>
+
+  <!-- A point x on the sphere -->
+  <circle cx="300" cy="120" r="4" fill="#16a34a"/>
+  <text x="308" y="118" fill="#16a34a" font-weight="bold">x</text>
+
+  <!-- Projection line from p through x to the plane -->
+  <line x1="250" y1="90" x2="370" y2="220" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Image point f(x) on the plane -->
+  <circle cx="370" cy="220" r="4" fill="#f59e0b"/>
+  <text x="360" y="240" fill="#f59e0b" font-weight="bold">f(x)</text>
+
+  <!-- Another point -->
+  <circle cx="195" cy="135" r="4" fill="#16a34a"/>
+  <text x="177" y="130" fill="#16a34a">y</text>
+
+  <!-- Its projection line -->
+  <line x1="250" y1="90" x2="155" y2="220" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Image point f(y) -->
+  <circle cx="155" cy="220" r="4" fill="#f59e0b"/>
+  <text x="140" y="240" fill="#f59e0b" font-weight="bold">f(y)</text>
+
+  <!-- Labels -->
+  <text x="145" y="160" fill="#2563eb" font-size="15" font-style="italic">S^n</text>
+
+  <!-- Caption -->
+  <text x="100" y="290" fill="#333" font-size="13" text-anchor="start">Stereographic projection: draw a line from p through x;</text>
+  <text x="100" y="308" fill="#333" font-size="13" text-anchor="start">its intersection with the plane is f(x).</text>
+</svg>

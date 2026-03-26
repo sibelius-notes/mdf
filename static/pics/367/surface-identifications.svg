@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" font-family="serif" font-size="13">
+  <!-- Title -->
+  <text x="330" y="25" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">Surfaces from edge identifications of a square</text>
+
+  <!-- ===== TORUS T^2 ===== -->
+  <g transform="translate(30, 50)">
+    <rect x="0" y="0" width="120" height="120" fill="#dbeafe" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Top edge: a (right) -->
+    <line x1="0" y1="0" x2="120" y2="0" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,0 55,-6 55,6" fill="#dc2626"/>
+    <text x="50" y="-8" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Bottom edge: a (right) -->
+    <line x1="0" y1="120" x2="120" y2="120" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,120 55,114 55,126" fill="#dc2626"/>
+    <text x="50" y="140" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Left edge: b (up) -->
+    <line x1="0" y1="120" x2="0" y2="0" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="0,55 -6,65 6,65" fill="#2563eb"/>
+    <text x="-18" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <!-- Right edge: b (up) -->
+    <line x1="120" y1="120" x2="120" y2="0" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="120,55 114,65 126,65" fill="#2563eb"/>
+    <text x="128" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <text x="60" y="175" text-anchor="middle" fill="#333" font-weight="bold">Torus T^2</text>
+    <text x="60" y="192" text-anchor="middle" fill="#666" font-size="11">aba^{-1}b^{-1}</text>
+  </g>
+
+  <!-- ===== SPHERE S^2 ===== -->
+  <g transform="translate(190, 50)">
+    <rect x="0" y="0" width="120" height="120" fill="#dcfce7" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Top edge: a (right) -->
+    <line x1="0" y1="0" x2="120" y2="0" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,0 55,-6 55,6" fill="#dc2626"/>
+    <text x="50" y="-8" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Bottom edge: a (LEFT = inverse) -->
+    <line x1="120" y1="120" x2="0" y2="120" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="55,120 65,114 65,126" fill="#dc2626"/>
+    <text x="50" y="140" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Left edge: b (down = inverse) -->
+    <line x1="0" y1="0" x2="0" y2="120" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="0,65 -6,55 6,55" fill="#2563eb"/>
+    <text x="-18" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <!-- Right edge: b (down = inverse) -->
+    <line x1="120" y1="0" x2="120" y2="120" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="120,65 114,55 126,55" fill="#2563eb"/>
+    <text x="128" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <text x="60" y="175" text-anchor="middle" fill="#333" font-weight="bold">Sphere S^2</text>
+    <text x="60" y="192" text-anchor="middle" fill="#666" font-size="11">abb^{-1}a^{-1}</text>
+  </g>
+
+  <!-- ===== PROJECTIVE PLANE P^2 ===== -->
+  <g transform="translate(350, 50)">
+    <rect x="0" y="0" width="120" height="120" fill="#fef3c7" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Top edge: a (right) -->
+    <line x1="0" y1="0" x2="120" y2="0" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,0 55,-6 55,6" fill="#dc2626"/>
+    <text x="50" y="-8" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Bottom edge: a (right, SAME direction) -->
+    <line x1="0" y1="120" x2="120" y2="120" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,120 55,114 55,126" fill="#dc2626"/>
+    <text x="50" y="140" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Left edge: b (up) -->
+    <line x1="0" y1="120" x2="0" y2="0" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="0,55 -6,65 6,65" fill="#2563eb"/>
+    <text x="-18" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <!-- Right edge: b (down = same direction as left going up means opposite for identification) -->
+    <line x1="120" y1="0" x2="120" y2="120" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="120,65 114,55 126,55" fill="#2563eb"/>
+    <text x="128" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <text x="60" y="175" text-anchor="middle" fill="#333" font-weight="bold">Proj. Plane P^2</text>
+    <text x="60" y="192" text-anchor="middle" fill="#666" font-size="11">abab</text>
+  </g>
+
+  <!-- ===== KLEIN BOTTLE K^2 ===== -->
+  <g transform="translate(510, 50)">
+    <rect x="0" y="0" width="120" height="120" fill="#fce7f3" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Top edge: a (right) -->
+    <line x1="0" y1="0" x2="120" y2="0" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="65,0 55,-6 55,6" fill="#dc2626"/>
+    <text x="50" y="-8" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Bottom edge: a (LEFT = inverse) -->
+    <line x1="120" y1="120" x2="0" y2="120" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="55,120 65,114 65,126" fill="#dc2626"/>
+    <text x="50" y="140" fill="#dc2626" font-weight="bold" font-size="14">a</text>
+
+    <!-- Left edge: b (up) -->
+    <line x1="0" y1="120" x2="0" y2="0" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="0,55 -6,65 6,65" fill="#2563eb"/>
+    <text x="-18" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <!-- Right edge: b (down = SAME direction, so reflection) -->
+    <line x1="120" y1="0" x2="120" y2="120" stroke="#2563eb" stroke-width="3"/>
+    <polygon points="120,65 114,55 126,55" fill="#2563eb"/>
+    <text x="128" y="65" fill="#2563eb" font-weight="bold" font-size="14">b</text>
+
+    <text x="60" y="175" text-anchor="middle" fill="#333" font-weight="bold">Klein Bottle K^2</text>
+    <text x="60" y="192" text-anchor="middle" fill="#666" font-size="11">aba^{-1}b</text>
+  </g>
+
+  <!-- Legend -->
+  <text x="30" y="305" fill="#555" font-size="12">Matching arrows on opposite edges indicate identification. Same direction = identify directly; opposite = identify with a flip.</text>
+  <text x="30" y="322" fill="#555" font-size="12">Torus: both pairs parallel. Sphere: both pairs anti-parallel. Klein bottle: one pair flipped. Proj. plane: both pairs flipped.</text>
+</svg>

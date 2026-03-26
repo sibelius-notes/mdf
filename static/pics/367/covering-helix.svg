@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 340" font-family="serif" font-size="13">
+  <!-- Title -->
+  <text x="230" y="22" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">The universal cover of S^1</text>
+
+  <!-- The circle S^1 at the bottom -->
+  <ellipse cx="230" cy="275" rx="70" ry="25" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="310" y="280" fill="#2563eb" font-weight="bold" font-size="14">S^1</text>
+
+  <!-- Base point on circle -->
+  <circle cx="300" cy="275" r="4" fill="#dc2626"/>
+  <text x="308" y="272" fill="#dc2626" font-size="12">1</text>
+
+  <!-- The helix (R covering S^1) -->
+  <!-- Back half-turns (behind the circle, dashed) -->
+  <path d="M 300,275 C 350,260 350,235 230,225" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <path d="M 230,225 C 110,215 110,195 230,185" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <path d="M 230,185 C 350,175 350,155 230,145" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <path d="M 230,145 C 110,135 110,115 230,105" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <path d="M 230,105 C 350,95 350,75 230,65" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <path d="M 230,65 C 110,55 110,40 200,38" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Arrow at top -->
+  <polygon points="200,38 195,46 205,44" fill="#16a34a"/>
+
+  <!-- Points on the helix above 1 -->
+  <circle cx="300" cy="275" r="3" fill="#dc2626"/>
+  <circle cx="230" cy="185" r="3" fill="#f59e0b"/>
+  <circle cx="230" cy="105" r="3" fill="#f59e0b"/>
+
+  <!-- Labels for helix points -->
+  <text x="240" y="183" fill="#f59e0b" font-size="11">2pi</text>
+  <text x="240" y="103" fill="#f59e0b" font-size="11">4pi</text>
+  <text x="290" y="294" fill="#dc2626" font-size="11">0</text>
+
+  <!-- R label -->
+  <text x="370" y="60" fill="#16a34a" font-weight="bold" font-size="14">R</text>
+
+  <!-- Projection arrow -->
+  <line x1="380" y1="180" x2="380" y2="260" stroke="#666" stroke-width="1.5"/>
+  <polygon points="380,265 376,255 384,255" fill="#666"/>
+  <text x="390" y="225" fill="#666" font-size="12" font-style="italic">p</text>
+  <text x="390" y="240" fill="#666" font-size="11">p(t) = e^{it}</text>
+
+  <!-- Fibre annotation -->
+  <line x1="140" y1="275" x2="140" y2="100" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="50" y="190" fill="#888" font-size="11">fibre p^{-1}(1)</text>
+  <text x="65" y="205" fill="#888" font-size="11">= 2pi Z</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="serif" font-size="13">
+  <!-- Figure Eight -->
+  <g transform="translate(80, 100)">
+    <!-- Left circle -->
+    <circle cx="-40" cy="0" r="40" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+    <!-- Right circle -->
+    <circle cx="40" cy="0" r="40" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+    <!-- Center point -->
+    <circle cx="0" cy="0" r="4" fill="#dc2626"/>
+    <text x="-8" y="20" fill="#dc2626" font-size="12" font-weight="bold">0</text>
+  </g>
+  <text x="80" y="170" text-anchor="middle" fill="#333" font-weight="bold">Figure Eight (8)</text>
+  <text x="80" y="186" text-anchor="middle" fill="#666" font-size="11">Removing 0 gives 4 arcs</text>
+
+  <!-- "homotopy equivalent" text -->
+  <text x="220" y="95" fill="#16a34a" font-size="14">~</text>
+  <text x="210" y="112" fill="#16a34a" font-size="11">homotopy</text>
+  <text x="210" y="126" fill="#16a34a" font-size="11">equivalent</text>
+
+  <!-- Theta Space -->
+  <g transform="translate(360, 100)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+    <!-- Inner horizontal bar -->
+    <line x1="-50" y1="0" x2="50" y2="0" stroke="#7c3aed" stroke-width="2.5"/>
+    <!-- Points on the bar -->
+    <circle cx="-50" cy="0" r="3" fill="#f59e0b"/>
+    <circle cx="50" cy="0" r="3" fill="#f59e0b"/>
+  </g>
+  <text x="360" y="170" text-anchor="middle" fill="#333" font-weight="bold">Theta Space (Theta)</text>
+  <text x="360" y="186" text-anchor="middle" fill="#666" font-size="11">No point removal gives 4 arcs</text>
+
+  <!-- NOT homeomorphic annotation -->
+  <text x="220" y="148" fill="#dc2626" font-size="12">but</text>
+  <text x="210" y="162" fill="#dc2626" font-size="11">NOT homeo-</text>
+  <text x="215" y="176" fill="#dc2626" font-size="11">morphic</text>
+</svg>
