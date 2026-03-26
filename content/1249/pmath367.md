@@ -1088,39 +1088,314 @@ For a general subgroup \(H\), one forms the quotient \(\tilde{X}_H = \tilde{X}/{
 
 ---
 
-# Part V: Looking Ahead
+# Part V: Beyond the Fundamental Group
 
-## A glimpse of algebraic topology (PMATH 467)
+## Chapter 11: Algebraic Topology — Higher Invariants (PMATH 467)
 
-The fundamental group is just the first in a sequence of increasingly powerful algebraic invariants. **PMATH 467: Algebraic Topology** develops the full machinery.
+The fundamental group \(\pi_1(X)\) is a remarkably effective invariant, but it has blind spots. It detects 1-dimensional holes — loops that cannot be contracted — but says nothing about higher-dimensional phenomena. The sphere \(S^2\) has \(\pi_1(S^2) = 0\), yet it is clearly not contractible (it encloses a 2-dimensional "hole"). To detect such features, we need more powerful machinery. **PMATH 467: Algebraic Topology** develops the full arsenal: higher homotopy groups, homology, cohomology, and the deep theorems they unlock.
 
-**Homotopy groups.** The fundamental group \(\pi_1(X, a)\) detects 1-dimensional holes (loops). The **higher homotopy groups** \(\pi_n(X, a)\), defined using maps from the \(n\)-sphere \(S^n\) into \(X\), detect \(n\)-dimensional holes. While \(\pi_1\) can be non-abelian, all higher homotopy groups are abelian. Computing them is notoriously difficult — even the homotopy groups of spheres are not fully known.
+### Higher homotopy groups
 
-**Homology groups.** An alternative approach assigns to each space a sequence of abelian groups \(H_0(X), H_1(X), H_2(X), \ldots\) called **homology groups**. They are generally more computable than homotopy groups and satisfy powerful axioms (the Eilenberg-Steenrod axioms). For instance, \(H_n(S^k) \cong \mathbb{Z}\) if \(n = 0\) or \(n = k\), and is trivial otherwise.
+The fundamental group studies maps from the circle \(S^1\) into \(X\). The natural generalization replaces the circle with higher-dimensional spheres.
 
-**Cohomology.** The dual theory of **cohomology** \(H^n(X)\) carries additional structure: the **cup product** makes \(H^*(X) = \bigoplus_n H^n(X)\) into a graded ring. This ring structure can distinguish spaces that homology alone cannot.
+<div class="definition">
 
-Some celebrated results of algebraic topology include:
+<strong>Definition 11.1.</strong> For \(n \geq 1\) and a based space \((X, a)\), the <strong>\(n\)-th homotopy group</strong> \(\pi_n(X, a)\) is the set of homotopy classes of based maps \(f: (S^n, *) \to (X, a)\), with the group operation defined by "stacking" maps along an equatorial hyperplane. For \(n = 0\), \(\pi_0(X)\) is the set of path-components (with no group structure in general).
 
-- The **Brouwer fixed point theorem** (in all dimensions): every continuous map \(D^n \to D^n\) has a fixed point.
-- The **hairy ball theorem**: there is no continuous non-vanishing tangent vector field on \(S^{2n}\). (You cannot comb a hairy ball flat without creating a cowlick.)
-- The **Borsuk-Ulam theorem**: every continuous map \(S^n \to \mathbb{R}^n\) identifies a pair of antipodal points. A playful consequence: at any moment, there exist two antipodal points on Earth with the same temperature and barometric pressure (the **ham sandwich theorem** is a related result about simultaneous bisection of multiple objects by a hyperplane).
-- The **Lefschetz fixed point theorem**: a powerful generalization of the Brouwer theorem using traces on homology.
-- The **classification of Platonic solids**: the Euler characteristic constrains which regular polyhedra can exist, and homology makes this precise.
+</div>
 
-## A glimpse of topological dynamics (PMATH 457)
+For \(n = 1\), this recovers the fundamental group. For \(n \geq 2\), something remarkable happens: the group operation is *abelian*. Intuitively, this is because in two or more dimensions there is enough room to "slide" one map past another — a phenomenon that fails in one dimension, which is why \(\pi_1\) can be non-abelian.
 
-While algebraic topology studies spaces through algebraic invariants, **PMATH 457: Topological Dynamics and Ergodic Theory** studies spaces through the lens of *continuous transformations acting on them*. The central objects are dynamical systems \((X, T)\) where \(X\) is a compact topological space and \(T: X \to X\) is a continuous map.
+The higher homotopy groups are functorial (a continuous map \(f: X \to Y\) induces homomorphisms \(f_*: \pi_n(X) \to \pi_n(Y)\)) and homotopy-invariant. A space is **\(n\)-connected** if \(\pi_k(X) = 0\) for all \(k \leq n\). Simply connected means 1-connected.
 
-**Topological dynamics** studies the orbit structure: given a point \(x\), what can we say about the sequence \(x, Tx, T^2x, \ldots\)? A **minimal flow** is one where every orbit is dense — the system is as "mixed" as possible. The study of minimal flows connects to combinatorics through:
+<div class="example">
 
-- **Van der Waerden's theorem**: any finite colouring of the integers contains arbitrarily long monochromatic arithmetic progressions. This has a beautiful proof via topological dynamics on the space of ultrafilters \(\beta\mathbb{N}\).
-- **Hales-Jewett theorem**: a powerful generalization about combinatorial lines in high-dimensional grids.
+<strong>Example 11.2.</strong> The spheres \(S^n\) have a single "essential" map in dimension \(n\): the identity map \(S^n \to S^n\) is not null-homotopic, giving \(\pi_n(S^n) \cong \mathbb{Z}\). But here is a surprise: \(\pi_3(S^2) \cong \mathbb{Z}\) as well! The generator is the **Hopf fibration** \(h: S^3 \to S^2\), one of the most beautiful maps in all of mathematics. Viewing \(S^3 \subseteq \mathbb{C}^2\) and \(S^2 = \mathbb{CP}^1\), it sends \((z_1, z_2) \mapsto [z_1 : z_2]\). Every fibre \(h^{-1}(p)\) is a circle, and any two such fibres are linked in \(S^3\). This linking is what makes \(h\) topologically non-trivial.
 
-**Ergodic theory** adds a measure-theoretic dimension. Given a probability measure \(\mu\) preserved by \(T\), the **ergodic theorems** of Birkhoff and von Neumann say that time averages \(\frac{1}{n}\sum_{k=0}^{n-1} f(T^k x)\) converge to space averages \(\int f \, d\mu\) for "most" points \(x\). Key results include:
+</div>
 
-- **Rokhlin's lemma**: any aperiodic measure-preserving transformation can be approximated by a periodic one on most of the space, a powerful tool for constructing counterexamples and proving structural results.
-- **Entropy**: a numerical invariant measuring the "information content" of a dynamical system. Two systems with different entropy cannot be isomorphic.
-- **Ornstein's theorem**: a remarkable rigidity result stating that Bernoulli shifts (the simplest "random" systems) are completely classified by their entropy — a striking parallel to the classification of surfaces by the Euler characteristic.
+Computing \(\pi_n(S^k)\) for general \(n\) and \(k\) is one of the deepest unsolved problems in topology. The homotopy groups of spheres exhibit chaotic, seemingly unpredictable behaviour. Here is a small sample:
 
-The subject sits at the intersection of topology, measure theory, group theory, and combinatorics, drawing on the foundations built in PMATH 367.
+| | \(\pi_1\) | \(\pi_2\) | \(\pi_3\) | \(\pi_4\) | \(\pi_5\) | \(\pi_6\) |
+|:---|:---|:---|:---|:---|:---|:---|
+| \(S^1\) | \(\mathbb{Z}\) | 0 | 0 | 0 | 0 | 0 |
+| \(S^2\) | 0 | \(\mathbb{Z}\) | \(\mathbb{Z}\) | \(\mathbb{Z}_2\) | \(\mathbb{Z}_2\) | \(\mathbb{Z}_{12}\) |
+| \(S^3\) | 0 | 0 | \(\mathbb{Z}\) | \(\mathbb{Z}_2\) | \(\mathbb{Z}_2\) | \(\mathbb{Z}_{12}\) |
+
+The pattern \(\pi_{n+k}(S^n)\) eventually stabilizes for large \(n\) (this is the **Freudenthal suspension theorem**); the resulting "stable" groups form the subject of **stable homotopy theory**, a central topic of modern algebraic topology.
+
+### Homology: counting holes algebraically
+
+Homotopy groups are conceptually clean but fiendishly difficult to compute. **Homology** takes a different approach: instead of studying maps from spheres, it studies the space itself by decomposing it into simple pieces and tracking how those pieces fit together.
+
+The key idea is the **chain complex**. One triangulates the space (or, more generally, decomposes it into cells) and forms free abelian groups \(C_n\) generated by the \(n\)-dimensional cells. The **boundary operator** \(\partial_n: C_n \to C_{n-1}\) records how each cell's boundary is assembled from lower-dimensional cells. The crucial property is \(\partial_{n-1} \circ \partial_n = 0\) — "the boundary of a boundary is zero."
+
+<div class="definition">
+
+<strong>Definition 11.3.</strong> The <strong>\(n\)-th homology group</strong> of a chain complex is
+
+\[H_n = \ker(\partial_n) / \operatorname{im}(\partial_{n+1}) = Z_n / B_n\]
+
+where \(Z_n = \ker \partial_n\) are the <strong>cycles</strong> (chains without boundary) and \(B_n = \operatorname{im}\, \partial_{n+1}\) are the <strong>boundaries</strong> (chains that bound something). A homology class \([\sigma] \in H_n\) represents an \(n\)-dimensional "hole" — a cycle that does not bound.
+
+</div>
+
+<div class="example">
+
+<strong>Example 11.4.</strong> The homology of the spheres is beautifully simple:
+
+\[H_k(S^n) = \begin{cases} \mathbb{Z} & \text{if } k = 0 \text{ or } k = n, \\ 0 & \text{otherwise.} \end{cases}\]
+
+The generator of \(H_n(S^n)\) is called the **fundamental class** — it represents the sphere "wrapping once around itself." For the torus, \(H_0(T^2) \cong \mathbb{Z}\), \(H_1(T^2) \cong \mathbb{Z}^2\), and \(H_2(T^2) \cong \mathbb{Z}\). The two generators of \(H_1\) correspond to the two independent loops on the torus.
+
+</div>
+
+Homology satisfies the **Eilenberg-Steenrod axioms**, which characterize it uniquely (up to a choice of coefficient group). Among the axioms, the most powerful is the **Mayer-Vietoris sequence**: if \(X = U \cup V\), there is a long exact sequence
+
+\[\cdots \to H_n(U \cap V) \to H_n(U) \oplus H_n(V) \to H_n(X) \to H_{n-1}(U \cap V) \to \cdots\]
+
+This is the homological analogue of the Seifert-Van Kampen theorem, but it works in all dimensions and is often easier to apply.
+
+The **Euler characteristic** from Chapter 5 appears here in its true generality:
+
+\[\chi(X) = \sum_{n=0}^{\infty} (-1)^n \operatorname{rank}(H_n(X)).\]
+
+For compact surfaces, this recovers the formula \(\chi = V - E + F\) from any triangulation.
+
+The relationship between \(\pi_1\) and \(H_1\) is precise: \(H_1(X) \cong \pi_1(X)^{\text{ab}}\), the abelianization of the fundamental group. So homology forgets the non-abelian structure of \(\pi_1\) but gains computability and higher-dimensional reach.
+
+### Cohomology and the cup product
+
+Where homology assigns groups, **cohomology** assigns *dual* groups — and gains a multiplicative structure.
+
+<div class="definition">
+
+<strong>Definition 11.5.</strong> The <strong>\(n\)-th cohomology group</strong> with coefficients in a ring \(R\) is \(H^n(X; R) = \operatorname{Hom}(H_n(X), R)\) (roughly speaking). The <strong>cup product</strong> \(\smile: H^p(X) \times H^q(X) \to H^{p+q}(X)\) makes the **cohomology ring** \(H^*(X) = \bigoplus_n H^n(X)\) into a graded-commutative ring.
+
+</div>
+
+The cup product is a strictly finer invariant than homology alone. A famous example: the spaces \(\mathbb{CP}^2\) and \(S^2 \vee S^4\) have identical homology groups, but their cohomology rings differ — \(H^*(\mathbb{CP}^2)\) has a non-trivial cup product (the square of the degree-2 generator is the degree-4 generator), while \(H^*(S^2 \vee S^4)\) has all cup products zero. The cup product detects how the "holes" in a space interact, not just how many there are.
+
+### The great theorems
+
+The machinery of algebraic topology proves theorems that seem far removed from algebra.
+
+**The Brouwer Fixed Point Theorem** (all dimensions). *Every continuous map \(f: D^n \to D^n\) has a fixed point.* The proof is a homological echo of our \(\pi_1\) argument: if \(f\) had no fixed point, we could construct a retraction \(r: D^n \to S^{n-1}\), which would induce a surjection \(H_{n-1}(D^n) \twoheadrightarrow H_{n-1}(S^{n-1})\). But \(H_{n-1}(D^n) = 0\) while \(H_{n-1}(S^{n-1}) \cong \mathbb{Z}\), a contradiction.
+
+**The Hairy Ball Theorem.** *There is no continuous non-vanishing tangent vector field on \(S^{2n}\) (even-dimensional spheres).* You cannot comb a coconut without creating a cowlick. The proof uses the **Euler class** or an index-theoretic argument: a non-vanishing vector field would define a homotopy from the identity to the antipodal map, which has degree \((-1)^{2n+1} = -1 \neq 1\), contradicting the fact that homotopic maps have the same degree. On odd-dimensional spheres, non-vanishing vector fields *do* exist — for \(S^1\), the tangent vector field is simply rotation by 90 degrees.
+
+**The Borsuk-Ulam Theorem.** *For every continuous map \(f: S^n \to \mathbb{R}^n\), there exists a point \(x \in S^n\) with \(f(x) = f(-x)\).* At every moment, some pair of antipodal points on Earth has the same temperature and the same barometric pressure. The proof for \(n = 2\) uses the fundamental group of \(\mathbb{RP}^2\); the general case uses \(\mathbb{Z}_2\)-cohomology. A delightful corollary:
+
+**The Ham Sandwich Theorem.** *Given \(n\) measurable sets in \(\mathbb{R}^n\), there exists a single hyperplane simultaneously bisecting all of them by volume.* Two slices of bread and a slice of ham in \(\mathbb{R}^3\) can always be simultaneously halved by one cut — hence the name.
+
+**The Lefschetz Fixed Point Theorem.** *If \(f: X \to X\) is a continuous map of a compact triangulable space and the Lefschetz number \(\Lambda(f) = \sum_{n} (-1)^n \operatorname{tr}(f_*: H_n(X; \mathbb{Q}) \to H_n(X; \mathbb{Q}))\) is nonzero, then \(f\) has a fixed point.* Brouwer's theorem is the special case \(X = D^n\), where \(\Lambda(f) = 1\) for any \(f\). The Lefschetz theorem detects fixed points even when \(X\) has complicated topology.
+
+**Classification of Platonic Solids.** *There are exactly five convex regular polyhedra: tetrahedron, cube, octahedron, dodecahedron, and icosahedron.* The proof uses the Euler characteristic \(\chi(S^2) = V - E + F = 2\). If each face is a regular \(p\)-gon and \(q\) faces meet at each vertex, then double-counting gives \(qV = 2E = pF\), and substituting into \(\chi = 2\) yields \(\frac{1}{p} + \frac{1}{q} = \frac{1}{2} + \frac{1}{E}\). Since \(\frac{1}{p} + \frac{1}{q} > \frac{1}{2}\) and \(p, q \geq 3\), only five pairs \((p, q)\) work: \((3,3), (3,4), (4,3), (3,5), (5,3)\).
+
+### Deeper waters
+
+Beyond these classical results, algebraic topology connects to many areas of modern mathematics:
+
+- **K-theory** classifies vector bundles over spaces, linking topology to algebra and number theory. The **Bott periodicity theorem** says that the homotopy groups of the classifying spaces for vector bundles repeat with period 2 (complex) or 8 (real), a stunning rigidity.
+- **Characteristic classes** (Stiefel-Whitney, Chern, Pontryagin) are cohomology classes associated to vector bundles that measure twisting. The non-orientability of the Möbius band, for instance, is detected by a non-trivial Stiefel-Whitney class.
+- **Spectral sequences** are a bookkeeping device for computing homology from successive approximations. They are notorious for their complexity but indispensable for serious computations.
+- The **Poincare conjecture** (proved by Perelman in 2003 using Ricci flow, not purely algebraic topology) states that every simply connected, closed 3-manifold is homeomorphic to \(S^3\). Higher-dimensional analogues were proved earlier by Smale (\(n \geq 5\)) and Freedman (\(n = 4\)) using surgery theory and cobordism — deep tools from algebraic topology.
+
+---
+
+## Chapter 12: Topological Dynamics and Ergodic Theory (PMATH 457)
+
+If algebraic topology studies the *shape* of spaces, topological dynamics studies what happens when you *move around* in them. The central question is: given a space \(X\) and a continuous self-map \(T: X \to X\), what can we say about the long-term behaviour of the orbits \(x, Tx, T^2x, T^3x, \ldots\)? Do they eventually cycle? Become dense? Distribute themselves evenly? **PMATH 457** develops the theory in two intertwined halves: *topological dynamics* (using topology and combinatorics) and *ergodic theory* (adding measure theory).
+
+### Topological dynamical systems
+
+<div class="definition">
+
+<strong>Definition 12.1.</strong> A <strong>(compact) topological dynamical system</strong> is a pair \((X, T)\) where \(X\) is a compact Hausdorff space and \(T: X \to X\) is a continuous map. More generally, a <strong>flow</strong> is a continuous action of a topological group \(G\) on \(X\), i.e., a continuous map \(G \times X \to X\) satisfying the group action axioms. When \(G = \mathbb{Z}\) (generated by a single homeomorphism), one recovers the case of iterating a single map.
+
+</div>
+
+The **orbit** of a point \(x\) is the set \(\mathcal{O}(x) = \{T^n x \mid n \geq 0\}\), and its closure \(\overline{\mathcal{O}(x)}\) is the **orbit closure**. The orbit closure is always a closed invariant set — a "sub-dynamical system" in its own right.
+
+<div class="example">
+
+<strong>Example 12.2 (Irrational rotation).</strong> Let \(X = S^1\) (the unit circle in \(\mathbb{C}\)) and \(T(z) = e^{2\pi i \alpha} z\) for some irrational \(\alpha\). Then every orbit is dense in \(S^1\) — the sequence \(1, e^{2\pi i\alpha}, e^{4\pi i\alpha}, \ldots\) visits every arc of the circle. This is the **equidistribution theorem** of Weyl: the points are not only dense, they are uniformly distributed. Contrast this with the case of rational \(\alpha = p/q\), where every orbit is periodic with period \(q\).
+
+</div>
+
+<div class="example">
+
+<strong>Example 12.3 (The doubling map).</strong> Let \(T: S^1 \to S^1\) be \(T(z) = z^2\), or equivalently \(T(x) = 2x \mod 1\) on \([0, 1)\). This is a chaotic system: nearby points diverge exponentially (sensitive dependence on initial conditions), periodic orbits are dense, and the map is topologically mixing. Writing \(x\) in binary, the doubling map simply shifts the binary expansion one place to the left — it is the "shift map" in disguise.
+
+</div>
+
+### Minimality and recurrence
+
+<div class="definition">
+
+<strong>Definition 12.4.</strong> A dynamical system \((X, T)\) is <strong>minimal</strong> if \(X\) has no proper non-empty closed invariant subset. Equivalently, every orbit is dense: \(\overline{\mathcal{O}(x)} = X\) for every \(x \in X\).
+
+</div>
+
+Minimal systems are the "irreducible" building blocks of topological dynamics. By Zorn's Lemma (applied to the poset of non-empty closed invariant subsets), every compact dynamical system contains a minimal subsystem. The irrational rotation is the prototypical minimal system.
+
+A point \(x\) is **recurrent** if it returns arbitrarily close to its starting position: for every neighbourhood \(U\) of \(x\), there exists \(n \geq 1\) with \(T^n x \in U\). In a minimal system, every point is recurrent. The **Birkhoff recurrence theorem** states that *every* compact dynamical system has at least one recurrent point — this is proved using Zorn's Lemma and the intersection property of compact sets.
+
+### The Stone-Cech compactification and ultrafilters
+
+One of the most profound ideas in topological dynamics is the use of **ultrafilters** and the **Stone-Cech compactification** \(\beta\mathbb{N}\) as a dynamical tool.
+
+<div class="definition">
+
+<strong>Definition 12.5.</strong> An <strong>ultrafilter</strong> on \(\mathbb{N}\) is a collection \(p\) of subsets of \(\mathbb{N}\) that is closed under finite intersections and supersets, contains no empty set, and is "maximal" in the sense that for every \(A \subseteq \mathbb{N}\), either \(A \in p\) or \(\mathbb{N} \setminus A \in p\). The **principal ultrafilters** are those of the form \(p_n = \{A \subseteq \mathbb{N} \mid n \in A\}\). All others are called **free ultrafilters** (their existence requires the Axiom of Choice).
+
+</div>
+
+The set \(\beta\mathbb{N}\) of all ultrafilters on \(\mathbb{N}\), with the Stone topology, is a compact Hausdorff space in which \(\mathbb{N}\) embeds densely (via principal ultrafilters). The remarkable fact is that addition on \(\mathbb{N}\) extends to a *semigroup operation* on \(\beta\mathbb{N}\): define \(p + q = \{A \subseteq \mathbb{N} \mid \{n : A - n \in p\} \in q\}\). This operation is associative (but not commutative) and right-continuous. The algebraic structure of this semigroup — its **idempotents** (elements with \(p + p = p\)), **minimal ideals**, and **smallest ideal** — encodes deep combinatorial information about the integers.
+
+### From dynamics to combinatorics
+
+The connection between topological dynamics and Ramsey theory is one of the jewels of modern combinatorics.
+
+<div class="theorem">
+
+<strong>Theorem 12.6 (Van der Waerden, 1927).</strong> For any finite colouring of \(\mathbb{Z}\) (that is, any partition \(\mathbb{Z} = C_1 \cup C_2 \cup \cdots \cup C_r\)), at least one colour class contains arbitrarily long arithmetic progressions.
+
+</div>
+
+The original proof is purely combinatorial (and intricate). But there is a beautiful dynamical proof due to Furstenberg and Weiss. The idea is:
+
+1. Encode the colouring as a point in a compact product space \(X = \{1, \ldots, r\}^{\mathbb{Z}}\) (the space of all bi-infinite sequences on \(r\) colours, with the product topology).
+2. The shift map \(T: X \to X\) given by \((Tx)_n = x_{n+1}\) is a homeomorphism.
+3. The colouring of \(\mathbb{Z}\) corresponds to a single point \(x_0 \in X\), and the orbit closure \(Y = \overline{\mathcal{O}(x_0)}\) is a compact invariant subsystem.
+4. By the Birkhoff Multiple Recurrence Theorem (a non-trivial dynamical result), there is a point in \(Y\) that is "multiply recurrent," which translates directly into a monochromatic arithmetic progression.
+
+This approach generalizes vastly. The **Hales-Jewett theorem** — a much stronger result about "combinatorial lines" in the grid \(\{0, 1, \ldots, k-1\}^n\) for large \(n\) — also admits a proof via topological dynamics (though the standard proof is combinatorial). It implies Van der Waerden's theorem as a special case.
+
+<div class="theorem">
+
+<strong>Theorem 12.7 (Hales-Jewett, 1963).</strong> For any finite alphabet \(A\) and any finite colouring of the set \(A^n\) of words of length \(n\), if \(n\) is large enough (depending on \(|A|\) and the number of colours), there exists a monochromatic <strong>combinatorial line</strong> — a set of \(|A|\) words obtained by replacing some fixed set of coordinates with each letter of \(A\) in turn.
+
+</div>
+
+### Boundary actions and the greatest ambit
+
+When a topological group \(G\) acts on a compact space \(X\), the dynamics encode information about the *group itself*. The **greatest ambit** of \(G\) is the "largest" compact \(G\)-flow with a distinguished point — it is the Stone-Cech compactification \(\beta G\) with the natural \(G\)-action, and every compact \(G\)-flow is a quotient of it.
+
+**Boundary actions** arise when \(G\) acts on a compact space \(X\) and there is a \(G\)-fixed probability measure — the "boundary" is a minimal \(G\)-invariant subset that captures the asymptotic behaviour of orbits. For free groups and hyperbolic groups, the boundary is a Cantor set or a sphere, and its dynamics encodes the geometry of the group at infinity. This connects topological dynamics to geometric group theory.
+
+### Ergodic theory: adding measure
+
+Topological dynamics tells us *where* orbits go, but not *how often* they visit different regions. For this, we need measures.
+
+<div class="definition">
+
+<strong>Definition 12.8.</strong> A <strong>measure-preserving system</strong> is a tuple \((X, \mathcal{B}, \mu, T)\) where \((X, \mathcal{B}, \mu)\) is a probability space and \(T: X \to X\) is a measurable map with \(\mu(T^{-1}(A)) = \mu(A)\) for all \(A \in \mathcal{B}\). The system is <strong>ergodic</strong> if every invariant set \(A\) (i.e., \(T^{-1}(A) = A\)) has measure 0 or 1.
+
+</div>
+
+Ergodicity means the system cannot be decomposed into two independent subsystems of positive measure — it is "indecomposable" from the measure-theoretic viewpoint. The irrational rotation on \(S^1\) with Lebesgue measure is ergodic. The doubling map is ergodic. The identity map is not ergodic (every set is invariant).
+
+The **Krylov-Bogolyubov theorem** guarantees that every continuous map on a compact metrizable space has at least one invariant probability measure — so the ergodic-theoretic viewpoint is always available.
+
+### The ergodic theorems
+
+The **mean ergodic theorem** (von Neumann, 1932) and the **pointwise ergodic theorem** (Birkhoff, 1931) are the founding results of the subject. They say that time averages equal space averages.
+
+<div class="theorem">
+
+<strong>Theorem 12.9 (Birkhoff's Pointwise Ergodic Theorem).</strong> Let \((X, \mathcal{B}, \mu, T)\) be a measure-preserving system and \(f \in L^1(X, \mu)\). Then the limit
+
+\[\bar{f}(x) = \lim_{N \to \infty} \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x)\]
+
+exists for \(\mu\)-almost every \(x\), and \(\bar{f}\) is \(T\)-invariant. If the system is ergodic, then \(\bar{f}(x) = \int_X f \, d\mu\) almost everywhere.
+
+</div>
+
+In physical terms: if \(f\) measures some observable quantity (temperature, velocity, etc.) and \(T\) is the time evolution, then the long-run time average of \(f\) along almost every orbit equals the spatial average over the entire phase space. This is the mathematical justification for the **ergodic hypothesis** in statistical mechanics — the reason we can compute thermodynamic quantities by averaging over phase space instead of tracking individual particle trajectories.
+
+### Rokhlin's Lemma: approximation by towers
+
+<div class="theorem">
+
+<strong>Theorem 12.10 (Rokhlin's Lemma, 1948).</strong> Let \(T\) be an aperiodic (no periodic orbits a.e.) invertible measure-preserving transformation of a non-atomic probability space \((X, \mu)\). For any \(n \geq 1\) and \(\varepsilon > 0\), there exists a measurable set \(B\) such that the sets \(B, TB, T^2B, \ldots, T^{n-1}B\) are pairwise disjoint and
+
+\[\mu(B \cup TB \cup \cdots \cup T^{n-1}B) > 1 - \varepsilon.\]
+
+</div>
+
+The collection \(\{B, TB, \ldots, T^{n-1}B\}\) is called a **Rokhlin tower** of height \(n\). The lemma says that an aperiodic system can be approximated by a periodic one (the tower looks like a cyclic permutation) on a set of measure as close to 1 as desired. This is an indispensable tool for constructing examples and counterexamples in ergodic theory.
+
+### Entropy: measuring chaos
+
+How "random" is a dynamical system? The concept of **entropy**, imported from information theory by Kolmogorov and Sinai, gives a precise numerical answer.
+
+<div class="definition">
+
+<strong>Definition 12.11.</strong> Let \(\mathcal{P} = \{P_1, \ldots, P_k\}\) be a finite measurable partition of \(X\). Its <strong>Shannon entropy</strong> is
+
+\[H(\mathcal{P}) = -\sum_{i=1}^k \mu(P_i) \log \mu(P_i).\]
+
+The <strong>entropy of the partition \(\mathcal{P}\) relative to \(T\)</strong> is
+
+\[h(T, \mathcal{P}) = \lim_{n \to \infty} \frac{1}{n} H\left(\bigvee_{j=0}^{n-1} T^{-j}\mathcal{P}\right)\]
+
+where \(\bigvee\) denotes the join (common refinement) of partitions. The <strong>measure-theoretic entropy</strong> of \(T\) is \(h(T) = \sup_{\mathcal{P}} h(T, \mathcal{P})\).
+
+</div>
+
+Entropy measures the rate at which the system generates information — how quickly you need new bits to describe the orbit of a typical point. A rotation (rational or irrational) has entropy 0: it is completely predictable. The doubling map \(x \mapsto 2x \mod 1\) has entropy \(\log 2\): each iteration effectively reveals one new binary digit.
+
+Entropy is a conjugacy invariant: if two systems are measurably isomorphic, they have the same entropy. The converse fails in general, but for the most "random" systems it holds.
+
+### Ornstein's theorem: the classification of Bernoulli shifts
+
+The most spectacular application of entropy is the classification of **Bernoulli shifts** — the paradigmatic random systems.
+
+<div class="definition">
+
+<strong>Definition 12.12.</strong> Let \(p = (p_1, \ldots, p_k)\) be a probability vector. The <strong>Bernoulli shift</strong> \(B(p_1, \ldots, p_k)\) is the shift map on the product space \(\{1, \ldots, k\}^{\mathbb{Z}}\) with the product measure \(\mu = \prod_{n \in \mathbb{Z}} (p_1, \ldots, p_k)\). This models an independent sequence of coin flips (with a biased coin).
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 12.13 (Ornstein, 1970).</strong> Two Bernoulli shifts are measurably isomorphic if and only if they have the same entropy. That is, \(B(p_1, \ldots, p_k) \cong B(q_1, \ldots, q_\ell)\) if and only if \(-\sum p_i \log p_i = -\sum q_j \log q_j\).
+
+</div>
+
+This is a remarkable rigidity theorem. It says that for Bernoulli shifts, entropy is a *complete* invariant — it tells you everything. The "if" direction is the hard part: one must construct an explicit measure-preserving isomorphism between two product spaces with different alphabets but the same entropy. The proof introduces the concept of **finitely determined processes** and uses a deep approximation argument.
+
+Ornstein's theorem has a beautiful analogy with the classification of surfaces: just as compact surfaces are classified by two numbers (orientability and Euler characteristic), Bernoulli shifts are classified by a single number (entropy).
+
+### Orbit equivalence: dynamics beyond isomorphism
+
+A further weakening of "same dynamics" asks only that orbits have the same *structure*, not the same map.
+
+<div class="definition">
+
+<strong>Definition 12.14.</strong> Two measure-preserving systems \((X, \mu, T)\) and \((Y, \nu, S)\) are <strong>orbit equivalent</strong> if there exists a measure-preserving bijection \(\varphi: X \to Y\) sending each \(T\)-orbit to an \(S\)-orbit (not necessarily respecting the dynamics).
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem 12.15 (Dye, 1959).</strong> Any two ergodic measure-preserving transformations of a non-atomic probability space are orbit equivalent.
+
+</div>
+
+This stunning result says that from the point of view of orbit structure alone, *all* ergodic systems look the same. The entropy, which distinguishes Bernoulli shifts so precisely, is invisible to orbit equivalence. This shows that orbit equivalence is a much coarser relation than measurable isomorphism — it forgets the "speed" of the dynamics and retains only the "shape" of the orbits.
+
+Dye's theorem is the starting point for the deep connections between ergodic theory and the theory of **von Neumann algebras** in operator theory, where the orbit equivalence relation of a group action determines a factor of type \(\mathrm{II}_1\).
+
+### The web of connections
+
+The interplay between the topological, combinatorial, and measure-theoretic viewpoints is the defining feature of PMATH 457. The subject draws on essentially everything developed in PMATH 367:
+
+- **Compact spaces** are the stage for topological dynamics (Tychonoff's theorem ensures that product spaces and Stone-Cech compactifications are available).
+- **Quotient spaces** appear when forming orbit spaces and factor systems.
+- **Covering spaces** relate to the dynamics of deck transformations.
+- **The fundamental group** appears in the study of flows on surfaces and the dynamics of surface homeomorphisms.
+- **Product topologies** underlie shift spaces and symbolic dynamics.
+
+From this foundation, the subject radiates into number theory (equidistribution, continued fractions), combinatorics (Ramsey theory, additive combinatorics), probability (mixing, large deviations), and mathematical physics (statistical mechanics, quantum ergodicity).
