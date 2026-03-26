@@ -1,0 +1,2668 @@
+---
+title: "STAT 901: Probability"
+prof: "Professor TBD"
+---
+
+These notes synthesize material from two primary sources for the University of Waterloo's STAT 901 graduate probability course, Fall 2024:
+
+- **Jacob Schnell**, *STAT 901 Fall 2024: Notes* — the primary lecture notes following the Fall 2024 offering
+- **Don McLeish**, *STAT 901: Probability* (September 2005) — a comprehensive reference text by the late Professor McLeish, used to enrich and deepen the treatment
+
+The course develops measure-theoretic probability from the ground up: starting with σ-fields and probability measures, building through Lebesgue integration and the various modes of convergence, culminating in the central limit theorem and conditional expectation. This is the foundational course for all graduate work in probability and statistics at Waterloo.
+
+# Chapter 1: Probability Measures
+
+The theory of probability rests on a rigorous measure-theoretic foundation. In this chapter we develop the key structures --- \(\sigma\)-fields, probability measures, and probability spaces --- that allow us to assign probabilities to events in a mathematically consistent way. We then explore how to extend measures from simple collections of sets to richer ones via the Carath\'{e}odory extension theorem, study the elegant \(\pi\)-\(\lambda\) technique for proving uniqueness, and conclude with the notions of conditional probability, independence, the Borel--Cantelli lemmas, and Kolmogorov's zero--one law.
+
+## 1.1 \(\sigma\)-Fields
+
+A natural first question in probability theory is: to which collections of outcomes should we be able to assign probabilities? The answer is provided by the concept of a \(\sigma\)-field (also called a \(\sigma\)-algebra), which is a collection of subsets of a given universe that is closed under the operations we need for a consistent probability calculus --- complementation and countable union.
+
+<div class="definition">
+<strong>Definition 1.1 (\(\sigma\)-Field).</strong> A class \(\mathcal{F} \subseteq \mathcal{P}(\Omega)\) of subsets of a universe \(\Omega\) is called a <strong>\(\sigma\)-field</strong> if:<br>
+(1) \(\Omega \in \mathcal{F}\).<br>
+(2) If \(A \in \mathcal{F}\), then \(A^c = \Omega \setminus A \in \mathcal{F}\).<br>
+(3) If \(A_1, A_2, \ldots \in \mathcal{F}\) (countably many sets), then \(\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}\).
+</div>
+
+The axioms of a \(\sigma\)-field guarantee closure under the basic set operations one repeatedly performs in probability. Since \(\Omega \in \mathcal{F}\) and \(\mathcal{F}\) is closed under complementation, we immediately have \(\emptyset = \Omega^c \in \mathcal{F}\). By De Morgan's laws and closure under complementation and countable union, every \(\sigma\)-field is also closed under countable intersection: if \(A_1, A_2, \ldots \in \mathcal{F}\), then \(\bigcap_{i=1}^{\infty} A_i = \bigl(\bigcup_{i=1}^{\infty} A_i^c\bigr)^c \in \mathcal{F}\).
+
+Let us examine several important examples to build intuition.
+
+<div class="example">
+<strong>Example 1.2.</strong> The set \(\mathcal{F} = \{\emptyset, \Omega\}\) is called the <strong>trivial \(\sigma\)-field</strong>. It contains no information beyond the certain event \(\Omega\) and the impossible event \(\emptyset\).
+</div>
+
+<div class="example">
+<strong>Example 1.3.</strong> The power set \(\mathcal{P}(\Omega) = \{A : A \subseteq \Omega\}\) is a \(\sigma\)-field. It is the largest possible \(\sigma\)-field on \(\Omega\).
+</div>
+
+<div class="example">
+<strong>Example 1.4.</strong> For any \(A \subseteq \Omega\), the collection \(\mathcal{F} = \{\emptyset, A, A^c, \Omega\}\) is a \(\sigma\)-field. One can verify each axiom directly.
+</div>
+
+<div class="example">
+<strong>Example 1.5.</strong> The collection \(\mathcal{F} = \{A \subseteq \Omega : A \text{ is countable or } A^c \text{ is countable}\}\) is a \(\sigma\)-field. To verify closure under countable union: if any set in the union has a countable complement, then the complement of the union is even smaller (a subset of a countable set) and hence countable. If all sets in the union are themselves countable, then their countable union is countable.
+</div>
+
+The next example illustrates the important distinction between a field (closed under finite unions) and a \(\sigma\)-field (closed under countable unions).
+
+<div class="example">
+<strong>Example 1.6.</strong> Let \(\Omega = (0,1]\) and let \(\mathcal{B}_0\) be the class of all finite unions of disjoint subintervals of the form \((a,b]\) within \(\Omega\). Then \(\Omega \in \mathcal{B}_0\), and one can check that \(\mathcal{B}_0\) is closed under complementation and finite unions. However, \(\mathcal{B}_0\) is <em>not</em> closed under countable unions. For instance, with \(A_n = \bigl(\frac{1}{2n}, \frac{1}{2n+1}\bigr]\), the union \(\bigcup_{n=1}^{\infty} A_n\) has infinitely many connected components and does not belong to \(\mathcal{B}_0\). As another counterexample, \(A_n = (0, 1 - \tfrac{1}{n}]\) gives \(\bigcup_{n=1}^{\infty} A_n = (0,1)\), which is right-open and therefore not in \(\mathcal{B}_0\). Thus \(\mathcal{B}_0\) is a field but not a \(\sigma\)-field.
+</div>
+
+## 1.2 Generators and the Borel \(\sigma\)-Field
+
+In practice, \(\sigma\)-fields are typically too large to describe explicitly. Instead, we specify a \(\sigma\)-field by giving a generating class --- a smaller, more manageable collection of sets whose \(\sigma\)-field closure produces the desired collection.
+
+<div class="definition">
+<strong>Definition 1.7 (\(\sigma\)-Field Generated by a Class).</strong> Let \(\mathcal{A}\) be a class of subsets of \(\Omega\). The <strong>\(\sigma\)-field generated by \(\mathcal{A}\)</strong>, denoted \(\sigma(\mathcal{A})\), is defined as the intersection of all \(\sigma\)-fields containing \(\mathcal{A}\):
+\[
+\sigma(\mathcal{A}) = \bigcap \{\mathcal{F} : \mathcal{A} \subseteq \mathcal{F},\; \mathcal{F} \text{ is a } \sigma\text{-field}\}.
+\]
+One can verify that this intersection is itself a \(\sigma\)-field. Moreover, \(\sigma(\mathcal{A})\) is the <em>smallest</em> \(\sigma\)-field containing \(\mathcal{A}\).
+</div>
+
+The idea behind the generated \(\sigma\)-field is powerful: we only need to specify a convenient collection of "building-block" sets, and the \(\sigma\)-field machinery fills in everything else. Any \(\sigma\)-field containing the generators must contain all sets that can be built from them by countable unions, intersections, and complements.
+
+<div class="example">
+<strong>Example 1.8.</strong> The trivial \(\sigma\)-field satisfies \(\{\emptyset, \Omega\} = \sigma(\{\emptyset\})\).
+</div>
+
+<div class="example">
+<strong>Example 1.9.</strong> For any \(A \subseteq \Omega\), we have \(\{\emptyset, A, A^c, \Omega\} = \sigma(\{A\}) = \sigma(\{A^c\})\).
+</div>
+
+<div class="example">
+<strong>Example 1.10.</strong> The \(\sigma\)-field of countable/co-countable sets satisfies \(\{A \subseteq \Omega : A \text{ is countable or } A^c \text{ is countable}\} = \sigma(\{\{w\} : w \in \Omega\})\); it is generated by the collection of all singletons.
+</div>
+
+Perhaps the most important \(\sigma\)-field in probability theory is the **Borel \(\sigma\)-field**, which captures all the sets we typically need when working on the real line or more general topological spaces.
+
+<div class="definition">
+<strong>Definition 1.11 (Borel \(\sigma\)-Field).</strong> On \(\Omega = (0,1]\), the <strong>Borel \(\sigma\)-field</strong> \(\mathcal{B}\) is the \(\sigma\)-field generated by \(\mathcal{B}_0 = \{\text{finite unions of disjoint subintervals } (a,b] \text{ of } \Omega\}\). More generally, for a topological space \(\Omega\), the Borel \(\sigma\)-field is \(\mathcal{B} = \sigma(\mathcal{O})\), where \(\mathcal{O}\) is the collection of all open sets.
+</div>
+
+A key fact about the Borel \(\sigma\)-field on the real line is that it can be generated by many different natural collections of intervals. The equivalences below follow because any type of interval can be expressed in terms of any other type using countable set operations (for instance, \([a,b] = \bigcap_{n=1}^{\infty}(a - \tfrac{1}{n}, b + \tfrac{1}{n})\) and \((a,b) = \bigcup_{n=1}^{\infty}[a + \tfrac{1}{n}, b - \tfrac{1}{n}]\)).
+
+<div class="proposition">
+<strong>Proposition 1.12.</strong> The Borel \(\sigma\)-field on \(\mathbb{R}\) satisfies
+\[
+\mathcal{B} = \sigma(\{(a,b]\}) = \sigma(\{[a,b)\}) = \sigma(\{[a,b]\}) = \sigma(\{(a,b)\}).
+\]
+It is also generated by the class of all open subsets of \(\mathbb{R}\), or equivalently by the class of all closed subsets of \(\mathbb{R}\).
+</div>
+
+The equivalence between the open-set generators and the interval generators relies on a fundamental structural result: every open subset of \(\mathbb{R}\) can be written as a countable union of open intervals. This is because each point \(x\) in an open set \(O\) belongs to a maximal open interval \(I_x \subseteq O\), these maximal intervals are pairwise disjoint, and each contains a rational number, so there can be at most countably many of them.
+
+## 1.3 Probability Measures and Probability Spaces
+
+With the notion of \(\sigma\)-field in hand, we can now define the central object of probability theory: the probability measure.
+
+<div class="definition">
+<strong>Definition 1.13 (Probability Measure).</strong> A set function \(P \colon \mathcal{F} \to [0,1]\) defined on a \(\sigma\)-field \(\mathcal{F}\) is a <strong>probability measure</strong> if:<br>
+(1) \(0 \leq P(A) \leq 1\) for all \(A \in \mathcal{F}\).<br>
+(2) \(P(\emptyset) = 0\) and \(P(\Omega) = 1\).<br>
+(3) \(P\) is countably additive: if \(A_1, A_2, \ldots \in \mathcal{F}\) are pairwise disjoint, then
+\[
+P\!\Bigl(\bigcup_{i=1}^{\infty} A_i\Bigr) = \sum_{i=1}^{\infty} P(A_i).
+\]
+</div>
+
+<div class="remark">
+<strong>Remark 1.14.</strong> Some of the conditions above are redundant. An equivalent, more succinct set of axioms is: (1') \(P(A) \geq 0\) for all \(A \in \mathcal{F}\); (2') \(P(\Omega) = 1\); (3') \(P\) is countably additive. Conditions (1) and (2) of the original formulation then follow.
+</div>
+
+<div class="remark">
+<strong>Remark 1.15.</strong> From a frequentist perspective, probability can be interpreted as the long-run relative frequency of an event when an experiment is repeated indefinitely. Under this interpretation, conditions (1) and (2) are immediate, but countable additivity (3) goes beyond what finite repetitions can verify --- it is a mathematical axiom that enables us to take limits. In the Bayesian perspective, probability is a subjective measure of belief about the relative likelihood of events, rescaled to lie in \([0,1]\). Both perspectives ultimately rest on the same mathematical axioms.
+</div>
+
+We now assemble the three components into the fundamental structure of probability theory.
+
+<div class="definition">
+<strong>Definition 1.16 (Probability Space).</strong> A <strong>probability space</strong> is a triple \((\Omega, \mathcal{F}, P)\) where:<br>
+&bull; \(\Omega\) is a set called the <strong>sample space</strong>, representing all possible outcomes of a random experiment.<br>
+&bull; \(\mathcal{F}\) is a \(\sigma\)-field of subsets of \(\Omega\). The elements of \(\mathcal{F}\) are called <strong>events</strong>.<br>
+&bull; \(P\) is a probability measure on \(\mathcal{F}\).
+</div>
+
+The sample space, \(\sigma\)-field, and probability measure each play a distinct role. The sample space \(\Omega\) is simply some set of points --- it need not carry any additional structure. The \(\sigma\)-field \(\mathcal{F}\) specifies which subsets of \(\Omega\) we can meaningfully discuss; it encodes the "information" available about the experiment. The probability measure \(P\) assigns a numerical probability to each event in \(\mathcal{F}\).
+
+<div class="example">
+<strong>Example 1.17.</strong> For the experiment of flipping a coin \(n\) times, the sample space is \(\Omega = \{\text{sequences of H and T of length } n\}\).
+</div>
+
+<div class="example">
+<strong>Example 1.18.</strong> For measuring the time until some random event occurs (e.g., radioactive decay), one takes \(\Omega = \{0\} \cup \mathbb{R}^+\).
+</div>
+
+<div class="example">
+<strong>Example 1.19.</strong> For tomorrow's weather, one might take \(\Omega = \{\text{sunny, rainy, cloudy}, \ldots\}\).
+</div>
+
+<div class="example">
+<strong>Example 1.20 (Discrete Probability Space).</strong> Let \(\Omega\) be countable (or finite). Suppose \(p \colon \Omega \to \mathbb{R}\) is a function with \(p(\omega) \geq 0\) for all \(\omega\) and \(\sum_{\omega \in \Omega} p(\omega) = 1\). Define \(P(A) = \sum_{\omega \in A} p(\omega)\) for all \(A \in \mathcal{F}\). Then \(P\) is a probability measure and \((\Omega, \mathcal{F}, P)\) is a <strong>discrete probability space</strong>. In this setting, \(\mathcal{F}\) merely specifies for which sets \(P\) is defined; one often takes \(\mathcal{F} = \mathcal{P}(\Omega)\). Note that \(p\) itself is not a probability measure --- it is a function on individual points, not on sets.
+</div>
+
+<div class="remark">
+<strong>Remark 1.21 (Why do we need \(\mathcal{F}\)?).</strong> There are two compelling reasons to restrict our attention to a \(\sigma\)-field rather than working with all subsets of \(\Omega\).<br><br>
+1. <em>Existence of well-behaved measures.</em> One may wish a measure to satisfy natural properties such as translation invariance (\(\mu(A) = \mu(A + b)\)). A classical result shows that there is no translation-invariant probability measure defined on <em>all</em> subsets of \((0,1]\). Thus we must restrict to a \(\sigma\)-field to ensure a good measure exists.<br><br>
+2. <em>Information modelling.</em> The \(\sigma\)-field \(\mathcal{F}\) represents the information available about an experiment. It is the collection of events for which we can talk about probability and will know when they occur. Different observers, or the same observer at different times, may have different \(\sigma\)-fields reflecting different levels of information.
+</div>
+
+## 1.4 Set Limits
+
+Before studying further properties of probability measures, we need the notion of limits for sequences of sets, which parallels the familiar \(\liminf\) and \(\limsup\) for sequences of real numbers.
+
+<div class="definition">
+<strong>Definition 1.22 (Set Limits).</strong> Let \(A_1, A_2, \ldots \subseteq \Omega\) be a sequence of sets. We define:
+\[
+\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{j \geq n} A_j = \{\omega \in \Omega : \exists\, n,\; \forall\, j \geq n,\; \omega \in A_j\},
+\]
+\[
+\limsup_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} \bigcup_{j \geq n} A_j = \{\omega \in \Omega : \forall\, n,\; \exists\, j \geq n,\; \omega \in A_j\}.
+\]
+When \(\liminf_{n \to \infty} A_n = \limsup_{n \to \infty} A_n\), we write \(\lim_{n \to \infty} A_n\) for the common value.
+</div>
+
+These definitions admit vivid probabilistic interpretations. A point \(\omega\) belongs to \(\liminf_{n \to \infty} A_n\) if and only if \(\omega \in A_k\) for all but finitely many \(k\); in probabilistic shorthand, \(\omega\) is in \(A_n\) **almost always** (a.a.). Conversely, \(\omega \in \limsup_{n \to \infty} A_n\) if and only if \(\omega \in A_k\) for infinitely many \(k\); we say \(\omega\) is in \(A_n\) **infinitely often** (i.o.). We write:
+\[
+\liminf_{n \to \infty} A_n = \{A_n \text{ a.a.}\}, \qquad \limsup_{n \to \infty} A_n = \{A_n \text{ i.o.}\}.
+\]
+
+Since every point that is in all but finitely many \(A_k\) is certainly in infinitely many \(A_k\), we always have \(\liminf_{n \to \infty} A_n \subseteq \limsup_{n \to \infty} A_n\). These two set limits coincide precisely for monotone sequences.
+
+<div class="proposition">
+<strong>Proposition 1.23 (Limits of Monotone Sequences).</strong> If \(A_1 \subseteq A_2 \subseteq \cdots\) is an increasing sequence, then
+\[
+\lim_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} A_n.
+\]
+If \(A_1 \supseteq A_2 \supseteq \cdots\) is a decreasing sequence, then
+\[
+\lim_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} A_n.
+\]
+</div>
+
+## 1.5 Properties and Continuity of Probability Measures
+
+Probability measures inherit several useful properties from their axioms.
+
+<div class="proposition">
+<strong>Proposition 1.24 (Basic Properties of Probability Measures).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space. Then:<br>
+(1) <em>Monotonicity:</em> If \(A \subseteq B\), then \(P(A) \leq P(B)\).<br>
+(2) <em>Complement rule:</em> \(P(A^c) = 1 - P(A)\).<br>
+(3) <em>Inclusion--exclusion for two sets:</em> \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\).
+</div>
+
+The two-set inclusion--exclusion formula generalizes to any finite collection of events.
+
+<div class="proposition">
+<strong>Proposition 1.25 (Inclusion--Exclusion Formula).</strong> For events \(A_1, A_2, \ldots, A_n \in \mathcal{F}\),
+\[
+P\!\Bigl(\bigcup_{i=1}^{n} A_i\Bigr) = \sum_{1 \leq i \leq n} P(A_i) - \sum_{1 \leq i < j \leq n} P(A_i \cap A_j) + \sum_{1 \leq i < j < k \leq n} P(A_i \cap A_j \cap A_k) - \cdots + (-1)^{n+1} P(A_1 \cap \cdots \cap A_n).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We proceed by induction. The base case \(n = 2\) is Proposition 1.24(3). Assume the formula holds for \(n\). Then
+\[
+P\!\Bigl(\bigcup_{i=1}^{n+1} A_i\Bigr) = P\!\Bigl(\bigcup_{i=1}^{n} A_i\Bigr) + P(A_{n+1}) - P\!\Bigl(\bigl(\bigcup_{i=1}^{n} A_i\bigr) \cap A_{n+1}\Bigr).
+\]
+Since \(\bigl(\bigcup_{i=1}^{n} A_i\bigr) \cap A_{n+1} = \bigcup_{i=1}^{n} (A_i \cap A_{n+1})\), we apply the induction hypothesis to each of \(\bigcup_{i=1}^{n} A_i\) and \(\bigcup_{i=1}^{n} (A_i \cap A_{n+1})\), and a careful bookkeeping of signs yields the formula for \(n+1\).
+</div>
+
+One of the most powerful properties of probability measures is their continuity with respect to monotone sequences of events.
+
+<div class="proposition">
+<strong>Proposition 1.26 (Continuity of Probability Measures).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots \in \mathcal{F}\). If \(A_1 \subseteq A_2 \subseteq \cdots\) (increasing) or \(A_1 \supseteq A_2 \supseteq \cdots\) (decreasing), then
+\[
+\lim_{n \to \infty} P(A_n) = P\!\Bigl(\lim_{n \to \infty} A_n\Bigr).
+\]
+That is, probability measures are continuous from below and from above.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Suppose \(A_n\) is increasing. Define \(B_1 = A_1\) and \(B_n = A_n \setminus A_{n-1}\) for \(n \geq 2\), so that \(B_n\) represents the portion added by \(A_n\). Then \(B_1, B_2, \ldots\) are pairwise disjoint, \(A_n = \bigcup_{i=1}^{n} B_i\), and \(\lim_{n \to \infty} A_n = \bigcup_{i=1}^{\infty} B_i\). By countable additivity,
+\[
+P\!\Bigl(\lim_{n \to \infty} A_n\Bigr) = P\!\Bigl(\bigcup_{i=1}^{\infty} B_i\Bigr) = \sum_{i=1}^{\infty} P(B_i) = \lim_{n \to \infty} \sum_{i=1}^{n} P(B_i) = \lim_{n \to \infty} P\!\Bigl(\bigcup_{i=1}^{n} B_i\Bigr) = \lim_{n \to \infty} P(A_n).
+\]
+For the decreasing case, note that \(A_n^c\) is increasing with \(\lim_{n \to \infty} A_n^c = \bigl(\lim_{n \to \infty} A_n\bigr)^c\). By the increasing case,
+\[
+P\!\Bigl(\lim_{n \to \infty} A_n\Bigr) = 1 - P\!\Bigl(\lim_{n \to \infty} A_n^c\Bigr) = 1 - \lim_{n \to \infty} P(A_n^c) = \lim_{n \to \infty}\bigl(1 - P(A_n^c)\bigr) = \lim_{n \to \infty} P(A_n). \qquad \square
+\]
+</div>
+
+A useful inequality that follows from countable additivity is Boole's inequality, also known as the union bound.
+
+<div class="proposition">
+<strong>Proposition 1.27 (Boole's Inequality).</strong> If \(A_1, A_2, \ldots \in \mathcal{F}\), then
+\[
+P\!\Bigl(\bigcup_{i=1}^{\infty} A_i\Bigr) \leq \sum_{i=1}^{\infty} P(A_i).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \(B_1 = A_1\) and \(B_n = A_n \setminus \bigcup_{i=1}^{n-1} A_i\) for \(n \geq 2\). Then \(B_1, B_2, \ldots\) are pairwise disjoint, \(\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i\), and \(B_i \subseteq A_i\) for each \(i\). Therefore
+\[
+P\!\Bigl(\bigcup_{i=1}^{\infty} A_i\Bigr) = P\!\Bigl(\bigcup_{i=1}^{\infty} B_i\Bigr) = \sum_{i=1}^{\infty} P(B_i) \leq \sum_{i=1}^{\infty} P(A_i),
+\]
+since \(P(B_i) \leq P(A_i)\) by monotonicity. \(\square\)
+</div>
+
+Continuity of measures extends beyond monotone sequences. The following result relates \(\liminf\) and \(\limsup\) of probabilities to probabilities of set limits.
+
+<div class="theorem">
+<strong>Theorem 1.28.</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots \in \mathcal{F}\). Then:<br>
+(1) \(P(\liminf_{n \to \infty} A_n) \leq \liminf_{n \to \infty} P(A_n) \leq \limsup_{n \to \infty} P(A_n) \leq P(\limsup_{n \to \infty} A_n)\).<br>
+(2) If \(\lim_{n \to \infty} A_n = A\) exists, then \(\lim_{n \to \infty} P(A_n) = P(A)\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \(B_n = \bigcap_{k \geq n} A_k\) and \(C_n = \bigcup_{k \geq n} A_k\). Then \(B_n\) is increasing (we intersect with fewer events as \(n\) grows), \(C_n\) is decreasing (we union with fewer events), and \(B_n \subseteq A_n \subseteq C_n\). Moreover, \(\lim_{n \to \infty} B_n = \liminf_{n \to \infty} A_n\) and \(\lim_{n \to \infty} C_n = \limsup_{n \to \infty} A_n\). By the monotonicity of \(P\) and the continuity of measures along monotone sequences:
+\[
+\liminf_{n \to \infty} P(A_n) \geq \lim_{n \to \infty} P(B_n) = P\!\Bigl(\liminf_{n \to \infty} A_n\Bigr),
+\]
+\[
+\limsup_{n \to \infty} P(A_n) \leq \lim_{n \to \infty} P(C_n) = P\!\Bigl(\limsup_{n \to \infty} A_n\Bigr).
+\]
+Part (2) is immediate from (1) by the squeeze theorem. \(\square\)
+</div>
+
+## 1.6 Fields, Outer Measures, and the Carath\'{e}odory Extension
+
+In practice, one often specifies a probability measure on a simple collection of sets --- a field --- and then extends it to the full \(\sigma\)-field. The Carath\'{e}odory extension theorem provides the machinery for this.
+
+<div class="definition">
+<strong>Definition 1.29 (Field).</strong> A class \(\mathcal{F}_0 \subseteq \mathcal{P}(\Omega)\) is called a <strong>field</strong> (or algebra) if:<br>
+(1) \(\Omega \in \mathcal{F}_0\).<br>
+(2) If \(A \in \mathcal{F}_0\), then \(A^c \in \mathcal{F}_0\).<br>
+(3) If \(A, B \in \mathcal{F}_0\), then \(A \cup B \in \mathcal{F}_0\).
+</div>
+
+Property (3) gives closure under finite unions (by induction), but unlike a \(\sigma\)-field, a field need not be closed under countable unions. Every \(\sigma\)-field is a field, but Example 1.6 shows the converse is false.
+
+The extension from a field to its generated \(\sigma\)-field uses the concept of outer measure.
+
+<div class="definition">
+<strong>Definition 1.30 (Outer Measure).</strong> Let \(\Omega\) be a sample space with field \(\mathcal{F}_0\) and measure \(P\). For any set \(A \subseteq \Omega\) (not necessarily in \(\mathcal{F}_0\)), the <strong>outer measure</strong> of \(A\) is
+\[
+P^*(A) := \inf\!\Biggl\{\sum_{n=1}^{\infty} P(A_n) : A \subseteq \bigcup_{n=1}^{\infty} A_n,\; A_1, A_2, \ldots \in \mathcal{F}_0\Biggr\}.
+\]
+That is, \(P^*(A)\) is the infimum of the total measure of all countable covers of \(A\) by sets from \(\mathcal{F}_0\).
+</div>
+
+The outer measure extends \(P\) to all subsets of \(\Omega\), but it is generally only subadditive, not countably additive. To recover full additivity, we restrict attention to those sets that "split" every other set cleanly.
+
+<div class="definition">
+<strong>Definition 1.31 (\(P^*\)-Measurable Set).</strong> A set \(A \subseteq \Omega\) is <strong>\(P^*\)-measurable</strong> if
+\[
+P^*(A \cap E) + P^*(A^c \cap E) = P^*(E)
+\]
+for all \(E \subseteq \Omega\). This is known as <strong>Carath\'{e}odory's criterion</strong>. Intuitively, it says that the "boundary" cast by \(A\) does not interfere with the measurement of any set \(E\). We write \(\mathcal{M}\) for the class of all \(P^*\)-measurable subsets of \(\Omega\).
+</div>
+
+<div class="proposition">
+<strong>Proposition 1.32.</strong> The class \(\mathcal{M}\) is a \(\sigma\)-field, \(P^*\) is countably additive on \(\mathcal{M}\), and \(P^*\) is a probability measure on \(\mathcal{M}\). Therefore \((\Omega, \mathcal{M}, P^*)\) is a probability space.
+</div>
+
+The proof of the full \(\sigma\)-field and countable-additivity properties of \(\mathcal{M}\) is technical and is omitted. However, one can see that \(P^*(A) \geq 0\) since it is an infimum of sums of non-negative values, and \(P^*(\Omega) = P(\Omega) = 1\) since \(\Omega \in \mathcal{F}_0\) is its own smallest cover.
+
+The crucial link between the original field and the extended \(\sigma\)-field is established next.
+
+<div class="proposition">
+<strong>Proposition 1.33.</strong> Let \(\Omega\) be a sample space with field \(\mathcal{F}_0\) and measure \(P\). Then \(\mathcal{F}_0 \subseteq \mathcal{M}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(A \in \mathcal{F}_0\). For any \(E \subseteq \Omega\), we must show \(P^*(A \cap E) + P^*(A^c \cap E) = P^*(E)\). Let \(\varepsilon > 0\). Choose a cover \(A_1, A_2, \ldots \in \mathcal{F}_0\) of \(E\) with \(\sum_{n=1}^{\infty} P(A_n) \leq P^*(E) + \varepsilon\). Define \(B_n = A_n \cap A \in \mathcal{F}_0\) and \(C_n = A_n \cap A^c \in \mathcal{F}_0\). Since \(B_n\) and \(C_n\) are disjoint with \(B_n \cup C_n = A_n\), we have \(P(B_n) + P(C_n) = P(A_n)\). Moreover, \(E \cap A \subseteq \bigcup_{n=1}^{\infty} B_n\) and \(E \cap A^c \subseteq \bigcup_{n=1}^{\infty} C_n\). By Boole's inequality,
+\[
+P^*(E \cap A) + P^*(E \cap A^c) \leq \sum_{n=1}^{\infty} P(B_n) + \sum_{n=1}^{\infty} P(C_n) = \sum_{n=1}^{\infty} P(A_n) \leq P^*(E) + \varepsilon.
+\]
+Since \(\varepsilon > 0\) was arbitrary, \(P^*(E \cap A) + P^*(E \cap A^c) \leq P^*(E)\). The reverse inequality holds trivially (any cover of \(E\) covers both \(E \cap A\) and \(E \cap A^c\)), so \(P^*(E \cap A) + P^*(E \cap A^c) = P^*(E)\), confirming \(A \in \mathcal{M}\). \(\square\)
+</div>
+
+## 1.7 \(\pi\)-\(\lambda\) Systems
+
+A remarkably efficient tool for proving results about \(\sigma\)-fields is the \(\pi\)-\(\lambda\) theorem, which decomposes the \(\sigma\)-field axioms into two simpler pieces.
+
+<div class="definition">
+<strong>Definition 1.34 (\(\pi\)-System).</strong> A class \(\mathcal{P} \subseteq \mathcal{P}(\Omega)\) is a <strong>\(\pi\)-system</strong> if \(A, B \in \mathcal{P}\) implies \(A \cap B \in \mathcal{P}\). That is, \(\mathcal{P}\) is closed under finite intersection.
+</div>
+
+A \(\pi\)-system captures the "intersection" half of the \(\sigma\)-field axioms. The simplest example is the family of rectangles in Euclidean space; any Boolean algebra is also a \(\pi\)-system.
+
+<div class="definition">
+<strong>Definition 1.35 (\(\lambda\)-System).</strong> A class \(\mathcal{L} \subseteq \mathcal{P}(\Omega)\) is a <strong>\(\lambda\)-system</strong> if:<br>
+(1) \(\Omega \in \mathcal{L}\).<br>
+(2) If \(A \in \mathcal{L}\), then \(A^c \in \mathcal{L}\).<br>
+(3) If \(A_1, A_2, \ldots \in \mathcal{L}\) are <em>pairwise disjoint</em>, then \(\bigcup_{n=1}^{\infty} A_n \in \mathcal{L}\).
+</div>
+
+The only difference between a \(\lambda\)-system and a \(\sigma\)-field is that a \(\lambda\)-system requires the sets in condition (3) to be disjoint, whereas a \(\sigma\)-field does not. The next proposition shows that combining both structures gives a \(\sigma\)-field.
+
+<div class="proposition">
+<strong>Proposition 1.36.</strong> A class that is both a \(\pi\)-system and a \(\lambda\)-system is a \(\sigma\)-field.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(\mathcal{C}\) be both a \(\pi\)-system and a \(\lambda\)-system. We need to show \(\mathcal{C}\) is closed under countable (not necessarily disjoint) union. Let \(A_1, A_2, \ldots \in \mathcal{C}\). Define \(B_1 = A_1\) and
+\[
+B_n = A_n \setminus \bigcup_{i=1}^{n-1} A_i = A_n \cap A_{n-1}^c \cap A_{n-2}^c \cap \cdots \cap A_1^c.
+\]
+Each \(B_n\) belongs to \(\mathcal{C}\) since it is formed by finitely many intersections (using the \(\pi\)-system property) and complementation. The sets \(B_1, B_2, \ldots\) are pairwise disjoint, so \(\bigcup_{n=1}^{\infty} B_n \in \mathcal{C}\) by the \(\lambda\)-system property. Since \(\bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} B_n\), we are done. \(\square\)
+</div>
+
+A helpful auxiliary result is needed for the main \(\pi\)-\(\lambda\) theorem.
+
+<div class="proposition">
+<strong>Proposition 1.37.</strong> If a \(\lambda\)-system \(\mathcal{L}\) contains both \(A\) and \(A \cap B\), then \(A \cap B^c \in \mathcal{L}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \(A \in \mathcal{L}\), we have \(A^c \in \mathcal{L}\). The sets \(A^c\) and \(A \cap B\) are disjoint, so \(A^c \cup (A \cap B) \in \mathcal{L}\). Taking the complement, \(\bigl(A^c \cup (A \cap B)\bigr)^c = A \cap (A^c \cup B^c) = A \cap B^c \in \mathcal{L}\). \(\square\)
+</div>
+
+We now state and prove the central result of this section.
+
+<div class="theorem">
+<strong>Theorem 1.38 (\(\pi\)-\(\lambda\) Theorem / Dynkin's Theorem).</strong> If \(\mathcal{P}\) is a \(\pi\)-system, \(\mathcal{L}\) is a \(\lambda\)-system, and \(\mathcal{P} \subseteq \mathcal{L}\), then \(\sigma(\mathcal{P}) \subseteq \mathcal{L}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(\ell(\mathcal{P}) = \bigcap\{\mathcal{L}' : \mathcal{P} \subseteq \mathcal{L}',\; \mathcal{L}' \text{ is a } \lambda\text{-system}\}\) be the smallest \(\lambda\)-system containing \(\mathcal{P}\). For any \(A \subseteq \Omega\), define
+\[
+G_A = \{B \subseteq \Omega : A \cap B \in \ell(\mathcal{P})\}.
+\]
+
+<strong>Step 1.</strong> We show that for any \(A \in \ell(\mathcal{P})\), \(G_A\) is a \(\lambda\)-system. (i) Since \(A \cap \Omega = A \in \ell(\mathcal{P})\), we have \(\Omega \in G_A\). (ii) If \(B \in G_A\), then \(\ell(\mathcal{P})\) contains both \(A\) and \(A \cap B\), so by Proposition 1.37, \(A \cap B^c \in \ell(\mathcal{P})\), giving \(B^c \in G_A\). (iii) If \(B_1, B_2, \ldots \in G_A\) are pairwise disjoint, then \(A \cap B_1, A \cap B_2, \ldots \in \ell(\mathcal{P})\) are also disjoint, so \(\bigcup_{i=1}^{\infty}(A \cap B_i) = A \cap \bigl(\bigcup_{i=1}^{\infty} B_i\bigr) \in \ell(\mathcal{P})\), hence \(\bigcup_{i=1}^{\infty} B_i \in G_A\).
+
+<strong>Step 2.</strong> For any \(A \in \mathcal{P}\), we show \(\ell(\mathcal{P}) \subseteq G_A\). For any \(B \in \mathcal{P}\), since \(\mathcal{P}\) is a \(\pi\)-system, \(A \cap B \in \mathcal{P} \subseteq \ell(\mathcal{P})\), so \(B \in G_A\). Thus \(\mathcal{P} \subseteq G_A\). Since \(G_A\) is a \(\lambda\)-system and \(\ell(\mathcal{P})\) is the smallest \(\lambda\)-system containing \(\mathcal{P}\), we conclude \(\ell(\mathcal{P}) \subseteq G_A\).
+
+<strong>Step 3.</strong> For any \(B \in \ell(\mathcal{P})\), we show \(\ell(\mathcal{P}) \subseteq G_B\). For any \(A \in \mathcal{P}\), Step 2 gives \(B \in \ell(\mathcal{P}) \subseteq G_A\), so \(A \cap B \in \ell(\mathcal{P})\), hence \(A \in G_B\). This shows \(\mathcal{P} \subseteq G_B\), and since \(G_B\) is a \(\lambda\)-system, \(\ell(\mathcal{P}) \subseteq G_B\).
+
+<strong>Conclusion.</strong> For any \(A, B \in \ell(\mathcal{P})\), Step 3 gives \(A \in G_B\), so \(A \cap B \in \ell(\mathcal{P})\). Thus \(\ell(\mathcal{P})\) is a \(\pi\)-system. By Proposition 1.36, \(\ell(\mathcal{P})\) is a \(\sigma\)-field. Since \(\ell(\mathcal{P})\) is a \(\sigma\)-field containing \(\mathcal{P}\) and \(\sigma(\mathcal{P})\) is the smallest such, \(\sigma(\mathcal{P}) \subseteq \ell(\mathcal{P})\). Conversely, \(\sigma(\mathcal{P})\) is a \(\lambda\)-system containing \(\mathcal{P}\) and \(\ell(\mathcal{P})\) is the smallest such, so \(\ell(\mathcal{P}) \subseteq \sigma(\mathcal{P})\). Hence \(\sigma(\mathcal{P}) = \ell(\mathcal{P}) \subseteq \mathcal{L}\). \(\square\)
+</div>
+
+The \(\pi\)-\(\lambda\) theorem has an extremely important corollary: two probability measures that agree on a \(\pi\)-system must agree on the entire generated \(\sigma\)-field.
+
+<div class="corollary">
+<strong>Corollary 1.39 (Uniqueness of Extension from a \(\pi\)-System).</strong> Let \(P_1\) and \(P_2\) be two probability measures that agree on a \(\pi\)-system \(\mathcal{P}\). That is, \(P_1(A) = P_2(A)\) for all \(A \in \mathcal{P}\). Then \(P_1\) and \(P_2\) agree on \(\sigma(\mathcal{P})\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(\mathcal{L} = \{A \in \sigma(\mathcal{P}) : P_1(A) = P_2(A)\}\). We verify \(\mathcal{L}\) is a \(\lambda\)-system. (1) \(\Omega \in \sigma(\mathcal{P})\) and \(P_1(\Omega) = 1 = P_2(\Omega)\), so \(\Omega \in \mathcal{L}\). (2) If \(A \in \mathcal{L}\), then \(P_1(A^c) = 1 - P_1(A) = 1 - P_2(A) = P_2(A^c)\), so \(A^c \in \mathcal{L}\). (3) If \(A_1, A_2, \ldots \in \mathcal{L}\) are pairwise disjoint, then by countable additivity \(P_1(\bigcup_{n=1}^{\infty} A_n) = \sum_{n=1}^{\infty} P_1(A_n) = \sum_{n=1}^{\infty} P_2(A_n) = P_2(\bigcup_{n=1}^{\infty} A_n)\), so \(\bigcup_{n=1}^{\infty} A_n \in \mathcal{L}\). Since \(\mathcal{P} \subseteq \mathcal{L}\) by hypothesis and \(\mathcal{L}\) is a \(\lambda\)-system, the \(\pi\)-\(\lambda\) theorem gives \(\sigma(\mathcal{P}) \subseteq \mathcal{L}\). Hence \(P_1\) and \(P_2\) agree on all of \(\sigma(\mathcal{P})\). \(\square\)
+</div>
+
+## 1.8 Existence and Uniqueness of Extensions
+
+With the tools of outer measures and the \(\pi\)-\(\lambda\) theorem, we can now state the fundamental extension theorem.
+
+<div class="theorem">
+<strong>Theorem 1.40 (Existence and Uniqueness of Probability Measures / Carath\'{e}odory Extension).</strong> Let \(\mathcal{F}_0\) be a field on \(\Omega\) and let \(P\) be a set function on \(\mathcal{F}_0\) satisfying the probability axioms on \(\mathcal{F}_0\): (1) \(0 \leq P(A) \leq 1\) for all \(A \in \mathcal{F}_0\); (2) \(P(\emptyset) = 0\) and \(P(\Omega) = 1\); (3) if \(A_1, A_2, \ldots \in \mathcal{F}_0\) are disjoint and \(\bigcup_{k=1}^{\infty} A_k \in \mathcal{F}_0\), then \(P(\bigcup_{k=1}^{\infty} A_k) = \sum_{k=1}^{\infty} P(A_k)\). Then there exists a <em>unique</em> probability measure \(Q\) on \(\sigma(\mathcal{F}_0)\) such that \(Q(A) = P(A)\) for all \(A \in \mathcal{F}_0\).
+</div>
+
+<div class="proof">
+<strong>Proof (sketch).</strong> <em>Existence:</em> From Proposition 1.33, \(\mathcal{F}_0 \subseteq \mathcal{M}\), and since \(\mathcal{M}\) is a \(\sigma\)-field, \(\sigma(\mathcal{F}_0) \subseteq \mathcal{M}\). Since \(P^*\) is a probability measure on \(\mathcal{M}\), its restriction to \(\sigma(\mathcal{F}_0)\) is also a probability measure. For any \(A \in \mathcal{F}_0\), the smallest cover of \(A\) is \(A\) itself, so \(P^*(A) = P(A)\).
+
+<em>Uniqueness:</em> Since \(\mathcal{F}_0\) is closed under finite intersection, it is a \(\pi\)-system. By Corollary 1.39, any two probability measures that agree on \(\mathcal{F}_0\) must agree on \(\sigma(\mathcal{F}_0)\). \(\square\)
+</div>
+
+<div class="remark">
+<strong>Remark 1.41.</strong> The power of this theorem lies in its practical utility. Members of \(\sigma\)-fields are typically hard to describe explicitly, making it difficult to define a probability measure on a \(\sigma\)-field directly. Instead, one defines the measure on a simpler field and extends it uniquely to the full \(\sigma\)-field.
+</div>
+
+## 1.9 Lebesgue Measure
+
+The most important application of the Carath\'{e}odory extension is the construction of Lebesgue measure, which formalizes the intuitive notion of "length."
+
+<div class="definition">
+<strong>Definition 1.42 (Lebesgue Measure on \((0,1]\)).</strong> Let \(\Omega = (0,1]\) with Borel \(\sigma\)-field \(\mathcal{B}\). Recall that \(\mathcal{B}_0 = \{\text{finite unions of disjoint intervals } (a,b] \text{ on } (0,1]\}\) is a field and \(\mathcal{B} = \sigma(\mathcal{B}_0)\). Define a set function \(\lambda\) on \(\mathcal{B}_0\) by \(\lambda((a,b]) = b - a\) and extend to general members of \(\mathcal{B}_0\) by summing the lengths of the constituent disjoint intervals. One can verify that \(\lambda\) satisfies the probability axioms on \(\mathcal{B}_0\). By Theorem 1.40, there is a unique extension of \(\lambda\) to a probability measure on \(\mathcal{B}\). We call \(\lambda\) the <strong>Lebesgue measure</strong> on \(\mathcal{B}\).
+</div>
+
+The Lebesgue measure on \((0,1]\) is the unique probability measure satisfying the property that the measure of any interval equals its length. One can similarly construct Lebesgue measure on all of \(\mathbb{R}\), but there it is no longer a probability measure since \(\lambda(\mathbb{R}) = \infty\); it is instead a \(\sigma\)-finite measure.
+
+<div class="remark">
+<strong>Remark 1.43.</strong> Any finite measure can be normalized to a probability measure via \(\mu'(A) = \mu(A)/\mu(\Omega)\), provided \(\mu(\Omega) < \infty\). However, this observation does not apply to Lebesgue measure on \(\mathbb{R}\), which is fundamentally different from a probability measure.
+</div>
+
+## 1.10 Null Sets and Completeness
+
+Probability zero does not mean impossibility; it means that the event has arbitrarily small probability. The notions of null sets and completeness address how a probability space handles sets of measure zero.
+
+<div class="definition">
+<strong>Definition 1.44 (Null Set).</strong> For a probability space \((\Omega, \mathcal{F}, P)\), a set \(A \in \mathcal{F}\) is called a <strong>null set</strong> if \(P(A) = 0\).
+</div>
+
+<div class="definition">
+<strong>Definition 1.45 (Completeness).</strong> A probability space \((\Omega, \mathcal{F}, P)\) is <strong>complete</strong> if whenever \(A \subseteq B\), \(B \in \mathcal{F}\), and \(P(B) = 0\), then \(A \in \mathcal{F}\) (and consequently \(P(A) = 0\)).
+</div>
+
+Completeness says that every subset of a null set is itself measurable (and null). This is a natural and desirable property: if an event has probability zero, all "smaller" events should as well.
+
+<div class="proposition">
+<strong>Proposition 1.46.</strong> If \((\Omega, \mathcal{F}, P)\) is complete and \(A'\) is a set such that \(A \Delta A' \subseteq B\) for some \(A \in \mathcal{F}\) with \(P(B) = 0\), then \(A' \in \mathcal{F}\) and \(P(A') = P(A)\). Here \(A \Delta A' = (A \cap A'^c) \cup (A^c \cap A')\) is the symmetric difference.
+</div>
+
+Every probability space can be completed.
+
+<div class="proposition">
+<strong>Proposition 1.47.</strong> For any probability space \((\Omega, \mathcal{F}, P)\), there exists a complete probability space \((\Omega, \mathcal{F}', P')\) that extends it, meaning \(\mathcal{F} \subseteq \mathcal{F}'\) and \(P'(A) = P(A)\) for all \(A \in \mathcal{F}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> The outer measure construction provides the completion. Recall that \((\Omega, \mathcal{M}, P^*)\) is a probability space where \(\mathcal{M}\) is the class of all \(P^*\)-measurable sets. We have \(\mathcal{F} \subseteq \mathcal{M}\) and \(P^*\) extends \(P\). To show completeness: suppose \(P^*(B) = 0\) and \(A \subseteq B\). For any \(E \subseteq \Omega\),
+\[
+P^*(A \cap E) + P^*(A^c \cap E) \leq P^*(B) + P^*(E) = P^*(E),
+\]
+by the monotonicity of \(P^*\) (since \(A \cap E \subseteq B\)). The reverse inequality is trivial. Hence \(A \in \mathcal{M}\) and \(P^*(A) = 0\). \(\square\)
+</div>
+
+## 1.11 Conditional Probability
+
+When we learn that some event has occurred, we want to update our probabilities accordingly. This leads to the concept of conditional probability.
+
+<div class="definition">
+<strong>Definition 1.48 (Conditional Probability).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A, B \in \mathcal{F}\) with \(P(A) > 0\). The <strong>conditional probability</strong> of \(B\) given \(A\) is
+\[
+P(B \mid A) := \frac{P(A \cap B)}{P(A)}.
+\]
+</div>
+
+One can verify that, for fixed \(A\) with \(P(A) > 0\), the function \(Q(\cdot) = P(\cdot \mid A)\) defines a new probability measure on the same measurable space \((\Omega, \mathcal{F})\). This observation is fundamental: conditioning on an event produces a new, perfectly valid probability measure.
+
+From the definition of conditional probability, two useful computational tools follow immediately.
+
+<div class="proposition">
+<strong>Proposition 1.49 (Chain Rule).</strong> For events \(A_1, A_2, \ldots, A_n \in \mathcal{F}\),
+\[
+P(A_1 \cap A_2 \cap \cdots \cap A_n) = P(A_1) \cdot P(A_2 \mid A_1) \cdot P(A_3 \mid A_1 \cap A_2) \cdots P(A_n \mid A_1 \cap \cdots \cap A_{n-1}).
+\]
+</div>
+
+<div class="proposition">
+<strong>Proposition 1.50 (Law of Total Probability).</strong> Suppose \(A_1, A_2, \ldots \in \mathcal{F}\) form a partition of \(\Omega\) (i.e., they are pairwise disjoint and \(\bigcup_{n=1}^{\infty} A_n = \Omega\)). Then for any \(B \in \mathcal{F}\),
+\[
+P(B) = \sum_{n=1}^{\infty} P(B \mid A_n)\, P(A_n).
+\]
+</div>
+
+The law of total probability is a powerful decomposition technique: it breaks the probability of a complex event into a sum of simpler conditional probabilities over a partition.
+
+## 1.12 Independence
+
+Independence is the central structural concept that distinguishes probability from general measure theory. Intuitively, events are independent if knowing one tells us nothing about the other.
+
+<div class="definition">
+<strong>Definition 1.51 (Independence of Events).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space. Two events \(A, B \in \mathcal{F}\) are <strong>independent</strong> if \(P(A \cap B) = P(A)\, P(B)\). When \(P(A) > 0\), this is equivalent to \(P(B \mid A) = P(B)\). We write \(A \perp\!\!\!\perp B\).<br><br>
+For \(n\) events \(A_1, \ldots, A_n\), they are <strong>mutually independent</strong> if
+\[
+P\!\Bigl(\bigcap_{i \in I} A_i\Bigr) = \prod_{i \in I} P(A_i)
+\]
+for <em>every</em> subset \(I \subseteq \{1, 2, \ldots, n\}\). An infinite (possibly uncountable) collection \(\{A_t\}_{t \in T}\) is independent if every finite subcollection is mutually independent.
+</div>
+
+<div class="remark">
+<strong>Remark 1.52.</strong> For \(n \geq 3\), mutual independence is strictly stronger than pairwise independence (i.e., \(A_i \perp\!\!\!\perp A_j\) for all \(i \neq j\)). It is also strictly stronger than the single condition \(P(\bigcap_{i=1}^{n} A_i) = \prod_{i=1}^{n} P(A_i)\); mutual independence requires the product formula to hold for <em>all</em> subsets of indices, not just the full set. A classical counterexample is the two-coin experiment: toss two fair coins and let \(A\) = first coin is heads, \(B\) = second coin is heads, \(C\) = exactly one heads. Then \(A, B, C\) are pairwise independent but not mutually independent.
+</div>
+
+The concept of independence extends naturally from individual events to entire collections and \(\sigma\)-fields.
+
+<div class="definition">
+<strong>Definition 1.53 (Independence of Collections and \(\sigma\)-Fields).</strong> A collection of classes of events \(\{\mathcal{A}_\theta\}_{\theta \in \Theta}\) with \(\mathcal{A}_\theta \subseteq \mathcal{F}\) for all \(\theta\) is called <strong>independent</strong> if every selection of one event from each class --- \(\{A_\theta : A_\theta \in \mathcal{A}_\theta\}_{\theta \in \Theta}\) --- is mutually independent. In particular, \(\sigma\)-fields \(\mathcal{F}_1, \ldots, \mathcal{F}_n\) are independent if every collection \(A_1 \in \mathcal{F}_1, \ldots, A_n \in \mathcal{F}_n\) is mutually independent.
+</div>
+
+A powerful result shows that independence of generating \(\pi\)-systems lifts to independence of the generated \(\sigma\)-fields.
+
+<div class="proposition">
+<strong>Proposition 1.54.</strong> If \(\mathcal{A}_\theta\) for \(\theta \in \Theta\) are independent classes and each \(\mathcal{A}_\theta\) is a \(\pi\)-system, then \(\sigma(\mathcal{A}_\theta)\) for \(\theta \in \Theta\) are independent.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> It suffices to show that for any \(n \in \mathbb{N}\) and any \(A_1 \in \sigma(\mathcal{A}_1), \ldots, A_n \in \sigma(\mathcal{A}_n)\), we have \(P(A_1 \cap \cdots \cap A_n) = P(A_1) \cdots P(A_n)\). Fix \(n\) and \(A_2 \in \mathcal{A}_2, \ldots, A_n \in \mathcal{A}_n\). Define \(\mathcal{L}_1 = \{A_1 \in \sigma(\mathcal{A}_1) : P(A_1 \cap \cdots \cap A_n) = \prod_{i=1}^{n} P(A_i)\}\). Since \(\mathcal{A}_1, \ldots, \mathcal{A}_n\) are independent, \(\mathcal{A}_1 \subseteq \mathcal{L}_1\). One checks that \(\mathcal{L}_1\) is a \(\lambda\)-system. By the \(\pi\)-\(\lambda\) theorem, \(\sigma(\mathcal{A}_1) \subseteq \mathcal{L}_1\). This shows \(\sigma(\mathcal{A}_1), \mathcal{A}_2, \ldots, \mathcal{A}_n\) are independent. Repeating this argument for each coordinate in turn establishes that \(\sigma(\mathcal{A}_1), \ldots, \sigma(\mathcal{A}_n)\) are independent. \(\square\)
+</div>
+
+<div class="proposition">
+<strong>Proposition 1.55.</strong> Let \(\{A_{ij}\}_{i,j \in \mathbb{N}}\) be an array of independent events. If \(\mathcal{F}_i = \sigma(\{A_{ij} : j \in \mathbb{N}\})\) is the \(\sigma\)-field generated by the \(i\)-th row, then \(\mathcal{F}_1, \mathcal{F}_2, \ldots\) are independent.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For each \(i\), let \(\mathcal{A}_i\) be the class of all finite intersections of elements from the \(i\)-th row. Then \(\mathcal{A}_i\) is a \(\pi\)-system with \(\sigma(\mathcal{A}_i) = \mathcal{F}_i\). For any finite set of indices \(I\) and any choices \(C_i \in \mathcal{A}_i\) (each being a finite intersection \(C_i = \bigcap_{j \in J_i} A_{ij}\)), the full independence of the array gives
+\[
+P\!\Bigl(\bigcap_{i \in I} C_i\Bigr) = P\!\Bigl(\bigcap_{i \in I} \bigcap_{j \in J_i} A_{ij}\Bigr) = \prod_{i \in I} \prod_{j \in J_i} P(A_{ij}) = \prod_{i \in I} P(C_i).
+\]
+Hence \(\mathcal{A}_1, \mathcal{A}_2, \ldots\) are independent, and by Proposition 1.54, so are \(\mathcal{F}_1, \mathcal{F}_2, \ldots\). \(\square\)
+</div>
+
+## 1.13 The Borel--Cantelli Lemmas
+
+The Borel--Cantelli lemmas are among the most frequently used tools in probability theory. They provide conditions under which infinitely many events in a sequence occur, connecting the summability of probabilities to the behavior of \(\limsup\).
+
+<div class="theorem">
+<strong>Theorem 1.56 (First Borel--Cantelli Lemma).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots \in \mathcal{F}\). If \(\sum_{n=1}^{\infty} P(A_n) < \infty\), then \(P(A_n \text{ i.o.}) = 0\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Recall \(\{A_n \text{ i.o.}\} = \limsup_{n \to \infty} A_n = \bigcap_{m=1}^{\infty} \bigcup_{k=m}^{\infty} A_k\). For any \(m\), \(\limsup_{n \to \infty} A_n \subseteq \bigcup_{k=m}^{\infty} A_k\), so by Boole's inequality,
+\[
+P(\limsup_{n \to \infty} A_n) \leq P\!\Bigl(\bigcup_{k=m}^{\infty} A_k\Bigr) \leq \sum_{k=m}^{\infty} P(A_k).
+\]
+Since \(\sum_{n=1}^{\infty} P(A_n) < \infty\), the tail sum \(\sum_{k=m}^{\infty} P(A_k) \to 0\) as \(m \to \infty\). Therefore \(P(A_n \text{ i.o.}) = 0\). \(\square\)
+</div>
+
+The first Borel--Cantelli lemma requires no independence assumption. Its converse, however, is false without additional conditions. For example, if \(A_n = [0, 1/n]\) on the unit interval with Lebesgue measure, then \(\sum P(A_n) = \infty\) but \(P(A_n \text{ i.o.}) = P(\{0\}) = 0\). With the additional assumption of independence, we do get a converse.
+
+<div class="theorem">
+<strong>Theorem 1.57 (Second Borel--Cantelli Lemma).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots\) be an <em>independent</em> sequence of events. If \(\sum_{n=1}^{\infty} P(A_n) = \infty\), then \(P(A_n \text{ i.o.}) = 1\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By De Morgan's laws, \(1 - P(A_n \text{ i.o.}) = P\bigl(\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k^c\bigr)\). It suffices to show \(P(\bigcap_{k=n}^{\infty} A_k^c) = 0\) for each fixed \(n\). For any \(j \geq 1\), by independence,
+\[
+P\!\Bigl(\bigcap_{k=n}^{n+j} A_k^c\Bigr) = \prod_{k=n}^{n+j} P(A_k^c) = \prod_{k=n}^{n+j}(1 - P(A_k)) \leq \prod_{k=n}^{n+j} e^{-P(A_k)} = \exp\!\Biggl(-\sum_{k=n}^{n+j} P(A_k)\Biggr),
+\]
+using the inequality \(1 - x \leq e^{-x}\). Since \(\sum_{k=1}^{\infty} P(A_k) = \infty\), only finitely many terms of the sum precede index \(n\), so \(\sum_{k=n}^{n+j} P(A_k) \to \infty\) as \(j \to \infty\). Hence \(P(\bigcap_{k=n}^{n+j} A_k^c) \to 0\). By the continuity of probability measures along decreasing sequences, \(P(\bigcap_{k=n}^{\infty} A_k^c) = 0\). Since this holds for each \(n\), Boole's inequality gives \(P(\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k^c) = 0\), so \(P(A_n \text{ i.o.}) = 1\). \(\square\)
+</div>
+
+The Borel--Cantelli lemmas are best appreciated through concrete examples.
+
+<div class="example">
+<strong>Example 1.58 (Polya-like urn, slow growth).</strong> Suppose a box contains \(m\) balls. Each time a ball is drawn uniformly at random and returned along with one extra ball. Fix a particular ball and let \(A_n\) be the event it is drawn at time \(n\). If the ball was placed in the box just before time \(K\), then \(P(A_n) = 0\) for \(n < K\) and \(P(A_n) = \frac{1}{m + n - 1}\) for \(n \geq K\). The draws are independent and \(\sum_{n=1}^{\infty} P(A_n) = \infty\) (harmonic series). By the second Borel--Cantelli lemma, \(P(A_n \text{ i.o.}) = 1\): with probability 1, the ball is drawn infinitely many times.
+</div>
+
+<div class="example">
+<strong>Example 1.59 (Exponentially growing urn).</strong> Now suppose the box starts with 1 ball, and after each draw, enough new balls are added so that the total is exactly \(2^n\) after draw \(n\). Then \(P(A_n) = 1/2^n\), so \(\sum_{n=1}^{\infty} P(A_n) < \infty\). By the first Borel--Cantelli lemma, \(P(A_n \text{ i.o.}) = 0\): with probability 1, the chosen ball is drawn only finitely many times.
+</div>
+
+<div class="remark">
+<strong>Remark 1.60 (Zero--One Laws).</strong> Many results in probability take the form of zero--one laws: \(P(A_n \text{ i.o.}) = 0\) or \(P(A_n \text{ i.o.}) = 1\). Such results assert that certain events occur almost surely or almost never --- there is no intermediate possibility. As an important application, the recurrence and transience of states in a discrete-time Markov chain are zero--one laws: a state \(i\) is either visited infinitely often with probability 1 (recurrent) or only finitely often with probability 1 (transient).
+</div>
+
+## 1.14 Tail \(\sigma\)-Fields and Kolmogorov's Zero--One Law
+
+The Borel--Cantelli lemmas hint at a deeper phenomenon: events determined by the "tail" of an independent sequence must have probability 0 or 1. To formalize this, we introduce the tail \(\sigma\)-field.
+
+<div class="definition">
+<strong>Definition 1.61 (Tail \(\sigma\)-Field).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots \in \mathcal{F}\) be events. The <strong>tail \(\sigma\)-field</strong> of the sequence \(\{A_n\}_{n=1}^{\infty}\) is
+\[
+\mathcal{T} = \bigcap_{n=1}^{\infty} \sigma(A_n, A_{n+1}, \ldots).
+\]
+Elements of \(\mathcal{T}\) are called <strong>tail events</strong>.
+</div>
+
+A tail event is one that does not depend on any finite number of events in the sequence; it is determined entirely by the "asymptotic behavior." For instance, \(\limsup_{n \to \infty} A_n = \bigcap_{m=1}^{\infty} \bigcup_{k=m}^{\infty} A_k\) is a tail event, because for any \(m\), it belongs to \(\sigma(A_m, A_{m+1}, \ldots)\). Similarly, \(\liminf_{n \to \infty} A_n\) is a tail event.
+
+Kolmogorov's zero--one law is a remarkable result stating that for independent sequences, every tail event has a trivial probability.
+
+<div class="theorem">
+<strong>Theorem 1.62 (Kolmogorov's Zero--One Law).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(A_1, A_2, \ldots \in \mathcal{F}\) be an independent sequence of events. Let \(\mathcal{T}\) be their tail \(\sigma\)-field. Then for any \(A \in \mathcal{T}\), either \(P(A) = 0\) or \(P(A) = 1\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the independence of \(A_1, A_2, \ldots\), for any fixed \(n\), the \(\sigma\)-fields \(\sigma(\{A_1\}), \ldots, \sigma(\{A_{n-1}\}), \sigma(\{A_n, A_{n+1}, \ldots\})\) are all independent (this follows from Propositions 1.54 and 1.55). Now let \(A \in \mathcal{T}\). Since \(\mathcal{T} \subseteq \sigma(A_n, A_{n+1}, \ldots)\) for every \(n\), the event \(A\) is independent of \(A_1, \ldots, A_{n-1}\) for every \(n\). Since \(n\) is arbitrary, \(\sigma(\{A\})\) and \(\sigma(A_1, A_2, \ldots)\) are independent.
+
+However, we also have \(A \in \mathcal{T} \subseteq \sigma(A_1, A_2, \ldots)\). So \(A\) belongs to both \(\sigma(\{A\})\) and \(\sigma(A_1, A_2, \ldots)\), meaning \(A\) is independent of itself:
+\[
+P(A) = P(A \cap A) = P(A) \cdot P(A).
+\]
+The only solutions to \(p = p^2\) are \(p = 0\) and \(p = 1\). \(\square\)
+</div>
+
+Kolmogorov's zero--one law is a foundational result in probability. It tells us that the tail behavior of an independent sequence is deterministic in a probabilistic sense: every question about the asymptotic behavior has a definitive yes-or-no answer with probability 1.
+
+
+---
+
+# Chapter 2: Random Variables and Measurable Functions
+
+With the framework of probability spaces in hand, we now turn to the objects that live on them. A **random variable** is the mathematical device that assigns a numerical value to each outcome, allowing us to do calculus with randomness. In this chapter, we develop the theory of measurable mappings and random variables, study the cumulative distribution function as a complete characterization of a random variable's behavior, and explore induced measures and key distribution types.
+
+## 2.1 Measurability and Measurable Mappings
+
+To connect a probability space to the real numbers, we need functions that respect the measurable structure of both spaces. The key requirement is that the pre-image of every "nice" set in the codomain must be a "nice" set in the domain.
+
+<div class="definition">
+<strong>Definition 2.1 (Measurable Mapping).</strong> Let \((\Omega, \mathcal{F})\) and \((S, \mathcal{A})\) be measurable spaces. A mapping \(X \colon \Omega \to S\) is said to be <strong>measurable</strong> (or \(\mathcal{F}/\mathcal{A}\)-measurable) if for every \(A \in \mathcal{A}\), the pre-image
+\[
+X^{-1}(A) := \{\omega \in \Omega : X(\omega) \in A\}
+\]
+belongs to \(\mathcal{F}\). That is, the pre-image of every measurable set is measurable.
+</div>
+
+<div class="definition">
+<strong>Definition 2.2 (Random Variable).</strong> If the codomain is the real line with its Borel \(\sigma\)-field, \((S, \mathcal{A}) = (\mathbb{R}, \mathcal{B})\), then a measurable mapping \(X \colon (\Omega, \mathcal{F}) \to (\mathbb{R}, \mathcal{B})\) is called a <strong>random variable</strong>.
+</div>
+
+Measurability has a convenient characterization: one does not need to check every Borel set, but only a generating class.
+
+<div class="remark">
+<strong>Remark 2.3.</strong> Since the Borel \(\sigma\)-field on \(\mathbb{R}\) is generated by half-lines \(\{(-\infty, x] : x \in \mathbb{R}\}\), a function \(X \colon \Omega \to \mathbb{R}\) is a random variable if and only if \(\{\omega : X(\omega) \leq x\} \in \mathcal{F}\) for every \(x \in \mathbb{R}\). This follows from the general fact that for any class \(\mathcal{C}\), \(X^{-1}(\sigma(\mathcal{C})) = \sigma(X^{-1}(\mathcal{C}))\).
+</div>
+
+The pre-image operation commutes with all set operations: \(X^{-1}(\bigcup_n B_n) = \bigcup_n X^{-1}(B_n)\), \(X^{-1}(\bigcap_n B_n) = \bigcap_n X^{-1}(B_n)\), and \([X^{-1}(B)]^c = X^{-1}(B^c)\). These properties are what make measurable functions work so seamlessly with \(\sigma\)-fields.
+
+When we discuss events defined by the value of \(X\), we adopt the shorthand \(\{X \in B\} := \{\omega \in \Omega : X(\omega) \in B\} = X^{-1}(B)\) and \(P(X \in B) = P(X^{-1}(B))\).
+
+<div class="example">
+<strong>Example 2.4 (Discrete Probability Space).</strong> If \(\Omega\) is countable and \(\mathcal{F} = \mathcal{P}(\Omega)\), then any mapping \(X \colon \Omega \to \mathbb{R}\) is automatically a random variable, since every subset of \(\Omega\) is measurable. The induced probability measure is \(P(X \in B) = \sum_{b \in B} P(X = b)\).
+</div>
+
+<div class="example">
+<strong>Example 2.5 (Indicator Random Variable).</strong> Let \(A \in \mathcal{F}\) be an event. The <strong>indicator function</strong> of \(A\) is
+\[
+\mathbf{1}_A(\omega) = \begin{cases} 1 & \text{if } \omega \in A, \\ 0 & \text{if } \omega \notin A. \end{cases}
+\]
+Then \(\mathbf{1}_A\) is a random variable. Indeed, for any Borel set \(B\), the pre-image \(\mathbf{1}_A^{-1}(B)\) is one of \(\emptyset, A, A^c, \Omega\), all of which belong to \(\mathcal{F}\).
+</div>
+
+<div class="example">
+<strong>Example 2.6 (Simple Random Variables).</strong> Let \(A_1, \ldots, A_n \in \mathcal{F}\) be a partition of \(\Omega\) and let \(c_1, \ldots, c_n \in \mathbb{R}\). The function \(X(\omega) = \sum_{i=1}^{n} c_i \mathbf{1}_{A_i}(\omega)\) is a random variable taking finitely many values; such a random variable is called <strong>simple</strong>.
+</div>
+
+## 2.2 Induced Measures and Distributions
+
+Every random variable induces a probability measure on the codomain.
+
+<div class="definition">
+<strong>Definition 2.7 (Distribution / Induced Measure).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and \(X\) a random variable. The mapping \(\mu \colon \mathcal{B} \to [0,1]\) defined by
+\[
+\mu(B) = P(X \in B) = P(X^{-1}(B))
+\]
+is called the <strong>distribution</strong> (or <strong>law</strong>) of \(X\). It is a probability measure on \((\mathbb{R}, \mathcal{B})\).
+</div>
+
+One can verify that \(\mu\) is indeed a probability measure: \(\mu(\mathbb{R}) = P(\Omega) = 1\), and countable additivity of \(\mu\) follows from that of \(P\) together with the fact that pre-images of disjoint sets are disjoint.
+
+<div class="remark">
+<strong>Remark 2.8.</strong> The measure \(\mu\) is also called a <strong>push-forward measure</strong>, since it "pushes" the probability measure \(P\) defined on \((\Omega, \mathcal{F})\) forward to the measurable space \((\mathbb{R}, \mathcal{B})\) via the mapping \(X\).
+</div>
+
+## 2.3 Cumulative Distribution Functions
+
+The cumulative distribution function provides a concrete, real-valued characterization of a random variable's distribution.
+
+<div class="definition">
+<strong>Definition 2.9 (Cumulative Distribution Function).</strong> Let \(X\) be a random variable on a probability space \((\Omega, \mathcal{F}, P)\) with distribution \(\mu\). The <strong>cumulative distribution function</strong> (c.d.f.) of \(X\) is the function \(F \colon \mathbb{R} \to [0,1]\) defined by
+\[
+F(x) = P(X \leq x) = \mu((-\infty, x]).
+\]
+Since \(\{(-\infty, x] : x \in \mathbb{R}\}\) is a \(\pi\)-system that generates \(\mathcal{B}\), the c.d.f.\ \(F\) uniquely determines \(\mu\). That is, the distribution of a random variable is fully characterized by its cumulative distribution function.
+</div>
+
+The c.d.f.\ enjoys several important structural properties that follow from the properties of the underlying probability measure.
+
+<div class="proposition">
+<strong>Proposition 2.10 (Properties of the CDF).</strong> Let \(F\) be the c.d.f.\ of a random variable \(X\). Then:<br>
+(1) \(F\) is non-decreasing.<br>
+(2) \(\lim_{x \to -\infty} F(x) = 0\) and \(\lim_{x \to \infty} F(x) = 1\).<br>
+(3) \(F\) is right-continuous: \(F(a) = \lim_{x \to a^+} F(x)\) for all \(a \in \mathbb{R}\).<br>
+(4) \(\lim_{x \to a^-} F(x) = P(X < a)\). We write \(F(a^-) = P(X < a)\).<br>
+(5) \(P(X = x) = F(x) - F(x^-)\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (1) follows from the monotonicity of \(P\): if \(x \leq y\), then \(\{X \leq x\} \subseteq \{X \leq y\}\), so \(F(x) \leq F(y)\).
+
+(2) As \(x \to \infty\), \((-\infty, x] \uparrow \mathbb{R}\), so by continuity from below, \(F(x) \to P(\mathbb{R}) = 1\). As \(x \to -\infty\), \((-\infty, x] \downarrow \emptyset\), so by continuity from above, \(F(x) \to 0\).
+
+(3) For right-continuity, let \(x_n \downarrow a\). Then \(\{X \leq x_n\} \downarrow \{X \leq a\}\), so by continuity from above, \(\lim_{n} F(x_n) = P(X \leq a) = F(a)\).
+
+(4) Let \(x_n \uparrow a\). Then \(\{X \leq x_n\} \uparrow \{X < a\}\), so by continuity from below, \(\lim_{n} F(x_n) = P(X < a)\).
+
+(5) Follows by taking the difference: \(P(X = a) = F(a) - F(a^-)\). \(\square\)
+</div>
+
+A bounded, non-decreasing function has at most countably many discontinuities and possesses one-sided limits everywhere. In the context of a c.d.f., the jump \(F(x) - F(x^-)\) at a point \(x\) equals \(P(X = x)\), so discontinuities correspond precisely to atoms of the distribution.
+
+A remarkable converse shows that properties (1)--(3) fully characterize distribution functions.
+
+<div class="theorem">
+<strong>Theorem 2.11 (Existence of a Random Variable with a Given CDF).</strong> Suppose \(F \colon \mathbb{R} \to \mathbb{R}\) satisfies: (1) \(F\) is non-decreasing; (2) \(\lim_{x \to -\infty} F(x) = 0\) and \(\lim_{x \to \infty} F(x) = 1\); (3) \(F\) is right-continuous. Then there exists a probability space \((\Omega, \mathcal{F}, P)\) and a random variable \(X\) on that space such that \(F\) is the c.d.f.\ of \(X\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Take \(\Omega = (0,1)\), \(\mathcal{F} = \mathcal{B}\) (the Borel \(\sigma\)-field), and \(P = \lambda\) (Lebesgue measure). For \(\omega \in (0,1)\), define the <strong>generalized inverse</strong>
+\[
+X(\omega) := F^{-1}(\omega) = \sup\{y \in \mathbb{R} : F(y) < \omega\}.
+\]
+We claim that the events \(\{\omega : \omega \leq F(x)\}\) and \(\{\omega : X(\omega) \leq x\}\) coincide.
+
+If \(\omega \leq F(x)\), then for any \(y\) with \(F(y) < \omega\), we have \(F(y) < \omega \leq F(x)\), so \(y < x\) (since \(F\) is non-decreasing). Taking the supremum, \(X(\omega) \leq x\).
+
+Conversely, if \(\omega > F(x)\), then since \(F\) is right-continuous and the inequality is strict, there exists \(x' > x\) with \(\omega > F(x')\). Then \(x' \in \{y : F(y) < \omega\}\), so \(X(\omega) \geq x' > x\).
+
+Therefore \(\omega \leq F(x)\) if and only if \(X(\omega) \leq x\), and so
+\[
+P(X \leq x) = P(\omega \leq F(x)) = \lambda((0, F(x)]) = F(x). \qquad \square
+\]
+</div>
+
+This is the **probability integral transform** in reverse: any valid c.d.f.\ can be realized as the distribution of a random variable on the unit interval. Conversely, if \(X\) has a continuous, strictly increasing c.d.f.\ \(F\), then \(F(X) \sim U(0,1)\).
+
+<div class="remark">
+<strong>Remark 2.12 (Equality in Distribution).</strong> If random variables \(X\) and \(Y\) have the same c.d.f., \(F_X = F_Y\), we say they are <strong>equal in distribution</strong> and write \(X \stackrel{d}{=} Y\). This does <em>not</em> mean \(X(\omega) = Y(\omega)\) for all (or almost all) \(\omega\); it only means they induce the same probability measure on \((\mathbb{R}, \mathcal{B})\).
+</div>
+
+## 2.4 Density and Mass Functions
+
+The c.d.f.\ always exists, but for many distributions one can describe the probability measure more explicitly through a density or mass function.
+
+<div class="definition">
+<strong>Definition 2.13 (Probability Density Function).</strong> A random variable \(X\) has a <strong>probability density function</strong> (p.d.f.) \(f\) if for all \(x \in \mathbb{R}\),
+\[
+P(X \leq x) = F(x) = \int_{-\infty}^{x} f(y)\, dy.
+\]
+If \(f\) is only defined on a countable set, it is called a <strong>probability mass function</strong> (p.m.f.).
+</div>
+
+<div class="remark">
+<strong>Remark 2.14.</strong> By the Fundamental Theorem of Calculus (where \(F\) is sufficiently regular), \(f(x) = F'(x)\). Moreover,
+\[
+P(X \in (a,b]) = F(b) - F(a) = \int_a^b f(y)\, dy.
+\]
+As a consequence, for a random variable with a density,
+\[
+P(X = x) = \lim_{\varepsilon \to 0} P(X \in (x - \varepsilon, x + \varepsilon)) = \lim_{\varepsilon \to 0} \int_{x-\varepsilon}^{x+\varepsilon} f(y)\, dy = 0,
+\]
+so individual points have zero probability, and in particular \(P(a < X < b) = P(a \leq X \leq b)\).
+</div>
+
+## 2.5 Types of Distributions
+
+Distributions fall into three fundamental categories, depending on the nature of the c.d.f.
+
+<div class="definition">
+<strong>Definition 2.15 (Absolutely Continuous Distribution).</strong> If a distribution has a probability density function, it is called <strong>absolutely continuous</strong>.
+</div>
+
+<div class="definition">
+<strong>Definition 2.16 (Continuous Distribution).</strong> If \(P(X = a) = F(a) - F(a^-) = 0\) for all \(a \in \mathbb{R}\) --- that is, the c.d.f.\ is continuous --- then the distribution is called <strong>continuous</strong>. Every absolutely continuous distribution is continuous, but the converse need not hold.
+</div>
+
+<div class="definition">
+<strong>Definition 2.17 (Discrete Distribution).</strong> If there exists a countable set \(A \in \mathcal{B}\) such that \(P(X \in A) = 1\), then \(X\) is said to have a <strong>discrete distribution</strong>. A discrete random variable has a probability mass function.
+</div>
+
+<div class="definition">
+<strong>Definition 2.18 (Singular Distribution).</strong> If there exists a set \(A \in \mathcal{B}\) with Lebesgue measure \(\lambda(A) = 0\) but \(P(X \in A) = 1\), and the distribution is continuous (no point masses), then \(X\) has a <strong>singular distribution</strong>.
+</div>
+
+<div class="remark">
+<strong>Remark 2.19.</strong> The existence of singular distributions shows that one cannot assume every distribution is simply a mixture of a part with density and a part with point masses. However, any distribution can be uniquely decomposed into an absolutely continuous part, a discrete part, and a singular part.
+</div>
+
+Let us record several standard examples.
+
+<div class="example">
+<strong>Example 2.20 (Uniform Distribution).</strong> If \(X\) has p.d.f.\ \(f(x) = 1\) for \(x \in (0,1)\) (and 0 elsewhere), then \(F(x) = 0\) for \(x < 0\), \(F(x) = x\) for \(0 \leq x \leq 1\), and \(F(x) = 1\) for \(x > 1\). We write \(X \sim U(0,1)\).
+</div>
+
+<div class="example">
+<strong>Example 2.21 (Exponential Distribution).</strong> If \(X\) has p.d.f.\ \(f(x) = \lambda e^{-\lambda x}\) for \(x \geq 0\) (with \(\lambda > 0\)), then \(X \sim \text{Exp}(\lambda)\).
+</div>
+
+<div class="example">
+<strong>Example 2.22 (Standard Normal Distribution).</strong> If \(X\) has p.d.f.\ \(f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}\) for \(x \in \mathbb{R}\), then \(X \sim N(0,1)\).
+</div>
+
+<div class="example">
+<strong>Example 2.23 (Dirac Distribution).</strong> If \(P(X = 0) = 1\), so that \(F(x) = \mathbf{1}_{x \geq 0}\), then \(X\) has a <strong>Dirac distribution</strong> (a point mass at 0).
+</div>
+
+## 2.6 The \(\sigma\)-Field Generated by a Random Variable
+
+Just as we defined \(\sigma\)-fields generated by collections of sets, we can define the \(\sigma\)-field generated by a mapping.
+
+<div class="definition">
+<strong>Definition 2.24 (\(\sigma\)-Field Generated by a Mapping).</strong> Let \(X \colon \Omega \to \mathbb{R}\) be a mapping. The class
+\[
+\sigma(X) = \{\{\omega \in \Omega : X(\omega) \in B\} : B \in \mathcal{B}\} = \{X^{-1}(B) : B \in \mathcal{B}\}
+\]
+is a \(\sigma\)-field on \(\Omega\), and it is the smallest \(\sigma\)-field with respect to which \(X\) is measurable. We call it the <strong>\(\sigma\)-field generated by \(X\)</strong>. More generally, \(\sigma(X_1, X_2, \ldots)\) is the smallest \(\sigma\)-field such that all of \(X_1, X_2, \ldots\) are measurable.
+</div>
+
+The \(\sigma\)-field \(\sigma(X)\) encodes precisely the information carried by \(X\): an event \(A\) belongs to \(\sigma(X)\) if and only if knowing the value of \(X\) determines whether \(A\) has occurred. This interpretation is central to conditional expectation and filtering in later chapters.
+
+## 2.7 Measurable Functions of Random Variables
+
+An essential property of measurable mappings is that they compose well: a measurable function of a random variable is again a random variable.
+
+<div class="theorem">
+<strong>Theorem 2.25 (Composition of Measurable Mappings).</strong> Let \(X \colon (\Omega, \mathcal{F}) \to (S, \mathcal{A})\) and \(f \colon (S, \mathcal{A}) \to (T, \mathcal{B})\) be measurable mappings. Then \(f \circ X \colon (\Omega, \mathcal{F}) \to (T, \mathcal{B})\) is a measurable mapping.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(B \in \mathcal{B}\). Since \(f\) is measurable, \(f^{-1}(B) \in \mathcal{A}\). Since \(X\) is measurable and \(f^{-1}(B) \in \mathcal{A}\), we have \(X^{-1}(f^{-1}(B)) \in \mathcal{F}\). But \((f \circ X)^{-1}(B) = X^{-1}(f^{-1}(B))\), so \(f \circ X\) is measurable. \(\square\)
+</div>
+
+As an immediate consequence, if \(X_1, \ldots, X_n\) are random variables and \(f \colon \mathbb{R}^n \to \mathbb{R}\) is Borel measurable, then \(f(X_1, \ldots, X_n)\) is a random variable. In particular, \(-X_1\), \(X_1 + \cdots + X_n\), \(X_1 \cdots X_n\), \(e^{X_1}\), \(\sin(X_1 + X_2)\), and so forth are all random variables.
+
+## 2.8 Limits of Random Variables
+
+We conclude with a fundamental closure property: the class of random variables is closed under the familiar limiting operations of analysis.
+
+<div class="theorem">
+<strong>Theorem 2.26 (Measurability of Limits).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space and let \(X_1, X_2, \ldots\) be random variables. Then
+\[
+\inf_{n} X_n, \quad \sup_{n} X_n, \quad \liminf_{n \to \infty} X_n, \quad \limsup_{n \to \infty} X_n
+\]
+are all random variables (on the extended reals \(\overline{\mathbb{R}}\)).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For the infimum: \(\{\inf_n X_n < a\} = \bigcup_{n=1}^{\infty} \{X_n < a\} \in \mathcal{F}\), since each \(\{X_n < a\} \in \mathcal{F}\) and \(\mathcal{F}\) is closed under countable union. Similarly, \(\{\sup_n X_n > a\} = \bigcup_{n=1}^{\infty} \{X_n > a\} \in \mathcal{F}\).
+
+For the \(\liminf\): since \(\liminf_{n \to \infty} X_n = \sup_n \inf_{m \geq n} X_m\), and \(\inf_{m \geq n} X_m\) is a random variable for each \(n\) (by the infimum result), the supremum over \(n\) is also a random variable. The argument for \(\limsup\) is analogous. \(\square\)
+</div>
+
+As a corollary, if \(\lim_{n \to \infty} X_n\) exists (i.e., \(\liminf = \limsup\)), then the pointwise limit is also a random variable. This closure under limits is essential for the convergence theory developed in subsequent chapters.
+# Chapter 3: Lebesgue Integration and Expectation
+
+The theory of integration lies at the heart of modern probability. While the Riemann integral, familiar from calculus, suffices for many purposes, it is fundamentally inadequate for the demands of measure-theoretic probability. A simple illustration of this inadequacy is the indicator function of the irrationals on \([0,1]\): this function equals 1 at every irrational point and 0 at every rational point, yet it has no Riemann integral because every subinterval of \([0,1]\) contains both rational and irrational numbers. The Lebesgue integral, by contrast, handles such functions effortlessly, because it partitions the range of a function rather than its domain. In this chapter we construct the Lebesgue integral in stages --- first for simple functions, then for bounded functions, then for non-negative measurable functions, and finally for arbitrary integrable functions --- and develop the powerful convergence theorems that make this integral indispensable in probability theory.
+
+## Sigma-Finite Measures and Simple Functions
+
+Before constructing the integral, we must set the stage with two preliminary notions. The first is a regularity condition on our measure space that ensures the measure does not assign infinite mass in an uncontrolled way.
+
+<div class="definition">
+<strong>Definition (Sigma-Finite Measure).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space (where \(\mu\) is not necessarily a probability measure, i.e., it may not have total mass 1). We say \(\mu\) is <strong>sigma-finite</strong> if there exist sets \(A_1, A_2, \ldots \in \mathcal{F}\) such that \(\mu(A_n) < \infty\) for all \(n = 1, 2, \ldots\) and \(\bigcup_n A_n = \Omega\).
+</div>
+
+Every probability measure is trivially sigma-finite (take \(A_1 = \Omega\)), but sigma-finiteness is a much broader condition that encompasses important measures like Lebesgue measure on \(\mathbb{R}\), which assigns infinite total mass to the real line yet can be decomposed into intervals of finite length. The sigma-finiteness condition will be crucial when we extend the integral from bounded functions to non-negative measurable functions.
+
+The second preliminary notion is that of a simple function, which plays the role that step functions play in the Riemann theory: they are the elementary building blocks from which we construct the integral.
+
+<div class="definition">
+<strong>Definition (Simple Function).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. A function \(\varphi : \Omega \to \mathbb{R}\) is a <strong>simple function</strong> if it can be written as
+\[
+\varphi(\omega) = \sum_{i=1}^{n} a_i \mathbf{1}_{\omega \in A_i}
+\]
+where \(a_i \in \mathbb{R}\) and \(A_i \in \mathcal{F}\) with \(\mu(A_i) < \infty\) for all \(i = 1, \ldots, n\).
+</div>
+
+Simple functions are, in a sense, a generalization of the bins used in Riemann integrals. Rather than partitioning the domain into subintervals and approximating the function's height on each one, we partition the sample space into measurable sets on which the function takes constant values. Any measurable function taking only finitely many values can be written in this form. In a probabilistic context, a simple random variable \(X = \sum_{i=1}^n c_i \mathbf{1}_{A_i}\) on a probability space \((\Omega, \mathcal{F}, P)\) is the prototypical example: its expectation is naturally \(\sum_{i=1}^n c_i P(A_i)\).
+
+## The Lebesgue Integral of Simple Functions
+
+With simple functions in hand, we can define the Lebesgue integral in its most elementary form.
+
+<div class="definition">
+<strong>Definition (Lebesgue Integral of a Simple Function).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(\varphi(\omega) = \sum_{i=1}^{n} a_i \mathbf{1}_{\omega \in A_i}\) be a simple function. We define the <strong>Lebesgue integral</strong> of \(\varphi\) to be
+\[
+\int \varphi \, d\mu = \sum_{i=1}^{n} a_i \, \mu(A_i).
+\]
+</div>
+
+This definition is the natural one: each value \(a_i\) is weighted by the "size" of the set on which the function takes that value, exactly mirroring the formula \(E[X] = \sum c_i P(A_i)\) for discrete random variables. The key properties of this integral are collected in the following lemma, which establishes the linearity, monotonicity, and absolute value inequality that we expect any reasonable integral to satisfy.
+
+<div class="lemma">
+<strong>Lemma 27.</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(\varphi\) and \(\psi\) be simple functions. Then the following hold:
+<ol>
+<li>If \(\varphi \geq 0\) almost everywhere (i.e., \(\mu(\varphi < 0) = 0\)), then \(\int \varphi \, d\mu \geq 0\).</li>
+<li>For any \(a \in \mathbb{R}\), \(\int a\varphi \, d\mu = a \int \varphi \, d\mu\).</li>
+<li>\(\int (\varphi + \psi) \, d\mu = \int \varphi \, d\mu + \int \psi \, d\mu\).</li>
+<li>If \(\varphi \leq \psi\) almost everywhere, then \(\int \varphi \, d\mu \leq \int \psi \, d\mu\).</li>
+<li>If \(\varphi = \psi\) almost everywhere, then \(\int \varphi \, d\mu = \int \psi \, d\mu\).</li>
+<li>\(\left| \int \varphi \, d\mu \right| \leq \int |\varphi| \, d\mu\).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Properties (1) and (2) are immediate from the definition.
+
+For (3), suppose \(\varphi = \sum_i a_i \mathbf{1}_{A_i}\) and \(\psi = \sum_j b_j \mathbf{1}_{B_j}\). For \(\omega \in A_i \cap B_j\), we have \((\varphi + \psi)(\omega) = a_i + b_j\). So we may write \(\varphi + \psi = \sum_{i=1}^n \sum_{j=1}^m (a_i + b_j) \mathbf{1}_{A_i \cap B_j}\). Then
+\[
+\int (\varphi + \psi) \, d\mu = \sum_{i=1}^n \sum_{j=1}^m (a_i + b_j) \mu(A_i \cap B_j) = \sum_{i=1}^n a_i \sum_{j=1}^m \mu(A_i \cap B_j) + \sum_{j=1}^m b_j \sum_{i=1}^n \mu(A_i \cap B_j) = \sum_{i=1}^n a_i \mu(A_i) + \sum_{j=1}^m b_j \mu(B_j) = \int \varphi \, d\mu + \int \psi \, d\mu.
+\]
+
+For (4), by (3) we may write \(\int \psi \, d\mu = \int \varphi \, d\mu + \int (\psi - \varphi) \, d\mu\). Since \(\psi - \varphi \geq 0\) almost everywhere, by (1) we have \(\int (\psi - \varphi) \, d\mu \geq 0\), giving the desired inequality.
+
+For (5), since \(\varphi = \psi\) almost everywhere, both \(\varphi \leq \psi\) and \(\psi \leq \varphi\) hold almost everywhere, so by (4) their integrals are equal.
+
+For (6), note that \(|\varphi| = \max(\varphi, -\varphi)\). Then \(\varphi \leq |\varphi|\) and \(-\varphi \leq |\varphi|\), so by (4) and (2), \(\int \varphi \, d\mu \leq \int |\varphi| \, d\mu\) and \(-\int \varphi \, d\mu = \int (-\varphi) \, d\mu \leq \int |\varphi| \, d\mu\). This shows \(\left|\int \varphi \, d\mu\right| \leq \int |\varphi| \, d\mu\). \(\blacksquare\)
+</div>
+
+## The Lebesgue Integral of Bounded Functions
+
+Having established the integral for simple functions, we next extend it to bounded measurable functions that vanish outside a set of finite measure. The key insight is that every such function can be "squeezed" between simple functions from above and below, and Proposition 28 shows that the resulting upper and lower integrals coincide.
+
+<div class="proposition">
+<strong>Proposition 28.</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f : \Omega \to \mathbb{R}\) be a bounded function such that \(f(x) = 0\) for \(x \in E^c\) for some \(E\) with \(\mu(E) < \infty\). Then
+\[
+\sup\left\{\int \varphi \, d\mu : \varphi \leq f \text{ and } \varphi \text{ satisfies } (*)\right\} = \inf\left\{\int \psi \, d\mu : \psi \geq f \text{ and } \psi \text{ satisfies } (*)\right\}
+\]
+where \((*)\) is the condition that \(\varphi\) (resp. \(\psi\)) is simple and \(\varphi(x) = 0\) (resp. \(\psi(x) = 0\)) for all \(x \in E^c\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For any such \(\varphi\) and \(\psi\), we have \(\varphi \leq f \leq \psi\) and they are simple, so \(\int \varphi \, d\mu \leq \int \psi \, d\mu\). Thus \(\sup_{\varphi \leq f} \int \varphi \, d\mu \leq \inf_{\psi \geq f} \int \psi \, d\mu\).
+
+For the reverse inequality, since \(f\) is bounded, there exists \(M\) such that \(|f(\omega)| \leq M\) for all \(\omega \in \Omega\). For each \(n \in \{1, 2, \ldots\}\), define \(E_k = \{x \in E : kM/n \geq f(x) \geq (k-1)M/n\}\) for \(-n \leq k \leq n\). Now define
+\[
+\psi_n(x) = \sum_{k=-n}^{n} \frac{kM}{n} \mathbf{1}_{x \in E_k} \quad \text{and} \quad \varphi_n(x) = \sum_{k=-n}^{n} \frac{(k-1)M}{n} \mathbf{1}_{x \in E_k}.
+\]
+Then \(\psi_n(x) - \varphi_n(x) = \frac{M}{n} \mathbf{1}_{x \in E}\), and so \(\int (\psi_n - \varphi_n) \, d\mu = \frac{M}{n} \mu(E)\). Since \(\varphi_n \leq f\) and \(\psi_n \geq f\), we have
+\[
+\sup_{\varphi \leq f} \int \varphi \, d\mu \geq \int \varphi_n \, d\mu = \int \psi_n \, d\mu - \frac{M}{n}\mu(E) \geq \inf_{\psi \geq f} \int \psi \, d\mu - \frac{M}{n}\mu(E).
+\]
+Taking \(n \to \infty\) yields \(\sup_{\varphi \leq f} \int \varphi \, d\mu \geq \inf_{\psi \geq f} \int \psi \, d\mu\), and combining both inequalities gives equality. \(\blacksquare\)
+</div>
+
+This proposition justifies the following definition, which extends the integral from simple functions to bounded functions.
+
+<div class="definition">
+<strong>Definition (Lebesgue Integral of a Bounded Function).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f\) be a bounded function such that \(f(x) = 0\) for \(x \in E^c\) for some \(E\) with \(\mu(E) < \infty\). Then we define the <strong>integral</strong> of \(f\) to be
+\[
+\int f \, d\mu = \sup_{\varphi \leq f} \int \varphi \, d\mu = \inf_{\psi \geq f} \int \psi \, d\mu.
+\]
+</div>
+
+The properties established for simple functions carry over to this broader class without difficulty.
+
+<div class="lemma">
+<strong>Lemma 29.</strong> The properties (1)--(6) of integrals for simple functions in Lemma 27 also hold for bounded functions.
+</div>
+
+The proof is left as an exercise; it follows by approximating bounded functions with simple functions and applying the corresponding properties.
+
+## The Lebesgue Integral of Non-Negative Functions
+
+We now take the crucial step of extending the integral to non-negative measurable functions, which need not be bounded and need not vanish outside a set of finite measure. The idea is to approximate from below using bounded functions.
+
+<div class="definition">
+<strong>Definition (Lebesgue Integral of a Non-Negative Function).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f : \Omega \to \mathbb{R}\) be a non-negative function. Then we define the <strong>integral</strong> of \(f\) to be
+\[
+\int f \, d\mu = \sup\left\{\int h \, d\mu : 0 \leq h \leq f,\; h \text{ is bounded, and } \mu(\{x : h(x) > 0\}) < \infty\right\}.
+\]
+</div>
+
+This definition takes the supremum over all "nice" functions that sit below \(f\). The integral may well be infinite --- and this is by design, since many important non-negative functions (such as the constant function 1 on a space of infinite measure) have infinite integrals. The next lemma shows that this integral can be computed as a limit of integrals of truncated functions, which is often the most practical way to evaluate it.
+
+<div class="lemma">
+<strong>Lemma 30.</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f : \Omega \to \mathbb{R}\) be a non-negative function. Define \((f \wedge n) := \min(f, n)\). Define \(h_n = (f \wedge n) \mathbf{1}_{E_n}\) where \(E_1 \subseteq E_2 \subseteq \cdots\) and \(\lim_{n \to \infty} E_n = \Omega\) but \(\mu(E_n) < \infty\) for \(n = 1, 2, \ldots\). Then \(\lim_{n \to \infty} \int h_n \, d\mu = \int f \, d\mu\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Clearly \(\int h_n \, d\mu\) is non-decreasing (each \(h_n\) itself gets larger and larger, and the region of integration grows). Thus the limit \(\lim_{n \to \infty} \int h_n \, d\mu\) exists (possibly as \(+\infty\)). Let
+\[
+H := \{h : \Omega \to \mathbb{R} : 0 \leq h \leq f,\; h \text{ is bounded, and } \mu(\{x : h(x) > 0\}) < \infty\}
+\]
+so that \(\int f \, d\mu = \sup\{\int h \, d\mu : h \in H\}\). For any \(h \in H\), let \(M\) be an upper bound of \(h\). Then for any \(n \geq M\),
+\[
+\int h_n \, d\mu = \int_{E_n} (f \wedge n) \, d\mu \geq \int_{E_n} h \, d\mu = \int h \, d\mu - \int_{E_n^c} h \, d\mu.
+\]
+since \(h \leq f\) and \(h\) is bounded by \(M\) so that \(h \leq f \wedge M \leq f \wedge n\). Let \(E = \{x : h(x) > 0\}\) with \(\mu(E) < \infty\). Then
+\[
+\int_{E_n^c} h \, d\mu = \int_{E_n^c \cap E} h \, d\mu \leq M \mu(E \setminus E_n).
+\]
+Since \(E_n \to \Omega\), we have \(\mu(E \setminus E_n) \to 0\), which implies \(\int_{E_n^c} h \, d\mu \to 0\). Taking \(n \to \infty\), we get \(\lim_{n \to \infty} \int h_n \, d\mu \geq \int h \, d\mu\). Since this holds for any \(h \in H\),
+\[
+\lim_{n \to \infty} \int h_n \, d\mu \geq \sup\left\{\int h \, d\mu : h \in H\right\} = \int f \, d\mu.
+\]
+On the other hand, \(h_n \in H\) for all \(n\), so \(\lim_{n \to \infty} \int h_n \, d\mu \leq \int f \, d\mu\). This proves equality. \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> This proof does not necessarily mean that \(\lim_{n \to \infty} \int h_n \, d\mu = \int f \, d\mu\) is finite. In fact, both sides can simultaneously be infinite.
+</div>
+
+The integral properties extend once more to this broader class.
+
+<div class="lemma">
+<strong>Lemma 31.</strong> The properties (1)--(6) of integrals for simple functions in Lemma 27 also hold for non-negative functions.
+</div>
+
+## The General Lebesgue Integral
+
+Finally, we handle arbitrary measurable functions by decomposing them into their positive and negative parts. Every measurable function \(f\) can be written as \(f = f^+ - f^-\), where \(f^+(x) = \max\{f(x), 0\}\) and \(f^-(x) = -\min\{f(x), 0\} = \max\{-f(x), 0\}\). Both \(f^+\) and \(f^-\) are non-negative and measurable, and \(|f| = f^+ + f^-\).
+
+<div class="definition">
+<strong>Definition (Lebesgue Integral).</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f : \Omega \to \mathbb{R}\) be any measurable function. If \(\int |f| \, d\mu < \infty\) (which is defined since \(|f|\) is non-negative), then we say \(f\) is <strong>integrable</strong> and define
+\[
+\int f \, d\mu = \int f^+ \, d\mu - \int f^- \, d\mu.
+\]
+</div>
+
+The condition \(\int |f| \, d\mu < \infty\) ensures that we never encounter the indeterminate form \(\infty - \infty\). Each of \(f^+\) and \(f^-\) is non-negative and hence has a well-defined integral (possibly infinite), but integrability requires both to be finite.
+
+In the probabilistic setting, when \(\mu = P\) is a probability measure and \(f = X\) is a random variable, the Lebesgue integral \(\int X \, dP\) is precisely the **expectation** \(E[X]\). All the properties we have developed --- linearity, monotonicity, the triangle inequality --- apply directly to expectations of random variables.
+
+<div class="theorem">
+<strong>Theorem 32.</strong> The properties (1)--(6) of integrals for simple functions in Lemma 27 hold for all integrable functions.
+</div>
+
+In the enrichment source (McLeish), the construction of expectation is presented equivalently: for non-negative random variables, \(E(X) = \sup\{E(Y) : Y \text{ simple}, Y \leq X\}\), and for general random variables, \(E(X) = E(X^+) - E(X^-)\). McLeish also notes that if \(P(A) = 0\), then \(\int_A X \, dP = 0\), and that if \(X\) is a non-negative random variable, the set function \(\mu(A) = \int_A X \, dP\) defines a countably additive measure on \(\mathcal{F}\). This latter fact is important: it shows that integration with respect to a density creates a new measure, and this is the essential idea behind the Radon--Nikodym theorem.
+
+## Two Probability Inequalities
+
+Before continuing to the great convergence theorems, we pause to develop two fundamental inequalities that are used throughout probability theory. These inequalities --- named for Chebyshev and Markov --- provide bounds on tail probabilities in terms of expectations.
+
+<div class="theorem">
+<strong>Theorem 33 (Generalized Chebyshev Inequality).</strong> Let \(X\) be a random variable and \(g\) be a non-negative function. For some \(B \in \mathcal{B}\), let \(\ell := \inf\{g(x) : x \in B\}\) (a lower bound of \(g(x)\) on \(B\)). Then
+\[
+\ell \cdot P(X \in B) \leq E[g(X)], \quad \text{or equivalently} \quad P(X \in B) \leq \frac{1}{\ell} E[g(X)].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \(Y = \ell \cdot \mathbf{1}_{X \in B}\). Then clearly \(Y \leq g(X)\) for any \(x \in B\), and so
+\[
+\ell \cdot P(X \in B) = E[Y] \leq E[g(X)]
+\]
+as desired. \(\blacksquare\)
+</div>
+
+The generalized Chebyshev inequality is a remarkably versatile tool. By choosing \(g\) and \(B\) appropriately, we obtain a family of useful corollaries.
+
+<div class="corollary">
+<strong>Corollary 34 (Markov Inequality).</strong> If \(X\) is a non-negative random variable, then for any \(a > 0\),
+\[
+P(X \geq a) \leq \frac{1}{a} E[X].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Take \(B = [a, \infty) \in \mathcal{B}\) and \(g(x) = x^+ = \max\{x, 0\}\). Then the result follows from the generalized Chebyshev inequality. \(\blacksquare\)
+</div>
+
+The Markov inequality is the simplest tail bound one can write down: it says that a non-negative random variable can exceed a threshold \(a\) with probability at most its mean divided by \(a\). Although crude, it is sharp in the sense that there exist distributions for which equality holds.
+
+<div class="corollary">
+<strong>Corollary 35 (Chebyshev Inequality, Strict Form).</strong> For any random variable \(X\) and any \(a > 0\),
+\[
+a^2 P(|X| \geq a) \leq E[X^2] \quad \text{and} \quad a^2 P(|X - E[X]| \geq a) \leq \operatorname{Var}(X).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Take \(g(x) = x^2\) and \(B = (-\infty, -a] \cup [a, \infty)\). Then the result follows from the generalized Chebyshev inequality. For the variance form, apply the same argument to \(X - E[X]\). \(\blacksquare\)
+</div>
+
+The Chebyshev inequality in its variance form is perhaps the single most-used inequality in elementary probability. It tells us that the probability of deviating from the mean by more than \(a\) standard deviations is at most \(1/a^2\), regardless of the distribution.
+
+## Jensen's Inequality
+
+Another inequality of fundamental importance in probability is Jensen's inequality, which relates the expectation of a convex function to the convex function of the expectation. Recall that a function \(\varphi : \mathbb{R} \to \mathbb{R}\) is **convex** if for every pair of points \(x, y\) and every \(0 < p < 1\),
+\[
+\varphi(px + (1-p)y) \leq p\varphi(x) + (1-p)\varphi(y).
+\]
+Geometrically, the graph of a convex function lies below any chord connecting two of its points. Since expectation is a form of weighted average, the following result is a natural generalization.
+
+<div class="theorem">
+<strong>Theorem 36 (Jensen's Inequality).</strong> Let \(X\) be a random variable and \(\varphi\) be a convex function. Then
+\[
+\varphi(E[X]) \leq E[\varphi(X)].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(x_0 = E[X]\) and \(g_0 = \varphi(E[X])\). Since \(\varphi\) is convex, there exists a supporting line \(l(x) = g_0 + k(x - x_0)\) through the point \((x_0, g_0)\) such that \(\varphi(x) \geq l(x)\) for all \(x\). Therefore
+\[
+E[\varphi(X)] \geq E[l(X)] = g_0 + k(E[X] - x_0) = \varphi(E[X]),
+\]
+as desired. \(\blacksquare\)
+</div>
+
+As immediate applications, taking \(\varphi(x) = x^2\) yields \((E[X])^2 \leq E[X^2]\), and taking \(\varphi(x) = e^{tx}\) for \(t > 0\) yields \(e^{tE[X]} \leq E[e^{tX}]\). Jensen's inequality will also be used shortly in establishing properties of characteristic functions.
+
+## The Monotone Convergence Theorem
+
+The real power of the Lebesgue integral lies in the convergence theorems that allow us to interchange limits and integrals under appropriate conditions. The first and most basic of these is the Monotone Convergence Theorem (MCT), which states that for non-decreasing sequences of non-negative functions, the integral of the limit equals the limit of the integrals.
+
+<div class="theorem">
+<strong>Monotone Convergence Theorem.</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. If \(f_n\) is a non-decreasing sequence of non-negative measurable functions converging pointwise to \(f\), then
+\[
+\lim_{n \to \infty} \int f_n \, d\mu = \int f \, d\mu.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \(f_n \leq f\) for all \(n\), monotonicity of the integral gives \(\int f_n \, d\mu \leq \int f \, d\mu\). Moreover, \(\int f_n \, d\mu\) is non-decreasing and hence converges, with \(\lim \int f_n \, d\mu \leq \int f \, d\mu\).
+
+For the reverse inequality, let \(\varepsilon > 0\) be arbitrary and let \(Y = \sum_i c_i \mathbf{1}_{A_i}\) be any simple function with \(Y \leq f\). Define \(B_n = \{\omega : f_n(\omega) \geq (1 - \varepsilon) Y(\omega)\}\). As \(n \to \infty\), the sets \(B_n\) increase to a set containing \(\{\omega : f(\omega) \geq (1 - \varepsilon/2) Y(\omega)\}\), and since \(f \geq Y\), this is all of \(\Omega\). Therefore
+\[
+\int f_n \, d\mu \geq \int f_n \mathbf{1}_{B_n} \, d\mu \geq (1 - \varepsilon) \int Y \mathbf{1}_{B_n} \, d\mu.
+\]
+Since \(\int Y \mathbf{1}_{B_n} \, d\mu = \sum_i c_i \mu(A_i \cap B_n) \to \sum_i c_i \mu(A_i) = \int Y \, d\mu\) as \(n \to \infty\), we get \(\lim \int f_n \, d\mu \geq (1 - \varepsilon) \int Y \, d\mu\). Taking the supremum over all simple \(Y \leq f\) gives \(\lim \int f_n \, d\mu \geq (1 - \varepsilon) \int f \, d\mu\). Since \(\varepsilon > 0\) was arbitrary, the result follows. \(\blacksquare\)
+</div>
+
+The MCT holds even if \(\int f \, d\mu = \infty\); in that case it says \(\int f_n \, d\mu \to \infty\). This theorem is used constantly in probability, often implicitly, whenever we interchange a sum (which is a limit of partial sums) and an integral.
+
+## Fatou's Lemma
+
+The next convergence result does not require monotonicity, but the price we pay is that we get only an inequality rather than equality.
+
+<div class="lemma">
+<strong>Fatou's Lemma.</strong> If \(X_n\) is a sequence of non-negative random variables, then
+\[
+E[\liminf_{n \to \infty} X_n] \leq \liminf_{n \to \infty} E[X_n].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \(Y_n(\omega) = \inf_{m \geq n} X_m(\omega)\). Then \(Y_n\) is a non-decreasing sequence of random variables and \(\lim Y_n = \liminf X_n\). By the Monotone Convergence Theorem, \(E[Y_n] \to E[\liminf X_n]\). Since \(Y_n \leq X_n\) for all \(n\),
+\[
+E[\liminf X_n] = \lim E[Y_n] \leq \liminf E[X_n]. \quad \blacksquare
+\]
+</div>
+
+Fatou's lemma is indispensable because it applies to sequences that may not be monotone. The inequality can be strict: consider \(X_n = n \mathbf{1}_{(0, 1/n)}\) on \((0,1)\) with Lebesgue measure, where \(X_n \to 0\) pointwise but \(E[X_n] = 1\) for all \(n\).
+
+## The Dominated Convergence Theorem
+
+The most widely used convergence theorem is the **Dominated Convergence Theorem** (DCT), which provides conditions under which pointwise convergence of functions implies convergence of their integrals. Unlike the MCT, it does not require monotonicity, but it does require a dominating integrable function.
+
+<div class="theorem">
+<strong>Theorem (Lebesgue Dominated Convergence Theorem).</strong> If \(X_n(\omega) \to X(\omega)\) for each \(\omega\), and there exists an integrable random variable \(Y\) with \(|X_n(\omega)| \leq Y(\omega)\) for all \(n\) and \(\omega\), then \(X\) is integrable and \(E[X_n] \to E[X]\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \(Y \geq |X_n|\), the random variables \(Y + X_n\) are non-negative. By Fatou's lemma,
+\[
+E[\liminf(Y + X_n)] \leq \liminf E[Y + X_n],
+\]
+which gives \(E[Y] + E[X] \leq E[Y] + \liminf E[X_n]\), hence \(E[X] \leq \liminf E[X_n]\).
+
+Similarly, applying Fatou's lemma to \(Y - X_n\) (also non-negative) gives
+\[
+E[Y] - E[X] \leq E[Y] - \limsup E[X_n],
+\]
+hence \(E[X] \geq \limsup E[X_n]\). Combining these, \(E[X] = \lim E[X_n]\). \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The Dominated Convergence Theorem can be proved under the more general condition that \(X_n\) converges to \(X\) almost surely (or even in measure), rather than pointwise. The essential requirement is the existence of the integrable dominating function \(Y\).
+</div>
+
+The DCT is the workhorse of measure-theoretic probability. Whenever we need to pass a limit through an expectation, we look for a dominating integrable function. Its hypotheses are sharp in the sense that without a dominating function, the conclusion can fail, as the example \(X_n = n \mathbf{1}_{(0,1/n)}\) demonstrates.
+
+## The Lebesgue--Stieltjes Integral
+
+In many applications, particularly in probability theory, we integrate not with respect to Lebesgue measure but with respect to a measure induced by a cumulative distribution function. This leads to the **Lebesgue--Stieltjes integral**.
+
+Suppose \(F(x)\) is a right-continuous, non-decreasing function on \(\mathbb{R}\). Then \(F\) induces a measure \(\mu\) on the Borel sets of \(\mathbb{R}\) by setting \(\mu((a, b]) = F(b) - F(a)\) and extending to all Borel sets via the Caratheodory extension theorem.
+
+<div class="definition">
+<strong>Definition (Lebesgue--Stieltjes Integral).</strong> Let \(g(x)\) be a Borel measurable function and \(F(x)\) a right-continuous non-decreasing function inducing a measure \(\mu\). The <strong>Lebesgue--Stieltjes integral</strong> of \(g\) with respect to \(F\) is defined as
+\[
+\int g(x) \, dF(x) = \int g(x) \, d\mu
+\]
+where the right-hand side is the Lebesgue integral with respect to \(\mu\). For a simple function \(g(x) = \sum_i c_i \mathbf{1}_{A_i}(x)\), this becomes \(\int g \, dF = \sum_i c_i \mu(A_i)\).
+</div>
+
+When \(F\) is the cumulative distribution function of a random variable \(X\), the Lebesgue--Stieltjes integral \(\int g(x) \, dF(x)\) equals \(E[g(X)]\). For a discrete distribution with mass points \(x_j\) and probabilities \(p_j\), this reduces to \(\sum_j g(x_j) p_j\). For an absolutely continuous distribution with density \(f\), it reduces to \(\int g(x) f(x) \, dx\). The Lebesgue--Stieltjes integral thus provides a unified framework for computing expectations regardless of whether the distribution is discrete, continuous, or a mixture.
+
+All the convergence theorems --- the Monotone Convergence Theorem, Fatou's Lemma, and the Dominated Convergence Theorem --- apply equally well to Lebesgue--Stieltjes integrals, with \(\mu\) replaced by the measure induced by \(F\).
+
+<div class="remark">
+<strong>Remark (Absolute Continuity and the Radon--Nikodym Theorem).</strong> A measure \(\mu\) on \(\mathbb{R}\) is <strong>absolutely continuous</strong> with respect to Lebesgue measure \(\lambda\) (written \(\mu \ll \lambda\)) if \(\lambda(B) = 0\) implies \(\mu(B) = 0\) for all Borel sets \(B\). The Radon--Nikodym theorem states that this is equivalent to the existence of an integrable function \(f\) (the density, or Radon--Nikodym derivative) such that \(\mu(B) = \int_B f(x) \, d\lambda\) for all Borel sets \(B\). The "continuous distributions" studied in elementary statistics --- normal, gamma, exponential, and so on --- are precisely those that are absolutely continuous with respect to Lebesgue measure.
+</div>
+
+## Moments and the Moment Generating Function
+
+Many properties of a random variable \(X\) are captured by its **moments**. The \(k\)-th moment of \(X\) is \(E[X^k]\), and the \(k\)-th **central moment** is \(E[(X - \mu)^k]\) where \(\mu = E[X]\). Important special cases include the **variance** \(\operatorname{Var}(X) = E[(X - \mu)^2]\), the **skewness** \(E[(X-\mu)^3]/\sigma^3\) (measuring asymmetry), and the **kurtosis** \(E[(X-\mu)^4]/\sigma^4\) (measuring tail heaviness). For the normal distribution, skewness is 0 and kurtosis is 3.
+
+<div class="definition">
+<strong>Definition (Moment Generating Function).</strong> Let \(X\) be a random variable with c.d.f. \(F(x)\). The <strong>moment generating function</strong> (m.g.f.) of \(X\) is
+\[
+m_X(t) = E[e^{tX}] = \int_{-\infty}^{\infty} e^{tx} \, dF(x), \quad t \in \mathbb{R}.
+\]
+</div>
+
+Since \(e^{tX}\) is always non-negative, the m.g.f. is well-defined but may take the value \(+\infty\) for some or all \(t\). When \(m_X(t)\) is finite in an open neighborhood of \(t = 0\), we can recover moments by differentiation:
+\[
+E[X^n] = m_X^{(n)}(0).
+\]
+This follows from the Taylor expansion \(m_X(t) = \sum_{j=0}^{\infty} \frac{t^j E[X^j]}{j!}\), valid when the series converges absolutely near \(t = 0\).
+
+<div class="example">
+<strong>Example (Normal m.g.f.).</strong> The standard normal distribution \(X \sim N(0,1)\) has moment generating function \(m_X(t) = e^{t^2/2}\). For a general normal \(X \sim N(\mu, \sigma^2)\), we have \(m_X(t) = e^{\mu t + \sigma^2 t^2/2}\).
+</div>
+
+Unlike the moment generating function, which may not exist, the **characteristic function** always exists and is the preferred tool for proving general results about distributions.
+
+## Characteristic Functions
+
+The characteristic function is the Fourier transform of the distribution of a random variable. It always exists, completely determines the distribution, and has elegant algebraic properties that make it the tool of choice for analyzing sums of independent random variables.
+
+<div class="definition">
+<strong>Definition (Characteristic Function).</strong> Let \(X\) be a random variable. Its <strong>characteristic function</strong> is defined as
+\[
+\varphi_X(t) = E[e^{itX}] = E[\cos(tX)] + i E[\sin(tX)] = \int_{\mathbb{R}} e^{itx} f(x) \, dx
+\]
+for \(t \in \mathbb{R}\), where the last expression applies when \(X\) has density \(f\).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The characteristic function of \(X\) is also the Fourier transform of the probability density function of \(X\). Unlike the moment generating function \(E[e^{tX}]\) or the probability generating function \(E[s^X]\) of non-negative integer-valued random variables, the characteristic function always exists on \(\mathbb{R}\). This is why, to prove general results about random variables, we should always use the characteristic function instead of the moment generating function.
+</div>
+
+The basic properties of the characteristic function follow immediately from its definition.
+
+<div class="theorem">
+<strong>Theorem 37 (Properties of the Characteristic Function).</strong> Let \(\varphi = \varphi_X\) be the characteristic function of a random variable \(X\). Then:
+<ol>
+<li>\(\varphi(0) = 1\).</li>
+<li>\(\varphi(-t) = \overline{\varphi(t)}\) (the complex conjugate, where \(\overline{a + bi} = a - bi\)).</li>
+<li>\(|\varphi(t)| = |E[e^{itX}]| \leq E[|e^{itX}|] = 1\).</li>
+<li>\(\varphi_{aX+b}(t) = E[e^{it(aX+b)}] = e^{itb} \varphi_X(at)\).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (1) We have \(e^{0 \cdot iX} = 1\), so \(\varphi(0) = 1\).
+
+(2) We have \(\varphi(-t) = E[e^{-itX}] = E[\cos(-tX)] + iE[\sin(-tX)] = E[\cos(tX)] - iE[\sin(tX)]\) since cosine is even and sine is odd.
+
+(3) Note that \(f(x, y) = (x^2 + y^2)^{1/2}\) is a convex function. By Jensen's inequality, \(f(E[X'], E[Y']) \leq E[f(X', Y')]\). Taking \(X' = \cos(tX)\) and \(Y' = \sin(tX)\), we get \(|\varphi(t)| = f(E[X'], E[Y']) \leq E[f(X', Y')] = E[1] = 1\).
+
+(4) Follows by direct computation. \(\blacksquare\)
+</div>
+
+The characteristic function behaves multiplicatively for sums of independent random variables, which is its most powerful algebraic property.
+
+<div class="theorem">
+<strong>Theorem 38.</strong> Let \(X\) and \(Y\) be independent random variables with characteristic functions \(\varphi_X\) and \(\varphi_Y\), respectively. Then \(X + Y\) has characteristic function \(\varphi_{X+Y} = \varphi_X \cdot \varphi_Y\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We have \(\varphi_{X+Y}(t) = E[e^{it(X+Y)}] = E[e^{itX} e^{itY}] = E[e^{itX}] E[e^{itY}] = \varphi_X(t) \varphi_Y(t)\), where the factoring of the expectation uses independence. \(\blacksquare\)
+</div>
+
+Let us illustrate the power of characteristic functions with several important distributions.
+
+<div class="example">
+<strong>Example (Poisson Distribution).</strong> Let \(X \sim \operatorname{Poi}(\lambda)\) with \(P(X = k) = e^{-\lambda} \lambda^k / k!\) for \(k = 0, 1, \ldots\). Then
+\[
+\varphi(t) = E[e^{itX}] = \sum_{k=0}^{\infty} e^{-\lambda} \frac{\lambda^k e^{itk}}{k!} = e^{-\lambda} \sum_{k=0}^{\infty} \frac{(\lambda e^{it})^k}{k!} = e^{-\lambda} e^{\lambda e^{it}} = e^{\lambda(e^{it} - 1)}.
+\]
+If \(Y \sim \operatorname{Poi}(\eta)\) is independent of \(X\), then \(\varphi_{X+Y}(t) = e^{\lambda(e^{it}-1)} e^{\eta(e^{it}-1)} = e^{(\lambda+\eta)(e^{it}-1)}\), which is the characteristic function of a \(\operatorname{Poi}(\lambda + \eta)\) distribution. Thus the sum of independent Poisson random variables is again Poisson.
+</div>
+
+But does the characteristic function uniquely determine the distribution? The following inversion formula shows that it does.
+
+<div class="theorem">
+<strong>Theorem 39 (Inversion Formula).</strong> Let \(\varphi_X(t) = \int e^{itx} \mu(dx) = E[e^{itX}]\) where \(\mu\) is the probability measure induced by \(X\). Then for \(a < b\),
+\[
+\lim_{T \to \infty} (2\pi)^{-1} \int_{-T}^{T} \frac{e^{-ita} - e^{-itb}}{it} \varphi(t) \, dt = \mu((a,b)) + \tfrac{1}{2}\mu(\{a, b\}).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \(I_T = \int_{-T}^{T} \frac{e^{-ita} - e^{-itb}}{it} \varphi(t) \, dt\). By Fubini's theorem,
+\[
+I_T = \int \int_{-T}^{T} \frac{e^{it(x-a)} - e^{it(x-b)}}{it} \, dt \, \mu(dx) = \int \left[\int_{-T}^{T} \frac{\sin(t(x-a))}{t} \, dt - \int_{-T}^{T} \frac{\sin(t(x-b))}{t} \, dt\right] \mu(dx).
+\]
+The cosine terms vanish by symmetry of the integration interval. Using the classical result that for \(\theta > 0\),
+\[
+\lim_{T \to \infty} \int_{-T}^{T} \frac{\sin(\theta t)}{t} \, dt = \pi, \qquad \lim_{T \to \infty} \int_{-T}^{T} \frac{\sin(\theta t)}{t} \, dt = -\pi \text{ for } \theta < 0,
+\]
+we obtain
+\[
+g(x) := \lim_{T \to \infty} \left[\int_{-T}^{T} \frac{\sin(t(x-a))}{t} \, dt - \int_{-T}^{T} \frac{\sin(t(x-b))}{t} \, dt\right] = \begin{cases} 2\pi & \text{if } a < x < b, \\ \pi & \text{if } x = a \text{ or } x = b, \\ 0 & \text{if } x < a \text{ or } x > b. \end{cases}
+\]
+Since \(\left|\int_{-T}^{T} \frac{\sin(t(x-a))}{t} \, dt\right| \leq \sup_c \int_{-c}^{c} \frac{|\sin(y)|}{|y|} \, dy =: M < \infty\), the integrand is bounded by \(2M\). By the Dominated Convergence Theorem, \(\lim_{T \to \infty} I_T = \int g(x) \, \mu(dx) = 2\pi \mu((a,b)) + \pi \mu(\{a,b\})\), and hence \(\frac{1}{2\pi} I_T \to \mu((a,b)) + \frac{1}{2}\mu(\{a,b\})\). \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> From the inversion formula, we know that the characteristic function completely determines the distribution. We rarely apply the inversion formula directly; rather, its primary use is in guaranteeing that characteristic functions fully characterize their distributions. For instance, if \(X_1, X_2, \ldots, X_n\) are independent Poisson random variables with \(X_i \sim \operatorname{Poi}(\lambda_i)\), then \(\sum_{i=1}^n X_i \sim \operatorname{Poi}(\sum_{i=1}^n \lambda_i)\), as we can verify by comparing characteristic functions and invoking the inversion formula.
+</div>
+
+<div class="example">
+<strong>Example (Standard Normal Distribution).</strong> A standard normal \(X \sim N(0,1)\) has density \(f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}\). Its characteristic function is
+\[
+\varphi(t) = E[e^{itX}] = \int_{\mathbb{R}} \frac{1}{\sqrt{2\pi}} e^{itx - x^2/2} \, dx = e^{-t^2/2} \int_{\mathbb{R}} \frac{1}{\sqrt{2\pi}} e^{-(x-it)^2/2} \, dx = e^{-t^2/2}.
+\]
+Here we completed the square and used the fact that the integral of the standard normal density is 1 (by analytic continuation to the complex plane).
+</div>
+
+<div class="example">
+<strong>Example (General Normal Distribution).</strong> A general normal \(X \sim N(\mu, \sigma^2)\) has density \(f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2/(2\sigma^2)}\). Writing \(X = \mu + \sigma Z\) for \(Z \sim N(0,1)\), property (4) of characteristic functions gives \(\varphi_X(t) = e^{i\mu t - \sigma^2 t^2/2}\).
+
+If \(X_1 \sim N(\mu_1, \sigma_1^2)\) and \(X_2 \sim N(\mu_2, \sigma_2^2)\) are independent, then
+\[
+\varphi_{X_1 + X_2}(t) = \exp\left(i(\mu_1 + \mu_2)t - \tfrac{1}{2}(\sigma_1^2 + \sigma_2^2)t^2\right),
+\]
+which is the characteristic function of \(N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)\). By the inversion formula, \(X_1 + X_2 \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)\).
+</div>
+
+## Multivariate Characteristic Functions and the Multivariate Normal
+
+The theory of characteristic functions extends naturally to random vectors. For a random vector \(\vec{X} = (X_1, \ldots, X_n)\) and any \(\vec{t} = (t_1, \ldots, t_n) \in \mathbb{R}^n\), the **multivariate characteristic function** is
+\[
+\varphi_{\vec{X}}(\vec{t}) = E\left[e^{i\langle \vec{t}, \vec{X}\rangle}\right] = E\left[\exp\left(i \sum_{j=1}^n t_j X_j\right)\right]
+\]
+where \(\langle \vec{a}, \vec{b}\rangle = \sum_{i=1}^n a_i b_i\) is the standard inner product on \(\mathbb{R}^n\).
+
+<div class="definition">
+<strong>Definition (Multivariate Normal).</strong> An \(\mathbb{R}^n\)-valued random variable \(\vec{X} = (X_1, \ldots, X_n)\) is said to be <strong>multivariate normal</strong> if every linear combination \(\sum_{i=1}^n a_i X_i\) follows a (possibly degenerate) univariate normal distribution.
+</div>
+
+The multivariate normal distribution is completely characterized by its mean vector and covariance matrix: \(\vec{X}\) is multivariate normal if and only if its characteristic function has the form
+\[
+\varphi_{\vec{X}}(\vec{t}) = \exp\left(i\langle \vec{t}, \vec{\mu}\rangle - \tfrac{1}{2} \langle \vec{t}, \Sigma \vec{t}\rangle\right)
+\]
+where \(\vec{\mu} = E[\vec{X}] \in \mathbb{R}^n\) and \(\Sigma = (\operatorname{Cov}(X_i, X_j))_{i,j}\) is a symmetric positive semi-definite matrix.
+
+<div class="proof">
+<strong>Proof.</strong> (\(\Leftarrow\)) Assume the above form holds. For \(Y = \sum_{i=1}^n a_i X_i = \langle \vec{a}, \vec{X}\rangle\), we compute
+\[
+\varphi_Y(t) = E[e^{itY}] = E[e^{i\langle t\vec{a}, \vec{X}\rangle}] = \varphi_{\vec{X}}(t\vec{a}) = \exp\left(it\langle \vec{a}, \vec{\mu}\rangle - \tfrac{t^2}{2}\langle \vec{a}, \Sigma \vec{a}\rangle\right),
+\]
+which is the characteristic function of \(N(\langle \vec{a}, \vec{\mu}\rangle, \vec{a}^T \Sigma \vec{a})\). So every linear combination is normal.
+
+(\(\Rightarrow\)) Suppose \(\vec{X}\) is multivariate normal. For any \(\vec{a} \in \mathbb{R}^n\), the variable \(Y = \langle \vec{a}, \vec{X}\rangle\) is normal with mean \(\langle \vec{a}, \vec{\mu}\rangle\) and variance \(\vec{a}^T \Sigma \vec{a}\). Then \(\varphi_{\vec{X}}(\vec{a}) = E[e^{i\langle \vec{a}, \vec{X}\rangle}] = E[e^{i \cdot 1 \cdot Y}] = \varphi_Y(1) = \exp\left(i\langle \vec{a}, \vec{\mu}\rangle - \tfrac{1}{2}\vec{a}^T \Sigma \vec{a}\right)\). \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The distribution of a multivariate normal random variable is completely determined by its mean vector and covariance matrix (its first two moments). This is a very special property not shared by most multivariate distributions.
+</div>
+
+<div class="corollary">
+<strong>Corollary 40.</strong> If \(\vec{X} \sim N(\vec{\mu}, \Sigma)\) then \(A\vec{X} + \vec{c} \sim N(A\vec{\mu} + \vec{c}, A\Sigma A^T)\) for any \(A \in \mathbb{R}^{m \times n}\) and \(\vec{c} \in \mathbb{R}^m\).
+</div>
+
+<div class="corollary">
+<strong>Corollary 41.</strong> If \(\vec{X} \sim N(\vec{\mu}, \Sigma)\), then any two components \(X_i, X_j\) are independent if and only if \(\operatorname{Cov}(X_i, X_j) = 0\).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> In the general case, while \(X \perp Y\) implies \(\operatorname{Cov}(X, Y) = 0\), the converse is not true. Uncorrelated random variables need not be independent. The multivariate normal is special in that uncorrelatedness does imply independence.
+</div>
+
+## \(L^p\) Spaces and Further Inequalities
+
+We have already encountered \(L^p\) spaces implicitly through the various notions of integrability. Let us now formalize this concept, as it will be essential for the convergence theory developed in the next chapter.
+
+For a probability space \((\Omega, \mathcal{F}, P)\) and \(1 \leq p < \infty\), the space \(L^p\) consists of all random variables \(X\) such that \(E[|X|^p] < \infty\). This space is equipped with the norm
+\[
+\|X\|_p = \left(E[|X|^p]\right)^{1/p}.
+\]
+The space \(L^2\) is especially important because it is a Hilbert space with inner product \(\langle X, Y \rangle = E[XY]\), which provides the geometric framework for least-squares estimation and projection. Other \(L^p\) spaces for \(p \neq 2\) are Banach spaces (complete normed vector spaces) but do not generally have inner products.
+
+The Markov and Chebyshev inequalities developed earlier are special cases of a more general family of inequalities. Two further inequalities of great importance in the \(L^p\) theory are Holder's inequality and Minkowski's inequality.
+
+**Holder's inequality** states that if \(p, q > 1\) satisfy \(1/p + 1/q = 1\), and if \(X \in L^p\) and \(Y \in L^q\), then \(XY \in L^1\) and
+\[
+E[|XY|] \leq \|X\|_p \|Y\|_q.
+\]
+The special case \(p = q = 2\) is the Cauchy--Schwarz inequality \(E[|XY|] \leq \sqrt{E[X^2] E[Y^2]}\).
+
+**Minkowski's inequality** states that for \(p \geq 1\) and \(X, Y \in L^p\),
+\[
+\|X + Y\|_p \leq \|X\|_p + \|Y\|_p.
+\]
+This is precisely the triangle inequality for the \(L^p\) norm, confirming that \(\|\cdot\|_p\) is indeed a norm on \(L^p\).
+
+---
+
+# Chapter 4: Convergence of Random Variables
+
+In probability theory, we are frequently concerned with the behavior of sequences of random variables. The law of large numbers, the central limit theorem, and the theory of statistical estimation all involve taking limits of random quantities. But what does it mean for a sequence of random variables to "converge"? Unlike sequences of real numbers, where there is only one notion of convergence, sequences of random variables admit several distinct notions of convergence, each capturing a different aspect of probabilistic behavior. In this chapter, we introduce four principal modes of convergence --- almost sure, in \(L^p\), in probability, and in distribution --- and systematically explore the relationships among them.
+
+## Almost Sure Convergence
+
+The strongest and most intuitive notion of convergence requires that, for almost every outcome \(\omega\), the numerical sequence \(X_n(\omega)\) converges to \(X(\omega)\) in the ordinary sense.
+
+Recall that for a sequence of real numbers \(x_1, x_2, \ldots\), the limit exists if and only if \(\limsup_{n \to \infty} x_n = \liminf_{n \to \infty} x_n\). For random variables, the set
+\[
+\Omega_0 := \{\omega : \lim_{n \to \infty} X_n(\omega) \text{ exists}\} = \{\limsup_{n \to \infty} X_n - \liminf_{n \to \infty} X_n = 0\}
+\]
+is measurable (since \(\limsup X_n\) and \(\liminf X_n\) are measurable). If \(P(\Omega_0) = 1\), we say the sequence converges almost surely.
+
+<div class="definition">
+<strong>Definition (Almost Sure Convergence).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables. We say \(\{X_n\}_{n=1}^{\infty}\) <strong>converges almost surely</strong> to a random variable \(X\) if and only if \(P(\lim_{n \to \infty} X_n = X) = 1\). This can be equivalently written as \(P(\{\omega : X_n(\omega) \to X(\omega)\}) = 1\). We write \(X_n \xrightarrow{a.s.} X\).
+</div>
+
+Almost sure convergence means that the set of outcomes where convergence fails has probability zero. For any particular outcome \(\omega\) in the probability-one set, the sequence of real numbers \(X_1(\omega), X_2(\omega), \ldots\) converges to \(X(\omega)\) in the usual sense.
+
+<div class="definition">
+<strong>Definition (Convergence Everywhere).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables. We say \(\{X_n\}_{n=1}^{\infty}\) <strong>converges everywhere</strong> to \(X\) if and only if \(X_n(\omega) \to X(\omega)\) for all \(\omega \in \Omega\).
+</div>
+
+Convergence everywhere is strictly stronger than almost sure convergence, since it requires convergence at every single point, not just on a set of full measure. In practice, almost sure convergence is the more natural and useful concept.
+
+<div class="example">
+<strong>Example (Binomial Distribution).</strong> Let \(X \sim \operatorname{Bin}(n, p)\), the distribution of the number of successes in \(n\) independent trials each with success probability \(p\). Writing \(X = Y_1 + \cdots + Y_n\) where \(Y_1, \ldots, Y_n \overset{i.i.d.}{\sim} \operatorname{Bern}(p)\), we have \(E[X] = np\) and \(\operatorname{Var}(X) = np(1-p)\).
+</div>
+
+## Convergence in \(L^p\)
+
+While almost sure convergence is about the pointwise behavior of sample paths, convergence in \(L^p\) is about the behavior of integral (expectation) quantities.
+
+<div class="definition">
+<strong>Definition (Convergence in \(L^p\)).</strong> Defined for \(1 \leq p < \infty\). Let \(X_1, X_2, \ldots\) be a sequence of random variables. We say \(\{X_n\}\) <strong>converges in \(L^p\)</strong> to \(X\) if and only if \(\lim_{n \to \infty} E[|X_n - X|^p] = 0\). Equivalently, \(\|X_n - X\|_p \to 0\). We write \(X_n \xrightarrow{L^p} X\).
+</div>
+
+Two important special cases deserve emphasis. If \(X_n \xrightarrow{L^1} X\), then \(E[|X_n - X|] \to 0\), which implies \(E[X_n] \to E[X]\); this is necessary but not sufficient for \(L^1\) convergence. If \(X_n \xrightarrow{L^2} X\), then \(E[(X_n - X)^2] \to 0\), which implies \(E[X_n^2] \to E[X^2]\); again necessary but not sufficient. The space \(L^2\) is especially tractable because it is a Hilbert space with inner product structure, while other \(L^p\) spaces are Banach spaces without inner products.
+
+## Convergence in Probability
+
+Convergence in probability is a weaker notion that asks only that the probability of a large deviation tends to zero, without requiring that deviations vanish along individual sample paths.
+
+<div class="definition">
+<strong>Definition (Convergence in Probability).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables. We say \(\{X_n\}\) <strong>converges in probability</strong> to \(X\) if and only if \(\lim_{n \to \infty} P(|X_n - X| > \varepsilon) = 0\) for every \(\varepsilon > 0\). We write \(X_n \xrightarrow{P} X\).
+</div>
+
+## Relationships Among the Modes of Convergence
+
+The following theorem establishes the two most basic implications among our modes of convergence.
+
+<div class="theorem">
+<strong>Theorem 42.</strong>
+<ol>
+<li>If \(X_n \xrightarrow{a.s.} X\), then \(X_n \xrightarrow{P} X\).</li>
+<li>If \(X_n \xrightarrow{L^p} X\), then \(X_n \xrightarrow{P} X\).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (1) Fix \(\varepsilon > 0\). Let \(A_n = \{\omega \in \Omega : |X_m(\omega) - X(\omega)| \leq \varepsilon \text{ for all } m \geq n\}\). Then \(A_n\) is non-decreasing and
+\[
+\lim_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} A_n = \{\text{there exists } n \text{ such that } |X_m - X| \leq \varepsilon \text{ for all } m \geq n\} \supseteq \{X_n \to X\}.
+\]
+Since \(P(\{X_n \to X\}) = 1\), by continuity of probability, \(\lim_{n \to \infty} P(A_n) = 1\). Since \(A_n \subseteq \{|X_n - X| \leq \varepsilon\}\), we get \(\lim_{n \to \infty} P(|X_n - X| \leq \varepsilon) = 1\).
+
+(2) Fix \(\varepsilon > 0\). By the Markov inequality,
+\[
+P(|X_n - X| > \varepsilon) = P(|X_n - X|^p > \varepsilon^p) \leq \frac{E[|X_n - X|^p]}{\varepsilon^p} \to 0
+\]
+since \(X_n \xrightarrow{L^p} X\). \(\blacksquare\)
+</div>
+
+Higher \(L^p\) convergence implies lower \(L^p\) convergence:
+
+<div class="proposition">
+<strong>Proposition 43.</strong> Let \(1 \leq p < q < \infty\). If \(X_n \xrightarrow{L^q} X\), then \(X_n \xrightarrow{L^p} X\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For any \(\varepsilon < 1\),
+\[
+E[|X_n - X|^p] = E[|X_n - X|^p \mathbf{1}_{\{|X_n - X| \geq \varepsilon\}}] + E[|X_n - X|^p \mathbf{1}_{\{|X_n - X| < \varepsilon\}}].
+\]
+When \(|X_n - X| \geq \varepsilon\), we have \(|X_n - X|^p \leq \varepsilon^{p-q} |X_n - X|^q\) since \(p - q < 0\). When \(|X_n - X| < \varepsilon\), we have \(|X_n - X|^p < \varepsilon^p\). Therefore
+\[
+E[|X_n - X|^p] \leq \varepsilon^{p-q} E[|X_n - X|^q] + \varepsilon^p.
+\]
+Taking \(n \to \infty\), \(\limsup_{n \to \infty} E[|X_n - X|^p] \leq \varepsilon^p\). Since \(\varepsilon > 0\) is arbitrary, the result follows. \(\blacksquare\)
+</div>
+
+The converses of the implications in Theorem 42 are false in general, as the following examples demonstrate.
+
+<div class="example">
+<strong>Example (Convergence in probability does not imply a.s. or \(L^p\) convergence).</strong> On the probability space \(((0,1), \mathcal{B}, \lambda)\), consider a sequence that "sweeps" across the interval in ever-finer passes: \(X_1 = \mathbf{1}_{[0,1]}\), then \(X_2 = \mathbf{1}_{[0,1/2]}\), \(X_3 = \mathbf{1}_{[1/2,1]}\), then \(X_4 = \mathbf{1}_{[0,1/3]}\), \(X_5 = \mathbf{1}_{[1/3,2/3]}\), \(X_6 = \mathbf{1}_{[2/3,1]}\), and so on. Then \(X_n \xrightarrow{P} 0\) since \(P(|X_n| > \varepsilon) \to 0\), but \(X_n \not\xrightarrow{a.s.} 0\) because for every irrational \(\omega \in (0,1)\), there are infinitely many \(n\) with \(X_n(\omega) = 1\).
+</div>
+
+<div class="example">
+<strong>Example (Convergence in probability does not imply \(L^p\) convergence).</strong> Consider \(X_n = n \mathbf{1}_{(0, 1/n)}\) on \(((0,1), \mathcal{B}, \lambda)\). For any \(\varepsilon > 0\), \(P(|X_n| > \varepsilon) = 1/n \to 0\), so \(X_n \xrightarrow{P} 0\). However, \(E[|X_n|^p] = n^p \cdot (1/n) = n^{p-1} \to \infty\) for \(p \geq 1\), so \(X_n \not\xrightarrow{L^p} 0\).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The above examples also show that \(L^1\) convergence does not imply almost sure convergence, and vice versa. The first example has \(X_n \not\xrightarrow{a.s.} 0\) despite \(X_n \xrightarrow{L^1} 0\) (since \(E[|X_n|] \to 0\)). The second example has \(X_n \xrightarrow{a.s.} 0\) (since for any \(\omega > 0\), eventually \(1/n < \omega\)) despite \(X_n \not\xrightarrow{L^1} 0\).
+</div>
+
+Although convergence in probability does not imply almost sure convergence, it does imply the existence of an almost surely convergent subsequence.
+
+<div class="theorem">
+<strong>Theorem 44.</strong> If \(X_n \xrightarrow{P} X\), then there exists a subsequence \(\{X_{i_m}\}_{m=1}^{\infty}\) with \(i_1 < i_2 < i_3 < \cdots\) such that \(X_{i_m} \xrightarrow{a.s.} X\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Set \(i_0 = 0\). For each \(m \geq 1\), choose \(i_m = \inf\{i \geq i_{m-1} : P(|X_i - X| > 1/m) \leq 2^{-m}\}\). This infimum exists since \(\lim_{n \to \infty} P(|X_n - X| > \varepsilon) = 0\) for every \(\varepsilon > 0\). Then
+\[
+\sum_{m=1}^{\infty} P\left(|X_{i_m} - X| > \frac{1}{m}\right) \leq \sum_{m=1}^{\infty} 2^{-m} = 1 < \infty.
+\]
+By the first Borel--Cantelli lemma, \(P(|X_{i_m} - X| > 1/m \text{ i.o.}) = 0\). This means that \(|X_{i_m} - X| > 1/m\) for only finitely many \(m\) almost surely, which in turn means \(|X_{i_m} - X| \leq 1/m\) from some \(m\) onward almost surely. Therefore \(X_{i_m} \xrightarrow{a.s.} X\). \(\blacksquare\)
+</div>
+
+## Uniform Integrability
+
+We have seen that convergence in probability does not in general imply \(L^p\) convergence. The missing condition is **uniform integrability**, which controls the tails of the distributions uniformly over the sequence.
+
+<div class="definition">
+<strong>Definition (Uniform Integrability).</strong> A sequence of random variables \(\{X_n\}_{n=1}^{\infty}\) is <strong>uniformly integrable</strong> (U.I.) if
+\[
+\lim_{k \to \infty} \sup_n E[|X_n| \mathbf{1}_{\{|X_n| > k\}}] = 0.
+\]
+</div>
+
+Intuitively, uniform integrability means that the "tail mass" of the integrals is uniformly small: as the truncation threshold \(k\) grows, the contribution of \(|X_n|\) beyond \(k\) vanishes, uniformly over all \(n\). For a single integrable random variable, the tail contribution always vanishes; uniform integrability requires this to happen at the same rate for the entire sequence. The counterexample \(X_n = n \mathbf{1}_{(0,1/n)}\) fails uniform integrability because the integrals do not grow "nicely" --- the mass concentrates on a shrinking set but grows proportionally taller.
+
+<div class="theorem">
+<strong>Theorem 45.</strong> If \(X_n \xrightarrow{P} X\) and \(\{X_n\}_{n=1}^{\infty}\) is uniformly integrable, then \(X_n \xrightarrow{L^1} X\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Without loss of generality, assume \(X \equiv 0\). For any fixed \(\varepsilon > 0\), by uniform integrability there exists \(t_\varepsilon > 0\) such that \(E[|X_n| \mathbf{1}_{\{|X_n| > t_\varepsilon\}}] \leq \varepsilon\) for all \(n\). Since \(X_n \xrightarrow{P} 0\), there exists \(N_\varepsilon\) such that for \(n \geq N_\varepsilon\), \(P(|X_n| > \varepsilon) \leq \varepsilon / t_\varepsilon\). For \(n \geq N_\varepsilon\),
+\[
+E[|X_n|] = \int_{\{|X_n| < \varepsilon\}} |X_n| \, dP + \int_{\{\varepsilon \leq |X_n| \leq t_\varepsilon\}} |X_n| \, dP + \int_{\{|X_n| > t_\varepsilon\}} |X_n| \, dP \leq \varepsilon + t_\varepsilon P(|X_n| > \varepsilon) + \varepsilon \leq \varepsilon + \varepsilon + \varepsilon = 3\varepsilon.
+\]
+Since this holds for all \(\varepsilon > 0\), \(E[|X_n|] \to 0\), so \(X_n \xrightarrow{L^1} 0\). \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> To summarize the relationships so far: almost sure convergence and \(L^p\) convergence both imply convergence in probability. Convergence in probability implies the existence of a subsequence that converges almost surely. For uniformly integrable sequences, convergence in probability implies \(L^1\) convergence. There is, in general, no direct implication between almost sure convergence and \(L^p\) convergence.
+</div>
+
+## Convergence in Distribution
+
+The weakest mode of convergence does not involve the random variables themselves, only their distribution functions. It is also the most widely applicable, forming the basis for the central limit theorem and asymptotic statistics.
+
+<div class="definition">
+<strong>Definition (Convergence in Distribution / Weak Convergence).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables with distribution functions \(F_1, F_2, \ldots\). We say \(\{X_n\}\) <strong>converges in distribution</strong> (or <strong>weakly</strong>) to a random variable \(X\) with distribution function \(F\) if \(F_n(x) \to F(x)\) for all \(x \in \mathbb{R}\) at which \(F\) is continuous. We write \(X_n \xrightarrow{d} X\).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> Convergence in distribution is fundamentally different from the three previous modes of convergence. The earlier notions concern the pointwise behavior of random variables: they compare \(X_n(\omega)\) and \(X(\omega)\) for individual outcomes \(\omega\). Convergence in distribution, by contrast, concerns only the distribution functions \(F_n(x)\) and \(F(x)\). It tells us nothing about the relationship between \(X_n(\omega)\) and \(X(\omega)\) on any particular probability space.
+</div>
+
+<div class="example">
+<strong>Example.</strong> If \(X_1, X_2, \ldots \overset{i.i.d.}{\sim} X\), then \(X_n \xrightarrow{d} X\) trivially (since all \(F_n\) are identical to \(F\)), but the sequence does not converge in any other sense.
+</div>
+
+<div class="example">
+<strong>Example (Geometric to Exponential).</strong> Consider independent trials with success probability \(p\), and let \(X_p\) be the number of trials until the first success, so \(X_p \sim \operatorname{Geom}(p)\). Then \(P(X_p > n) = (1-p)^n\). As \(p \to 0\),
+\[
+\lim_{p \to 0} P(pX_p > x) = \lim_{p \to 0} P(X_p > x/p) \approx \lim_{p \to 0} (1-p)^{x/p} = e^{-x}
+\]
+for \(x \geq 0\). Thus \(P(pX_p \leq x) \to 1 - e^{-x}\), the c.d.f. of an \(\operatorname{Exp}(1)\) distribution. So \(pX_p \xrightarrow{d} W\) where \(W \sim \operatorname{Exp}(1)\).
+</div>
+
+Convergence in probability implies convergence in distribution, as the following result shows.
+
+<div class="proposition">
+<strong>Proposition 46.</strong> If \(X_n \xrightarrow{P} X\), then \(X_n \xrightarrow{d} X\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(F_n\) and \(F\) be the distribution functions of \(X_n\) and \(X\). Let \(a \in \mathbb{R}\) be a continuity point of \(F\). For any \(\varepsilon > 0\), by continuity of \(F\) at \(a\), there exists \(\delta > 0\) with \(F(a) - \varepsilon < F(a - \delta) \leq F(a) \leq F(a + \delta) < F(a) + \varepsilon\). Since \(X_n \xrightarrow{P} X\), there exists \(N_\varepsilon\) such that \(P(|X_n - X| > \delta) < \varepsilon\) for \(n \geq N_\varepsilon\).
+
+For such \(n\), \(F_n(a) = P(X_n \leq a) = P(X_n \leq a, |X_n - X| \leq \delta) + P(X_n \leq a, |X_n - X| > \delta)\). The second term is at most \(\varepsilon\). The first term satisfies
+\[
+P(X_n \leq a, |X_n - X| \leq \delta) \in \left[F(a - \delta) - \varepsilon,\; F(a + \delta)\right].
+\]
+Thus \(F_n(a) \in (F(a) - 2\varepsilon, F(a) + 2\varepsilon)\). Since \(\varepsilon\) is arbitrary, \(F_n(a) \to F(a)\). \(\blacksquare\)
+</div>
+
+The converse is false in general: convergence in distribution does not imply convergence in probability. However, there is one important exception.
+
+<div class="proposition">
+<strong>Proposition 47.</strong> If \(X_n \xrightarrow{d} c\) for some constant \(c\), then \(X_n \xrightarrow{P} c\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For any \(\varepsilon > 0\), we need \(P(|X_n - c| \leq \varepsilon) \to 1\). The distribution of \(X \equiv c\) is \(F(x) = \mathbf{1}_{\{x \geq c\}}\), which is continuous everywhere except at \(c\). By convergence in distribution, \(F_n(c + \varepsilon) \to F(c + \varepsilon) = 1\) and \(F_n(c - \varepsilon) \to F(c - \varepsilon) = 0\). Hence
+\[
+P(|X_n - c| \leq \varepsilon) \geq F_n(c + \varepsilon) - F_n(c - \varepsilon) \to 1 - 0 = 1. \quad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> Convergence in distribution is the weakest form of convergence: every other mode implies it. However, convergence in distribution implies convergence in probability only when the limit is a constant. This dichotomy reflects the fact that convergence in distribution is a statement about distributions, not about random variables on a common probability space.
+</div>
+
+## Skorokhod's Theorem
+
+A remarkable result due to Skorokhod shows that convergence in distribution can always be "upgraded" to almost sure convergence on a suitable probability space. This theorem is a powerful technical tool for transferring results from almost sure convergence to the distributional setting.
+
+<div class="theorem">
+<strong>Theorem 48 (Skorokhod's Theorem).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables such that \(X_n \xrightarrow{d} X\). Then there exists a probability space \((\Omega, \mathcal{F}, P)\) and random variables \(Y_1, Y_2, \ldots\) and \(Y\) on this space such that \(Y_n \overset{D}{=} X_n\) and \(Y \overset{D}{=} X\), and \(Y_n \xrightarrow{a.s.} Y\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \(F_n\) and \(F\) be the distribution functions of \(X_n\) and \(X\). Take the probability space \(((0,1), \mathcal{B}, \lambda)\) with Lebesgue measure. Define \(Y_n(x) = F_n^{-1}(x) = \sup\{y : F_n(y) < x\}\) and \(Y(x) = F^{-1}(x)\). By the quantile transform theorem, \(Y_n\) has distribution function \(F_n\) and \(Y\) has distribution function \(F\).
+
+For any \(x \in (0,1)\), define \(a_x = \sup\{y : F(y) < x\}\) and \(b_x = \inf\{y : F(y) > x\}\). Let \(\Omega_0 = \{x : a_x = b_x\}\). For \(x \in \Omega_0\), if \(y < F^{-1}(x)\) then \(F(y) < x\), and if \(y > F^{-1}(x)\) then \(F(y) > x\).
+
+We claim that for any \(x \in \Omega_0\): (1) \(\liminf_{n \to \infty} F_n^{-1}(x) \geq F^{-1}(x)\), and (2) \(\limsup_{n \to \infty} F_n^{-1}(x) \leq F^{-1}(x)\).
+
+For (1), let \(y < F^{-1}(x)\) be a continuity point of \(F\). Then \(F(y) < x\). By weak convergence, \(F_n(y) \to F(y) < x\), so \(F_n(y) < x\) for large \(n\), hence \(y \leq F_n^{-1}(x)\). Taking \(y \to F^{-1}(x)\) from below gives (1). Claim (2) follows by a similar argument.
+
+Since \(\Omega \setminus \Omega_0\) is at most countable (each element corresponds to a distinct non-degenerate interval, and each such interval contains a rational number), \(P(\Omega \setminus \Omega_0) = 0\). Thus \(Y_n \xrightarrow{a.s.} Y\). \(\blacksquare\)
+</div>
+
+Skorokhod's theorem is enormously useful because it allows us to use pointwise convergence arguments (and thus the Dominated Convergence Theorem) in situations where we only have convergence in distribution. We will see it applied immediately in the proof of the Portmanteau theorem.
+
+## The Portmanteau Theorem
+
+The Portmanteau theorem provides several equivalent characterizations of weak convergence. It is one of the central results in the theory and is used constantly in asymptotic statistics.
+
+<div class="definition">
+<strong>Definition (\(\mu\)-Continuity Set).</strong> A set \(A\) is said to be a <strong>\(\mu\)-continuity set</strong> if \(\mu(\partial A) = 0\), where \(\partial A = \bar{A} \setminus \operatorname{Int}(A)\) is the boundary of \(A\).
+</div>
+
+<div class="theorem">
+<strong>Theorem 49 (Portmanteau Theorem).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables and \(X\) another random variable. The following are equivalent:
+<ol>
+<li>\(X_n \xrightarrow{d} X\).</li>
+<li>\(E[f(X_n)] \to E[f(X)]\) for all bounded continuous functions \(f\).</li>
+<li>\(\mu_n(A) \to \mu(A)\) for every \(\mu\)-continuity set \(A\), where \(\mu_n\) and \(\mu\) are the probability measures induced by \(X_n\) and \(X\). Equivalently, \(P(X_n \in A) \to P(X \in A)\) for all sets \(A\) with \(P(X \in \partial A) = 0\).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We prove all four implications.
+
+<strong>(1) \(\Rightarrow\) (2):</strong> Let \(f\) be bounded and continuous. By Skorokhod's theorem, there exist \(Y_1, Y_2, \ldots\) and \(Y\) with \(Y_n \overset{D}{=} X_n\), \(Y \overset{D}{=} X\), and \(Y_n \xrightarrow{a.s.} Y\). Then \(E[f(Y_n)] = E[f(X_n)]\) and \(E[f(Y)] = E[f(X)]\). Since \(f\) is continuous and \(Y_n \xrightarrow{a.s.} Y\), we have \(f(Y_n) \xrightarrow{a.s.} f(Y)\). Since \(f\) is bounded, the Dominated Convergence Theorem gives \(E[f(Y_n)] \to E[f(Y)]\).
+
+<strong>(1) \(\Rightarrow\) (3):</strong> A similar argument applies using \(f = \mathbf{1}_A\). Since \(A\) is a \(\mu\)-continuity set, \(P(Y \in \partial A) = P(X \in \partial A) = 0\), so \(f\) is almost surely continuous for \(Y\). Since \(Y_n \xrightarrow{a.s.} Y\), we still get \(f(Y_n) \xrightarrow{a.s.} f(Y)\), and since \(f\) is bounded, DCT applies.
+
+<strong>(3) \(\Rightarrow\) (1):</strong> Take \(A = (-\infty, x]\), so \(\partial A = \{x\}\). Then \(A\) is a \(\mu\)-continuity set if and only if \(P(X = x) = 0\), which holds if and only if \(F\) is continuous at \(x\). So \(F_n(x) \to F(x)\) at all continuity points of \(F\).
+
+<strong>(2) \(\Rightarrow\) (1):</strong> For any \(x\) at which \(F\) is continuous and any \(y > x\), define the piecewise linear function
+\[
+f(t) = \begin{cases} 1 & \text{if } t \leq x, \\ \frac{y - t}{y - x} & \text{if } x < t < y, \\ 0 & \text{if } t \geq y, \end{cases}
+\]
+which is bounded and continuous. Note \(F_n(x) = E[\mathbf{1}_{(-\infty, x]}(X_n)] \leq E[f(X_n)]\) and \(E[f(X)] \leq F(y)\). By (2), taking \(n \to \infty\) gives \(\limsup F_n(x) \leq F(y)\). Since \(F\) is continuous at \(x\), taking \(y \to x^+\) gives \(\limsup F_n(x) \leq F(x)\). A similar argument with \(y < x\) gives \(F(x) \leq \liminf F_n(x)\). Hence \(F_n(x) \to F(x)\). \(\blacksquare\)
+</div>
+
+Characterization (2) is often taken as the definition of weak convergence in more general settings (e.g., for random elements of metric spaces), where distribution functions may not be available.
+
+## The Continuous Mapping Theorem
+
+A direct consequence of Skorokhod's theorem is the continuous mapping theorem, which states that continuous functions preserve convergence in distribution.
+
+<div class="theorem">
+<strong>Continuous Mapping Theorem.</strong> Suppose \(X_n \xrightarrow{d} X\) and \(g\) is a Borel measurable function with \(P(X \in D_g) = 0\), where \(D_g = \{x : g \text{ is discontinuous at } x\}\). Then \(g(X_n) \xrightarrow{d} g(X)\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By Skorokhod's theorem, there exist \(Y_n \overset{D}{=} X_n\) and \(Y \overset{D}{=} X\) with \(Y_n \to Y\) a.s. Since \(P(Y \in D_g) = P(X \in D_g) = 0\), the function \(g\) is continuous at \(Y(\omega)\) for almost all \(\omega\), so \(g(Y_n) \to g(Y)\) a.s. Almost sure convergence implies convergence in distribution, and since \(g(Y_n) \overset{D}{=} g(X_n)\) and \(g(Y) \overset{D}{=} g(X)\), we conclude \(g(X_n) \xrightarrow{d} g(X)\). \(\blacksquare\)
+</div>
+
+## Slutsky's Theorem
+
+An important companion to the continuous mapping theorem is Slutsky's theorem, which describes how convergence in distribution interacts with convergence in probability. It is used constantly in asymptotic statistics.
+
+<div class="theorem">
+<strong>Slutsky's Theorem.</strong> If \(X_n \xrightarrow{d} X\) and \(Y_n - X_n \xrightarrow{P} 0\), then \(Y_n \xrightarrow{d} X\).
+</div>
+
+This follows because convergence in probability to zero can be combined with convergence in distribution to yield convergence in distribution of the perturbed sequence. More generally, if \(X_n \xrightarrow{d} X\) and \(Y_n \xrightarrow{P} c\) for a constant \(c\), then \(X_n + Y_n \xrightarrow{d} X + c\) and \(X_n Y_n \xrightarrow{d} cX\). The key requirement is that the sequence converging in probability must converge to a constant, not to a random variable.
+
+## Helly's Selection Theorem
+
+We now turn to the question of compactness for sequences of distribution functions. Helly's selection theorem is the analogue of the Bolzano--Weierstrass theorem for distribution functions: it guarantees that every sequence of distribution functions has a subsequence that converges, at least in a weak sense.
+
+<div class="theorem">
+<strong>Theorem 50 (Helly's Selection Theorem).</strong> Let \(X_1, X_2, \ldots\) be a sequence of random variables with distribution functions \(F_1, F_2, \ldots\). Then there exists a subsequence \(F_{n(1)}, F_{n(2)}, \ldots\) with \(n(1) < n(2) < \cdots\) and a right-continuous non-decreasing function \(F\) such that \(\lim_{m \to \infty} F_{n(m)}(y) = F(y)\) for all \(y\) at which \(F\) is continuous.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Consider an enumeration \(q_1, q_2, \ldots\) of the rational numbers. Since \(F_n(q_1)\) is a bounded sequence in \([0,1]\), the Bolzano--Weierstrass theorem gives a subsequence \(F_{n_1(1)}, F_{n_1(2)}, \ldots\) converging at \(q_1\). Take a further subsequence converging also at \(q_2\), and continue. A diagonal argument produces a subsequence \(F_{n_k(k)}\) that converges at every rational number to a limit function \(G\).
+
+Since each \(F_n\) is non-decreasing, \(G\) is also non-decreasing. To make \(G\) right-continuous, define \(F(x) := \inf\{G(q) : q \in \mathbb{Q}, q > x\}\). Then \(F\) is right-continuous and non-decreasing.
+
+It remains to show \(F_{n_k(k)}(x) \to F(x)\) at all continuity points of \(F\). Let \(\varepsilon > 0\). Choose rational \(r_1 < r_2 < x < s\) with \(F(x) - \varepsilon < F(r_1) \leq F(r_2) \leq F(x) \leq F(s) < F(x) + \varepsilon\). Since \(F_{n_k(k)}(s) \to G(s) \leq F(s) < F(x) + \varepsilon\), for large \(k\), \(F_{n_k(k)}(x) \leq F_{n_k(k)}(s) < F(x) + \varepsilon\). Since \(F_{n_k(k)}(r_2) \to G(r_2) \geq F(r_1) > F(x) - \varepsilon\), for large \(k\), \(F_{n_k(k)}(x) \geq F_{n_k(k)}(r_2) > F(x) - \varepsilon\). Thus \(|F_{n_k(k)}(x) - F(x)| < \varepsilon\) for large \(k\). \(\blacksquare\)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The limit function \(F\) in Helly's selection theorem may not be a valid distribution function: it may fail to satisfy \(\lim_{y \to -\infty} F(y) = 0\) or \(\lim_{y \to \infty} F(y) = 1\). Mass may "escape" to infinity. For example, if \(F_n\) is the c.d.f. of a point mass at \(n\), then every subsequence converges to the zero function, which is not a distribution function. The condition that ensures the limit is a proper distribution function is tightness.
+</div>
+
+## Tightness
+
+Tightness is the condition that prevents mass from escaping to infinity along subsequences. It is the key ingredient that upgrades Helly's selection theorem from a statement about non-decreasing functions to a statement about distribution functions.
+
+<div class="definition">
+<strong>Definition (Tightness).</strong> A sequence of probability measures \(\mu_1, \mu_2, \ldots\) on \((\mathbb{R}, \mathcal{B})\) is called <strong>tight</strong> if for any \(\varepsilon > 0\), there exists \(M > 0\) such that \(\liminf_{n \to \infty} \mu_n((-M, M]) \geq 1 - \varepsilon\). Equivalently, there exists \(M' > 0\) such that \(\mu_n((-M', M']) \geq 1 - \varepsilon\) for all \(n\). For distribution functions, \(F_1, F_2, \ldots\) is tight if and only if the induced probability measures are tight. Intuitively, tightness means that the majority of the probability mass is not found in the tails of the distributions.
+</div>
+
+The fundamental theorem connecting tightness and weak convergence is Prokhorov's theorem, one direction of which is established here.
+
+<div class="theorem">
+<strong>Theorem 51.</strong> The sequence of distribution functions \(F_1, F_2, \ldots\) is tight if and only if each of its subsequences has a further subsequence that converges weakly (pointwise at continuity points) to a probability measure.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (\(\Rightarrow\)) Suppose \(\mu_1, \mu_2, \ldots\) is tight. By Helly's selection theorem, every subsequence has a further subsequence \(F_{n(m)}\) converging to a right-continuous non-decreasing function \(F\). We must show \(F\) is a distribution function. By tightness, for any \(\varepsilon > 0\) there exists \(M_\varepsilon\) such that \(\limsup_{n \to \infty}(1 - F_n(M_\varepsilon) + F_n(-M_\varepsilon)) \leq \varepsilon\). Taking continuity points \(r < -M_\varepsilon\) and \(s > M_\varepsilon\) of \(F\), we get \(1 - F(s) + F(r) \leq \varepsilon\). Hence \(\lim_{y \to \infty}(F(y) - F(-y)) \geq 1 - \varepsilon\). Since \(\varepsilon\) is arbitrary, \(F\) is a distribution function.
+
+(\(\Leftarrow\)) By contrapositive, if the sequence is not tight, there exist \(\varepsilon > 0\) and indices \(n(k) \to \infty\) with \(1 - F_{n(k)}(k) + F_{n(k)}(-k) \geq \varepsilon\). By Helly, any further subsequence converges to some \(F\), but the tightness failure forces \(\lim_{y \to \infty}(F(y) - F(-y)) \leq 1 - \varepsilon\), so \(F\) cannot be a distribution function. \(\blacksquare\)
+</div>
+
+<div class="corollary">
+<strong>Corollary 52.</strong> If \(\mu_1, \mu_2, \ldots\) is a tight sequence of probability measures, and each weakly convergent subsequence converges to the same limit \(\mu\), then \(\mu_n \xrightarrow{d} \mu\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By contradiction, suppose \(\mu_n \not\xrightarrow{d} \mu\). Then there exists a continuity point \(x\) of \(F\) and \(\varepsilon > 0\) such that \(|F_{n_k}(x) - F(x)| \geq \varepsilon\) for infinitely many \(n_k\). By tightness, this subsequence has a further subsequence converging weakly to some distribution. But this limit cannot be \(\mu\), contradicting the assumption that all weakly convergent subsequences have the same limit. \(\blacksquare\)
+</div>
+
+## The Continuity Theorem
+
+The continuity theorem is the cornerstone of the characteristic function approach to convergence in distribution. It states that weak convergence of probability measures is equivalent to pointwise convergence of characteristic functions, providing a powerful analytic tool for proving distributional limit theorems.
+
+<div class="proposition">
+<strong>Proposition 53.</strong> The characteristic function \(\varphi\) of any probability measure is continuous on \(\mathbb{R}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> As \(s \to t\), \(e^{isX} \to e^{itX}\) pointwise. Since \(|e^{itX}| = 1\), the Dominated Convergence Theorem gives \(\varphi(s) = E[e^{isX}] \to E[e^{itX}] = \varphi(t)\). \(\blacksquare\)
+</div>
+
+<div class="theorem">
+<strong>Theorem 54 (Continuity Theorem).</strong> Let \(\mu_1, \mu_2, \ldots\) and \(\mu\) be probability measures on \((\mathbb{R}, \mathcal{B})\), with characteristic functions \(\varphi_1, \varphi_2, \ldots\) and \(\varphi\). Then \(\mu_n \xrightarrow{d} \mu\) if and only if \(\varphi_n(t) \to \varphi(t)\) for all \(t \in \mathbb{R}\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (\(\Rightarrow\)) Since \(e^{itx}\) is a bounded continuous function of \(x\), the Portmanteau theorem gives \(E[e^{itX_n}] \to E[e^{itX}]\) (applying the theorem separately to the real and imaginary parts), i.e., \(\varphi_n(t) \to \varphi(t)\).
+
+(\(\Leftarrow\)) We first show tightness. Using the identity
+\[
+\frac{1}{u} \int_{-u}^{u} (1 - \varphi_n(t)) \, dt = 2E\left[1 - \frac{\sin(uX_n)}{uX_n}\right] \geq P\left(|X_n| \geq \frac{2}{u}\right),
+\]
+which holds because \(|\sin(x)/x| \leq 1\) and \(1 - \sin(x)/x \geq 1/2\) when \(|x| \geq 2\). Since \(\varphi\) is continuous with \(\varphi(0) = 1\), for any \(\varepsilon > 0\) there exists \(u > 0\) with \(u^{-1} \int_{-u}^{u} (1 - \varphi(t)) \, dt < \varepsilon\). Since \(\varphi_n \to \varphi\) pointwise and \(|1 - \varphi_n(t)| \leq 2\), by DCT, \(u^{-1}\int_{-u}^{u}(1 - \varphi_n(t)) \, dt \to u^{-1}\int_{-u}^{u}(1 - \varphi(t)) \, dt\). So for large \(n\), \(u^{-1}\int_{-u}^{u}(1 - \varphi_n(t)) \, dt < \varepsilon\), giving \(P(|X_n| \geq 2/u) < \varepsilon\). This establishes tightness.
+
+Now suppose a subsequence \(\mu_{n_k}\) converges weakly to some \(\mu'\). By the forward direction, \(\varphi_{n_k}(t) \to \varphi'(t)\). But \(\varphi_{n_k}(t) \to \varphi(t)\), so \(\varphi' = \varphi\). Since the characteristic function determines the distribution, \(\mu' = \mu\). All weakly convergent subsequences have the same limit, so by Corollary 52, \(\mu_n \xrightarrow{d} \mu\). \(\blacksquare\)
+</div>
+
+The continuity theorem is the engine behind most proofs of the central limit theorem: one shows that the characteristic functions of the standardized sample means converge pointwise to \(e^{-t^2/2}\), the characteristic function of the standard normal, and then invokes the continuity theorem to conclude convergence in distribution.
+
+## Summary of Relationships
+
+We conclude this chapter with a summary of the relationships among the four modes of convergence for a sequence of random variables \(X_n\) and a limit \(X\):
+
+1. \(X_n \xrightarrow{a.s.} X \implies X_n \xrightarrow{P} X \implies X_n \xrightarrow{d} X\).
+2. \(X_n \xrightarrow{L^p} X \implies X_n \xrightarrow{P} X \implies X_n \xrightarrow{d} X\).
+3. For \(1 \leq p < q < \infty\): \(X_n \xrightarrow{L^q} X \implies X_n \xrightarrow{L^p} X\).
+4. \(X_n \xrightarrow{P} X\) implies there exists a subsequence \(X_{n_k} \xrightarrow{a.s.} X\).
+5. \(X_n \xrightarrow{P} X\) with \(\{X_n\}\) uniformly integrable implies \(X_n \xrightarrow{L^1} X\).
+6. \(X_n \xrightarrow{d} c\) (constant) implies \(X_n \xrightarrow{P} c\).
+7. There is no general implication between almost sure convergence and \(L^p\) convergence in either direction.
+
+These relationships form a web of connections that pervades all of probability theory and mathematical statistics. Understanding which mode of convergence is appropriate in a given context --- and what additional conditions are needed to strengthen one mode to another --- is a central skill in modern probability.
+# Chapter 5: Characteristic Functions and Limit Theorems
+
+The deepest results in probability theory concern the large-scale behaviour of sums of random variables. The **law of large numbers** asserts that averages converge to their expected values; the **central limit theorem** explains that the fluctuations around those averages are approximately Gaussian. To prove these results in full generality we need a tool that converts the multiplicative structure of independence into something analytically tractable. That tool is the **characteristic function**, which exists for every distribution and uniquely determines it.
+
+This chapter begins with the definition and fundamental properties of characteristic functions, including the inversion formula and the continuity theorem that links pointwise convergence of characteristic functions to weak convergence of distributions. Armed with these tools we then prove the weak and strong laws of large numbers and the central limit theorem, culminating in the Lindeberg--Feller extension and the delta method.
+
+## Characteristic Functions
+
+### Definition and Basic Properties
+
+Recall that the moment generating function \( M_X(t) = E[e^{tX}] \) does not always exist: the integral may diverge when the tails of the distribution are heavy. The key advantage of the characteristic function is that it replaces the real exponential with the complex exponential \( e^{itX} \), which always has modulus one.
+
+<div class="definition">
+<strong>Definition (Characteristic Function).</strong> Let \( X \) be a random variable on a probability space \( (\Omega, \mathcal{F}, P) \). The <strong>characteristic function</strong> of \( X \) is the function \( \varphi_X : \mathbb{R} \to \mathbb{C} \) defined by
+\[
+\varphi_X(t) = E[e^{itX}] = E[\cos(tX)] + i\,E[\sin(tX)] = \int_{\mathbb{R}} e^{itx}\,dF_X(x).
+\]
+</div>
+
+The characteristic function is sometimes called the Fourier--Stieltjes transform of the distribution. Unlike the moment generating function or the probability generating function, the characteristic function always exists on all of \( \mathbb{R} \) because \( |e^{itx}| = 1 \) for every real \( t \) and \( x \), so the integral is dominated by the constant function 1, which is integrable with respect to any probability measure. This universality is the reason we prefer characteristic functions when proving general distributional results.
+
+<div class="theorem">
+<strong>Theorem (Properties of Characteristic Functions).</strong> Let \( \varphi = \varphi_X \) be the characteristic function of a random variable \( X \). Then:
+<ol>
+<li>\( \varphi(0) = 1 \).</li>
+<li>\( \varphi(-t) = \overline{\varphi(t)} \) (the complex conjugate).</li>
+<li>\( |\varphi(t)| \leq 1 \) for all \( t \in \mathbb{R} \).</li>
+<li>If \( Y = aX + b \) for constants \( a, b \in \mathbb{R} \), then \( \varphi_Y(t) = e^{ibt}\,\varphi_X(at) \).</li>
+<li>\( \varphi \) is uniformly continuous on \( \mathbb{R} \).</li>
+<li>The characteristic function of \( -X \) is \( \overline{\varphi(t)} \).</li>
+<li>\( \varphi \) is real-valued if and only if the distribution of \( X \) is symmetric about zero.</li>
+<li>If \( X \) and \( Y \) are independent, then \( \varphi_{X+Y}(t) = \varphi_X(t)\,\varphi_Y(t) \).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Property (1) is immediate: \( e^{i \cdot 0 \cdot X} = 1 \). For (2), note that \( \varphi(-t) = E[e^{-itX}] = E[\cos(tX) - i\sin(tX)] = \overline{\varphi(t)} \) since cosine is even and sine is odd. Property (3) follows from Jensen's inequality applied to the convex function \( f(x,y) = (x^2 + y^2)^{1/2} \): writing \( X' = \cos(tX) \) and \( Y' = \sin(tX) \), we have
+\[
+|\varphi(t)| = \sqrt{E[\cos(tX)]^2 + E[\sin(tX)]^2} \leq E\!\left[\sqrt{\cos^2(tX) + \sin^2(tX)}\right] = 1.
+\]
+Property (4) is a direct calculation: \( E[e^{it(aX+b)}] = e^{ibt}\,E[e^{i(at)X}] = e^{ibt}\,\varphi_X(at) \).
+
+For (5), let \( h = s - t \). Then
+\[
+|\varphi(t) - \varphi(s)| = |E[e^{itX}(e^{ihX} - 1)]| \leq E[|e^{ihX} - 1|].
+\]
+As \( h \to 0 \), the function \( e^{ihX} - 1 \to 0 \) pointwise, and it is bounded by 2. By the dominated convergence theorem, \( E[|e^{ihX} - 1|] \to 0 \), so \( \varphi \) is uniformly continuous.
+
+Property (6) is the same as (2). For (7), the distribution is symmetric about zero precisely when \( X \) and \( -X \) have the same distribution, hence the same characteristic function. By (6), this means \( \varphi(t) = \overline{\varphi(t)} \), which holds if and only if \( \varphi \) is real-valued.
+
+For (8), independence gives
+\[
+\varphi_{X+Y}(t) = E[e^{it(X+Y)}] = E[e^{itX}\,e^{itY}] = E[e^{itX}]\,E[e^{itY}] = \varphi_X(t)\,\varphi_Y(t). \qquad \blacksquare
+\]
+</div>
+
+Property (8) is especially powerful: it converts the convolution of distributions (which is analytically cumbersome) into a simple product. This is the fundamental reason characteristic functions are useful for studying sums of independent random variables.
+
+### Examples
+
+The Poisson and normal characteristic functions illustrate the technique and will be used repeatedly in the sequel.
+
+<div class="example">
+<strong>Example (Poisson Distribution).</strong> If \( X \sim \mathrm{Poi}(\lambda) \), then
+\[
+\varphi_X(t) = \sum_{k=0}^{\infty} e^{itk}\,e^{-\lambda}\frac{\lambda^k}{k!} = e^{-\lambda}\sum_{k=0}^{\infty}\frac{(\lambda e^{it})^k}{k!} = e^{\lambda(e^{it}-1)}.
+\]
+If \( Y \sim \mathrm{Poi}(\eta) \) is independent of \( X \), then \( \varphi_{X+Y}(t) = e^{(\lambda+\eta)(e^{it}-1)} \), which is the characteristic function of a \( \mathrm{Poi}(\lambda + \eta) \). Does this guarantee \( X + Y \sim \mathrm{Poi}(\lambda+\eta) \)? It does, provided the characteristic function uniquely determines the distribution -- a fact we establish next.
+</div>
+
+<div class="example">
+<strong>Example (Normal Distribution).</strong> If \( Z \sim N(0,1) \), then by completing the square in the exponent,
+\[
+\varphi_Z(t) = \int_{-\infty}^{\infty} e^{itx}\,\frac{1}{\sqrt{2\pi}}\,e^{-x^2/2}\,dx = e^{-t^2/2}.
+\]
+More generally, if \( X \sim N(\mu, \sigma^2) \), then \( X = \mu + \sigma Z \) and property (4) gives
+\[
+\varphi_X(t) = e^{i\mu t - \sigma^2 t^2/2}.
+\]
+Since characteristic functions multiply under convolution of independent summands, the sum of independent normals \( X_1 \sim N(\mu_1, \sigma_1^2) \) and \( X_2 \sim N(\mu_2, \sigma_2^2) \) has characteristic function \( \exp(i(\mu_1+\mu_2)t - \tfrac{1}{2}(\sigma_1^2+\sigma_2^2)t^2) \), which is that of \( N(\mu_1+\mu_2, \sigma_1^2+\sigma_2^2) \).
+</div>
+
+<div class="example">
+<strong>Example (Cauchy Distribution).</strong> If \( X \) has the standard Cauchy density \( f(x) = \frac{1}{\pi(1+x^2)} \), then using the integral identity \( \int_0^{\infty} \frac{\cos(tx)}{b^2+x^2}\,dx = \frac{\pi}{2b}\,e^{-tb} \) for \( t \geq 0 \), one obtains \( \varphi_X(t) = e^{-|t|} \). If \( X_1, \ldots, X_n \) are i.i.d. Cauchy, the sample mean \( \bar{X} \) has characteristic function \( (e^{-|t/n|})^n = e^{-|t|} \), so \( \bar{X} \) has the same distribution as \( X_1 \). The Cauchy distribution thus provides a dramatic example showing that the law of large numbers fails without the hypothesis of finite first moments.
+</div>
+
+### The Inversion Formula
+
+The inversion formula shows how to recover probabilities from the characteristic function, thereby establishing that the characteristic function uniquely determines the distribution.
+
+<div class="theorem">
+<strong>Theorem (Inversion Formula).</strong> Let \( \varphi_X(t) = \int e^{itx}\,d\mu(x) \) be the characteristic function of a probability measure \( \mu \). Then for any \( a < b \),
+\[
+\mu((a,b)) + \tfrac{1}{2}\mu(\{a,b\}) = \lim_{T \to \infty} \frac{1}{2\pi}\int_{-T}^{T} \frac{e^{-ita} - e^{-itb}}{it}\,\varphi_X(t)\,dt.
+\]
+</div>
+
+The proof proceeds by interchanging the order of integration (justified by Fubini's theorem), reducing the problem to the evaluation of the sine integral.
+
+<div class="proof">
+<strong>Proof.</strong> Define
+\[
+I_T = \int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\,\varphi(t)\,dt = \int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\int_{\mathbb{R}} e^{itx}\,\mu(dx)\,dt.
+\]
+By Fubini's theorem (noting that the integrand is bounded), we may interchange the order of integration to obtain
+\[
+I_T = \int_{\mathbb{R}}\int_{-T}^{T}\frac{e^{it(x-a)} - e^{it(x-b)}}{it}\,dt\,\mu(dx).
+\]
+The inner integral separates into sine integrals. Since \( \frac{e^{itc}}{i} \) has real part \( \frac{\sin(tc)}{t} \) (the cosine terms cancel by symmetry of the interval \( [-T,T] \)), we get
+\[
+I_T = \int_{\mathbb{R}}\left[\int_{-T}^{T}\frac{\sin(t(x-a))}{t}\,dt - \int_{-T}^{T}\frac{\sin(t(x-b))}{t}\,dt\right]\mu(dx).
+\]
+The classical result \( \int_{-\infty}^{\infty}\frac{\sin(y)}{y}\,dy = \pi \) (and the substitution \( y = \theta t \)) gives, for \( \theta > 0 \),
+\[
+\lim_{T\to\infty}\int_{-T}^{T}\frac{\sin(\theta t)}{t}\,dt = \pi, \qquad \lim_{T\to\infty}\int_{-T}^{T}\frac{\sin(\theta t)}{t}\,dt = -\pi \text{ for } \theta < 0.
+\]
+Therefore, define
+\[
+g(x) = \lim_{T\to\infty}\left[\int_{-T}^{T}\frac{\sin(t(x-a))}{t}\,dt - \int_{-T}^{T}\frac{\sin(t(x-b))}{t}\,dt\right] = \begin{cases} 2\pi & \text{if } a < x < b, \\ \pi & \text{if } x = a \text{ or } x = b, \\ 0 & \text{if } x < a \text{ or } x > b. \end{cases}
+\]
+Since the integrand is bounded by a universal constant \( 2M \) (where \( M = \sup_{c}\int_{-c}^{c}\frac{|\sin y|}{|y|}\,dy < \infty \)), the dominated convergence theorem justifies passing the limit inside the outer integral:
+\[
+\lim_{T\to\infty} I_T = \int_{\mathbb{R}} g(x)\,\mu(dx) = 2\pi\,\mu((a,b)) + \pi\,\mu(\{a,b\}).
+\]
+Dividing by \( 2\pi \) yields the result. \( \blacksquare \)
+</div>
+
+The most important consequence of the inversion formula is that the characteristic function completely determines the distribution.
+
+<div class="corollary">
+<strong>Corollary (Uniqueness).</strong> If two random variables \( X \) and \( Y \) have the same characteristic function, then they have the same distribution.
+</div>
+
+This follows immediately from the inversion formula, since the probabilities of all intervals \( (a,b) \) are determined by \( \varphi \), and these generate the Borel \( \sigma \)-algebra.
+
+<div class="remark">
+<strong>Remark.</strong> In practice we rarely apply the inversion formula directly. Its main role is theoretical: it guarantees that characteristic functions fully characterize distributions, so that if we can identify a characteristic function as belonging to a known distribution, we have determined the distribution of our random variable.
+</div>
+
+We also record the multivariate extension.
+
+<div class="remark">
+<strong>Remark (Multivariate Characteristic Functions).</strong> If \( \mathbf{X} = (X_1, \ldots, X_n) \) is a random vector in \( \mathbb{R}^n \), its characteristic function is
+\[
+\varphi_{\mathbf{X}}(\mathbf{t}) = E\!\left[\exp\!\left(i\sum_{j=1}^{n}t_j X_j\right)\right] = E\!\left[e^{i\langle \mathbf{t}, \mathbf{X}\rangle}\right]
+\]
+for \( \mathbf{t} = (t_1, \ldots, t_n) \in \mathbb{R}^n \). The multivariate inversion and uniqueness theorems hold by the same arguments applied coordinate-wise.
+</div>
+
+### The Lévy Continuity Theorem
+
+The continuity theorem is the bridge between characteristic functions and weak convergence. It asserts that pointwise convergence of characteristic functions to a limit that is continuous at the origin is equivalent to weak convergence of the corresponding distributions.
+
+<div class="proposition">
+<strong>Proposition.</strong> The characteristic function \( \varphi \) of any probability measure is continuous on \( \mathbb{R} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> As \( s \to t \), we have \( e^{isX} \to e^{itX} \) pointwise. Since \( |e^{itX}| = 1 \), the dominated convergence theorem gives \( \varphi(s) = E[e^{isX}] \to E[e^{itX}] = \varphi(t) \). \( \blacksquare \)
+</div>
+
+<div class="theorem">
+<strong>Theorem (Lévy Continuity Theorem).</strong> Let \( \mu_1, \mu_2, \ldots \) and \( \mu \) be probability measures on \( (\mathbb{R}, \mathcal{B}) \) with characteristic functions \( \varphi_1, \varphi_2, \ldots \) and \( \varphi \), respectively. Then \( \mu_n \xrightarrow{d} \mu \) if and only if \( \varphi_n(t) \to \varphi(t) \) for all \( t \in \mathbb{R} \).
+</div>
+
+The forward direction is a straightforward application of the portmanteau theorem; the converse requires establishing tightness of the sequence from the assumed pointwise convergence.
+
+<div class="proof">
+<strong>Proof.</strong> <em>Forward direction.</em> Suppose \( \mu_n \xrightarrow{d} \mu \). Since \( x \mapsto e^{itx} \) is bounded and continuous, the portmanteau theorem (applied to the real and imaginary parts separately) gives \( E[e^{itX_n}] \to E[e^{itX}] \), i.e., \( \varphi_n(t) \to \varphi(t) \) for all \( t \).
+
+<em>Converse.</em> Assume \( \varphi_n(t) \to \varphi(t) \) for all \( t \) and that \( \varphi \) is continuous at 0 (which it is, being the characteristic function of a probability measure). We first show the sequence \( \{\mu_n\} \) is tight. Observe that
+\[
+\frac{1}{u}\int_{-u}^{u}(1 - \varphi_n(t))\,dt = 2\,E\!\left[1 - \frac{\sin(uX_n)}{uX_n}\right].
+\]
+Since \( 1 - \frac{\sin(y)}{y} \geq 0 \) and \( 1 - \frac{\sin(y)}{y} \geq \frac{1}{2} \) whenever \( |y| \geq 2 \), we obtain
+\[
+\frac{1}{u}\int_{-u}^{u}(1 - \varphi_n(t))\,dt \geq P\!\left(|X_n| \geq \frac{2}{u}\right).
+\]
+Because \( \varphi \) is continuous and \( \varphi(0) = 1 \), we have \( u^{-1}\int_{-u}^{u}(1-\varphi(t))\,dt \to 0 \) as \( u \to 0 \). Since \( \varphi_n \to \varphi \) pointwise and \( |1-\varphi_n(t)| \leq 2 \), the dominated convergence theorem gives
+\[
+\frac{1}{u}\int_{-u}^{u}(1-\varphi_n(t))\,dt \to \frac{1}{u}\int_{-u}^{u}(1-\varphi(t))\,dt.
+\]
+Hence, for any \( \varepsilon > 0 \), choose \( u \) small enough that the right side is less than \( \varepsilon \), then choose \( N \) large enough so that the left side is also less than \( \varepsilon \) for all \( n \geq N \). Setting \( M = 2/u \), we get \( P(|X_n| \geq M) < \varepsilon \) for all large \( n \). This establishes tightness.
+
+By Helly's selection theorem, every subsequence of \( \{\mu_n\} \) has a further subsequence that converges weakly to some probability measure \( \mu' \). By the forward direction, the characteristic function of \( \mu' \) must equal \( \varphi \). Since characteristic functions uniquely determine distributions, \( \mu' = \mu \). Thus every weakly convergent subsequence has the same limit \( \mu \), which implies \( \mu_n \xrightarrow{d} \mu \). \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The continuity theorem is the workhorse behind virtually all distributional limit theorems in probability. To prove that a sequence of random variables converges in distribution, it suffices to show that their characteristic functions converge pointwise and to identify the limit.
+</div>
+
+### Taylor Expansion of Characteristic Functions
+
+Before proving the central limit theorem, we need a precise expansion of the characteristic function in terms of moments.
+
+<div class="lemma">
+<strong>Lemma.</strong> For any \( x \in \mathbb{R} \) and any non-negative integer \( n \),
+\[
+\left|e^{ix} - \sum_{m=0}^{n}\frac{(ix)^m}{m!}\right| \leq \min\!\left(\frac{|x|^{n+1}}{(n+1)!},\,\frac{2|x|^n}{n!}\right).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> This follows from Taylor's theorem with integral remainder. \( \blacksquare \)
+</div>
+
+Applying this lemma with \( n = 2 \) and taking expectations yields the following.
+
+<div class="theorem">
+<strong>Theorem.</strong> If \( E[X^2] < \infty \), then
+\[
+\varphi_X(t) = 1 + it\,E[X] - \frac{t^2\,E[X^2]}{2} + o(t^2)
+\]
+as \( t \to 0 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the lemma with \( n = 2 \), the remainder satisfies
+\[
+\left|\varphi(t) - 1 - itE[X] + \frac{t^2 E[X^2]}{2}\right| \leq t^2\,E\!\left[\min\!\left(\frac{|t|\cdot|X|^3}{6},\,|X|^2\right)\right].
+\]
+The quantity inside the expectation converges to 0 as \( t \to 0 \) and is bounded by \( |X|^2 \), which is integrable. By the dominated convergence theorem, the expectation is \( o(1) \), and multiplying by \( t^2 \) gives \( o(t^2) \). \( \blacksquare \)
+</div>
+
+## Laws of Large Numbers
+
+The laws of large numbers assert that the sample mean converges to the population mean. We present a hierarchy of results, starting with the simplest \( L^2 \) version and progressing to the general strong law.
+
+### Weak Law of Large Numbers: \( L^2 \) Version
+
+The simplest convergence result requires only uncorrelated random variables with uniformly bounded variances.
+
+<div class="theorem">
+<strong>Theorem (WLLN, \( L^2 \) Version).</strong> Let \( X_1, X_2, \ldots \) be a sequence of uncorrelated random variables with \( E[X_i] = \mu \) and \( \operatorname{Var}(X_i) \leq c < \infty \) for all \( i \). Let \( S_n = X_1 + \cdots + X_n \). Then \( \frac{S_n}{n} \xrightarrow{L^2} \mu \), and consequently \( \frac{S_n}{n} \xrightarrow{P} \mu \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since the \( X_i \) are uncorrelated, \( \operatorname{Var}(S_n) = \sum_{i=1}^{n}\operatorname{Var}(X_i) \). Therefore
+\[
+E\!\left[\left(\frac{S_n}{n} - \mu\right)^2\right] = \operatorname{Var}\!\left(\frac{S_n}{n}\right) = \frac{1}{n^2}\sum_{i=1}^{n}\operatorname{Var}(X_i) \leq \frac{nc}{n^2} = \frac{c}{n} \to 0.
+\]
+Thus \( \frac{S_n}{n} \to \mu \) in \( L^2 \), which implies convergence in probability. \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> In particular, if \( X_1, X_2, \ldots \) are i.i.d. with finite variance, then \( \frac{S_n}{n} \xrightarrow{L^2} \mu \). Note that the uncorrelated hypothesis is strictly weaker than independence.
+</div>
+
+### Triangular Array Version
+
+Many applications involve arrays of random variables rather than a single sequence. The following extension handles this setting.
+
+<div class="theorem">
+<strong>Theorem (Triangular Array WLLN).</strong> Consider a triangular array of random variables where, for each \( n \), the variables \( X_{n,1}, \ldots, X_{n,n} \) in the \( n \)th row are independent. Let \( S_n = \sum_{i=1}^{n}X_{n,i} \), \( \mu_n = E[S_n] \), \( \sigma_n^2 = \operatorname{Var}(S_n) \), and let \( b_1, b_2, \ldots \) be positive real numbers. If \( \sigma_n^2/b_n^2 \to 0 \), then
+\[
+\frac{S_n - \mu_n}{b_n} \xrightarrow{L^2} 0 \qquad \text{and hence} \qquad \frac{S_n - \mu_n}{b_n} \xrightarrow{P} 0.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Compute
+\[
+E\!\left[\left(\frac{S_n - \mu_n}{b_n}\right)^2\right] = \frac{\sigma_n^2}{b_n^2} \to 0. \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> This extends the previous result: we can now handle multiple separate sequences that show convergence. If \( X_{n,k} \) are all identically distributed with mean \( \mu \) and variance \( \sigma^2 \) and the variables in the same row are independent, then taking \( b_n = n \) gives \( \bar{X}_n = S_n/n \xrightarrow{P} \mu \), which is the most common formulation of the weak law.
+</div>
+
+### Truncation Method
+
+The following result uses truncation to weaken the moment assumptions. The idea is to replace the original random variables by truncated versions, verify convergence of the truncated sums, and then show that the truncation error is negligible.
+
+<div class="theorem">
+<strong>Theorem (WLLN via Truncation).</strong> Consider a triangular array where \( X_{n,1}, \ldots, X_{n,n} \) are independent for each row. Let \( b_n > 0 \) with \( b_n \to \infty \). Define the truncated variables \( \tilde{X}_{n,k} = X_{n,k}\,\mathbf{1}_{\{|X_{n,k}| \leq b_n\}} \). Suppose that as \( n \to \infty \):
+<ol>
+<li>\( \sum_{k=1}^{n}P(|X_{n,k}| > b_n) \to 0 \), and</li>
+<li>\( b_n^{-2}\sum_{k=1}^{n}E[\tilde{X}_{n,k}^2] \to 0 \).</li>
+</ol>
+Define \( S_n = X_{n,1} + \cdots + X_{n,n} \) and \( a_n = \sum_{k=1}^{n}E[\tilde{X}_{n,k}] \). Then \( \frac{S_n - a_n}{b_n} \xrightarrow{P} 0 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Let \( \tilde{S}_n = \tilde{X}_{n,1} + \cdots + \tilde{X}_{n,n} \) and let \( \varepsilon > 0 \). Then
+\[
+P\!\left(\left|\frac{S_n - a_n}{b_n}\right| > \varepsilon\right) \leq P(S_n \neq \tilde{S}_n) + P\!\left(\left|\frac{\tilde{S}_n - a_n}{b_n}\right| > \varepsilon\right).
+\]
+For the first term, \( P(S_n \neq \tilde{S}_n) \leq \sum_{k=1}^{n}P(X_{n,k} \neq \tilde{X}_{n,k}) = \sum_{k=1}^{n}P(|X_{n,k}| > b_n) \to 0 \) by condition (1). Since \( a_n = E[\tilde{S}_n] \), the second term satisfies
+\[
+E\!\left[\left(\frac{\tilde{S}_n - a_n}{b_n}\right)^2\right] = \frac{\operatorname{Var}(\tilde{S}_n)}{b_n^2} = \frac{1}{b_n^2}\sum_{k=1}^{n}\operatorname{Var}(\tilde{X}_{n,k}) \leq \frac{1}{b_n^2}\sum_{k=1}^{n}E[\tilde{X}_{n,k}^2] \to 0
+\]
+by condition (2). Hence both terms vanish, giving \( \frac{S_n - a_n}{b_n} \xrightarrow{P} 0 \). \( \blacksquare \)
+</div>
+
+The following auxiliary result is needed for the verification of condition (2) in practice.
+
+<div class="lemma">
+<strong>Lemma (Tail Integral).</strong> If \( Y \geq 0 \) is a non-negative random variable, then \( E[Y^2] = \int_0^{\infty}2y\,P(Y > y)\,dy \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( P(Y > y) = E[\mathbf{1}_{\{Y > y\}}] \), we have
+\[
+\int_0^{\infty}2y\,P(Y > y)\,dy = \int_0^{\infty}E[2y\,\mathbf{1}_{\{Y > y\}}]\,dy = E\!\left[\int_0^{\infty}2y\,\mathbf{1}_{\{Y > y\}}\,dy\right] = E\!\left[\int_0^{Y}2y\,dy\right] = E[Y^2],
+\]
+where the interchange of integral and expectation is justified by Fubini's theorem. \( \blacksquare \)
+</div>
+
+Now we can prove the classical weak law requiring only finite first moments.
+
+<div class="theorem">
+<strong>Theorem (Weak Law for I.I.D. Sequences).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. with \( x\,P(|X_1| > x) \to 0 \) as \( x \to \infty \). Define \( S_n = X_1 + \cdots + X_n \) and \( \mu_n = E[X_1\,\mathbf{1}_{\{|X_1| \leq n\}}] \). Then \( \frac{S_n}{n} - \mu_n \xrightarrow{P} 0 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Take \( X_{n,k} = X_k \) and \( b_n = n \). Then \( \sum_{k=1}^{n}P(|X_{n,k}| > b_n) = n\,P(|X_1| > n) \to 0 \), verifying condition (1). For condition (2), note that \( E[\tilde{X}_{n,1}^2] = \int_0^{\infty}2y\,P(|\tilde{X}_{n,1}| > y)\,dy \leq \int_0^{n}2y\,P(|X_1| > y)\,dy \), so
+\[
+b_n^{-2}\sum_{k=1}^{n}E[\tilde{X}_{n,k}^2] = \frac{1}{n}\,E[\tilde{X}_{n,1}^2] \leq \frac{1}{n}\int_0^{n}2y\,P(|X_1| > y)\,dy.
+\]
+Since \( y\,P(|X_1| > y) \to 0 \), the running average \( \frac{1}{n}\int_0^{n}2y\,P(|X_1| > y)\,dy \to 0 \). The result then follows from the truncation theorem. \( \blacksquare \)
+</div>
+
+<div class="theorem">
+<strong>Theorem (Weak Law of Large Numbers).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. with \( E[|X_1|] < \infty \) and \( \mu = E[X_1] \). Then \( \frac{S_n}{n} \xrightarrow{P} \mu \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We verify the hypothesis \( x\,P(|X_1| > x) \to 0 \). Indeed,
+\[
+x\,P(|X_1| > x) = E[x\,\mathbf{1}_{\{|X_1| > x\}}] \leq E[|X_1|\,\mathbf{1}_{\{|X_1| > x\}}] \to 0
+\]
+by the dominated convergence theorem (since \( |X_1|\,\mathbf{1}_{\{|X_1| > x\}} \leq |X_1| \) and \( |X_1|\,\mathbf{1}_{\{|X_1| > x\}} \to 0 \) a.s.). Moreover, \( \mu_n = E[X_1\,\mathbf{1}_{\{|X_1| \leq n\}}] \to E[X_1] = \mu \) by dominated convergence. Therefore
+\[
+\frac{S_n}{n} - \mu = \left(\frac{S_n}{n} - \mu_n\right) + (\mu_n - \mu) \xrightarrow{P} 0. \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The above is the most classical statement of the weak law: i.i.d. random variables with finite first moment converge in probability to their common mean.
+</div>
+
+### Strong Law of Large Numbers
+
+The strong law strengthens convergence in probability to almost sure convergence. The proof is considerably more involved, requiring Borel--Cantelli arguments and careful bounding of variances along subsequences. We need two preparatory lemmas.
+
+<div class="lemma">
+<strong>Lemma.</strong> If \( y \geq 0 \), then \( 2y\sum_{k \in \mathbb{Z} : k > y}k^{-2} \leq 4 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For \( y \geq 1 \), we have \( \sum_{k=\lfloor y\rfloor+1}^{\infty}k^{-2} \leq \sum_{k=\lfloor y\rfloor+1}^{\infty}(\frac{1}{k-1}-\frac{1}{k}) = \frac{1}{\lfloor y\rfloor} \). Since \( y \leq 2\lfloor y\rfloor \) for \( y \geq 1 \), we get \( 2y \cdot \frac{1}{\lfloor y\rfloor} \leq 4 \). For \( 0 \leq y < 1 \), we have \( 2y\sum_{k=1}^{\infty}k^{-2} \leq 2 \cdot 1 \cdot 2 = 4 \) (using \( \sum_{k=1}^{\infty}k^{-2} \leq 2 \)). \( \blacksquare \)
+</div>
+
+<div class="lemma">
+<strong>Lemma.</strong> Let \( X_1, X_2, \ldots \) have identical distributions and be pairwise independent. Define \( Y_k = X_k\,\mathbf{1}_{\{|X_k| \leq k\}} \). Then
+\[
+\sum_{k=1}^{\infty}\frac{\operatorname{Var}(Y_k)}{k^2} \leq 4\,E[|X_1|] < \infty.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( \operatorname{Var}(Y_k) \leq E[Y_k^2] \) and \( E[Y_k^2] = \int_0^{\infty}2y\,P(|Y_k| > y)\,dy \leq \int_0^{k}2y\,P(|X_1| > y)\,dy \), we compute
+\[
+\sum_{k=1}^{\infty}\frac{E[Y_k^2]}{k^2} \leq \sum_{k=1}^{\infty}\frac{1}{k^2}\int_0^{k}2y\,P(|X_1| > y)\,dy = \int_0^{\infty}\sum_{\substack{k=1 \\ k > y}}^{\infty}\frac{1}{k^2}\cdot 2y\,P(|X_1|>y)\,dy
+\]
+by Fubini's theorem. By the previous lemma, \( 2y\sum_{k>y}k^{-2} \leq 4 \), so
+\[
+\sum_{k=1}^{\infty}\frac{E[Y_k^2]}{k^2} \leq 4\int_0^{\infty}P(|X_1|>y)\,dy = 4\,E[|X_1|] < \infty. \qquad \blacksquare
+\]
+</div>
+
+<div class="theorem">
+<strong>Theorem (Strong Law of Large Numbers).</strong> Let \( X_1, X_2, \ldots \) have identical distributions and be pairwise independent. If \( E[|X_1|] < \infty \), then
+\[
+\frac{S_n}{n} \xrightarrow{a.s.} \mu = E[X_1].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> <em>Step 1: Reduction to truncated variables.</em> Let \( Y_k = X_k\,\mathbf{1}_{\{|X_k| \leq k\}} \) and \( T_n = Y_1 + \cdots + Y_n \). Since \( \sum_{k=1}^{\infty}P(|X_k| > k) \leq \int_0^{\infty}P(|X_1| > t)\,dt = E[|X_1|] < \infty \), the first Borel--Cantelli lemma gives \( P(X_k \neq Y_k \ \text{i.o.}) = 0 \). So almost surely, \( X_k \neq Y_k \) for only finitely many \( k \), which implies \( \frac{S_n - T_n}{n} \to 0 \) a.s. It therefore suffices to prove \( T_n/n \to \mu \) a.s. By decomposing \( X = X^+ - X^- \), we may assume \( X \geq 0 \).
+
+<em>Step 2: Convergence along a subsequence.</em> Fix \( \alpha > 1 \) and let \( k(n) = \lfloor\alpha^n\rfloor \). By Chebyshev's inequality,
+\[
+\sum_{n=1}^{\infty}P(|T_{k(n)} - E[T_{k(n)}]| > \varepsilon\,k(n)) \leq \varepsilon^{-2}\sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2}.
+\]
+Interchanging the order of summation,
+\[
+\sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2} = \sum_{n=1}^{\infty}\frac{1}{k(n)^2}\sum_{m=1}^{k(n)}\operatorname{Var}(Y_m) = \sum_{m=1}^{\infty}\operatorname{Var}(Y_m)\sum_{n:\,k(n)\geq m}\frac{1}{k(n)^2}.
+\]
+Since \( k(n) \geq \alpha^n/2 \) for \( n \geq 1 \), the inner sum is bounded by \( 4\alpha^{-2n_0} \cdot \frac{1}{1-\alpha^{-2}} \leq \frac{4}{m^2(1-\alpha^{-2})} \). Therefore,
+\[
+\sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2} \leq \frac{4}{1-\alpha^{-2}}\sum_{m=1}^{\infty}\frac{\operatorname{Var}(Y_m)}{m^2} \leq \frac{16\,E[|X_1|]}{1-\alpha^{-2}} < \infty.
+\]
+By the first Borel--Cantelli lemma, \( P(|T_{k(n)} - E[T_{k(n)}]|/k(n) > \varepsilon \ \text{i.o.}) = 0 \), so almost surely \( (T_{k(n)} - E[T_{k(n)}])/k(n) \to 0 \). Since \( E[Y_k] \to E[X_1] = \mu \) by dominated convergence, Cesàro's theorem gives \( E[T_{k(n)}]/k(n) \to \mu \). Combining: \( T_{k(n)}/k(n) \to \mu \) a.s.
+
+<em>Step 3: Extension to the full sequence.</em> Since \( X \geq 0 \), \( T_n \) is non-decreasing. For any \( m \), choose \( n \) so that \( k(n) \leq m \leq k(n+1) \). Then
+\[
+\frac{T_{k(n)}}{k(n+1)} \leq \frac{T_m}{m} \leq \frac{T_{k(n+1)}}{k(n)}.
+\]
+Since \( k(n+1)/k(n) \to \alpha \), taking limits gives
+\[
+\frac{\mu}{\alpha} \leq \liminf_{m\to\infty}\frac{T_m}{m} \leq \limsup_{m\to\infty}\frac{T_m}{m} \leq \alpha\mu.
+\]
+Letting \( \alpha \to 1 \), we conclude \( T_m/m \to \mu \) a.s. \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> If \( X_1, X_2, \ldots \) are i.i.d. with \( E[X_1^+] = \infty \) but \( E[X_1^-] < \infty \), then \( S_n/n \to \infty \) a.s. This can be shown by a truncation argument showing that \( \liminf_{n\to\infty}S_n/n > x \) for all \( x \).
+</div>
+
+### Applications of the Strong Law
+
+<div class="example">
+<strong>Example (Renewal Theory).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. positive random variables with \( E[X_1] = \mu < \infty \), representing inter-arrival times. Define \( T(n) = X_1 + \cdots + X_n \) and \( N_t = \sup\{n : T(n) \leq t\} \).
+</div>
+
+<div class="theorem">
+<strong>Theorem.</strong> Under the above setup, \( N_t/t \xrightarrow{a.s.} 1/\mu \) as \( t \to \infty \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the SLLN, \( T(n)/n \xrightarrow{a.s.} \mu \). Since \( T(N_t) \leq t < T(N_t+1) \),
+\[
+\frac{T(N_t)}{N_t} \leq \frac{t}{N_t} < \frac{T(N_t+1)}{N_t+1}\cdot\frac{N_t+1}{N_t}.
+\]
+As \( t \to \infty \), \( N_t \to \infty \), so both sides converge to \( \mu \) a.s. Hence \( t/N_t \to \mu \), i.e., \( N_t/t \to 1/\mu \). \( \blacksquare \)
+</div>
+
+### The Glivenko--Cantelli Theorem
+
+The Glivenko--Cantelli theorem is a beautiful application of the strong law that establishes uniform convergence of the empirical distribution function.
+
+<div class="theorem">
+<strong>Theorem (Glivenko--Cantelli).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. with distribution function \( F \). Let \( F_n(x) = \frac{1}{n}\sum_{m=1}^{n}\mathbf{1}_{\{X_m \leq x\}} \) be the empirical distribution function. Then
+\[
+\sup_{x \in \mathbb{R}}|F_n(x) - F(x)| \xrightarrow{a.s.} 0.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Pointwise convergence \( F_n(x) \to F(x) \) a.s. for each fixed \( x \) is immediate from the SLLN applied to the indicators \( \mathbf{1}_{\{X_m \leq x\}} \). Similarly, \( F_n(x-) \to F(x-) \) a.s. The challenge is to upgrade this to uniform convergence.
+
+For each \( k \geq 1 \) and \( 1 \leq j \leq k-1 \), define \( x_{j,k} = \inf\{y : F(y) \geq j/k\} \), the \( (j/k) \)th quantile. By construction, \( F(x_{j,k}-) - F(x_{j-1,k}) \leq 1/k \). By almost sure pointwise convergence, almost surely there exists \( N_k(\omega) \) such that for all \( n \geq N_k(\omega) \),
+\[
+|F_n(x_{j,k}) - F(x_{j,k})| < \frac{1}{k} \quad \text{and} \quad |F_n(x_{j,k}-) - F(x_{j,k}-)| < \frac{1}{k}
+\]
+for all \( 1 \leq j \leq k-1 \). For any \( x \in [x_{j-1,k}, x_{j,k}) \), since \( F_n \) and \( F \) are both non-decreasing,
+\[
+F_n(x) \leq F_n(x_{j,k}-) \leq F(x_{j,k}-) + \frac{1}{k} \leq F(x) + \frac{2}{k},
+\]
+and similarly \( F_n(x) \geq F(x) - \frac{2}{k} \). Thus \( \sup_x|F_n(x) - F(x)| \leq 2/k \) for \( n \geq N_k(\omega) \). Since this holds for all \( k \), taking \( k \to \infty \) gives the result. \( \blacksquare \)
+</div>
+
+## The Central Limit Theorem
+
+Having established that averages converge, we now ask about the rate of convergence. The central limit theorem asserts that the standardized fluctuations are asymptotically Gaussian.
+
+<div class="theorem">
+<strong>Theorem (Central Limit Theorem).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. with \( E[X_1] = \mu \) and \( \operatorname{Var}(X_1) = \sigma^2 < \infty \). Let \( S_n = X_1 + \cdots + X_n \). Then
+\[
+\frac{S_n - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} Z \sim N(0,1) \qquad \text{equivalently,} \qquad \frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0,1).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Without loss of generality, assume \( \mu = 0 \) (replace \( X_i \) by \( X_i - \mu \)). By the Taylor expansion theorem, the characteristic function of \( X_i \) satisfies \( \varphi(t) = 1 - \frac{\sigma^2 t^2}{2} + o(t^2) \). Therefore, the characteristic function of \( S_n/(\sigma\sqrt{n}) \) is
+\[
+\varphi_{S_n/(\sigma\sqrt{n})}(t) = \left[\varphi\!\left(\frac{t}{\sigma\sqrt{n}}\right)\right]^n = \left(1 - \frac{t^2}{2n} + o\!\left(\frac{t^2}{n}\right)\right)^n \to e^{-t^2/2}
+\]
+as \( n \to \infty \). Since \( e^{-t^2/2} \) is the characteristic function of the standard normal distribution and is continuous at the origin, the Lévy continuity theorem gives the result. \( \blacksquare \)
+</div>
+
+<div class="example">
+<strong>Example (Normal Approximation to the Binomial).</strong> If \( X_1, X_2, \ldots \) are i.i.d. \( \mathrm{Bernoulli}(p) \), then \( S_n \sim \mathrm{Bin}(n,p) \), \( E[X_1] = p \), and \( \operatorname{Var}(X_1) = p(1-p) \). The CLT gives
+\[
+\frac{S_n - np}{\sqrt{np(1-p)}} \xrightarrow{d} N(0,1).
+\]
+For instance, when \( p = 1/2 \) and \( n = 10000 \),
+\[
+P(4900 \leq S_n \leq 5100) \approx \Phi(2) - \Phi(-2) \approx 0.95.
+\]
+This is the basis for the normal approximation to the binomial that is widely used in practice.
+</div>
+
+### The Lindeberg--Feller CLT
+
+The classical CLT requires the summands to be identically distributed. The Lindeberg--Feller theorem relaxes this requirement, allowing the summands to vary across rows of a triangular array.
+
+<div class="theorem">
+<strong>Theorem (Lindeberg--Feller CLT).</strong> Consider a triangular array where, for each \( n \), the random variables \( X_{n,1}, \ldots, X_{n,n} \) are independent with \( E[X_{n,m}] = 0 \). Suppose:
+<ol>
+<li>\( \sum_{m=1}^{n}E[X_{n,m}^2] \to \sigma^2 > 0 \), and</li>
+<li>for every \( \varepsilon > 0 \), \( \displaystyle\lim_{n\to\infty}\sum_{m=1}^{n}E\!\left[|X_{n,m}|^2\,\mathbf{1}_{\{|X_{n,m}| > \varepsilon\}}\right] = 0 \).</li>
+</ol>
+Then \( S_n = X_{n,1} + \cdots + X_{n,n} \xrightarrow{d} N(0, \sigma^2) \).
+</div>
+
+Condition (2) is called the **Lindeberg condition**: it requires that no single summand contributes a disproportionate share of the total variance, which is the essential requirement for asymptotic normality. Intuitively, the central limit theorem holds whenever the aggregate effect arises from many small, independent contributions.
+
+<div class="remark">
+<strong>Remark.</strong> Note that independence between rows is not required, and the random variables need not share a common distribution. The Lindeberg--Feller theorem is the most general form of the CLT for triangular arrays and subsumes the classical i.i.d. version as a special case.
+</div>
+
+### The Delta Method
+
+The **delta method** is a useful technique for determining the asymptotic distribution of a smooth function of a sequence of random variables that satisfies a CLT. Although it was not explicitly covered in the STAT 901 lectures, it is a natural and important consequence of the central limit theorem.
+
+<div class="theorem">
+<strong>Theorem (Delta Method).</strong> Suppose \( \sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2) \) for some constant \( \theta \) and \( \sigma^2 > 0 \). Let \( g : \mathbb{R} \to \mathbb{R} \) be a function that is differentiable at \( \theta \) with \( g'(\theta) \neq 0 \). Then
+\[
+\sqrt{n}\left(g(X_n) - g(\theta)\right) \xrightarrow{d} N\!\left(0,\,\sigma^2\left[g'(\theta)\right]^2\right).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof (sketch).</strong> By the differentiability of \( g \) at \( \theta \), Taylor's theorem gives
+\[
+g(X_n) - g(\theta) = g'(\theta)(X_n - \theta) + o(|X_n - \theta|).
+\]
+Since \( X_n \xrightarrow{P} \theta \) (convergence in distribution to a constant implies convergence in probability), the remainder \( o(|X_n - \theta|) \) is negligible after multiplication by \( \sqrt{n} \). Applying Slutsky's theorem,
+\[
+\sqrt{n}(g(X_n) - g(\theta)) = g'(\theta)\cdot\sqrt{n}(X_n - \theta) + o_P(1) \xrightarrow{d} g'(\theta)\cdot N(0, \sigma^2) = N(0, \sigma^2[g'(\theta)]^2). \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The delta method can be extended to the multivariate setting: if \( \sqrt{n}(\mathbf{X}_n - \boldsymbol{\theta}) \xrightarrow{d} N(\mathbf{0}, \Sigma) \) and \( g : \mathbb{R}^d \to \mathbb{R}^k \) is differentiable at \( \boldsymbol{\theta} \), then \( \sqrt{n}(g(\mathbf{X}_n) - g(\boldsymbol{\theta})) \xrightarrow{d} N(\mathbf{0}, \nabla g(\boldsymbol{\theta})^T \Sigma\, \nabla g(\boldsymbol{\theta})) \). This is extremely useful in statistics for deriving the asymptotic distribution of estimators.
+</div>
+
+---
+
+# Chapter 6: Conditional Expectation
+
+In elementary probability, the conditional expectation \( E[Y \mid X = x] \) is defined by cases: if \( X \) and \( Y \) are discrete, one uses conditional probabilities \( P(Y = y \mid X = x) = P(Y = y, X = x)/P(X = x) \); if \( X \) and \( Y \) are jointly continuous, one uses the conditional density \( f_{Y|X}(y \mid x) = f_{X,Y}(x,y)/f_X(x) \). But these definitions break down in the general case -- when \( X \) is continuous, \( P(X = x) = 0 \), so the ratio is undefined. Even more problematic, the distribution of \( Y \) given \( X \) may not admit a density at all (for instance, when \( Y \) has a singular distribution).
+
+The modern theory of conditional expectation, due to Kolmogorov, resolves these difficulties by defining the conditional expectation as a random variable satisfying a certain integral identity. This definition relies on the Radon--Nikodym theorem and automatically produces a version that is measurable with respect to the conditioning information. In this chapter we develop this theory, establish the fundamental properties of conditional expectation, and briefly discuss regular conditional distributions.
+
+## Motivation and Definition
+
+### The Informal Picture
+
+Recall the informal definition:
+\[
+E[Y \mid X = x] = \begin{cases} \displaystyle\sum_y y\,P(Y = y \mid X = x) & \text{if } X, Y \text{ are discrete}, \\[6pt] \displaystyle\int y\,f_{Y|X}(y \mid x)\,dy & \text{if } X, Y \text{ are absolutely continuous}. \end{cases}
+\]
+The key observation is that \( E[Y \mid X = x] \) is a function of \( x \). If we substitute \( X(\omega) \) for \( x \), we get a random variable \( E[Y \mid X] = g(X) \), which is determined by the value of \( X \) -- that is, it is measurable with respect to \( \sigma(X) \). This random variable has the property that for every set \( A \in \sigma(X) \),
+\[
+\int_A Y\,dP = \int_A E[Y \mid X]\,dP.
+\]
+Formalizing this integral identity, and replacing \( \sigma(X) \) by an arbitrary sub-\( \sigma \)-field \( \mathcal{G} \), gives the general definition.
+
+### The Formal Definition
+
+<div class="definition">
+<strong>Definition (Conditional Expectation Given a Sub-\( \sigma \)-field).</strong> Let \( (\Omega, \mathcal{F}, P) \) be a probability space, \( X \) an integrable random variable (\( E[|X|] < \infty \)), and \( \mathcal{G} \) a sub-\( \sigma \)-field of \( \mathcal{F} \). The <strong>conditional expectation</strong> of \( X \) given \( \mathcal{G} \), denoted \( E[X \mid \mathcal{G}] \), is any random variable \( Y \) such that:
+<ol>
+<li>\( Y \) is \( \mathcal{G} \)-measurable, and</li>
+<li>For every \( A \in \mathcal{G} \), \( \displaystyle\int_A X\,dP = \int_A Y\,dP \).</li>
+</ol>
+</div>
+
+Intuitively, \( E[X \mid \mathcal{G}] \) is the "best estimate" of \( X \) when we only have the resolution of \( \mathcal{G} \). It is like looking through mosaic glass: we flatten the detail within each piece of the mosaic to a single value. The conditional expectation \( Y \) lacks the full resolution of \( X \) and is constant on portions where \( X \) may not be constant.
+
+The definition raises two immediate questions: does such a \( Y \) exist, and is it unique? Both answers are affirmative, and the proofs rely on the Radon--Nikodym theorem.
+
+## Existence and Uniqueness
+
+### Absolutely Continuous Measures and the Radon--Nikodym Theorem
+
+<div class="definition">
+<strong>Definition (Absolute Continuity of Measures).</strong> Let \( \mu \) and \( \nu \) be measures on a measurable space \( (\Omega, \mathcal{F}) \). We say \( \nu \) is <strong>absolutely continuous</strong> with respect to \( \mu \), written \( \nu \ll \mu \), if for every \( A \in \mathcal{F} \), \( \mu(A) = 0 \) implies \( \nu(A) = 0 \).
+</div>
+
+<div class="theorem">
+<strong>Theorem (Radon--Nikodym).</strong> Let \( \mu \) and \( \nu \) be \( \sigma \)-finite measures on \( (\Omega, \mathcal{F}) \). If \( \nu \ll \mu \), then there exists an \( \mathcal{F} \)-measurable function \( f \geq 0 \) such that for every \( A \in \mathcal{F} \),
+\[
+\nu(A) = \int_A f\,d\mu.
+\]
+The function \( f \) is called the <strong>Radon--Nikodym derivative</strong> of \( \nu \) with respect to \( \mu \) and is denoted \( \frac{d\nu}{d\mu} \). It is unique \( \mu \)-a.e.
+</div>
+
+The proof of the Radon--Nikodym theorem belongs to real analysis; we take it as given. With it in hand, the existence of conditional expectation follows cleanly.
+
+### Existence
+
+<div class="proposition">
+<strong>Proposition (Existence of Conditional Expectation).</strong> Let \( (\Omega, \mathcal{F}, P) \) be a probability space, \( X \) an integrable random variable, and \( \mathcal{G} \subseteq \mathcal{F} \) a sub-\( \sigma \)-field. Then \( E[X \mid \mathcal{G}] \) exists.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> <em>Case 1: \( X \geq 0 \).</em> Let \( \mu = P|_{\mathcal{G}} \) be the restriction of \( P \) to \( \mathcal{G} \). Define \( \nu(A) = \int_A X\,dP \) for \( A \in \mathcal{G} \). Then \( \nu \) is a measure on \( (\Omega, \mathcal{G}) \). Whenever \( \mu(A) = P(A) = 0 \), we have \( \nu(A) = \int_A X\,dP = 0 \), so \( \nu \ll \mu \). By the Radon--Nikodym theorem, there exists a \( \mathcal{G} \)-measurable function \( Y = \frac{d\nu}{d\mu} \) such that for every \( A \in \mathcal{G} \),
+\[
+\int_A X\,dP = \nu(A) = \int_A Y\,d\mu = \int_A Y\,dP.
+\]
+This \( Y \) satisfies both conditions in the definition.
+
+<em>Case 2: General \( X \).</em> Write \( X = X^+ - X^- \). Let \( Y_1 = E[X^+ \mid \mathcal{G}] \) and \( Y_2 = E[X^- \mid \mathcal{G}] \), which exist by Case 1. Set \( Y = Y_1 - Y_2 \). Then \( Y \) is \( \mathcal{G} \)-measurable, and for every \( A \in \mathcal{G} \),
+\[
+\int_A X\,dP = \int_A X^+\,dP - \int_A X^-\,dP = \int_A Y_1\,dP - \int_A Y_2\,dP = \int_A Y\,dP. \qquad \blacksquare
+\]
+</div>
+
+### Uniqueness
+
+<div class="proposition">
+<strong>Proposition (Uniqueness).</strong> The conditional expectation is unique almost surely. That is, if \( Y \) and \( Y' \) both satisfy the definition of \( E[X \mid \mathcal{G}] \), then \( P(Y = Y') = 1 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Suppose \( P(Y > Y') > 0 \). Let \( A = \{Y > Y'\} \). Since both \( Y \) and \( Y' \) are \( \mathcal{G} \)-measurable, \( A \in \mathcal{G} \). By the defining property,
+\[
+\int_A Y\,dP = \int_A X\,dP = \int_A Y'\,dP,
+\]
+so \( \int_A (Y - Y')\,dP = 0 \). But \( Y - Y' > 0 \) on \( A \) and \( P(A) > 0 \), so there exists \( \varepsilon > 0 \) with \( P(Y - Y' > \varepsilon) > 0 \), making \( \int_A(Y - Y')\,dP > 0 \) -- a contradiction. By symmetry, \( P(Y' > Y) = 0 \) as well, so \( Y = Y' \) a.s. \( \blacksquare \)
+</div>
+
+### The Projection Perspective
+
+There is an elegant alternative viewpoint when \( X \) has finite second moment. In this setting, conditional expectation is the orthogonal projection in \( L^2 \).
+
+<div class="theorem">
+<strong>Theorem (Conditional Expectation as Projection).</strong> Let \( \mathcal{G} \subseteq \mathcal{F} \) be \( \sigma \)-algebras and \( X \) a random variable with \( E[X^2] < \infty \). Then there exists a \( \mathcal{G} \)-measurable \( Y \) such that
+\[
+E[(X - Y)^2] = \inf_Z E[(X - Z)^2]
+\]
+where the infimum is over all \( \mathcal{G} \)-measurable random variables \( Z \). This \( Y \) equals \( E[X \mid \mathcal{G}] \).
+</div>
+
+This viewpoint, developed extensively in McLeish's treatment, shows that conditional expectation is the least-squares approximation to \( X \) among all \( \mathcal{G} \)-measurable random variables. When \( \mathcal{G} = \{\emptyset, \Omega\} \), the only \( \mathcal{G} \)-measurable random variables are constants, and the projection reduces to the ordinary expectation \( E[X] \).
+
+<div class="example">
+<strong>Example.</strong> If \( \mathcal{G} = \{\emptyset, A, A^c, \Omega\} \) for some event \( A \) with \( P(A) > 0 \), then the conditional expectation of \( X \) given \( \mathcal{G} \) takes the value
+\[
+E[X \mid \mathcal{G}](\omega) = \begin{cases} \displaystyle\frac{E[X\,\mathbf{1}_A]}{P(A)} & \text{if } \omega \in A, \\[6pt] \displaystyle\frac{E[X\,\mathbf{1}_{A^c}]}{P(A^c)} & \text{if } \omega \in A^c. \end{cases}
+\]
+These are the familiar conditional expectations \( E[X \mid A] \) and \( E[X \mid A^c] \).
+</div>
+
+<div class="example">
+<strong>Example (Finite Partition).</strong> If \( \mathcal{G} \) is generated by a finite partition \( \{A_1, \ldots, A_n\} \) of \( \Omega \), then
+\[
+E[X \mid \mathcal{G}](\omega) = \sum_{i=1}^{n}\frac{E[X\,\mathbf{1}_{A_i}]}{P(A_i)}\,\mathbf{1}_{A_i}(\omega),
+\]
+the piecewise-constant function that averages \( X \) over each atom.
+</div>
+
+### Conditional Expectation Given a Random Variable
+
+<div class="definition">
+<strong>Definition (Conditional Expectation Given a Random Variable).</strong> Let \( X \) and \( Y \) be random variables with \( E[|Y|] < \infty \). Define
+\[
+E[Y \mid X] := E[Y \mid \sigma(X)]
+\]
+where \( \sigma(X) = \{X^{-1}(B) : B \in \mathcal{B}\} \) is the \( \sigma \)-field generated by \( X \).
+</div>
+
+Since \( E[Y \mid X] \) is \( \sigma(X) \)-measurable, by the Doob--Dynkin lemma it can be written as \( g(X) \) for some Borel function \( g \). This is consistent with the informal notation \( E[Y \mid X = x] = g(x) \).
+
+## Properties of Conditional Expectation
+
+The following properties make conditional expectation a flexible and powerful tool. Throughout, \( \mathcal{F} \) denotes a sub-\( \sigma \)-field of the underlying \( \sigma \)-algebra, and all random variables are assumed integrable.
+
+<div class="proposition">
+<strong>Proposition (Properties of Conditional Expectation).</strong>
+<ol>
+<li><strong>Linearity:</strong> \( E[aX + Y \mid \mathcal{F}] = a\,E[X \mid \mathcal{F}] + E[Y \mid \mathcal{F}] \) for \( a \in \mathbb{R} \).</li>
+<li><strong>Monotonicity:</strong> If \( X \leq Y \) a.s., then \( E[X \mid \mathcal{F}] \leq E[Y \mid \mathcal{F}] \) a.s.</li>
+<li><strong>Monotone Convergence:</strong> If \( X_n \geq 0 \), \( X_n \uparrow X \), and \( E[|X|] < \infty \), then \( E[X_n \mid \mathcal{F}] \uparrow E[X \mid \mathcal{F}] \) a.s.</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (1) follows directly from the linearity of integration.
+
+(2) Let \( A = \{E[X \mid \mathcal{F}] > E[Y \mid \mathcal{F}]\} \in \mathcal{F} \). Then
+\[
+\int_A E[X \mid \mathcal{F}]\,dP = \int_A X\,dP \leq \int_A Y\,dP = \int_A E[Y \mid \mathcal{F}]\,dP,
+\]
+which forces \( P(A) = 0 \).
+
+(3) Define \( Y_n = X - X_n \geq 0 \) and \( Z_n = E[Y_n \mid \mathcal{F}] = E[X \mid \mathcal{F}] - E[X_n \mid \mathcal{F}] \). Since \( Y_n \downarrow 0 \) and \( |Y_n| \leq |X| \), the dominated convergence theorem gives \( \int_A Y_n\,dP \to 0 \) for every \( A \in \mathcal{F} \). But \( \int_A Y_n\,dP = \int_A Z_n\,dP \), so \( \int_A Z_n\,dP \to 0 \). By monotonicity, \( Z_n \) is decreasing; let \( Z_\infty = \lim Z_n \geq 0 \). By the monotone convergence theorem, \( \int_A Z_n\,dP \to \int_A Z_\infty\,dP \). Since \( \int_A Z_\infty\,dP = 0 \) for all \( A \in \mathcal{F} \) and \( Z_\infty \geq 0 \), we conclude \( Z_\infty = 0 \) a.s. \( \blacksquare \)
+</div>
+
+The next property says that if \( X \) is already \( \mathcal{F} \)-measurable, conditioning on \( \mathcal{F} \) does not change it.
+
+<div class="remark">
+<strong>Remark.</strong> If \( X \) is \( \mathcal{F} \)-measurable, then \( E[X \mid \mathcal{F}] = X \) a.s. This is immediate: \( X \) itself satisfies both conditions in the definition.
+</div>
+
+### The Tower Property
+
+The tower property (also called the law of iterated expectations) is one of the most frequently used properties of conditional expectation.
+
+<div class="theorem">
+<strong>Theorem (Tower Property).</strong> If \( \mathcal{F}_1 \subseteq \mathcal{F}_2 \) are sub-\( \sigma \)-fields, then:
+<ol>
+<li>\( E[E[X \mid \mathcal{F}_1] \mid \mathcal{F}_2] = E[X \mid \mathcal{F}_1] \).</li>
+<li>\( E[E[X \mid \mathcal{F}_2] \mid \mathcal{F}_1] = E[X \mid \mathcal{F}_1] \).</li>
+</ol>
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> (1) Since \( E[X \mid \mathcal{F}_1] \) is \( \mathcal{F}_1 \)-measurable and \( \mathcal{F}_1 \subseteq \mathcal{F}_2 \), it is also \( \mathcal{F}_2 \)-measurable. Conditioning an \( \mathcal{F}_2 \)-measurable random variable on \( \mathcal{F}_2 \) leaves it unchanged.
+
+(2) For any \( A \in \mathcal{F}_1 \subseteq \mathcal{F}_2 \),
+\[
+\int_A E[X \mid \mathcal{F}_1]\,dP = \int_A X\,dP = \int_A E[X \mid \mathcal{F}_2]\,dP.
+\]
+This shows that \( E[X \mid \mathcal{F}_1] \) satisfies the defining identity for \( E[E[X \mid \mathcal{F}_2] \mid \mathcal{F}_1] \). \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> Taking \( \mathcal{F}_1 = \{\emptyset, \Omega\} \) in part (2) gives \( E[E[X \mid \mathcal{F}_2]] = E[X] \), the law of total expectation.
+</div>
+
+### Factoring Out Known Information
+
+<div class="theorem">
+<strong>Theorem (Taking Out What Is Known).</strong> If \( X \) is \( \mathcal{F} \)-measurable with \( E[|X|] < \infty \) and \( E[|XY|] < \infty \), then
+\[
+E[XY \mid \mathcal{F}] = X\,E[Y \mid \mathcal{F}] \quad \text{a.s.}
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We verify the two defining conditions. First, \( X\,E[Y \mid \mathcal{F}] \) is \( \mathcal{F} \)-measurable since both factors are. For the integral condition, we use a bootstrapping argument. When \( X = \mathbf{1}_B \) for \( B \in \mathcal{F} \), then for any \( A \in \mathcal{F} \),
+\[
+\int_A \mathbf{1}_B\,E[Y \mid \mathcal{F}]\,dP = \int_{A \cap B}E[Y \mid \mathcal{F}]\,dP = \int_{A \cap B}Y\,dP = \int_A \mathbf{1}_B\,Y\,dP = \int_A XY\,dP.
+\]
+The result extends to simple \( X \) by linearity, to non-negative \( X \) by monotone approximation, and to general \( X \) by decomposing into positive and negative parts. \( \blacksquare \)
+</div>
+
+### Independence
+
+<div class="theorem">
+<strong>Theorem.</strong> If \( X \) and \( Y \) are independent with \( E[|Y|] < \infty \), then \( E[Y \mid X] = E[Y] \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For any \( A \in \sigma(X) \), we have \( A = \{X \in B\} \) for some Borel set \( B \). Thus \( \mathbf{1}_A \) is a function of \( X \) and is independent of \( Y \). By independence,
+\[
+\int_A Y\,dP = E[Y \cdot \mathbf{1}_A] = E[Y]\cdot E[\mathbf{1}_A] = \int_A E[Y]\,dP.
+\]
+Since this holds for all \( A \in \sigma(X) \) and \( E[Y] \) is trivially \( \sigma(X) \)-measurable (it is a constant), we conclude \( E[Y \mid X] = E[Y] \). \( \blacksquare \)
+</div>
+
+This result captures the intuition that conditioning on irrelevant information provides no additional knowledge.
+
+### Conditional Jensen's Inequality
+
+<div class="theorem">
+<strong>Theorem (Conditional Jensen's Inequality).</strong> Let \( \varphi \) be a convex function, and let \( X \) be a random variable with \( E[|X|] < \infty \) and \( E[|\varphi(X)|] < \infty \). Then
+\[
+\varphi(E[X \mid \mathcal{F}]) \leq E[\varphi(X) \mid \mathcal{F}] \quad \text{a.s.}
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By convexity, \( \varphi(x) = \sup\{a + bx : a + bx \leq \varphi(x) \text{ for all } x\} \). For any supporting line \( L(x) = a + bx \leq \varphi(x) \),
+\[
+E[\varphi(X) \mid \mathcal{F}] \geq E[L(X) \mid \mathcal{F}] = a + b\,E[X \mid \mathcal{F}] = L(E[X \mid \mathcal{F}]).
+\]
+Taking the supremum over all such lines gives \( E[\varphi(X) \mid \mathcal{F}] \geq \varphi(E[X \mid \mathcal{F}]) \). \( \blacksquare \)
+</div>
+
+An immediate corollary is the \( L^p \) contraction property.
+
+<div class="corollary">
+<strong>Corollary.</strong> For any \( p \geq 1 \), \( \|E[X \mid \mathcal{F}]\|_p \leq \|X\|_p \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( |x|^p \) is convex, Jensen's inequality gives \( |E[X \mid \mathcal{F}]|^p \leq E[|X|^p \mid \mathcal{F}] \). Taking expectations: \( E[|E[X \mid \mathcal{F}]|^p] \leq E[E[|X|^p \mid \mathcal{F}]] = E[|X|^p] \). \( \blacksquare \)
+</div>
+
+### Orthogonality and Minimal Distance
+
+The projection interpretation leads naturally to orthogonality results.
+
+<div class="proposition">
+<strong>Proposition (Orthogonality).</strong> Let \( E[X^2] < \infty \) and let \( Y \) be a square-integrable \( \mathcal{F} \)-measurable random variable. Then \( X - E[X \mid \mathcal{F}] \) and \( Y \) are uncorrelated:
+\[
+\operatorname{Cov}(X - E[X \mid \mathcal{F}],\, Y) = 0.
+\]
+In particular, \( E[X \mid \mathcal{F}] \) and \( X - E[X \mid \mathcal{F}] \) are uncorrelated.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Note \( E[X - E[X \mid \mathcal{F}]] = 0 \), so it suffices to show \( E[(X - E[X \mid \mathcal{F}])\,Y] = 0 \). Using the tower property:
+\[
+E[(X - E[X \mid \mathcal{F}])\,Y] = E\!\left[E[(X - E[X \mid \mathcal{F}])\,Y \mid \mathcal{F}]\right] = E\!\left[Y\,E[X - E[X \mid \mathcal{F}] \mid \mathcal{F}]\right] = E[Y \cdot 0] = 0. \qquad \blacksquare
+\]
+</div>
+
+<div class="theorem">
+<strong>Theorem (Minimal Distance).</strong> If \( E[X^2] < \infty \), then for any \( \mathcal{F} \)-measurable \( Z \) with \( E[Z^2] < \infty \),
+\[
+E[(X - E[X \mid \mathcal{F}])^2] \leq E[(X - Z)^2].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Write \( X - Z = (X - E[X \mid \mathcal{F}]) + (E[X \mid \mathcal{F}] - Z) \). Since \( E[X \mid \mathcal{F}] - Z \) is \( \mathcal{F} \)-measurable, the orthogonality property gives
+\[
+E[(X - Z)^2] = E[(X - E[X \mid \mathcal{F}])^2] + E[(E[X \mid \mathcal{F}] - Z)^2] \geq E[(X - E[X \mid \mathcal{F}])^2]. \qquad \blacksquare
+\]
+</div>
+
+## Applications
+
+### Wald's Identity
+
+<div class="example">
+<strong>Example (Wald's Identity).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. with \( E[|X_1|] < \infty \). Let \( N \) be a non-negative integer-valued random variable with \( E[N] < \infty \), independent of the \( X_i \). Then
+\[
+E\!\left[\sum_{n=1}^{N}X_n\right] = E[N]\cdot E[X_1].
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the tower property,
+\[
+E\!\left[\sum_{n=1}^{N}X_n\right] = E\!\left[E\!\left[\sum_{n=1}^{N}X_n \,\middle|\, N\right]\right].
+\]
+Conditional on \( N = k \), the inner expectation is \( E\!\left[\sum_{n=1}^{k}X_n \,\middle|\, N = k\right] = k\,E[X_1] \) by independence. Thus \( E\!\left[\sum_{n=1}^{N}X_n \,\middle|\, N\right] = N\,E[X_1] \), and taking expectations gives \( E[N]\cdot E[X_1] \). \( \blacksquare \)
+</div>
+
+### Conditional Variance and the Law of Total Variance
+
+<div class="definition">
+<strong>Definition (Conditional Variance).</strong> For random variables \( X, Y \) with \( E[X^2] < \infty \), the <strong>conditional variance</strong> of \( X \) given \( Y \) is
+\[
+\operatorname{Var}(X \mid Y) = E[(X - E[X \mid Y])^2 \mid Y].
+\]
+</div>
+
+<div class="example">
+<strong>Example (EVVE's Law / Law of Total Variance).</strong> If \( E[X^2] < \infty \), then
+\[
+\operatorname{Var}(X) = E[\operatorname{Var}(X \mid Y)] + \operatorname{Var}(E[X \mid Y]).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Expand:
+\[
+\operatorname{Var}(X) = E[(X - E[X])^2] = E\!\left[\left((X - E[X \mid Y]) + (E[X \mid Y] - E[X])\right)^2\right].
+\]
+By orthogonality, the cross-term vanishes, giving
+\[
+\operatorname{Var}(X) = E[(X - E[X \mid Y])^2] + E[(E[X \mid Y] - E[X])^2].
+\]
+The first term equals \( E[E[(X - E[X \mid Y])^2 \mid Y]] = E[\operatorname{Var}(X \mid Y)] \) by the tower property, and the second term equals \( \operatorname{Var}(E[X \mid Y]) \). \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> This decomposition has a beautiful interpretation: the total variance of \( X \) splits into the average intra-group variance \( E[\operatorname{Var}(X \mid Y)] \) (variation within groups defined by \( Y \)) and the inter-group variance \( \operatorname{Var}(E[X \mid Y]) \) (variation between group means).
+</div>
+
+## Regular Conditional Distributions
+
+We motivated conditional expectation by avoiding the need to define a "conditional distribution" directly. However, in many applications it is useful to have an actual probability measure \( P(B \mid \mathcal{G})(\omega) \) that is simultaneously a probability measure in \( B \) for each fixed \( \omega \) and a conditional expectation in \( \omega \) for each fixed \( B \). Such an object is called a **regular conditional distribution**.
+
+<div class="definition">
+<strong>Definition (Regular Conditional Distribution).</strong> Let \( (\Omega, \mathcal{F}, P) \) be a probability space and \( \mathcal{G} \subseteq \mathcal{F} \) a sub-\( \sigma \)-field. A <strong>regular conditional probability</strong> given \( \mathcal{G} \) is a function \( Q : \mathcal{F} \times \Omega \to [0,1] \) such that:
+<ol>
+<li>For each fixed \( \omega \), the map \( B \mapsto Q(B, \omega) \) is a probability measure on \( (\Omega, \mathcal{F}) \).</li>
+<li>For each fixed \( B \in \mathcal{F} \), the map \( \omega \mapsto Q(B, \omega) \) is a version of \( P(B \mid \mathcal{G}) \).</li>
+</ol>
+</div>
+
+Condition (1) requires that for each \( \omega \) we get a genuine probability measure, not just a collection of numbers that are individually valid conditional expectations. Condition (2) ties these probability measures to the abstract conditional expectation we have already defined.
+
+Regular conditional distributions do not always exist in full generality (pathological examples can be constructed on exotic probability spaces). However, they do exist in the most important settings.
+
+<div class="theorem">
+<strong>Theorem (Existence of Regular Conditional Distributions).</strong> If \( X \) is a random variable taking values in a Polish space (a complete, separable metric space) -- in particular, in \( \mathbb{R}^d \) -- and \( \mathcal{G} \) is a sub-\( \sigma \)-field of \( \mathcal{F} \), then a regular conditional distribution of \( X \) given \( \mathcal{G} \) exists.
+</div>
+
+The proof, which we omit, uses the separability of the state space to reduce the problem to countably many conditional probability statements, each of which is handled by the Radon--Nikodym theorem.
+
+When a regular conditional distribution \( Q(\cdot, \omega) \) exists, conditional expectations can be computed as ordinary integrals:
+\[
+E[f(X) \mid \mathcal{G}](\omega) = \int f(x)\,Q(dx, \omega)
+\]
+for any measurable \( f \) with \( E[|f(X)|] < \infty \). This recovers the informal picture: the conditional expectation is obtained by integrating against the conditional distribution.
+
+<div class="remark">
+<strong>Remark.</strong> In practice, regular conditional distributions are indispensable in Bayesian statistics (where the posterior distribution is a regular conditional distribution of the parameter given the data) and in the theory of Markov processes (where the transition kernel provides a regular conditional distribution of the future state given the present).
+</div>
+
+## Looking Ahead
+
+The machinery of conditional expectation developed in this chapter is the foundation for the theory of martingales and stochastic processes, which forms the core of STAT 902. A **martingale** is a stochastic process \( (X_t, \mathcal{H}_t) \) satisfying \( E[X_t \mid \mathcal{H}_s] = X_s \) for \( s < t \) -- the conditional expectation of the future, given the present and past, equals the present value. The study of martingales leads to powerful convergence theorems, optional stopping results, and ultimately to stochastic calculus and Itô integration with respect to Brownian motion and continuous semi-martingales.
