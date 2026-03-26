@@ -1,6 +1,5 @@
 ---
 title: "STAT 901: Probability"
-prof: "Professor TBD"
 ---
 
 These notes synthesize material from two primary sources for the University of Waterloo's STAT 901 graduate probability course, Fall 2024:
@@ -114,7 +113,8 @@ P\!\Bigl(\bigcup_{i=1}^{\infty} A_i\Bigr) = \sum_{i=1}^{\infty} P(A_i).
 </div>
 
 <div class="remark">
-<strong>Remark 1.15.</strong> From a frequentist perspective, probability can be interpreted as the long-run relative frequency of an event when an experiment is repeated indefinitely. Under this interpretation, conditions (1) and (2) are immediate, but countable additivity (3) goes beyond what finite repetitions can verify --- it is a mathematical axiom that enables us to take limits. In the Bayesian perspective, probability is a subjective measure of belief about the relative likelihood of events, rescaled to lie in \([0,1]\). Both perspectives ultimately rest on the same mathematical axioms.
+<strong>Remark 1.15.</strong> From a frequentist perspective, probability can be interpreted as the long-run relative frequency of an event when an experiment is repeated indefinitely. Under this interpretation, conditions (1) and (2) are immediate, but countable additivity (3) goes beyond what finite repetitions can verify --- it is a mathematical axiom that enables us to take limits. In the Bayesian perspective, probability is a subjective measure of belief about the relative likelihood of events, rescaled to lie in \([0,1]\). Both perspectives ultimately rest on the same mathematical axioms.<br><br>
+Why do we adopt countable additivity rather than merely finite additivity, given that the frequentist interpretation only guarantees the latter? The answer is that countable additivity is precisely the condition that allows us to interchange probability with limits: if \(A_n \uparrow A\), then \(P(A_n) \to P(A)\). Without this passage to the limit, one cannot move from the discrete world (finite experiments, countable sample spaces) to the continuous world (probability on the real line, density functions, distribution functions). In short, countable additivity is the bridge from combinatorial probability to modern analysis-based probability.
 </div>
 
 We now assemble the three components into the fundamental structure of probability theory.
@@ -299,6 +299,10 @@ The outer measure extends \(P\) to all subsets of \(\Omega\), but it is generall
 P^*(A \cap E) + P^*(A^c \cap E) = P^*(E)
 \]
 for all \(E \subseteq \Omega\). This is known as <strong>Carath\'{e}odory's criterion</strong>. Intuitively, it says that the "boundary" cast by \(A\) does not interfere with the measurement of any set \(E\). We write \(\mathcal{M}\) for the class of all \(P^*\)-measurable subsets of \(\Omega\).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> One can build further intuition for Carath\'{e}odory's criterion through a covering picture. The outer measure \(P^*(E)\) is computed by covering \(E\) with field-sets and taking the infimum of the total measure. When \(A\) has a "clean boundary" --- meaning it belongs to the field, or more generally is \(P^*\)-measurable --- a cover of \(E\) can be cleanly split into a cover of \(E \cap A\) and a cover of \(E \cap A^c\) without waste. The total measure of the split covers equals the total measure of the original cover, and Carath\'{e}odory's criterion holds. By contrast, when \(A\) has a "fuzzy boundary," splitting a cover of \(E\) along \(A\) introduces overlap: the covering sets near the boundary of \(A\) contribute to both \(P^*(E \cap A)\) and \(P^*(E \cap A^c)\), leading to the strict inequality \(P^*(A \cap E) + P^*(A^c \cap E) > P^*(E)\). Thus, \(P^*\)-measurability captures exactly the sets whose boundaries are sufficiently well-behaved for consistent measurement.
 </div>
 
 <div class="proposition">
@@ -2631,6 +2635,57 @@ The first term equals \( E[E[(X - E[X \mid Y])^2 \mid Y]] = E[\operatorname{Var}
 <strong>Remark.</strong> This decomposition has a beautiful interpretation: the total variance of \( X \) splits into the average intra-group variance \( E[\operatorname{Var}(X \mid Y)] \) (variation within groups defined by \( Y \)) and the inter-group variance \( \operatorname{Var}(E[X \mid Y]) \) (variation between group means).
 </div>
 
+### Compound Distributions via Generating Functions
+
+A natural companion to Wald's identity is the problem of determining the full distribution --- not just the mean --- of a random sum \( Y = \sum_{n=1}^{N}X_n \), where \( N \) is a random variable independent of the i.i.d. summands. The key tool is the **probability generating function**, which interacts beautifully with the tower property.
+
+<div class="definition">
+<strong>Definition (Probability Generating Function).</strong> Let \( Z \) be a non-negative integer-valued random variable. The <strong>probability generating function</strong> (p.g.f.) of \( Z \) is
+\[
+g_Z(t) = E[t^Z] = \sum_{n=0}^{\infty}t^n\,P(Z = n), \qquad t \in [0,1].
+\]
+</div>
+
+<div class="theorem">
+<strong>Theorem (Characteristic Function of a Random Sum).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. random variables with characteristic function \( \varphi_X(t) = E[e^{itX_1}] \). Let \( N \) be a non-negative integer-valued random variable with probability generating function \( g_N \), independent of the \( X_i \). Define \( Y = \sum_{n=1}^{N}X_n \). Then the characteristic function of \( Y \) is
+\[
+\varphi_Y(t) = g_N\!\left(\varphi_X(t)\right).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the tower property, conditioning on \( N \),
+\[
+\varphi_Y(t) = E\!\left[e^{it\sum_{n=1}^{N}X_n}\right] = E\!\left[E\!\left[e^{it\sum_{n=1}^{N}X_n} \,\middle|\, N\right]\right].
+\]
+Conditional on \( N = k \), the \( X_i \) are i.i.d. and independent of \( N \), so
+\[
+E\!\left[e^{it\sum_{n=1}^{k}X_n} \,\middle|\, N = k\right] = \prod_{n=1}^{k}E[e^{itX_n}] = \left[\varphi_X(t)\right]^k.
+\]
+Therefore \( E[e^{it\sum_{n=1}^{N}X_n} \mid N] = [\varphi_X(t)]^N \), and taking expectations gives
+\[
+\varphi_Y(t) = E\!\left[[\varphi_X(t)]^N\right] = g_N\!\left(\varphi_X(t)\right). \qquad \blacksquare
+\]
+</div>
+
+This result reduces the problem to a composition of two known functions. We illustrate with a concrete example.
+
+<div class="example">
+<strong>Example (Exponential--Geometric Compound).</strong> Let \( X_1, X_2, \ldots \) be i.i.d. \( \mathrm{Exp}(\lambda) \) and let \( N \sim \mathrm{Geo}(p) \) (with \( P(N = k) = p(1-p)^{k-1} \) for \( k = 1, 2, \ldots \)), independent of the \( X_i \). Define \( Y = \sum_{n=1}^{N}X_n \). We have
+\[
+\varphi_X(t) = \frac{\lambda}{\lambda - it}, \qquad g_N(s) = E[s^N] = \frac{ps}{1 - (1-p)s}.
+\]
+Applying the theorem,
+\[
+\varphi_Y(t) = g_N(\varphi_X(t)) = \frac{p\cdot\frac{\lambda}{\lambda - it}}{1 - (1-p)\cdot\frac{\lambda}{\lambda - it}} = \frac{p\lambda}{\lambda - it - (1-p)\lambda} = \frac{p\lambda}{p\lambda - it}.
+\]
+This is the characteristic function of \( \mathrm{Exp}(p\lambda) \). Therefore \( Y \sim \mathrm{Exp}(p\lambda) \): the random sum of geometrically many exponential random variables is itself exponential, with the rate scaled by the geometric success probability. This is a manifestation of the memoryless property.
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The generating-function method extends naturally to the multivariate setting and is a central tool in the theory of branching processes (where the offspring distribution has a p.g.f. that is iterated to obtain the distribution of the population at generation \( n \)) and in queueing theory (where service times and arrival counts often compound in this manner).
+</div>
+
 ## Regular Conditional Distributions
 
 We motivated conditional expectation by avoiding the need to define a "conditional distribution" directly. However, in many applications it is useful to have an actual probability measure \( P(B \mid \mathcal{G})(\omega) \) that is simultaneously a probability measure in \( B \) for each fixed \( \omega \) and a conditional expectation in \( \omega \) for each fixed \( B \). Such an object is called a **regular conditional distribution**.
@@ -2665,4 +2720,392 @@ for any measurable \( f \) with \( E[|f(X)|] < \infty \). This recovers the info
 
 ## Looking Ahead
 
-The machinery of conditional expectation developed in this chapter is the foundation for the theory of martingales and stochastic processes, which forms the core of STAT 902. A **martingale** is a stochastic process \( (X_t, \mathcal{H}_t) \) satisfying \( E[X_t \mid \mathcal{H}_s] = X_s \) for \( s < t \) -- the conditional expectation of the future, given the present and past, equals the present value. The study of martingales leads to powerful convergence theorems, optional stopping results, and ultimately to stochastic calculus and Itô integration with respect to Brownian motion and continuous semi-martingales.
+The machinery of conditional expectation developed in this chapter is the foundation for the theory of martingales and stochastic processes, which we develop next. A **martingale** is a stochastic process \( (X_n, \mathcal{F}_n) \) satisfying \( E[X_n \mid \mathcal{F}_m] = X_m \) for \( m < n \) --- the conditional expectation of the future, given the present and past, equals the present value. The study of martingales leads to powerful convergence theorems, optional stopping results, and ultimately to stochastic calculus and It\^{o} integration with respect to Brownian motion and continuous semi-martingales. In the next chapter, we develop the discrete-time theory, covering the basic definitions, the martingale transform, stopping times, the optional sampling theorem, and concrete applications to random walks.
+
+---
+
+# Chapter 7: Discrete Martingales
+
+The theory of martingales is one of the most powerful and elegant developments in modern probability. Originally motivated by the analysis of gambling strategies --- the word "martingale" itself derives from a class of betting systems --- the theory has grown into an indispensable tool across probability, statistics, and mathematical finance. In this chapter we develop the discrete-time theory from scratch, building on the conditional expectation machinery of Chapter 6. We define martingales, establish their fundamental properties, introduce the martingale transform (a discrete analogue of the stochastic integral), develop the theory of stopping times and stopped processes, and prove the optional sampling theorem. We conclude with a detailed study of random walks that showcases the power of the martingale approach.
+
+## 7.1 Stochastic Processes and Filtrations
+
+We begin with the basic framework for modeling phenomena that evolve over time.
+
+<div class="definition">
+<strong>Definition (Stochastic Process).</strong> Let \( (\Omega, \mathcal{F}, P) \) be a probability space and let \( T \) be an index set. A <strong>stochastic process</strong> is a family of random variables \( \{X_t\}_{t \in T} \) defined on the same probability space. Most commonly, \( T = \{0, 1, 2, \ldots\} \) (discrete time) or \( T = [0, \infty) \) (continuous time). In this chapter, we restrict attention to discrete time: \( T = \{0, 1, 2, \ldots\} \).
+</div>
+
+A stochastic process is more than a sequence of random variables: we also need to formalize the notion of "information available at each time." This is captured by a filtration.
+
+<div class="definition">
+<strong>Definition (Filtration).</strong> A <strong>filtration</strong> on \( (\Omega, \mathcal{F}, P) \) is a non-decreasing sequence of sub-\( \sigma \)-fields
+\[
+\mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \mathcal{F}_2 \subseteq \cdots \subseteq \mathcal{F}.
+\]
+Intuitively, \( \mathcal{F}_n \) represents the information available at time \( n \). As time progresses, more information becomes available, which is why the sequence is non-decreasing.
+</div>
+
+<div class="definition">
+<strong>Definition (Natural Filtration).</strong> Given a stochastic process \( \{X_n\}_{n \geq 0} \), the <strong>natural filtration</strong> (or filtration generated by the process) is
+\[
+\mathcal{F}_n = \sigma(X_0, X_1, \ldots, X_n), \qquad n = 0, 1, 2, \ldots
+\]
+This is the smallest \( \sigma \)-field with respect to which \( X_0, X_1, \ldots, X_n \) are all measurable. It encodes exactly the information obtained by observing the process up to time \( n \).
+</div>
+
+<div class="definition">
+<strong>Definition (Adapted Process).</strong> A stochastic process \( \{X_n\}_{n \geq 0} \) is <strong>adapted</strong> to a filtration \( \{\mathcal{F}_n\}_{n \geq 0} \) if \( X_n \) is \( \mathcal{F}_n \)-measurable for every \( n \geq 0 \). In words, the value of the process at time \( n \) is determined by the information available at time \( n \).
+</div>
+
+Every process is adapted to its natural filtration. However, adaptedness can fail for filtrations that carry less information.
+
+<div class="example">
+<strong>Example (A Non-Adapted Process).</strong> Let \( \{X_n\}_{n \geq 0} \) be a stochastic process with natural filtration \( \mathcal{F}_n = \sigma(X_0, \ldots, X_n) \). Define the "smoothed" process
+\[
+Y_n = \frac{1}{3}(X_{n-1} + X_n + X_{n+1}), \qquad n \geq 1.
+\]
+Then \( Y_n \) depends on \( X_{n+1} \), which is not \( \mathcal{F}_n \)-measurable in general. Thus \( \{Y_n\} \) is not adapted to \( \{\mathcal{F}_n\} \): the process "looks into the future," which is not permitted for adapted processes.
+</div>
+
+## 7.2 Martingales
+
+With the language of filtrations and adaptedness in place, we can define the central object of this chapter.
+
+<div class="definition">
+<strong>Definition (Martingale).</strong> Let \( (\Omega, \mathcal{F}, P) \) be a probability space with filtration \( \{\mathcal{F}_n\}_{n \geq 0} \). An \( \{\mathcal{F}_n\} \)-adapted process \( \{X_n\}_{n \geq 0} \) is called a <strong>martingale</strong> (with respect to \( \{\mathcal{F}_n\} \)) if:<br>
+(1) \( E[|X_n|] < \infty \) for all \( n \geq 0 \) (integrability).<br>
+(2) \( E[X_{n+1} \mid \mathcal{F}_n] = X_n \) for all \( n \geq 0 \) (the martingale property).<br><br>
+If condition (2) is replaced by \( E[X_{n+1} \mid \mathcal{F}_n] \leq X_n \), the process is called a <strong>supermartingale</strong>. If \( E[X_{n+1} \mid \mathcal{F}_n] \geq X_n \), it is called a <strong>submartingale</strong>.
+</div>
+
+The terminology is vivid: a martingale models a **fair gamble** --- the expected future value, given the present and past, equals the present value. A supermartingale models an unfavorable gamble (expected future value is at most the present value), while a submartingale models a favorable one.
+
+<div class="example">
+<strong>Example (Symmetric Simple Random Walk).</strong> Let \( Z_1, Z_2, \ldots \) be i.i.d. with \( P(Z_i = 1) = P(Z_i = -1) = 1/2 \). Set \( S_0 = 0 \) and \( S_n = Z_1 + \cdots + Z_n \) for \( n \geq 1 \). Let \( \mathcal{F}_n = \sigma(Z_1, \ldots, Z_n) \). Then \( \{S_n\} \) is a martingale with respect to \( \{\mathcal{F}_n\} \). Indeed, \( E[|S_n|] \leq n < \infty \), and
+\[
+E[S_{n+1} \mid \mathcal{F}_n] = E[S_n + Z_{n+1} \mid \mathcal{F}_n] = S_n + E[Z_{n+1}] = S_n,
+\]
+since \( S_n \in \mathcal{F}_n \) and \( Z_{n+1} \) is independent of \( \mathcal{F}_n \) with \( E[Z_{n+1}] = 0 \).
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The martingale property of the symmetric random walk depends only on the fact that \( E[Z_i] = 0 \), not on the specific distribution of \( Z_i \). More generally, if \( Z_1, Z_2, \ldots \) are independent (not necessarily identically distributed) with \( E[Z_i] = 0 \) for all \( i \), then the partial sums \( S_n = Z_1 + \cdots + Z_n \) form a martingale with respect to the natural filtration.
+</div>
+
+<div class="example">
+<strong>Example (Random Walk with Drift).</strong> If \( E[Z_i] = \alpha \neq 0 \), then \( S_n = Z_1 + \cdots + Z_n \) is no longer a martingale: \( E[S_{n+1} \mid \mathcal{F}_n] = S_n + \alpha \). The process is a submartingale if \( \alpha > 0 \) and a supermartingale if \( \alpha < 0 \). However, the **centred** process \( S_n' = S_n - n\alpha = \sum_{i=1}^{n}(Z_i - \alpha) \) is always a martingale, since the increments \( Z_i - \alpha \) have mean zero.
+</div>
+
+<div class="example">
+<strong>Example (Conditional Expectation Martingale).</strong> Let \( Y \) be an integrable random variable on \( (\Omega, \mathcal{F}, P) \) and let \( \{\mathcal{F}_n\} \) be any filtration. Define \( X_n = E[Y \mid \mathcal{F}_n] \). Then \( \{X_n\} \) is a martingale: integrability follows from \( E[|X_n|] \leq E[|Y|] < \infty \) (Jensen's inequality for conditional expectation), and the martingale property follows from the tower property:
+\[
+E[X_{n+1} \mid \mathcal{F}_n] = E[E[Y \mid \mathcal{F}_{n+1}] \mid \mathcal{F}_n] = E[Y \mid \mathcal{F}_n] = X_n.
+\]
+This is in many ways the prototypical example: as we acquire more information, our best estimate of \( Y \) updates but remains "fair" on average.
+</div>
+
+## 7.3 Properties of Martingales
+
+The martingale property \( E[X_{n+1} \mid \mathcal{F}_n] = X_n \) extends by iteration to the statement that the best prediction of \( X_n \) given information at any earlier time \( m \) is simply \( X_m \).
+
+<div class="theorem">
+<strong>Theorem (Generalized Martingale Property).</strong> If \( \{X_n\} \) is a martingale (respectively super/submartingale) with respect to \( \{\mathcal{F}_n\} \), then for all \( n > m \geq 0 \),
+\[
+E[X_n \mid \mathcal{F}_m] = X_m \qquad (\text{respectively } \leq X_m, \; \geq X_m).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We prove the martingale case by induction on \( n - m \). The base case \( n = m + 1 \) is the definition. For the inductive step, suppose the result holds for \( n - m = k \). Then by the tower property and the inductive hypothesis,
+\[
+E[X_{m+k+1} \mid \mathcal{F}_m] = E[E[X_{m+k+1} \mid \mathcal{F}_{m+k}] \mid \mathcal{F}_m] = E[X_{m+k} \mid \mathcal{F}_m] = X_m.
+\]
+The super/submartingale cases follow identically, replacing equalities with the appropriate inequalities (monotonicity of conditional expectation preserves the direction). \( \blacksquare \)
+</div>
+
+An immediate consequence for expectations is that the expected value of a martingale is constant: \( E[X_n] = E[E[X_n \mid \mathcal{F}_0]] = E[X_0] \) for all \( n \). For a supermartingale, \( E[X_n] \leq E[X_0] \), and for a submartingale, \( E[X_n] \geq E[X_0] \).
+
+The next result shows that convex functions of martingales produce submartingales --- a consequence of Jensen's inequality.
+
+<div class="theorem">
+<strong>Theorem (Jensen's Submartingale Inequality).</strong> Let \( \{X_n\} \) be a martingale with respect to \( \{\mathcal{F}_n\} \), and let \( \varphi : \mathbb{R} \to \mathbb{R} \) be a convex function such that \( E[|\varphi(X_n)|] < \infty \) for all \( n \). Then \( \{\varphi(X_n)\} \) is a submartingale with respect to \( \{\mathcal{F}_n\} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Adaptedness and integrability are immediate. By the conditional version of Jensen's inequality,
+\[
+E[\varphi(X_{n+1}) \mid \mathcal{F}_n] \geq \varphi(E[X_{n+1} \mid \mathcal{F}_n]) = \varphi(X_n). \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> Taking \( \varphi(x) = |x| \) shows that if \( \{X_n\} \) is a martingale, then \( \{|X_n|\} \) is a submartingale. Taking \( \varphi(x) = x^2 \) (when second moments exist) shows that \( \{X_n^2\} \) is a submartingale. Taking \( \varphi(x) = x^+ = \max(x, 0) \) shows that \( \{X_n^+\} \) is a submartingale. These facts are used frequently in the theory of martingale convergence and maximal inequalities.
+</div>
+
+## 7.4 The Martingale Transform
+
+In a gambling context, one might wonder whether a clever betting strategy can turn a fair game into a favorable one. The martingale transform formalizes this question --- and the answer is no.
+
+<div class="definition">
+<strong>Definition (Predictable Process).</strong> A process \( \{H_n\}_{n \geq 1} \) is <strong>predictable</strong> with respect to a filtration \( \{\mathcal{F}_n\}_{n \geq 0} \) if \( H_n \) is \( \mathcal{F}_{n-1} \)-measurable for all \( n \geq 1 \). That is, the value of \( H_n \) is determined by information available before time \( n \). This models a gambling strategy where the bet placed at time \( n \) must be decided before the outcome at time \( n \) is revealed.
+</div>
+
+<div class="definition">
+<strong>Definition (Martingale Transform).</strong> Let \( \{X_n\}_{n \geq 0} \) be an adapted process and \( \{H_n\}_{n \geq 1} \) a predictable process. The <strong>martingale transform</strong> (or discrete stochastic integral) of \( X \) by \( H \) is
+\[
+(H \cdot X)_n = \sum_{m=1}^{n}H_m(X_m - X_{m-1}), \qquad n \geq 1,
+\]
+with the convention \( (H \cdot X)_0 = 0 \).
+</div>
+
+The terminology "stochastic integral" is apt: \( (H \cdot X)_n \) is a discrete analogue of the It\^{o} integral \( \int_0^t H_s\,dX_s \). In the gambling interpretation, \( X_n \) is the price of a stock at time \( n \), \( H_n \) is the number of shares held from time \( n-1 \) to time \( n \), and \( H_m(X_m - X_{m-1}) \) is the profit or loss from the \( m \)th period. The transform \( (H \cdot X)_n \) is the total cumulative gain by time \( n \).
+
+<div class="theorem">
+<strong>Theorem (Martingale Transform Preserves the Martingale Property).</strong> Let \( \{X_n\} \) be a supermartingale (respectively martingale, submartingale) with respect to \( \{\mathcal{F}_n\} \). If \( \{H_n\}_{n \geq 1} \) is a non-negative, bounded, predictable process, then \( \{(H \cdot X)_n\}_{n \geq 0} \) is a supermartingale (respectively martingale, submartingale) with respect to \( \{\mathcal{F}_n\} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( H_n \) is \( \mathcal{F}_{n-1} \)-measurable and bounded, and \( X_n \) is \( \mathcal{F}_n \)-measurable and integrable, the transform \( (H \cdot X)_n \) is \( \mathcal{F}_n \)-measurable and integrable for each \( n \). For the supermartingale property, compute
+\[
+E[(H \cdot X)_{n+1} \mid \mathcal{F}_n] = E\!\left[(H \cdot X)_n + H_{n+1}(X_{n+1} - X_n) \mid \mathcal{F}_n\right].
+\]
+Since \( (H \cdot X)_n \in \mathcal{F}_n \) and \( H_{n+1} \in \mathcal{F}_n \) (by predictability), this equals
+\[
+(H \cdot X)_n + H_{n+1}\,E[X_{n+1} - X_n \mid \mathcal{F}_n].
+\]
+For a supermartingale, \( E[X_{n+1} \mid \mathcal{F}_n] \leq X_n \), so \( E[X_{n+1} - X_n \mid \mathcal{F}_n] \leq 0 \). Since \( H_{n+1} \geq 0 \), we get \( E[(H \cdot X)_{n+1} \mid \mathcal{F}_n] \leq (H \cdot X)_n \). The martingale and submartingale cases are analogous. \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> This theorem has a striking interpretation: **you cannot beat a fair game by clever betting**. No matter how sophisticated the predictable strategy \( H \), if the underlying process \( X \) is a (super)martingale, the cumulative gains \( (H \cdot X) \) remain a (super)martingale. In particular, if \( X \) is a martingale, then \( E[(H \cdot X)_n] = 0 \) for all \( n \) --- the expected gain from any predictable strategy is zero.
+</div>
+
+## 7.5 Stopping Times
+
+In many applications, the time at which a decision is made depends on the observed process --- one stops when a certain threshold is hit, or when a pattern is detected. Stopping times formalize this idea.
+
+<div class="definition">
+<strong>Definition (Stopping Time).</strong> A random variable \( N : \Omega \to \{0, 1, 2, \ldots\} \cup \{\infty\} \) is a <strong>stopping time</strong> with respect to a filtration \( \{\mathcal{F}_n\} \) if
+\[
+\{N = n\} \in \mathcal{F}_n \qquad \text{for all } n = 0, 1, 2, \ldots
+\]
+Equivalently, \( \{N \leq n\} \in \mathcal{F}_n \) for all \( n \).
+</div>
+
+The key idea is that the decision to stop at time \( n \) must be based solely on information available at time \( n \) --- we cannot peek into the future to decide when to stop. This is sometimes summarized as: "we know it happens when it happens."
+
+<div class="example">
+<strong>Example (First Hitting Time).</strong> Let \( \{X_n\} \) be an adapted process and \( a \in \mathbb{R} \). The <strong>first hitting time</strong> of level \( a \) is
+\[
+T_a = \inf\{n \geq 0 : X_n \geq a\}.
+\]
+Then \( T_a \) is a stopping time, since \( \{T_a = n\} = \{X_0 < a, X_1 < a, \ldots, X_{n-1} < a, X_n \geq a\} \in \mathcal{F}_n \).
+</div>
+
+<div class="example">
+<strong>Example (A Random Time That Is Not a Stopping Time).</strong> Let \( M > 0 \) be a fixed time horizon. Define
+\[
+T_a' = \sup\{n \leq M : X_n \geq a\},
+\]
+the <em>last time</em> that the process is at or above level \( a \) before the horizon \( M \). Then \( T_a' \) is generally <em>not</em> a stopping time. Indeed, \( \{T_a' = n\} = \{X_n \geq a,\,X_{n+1} < a,\,\ldots,\,X_M < a\} \), which requires knowledge of the process after time \( n \). At the moment \( n \) occurs, one cannot know that it is the last time the process visits level \( a \) --- that is only revealed in hindsight.
+</div>
+
+## 7.6 Stopped Processes and the Optional Sampling Theorem
+
+Given a stopping time \( N \) and a process \( \{X_n\} \), the **stopped process** freezes the value of \( X \) at the moment of stopping.
+
+<div class="definition">
+<strong>Definition (Stopped Process).</strong> Let \( \{X_n\}_{n \geq 0} \) be a stochastic process and \( N \) a stopping time. The <strong>stopped process</strong> is
+\[
+X_{N \wedge n} = \begin{cases} X_n & \text{if } N > n, \\ X_N & \text{if } N \leq n, \end{cases}
+\]
+where \( N \wedge n = \min(N, n) \).
+</div>
+
+The next theorem shows that stopping preserves the martingale property --- a fundamental result that enables the powerful applications to follow.
+
+<div class="theorem">
+<strong>Theorem (Stopped Martingales).</strong> If \( \{X_n\} \) is a martingale (respectively super/submartingale) with respect to \( \{\mathcal{F}_n\} \), and \( N \) is a stopping time with respect to \( \{\mathcal{F}_n\} \), then the stopped process \( \{X_{N \wedge n}\}_{n \geq 0} \) is also a martingale (respectively super/submartingale) with respect to \( \{\mathcal{F}_n\} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Define \( H_n = \mathbf{1}_{\{N \geq n\}} \) for \( n \geq 1 \). Since \( \{N \geq n\} = \{N \leq n-1\}^c \) and \( \{N \leq n-1\} \in \mathcal{F}_{n-1} \), we have \( H_n \in \mathcal{F}_{n-1} \), so \( \{H_n\} \) is predictable. Moreover, each \( H_n \) is bounded (taking values in \( \{0, 1\} \)) and non-negative. By the martingale transform theorem, \( \{(H \cdot X)_n\} \) is a (super/sub)martingale. To conclude, observe that
+\[
+(H \cdot X)_n = \sum_{m=1}^{n}\mathbf{1}_{\{N \geq m\}}(X_m - X_{m-1}) = \sum_{m=1}^{N \wedge n}(X_m - X_{m-1}) = X_{N \wedge n} - X_0.
+\]
+Since \( X_{N \wedge n} = (H \cdot X)_n + X_0 \) and the sum of a (super/sub)martingale and a constant is a (super/sub)martingale, the result follows. \( \blacksquare \)
+</div>
+
+The stopped martingale theorem tells us that \( E[X_{N \wedge n}] = E[X_0] \) for every \( n \). A natural question is whether this identity persists in the limit as \( n \to \infty \), yielding \( E[X_N] = E[X_0] \). This is the content of the **optional sampling theorem**, which requires a condition to ensure that the convergence is well-behaved.
+
+<div class="theorem">
+<strong>Theorem (Optional Sampling Theorem / Doob's Optional Stopping Theorem).</strong> Let \( \{X_n\} \) be a martingale (respectively submartingale) with respect to \( \{\mathcal{F}_n\} \), and let \( N \) be a stopping time with \( N < \infty \) a.s. If the stopped process \( \{X_{N \wedge n}\} \) is uniformly integrable, then
+\[
+E[X_N] = E[X_0] \qquad (\text{respectively } E[X_N] \geq E[X_0]).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By the stopped martingale theorem, \( \{X_{N \wedge n}\} \) is a (sub)martingale, so \( E[X_{N \wedge n}] = E[X_0] \) (respectively \( \geq E[X_0] \)) for every \( n \). Since \( N < \infty \) a.s., we have \( X_{N \wedge n} \to X_N \) a.s. as \( n \to \infty \). Uniform integrability of \( \{X_{N \wedge n}\} \) then guarantees that this almost sure convergence can be promoted to \( L^1 \) convergence, giving \( E[X_{N \wedge n}] \to E[X_N] \). The result follows. \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The uniform integrability condition is essential. Without it, the optional sampling theorem can fail badly --- we will see examples in the random walk applications below. What the proof really requires is that the specific family \( \{X_{N \wedge n}\}_{n \geq 0} \) be uniformly integrable, which is a condition on the interaction between the process \( X \) and the stopping time \( N \). If \( \{X_n\} \) is itself uniformly integrable (as a family indexed by \( n \)), then \( \{X_{N \wedge n}\} \) is automatically uniformly integrable, since it is dominated by the family \( \{X_n\} \).
+</div>
+
+The most commonly used special case avoids the uniform integrability condition entirely by restricting to bounded stopping times.
+
+<div class="corollary">
+<strong>Corollary (Bounded Stopping Time).</strong> Let \( \{X_n\} \) be a martingale (respectively sub/supermartingale). If \( N \) is a stopping time with \( N \leq M \) a.s. for some constant \( M < \infty \), then
+\[
+E[X_N] = E[X_0] \qquad (\text{respectively } \geq E[X_0], \; \leq E[X_0]).
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( N \leq M \), the stopped process \( X_{N \wedge n} \) is eventually constant (equal to \( X_N \) for all \( n \geq M \)), and in particular \( |X_{N \wedge n}| \leq \max_{0 \leq k \leq M}|X_k| \), which is integrable. A family of random variables dominated by an integrable random variable is automatically uniformly integrable. The result then follows from the optional sampling theorem. \( \blacksquare \)
+</div>
+
+## 7.7 Applications to Random Walks
+
+The optional sampling theorem is at its most vivid when applied to random walks with absorbing barriers. We treat the symmetric and asymmetric cases separately.
+
+### Symmetric Simple Random Walk
+
+Let \( Z_1, Z_2, \ldots \) be i.i.d. with \( P(Z_i = 1) = P(Z_i = -1) = 1/2 \). Set \( X_0 = 0 \) and \( X_n = Z_1 + \cdots + Z_n \). Fix integers \( a < 0 < b \) and define the stopping time
+\[
+\tau = \inf\{n \geq 0 : X_n = a \text{ or } X_n = b\},
+\]
+the first time the walk hits either barrier. Since the walk is recurrent on \( \mathbb{Z} \), \( \tau < \infty \) a.s.
+
+<div class="theorem">
+<strong>Theorem (Hitting Probabilities).</strong> For the symmetric simple random walk with barriers at \( a < 0 < b \),
+\[
+P(\text{hits } a \text{ before } b) = P(X_\tau = a) = \frac{b}{b - a}, \qquad P(X_\tau = b) = \frac{-a}{b - a}.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( \{X_n\} \) is a martingale and the stopped process \( \{X_{\tau \wedge n}\} \) is bounded by \( \max(|a|, b) \), it is uniformly integrable. By the optional sampling theorem,
+\[
+E[X_\tau] = E[X_0] = 0.
+\]
+Since \( X_\tau \in \{a, b\} \), we have \( 0 = a\,P(X_\tau = a) + b\,P(X_\tau = b) \). Combined with \( P(X_\tau = a) + P(X_\tau = b) = 1 \), we obtain \( P(X_\tau = a) = b/(b-a) \) and \( P(X_\tau = b) = -a/(b-a) \). \( \blacksquare \)
+</div>
+
+To compute the expected hitting time, we need a second martingale.
+
+<div class="lemma">
+<strong>Lemma.</strong> The process \( M_n = X_n^2 - n \) is a martingale with respect to the natural filtration of the symmetric simple random walk.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Integrability is clear since \( |M_n| \leq n^2 + n \). For the martingale property, since \( X_{n+1} = X_n + Z_{n+1} \),
+\[
+E[X_{n+1}^2 - (n+1) \mid \mathcal{F}_n] = E[X_n^2 + 2X_nZ_{n+1} + Z_{n+1}^2 \mid \mathcal{F}_n] - n - 1.
+\]
+Since \( X_n \in \mathcal{F}_n \), \( Z_{n+1} \) is independent of \( \mathcal{F}_n \), \( E[Z_{n+1}] = 0 \), and \( E[Z_{n+1}^2] = 1 \), this equals \( X_n^2 + 0 + 1 - n - 1 = X_n^2 - n = M_n \). \( \blacksquare \)
+</div>
+
+<div class="theorem">
+<strong>Theorem (Expected Hitting Time).</strong> For the symmetric simple random walk with barriers at \( a < 0 < b \),
+\[
+E[\tau] = -ab = |a|\cdot b.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> The direct application of the optional sampling theorem to \( M_n = X_n^2 - n \) is complicated by the fact that \( \{M_n\} \) is not uniformly integrable and \( \tau \) is not bounded. We proceed by a limiting argument. For each fixed \( K > 0 \), the stopping time \( \tau \wedge K \) is bounded, so the optional sampling theorem gives
+\[
+E[X_{\tau \wedge K}^2 - (\tau \wedge K)] = E[M_{\tau \wedge K}] = E[M_0] = 0,
+\]
+whence \( E[\tau \wedge K] = E[X_{\tau \wedge K}^2] \). We split the right-hand side:
+\[
+E[X_{\tau \wedge K}^2] = E[X_\tau^2\,\mathbf{1}_{\{\tau \leq K\}}] + E[X_K^2\,\mathbf{1}_{\{\tau > K\}}].
+\]
+For the first term, \( X_\tau \in \{a, b\} \), so \( E[X_\tau^2\,\mathbf{1}_{\{\tau \leq K\}}] = a^2\,P(\tau \leq K,\,X_\tau = a) + b^2\,P(\tau \leq K,\,X_\tau = b) \). For the second term, \( |X_K| \leq \max(|a|, b) \) on \( \{\tau > K\} \), so \( E[X_K^2\,\mathbf{1}_{\{\tau > K\}}] \leq (a^2 \vee b^2)\,P(\tau > K) \to 0 \) as \( K \to \infty \) (since \( \tau < \infty \) a.s.). Taking \( K \to \infty \), the monotone convergence theorem gives \( E[\tau \wedge K] \nearrow E[\tau] \) on the left, and the first term converges to \( a^2\,P(X_\tau = a) + b^2\,P(X_\tau = b) \) on the right. Therefore
+\[
+E[\tau] = a^2 \cdot \frac{b}{b-a} + b^2 \cdot \frac{-a}{b-a} = \frac{a^2 b - a b^2}{b - a} = \frac{ab(a-b)}{b-a} = -ab. \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> The formula \( E[\tau] = |a|\cdot b \) has an appealing symmetry: the expected time to absorption is the product of the distances from the starting point to each barrier. For instance, starting at 0 with barriers at \( -5 \) and \( +10 \), the expected absorption time is \( 5 \times 10 = 50 \).
+</div>
+
+### Asymmetric Simple Random Walk
+
+Now suppose the walk has drift: \( P(Z_i = 1) = p \) and \( P(Z_i = -1) = 1 - p \), where \( p \in (0,1) \) with \( p \neq 1/2 \). The partial sums \( X_n = Z_1 + \cdots + Z_n \) are no longer a martingale. To apply optional sampling, we need to construct an appropriate martingale from the biased walk.
+
+<div class="lemma">
+<strong>Lemma (Exponential Martingale).</strong> Let \( q = 1 - p \). The process
+\[
+Y_n = \left(\frac{q}{p}\right)^{X_n}, \qquad n \geq 0,
+\]
+is a martingale with respect to the natural filtration \( \{\mathcal{F}_n\} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Integrability is clear since \( Y_n \) is bounded for each fixed \( n \) (as \( |X_n| \leq n \), so \( Y_n \leq \max((q/p)^n, (q/p)^{-n}) \)). For the martingale property,
+\[
+E[Y_{n+1} \mid \mathcal{F}_n] = E\!\left[\left(\frac{q}{p}\right)^{X_n + Z_{n+1}} \,\middle|\, \mathcal{F}_n\right] = Y_n \cdot E\!\left[\left(\frac{q}{p}\right)^{Z_{n+1}}\right],
+\]
+since \( Z_{n+1} \) is independent of \( \mathcal{F}_n \). Computing the expectation:
+\[
+E\!\left[\left(\frac{q}{p}\right)^{Z_{n+1}}\right] = p \cdot \frac{q}{p} + q \cdot \frac{p}{q} = q + p = 1.
+\]
+Therefore \( E[Y_{n+1} \mid \mathcal{F}_n] = Y_n \). \( \blacksquare \)
+</div>
+
+<div class="theorem">
+<strong>Theorem (Hitting Probabilities for Asymmetric Walk).</strong> For the asymmetric simple random walk with \( P(Z_i = 1) = p \neq 1/2 \) and barriers at \( a < 0 < b \), let \( \rho = q/p = (1-p)/p \). Then
+\[
+P(X_\tau = a) = \frac{1 - \rho^b}{\rho^a - \rho^b}, \qquad P(X_\tau = b) = \frac{\rho^a - 1}{\rho^a - \rho^b}.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Since \( Y_n = \rho^{X_n} \) is a martingale and the stopped process \( Y_{\tau \wedge n} = \rho^{X_{\tau \wedge n}} \) is bounded by \( \max(\rho^a, \rho^b) \), it is uniformly integrable. By the optional sampling theorem,
+\[
+E[Y_\tau] = E[Y_0] = \rho^0 = 1.
+\]
+Since \( X_\tau \in \{a, b\} \),
+\[
+\rho^a\,P(X_\tau = a) + \rho^b\,P(X_\tau = b) = 1.
+\]
+Combined with \( P(X_\tau = a) + P(X_\tau = b) = 1 \), solving the system yields the stated formulas. \( \blacksquare \)
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> When \( p = 1/2 \), we have \( \rho = 1 \), and the formulas degenerate (\( 0/0 \)). Applying L'H\^{o}pital's rule or taking the limit \( \rho \to 1 \) recovers the symmetric formulas \( P(X_\tau = a) = b/(b-a) \) and \( P(X_\tau = b) = -a/(b-a) \), confirming consistency.
+</div>
+
+The exponential martingale also reveals the transience behavior of biased random walks.
+
+<div class="theorem">
+<strong>Theorem (Probability of Ever Hitting a Level).</strong> Suppose \( p > 1/2 \) (so the walk drifts to \( +\infty \)) and \( a < 0 \). Then
+\[
+P(T_a < \infty) = \left(\frac{q}{p}\right)^{-a} = \left(\frac{1-p}{p}\right)^{|a|},
+\]
+where \( T_a = \inf\{n : X_n = a\} \). In particular, \( P(T_a < \infty) < 1 \): the biased walk may never visit level \( a \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> The events \( \{T_a < T_b\} \) increase to \( \{T_a < \infty\} \) as \( b \to \infty \). By continuity of probability and the hitting probability formula,
+\[
+P(T_a < \infty) = \lim_{b \to \infty}P(X_\tau = a) = \lim_{b \to \infty}\frac{1 - \rho^b}{\rho^a - \rho^b}.
+\]
+Since \( p > 1/2 \), we have \( \rho = q/p < 1 \), so \( \rho^b \to 0 \) as \( b \to \infty \). Therefore
+\[
+P(T_a < \infty) = \frac{1 - 0}{\rho^a - 0} = \rho^{-a} = \left(\frac{q}{p}\right)^{|a|}. \qquad \blacksquare
+\]
+</div>
+
+<div class="remark">
+<strong>Remark.</strong> When \( p \leq 1/2 \), one can show that \( P(T_a < \infty) = 1 \) for all \( a < 0 \). In particular, the symmetric random walk (\( p = 1/2 \)) is recurrent: it visits every integer infinitely often with probability 1.
+</div>
+
+## Looking Ahead
+
+The discrete martingale theory developed in this chapter extends naturally to continuous time, where the index set \( \{0, 1, 2, \ldots\} \) is replaced by \( [0, \infty) \). In the continuous-time setting, Brownian motion plays the role of the simple random walk, filtrations are parametrized continuously, and the martingale transform becomes the It\^{o} stochastic integral. The optional sampling theorem generalizes to continuous stopping times, and the theory of martingale convergence (Doob's martingale convergence theorem, the \( L^p \) maximal inequality) provides the analytical backbone for stochastic calculus. These developments form the core of STAT 902 and are the gateway to the modern theory of stochastic differential equations, mathematical finance, and stochastic filtering.
