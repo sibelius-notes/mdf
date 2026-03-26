@@ -5,6 +5,8 @@ prof: "Prof. David McKinnon"
 
 *L'algèbre n'est qu'une géométrie écrite, la géométrie n'est qu'une algèbre figurée.* — Sophie Germain
 
+*These notes are based on Prof. David McKinnon's lectures, enriched with material from [Prof. S. New's PMATH 464/764 lecture notes](https://math.uwaterloo.ca/~snew/PMATH464/index.html).*
+
 ---
 
 # Algebraic Sets
@@ -33,6 +35,10 @@ In other words, \(V(S)\) is the set of points where all functions in \(S\) vanis
 
 There are lots of algebraic sets. The \(xy\)-plane is the algebraic subset of \(\mathbb{A}^2\) corresponding to the empty set \(S\). The \(x\)-axis is \(V(\{y\})\). The unit "sphere" in \(\mathbb{C}^3\) is \(V(x^2 + y^2 + z^2 - 1)\). The **twisted cubic** is the algebraic subset of \(\mathbb{A}^3\) defined by \(\{y - x^2, z - x^3\}\). The origin in \(\mathbb{A}^2\) is defined by \(\{x, y\}\).
 
+Although we work over \(\mathbb{C}\) in this course, the definition makes sense over any field \(F\). Working over different fields produces strikingly different geometry from the same equations. Over \(\mathbb{R}\), the circle \(V(x^2 + y^2 - 1)\) is the familiar unit circle, while \(V(x^2 + y^2 + 1) = \varnothing\) — there are no real solutions. Over \(\mathbb{C}\), neither equation produces an empty variety (a consequence of the Nullstellensatz). Over finite fields, every variety is a finite set of points: in \(\mathbb{Z}_3^2\), the "circle" \(V(x^2 + y^2 - 1)\) consists of just four points \(\{(0,1), (0,2), (1,0), (2,0)\}\).
+
+The classification of varieties in one variable is simple but instructive: in \(F^1\), every variety is either \(F\) itself (when \(S = \varnothing\)), the empty set (when \(S\) contains a nonzero constant), or a finite set of points (since a nonzero polynomial has finitely many roots). In higher dimensions, the picture becomes richer. In \(F^2\), we can form unions: for instance, \(V\bigl((x-a)(x-c), (x-a)(y-d), (x-c)(y-b), (y-b)(y-d)\bigr)\) gives the two-point set \(\{(a,b), (c,d)\}\). And in \(F^{n^2}\), the set \(\operatorname{GL}(n,F)\) of invertible matrices is *open* in the Zariski topology — it is the complement of \(V(\det)\), the vanishing locus of the determinant polynomial.
+
 This lets us make a Geometric Thing out of an Algebra Thing. Next step: go the other way.
 
 <div class="definition">
@@ -50,7 +56,25 @@ The ideal of the \(x\)-axis is \((y)\), since the vanishing polynomials are exac
 <em>Proof.</em> For additivity: if \(f, g \in I(X)\) then \(f(x) = g(x) = 0\) for all \(x \in X\), so \((f \pm g)(x) = 0\) too. For multiplication: if \(h \in \mathbb{C}[x_1,\ldots,x_n]\) and \(f \in I(X)\), then \((hf)(x) = h(x) \cdot 0 = 0\). For radical: if \(f^n \in I(X)\), then \((f(x))^n = 0\) for all \(x \in X\), so \(f(x) = 0\), so \(f \in I(X)\). ∎
 </div>
 
-This means not every ideal is the ideal of an algebraic set — only radical ideals are. Since every ideal of \(\mathbb{C}[x_1, \ldots, x_n]\) is finitely generated (Hilbert Basis Theorem), every algebraic set is defined by finitely many polynomials.
+This means not every ideal is the ideal of an algebraic set — only radical ideals are. The finiteness of the algebraic world rests on a foundational result.
+
+<div class="definition">
+<strong>Definition 2.4a.</strong> A ring \(R\) is <strong>Noetherian</strong> if every ascending chain of ideals \(A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots\) eventually stabilizes: there exists an index \(\ell\) such that \(A_k = A_\ell\) for all \(k \geq \ell\). Equivalently, \(R\) is Noetherian if and only if every ideal of \(R\) is finitely generated.
+</div>
+
+The equivalence is easy to see: if every ideal is finitely generated, take \(A = \bigcup A_i\); its generators all lie in some \(A_\ell\), forcing the chain to stabilize. Conversely, if some ideal \(A\) were not finitely generated, we could build a strictly ascending chain by adding one generator at a time.
+
+<div class="theorem">
+<strong>Theorem 2.4b (Hilbert's Basis Theorem).</strong> If \(R\) is Noetherian, then so is \(R[x]\). In particular, \(\mathbb{C}[x_1, \ldots, x_n]\) is Noetherian.
+</div>
+
+<div class="proof">
+<em>Proof.</em> Let \(A\) be an ideal in \(R[x]\). For each \(k \geq 0\), let \(A_k\) be the set of leading coefficients of polynomials in \(A\) of degree \(k\), together with \(0\). Each \(A_k\) is an ideal in \(R\), and \(A_0 \subseteq A_1 \subseteq A_2 \subseteq \cdots\). Since \(R\) is Noetherian, this chain stabilizes at some index \(m\), meaning \(A_k = A_m\) for all \(k \geq m\). Each \(A_k\) is finitely generated: say \(A_k = (a_{k,1}, \ldots, a_{k,\ell_k})\). For each generator \(a_{k,i}\), choose a polynomial \(f_{k,i} \in A\) of degree \(k\) with leading coefficient \(a_{k,i}\).
+
+Let \(B = (f_{k,i} \mid k \leq m,\, i \leq \ell_k)\). We claim \(A = B\). If \(f \in A\) has degree \(k \leq m\), its leading coefficient lies in \(A_k\), so we can subtract a suitable linear combination of the \(f_{k,i}\) to reduce the degree. If \(\deg f = k > m\), the leading coefficient lies in \(A_k = A_m\), so we multiply the \(f_{m,i}\) by \(x^{k-m}\) and subtract to reduce the degree. By induction on degree, every \(f \in A\) lies in \(B\). ∎
+</div>
+
+Since \(\mathbb{C}\) is a field (hence Noetherian), repeated application gives that \(\mathbb{C}[x_1, \ldots, x_n]\) is Noetherian. Thus every algebraic set is defined by finitely many polynomials.
 
 <div class="definition">
 <strong>Definition 2.5.</strong> An ideal \(I\) of a ring \(R\) is called <strong>radical</strong> if every \(r \in R\) with \(r^n \in I\) for some positive integer \(n\) satisfies \(r \in I\). For an arbitrary ideal \(I\), define the <strong>radical</strong> of \(I\) to be:
@@ -65,12 +89,26 @@ This means not every ideal is the ideal of an algebraic set — only radical ide
 <em>Proof sketch.</em> Clearly \(I \subseteq \text{rad}(I)\) (take \(n = 1\). For closure under multiplication: if \(j \in \text{rad}(I)\) with \(j^n \in I\), then \((rj)^n = r^n j^n \in I\). For radical: if \(j^n \in \text{rad}(I)\), then \((j^n)^m \in I\), so \(j^{nm} \in I\). For closure under addition: if \(j_1^{n_1} \in I\) and \(j_2^{n_2} \in I\), then every term of \((j_1 \pm j_2)^{n_1 + n_2}\) contains either a factor of \(j_1^{n_1}\) or \(j_2^{n_2}\), so \((j_1 \pm j_2)^{n_1+n_2} \in I\). ∎
 </div>
 
-We are now ready for the big correspondence.
+We are now ready for the big correspondence — the theorem that makes the entire subject work. Its proof requires the machinery of Noether normalization (developed later in these notes), but we state it here because it governs every construction that follows.
 
 <div class="theorem">
-<strong>Theorem 2.7 (Hilbert's Nullstellensatz).</strong> Let \(n\) be a positive integer. There is a bijection:
+<strong>Theorem 2.7 (Hilbert's Weak Nullstellensatz).</strong> Let \(A \subsetneq \mathbb{C}[x_1, \ldots, x_n]\) be a proper ideal. Then \(V(A) \neq \varnothing\).
+</div>
+
+<div class="proof">
+<em>Proof.</em> Choose a maximal ideal \(M\) containing \(A\) (by Zorn's lemma). Then \(L = \mathbb{C}[x_1, \ldots, x_n]/M\) is a field containing \(\mathbb{C}\). Writing \(u_i = x_i + M\), we have \(L = \mathbb{C}[u_1, \ldots, u_n]\). If some \(u_i\) were transcendental over \(\mathbb{C}\), then by Noether normalization, \(L\) would contain a polynomial subring over which it is integral, and the Lying Over Theorem would force a nontrivial maximal ideal in \(L\) — impossible since \(L\) is a field and \(\{0\}\) is its only maximal ideal. So every \(u_i\) is algebraic over \(\mathbb{C}\), hence \(u_i \in \mathbb{C}\) (since \(\mathbb{C}\) is algebraically closed). Choosing \(a_i \in \mathbb{C}\) with \(u_i = a_i + M\), the point \(a = (a_1, \ldots, a_n)\) lies in \(V(M) \subseteq V(A)\). ∎
+</div>
+
+<div class="theorem">
+<strong>Theorem 2.7a (Hilbert's Strong Nullstellensatz).</strong> Let \(A\) be an ideal in \(\mathbb{C}[x_1, \ldots, x_n]\). Then \(I(V(A)) = \sqrt{A}\). In particular, there is a bijection:
 \[ \{\text{algebraic subsets of } \mathbb{A}^n\} \longleftrightarrow \{\text{radical ideals of } \mathbb{C}[x_1, \ldots, x_n]\} \]
 given by \(X \mapsto I(X)\) and \(I \mapsto V(I)\).
+</div>
+
+<div class="proof">
+<em>Proof (Rabinowitsch trick).</em> We always have \(\sqrt{A} \subseteq I(V(A))\), so take \(f \in I(V(A))\). Introduce a new variable \(y\) and let \(B = (A, yf - 1) \subseteq \mathbb{C}[x_1, \ldots, x_n, y]\). If \((a, b) \in V(B)\), then \(a \in V(A)\), so \(f(a) = 0\), but also \(bf(a) = 1\) — a contradiction. So \(V(B) = \varnothing\), and by the Weak Nullstellensatz, \(B = \mathbb{C}[x_1, \ldots, x_n, y]\). In particular, \(1 \in B\):
+\[ 1 = \sum_{i=1}^{k} f_i(x,y) g_i(x,y) + (yf(x) - 1) g_{k+1}(x,y) \]
+with \(f_i \in A\). Setting \(y = 1/f(x)\) in the fraction field \(\mathbb{C}(x_1, \ldots, x_n)\) and clearing denominators by multiplying by \(f^N\) (where \(N\) is the highest power of \(y\) appearing), we obtain \(f^N \in A\). Hence \(f \in \sqrt{A}\). ∎
 </div>
 
 This correspondence is more awesome than it appears. Under it:
@@ -83,7 +121,48 @@ This correspondence is more awesome than it appears. Under it:
 <strong>Definition 2.8.</strong> Let \(X\) be a nonempty algebraic set. We say that \(X\) is <strong>reducible</strong> if and only if it is the union \(X = Y_1 \cup Y_2\) of two proper algebraic subsets. We say that \(X\) is <strong>irreducible</strong> if and only if it is not reducible. (The empty set is neither irreducible nor reducible.)
 </div>
 
-The proof of the correspondence between prime ideals and irreducible sets is elegant: if \(I(X)\) is not prime, there exist polynomials \(f_1, f_2 \notin I(X)\) with \(f_1 f_2 \in I(X)\). Then \(X = (X \cap V(f_1)) \cup (X \cap V(f_2))\) is a decomposition into proper algebraic subsets.
+The proof of the correspondence between prime ideals and irreducible sets is elegant: if \(I(X)\) is not prime, there exist polynomials \(f_1, f_2 \notin I(X)\) with \(f_1 f_2 \in I(X)\). Then \(X = (X \cap V(f_1)) \cup (X \cap V(f_2))\) is a decomposition into proper algebraic subsets. Conversely, if \(X = Y \cup Z\) with \(Y, Z \subsetneq X\), choose \(f \in I(Y) \setminus I(X)\) and \(g \in I(Z) \setminus I(X)\). Then \(fg\) vanishes on \(Y \cup Z = X\), so \(fg \in I(X)\) with neither factor in \(I(X)\) — the ideal is not prime.
+
+Every algebraic set breaks into irreducible pieces, and this decomposition is essentially unique.
+
+<div class="theorem">
+<strong>Theorem 2.9 (Irreducible Decomposition).</strong> Every nonempty algebraic set \(X\) can be written as a finite union \(X = X_1 \cup \cdots \cup X_r\) of irreducible algebraic sets, with no \(X_i\) contained in any \(X_j\) for \(i \neq j\). This decomposition is unique up to reordering.
+</div>
+
+<div class="proof">
+<em>Proof.</em> <strong>Existence:</strong> If \(X\) is irreducible, we are done. Otherwise \(X = Y_1 \cup Z_1\) with \(Y_1, Z_1 \subsetneq X\). If \(Z_1\) is irreducible, stop; otherwise decompose \(Z_1 = Y_2 \cup Z_2\), giving \(X = Y_1 \cup Y_2 \cup Z_2\). This process must terminate: an infinite chain \(Z_1 \supsetneq Z_2 \supsetneq \cdots\) would produce an infinite ascending chain \(I(Z_1) \subsetneq I(Z_2) \subsetneq \cdots\) of ideals, contradicting the Noetherian property. Discard any \(X_i\) contained in another \(X_j\) to obtain the minimal decomposition.
+
+<strong>Uniqueness:</strong> Suppose \(X = X_1 \cup \cdots \cup X_r = Y_1 \cup \cdots \cup Y_s\). Fix \(i\). Then \(X_i = (Y_1 \cap X_i) \cup \cdots \cup (Y_s \cap X_i)\). Since \(X_i\) is irreducible, \(X_i = Y_j \cap X_i\) for some \(j\), giving \(X_i \subseteq Y_j\). By symmetry, \(Y_j \subseteq X_k\) for some \(k\), so \(X_i \subseteq X_k\), forcing \(i = k\) and hence \(X_i = Y_j\). ∎
+</div>
+
+For varieties in the affine plane, the story has a particularly clean ending.
+
+<div class="theorem">
+<strong>Theorem 2.10 (Classification in \(\mathbb{A}^2\)).</strong> Let \(F\) be an infinite field. Then:
+<ol>
+<li>If \(f, g \in F[x,y]\) share no common factor, then \(V(f) \cap V(g)\) is finite.</li>
+<li>If \(f\) is irreducible and \(V(f)\) is infinite, then \(V(f)\) is irreducible with \(I(V(f)) = (f)\).</li>
+<li>The irreducible varieties in \(F^2\) are: single points, infinite sets \(V(f)\) for irreducible \(f\), and \(F^2\) itself.</li>
+</ol>
+</div>
+
+The key to part (1) is the Euclidean algorithm: since \(f\) and \(g\) have no common factor in \(F[x][y]\), we can find \(s, t \in F(x)[y]\) with \(fs + gt = 1\), and clearing denominators yields \(fp + gq = r(x)\) for some nonzero \(r \in F[x]\). Any common zero of \(f\) and \(g\) must be a root of \(r(x)\), of which there are finitely many. Part (2) follows: if \(g \in I(V(f))\), then \(V(f) \cap V(g) = V(f)\) is infinite, so \(f\) and \(g\) share a factor — which must be \(f\) itself, giving \(g \in (f)\).
+
+---
+
+# Affine Maps and Equivalence
+
+Before we develop the full theory of polynomial maps, it is worth pausing to consider the simplest kind of map between varieties: affine maps, which combine a linear transformation with a translation.
+
+<div class="definition">
+<strong>Definition 3.1.</strong> An <strong>affine map</strong> from \(\mathbb{A}^n\) to \(\mathbb{A}^m\) is a function \(f(x) = Ax + b\) for some \(m \times n\) matrix \(A\) and vector \(b \in \mathbb{A}^m\). An <strong>affine equivalence</strong> (or <strong>affine change of coordinates</strong>) is a bijective affine map \(f : \mathbb{A}^n \to \mathbb{A}^n\), which requires \(n = m\) and \(A\) invertible.
+</div>
+
+Two algebraic sets \(X \subseteq \mathbb{A}^n\) and \(Y \subseteq \mathbb{A}^m\) are **affinely equivalent** if there is an affine map \(f : \mathbb{A}^n \to \mathbb{A}^m\) restricting to a bijection \(f : X \to Y\) whose inverse is also affine. Affine equivalence is a coarse but useful notion: it tells us when two varieties are "the same" up to a change of coordinates. For affine subspaces, the classification is immediate — two affine subspaces are equivalent if and only if they have the same dimension.
+
+The classification of plane conics illustrates the power of affine equivalence. By diagonalizing the associated symmetric bilinear form (and applying Sylvester's Law of Inertia over \(\mathbb{R}\)), one shows that every degree-2 variety \(V(f) \subseteq \mathbb{R}^2\) is affinely equivalent to one of: the circle \(V(x^2 + y^2 - 1)\), the hyperbola \(V(x^2 - y^2 - 1)\), the parabola \(V(y - x^2)\), a pair of intersecting lines \(V(x^2 - y^2)\), parallel lines \(V(y^2 - 1)\), a single line \(V(y^2)\), a point \(V(x^2 + y^2)\), or the empty set \(V(x^2 + y^2 + 1)\).
+
+Over \(\mathbb{C}\), the classification collapses: the circle and hyperbola become equivalent (via \((x,y) \mapsto (ix, y)\)), leaving only the circle \(V(x^2 + y^2 - 1)\), the parabola \(V(y - x^2)\), intersecting lines \(V(x^2 - y^2)\), and a single line \(V(y^2)\). The "missing" cases — the point, the empty set, parallel lines — all merge into existing classes because \(\mathbb{C}\) has enough square roots and algebraic solutions.
 
 ---
 
@@ -149,6 +228,30 @@ Given a polynomial map \(\phi : X \to Y\), we can turn it into a homomorphism go
 </div>
 
 This is the coup de grâce: two algebraic sets are isomorphic if and only if their coordinate rings are isomorphic as \(\mathbb{C}\)-algebras.
+
+## 4. Dominance and the Image of a Polynomial Map
+
+A polynomial map need not be surjective, and its image need not even be an algebraic set. The map \(f : V(xy - 1) \to \mathbb{A}^1\) given by \(f(x,y) = x\) has image \(\mathbb{A}^1 \setminus \{0\}\), which is not a variety. The right notion is *dominance*: \(f\) is dense enough.
+
+<div class="definition">
+<strong>Definition 1.9.</strong> A polynomial map \(f : X \to Y\) is <strong>dominant</strong> if \(\overline{f(X)} = Y\) (the image is dense in the Zariski topology). It has a <strong>left polynomial inverse</strong> if there exists \(g : Y \to X\) with \(g \circ f = \operatorname{id}_X\).
+</div>
+
+<div class="theorem">
+<strong>Theorem 1.10.</strong> Let \(f : X \to Y\) be a polynomial map. Then:
+<ol>
+<li>\(f^*\) is injective if and only if \(f\) is dominant.</li>
+<li>\(f^*\) is surjective if and only if \(f\) has a left polynomial inverse.</li>
+</ol>
+</div>
+
+The first part captures a recurring theme: injectivity on the algebra side corresponds to surjectivity (or at least density) on the geometric side. The proof of (1) is direct: \(f^*\) injective means \(g \circ f = 0 \Rightarrow g = 0\) in \(\Gamma(Y)\), which says precisely that the only polynomial vanishing on \(f(X)\) is the zero class — i.e., \(I(f(X)) = I(Y)\), so \(\overline{f(X)} = Y\).
+
+## 5. Non-Isomorphism via Coordinate Rings
+
+The coordinate ring is a powerful invariant. It can prove that two varieties that *look* alike are genuinely different.
+
+**Example:** The cuspidal cubic \(X = V(y^2 - x^3) \subseteq \mathbb{A}^2\) is *not* isomorphic to \(\mathbb{A}^1\). The map \(f : \mathbb{A}^1 \to X\) given by \(f(t) = (t^2, t^3)\) is surjective but not an isomorphism. To see why, note that \(f^* : \Gamma(X) \to \mathbb{C}[t]\) sends \(x \mapsto t^2\) and \(y \mapsto t^3\). The image \(f^*(\Gamma(X))\) is the subring of \(\mathbb{C}[t]\) generated by \(t^2\) and \(t^3\) — this contains \(t^4 = (t^2)^2, t^5 = t^2 \cdot t^3, t^6 = (t^3)^2\), and so on, but *not* \(t\) itself. In \(\Gamma(X)\), the elements \(x\) and \(y\) are both irreducible, yet \(x^3 = y^2\), so \(\Gamma(X)\) is not a UFD. Since \(\mathbb{C}[t]\) is a UFD, we have \(\Gamma(X) \not\cong \mathbb{C}[t]\), hence \(X \not\cong \mathbb{A}^1\).
 
 ---
 
@@ -238,6 +341,99 @@ An interesting consequence: for \(U = \mathbb{A}^2 - \{(0,0)\}\), we have \(\Gam
 <strong>Theorem 0.7.</strong> Let \(\phi : V \dashrightarrow W\) be a rational map defined at \(P \in V\). Then \(\phi^*\) induces a ring homomorphism \(\mathcal{O}_{\phi(P)}(W) \to \mathcal{O}_P(V)\). Moreover, if \(\phi\) is birational with \(\phi^{-1}\) defined at \(\phi(P)\), then \(\phi^*\) induces an isomorphism of local rings.
 </div>
 
+## 3. Blow-Ups and Desingularization
+
+One of the most beautiful constructions in algebraic geometry is the **blow-up**, which replaces a point by all the directions through it, effectively "untangling" curves that cross at a singularity.
+
+<div class="definition">
+<strong>Definition 0.8.</strong> Let \(a \in \mathbb{A}^n\). The <strong>blow-up of \(\mathbb{A}^n\) at \(a\)</strong> is the graph of the projection from \(a\) to a hyperplane. Concretely, for \(a = (0,0)\) in \(\mathbb{A}^2\), the projection to the line \(x = 1\) is \(g(x,y) = y/x\), and the blow-up is the closure of its graph:
+\[ \widetilde{\mathbb{A}^2} = V(y - xz) \subseteq \mathbb{A}^3 \]
+The natural projection \(p : \widetilde{\mathbb{A}^2} \to \mathbb{A}^2\) given by \(p(x,y,z) = (x,y)\) and the lift \(\ell(x,y) = (x, y, y/x)\) are rational inverses.
+</div>
+
+If \(X \subseteq \mathbb{A}^n\) is an irreducible variety passing through \(a\), the **blow-up of \(X\)** at \(a\), denoted \(\widetilde{X}\), is the closure of \(\ell(X \setminus \{a\})\). The blow-up is birational to \(X\) but may have better singularity behavior.
+
+**Example (cuspidal cubic):** Let \(X = V(y^2 - x^3)\). Points on \(X\) have the form \((t^2, t^3)\), so \(\ell(X \setminus \{0\}) = \{(t^2, t^3, t) \mid t \neq 0\}\). The closure is \(\widetilde{X} = V(x - z^2, y - z^3)\) — the **twisted cubic**, which is perfectly smooth! The cusp has been resolved.
+
+**Example (nodal cubic):** Let \(X = V(y^2 - x^3 - x^2)\). Points on \(X\) have the form \((t^2 - 1, t(t^2 - 1))\), so the blow-up is \(\widetilde{X} = V(x - z^2 + 1, y - z^3 + z)\), which is again smooth. The two branches that crossed at the node have been separated.
+
+<div class="remark">
+<strong>Remark.</strong> It is a fundamental theorem that by performing repeated blow-ups at singular points, one can always obtain a smooth curve birational to the original — the <strong>desingularization</strong> (or <strong>resolution of singularities</strong>) of the curve. Over \(\mathbb{C}\), this was proven for curves by classical methods, for surfaces by Zariski, and in all dimensions by Hironaka (1964), earning him the Fields Medal.
+</div>
+
+Another important application of projection is **stereographic projection**. The projection from the north pole \((0,0,1)\) of the unit sphere \(S^2 = V(x^2 + y^2 + z^2 - 1)\) to the plane \(z = 0\) gives a birational equivalence \(g : S^2 \dashrightarrow \mathbb{A}^2\) via \(g(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right)\), with rational inverse \(f(u,v) = \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1}\right)\). Since \(\mathbb{A}^2\) is irreducible and \(f(\mathbb{A}^2)\) is dense in \(S^2\), we conclude that the sphere is irreducible and \(S^2 \sim \mathbb{A}^2\) (birationally equivalent). Over \(\mathbb{Q}\), this parametrization recovers all rational points on the sphere — and restricting to the circle gives the classical parametrization of Pythagorean triples.
+
+---
+
+# Ring Extensions and Noether Normalization
+
+The deepest results in algebraic geometry — the Nullstellensatz, the theory of dimension, the finiteness of morphisms — all rest on a common algebraic foundation: the interplay between integral extensions and transcendence degree. This chapter develops the machinery that powers everything to come.
+
+## 1. Integral Extensions
+
+<div class="definition">
+<strong>Definition 5.1.</strong> Let \(R \subseteq S\) be commutative rings. An element \(u \in S\) is <strong>integral over \(R\)</strong> if \(u\) is a root of some monic polynomial \(f \in R[x]\). We say \(S\) is <strong>integral over \(R\)</strong> if every element of \(S\) is integral over \(R\).
+</div>
+
+For example, \(\sqrt{2}\) is integral over \(\mathbb{Z}\) (it satisfies \(x^2 - 2 = 0\)), but \(1/2\) is not. The element \(x \in F[x]\) is integral over \(F[x^2]\) (satisfying \(t^2 - x^2 = 0\)), but \(1/x \in F(x)\) is not integral over \(F[x]\).
+
+<div class="theorem">
+<strong>Theorem 5.2.</strong> Let \(R \subseteq S\) be domains, \(u \in S\). The following are equivalent:
+<ol>
+<li>\(u\) is integral over \(R\).</li>
+<li>\(R[u]\) is finitely generated as an \(R\)-module.</li>
+<li>\(R[u]\) is contained in some subring \(T \subseteq S\) that is finitely generated as an \(R\)-module.</li>
+<li>Every element of \(R[u]\) is integral over \(R\).</li>
+</ol>
+</div>
+
+The implication \((1) \Rightarrow (2)\) is the key: if \(f(u) = 0\) with \(f\) monic of degree \(n\), the division algorithm lets us reduce any power \(u^k\) modulo \(f\), so \(R[u] = R \cdot 1 + R \cdot u + \cdots + R \cdot u^{n-1}\). The implication \((3) \Rightarrow (4)\) uses a determinant trick: if \(w \in R[u] \subseteq T = R v_1 + \cdots + R v_n\), then \(w v_i = \sum a_{ij} v_j\) for some \(a_{ij} \in R\), giving \(\det(wI - A) = 0\), which is a monic polynomial in \(w\) over \(R\).
+
+<div class="corollary">
+<strong>Corollary 5.3.</strong> If \(R \subseteq S \subseteq T\) are domains with \(T\) integral over \(S\) and \(S\) integral over \(R\), then \(T\) is integral over \(R\) (integrality is transitive).
+</div>
+
+## 2. The Lying Over Theorem
+
+<div class="theorem">
+<strong>Theorem 5.4 (Lying Over).</strong> Let \(R \subseteq S\) be domains with \(S\) integral over \(R\). If \(M \subseteq R\) is a maximal ideal, then there exists a maximal ideal \(N \subseteq S\) with \(N \cap R = M\).
+</div>
+
+The proof uses Zorn's lemma to find a maximal element \(N\) among ideals of \(S\) whose contraction to \(R\) is contained in \(M\), and then a careful argument involving integrality to show that \(N \cap R\) is exactly \(M\) (not a smaller ideal). The geometric significance is immediate: if \(f : X \to Y\) is a morphism with \(\Gamma(X)\) integral over \(f^*\Gamma(Y)\), then every point of \(Y\) has a preimage in \(X\) — the map is surjective.
+
+## 3. Transcendence Degree
+
+<div class="definition">
+<strong>Definition 5.5.</strong> Let \(F \subseteq K\) be fields. A subset \(U \subseteq K\) is <strong>algebraically independent over \(F\)</strong> if for every \(n \in \mathbb{Z}^+\), every nonzero polynomial \(f \in F[x_1, \ldots, x_n]\), and all distinct \(u_1, \ldots, u_n \in U\), we have \(f(u_1, \ldots, u_n) \neq 0\). A <strong>transcendence basis</strong> for \(K\) over \(F\) is a maximal algebraically independent set.
+</div>
+
+<div class="theorem">
+<strong>Theorem 5.6.</strong> Let \(F \subseteq K\) be fields.
+<ol>
+<li>If \(U\) is algebraically independent over \(F\), then \(u \in K\) is transcendental over \(F(U)\) if and only if \(U \cup \{u\}\) is algebraically independent.</li>
+<li>\(U\) is a transcendence basis if and only if \(U\) is algebraically independent and \(K\) is algebraic over \(F(U)\).</li>
+<li>Any two transcendence bases have the same cardinality.</li>
+</ol>
+</div>
+
+The cardinality of any transcendence basis is the **transcendence degree** \(\operatorname{trans}_F K\). For example, \(\{x_1, \ldots, x_n\}\) is a transcendence basis for \(F(x_1, \ldots, x_n)\) over \(F\), so \(\operatorname{trans}_F F(x_1, \ldots, x_n) = n\). The proof that all transcendence bases have the same size mirrors the Steinitz exchange lemma from linear algebra: replace one element of a basis at a time.
+
+## 4. Noether's Normalization Lemma
+
+This is perhaps the most important theorem in commutative algebra. It says that every finitely generated algebra over a field, no matter how complicated, is built by a finite integral extension on top of a polynomial ring.
+
+<div class="theorem">
+<strong>Theorem 5.7 (Noether's Normalization Lemma).</strong> Let \(F\) be a field and let \(R = F[u_1, \ldots, u_n]\) be a domain. Let \(r = \operatorname{trans}_F \operatorname{Frac}(R)\). Then there exist elements \(v_1, \ldots, v_r \in R\), algebraically independent over \(F\), such that \(R\) is integral over \(F[v_1, \ldots, v_r]\).
+</div>
+
+<div class="proof">
+<em>Proof sketch.</em> If \(\{u_1, \ldots, u_n\}\) is algebraically independent, take \(v_i = u_i\). Otherwise, choose a nonzero relation \(f(u_1, \ldots, u_n) = 0\). The trick is to make a "generic" change of variables: for a large integer \(b\), set \(v_j = u_j - u_n^{b^j}\) for \(j = 1, \ldots, n-1\). Substituting \(u_j = v_j + u_n^{b^j}\) into \(f\) and choosing \(b\) large enough that the base-\(b\) representations of exponent tuples are distinct, the resulting polynomial has a unique term of highest degree in \(u_n\). Dividing by its coefficient, \(u_n\) satisfies a monic polynomial over \(F[v_1, \ldots, v_{n-1}]\), making it integral. Repeat until the remaining generators are algebraically independent. ∎
+</div>
+
+Geometrically, Noether normalization says that every irreducible variety of dimension \(d\) admits a surjective, finite-to-one map to \(\mathbb{A}^d\). The variety is a "finite branched cover" of affine space.
+
+**Example:** For \(R = F[x, 1/x]\), the generators \(\{x, 1/x\}\) satisfy \(st - 1 = 0\). Setting \(v = x - (1/x)^2\), we find that \(1/x\) is a root of the monic polynomial \(t^3 + vt - 1 \in F[v][t]\). So \(R\) is integral over \(F[v]\), as the lemma promises.
+
 ---
 
 # Dimension and Smoothness
@@ -261,6 +457,40 @@ By the Nullstellensatz, the dimension of \(V\) equals the Krull dimension of \(\
 </div>
 
 **Example:** The twisted cubic \(C = V(y - x^2, z - x^3) \subset \mathbb{A}^3\) has dimension 1. We can demonstrate this by the chain \((1,1,1) \subsetneq C \subsetneq V(y-x^2) \subsetneq \mathbb{A}^3\), which must be maximal since \(\mathbb{A}^3\) has dimension 3.
+
+The transcendence degree definition of dimension is equivalent to the chain definition, but the proof requires the full force of Noether normalization.
+
+<div class="theorem">
+<strong>Theorem 1.3a.</strong> Over an algebraically closed field, \(\dim(X)\) equals the length of the longest chain of irreducible subvarieties \(X_0 \subsetneq X_1 \subsetneq \cdots \subsetneq X_\ell = X\).
+</div>
+
+The key ingredient is that between any proper subvariety and the ambient variety, we can always insert a hypersurface.
+
+<div class="theorem">
+<strong>Theorem 1.4 (Hypersurface Characterization).</strong> An irreducible variety \(X \subseteq \mathbb{A}^n\) has dimension \(n-1\) if and only if \(X = V(f)\) for some irreducible polynomial \(f\).
+</div>
+
+<div class="proof">
+<em>Proof sketch.</em> If \(X = V(f)\) with \(f\) irreducible, then some variable \(x_n\) appears in \(f\), making \(x_n\) algebraic over \(\mathbb{C}(x_1, \ldots, x_{n-1})\) in \(K(X)\). If \(\{x_1, \ldots, x_{n-1}\}\) were algebraically dependent, some \(g(x_1, \ldots, x_{n-1}) \in I(X) = (f)\), forcing \(f \mid g\) — impossible since \(x_n\) appears in \(f\) but not in \(g\). So \(\dim(X) = n-1\). Conversely, if \(\dim(X) = n-1\), choose any \(g \in I(X)\); some irreducible factor \(f\) lies in the prime ideal \(I(X)\), and a dimension argument forces \(X = V(f)\). ∎
+</div>
+
+## 1a. Resultants and Generically Finite Maps
+
+The theory of dimension is intimately connected to the question: how many preimages does a map typically have? The answer involves resultants, a classical tool from elimination theory.
+
+<div class="definition">
+<strong>Definition 1.5.</strong> Let \(f(x) = \sum a_k x^k\) and \(g(x) = \sum b_k x^k\) be polynomials over a ring \(R\) of degrees \(n\) and \(m\). The <strong>resultant</strong> \(\operatorname{res}_{n,m}(f,g)\) is the determinant of the <strong>Sylvester matrix</strong>, the \((n+m) \times (n+m)\) matrix with \(m\) columns of coefficients of \(f\) and \(n\) columns of coefficients of \(g\). The polynomials \(f\) and \(g\) have a common root (in the algebraic closure) if and only if \(\operatorname{res}_{n,m}(f,g) = 0\).
+</div>
+
+The **discriminant** \(\operatorname{disc}_\ell(f) = \operatorname{res}_{\ell, \ell-1}(f, f')\) detects repeated roots: \(f\) has a repeated root if and only if \(\operatorname{disc}(f) = 0\).
+
+<div class="theorem">
+<strong>Theorem 1.6 (Generically \(d\):1 Maps).</strong> Let \(f : Y \to X\) be a dominant polynomial map of irreducible varieties over \(\mathbb{C}\). If \(K(Y)\) is algebraic over \(f^* K(X)\), then \(f\) is generically \(d\):1, where \(d = [K(Y) : f^* K(X)]\). If \(K(Y)\) is transcendental over \(f^* K(X)\), then \(f\) is generically \(\infty\):1.
+</div>
+
+"Generically \(d\):1" means that there is a dense open subset \(U \subseteq X\) such that \(|f^{-1}(a)| = d\) for every \(a \in U\). The proof reduces to the case \(Y \subseteq \mathbb{A}^{n+1}\), \(X \subseteq \mathbb{A}^n\) with \(f\) the projection: the fiber over a generic point \(a \in X\) consists of the roots of a minimal polynomial \(p(a, t)\), and the discriminant condition ensures exactly \(d\) distinct roots on a dense open set.
+
+As a corollary, Noether normalization yields: every irreducible variety of dimension \(d\) admits a surjective, finite-to-one polynomial map to \(\mathbb{A}^d\).
 
 ## 2. Smoothness
 
@@ -306,6 +536,42 @@ The reason we use the local ring \(\mathcal{O}_P(V)\) rather than \(\Gamma(V)\) 
 \[ \mathfrak{m}^{n-1}/\mathfrak{m}^n \cong \mathfrak{M}^{n-1}/\mathfrak{M}^n \]
 where \(\mathfrak{M}\) denotes the ideal of \(D_{\mathfrak{m}}\) generated by \(\mathfrak{m}\). In particular, \(\mathfrak{m}/\mathfrak{m}^2 \cong \mathfrak{M}/\mathfrak{M}^2\).
 </div>
+
+## 2. The Push-Forward
+
+A morphism (or rational map regular at a point) carries tangent vectors forward.
+
+<div class="definition">
+<strong>Definition 1.3.</strong> Let \(f : X \to Y\) be a polynomial map (or a rational map regular at \(P\)). The <strong>push-forward</strong> of \(f\) at \(P\) is the linear map \(f_* : T_P(X) \to T_{f(P)}(Y)\) given by \(f_*(u) = Df(P) \cdot u\), where \(Df(P)\) is the Jacobian matrix of \(f\) at \(P\).
+</div>
+
+<div class="theorem">
+<strong>Theorem 1.4.</strong> If \(f : X \to Y\) is an isomorphism (or a birational equivalence regular at \(P\) with inverse regular at \(f(P)\)), then \(f_* : T_P(X) \to T_{f(P)}(Y)\) is a linear isomorphism. In particular, \(\dim_P X = \dim_{f(P)} Y\).
+</div>
+
+This is the formal statement that smoothness and the tangent space dimension are invariants of isomorphism — they detect intrinsic geometry, not extrinsic embedding.
+
+## 3. Every Variety is Birational to a Hypersurface
+
+Two deep results from field theory — the Separating Transcendence Basis Theorem and the Primitive Element Theorem — combine to yield a remarkable structural result.
+
+<div class="theorem">
+<strong>Theorem 1.5 (Separating Transcendence Basis).</strong> Let \(K\) be finitely generated over an algebraically closed field \(F\), with \(\operatorname{trans}_F K = r\). Then some subset of the generators forms a transcendence basis \(\{u_1, \ldots, u_r\}\) such that \(K\) is separable over \(F(u_1, \ldots, u_r)\).
+</div>
+
+<div class="theorem">
+<strong>Theorem 1.6 (Primitive Element).</strong> If \(K\) is a finite separable extension of \(F\), then \(K = F[u]\) for some \(u \in K\).
+</div>
+
+<div class="theorem">
+<strong>Theorem 1.7.</strong> Every irreducible variety of dimension \(d\) is birationally equivalent to a hypersurface in \(\mathbb{A}^{d+1}\).
+</div>
+
+<div class="proof">
+<em>Proof sketch.</em> Let \(X \subseteq \mathbb{A}^n\) have dimension \(d\). Choose a separating transcendence basis \(\{x_1, \ldots, x_d\}\) for \(K(X)\) over \(\mathbb{C}\), and apply the Primitive Element Theorem to get \(K(X) = \mathbb{C}(x_1, \ldots, x_d)[u]\). The minimal polynomial \(p\) of \(u\) over \(\mathbb{C}(x_1, \ldots, x_d)\) is irreducible, and \(Y = V(p) \subseteq \mathbb{A}^{d+1}\) satisfies \(K(Y) \cong K(X)\), giving \(X \sim Y\). ∎
+</div>
+
+This is a powerful simplification: no matter how many equations define a variety, up to birational equivalence, it is always the zero set of a single polynomial in one extra dimension.
 
 ---
 
@@ -372,6 +638,18 @@ where "RRH" stands for "relevant radical homogeneous". (The irrelevant ideal is 
 <div class="theorem">
 <strong>Theorem 1.10.</strong> If \(V = V(F)\) for a polynomial \(F\) of degree \(d\), then the projective closure of \(V\) is \(V(f)\), where \(f = x_0^d F(x_1/x_0, \ldots, x_n/x_0)\) is the <strong>homogenization</strong> of \(F\).
 </div>
+
+The operations of homogenization and dehomogenization formalize the passage between affine and projective worlds.
+
+<div class="definition">
+<strong>Definition 1.11.</strong> Given a polynomial \(g \in \mathbb{C}[x_1, \ldots, x_n]\) of degree \(d\), the <strong>homogenization</strong> of \(g\) with respect to the variable \(x_0\) is:
+\[ g^h(x_0, x_1, \ldots, x_n) = x_0^d \cdot g\!\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) \]
+Conversely, given a homogeneous polynomial \(f \in \mathbb{C}[x_0, x_1, \ldots, x_n]\), its <strong>dehomogenization</strong> with respect to \(x_0\) is \(f^a(x_1, \ldots, x_n) = f(1, x_1, \ldots, x_n)\).
+</div>
+
+These are nearly inverse operations: \((g^h)^a = g\) always, while \((f^a)^h\) equals \(f\) up to a power of \(x_0\). The projective variety \(V(f) \cap U_0\) (where \(U_0 = \{x_0 \neq 0\}\)) is isomorphic to the affine variety \(V(f^a)\), and the projective closure of \(V(g)\) is \(V(g^h)\) (when \(g\) is irreducible).
+
+**Example:** The homogeneous polynomial \(f(x,y,z) = x^3 + 2x^2y - xyz\) dehomogenizes to \(f(1,y,z) = 1 + 2y - yz\) (setting \(x = 1\)), to \(f(x,1,z) = x^3 + 2x^2 - xz\) (setting \(y = 1\)), or to \(f(x,y,1) = x^3 + 2x^2y - xy\) (setting \(z = 1\)). The choice of chart determines which "slice" of the projective variety one sees as an affine variety.
 
 ---
 

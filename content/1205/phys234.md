@@ -3,19 +3,114 @@ title: "PHYS 234: Introduction to Quantum Mechanics"
 prof: "Raffi Budakian"
 ---
 
-# Unit 1: Foundations of Quantum Mechanics
+# Unit 1: The Breakdown of Classical Physics
 
-## Introduction and Historical Background
+Physics at the close of the nineteenth century rested on two seemingly complete pillars: particles obeying Newtonian mechanics and electromagnetic waves governed by Maxwell's equations. Point particles could be described entirely by position and momentum, with an associated kinetic and potential energy, and the laws of collision and conservation applied without exception. Waves, on the other hand, spread continuously through space, carried energy distributed over their entire extent, and produced interference when superimposed. Nothing in classical theory suggested that these two descriptions would ever need to overlap.
 
-Quantum mechanics grew out of the failures of classical physics in the late nineteenth and early twentieth centuries. Classical physics predicted a continuous distribution of energies for systems like blackbody radiation, but experiments showed discrete spectra. The photoelectric effect could not be explained by classical wave theory. These failures drove a revolution in how we understand the microscopic world.
-
-The central theme of this course is the **Stern-Gerlach experiment**, which exposes all the essential features of quantum mechanics in a compact, tangible setting. We begin with spin, a fundamentally quantum property with no classical analogue, before building the general formalism and applying it to the Schrödinger equation and wave mechanics.
+Then a series of experiments shattered that boundary. Blackbody radiation revealed that light energy comes in discrete packets. The photoelectric effect showed that electromagnetic waves behave like particles when they knock electrons off metals. The Compton effect demonstrated that photons carry momentum and obey the same conservation laws as billiard balls. And the Davisson-Germer experiment proved the converse — that particles like electrons produce diffraction patterns, behaving unmistakably like waves. Taken together, these results demanded an entirely new framework: quantum mechanics.
 
 **Key constants:**
-- Planck's constant (reduced): \(\hbar = h / 2\pi = 1.0546 \times 10^{-34}\ \mathrm{J \cdot s}\)
+- Planck's constant: \(h = 6.626 \times 10^{-34}\ \mathrm{J \cdot s}\)
+- Reduced Planck's constant: \(\hbar = h / 2\pi = 1.0546 \times 10^{-34}\ \mathrm{J \cdot s}\)
 - The unit of energy is the electron-volt: \(1\ \mathrm{eV} = 1.6 \times 10^{-19}\ \mathrm{J}\)
 
 ---
+
+## The Photoelectric Effect
+
+### Experimental Observations
+
+When light strikes a metal surface, electrons are ejected and collected at an opposing plate, producing a measurable current. Classical wave theory predicts that any frequency of light should liberate electrons if the intensity is high enough, that brighter light should eject faster electrons, and that there should be a time delay for weak sources as the electrons gradually absorb enough energy to escape. All three predictions fail spectacularly:
+
+- There is a sharp **cutoff frequency** \(f_0\) below which no current flows, regardless of intensity.
+- Even the faintest light above \(f_0\) produces an instantaneous current — no delay whatsoever.
+- Increasing intensity increases the number of ejected electrons but does not change their maximum kinetic energy.
+
+If an external voltage \(V\) is applied against the electron flow, the current ceases at a **stopping voltage** \(V_0\) that depends on frequency but not on intensity. The cutoff frequency is thus a function of the applied voltage: \(f_0(V)\).
+
+### Einstein's Explanation (1905)
+
+Einstein resolved these puzzles with two radical postulates: light comes in quantized packets called **photons**, and each photon of frequency \(f\) carries energy
+
+\[
+E_f = hf
+\]
+
+For visible light with \(f \approx 10^{15}\ \mathrm{Hz}\), this gives \(E_f \approx 10^{-19}\ \mathrm{J} \sim 1\ \mathrm{eV}\).
+
+The mechanism is elegantly simple: one photon interacts with one electron. The photon is absorbed completely, transferring its energy to the electron. The electron uses part of this energy to overcome the binding potential of the metal — the **work function** \(W\) — and the remainder becomes kinetic energy:
+
+\[
+hf = W + E_k
+\]
+
+The cutoff frequency satisfies \(hf_0 = W\), giving \(f_0 = W/h\). If \(f < f_0\), no single photon has enough energy to liberate an electron, and no current flows regardless of intensity. Even if an electron absorbs a sub-threshold photon, its energy dissipates through collisions long before a second photon arrives. With an applied stopping voltage, energy conservation gives:
+
+\[
+V_0 = \frac{hf - W}{e}
+\]
+
+where \(e\) is the electron charge. This linear relationship between stopping voltage and frequency was confirmed experimentally by Millikan in 1916, providing one of the earliest quantitative verifications of the quantum hypothesis.
+
+---
+
+## The Compton Effect
+
+Having established that light carries quantized energy, it is natural to ask whether photons also carry momentum. The **Compton effect** (1923) answers this decisively.
+
+### Classical Expectation
+
+In classical electromagnetic theory, light scattered by charged particles undergoes **Rayleigh scattering**: the oscillating electric field of the incoming wave sets the charges in the target vibrating at the same frequency, and these accelerating charges radiate at that same frequency in all directions. The intensity of Rayleigh scattering scales as \(f^4\) — which is why the sky is blue — but crucially, the frequency of the scattered light is unchanged.
+
+### The Quantum Result
+
+When Arthur Compton directed X-rays at graphite targets, he observed that the scattered X-rays at an angle \(\theta\) had a *different* wavelength from the incident beam, with the shift depending on the scattering angle. This frequency change cannot be explained by classical wave theory.
+
+The quantum explanation treats the interaction as a billiard-ball collision between a photon and a loosely bound electron. The photon has momentum:
+
+\[
+p_f = \frac{hf}{c} = \frac{h}{\lambda}
+\]
+
+Applying conservation of relativistic energy and momentum to the photon-electron collision yields the **Compton scattering formula**:
+
+\[
+\Delta\lambda = \frac{h}{m_e c}(1 - \cos\theta) = \lambda_C(1 - \cos\theta)
+\]
+
+where \(\lambda_C = h/(m_e c) \approx 2.43 \times 10^{-12}\ \mathrm{m}\) is the **Compton wavelength** of the electron. The shift is maximal for backscattering (\(\theta = \pi\), giving \(\Delta\lambda = 2\lambda_C\)) and zero for forward scattering. The Compton effect is negligible at optical wavelengths (where \(\Delta\lambda \ll \lambda\)) but dramatic in the X-ray regime, providing irrefutable evidence that photons carry momentum exactly as Einstein's quantum picture demands.
+
+---
+
+## The De Broglie Hypothesis and the Davisson-Germer Experiment
+
+### De Broglie's Postulate (1924)
+
+The photoelectric and Compton effects proved that waves can behave like particles. Louis de Broglie made the audacious leap in the other direction: if the photon momentum relation \(p = h/\lambda\) contains nothing specific to light, perhaps *all* matter has an associated wavelength. His postulate assigns to every particle of momentum \(p\) a **de Broglie wavelength**:
+
+\[
+\lambda = \frac{h}{p}
+\]
+
+For macroscopic objects this wavelength is absurdly small — a tennis ball at 50 m/s has \(\lambda \sim 10^{-34}\ \mathrm{m}\) — but for electrons accelerated through modest voltages, \(\lambda\) falls in the range of atomic spacings, making wave-like effects observable.
+
+### The Davisson-Germer Experiment (1927)
+
+The experimental confirmation came from Clinton Davisson and Lester Germer, who directed a beam of electrons at a nickel crystal. The crystal lattice acts as a **Bragg grating**: planes of atoms separated by distance \(d\) reflect waves, and constructive interference occurs when the path length difference satisfies the **Bragg condition**:
+
+\[
+n\lambda = 2d\sin\phi
+\]
+
+where \(\phi\) is the angle of incidence and \(n\) is a positive integer. Davisson and Germer observed sharp diffraction maxima at exactly the angles predicted by the Bragg condition using de Broglie's wavelength for the electrons. This was the definitive proof that particles exhibit wave-like properties such as diffraction and interference — and it earned de Broglie the 1929 Nobel Prize in Physics.
+
+The stage was now set: waves behave like particles (photoelectric, Compton), and particles behave like waves (Davisson-Germer, double slit). The task of quantum mechanics is to provide a unified framework encompassing both.
+
+---
+
+# Unit 2: Foundations of Quantum Mechanics
+
+The central theme of this course is the **Stern-Gerlach experiment**, which exposes all the essential features of quantum mechanics in a compact, tangible setting. We begin with spin, a fundamentally quantum property with no classical analogue, before building the general formalism and applying it to the Schrödinger equation and wave mechanics.
 
 ## The Stern-Gerlach Experiment I
 
@@ -339,7 +434,7 @@ A rotation by \(4\pi\) is needed to fully recover the original state. This **spi
 
 ---
 
-# Unit 2: Commutation Relations and the Uncertainty Principle
+# Unit 3: Commutation Relations and the Uncertainty Principle
 
 ## Commutation Relations for Angular Momentum
 
@@ -423,6 +518,90 @@ Indeed, \(\Delta S_x = \Delta S_y = \hbar/2\), so \(\Delta S_x\,\Delta S_y = \hb
 
 ---
 
+## Interaction-Free Measurement: The Elitzur-Vaidman Bomb Tester
+
+One of the most striking consequences of quantum superposition is that it permits **interaction-free measurement** — detecting the presence of an object without a single photon ever touching it. The Elitzur-Vaidman bomb problem, first proposed in 1993, provides a vivid illustration.
+
+### The Setup
+
+Consider a factory that produces bombs fitted with optical fuses so sensitive that a single photon striking the fuse detonates the bomb. Unfortunately, some bombs are defective — their fuses do not work. The challenge is to identify working bombs without detonating them.
+
+Classically this is impossible: any photon that tests the fuse either detonates the bomb (confirming it works) or passes through (leaving us uncertain). Quantum mechanics, however, offers a way out using a **Mach-Zehnder interferometer** — two 50-50 beam splitters connected by two paths.
+
+### Without the Bomb
+
+A photon entering the interferometer from the lower path encounters beam splitter \(B_1\), which creates a superposition of the upper and lower paths. Both paths converge at beam splitter \(B_2\). The beam splitter operators are:
+
+\[
+B_1 = \frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1 \\ 1 & -1\end{pmatrix}, \qquad B_2 = \frac{1}{\sqrt{2}}\begin{pmatrix}-1 & 1 \\ 1 & 1\end{pmatrix}
+\]
+
+The output state is:
+
+\[
+|\text{out}\rangle = B_2 B_1 |\text{down}\rangle = |\text{up}\rangle
+\]
+
+Due to destructive interference in the lower output port, the photon *always* exits upward and arrives at Detector 1. Detector 2 never clicks.
+
+### With a Working Bomb
+
+Now place a working bomb in the upper path. If the photon takes the upper path (probability 1/2), the bomb detonates. If it takes the lower path (probability 1/2), the bomb is untouched — but the superposition is destroyed because the upper path has been blocked. Without interference, the photon at \(B_2\) has equal probability of reaching either detector.
+
+The three outcomes are:
+- **Bomb explodes** (50%): the photon hit the fuse.
+- **Detector 1 clicks** (25%): indistinguishable from a defective bomb — no information gained.
+- **Detector 2 clicks** (25%): this *never* happens without the bomb. The photon reached Detector 2 without touching the bomb, yet we know with certainty that the bomb is live.
+
+| Bomb Status | Explodes | Detector 1 | Detector 2 |
+| :--- | :--- | :--- | :--- |
+| Defective | — | 100% | 0% |
+| Working | 50% | 25% | 25% |
+
+A click at Detector 2 constitutes **interaction-free measurement**: we have certified a bomb as working using a photon that never interacted with it. The mere *possibility* of interaction — the bomb's capacity to absorb a photon on one path — is enough to destroy the interference that would otherwise prevent Detector 2 from firing.
+
+Starting with 70% working bombs, a single pass yields 17.5% certified working bombs (without detonation), 47.5% undetermined, and 35% exploded. By recycling the undetermined bombs through repeated trials, the yield improves further. Remarkably, more sophisticated schemes using the quantum Zeno effect can push the success rate arbitrarily close to 100%.
+
+---
+
+## The Quantum Zeno Effect
+
+The quantum Zeno effect demonstrates that sufficiently frequent observation can freeze the evolution of a quantum system, holding it in its initial state indefinitely. The name alludes to Zeno's paradox of the arrow — if observed at each instant, a moving arrow appears stationary.
+
+### Setup
+
+Consider a unitary operator \(U\) that flips a spin from \(|{+}\rangle\) to \(|{-}\rangle\) (implemented, say, by passing the particle through a magnetic field region of appropriate length \(L\)). Now divide this region into \(n\) equal segments, each implementing a partial rotation:
+
+\[
+U_{L/n} = \begin{pmatrix}\cos\!\left(\frac{\pi}{2n}\right) & i\sin\!\left(\frac{\pi}{2n}\right) \\ i\sin\!\left(\frac{\pi}{2n}\right) & \cos\!\left(\frac{\pi}{2n}\right)\end{pmatrix}
+\]
+
+Note that \(U_{L/n}^n = U\): applying all \(n\) partial rotations recovers the full flip. Insert a \(z\)-oriented Stern-Gerlach device after each segment, blocking the \(|{-}\rangle\) component.
+
+### Quantitative Analysis
+
+After one segment followed by a measurement, the probability of surviving in the \(|{+}\rangle\) state is:
+
+\[
+P_{\text{survive}}^{(1)} = \cos^2\!\left(\frac{\pi}{2n}\right)
+\]
+
+After all \(n\) segments (each followed by a measurement), the total survival probability is:
+
+\[
+P_{\text{survive}}^{(n)} = \cos^{2n}\!\left(\frac{\pi}{2n}\right) \approx 1 - \frac{\pi^2}{4n}
+\]
+
+where the last approximation uses \(\cos\theta \approx 1 - \theta^2/2\) for small \(\theta\). As \(n \to \infty\), the survival probability approaches 1: *all atoms emerge in the \(|{+}\rangle\) state*, even though the magnetic field is trying to flip them.
+
+### Physical Interpretation
+
+The mechanism is subtle. Each measurement collapses the state back to \(|{+}\rangle\), converting a coherent probability amplitude into a classical probability. Between measurements, the unitary evolution only rotates the state by a small angle \(\pi/(2n)\), so the probability of finding \(|{-}\rangle\) is only \(\sin^2(\pi/2n) \approx \pi^2/(4n^2)\) — quadratically small. Each measurement resets the clock, and the accumulated probability of ever transitioning to \(|{-}\rangle\) scales as \(n \times \pi^2/(4n^2) = \pi^2/(4n) \to 0\).
+
+In essence, frequent measurement interrupts the coherent buildup of the \(|{-}\rangle\) amplitude. The system is perpetually nudged back to its initial state. This is not merely a theoretical curiosity — the quantum Zeno effect has been observed experimentally in trapped ions and has practical implications for quantum error correction and quantum computing, where controlled measurements can suppress unwanted transitions.
+
+---
+
 ## The Density Operator
 
 ### Pure and Mixed Ensembles
@@ -438,7 +617,7 @@ The expectation value of any observable is \(\langle\hat{A}\rangle = \mathrm{Tr}
 
 ---
 
-# Unit 3: Time Evolution
+# Unit 4: Time Evolution
 
 ## The Hamiltonian and the Schrödinger Equation
 
@@ -488,7 +667,7 @@ The Hamiltonian has off-diagonal matrix elements coupling the two configurations
 
 ---
 
-## Lectures 15–17: Spin Precession and Magnetic Resonance
+## Spin Precession and Magnetic Resonance
 
 ### Spin Hamiltonian
 
@@ -532,7 +711,113 @@ At resonance, \(\Omega = \omega_1\) and \(P_{+\to -} = \sin^2(\omega_1 t/2)\), r
 
 ---
 
-# Unit 4: Wave Mechanics in Position Space
+## Applications of Time Evolution
+
+### Constant Energy Shifts
+
+If every energy eigenvalue is shifted by a constant \(\Delta\), so that \(H' = \sum_n (E_n + \Delta)|E_n\rangle\langle E_n|\), the time-evolved state simply acquires an additional global phase:
+
+\[
+|\psi'(t)\rangle = e^{-i\Delta t/\hbar}\,|\psi(t)\rangle
+\]
+
+Since the global phase factor \(e^{-i\Delta t/\hbar}\) cancels in all expectation values and probabilities, a uniform energy shift is physically irrelevant. This is the quantum analogue of the classical freedom to choose the zero of potential energy.
+
+### Neutrino Oscillations
+
+**Neutrinos** are relativistic leptons that interact only via the weak force. Three flavours exist — the electron neutrino \(\nu_e\), the muon neutrino \(\nu_\mu\), and the tau neutrino \(\nu_\tau\) — produced in reactions like:
+
+\[
+p \to n + e^+ + \nu_e, \qquad \pi^+ \to \mu^+ + \nu_\mu
+\]
+
+The three flavour states span a vector space: \(|\psi\rangle = \alpha|\nu_e\rangle + \beta|\nu_\mu\rangle + \gamma|\nu_\tau\rangle\). A deep puzzle emerged when solar neutrino experiments detected only about a third of the predicted electron neutrinos. Quantum mechanics explains this through **neutrino oscillations** — flavour states are not energy eigenstates.
+
+In the simplified two-flavour case (neglecting \(\nu_\tau\) for solar neutrinos), the flavour eigenstates are related to the mass eigenstates \(|\nu_1\rangle\), \(|\nu_2\rangle\) by a **mixing angle** \(\theta\):
+
+\[
+|\nu_e\rangle = \cos\frac{\theta}{2}\,|\nu_1\rangle + \sin\frac{\theta}{2}\,|\nu_2\rangle, \qquad |\nu_\mu\rangle = \sin\frac{\theta}{2}\,|\nu_1\rangle - \cos\frac{\theta}{2}\,|\nu_2\rangle
+\]
+
+Since neutrinos interact so weakly, they propagate essentially as free particles with relativistic energies \(E_j = \sqrt{(pc)^2 + (m_j c^2)^2}\). An electron neutrino produced at \(t = 0\) evolves as:
+
+\[
+|\psi(t)\rangle = \cos\frac{\theta}{2}\,e^{-iE_1 t/\hbar}|\nu_1\rangle + \sin\frac{\theta}{2}\,e^{-iE_2 t/\hbar}|\nu_2\rangle
+\]
+
+The probability of detecting a muon neutrino at time \(t\) oscillates:
+
+\[
+P(\nu_e \to \nu_\mu) = \sin^2\theta\,\sin^2\!\left(\frac{(E_1 - E_2)t}{2\hbar}\right)
+\]
+
+Since neutrinos travel at nearly the speed of light, we substitute \(t = L/c\) to express this in terms of distance \(L\) from the source:
+
+\[
+P(\nu_e \to \nu_\mu) = \sin^2\theta\,\sin^2\!\left(\frac{(m_1^2 - m_2^2)Lc^3}{4E\hbar}\right)
+\]
+
+Experimental measurements give \(m_1^2 - m_2^2 \approx 8 \times 10^{-5}\ \mathrm{eV}^2/c^4\) and a mixing angle \(\theta \approx 69°\). This is a beautiful macroscopic manifestation of the quantum superposition principle: a particle created with a definite flavour does not retain that flavour as it propagates, because flavour and mass are described by different bases. The resolution of the solar neutrino problem earned the 2015 Nobel Prize in Physics.
+
+### Quantum Clocks
+
+A **quantum clock** exploits the Bohr frequency of a two-level system to measure time with extraordinary precision. The idea is conceptually identical to a pendulum clock, but with a quantum oscillator replacing the mechanical one.
+
+Consider an atom with ground state \(|g\rangle\) (energy \(E_g\)) and excited state \(|e\rangle\) (energy \(E_e\)). The Hamiltonian is \(H = E_g|g\rangle\langle g| + E_e|e\rangle\langle e|\). Prepare the atom in the equal superposition \(|\psi(0)\rangle = (|e\rangle + |g\rangle)/\sqrt{2}\) by applying a \(\pi/2\)-pulse (a 90° rotation on the Bloch sphere using a resonant field along the \(y\)-axis):
+
+\[
+U_{\pi/2} = \frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1 \\ -1 & 1\end{pmatrix}
+\]
+
+On the Bloch sphere, this places the state vector on the equator. Under free evolution, the Bloch vector precesses around the \(z\)-axis at the Bohr frequency \(\Omega = (E_e - E_g)/\hbar\):
+
+\[
+|\psi(t)\rangle = \frac{1}{\sqrt{2}}\left(e^{-iE_e t/\hbar}|e\rangle + e^{-iE_g t/\hbar}|g\rangle\right)
+\]
+
+After a time interval \(\Delta t\), apply the inverse rotation \(U_{-\pi/2}\) and measure in the \(\{|e\rangle, |g\rangle\}\) basis. The probability of finding the atom in the ground state is:
+
+\[
+P(g) = \cos^2\!\left(\frac{\Omega\,\Delta t}{2}\right)
+\]
+
+By repeating this protocol many times and measuring \(P(g)\), one determines \(\Omega\,\Delta t\) and hence the elapsed time \(\Delta t\). The period of the oscillation is \(T = 2\pi/\Omega\). Modern atomic clocks based on this principle (using the caesium-133 hyperfine transition at 9.192 GHz) define the SI second and achieve fractional uncertainties below \(10^{-16}\) — losing less than one second in 300 million years.
+
+---
+
+## The Bloch Vector: General Theory
+
+The Bloch sphere representation introduced earlier can be formalized using the density matrix and Pauli operators. For any spin-\(\frac{1}{2}\) state (pure or mixed), the **Bloch vector** \(\vec{v}\) is defined by:
+
+\[
+\vec{v} = \begin{pmatrix}\langle\sigma_x\rangle \\ \langle\sigma_y\rangle \\ \langle\sigma_z\rangle\end{pmatrix} = \frac{2}{\hbar}\begin{pmatrix}\langle S_x\rangle \\ \langle S_y\rangle \\ \langle S_z\rangle\end{pmatrix}
+\]
+
+The density matrix can be expressed compactly in terms of the Bloch vector:
+
+\[
+\rho = \frac{1}{2}\left(\mathbf{1} + \vec{v}\cdot\vec{\sigma}\right)
+\]
+
+For a **pure state**, \(|\vec{v}| = 1\) (the Bloch vector sits on the surface of the unit sphere). For a **mixed state**, \(|\vec{v}| < 1\) (the vector lies inside the sphere). The completely mixed state has \(\vec{v} = \vec{0}\) and \(\rho = \mathbf{1}/2\).
+
+The expectation value of spin along an arbitrary direction \(\hat{n}\) follows directly:
+
+\[
+\langle S_{\hat{n}}\rangle = \frac{\hbar}{2}\,\vec{v}\cdot\hat{n}
+\]
+
+and the measurement probabilities are:
+
+\[
+P(+_{\hat{n}}) = \frac{1}{2}(1 + \vec{v}\cdot\hat{n}), \qquad P(-_{\hat{n}}) = \frac{1}{2}(1 - \vec{v}\cdot\hat{n})
+\]
+
+These formulas make the Bloch sphere a powerful tool for visualizing spin dynamics. Under a Hamiltonian \(H = -\omega_0 S_z\), the Bloch vector precesses around \(\hat{z}\) at the Larmor frequency — exactly as described in the magnetic resonance section above.
+
+---
+
+# Unit 5: Wave Mechanics in Position Space
 
 ## Quantum Mechanics in the Position Basis
 
@@ -706,6 +991,38 @@ inside the well, oscillatory solutions match smoothly to the decaying exponentia
 
 The number of bound states (states with \(E < 0\)) is finite and depends on the depth and width of the well. As \(V_0 \to \infty\), the finite-well results converge to the infinite-well results.
 
+### The Parity Operator and Symmetry Simplifications
+
+The eigenfunctions of the infinite square well alternate between even and odd symmetry. This pattern is no accident — it is a consequence of the **parity operator** \(\hat{\Pi}\), defined by:
+
+\[
+\hat{\Pi}|x\rangle = |-x\rangle
+\]
+
+The parity operator reflects the coordinate through the origin. If the potential is symmetric, \(V(-x) = V(x)\), then \(\hat{\Pi}\) commutes with the Hamiltonian: \([\hat{\Pi}, H] = 0\). By the theorem that commuting Hermitian operators share eigenstates, every energy eigenfunction must also be an eigenstate of parity — that is, either **symmetric** (even parity, \(\hat{\Pi}\psi = +\psi\)) or **antisymmetric** (odd parity, \(\hat{\Pi}\psi = -\psi\)).
+
+For the symmetric finite square well centered at the origin (\(-a < x < a\)), this dramatically simplifies the boundary-matching problem. Instead of solving for four unknown coefficients, we can treat the symmetric and antisymmetric cases separately:
+
+**Symmetric solutions** (\(\psi(-x) = \psi(x)\)):
+
+\[
+\psi_E(x) = \begin{cases}A_+ e^{\kappa x}, & x \leq -a \\ B\cos(kx), & |x| < a \\ A_+ e^{-\kappa x}, & x \geq a\end{cases}
+\]
+
+**Antisymmetric solutions** (\(\psi(-x) = -\psi(x)\)):
+
+\[
+\psi_E(x) = \begin{cases}A_+ e^{\kappa x}, & x \leq -a \\ B\sin(kx), & |x| < a \\ -A_+ e^{-\kappa x}, & x \geq a\end{cases}
+\]
+
+Matching \(\psi\) and \(\psi'\) at \(x = a\) yields the transcendental equations:
+
+\[
+\kappa = \begin{cases}k\tan(ka), & \text{symmetric} \\ -k\cot(ka), & \text{antisymmetric}\end{cases}
+\]
+
+These must be solved graphically or numerically. The key physical insight is that parity symmetry cuts the problem in half: the symmetric and antisymmetric solutions can be found independently, and the energy levels alternate in parity as they increase.
+
 ---
 
 ## Time Evolution and Position-Momentum Uncertainty
@@ -732,7 +1049,7 @@ The product \(\Delta x\,\Delta p > \hbar/2\) for all \(n\), consistent with the 
 
 ---
 
-# Unit 5: The Quantum Harmonic Oscillator
+# Unit 6: The Quantum Harmonic Oscillator
 
 ## The Quantum Harmonic Oscillator I — Energy Spectrum
 
@@ -844,7 +1161,7 @@ Classically, the probability density is \(\rho(x) = 1/(\pi\sqrt{A^2 - x^2})\) fo
 
 ---
 
-# Unit 6: Free Particles and Wave Packets
+# Unit 7: Free Particles and Wave Packets
 
 ## Free Particle Eigenstates
 
@@ -930,7 +1247,7 @@ and wavefunction \(\psi(x) = \sqrt{m\alpha/\hbar^2}\,e^{-m\alpha|x|/\hbar^2}\).
 
 ---
 
-# Unit 7: Scattering and Tunneling
+# Unit 8: Scattering and Tunneling
 
 ## Scattering from Localized Potentials
 
@@ -988,13 +1305,19 @@ Tunneling is responsible for:
 - The tunnel diode
 - Flash memory transistors
 
+### Radioactive Alpha Decay
+
+In 1928, George Gamow applied tunneling to explain alpha decay — the spontaneous emission of a helium-4 nucleus (\(\alpha\) particle) from a heavy nucleus. Inside the nucleus, the \(\alpha\) particle sits in a potential well created by the strong nuclear force. Outside, the Coulomb repulsion creates a barrier whose height (tens of MeV) far exceeds the \(\alpha\) particle's kinetic energy (typically 4–9 MeV). Classically, the \(\alpha\) particle should remain trapped forever.
+
+Quantum mechanically, there is a small but non-zero tunneling probability each time the \(\alpha\) particle bounces off the barrier wall. The \(\alpha\) particle rattles back and forth inside the nucleus at a frequency \(\nu \sim v/(2R)\) (where \(R\) is the nuclear radius), and each collision has a transmission probability \(T \approx e^{-2\kappa w}\), where \(w\) is the effective barrier width. The decay rate is \(\lambda = \nu T\), and the half-life is \(t_{1/2} = \ln 2/\lambda\). Because \(T\) depends exponentially on the barrier parameters, small changes in the \(\alpha\) particle's energy produce enormous changes in half-life — from microseconds to billions of years — explaining the vast range of observed half-lives across the periodic table.
+
 ### Scanning Tunneling Microscopy (STM)
 
 In an STM, a sharp metal tip is brought within a few angstroms of a conducting surface. The tunneling current (exponentially sensitive to tip-surface distance) enables atomic-resolution imaging of surfaces. The exponential sensitivity means \(\sim 1\)Å changes in distance produce an order-of-magnitude change in current.
 
 ---
 
-# Unit 8: Entanglement and the Foundations of Quantum Mechanics
+# Unit 9: Entanglement and the Foundations of Quantum Mechanics
 
 ## The EPR Paradox and Bell Inequalities
 
