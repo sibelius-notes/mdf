@@ -3,9 +3,7 @@
   <header class="course-header">
     <h1 class="course-title caveat">{{ .Title }}</h1>
     {{ with .Params.prof }}<p class="course-prof caveat">{{ . }}</p>{{ end }}
-    {{ $rawStripped := .RawContent | replaceRE "<[^>]+>" " " | replaceRE "(?s)^---.*?---" "" | replaceRE "\\s+" " " | strings.TrimSpace }}
-    {{ $words := len (split $rawStripped " ") }}
-    {{ $minutes := div $words 180 }}
+    {{ $minutes := div .WordCount 180 }}
     <p class="reading-time">Estimated reading time: {{ if lt $minutes 1 }}less than 1 minute{{ else if ge $minutes 60 }}{{ $hrs := div $minutes 60 }}{{ $mins := mod $minutes 60 }}{{ $hrs }} hr{{ if $mins }} {{ $mins }} min{{ end }}{{ else }}{{ $minutes }} minutes{{ end }}</p>
   </header>
 
