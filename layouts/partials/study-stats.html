@@ -20,7 +20,7 @@
 {{- $displayEquations := add (len $displayMatches) (len $envMatches) -}}
 {{- $mathCommands := len (findRE `\\[A-Za-z]+` $mathContent) -}}
 
-{{- $proseSeconds := mul $proseWords 20 -}}
+{{- $proseSeconds := div (mul $proseWords 60) 180 -}}
 {{- $inlineSeconds := mul $inlineEquations 2 -}}
 {{- $displaySeconds := mul $displayEquations 20 -}}
 {{- $commandSeconds := div $mathCommands 2 -}}
