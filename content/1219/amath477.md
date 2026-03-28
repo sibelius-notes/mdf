@@ -108,7 +108,11 @@ The **characteristic function** is \(\phi_X(t) = E[e^{itX}]\), which always exis
 
 The **cumulant generating function** is \(\log M_X(t) = \sum_{n=1}^\infty \kappa_n t^n/n!\). The cumulants \(\kappa_n\) are related to moments: \(\kappa_1 = E[X]\), \(\kappa_2 = \text{Var}(X)\), and higher cumulants measure departure from Gaussianity. For a Gaussian, all cumulants of order \(\ge 3\) are zero.
 
+![Characteristic functions $\varphi(t)=E[e^{itX}]$: Normal (Gaussian decay $e^{-t^2/2}$, blue) vs Cauchy (exponential decay $e^{-|t|}$, red), in linear and log scale.](/static/pics/amath477/characteristic_functions.png)
+
 ## Key Continuous Distributions
+
+![Standard Normal $N(0,1)$: PDF $\phi(x)$ with 68% and 95% shaded regions (left); CDF $\Phi(x)$ with key values marked (right).](/static/pics/amath477/normal_pdf_cdf.png)
 
 The **Exponential** distribution with rate \(\lambda > 0\) has PDF \(p(x) = \lambda e^{-\lambda x}\) for \(x \ge 0\). Its mean is \(1/\lambda\) and variance \(1/\lambda^2\).
 
@@ -154,7 +158,36 @@ The **abstract definition** via \(\sigma\)-algebras is more general and foundati
 4. **Independence:** If \(X\) is independent of \(\mathcal{G}\), then \(E[X|\mathcal{G}] = E[X]\).
 5. **Jensen's inequality:** For convex \(\varphi\), \(\varphi(E[X|\mathcal{G}]) \le E[\varphi(X)|\mathcal{G}]\).
 
-The **best approximation property** of conditional expectation states that among all \(\mathcal{G}\)-measurable functions \(g\), the function \(E[X|\mathcal{G}]\) minimizes \(E[(X - g)^2]\). This is the MMSE interpretation: \(E[X|Y]\) is the best predictor of \(X\) given observation \(Y\).
+The **best approximation property** of conditional expectation states that among all \(\mathcal{G}\)-measurable functions \(g\), the function \(E[X|\mathcal{G}]\) minimizes \(E[(X - g)^2]\).
+
+<svg viewBox="0 0 460 230" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <text x="230" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor">Conditional Expectation as Projection in $L^2$</text>
+  <!-- Subspace V line (G-measurable) -->
+  <line x1="40" y1="190" x2="420" y2="130" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="425" y="128" font-size="11" fill="#3b82f6">$V = L^2(\mathcal{G})$</text>
+  <!-- X point -->
+  <circle cx="280" cy="60" r="5" fill="#ef4444"/>
+  <text x="288" y="58" font-size="11" fill="#ef4444">$X$</text>
+  <!-- Projection Xhat on V -->
+  <!-- perpendicular foot: project (280,60) onto line from (40,190) to (420,130) -->
+  <!-- direction: (380,-60), len=sqrt(380^2+60^2)≈385. foot t = ((280-40)*380+(60-190)*(-60)) / 385^2 -->
+  <!-- t = (240*380 + (-130)*(-60))/385^2 = (91200+7800)/148225 ≈ 0.668 -->
+  <!-- foot = (40+0.668*380, 190+0.668*(-60)) = (294, 150) -->
+  <circle cx="294" cy="150" r="5" fill="#3b82f6"/>
+  <text x="300" y="148" font-size="11" fill="#3b82f6">$\hat{X}=E[X|\mathcal{G}]$</text>
+  <!-- Dashed perpendicular -->
+  <line x1="280" y1="60" x2="294" y2="150" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Right angle mark -->
+  <polyline points="287,144 291,136 299,140" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+  <!-- Error arrow and label -->
+  <text x="255" y="112" font-size="10" fill="#ef4444">$X - \hat{X}$</text>
+  <text x="244" y="124" font-size="9" fill="#ef4444">(error, $\perp V$)</text>
+  <!-- Another point on V for illustration -->
+  <circle cx="180" cy="170" r="4" fill="gray" opacity="0.6"/>
+  <text x="158" y="182" font-size="9" fill="gray">other $Z\in V$</text>
+  <line x1="280" y1="60" x2="180" y2="170" stroke="gray" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="195" y="112" font-size="9" fill="gray">$\|X-Z\|\geq\|X-\hat{X}\|$</text>
+</svg> This is the MMSE interpretation: \(E[X|Y]\) is the best predictor of \(X\) given observation \(Y\).
 
 ## Memoryless Property of the Exponential Distribution
 
@@ -217,12 +250,54 @@ Given a sequence of random variables \(X_1, X_2, \ldots\) and a target \(X\), fo
 
 **Relationships among modes:** (a.s.) \(\Rightarrow\) (p.) \(\Rightarrow\) (d.); (m.s.) \(\Rightarrow\) (p.) \(\Rightarrow\) (d.). Neither (a.s.) nor (m.s.) implies the other in general.
 
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor">Convergence Modes Hierarchy</text>
+  <!-- Boxes -->
+  <!-- a.s. -->
+  <rect x="30" y="50" width="110" height="44" rx="8" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="85" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#3b82f6">a.s.</text>
+  <text x="85" y="84" text-anchor="middle" font-size="9" fill="currentColor">$P(\lim X_n=X)=1$</text>
+  <!-- m.s. -->
+  <rect x="30" y="120" width="110" height="44" rx="8" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="85" y="138" text-anchor="middle" font-size="12" font-weight="bold" fill="#22c55e">m.s.</text>
+  <text x="85" y="154" text-anchor="middle" font-size="9" fill="currentColor">$E[(X_n-X)^2]\to 0$</text>
+  <!-- in P -->
+  <rect x="185" y="85" width="110" height="44" rx="8" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="240" y="103" text-anchor="middle" font-size="12" font-weight="bold" fill="#ef4444">in prob.</text>
+  <text x="240" y="119" text-anchor="middle" font-size="9" fill="currentColor">$P(|X_n-X|>\varepsilon)\to 0$</text>
+  <!-- in d -->
+  <rect x="340" y="85" width="110" height="44" rx="8" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-width="1.8"/>
+  <text x="395" y="103" text-anchor="middle" font-size="12" font-weight="bold" fill="#a855f7">in distr.</text>
+  <text x="395" y="119" text-anchor="middle" font-size="9" fill="currentColor">$F_{X_n}(x)\to F_X(x)$</text>
+  <!-- Arrows -->
+  <!-- a.s. → in P -->
+  <line x1="140" y1="72" x2="185" y2="100" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- m.s. → in P -->
+  <line x1="140" y1="142" x2="185" y2="118" stroke="#22c55e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- in P → in d -->
+  <line x1="295" y1="107" x2="340" y2="107" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- No-implication between a.s. and m.s. -->
+  <line x1="85" y1="94" x2="85" y2="120" stroke="gray" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="92" y="110" font-size="8" fill="gray">neither</text>
+  <!-- Notes -->
+  <text x="240" y="170" text-anchor="middle" font-size="9" fill="currentColor">Converse arrows fail in general (counterexamples exist).</text>
+  <text x="240" y="185" text-anchor="middle" font-size="9" fill="currentColor">a.s. $\xRightarrow{\text{dom. conv.}}$ m.s. when dominated.</text>
+</svg>
+
 The implication (m.s.) \(\Rightarrow\) (p.) follows from **Markov's inequality**: for any \(\varepsilon > 0\),
 \[P(|X_n - X| > \varepsilon) \le \frac{E[(X_n-X)^2]}{\varepsilon^2} \to 0.\]
 
 **Chebyshev's inequality** is a special case: \(P(|X - \mu| \ge k\sigma) \le 1/k^2\).
 
 ## Central Limit Theorem
+
+![CLT illustration: standardized sums of $n$ Uniform$[0,1]$ variables (blue histograms) converging to $N(0,1)$ (red curve) for $n=1,4,16,64$.](/static/pics/amath477/clt_convergence.png)
 
 <div class="theorem">
 <strong>Central Limit Theorem.</strong> Let \(X_1, X_2, \ldots\) be i.i.d. with mean \(\mu\) and variance \(\sigma^2 < \infty\). Then

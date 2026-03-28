@@ -1,0 +1,27 @@
+<svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:1.5em auto">
+  <!-- Sheet 1 (bottom) -->
+  <g transform="translate(0,30)">
+    <ellipse cx="120" cy="130" rx="100" ry="45" stroke="#3b82f6" stroke-width="1.5" fill="#3b82f6" fill-opacity="0.08"/>
+    <text x="40" y="125" font-size="12" fill="#3b82f6" font-family="serif">Sheet 1</text>
+    <text x="40" y="140" font-size="11" fill="currentColor" font-family="serif">arg ∈ (−π, π)</text>
+    <!-- Branch cut on sheet 1 -->
+    <line x1="120" y1="130" x2="20" y2="130" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,3"/>
+  </g>
+  <!-- Sheet 2 (top, offset) -->
+  <g transform="translate(100,-30)">
+    <ellipse cx="120" cy="100" rx="100" ry="45" stroke="#22c55e" stroke-width="1.5" fill="#22c55e" fill-opacity="0.08"/>
+    <text x="40" y="90" font-size="12" fill="#22c55e" font-family="serif">Sheet 2</text>
+    <text x="40" y="105" font-size="11" fill="currentColor" font-family="serif">arg ∈ (π, 3π)</text>
+    <!-- Branch cut on sheet 2 -->
+    <line x1="120" y1="100" x2="20" y2="100" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,3"/>
+  </g>
+  <!-- Connection lines at branch cut -->
+  <line x1="20" y1="160" x2="120" y2="70" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/>
+  <line x1="120" y1="160" x2="220" y2="70" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/>
+  <!-- Labels -->
+  <text x="5" y="175" font-size="11" fill="#ef4444" font-family="serif">branch cut z ∈ (−∞,0)</text>
+  <text x="210" y="200" font-size="11" fill="currentColor" font-family="serif">Riemann surface for √z</text>
+  <!-- Branch point -->
+  <circle cx="120" cy="160" r="4" fill="#ef4444"/>
+  <text x="124" y="158" font-size="11" fill="#ef4444" font-family="serif">z=0</text>
+</svg>

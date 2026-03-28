@@ -236,6 +236,8 @@ Writing \( z = x + iy \) with \( i = (0,1) \), we have \( i^2 = -1 \). Complex n
 
 The polar form \( z = re^{i\theta} \) shows that multiplication in \( \mathbb{C} \) combines magnitudes and adds angles: \( zw = rse^{i(\theta + \phi)} \). This geometric interpretation — multiplication is a simultaneous scaling and rotation — is at the heart of why analytic functions preserve angles (conformality).
 
+![Complex plane: point z=a+bi, modulus |z|, and argument θ](/static/pics/pmath352/complex-plane.svg)
+
 <div class="proposition" markdown="1">
 <strong>Proposition 3.1.3 (Algebraic Properties).</strong> For \( z, w \in \mathbb{C} \):
 1. \( z\bar{z} = |z|^2 \), so \( z^{-1} = \bar{z}/|z|^2 \)
@@ -256,6 +258,37 @@ Limits of complex functions reduce to simultaneous limits of the real and imagin
 
 <div class="proposition" markdown="1">
 <strong>Proposition 3.2.2.</strong> Writing \( f = u + iv \) and \( L = a + ib \): \( \lim_{z\to z_0} f(z) = L \) if and only if \( \lim_{(x,y)\to(x_0,y_0)} u = a \) and \( \lim_{(x,y)\to(x_0,y_0)} v = b \). Hence all limit laws from real analysis hold for complex limits.
+</div>
+
+## 3.3 The Extended Complex Plane
+
+The complex plane \( \mathbb{C} \) is not compact: sequences can escape to infinity without converging, and a rational function with a pole at \( z_0 \) is simply undefined there. To work globally — to regard a Möbius transformation as a bijection of an entire space, or to say a meromorphic function takes the value \( \infty \) at a pole — one appends a single formal symbol \( \infty \) to obtain the **extended complex plane** \( \hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\} \), also called the **Riemann sphere**. The resulting space is compact, and every meromorphic function becomes a continuous (in fact holomorphic) map \( \hat{\mathbb{C}} \to \hat{\mathbb{C}} \).
+
+<div class="definition" markdown="1">
+<strong>Definition 3.3.1 (Extended Complex Plane).</strong> The *extended complex plane* is \( \hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\} \), where \( \infty \) is a formal symbol. A *neighbourhood of \( \infty \)* is any set of the form \( \{z \in \mathbb{C} : |z| > R\} \cup \{\infty\} \) for some \( R > 0 \). With this topology, \( \hat{\mathbb{C}} \) is compact — it is the one-point compactification of \( \mathbb{C} \cong \mathbb{R}^2 \).
+</div>
+
+The geometric realization of \( \hat{\mathbb{C}} \) is given by **stereographic projection**. Embed \( \mathbb{C} \) as the equatorial plane \( \{(x_1, x_2, 0)\} \subset \mathbb{R}^3 \) and consider the unit sphere \( S^2 = \{x_1^2 + x_2^2 + x_3^2 = 1\} \). Let \( N = (0,0,1) \) be the north pole.
+
+<div class="definition" markdown="1">
+<strong>Definition 3.3.2 (Stereographic Projection).</strong> The *stereographic projection* \( \pi: S^2 \setminus \{N\} \to \mathbb{C} \) maps each point \( (x_1, x_2, x_3) \neq N \) on \( S^2 \) to the intersection of the line through \( N \) and \( (x_1, x_2, x_3) \) with the plane \( x_3 = 0 \):
+\[ \pi(x_1, x_2, x_3) = \frac{x_1 + ix_2}{1 - x_3} \in \mathbb{C}. \]
+Extending by \( \pi(N) = \infty \) gives a homeomorphism \( S^2 \xrightarrow{\sim} \hat{\mathbb{C}} \). The inverse is
+\[ \pi^{-1}(z) = \left(\frac{2\operatorname{Re}z}{1+|z|^2},\; \frac{2\operatorname{Im}z}{1+|z|^2},\; \frac{|z|^2-1}{|z|^2+1}\right). \]
+</div>
+
+Stereographic projection is **conformal**: it preserves angles between smooth curves. More strikingly, it maps *circles and lines* in \( \mathbb{C} \) bijectively to *circles on \( S^2 \)* — straight lines correspond to circles through \( N \) (passing through \( \infty \)). This **circles-go-to-circles** property is the geometric content underlying Möbius transformations: viewed as self-maps of \( \hat{\mathbb{C}} \), they correspond under stereographic projection to conformal automorphisms of \( S^2 \), which necessarily send circles to circles.
+
+The **chordal metric** on \( \hat{\mathbb{C}} \) measures the Euclidean distance between the corresponding points on \( S^2 \):
+\[ \chi(z,w) = \frac{2|z-w|}{\sqrt{(1+|z|^2)(1+|w|^2)}}, \qquad \chi(z,\infty) = \frac{2}{\sqrt{1+|z|^2}}. \]
+This turns \( \hat{\mathbb{C}} \) into a compact metric space, and convergence in \( \chi \) agrees with the topology defined above.
+
+<div class="remark" markdown="1">
+<strong>Remark (Meromorphic functions as maps \( \hat{\mathbb{C}} \to \hat{\mathbb{C}} \)).</strong> A meromorphic function \( f \) on a domain \( D \) extends to a continuous map \( D \to \hat{\mathbb{C}} \) by setting \( f(z_0) = \infty \) at each pole. From this viewpoint, poles are not singularities but perfectly well-defined values in \( \hat{\mathbb{C}} \). A non-constant rational function of degree \( d \) is a surjective holomorphic map \( \hat{\mathbb{C}} \to \hat{\mathbb{C}} \) with exactly \( d \) preimages of every point (counted with multiplicity). A function holomorphic on all of \( \hat{\mathbb{C}} \) must be constant — this is Liouville's theorem applied to the compact Riemann surface \( \hat{\mathbb{C}} \).
+</div>
+
+<div class="remark" markdown="1">
+<strong>Remark (Möbius transformations as automorphisms of \( \hat{\mathbb{C}} \)).</strong> A Möbius transformation \( f(z) = (az+b)/(cz+d) \) with \( ad-bc \neq 0 \) extends to a bijection \( \hat{\mathbb{C}} \to \hat{\mathbb{C}} \) by setting \( f(-d/c) = \infty \) and \( f(\infty) = a/c \) (when \( c \neq 0 \)). The collection of all such extensions forms the group \( \operatorname{PSL}(2,\mathbb{C}) = \operatorname{GL}(2,\mathbb{C})/(\mathbb{C}^\times \cdot I) \), acting on \( \hat{\mathbb{C}} \) by conformal bijections. Every conformal automorphism of \( \hat{\mathbb{C}} \) is of this form — a fact established in §10.3.
 </div>
 
 # Chapter 4: Analytic Functions
@@ -309,6 +342,8 @@ The CRE are necessary but not sufficient on their own — differentiability of \
 \[ f(z_0 + h) - f(z_0) = \begin{pmatrix} u_x & u_y \\ v_x & v_y \end{pmatrix}\begin{pmatrix} h_1 \\ h_2 \end{pmatrix} + o(|h|) \]
 where \( h = h_1 + ih_2 \). Using the CRE, the Jacobian matrix is \( \begin{pmatrix} u_x & -v_x \\ v_x & u_x \end{pmatrix} \), which corresponds to multiplication by the complex number \( u_x + iv_x \). Thus \( \frac{f(z_0+h) - f(z_0)}{h} \to u_x + iv_x \). \( \square \)
 </div>
+
+![Cauchy–Riemann level curves: u(x,y) and v(x,y) as orthogonal families for f(z)=z²](/static/pics/pmath352/cauchy-riemann-levelcurves.png)
 
 ## 4.3 Properties of Analytic Functions
 
@@ -445,6 +480,8 @@ More generally, \( \oint_{|z-z_0|=r} (z-z_0)^n\, dz = \begin{cases} 2\pi i & n =
 
 This calculation is fundamental: it explains why the coefficient \( c_{-1} \) in a Laurent expansion (the residue) is the only term that contributes to a contour integral. All other powers \( (z - z_0)^n \) with \( n \neq -1 \) have an antiderivative near \( z_0 \) and integrate to zero around any loop.
 
+![Closed contour C in complex plane encircling a pole z₀, illustrating the contour integral](/static/pics/pmath352/contour-integral.svg)
+
 ## 6.2 Antiderivatives and Path Independence
 
 The antiderivative theorem is the complex analogue of the Fundamental Theorem of Calculus. Its equivalence with path independence and the vanishing of all closed-loop integrals is the same as in vector calculus — but in the complex setting, analyticity alone (via Cauchy's theorem) will force this to hold automatically on simply connected domains.
@@ -539,6 +576,44 @@ Morera's theorem is the converse of Cauchy's theorem: if a continuous function h
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.5.3 (Morera's Theorem).</strong> Let \( f \) be continuous on a domain \( D \). If \( \oint_T f\, dz = 0 \) for every triangular contour \( T \) in \( D \), then \( f \) is analytic on \( D \).
+</div>
+
+## 6.6 Winding Numbers
+
+The **winding number** (or **index**) of a closed curve around a point is the fundamental topological invariant of complex analysis. It counts, with sign, how many times a curve wraps around a given point. What makes the winding number analytic rather than merely topological is its definition as a contour integral — the same integral that appears in the Cauchy Integral Formula. The general form of Cauchy's theorem is precisely the statement that contour integrals are \( 2\pi i \) times a winding number.
+
+<div class="definition" markdown="1">
+<strong>Definition 6.6.1 (Winding Number).</strong> Let \( \gamma: [a,b] \to \mathbb{C} \) be a closed piecewise smooth curve and let \( z_0 \notin \gamma([a,b]) \). The *winding number* (or *index*) of \( \gamma \) around \( z_0 \) is
+\[ n(\gamma, z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{dz}{z - z_0}. \]
+</div>
+
+That \( n(\gamma, z_0) \) is always an integer is far from obvious from the integral formula. The proof tracks the argument of \( \gamma(t) - z_0 \) as \( t \) traverses \( [a,b] \): since \( \gamma \) is closed, the argument returns to its starting value modulo \( 2\pi \), so the total change is \( 2\pi \) times an integer.
+
+<div class="proposition" markdown="1">
+<strong>Proposition 6.6.2 (Integrality of Winding Number).</strong> \( n(\gamma, z_0) \in \mathbb{Z} \) for every closed piecewise smooth curve \( \gamma \) and every \( z_0 \notin \gamma([a,b]) \). As a function of \( z_0 \), the winding number is locally constant on \( \mathbb{C} \setminus \gamma([a,b]) \) and equal to \( 0 \) on the unbounded component.
+</div>
+
+<div class="proof" markdown="1">
+*Proof.* Define \( h(t) = \int_a^t \frac{\gamma'(s)}{\gamma(s) - z_0}\, ds \). Then \( h'(t) = \gamma'(t)/(\gamma(t) - z_0) \), and one checks that \( g(t) = e^{-h(t)}(\gamma(t) - z_0) \) satisfies \( g'(t) = 0 \) identically, so \( g \) is constant: \( g(t) = g(a) = \gamma(a) - z_0 \). At \( t = b \): \( e^{-h(b)}(\gamma(b) - z_0) = \gamma(a) - z_0 \). Since \( \gamma \) is closed, \( \gamma(a) = \gamma(b) \), giving \( e^{-h(b)} = 1 \), hence \( h(b) \in 2\pi i\mathbb{Z} \). But \( h(b) = 2\pi i\, n(\gamma, z_0) \) by definition. Local constancy follows because the integral \( \oint_\gamma dz/(z-z_0) \) varies continuously with \( z_0 \in \mathbb{C} \setminus \gamma([a,b]) \) while remaining integer-valued. On the unbounded component, \( |z_0| \to \infty \) forces the integrand \( \to 0 \), giving \( n = 0 \). \( \square \)
+</div>
+
+<div class="example" markdown="1">
+<strong>Example 6.6.3.</strong> For the circle \( \gamma(t) = z_0 + re^{it} \), \( t \in [0, 2\pi] \), a direct computation gives \( n(\gamma, z_0) = 1 \). The same circle traversed clockwise gives \( n = -1 \), and traversed \( k \) times counterclockwise gives \( n = k \). For a point \( w \) with \( |w - z_0| > r \), Cauchy's theorem gives \( n(\gamma, w) = 0 \).
+</div>
+
+With the winding number in hand, the Cauchy Integral Formula admits a clean generalization to arbitrary closed curves, removing the restriction that \( \gamma \) be simple and that the domain be simply connected.
+
+<div class="theorem" markdown="1">
+<strong>Theorem 6.6.4 (General Cauchy Integral Formula).</strong> Let \( f \) be analytic on a domain \( D \), and let \( \gamma \) be a closed piecewise smooth curve in \( D \) with \( n(\gamma, z_0) = 0 \) for all \( z_0 \notin D \). Then for any \( w \in D \setminus \gamma([a,b]) \):
+\[ \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - w}\, dz = n(\gamma, w)\, f(w). \]
+</div>
+
+The condition "\( n(\gamma, z_0) = 0 \) for all \( z_0 \notin D \)" is the general substitute for "simply connected domain" — it says topologically that \( \gamma \) does not wind around any point outside \( D \), so there are no singularities trapped inside the curve. For a simple closed Jordan curve bounding a region entirely inside \( D \), the winding number is \( \pm 1 \) for interior points, recovering Theorem 6.4.1.
+
+<div class="remark" markdown="1">
+<strong>Remark (Winding numbers and the Argument Principle).</strong> The Argument Principle (§9.4) can be rephrased elegantly using winding numbers: for a meromorphic function \( f \) and a suitable closed curve \( \gamma \),
+\[ n(f \circ \gamma,\, 0) = Z - P, \]
+where \( Z, P \) count zeros and poles inside \( \gamma \) with multiplicity. The winding number of the *image curve* \( f \circ \gamma \) around the origin equals the net zero-pole count — a beautiful incarnation of the principle that analytic functions carry topological information.
 </div>
 
 # Chapter 7: Series Representations
@@ -734,6 +809,8 @@ Pole of order 2 at \( z = 1 \):
 
 The Residue Theorem is remarkable for what it ignores: the shape of the contour, the behavior of \( f \) far from the singularities, the exact values of \( f \) anywhere away from the poles. The entire integral depends only on the residues — purely local algebraic data at the singularities. This reduction of a global analytic question to local algebraic data is the hallmark of complex analysis.
 
+![Keyhole contour for branch-cut integrals: large arc C_R, small arc ε→0, segments above and below the branch cut](/static/pics/pmath352/keyhole-contour.svg)
+
 ## 9.3 Applications to Real Integrals
 
 <div class="example" markdown="1">
@@ -792,6 +869,8 @@ Conformal mappings are the geometric objects of complex analysis. An analytic fu
 </div>
 
 Why does \( f'(z_0) \neq 0 \) imply angle preservation? Because locally, \( f \) looks like multiplication by the complex number \( f'(z_0) \), which is a rotation by \( \arg f'(z_0) \) composed with a scaling by \( |f'(z_0)| \). Rotations and scalings preserve angles, so the differential of \( f \) at \( z_0 \) preserves angles. At a point where \( f'(z_0) = 0 \), angles are multiplied by the order of the zero, leading to angle-multiplying maps rather than angle-preserving ones.
+
+![Conformal map w=z²: rectangular grid in the z-plane maps to curved curvilinear grid in the w-plane](/static/pics/pmath352/conformal-map-z2.png)
 
 <div class="theorem" markdown="1">
 <strong>Theorem 10.1.2 (Open Mapping Theorem).</strong> A non-constant analytic function on a domain \( D \) maps open sets to open sets.
@@ -913,6 +992,8 @@ The Monodromy Theorem explains in precise terms why branch cuts exist. The logar
 </div>
 
 ## 11.3 Riemann Surfaces
+
+![Riemann surface for √z: two sheets (arg ∈ (−π,π) and arg ∈ (π,3π)) connected along the branch cut z ∈ (−∞,0)](/static/pics/pmath352/riemann-surface-sqrt.svg)
 
 The multi-valuedness of \( \log z \) and of algebraic functions is not a pathology — it is geometry. A Riemann surface is a space on which a multi-valued function becomes single-valued by "unfolding" the sheets of the multi-valuedness. This is the natural home for functions like \( \log z \), \( z^{1/n} \), and the roots of polynomial equations, and it connects complex analysis to algebraic geometry and topology.
 

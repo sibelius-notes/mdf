@@ -46,6 +46,8 @@ This equation identifies \(\mathsf{p}\) with the gradient of \(l\), and convexit
 
 Applied to classical mechanics, the Legendre transform of the Lagrangian \(L(\mathsf{q}, \dot{\mathsf{q}}, t)\) with respect to the velocities \(\dot{q}^a\) gives the **Hamiltonian**:
 
+![Legendre transform: convex function f(q) and its dual f*(p)](/pics/amath474/legendre_transform.png)
+
 \[
 H(\mathsf{q}, \mathsf{p}, t) = \max_{\dot{\mathsf{q}}} \left[ p_a \dot{q}^a - L(\mathsf{q}, \dot{\mathsf{q}}, t) \right] = \left[ p_a \dot{q}^a - L(\mathsf{q}, \dot{\mathsf{q}}, t) \right]_{\dot{\mathsf{q}} \to \dot{\mathsf{q}}(\mathsf{q},\mathsf{p})},
 \]
@@ -89,6 +91,8 @@ The cotangent space at each point \(\mathsf{q} \in \mathcal{Q}\) is denoted \(T^
 is the phase space: a \(2n\)-dimensional manifold carrying the points \((\mathsf{q}, \mathsf{p})\). Physical classical trajectories are curves in \(\mathsf{T}^*\mathcal{Q}\) whose tangent vector is determined by the Hamiltonian via Hamilton's equations. Functions \(f(\mathsf{q}, \mathsf{p})\) on phase space are called **dynamical variables**.
 
 For the pendulum example, the configuration space is the circle \(\mathcal{Q} = S^1\). At each angle \(\theta\) the cotangent space is \(\mathbb{R}\), so phase space is the cylinder \(\mathsf{T}^*\mathcal{Q} = S^1 \times \mathbb{R}\) — a familiar picture from introductory mechanics.
+
+![Pendulum phase portrait showing libration orbits, separatrix, and rotation](/pics/amath474/pendulum_phase.png)
 
 ### 1.5 Poisson Brackets
 
@@ -244,6 +248,38 @@ One of the deepest results in classical statistical mechanics is that Hamiltonia
 
 **Liouville's theorem** states that this volume form is invariant under any Hamiltonian flow. The proof is elegant: since \(\boldsymbol\Omega\) is preserved by symplectic transformations (including Hamiltonian evolution), and \(\boldsymbol{v}\) is a simple function of \(\boldsymbol\Omega\) (its \(n\)-th exterior power), \(\boldsymbol{v}\) is also preserved.
 
+<svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="ali" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Axes labels -->
+  <text x="60" y="20" font-size="11" font-family="serif" fill="#555">Phase space at $t=0$</text>
+  <text x="280" y="20" font-size="11" font-family="serif" fill="#555">After flow $\varphi_t$</text>
+  <!-- Original region: rectangle -->
+  <rect x="40" y="50" width="80" height="50" fill="#3b82f670" stroke="#3b82f6" stroke-width="2"/>
+  <text x="80" y="80" text-anchor="middle" font-size="12" font-family="serif" fill="#3b82f6">$\mathcal{U}$</text>
+  <!-- Arrow -->
+  <line x1="135" y1="75" x2="240" y2="75" stroke="#555" stroke-width="1.5" marker-end="url(#ali)"/>
+  <text x="188" y="67" text-anchor="middle" font-size="11" font-family="serif" fill="#555">Hamiltonian flow $\varphi_t$</text>
+  <!-- Deformed region: parallelogram (deformed) -->
+  <polygon points="260,45 330,35 350,95 280,105" fill="#3b82f670" stroke="#3b82f6" stroke-width="2"/>
+  <text x="305" y="75" text-anchor="middle" font-size="12" font-family="serif" fill="#3b82f6">$\varphi_t(\mathcal{U})$</text>
+  <!-- Volume equal sign -->
+  <text x="370" y="78" font-size="13" font-family="serif" fill="#ef4444">Vol$(\mathcal{U})$ = Vol$(\varphi_t(\mathcal{U}))$</text>
+  <!-- Axes -->
+  <line x1="30" y1="140" x2="200" y2="140" stroke="#888" stroke-width="1"/>
+  <line x1="30" y1="140" x2="30" y2="30" stroke="#888" stroke-width="1"/>
+  <text x="205" y="143" font-size="11" font-family="serif" fill="#888">$q$</text>
+  <text x="20" y="28" font-size="11" font-family="serif" fill="#888">$p$</text>
+  <line x1="250" y1="140" x2="420" y2="140" stroke="#888" stroke-width="1"/>
+  <line x1="250" y1="140" x2="250" y2="30" stroke="#888" stroke-width="1"/>
+  <text x="424" y="143" font-size="11" font-family="serif" fill="#888">$q$</text>
+  <text x="240" y="28" font-size="11" font-family="serif" fill="#888">$p$</text>
+  <text x="230" y="163" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">Liouville: incompressible phase-space flow</text>
+</svg>
+
 More concretely, this means that however a region \(\mathcal{U}\) of phase space deforms under Hamiltonian evolution, its volume \(\int_\mathcal{U}\boldsymbol{v}\) remains constant:
 
 \[
@@ -387,6 +423,8 @@ This is only possible if at least one of \(W_1\) or \(W_2\) takes negative value
 </div>
 
 **Hudson's theorem** makes precise which states have non-negative Wigner functions: \(W(q,p) \geq 0\) for all \(q, p\) if and only if \(W\) is a Gaussian (and for pure states, the wavefunction is also Gaussian). The negativity of the Wigner function is a signature of genuine quantum features of the state — it signals the presence of quantum interference and non-classicality that cannot be captured by any positive phase-space distribution.
+
+![Wigner function for Fock state |n=1⟩ showing negative values (non-classical)](/pics/amath474/wigner_fock1.png)
 
 **Folland-Sitaram theorem.** \(W(q,p)\) has compact support if and only if \(W(q,p) = 0\) everywhere. In other words, no physical quantum state has a Wigner function that vanishes outside a bounded region.
 

@@ -3,7 +3,7 @@ title: "PMATH 453: Functional Analysis"
 prof: "Stephen New"
 ---
 
-> These notes are primarily based on Prof. Stephen New's lectures. Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Laurent Marcoux, Fall 2021).
+> These notes are primarily based on Prof. Stephen New's lectures. Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Laurent Marcoux, Fall 2021) and from [Prof. Marcoux's official course notes](https://www.math.uwaterloo.ca/~lwmarcou/notes/pmath453.pdf) (5th ed., 2022).
 
 Functional analysis is the branch of mathematics concerned with infinite-dimensional vector spaces equipped with analytic structure — norms, inner products, and topologies — together with the linear maps between them. This course develops the three pillars of classical functional analysis: Hilbert space theory (orthogonal decomposition, spectral theory), Banach space theory (the Hahn-Banach theorem, open mapping theorem, closed graph theorem), and general topology (weak topologies, compactness, the Banach-Alaoglu theorem). The prerequisite material from real analysis (PMATH 351) and measure theory (PMATH 450) is reviewed in Chapter 0.
 
@@ -198,6 +198,24 @@ Direct sums are essential for building new Banach spaces from old ones and appea
 </div>
 
 This criterion is often more convenient in practice than verifying Cauchy sequences directly: one constructs a candidate sum from the absolutely convergent series and checks convergence.
+
+<div class="example">
+<strong>Example 1.J (Bounded Variation Sequences).</strong> For a sequence \( x = (x_n)_{n \geq 1} \) of scalars, the <strong>total variation</strong> is
+\[V(x) := \sum_{n=1}^\infty |x_{n+1} - x_n|.\]
+If \( V(x) < \infty \), we say \( x \) has <strong>bounded variation</strong>. The space
+\[bv := \{(x_n)_{n \geq 1} \in \mathbb{K}^\mathbb{N} : V(x) < \infty\},\]
+equipped with the norm \( \|(x_n)\|_{bv} := |x_1| + V(x) \), is a Banach space. The subspace \( bv_0 := \{x \in bv : x_n \to 0\} \) is a Banach space under \( \|(x_n)\|_{bv_0} := V(x) \).
+</div>
+
+The norm \( \|(x_n)\|_{bv} = |x_1| + V(x) \) controls both the initial value and the total oscillation of the sequence. Every bounded variation sequence is bounded: \( |x_n| \leq |x_1| + V(x) \) for all \( n \), so \( bv \subseteq \ell^\infty \). The space \( bv_0 \) is isometrically isomorphic to \( \ell^1 \) via the difference map \( (x_n) \mapsto (x_1, x_1 - x_2, x_2 - x_3, \ldots) \), and this isomorphism exchanges the \( bv_0 \) norm with the \( \ell^1 \) norm. The dual of \( bv_0 \) is therefore isomorphic to \( \ell^\infty \).
+
+<div class="remark">
+<strong>Remark 1.K (Tsirel'son and James Spaces).</strong> For decades after Banach's 1932 monograph, a central open problem asked whether every infinite-dimensional Banach space contains a subspace isomorphic to \( c_0 \) or to \( \ell^p \) for some \( 1 \leq p < \infty \). In 1974, B.S. Tsirel'son answered this in the negative by constructing an infinite-dimensional Banach space \( T \) — the <strong>Tsirel'son space</strong> — containing no isomorphic copy of \( c_0 \) or any \( \ell^p \). The norm on \( T \) is defined implicitly via the Minkowski functional of a convex set \( D \subseteq c_0 \) satisfying certain block-stability conditions; the resulting space is far removed from the classical sequence spaces.
+
+An equally remarkable example is <strong>James' space</strong> \( J \), the subspace of \( c_0 \) of sequences satisfying
+\[\sup_{n_1 < n_2 < \cdots < n_k} \left[(x_{n_1} - x_{n_2})^2 + (x_{n_2} - x_{n_3})^2 + \cdots + (x_{n_{k-1}} - x_{n_k})^2\right]^{1/2} < \infty.\]
+James' space is isometrically isomorphic to its own double dual \( J^{**} \), yet is <em>not reflexive</em> — it sits as a proper closed subspace of codimension one in \( J^{**} \). This answered (negatively) the conjecture that isomorphic identification with the double dual forces reflexivity.
+</div>
 
 ## Bounded Linear Operators
 
@@ -1529,5 +1547,128 @@ where the series converges in operator norm. Each \( M_n \) is finite-dimensiona
 <div class="corollary">
 <strong>Corollary 11.20.</strong> Let \( H \) be a Hilbert space and \( N \in B(H) \) a compact normal operator. There exists an orthonormal basis \( \{e_\alpha\}_{\alpha \in \Lambda} \) for \( H \) such that each \( e_\alpha \) is an eigenvector for \( N \).
 </div>
+
+---
+
+## Banach Algebras and the Spectral Calculus
+
+The operator-theoretic results of this chapter established the spectral decomposition for compact normal operators and stated that the spectrum consists of eigenvalues accumulating at zero. Two facts were used without full justification: that \( \sigma(T) \) is always nonempty, and that the spectral radius \( \operatorname{spr}(T) = \sup\{|\lambda| : \lambda \in \sigma(T)\} \) can be computed from norm data alone. Both follow cleanly from the theory of **Banach algebras**, where the resolvent function becomes a vector-valued analytic function and Liouville's theorem delivers the key conclusions.
+
+<div class="definition">
+<strong>Definition 11.21 (Banach Algebra).</strong> A <strong>Banach algebra</strong> over \( \mathbb{K} \) is a Banach space \( A \) equipped with an associative bilinear multiplication satisfying the submultiplicativity condition \( \|ab\| \leq \|a\|\,\|b\| \) for all \( a, b \in A \). We call \( A \) <strong>unital</strong> if it contains a multiplicative identity \( \mathbf{1} \) with \( \|\mathbf{1}\| = 1 \).
+</div>
+
+The prototype is \( B(X) \) for any Banach space \( X \): multiplication is composition and submultiplicativity is the standard inequality \( \|TS\| \leq \|T\|\,\|S\| \). Further natural examples include: \( C(K) \) (continuous functions on a compact Hausdorff space \( K \)) under pointwise multiplication and the sup norm; the disc algebra \( A(\mathbb{D}) \) from Example 1.B; and \( \ell^1(\mathbb{Z}) \) under convolution. If \( A \) is not unital, one forms the **unitization** \( A^+ = A \times \mathbb{K} \) with multiplication \( (a, \lambda)(b, \mu) = (ab + \mu a + \lambda b, \lambda\mu) \) and identity \( (\mathbf{0}, 1) \); this embeds \( A \) isometrically as a closed ideal of codimension one, and all spectral questions can be formulated in \( A^+ \).
+
+<div class="definition">
+<strong>Definition 11.22 (Resolvent, Spectrum, Spectral Radius).</strong> Let \( A \) be a unital Banach algebra and \( a \in A \). The <strong>resolvent set</strong> of \( a \) is
+\[\rho(a) = \{\lambda \in \mathbb{C} : \lambda\mathbf{1} - a \text{ is invertible in } A\},\]
+and the <strong>spectrum</strong> of \( a \) is \( \sigma(a) = \mathbb{C} \setminus \rho(a) \). The <strong>resolvent function</strong> of \( a \) is
+\[R(\cdot, a) : \rho(a) \to A, \qquad R(\lambda, a) = (\lambda\mathbf{1} - a)^{-1}.\]
+The <strong>spectral radius</strong> of \( a \) is \( \operatorname{spr}(a) = \sup\{|\lambda| : \lambda \in \sigma(a)\} \).
+</div>
+
+For \( T \in B(X) \), Definition 11.22 recovers Definition 11.17 verbatim. That \( \sigma(a) \) is compact follows from two elementary observations: the set of invertible elements in a Banach algebra is open (if \( a \) is invertible and \( \|b - a\| < \|a^{-1}\|^{-1} \), the Neumann series \( b^{-1} = \sum_{n \geq 0} a^{-1}(I - ba^{-1})^n \) converges), so \( \rho(a) \) is open. Boundedness: \( |\lambda| > \|a\| \) implies \( \lambda\mathbf{1} - a = \lambda(\mathbf{1} - \lambda^{-1}a) \) is invertible by the geometric series \( (\mathbf{1} - \lambda^{-1}a)^{-1} = \sum_{n \geq 0} \lambda^{-n}a^n \) (converging since \( \|\lambda^{-1}a\| < 1 \)), so \( \sigma(a) \subseteq \overline{B}(0, \|a\|) \).
+
+<div class="theorem">
+<strong>Theorem 11.23 (Resolvent is Analytic).</strong> For any \( a \) in a unital Banach algebra \( A \), the resolvent function \( R(\cdot, a) : \rho(a) \to A \) is analytic. For \( |\lambda| > \|a\| \), the Neumann expansion
+\[R(\lambda, a) = \sum_{n=0}^{\infty} \frac{a^n}{\lambda^{n+1}}\]
+converges absolutely in \( A \).
+</div>
+
+Analyticity follows from the **Common Denominator Formula**: for \( \lambda, \mu \in \rho(a) \),
+\[R(\lambda, a) - R(\mu, a) = (\mu - \lambda)\,R(\lambda, a)\,R(\mu, a),\]
+which gives the Newton quotient \( (R(\lambda, a) - R(\lambda_0, a))/(\lambda - \lambda_0) \to -R(\lambda_0, a)^2 \) as \( \lambda \to \lambda_0 \). The Neumann expansion for \( |\lambda| > \|a\| \) is the formal series for \( \lambda^{-1}(\mathbf{1} - \lambda^{-1}a)^{-1} \).
+
+To prove non-emptiness of the spectrum, we need Liouville's theorem for Banach-space-valued functions.
+
+<div class="theorem">
+<strong>Theorem 11.24 (Liouville for Banach-Valued Functions).</strong> Every bounded entire function \( f : \mathbb{C} \to X \) into a Banach space \( X \) is constant.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For each \( x^* \in X^* \), the scalar function \( z \mapsto x^*(f(z)) \) is bounded and entire, hence constant by the classical Liouville theorem. Since \( X^* \) separates points of \( X \) (Hahn-Banach), \( f \) is constant. \( \square \)
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.25 (Gelfand: Spectrum is Nonempty).</strong> For any element \( a \) of a unital Banach algebra \( A \), \( \sigma(a) \neq \emptyset \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> Suppose for contradiction that \( \sigma(a) = \emptyset \), so \( \rho(a) = \mathbb{C} \) and \( R(\cdot, a) \) is entire. For \( |\lambda| > \|a\| \), the Neumann bound gives
+\[\|R(\lambda, a)\| \leq \sum_{n=0}^\infty \frac{\|a\|^n}{|\lambda|^{n+1}} = \frac{1}{|\lambda| - \|a\|} \xrightarrow{|\lambda| \to \infty} 0.\]
+In particular \( R(\cdot, a) \) is bounded on \( \{|\lambda| > \|a\|\} \), and by continuity it is bounded on the compact disc \( \{|\lambda| \leq \|a\|\} \), so it is bounded on all of \( \mathbb{C} \). By Theorem 11.24, \( R(\cdot, a) \) is constant — but a constant whose norm tends to zero at infinity must be identically zero, contradicting \( R(\lambda, a) = (\lambda\mathbf{1} - a)^{-1} \neq \mathbf{0} \). Hence \( \sigma(a) \neq \emptyset \). \( \square \)
+</div>
+
+<div class="theorem">
+<strong>Theorem 11.26 (Gelfand-Mazur).</strong> If \( A \) is a unital Banach algebra in which every nonzero element is invertible (a <strong>Banach division algebra</strong>), then there is a unique isometric algebra isomorphism \( A \cong \mathbb{C} \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By Theorem 11.25, for each \( b \in A \) the spectrum \( \sigma(b) \) is nonempty. Since every nonzero element of \( A \) is invertible, the only noninvertible elements are zero, so \( \lambda\mathbf{1} - b \) is noninvertible iff \( \lambda\mathbf{1} = b \). Thus \( \sigma(b) = \{\lambda_b\} \) for a unique \( \lambda_b \in \mathbb{C} \), and \( b = \lambda_b\,\mathbf{1} \). The map \( \varphi : A \to \mathbb{C} \), \( b \mapsto \lambda_b \), is an algebra isomorphism satisfying \( \|\varphi(b)\| = |\lambda_b| = \|b\| \). \( \square \)
+</div>
+
+The Gelfand-Mazur theorem is foundational in C\(^*\)-algebra theory: it implies that the characters (continuous multiplicative linear functionals to \( \mathbb{C} \)) of a commutative unital C\(^*\)-algebra are the algebra's only maximal ideals, and the Gelfand transform identifies the algebra with continuous functions on its character space. Every commutative unital C\(^*\)-algebra is therefore isomorphic to \( C(K) \) for some compact Hausdorff space \( K \).
+
+### The Spectral Radius Formula
+
+<div class="theorem">
+<strong>Theorem 11.27 (Polynomial Spectral Mapping Theorem).</strong> Let \( A \) be a unital Banach algebra, \( a \in A \), and \( p \in \mathbb{C}[z] \) a polynomial. Then
+\[\sigma(p(a)) = p(\sigma(a)) := \{p(\lambda) : \lambda \in \sigma(a)\}.\]
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For any \( \alpha \in \mathbb{C} \), factor \( p(z) - \alpha = \gamma(z - \beta_1)\cdots(z - \beta_n) \) in \( \mathbb{C}[z] \). Then \( p(a) - \alpha\mathbf{1} = \gamma(a - \beta_1\mathbf{1})\cdots(a - \beta_n\mathbf{1}) \). Since all factors commute, \( p(a) - \alpha\mathbf{1} \) is noninvertible iff some \( a - \beta_j\mathbf{1} \) is noninvertible, i.e., iff \( \beta_j \in \sigma(a) \) for some \( j \), i.e., iff \( \alpha = p(\beta_j) \in p(\sigma(a)) \). \( \square \)
+</div>
+
+The Spectral Radius Formula is the capstone result of this section. It is by no means obvious that \( \lim_{n \to \infty} \|a^n\|^{1/n} \) exists at all — the submultiplicativity of the norm shows only that \( \|a^{n+m}\| \leq \|a^n\|\,\|a^m\| \), which gives subadditivity of \( \log \|a^n\| \) but not convergence of the ratio. The existence of the limit — and its identification as the spectral radius — emerges from the analyticity of the resolvent.
+
+<div class="theorem">
+<strong>Theorem 11.28 (Beurling's Spectral Radius Formula).</strong> For any element \( a \) of a Banach algebra \( A \),
+\[\operatorname{spr}(a) = \lim_{n \to \infty} \|a^n\|^{1/n}.\]
+In particular, the limit exists.
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We may assume \( A \) is unital.
+
+<em>Lower bound.</em> If \( \lambda \in \sigma(a) \) then \( \lambda^n \in \sigma(a^n) \) for all \( n \geq 1 \): since \( a^n - \lambda^n\mathbf{1} = (a - \lambda\mathbf{1})(a^{n-1} + \lambda a^{n-2} + \cdots + \lambda^{n-1}\mathbf{1}) \) is noninvertible (as \( a - \lambda\mathbf{1} \) is noninvertible and all factors commute). Hence \( \operatorname{spr}(a)^n \leq \operatorname{spr}(a^n) \leq \|a^n\| \), giving
+\[\operatorname{spr}(a) \leq \|a^n\|^{1/n} \qquad \text{for all } n \geq 1.\]
+
+<em>Upper bound.</em> Fix \( \lambda \in \mathbb{C} \) with \( |\lambda| > \operatorname{spr}(a) \). By Theorem 11.23, the Neumann expansion \( R(\mu, a) = \sum_{n \geq 0} a^n/\mu^{n+1} \) holds for \( |\mu| > \|a\| \). Since \( R(\cdot, a) \) is analytic on the larger open set \( \{|\mu| > \operatorname{spr}(a)\} \), this Laurent series extends to converge absolutely there. In particular, for any \( \varphi \in A^* \), the scalar series \( \sum_{n \geq 0} \varphi(a^n)/\lambda^{n+1} \) converges, so \( \varphi(a^n)/\lambda^{n+1} \to 0 \). Hence the sequence \( \{a^n/\lambda^{n+1}\}_{n \geq 0} \) is pointwise bounded by every functional in \( A^* \). By the Uniform Boundedness Principle (Theorem 1.35), there exists \( M_\lambda > 0 \) with \( \|a^n\| \leq M_\lambda\,|\lambda|^{n+1} \) for all \( n \). Taking \( n \)-th roots:
+\[\limsup_{n \to \infty} \|a^n\|^{1/n} \leq |\lambda|.\]
+Since \( |\lambda| > \operatorname{spr}(a) \) was arbitrary, \( \limsup_n \|a^n\|^{1/n} \leq \operatorname{spr}(a) \).
+
+Combining: \( \operatorname{spr}(a) \leq \liminf_n \|a^n\|^{1/n} \leq \limsup_n \|a^n\|^{1/n} \leq \operatorname{spr}(a) \), so the limit exists and equals \( \operatorname{spr}(a) \). \( \square \)
+</div>
+
+The proof beautifully intertwines the Uniform Boundedness Principle (real analysis) with the analyticity of the resolvent (complex analysis): the upper bound is precisely the statement that the Laurent coefficients of an analytic function grow no faster than dictated by the radius of convergence.
+
+<div class="corollary">
+<strong>Corollary 11.29.</strong> Let \( H \) be a complex Hilbert space and \( N \in B(H) \) a normal operator. Then \( \operatorname{spr}(N) = \|N\| \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> We claim \( \|N^{2^k}\| = \|N\|^{2^k} \) for all \( k \geq 0 \). The case \( k = 0 \) is trivial. For the inductive step, suppose \( M = N^{2^k} \) is normal. Since \( N \) is normal, \( \|Ny\| = \|N^* y\| \) for all \( y \in H \) (Proposition 11.16), so for any \( x \in H \):
+\[\|M^2 x\| = \|M(Mx)\| = \|M^*(Mx)\| = \|M^*Mx\|.\]
+Therefore \( \|M^2\| = \sup_{\|x\|=1} \|M^*Mx\| \geq \sup_{\|x\|=1} |\langle M^*Mx, x\rangle| = \sup_{\|x\|=1} \|Mx\|^2 = \|M\|^2 \), and the reverse inequality \( \|M^2\| \leq \|M\|^2 \) follows from submultiplicativity. Hence \( \|N^{2^{k+1}}\| = \|N^{2^k}\|^2 = \|N\|^{2^{k+1}} \). By Theorem 11.28,
+\[\operatorname{spr}(N) = \lim_{k \to \infty} \|N^{2^k}\|^{1/2^k} = \lim_{k \to \infty} \|N\|^{2^k / 2^k} = \|N\|. \quad \square\]
+</div>
+
+An operator \( Q \in B(X) \) is called **quasinilpotent** if \( \sigma(Q) = \{0\} \), equivalently \( \operatorname{spr}(Q) = 0 \), equivalently \( \|Q^n\|^{1/n} \to 0 \). Corollary 11.29 says the only quasinilpotent normal operator is \( 0 \): normality forces \( \operatorname{spr}(N) = \|N\| \), so \( \operatorname{spr}(N) = 0 \) implies \( N = 0 \). On general Banach spaces, however, nontrivial quasinilpotent operators abound.
+
+### The Volterra Operator: A Quasinilpotent Example
+
+The most classical quasinilpotent operator is the **Volterra integration operator**
+\[V : C([0,1]) \to C([0,1]), \qquad (Vf)(x) = \int_0^x f(t)\,dt.\]
+Since \( |(Vf)(x)| \leq \int_0^x |f(t)|\,dt \leq \|f\|_\infty \), we have \( \|V\| \leq 1 \). Testing on the constant function \( \mathbf{1} \) shows \( (V\mathbf{1})(x) = x \), so \( \|V\mathbf{1}\|_\infty = 1 = \|\mathbf{1}\|_\infty \), giving \( \|V\| = 1 \).
+
+For the iterated operators, a direct calculation yields \( (V^n f)(x) = \int_0^x k_n(x, y)\,f(y)\,dy \) where the iterated kernel satisfies \( |k_n(x, y)| \leq \frac{(x-y)^{n-1}}{(n-1)!} \) for \( x > y \) and \( 0 \) otherwise. The base case \( k_1(x,y) = \mathbf{1}_{[0,x]}(y) \) satisfies the bound trivially. For the inductive step, \( k_{n+1}(x,y) = \int_0^x k_1(x,t)\,k_n(t,y)\,dt = \int_y^x k_n(t,y)\,dt \), so \( |k_{n+1}(x,y)| \leq \int_y^x \frac{(t-y)^{n-1}}{(n-1)!}\,dt = \frac{(x-y)^n}{n!} \). Therefore,
+\[\|V^n\| = \sup_{\|f\|_\infty = 1} \|V^n f\|_\infty \leq \sup_{x \in [0,1]} \int_0^x |k_n(x,y)|\,dy \leq \frac{1}{(n-1)!}.\]
+
+By Beurling's formula,
+\[\operatorname{spr}(V) = \lim_{n \to \infty} \|V^n\|^{1/n} \leq \lim_{n \to \infty} \left(\frac{1}{(n-1)!}\right)^{1/n} = 0.\]
+
+Thus \( V \) is quasinilpotent: \( \sigma(V) = \{0\} \). Every \( \lambda \neq 0 \) lies in the resolvent — the equation \( (\lambda I - V)f = g \) has a unique solution in \( C([0,1]) \) for every \( g \), given explicitly by the Neumann series \( f = \sum_{n \geq 0} \lambda^{-n-1} V^n g \) (converging in operator norm since \( \|V^n\|^{1/n} \to 0 \)). The Volterra operator is one of the simplest examples of an operator whose spectrum is a single point yet which is not zero, illustrating clearly how spectral theory in infinite dimensions diverges from the finite-dimensional eigenvalue picture.
 
 The Spectral Theorem for compact normal operators encompasses the self-adjoint case (Chapter 2) as a special case where all eigenvalues are real. For normal operators, the eigenvalues may be complex, but the eigenspaces for distinct eigenvalues are still orthogonal (Proposition 11.16(3)), and the operator is still completely determined by its spectral data \( \{(\alpha_n, P_n)\} \). This result is the infinite-dimensional analogue of the finite-dimensional theorem that every normal matrix is unitarily diagonalizable.

@@ -346,6 +346,43 @@ In the canonical matrix representation \(|0\rangle = (0,1)^\top\), \(|1\rangle =
 
 The Pauli operators satisfy the commutation relations \([\hat{\sigma}_x, \hat{\sigma}_y] = 2i\hat{\sigma}_z\) and cyclic permutations, and the square relations \(\hat{\sigma}_x^2 = \hat{\sigma}_y^2 = \hat{\sigma}_z^2 = \hat{\mathbf{1}}\). They are simultaneously the generators of rotations in the spin-\(\tfrac{1}{2}\) Hilbert space and the simplest non-trivial observables in quantum information.
 
+<svg viewBox="0 0 300 310" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <!-- Bloch sphere -->
+  <ellipse cx="150" cy="150" rx="110" ry="110" fill="none" stroke="#888" stroke-width="1.5"/>
+  <!-- Equator ellipse -->
+  <ellipse cx="150" cy="155" rx="110" ry="28" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <!-- Axes -->
+  <line x1="150" y1="40" x2="150" y2="260" stroke="#555" stroke-width="1.2"/>
+  <line x1="40" y1="155" x2="260" y2="155" stroke="#555" stroke-width="1.2"/>
+  <line x1="200" y1="195" x2="100" y2="115" stroke="#555" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <!-- Axis labels -->
+  <text x="150" y="32" text-anchor="middle" font-size="13" font-family="serif" fill="#22c55e">|0⟩ (North)</text>
+  <text x="150" y="278" text-anchor="middle" font-size="13" font-family="serif" fill="#22c55e">|1⟩ (South)</text>
+  <text x="265" y="158" font-size="12" font-family="serif" fill="#555">x</text>
+  <text x="96" y="111" font-size="12" font-family="serif" fill="#555">y</text>
+  <text x="152" y="152" font-size="12" font-family="serif" fill="#555">z</text>
+  <!-- State vector |ψ⟩ -->
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="150" y1="155" x2="195" y2="85" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arr3)"/>
+  <text x="202" y="80" font-size="12" font-family="serif" fill="#3b82f6">|ψ⟩</text>
+  <!-- θ angle arc -->
+  <path d="M 150 135 A 20 20 0 0 1 163 120" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="167" y="128" font-size="11" font-family="serif" fill="#ef4444">θ</text>
+  <!-- φ angle label -->
+  <text x="170" y="165" font-size="11" font-family="serif" fill="#f59e0b">φ</text>
+  <!-- Equator states -->
+  <circle cx="260" cy="155" r="4" fill="#888"/>
+  <text x="262" y="148" font-size="10" font-family="serif" fill="#888">|+⟩</text>
+  <circle cx="40" cy="155" r="4" fill="#888"/>
+  <text x="20" y="148" font-size="10" font-family="serif" fill="#888">|−⟩</text>
+  <!-- Formula -->
+  <text x="150" y="298" text-anchor="middle" font-size="11" font-family="serif" fill="#555">|ψ⟩ = cos(θ/2)|0⟩ + e^{iφ}sin(θ/2)|1⟩</text>
+</svg>
+
 **Continuous spectra and the rigged Hilbert space.** Everything above assumed a discrete (countable) spectrum. But the most important operators in quantum mechanics — position and momentum — have continuous spectra. The position operator \(\hat{X}\) acts on functions by multiplication: \(\hat{X}\phi(x) = x\phi(x)\). Its eigenvalue equation \(\hat{X}\phi = x_0\phi\) has formal solutions \(\phi(x) = \delta(x - x_0)\), which are not normalizable in \(L^2(\mathbb{R})\).
 
 Dirac's treatment is to work formally with continuous eigenstates \(|x_0\rangle\) satisfying
@@ -850,6 +887,40 @@ Explicitly:
 \]
 
 The composition of two Galilean transformations \(\tau_2\tau_1 = \tau_3\) must be reflected in the composition of the corresponding unitary operators. However, we must allow for the fact that two state vectors that differ only by a global phase represent the same physical state. Therefore the operators \(\hat{U}(\tau_3)\) and \(\hat{U}(\tau_2)\hat{U}(\tau_1)\) need not be identical — they need only represent the same physical transformation, which means they may differ by a phase factor:
+
+<svg viewBox="0 0 500 170" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arw" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#ef4444"/>
+    </marker>
+    <marker id="arwg" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- Frame S at left -->
+  <circle cx="60" cy="85" r="22" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="60" y="90" text-anchor="middle" font-size="12" font-family="serif" fill="#555">S</text>
+  <!-- Boost v1 → S' -->
+  <line x1="82" y1="65" x2="195" y2="65" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="138" y="57" text-anchor="middle" font-size="11" font-family="serif" fill="#3b82f6">boost $v_1$</text>
+  <!-- Frame S' at middle -->
+  <circle cx="220" cy="85" r="22" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="220" y="90" text-anchor="middle" font-size="12" font-family="serif" fill="#555">S′</text>
+  <!-- Boost v2 → S'' -->
+  <line x1="242" y1="65" x2="355" y2="65" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="298" y="57" text-anchor="middle" font-size="11" font-family="serif" fill="#3b82f6">boost $v_2$</text>
+  <!-- Frame S'' at right -->
+  <circle cx="380" cy="85" r="22" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="380" y="90" text-anchor="middle" font-size="12" font-family="serif" fill="#555">S′′</text>
+  <!-- Direct arrow below: Galilean boost = v1+v2 (no rotation) -->
+  <line x1="82" y1="105" x2="355" y2="105" stroke="#22c55e" stroke-width="2" marker-end="url(#arwg)"/>
+  <text x="218" y="122" text-anchor="middle" font-size="11" font-family="serif" fill="#22c55e">Galilean: direct boost $v_1+v_2$ (no extra rotation)</text>
+  <!-- Phase annotation -->
+  <text x="250" y="148" text-anchor="middle" font-size="11" font-family="serif" fill="#555">Projective phase: $\hat{U}(\tau_2)\hat{U}(\tau_1) = e^{i\omega(\tau_2,\tau_1)}\hat{U}(\tau_2\tau_1)$</text>
+</svg>
 \[
 \hat{U}(\tau_2\tau_1) = e^{i\omega(\tau_2,\tau_1)}\hat{U}(\tau_2)\hat{U}(\tau_1). \tag{2.2.1}
 \]
@@ -1090,6 +1161,34 @@ where \(\hat{\boldsymbol{S}}\) satisfies \([\hat{X}, \hat{S}] = [\hat{P}, \hat{S
 \]
 
 This is again the angular momentum algebra, now for the spin degrees of freedom.
+
+<svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="acg" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Left side: product basis -->
+  <text x="10" y="30" font-size="12" font-family="serif" fill="#555">Product basis:</text>
+  <rect x="10" y="38" width="180" height="120" rx="6" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="100" y="65" text-anchor="middle" font-size="13" font-family="serif" fill="#3b82f6">|j₁,m₁⟩ ⊗ |j₂,m₂⟩</text>
+  <text x="100" y="90" text-anchor="middle" font-size="11" font-family="serif" fill="#888">m₁ ∈ {−j₁,…,j₁}</text>
+  <text x="100" y="108" text-anchor="middle" font-size="11" font-family="serif" fill="#888">m₂ ∈ {−j₂,…,j₂}</text>
+  <text x="100" y="148" text-anchor="middle" font-size="11" font-family="serif" fill="#888">dim = (2j₁+1)(2j₂+1)</text>
+  <!-- Arrow with CG label -->
+  <line x1="193" y1="98" x2="287" y2="98" stroke="#3b82f6" stroke-width="2" marker-end="url(#acg)"/>
+  <text x="240" y="91" text-anchor="middle" font-size="11" font-family="serif" fill="#3b82f6">C-G</text>
+  <text x="240" y="110" text-anchor="middle" font-size="10" font-family="serif" fill="#3b82f6">coefficients</text>
+  <!-- Right side: total angular momentum basis -->
+  <text x="290" y="30" font-size="12" font-family="serif" fill="#555">Total-J basis:</text>
+  <rect x="290" y="38" width="180" height="120" rx="6" fill="none" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="380" y="65" text-anchor="middle" font-size="13" font-family="serif" fill="#22c55e">|J, M⟩</text>
+  <text x="380" y="88" text-anchor="middle" font-size="11" font-family="serif" fill="#888">J ∈ {|j₁−j₂|,…,j₁+j₂}</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11" font-family="serif" fill="#888">M = m₁+m₂</text>
+  <text x="380" y="148" text-anchor="middle" font-size="11" font-family="serif" fill="#888">same total dim</text>
+  <!-- Bottom label -->
+  <text x="240" y="172" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">Clebsch-Gordan: |J,M⟩ = Σ ⟨j₁m₁j₂m₂|JM⟩ |j₁m₁⟩|j₂m₂⟩</text>
+</svg>
 
 For the boost generator, the argument from §6.2 shows that \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with \(\hat{P}$ but is no longer necessarily a multiple of the identity — it could be a function of the internal operators. Since it must be a 3-vector under rotations, and the only 3-vector function of \(\hat{S}\) is \(\hat{S}\) itself (since cross products of \(\hat{S}\) are proportional to \(\hat{S}\) given \(\hat{S}\times\hat{S} = i\hat{S}\)), we would have \(\hat{G}_\alpha = M\hat{X}_\alpha + c\hat{S}_\alpha\). However, the commutation relation \([\hat{G}_\alpha, \hat{G}_\beta] = 0\) imposes \(c = 0\), because the three components of \(\hat{S}\) do not commute with each other. Therefore even in the presence of spin:
 \[
@@ -1566,7 +1665,9 @@ It is instructive to identify the one case in which an interaction does \emph{no
 <div class="remark">
 <strong>Remark (Kempf — Why the Classical Electromagnetic Field Works So Well).</strong> This exceptional non-entangling case resolves a puzzle that Kempf raises directly in lecture: if an electron is strongly interacting with the electromagnetic field, and both are quantum systems, why doesn't the electron immediately become mixed? Why can we write a Schrödinger equation for the electron alone, with a classical electromagnetic potential, even when the interaction is very strong?
 
-The answer is that electromagnetic fields generated by macroscopic charges and currents are very often in a coherent state — a state that is approximately an eigenstate of the electric and magnetic field operators. When the environment (the electromagnetic field) is in an eigenstate of its part of the interaction Hamiltonian, no entanglement is generated by the interaction. The system (the electron) evolves unitarily, as if the field were classical. This is such a good approximation that it is often not mentioned in first courses in quantum mechanics that the Schrödinger equation with a classical electromagnetic potential is in fact an approximation — the true description involves two interacting quantum systems that happen not to entangle.
+The answer is that electromagnetic fields generated by macroscopic charges and currents are very often in a coherent state — a state that is approximately an eigenstate of the electric and magnetic field operators. When the environment (the electromagnetic field) is in an eigenstate of its part of the interaction Hamiltonian, no entanglement is generated by the interaction. The system (the electron) evolves unitarily, as if the field were classical.
+
+![Wigner function W(q,p) for a coherent state — a positive Gaussian in phase space](/pics/amath473/wigner_coherent.png) This is such a good approximation that it is often not mentioned in first courses in quantum mechanics that the Schrödinger equation with a classical electromagnetic potential is in fact an approximation — the true description involves two interacting quantum systems that happen not to entangle.
 
 This approximation breaks down for non-classical light — electromagnetic fields not in coherent states. When non-classical light interacts with matter, genuine entanglement is generated and the electron's state becomes mixed. This is the domain of quantum optics, where phenomena like quantum cryptography, quantum key distribution, and quantum computing with photons live.
 </div>

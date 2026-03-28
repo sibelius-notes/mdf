@@ -33,13 +33,17 @@ The universe is organized hierarchically. **Planets** orbit **stars**, which gat
 
 \[v = H_0 \, d,\]
 
-where \(v\) is the recession velocity, \(d\) is the proper distance, and \(H_0\) is the **Hubble constant**, measured today as \(H_0 \approx 68 \text{ km s}^{-1} \text{ Mpc}^{-1}\). The Hubble constant sets a natural timescale — the **Hubble time**:
+where \(v\) is the recession velocity, \(d\) is the proper distance, and \(H_0\) is the **Hubble constant**, measured today as \(H_0 \approx 68 \text{ km s}^{-1} \text{ Mpc}^{-1}\).
+
+![Hubble's law: recession velocity vs. distance with linear fit](/pics/phys475/hubble_law.png) The Hubble constant sets a natural timescale — the **Hubble time**:
 
 \[t_H = \frac{1}{H_0} \approx 14 \text{ Gyr},\]
 
 which gives an order-of-magnitude estimate of the age of the universe. The recession of galaxies implies that the universe was once much denser. Extrapolating backward in time leads to the **Big Bang** — a hot, dense initial state from which the universe has been expanding and cooling ever since.
 
 The most compelling evidence for the Hot Big Bang is the **cosmic microwave background (CMB)**, discovered serendipitously in 1965 by **Arno Penzias** and **Robert Wilson** at Bell Laboratories. They detected an isotropic microwave signal at a temperature \(T_0 = 2.725 \text{ K}\) coming from every direction in the sky. Robert Dicke and his Princeton group recognized this as the cooled relic radiation of the primordial fireball — photons that last scattered off matter when the universe was about 380,000 years old and have been redshifting freely ever since.
+
+![CMB blackbody spectrum at T = 2.725 K showing Planck distribution with peak near 160 GHz](/pics/phys475/cmb_spectrum.png)
 
 ---
 
@@ -104,6 +108,39 @@ The Cosmological Principle constrains the spatial geometry of the universe to on
 \[d\ell^2 = \frac{dr^2}{1 - kr^2} + r^2\left(d\theta^2 + \sin^2\theta\, d\phi^2\right),\]
 
 where \(k = -1\) (hyperbolic/open), \(k = 0\) (Euclidean/flat), or \(k = +1\) (spherical/closed). Note that this is the metric on the spatial hypersurface at a fixed time — it describes the intrinsic geometry of space, not spacetime.
+
+<svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;display:block;margin:1.5em auto">
+  <!-- k=+1: Sphere -->
+  <ellipse cx="80" cy="90" rx="55" ry="55" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <ellipse cx="80" cy="90" rx="55" ry="18" fill="none" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <text x="80" y="162" text-anchor="middle" font-size="12" fill="#3b82f6">k = +1</text>
+  <text x="80" y="174" text-anchor="middle" font-size="11" fill="currentColor">Closed (sphere)</text>
+  <!-- Parallel lines converge on sphere -->
+  <line x1="55" y1="55" x2="78" y2="65" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="105" y1="55" x2="83" y2="65" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <!-- k=0: Flat plane -->
+  <rect x="195" y="55" width="100" height="70" fill="none" stroke="#22c55e" stroke-width="2" rx="2"/>
+  <!-- Grid lines -->
+  <line x1="215" y1="55" x2="215" y2="125" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <line x1="245" y1="55" x2="245" y2="125" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <line x1="275" y1="55" x2="275" y2="125" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <line x1="195" y1="75" x2="295" y2="75" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <line x1="195" y1="95" x2="295" y2="95" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <line x1="195" y1="115" x2="295" y2="115" stroke="#22c55e" stroke-width="0.8" opacity="0.5"/>
+  <text x="245" y="150" text-anchor="middle" font-size="12" fill="#22c55e">k = 0</text>
+  <text x="245" y="163" text-anchor="middle" font-size="11" fill="currentColor">Flat (Euclidean)</text>
+  <!-- k=-1: Saddle -->
+  <!-- Approximate saddle shape with bezier curves -->
+  <path d="M 355 125 Q 390 60 440 80 Q 480 100 490 140" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M 355 75 Q 390 120 440 100 Q 480 80 490 75" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M 375 55 Q 395 100 420 90 Q 445 80 470 55" fill="none" stroke="#ef4444" stroke-width="1.2" opacity="0.5"/>
+  <path d="M 365 145 Q 395 100 420 115 Q 445 130 475 145" fill="none" stroke="#ef4444" stroke-width="1.2" opacity="0.5"/>
+  <text x="420" y="165" text-anchor="middle" font-size="12" fill="#ef4444">k = −1</text>
+  <text x="420" y="177" text-anchor="middle" font-size="11" fill="currentColor">Open (hyperbolic)</text>
+  <!-- Dividers -->
+  <line x1="163" y1="10" x2="163" y2="145" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+  <line x1="340" y1="10" x2="340" y2="145" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+</svg>
 
 ### The Full FRW Metric
 
@@ -191,6 +228,8 @@ The transitions between eras are characterized by **equality redshifts**:
 - **Matter–dark energy equality**: \(\rho_m = \rho_\Lambda\) at \(z \approx 0.3\), corresponding to a lookback time of a few billion years. Since then, the universe has been **dark-energy dominated** and accelerating.
 
 This sequence — radiation → matter → dark energy — defines the broad thermal and dynamical history of the cosmos.
+
+![Scale factor a(t) evolution for radiation-dominated, matter-dominated, and Λ-dominated universes](/pics/phys475/scale_factor.png)
 
 ---
 

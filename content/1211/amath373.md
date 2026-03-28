@@ -218,6 +218,8 @@ where \(\tau = md^2/\hbar\) is the **spreading time scale**. For an electron in 
 
 The spreading is irreversible: once the wave packet spreads, the particle's position becomes increasingly uncertain. This is not a limitation of measurement technology but a fundamental feature of quantum mechanics.
 
+![Gaussian wave packet at t=0 and after spreading](/pics/amath373/wave_packet.png)
+
 ## Chapter 3: The Time-Dependent Schrödinger Equation
 
 ### 3.1 The TDSE and Its Stationary Solutions
@@ -318,6 +320,8 @@ for \(n = 1, 2, 3, \ldots\) The ground state (\(n=1\)) has energy \(E_1 = \pi^2\
        0                    L
 ```
 
+![Infinite square well wave functions ψ₁–ψ₄ with energy levels](/pics/amath373/infinite_well.png)
+
 ### 3.5 Probability Current and Norm Conservation
 
 Multiply the TDSE by \(\Psi^*\) and subtract the complex conjugate equation multiplied by \(\Psi\):
@@ -333,6 +337,34 @@ where \(\rho = |\Psi|^2\) is the probability density and
 \[j(x,t) = \frac{\hbar}{m}\,\text{Im}\!\left[\Psi^*\frac{\partial\Psi}{\partial x}\right] = \frac{\hbar}{2mi}\left(\Psi^*\frac{\partial\Psi}{\partial x} - \Psi\frac{\partial\Psi^*}{\partial x}\right)\]
 
 is the **probability current** (probability flux). The continuity equation expresses local conservation of probability: if probability density decreases in some region, probability must be flowing out of that region. Integrating over all space and using vanishing BCs, we get \(\frac{d}{dt}\int|\Psi|^2\,dx = 0\), so the total probability is conserved.
+
+<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Region box -->
+  <rect x="160" y="40" width="200" height="80" rx="4" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="260" y="86" text-anchor="middle" fill="#22c55e" font-size="13" font-family="serif">Region Ω</text>
+  <!-- Left boundary label -->
+  <line x1="160" y1="40" x2="160" y2="120" stroke="#555" stroke-width="1.5"/>
+  <text x="155" y="35" text-anchor="middle" fill="#555" font-size="11" font-family="serif">x₁</text>
+  <!-- Right boundary label -->
+  <line x1="360" y1="40" x2="360" y2="120" stroke="#555" stroke-width="1.5"/>
+  <text x="365" y="35" text-anchor="start" fill="#555" font-size="11" font-family="serif">x₂</text>
+  <!-- Flux arrows entering left -->
+  <line x1="60" y1="80" x2="155" y2="80" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="100" y="70" text-anchor="middle" fill="#3b82f6" font-size="12" font-family="serif">j(x₁,t)</text>
+  <!-- Flux arrows leaving right -->
+  <line x1="365" y1="80" x2="460" y2="80" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="415" y="70" text-anchor="middle" fill="#ef4444" font-size="12" font-family="serif">j(x₂,t)</text>
+  <!-- Continuity equation -->
+  <text x="260" y="148" text-anchor="middle" fill="#555" font-size="12" font-family="serif">∂ρ/∂t + ∂j/∂x = 0  ⟹  dP_Ω/dt = j(x₁)−j(x₂)</text>
+</svg>
 
 ### 3.6 Matrix Elements and Expectation Values
 
@@ -436,6 +468,8 @@ where \(k = \sqrt{2mE}/\hbar\). For an **opaque barrier** (\(\kappa L \gg 1\)), 
 
 The dominant factor \(e^{-2\kappa L}\) shows that tunneling is exponentially suppressed by both the barrier width \(L\) and the barrier height (which enters through \(\kappa\)). This exponential sensitivity explains why tunneling is dramatically important in some contexts (nuclear alpha decay, scanning tunnelling microscopy) but negligible in others (a billiard ball passing through a wall).
 
+![Quantum tunneling wave function through rectangular barrier](/pics/amath373/tunneling.png)
+
 **Resonant transmission.** For \(E > U_0\), both regions have oscillatory solutions. The transmission is now \(T \le 1\), with \(T = 1\) (perfect transmission) at resonance energies
 
 \[k'L = n\pi, \quad n = 1, 2, \ldots, \qquad \text{where } k' = \sqrt{2m(E-U_0)}/\hbar.\]
@@ -538,6 +572,8 @@ where \(H_n\) are the Hermite polynomials: \(H_0 = 1\), \(H_1 = 2\xi\), \(H_2 = 
 ```
 
 The uncertainty relation for the SHO is saturated by the ground state: \(\Delta x\,\Delta p = \hbar(n+1/2) \ge \hbar/2\). For \(n=0\), the ground state is a Gaussian (as we saw in Chapter 2), achieving the minimum uncertainty \(\Delta x\,\Delta p = \hbar/2\). For higher \(n\), the uncertainty product grows linearly with \(n\), as the state becomes more spread out.
+
+![Harmonic oscillator n=10: quantum probability density vs classical prediction](/pics/amath373/sho_classical_quantum.png)
 
 # Part IV: The Mathematical Structure of Quantum Mechanics
 

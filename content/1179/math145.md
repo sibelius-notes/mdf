@@ -373,6 +373,37 @@ By Proposition 4.3, \(N > 1\) has a prime factor \(p\). Since every \(p_i\) divi
 
 ## The Fundamental Theorem of Arithmetic
 
+<svg viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:1.5em auto">
+  <text x="170" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Prime Factorization Tree: 60 = 2²·3·5</text>
+  <!-- root: 60 -->
+  <circle cx="170" cy="36" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="170" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor">60</text>
+  <!-- split: 4 × 15 -->
+  <line x1="155" y1="52" x2="100" y2="84" stroke="currentColor" stroke-width="1.3"/>
+  <line x1="185" y1="52" x2="240" y2="84" stroke="currentColor" stroke-width="1.3"/>
+  <circle cx="100" cy="100" r="16" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="100" y="104" text-anchor="middle" font-size="12" fill="#3b82f6">4</text>
+  <circle cx="240" cy="100" r="16" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="240" y="104" text-anchor="middle" font-size="12" fill="#22c55e">15</text>
+  <!-- 4 → 2 × 2 -->
+  <line x1="88" y1="114" x2="60" y2="148" stroke="#3b82f6" stroke-width="1.2"/>
+  <line x1="112" y1="114" x2="130" y2="148" stroke="#3b82f6" stroke-width="1.2"/>
+  <circle cx="60" cy="162" r="16" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="60" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b82f6">2</text>
+  <circle cx="130" cy="162" r="16" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="130" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b82f6">2</text>
+  <!-- 15 → 3 × 5 -->
+  <line x1="228" y1="114" x2="205" y2="148" stroke="#22c55e" stroke-width="1.2"/>
+  <line x1="252" y1="114" x2="278" y2="148" stroke="#22c55e" stroke-width="1.2"/>
+  <circle cx="205" cy="162" r="16" fill="#22c55e20" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="205" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#22c55e">3</text>
+  <circle cx="278" cy="162" r="16" fill="#22c55e20" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="278" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#22c55e">5</text>
+  <!-- result -->
+  <text x="170" y="200" text-anchor="middle" font-size="11" fill="currentColor">60 = 2 × 2 × 3 × 5 = 2² · 3 · 5</text>
+  <text x="170" y="216" text-anchor="middle" font-size="10" fill="currentColor">Leaves are primes — factorization is unique (FTA)</text>
+</svg>
+
 <div class="theorem">
 
 <strong>Theorem 4.5 (Fundamental Theorem of Arithmetic, FTA).</strong> Every integer \(n > 1\) can be written as a product of primes. Moreover, this factorization is unique up to the order of the factors.
@@ -574,6 +605,33 @@ Its order is Euler's totient function \(\phi(n) = \lvert (\mathbb{Z}/n\mathbb{Z}
 *Proof.* The congruence \(ax \equiv c \pmod{m}\) is equivalent to the LDE \(ax - my = c\). By LDET 1, solutions exist iff \(d \mid c\). By LDET 2, the general solution is \(x = x_0 + (m/d)n\) for \(n \in \mathbb{Z}\). Modulo \(m\), the values \(x_0, x_0 + m/d, x_0 + 2m/d, \ldots, x_0 + (d-1)m/d\) are the \(d\) distinct solutions. \(\square\)
 
 ## The Chinese Remainder Theorem
+
+<svg viewBox="0 0 460 170" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <text x="230" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Chinese Remainder Theorem: simultaneous congruences</text>
+  <!-- system of congruences -->
+  <rect x="10" y="22" width="200" height="80" rx="4" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="110" y="38" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">System</text>
+  <text x="20" y="57" font-size="11" fill="currentColor">n ≡ 2  (mod 3)</text>
+  <text x="20" y="74" font-size="11" fill="currentColor">n ≡ 3  (mod 5)</text>
+  <text x="20" y="91" font-size="11" fill="currentColor">gcd(3,5) = 1  ✓</text>
+  <!-- arrow -->
+  <line x1="215" y1="62" x2="270" y2="62" stroke="#ef4444" stroke-width="2" marker-end="url(#crt)"/>
+  <text x="243" y="56" text-anchor="middle" font-size="9" fill="#ef4444">unique sol</text>
+  <text x="243" y="76" text-anchor="middle" font-size="9" fill="#ef4444">mod 15</text>
+  <defs>
+    <marker id="crt" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- solution -->
+  <rect x="275" y="40" width="175" height="44" rx="4" fill="#22c55e20" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="362" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#22c55e">n ≡ 8  (mod 15)</text>
+  <text x="362" y="78" text-anchor="middle" font-size="10" fill="currentColor">8 mod 3 = 2 ✓,  8 mod 5 = 3 ✓</text>
+  <!-- ring iso -->
+  <rect x="10" y="115" width="440" height="42" rx="3" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="230" y="133" text-anchor="middle" font-size="11" fill="currentColor">Ring isomorphism: ℤ/Mℤ  ≅  ℤ/m₁ℤ × ℤ/m₂ℤ × ⋯ × ℤ/mₖℤ</text>
+  <text x="230" y="150" text-anchor="middle" font-size="10" fill="currentColor">when m₁,…,mₖ pairwise coprime,  M = m₁m₂⋯mₖ</text>
+</svg>
 
 One of the jewels of number theory: a system of simultaneous congruences with coprime moduli always has a unique simultaneous solution. The theorem has a constructive proof that doubles as an algorithm.
 

@@ -130,6 +130,56 @@ where \(\mathbf{u}_r\) is the radial unit vector pointing away from the source. 
 
 The field concept is more than a notational convenience. It is ontologically fundamental: when charges are in motion, the field carries energy and momentum. Disturbances propagate as electromagnetic waves. The field has physical reality independent of whether any test charge is present to feel it.
 
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="ef-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="currentColor"/>
+    </marker>
+    <marker id="ef-arr-blue" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="ef-arr-red" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- === Left panel: Single +q charge === -->
+  <text x="75" y="18" text-anchor="middle" font-size="12" fill="currentColor">Single +q</text>
+  <!-- charge -->
+  <circle cx="75" cy="110" r="12" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="75" y="115" text-anchor="middle" font-size="13" fill="#3b82f6">+</text>
+  <!-- Radial field lines (8 directions) -->
+  <line x1="75" y1="95" x2="75" y2="32" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="75" y1="125" x2="75" y2="188" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="60" y1="110" x2="15" y2="110" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="90" y1="110" x2="140" y2="110" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="64" y1="99" x2="28" y2="63" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="86" y1="99" x2="122" y2="63" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="64" y1="121" x2="28" y2="157" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <line x1="86" y1="121" x2="122" y2="157" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ef-arr-blue)"/>
+  <!-- === Divider === -->
+  <line x1="165" y1="10" x2="165" y2="210" stroke="currentColor" stroke-width="1" stroke-dasharray="5,4" opacity="0.4"/>
+  <!-- === Right panel: Dipole === -->
+  <text x="330" y="18" text-anchor="middle" font-size="12" fill="currentColor">Electric dipole (+q and −q)</text>
+  <!-- +q -->
+  <circle cx="280" cy="110" r="11" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="280" y="115" text-anchor="middle" font-size="13" fill="#3b82f6">+</text>
+  <!-- −q -->
+  <circle cx="380" cy="110" r="11" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="380" y="115" text-anchor="middle" font-size="13" fill="#ef4444">−</text>
+  <!-- Dipole field lines (simplified arcs from + to -) -->
+  <!-- top arc -->
+  <path d="M 280 99 Q 330 40 380 99" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#ef-arr)"/>
+  <!-- bottom arc -->
+  <path d="M 280 121 Q 330 180 380 121" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#ef-arr)"/>
+  <!-- direct line between charges -->
+  <line x1="291" y1="110" x2="369" y2="110" stroke="currentColor" stroke-width="1.4" marker-end="url(#ef-arr)"/>
+  <!-- outer arcs -->
+  <path d="M 275 102 Q 330 20 385 102" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.6" marker-end="url(#ef-arr)"/>
+  <path d="M 275 118 Q 330 200 385 118" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.6" marker-end="url(#ef-arr)"/>
+  <!-- Caption -->
+  <text x="250" y="210" font-size="11" fill="currentColor">Field lines leave + charge, terminate on − charge</text>
+</svg>
+
 ### 3.2 The Field of a Continuous Distribution
 
 By the superposition principle, the field due to a continuous charge distribution with volume density \(\rho(\mathbf{r}')\) in a region \(\Omega\) is:
@@ -153,6 +203,35 @@ The irrotational and Gauss properties of \(\mathbf{E}\) provide a more elegant d
 \[ \mathbf{E} = \frac{\sigma}{2\epsilon_0}\, \mathbf{n} \]
 
 where \(\mathbf{n}\) is the outward unit normal. Remarkably, this is **independent of distance** from the plane — the field is uniform. Two parallel planes of opposite charge density, like a parallel-plate capacitor, produce a uniform field \(\sigma/\epsilon_0\) between them and (nearly) zero field outside.
+
+<svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="pp-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Positive plate (+) -->
+  <rect x="60" y="20" width="16" height="180" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="68" y="15" text-anchor="middle" font-size="13" fill="#3b82f6">+σ</text>
+  <!-- Negative plate (−) -->
+  <rect x="300" y="20" width="16" height="180" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="308" y="15" text-anchor="middle" font-size="13" fill="#ef4444">−σ</text>
+  <!-- Uniform E field lines between plates -->
+  <line x1="80" y1="50" x2="296" y2="50" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#pp-arr)"/>
+  <line x1="80" y1="90" x2="296" y2="90" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#pp-arr)"/>
+  <line x1="80" y1="130" x2="296" y2="130" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#pp-arr)"/>
+  <line x1="80" y1="170" x2="296" y2="170" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#pp-arr)"/>
+  <!-- E label -->
+  <text x="188" y="115" text-anchor="middle" font-size="13" fill="#3b82f6">E = σ/ε₀</text>
+  <!-- Fringe field (faint, outside) -->
+  <line x1="44" y1="90" x2="56" y2="90" stroke="currentColor" stroke-width="1.2" opacity="0.4" marker-end="url(#pp-arr)"/>
+  <line x1="320" y1="90" x2="332" y2="90" stroke="currentColor" stroke-width="1.2" opacity="0.4" marker-end="url(#pp-arr)"/>
+  <!-- Distance label -->
+  <line x1="76" y1="205" x2="300" y2="205" stroke="currentColor" stroke-width="1.2"/>
+  <text x="188" y="215" text-anchor="middle" font-size="11" fill="currentColor">d (plate separation)</text>
+  <!-- Caption -->
+  <text x="188" y="200" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.7">E ≈ 0 outside (infinite plates)</text>
+</svg>
 
 **Charged circular loop.** For a loop of radius \(R\) carrying charge \(Q\), the field at a point on the axis at distance \(z\) from the centre has only a \(z\)-component (by symmetry, all transverse contributions cancel):
 
@@ -187,6 +266,36 @@ where \(\tilde\Omega\) is the volume bounded by \(\tilde\Sigma\) and \(Q_\text{e
 </div>
 
 This is the **first Maxwell equation** for the electrostatic field. We have derived it from empirical laws — Coulomb and superposition — so it encodes exactly the same physics, merely repackaged.
+
+<svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="gs-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Gaussian sphere (dashed ellipse) -->
+  <ellipse cx="170" cy="140" rx="110" ry="90" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8,5"/>
+  <!-- Point charge at center -->
+  <circle cx="170" cy="140" r="10" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="145" text-anchor="middle" font-size="13" fill="#3b82f6">q</text>
+  <!-- Radial E field arrows -->
+  <line x1="170" y1="127" x2="170" y2="58" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#gs-arr)"/>
+  <line x1="170" y1="153" x2="170" y2="222" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#gs-arr)"/>
+  <line x1="158" y1="140" x2="68" y2="140" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#gs-arr)"/>
+  <line x1="182" y1="140" x2="272" y2="140" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#gs-arr)"/>
+  <line x1="163" y1="130" x2="104" y2="77" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#gs-arr)"/>
+  <line x1="177" y1="130" x2="236" y2="77" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#gs-arr)"/>
+  <line x1="163" y1="150" x2="104" y2="203" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#gs-arr)"/>
+  <line x1="177" y1="150" x2="236" y2="203" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#gs-arr)"/>
+  <!-- Normal vector label -->
+  <text x="245" y="90" font-size="12" fill="currentColor">n̂</text>
+  <!-- Gaussian surface label -->
+  <text x="170" y="255" text-anchor="middle" font-size="11" fill="currentColor">Gaussian surface Σ (radius R)</text>
+  <!-- Flux formula -->
+  <text x="170" y="272" text-anchor="middle" font-size="12" fill="currentColor">∮ E·n̂ dA = q/ε₀</text>
+  <!-- Title -->
+  <text x="170" y="22" text-anchor="middle" font-size="12" fill="currentColor">Gauss's Law: Spherical Gaussian Surface</text>
+</svg>
 
 Gauss's theorem is powerful but insufficient alone. To determine \(\mathbf{E}\) uniquely from its flux through a surface, we need additional constraints — specifically, symmetry arguments or the second Maxwell equation, the irrotational property. The right-hand side of Gauss's theorem (the enclosed charge integral) is easy to compute; the left-hand side involves \(\mathbf{E}\), which we are trying to find. Only when symmetry constrains the direction and position-dependence of \(\mathbf{E}\) can we extract \(|\mathbf{E}|\) from the flux integral.
 
@@ -244,6 +353,42 @@ Label the two sides as region 1 (above \(\Sigma\)) and region 2 (below), with th
 
 The normal component of \(\mathbf{E}\) is **discontinuous** across a charged surface — the discontinuity equals \(\sigma/\epsilon_0\). The tangential component is **continuous**. These boundary conditions are the working tools for problems involving surfaces.
 
+<svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="bc-arr1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="bc-arr2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Interface surface -->
+  <line x1="20" y1="100" x2="360" y2="100" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Region labels -->
+  <text x="30" y="60" font-size="13" fill="currentColor">Region 1 (above)</text>
+  <text x="30" y="155" font-size="13" fill="currentColor">Region 2 (below)</text>
+  <!-- Surface label -->
+  <text x="290" y="95" font-size="11" fill="currentColor">Σ, σ</text>
+  <!-- Normal vector n21 (upward) -->
+  <line x1="190" y1="100" x2="190" y2="40" stroke="currentColor" stroke-width="1.8" marker-end="url(#bc-arr1)"/>
+  <text x="196" y="50" font-size="12" fill="currentColor">n̂₂₁</text>
+  <!-- E1 normal (larger, above) - discontinuous -->
+  <line x1="130" y1="95" x2="130" y2="30" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#bc-arr1)"/>
+  <text x="95" y="45" font-size="11" fill="#3b82f6">E₁ₙ (large)</text>
+  <!-- E2 normal (smaller, below) -->
+  <line x1="130" y1="105" x2="130" y2="150" stroke="#ef4444" stroke-width="2.5" marker-end="url(#bc-arr2)"/>
+  <text x="95" y="168" font-size="11" fill="#ef4444">E₂ₙ (small)</text>
+  <!-- Tangential components (continuous) -->
+  <line x1="250" y1="78" x2="320" y2="78" stroke="#3b82f6" stroke-width="2" marker-end="url(#bc-arr1)"/>
+  <text x="253" y="70" font-size="11" fill="#3b82f6">E₁ₜ</text>
+  <line x1="250" y1="122" x2="320" y2="122" stroke="#ef4444" stroke-width="2" marker-end="url(#bc-arr2)"/>
+  <text x="253" y="138" font-size="11" fill="#ef4444">E₂ₜ</text>
+  <!-- Continuity annotation -->
+  <text x="330" y="102" font-size="11" fill="currentColor">E₁ₜ = E₂ₜ</text>
+  <!-- Discontinuity annotation -->
+  <text x="20" y="192" font-size="12" fill="currentColor">(E₁ − E₂)·n̂₂₁ = σ/ε₀    (E₁ − E₂)×n̂₂₁ = 0</text>
+</svg>
+
 The classic example is the infinite conducting plane (at equilibrium, to be discussed in Chapter 9): the field just outside the conductor is \(\sigma/\epsilon_0\), perpendicular to the surface, and the field inside is zero.
 
 There is also a **Case 3** — the exterior of a finite charged object where charge resides only on the boundary and nothing exists inside (a spherical shell, for instance). Here, the field outside is determined by Gauss and irrotational, while inside the shell the field vanishes by the superposition of contributions from all parts of the shell.
@@ -287,6 +432,8 @@ By superposition:
 \[ V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_\Omega \frac{\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dV' \]
 
 This scalar integral is considerably easier to compute than the vector integral for \(\mathbf{E}\). One first computes \(V\), then recovers \(\mathbf{E} = -\nabla V\). The strategy is particularly effective for problems with moderate symmetry where the direct evaluation of \(\nabla V\) is still manageable.
+
+![Electric potential contour plot and radial field lines around a point charge +q](/pics/phys242/electric_potential_contour.png)
 
 ### 5.4 Properties of V and Relations to E
 

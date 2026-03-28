@@ -209,6 +209,82 @@ The Axiom of Choice is intuitively obvious for finite collections and even for c
 These pathologies illustrate why the relationship between AC and analysis is subtle: AC is essential for many positive results (the Hahn--Banach theorem, Tychonoff's theorem, the existence of maximal ideals) but also produces "paradoxical" objects.
 </div>
 
+### 1.5a Well-Ordered Sets, Transfinite Induction, and Ordinal Numbers
+
+The Axiom of Choice is most naturally understood through the lens of **well-ordered sets** — posets in which every nonempty subset has a minimum element. The ordinary induction principle on \(\mathbb{N}\) generalizes to any well-ordered set, and the resulting framework of transfinite induction is one of the most powerful tools in set theory and logic.
+
+<div class="definition">
+<strong>Definition 1.14b (Well-Ordered Set).</strong> A nonempty partially ordered set \((X, \le)\) is <em>well-ordered</em> if every nonempty subset \(A \subseteq X\) has a minimum element — an element \(m \in A\) such that \(m \le a\) for all \(a \in A\).
+</div>
+
+Every well-ordered set is automatically totally ordered: given \(x, y \in X\), the subset \(\{x, y\}\) has a minimum element, which must be \(\le\) the other. The natural numbers \(\mathbb{N}\) under the usual order are the archetypal well-ordered set; the reals \(\mathbb{R}\) are not well-ordered (the open interval \((0,1)\) has no minimum element).
+
+A slightly exotic example illuminates the concept: let \(\omega + 7 = \{1, 2, 3, \ldots\} \cup \{\omega, \omega+1, \omega+2, \ldots, \omega+6\}\), with the ordering \(n \le \omega + k\) for all \(n \in \mathbb{N}\) and \(0 \le k \le 6\), and \(\omega + i \le \omega + j\) when \(i \le j\). This set is well-ordered: it looks like the natural numbers followed by seven extra elements "after infinity." The element \(\omega\) has no immediate predecessor — no largest natural number precedes it — yet every nonempty subset still has a minimum.
+
+<div class="theorem">
+<strong>Theorem 1.14c (Principle of Transfinite Induction).</strong> Let \((X, \le)\) be a well-ordered set and \(S \subseteq X\). Suppose that for every \(x \in X\),
+\[
+\{y \in X : y < x\} \subseteq S \implies x \in S.
+\]
+Then \(S = X\).
+</div>
+
+*Proof.* If \(S \ne X\), let \(x_0 = \min(X \setminus S)\), which exists since \(X \setminus S\) is nonempty and \(X\) is well-ordered. By definition of \(x_0\), every \(y < x_0\) belongs to \(S\), i.e., \(\{y : y < x_0\} \subseteq S\). By hypothesis, \(x_0 \in S\), a contradiction. Hence \(S = X\). \(\square\)
+
+This generalizes ordinary induction: when \(X = \mathbb{N}\), the condition \(\{y < n\} \subseteq S \Rightarrow n \in S\) is exactly "if \(S(0), S(1), \ldots, S(n-1)\) hold then \(S(n)\) holds," which is strong induction. When \(X\) contains limit ordinals (elements with no immediate predecessor, like \(\omega\)), transfinite induction handles them naturally via the hypothesis: if \(S\) contains all elements before a limit ordinal \(\lambda\), then \(S\) contains \(\lambda\) too.
+
+**Culture: Ordinal Numbers.** The notion of well-ordered sets leads naturally to the concept of ordinal numbers, which measure the "order type" of well-ordered sets in the same way that cardinal numbers measure their size.
+
+Two well-ordered sets \((A, \le_A)\) and \((B, \le_B)\) are called **order-isomorphic** if there exists an order-preserving bijection \(f: A \to B\) (i.e., \(a_1 \le_A a_2 \Rightarrow f(a_1) \le_B f(a_2)\)). An **ordinal number** is an equivalence class of well-ordered sets under order isomorphism.
+
+The finite ordinals are just the natural numbers: \(0 = \emptyset\), \(1 = \{0\}\), \(2 = \{0,1\}\), and so on, with \(n = \{0, 1, \ldots, n-1\}\) for each \(n \in \mathbb{N}\). The first infinite ordinal is \(\omega = \{0, 1, 2, \ldots\}\), the order type of \(\mathbb{N}\). Beyond \(\omega\) lie \(\omega + 1, \omega + 2, \ldots\), then \(\omega + \omega = \omega \cdot 2\), then \(\omega^2, \omega^3, \ldots, \omega^\omega\), and so on through a transfinite hierarchy.
+
+One striking feature is that ordinal addition is not commutative. If we prepend a single element to \(\mathbb{N}\), we get a set order-isomorphic to \(\mathbb{N}\) itself (just shift all indices), so \(1 + \omega = \omega\). But \(\omega + 1\) consists of \(\mathbb{N}\) followed by one extra element after all natural numbers; this has a maximum element while \(\omega\) does not, so \(\omega + 1 \ne \omega\). Thus \(1 + \omega = \omega \ne \omega + 1\).
+
+This non-commutativity contrasts with cardinal arithmetic, where infinite cardinals satisfy \(\kappa + \lambda = \lambda + \kappa = \max(\kappa, \lambda)\). The distinction reflects the fact that ordinals care about order, while cardinals care only about size.
+
+### 1.5b Proof of the Equivalences: AC, Zorn's Lemma, and the Well-Ordering Principle
+
+The three statements AC, ZL, and WO stated in §1.5 are equivalent in Zermelo–Fraenkel set theory. We give the complete proof here, following Marcoux's treatment. The argument is the most technical in Chapter 1, but it pays off: it shows how all three principles are facets of the same underlying idea — that "arbitrary choices can always be made simultaneously."
+
+<div class="definition">
+<strong>Definition 1.14d (Initial Segment).</strong> Let \((X, \le)\) be a poset, \(C \subseteq X\) a chain, and \(d \in C\). The <em>initial segment of \(C\) at \(d\)</em> is
+\[
+P(C, d) = \{c \in C : c < d\}.
+\]
+</div>
+
+**Examples.** For \((R, \le)\), the interval \((-\infty, r)\) is an initial segment. For \(\mathbb{N}\), the set \(\{1, 2, \ldots, n\}\) is the initial segment at \(n+1\).
+
+<div class="theorem">
+<strong>Theorem 1.14e.</strong> The following are equivalent:
+<ol>
+<li><strong>(AC)</strong> For any nonempty collection \(\{X_\lambda\}_{\lambda \in \Lambda}\) of nonempty sets, \(\prod_{\lambda \in \Lambda} X_\lambda \ne \emptyset\).</li>
+<li><strong>(ZL)</strong> Let \((Y, \le)\) be a nonempty poset in which every chain has an upper bound. Then \(Y\) has a maximal element.</li>
+<li><strong>(WO)</strong> Every nonempty set \(Z\) admits a well-ordering.</li>
+</ol>
+</div>
+
+*Proof.*
+
+**(AC \(\Rightarrow\) ZL).** Suppose every chain in \((X, \le)\) has an upper bound, but assume for contradiction that \(X\) has no maximal element. Then every chain \(C\) has a *strict* upper bound — an element strictly greater than every upper bound. By AC, we can choose one strict upper bound \(f(C)\) for each chain \(C\); if \(C = \emptyset\), choose any \(x_0 \in X\) and set \(f(\emptyset) = x_0\).
+
+Call a subset \(A \subseteq X\) a **\(P\)-set** if (I) \((A, \le)\) is well-ordered, and (II) for every \(x \in A\), \(x = f(P(A, x))\) — each element of \(A\) is the chosen strict upper bound of its initial segment within \(A\).
+
+**Claim 1:** If \(A\) and \(B\) are both \(P\)-sets and \(A \ne B\), then one is an initial segment of the other. (The proof compares minimum elements of \(A \setminus B\) and \(B \setminus A\), using the well-orderings and property (II) to establish the equality \(P(A,x) = P(B,y)\) at the key element, and concludes that one is an initial segment of the other.)
+
+Let \(V = \bigcup\{A \subseteq X : A \text{ is a } P\text{-set}\}\).
+
+**Claim 2:** \(V\) is itself a \(P\)-set. (Follows from Claim 1: the union of a "compatible" family of well-ordered sets is well-ordered, and the property (II) is inherited by the union.)
+
+Now set \(w = f(V)\). Then \(V \cup \{w\}\) is a \(P\)-set strictly containing \(V\), so \(w \in V\), contradicting \(w = f(V)\) being a strict upper bound for \(V\). This contradiction shows that \(X\) must have had a maximal element.
+
+**(ZL \(\Rightarrow\) WO).** Let \(X \ne \emptyset\). Let \(\mathcal{A}\) be the collection of pairs \((Y, \le_Y)\) where \(Y \subseteq X\) and \(\le_Y\) is a well-ordering of \(Y\). Partially order \(\mathcal{A}\) by: \((A, \le_A) \le (B, \le_B)\) if \(A\) is an initial segment of \(B\). Any chain in \(\mathcal{A}\) has an upper bound (the union with the induced ordering). By ZL, \(\mathcal{A}\) has a maximal element \((M, \le_M)\). If \(M \ne X\), pick \(x_0 \in X \setminus M\) and extend \(\le_M\) to a well-ordering of \(M \cup \{x_0\}\) by declaring \(x_0\) greater than everything in \(M\); this contradicts maximality of \((M, \le_M)\). Hence \(M = X\), giving a well-ordering of \(X\).
+
+**(WO \(\Rightarrow\) AC).** Let \(\{X_\lambda\}_{\lambda \in \Lambda}\) be a nonempty collection of nonempty sets. By WO, each \(X_\lambda\) can be well-ordered, so it has a minimum element \(\min X_\lambda\). Define the choice function \(f(\lambda) = \min X_\lambda\). \(\square\)
+
+The implication AC \(\Rightarrow\) ZL deserves a comment: the detailed verification of Claims 1 and 2 is intricate (it occupies several pages in Marcoux's notes), but the core idea is clean — a maximal "coherent" well-ordered structure built by iterating the choice function must equal all of \(X\), and that yields a contradiction unless a maximal element exists.
+
 ### 1.6 Cardinal Arithmetic
 
 Using the Cantor--Schroeder--Bernstein Theorem (Theorem 1.11) and the closure properties of countable sets (Theorem 1.12), we can develop a full arithmetic of cardinal numbers, extending ordinary arithmetic to infinite quantities.
@@ -516,6 +592,32 @@ Having defined metric spaces and their metrics in Chapter 2, we now develop the 
 
 ### 3.1 Open and Closed Sets
 
+<svg viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <text x="230" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Open and Closed Sets in ℝ</text>
+  <!-- number line -->
+  <line x1="20" y1="60" x2="440" y2="60" stroke="currentColor" stroke-width="1.2" marker-end="url(#rl)"/>
+  <defs>
+    <marker id="rl" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- open interval (a,b) -->
+  <line x1="60" y1="55" x2="180" y2="55" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="60" cy="60" r="5" fill="white" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="180" cy="60" r="5" fill="white" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="78" text-anchor="middle" font-size="11" fill="#3b82f6">a</text>
+  <text x="180" y="78" text-anchor="middle" font-size="11" fill="#3b82f6">b</text>
+  <text x="120" y="44" text-anchor="middle" font-size="10" fill="#3b82f6">(a,b) open</text>
+  <!-- closed interval [c,d] -->
+  <line x1="250" y1="55" x2="380" y2="55" stroke="#22c55e" stroke-width="3"/>
+  <circle cx="250" cy="60" r="5" fill="#22c55e" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="380" cy="60" r="5" fill="#22c55e" stroke="#22c55e" stroke-width="2"/>
+  <text x="250" y="78" text-anchor="middle" font-size="11" fill="#22c55e">c</text>
+  <text x="380" y="78" text-anchor="middle" font-size="11" fill="#22c55e">d</text>
+  <text x="315" y="44" text-anchor="middle" font-size="10" fill="#22c55e">[c,d] closed</text>
+  <text x="230" y="100" text-anchor="middle" font-size="10" fill="currentColor">Open: hollow endpoints (not included);  Closed: filled endpoints (included)</text>
+</svg>
+
 <div class="definition">
 <strong>Definition 3.1 (Open and Closed Sets).</strong> Let \(X\) be a metric space and \(A \subseteq X\). We say \(A\) is <em>open</em> if for every \(a \in A\) there exists \(r > 0\) with \(B(a,r) \subseteq A\). We say \(A\) is <em>closed</em> if its complement \(A^c = X \setminus A\) is open.
 </div>
@@ -747,6 +849,37 @@ Continuity is the single most important concept in analysis --- it is the bridge
 
 ### 4.1 Continuity and Its Characterizations
 
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">ε-δ Continuity in Metric Spaces: B(x,δ) maps into B(f(x),ε)</text>
+  <!-- X space -->
+  <ellipse cx="100" cy="105" rx="85" ry="75" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="100" y="28" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">(X, d_X)</text>
+  <!-- x point -->
+  <circle cx="100" cy="100" r="3" fill="currentColor"/>
+  <text x="108" y="98" font-size="10" fill="currentColor">x</text>
+  <!-- delta ball -->
+  <circle cx="100" cy="100" r="35" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="100" y="148" text-anchor="middle" font-size="10" fill="#3b82f6">B(x, δ)</text>
+  <!-- Y space -->
+  <ellipse cx="370" cy="105" rx="85" ry="75" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="370" y="28" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">(Y, d_Y)</text>
+  <!-- f(x) point -->
+  <circle cx="370" cy="100" r="3" fill="currentColor"/>
+  <text x="378" y="98" font-size="10" fill="currentColor">f(x)</text>
+  <!-- epsilon ball -->
+  <circle cx="370" cy="100" r="35" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="370" y="148" text-anchor="middle" font-size="10" fill="#22c55e">B(f(x), ε)</text>
+  <!-- arrow f -->
+  <line x1="190" y1="100" x2="280" y2="100" stroke="#ef4444" stroke-width="2" marker-end="url(#ep)"/>
+  <text x="235" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">f</text>
+  <defs>
+    <marker id="ep" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <text x="240" y="188" text-anchor="middle" font-size="10" fill="currentColor">∀ε>0 ∃δ>0: d_X(x,a)&lt;δ ⟹ d_Y(f(x),f(a))&lt;ε</text>
+</svg>
+
 <div class="definition">
 <strong>Definition 4.1 (Limits and Continuity).</strong> Let \((X, d_X)\) and \((Y, d_Y)\) be metric spaces, \(f: X \to Y\), and \(a \in X\).
 <ul>
@@ -964,6 +1097,8 @@ To conclude that the full sequence converges: if \(f(x_n) \not\to f(x)\), there 
 </div>
 
 ### 4.5 Uniform Convergence
+
+![Uniform vs pointwise convergence: f_n(x)=xⁿ (pointwise, discontinuous limit) vs f_n(x)=x/n (uniform, limit=0)](/pics/pmath351/uniform_vs_pointwise.png)
 
 <div class="definition">
 <strong>Definition 4.17.</strong> A sequence \((f_n)\) in \(\mathcal{F}(X) = \{f: X \to \mathbb{R}\}\) <em>converges uniformly</em> to \(g\) on \(X\) if for every \(\varepsilon > 0\) there exists \(N\) such that \(|f_n(x) - g(x)| < \varepsilon\) for all \(n \ge N\) and all \(x \in X\). Equivalently, \(\|f_n - g\|_\infty \to 0\).
@@ -1531,6 +1666,8 @@ Compact operators are central to spectral theory: the spectral theorem for compa
 </div>
 
 ### 6.5 The Cantor Set and Space-Filling Curves
+
+![Cantor set construction: first 5 iterations](/pics/pmath351/cantor_set.png)
 
 <div class="definition">
 <strong>Definition 6.18 (Cantor Set).</strong> Let \(C_0 = [0,1]\). Construct \(C_{n+1}\) by removing the open middle third of each component interval of \(C_n\). The <em>Cantor set</em> is \(C = \bigcap_{n=0}^\infty C_n\).
@@ -2485,6 +2622,32 @@ The resolution is to use Chebyshev nodes \(x_k = \cos((2k+1)\pi/(2n+2))\), which
 
 <div class="proof">
 <strong>Proof.</strong> By the Weierstrass theorem, choose polynomials \(p_k \to f\) uniformly. Then \(\int_a^b f^2 = \lim_{k \to \infty} \int_a^b f \cdot p_k = 0\) (since each \(\int f \cdot p_k = 0\) by hypothesis and linearity). Since \(f\) is continuous and \(f^2 \ge 0\) with integral 0, we have \(f \equiv 0\).
+</div>
+
+<div class="remark">
+<strong>Remark (Convolution-Kernel Proof of Weierstrass Approximation).</strong> The Bernstein proof above uses a probabilistic averaging operator. There is a second, analytically deeper proof via a polynomial approximate identity — a "convolution kernel" that concentrates at the origin. This proof is the prototype for the Fejér kernel in Fourier analysis.
+
+Define the <em>Landau kernel</em>
+\[
+Q_n(t) = c_n(1 - t^2)^n, \quad t \in [-1, 1],
+\]
+where the constant \(c_n\) is chosen so that \(\int_{-1}^1 Q_n(t)\, dt = 1\). Note that \(Q_n\) is a polynomial of degree \(2n\) in \(t\). To estimate \(c_n\): using the substitution \(t = \sin\theta\) or the bound \((1-t^2)^n \ge (1-1/n)^n \ge e^{-2}\) on \(|t| \le 1/\sqrt{n}\), one shows \(\int_{-1}^1 (1-t^2)^n\, dt \ge \frac{2}{\sqrt{n}(1+1/n)} \), so \(c_n = O(\sqrt{n})\). The key property of \(Q_n\) is that for any fixed \(\delta > 0\),
+\[
+\int_{\delta \le |t| \le 1} Q_n(t)\, dt \le c_n(1-\delta^2)^n \to 0 \quad \text{as } n \to \infty.
+\]
+In other words, the mass of \(Q_n\) concentrates on \((-\delta, \delta)\) as \(n \to \infty\).
+
+For \(f \in C[-1,1]\), extend \(f\) by zero outside \([-1,1]\) and define the polynomial approximant
+\[
+p_n(x) = \int_{-1}^1 f(x + t)\, Q_n(t)\, dt.
+\]
+This is a polynomial in \(x\) of degree \(2n\) (since \(Q_n(t)\) is a polynomial in \(t\) and we are integrating against a fixed function of \(t\)). To show \(p_n \to f\) uniformly on \([-1,1]\), write
+\[
+p_n(x) - f(x) = \int_{-1}^1 \bigl(f(x+t) - f(x)\bigr) Q_n(t)\, dt.
+\]
+Given \(\varepsilon > 0\), choose \(\delta > 0\) by uniform continuity so that \(|t| < \delta \Rightarrow |f(x+t) - f(x)| < \varepsilon\) for all \(x\). Split the integral at \(\pm\delta\): the contribution from \(|t| < \delta\) is bounded by \(\varepsilon \int Q_n = \varepsilon\), while the contribution from \(|t| \ge \delta\) is bounded by \(2\|f\|_\infty \cdot c_n(1-\delta^2)^n \to 0\). Choosing \(n\) large enough makes the total error less than \(2\varepsilon\), uniformly in \(x\).
+
+This proof is more than a curiosity: the construction \(f \mapsto f * Q_n\) is exactly a <em>convolution with an approximate identity</em>. In Fourier analysis, the Fejér kernel \(F_N(\theta) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right)^2\) plays the analogous role for trigonometric approximation — it is a non-negative kernel integrating to 1, concentrating at \(\theta = 0\), and the Cesàro means \(\sigma_N f = f * F_N\) converge uniformly to \(f\) for any \(f \in C(\mathbb{T})\). The Weierstrass theorem and Fejér's theorem are thus parallel statements in two different approximation settings.
 </div>
 
 ### 11.2 Best Approximation

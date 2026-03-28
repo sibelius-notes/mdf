@@ -159,6 +159,8 @@ A recursively defined sequence specifies each term in terms of previous terms. F
 
 For example, since \(-1/n \le \sin(n)/n \le 1/n\) and both bounds converge to \(0\), the Squeeze Theorem gives \(\lim_{n\to\infty} \sin(n)/n = 0\).
 
+![Squeeze theorem for sin(n)/n](/static/pics/math137/squeeze.png)
+
 ## 1.4 Monotone Convergence Theorem
 
 <div class="definition">
@@ -193,6 +195,8 @@ For example, since \(-1/n \le \sin(n)/n \le 1/n\) and both bounds converge to \(
 <br>In particular, \(\{a_n\}\) converges if and only if it is bounded above. A similar statement holds for decreasing sequences.
 
 </div>
+
+![Monotone convergence: increasing bounded sequence](/static/pics/math137/monotone_conv.png)
 
 ## 1.5 Introduction to Series
 
@@ -240,6 +244,45 @@ The converse is false: the Harmonic Series \(\sum 1/n\) diverges even though \(1
 <strong>Definition (Limit of a Function at \(x = a\)).</strong> Let \(f\) be a function and \(a \in \mathbb{R}\). We say \(\lim_{x \to a} f(x) = L\) if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that if \(0 < |x - a| < \delta\), then \(|f(x) - L| < \varepsilon\).
 
 </div>
+
+<svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="edArr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="160" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">ε-δ Definition of Limit</text>
+  <!-- Axes -->
+  <line x1="20" y1="200" x2="300" y2="200" stroke="currentColor" stroke-width="1.2" marker-end="url(#edArr)"/>
+  <line x1="40" y1="215" x2="40" y2="25" stroke="currentColor" stroke-width="1.2" marker-end="url(#edArr)"/>
+  <text x="303" y="204" font-size="10" fill="currentColor">x</text>
+  <text x="34" y="22" font-size="10" fill="currentColor">y</text>
+  <!-- Curve: f(x) = (x-160)^2/1500 + 90, in pixel coords -->
+  <path d="M60,185 Q120,95 160,85 Q200,75 260,130" fill="none" stroke="currentColor" stroke-width="2"/>
+  <!-- a = 160, f(a)=85 -->
+  <!-- delta strip: x in [130, 190] -->
+  <rect x="130" y="25" width="60" height="175" fill="#3b82f6" fill-opacity="0.10" stroke="none"/>
+  <line x1="130" y1="25" x2="130" y2="200" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="190" y1="25" x2="190" y2="200" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="130" y="215" font-size="9" fill="#3b82f6" text-anchor="middle">a−δ</text>
+  <text x="190" y="215" font-size="9" fill="#3b82f6" text-anchor="middle">a+δ</text>
+  <text x="160" y="215" font-size="9" fill="currentColor" text-anchor="middle">a</text>
+  <circle cx="160" cy="200" r="2.5" fill="currentColor"/>
+  <!-- epsilon strip: y in [65, 105] -->
+  <rect x="20" y="65" width="280" height="40" fill="#ef4444" fill-opacity="0.10" stroke="none"/>
+  <line x1="20" y1="65" x2="300" y2="65" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="20" y1="105" x2="300" y2="105" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="18" y="62" font-size="9" fill="#ef4444" text-anchor="end">L+ε</text>
+  <text x="18" y="108" font-size="9" fill="#ef4444" text-anchor="end">L−ε</text>
+  <text x="16" y="87" font-size="9" fill="currentColor" text-anchor="end">L</text>
+  <circle cx="40" cy="85" r="2.5" fill="currentColor"/>
+  <!-- Point on curve at a -->
+  <circle cx="160" cy="85" r="4" fill="#22c55e"/>
+  <!-- Connecting dashed lines -->
+  <line x1="160" y1="85" x2="160" y2="200" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="40" y1="85" x2="160" y2="85" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <text x="160" y="225" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.7">|x−a|&lt;δ ⟹ |f(x)−L|&lt;ε</text>
+</svg>
 
 ## 2.2 Sequential Characterization of Limits
 
@@ -830,6 +873,8 @@ Key examples centered at \(a = 0\):
 - \(e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots + \frac{x^n}{n!} + \cdots\)
 - \(\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} - \cdots\)
 - \(\cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} - \cdots\)
+
+![Taylor polynomials for eˣ: T₁, T₂, T₃, T₅](/static/pics/math137/taylor_exp.png)
 
 ## 5.2 Taylor's Theorem and Errors in Approximations
 

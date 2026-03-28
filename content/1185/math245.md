@@ -272,6 +272,36 @@ Self-adjoint and unitary operators are both normal. The class of normal operator
 
 *Proof.* Suppose \(T\mathbf{v} = \lambda \mathbf{v}\) with \(\|\mathbf{v}\| = 1\). Then \(\lambda = \langle T\mathbf{v}, \mathbf{v} \rangle = \langle \mathbf{v}, T^*\mathbf{v} \rangle = \langle \mathbf{v}, T\mathbf{v} \rangle = \overline{\langle T\mathbf{v}, \mathbf{v} \rangle} = \bar{\lambda}\), so \(\lambda \in \mathbb{R}\). \(\square\)
 
+<svg viewBox="0 0 380 130" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="saArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="190" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Self-Adjoint: Real Eigenvalues on Number Line, Orthogonal Eigenvectors</text>
+  <!-- Number line for eigenvalues -->
+  <line x1="20" y1="55" x2="360" y2="55" stroke="currentColor" stroke-width="1.3" marker-end="url(#saArr)"/>
+  <text x="363" y="59" font-size="10" fill="currentColor">ℝ</text>
+  <!-- Eigenvalue markers -->
+  <circle cx="80" cy="55" r="5" fill="#ef4444"/>
+  <text x="80" y="47" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">λ₁</text>
+  <text x="80" y="72" font-size="10" fill="currentColor" text-anchor="middle">real</text>
+  <circle cx="180" cy="55" r="5" fill="#3b82f6"/>
+  <text x="180" y="47" font-size="11" fill="#3b82f6" text-anchor="middle" font-weight="bold">λ₂</text>
+  <text x="180" y="72" font-size="10" fill="currentColor" text-anchor="middle">real</text>
+  <circle cx="280" cy="55" r="5" fill="#22c55e"/>
+  <text x="280" y="47" font-size="11" fill="#22c55e" text-anchor="middle" font-weight="bold">λ₃</text>
+  <text x="280" y="72" font-size="10" fill="currentColor" text-anchor="middle">real</text>
+  <!-- Orthogonal eigenvector pair arrows -->
+  <line x1="30" y1="100" x2="80" y2="100" stroke="#ef4444" stroke-width="2" marker-end="url(#saArr)"/>
+  <text x="83" y="104" font-size="10" fill="#ef4444">v₁</text>
+  <line x1="30" y1="100" x2="30" y2="115" stroke="#3b82f6" stroke-width="2" marker-end="url(#saArr)"/>
+  <text x="20" y="125" font-size="9" fill="#3b82f6">v₂</text>
+  <!-- Right angle mark -->
+  <rect x="30" y="100" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <text x="180" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">λ₁≠λ₂≠λ₃ ⟹ v₁⊥v₂⊥v₃  (distinct eigenvalues → orthogonal eigenvectors)</text>
+</svg>
+
 <div class="theorem">
 
 <strong>Theorem 4.3.</strong> Eigenvectors of a normal operator \(T\) corresponding to distinct eigenvalues are orthogonal.
@@ -291,6 +321,32 @@ Before the full spectral theorem, we need Schur's triangularization, which holds
 </div>
 
 *Proof.* By induction on \(n\). For \(n = 1\) the result is trivial. For \(n > 1\): since \(\mathbb{C}\) is algebraically closed, \(T\) has an eigenvalue \(\lambda_1\) with unit eigenvector \(\mathbf{e}_1\). Let \(W = \operatorname{span}\{\mathbf{e}_1\}^\perp\); note \(T^*\) need not preserve \(W\), but we can consider the compression of \(T\) to a suitable space. More precisely, extend \(\mathbf{e}_1\) to an orthonormal basis, write the matrix of \(T\) in this basis as \(\begin{pmatrix} \lambda_1 & * \\ 0 & T_1 \end{pmatrix}\), and apply the inductive hypothesis to the \((n-1)\times(n-1)\) block \(T_1\). \(\square\)
+
+<svg viewBox="0 0 360 140" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
+  <text x="180" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Schur Triangularization: U*TU = R (upper triangular)</text>
+  <!-- T -->
+  <rect x="15" y="32" width="60" height="70" rx="4" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.5"/>
+  <text x="45" y="70" font-size="13" fill="currentColor" text-anchor="middle" font-weight="bold">T</text>
+  <text x="45" y="115" font-size="9" fill="currentColor" text-anchor="middle">any operator</text>
+  <!-- = -->
+  <text x="85" y="72" font-size="16" fill="currentColor">=</text>
+  <!-- U -->
+  <rect x="100" y="32" width="60" height="60" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="130" y="66" font-size="13" fill="#3b82f6" text-anchor="middle" font-weight="bold">U</text>
+  <text x="130" y="105" font-size="9" fill="#3b82f6" text-anchor="middle">unitary</text>
+  <!-- R: upper triangular -->
+  <rect x="170" y="32" width="60" height="60" rx="4" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- Show upper triangular pattern -->
+  <text x="178" y="50" font-size="10" fill="#ef4444">λ₁ * *</text>
+  <text x="178" y="65" font-size="10" fill="#ef4444">  λ₂ *</text>
+  <text x="178" y="80" font-size="10" fill="#ef4444">    λ₃</text>
+  <text x="200" y="105" font-size="9" fill="#ef4444" text-anchor="middle">upper triangular</text>
+  <!-- U* -->
+  <rect x="240" y="32" width="60" height="60" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="270" y="66" font-size="13" fill="#3b82f6" text-anchor="middle" font-weight="bold">U*</text>
+  <text x="270" y="105" font-size="9" fill="#3b82f6" text-anchor="middle">= U⁻¹</text>
+  <text x="180" y="132" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">Eigenvalues appear on diagonal of R; normal ⟹ R is diagonal</text>
+</svg>
 
 ## 4.3 The Real Spectral Theorem
 
@@ -394,6 +450,8 @@ Extend \(\{\mathbf{u}_1, \ldots, \mathbf{u}_r\}\) to an orthonormal basis \(\{\m
 Now check: \(A V = A[\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n] = [\sigma_1 \mathbf{u}_1 \mid \cdots \mid \sigma_r \mathbf{u}_r \mid \mathbf{0} \mid \cdots \mid \mathbf{0}] = U\Sigma\). Since \(V\) is orthogonal, \(A = U\Sigma V^T\). \(\square\)
 
 The geometric meaning: \(V^T\) rotates the domain, \(\Sigma\) scales each coordinate (zeroing out the null-space directions), and \(U\) rotates the codomain. Every linear map is, in the right pair of orthonormal frames, a diagonal scaling.
+
+![SVD geometry: unit circle maps to ellipse](/static/pics/math245/svd_geometry.png)
 
 ## 5.3 Applications
 

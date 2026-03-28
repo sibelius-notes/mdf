@@ -344,6 +344,48 @@ for \(3 \leq i \leq k\). Then \(\text{Span}\{\vec{v}_1, \ldots, \vec{v}_i\} = \t
 
 If a vector \(\vec{v}_i\) turns out to be \(\vec{0}\), this indicates that \(\vec{w}_i\) was a linear combination of the previous vectors; we simply skip it and continue.
 
+<svg viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="gsBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="gsRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="gsGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="gsDash" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="170" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Gram-Schmidt: w₁, w₂ → v₁, v₂ (orthogonal)</text>
+  <!-- Origin -->
+  <circle cx="60" cy="180" r="3" fill="currentColor"/>
+  <text x="48" y="194" font-size="10" fill="currentColor">O</text>
+  <!-- w1 = v1: along (160, -60) from (60,180) → endpoint (220, 120) -->
+  <line x1="60" y1="180" x2="220" y2="120" stroke="#3b82f6" stroke-width="2" marker-end="url(#gsBlue)"/>
+  <text x="224" y="116" font-size="12" fill="#3b82f6" font-weight="bold">w₁=v₁</text>
+  <!-- w2: original at angle, endpoint (120, 50) -->
+  <line x1="60" y1="180" x2="120" y2="50" stroke="#ef4444" stroke-width="2" marker-end="url(#gsRed)"/>
+  <text x="96" y="44" font-size="12" fill="#ef4444" font-weight="bold">w₂</text>
+  <!-- projection of w2 onto v1: proj = ((w2·v1)/|v1|²) v1
+       w2=(60,-130), v1=(160,-60). dot=60*160+(-130)(-60)=9600+7800=17400. |v1|²=160²+60²=25600+3600=29200
+       proj = (17400/29200)*(160,-60) = 0.5959*(160,-60)=(95.3,-35.8) → endpoint=(60+95,180-36)=(155,144) -->
+  <line x1="60" y1="180" x2="155" y2="144" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#gsDash)"/>
+  <text x="105" y="175" font-size="10" fill="currentColor">proj</text>
+  <!-- v2 = w2 - proj: from foot (155,144) to w2 (120,50)? No: v2 = w2 - proj, drawn from O
+       v2 endpoint = (60+60-95, 180-130+36) = (25, 86) -->
+  <line x1="60" y1="180" x2="25" y2="86" stroke="#22c55e" stroke-width="2.2" marker-end="url(#gsGreen)"/>
+  <text x="8" y="82" font-size="12" fill="#22c55e" font-weight="bold">v₂</text>
+  <!-- Right angle between v1 and v2 — small square symbol near origin area -->
+  <!-- v1 direction (160,-60)/|v1|, v2 direction (-35,-94)/|v2| - just show text note -->
+  <!-- Dashed line from proj foot to w2 tip -->
+  <line x1="155" y1="144" x2="120" y2="50" stroke="#22c55e" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <!-- Right angle mark: place between v1 and v2 near O -->
+  <text x="170" y="205" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">v₂ = w₂ − proj_{v₁}(w₂),  v₁ ⊥ v₂</text>
+</svg>
+
 ## 9.4 General Projections
 
 <div class="definition">
@@ -437,6 +479,42 @@ When \(A\vec{x} = \vec{b}\) is inconsistent, we seek \(\vec{x}\) minimizing \(\|
 
 By the Fundamental Theorem, \(\vec{b} - A\vec{x} \in \text{Null}(A^T)\), giving the normal system \(A^T A \vec{x} = A^T \vec{b}\).
 
+<svg viewBox="0 0 300 230" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="lsBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="lsRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="lsGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="lsBlk" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="150" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Least Squares: proj b onto Col(A)</text>
+  <!-- Col(A) plane (parallelogram) -->
+  <polygon points="30,190 200,160 260,80 90,110" fill="#3b82f6" fill-opacity="0.12" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="195" y="100" font-size="11" fill="#3b82f6" font-weight="bold">Col(A)</text>
+  <!-- b vector -->
+  <circle cx="80" cy="200" r="3" fill="currentColor"/>
+  <text x="68" y="215" font-size="10" fill="currentColor">O</text>
+  <line x1="80" y1="200" x2="185" y2="48" stroke="#ef4444" stroke-width="2" marker-end="url(#lsRed)"/>
+  <text x="188" y="44" font-size="12" fill="#ef4444" font-weight="bold">b</text>
+  <!-- Projection Ax_hat = proj_Col(A)(b) -->
+  <!-- foot: roughly at (165, 135) on the plane -->
+  <line x1="80" y1="200" x2="162" y2="138" stroke="#22c55e" stroke-width="2.2" marker-end="url(#lsGreen)"/>
+  <text x="115" y="187" font-size="11" fill="#22c55e" font-weight="bold">Ax̂</text>
+  <!-- Residual: b - Ax_hat -->
+  <line x1="162" y1="138" x2="185" y2="48" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#lsBlk)"/>
+  <text x="188" y="95" font-size="10" fill="currentColor">b − Ax̂</text>
+  <!-- Right angle mark at foot -->
+  <rect x="154" y="130" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <text x="150" y="222" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">b − Ax̂ ⊥ Col(A)  ⟹  AᵀAx̂ = Aᵀb</text>
+</svg>
+
 <div class="theorem">
 
 <strong>Theorem 9.6.2 (Least Squares).</strong> Given data points \((x_1, y_1), \ldots, (x_m, y_m)\), let
@@ -515,6 +593,38 @@ The proof uses the Triangularization Theorem: since \(A\) is symmetric and all e
 
 To orthogonally diagonalize a symmetric matrix: find all eigenvalues, find a basis for each eigenspace, apply Gram-Schmidt within each eigenspace (if needed), and normalize to form the orthogonal matrix \(P\).
 
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1.5em auto">
+  <text x="200" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Spectral Theorem: A = PDP ᵀ  (A symmetric)</text>
+  <!-- A -->
+  <rect x="10" y="35" width="55" height="55" rx="4" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.5"/>
+  <text x="37" y="67" font-size="13" fill="currentColor" text-anchor="middle" font-weight="bold">A</text>
+  <text x="37" y="105" font-size="10" fill="currentColor" text-anchor="middle">symmetric</text>
+  <!-- = -->
+  <text x="75" y="67" font-size="16" fill="currentColor">=</text>
+  <!-- P (orthogonal) -->
+  <rect x="90" y="35" width="55" height="55" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="117" y="67" font-size="13" fill="#3b82f6" text-anchor="middle" font-weight="bold">P</text>
+  <text x="117" y="105" font-size="10" fill="#3b82f6" text-anchor="middle">orthogonal</text>
+  <text x="117" y="116" font-size="9" fill="#3b82f6" text-anchor="middle">Pᵀ=P⁻¹</text>
+  <!-- D (diagonal, eigenvalues) -->
+  <rect x="155" y="35" width="55" height="55" rx="4" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="182" y="57" font-size="11" fill="#ef4444" text-anchor="middle">λ₁</text>
+  <text x="182" y="73" font-size="11" fill="#ef4444" text-anchor="middle">  λ₂</text>
+  <text x="182" y="89" font-size="11" fill="#ef4444" text-anchor="middle">    ⋱</text>
+  <text x="182" y="105" font-size="10" fill="#ef4444" text-anchor="middle">diagonal D</text>
+  <text x="182" y="116" font-size="9" fill="#ef4444" text-anchor="middle">real eigenvalues</text>
+  <!-- Pᵀ -->
+  <rect x="220" y="35" width="55" height="55" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="247" y="67" font-size="13" fill="#3b82f6" text-anchor="middle" font-weight="bold">Pᵀ</text>
+  <text x="247" y="105" font-size="10" fill="#3b82f6" text-anchor="middle">= P⁻¹</text>
+  <!-- Right: eigenvectors note -->
+  <text x="290" y="50" font-size="11" fill="currentColor">Cols of P:</text>
+  <text x="290" y="65" font-size="11" fill="currentColor">orthonormal</text>
+  <text x="290" y="80" font-size="11" fill="currentColor">eigenvectors</text>
+  <text x="290" y="95" font-size="11" fill="currentColor">q₁, …, qₙ</text>
+  <text x="200" y="148" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">A = λ₁q₁q₁ᵀ + λ₂q₂q₂ᵀ + … + λₙqₙqₙᵀ  (spectral decomposition)</text>
+</svg>
+
 ## 10.3 Quadratic Forms
 
 <div class="definition">
@@ -562,6 +672,35 @@ Every quadratic form can be represented by a unique symmetric matrix. The off-di
 </div>
 
 The eigenvectors of the corresponding symmetric matrix are called the principal axes of the quadratic form. The level curve \(Q(\vec{x}) = k\) can be an ellipse, hyperbola, pair of lines, or a point depending on the signs of \(\lambda_1, \lambda_2\) and \(k\).
+
+<svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="qfArr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- Left panel: ellipse (both eigenvalues same sign) -->
+  <text x="95" y="16" font-size="11" fill="currentColor" text-anchor="middle" font-weight="bold">Ellipse: λ₁,λ₂ &gt; 0</text>
+  <line x1="15" y1="100" x2="185" y2="100" stroke="currentColor" stroke-width="1" opacity="0.4" marker-end="url(#qfArr)"/>
+  <line x1="95" y1="175" x2="95" y2="25" stroke="currentColor" stroke-width="1" opacity="0.4" marker-end="url(#qfArr)"/>
+  <ellipse cx="95" cy="100" rx="60" ry="35" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="158" y="97" font-size="10" fill="#3b82f6">y₁</text>
+  <text x="98" y="22" font-size="10" fill="#3b82f6">y₂</text>
+  <text x="95" y="192" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">λ₁y₁² + λ₂y₂² = 1</text>
+  <!-- Right panel: hyperbola (opposite sign eigenvalues) -->
+  <text x="285" y="16" font-size="11" fill="currentColor" text-anchor="middle" font-weight="bold">Hyperbola: λ₁&gt;0, λ₂&lt;0</text>
+  <line x1="205" y1="100" x2="375" y2="100" stroke="currentColor" stroke-width="1" opacity="0.4" marker-end="url(#qfArr)"/>
+  <line x1="285" y1="175" x2="285" y2="25" stroke="currentColor" stroke-width="1" opacity="0.4" marker-end="url(#qfArr)"/>
+  <!-- Hyperbola branches -->
+  <path d="M245,25 Q285,65 325,25" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M245,175 Q285,135 325,175" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <!-- Asymptote lines -->
+  <line x1="215" y1="170" x2="355" y2="30" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3" opacity="0.3"/>
+  <line x1="215" y1="30" x2="355" y2="170" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3" opacity="0.3"/>
+  <text x="348" y="97" font-size="10" fill="#ef4444">y₁</text>
+  <text x="288" y="22" font-size="10" fill="#ef4444">y₂</text>
+  <text x="285" y="192" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">λ₁y₁² − |λ₂|y₂² = 1</text>
+</svg>
 
 ## 10.5 Optimizing Quadratic Forms
 
@@ -630,6 +769,44 @@ The SVD extends diagonalization-like ideas to arbitrary \(m \times n\) matrices.
 </div>
 
 The algorithm: (1) find eigenvalues and orthonormal eigenvectors of \(A^T A\); (2) form \(V\) and \(\Sigma\); (3) compute \(\vec{u}_i = \frac{1}{\sigma_i} A \vec{v}_i\) for \(1 \leq i \leq r\) and extend to an orthonormal basis for \(\mathbb{R}^m\) to get \(U\).
+
+<svg viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <!-- Title -->
+  <text x="210" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">SVD: A = U Σ Vᵀ  (dimensions labeled)</text>
+  <!-- A block -->
+  <rect x="10" y="30" width="60" height="80" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="40" y="74" font-size="14" fill="#3b82f6" text-anchor="middle" font-weight="bold">A</text>
+  <text x="40" y="122" font-size="10" fill="currentColor" text-anchor="middle">m × n</text>
+  <!-- = -->
+  <text x="80" y="76" font-size="18" fill="currentColor" text-anchor="middle">=</text>
+  <!-- U block (m×m) -->
+  <rect x="94" y="30" width="80" height="80" rx="4" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="134" y="74" font-size="14" fill="#22c55e" text-anchor="middle" font-weight="bold">U</text>
+  <text x="134" y="122" font-size="10" fill="currentColor" text-anchor="middle">m × m</text>
+  <text x="134" y="134" font-size="9" fill="#22c55e" text-anchor="middle">left sing. vecs</text>
+  <!-- Sigma block (m×n) -->
+  <rect x="184" y="30" width="60" height="80" rx="4" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="214" y="68" font-size="13" fill="#ef4444" text-anchor="middle" font-weight="bold">Σ</text>
+  <!-- Diagonal dots in sigma -->
+  <circle cx="196" cy="42" r="3" fill="#ef4444" opacity="0.6"/>
+  <circle cx="207" cy="53" r="3" fill="#ef4444" opacity="0.6"/>
+  <circle cx="218" cy="64" r="3" fill="#ef4444" opacity="0.6"/>
+  <text x="214" y="122" font-size="10" fill="currentColor" text-anchor="middle">m × n</text>
+  <text x="214" y="134" font-size="9" fill="#ef4444" text-anchor="middle">σ₁≥…≥σᵣ>0</text>
+  <!-- VT block (n×n) -->
+  <rect x="254" y="30" width="60" height="60" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="284" y="64" font-size="14" fill="#3b82f6" text-anchor="middle" font-weight="bold">Vᵀ</text>
+  <text x="284" y="105" font-size="10" fill="currentColor" text-anchor="middle">n × n</text>
+  <text x="284" y="117" font-size="9" fill="#3b82f6" text-anchor="middle">right sing. vecs</text>
+  <!-- Braces / size annotations -->
+  <line x1="94" y1="25" x2="174" y2="25" stroke="#22c55e" stroke-width="1" opacity="0.5"/>
+  <text x="134" y="22" font-size="9" fill="#22c55e" text-anchor="middle">m cols</text>
+  <!-- Summary -->
+  <text x="340" y="60" font-size="11" fill="currentColor">U: orthogonal</text>
+  <text x="340" y="76" font-size="11" fill="currentColor">V: orthogonal</text>
+  <text x="340" y="92" font-size="11" fill="currentColor">Σ: diagonal</text>
+  <text x="340" y="108" font-size="11" fill="currentColor">(non-neg. diag)</text>
+</svg>
 
 ---
 

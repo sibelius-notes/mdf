@@ -47,6 +47,46 @@ This simple observation is the engine behind our ability to strip spanning sets 
 
 A spanning set may contain redundancy — some vectors expressible in terms of the others. Linear independence is the condition that no such redundancy exists.
 
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <!-- Left panel: two independent vectors -->
+  <text x="120" y="14" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">Linearly Independent</text>
+  <line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width="0.8"/>
+  <line x1="120" y1="30" x2="120" y2="170" stroke="currentColor" stroke-width="0.8"/>
+  <!-- v1 -->
+  <line x1="120" y1="110" x2="180" y2="60" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#li1)"/>
+  <text x="186" y="55" font-size="11" fill="#3b82f6" font-weight="bold">v₁</text>
+  <!-- v2 -->
+  <line x1="120" y1="110" x2="80" y2="52" stroke="#22c55e" stroke-width="2.5" marker-end="url(#li2)"/>
+  <text x="64" y="50" font-size="11" fill="#22c55e" font-weight="bold">v₂</text>
+  <text x="120" y="188" text-anchor="middle" font-size="10" fill="currentColor">Span = plane ℝ²</text>
+  <defs>
+    <marker id="li1" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="li2" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#22c55e"/>
+    </marker>
+    <marker id="li3" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Right panel: three coplanar (dependent) vectors -->
+  <text x="360" y="14" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">Linearly Dependent</text>
+  <line x1="280" y1="110" x2="440" y2="110" stroke="currentColor" stroke-width="0.8"/>
+  <line x1="360" y1="30" x2="360" y2="170" stroke="currentColor" stroke-width="0.8"/>
+  <!-- u1 -->
+  <line x1="360" y1="110" x2="420" y2="70" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#li1)"/>
+  <text x="426" y="66" font-size="11" fill="#3b82f6" font-weight="bold">u₁</text>
+  <!-- u2 -->
+  <line x1="360" y1="110" x2="310" y2="70" stroke="#22c55e" stroke-width="2.5" marker-end="url(#li2)"/>
+  <text x="296" y="66" font-size="11" fill="#22c55e" font-weight="bold">u₂</text>
+  <!-- u3 = u1+u2 (dependent) -->
+  <line x1="360" y1="110" x2="370" y2="50" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#li3)"/>
+  <text x="374" y="46" font-size="11" fill="#ef4444" font-weight="bold">u₃</text>
+  <text x="360" y="188" text-anchor="middle" font-size="10" fill="#ef4444">u₃ = c₁u₁+c₂u₂ (redundant)</text>
+</svg>
+
 <div class="definition">
 
 <strong>Definition 1.4 (Linear Dependence and Independence).</strong> Vectors \(\mathbf{v}_1, \ldots, \mathbf{v}_k \in \mathbb{R}^n\) are <em>linearly dependent</em> if there exist scalars \(c_1, \ldots, c_k\), not all zero, such that \(c_1\mathbf{v}_1 + \cdots + c_k\mathbf{v}_k = \mathbf{0}\). They are <em>linearly independent</em> if the only solution to \(c_1\mathbf{v}_1 + \cdots + c_k\mathbf{v}_k = \mathbf{0}\) is \(c_1 = \cdots = c_k = 0\).

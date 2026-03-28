@@ -49,6 +49,49 @@ y &= Cx + Du, \tag{1.3b}
 
 or simply denote it by the quadruple \((A, B, C, D)\). LTI systems will be our primary focus throughout the course.
 
+<svg viewBox="0 0 620 140" xmlns="http://www.w3.org/2000/svg" style="max-width:620px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arh" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#555"/>
+    </marker>
+    <marker id="arb" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arg" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- u input -->
+  <text x="18" y="72" font-size="13" font-family="serif" fill="#555">u(t)</text>
+  <line x1="50" y1="68" x2="100" y2="68" stroke="#555" stroke-width="1.5" marker-end="url(#arh)"/>
+  <!-- (sI-A)^{-1}B block -->
+  <rect x="100" y="50" width="130" height="40" rx="5" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="75" text-anchor="middle" font-size="12" font-family="serif" fill="#3b82f6">$(sI-A)^{-1}B$</text>
+  <!-- x state output -->
+  <line x1="230" y1="68" x2="310" y2="68" stroke="#555" stroke-width="1.5" marker-end="url(#arh)"/>
+  <text x="268" y="62" font-size="12" font-family="serif" fill="#555">x</text>
+  <!-- C block -->
+  <rect x="310" y="50" width="70" height="40" rx="5" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="345" y="75" text-anchor="middle" font-size="13" font-family="serif" fill="#3b82f6">$C$</text>
+  <!-- Cx output -->
+  <line x1="380" y1="68" x2="440" y2="68" stroke="#555" stroke-width="1.5" marker-end="url(#arh)"/>
+  <!-- Sum circle -->
+  <circle cx="455" cy="68" r="14" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="455" y="73" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#555">+</text>
+  <!-- D feedthrough -->
+  <rect x="140" y="100" width="60" height="30" rx="4" fill="none" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="170" y="120" text-anchor="middle" font-size="13" font-family="serif" fill="#22c55e">$D$</text>
+  <!-- D path: from u down, right, and to sum -->
+  <polyline points="75,68 75,115 140,115" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arg)"/>
+  <line x1="200" y1="115" x2="455" y2="115" stroke="#22c55e" stroke-width="1.5"/>
+  <line x1="455" y1="115" x2="455" y2="82" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arg)"/>
+  <!-- y output -->
+  <line x1="469" y1="68" x2="560" y2="68" stroke="#555" stroke-width="1.5" marker-end="url(#arh)"/>
+  <text x="570" y="72" font-size="13" font-family="serif" fill="#555">y(t)</text>
+  <!-- Labels -->
+  <text x="310" y="25" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#888">State-Space Block Diagram: x′=Ax+Bu, y=Cx+Du</text>
+</svg>
+
 ### Nonlinear Systems
 
 More generally, a continuous-time control system can be described by a system of ordinary differential equations with inputs and outputs of the form
@@ -243,6 +286,33 @@ which we denote simply by \((A, B)\), omitting the output equation for now. From
 \[x(t) = e^{At}x_0 + \int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau.\]
 
 **Controllability** asks a fundamental question about the capabilities of this system: given any initial state \(x_0\) and any desired final state \(x_1\), can we always find a control input \(u(t)\) that steers the system from \(x_0\) to \(x_1\) in finite time? The answer depends on the structure of the matrices \(A\) and \(B\), and characterizing exactly when such steering is possible is the central problem of this lecture.
+
+<svg viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg" style="max-width:440px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arc" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- State space R^n as outer ellipse -->
+  <ellipse cx="220" cy="110" rx="190" ry="95" fill="none" stroke="#888" stroke-width="1.8" stroke-dasharray="6,3"/>
+  <text x="390" y="35" text-anchor="end" font-size="12" font-family="serif" fill="#888">$\mathbb{R}^n$</text>
+  <!-- Reachable subspace (inner ellipse, blue) -->
+  <ellipse cx="195" cy="115" rx="100" ry="55" fill="#3b82f670" stroke="#3b82f6" stroke-width="2"/>
+  <text x="195" y="118" text-anchor="middle" font-size="12" font-family="serif" fill="#3b82f6">Reachable set</text>
+  <text x="195" y="134" text-anchor="middle" font-size="11" font-family="serif" fill="#3b82f6">$\mathcal{R} = \mathrm{Im}(\mathcal{C})$</text>
+  <!-- x_0 at origin -->
+  <circle cx="195" cy="100" r="5" fill="#ef4444"/>
+  <text x="200" y="96" font-size="11" font-family="serif" fill="#ef4444">$x_0$</text>
+  <!-- x_1 inside reachable set -->
+  <circle cx="265" cy="130" r="5" fill="#22c55e"/>
+  <text x="270" y="127" font-size="11" font-family="serif" fill="#22c55e">$x_1$ ✓</text>
+  <!-- x_2 outside reachable set -->
+  <circle cx="360" cy="85" r="5" fill="#888"/>
+  <text x="365" y="82" font-size="11" font-family="serif" fill="#888">$x_2$ ✗</text>
+  <!-- Arrow from x_0 to x_1 -->
+  <line x1="200" y1="103" x2="258" y2="127" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arc)"/>
+  <text x="220" y="185" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">$(A,B)$ controllable $\Leftrightarrow$ $\mathcal{C}=[B\ AB\ \cdots\ A^{n-1}B]$ has rank $n$</text>
+</svg>
 
 **Definition 3.1.** The LTI system \((A, B)\) is said to be **controllable** if for any initial state \(x_0 \in \mathbb{R}^n\), any final state \(x_1 \in \mathbb{R}^n\), and any time \(t_1 > 0\), there exists an input \(u \colon [0, t_1] \to \mathbb{R}^k\) such that the solution satisfies \(x(0) = x_0\) and \(x(t_1) = x_1\).
 
@@ -1126,6 +1196,9 @@ bode(G);
 ```
 
 The resulting Bode plot shows the characteristic resonance peak in the gain curve near \( \omega = 1 \) rad/s and the transition in the phase curve from \( 0^\circ \) to \( -180^\circ \).
+
+![Bode plot for second-order system showing magnitude and phase vs frequency](/pics/amath455/bode_plot.png)
+
 # Poles, Zeros, and Internal Stability
 
 ## Poles and Zeros
@@ -1310,6 +1383,8 @@ The following central result provides four equivalent characterizations of inter
 \[ A^T P + PA = -Q. \]
 
 **Remark 10.13.** Item (2) is called **asymptotic stability** and item (3) is called **exponential stability**. For unforced linear systems these two notions coincide, and both are equivalent to the existence of the quadratic **Lyapunov function** \(V(x) = x^T P x\) solving the Lyapunov equation in (4). The matrix \(P\) and the function \(V\) play a central role not only in linear analysis but also in the stability theory of nonlinear systems.
+
+![Lyapunov level sets V(x)=xᵀPx=c: nested ellipses converging to the stable origin](/pics/amath455/lyapunov_levels.png)
 
 *Proof (selected directions).*
 
@@ -1547,6 +1622,8 @@ Theorem 12.7 guarantees that a controllable system can be stabilized with eigenv
 2. For every set of complex numbers \(\{\lambda_1, \lambda_2, \ldots, \lambda_n\}\) in which complex values appear in conjugate pairs, there exists a matrix \(K \in \mathbb{R}^{k \times n}\) such that the eigenvalues of \(A + BK\) are exactly \(\{\lambda_1, \ldots, \lambda_n\}\).
 
 This is the **pole placement theorem**, one of the foundational results of linear control theory. The condition that complex eigenvalues appear in conjugate pairs is required to ensure \(K\) is real.
+
+![Root locus showing how closed-loop poles move as gain K increases from 0 to ∞](/pics/amath455/root_locus.png)
 
 *Proof.* (2) \(\Rightarrow\) (1) follows from the same argument as the converse direction in Theorem 12.7: uncontrollable eigenvalues are immune to state feedback.
 

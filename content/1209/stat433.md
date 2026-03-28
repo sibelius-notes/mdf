@@ -48,6 +48,8 @@ Key facts: (i) **Closure under linear maps**: \(A\mathbf{X} + \mathbf{b} \sim N(
 
 ## Setup and Counting Sample Paths
 
+![Simple random walk: 5 sample paths for N=100 steps](/pics/stat433/random_walk_paths.png)
+
 The **simple random walk** \(\{S_n\}_{n \geq 0}\) has \(S_0 = 0\) and \(S_n = \xi_1 + \cdots + \xi_n\) where \(\xi_i\) are iid with \(P(\xi_i = +1) = p\) and \(P(\xi_i = -1) = q = 1-p\). To go from position \(a\) to position \(b\) in \(n\) steps requires \(u\) up-steps and \(d\) down-steps satisfying \(u + d = n\) and \(u - d = b - a\), giving \(u = (n+b-a)/2\). The number of such paths is \(\binom{n}{u}\), so:
 \[
 P(S_n = b \mid S_0 = a) = \binom{n}{\frac{n+b-a}{2}} p^{\frac{n+b-a}{2}} q^{\frac{n+a-b}{2}}.
@@ -62,6 +64,8 @@ u_{2n} = \binom{2n}{n}\frac{1}{4^n} \approx \frac{1}{\sqrt{\pi n}}.
 This decays to 0 but the sum \(\sum u_{2n}\) diverges (like \(\sum 1/\sqrt{n}\)), which will later confirm that the symmetric walk is recurrent.
 
 ## Reflection Principle
+
+![Reflection principle: reflected path and original path](/pics/stat433/reflection_principle.png)
 
 The key idea: a path from \((0, a)\) to \((n, b)\) with \(a, b > 0\) that **touches the axis** must cross it at some first time \(\tau\). Reflecting the portion of the path before \(\tau\) about the \(x\)-axis gives a bijection between:
 - paths from \((0, a)\) to \((n, b)\) that touch 0, and
@@ -104,6 +108,8 @@ Verify directly: the paths from 0 to 1 in 3 steps that hit 1 for the first time 
 
 The **generating function** for first passage to level 1 is \(\Lambda(s) = \frac{1 - \sqrt{1-4pqs^2}}{2qs}\), and by a multiplicative structure argument, the generating function for first passage to level \(b\) is \(F_b(s) = [\Lambda(s)]^b\) — reaching \(b\) requires \(b\) independent first passages of unit height.
 
+![First passage time distribution f_n vs. n](/pics/stat433/first_passage_dist.png)
+
 ## Recurrence and Transience of the Random Walk
 
 The probability of ever returning to the origin is:
@@ -134,7 +140,11 @@ Total: \((35 + 20 + 18 + 20 + 35)/128 = 128/128 = 1\). ✓
 
 Notice the probabilities are **largest at the extremes** (last zero early or late) and smallest in the middle. This is the arcsine shape: the walk tends to spend most of its time on one side of the axis, flipping sides rarely.
 
-In the limit, \(L_{2n}/(2n) \to \text{Arcsine}(0,1)\) distribution with density \(f(x) = \frac{1}{\pi\sqrt{x(1-x)}}\). The probability of spending less than 10% of the time positive or more than 90% is:
+In the limit, \(L_{2n}/(2n) \to \text{Arcsine}(0,1)\) distribution with density \(f(x) = \frac{1}{\pi\sqrt{x(1-x)}}\).
+
+![Arcsine law: density of proportion of time in positive half](/pics/stat433/arcsine_law.png)
+
+The probability of spending less than 10% of the time positive or more than 90% is:
 \[
 P(L_{2n}/(2n) \leq 0.1) + P(L_{2n}/(2n) \geq 0.9) \approx 2 \cdot \frac{2}{\pi}\arcsin(\sqrt{0.1}) \approx 40.5\%.
 \]
@@ -415,6 +425,8 @@ P^n = \begin{pmatrix} 2/3 & 1/3 \\ 2/3 & 1/3 \end{pmatrix} + 0.4^n \begin{pmatri
 For \(n = 5\): \(0.4^5 = 0.01024\), so the deviation from stationarity is about 1%. After 10 steps: \(0.4^{10} \approx 0.0001\) — essentially converged.
 
 **Periodic chains**: For a periodic chain with period \(d\), the limit \(p_{ij}^{(n)}\) does not exist, but Cesàro averages converge: \(\frac{1}{n}\sum_{k=0}^{n-1} p_{ij}^{(k)} \to \pi_j\).
+
+![Convergence of P^n to stationary distribution π for 3-state chain](/pics/stat433/stationary_convergence.png)
 
 ---
 
@@ -931,6 +943,52 @@ For a G/M/1 queue (general arrivals, exponential service), the queue length embe
 ## Renewal Processes
 
 A **renewal process** \(\{N(t)\}_{t \geq 0}\) has iid inter-renewal times \(X_1, X_2, \ldots\) with distribution \(F\) and mean \(\mu = E[X_1] \in (0,\infty]\). The renewal epochs are \(S_n = X_1+\cdots+X_n\) and \(N(t) = \max\{n: S_n \leq t\}\).
+
+<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arr4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" opacity="0.7"/>
+    </marker>
+  </defs>
+  <!-- Timeline arrow -->
+  <line x1="30" y1="80" x2="495" y2="80" stroke="currentColor" stroke-width="2" opacity="0.5" marker-end="url(#arr4)"/>
+  <text x="498" y="85" font-size="11" fill="currentColor" opacity="0.6">t</text>
+  <!-- Origin -->
+  <circle cx="40" cy="80" r="5" fill="#3b82f6"/>
+  <text x="40" y="100" text-anchor="middle" font-size="10" fill="currentColor">S₀=0</text>
+  <!-- S1 -->
+  <circle cx="130" cy="80" r="5" fill="#3b82f6"/>
+  <text x="130" y="100" text-anchor="middle" font-size="10" fill="currentColor">S₁</text>
+  <!-- S2 -->
+  <circle cx="230" cy="80" r="5" fill="#3b82f6"/>
+  <text x="230" y="100" text-anchor="middle" font-size="10" fill="currentColor">S₂</text>
+  <!-- S3 -->
+  <circle cx="300" cy="80" r="5" fill="#3b82f6"/>
+  <text x="300" y="100" text-anchor="middle" font-size="10" fill="currentColor">S₃</text>
+  <!-- S4 -->
+  <circle cx="420" cy="80" r="5" fill="#3b82f6"/>
+  <text x="420" y="100" text-anchor="middle" font-size="10" fill="currentColor">S₄</text>
+  <!-- Inter-renewal braces and labels -->
+  <path d="M 42 58 Q 85 45 128 58" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="85" y="40" text-anchor="middle" font-size="11" fill="#22c55e">X₁</text>
+  <path d="M 132 58 Q 180 45 228 58" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="180" y="40" text-anchor="middle" font-size="11" fill="#22c55e">X₂</text>
+  <path d="M 232 58 Q 265 45 298 58" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="265" y="40" text-anchor="middle" font-size="11" fill="#22c55e">X₃</text>
+  <path d="M 302 58 Q 360 45 418 58" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="360" y="40" text-anchor="middle" font-size="11" fill="#22c55e">X₄</text>
+  <!-- N(t) value indicators -->
+  <text x="85" y="120" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.5">N(t)=0</text>
+  <text x="180" y="120" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.5">N(t)=1</text>
+  <text x="265" y="120" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.5">N(t)=2</text>
+  <text x="355" y="120" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.5">N(t)=3</text>
+  <text x="445" y="120" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.5">N(t)=4</text>
+  <!-- vertical tick marks at renewal epochs -->
+  <line x1="130" y1="68" x2="130" y2="92" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="230" y1="68" x2="230" y2="92" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="300" y1="68" x2="300" y2="92" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="420" y1="68" x2="420" y2="92" stroke="#3b82f6" stroke-width="1.5"/>
+</svg>
 
 By the SLLN: \(N(t)/t \to 1/\mu\) a.s. — renewals occur at rate \(1/\mu\) in the long run.
 

@@ -492,6 +492,8 @@ The upcrossing inequality is remarkable for its economy: it bounds oscillation (
 
 ### 2.3 Optional Sampling Theorems
 
+![Martingale: optional sampling theorem visualization](/pics/stat902/martingale_ost.png)
+
 The optional sampling (or optional stopping) theorems describe when the martingale property is preserved at stopping times. The basic question is: if \(X\) is a martingale and \(S \leq T\) are stopping times, does \(E(X_T \mid \mathcal{F}_S) = X_S\) still hold? The answer depends on the integrability and closure properties of \(X\), and getting the hypotheses right is one of the subtleties of the subject.
 
 We begin with convergence in \(L^2\), which provides a useful warmup.
@@ -816,6 +818,8 @@ This is the definitive version of optional sampling for discrete-time martingale
 
 Brownian motion is the most fundamental continuous-time stochastic process and the prototype for all of stochastic calculus. It arises as the scaling limit of random walks, as the canonical Gaussian process with independent increments, and as the unique continuous martingale with a prescribed quadratic variation. In this section, we establish its basic properties and the key structural results that will be needed for stochastic integration.
 
+![Standard Brownian motion: 5 sample paths on [0,1]](/pics/stat902/brownian_motion.png)
+
 <div class="definition">
 
 <strong>Definition 2.22 (Standard Brownian Motion).</strong> A stochastic process \(\{B_t\}_{t \geq 0}\) on a probability space \((\Omega, \mathcal{F}, P)\) is a <strong>standard (one-dimensional) Brownian motion</strong> if:
@@ -1043,6 +1047,8 @@ Fix an interval \([a, b]\) and a probability space \((\Omega, \mathcal{F}, P)\) 
 for a suitable class of random processes \(f\). In classical analysis, if \(g\) is a function of bounded variation on \([a,b]\), then \(\int f \, dg\) is well-defined as a Lebesgue–Stieltjes integral. However, we showed in Chapter 2 that almost every path of Brownian motion has unbounded variation on every interval. Consequently, the Lebesgue–Stieltjes approach fails, and a fundamentally different construction is required.
 
 The key insight, due to Itô, is to define the integral first for simple processes, establish an isometry that identifies the stochastic integral with an element of \(L^2\), and then extend by continuity to a larger class of integrands.
+
+![Itô integral: left-endpoint Riemann sum approximation of ∫W dW](/pics/stat902/ito_integral.png)
 
 #### The Space of Integrands
 
@@ -1328,6 +1334,8 @@ dX_t = X_t\left[\left(r - \tfrac{\sigma^2}{2}\right)dt + \sigma \, dB_t\right] +
 
 The drift correction \(-\sigma^2/2\) in the exponent is precisely compensated by the Itô correction \(+\sigma^2/2\), yielding the clean SDE \(dX_t = rX_t \, dt + \sigma X_t \, dB_t\). This is the **geometric Brownian motion**, fundamental in mathematical finance as the Black–Scholes model.
 
+![Geometric Brownian motion dS = μS dt + σS dW: 10 paths](/pics/stat902/gbm_paths.png)
+
 #### Integration by Parts
 
 <div class="theorem">
@@ -1358,7 +1366,11 @@ The cross-variation term \(v_1 v_2 \, dt\) is the stochastic correction to the c
 
 ### 4.1 Quadratic variation of Brownian motion
 
-In the previous chapters we assembled the machinery of martingale theory and conditional expectation. We now turn to a phenomenon that lies at the heart of stochastic calculus: **quadratic variation**. Classical calculus rests on the fact that a smooth path \(f\) on \([a,b]\) has vanishing quadratic variation — the sum \(\sum |f(t_{i+1}) - f(t_i)|^2\) tends to zero as the partition mesh shrinks. Brownian motion is fundamentally different. Its paths are so rough that the analogous sum converges to a non-zero, deterministic limit. Understanding this limit is the key to unlocking the Ito calculus.
+In the previous chapters we assembled the machinery of martingale theory and conditional expectation. We now turn to a phenomenon that lies at the heart of stochastic calculus: **quadratic variation**. Classical calculus rests on the fact that a smooth path \(f\) on \([a,b]\) has vanishing quadratic variation — the sum \(\sum |f(t_{i+1}) - f(t_i)|^2\) tends to zero as the partition mesh shrinks. Brownian motion is fundamentally different.
+
+![Quadratic variation: [W,W]_t = t vs. smooth function](/pics/stat902/quadratic_variation.png)
+
+Its paths are so rough that the analogous sum converges to a non-zero, deterministic limit. Understanding this limit is the key to unlocking the Ito calculus.
 
 Let \((B_t)_{t \ge 0}\) be a standard Brownian motion on a filtered probability space \((\Omega, \mathcal{F}, (\mathcal{F}_t), \mathbb{P})\). Fix an interval \([a, b]\), and let \(\Delta = \{a = t_0 < t_1 < \cdots < t_n = b\}\) be a partition with mesh \(|\Delta| = \max_i (t_{i+1} - t_i)\).
 

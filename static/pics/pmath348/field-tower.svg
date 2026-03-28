@@ -1,0 +1,32 @@
+<svg viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;display:block;margin:1.5em auto">
+  <!-- Tower: Q at bottom, Q(sqrt2) in middle, Q(sqrt2,sqrt3) at top -->
+  <!-- Boxes -->
+  <rect x="80" y="240" width="80" height="35" rx="5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.05"/>
+  <text x="90" y="263" font-size="14" fill="currentColor" font-family="serif">ℚ</text>
+
+  <rect x="60" y="145" width="120" height="35" rx="5" stroke="#3b82f6" stroke-width="1.5" fill="#3b82f6" fill-opacity="0.06"/>
+  <text x="70" y="168" font-size="13" fill="#3b82f6" font-family="serif">ℚ(√2)</text>
+
+  <rect x="40" y="50" width="160" height="35" rx="5" stroke="#22c55e" stroke-width="1.5" fill="#22c55e" fill-opacity="0.06"/>
+  <text x="50" y="73" font-size="13" fill="#22c55e" font-family="serif">ℚ(√2, √3)</text>
+
+  <!-- Lines between levels -->
+  <line x1="120" y1="240" x2="120" y2="180" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="120" y1="145" x2="120" y2="85" stroke="currentColor" stroke-width="1.5"/>
+
+  <!-- Degree labels on the lines -->
+  <text x="126" y="218" font-size="13" fill="#ef4444" font-family="serif">[2]</text>
+  <text x="126" y="122" font-size="13" fill="#ef4444" font-family="serif">[2]</text>
+
+  <!-- Total degree -->
+  <text x="10" y="165" font-size="11" fill="currentColor" font-family="sans-serif" opacity="0.7">deg</text>
+  <text x="10" y="178" font-size="11" fill="currentColor" font-family="sans-serif" opacity="0.7">= 2</text>
+  <text x="10" y="70" font-size="11" fill="currentColor" font-family="sans-serif" opacity="0.7">deg</text>
+  <text x="10" y="83" font-size="11" fill="currentColor" font-family="sans-serif" opacity="0.7">= 4</text>
+
+  <!-- Total degree bracket -->
+  <line x1="35" y1="50" x2="20" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="35" y1="275" x2="20" y2="275" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="20" y1="50" x2="20" y2="275" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <text x="2" y="168" font-size="11" fill="currentColor" font-family="sans-serif" opacity="0.6" transform="rotate(-90,8,168)">total [4:1]</text>
+</svg>

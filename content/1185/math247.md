@@ -26,6 +26,31 @@ We also call this a <em>neighborhood</em> of \(\mathbf{a}\).
 
 The notion of an open set captures, informally, the idea that every point has "room to wiggle" without leaving the set.
 
+<svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="obArr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="130" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Open Ball B_r(a) in ℝ²</text>
+  <!-- Axes -->
+  <line x1="20" y1="190" x2="240" y2="190" stroke="currentColor" stroke-width="1.1" marker-end="url(#obArr)"/>
+  <line x1="130" y1="205" x2="130" y2="25" stroke="currentColor" stroke-width="1.1" marker-end="url(#obArr)"/>
+  <text x="243" y="194" font-size="10" fill="currentColor">x₁</text>
+  <text x="124" y="22" font-size="10" fill="currentColor">x₂</text>
+  <!-- Open ball (dashed circle boundary = open) -->
+  <circle cx="130" cy="120" r="55" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="6,3"/>
+  <!-- Center a -->
+  <circle cx="130" cy="120" r="4" fill="currentColor"/>
+  <text x="136" y="116" font-size="11" fill="currentColor" font-weight="bold">a</text>
+  <!-- Radius arrow -->
+  <line x1="130" y1="120" x2="172" y2="80" stroke="#ef4444" stroke-width="1.8" marker-end="url(#obArr)"/>
+  <text x="175" y="75" font-size="11" fill="#ef4444" font-weight="bold">r</text>
+  <!-- Dashed boundary label -->
+  <text x="130" y="200" font-size="10" fill="#3b82f6" text-anchor="middle">boundary excluded (open)</text>
+  <text x="130" y="212" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.7">B_r(a) = {x : ‖x−a‖ &lt; r}</text>
+</svg>
+
 <div class="definition">
 
 <strong>Definition 1.2 (Open Set).</strong> A set \(U \subseteq \mathbb{R}^n\) is <em>open</em> if for every \(\mathbf{a} \in U\) there exists \(r > 0\) such that \(B_r(\mathbf{a}) \subseteq U\).
@@ -341,6 +366,39 @@ JF^{-1}(\mathbf{y}) = \bigl[JF(F^{-1}(\mathbf{y}))\bigr]^{-1}.
 
 The theorem says: if the best linear approximation to \(F\) at \(\mathbf{a}\) is invertible, then \(F\) itself is locally invertible. Notice that the condition is only about the derivative at a single point, yet the conclusion is about the behavior of \(F\) in an entire neighborhood.
 
+<svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="iftArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="180" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Inverse Function Theorem: Local Diffeomorphism</text>
+  <!-- Domain -->
+  <ellipse cx="80" cy="100" rx="60" ry="55" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+  <text x="80" y="38" font-size="11" fill="currentColor" text-anchor="middle">ℝⁿ (domain)</text>
+  <!-- Neighborhood U around a -->
+  <circle cx="75" cy="95" r="22" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="75" y="92" font-size="10" fill="#3b82f6" text-anchor="middle">U</text>
+  <circle cx="75" cy="105" r="3" fill="currentColor"/>
+  <text x="82" y="109" font-size="10" fill="currentColor">a</text>
+  <!-- Arrow F -->
+  <line x1="148" y1="95" x2="212" y2="95" stroke="currentColor" stroke-width="1.8" marker-end="url(#iftArr)"/>
+  <text x="180" y="88" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">F</text>
+  <text x="180" y="110" font-size="9" fill="currentColor" text-anchor="middle">det JF(a) ≠ 0</text>
+  <!-- Codomain -->
+  <ellipse cx="280" cy="100" rx="60" ry="55" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+  <text x="280" y="38" font-size="11" fill="currentColor" text-anchor="middle">ℝⁿ (codomain)</text>
+  <!-- Neighborhood V around F(a) -->
+  <circle cx="285" cy="95" r="22" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="285" y="92" font-size="10" fill="#ef4444" text-anchor="middle">V</text>
+  <circle cx="285" cy="105" r="3" fill="currentColor"/>
+  <text x="292" y="109" font-size="10" fill="currentColor">F(a)</text>
+  <!-- F^{-1} arrow back -->
+  <path d="M212 130 Q180 155 148 130" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#iftArr)"/>
+  <text x="180" y="163" font-size="10" fill="#22c55e" text-anchor="middle">F⁻¹ (C¹, local)</text>
+  <text x="180" y="175" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.7">F : U → V is a C¹ diffeomorphism</text>
+</svg>
+
 *Proof (sketch).* Without loss of generality \(\mathbf{a} = F(\mathbf{a}) = \mathbf{0}\) and \(JF(\mathbf{0}) = I\) (by composing with \(JF(\mathbf{a})^{-1}\)). Define \(\Phi(\mathbf{x}) = \mathbf{x} - F(\mathbf{x})\); then \(D\Phi(\mathbf{0}) = 0\). By continuity of the Jacobian, choose \(r > 0\) so that \(\|D\Phi(\mathbf{x})\| \leq 1/2\) on \(B_r(\mathbf{0})\). By the mean value inequality, \(\|\Phi(\mathbf{x}) - \Phi(\mathbf{x}')\| \leq \frac{1}{2}\|\mathbf{x} - \mathbf{x}'\|\), so \(\Phi\) is a contraction. For each \(\mathbf{y}\) near \(\mathbf{0}\), the map \(T_{\mathbf{y}}(\mathbf{x}) = \mathbf{y} + \Phi(\mathbf{x}) = \mathbf{y} + \mathbf{x} - F(\mathbf{x})\) is a contraction of a suitable closed ball. The Banach Fixed Point Theorem gives a unique \(\mathbf{x}\) with \(T_{\mathbf{y}}(\mathbf{x}) = \mathbf{x}\), i.e., \(F(\mathbf{x}) = \mathbf{y}\). Smoothness of the inverse follows from differentiating the identity \(F(F^{-1}(\mathbf{y})) = \mathbf{y}\) and using the chain rule. \(\square\)
 
 The formula \(JF^{-1} = (JF)^{-1}\) is the matrix version of \((f^{-1})'(y) = 1/f'(x)\) from single-variable calculus.
@@ -449,6 +507,8 @@ and \(|R_1(\mathbf{x})| \leq M\|\mathbf{x}-\mathbf{a}\|^2\) for some constant \(
 </div>
 
 *Proof.* By Taylor's theorem, \(f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) = \frac{1}{2}\mathbf{h}^T Hf(\mathbf{c})\mathbf{h}\) for \(\mathbf{c}\) near \(\mathbf{a}\). If \(H\) is positive definite, by continuity of the second partials, \(Hf(\mathbf{c})\) remains positive definite for \(\|\mathbf{h}\|\) small, so \(f(\mathbf{a}+\mathbf{h}) > f(\mathbf{a})\). The other cases are similar. \(\square\)
+
+![Hessian positive vs negative definite: bowl and cap shapes](/static/pics/math247/hessian_bowl_cap.png)
 
 For \(n = 2\), the test reduces to: let \(D = f_{xx}f_{yy} - f_{xy}^2 = \det Hf\). Then \(D > 0, f_{xx} > 0\) gives a minimum; \(D > 0, f_{xx} < 0\) gives a maximum; \(D < 0\) gives a saddle; \(D = 0\) is inconclusive.
 

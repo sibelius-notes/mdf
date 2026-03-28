@@ -141,6 +141,8 @@ Observations with \(D_i > 4/(n-p-1) \) are conventionally flagged as influential
 
 **DFFITS** and **DFBETAS** provide finer-grained measures of observation influence on individual fitted values and specific coefficients, respectively.
 
+![Residual plot: fitted values vs. residuals with heteroscedastic pattern](/pics/stat444/residual_plot.png)
+
 ---
 
 # Module 3: The Bias-Variance Trade-Off
@@ -181,6 +183,8 @@ plt.tight_layout()
 plt.savefig('bias_variance_tradeoff.png', dpi=150)
 plt.show()
 ```
+
+![Bias-variance tradeoff: U-shaped test MSE curve vs. model flexibility](/pics/stat444/bias_variance.png)
 
 ## Reducible vs. Irreducible Error
 
@@ -231,6 +235,8 @@ GCV is computationally cheaper than LOOCV and generalises naturally beyond linea
 \]
 
 This formulation is particularly important for smoothing splines and kernel regression, where the smoother matrix depends on a tuning parameter.
+
+![5-fold cross-validation error vs. regularization parameter λ](/pics/stat444/cv_error.png)
 
 ---
 
@@ -718,6 +724,8 @@ plt.tight_layout()
 plt.savefig('ridge_lasso_paths.png', dpi=150)
 plt.show()
 ```
+
+![LASSO regularization path: 5 coefficients vs. λ on log scale](/pics/stat444/lasso_path.png)
 
 ## The Elastic Net
 

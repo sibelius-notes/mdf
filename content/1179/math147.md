@@ -46,6 +46,39 @@ The rational numbers have a glaring gap: the set \(\{x \in \mathbb{Q} : x^2 < 2\
 
 We take this as an axiom characterising \(\mathbb{R}\): up to isomorphism of ordered fields, there is exactly one complete ordered field, and we call it the real numbers. Notice that the completeness axiom fails for \(\mathbb{Q}\): the set \(\{q \in \mathbb{Q} : q > 0, q^2 < 2\}\) has no supremum in \(\mathbb{Q}\).
 
+<svg viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <defs><marker id="ah-lub" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="currentColor"/></marker></defs>
+  <!-- Number line -->
+  <line x1="20" y1="80" x2="400" y2="80" stroke="currentColor" stroke-width="1.8" marker-end="url(#ah-lub)"/>
+  <!-- Set S: filled dots -->
+  <text x="30" y="65" font-size="10" fill="#3b82f6">S</text>
+  <circle cx="60" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="95" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="130" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="158" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="175" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="185" cy="80" r="4" fill="#3b82f6"/>
+  <circle cx="191" cy="80" r="3.5" fill="#3b82f6"/>
+  <circle cx="194" cy="80" r="3" fill="#3b82f6"/>
+  <circle cx="196" cy="80" r="2.5" fill="#3b82f6"/>
+  <!-- sup S (open circle - not necessarily in S) -->
+  <circle cx="200" cy="80" r="5" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <line x1="200" y1="55" x2="200" y2="70" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="200" y="48" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">sup S = α</text>
+  <!-- Upper bounds to the right -->
+  <circle cx="240" cy="80" r="4" fill="#22c55e" opacity="0.7"/>
+  <circle cx="280" cy="80" r="4" fill="#22c55e" opacity="0.7"/>
+  <circle cx="330" cy="80" r="4" fill="#22c55e" opacity="0.7"/>
+  <text x="285" y="65" font-size="9" fill="#22c55e">upper bounds ≥ α</text>
+  <!-- α-ε bracket -->
+  <line x1="172" y1="100" x2="200" y2="100" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="172" y1="95" x2="172" y2="105" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="200" y1="95" x2="200" y2="105" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="186" y="118" font-size="9" fill="#a855f7" text-anchor="middle">ε (∃ x∈S in here)</text>
+  <text x="186" y="130" font-size="9" fill="#a855f7" text-anchor="middle">(α−ε, α]</text>
+  <text x="210" y="148" font-size="9" fill="currentColor" text-anchor="middle" font-style="italic">sup S: smallest upper bound — any α−ε is beaten by some element of S</text>
+</svg>
+
 <div class="remark">
 
 <strong>Remark 1.5.</strong> A useful rephrasing: \(\alpha = \sup S\) if and only if (i) \(x \le \alpha\) for all \(x \in S\), and (ii) for every \(\varepsilon > 0\) there exists \(x \in S\) with \(x > \alpha - \varepsilon\). Condition (ii) says \(\alpha\) is the *smallest* upper bound — anything strictly smaller gets beaten by some element of \(S\).
@@ -114,6 +147,46 @@ A sequence is the simplest setting in which to develop the idea of a limit. Befo
 </div>
 
 The key idea is that \(\varepsilon\) is given first — it is the tolerance — and we must respond with an \(N\) that works for that tolerance. The order matters: \(N\) is allowed to depend on \(\varepsilon\).
+
+<svg viewBox="0 0 420 175" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <defs><marker id="ah-seq" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="currentColor"/></marker></defs>
+  <!-- Axes -->
+  <line x1="30" y1="140" x2="400" y2="140" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah-seq)"/>
+  <line x1="30" y1="140" x2="30" y2="20" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah-seq)"/>
+  <text x="405" y="144" font-size="11" fill="currentColor">n</text>
+  <text x="20" y="18" font-size="11" fill="currentColor">aₙ</text>
+  <!-- Limit L -->
+  <line x1="30" y1="68" x2="395" y2="68" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <text x="10" y="72" font-size="11" fill="#ef4444">L</text>
+  <!-- Epsilon band -->
+  <line x1="30" y1="50" x2="395" y2="50" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="30" y1="86" x2="395" y2="86" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="400" y="54" font-size="9" fill="#22c55e">L+ε</text>
+  <text x="400" y="90" font-size="9" fill="#22c55e">L-ε</text>
+  <!-- Sequence points: 1/n oscillating towards L -->
+  <!-- Simulate a_n = L + (-1)^n/n type convergence -->
+  <!-- Plot approximate sequence values -->
+  <circle cx="50" cy="30" r="3.5" fill="#3b82f6"/>
+  <circle cx="75" cy="108" r="3.5" fill="#3b82f6"/>
+  <circle cx="100" cy="45" r="3.5" fill="#3b82f6"/>
+  <circle cx="125" cy="96" r="3.5" fill="#3b82f6"/>
+  <circle cx="150" cy="54" r="3.5" fill="#3b82f6"/>
+  <circle cx="175" cy="82" r="3.5" fill="#3b82f6"/>
+  <circle cx="200" cy="60" r="3.5" fill="#3b82f6"/>
+  <circle cx="225" cy="77" r="3.5" fill="#3b82f6"/>
+  <circle cx="250" cy="63" r="3.5" fill="#3b82f6"/>
+  <circle cx="275" cy="74" r="3.5" fill="#3b82f6"/>
+  <circle cx="300" cy="65" r="3.5" fill="#3b82f6"/>
+  <circle cx="325" cy="72" r="3.5" fill="#3b82f6"/>
+  <circle cx="350" cy="66" r="3.5" fill="#3b82f6"/>
+  <circle cx="375" cy="70" r="3.5" fill="#3b82f6"/>
+  <!-- N marker -->
+  <line x1="200" y1="140" x2="200" y2="30" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="200" y="154" font-size="10" fill="#a855f7" text-anchor="middle">N(ε)</text>
+  <text x="310" y="42" font-size="9" fill="#22c55e">all aₙ inside ε-band</text>
+  <text x="310" y="54" font-size="9" fill="#22c55e">for n ≥ N</text>
+  <text x="210" y="165" font-size="9" fill="currentColor" text-anchor="middle" font-style="italic">aₙ → L: eventually every term lands within ε of L</text>
+</svg>
 
 <div class="example">
 
@@ -243,6 +316,10 @@ With sequences in hand, we can define limits of functions. The interplay between
 
 Notice the condition \(0 < |x - a|\): we never evaluate \(f\) at \(x = a\). The limit is about the behaviour of \(f\) *near* \(a\), not *at* \(a\).
 
+![Epsilon-delta limit definition and derivative as tangent slope](/pics/math147/epsdelta_derivative.png)
+
+*Left: the ε-δ definition of limit. The green vertical strip of width \(2\delta\) centred at \(a\) maps into the red horizontal band of height \(2\varepsilon\) around \(L\). Right: the derivative as the limiting slope of secant lines as \(h \to 0\); successive secant slopes (red, purple, green) converge to the tangent (black dashed).*
+
 <div class="example">
 
 <strong>Example 3.2.</strong> Prove \(\lim_{x \to 3}(2x - 1) = 5\) directly from the definition. We need \(|f(x) - 5| = |2x - 6| = 2|x - 3| < \varepsilon\) whenever \(0 < |x - 3| < \delta\). Choosing \(\delta = \varepsilon/2\) works: if \(|x-3| < \delta\) then \(|2x - 6| = 2|x-3| < 2\delta = \varepsilon\). \(\square\)
@@ -291,6 +368,10 @@ This theorem is the bridge between sequence theory and function limits. It means
 </div>
 
 *Proof (sketch).* For \(0 < \theta < \pi/2\), comparing areas of triangles and the circular sector on the unit circle gives \(\sin\theta < \theta < \tan\theta\), hence \(\cos\theta < \sin\theta/\theta < 1\). Since \(\cos\theta \to 1\), the Squeeze Theorem finishes it. \(\square\)
+
+![Squeeze theorem for x^2 sin(1/x) and Mean Value Theorem](/pics/math147/squeeze_mvt.png)
+
+*Left: the squeeze theorem in action — \(x^2\sin(1/x)\) (red) is sandwiched between \(-x^2\) and \(x^2\) (blue dashed), forcing the limit to 0 at the origin. Right: the MVT guarantees a point \(c\) (purple) where the tangent (green) is parallel to the secant through \((a, f(a))\) and \((b, f(b))\) (red dashed).*
 
 ## 3.3 One-Sided Limits and Limits at Infinity
 

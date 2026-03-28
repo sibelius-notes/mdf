@@ -98,6 +98,26 @@ If we have \(n\) symbols total with \(n_i\) of type \(i\) (for \(i = 1, 2, \ldot
 
 ## 4.1 General Methods
 
+<svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <!-- background rectangle -->
+  <rect x="5" y="5" width="410" height="230" rx="8" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
+  <text x="210" y="22" text-anchor="middle" font-size="13" fill="currentColor" opacity="0.5">Sample Space S</text>
+  <!-- Circle A -->
+  <circle cx="155" cy="128" r="72" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-width="2"/>
+  <!-- Circle B -->
+  <circle cx="265" cy="128" r="72" fill="#ef4444" fill-opacity="0.18" stroke="#ef4444" stroke-width="2"/>
+  <!-- Intersection label -->
+  <text x="210" y="122" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">A∩B</text>
+  <!-- A only label -->
+  <text x="128" y="118" text-anchor="middle" font-size="14" fill="#3b82f6" font-weight="700">A</text>
+  <text x="128" y="138" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.7">only</text>
+  <!-- B only label -->
+  <text x="292" y="118" text-anchor="middle" font-size="14" fill="#ef4444" font-weight="700">B</text>
+  <text x="292" y="138" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.7">only</text>
+  <!-- A∪B label -->
+  <text x="210" y="218" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.7">A∪B = shaded region</text>
+</svg>
+
 The basic rules of probability follow directly from the definitions:
 
 - **Rule 1:** \(P(S) = 1\).
@@ -210,6 +230,44 @@ and so on.
 
 </div>
 
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <!-- Root node -->
+  <circle cx="80" cy="140" r="18" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="2"/>
+  <text x="80" y="145" text-anchor="middle" font-size="13" fill="currentColor" font-weight="600">S</text>
+  <!-- Branch to B1 -->
+  <line x1="98" y1="128" x2="210" y2="70" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="148" y="88" text-anchor="middle" font-size="11" fill="#3b82f6">P(B₁)</text>
+  <!-- Branch to B2 -->
+  <line x1="98" y1="140" x2="210" y2="140" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="154" y="134" text-anchor="middle" font-size="11" fill="#3b82f6">P(B₂)</text>
+  <!-- Branch to B3 -->
+  <line x1="98" y1="152" x2="210" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="148" y="196" text-anchor="middle" font-size="11" fill="#3b82f6">P(B₃)</text>
+  <!-- B1, B2, B3 nodes -->
+  <circle cx="228" cy="70" r="18" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="228" y="75" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">B₁</text>
+  <circle cx="228" cy="140" r="18" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="228" y="145" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">B₂</text>
+  <circle cx="228" cy="210" r="18" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="228" y="215" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">B₃</text>
+  <!-- Branches to A -->
+  <line x1="246" y1="70" x2="370" y2="70" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="308" y="62" text-anchor="middle" font-size="11" fill="#ef4444">P(A|B₁)</text>
+  <line x1="246" y1="140" x2="370" y2="140" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="308" y="132" text-anchor="middle" font-size="11" fill="#ef4444">P(A|B₂)</text>
+  <line x1="246" y1="210" x2="370" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="308" y="202" text-anchor="middle" font-size="11" fill="#ef4444">P(A|B₃)</text>
+  <!-- A nodes -->
+  <circle cx="388" cy="70" r="18" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="388" y="75" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">A</text>
+  <circle cx="388" cy="140" r="18" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="388" y="145" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">A</text>
+  <circle cx="388" cy="210" r="18" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="388" y="215" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">A</text>
+  <!-- Bottom formula -->
+  <text x="240" y="265" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.75">P(A) = P(A|B₁)P(B₁) + P(A|B₂)P(B₂) + P(A|B₃)P(B₃)</text>
+</svg>
+
 <div class="theorem">
 
 <strong>Bayes' Theorem.</strong> Suppose \(P(B) > 0\). Then
@@ -288,6 +346,8 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 
 **Physical Setup:** An experiment with two outcomes (S with probability \(p\), F with probability \(1-p\)) is repeated \(n\) independent times. Let \(X\) = number of successes. Then \(X \sim \text{Binomial}(n, p)\).
 
+![Binomial PMF: B(n=20, p=0.3)](/pics/stat230/binomial_pmf.png)
+
 <div class="definition">
 
 <strong>Binomial Distribution.</strong>
@@ -336,6 +396,8 @@ where \(\mu > 0\).
 </div>
 
 The Poisson distribution provides a good approximation to \(\text{Binomial}(n, p)\) when \(n\) is large and \(p\) is small, with \(\mu = np\).
+
+![Poisson PMF for λ=2, 5, 10](/pics/stat230/poisson_pmf.png)
 
 ## 5.8 Poisson Distribution from Poisson Process
 
@@ -511,6 +573,8 @@ Key properties: \(\Gamma(\alpha) = (\alpha - 1)\Gamma(\alpha - 1)\) for \(\alpha
 
 **Memoryless Property:** \(P(X > c + b \mid X > b) = P(X > c)\). Given that you have already waited \(b\) time units, the probability of waiting an additional \(c\) units does not depend on \(b\).
 
+![Exponential CDF for θ = 0.5, 1, 2](/pics/stat230/exponential_cdf.png)
+
 ## 8.4 Computer Generation of Random Variables
 
 <div class="theorem">
@@ -543,6 +607,8 @@ The **standard Normal** distribution is \(Z \sim N(0, 1)\), with p.d.f. \(\phi(z
 </div>
 
 By symmetry of the standard Normal: \(P(Z \le -z) = P(Z \ge z) = 1 - P(Z \le z)\).
+
+![Standard Normal with ±1σ and ±2σ shaded regions](/pics/stat230/normal_sigma.png)
 
 ### Summary of Continuous Distributions
 

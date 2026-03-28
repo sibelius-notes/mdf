@@ -170,6 +170,8 @@ The long-term behavior of solutions to \( \dot{x} = Ax \) is determined by the e
 
 The stability of the origin is summarized by the sign of the real parts: the origin is asymptotically stable if and only if all eigenvalues have strictly negative real part, i.e., \( \tau < 0 \) and \( \Delta > 0 \).
 
+![Phase portraits: stable node, unstable spiral, saddle, center](/pics/amath451/phase_portraits.png)
+
 ### 2.5 Contractions and Expansions
 
 Liu's notes emphasize the geometric interpretation of linear flows in terms of *volume* and *distance*.
@@ -301,6 +303,8 @@ For hyperbolic equilibria, the linear stable and unstable subspaces generalize t
 
 The **global stable manifold** \( W^s(x^*) \) is obtained by flowing the local manifold backwards in time. Similarly, the global unstable manifold \( W^u(x^*) \) flows the local manifold forward. These objects organize the global phase portrait; the stable and unstable manifolds of saddle points in particular act as *separatrices* dividing the phase plane into qualitatively different regions.
 
+![Stable and unstable manifolds at a saddle equilibrium](/pics/amath451/manifolds.png)
+
 ### 3.4 Centre Manifold Theory
 
 When the equilibrium is non-hyperbolic — when \( Df(x^*) \) has eigenvalues with zero real parts in addition to the stable/unstable ones — we cannot immediately apply Hartman–Grobman. The dynamics on the centre subspace \( E^c \) are not determined by the linear terms alone; nonlinear terms are crucial. The **Centre Manifold Theorem** allows us to reduce the study of the full system to a lower-dimensional system on the centre manifold.
@@ -372,6 +376,8 @@ For any \( \mu \), there are equilibria at \( x = 0 \) and \( x = \mu \). When \
 \[  \dot{x} = \mu x - x^3. \]
 
 For \( \mu \leq 0 \), only \( x = 0 \) is an equilibrium (stable). For \( \mu > 0 \), the origin becomes unstable and two new stable equilibria appear at \( x = \pm\sqrt{\mu} \). The subcritical pitchfork has the form \( \dot{x} = \mu x + x^3 \), where for \( \mu < 0 \) the origin is stable with two flanking unstable equilibria at \( x = \pm\sqrt{-\mu} \), and for \( \mu > 0 \) only the unstable origin remains.
+
+![Bifurcation diagrams: saddle-node, transcritical, pitchfork](/pics/amath451/bifurcations.png)
 
 ---
 
@@ -475,6 +481,8 @@ The **Van der Pol equation** is the canonical example, with \( f(x) = \mu(x^2 - 
 For \( \mu > 0 \), the damping is negative for \( |x| < 1 \) (energy input) and positive for \( |x| > 1 \) (energy dissipation). This self-sustaining oscillation is responsible for the existence and uniqueness of a stable limit cycle for any \( \mu > 0 \).
 
 **Theorem 4.7 (Liénard, Uniqueness of Limit Cycle).** For the Van der Pol equation with \( \mu > 0 \), there exists a unique stable limit cycle, and all non-equilibrium orbits tend to this cycle as \( t \to \infty \).
+
+![Van der Pol oscillator phase plane showing unique stable limit cycle](/pics/amath451/van_der_pol.png)
 
 More generally, for a Liénard system, suppose:
 1. \( g \) is odd: \( g(-x) = -g(x) \), and \( g(x) > 0 \) for \( x > 0 \).

@@ -198,6 +198,8 @@ One might wonder whether every subset of \(\mathbb{R}\) is measurable — would 
 
 *Proof.* The standard Cantor set \(C\) has \(\lambda(C) = 0\), so every subset of \(C\) is measurable. Since \(|C| = 2^{\aleph_0}\), the number of subsets of \(C\) is \(2^{2^{\aleph_0}}\).
 
+![Cantor set: 4 iterations of middle-third removal, showing the fractal dust that remains at each stage](/static/pics/pmath450/cantor-set.png)
+
 **1.18 Theorem.** There exists a **non-measurable** subset of \(\mathbb{R}\).
 
 *Proof* (Vitali). Define an equivalence relation on \([0,1]\) by \(x \sim y \Leftrightarrow y - x \in \mathbb{Q}\). Using the Axiom of Choice, select one element from each equivalence class to form \(A \subseteq [0,1]\). Enumerate \(\mathbb{Q} \cap [0,2] = \{a_1, a_2, \ldots\}\) and let \(A_k = a_k + A\). One checks the \(A_k\) are pairwise disjoint and \([1,2] \subseteq \bigcup_k A_k \subseteq [0,3]\). If \(A\) were measurable, countable additivity would give \(\sum_k \lambda(A_k) = \sum_k \lambda(A)\) equal to either 0 or \(\infty\), contradicting \(1 \leq \lambda\!\left(\bigcup_k A_k\right) \leq 3\).
@@ -236,6 +238,8 @@ The concepts in this section provide a topological counterpart to measure-theore
 
 **1.33 Example.** Every countable set is first category (each singleton is nowhere dense), so \(\mathbb{Q}\) is first category and \(\mathbb{Q}^c\) is residual.
 
+![Baire category: nowhere dense sets N₁ (red), N₂ (blue) scattered on ℝ; countable union of nowhere dense sets cannot fill ℝ](/static/pics/pmath450/baire-nowhere-dense.svg)
+
 **1.36 Theorem** (Baire Category Theorem). *(1)* Every first-category set has empty interior. *(2)* Every residual set is dense. *(3)* A countable intersection of dense open sets is dense.
 
 *Proof sketch:* If \(A = \bigcup_{k=1}^\infty C_k\) with each \(C_k\) nowhere dense, suppose \(A\) has nonempty interior and choose a closed interval \(I_0 \subseteq A\). Inductively choose nested closed intervals \(I_0 \supseteq I_1 \supseteq I_2 \supseteq \cdots\) with \(I_k \cap C_k = \emptyset\). By the nested interval theorem, \(\bigcap I_k \neq \emptyset\); but any point in the intersection lies in \(I_0 \subseteq A\) yet in no \(C_k\) — contradiction.
@@ -266,11 +270,83 @@ Before building the Lebesgue integral, it is helpful to recall the Riemann theor
 
 This theorem gives a clean measure-theoretic characterization of Riemann integrability: a function is Riemann integrable precisely when it is continuous almost everywhere. This also makes it transparent why functions with "too many" discontinuities fail to be Riemann integrable.
 
+![Lebesgue vs. Riemann: a densely-discontinuous function f (not Riemann integrable) whose Lebesgue integral equals 0.5](/static/pics/pmath450/lebesgue-vs-riemann.png)
+
 **2.8 Example.** The Dirichlet function \(f = \chi_{\mathbb{Q} \cap [0,1]}\) is discontinuous everywhere and hence *not* Riemann integrable.
 
 **2.11–2.14 Examples** (Cantor function). Given a Cantor set \(C = [0,1] \setminus U\), the corresponding **Cantor function** \(f: [0,1] \to [0,1]\) is continuous and non-decreasing with \(f' = 0\) a.e. on \(U\). When \(C\) is the standard Cantor set, the homeomorphism \(g(x) = x + f(x)\) sends a set of measure zero (\(C\) to a set of measure one, illustrating that continuous images of measurable sets need not be measurable.
 
 The Cantor function is a pathological but illuminating example: it is continuous and non-decreasing, yet its derivative vanishes almost everywhere. Its integral from 0 to 1 is 1, yet integrating its derivative gives 0. This so-called "devil's staircase" foreshadows the need to be careful about the relationship between differentiation and integration, a theme that will recur throughout the course.
+
+### Riemann Integration for Banach-Valued Functions
+
+The Riemann theory of integration extends naturally to functions taking values in a **Banach space** \(X\). This generalization is not merely formal: in Chapter 6, Fourier analysis on homogeneous Banach spaces requires integrating \(X\)-valued functions, and the convolution \(K * f\) for a scalar kernel \(K \in L^1(\mathbb{T})\) acting on an element \(f\) of a homogeneous Banach space is defined as a Banach-valued Riemann integral. Crucially, the Banach structure — completeness of \(X\) — is exactly what is needed to guarantee that Riemann sums converge. A merely normed, incomplete space would not suffice.
+
+<div class="definition">
+
+<strong>Definition (Banach-Valued Riemann Sums).</strong> Let \(X\) be a Banach space and \(f : [a,b] \to X\). A <em>partition</em> of \([a,b]\) is a finite set \(P = \{a = t_0 < t_1 < \cdots < t_n = b\}\) with <em>mesh</em> \(\|P\| = \max_i(t_i - t_{i-1})\). A <em>Riemann sum</em> associated to \(P\) and sample points \(t_i^* \in [t_{i-1}, t_i]\) is
+\[
+S(f, P) = \sum_{i=1}^n f(t_i^*)(t_i - t_{i-1}) \in X.
+\]
+A partition \(Q\) is a <em>refinement</em> of \(P\) if \(P \subseteq Q\) as sets of partition points.
+
+</div>
+
+<div class="definition">
+
+<strong>Definition (Banach-Valued Riemann Integrability).</strong> The function \(f : [a,b] \to X\) is <em>Riemann integrable</em> if there exists \(x \in X\) such that for every \(\varepsilon > 0\) there is a partition \(\bar{P}\) such that for every refinement \(P \supseteq \bar{P}\) and every choice of sample points,
+\[
+\|S(f, P) - x\| < \varepsilon.
+\]
+The unique such \(x\) is the <em>Riemann integral</em> \(\int_a^b f(t)\, dt\). Uniqueness follows from the Hausdorff property of the norm topology.
+
+</div>
+
+The use of refinements rather than mesh-to-zero is essential: it requires the Riemann sums to stabilize not just along one sequence of finer and finer partitions, but uniformly over all sufficiently fine partitions regardless of sample point placement.
+
+<div class="theorem">
+
+<strong>Theorem (Cauchy Criterion).</strong> A function \(f : [a,b] \to X\) is Riemann integrable if and only if for every \(\varepsilon > 0\) there exists a partition \(\bar{Q}\) such that for any two refinements \(P, Q \supseteq \bar{Q}\) (with any choice of sample points in each),
+\[
+\|S(f, P) - S(f, Q)\| < \varepsilon.
+\]
+
+</div>
+
+The proof is an immediate application of completeness: the Cauchy condition ensures the net of Riemann sums is a Cauchy net in \(X\), and completeness guarantees convergence to some limit. This is one of many points in the course where the distinction between a normed space and a Banach space carries concrete analytical weight rather than being a formality.
+
+<div class="lemma">
+
+<strong>Lemma.</strong> Suppose \(f : [a,b] \to X\) is continuous. For every \(\varepsilon > 0\) there exists \(\delta > 0\) such that for any partition \(P\) with \(\|P\| < \delta\) and any refinement \(P_1 \supseteq P\),
+\[
+\|S(f, P) - S(f, P_1)\| < \varepsilon.
+\]
+
+</div>
+
+<div class="proof">
+
+<strong>Proof.</strong> Since \(f\) is continuous on the compact set \([a,b]\), it is uniformly continuous: choose \(\delta > 0\) so that \(|s - t| < \delta \Rightarrow \|f(s) - f(t)\| < \varepsilon/(b-a)\). Any refinement \(P_1 \supseteq P\) subdivides each subinterval \([t_{i-1}, t_i]\) of \(P\) further. Within each such subinterval, any two sample points differ by at most \(\|P\| < \delta\), so any two evaluations of \(f\) at sample points within that subinterval differ in norm by at most \(\varepsilon/(b-a)\). Summing over all subintervals, weighted by their lengths, and using \(\sum_i(t_i - t_{i-1}) = b - a\), gives \(\|S(f,P) - S(f,P_1)\| \le \varepsilon\). \(\square\)
+
+</div>
+
+<div class="theorem">
+
+<strong>Theorem.</strong> Every continuous function \(f : [a,b] \to X\) is Riemann integrable.
+
+</div>
+
+<div class="proof">
+
+<strong>Proof.</strong> Given \(\varepsilon > 0\), choose \(\delta > 0\) from the Lemma. For any two partitions \(P, Q\) both of mesh less than \(\delta\), let \(R = P \cup Q\) be their common refinement. Then
+\[
+\|S(f,P) - S(f,Q)\| \le \|S(f,P) - S(f,R)\| + \|S(f,R) - S(f,Q)\| < 2\varepsilon.
+\]
+By the Cauchy Criterion, \(f\) is Riemann integrable. \(\square\)
+
+</div>
+
+In Chapter 6, the convolution \(K * f\) for \(K \in L^1(\mathbb{T})\) and \(f\) in a homogeneous Banach space is defined precisely as a Banach-valued Riemann integral of the function \(t \mapsto K(t)\, T_t f\), where \(T_t f\) is the translation. The theorem above guarantees this integral is well-defined whenever \(t \mapsto T_t f\) is continuous — which holds in homogeneous spaces by definition.
 
 ## Measurable Functions
 
@@ -412,6 +488,8 @@ and let \(\ell^p = \{x : \|x\|_p < \infty\}\), \(\ell^\infty = \{x : \|x\|_\inft
 and let \(L^p(A) = \{f \in \mathcal{M}(A) : \|f\|_p < \infty\}/{\sim}\) where \(f \sim g \Leftrightarrow f = g\) a.e. (We identify functions equal almost everywhere so that \(\|f\|_p = 0 \Rightarrow f = 0\) in \(L^p\).)
 
 The identification of functions that agree almost everywhere is essential: without it, \(\|\cdot\|_p\) would not be a genuine norm (it would fail to separate points, since any function modified on a null set has the same \(p\)-norm). With this identification, elements of \(L^p\) are equivalence classes of functions rather than individual functions — a subtlety that is important to keep in mind.
+
+![Unit balls in ℝ² for ℓ¹ (diamond), ℓ² (circle), and ℓ∞ (square) norms](/static/pics/pmath450/lp-unit-balls.png)
 
 **3.15 Lemma.** If \(f\) is measurable, then \(\{|f| > \|f\|_\infty\}\) has measure zero (the essential supremum is achieved a.e.).
 
@@ -1076,3 +1154,109 @@ For \(1 < p < 2\): use the adjoint argument. Define \(H^*\) by \(\int H^*(f)\bar
 This is one of the deepest results in classical Fourier analysis. It fails at the endpoints \(p = 1\) and \(p = \infty\): the divergence construction of Section 6.2 shows that even for continuous functions (a subset of both \(L^\infty\) and \(L^1\)), Fourier partial sums need not converge pointwise. The special structure of \(L^p\) for \(1 < p < \infty\) — specifically, the reflexivity that allows the adjoint argument — is what makes the result possible.
 
 The boundedness of the Hilbert transform on \(L^p\) is a cornerstone of harmonic analysis, with applications far beyond Fourier series: it appears in the theory of singular integral operators, complex analysis (the Hilbert transform is the boundary value of the conjugate harmonic function), and the study of \(H^p\) Hardy spaces.
+
+---
+
+# Chapter 7: Which Sequences Are Fourier Coefficients?
+
+The Riemann–Lebesgue Lemma (Chapter 5) tells us that the Fourier coefficients of any \(f \in L^1(\mathbb{T})\) form a sequence in \(c_0(\mathbb{Z}, \mathbb{C})\) — that is, they vanish at infinity. This raises a natural converse question: given an arbitrary sequence \((\beta_n)_{n \in \mathbb{Z}} \in c_0(\mathbb{Z}, \mathbb{C})\), is it the sequence of Fourier coefficients of some \(f \in L^1(\mathbb{T})\)?
+
+The \(L^2\) theory answers a related question completely and affirmatively: by the Riesz–Fischer theorem, a sequence \((\gamma_n)_{n \in \mathbb{Z}}\) is the Fourier coefficient sequence of some \(f \in L^2(\mathbb{T})\) if and only if \((\gamma_n) \in \ell^2(\mathbb{Z}, \mathbb{C})\). The map \(f \mapsto (\hat{f}(n))_{n \in \mathbb{Z}}\) is an isometric isomorphism between \(L^2\) and \(\ell^2\).
+
+For \(L^1\), the question is harder. Since \(L^2 \subsetneq L^1\) (on the compact space \(\mathbb{T}\)) and \(\ell^2 \subsetneq c_0\), the \(L^1\) theory might seem tractable: perhaps every \(c_0\) sequence arises from some \(L^1\) function. The answer — perhaps surprisingly — is no, and the proof is a beautiful application of the **Open Mapping Theorem**.
+
+## The Fourier Transform as a Bounded Operator
+
+Let us package the Fourier transform as a linear map between Banach spaces. Define
+
+\[
+\Lambda: (L^1(\mathbb{T}, \mathbb{C}), \|\cdot\|_1) \longrightarrow (c_0(\mathbb{Z}, \mathbb{C}), \|\cdot\|_\infty), \quad \Lambda([f]) = (\hat{f}(n))_{n \in \mathbb{Z}}.
+\]
+
+That \(\Lambda\) is linear follows immediately from the linearity of the Lebesgue integral. That \(\Lambda\) is bounded — indeed, with \(\|\Lambda\| \leq 1\) — follows from the estimate
+\[
+|\hat{f}(n)| = \left|\int_{\mathbb{T}} f(t) e^{-2\pi i n t}\,dt\right| \leq \int_{\mathbb{T}} |f(t)|\,dt = \|f\|_1,
+\]
+so \(\|\Lambda([f])\|_\infty = \sup_{n \in \mathbb{Z}} |\hat{f}(n)| \leq \|f\|_1\). By the uniqueness theorem (Corollary to Fejér's theorem), \(\Lambda\) is also **injective**: if \(\hat{f}(n) = 0\) for all \(n\), then \([f] = [0]\) in \(L^1\).
+
+The question of whether every \(c_0\) sequence is a Fourier coefficient sequence is therefore precisely the question of whether \(\Lambda\) is **surjective**.
+
+To settle this, we need a theorem from functional analysis — the Open Mapping Theorem — which is itself a consequence of the Baire Category Theorem proved in Chapter 1 of PMATH 450 (or Chapter 8 of PMATH 351).
+
+## The Open Mapping Theorem
+
+<div class="definition">
+<strong>Notation.</strong> Let \((Z, \|\cdot\|_Z)\) be a Banach space and \(r > 0\). Write \(Z_r = \{z \in Z : \|z\|_Z \leq r\}\) for the closed ball of radius \(r\) at the origin, and \(B^Z(z_0, \varepsilon) = \{z : \|z - z_0\| < \varepsilon\}\) for the open ball of radius \(\varepsilon\) centred at \(z_0\).
+</div>
+
+The key lemma shows that if the image of the closed unit ball under a bounded linear map is "large" (i.e., its closure contains a ball), then we can upgrade closure to actual containment, using completeness.
+
+<div class="lemma">
+<strong>Lemma 7.1.</strong> Let \(X\) and \(Y\) be Banach spaces and \(T \in \mathcal{B}(X, Y)\). If \(Y_1 \subseteq \overline{T(X_m)}\) for some \(m \geq 1\), then \(Y_1 \subseteq T(X_{2m})\).
+</div>
+
+*Proof.* The hypothesis \(Y_1 \subseteq \overline{T(X_m)}\) implies \(Y_r \subseteq \overline{T(X_{rm})}\) for all \(r > 0\) by scaling. Choose \(y \in Y_1\). Since \(y \in Y_1 \subseteq \overline{T(X_m)}\), there exists \(x_1 \in X_m\) with \(\|y - Tx_1\| < 1/2\). Since \(y - Tx_1 \in Y_{1/2} \subseteq \overline{T(X_{m/2})}\), there exists \(x_2 \in X_{m/2}\) with \(\|(y - Tx_1) - Tx_2\| < 1/4\). Continuing inductively, we find \(x_n \in X_{m/2^{n-1}}\) such that
+\[
+\left\|y - \sum_{j=1}^n Tx_j\right\| < \frac{1}{2^n}.
+\]
+Since \(\sum_{n=1}^\infty \|x_n\| \leq \sum_{n=1}^\infty m/2^{n-1} = 2m\), and \(X\) is complete, the series \(x = \sum_{n=1}^\infty x_n\) converges to some \(x \in X_{2m}\). By continuity of \(T\), \(Tx = \sum_{n=1}^\infty Tx_n = y\). Thus \(y \in T(X_{2m})\). \(\square\)
+
+<div class="theorem">
+<strong>Theorem 7.2 (Open Mapping Theorem).</strong> Let \(X\) and \(Y\) be Banach spaces and \(T \in \mathcal{B}(X, Y)\) a surjection. Then \(T\) is an open map: if \(G \subseteq X\) is open, then \(T(G) \subseteq Y\) is open.
+</div>
+
+*Proof.* Since \(T\) is surjective, \(Y = T(X) = \bigcup_{n=1}^\infty \overline{T(X_n)}\). Now \(Y\) is a complete metric space, so by the **Baire Category Theorem**, some \(\overline{T(X_m)}\) has nonempty interior: there exists \(y \in \mathrm{int}(\overline{T(X_m)}) \cap \overline{T(X_m)}\). Choose \(\delta > 0\) so that \(B^Y(y, \delta) \subseteq \overline{T(X_m)}\). Then
+\[
+B^Y(0, \delta) \subseteq -y + \overline{T(X_m)} \subseteq \overline{T(X_m)} + \overline{T(X_m)} \subseteq \overline{T(X_{2m})},
+\]
+so \(Y_{\delta/2} \subseteq \overline{T(X_{2m})}\). By Lemma 7.1, \(Y_{\delta/2} \subseteq T(X_{4m})\), i.e.
+\[
+T(X_r) \supseteq Y_{r\delta/8m} \quad \text{for all } r > 0.
+\]
+Now let \(G \subseteq X\) be open and \(y = Tx \in T(G)\). Choose \(\varepsilon > 0\) with \(x + B^X(0, \varepsilon) \subseteq G\). Then
+\[
+T(G) \supseteq y + T\!\left(B^X(0, \varepsilon)\right) \supseteq y + T(X_{\varepsilon/2}) \supseteq y + Y_{\varepsilon\delta/16m} = B^Y\!\left(y,\, \tfrac{\varepsilon\delta}{16m}\right).
+\]
+Thus every \(y \in T(G)\) is an interior point, so \(T(G)\) is open. \(\square\)
+
+<div class="theorem">
+<strong>Corollary 7.3 (Inverse Mapping Theorem).</strong> Let \(X\) and \(Y\) be Banach spaces and \(T \in \mathcal{B}(X, Y)\) a bijection. Then \(T^{-1}\) is continuous, and hence \(T\) is a homeomorphism.
+</div>
+
+*Proof.* That \(T^{-1}\) is linear is elementary. If \(G \subseteq X\) is open, then \((T^{-1})^{-1}(G) = T(G)\) is open in \(Y\) by the Open Mapping Theorem. Hence \(T^{-1}\) is continuous. \(\square\)
+
+The Inverse Mapping Theorem is remarkable: it says that if a bounded linear bijection between Banach spaces has a (set-theoretic) inverse, that inverse is automatically bounded. This fails in incomplete normed spaces: one can construct a linear bijection from a normed space to itself whose inverse is unbounded.
+
+## The Fourier Map Is Not Surjective
+
+We can now answer the question about Fourier coefficients.
+
+<div class="theorem">
+<strong>Theorem 7.4.</strong> The map \(\Lambda: L^1(\mathbb{T}) \to c_0(\mathbb{Z}, \mathbb{C})\) defined by \(\Lambda([f]) = (\hat{f}(n))_{n \in \mathbb{Z}}\) is not surjective. That is, there exist sequences in \(c_0(\mathbb{Z}, \mathbb{C})\) that are not Fourier coefficient sequences of any \(L^1\) function.
+</div>
+
+*Proof.* We established that \(\Lambda\) is continuous, linear, and injective. Suppose for contradiction that \(\Lambda\) were surjective. By the Inverse Mapping Theorem, \(\Lambda^{-1}: c_0(\mathbb{Z}, \mathbb{C}) \to L^1(\mathbb{T})\) would be continuous.
+
+Recall from Section 6.2 the Dirichlet kernels \(D_N = \sum_{n=-N}^{N} e^{2\pi i n \cdot}\). Their Fourier coefficients are
+\[
+d_N := \Lambda([D_N]) = (\ldots, 0, \underbrace{1, 1, \ldots, 1}_{2N+1 \text{ ones}}, 0, \ldots),
+\]
+so \(\|d_N\|_\infty = 1\) for all \(N\). Each \(d_N\) is finitely supported, hence in \(c_0\). But the divergence of the Dirichlet kernel norms — proved in Section 6.2 using the harmonic series — gives
+\[
+\|\Lambda^{-1}(d_N)\|_1 = \|D_N\|_1 \to \infty \quad \text{as } N \to \infty.
+\]
+A uniformly bounded sequence \((d_N)\) in \(c_0\) is mapped by \(\Lambda^{-1}\) to an unbounded sequence in \(L^1\). This contradicts the assumed continuity (i.e., boundedness) of \(\Lambda^{-1}\). Therefore \(\Lambda\) is not surjective. \(\square\)
+
+This is a genuinely surprising result. The Riemann–Lebesgue Lemma identifies \(c_0\) as a necessary condition on Fourier coefficients of \(L^1\) functions, but Theorem 7.4 shows that it is far from sufficient.
+
+## What Is the Range of the Fourier Transform?
+
+Since \(\Lambda\) is injective but not surjective, its range \(\Lambda(L^1) \subsetneq c_0(\mathbb{Z})\) is a proper subspace. One might guess that the range is \(\ell^1(\mathbb{Z})\) — but this is also wrong. The sequence \(\beta_n = 1/n\) for \(n \geq 1\) and \(\beta_n = 0\) for \(n \leq 0\) lies in \(\ell^2\) (hence is the Fourier coefficient sequence of some \(f \in L^2 \subseteq L^1\)), but \((\beta_n) \notin \ell^1\). So the range of \(\Lambda\) contains sequences outside \(\ell^1\), and yet by Theorem 7.4 it does not contain all of \(c_0\). The range is a proper subset of \(c_0\) that properly contains \(\ell^1\), and its exact description is not known in general.
+
+The question of which sequences are Fourier coefficients is, in general, wide open. Katznelson summarizes the situation with characteristic directness:
+
+> The only spaces, defined by conditions of size or smoothness of the functions, for which we obtain a complete characterisation — that is, a necessary and sufficient condition expressed in terms of order of magnitude for a sequence \(\{a_n\}\) to be the Fourier coefficients of a function in the space — are \(L^2(\mathbb{T})\) and its "derivatives" (such as the space of absolutely continuous functions with derivatives in \(L^2\)).
+
+The \(L^2\) case is the Riesz–Fischer theorem. For all other natural function spaces on \(\mathbb{T}\), the problem of characterizing Fourier coefficient sequences remains one of the central open problems of classical harmonic analysis.
+
+The interplay here is beautiful: the Baire Category Theorem — a purely topological result about complete metric spaces — gives us an operator-theoretic tool (the Open Mapping Theorem) that resolves an analytic question (the characterization of Fourier coefficients) by showing a certain operator cannot be surjective. This exemplifies the deep unity of analysis: completeness is not just a technical condition, but a structural property with far-reaching consequences.

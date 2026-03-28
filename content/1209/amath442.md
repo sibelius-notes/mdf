@@ -5,7 +5,8 @@ prof: "Sander Rhebergen"
 
 These notes cover the core numerical methods for solving partial differential equations (PDEs), developed in AMATH 442/642 at the University of Waterloo. Mathematical models based on PDEs arise throughout science, engineering, finance, and economics. When exact solutions are unavailable, we rely on numerical approximations computed on a computer. The goal is threefold: to understand the theory of numerical methods (with derivations and proofs), to implement them computationally, and to apply them to problems in fluid mechanics, diffusion, wave propagation, and related fields.
 
-The course covers:
+The notes are organized as follows. The **Introduction** classifies second-order PDEs and introduces the prototypical examples that motivate each method family. The **Finite Difference Methods** supplement (drawn from the Fall 2014 lecture notes of Prof. Krivodonova) develops explicit and implicit schemes for the heat and advection equations, covering consistency, stability, the Lax Equivalence Theorem, Von Neumann analysis, Crank–Nicolson, ADI, and dissipation/dispersion theory. The remaining sections cover the **finite element method** and **finite volume/discontinuous Galerkin** methods in the framework of Rhebergen's course:
+
 - **Section 2**: The continuous Galerkin (CG) finite element method for an elliptic PDE in 1D
 - **Section 3**: The CG finite element method for a time-dependent parabolic PDE in 1D
 - **Section 4**: Well-posedness and error analysis of the finite element method
@@ -13,6 +14,276 @@ The course covers:
 - **Section 6**: The discontinuous Galerkin (DG) finite element method for scalar hyperbolic conservation laws in 1D
 - **Section 7**: Systems of hyperbolic conservation laws in 1D
 - **Section 8**: Systems of hyperbolic conservation laws in 2D
+
+---
+
+## Introduction: The Landscape of PDEs
+
+Before developing numerical methods, it is useful to understand what kinds of mathematical behaviour we are trying to approximate. Second-order linear PDEs divide into three fundamental types, each arising from a different physical regime and requiring different numerical treatment.
+
+A general second-order linear PDE in two variables has the form \(Au_{xx} + Bu_{xy} + Cu_{yy} + \text{lower order} = 0\). The **discriminant** \(B^2 - 4AC\) classifies its character: if \(B^2 - 4AC < 0\) the equation is **elliptic** (Laplace, Poisson), if \(B^2 - 4AC = 0\) it is **parabolic** (heat, diffusion), and if \(B^2 - 4AC > 0\) it is **hyperbolic** (wave equation, advection). These three regimes behave so differently that each has its own theory of well-posedness and its own family of numerical methods.
+
+**Parabolic PDEs** — prototyped by the heat equation \(u_t = \sigma u_{xx}\) — describe diffusion processes in which energy or mass spreads out from regions of concentration. Their solutions decay over time (when \(\sigma > 0\)), high spatial frequencies die faster than low ones, and rough initial data is immediately smoothed. The heat equation on \(\Omega = [-1,1]\) with boundary conditions \(u(\pm 1,t) = 0\) has Fourier modes \(u(x,t) = e^{-\sigma k^2 t}\sin kx\): the factor \(e^{-\sigma k^2 t}\) tells us that larger wavenumbers \(k\) decay more rapidly. Numerically, this smoothing must be respected — schemes that allow high-frequency modes to grow are useless for diffusion problems.
+
+**Elliptic PDEs** — prototyped by the Laplace equation \(\Delta u = 0\) and the Poisson equation \(-\Delta u = f\) — govern steady-state phenomena: electrostatic potentials, incompressible inviscid flow, and equilibrium temperature distributions. They do not involve time; all boundary information propagates instantaneously throughout the domain. As Remark 2.4 in the finite difference analysis notes, an elliptic equation can be viewed as the steady state of a parabolic one: setting \(\partial_t u = 0\) in the heat equation yields \(\sigma u_{xx} = -f(x)\).
+
+**Hyperbolic PDEs** — prototyped by the wave equation \(u_{tt} = c^2 u_{xx}\) and the linear advection equation \(u_t + a u_x = 0\) — describe propagation at finite speed without dissipation. Unlike the heat equation, solutions of the advection equation \(u_t + au_x = 0\) do not decay: the initial profile \(u_0(x)\) simply translates as \(u(x,t) = u_0(x-at)\). No new extrema can be created by the PDE itself — only boundary conditions introduce them. This is a property numerical schemes must preserve: schemes that create spurious oscillations violate the physical character of hyperbolic problems. Nonlinear hyperbolic equations (e.g., Burgers' equation \(u_t + uu_x = 0\)) are even more subtle, as smooth initial data can develop **shocks** — discontinuities — in finite time, requiring the theory of weak solutions.
+
+There are also important nonlinear PDEs that blend these types: Burgers' equation \(u_t + uu_x = 0\) (nonlinear wave with possible shocks), the nonlinear heat equation \(u_t = (\sigma(u)u_x)_x\) (variable diffusivity), and higher-order dispersive equations such as the Korteweg–de Vries equation \(u_t + uu_x + u_{xxx} = 0\).
+
+---
+
+## Finite Difference Methods
+
+The **finite difference method** (FDM) is the most intuitive discretisation strategy: replace derivatives with finite difference quotients on a grid. While the finite element and finite volume methods dominate modern PDE computation, the FDM remains the natural setting to develop the core concepts of consistency, stability, and convergence — ideas that carry over to all other methods.
+
+### FDM.1 Discretisation and the Explicit Scheme for the Heat Equation
+
+We discretise space and time using a uniform grid. Let \(\Delta x\) denote the spatial step and \(\Delta t\) the time step; by convention both are positive. A grid point is the pair \((x_j, t_n)\) where \(x_j = j\Delta x\) and \(t_n = n\Delta t\), abbreviated as \((j,n)\). We write \(u_j^n\) for the exact solution at \((x_j, t_n)\) and \(U_j^n\) for the numerical approximation.
+
+From the Taylor expansion of \(u\) about \((x_j, t_n)\), the **forward difference**, **backward difference**, and **central difference** approximations are:
+
+\[
+(u_x)_j^n = \frac{u_{j+1}^n - u_j^n}{\Delta x} + O(\Delta x), \qquad
+(u_x)_j^n = \frac{u_j^n - u_{j-1}^n}{\Delta x} + O(\Delta x), \qquad
+(u_x)_j^n = \frac{u_{j+1}^n - u_{j-1}^n}{2\Delta x} + O(\Delta x^2).
+\]
+
+The central difference is second-order accurate because the leading errors cancel by symmetry; higher-order stencils involving more grid points achieve still higher accuracy. For the second derivative, the standard three-point stencil gives
+
+\[
+(u_{xx})_j^n = \frac{u_{j+1}^n - 2u_j^n + u_{j-1}^n}{\Delta x^2} + O(\Delta x^2).
+\]
+
+Applying forward differencing in time and central differencing in space to the heat equation \(u_t = \sigma u_{xx}\) gives the **explicit (forward Euler) scheme**:
+
+\[
+U_j^{n+1} = r U_{j-1}^n + (1 - 2r)U_j^n + r U_{j+1}^n, \qquad r = \frac{\sigma\Delta t}{\Delta x^2}.
+\]
+
+This is an **explicit** scheme: given all values at time level \(n\), we compute level \(n+1\) pointwise with no system to solve. It requires only \(O(J)\) work per time step, where \(J\) is the number of grid points. The initial condition is \(U_j^0 = u_0(x_j)\).
+
+Stability constrains \(r\). In the \(\ell^\infty\) norm, we need the weights \(r\), \(1-2r\), \(r\) to all be non-negative (so no cancellation can amplify the solution), which requires \(1-2r \ge 0\), i.e. \(r \le 1/2\). When \(r > 1/2\), one can show that the checkerboard initial data \(U_j^0 = (-1)^j\) grows exponentially like \((4r-1)^n\) — catastrophic instability. The stability condition is therefore
+
+\[
+r = \frac{\sigma\Delta t}{\Delta x^2} \le \frac{1}{2} \implies \Delta t \le \frac{\Delta x^2}{2\sigma}.
+\]
+
+This is a severe constraint in practice: if \(\Delta x = 10^{-3}\) then \(\Delta t \lesssim 10^{-6}\), requiring \(10^6\) time steps to reach \(T = 1\).
+
+### FDM.2 Consistency, Truncation Error, and the Lax Equivalence Theorem
+
+When we substitute the exact solution into a finite difference scheme, it does not satisfy the discrete equation exactly — the mismatch is the **truncation (discretisation) error** \(\tau_j^n\). For the explicit heat equation scheme, Taylor-expanding and using \(u_t = \sigma u_{xx}\) yields
+
+\[
+\tau_j^n = \frac{\Delta t}{2}(u_{tt})_j^n - \frac{\sigma\Delta x^2}{12}(u_{xxxx})_j^n + O(\Delta t^2, \Delta x^4).
+\]
+
+Since \(u_t = \sigma u_{xx}\) implies \(u_{tt} = \sigma u_{xxt}\), the truncation error is \(\tau_j^n = O(\Delta t, \Delta x^2)\). Under the stability constraint \(r < 1/2\), the time step satisfies \(\Delta t \lesssim \Delta x^2\), so in fact \(\tau_j^n = O(\Delta x^2)\): the scheme is second-order accurate.
+
+**Definition (Consistency).** A scheme is *consistent* if \(\tau_j^n \to 0\) as \(\Delta x, \Delta t \to 0\). It is *consistent of order \(k\) in space and \(m\) in time* if \(\tau_j^n = O(\Delta x^k, \Delta t^m)\).
+
+**Definition (Stability).** A scheme is *stable* if there exists \(C > 0\) independent of \(\Delta x\), \(\Delta t\), and the initial data such that \(\|U^n\| \le C\|U^0\|\) for all \(n\Delta t \le T\). Stability guarantees that rounding errors and discretisation errors do not grow without bound.
+
+Consistency measures how well the scheme approximates the PDE; stability controls error propagation in time. Together they imply convergence — that the numerical solution approaches the exact solution as the grid is refined.
+
+<div class="theorem">
+<strong>Theorem (Lax Equivalence Theorem).</strong> For a linear well-posed initial-value problem and a consistent finite difference scheme, stability is necessary and sufficient for convergence.
+</div>
+
+The forward direction (stability + consistency \(\Rightarrow\) convergence) is proved by bounding the error accumulation over \(n\) time steps: if \(\|e^0\| = 0\) and the scheme is stable, then \(\|e^n\| \le n\Delta t \cdot \|\tau\| \le T \cdot O(\Delta x^k, \Delta t^m)\). The converse (convergence without stability is impossible) is harder but follows from the principle that any unstable mode in the numerical scheme can be excited by a suitable initial condition, preventing uniform convergence.
+
+**Convergence in practice.** When the exact solution \(u\) is not available, one estimates the convergence order by comparing numerical solutions on successively refined grids. For a scheme of order \(k\), doubling resolution approximately halves the error by a factor \(2^k\):
+
+\[
+\log_2\frac{\|U_{\Delta x} - U_{\Delta x/2}\|}{\|U_{\Delta x/2} - U_{\Delta x/4}\|} \approx k.
+\]
+
+**Richardson extrapolation** gives an error estimate from two grid levels: since \(e_{\Delta x} \approx C\Delta x^k\),
+
+\[
+e_{\Delta x} \approx \frac{U_{\Delta x} - U_{\Delta x/2}}{1 - 2^{-k}}.
+\]
+
+### FDM.3 Von Neumann Stability Analysis
+
+Von Neumann analysis is a powerful Fourier-mode stability test, applicable not only to finite differences but to any scheme on a periodic domain. The idea is to decompose the numerical solution into discrete Fourier modes and track how each mode is amplified (or damped) per time step.
+
+On a periodic domain of \(J\) points, any grid function \(U_j^n\) can be written as a discrete Fourier series:
+
+\[
+U_j^n = \sum_{k=0}^{J-1} A_k^n w_j^k, \qquad w_j^k = e^{2\pi i k j / J}.
+\]
+
+The **discrete Parseval relation** \(\|U^n\|_2^2 = J\|A^n\|_2^2\) connects the physical-space norm to the Fourier coefficient norm. Substituting a single mode \(U_j^n = A_k^n e^{2\pi i kj/J}\) into the finite difference scheme, linearity allows us to write
+
+\[
+A_k^{n+1} = M_k(\theta)\,A_k^n, \qquad \theta = \frac{\pi k}{J},
+\]
+
+where \(M_k\) is the **amplification factor** of mode \(k\). The scheme is stable in the \(L^2\)-norm if and only if \(|M_k| \le 1 + C\Delta t\) for all \(k\) (the **Von Neumann condition**). For a scheme intended to preserve solution magnitude (e.g., pure advection), we require \(|M_k| \le 1\).
+
+**Example: FTBS scheme for linear advection.** Consider \(u_t + au_x = 0\) (\(a > 0\)) with the forward-time backward-space (FTBS) upwind scheme:
+
+\[
+U_j^{n+1} = (1-\alpha)U_j^n + \alpha U_{j-1}^n, \qquad \alpha = \frac{a\Delta t}{\Delta x}.
+\]
+
+Substituting a Fourier mode:
+
+\[
+M_k = (1-\alpha) + \alpha e^{-2\pi i k/J} = 1 - \alpha(1 - e^{-i\theta \cdot 2}).
+\]
+
+A direct calculation gives \(|M_k|^2 = 1 - 4\alpha(1-\alpha)\sin^2(\theta/2)\). For \(0 < \alpha \le 1\) we have \(|M_k|^2 \le 1\), so the scheme is stable. For \(\alpha > 1\) or \(\alpha < 0\) (i.e., the upwind direction is wrong), \(|M_k|^2 > 1\) for some \(k\) and the scheme is unstable. The stability requirement \(\alpha = a\Delta t/\Delta x \le 1\) is the **CFL (Courant–Friedrichs–Lewy) condition** for advection; it says the numerical domain of dependence must contain the exact domain of dependence.
+
+<div class="theorem">
+<strong>Theorem (Von Neumann characterisation).</strong> A constant-coefficient scalar one-level finite difference method is stable in the \(L^2\)-norm if and only if it satisfies the Von Neumann condition \(|M_k| \le 1 + C\Delta t\) for all modes \(k\).
+</div>
+
+The proof (sketched above) follows by expressing \(\|U^n\|_2^2 = J\sum_k |M_k|^{2n}|A_k^0|^2\) and bounding each factor.
+
+### FDM.4 Implicit Methods and Unconditional Stability
+
+The constraint \(\Delta t \le \Delta x^2/(2\sigma)\) of the explicit scheme is extremely restrictive for small \(\Delta x\). The remedy is an **implicit** scheme, which evaluates the spatial term at the new time level:
+
+\[
+\frac{U_j^{n+1} - U_j^n}{\Delta t} = \sigma\frac{U_{j+1}^{n+1} - 2U_j^{n+1} + U_{j-1}^{n+1}}{\Delta x^2}.
+\]
+
+Rearranging, each unknown \(U_j^{n+1}\) depends on its neighbours at the same time level: the scheme requires solving a **linear system** at every time step. In the Von Neumann analysis, substituting a Fourier mode gives
+
+\[
+M_k^{-1} = 1 + 4r\sin^2\!\left(\frac{\pi k}{J}\right) \ge 1 \quad \forall r > 0,
+\]
+
+so \(|M_k| \le 1\) for all \(r > 0\) and all \(k\) — the implicit scheme is **unconditionally stable**. However, the improved stability comes at the cost of reduced temporal accuracy: the implicit scheme is \(O(\Delta x^2, \Delta t)\), only first-order in time. In practice, one takes \(\Delta t \sim \Delta x\) to match spatial and temporal accuracy, so the total work is \(O(J^2)\) — the same order as the explicit scheme, but without the harsh stability penalty.
+
+### FDM.5 The Crank–Nicolson Method
+
+The **Crank–Nicolson (CN) method** averages the explicit and implicit spatial terms to achieve second-order accuracy in both space and time:
+
+\[
+\frac{U_j^{n+1} - U_j^n}{\Delta t} = \frac{\sigma}{2}\!\left(\frac{U_{j+1}^{n+1} - 2U_j^{n+1} + U_{j-1}^{n+1}}{\Delta x^2} + \frac{U_{j+1}^n - 2U_j^n + U_{j-1}^n}{\Delta x^2}\right).
+\]
+
+To verify the accuracy, expand using Taylor series: the leading error term involves \(\frac{\Delta t}{2}u_{tt} - \frac{\sigma}{2}\Delta t u_{xxt}\). Using \(u_t = \sigma u_{xx}\) gives \(u_{tt} = \sigma u_{xxt}\), so these two contributions cancel, and the truncation error is \(\tau_j^n = O(\Delta t^2, \Delta x^2)\). CN is unconditionally stable (as can be shown by Von Neumann analysis) and second-order in both space and time — the best of both worlds.
+
+The CN method takes the linear system form \(AU^{n+1} = F^n\), where
+
+\[
+A = I - \frac{r}{2}C, \qquad F^n = \left(I + \frac{r}{2}C\right)U^n + \frac{r}{2}(f^n + f^{n+1}),
+\]
+
+and \(C\) is the tridiagonal matrix with \(-2\) on the diagonal and \(1\) on the super- and sub-diagonals. Comparing the three schemes:
+
+| Scheme | Accuracy | Stability | Total work (\(T=1\), \(\Delta x = 1/J\)) |
+|--------|----------|-----------|------------------------------------------|
+| Explicit | \(O(\Delta x^2, \Delta t)\) | \(r < 1/2\), so \(\Delta t \sim \Delta x^2\) | \(O(J^3)\) |
+| Implicit | \(O(\Delta x^2, \Delta t)\) | Unconditional, use \(\Delta t \sim \Delta x\) | \(O(J^2)\) |
+| Crank–Nicolson | \(O(\Delta x^2, \Delta t^2)\) | Unconditional, use \(\Delta t \sim \Delta x\) | \(O(J^2)\) |
+
+Even though CN is unconditionally stable, one should still choose \(\Delta t \sim \Delta x\) for two reasons: accuracy (large \(\Delta t\) defeats the second-order accuracy) and convergence of iterative linear solvers.
+
+### FDM.6 The Tridiagonal Algorithm
+
+The linear system arising in the implicit and CN schemes has a **tridiagonal** coefficient matrix — \(O(J)\) nonzero entries in a banded structure. Gaussian elimination exploits this sparsity. For \(AU = F\) with \(A\) tridiagonal (subdiagonal \(b_j\), diagonal \(a_j\), superdiagonal \(c_j\)), the LU factorisation requires only \(O(J)\) arithmetic operations.
+
+Write \(A = LU\) where \(L\) is unit lower bidiagonal and \(U\) is upper bidiagonal. The factorisation follows the recurrences
+
+\[
+u_1 = a_1, \quad v_j = c_j, \quad l_j = \frac{b_j}{u_{j-1}}, \quad u_j = a_j - l_j v_{j-1}.
+\]
+
+Forward substitution solves \(Ly = F\) in \(O(J)\) steps: \(y_j = F_j - l_j y_{j-1}\). Back substitution solves \(UX = y\) in \(O(J)\) steps. The total cost is \(3 \times O(J)\) — three times \(J\) arithmetic operations, linear in the problem size. Crucially, pivoting is rarely needed for matrices arising from PDE discretisations, because the diagonal dominance inherited from the PDE structure ensures numerical stability.
+
+### FDM.7 Boundary Conditions
+
+Dirichlet and Neumann boundary conditions require different treatment in finite difference schemes.
+
+**Dirichlet boundary conditions** (\(u(\alpha, t) = f_L(t)\)) are imposed directly: set \(U_0^n = f_L(t_n)\) and exclude the boundary node from the linear system.
+
+**Neumann boundary conditions** (\(u_x(\alpha, t) = g_L(t)\)) cannot be imposed directly, because the grid does not include a node outside the domain. Three approaches exist.
+
+*Method 1 (one-sided difference):* Approximate \(u_x\) by \((U_1^n - U_0^n)/\Delta x = g_L^n\), giving \(U_0^n = U_1^n - \Delta x\,g_L^n\). This is first-order accurate at the boundary, reducing global accuracy.
+
+*Method 2 (higher-order one-sided):* Use the three-point formula \((u_x)_0^n \approx (-3U_0^n + 4U_1^n - U_2^n)/(2\Delta x)\) to get \(U_0^n = (2\Delta x\,g_L^n - 4U_1^n + U_2^n)/(-3)\). This restores second-order accuracy at the boundary.
+
+*Method 3 (ghost cell):* Introduce an imaginary node \(j = -1\) outside the domain. The second-order Neumann condition \((U_1^n - U_{-1}^n)/(2\Delta x) = g_L^n\) gives \(U_{-1}^n = U_1^n - 2\Delta x\,g_L^n\). Substituting into the interior stencil at \(j = 0\) modifies the first row: \((U_{xx})_0^n \approx (U_1^n - 2\Delta x\,g_L^n - 2U_0^n + U_1^n)/\Delta x^2 = (2U_1^n - 2\Delta x\,g_L^n - 2U_0^n)/\Delta x^2\). The ghost cell method is clean and maintains second-order accuracy globally.
+
+There are also **Robin boundary conditions** \(\alpha u + \beta u_x = f\) (a linear combination of Dirichlet and Neumann) and **mixed** problems (Dirichlet on part of the boundary, Neumann on the rest).
+
+### FDM.8 Higher Dimensions and ADI
+
+Extending FDM to two dimensions is straightforward. For the 2D heat equation \(u_t = \sigma(u_{xx} + u_{yy})\), the explicit scheme uses a 5-point spatial stencil:
+
+\[
+\frac{U_{j,k}^{n+1} - U_{j,k}^n}{\Delta t} = \sigma\!\left(\frac{U_{j+1,k}^n - 2U_{j,k}^n + U_{j-1,k}^n}{\Delta x^2} + \frac{U_{j,k+1}^n - 2U_{j,k}^n + U_{j,k-1}^n}{\Delta y^2}\right).
+\]
+
+Von Neumann analysis gives the stability condition \(r_x + r_y \le 1/2\), where \(r_x = \sigma\Delta t/\Delta x^2\) and \(r_y = \sigma\Delta t/\Delta y^2\). For a uniform mesh \(\Delta x = \Delta y\), this requires \(\Delta t \le \Delta x^2/(4\sigma)\) — twice as restrictive as 1D. In 3D the condition becomes \(\Delta t \le \Delta x^2/(6\sigma)\). The computational cost also scales adversely: in 1D we have \(J\) spatial points and total work \(O(JN)\); in 2D we have \(J^2\) spatial points and total work \(O(J^2 N)\); in 3D, \(O(J^3 N)\).
+
+The implicit (backward Euler) generalisation of the CN method in 2D would read
+
+\[
+\left(1 - \frac{r_x}{2}\delta_x^2 - \frac{r_y}{2}\delta_y^2\right)U^{n+1} = \left(1 + \frac{r_x}{2}\delta_x^2 + \frac{r_y}{2}\delta_y^2\right)U^n,
+\]
+
+where \(\delta_x^2 U_{j,k} = U_{j-1,k} - 2U_{j,k} + U_{j+1,k}\). The difficulty is that no matter how we order the unknowns \(U_{j,k}^{n+1}\) into a vector, the resulting coefficient matrix is **not tridiagonal** — it has a banded structure with bandwidth \(J\), making direct solution \(O(J^3)\) per time step.
+
+The **Alternating Direction Implicit (ADI)** method resolves this by splitting the 2D problem into a sequence of 1D tridiagonal solves. Introduce a half-step \(U^{n+1/2}\) and solve
+
+\[
+\left(1 - \frac{r_x}{2}\delta_x^2\right)U^{n+1/2} = \left(1 + \frac{r_y}{2}\delta_y^2\right)U^n, \qquad
+\left(1 - \frac{r_y}{2}\delta_y^2\right)U^{n+1} = \left(1 + \frac{r_x}{2}\delta_x^2\right)U^{n+1/2}.
+\]
+
+Each half-step is a tridiagonal system in one spatial direction, solvable in \(O(J)\) operations. The ADI method is unconditionally stable, second-order in time and space, and costs only \(O(J^2)\) per time step in 2D — matching the efficiency of 1D implicit methods. The price is an additional cross-derivative error: the product of the two splitting operators introduces a term \(\frac{r_x r_y}{4}\delta_x^2\delta_y^2\) that represents an \(O(\Delta t^2)\) discrepancy from the full 2D CN scheme.
+
+### FDM.9 Dissipation and Dispersion Errors
+
+Even when a scheme is stable and consistent, the numerical solution may differ from the exact solution in two qualitatively different ways. **Dissipation** (or amplitude error) refers to numerical decay: modes that should propagate unchanged lose amplitude over time. **Dispersion** (or phase error) refers to modes travelling at the wrong speed — different wavenumbers propagate at different numerical speeds, causing an initially sharp profile to spread and oscillate.
+
+To analyse these errors, consider the one-parameter family of schemes for \(u_t + au_x = 0\):
+
+\[
+U_j^{n+1} = U_j^n - \frac{\alpha}{2}(U_{j+1}^n - U_{j-1}^n) + \frac{\beta}{2}(U_{j+1}^n - 2U_j^n + U_{j-1}^n),
+\]
+
+where \(\alpha = a\Delta t/\Delta x\) is the CFL number. The parameter \(\beta\) controls numerical diffusivity:
+
+| Scheme | \(\beta\) | Character |
+|--------|-----------|-----------|
+| Central | \(0\) | Unstable: \(|M_k|^2 = 1 + \alpha^2\sin^2\theta > 1\) |
+| Upwind | \(|\alpha|\) | Stable for \(|\alpha| \le 1\) |
+| Lax–Friedrichs | \(1\) | Dissipates high-frequency modes heavily |
+| Lax–Wendroff | \(\alpha^2\) | Least dissipative among stable schemes |
+
+Substituting a Fourier mode \(U_j^n = A_k^n e^{2\pi i kj/J}\) into this general scheme gives the amplification factor
+
+\[
+M_k = 1 - 2\beta\sin^2\!\theta - i\alpha\sin 2\theta, \qquad \theta = \frac{\pi k}{J}.
+\]
+
+The real part governs amplitude: \(\operatorname{Re}(M_k) = 1 - 2\beta\sin^2\theta\). The imaginary part governs phase: \(\operatorname{Im}(M_k) = -\alpha\sin 2\theta\). For the exact solution, both the amplitude is preserved and all modes travel at speed \(a\), meaning \(M_k^{\text{exact}} = e^{-i\alpha\sin 2\theta}\) — unit modulus, pure phase shift.
+
+**Dissipation order.** We say a scheme is *dissipative of order \(2r\)* if \(|M_k(\theta)| \le 1 - C|\theta|^{2r}\) for \(\theta \in [0,\pi/2]\). Lax–Wendroff, with \(\beta = \alpha^2\), gives
+
+\[
+|M_k|^2 = 1 - 4\alpha^2(1-\alpha^2)\sin^4\theta,
+\]
+
+so it is dissipative of order 4. The upwind scheme (\(\beta = |\alpha|\)) gives \(|M_k|^2 = 1 - 4|\alpha|(1-|\alpha|)\sin^2\theta\), dissipative of order 2. A scheme dissipative of higher order concentrates its amplitude damping on high-frequency (short-wavelength) modes, leaving resolved waves nearly undamped — this is desirable.
+
+**Dispersion analysis.** Write \(M_k = |M_k|e^{i\phi_k}\) and define the **numerical wave speed** as \(a_k = -\phi_k/(2\pi k\,\Delta t)\). Expanding for small \(\theta\):
+
+\[
+a_k \approx a\!\left[1 - \frac{2\theta^2}{3}(1 + 2\alpha^2 - 3\beta)\right] + O(\theta^4).
+\]
+
+For Lax–Wendroff (\(\beta = \alpha^2\)): \(1 + 2\alpha^2 - 3\alpha^2 = 1 - \alpha^2 > 0\), so \(a_k \le a\) — the numerical solution lags behind the exact solution. For Lax–Friedrichs (\(\beta = 1\)): \(1 + 2\alpha^2 - 3 = 2\alpha^2 - 2 < 0\) (for \(|\alpha| < 1\)), so \(a_k > a\) — the numerical solution travels faster than the exact one. Lax–Wendroff is the *least dissipative* of the stable linear schemes (order-4 dissipation), making it the best-performing scheme for smooth solutions; however, its dispersion causes oscillations near discontinuities, motivating the need for slope limiters in DG methods.
+
+For **resolved waves** (small \(\theta\), i.e., many grid points per wavelength), all well-designed schemes have \(|M_k| \approx 1\) and \(a_k \approx a\) — they all work well. The differences emerge for **unresolved waves** (large \(\theta\), near the Nyquist frequency): Lax–Friedrichs and Lax–Wendroff damp these modes strongly, while the central scheme amplifies them (instability). Dissipating high-frequency numerical noise is generally desirable — these modes are largely artefacts of the discretisation, not physical features of the solution.
 
 ---
 
@@ -126,6 +397,8 @@ Each global basis function is nonzero only on the two elements sharing node \(x_
 
 so \(\psi_{k,1} = \phi_{k-1}\) and \(\psi_{k,2} = \phi_k\) on \(K_k\). The key feature of these basis functions is their **compact support** — they are nonzero only on a small number of elements, leading to a sparse stiffness matrix.
 
+![1D FEM hat basis functions on a uniform mesh of 6 elements](/pics/amath442/hat_basis.png)
+
 #### 2.2.3 Imposing the Dirichlet Boundary Condition
 
 We set \(G = \alpha\phi_0(x) = \alpha\psi_{1,1}(x)\), where \(\phi_0(x_0) = 1\) and \(\phi_0(x_i) = 0\) for \(i = 1, \ldots, N\). This satisfies the Dirichlet condition exactly.
@@ -147,6 +420,8 @@ A^{(k)}_{21} U_{k-1} + \left(A^{(k)}_{22} + A^{(k+1)}_{11}\right) U_k + A^{(k+1)
 
 The assembled global matrix \(A\) is **symmetric positive definite** and **banded** (tridiagonal for linear elements), making it computationally efficient to solve.
 
+![Stiffness matrix sparsity pattern for 1D FEM with N=15 hat functions](/pics/amath442/stiffness_sparsity.png)
+
 #### 2.2.5 Mapping to the Reference Element
 
 To compute element integrals efficiently, we introduce the **reference element** \(\hat{K} = [0,1]\) and the affine mapping
@@ -155,7 +430,41 @@ To compute element integrals efficiently, we introduce the **reference element**
 F_{K_j}: (0,1) \to (x_{j-1}, x_j): \xi \mapsto x = h_j\xi + x_{j-1}.
 \]
 
-The reference basis functions are \(\hat{\psi}_1(\xi) = 1 - \xi\) and \(\hat{\psi}_2(\xi) = \xi\). The element integrals transform to
+The reference basis functions are \(\hat{\psi}_1(\xi) = 1 - \xi\) and \(\hat{\psi}_2(\xi) = \xi\).
+
+<svg viewBox="0 0 500 170" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arfe" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Reference element [0,1] -->
+  <text x="80" y="25" text-anchor="middle" font-size="12" font-family="serif" fill="#555">Reference element $\hat{K}=[0,1]$</text>
+  <line x1="20" y1="80" x2="140" y2="80" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="20" cy="80" r="5" fill="#3b82f6"/>
+  <circle cx="140" cy="80" r="5" fill="#3b82f6"/>
+  <text x="14" y="97" font-size="11" font-family="serif" fill="#3b82f6">$\xi=0$</text>
+  <text x="130" y="97" font-size="11" font-family="serif" fill="#3b82f6">$\xi=1$</text>
+  <!-- Basis functions on reference element -->
+  <line x1="20" y1="130" x2="140" y2="80" stroke="#ef4444" stroke-width="1.8"/>
+  <line x1="20" y1="80" x2="140" y2="130" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="10" y="128" font-size="10" font-family="serif" fill="#ef4444">$\hat\psi_1=1-\xi$</text>
+  <text x="110" y="150" font-size="10" font-family="serif" fill="#22c55e">$\hat\psi_2=\xi$</text>
+  <!-- Mapping arrow -->
+  <line x1="155" y1="80" x2="240" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arfe)"/>
+  <text x="197" y="72" text-anchor="middle" font-size="11" font-family="serif" fill="#555">$F_{K_j}$</text>
+  <text x="197" y="92" text-anchor="middle" font-size="10" font-family="serif" fill="#555">$x=h_j\xi+x_{j-1}$</text>
+  <!-- Physical element [x_{j-1}, x_j] -->
+  <text x="365" y="25" text-anchor="middle" font-size="12" font-family="serif" fill="#555">Physical element $K_j=[x_{j-1},x_j]$</text>
+  <line x1="255" y1="80" x2="470" y2="80" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="255" cy="80" r="5" fill="#3b82f6"/>
+  <circle cx="470" cy="80" r="5" fill="#3b82f6"/>
+  <text x="238" y="97" font-size="11" font-family="serif" fill="#3b82f6">$x_{j-1}$</text>
+  <text x="460" y="97" font-size="11" font-family="serif" fill="#3b82f6">$x_j$</text>
+  <!-- Length annotation -->
+  <line x1="255" y1="60" x2="470" y2="60" stroke="#555" stroke-width="0.8"/>
+  <text x="362" y="57" text-anchor="middle" font-size="11" font-family="serif" fill="#555">$h_j$</text>
+</svg> The element integrals transform to
 
 \[
 A^{(k)}_{ij} = \frac{1}{h_k}\int_0^1 \kappa(x(\xi))\frac{d\hat{\psi}_j}{d\xi}\frac{d\hat{\psi}_i}{d\xi}\,d\xi, \qquad
@@ -243,6 +552,8 @@ Lectures 11–22 develop the mathematical analysis of the finite element method.
 - **Interpolation estimates**: for smooth \(u\) and piecewise linear elements, \(\|u - u_h\|_{L^2} = O(h^2)\) and \(\|u - u_h\|_{H^1} = O(h)\).
 - **H<sup>1</sup> and L<sup>2</sup> error estimates** via the Aubin–Nitsche duality argument.
 
+![FEM error convergence on log-log scale: P1 elements achieve O(h²) in L² and O(h) in H¹; P2 elements achieve O(h³) in L² and O(h²) in H¹](/pics/amath442/fem_convergence.png)
+
 ---
 
 ## Section 5: Implementing the CG Finite Element Method in 2D
@@ -311,6 +622,8 @@ F_i = \int_\Omega \phi_i f\,dx - \sum_{j=N+1}^{N+N_\partial} U_j \int_\Omega \na
 ### 5.3 Discretization on Unstructured Triangular Meshes
 
 A key advantage of finite elements is their ability to handle **unstructured grids** on complex geometries. We discretize \(\Omega\) with a triangulation \mathcal{T}_h\) of triangles \(K_k\) satisfying: \(\cup_k \overline{K_k} = \Omega\), triangles do not overlap, and vertices of neighboring triangles coincide.
+
+![2D triangular FEM mesh on the unit square with one highlighted element K](/pics/amath442/fem_mesh_2d.png)
 
 **Local basis functions.** Each triangle \(K_k\) has three local degrees of freedom (one per vertex) with basis set \(\Sigma_k = \{\psi_{k,1}, \psi_{k,2}, \psi_{k,3}\}\). The local solution in element \(K_k\) is
 
@@ -387,6 +700,26 @@ Dirichlet boundary conditions are imposed by **row elimination**: for each bound
 ## Section 6: The Finite Volume and Discontinuous Galerkin Methods for Scalar Hyperbolic Conservation Laws in 1D
 
 *(Lectures 26–34)*
+
+### 6.0 Method of Characteristics
+
+Before developing numerical methods for hyperbolic conservation laws, it is essential to understand how solutions propagate. For the **linear advection equation** \(u_t + au_x = 0\) on \(-\infty < x < \infty\), consider the behaviour of \(u\) restricted to a curve \(x(t)\) in the \(x\)–\(t\) plane. Differentiating along the curve,
+
+\[
+\frac{d}{dt}u(x(t), t) = u_x\frac{dx}{dt} + u_t = u_x\frac{dx}{dt} - au_x = \left(\frac{dx}{dt} - a\right)u_x.
+\]
+
+If we choose the curve so that \(dx/dt = a\), then \(d/dt\,[u(x(t),t)] = 0\): the solution is **constant along the curve**. These special curves are called **characteristics**; for the linear advection equation they are the straight lines \(x(t) = at + x_0\). Given initial data \(u(x,0) = u_0(x)\), we trace back along the characteristic through \((x,t)\) to the \(t=0\) axis: the foot of the characteristic is \(x_0 = x - at\), and the solution is
+
+\[
+u(x,t) = u_0(x - at).
+\]
+
+The initial profile simply translates to the right (if \(a > 0\)) at speed \(a\) without changing shape. This tells us two things about proper numerical schemes: they should preserve solution magnitude (no artificial damping or amplification), and they should distinguish the direction of propagation — the "upwind" direction.
+
+For the **nonlinear Burgers' equation** \(u_t + uu_x = 0\), the method of characteristics still applies. Along a curve satisfying \(dx/dt = u\), the solution is constant: \(u(x(t),t) = u_0(x_0)\). But now the characteristic speed equals the solution value, so characteristics emanating from different points travel at different speeds. When a faster characteristic overtakes a slower one, **characteristics cross** — the solution becomes multi-valued, and a shock (discontinuity) must form.
+
+Consider the Riemann initial condition \(u_0(x) = 0\) for \(x < 0\) and \(u_0(x) = 1\) for \(x \ge 0\). The characteristics from the left travel at speed 0 (staying vertical in the \(x\)–\(t\) plane), while those from the right travel at speed 1. Moving left to right, the speed **jumps** from 1 to 0 — characteristics converge. Contrast this with the reversed Riemann problem \(u_0(x) = 1\) for \(x < 0\) and \(u_0(x) = 0\) for \(x \ge 0\): characteristics diverge, leaving a wedge-shaped region of the \(x\)–\(t\) plane uncovered. The correct solution for this **rarefaction (expansion) wave** is the fan-shaped function \(u(x,t) = x/t\) for \(0 < x/t < 1\), interpolating continuously between the two constant states. The domain-of-dependence theorem states that for consistency of any numerical scheme, the exact domain of dependence must lie inside the numerical domain of dependence, recovering the CFL condition \(\Delta x/\Delta t \le |\lambda_{\max}|\).
 
 ### 6.1 The Scalar Hyperbolic Conservation Law
 

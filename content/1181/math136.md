@@ -51,6 +51,61 @@ V10: \(1\vec{x} = \vec{x}\).
 
 Properties V1 and V6 together imply that \(\mathbb{R}^n\) is closed under linear combinations.
 
+<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;display:block;margin:1.5em auto">
+  <!-- Axes -->
+  <line x1="30" y1="210" x2="290" y2="210" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="30" y1="210" x2="30" y2="20" stroke="currentColor" stroke-width="1.2"/>
+  <text x="293" y="214" font-size="12" fill="currentColor">x</text>
+  <text x="24" y="16" font-size="12" fill="currentColor">y</text>
+  <!-- Origin -->
+  <text x="22" y="224" font-size="11" fill="currentColor">O</text>
+  <!-- Vector u = (3,2) scaled: 30+3*50=180, 210-2*50=110 -->
+  <line x1="30" y1="210" x2="180" y2="110" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="185" y="105" font-size="12" fill="#3b82f6" font-weight="bold">u</text>
+  <!-- Vector v = (1,3) scaled: 30+1*50=80, 210-3*50=60 -->
+  <line x1="30" y1="210" x2="80" y2="60" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="68" y="54" font-size="12" fill="#ef4444" font-weight="bold">v</text>
+  <!-- u+v = (4,5) scaled: 30+4*50=230, 210-5*50 too big; use scale 40: 30+4*40=190, 210-5*40=10 too small. Use (2,1)+(1,2)=(3,3) scale 55: u=(2,1)->140,155; v=(1,2)->85,100; u+v=(3,3)->195,45 -->
+  <!-- Redo with u=(2,1), v=(1,2), scale=55 -->
+  <!-- u: 30+2*55=140, 210-1*55=155 -->
+  <!-- v: 30+1*55=85, 210-2*55=100 -->
+  <!-- u+v: 30+3*55=195, 210-3*55=45 -->
+  <!-- Parallelogram dashed sides -->
+  <line x1="140" y1="155" x2="195" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="85" y1="100" x2="195" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <!-- Redraw u and v with correct coords -->
+  <!-- Clear previous and use new scale, but SVG doesn't support clearing. Just layer on top -->
+  <!-- u=(2,1) -->
+  <line x1="30" y1="210" x2="140" y2="155" stroke="#3b82f6" stroke-width="2.2" marker-end="url(#arrowBlue2)"/>
+  <text x="100" y="178" font-size="12" fill="#3b82f6" font-weight="bold">u</text>
+  <!-- v=(1,2) -->
+  <line x1="30" y1="210" x2="85" y2="100" stroke="#ef4444" stroke-width="2.2" marker-end="url(#arrowRed2)"/>
+  <text x="42" y="148" font-size="12" fill="#ef4444" font-weight="bold">v</text>
+  <!-- u+v -->
+  <line x1="30" y1="210" x2="195" y2="45" stroke="#22c55e" stroke-width="2.2" marker-end="url(#arrowGreen)"/>
+  <text x="198" y="42" font-size="12" fill="#22c55e" font-weight="bold">u+v</text>
+  <!-- 2u label -->
+  <text x="50" y="228" font-size="11" fill="currentColor" opacity="0.7">Parallelogram law: u + v</text>
+  <!-- Defs -->
+  <defs>
+    <marker id="arrowBlue2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowRed2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>
+
 ### Span
 
 <div class="definition">
@@ -130,6 +185,38 @@ When a spanning set contains redundant vectors, we can simplify.
 ## 1.2 Subspaces
 
 Not all subsets of \(\mathbb{R}^n\) are closed under addition and scalar multiplication. Those that are enjoy a special structure.
+
+<svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <!-- 3D-ish axes -->
+  <line x1="150" y1="210" x2="270" y2="210" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="150" y1="210" x2="150" y2="30" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="150" y1="210" x2="60" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="274" y="214" font-size="11" fill="currentColor">x</text>
+  <text x="145" y="26" font-size="11" fill="currentColor">z</text>
+  <text x="53" y="168" font-size="11" fill="currentColor">y</text>
+  <!-- Subspace plane through origin — parallelogram in 3D projection -->
+  <polygon points="150,210 230,170 260,100 180,140" fill="#3b82f6" opacity="0.18" stroke="#3b82f6" stroke-width="1.4"/>
+  <text x="218" y="128" font-size="11" fill="#3b82f6" font-weight="bold">S</text>
+  <!-- Origin dot -->
+  <circle cx="150" cy="210" r="3.5" fill="currentColor"/>
+  <text x="136" y="226" font-size="10" fill="currentColor">O (∈ S)</text>
+  <!-- Vectors in S -->
+  <line x1="150" y1="210" x2="215" y2="178" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arr3d)"/>
+  <line x1="150" y1="210" x2="188" y2="152" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arr3dr)"/>
+  <text x="218" y="174" font-size="10" fill="#3b82f6">v</text>
+  <text x="191" y="148" font-size="10" fill="#ef4444">w</text>
+  <!-- Label: span of two linearly independent vectors -->
+  <text x="150" y="18" font-size="11" fill="currentColor" text-anchor="middle" font-weight="bold">Subspace S ⊂ ℝ³ (plane through origin)</text>
+  <text x="150" y="235" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">S = Span{v, w}, closed under + and scalar mult.</text>
+  <defs>
+    <marker id="arr3d" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr3dr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>
 
 <div class="definition">
 
@@ -255,6 +342,45 @@ Given vectors \(\vec{u}\) and \(\vec{v}\), we often want to decompose \(\vec{u}\
 
 One can verify that \(\operatorname{proj}_{\vec{v}} \vec{u} \cdot \operatorname{perp}_{\vec{v}} \vec{u} = 0\), confirming the decomposition is orthogonal. To project a vector onto a plane, compute the perpendicular of the projection onto the plane's normal vector.
 
+<svg viewBox="0 0 300 230" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arrProj" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- Origin -->
+  <circle cx="60" cy="180" r="3" fill="currentColor"/>
+  <text x="48" y="196" font-size="11" fill="currentColor">O</text>
+  <!-- v vector along x-axis direction: O=(60,180) to (240,180) -->
+  <line x1="60" y1="180" x2="245" y2="180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="248" y="184" font-size="12" fill="#3b82f6" font-weight="bold">v</text>
+  <!-- u vector: O to (140, 60) -->
+  <line x1="60" y1="180" x2="145" y2="65" stroke="#ef4444" stroke-width="2" marker-end="url(#arrRed)"/>
+  <text x="148" y="60" font-size="12" fill="#ef4444" font-weight="bold">u</text>
+  <!-- proj_v(u): foot at (145,180) from O -->
+  <!-- proj = (u·v/|v|²)v. u=(85,-115), v=(185,0). proj = (85*185/(185²))*185 = 85 in x. So foot=(60+85,180)=(145,180) -->
+  <line x1="60" y1="180" x2="145" y2="180" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <text x="90" y="198" font-size="11" fill="#22c55e" font-weight="bold">proj<tspan font-size="9" baseline-shift="sub">v</tspan>(u)</text>
+  <!-- perp: from foot to tip of u -->
+  <line x1="145" y1="180" x2="145" y2="65" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrProj)"/>
+  <text x="150" y="125" font-size="11" fill="currentColor">perp<tspan font-size="9" baseline-shift="sub">v</tspan>(u)</text>
+  <!-- Right angle mark at foot -->
+  <rect x="145" y="168" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+  <!-- Formula -->
+  <text x="150" y="18" font-size="11" fill="currentColor" text-anchor="middle" font-weight="bold">Projection onto v in ℝ²</text>
+  <text x="150" y="36" font-size="10" fill="currentColor" text-anchor="middle">proj_v(u) = (u·v / ‖v‖²) v</text>
+  <text x="150" y="220" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">u = proj_v(u) + perp_v(u),   perp_v(u) ⊥ v</text>
+</svg>
+
 # Chapter 2: Systems of Linear Equations
 
 ## 2.1 Systems of Linear Equations
@@ -298,6 +424,43 @@ One can verify that \(\operatorname{proj}_{\vec{v}} \vec{u} \cdot \operatorname{
 ## 2.2 Solving Systems of Linear Equations
 
 We encode a system compactly as a matrix and use row operations to solve it.
+
+<svg viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="210" y="18" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Row Reduction: Augmented Matrix → RREF</text>
+  <!-- Matrix 1: original -->
+  <rect x="10" y="28" width="100" height="80" rx="4" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+  <text x="60" y="44" font-size="10" fill="currentColor" text-anchor="middle" font-weight="bold">[A | b]</text>
+  <text x="32" y="62" font-size="11" fill="currentColor">2  1 | 5</text>
+  <text x="32" y="78" font-size="11" fill="currentColor">4  3 | 11</text>
+  <text x="32" y="94" font-size="11" fill="currentColor">0  2 | 4</text>
+  <!-- Arrow 1 -->
+  <line x1="114" y1="68" x2="148" y2="68" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="131" y="62" font-size="9" fill="#3b82f6" text-anchor="middle">R₂−2R₁</text>
+  <!-- Matrix 2: after first step -->
+  <rect x="152" y="28" width="100" height="80" rx="4" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+  <text x="202" y="62" font-size="11" fill="currentColor">2  1 | 5</text>
+  <text x="202" y="78" font-size="11" fill="#ef4444">0  1 | 1</text>
+  <text x="202" y="94" font-size="11" fill="currentColor">0  2 | 4</text>
+  <!-- Arrow 2 -->
+  <line x1="256" y1="68" x2="290" y2="68" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="273" y="62" font-size="9" fill="#3b82f6" text-anchor="middle">R₃−2R₂</text>
+  <!-- Matrix 3: RREF -->
+  <rect x="294" y="28" width="112" height="80" rx="4" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.7"/>
+  <text x="350" y="44" font-size="10" fill="#22c55e" text-anchor="middle" font-weight="bold">RREF</text>
+  <text x="310" y="62" font-size="11" fill="currentColor">1  0 | 2</text>
+  <text x="310" y="78" font-size="11" fill="currentColor">0  1 | 1</text>
+  <text x="310" y="94" font-size="11" fill="currentColor">0  0 | 0</text>
+  <!-- Pivot highlights -->
+  <rect x="294" y="51" width="14" height="16" rx="2" fill="#22c55e" opacity="0.2"/>
+  <rect x="317" y="67" width="14" height="16" rx="2" fill="#22c55e" opacity="0.2"/>
+  <text x="210" y="125" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">Each pivot (leading 1) is highlighted in green — rank = 2</text>
+</svg>
 
 <div class="definition">
 
@@ -615,6 +778,41 @@ The key consequence is that if \(\vec{x} = c_1\vec{v}_1 + \cdots + c_k\vec{v}_k\
 </div>
 
 The nullspace, columnspace, rowspace, and left nullspace are the <em>four fundamental subspaces</em> of a matrix.
+
+<svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <!-- Title -->
+  <text x="190" y="18" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Null(A) ⊂ ℝⁿ  vs  Col(A) ⊂ ℝᵐ</text>
+  <!-- Left: Null space in R^n -->
+  <ellipse cx="95" cy="110" rx="75" ry="70" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.5"/>
+  <text x="95" y="40" font-size="11" fill="currentColor" text-anchor="middle">ℝⁿ (domain)</text>
+  <!-- Null subspace -->
+  <ellipse cx="85" cy="120" rx="38" ry="30" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="85" y="118" font-size="11" fill="#3b82f6" text-anchor="middle" font-weight="bold">Null(A)</text>
+  <text x="85" y="132" font-size="10" fill="#3b82f6" text-anchor="middle">dim = n − r</text>
+  <!-- zero vector -->
+  <circle cx="85" cy="87" r="3" fill="currentColor"/>
+  <text x="90" y="83" font-size="9" fill="currentColor">0</text>
+  <!-- Arrow A: domain to codomain -->
+  <defs>
+    <marker id="arrMap" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <line x1="175" y1="105" x2="205" y2="105" stroke="currentColor" stroke-width="1.8" marker-end="url(#arrMap)"/>
+  <text x="190" y="98" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">A</text>
+  <!-- Right: Col space in R^m -->
+  <ellipse cx="285" cy="110" rx="75" ry="70" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.5"/>
+  <text x="285" y="40" font-size="11" fill="currentColor" text-anchor="middle">ℝᵐ (codomain)</text>
+  <!-- Col subspace -->
+  <ellipse cx="295" cy="115" rx="42" ry="35" fill="#ef4444" fill-opacity="0.18" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="295" y="112" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">Col(A)</text>
+  <text x="295" y="128" font-size="10" fill="#ef4444" text-anchor="middle">dim = r</text>
+  <!-- zero in codomain -->
+  <circle cx="260" cy="83" r="3" fill="currentColor"/>
+  <text x="265" y="79" font-size="9" fill="currentColor">0</text>
+  <!-- Rank label -->
+  <text x="190" y="185" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">rank(A) = r;   dim Null(A) + dim Col(A) = n  (Rank-Nullity)</text>
+</svg>
 
 <div class="theorem">
 

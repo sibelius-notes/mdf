@@ -98,6 +98,8 @@ A geodesic on a sphere of radius \(R\) is the curve of shortest length joining t
 
 By orienting the sphere so that one point is at the north pole and both points share the same meridian, the problem simplifies dramatically. Setting \(\theta(t) = \theta_B\) (constant), any smooth \(\phi\) connecting the two latitudes achieves the minimum length \(R\phi_B\). This is a **great circle** arc, confirming that geodesics on spheres are arcs of great circles.
 
+![Geodesic on sphere: great circle (blue) vs non-geodesic path (red dashed)](/pics/amath456/geodesic_sphere.png)
+
 ## 2.3 The Gateaux Derivative
 
 The analogue of the directional derivative in a linear space is the **Gateaux derivative**.
@@ -144,6 +146,34 @@ where \(f : \mathbb{R}^3 \to \mathbb{R}\). The function \(f\) is called the **La
 
 For stationary functions over the set \(D = \{y \in C^1[a,b] : y(a) = y_a,\, y(b) = y_b\}\), admissible variations must satisfy \(v(a) = v(b) = 0\).
 
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <!-- Axes -->
+  <line x1="40" y1="170" x2="470" y2="170" stroke="#888" stroke-width="1.2"/>
+  <line x1="40" y1="170" x2="40" y2="20" stroke="#888" stroke-width="1.2"/>
+  <text x="475" y="173" font-size="11" font-family="serif" fill="#888">x</text>
+  <text x="30" y="18" font-size="11" font-family="serif" fill="#888">y</text>
+  <!-- Boundary markers -->
+  <line x1="80" y1="170" x2="80" y2="40" stroke="#555" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <line x1="440" y1="170" x2="440" y2="40" stroke="#555" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="76" y="183" font-size="11" font-family="serif" fill="#555">a</text>
+  <text x="436" y="183" font-size="11" font-family="serif" fill="#555">b</text>
+  <!-- Optimal curve y*(x) -->
+  <path d="M 80,100 C 180,60 300,130 440,90" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="260" y="82" font-size="12" font-family="serif" fill="#3b82f6">$y^*(x)$ (optimal)</text>
+  <!-- Nearby curve y*+εη -->
+  <path d="M 80,100 C 180,40 300,150 440,90" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <text x="175" y="47" font-size="12" font-family="serif" fill="#ef4444">$y^*\!+\!\varepsilon\eta$</text>
+  <!-- Fixed endpoints markers -->
+  <circle cx="80" cy="100" r="5" fill="#22c55e"/>
+  <circle cx="440" cy="90" r="5" fill="#22c55e"/>
+  <text x="55" y="97" font-size="11" font-family="serif" fill="#22c55e">$(a,y_a)$</text>
+  <text x="445" y="88" font-size="11" font-family="serif" fill="#22c55e">$(b,y_b)$</text>
+  <!-- η arrows at a point -->
+  <text x="300" y="162" font-size="11" font-family="serif" fill="#ef4444">$\eta(a)=\eta(b)=0$</text>
+  <!-- J[y] label -->
+  <text x="140" y="180" font-size="12" font-family="serif" fill="#555">$J[y]=\int_a^b f(x,y,y')\,dx$</text>
+</svg>
+
 Integrating by parts on the second term and using the boundary conditions, the Gateaux derivative becomes
 
 \[\delta J(y; v) = \int_a^b \left[f_y[y(x)] - \frac{d}{dx}f_z[y(x)]\right]v(x)\,dx.\]
@@ -155,6 +185,8 @@ Integrating by parts on the second term and using the boundary conditions, the G
 The "if" direction (Proposition 3.2) follows immediately from the integration-by-parts computation above. The "only if" direction requires the **du Bois-Reymond Lemma** and Lemma 3.4, which together show that any function making \(\delta J(y; v) = 0\) for all admissible \(v\) must satisfy the Euler–Lagrange equation.
 
 **Lemma 3.3 (du Bois-Reymond).** If \(h \in C[a,b]\) and \(\int_a^b h(x)v'(x)\,dx = 0\) for all \(v \in A\), then \(h\) is constant on \([a,b]\).
+
+![Arc-length functional $J[y]=\int_0^1\sqrt{1+y'^2}\,dx$: several paths from $(0,0)$ to $(1,1)$ with their $J$ values (left); functional value vs perturbation amplitude $A$, minimized at $A=0$ (straight line, right).](/static/pics/amath456/euler_lagrange_functional.png)
 
 ## 3.2 Simplifications
 
@@ -202,6 +234,8 @@ Solving this via the substitution \(x(\theta) = \frac{k^2}{2}(1 - \cos \theta)\)
 
 This curve is a **cycloid** — the path traced by a point on the rim of a rolling circle. The constant \(k\) is determined by the endpoint \((a, b)\).
 
+![Brachistochrone: cycloid (blue) vs straight line (red dashed) — fastest descent path](/pics/amath456/brachistochrone.png)
+
 ---
 
 # Extensions and Generalizations
@@ -215,6 +249,30 @@ When not all boundary conditions are prescribed, the variational problem determi
 \[f_z[y(b)] = 0.\]
 
 **Example 4.3 (Steady-state temperature).** A bar of length \(L\) with one end fixed at \(y(0) = 100\) and the other free minimizes \(U(y) = k \int_0^L (y')^2\,dx\). The natural boundary condition \(f_z[y(L)] = 2ky'(L) = 0\) means no heat flux at the free end. Together with the Euler–Lagrange equation \(y'' = 0\), the unique solution is \(y(x) = 100\) (constant temperature).
+
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <!-- Axes -->
+  <line x1="40" y1="160" x2="440" y2="160" stroke="#888" stroke-width="1.2"/>
+  <line x1="40" y1="160" x2="40" y2="20" stroke="#888" stroke-width="1.2"/>
+  <text x="445" y="163" font-size="11" font-family="serif" fill="#888">x</text>
+  <text x="28" y="18" font-size="11" font-family="serif" fill="#888">y</text>
+  <!-- Fixed left endpoint -->
+  <line x1="80" y1="160" x2="80" y2="30" stroke="#555" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="76" y="173" font-size="11" font-family="serif" fill="#555">a</text>
+  <circle cx="80" cy="80" r="5" fill="#22c55e"/>
+  <text x="50" y="77" font-size="11" font-family="serif" fill="#22c55e">$(a,y_a)$ fixed</text>
+  <!-- Free right endpoint: y*(b) slides vertically -->
+  <line x1="400" y1="30" x2="400" y2="160" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="396" y="173" font-size="11" font-family="serif" fill="#ef4444">b (free)</text>
+  <!-- Optimal curve -->
+  <path d="M 80,80 C 200,50 300,100 400,120" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  <circle cx="400" cy="120" r="5" fill="#ef4444"/>
+  <text x="408" y="118" font-size="11" font-family="serif" fill="#ef4444">$y^*(b)$ free</text>
+  <!-- Horizontal tangent at free end = NBC -->
+  <line x1="370" y1="120" x2="435" y2="120" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="405" y="140" font-size="10" font-family="serif" fill="#f59e0b">slope = $f_z = 0$</text>
+  <text x="100" y="185" font-size="12" font-family="serif" fill="#555">NBC: $f_z[y^*(b)] = \partial f/\partial y'\big|_{x=b} = 0$</text>
+</svg>
 
 If neither endpoint is specified (Theorem 4.4), the natural boundary conditions become \(f_z[y(a)] = f_z[y(b)] = 0\), and the minimizing function is unique up to an additive constant when \(f\) is strictly pointwise convex.
 
@@ -484,6 +542,8 @@ The PMP provides *necessary* conditions. It was introduced to handle cases where
 
 ## 10.4 Bang-Bang Control
 
+![Bang-bang control for double integrator $\ddot{y}=u$, $|u|\leq1$: phase plane $(y_1,y_2)$ showing switching curve (red parabolas), $u=-1$ trajectories (blue arcs), $u=+1$ trajectories (green arcs), and target origin.](/static/pics/amath456/bangbang_phase.png)
+
 When \(H\) is linear in \(u\) and \(U = [M_1, M_2]\), the optimal control always takes the extreme values:
 
 \[u^o_k(t) = \begin{cases} M_1 & \text{if } p(t)^T B_k < 0, \\\ M_2 & \text{if } p(t)^T B_k > 0. \end{cases}\]
@@ -559,6 +619,8 @@ If \(P\) satisfies the **Algebraic Riccati Equation (ARE)**:
 and \(A - BR^{-1}B^T P\) is **Hurwitz** (all eigenvalues with negative real parts), then the cost reduces to \(J = x_0^T P x_0\) with the feedback law \(u = Kx\), and this is optimal among all stabilizing controllers.
 
 **Theorem 11.2.** Suppose the ARE admits a symmetric positive semi-definite solution \(P\) such that \(A - BR^{-1}B^T P\) is Hurwitz. Then the feedback law \(u = Kx = -R^{-1}B^T Px\) stabilizes the system and minimizes the LQR cost, with optimal cost \(J^* = x_0^T P x_0\).
+
+![Scalar LQR ($a=-0.5$, $R=1$): Riccati ODE solution $P(t)$ converging to steady-state $P^*$ for different $q$ values (left); optimal feedback gain $K^*=P^*$ and cost-to-go vs state weight $q$ (right).](/static/pics/amath456/lqr_riccati.png)
 
 The ARE is the equilibrium condition of the DRE: \(\dot{P} = 0\). Under appropriate conditions (stabilizability and detectability), the DRE solution \(P(t; T)\) converges as \(T \to \infty\) to the stabilizing solution of the ARE.
 

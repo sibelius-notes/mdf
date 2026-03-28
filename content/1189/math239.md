@@ -114,6 +114,40 @@ A key structural notion is the block decomposition of a string: a maximal run of
 
 For example, in the string \(110001101\), the blocks are \(11\), \(000\), \(11\), \(0\), \(1\), alternating between 1-blocks and 0-blocks. This block decomposition is fundamental: every non-empty binary string consists of alternating blocks of 0s and 1s, starting with either a 0-block or a 1-block. Identifying a binary string with its sequence of block lengths converts string-counting problems into composition-counting problems, connecting the two threads of Chapter 1.
 
+<svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <text x="210" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Binary String Block Decomposition: 1 1 0 0 0 1 1 0 1</text>
+  <!-- Character boxes -->
+  <!-- 1 1 0 0 0 1 1 0 1 = 9 chars, each box 38px wide starting at x=20 -->
+  <!-- Block labels -->
+  <!-- Block 1: chars 0-1 (11) -->
+  <rect x="20" y="30" width="76" height="36" rx="3" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="32" y="52" font-size="16" fill="#3b82f6" font-weight="bold">1</text>
+  <text x="70" y="52" font-size="16" fill="#3b82f6" font-weight="bold">1</text>
+  <text x="58" y="22" font-size="9" fill="#3b82f6" text-anchor="middle">1-block(2)</text>
+  <!-- Block 2: chars 2-4 (000) -->
+  <rect x="96" y="30" width="114" height="36" rx="3" fill="#ef4444" fill-opacity="0.18" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="108" y="52" font-size="16" fill="#ef4444" font-weight="bold">0</text>
+  <text x="146" y="52" font-size="16" fill="#ef4444" font-weight="bold">0</text>
+  <text x="184" y="52" font-size="16" fill="#ef4444" font-weight="bold">0</text>
+  <text x="153" y="22" font-size="9" fill="#ef4444" text-anchor="middle">0-block(3)</text>
+  <!-- Block 3: chars 5-6 (11) -->
+  <rect x="210" y="30" width="76" height="36" rx="3" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="222" y="52" font-size="16" fill="#3b82f6" font-weight="bold">1</text>
+  <text x="260" y="52" font-size="16" fill="#3b82f6" font-weight="bold">1</text>
+  <text x="248" y="22" font-size="9" fill="#3b82f6" text-anchor="middle">1-block(2)</text>
+  <!-- Block 4: char 7 (0) -->
+  <rect x="286" y="30" width="38" height="36" rx="3" fill="#ef4444" fill-opacity="0.18" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="298" y="52" font-size="16" fill="#ef4444" font-weight="bold">0</text>
+  <text x="305" y="22" font-size="9" fill="#ef4444" text-anchor="middle">0(1)</text>
+  <!-- Block 5: char 8 (1) -->
+  <rect x="324" y="30" width="38" height="36" rx="3" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="336" y="52" font-size="16" fill="#3b82f6" font-weight="bold">1</text>
+  <text x="343" y="22" font-size="9" fill="#3b82f6" text-anchor="middle">1(1)</text>
+  <!-- Arrows / decomposition legend -->
+  <text x="210" y="90" font-size="10" fill="currentColor" text-anchor="middle">Blocks alternate: (1-block, 0-block, …). Block lengths give a composition of the length.</text>
+  <text x="210" y="108" font-size="10" fill="currentColor" text-anchor="middle">Length = 2 + 3 + 2 + 1 + 1 = 9</text>
+</svg>
+
 <div class="definition">
 
 <strong>Definition (Concatenation).</strong> If \(s\) and \(t\) are binary strings, their <em>concatenation</em> \(st\) is the string formed by appending \(t\) to the end of \(s\).
@@ -479,6 +513,50 @@ A \(k\)-regular graph on \(n\) vertices has exactly \(\frac{nk}{2}\) edges (by t
 
 A graph whose vertices can be partitioned into two sets \(A\) and \(B\) so that every edge joins a vertex in \(A\) to a vertex in \(B\) is called a **bipartite graph** with **bipartition** \((A,B)\). The two parts \(A\) and \(B\) are the *sides* of the bipartition. No edge is allowed within \(A\) or within \(B\). Bipartite graphs model many natural situations — for instance, a job-assignment problem in which one side represents workers and the other represents tasks, with an edge meaning "this worker can do this task."
 
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="bpArr" markerWidth="0" markerHeight="0" refX="0" refY="0" orient="auto"/>
+  </defs>
+  <text x="160" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Bipartite Graph with Perfect Matching</text>
+  <!-- Side A label -->
+  <text x="70" y="36" font-size="11" fill="#3b82f6" text-anchor="middle" font-weight="bold">A</text>
+  <!-- Side B label -->
+  <text x="250" y="36" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">B</text>
+  <!-- A vertices at x=70, y = 55,95,135,175 -->
+  <!-- B vertices at x=250, y = 55,95,135,175 -->
+  <!-- All edges (non-matching): thin gray -->
+  <line x1="70" y1="55" x2="250" y2="95" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="55" x2="250" y2="135" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="95" x2="250" y2="55" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="95" x2="250" y2="175" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="135" x2="250" y2="95" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="175" x2="250" y2="135" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <!-- Perfect matching edges: thick green -->
+  <line x1="70" y1="55" x2="250" y2="55" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="70" y1="95" x2="250" y2="135" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="70" y1="135" x2="250" y2="175" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="70" y1="175" x2="250" y2="95" stroke="#22c55e" stroke-width="2.5"/>
+  <!-- A vertices -->
+  <circle cx="70" cy="55" r="10" fill="#3b82f6" fill-opacity="0.8"/>
+  <circle cx="70" cy="95" r="10" fill="#3b82f6" fill-opacity="0.8"/>
+  <circle cx="70" cy="135" r="10" fill="#3b82f6" fill-opacity="0.8"/>
+  <circle cx="70" cy="175" r="10" fill="#3b82f6" fill-opacity="0.8"/>
+  <text x="70" y="59" font-size="9" fill="white" text-anchor="middle">a₁</text>
+  <text x="70" y="99" font-size="9" fill="white" text-anchor="middle">a₂</text>
+  <text x="70" y="139" font-size="9" fill="white" text-anchor="middle">a₃</text>
+  <text x="70" y="179" font-size="9" fill="white" text-anchor="middle">a₄</text>
+  <!-- B vertices -->
+  <circle cx="250" cy="55" r="10" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="250" cy="95" r="10" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="250" cy="135" r="10" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="250" cy="175" r="10" fill="#ef4444" fill-opacity="0.8"/>
+  <text x="250" y="59" font-size="9" fill="white" text-anchor="middle">b₁</text>
+  <text x="250" y="99" font-size="9" fill="white" text-anchor="middle">b₂</text>
+  <text x="250" y="139" font-size="9" fill="white" text-anchor="middle">b₃</text>
+  <text x="250" y="179" font-size="9" fill="white" text-anchor="middle">b₄</text>
+  <text x="160" y="195" font-size="9" fill="#22c55e" text-anchor="middle">Green edges: perfect matching (saturates all vertices)</text>
+</svg>
+
 The **complete bipartite graph** \(K_{m,n}\) has all vertices in \(A\) adjacent to all vertices in \(B\), with \(|A|=m\), \(|B|=n\). It has \(mn\) edges. Each vertex in \(A\) has degree \(n\) and each vertex in \(B\) has degree \(m\).
 
 A particularly beautiful family of bipartite graphs is the hypercube family:
@@ -787,6 +865,32 @@ The proof uses a **longest-path argument**: let \(P = v_1 v_2 \cdots v_k\) be a 
 Consider \(v_1\). Its only neighbour on \(P\) is \(v_2\). Could \(v_1\) have a neighbour \(u\) outside \(P\)? No — because then \(u, v_1, v_2, \ldots, v_k\) would be a path longer than \(P\), a contradiction. Could \(v_1\) have a neighbour \(v_i\) with \(i > 2\)? No — because then \(v_1, v_2, \ldots, v_i, v_1\) would be a cycle, contradicting the tree property. So \(v_1\) has degree exactly 1, i.e., it is a leaf. By an identical argument, \(v_k\) is a leaf. Since \(k \ge 2\), \(v_1 \ne v_k\), so we have found two distinct leaves. \(\square\)
 
 The proof uses the two properties of trees — acyclicity and connectivity — in an elegant interplay. The longest-path argument is a recurring technique in graph theory.
+
+<svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="treeArr" markerWidth="0" markerHeight="0" refX="0" refY="0" orient="auto"/>
+  </defs>
+  <text x="140" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Labeled Tree (5 vertices, 4 edges)</text>
+  <!-- Vertices: root=1 at top center, children 2,3 at level 2, 4,5 as leaves -->
+  <!-- 1 at (140, 45), 2 at (80, 110), 3 at (200, 110), 4 at (50, 175), 5 at (115, 175) -->
+  <line x1="140" y1="45" x2="80" y2="110" stroke="currentColor" stroke-width="2"/>
+  <line x1="140" y1="45" x2="200" y2="110" stroke="currentColor" stroke-width="2"/>
+  <line x1="80" y1="110" x2="50" y2="175" stroke="currentColor" stroke-width="2"/>
+  <line x1="80" y1="110" x2="115" y2="175" stroke="currentColor" stroke-width="2"/>
+  <!-- Vertex circles -->
+  <circle cx="140" cy="45" r="14" fill="#3b82f6" fill-opacity="0.85"/>
+  <text x="140" y="50" font-size="11" fill="white" text-anchor="middle" font-weight="bold">1</text>
+  <circle cx="80" cy="110" r="14" fill="#3b82f6" fill-opacity="0.85"/>
+  <text x="80" y="115" font-size="11" fill="white" text-anchor="middle" font-weight="bold">2</text>
+  <circle cx="200" cy="110" r="14" fill="#3b82f6" fill-opacity="0.85"/>
+  <text x="200" y="115" font-size="11" fill="white" text-anchor="middle" font-weight="bold">3</text>
+  <circle cx="50" cy="175" r="14" fill="#22c55e" fill-opacity="0.85"/>
+  <text x="50" y="180" font-size="11" fill="white" text-anchor="middle" font-weight="bold">4</text>
+  <circle cx="115" cy="175" r="14" fill="#22c55e" fill-opacity="0.85"/>
+  <text x="115" y="180" font-size="11" fill="white" text-anchor="middle" font-weight="bold">5</text>
+  <!-- Leaf labels -->
+  <text x="140" y="196" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">Leaves: 3, 4, 5 (degree 1).  |V|=5, |E|=4=|V|−1.</text>
+</svg>
 
 ### 5.2 Spanning Trees
 

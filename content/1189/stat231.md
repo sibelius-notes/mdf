@@ -142,6 +142,8 @@ The m.l.e. is usually found by solving \(\frac{d}{d\theta}\ell(\theta) = 0\) and
 
 For independent experiments, likelihoods combine as products: \(L(\theta) = L_1(\theta) \cdot L_2(\theta)\).
 
+![Log-likelihood function with maximum marked](/pics/stat231/mle_loglikelihood.png)
+
 ## 2.3 Likelihood Functions for Continuous Distributions
 
 <div class="definition">
@@ -167,7 +169,13 @@ This property allows us to estimate any function of unknown parameters directly 
 
 ## 2.6 Checking the Model
 
-Methods for assessing model fit include: (1) **comparing observed and expected frequencies**, (2) **superimposing the fitted p.d.f. on a relative frequency histogram**, (3) **comparing the empirical CDF with the fitted CDF**, and (4) **Gaussian qqplots** where the data should fall approximately on a straight line if the Gaussian model is appropriate. In a qqplot, U-shaped departures indicate positive skewness, S-shaped departures indicate lighter tails than the Gaussian, and points far from the line at the extremes are expected due to the rapid change of Gaussian quantiles in the tails.
+Methods for assessing model fit include: (1) **comparing observed and expected frequencies**, (2) **superimposing the fitted p.d.f. on a relative frequency histogram**, (3) **comparing the empirical CDF with the fitted CDF**, and (4) **Gaussian qqplots** where the data should fall approximately on a straight line if the Gaussian model is appropriate.
+
+![Histogram with kernel density estimate](/pics/stat231/histogram_kde.png)
+
+![Normal Q-Q plot for skewed data](/pics/stat231/qqplot_normal.png)
+
+In a qqplot, U-shaped departures indicate positive skewness, S-shaped departures indicate lighter tails than the Gaussian, and points far from the line at the extremes are expected due to the rapid change of Gaussian quantiles in the tails.
 
 ---
 
@@ -417,6 +425,8 @@ A \(100p\%\) confidence interval for \(\sigma^2\) is:
 \[\left[\frac{(n-1)s^2}{b}, \frac{(n-1)s^2}{a}\right]\]
 where \(a\) and \(b\) satisfy \(P(U \le a) = (1-p)/2\) and \(P(U \le b) = (1+p)/2\) with \(U \sim \chi^2(n-1)\). Taking square roots gives a CI for \(\sigma\).
 
+![Confidence interval: normal distribution with rejection regions for two-sided test](/pics/stat231/ci_rejection_regions.png)
+
 ---
 
 # Chapter 5: Hypothesis Testing
@@ -530,6 +540,8 @@ For the intercept \(\alpha\):
 
 **Model checking** uses residual plots: scatterplot of standardized residuals \(\hat{r}_i = (y_i - \hat{\mu}_i)/s_e\) vs. \(x_i\) and vs. \(\hat{\mu}_i\) (should show no pattern), and a qqplot of standardized residuals (should be approximately linear).
 
+![Regression: scatter plot with fitted line and residuals](/pics/stat231/regression_residuals.png)
+
 ## 6.3 Comparing the Means of Two Populations
 
 ### Equal Variances
@@ -583,6 +595,8 @@ For the general model \(Y_i \sim G(\mu_i, \sigma)\) with \(\mu_i = \sum_{j=1}^k 
 The pivotal quantity for \(\beta_j\) is:
 \[\frac{\tilde{\beta}_j - \beta_j}{S_e\sqrt{c_j}} \sim t(n-k)\]
 where \(c_j\) is the \(j\)th diagonal element of \((X^TX)^{-1}\). A \(100p\%\) CI for \(\beta_j\) takes the form \(\hat{\beta}_j \pm a \cdot s_e\sqrt{c_j}\).
+
+![Power curve: power vs. μ_alternative for one-sided test](/pics/stat231/power_curve.png)
 
 ---
 

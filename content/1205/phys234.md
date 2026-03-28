@@ -52,6 +52,42 @@ V_0 = \frac{hf - W}{e}
 
 where \(e\) is the electron charge. This linear relationship between stopping voltage and frequency was confirmed experimentally by Millikan in 1916, providing one of the earliest quantitative verifications of the quantum hypothesis.
 
+<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="pe-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+    <marker id="pe-arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="pe-arrow-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Metal surface -->
+  <rect x="30" y="110" width="200" height="70" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="130" y="150" text-anchor="middle" font-size="13" fill="currentColor">Metal (work fn φ)</text>
+  <!-- Incident photon hf -->
+  <line x1="80" y1="20" x2="80" y2="105" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#pe-arrow-blue)" stroke-dasharray="8,4"/>
+  <text x="88" y="55" font-size="12" fill="#3b82f6">photon hf</text>
+  <!-- Ejected electron -->
+  <line x1="95" y1="108" x2="195" y2="40" stroke="#ef4444" stroke-width="2.5" marker-end="url(#pe-arrow-red)"/>
+  <text x="200" y="35" font-size="12" fill="#ef4444">e⁻</text>
+  <!-- KE label -->
+  <text x="205" y="55" font-size="12" fill="#ef4444">KE = hf − φ</text>
+  <!-- Collector plate -->
+  <rect x="340" y="30" width="18" height="150" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="362" y="115" font-size="12" fill="currentColor">Collector</text>
+  <!-- Current arrow -->
+  <line x1="310" y1="100" x2="342" y2="100" stroke="currentColor" stroke-width="1.8" marker-end="url(#pe-arrow)"/>
+  <text x="290" y="92" font-size="11" fill="currentColor">I</text>
+  <!-- Stopping voltage label -->
+  <text x="370" y="170" font-size="11" fill="currentColor">−V₀</text>
+  <line x1="358" y1="165" x2="358" y2="155" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Energy equation -->
+  <text x="30" y="195" font-size="12" fill="currentColor">hf = φ + KE_max ,   KE_max = eV₀</text>
+</svg>
+
 ---
 
 ## The Compton Effect
@@ -80,6 +116,41 @@ Applying conservation of relativistic energy and momentum to the photon-electron
 
 where \(\lambda_C = h/(m_e c) \approx 2.43 \times 10^{-12}\ \mathrm{m}\) is the **Compton wavelength** of the electron. The shift is maximal for backscattering (\(\theta = \pi\), giving \(\Delta\lambda = 2\lambda_C\)) and zero for forward scattering. The Compton effect is negligible at optical wavelengths (where \(\Delta\lambda \ll \lambda\)) but dramatic in the X-ray regime, providing irrefutable evidence that photons carry momentum exactly as Einstein's quantum picture demands.
 
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="ca-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+    <marker id="ca-arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="ca-arr-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+    <marker id="ca-arr-grn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- Incident photon (λ) -->
+  <line x1="20" y1="100" x2="190" y2="100" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#ca-arr-blue)" stroke-dasharray="7,4"/>
+  <text x="80" y="90" font-size="12" fill="#3b82f6">γ (λ, p = h/λ)</text>
+  <!-- Electron at rest -->
+  <circle cx="210" cy="100" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="207" y="104" font-size="11" fill="currentColor">e⁻</text>
+  <text x="195" y="130" font-size="11" fill="currentColor">at rest</text>
+  <!-- Scattered photon at angle θ -->
+  <line x1="222" y1="88" x2="360" y2="30" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#ca-arr-blue)" stroke-dasharray="7,4"/>
+  <text x="298" y="30" font-size="12" fill="#3b82f6">γ′ (λ′ &gt; λ)</text>
+  <!-- Angle arc -->
+  <path d="M 240 100 A 30 30 0 0 0 232 78" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  <text x="248" y="88" font-size="11" fill="currentColor">θ</text>
+  <!-- Recoil electron -->
+  <line x1="222" y1="112" x2="360" y2="175" stroke="#ef4444" stroke-width="2.5" marker-end="url(#ca-arr-red)"/>
+  <text x="365" y="180" font-size="12" fill="#ef4444">e⁻ (recoil)</text>
+  <!-- Compton formula -->
+  <text x="20" y="190" font-size="12" fill="currentColor">Δλ = (h/m_e c)(1 − cos θ) = λ_C(1 − cos θ)</text>
+</svg>
+
 ---
 
 ## The De Broglie Hypothesis and the Davisson-Germer Experiment
@@ -103,6 +174,8 @@ n\lambda = 2d\sin\phi
 \]
 
 where \(\phi\) is the angle of incidence and \(n\) is a positive integer. Davisson and Germer observed sharp diffraction maxima at exactly the angles predicted by the Bragg condition using de Broglie's wavelength for the electrons. This was the definitive proof that particles exhibit wave-like properties such as diffraction and interference — and it earned de Broglie the 1929 Nobel Prize in Physics.
+
+![Davisson-Germer diffraction peak at 50° for electrons on nickel crystal](/pics/phys234/davisson_germer.png)
 
 The stage was now set: waves behave like particles (photoelectric, Compton), and particles behave like waves (Davisson-Germer, double slit). The task of quantum mechanics is to provide a unified framework encompassing both.
 
@@ -145,6 +218,48 @@ S_z = \pm\frac{\hbar}{2}
 \]
 
 Particles with \(|S_z| = \hbar/2\) are called **spin-\(\frac{1}{2}\)** particles.
+
+<svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="sg-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+    <marker id="sg-arr-up" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="sg-arr-dn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Oven source -->
+  <rect x="10" y="72" width="50" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="35" y="95" text-anchor="middle" font-size="11" fill="currentColor">Ag oven</text>
+  <!-- Beam entering magnet -->
+  <line x1="60" y1="90" x2="140" y2="90" stroke="currentColor" stroke-width="2" marker-end="url(#sg-arr)"/>
+  <!-- Inhomogeneous magnet (trapezoid shaped pole pieces) -->
+  <polygon points="145,50 260,60 260,82 145,82" fill="none" stroke="currentColor" stroke-width="2"/>
+  <polygon points="145,98 260,98 260,120 145,130" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="200" y="75" text-anchor="middle" font-size="11" fill="currentColor">N</text>
+  <text x="200" y="115" text-anchor="middle" font-size="11" fill="currentColor">S</text>
+  <text x="200" y="148" text-anchor="middle" font-size="10" fill="currentColor">∂B/∂z ≠ 0</text>
+  <!-- Gradient arrow -->
+  <line x1="275" y1="70" x2="275" y2="110" stroke="currentColor" stroke-width="1.2" marker-end="url(#sg-arr)"/>
+  <text x="280" y="92" font-size="10" fill="currentColor">z</text>
+  <!-- Beam splitting into 2 -->
+  <line x1="260" y1="90" x2="320" y2="60" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#sg-arr-up)"/>
+  <line x1="260" y1="90" x2="320" y2="120" stroke="#ef4444" stroke-width="2.5" marker-end="url(#sg-arr-dn)"/>
+  <!-- Screen -->
+  <rect x="330" y="30" width="14" height="130" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="348" y="30" font-size="11" fill="currentColor">Screen</text>
+  <!-- Two discrete spots -->
+  <ellipse cx="337" cy="58" rx="5" ry="9" fill="#3b82f6" opacity="0.8"/>
+  <ellipse cx="337" cy="122" rx="5" ry="9" fill="#ef4444" opacity="0.8"/>
+  <!-- Labels -->
+  <text x="360" y="62" font-size="12" fill="#3b82f6">S_z = +ℏ/2</text>
+  <text x="360" y="126" font-size="12" fill="#ef4444">S_z = −ℏ/2</text>
+  <!-- classical smear reference -->
+  <text x="348" y="175" font-size="10" fill="currentColor">(Classical prediction: continuous smear)</text>
+</svg>
 
 ### The Quantum State Vector (Postulate 1)
 
@@ -195,6 +310,8 @@ For slit separation \(h\) and screen distance \(l\):
 \[
 r_1 - r_2 \approx \frac{hx}{l}, \qquad I(P) = \left(\frac{A}{2}\right)^2\left[1 + \cos\!\left(\frac{2\pi h}{\lambda l}x\right)\right]
 \]
+
+![Double-slit interference: intensity vs. position on screen](/pics/phys234/double_slit.png)
 
 ### Single-Particle Interference and Probability Amplitudes
 
@@ -606,14 +723,61 @@ In essence, frequent measurement interrupts the coherent buildup of the \(|{-}\r
 
 ### Pure and Mixed Ensembles
 
-So far we have described particles in a definite quantum state \(|\psi\rangle\) — a **pure state**. However, a statistical mixture of different quantum states (a **mixed state** or mixed ensemble) cannot be described by a single ket.
+So far we have described particles in a definite quantum state \(|\psi\rangle\) — a **pure state**. However, a statistical mixture of different quantum states (a **mixed state** or mixed ensemble) cannot be described by a single ket. This situation arises whenever we lack complete information about which quantum state a particle is in — for example, the silver atoms exiting an oven in the Stern-Gerlach experiment are in random spin orientations with no phase coherence between them.
 
-The **density operator** (density matrix) \(\rho\) provides a unified description:
+The **density operator** (or **density matrix**) \(\hat{\rho}\) provides a unified description that handles both pure and mixed situations:
 
-- **Pure state:** \(\rho = |\psi\rangle\langle\psi|\), with \(\rho^2 = \rho\) and \(\mathrm{Tr}(\rho^2) = 1\).
-- **Mixed state:** \(\rho = \sum_k p_k|\psi_k\rangle\langle\psi_k|\), with \(\mathrm{Tr}(\rho^2) < 1\).
+\[
+\hat{\rho} = \begin{cases} |\psi\rangle\langle\psi| & \text{pure state} \\[4pt] \displaystyle\sum_k p_k|\psi_k\rangle\langle\psi_k| & \text{mixed state, with } \sum_k p_k = 1 \end{cases}
+\]
 
-The expectation value of any observable is \(\langle\hat{A}\rangle = \mathrm{Tr}(\rho\hat{A})\). The atoms exiting an oven in the S-G experiment constitute a mixed ensemble, since they are in random spin orientations.
+The density operator is always **Hermitian** (\(\hat{\rho} = \hat{\rho}^\dagger\)), which can be verified directly: \(\rho_{ij}^* = \langle j|\hat{\rho}|i\rangle^* = \langle i|\hat{\rho}^\dagger|j\rangle = \rho_{ji}\).
+
+### Formal Properties
+
+<div class="theorem"><strong>Statement 1 — Unit Trace:</strong> \(\mathrm{Tr}(\hat{\rho}) = 1\) for any pure or mixed ensemble.
+
+<em>Proof (pure case):</em> Let \(\langle\psi|\psi\rangle = 1\) and \(\hat{\rho} = |\psi\rangle\langle\psi|\). Then
+\[\mathrm{Tr}(\hat{\rho}) = \sum_i \langle i|\hat{\rho}|i\rangle = \sum_i \langle i|\psi\rangle\langle\psi|i\rangle = \sum_i \langle\psi|i\rangle\langle i|\psi\rangle = \langle\psi|\psi\rangle = 1.\]
+The mixed case follows immediately since \(\mathrm{Tr}(\hat{\rho}) = \sum_k p_k \mathrm{Tr}(|\psi_k\rangle\langle\psi_k|) = \sum_k p_k = 1\).</div>
+
+<div class="theorem"><strong>Statement 2 — Idempotent for Pure States:</strong> \(\hat{\rho}^2 = \hat{\rho}\) if and only if \(\hat{\rho}\) is a pure state.
+
+<em>Proof:</em> \(\hat{\rho}^2 = |\psi\rangle\langle\psi|\psi\rangle\langle\psi| = |\psi\rangle\langle\psi| = \hat{\rho}\). For mixed states, \(\mathrm{Tr}(\hat{\rho}^2) = \sum_k p_k^2 < \sum_k p_k = 1\), so \(\hat{\rho}^2 \neq \hat{\rho}\).</div>
+
+<div class="theorem"><strong>Statement 3 — Born Rule via Trace:</strong> The probability of obtaining outcome \(|\phi\rangle\) when measuring a system in state \(\hat{\rho}\) is
+\[P(\phi) = |\langle\phi|\psi\rangle|^2 = \mathrm{Tr}(\hat{P}_\phi\,\hat{\rho})\]
+where \(\hat{P}_\phi = |\phi\rangle\langle\phi|\) is the projection operator.</div>
+
+<div class="theorem"><strong>Statement 4 — Expectation Value:</strong> For any observable \(\hat{A}\),
+\[\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \mathrm{Tr}(\hat{A}\,\hat{\rho}).\]
+<em>Proof:</em> \(\langle\psi|\hat{A}|\psi\rangle = \sum_i \langle\psi|\hat{A}|i\rangle\langle i|\psi\rangle = \sum_i \langle i|\psi\rangle\langle\psi|\hat{A}|i\rangle = \mathrm{Tr}(\hat{\rho}\,\hat{A})\).</div>
+
+<div class="theorem"><strong>Statement 5 — Mixed State Test:</strong> \(\mathrm{Tr}(\hat{\rho}^2) < 1\) for a mixed ensemble. This is a definitive criterion: given any density matrix, compute \(\mathrm{Tr}(\hat{\rho}^2)\) — if it equals 1 the state is pure; if less than 1 it is mixed.</div>
+
+### Worked Examples
+
+**Example 1 — Pure spin-up state.** For \(\hat{\rho}_+ = |{+}\rangle\langle{+}|\):
+\[
+\hat{\rho}_+ = \begin{pmatrix}1\\0\end{pmatrix}\begin{pmatrix}1&0\end{pmatrix} = \begin{pmatrix}1&0\\0&0\end{pmatrix}
+\]
+Expectation of \(S_z\): \(\langle S_z\rangle = \mathrm{Tr}\!\left(S_z\,\hat{\rho}_+\right) = \mathrm{Tr}\!\left(\frac{\hbar}{2}\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0&0\end{pmatrix}\right) = \mathrm{Tr}\!\left(\frac{\hbar}{2}\begin{pmatrix}1&0\\0&0\end{pmatrix}\right) = \frac{\hbar}{2}.\)
+
+Expectation of \(S_x\): \(\langle S_x\rangle = \mathrm{Tr}(S_x\,\hat{\rho}_+) = 0\). (Verify: off-diagonal \(S_x\) paired with diagonal \(\hat{\rho}_+\) gives zero trace.)
+
+**Example 2 — Maximally mixed ensemble.** Suppose a beam contains equal proportions of \(|{+}\rangle\) and \(|{-}\rangle\) atoms with no phase coherence:
+\[
+\hat{\rho}_{\mathrm{mix}} = \frac{1}{2}|{+}\rangle\langle{+}| + \frac{1}{2}|{-}\rangle\langle{-}| = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{\mathbf{1}}{2}
+\]
+Check: \(\mathrm{Tr}(\hat{\rho}^2) = \mathrm{Tr}\!\left(\frac{1}{4}\mathbf{1}\right) = \frac{1}{2} < 1\) — confirming this is mixed. The expectation value \(\langle S_{\hat{n}}\rangle = \mathrm{Tr}(S_{\hat{n}}\,\hat{\rho}_{\mathrm{mix}}) = 0\) for **any** direction \(\hat{n}\). This is the defining property of a maximally mixed ensemble: no measurement in any direction reveals a preferred orientation.
+
+**Example 3 — A partially polarized ensemble.** If \(3/4\) of atoms are spin-up and \(1/4\) spin-down:
+\[
+\hat{\rho} = \frac{3}{4}\begin{pmatrix}1&0\\0&0\end{pmatrix} + \frac{1}{4}\begin{pmatrix}0&0\\0&1\end{pmatrix} = \begin{pmatrix}3/4&0\\0&1/4\end{pmatrix}
+\]
+\(\mathrm{Tr}(\hat{\rho}^2) = (3/4)^2 + (1/4)^2 = 10/16 = 5/8 < 1\) — mixed. \(\langle S_z\rangle = \frac{\hbar}{2}\!\left(\frac{3}{4} - \frac{1}{4}\right) = \frac{\hbar}{4}.\)
+
+The density matrix is the correct language for describing any real experimental ensemble, including those prepared by partial measurements, thermal equilibration, or entanglement with an environment whose degrees of freedom are traced out.
 
 ---
 
@@ -657,13 +821,109 @@ For a two-level superposition \(|\psi(0)\rangle = c_1|E_1\rangle + c_2|E_2\rangl
 
 with \(\omega_n = E_n/\hbar\). This oscillation frequency \(\omega_{21} = (E_2 - E_1)/\hbar\) is the **Bohr frequency** corresponding to the energy difference between the levels.
 
+<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="el-arr-up" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="el-arr-dn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Ground state E1 -->
+  <line x1="40" y1="170" x2="200" y2="170" stroke="currentColor" stroke-width="2.5"/>
+  <text x="210" y="175" font-size="13" fill="currentColor">E₁ (ground)</text>
+  <!-- Excited state E2 -->
+  <line x1="40" y1="60" x2="200" y2="60" stroke="currentColor" stroke-width="2.5"/>
+  <text x="210" y="65" font-size="13" fill="currentColor">E₂ (excited)</text>
+  <!-- Higher level E3 -->
+  <line x1="40" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="1.8" stroke-dasharray="6,3"/>
+  <text x="210" y="25" font-size="12" fill="currentColor">E₃</text>
+  <!-- Absorption arrow (up, blue) -->
+  <line x1="90" y1="165" x2="90" y2="65" stroke="#3b82f6" stroke-width="2.2" marker-end="url(#el-arr-up)"/>
+  <text x="30" y="118" font-size="11" fill="#3b82f6">absorb</text>
+  <text x="28" y="130" font-size="11" fill="#3b82f6">hf = ΔE</text>
+  <!-- Emission arrow (down, red) -->
+  <line x1="150" y1="65" x2="150" y2="165" stroke="#ef4444" stroke-width="2.2" marker-end="url(#el-arr-dn)"/>
+  <text x="158" y="118" font-size="11" fill="#ef4444">emit</text>
+  <text x="155" y="130" font-size="11" fill="#ef4444">photon</text>
+  <!-- Photon wavy line leaving downward -->
+  <path d="M 150 170 Q 160 180 170 170 Q 180 160 190 170" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E label on left -->
+  <text x="10" y="15" font-size="12" fill="currentColor">E</text>
+  <line x1="18" y1="18" x2="18" y2="205" stroke="currentColor" stroke-width="1.5" marker-end="url(#el-arr-up)"/>
+  <!-- Caption -->
+  <text x="40" y="205" font-size="11" fill="currentColor">Photon absorption &amp; emission between levels</text>
+</svg>
+
 ---
 
 ## The Ammonia Molecule
 
-The ammonia molecule NH\(_3\) provides a beautiful example of quantum dynamics arising from a superposition of energy eigenstates. The nitrogen atom can sit on either side of the plane of hydrogen atoms, giving two classical configurations \(|1\rangle\) and \(|2\rangle\).
+The ammonia molecule NH\(_3\) is the quantum mechanics course's flagship two-level system — concrete enough to visualize, rich enough to demonstrate everything the formalism can do. The nitrogen atom can sit at the apex above or below the plane of the three hydrogen atoms, giving two geometrically distinct configurations which we label \(|1\rangle\) (N above the plane) and \(|2\rangle\) (N below). By the symmetry of the molecule, these two configurations have identical energy \(E_0\) in the absence of any coupling.
 
-The Hamiltonian has off-diagonal matrix elements coupling the two configurations, representing quantum tunneling through the potential barrier. Diagonalizing gives symmetric and antisymmetric energy eigenstates with energies \(E_1 = E_0 - A\) and \(E_2 = E_0 + A\). A molecule starting in \(|1\rangle\) oscillates between \(|1\rangle\) and \(|2\rangle\) at frequency \(2A/\hbar\) — this is the inversion frequency of ammonia, which is the basis of the first maser.
+### The Two-State Hamiltonian
+
+Here is the key quantum mechanical insight: the nitrogen atom's wavefunction does not vanish at the H-plane. It "leaks" through the barrier by quantum tunneling, so the system is not genuinely confined to one side. The correct eigenstates of the Hamiltonian are therefore not \(|1\rangle\) or \(|2\rangle\) individually, but rather their symmetric and antisymmetric combinations.
+
+In the \(\{|1\rangle, |2\rangle\}\) basis, the Hamiltonian matrix is:
+
+\[
+H = \begin{pmatrix} \langle 1|H|1\rangle & \langle 1|H|2\rangle \\ \langle 2|H|1\rangle & \langle 2|H|2\rangle \end{pmatrix} = \begin{pmatrix} E_0 & -A \\ -A & E_0 \end{pmatrix}
+\]
+
+The diagonal elements are \(E_0\) (both configurations have equal energy by symmetry). The off-diagonal element \(-A < 0\) is the **tunneling matrix element** — it represents the amplitude for the nitrogen atom to tunnel from one side to the other through the potential barrier separating the two configurations.
+
+### Diagonalization: Energy Eigenstates
+
+To find the energy eigenvalues, we solve \(\det(H - \lambda\mathbf{1}) = 0\):
+
+\[
+(E_0 - \lambda)^2 - A^2 = 0 \implies \lambda = E_0 \pm A
+\]
+
+The two energy levels are split symmetrically around \(E_0\). The corresponding normalized eigenvectors are the symmetric and antisymmetric combinations:
+
+\[
+|I\rangle = \frac{1}{\sqrt{2}}\bigl(|1\rangle + |2\rangle\bigr), \quad E_I = E_0 - A
+\]
+\[
+|II\rangle = \frac{1}{\sqrt{2}}\bigl(|1\rangle - |2\rangle\bigr), \quad E_{II} = E_0 + A
+\]
+
+The lower-energy state \(|I\rangle\) is the **symmetric** (even-parity) combination and the higher-energy state \(|II\rangle\) is the **antisymmetric** (odd-parity) combination. This energy ordering makes physical sense: the symmetric state has a wavefunction that is non-zero at the barrier peak, "sampling" less of the repulsive region, while the antisymmetric state has a node at the barrier and pays a larger kinetic energy penalty.
+
+### Time Evolution and Inversion Oscillation
+
+The two configurations \(|1\rangle\) and \(|2\rangle\) can be re-expressed in terms of the energy eigenstates:
+
+\[
+|1\rangle = \frac{1}{\sqrt{2}}\bigl(|I\rangle + |II\rangle\bigr), \qquad |2\rangle = \frac{1}{\sqrt{2}}\bigl(|I\rangle - |II\rangle\bigr)
+\]
+
+Suppose the nitrogen atom begins above the plane: \(|\psi(0)\rangle = |1\rangle\). Time evolution gives each energy eigenstate a phase factor:
+
+\[
+|\psi(t)\rangle = \frac{1}{\sqrt{2}}\bigl(e^{-iE_I t/\hbar}|I\rangle + e^{-iE_{II} t/\hbar}|II\rangle\bigr)
+\]
+
+The probability of finding the nitrogen atom above the plane at time \(t\) is:
+
+\[
+P_1(t) = |\langle 1|\psi(t)\rangle|^2 = \cos^2\!\left(\frac{At}{\hbar}\right)
+\]
+
+and the probability below:
+
+\[
+P_2(t) = |\langle 2|\psi(t)\rangle|^2 = \sin^2\!\left(\frac{At}{\hbar}\right)
+\]
+
+The nitrogen atom **oscillates** between the two configurations with angular frequency \(\omega = 2A/\hbar\), or inversion frequency \(\nu = A/(\pi\hbar)\). For ammonia, \(A \approx 3.84 \times 10^{-5}\ \mathrm{eV}\), giving \(\nu \approx 23.87\ \mathrm{GHz}\) — in the microwave range.
+
+### Application: The Maser
+
+This inversion frequency is precisely what made ammonia the active medium of the first **maser** (Microwave Amplification by Stimulated Emission of Radiation), built by Townes and colleagues in 1954. By selecting molecules in the upper energy state \(|II\rangle\) and placing them in a microwave cavity resonant at \(2A/\hbar\), they achieved stimulated emission at the inversion frequency — the working principle that would later be extended to optical frequencies to create the laser. Townes shared the 1964 Nobel Prize in Physics for this work.
 
 ---
 
@@ -1335,27 +1595,70 @@ In this state, neither particle has a definite spin projection. If observer A me
 
 ### Bell Inequalities
 
-John Bell (1964) showed that any **local hidden variable** theory imposes constraints on correlations. Consider measurements along three axes \(\hat{a}\), \(\hat{b}\), \(\hat{c}\) with outcomes \(\pm 1\). Classical counting gives:
+John Bell (1964) showed that any **local hidden variable** theory — one in which particle properties are fixed at creation and carried locally — makes predictions that differ from quantum mechanics. The beautiful thing about Bell's argument is that it requires only counting, not any sophisticated physics.
+
+#### The Hidden Variable Hypothesis
+
+Suppose each pion decay produces a pair of particles whose spin projections along the three axes \(\hat{a}\), \(\hat{b}\), \(\hat{c}\) (separated by \(120°\)) are predetermined. There are \(2^3 = 8\) possible assignment patterns, labelled by populations \(N_1, \ldots, N_8\) with total \(N = \sum_i N_i\):
+
+| Type | Particle 1 (\(\hat{a}\), \(\hat{b}\), \(\hat{c}\)) | Particle 2 (\(\hat{a}\), \(\hat{b}\), \(\hat{c}\)) |
+|------|------|------|
+| 1 | \(+\ +\ +\) | \(-\ -\ -\) |
+| 2 | \(+\ +\ -\) | \(-\ -\ +\) |
+| 3 | \(+\ -\ +\) | \(-\ +\ -\) |
+| 4 | \(+\ -\ -\) | \(-\ +\ +\) |
+| 5 | \(-\ +\ +\) | \(+\ -\ -\) |
+| 6 | \(-\ +\ -\) | \(+\ -\ +\) |
+| 7 | \(-\ -\ +\) | \(+\ +\ -\) |
+| 8 | \(-\ -\ -\) | \(+\ +\ +\) |
+
+Note that particle 2's values are always opposite to particle 1's along each axis — required by conservation of angular momentum for a singlet state.
+
+#### The Bell Inequality (Counting Argument)
+
+Observer A measures along one of \(\hat{a}\), \(\hat{b}\), \(\hat{c}\) chosen at random; Observer B independently chooses a measurement axis. There are 9 axis-pair combinations. When A and B choose the **same** axis, the outcomes are always opposite (types 1–8 all give opposite results along matching axes). When they choose **different** axes, the fraction of "same" outcomes depends on the type distribution.
+
+For any type distribution, the fraction of measurements with **same outcomes** when different axes are chosen satisfies:
 
 \[
-P_{\mathrm{same}} \leq \frac{4}{9} \approx 0.44
+\langle P_{\text{same}}\rangle_{\text{LHV}} \leq \frac{4}{9} \approx 0.44
 \]
 
-Quantum mechanics for axes separated by \(120^\circ\):
+This bound holds regardless of the distribution \(\{N_i\}\) — it is a purely combinatorial constraint on any local realistic model. (The maximum 4/9 is achieved, for example, by concentrating all population on types 2, 3, or 4 with their mixed-axis same-outcome fractions.)
+
+#### The Quantum Prediction
+
+Quantum mechanics makes a precise prediction for the singlet state \(|s=0, m=0\rangle\). If observer A measures along \(\hat{z}\) and observer B measures along a direction \(\hat{n}\) at angle \(\theta\) from \(\hat{z}\), the four outcome probabilities are:
 
 \[
-P_s(\theta = 120°) = \sin^2(60°) = \frac{3}{4}
+P(+\hat{z},\ +\hat{n}) = P(-\hat{z},\ -\hat{n}) = \frac{1}{2}\sin^2\!\frac{\theta}{2}, \qquad P(+\hat{z},\ -\hat{n}) = P(-\hat{z},\ +\hat{n}) = \frac{1}{2}\cos^2\!\frac{\theta}{2}
 \]
 
-Averaging over random axis choices:
+The probability of **same** outcomes is therefore:
 
 \[
-\langle P_{\mathrm{same}}\rangle_{\mathrm{QM}} = \frac{1}{2} > \frac{4}{9}
+P_s(\theta) = \sin^2\!\frac{\theta}{2}
 \]
 
-**Quantum mechanics predicts \(\langle P_{\mathrm{same}}\rangle = 0.5\), violating the Bell inequality bound of 0.44.** Experiments (Aspect 1982, Zeilinger, ...) definitively confirm the quantum prediction. Local hidden variable theories are **ruled out by experiment**.
+For axes separated by \(\theta = 120°\):
 
-The universe is fundamentally non-local (or non-real) at the quantum level. Properties of entangled particles do not pre-exist measurement; the outcomes are genuinely undetermined until a measurement is made.
+\[
+P_s(120°) = \sin^2 60° = \frac{3}{4}
+\]
+
+Averaging over the nine axis combinations (1/3 probability of same axis giving \(P_s = 0\), 2/3 probability of different axes giving \(P_s = 3/4\)):
+
+\[
+\langle P_{\text{same}}\rangle_{\text{QM}} = \frac{1}{3}(0) + \frac{2}{3}\!\left(\frac{3}{4}\right) = \frac{1}{2}
+\]
+
+**Quantum mechanics predicts \(\langle P_{\text{same}}\rangle = 0.5\), which exceeds the local hidden variable bound of \(4/9 \approx 0.44\).** This difference — 0.5 vs. 0.44 — is measurable.
+
+#### The Experimental Verdict
+
+Alain Aspect and colleagues (1982) performed the decisive test, measuring photon polarization correlations in entangled pairs while rapidly switching the measurement axes to prevent any signal from traveling between the detectors. The results unambiguously violated Bell's inequality and agreed with the quantum prediction. Subsequent experiments by Zeilinger (1998) and others closed successive "loopholes" — the detection loophole, the locality loophole, the freedom-of-choice loophole — until by the 2010s the case was airtight.
+
+**Local hidden variable theories are experimentally ruled out.** The universe cannot be simultaneously local (no faster-than-light influences) and realistic (properties exist prior to measurement). Aspect, Clauser, and Zeilinger were awarded the 2022 Nobel Prize in Physics for this work. The properties of entangled particles are genuinely undetermined until measurement — quantum randomness is irreducible.
 
 ---
 

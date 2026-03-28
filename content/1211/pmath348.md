@@ -90,6 +90,8 @@ If \(E/F\) is a field extension, we can view \(E\) as a vector space over \(F\),
 
 *Proof sketch.* Suppose \([E:K] = m\) and \([K:F] = n\), with bases \(\{a_1, \ldots, a_m\}\) for \(E/K\) and \(\{b_1, \ldots, b_n\}\) for \(K/F\). One verifies that \(\{a_i b_j : 1 \leq i \leq m,\ 1 \leq j \leq n\}\) is a basis of \(E/F\), giving \([E:F] = mn\). ∎
 
+![Field extension tower: ℚ ⊂ ℚ(√2) ⊂ ℚ(√2,√3) with degree labels [2] and [2], total degree [4:1]](/static/pics/pmath348/field-tower.svg)
+
 ### 2.2 Algebraic and Transcendental Extensions
 
 <div class="definition">
@@ -473,7 +475,9 @@ Moreover, \([E:L] = |L^*|\) and \([L:F] = [G:L^*]\).
 
 *Proof.* The maps are mutually inverse: if \(L \in \text{Int}(E/F)\), then \((L^*)^* = E^{\text{Gal}_L(E)} = L\) by Theorem 7.3.1. If \(H \in \text{Sub}(G)\), then \((H^*)^* = \text{Gal}_{E^H}(E) = H\) by Artin's theorem. ∎
 
-The correspondence can be visualised as an inverted diagram:
+The correspondence can be visualised as an inverted diagram and is illustrated below:
+
+![Galois correspondence: lattice of subgroups of Gal(K/F) ↔ lattice of intermediate subfields, order-reversing bijection](/static/pics/pmath348/galois-correspondence.svg)
 
 | Intermediate fields (include ↑ = contain more) | Subgroups (include ↑ = larger group) |
 |---|---|
@@ -546,6 +550,8 @@ such that \(F_i = F_{i-1}(\alpha_i)\) and \(\alpha_i^{d_i} \in F_{i-1}\) for som
 
 A polynomial \(f(x) \in F[x]\) is <strong>solvable by radicals</strong> if it splits over some radical extension of \(F\).
 </div>
+
+![Radical tower: F=F₀ ⊂ F₁=F₀(α₁) ⊂ … ⊂ Fₘ, each αᵢ an nᵢ-th root; solvable by radicals ⟺ Galois group is solvable](/static/pics/pmath348/radical-tower.svg)
 
 <div class="lemma">
 <strong>Lemma 11.1.1.</strong> If \(E/F\) is a finite separable radical extension, then its normal closure \(N/F\) is also radical. In particular, when studying solvability of separable polynomials by radicals, we may assume the radical extension is Galois.

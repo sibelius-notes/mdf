@@ -199,6 +199,48 @@ A rotation of a spin-1/2 state by angle \(\phi\) about \(\hat{n}\) is
 
 A rotation by \(2\pi\) gives \(\mathcal{D}^{(1/2)} = -\mathbf{1}\): a spinor picks up a sign under a full rotation. The set of all spin states traces out the **Bloch sphere**, with north/south poles as \(|\pm\rangle\) and equatorial points as eigenstates of \(S_x\) and \(S_y\).
 
+<svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="bs-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="currentColor"/>
+    </marker>
+    <marker id="bs-arr-blue" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Sphere outline -->
+  <ellipse cx="150" cy="155" rx="100" ry="100" fill="none" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+  <!-- Equatorial ellipse (dashed) -->
+  <ellipse cx="150" cy="155" rx="100" ry="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- z axis (vertical) -->
+  <line x1="150" y1="45" x2="150" y2="270" stroke="currentColor" stroke-width="1.5" marker-end="url(#bs-arr)"/>
+  <text x="155" y="42" font-size="12" fill="currentColor">z</text>
+  <!-- x axis -->
+  <line x1="42" y1="175" x2="258" y2="175" stroke="currentColor" stroke-width="1.5" marker-end="url(#bs-arr)" opacity="0.5"/>
+  <text x="262" y="179" font-size="12" fill="currentColor">x</text>
+  <!-- y axis (into page) -->
+  <line x1="150" y1="155" x2="100" y2="195" stroke="currentColor" stroke-width="1.5" marker-end="url(#bs-arr)" opacity="0.5"/>
+  <text x="88" y="208" font-size="12" fill="currentColor">y</text>
+  <!-- |+⟩ north pole -->
+  <circle cx="150" cy="55" r="5" fill="#3b82f6"/>
+  <text x="158" y="52" font-size="13" fill="#3b82f6">|+⟩</text>
+  <!-- |−⟩ south pole -->
+  <circle cx="150" cy="255" r="5" fill="#ef4444"/>
+  <text x="158" y="260" font-size="13" fill="#ef4444">|−⟩</text>
+  <!-- Bloch vector |ψ⟩ -->
+  <line x1="150" y1="155" x2="218" y2="92" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#bs-arr-blue)"/>
+  <text x="225" y="88" font-size="13" fill="#3b82f6">|ψ⟩</text>
+  <!-- θ angle arc -->
+  <path d="M 150 105 A 50 50 0 0 1 185 127" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="165" y="112" font-size="11" fill="currentColor">θ</text>
+  <!-- φ angle arc on equator -->
+  <path d="M 200 155 A 50 14 0 0 0 172 169" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+  <text x="202" y="165" font-size="11" fill="currentColor">φ</text>
+  <!-- Formula -->
+  <text x="20" y="298" font-size="11" fill="currentColor">|ψ⟩ = cos(θ/2)|+⟩ + e^{iφ} sin(θ/2)|−⟩</text>
+  <text x="150" y="315" text-anchor="middle" font-size="11" fill="currentColor">Bloch Sphere (spin-½)</text>
+</svg>
+
 ### 4.4 Euler Angles and Wigner D-Matrices
 
 A general rotation is parametrised by **Euler angles** \((\alpha, \beta, \gamma)\):
@@ -210,6 +252,40 @@ The matrix elements in the \(|j,m\rangle\) basis are the **Wigner D-matrices**:
 \[D^{(j)}_{m'm}(\alpha,\beta,\gamma) = e^{-im'\alpha}\,d^{(j)}_{m'm}(\beta)\,e^{-im\gamma},\]
 
 where \(d^{(j)}_{m'm}(\beta) = \langle j,m'|e^{-iJ_y\beta/\hbar}|j,m\rangle\) is the reduced rotation matrix. These appear in the description of scattering amplitudes and multipole transitions.
+
+<svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="ba-arr-blue" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="ba-arr-red" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Incident plane wave (horizontal lines) -->
+  <line x1="10" y1="95" x2="170" y2="95" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="10,5" marker-end="url(#ba-arr-blue)"/>
+  <line x1="10" y1="75" x2="120" y2="75" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="10,5" opacity="0.5"/>
+  <line x1="10" y1="115" x2="120" y2="115" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="10,5" opacity="0.5"/>
+  <text x="60" y="65" font-size="12" fill="#3b82f6">e^{ik·r} (incident)</text>
+  <!-- Scattering centre -->
+  <circle cx="185" cy="95" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="185" y="100" text-anchor="middle" font-size="11" fill="currentColor">V(r)</text>
+  <!-- Scattered spherical wave (arcs) -->
+  <path d="M 210 75 Q 270 50 310 75" fill="none" stroke="#ef4444" stroke-width="1.5" marker-end="url(#ba-arr-red)"/>
+  <path d="M 210 95 Q 300 95 370 80" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#ba-arr-red)"/>
+  <path d="M 210 115 Q 270 140 310 115" fill="none" stroke="#ef4444" stroke-width="1.5" marker-end="url(#ba-arr-red)"/>
+  <path d="M 198 80 Q 250 30 310 55" fill="none" stroke="#ef4444" stroke-width="1.2" opacity="0.6" marker-end="url(#ba-arr-red)"/>
+  <path d="M 198 110 Q 250 160 310 135" fill="none" stroke="#ef4444" stroke-width="1.2" opacity="0.6" marker-end="url(#ba-arr-red)"/>
+  <!-- Scattered label -->
+  <text x="375" y="80" font-size="11" fill="#ef4444">e^{ikr}/r·f(θ,φ)</text>
+  <text x="375" y="94" font-size="11" fill="#ef4444">(scattered)</text>
+  <!-- scattering angle θ -->
+  <path d="M 220 95 A 40 40 0 0 0 230 73" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="238" y="82" font-size="11" fill="currentColor">θ</text>
+  <!-- Born approximation label -->
+  <text x="20" y="175" font-size="11" fill="currentColor">Born approximation: f(θ) ∝ ∫ V(r) e^{iq·r} d³r   (Fourier transform of V)</text>
+  <text x="230" y="195" text-anchor="middle" font-size="11" fill="currentColor">momentum transfer q = k′ − k</text>
+</svg>
 
 ### 4.5 General Angular Momentum: Eigenvalue Spectrum
 
@@ -224,6 +300,57 @@ The operator \(J_+\) raises \(m\) by one unit; \(J_-\) lowers it. Since \(\langl
 The normalised matrix elements of the ladder operators are
 
 \[J_\pm|j,m\rangle = \hbar\sqrt{j(j+1) - m(m\pm 1)}\,|j,m\pm 1\rangle.\]
+
+<svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="lad-arr-up" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="lad-arr-dn" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="180" y="18" text-anchor="middle" font-size="12" fill="currentColor">Angular Momentum: |j,m⟩ Ladder</text>
+  <!-- j=0 -->
+  <circle cx="180" cy="270" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="180" y="275" text-anchor="middle" font-size="11" fill="currentColor">0,0</text>
+  <!-- j=1/2 -->
+  <circle cx="140" cy="210" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="140" y="215" text-anchor="middle" font-size="10" fill="currentColor">½,−½</text>
+  <circle cx="220" cy="210" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="220" y="215" text-anchor="middle" font-size="10" fill="currentColor">½,+½</text>
+  <!-- j=1 -->
+  <circle cx="80" cy="150" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="80" y="155" text-anchor="middle" font-size="10" fill="currentColor">1,−1</text>
+  <circle cx="180" cy="150" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="180" y="155" text-anchor="middle" font-size="10" fill="currentColor">1,0</text>
+  <circle cx="280" cy="150" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="280" y="155" text-anchor="middle" font-size="10" fill="currentColor">1,+1</text>
+  <!-- j=3/2 -->
+  <circle cx="30" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="30" y="95" text-anchor="middle" font-size="9" fill="currentColor">3/2,−3/2</text>
+  <circle cx="110" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="110" y="95" text-anchor="middle" font-size="9" fill="currentColor">3/2,−½</text>
+  <circle cx="250" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="250" y="95" text-anchor="middle" font-size="9" fill="currentColor">3/2,+½</text>
+  <circle cx="330" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="330" y="95" text-anchor="middle" font-size="9" fill="currentColor">3/2,+3/2</text>
+  <!-- J+ arrows (blue, raising) within j=1 -->
+  <line x1="95" y1="147" x2="163" y2="147" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#lad-arr-up)"/>
+  <line x1="195" y1="147" x2="263" y2="147" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#lad-arr-up)"/>
+  <text x="125" y="140" font-size="10" fill="#3b82f6">J₊</text>
+  <!-- J- arrows (red, lowering) within j=1 -->
+  <line x1="265" y1="154" x2="197" y2="154" stroke="#ef4444" stroke-width="1.8" marker-end="url(#lad-arr-dn)"/>
+  <line x1="165" y1="154" x2="97" y2="154" stroke="#ef4444" stroke-width="1.8" marker-end="url(#lad-arr-dn)"/>
+  <text x="225" y="165" font-size="10" fill="#ef4444">J₋</text>
+  <!-- axis labels -->
+  <text x="8" y="35" font-size="11" fill="currentColor">j=3/2</text>
+  <text x="8" y="95" font-size="11" fill="currentColor" opacity="0.5">m:</text>
+  <text x="8" y="155" font-size="11" fill="currentColor">j=1</text>
+  <text x="8" y="215" font-size="11" fill="currentColor">j=½</text>
+  <text x="8" y="275" font-size="11" fill="currentColor">j=0</text>
+</svg>
 
 ### 4.6 Orbital Angular Momentum and Spherical Harmonics
 
@@ -567,6 +694,56 @@ dropping the \(\mathbf{A}^2\) term in the weak-field limit. The perturbation \(V
 For optical wavelengths (\(\lambda \sim 500\,\text{nm}\)) and atomic sizes (\(a_0\sim 0.05\,\text{nm}\)), \(e^{i\mathbf{k}\cdot\mathbf{r}}\approx 1\) in the atomic volume (**electric dipole approximation**). The matrix element reduces to \(V_{ni}\propto\hat{\boldsymbol{\epsilon}}\cdot\mathbf{p}_{ni}\), which via \(\mathbf{p}_{ni} = im\omega_{ni}\mathbf{r}_{ni}\) becomes an electric dipole coupling.
 
 By the parity argument: \(\mathbf{r}\) is parity-odd, so \(\langle n|\mathbf{r}|i\rangle\) is non-zero only between states of opposite parity, giving \(\Delta\ell = \pm 1\). Rotational invariance gives \(\Delta m = 0, \pm 1\). These are the **electric dipole selection rules**.
+
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="sel-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="sel-arr-r" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="200" y="18" text-anchor="middle" font-size="12" fill="currentColor">Electric Dipole Selection Rules: Δℓ = ±1, Δm = 0,±1</text>
+  <!-- ℓ=0 level (s) -->
+  <line x1="170" y1="250" x2="230" y2="250" stroke="currentColor" stroke-width="2"/>
+  <text x="155" y="255" font-size="11" fill="currentColor">ℓ=0</text>
+  <text x="200" y="265" text-anchor="middle" font-size="10" fill="currentColor">m=0</text>
+  <!-- ℓ=1 levels (p) -->
+  <line x1="60" y1="170" x2="120" y2="170" stroke="currentColor" stroke-width="2"/>
+  <line x1="170" y1="170" x2="230" y2="170" stroke="currentColor" stroke-width="2"/>
+  <line x1="280" y1="170" x2="340" y2="170" stroke="currentColor" stroke-width="2"/>
+  <text x="45" y="175" font-size="11" fill="currentColor">ℓ=1</text>
+  <text x="90" y="185" text-anchor="middle" font-size="10" fill="currentColor">m=−1</text>
+  <text x="200" y="185" text-anchor="middle" font-size="10" fill="currentColor">m=0</text>
+  <text x="310" y="185" text-anchor="middle" font-size="10" fill="currentColor">m=+1</text>
+  <!-- ℓ=2 levels (d) -->
+  <line x1="20" y1="90" x2="80" y2="90" stroke="currentColor" stroke-width="2"/>
+  <line x1="100" y1="90" x2="160" y2="90" stroke="currentColor" stroke-width="2"/>
+  <line x1="170" y1="90" x2="230" y2="90" stroke="currentColor" stroke-width="2"/>
+  <line x1="240" y1="90" x2="300" y2="90" stroke="currentColor" stroke-width="2"/>
+  <line x1="320" y1="90" x2="380" y2="90" stroke="currentColor" stroke-width="2"/>
+  <text x="5" y="95" font-size="11" fill="currentColor">ℓ=2</text>
+  <text x="50" y="104" text-anchor="middle" font-size="10" fill="currentColor">m=−2</text>
+  <text x="130" y="104" text-anchor="middle" font-size="10" fill="currentColor">m=−1</text>
+  <text x="200" y="104" text-anchor="middle" font-size="10" fill="currentColor">m=0</text>
+  <text x="270" y="104" text-anchor="middle" font-size="10" fill="currentColor">m=+1</text>
+  <text x="350" y="104" text-anchor="middle" font-size="10" fill="currentColor">m=+2</text>
+  <!-- Allowed transitions ℓ=0 → ℓ=1, Δm=0 and ±1 -->
+  <line x1="200" y1="248" x2="200" y2="174" stroke="#3b82f6" stroke-width="2" marker-end="url(#sel-arr)"/>
+  <line x1="200" y1="248" x2="92" y2="174" stroke="#3b82f6" stroke-width="2" marker-end="url(#sel-arr)"/>
+  <line x1="200" y1="248" x2="308" y2="174" stroke="#3b82f6" stroke-width="2" marker-end="url(#sel-arr)"/>
+  <!-- Allowed transitions ℓ=1(m=0) → ℓ=2 -->
+  <line x1="200" y1="168" x2="132" y2="94" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#sel-arr)"/>
+  <line x1="200" y1="168" x2="200" y2="94" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#sel-arr)"/>
+  <line x1="200" y1="168" x2="268" y2="94" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#sel-arr)"/>
+  <!-- Forbidden label -->
+  <text x="340" y="220" font-size="10" fill="#ef4444">✗ Δℓ=0</text>
+  <line x1="310" y1="170" x2="280" y2="170" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Legend -->
+  <text x="200" y="275" text-anchor="middle" font-size="11" fill="currentColor">Solid: ℓ=0↔1   Dashed: ℓ=1↔2   (Δℓ = ±1, Δm = 0,±1)</text>
+</svg>
 
 ### 16.3 Photoelectric Effect
 

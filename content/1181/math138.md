@@ -57,6 +57,8 @@ where \(R_n\) and \(L_n\) are the right- and left-hand Riemann sums for the regu
 
 This theorem also holds if \(f\) is bounded and has finitely many discontinuities on \([a,b]\).
 
+![Left, right, and midpoint Riemann sums](/static/pics/math138/riemann_sums.png)
+
 ## 1.3 Properties of the Definite Integral
 
 <div class="theorem">
@@ -208,6 +210,29 @@ For example, using \(x = \sin(u)\) one can show \(\int_{-1}^{1}\sqrt{1-x^2}\,dx 
 </div>
 
 Integration by Parts is suited for integrals of the types \(\int x^n\cos x\,dx\), \(\int x^n\sin x\,dx\), \(\int x^n e^x\,dx\), \(\int e^x\cos x\,dx\), \(\int e^x\sin x\,dx\), and integrals like \(\int\arctan(x)\,dx\) or \(\int\ln(x)\,dx\) (writing the integrand as \(1 \cdot f(x)\)).
+
+<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
+  <text x="180" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Integration by Parts: ∫u dv = uv − ∫v du</text>
+  <!-- uv box -->
+  <rect x="30" y="35" width="80" height="90" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- Labels on sides -->
+  <text x="70" y="30" font-size="11" fill="#3b82f6" text-anchor="middle" font-weight="bold">u</text>
+  <text x="20" y="84" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">v</text>
+  <!-- split: d(uv) = u dv + v du -->
+  <rect x="30" y="35" width="80" height="50" rx="0" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="0"/>
+  <text x="70" y="64" font-size="11" fill="currentColor" text-anchor="middle">u dv</text>
+  <rect x="30" y="85" width="80" height="40" rx="0" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="0"/>
+  <text x="70" y="109" font-size="11" fill="currentColor" text-anchor="middle">v du</text>
+  <line x1="30" y1="85" x2="110" y2="85" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <!-- Boundary lines -->
+  <rect x="30" y="35" width="80" height="90" rx="4" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+  <!-- Formula -->
+  <text x="220" y="55" font-size="12" fill="currentColor">d(uv) = u dv + v du</text>
+  <text x="220" y="78" font-size="13" fill="#3b82f6">∫u dv = uv</text>
+  <text x="300" y="78" font-size="13" fill="currentColor"> −</text>
+  <text x="220" y="100" font-size="13" fill="#ef4444">         ∫v du</text>
+  <text x="160" y="150" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">LIATE rule: choose u as the "harder to integrate" function</text>
+</svg>
 
 ## 2.3 Partial Fractions
 
@@ -565,6 +590,8 @@ For positive series, the partial sums are non-decreasing, so the series either c
 
 </div>
 
+![Integral test: bars aₙ vs continuous f(x)](/static/pics/math138/integral_test.png)
+
 ## 5.7 Alternating Series
 
 <div class="definition">
@@ -793,6 +820,8 @@ for all \(x \in I\).
 
 Key Taylor series (valid for all \(x \in \mathbb{R}\)):
 \[e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}, \quad \sin(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}.\]
+
+![Taylor partial sums for sin(x): n=1,3,5,7](/static/pics/math138/taylor_sin.png)
 
 ## 6.9 Binomial Series
 

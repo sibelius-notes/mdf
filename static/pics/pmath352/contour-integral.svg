@@ -1,0 +1,29 @@
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arrc" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrax" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="20" y1="140" x2="280" y2="140" stroke="currentColor" stroke-width="1.2" marker-end="url(#arrax)" opacity="0.4"/>
+  <line x1="150" y1="240" x2="150" y2="20" stroke="currentColor" stroke-width="1.2" marker-end="url(#arrax)" opacity="0.4"/>
+  <text x="282" y="144" font-size="11" fill="currentColor" font-family="serif">Re</text>
+  <text x="154" y="18" font-size="11" fill="currentColor" font-family="serif">Im</text>
+  <!-- Closed contour C (ellipse) -->
+  <ellipse cx="150" cy="130" rx="90" ry="70" stroke="#3b82f6" stroke-width="2" fill="#3b82f6" fill-opacity="0.06"/>
+  <!-- Arrow on contour (CCW direction) at top-right -->
+  <path d="M 235,115 A 90,70 0 0,0 230,110" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrc)"/>
+  <!-- Pole z0 inside -->
+  <circle cx="150" cy="130" r="4" fill="#ef4444"/>
+  <text x="156" y="128" font-size="12" fill="#ef4444" font-family="serif" font-style="italic">z₀</text>
+  <!-- × symbol for pole -->
+  <line x1="145" y1="125" x2="155" y2="135" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="155" y1="125" x2="145" y2="135" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- C label -->
+  <text x="238" y="125" font-size="14" fill="#3b82f6" font-family="serif" font-style="italic">C</text>
+  <!-- Res formula -->
+  <text x="30" y="230" font-size="11" fill="currentColor" font-family="serif">∮_C f(z) dz = 2πi · Res(f, z₀)</text>
+</svg>

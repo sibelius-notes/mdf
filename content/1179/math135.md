@@ -375,6 +375,26 @@ We define \(\gcd(0,0) = 0\).
 
 This proposition underlies the <strong>Euclidean Algorithm</strong>: repeatedly apply the Division Algorithm until the remainder is zero; the last nonzero remainder is the GCD.
 
+<svg viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Euclidean Algorithm: gcd(48, 18)</text>
+  <!-- step boxes -->
+  <rect x="20" y="26" width="440" height="34" rx="3" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="30" y="40" font-size="11" fill="currentColor">Step 1:</text>
+  <text x="100" y="40" font-size="11" fill="currentColor">48 = 2·18 + 12</text>
+  <text x="280" y="40" font-size="11" fill="#3b82f6">→ gcd(48, 18) = gcd(18, 12)</text>
+  <rect x="20" y="68" width="440" height="34" rx="3" fill="#22c55e20" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="30" y="82" font-size="11" fill="currentColor">Step 2:</text>
+  <text x="100" y="82" font-size="11" fill="currentColor">18 = 1·12 + 6</text>
+  <text x="280" y="82" font-size="11" fill="#22c55e">→ gcd(18, 12) = gcd(12, 6)</text>
+  <rect x="20" y="110" width="440" height="34" rx="3" fill="#ef444420" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="30" y="124" font-size="11" fill="currentColor">Step 3:</text>
+  <text x="100" y="124" font-size="11" fill="currentColor">12 = 2·6 + 0</text>
+  <text x="280" y="124" font-size="11" fill="#ef4444">→ gcd(12, 6) = 6</text>
+  <!-- result -->
+  <rect x="160" y="155" width="160" height="28" rx="4" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="240" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">gcd(48, 18) = 6</text>
+</svg>
+
 <div class="theorem">
 
 <strong>Proposition (GCD Characterization Theorem, GCD CT).</strong> If \(d\) is a positive common divisor of integers \(a\) and \(b\), and there exist integers \(x\) and \(y\) so that \(ax + by = d\), then \(d = \gcd(a,b)\).
@@ -543,6 +563,40 @@ which gives \(d\) distinct solutions modulo \(m\).
 
 ## Chapter 26: Modular Arithmetic
 
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;display:block;margin:1.5em auto">
+  <text x="120" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">ℤ₁₂: Clock / Modular Arithmetic</text>
+  <!-- clock circle -->
+  <circle cx="120" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- hour marks -->
+  <circle cx="120" cy="48" r="14" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="120" y="53" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">0</text>
+  <circle cx="165" cy="62" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="165" y="67" text-anchor="middle" font-size="11" fill="currentColor">1</text>
+  <circle cx="196" cy="95" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="196" y="100" text-anchor="middle" font-size="11" fill="currentColor">2</text>
+  <circle cx="206" cy="138" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="206" y="143" text-anchor="middle" font-size="11" fill="currentColor">3</text>
+  <circle cx="196" cy="181" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="196" y="186" text-anchor="middle" font-size="11" fill="currentColor">4</text>
+  <circle cx="165" cy="210" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="165" y="215" text-anchor="middle" font-size="11" fill="currentColor">5</text>
+  <circle cx="120" cy="220" r="14" fill="#ef444420" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="120" y="225" text-anchor="middle" font-size="11" fill="#ef4444">6</text>
+  <circle cx="75" cy="210" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="75" y="215" text-anchor="middle" font-size="11" fill="currentColor">7</text>
+  <circle cx="44" cy="181" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="44" y="186" text-anchor="middle" font-size="11" fill="currentColor">8</text>
+  <circle cx="34" cy="138" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="34" y="143" text-anchor="middle" font-size="11" fill="currentColor">9</text>
+  <circle cx="44" cy="95" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="44" y="100" text-anchor="middle" font-size="11" fill="currentColor">10</text>
+  <circle cx="75" cy="62" r="14" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="75" y="67" text-anchor="middle" font-size="11" fill="currentColor">11</text>
+  <!-- example: 7+8=3 in Z12 -->
+  <text x="120" y="130" text-anchor="middle" font-size="10" fill="currentColor">7+8≡3</text>
+  <text x="120" y="144" text-anchor="middle" font-size="9" fill="currentColor">(mod 12)</text>
+</svg>
+
 <div class="definition">
 
 <strong>Definition 26.2.1 (Congruence Class).</strong> The congruence class modulo \(m\) of the integer \(a\) is
@@ -620,6 +674,34 @@ have a unique solution modulo \(m_1 m_2\).
 </div>
 
 ## Chapter 29: The RSA Scheme
+
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">RSA Key Generation and Encryption/Decryption</text>
+  <!-- Setup box -->
+  <rect x="10" y="22" width="460" height="42" rx="3" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="20" y="37" font-size="11" font-weight="bold" fill="#3b82f6">Setup:</text>
+  <text x="80" y="37" font-size="11" fill="currentColor">Pick primes p, q  →  n = pq  →  φ(n) = (p−1)(q−1)</text>
+  <text x="20" y="55" font-size="11" fill="currentColor">Choose e with gcd(e, φ(n)) = 1;  find d with ed ≡ 1 (mod φ(n))</text>
+  <!-- keys -->
+  <rect x="10" y="72" width="215" height="36" rx="3" fill="#22c55e20" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="117" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#22c55e">Public Key: (e, n)</text>
+  <text x="117" y="102" text-anchor="middle" font-size="10" fill="currentColor">shared openly</text>
+  <rect x="255" y="72" width="215" height="36" rx="3" fill="#ef444420" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="362" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">Private Key: (d, n)</text>
+  <text x="362" y="102" text-anchor="middle" font-size="10" fill="currentColor">kept secret</text>
+  <!-- encrypt -->
+  <rect x="10" y="118" width="215" height="36" rx="3" fill="#3b82f620" stroke="#3b82f6" stroke-width="1"/>
+  <text x="117" y="134" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">Encrypt (Alice → Bob)</text>
+  <text x="117" y="148" text-anchor="middle" font-size="11" fill="currentColor">C ≡ Mᵉ (mod n)</text>
+  <!-- decrypt -->
+  <rect x="255" y="118" width="215" height="36" rx="3" fill="#ef444420" stroke="#ef4444" stroke-width="1"/>
+  <text x="362" y="134" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">Decrypt (Bob)</text>
+  <text x="362" y="148" text-anchor="middle" font-size="11" fill="currentColor">M ≡ Cᵈ (mod n)</text>
+  <!-- security note -->
+  <rect x="10" y="163" width="460" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="240" y="178" text-anchor="middle" font-size="10" fill="currentColor">Security: hard to factor n = pq  →  hard to find d from e and n</text>
+  <text x="240" y="193" text-anchor="middle" font-size="10" fill="currentColor">Correctness: Cᵈ = Mᵉᵈ ≡ M (mod n)  by Fermat's Little Theorem + CRT</text>
+</svg>
 
 RSA setup: choose distinct primes \(p,q\), let \(n = pq\). Choose \(e\) with \(\gcd(e,(p-1)(q-1))=1\). Solve \(ed \equiv 1 \pmod{(p-1)(q-1)}\). Public key: \((e,n)\). Private key: \((d,n)\). Encrypt: \(M^e \equiv C \pmod{n}\). Decrypt: \(C^d \equiv R \pmod{n}\).
 

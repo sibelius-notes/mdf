@@ -99,6 +99,45 @@ and the **Poynting vector** is
 
 The Poynting vector \(\mathbf{S}\) has units of W/m² and represents the rate of energy flow per unit area — the **intensity** of the field. The Poynting theorem says: the mechanical power delivered to matter in a volume equals the decrease in field energy inside that volume minus the energy that flows out through the surface. Energy is stored in both electric and magnetic fields, half-and-half for a plane wave.
 
+<svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="pv-arr-k" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+    <marker id="pv-arr-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="pv-arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+    <marker id="pv-arr-s" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="170" y="18" text-anchor="middle" font-size="12" fill="currentColor">Poynting Vector S = E × B / μ₀</text>
+  <!-- Origin -->
+  <circle cx="120" cy="130" r="3" fill="currentColor"/>
+  <!-- E (upward, blue) -->
+  <line x1="120" y1="130" x2="120" y2="45" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#pv-arr-e)"/>
+  <text x="125" y="42" font-size="13" fill="#3b82f6">E</text>
+  <!-- B (to the right, red) -->
+  <line x1="120" y1="130" x2="230" y2="130" stroke="#ef4444" stroke-width="2.5" marker-end="url(#pv-arr-b)"/>
+  <text x="235" y="134" font-size="13" fill="#ef4444">B</text>
+  <!-- S = E×B (out of page, represented as diagonal) -->
+  <line x1="120" y1="130" x2="55" y2="195" stroke="#22c55e" stroke-width="3" marker-end="url(#pv-arr-s)"/>
+  <text x="32" y="210" font-size="13" fill="#22c55e">S</text>
+  <!-- Right angle marks -->
+  <rect x="112" y="122" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- Cross-product annotation -->
+  <text x="170" y="80" font-size="11" fill="currentColor">S = E×B / μ₀</text>
+  <text x="170" y="96" font-size="11" fill="currentColor">||S|| = ⟨u⟩·c</text>
+  <!-- E and B perpendicular -->
+  <text x="240" y="100" font-size="10" fill="currentColor">E ⊥ B ⊥ S</text>
+  <!-- For a plane wave formula -->
+  <text x="30" y="225" font-size="11" fill="currentColor">Plane wave: ⟨S⟩ = E₀²/(2μ₀c)  along k̂</text>
+</svg>
+
 ### Electromagnetic Momentum
 
 The electromagnetic field also carries **momentum density**:
@@ -148,6 +187,44 @@ The simplest solution is the **monochromatic plane wave**:
 \]
 
 where \(\tilde{E}_0\) is the (complex) amplitude, \(\mathbf{k} = k\hat{\mathbf{k}}\) is the wave vector, \(\omega = ck\), and \(\hat{\mathbf{n}} \perp \hat{\mathbf{k}}\). The physical fields are the real parts. Note that \(\mathbf{E}\), \(\mathbf{B}\), and \(\hat{\mathbf{k}}\) form a mutually orthogonal right-handed triad: \(\hat{\mathbf{k}} \times \hat{\mathbf{E}} = \hat{\mathbf{B}}\). Electromagnetic waves in vacuum are **transverse**.
+
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="em-k" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="currentColor"/>
+    </marker>
+    <marker id="em-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="em-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="180" y="18" text-anchor="middle" font-size="12" fill="currentColor">EM Plane Wave: E, B, k̂ Orthogonal Triad</text>
+  <!-- Origin -->
+  <circle cx="160" cy="140" r="3" fill="currentColor"/>
+  <!-- k direction (horizontal, propagation) -->
+  <line x1="160" y1="140" x2="310" y2="140" stroke="currentColor" stroke-width="2.5" marker-end="url(#em-k)"/>
+  <text x="318" y="145" font-size="14" fill="currentColor">k̂</text>
+  <!-- E field (vertical, upward) -->
+  <line x1="160" y1="140" x2="160" y2="35" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#em-e)"/>
+  <text x="165" y="30" font-size="14" fill="#3b82f6">E</text>
+  <!-- B field (into page / diagonal) -->
+  <line x1="160" y1="140" x2="68" y2="198" stroke="#ef4444" stroke-width="2.5" marker-end="url(#em-b)"/>
+  <text x="48" y="212" font-size="14" fill="#ef4444">B</text>
+  <!-- Wave oscillations for E -->
+  <path d="M 20 140 Q 35 110 50 140 Q 65 170 80 140 Q 95 110 110 140 Q 125 170 140 140" fill="none" stroke="#3b82f6" stroke-width="1.8" opacity="0.7"/>
+  <!-- Wave oscillations for B (rotated 90°) -->
+  <!-- using a horizontal wavy in a different plane (simulated) -->
+  <text x="22" y="200" font-size="10" fill="currentColor" opacity="0.7">wave propagates →</text>
+  <!-- Right-hand rule annotation -->
+  <text x="160" y="240" text-anchor="middle" font-size="12" fill="currentColor">k̂ × Ê = B̂    (right-hand rule)</text>
+  <!-- E B perpendicular symbol -->
+  <rect x="152" y="132" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- Labels: S = E×B/μ₀ -->
+  <text x="180" y="255" text-anchor="middle" font-size="11" fill="currentColor">Poynting: S = E×B/μ₀ || k̂</text>
+</svg>
 
 ### Impedance and Intensity
 
@@ -213,6 +290,8 @@ d = \frac{1}{\kappa} \approx \sqrt{\frac{2}{\mu\sigma\omega}}
 
 (for good conductors where \(\sigma \gg \omega\varepsilon\)). High-frequency fields are excluded from a good conductor — they penetrate only a skin depth before being absorbed. For copper at 60 Hz, \(d \approx 8.5\ \text{mm}\); at 10 GHz, \(d \approx 0.66\ \mu\text{m}\). This is why RF shielding works.
 
+![Skin effect: exponential decay of EM wave amplitude inside a conductor, showing skin depth d](/pics/phys442/skin_depth.png)
+
 ### Oblique Incidence: s and p Polarization
 
 The normal-incidence Fresnel equations above are a special case of a richer story. At oblique incidence, the plane containing the wave vector and the surface normal — the **plane of incidence** — breaks the symmetry between the two transverse polarization directions. Boundary conditions treat these two directions differently, and the reflection and transmission amplitudes depend on which polarization you consider.
@@ -249,11 +328,57 @@ Physically, at Brewster's angle the reflected and transmitted rays are perpendic
 
 For s-polarization, no Brewster angle exists in typical non-magnetic media. The condition \(\alpha\beta = 1\) requires \((\mu_2/\mu_1)^2 \neq 1\), which fails when \(\mu_1 \approx \mu_2 \approx \mu_0\). A Brewster angle for s-polarization would require materials with substantially different magnetic permeabilities — unusual at optical frequencies, but achievable in carefully designed metamaterials.
 
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="fr-arr-b" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+    <marker id="fr-arr-r" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ef4444"/>
+    </marker>
+    <marker id="fr-arr-g" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <!-- Interface -->
+  <line x1="0" y1="130" x2="480" y2="130" stroke="currentColor" stroke-width="2"/>
+  <!-- Region labels -->
+  <text x="20" y="115" font-size="12" fill="currentColor">n₁ (medium 1)</text>
+  <text x="20" y="155" font-size="12" fill="currentColor">n₂ (medium 2, n₂ > n₁)</text>
+  <!-- Normal (dashed vertical) -->
+  <line x1="220" y1="30" x2="220" y2="230" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+  <!-- Incident ray -->
+  <line x1="110" y1="40" x2="218" y2="128" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#fr-arr-b)"/>
+  <text x="100" y="35" font-size="12" fill="#3b82f6">Incident (I)</text>
+  <!-- Incident angle arc -->
+  <path d="M 220 70 A 50 50 0 0 0 196 80" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="195" y="68" font-size="11" fill="currentColor">θᵢ</text>
+  <!-- Reflected ray -->
+  <line x1="222" y1="128" x2="330" y2="40" stroke="#ef4444" stroke-width="2" marker-end="url(#fr-arr-r)"/>
+  <text x="330" y="35" font-size="12" fill="#ef4444">Reflected (R)</text>
+  <!-- Reflected angle -->
+  <path d="M 244 80 A 50 50 0 0 0 220 70" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="242" y="68" font-size="11" fill="#ef4444">θᵣ=θᵢ</text>
+  <!-- Transmitted ray -->
+  <line x1="220" y1="132" x2="280" y2="230" stroke="#22c55e" stroke-width="2.5" marker-end="url(#fr-arr-g)"/>
+  <text x="285" y="240" font-size="12" fill="#22c55e">Transmitted (T)</text>
+  <!-- Transmitted angle arc -->
+  <path d="M 220 165 A 40 40 0 0 1 239 168" fill="none" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="242" y="172" font-size="11" fill="#22c55e">θₜ</text>
+  <!-- s/p labels -->
+  <text x="60" y="75" font-size="11" fill="currentColor">s-pol: E ⊥ plane</text>
+  <text x="60" y="90" font-size="11" fill="currentColor">p-pol: E ∥ plane</text>
+  <!-- Snell's law -->
+  <text x="240" y="250" font-size="12" fill="currentColor">Snell: n₁ sin θᵢ = n₂ sin θₜ</text>
+</svg>
+
 **Total internal reflection** occurs when light travels from a denser to a rarer medium (\(n_1 > n_2\)) and \(\theta_I\) exceeds the **critical angle** \(\theta_c = \arcsin(n_2/n_1)\). Beyond this angle, Snell's law would require \(\sin\theta_T > 1\), which has no real solution: there is no transmitted propagating wave. Instead, the boundary conditions are satisfied by an **evanescent wave** in medium 2 — a field that decays exponentially away from the interface with no net energy flow. The reflection coefficient becomes complex with \(|R| = 1\): every photon is reflected. Total internal reflection underpins optical fibers (the glass core has higher \(n\) than the cladding), frustrated total internal reflection sensors, and near-field optical microscopy.
 
 ### Dispersion and the Optical Response of Matter
 
 The refractive index \(n\) is not a fixed property of a material — it depends on frequency. This frequency dependence, **dispersion**, is responsible for rainbows, chromatic aberration in lenses, and the separation of colors by a prism. Understanding it requires a microscopic model of how the electromagnetic field interacts with bound electrons.
+
+![Dispersion relation ω(k) for free space, dielectric, and dispersive medium](/pics/phys442/dispersion_relation.png)
 
 #### Phase Velocity and Group Velocity
 

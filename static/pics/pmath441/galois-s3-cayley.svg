@@ -1,0 +1,57 @@
+<svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arrs3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrs3r" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- 6 elements of S₃ arranged in a hexagon -->
+  <!-- Center at (190,140), radius 90 -->
+  <!-- e at top, then r, r², then reflections s, sr, sr² -->
+  <!-- Positions (hexagon vertices): -->
+  <!-- e: (190,50), r: (268,95), r²: (268,185), -->
+  <!-- r³=e skip; s:(190,230), sr:(112,185), sr²:(112,95) -->
+
+  <!-- Nodes -->
+  <circle cx="190" cy="50" r="22" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.05"/>
+  <text x="183" y="55" font-size="13" fill="currentColor" font-family="serif">e</text>
+
+  <circle cx="268" cy="95" r="22" stroke="#3b82f6" stroke-width="1.5" fill="#3b82f6" fill-opacity="0.07"/>
+  <text x="261" y="100" font-size="13" fill="#3b82f6" font-family="serif">r</text>
+
+  <circle cx="268" cy="185" r="22" stroke="#3b82f6" stroke-width="1.5" fill="#3b82f6" fill-opacity="0.07"/>
+  <text x="257" y="190" font-size="13" fill="#3b82f6" font-family="serif">r²</text>
+
+  <circle cx="190" cy="230" r="22" stroke="#ef4444" stroke-width="1.5" fill="#ef4444" fill-opacity="0.07"/>
+  <text x="183" y="235" font-size="13" fill="#ef4444" font-family="serif">s</text>
+
+  <circle cx="112" cy="185" r="22" stroke="#ef4444" stroke-width="1.5" fill="#ef4444" fill-opacity="0.07"/>
+  <text x="100" y="190" font-size="13" fill="#ef4444" font-family="serif">sr</text>
+
+  <circle cx="112" cy="95" r="22" stroke="#ef4444" stroke-width="1.5" fill="#ef4444" fill-opacity="0.07"/>
+  <text x="100" y="100" font-size="13" fill="#ef4444" font-family="serif">sr²</text>
+
+  <!-- Rotation arrows (blue, order 3 cycle: e→r→r²→e) -->
+  <path d="M 208,62 Q 258,62 255,90" stroke="#3b82f6" stroke-width="1.5" fill="none" marker-end="url(#arrs3)"/>
+  <path d="M 270,117 L 270,163" stroke="#3b82f6" stroke-width="1.5" fill="none" marker-end="url(#arrs3)"/>
+  <path d="M 252,200 Q 220,230 210,224" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  <text x="255" y="145" font-size="10" fill="#3b82f6" font-family="sans-serif">×r</text>
+
+  <!-- Reflection arrows (red, order 2: s²=e; connecting pairs) -->
+  <path d="M 170,65 Q 130,80 122,90" stroke="#ef4444" stroke-width="1.2" fill="none" marker-end="url(#arrs3r)" stroke-dasharray="4,2"/>
+  <path d="M 250,175 Q 230,210 207,225" stroke="#ef4444" stroke-width="1.2" fill="none" marker-end="url(#arrs3r)" stroke-dasharray="4,2"/>
+  <path d="M 133,102 Q 160,102 185,60" stroke="#ef4444" stroke-width="1.2" fill="none" stroke-dasharray="4,2"/>
+
+  <!-- Center label -->
+  <text x="155" y="140" font-size="12" fill="currentColor" font-family="sans-serif">S₃ ≅ D₃</text>
+  <text x="140" y="155" font-size="11" fill="currentColor" font-family="sans-serif">|S₃| = 6</text>
+
+  <!-- Legend -->
+  <line x1="10" y1="260" x2="40" y2="260" stroke="#3b82f6" stroke-width="2"/>
+  <text x="45" y="264" font-size="11" fill="currentColor" font-family="sans-serif">rotation (order 3)</text>
+  <line x1="180" y1="260" x2="210" y2="260" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="215" y="264" font-size="11" fill="currentColor" font-family="sans-serif">reflection (order 2)</text>
+</svg>

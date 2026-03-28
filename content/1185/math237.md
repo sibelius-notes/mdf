@@ -265,6 +265,8 @@ z = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x - a) + \frac{\partial f}{\part
 
 </div>
 
+![Tangent plane to surface at a point](/static/pics/math237/tangent_plane.png)
+
 ## 5.2 Differentiability and Continuity
 
 The existence of partial derivatives does not imply continuity for \(f : \mathbb{R}^2 \to \mathbb{R}\). However, the stronger condition of differentiability does.
@@ -361,6 +363,8 @@ Choosing \(\hat{\mathbf{u}} = \hat{\mathbf{i}}\) or \(\hat{\mathbf{u}} = \hat{\m
 <strong>Theorem 7.3 (Gradient Orthogonal to Level Curves).</strong> Suppose \(f : \mathbb{R}^2 \to \mathbb{R}\) is differentiable at \(\mathbf{a}\) and \(\nabla f(\mathbf{a}) \neq \mathbf{0}\). Then \(\nabla f(\mathbf{a})\) is orthogonal to the level curve \(f(x,y) = k\) through \(\mathbf{a}\).
 
 </div>
+
+![Gradient vector field with contours](/static/pics/math237/gradient_field.png)
 
 ## 7.3 The Gradient Vector in Three Dimensions
 
@@ -485,6 +489,8 @@ or at least one of \(f_x\) or \(f_y\) does not exist at \((a,b)\).
 <strong>Definition (Saddle Point).</strong> A critical point \((a,b)\) of \(f : \mathbb{R}^2 \to \mathbb{R}\) is a saddle point if in every neighborhood of \((a,b)\) there exist points \((x_1,y_1)\) and \((x_2,y_2)\) with \(f(x_1,y_1) > f(a,b)\) and \(f(x_2,y_2) < f(a,b)\).
 
 </div>
+
+![Saddle point z=x²−y² with level curves](/static/pics/math237/saddle_level.png)
 
 ## 9.2 The Second Derivative Test
 
@@ -839,6 +845,46 @@ For polar coordinates \((x,y) = (r\cos\theta, r\sin\theta)\), the Jacobian is \(
 \[
 \iint_{D_{xy}} H(x,y)\,dx\,dy = \iint_{D_{r\theta}} H(r\cos\theta, r\sin\theta)\,r\,dr\,d\theta.
 \]
+
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="cvArr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="200" y="16" font-size="12" fill="currentColor" text-anchor="middle" font-weight="bold">Change of Variables: Rectangular (r,θ) → Polar (x,y)</text>
+  <!-- Left: r-theta rectangle -->
+  <text x="75" y="36" font-size="11" fill="currentColor" text-anchor="middle">(r, θ) domain</text>
+  <line x1="15" y1="160" x2="140" y2="160" stroke="currentColor" stroke-width="1.2" marker-end="url(#cvArr)"/>
+  <line x1="15" y1="160" x2="15" y2="45" stroke="currentColor" stroke-width="1.2" marker-end="url(#cvArr)"/>
+  <text x="143" y="164" font-size="10" fill="currentColor">r</text>
+  <text x="10" y="42" font-size="10" fill="currentColor">θ</text>
+  <!-- Rectangle r1 to r2, θ1 to θ2 -->
+  <rect x="35" y="70" width="80" height="70" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="75" y="108" font-size="10" fill="#3b82f6" text-anchor="middle">D_rθ</text>
+  <text x="35" y="170" font-size="9" fill="currentColor" text-anchor="middle">r₁</text>
+  <text x="115" y="170" font-size="9" fill="currentColor" text-anchor="middle">r₂</text>
+  <text x="5" y="75" font-size="9" fill="currentColor">θ₂</text>
+  <text x="5" y="143" font-size="9" fill="currentColor">θ₁</text>
+  <!-- Arrow in middle -->
+  <text x="175" y="112" font-size="22" fill="currentColor" text-anchor="middle">→</text>
+  <text x="175" y="130" font-size="9" fill="currentColor" text-anchor="middle">x=r cosθ</text>
+  <text x="175" y="142" font-size="9" fill="currentColor" text-anchor="middle">y=r sinθ</text>
+  <!-- Right: annular sector in xy -->
+  <text x="315" y="36" font-size="11" fill="currentColor" text-anchor="middle">(x, y) domain</text>
+  <line x1="215" y1="160" x2="390" y2="160" stroke="currentColor" stroke-width="1.2" marker-end="url(#cvArr)"/>
+  <line x1="305" y1="185" x2="305" y2="40" stroke="currentColor" stroke-width="1.2" marker-end="url(#cvArr)"/>
+  <text x="393" y="164" font-size="10" fill="currentColor">x</text>
+  <text x="300" y="37" font-size="10" fill="currentColor">y</text>
+  <!-- Annular sector: two arcs from theta1=30° to theta2=80° r1=30px r2=65px -->
+  <path d="M 331 134 A 30 30 0 0 1 305 130 L 305 95 A 65 65 0 0 0 357 113 Z"
+        fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- Better annular sector -->
+  <path d="M 331 134 A 30 30 0 0 1 310 132 L 278 103 A 65 65 0 0 0 357 111 Z"
+        fill="#ef4444" fill-opacity="0.25" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="330" y="120" font-size="10" fill="#ef4444">D_xy</text>
+  <text x="200" y="192" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">Jacobian = r,  so dA = r dr dθ</text>
+</svg>
 
 ---
 

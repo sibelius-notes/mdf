@@ -1,0 +1,30 @@
+<svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
+  <!-- Sphere outline -->
+  <circle cx="150" cy="130" r="110" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.03"/>
+  <!-- Equator (ellipse) -->
+  <ellipse cx="150" cy="130" rx="110" ry="30" stroke="currentColor" stroke-width="1" stroke-dasharray="5,4" fill="none" opacity="0.4"/>
+  <!-- Spherical triangle: three vertices on sphere -->
+  <!-- A top: (150,20), B lower-left: (65,185), C lower-right: (235,185) -->
+  <!-- Great circle arcs approximated as quadratic beziers -->
+  <path d="M 150,20 Q 80,100 65,185" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <path d="M 150,20 Q 220,100 235,185" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <path d="M 65,185 Q 150,215 235,185" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <!-- Spherical triangle fill -->
+  <path d="M 150,20 Q 80,100 65,185 Q 150,215 235,185 Q 220,100 150,20" fill="#3b82f6" fill-opacity="0.08"/>
+  <!-- Vertices -->
+  <circle cx="150" cy="20" r="4" fill="#ef4444"/>
+  <circle cx="65" cy="185" r="4" fill="#ef4444"/>
+  <circle cx="235" cy="185" r="4" fill="#ef4444"/>
+  <!-- Vertex labels -->
+  <text x="154" y="17" font-size="13" fill="#ef4444" font-family="serif" font-style="italic">A</text>
+  <text x="48" y="182" font-size="13" fill="#ef4444" font-family="serif" font-style="italic">B</text>
+  <text x="240" y="182" font-size="13" fill="#ef4444" font-family="serif" font-style="italic">C</text>
+  <!-- Angle labels -->
+  <text x="148" y="38" font-size="12" fill="#22c55e" font-family="serif" font-style="italic">α</text>
+  <text x="74" y="175" font-size="12" fill="#22c55e" font-family="serif" font-style="italic">β</text>
+  <text x="222" y="175" font-size="12" fill="#22c55e" font-family="serif" font-style="italic">γ</text>
+  <!-- Spherical excess label -->
+  <text x="10" y="240" font-size="11" fill="currentColor" font-family="sans-serif">Angle sum: α+β+γ > π</text>
+  <text x="10" y="256" font-size="11" fill="currentColor" font-family="sans-serif">Spherical excess E = α+β+γ − π</text>
+  <text x="10" y="272" font-size="11" fill="currentColor" font-family="sans-serif">Area = R²·E (Girard's theorem)</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arrst" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- Projection plane (horizontal line at y=200) -->
+  <line x1="10" y1="200" x2="310" y2="200" stroke="currentColor" stroke-width="1.5"/>
+  <text x="290" y="195" font-size="11" fill="currentColor" font-family="serif">ℂ</text>
+  <!-- Sphere (circle centered at (160,140) radius 70) -->
+  <circle cx="160" cy="130" r="70" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.04"/>
+  <!-- North pole N at top of sphere: (160, 60) -->
+  <circle cx="160" cy="60" r="4" fill="#ef4444"/>
+  <text x="164" y="55" font-size="12" fill="#ef4444" font-family="serif" font-style="italic">N</text>
+  <!-- South pole (sphere bottom touches plane at y=200) -->
+  <!-- Point P on sphere ~ upper right: (210, 90) -->
+  <circle cx="210" cy="85" r="4" fill="#3b82f6"/>
+  <text x="215" y="82" font-size="12" fill="#3b82f6" font-family="serif" font-style="italic">P</text>
+  <!-- σ(P) on plane: line from N through P extended to y=200 -->
+  <!-- N=(160,60), P=(210,85); parametric: (160+t*50, 60+t*25); at y=200: 60+25t=200 → t=5.6; x=160+5.6*50=440 too far -->
+  <!-- use P=(195,92): t: 60+t*(92-60)=200 → t=140/32=4.375; x=160+4.375*35=313 too far -->
+  <!-- use P=(180,88): t: 60+t*28=200 → t=5; x=160+5*20=260 -->
+  <circle cx="180" cy="88" r="4" fill="#3b82f6"/>
+  <text x="185" y="85" font-size="12" fill="#3b82f6" font-family="serif" font-style="italic">P</text>
+  <!-- projection line from N through P to plane -->
+  <line x1="160" y1="60" x2="260" y2="200" stroke="#3b82f6" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrst)"/>
+  <!-- sigma(P) on plane -->
+  <circle cx="260" cy="200" r="4" fill="#22c55e"/>
+  <text x="264" y="215" font-size="12" fill="#22c55e" font-family="serif">σ(P)</text>
+  <!-- Equator line (dashed) -->
+  <line x1="90" y1="130" x2="230" y2="130" stroke="currentColor" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+  <!-- Label -->
+  <text x="10" y="250" font-size="11" fill="currentColor" font-family="sans-serif">Stereographic projection from N</text>
+</svg>

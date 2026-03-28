@@ -23,6 +23,8 @@ In this course, we will be working over the complex numbers, and all the algebra
 
 ## 2. Algebraic Sets
 
+![Affine variety V(y − x²): parabola in affine plane A²](/pics/pmath464/variety_parabola.png)
+
 <div class="definition">
 <strong>Definition 2.1.</strong> Let \(n\) be a positive integer. <strong>Affine space</strong> \(\mathbb{A}^n\) is the set \(\mathbb{C}^n\).
 </div>
@@ -170,6 +172,37 @@ Over \(\mathbb{C}\), the classification collapses: the circle and hyperbola beco
 
 ## 1. Morphisms
 
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1.5em auto">
+  <text x="200" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Morphism of Varieties: polynomial map φ: X → Y</text>
+  <!-- X variety -->
+  <ellipse cx="90" cy="90" rx="70" ry="55" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="90" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">X ⊂ 𝔸ⁿ</text>
+  <!-- points in X -->
+  <circle cx="70" cy="85" r="3" fill="#3b82f6"/>
+  <circle cx="100" cy="100" r="3" fill="#3b82f6"/>
+  <circle cx="90" cy="110" r="3" fill="#3b82f6"/>
+  <text x="75" y="82" font-size="9" fill="currentColor">P</text>
+  <!-- Y variety -->
+  <ellipse cx="310" cy="90" rx="70" ry="55" fill="none" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="310" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#22c55e">Y ⊂ 𝔸ᵐ</text>
+  <!-- points in Y -->
+  <circle cx="295" cy="85" r="3" fill="#22c55e"/>
+  <circle cx="320" cy="100" r="3" fill="#22c55e"/>
+  <circle cx="308" cy="110" r="3" fill="#22c55e"/>
+  <text x="278" y="82" font-size="9" fill="currentColor">φ(P)</text>
+  <!-- arrows -->
+  <line x1="162" y1="85" x2="238" y2="85" stroke="#ef4444" stroke-width="2" marker-end="url(#mor)"/>
+  <line x1="162" y1="100" x2="238" y2="100" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#mor)"/>
+  <defs>
+    <marker id="mor" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <text x="200" y="76" text-anchor="middle" font-size="11" fill="#ef4444">φ</text>
+  <text x="200" y="125" text-anchor="middle" font-size="10" fill="currentColor">φ = (φ₁,…,φₘ), each φᵢ a polynomial</text>
+  <text x="200" y="145" text-anchor="middle" font-size="10" fill="currentColor">Isomorphism: φ has polynomial inverse g with g∘φ = id</text>
+</svg>
+
 These days, every time mathematicians start a new subject, they define the objects they are interested in, and then immediately define the *relationships* between them. For algebraic sets, those relationships are functions that preserve their algebraic structure.
 
 <div class="definition">
@@ -307,6 +340,27 @@ The local ring captures all the information about a variety near a particular po
 
 ## 1. The Zariski Topology
 
+<svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;display:block;margin:1.5em auto">
+  <text x="230" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Zariski Topology: closed sets = algebraic varieties</text>
+  <!-- ambient space -->
+  <rect x="20" y="24" width="420" height="140" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="230" y="40" text-anchor="middle" font-size="11" fill="currentColor">𝔸² (affine space)</text>
+  <!-- closed sets (varieties) -->
+  <!-- parabola outline -->
+  <path d="M 80 140 Q 150 60 220 140" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="110" y="115" font-size="10" fill="#3b82f6">V(y−x²)</text>
+  <!-- line -->
+  <line x1="250" y1="50" x2="400" y2="150" stroke="#22c55e" stroke-width="2"/>
+  <text x="340" y="80" font-size="10" fill="#22c55e">V(ax+by+c)</text>
+  <!-- point -->
+  <circle cx="300" cy="115" r="4" fill="#ef4444"/>
+  <text x="310" y="112" font-size="10" fill="#ef4444">V(x−a, y−b)</text>
+  <!-- open set label -->
+  <rect x="30" y="50" width="55" height="25" rx="3" fill="#f59e0b20" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="57" y="66" text-anchor="middle" font-size="9" fill="#f59e0b">open set U</text>
+  <text x="230" y="175" text-anchor="middle" font-size="10" fill="currentColor">Closed = V(S); Open = complement; Two opens can't be disjoint (irreducible)</text>
+</svg>
+
 <div class="definition">
 <strong>Definition 0.1.</strong> Let \(V\) be an algebraic variety. A <strong>Zariski closed</strong> subset of \(V\) is an algebraic subset of \(V\). A subset \(U \subset V\) is <strong>Zariski open</strong> if \(V - U\) is Zariski closed.
 </div>
@@ -344,6 +398,36 @@ An interesting consequence: for \(U = \mathbb{A}^2 - \{(0,0)\}\), we have \(\Gam
 ## 3. Blow-Ups and Desingularization
 
 One of the most beautiful constructions in algebraic geometry is the **blow-up**, which replaces a point by all the directions through it, effectively "untangling" curves that cross at a singularity.
+
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Blow-Up: replace singular point with all directions (ℙ¹)</text>
+  <!-- original: node at origin -->
+  <text x="100" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">X (singular)</text>
+  <!-- two branches crossing at origin -->
+  <line x1="40" y1="160" x2="160" y2="50" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="40" y1="50" x2="160" y2="160" stroke="#22c55e" stroke-width="2"/>
+  <!-- node point -->
+  <circle cx="100" cy="105" r="6" fill="#ef4444"/>
+  <text x="112" y="103" font-size="10" fill="#ef4444">node</text>
+  <!-- arrow -->
+  <line x1="175" y1="105" x2="255" y2="105" stroke="currentColor" stroke-width="1.5" marker-end="url(#bu)"/>
+  <text x="215" y="98" text-anchor="middle" font-size="10" fill="currentColor">blow-up</text>
+  <defs>
+    <marker id="bu" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- blown-up variety -->
+  <text x="370" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">X̃ (smooth)</text>
+  <!-- two branches now separated -->
+  <line x1="310" y1="160" x2="430" y2="70" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="310" y1="60" x2="430" y2="155" stroke="#22c55e" stroke-width="2"/>
+  <!-- exceptional divisor (P^1) -->
+  <line x1="330" y1="100" x2="420" y2="100" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="375" y="92" text-anchor="middle" font-size="10" fill="#ef4444">E ≅ ℙ¹</text>
+  <!-- labels for branches -->
+  <text x="240" y="170" text-anchor="middle" font-size="10" fill="currentColor">Node separated; exceptional divisor E replaces origin</text>
+</svg>
 
 <div class="definition">
 <strong>Definition 0.8.</strong> Let \(a \in \mathbb{A}^n\). The <strong>blow-up of \(\mathbb{A}^n\) at \(a\)</strong> is the graph of the projection from \(a\) to a hyperplane. Concretely, for \(a = (0,0)\) in \(\mathbb{A}^2\), the projection to the line \(x = 1\) is \(g(x,y) = y/x\), and the blow-up is the closure of its graph:

@@ -12,7 +12,36 @@ But this is not an end in itself. The deeper goal is to develop an **infinitary*
 
 ### Building the Natural Numbers as Sets
 
-We begin with two **undefined notions**: the notion of a **set**, and the binary relation of **membership**, written \(x \in y\). Intuitively a set is a collection of objects, but we leave this informal; what matters is that sets and membership are the raw material from which everything else is built.
+We begin with two **undefined notions**: the notion of a **set**, and the binary relation of **membership**, written \(x \in y\).
+
+<svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Von Neumann Ordinals: each n = set of all smaller ordinals</text>
+  <!-- 0 = ∅ -->
+  <rect x="10" y="30" width="60" height="50" rx="4" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="40" y="54" text-anchor="middle" font-size="20" fill="currentColor">∅</text>
+  <text x="40" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">0</text>
+  <!-- 1 = {∅} -->
+  <rect x="90" y="24" width="80" height="62" rx="4" fill="none" stroke="#22c55e" stroke-width="1.8"/>
+  <rect x="102" y="36" width="56" height="38" rx="3" fill="none" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="130" y="59" text-anchor="middle" font-size="16" fill="currentColor">∅</text>
+  <text x="130" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#22c55e">1 = {∅}</text>
+  <!-- 2 = {∅,{∅}} -->
+  <rect x="185" y="18" width="120" height="72" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <rect x="196" y="28" width="44" height="30" rx="3" fill="none" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="218" y="47" text-anchor="middle" font-size="13" fill="currentColor">∅</text>
+  <rect x="248" y="28" width="46" height="30" rx="3" fill="none" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="271" y="47" text-anchor="middle" font-size="10" fill="currentColor">{∅}</text>
+  <text x="245" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">2 = {∅, {∅}}</text>
+  <!-- 3 -->
+  <rect x="320" y="12" width="150" height="80" rx="4" fill="none" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="395" y="52" text-anchor="middle" font-size="10" fill="currentColor">{∅, {∅}, {∅,{∅}}}</text>
+  <text x="395" y="102" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">3</text>
+  <!-- arrow labels -->
+  <text x="75" y="56" font-size="14" fill="currentColor">⊂</text>
+  <text x="174" y="54" font-size="14" fill="currentColor">⊂</text>
+  <text x="309" y="54" font-size="14" fill="currentColor">⊂</text>
+  <text x="240" y="128" text-anchor="middle" font-size="10" fill="currentColor">S(n) = n ∪ {n};  each ordinal is a set of all smaller ordinals</text>
+</svg> Intuitively a set is a collection of objects, but we leave this informal; what matters is that sets and membership are the raw material from which everything else is built.
 
 With these notions in hand we can already sketch the construction. We define
 
@@ -194,7 +223,39 @@ Note how striking part (b) is: the elements of any natural number are also subse
 
 ### Strict Partial Orderings and Well-Orderings
 
-Before we can describe the ordering on \(\omega\) induced by membership, we pause to fix the relevant definitions. A **strict partial ordering** on a set \(E\) is a binary relation \(R\) satisfying:
+Before we can describe the ordering on \(\omega\) induced by membership, we pause to fix the relevant definitions.
+
+<svg viewBox="0 0 440 130" xmlns="http://www.w3.org/2000/svg" style="max-width:440px;display:block;margin:1.5em auto">
+  <text x="220" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Well-Ordering: every non-empty subset has a least element</text>
+  <!-- number line -->
+  <line x1="30" y1="70" x2="410" y2="70" stroke="currentColor" stroke-width="1.5" marker-end="url(#wo)"/>
+  <defs>
+    <marker id="wo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- elements -->
+  <circle cx="60" cy="70" r="5" fill="#3b82f6"/>
+  <circle cx="130" cy="70" r="5" fill="#3b82f6"/>
+  <circle cx="200" cy="70" r="5" fill="#3b82f6"/>
+  <circle cx="270" cy="70" r="5" fill="#3b82f6"/>
+  <circle cx="340" cy="70" r="5" fill="#3b82f6"/>
+  <text x="60" y="90" text-anchor="middle" font-size="11" fill="currentColor">a₁</text>
+  <text x="130" y="90" text-anchor="middle" font-size="11" fill="currentColor">a₂</text>
+  <text x="200" y="90" text-anchor="middle" font-size="11" fill="currentColor">a₃</text>
+  <text x="270" y="90" text-anchor="middle" font-size="11" fill="currentColor">a₄</text>
+  <text x="340" y="90" text-anchor="middle" font-size="11" fill="currentColor">⋯</text>
+  <!-- highlight least element -->
+  <circle cx="60" cy="70" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="50" text-anchor="middle" font-size="10" fill="#ef4444">min</text>
+  <line x1="60" y1="55" x2="60" y2="63" stroke="#ef4444" stroke-width="1.2" marker-end="url(#wo2)"/>
+  <defs>
+    <marker id="wo2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <text x="220" y="120" text-anchor="middle" font-size="10" fill="currentColor">Linear order  +  every non-empty subset has a least element = well-ordering</text>
+</svg> A **strict partial ordering** on a set \(E\) is a binary relation \(R\) satisfying:
 
 1. *Antireflexivity*: \(\neg(x R x)\) for all \(x \in E\).
 2. *Antisymmetry*: if \(x R y\) and \(y R x\) then \(x = y\).
@@ -411,7 +472,50 @@ The second form is more concrete: to define a definite operation on ordinals, on
 
 ## Ordinal Arithmetic
 
-Last time we established transfinite recursion; today we put it to work. The goal is to extend the familiar arithmetic operations — addition, multiplication, exponentiation — from the natural numbers to all ordinals. The guiding principle in each case is the same: at successors we apply the natural "next step" rule, and at limit ordinals we take the supremum of all previously computed values.
+Last time we established transfinite recursion; today we put it to work.
+
+<svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <text x="250" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">Ordinal Number Line: ω, ω+1, ω+2, … , ω·2, …</text>
+  <!-- axis -->
+  <line x1="10" y1="55" x2="490" y2="55" stroke="currentColor" stroke-width="1.2" marker-end="url(#oa)"/>
+  <defs>
+    <marker id="oa" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <!-- finite ordinals -->
+  <text x="15" y="48" font-size="10" fill="currentColor">0</text>
+  <line x1="15" y1="50" x2="15" y2="60" stroke="currentColor" stroke-width="1"/>
+  <text x="40" y="48" font-size="10" fill="currentColor">1</text>
+  <line x1="40" y1="50" x2="40" y2="60" stroke="currentColor" stroke-width="1"/>
+  <text x="65" y="48" font-size="10" fill="currentColor">2</text>
+  <line x1="65" y1="50" x2="65" y2="60" stroke="currentColor" stroke-width="1"/>
+  <text x="88" y="48" font-size="10" fill="currentColor">⋯</text>
+  <!-- omega -->
+  <line x1="130" y1="44" x2="130" y2="66" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b82f6">ω</text>
+  <!-- omega+1, +2 -->
+  <line x1="160" y1="50" x2="160" y2="60" stroke="#3b82f6" stroke-width="1"/>
+  <text x="160" y="45" text-anchor="middle" font-size="9" fill="#3b82f6">ω+1</text>
+  <line x1="190" y1="50" x2="190" y2="60" stroke="#3b82f6" stroke-width="1"/>
+  <text x="190" y="45" text-anchor="middle" font-size="9" fill="#3b82f6">ω+2</text>
+  <text x="218" y="48" font-size="10" fill="currentColor">⋯</text>
+  <!-- omega*2 -->
+  <line x1="260" y1="44" x2="260" y2="66" stroke="#22c55e" stroke-width="2"/>
+  <text x="260" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="#22c55e">ω·2</text>
+  <!-- omega*2+1, +2 -->
+  <line x1="290" y1="50" x2="290" y2="60" stroke="#22c55e" stroke-width="1"/>
+  <text x="296" y="45" font-size="9" fill="#22c55e">ω·2+1</text>
+  <text x="340" y="48" font-size="10" fill="currentColor">⋯</text>
+  <!-- omega*3 -->
+  <line x1="380" y1="44" x2="380" y2="66" stroke="#ef4444" stroke-width="2"/>
+  <text x="380" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#ef4444">ω·3</text>
+  <text x="415" y="48" font-size="10" fill="currentColor">⋯</text>
+  <!-- omega^2 -->
+  <line x1="460" y1="44" x2="460" y2="66" stroke="#f59e0b" stroke-width="2"/>
+  <text x="460" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">ω²</text>
+  <text x="250" y="88" text-anchor="middle" font-size="10" fill="currentColor">1+ω = ω  (not commutative!),  but ω+1 ≠ ω</text>
+</svg> The goal is to extend the familiar arithmetic operations — addition, multiplication, exponentiation — from the natural numbers to all ordinals. The guiding principle in each case is the same: at successors we apply the natural "next step" rule, and at limit ordinals we take the supremum of all previously computed values.
 
 ### Ordinal Addition
 

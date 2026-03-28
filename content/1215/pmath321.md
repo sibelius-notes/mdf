@@ -193,6 +193,10 @@ Beyond the basic metric properties of triangles, classical Euclidean geometry is
 
 The Euler line is a striking example of how the basic metric structure of a triangle coerces several independently defined points into a single line. The incentre, defined by angle bisectors rather than side bisectors, does not generally lie on the Euler line.
 
+![Triangle with centroid G (blue), circumcenter O (green), incenter I (red), orthocenter H (orange) marked](/static/pics/pmath321/triangle-centers.svg)
+
+![Euler line: H (orthocenter), G (centroid), O (circumcenter) are collinear with HG:GO = 2:1](/static/pics/pmath321/euler-line.svg)
+
 <div class="theorem"><strong>Theorem 1.70 (Incentre):</strong> The three internal angle bisectors of a triangle meet at the incentre \(i\), which is equidistant from all three sides. It is the centre of the inscribed circle.</div>
 
 ## 1.5 Isometries of Euclidean Space
@@ -227,6 +231,8 @@ The isometries of the plane are:
 - **Glide reflection**: \(G_{u,L} = T_u \circ F_L = F_L \circ T_u\) when \(L\) is parallel to \(u\).
 
 Translations, rotations preserve orientation; reflections, glide reflections reverse it.
+
+![Four isometries of ℝ²: rotation, reflection, translation, and glide reflection (blue = original, red dashed = image)](/static/pics/pmath321/isometries.svg)
 
 The next theorem reveals that reflections are in some sense the "atoms" of planar isometries — every isometry is a product of reflections. Understanding how reflections compose gives us all the others.
 
@@ -333,6 +339,8 @@ This quantity \(\alpha + \beta + \gamma - \pi > 0\) is the spherical excess of t
 
 This is one of the most beautiful theorems in geometry: the area of a spherical triangle is completely determined by its angle sum, with no reference to side lengths.
 
+![Spherical triangle on S²: vertices A, B, C with angles α, β, γ > corresponding flat angles; angle sum α+β+γ > π](/static/pics/pmath321/spherical-triangle.svg)
+
 The next construction introduces a remarkable symmetry unique to spherical geometry: the polar triangle, which swaps the roles of sides and angles.
 
 <div class="definition"><strong>Definition 2.19 (Polar Triangle):</strong> For an ordered triangle \([\mathbf{u},\mathbf{v},\mathbf{w}]\), the polar triangle is \([\mathbf{u}', \mathbf{v}', \mathbf{w}']\) where
@@ -412,6 +420,8 @@ No single projection can faithfully represent all properties of the sphere on a 
 This is why the gnomonic projection is used in navigation charts where straight-line paths represent great-circle routes.
 
 **Stereographic Projection:** The map \(\phi: S^2 \setminus \{(0,0,1)\} \to \mathbb{R}^2\) given by projecting through the north pole \((0,0,1)\) to the equatorial plane \(z=0\):
+
+![Stereographic projection: from north pole N, point P on sphere maps to σ(P) on the equatorial plane ℂ](/static/pics/pmath321/stereographic-projection.svg)
 \[ \phi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right), \qquad \psi(u,v) = \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1}\right). \]
 
 <div class="theorem"><strong>Theorem 2.54:</strong> The inverse stereographic projection \(\psi: \mathbb{R}^2 \to S^2\) is a local scaling near \((u,v)\) of scaling factor \(c = \frac{2}{u^2+v^2+1}\). In particular, stereographic projection is conformal (angle-preserving).</div>
@@ -446,6 +456,8 @@ We can identify \(\mathbb{P}^2\) with the set of antipodal pairs \(\{\pm\mathbf{
 </ol></div>
 
 The key contrast with Euclidean geometry: in \(\mathbb{P}^2\), any two distinct lines always meet. There are no parallels. This is because "parallel" Euclidean lines meet at their common point at infinity.
+
+![Projective plane: parallel lines (railway tracks) converge to a point at infinity P_∞ on the line at infinity](/static/pics/pmath321/projective-infinity.svg)
 
 <div class="theorem"><strong>Theorem 3.15 (Isometries of \(\mathbb{P}^2\)):</strong> Every isometry of \(\mathbb{P}^2\) is induced by a rotation \(R_{p,\theta}\) for some \(p \in S^2\), \(\theta \in \mathbb{R}\). The isometry group of \(\mathbb{P}^2\) is
 \[ SO(3, \mathbb{R}) = \left\{ A \in M_3(\mathbb{R}) \mid A^T A = I,\, \det A = 1 \right\}. \]</div>

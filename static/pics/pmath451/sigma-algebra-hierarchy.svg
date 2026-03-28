@@ -1,0 +1,22 @@
+<svg viewBox="0 0 380 240" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;display:block;margin:1.5em auto">
+  <!-- Nested ovals: Lebesgue (outermost) → Borel → σ(F) → F -->
+  <!-- Lebesgue measurable (largest) -->
+  <ellipse cx="190" cy="120" rx="175" ry="100" stroke="#22c55e" stroke-width="2" fill="#22c55e" fill-opacity="0.04"/>
+  <text x="20" y="35" font-size="12" fill="#22c55e" font-family="sans-serif">Lebesgue measurable sets</text>
+
+  <!-- Borel σ-algebra -->
+  <ellipse cx="190" cy="125" rx="135" ry="78" stroke="#3b82f6" stroke-width="2" fill="#3b82f6" fill-opacity="0.05"/>
+  <text x="75" y="55" font-size="12" fill="#3b82f6" font-family="sans-serif">Borel σ-algebra ℬ</text>
+
+  <!-- σ(F) generated sigma-algebra -->
+  <ellipse cx="190" cy="130" rx="95" ry="56" stroke="#ef4444" stroke-width="1.8" fill="#ef4444" fill-opacity="0.06"/>
+  <text x="118" y="82" font-size="12" fill="#ef4444" font-family="sans-serif">σ(ℱ)</text>
+
+  <!-- F (base collection) -->
+  <ellipse cx="190" cy="133" rx="55" ry="33" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.07"/>
+  <text x="173" y="137" font-size="13" fill="currentColor" font-family="sans-serif">ℱ</text>
+
+  <!-- Labels on right -->
+  <text x="255" y="115" font-size="11" fill="currentColor" font-family="sans-serif">⊆</text>
+  <text x="210" y="200" font-size="11" fill="currentColor" font-family="sans-serif">ℱ ⊆ σ(ℱ) ⊆ ℬ ⊆ Lebesgue</text>
+</svg>

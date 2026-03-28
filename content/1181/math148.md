@@ -139,6 +139,8 @@ The integral inherits the expected algebraic and order properties directly from 
 
 The Fundamental Theorem is the central result of calculus: it says that differentiation and integration are inverse operations. We prove both parts with full rigour.
 
+![FTC: F'(x)=f(x) and area under curve equals F(b)−F(a)](/pics/math148/ftc.png)
+
 <div class="definition">
 
 <strong>Definition 1.13 (Accumulation Function).</strong> If \(f\) is integrable on \([a,b]\), the <em>accumulation function</em> of \(f\) based at \(a\) is
@@ -289,6 +291,8 @@ Not every convergent improper integral converges because the integrand is eventu
 A function like \(f(x) = \sin(x)/x\) on \([1,\infty)\) converges conditionally but not absolutely: the oscillation provides cancellation that the absolute value destroys. This parallels the series distinction between absolute and conditional convergence.
 
 ## 3.3 Comparison Tests
+
+![Comparison test: 0 ≤ f(x) ≤ g(x), f converges while g diverges](/pics/math148/comparison_test.png)
 
 <div class="theorem">
 

@@ -548,6 +548,48 @@ A DTMC is <strong>irreducible</strong> if all states communicate (i.e., there is
 
 Communication is an equivalence relation (reflexive, symmetric, transitive), so it partitions the state space into **communication classes**. A practical tool for finding classes is the **state transition diagram**, where a directed arrow connects \(i\) to \(j\) whenever \(p_{ij} > 0\).
 
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1.5em auto">
+  <!-- State 1 -->
+  <circle cx="80" cy="100" r="30" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="2"/>
+  <text x="80" y="96" text-anchor="middle" font-size="14" fill="currentColor" font-weight="600">1</text>
+  <text x="80" y="114" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">State 1</text>
+  <!-- State 2 -->
+  <circle cx="210" cy="40" r="30" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="2"/>
+  <text x="210" y="36" text-anchor="middle" font-size="14" fill="currentColor" font-weight="600">2</text>
+  <text x="210" y="54" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">State 2</text>
+  <!-- State 3 -->
+  <circle cx="210" cy="160" r="30" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+  <text x="210" y="156" text-anchor="middle" font-size="14" fill="currentColor" font-weight="600">3</text>
+  <text x="210" y="174" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">State 3</text>
+  <!-- 1→2 -->
+  <path d="M 104 82 Q 155 30 182 42" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="138" y="48" font-size="10" fill="#3b82f6" text-anchor="middle">0.4</text>
+  <!-- 1→3 -->
+  <path d="M 104 118 Q 155 170 182 158" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="138" y="158" font-size="10" fill="#3b82f6" text-anchor="middle">0.3</text>
+  <!-- 1→1 self-loop -->
+  <path d="M 55 80 Q 20 50 55 72" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="30" y="62" font-size="10" fill="#3b82f6" text-anchor="middle">0.3</text>
+  <!-- 2→1 -->
+  <path d="M 187 52 Q 150 60 108 88" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="150" y="80" font-size="10" fill="#22c55e" text-anchor="middle">0.5</text>
+  <!-- 2→3 -->
+  <path d="M 210 70 L 210 130" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="222" y="105" font-size="10" fill="#22c55e" text-anchor="middle">0.5</text>
+  <!-- 3→1 -->
+  <path d="M 185 148 Q 140 130 107 112" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="148" y="142" font-size="10" fill="#ef4444" text-anchor="middle">0.7</text>
+  <!-- 3→3 self-loop -->
+  <path d="M 235 145 Q 265 120 240 138" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="268" y="134" font-size="10" fill="#ef4444" text-anchor="middle">0.3</text>
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" opacity="0.7"/>
+    </marker>
+  </defs>
+</svg>
+
 <div class="definition">
 <strong>Proof that communication is an equivalence relation.</strong>
 <ul>
@@ -608,6 +650,46 @@ State \(i\) is <strong>recurrent</strong> if \(f_{ii} = 1\) (the chain returns t
 
 State \(i\) is <strong>transient</strong> if \(f_{ii} < 1\) (there is positive probability of never returning).
 </div>
+
+<svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" opacity="0.75"/>
+    </marker>
+  </defs>
+  <!-- Recurrent class (closed) -->
+  <rect x="10" y="20" width="200" height="140" rx="10" fill="#3b82f6" fill-opacity="0.07" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="110" y="15" text-anchor="middle" font-size="11" fill="#3b82f6">Recurrent class (closed)</text>
+  <!-- R1 -->
+  <circle cx="60" cy="90" r="25" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="95" text-anchor="middle" font-size="13" fill="currentColor" font-weight="600">R₁</text>
+  <!-- R2 -->
+  <circle cx="155" cy="90" r="25" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-width="2"/>
+  <text x="155" y="95" text-anchor="middle" font-size="13" fill="currentColor" font-weight="600">R₂</text>
+  <!-- R1↔R2 -->
+  <path d="M 85 82 L 130 82" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" opacity="0.7"/>
+  <path d="M 130 98 L 85 98" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" opacity="0.7"/>
+  <!-- R1 self-loop -->
+  <path d="M 42 66 Q 20 40 46 62" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" opacity="0.7"/>
+  <!-- Transient states -->
+  <text x="390" y="15" text-anchor="middle" font-size="11" fill="#ef4444">Transient states</text>
+  <!-- T1 -->
+  <circle cx="310" cy="60" r="25" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4,2"/>
+  <text x="310" y="65" text-anchor="middle" font-size="13" fill="currentColor" font-weight="600">T₁</text>
+  <!-- T2 -->
+  <circle cx="390" cy="120" r="25" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4,2"/>
+  <text x="390" y="125" text-anchor="middle" font-size="13" fill="currentColor" font-weight="600">T₂</text>
+  <!-- T1→T2 -->
+  <path d="M 328 74 L 373 107" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" opacity="0.7"/>
+  <!-- T1→R1 (eventually absorbed) -->
+  <path d="M 286 62 Q 210 60 182 80" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" stroke-dasharray="5,2" opacity="0.6"/>
+  <text x="238" y="52" font-size="10" fill="currentColor" opacity="0.6">absorbed</text>
+  <!-- T2→R1 -->
+  <path d="M 367 132 Q 280 155 185 108" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr2)" stroke-dasharray="5,2" opacity="0.6"/>
+  <!-- T escape arrow (leaves) -->
+  <path d="M 413 112 L 475 95" stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr2)" opacity="0.5"/>
+  <text x="470" y="90" font-size="9" fill="currentColor" opacity="0.5">escape</text>
+</svg>
 
 An equivalent characterisation using the expected number of returns \(M_i = \sum_{n=1}^\infty \mathbf{1}[X_n = i]\) (counting visits to \(i\), not including time 0):
 \[
@@ -733,6 +815,56 @@ in the sense that the expected fraction converges to \(\pi_j\). This follows bec
 ### 3.4.1 The Galton–Watson Branching Process
 
 The **Galton–Watson branching process** models population growth over discrete generations. Let \(X_n\) denote the size of generation \(n\). Each individual in generation \(n\) independently produces offspring according to a common distribution \(\{\alpha_m\}_{m \geq 0}\) (where \(\alpha_m = P(\text{number of offspring} = m)\)).
+
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" opacity="0.6"/>
+    </marker>
+  </defs>
+  <!-- Gen 0 label -->
+  <text x="20" y="52" font-size="10" fill="currentColor" opacity="0.5">Gen 0</text>
+  <text x="20" y="112" font-size="10" fill="currentColor" opacity="0.5">Gen 1</text>
+  <text x="20" y="182" font-size="10" fill="currentColor" opacity="0.5">Gen 2</text>
+  <text x="20" y="252" font-size="10" fill="currentColor" opacity="0.5">Gen 3</text>
+  <!-- Gen 0: 1 node -->
+  <circle cx="240" cy="40" r="16" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="45" text-anchor="middle" font-size="12" fill="currentColor" font-weight="600">Z₀</text>
+  <!-- Gen 0 → Gen 1 -->
+  <line x1="230" y1="56" x2="155" y2="94" stroke="currentColor" stroke-width="1.2" opacity="0.5" marker-end="url(#arr3)"/>
+  <line x1="240" y1="56" x2="240" y2="94" stroke="currentColor" stroke-width="1.2" opacity="0.5" marker-end="url(#arr3)"/>
+  <line x1="250" y1="56" x2="325" y2="94" stroke="currentColor" stroke-width="1.2" opacity="0.5" marker-end="url(#arr3)"/>
+  <!-- Gen 1: 3 nodes -->
+  <circle cx="150" cy="108" r="14" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="150" y="113" text-anchor="middle" font-size="11" fill="currentColor">Z₁</text>
+  <circle cx="240" cy="108" r="14" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="240" y="113" text-anchor="middle" font-size="11" fill="currentColor">Z₂</text>
+  <circle cx="330" cy="108" r="14" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="330" y="113" text-anchor="middle" font-size="11" fill="currentColor">Z₃</text>
+  <!-- Gen 1 → Gen 2: Z1 has 2 children, Z2 has 0, Z3 has 3 -->
+  <line x1="143" y1="122" x2="105" y2="162" stroke="currentColor" stroke-width="1.1" opacity="0.5" marker-end="url(#arr3)"/>
+  <line x1="157" y1="122" x2="180" y2="162" stroke="currentColor" stroke-width="1.1" opacity="0.5" marker-end="url(#arr3)"/>
+  <!-- Z2: 0 children — dashed cross -->
+  <text x="240" y="152" text-anchor="middle" font-size="10" fill="#ef4444" opacity="0.7">∅</text>
+  <line x1="323" y1="122" x2="270" y2="162" stroke="currentColor" stroke-width="1.1" opacity="0.5" marker-end="url(#arr3)"/>
+  <line x1="330" y1="122" x2="330" y2="162" stroke="currentColor" stroke-width="1.1" opacity="0.5" marker-end="url(#arr3)"/>
+  <line x1="337" y1="122" x2="390" y2="162" stroke="currentColor" stroke-width="1.1" opacity="0.5" marker-end="url(#arr3)"/>
+  <!-- Gen 2: 5 nodes -->
+  <circle cx="100" cy="175" r="12" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="185" cy="175" r="12" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="265" cy="175" r="12" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="330" cy="175" r="12" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="395" cy="175" r="12" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- Gen 3 dots (abbreviated) -->
+  <text x="100" y="250" text-anchor="middle" font-size="18" fill="currentColor" opacity="0.35">⋮</text>
+  <text x="185" y="250" text-anchor="middle" font-size="18" fill="currentColor" opacity="0.35">⋮</text>
+  <text x="330" y="250" text-anchor="middle" font-size="18" fill="currentColor" opacity="0.35">⋮</text>
+  <text x="395" y="250" text-anchor="middle" font-size="18" fill="currentColor" opacity="0.35">⋮</text>
+  <!-- X values -->
+  <text x="440" y="45" font-size="10" fill="#3b82f6" opacity="0.7">X₀=1</text>
+  <text x="440" y="112" font-size="10" fill="#22c55e" opacity="0.7">X₁=3</text>
+  <text x="440" y="178" font-size="10" fill="#ef4444" opacity="0.7">X₂=5</text>
+</svg>
 
 The dynamics are:
 \[
@@ -995,6 +1127,8 @@ N(t) \sim \text{Poisson}(\lambda t),
 i.e., \(P(N(t) = n) = \frac{(\lambda t)^n e^{-\lambda t}}{n!}\). More generally, \(N(s+t) - N(s) \sim \text{Poisson}(\lambda t)\) for any \(s \geq 0\).
 
 *Proof sketch.* Let \(\phi(t) = E[e^{u N(t)}]\) be the MGF of \(N(t)\) in the parameter \(u\). Using independent increments and the infinitesimal conditions, one derives the ODE \(\phi'(t) = \lambda(e^u - 1)\phi(t)\) with \(\phi(0) = 1\). The solution is \(\phi(t) = e^{\lambda t(e^u - 1)}\), which is the MGF of \(\text{Poisson}(\lambda t)\).
+
+![Poisson process: inter-arrival times and counting process N(t)](/pics/stat333/poisson_process.png)
 
 ### Inter-Arrival and Arrival Times
 
