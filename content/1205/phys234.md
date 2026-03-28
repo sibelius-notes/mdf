@@ -1,5 +1,5 @@
 ---
-title: "PHYS 234: Introduction to Quantum Mechanics"
+title: "PHYS 234: Quantum Physics 1: Introduction to Quantum Mechanics"
 prof: "Raffi Budakian"
 ---
 
