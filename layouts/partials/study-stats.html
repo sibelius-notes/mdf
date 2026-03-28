@@ -1,0 +1,36 @@
+{{- /* Study time uses prose at 180 wpm, then adds overhead for inline/display math and LaTeX command density. */ -}}
+{{- $raw := .RawContent -}}
+{{- $plain := .Plain -}}
+{{- $inlinePattern := `(?s)\\\(.*?\\\)` -}}
+{{- $displayPattern := `(?s)\\\[.*?\\\]` -}}
+{{- $envPattern := `(?s)\\begin\{[A-Za-z*]+\}.*?\\end\{[A-Za-z*]+\}` -}}
+
+{{- $inlineMatches := findRE $inlinePattern $raw -}}
+{{- $displayMatches := findRE $displayPattern $raw -}}
+{{- $rawWithoutDelimitedMath := replaceRE $displayPattern " " (replaceRE $inlinePattern " " $raw) -}}
+{{- $envMatches := findRE $envPattern $rawWithoutDelimitedMath -}}
+
+{{- $plainWithoutInlineMath := replaceRE $inlinePattern " " $plain -}}
+{{- $plainWithoutDisplayMath := replaceRE $displayPattern " " $plainWithoutInlineMath -}}
+{{- $prosePlain := replaceRE $envPattern " " $plainWithoutDisplayMath -}}
+
+{{- $mathContent := delimit (append (append $inlineMatches $displayMatches) $envMatches) " " -}}
+{{- $proseWords := countwords $prosePlain -}}
+{{- $inlineEquations := len $inlineMatches -}}
+{{- $displayEquations := add (len $displayMatches) (len $envMatches) -}}
+{{- $mathCommands := len (findRE `\\[A-Za-z]+` $mathContent) -}}
+
+{{- $proseSeconds := mul $proseWords 20 -}}
+{{- $inlineSeconds := mul $inlineEquations 2 -}}
+{{- $displaySeconds := mul $displayEquations 20 -}}
+{{- $commandSeconds := div $mathCommands 2 -}}
+{{- $studySeconds := add (add $proseSeconds $inlineSeconds) (add $displaySeconds $commandSeconds) -}}
+{{- $studyMinutes := div (add $studySeconds 59) 60 -}}
+
+{{- return (dict
+  "display_equations" $displayEquations
+  "inline_equations" $inlineEquations
+  "math_commands" $mathCommands
+  "minutes" $studyMinutes
+  "prose_words" $proseWords
+) -}}

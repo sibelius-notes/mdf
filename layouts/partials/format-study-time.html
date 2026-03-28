@@ -1,0 +1,34 @@
+{{- $minutes := .minutes -}}
+{{- $style := default "short" .style -}}
+{{- if eq $style "total" -}}
+  {{- $days := div (add $minutes 1439) 1440 -}}
+  {{- $years := div $days 365 -}}
+  {{- $remainingDays := mod $days 365 -}}
+  {{- $months := div $remainingDays 30 -}}
+  {{- $daysRemainder := mod $remainingDays 30 -}}
+  {{- if gt $years 0 -}}
+    {{- $years }} year{{ if ne $years 1 }}s{{ end -}}
+  {{- end -}}
+  {{- if gt $months 0 -}}
+    {{- if gt $years 0 }}, {{ end -}}
+    {{- $months }} month{{ if ne $months 1 }}s{{ end -}}
+  {{- end -}}
+  {{- if gt $daysRemainder 0 -}}
+    {{- if or (gt $years 0) (gt $months 0) }}, {{ end -}}
+    {{- $daysRemainder }} day{{ if ne $daysRemainder 1 }}s{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- if lt $minutes 1 -}}
+    less than 1 minute
+  {{- else if ge $minutes 1440 -}}
+    {{- $days := div $minutes 1440 -}}
+    {{- $hours := div (mod $minutes 1440) 60 -}}
+    {{- $days }} day{{ if ne $days 1 }}s{{ end }}{{ if gt $hours 0 }} {{ $hours }} hr{{ end -}}
+  {{- else if ge $minutes 60 -}}
+    {{- $hours := div $minutes 60 -}}
+    {{- $mins := mod $minutes 60 -}}
+    {{- $hours }} hr{{ if gt $mins 0 }} {{ $mins }} min{{ end -}}
+  {{- else -}}
+    {{- $minutes }} minute{{ if ne $minutes 1 }}s{{ end -}}
+  {{- end -}}
+{{- end -}}
