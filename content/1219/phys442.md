@@ -213,6 +213,130 @@ d = \frac{1}{\kappa} \approx \sqrt{\frac{2}{\mu\sigma\omega}}
 
 (for good conductors where \(\sigma \gg \omega\varepsilon\)). High-frequency fields are excluded from a good conductor — they penetrate only a skin depth before being absorbed. For copper at 60 Hz, \(d \approx 8.5\ \text{mm}\); at 10 GHz, \(d \approx 0.66\ \mu\text{m}\). This is why RF shielding works.
 
+### Oblique Incidence: s and p Polarization
+
+The normal-incidence Fresnel equations above are a special case of a richer story. At oblique incidence, the plane containing the wave vector and the surface normal — the **plane of incidence** — breaks the symmetry between the two transverse polarization directions. Boundary conditions treat these two directions differently, and the reflection and transmission amplitudes depend on which polarization you consider.
+
+**s-polarization** (from *senkrecht*, German for perpendicular; also called TE) has \(\mathbf{E}\) perpendicular to the plane of incidence. **p-polarization** (parallel; also TM) has \(\mathbf{E}\) in the plane of incidence. Any incident wave is a superposition of these two, and they can be handled independently.
+
+Define the auxiliary ratios
+
+\[
+\alpha = \frac{\cos\theta_T}{\cos\theta_I} = \frac{\sqrt{1 - (n_1/n_2)^2 \sin^2\theta_I}}{\cos\theta_I}, \qquad \beta = \frac{\mu_1 v_1}{\mu_2 v_2} \approx \frac{n_2}{n_1}
+\]
+
+where Snell's law \(n_1\sin\theta_I = n_2\sin\theta_T\) has been used to eliminate \(\theta_T\). The **Fresnel equations for s-polarization** are:
+
+\[
+\frac{\tilde{E}_{R,0}}{\tilde{E}_{I,0}} = \frac{1 - \alpha\beta}{1 + \alpha\beta}, \qquad \frac{\tilde{E}_{T,0}}{\tilde{E}_{I,0}} = \frac{2}{1 + \alpha\beta}.
+\]
+
+The **Fresnel equations for p-polarization** are:
+
+\[
+\frac{\tilde{E}_{R,0}}{\tilde{E}_{I,0}} = \frac{\alpha - \beta}{\alpha + \beta}, \qquad \frac{\tilde{E}_{T,0}}{\tilde{E}_{I,0}} = \frac{2}{\alpha + \beta}.
+\]
+
+At normal incidence \(\theta_I = 0\), both cases give \(\alpha = 1\) and reduce to the familiar forms derived earlier. One can verify that \(R + T = 1\) in both cases, as required by energy conservation, where \(T = \alpha\beta|E_{T,0}/E_{I,0}|^2\) for s-polarization and \(T = \beta|E_{T,0}/E_{I,0}|^2\alpha\) for p-polarization.
+
+**Brewster's angle** for p-polarization occurs where \(\alpha = \beta\), making the reflected amplitude vanish. For non-magnetic media where \(\mu_1 = \mu_2 = \mu_0\), the condition \(\beta = n_2/n_1\) yields
+
+\[
+\theta_B = \arctan\!\left(\frac{n_2}{n_1}\right).
+\]
+
+Physically, at Brewster's angle the reflected and transmitted rays are perpendicular to each other: \(\theta_I + \theta_T = 90°\). The oscillating dipoles in the second medium that re-radiate the "reflected" wave cannot radiate along their own axis — so the p-component (whose induced dipoles are aligned with the would-be reflection direction) produces zero reflected intensity. The s-component is unaffected, so the reflected beam at Brewster's angle is purely s-polarized. This is why glare-reducing polarizing sunglasses work: sunlight reflected off horizontal surfaces is predominantly s-polarized, and the lenses are oriented to block that component.
+
+For s-polarization, no Brewster angle exists in typical non-magnetic media. The condition \(\alpha\beta = 1\) requires \((\mu_2/\mu_1)^2 \neq 1\), which fails when \(\mu_1 \approx \mu_2 \approx \mu_0\). A Brewster angle for s-polarization would require materials with substantially different magnetic permeabilities — unusual at optical frequencies, but achievable in carefully designed metamaterials.
+
+**Total internal reflection** occurs when light travels from a denser to a rarer medium (\(n_1 > n_2\)) and \(\theta_I\) exceeds the **critical angle** \(\theta_c = \arcsin(n_2/n_1)\). Beyond this angle, Snell's law would require \(\sin\theta_T > 1\), which has no real solution: there is no transmitted propagating wave. Instead, the boundary conditions are satisfied by an **evanescent wave** in medium 2 — a field that decays exponentially away from the interface with no net energy flow. The reflection coefficient becomes complex with \(|R| = 1\): every photon is reflected. Total internal reflection underpins optical fibers (the glass core has higher \(n\) than the cladding), frustrated total internal reflection sensors, and near-field optical microscopy.
+
+### Dispersion and the Optical Response of Matter
+
+The refractive index \(n\) is not a fixed property of a material — it depends on frequency. This frequency dependence, **dispersion**, is responsible for rainbows, chromatic aberration in lenses, and the separation of colors by a prism. Understanding it requires a microscopic model of how the electromagnetic field interacts with bound electrons.
+
+#### Phase Velocity and Group Velocity
+
+For a monochromatic wave, the **phase velocity** is the speed at which surfaces of constant phase travel:
+
+\[
+v_{\rm ph} = \frac{\omega}{k}.
+\]
+
+This is \(c/n(\omega)\) in a medium. A wave packet, however, is a superposition of many frequencies, and the **group velocity** — the speed at which the envelope of the packet propagates — is:
+
+\[
+v_g = \frac{\partial\omega}{\partial k}.
+\]
+
+In vacuum, \(\omega = ck\), so \(v_{\rm ph} = v_g = c\). In a dispersive medium, \(k = n(\omega)\omega/c\), and \(v_{\rm ph} \neq v_g\) in general. The group velocity carries energy and information; the phase velocity can in principle exceed \(c\) near a resonance without violating causality, because the wave packet is distorted and the concept of a well-defined group velocity breaks down in regions of rapid dispersion (**anomalous dispersion**).
+
+#### The Lorentz Oscillator Model
+
+A microscopic model treats the electrons in a dielectric as **damped driven harmonic oscillators**. An electron of mass \(m\) and charge \(q\) bound to an equilibrium position with natural frequency \(\omega_0\) and damping constant \(\gamma\) obeys
+
+\[
+m\ddot{x} = -m\omega_0^2 x - m\gamma\dot{x} + qE_0 e^{-i\omega t}.
+\]
+
+The steady-state solution is \(x(t) = \tilde{x}_0 e^{-i\omega t}\) with
+
+\[
+\tilde{x}_0 = \frac{qE_0/m}{\omega_0^2 - \omega^2 - i\gamma\omega}.
+\]
+
+The induced dipole moment is \(\tilde{p} = q\tilde{x}_0\), and the phase between the driving field and the response depends on frequency:
+
+\[
+\delta = \arctan\!\left(\frac{\gamma\omega}{\omega_0^2 - \omega^2}\right).
+\]
+
+For a medium with \(N\) such oscillators per unit volume, summing over all bound electron transitions (each with oscillator strength \(f_j\), natural frequency \(\omega_j\), and damping \(\gamma_j\)) gives the **complex electric susceptibility**:
+
+\[
+\tilde{\chi}(\omega) = \frac{Nq^2}{m\varepsilon_0}\sum_j \frac{f_j}{\omega_j^2 - \omega^2 - i\gamma_j\omega}.
+\]
+
+The complex **dielectric function** is \(\tilde{\varepsilon}(\omega) = \varepsilon_0[1 + \tilde{\chi}(\omega)]\), and the complex wave vector satisfies \(\tilde{k}^2 = \tilde{\varepsilon}\mu_0\omega^2\). Writing \(\tilde{k} = k + i\kappa\), the wave propagates as
+
+\[
+\tilde{\mathbf{E}} = \tilde{\mathbf{E}}_0 e^{-\kappa z} e^{i(kz - \omega t)},
+\]
+
+so the wave oscillates with wave number \(k = (\omega/c)\,\text{Re}[\tilde{n}]\) and attenuates with absorption coefficient \(\alpha = 2\kappa = 2(\omega/c)\,\text{Im}[\tilde{n}]\). The real part of the complex refractive index determines phase velocity; the imaginary part determines absorption.
+
+Taking the real and imaginary parts of \(\tilde{\chi}\) separately, the **real refractive index** is approximately
+
+\[
+n(\omega) \approx 1 + \frac{Nq^2}{2m\varepsilon_0}\sum_j \frac{f_j(\omega_j^2 - \omega^2)}{(\omega_j^2 - \omega^2)^2 + (\gamma_j\omega)^2},
+\]
+
+and the **absorption coefficient** is
+
+\[
+\alpha(\omega) \approx \frac{Nq^2\omega^2}{mc\varepsilon_0}\sum_j \frac{f_j\gamma_j}{(\omega_j^2 - \omega^2)^2 + (\gamma_j\omega)^2}.
+\]
+
+Far from any resonance (\(\omega \ll \omega_j\) or \(\omega \gg \omega_j\)), the medium is nearly transparent and \(n\) varies slowly — this is the **normal dispersion** regime where \(dn/d\lambda < 0\) (shorter wavelengths refract more). Near a resonance, \(n\) passes through a maximum, drops steeply, then rises again — the **anomalous dispersion** region where \(dn/d\lambda > 0\). The absorption is largest at the resonance peak. This behavior is why glass is transparent in the visible but opaque in the UV (electronic resonances) and IR (phonon resonances).
+
+### The Plasma Frequency
+
+In the high-frequency limit where \(\omega\) is much larger than all atomic resonances \(\omega_j\), the response simplifies. Every electron in the medium (treating them as essentially free at high frequencies, with \(\omega_0 \to 0\)) contributes equally, and the sum \(\sum_j f_j = Z\) (the total number of electrons per atom) gives:
+
+\[
+\tilde{n}^2(\omega) \approx 1 - \frac{NZq^2}{m\varepsilon_0\omega^2} \equiv 1 - \frac{\omega_p^2}{\omega^2},
+\]
+
+where the **plasma frequency** is
+
+\[
+\omega_p = \sqrt{\frac{NZq^2}{m\varepsilon_0}}.
+\]
+
+For \(\omega > \omega_p\), we have \(n^2 > 0\) and the wave propagates normally. For \(\omega < \omega_p\), we have \(n^2 < 0\), meaning \(n\) is purely imaginary: the wave decays exponentially without propagating. The plasma acts as a **high-pass filter** — electromagnetic waves with frequency below \(\omega_p\) cannot propagate through the medium.
+
+This cutoff is directly observable in the Earth's ionosphere. The ionosphere is a layer of partially ionized gas at altitudes 60–1000 km with a plasma frequency in the MHz range. AM radio waves (500 kHz to 1600 kHz) are below \(\omega_p\) for the ionosphere and are reflected back to Earth, enabling long-range AM broadcasting. FM radio and television (tens to hundreds of MHz) are typically above the ionospheric \(\omega_p\) and pass straight through, which is why FM cannot be received over the horizon. The same principle governs the reflection of radar by plasmas and the opacity of metals at optical frequencies — the electron density in a metal gives \(\omega_p\) in the UV, so metals reflect visible light (\(\omega < \omega_p\)) but transmit UV (\(\omega > \omega_p\)), a phenomenon confirmed experimentally with thin metal films.
+
 ---
 
 ## Chapter 5: Waveguides and Cavity Resonators
@@ -378,6 +502,58 @@ where \(\mathbf{u} \equiv c\hat{\tilde{r}} - \mathbf{v}\) and all quantities are
 ---
 
 ## Chapter 8: Radiation
+
+### Radiation from a General Localized Source
+
+Before treating specific geometries, it is worth establishing the general framework. Consider a localized charge distribution — a blob of oscillating charge confined to a region of size \(d\) near the origin. We are interested in the fields far away (\(r \gg d\)) and at wavelengths much larger than the source (\(\lambda/2\pi \gg d\)). These are the **radiation zone** and **long-wavelength** approximations respectively.
+
+The starting point is the retarded scalar potential:
+
+\[
+V(\mathbf{r}, t) = \frac{1}{4\pi\varepsilon_0}\int \frac{\rho(\mathbf{r}', t_r)}{\tilde{r}}\,d\tau', \qquad t_r = t - \frac{\tilde{r}}{c}.
+\]
+
+In the far field (\(r \gg r'\)), the separation \(\tilde{r} = |\mathbf{r} - \mathbf{r}'| \approx r - \hat{r}\cdot\mathbf{r}'\), and \(1/\tilde{r} \approx 1/r\). Under these approximations, the potential admits a **multipole expansion**:
+
+\[
+V(\mathbf{r}, t) \approx \frac{1}{4\pi\varepsilon_0}\left[\frac{Q}{r} + \frac{\hat{r}\cdot\mathbf{p}(t_r)}{r^2} + \frac{\hat{r}\cdot\dot{\mathbf{p}}(t_r)}{cr}\right],
+\]
+
+and the vector potential is simply
+
+\[
+\mathbf{A}(\mathbf{r}, t) = \frac{\mu_0}{4\pi}\frac{\dot{\mathbf{p}}(t_r)}{r},
+\]
+
+where \(Q = \int\rho\,d\tau\) is the total charge (conserved, so \(\dot{Q} = 0\) produces no radiation), and \(\mathbf{p}(t) = \int\mathbf{r}'\rho(\mathbf{r}', t)\,d\tau'\) is the electric dipole moment.
+
+The key physical point emerges from the structure of these potentials: in the radiation zone (\(r \gg \lambda\)), only the \(1/r\) terms survive when we compute the fields. The term proportional to \(\dot{\mathbf{p}}(t_r)/r\) dominates over the static dipole term \(\mathbf{p}(t_r)/r^2\), and the resulting electric and magnetic fields are:
+
+\[
+\mathbf{E}(\mathbf{r}, t) = -\frac{\mu_0}{4\pi r}\ddot{\mathbf{p}}_\perp(t_r), \qquad \mathbf{B}(\mathbf{r}, t) = -\frac{\mu_0}{4\pi rc}\hat{r}\times\ddot{\mathbf{p}}(t_r),
+\]
+
+where \(\ddot{\mathbf{p}}_\perp = \hat{r}\times(\ddot{\mathbf{p}}\times\hat{r})\) is the component of \(\ddot{\mathbf{p}}\) perpendicular to the line of sight. Note \(\mathbf{E} = -c\hat{r}\times\mathbf{B}\): the radiation fields are transverse to \(\hat{r}\) and mutually perpendicular, propagating outward as a spherical wave.
+
+The time-averaged Poynting vector is
+
+\[
+\langle\mathbf{S}\rangle = \frac{\mu_0}{16\pi^2 c}\frac{|\ddot{p}\sin\theta|^2}{r^2}\hat{r},
+\]
+
+where \(\theta\) is the angle between \(\hat{r}\) and the dipole axis. Integrating over the full sphere gives the **total radiated power**:
+
+\[
+P = \frac{\mu_0}{6\pi c}\left|\ddot{\mathbf{p}}\right|^2.
+\]
+
+For a point charge \(q\) with acceleration \(\mathbf{a}\), we have \(\ddot{\mathbf{p}} = q\mathbf{a}\), and this is the **Larmor formula**:
+
+\[
+P = \frac{\mu_0 q^2 a^2}{6\pi c} = \frac{q^2 a^2}{6\pi\varepsilon_0 c^3}.
+\]
+
+The general formula above contains only the electric dipole term. When the dipole moment vanishes by symmetry (e.g., a centrosymmetric charge distribution), the next term in the multipole expansion — the **magnetic dipole** moment or the **electric quadrupole** moment — determines the radiation. These contribute at order \((d/\lambda)^2\) relative to the electric dipole, so they are suppressed by the square of the ratio of source size to wavelength. This hierarchy explains why electric dipole transitions dominate in atomic spectroscopy, with magnetic dipole and electric quadrupole transitions many orders of magnitude weaker.
 
 ### Electric Dipole Radiation
 
