@@ -1,6 +1,6 @@
 ---
 title: "PMATH 464: Introduction to Algebraic Geometry"
-prof: "Prof. David McKinnon"
+prof: "David McKinnon"
 ---
 
 *L'algèbre n'est qu'une géométrie écrite, la géométrie n'est qu'une algèbre figurée.* — Sophie Germain

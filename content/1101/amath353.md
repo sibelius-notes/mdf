@@ -108,6 +108,104 @@ The three main types of boundary conditions are:
 
 <div class="definition"><strong>Definition (Well-posedness).</strong> A problem is <em>well-posed</em> in the sense of Hadamard if: (1) a solution exists, (2) the solution is unique, and (3) the solution depends continuously on the data. Physical models that are not well-posed are suspect as mathematical formulations.</div>
 
+## The Modelling Framework: Conservation Laws
+
+The conservation law derivation of the heat equation (given in full detail in Chapter 2) is a special case of a universal modelling template. Consider any **extensive quantity** \(u(x,t)\) — temperature, chemical concentration, traffic density, population — defined on a one-dimensional domain. The **global conservation law** for \(u\) over an arbitrary interval \([a,b]\) states:
+
+\[
+\frac{d}{dt}\int_a^b u\,dx = \phi(a,t) - \phi(b,t) + \int_a^b f\,dx,
+\]
+
+where \(\phi(x,t)\) is the **flux** (the rate at which \(u\) crosses the point \(x\) in the positive direction) and \(f(x,t)\) is the **source density**. Rewriting the flux terms as \(-\int_a^b \partial\phi/\partial x\,dx\) and invoking the Du Bois-Reymond lemma (since \([a,b]\) is arbitrary), one obtains the **local conservation law**:
+
+\[
+\frac{\partial u}{\partial t} + \frac{\partial \phi}{\partial x} = f.
+\]
+
+This is the universal skeleton of a PDE model. To close the system, one adds a **constitutive relation** specifying \(\phi\) and \(f\) in terms of \(u\). Different choices yield different PDEs:
+
+| Constitutive relation | Source \(f\) | PDE | Name |
+|---|---|---|---|
+| \(\phi = -Du_x\) | \(0\) | \(u_t = Du_{xx}\) | Diffusion / Heat |
+| \(\phi = cu\) | \(0\) | \(u_t + cu_x = 0\) | Advection |
+| \(\phi = cu - Du_x\) | \(0\) | \(u_t + cu_x = Du_{xx}\) | Advection-Diffusion |
+| \(\phi = -Du_x\) | \(ru(1-u/K)\) | \(u_t = Du_{xx} + ru(1-u/K)\) | Fisher-KPP |
+| \(\phi = u^2/2\) | \(0\) | \(u_t + uu_x = 0\) | Inviscid Burgers |
+| \(\phi = u^2/2 - \nu u_x\) | \(0\) | \(u_t + uu_x = \nu u_{xx}\) | Viscous Burgers |
+
+The **advection equation** \(u_t + cu_x = 0\) is the simplest first-order PDE. Its general solution is \(u(x,t) = u(x-ct, 0)\): the initial profile is carried rigidly to the right at speed \(c\), without distortion. This will be confirmed via the method of characteristics in Chapter 12.
+
+The **Fisher-KPP equation** (proposed independently by Fisher and by Kolmogorov, Petrovskii, and Piskunov in 1937) couples diffusion with logistic population growth. It supports **travelling wave solutions** — fronts that advance into unstratified territory at a minimum speed \(c^* = 2\sqrt{rD}\), determined by the interplay of diffusion and growth.
+
+The **Burgers equation** \(u_t + uu_x = \nu u_{xx}\) combines nonlinear advection (with the solution value itself as advection speed) and linear diffusion. In the inviscid limit \(\nu \to 0\), profiles steepen and shocks form — the phenomena studied in Chapter 12. With viscosity, the Hopf-Cole transformation \(u = -2\nu(\ln v)_x\) converts it to the heat equation exactly, making Burgers the paradigm for exactly solvable nonlinear PDEs.
+
+The recurring template — **PDE = conservation law + constitutive relation** — structures much of applied mathematics, from fluid dynamics and electromagnetism to population ecology. Every PDE studied in this course fits this mould.
+
+## Classification of Second-Order PDEs
+
+A general second-order linear PDE in two independent variables \(x\) and \(y\) takes the form
+
+\[
+A u_{xx} + B u_{xy} + C u_{yy} + D u_x + E u_y + F u = G,
+\]
+
+where \(A, B, C, \ldots\) may depend on \(x\) and \(y\). The **classification** depends on the **discriminant**
+
+\[
+\Delta = B^2 - 4AC.
+\]
+
+<div class="definition"><strong>Definition (Classification of Second-Order PDEs).</strong> At a point \((x_0,y_0)\), the PDE is:
+<ul>
+<li><strong>Hyperbolic</strong> if \(\Delta > 0\) — two real characteristic directions exist.</li>
+<li><strong>Parabolic</strong> if \(\Delta = 0\) — one repeated characteristic direction.</li>
+<li><strong>Elliptic</strong> if \(\Delta < 0\) — no real characteristics.</li>
+</ul>
+The three names come directly from the classification of conic sections \(Ax^2 + Bxy + Cy^2 = 1\), which uses the same discriminant.
+</div>
+
+**Verification for the canonical types.** For the heat equation \(u_t = ku_{xx}\) (with variables \(x\) and \(t\)): \(A = k\), \(B = 0\), \(C = 0\), so \(\Delta = 0\) — **parabolic**. For the wave equation \(u_{tt} = c^2 u_{xx}\): \(A = -c^2\), \(B = 0\), \(C = 1\), giving \(\Delta = 4c^2 > 0\) — **hyperbolic**. For Laplace's equation \(u_{xx} + u_{yy} = 0\): \(A = 1\), \(B = 0\), \(C = 1\), so \(\Delta = -4 < 0\) — **elliptic**.
+
+### Reduction to Canonical Form
+
+The discriminant is not merely a label — it determines the geometry of **characteristic curves**, which are the curves along which information propagates. For a hyperbolic PDE, two families of characteristic curves satisfy
+
+\[
+\frac{dy}{dx} = \frac{B \pm \sqrt{B^2 - 4AC}}{2A}.
+\]
+
+Setting \(\xi = \xi(x,y)\) and \(\eta = \eta(x,y)\) as functions constant on each family, the transformed PDE takes the **canonical hyperbolic form** \(u_{\xi\eta} = \text{(lower-order terms)}\).
+
+For the wave equation \(u_{tt} = c^2u_{xx}\), the characteristic curves satisfy \(dx/dt = \pm c\), giving the **characteristic variables** \(\xi = x - ct\) and \(\eta = x + ct\). In these coordinates, the wave equation reduces to
+
+\[
+\frac{\partial^2 u}{\partial \xi\,\partial \eta} = 0,
+\]
+
+which integrates immediately to \(u = F(\xi) + G(\eta) = F(x-ct) + G(x+ct)\) — d'Alembert's solution.
+
+### Ill-Posedness and Hadamard's Example
+
+The classification has a decisive implication for well-posedness. For elliptic equations, specifying Cauchy data (both \(u\) and its normal derivative) on an open curve is a severely ill-posed problem. The classic counterexample due to Hadamard considers Laplace's equation with oscillatory Neumann data:
+
+\[
+u_{xx} + u_{yy} = 0, \quad u(x,0) = 0, \quad u_y(x,0) = \frac{\sin(nx)}{n}.
+\]
+
+The exact solution is
+
+\[
+u_n(x,y) = \frac{\sin(nx)\sinh(ny)}{n^2}.
+\]
+
+As \(n \to \infty\), the Cauchy data \(u_y(x,0) = n^{-1}\sin(nx)\) tends to zero uniformly, yet for any fixed \(y > 0\),
+
+\[
+\|u_n(\cdot,y)\|_\infty = \frac{\sinh(ny)}{n^2} \sim \frac{e^{ny}}{2n^2} \to \infty.
+\]
+
+Vanishingly small changes in the data produce unbounded changes in the solution: this Cauchy problem for Laplace's equation is **not well-posed**. The ill-posedness arises because the Laplacian has no preferred time direction — solutions can grow in either direction, and without a closed boundary to constrain them, arbitrarily small high-frequency perturbations explode. The same mechanism underlies the ill-posedness of the backward heat equation: running \(u_t = ku_{xx}\) in reverse (\(u_t = -ku_{xx}\)) causes high-wavenumber modes to grow as \(e^{+Dk^2|t|}\), amplifying any noise without bound.
+
 ---
 
 # Chapter 2: The Heat Equation in One Dimension
@@ -1001,6 +1099,246 @@ where \( \rho_L \) and \( \rho_R \) are the densities immediately to the left an
 <div class="example"><strong>Example (Traffic Light).</strong> At \( t = 0 \), traffic is stopped at a red light: \( \rho(x,0) = \rho_{\max} \) for \( x < 0 \) (jammed behind light) and \( \rho(x,0) = 0 \) for \( x > 0 \) (empty road ahead). When the light turns green, the characteristics from the left have slope \( c(\rho_{\max}) = -u_{\max} \) (negative) and from the right have slope \( c(0) = u_{\max} \) (positive). The characteristics fan outward, creating a <strong>rarefaction wave</strong> — a region of expanding, smoothly varying density. This is the opposite of a shock: the solution remains continuous but the density gradient spreads out in time. \(\blacksquare\)</div>
 
 <div class="remark"><strong>Remark.</strong> The method of characteristics illustrates a deep structural difference between first-order PDEs and the second-order equations studied earlier in the course. First-order equations propagate information along characteristic curves; the PDE solution is — in a precise sense — "nothing but" the propagation of initial data along these curves.</div>
+
+---
+
+# Chapter 13: Stability Theory and Dispersion
+
+## Normal Mode Analysis
+
+Many PDEs of physical interest possess constant-coefficient solutions or equilibrium states whose **stability** one wants to assess: does a small perturbation decay, persist, or grow? The systematic tool is **normal mode analysis**, which exploits the translational symmetry of the coefficients to diagonalise the linearised problem.
+
+Given a linear PDE with coefficients independent of \(x\) and \(t\), substitute the **normal mode ansatz**
+
+\[
+u(x,t) = e^{ikx + \lambda t}
+\]
+
+where \(k \in \mathbb{R}\) is the **wavenumber** and \(\lambda \in \mathbb{C}\) is the **growth rate** to be determined. Substituting into the PDE yields an algebraic equation relating \(\lambda\) to \(k\).
+
+**The diffusion equation** \(u_t = Du_{xx}\): substituting gives \(\lambda = -Dk^2 \le 0\) for all \(k\). Every normal mode decays exponentially, with high-wavenumber (fine-scale) modes decaying fastest. The diffusion equation is **unconditionally stable** — it smooths initial data.
+
+**The backward heat equation** \(u_t = -Du_{xx}\): now \(\lambda = +Dk^2 > 0\), and every mode grows, with short-wavelength perturbations growing fastest. This is the mechanism behind Hadamard's ill-posedness result from Chapter 1: the backward problem is unstable in the most extreme sense.
+
+**Reaction-diffusion** \(u_t = Du_{xx} + \alpha u\) (with \(\alpha > 0\)): the growth rate is \(\lambda = -Dk^2 + \alpha\). Long-wavelength modes (\(k^2 < \alpha/D\)) have \(\lambda > 0\) and grow, while short-wavelength modes are damped by diffusion. This competition between short-scale stabilisation and long-scale instability is the mathematical basis of **Turing instability** — the mechanism by which reaction-diffusion systems can spontaneously form spatial patterns from a uniform state.
+
+<div class="definition"><strong>Definition (Stability).</strong> The zero solution of a linear PDE is <em>stable</em> if \(\mathrm{Re}(\lambda(k)) < 0\) for all \(k \in \mathbb{R}\), and <em>unstable</em> if \(\mathrm{Re}(\lambda(k)) > 0\) for some \(k\).</div>
+
+The normal mode analysis for the heat equation reveals a quantitative version of the smoothing property: the solution operator \(e^{tL}\) is a low-pass filter in Fourier space, multiplying the \(k\)-th Fourier coefficient by \(e^{-Dk^2t}\). This is exactly the convolution with the heat kernel seen in Chapter 10.
+
+## Dispersion Relations
+
+For wave-like problems, it is natural to recast the normal mode in terms of an explicitly oscillatory form. The **travelling wave ansatz**
+
+\[
+u(x,t) = e^{i(kx - \omega t)}
+\]
+
+is related to the normal mode by \(\lambda = -i\omega\). The relationship \(\omega = \omega(k)\) — the **dispersion relation** — encodes all the wave-propagation properties of the PDE. The **phase speed**
+
+\[
+c_p = \frac{\omega}{k}
+\]
+
+is the velocity at which crests of constant phase travel. A PDE is **non-dispersive** if \(c_p\) is independent of \(k\) (all wavenumbers travel at the same speed), and **dispersive** otherwise.
+
+**The wave equation** \(u_{tt} = c^2 u_{xx}\): substituting gives \(-\omega^2 = -c^2k^2\), so \(\omega = \pm ck\) and \(c_p = \pm c\). The wave equation is non-dispersive: initial profiles propagate without change of shape — an initial Gaussian emerges as a perfect Gaussian at any later time.
+
+**The telegrapher's equation** \(u_{tt} + 2\gamma u_t = c^2 u_{xx}\) arises in transmission line theory, modelling electromagnetic waves with resistive losses. Substituting the travelling wave ansatz:
+
+\[
+-\omega^2 - 2i\gamma\omega = -c^2k^2 \implies \omega = -i\gamma \pm \sqrt{c^2k^2 - \gamma^2}.
+\]
+
+The imaginary part \(-\gamma\) of \(\omega\) causes uniform exponential damping (\(e^{-\gamma t}\)); the real part gives oscillation with phase speed
+
+\[
+c_p = \frac{\sqrt{c^2k^2 - \gamma^2}}{k} = c\sqrt{1 - \frac{\gamma^2}{c^2k^2}},
+\]
+
+which approaches \(c\) as \(k \to \infty\) — low-frequency waves are slower, making the telegrapher's equation dispersive and dissipative.
+
+**The Klein-Gordon equation** \(u_{tt} = c^2 u_{xx} - \alpha^2 u\) (with \(\alpha > 0\)) arises in relativistic quantum mechanics and field theory as the wave equation for massive particles. The dispersion relation is
+
+\[
+\omega = \pm\sqrt{c^2k^2 + \alpha^2},
+\]
+
+giving phase speed \(c_p = \pm\sqrt{c^2 + \alpha^2/k^2}\). Remarkably, \(c_p > c\) for all finite \(k\) — the phase velocity is superluminal! However, the **group velocity**
+
+\[
+c_g = \frac{d\omega}{dk} = \frac{c^2 k}{\sqrt{c^2k^2 + \alpha^2}} = \frac{c^2}{c_p} < c
+\]
+
+is subluminal. Since \(c_g\) is the velocity of energy and information propagation, special relativity is not violated.
+
+<div class="definition"><strong>Definition (Group Velocity).</strong> For a dispersive wave with dispersion relation \(\omega = \omega(k)\), the <em>group velocity</em> is
+\[
+c_g = \frac{d\omega}{dk}.
+\]
+The group velocity is the speed of the envelope of a narrow-band wave packet and, physically, the speed of energy transport.
+</div>
+
+The distinction between phase and group velocity is fundamental. A wave packet built from wavenumbers near \(k_0\) travels at the group velocity \(c_g(k_0)\), while the individual crests inside the packet move at the phase velocity \(c_p(k_0)\). For a non-dispersive medium, \(c_g = c_p\) and the packet maintains its shape; for a dispersive medium, the packet spreads over time as its constituent frequencies separate. This spreading is why, for example, a lightning strike (a broadband impulsive source) is heard as a rumble rather than a sharp crack at large distances — the atmosphere is dispersive.
+
+---
+
+# Chapter 14: Adjoint Operators and Green's Identities
+
+## The Adjoint of a Differential Operator
+
+The concept of the **adjoint** of a linear operator is a far-reaching generalisation of the matrix transpose. For a differential operator \(L\) acting on functions on a domain \(\Omega\), the **adjoint** \(L^*\) is defined by the identity
+
+\[
+\langle v, Lu \rangle = \langle L^*v, u \rangle
+\]
+
+for all functions \(u, v\) in the function space, where \(\langle f, g \rangle = \int_\Omega fg\,d\mathbf{x}\) is the \(L^2\) inner product. Equivalently, \(L^*\) is the operator making the **Green's identity**
+
+\[
+\int_\Omega \bigl(v\, Lu - u\, L^*v\bigr)\,d\mathbf{x} = \text{boundary terms}
+\]
+
+hold. The boundary terms are determined by integration by parts and depend on the domain and the boundary conditions imposed. If \(L^* = L\), the operator is **self-adjoint** — the PDE analogue of a symmetric matrix.
+
+## The Heat Operator and Its Adjoint
+
+The **heat operator** \(L = \partial_t - k\partial_{xx}\) acts on functions of \((x,t)\). To find \(L^*\), multiply \(Lu\) by a test function \(v\) and integrate by parts over the space-time rectangle \([0,\ell] \times [0,T]\):
+
+\[
+\int_0^T\!\int_0^\ell v\,(u_t - ku_{xx})\,dx\,dt = \int_0^T\!\int_0^\ell u\,(-v_t - kv_{xx})\,dx\,dt + \text{(boundary terms)}.
+\]
+
+The time integration by parts gives \(\int v u_t\,dt = [vu]_0^T - \int u v_t\,dt\); the spatial integration by parts gives \(\int v u_{xx}\,dx = [vu_x - v_x u]_0^\ell + \int u v_{xx}\,dx\). Reading off the operator acting on \(u\) in the bulk integral, the adjoint is
+
+\[
+L^* v = -v_t - kv_{xx}.
+\]
+
+The heat operator is **not self-adjoint**: \(L^* \ne L\) because \(-\partial_t \ne \partial_t\). Physically, this reflects the irreversibility of diffusion — the forward and backward heat equations are genuinely different physical processes. The adjoint \(L^*\) corresponds to running the heat equation backward in time.
+
+## Self-Adjointness of the Laplacian
+
+The **Laplacian** \(-\nabla^2\) (and more generally, any Sturm-Liouville operator \(L = -(pu')' + qu\) with appropriate boundary conditions) is self-adjoint. **Green's second identity** states that for any smooth \(u, v\) on a domain \(\Omega\):
+
+\[
+\int_\Omega \bigl(v\nabla^2 u - u\nabla^2 v\bigr)\,d\mathbf{x} = \oint_{\partial\Omega}\bigl(v\nabla u - u\nabla v\bigr)\cdot\hat{n}\,dS.
+\]
+
+When \(u\) and \(v\) both satisfy homogeneous Dirichlet or Neumann boundary conditions on \(\partial\Omega\), the right-hand side vanishes, giving \(\langle v, Lu \rangle = \langle u, Lv \rangle\) — self-adjointness. This single identity is the engine behind all the orthogonality results of the course: the orthogonality of Fourier modes, of Bessel functions, and of Sturm-Liouville eigenfunctions all follow from Green's second identity applied to eigenfunctions with different eigenvalues.
+
+In Chapter 8, the Sturm-Liouville problem was treated as a boundary-value problem with a weight function. The abstract reason why distinct eigenfunctions are orthogonal is now clear: if \(L\phi_m = \lambda_m \sigma \phi_m\) and \(L\phi_n = \lambda_n \sigma \phi_n\), then self-adjointness (with the weight \(\sigma\)) gives
+
+\[
+(\lambda_m - \lambda_n)\langle \phi_m, \phi_n \rangle_\sigma = 0,
+\]
+
+so \(\langle \phi_m, \phi_n \rangle_\sigma = 0\) whenever \(\lambda_m \ne \lambda_n\).
+
+## Solvability and the Fredholm Alternative
+
+The adjoint governs not just eigenvalue theory but the solvability of inhomogeneous equations. The central result is:
+
+<div class="theorem"><strong>Theorem (Fredholm Alternative).</strong> Let \(L\) be a linear operator with adjoint \(L^*\). The equation \(Lu = f\) has a solution if and only if
+\[
+\langle v, f \rangle = 0
+\]
+for every \(v\) in the null space of \(L^*\) (i.e., every \(v\) with \(L^*v = 0\)).</div>
+
+In words: the right-hand side \(f\) must be orthogonal to all solutions of the homogeneous adjoint problem. This is the PDE analogue of the familiar linear algebra result: the system \(A\mathbf{x} = \mathbf{b}\) has a solution if and only if \(\mathbf{b}\) is orthogonal to the null space of \(A^T\). The Fredholm alternative controls when Green's functions exist and when resonance phenomena occur (the forcing \(f\) excites a natural mode of the system, leading to the absence of bounded solutions).
+
+---
+
+# Chapter 15: Nonlinear Wave Phenomena and the KdV Equation
+
+## Linear Dissipation versus Linear Dispersion
+
+The linear wave equation \(u_{tt} = c^2 u_{xx}\) propagates all Fourier modes at the same speed \(c\) with no change in amplitude. Two physically important modifications break this ideal behaviour:
+
+**Linear dissipation** arises from resistive forces. For the advection-diffusion equation \(u_t + cu_x = \nu u_{xx}\), substituting \(u = e^{i(kx-\omega t)}\) gives
+
+\[
+-i\omega + ick = \nu(ik)^2 = -\nu k^2 \implies \omega = ck - i\nu k^2.
+\]
+
+The complex phase speed is \(U = \omega/k = c - i\nu k\), with a negative imaginary part proportional to \(k\). All modes are damped by the factor \(e^{-\nu k^2 t}\); short wavelengths (\(|k|\) large) decay fastest. This is dissipative but not dispersive: \(\mathrm{Re}(\omega)/k = c\) is independent of \(k\), so undamped components all travel at the same speed.
+
+**Linear dispersion** arises from higher-order spatial derivatives. For \(u_t + cu_x + \beta u_{xxx} = 0\), substituting gives
+
+\[
+-i\omega + ick + \beta(ik)^3 = 0 \implies \omega = ck - \beta k^3, \quad U = c - \beta k^2.
+\]
+
+There is no damping (\(\mathrm{Im}(\omega) = 0\)), but the phase speed \(U = c - \beta k^2\) depends on \(k\): short waves travel at a different speed than long waves. A localised initial profile will spread as its Fourier components separate — dispersing without dissipating.
+
+## The Korteweg-de Vries Equation
+
+In 1895, Korteweg and de Vries derived a model for long shallow-water waves that combines **nonlinear steepening** (like Burgers' equation) with **linear dispersion** (the \(u_{xxx}\) term):
+
+\[
+u_t + 6uu_x + u_{xxx} = 0.
+\]
+
+This is the **Korteweg-de Vries (KdV) equation**. The nonlinear term \(6uu_x\) tends to steepen wave fronts — taller parts of the wave travel faster, causing the profile to lean forward and eventually break, as in Burgers' equation. The dispersive term \(u_{xxx}\) opposes this: it spreads energy across wavenumbers, preventing blow-up. For a precise balance between the two effects, stable localised solutions exist.
+
+The motivation for the KdV equation was the solitary wave observed by John Scott Russell on the Union Canal near Edinburgh in 1834. Russell followed a hump of water on horseback for two miles, noting that it maintained its shape and speed rather than spreading out or breaking. The existence of such waves was theoretically controversial for decades; KdV resolved the puzzle by providing an equation for which exact localised solutions exist.
+
+## The Soliton Solution
+
+We seek a **travelling wave** \(u(x,t) = f(\xi)\) with \(\xi = x - Ut\) and wave speed \(U > 0\). Substituting into KdV:
+
+\[
+-Uf' + 6ff' + f''' = 0.
+\]
+
+Integrating once with respect to \(\xi\):
+
+\[
+f'' = Uf - 3f^2 + A
+\]
+
+for an integration constant \(A\). For a **soliton** — a localised pulse with \(f, f', f'' \to 0\) as \(|\xi| \to \infty\) — we need \(A = 0\). Multiplying by \(f'\) and integrating again:
+
+\[
+\frac{(f')^2}{2} = \frac{Uf^2}{2} - f^3 + B,
+\]
+
+and the same boundary condition forces \(B = 0\), giving
+
+\[
+(f')^2 = Uf^2 - 2f^3 = f^2(U - 2f).
+\]
+
+For a positive, localised solution, we need \(0 < f < U/2\). Taking the square root and separating variables, the integral can be evaluated by the substitution \(f = (U/2)\mathrm{sech}^2(\theta)\). One verifies directly (using \((\mathrm{sech}^2)'' = 2\mathrm{sech}^2(2\mathrm{sech}^2 - 1)\)) that the solution is
+
+\[
+f(\xi) = \frac{U}{2}\,\mathrm{sech}^2\!\left(\frac{\sqrt{U}}{2}\,\xi\right).
+\]
+
+<div class="theorem"><strong>Theorem (KdV One-Soliton).</strong> For any speed \(U > 0\), the function
+\[
+u(x,t) = \frac{U}{2}\,\mathrm{sech}^2\!\!\left(\frac{\sqrt{U}}{2}(x - Ut)\right)
+\]
+is an exact solution of \(u_t + 6uu_x + u_{xxx} = 0\). The amplitude is \(U/2\), and the spatial width scales as \(1/\sqrt{U}\): <strong>faster solitons are taller and narrower.</strong>
+</div>
+
+Several features of this solution are extraordinary:
+
+- **Amplitude determines speed**: there is no free parameter separating the height and velocity of a KdV soliton. A taller soliton is necessarily faster.
+- **Elastic collisions**: when two KdV solitons collide, they pass through each other and emerge with their shapes and speeds completely unchanged — only a phase shift marks the interaction. This particle-like behaviour gave solitons their name.
+- **Stability**: solitons are stable to small perturbations. This is the mathematical explanation for Russell's observation: a solitary wave on a canal maintains its shape because the KdV balance between steepening and dispersion is dynamically stable.
+
+## The Inverse Scattering Transform
+
+The KdV equation is a member of a rare class of **completely integrable** PDEs that can be solved exactly for *arbitrary* initial data. The **inverse scattering transform** (developed by Gardner, Greene, Kruskal, and Miura in 1967) proceeds in three steps:
+
+1. **Direct scattering**: the initial condition \(u(x,0)\) is treated as a potential in a Schrödinger equation \(\psi_{xx} + (\lambda - u)\psi = 0\); the bound-state eigenvalues \(\lambda_n < 0\) are computed.
+2. **Time evolution**: the scattering data evolve trivially in time — each eigenvalue is conserved, and the corresponding eigenfunction evolves as \(e^{4\lambda_n^{3/2}t}\).
+3. **Inverse scattering**: the solution \(u(x,t)\) is recovered from the evolved scattering data via the Gel'fand-Levitan-Marchenko integral equation.
+
+Each bound state eigenvalue corresponds to a soliton in the long-time solution; the number of solitons is determined by the initial data. Continuous spectrum components disperse to zero, leaving a finite train of solitons as the asymptotic state. The inverse scattering transform is a nonlinear analogue of the Fourier transform: just as the Fourier transform linearises convolution, the IST linearises the KdV flow on the space of potentials.
+
+The discovery of the IST opened the field of **integrable systems**, connecting KdV to the nonlinear Schrödinger equation, the sine-Gordon equation, and dozens of other exactly solvable models — one of the deepest developments in twentieth-century mathematical physics.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "ANTH 204: Biological Anthropology"
-prof: "Dr. Alexis Dolphin"
+prof: "Alexis Dolphin"
 ---
 
 # Introduction to Biological Anthropology
@@ -814,10 +814,10 @@ Motivations for cranial modification varied by culture:
 
 **Trephination** (trepanation) — drilling or cutting holes through the skull — is one of the oldest known surgical procedures, practiced across Old and New World cultures from prehistory through the 1990s. Possible purposes included cleaning up wounds, releasing blood buildup, and releasing spirits or "bad humors" (as a treatment for epilepsy or other conditions). Many trephined skulls show evidence of healing around the margins of the hole, indicating that patients survived the procedure.
 
-## Dr. Dolphin's Research: Barqa Landscape Project
+## Dolphin's Research: Barqa Landscape Project
 
-Dr. Alexis Dolphin's own research includes work on the **Barqa Landscape Project in Jordan**, investigating **paleopollution in Wadi Faynan** — an area with extensive ancient copper smelting that may have affected the health of local populations. This research exemplifies the biocultural approach, examining how cultural activities (copper production) affected human biology (skeletal health markers).
+Alexis Dolphin's own research includes work on the **Barqa Landscape Project in Jordan**, investigating **paleopollution in Wadi Faynan** — an area with extensive ancient copper smelting that may have affected the health of local populations. This research exemplifies the biocultural approach, examining how cultural activities (copper production) affected human biology (skeletal health markers).
 
 ---
 
-*These notes synthesize all 26 lectures of ANTH 204: Biological Anthropology, taught by Dr. Alexis Dolphin at the University of Waterloo, Winter 2021. The course textbook is Larsen's* Our Origins.
+*These notes synthesize all 26 lectures of ANTH 204: Biological Anthropology, taught by Alexis Dolphin at the University of Waterloo, Winter 2021. The course textbook is Larsen's* Our Origins.

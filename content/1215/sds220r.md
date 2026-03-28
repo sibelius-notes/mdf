@@ -1,6 +1,6 @@
 ---
 title: "SDS 220R: Changing Concepts of Childhood"
-prof: "Dr. Kristina Llewellyn"
+prof: "Kristina Llewellyn"
 ---
 
 # Introduction — Studying Childhood Through a Socio-Historical Lens
@@ -89,7 +89,7 @@ Schools in the early 1800s focused on sewing skills for girls and academics for 
 
 **Mothers' Allowance** in the early 1900s was also designed to reinforce men as breadwinners and women as unpaid childcare providers. It was only provided to women who had exhausted all efforts to find a husband, and only after they proved they were "proper and fit" to care for children. Even then, the amount was minimal, forcing women to find husbands since they were discouraged from paid labour.
 
-So-called "experts" in health and psychology — from **Dr. Spock** in the 1950s to conservative radio personalities today — have pathologized individuals who fell outside traditional kin arrangements, deeming them "dysfunctional" or "abnormal," despite the intangible status of the white, middle-class, male breadwinner model for most people. The nuclear family ideal is, however, **mythology**. It obscures domestic insecurities and diversity in the past and present.
+So-called "experts" in health and psychology — from **Spock** in the 1950s to conservative radio personalities today — have pathologized individuals who fell outside traditional kin arrangements, deeming them "dysfunctional" or "abnormal," despite the intangible status of the white, middle-class, male breadwinner model for most people. The nuclear family ideal is, however, **mythology**. It obscures domestic insecurities and diversity in the past and present.
 
 As a video resource in the course (*Where Does the Nuclear Family Come From?*, Origin of Everything, Season 1 Episode 12) indicates, the nuclear family ideal is a colonial structure. Many diverse family structures exist, including among First Nations, Métis, and Inuit peoples in what we know as Canada today.
 
@@ -112,7 +112,7 @@ Former Prime Minister **Pierre Elliott Trudeau** famously said in the 1960s that
 
 There are many instances historically in which the state has intervened to **control, discipline, and even destroy** families it considered maladjusted or harmful to society. Several examples illustrate this:
 
-**The Dionne Quintuplets** (born 1934, near North Bay, Ontario) — the first known quintuplets to survive infancy — provide a clear case of destructive state intervention. The province of Ontario stripped their parents of custody, turned their home into a theme park called **Quintland**, and allowed tourists from across the world to observe the girls through glass barriers as if in a zoo. Their physician, **Dr. Allan Dafoe**, was their primary caretaker and profited substantially from their fame. The Dionne quints demonstrate how childhood could be commercially exploited and how the state could weaponize "the best interests of the child" against an actual family.
+**The Dionne Quintuplets** (born 1934, near North Bay, Ontario) — the first known quintuplets to survive infancy — provide a clear case of destructive state intervention. The province of Ontario stripped their parents of custody, turned their home into a theme park called **Quintland**, and allowed tourists from across the world to observe the girls through glass barriers as if in a zoo. Their physician, **Allan Dafoe**, was their primary caretaker and profited substantially from their fame. The Dionne quints demonstrate how childhood could be commercially exploited and how the state could weaponize "the best interests of the child" against an actual family.
 
 **Eugenics**: In the 1920s, British Columbia and Alberta passed **Sterilization Acts** allowing the forced sterilization of women identified as mentally deficient by social reformers, doctors, and judges. **Eugenics** is the belief that science should control the gene pool from being "contaminated" by the "unfit." Eugenicists associated mental deficiency with race, particularly immigrant women, and morality with unwed mothers. Although sterilizations decreased dramatically after the Nazi regime demonstrated the horrors of eugenic science, the Sterilization Acts would not be repealed until the 1970s.
 
@@ -182,7 +182,7 @@ After Confederation, the government needed to create the British nation out of a
 
 Residential schools were part of an overall politics of **dispossession from lands and resources**. Indigenous mothers and fathers were assumed to embody primitive promiscuity and irresponsibility. From the nineteenth century to the 1990s, some **130 residential schools** operated in Canada; at its peak in the 1930s, there were over 80 schools. Students ranging in age from five to their late teens were vulnerable to being forcibly removed from their families and cultural ties.
 
-According to a report by **Dr. Peter Bryce** in 1909, school mortality rates varied between 35% and 60% (Bryce, 1922). Over **100,000 children** — or 20–30% of the Indigenous population — attended a residential school. Approximately **9 in 10 Indigenous people today** have been touched by a residential school experience in their family.
+According to a report by **Peter Bryce** in 1909, school mortality rates varied between 35% and 60% (Bryce, 1922). Over **100,000 children** — or 20–30% of the Indigenous population — attended a residential school. Approximately **9 in 10 Indigenous people today** have been touched by a residential school experience in their family.
 
 Well-being and education were compromised by abysmal food and accommodation, little attention to academics, untrained educators, and physical and emotional abuse. Residents were prepared for low-waged employment and social subordination. The damage to families and Indigenous nations has proved long lasting.
 
@@ -326,11 +326,11 @@ Taking care of one's health became a **civic responsibility** rather than a Chri
 
 Health curriculum in schools focused on citizenship lessons through personal development: appearance, dating, and community service. In 1951–52, British Columbia created a new course, **"Effective Living"**, for grades ten to twelve. All course units — Personality, Family, and Community Health — underscored "developing a stable heterosexual pattern, developing habits of constancy and loyalty, and adjusting to accepted customs and conventions." Such questions as "Why is wearing the right dress a mark of maturity?" and "What is the importance of religion to happiness in life and in marriage?" were presented to students as health questions (Llewellyn, 2012).
 
-The growing consumer industry of the postwar period provided grooming and hygiene products targeted to young people that promised good health. Housewives were directed to the latest domestic technology — the washing machine, the vacuum — to create a healthy and happy home. **Dr. Benjamin Spock's** *The Common Sense Book of Baby and Child Care* (1946) became the bible for proper mothering. Male psychologists had an unprecedented place in schools, testing and inspecting children for normal behaviour and appearance, and identifying potential deviants.
+The growing consumer industry of the postwar period provided grooming and hygiene products targeted to young people that promised good health. Housewives were directed to the latest domestic technology — the washing machine, the vacuum — to create a healthy and happy home. **Benjamin Spock's** *The Common Sense Book of Baby and Child Care* (1946) became the bible for proper mothering. Male psychologists had an unprecedented place in schools, testing and inspecting children for normal behaviour and appearance, and identifying potential deviants.
 
 ## Child Health — 1970s to Today
 
-Children's health has received increasing medical attention over the course of the twentieth century, evident in how we explain child behaviour — public officials now seek psychological and physiological explanations for bullying and abuse, with systemic injustices receiving less attention. When Dr. Spock wrote post-WWII, issues from autism spectrum disorder to child obesity were not yet prominent concerns.
+Children's health has received increasing medical attention over the course of the twentieth century, evident in how we explain child behaviour — public officials now seek psychological and physiological explanations for bullying and abuse, with systemic injustices receiving less attention. When Spock wrote post-WWII, issues from autism spectrum disorder to child obesity were not yet prominent concerns.
 
 The expansion of medical provisions for child health waned during the 1970s and 1980s as health care costs skyrocketed and the economy entered recession. Public health moved toward **community approaches to well-being**, combining medical and social sciences to address underlying social causes of ill health. The government, in its retreat from social spending, partnered with corporations to provide recreation programs for "at-risk" youth — the 1980s and 90s saw programs like **ParticipACTION** and Nike's PLAY; today soccer fields are filled with children playing as **Timbits**, which are running advertisements for Tim Hortons.
 
@@ -396,7 +396,7 @@ Comacchio argues that "adolescence came to be regarded as a social problem prima
 
 **G. Stanley Hall** is credited with developing the term adolescence in his 1904 work *Adolescence*. Hall asserted that child development mirrored human evolution, characterizing childhood as the prehistoric stage and adolescence as the critical gap between primitive childhood and civilized adulthood. Normal adolescence was, for Hall, an episode of "physical and mental anarchy" brought about by the onset of biological puberty.
 
-**Sigmund Freud** proposed a psychosexual development theory in which the genital stage and fixation on the opposite sex was the ultimate sign of maturity during adolescent years. **Dr. Alan Brown**, Canada's well-known pediatrician, argued that due to rapid growth during adolescence, teenagers experienced emotional confusion, including anxiety and alienation.
+**Sigmund Freud** proposed a psychosexual development theory in which the genital stage and fixation on the opposite sex was the ultimate sign of maturity during adolescent years. **Alan Brown**, Canada's well-known pediatrician, argued that due to rapid growth during adolescence, teenagers experienced emotional confusion, including anxiety and alienation.
 
 By the 1920s, sociologists were examining the social causes of youth problems. These experts diagnosed teenage angst as "**maladjustment**" — a catch-all phrase that had public resonance and justified the extensive work of adults to regulate young people's lives.
 
@@ -488,7 +488,7 @@ Gleason and Adams in the readings also describe anxiety about boys remaining "ma
 
 ## Psychological Persuasion and Sex Education
 
-**Dr. Marion Hilliard**, a prominent Canadian doctor who wrote advice columns on teenage sexuality for *Chatelaine* in the 1950s, argued that a strong sex drive for boys and girls was natural but that teenagers needed to learn to control and direct those urges. Girls, more so than boys, were responsible for safeguarding the moral compass of society.
+**Marion Hilliard**, a prominent Canadian doctor who wrote advice columns on teenage sexuality for *Chatelaine* in the 1950s, argued that a strong sex drive for boys and girls was natural but that teenagers needed to learn to control and direct those urges. Girls, more so than boys, were responsible for safeguarding the moral compass of society.
 
 The postwar years saw an increasing number of boys and girls, as well as their mothers, attending **mental hygiene clinics** and being prescribed medicine or therapy for sexual and gender "abnormalities." Sex education films like *Molly Grows Up* and *Habit Patterns* circulated in schools to train teenagers in "normal" sexual and gender development. For girls, "normal" meant deferring sexual activity, prioritizing domesticity and marriage, and serving as the moral guardian of heterosexual relations. Boys' normality was measured by their embrace of competition, leadership, and future breadwinning.
 
@@ -559,8 +559,8 @@ The course asks: Why is it important to know about changing concepts of childhoo
 
 ## Thank You
 
-*Dr. Llewellyn closes the course with an invitation to remember that childhood can be a time of pleasure, play, and happy memories — and to hold onto that as motivation for the difficult, necessary work of understanding and improving the conditions of children's lives.*
+*Llewellyn closes the course with an invitation to remember that childhood can be a time of pleasure, play, and happy memories — and to hold onto that as motivation for the difficult, necessary work of understanding and improving the conditions of children's lives.*
 
 ---
 
-*Prepared from SDS 220R Spring 2021 lecture materials, University of Waterloo (Renison University College). Course author: Dr. Kristina Llewellyn, Associate Professor, Social Development Studies.*
+*Prepared from SDS 220R Spring 2021 lecture materials, University of Waterloo (Renison University College). Course author: Kristina Llewellyn, Associate Professor, Social Development Studies.*

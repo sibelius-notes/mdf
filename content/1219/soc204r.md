@@ -1,6 +1,6 @@
 ---
 title: "SOC 204R: Youth and Society"
-prof: "Dr. Nicole Sanderson"
+prof: "Nicole Sanderson"
 ---
 
 # Module 1: Introduction — What Is Youth Studies? Digital Storytelling
@@ -612,4 +612,4 @@ He is realistic that overcoming these differences will not happen overnight, yet
 
 ---
 
-*Notes compiled from SOC 204R: Youth and Society, University of Waterloo (Renison University College), Fall 2021. Course author: Dr. Nicole Sanderson, Social Development Studies, Renison.*
+*Notes compiled from SOC 204R: Youth and Society, University of Waterloo (Renison University College), Fall 2021. Course author: Nicole Sanderson, Social Development Studies, Renison.*

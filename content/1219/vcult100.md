@@ -1,13 +1,13 @@
 ---
 title: "VCULT 100: World Cinema and Visual Culture"
-prof: "Dr. Alice Kuzniar"
+prof: "Alice Kuzniar"
 ---
 
 # Part 1: Introduction and Methodology
 
 ## Introduction to VCULT 100
 
-VCULT 100 / FINE 102, *World Cinema and Visual Culture*, is offered at the University of Waterloo by Dr. Alice Kuzniar, Professor of German and English and University Research Chair since 2017. The course introduces students to contemporary global and transnational filmmaking with the goal of developing fluency in film technical vocabulary and the capacity to analyze films from a stylistic point of view. Students become aware of the multi-dimensionality of filmmaking — encompassing directorial decisions about genre, editing, cinematography, storytelling, and more — while also considering themselves as global citizens whose perceptions of the world are shaped by visual media. The overarching aim is, in short, to increase **global cine-literacy**.
+VCULT 100 / FINE 102, *World Cinema and Visual Culture*, is offered at the University of Waterloo by Alice Kuzniar, Professor of German and English and University Research Chair since 2017. The course introduces students to contemporary global and transnational filmmaking with the goal of developing fluency in film technical vocabulary and the capacity to analyze films from a stylistic point of view. Students become aware of the multi-dimensionality of filmmaking — encompassing directorial decisions about genre, editing, cinematography, storytelling, and more — while also considering themselves as global citizens whose perceptions of the world are shaped by visual media. The overarching aim is, in short, to increase **global cine-literacy**.
 
 A central thread running through the course is the relationship between national cinema and national identity. How is national identity represented through film culture, and what separates one nation from the next beyond mere geography? Culture, religion, history, race, and language all play defining roles. Benedict Anderson's concept of the nation as an **imagined community** is especially useful here: cinema is one of the primary means by which communities imagine themselves into existence and project that image outward. The course asks students to interrogate their own stereotypes and to consider how competing cultural identities within a single nation are negotiated on screen.
 
@@ -653,4 +653,4 @@ The French and Canadian political debates around the headscarf and niqab raise d
 
 ---
 
-*Notes compiled from the lectures of Dr. Alice Kuzniar, VCULT 100 / FINE 102: World Cinema and Visual Culture, University of Waterloo, Fall 2021 (Term 1219).*
+*Notes compiled from the lectures of Alice Kuzniar, VCULT 100 / FINE 102: World Cinema and Visual Culture, University of Waterloo, Fall 2021 (Term 1219).*

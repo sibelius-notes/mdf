@@ -1,6 +1,6 @@
 ---
 title: "GEOG 207: Climate Change — Science, Policy, and Practice"
-prof: "Sarah Burch (course author); Jack Virgin (course instructor, Spring 2021)"
+prof: "Sarah Burch; Jack Virgin"
 term: "1215 (Spring 2021)"
 institution: "University of Waterloo, Department of Geography and Environmental Management"
 ---

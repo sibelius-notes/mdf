@@ -1,6 +1,6 @@
 ---
 title: "AMATH 475: Introduction to General Relativity"
-prof: "Eduardo Martín-Martínez, University of Waterloo, Winter 2021"
+prof: "Eduardo Martín-Martínez"
 ---
 
 *These notes integrate the professor's typed lecture blocks with spoken explanations from the full lecture series. Video lectures by Eduardo Martín-Martínez are available on YouTube: [Online course — Intro to General Relativity](https://youtube.com/playlist?list=PLeoh1MW56PeLn-tYxepNXBnfTMdbBemfJ).*
@@ -965,6 +965,30 @@ The Weak Equivalence Principle (WEP): all objects fall identically in a gravitat
 
 The WEP has been tested to one part in \(10^{13}\) by Eötvös-type experiments. The MICROSCOPE satellite experiment (2022) confirmed it to \(10^{-15}\). General Relativity assumes it is exact. Extensions of GR (scalar-tensor theories like Brans-Dicke) can violate the Strong Equivalence Principle (which adds that gravitational self-energy also falls the same way) while preserving WEP.
 
+**Tidal forces and the need for local frames.** There is a subtle but essential qualification to the equivalence principle: it can only hold *locally*. Consider a large enough falling elevator — particles near the floor and near the ceiling experience slightly different gravitational accelerations, since gravity weakens with distance. These *tidal forces*, caused by the non-uniformity of the field, are not removable by any choice of freely-falling frame. Two nearby freely-falling particles that begin at rest relative to each other will slowly drift apart (or together) as they fall, revealing the curvature lurking beneath the locally flat appearance of spacetime. Tidal forces measure the second derivative of the gravitational potential, which is precisely the Riemann curvature tensor. This is why the equivalence principle must be stated carefully: *in a sufficiently small, local* freely-falling frame, spacetime looks flat to first order. The word "local" carries the entire weight.
+
+**The Pound-Rebka experiment.** The equivalence principle carries a sharp quantitative prediction — that clocks at different heights in a gravitational field tick at different rates — which can be derived without any differential geometry. The argument runs as follows. Consider observers \(A\) (at height \(h\)) and \(B\) (at height \(0\)) inside an accelerating rocket with acceleration \(g\). Let \(A\) emit a light signal of wavelength \(\lambda_A\). By the time the signal reaches \(B\), the rocket has accelerated, Doppler-shifting the signal. In the non-relativistic regime, the received wavelength is:
+\[
+\lambda_B = \lambda_A\!\left(1 - \frac{gh}{c^2}\right)
+\]
+The signal is *blue-shifted*: the lower observer receives more cycles per second than the upper one sends. By Einstein's Strong Equivalence Principle, a rocket stationary in a uniform gravitational field \(g\) must behave identically. A photon climbing *out* of a gravitational well is therefore red-shifted by the factor \(\Delta\lambda/\lambda \approx gh/c^2\). On the Earth's surface this is of order \(10^{-15}\). Pound and Rebka measured exactly this shift in 1959 using the Mössbauer effect, confirming the prediction to 10% precision. The result is profound: time itself runs slower deeper in a gravitational field, and this follows from nothing more than the equivalence principle.
+
+**Early attempts at a relativistic theory of gravity.** Before arriving at general relativity in November 1915, Einstein had to navigate a thicket of plausible-but-wrong theories. The history is instructive because it shows that the tensor field equations were not logically inevitable — and that the key discriminating experiment was the bending of light.
+
+In 1907, Nordstrom proposed the simplest scalar theory: replace the Newtonian Poisson equation with the covariant version
+\[
+\Box\,\phi = 4\pi G\, T^\alpha{}_\alpha
+\]
+where \(\Box = \eta^{\mu\nu}\partial_\mu\partial_\nu\) is the Minkowski d'Alembertian. The theory is linear and, problematically, gravity does not self-gravitate. Nordstrom revised it in 1913 to the nonlinear equation \(\Box\phi/\phi = 4\pi G\,T^\alpha{}_\alpha\), which at least admits self-interaction. In 1914, Einstein and Fokker showed this is equivalent to the geometric scalar theory \(R = \tilde T^\alpha{}_\alpha\) — a genuinely covariant and geometric gravity theory. Yet all of these scalar theories share a fatal flaw. Light has a trace-free stress-energy tensor, \(T^\alpha{}_\alpha = 0\) for electromagnetic radiation, so scalar-gravity predicts *no light bending at all*. Since the equivalence principle itself requires light to bend — the Pound-Rebka argument shows photons must gain and lose energy in a gravitational field — any theory with zero light bending is ruled out. Einstein's full tensor theory arrived in 1915, and Eddington's 1919 measurement of light deflection during a solar eclipse confirmed it decisively.
+
+The lesson is clean: the source of gravity cannot be merely the trace of the stress-energy tensor. The full symmetric tensor \(T_{\mu\nu}\) must source the geometry, which is why the Einstein equations couple the Ricci tensor — not a scalar — to the complete stress-energy content of matter.
+
+**The static weak-field metric.** The equivalence principle arguments also constrain the form of the metric in a weak, static gravitational field with Newtonian potential \(\phi\). Matching the Pound-Rebka time dilation to the \(g_{00}\) component, and requiring that the geodesic equation reduce to Newton's law \(\ddot{\vec{x}} = -\nabla\phi\), forces:
+\[
+d\tau^2 = \left(1 + \frac{2\phi}{c^2}\right)c^2\,dt^2 - \left(1 - \frac{2\phi}{c^2}\right)\!\left(dx^2 + dy^2 + dz^2\right)
+\]
+The \(g_{00}\) component encodes gravitational time dilation; the spatial components encode a position-dependent length scale. For \(\phi = -G_N M/r\), this is the \(R_s/r \ll 1\) limit of the Schwarzschild metric — a consistency check, and a hint that the exact solution must "exponentiate" the weak-field perturbation.
+
 **From WEP to curved spacetime.** If freely-falling observers experience flat spacetime locally, then the geodesics of freely-falling test particles determine the geometry. Gravity is not a force but a manifestation of spacetime curvature: a ball thrown upward follows a geodesic in curved spacetime, and what we perceive as the "force of gravity" is really the curvature of that spacetime causing nearby geodesics to converge. The geodesic deviation equation captures this precisely: \(D^2\xi^\mu/d\tau^2 = R^\mu{}_{\nu\rho\sigma}u^\nu u^\rho \xi^\sigma\) is the GR version of Newton's tidal force equation \(\ddot\xi^i = (\partial_i\partial_j\Phi)\xi^j\).
 
 <div class="definition">
@@ -1055,6 +1079,29 @@ ds^2 = -\left(1 - \frac{R_s}{r}\right)c^2\,dt^2 + \left(1 - \frac{R_s}{r}\right)
 
 where \(d\Omega^2 = d\theta^2 + \sin^2\theta\,d\phi^2\). The metric is asymptotically flat: as \(r\to\infty\) it becomes Minkowski.
 
+**Derivation.** It is worth understanding where this metric comes from — Schwarzschild obtained it within weeks of Einstein's November 1915 paper, while serving in the German army on the Eastern Front, before dying of illness the following year. The derivation is a beautiful illustration of how symmetry alone constrains a solution.
+
+We seek the most general metric consistent with spherical symmetry and time-translational invariance (static field). Spherical symmetry forces the angular part to be \(r^2 d\Omega^2\). Staticity eliminates any \(dt\,dr\) cross terms (by time-reversal invariance). The most general ansatz is therefore:
+\[
+ds^2 = -e^{2\alpha(r)}\,dt^2 + e^{2\beta(r)}\,dr^2 + r^2\,d\Omega^2
+\]
+with two undetermined functions \(\alpha(r)\) and \(\beta(r)\). Outside the source there is no matter, so the vacuum Einstein equations \(R_{\mu\nu} = 0\) apply. Computing the Ricci tensor from the Christoffel symbols of this ansatz, the \(tt\) and \(rr\) components give:
+\[
+R_{tt} = 0 \implies e^{2(\alpha-\beta)}\!\left(\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right) = 0
+\]
+\[
+R_{rr} = 0 \implies -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r} = 0
+\]
+Adding the two equations (after multiplying the first through by \(e^{2(\beta-\alpha)}\)) the second-derivative terms cancel, leaving simply \(\alpha' + \beta' = 0\). Integrating and imposing the Minkowski boundary condition at infinity:
+\[
+\alpha(r) = -\beta(r)
+\]
+With this relation, the \(\theta\theta\) component \(R_{\theta\theta} = 0\) reduces to:
+\[
+\partial_r\!\left(r\, e^{2\alpha}\right) = 1
+\]
+Integrating: \(r\,e^{2\alpha} = r - R_s\) for an integration constant \(R_s\), so \(e^{2\alpha} = 1 - R_s/r\), and the metric follows. The constant is fixed by the weak-field limit: \(g_{tt} \approx -(1 + 2\phi/c^2)\) with \(\phi = -G_N M/r\) gives \(R_s = 2G_N M/c^2\). Birkhoff's theorem guarantees this is the *unique* vacuum spherically symmetric solution — even for a pulsating source.
+
 **Newtonian limit.** For \(R_s/r \ll 1\), approximate \((1-R_s/r)^{-1} \approx 1 + R_s/r\) and match with the Newtonian potential \(\phi = -G_N M/r\):
 \[
 R_s = \frac{2G_N M}{c^2}
@@ -1075,10 +1122,29 @@ The normalization constraint \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -1\) gives an ef
 
 The last term is the GR correction; the rest matches Newtonian mechanics.
 
-**Gravitational redshift.** For two stationary observers at radii \(r_1 < r_2\):
+**Gravitational redshift.** Since the Schwarzschild metric is independent of \(t\), the vector field \(\xi^\mu = (1,0,0,0)\) is a Killing vector: \(\nabla_{(\mu}\xi_{\nu)} = 0\). For any photon moving along a null geodesic with four-momentum \(p^\mu\), the quantity \(\xi^\mu p_\mu\) is conserved along the geodesic. The proof is immediate: differentiating along the geodesic with tangent \(V^\mu\),
+\[
+\nabla_V(\xi^\mu p_\mu) = (\nabla_V \xi^\mu)p_\mu + \xi^\mu(\nabla_V p_\mu) = V^\alpha V^\beta \nabla_\alpha \xi_\beta + 0
+\]
+where the second term vanishes by the geodesic equation. The first term vanishes because \(\nabla_\alpha \xi_\beta\) is antisymmetric (Killing equation) while \(V^\alpha V^\beta\) is symmetric — their contraction is zero. Thus \(\xi^\mu p_\mu = \text{const}\) along any photon worldline.
+
+Now consider a stationary observer at Schwarzschild radius \(r\). Their four-velocity is:
+\[
+u^\mu = \left(1 - \frac{R_s}{r}\right)^{-1/2}\!\xi^\mu
+\]
+(normalised so that \(g_{\mu\nu}u^\mu u^\nu = -1\)). The energy measured by this observer is \(E(r) = -u^\mu p_\mu\), so:
+\[
+E(r) = \left(1 - \frac{R_s}{r}\right)^{-1/2}\!(-\xi^\mu p_\mu)
+\]
+Since \(\xi^\mu p_\mu\) is the same at \(r_1\) and \(r_2\), the ratio of measured energies is:
+\[
+\frac{E_1}{E_2} = \sqrt{\frac{1 - R_s/r_2}{1 - R_s/r_1}}
+\]
+For two stationary observers at radii \(r_1 < r_2\):
 \[
 \frac{E_2}{E_1} = \sqrt{\frac{1 - R_s/r_1}{1 - R_s/r_2}}
 \]
+Since \(r_1 < r_2\), we have \(E_2 < E_1\): the photon loses energy climbing out of the gravitational well. Equivalently, \(\lambda_2 > \lambda_1\) — the wavelength is stretched, the light is red-shifted. In the weak-field limit \(R_s \ll r_{1,2}\), this reduces to \(E_2/E_1 \approx 1 - R_s(1/r_1 - 1/r_2)/2 \approx 1 + \Delta\phi/c^2\), recovering the Pound-Rebka result.
 
 GPS correction: satellite clocks at \(r_2 \approx 4.2\times 10^7\) m run \(\approx 0.53\) ns/s faster than Earth clocks due to gravitational time dilation. There is also a competing special-relativistic effect: the satellite's orbital speed (\(v \approx 3.9\) km/s) causes time dilation that slows the clock by \(\approx -0.22\) ns/s. The net correction is \(+0.31\) ns/s. Accumulated over 24 hours: \(\approx 27 \mu\)s. At 30 cm per 1 ns timing error, ignoring GR would cause GPS to accumulate a position error of \(\sim 8\) km per day. GPS would be useless within hours without relativistic corrections.
 
@@ -1088,6 +1154,30 @@ GPS correction: satellite clocks at \(r_2 \approx 4.2\times 10^7\) m run \(\appr
 \]
 
 For Mercury: \(\Delta\phi \approx 43''\)/century. This matched the long-standing anomaly (the total observed precession is \(574''\)/century, of which \(531''\) is due to perturbations from other planets; the remaining \(43''\) was unexplained for decades) and became the first quantitative confirmation of GR.
+
+**Derivation of perihelion precession.** The result \(\Delta\phi = 6\pi G_N M/[(1-e^2)a]\) is not obvious — it emerges from a perturbative analysis of the radial geodesic equation. Let us trace the argument.
+
+The orbit lies in the equatorial plane \(\theta = \pi/2\). The Killing vectors give two conserved quantities along a timelike geodesic:
+\[
+E = \left(1 - \frac{R_s}{r}\right)\dot t, \qquad L = r^2\dot\phi
+\]
+The normalisation condition \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -1\) yields, after multiplying through by \((1 - R_s/r)\):
+\[
+-E^2 + \dot r^2 + \frac{L^2}{r^2}\!\left(1 - \frac{R_s}{r}\right) = -\!\left(1 - \frac{R_s}{r}\right)
+\]
+Rearranging into the form of a one-dimensional energy equation:
+\[
+\frac{1}{2}\dot r^2 + V(r) = \mathcal{E}, \qquad V(r) = \frac{1}{2} - \frac{R_s}{2r} + \frac{L^2}{2r^2} - \frac{R_s L^2}{2r^3}, \qquad \mathcal{E} = \frac{1}{2}E^2
+\]
+The GR correction to the Newtonian effective potential is the last term \(-R_s L^2/(2r^3)\), which falls off faster than the \(1/r^2\) centrifugal barrier. To convert this to an orbit equation, write \(r\) as a function of \(\phi\) via \(\dot r = (dr/d\phi)\dot\phi = (dr/d\phi)L/r^2\), multiply through by \(\dot\phi^{-2} = r^4/L^2\), and introduce the substitution \(x = 2L^2/(R_s r)\). The orbit equation becomes:
+\[
+\frac{d^2 x}{d\phi^2} - 1 + x = \frac{3}{4}\frac{R_s^2}{L^2}\,x^2
+\]
+The right-hand side is the GR perturbation; in the Newtonian limit it vanishes and the equation is that of a simple harmonic oscillator in \(x\) (giving closed ellipses, \(x_0 = 1 + e\cos\phi\)). Treating the RHS as small, write \(x = x_0 + x_1\) and substitute. The driven harmonic oscillator equation for \(x_1\) has a resonant (secular) term \(\propto \cos\phi\) which causes the orbit to fail to close. Solving:
+\[
+x \approx 1 + e\cos\!\left[(1 - \alpha)\phi\right], \qquad \alpha = \frac{3}{4}\frac{R_s^2}{L^2} \approx \frac{3R_s}{(1-e^2)a}
+\]
+The perihelion advances by \(\Delta\phi = 2\pi\alpha\) per orbit, giving the formula above. The calculation is structurally identical to the secular perturbation theory used in celestial mechanics, but the perturbation now comes from the geometry of spacetime rather than from other planets.
 
 **Stable and unstable circular orbits.** Setting \(dV/dr = 0\) and \(d^2V/dr^2 > 0\) for the effective potential, stable circular orbits in Schwarzschild exist for \(r > 3R_s\). The *innermost stable circular orbit* (ISCO) is at \(r_\text{ISCO} = 3R_s = 6G_N M/c^2\). Below this radius, only unstable circular orbits (saddle points) or plunging trajectories exist. The ISCO is crucial for accretion disk physics — matter spirals in and falls off the ISCO into the black hole, radiating away energy. The efficiency of accretion onto a Schwarzschild black hole is \(\eta = 1 - \sqrt{8/9} \approx 5.7\%\) of rest mass energy, far greater than nuclear fusion (\(\sim 0.7\%\)).
 
@@ -1108,6 +1198,20 @@ For null geodesics, the analogous unstable circular orbit (photon sphere) is at 
 \]
 
 where \(b = L/E\) is the impact parameter. The Newtonian prediction gives only *half* this angle. Eddington's 1919 solar eclipse measurement confirmed the GR value, making Einstein world-famous. The deflection for rays grazing the Sun is \(\approx 1.75''\).
+
+**Derivation of light deflection.** The geodesic analysis for null rays parallels the timelike case but with the normalisation \(g_{\mu\nu}\dot x^\mu\dot x^\nu = 0\). For radial motion in the equatorial plane the conserved quantities are still \(E = (1 - R_s/r)\dot t\) and \(L = r^2\dot\phi\), and the null condition gives:
+\[
+\frac{1}{b^2} = \frac{\dot r^2}{L^2} + W_\text{eff}(r), \qquad W_\text{eff}(r) = \frac{1}{r^2}\!\left(1 - \frac{R_s}{r}\right)
+\]
+where \(b = L/E\) is the impact parameter (the perpendicular distance from the source to the undeflected ray at large \(r\)). For a ray approaching from \(r = \infty\), passing closest approach \(r_1\), and escaping to \(r = \infty\), the total angular change is:
+\[
+\Delta\phi = 2\int_{r_1}^{\infty} \frac{dr}{r^2}\!\left(\frac{1}{b^2} - W_\text{eff}(r)\right)^{-1/2}
+\]
+If there were no deflection, \(\Delta\phi = \pi\). The deflection angle is \(\delta\phi = \Delta\phi - \pi\). Expanding to first order in \(R_s/r\) (weak-field limit), the integral can be evaluated by treating \(R_s\) as a small parameter. Writing the unperturbed solution \(r = d/\sin\phi\) (straight-line trajectory with impact parameter \(d \approx b\)):
+\[
+\delta\phi = \frac{2R_s}{b} = \frac{4G_N M}{bc^2}
+\]
+The factor of 2 relative to the Newtonian result arises because both the \(g_{tt}\) and \(g_{rr}\) components of the metric contribute equally to the deflection — the spatial curvature doubles the answer. Newtonian gravity only modifies \(g_{tt}\) (the gravitational potential) but leaves spatial geometry flat; GR curves both time and space, giving the full deflection. Eddington's eclipse measurement was the first direct test of this spatial curvature contribution, and it gave a result consistent with GR and inconsistent with the Newtonian (half) value.
 
 **Gravitational lensing.** Light deflection by massive objects acts like a gravitational lens. For a point mass lens at distance \(D_L\) with a source at \(D_S\), the angular radius of the Einstein ring (perfect alignment) is:
 \[
@@ -1150,6 +1254,28 @@ K = R^{\mu\nu\rho\sigma}R_{\mu\nu\rho\sigma} = \frac{12 R_s^2}{r^6}
 \]
 
 At \(r = 0\): \(K \to \infty\) — genuine curvature singularity. At \(r = R_s\): \(K\) is finite — the divergence in Schwarzschild coordinates is a *coordinate singularity* (removable by changing coordinates, like the North Pole in longitude-latitude).
+
+**Eddington-Finkelstein coordinates.** The coordinate singularity at \(r = R_s\) can be removed by a clever change of variables. The idea, due to Eddington (1924) and rediscovered by Finkelstein (1958), is to trade the Schwarzschild time \(t\) for a coordinate adapted to ingoing null geodesics.
+
+Start with flat Minkowski space in spherical coordinates: \(ds^2 = -dt^2 + dr^2 + r^2 d\Omega^2\). Introduce \(v = t + r\); then \(dv = dt + dr\) and the metric becomes \(ds^2 = -dv^2 + 2\,dv\,dr + r^2 d\Omega^2\), which is regular everywhere. For the Schwarzschild spacetime the analogous substitution is:
+\[
+v = t + r + R_s\ln\!\left|\frac{r}{R_s} - 1\right|
+\]
+The logarithm is chosen precisely so that the singular factor \((1-R_s/r)^{-1}\) in the Schwarzschild \(dr^2\) coefficient cancels. In these ingoing Eddington-Finkelstein (EF) coordinates \((v, r, \theta, \phi)\), the metric becomes:
+\[
+ds^2 = -\!\left(1 - \frac{R_s}{r}\right)dv^2 + 2\,dv\,dr + r^2\,d\Omega^2
+\]
+The metric component \(g_{rr} = 0\) and \(g_{vr} = 1\); there is no factor of \((1-R_s/r)^{-1}\) anywhere. At \(r = R_s\) the metric is perfectly smooth. The matrix representation is:
+\[
+g_{\alpha\beta} = \begin{pmatrix}-(1-R_s/r) & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & r^2 \end{pmatrix}
+\]
+To understand the causal structure, look at radial null geodesics in EF coordinates (set \(d\Omega^2 = 0\)). The condition \(ds^2 = 0\) gives:
+\[
+\left(1 - \frac{R_s}{r}\right)dv^2 - 2\,dv\,dr = 0 \implies dv\!\left[\left(1 - \frac{R_s}{r}\right)dv - 2\,dr\right] = 0
+\]
+The two families of null rays are: (i) \(dv = 0\), i.e., \(v = \text{const}\) — these are the ingoing rays; (ii) \((1-R_s/r)\,dv = 2\,dr\), which integrates to \(v = 2r + 2R_s\ln|r - R_s| + \text{const}\). Outside the horizon (\(r > R_s\)) the second family moves outward. At the horizon (\(r = R_s\)) the equation becomes \(0 = 2\,dr\), so \(r = R_s\) is itself a null surface — the trapped null ray that hovers at the horizon forever. Inside (\(r < R_s\)), both families move toward decreasing \(r\). There is *no way* for a light signal emitted at \(r < R_s\) to escape to \(r > R_s\). The surface \(r = R_s\) is a one-way membrane — the **event horizon** — and EF coordinates make this causally transparent without any coordinate pathology.
+
+The EF chart covers only the exterior region and the black hole interior (\(r > 0\)). It does not naturally describe the white hole region. To expose the full maximal extension — all four quadrants of the Kruskal diagram — one needs the Kruskal-Szekeres coordinates.
 
 **Kruskal-Szekeres coordinates** \((T, X)\) are regular at the horizon:
 \[
@@ -1219,6 +1345,14 @@ where \(\Sigma = r^2 + a^2\cos^2\theta\), \(\Delta = r^2 - R_s r + a^2\), and \(
 
 ### Chapter 24. The FLRW Metric and Friedmann Equations
 
+**The dark night sky and the end of the static universe.** Up until the early twentieth century, scientists assumed the universe to be infinite, static, and eternal — a vast unchanging stage for local events. The first serious challenge to this picture came not from measurement but from a simple observation: the night sky is dark.
+
+If the universe were infinite, uniform, and eternal, then every line of sight from Earth would eventually intersect the surface of a star. The night sky would be as bright as the surface of the Sun in every direction. This is **Olbers' paradox**, first formulated clearly in 1826, and it rules out the classical infinite static universe. One resolution is that the universe had a beginning — stars have finite ages and their light has had finite time to reach us — but in 1826 this seemed philosophically unacceptable.
+
+The observational breakthrough came in stages. In 1912, Slipher measured Doppler shifts of nearby galaxies and found most were receding from us. In 1929, Hubble extended Slipher's work to greater distances, using Cepheid variable stars as standard candles, and found a striking linear relationship: the recession velocity of a galaxy is proportional to its distance. Written as \(v = H_0 d\), this is **Hubble's law**, with Hubble's original constant \(H_0 \approx 500\) km/s/Mpc (now revised to \(67\)–\(73\) km/s/Mpc). The implication was unavoidable: the space between galaxies is growing, all galaxies are moving away from each other, and the universe is not static. Running the film backward, everything must have been much closer together in the past — the universe has a beginning.
+
+At this point, general relativity became the natural tool for studying the *evolution* of the universe as a whole. To apply it, one needs a metric that describes a homogeneous, isotropic, and expanding spacetime. The symmetry analysis that produces this metric also teaches us what "homogeneous and isotropic" means in the language of Killing vectors.
+
 **The cosmological principle.** The universe is:
 1. *Homogeneous*: no preferred locations
 2. *Isotropic*: no preferred directions (for comoving observers)
@@ -1233,6 +1367,14 @@ These two demands, together with the requirement that the spacetime be time-orie
 \]
 
 The redshift \(z\) directly measures the ratio of scale factors, not a Doppler shift (though both descriptions are valid in the limit of small distances). The CMB was emitted at \(z \approx 1100\), when the universe was \(\approx 380\,000\) years old and the scale factor was \(1/1101\) of its present value.
+
+**Maximal symmetry.** A manifold of dimension \(n\) can have at most \(n(n+1)/2\) independent Killing vectors. When this maximum is achieved, the space is called *maximally symmetric*. In that case, the Riemann tensor is completely determined by a single constant \(k\):
+\[
+R_{\alpha\beta\gamma\delta} = \frac{k}{n(n-1)}\left(g_{\alpha\gamma}g_{\beta\delta} - g_{\alpha\delta}g_{\beta\gamma}\right)
+\]
+For 3-dimensional space, the maximum is \(3 \cdot 4/2 = 6\) Killing vectors (3 rotations + 3 translations). The three maximally symmetric spaces are the flat Euclidean space \(\mathbb{R}^3\) (with \(k=0\)), the round 3-sphere \(S^3\) (with \(k > 0\)), and the hyperbolic space \(\mathcal{H}^3\) (with \(k < 0\)).
+
+Homogeneity (6 translational Killing vectors from isotropy at every point, and 3 rotational ones) combined with isotropy forces the spatial sections to be maximally symmetric. This is not an assumption about the universe's large-scale geometry — it is a *consequence* of requiring that space looks the same from every location in every direction. The three possibilities are exactly \(k \in \{-1, 0, +1\}\), up to rescaling.
 
 **Derivation of the FLRW metric.** Starting from the most general metric and imposing homogeneity and isotropy systematically:
 1. Isotropy forces \(g_{0i} = 0\) (no preferred direction in space)
@@ -1269,15 +1411,32 @@ Current observations favour \(k \approx 0\).
 
 The first is the Friedmann equation; the second is the Raychaudhuri acceleration equation.
 
-**Equations of state and evolution:**
+**Equations of state and evolution.** The matter content of the universe is modelled as a perfect fluid with equation of state \(P = w\rho\). Each component has a characteristic \(w\):
 
-| Matter type | Equation of state | \(\rho\) scaling |
-|---|---|---|
-| Dust (cold dark matter) | \(p = 0\) | \(\rho \propto a^{-3}\) |
-| Radiation | \(p = \rho c^2/3\) | \(\rho \propto a^{-4}\) |
-| Cosmological constant | \(p = -\rho c^2\) | \(\rho = \text{const}\) |
+| Component | \(w\) | \(\rho \propto\) | \(a(t) \propto\) |
+|---|---|---|---|
+| Dust (cold dark matter) | \(0\) | \(a^{-3}\) | \(t^{2/3}\) |
+| Radiation | \(1/3\) | \(a^{-4}\) | \(t^{1/2}\) |
+| Cosmological constant | \(-1\) | \(\text{const}\) | \(e^{Ht}\) (de Sitter) |
+| "Curvature" | \(-1/3\) | \(a^{-2}\) | \(t\) |
 
-**Fate of the universe.** The Raychaudhuri equation shows:
+The \(\rho \propto a^{-3(1+w)}\) scaling follows from stress-energy conservation \(\nabla_\mu T^{\mu\nu} = 0\) in the FLRW background, which reduces to \(\dot\rho + 3(\dot a/a)(\rho + P) = 0\). The physical interpretations are transparent: for dust, the energy density dilutes as the volume \(a^3\); for radiation, there is an extra factor of \(a^{-1}\) from the cosmological redshift of each photon's energy; for \(\Lambda\), the vacuum energy density is a constant property of spacetime itself.
+
+Since \(\rho_R \propto a^{-4}\) and \(\rho_M \propto a^{-3}\), radiation dominates at early times (small \(a\)) and matter dominates at later times. Eventually, as \(a\) grows, the cosmological constant wins. The universe passes through three eras: radiation-dominated \(\to\) matter-dominated \(\to\) \(\Lambda\)-dominated — and we live near the transition between the latter two.
+
+**The deceleration parameter.** It is useful to introduce the dimensionless deceleration parameter:
+\[
+q(t) = -\frac{a\ddot a}{\dot a^2} = -\frac{\ddot a/a}{H^2}
+\]
+A universe decelerating under gravity has \(q > 0\); one accelerating under dark energy has \(q < 0\). The Raychaudhuri equation shows \(q = \frac{1}{2}(1 + 3w)\Omega\) in a flat single-component universe — so matter (\(w=0\)) gives \(q = 1/2\) (decelerating), radiation (\(w=1/3\)) gives \(q = 1\) (more decelerating), and a cosmological constant (\(w=-1\)) gives \(q = -1\) (exponential acceleration). Current measurements give \(q_0 \approx -0.55\), confirming the accelerating expansion discovered by Riess, Perlmutter, and Schmidt in 1998.
+
+**The Einstein Universe and the static solution.** Before Hubble's discovery, Einstein believed the universe to be static (\(\dot a = 0\)) and eternal. Substituting \(\dot a = \ddot a = 0\) and \(\dot\rho = 0\) into the Friedmann equations with a cosmological constant:
+\[
+\frac{k}{a_0^2} = \frac{8\pi G}{3}\rho_0 + \frac{\Lambda}{3}, \qquad 0 = -4\pi G(\rho_0 + 3P_0) + \Lambda
+\]
+For dust (\(P_0 = 0\)) the second equation gives \(\Lambda = 4\pi G\rho_0 > 0\), and the first then gives \(k = 1\) (a closed 3-sphere). The Einstein universe is a compact space with topology \(\mathbb{R} \times S^3\), held in equilibrium by the cosmological constant exactly balancing the gravitational attraction. Einstein introduced \(\Lambda\) for precisely this purpose — to permit a static solution. The solution is unstable: a small perturbation causes either unbounded expansion or collapse. When Hubble showed \(\dot a \neq 0\), Einstein called the cosmological constant "the greatest blunder of my life." It returned in 1998 — with the opposite implication.
+
+**Fate of the universe.** The Raychaudhuri equation shows: The Raychaudhuri equation shows:
 - Without \(\Lambda\): matter and radiation cause \(\ddot a < 0\) — decelerating expansion
 - With positive \(\Lambda\): dark energy makes \(\ddot a > 0\) for sufficiently large \(a\) — accelerating expansion (observed since 1998)
 

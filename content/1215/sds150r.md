@@ -1,6 +1,6 @@
 ---
 title: "SDS 150R: Introduction to Human Development"
-prof: "Dr. Hsiao d'Ailly & Dr. Debbie Wang"
+prof: "Hsiao d'Ailly & Debbie Wang"
 ---
 
 # Module 1: Introduction and Basic Concepts
@@ -14,7 +14,7 @@ It is scientific in that it employs theories, hypotheses, and empirical evidence
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/xTra-yePY_A?rel=0" frameborder="0" allowfullscreen></iframe></div>
 *Kimberly Noble — How does income affect childhood brain development? (TED, 2019)*
 
-Dr. Kimberly Noble's work illustrates all three dimensions of the field: her research on the relationship between socioeconomic status and children's brain development is scientifically rigorous, it draws from multiple disciplines including neuroscience and economics, and it has clear applied implications for social policy and early childhood intervention programs.
+Kimberly Noble's work illustrates all three dimensions of the field: her research on the relationship between socioeconomic status and children's brain development is scientifically rigorous, it draws from multiple disciplines including neuroscience and economics, and it has clear applied implications for social policy and early childhood intervention programs.
 
 ## 1b. Key Debates in Human Development
 
@@ -44,7 +44,7 @@ The "nature vs nurture" debate is perhaps the most publicly recognized debate in
 
 **Nurture** theorists focus on the impact of physical and social forces, arguing that they can significantly influence both biological and psychological development.
 
-Research often relies on **twin studies**, in which identical twins (sharing identical genetic material) raised in separate environments are studied to observe similarities and differences in development. Dr. Nancy Segal's work using such research makes a compelling argument for the influence of genetics on human development.
+Research often relies on **twin studies**, in which identical twins (sharing identical genetic material) raised in separate environments are studied to observe similarities and differences in development. Nancy Segal's work using such research makes a compelling argument for the influence of genetics on human development.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/c2__1Jrcpv4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 *Nancy Segal — Twins: A Window into Human Nature (TEDxManhattanBeach, 2017)*
@@ -224,10 +224,10 @@ Bowlby thus conceptualized attachment not merely as a feature of infancy but as 
 
 Because attachment impacts development throughout life, helping a baby develop a **secure attachment** is one of the most important things a parent can do. Both parent and child contribute to the way their attachment connection develops. The term used to describe the mutual, interlocking pattern of attachment behaviors shared by a parent and child is **synchrony**.
 
-One of the most important experiments demonstrating the role of synchrony is the **still-face experiment**, developed by Dr. Edward Tronick. In this procedure, a caregiver and infant engage in normal interactive play, then the caregiver suddenly adopts a neutral, expressionless "still face." Infants respond with distress, attempts to re-engage, and ultimately withdrawal — powerfully demonstrating how dependent infants are on the responsiveness of their caregiver.
+One of the most important experiments demonstrating the role of synchrony is the **still-face experiment**, developed by Edward Tronick. In this procedure, a caregiver and infant engage in normal interactive play, then the caregiver suddenly adopts a neutral, expressionless "still face." Infants respond with distress, attempts to re-engage, and ultimately withdrawal — powerfully demonstrating how dependent infants are on the responsiveness of their caregiver.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/apzXGEbZht0?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Still Face Experiment: Dr. Edward Tronick (UMass Boston, 2009)*
+*Still Face Experiment: Edward Tronick (UMass Boston, 2009)*
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/7Pcr1Rmr1rM?rel=0" frameborder="0" allowfullscreen></iframe></div>
 *Still Face with Dads (Children's Institute, 2016)*
@@ -310,7 +310,7 @@ Adult attachment, in the work of psychologist **Sue Johnson** (developer of Emot
 > — Sue Johnson, 2013
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/OyCHT9AbD_Y?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Love Sense: from Infant to Adult — Sue Johnson and Ed Tronick (Dr. Sue Johnson, 2016)*
+*Love Sense: from Infant to Adult — Sue Johnson and Ed Tronick (Sue Johnson, 2016)*
 
 Emotional presence is key to healthy attachment in adult relationships. Johnson uses the acronym **A.R.E.** to describe what partners need to know about each other:
 
@@ -358,11 +358,11 @@ Studying resilience from a developmental perspective means asking: why do certai
 Resilience is not simply a character trait on the part of an individual — many social and environmental factors contribute substantially to it.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/7tWXHhPI5lo?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*What resilience is and isn't — 9 things children need by Dr. Michael Ungar (Roots of Empathy, 2020)*
+*What resilience is and isn't — 9 things children need by Michael Ungar (Roots of Empathy, 2020)*
 
 ### Masten's Short List of Resilience Factors
 
-Dr. Ann Masten (Director of Project Competence Research on Risk and Resilience at the University of Minnesota) identifies the following key resilience factors and their associated human adaptive systems:
+Ann Masten (Director of Project Competence Research on Risk and Resilience at the University of Minnesota) identifies the following key resilience factors and their associated human adaptive systems:
 
 - Positive attachment bonds with caregivers *(attachment; family)*
 - Positive relationships with other nurturing and competent adults *(attachment)*
@@ -379,7 +379,7 @@ Dr. Ann Masten (Director of Project Competence Research on Risk and Resilience a
 
 ### Ungar's Resilience-Promoting Program Ingredients
 
-Dr. Michael Ungar (Canada Research Chair in Child, Family and Community Resilience; Director of the Resilience Research Centre at Dalhousie University) identifies key ingredients of successful resilience-promoting programs. Such programs focus far more on increasing capacity than decreasing disorder. Their essential experiences include:
+Michael Ungar (Canada Research Chair in Child, Family and Community Resilience; Director of the Resilience Research Centre at Dalhousie University) identifies key ingredients of successful resilience-promoting programs. Such programs focus far more on increasing capacity than decreasing disorder. Their essential experiences include:
 
 - Building relationships
 - Encouraging powerful identities
@@ -392,7 +392,7 @@ Dr. Michael Ungar (Canada Research Chair in Child, Family and Community Resilien
 *(Ungar, n.d.)*
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/bBe0MRJ-teU?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Dr. Michael Ungar — Assessing Your Resilience Resources (Roots of Empathy, 2018)*
+*Michael Ungar — Assessing Your Resilience Resources (Roots of Empathy, 2018)*
 
 The concept of **Adverse Childhood Experiences (ACEs)** — a research framework stemming from a landmark CDC-Kaiser study — has become central to understanding risk factors for poor long-term outcomes. ACE scores quantify exposure to various forms of childhood adversity (abuse, neglect, household dysfunction). Higher ACE scores are associated with elevated risks for a broad range of poor health and social outcomes in adulthood. Resilience research complements this by asking: given exposure to adversity, what protective factors allow individuals to do well anyway?
 
@@ -977,4 +977,4 @@ Cultural practices around death and mourning vary enormously and serve important
 
 ---
 
-*Notes compiled from course materials by Dr. Hsiao d'Ailly and Dr. Debbie Wang, and from the textbook HDEV (6th ed.) by Spencer A. Rathus. SDS 150R, Spring 2021, Renison University College, University of Waterloo.*
+*Notes compiled from course materials by Hsiao d'Ailly and Debbie Wang, and from the textbook HDEV (6th ed.) by Spencer A. Rathus. SDS 150R, Spring 2021, Renison University College, University of Waterloo.*
