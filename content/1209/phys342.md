@@ -1,6 +1,7 @@
 ---
 title: "PHYS 342: Electricity and Magnetism 2"
 prof: "Dr. Matteo Mariantoni"
+subjects: "PHYS"
 ---
 
 > **Video lectures**: These notes draw on the lecture recordings by Dr. Matteo Mariantoni, available at the [PHYS 342 Fall 2020 YouTube playlist](https://youtube.com/playlist?list=PLXD4WWpHMeSyMteCM89uW-_OsPK1yEqRf).

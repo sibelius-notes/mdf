@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 260: Symphony"
 prof: "Laura Gray"
+subjects: "MUSIC"
 ---
 # What is a Symphony?
 

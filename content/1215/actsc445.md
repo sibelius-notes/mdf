@@ -1,6 +1,7 @@
 ---
 title: "ACTSC 445/845: Quantitative Enterprise Risk Management"
 prof: "Fan Yang"
+subjects: "ACTSC"
 ---
 
 # Chapter 1: Introduction to Risk Management

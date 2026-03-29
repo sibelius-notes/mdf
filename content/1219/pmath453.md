@@ -1,6 +1,7 @@
 ---
 title: "PMATH 453: Functional Analysis"
 prof: "Stephen New"
+subjects: "PMATH"
 ---
 
 > These notes are primarily based on Prof. Stephen New's lectures. Additional definitions, theorems, examples, and explanations have been incorporated from [Felix Zhou's course notes](https://felix-zhou.com/) (Prof. Laurent Marcoux, Fall 2021) and from [Prof. Marcoux's official course notes](https://www.math.uwaterloo.ca/~lwmarcou/notes/pmath453.pdf) (5th ed., 2022).

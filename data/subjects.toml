@@ -1,0 +1,114 @@
+# Subject code → full name mapping
+# Used for display in sidebar and subject pages
+
+[ACTSC]
+name = "Actuarial Science"
+[AFM]
+name = "Accounting & Finance"
+[AHS]
+name = "Applied Health Sciences"
+[AMATH]
+name = "Applied Mathematics"
+short = "Applied Math"
+[ANTH]
+name = "Anthropology"
+[ARBUS]
+name = "Arts & Business"
+[ARTS]
+name = "Arts"
+[BET]
+name = "Business, Entrepreneurship & Technology"
+[BIOL]
+name = "Biology"
+[CHEM]
+name = "Chemistry"
+[CIVE]
+name = "Civil Engineering"
+[CLAS]
+name = "Classical Studies"
+[CO]
+name = "Combinatorics & Optimization"
+short = "C&O"
+[CS]
+name = "Computer Science"
+short = "Comp. Sci."
+[EARTH]
+name = "Earth Sciences"
+[EASIA]
+name = "East Asian Studies"
+[ECON]
+name = "Economics"
+[ENBUS]
+name = "Environment & Business"
+[ENGL]
+name = "English"
+[ENVS]
+name = "Environmental Studies"
+[ERS]
+name = "Environment & Resource Studies"
+[FINE]
+name = "Fine Arts"
+[GEOG]
+name = "Geography"
+[GSJ]
+name = "Gender & Social Justice"
+[HIST]
+name = "History"
+[HRM]
+name = "Human Resources Management"
+[INDG]
+name = "Indigenous Studies"
+[INTEG]
+name = "Integrated Studies"
+[KIN]
+name = "Kinesiology"
+[LS]
+name = "Legal Studies"
+[MATH]
+name = "Mathematics"
+short = "Math"
+[MEDVL]
+name = "Medieval Studies"
+[MGMT]
+name = "Management Sciences"
+[MSCI]
+name = "Management Sciences"
+[MUSIC]
+name = "Music"
+[NE]
+name = "Nanotechnology Engineering"
+[PACS]
+name = "Peace & Conflict Studies"
+[PHARM]
+name = "Pharmacy"
+[PHIL]
+name = "Philosophy"
+[PHYS]
+name = "Physics"
+[PMATH]
+name = "Pure Mathematics"
+short = "Pure Math"
+[PSCI]
+name = "Political Science"
+[PSYCH]
+name = "Psychology"
+[REC]
+name = "Recreation & Leisure Studies"
+[RS]
+name = "Religious Studies"
+[SCI]
+name = "Science"
+[SDS]
+name = "Social Development Studies"
+[SMF]
+name = "Sexuality, Marriage & Family"
+[SOC]
+name = "Sociology"
+[STAT]
+name = "Statistics"
+[STV]
+name = "Society, Technology & Values"
+[SYDE]
+name = "Systems Design Engineering"
+[VCULT]
+name = "Visual Culture"

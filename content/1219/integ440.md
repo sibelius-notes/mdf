@@ -1,6 +1,7 @@
 ---
 title: "INTEG 440: Computational Social Science"
 prof: "John McLevey"
+subjects: "INTEG"
 ---
 
 **Instructor:** John McLevey (PhD Sociology, McMaster 2013). McLevey is a computational social scientist and network scientist whose research uses large-scale social media data to study disinformation campaigns and the diffusion of misinformation online. His lab (NETLAB) has produced open-source Python packages including `metaknowledge`, `pdpp`, and `Nate`. The textbook for this course — *Doing Computational Social Science* (SAGE, pre-print) — was written by McLevey himself.

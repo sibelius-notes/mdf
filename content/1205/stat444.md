@@ -1,6 +1,7 @@
 ---
 title: "STAT 444: Statistical Learning / Nonparametric Regression"
 prof: "Reza Ramezan"
+subjects: "STAT"
 ---
 
 These notes follow Professor Reza Ramezan's Spring 2020 offering of STAT 444 at the University of Waterloo. The course builds from classical multiple regression through modern nonparametric smoothing methods, culminating in applications to neural spike-train data from computational neuroscience.

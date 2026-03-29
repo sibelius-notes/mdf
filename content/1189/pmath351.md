@@ -1,6 +1,7 @@
 ---
 title: "PMATH 351: Real Analysis"
 prof: "Stephen New"
+subjects: "PMATH"
 ---
 
 *These notes synthesize material from multiple sources: Stephen New's Fall 2018 lecture notes (primary), Kenneth Davidson's PMATH 351 instructor notes, Brian Forrest's PMATH 351 instructor notes, Laurent Marcoux's PMATH 351 instructor notes, and student notes by Felix Zhou (Fall 2019, Davidson's section), Richard Wu (Fall 2018, Forrest's section), and David Duan. All sources are credited below.*

@@ -1,6 +1,7 @@
 ---
 title: "AMATH 231: Calculus 4 — Vector Calculus and Fourier Series"
 prof: "E.R. Vrscay"
+subjects: "AMATH"
 ---
 
 # Chapter 1: Scalar and Vector Fields

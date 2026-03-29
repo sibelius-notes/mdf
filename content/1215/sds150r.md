@@ -1,6 +1,7 @@
 ---
 title: "SDS 150R: Introduction to Human Development"
 prof: "Hsiao d'Ailly & Debbie Wang"
+subjects: "SDS"
 ---
 
 # Module 1: Introduction and Basic Concepts

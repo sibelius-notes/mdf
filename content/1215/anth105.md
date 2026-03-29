@@ -1,6 +1,7 @@
 ---
 title: "ANTH 105: Prehistoric Peoples and Places"
 prof: "Robert W. Park"
+subjects: "ANTH"
 ---
 
 Humans began making tools more than 2.5 million years ago. Written out, that number looks like this: 2,500,000. But it was less than 6,000 years ago that some peoples began writing down information about their ways of life. Scholars now recognize that writing may have independently developed in at least four ancient civilizations — in Mesopotamia, Egypt, China, and Mesoamerica — and some groups around the world did not adopt writing until just a few centuries ago. Only 3% of the time since humans started making tools is documented at all in written historical records. The other 97%, from 2.5 million years ago to 6,000 years ago, is the realm of **prehistory**.

@@ -1,6 +1,7 @@
 ---
 title: "INDG 201: The Indigenous Experience in Canada"
 prof: "Roland Robinson"
+subjects: "INDG"
 ---
 
 INDG 201 / CDNST 201 is an introductory survey of the history, cultures, and contemporary circumstances of Indigenous Peoples within the territory currently known as Canada. The course is structured around Lisa Monchalin's *The Colonial Problem: An Indigenous Perspective on Crime and Justice in Canada* (University of Toronto Press, 2016) and is taught at the University of Waterloo, housed in the Indigenous Studies Programme at St. Paul's University College. The class meets on the Dish with One Spoon Territory — the traditional lands of the Attawandaron (Neutral) Nation, the Anishinaabeg/Anishinabek (Three Fires Confederacy and Mississauga), the Rotinonshón:ni Six Nations Confederacy, and the Wyandot People. The University of Waterloo sits within Block 2 of the Haldimand Tract, land promised to the Six Nations by the British Crown in 1784.

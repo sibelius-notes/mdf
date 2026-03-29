@@ -1,6 +1,7 @@
 ---
 title: "MEDVL 252: Medieval Monsters"
 prof: "Multiple Authors"
+subjects: "MEDVL"
 ---
 
 This course surveys medieval monsters through the lenses of multiple academic disciplines — archaeology, literary studies, musicology, intellectual history, art history, philosophy, and theology. Across twelve modules, scholars from the University of Waterloo demonstrate how studying what medieval people feared, imagined, and depicted reveals the deeper values, anxieties, and cosmologies of the Middle Ages.

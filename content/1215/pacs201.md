@@ -1,6 +1,7 @@
 ---
 title: "PACS 201: Roots of Conflict, Violence, and Peace"
 prof: "Nathan Funk"
+subjects: "PACS"
 ---
 
 # Course Overview

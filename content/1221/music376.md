@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 376: Composition Seminar"
 prof: "Karen Sunabacka"
+subjects: "MUSIC"
 ---
 
 # Harmony

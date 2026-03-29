@@ -1,6 +1,7 @@
 ---
 title: "MSCI 211: Organizational Behavior"
 prof: "Sarch Konay"
+subjects: "MSCI"
 ---
 
 # Chapter 1: What Is Organizational Behavior?

@@ -1,6 +1,7 @@
 ---
 title: "PMATH 433/733: Set Theory and Model Theory"
 prof: "R. Moosa"
+subjects: "PMATH"
 ---
 # Part I: Set Theory
 

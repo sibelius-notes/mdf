@@ -1,6 +1,7 @@
 ---
 title: "PMATH 370: Chaos and Fractals"
 prof: "E.R. Vrscay"
+subjects: "PMATH"
 ---
 
 # Chapter 1: Iteration of Functions

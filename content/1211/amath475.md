@@ -1,6 +1,7 @@
 ---
 title: "AMATH 475: Introduction to General Relativity"
 prof: "Eduardo Martín-Martínez"
+subjects: "AMATH"
 ---
 
 *These notes integrate the professor's typed lecture blocks with spoken explanations from the full lecture series. Video lectures by Eduardo Martín-Martínez are available on YouTube: [Online course — Intro to General Relativity](https://youtube.com/playlist?list=PLeoh1MW56PeLn-tYxepNXBnfTMdbBemfJ).*

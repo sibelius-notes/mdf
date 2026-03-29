@@ -1,6 +1,7 @@
 ---
 title: "CIVE 353: Geotechnical Engineering"
 prof: ""
+subjects: "CIVE"
 ---
 
 # Soil Composition and Phase Relationships

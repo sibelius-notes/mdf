@@ -1,6 +1,7 @@
 ---
 title: "ENVS 131: Communication for Environmental Professions"
 prof: "James"
+subjects: "ENVS"
 ---
 
 # Foundations of Rhetoric and Strategic Communication

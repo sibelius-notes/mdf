@@ -1,6 +1,7 @@
 ---
 title: "MGMT 171: Fundamentals of Personal and Business Finance"
 prof: "Predrag Rajsic"
+subjects: "MGMT"
 ---
 
 MGMT 171 is a practical introduction to personal finance and investment decision-making taught at the University of Waterloo (Spring 2021, remote delivery). The course is organized around the textbook *Personal Finance*, Fourth Canadian Edition, by Jeff Madura and Hardeep Singh Gill. The central goal is to help students develop a coherent financial plan for themselves by understanding the five interconnected components of personal finance: budgeting and tax planning, financing purchases, protecting assets and income, investing, and retirement and estate planning.

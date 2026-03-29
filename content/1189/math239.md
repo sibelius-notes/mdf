@@ -1,5 +1,6 @@
 ---
 title: "MATH 239: Introduction to Combinatorics"
+subjects: "MATH"
 ---
 
 # MATH 239 -- Introduction to Combinatorics

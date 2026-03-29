@@ -1,5 +1,6 @@
 ---
 title: "MATH 235: Linear Algebra 2 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 # Chapter 7: Fundamental Subspaces

@@ -1,6 +1,7 @@
 ---
 title: "EARTH 121: Our Earth"
 prof: "University of Waterloo"
+subjects: "EARTH"
 ---
 
 # Module 1: Introduction to Earth Science

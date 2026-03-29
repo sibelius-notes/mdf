@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 211: Developmental Psychology"
 prof: ""
+subjects: "PSYCH"
 ---
 
 # Topic 1: Introduction to Developmental Psychology and Research Methods

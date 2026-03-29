@@ -1,6 +1,7 @@
 ---
 title: "HIST 205/REC 202: Sport, Race, and Society"
 prof: ""
+subjects: "HIST"
 ---
 
 # Topic 1: Critical Race Theory and Black Feminist Thought

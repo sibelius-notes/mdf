@@ -3,6 +3,7 @@ title: "PSCI 389: Global Governance"
 prof: "Carleigh Cartmell"
 term: "Spring 2021 (1215)"
 university: "University of Waterloo"
+subjects: "PSCI"
 ---
 
 # Defining Global Governance

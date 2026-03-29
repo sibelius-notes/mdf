@@ -1,6 +1,7 @@
 ---
 title: "PHYS 475: Cosmology"
 prof: "Niayesh Afshordi"
+subjects: "PHYS"
 ---
 
 *Notes by TC Fraser, Fall 2016. Supplemented from Barbara Ryden, Introduction to Cosmology (2nd ed.).*

@@ -1,6 +1,7 @@
 ---
 title: "CHEM 120: General Chemistry 1"
 prof: "Scott Hopkins"
+subjects: "CHEM"
 ---
 
 CHEM 120 is a first-year general chemistry course at the University of Waterloo, covering stoichiometry review, quantum theory, atomic structure, chemical bonding (Lewis structures, VSEPR, valence bond theory, and molecular orbital theory), the behaviour of gases, and intermolecular forces. The quantum theory and atomic structure modules are taught by Prof Scott Hopkins; the bonding and gases modules are co-taught with Prof Sen. Course administration is coordinated by Dr Jake Fisher. Assignments and tests are delivered through the Mobius online system.

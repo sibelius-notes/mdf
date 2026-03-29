@@ -7,6 +7,7 @@ university: "University of Waterloo"
 semester: "Fall 2021"
 description: "A rigorous introduction to the mathematical foundations of signal analysis, from classical Fourier theory through the modern wavelet transform. Topics include metric and normed spaces, Hilbert space theory, Fourier series, the Discrete and Continuous Fourier transforms, sampling theory, time-frequency analysis, and multiresolution analysis with Daubechies wavelets."
 tags: ["fourier", "wavelets", "functional analysis", "signal processing", "hilbert spaces", "dft", "haar", "daubechies", "mra"]
+subjects: "AMATH"
 ---
 
 ## Chapter 1: Introduction — Signals and Mathematical Analysis

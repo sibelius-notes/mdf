@@ -2,6 +2,9 @@ baseURL = "https://mdf.sibeliusp.com/"
 languageCode = "en-us"
 title = "MD Lecture Notes"
 
+[taxonomies]
+  subject = "subjects"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

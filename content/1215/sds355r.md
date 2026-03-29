@@ -1,5 +1,6 @@
 ---
 title: "SDS 355R: Resilience and Social Support"
+subjects: "SDS"
 ---
 
 **University of Waterloo — Spring 2021**

@@ -1,6 +1,7 @@
 ---
 title: "PMATH 321: Non-Euclidean Geometry"
 prof: "Stephen New"
+subjects: "PMATH"
 ---
 
 # Chapter 1: Euclidean Geometry

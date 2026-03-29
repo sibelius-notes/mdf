@@ -1,6 +1,7 @@
 ---
 title: "PMATH 441/641: Algebraic Number Theory"
 prof: "David McKinnon"
+subjects: "PMATH"
 ---
 
 These notes synthesize material from multiple sources on algebraic number theory as taught at the University of Waterloo. The following resources were consulted and are gratefully credited:

@@ -1,6 +1,7 @@
 ---
 title: "ECON 101: Principles of Microeconomics"
 prof: ""
+subjects: "ECON"
 ---
 
 # Chapter 1: What Is Economics?

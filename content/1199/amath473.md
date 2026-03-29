@@ -1,6 +1,7 @@
 ---
 title: "AMATH 473: Quantum Theory 2"
 prof: "Eduardo Martín-Martínez"
+subjects: "AMATH"
 ---
 
 *These notes integrate Eduardo Martín-Martínez's AMATH 473/673 lecture blocks (Fall 2019) with supplementary material from Achim Kempf's Advanced Quantum Mechanics notes and lecture series (UWaterloo Physics of Information Lab, Fall 2020).*

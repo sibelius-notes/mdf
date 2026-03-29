@@ -1,5 +1,6 @@
 ---
 title: "STAT 902: Martingales and Stochastic Calculus"
+subjects: "STAT"
 ---
 
 > These notes synthesize material from two sources for the University of Waterloo course STAT 902 (cross-listed as E&CE 784). The primary source is Alex Rutar's student notes from the Winter 2020 offering. Supplementary material, particularly extended proofs and background, is drawn from Andrew J. Heunis's comprehensive lecture notes for the 2011 offering. Full references appear at the end of these notes.

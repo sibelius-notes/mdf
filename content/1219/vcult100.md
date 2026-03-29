@@ -1,6 +1,7 @@
 ---
 title: "VCULT 100: World Cinema and Visual Culture"
 prof: "Alice Kuzniar"
+subjects: "VCULT"
 ---
 
 # Part 1: Introduction and Methodology

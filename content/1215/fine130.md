@@ -1,6 +1,7 @@
 ---
 title: "FINE 130: Introduction to Digital Imaging"
 prof: "Natalie Hunter"
+subjects: "FINE"
 ---
 
 # Module 1: Collage

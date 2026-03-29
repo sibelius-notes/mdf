@@ -1,6 +1,7 @@
 ---
 title: "PHIL 251: Metaphysics and Epistemology"
 prof: "Gerry Callaghan"
+subjects: "PHIL"
 ---
 
 # The World of Universals

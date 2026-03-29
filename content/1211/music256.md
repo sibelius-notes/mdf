@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 256: Music Since 1900"
 prof: "Laura Gray"
+subjects: "MUSIC"
 ---
 # The Era and Its Music
 

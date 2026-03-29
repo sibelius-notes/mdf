@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 246: Soundtracks: Music in films"
 prof: "Simon Wood"
+subjects: "MUSIC"
 ---
 # Introduction — Why Music?
 ## Part A: Welcome To The Show!

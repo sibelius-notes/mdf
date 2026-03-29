@@ -1,5 +1,6 @@
 ---
 title: "MATH 147: Calculus 1 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 These notes cover MATH 147 (Calculus 1 for Honours Mathematics) at the University of Waterloo. The course is the rigorous companion to MATH 137: every definition is given the full \(\varepsilon\)-\(\delta\) treatment, every major theorem is proved, and the real number system itself is developed from first principles. The primary inspiration is Spivak's *Calculus* and Rudin's *Principles of Mathematical Analysis*, but the presentation is aimed at a student encountering rigorous analysis for the first time.

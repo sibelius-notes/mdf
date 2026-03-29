@@ -1,6 +1,7 @@
 ---
 title: "AMATH 474: Quantum Theory 3 — Quantum Information and Foundations"
 prof: "Eduardo Martín-Martínez"
+subjects: "AMATH"
 ---
 
 *These notes are based on the official typed lecture blocks by Eduardo Martín-Martínez (Version 0.4k). The course covers the phase-space formulation of quantum mechanics, Gaussian quantum information, and the foundations of quantum entanglement in continuous-variable systems.*

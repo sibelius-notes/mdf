@@ -1,6 +1,7 @@
 ---
 title: "PHARM 466: Geriatric Pharmacy"
 prof: ""
+subjects: "PHARM"
 ---
 
 # Part 1: PHARM 466 — Epidemiology of Aging

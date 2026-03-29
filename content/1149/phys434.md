@@ -1,6 +1,7 @@
 ---
 title: "PHYS 434: Quantum Physics 3"
 prof: "Eduardo Martín-Martínez"
+subjects: "PHYS"
 ---
 
 These notes follow the course structure laid out by Dr. Eduardo Martín-Martínez for PHYS 434 at the University of Waterloo (Fall 2014). Much of the mathematical content in Parts I, II, IV, and V draws from a superb set of student notes prepared by **TC Fraser** (tcfraser@tcfraser.com) for a parallel offering of this course taught by Prof. Anton Burkov, distributed as version 1.1. Fraser's derivations of the time evolution operator, the time-reversal anti-unitarity argument, and the Dirac equation are models of clarity and are reproduced here with gratitude.

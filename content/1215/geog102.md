@@ -1,6 +1,7 @@
 ---
 title: "GEOG 102: Introduction to Physical Geography"
 prof: "Ellsworth LeDrew"
+subjects: "GEOG"
 ---
 
 # Module 1: Course Introduction

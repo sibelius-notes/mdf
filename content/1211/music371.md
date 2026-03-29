@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 371: Music Theory 4"
 prof: "Karen Sunabacka"
+subjects: "MUSIC"
 ---
 # The Twilight of the Tonal System
 The end of Tonality - da da daaaaa.

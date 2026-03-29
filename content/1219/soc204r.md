@@ -1,6 +1,7 @@
 ---
 title: "SOC 204R: Youth and Society"
 prof: "Nicole Sanderson"
+subjects: "SOC"
 ---
 
 # Module 1: Introduction — What Is Youth Studies? Digital Storytelling

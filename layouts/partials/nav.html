@@ -5,13 +5,60 @@
       <span class="icon-sun">☀</span><span class="icon-moon">☽</span>
     </button>
   </div>
-  <ul class="nav-list">
+  <div class="nav-toggle">
+    <button class="nav-toggle-btn active" data-target="terms">By Term</button>
+    <button class="nav-toggle-btn" data-target="subjects">By Subject</button>
+  </div>
+  <ul class="nav-list" id="nav-terms">
     {{ $currentSection := "" }}
     {{ with .FirstSection }}{{ with .File }}{{ $currentSection = .ContentBaseName }}{{ end }}{{ end }}
+    {{ $smallTermCount := 0 }}
+    {{ $smallTermActive := eq .RelPermalink "/terms/" }}
     {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
+      {{ if gt (len .Pages) 4 }}
     <li>
       <a href="{{ .RelPermalink }}"{{ if and .File (eq .File.ContentBaseName $currentSection) }} class="active"{{ end }}>
         {{ .Title }}
+      </a>
+    </li>
+      {{ else }}
+        {{ $smallTermCount = add $smallTermCount (len .Pages) }}
+        {{ if and .File (eq .File.ContentBaseName $currentSection) }}{{ $smallTermActive = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if gt $smallTermCount 0 }}
+    <li>
+      <a href="/terms/" class="nav-grouped{{ if $smallTermActive }} active{{ end }}">
+        Other Terms <span class="nav-count">({{ $smallTermCount }})</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ $currentPath := .RelPermalink }}
+  <ul class="nav-list" id="nav-subjects" style="display:none">
+    {{ $smallSubjCount := 0 }}
+    {{ $smallSubjActive := eq $currentPath "/subjects/" }}
+    {{ range .Site.Taxonomies.subjects.ByCount }}
+      {{ if gt .Count 4 }}
+    <li>
+      {{ $code := .Page.Title | upper }}
+      {{ $label := $code }}
+      {{ with index $.Site.Data.subjects $code }}
+        {{ if .short }}{{ $label = .short }}{{ else }}{{ $label = .name }}{{ end }}
+      {{ end }}
+      <a href="{{ .Page.RelPermalink }}"{{ if eq $currentPath .Page.RelPermalink }} class="active"{{ end }}>
+        {{ $label }} <span class="nav-count">({{ .Count }})</span>
+      </a>
+    </li>
+      {{ else }}
+        {{ $smallSubjCount = add $smallSubjCount .Count }}
+        {{ if eq $currentPath .Page.RelPermalink }}{{ $smallSubjActive = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if gt $smallSubjCount 0 }}
+    <li>
+      <a href="/subjects/" class="nav-grouped{{ if $smallSubjActive }} active{{ end }}">
+        Other Subjects <span class="nav-count">({{ $smallSubjCount }})</span>
       </a>
     </li>
     {{ end }}
@@ -33,6 +80,32 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 <script>
 (function() {
+  var mode = localStorage.getItem('navMode') || 'terms';
+  // Auto-detect subject pages
+  var p = window.location.pathname;
+  if (p.indexOf('/subjects/') === 0) mode = 'subjects';
+  if (p === '/terms/' || p === '/terms') mode = 'terms';
+  var btns = document.querySelectorAll('.nav-toggle-btn');
+  var termList = document.getElementById('nav-terms');
+  var subjectList = document.getElementById('nav-subjects');
+
+  function setMode(m) {
+    mode = m;
+    localStorage.setItem('navMode', m);
+    termList.style.display = m === 'terms' ? '' : 'none';
+    subjectList.style.display = m === 'subjects' ? '' : 'none';
+    btns.forEach(function(b) {
+      b.classList.toggle('active', b.dataset.target === m);
+    });
+  }
+
+  btns.forEach(function(b) {
+    b.addEventListener('click', function() { setMode(b.dataset.target); });
+  });
+
+  setMode(mode);
+})();
+(function() {
   var input = document.getElementById('search-input');
   var overlay = document.getElementById('search-overlay');
   var resultsEl = document.getElementById('search-results');
@@ -45,6 +118,7 @@
       fuse = new Fuse(data, {
         keys: [
           { name: 'title', weight: 3 },
+          { name: 'subject', weight: 2 },
           { name: 'prof', weight: 1 },
           { name: 'content', weight: 1 }
         ],

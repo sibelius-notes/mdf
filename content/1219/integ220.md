@@ -1,6 +1,7 @@
 ---
 title: "INTEG 220: Nature of Scientific Knowledge"
 prof: "Katie Plaisance"
+subjects: "INTEG"
 ---
 
 Science is one of the most powerful knowledge-making enterprises in human history. It has given us germ theory, quantum mechanics, the structure of DNA, vaccines, and space telescopes. Yet most of us, including scientists themselves, rarely stop to ask the most basic philosophical questions about it: What *is* scientific knowledge? When can we trust it? How does it get produced? Who counts as an expert? And how should it inform the decisions we make together as a society?

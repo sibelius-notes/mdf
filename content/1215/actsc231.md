@@ -1,6 +1,7 @@
 ---
 title: "ACTSC 231: Mathematics of Finance"
 prof: "Keith Freeland"
+subjects: "ACTSC"
 ---
 
 # Time Value of Money

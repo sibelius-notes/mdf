@@ -1,6 +1,7 @@
 ---
 title: "EASIA 202R: Chinese Culture and Society"
 prof: "Huaping Zhuang"
+subjects: "EASIA"
 ---
 # Quick Facts
 (Pictures not included for this section)

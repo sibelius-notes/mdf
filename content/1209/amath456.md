@@ -1,6 +1,7 @@
 ---
 title: "AMATH 456: Calculus of Variations and Optimal Control Theory"
 prof: "Kirsten Morris"
+subjects: "AMATH"
 ---
 
 # Optimization and Convexity in R<sup>n</sup>

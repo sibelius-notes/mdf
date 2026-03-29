@@ -1,6 +1,7 @@
 ---
 title: "ANTH 204: Biological Anthropology"
 prof: "Alexis Dolphin"
+subjects: "ANTH"
 ---
 
 # Introduction to Biological Anthropology

@@ -1,5 +1,6 @@
 ---
 title: "MATH 237: Calculus 3 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 # Chapter 1: Graphs of Scalar Functions

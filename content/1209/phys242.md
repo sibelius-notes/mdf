@@ -1,6 +1,7 @@
 ---
 title: "PHYS 242: Electricity and Magnetism 1"
 prof: "Matteo Mariantoni"
+subjects: "PHYS"
 ---
 
 # Part I: Electrostatics in Vacuum

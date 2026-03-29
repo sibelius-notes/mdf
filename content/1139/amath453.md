@@ -1,6 +1,7 @@
 ---
 title: "AMATH 453: Partial Differential Equations II"
 prof: "Sivabal Sivaloganathan"
+subjects: "AMATH"
 ---
 
 Partial Differential Equations II picks up where the first course left off and pursues two intertwined goals: to develop a geometric and analytical framework for understanding *all* PDEs, and then to apply that framework systematically to the three great classical equations — Laplace's, the wave equation, and the heat equation. The course opens with a tour of first-order theory, where the method of characteristics converts a PDE into an equivalent family of ODEs and makes the geometry of solutions vivid. It then classifies second-order equations by the sign of a single discriminant, revealing why Laplace's equation behaves so differently from the wave equation. The bulk of the course treats each type in turn: elliptic equations through harmonic function theory, maximum principles, Green's functions, and conformal mapping; hyperbolic equations through d'Alembert's formula and spherical means; parabolic equations through eigenfunction expansions and the Fourier transform.

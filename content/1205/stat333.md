@@ -1,6 +1,7 @@
 ---
 title: "STAT 333: Applied Probability"
 prof: "Steve Drakich"
+subjects: "STAT"
 ---
 
 # Introduction

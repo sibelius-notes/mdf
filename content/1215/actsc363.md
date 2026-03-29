@@ -1,6 +1,7 @@
 ---
 title: "ACTSC 363: Loss Models"
 prof: "Mirabelle Huynh"
+subjects: "ACTSC"
 ---
 
 **Instructor:** Mirabelle Huynh | Spring 2021 | University of Waterloo

@@ -1,6 +1,7 @@
 ---
 title: "CS 350: Operating Systems (help page)"
 prof: "Lesley Istead"
+subjects: "CS"
 ---
 ... Also, check my [miscellaneous notes](/1201/cs350) and the [Spring 2021 notes](/1215/cs350).
 

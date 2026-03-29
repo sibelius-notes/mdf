@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 240: Introduction to Jazz"
 prof: "Patricia 'Bonnie' Brett"
+subjects: "MUSIC"
 ---
 
 *Notes compiled with reference to course materials. Additional resources at [dongrichard.com](https://www.dongrichard.com/).*

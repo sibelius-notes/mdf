@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 255: The Romantic Century"
 prof: "Laura Gray"
+subject: "MUSIC"
 ---
 # Overview: Romantic Music — An Introduction
 

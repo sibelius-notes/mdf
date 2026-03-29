@@ -1,6 +1,7 @@
 ---
 title: "AMATH 351: Ordinary Differential Equations 2"
 prof: "E.R. Vrscay"
+subjects: "AMATH"
 ---
 
 # Chapter 1: Introduction and Linear Second Order ODEs

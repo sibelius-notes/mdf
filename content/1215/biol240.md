@@ -4,6 +4,7 @@ prof: ""
 term: "Spring 2021 (1215)"
 institution: "University of Waterloo"
 textbook: "Wessner, Dupont, Charles, Neufeld. Microbiology, 3rd ed. Wiley, 2020."
+subjects: "BIOL"
 ---
 
 # Module 1: The Microbial World

@@ -1,5 +1,6 @@
 ---
 title: "MATH 135: Algebra for Honours Mathematics"
+subjects: "MATH"
 ---
 
 # Part I: Introduction to Proof Methods

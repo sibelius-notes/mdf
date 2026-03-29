@@ -1,5 +1,6 @@
 ---
 title: "MATH 138: Calculus 2 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 # Chapter 1: Integration

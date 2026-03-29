@@ -1,6 +1,7 @@
 ---
 title: "EASIA 231R: Calligraphy to Conceptual Art: Text as an Image in Islamic and East Asian Visual Arts and Beyond"
 prof: "Soheila Kolahdouz Esfahani"
+subjects: "EASIA"
 ---
 
 # Course Introduction and Islamic Calligraphy — Foundations

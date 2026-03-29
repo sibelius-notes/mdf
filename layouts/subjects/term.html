@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article>
+  {{ $code := .Title | upper }}
+  {{ $name := "" }}
+  {{ with index .Site.Data.subjects $code }}{{ $name = .name }}{{ end }}
+  <h1>{{ $code }}{{ with $name }}: {{ . }}{{ end }}</h1>
+  <div class="course-grid">
+  {{ range .Pages.ByTitle }}
+    {{ $study := partialCached "study-stats.html" . .RelPermalink }}
+    <a href="{{ .RelPermalink }}" class="course-card">
+      <span class="course-code">{{ .Title }}</span>
+      <span class="course-meta">
+        <span class="course-term-badge">{{ .CurrentSection.Title }}</span>
+        {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+      </span>
+      <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short") }}</span>
+    </a>
+  {{ end }}
+  </div>
+</article>
+{{ end }}

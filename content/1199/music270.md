@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 270: Music Theory 1"
 prof: "Terry Paynter"
+subjects: "MUSIC"
 ---
 
 Note that this page has removed all vextab scores due to rendering issues... This set of notes is meant to review the material and it is not taken during the class.

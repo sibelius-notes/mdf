@@ -1,5 +1,6 @@
 ---
 title: "STAT 231: Statistics"
+subjects: "STAT"
 ---
 
 # Chapter 1: Introduction to Statistical Sciences

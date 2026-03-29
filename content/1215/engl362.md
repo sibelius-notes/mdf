@@ -1,6 +1,7 @@
 ---
 title: "ENGL 362/THPERF 386: Shakespeare in Performance"
 prof: "University of Waterloo"
+subjects: "ENGL"
 ---
 
 # Module I: Introduction

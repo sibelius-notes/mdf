@@ -1,5 +1,6 @@
 ---
 title: "STAT 230: Probability"
+subjects: "STAT"
 ---
 
 # Chapter 1: Introduction to Probability

@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 254: Baroque and Classical music"
 prof: "Laura Gray"
+subjects: "MUSIC"
 ---
 # Baroque Era
 * end of 16c to mid 18c

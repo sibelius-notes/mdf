@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 370: Music Theory 3"
 prof: "Karen Sunabacka"
+subjects: "MUSIC"
 ---
 The notes below are quite incomplete...
 # Introduction: Course Tools and Voice Leading

@@ -1,6 +1,7 @@
 ---
 title: "HIST 200: History and Film"
 prof: "David Schweitzer"
+subjects: "HIST"
 ---
 
 # Introduction — What Is History and Film?

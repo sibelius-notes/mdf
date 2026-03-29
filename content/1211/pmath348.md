@@ -1,6 +1,7 @@
 ---
 title: "PMATH 348: Fields and Galois Theory"
 prof: "Yu-Ru Liu"
+subjects: "PMATH"
 ---
 
 ## Introduction: Why Galois Theory?

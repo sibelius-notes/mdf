@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 261: Opera"
 prof: "Laura Gray"
+subjects: "MUSIC"
 ---
 # Elements of Opera
 

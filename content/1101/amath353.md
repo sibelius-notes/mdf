@@ -1,6 +1,7 @@
 ---
 title: "AMATH 353: Partial Differential Equations 1"
 prof: "E.R. Vrscay"
+subjects: "AMATH"
 ---
 
 # Chapter 1: Introduction to Partial Differential Equations

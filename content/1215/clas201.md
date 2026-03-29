@@ -1,6 +1,7 @@
 ---
 title: "CLAS 201: Introduction to Classical Studies"
 prof: ""
+subjects: "CLAS"
 ---
 
 CLAS 201 at the University of Waterloo is officially titled *Ancient Greek Society* and is taught by Dr. Lisa Trentin, a specialist in the visual culture and social history of ancient Rome whose research has focused on marginalized bodies and the representation of identity, and who has excavated at Pompeii.

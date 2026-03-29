@@ -1,6 +1,7 @@
 ---
 title: "AMATH 373: Quantum Theory 1"
 prof: "Z. Miskovic"
+subjects: "AMATH"
 ---
 
 Quantum mechanics is, without exaggeration, the most precisely tested physical theory ever constructed. Its predictions agree with experiment to better than one part in a billion in some domains, and yet its conceptual foundations remain genuinely strange: particles that exist as probability waves, quantities that cannot be simultaneously measured with arbitrary precision, and a measurement process that seems to disturb the very system being observed. This course develops the mathematical machinery of non-relativistic quantum mechanics from first principles, moving from the historical motivations through the formal axioms to applications ranging from atomic structure to perturbation theory.

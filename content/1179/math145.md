@@ -1,5 +1,6 @@
 ---
 title: "MATH 145: Algebra for Honours Mathematics"
+subjects: "MATH"
 ---
 
 These notes cover MATH 145, the honours enrichment of MATH 135 at the University of Waterloo. The course develops the algebraic foundations underlying modern number theory and cryptography — divisibility, congruences, prime factorization, and the structure of modular arithmetic — at a level of rigour and depth suited to students who will continue into pure mathematics. Where MATH 135 states results, MATH 145 proves them; where MATH 135 computes, MATH 145 asks *why* the computation works.

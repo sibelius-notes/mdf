@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 332: Aesthetics of Music"
 prof: "Laura Gray"
+subjects: "MUSIC"
 ---
 # What is the "Aesthetics of Music"?
 

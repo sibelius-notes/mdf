@@ -1,6 +1,7 @@
 ---
 title: "SYDE 522: Machine Intelligence"
 prof: "Hamid R. Tizhoosh"
+subjects: "SYDE"
 ---
 # Introduction to Artificial Intelligence
 Objectives of this course:

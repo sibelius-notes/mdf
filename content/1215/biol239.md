@@ -1,6 +1,7 @@
 ---
 title: "BIOL 239: Genetics"
 prof: "Christine Dupont"
+subjects: "BIOL"
 ---
 
 ## Introduction to the Course

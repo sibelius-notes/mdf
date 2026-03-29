@@ -1,6 +1,7 @@
 ---
 title: "PMATH 465/665: Smooth Manifolds"
 prof: "Spiro Karigiannis"
+subjects: "PMATH"
 ---
 
 These are comprehensive lecture notes for PMATH 465/665: Smooth Manifolds, as taught by Dr. Spiro Karigiannis at the University of Waterloo in Fall 2020. The course follows John M. Lee's *Introduction to Smooth Manifolds* (2nd edition, Springer GTM 218), with supplementary material drawn from Boothby's *An Introduction to Differentiable Manifolds and Riemannian Geometry*. Dr. Karigiannis also taught a companion course on Riemannian geometry in Fall 2013, and the present notes incorporate several organizational ideas and examples from that earlier iteration. The goal of this course is to develop the foundational theory of smooth manifolds — the natural setting for modern differential geometry, geometric analysis, and mathematical physics — beginning with topological manifolds and smooth structures, proceeding through the calculus of smooth maps, and culminating in the theory of tangent vectors, the tangent bundle, and vector fields with their Lie-algebraic structure.

@@ -1,6 +1,7 @@
 ---
 title: "ENBUS 375: Business and Environment"
 prof: ""
+subjects: "ENBUS"
 ---
 
 **Instructor:** Dr. Jennifer Lynes, Associate Professor, School of Environment, Enterprise and Development (SEED), University of Waterloo. Office hours: Wednesdays 10:00 am to 12:00 pm.

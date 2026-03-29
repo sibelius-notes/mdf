@@ -1,6 +1,7 @@
 ---
 title: "AMATH 477/677: Introduction to Applied Stochastic Processes"
 prof: "N. Sri Namachchivaya"
+subjects: "AMATH"
 ---
 
 These notes follow the Fall 2021 lectures of Professor N. Sri Namachchivaya for AMATH 477/677 at the University of Waterloo. The course develops the theory of applied stochastic processes from first principles in probability, through martingales and Markov chains, to the Kalman filter — the central algorithmic achievement connecting all threads.

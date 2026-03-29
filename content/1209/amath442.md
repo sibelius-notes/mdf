@@ -1,6 +1,7 @@
 ---
 title: "AMATH 442: Computational Methods for PDEs"
 prof: "Sander Rhebergen"
+subjects: "AMATH"
 ---
 
 These notes cover the core numerical methods for solving partial differential equations (PDEs), developed in AMATH 442/642 at the University of Waterloo. Mathematical models based on PDEs arise throughout science, engineering, finance, and economics. When exact solutions are unavailable, we rely on numerical approximations computed on a computer. The goal is threefold: to understand the theory of numerical methods (with derivations and proofs), to implement them computationally, and to apply them to problems in fluid mechanics, diffusion, wave propagation, and related fields.

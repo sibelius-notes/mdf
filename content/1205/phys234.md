@@ -1,6 +1,7 @@
 ---
 title: "PHYS 234: Quantum Physics 1: Introduction to Quantum Mechanics"
 prof: "Raffi Budakian"
+subjects: "PHYS"
 ---
 
 # Unit 1: The Breakdown of Classical Physics

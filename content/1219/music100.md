@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 100: Introduction to Music"
 prof: "John Brownell"
+subjects: "MUSIC"
 ---
 
 # Introduction — What is Music?

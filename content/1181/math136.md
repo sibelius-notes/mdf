@@ -1,5 +1,6 @@
 ---
 title: "MATH 136: Linear Algebra 1"
+subjects: "MATH"
 ---
 
 # Chapter 1: Vectors in Euclidean Space

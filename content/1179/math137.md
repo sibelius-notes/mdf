@@ -1,5 +1,6 @@
 ---
 title: "MATH 137: Calculus 1 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 This quick reference covers MATH 137 (Fall 2017, University of Waterloo), based on the course notes by Barbara A. Forrest and Brian E. Forrest. The material progresses from sequences through limits, derivatives, the Mean Value Theorem, and culminates in Taylor polynomials.

@@ -1,5 +1,6 @@
 ---
 title: "STAT 901: Probability"
+subjects: "STAT"
 ---
 
 These notes synthesize material from two primary sources for the University of Waterloo's STAT 901 graduate probability course, Fall 2024:

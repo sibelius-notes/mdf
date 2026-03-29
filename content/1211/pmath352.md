@@ -1,6 +1,7 @@
 ---
 title: "PMATH 352: Complex Analysis"
 prof: "Ruxandra Moraru"
+subjects: "PMATH"
 ---
 
 # Chapter 1: Plane Calculus

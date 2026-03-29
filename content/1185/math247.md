@@ -1,5 +1,6 @@
 ---
 title: "MATH 247: Calculus 3 for Honours Mathematics"
+subjects: "MATH"
 ---
 
 These notes cover MATH 247 (Calculus 3 for Honours Mathematics) at the University of Waterloo. The course is the rigorous honours companion to MATH 237, treating multivariable calculus with the full force of real analysis: epsilon-delta arguments, the topology of \(\mathbb{R}^n\), the Inverse and Implicit Function Theorems, and an introduction to differential forms and the classical integral theorems of vector calculus. The underlying philosophy throughout is that of Spivak's *Calculus on Manifolds*: every definition should be motivated, every theorem should be understood geometrically, and every proof should illuminate rather than merely verify.

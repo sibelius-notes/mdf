@@ -1,6 +1,7 @@
 ---
 title: "GEOG 181: Designing Effective Maps"
 prof: "Weikai Tan"
+subjects: "GEOG"
 ---
 # An Introduction to Maps
 > "A map is any concrete or abstract representation of the features that occur on or near the surface of the earth or other celestial bodies."

@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 390: Research Methods in Memory"
 prof: ""
+subjects: "PSYCH"
 ---
 
 ## Course Overview

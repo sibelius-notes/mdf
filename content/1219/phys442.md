@@ -1,6 +1,7 @@
 ---
 title: "PHYS 442: Electrodynamics"
 prof: "Chris O'Donovan"
+subjects: "PHYS"
 ---
 
 Electrodynamics is the crown jewel of classical physics. By the 1860s, James Clerk Maxwell had synthesized the piecemeal laws of electricity and magnetism — Gauss's law, Faraday's induction, Ampère's circuital law — into a single, self-consistent system of four equations. These equations predicted electromagnetic waves propagating at the speed of light, an astonishing discovery that unified optics with electromagnetism. A generation later, Einstein's special theory of relativity emerged directly from asking what happens when you apply the principle of relativity to Maxwell's equations. The field theory framework pioneered here would go on to serve as the template for quantum electrodynamics, the electroweak theory, and the Standard Model of particle physics.

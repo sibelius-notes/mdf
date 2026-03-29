@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article>
+  <h1>Other Terms</h1>
+  {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
+    {{ if le (len .Pages) 4 }}
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="course-grid">
+    {{ range .Pages.ByTitle }}
+      {{ $study := partialCached "study-stats.html" . .RelPermalink }}
+      <a href="{{ .RelPermalink }}" class="course-card">
+        <span class="course-code">{{ .Title }}</span>
+        {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+        <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short") }}</span>
+      </a>
+    {{ end }}
+    </div>
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}

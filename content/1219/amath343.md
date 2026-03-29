@@ -1,6 +1,7 @@
 ---
 title: "AMATH 343: Discrete Models in Applied Mathematics"
 prof: "E.R. Vrscay"
+subjects: "AMATH"
 ---
 
 # Chapter 1: Introduction to Discrete Models

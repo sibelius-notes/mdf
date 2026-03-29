@@ -1,6 +1,7 @@
 ---
 title: "AMATH 451: Introduction to Dynamical Systems"
 prof: "Sue Ann Campbell & Xinzhi Liu"
+subjects: "AMATH"
 ---
 
 These notes integrate two sets of course materials: **Sue Ann Campbell's** lecture notes (Winter 2020, 144 pp.) and **Xinzhi Liu's** course notes (January 2021, 116 pp.). Together they provide a rigorous treatment of continuous dynamical systems, from existence theory through linear analysis, local and global nonlinear behavior, to periodic orbits and bifurcations.

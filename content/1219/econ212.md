@@ -1,6 +1,7 @@
 ---
 title: "ECON 212: Introduction to Game Theory"
 prof: "Joel Blit"
+subjects: "ECON"
 ---
 
 # Chapter 1: Introduction & Strategic Games

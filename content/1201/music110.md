@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 110: Music in Cultural Contexts"
 prof: "Maisie Sum, Kate Steiner"
+subjects: "MUSIC"
 ---
 # Course Introduction
 Introductions

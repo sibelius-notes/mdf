@@ -1,6 +1,7 @@
 ---
 title: "STAT 433: Applied Probability"
 prof: "Steve Drekic"
+subjects: "STAT"
 ---
 
 # Probability Review

@@ -1,6 +1,7 @@
 ---
 title: "AMATH 455/655: Control Theory"
 prof: "Jun Liu"
+subjects: "AMATH"
 ---
 # Introduction and State-Space Models
 

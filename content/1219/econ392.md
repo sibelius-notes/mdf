@@ -1,6 +1,7 @@
 ---
 title: "ECON 392: Strategic Situations and Welfare Economics"
 prof: "Ahmet Ozkardas"
+subjects: "ECON"
 ---
 
 # What is Game Theory?

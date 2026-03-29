@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 140: Popular music"
 prof: "Simon Wood"
+subjects: "MUSIC"
 ---
 # Post-War America and the Music Industry
 ## Part A

@@ -1,6 +1,7 @@
 ---
 title: "ENBUS 211: Principles of Marketing for Sustainability"
 prof: "Sadaf Abasian"
+subjects: "ENBUS"
 ---
 
 # Module 1: Introduction to Green Marketing and Social Accountability

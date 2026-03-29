@@ -1,5 +1,6 @@
 ---
 title: "ACTSC 371: Introduction to investment"
+subjects: "ACTSC"
 ---
 
 # Chapter 1: The Investment Environment

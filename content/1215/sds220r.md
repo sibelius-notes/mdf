@@ -1,6 +1,7 @@
 ---
 title: "SDS 220R: Changing Concepts of Childhood"
 prof: "Kristina Llewellyn"
+subjects: "SDS"
 ---
 
 # Introduction — Studying Childhood Through a Socio-Historical Lens

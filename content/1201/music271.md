@@ -1,6 +1,7 @@
 ---
 title: "MUSIC 271: Music Theory 2"
 prof: "Karen Sunabacka"
+subjects: "MUSIC"
 ---
 # § 12: Tonic Confirmation
 Review from [music 270](/music/270).
