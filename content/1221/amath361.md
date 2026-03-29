@@ -3,7 +3,7 @@ title: "AMATH 361: Continuum Mechanics"
 prof: ""
 ---
 
-These notes synthesize AMATH 361 as offered at the University of Waterloo (Winter 2022). The primary source is the course summary prepared by Ryan Newson (Winter 2005), which covers the material in a compact but mathematically precise form. The exposition of viscoelasticity and elasticity follows A.J.M. Spencer, *Continuum Mechanics* (Dover Publications, 2004), one of the clearest undergraduate treatments of the subject. The fluid mechanics chapters draw on D.J. Acheson, *Elementary Fluid Dynamics* (Oxford University Press, 1990), and G.K. Batchelor, *An Introduction to Fluid Dynamics* (Cambridge University Press, 1967). Readers seeking a more geometrically modern treatment of kinematics should consult M.E. Gurtin, *An Introduction to Continuum Mechanics* (Academic Press, 1981).
+The primary source is the course summary prepared by Ryan Newson (Winter 2005), which covers the material in a compact but mathematically precise form. The exposition of viscoelasticity and elasticity follows A.J.M. Spencer, *Continuum Mechanics* (Dover Publications, 2004), one of the clearest undergraduate treatments of the subject. The fluid mechanics chapters draw on D.J. Acheson, *Elementary Fluid Dynamics* (Oxford University Press, 1990), and G.K. Batchelor, *An Introduction to Fluid Dynamics* (Cambridge University Press, 1967). Readers seeking a more geometrically modern treatment of kinematics should consult M.E. Gurtin, *An Introduction to Continuum Mechanics* (Academic Press, 1981).
 
 ---
 
