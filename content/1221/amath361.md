@@ -75,6 +75,92 @@ f(t) = G r_0 \exp\!\left(-\frac{G}{\eta}\, t\right)
 
 The stress relaxes exponentially to zero with relaxation time \(\tau_M = \eta/G\). For \(t \gg \tau_M\), no force is needed to maintain the deformation — the dashpot has accommodated all the strain and the spring is at rest. This is **fluid-like behaviour**: the Maxwell model eventually flows without limit under any sustained load.
 
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 200" width="680" height="200" style="max-width:100%;font-family:serif;font-size:13px;">
+  <!-- Maxwell: spring in series with dashpot -->
+  <text x="110" y="18" text-anchor="middle" font-weight="bold">Maxwell (series)</text>
+  <!-- left wall -->
+  <rect x="10" y="85" width="6" height="30" fill="#666"/>
+  <line x1="16" y1="100" x2="40" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- spring -->
+  <polyline points="40,100 47,88 54,112 61,88 68,112 75,88 82,112 89,100" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- connector -->
+  <line x1="89" y1="100" x2="110" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- dashpot cylinder -->
+  <rect x="110" y="90" width="40" height="20" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="130" y1="82" x2="130" y2="90" stroke="#333" stroke-width="2"/>
+  <line x1="118" y1="102" x2="142" y2="102" stroke="#333" stroke-width="2.5"/>
+  <!-- dashpot piston rod -->
+  <line x1="150" y1="100" x2="175" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- arrow / force label -->
+  <line x1="175" y1="100" x2="195" y2="100" stroke="#e05" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="200" y="104" fill="#e05">f</text>
+  <!-- labels -->
+  <text x="64" y="125" text-anchor="middle" font-size="12" font-style="italic">G</text>
+  <text x="130" y="125" text-anchor="middle" font-size="12" font-style="italic">η</text>
+
+  <!-- Kelvin-Voigt: spring parallel with dashpot -->
+  <text x="390" y="18" text-anchor="middle" font-weight="bold">Kelvin-Voigt (parallel)</text>
+  <!-- left wall -->
+  <rect x="290" y="75" width="6" height="50" fill="#666"/>
+  <line x1="296" y1="85" x2="320" y2="85" stroke="#333" stroke-width="2"/>
+  <line x1="296" y1="115" x2="320" y2="115" stroke="#333" stroke-width="2"/>
+  <!-- vertical connectors left -->
+  <line x1="320" y1="85" x2="320" y2="115" stroke="#333" stroke-width="1.5"/>
+  <!-- top path: spring -->
+  <polyline points="320,85 327,73 334,97 341,73 348,97 355,73 362,85" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="362" y1="85" x2="380" y2="85" stroke="#333" stroke-width="2"/>
+  <!-- bottom path: dashpot -->
+  <rect x="320" y="107" width="40" height="16" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="340" y1="101" x2="340" y2="107" stroke="#333" stroke-width="2"/>
+  <line x1="328" y1="117" x2="352" y2="117" stroke="#333" stroke-width="2.5"/>
+  <line x1="360" y1="115" x2="380" y2="115" stroke="#333" stroke-width="2"/>
+  <!-- right connector -->
+  <line x1="380" y1="85" x2="380" y2="115" stroke="#333" stroke-width="1.5"/>
+  <line x1="380" y1="100" x2="405" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- arrow -->
+  <line x1="405" y1="100" x2="425" y2="100" stroke="#e05" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="430" y="104" fill="#e05">f</text>
+  <!-- labels -->
+  <text x="341" y="68" text-anchor="middle" font-size="12" font-style="italic">G</text>
+  <text x="340" y="137" text-anchor="middle" font-size="12" font-style="italic">η</text>
+
+  <!-- SLS: KV element in series with a spring -->
+  <text x="590" y="18" text-anchor="middle" font-weight="bold">Zener / SLS</text>
+  <!-- left wall -->
+  <rect x="490" y="85" width="6" height="30" fill="#666"/>
+  <line x1="496" y1="100" x2="518" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- Spring G1 -->
+  <polyline points="518,100 525,88 532,112 539,88 546,112 553,88 560,100" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="560" y1="100" x2="574" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- parallel block: G2 || η -->
+  <line x1="574" y1="100" x2="574" y2="78" stroke="#333" stroke-width="1.5"/>
+  <line x1="574" y1="100" x2="574" y2="122" stroke="#333" stroke-width="1.5"/>
+  <polyline points="574,78 581,66 588,90 595,66 602,78" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="602" y1="78" x2="622" y2="78" stroke="#333" stroke-width="2"/>
+  <rect x="574" y="114" width="36" height="14" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="592" y1="108" x2="592" y2="114" stroke="#333" stroke-width="2"/>
+  <line x1="582" y1="122" x2="602" y2="122" stroke="#333" stroke-width="2.5"/>
+  <line x1="610" y1="122" x2="622" y2="122" stroke="#333" stroke-width="2"/>
+  <line x1="622" y1="78" x2="622" y2="122" stroke="#333" stroke-width="1.5"/>
+  <line x1="622" y1="100" x2="640" y2="100" stroke="#333" stroke-width="2"/>
+  <!-- arrow -->
+  <line x1="640" y1="100" x2="660" y2="100" stroke="#e05" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="665" y="104" fill="#e05">f</text>
+  <!-- labels -->
+  <text x="538" y="132" text-anchor="middle" font-size="11" font-style="italic">G₁</text>
+  <text x="588" y="62" text-anchor="middle" font-size="11" font-style="italic">G₂</text>
+  <text x="592" y="145" text-anchor="middle" font-size="11" font-style="italic">η</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e05"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Three canonical spring-dashpot models. Left: Maxwell (series) — shared force, additive deformations. Centre: Kelvin–Voigt (parallel) — shared deformation, additive forces. Right: Standard Linear Solid / Zener (spring G₁ in series with a K-V block) — finite instantaneous and long-time stiffness.</figcaption>
+</figure>
+
 ## 1.4 The Kelvin–Voigt Solid
 
 In the **Kelvin–Voigt model**, a spring and dashpot are in **parallel**. Elements in parallel share the same deformation (they are attached at both ends) and their forces add:
@@ -151,6 +237,48 @@ The **stress relaxation test** applies a step in deformation: \(r(t) = r_0 H(t)\
 
 The **oscillatory test** applies \(f(t) = f_0 \sin(\omega t)\) and observes the steady-state response \(r(t) = r_0 \sin(\omega t - \delta)\). The **loss angle** \(\delta\) quantifies the phase lag. For a perfectly elastic material, \(\delta = 0\); for a purely viscous fluid, \(\delta = \pi/2\). The **storage modulus** \(G' = (f_0/r_0)\cos\delta\) measures elastic energy storage; the **loss modulus** \(G'' = (f_0/r_0)\sin\delta\) measures viscous dissipation.
 
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 200" width="540" height="200" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Left panel: Creep compliance J(t) -->
+  <!-- axes -->
+  <line x1="40" y1="165" x2="230" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="40" y1="165" x2="40" y2="20" stroke="#333" stroke-width="1.5"/>
+  <text x="235" y="168" font-size="12" font-style="italic">t</text>
+  <text x="28" y="16" font-size="12" font-style="italic">J(t)</text>
+  <text x="130" y="185" text-anchor="middle" font-size="11" font-weight="bold">Creep Compliance</text>
+  <!-- Maxwell: grows linearly (fluid-like) -->
+  <polyline points="40,165 80,140 130,105 190,65 220,45" fill="none" stroke="#4488cc" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="225" y="48" fill="#4488cc" font-size="11">Maxwell</text>
+  <!-- KV: exponential approach to 1/G plateau -->
+  <polyline points="40,165 55,143 70,127 90,112 115,103 145,99 175,97 205,97 225,97" fill="none" stroke="#cc4422" stroke-width="2"/>
+  <text x="225" y="100" fill="#cc4422" font-size="11">K-V</text>
+  <!-- SLS: similar to KV but starts stiffer -->
+  <polyline points="40,155 55,138 75,126 100,115 135,106 170,101 210,98 225,98" fill="none" stroke="#33aa55" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="225" y="90" fill="#33aa55" font-size="11">SLS</text>
+  <!-- equilibrium line -->
+  <line x1="40" y1="97" x2="225" y2="97" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Right panel: Relaxation Modulus G(t) -->
+  <line x1="310" y1="165" x2="500" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="310" y1="165" x2="310" y2="20" stroke="#333" stroke-width="1.5"/>
+  <text x="505" y="168" font-size="12" font-style="italic">t</text>
+  <text x="298" y="16" font-size="12" font-style="italic">G(t)</text>
+  <text x="400" y="185" text-anchor="middle" font-size="11" font-weight="bold">Stress Relaxation Modulus</text>
+  <!-- Maxwell: exponential decay to 0 -->
+  <polyline points="310,35 340,50 375,75 415,110 455,140 490,158 500,162" fill="none" stroke="#4488cc" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="497" y="158" fill="#4488cc" font-size="11">Maxwell</text>
+  <!-- SLS: decays to finite plateau -->
+  <polyline points="310,35 340,52 375,75 415,100 455,115 490,122 500,124" fill="none" stroke="#33aa55" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="497" y="130" fill="#33aa55" font-size="11">SLS</text>
+  <!-- KV: instant jump, stays constant (ideal solid) -->
+  <polyline points="310,165 310,35 500,35" fill="none" stroke="#cc4422" stroke-width="2"/>
+  <text x="497" y="48" fill="#cc4422" font-size="11">K-V</text>
+  <!-- asymptote dashed for SLS plateau -->
+  <line x1="310" y1="124" x2="500" y2="124" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Creep compliance \(J(t)\) (left) and stress relaxation modulus \(G(t)\) (right) for the three classical models. The Maxwell fluid flows without bound under sustained load; Kelvin–Voigt has infinite instantaneous stiffness; the SLS correctly interpolates with finite behaviour at both extremes.</figcaption>
+</figure>
+
 ## 1.8 Plasticity and Nonlinear Response
 
 The viscoelastic theory above is fundamentally linear: superposition holds. Many materials, however, exhibit **plasticity** — irreversible deformation that occurs once a stress threshold is exceeded. The simplest model replaces the smooth spring with a frictional element obeying Coulomb friction:
@@ -189,6 +317,43 @@ e(x) = u_x = f'(x) - 1
 \]
 
 This linear approximation is valid for metals under service loads, geological rocks under tectonic stresses, and most structural engineering problems. It breaks down for rubber, biological tissue under large deformations, and any problem where geometric nonlinearity matters.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180" width="440" height="180" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Reference square (dashed) -->
+  <rect x="50" y="60" width="80" height="80" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="90" y="55" text-anchor="middle" fill="#888" font-size="11">Reference</text>
+
+  <!-- Normal strain e_11: stretched in x -->
+  <rect x="200" y="60" width="110" height="80" fill="rgba(68,136,204,0.1)" stroke="#4488cc" stroke-width="2"/>
+  <text x="255" y="55" text-anchor="middle" fill="#4488cc" font-size="11">Normal strain</text>
+  <text x="255" y="45" text-anchor="middle" fill="#4488cc" font-size="10" font-style="italic">e₁₁ = ∂u₁/∂x₁ &gt; 0</text>
+  <!-- stretch arrows -->
+  <line x1="196" y1="100" x2="185" y2="100" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arB)"/>
+  <line x1="314" y1="100" x2="325" y2="100" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arB)"/>
+  <!-- reference outline dashed -->
+  <rect x="215" y="60" width="80" height="80" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Shear strain e_12: shearing -->
+  <polygon points="50,310 130,310 135,390 55,390" fill="rgba(204,68,34,0.1)" stroke="#cc4422" stroke-width="2" transform="translate(220,-220)"/>
+  <text x="385" y="55" text-anchor="middle" fill="#cc4422" font-size="11">Shear strain</text>
+  <text x="385" y="45" text-anchor="middle" fill="#cc4422" font-size="10" font-style="italic">e₁₂ = ½(∂u₁/∂x₂ + ∂u₂/∂x₁)</text>
+  <!-- reference outline dashed -->
+  <rect x="350" y="90" width="80" height="80" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- axes labels -->
+  <line x1="30" y1="155" x2="30" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#arD)"/>
+  <line x1="30" y1="155" x2="145" y2="155" stroke="#333" stroke-width="1.5" marker-end="url(#arD)"/>
+  <text x="148" y="158" font-size="11" font-style="italic">x₁</text>
+  <text x="22" y="46" font-size="11" font-style="italic">x₂</text>
+
+  <defs>
+    <marker id="arB" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#4488cc"/></marker>
+    <marker id="arD" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Normal strain \(e_{11}\) stretches the element in the \(x_1\)-direction; shear strain \(e_{12}\) skews it. The infinitesimal strain tensor captures both effects as the symmetric part of the displacement gradient.</figcaption>
+</figure>
 
 ## 2.2 Cartesian Tensors and Index Notation
 
@@ -259,6 +424,42 @@ t_i = \tau_{ij}\, \hat{n}_j \qquad [N/m^2]
 </div>
 
 This is a profound result: it asserts that the traction depends linearly on the surface normal, regardless of the surface's shape or orientation. The proof proceeds by applying Newton's law to a shrinking tetrahedron with three faces aligned with the coordinate planes and one inclined face — Cauchy's classical argument.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Tetrahedron vertices: O at (100,160), A at (240,160), B at (50,60), C at (180,40) -->
+  <!-- Back faces (dashed) -->
+  <polygon points="100,160 50,60 180,40" fill="rgba(200,200,200,0.2)" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="100" y1="160" x2="240" y2="160" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="100" y1="160" x2="180" y2="40" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Inclined face (front, highlighted) -->
+  <polygon points="240,160 50,60 180,40" fill="rgba(68,136,204,0.15)" stroke="#4488cc" stroke-width="2"/>
+  <!-- Axes from O -->
+  <line x1="100" y1="160" x2="260" y2="160" stroke="#e05" stroke-width="1.5" marker-end="url(#arE)"/>
+  <text x="265" y="163" fill="#e05" font-size="12" font-style="italic">x₁</text>
+  <line x1="100" y1="160" x2="100" y2="30" stroke="#e05" stroke-width="1.5" marker-end="url(#arE)"/>
+  <text x="88" y="26" fill="#e05" font-size="12" font-style="italic">x₃</text>
+  <line x1="100" y1="160" x2="35" y2="85" stroke="#e05" stroke-width="1.5" marker-end="url(#arE)"/>
+  <text x="22" y="82" fill="#e05" font-size="12" font-style="italic">x₂</text>
+  <!-- Normal to inclined face -->
+  <line x1="157" y1="87" x2="200" y2="60" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arF)"/>
+  <text x="205" y="58" fill="#4488cc" font-size="12" font-style="italic">n̂</text>
+  <!-- Traction vector -->
+  <line x1="157" y1="87" x2="185" y2="100" stroke="#33aa55" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="188" y="106" fill="#33aa55" font-size="12" font-style="italic">t = τn̂</text>
+  <!-- Point labels -->
+  <text x="96" y="175" font-size="11">O</text>
+  <text x="244" y="175" font-size="11">A</text>
+  <text x="38" y="58" font-size="11">B</text>
+  <text x="182" y="36" font-size="11">C</text>
+  <defs>
+    <marker id="arE" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#e05"/></marker>
+    <marker id="arF" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#4488cc"/></marker>
+    <marker id="arG" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#33aa55"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Cauchy's tetrahedron argument. The three coordinate faces carry stress components \(\tau_{ij}\); the inclined face with outward normal \(\hat{n}\) carries the traction \(t_i = \tau_{ij}\hat{n}_j\). Taking the volume to zero shows the traction is a linear function of \(\hat{n}\) — the fundamental result of stress theory.</figcaption>
+</figure>
 
 The diagonal entries \(\tau_{11}, \tau_{22}, \tau_{33}\) are **normal stresses**: positive means tension, negative means compression. The off-diagonal entries \(\tau_{12} = \tau_{21}\), etc., are **shear stresses**. The symmetry \(\tau_{ij} = \tau_{ji}\) is a consequence of angular momentum balance applied to an infinitesimal volume.
 
@@ -585,6 +786,45 @@ u(x) = \frac{1}{2\nu}\frac{dp}{dz}\!\left(x^2 - h^2\right)
 \]
 
 This **parabolic profile** is the hallmark of Poiseuille (pressure-driven) flow. The maximum velocity is at the centreline \(x = 0\); the flow rate per unit width is \(Q = -\frac{2h^3}{3\nu}\frac{dp}{dz}\).
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Channel walls -->
+  <rect x="60" y="20" width="220" height="12" fill="#aaa" rx="2"/>
+  <rect x="60" y="168" width="220" height="12" fill="#aaa" rx="2"/>
+  <text x="50" y="32" text-anchor="end" font-size="11">x = h</text>
+  <text x="50" y="178" text-anchor="end" font-size="11">x = -h</text>
+  <!-- Parabolic velocity profile (half-width 70px at centreline) -->
+  <path d="M 60,100 Q 195,26 280,100" fill="rgba(68,136,204,0.15)" stroke="#4488cc" stroke-width="2.5"/>
+  <path d="M 60,100 Q 195,174 280,100" fill="rgba(68,136,204,0.15)" stroke="#4488cc" stroke-width="2.5"/>
+  <line x1="60" y1="100" x2="280" y2="100" stroke="#4488cc" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- velocity arrows at several heights -->
+  <line x1="60" y1="32" x2="65" y2="32" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="55" x2="105" y2="55" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="75" x2="155" y2="75" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="100" x2="195" y2="100" stroke="#33aa55" stroke-width="2.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="125" x2="155" y2="125" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="145" x2="105" y2="145" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <line x1="60" y1="168" x2="65" y2="168" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arH)"/>
+  <!-- axis -->
+  <line x1="60" y1="180" x2="60" y2="10" stroke="#333" stroke-width="1.5" marker-end="url(#arI)"/>
+  <text x="50" y="100" text-anchor="end" font-size="11">0</text>
+  <text x="40" y="10" font-size="11" font-style="italic">x</text>
+  <!-- max velocity label -->
+  <text x="200" y="97" font-size="11" fill="#4488cc">u_max</text>
+  <text x="195" y="115" text-anchor="middle" font-size="10" fill="#555" font-style="italic">u(x) = u_max(1 − x²/h²)</text>
+  <!-- pressure arrow -->
+  <line x1="245" y1="100" x2="295" y2="100" stroke="#e05" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arJ)"/>
+  <text x="298" y="103" fill="#e05" font-size="11">z</text>
+  <text x="270" y="92" fill="#e05" font-size="10">dp/dz &lt; 0</text>
+  <defs>
+    <marker id="arH" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#33aa55"/></marker>
+    <marker id="arI" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arJ" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#e05"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Poiseuille flow between parallel plates: the parabolic velocity profile \(u(x) = u_{max}(1 - x^2/h^2)\). No-slip at both walls; maximum velocity at the centreline; driven by the pressure gradient \(dp/dz < 0\) in the flow direction.</figcaption>
+</figure>
 
 For flow in a circular pipe of radius \(R\) — **Hagen–Poiseuille flow** — the analogous result is:
 \[

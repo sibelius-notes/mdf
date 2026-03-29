@@ -179,6 +179,58 @@ Two important limits follow immediately:
 
 **Shallow water** (\(kH \ll 1\), i.e., wavelength \(\gg\) depth): \(\tanh(kH) \approx kH\), giving \(\omega^2 = gH k^2\), or \(\omega = \sqrt{gH}\,k\). All wavelengths travel at the same speed \(c = \sqrt{gH}\) — shallow-water waves are **non-dispersive**. Tsunamis are shallow-water waves (ocean depth \(\sim\) 4 km, wavelength \(\sim\) 200 km): they travel at \(\sqrt{gH} \approx 200\) m/s \(\approx\) 700 km/h.
 
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- axes -->
+  <line x1="50" y1="200" x2="370" y2="200" stroke="#333" stroke-width="1.5" marker-end="url(#arA1)"/>
+  <line x1="50" y1="200" x2="50" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arA2)"/>
+  <text x="374" y="204" font-size="13" font-style="italic">kH</text>
+  <text x="38" y="18" font-size="13" font-style="italic">ω²/gk</text>
+  <!-- kH axis ticks -->
+  <line x1="130" y1="200" x2="130" y2="205" stroke="#333" stroke-width="1"/>
+  <line x1="210" y1="200" x2="210" y2="205" stroke="#333" stroke-width="1"/>
+  <line x1="290" y1="200" x2="290" y2="205" stroke="#333" stroke-width="1"/>
+  <text x="130" y="215" text-anchor="middle" font-size="10">1</text>
+  <text x="210" y="215" text-anchor="middle" font-size="10">2</text>
+  <text x="290" y="215" text-anchor="middle" font-size="10">3</text>
+  <!-- ω² axis ticks -->
+  <line x1="45" y1="110" x2="50" y2="110" stroke="#333" stroke-width="1"/>
+  <text x="40" y="114" text-anchor="end" font-size="10">0.5</text>
+  <line x1="45" y1="50" x2="50" y2="50" stroke="#333" stroke-width="1"/>
+  <text x="40" y="54" text-anchor="end" font-size="10">1.0</text>
+
+  <!-- tanh(kH) curve: ω²/(gk) = tanh(kH), sampled points -->
+  <!-- tanh(x): 0.197,0.462,0.716,0.905,0.964,0.988,0.995 for x=0.2,0.5,1,2,3,4,5 -->
+  <!-- mapping: kH axis from 50 to 370 (range 320 for kH 0..4), ω axis from 200 to 20 (range 180 for 0..1) -->
+  <!-- kH=0: tanh=0 → (50,200); kH=0.5→(130,117); kH=1→(210,71); kH=2→(290,37); kH=3→(330,27); kH=4→(354,22) -->
+  <polyline points="50,200 90,166 130,117 170,84 210,71 250,57 290,37 330,27 354,22" fill="none" stroke="#4488cc" stroke-width="2.5"/>
+  <text x="356" y="19" fill="#4488cc" font-size="11">tanh(kH)</text>
+
+  <!-- Deep-water asymptote: ω²/(gk)=1 → horizontal line at y=50 -->
+  <line x1="50" y1="50" x2="370" y2="50" stroke="#cc4422" stroke-width="1.5" stroke-dasharray="7,4"/>
+  <text x="310" y="44" fill="#cc4422" font-size="11">Deep water: ω²=gk</text>
+
+  <!-- Shallow-water linear: ω²/(gk) = kH → line through origin with slope 1 in our coords -->
+  <!-- At kH=0: y=200; at kH=1: y=200-180*1=20; so almost vertical — scale down: show as 45° in first quadrant -->
+  <!-- Let's use kH→ x-axis at 80px per unit; y axis maps kH also for shallow: y=200-(180*kH) -->
+  <polyline points="50,200 90,182 130,164 170,146 185,139" fill="none" stroke="#33aa55" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="186" y="136" fill="#33aa55" font-size="11">Shallow: ω²=gHk²</text>
+
+  <!-- label regions -->
+  <text x="190" y="180" text-anchor="middle" fill="#888" font-size="10">Shallow (kH≪1)</text>
+  <text x="330" y="80" text-anchor="middle" fill="#888" font-size="10">Deep (kH≫1)</text>
+  <!-- vertical at kH=1 marking transition -->
+  <line x1="210" y1="200" x2="210" y2="20" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="212" y="30" fill="#aaa" font-size="10">kH=1</text>
+
+  <defs>
+    <marker id="arA1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arA2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Dispersion relation \(\omega^2 = gk\tanh(kH)\). The full curve (blue) interpolates between the shallow-water linear limit \(\omega^2 = gHk^2\) (green dashed) and the deep-water limit \(\omega^2 = gk\) (red dashed). The transition occurs near \(kH \approx 1\), i.e., wavelength comparable to depth.</figcaption>
+</figure>
+
 ## 3.2 Group Velocity and Energy Transport
 
 The concept of **group velocity** is one of the most profound in wave physics. For a dispersive medium with dispersion relation \(\omega = \omega(k)\), a localised wave packet — a superposition of plane waves with wavenumbers centred near \(k_0\) — propagates as a whole at the group velocity:
@@ -219,6 +271,68 @@ The simplest exact solution: fluid between two infinite parallel plates at \(y =
 \]
 
 A perfect linear profile. The shear stress on each plate is \(\tau = \mu U/h\). **Couette flow** is the defining experiment for measuring viscosity: by measuring the torque on a rotating cylinder (the Couette viscometer), one infers \(\mu\) from the known geometry.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Couette flow (left panel) -->
+  <!-- walls -->
+  <rect x="30" y="20" width="160" height="10" fill="#888" rx="1"/>
+  <rect x="30" y="170" width="160" height="10" fill="#888" rx="1"/>
+  <!-- moving wall indicator -->
+  <line x1="60" y1="20" x2="95" y2="20" stroke="#e05" stroke-width="2" marker-end="url(#arC1)"/>
+  <text x="100" y="18" fill="#e05" font-size="11">U</text>
+  <text x="110" y="35" font-size="10" fill="#888">upper plate moving</text>
+  <text x="110" y="175" font-size="10" fill="#888">lower plate fixed</text>
+  <!-- linear profile -->
+  <polygon points="30,30 110,30 30,170" fill="rgba(68,136,204,0.15)" stroke="none"/>
+  <line x1="30" y1="30" x2="110" y2="30" stroke="#4488cc" stroke-width="2.5"/>
+  <line x1="30" y1="30" x2="30" y2="170" stroke="#4488cc" stroke-width="2.5"/>
+  <line x1="30" y1="170" x2="30" y2="170" stroke="#4488cc" stroke-width="2.5"/>
+  <line x1="30" y1="170" x2="30" y2="170" stroke="#4488cc" stroke-width="0"/>
+  <!-- draw the velocity arrows -->
+  <line x1="30" y1="55" x2="90" y2="55" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="30" y1="80" x2="70" y2="80" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="30" y1="110" x2="50" y2="110" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="30" y1="145" x2="35" y2="145" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="30" y1="30" x2="110" y2="30" stroke="#33aa55" stroke-width="2" marker-end="url(#arC2)"/>
+  <!-- y axis -->
+  <line x1="30" y1="170" x2="30" y2="18" stroke="#333" stroke-width="1.5" marker-end="url(#arC3)"/>
+  <text x="18" y="17" font-size="11" font-style="italic">y</text>
+  <text x="110" y="110" text-anchor="middle" font-size="11" fill="#4488cc">u(y)=Uy/h</text>
+  <text x="110" y="195" text-anchor="middle" font-weight="bold" font-size="11">Plane Couette</text>
+
+  <!-- Poiseuille flow (right panel) -->
+  <rect x="300" y="20" width="160" height="10" fill="#888" rx="1"/>
+  <rect x="300" y="170" width="160" height="10" fill="#888" rx="1"/>
+  <!-- pressure arrow -->
+  <line x1="280" y1="100" x2="300" y2="100" stroke="#e05" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arC4)"/>
+  <text x="268" y="104" fill="#e05" font-size="10">Δp</text>
+  <!-- parabolic profile -->
+  <path d="M 300,30 Q 440,100 300,170" fill="rgba(68,136,204,0.15)" stroke="#4488cc" stroke-width="2.5"/>
+  <line x1="300" y1="30" x2="300" y2="170" stroke="#4488cc" stroke-width="2.5"/>
+  <!-- velocity arrows -->
+  <line x1="300" y1="35" x2="305" y2="35" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="300" y1="60" x2="360" y2="60" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="300" y1="85" x2="415" y2="85" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="300" y1="100" x2="440" y2="100" stroke="#33aa55" stroke-width="2" marker-end="url(#arC2)"/>
+  <line x1="300" y1="115" x2="415" y2="115" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="300" y1="140" x2="360" y2="140" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <line x1="300" y1="165" x2="305" y2="165" stroke="#33aa55" stroke-width="1.5" marker-end="url(#arC2)"/>
+  <!-- y axis -->
+  <line x1="300" y1="170" x2="300" y2="18" stroke="#333" stroke-width="1.5" marker-end="url(#arC3)"/>
+  <text x="288" y="17" font-size="11" font-style="italic">y</text>
+  <text x="390" y="195" text-anchor="middle" font-weight="bold" font-size="11">Plane Poiseuille</text>
+  <text x="420" y="100" font-size="10" fill="#4488cc">u_max</text>
+
+  <defs>
+    <marker id="arC1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#e05"/></marker>
+    <marker id="arC2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#33aa55"/></marker>
+    <marker id="arC3" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arC4" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#e05"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Velocity profiles for the two canonical viscous flows. Left: Plane Couette flow (shear-driven, linear profile). Right: Plane Poiseuille flow (pressure-driven, parabolic profile with no-slip at both walls).</figcaption>
+</figure>
 
 ## 4.3 Hagen–Poiseuille Flow
 
@@ -329,6 +443,49 @@ c_f = \frac{\tau_w}{\frac{1}{2}\rho U^2} = \frac{0.664}{\sqrt{Re_x}}
 
 These are exact asymptotic results, valid for large \(Re_x\). They agree very well with experiments up to the transition to turbulent boundary layers (typically around \(Re_x \approx 5\times 10^5\)).
 
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- flat plate -->
+  <rect x="60" y="140" width="360" height="8" fill="#777" rx="1"/>
+  <text x="420" y="155" font-size="11">plate</text>
+  <!-- free-stream arrows above BL -->
+  <line x1="30" y1="40" x2="80" y2="40" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arD1)"/>
+  <line x1="30" y1="65" x2="80" y2="65" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arD1)"/>
+  <line x1="30" y1="90" x2="80" y2="90" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arD1)"/>
+  <line x1="30" y1="115" x2="80" y2="115" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arD1)"/>
+  <text x="25" y="40" text-anchor="end" font-size="11" fill="#4488cc">U</text>
+  <!-- BL edge curve: growing as sqrt(x) from (60,140) -->
+  <!-- points: x=60,δ=0; x=120,δ=20; x=200,δ=35; x=300,δ=50; x=420,δ=65 (in SVG: y = 140 - δ) -->
+  <path d="M 60,140 Q 150,118 240,105 Q 330,92 420,75" fill="rgba(68,136,204,0.12)" stroke="#4488cc" stroke-width="2"/>
+  <line x1="60" y1="140" x2="60" y2="140" stroke="#4488cc" stroke-width="2"/>
+  <!-- close the region -->
+  <path d="M 60,140 Q 150,118 240,105 Q 330,92 420,75 L 420,140 Z" fill="rgba(68,136,204,0.1)" stroke="none"/>
+  <!-- velocity profiles at several x positions -->
+  <!-- At x=120: BL height ≈20px above plate, show partial parabolic approach from 0 to U -->
+  <path d="M 120,140 Q 135,130 140,120" fill="none" stroke="#33aa55" stroke-width="1.5"/>
+  <line x1="140" y1="120" x2="140" y2="40" stroke="#33aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <path d="M 240,140 Q 262,125 272,105" fill="none" stroke="#33aa55" stroke-width="1.5"/>
+  <line x1="272" y1="105" x2="272" y2="40" stroke="#33aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <path d="M 360,140 Q 388,120 400,82" fill="none" stroke="#33aa55" stroke-width="1.5"/>
+  <line x1="400" y1="82" x2="400" y2="40" stroke="#33aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- δ(x) label -->
+  <line x1="300" y1="140" x2="300" y2="95" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="305" y="120" font-size="11" fill="#888" font-style="italic">δ(x) ~ √(νx/U)</text>
+  <!-- axes -->
+  <line x1="50" y1="148" x2="440" y2="148" stroke="#333" stroke-width="1.5" marker-end="url(#arD2)"/>
+  <text x="444" y="151" font-size="11" font-style="italic">x</text>
+  <line x1="60" y1="148" x2="60" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arD2)"/>
+  <text x="52" y="18" font-size="11" font-style="italic">y</text>
+  <!-- leading edge marker -->
+  <text x="60" y="165" text-anchor="middle" font-size="10">x=0</text>
+  <defs>
+    <marker id="arD1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#4488cc"/></marker>
+    <marker id="arD2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Growth of the laminar boundary layer along a flat plate. The boundary layer thickness \(\delta(x) \sim \sqrt{\nu x/U}\) grows as the square root of distance from the leading edge. Velocity profiles evolve from zero at the wall to the free-stream speed \(U\) across a thickening shear layer (Blasius similarity solution).</figcaption>
+</figure>
+
 ## 5.4 Boundary Layer Separation
 
 When the outer flow decelerates (\(dU/dx < 0\)), the adverse pressure gradient (\(dP/dx > 0\)) decelerates the boundary layer fluid. Near the wall, where the fluid has been slowed by friction, the momentum may be insufficient to overcome the adverse pressure gradient, and the flow **reverses direction**. At the point where the wall shear stress vanishes, the boundary layer is said to **separate**.
@@ -339,6 +496,44 @@ After separation, the thin boundary layer approximation breaks down, the flow le
 - Flow separation at pipe bends and over hills
 
 The position of separation depends delicately on the surface geometry and the upstream pressure distribution. For a circular cylinder in potential flow, the outer flow decelerates after the midpoint, and separation occurs around 80° from the leading stagnation point. The dramatic drag reduction of a dimpled golf ball (compared to a smooth one) works by triggering an early turbulent transition in the boundary layer, which can sustain higher adverse pressure gradients before separating — the separation point moves backward and the wake narrows.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- curved surface (aerofoil-like, adverse pressure gradient region) -->
+  <path d="M 30,100 Q 120,40 250,100 Q 350,150 430,100" fill="rgba(150,150,150,0.2)" stroke="#777" stroke-width="2"/>
+  <!-- BL before separation -->
+  <path d="M 30,100 Q 90,55 160,80 Q 200,90 230,105" fill="rgba(68,136,204,0.12)" stroke="#4488cc" stroke-width="1.5"/>
+  <!-- velocity profiles: attached -->
+  <!-- profile 1 at x=90 -->
+  <line x1="90" y1="68" x2="90" y2="40" stroke="#33aa55" stroke-width="1" stroke-dasharray="2,2"/>
+  <path d="M 90,68 Q 100,58 104,40" fill="none" stroke="#33aa55" stroke-width="1.5"/>
+  <!-- profile 2 at x=170 -->
+  <line x1="170" y1="80" x2="170" y2="40" stroke="#33aa55" stroke-width="1" stroke-dasharray="2,2"/>
+  <path d="M 170,80 Q 178,65 183,40" fill="none" stroke="#33aa55" stroke-width="1.5"/>
+  <!-- separation point S -->
+  <circle cx="230" cy="105" r="4" fill="#e05"/>
+  <text x="225" y="120" fill="#e05" font-size="11" font-weight="bold">S</text>
+  <text x="225" y="130" fill="#e05" font-size="10">τ_w=0</text>
+  <!-- velocity profile at separation: vertical at wall -->
+  <path d="M 230,105 L 230,70" fill="none" stroke="#e05" stroke-width="1.5"/>
+  <!-- reversed flow after separation -->
+  <path d="M 265,115 Q 300,145 350,140 Q 390,135 430,110" fill="rgba(204,68,34,0.1)" stroke="#cc4422" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- backflow arrow -->
+  <line x1="320" y1="130" x2="280" y2="130" stroke="#cc4422" stroke-width="1.5" marker-end="url(#arE1)"/>
+  <text x="295" y="145" fill="#cc4422" font-size="10">recirculation</text>
+  <!-- pressure arrows -->
+  <text x="80" y="30" text-anchor="middle" fill="#888" font-size="10">favourable ∂p/∂x&lt;0</text>
+  <text x="350" y="30" text-anchor="middle" fill="#888" font-size="10">adverse ∂p/∂x&gt;0</text>
+  <line x1="180" y1="22" x2="240" y2="22" stroke="#888" stroke-width="1" marker-end="url(#arE2)"/>
+  <!-- wake label -->
+  <text x="380" y="160" fill="#cc4422" font-size="11">wake</text>
+  <defs>
+    <marker id="arE1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#cc4422"/></marker>
+    <marker id="arE2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#888"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Boundary layer separation. Where the outer pressure gradient becomes adverse (\(\partial p/\partial x > 0\)), near-wall fluid decelerates and eventually reverses direction. At the separation point S the wall shear stress vanishes (\(\tau_w = 0\)). Beyond S, the separated boundary layer lifts off the surface and a recirculating wake forms.</figcaption>
+</figure>
 
 ---
 
@@ -394,6 +589,53 @@ E(k) = C\varepsilon^{2/3} k^{-5/3}
 \]
 where \(C \approx 1.5\) is the Kolmogorov constant. This \(k^{-5/3}\) power law is one of the most universally observed results in fluid turbulence, confirmed over many decades of wavenumber in atmospheric, oceanic, and laboratory experiments.
 
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 240" width="380" height="240" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- axes -->
+  <line x1="55" y1="200" x2="350" y2="200" stroke="#333" stroke-width="1.5" marker-end="url(#arF1)"/>
+  <line x1="55" y1="200" x2="55" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arF2)"/>
+  <text x="354" y="204" font-size="12" font-style="italic">k</text>
+  <text x="30" y="18" font-size="12" font-style="italic">E(k)</text>
+  <text x="200" y="220" text-anchor="middle" font-size="10" fill="#888">(log scale)</text>
+  <text x="20" y="115" font-size="10" fill="#888" transform="rotate(-90,20,115)">(log scale)</text>
+
+  <!-- Energy-containing range: flat/rising left part -->
+  <polyline points="55,60 90,55 130,58 160,70" fill="none" stroke="#4488cc" stroke-width="2.5"/>
+  <!-- Inertial subrange: -5/3 slope -->
+  <polyline points="160,70 200,90 240,115 280,145 310,165" fill="none" stroke="#4488cc" stroke-width="2.5"/>
+  <!-- Dissipation range: steep drop -->
+  <polyline points="310,165 330,178 345,192 355,200" fill="none" stroke="#4488cc" stroke-width="2.5"/>
+
+  <!-- slope indicator for -5/3 -->
+  <line x1="175" y1="72" x2="295" y2="150" stroke="#cc4422" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="175" y1="72" x2="295" y2="72" stroke="#cc4422" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="295" y1="72" x2="295" y2="150" stroke="#cc4422" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="310" y="112" fill="#cc4422" font-size="11">−5/3</text>
+
+  <!-- region labels -->
+  <text x="100" y="40" text-anchor="middle" fill="#888" font-size="10">Energy</text>
+  <text x="100" y="52" text-anchor="middle" fill="#888" font-size="10">injection</text>
+  <text x="235" y="85" text-anchor="middle" fill="#33aa55" font-size="11" font-weight="bold">Inertial</text>
+  <text x="235" y="97" text-anchor="middle" fill="#33aa55" font-size="10">subrange</text>
+  <text x="340" y="140" fill="#888" font-size="10">Dissipation</text>
+
+  <!-- k_L and k_Kolmogorov markers -->
+  <line x1="155" y1="200" x2="155" y2="70" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="155" y="215" text-anchor="middle" font-size="10" fill="#888">k_L</text>
+  <line x1="310" y1="200" x2="310" y2="165" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="310" y="215" text-anchor="middle" font-size="10" fill="#888">k_η</text>
+
+  <!-- formula -->
+  <text x="200" y="135" text-anchor="middle" fill="#4488cc" font-size="12" font-style="italic">E(k) = Cε²/³k⁻⁵/³</text>
+
+  <defs>
+    <marker id="arF1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arF2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Kolmogorov energy spectrum on log-log axes. Energy is injected at large scales (small \(k_L\)), cascades through the inertial subrange with the universal \(k^{-5/3}\) law, and is dissipated at the Kolmogorov microscale \(k_\eta = \eta^{-1}\). The inertial range spans many decades in high-Reynolds-number turbulence.</figcaption>
+</figure>
+
 ## 6.4 Wall Turbulence and the Logarithmic Layer
 
 Near a solid wall, turbulence has a characteristic multi-layer structure. Define the friction velocity \(u_* = \sqrt{\tau_w/\rho}\) (where \(\tau_w\) is the wall shear stress) and the viscous length \(\ell_\nu = \nu/u_*\). The dimensionless wall distance is \(y^+ = y/\ell_\nu = u_* y/\nu\).
@@ -416,6 +658,71 @@ u^+ = \frac{1}{\kappa}\ln y^+ + B
 \]
 
 with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx 5.2\). This **logarithmic law of the wall** is remarkably universal: it holds for smooth and rough walls, pipes and boundary layers, gases and liquids, from laboratory experiments to atmospheric surface layers.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- axes -->
+  <line x1="55" y1="195" x2="345" y2="195" stroke="#333" stroke-width="1.5" marker-end="url(#arG1)"/>
+  <line x1="55" y1="195" x2="55" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arG2)"/>
+  <text x="348" y="198" font-size="12" font-style="italic">y⁺</text>
+  <text x="42" y="18" font-size="12" font-style="italic">u⁺</text>
+  <text x="200" y="218" text-anchor="middle" font-size="10" fill="#888">(log scale in y⁺)</text>
+
+  <!-- x-axis tick marks (log scale): y+=1,5,30,300 → map to positions -->
+  <!-- x range 55..345 = 290px for y+ 0.5..1000 (log10: -0.3..3 range 3.3) → scale 290/3.3=88px/decade -->
+  <!-- y+=1 → log10=0 → x = 55 + 88*(0-(-0.3))=55+26=81 -->
+  <!-- y+=5 → log10=0.7 → x = 55+88*(0.7+0.3)=55+88=143 -->
+  <!-- y+=30 → log10=1.48 → x = 55+88*(1.48+0.3)=55+157=212 -->
+  <!-- y+=300 → log10=2.48 → x = 55+88*(2.48+0.3)=55+245=300 -->
+  <line x1="81" y1="195" x2="81" y2="200" stroke="#333" stroke-width="1"/>
+  <text x="81" y="210" text-anchor="middle" font-size="9">1</text>
+  <line x1="143" y1="195" x2="143" y2="200" stroke="#333" stroke-width="1"/>
+  <text x="143" y="210" text-anchor="middle" font-size="9">5</text>
+  <line x1="212" y1="195" x2="212" y2="200" stroke="#333" stroke-width="1"/>
+  <text x="212" y="210" text-anchor="middle" font-size="9">30</text>
+  <line x1="300" y1="195" x2="300" y2="200" stroke="#333" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" font-size="9">300</text>
+
+  <!-- u+ axis ticks: 0,5,10,15,20,25 → y range 195..25=170px for u+ 0..25 → scale 6.8px/unit -->
+  <line x1="50" y1="161" x2="55" y2="161" stroke="#333" stroke-width="1"/>
+  <text x="48" y="165" text-anchor="end" font-size="9">5</text>
+  <line x1="50" y1="127" x2="55" y2="127" stroke="#333" stroke-width="1"/>
+  <text x="48" y="131" text-anchor="end" font-size="9">10</text>
+  <line x1="50" y1="93" x2="55" y2="93" stroke="#333" stroke-width="1"/>
+  <text x="48" y="97" text-anchor="end" font-size="9">15</text>
+  <line x1="50" y1="59" x2="55" y2="59" stroke="#333" stroke-width="1"/>
+  <text x="48" y="63" text-anchor="end" font-size="9">20</text>
+  <line x1="50" y1="25" x2="55" y2="25" stroke="#333" stroke-width="1"/>
+  <text x="48" y="29" text-anchor="end" font-size="9">25</text>
+
+  <!-- Viscous sublayer: u+ = y+ (linear, from y+=1 to y+=5) -->
+  <line x1="55" y1="195" x2="143" y2="161" stroke="#cc4422" stroke-width="2"/>
+  <text x="90" y="170" fill="#cc4422" font-size="10">u⁺=y⁺</text>
+  <text x="90" y="182" fill="#cc4422" font-size="9">viscous sublayer</text>
+
+  <!-- Buffer layer (y+=5 to 30): curve transition -->
+  <path d="M 143,161 Q 175,142 212,120" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="175" y="135" fill="#888" font-size="9">buffer</text>
+
+  <!-- Log law: u+ = (1/0.41)ln(y+) + 5.2 = 2.44 ln(y+) + 5.2 -->
+  <!-- At y+=30: u+ = 2.44*ln(30)+5.2 = 2.44*3.4+5.2=8.3+5.2=13.5 → y-coord = 195-13.5*6.8=195-92=103 ✓ close to 120 -->
+  <!-- At y+=300: u+ = 2.44*ln(300)+5.2 = 2.44*5.7+5.2=13.9+5.2=19.1 → y-coord=195-19.1*6.8=195-130=65 -->
+  <line x1="212" y1="103" x2="300" y2="65" stroke="#4488cc" stroke-width="2.5"/>
+  <text x="240" y="75" fill="#4488cc" font-size="11">u⁺ = (1/κ)ln y⁺ + B</text>
+  <text x="240" y="86" fill="#4488cc" font-size="10">κ≈0.41, B≈5.2</text>
+  <text x="240" y="97" fill="#4488cc" font-size="9">log layer</text>
+
+  <!-- region boundary lines -->
+  <line x1="143" y1="195" x2="143" y2="20" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="212" y1="195" x2="212" y2="20" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <defs>
+    <marker id="arG1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arG2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">The law of the wall on semi-logarithmic axes. Viscous sublayer (\(y^+ \lesssim 5\)): \(u^+ = y^+\). Buffer layer (\(5 \lesssim y^+ \lesssim 30\)): transition. Logarithmic layer (\(y^+ \gtrsim 30\)): \(u^+ = \frac{1}{\kappa}\ln y^+ + B\) with von Kármán constant \(\kappa \approx 0.41\).</figcaption>
+</figure>
 
 ---
 
@@ -558,6 +865,60 @@ t_{break} = \frac{-1}{\min_x\bigl(\partial u_0/\partial x\bigr)}
 \]
 
 At \(t = t_{break}\), the solution becomes multi-valued: the wave has **broken**. Physically, the steep wave front has steepened to a vertical slope and then to an overhang — which is unphysical. The solution beyond breaking must be interpreted as a **shock**: a discontinuity satisfying a **jump condition** (the Rankine–Hugoniot relation) derived from the integral conservation law.
+
+<figure style="text-align:center;margin:1.5em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220" style="max-width:100%;font-family:serif;font-size:12px;">
+  <!-- Left: characteristic diagram -->
+  <!-- t axis vertical, x axis horizontal -->
+  <line x1="30" y1="195" x2="190" y2="195" stroke="#333" stroke-width="1.5" marker-end="url(#arH1)"/>
+  <line x1="30" y1="195" x2="30" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arH2)"/>
+  <text x="193" y="198" font-size="12" font-style="italic">x</text>
+  <text x="20" y="18" font-size="12" font-style="italic">t</text>
+  <text x="110" y="212" text-anchor="middle" font-weight="bold" font-size="11">Characteristic diagram</text>
+
+  <!-- characteristics: fast from left (large u₀), slow from right -->
+  <!-- fast characteristics converge -->
+  <line x1="40" y1="195" x2="115" y2="30" stroke="#4488cc" stroke-width="1.5"/>
+  <line x1="60" y1="195" x2="120" y2="30" stroke="#4488cc" stroke-width="1.5"/>
+  <line x1="80" y1="195" x2="125" y2="30" stroke="#4488cc" stroke-width="1.5"/>
+  <!-- slow characteristics -->
+  <line x1="120" y1="195" x2="140" y2="30" stroke="#4488cc" stroke-width="1.5"/>
+  <line x1="140" y1="195" x2="150" y2="30" stroke="#4488cc" stroke-width="1.5"/>
+  <line x1="155" y1="195" x2="157" y2="120" stroke="#4488cc" stroke-width="1.5"/>
+  <!-- shock trajectory after crossing -->
+  <line x1="110" y1="70" x2="155" y2="30" stroke="#e05" stroke-width="2.5"/>
+  <!-- crossing/focusing point -->
+  <circle cx="110" cy="70" r="4" fill="#e05"/>
+  <text x="108" y="62" fill="#e05" font-size="10">t_break</text>
+  <!-- label -->
+  <text x="150" y="28" fill="#e05" font-size="10">shock</text>
+
+  <!-- Right: wave profile steepening -->
+  <line x1="240" y1="195" x2="420" y2="195" stroke="#333" stroke-width="1.5" marker-end="url(#arH1)"/>
+  <line x1="240" y1="195" x2="240" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arH2)"/>
+  <text x="423" y="198" font-size="12" font-style="italic">x</text>
+  <text x="230" y="18" font-size="12" font-style="italic">u</text>
+  <text x="330" y="212" text-anchor="middle" font-weight="bold" font-size="11">Wave steepening</text>
+
+  <!-- Initial profile: smooth hump -->
+  <path d="M 250,170 Q 290,140 320,80 Q 345,130 380,170" fill="none" stroke="#4488cc" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="302" y="72" fill="#4488cc" font-size="10">t=0</text>
+
+  <!-- Later profile: steepened right side -->
+  <path d="M 255,170 Q 295,145 330,90 Q 352,120 370,170" fill="none" stroke="#33aa55" stroke-width="2"/>
+  <text x="352" y="108" fill="#33aa55" font-size="10">t&lt;t_break</text>
+
+  <!-- Near breaking: vertical front -->
+  <path d="M 260,170 Q 300,148 340,100 L 345,100 L 345,170" fill="none" stroke="#e05" stroke-width="2.5"/>
+  <text x="355" y="120" fill="#e05" font-size="10">t≈t_break</text>
+
+  <defs>
+    <marker id="arH1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+    <marker id="arH2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
+  </defs>
+</svg>
+<figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Left: Characteristic diagram for Burgers' equation. Characteristics (blue lines) carry constant \(u\) values; characteristics from faster-moving parts overtake slower ones, converging at the breaking time \(t_{break}\). Beyond that, a shock (red) propagates according to the Rankine–Hugoniot condition. Right: Wave steepening — the initially smooth profile develops a progressively steeper front until vertical slope signals shock formation.</figcaption>
+</figure>
 
 ## 8.3 Shock Formation and the Rankine–Hugoniot Condition
 
