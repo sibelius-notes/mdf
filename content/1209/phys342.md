@@ -8,9 +8,9 @@ subjects: "PHYS"
 
 ---
 
-# Part I: The Laws of Electromagnetism in Statics
+# Chapter 1: The Laws of Electromagnetism in Statics
 
-## Chapter 1: Maxwell's Equations — Three Equivalent Formulations
+## Section 1.1: Maxwell's Equations — Three Equivalent Formulations
 
 The central pillar of this course is Maxwell's four equations, which together encode the complete classical theory of electromagnetism. Before studying specific phenomena, it is essential to understand that these laws are not a single monolithic set: they exist in three distinct mathematical forms, each valid under different smoothness conditions. Understanding when to use each form is as important as knowing the equations themselves.
 
@@ -99,7 +99,7 @@ The central pillar of this course is Maxwell's four equations, which together en
 | Normal **B** (always) | \(B_{n1} = B_{n2}\) | Gauss pillbox on \(\nabla\!\cdot\!\vec{B}=0\) |
 | Tangential **B** across surface current \(\vec{J}_s\) | \((\vec{B}_1 - \vec{B}_2) \times \hat{n} = \mu_0 \vec{J}_s\) | Stokes loop on Ampère |
 
-## Chapter 2: The Electrostatic Field and Its Potential
+## Section 1.2: The Electrostatic Field and Its Potential
 
 In electrostatics all charges are at rest and no fields change in time. The vanishing of \(\nabla \times \vec{E} = 0\) makes the electric field **conservative** (irrotational). By Poincaré's lemma, \(\vec{E}\) is the gradient of a scalar **electrostatic potential** \(\phi\):
 
@@ -144,7 +144,7 @@ In a charge-free region (\(\rho = 0\)) this reduces to the **Laplace equation** 
                   ↘ ← ← ← ←  ←  ← ← ↗
 ```
 
-## Chapter 3: The Magnetostatic Field and the Vector Potential
+## Section 1.3: The Magnetostatic Field and the Vector Potential
 
 The magnetostatic partner of Gauss's law is \(\nabla \cdot \vec{B} = 0\): **B** field lines always close on themselves. There are no magnetic monopoles. The solenoidal property means we can write:
 
@@ -179,9 +179,9 @@ Taking the curl recovers the **Biot-Savart law**. The duality between electrosta
 
 ---
 
-# Part II: Conductors and the Dirichlet Problem
+# Chapter 2: Conductors and the Dirichlet Problem
 
-## Chapter 4: Perfect Conductors
+## Section 2.1: Perfect Conductors
 
 A **perfect conductor** (\(\eta = 0\)) has free electrons that redistribute instantaneously. At equilibrium:
 
@@ -222,7 +222,7 @@ A **perfect conductor** (\(\eta = 0\)) has free electrons that redistribute inst
 
 **Electrostatic shielding**: The interior of any closed conductor is completely decoupled from all external charges. This is not just a macroscopic approximation — it is exact from the uniqueness theorem applied to the interior Dirichlet problem.
 
-## Chapter 5: The Dirichlet Problem for Conductors
+## Section 2.2: The Dirichlet Problem for Conductors
 
 The **Dirichlet problem** finds the electrostatic potential in the region between conductors held at specified potentials. The five-step procedure:
 
@@ -255,7 +255,7 @@ The **Dirichlet problem** finds the electrostatic potential in the region betwee
 
 The uniqueness theorem guarantees exactly one solution. A key implication: if you can *guess* a function that satisfies Laplace's equation and matches all boundary values, you have the exact answer — no further verification is needed. This is the mathematical license behind the method of images.
 
-## Chapter 6: Systems of Conductors and Capacitance
+## Section 2.3: Systems of Conductors and Capacitance
 
 For \(n\) conductors, linearity of Laplace's equation implies:
 
@@ -291,9 +291,9 @@ U = \frac{1}{2} \sum_{i,j} C_{ij} \phi_i \phi_j
 
 ---
 
-# Part III: Currents, Magnetostatics, and Induction
+# Chapter 3: Currents, Magnetostatics, and Induction
 
-## Chapter 7: Electric Currents and Ohm's Law
+## Section 3.1: Electric Currents and Ohm's Law
 
 **Electric current** is the net charge flow per unit time. The current density \(\vec{J}\) relates to the free charge density \(\rho_f\) and drift velocity \(\vec{v}\) by:
 
@@ -339,7 +339,7 @@ For **stationary (DC) currents**, \(\partial\rho/\partial t = 0\), so \(\nabla \
         R = ηℓ/A   (resistance from geometry and material)
 ```
 
-## Chapter 8: Magnetism as a Relativistic Effect of Electrostatics
+## Section 3.2: Magnetism as a Relativistic Effect of Electrostatics
 
 Magnetism is **not** an independent phenomenon — it is electrostatics seen from a moving reference frame. Consider a test charge \(q\) moving at velocity \(\vec{v}\) parallel to a current-carrying wire:
 
@@ -366,7 +366,7 @@ The relativistic transformation of charge density (\(\rho' = \gamma\rho\)) creat
 
 Both are equally valid; neither is physically distinguished.
 
-## Chapter 9: Neumann's Formula and Self-Inductance
+## Section 3.3: Neumann's Formula and Self-Inductance
 
 For two closed filiform circuits \(\gamma_1\) and \(\gamma_2\), the **mutual inductance** is given by the **Neumann formula**:
 
@@ -397,7 +397,7 @@ L \approx \mu_0 R \left[\ln\!\left(\frac{8R}{a}\right) - 2\right]
 
 Inductance is purely geometric — it depends on shape, not on current. A fatter wire (\(a\) larger) reduces \(L\) because the flux linking the wire itself is smaller.
 
-## Chapter 10: Forces on Conductors and Circuits
+## Section 3.4: Forces on Conductors and Circuits
 
 Forces on conductors in fields depend on which thermodynamic constraint is imposed:
 
@@ -430,9 +430,9 @@ The sign reversal at constant current occurs because the battery must supply ext
 
 ---
 
-# Part IV: Multipole Expansions
+# Chapter 4: Multipole Expansions
 
-## Chapter 11: The Electric Multipole Expansion
+## Section 4.1: The Electric Multipole Expansion
 
 When \(r \gg r'\) (observer far from source), expand \(1/|\vec{r}-\vec{r}'|\) using Legendre polynomials:
 
@@ -471,7 +471,7 @@ V(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \left[ \underbrace{\frac{Q}{r}}_{\text{
 
 A neutral atom (\(Q = 0\)) is characterized by its dipole moment at large distances; a symmetric molecule (\(Q = 0\), \(\vec{p} = 0\)) by its quadrupole moment.
 
-## Chapter 12: The Electric Dipole
+## Section 4.2: The Electric Dipole
 
 The **ideal electric dipole** is the limit \(d \to 0\), \(q \to \infty\) with \(\vec{p} = q\vec{d} = \text{const}\). The potential and field:
 
@@ -513,7 +513,7 @@ V = \frac{p\cos\theta}{4\pi\varepsilon_0 r^2}, \qquad E_r = \frac{2p\cos\theta}{
                     net torque ≠ 0 if p ∦ E₀)
 ```
 
-## Chapter 13: Electrostatic Induction and the Method of Images
+## Section 4.3: Electrostatic Induction and the Method of Images
 
 When a point charge \(q\) is placed near a grounded conductor (\(\phi = 0\)), charges redistribute on the conductor surface, with total induced charge \(-q\). The **method of images** replaces the conductor with an image charge to generate the correct boundary condition:
 
@@ -543,7 +543,7 @@ When a point charge \(q\) is placed near a grounded conductor (\(\phi = 0\)), ch
 
 The field lines between \(q\) and the plane are identical to those between \(q\) and \(-q\) at distance \(d\), for \(z \geq 0\). Below the plane there is no field (conductor interior).
 
-## Chapter 14: Magnetic Multipoles and the Ideal Magnetic Dipole
+## Section 4.4: Magnetic Multipoles and the Ideal Magnetic Dipole
 
 The magnetic monopole term vanishes identically for any closed current loop (\(\oint \vec{J}\, dV' = 0\)). The leading term is the **magnetic dipole**:
 
@@ -576,9 +576,9 @@ In an external field \(\vec{B}\), the torque \(\vec{\tau} = \vec{m} \times \vec{
 
 ---
 
-# Part V: Matter in Fields — Dielectrics and Magnetic Materials
+# Chapter 5: Matter in Fields — Dielectrics and Magnetic Materials
 
-## Chapter 15: Dielectric Polarization
+## Section 5.1: Dielectric Polarization
 
 A **dielectric** is an insulator where charges are bound. An applied field shifts positive and negative charge centers, creating microscopic dipoles. The **polarization** \(\vec{P}\) is the volume density of dipole moments:
 
@@ -623,7 +623,7 @@ The bound charge densities:
         E_p = −P/ε₀ opposing the polarization.
 ```
 
-## Chapter 16: The Displacement Field and Macroscopic Electrostatics
+## Section 5.2: The Displacement Field and Macroscopic Electrostatics
 
 Separating free charge \(\rho_f\) from bound charge \(\rho_p = -\nabla\cdot\vec{P}\) in Gauss's law motivates the **displacement field**:
 
@@ -669,7 +669,7 @@ Separating free charge \(\rho_f\) from bound charge \(\rho_p = -\nabla\cdot\vec{
         → tanθ₂/tanθ₁ = ε₂/ε₁  (field bends toward normal in low-ε medium)
 ```
 
-## Chapter 17: Linear Dielectrics and Applications
+## Section 5.3: Linear Dielectrics and Applications
 
 For **ILH** (isotropic, linear, homogeneous) dielectrics:
 
@@ -739,7 +739,7 @@ C = \frac{\varepsilon_0\varepsilon_{r1} A}{\ell_1 + 2\varepsilon_{r1}\ell_0}
         C = Q/V = ε₀εᵣA/(ℓ₁ + 2εᵣℓ₀)
 ```
 
-## Chapter 18: Magnetic Materials and the Bohr Magneton
+## Section 5.4: Magnetic Materials and the Bohr Magneton
 
 Atomic magnetic dipoles arise from orbiting electrons. The **Rutherford-Bohr model** gives:
 
@@ -766,7 +766,7 @@ The **magnetization** \(\vec{M}\) is the volume density of these atomic moments:
 \vec{M} = \lim_{\Delta V \to 0} \frac{\Delta\vec{m}}{\Delta V} = N\bar{\vec{m}} \quad [\text{A/m}]
 \]
 
-## Chapter 19: Magnetization Currents and the H Field
+## Section 5.5: Magnetization Currents and the H Field
 
 Magnetized matter carries **bound currents** that affect the macroscopic \(\vec{B}\):
 
@@ -814,7 +814,7 @@ Including these in Ampère's law and rearranging motivates the **auxiliary field
                               ↑ H does NOT depend on μᵣ ↑
 ```
 
-## Chapter 20: Classification of Magnetic Materials
+## Section 5.6: Classification of Magnetic Materials
 
 | Type | \(\chi_m\) | \(\mu_r\) | Microscopic origin |
 |---|---|---|---|
@@ -857,7 +857,7 @@ Including these in Ampère's law and rearranging motivates the **auxiliary field
         (domains cancel → M=0)  (domain walls swept → large M)
 ```
 
-## Chapter 21: Permanent Magnets — Geometry and Demagnetization
+## Section 5.7: Permanent Magnets — Geometry and Demagnetization
 
 A permanent magnet carries uniform magnetization \(\vec{M}\). The surface magnetization current \(\vec{J}_{ms} = \vec{M} \times \hat{n}\) acts as an equivalent current sheet.
 
@@ -909,9 +909,9 @@ A permanent magnet carries uniform magnetization \(\vec{M}\). The surface magnet
 
 ---
 
-# Part VI: Electrodynamics — Maxwell's Synthesis
+# Chapter 6: Electrodynamics — Maxwell's Synthesis
 
-## Chapter 22: The Complete Maxwell's Equations
+## Section 6.1: The Complete Maxwell's Equations
 
 Maxwell's synthesis couples time-varying \(\vec{E}\) and \(\vec{B}\) into a self-sustaining system. The **five integral form laws in vacuum**:
 
@@ -947,7 +947,7 @@ The solenoidal property of \(\vec{G} = \vec{J} + \varepsilon_0\partial\vec{E}/\p
            ∮B·dl = μ₀(I_c + I_d) = μ₀I_c regardless of surface choice
 ```
 
-## Chapter 23: Electromagnetic Induction and Lenz's Law
+## Section 6.2: Electromagnetic Induction and Lenz's Law
 
 **Faraday-Neumann law**: the EMF around a loop \(\gamma\) equals the negative rate of change of magnetic flux:
 
@@ -998,7 +998,7 @@ The solenoidal property of \(\vec{G} = \vec{J} + \varepsilon_0\partial\vec{E}/\p
         (motional EMF — field constant, conductor moving)
 ```
 
-## Chapter 24: The Displacement Current
+## Section 6.3: The Displacement Current
 
 The **displacement current density** \(\vec{J}_d = \varepsilon_0\partial\vec{E}/\partial t\) completes the generalized current:
 
@@ -1019,7 +1019,7 @@ The **displacement current density** \(\vec{J}_d = \varepsilon_0\partial\vec{E}/
         Magnetic field B circles both I_c and I_d consistently.
 ```
 
-## Chapter 25: Maxwell's Equations in Materials
+## Section 6.4: Maxwell's Equations in Materials
 
 In materials, free charges are separated from bound charges via \(\vec{D}\) and \(\vec{H}\). The full set in integral form:
 
@@ -1058,7 +1058,7 @@ The **constitutive relations** close the system:
                                          J is finite (surface current only)
 ```
 
-## Chapter 26: Electromagnetic Potentials and Gauge Conditions
+## Section 6.5: Electromagnetic Potentials and Gauge Conditions
 
 Since \(\nabla\cdot\vec{B} = 0\), we write \(\vec{B} = \nabla\times\vec{A}\). Faraday's law then gives \(\nabla\times(\vec{E} + \partial\vec{A}/\partial t) = 0\), so:
 
@@ -1118,9 +1118,9 @@ These are the **fundamental wave equations of electromagnetism**. The speed of l
 
 ---
 
-# Part VII: Energy, Poynting's Theorem, and Oscillations
+# Chapter 7: Energy, Poynting's Theorem, and Oscillations
 
-## Chapter 27: Magnetic Field Energy
+## Section 7.1: Magnetic Field Energy
 
 For a general volume current distribution, the magnetic energy generalizes to:
 
@@ -1170,7 +1170,7 @@ Comparing electric and magnetic energy densities:
 | Stored in component | Capacitor \(U = \frac{1}{2}CV^2\) | Inductor \(U = \frac{1}{2}L\iota^2\) |
 | Sources | Free charges \(\rho_f\) | Free currents \(\vec{J}_c\) |
 
-## Chapter 28: Poynting's Theorem — Energy Flow in Electromagnetic Fields
+## Section 7.2: Poynting's Theorem — Energy Flow in Electromagnetic Fields
 
 Starting from Maxwell's equations in materials, dotting with \(\vec{H}\) and \(\vec{E}\) respectively and subtracting:
 
@@ -1230,7 +1230,7 @@ The **Poynting vector** \(\vec{\mathscr{P}} = \vec{E}\times\vec{H}\) is the elec
         energy travels through the electromagnetic field, guided by wires.
 ```
 
-## Chapter 29: Magnetic Energy in Circuits — the RL Circuit
+## Section 7.3: Magnetic Energy in Circuits — the RL Circuit
 
 For an RL circuit with battery EMF \(\mathcal{E}_0\):
 
@@ -1260,7 +1260,7 @@ The cross term \(M\iota_1\iota_2\) can be positive or negative depending on rela
               [heat]  [field]
 ```
 
-## Chapter 30: The LC Oscillating Circuit
+## Section 7.4: The LC Oscillating Circuit
 
 An ideal **LC circuit** (no resistance) is the electromagnetic harmonic oscillator. Faraday-Neumann applied to the closed loop with capacitor voltage \(v_c\) and inductor flux \(\Phi_\gamma = L\iota\):
 

@@ -6,9 +6,9 @@ subjects: "AMATH"
 
 Partial Differential Equations II picks up where the first course left off and pursues two intertwined goals: to develop a geometric and analytical framework for understanding *all* PDEs, and then to apply that framework systematically to the three great classical equations — Laplace's, the wave equation, and the heat equation. The course opens with a tour of first-order theory, where the method of characteristics converts a PDE into an equivalent family of ODEs and makes the geometry of solutions vivid. It then classifies second-order equations by the sign of a single discriminant, revealing why Laplace's equation behaves so differently from the wave equation. The bulk of the course treats each type in turn: elliptic equations through harmonic function theory, maximum principles, Green's functions, and conformal mapping; hyperbolic equations through d'Alembert's formula and spherical means; parabolic equations through eigenfunction expansions and the Fourier transform.
 
-# Part I: First-Order PDEs and Classification
+# Chapter 1: First-Order PDEs and Classification
 
-## Chapter 1: The Cauchy Problem and Method of Characteristics
+## Section 1.1: The Cauchy Problem and Method of Characteristics
 
 ### From ODEs to PDEs
 
@@ -158,7 +158,7 @@ In the analytic setting, the Cauchy–Kowalevski theorem provides a definitive e
 
 ---
 
-## Chapter 2: Classification of Second-Order PDEs and Well-Posedness
+## Section 1.2: Classification of Second-Order PDEs and Well-Posedness
 
 ### The Discriminant and PDE Type
 
@@ -289,9 +289,9 @@ Well-posedness is not automatic. The **Dirichlet problem** for Laplace's equatio
 
 ---
 
-# Part II: Elliptic Equations
+# Chapter 2: Elliptic Equations
 
-## Chapter 3: Harmonic Functions and Green's Identities
+## Section 2.1: Harmonic Functions and Green's Identities
 
 ### Laplace and Poisson Equations
 
@@ -347,7 +347,7 @@ This follows from the first identity by exchanging \(u\) and \(v\) and subtracti
 
 ---
 
-## Chapter 4: Maximum Principles and Mean Value Properties
+## Section 2.2: Maximum Principles and Mean Value Properties
 
 The maximum principle is one of the most powerful results in elliptic theory. It says, informally, that a harmonic function cannot achieve its maximum (or minimum) in the interior of a domain — it must do so on the boundary.
 
@@ -409,7 +409,7 @@ This one inequality is the seed of the maximum principle.
 
 ---
 
-## Chapter 5: Green's Functions and Integral Representations
+## Section 2.3: Green's Functions and Integral Representations
 
 ### The Fundamental Solution of the Laplacian
 
@@ -567,7 +567,7 @@ u(x) = -\int_{\partial\Omega} G_N\, f\,dS + \int_\Omega G_N\,F\,d\xi.
 
 ---
 
-## Chapter 6: Conformal Mapping
+## Section 2.4: Conformal Mapping
 
 ### Holomorphic Functions and Conformal Maps
 
@@ -638,7 +638,7 @@ F(z) = \frac{(z-1)^2 + i(z+1)^2}{(z-1)^2 - i(z+1)^2}: \Omega \to B_1(0).
 
 ---
 
-## Chapter 7: Fourier Series and Eigenvalues of the Laplacian
+## Section 2.5: Fourier Series and Eigenvalues of the Laplacian
 
 ### Separation of Variables
 
@@ -702,9 +702,9 @@ This provides an explicit formula for \(G\) in terms of spectral data and is use
 
 ---
 
-# Part III: Hyperbolic Equations
+# Chapter 3: Hyperbolic Equations
 
-## Chapter 8: The Wave Equation
+## Section 3.1: The Wave Equation
 
 ### D'Alembert's Formula in One Dimension
 
@@ -866,9 +866,9 @@ is conserved: \(dE/dt = 0\). This follows from multiplying the wave equation by 
 
 ---
 
-# Part IV: Parabolic Equations and Transform Methods
+# Chapter 4: Parabolic Equations and Transform Methods
 
-## Chapter 9: The Heat Equation
+## Section 4.1: The Heat Equation
 
 ### Existence via Eigenfunction Expansion
 

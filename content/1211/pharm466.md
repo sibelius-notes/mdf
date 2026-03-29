@@ -150,7 +150,7 @@ The challenges to enacting these principles in practice are considerable: multip
 
 ---
 
-# Part 1: PHARM 466 — Geriatric Syndromes & Frailty
+# Part 2: PHARM 466 — Geriatric Syndromes & Frailty
 
 ## Topic: Geriatric Syndromes — Conceptual Framework
 
@@ -330,7 +330,7 @@ The care of older adults across the frailty spectrum requires a growing, geriatr
 
 ---
 
-# Part 2: PHARM 491 — Pharmacy Seminar
+# Part 3: PHARM 491 — Pharmacy Seminar
 
 ## Topic: Course Introduction
 

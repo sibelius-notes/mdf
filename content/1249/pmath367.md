@@ -8,9 +8,9 @@ These notes are based on the Fall 2024 lecture notes by Stephen New at the Unive
 
 ---
 
-# Part I: Point-Set Topology
+# Chapter 1: Point-Set Topology
 
-## Chapter 1: Topological Spaces and Continuous Maps
+## Section 1.1: Topological Spaces and Continuous Maps
 
 ### The leap from metric spaces to topological spaces
 
@@ -213,7 +213,7 @@ Continuity can also be verified locally: if \(X\) is covered by open sets \(\{A_
 
 ---
 
-## Chapter 2: Examples of Topological Spaces
+## Section 1.2: Examples of Topological Spaces
 
 ### The standard topology on Euclidean space
 
@@ -313,7 +313,7 @@ Not all quotient constructions yield nice spaces. The action of \((0, \infty)\) 
 
 ---
 
-## Chapter 3: Connected, Path-Connected, and Compact Spaces
+## Section 1.3: Connected, Path-Connected, and Compact Spaces
 
 These three properties — connectedness, path-connectedness, and compactness — are the workhorses of topology. They are **topological invariants**: preserved under homeomorphism. This makes them powerful tools for proving that two spaces are *not* homeomorphic.
 
@@ -483,9 +483,9 @@ Tychonoff's Theorem is powerful because it applies to *arbitrary* products. It u
 
 ---
 
-# Part II: Separation, Countability, and Manifolds
+# Chapter 2: Separation, Countability, and Manifolds
 
-## Chapter 4: Countability and Separation Axioms
+## Section 2.1: Countability and Separation Axioms
 
 ### Countability axioms
 
@@ -577,7 +577,7 @@ The proof of the Tietze Extension Theorem builds the extension as a uniformly co
 
 ---
 
-## Chapter 5: Topological Manifolds
+## Section 2.2: Topological Manifolds
 
 Manifolds are the spaces where geometry and topology meet. They are the natural setting for calculus on curved spaces, and their study lies at the heart of modern mathematics and physics.
 
@@ -662,9 +662,9 @@ Two invariants suffice to distinguish all compact surfaces:
 
 ---
 
-# Part III: The Fundamental Group
+# Chapter 3: The Fundamental Group
 
-## Chapter 6: Homotopy of Paths and the Fundamental Group
+## Section 3.1: Homotopy of Paths and the Fundamental Group
 
 We now make the leap from point-set topology to **algebraic topology**: the programme of associating algebraic objects (groups, rings, modules) to topological spaces in a way that respects continuous maps. The most accessible such invariant is the **fundamental group**, which detects "holes" by studying loops.
 
@@ -780,7 +780,7 @@ If \(\gamma\) is a path from \(a\) to \(b\) in \(X\), the map \(\varphi_\gamma: 
 
 ---
 
-## Chapter 7: Homotopy Invariance and Retracts
+## Section 3.2: Homotopy Invariance and Retracts
 
 ### Homotopy equivalence of spaces
 
@@ -870,9 +870,9 @@ All of these classical results follow, directly or indirectly, from the non-triv
 
 ---
 
-# Part IV: Computing the Fundamental Group
+# Chapter 4: Computing the Fundamental Group
 
-## Chapter 8: Free Groups and Free Products
+## Section 4.1: Free Groups and Free Products
 
 To compute fundamental groups of complicated spaces, we need algebraic machinery: free groups and free products. These are the group-theoretic analogues of "putting things together without imposing relations."
 
@@ -933,7 +933,7 @@ The **abelianization** of a group \(G\) is \(\mathrm{Ab}(G) = G/[G, G]\), where 
 
 ---
 
-## Chapter 9: The Seifert-Van Kampen Theorem
+## Section 4.2: The Seifert-Van Kampen Theorem
 
 The Seifert-Van Kampen theorem is the most powerful tool for computing fundamental groups. It computes \(\pi_1(X)\) from the fundamental groups of open subsets that cover \(X\).
 
@@ -998,7 +998,7 @@ A deep consequence: **every finitely presented group arises as the fundamental g
 
 ---
 
-## Chapter 10: Covering Spaces
+## Section 4.3: Covering Spaces
 
 Covering spaces provide a geometric realization of the fundamental group. The theory reveals a beautiful dictionary between topology and group theory: subgroups of \(\pi_1(X)\) correspond to covering spaces of \(X\), just as subgroups of a group correspond to intermediate fields in Galois theory.
 
@@ -1089,9 +1089,9 @@ For a general subgroup \(H\), one forms the quotient \(\tilde{X}_H = \tilde{X}/{
 
 ---
 
-# Part V: Beyond the Fundamental Group
+# Chapter 5: Beyond the Fundamental Group
 
-## Chapter 11: Algebraic Topology — Higher Invariants (PMATH 467)
+## Section 5.1: Algebraic Topology — Higher Invariants (PMATH 467)
 
 The fundamental group \(\pi_1(X)\) is a remarkably effective invariant, but it has blind spots. It detects 1-dimensional holes — loops that cannot be contracted — but says nothing about higher-dimensional phenomena. The sphere \(S^2\) has \(\pi_1(S^2) = 0\), yet it is clearly not contractible (it encloses a 2-dimensional "hole"). To detect such features, we need more powerful machinery. **PMATH 467: Algebraic Topology** develops the full arsenal: higher homotopy groups, homology, cohomology, and the deep theorems they unlock.
 
@@ -1204,7 +1204,7 @@ Beyond these classical results, algebraic topology connects to many areas of mod
 
 ---
 
-## Chapter 12: Topological Dynamics and Ergodic Theory (PMATH 457)
+## Section 5.2: Topological Dynamics and Ergodic Theory (PMATH 457)
 
 If algebraic topology studies the *shape* of spaces, topological dynamics studies what happens when you *move around* in them. The central question is: given a space \(X\) and a continuous self-map \(T: X \to X\), what can we say about the long-term behaviour of the orbits \(x, Tx, T^2x, T^3x, \ldots\)? Do they eventually cycle? Become dense? Distribute themselves evenly? **PMATH 457** develops the theory in two intertwined halves: *topological dynamics* (using topology and combinatorics) and *ergodic theory* (adding measure theory).
 

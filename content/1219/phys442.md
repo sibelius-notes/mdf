@@ -10,9 +10,9 @@ This course develops electrodynamics at the advanced undergraduate level, buildi
 
 ---
 
-# Part I: The Structure of Electrodynamics
+# Chapter 1: The Structure of Electrodynamics
 
-## Chapter 1: Maxwell's Equations
+## Section 1.1: Maxwell's Equations
 
 ### The Four Laws
 
@@ -76,7 +76,7 @@ For **linear, isotropic** media: \(\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}\
 
 ---
 
-## Chapter 2: Energy and Momentum in Electromagnetic Fields
+## Section 1.2: Energy and Momentum in Electromagnetic Fields
 
 ### The Poynting Vector
 
@@ -161,9 +161,9 @@ The net electromagnetic force on a volume is \(F_i = \oint_{\partial \mathcal{V}
 
 ---
 
-# Part II: Electromagnetic Waves
+# Chapter 2: Electromagnetic Waves
 
-## Chapter 3: Plane Waves in Vacuum
+## Section 2.1: Plane Waves in Vacuum
 
 ### Deriving the Wave Equation
 
@@ -253,7 +253,7 @@ Setting \(\delta = 0\) gives a linear polarization at 45°; setting \(\delta = \
 
 ---
 
-## Chapter 4: Electromagnetic Waves in Matter
+## Section 2.2: Electromagnetic Waves in Matter
 
 ### Waves in Linear Dielectrics
 
@@ -465,7 +465,7 @@ This cutoff is directly observable in the Earth's ionosphere. The ionosphere is 
 
 ---
 
-## Chapter 5: Waveguides and Cavity Resonators
+## Section 2.3: Waveguides and Cavity Resonators
 
 ### Guided Waves
 
@@ -509,9 +509,9 @@ The **quality factor** \(Q\) measures how many oscillation periods it takes for 
 
 ---
 
-# Part III: Sources and Radiation
+# Chapter 3: Sources and Radiation
 
-## Chapter 6: Potentials and Gauge
+## Section 3.1: Potentials and Gauge
 
 ### Scalar and Vector Potentials
 
@@ -565,7 +565,7 @@ where \(\Box^2 = \nabla^2 - \frac{1}{c^2}\partial_t^2\) is the **d'Alembertian**
 
 ---
 
-## Chapter 7: Retarded Potentials and Moving Charges
+## Section 3.2: Retarded Potentials and Moving Charges
 
 ### Retarded Potentials
 
@@ -627,7 +627,7 @@ where \(\mathbf{u} \equiv c\hat{\tilde{r}} - \mathbf{v}\) and all quantities are
 
 ---
 
-## Chapter 8: Radiation
+## Section 3.3: Radiation
 
 ### Radiation from a General Localized Source
 
@@ -737,9 +737,9 @@ where the **characteristic time** \(\tau = \mu_0 q^2/(6\pi mc)\). For the electr
 
 ---
 
-# Part IV: Special Relativity and Covariant Electrodynamics
+# Chapter 4: Special Relativity and Covariant Electrodynamics
 
-## Chapter 9: Tensors
+## Section 4.1: Tensors
 
 ### Rank and Transformation
 
@@ -761,7 +761,7 @@ The **divergence theorem** in index notation is \(\int d\tau\, \partial_i v_i = 
 
 ---
 
-## Chapter 10: Special Relativity
+## Section 4.2: Special Relativity
 
 ### Galilean Relativity and Its Failure
 
@@ -870,7 +870,7 @@ The **twin paradox** is resolved geometrically: in Minkowski spacetime, straight
 
 ---
 
-## Chapter 11: Maxwell's Equations in Covariant Form
+## Section 4.3: Maxwell's Equations in Covariant Form
 
 ### The 4-Potential
 

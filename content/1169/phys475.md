@@ -8,9 +8,9 @@ subjects: "PHYS"
 
 ---
 
-# Part I: The Foundations of Modern Cosmology
+# Chapter 1: The Foundations of Modern Cosmology
 
-## Chapter 1: The Cosmological Principle and the Observable Universe
+## Section 1.1: The Cosmological Principle and the Observable Universe
 
 ### The Cosmological Principle
 
@@ -48,7 +48,7 @@ The most compelling evidence for the Hot Big Bang is the **cosmic microwave back
 
 ---
 
-## Chapter 2: Newtonian Cosmology and the Friedmann Equation
+## Section 1.2: Newtonian Cosmology and the Friedmann Equation
 
 ### Co-moving Coordinates and the Scale Factor
 
@@ -100,7 +100,7 @@ This is crucial: both energy density \(\rho c^2\) and pressure \(P\) contribute 
 
 ---
 
-## Chapter 3: The Friedmann–Robertson–Walker Metric
+## Section 1.3: The Friedmann–Robertson–Walker Metric
 
 ### Spatial Geometry of the Universe
 
@@ -191,9 +191,9 @@ Redshift is thus a direct measure of the scale factor at the time of emission. A
 
 ---
 
-# Part II: Observational Cosmology
+# Chapter 2: Observational Cosmology
 
-## Chapter 4: Cosmic Eras — Equations of State and Scale Factor Solutions
+## Section 2.1: Cosmic Eras — Equations of State and Scale Factor Solutions
 
 ### Equations of State
 
@@ -234,7 +234,7 @@ This sequence — radiation → matter → dark energy — defines the broad the
 
 ---
 
-## Chapter 5: Distances and the Discovery of Dark Energy
+## Section 2.2: Distances and the Discovery of Dark Energy
 
 ### The Density Parameter
 
@@ -286,7 +286,7 @@ In a pure matter-dominated flat universe (\(\Omega_m = 1\)), this gives \(t_0 = 
 
 ---
 
-## Chapter 6: Geodesics and Cosmological Distances
+## Section 2.3: Geodesics and Cosmological Distances
 
 ### Null Geodesics in the FRW Spacetime
 
@@ -326,7 +326,7 @@ For a flat matter-dominated universe, this gives \(d_H = 3ct_0\) — about 46 Gp
 
 ---
 
-## Chapter 7: Dark Matter — Evidence and Probes
+## Section 2.4: Dark Matter — Evidence and Probes
 
 ### The Visible Universe
 
@@ -445,9 +445,9 @@ As Ryden observes, "it is a sign of the vast ignorance concerning nonbaryonic da
 
 ---
 
-# Part III: The Thermal History
+# Chapter 3: The Thermal History
 
-## Chapter 8: The Cosmic Microwave Background
+## Section 3.1: The Cosmic Microwave Background
 
 ### Properties of the CMB
 
@@ -511,7 +511,7 @@ The combination of CMB temperature and polarization data from *Planck* provides 
 
 ---
 
-## Chapter 9: Structure Formation
+## Section 3.2: Structure Formation
 
 ### The Galaxy Correlation Function
 
@@ -545,7 +545,7 @@ Massive, elliptical galaxies in dense environments tend to have \(b > 1\) (they 
 
 ---
 
-## Chapter 10: The Early Universe — Thermal History and Baryogenesis
+## Section 3.3: The Early Universe — Thermal History and Baryogenesis
 
 ### Time–Temperature Correspondence
 
@@ -586,7 +586,7 @@ The Standard Model satisfies all three conditions in principle, but the degree o
 
 ---
 
-## Chapter 11: Big Bang Nucleosynthesis
+## Section 3.4: Big Bang Nucleosynthesis
 
 ### Historical Background
 
@@ -639,7 +639,7 @@ BBN provides an independent measurement of the baryon density \(\Omega_b \approx
 
 ---
 
-## Chapter 12: Inflation
+## Section 3.5: Inflation
 
 ### Problems with the Standard Big Bang
 
@@ -690,9 +690,9 @@ Inflation also predicts a background of primordial **gravitational waves** (tens
 
 ---
 
-# Part IV: The Big Bang, Black Holes, and the Far Future
+# Chapter 4: The Big Bang, Black Holes, and the Far Future
 
-## Chapter 13: Singularities, Quantum Gravity, and the Origin of Time
+## Section 4.1: Singularities, Quantum Gravity, and the Origin of Time
 
 ### Penrose Diagrams
 
@@ -725,9 +725,9 @@ In LQG, the Big Bang singularity is replaced by a **Big Bounce**: the universe c
 
 ---
 
-# Part V: Neutrino Cosmology, Precision Measurements, and Dark Matter Halos
+# Chapter 5: Neutrino Cosmology, Precision Measurements, and Dark Matter Halos
 
-## Chapter 14: Neutrino Cosmology
+## Section 5.1: Neutrino Cosmology
 
 ### Beta Decay and the Neutrino
 
@@ -759,7 +759,7 @@ The **effective number of neutrino species** is measured from the CMB through it
 
 ---
 
-## Chapter 15: Precision Cosmology and the \(\Lambda\)CDM Standard Model
+## Section 5.2: Precision Cosmology and the \(\Lambda\)CDM Standard Model
 
 ### The Six-Parameter Model
 
@@ -804,7 +804,7 @@ The posterior is explored using **Markov Chain Monte Carlo (MCMC)** algorithms, 
 
 ---
 
-## Chapter 16: Dark Matter Halos — Spherical Collapse and the Mass Function
+## Section 5.3: Dark Matter Halos — Spherical Collapse and the Mass Function
 
 ### The Spherical Collapse Model
 

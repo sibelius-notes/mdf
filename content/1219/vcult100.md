@@ -4,7 +4,7 @@ prof: "Alice Kuzniar"
 subjects: "VCULT"
 ---
 
-# Part 1: Introduction and Methodology
+# Chapter 1: Introduction and Methodology
 
 ## Introduction to VCULT 100
 
@@ -48,7 +48,7 @@ The course analyzes film according to two broad categories. The first comprises 
 
 ---
 
-# Part 2: Mise en Scène
+# Chapter 2: Mise en Scène
 
 ## Introduction to *The Grand Budapest Hotel* and Mise en Scène
 
@@ -114,7 +114,7 @@ The question of casting — professional actors versus nonprofessional actors, s
 
 ---
 
-# Part 3: Cinematography
+# Chapter 3: Cinematography
 
 ## Cinematography 1: Frame Composition
 
@@ -172,7 +172,7 @@ A **telephoto lens** has a long focal length; it gathers a narrow view and, crit
 
 ---
 
-# Part 4: Editing
+# Chapter 4: Editing
 
 ## Editing 1: Shot Duration and Continuity Editing
 
@@ -244,7 +244,7 @@ The key editing concepts of the course can be organized as follows: **cross-cutt
 
 ---
 
-# Part 5: Sound
+# Chapter 5: Sound
 
 ## The Powers of Sound
 
@@ -272,7 +272,7 @@ The most fundamental distinction in film sound is between **diegetic** and **non
 
 ---
 
-# Part 6: Narrative
+# Chapter 6: Narrative
 
 ## What Is Narrative?
 
@@ -292,7 +292,7 @@ To analyze a narrative sequence, one asks what its **function** within the large
 
 ---
 
-# Part 7: European Art Cinema
+# Chapter 7: European Art Cinema
 
 ## What Is European Art Cinema?
 
@@ -316,7 +316,7 @@ The French New Wave defined what a "new wave" meant for other national cinemas: 
 
 ---
 
-# Part 8: Documentary
+# Chapter 8: Documentary
 
 ## What Is Documentary?
 
@@ -336,7 +336,7 @@ The documentary raises deep ethical questions about the limits and responsibilit
 
 ---
 
-# Part 9: Animation
+# Chapter 9: Animation
 
 ## Theories and Principles of Animation
 
@@ -368,7 +368,7 @@ Philip Brophy has argued that animation "displays the potential for forgetting h
 
 ---
 
-# Part 10: National Cinemas
+# Chapter 10: National Cinemas
 
 ## Introduction to National Cinemas
 
@@ -466,7 +466,7 @@ Yet during the reformist regime of President Khatami (1997–2005), cinematic pr
 
 ---
 
-# Part 11: Film Analyses
+# Chapter 11: Film Analyses
 
 ## Analysis: *The Grand Budapest Hotel* (Wes Anderson, 2014)
 
@@ -638,7 +638,7 @@ The film's analysis of Emad as symbolic of the Iranian government is not heavy-h
 
 ---
 
-# Part 12: Women's Visibility and the Veil
+# Chapter 12: Women's Visibility and the Veil
 
 ## On the Visibility of Women and the Veil
 

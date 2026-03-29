@@ -8,9 +8,9 @@ Quantum mechanics is, without exaggeration, the most precisely tested physical t
 
 The logical arc of the notes proceeds as follows. We first recall the Hamiltonian formulation of classical mechanics, which already contains the seeds of quantum theory in the algebraic structure of Poisson brackets. We then examine the experimental evidence that forced physicists in the early twentieth century to abandon classical wave theory in favour of a probabilistic description of matter waves. The bulk of the course is concerned with solving the Schrödinger equation — first for free particles, then for a variety of one-dimensional potentials, then in three dimensions leading to the hydrogen atom. We conclude with electron spin, the Zeeman effect, and the two principal approximation methods: perturbation theory and the variational principle.
 
-# Part I: From Classical to Quantum
+# Chapter 1: From Classical to Quantum
 
-## Chapter 1: The Classical Framework and the Quantum Revolution
+## Section 1.1: The Classical Framework and the Quantum Revolution
 
 ### 1.1 Hamiltonian Mechanics
 
@@ -80,9 +80,9 @@ The function \(\Phi(k)\) is the Fourier transform of the initial profile \(\Psi(
 
 For electromagnetic waves with \(\omega = ck\), consider a wave packet peaked around wave number \(k_0\). Each frequency component travels at the same speed \(c\), so the entire packet moves rigidly at speed \(c\) without distortion. This undistorted propagation is a special property of linear dispersion and does not persist for matter waves, where \(\omega \propto k^2\).
 
-# Part II: The Schrödinger Wave Mechanics
+# Chapter 2: The Schrödinger Wave Mechanics
 
-## Chapter 2: Wave Packets and Probabilistic Interpretation
+## Section 2.1: Wave Packets and Probabilistic Interpretation
 
 ### 2.1 Born's Rule and the Momentum Representation
 
@@ -221,7 +221,7 @@ The spreading is irreversible: once the wave packet spreads, the particle's posi
 
 ![Gaussian wave packet at t=0 and after spreading](/pics/amath373/wave_packet.png)
 
-## Chapter 3: The Time-Dependent Schrödinger Equation
+## Section 2.2: The Time-Dependent Schrödinger Equation
 
 ### 3.1 The TDSE and Its Stationary Solutions
 
@@ -393,9 +393,9 @@ From these, the position and momentum uncertainties for the \(n\)-th PIB state a
 
 giving \(\Delta x_n\Delta p_n > \hbar/2\) for all \(n \ge 1\), consistent with the Heisenberg uncertainty relation (with equality only in the limit \(n\to\infty\) up to corrections).
 
-# Part III: Exactly Solvable Problems
+# Chapter 3: Exactly Solvable Problems
 
-## Chapter 4: Scattering and Quantum Tunneling
+## Section 3.1: Scattering and Quantum Tunneling
 
 ### 4.1 Flux Conservation in Stationary Scattering States
 
@@ -511,7 +511,7 @@ where \(L\) is the period and \(\gamma\) parametrizes the barrier strength. Bloc
 
 The Kronig-Penney model is the quantum mechanical basis for understanding the electronic band structure of crystalline solids. Electrons in allowed bands can propagate through the crystal and conduct electricity; those in band gaps cannot.
 
-## Chapter 5: Bound States in One Dimension
+## Section 3.2: Bound States in One Dimension
 
 ### 5.1 The Finite Potential Well
 
@@ -576,9 +576,9 @@ The uncertainty relation for the SHO is saturated by the ground state: \(\Delta 
 
 ![Harmonic oscillator n=10: quantum probability density vs classical prediction](/pics/amath373/sho_classical_quantum.png)
 
-# Part IV: The Mathematical Structure of Quantum Mechanics
+# Chapter 4: The Mathematical Structure of Quantum Mechanics
 
-## Chapter 6: Hilbert Spaces, Operators, and the Axioms of Quantum Theory
+## Section 4.1: Hilbert Spaces, Operators, and the Axioms of Quantum Theory
 
 The mathematical framework of quantum mechanics can be organized into four axioms. Rather than viewing these as postulates to be accepted uncritically, we should understand them as the minimal mathematical structure consistent with the experimental facts: the probabilistic nature of measurement, the superposition principle, and the uncertainty principle.
 
@@ -691,9 +691,9 @@ This is **Ehrenfest's theorem**. Using \([\hat{H},\hat{x}] = -i\hbar\hat{p}/m\) 
 
 These are Newton's equations for the expectation values — quantum mechanics reduces to classical mechanics in the sense of expectation values. The subtle point is that \(\langle dU/dx\rangle \approx dU(\langle x\rangle)/dx\) only when the wave packet is narrow compared to the scale on which \(U\) varies; in general, quantum corrections appear.
 
-# Part V: Quantum Mechanics in Three Dimensions
+# Chapter 5: Quantum Mechanics in Three Dimensions
 
-## Chapter 7: Central Potentials and the Hydrogen Atom
+## Section 5.1: Central Potentials and the Hydrogen Atom
 
 ### 7.1 Separable Solutions in Cartesian Coordinates
 
@@ -915,9 +915,9 @@ The ladder must terminate: there is a maximum \(m_{\max}\) such that \(\hat{L}_+
 
 Integer values of \(l\) correspond to **bosons** (orbital angular momentum, photons); half-integer values correspond to **fermions** (particles with spin-1/2). The electron, as we discover in the next chapter, has spin \(s = 1/2\) — a half-integer angular momentum with no classical analogue.
 
-# Part VI: Spin
+# Chapter 6: Spin
 
-## Chapter 8: Electron Spin and the Pauli Theory
+## Section 6.1: Electron Spin and the Pauli Theory
 
 ### 8.1 The Stern-Gerlach Experiment
 
@@ -1071,9 +1071,9 @@ as expected (the \(n^2\)-fold degeneracy doubled by spin). The spin-orbit coupli
 
 The proper treatment of addition of angular momenta requires Clebsch-Gordan coefficients and goes beyond the scope of this course. The key physical message is: in an atom, spin and orbital angular momentum couple into a total angular momentum \(\vec{J}\), and this coupling produces observable splittings in atomic spectra.
 
-# Part VII: Approximation Methods
+# Chapter 7: Approximation Methods
 
-## Chapter 9: Perturbation Theory and the Variational Principle
+## Section 7.1: Perturbation Theory and the Variational Principle
 
 Most quantum mechanical problems cannot be solved exactly. The harmonic oscillator, the hydrogen atom, and the particle in a box are exceptional. In reality, we must often deal with potentials that are "close" to an exactly solvable case — for example, the hydrogen atom in an electric field (Stark effect) or a diatomic molecule modelled as a slightly anharmonic oscillator. The goal of perturbation theory is to develop systematic corrections to exact solutions when the Hamiltonian differs from a known, solvable one by a "small" amount.
 

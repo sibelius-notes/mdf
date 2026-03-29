@@ -197,7 +197,7 @@ If \(S\) is a set with weight function \(w\) having no elements of weight 0, def
 \[
 S^* = S^0 \cup S^1 \cup S^2 \cup S^3 \cup \cdots,
 \]
-the set of all finite tuples (strings) of elements of \(S$. The weight of a tuple \((\sigma_1, \ldots, \sigma_t)\) is defined as the sum of the weights of its entries: \(w^*(\sigma_1, \ldots, \sigma_t) = \sum_{i=1}^t w(\sigma_i)\), with the empty tuple having weight 0.
+the set of all finite tuples (strings) of elements of \(S\). The weight of a tuple \((\sigma_1, \ldots, \sigma_t)\) is defined as the sum of the weights of its entries: \(w^*(\sigma_1, \ldots, \sigma_t) = \sum_{i=1}^t w(\sigma_i)\), with the empty tuple having weight 0.
 
 Nelson motivates this in Lecture 8 with two concrete examples. First, when \(S = \{0, 1\}\) with both elements having weight 1, the elements of \(S^*\) are exactly the binary strings (after removing tuple punctuation), and the weight is string length. Second, when \(S\) is the set of positive integers with \(w(n) = n\), the elements of \(S^*\) are exactly the compositions of non-negative integers, and the weight is the sum of parts. The Kleene star thus simultaneously captures both binary strings and compositions as special cases of a single construction.
 

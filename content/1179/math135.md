@@ -3,9 +3,9 @@ title: "MATH 135: Algebra for Honours Mathematics"
 subjects: "MATH"
 ---
 
-# Part I: Introduction to Proof Methods
+# Chapter 1: Introduction to Proof Methods
 
-## Chapter 2: A First Look at Proofs
+## Section 1.1: A First Look at Proofs
 
 This chapter introduces the foundational vocabulary of mathematical reasoning: statements, propositions, and axioms.
 
@@ -23,7 +23,7 @@ A <em>proposition</em> is a mathematical claim posed as a statement that needs t
 
 </div>
 
-## Chapter 3: Truth Tables and Logical Operators
+## Section 1.2: Truth Tables and Logical Operators
 
 We build compound statements from simpler components using logical operators.
 
@@ -67,7 +67,7 @@ We build compound statements from simpler components using logical operators.
 
 The Distributivity Laws also hold: \(A \wedge (B \vee C) \equiv (A \wedge B) \vee (A \wedge C)\) and \(A \vee (B \wedge C) \equiv (A \vee B) \wedge (A \vee C)\).
 
-## Chapter 4: Implications and the Direct Proof
+## Section 1.3: Implications and the Direct Proof
 
 <div class="definition">
 
@@ -79,7 +79,7 @@ The negation of an implication satisfies \(\neg(A \Rightarrow B) \equiv A \wedge
 
 A <strong>direct proof</strong> of \(A \Rightarrow B\) assumes \(A\) is true and deduces that \(B\) must be true.
 
-## Chapter 5: Analysis of a Proof -- Divisibility
+## Section 1.4: Analysis of a Proof -- Divisibility
 
 <div class="definition">
 
@@ -93,7 +93,7 @@ A <strong>direct proof</strong> of \(A \Rightarrow B\) assumes \(A\) is true and
 
 </div>
 
-## Chapter 6: Discovering Proofs
+## Section 1.5: Discovering Proofs
 
 <div class="proposition">
 
@@ -107,9 +107,9 @@ A <strong>direct proof</strong> of \(A \Rightarrow B\) assumes \(A\) is true and
 
 </div>
 
-# Part II: Foundations -- Sets and Quantifiers
+# Chapter 2: Foundations -- Sets and Quantifiers
 
-## Chapter 7: Introduction to Sets
+## Section 2.1: Introduction to Sets
 
 <div class="definition">
 
@@ -161,7 +161,7 @@ The part after the colon is the defining property of the set.
 
 </div>
 
-## Chapter 8: Subsets, Set Equality, Converse, and If and Only If
+## Section 2.2: Subsets, Set Equality, Converse, and If and Only If
 
 <div class="definition">
 
@@ -205,7 +205,7 @@ The part after the colon is the defining property of the set.
 
 </div>
 
-## Chapter 9: Quantifiers
+## Section 2.3: Quantifiers
 
 The <strong>universal quantifier</strong> \(\forall\) means "for all"; the <strong>existential quantifier</strong> \(\exists\) means "there exists". Negation rules:
 \[\neg[\forall x \in S,\, P(x)] \equiv \exists x \in S,\, \neg P(x)\]
@@ -219,7 +219,7 @@ The <strong>universal quantifier</strong> \(\forall\) means "for all"; the <stro
 
 Key proof methods: the <strong>Select Method</strong> proves \(\forall x \in S, P(x)\) by choosing a representative \(x\); the <strong>Construct Method</strong> proves \(\exists x \in S, P(x)\) by exhibiting a specific element.
 
-## Chapter 10: Nested Quantifiers
+## Section 2.4: Nested Quantifiers
 
 <div class="definition">
 
@@ -233,9 +233,9 @@ Key proof methods: the <strong>Select Method</strong> proves \(\forall x \in S, 
 
 </div>
 
-# Part III: More Proof Techniques
+# Chapter 3: More Proof Techniques
 
-## Chapter 11: Contrapositives
+## Section 3.1: Contrapositives
 
 <div class="definition">
 
@@ -245,7 +245,7 @@ Key proof methods: the <strong>Select Method</strong> proves \(\forall x \in S, 
 
 To prove \(A \Rightarrow B\) by contrapositive, assume \(\neg B\) and deduce \(\neg A\).
 
-## Chapter 12: Proofs by Contradiction
+## Section 3.2: Proofs by Contradiction
 
 <div class="definition">
 
@@ -267,7 +267,7 @@ To prove a statement \(C\) by contradiction, assume \(\neg C\) and derive a cont
 
 </div>
 
-## Chapter 13: Uniqueness, Injections, and the Division Algorithm
+## Section 3.3: Uniqueness, Injections, and the Division Algorithm
 
 <div class="definition">
 
@@ -282,7 +282,7 @@ To prove a statement \(C\) by contradiction, assume \(\neg C\) and derive a cont
 
 </div>
 
-## Chapter 14: Simple Induction
+## Section 3.4: Simple Induction
 
 <div class="definition">
 
@@ -338,7 +338,7 @@ To prove a statement \(C\) by contradiction, assume \(\neg C\) and derive a cont
 
 </div>
 
-## Chapter 15: Strong Induction
+## Section 3.5: Strong Induction
 
 <div class="definition">
 
@@ -354,9 +354,9 @@ Use strong induction when the general case depends on multiple previous cases.
 
 </div>
 
-# Part IV: Securing Internet Commerce
+# Chapter 4: Securing Internet Commerce
 
-## Chapter 17: The Greatest Common Divisor
+## Section 4.1: The Greatest Common Divisor
 
 <div class="definition">
 
@@ -402,7 +402,7 @@ This proposition underlies the <strong>Euclidean Algorithm</strong>: repeatedly 
 
 </div>
 
-## Chapter 18: The Extended Euclidean Algorithm
+## Section 4.2: The Extended Euclidean Algorithm
 
 <div class="definition">
 
@@ -418,7 +418,7 @@ The <strong>Extended Euclidean Algorithm (EEA)</strong> computes \(d = \gcd(a,b)
 
 </div>
 
-## Chapter 19: Properties of GCDs
+## Section 4.3: Properties of GCDs
 
 <div class="definition">
 
@@ -450,7 +450,7 @@ The <strong>Extended Euclidean Algorithm (EEA)</strong> computes \(d = \gcd(a,b)
 
 </div>
 
-## Chapter 20: GCD from Prime Factorization
+## Section 4.4: GCD from Prime Factorization
 
 <div class="theorem">
 
@@ -479,7 +479,7 @@ Also known as the <strong>Fundamental Theorem of Arithmetic</strong>.
 
 </div>
 
-## Chapter 21: Linear Diophantine Equations -- One Solution
+## Section 4.5: Linear Diophantine Equations -- One Solution
 
 <div class="definition">
 
@@ -493,7 +493,7 @@ Also known as the <strong>Fundamental Theorem of Arithmetic</strong>.
 
 </div>
 
-## Chapter 22: Linear Diophantine Equations -- All Solutions
+## Section 4.6: Linear Diophantine Equations -- All Solutions
 
 <div class="theorem">
 
@@ -502,7 +502,7 @@ Also known as the <strong>Fundamental Theorem of Arithmetic</strong>.
 
 </div>
 
-## Chapter 23: Congruence
+## Section 4.7: Congruence
 
 <div class="definition">
 
@@ -538,7 +538,7 @@ As a corollary, if \(a \equiv b \pmod{m}\), then \(a^n \equiv b^n \pmod{m}\) for
 
 </div>
 
-## Chapter 24: Congruence and Remainders
+## Section 4.8: Congruence and Remainders
 
 <div class="proposition">
 
@@ -546,7 +546,7 @@ As a corollary, if \(a \equiv b \pmod{m}\), then \(a^n \equiv b^n \pmod{m}\) for
 
 </div>
 
-## Chapter 25: Linear Congruences
+## Section 4.9: Linear Congruences
 
 <div class="definition">
 
@@ -562,7 +562,7 @@ which gives \(d\) distinct solutions modulo \(m\).
 
 </div>
 
-## Chapter 26: Modular Arithmetic
+## Section 4.10: Modular Arithmetic
 
 <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;display:block;margin:1.5em auto">
   <text x="120" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">ℤ₁₂: Clock / Modular Arithmetic</text>
@@ -631,7 +631,7 @@ In \(\mathbb{Z}_m\), the additive identity is \([0]\), the multiplicative identi
 
 </div>
 
-## Chapter 27: Fermat's Little Theorem
+## Section 4.11: Fermat's Little Theorem
 
 <div class="theorem">
 
@@ -651,7 +651,7 @@ In \(\mathbb{Z}_m\), the additive identity is \([0]\), the multiplicative identi
 
 </div>
 
-## Chapter 28: Chinese Remainder Theorem
+## Section 4.12: Chinese Remainder Theorem
 
 <div class="theorem">
 
@@ -674,7 +674,7 @@ have a unique solution modulo \(m_1 m_2\).
 
 </div>
 
-## Chapter 29: The RSA Scheme
+## Section 4.13: The RSA Scheme
 
 <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;display:block;margin:1.5em auto">
   <text x="240" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">RSA Key Generation and Encryption/Decryption</text>
@@ -714,9 +714,9 @@ RSA setup: choose distinct primes \(p,q\), let \(n = pq\). Choose \(e\) with \(\
 
 The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately, then combines via CRT.
 
-# Part V: Complex Numbers and Euler's Formula
+# Chapter 5: Complex Numbers and Euler's Formula
 
-## Chapter 30: Complex Numbers
+## Section 5.1: Complex Numbers
 
 <div class="definition">
 
@@ -760,7 +760,7 @@ The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately,
 
 </div>
 
-## Chapter 31: Properties of Complex Numbers
+## Section 5.2: Properties of Complex Numbers
 
 <div class="definition">
 
@@ -796,7 +796,7 @@ The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately,
 
 </div>
 
-## Chapter 32: Polar Form
+## Section 5.3: Polar Form
 
 <div class="definition">
 
@@ -811,7 +811,7 @@ The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately,
 
 </div>
 
-## Chapter 33: De Moivre's Theorem
+## Section 5.4: De Moivre's Theorem
 
 <div class="theorem">
 
@@ -842,7 +842,7 @@ Setting \(\theta = \pi\) yields Euler's identity: \(e^{i\pi} + 1 = 0\).
 
 </div>
 
-## Chapter 34: Roots of Complex Numbers
+## Section 5.5: Roots of Complex Numbers
 
 <div class="definition">
 
@@ -865,9 +865,9 @@ Every nonzero complex number has exactly \(n\) distinct \(n\)-th roots, uniforml
 
 </div>
 
-# Part VI: Factoring Polynomials
+# Chapter 6: Factoring Polynomials
 
-## Chapter 35: An Introduction to Polynomials
+## Section 6.1: An Introduction to Polynomials
 
 <div class="definition">
 
@@ -901,7 +901,7 @@ where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 
 </div>
 
-## Chapter 36: Factoring Polynomials
+## Section 6.2: Factoring Polynomials
 
 <div class="definition">
 
@@ -982,9 +982,9 @@ where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 
 </div>
 
-# Part VII: Bijections, Counting, and Cardinality
+# Chapter 7: Bijections, Counting, and Cardinality
 
-## Chapter 37: Compositions and Bijections
+## Section 7.1: Compositions and Bijections
 
 <div class="definition">
 
@@ -1028,7 +1028,7 @@ where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 
 </div>
 
-## Chapter 38: Counting
+## Section 7.2: Counting
 
 <div class="definition">
 
@@ -1060,7 +1060,7 @@ where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 
 </div>
 
-## Chapter 39: Cardinality of Infinite Sets
+## Section 7.3: Cardinality of Infinite Sets
 
 <div class="proposition">
 

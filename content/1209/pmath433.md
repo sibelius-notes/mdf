@@ -3,7 +3,7 @@ title: "PMATH 433/733: Set Theory and Model Theory"
 prof: "R. Moosa"
 subjects: "PMATH"
 ---
-# Part I: Set Theory
+# Chapter 1: Set Theory
 
 ## First Axioms
 
@@ -600,7 +600,7 @@ The key role of Replacement is visible in step (iii): the set \(\mathrm{im}(f)\)
 This theorem brings Part 1 of the chapter to a close. We defined ordinals as a special class of well-orderings — those in which the ordering is membership itself. The Representation Theorem says this was no restriction at all: every well-ordering is uniquely and canonically isomorphic to an ordinal. When we study ordinals, we are really studying all well-orderings up to isomorphism, with the crucial advantage that ordinals carry a canonical, set-theoretically intrinsic structure. This perspective will be essential in the next part of the course when we turn to cardinals and cardinality.
 
 ---
-# Part II: Cardinals and the Axiom of Choice
+# Chapter 2: Cardinals and the Axiom of Choice
 
 ## Equinumerosity
 
@@ -748,7 +748,7 @@ From this point forward we work in **ZFC** — Zermelo-Fraenkel set theory with 
 
 ---
 
-# Part III: Cardinal Arithmetic
+# Chapter 3: Cardinal Arithmetic
 
 ## Lectures 14a & 14b: Enumerating Cardinals
 
@@ -917,7 +917,7 @@ This is one of the few unconditional results we can prove about \(2^{\aleph_0}\)
 With this, the set theory component of the course draws to a close. The theory of ordinals and cardinals — built up from the axioms of ZFC with transfinite induction and recursion as the central tools — provides the foundational arithmetic needed for the rest of the course. When we return from the break, we enter model theory, which in some sense picks up where this leaves off: asking not just about the *size* of mathematical structures, but about what can and cannot be said about them in a formal language.
 
 ---
-# Part IV: First-order Logic and Model Theory
+# Chapter 4: First-order Logic and Model Theory
 
 ## Structures
 

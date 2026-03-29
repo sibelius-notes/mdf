@@ -8,9 +8,9 @@ These notes follow the course structure laid out by Dr. Eduardo Martín-Martíne
 
 ---
 
-# Part I: Foundations
+# Chapter 1: Foundations
 
-## Chapter 1: Hilbert Spaces and the Dirac Formalism
+## Section 1.1: Hilbert Spaces and the Dirac Formalism
 
 ### 1.1 The Mathematical Stage
 
@@ -44,7 +44,7 @@ Given an orthonormal basis \(\{|a'\rangle\}\), every operator is represented by 
 
 ---
 
-## Chapter 2: Quantum States and Measurements
+## Section 1.2: Quantum States and Measurements
 
 ### 2.1 The Postulates
 
@@ -104,7 +104,7 @@ This Fourier duality implies the Heisenberg uncertainty principle \(\Delta X\,\D
 
 ---
 
-## Chapter 3: Time Evolution
+## Section 1.3: Time Evolution
 
 ### 3.1 The Time Evolution Operator
 
@@ -160,7 +160,7 @@ These are the classical equations of motion with quantum expectation values in p
 
 ---
 
-## Chapter 4: Rotations and Angular Momentum
+## Section 1.4: Rotations and Angular Momentum
 
 ### 4.1 Rotation Matrices and Non-Commutativity
 
@@ -371,9 +371,9 @@ The total angular momentum quantum number ranges as \(j \in \{|j_1 - j_2|, |j_1-
 
 ---
 
-# Part II: Symmetries
+# Chapter 2: Symmetries
 
-## Chapter 5: Parity and Discrete Symmetries
+## Section 2.1: Parity and Discrete Symmetries
 
 ### 5.1 Symmetries and Conservation Laws
 
@@ -405,7 +405,7 @@ the characteristic cosine band structure of condensed matter physics, with bandw
 
 ---
 
-## Chapter 6: Time Reversal
+## Section 2.2: Time Reversal
 
 ### 6.1 Why Time Reversal Must Be Anti-Unitary
 
@@ -443,9 +443,9 @@ Kramers degeneracy is observable: atoms and molecules with an odd number of elec
 
 ---
 
-# Part III: Density Operators and Quantum Information
+# Chapter 3: Density Operators and Quantum Information
 
-## Chapter 7: Density Operators and Mixed States
+## Section 3.1: Density Operators and Mixed States
 
 ### 7.1 Pure and Mixed States
 
@@ -479,7 +479,7 @@ All local predictions for measurements on \(A\) alone are correctly reproduced b
 
 ---
 
-## Chapter 8: Entanglement
+## Section 3.2: Entanglement
 
 ### 8.1 Tensor Products and Entangled States
 
@@ -503,7 +503,7 @@ Each has Schmidt coefficients \(\sqrt{1/2}, \sqrt{1/2}\), giving \(\rho_A = \mat
 
 ---
 
-## Chapter 9: EPR, Bell's Theorem, and Quantum Teleportation
+## Section 3.3: EPR, Bell's Theorem, and Quantum Teleportation
 
 ### 9.1 The Einstein-Podolsky-Rosen Paradox
 
@@ -530,9 +530,9 @@ Alice measures qubits 1–2 in the Bell basis (obtaining one of four outcomes, e
 
 ---
 
-# Part IV: Perturbation Theory
+# Chapter 4: Perturbation Theory
 
-## Chapter 10: Time-Independent Perturbation Theory — Non-Degenerate Case
+## Section 4.1: Time-Independent Perturbation Theory — Non-Degenerate Case
 
 ### 10.1 The Setup
 
@@ -558,7 +558,7 @@ For the **ground state**, all denominators are negative: \(E_0^{(2)} \leq 0\). P
 
 ---
 
-## Chapter 11: Degenerate Perturbation Theory
+## Section 4.2: Degenerate Perturbation Theory
 
 ### 11.1 Failure of the Non-Degenerate Formula
 
@@ -576,9 +576,9 @@ For example, in the fine structure of hydrogen, the degeneracy within each \(n\)
 
 ---
 
-# Part V: Time-Dependent Perturbation Theory
+# Chapter 5: Time-Dependent Perturbation Theory
 
-## Chapter 12: The Interaction Picture
+## Section 5.1: The Interaction Picture
 
 ### 12.1 Motivation and Definition
 
@@ -602,7 +602,7 @@ Truncating at first order in \(V\) gives first-order TDPT.
 
 ---
 
-## Chapter 13: Two-State Systems and Rabi Oscillations
+## Section 5.2: Two-State Systems and Rabi Oscillations
 
 ### 13.1 The Harmonic Two-Level System
 
@@ -628,7 +628,7 @@ In **nuclear magnetic resonance**, a spin-1/2 nucleus in static field \(\mathbf{
 
 ---
 
-## Chapter 14: Adiabatic Evolution and Berry Phase
+## Section 5.3: Adiabatic Evolution and Berry Phase
 
 ### 14.1 The Adiabatic Theorem
 
@@ -650,7 +650,7 @@ where \(\boldsymbol{\Omega}_m = \nabla_\mathbf{R}\times\mathbf{A}_m\) is the **B
 
 ---
 
-## Chapter 15: Fermi's Golden Rule
+## Section 5.4: Fermi's Golden Rule
 
 ### 15.1 First-Order Transition Amplitudes
 
@@ -680,7 +680,7 @@ The transition probability \(\sum_{n\neq i}|c_n^{(1)}(t)|^2\) increases linearly
 
 ---
 
-## Chapter 16: Light-Matter Interaction
+## Section 5.5: Light-Matter Interaction
 
 ### 16.1 Minimal Coupling
 
@@ -756,9 +756,9 @@ Einstein's 1905 result — that the ejected electron energy \(E_f = \hbar\omega 
 
 ---
 
-# Part VI: Relativistic Quantum Mechanics
+# Chapter 6: Relativistic Quantum Mechanics
 
-## Chapter 17: Special Relativity Review
+## Section 6.1: Special Relativity Review
 
 ### 17.1 Four-Vectors and the Minkowski Metric
 
@@ -774,7 +774,7 @@ In natural units (\(\hbar = c = 1\)): \(E^2 = m^2 + |\mathbf{p}|^2\).
 
 ---
 
-## Chapter 18: The Klein-Gordon Equation and Its Failure
+## Section 6.2: The Klein-Gordon Equation and Its Failure
 
 ### 18.1 From Dispersion Relation to Wave Equation
 
@@ -790,7 +790,7 @@ The conserved current is \(j^\mu = i(\psi^*\partial^\mu\psi - \psi\partial^\mu\p
 
 ---
 
-## Chapter 19: The Dirac Equation
+## Section 6.3: The Dirac Equation
 
 ### 19.1 Dirac's Insight: A First-Order Equation
 
@@ -832,7 +832,7 @@ For each choice of the two-component spinor \(\phi\), this gives one of two inde
 
 ---
 
-## Chapter 20: Physics of the Dirac Equation
+## Section 6.4: Physics of the Dirac Equation
 
 ### 20.1 Non-Relativistic Limit: Spin and \(g=2\)
 
@@ -848,7 +848,7 @@ Negative-energy solutions (\(E = -\sqrt{|\mathbf{p}|^2+m^2} < 0\)) remain proble
 
 ---
 
-## Chapter 21: Ultra-Relativistic Limit and Weyl Equations
+## Section 6.5: Ultra-Relativistic Limit and Weyl Equations
 
 ### 21.1 Chirality and \(\gamma^5\)
 
@@ -868,7 +868,7 @@ Weyl fermions describe massless neutrinos (approximately, for energies above the
 
 ---
 
-## Chapter 22: Symmetries of the Dirac Equation
+## Section 6.6: Symmetries of the Dirac Equation
 
 ### 22.1 Parity
 
