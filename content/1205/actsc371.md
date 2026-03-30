@@ -5,13 +5,11 @@ prof: "Surya Banerjee"
 
 These notes cover the full content of ACTSC 371 as taught at the University of Waterloo, following the syllabus based on *Investments* by Bodie, Kane, and Marcus (9th Canadian Edition). The course covers three major arcs: the theory of capital markets and portfolio selection, fixed income securities and term structure, and derivative securities including options, futures, and swaps.
 
-# Part I: Capital Markets and Financial Instruments
-
-## Chapter 1: The Investment Environment
+# Chapter 1: The Investment Environment
 
 Every course in investments must begin by answering a fundamental question: what is an investment, and why do organized markets for investments exist? The answer leads quickly to the two-sided nature of capital markets — they are simultaneously a mechanism for transferring resources across time and a mechanism for transferring risk across agents. Before developing the quantitative machinery of portfolio theory, it is essential to understand the institutional landscape in which investment takes place.
 
-### Real Assets and Financial Assets
+## Real Assets and Financial Assets
 
 <div class="definition"><strong>Definition 1.1 (Real Assets and Financial Assets).</strong> <strong>Real assets</strong> are the productive capacity of an economy: land, buildings, machines, human capital, knowledge, and organizational capital. They generate the goods and services that constitute real economic output. <strong>Financial assets</strong> are claims on real assets or obligations of other parties — stocks, bonds, derivatives, and bank deposits. They do not themselves produce output, but determine how the income flowing from real assets is distributed among investors.</div>
 
@@ -21,7 +19,7 @@ The distinction matters for welfare accounting. When a share of Royal Bank chang
 
 Financial assets serve two essential economic functions. First, they allow **consumption timing**: a household that earns income in working years but wishes to consume in retirement holds financial claims that transfer purchasing power forward in time; a corporation that invests now to generate future cash flows issues securities that transfer the funding backward. Second, they allow **risk allocation**: financial contracts allow parties with comparative advantages in bearing different risks to specialize accordingly — an insurance company can bear longevity risk that individuals cannot efficiently self-insure.
 
-### A History of Investment Markets
+## A History of Investment Markets
 
 The history of organized capital markets spans more than four millennia, but the essential architecture of modern markets emerged in the seventeenth century.
 
@@ -31,7 +29,7 @@ The **Dutch East India Company (VOC)** issued the world's first publicly traded 
 
 The **New York Stock Exchange** was founded in **1792** under the Buttonwood Agreement among 24 brokers. The **Toronto Stock Exchange** began operations in **1861** with 18 listed companies. The modern U.S. securities regulatory framework was built almost entirely in response to the **Crash of 1929** and ensuing Great Depression: the Securities Act of 1933 introduced mandatory disclosure for new securities issues, and the Securities Exchange Act of 1934 established the Securities and Exchange Commission and regulated secondary market trading. **Black Monday** (October 19, 1987) saw the Dow Jones Industrial Average fall 22.6% in a single session, without obvious economic cause, forcing a rethink of market microstructure and circuit breakers. The **dot-com bubble and crash** (1995–2002) and the **global financial crisis** (2008–2009) each added further layers to the regulatory framework and to investors' understanding of systemic risk.
 
-### The Structure of the Investment Industry
+## The Structure of the Investment Industry
 
 The investment process involves two separable decisions, and understanding their relative importance is prerequisite to organizing any study of investments.
 
@@ -43,11 +41,11 @@ Empirical research by Brinson, Hood, and Beebower (1986) found that asset alloca
 
 ---
 
-## Chapter 2: Financial Markets and Instruments
+# Chapter 2: Financial Markets and Instruments
 
 Financial instruments can be broadly classified by maturity (short vs. long term), by the nature of the claim (debt vs. equity vs. derivative), and by the creditworthiness of the issuer (government vs. corporate). This chapter surveys the major instruments that appear throughout the course.
 
-### The Money Market
+## The Money Market
 
 The **money market** encompasses short-term debt instruments with maturities of one year or less. The combination of short maturities, high credit quality, and liquid secondary markets makes these instruments close substitutes for cash.
 
@@ -77,7 +75,7 @@ The BEY exceeds the BD yield because it divides by the actual price paid and use
 
 Repos are used extensively by securities dealers for overnight financing of inventory, by banks for short-term liquidity management, and by central banks for implementing monetary policy (an open market purchase of securities is equivalent to a reverse repo from the central bank's perspective).
 
-### The Bond Market
+## The Bond Market
 
 <div class="definition"><strong>Definition 2.5 (Bond).</strong> A <strong>bond</strong> is a debt security in which the issuer (borrower) promises to make periodic coupon payments of amount \(C\) and to repay the face value (par value) \(F\) at maturity date \(T\). The <strong>coupon rate</strong> is \(C/F\), expressed as an annual percentage of face value. In North America, coupons are conventionally paid semi-annually.</div>
 
@@ -91,7 +89,7 @@ Repos are used extensively by securities dealers for overnight financing of inve
 
 **Mortgage-backed securities (MBS)** are bonds whose cash flows derive from a pool of mortgage loans. Securitization converts illiquid individual mortgages into tradeable claims, improving the allocation of mortgage risk. The 2008 financial crisis illustrated the hazard when the complexity of re-securitized MBS (collateralized debt obligations, or CDOs) makes the underlying risk impossible to assess accurately.
 
-### Equity Markets
+## Equity Markets
 
 <div class="definition"><strong>Definition 2.8 (Common Share).</strong> A <strong>common share</strong> (or common stock) represents a fractional ownership claim in a corporation. Common shareholders receive dividends at the discretion of the board of directors, have voting rights on major corporate decisions, and hold a <strong>residual claim</strong> — they are entitled to what remains after all debt obligations are satisfied in liquidation. This makes common equity the most junior claim in the firm's capital structure and therefore the most risky.</div>
 
@@ -99,7 +97,7 @@ Repos are used extensively by securities dealers for overnight financing of inve
 
 <div class="definition"><strong>Definition 2.10 (American Depositary Receipt).</strong> An <strong>American Depositary Receipt (ADR)</strong> is a U.S. dollar-denominated certificate issued by a U.S. depositary bank, representing a specified number of shares in a foreign company held in custody by that bank. ADRs trade on U.S. exchanges and allow U.S. investors to access foreign equities without direct foreign settlement. The investor bears the underlying equity risk and the foreign exchange risk of the issuer's home currency versus the U.S. dollar.</div>
 
-### Stock Market Indices
+## Stock Market Indices
 
 A **stock market index** is a number designed to summarize the performance of a specified set of securities. The construction methodology determines the index's economic meaning and its practical use as a benchmark.
 
@@ -115,11 +113,11 @@ Cap-weighted indices have two practical advantages: they are **self-rebalancing*
 
 ---
 
-## Chapter 3: Trading on Securities Markets
+# Chapter 3: Trading on Securities Markets
 
 Understanding how securities markets operate — how prices are discovered, how orders are executed, and how investors can use leverage — is essential background for understanding both market efficiency and investment strategy.
 
-### How Firms Issue Securities
+## How Firms Issue Securities
 
 <div class="definition"><strong>Definition 3.1 (Initial Public Offering).</strong> An <strong>initial public offering (IPO)</strong> is the first sale of a company's equity securities to the public. The issuer engages an <strong>investment bank</strong> as <strong>underwriter</strong>. In a <strong>firm commitment</strong> arrangement, the bank purchases the entire offering from the issuer at a fixed price and resells to the public at a slightly higher offering price, bearing the price risk if the offering is poorly received. In a <strong>best efforts</strong> arrangement, the bank acts only as agent, committing to best efforts at sale but not bearing unsold inventory risk.</div>
 
@@ -129,7 +127,7 @@ The IPO process begins with preparation of a **prospectus** — a detailed discl
 
 Two prominent theories explain IPO underpricing. The **winner's curse** (Rock, 1986) argues that informed investors bid aggressively for attractive offerings and stay away from unattractive ones. Uninformed investors, not knowing which offerings are attractive, submit bids to all offerings and are crowded out of good ones (informed investors take the full allocation) but receive full allocations of bad ones. To attract uninformed investors, issuers must underprice enough to compensate for the adverse allocation they systematically receive. The **information revelation** theory (Benveniste and Spindt, 1989) argues that underpricing compensates institutional investors for truthfully revealing positive private information during book building.
 
-### Market Structure
+## Market Structure
 
 <div class="definition"><strong>Definition 3.3 (Market Types).</strong> Securities markets are organized along a spectrum:
 <ul>
@@ -141,13 +139,13 @@ Two prominent theories explain IPO underpricing. The **winner's curse** (Rock, 1
 
 <div class="definition"><strong>Definition 3.4 (Bid-Ask Spread).</strong> In a dealer market, the <strong>bid price</strong> is the price at which the dealer will buy from the investor, and the <strong>ask (offer) price</strong> is the price at which the dealer will sell to the investor. The <strong>bid-ask spread</strong> is the difference: \(\text{spread} = P_{\text{ask}} - P_{\text{bid}}\). The spread compensates the dealer for three costs: order processing, inventory carrying costs, and adverse selection (the risk that the counterparty is better informed).</div>
 
-### Order Types
+## Order Types
 
 <div class="definition"><strong>Definition 3.5 (Market and Limit Orders).</strong> A <strong>market order</strong> is an instruction to buy or sell immediately at the best available price. Execution is certain; price is not. A <strong>limit order</strong> specifies the maximum price acceptable for a buy (or minimum for a sell). The order enters the <strong>limit order book</strong> and executes only if the market price reaches the specified level. Price is certain; execution is not.</div>
 
 <div class="definition"><strong>Definition 3.6 (Stop Order).</strong> A <strong>stop order</strong> becomes a market order once the security's price touches a specified <strong>trigger price</strong>. A stop-sell at \$45 on a position purchased at \$60 limits losses but executes at market price once \$45 is touched — in a fast-falling market, the actual execution price may be substantially below \$45. Stop orders do not guarantee a particular exit price; they guarantee execution after the trigger is touched.</div>
 
-### Margin Trading and Short Selling
+## Margin Trading and Short Selling
 
 <div class="definition"><strong>Definition 3.7 (Margin Trading).</strong> <strong>Margin trading</strong> is the purchase of securities using borrowed funds from a broker. The <strong>initial margin</strong> requirement specifies the minimum fraction of the position value that must be funded by the investor's own equity. In Canada and the U.S., initial margin on equities is typically 50%. The <strong>maintenance margin</strong> is the minimum equity fraction that must be maintained subsequently; if equity falls below this level, a <strong>margin call</strong> is issued requiring additional deposits to restore the account to initial margin.</div>
 
@@ -166,13 +164,11 @@ If the stock falls below \$33.33, a margin call is issued. At \$33.33, equity = 
 
 ---
 
-# Part II: Portfolio Theory
-
-## Chapter 4: Return and Risk
+# Chapter 4: Return and Risk
 
 The quantitative analysis of investment begins with precise definitions of return and risk. The intuitive notion that higher expected reward comes at the cost of higher risk is correct, but requires mathematical precision to be operationally useful.
 
-### Measuring Returns
+## Measuring Returns
 
 <div class="definition"><strong>Definition 4.1 (Holding Period Return).</strong> The <strong>holding period return (HPR)</strong> over a single period is:
 \[ r = \frac{P_1 - P_0 + D_1}{P_0} = \underbrace{\frac{P_1 - P_0}{P_0}}_{\text{capital gain yield}} + \underbrace{\frac{D_1}{P_0}}_{\text{dividend yield}} \]
@@ -194,7 +190,7 @@ holds, where \(\sigma^2\) is the variance of the periodic returns. The arithmeti
 \[ \bar{r}_G = \sqrt{(1.50)(0.667)} - 1 = \sqrt{1.0005} - 1 \approx 0.025\% \]
 The geometric mean is nearly zero because a 50% gain followed by a 33.3% loss returns to approximately the starting value: \(1.50 \times 0.667 = 1.000\). The arithmetic mean of 8.35% gives the expected return for each individual year's draw, not the compounded growth.</div>
 
-### Expected Return and Variance
+## Expected Return and Variance
 
 When returns are treated as random variables (the appropriate treatment in forward-looking analysis), the relevant statistics are:
 
@@ -217,7 +213,7 @@ The standard deviation \(\sigma\) is expressed in the same units as the return a
 \[ = 0.25(0.0992) + 0.45(0.000225) + 0.30(0.0812) = 0.02480 + 0.000101 + 0.02436 = 0.04926 \]
 \[ \sigma = \sqrt{0.04926} = 22.2\% \]</div>
 
-### Covariance, Correlation, and Portfolio Risk
+## Covariance, Correlation, and Portfolio Risk
 
 The co-movement of assets determines the diversification benefit from combining them in a portfolio:
 
@@ -240,7 +236,7 @@ A correlation of \(+1\) indicates perfect positive co-movement; \(-1\) indicates
 \[ \sigma_p = \sqrt{0.01696} = 13.02\% \]
 The weighted-average standard deviation would be \(0.6(20\%) + 0.4(10\%) = 16\%\). The portfolio standard deviation of 13.02% is substantially lower — this is the diversification benefit.</div>
 
-### The Sharpe Ratio
+## The Sharpe Ratio
 
 The most widely used risk-adjusted performance measure is the ratio of expected excess return to standard deviation:
 
@@ -250,7 +246,7 @@ where \(r_f\) is the risk-free rate. The Sharpe ratio measures the additional ex
 
 The Sharpe ratio is the appropriate performance measure when the portfolio being evaluated represents the investor's entire risky portfolio — i.e., when it has no diversification relationship with other holdings. When the portfolio is a component of a larger portfolio, the appropriate measure is the information ratio or Treynor ratio (which uses beta-adjusted risk).
 
-### Historical Evidence on Risk and Return
+## Historical Evidence on Risk and Return
 
 Decades of data from Canadian and U.S. markets establish the empirical risk-return relationship with considerable precision. Canadian equities (S&P/TSX) have historically delivered arithmetic mean annual returns of approximately 11–13%, with annual standard deviation near 18–20%. Long-term Government of Canada bonds have returned roughly 6–8% with standard deviation near 10%. 91-day T-bills have returned approximately 3–5% with near-zero variance.
 
@@ -260,9 +256,9 @@ Historically (1926–2020), the U.S. arithmetic ERP has been approximately 7–8
 
 ---
 
-## Chapter 5: Capital Allocation to Risky Assets
+# Chapter 5: Capital Allocation to Risky Assets
 
-### Utility and Risk Aversion
+## Utility and Risk Aversion
 
 Investors differ in their tolerance for risk. We model this formally through utility functions that trade off expected return against return variance:
 
@@ -286,7 +282,7 @@ This investor prefers Q despite its lower expected return, because P's higher va
 \[ \text{CER}_P = 12\% - 2\% = 10\%, \quad \text{CER}_Q = 8\% - 0.5\% = 7.5\% \]
 This investor prefers P. Risk aversion determines which portfolio is preferred.</div>
 
-### The Capital Allocation Line
+## The Capital Allocation Line
 
 The central problem of capital allocation is: given a risk-free asset and a risky portfolio, what fraction of wealth should an investor place in each?
 
@@ -314,7 +310,7 @@ The investor places 69.4% in the risky portfolio and 30.6% in T-bills. The compl
 \[ E(r_C) = 3\% + 0.694(12\% - 3\%) = 3\% + 6.25\% = 9.25\% \]
 \[ \sigma_C = 0.694 \times 18\% = 12.49\% \]</div>
 
-### The Efficient Frontier and the Separation Theorem
+## The Efficient Frontier and the Separation Theorem
 
 When investors can combine any number of risky assets freely, the full opportunity set of achievable risk-return combinations is bounded by a curve called the efficient frontier:
 
@@ -330,9 +326,9 @@ This is the most powerful theorem in classical portfolio theory. It implies that
 
 ---
 
-## Chapter 7 (§7.1): The Capital Asset Pricing Model
+# Chapter 7 (§7.1): The Capital Asset Pricing Model
 
-### Assumptions and the Market Portfolio
+## Assumptions and the Market Portfolio
 
 The **Capital Asset Pricing Model (CAPM)**, developed by Sharpe (1964), Lintner (1965), and Mossin (1966), uses the two-fund separation theorem to derive equilibrium expected returns for all risky assets.
 
@@ -354,7 +350,7 @@ In practice, broad market indices (S&P/TSX Composite, S&P 500, MSCI World) serve
 \[ E(r_C) = r_f + \frac{E(r_M) - r_f}{\sigma_M} \cdot \sigma_C \]
 The CML represents the highest achievable Sharpe ratio; no portfolio outside the CML exists in equilibrium. The slope \([E(r_M) - r_f]/\sigma_M\) is the market price of risk per unit of total standard deviation. The CML describes only efficient portfolios — it does not apply to individual assets.</div>
 
-### Beta and the Security Market Line
+## Beta and the Security Market Line
 
 For individual securities, the relevant risk measure is not total standard deviation (much of which can be diversified away) but systematic risk:
 
@@ -380,7 +376,7 @@ In CAPM equilibrium, \(\alpha_i = 0\) for every asset. In empirical tests of the
 \[ E(r_{XYZ}) = 3\% + 1.3 \times 7\% = 3\% + 9.1\% = 12.1\% \]
 If the analyst estimates the stock's true expected return at 14%, the stock has an alpha of \(14\% - 12.1\% = 1.9\%\), suggesting it is underpriced relative to its systematic risk.</div>
 
-### Risk Decomposition
+## Risk Decomposition
 
 <div class="theorem"><strong>Theorem 7.7 (Decomposition of Total Risk).</strong> For any asset \(i\) with return \(r_i = \alpha_i + \beta_i r_M + \varepsilon_i\) (where \(\text{Cov}(r_M, \varepsilon_i) = 0\)):
 \[ \sigma_i^2 = \underbrace{\beta_i^2 \sigma_M^2}_{\text{systematic risk}} + \underbrace{\sigma^2(\varepsilon_i)}_{\text{idiosyncratic risk}} \]
@@ -390,13 +386,11 @@ The **coefficient of determination** \(R^2 = \beta_i^2\sigma_M^2/\sigma_i^2\) me
 
 ---
 
-# Part III: Fixed Income Securities
-
-## Chapter 12: Bond Prices and Yields
+# Chapter 12: Bond Prices and Yields
 
 Fixed income securities are the largest component of global capital markets by total value outstanding. Governments and corporations issue bonds to fund expenditures; pension funds, insurance companies, and individual investors hold them for their income stream and to manage risk. Understanding how bonds are priced and how their yields relate to returns is the foundation of fixed income analysis.
 
-### Bond Characteristics
+## Bond Characteristics
 
 <div class="definition"><strong>Definition 12.1 (Coupon Bond).</strong> A <strong>coupon bond</strong> issued at face value \(F\) with coupon rate \(c\) and maturity of \(T\) semi-annual periods makes coupon payments of \(C = cF/2\) every six months and repays \(F\) at maturity. The <strong>indenture</strong> specifies all terms of the obligation, including covenants protecting the bondholder's position.</div>
 
@@ -404,7 +398,7 @@ Fixed income securities are the largest component of global capital markets by t
 
 <div class="definition"><strong>Definition 12.3 (Callable and Putable Bonds).</strong> A <strong>callable bond</strong> includes a call provision allowing the issuer to retire the bond early at the call price, typically at a premium to par. The call option has positive value to the issuer (and is therefore a cost to the investor, who must be compensated with a higher coupon). A <strong>putable bond</strong> grants the holder the right to sell back to the issuer at par before maturity, protecting against rising rates. A convertible bond grants the holder the right to exchange the bond for equity shares at a specified conversion ratio.</div>
 
-### Bond Pricing
+## Bond Pricing
 
 <div class="theorem"><strong>Theorem 12.4 (Bond Pricing Formula).</strong> The price of a coupon bond with \(T\) remaining semi-annual periods, semi-annual coupon \(C\), face value \(F\), and semi-annual yield \(y\) is:
 \[ P = \sum_{t=1}^{T} \frac{C}{(1+y)^t} + \frac{F}{(1+y)^T} = C \cdot \frac{1 - (1+y)^{-T}}{y} + F(1+y)^{-T} \]
@@ -426,7 +420,7 @@ The bond prices above par because its coupon rate (6%) exceeds the market yield 
 </ol>
 Furthermore, as maturity approaches, the price of any coupon bond converges to face value regardless of its coupon rate (the <strong>pull to par</strong>).</div>
 
-### Yield Measures
+## Yield Measures
 
 <div class="definition"><strong>Definition 12.6 (Yield to Maturity).</strong> The <strong>yield to maturity (YTM)</strong> of a bond is the discount rate \(y\) that equates the present value of all future cash flows to the current market price:
 \[ P = \sum_{t=1}^{T} \frac{CF_t}{(1+y)^t} \]
@@ -444,7 +438,7 @@ The YTM is found by solving:
 \[ 950 = \sum_{t=1}^{20} \frac{40}{(1+y)^t} + \frac{1000}{(1+y)^{20}} \]
 Using a financial calculator: N=20, PV=−950, PMT=40, FV=1000 → solve for I/Y: \(y = 4.32\%\) semi-annual, or 8.64% annual YTM. The YTM exceeds the current yield because the bond is priced below par and will generate a capital gain of \$50 at maturity.</div>
 
-### The Price-Yield Relationship
+## The Price-Yield Relationship
 
 The relationship between bond price and yield is among the most important in fixed income:
 
@@ -458,11 +452,11 @@ The relationship between bond price and yield is among the most important in fix
 
 ---
 
-## Chapter 13: The Term Structure of Interest Rates
+# Chapter 13: The Term Structure of Interest Rates
 
 The term structure describes how yields vary across maturities. Understanding this relationship is prerequisite to both bond portfolio management and derivative pricing.
 
-### Spot Rates and the Yield Curve
+## Spot Rates and the Yield Curve
 
 <div class="definition"><strong>Definition 13.1 (Spot Rate).</strong> The <strong>spot rate</strong> \(y_t\) is the yield on a zero-coupon (pure discount) bond maturing at time \(t\). Equivalently, it is the rate of return guaranteed on a riskless investment from today until time \(t\). The collection of spot rates across maturities constitutes the <strong>zero-coupon yield curve</strong> (or spot curve).</div>
 
@@ -474,7 +468,7 @@ The term structure describes how yields vary across maturities. Understanding th
 <li><strong>Humped:</strong> intermediate maturities carry higher yields than both short and long maturities.</li>
 </ul></div>
 
-### Forward Rates
+## Forward Rates
 
 <div class="definition"><strong>Definition 13.3 (Forward Rate).</strong> The <strong>forward rate</strong> \(f_{t,t+1}\) is the interest rate that can be locked in today for a one-period investment beginning at time \(t\). From no-arbitrage:
 \[ (1+y_{t+1})^{t+1} = (1+y_t)^t(1 + f_{t,t+1}) \]
@@ -487,7 +481,7 @@ Solving:
 \[ f_{1,2} = \frac{(1.035)^2}{(1.030)^1} - 1 = \frac{1.07122}{1.030} - 1 = 1.03993 - 1 = 4.00\% \]
 The forward rate (4.00%) exceeds the current 1-year spot (3.00%) and 2-year spot (3.50%), consistent with the upward-sloping yield curve implying rising expected short rates.</div>
 
-### Bootstrapping the Spot Curve
+## Bootstrapping the Spot Curve
 
 In practice, the zero-coupon spot curve must be extracted from coupon bond prices through a procedure called **bootstrapping**:
 
@@ -499,7 +493,7 @@ In practice, the zero-coupon spot curve must be extracted from coupon bond price
 <li>2-year bond: 5% coupon, price \$101.50. Then \(101.50 = 5/1.04 + 105/(1+y_2)^2\), so \((1+y_2)^2 = 105/(101.50 - 5/1.04) = 105/96.69 = 1.0860\), giving \(y_2 = 4.22\%\).</li>
 </ul></div>
 
-### Theories of the Term Structure
+## Theories of the Term Structure
 
 <div class="definition"><strong>Definition 13.5 (Pure Expectations Hypothesis).</strong> The <strong>pure expectations hypothesis (PEH)</strong> holds that long-term yields are geometric averages of expected future short rates:
 \[ (1+y_T)^T = \prod_{t=0}^{T-1}(1 + E[r_{t,t+1}]) \]
@@ -513,9 +507,9 @@ The forward rate embeds both the expected future short rate and a risk premium t
 
 ---
 
-## Chapter 14: Managing Bond Portfolios
+# Chapter 14: Managing Bond Portfolios
 
-### Duration
+## Duration
 
 The central risk of bond investing is **interest rate risk** — the inverse relationship between bond prices and yields means that rising rates cause portfolio losses. Duration is the tool for measuring and managing this risk:
 
@@ -538,7 +532,7 @@ For a zero-coupon bond, \(D = T\) always (all weight on the single terminal cash
 <li>The duration of a portfolio equals the value-weighted average of the durations of its component bonds.</li>
 </ol></div>
 
-### Modified Duration and Price Sensitivity
+## Modified Duration and Price Sensitivity
 
 Macaulay duration is related to price sensitivity through a simple adjustment:
 
@@ -556,7 +550,7 @@ Therefore \(dP/P = -D^* \cdot dy\). For discrete changes, this is a linear appro
 \[ \Delta P \approx -7.2 \times 980 \times 0.005 = -\$35.28 \]
 The new approximate price is \$944.72. The dollar duration (\(D^* \times P = 7,056\)) gives the dollar price change per 100 basis point move.</div>
 
-### Convexity
+## Convexity
 
 The modified duration approximation is linear in yield changes. The actual price-yield curve is convex — for equal yield changes up and down, the price rises more than it falls. This second-order correction is captured by convexity:
 
@@ -568,7 +562,7 @@ The improved price approximation including convexity is:
 
 <div class="remark"><strong>Remark.</strong> The convexity correction \(\frac{1}{2}\text{CX}\cdot(\Delta y)^2\) is always non-negative for option-free bonds (convexity is always positive). This means bondholders always benefit from convexity: price rises more for yield declines than it falls for equal yield increases. For bonds with embedded calls (callable bonds), convexity can become negative at low yields — when rates are low, the call option is more likely to be exercised, and the bond behaves more like a short-maturity bond, reducing its price appreciation.</div>
 
-### Immunization
+## Immunization
 
 <div class="definition"><strong>Definition 14.5 (Immunization).</strong> A bond portfolio is <strong>immunized</strong> against interest rate changes over a target horizon \(H\) if the portfolio's Macaulay duration equals \(H\). An interest rate change creates two offsetting effects: a <strong>price effect</strong> (rising rates lower the portfolio's current value) and a <strong>reinvestment effect</strong> (rising rates allow coupon reinvestment at higher rates). When \(D = H\), these effects exactly offset for small rate changes, leaving the portfolio value at the horizon date unchanged.</div>
 
@@ -581,19 +575,17 @@ These effects exactly offset, and the accumulated portfolio value at year 5 rema
 
 ---
 
-# Part IV: Equity Valuation
-
-## Chapter 16: Equity Valuation Models
+# Chapter 16: Equity Valuation Models
 
 Equity valuation is both more intellectually demanding and more practically influential than fixed income valuation. Unlike bonds, whose cash flows are contractual, equity cash flows depend on managerial decisions, competitive dynamics, and macroeconomic conditions that must be forecast. The valuation models in this chapter provide disciplined frameworks for translating these forecasts into an estimate of intrinsic value.
 
-### Intrinsic Value and Mispricing
+## Intrinsic Value and Mispricing
 
 <div class="definition"><strong>Definition 16.1 (Intrinsic Value).</strong> The <strong>intrinsic value</strong> \(V_0\) of a share is the present value of all future cash flows that the share will generate for its owner, discounted at the appropriate risk-adjusted required rate of return \(k\). The <strong>required rate of return</strong> is estimated using the CAPM:
 \[ k = r_f + \beta[E(r_M) - r_f] \]
 If \(V_0 > P_0\) (current market price), the stock is undervalued; if \(V_0 < P_0\), it is overvalued.</div>
 
-### The Dividend Discount Model
+## The Dividend Discount Model
 
 <div class="theorem"><strong>Theorem 16.2 (General Dividend Discount Model).</strong> The intrinsic value of a share is the present value of all future dividends:
 \[ V_0 = \sum_{t=1}^{\infty}\frac{D_t}{(1+k)^t} \]
@@ -603,7 +595,7 @@ where \(D_t\) is the expected dividend in period \(t\) and \(k\) is the required
 \[ V_0 = \frac{D_1 + P_1}{1+k} \]
 But \(P_1\) itself equals the present value of subsequent dividends discounted one period later. Iterating indefinitely (and assuming the terminal price term vanishes as the horizon grows), the result follows. \(\square\)</div>
 
-### The Gordon Growth Model
+## The Gordon Growth Model
 
 The most widely used simplification of the DDM is the constant-growth model:
 
@@ -623,7 +615,7 @@ Rearranging the Gordon model provides a useful alternative perspective:
 \[ k = \frac{D_1}{V_0} + g \]
 The required return equals the dividend yield plus the (constant) capital gain rate. This decomposition holds at every point in time in the constant-growth model.</div>
 
-### The Plowback Model of Growth
+## The Plowback Model of Growth
 
 The constant growth rate \(g\) is not arbitrary — it is determined by the firm's reinvestment policy:
 
@@ -633,7 +625,7 @@ A firm paying out all earnings as dividends (\(b=0\)) has \(g=0\); a firm retain
 
 <div class="remark"><strong>Remark (Modigliani-Miller insight).</strong> The Gordon model implies that a firm with higher \(g\) is worth more. But note that \(g = b \times \text{ROE}\) increases both the growth in dividends and reduces the current dividend (since higher \(b\) means lower payout). Growth only adds value if \(\text{ROE} > k\) — if the firm earns more than its cost of equity on retained earnings. If \(\text{ROE} = k\), paying out all earnings as dividends (no growth) yields the same stock price as retaining and reinvesting. This is the content of Modigliani-Miller dividend irrelevance in a world without taxes.</div>
 
-### Multistage Growth Models
+## Multistage Growth Models
 
 <div class="definition"><strong>Definition 16.5 (Two-Stage DDM).</strong> A <strong>two-stage DDM</strong> models a period of high or abnormal growth at rate \(g_1\) for the first \(T\) periods, followed by a perpetual mature growth rate \(g_2 < k\):
 \[ V_0 = \sum_{t=1}^{T}\frac{D_t}{(1+k)^t} + \frac{P_T}{(1+k)^T} \]
@@ -653,7 +645,7 @@ Present value:
 
 Note that the terminal value accounts for \$18.44/\$21.89 = 84% of total value — the assumed long-run growth rate dominates the valuation.</div>
 
-### Price Ratios
+## Price Ratios
 
 The **price-to-earnings (P/E) ratio** is the most widely used equity valuation metric. The Gordon model implies a theoretical P/E:
 
@@ -665,13 +657,11 @@ where \(E_1/k\) is the value of the stock as a no-growth perpetuity and \(\text{
 
 ---
 
-# Part V: Derivative Securities
-
-## Chapter 18: Options and Other Derivatives Markets
+# Chapter 18: Options and Other Derivatives Markets
 
 Derivatives are financial contracts whose payoffs depend on the values of underlying assets. They serve two distinct social purposes: **hedging** (reducing existing exposures) and **price discovery** (aggregating information about future asset prices). This chapter covers the institutional mechanics of options markets and the fundamental pricing relationships that constrain option values.
 
-### Option Fundamentals
+## Option Fundamentals
 
 <div class="definition"><strong>Definition 18.1 (Call and Put Options).</strong> A <strong>call option</strong> is the right, but not the obligation, to <strong>buy</strong> a specified underlying asset at a specified <strong>strike price</strong> \(X\) on or before a specified <strong>expiration date</strong> \(T\). A <strong>put option</strong> is the right to <strong>sell</strong> at \(X\). The buyer of an option pays the <strong>option premium</strong> to the seller (writer). An <strong>American option</strong> may be exercised at any time before expiry; a <strong>European option</strong> only at expiry.</div>
 
@@ -683,7 +673,7 @@ Derivatives are financial contracts whose payoffs depend on the values of underl
 </ul>
 The <strong>intrinsic value</strong> of a call is \(\max(S-X,0)\); of a put is \(\max(X-S,0)\). Any excess of market price over intrinsic value is the <strong>time value</strong>.</div>
 
-### Option Payoffs and Profits
+## Option Payoffs and Profits
 
 <div class="theorem"><strong>Theorem 18.3 (Option Payoffs at Expiry).</strong> At expiration, the payoffs are:
 
@@ -708,7 +698,7 @@ The profit is payoff minus the premium paid (or plus premium received for short 
 
 The break-even stock price is \(X + C = 53\). Maximum loss = \$3 (premium paid); maximum gain is unlimited.</div>
 
-### Option Strategies
+## Option Strategies
 
 <div class="definition"><strong>Definition 18.4 (Protective Put).</strong> A <strong>protective put</strong> combines a long position in the stock with a long put option:
 \[ \text{Payoff} = S_T + \max(X - S_T, 0) = \max(S_T, X) \]
@@ -722,7 +712,7 @@ The investor collects the call premium and retains upside up to the strike, but 
 \[ \text{Payoff} = \max(S_T - X, 0) + \max(X - S_T, 0) = |S_T - X| \]
 The straddle profits from large moves in either direction. It is valuable when the investor expects high volatility but is uncertain about direction — before an earnings announcement, regulatory decision, or merger vote, for instance.</div>
 
-### Factors Affecting Option Prices
+## Factors Affecting Option Prices
 
 <div class="theorem"><strong>Theorem 18.7 (Option Price Determinants).</strong> The following relationships hold for European options on non-dividend paying stocks:
 
@@ -738,7 +728,7 @@ The straddle profits from large moves in either direction. It is valuable when t
 
 The volatility sensitivity deserves special emphasis. Unlike all other inputs, which affect calls and puts in opposite directions, **both** calls and puts benefit from higher volatility. This is because option payoffs are asymmetric: the holder benefits from large moves on the favorable side but is protected against large moves on the unfavorable side (the option simply expires worthless). Higher volatility expands the distribution of outcomes and therefore increases expected payoffs for both call and put holders.
 
-### Put-Call Parity
+## Put-Call Parity
 
 The most fundamental no-arbitrage constraint linking call and put prices is:
 
@@ -770,9 +760,9 @@ If the put traded at \$4.40, an arbitrageur could earn a riskless profit of \$0.
 
 ---
 
-## Chapter 19: Option Valuation
+# Chapter 19: Option Valuation
 
-### The Binomial Option Pricing Model
+## The Binomial Option Pricing Model
 
 The binomial model provides the conceptual foundation for all option pricing. It shows that option values can be derived from the principle of no-arbitrage alone, without any assumptions about investor risk preferences.
 
@@ -798,7 +788,7 @@ Substituting \(\Delta\) and simplifying yields the risk-neutral pricing formula.
 \[ C = \frac{0.625 \times 15 + 0.375 \times 0}{1.05} = \frac{9.375}{1.05} = \$8.93 \]
 Hedge ratio: \(\Delta = (15-0)/(120-80) = 15/40 = 0.375\). A portfolio long 0.375 shares, short one call costs \(0.375 \times 100 - 8.93 = \$28.57\) and pays \(0.375 \times 80 - 0 = \$30 = 28.57 \times 1.05\). ✓</div>
 
-### The Black-Scholes Formula
+## The Black-Scholes Formula
 
 As the number of binomial periods increases and the time step shrinks to zero, the binomial model converges to the **Black-Scholes formula**:
 
@@ -820,7 +810,7 @@ The drift \(\mu\) does not appear in the formula — consistent with the risk-ne
 \[ C = 50(0.5886) - 50e^{-0.025}(0.5047) = 29.43 - 50(0.9753)(0.5047) = 29.43 - 24.61 = \$4.82 \]
 By put-call parity: \(P = 4.82 + 50e^{-0.025} - 50 = 4.82 - 1.23 = \$3.59\).</div>
 
-### The Greeks
+## The Greeks
 
 <div class="definition"><strong>Definition 19.4 (The Greeks).</strong> The <strong>Greeks</strong> quantify an option's sensitivity to each input:
 <ul>
@@ -833,7 +823,7 @@ By put-call parity: \(P = 4.82 + 50e^{-0.025} - 50 = 4.82 - 1.23 = \$3.59\).</di
 
 <div class="remark"><strong>Remark (Gamma-Theta Trade-off).</strong> For a delta-hedged long option position, the two dominant P&L drivers are gamma and theta. Gamma is positive (the position benefits from large stock moves in either direction — positive convexity); theta is negative (the position loses value as time passes). The Black-Scholes PDE can be interpreted as the break-even condition: theta decay exactly compensates gamma gains when the stock moves by the diffusion amount \(\sigma S\sqrt{dt}\) per unit time. If realized volatility exceeds the implied volatility used to price the option, the gamma gains outpace the theta decay and the long option position profits.</div>
 
-### Implied Volatility
+## Implied Volatility
 
 <div class="definition"><strong>Definition 19.5 (Implied Volatility).</strong> The <strong>implied volatility</strong> of an option is the value of \(\sigma\) that, when input into the Black-Scholes formula, produces the observed market price. Implied volatility is the market's consensus forecast of the stock's future realized volatility embedded in option prices.</div>
 
@@ -841,9 +831,9 @@ The empirical finding that implied volatility varies systematically across strik
 
 ---
 
-## Chapter 20: Futures, Forwards, and Swap Markets
+# Chapter 20: Futures, Forwards, and Swap Markets
 
-### Futures and Forwards: Institutional Background
+## Futures and Forwards: Institutional Background
 
 <div class="definition"><strong>Definition 20.1 (Forward Contract).</strong> A <strong>forward contract</strong> is a privately negotiated agreement to buy or sell a specified asset at a specified price (the **forward price**) at a specified future date (the **delivery date**). Forwards are customized to the parties' needs and traded over the counter (OTC). Because they are bilateral agreements with no intermediary guarantee, they expose each party to **counterparty credit risk** — the risk that the other party defaults before delivery.</div>
 
@@ -853,7 +843,7 @@ The empirical finding that implied volatility varies systematically across strik
 
 <div class="example"><strong>Example 20.1.</strong> An investor enters a long futures contract on 100 barrels of crude oil at \$80/barrel. Initial margin = \$3,000; maintenance margin = \$2,500. If the futures price falls to \$77, the daily loss is \(100 \times (-3) = -\$300\), reducing the margin account from \$3,000 to \$2,700. The next day, price falls to \$75: daily loss = \$200, margin account = \$2,500 (exactly at maintenance). One more day with any decline triggers a margin call to restore the account to \$3,000.</div>
 
-### Futures Pricing: The Cost of Carry Model
+## Futures Pricing: The Cost of Carry Model
 
 <div class="theorem"><strong>Theorem 20.4 (Futures Pricing for Non-Dividend Paying Assets).</strong> For an asset with no carrying costs or intermediate cash flows:
 \[ F_0 = S_0(1+r_f)^T \]
@@ -872,7 +862,7 @@ where \(u\) is the continuously compounded storage cost (for commodities) or zer
 
 <div class="definition"><strong>Definition 20.6 (Basis and Convergence).</strong> The <strong>basis</strong> is defined as \(S_0 - F_0\). For non-dividend-paying assets, basis = \(-S_0 r_f T < 0\) (futures exceed spot price, called **contango**). For dividend-paying assets or commodities with high convenience yield, \(d > r + u\) and the basis can be positive (futures below spot, called **backwardation**). At expiry, the futures price converges to the spot price: \(F_T = S_T\).</div>
 
-### Hedging with Futures
+## Hedging with Futures
 
 <div class="definition"><strong>Definition 20.7 (Short Hedge and Long Hedge).</strong> A <strong>short hedge</strong> involves selling futures to protect against a price decline in an asset held or to be produced. A farmer who has planted wheat in spring and will sell at harvest enters a short wheat futures position to lock in a selling price. A <strong>long hedge</strong> involves buying futures to lock in the acquisition cost of an asset to be purchased. An airline entering a long crude oil futures position to lock in jet fuel costs is a long hedge.</div>
 
@@ -886,7 +876,7 @@ Differentiating with respect to \(h\) and setting to zero: \(-2\sigma_{SF} + 2h\
 
 <div class="remark"><strong>Remark.</strong> The hedge ratio equals one (a unit hedge) only when spot and futures prices are perfectly correlated and have equal volatility. In practice, the hedged asset often differs from the futures contract's underlying in grade, location, or timing — introducing **basis risk**. Basis risk means the hedge cannot be perfect even with the optimal ratio. The hedging effectiveness \(R^2 = \rho_{SF}^2\) measures the fraction of spot price variance eliminated by the optimal hedge.</div>
 
-### Swap Markets
+## Swap Markets
 
 <div class="definition"><strong>Definition 20.9 (Interest Rate Swap).</strong> An <strong>interest rate swap</strong> is an agreement in which two counterparties exchange periodic interest payments on a specified <strong>notional principal</strong>. In a <strong>plain vanilla swap</strong>, one party pays a fixed rate (the **swap rate**) while the other pays a floating rate (typically SOFR), both applied to the same notional. The notional itself is never exchanged — only the net interest difference changes hands.</div>
 
