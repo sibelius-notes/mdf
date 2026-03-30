@@ -1,6 +1,6 @@
 ---
 title: "AMATH 361: Continuum Mechanics"
-prof: ""
+prof: "Francis J. Poulin"
 subjects: "AMATH"
 ---
 
@@ -853,3 +853,524 @@ Vortex stretching is absent in two-dimensional flows (since \(\boldsymbol{\omega
 \]
 
 This is structurally identical to the advection-diffusion equation for a passive scalar (such as temperature or dye concentration). The analogy is deep: just as dye spreads by diffusion and is carried by the flow, so does vorticity. Vorticity is created at solid boundaries (where the no-slip condition imposes a discontinuity in velocity), diffuses away from the wall, and is swept downstream. The entire structure of viscous boundary layers can be understood as the diffusion of wall-generated vorticity into the flow interior.
+
+---
+
+# Chapter 8: Applications — Bernoulli's Theorem and Potential Flow
+
+The governing equations of ideal fluid mechanics — the Euler equations for an inviscid, incompressible fluid — are nonlinear partial differential equations, and in general they resist closed-form solution. Yet two classical techniques, **Bernoulli's theorem** and **potential flow theory**, carve out a rich class of problems that admit exact, elegant solutions. Bernoulli's theorem converts the momentum equation into an algebraic conservation law along streamlines, while potential flow reduces the entire velocity field to a single scalar satisfying Laplace's equation. Together they underpin much of classical aerodynamics and hydraulics.
+
+## 8.1 Bernoulli's Theorem
+
+Consider the steady Euler momentum equation for an incompressible fluid of uniform density \(\rho\):
+
+\[
+(\mathbf{u}\cdot\nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p + \mathbf{g}
+\]
+
+We write \(\mathbf{g} = -\nabla(gz)\) (taking \(z\) upward) and use the vector identity
+
+\[
+(\mathbf{u}\cdot\nabla)\mathbf{u} = \nabla\!\left(\tfrac{1}{2}|\mathbf{u}|^2\right) - \mathbf{u}\times\boldsymbol{\omega}
+\]
+
+where \(\boldsymbol{\omega} = \nabla\times\mathbf{u}\) is the vorticity. The momentum equation becomes:
+
+\[
+\nabla\!\left(\frac{p}{\rho} + \tfrac{1}{2}|\mathbf{u}|^2 + gz\right) = \mathbf{u}\times\boldsymbol{\omega}
+\]
+
+Now take the dot product with \(\mathbf{u}\). Since \(\mathbf{u}\cdot(\mathbf{u}\times\boldsymbol{\omega}) = 0\) identically (the cross product is perpendicular to \(\mathbf{u}\)), we obtain:
+
+\[
+\mathbf{u}\cdot\nabla\!\left(\frac{p}{\rho} + \tfrac{1}{2}|\mathbf{u}|^2 + gz\right) = 0
+\]
+
+This says that the quantity in parentheses is constant along streamlines (curves everywhere tangent to \(\mathbf{u}\)).
+
+<div class="theorem">
+<strong>Bernoulli's Theorem (steady, inviscid, incompressible flow).</strong> Along any streamline,
+\[
+p + \tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho g z = \text{const}
+\]
+The three terms are the <strong>static pressure</strong>, <strong>dynamic pressure</strong>, and <strong>hydrostatic pressure</strong> respectively. Their sum, the <strong>stagnation pressure</strong>, is conserved along each streamline.
+</div>
+
+If the flow is additionally **irrotational** (\(\boldsymbol{\omega} = 0\)), then the right-hand side vanishes everywhere (not just along \(\mathbf{u}\)), and the Bernoulli quantity is constant throughout the entire flow domain — a stronger result.
+
+<div class="theorem">
+<strong>Bernoulli's Theorem (irrotational form).</strong> For steady, inviscid, incompressible, irrotational flow,
+\[
+p + \tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho g z = \text{const everywhere}
+\]
+</div>
+
+**Applications.** The practical power of Bernoulli's theorem is considerable. In a **Venturi tube**, a pipe narrows from cross-sectional area \(A_1\) to \(A_2 < A_1\). Continuity demands \(u_1 A_1 = u_2 A_2\), so the fluid accelerates. Bernoulli then requires \(p_1 - p_2 = \tfrac{1}{2}\rho(u_2^2 - u_1^2) > 0\): pressure drops in the constriction. Measuring this pressure difference with a manometer gives the flow speed without any moving parts.
+
+A **Pitot tube** is a bent tube with one opening facing the oncoming flow and one opening perpendicular to it. At the forward-facing stagnation point the flow speed is zero, so \(p_\text{stag} = p_\infty + \tfrac{1}{2}\rho U^2\), where \(U\) is the free-stream speed. Comparing \(p_\text{stag}\) to the static pressure \(p_\infty\) measured at the side port directly gives the airspeed — the operating principle of every aircraft airspeed indicator.
+
+For flow over an **aerofoil**, the geometry forces the flow above the wing to travel a greater distance and therefore at higher speed than the flow below. By Bernoulli, the upper surface has lower pressure than the lower surface, and the net upward pressure difference integrated over the wing chord gives **lift**. (Quantifying this rigorously requires the **Kutta condition** and the **Kutta–Joukowski theorem** \(L = \rho U \Gamma\), where \(\Gamma\) is the circulation around the aerofoil.)
+
+**Caveats.** Bernoulli's theorem in the form above applies only when: (i) the flow is **steady** (no explicit time dependence); (ii) the fluid is **inviscid** (no shear stresses); (iii) the fluid is **incompressible** (\(\rho\) = const); and (iv) the relation holds along a single streamline (or everywhere, if irrotational). In unsteady flows an additional term \(\partial\phi/\partial t\) (involving the velocity potential \(\phi\)) appears; in compressible flows \(p/\rho\) is replaced by the enthalpy; and across streamlines in rotational flows the constant of integration differs from line to line.
+
+## 8.2 Potential Flow
+
+When the flow is irrotational, \(\boldsymbol{\omega} = \nabla\times\mathbf{u} = 0\), a classical theorem of vector calculus guarantees the existence of a scalar **velocity potential** \(\phi\) such that
+
+\[
+\mathbf{u} = \nabla\phi
+\]
+
+Substituting into the incompressibility condition \(\nabla\cdot\mathbf{u} = 0\) yields Laplace's equation:
+
+\[
+\nabla^2\phi = 0
+\]
+
+The problem of finding the flow is thus reduced from solving a nonlinear vector PDE (Euler) to solving a linear scalar PDE (Laplace) — an enormous simplification. The pressure is then recovered a posteriori from the Bernoulli relation.
+
+<div class="definition">
+<strong>Velocity Potential.</strong> A scalar field \(\phi(\mathbf{x},t)\) is a velocity potential for the flow \(\mathbf{u}\) if \(\mathbf{u} = \nabla\phi\). Potential flows are automatically irrotational, and for incompressible fluids \(\phi\) satisfies \(\nabla^2\phi = 0\).
+</div>
+
+**The stream function in 2D.** For two-dimensional incompressible flow \(\mathbf{u} = (u, v)\) with \(\partial u/\partial x + \partial v/\partial y = 0\), there exists a **stream function** \(\psi\) such that
+
+\[
+u = \frac{\partial\psi}{\partial y}, \qquad v = -\frac{\partial\psi}{\partial x}
+\]
+
+Curves of constant \(\psi\) are **streamlines**: since \(d\psi = \psi_x\,dx + \psi_y\,dy = -v\,dx + u\,dy = 0\) along \(dy/dx = v/u\). Moreover, the volume flux between two streamlines equals the difference of their \(\psi\)-values. For irrotational 2D flow, substituting the stream function into \(\omega = \partial v/\partial x - \partial u/\partial y = 0\) gives \(\nabla^2\psi = 0\) as well. Both \(\phi\) and \(\psi\) satisfy Laplace's equation.
+
+**The complex potential.** In two dimensions, introduce the complex variable \(z = x + iy\) (not to be confused with the vertical coordinate) and define the **complex potential**
+
+\[
+w(z) = \phi(x,y) + i\psi(x,y)
+\]
+
+The Cauchy–Riemann equations, which are the condition for \(w\) to be a holomorphic (complex-analytic) function, state \(\phi_x = \psi_y\) and \(\phi_y = -\psi_x\). These are precisely the relations \(u = \phi_x = \psi_y\) and \(v = \phi_y = -\psi_x\). Therefore, **every holomorphic function \(w(z)\) generates a valid 2D potential flow**, and the complex velocity is \(dw/dz = u - iv\). This identification with complex analysis opens the entire toolkit of conformal mappings to the aerodynamicist.
+
+**Elementary solutions.** The linearity of Laplace's equation means that solutions may be superposed freely. The following elementary flows are the building blocks:
+
+<div class="example">
+<strong>Uniform stream.</strong> \(w = Ue^{-i\alpha}z\), giving \(\phi = U(x\cos\alpha + y\sin\alpha)\), streamlines are straight lines at angle \(\alpha\) to the \(x\)-axis.
+</div>
+
+<div class="example">
+<strong>Line source/sink.</strong> \(w = \frac{m}{2\pi}\ln z\), where \(m > 0\) is the source strength (volume flux per unit depth). In polar coordinates, \(\phi = \frac{m}{2\pi}\ln r\), \(\psi = \frac{m}{2\pi}\theta\). The radial velocity is \(u_r = m/(2\pi r)\) and there is no azimuthal component. A sink has \(m < 0\).
+</div>
+
+<div class="example">
+<strong>Doublet.</strong> Formed by placing a source of strength \(m\) at \(-\epsilon\) and a sink of equal strength at \(+\epsilon\) on the real axis and taking \(m\epsilon \to \kappa/2\pi\) as \(\epsilon\to 0\). The complex potential is \(w = \kappa/(2\pi z)\); in polar form \(\phi = (\kappa/2\pi)(x/r^2)\), \(\psi = -(\kappa/2\pi)(y/r^2)\). The streamlines are circles through the origin.
+</div>
+
+<div class="example">
+<strong>Point vortex.</strong> \(w = -\frac{i\Gamma}{2\pi}\ln z\), where \(\Gamma\) is the circulation. Then \(\phi = \Gamma\theta/(2\pi)\), \(\psi = -\Gamma\ln r/(2\pi)\). The azimuthal velocity is \(u_\theta = \Gamma/(2\pi r)\); radial velocity vanishes. Streamlines are circles centred on the vortex.
+</div>
+
+**Flow past a cylinder.** Superpose a uniform stream \(w_1 = Uz\) and a doublet \(w_2 = Ua^2/z\) (strength \(\kappa = 2\pi U a^2\)):
+
+\[
+w = U\!\left(z + \frac{a^2}{z}\right)
+\]
+
+In polar coordinates, \(\psi = U(r - a^2/r)\sin\theta\). On \(r = a\), \(\psi = 0\): the circle of radius \(a\) is a streamline, i.e., it can be regarded as a solid cylinder. The velocity components are
+
+\[
+u_r = U\!\left(1 - \frac{a^2}{r^2}\right)\cos\theta, \qquad u_\theta = -U\!\left(1 + \frac{a^2}{r^2}\right)\sin\theta
+\]
+
+On the cylinder surface (\(r = a\)), \(u_r = 0\) and \(u_\theta = -2U\sin\theta\). By Bernoulli (with gravity neglected), the surface pressure is
+
+\[
+p = p_\infty + \tfrac{1}{2}\rho U^2\bigl(1 - 4\sin^2\theta\bigr)
+\]
+
+The pressure distribution is symmetric fore-and-aft, which leads to the remarkable conclusion discussed in Section 8.3.
+
+Adding a vortex of circulation \(\Gamma\) to the doublet-plus-stream gives **flow past a cylinder with circulation**, whose pressure distribution is no longer symmetric top-to-bottom, generating a net **lift force** \(L = \rho U \Gamma\) per unit span — the Kutta–Joukowski theorem. This is the simplest model of how a spinning cylinder (Magnus effect) or an aerofoil generates lift.
+
+## 8.3 D'Alembert's Paradox and Its Resolution
+
+The pressure distribution for flow past a cylinder derived above integrates to zero net force in any direction. This is not a coincidence of the cylinder geometry.
+
+<div class="theorem">
+<strong>D'Alembert's Paradox.</strong> In steady, inviscid, incompressible, irrotational flow past a body of arbitrary shape, the net hydrodynamic drag on the body is zero.
+</div>
+
+The result follows from the **Blasius theorem**: for a body with boundary \(C\), the complex force per unit depth is \(F_x - iF_y = \tfrac{i\rho}{2}\oint_C \left(dw/dz\right)^2 dz\). For any potential flow that is \(O(1/r)\) at large \(r\) (faster than the source decay), the residue theorem applied to a large contour yields zero net force. Put differently, the fore-aft symmetry of irrotational flow means the pressure deceleration on the front face of a body is exactly matched by the pressure acceleration on the rear face: there is no **form drag**.
+
+This prediction flatly contradicts everyday experience — aeroplanes and ships clearly experience drag — and was recognised as a fundamental difficulty almost immediately after the mathematical result was established in the eighteenth century.
+
+**Resolution.** The paradox is resolved by viscosity, which becomes important in a thin **boundary layer** near any solid surface no matter how small the viscosity (as long as it is nonzero). Within the boundary layer, the no-slip condition decelerates the fluid from the free-stream velocity to zero over a distance of order \(\delta \sim (\nu L/U)^{1/2}\). When the pressure rises sufficiently steeply on the rear of a body (an **adverse pressure gradient**), the boundary-layer flow separates from the wall, forming a turbulent **wake** with a momentum deficit. This momentum deficit is what the body's drag must supply. Inviscid potential flow predicts no wake and hence no drag because it enforces no no-slip condition and allows the flow to turn the corner at the rear with no separation.
+
+Prandtl's **boundary-layer theory** (1904) provided the quantitative reconciliation: at high Reynolds numbers the flow is potential flow everywhere except in an \(O(\text{Re}^{-1/2})\)-thick boundary layer and in the wake. The boundary layer carries the vorticity generated at the wall (recall Section 7.4) and is the seat of all viscous effects. The theory, which is developed systematically in AMATH 463, is arguably the most important asymptotic theory in classical fluid mechanics.
+
+---
+
+# Chapter 9: Thermodynamics and Equations of State
+
+The equations of motion developed so far — the continuity equation and the Navier–Stokes equations — govern five scalar fields: density \(\rho\), the three velocity components \((u,v,w)\), and pressure \(p\). For an incompressible fluid with given body force and viscosity these five equations (one continuity, three momentum, one incompressibility constraint) close the system. For a **compressible** fluid, however, density and pressure are not independent: we need an additional thermodynamic relation between them, an **equation of state**, together with an energy equation governing temperature. This chapter provides that closure.
+
+## 9.1 Thermodynamic Quantities
+
+We model the fluid as a **simple compressible substance** characterised at each material point by a small set of thermodynamic state variables. The primary quantities are:
+
+- **Internal energy** \(e\) (per unit mass): the microscopic kinetic and potential energy of the molecules.
+- **Enthalpy** \(h = e + p/\rho\): the thermodynamic potential natural for constant-pressure processes and for analysing flow through ducts and nozzles.
+- **Temperature** \(T\): the absolute temperature in Kelvin.
+- **Entropy** \(s\) (per unit mass): a measure of the disorder of the molecular state; central to understanding irreversibility.
+
+Two material constants characterise how a fluid stores heat:
+
+<div class="definition">
+<strong>Specific Heats.</strong> The <strong>specific heat at constant volume</strong> \(c_v\) is the energy required to raise the temperature of unit mass by one Kelvin at fixed volume: \(c_v = (\partial e/\partial T)_v\). The <strong>specific heat at constant pressure</strong> \(c_p\) is defined analogously at fixed pressure: \(c_p = (\partial h/\partial T)_p\). The ratio \(\gamma = c_p/c_v\) (the <strong>adiabatic index</strong>) equals \(7/5 = 1.4\) for diatomic gases (air) and \(5/3 \approx 1.67\) for monatomic noble gases.
+</div>
+
+For an **ideal gas**, \(c_v\) and \(c_p\) are constants independent of temperature, and one can show from statistical mechanics that \(c_p - c_v = R\), where \(R\) is the **specific gas constant** (universal gas constant divided by molar mass: \(R = 287\) J kg\(^{-1}\) K\(^{-1}\) for air).
+
+## 9.2 The First Law of Thermodynamics
+
+The **first law** for a fluid parcel moving with the flow states that the rate of change of internal energy equals the work done by compression plus the heat added. Expressed in terms of material derivatives:
+
+\[
+\frac{De}{Dt} = -p\,\frac{D}{Dt}\!\left(\frac{1}{\rho}\right) + \dot{Q}
+\]
+
+Here \(1/\rho\) is the specific volume (volume per unit mass), so \(-p\,D(1/\rho)/Dt\) is the compressive work done on the parcel per unit time and per unit mass. The term \(\dot{Q}\) (J kg\(^{-1}\) s\(^{-1}\)) represents all heat additions: conduction, radiation, and internal heat sources such as viscous dissipation.
+
+Since \(h = e + p/\rho\), we compute \(Dh/Dt = De/Dt + (1/\rho)Dp/Dt + p\,D(1/\rho)/Dt\). Substituting the first law:
+
+\[
+\frac{Dh}{Dt} = \frac{1}{\rho}\frac{Dp}{Dt} + \dot{Q}
+\]
+
+This form is especially convenient in compressible duct flows where the pressure history of a parcel is prescribed.
+
+**Connection to the macroscopic energy equation.** The energy equation for a fluid element can also be derived by taking the dot product of the momentum equation with \(\mathbf{u}\) and combining with continuity. The result, in the absence of viscosity, is:
+
+\[
+\frac{\partial}{\partial t}\!\left(\tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho e\right) + \nabla\cdot\!\left[\mathbf{u}\left(\tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho e + p\right)\right] = \rho\dot{Q}
+\]
+
+This is a conservation law: the rate of change of total energy (kinetic plus internal) in a volume equals the flux of energy (kinetic + internal + pressure work) through the boundary plus the heat source. The appearance of the enthalpy \(h = e + p/\rho\) in the flux term — rather than just \(e\) — reflects the flow work done by pressure forces moving the fluid across the control surface.
+
+## 9.3 Entropy and the Second Law
+
+The thermodynamic identity relating entropy to other state variables is the **Gibbs relation**:
+
+\[
+T\,ds = de + p\,d\!\left(\frac{1}{\rho}\right)
+\]
+
+In rate form following a fluid parcel, \(T\,Ds/Dt = De/Dt + p\,D(1/\rho)/Dt\). Comparing with the first law, we immediately identify:
+
+<div class="theorem">
+<strong>Entropy Equation.</strong> For a fluid parcel,
+\[
+T\,\frac{Ds}{Dt} = \dot{Q}
+\]
+For an <strong>adiabatic</strong> (\(\dot{Q} = 0\)) and <strong>reversible</strong> (frictionless) process, entropy is conserved along particle paths: \(Ds/Dt = 0\). Such a flow is called <strong>isentropic</strong>.
+</div>
+
+The **second law** states that irreversible processes (viscous dissipation, heat conduction across a temperature gradient) generate entropy: \(\dot{Q}_\text{irrev} > 0\) at the molecular scale. Therefore, for a real viscous heat-conducting fluid, \(Ds/Dt \geq 0\) for every fluid parcel, with equality only in the ideal (inviscid, non-conducting) limit.
+
+For an **ideal fluid** (inviscid and non-heat-conducting), \(Ds/Dt = 0\) following every parcel. This means that material surfaces of constant entropy are preserved by the flow: if the fluid is homentropic (uniform \(s\)) initially, it remains so for all time. Under isentropic conditions the equations of state simplify greatly, as the next section shows.
+
+## 9.4 Ideal Gas Equation of State
+
+For an ideal gas the equation of state is:
+
+<div class="definition">
+<strong>Ideal Gas Law.</strong>
+\[
+p = \rho R T
+\]
+where \(R = c_p - c_v\) is the specific gas constant. For air, \(R \approx 287\) J kg\(^{-1}\) K\(^{-1}\) and \(\gamma = 1.4\).
+</div>
+
+Combining the ideal gas law with the isentropic condition \(Ds/Dt = 0\) (i.e., \(de = -p\,d(1/\rho)\) and \(e = c_v T\)), one derives the **isentropic relations**:
+
+\[
+\frac{p}{p_0} = \left(\frac{\rho}{\rho_0}\right)^\gamma = \left(\frac{T}{T_0}\right)^{\gamma/(\gamma-1)}
+\]
+
+where the subscript \(0\) denotes a reference state. Equivalently, \(p = C\rho^\gamma\) for some constant \(C\) that is the same for all parcels in a homentropic flow.
+
+**Sound speed.** The speed of sound is the speed at which small isentropic pressure perturbations propagate:
+
+\[
+c^2 = \left.\frac{\partial p}{\partial \rho}\right|_s = \frac{\gamma p}{\rho} = \gamma R T
+\]
+
+For air at 20°C, \(c \approx 343\) m s\(^{-1}\). The **Mach number** \(M = |\mathbf{u}|/c\) measures the ratio of flow speed to sound speed; flows with \(M \ll 1\) are effectively incompressible, while \(M > 1\) (supersonic) flows develop shock waves — surfaces across which entropy is produced and the isentropic relations break down.
+
+**Potential temperature.** In atmospheric science it is convenient to track parcels by their **potential temperature**:
+
+\[
+\theta = T\!\left(\frac{p_0}{p}\right)^{R/c_p}
+\]
+
+where \(p_0\) is a reference pressure (conventionally 1000 hPa). Under isentropic conditions \(Ds/Dt = 0\), one can show \(D\theta/Dt = 0\): potential temperature is conserved along parcel trajectories. Atmospheric stability is determined by the vertical gradient of \(\theta\): if \(\partial\theta/\partial z > 0\) the atmosphere is stably stratified and resists vertical motion; if \(\partial\theta/\partial z < 0\) it is convectively unstable.
+
+## 9.5 Closing the System
+
+We are now in a position to count equations and unknowns for the full compressible fluid system.
+
+**Unknowns.** In three dimensions: density \(\rho\), three velocity components \((u,v,w)\), pressure \(p\), temperature \(T\), and specific entropy \(s\) — seven scalar fields in total. The equation of state \(p = \rho R T\) reduces this to six independent variables; fixing any two of \(\{p, \rho, T, s\}\) via the equation of state determines the others through thermodynamic identities.
+
+**Equations.** The governing system for a compressible ideal (inviscid, non-heat-conducting) gas is:
+
+<div class="theorem">
+<strong>Compressible Euler System (ideal gas).</strong>
+<ol>
+<li><strong>Continuity:</strong> \(\partial\rho/\partial t + \nabla\cdot(\rho\mathbf{u}) = 0\)</li>
+<li><strong>Momentum</strong> (3 equations): \(\rho\,D\mathbf{u}/Dt = -\nabla p + \rho\mathbf{g}\)</li>
+<li><strong>Energy/Entropy:</strong> \(Ds/Dt = 0\) (or equivalently \(D\theta/Dt = 0\))</li>
+<li><strong>Equation of state:</strong> \(p = \rho R T\) (and \(p = C\rho^\gamma\) for homentropic flow)</li>
+</ol>
+This gives 1 + 3 + 1 + 1 = 6 equations for 6 unknowns \((\rho, u, v, w, p, T)\) (with \(s\) determined by the equation of state). The system is closed.
+</div>
+
+**Incompressible limit.** For liquids or low-Mach-number gas flows, \(\rho = \text{const}\) and the system simplifies drastically. The continuity equation reduces to \(\nabla\cdot\mathbf{u} = 0\). The isentropic condition \(Ds/Dt = 0\) is automatically satisfied if the flow is homentropic. The thermodynamic equations decouple entirely from the momentum equation (temperature is advected passively if needed). We are left with:
+
+- Continuity: \(\nabla\cdot\mathbf{u} = 0\) — 1 equation
+- Navier–Stokes momentum: \(\rho\,D\mathbf{u}/Dt = -\nabla p + \mu\nabla^2\mathbf{u} + \rho\mathbf{g}\) — 3 equations
+
+This is 4 equations for 4 unknowns \((u, v, w, p)\). The incompressible Navier–Stokes system is therefore self-contained, confirming that all the fluid mechanics in Chapters 6 and 7 was already complete without thermodynamics. The full compressible machinery of the present chapter is essential only when \(M\) is not small, or when temperature effects (buoyancy, stratification, chemical reactions) play a dynamical role.
+
+---
+
+# Chapter 10: Magnetohydrodynamics
+
+**Magnetohydrodynamics** (MHD) is the study of electrically conducting fluids — plasmas, liquid metals, and electrolyte solutions — in the presence of magnetic fields. The defining feature of MHD is the two-way coupling between fluid motion and the magnetic field: the flow distorts and advects the field, while the field exerts forces on the fluid via the Lorentz force. This mutual interaction produces a rich phenomenology absent from ordinary hydrodynamics: waves guided by field lines, equilibria maintained by magnetic pressure and tension, and the spontaneous generation of large-scale magnetic fields by the fluid dynamo effect.
+
+MHD is central to geophysics (the generation of Earth's magnetic field by convection in the liquid iron outer core), solar physics (the structure of sunspots, the solar corona, the solar wind), plasma physics (magnetic confinement fusion in tokamaks), and astrophysics (accretion discs around black holes, neutron star magnetospheres). The Winter 2026 edition of AMATH 361 introduces MHD as a natural extension of the continuum framework developed in the preceding chapters: the fluid is described by the Navier–Stokes equations, and Maxwell's equations govern the electromagnetic field, with the two coupled through Ohm's law and the Lorentz force.
+
+## 10.1 Maxwell's Equations and the Lorentz Force
+
+The electromagnetic field is described by the electric field \(\mathbf{E}\) and magnetic flux density \(\mathbf{B}\), related to the free charge density \(\rho_e\) and free current density \(\mathbf{J}\) by **Maxwell's equations**:
+
+\[
+\nabla\cdot\mathbf{B} = 0
+\]
+\[
+\nabla\cdot\mathbf{E} = \frac{\rho_e}{\varepsilon_0}
+\]
+\[
+\nabla\times\mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}
+\]
+\[
+\nabla\times\mathbf{B} = \mu_0\mathbf{J} + \mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}
+\]
+
+The four equations are, in order: no magnetic monopoles, Gauss's law, Faraday's law, and the Ampère–Maxwell law. Here \(\mu_0 = 4\pi\times 10^{-7}\) H m\(^{-1}\) is the magnetic permeability of free space and \(\varepsilon_0 = 8.85\times 10^{-12}\) F m\(^{-1}\) is the permittivity.
+
+**The MHD approximation.** In most conducting fluids of interest, the fluid velocity \(U\) satisfies \(U \ll c\) (where \(c = 1/\sqrt{\mu_0\varepsilon_0}\) is the speed of light). Under this non-relativistic assumption, the **displacement current** \(\mu_0\varepsilon_0\,\partial\mathbf{E}/\partial t\) in the Ampère–Maxwell law is of order \((U/c)^2\) relative to the magnetic field term \(\nabla\times\mathbf{B}\) and can be neglected. The Ampère law then reduces to:
+
+\[
+\nabla\times\mathbf{B} = \mu_0\mathbf{J}
+\]
+
+This pre-Maxwell approximation is the cornerstone of MHD. It implies, on taking the divergence, that \(\nabla\cdot\mathbf{J} = 0\) — current is divergence-free in MHD — and that we need not separately track \(\mathbf{E}\) as a dynamic variable.
+
+**Ohm's law for a moving conductor.** In a reference frame moving with the fluid at velocity \(\mathbf{u}\), the electric field seen by the fluid is \(\mathbf{E} + \mathbf{u}\times\mathbf{B}\). **Ohm's law** for a conducting fluid with electrical conductivity \(\sigma\) (units: S m\(^{-1}\)) states that the current density is proportional to this effective electric field:
+
+\[
+\mathbf{J} = \sigma(\mathbf{E} + \mathbf{u}\times\mathbf{B})
+\]
+
+For a **perfect conductor** (\(\sigma\to\infty\)) we must have \(\mathbf{E} + \mathbf{u}\times\mathbf{B} = 0\) to keep \(\mathbf{J}\) finite. For a resistive conductor, the ratio \(\eta = 1/(\mu_0\sigma)\) is the **magnetic diffusivity** (units: m\(^2\) s\(^{-1}\)), which plays the role for the magnetic field that kinematic viscosity \(\nu\) plays for the vorticity.
+
+**The Lorentz force.** A volume element carrying current density \(\mathbf{J}\) in a magnetic field \(\mathbf{B}\) experiences a body force per unit volume:
+
+<div class="definition">
+<strong>Lorentz Force Density.</strong>
+\[
+\mathbf{f} = \mathbf{J}\times\mathbf{B}
+\]
+This force couples the electromagnetic field to the fluid momentum equation. Using the MHD Ampère law \(\mathbf{J} = \nabla\times\mathbf{B}/\mu_0\), we can write the Lorentz force entirely in terms of \(\mathbf{B}\):
+\[
+\mathbf{f} = \frac{1}{\mu_0}(\nabla\times\mathbf{B})\times\mathbf{B} = -\nabla\!\left(\frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B}\cdot\nabla)\mathbf{B}
+\]
+</div>
+
+The identity used in the last step is the vector identity \((\nabla\times\mathbf{B})\times\mathbf{B} = (\mathbf{B}\cdot\nabla)\mathbf{B} - \nabla(B^2/2)\). The two resulting terms have transparent physical interpretations that will be discussed in Section 10.3.
+
+## 10.2 The Induction Equation
+
+The equation governing the evolution of \(\mathbf{B}\) is derived by eliminating \(\mathbf{E}\) and \(\mathbf{J}\) among Faraday's law, Ohm's law, and the MHD Ampère law.
+
+From Ohm's law, \(\mathbf{E} = \mathbf{J}/\sigma - \mathbf{u}\times\mathbf{B}\). Substituting \(\mathbf{J} = \nabla\times\mathbf{B}/\mu_0\):
+
+\[
+\mathbf{E} = \frac{1}{\mu_0\sigma}\nabla\times\mathbf{B} - \mathbf{u}\times\mathbf{B} = \eta\,\nabla\times\mathbf{B} - \mathbf{u}\times\mathbf{B}
+\]
+
+Now substitute into Faraday's law \(\partial\mathbf{B}/\partial t = -\nabla\times\mathbf{E}\):
+
+\[
+\frac{\partial\mathbf{B}}{\partial t} = \nabla\times(\mathbf{u}\times\mathbf{B}) - \eta\,\nabla\times(\nabla\times\mathbf{B})
+\]
+
+Using \(\nabla\times(\nabla\times\mathbf{B}) = \nabla(\nabla\cdot\mathbf{B}) - \nabla^2\mathbf{B} = -\nabla^2\mathbf{B}\) (since \(\nabla\cdot\mathbf{B} = 0\)):
+
+<div class="theorem">
+<strong>The Induction Equation.</strong>
+\[
+\frac{\partial\mathbf{B}}{\partial t} = \nabla\times(\mathbf{u}\times\mathbf{B}) + \eta\,\nabla^2\mathbf{B}
+\]
+The first term on the right is the <strong>advective</strong> (or inductive) term, describing the distortion and advection of magnetic field lines by the flow. The second term is <strong>magnetic diffusion</strong>, which smooths out field gradients on a timescale \(\tau_\eta \sim L^2/\eta\).
+</div>
+
+This equation has the same mathematical structure as the vorticity equation (Section 7.4): a material transport equation with a diffusion term. Indeed, in the limit of **ideal MHD** (\(\eta = 0\), i.e., infinite conductivity), the induction equation reduces to \(\partial\mathbf{B}/\partial t = \nabla\times(\mathbf{u}\times\mathbf{B})\), which is identical in form to the equation for vorticity in an inviscid fluid.
+
+**The magnetic Reynolds number.** The relative importance of advection and diffusion is measured by the **magnetic Reynolds number**:
+
+<div class="definition">
+<strong>Magnetic Reynolds Number.</strong>
+\[
+Rm = \frac{UL}{\eta}
+\]
+where \(U\) is a characteristic velocity scale and \(L\) a characteristic length scale. When \(Rm \gg 1\) (advection dominates), magnetic field lines are effectively "frozen" into the fluid. When \(Rm \ll 1\) (diffusion dominates), the field diffuses almost independently of the flow.
+</div>
+
+In the Earth's liquid core, \(U \sim 10^{-4}\) m s\(^{-1}\), \(L \sim 10^6\) m, \(\eta \sim 1\) m\(^2\) s\(^{-1}\), giving \(Rm \sim 10^2\). In the solar convection zone, \(Rm \sim 10^8\). In laboratory liquid-metal experiments, \(Rm \sim 1\text{–}10^2\). The large values in natural systems mean that flux freezing is an excellent approximation there.
+
+**Alfvén's frozen flux theorem.** In the ideal MHD limit (\(\eta = 0\)), the magnetic flux through any material surface (a surface that moves with the fluid) is conserved:
+
+\[
+\frac{d}{dt}\int_{\mathcal{S}(t)}\mathbf{B}\cdot d\mathbf{A} = 0
+\]
+
+This means that magnetic field lines are **frozen into the fluid**: two fluid parcels that initially lie on the same field line always remain on the same field line. The field lines are material lines, carried along and stretched (but not broken) by the flow. Flux freezing is the fundamental organizing principle of ideal MHD, constraining how the magnetic topology can evolve.
+
+## 10.3 The MHD Equations
+
+Combining the Navier–Stokes equations (here in the inviscid limit for clarity) with the induction equation and the Lorentz body force, we obtain the **ideal MHD system**:
+
+<div class="theorem">
+<strong>Ideal MHD Equations.</strong>
+\[
+\frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\mathbf{u}) = 0 \quad\text{(continuity)}
+\]
+\[
+\rho\frac{D\mathbf{u}}{Dt} = -\nabla p + \frac{1}{\mu_0}(\nabla\times\mathbf{B})\times\mathbf{B} \quad\text{(momentum)}
+\]
+\[
+\frac{\partial\mathbf{B}}{\partial t} = \nabla\times(\mathbf{u}\times\mathbf{B}) \quad\text{(induction, ideal MHD)}
+\]
+\[
+\nabla\cdot\mathbf{B} = 0 \quad\text{(solenoidal constraint)}
+\]
+</div>
+
+(Body forces such as gravity are omitted here but can be added; an energy equation closes the system for compressible fluids.)
+
+**Physical interpretation of the Lorentz force.** Using the identity derived at the end of Section 10.1, the momentum equation becomes:
+
+\[
+\rho\frac{D\mathbf{u}}{Dt} = -\nabla\!\left(p + \frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B}\cdot\nabla)\mathbf{B}
+\]
+
+This decomposition reveals two physically distinct contributions:
+
+<div class="definition">
+<strong>Magnetic Pressure and Tension.</strong>
+<ul>
+<li><strong>Magnetic pressure:</strong> \(p_B = B^2/(2\mu_0)\). This acts like an isotropic pressure, pushing fluid away from regions of strong field. It adds to the thermodynamic pressure in the effective pressure \(p + p_B\).</li>
+<li><strong>Magnetic tension:</strong> \((\mathbf{B}\cdot\nabla)\mathbf{B}/\mu_0\). This force acts along field lines, resisting their curvature. Curved field lines exert a restoring force analogous to the tension in an elastic string: a field line of curvature \(\kappa\) exerts a force of magnitude \(B^2\kappa/\mu_0\) directed toward the centre of curvature.</li>
+</ul>
+</div>
+
+Magnetic tension is the restoring force responsible for Alfvén waves (Section 10.4). Magnetic pressure tends to drive fluid out of flux tubes, causing them to expand unless contained by external pressure. The interplay between magnetic pressure, tension, and fluid pressure governs the equilibrium structures of solar flux tubes, tokamak plasmas, and planetary magnetospheres.
+
+**The energy budget.** Taking the dot product of the momentum equation with \(\mathbf{u}\) and combining with the induction equation yields an energy conservation law:
+
+\[
+\frac{\partial}{\partial t}\!\left(\frac{1}{2}\rho|\mathbf{u}|^2 + \frac{B^2}{2\mu_0}\right) + \nabla\cdot(\cdots) = 0
+\]
+
+The two terms in the time derivative are the **kinetic energy density** and the **magnetic energy density** \(B^2/(2\mu_0)\). Energy can be exchanged between kinetic and magnetic forms, but the total is conserved (in the ideal, inviscid case). In the resistive case, Ohmic heating \(\mathbf{J}\cdot\mathbf{E} = J^2/\sigma\) irreversibly converts magnetic energy into thermal energy, and viscous dissipation similarly converts kinetic energy.
+
+## 10.4 Alfvén Waves
+
+The most fundamental wave mode of MHD is the **Alfvén wave**, a transverse wave in which a magnetic field line oscillates like a vibrating string under tension. The analogy is precise: recall that a taut string of linear mass density \(\mu\) and tension \(T\) supports transverse waves with speed \(\sqrt{T/\mu}\). A magnetised fluid of density \(\rho\) and field strength \(B_0\) has magnetic tension \(B_0^2/\mu_0\) per unit area, giving a wave speed \(B_0/\sqrt{\mu_0\rho}\).
+
+**Derivation.** Consider an incompressible fluid at rest with uniform density \(\rho_0\) and uniform magnetic field \(\mathbf{B}_0 = B_0\hat{\mathbf{z}}\). Perturb the state with small-amplitude velocity \(\mathbf{u}'\) and magnetic field \(\mathbf{b}' = \mathbf{B} - \mathbf{B}_0\), where primed quantities are \(O(\epsilon)\) with \(\epsilon \ll 1\). Linearising the ideal MHD equations (dropping all quadratic terms in primed quantities):
+
+- Momentum: \(\rho_0\,\partial\mathbf{u}'/\partial t = -\nabla p' + \frac{1}{\mu_0}(\mathbf{B}_0\cdot\nabla)\mathbf{b}'\)
+- Induction: \(\partial\mathbf{b}'/\partial t = (\mathbf{B}_0\cdot\nabla)\mathbf{u}' - \mathbf{B}_0(\nabla\cdot\mathbf{u}')\)
+
+With \(\nabla\cdot\mathbf{u}' = 0\) (incompressibility) and \(\mathbf{B}_0\cdot\nabla = B_0\,\partial/\partial z\):
+
+\[
+\rho_0\,\frac{\partial\mathbf{u}'}{\partial t} = -\nabla p' + \frac{B_0}{\mu_0}\frac{\partial\mathbf{b}'}{\partial z}, \qquad \frac{\partial\mathbf{b}'}{\partial t} = B_0\frac{\partial\mathbf{u}'}{\partial z}
+\]
+
+Differentiating the first equation with respect to \(t\) and substituting the second:
+
+\[
+\rho_0\,\frac{\partial^2\mathbf{u}'}{\partial t^2} = \frac{B_0^2}{\mu_0}\frac{\partial^2\mathbf{u}'}{\partial z^2} - \nabla\frac{\partial p'}{\partial t}
+\]
+
+For transverse perturbations (in the \(x\)- or \(y\)-direction, perpendicular to \(\hat{\mathbf{z}}\)), the pressure perturbation vanishes (by symmetry and incompressibility), and we obtain the wave equation:
+
+\[
+\frac{\partial^2 u'_x}{\partial t^2} = v_A^2\,\frac{\partial^2 u'_x}{\partial z^2}
+\]
+
+<div class="theorem">
+<strong>Alfvén Wave Dispersion Relation.</strong> For plane-wave solutions \(\propto e^{i(kz - \omega t)}\) propagating along the equilibrium field \(\mathbf{B}_0 = B_0\hat{\mathbf{z}}\),
+\[
+\omega = \pm v_A k, \qquad v_A = \frac{B_0}{\sqrt{\mu_0\rho_0}}
+\]
+where \(v_A\) is the <strong>Alfvén speed</strong>. The waves are transverse: velocity and magnetic perturbations are perpendicular to both \(\mathbf{B}_0\) and the propagation direction.
+</div>
+
+**Physical interpretation.** Consider a field line displaced sideways by a small amount \(\xi\). The restoring tension \(B_0^2/\mu_0\) per unit area acts to straighten the line, while the fluid inertia \(\rho_0\) resists the motion. The balance gives a wave speed \(v_A = B_0/\sqrt{\mu_0\rho_0}\) — exactly the Alfvén speed. The velocity and magnetic perturbations are in phase and proportional: \(\mathbf{u}' = \pm\mathbf{b}'/\sqrt{\mu_0\rho_0}\). This means that kinetic and magnetic energy are equal and exchanged periodically, with no net dissipation in the ideal case.
+
+**Propagation at oblique angles.** When the wave vector \(\mathbf{k}\) makes an angle \(\theta\) with \(\mathbf{B}_0\), the dispersion relation becomes more complex. Three distinct wave branches appear:
+
+- **Alfvén wave** (shear mode): \(\omega = v_A k\cos\theta\); purely transverse, incompressible.
+- **Fast magnetosonic wave**: speed greater than both \(v_A\) and the sound speed \(c_s\); propagates in all directions and is nearly isotropic for \(v_A \ll c_s\) or \(v_A \gg c_s\).
+- **Slow magnetosonic wave**: speed less than both \(v_A\) and \(c_s\); propagates preferentially along field lines.
+
+For an incompressible fluid only the shear Alfvén mode exists. The fast and slow modes are acoustic in nature and require compressibility. In the solar wind, all three modes have been observed directly by spacecraft.
+
+**Typical Alfvén speeds.** In the Earth's outer core, \(B_0 \sim 10^{-3}\) T, \(\rho_0 \sim 10^4\) kg m\(^{-3}\), giving \(v_A \sim 3\times 10^{-3}\) m s\(^{-1}\) — slower than the convective velocity, so MHD inertia competes with magnetic forces. In the solar corona, \(B_0 \sim 10^{-3}\) T, \(\rho_0 \sim 10^{-12}\) kg m\(^{-3}\), giving \(v_A \sim 10^6\) m s\(^{-1}\) — comparable to the speed of coronal mass ejections.
+
+## 10.5 MHD Equilibria and Applications
+
+**Static equilibrium.** When \(\mathbf{u} = 0\) and all time derivatives vanish, the momentum equation reduces to force balance between the pressure gradient and the Lorentz force:
+
+\[
+\nabla\!\left(p + \frac{B^2}{2\mu_0}\right) = \frac{1}{\mu_0}(\mathbf{B}\cdot\nabla)\mathbf{B}
+\]
+
+This is the condition for **magnetostatic equilibrium**. If the field lines are straight and parallel, the tension term vanishes and the equilibrium is \(p + B^2/(2\mu_0) = \text{const}\): total pressure (thermal plus magnetic) is uniform. If the field lines are curved, tension provides an additional force that must be balanced.
+
+<div class="example">
+<strong>The Z-pinch.</strong> Consider a cylindrical plasma with current flowing in the \(z\)-direction, \(\mathbf{J} = J(r)\hat{\mathbf{z}}\). By Ampère's law, \(\mathbf{B} = B_\theta(r)\hat{\boldsymbol{\theta}}\) (azimuthal field). The Lorentz force \(\mathbf{J}\times\mathbf{B}\) points radially inward, compressing the plasma: \(dp/dr = -J B_\theta\). This self-constriction (the "pinch effect") confines the plasma without external magnets. The Z-pinch is MHD unstable (to the "sausage" and "kink" instabilities), but it remains a conceptually important configuration.
+</div>
+
+<div class="example">
+<strong>The \(\theta\)-pinch.</strong> Here the current flows in the azimuthal direction \(\hat{\boldsymbol{\theta}}\) and the field is axial \(\hat{\mathbf{z}}\). The Lorentz force \(\mathbf{J}\times\mathbf{B}\) is again radially inward. Unlike the Z-pinch, the \(\theta\)-pinch has straight field lines so there is no tension; pressure balance gives \(p + B^2/(2\mu_0) = \text{const}\). The \(\theta\)-pinch is the basis of many pulsed-power confinement devices.
+</div>
+
+**Geophysical applications.**
+
+*The Earth's geodynamo.* Earth's liquid iron outer core (\(2900\text{–}5100\) km depth) is a convecting, electrically conducting fluid. Thermal and compositional convection drives a self-sustaining dynamo: fluid motions generate electric currents (by the induction equation), which generate magnetic field (Ampère's law), which feeds back on the motion (Lorentz force). The output is Earth's dipole field, which reverses irregularly (most recently 780,000 years ago) and protects the surface from cosmic rays. Numerical MHD simulations have reproduced dipole reversals and secular variation in the geomagnetic field, validating the dynamo hypothesis.
+
+*The solar corona and solar wind.* The Sun's outermost atmosphere (the corona) is structured by the solar magnetic field into loop-like flux tubes and open field lines. Coronal plasma is heated to temperatures of \(10^6\text{–}10^7\) K by mechanisms still debated (wave heating, magnetic reconnection), and flows outward as the **solar wind** at \(\sim 400\text{–}800\) km s\(^{-1}\). **Magnetic reconnection** — the topological rearrangement of field lines through resistive breakdown of flux-freezing — releases stored magnetic energy explosively, driving solar flares and coronal mass ejections (CMEs). These events deposit energy in Earth's magnetosphere, causing geomagnetic storms and auroras.
+
+*The magnetosphere.* The solar wind compresses Earth's magnetic field on the dayside (to \(\sim 10\) Earth radii) and stretches it into a long magnetotail on the nightside. The boundary, the **magnetopause**, is a current sheet in MHD equilibrium between solar wind dynamic pressure and Earth's magnetic pressure. Inside, trapped energetic particles form the Van Allen radiation belts. Substorm activity involves magnetic reconnection in the magnetotail, releasing stored energy that accelerates particles toward the polar ionosphere.
+
+**Astrophysical applications.**
+
+*Accretion disc instability.* Gas infalling onto a compact object (black hole, neutron star) forms a rotating disc. Without a mechanism for angular momentum transport, the gas would not accrete. The **magnetorotational instability** (MRI, Balbus and Hawley 1991) provides this mechanism: a weak magnetic field in a differentially rotating disc is linearly unstable. Field lines connecting adjacent annuli are stretched by the differential rotation; the tension tries to spin up the outer annulus and slow down the inner one, transferring angular momentum outward and allowing inflow. The MRI is now the accepted mechanism for turbulent angular momentum transport in accretion discs, explaining the observed luminosities of X-ray binary systems and active galactic nuclei.
+
+*Stellar interiors.* The solar interior is the site of a large-scale magnetic dynamo operating in the tachocline (the thin shear layer between the rigidly rotating radiative zone and the differentially rotating convective zone). Magnetic flux tubes buoyantly rise through the convection zone and emerge at the surface as sunspots, whose 11-year activity cycle reflects the underlying dynamo oscillation. Helioseismology (the analysis of solar oscillations) constrains the internal rotation profile and magnetic field structure, providing the observational foundation for modern stellar MHD.
+
+*Neutron star magnetospheres.* Neutron stars have surface magnetic fields of \(10^8\text{–}10^{12}\) T — \(12\) orders of magnitude stronger than Earth's field. In **pulsars**, the rotating dipole field drives a relativistic plasma wind and radiation beam that sweeps past the observer like a lighthouse. In **magnetars**, field strengths exceed \(10^{10}\) T, making magnetic energy comparable to gravitational binding energy; sudden magnetic rearrangements (starquakes) release gamma-ray bursts detectable across the Galaxy.
+
+**Closing remarks.** Magnetohydrodynamics illustrates the power of the continuum framework: by treating an electrically conducting fluid as a continuum and combining Maxwell's equations with the Navier–Stokes equations through a single constitutive relation (Ohm's law), one obtains a system that describes phenomena spanning planetary cores, stellar atmospheres, and relativistic compact objects. The key dimensionless parameter is the magnetic Reynolds number \(Rm\), which governs whether field lines are frozen into the fluid or can diffuse relative to it. When \(Rm\) is large, the fluid and field co-evolve on an equal footing, exchanging energy through Alfvén waves and storing it in large-scale ordered structures. When \(Rm\) is small, the field is a passive diagnostic of the flow. Between these limits lies the rich and largely unresolved physics of MHD turbulence, dynamo action, and magnetic reconnection — among the most active research frontiers in applied mathematics today.

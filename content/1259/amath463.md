@@ -1,6 +1,6 @@
 ---
 title: "AMATH 463: Fluid Mechanics"
-prof: ""
+prof: "Mike Waite"
 subjects: "AMATH"
 ---
 
@@ -81,9 +81,211 @@ At infinity for an exterior flow problem:
 
 ---
 
-# Chapter 2: Potential Flow and Aerofoil Theory
+---
 
-## 2.1 Irrotational Flow and the Velocity Potential
+# Chapter 2: Vorticity Dynamics
+
+Vorticity is the fundamental measure of local rotation in a fluid. Defined as the curl of the velocity field, \(\boldsymbol{\omega} = \nabla \times \mathbf{u}\), it encodes the spin that each infinitesimal fluid element carries as it is swept through the flow. Understanding how vorticity is generated, transported, stretched, and destroyed is arguably the deepest single thread running through all of classical fluid mechanics: potential flow lives in the absence of vorticity, turbulence is dominated by its generation and cascade, geophysical flows are controlled by its planetary-scale budget, and stability theory asks when ordered vorticity fields break into disorder.
+
+This chapter develops the dynamics of vorticity from first principles. We begin by deriving the vorticity transport equation directly from the Navier–Stokes equations, identifying the key physical mechanisms. We then prove Kelvin's circulation theorem and Helmholtz's vortex theorems — the cornerstones of inviscid vortex dynamics — and develop the Biot–Savart law for the velocity field induced by a given vorticity distribution. The chapter closes by extending the framework to rotating reference frames and introducing potential vorticity, the conserved quantity that anchors large-scale geophysical dynamics (taken up in detail in Chapter 8).
+
+## 2.1 The Vorticity Equation
+
+### Derivation from the Navier–Stokes Equations
+
+The vorticity equation is obtained by taking the curl of the incompressible Navier–Stokes equations. Starting from
+\[
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p + \nu\nabla^2\mathbf{u} + \mathbf{g},
+\]
+we use the vector identity \((\mathbf{u}\cdot\nabla)\mathbf{u} = \nabla(\tfrac{1}{2}|\mathbf{u}|^2) - \mathbf{u}\times\boldsymbol{\omega}\) to rewrite the advection term, then apply \(\nabla\times\) to the entire equation. Since \(\nabla\times(\nabla\phi) = \mathbf{0}\) for any scalar \(\phi\), the pressure gradient and the kinetic energy gradient both vanish under the curl. The gravitational term \(\mathbf{g} = -\nabla(gz)\) also vanishes. For a fluid of variable density, however, the pressure term contributes a **baroclinic torque**: the curl of \(-\nabla p / \rho\) does not vanish when \(\nabla \rho\) and \(\nabla p\) are not parallel. The result is the **vorticity equation**:
+
+<div class="theorem">
+<strong>Vorticity Transport Equation.</strong> For a viscous fluid (Navier–Stokes),
+\[
+\frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega}\cdot\nabla)\mathbf{u} - \boldsymbol{\omega}(\nabla\cdot\mathbf{u}) + \frac{\nabla\rho \times \nabla p}{\rho^2} + \nu\nabla^2\boldsymbol{\omega}.
+\]
+For an incompressible flow (\(\nabla\cdot\mathbf{u} = 0\)) this reduces to
+\[
+\frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega}\cdot\nabla)\mathbf{u} + \frac{\nabla\rho \times \nabla p}{\rho^2} + \nu\nabla^2\boldsymbol{\omega}.
+\]
+</div>
+
+Each term on the right-hand side represents a distinct physical mechanism:
+
+**Vortex stretching and tilting** — the term \((\boldsymbol{\omega}\cdot\nabla)\mathbf{u}\) is a \(3\times 3\) tensor acting on the vorticity vector. It has two geometric interpretations. When the component of \(\nabla\mathbf{u}\) along \(\boldsymbol{\omega}\) is extensional (the fluid element is being stretched along the vortex line), the vorticity magnitude increases by angular momentum conservation — this is **vortex stretching**. When the off-diagonal components are nonzero, the vortex line is tilted into a new orientation — this is **vortex tilting**. Vortex stretching is the primary mechanism by which turbulent flows generate intense small-scale vorticity from weaker large-scale vorticity, and it is the mechanism responsible for the tornado-like intensification of a vortex as it is drawn into a convergent region.
+
+**Baroclinic generation** — the term \(\nabla\rho \times \nabla p / \rho^2\) (often called the **baroclinic torque** or **solenoidal term**) generates vorticity wherever surfaces of constant density are not parallel to surfaces of constant pressure. A classic example is the sea breeze: over a heated coastline, the density of air decreases faster over land than over sea, but the pressure gradient is nearly horizontal, so \(\nabla\rho \times \nabla p \neq \mathbf{0}\) and a coastal circulation is driven. For a **barotropic** fluid — one in which \(p = p(\rho)\), so that \(\nabla p\) is always parallel to \(\nabla\rho\) — the baroclinic term vanishes identically.
+
+**Viscous diffusion** — the term \(\nu\nabla^2\boldsymbol{\omega}\) diffuses vorticity in exactly the same way that heat diffusion spreads a thermal anomaly. In the absence of the other terms, vorticity would simply spread out over a diffusion length \(\ell \sim \sqrt{\nu t}\). The dimensionless ratio of vortex stretching to viscous diffusion is the Reynolds number \(Re = UL/\nu\): at high \(Re\), diffusion is negligible and the inviscid dynamics dominate.
+
+### Two-Dimensional Flows
+
+In two-dimensional flow in the \((x,y)\) plane, the velocity field is \(\mathbf{u} = (u,v,0)\) with no \(z\)-dependence, so the vorticity is purely in the \(z\)-direction: \(\boldsymbol{\omega} = \omega\hat{\mathbf{z}}\) with \(\omega = \partial v/\partial x - \partial u/\partial y\). The stretching term vanishes because \((\boldsymbol{\omega}\cdot\nabla)\mathbf{u} = \omega\, \partial\mathbf{u}/\partial z = \mathbf{0}\). The vorticity equation reduces to the **2D vorticity transport equation**:
+\[
+\frac{D\omega}{Dt} = \nu\nabla^2\omega,
+\]
+which is a scalar advection–diffusion equation. In the inviscid 2D limit, \(D\omega/Dt = 0\): vorticity is simply carried along by the flow without change. This is why 2D turbulence behaves so differently from 3D turbulence — the absence of vortex stretching prevents the forward cascade of enstrophy to small scales and instead permits an **inverse energy cascade** from small to large scales.
+
+## 2.2 Kelvin's Circulation Theorem
+
+### The Circulation Integral
+
+The **circulation** \(\Gamma\) around a closed loop \(\mathcal{C}\) is defined as the line integral of velocity:
+\[
+\Gamma = \oint_{\mathcal{C}} \mathbf{u}\cdot d\boldsymbol{\ell}.
+\]
+By Stokes' theorem, \(\Gamma = \iint_{\mathcal{S}} \boldsymbol{\omega}\cdot d\mathbf{S}\), where \(\mathcal{S}\) is any surface bounded by \(\mathcal{C}\). Thus circulation measures the net vorticity flux threading through the loop — it is the "amount of spin" enclosed by the curve.
+
+The key question is how \(\Gamma\) evolves when the loop \(\mathcal{C}(t)\) is a **material loop** — one whose points move with the fluid. The rate of change has two contributions: the change in the integrand \(\mathbf{u}\) as fluid accelerates, and the change in the path element \(d\boldsymbol{\ell}\) as the loop deforms.
+
+<div class="theorem">
+<strong>Kelvin's Circulation Theorem.</strong> For an inviscid, barotropic fluid (so that the pressure is a function of density alone) subject to conservative body forces, the circulation around any material loop is conserved:
+\[
+\frac{D\Gamma}{Dt} = 0.
+\]
+</div>
+
+**Proof.** The material derivative of the circulation is
+\[
+\frac{D\Gamma}{Dt} = \oint_{\mathcal{C}(t)} \frac{D\mathbf{u}}{Dt}\cdot d\boldsymbol{\ell} + \oint_{\mathcal{C}(t)} \mathbf{u}\cdot \frac{D(d\boldsymbol{\ell})}{Dt}.
+\]
+For the second integral, the material derivative of the line element satisfies \(D(d\boldsymbol{\ell})/Dt = (d\boldsymbol{\ell}\cdot\nabla)\mathbf{u}\), so \(\mathbf{u}\cdot D(d\boldsymbol{\ell})/Dt = \mathbf{u}\cdot(d\boldsymbol{\ell}\cdot\nabla)\mathbf{u} = d(\tfrac{1}{2}|\mathbf{u}|^2)\), which integrates to zero around a closed loop. For the first integral, the Euler equation gives \(D\mathbf{u}/Dt = -\nabla p/\rho + \mathbf{g}\). The body force integrates to zero (conservative). The pressure term gives
+\[
+\oint_{\mathcal{C}} \frac{\nabla p}{\rho}\cdot d\boldsymbol{\ell} = \oint_{\mathcal{C}} \frac{dp}{\rho}.
+\]
+For a barotropic fluid, \(p = p(\rho)\), so \(dp/\rho = dP\) is an exact differential of the function \(P(\rho) = \int dp/\rho(\cdot)\). Its integral around a closed loop vanishes. Hence \(D\Gamma/Dt = 0\). \(\square\)
+
+### Physical Implications
+
+Kelvin's theorem has profound consequences. If a flow is initially irrotational everywhere — \(\boldsymbol{\omega} = \mathbf{0}\) at \(t=0\) — then every material loop has zero circulation initially. By Kelvin's theorem, every material loop maintains zero circulation for all time. Since this holds for every loop (and loops can be shrunk arbitrarily small), the vorticity remains zero everywhere for all time. **An inviscid, barotropic flow that starts irrotational remains irrotational** — the justification for potential flow theory (Chapter 3).
+
+Conversely, if vorticity is created somewhere (by viscosity at a wall, or by the baroclinic term in a density-stratified flow), Kelvin's theorem tells us that the vorticity cannot simply appear in the interior of an inviscid barotropic flow without violating the circulation constraint. Vorticity must enter through boundaries or through baroclinic generation.
+
+## 2.3 Helmholtz's Vortex Theorems
+
+The vorticity field \(\boldsymbol{\omega}\) has zero divergence — \(\nabla\cdot\boldsymbol{\omega} = \nabla\cdot(\nabla\times\mathbf{u}) = 0\) always — and is therefore solenoidal. This constrains the geometry of vortex lines (curves tangent to \(\boldsymbol{\omega}\)) in the same way that \(\nabla\cdot\mathbf{B} = 0\) constrains magnetic field lines. Helmholtz's vortex theorems, formulated in 1858, describe the kinematics and dynamics of vortex tubes in inviscid, barotropic flow.
+
+<div class="definition">
+<strong>Vortex Tube and Vortex Strength.</strong> A <strong>vortex tube</strong> is the surface formed by all vortex lines passing through a closed curve. The <strong>strength</strong> (or <strong>circulation</strong>) of a vortex tube is \(\Gamma = \iint_{\mathcal{S}} \boldsymbol{\omega}\cdot d\mathbf{S}\) for any cross-sectional surface \(\mathcal{S}\) of the tube.
+</div>
+
+<div class="theorem">
+<strong>Helmholtz's First Vortex Theorem.</strong> The strength of a vortex tube is constant along its length at any instant: if \(\mathcal{S}_1\) and \(\mathcal{S}_2\) are two cross-sections of the same vortex tube, then \(\Gamma_1 = \Gamma_2\).
+</div>
+
+This follows immediately from \(\nabla\cdot\boldsymbol{\omega} = 0\): by the divergence theorem applied to the volume between the two cross-sections, the net flux of \(\boldsymbol{\omega}\) through the closed surface is zero. Since the lateral surface of the tube contributes nothing (vortex lines are tangent to it), the two end fluxes must be equal and opposite. As a corollary, a vortex tube cannot end in the interior of a fluid — it must either close on itself (a vortex ring), end on a boundary, or extend to infinity.
+
+<div class="theorem">
+<strong>Helmholtz's Second Vortex Theorem.</strong> For an inviscid, barotropic fluid with conservative body forces, the strength of a vortex tube is constant in time: \(D\Gamma/Dt = 0\).
+</div>
+
+This is simply Kelvin's circulation theorem applied to the material loop that forms the boundary of a cross-section of the vortex tube. Combined with the first theorem, it says that the entire vortex tube has a fixed, time-independent circulation — vortex tubes are indestructible in ideal flow.
+
+<div class="theorem">
+<strong>Helmholtz's Third Vortex Theorem.</strong> In an inviscid, barotropic flow, vortex lines (and vortex tubes) move with the fluid: fluid particles that lie on a vortex line at one time continue to lie on the same vortex line at all subsequent times.
+</div>
+
+This is the statement that vorticity is **frozen into** the fluid in ideal flow. The mathematical proof shows that if \(\mathbf{x}(a,t)\) is the trajectory of a fluid particle initially at \(\mathbf{a}\), then the vorticity \(\boldsymbol{\omega}(\mathbf{x},t)\) satisfies the same equation as the material line element \(\partial\mathbf{x}/\partial\mathbf{a}\), so that vortex lines deform exactly as infinitesimal material line elements do.
+
+### Vortex Stretching as an Intensification Mechanism
+
+Helmholtz's theorems have a remarkable consequence for vortex dynamics. Because the strength \(\Gamma\) of a vortex tube is constant in time, while its cross-sectional area \(A\) can change (as the fluid stretches the tube), the average vorticity magnitude must change: \(\Gamma = \omega_{\text{avg}} \cdot A\), so if \(A\) decreases (the tube is stretched and thinned), then \(\omega_{\text{avg}}\) must increase proportionally. This is vortex stretching: a vortex that is stretched by the strain field of the surrounding flow intensifies. The phenomenon is visually familiar in the bathtub vortex, where water draining into a narrow outlet accelerates the angular velocity dramatically, and in tornadoes, where air converging toward the funnel stretches vertical vorticity into an intense concentrated core.
+
+## 2.4 Vortex Dynamics: The Biot–Savart Law
+
+### Velocity Induced by a Vortex Distribution
+
+The solenoidal condition \(\nabla\cdot\boldsymbol{\omega} = 0\) allows us to write \(\boldsymbol{\omega} = \nabla\times\mathbf{A}\) for a vector potential \(\mathbf{A}\). Combined with \(\boldsymbol{\omega} = \nabla\times\mathbf{u}\) and the Helmholtz decomposition, one can show that in an unbounded domain the velocity field induced by a given vorticity distribution satisfies the vector Poisson equation \(\nabla^2\mathbf{u} = -\nabla\times\boldsymbol{\omega}\). The solution is given by the **Biot–Savart law**, in exact analogy with magnetostatics:
+
+<div class="theorem">
+<strong>Biot–Savart Law.</strong> Given a vorticity field \(\boldsymbol{\omega}(\mathbf{x}')\) in an unbounded domain, the velocity field is
+\[
+\mathbf{u}(\mathbf{x}) = \frac{1}{4\pi}\int \frac{\boldsymbol{\omega}(\mathbf{x}') \times (\mathbf{x} - \mathbf{x}')}{|\mathbf{x} - \mathbf{x}'|^3}\, dV'.
+\]
+For a thin vortex filament of circulation \(\Gamma\) along a curve \(\mathcal{C}\), this becomes
+\[
+d\mathbf{u} = \frac{\Gamma}{4\pi}\frac{d\boldsymbol{\ell} \times \hat{\mathbf{r}}}{r^2},
+\]
+where \(\mathbf{r} = \mathbf{x} - \mathbf{x}'\) and \(\hat{\mathbf{r}} = \mathbf{r}/r\).
+</div>
+
+The analogy with the Biot–Savart law of magnetostatics (where current \(\mathbf{J}\) plays the role of \(\boldsymbol{\omega}\)) is exact: vorticity acts as the "source" of the velocity field in the same way that electric current acts as the source of the magnetic field.
+
+### The Infinite Straight Vortex
+
+For an infinite straight vortex filament of circulation \(\Gamma\) aligned with the \(z\)-axis, integrating the Biot–Savart law gives an azimuthal velocity
+\[
+u_\theta = \frac{\Gamma}{2\pi r},
+\]
+where \(r\) is the radial distance from the filament. This is the potential vortex of Chapter 3, recovered here from the fundamental integral law. The velocity field is irrotational everywhere except at \(r = 0\), where the vorticity is a delta function.
+
+### Self-Induced Motion of a Vortex Ring
+
+A vortex ring of radius \(R\) and core radius \(a \ll R\) (and circulation \(\Gamma\)) translates along its symmetry axis at speed
+\[
+U_{\text{ring}} = \frac{\Gamma}{4\pi R}\left(\ln\frac{8R}{a} - \frac{1}{4}\right),
+\]
+a result first obtained by Kelvin and derived by applying the Biot–Savart law to the toroidal geometry. The logarithm reflects the divergence of the self-induced velocity as the core size shrinks; real cores have finite size and internal structure that cut off this divergence. Smoke rings, which are vortex rings in air, translate at speeds of order \(\Gamma/(4\pi R)\) and expand slowly due to viscous diffusion.
+
+### Interaction of Two Parallel Vortices
+
+Consider two parallel line vortices of circulations \(\Gamma_1\) and \(\Gamma_2\) separated by distance \(d\). Each vortex induces a velocity field at the location of the other, causing each to move.
+
+**Co-rotating vortices** (\(\Gamma_1 = \Gamma_2 = \Gamma > 0\)): Each vortex moves in the velocity field of the other. The induced speed at distance \(d\) is \(U = \Gamma/(2\pi d)\), directed perpendicular to the line joining the two vortices. Both vortices therefore orbit their common centroid at angular velocity
+\[
+\Omega = \frac{\Gamma}{\pi d^2},
+\]
+tracing circular paths of radius \(d/2\). The combined system is a rotating doublet. In geophysical flows, merging of co-rotating vortices is a dominant mechanism for the inverse energy cascade in two-dimensional turbulence.
+
+**Counter-rotating vortices** (\(\Gamma_1 = \Gamma > 0\), \(\Gamma_2 = -\Gamma\)): the two vortices translate together in the direction perpendicular to the line joining them at speed \(U = \Gamma/(2\pi d)\). This is the mechanism underlying the trailing vortex pair behind an aircraft wing — the two tip vortices of opposite sign propagate downward and away from the aircraft. A swimmer's hands pushing backward form a counter-rotating pair that propels them forward.
+
+## 2.5 The Vorticity Equation in Rotating Frames
+
+### The Coriolis Modification
+
+In a frame rotating with angular velocity \(\boldsymbol{\Omega}\) (for Earth, \(|\boldsymbol{\Omega}| = 7.27\times 10^{-5}\) rad s\(^{-1}\)), the equations of motion gain Coriolis and centrifugal terms. The **absolute vorticity** — the vorticity measured in an inertial frame — is
+\[
+\boldsymbol{\omega}_{\text{abs}} = \boldsymbol{\omega} + 2\boldsymbol{\Omega},
+\]
+where \(\boldsymbol{\omega} = \nabla\times\mathbf{u}\) is the **relative vorticity** computed in the rotating frame and \(2\boldsymbol{\Omega}\) is the **planetary vorticity**. The factor of 2 arises from the relation \(\nabla\times(\boldsymbol{\Omega}\times\mathbf{x}) = 2\boldsymbol{\Omega}\).
+
+The vorticity equation in a rotating frame, for an inviscid barotropic fluid, takes the form
+\[
+\frac{D\boldsymbol{\omega}_{\text{abs}}}{Dt} = (\boldsymbol{\omega}_{\text{abs}}\cdot\nabla)\mathbf{u},
+\]
+which is identical to the non-rotating form but with absolute vorticity replacing relative vorticity. This means that all of Kelvin's and Helmholtz's theorems carry over: the absolute circulation is conserved on material loops, and absolute vortex lines move with the fluid.
+
+### The Coriolis Parameter and \(f\)-Plane Approximation
+
+On a sphere of radius \(a\) at latitude \(\phi\), the component of planetary vorticity in the local vertical direction is \(f = 2\Omega\sin\phi\), the **Coriolis parameter**. On the \(f\)-plane approximation (treating a small patch of Earth as flat with constant \(f\)), the relevant vorticity component is the vertical one:
+\[
+\zeta = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y},
+\]
+and the absolute vorticity is \(\zeta + f\).
+
+### Potential Vorticity Conservation
+
+For **shallow-water flow** of depth \(H(\mathbf{x},t)\) in a rotating frame, combining conservation of absolute vorticity with conservation of mass leads to the most important invariant in geophysical fluid dynamics:
+
+<div class="theorem">
+<strong>Shallow-Water Potential Vorticity.</strong> The <strong>potential vorticity</strong>
+\[
+q = \frac{\zeta + f}{H}
+\]
+is conserved following each fluid column:
+\[
+\frac{Dq}{Dt} = 0.
+\]
+</div>
+
+The physical interpretation is elegant: as a fluid column is stretched vertically (increasing \(H\)), it must spin up (increasing \(\zeta + f\)) to conserve potential vorticity — the fluid mechanical analogue of a figure skater pulling in their arms. Conversely, column squashing reduces vorticity. This mechanism is responsible for the generation of Rossby waves (§8.4), which propagate because a displaced fluid column creates a potential vorticity anomaly that drives the restoring motion.
+
+Potential vorticity conservation is the organizing principle behind most of geophysical fluid dynamics. Its three-dimensional generalisation (Ertel's potential vorticity theorem) plays the same role in the stratified atmosphere and ocean that it plays here in shallow water. Chapter 8 develops these ideas in detail; the present section is the conceptual foundation for that discussion.
+
+
+# Chapter 3: Potential Flow and Aerofoil Theory
+
+## 3.1 Irrotational Flow and the Velocity Potential
 
 Recall from AMATH 361: a flow is **irrotational** if \(\boldsymbol{\omega} = \nabla \times \mathbf{u} = \mathbf{0}\). By Kelvin's circulation theorem, inviscid flows that start irrotational remain irrotational. For a simply connected domain, irrotationality implies the existence of a velocity potential \(\phi\) with \(\mathbf{u} = \nabla\phi\). Combined with incompressibility:
 
@@ -93,7 +295,7 @@ Recall from AMATH 361: a flow is **irrotational** if \(\boldsymbol{\omega} = \na
 
 The theory of potential flow is therefore the theory of harmonic functions applied to fluid mechanics. Solutions are smooth, satisfy the superposition principle, and can be constructed by adding elementary solutions.
 
-## 2.2 Elementary Potential Flows
+## 3.2 Elementary Potential Flows
 
 A powerful feature of Laplace's equation is linearity: superpositions of solutions are solutions. The elementary 2D complex potential solutions are:
 
@@ -115,7 +317,7 @@ The streamline \(\psi = 0\) passes through the circle \(|z| = a\), so this is th
 u_\theta = -2U\sin\theta
 \]
 
-## 2.3 The Blasius Theorem and Lift
+## 3.3 The Blasius Theorem and Lift
 
 For a body in a potential flow, the net force per unit length can be computed from the complex potential without knowing the full flow field:
 
@@ -134,7 +336,7 @@ X = 0, \qquad Y = \rho U \Gamma
 
 This is the **Kutta–Joukowski theorem**: the lift per unit span is \(L' = \rho U \Gamma\). Zero drag (**d'Alembert's paradox** — a consequence of neglecting viscosity and the resulting flow symmetry). The generation of lift requires circulation, and the Kutta condition (see below) determines the appropriate amount of circulation for a real aerofoil.
 
-## 2.4 Conformal Mapping and Joukowski Aerofoils
+## 3.4 Conformal Mapping and Joukowski Aerofoils
 
 A conformal map \(\zeta = f(z)\) is a complex analytic function that maps one flow domain to another while preserving angles. This is extraordinary: if we can solve Laplace's equation in a simple geometry (a circle), a conformal map immediately gives us the solution in a complicated geometry (an aerofoil cross-section).
 
@@ -152,9 +354,9 @@ where \(\alpha\) is the angle of attack and \(\beta\) accounts for the aerofoil 
 
 ---
 
-# Chapter 3: Surface Gravity Waves
+# Chapter 4: Surface Gravity Waves
 
-## 3.1 The Linear Theory of Water Waves
+## 4.1 The Linear Theory of Water Waves
 
 Surface gravity waves are generated by any disturbance of a free water surface — a wind gust, a boat, an earthquake-driven seafloor motion. The restoring force is gravity, which acts to flatten disturbances of the free surface. We derive the linear (small-amplitude) wave theory for an inviscid, incompressible fluid with a free surface.
 
@@ -232,7 +434,7 @@ Two important limits follow immediately:
 <figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Dispersion relation \(\omega^2 = gk\tanh(kH)\). The full curve (blue) interpolates between the shallow-water linear limit \(\omega^2 = gHk^2\) (green dashed) and the deep-water limit \(\omega^2 = gk\) (red dashed). The transition occurs near \(kH \approx 1\), i.e., wavelength comparable to depth.</figcaption>
 </figure>
 
-## 3.2 Group Velocity and Energy Transport
+## 4.2 Group Velocity and Energy Transport
 
 The concept of **group velocity** is one of the most profound in wave physics. For a dispersive medium with dispersion relation \(\omega = \omega(k)\), a localised wave packet — a superposition of plane waves with wavenumbers centred near \(k_0\) — propagates as a whole at the group velocity:
 
@@ -244,7 +446,7 @@ while individual crests move at the phase velocity \(c_p = \omega/k\). The group
 
 For shallow-water waves (\(c_g = c_p\)), there is no dispersive spreading: the wave packet propagates unchanged in shape. This is why a tsunami is devastating — it does not disperse during the thousands of kilometres of open-ocean travel.
 
-## 3.3 Stokes Waves — A Glimpse of Nonlinearity
+## 4.3 Stokes Waves — A Glimpse of Nonlinearity
 
 The linear theory of water waves assumes small amplitude \(a\) compared to wavelength \(\lambda\). The relevant parameter is the **wave steepness** \(\epsilon = ak\). For finite steepness, the free-surface boundary conditions must be applied at the actual free surface \(z = \eta\) rather than at \(z = 0\), introducing nonlinear corrections.
 
@@ -257,13 +459,13 @@ Higher-amplitude waves travel slightly faster. Moreover, the wave profile is no 
 
 ---
 
-# Chapter 4: Laminar Flow — Exact Solutions
+# Chapter 5: Laminar Flow — Exact Solutions
 
-## 4.1 The Meaning of Exact Solutions
+## 5.1 The Meaning of Exact Solutions
 
 The Navier–Stokes equations are nonlinear PDEs and admit very few exact analytical solutions. When they do exist, the nonlinear advection term vanishes — usually because the geometry forces the flow to be unidirectional or because the streamlines are circles or spirals. These exact solutions are not mere mathematical exercises: they describe real flows that arise in engineering and nature, they provide benchmarks for numerical solvers, and they build physical intuition about how viscosity acts.
 
-## 4.2 Plane Couette Flow
+## 5.2 Plane Couette Flow
 
 The simplest exact solution: fluid between two infinite parallel plates at \(y = 0\) and \(y = h\), with the lower plate at rest and the upper plate moving at speed \(U\). No imposed pressure gradient. The flow is \(\mathbf{u} = u(y)\hat{x}\), incompressibility is satisfied, and the Navier–Stokes equations reduce to:
 
@@ -335,7 +537,7 @@ A perfect linear profile. The shear stress on each plate is \(\tau = \mu U/h\). 
 <figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Velocity profiles for the two canonical viscous flows. Left: Plane Couette flow (shear-driven, linear profile). Right: Plane Poiseuille flow (pressure-driven, parabolic profile with no-slip at both walls).</figcaption>
 </figure>
 
-## 4.3 Hagen–Poiseuille Flow
+## 5.3 Hagen–Poiseuille Flow
 
 Steady, pressure-driven flow in a straight circular pipe of radius \(R\) along the \(z\)-axis. Symmetry forces \(\mathbf{u} = u(r)\hat{z}\). In cylindrical coordinates, the Navier–Stokes equations reduce to:
 
@@ -356,7 +558,7 @@ Q = \int_0^R u(r)\, 2\pi r\, dr = \frac{\pi R^4}{8\mu}\!\left(-\frac{dp}{dz}\rig
 
 This \(R^4\) scaling — Hagen–Poiseuille's law — has enormous practical consequences. A 10% reduction in pipe radius reduces flow rate by \((0.9)^4 \approx 66\%\) at the same pressure gradient. It governs blood flow in the circulatory system, water supply in municipal networks, and flow through porous media.
 
-## 4.4 The Stokes Equations and Creeping Flow
+## 5.4 The Stokes Equations and Creeping Flow
 
 At very low Reynolds number (\(Re \ll 1\)), the nonlinear advection term \((\mathbf{u}\cdot\nabla)\mathbf{u}\) is negligible compared to the viscous term. The Navier–Stokes equations linearise to:
 
@@ -373,7 +575,7 @@ F_{drag} = 6\pi\mu a U
 
 This formula underlies Millikan's oil-drop experiment (1909), Stokes settling of particles in centrifugation, and the motion of aerosol particles in the atmosphere.
 
-## 4.5 Oscillatory Stokes Layer
+## 5.5 Oscillatory Stokes Layer
 
 Consider the Stokes problem of a flat plate oscillating in its own plane at frequency \(\omega\): \(u(0,t) = U\cos\omega t\). The governing equation is:
 
@@ -391,9 +593,9 @@ The velocity oscillation decays exponentially with a characteristic **Stokes lay
 
 ---
 
-# Chapter 5: Boundary Layer Theory
+# Chapter 6: Boundary Layer Theory
 
-## 5.1 The Boundary Layer Concept
+## 6.1 The Boundary Layer Concept
 
 One of the great discoveries of twentieth-century fluid mechanics is due to Ludwig Prandtl (1904): at high Reynolds number, viscosity is important only in a thin layer adjacent to solid boundaries. Away from this **boundary layer**, the flow is approximately inviscid and can be described by the Euler equations. Within the boundary layer, viscosity dominates and enforces the no-slip condition.
 
@@ -404,7 +606,7 @@ U\frac{\partial u}{\partial x} \sim U\frac{U}{L}, \qquad \nu\frac{\partial^2 u}{
 
 Setting these equal: \(\delta \sim \sqrt{\nu L / U} = L/\sqrt{Re}\). The boundary layer becomes thinner as \(Re\) increases — which is why viscous effects *appear* to diminish at high Reynolds number even though \(\nu\) is fixed.
 
-## 5.2 Prandtl's Boundary Layer Equations
+## 6.2 Prandtl's Boundary Layer Equations
 
 Prandtl derived simplified equations valid inside the boundary layer by scaling arguments. Let \(x\) be along the wall, \(y\) normal to it, \(U(x)\) the outer (inviscid) flow speed at the wall, \(u\) the streamwise velocity, and \(v\) the normal velocity. The full Navier–Stokes equations, after rescaling \(y \to y/\delta\) with \(\delta \sim Re^{-1/2}\), reduce in the limit \(Re \to \infty\) to:
 
@@ -421,7 +623,7 @@ with boundary conditions \(u = v = 0\) at \(y = 0\) and \(u \to U(x)\) as \(y \t
 
 The key simplification: the pressure gradient across the boundary layer is negligible (\(\partial p / \partial y \approx 0\)), so the pressure at the wall equals the inviscid outer pressure, given by Bernoulli's equation along the outer streamline: \(dP/dx = -\rho U\, dU/dx\).
 
-## 5.3 The Blasius Flat-Plate Solution
+## 6.3 The Blasius Flat-Plate Solution
 
 For a flat plate (\(dU/dx = 0\), so the outer flow speed \(U\) is constant), the boundary layer equations admit a **similarity solution**. The key observation is that the equations have no built-in length scale when \(U = \text{const}\). This suggests that the velocity profile at different \(x\)-locations is self-similar: rescaling \(y\) by \(\delta(x) \sim \sqrt{\nu x/U}\) collapses all profiles onto a single curve.
 
@@ -487,7 +689,7 @@ These are exact asymptotic results, valid for large \(Re_x\). They agree very we
 <figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Growth of the laminar boundary layer along a flat plate. The boundary layer thickness \(\delta(x) \sim \sqrt{\nu x/U}\) grows as the square root of distance from the leading edge. Velocity profiles evolve from zero at the wall to the free-stream speed \(U\) across a thickening shear layer (Blasius similarity solution).</figcaption>
 </figure>
 
-## 5.4 Boundary Layer Separation
+## 6.4 Boundary Layer Separation
 
 When the outer flow decelerates (\(dU/dx < 0\)), the adverse pressure gradient (\(dP/dx > 0\)) decelerates the boundary layer fluid. Near the wall, where the fluid has been slowed by friction, the momentum may be insufficient to overcome the adverse pressure gradient, and the flow **reverses direction**. At the point where the wall shear stress vanishes, the boundary layer is said to **separate**.
 
@@ -538,9 +740,9 @@ The position of separation depends delicately on the surface geometry and the up
 
 ---
 
-# Chapter 6: Turbulence
+# Chapter 7: Turbulence
 
-## 6.1 The Nature of Turbulent Flow
+## 7.1 The Nature of Turbulent Flow
 
 At sufficiently high Reynolds number, laminar flows become unstable and transition to **turbulence**: an apparently chaotic, three-dimensional, time-dependent motion characterised by a broad range of active length and time scales. Turbulence is not random — it is deterministic at every instant (the Navier–Stokes equations have a unique solution for smooth initial data) — but it is extremely sensitive to initial conditions, making long-time prediction effectively impossible.
 
@@ -551,7 +753,7 @@ The Reynolds number at which transition occurs depends on geometry and the level
 
 Turbulence is characterised by **vortex stretching** (absent in 2D) transferring energy to progressively smaller scales until viscous dissipation converts kinetic energy to heat. This **energy cascade** (Kolmogorov 1941) determines the statistics of turbulent flows.
 
-## 6.2 The Reynolds Decomposition
+## 7.2 The Reynolds Decomposition
 
 Osborne Reynolds (1895) introduced the decomposition that still bears his name: split each quantity into a **mean** (time-averaged) and a **fluctuation**:
 
@@ -570,7 +772,7 @@ where \(\overline{u'_i} = 0\) by definition of the mean. Substituting into the N
 
 The term \(-\rho\overline{u'_i u'_j}\) is the **Reynolds stress tensor**: the mean momentum flux due to turbulent fluctuations. It plays the same formal role as the viscous stress, but it is orders of magnitude larger in fully turbulent flows. The fundamental difficulty of turbulence theory — the **closure problem** — is that the RANS equations for the means involve unknowns (the Reynolds stresses), and equations for the Reynolds stresses involve higher-order correlations, and so on without end.
 
-## 6.3 Turbulent Kinetic Energy and the Closure Problem
+## 7.3 Turbulent Kinetic Energy and the Closure Problem
 
 The **turbulent kinetic energy** (TKE) is:
 \[
@@ -637,7 +839,7 @@ where \(C \approx 1.5\) is the Kolmogorov constant. This \(k^{-5/3}\) power law 
 <figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Kolmogorov energy spectrum on log-log axes. Energy is injected at large scales (small \(k_L\)), cascades through the inertial subrange with the universal \(k^{-5/3}\) law, and is dissipated at the Kolmogorov microscale \(k_\eta = \eta^{-1}\). The inertial range spans many decades in high-Reynolds-number turbulence.</figcaption>
 </figure>
 
-## 6.4 Wall Turbulence and the Logarithmic Layer
+## 7.4 Wall Turbulence and the Logarithmic Layer
 
 Near a solid wall, turbulence has a characteristic multi-layer structure. Define the friction velocity \(u_* = \sqrt{\tau_w/\rho}\) (where \(\tau_w\) is the wall shear stress) and the viscous length \(\ell_\nu = \nu/u_*\). The dimensionless wall distance is \(y^+ = y/\ell_\nu = u_* y/\nu\).
 
@@ -727,9 +929,9 @@ with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx
 
 ---
 
-# Chapter 7: Geophysical Fluid Dynamics
+# Chapter 8: Geophysical Fluid Dynamics
 
-## 7.1 The Rotating Reference Frame
+## 8.1 The Rotating Reference Frame
 
 The dynamics of Earth's atmosphere and oceans cannot be understood without accounting for the rotation of the Earth. In a reference frame rotating at angular velocity \(\boldsymbol{\Omega}\), additional apparent forces arise:
 
@@ -750,7 +952,7 @@ f = 2\Omega\sin\phi
 
 At the North Pole \(f = 2\Omega \approx 1.45 \times 10^{-4}\) s\(^{-1}\); at the equator \(f = 0\).
 
-## 7.2 Geostrophic Balance
+## 8.2 Geostrophic Balance
 
 At large scales in the atmosphere and ocean (\(L \sim 10^3\) km, \(U \sim 10\) m/s), the Rossby number:
 \[
@@ -769,7 +971,7 @@ The geostrophic flow is parallel to lines of constant pressure.
 
 In the atmosphere, low-pressure systems (cyclones) have counter-clockwise geostrophic circulation in the Northern Hemisphere: wind flows around the low, not into it. This is completely opposite to what you might naively expect (wind blowing from high to low pressure) — and is entirely due to the Coriolis force.
 
-## 7.3 The Taylor–Proudman Theorem
+## 8.3 The Taylor–Proudman Theorem
 
 A remarkable consequence of rotation concerns three-dimensional flow at small Rossby number.
 
@@ -783,7 +985,7 @@ The velocity field is independent of position along the rotation axis. Fluid col
 
 The experimental demonstration by G.I. Taylor (1921) is beautiful: obstacles placed in a rotating tank of water generate columns of fluid that extend vertically far above the obstacle, deflecting the flow horizontally as if the column were a solid cylinder. The fluid "sees" the obstacle even where it cannot see it directly. This column rigidity has profound consequences for the dynamics of the Earth's liquid outer core and for the structure of large-scale atmospheric and oceanic eddies.
 
-## 7.4 Rossby Waves
+## 8.4 Rossby Waves
 
 The most important wave in large-scale geophysical fluid dynamics is the **Rossby wave** (or planetary wave), driven by the variation of the Coriolis parameter with latitude. On a **\(\beta\)-plane** approximation, \(f \approx f_0 + \beta y\) where \(\beta = df/dy = 2\Omega\cos\phi/R_E\) (with \(R_E\) the Earth's radius).
 
@@ -803,7 +1005,7 @@ c_{gx} = \frac{\partial\omega}{\partial k} = \frac{\beta(k^2 - l^2)}{(k^2 + l^2 
 \]
 which can be positive or negative depending on the wavenumber. Long Rossby waves carry energy westward; short Rossby waves carry energy eastward.
 
-## 7.5 Stratification and Internal Waves
+## 8.5 Stratification and Internal Waves
 
 In addition to rotation, geophysical fluids are typically **stratified**: their density varies with depth due to temperature and salinity gradients. The buoyancy force on a vertically displaced fluid parcel provides a restoring mechanism that supports **internal gravity waves**.
 
@@ -824,11 +1026,247 @@ where \(m\) is the vertical wavenumber and \(\theta\) is the angle of the wave v
 
 ---
 
-# Chapter 8: Nonlinear Waves — AMATH 867
+---
+
+# Chapter 9: Compressible Flow and Sound Waves
+
+All the flow physics developed in Chapters 1–8 assumed that the fluid density is either constant (incompressible liquids) or at most weakly varying (the Boussinesq approximation for stratified flows). This assumption breaks down whenever the fluid velocity becomes comparable to the speed of sound, or whenever thermal effects couple significantly to the dynamics. The resulting field — **compressible flow** — is the domain of aeroacoustics, high-speed aerodynamics, shock physics, and atmospheric acoustics.
+
+This chapter follows Kundu Chapter 16. We begin with the thermodynamic framework needed to close the equations of motion for a compressible gas, then derive the compressible Euler equations and linearise them to recover the acoustic wave equation. We examine the energy and intensity of sound waves, discuss the Mach number as the key parameter governing compressibility effects, and close with the physics of shock waves — the most dramatic consequence of nonlinear compressible dynamics.
+
+## 9.1 Thermodynamics of Gases
+
+### The Ideal Gas Law
+
+A **perfect (ideal) gas** satisfies the equation of state
+\[
+p = \rho R T,
+\]
+where \(p\) is the absolute pressure, \(\rho\) the density, \(T\) the absolute temperature (Kelvin), and \(R\) the specific gas constant (\(R = R_{\text{univ}}/M\), with \(R_{\text{univ}} = 8.314\) J mol\(^{-1}\) K\(^{-1}\) and \(M\) the molar mass). For dry air, \(R \approx 287\) J kg\(^{-1}\) K\(^{-1}\). The ideal gas law is an excellent approximation for gases at moderate pressures and temperatures — conditions met throughout atmospheric dynamics and most engineering flows.
+
+### First and Second Laws of Thermodynamics
+
+The **first law of thermodynamics** for a fluid parcel states that the change in specific internal energy \(e\) equals the heat added minus the work done by the parcel:
+\[
+De = \delta q - p\, D\!\left(\frac{1}{\rho}\right) = \delta q + \frac{p}{\rho^2}D\rho,
+\]
+where \(\delta q\) is the specific heat added and \(1/\rho\) is the specific volume. For an ideal gas, \(e = c_v T\) where \(c_v\) is the specific heat at constant volume. The **specific enthalpy** is \(h = e + p/\rho = c_p T\), where \(c_p = c_v + R\) is the specific heat at constant pressure.
+
+The **second law** introduces the specific entropy \(s\): for a reversible process, \(Ds = \delta q / T \geq 0\) (with equality only for reversible processes). For an ideal gas:
+\[
+Ds = c_v \frac{DT}{T} - R\frac{D\rho}{\rho} = c_p\frac{DT}{T} - \frac{R}{p}Dp.
+\]
+
+### Isentropic Relations
+
+An **isentropic** (adiabatic and reversible) process has \(Ds = 0\). Setting the entropy expression to zero and integrating:
+\[
+\frac{p}{\rho^\gamma} = \text{const}, \quad \text{or equivalently} \quad p \propto \rho^\gamma,
+\]
+where \(\gamma = c_p/c_v\) is the **ratio of specific heats** (\(\gamma = 7/5 = 1.4\) for diatomic gases such as air at moderate temperatures). These **isentropic (Poisson) relations** connect the thermodynamic variables along a fluid parcel trajectory in the absence of heat transfer.
+
+### The Speed of Sound
+
+Consider a small pressure perturbation propagating through a gas at rest. The propagation speed is determined by how the gas responds to compression. For an isentropic process (sound waves are rapid enough that heat conduction is negligible):
+\[
+c^2 = \left.\frac{\partial p}{\partial \rho}\right|_s = \frac{\gamma p}{\rho} = \gamma R T.
+\]
+
+<div class="theorem">
+<strong>Speed of Sound.</strong> The adiabatic speed of sound in an ideal gas is
+\[
+c = \sqrt{\frac{\gamma p}{\rho}} = \sqrt{\gamma R T}.
+\]
+For air at \(T = 293\) K (20°C), \(c \approx 343\) m s\(^{-1}\).
+</div>
+
+The square-root dependence on temperature means that the speed of sound increases with temperature: sound travels faster in warm air near the ground than in the cold upper atmosphere, leading to refraction of sound toward the ground in temperature inversions. The isentropic assumption is critical: the isothermal speed \(\sqrt{RT}\) (Newton's original estimate) is lower by a factor of \(\sqrt{\gamma}\), a discrepancy that puzzled scientists until Laplace correctly identified the adiabatic character of sound propagation in 1816.
+
+## 9.2 The Compressible Euler Equations
+
+### The Full System
+
+For an inviscid compressible gas, conservation of mass, momentum, and energy gives the **compressible Euler equations**:
+
+<div class="theorem">
+<strong>Compressible Euler Equations.</strong>
+\[
+\frac{\partial \rho}{\partial t} + \nabla\cdot(\rho\mathbf{u}) = 0,
+\]
+\[
+\frac{\partial(\rho\mathbf{u})}{\partial t} + \nabla\cdot(\rho\mathbf{u}\otimes\mathbf{u}) = -\nabla p,
+\]
+\[
+\frac{\partial}{\partial t}\left(\rho e + \frac{1}{2}\rho|\mathbf{u}|^2\right) + \nabla\cdot\left[\left(\rho e + \frac{1}{2}\rho|\mathbf{u}|^2 + p\right)\mathbf{u}\right] = 0.
+\]
+The system is closed by the ideal gas equation of state \(p = \rho RT\) (or equivalently \(e = c_v T\)).
+</div>
+
+The first equation is the mass continuity equation — now in its fully compressible form, with no simplification to \(\nabla\cdot\mathbf{u} = 0\). The second is the momentum equation in conservative form; expanding the divergence and using mass conservation recovers \(\rho D\mathbf{u}/Dt = -\nabla p\). The third is the energy equation: the quantity in parentheses on the left is the total energy density (internal plus kinetic), and the flux on the right is the total energy flux plus work done by pressure forces.
+
+### Isentropic Flow
+
+For smooth (shock-free) adiabatic flows with no heat sources, the entropy of each fluid parcel is conserved: \(Ds/Dt = 0\). The energy equation is then equivalent to the isentropic relation \(p\propto\rho^\gamma\), and the system reduces to four equations (mass, three momentum) for the four unknowns \((\rho, \mathbf{u})\) with \(p = p(\rho) = p_0(\rho/\rho_0)^\gamma\). This simplification is valid for most acoustic phenomena and for smooth supersonic flows away from shocks.
+
+## 9.3 Small-Amplitude Sound Waves
+
+### Linearisation about a Uniform State
+
+We linearise the compressible Euler equations about a **uniform rest state** \((\rho_0, p_0, \mathbf{u}_0 = \mathbf{0})\) by writing \(\rho = \rho_0 + \rho'\), \(p = p_0 + p'\), \(\mathbf{u} = \mathbf{u}'\), where primed quantities are small. Substituting and retaining only first-order terms:
+\[
+\frac{\partial \rho'}{\partial t} + \rho_0\nabla\cdot\mathbf{u}' = 0,
+\]
+\[
+\rho_0\frac{\partial \mathbf{u}'}{\partial t} = -\nabla p'.
+\]
+For isentropic perturbations, \(p' = c_0^2\rho'\) where \(c_0^2 = \gamma p_0/\rho_0\). Substituting into the continuity equation and differentiating with respect to time:
+\[
+\frac{\partial^2 \rho'}{\partial t^2} = -\rho_0\frac{\partial(\nabla\cdot\mathbf{u}')}{\partial t} = \nabla\cdot(\nabla p') = c_0^2\nabla^2\rho'.
+\]
+
+<div class="theorem">
+<strong>Acoustic Wave Equation.</strong> The pressure perturbation in a small-amplitude sound wave satisfies
+\[
+\frac{\partial^2 p'}{\partial t^2} = c_0^2\nabla^2 p'.
+\]
+The same equation holds for \(\rho'\) and each component of \(\mathbf{u}'\).
+</div>
+
+### Plane Wave Solutions and Dispersion Relation
+
+A plane wave solution \(p' = P\exp(i\mathbf{k}\cdot\mathbf{x} - i\omega t)\) satisfies the wave equation if and only if
+\[
+\omega^2 = c_0^2|\mathbf{k}|^2, \quad \text{i.e.,} \quad \omega = c_0 k,
+\]
+where \(k = |\mathbf{k}|\). This is a **non-dispersive** dispersion relation: the phase velocity \(\omega/k = c_0\) and the group velocity \(\partial\omega/\partial k = c_0\) are both equal to the sound speed and independent of wavenumber. All frequencies travel at the same speed — sound pulses do not spread out as they propagate (unlike water waves). This is why the pitch of a distant instrument is unaffected by distance, and why sonar can achieve sharp time resolution.
+
+The velocity perturbation associated with the plane wave is
+\[
+\mathbf{u}' = \frac{p'}{\rho_0 c_0}\hat{\mathbf{k}},
+\]
+where \(\hat{\mathbf{k}}\) is the unit vector in the propagation direction. Sound waves are **longitudinal** — the fluid oscillates parallel to the direction of wave propagation, in contrast to transverse waves (e.g., electromagnetic waves or shear waves in solids).
+
+## 9.4 Energy and Intensity of Acoustic Waves
+
+### Acoustic Energy Density
+
+For a plane sound wave, the time-averaged **acoustic energy density** (energy per unit volume) is
+\[
+\langle E \rangle = \frac{\langle p'^2\rangle}{\rho_0 c_0^2} = \rho_0\langle|\mathbf{u}'|^2\rangle,
+\]
+consisting of equal contributions from potential energy (compression) and kinetic energy (particle motion), in analogy with the equipartition of energy in a simple harmonic oscillator.
+
+### Acoustic Intensity and Energy Flux
+
+The **acoustic intensity** \(\mathbf{I}\) is the energy flux — the rate at which energy is transported per unit area:
+\[
+\mathbf{I} = p'\mathbf{u}' = \frac{\langle p'^2\rangle}{\rho_0 c_0}\hat{\mathbf{k}}.
+\]
+This is the acoustic analogue of the Poynting vector in electromagnetism. The time-averaged intensity for a sinusoidal wave of amplitude \(P\) is
+\[
+\langle I\rangle = \frac{P^2}{2\rho_0 c_0}.
+\]
+The quantity \(Z = \rho_0 c_0\) is the **acoustic impedance** of the medium; it controls the reflection and transmission of sound at interfaces between different materials (the origin of echo, sonar returns, and the muffled sound when one's ears are submerged).
+
+### The Inverse-Square Law
+
+For a point source of acoustic power \(\mathcal{P}\) in a free field, the wave energy spreads uniformly over spherical surfaces. At radius \(r\) from the source, the surface area is \(4\pi r^2\), so by energy conservation:
+\[
+\langle I \rangle = \frac{\mathcal{P}}{4\pi r^2}.
+\]
+This **inverse-square law** is the basis of the decibel scale in acoustics: each doubling of distance reduces intensity by 6 dB. The inverse-square law holds for free-field propagation; real environments involve reflections, absorption, and diffraction, but the \(r^{-2}\) decay remains the dominant trend.
+
+## 9.5 The Mach Number and Compressibility Effects
+
+### The Mach Number
+
+The **Mach number** is the ratio of a characteristic flow speed \(U\) to the local speed of sound:
+\[
+Ma = \frac{U}{c}.
+\]
+It is the fundamental parameter governing compressibility effects.
+
+<div class="definition">
+<strong>Flow Regimes by Mach Number.</strong>
+<ul>
+<li><strong>Subsonic:</strong> \(Ma < 1\) — disturbances can propagate upstream; the flow is influenced by downstream conditions.</li>
+<li><strong>Transonic:</strong> \(Ma \approx 1\) — mixed subsonic/supersonic regions; wave drag appears; complex shock-boundary-layer interactions.</li>
+<li><strong>Supersonic:</strong> \(Ma > 1\) — disturbances cannot propagate upstream (they are swept downstream faster than sound travels); the flow is determined entirely by upstream conditions.</li>
+<li><strong>Hypersonic:</strong> \(Ma \gg 1\) — shock layers are very thin; real-gas and dissociation effects become important.</li>
+</ul>
+</div>
+
+### The Breakdown of the Incompressible Approximation
+
+For flow speeds much smaller than the sound speed, compressibility effects are negligible and the incompressible approximation is excellent. The fractional density change in a flow of speed \(U\) over an obstacle is of order \(Ma^2\):
+\[
+\frac{\Delta\rho}{\rho_0} \sim Ma^2.
+\]
+For \(Ma < 0.3\), this is less than 9% — negligible for engineering purposes. Above \(Ma \approx 0.3\), compressibility corrections become measurable, and above \(Ma \approx 0.8\), they become dominant.
+
+### The Prandtl–Glauert Compressibility Correction
+
+For subsonic flow past an aerofoil at Mach number \(Ma\), the lift coefficient is enhanced relative to its incompressible value by the **Prandtl–Glauert rule**:
+\[
+C_L = \frac{C_{L,0}}{\sqrt{1 - Ma^2}},
+\]
+where \(C_{L,0}\) is the incompressible lift coefficient. This correction follows from a linearised potential flow analysis: compressibility effectively increases the camber of the aerofoil as seen by the flow. The rule diverges as \(Ma \to 1\), signalling the breakdown of linear theory and the onset of transonic wave drag — the "sound barrier" encountered by early jet aircraft.
+
+## 9.6 Shock Waves in Compressible Flow
+
+### Steepening of Finite-Amplitude Waves
+
+In linear acoustics, all Fourier components travel at the same speed \(c_0\), and a waveform propagates without distortion. For finite-amplitude waves, however, the local speed of sound depends on the local density: \(c = c_0 + (\gamma+1)u'/2 + O(u'^2)\). Compressed regions (higher \(c\)) overtake rarefied regions (lower \(c\)), causing the waveform to progressively steepen. Eventually, the gradient \(\partial u'/\partial x\) becomes infinite in finite time — the nonlinear wave **breaks**, forming a **shock wave**. This is exactly the wave-breaking mechanism analysed in §10.3 for the inviscid Burgers equation, here in a compressible gas context.
+
+A shock is an extremely thin (of order mean free path) layer across which the flow variables change discontinuously on macroscopic scales. The internal structure is controlled by viscosity and heat conduction, but the jump conditions are determined purely by conservation laws.
+
+### The Rankine–Hugoniot Relations
+
+Consider a **normal shock** — a shock perpendicular to the incoming flow — with the shock stationary and the upstream state \((\rho_1, u_1, p_1, T_1)\) entering from the left and the downstream state \((\rho_2, u_2, p_2, T_2)\) exiting to the right. Conservation of mass, momentum, and energy across the shock (with no work done or heat added in the shock itself) gives:
+
+<div class="theorem">
+<strong>Rankine–Hugoniot Relations (Normal Shock).</strong>
+\[
+\rho_1 u_1 = \rho_2 u_2 \qquad \text{(mass)},
+\]
+\[
+p_1 + \rho_1 u_1^2 = p_2 + \rho_2 u_2^2 \qquad \text{(momentum)},
+\]
+\[
+h_1 + \frac{1}{2}u_1^2 = h_2 + \frac{1}{2}u_2^2 \qquad \text{(energy, with } h = c_p T\text{)}.
+\]
+</div>
+
+These three equations plus the equation of state determine the four downstream variables given the upstream state and the shock speed. The key result is the **normal shock relations** expressed in terms of the upstream Mach number \(Ma_1 > 1\):
+\[
+\frac{\rho_2}{\rho_1} = \frac{(\gamma+1)Ma_1^2}{(\gamma-1)Ma_1^2 + 2}, \qquad
+\frac{p_2}{p_1} = \frac{2\gamma Ma_1^2 - (\gamma-1)}{\gamma+1}, \qquad
+\frac{T_2}{T_1} = \frac{p_2}{p_1}\cdot\frac{\rho_1}{\rho_2}.
+\]
+The downstream Mach number satisfies \(Ma_2 < 1\): a normal shock always converts supersonic flow to subsonic flow. For strong shocks (\(Ma_1 \to \infty\)):
+\[
+\frac{\rho_2}{\rho_1} \to \frac{\gamma+1}{\gamma-1} = 6 \quad (\text{for air}), \qquad \frac{p_2}{p_1} \to \frac{2\gamma}{\gamma+1}Ma_1^2.
+\]
+The density ratio is bounded (by at most a factor of 6 for a diatomic gas), while the pressure ratio grows without limit.
+
+### Entropy Production at a Shock
+
+The Rankine–Hugoniot relations are consistent with the second law of thermodynamics only for shocks moving into supersonic flow (\(Ma_1 > 1\)). The entropy jump across the shock is
+\[
+s_2 - s_1 = c_v\ln\frac{p_2/p_1}{(p_2/p_1)^{\gamma}} = c_v\ln\frac{T_2^\gamma}{p_2^{\gamma-1}} - c_v\ln\frac{T_1^\gamma}{p_1^{\gamma-1}} > 0,
+\]
+which is positive for \(Ma_1 > 1\) and negative (physically forbidden) for \(Ma_1 < 1\). Thus the second law selects only compressive shocks, ruling out expansion shocks. The entropy production represents irreversible dissipation within the shock layer — even though the Rankine–Hugoniot conditions do not explicitly involve viscosity, the shock owes its existence to molecular dissipation on the sub-mean-free-path scale.
+
+### Oblique Shocks
+
+When a supersonic flow encounters a wedge-shaped surface at an angle, the resulting shock is **oblique** — inclined at an angle to the incoming flow direction. The normal Rankine–Hugoniot relations still apply to the velocity component normal to the shock; the tangential component is unchanged. Oblique shocks produce weaker jumps than normal shocks at the same upstream Mach number, and they are the predominant shock type in practical supersonic flows (over wing leading edges, in engine intakes, and in supersonic jets). The **shock-wave/boundary-layer interaction** at oblique shocks is an important and still-active research problem in high-speed aerodynamics.
+
+
+# Chapter 10: Nonlinear Waves — AMATH 867
 
 *This chapter extends the course into graduate territory, covering the topics of AMATH 867 (Nonlinear Waves). The central question: what happens when the small-amplitude assumption of linear wave theory breaks down?*
 
-## 8.1 Beyond Linearity — The Need for Nonlinear Theory
+## 10.1 Beyond Linearity — The Need for Nonlinear Theory
 
 Linear wave theory, which dominated Chapters 3 and 7, rests on the assumption that wave amplitudes are small enough that nonlinear terms in the governing equations can be neglected. This approximation captures the dispersion relation, the group velocity, and the spatial structure of waves — but it fundamentally misses phenomena that arise from wave-wave interactions:
 
@@ -839,7 +1277,7 @@ Linear wave theory, which dominated Chapters 3 and 7, rests on the assumption th
 
 The mathematics of nonlinear waves draws on the method of characteristics, weakly nonlinear asymptotics, and the theory of integrable systems. The goal is not merely to find solutions but to understand the qualitative character of wave dynamics when amplitude matters.
 
-## 8.2 Method of Characteristics and First-Order Conservation Laws
+## 10.2 Method of Characteristics and First-Order Conservation Laws
 
 The simplest nonlinear wave equation is the **inviscid Burgers equation** (or the scalar conservation law):
 
@@ -921,7 +1359,7 @@ At \(t = t_{break}\), the solution becomes multi-valued: the wave has **broken**
 <figcaption style="font-size:0.88em;color:#888;margin-top:0.3em;">Left: Characteristic diagram for Burgers' equation. Characteristics (blue lines) carry constant \(u\) values; characteristics from faster-moving parts overtake slower ones, converging at the breaking time \(t_{break}\). Beyond that, a shock (red) propagates according to the Rankine–Hugoniot condition. Right: Wave steepening — the initially smooth profile develops a progressively steeper front until vertical slope signals shock formation.</figcaption>
 </figure>
 
-## 8.3 Shock Formation and the Rankine–Hugoniot Condition
+## 10.3 Shock Formation and the Rankine–Hugoniot Condition
 
 A shock at position \(x = s(t)\) satisfies the integral conservation law for the original PDE. For the scalar conservation law \(\partial_t u + \partial_x F(u) = 0\):
 
@@ -933,7 +1371,7 @@ where \(u_L\) and \(u_R\) are the values of \(u\) immediately to the left and ri
 
 An additional condition — the **entropy condition** — selects the physically correct (stable) shock from among all weak solutions. For Burgers' equation: \(u_L > u_R\) (faster fluid behind, slower ahead — this is the steepening condition). Shocks satisfying the entropy condition are **stable** and those violating it are **unstable** (they split into rarefactions).
 
-## 8.4 Weakly Nonlinear Waves — The Stokes Expansion
+## 10.4 Weakly Nonlinear Waves — The Stokes Expansion
 
 For wave problems, the characteristic approach gives shocks, but many physical waves do not shock: they are dispersive, meaning different wavenumbers travel at different speeds, and dispersion can balance nonlinear steepening. The regime of **weakly nonlinear waves** is where both effects are comparable.
 
@@ -957,7 +1395,7 @@ i\frac{\partial A}{\partial T} + \frac{1}{2}\omega''\frac{\partial^2 A}{\partial
 
 where \(\omega'' = d^2\omega/dk^2\) is the dispersion coefficient and \(\gamma\) is a nonlinear coefficient depending on the specific physical problem. The NLS governs the slow evolution of the wave envelope for a broad class of dispersive nonlinear wave problems, from water waves to optical pulses in fibres.
 
-## 8.5 Modulational Instability (Benjamin–Feir)
+## 10.5 Modulational Instability (Benjamin–Feir)
 
 The NLS has a remarkable consequence: a uniform wavetrain \(A = A_0 e^{i\gamma A_0^2 T}\) (a wave of constant amplitude) is **unstable** to long-wavelength perturbations when \(\omega'' \gamma > 0\). This is the **Benjamin–Feir instability** (1967), discovered simultaneously by Lighthill.
 
@@ -970,7 +1408,7 @@ The growth rate of the Benjamin–Feir instability for perturbation wavenumber \
 
 Maximum growth occurs at \(K = K_{max} = \sqrt{2\gamma A_0^2/\omega''}\). Perturbations with \(K > K_{max}\) are stable; the instability band is \(0 < K < 2K_{max}\).
 
-## 8.6 The Korteweg–de Vries Equation and Solitons
+## 10.6 The Korteweg–de Vries Equation and Solitons
 
 A different balance — between nonlinear steepening and weak dispersion — produces the **Korteweg–de Vries (KdV) equation**. Consider long, weakly nonlinear shallow-water waves. The full nonlinear shallow-water equations, expanded in the wave amplitude \(\epsilon\) and the longwave parameter \(\mu = (kH)^2\), give at leading order (the Boussinesq regime \(\epsilon \sim \mu \ll 1\)):
 
@@ -997,7 +1435,7 @@ This is a localised wave of elevation, propagating without change of shape at sp
 
 This elastic interaction was the first observation (by John Scott Russell in 1834, theorised by Boussinesq and finally by Korteweg and de Vries in 1895) that suggested waves could behave like particles. The discovery in the 1960s that the KdV equation is **completely integrable** — solvable by the inverse scattering transform — sparked the modern theory of integrable systems and revealed an infinite hierarchy of conserved quantities.
 
-## 8.7 Inverse Scattering and Complete Integrability
+## 10.7 Inverse Scattering and Complete Integrability
 
 The **inverse scattering transform** (IST, developed by Gardner, Greene, Kruskal, and Miura in 1967) is to nonlinear wave equations what the Fourier transform is to linear PDEs. The idea: map the initial condition \(\eta(x,0)\) to the scattering data of an associated linear Schrödinger equation (the **direct problem**), evolve the scattering data forward in time using simple linear equations, then reconstruct \(\eta(x,t)\) from the evolved scattering data (the **inverse problem**).
 
@@ -1007,7 +1445,7 @@ The scattering data consists of:
 
 For any initial condition, the KdV equation evolves toward a superposition of solitons plus a decaying dispersive tail — the solitons emerge, separate by speed, and propagate to infinity. This gives a complete, nonlinear analogue of normal-mode decomposition.
 
-## 8.8 WKB Theory: Dispersive Waves in Inhomogeneous Media
+## 10.8 WKB Theory: Dispersive Waves in Inhomogeneous Media
 
 When the medium through which a wave propagates varies slowly in space — stratification changing with depth, water shoaling toward a beach, a slowly varying background current — the wave cannot be a pure plane wave with fixed wavenumber and frequency. Yet if the scale of variation \(L\) of the medium is much larger than the wavelength \(\lambda\), something close to a locally plane wave holds at each point.
 
@@ -1030,7 +1468,7 @@ Wave action (not wave energy) is the adiabatic invariant conserved in a slowly v
 
 For **internal waves in a stratified ocean**, rays refract as \(N(z)\) varies with depth, channelling wave energy into narrow beams and driving diapycnal mixing. At a **caustic** — a surface where rays converge and the WKB amplitude formally diverges — an Airy-function analysis replaces the leading-order WKB, capturing the wave tunnelling and the structure of the focal region. Caustics are the generic focusing surfaces of ray theory, ubiquitous in acoustics, optics, and geophysical wave propagation.
 
-## 8.9 Nonlinear Resonant Interactions
+## 10.9 Nonlinear Resonant Interactions
 
 When two or more waves coexist in a dispersive medium, they interact through the nonlinear terms in the governing equations. Most interactions are **non-resonant**: they produce oscillations at combination frequencies that quickly average to zero. For special combinations satisfying **resonance conditions**, however, the interaction is sustained and leads to significant energy exchange.
 
@@ -1052,7 +1490,7 @@ For deep-water gravity waves, these resonant quartets drive the slow evolution o
 
 **Wave turbulence** (weak turbulence theory) treats the statistics of many resonantly interacting waves with random phases. Zakharov (1965–1968) found that the kinetic equations for the wave action spectrum \(n(\mathbf{k},t)\) admit exact stationary power-law solutions — the **Kolmogorov–Zakharov spectra** — analogous to Kolmogorov's \(k^{-5/3}\) spectrum in strong turbulence but derived from first principles. These spectra describe the steady state in which wave action cascades through wavenumber space via resonant interactions, from the forcing scale to the dissipation scale.
 
-## 8.10 Weakly Nonlocal Solitary Waves and Beyond-All-Orders Asymptotics
+## 10.10 Weakly Nonlocal Solitary Waves and Beyond-All-Orders Asymptotics
 
 Classical solitons — the \(\text{sech}^2\) solutions of the KdV equation — are spatially **localised** and propagate without radiation. This perfection is special to completely integrable equations. For nearby but non-integrable equations — the fifth-order KdV, capillary-gravity water waves near the Bond-number resonance \(Bo = 1/3\) — true solitons do not exist. Instead, the system supports **weakly nonlocal solitary waves**: structures with a soliton-like core but small-amplitude oscillatory tails extending to infinity.
 
@@ -1072,11 +1510,11 @@ Beyond solitary waves, exponential asymptotics appears in: quantum tunnelling ra
 
 ---
 
-# Chapter 9: Hydrodynamic Stability — AMATH 863
+# Chapter 11: Hydrodynamic Stability — AMATH 863
 
 *This chapter extends the course into graduate territory, covering the topics of AMATH 863 (Hydrodynamic Stability and Turbulence). The central question: given a known laminar flow, is it stable to small perturbations?*
 
-## 9.1 The Stability Problem
+## 11.1 The Stability Problem
 
 Every exact solution of the Navier–Stokes equations represents a possible flow — but not every possible flow is **stable** and therefore observable in practice. A flow is stable if small perturbations applied to it decay in time; it is unstable if some perturbation grows. The transition from laminar to turbulent flow is the most practically important manifestation of hydrodynamic instability.
 
@@ -1089,7 +1527,7 @@ The general approach is **linear stability analysis**:
 
 A flow is **linearly stable** if all normal modes decay (\(\text{Im}(\omega) < 0\) for all \(k\)). It is **linearly unstable** if any mode grows. Linear theory describes the onset and initial growth of instability; nonlinear theory is needed to describe the saturated state.
 
-## 9.2 Normal Mode Analysis — The Orr–Sommerfeld Equation
+## 11.2 Normal Mode Analysis — The Orr–Sommerfeld Equation
 
 Consider a 2D parallel shear flow \(\overline{\mathbf{u}} = (U(y), 0)\) — plane Poiseuille flow, plane Couette flow, a boundary layer profile. Introducing the stream function perturbation \(\psi' = \phi(y)e^{i(kx - \omega t)}\), the linearised Navier–Stokes equations reduce to a single ODE for the complex amplitude \(\phi(y)\):
 
@@ -1108,7 +1546,7 @@ The Orr–Sommerfeld equation is the central object of viscous stability theory.
 (U-c)(\phi'' - k^2\phi) - U''\phi = 0
 \]
 
-## 9.3 Rayleigh's Inflection Point Criterion
+## 11.3 Rayleigh's Inflection Point Criterion
 
 <div class="theorem">
 <strong>Rayleigh's Inflection Point Criterion (1879).</strong> A necessary condition for inviscid instability of a parallel shear flow \(U(y)\) is that the velocity profile has an <strong>inflection point</strong> where \(U'' = 0\).
@@ -1118,7 +1556,7 @@ The proof proceeds by multiplying the Rayleigh equation by \(\phi^* / (U-c)^*\),
 
 Physical interpretation: inflection points are locations of maximum shear, where vorticity gradients can drive an exponential Kelvin–Helmholtz-like instability. Profiles without inflection points — parabolic Poiseuille flow, Couette flow — are inviscidly stable. Yet they transition to turbulence in practice! Viscosity, counterintuitively, can be **destabilising** for these flows, as it modifies the phase relationship between the perturbation velocity and the vorticity, allowing the Orr–Sommerfeld modes to extract energy from the mean flow.
 
-## 9.4 Kelvin–Helmholtz Instability
+## 11.4 Kelvin–Helmholtz Instability
 
 The **Kelvin–Helmholtz (KH) instability** arises at the interface between two fluids moving at different velocities — a shear layer. The idealised problem: fluid of density \(\rho_1\) moving at velocity \(U_1\) above fluid of density \(\rho_2\) moving at velocity \(U_2\), separated by a flat interface. Linearising the inviscid equations and matching boundary conditions at the interface:
 
@@ -1137,7 +1575,7 @@ For \(\rho_1 = \rho_2\) (no density difference): **always unstable** for any non
 
 The KH instability is ubiquitous: it is responsible for the formation of ocean surface waves by wind, for billows at the tropopause (clear-air turbulence), for the generation of vortices in mixing layers, and for instabilities in astrophysical jets. The beautiful billowing cat's-eye patterns visible in clouds and in laboratory stratified shear layers are the nonlinear manifestation of this linear instability.
 
-## 9.5 Rayleigh–Taylor Instability
+## 11.5 Rayleigh–Taylor Instability
 
 The **Rayleigh–Taylor (RT) instability** arises when a denser fluid overlies a lighter fluid under gravity — the classic "heavy fluid over light fluid" problem. Even in the absence of mean flow, the configuration is unstable.
 
@@ -1153,7 +1591,7 @@ So \(\omega\) is purely imaginary, with growth rate:
 
 Short waves grow faster: the RT instability is **ultraviolet** (high-\(k\)) unstable. Surface tension \(\sigma_T\) stabilises short waves with \(k > k_c = \sqrt{g(\rho_2-\rho_1)/\sigma_T}\), but long waves (\(k < k_c\)) remain unstable. The nonlinear evolution produces the spectacular mushroom clouds and fingers characteristic of this instability, seen in inertial confinement fusion implosions, supernova remnants, and ink dropping into water.
 
-## 9.6 Rayleigh–Bénard Convection
+## 11.6 Rayleigh–Bénard Convection
 
 **Rayleigh–Bénard convection** is the instability of a fluid layer heated uniformly from below. A horizontal layer of fluid of depth \(d\) is maintained at temperature \(T_0 + \Delta T\) at the bottom and \(T_0\) at the top. The density is lower at the bottom (since hot fluid expands), so this is a potentially unstable density stratification — but viscosity and thermal diffusion work against it.
 
@@ -1176,7 +1614,7 @@ The onset occurs at a **critical wavenumber** \(k_c\), corresponding to convecti
 
 Beyond \(Ra_c\), convection rolls are steady; at higher \(Ra\), they undergo further bifurcations — oscillatory convection, then chaotic convection, and ultimately turbulent convection. Rayleigh–Bénard turbulence at very high \(Ra\) is the model for convection in the Earth's mantle, the Sun's convection zone, and the atmospheres of giant planets.
 
-## 9.7 Energy Methods and Nonlinear Stability
+## 11.7 Energy Methods and Nonlinear Stability
 
 Linear stability theory determines whether infinitesimal perturbations grow. But it says nothing about the stability of flows to **finite-amplitude** perturbations. A flow can be linearly stable yet jump to turbulence when perturbed sufficiently strongly — this is precisely what happens in pipe flow (Hagen–Poiseuille), which is linearly stable for all \(Re\) yet turbulent in practice above \(Re \approx 2300\).
 
@@ -1194,7 +1632,7 @@ The first integral is energy **production** from the mean flow shear; the second
 
 This yields a **global stability threshold** \(Re_E\) (the energy Reynolds number): for \(Re < Re_E\), all perturbations, however large, decay monotonically. For pipe flow, \(Re_E \approx 81.5\). The gap between \(Re_E = 81.5\) and the experimental transition threshold \(Re \approx 2300\) is a region where small perturbations decay but large ones can sustain themselves — the realm of subcritical transition and turbulent puffs, which remains an active research area.
 
-## 9.8 Centrifugal Instability — Taylor–Couette Flow
+## 11.8 Centrifugal Instability — Taylor–Couette Flow
 
 **Centrifugal instability** arises in rotating flows when the centrifugal force on a radially displaced fluid ring exceeds the restoring pressure gradient, so the ring continues outward rather than returning. It is the rotational analogue of Rayleigh–Taylor instability, and it produces the most visually stunning sequence of bifurcations in fluid mechanics.
 
@@ -1222,7 +1660,7 @@ G.I. Taylor (1923) solved the viscous stability problem exactly and found instab
 
 Beyond the first bifurcation, Taylor–Couette flow undergoes a remarkably rich sequence as \(Ta\) increases: steady Taylor vortices → wavy vortices (the azimuthal symmetry breaks) → modulated wavy vortices → turbulent Taylor vortices → featureless turbulence. This cascade has been exhaustively studied as a paradigm for routes to turbulence, and each transition has been identified with a specific bifurcation type (pitchfork, Hopf, torus bifurcation). The system remains an important experimental and theoretical benchmark.
 
-## 9.9 Barotropic Instability
+## 11.9 Barotropic Instability
 
 **Barotropic instability** is the two-dimensional analogue of Kelvin–Helmholtz instability in a rotating geophysical fluid. It occurs in flows with no vertical structure (barotropic flows — pressure surfaces are horizontal and coincide with density surfaces) when perturbations can extract energy from the **horizontal shear** of the mean flow. It is responsible for the break-up of atmospheric jets and oceanic currents into synoptic-scale eddies.
 
@@ -1231,7 +1669,7 @@ On the \(\beta\)-plane, the linearised quasi-geostrophic potential vorticity equ
 (\overline{U} - c)\!\left(\frac{\partial^2\psi'}{\partial y^2} - k^2\psi'\right) + \left(\beta - \frac{\partial^2\overline{U}}{\partial y^2}\right)\psi' = 0
 \]
 
-This generalises the Rayleigh equation of §9.3 by replacing the vorticity gradient \(-U''\) with the **absolute vorticity gradient** \(\beta - U''\). The necessary condition for instability generalises accordingly:
+This generalises the Rayleigh equation of §11.3 by replacing the vorticity gradient \(-U''\) with the **absolute vorticity gradient** \(\beta - U''\). The necessary condition for instability generalises accordingly:
 
 <div class="theorem">
 <strong>Rayleigh–Kuo Necessary Condition.</strong> A necessary condition for barotropic instability of a zonal flow \(\overline{U}(y)\) on a \(\beta\)-plane is that the meridional gradient of absolute vorticity
@@ -1243,7 +1681,7 @@ changes sign somewhere in the domain.
 
 When \(q_y = 0\) somewhere, Rossby waves propagating on the vorticity gradient can be over-reflected, extracting energy from the mean flow. The condition \(q_y = 0\) requires \(U_{yy} = \beta > 0\) — a region of strong positive curvature in the jet. Atmospheric jets (particularly the polar jet stream) can satisfy this condition at their flanks, generating barotropically unstable modes that grow into synoptic-scale eddies. In the ocean, the Gulf Stream and Kuroshio extension are subject to barotropic instability, producing the energetic meanders and rings observed by satellite.
 
-## 9.10 Baroclinic Instability — The Eady Model
+## 11.10 Baroclinic Instability — The Eady Model
 
 **Baroclinic instability** is the dominant instability mechanism in mid-latitude weather systems and one of the most important dynamical processes in geophysical fluid dynamics. Unlike barotropic instability, which involves purely horizontal shear of a vertically uniform flow, baroclinic instability operates in **stratified, rotating fluids** where the density surfaces (isopycnals) are tilted — as they are in the atmosphere, where temperature decreases poleward, and in the ocean, where salinity and temperature both create lateral density gradients.
 
@@ -1286,7 +1724,7 @@ The **Phillips (1954) two-layer model** retains the \(\beta\)-effect, representi
 
 This result unifies barotropic instability (sign change of \(q_y = \beta - U_{yy}\) in the interior) and baroclinic instability (sign change at the boundaries — Eady model) into a single framework. It is the deepest and most general necessary condition for instability in quasi-geostrophic flows.
 
-## 9.11 Homogeneous Isotropic Turbulence
+## 11.11 Homogeneous Isotropic Turbulence
 
 The AMATH 863 curriculum treats the full spectrum of turbulence, from onset to the statistical theory of fully developed turbulence. The idealised case of **homogeneous isotropic turbulence** (HIT) — statistically uniform in all positions and directions — provides the theoretical foundation, even though it is never exactly realised in geophysical flows.
 
@@ -1307,7 +1745,7 @@ The ratio of energy-containing scale \(L\) to dissipation scale \(\eta\) grows a
 
 ### Turbulence Closure
 
-The **closure problem** (§6.2 of AMATH 463) is the central unsolved problem of turbulence theory: the RANS equations for the mean flow involve the Reynolds stress tensor \(\overline{u'_i u'_j}\), for which no exact equation in terms of mean quantities exists. Modern approaches:
+The **closure problem** (§7.2 of AMATH 463) is the central unsolved problem of turbulence theory: the RANS equations for the mean flow involve the Reynolds stress tensor \(\overline{u'_i u'_j}\), for which no exact equation in terms of mean quantities exists. Modern approaches:
 
 - **\(k\)-\(\varepsilon\) models**: solve transport equations for TKE \(k\) and dissipation rate \(\varepsilon\), relating Reynolds stresses to \(k\), \(\varepsilon\), and mean strain via the Boussinesq hypothesis \(\overline{u'_i u'_j} = -2\nu_T S_{ij} + \frac{2}{3}k\delta_{ij}\), where \(\nu_T \propto k^2/\varepsilon\) is the turbulent viscosity
 - **Large Eddy Simulation (LES)**: resolve scales larger than a filter width \(\Delta\), parameterise only subgrid scales; feasible for engineering Reynolds numbers
