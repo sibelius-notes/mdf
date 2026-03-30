@@ -1,6 +1,7 @@
 ---
 title: "PHIL 257: Philosophy of Mathematics"
 prof: "Patricia Marino"
+subjects: "PHIL"
 ---
 
 ## Sources and References

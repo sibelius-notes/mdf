@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 253: Social Psychology"
 prof: "Siobhan Sutherland"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

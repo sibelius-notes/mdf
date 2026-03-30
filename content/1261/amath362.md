@@ -1,6 +1,7 @@
 ---
 title: "AMATH 362: Mathematics of Climate Change"
 prof: Alain Gervais
+subjects: "AMATH"
 ---
 
 ## Sources and References

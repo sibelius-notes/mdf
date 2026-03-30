@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 444R: Psychological Interventions"
 prof: "Christine Logel"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

@@ -1,6 +1,7 @@
 ---
 title: "PHYS 490: String Theory, Renormalization, Path Integrals, and Supersymmetric Quantum Mechanics"
 prof: Gang Xu, Daniel Wohns
+subjects: "PHYS"
 ---
 
 ## Sources and References

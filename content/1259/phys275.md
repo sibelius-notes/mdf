@@ -1,6 +1,7 @@
 ---
 title: "PHYS 275: Planets"
 prof: "Michael Balogh"
+subjects: "PHYS"
 ---
 
 ## Sources and References

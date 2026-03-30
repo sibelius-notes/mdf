@@ -1,6 +1,7 @@
 ---
 title: "ACTSC 371: Introduction to Investments"
 prof: "Surya Banerjee"
+subjects: "ACTSC"
 ---
 
 These notes cover the full content of ACTSC 371 as taught at the University of Waterloo, following the syllabus based on *Investments* by Bodie, Kane, and Marcus (9th Canadian Edition). The course covers three major arcs: the theory of capital markets and portfolio selection, fixed income securities and term structure, and derivative securities including options, futures, and swaps.

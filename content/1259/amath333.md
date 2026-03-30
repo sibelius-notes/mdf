@@ -1,6 +1,7 @@
 ---
 title: "AMATH 333: Calculus on Manifolds for Applied Mathematics and Physics"
 prof: "Christopher Pollack"
+subjects: "AMATH"
 ---
 
 ## Sources and References

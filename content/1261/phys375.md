@@ -1,6 +1,7 @@
 ---
 title: "PHYS 375: Stars"
 prof: "Avery Broderick"
+subjects: "PHYS"
 ---
 
 ## Sources and References

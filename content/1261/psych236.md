@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 236: Introduction to Human Sexuality"
 prof: Carl Rodrigue
+subjects: "PSYCH"
 ---
 
 ## Sources and References

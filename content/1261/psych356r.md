@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 356R: Personality"
 prof: "Christine Logel, Cam Smith"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

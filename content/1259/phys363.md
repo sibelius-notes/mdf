@@ -1,6 +1,7 @@
 ---
 title: "PHYS 363: Intermediate Classical Mechanics"
 prof: "Avery Broderick"
+subjects: "PHYS"
 ---
 
 ## Sources and References

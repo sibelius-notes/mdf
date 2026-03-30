@@ -1,6 +1,7 @@
 ---
 title: "PHYS 474: Galaxies"
 prof: "Michael Balogh"
+subjects: "PHYS"
 ---
 
 ## Sources and References

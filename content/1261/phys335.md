@@ -1,6 +1,7 @@
 ---
 title: "PHYS 335: Condensed Matter Physics"
 prof: "David Hawthorn"
+subjects: "PHYS"
 ---
 
 ## Sources and References

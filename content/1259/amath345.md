@@ -1,6 +1,7 @@
 ---
 title: "AMATH 345: Data-Driven Mathematical Models"
 prof: "Roberto Guglielmi"
+subjects: "AMATH"
 ---
 
 ## Sources and References

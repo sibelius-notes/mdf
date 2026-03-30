@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 352R: Cross-Cultural Psychology"
 prof: "Ali Jasemi"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

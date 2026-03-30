@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 257: Psychopathology"
 prof: Siobhan Sutherland
+subjects: "PSYCH"
 ---
 
 ## Sources and References

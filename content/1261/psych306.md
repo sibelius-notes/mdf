@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 306: Perception"
 prof: Clara Colombatto
+subjects: "PSYCH"
 ---
 
 ## Sources and References

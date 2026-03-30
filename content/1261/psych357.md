@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 357: Psychology of Good"
 prof: "Chris Burris & John Rempel"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

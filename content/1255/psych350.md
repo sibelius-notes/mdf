@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 350: Political Psychology"
 prof: "Luke Brosnan"
+subjects: "PSYCH"
 ---
 
 ## Sources and References

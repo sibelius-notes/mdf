@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 261: Physiological Psychology"
 prof: Daniel Smilek
+subjects: "PSYCH"
 ---
 
 ## Sources and References

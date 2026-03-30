@@ -1,6 +1,7 @@
 ---
 title: "PHYS 394: Light-Matter Interactions"
 prof: Donna Strickland
+subjects: "PHYS"
 ---
 
 ## Sources and References

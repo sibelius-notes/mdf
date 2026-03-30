@@ -1,6 +1,7 @@
 ---
 title: "PHYS 468: Introduction to the Implementation of Quantum Information Processing"
 prof: Kevin Resch
+subjects: "PHYS"
 ---
 
 ## Sources and References

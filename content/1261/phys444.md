@@ -1,6 +1,7 @@
 ---
 title: "PHYS 444: Introduction to Particle Physics"
 prof: "Fil Simovic"
+subjects: "PHYS"
 ---
 
 ## Sources and References

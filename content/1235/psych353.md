@@ -1,6 +1,7 @@
 ---
 title: "PSYCH 353: Social Cognition"
 prof: "Cam Smith"
+subjects: "PSYCH"
 ---
 
 ## Sources and References
