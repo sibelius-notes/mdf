@@ -205,7 +205,7 @@ The generating series for \(S^*\) takes a beautifully compact form:
 
 <div class="theorem">
 
-<strong>Theorem (String/Kleene-Star Lemma).</strong> Let \(S\) be a set with weight function \(w\) such that no element of \(S\) has weight 0. Then the generating series for \(S^*\) with respect to \(w^*\) is
+<strong>Theorem (String/Kleene-Star Lemma).</strong> Let \(S\) be a set with weight function \(w\) such that no element of \(S\) has weight 0. Then the generating series for \(S^<em>\) with respect to \(w^</em>\) is
 \[
 \Phi_{S^*}(x) = \frac{1}{1 - \Phi_S(x)}.
 \]
@@ -1326,7 +1326,7 @@ These correspond to the five Platonic solids: the tetrahedron \((d, d^*) = (3,3)
 
 <div class="lemma">
 
-<strong>Lemma 7.4.2.</strong> Let \(G\) be a planar embedding with \(p\) vertices, \(q\) edges and \(s\) faces, in which each vertex has degree \(d \ge 3\) and each face has degree \(d^* \ge 3\). Then \((d, d^*)\) is one of the five pairs \(\{(3,3), (3,4), (4,3), (3,5), (5,3)\}\).
+<strong>Lemma 7.4.2.</strong> Let \(G\) be a planar embedding with \(p\) vertices, \(q\) edges and \(s\) faces, in which each vertex has degree \(d \ge 3\) and each face has degree \(d^<em> \ge 3\). Then \((d, d^</em>)\) is one of the five pairs \(\{(3,3), (3,4), (4,3), (3,5), (5,3)\}\).
 
 </div>
 
@@ -1336,7 +1336,7 @@ The proof is a beautiful interplay between Euler's formula, the Handshaking Lemm
 
 <strong>Lemma 7.4.3.</strong> If \(G\) is a platonic graph with \(p\) vertices, \(q\) edges and \(f\) faces, where each vertex has degree \(d\) and each face has degree \(d^*\), then
 \[
-q = \frac{2dd^*}{2d + 2d^* - dd^*}
+q = \frac{2dd^<em>}{2d + 2d^</em> - dd^*}
 \]
 and \(p = 2q/d\) and \(f = 2q/d^*\).
 
@@ -1356,7 +1356,7 @@ To prove non-planarity, we use an edge-counting argument: planar graphs with cer
 
 <div class="lemma">
 
-<strong>Lemma 7.5.2.</strong> Let \(G\) be a planar embedding with \(p\) vertices and \(q\) edges. If each face of \(G\) has degree at least \(d^*\), then \((d^* - 2)q \le d^*(p - 2)\).
+<strong>Lemma 7.5.2.</strong> Let \(G\) be a planar embedding with \(p\) vertices and \(q\) edges. If each face of \(G\) has degree at least \(d^<em>\), then \((d^</em> - 2)q \le d^*(p - 2)\).
 
 </div>
 

@@ -16,17 +16,17 @@ Before we can study organizational behavior, we must understand what an organiza
 
 <div class="definition"><strong>Organization:</strong> A consciously coordinated social unit, composed of a group of people, functioning on a relatively continuous basis to achieve a common goal or set of goals.</div>
 
-Three elements are necessary: the social unit must be *consciously coordinated* (there is deliberate structure and direction), it must function on a *relatively continuous basis* (it persists over time rather than dissolving after a single interaction), and it must pursue *common goals*. Consider Microsoft: it satisfies all three criteria — it is deliberately managed, it has operated continuously for decades, and it pursues goals such as maximizing shareholder value. By contrast, an MSCI 211 class does not fully qualify: although students and instructors interact repeatedly, they are not consciously coordinated around a shared collective goal in the same organizational sense.
+Three elements are necessary: the social unit must be <em>consciously coordinated</em> (there is deliberate structure and direction), it must function on a <em>relatively continuous basis</em> (it persists over time rather than dissolving after a single interaction), and it must pursue <em>common goals</em>. Consider Microsoft: it satisfies all three criteria — it is deliberately managed, it has operated continuously for decades, and it pursues goals such as maximizing shareholder value. By contrast, an MSCI 211 class does not fully qualify: although students and instructors interact repeatedly, they are not consciously coordinated around a shared collective goal in the same organizational sense.
 
 ## Micro-OB versus Macro-OB
 
-MSCI 211 is explicitly a **micro-OB** course. Micro-OB focuses on individual and small-group behavior within organizational settings — topics like job satisfaction, motivation, forming effective teams, leadership style, decision-making, and interpersonal conflict. **Macro-OB**, by contrast, treats organizations themselves as the unit of analysis: how firms are structured, how industries evolve, how organizations compete and cooperate in larger networks. While macro-OB draws heavily on sociology and economics, micro-OB is rooted in psychology, particularly social and industrial-organizational psychology.
+MSCI 211 is explicitly a <strong>micro-OB</strong> course. Micro-OB focuses on individual and small-group behavior within organizational settings — topics like job satisfaction, motivation, forming effective teams, leadership style, decision-making, and interpersonal conflict. <strong>Macro-OB</strong>, by contrast, treats organizations themselves as the unit of analysis: how firms are structured, how industries evolve, how organizations compete and cooperate in larger networks. While macro-OB draws heavily on sociology and economics, micro-OB is rooted in psychology, particularly social and industrial-organizational psychology.
 
 The distinction matters because the interventions differ. If you want to understand why an individual employee is performing poorly, that is a micro-OB question. If you want to understand why some industries tend to breed highly bureaucratic firms, that is a macro-OB question.
 
 ## Goals of Organizations and the Goal of OB
 
-Organizations are extraordinarily diverse in what they are trying to achieve. Publicly traded corporations aim to maximize shareholder value or profit. Not-for-profit organizations may pursue social welfare. Religious institutions may seek something like eternal salvation for their members. Research universities produce and disseminate knowledge. Because OB knowledge must be applicable across all these different contexts, the discipline needs a goal that generalizes. That unifying goal is **organizational effectiveness**.
+Organizations are extraordinarily diverse in what they are trying to achieve. Publicly traded corporations aim to maximize shareholder value or profit. Not-for-profit organizations may pursue social welfare. Religious institutions may seek something like eternal salvation for their members. Research universities produce and disseminate knowledge. Because OB knowledge must be applicable across all these different contexts, the discipline needs a goal that generalizes. That unifying goal is <strong>organizational effectiveness</strong>.
 
 <div class="definition"><strong>Organizational Effectiveness:</strong> The likelihood of an organization achieving its goals, whatever those goals may be.</div>
 
@@ -40,13 +40,13 @@ Prof. Onay emphasizes that everything studied in MSCI 211 can and should be conn
 
 <div class="definition"><strong>Organizational Commitment:</strong> How likely employees are to remain with an organization; the degree of identification and involvement with the organization.</div>
 
-These two outcomes serve as the proximate levers of organizational effectiveness. When organizations improve job performance and retention, they become more effective. Consider job satisfaction: it is intrinsically valuable (people who are satisfied at work report higher life satisfaction generally), but it also connects to these two outcomes. Research consistently shows that job satisfaction is positively correlated with both job performance and organizational commitment, and in the case of commitment there appears to be a causal relationship — greater satisfaction *causes* higher commitment. Understanding these linkages allows managers to design interventions that improve the things that matter.
+These two outcomes serve as the proximate levers of organizational effectiveness. When organizations improve job performance and retention, they become more effective. Consider job satisfaction: it is intrinsically valuable (people who are satisfied at work report higher life satisfaction generally), but it also connects to these two outcomes. Research consistently shows that job satisfaction is positively correlated with both job performance and organizational commitment, and in the case of commitment there appears to be a causal relationship — greater satisfaction <em>causes</em> higher commitment. Understanding these linkages allows managers to design interventions that improve the things that matter.
 
 ## Explaining, Predicting, and Managing Behavior
 
 OB's practical value lies in a three-step logical chain: explaining behavior, predicting behavior, and thereby enabling the management of behavior. The first step — explanation — means identifying the underlying psychological mechanisms that drive a given behavior or attitude. This is more than description; it is causal understanding.
 
-Prof. Onay illustrates this with a vivid analogy. Suppose two people both know from experience that objects fall when dropped. Person A has only this experiential knowledge; Person B understands the underlying mechanism — gravitational force. Take both people into outer space and ask them whether a dropped object will fall. Person A, lacking understanding of the mechanism, will likely predict incorrectly. Person B, who understands gravity, will correctly predict that objects float. The same logic applies in organizations. A manager who knows only that "bonus pay tends to motivate people" but does not understand *why* certain rewards motivate certain people for certain tasks cannot predict how employees will respond to a redesigned compensation scheme. Without the ability to predict, effective management of the outcome is impossible.
+Prof. Onay illustrates this with a vivid analogy. Suppose two people both know from experience that objects fall when dropped. Person A has only this experiential knowledge; Person B understands the underlying mechanism — gravitational force. Take both people into outer space and ask them whether a dropped object will fall. Person A, lacking understanding of the mechanism, will likely predict incorrectly. Person B, who understands gravity, will correctly predict that objects float. The same logic applies in organizations. A manager who knows only that "bonus pay tends to motivate people" but does not understand <em>why</em> certain rewards motivate certain people for certain tasks cannot predict how employees will respond to a redesigned compensation scheme. Without the ability to predict, effective management of the outcome is impossible.
 
 This is why OB takes the trouble to examine motivational theory in depth, to distinguish intrinsic from extrinsic rewards, and to understand when equity concerns override purely monetary incentives. The theoretical understanding is not academic pedantry — it is the prerequisite for reliable prediction and effective management.
 
@@ -76,17 +76,17 @@ Only the method of science produces knowledge that can be trusted across diverse
 
 ### The Scientific Method in OB
 
-The scientific method in OB follows the same logic as any other empirical science. A researcher begins with a **theory** — a coherent account of why certain variables should be related in particular ways. The theory may be informed by prior experience, observation, intuition, or previous research, but it must go beyond these sources by generating a **testable hypothesis**, one that is *falsifiable* — capable in principle of being proven wrong by observable evidence.
+The scientific method in OB follows the same logic as any other empirical science. A researcher begins with a <strong>theory</strong> — a coherent account of why certain variables should be related in particular ways. The theory may be informed by prior experience, observation, intuition, or previous research, but it must go beyond these sources by generating a <strong>testable hypothesis</strong>, one that is <em>falsifiable</em> — capable in principle of being proven wrong by observable evidence.
 
-The researcher then collects data using appropriate methodologies (surveys, experiments, field studies, archival data) and analyzes the results. A critical insight from the philosophy of science is that empirical hypotheses can be *falsified* but never fully *verified* in the strongest sense, unless one examines every member of the relevant population (which is almost never practical). If you examine one million swans and find all of them white, the statement "all swans are white" is highly supported but not proven — a single black swan would immediately falsify it. This asymmetry between falsification and verification is what makes falsifiability the gold standard for scientific hypotheses. A claim that cannot be falsified in principle is not a scientific claim at all.
+The researcher then collects data using appropriate methodologies (surveys, experiments, field studies, archival data) and analyzes the results. A critical insight from the philosophy of science is that empirical hypotheses can be <em>falsified</em> but never fully <em>verified</em> in the strongest sense, unless one examines every member of the relevant population (which is almost never practical). If you examine one million swans and find all of them white, the statement "all swans are white" is highly supported but not proven — a single black swan would immediately falsify it. This asymmetry between falsification and verification is what makes falsifiability the gold standard for scientific hypotheses. A claim that cannot be falsified in principle is not a scientific claim at all.
 
 ### Consistencies, Individual Differences, and the Contingency Approach
 
 A critical tension in OB is between the reality of individual differences and the scientific need to identify general patterns. People differ profoundly in personality, values, experience, culture, and cognition. How can we make generalizations about "how people behave" if everyone is different?
 
-OB's answer is that behavior is not random. Even amid tremendous diversity, there are **fundamental consistencies** that underlie human behavior — predictable patterns driven by shared human psychology and social dynamics. OB researchers search for these consistencies. Once identified, they can be modified to account for individual differences and contextual factors.
+OB's answer is that behavior is not random. Even amid tremendous diversity, there are <strong>fundamental consistencies</strong> that underlie human behavior — predictable patterns driven by shared human psychology and social dynamics. OB researchers search for these consistencies. Once identified, they can be modified to account for individual differences and contextual factors.
 
-This is operationalized through the **contingency approach**.
+This is operationalized through the <strong>contingency approach</strong>.
 
 <div class="definition"><strong>Contingency Approach:</strong> The view that it is impossible to make simple, universal generalizations about organizational behavior because behavior is context-dependent and shaped by individual differences. Relationships take the form: "X is likely to lead to Y, but only under conditions specified in Z."</div>
 
@@ -104,29 +104,29 @@ Research based on surveys of Fortune 500 HR executives reveals that the most imp
 
 ## Perception
 
-**Perception** is the process by which individuals organize and interpret sensory impressions in order to give meaning to their environment. Two people can observe the same event and draw radically different conclusions, because perception is not a passive recording of objective reality but an active construction shaped by the perceiver's expectations, knowledge, and motivations.
+<strong>Perception</strong> is the process by which individuals organize and interpret sensory impressions in order to give meaning to their environment. Two people can observe the same event and draw radically different conclusions, because perception is not a passive recording of objective reality but an active construction shaped by the perceiver's expectations, knowledge, and motivations.
 
 <div class="definition"><strong>Perception:</strong> The process by which individuals organize and interpret their sensory impressions in order to give meaning to their environment.</div>
 
-Several factors shape perception. **Characteristics of the perceiver** — including attitudes, motives, interests, past experiences, and expectations — all influence what is noticed and how it is interpreted. **Characteristics of the target** — the object or person being perceived — also matter; vivid, unusual, or emotionally salient features attract more attention. **Situational factors** — the context in which perception occurs — further shape interpretation.
+Several factors shape perception. <strong>Characteristics of the perceiver</strong> — including attitudes, motives, interests, past experiences, and expectations — all influence what is noticed and how it is interpreted. <strong>Characteristics of the target</strong> — the object or person being perceived — also matter; vivid, unusual, or emotionally salient features attract more attention. <strong>Situational factors</strong> — the context in which perception occurs — further shape interpretation.
 
 ### Attribution Theory
 
-When we observe someone's behavior, we naturally ask: why did they do that? **Attribution theory** describes the process by which we explain the causes of behavior — both our own and others'.
+When we observe someone's behavior, we naturally ask: why did they do that? <strong>Attribution theory</strong> describes the process by which we explain the causes of behavior — both our own and others'.
 
 <div class="definition"><strong>Attribution Theory:</strong> A framework for explaining how individuals determine the causes of their own and others' behavior, distinguishing between internal (dispositional) and external (situational) causes.</div>
 
-A **dispositional attribution** places the cause within the person — their personality, ability, effort, or character. A **situational attribution** places the cause in the environment — luck, task difficulty, or circumstances beyond the person's control. Whether we make one type or the other depends on three factors identified by Harold Kelley: **distinctiveness** (does the person behave this way only in this situation, or across all situations?), **consensus** (do other people behave the same way in this situation?), and **consistency** (does this person behave this way repeatedly in similar situations?).
+A <strong>dispositional attribution</strong> places the cause within the person — their personality, ability, effort, or character. A <strong>situational attribution</strong> places the cause in the environment — luck, task difficulty, or circumstances beyond the person's control. Whether we make one type or the other depends on three factors identified by Harold Kelley: <strong>distinctiveness</strong> (does the person behave this way only in this situation, or across all situations?), <strong>consensus</strong> (do other people behave the same way in this situation?), and <strong>consistency</strong> (does this person behave this way repeatedly in similar situations?).
 
 High distinctiveness, high consensus, and low consistency all point toward situational attributions. Low distinctiveness, low consensus, and high consistency all point toward dispositional attributions.
 
 ### Attribution Errors
 
-Human attributional reasoning is subject to systematic biases. The **fundamental attribution error** is the tendency to underestimate the influence of situational factors and overestimate the influence of dispositional factors when explaining others' behavior. We see someone fail to meet a deadline and conclude they are lazy, failing to consider the possibility that they faced exceptional circumstances.
+Human attributional reasoning is subject to systematic biases. The <strong>fundamental attribution error</strong> is the tendency to underestimate the influence of situational factors and overestimate the influence of dispositional factors when explaining others' behavior. We see someone fail to meet a deadline and conclude they are lazy, failing to consider the possibility that they faced exceptional circumstances.
 
 <div class="definition"><strong>Fundamental Attribution Error:</strong> The tendency to underestimate situational influences and overestimate dispositional influences when explaining others' behavior.</div>
 
-The **self-serving bias** is a complementary tendency: when evaluating our own behavior, we attribute successes to our own dispositional qualities (ability, effort) but attribute failures to situational factors (bad luck, unfair treatment).
+The <strong>self-serving bias</strong> is a complementary tendency: when evaluating our own behavior, we attribute successes to our own dispositional qualities (ability, effort) but attribute failures to situational factors (bad luck, unfair treatment).
 
 <div class="definition"><strong>Self-Serving Bias:</strong> The tendency to attribute personal successes to internal factors and personal failures to external factors.</div>
 
@@ -146,11 +146,11 @@ In making rapid assessments of people, we rely on cognitive shortcuts that often
 
 ### Person Perception in the Workplace
 
-Attribution theory and perceptual shortcuts have direct implications for human resource decisions. In **performance evaluations**, managers rely on perceptions of employee behavior that are subject to halo effects, contrast effects, and attribution errors. In **employment interviews**, first impressions form rapidly and are resistant to revision. **Impression management** refers to the deliberate efforts individuals make to influence how others perceive them — managing appearance, dress, behavior, and communication style.
+Attribution theory and perceptual shortcuts have direct implications for human resource decisions. In <strong>performance evaluations</strong>, managers rely on perceptions of employee behavior that are subject to halo effects, contrast effects, and attribution errors. In <strong>employment interviews</strong>, first impressions form rapidly and are resistant to revision. <strong>Impression management</strong> refers to the deliberate efforts individuals make to influence how others perceive them — managing appearance, dress, behavior, and communication style.
 
 ## Personality
 
-**Personality** refers to the relatively stable patterns of thoughts, feelings, and behaviors that distinguish individuals from one another. Personality is important in OB because it predicts behavior across situations and over time. It captures what is consistent about a person.
+<strong>Personality</strong> refers to the relatively stable patterns of thoughts, feelings, and behaviors that distinguish individuals from one another. Personality is important in OB because it predicts behavior across situations and over time. It captures what is consistent about a person.
 
 <div class="definition"><strong>Personality:</strong> The sum total of ways in which an individual reacts to and interacts with others; a set of relatively stable traits that characterize a person's behavioral tendencies.</div>
 
@@ -160,11 +160,11 @@ Personality is shaped by both genetic inheritance and environmental experience. 
 
 ### The Big Five Personality Model
 
-The most empirically supported personality framework is the **Big Five model**, also called the **Five-Factor Model (FFM)**. It identifies five broad dimensions that capture the major axes of personality variation.
+The most empirically supported personality framework is the <strong>Big Five model</strong>, also called the <strong>Five-Factor Model (FFM)</strong>. It identifies five broad dimensions that capture the major axes of personality variation.
 
 <div class="definition"><strong>Big Five Personality Model:</strong> A framework identifying five broad dimensions of personality: Openness to Experience, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).</div>
 
-**Openness to Experience** reflects intellectual curiosity, creativity, a preference for variety, and receptivity to new ideas. High scorers tend to be imaginative, broad-minded, and interested in art and culture. In organizational settings, openness is associated with higher performance in roles requiring learning and innovation. **Conscientiousness** reflects dependability, organization, self-discipline, and achievement orientation. It is consistently the single strongest Big Five predictor of job performance across virtually all occupational categories. Conscientious employees are reliable, thorough, and hardworking. **Extraversion** reflects sociability, assertiveness, positive emotionality, and a preference for stimulating environments. Extraverts tend to be effective in roles requiring frequent social interaction — sales, management, and positions that involve a great deal of interpersonal contact. **Agreeableness** reflects a cooperative, warm, trusting, and accommodating orientation toward others. Highly agreeable individuals work well in team settings and customer-facing roles, though extremely high agreeableness can make it difficult to engage in the constructive conflict that healthy team decision-making sometimes requires. **Neuroticism** (sometimes described in its positive pole as **Emotional Stability**) reflects the tendency to experience negative emotions — anxiety, hostility, depression, and self-consciousness. High neuroticism is associated with poor performance under stress, lower job satisfaction, and greater difficulty with interpersonal relationships at work.
+<strong>Openness to Experience</strong> reflects intellectual curiosity, creativity, a preference for variety, and receptivity to new ideas. High scorers tend to be imaginative, broad-minded, and interested in art and culture. In organizational settings, openness is associated with higher performance in roles requiring learning and innovation. <strong>Conscientiousness</strong> reflects dependability, organization, self-discipline, and achievement orientation. It is consistently the single strongest Big Five predictor of job performance across virtually all occupational categories. Conscientious employees are reliable, thorough, and hardworking. <strong>Extraversion</strong> reflects sociability, assertiveness, positive emotionality, and a preference for stimulating environments. Extraverts tend to be effective in roles requiring frequent social interaction — sales, management, and positions that involve a great deal of interpersonal contact. <strong>Agreeableness</strong> reflects a cooperative, warm, trusting, and accommodating orientation toward others. Highly agreeable individuals work well in team settings and customer-facing roles, though extremely high agreeableness can make it difficult to engage in the constructive conflict that healthy team decision-making sometimes requires. <strong>Neuroticism</strong> (sometimes described in its positive pole as <strong>Emotional Stability</strong>) reflects the tendency to experience negative emotions — anxiety, hostility, depression, and self-consciousness. High neuroticism is associated with poor performance under stress, lower job satisfaction, and greater difficulty with interpersonal relationships at work.
 
 ### Other Personality Dimensions Relevant to OB
 
@@ -172,7 +172,7 @@ Beyond the Big Five, several other personality constructs predict important orga
 
 <div class="definition"><strong>Locus of Control:</strong> The degree to which individuals believe they control their own fate. Internals believe they control their destiny; externals believe luck or powerful others determine outcomes.</div>
 
-People with an **internal locus of control** tend to be more satisfied with their jobs, show higher performance, and are more motivated. People with an **external locus of control** are more susceptible to stress and less likely to take initiative.
+People with an <strong>internal locus of control</strong> tend to be more satisfied with their jobs, show higher performance, and are more motivated. People with an <strong>external locus of control</strong> are more susceptible to stress and less likely to take initiative.
 
 <div class="definition"><strong>Machiavellianism:</strong> A personality dimension characterizing individuals who are pragmatic, maintain emotional distance, and believe that ends justify means.</div>
 
@@ -190,7 +190,7 @@ Proactive individuals are more likely to be effective in entrepreneurial environ
 
 ### The Myers-Briggs Type Indicator (MBTI)
 
-The **Myers-Briggs Type Indicator (MBTI)** is one of the most widely used personality assessment tools in organizational settings. It classifies individuals along four dimensions: Extraverted/Introverted, Sensing/Intuiting, Thinking/Feeling, and Judging/Perceiving, yielding sixteen personality types. While the MBTI has practical utility for team-building and self-awareness exercises, organizational researchers note that it lacks the empirical validation and predictive power of the Big Five framework. Its popularity in organizations exceeds its scientific standing.
+The <strong>Myers-Briggs Type Indicator (MBTI)</strong> is one of the most widely used personality assessment tools in organizational settings. It classifies individuals along four dimensions: Extraverted/Introverted, Sensing/Intuiting, Thinking/Feeling, and Judging/Perceiving, yielding sixteen personality types. While the MBTI has practical utility for team-building and self-awareness exercises, organizational researchers note that it lacks the empirical validation and predictive power of the Big Five framework. Its popularity in organizations exceeds its scientific standing.
 
 ## Emotions and Moods
 
@@ -206,7 +206,7 @@ Emotions are reactive — triggered by events — and tend to dissipate relative
 
 <div class="definition"><strong>Emotional Labor:</strong> The effort required to display organizationally desired emotions during interpersonal transactions, which may differ from what the employee actually feels.</div>
 
-Service workers, healthcare providers, and managers are often required to display emotions — friendliness, empathy, enthusiasm — whether or not those emotions are genuine. **Surface acting** involves changing outward expression without altering inner feelings; it produces emotional dissonance and contributes to burnout. **Deep acting** involves genuinely modifying one's internal emotional state to match the required expression; it is more sustainable but more cognitively demanding.
+Service workers, healthcare providers, and managers are often required to display emotions — friendliness, empathy, enthusiasm — whether or not those emotions are genuine. <strong>Surface acting</strong> involves changing outward expression without altering inner feelings; it produces emotional dissonance and contributes to burnout. <strong>Deep acting</strong> involves genuinely modifying one's internal emotional state to match the required expression; it is more sustainable but more cognitively demanding.
 
 ### Emotional Intelligence
 
@@ -220,17 +220,17 @@ EI encompasses four capabilities: the ability to perceive emotions accurately (r
 
 ## Values
 
-**Values** are broad, stable evaluative beliefs about what is desirable, good, and important. Unlike attitudes (which are targeted at specific objects or events), values are general standards that guide preferences and behavior across a wide range of situations.
+<strong>Values</strong> are broad, stable evaluative beliefs about what is desirable, good, and important. Unlike attitudes (which are targeted at specific objects or events), values are general standards that guide preferences and behavior across a wide range of situations.
 
 <div class="definition"><strong>Values:</strong> Broad, relatively enduring evaluative beliefs about desirable end-states or modes of conduct that guide behavior and serve as standards for judgment.</div>
 
 ### Terminal versus Instrumental Values
 
-Milton Rokeach distinguished two categories of values. **Terminal values** are desired end-states — outcomes we want to achieve in life, such as freedom, happiness, prosperity, or social recognition. **Instrumental values** are preferred modes of conduct — the behaviors or character traits we consider important in achieving those end-states, such as honesty, ambition, or responsibility. Both types can shape attitudes and behaviors in the workplace.
+Milton Rokeach distinguished two categories of values. <strong>Terminal values</strong> are desired end-states — outcomes we want to achieve in life, such as freedom, happiness, prosperity, or social recognition. <strong>Instrumental values</strong> are preferred modes of conduct — the behaviors or character traits we consider important in achieving those end-states, such as honesty, ambition, or responsibility. Both types can shape attitudes and behaviors in the workplace.
 
 ### Generational Differences in Values
 
-Employees from different generational cohorts often hold different workplace values. **Baby Boomers** (born roughly 1946–1964) tend to prioritize job security, career advancement, and loyalty to employers. **Generation X** (born roughly 1965–1980) tends to value work-life balance, flexibility, and independence, having grown up during corporate downsizings that taught them not to rely entirely on employer loyalty. **Millennials** (born roughly 1981–1996) tend to value work with a sense of purpose, continuous feedback, collaborative environments, and technological fluency. Understanding generational differences helps managers structure work and career paths in ways that appeal to the workforce.
+Employees from different generational cohorts often hold different workplace values. <strong>Baby Boomers</strong> (born roughly 1946–1964) tend to prioritize job security, career advancement, and loyalty to employers. <strong>Generation X</strong> (born roughly 1965–1980) tends to value work-life balance, flexibility, and independence, having grown up during corporate downsizings that taught them not to rely entirely on employer loyalty. <strong>Millennials</strong> (born roughly 1981–1996) tend to value work with a sense of purpose, continuous feedback, collaborative environments, and technological fluency. Understanding generational differences helps managers structure work and career paths in ways that appeal to the workforce.
 
 ### Cultural Values: Hofstede's Dimensions
 
@@ -250,11 +250,11 @@ These dimensions help predict how employees from different national cultures wil
 
 ## Attitudes
 
-Whereas values are general, **attitudes** are evaluative statements directed at specific objects, people, or events. They represent our evaluations — favorable or unfavorable — of something specific.
+Whereas values are general, <strong>attitudes</strong> are evaluative statements directed at specific objects, people, or events. They represent our evaluations — favorable or unfavorable — of something specific.
 
 <div class="definition"><strong>Attitudes:</strong> Evaluative statements or judgments — either favorable or unfavorable — concerning objects, people, or events, typically consisting of cognitive, affective, and behavioral components.</div>
 
-The **cognitive component** of an attitude is the belief or opinion it is based on. The **affective component** is the emotional or feeling part of the attitude. The **behavioral component** is the intention to behave in a certain way toward the object of the attitude. In practice, the affective component often drives behavior more powerfully than does the purely cognitive component.
+The <strong>cognitive component</strong> of an attitude is the belief or opinion it is based on. The <strong>affective component</strong> is the emotional or feeling part of the attitude. The <strong>behavioral component</strong> is the intention to behave in a certain way toward the object of the attitude. In practice, the affective component often drives behavior more powerfully than does the purely cognitive component.
 
 ### Cognitive Dissonance
 
@@ -268,7 +268,7 @@ Identified by Leon Festinger, cognitive dissonance motivates individuals to redu
 
 ## Job Satisfaction
 
-**Job satisfaction** is one of the most studied constructs in OB. It refers to the positive emotional state resulting from appraisal of one's job or job experiences.
+<strong>Job satisfaction</strong> is one of the most studied constructs in OB. It refers to the positive emotional state resulting from appraisal of one's job or job experiences.
 
 <div class="definition"><strong>Job Satisfaction:</strong> A positive emotional state resulting from one's appraisal of one's job and job experiences, reflecting the extent to which employees like their work.</div>
 
@@ -276,11 +276,11 @@ Job satisfaction is not a single thing but a collection of facets. An employee m
 
 ### Causes of Job Satisfaction
 
-Research identifies several reliable antecedents of job satisfaction. **Mentally challenging work** — work that provides variety, autonomy, and the opportunity to use one's skills — reliably produces satisfaction. **Fair rewards** — both pay and recognition perceived as equitable relative to effort and in comparison with what others receive — are important. **Supportive working conditions** — physical environment, adequate resources, reasonable hours — matter more when they are absent than when they are present. **Supportive colleagues and supervisors** who are friendly, competent, and respectful are among the most consistent predictors of satisfaction. Finally, **fit between personality and job** tends to produce more satisfied employees: people who are in roles congruent with their interests and values are happier than those in ill-fitting positions.
+Research identifies several reliable antecedents of job satisfaction. <strong>Mentally challenging work</strong> — work that provides variety, autonomy, and the opportunity to use one's skills — reliably produces satisfaction. <strong>Fair rewards</strong> — both pay and recognition perceived as equitable relative to effort and in comparison with what others receive — are important. <strong>Supportive working conditions</strong> — physical environment, adequate resources, reasonable hours — matter more when they are absent than when they are present. <strong>Supportive colleagues and supervisors</strong> who are friendly, competent, and respectful are among the most consistent predictors of satisfaction. Finally, <strong>fit between personality and job</strong> tends to produce more satisfied employees: people who are in roles congruent with their interests and values are happier than those in ill-fitting positions.
 
 ### Consequences of Job Satisfaction
 
-Job satisfaction is consequential for organizations, not merely a pleasant thing to foster. Satisfied employees are more likely to demonstrate **organizational citizenship behaviors (OCBs)** — discretionary behaviors beyond formal role requirements that help the organization function well, such as helping colleagues, volunteering for extra tasks, and speaking positively about the organization externally.
+Job satisfaction is consequential for organizations, not merely a pleasant thing to foster. Satisfied employees are more likely to demonstrate <strong>organizational citizenship behaviors (OCBs)</strong> — discretionary behaviors beyond formal role requirements that help the organization function well, such as helping colleagues, volunteering for extra tasks, and speaking positively about the organization externally.
 
 <div class="definition"><strong>Organizational Citizenship Behavior (OCB):</strong> Discretionary behavior that is not part of an employee's formal job requirements but that promotes the effective functioning of the organization (e.g., helping coworkers, voicing constructive suggestions, representing the organization favorably).</div>
 
@@ -290,7 +290,7 @@ Dissatisfied employees are more likely to engage in withdrawal behaviors — abs
 
 <div class="definition"><strong>Organizational Commitment:</strong> The degree to which an employee identifies with a particular organization and its goals and wishes to maintain membership in the organization.</div>
 
-Researchers distinguish three components of organizational commitment. **Affective commitment** refers to emotional attachment to the organization — employees high in affective commitment stay because they *want* to. **Continuance commitment** refers to perceived cost of leaving — employees high in continuance commitment stay because they feel they *have* to (because leaving is too costly). **Normative commitment** refers to a felt obligation to remain — employees high in normative commitment stay because they feel they *ought* to.
+Researchers distinguish three components of organizational commitment. <strong>Affective commitment</strong> refers to emotional attachment to the organization — employees high in affective commitment stay because they <em>want</em> to. <strong>Continuance commitment</strong> refers to perceived cost of leaving — employees high in continuance commitment stay because they feel they <em>have</em> to (because leaving is too costly). <strong>Normative commitment</strong> refers to a felt obligation to remain — employees high in normative commitment stay because they feel they <em>ought</em> to.
 
 Of these three, affective commitment is the most predictive of desirable organizational outcomes including job performance, OCBs, and low absenteeism. Organizations that foster genuine emotional connection to their mission and culture benefit most.
 
@@ -302,13 +302,13 @@ Of these three, affective commitment is the most predictive of desirable organiz
 
 <div class="definition"><strong>Motivation:</strong> The processes that account for an individual's intensity, direction, and persistence of effort toward attaining a goal, particularly an organizational goal.</div>
 
-Three components define motivation: **intensity** (how hard a person tries), **direction** (whether effort is channeled toward goals that benefit the organization), and **persistence** (how long a person maintains effort in the face of obstacles). Managers frequently confuse motivation with ability, attributing poor performance exclusively to low motivation when the cause may instead be inadequate training, poor tools, or unclear goals.
+Three components define motivation: <strong>intensity</strong> (how hard a person tries), <strong>direction</strong> (whether effort is channeled toward goals that benefit the organization), and <strong>persistence</strong> (how long a person maintains effort in the face of obstacles). Managers frequently confuse motivation with ability, attributing poor performance exclusively to low motivation when the cause may instead be inadequate training, poor tools, or unclear goals.
 
 ## Early Theories of Motivation
 
 ### Maslow's Hierarchy of Needs
 
-Abraham Maslow proposed that human needs are organized in a **hierarchy**, proceeding from the most basic physiological requirements to the highest psychological aspirations. The five levels, from lowest to highest, are: **physiological needs** (food, water, shelter), **safety needs** (security, stability, freedom from fear), **social needs** (belonging, affection, friendship), **esteem needs** (recognition, achievement, status), and **self-actualization needs** (fulfillment of one's potential, doing what one is best suited for).
+Abraham Maslow proposed that human needs are organized in a <strong>hierarchy</strong>, proceeding from the most basic physiological requirements to the highest psychological aspirations. The five levels, from lowest to highest, are: <strong>physiological needs</strong> (food, water, shelter), <strong>safety needs</strong> (security, stability, freedom from fear), <strong>social needs</strong> (belonging, affection, friendship), <strong>esteem needs</strong> (recognition, achievement, status), and <strong>self-actualization needs</strong> (fulfillment of one's potential, doing what one is best suited for).
 
 <div class="definition"><strong>Hierarchy of Needs:</strong> Maslow's theory that human needs can be arranged in a hierarchy of five levels, with lower-level needs (physiological and safety) requiring satisfaction before higher-level needs (social, esteem, and self-actualization) become motivating.</div>
 
@@ -316,13 +316,13 @@ Although Maslow's hierarchy is intuitively appealing and widely taught, it has r
 
 ### Herzberg's Two-Factor Theory
 
-Frederick Herzberg proposed a **two-factor theory** distinguishing factors that cause job dissatisfaction from factors that produce job satisfaction. These two sets of factors are not opposites of each other; they operate along separate dimensions.
+Frederick Herzberg proposed a <strong>two-factor theory</strong> distinguishing factors that cause job dissatisfaction from factors that produce job satisfaction. These two sets of factors are not opposites of each other; they operate along separate dimensions.
 
 <div class="definition"><strong>Hygiene Factors:</strong> Herzberg's term for factors associated with the job context (e.g., company policy, supervision quality, salary, working conditions, interpersonal relations) whose absence causes dissatisfaction but whose presence does not necessarily produce satisfaction or motivation.</div>
 
 <div class="definition"><strong>Motivators:</strong> Herzberg's term for factors associated with the job content (e.g., achievement, recognition, the work itself, responsibility, advancement) that produce genuine job satisfaction and intrinsic motivation when present.</div>
 
-The practical implication is significant: improving hygiene factors removes sources of dissatisfaction but does not by itself motivate employees. To increase motivation, managers must enrich the work itself — making jobs more challenging, providing recognition, delegating responsibility, and creating advancement opportunities. **Job enrichment** — redesigning jobs to increase motivating potential — is the direct managerial application of Herzberg's theory.
+The practical implication is significant: improving hygiene factors removes sources of dissatisfaction but does not by itself motivate employees. To increase motivation, managers must enrich the work itself — making jobs more challenging, providing recognition, delegating responsibility, and creating advancement opportunities. <strong>Job enrichment</strong> — redesigning jobs to increase motivating potential — is the direct managerial application of Herzberg's theory.
 
 ### McGregor's Theory X and Theory Y
 
@@ -338,7 +338,7 @@ Theory X assumptions lead managers toward close supervision, detailed control sy
 
 ### Expectancy Theory
 
-Victor Vroom's **expectancy theory** proposes that individuals choose among behavioral options by calculating the expected value of each option. Motivation is the product of three beliefs:
+Victor Vroom's <strong>expectancy theory</strong> proposes that individuals choose among behavioral options by calculating the expected value of each option. Motivation is the product of three beliefs:
 
 <div class="definition"><strong>Expectancy (E → P):</strong> The belief that effort will lead to acceptable performance — the perceived probability that a given level of effort will result in a given level of performance.</div>
 
@@ -350,31 +350,31 @@ Motivation equals Expectancy × Instrumentality × Valence. Because the terms ar
 
 ### Equity Theory
 
-J. Stacy Adams's **equity theory** holds that employees evaluate fairness by comparing their own **outcome-to-input ratio** with that of referent others.
+J. Stacy Adams's <strong>equity theory</strong> holds that employees evaluate fairness by comparing their own <strong>outcome-to-input ratio</strong> with that of referent others.
 
 <div class="definition"><strong>Equity Theory:</strong> The theory that employees compare their job input-outcome ratio to those of relevant others, and when perceived inequity exists, they are motivated to restore equity.</div>
 
-Inputs include effort, experience, education, skill, and time invested. Outcomes include pay, benefits, recognition, promotion, and intrinsic rewards. When an employee perceives her ratio as equal to that of a comparison other, she experiences **equity** and is content. When she perceives her ratio as lower (underpayment inequity), she may reduce her inputs (work less hard), seek greater outcomes (demand a raise), distort perceptions, choose a different comparison target, or ultimately leave the organization. Interestingly, perceived **overpayment inequity** (feeling overrewarded) also creates discomfort and motivates restoration — though people are generally more creative at rationalizing why they deserve what they receive.
+Inputs include effort, experience, education, skill, and time invested. Outcomes include pay, benefits, recognition, promotion, and intrinsic rewards. When an employee perceives her ratio as equal to that of a comparison other, she experiences <strong>equity</strong> and is content. When she perceives her ratio as lower (underpayment inequity), she may reduce her inputs (work less hard), seek greater outcomes (demand a raise), distort perceptions, choose a different comparison target, or ultimately leave the organization. Interestingly, perceived <strong>overpayment inequity</strong> (feeling overrewarded) also creates discomfort and motivates restoration — though people are generally more creative at rationalizing why they deserve what they receive.
 
 ### Goal-Setting Theory
 
-Edwin Locke's **goal-setting theory** is among the most empirically well-supported theories in all of OB. The central finding is that **specific, difficult goals** produce higher performance than vague goals ("do your best") or no goals at all.
+Edwin Locke's <strong>goal-setting theory</strong> is among the most empirically well-supported theories in all of OB. The central finding is that <strong>specific, difficult goals</strong> produce higher performance than vague goals ("do your best") or no goals at all.
 
 <div class="definition"><strong>Goal-Setting Theory:</strong> The theory that specific and difficult goals, with feedback, lead to higher performance than vague or easy goals.</div>
 
-Goals energize behavior (they direct attention and effort toward goal-relevant activities), and difficult goals keep effort sustained over time. Importantly, goal difficulty works *only* when the individual is committed to the goal — commitment requires that the person believes the goal is achievable (expectancy) and values its attainment. **Feedback** — information about progress toward the goal — is a necessary complement to goal specificity, enabling individuals to adjust their efforts.
+Goals energize behavior (they direct attention and effort toward goal-relevant activities), and difficult goals keep effort sustained over time. Importantly, goal difficulty works <em>only</em> when the individual is committed to the goal — commitment requires that the person believes the goal is achievable (expectancy) and values its attainment. <strong>Feedback</strong> — information about progress toward the goal — is a necessary complement to goal specificity, enabling individuals to adjust their efforts.
 
-The managerial application is **Management by Objectives (MBO)**, a process in which managers and employees jointly define specific, measurable goals and periodically review progress. MBO transforms goal-setting theory into a formal organizational process.
+The managerial application is <strong>Management by Objectives (MBO)</strong>, a process in which managers and employees jointly define specific, measurable goals and periodically review progress. MBO transforms goal-setting theory into a formal organizational process.
 
 ### Self-Determination Theory and Intrinsic Motivation
 
-**Self-determination theory (SDT)** distinguishes between intrinsic and extrinsic sources of motivation.
+<strong>Self-determination theory (SDT)</strong> distinguishes between intrinsic and extrinsic sources of motivation.
 
 <div class="definition"><strong>Intrinsic Motivation:</strong> Motivation driven by the inherent interest, enjoyment, or satisfaction of an activity itself, without dependence on external rewards or pressures.</div>
 
 <div class="definition"><strong>Extrinsic Motivation:</strong> Motivation driven by external rewards or punishments — pay, promotions, grades, recognition from others, or avoidance of negative consequences.</div>
 
-A counterintuitive finding — the **overjustification effect** — shows that introducing extrinsic rewards for activities that were previously intrinsically motivating can *reduce* intrinsic motivation. When people are paid to do something they would have done freely, the extrinsic reward displaces their internal reasons for doing it, and they come to see the activity as "just work." SDT proposes that intrinsic motivation flourishes when three basic psychological needs are met: **autonomy** (a sense of volition and self-determination), **competence** (a sense of mastery and effectiveness), and **relatedness** (a sense of connection and belonging).
+A counterintuitive finding — the <strong>overjustification effect</strong> — shows that introducing extrinsic rewards for activities that were previously intrinsically motivating can <em>reduce</em> intrinsic motivation. When people are paid to do something they would have done freely, the extrinsic reward displaces their internal reasons for doing it, and they come to see the activity as "just work." SDT proposes that intrinsic motivation flourishes when three basic psychological needs are met: <strong>autonomy</strong> (a sense of volition and self-determination), <strong>competence</strong> (a sense of mastery and effectiveness), and <strong>relatedness</strong> (a sense of connection and belonging).
 
 ---
 
@@ -408,7 +408,7 @@ Groups typically pass through predictable developmental stages.
 
 <div class="definition"><strong>Role:</strong> A set of expected behavior patterns attributed to someone occupying a given position in a social unit.</div>
 
-**Role conflict** occurs when an individual faces incompatible role expectations — for example, an employee who is expected by her manager to prioritize quantity but by her professional code to prioritize quality. **Role ambiguity** occurs when role expectations are unclear. Both role conflict and ambiguity increase stress and reduce job satisfaction and performance.
+<strong>Role conflict</strong> occurs when an individual faces incompatible role expectations — for example, an employee who is expected by her manager to prioritize quantity but by her professional code to prioritize quality. <strong>Role ambiguity</strong> occurs when role expectations are unclear. Both role conflict and ambiguity increase stress and reduce job satisfaction and performance.
 
 ### Norms
 
@@ -424,7 +424,7 @@ Status inequalities in groups can be functional (channeling expertise into the r
 
 ### Group Size
 
-Group size affects performance in complex ways. Larger groups generate more total input but suffer from **social loafing** — the tendency for individuals to exert less effort when working collectively than when working alone, because individual contributions are less identifiable and evaluation is diffuse.
+Group size affects performance in complex ways. Larger groups generate more total input but suffer from <strong>social loafing</strong> — the tendency for individuals to exert less effort when working collectively than when working alone, because individual contributions are less identifiable and evaluation is diffuse.
 
 <div class="definition"><strong>Social Loafing:</strong> The tendency for individuals to expend less effort when working collectively in a group than when working individually, particularly when individual contributions are not easily identifiable.</div>
 
@@ -442,7 +442,7 @@ Groupthink is characterized by illusions of invulnerability, collective rational
 
 ## Group Decision Making
 
-Groups can make better decisions than individuals in some circumstances (by pooling information and perspectives) and worse decisions in others (due to groupthink, social pressure, and diffusion of responsibility). Techniques designed to improve group decision quality include **brainstorming** (generating as many ideas as possible without criticism), the **nominal group technique** (independent idea generation followed by structured discussion), and the **Delphi technique** (iterative anonymous surveys that converge toward consensus without face-to-face interaction).
+Groups can make better decisions than individuals in some circumstances (by pooling information and perspectives) and worse decisions in others (due to groupthink, social pressure, and diffusion of responsibility). Techniques designed to improve group decision quality include <strong>brainstorming</strong> (generating as many ideas as possible without criticism), the <strong>nominal group technique</strong> (independent idea generation followed by structured discussion), and the <strong>Delphi technique</strong> (iterative anonymous surveys that converge toward consensus without face-to-face interaction).
 
 ---
 
@@ -468,7 +468,7 @@ Formal power (coercive, reward, and legitimate) derives from one's position in t
 
 ## Dependency
 
-The fundamental rule of power is that power depends on **dependency**: A has power over B to the extent that B depends on A for something B values and cannot easily obtain elsewhere. Dependencies are created by scarcity (B needs something A has and that is rare), importance (B considers what A provides important), and non-substitutability (B cannot easily find a substitute for what A provides).
+The fundamental rule of power is that power depends on <strong>dependency</strong>: A has power over B to the extent that B depends on A for something B values and cannot easily obtain elsewhere. Dependencies are created by scarcity (B needs something A has and that is rare), importance (B considers what A provides important), and non-substitutability (B cannot easily find a substitute for what A provides).
 
 ## Organizational Politics
 
@@ -476,7 +476,7 @@ The fundamental rule of power is that power depends on **dependency**: A has pow
 
 Political behavior ranges from legitimate (networking, impression management, forming coalitions) to illegitimate (spreading rumors, undermining rivals, sabotaging colleagues). The reality of organizational life is that resources are limited and decisions are rarely purely technical. Politics is the mechanism through which competing interests are reconciled.
 
-**Impression management** — the deliberate process by which individuals try to influence how others perceive them — is one of the most universal political tactics. Techniques include conformity (agreeing with others to gain their approval), flattery, self-promotion (highlighting one's accomplishments), exemplification (going beyond requirements to appear dedicated), and intimidation (demonstrating power).
+<strong>Impression management</strong> — the deliberate process by which individuals try to influence how others perceive them — is one of the most universal political tactics. Techniques include conformity (agreeing with others to gain their approval), flattery, self-promotion (highlighting one's accomplishments), exemplification (going beyond requirements to appear dedicated), and intimidation (demonstrating power).
 
 ---
 
@@ -494,7 +494,7 @@ Early leadership research sought the personality traits that distinguish effecti
 
 ## Behavioral Theories
 
-Behavioral theories shifted attention from *who leaders are* to *what leaders do*. The two most important leadership behavior dimensions identified by Ohio State and University of Michigan researchers are:
+Behavioral theories shifted attention from <em>who leaders are</em> to <em>what leaders do</em>. The two most important leadership behavior dimensions identified by Ohio State and University of Michigan researchers are:
 
 <div class="definition"><strong>Initiating Structure (Task-Oriented Behavior):</strong> The extent to which a leader defines and structures his or her role and those of employees in the search for goal attainment — assigning tasks, setting deadlines, and maintaining standards.</div>
 
@@ -506,9 +506,9 @@ High scores on both dimensions — leaders who are both task-oriented and relati
 
 Contingency theories of leadership propose that the effectiveness of a given leadership style depends on situational factors.
 
-**Fiedler's Contingency Model** proposes that leadership effectiveness depends on the fit between a leader's style (measured by the Least Preferred Co-worker scale, which assesses whether the leader is relationship-motivated or task-motivated) and the **situational control** — the degree to which the leader controls the situation, determined by leader-member relations, task structure, and position power. Task-motivated leaders perform best in very high-control and very low-control situations; relationship-motivated leaders perform best in moderate-control situations.
+<strong>Fiedler's Contingency Model</strong> proposes that leadership effectiveness depends on the fit between a leader's style (measured by the Least Preferred Co-worker scale, which assesses whether the leader is relationship-motivated or task-motivated) and the <strong>situational control</strong> — the degree to which the leader controls the situation, determined by leader-member relations, task structure, and position power. Task-motivated leaders perform best in very high-control and very low-control situations; relationship-motivated leaders perform best in moderate-control situations.
 
-**Path-Goal Theory** proposes that effective leaders clarify the path to goals, remove obstacles, and provide the rewards employees need to perform effectively. The appropriate leadership style — directive, supportive, participative, or achievement-oriented — depends on characteristics of the employee (ability, perceived locus of control, experience) and characteristics of the task (structure, ambiguity, difficulty).
+<strong>Path-Goal Theory</strong> proposes that effective leaders clarify the path to goals, remove obstacles, and provide the rewards employees need to perform effectively. The appropriate leadership style — directive, supportive, participative, or achievement-oriented — depends on characteristics of the employee (ability, perceived locus of control, experience) and characteristics of the task (structure, ambiguity, difficulty).
 
 <div class="definition"><strong>Situational Leadership Theory:</strong> The theory, developed by Hersey and Blanchard, that successful leadership is achieved by selecting the right style based on followers' level of readiness (competence and commitment) to perform a given task.</div>
 
@@ -518,7 +518,7 @@ Contingency theories of leadership propose that the effectiveness of a given lea
 
 <div class="definition"><strong>Transformational Leadership:</strong> Leadership that inspires followers to transcend their own self-interest for the good of the organization, producing extraordinary levels of effort by appealing to vision, values, and higher-order needs.</div>
 
-Transformational leaders demonstrate **idealized influence** (charisma that inspires identification and trust), **inspirational motivation** (articulating a compelling vision), **intellectual stimulation** (challenging followers to think creatively), and **individualized consideration** (treating followers as individuals with unique needs and capacities). Research consistently shows that transformational leadership predicts higher follower motivation, satisfaction, and performance than transactional leadership alone — though transactional mechanisms remain necessary for baseline performance management.
+Transformational leaders demonstrate <strong>idealized influence</strong> (charisma that inspires identification and trust), <strong>inspirational motivation</strong> (articulating a compelling vision), <strong>intellectual stimulation</strong> (challenging followers to think creatively), and <strong>individualized consideration</strong> (treating followers as individuals with unique needs and capacities). Research consistently shows that transformational leadership predicts higher follower motivation, satisfaction, and performance than transactional leadership alone — though transactional mechanisms remain necessary for baseline performance management.
 
 ## Authentic and Servant Leadership
 
@@ -534,25 +534,25 @@ Both authentic and servant leadership perspectives reflect growing recognition t
 
 ## Rational Decision Making
 
-The standard economic model of decision making assumes that individuals engage in **rational decision making**: defining the problem, identifying all criteria, weighting them, generating all possible alternatives, evaluating each alternative against all criteria, and selecting the alternative that maximizes expected value.
+The standard economic model of decision making assumes that individuals engage in <strong>rational decision making</strong>: defining the problem, identifying all criteria, weighting them, generating all possible alternatives, evaluating each alternative against all criteria, and selecting the alternative that maximizes expected value.
 
 <div class="definition"><strong>Rational Decision Making:</strong> A decision-making model that assumes fully informed, logical behavior aimed at maximizing the value of outcomes — involving problem definition, criterion identification, alternative generation, evaluation, and optimal selection.</div>
 
-This model is normative — it describes how people *should* decide rather than how they *actually* decide. In practice, people deviate from rational decision making systematically and predictably.
+This model is normative — it describes how people <em>should</em> decide rather than how they <em>actually</em> decide. In practice, people deviate from rational decision making systematically and predictably.
 
 ## Bounded Rationality
 
-Herbert Simon proposed that human decision makers operate under **bounded rationality**: cognitive limitations, limited information, and time constraints restrict decision quality to something far below the theoretical optimum. Rather than maximizing, people **satisfice** — they search for a solution that is "good enough" given the time and cognitive resources available.
+Herbert Simon proposed that human decision makers operate under <strong>bounded rationality</strong>: cognitive limitations, limited information, and time constraints restrict decision quality to something far below the theoretical optimum. Rather than maximizing, people <strong>satisfice</strong> — they search for a solution that is "good enough" given the time and cognitive resources available.
 
 <div class="definition"><strong>Bounded Rationality:</strong> Making decisions based on models that simplify complex problems, because individuals have limited information-processing capacity, resulting in "satisficing" rather than optimizing.</div>
 
 ## Intuition in Decision Making
 
-**Intuitive decision making** is an unconscious process created from distilled experience. Experts who have accumulated deep domain knowledge often make rapid, accurate judgments without deliberate analysis. This is not irrationality — it reflects learned pattern recognition. The challenge is distinguishing genuine intuition (reliable pattern recognition) from mere impulse or wishful thinking.
+<strong>Intuitive decision making</strong> is an unconscious process created from distilled experience. Experts who have accumulated deep domain knowledge often make rapid, accurate judgments without deliberate analysis. This is not irrationality — it reflects learned pattern recognition. The challenge is distinguishing genuine intuition (reliable pattern recognition) from mere impulse or wishful thinking.
 
 ## Heuristics and Biases
 
-Kahneman and Tversky's landmark research identified systematic **cognitive biases** produced by the use of mental shortcuts called **heuristics**. These biases represent predictable deviations from rational choice that are pervasive across people and contexts.
+Kahneman and Tversky's landmark research identified systematic <strong>cognitive biases</strong> produced by the use of mental shortcuts called <strong>heuristics</strong>. These biases represent predictable deviations from rational choice that are pervasive across people and contexts.
 
 <div class="definition"><strong>Availability Heuristic:</strong> The tendency to judge the likelihood of an event based on how easily examples of it come to mind, leading to overestimation of vivid, memorable, or recent events.</div>
 
@@ -568,19 +568,19 @@ Kahneman and Tversky's landmark research identified systematic **cognitive biase
 
 <div class="definition"><strong>Framing Effect:</strong> The tendency for choices to be influenced by how a problem is presented — whether outcomes are framed as gains or losses relative to a reference point.</div>
 
-The framing effect connects to Kahneman and Tversky's **prospect theory**, which shows that people are loss-averse: the psychological pain of losing a given amount is roughly twice as strong as the pleasure of gaining the equivalent amount. This asymmetry explains many anomalies in economic and organizational behavior.
+The framing effect connects to Kahneman and Tversky's <strong>prospect theory</strong>, which shows that people are loss-averse: the psychological pain of losing a given amount is roughly twice as strong as the pleasure of gaining the equivalent amount. This asymmetry explains many anomalies in economic and organizational behavior.
 
 ## Creativity
 
 <div class="definition"><strong>Creativity:</strong> The ability to produce novel and useful ideas — ideas that are both different from what has been done before and appropriate to the problem or opportunity.</div>
 
-Creativity in organizations depends on three components: **expertise** (a foundation of knowledge in the relevant domain), **creative thinking skills** (the ability to combine knowledge in novel ways), and **intrinsic motivation** (genuine engagement with and enthusiasm for the work). The work environment matters: autonomy, supportive supervisors, challenging assignments, and collaborative cultures foster creativity; excessive evaluation pressure, surveillance, and tight time constraints tend to suppress it.
+Creativity in organizations depends on three components: <strong>expertise</strong> (a foundation of knowledge in the relevant domain), <strong>creative thinking skills</strong> (the ability to combine knowledge in novel ways), and <strong>intrinsic motivation</strong> (genuine engagement with and enthusiasm for the work). The work environment matters: autonomy, supportive supervisors, challenging assignments, and collaborative cultures foster creativity; excessive evaluation pressure, surveillance, and tight time constraints tend to suppress it.
 
 ## Ethics in Decision Making
 
 Ethical behavior at work involves choosing actions that are right, fair, and honest — consistent with principles that transcend narrow self-interest. Several frameworks guide ethical reasoning.
 
-The **utilitarian approach** evaluates actions by their consequences: the right action is the one that produces the greatest good for the greatest number. The **rights approach** holds that certain fundamental rights must be respected regardless of consequences: people must be treated as ends in themselves, not merely as means. The **justice approach** focuses on fairness: processes and outcomes should be distributed according to defensible principles of equity. The **virtue ethics approach** asks what a person of good character would do — focusing on character traits such as honesty, integrity, compassion, and fairness rather than on rules or consequences.
+The <strong>utilitarian approach</strong> evaluates actions by their consequences: the right action is the one that produces the greatest good for the greatest number. The <strong>rights approach</strong> holds that certain fundamental rights must be respected regardless of consequences: people must be treated as ends in themselves, not merely as means. The <strong>justice approach</strong> focuses on fairness: processes and outcomes should be distributed according to defensible principles of equity. The <strong>virtue ethics approach</strong> asks what a person of good character would do — focusing on character traits such as honesty, integrity, compassion, and fairness rather than on rules or consequences.
 
 Organizations can foster ethical behavior through clear codes of conduct, ethical leadership, systems for reporting violations without fear of retaliation (whistleblower protections), and a culture in which ethical standards are modeled from the top.
 
@@ -592,11 +592,11 @@ Organizations can foster ethical behavior through clear codes of conduct, ethica
 
 <div class="definition"><strong>Organizational Culture:</strong> A system of shared meaning held by members that distinguishes the organization from other organizations — a pattern of basic assumptions, values, and beliefs that members take for granted and that shapes their perceptions, thoughts, feelings, and behavior.</div>
 
-Organizational culture is most usefully understood through Edgar Schein's three-level model. At the surface level are **artifacts** — visible expressions of culture such as architecture, dress code, office layout, stories and rituals, logos, and language. These are the most observable but the hardest to interpret without deeper context. Below artifacts lie **espoused values** — the organization's officially stated values, goals, and philosophies, as found in mission statements and annual reports. At the deepest level are **basic underlying assumptions** — unconscious, taken-for-granted beliefs about how the world works, which are the hardest to identify but most powerful in shaping behavior.
+Organizational culture is most usefully understood through Edgar Schein's three-level model. At the surface level are <strong>artifacts</strong> — visible expressions of culture such as architecture, dress code, office layout, stories and rituals, logos, and language. These are the most observable but the hardest to interpret without deeper context. Below artifacts lie <strong>espoused values</strong> — the organization's officially stated values, goals, and philosophies, as found in mission statements and annual reports. At the deepest level are <strong>basic underlying assumptions</strong> — unconscious, taken-for-granted beliefs about how the world works, which are the hardest to identify but most powerful in shaping behavior.
 
 ## Dimensions of Culture
 
-Research has identified several dimensions along which organizational cultures vary. **Innovation and risk-taking** cultures encourage experimentation and tolerate failure. **Attention to detail** cultures prize precision and analysis. **Outcome orientation** cultures focus on results over process. **People orientation** cultures prioritize fairness and respect for individuals. **Team orientation** cultures emphasize collaboration. **Aggressiveness** cultures tend toward competitive, hard-driving environments. **Stability** cultures value maintaining existing arrangements over growth or change.
+Research has identified several dimensions along which organizational cultures vary. <strong>Innovation and risk-taking</strong> cultures encourage experimentation and tolerate failure. <strong>Attention to detail</strong> cultures prize precision and analysis. <strong>Outcome orientation</strong> cultures focus on results over process. <strong>People orientation</strong> cultures prioritize fairness and respect for individuals. <strong>Team orientation</strong> cultures emphasize collaboration. <strong>Aggressiveness</strong> cultures tend toward competitive, hard-driving environments. <strong>Stability</strong> cultures value maintaining existing arrangements over growth or change.
 
 ## Functions of Organizational Culture
 
@@ -604,11 +604,11 @@ Culture serves several important functions. It defines boundaries and creates a 
 
 ## Culture as a Liability
 
-While culture can be a powerful source of competitive advantage, it can also create problems. A **strong culture** — one in which core values are widely held and intensely felt — reduces ambiguity and builds cohesion, but it can make the organization rigid and resistant to change. When the environment shifts, organizations with strong but misaligned cultures may be slow to adapt. Culture can also create barriers to mergers and acquisitions when two very different cultures are forced together, and it can perpetuate systems of exclusion by embedding assumptions that disadvantage particular groups.
+While culture can be a powerful source of competitive advantage, it can also create problems. A <strong>strong culture</strong> — one in which core values are widely held and intensely felt — reduces ambiguity and builds cohesion, but it can make the organization rigid and resistant to change. When the environment shifts, organizations with strong but misaligned cultures may be slow to adapt. Culture can also create barriers to mergers and acquisitions when two very different cultures are forced together, and it can perpetuate systems of exclusion by embedding assumptions that disadvantage particular groups.
 
 ## Creating and Sustaining Culture
 
-Organizational culture originates primarily with the **founders** — individuals whose personal vision and values shape the initial character of the organization. These values are transmitted through the **socialization** of new members, the stories and myths that circulate about the organization's history, the behaviors and practices that leaders model and reward, and the rituals and ceremonies through which organizational life is structured. **Selection** systems tend to admit individuals whose values fit the existing culture, and **socialization** processes convert new hires into culturally fluent members.
+Organizational culture originates primarily with the <strong>founders</strong> — individuals whose personal vision and values shape the initial character of the organization. These values are transmitted through the <strong>socialization</strong> of new members, the stories and myths that circulate about the organization's history, the behaviors and practices that leaders model and reward, and the rituals and ceremonies through which organizational life is structured. <strong>Selection</strong> systems tend to admit individuals whose values fit the existing culture, and <strong>socialization</strong> processes convert new hires into culturally fluent members.
 
 ---
 
@@ -616,23 +616,23 @@ Organizational culture originates primarily with the **founders** — individual
 
 ## Determinants of Job Performance
 
-Job performance is not a single behavior but a multidimensional construct. Research distinguishes **task performance** (behaviors directly related to producing goods or delivering services — the core activities of one's formal job description) from **contextual performance** (behaviors that contribute to the organizational environment in ways that facilitate task performance, corresponding roughly to OCBs). A third component, **counterproductive work behavior (CWB)**, encompasses voluntary behaviors that harm the organization or its members, including absenteeism, theft, sabotage, and interpersonal aggression.
+Job performance is not a single behavior but a multidimensional construct. Research distinguishes <strong>task performance</strong> (behaviors directly related to producing goods or delivering services — the core activities of one's formal job description) from <strong>contextual performance</strong> (behaviors that contribute to the organizational environment in ways that facilitate task performance, corresponding roughly to OCBs). A third component, <strong>counterproductive work behavior (CWB)</strong>, encompasses voluntary behaviors that harm the organization or its members, including absenteeism, theft, sabotage, and interpersonal aggression.
 
 <div class="definition"><strong>Counterproductive Work Behavior (CWB):</strong> Actions that actively damage the organization, including theft, sabotage, aggression, absenteeism, and deliberate reduction of effort.</div>
 
 ## Performance Evaluation Systems
 
-Organizations use **performance evaluation** (also called **performance appraisal**) both to provide employees with feedback and to support administrative decisions about pay, promotion, and termination. Evaluation systems vary along several dimensions: whether evaluations are based on **traits** (relatively stable characteristics), **behaviors** (specific observable actions), or **results** (outcomes achieved); whether evaluators are immediate supervisors, peers, subordinates, or some combination (**360-degree feedback**); and how frequently evaluations occur.
+Organizations use <strong>performance evaluation</strong> (also called <strong>performance appraisal</strong>) both to provide employees with feedback and to support administrative decisions about pay, promotion, and termination. Evaluation systems vary along several dimensions: whether evaluations are based on <strong>traits</strong> (relatively stable characteristics), <strong>behaviors</strong> (specific observable actions), or <strong>results</strong> (outcomes achieved); whether evaluators are immediate supervisors, peers, subordinates, or some combination (<strong>360-degree feedback</strong>); and how frequently evaluations occur.
 
 <div class="definition"><strong>360-Degree Feedback:</strong> A performance evaluation method in which employees receive feedback from multiple sources, including supervisors, peers, subordinates, and sometimes customers, providing a comprehensive view of performance from multiple perspectives.</div>
 
-Common rating errors include the **halo effect** (letting one positive trait color all ratings), the **leniency error** (rating everyone favorably to avoid conflict), the **central tendency error** (rating everyone near the middle of the scale), and **recency bias** (giving disproportionate weight to recent events at the expense of the whole evaluation period).
+Common rating errors include the <strong>halo effect</strong> (letting one positive trait color all ratings), the <strong>leniency error</strong> (rating everyone favorably to avoid conflict), the <strong>central tendency error</strong> (rating everyone near the middle of the scale), and <strong>recency bias</strong> (giving disproportionate weight to recent events at the expense of the whole evaluation period).
 
 ---
 
 # Putting It All Together: OB as an Integrated System
 
-MSCI 211 is a course in which the individual topics are best understood not as independent modules but as an interconnected system. Individual-level variables — personality, values, perception, emotions, and attitudes — shape motivation, which shapes behavior, which aggregates into group and team dynamics, which are further shaped by leadership, organizational culture, and structural arrangements. Every layer of this system influences the two key outcomes emphasized throughout the course: **job performance** and **organizational commitment**.
+MSCI 211 is a course in which the individual topics are best understood not as independent modules but as an interconnected system. Individual-level variables — personality, values, perception, emotions, and attitudes — shape motivation, which shapes behavior, which aggregates into group and team dynamics, which are further shaped by leadership, organizational culture, and structural arrangements. Every layer of this system influences the two key outcomes emphasized throughout the course: <strong>job performance</strong> and <strong>organizational commitment</strong>.
 
 The contingency approach, introduced in Chapter 1, runs through every subsequent topic. There is rarely a universal prescription. The appropriate leadership style depends on follower maturity and task structure. The motivational technique that works for one employee may undermine another. The cultural practices that drive performance in one industry context may be misaligned with the demands of another. What OB provides is not a recipe book but a conceptual framework — a set of well-validated theories and evidence-based principles — that allows managers and employees alike to think clearly about behavior, predict with better-than-chance accuracy, and intervene with evidence-based confidence.
 

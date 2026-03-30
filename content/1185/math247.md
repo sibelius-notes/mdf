@@ -602,7 +602,7 @@ The change-of-variables theorem is the multivariable substitute for integration 
 
 <div class="theorem">
 
-<strong>Theorem 7.4 (Change of Variables).</strong> Let \(\Phi : D^* \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be a \(C^1\) bijection from an open set \(D^*\) onto \(D\), with \(\det J\Phi(\mathbf{u}) \neq 0\) on \(D^*\) (except possibly on a set of measure zero). If \(f : D \to \mathbb{R}\) is integrable, then
+<strong>Theorem 7.4 (Change of Variables).</strong> Let \(\Phi : D^<em> \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be a \(C^1\) bijection from an open set \(D^</em>\) onto \(D\), with \(\det J\Phi(\mathbf{u}) \neq 0\) on \(D^*\) (except possibly on a set of measure zero). If \(f : D \to \mathbb{R}\) is integrable, then
 \[
 \int_D f(\mathbf{x})\, d\mathbf{x} = \int_{D^*} f(\Phi(\mathbf{u}))\, |\det J\Phi(\mathbf{u})|\, d\mathbf{u}.
 \]

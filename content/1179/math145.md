@@ -126,7 +126,7 @@ Then \(P(n)\) is true for all \(n \in \mathbb{N}\).
 
 <div class="remark">
 
-The intuition is a domino argument: the first domino falls (base case), and each fallen domino knocks over the next (inductive step), so all dominoes fall. But notice that induction does not tell you *what* to prove — finding the right predicate \(P(n)\) is the creative act.
+The intuition is a domino argument: the first domino falls (base case), and each fallen domino knocks over the next (inductive step), so all dominoes fall. But notice that induction does not tell you <em>what</em> to prove — finding the right predicate \(P(n)\) is the creative act.
 
 </div>
 
@@ -134,9 +134,9 @@ The intuition is a domino argument: the first domino falls (base case), and each
 
 <strong>Example 2.2.</strong> We prove \(\displaystyle\sum_{i=1}^n i = \frac{n(n+1)}{2}\) for all \(n \geq 1\).
 
-*Base case:* \(n = 1\): LHS \(= 1\), RHS \(= \frac{1 \cdot 2}{2} = 1\). ✓
+<em>Base case:</em> \(n = 1\): LHS \(= 1\), RHS \(= \frac{1 \cdot 2}{2} = 1\). ✓
 
-*Inductive step:* Assume the formula holds for some \(k \geq 1\). Then
+<em>Inductive step:</em> Assume the formula holds for some \(k \geq 1\). Then
 \[\sum_{i=1}^{k+1} i = \left(\sum_{i=1}^k i\right) + (k+1) = \frac{k(k+1)}{2} + (k+1) = (k+1)\cdot\frac{k+2}{2} = \frac{(k+1)(k+2)}{2},\]
 which is the formula for \(n = k+1\). \(\square\)
 
@@ -348,7 +348,7 @@ Primes are the atoms of multiplicative arithmetic — the integers that cannot b
 
 <div class="remark">
 
-Euclid's Lemma is the key to *uniqueness* in prime factorization. It says that primes behave "multiplicatively irreducibly" — you cannot split their divisibility between two factors. By induction, if \(p \mid a_1 a_2 \cdots a_k\) then \(p \mid a_i\) for some \(i\).
+Euclid's Lemma is the key to <em>uniqueness</em> in prime factorization. It says that primes behave "multiplicatively irreducibly" — you cannot split their divisibility between two factors. By induction, if \(p \mid a_1 a_2 \cdots a_k\) then \(p \mid a_i\) for some \(i\).
 
 </div>
 
@@ -520,7 +520,7 @@ In particular, \(a \equiv b \pmod{m}\) implies \(a^n \equiv b^n \pmod{m}\) for a
 
 <div class="remark">
 
-The significance of Theorem 6.3 is that congruence is a *congruence relation* on the ring \(\mathbb{Z}\): arithmetic respects the equivalence classes. This is what makes modular arithmetic a coherent system, not merely a bookkeeping device.
+The significance of Theorem 6.3 is that congruence is a <em>congruence relation</em> on the ring \(\mathbb{Z}\): arithmetic respects the equivalence classes. This is what makes modular arithmetic a coherent system, not merely a bookkeeping device.
 
 </div>
 
@@ -801,7 +801,7 @@ The group \((\mathbb{Z}/n\mathbb{Z})^*\) is a finite abelian group. A natural qu
 
 <div class="remark">
 
-Once we know a primitive root \(g\) exists, every element of \((\mathbb{Z}/p\mathbb{Z})^*\) can be written as \(g^k\) for a unique \(k \in \{0, 1, \ldots, p-2\}\). This integer \(k\) is called the *discrete logarithm* of \(a\) to base \(g\). The difficulty of computing discrete logarithms — given \(g^k\), find \(k\) — is the basis of the Diffie-Hellman key exchange and the ElGamal cryptosystem.
+Once we know a primitive root \(g\) exists, every element of \((\mathbb{Z}/p\mathbb{Z})^<em>\) can be written as \(g^k\) for a unique \(k \in \{0, 1, \ldots, p-2\}\). This integer \(k\) is called the </em>discrete logarithm* of \(a\) to base \(g\). The difficulty of computing discrete logarithms — given \(g^k\), find \(k\) — is the basis of the Diffie-Hellman key exchange and the ElGamal cryptosystem.
 
 </div>
 
@@ -889,7 +889,7 @@ In both cases, \(M^{ed} \equiv M \pmod{p}\). By the same argument with \(p\) and
 
 <div class="remark">
 
-Notice that the proof uses FLT for prime moduli and then combines with CRT (implicitly: if \(p \mid x\) and \(q \mid x\) and \(\gcd(p,q) = 1\), then \(pq \mid x\)). The security of RSA rests on the hardness of *integer factorization*: given \(n = pq\), finding \(p\) and \(q\) is believed to be computationally intractable for large \(n\) (say, \(n\) has 2048 bits). Without knowing \(p\) and \(q\), one cannot compute \(\phi(n)\), and without \(\phi(n)\), one cannot compute \(d\).
+Notice that the proof uses FLT for prime moduli and then combines with CRT (implicitly: if \(p \mid x\) and \(q \mid x\) and \(\gcd(p,q) = 1\), then \(pq \mid x\)). The security of RSA rests on the hardness of <em>integer factorization</em>: given \(n = pq\), finding \(p\) and \(q\) is believed to be computationally intractable for large \(n\) (say, \(n\) has 2048 bits). Without knowing \(p\) and \(q\), one cannot compute \(\phi(n)\), and without \(\phi(n)\), one cannot compute \(d\).
 
 </div>
 

@@ -225,11 +225,11 @@ This is where the Polarization Identity pays off: knowing that \(L\) preserves l
 ### Isometries in \(\mathbb{R}^2\)
 
 The isometries of the plane are:
-- **Identity**: \(I(x) = x\).
-- **Translation**: \(T_u(x) = x + u\).
-- **Rotation** about \(p\) by \(\theta\): \(R_{p,\theta}(x) = p + R_\theta(x-p)\) where \(R_\theta = \begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}\).
-- **Reflection** in line \(L\) through \(p\) perpendicular to \(u\): \(F_L(x) = x - \frac{2(x-p)\cdot u}{|u|^2}u\).
-- **Glide reflection**: \(G_{u,L} = T_u \circ F_L = F_L \circ T_u\) when \(L\) is parallel to \(u\).
+- <strong>Identity</strong>: \(I(x) = x\).
+- <strong>Translation</strong>: \(T_u(x) = x + u\).
+- <strong>Rotation</strong> about \(p\) by \(\theta\): \(R_{p,\theta}(x) = p + R_\theta(x-p)\) where \(R_\theta = \begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}\).
+- <strong>Reflection</strong> in line \(L\) through \(p\) perpendicular to \(u\): \(F_L(x) = x - \frac{2(x-p)\cdot u}{|u|^2}u\).
+- <strong>Glide reflection</strong>: \(G_{u,L} = T_u \circ F_L = F_L \circ T_u\) when \(L\) is parallel to \(u\).
 
 Translations, rotations preserve orientation; reflections, glide reflections reverse it.
 
@@ -407,20 +407,20 @@ Several important projections map parts of \(S^2\) to flat regions. Each has dis
 
 No single projection can faithfully represent all properties of the sphere on a flat map — there is always some distortion. The choice of projection depends on which property one wishes to preserve: area, angle, or straightness of geodesics.
 
-**Orthogonal Projection:** The map \(\phi: H \to D\) from the upper hemisphere \(H\) to the unit disc \(D\) given by \(\phi(x,y,z) = (x,y)\). The inverse is \(\psi(u,v) = (u, v, \sqrt{1-u^2-v^2})\).
+<strong>Orthogonal Projection:</strong> The map \(\phi: H \to D\) from the upper hemisphere \(H\) to the unit disc \(D\) given by \(\phi(x,y,z) = (x,y)\). The inverse is \(\psi(u,v) = (u, v, \sqrt{1-u^2-v^2})\).
 
-**Lambert Cylindrical Equal-Area Projection:** The map \(\phi: S \to R\) (where \(S = S^2 \setminus \{\pm(0,0,1)\}\) and \(R\) is the rectangle \([0,2\pi)\times[-1,1]\)) given by projecting radially outward from the \(z\)-axis to the cylinder \(x^2+y^2=1\), then unrolling. The formula is \(\phi\!\left(\sqrt{1-z^2}\cos\theta, \sqrt{1-z^2}\sin\theta, z\right) = (\theta, z)\).
+<strong>Lambert Cylindrical Equal-Area Projection:</strong> The map \(\phi: S \to R\) (where \(S = S^2 \setminus \{\pm(0,0,1)\}\) and \(R\) is the rectangle \([0,2\pi)\times[-1,1]\)) given by projecting radially outward from the \(z\)-axis to the cylinder \(x^2+y^2=1\), then unrolling. The formula is \(\phi\!\left(\sqrt{1-z^2}\cos\theta, \sqrt{1-z^2}\sin\theta, z\right) = (\theta, z)\).
 
 <div class="theorem"><strong>Theorem 2.45 (Lambert Preserves Area):</strong> The Lambert cylindrical equal-area projection preserves area.</div>
 
-**Gnomonic Projection:** The map \(\phi: H \to \mathbb{R}^2\) (where \(H\) is the open upper hemisphere) given by projecting radially from the origin to the plane \(z = 1\):
+<strong>Gnomonic Projection:</strong> The map \(\phi: H \to \mathbb{R}^2\) (where \(H\) is the open upper hemisphere) given by projecting radially from the origin to the plane \(z = 1\):
 \[ \phi(x,y,z) = \left(\frac{x}{z}, \frac{y}{z}\right). \]
 
 <div class="theorem"><strong>Theorem 2.49:</strong> The gnomonic projection maps great circles (intersected with \(H\)) to straight lines in \(\mathbb{R}^2\).</div>
 
 This is why the gnomonic projection is used in navigation charts where straight-line paths represent great-circle routes.
 
-**Stereographic Projection:** The map \(\phi: S^2 \setminus \{(0,0,1)\} \to \mathbb{R}^2\) given by projecting through the north pole \((0,0,1)\) to the equatorial plane \(z=0\):
+<strong>Stereographic Projection:</strong> The map \(\phi: S^2 \setminus \{(0,0,1)\} \to \mathbb{R}^2\) given by projecting through the north pole \((0,0,1)\) to the equatorial plane \(z=0\):
 
 ![Stereographic projection: from north pole N, point P on sphere maps to σ(P) on the equatorial plane ℂ](/static/pics/pmath321/stereographic-projection.svg)
 \[ \phi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right), \qquad \psi(u,v) = \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1}\right). \]
@@ -695,14 +695,14 @@ The Poincaré disc is one of several equivalent models.
 
 Each model of the hyperbolic plane emphasizes a different aspect of its geometry. Just as no single map projection faithfully represents the sphere, no single model of \(\mathbb{H}^2\) simultaneously preserves angles, distances, and the appearance of geodesics as straight lines. The choice of model is a matter of which properties are most useful for the task at hand.
 
-**Poincaré Upper Half-Plane Model:** Let \(\mathbb{U}^2 = \{(x,y) \mid y > 0\}\). Let \(C = C_E((0,1), \sqrt{2})\) and \(L\) be the \(x\)-axis; then \(S = F_L \circ F_C\) maps \(\mathbb{H}^2\) to \(\mathbb{U}^2\). In \(\mathbb{U}^2\), the metric is \(ds = \frac{d_E s}{y}\). Geodesics are vertical lines and upper semicircles with centres on the \(x\)-axis. Angles are Euclidean.
+<strong>Poincaré Upper Half-Plane Model:</strong> Let \(\mathbb{U}^2 = \{(x,y) \mid y > 0\}\). Let \(C = C_E((0,1), \sqrt{2})\) and \(L\) be the \(x\)-axis; then \(S = F_L \circ F_C\) maps \(\mathbb{H}^2\) to \(\mathbb{U}^2\). In \(\mathbb{U}^2\), the metric is \(ds = \frac{d_E s}{y}\). Geodesics are vertical lines and upper semicircles with centres on the \(x\)-axis. Angles are Euclidean.
 
-**Minkowski (Hyperboloid) Model:** Define the Minkowski quadratic form \(Q(x,y,t) = x^2 + y^2 - t^2\) on \(\mathbb{R}^3\). The model is the upper sheet of the hyperboloid:
+<strong>Minkowski (Hyperboloid) Model:</strong> Define the Minkowski quadratic form \(Q(x,y,t) = x^2 + y^2 - t^2\) on \(\mathbb{R}^3\). The model is the upper sheet of the hyperboloid:
 \[ \mathbb{M}^2 = \left\{ (x,y,t) \in \mathbb{R}^3 \mid x^2 + y^2 - t^2 = -1,\; t > 0 \right\}. \]
 A stereographic-like projection from \((0,0,-1)\) maps \(\mathbb{M}^2\) to \(\mathbb{H}^2\). Geodesics in \(\mathbb{M}^2\) are intersections with planes through the origin.
 
 The Minkowski model makes explicit the parallel with spherical geometry: just as \(S^2\) is the set of unit vectors for the Euclidean inner product, \(\mathbb{M}^2\) is the set of "unit vectors" for the Minkowski inner product \(\langle (x,y,t), (x',y',t') \rangle = xx' + yy' - tt'\). The sign change in the time coordinate is precisely what switches from positive to negative curvature.
 
-**Klein Model:** The unit disc \(\mathbb{K}^2 = \{(x,y) \mid x^2+y^2 < 1\}\) with a different metric defined so that the gnomic projection from \(\mathbb{M}^2\) is an isometry. In the Klein model, geodesics are Euclidean straight-line segments, but angles are not the same as Euclidean angles.
+<strong>Klein Model:</strong> The unit disc \(\mathbb{K}^2 = \{(x,y) \mid x^2+y^2 < 1\}\) with a different metric defined so that the gnomic projection from \(\mathbb{M}^2\) is an isometry. In the Klein model, geodesics are Euclidean straight-line segments, but angles are not the same as Euclidean angles.
 
 The three disc/plane models (Poincaré disc, upper half-plane, Klein) are conformally, isometrically, or projectively equivalent to each other, each highlighting different geometric properties. The Poincaré disc and upper half-plane are conformal (angle-preserving); the Klein model has straight-line geodesics. All satisfy the same abstract axioms of hyperbolic geometry, including the negation of Euclid's parallel postulate: through any point not on a given line, there are infinitely many lines parallel to (not intersecting) the given line.

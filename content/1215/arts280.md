@@ -15,13 +15,13 @@ Here is the truth that too many textbooks obscure: ARTS 280 is not a math course
 
 ## The Mean as a First Example
 
-Consider the **mean**, or arithmetic average. Everyone knows how to calculate an average — you add up all the scores and divide by how many there are. In statistical notation this is written:
+Consider the <strong>mean</strong>, or arithmetic average. Everyone knows how to calculate an average — you add up all the scores and divide by how many there are. In statistical notation this is written:
 
 \[ \bar{x} = \frac{\sum x_i}{N} \]
 
 Breaking this down: \(\bar{x}\) (called "x-bar") is the notation for the sample mean, the bar over any letter indicating an average. The capital Greek letter \(\Sigma\) (sigma) is the summation sign and means simply "add up everything that follows." The \(x_i\) refers to each individual score in the sample. Capital \(N\) is the total sample size. So the whole formula is just saying: add up all the individual scores and divide by the total number of scores. That is all an average is. The formula makes it look imposing, but the underlying instruction is something you have been doing since primary school.
 
-Similarly, the **standard deviation** — the average spread of scores around the mean — is written:
+Similarly, the <strong>standard deviation</strong> — the average spread of scores around the mean — is written:
 
 \[ s_x = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}} \]
 
@@ -29,7 +29,7 @@ Again, this formula provides a set of instructions: for each score, find how far
 
 ## The Summation Sign
 
-Because \(\Sigma\) appears in so many statistical formulas, it deserves special attention. Capital sigma means one thing and one thing only: **add**. When you see it followed by a quantity, you are being instructed to sum that quantity across all members of the sample. In formal notation, \(\sum_{i=1}^{n} x_i\) says to start at the first observation (\(i=1\)) and sum through to the last (\(i=n\)). In practice, in Arts 280, we will always be adding up everything in the sample, so the subscript and superscript on sigma become somewhat ceremonial. They will be progressively dropped as the course proceeds and the intent becomes obvious from context.
+Because \(\Sigma\) appears in so many statistical formulas, it deserves special attention. Capital sigma means one thing and one thing only: <strong>add</strong>. When you see it followed by a quantity, you are being instructed to sum that quantity across all members of the sample. In formal notation, \(\sum_{i=1}^{n} x_i\) says to start at the first observation (\(i=1\)) and sum through to the last (\(i=n\)). In practice, in Arts 280, we will always be adding up everything in the sample, so the subscript and superscript on sigma become somewhat ceremonial. They will be progressively dropped as the course proceeds and the intent becomes obvious from context.
 
 One important distinction: \(\sum x_i^2\) means "square each score and then add them all up," whereas \(\left(\sum x_i\right)^2\) means "add all the scores first and then square the total." These are not the same thing and this distinction comes up repeatedly when computing variances and other statistics.
 
@@ -45,7 +45,7 @@ Sample statistics — quantities calculated from the data — use Roman letters:
 
 ## Why Arts Students Need Statistics
 
-Statistics is required in a remarkably wide range of university programs — arts and business, knowledge integration, social development studies, sociology, economics, environmental science, health sciences, and many others. There is a good reason for this breadth. **Statistics** is the science of making sense of quantitative evidence, patterns, and trends. In virtually every career where decisions need to be justified and outcomes need to be evaluated, someone has to deal with numbers — and statistics is the toolkit for doing so responsibly.
+Statistics is required in a remarkably wide range of university programs — arts and business, knowledge integration, social development studies, sociology, economics, environmental science, health sciences, and many others. There is a good reason for this breadth. <strong>Statistics</strong> is the science of making sense of quantitative evidence, patterns, and trends. In virtually every career where decisions need to be justified and outcomes need to be evaluated, someone has to deal with numbers — and statistics is the toolkit for doing so responsibly.
 
 If you are a humanities student wondering what statistics has to do with philosophy or fine arts, the practical answer is that most Arts students are also in Arts and Business, signaling an intent to work in an organizational context. Businesses, non-profits, governments, hospitals, and universities all generate data and make decisions based on it. Someone needs to assess consumer demand, measure customer satisfaction, track employee morale, distinguish demographic trends, evaluate program outcomes. Statistics is the tool for all of this. Even as a supervisor or manager rather than a hands-on analyst, you need enough statistical literacy to understand what a consultant's report is actually saying — and to know when it is misleading you.
 
@@ -65,23 +65,23 @@ In ARTS 280, all three branches are covered, roughly in this order. Descriptive 
 
 ## The Research Cycle
 
-Statistics does not operate in isolation. It fits within a broader **research cycle** that begins with **problem formulation** or theory, moves through **data collection**, **analysis**, and **interpretation**, and then feeds back into new questions and theories. Statistics sits at the analysis stage. Understanding this context matters because it clarifies what statistics can and cannot do: it can analyze information that has been collected, but it cannot compensate for a poorly designed study or a badly worded question. The quality of conclusions is bounded by the quality of the data.
+Statistics does not operate in isolation. It fits within a broader <strong>research cycle</strong> that begins with <strong>problem formulation</strong> or theory, moves through <strong>data collection</strong>, <strong>analysis</strong>, and <strong>interpretation</strong>, and then feeds back into new questions and theories. Statistics sits at the analysis stage. Understanding this context matters because it clarifies what statistics can and cannot do: it can analyze information that has been collected, but it cannot compensate for a poorly designed study or a badly worded question. The quality of conclusions is bounded by the quality of the data.
 
 ## Populations and Samples
 
-One of the most important conceptual distinctions in statistics is between a **population** and a **sample**.
+One of the most important conceptual distinctions in statistics is between a <strong>population</strong> and a <strong>sample</strong>.
 
 <div class="definition"><strong>Population:</strong> The entire set of elements about which conclusions are desired. This could be all Canadian adults, all employees of a particular company, all sales transactions in a given quarter, or any other complete group of interest.</div>
 
 <div class="definition"><strong>Sample:</strong> A subset of the population that is actually measured. Because studying an entire population is almost always prohibitively expensive or logistically impossible, research is conducted on samples with the goal of inferring population characteristics from sample results.</div>
 
-A **random sample** is one in which every member of the population has a known, non-zero chance of being selected. Random sampling is the basis for legitimate inference, because it ensures that no systematic bias governs who ends up in the sample. Without random sampling, the connection between sample and population becomes scientifically dubious.
+A <strong>random sample</strong> is one in which every member of the population has a known, non-zero chance of being selected. Random sampling is the basis for legitimate inference, because it ensures that no systematic bias governs who ends up in the sample. Without random sampling, the connection between sample and population becomes scientifically dubious.
 
 ## Hypotheses, Variables, and Measurement Levels
 
-A **hypothesis** in statistics is a testable proposition specifying a relationship between at least two variables. For example: "Fear of crime among Canadians will decrease as violent crime rates decline." This hypothesis involves two variables — fear of crime and violent crime rate. The **independent variable** is the one theorized to be doing the influencing (violent crime rate in this example), and the **dependent variable** is the outcome being influenced (fear of crime).
+A <strong>hypothesis</strong> in statistics is a testable proposition specifying a relationship between at least two variables. For example: "Fear of crime among Canadians will decrease as violent crime rates decline." This hypothesis involves two variables — fear of crime and violent crime rate. The <strong>independent variable</strong> is the one theorized to be doing the influencing (violent crime rate in this example), and the <strong>dependent variable</strong> is the outcome being influenced (fear of crime).
 
-Data on variables can be measured at different levels, and these **measurement levels** are critically important because they determine which statistical procedures can legitimately be applied.
+Data on variables can be measured at different levels, and these <strong>measurement levels</strong> are critically important because they determine which statistical procedures can legitimately be applied.
 
 <div class="definition"><strong>Nominal level:</strong> Numbers (or labels) that distinguish qualitatively different categories with no implied ordering. Religion, region, and political party affiliation are nominal level variables. Arithmetic operations on these numbers are meaningless.</div>
 
@@ -99,33 +99,33 @@ The difference between discrete (nominal and ordinal) and continuous data is lik
 
 Descriptive statistics is the first and most commonly encountered branch of statistics. Its purpose is to summarize and display data in ways that reveal patterns. These are the statistics you already encounter daily: bar charts in news reports, averages quoted in financial commentary, pie charts in annual reports. Descriptive statistics are tremendously useful, but carry one important limitation: they describe only the sample they are based on. They say nothing directly about the population.
 
-The starting point for virtually all statistical work is the **frequency distribution** — a table or display showing how often each value of a variable occurs in the sample.
+The starting point for virtually all statistical work is the <strong>frequency distribution</strong> — a table or display showing how often each value of a variable occurs in the sample.
 
 <div class="definition"><strong>Frequency distribution:</strong> A tabular or graphical arrangement showing each possible value (or range of values) of a variable alongside the count of observations taking that value.</div>
 
-From the raw frequency counts, two derived measures are immediately useful. A **relative frequency** (or proportion) is the count for a category divided by the total sample size \(N\), giving a number between 0 and 1 that represents the fraction of the sample in that category. A **percentage** is simply the proportion multiplied by 100. When a variable has many possible values, constructing a grouped frequency distribution — combining adjacent values into intervals or classes — makes the distribution easier to interpret.
+From the raw frequency counts, two derived measures are immediately useful. A <strong>relative frequency</strong> (or proportion) is the count for a category divided by the total sample size \(N\), giving a number between 0 and 1 that represents the fraction of the sample in that category. A <strong>percentage</strong> is simply the proportion multiplied by 100. When a variable has many possible values, constructing a grouped frequency distribution — combining adjacent values into intervals or classes — makes the distribution easier to interpret.
 
 ## Graphical Displays
 
-For discrete-level variables (nominal and ordinal), the appropriate graphical display is typically a **bar chart**, in which separate, non-touching bars represent each category, with bar height proportional to frequency or percentage. A **pie chart** is an alternative for nominal data, partitioning a circle into slices proportional to each category's share of the total.
+For discrete-level variables (nominal and ordinal), the appropriate graphical display is typically a <strong>bar chart</strong>, in which separate, non-touching bars represent each category, with bar height proportional to frequency or percentage. A <strong>pie chart</strong> is an alternative for nominal data, partitioning a circle into slices proportional to each category's share of the total.
 
-For continuous-level variables, the appropriate display is a **histogram**. Unlike a bar chart, histogram bars are adjacent to one another, reflecting the fact that the underlying variable is continuous — there are no natural gaps between the intervals. The width of each bar reflects the class interval, and the area of each bar is proportional to the frequency of observations in that interval. A related display is the **frequency polygon**, which connects the midpoints of each bar's top edge with straight line segments, providing a smoother representation of the distribution's shape.
+For continuous-level variables, the appropriate display is a <strong>histogram</strong>. Unlike a bar chart, histogram bars are adjacent to one another, reflecting the fact that the underlying variable is continuous — there are no natural gaps between the intervals. The width of each bar reflects the class interval, and the area of each bar is proportional to the frequency of observations in that interval. A related display is the <strong>frequency polygon</strong>, which connects the midpoints of each bar's top edge with straight line segments, providing a smoother representation of the distribution's shape.
 
-A **stem-and-leaf plot** is a particularly useful hybrid display that retains the original data values while also showing the overall shape of the distribution. Each observation is split into a "stem" (typically the leading digit or digits) and a "leaf" (the final digit), allowing the full data set to be reconstructed from the display.
+A <strong>stem-and-leaf plot</strong> is a particularly useful hybrid display that retains the original data values while also showing the overall shape of the distribution. Each observation is split into a "stem" (typically the leading digit or digits) and a "leaf" (the final digit), allowing the full data set to be reconstructed from the display.
 
-For comparing two discrete variables simultaneously, a **cross-tabular (contingency) table** cross-matches the categories of both variables in a grid, with cell entries being the count of observations meeting both conditions. The conventional arrangement in ARTS 280 places the dependent variable as the row variable and the independent variable as the column variable, with percentages computed within each column (i.e., within each category of the independent variable) to allow comparison across groups.
+For comparing two discrete variables simultaneously, a <strong>cross-tabular (contingency) table</strong> cross-matches the categories of both variables in a grid, with cell entries being the count of observations meeting both conditions. The conventional arrangement in ARTS 280 places the dependent variable as the row variable and the independent variable as the column variable, with percentages computed within each column (i.e., within each category of the independent variable) to allow comparison across groups.
 
 ## Percentage Change, Ratios, and Rates
 
 Beyond simple frequencies and proportions, descriptive statistics includes several tools for comparing quantities across groups or over time.
 
-**Percentage change** measures how much a quantity has shifted from one time period (or group) to another. It is calculated as:
+<strong>Percentage change</strong> measures how much a quantity has shifted from one time period (or group) to another. It is calculated as:
 
 \[ \%\Delta = \frac{x_{\text{later}} - x_{\text{earlier}}}{x_{\text{earlier}}} \times 100 \]
 
-A **ratio** expresses the relative size of two quantities — for instance, the number of young adult offenders for every older adult offender. Ratios are purely comparative and do not involve population size.
+A <strong>ratio</strong> expresses the relative size of two quantities — for instance, the number of young adult offenders for every older adult offender. Ratios are purely comparative and do not involve population size.
 
-A **rate** standardizes a count relative to some base population, typically expressed per 1,000 or per 100,000 members of that population. Rates are essential for making valid comparisons between groups of very different sizes — the sheer count of crimes in Ontario will always exceed that in Prince Edward Island simply because Ontario has far more people.
+A <strong>rate</strong> standardizes a count relative to some base population, typically expressed per 1,000 or per 100,000 members of that population. Rates are essential for making valid comparisons between groups of very different sizes — the sheer count of crimes in Ontario will always exceed that in Prince Edward Island simply because Ontario has far more people.
 
 ---
 
@@ -133,9 +133,9 @@ A **rate** standardizes a count relative to some base population, typically expr
 
 ## The Moments of a Distribution
 
-No single number perfectly captures an entire distribution, but statisticians have identified four dimensions — called the **moments of the distribution** — that together provide a comprehensive description of its shape and characteristics.
+No single number perfectly captures an entire distribution, but statisticians have identified four dimensions — called the <strong>moments of the distribution</strong> — that together provide a comprehensive description of its shape and characteristics.
 
-The four moments are: (1) **central tendency**, (2) **dispersion**, (3) **skewness**, and (4) **kurtosis**. Central tendency and dispersion are by far the most important and are used in virtually every statistical procedure in the course. Skewness is easy to compute and provides useful additional information. Kurtosis — the degree to which a distribution is flat or peaked — is definitionally important but not calculated by hand in ARTS 280.
+The four moments are: (1) <strong>central tendency</strong>, (2) <strong>dispersion</strong>, (3) <strong>skewness</strong>, and (4) <strong>kurtosis</strong>. Central tendency and dispersion are by far the most important and are used in virtually every statistical procedure in the course. Skewness is easy to compute and provides useful additional information. Kurtosis — the degree to which a distribution is flat or peaked — is definitionally important but not calculated by hand in ARTS 280.
 
 ## Measures of Central Tendency
 
@@ -147,9 +147,9 @@ Central tendency refers to the single most representative score in a distributio
 
 <div class="definition"><strong>Mean:</strong> The arithmetic average, computed as the sum of all scores divided by the number of scores: \(\bar{x} = \frac{\sum x_i}{N}\). The mean is appropriate only for continuous (interval/ratio) data. It is the preferred measure of central tendency for inferential statistics because it is the most statistically efficient — it accounts for every score and its exact value, minimizing sampling bias relative to the population mean \(\mu\).</div>
 
-The mean is preferred for three reasons: **bias** (the sample mean tends to be closer to the population mean than the sample median or mode), **efficiency** (deviations of sample means from the population mean tend to be smaller), and **consistency** (sample means converge on the population mean as sample size increases). For these reasons, whenever a variable is continuous, the mean is used as the starting point for almost all inferential tests.
+The mean is preferred for three reasons: <strong>bias</strong> (the sample mean tends to be closer to the population mean than the sample median or mode), <strong>efficiency</strong> (deviations of sample means from the population mean tend to be smaller), and <strong>consistency</strong> (sample means converge on the population mean as sample size increases). For these reasons, whenever a variable is continuous, the mean is used as the starting point for almost all inferential tests.
 
-One important practical note: the mean is sensitive to **outliers** — extreme scores that pull it toward them. An income distribution in which most people earn between \$30,000 and \$80,000 but a handful earn tens of millions will have a mean substantially above what most individuals actually earn. In such cases the median is a more representative measure of what a "typical" person experiences.
+One important practical note: the mean is sensitive to <strong>outliers</strong> — extreme scores that pull it toward them. An income distribution in which most people earn between \$30,000 and \$80,000 but a handful earn tens of millions will have a mean substantially above what most individuals actually earn. In such cases the median is a more representative measure of what a "typical" person experiences.
 
 ---
 
@@ -159,7 +159,7 @@ One important practical note: the mean is sensitive to **outliers** — extreme 
 
 Research questions in the social sciences, business, and related fields are typically derived from theory or existing observation. Basil Bernstein's theory of restricted and elaborated learning codes — proposed to explain why middle-class children in 1960s Britain tended to outperform working-class children academically — is a classic example. From such a theoretical proposition, a researcher derives specific, testable predictions about the relationship between measurable variables.
 
-In statistics, research questions are formalized as **statistical hypotheses**. The convention is to always work with exactly two hypotheses: the **null hypothesis** and the **alternative hypothesis**.
+In statistics, research questions are formalized as <strong>statistical hypotheses</strong>. The convention is to always work with exactly two hypotheses: the <strong>null hypothesis</strong> and the <strong>alternative hypothesis</strong>.
 
 <div class="definition"><strong>Null hypothesis (\(H_0\)):</strong> The default assumption that nothing is happening at the population level — no difference, no relationship, no change. Any observed pattern in the sample is attributed entirely to sampling error. The null hypothesis is what we assume to be true unless the data provide sufficient evidence to doubt it.</div>
 
@@ -169,7 +169,7 @@ This pairing is not optional or arbitrary — it is the logical structure of all
 
 ## Measurement Levels Redux
 
-Understanding measurement levels is so fundamental to choosing the correct statistical test that the point is worth reinforcing. The overarching distinction is between **discrete** (nominal and ordinal) and **continuous** (interval and ratio) measurement. Discrete variables limit the mathematical operations available; you cannot meaningfully compute an average region of residence or an average political party. Continuous variables open up the full range of arithmetic, including means, variances, and standard deviations.
+Understanding measurement levels is so fundamental to choosing the correct statistical test that the point is worth reinforcing. The overarching distinction is between <strong>discrete</strong> (nominal and ordinal) and <strong>continuous</strong> (interval and ratio) measurement. Discrete variables limit the mathematical operations available; you cannot meaningfully compute an average region of residence or an average political party. Continuous variables open up the full range of arithmetic, including means, variances, and standard deviations.
 
 Throughout the remainder of ARTS 280, measurement level will be the first question to ask when confronted with any new statistical situation. It determines whether a mode or mean is appropriate, whether a bar chart or histogram is correct, and whether a chi-square test or a t-test is required.
 
@@ -185,13 +185,13 @@ Two distributions can have identical means yet be profoundly different in charac
 
 ## Measures of Dispersion for Discrete Data
 
-For nominal level variables, the **Index of Diversity** (ID) measures how spread out observations are across categories. If everyone in the sample fell into a single category, the ID would equal zero (no diversity). If observations were spread perfectly evenly across all categories, the ID would approach its maximum value near 1. A variant, the **Index of Qualitative Variation** (IQV), standardizes the ID by dividing it by its theoretical maximum, producing a value between 0 and 1 regardless of the number of categories, which facilitates comparison across variables with different numbers of groups.
+For nominal level variables, the <strong>Index of Diversity</strong> (ID) measures how spread out observations are across categories. If everyone in the sample fell into a single category, the ID would equal zero (no diversity). If observations were spread perfectly evenly across all categories, the ID would approach its maximum value near 1. A variant, the <strong>Index of Qualitative Variation</strong> (IQV), standardizes the ID by dividing it by its theoretical maximum, producing a value between 0 and 1 regardless of the number of categories, which facilitates comparison across variables with different numbers of groups.
 
 ## Measures of Dispersion for Continuous Data
 
-For continuous variables, the most important measures of dispersion are the **variance** and its square root, the **standard deviation**.
+For continuous variables, the most important measures of dispersion are the <strong>variance</strong> and its square root, the <strong>standard deviation</strong>.
 
-The computational path to the variance begins with the concept of a **deviation score**: the distance of each individual observation from the mean, expressed as \((x_i - \bar{x})\). Summing these deviations directly produces zero (because positive and negative deviations cancel), which is why they are squared before summing.
+The computational path to the variance begins with the concept of a <strong>deviation score</strong>: the distance of each individual observation from the mean, expressed as \((x_i - \bar{x})\). Summing these deviations directly produces zero (because positive and negative deviations cancel), which is why they are squared before summing.
 
 <div class="definition"><strong>Variance (\(s^2\)):</strong> The average of the squared deviation scores:
 \[ s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1} \]
@@ -217,19 +217,19 @@ For grouped data (where scores have been organized into class intervals), weight
 
 When a continuous variable has many distinct values — income to the nearest dollar, age to the nearest year, hours of television watched per week — it is usually necessary to group the data into intervals before constructing a display. The goal is to choose a number of class intervals (typically somewhere between five and fifteen) that is small enough to reveal overall patterns but large enough to preserve meaningful variation.
 
-Each class interval has a **lower class limit**, an **upper class limit**, a **midpoint**, and, importantly, a **true lower limit** and **true upper limit** that close the gap between adjacent intervals. The true limits extend halfway to the next class boundary, ensuring that no score falls between intervals.
+Each class interval has a <strong>lower class limit</strong>, an <strong>upper class limit</strong>, a <strong>midpoint</strong>, and, importantly, a <strong>true lower limit</strong> and <strong>true upper limit</strong> that close the gap between adjacent intervals. The true limits extend halfway to the next class boundary, ensuring that no score falls between intervals.
 
 A histogram constructed from grouped continuous data differs from a bar chart in that the bars touch one another — there are no gaps between classes because the underlying variable is continuous. The area of each bar represents the proportion of the total sample falling in that interval.
 
 ## Distribution Shapes
 
-Histograms and frequency polygons reveal the **shape** of a distribution, which is itself meaningful statistical information. The key dimensions of shape relate to the third and fourth moments of the distribution.
+Histograms and frequency polygons reveal the <strong>shape</strong> of a distribution, which is itself meaningful statistical information. The key dimensions of shape relate to the third and fourth moments of the distribution.
 
-**Skewness** describes asymmetry. A **positively skewed** distribution has a long right tail — most observations cluster at the lower values with a few extreme high values (income in most countries is a classic example). A **negatively skewed** distribution has a long left tail — most observations cluster at higher values with a few extreme low values (age in aging populations like contemporary Canada tends toward negative skew). In a skewed distribution, the mean is pulled toward the tail, making it a less representative summary than the median.
+<strong>Skewness</strong> describes asymmetry. A <strong>positively skewed</strong> distribution has a long right tail — most observations cluster at the lower values with a few extreme high values (income in most countries is a classic example). A <strong>negatively skewed</strong> distribution has a long left tail — most observations cluster at higher values with a few extreme low values (age in aging populations like contemporary Canada tends toward negative skew). In a skewed distribution, the mean is pulled toward the tail, making it a less representative summary than the median.
 
-**Kurtosis** describes whether the distribution is sharply peaked with thin tails (**leptokurtic**) or flat with heavy tails (**platykurtic**), relative to a normal distribution (**mesokurtic**). This is definitional knowledge in ARTS 280 rather than a calculation you will be asked to perform.
+<strong>Kurtosis</strong> describes whether the distribution is sharply peaked with thin tails (<strong>leptokurtic</strong>) or flat with heavy tails (<strong>platykurtic</strong>), relative to a normal distribution (<strong>mesokurtic</strong>). This is definitional knowledge in ARTS 280 rather than a calculation you will be asked to perform.
 
-The idealized shape underlying most of inferential statistics is the **normal distribution** — perfectly symmetric, unimodal, and bell-shaped — which will occupy center stage from Module 3 onwards.
+The idealized shape underlying most of inferential statistics is the <strong>normal distribution</strong> — perfectly symmetric, unimodal, and bell-shaped — which will occupy center stage from Module 3 onwards.
 
 ---
 
@@ -249,23 +249,23 @@ The result is a large negative percentage, confirming that older adults commit s
 
 ## Z-Scores and Standardization
 
-One of the most important transformations in all of statistics is the conversion of raw scores into **z-scores**, also called standardized scores.
+One of the most important transformations in all of statistics is the conversion of raw scores into <strong>z-scores</strong>, also called standardized scores.
 
 <div class="definition"><strong>Z-score:</strong> A standardized expression of a raw score indicating how many standard deviations above or below the mean the score falls:
 \[ z = \frac{x_i - \bar{x}}{s} \]
 Positive z-scores indicate scores above the mean; negative z-scores indicate scores below the mean. The magnitude indicates distance from the mean in standard deviation units.</div>
 
-The transformative property of z-scores is that any continuous distribution, regardless of its original units, becomes a **z-distribution** with a mean of zero and a standard deviation (and variance) of one. This common metric allows three powerful uses:
+The transformative property of z-scores is that any continuous distribution, regardless of its original units, becomes a <strong>z-distribution</strong> with a mean of zero and a standard deviation (and variance) of one. This common metric allows three powerful uses:
 
-First, **comparing across different scales**: A student scoring 75 on an exam with a mean of 70 and standard deviation of 10 has a z-score of 0.5. Another student scoring 55 on an exam with a mean of 40 and standard deviation of 20 has a z-score of 0.75. Despite scoring lower in absolute terms, the second student performed better relative to their peers.
+First, <strong>comparing across different scales</strong>: A student scoring 75 on an exam with a mean of 70 and standard deviation of 10 has a z-score of 0.5. Another student scoring 55 on an exam with a mean of 40 and standard deviation of 20 has a z-score of 0.75. Despite scoring lower in absolute terms, the second student performed better relative to their peers.
 
-Second, **combining different scales**: To create a composite score combining income (in thousands of dollars) and years of education, simply adding the two would be meaningless because they have wildly different scales and units. Converting both to z-scores first and then adding produces a fair composite that weights each dimension equally.
+Second, <strong>combining different scales</strong>: To create a composite score combining income (in thousands of dollars) and years of education, simply adding the two would be meaningless because they have wildly different scales and units. Converting both to z-scores first and then adding produces a fair composite that weights each dimension equally.
 
-Third, and most importantly for inferential statistics: **estimating exact probabilities** when the underlying distribution is normal. This application will be developed fully in the probability lessons.
+Third, and most importantly for inferential statistics: <strong>estimating exact probabilities</strong> when the underlying distribution is normal. This application will be developed fully in the probability lessons.
 
 ## Skewness
 
-The formula for the **skewness coefficient** is:
+The formula for the <strong>skewness coefficient</strong> is:
 
 \[ \text{Skewness} = \frac{N \sum (x_i - \bar{x})^3}{(N-1)(N-2)s^3} \]
 
@@ -273,11 +273,11 @@ A skewness of zero indicates a perfectly symmetrical distribution. Positive valu
 
 ## Percentiles and Boxplots
 
-A **percentile** indicates the value below which a specified percentage of observations fall. The 50th percentile is, by definition, the median. The 25th percentile is the **first quartile** (\(Q_1\)) and the 75th percentile is the **third quartile** (\(Q_3\)).
+A <strong>percentile</strong> indicates the value below which a specified percentage of observations fall. The 50th percentile is, by definition, the median. The 25th percentile is the <strong>first quartile</strong> (\(Q_1\)) and the 75th percentile is the <strong>third quartile</strong> (\(Q_3\)).
 
-The **interquartile range (IQR)** is the distance between the first and third quartiles: \(\text{IQR} = Q_3 - Q_1\). It represents the spread of the middle 50 percent of the data and is resistant to the influence of extreme values.
+The <strong>interquartile range (IQR)</strong> is the distance between the first and third quartiles: \(\text{IQR} = Q_3 - Q_1\). It represents the spread of the middle 50 percent of the data and is resistant to the influence of extreme values.
 
-A **boxplot** (box-and-whisker plot) provides a compact graphical summary using five statistics: the minimum, \(Q_1\), the median, \(Q_3\), and the maximum. The box spans from \(Q_1\) to \(Q_3\) with a line at the median. Whiskers extend to the most extreme non-outlier values. Points beyond 1.5 times the IQR from either quartile are plotted individually as suspected outliers. Boxplots are particularly useful for comparing distributions across groups at a glance.
+A <strong>boxplot</strong> (box-and-whisker plot) provides a compact graphical summary using five statistics: the minimum, \(Q_1\), the median, \(Q_3\), and the maximum. The box spans from \(Q_1\) to \(Q_3\) with a line at the median. Whiskers extend to the most extreme non-outlier values. Points beyond 1.5 times the IQR from either quartile are plotted individually as suspected outliers. Boxplots are particularly useful for comparing distributions across groups at a glance.
 
 ---
 
@@ -285,7 +285,7 @@ A **boxplot** (box-and-whisker plot) provides a compact graphical summary using 
 
 ## Why Probability?
 
-Descriptive statistics can only describe the sample at hand. Inferential statistics aims to draw conclusions about the population. The bridge between sample and population is **probability**, because inference ultimately requires answering the question: how likely is it that the pattern I see in my sample is merely a chance result of the particular sample I happened to draw, rather than a real pattern in the population?
+Descriptive statistics can only describe the sample at hand. Inferential statistics aims to draw conclusions about the population. The bridge between sample and population is <strong>probability</strong>, because inference ultimately requires answering the question: how likely is it that the pattern I see in my sample is merely a chance result of the particular sample I happened to draw, rather than a real pattern in the population?
 
 <div class="definition"><strong>Probability:</strong> A number between 0 and 1 (or equivalently, between 0% and 100%) expressing the likelihood of a particular outcome occurring. It is computed as the number of ways the outcome of interest can occur divided by the total number of possible outcomes in the universe of possibilities.</div>
 
@@ -293,15 +293,15 @@ Probability is less about mathematics than about logical reasoning. The primary 
 
 ## Empirical and Theoretical Probability Distributions
 
-An **empirical probability distribution** is simply the relative frequency distribution derived from a sample. If a fair six-sided die is thrown 30 times, the observed proportions for each face constitute an empirical probability distribution. In the short run, due to sampling variability, these proportions will not be perfectly equal even for a fair die.
+An <strong>empirical probability distribution</strong> is simply the relative frequency distribution derived from a sample. If a fair six-sided die is thrown 30 times, the observed proportions for each face constitute an empirical probability distribution. In the short run, due to sampling variability, these proportions will not be perfectly equal even for a fair die.
 
-A **theoretical probability distribution**, by contrast, is the idealized distribution of outcomes we would expect based on the known properties of the process. For a fair six-sided die, the theoretical probability is 1/6 for each face. As the number of trials increases toward infinity, the empirical distribution converges on the theoretical distribution — this is the basis of the **law of large numbers**.
+A <strong>theoretical probability distribution</strong>, by contrast, is the idealized distribution of outcomes we would expect based on the known properties of the process. For a fair six-sided die, the theoretical probability is 1/6 for each face. As the number of trials increases toward infinity, the empirical distribution converges on the theoretical distribution — this is the basis of the <strong>law of large numbers</strong>.
 
 The connection to statistics: when we draw a random sample from a population, the sample's frequency distribution is an empirical probability distribution. The question of inference is whether the empirical distribution from our sample is consistent with a particular theoretical distribution assumed for the population.
 
 ## Chebyshev's Theorem
 
-Even when the shape of a population distribution is completely unknown, **Chebyshev's theorem** guarantees that for any distribution, at least \(1 - \frac{1}{k^2}\) of observations fall within \(k\) standard deviations of the mean. For \(k = 2\), at least 75% of observations fall within two standard deviations of the mean; for \(k = 3\), at least 89%.
+Even when the shape of a population distribution is completely unknown, <strong>Chebyshev's theorem</strong> guarantees that for any distribution, at least \(1 - \frac{1}{k^2}\) of observations fall within \(k\) standard deviations of the mean. For \(k = 2\), at least 75% of observations fall within two standard deviations of the mean; for \(k = 3\), at least 89%.
 
 The theorem is remarkable in requiring no assumptions about distributional shape. However, it provides only a lower bound on probability (a range), not an exact probability. More precise probability estimation requires additional assumptions about distributional shape.
 
@@ -311,17 +311,17 @@ The theorem is remarkable in requiring no assumptions about distributional shape
 
 ## The Normal Distribution
 
-The **normal distribution** is the most important theoretical probability distribution in statistics. It is:
+The <strong>normal distribution</strong> is the most important theoretical probability distribution in statistics. It is:
 
-- **Unimodal**: One peak in the center
-- **Symmetrical**: Perfectly balanced around the mean
-- **Bell-shaped**: With tails that extend toward (but never reach) zero in either direction
+- <strong>Unimodal</strong>: One peak in the center
+- <strong>Symmetrical</strong>: Perfectly balanced around the mean
+- <strong>Bell-shaped</strong>: With tails that extend toward (but never reach) zero in either direction
 
 Because of its symmetry, in a perfectly normal distribution the mean, median, and mode all coincide at the center.
 
 <div class="definition"><strong>Normal distribution:</strong> A theoretical probability distribution specified entirely by two parameters: its mean \(\mu\) and its standard deviation \(\sigma\). Any normally distributed variable can be transformed to a standard normal distribution with mean zero and standard deviation one via the z-score transformation.</div>
 
-The **standard normal distribution** is the normal distribution with \(\mu = 0\) and \(\sigma = 1\). Statistical tables (Appendix A in the course notes) tabulate exact probabilities — specifically, the proportion of the area under the normal curve — for every possible z-score value. For example, approximately 68% of observations in a normal distribution fall within one standard deviation of the mean, approximately 95% within two standard deviations, and approximately 99.7% within three standard deviations.
+The <strong>standard normal distribution</strong> is the normal distribution with \(\mu = 0\) and \(\sigma = 1\). Statistical tables (Appendix A in the course notes) tabulate exact probabilities — specifically, the proportion of the area under the normal curve — for every possible z-score value. For example, approximately 68% of observations in a normal distribution fall within one standard deviation of the mean, approximately 95% within two standard deviations, and approximately 99.7% within three standard deviations.
 
 Once a raw score has been converted to a z-score, Appendix A provides the exact probability of observing a score that extreme (or more extreme) under the assumption that the population is normally distributed.
 
@@ -331,7 +331,7 @@ Once a raw score has been converted to a z-score, Appendix A provides the exact 
 
 ## The Sampling Problem
 
-The fundamental problem of inference is this: any one sample drawn from a large population will, due to random variation, misrepresent the population to some degree. This misrepresentation is called **sampling error** — not an error in the sense of a mistake, but the unavoidable discrepancy between a sample statistic and the corresponding population parameter.
+The fundamental problem of inference is this: any one sample drawn from a large population will, due to random variation, misrepresent the population to some degree. This misrepresentation is called <strong>sampling error</strong> — not an error in the sense of a mistake, but the unavoidable discrepancy between a sample statistic and the corresponding population parameter.
 
 <div class="definition"><strong>Sampling error:</strong> The degree to which a sample statistic (such as the sample mean \(\bar{x}\)) departs from the corresponding population parameter (such as the population mean \(\mu\)) due to random variation in the selection of sample members.</div>
 
@@ -339,7 +339,7 @@ Larger samples have less sampling error on average, but even large samples are n
 
 ## The Central Limit Theorem
 
-Here is where things get genuinely remarkable. The **Central Limit Theorem (CLT)** is arguably the most important result in all of statistics, and it states:
+Here is where things get genuinely remarkable. The <strong>Central Limit Theorem (CLT)</strong> is arguably the most important result in all of statistics, and it states:
 
 <div class="definition"><strong>Central Limit Theorem:</strong> Regardless of the shape of the population distribution, the sampling distribution of sample means based on samples of sufficiently large size (generally \(n \geq 30\)) will be approximately normally distributed with:
 <ul style="margin-top: 0.5em;">
@@ -384,7 +384,7 @@ There is an inherent trade-off between the two: reducing \(\alpha\) (being more 
 
 ## One-Tailed and Two-Tailed Tests
 
-When the alternative hypothesis simply states that the population parameter differs from the null value (either direction), the test is **two-tailed** and the rejection region is split equally between both tails of the sampling distribution. When theory or prior evidence justifies predicting a specific direction of difference, the test is **one-tailed** and the entire rejection region is placed in the predicted tail.
+When the alternative hypothesis simply states that the population parameter differs from the null value (either direction), the test is <strong>two-tailed</strong> and the rejection region is split equally between both tails of the sampling distribution. When theory or prior evidence justifies predicting a specific direction of difference, the test is <strong>one-tailed</strong> and the entire rejection region is placed in the predicted tail.
 
 The critical values for two-tailed tests at the 95% confidence level are \(z = \pm 1.96\), and at 99% confidence are \(z = \pm 2.576\). For one-tailed tests at the same confidence levels, these become \(z = 1.645\) and \(z = 2.326\) respectively.
 
@@ -400,7 +400,7 @@ For example, to find the probability that a randomly selected NHL player earns a
 
 ## The t-Distribution
 
-When sample size is small (generally \(n < 30\)) and/or the population standard deviation is unknown, the CLT cannot be invoked. The sampling distribution of the mean in these circumstances is not the standard normal but rather the **t-distribution**, a family of symmetric bell-shaped distributions that differ from the normal in having heavier tails — they spread out more probability into the extreme regions, reflecting the greater uncertainty that comes with small samples.
+When sample size is small (generally \(n < 30\)) and/or the population standard deviation is unknown, the CLT cannot be invoked. The sampling distribution of the mean in these circumstances is not the standard normal but rather the <strong>t-distribution</strong>, a family of symmetric bell-shaped distributions that differ from the normal in having heavier tails — they spread out more probability into the extreme regions, reflecting the greater uncertainty that comes with small samples.
 
 <div class="definition"><strong>t-distribution:</strong> A family of theoretical probability distributions parameterized by <strong>degrees of freedom</strong> (\(df\)). As degrees of freedom increase (i.e., as sample size increases), the t-distribution approaches the standard normal distribution. Critical values from the t-distribution are larger than their normal counterparts, meaning it is harder to reject the null hypothesis with small samples.</div>
 
@@ -418,13 +418,13 @@ Before any inferential test can be conducted, the hypotheses must be formalized 
 
 Every significance test in ARTS 280 follows the same four-step structure:
 
-**Step 1:** State the null hypothesis (\(H_0\)) and the alternative hypothesis (\(H_1\)), specifying whether the test is one-tailed or two-tailed.
+<strong>Step 1:</strong> State the null hypothesis (\(H_0\)) and the alternative hypothesis (\(H_1\)), specifying whether the test is one-tailed or two-tailed.
 
-**Step 2:** Calculate the **test statistic** — a standardized value expressing how far the sample result departs from what the null hypothesis predicts, relative to the expected sampling variability.
+<strong>Step 2:</strong> Calculate the <strong>test statistic</strong> — a standardized value expressing how far the sample result departs from what the null hypothesis predicts, relative to the expected sampling variability.
 
-**Step 3:** Determine the **critical value** from the appropriate sampling distribution (z, t, F, or chi-square) at the chosen significance level (\(\alpha\)).
+<strong>Step 3:</strong> Determine the <strong>critical value</strong> from the appropriate sampling distribution (z, t, F, or chi-square) at the chosen significance level (\(\alpha\)).
 
-**Step 4:** Make a **decision**: if the test statistic falls in the rejection region (beyond the critical value), reject \(H_0\) and conclude in favour of \(H_1\) with \((1 - \alpha) \times 100\%\) confidence. If not, fail to reject \(H_0\).
+<strong>Step 4:</strong> Make a <strong>decision</strong>: if the test statistic falls in the rejection region (beyond the critical value), reject \(H_0\) and conclude in favour of \(H_1\) with \((1 - \alpha) \times 100\%\) confidence. If not, fail to reject \(H_0\).
 
 It cannot be overstated: failing to reject the null hypothesis does not prove it is true. Statistics never proves; it either provides grounds for rejection or fails to do so.
 
@@ -434,7 +434,7 @@ It cannot be overstated: failing to reject the null hypothesis does not prove it
 
 ## The Logic of Confidence Intervals
 
-A **point estimate** — the sample mean or sample proportion — provides a single best guess for the population parameter, but without any indication of how precise that guess is. A **confidence interval** improves on this by providing a range of plausible values for the population parameter along with a stated level of confidence.
+A <strong>point estimate</strong> — the sample mean or sample proportion — provides a single best guess for the population parameter, but without any indication of how precise that guess is. A <strong>confidence interval</strong> improves on this by providing a range of plausible values for the population parameter along with a stated level of confidence.
 
 <div class="definition"><strong>Confidence interval:</strong> An interval computed from sample data within which the population parameter is estimated to fall with a specified probability (the confidence level, typically 95% or 99%). The interval is centered on the point estimate and extends a certain distance on either side based on the standard error and the appropriate critical value.</div>
 
@@ -444,7 +444,7 @@ For a large-sample confidence interval for the population mean \(\mu\):
 
 where \(z^*\) is the critical value from the standard normal distribution (1.96 for 95% confidence, 2.576 for 99% confidence).
 
-For a small-sample confidence interval for \(\mu\), replace \(z^*\) with \(t^*\), the critical value from the t-distribution with \(n-1\) degrees of freedom:
+For a small-sample confidence interval for \(\mu\), replace \(z^<em>\) with \(t^</em>\), the critical value from the t-distribution with \(n-1\) degrees of freedom:
 
 \[ \bar{x} \pm t^* \cdot \frac{s}{\sqrt{n}} \]
 
@@ -458,7 +458,7 @@ There is an important relationship between confidence and precision: widening th
 
 ## Significance Tests for a Single Mean (Z-test)
 
-The Z-significance test asks: what is the probability of observing a sample mean as extreme as \(\bar{x}\) if the null hypothesis value \(\mu_0\) is the true population mean? If this probability (the **p-value**) is small enough — specifically, below the chosen \(\alpha\) — we reject the null hypothesis.
+The Z-significance test asks: what is the probability of observing a sample mean as extreme as \(\bar{x}\) if the null hypothesis value \(\mu_0\) is the true population mean? If this probability (the <strong>p-value</strong>) is small enough — specifically, below the chosen \(\alpha\) — we reject the null hypothesis.
 
 The test statistic is:
 
@@ -466,7 +466,7 @@ The test statistic is:
 
 This converts the sample mean into a z-score expressing how many standard errors it sits above or below the hypothesized population mean. If the null hypothesis is true, this z-score should be close to zero. If it falls in the extreme tails, the null hypothesis becomes implausible.
 
-**Example**: Statistics Canada records that before new mortgage restrictions, the average days a home remained on the market across Canada was 42 days. Following the new restrictions, a random sample of 300 home sales shows an average of 49 days with a standard deviation of 60 days. Testing \(H_0: \mu = 42\) against \(H_1: \mu > 42\) (one-tailed):
+<strong>Example</strong>: Statistics Canada records that before new mortgage restrictions, the average days a home remained on the market across Canada was 42 days. Following the new restrictions, a random sample of 300 home sales shows an average of 49 days with a standard deviation of 60 days. Testing \(H_0: \mu = 42\) against \(H_1: \mu > 42\) (one-tailed):
 
 \[ z = \frac{49 - 42}{60/\sqrt{300}} = \frac{7}{3.46} = 2.02 \]
 
@@ -488,7 +488,7 @@ where \(p\) is the sample proportion. The same z-distribution and critical value
 
 Many research questions involve comparing two groups: Are female and male graduates earning different average salaries? Do apps designed for business generate more revenue than gaming apps? Do students in the new curriculum perform better on standardized tests than students in the old curriculum?
 
-These are **difference of means** questions. The null hypothesis for such tests is almost invariably:
+These are <strong>difference of means</strong> questions. The null hypothesis for such tests is almost invariably:
 
 \[ H_0: \mu_1 = \mu_2 \quad \text{(equivalently, } \mu_1 - \mu_2 = 0\text{)} \]
 
@@ -506,11 +506,11 @@ The denominator is the combined standard error for the two samples. The same App
 
 When the combined sample size is below 100, a t-test is required. In addition to small sample size, the t-test for the difference of means assumes:
 
-1. The two samples are **independent** (not matched, not repeated measures)
+1. The two samples are <strong>independent</strong> (not matched, not repeated measures)
 2. Both populations are normally distributed
-3. **Homoscedasticity**: the two populations have equal variance, \(\sigma_1^2 = \sigma_2^2 = \sigma^2\)
+3. <strong>Homoscedasticity</strong>: the two populations have equal variance, \(\sigma_1^2 = \sigma_2^2 = \sigma^2\)
 
-The homoscedasticity assumption is consequential: it means the two sample variances must be **pooled** into a single estimate of the common variance before computing the standard error:
+The homoscedasticity assumption is consequential: it means the two sample variances must be <strong>pooled</strong> into a single estimate of the common variance before computing the standard error:
 
 \[ s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2} \]
 
@@ -522,9 +522,9 @@ with degrees of freedom \(df = n_1 + n_2 - 2\). Critical values are obtained fro
 
 ## The Paired T-Test (Dependent Samples)
 
-When the two samples are not independent — for example, when measuring the same individuals before and after a treatment, or when comparing matched pairs — the appropriate test is the **paired t-test** (also called the dependent samples t-test or matched pairs t-test).
+When the two samples are not independent — for example, when measuring the same individuals before and after a treatment, or when comparing matched pairs — the appropriate test is the <strong>paired t-test</strong> (also called the dependent samples t-test or matched pairs t-test).
 
-The procedure is to compute the **difference score** \(d_i = x_{1i} - x_{2i}\) for each pair, then apply the one-sample t-test to the set of difference scores:
+The procedure is to compute the <strong>difference score</strong> \(d_i = x_{1i} - x_{2i}\) for each pair, then apply the one-sample t-test to the set of difference scores:
 
 \[ t = \frac{\bar{d}}{s_d / \sqrt{n}} \]
 
@@ -536,7 +536,7 @@ where \(\bar{d}\) is the mean difference, \(s_d\) is the standard deviation of t
 
 ## Comparing Three or More Groups
 
-When the research question involves comparing means across three or more groups — retail sales across five Canadian regions, average income across several ethnic groups, job satisfaction across four industry sectors — the appropriate test is **Analysis of Variance (ANOVA)**.
+When the research question involves comparing means across three or more groups — retail sales across five Canadian regions, average income across several ethnic groups, job satisfaction across four industry sectors — the appropriate test is <strong>Analysis of Variance (ANOVA)</strong>.
 
 <div class="definition"><strong>One-Way ANOVA:</strong> A significance test for comparing means across three or more groups defined by a multi-categorical nominal-level independent variable, with a continuous-level dependent variable. The test determines whether at least one of the group means differs significantly from at least one other at the population level.</div>
 
@@ -568,7 +568,7 @@ A large F-value indicates that between-group differences are large relative to w
 
 ## Eta-Squared: Effect Size for ANOVA
 
-Statistical significance tells us whether the group differences are real at the population level; it does not tell us how strong or important the relationship is. The **effect size** measure for ANOVA is **eta-squared**:
+Statistical significance tells us whether the group differences are real at the population level; it does not tell us how strong or important the relationship is. The <strong>effect size</strong> measure for ANOVA is <strong>eta-squared</strong>:
 
 \[ \eta^2 = \frac{SS_B}{SS_T} \]
 
@@ -580,19 +580,19 @@ Eta-squared represents the proportion of total variance in the dependent variabl
 
 ## Bivariate Regression
 
-**Regression analysis** examines the causal relationship between a continuous-level independent variable (\(x\)) and a continuous-level dependent variable (\(y\)). The **simple regression model** (one independent variable) specifies:
+<strong>Regression analysis</strong> examines the causal relationship between a continuous-level independent variable (\(x\)) and a continuous-level dependent variable (\(y\)). The <strong>simple regression model</strong> (one independent variable) specifies:
 
 \[ y_i = \alpha + \beta x_i + \varepsilon_i \]
 
-where \(\alpha\) is the **intercept** (the population value of \(y\) when \(x = 0\)), \(\beta\) is the **slope** (the expected change in \(y\) per unit increase in \(x\)), and \(\varepsilon_i\) is the **error term** (the deviation of the actual observation from the model's prediction). At the sample level, the model is estimated as:
+where \(\alpha\) is the <strong>intercept</strong> (the population value of \(y\) when \(x = 0\)), \(\beta\) is the <strong>slope</strong> (the expected change in \(y\) per unit increase in \(x\)), and \(\varepsilon_i\) is the <strong>error term</strong> (the deviation of the actual observation from the model's prediction). At the sample level, the model is estimated as:
 
 \[ \hat{y}_i = a + b x_i \]
 
-where \(a\) is the sample intercept and \(b\) is the sample slope. The difference between an observed value and its predicted value, \(e_i = y_i - \hat{y}_i\), is called a **residual**.
+where \(a\) is the sample intercept and \(b\) is the sample slope. The difference between an observed value and its predicted value, \(e_i = y_i - \hat{y}_i\), is called a <strong>residual</strong>.
 
 ## Calculating the Regression Statistics
 
-The slope and intercept are calculated using the **method of ordinary least squares (OLS)**, which minimizes the sum of squared residuals. The formulas are:
+The slope and intercept are calculated using the <strong>method of ordinary least squares (OLS)</strong>, which minimizes the sum of squared residuals. The formulas are:
 
 \[ b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}} \]
 
@@ -604,11 +604,11 @@ The slope \(b\) is the most substantively interesting result: it tells you by ho
 
 Three criteria determine whether a regression model is any good:
 
-**Specification**: Does the model make theoretical sense? Is the independent variable a plausible cause of the dependent variable? Predicting debt from height would be poorly specified — there is no theoretical reason why height should matter.
+<strong>Specification</strong>: Does the model make theoretical sense? Is the independent variable a plausible cause of the dependent variable? Predicting debt from height would be poorly specified — there is no theoretical reason why height should matter.
 
-**Parsimony**: Is the model as simple as possible while still doing the job? Adding independent variables always improves fit mechanically, but models with too many predictors become hard to interpret and may overfit the sample.
+<strong>Parsimony</strong>: Is the model as simple as possible while still doing the job? Adding independent variables always improves fit mechanically, but models with too many predictors become hard to interpret and may overfit the sample.
 
-**Goodness of Fit**: The **coefficient of determination** \(r^2\) quantifies how well the model fits the data:
+<strong>Goodness of Fit</strong>: The <strong>coefficient of determination</strong> \(r^2\) quantifies how well the model fits the data:
 
 \[ r^2 = 1 - \frac{SS_{\text{residual}}}{SS_{\text{total}}} = \frac{SS_{\text{regression}}}{SS_{\text{total}}} \]
 
@@ -616,7 +616,7 @@ Three criteria determine whether a regression model is any good:
 
 ## The Pearson Product Moment Correlation
 
-The **Pearson r** is the standardized measure of linear association between two continuous variables:
+The <strong>Pearson r</strong> is the standardized measure of linear association between two continuous variables:
 
 \[ r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{(n-1)s_x s_y} \]
 
@@ -640,13 +640,13 @@ with degrees of freedom 1 and \(n-2\), compared against the F-distribution (Appe
 
 ## The Chi-Square Test of Independence
 
-When both the independent and dependent variables are at the discrete level of measurement (nominal or ordinal), neither z, t, nor F tests are appropriate. Instead, the **chi-square test of independence** (\(\chi^2\)) is used to determine whether two discrete variables are related at the population level.
+When both the independent and dependent variables are at the discrete level of measurement (nominal or ordinal), neither z, t, nor F tests are appropriate. Instead, the <strong>chi-square test of independence</strong> (\(\chi^2\)) is used to determine whether two discrete variables are related at the population level.
 
 <div class="definition"><strong>Chi-square test of independence:</strong> A significance test applied to cross-tabular (contingency) tables to determine whether the distribution of the row variable differs across categories of the column variable — in other words, whether the two variables are statistically independent at the population level.</div>
 
-The null hypothesis states that the two variables are **independent** in the population: knowing a case's category on one variable provides no information about its category on the other. The alternative hypothesis states that they are **dependent** (associated).
+The null hypothesis states that the two variables are <strong>independent</strong> in the population: knowing a case's category on one variable provides no information about its category on the other. The alternative hypothesis states that they are <strong>dependent</strong> (associated).
 
-The test compares **observed cell frequencies** (\(f_o\)) from the sample to **expected cell frequencies** (\(f_e\)) — what the cell counts would be if the null hypothesis were exactly true. Expected frequencies are calculated as:
+The test compares <strong>observed cell frequencies</strong> (\(f_o\)) from the sample to <strong>expected cell frequencies</strong> (\(f_e\)) — what the cell counts would be if the null hypothesis were exactly true. Expected frequencies are calculated as:
 
 \[ f_e = \frac{(\text{row marginal})(\text{column marginal})}{N} \]
 
@@ -658,7 +658,7 @@ This statistic follows the chi-square distribution with degrees of freedom \(df 
 
 ## The Chi-Square Goodness of Fit Test
 
-The **goodness of fit** test is a variant applied to a single discrete variable rather than a cross-tabular table. It asks whether the observed distribution of a variable in the sample is consistent with some theorized population distribution. For example, if a die is fair, each face should come up one-sixth of the time. Throwing the die 60 times and computing:
+The <strong>goodness of fit</strong> test is a variant applied to a single discrete variable rather than a cross-tabular table. It asks whether the observed distribution of a variable in the sample is consistent with some theorized population distribution. For example, if a die is fair, each face should come up one-sixth of the time. Throwing the die 60 times and computing:
 
 \[ \chi^2 = \sum_{i=1}^{k} \frac{(f_{o,i} - f_{e,i})^2}{f_{e,i}} \]
 
@@ -668,21 +668,21 @@ where the expected frequency for each of the \(k\) categories is \(N \cdot p_i\)
 
 Statistical significance tells us that a relationship exists and generalizes to the population; it says nothing about how strong that relationship is. For continuous variables we have \(\eta^2\), \(r^2\), and \(r\). For discrete variables, a number of alternative measures have been developed, with somewhat different interpretations.
 
-**Phi (\(\phi\))** is appropriate for 2×2 tables and is calculated as:
+<strong>Phi (\(\phi\))</strong> is appropriate for 2×2 tables and is calculated as:
 
 \[ \phi = \sqrt{\frac{\chi^2}{N}} \]
 
-It ranges from 0 to 1 (for 2×2 tables with no sign convention) or \(-1\) to \(+1\) in some formulations. **Adjusted phi** corrects for tables larger than 2×2.
+It ranges from 0 to 1 (for 2×2 tables with no sign convention) or \(-1\) to \(+1\) in some formulations. <strong>Adjusted phi</strong> corrects for tables larger than 2×2.
 
-**Cramer's V** extends phi to larger tables:
+<strong>Cramer's V</strong> extends phi to larger tables:
 
 \[ V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}} \]
 
 Cramer's V ranges from 0 to 1 and allows comparison across tables of different sizes.
 
-**Yule's Q** applies specifically to 2×2 tables and produces a value between \(-1\) and \(+1\), with a Proportionate Reduction in Error (PRE) interpretation: a Q of 0.6 means knowing the independent variable reduces prediction errors about the dependent variable by 60%.
+<strong>Yule's Q</strong> applies specifically to 2×2 tables and produces a value between \(-1\) and \(+1\), with a Proportionate Reduction in Error (PRE) interpretation: a Q of 0.6 means knowing the independent variable reduces prediction errors about the dependent variable by 60%.
 
-**The Point-Biserial Correlation** is used when one variable is dichotomous (two categories) and the other is continuous, and is equivalent to the Pearson r computed on the two scores. **Spearman's r** (\(r_s\)) is a rank-order correlation appropriate when both variables are ordinal, and is computed by:
+<strong>The Point-Biserial Correlation</strong> is used when one variable is dichotomous (two categories) and the other is continuous, and is equivalent to the Pearson r computed on the two scores. <strong>Spearman's r</strong> (\(r_s\)) is a rank-order correlation appropriate when both variables are ordinal, and is computed by:
 
 \[ r_s = 1 - \frac{6 \sum d_i^2}{n(n^2-1)} \]
 
@@ -692,7 +692,7 @@ An important interpretive caution: because these measures are based on limited m
 
 ## Statistical Significance vs. Substantive Significance
 
-This distinction is worth emphasizing at the conclusion of the course. **Statistical significance** means a result is generalizable from the sample to the population — the observed pattern is unlikely to be a mere product of sampling chance. **Substantive significance** (or practical importance) refers to whether the relationship is strong enough to matter in the real world.
+This distinction is worth emphasizing at the conclusion of the course. <strong>Statistical significance</strong> means a result is generalizable from the sample to the population — the observed pattern is unlikely to be a mere product of sampling chance. <strong>Substantive significance</strong> (or practical importance) refers to whether the relationship is strong enough to matter in the real world.
 
 These two things are not the same. With a very large sample size, even a trivially small relationship can achieve statistical significance. Conversely — though this is logically impossible — something that fails to achieve statistical significance cannot be considered substantively significant either, because if it fails the significance test we cannot even conclude there is a relationship at the population level. The proper sequence is always: test for statistical significance first, and only if the relationship is significant proceed to evaluate its substantive importance via an effect size measure.
 
@@ -700,44 +700,44 @@ These two things are not the same. With a very large sample size, even a trivial
 
 ## Quick Reference: Key Formulas
 
-**Sample Mean:**
+<strong>Sample Mean:</strong>
 \[ \bar{x} = \frac{\sum x_i}{n} \]
 
-**Sample Variance and Standard Deviation:**
+<strong>Sample Variance and Standard Deviation:</strong>
 \[ s^2 = \frac{\sum(x_i - \bar{x})^2}{n-1} \qquad s = \sqrt{s^2} \]
 
-**Z-score:**
+<strong>Z-score:</strong>
 \[ z = \frac{x_i - \bar{x}}{s} \]
 
-**Standard Error of the Mean:**
+<strong>Standard Error of the Mean:</strong>
 \[ \text{SE} = \frac{s}{\sqrt{n}} \]
 
-**One-Sample Z-test for a Mean:**
+<strong>One-Sample Z-test for a Mean:</strong>
 \[ z = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} \]
 
-**Confidence Interval for \(\mu\) (large sample):**
+<strong>Confidence Interval for \(\mu\) (large sample):</strong>
 \[ \bar{x} \pm z^* \cdot \frac{s}{\sqrt{n}} \]
 
-**Pooled Variance (two-sample t-test):**
+<strong>Pooled Variance (two-sample t-test):</strong>
 \[ s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2} \]
 
-**Paired T-test:**
+<strong>Paired T-test:</strong>
 \[ t = \frac{\bar{d}}{s_d / \sqrt{n}}, \quad df = n-1 \]
 
-**ANOVA F-statistic:**
+<strong>ANOVA F-statistic:</strong>
 \[ F = \frac{SS_B/(k-1)}{SS_W/(N-k)} \]
 
-**Eta-squared:**
+<strong>Eta-squared:</strong>
 \[ \eta^2 = \frac{SS_B}{SS_T} \]
 
-**Regression Slope:**
+<strong>Regression Slope:</strong>
 \[ b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}} \]
 
-**Coefficient of Determination:**
+<strong>Coefficient of Determination:</strong>
 \[ r^2 = \frac{SS_{\text{regression}}}{SS_{\text{total}}} \]
 
-**Chi-square Test Statistic:**
+<strong>Chi-square Test Statistic:</strong>
 \[ \chi^2 = \sum \frac{(f_o - f_e)^2}{f_e} \]
 
-**Cramer's V:**
+<strong>Cramer's V:</strong>
 \[ V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}} \]

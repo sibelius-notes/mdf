@@ -469,9 +469,9 @@ By Theorems 8.1.1 and 8.2.1, a finite Galois extension is equivalent to the spli
 <div class="theorem">
 <strong>Theorem 9.2.1 (Fundamental Theorem of Galois Theory).</strong> Let \(E/F\) be a finite Galois extension with Galois group \(G = \text{Gal}_F(E)\). There is an order-reversing bijection between the set of intermediate fields \(\text{Int}(E/F)\) and the set of subgroups \(\text{Sub}(G)\):
 \[ \text{Int}(E/F) \longleftrightarrow \text{Sub}(G) \]
-given by \(L \mapsto L^* := \text{Gal}_L(E)\) and \(H \mapsto H^* := E^H\). These maps are inverse to each other, and they reverse inclusions: \(L_1 \subseteq L_2\) if and only if \(L_2^* \subseteq L_1^*\).
+given by \(L \mapsto L^<em> := \text{Gal}_L(E)\) and \(H \mapsto H^</em> := E^H\). These maps are inverse to each other, and they reverse inclusions: \(L_1 \subseteq L_2\) if and only if \(L_2^<em> \subseteq L_1^</em>\).
 
-Moreover, \([E:L] = |L^*|\) and \([L:F] = [G:L^*]\).
+Moreover, \([E:L] = |L^<em>|\) and \([L:F] = [G:L^</em>]\).
 </div>
 
 *Proof.* The maps are mutually inverse: if \(L \in \text{Int}(E/F)\), then \((L^*)^* = E^{\text{Gal}_L(E)} = L\) by Theorem 7.3.1. If \(H \in \text{Sub}(G)\), then \((H^*)^* = \text{Gal}_{E^H}(E) = H\) by Artin's theorem. ∎
@@ -487,7 +487,7 @@ The correspondence can be visualised as an inverted diagram and is illustrated b
 | \(F\) (bottom) | \(G\) (top) |
 
 <div class="theorem">
-<strong>Theorem 9.2.3.</strong> Under the Galois correspondence, the extension \(L/F\) is Galois if and only if \(L^*\) is a normal subgroup of \(G\). In this case, \[\text{Gal}_F(L) \cong G/L^*.\]
+<strong>Theorem 9.2.3.</strong> Under the Galois correspondence, the extension \(L/F\) is Galois if and only if \(L^<em>\) is a normal subgroup of \(G\). In this case, \[\text{Gal}_F(L) \cong G/L^</em>.\]
 </div>
 
 *Proof.* One shows: \(L/F\) is normal \(\Leftrightarrow\) \(\psi(L) = L\) for all \(\psi \in G\) \(\Leftrightarrow\) \(\psi \text{Gal}_L(E) \psi^{-1} = \text{Gal}_L(E)\) for all \(\psi \in G\) \(\Leftrightarrow\) \(L^* \trianglelefteq G\). The restriction map \(G \to \text{Gal}_F(L)\), \(\psi \mapsto \psi|_L\), is surjective with kernel \(L^*\). ∎

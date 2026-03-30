@@ -14,7 +14,7 @@ MGMT 171 is a practical introduction to personal finance and investment decision
 
 <div class="definition"><strong>Personal Financial Plan:</strong> A plan that specifies your financial goals and describes the spending, financing, and investing activities intended to achieve those goals, as well as the risk management strategies required to protect against uncontrollable events such as death or disability.</div>
 
-Understanding personal finance confers three broad benefits. First, it enables you to make **informed financial decisions** — you become aware that every decision carries an **opportunity cost**, meaning something is given up as a result of a choice. Second, it equips you to critically judge the advice of financial advisers by asking whether their recommendations serve your interests or their own. The Financial Planning Standards Council (FPSC) provides useful questions consumers can ask advisers. Third, mastering personal finance can be a career path: earning the **Certified Financial Planner (CFP)** designation requires meeting education, examination, experience, and ethical requirements.
+Understanding personal finance confers three broad benefits. First, it enables you to make <strong>informed financial decisions</strong> — you become aware that every decision carries an <strong>opportunity cost</strong>, meaning something is given up as a result of a choice. Second, it equips you to critically judge the advice of financial advisers by asking whether their recommendations serve your interests or their own. The Financial Planning Standards Council (FPSC) provides useful questions consumers can ask advisers. Third, mastering personal finance can be a career path: earning the <strong>Certified Financial Planner (CFP)</strong> designation requires meeting education, examination, experience, and ethical requirements.
 
 ## The Five Key Components of a Financial Plan
 
@@ -22,7 +22,7 @@ A complete personal financial plan integrates five areas, each of which affects 
 
 ### 1. Budgeting and Tax Planning
 
-**Budget planning** is the process of forecasting future income, expenses, and savings goals. It begins by evaluating your current financial position.
+<strong>Budget planning</strong> is the process of forecasting future income, expenses, and savings goals. It begins by evaluating your current financial position.
 
 <div class="definition"><strong>Assets:</strong> What you own.</div>
 <div class="definition"><strong>Liabilities:</strong> What you owe; your debt.</div>
@@ -36,7 +36,7 @@ Financial needs and priorities shift across life stages. The typical stages span
 <div class="definition"><strong>Money Management:</strong> Decisions regarding how much money to retain in liquid form and how to allocate funds among short-term investment instruments.</div>
 <div class="definition"><strong>Emergency Fund:</strong> A portion of savings allocated to short-term needs such as unexpected expenses, in order to maintain adequate liquidity.</div>
 
-**Credit management** involves decisions about how much credit to obtain to support spending and which sources of credit to use. Large expenditures — university tuition, a car, a home — often require loans. Managing loans well means determining how much you can afford to borrow, choosing an appropriate loan maturity, and selecting a competitive interest rate.
+<strong>Credit management</strong> involves decisions about how much credit to obtain to support spending and which sources of credit to use. Large expenditures — university tuition, a car, a home — often require loans. Managing loans well means determining how much you can afford to borrow, choosing an appropriate loan maturity, and selecting a competitive interest rate.
 
 ### 3. Protecting Your Assets and Income
 
@@ -64,7 +64,7 @@ Retirement planning focuses on building wealth over time inside a retirement acc
 
 ## How the Five Components Connect to Cash Flows
 
-Each component maps directly onto your cash flows. **Income** is cash you receive; **expenses** are cash you spend. Budgeting governs income and spending. Financial management directs surplus funds toward an emergency fund or toward credit for purchases. Protecting assets involves expenditures on insurance premiums. Investing deploys excess cash to build wealth. Retirement planning accumulates funds in dedicated accounts. Estate planning determines how the accumulated wealth is ultimately distributed.
+Each component maps directly onto your cash flows. <strong>Income</strong> is cash you receive; <strong>expenses</strong> are cash you spend. Budgeting governs income and spending. Financial management directs surplus funds toward an emergency fund or toward credit for purchases. Protecting assets involves expenditures on insurance premiums. Investing deploys excess cash to build wealth. Retirement planning accumulates funds in dedicated accounts. Estate planning determines how the accumulated wealth is ultimately distributed.
 
 ## Ethics in Personal Financial Advice
 
@@ -80,9 +80,9 @@ A financial plan is not a static document — it is built through a deliberate p
 
 ### Step 1: Establish Your Financial Goals
 
-Goals must be **SMART**: Specific, Measurable, Actionable, Realistic, and Timely. Short-term goals are to be achieved within the next year; medium-term goals fall between one and five years; long-term goals extend beyond five years. Specifying goals in SMART terms forces clarity and provides concrete benchmarks for progress.
+Goals must be <strong>SMART</strong>: Specific, Measurable, Actionable, Realistic, and Timely. Short-term goals are to be achieved within the next year; medium-term goals fall between one and five years; long-term goals extend beyond five years. Specifying goals in SMART terms forces clarity and provides concrete benchmarks for progress.
 
-*Example:* Maeva wants to save $3,000 over two years for a trip to Europe after high school graduation. The goal is specific (a European trip), measurable ($3,000), action-oriented (she has researched costs, spoken to her manager about extra shifts, and discussed the plan with her parents), realistic (based on calculated earning capacity), and time-bound (two years). This is a textbook SMART goal.
+<em>Example:</em> Maeva wants to save $3,000 over two years for a trip to Europe after high school graduation. The goal is specific (a European trip), measurable ($3,000), action-oriented (she has researched costs, spoken to her manager about extra shifts, and discussed the plan with her parents), realistic (based on calculated earning capacity), and time-bound (two years). This is a textbook SMART goal.
 
 ### Step 2: Consider Your Current Financial Position
 
@@ -90,11 +90,11 @@ Your future financial position is shaped by your present level of debt and your 
 
 ### Step 3: Identify and Evaluate Alternative Plans
 
-Multiple pathways can lead to the same goal. Plans may be **conservative** (lower risk, more discipline required, lower chance of failure) or **aggressive** (higher risk, potentially higher reward, but greater chance of not meeting the goal). Evaluating alternatives requires weighing the degree of discipline involved, the risks of each approach, and the likelihood of success.
+Multiple pathways can lead to the same goal. Plans may be <strong>conservative</strong> (lower risk, more discipline required, lower chance of failure) or <strong>aggressive</strong> (higher risk, potentially higher reward, but greater chance of not meeting the goal). Evaluating alternatives requires weighing the degree of discipline involved, the risks of each approach, and the likelihood of success.
 
 ### Step 4: Select and Implement the Best Plan
 
-Even two individuals in identical financial positions with identical goals may choose different plans based on their **risk tolerance** and **self-discipline**. One person might commit to saving a fixed amount every month; another might make riskier investments hoping for faster growth. Both approaches are rational given different preferences. Implementation is supported by the wealth of financial planning tools and information available online.
+Even two individuals in identical financial positions with identical goals may choose different plans based on their <strong>risk tolerance</strong> and <strong>self-discipline</strong>. One person might commit to saving a fixed amount every month; another might make riskier investments hoping for faster growth. Both approaches are rational given different preferences. Implementation is supported by the wealth of financial planning tools and information available online.
 
 ### Step 5: Evaluate Your Financial Plan
 
@@ -106,7 +106,7 @@ Plans must be updated as financial conditions change, as goals evolve, or when a
 
 ## How Psychology Affects Financial Planning
 
-Spending behavior is shaped by psychological forces that are worth examining critically. Seeking **immediate satisfaction**, succumbing to **peer pressure**, making **impulse purchases**, and engaging in "retail therapy" can all derail a financial plan. Conversely, a strong desire to avoid debt can be a motivating discipline. Effective financial planning requires self-awareness about what drives your spending decisions.
+Spending behavior is shaped by psychological forces that are worth examining critically. Seeking <strong>immediate satisfaction</strong>, succumbing to <strong>peer pressure</strong>, making <strong>impulse purchases</strong>, and engaging in "retail therapy" can all derail a financial plan. Conversely, a strong desire to avoid debt can be a motivating discipline. Effective financial planning requires self-awareness about what drives your spending decisions.
 
 ## A Hypothetical Financial Plan: The Sampsons
 

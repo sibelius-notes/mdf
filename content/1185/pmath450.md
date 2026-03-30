@@ -923,10 +923,10 @@ The partial sum operator can be expressed as convolution: \(S_N(f)(x) = (f * D_N
 <div class="theorem">
 
 <strong>Proposition 6.2.</strong> For \(f, g \in L^1(\mathbb{T})\):
-1. \(f * g = g * f\) (commutativity).
+1. \(f <em> g = g </em> f\) (commutativity).
 2. \(\|f * g\|_1 \leq \|f\|_1 \|g\|_1\).
 3. \(\widehat{f * g}(n) = \hat{f}(n)\hat{g}(n)\) for all \(n \in \mathbb{Z}\).
-4. If \(f \in L^\infty, g \in L^1\), then \(f * g \in L^\infty\) with \(\|f*g\|_\infty \leq \|f\|_\infty \|g\|_1\).
+4. If \(f \in L^\infty, g \in L^1\), then \(f <em> g \in L^\infty\) with \(\|f</em>g\|_\infty \leq \|f\|_\infty \|g\|_1\).
 
 </div>
 
@@ -957,7 +957,7 @@ A summability kernel is <em>positive</em> if additionally \(K_n \geq 0\), in whi
 \[
 F_N(t) = \sum_{n=-N}^{N} \left(1 - \frac{|n|}{N+1}\right) e^{int} = \frac{1}{N+1}\left(\frac{\sin\frac{(N+1)t}{2}}{\sin\frac{t}{2}}\right)^2
 \]
-is a positive summability kernel. Consequently \(\sigma_N(f) = F_N * f \to f\) uniformly for all \(f \in C(\mathbb{T})\), and \(\|F_N * f - f\|_1 \to 0\) for all \(f \in L^1(\mathbb{T})\).
+is a positive summability kernel. Consequently \(\sigma_N(f) = F_N <em> f \to f\) uniformly for all \(f \in C(\mathbb{T})\), and \(\|F_N </em> f - f\|_1 \to 0\) for all \(f \in L^1(\mathbb{T})\).
 
 </div>
 

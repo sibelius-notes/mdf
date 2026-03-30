@@ -1,448 +1,560 @@
 ---
 title: "PSYCH 350: Political Psychology"
-prof: Richard Eibach
+prof: "Luke Brosnan"
 ---
 
 ## Sources and References
 
-**Primary textbook** — Jost, J. T. (2020). *A Theory of System Justification*. Harvard University Press. (Foundational theoretical text for course themes.)
-**Supplementary texts** — Sears, D. O., Huddy, L., & Jervis, R. (Eds.) (2003). *Oxford Handbook of Political Psychology*. Oxford University Press; Haidt, J. (2012). *The Righteous Mind: Why Good People Are Divided by Politics and Religion*. Pantheon.
-**Primary readings (empirical papers assigned)** — Inbar & Lammers (2012); Slovic (2007); Steenbergen et al. (2018); Conway et al. (2018); Buttrick et al. (2020); Bilewicz (2022); Kozyreva et al. (2024); Pennycook & Rand (2021); Jost (2009); Haidt, Graham, & Joseph (2009); Zmigrod (2022); Fernbach & Van Boven (2022); Voelkel et al. (2024); Hartman et al. (2022); Jost, Baldassarri, & Druckman (2022); Altemeyer (1988); Osborne et al. (2023); Kennedy et al. (2023); Esses et al. (2015); Kleppestø et al. (2021); Golec de Zavala & Lantos (2020); Kay et al. (2023); Kachanoff et al. (2022); Friesen et al. (2019); Jost, Becker, Osborne, & Badaan (2017); Buttrick et al. (2017); Feinberg & Willer (2011, 2019); van Zomeren (2013); Drury & Reicher (2009); Mucchi-Faina et al. (2010); Haslam et al. (2021); Mendelberg & Karpowitz (2016); McAdams (2021); Kruglanski et al. (2021); Littman & Paluck (2015); Bruneau & Kteily (2017); Shnabel & Nadler (2015); Blatz et al. (2009); Ginges (2019); Shafir (2014); Petersen (2021); Epley & Gneezy (2007).
-**Online resources** — Annual Review of Political Science; *Political Psychology* journal; Society for Personality and Social Psychology (spsp.org).
+**Primary sources** — All readings are research papers assigned by the course. Full citations below.
+
+**Assigned papers:**
+- Slovic, P. (2007). "If I look at the mass I will never act": Psychic numbing and genocide. *Judgment and Decision Making*, 2(2), 79–95.
+- Inbar, Y., & Lammers, J. (2012). Political diversity in social and personality psychology. *Perspectives on Psychological Science*, 7(5), 496–503.
+- Jost, J. T. (2009). Elective affinities in political ideology: Why people end up being conservative or liberal. *Psychological Science*, 18(3), 129–135.
+- Haidt, J., Graham, J., & Joseph, C. (2009). Above and below left-right: Idealism and pragmatism in the political personality. *Psychological Inquiry*, 20(2–3), 110–119.
+- Buttrick, N., Moulder, R., & Oishi, S. (2020). Historical change in the moral foundations of political persuasion. *Personality and Social Psychology Bulletin*, 46(11), 1523–1537.
+- Bilewicz, M. (2022). Historical trauma and intergroup relations. *Advances in Political Psychology*, 43(S1), 149–168.
+- Zmigrod, L. (2022). The psychology of ideological thinking: Insights from behavioral and brain sciences. *Psychological Inquiry*, 33(4), 213–232.
+- Kozyreva, A., Lewandowsky, S., & Hertwig, R. (2024). Citizens versus the internet: Confronting digital challenges with cognitive tools. *Psychological Science in the Public Interest*, 25(1), 1–73.
+- Pennycook, G., & Rand, D. G. (2021). The psychology of fake news. *Trends in Cognitive Sciences*, 25(5), 388–402.
+- Voelkel, J. G., Chu, J., Stagnaro, M. N., Mernyk, J. S., Redekopp, C., Pink, S. L., … Willer, R. (2024). Megastudy identifying effective interventions to strengthen Americans' democratic commitments. *Science*, 382(6679), eadh3289.
+- Hartman, T. K., et al. (2022). Interventions to reduce partisan animosity: A review. [Review article; see also broader affective polarization intervention literature.]
+- Golec de Zavala, A., & Lantos, D. (2020). Collective narcissism and its social consequences: The bad and the ugly. *Current Directions in Psychological Science*, 29(3), 273–278.
+- Bruneau, E. G., & Kteily, N. (2017). The enemy as animal: Symmetric dehumanization during asymmetric warfare. *PLOS ONE*, 12(7), e0181422.
+- Shnabel, N., & Nadler, A. (2015). The role of agency and morality in reconciliation processes: The perspective of the needs-based model. *Current Directions in Psychological Science*, 24(6), 477–483.
+- Ginges, J. (2019). Sacred values and the psychology of political violence. *Current Opinion in Psychology*, 35, 81–85.
+
+**Supplementary texts and general resources consulted:**
+- Jost, J. T., & Sidanius, J. (Eds.). (2004). *Political Psychology: Key Readings*. Psychology Press.
+- Sears, D. O., Huddy, L., & Jervis, R. (Eds.). (2003). *Oxford Handbook of Political Psychology*. Oxford University Press.
+- Haidt, J. (2012). *The Righteous Mind: Why Good People Are Divided by Politics and Religion*. Pantheon.
+- Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. In W. G. Austin & S. Worchel (Eds.), *The Social Psychology of Intergroup Relations* (pp. 33–47). Brooks/Cole.
+- Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+- van der Linden, S. (2023). *Foolproof: Why Misinformation Infects Our Minds and How to Build Immunity*. W. W. Norton.
 
 ---
 
-# Chapter 1: Political Judgment and Decision-Making
+# Chapter 1: Introduction to Political Psychology
 
-## 1.1 What is Political Psychology?
+## What Is Political Psychology?
 
-<div class="definition">
-<strong>Political psychology</strong> is an interdisciplinary field at the intersection of psychology and political science that uses psychological theory and methods to understand political behaviour, cognition, and motivation. It asks: how do psychological processes (perception, emotion, cognition, personality) shape political attitudes, choices, and actions?
-</div>
-
-Political psychology draws on social cognition, personality psychology, developmental psychology, and neuroscience to illuminate phenomena — voter behaviour, ideology formation, collective violence — that purely institutional or rational-choice approaches cannot explain.
-
-## 1.2 The Role of Affect in Political Judgment
+Political psychology is the scientific study of the psychological processes underlying political behavior, attitudes, and institutions. It sits at the intersection of political science and psychology, drawing on cognitive psychology, social psychology, developmental psychology, and neuroscience to explain phenomena that neither discipline can fully account for alone. Why do citizens hold the political views they do? How do leaders acquire and maintain influence? What psychological forces drive conflict, prejudice, dehumanization, and occasionally reconciliation? These are the questions of political psychology.
 
 <div class="definition">
-<strong>Affect heuristic</strong> (Slovic, 2007): people use their emotional reactions — the positive or negative "feel" of an idea — as a quick cue for judging its benefits and risks. The same object or technology is rated as lower in risk and higher in benefit if it elicits positive affect, and higher in risk and lower in benefit if it elicits negative affect.
+<strong>Political psychology</strong> is the interdisciplinary study of the relationship between psychological processes — cognition, emotion, motivation, personality, development — and political phenomena including attitudes, behavior, leadership, conflict, and institutional design.
 </div>
 
-Political relevance: voters evaluate candidates and policies through rapid affective processing before engaging deliberate reasoning. **Motivated reasoning** then defends the affectively-reached conclusion.
+## A Brief History of the Field
 
-### 1.2.1 The Role of Disgust in Political Attitudes
+The roots of political psychology trace to early twentieth-century work on propaganda, crowd psychology (Le Bon, 1895), and psychoanalytic interpretations of political leadership. Harold Lasswell's *Psychopathology and Politics* (1930) introduced systematic psychological analysis of political actors, arguing that power-seeking behavior reflected compensatory personal needs displaced onto public objects. The rise of fascism in Europe prompted a different research program: Theodor Adorno and colleagues (1950) developed the *Authoritarian Personality* construct, attempting to identify the personality type susceptible to fascist appeal — a line of inquiry that remains influential today through research on right-wing authoritarianism (Altemeyer) and social dominance orientation (Sidanius & Pratto).
 
-Inbar & Lammers (2012) found that **disgust sensitivity** — the tendency to experience disgust easily — predicts socially conservative attitudes (opposition to gay marriage, abortion, premarital sex, drug use) more strongly than economic conservatism. Disgust originated as a pathogen-avoidance mechanism but has been co-opted to regulate norm violations and group boundaries in social domains.
+The behavioral revolution in political science (1950s–1970s) brought survey methods and empirical rigor to the field. *The American Voter* (Campbell et al., 1960) documented the role of party identification and partisan attitudes in voting behavior. The emergence of cognitive psychology in the 1970s shifted attention toward information processing, schema theory, and heuristics in political judgment. By the 1980s and 1990s, social identity theory (Tajfel & Turner) had become central to understanding group-based political behavior — why people vote with their group, denigrate out-groups, and define political identity in terms of social belonging.
 
-Implications: appeals to purity and contamination in political messaging may be especially effective for disgust-sensitive audiences; political attitudes are partially rooted in non-political personality traits.
+Contemporary political psychology is highly diverse in method (surveys, experiments, neuroimaging, computational text analysis, field experiments) and topic (ideology, prejudice, dehumanization, political violence, misinformation, democratic backsliding). The readings in this course represent the most active research fronts in the field as of the early 2020s.
 
-## 1.3 Integrative Complexity in Political Thought
+## Core Methods in Political Psychology
 
-<div class="definition">
-<strong>Integrative complexity</strong> (Conway, Suedfeld, & Tetlock, 2018) is a measure of the cognitive sophistication of political reasoning, capturing: (a) <strong>differentiation</strong> — recognizing multiple dimensions of an issue; and (b) <strong>integration</strong> — seeing relationships among differentiated dimensions.
+<div class="remark">
+<strong>Experimental methods</strong> are now dominant in political psychology. Randomized controlled experiments (in the lab and, increasingly, in the field via online platforms and national surveys) allow causal inference about psychological mechanisms. Survey experiments embed experimental manipulations within representative samples, combining internal and external validity. The rise of large-scale "megastudies" (as in Voelkel et al., 2024, covered in Chapter 8) reflects the field's increasing methodological ambition.
 </div>
 
-Higher integrative complexity is associated with:
-- More pragmatic, compromise-oriented political thinking.
-- Democratic leaders during negotiations vs. conflict escalation.
-- Creative policy solutions that transcend binary trade-offs.
+Other key methods include:
 
-Importantly, IC is not simply general intelligence; it is context-sensitive. People under threat, certainty, or ideological activation show lower IC. **Epistemic closure** (Kruglanski's theory of need for cognitive closure) drives down IC.
+- **Psychometric instruments:** Validated questionnaire scales measuring ideological orientation, moral foundations, collective narcissism, authoritarianism, and related constructs.
+- **Computational text analysis:** Linguistic analysis of large corpora (speeches, social media, newspapers) to detect psychological dimensions of political language over time (as in Buttrick et al., 2020, covered in Chapter 5).
+- **Neuroscience methods:** fMRI and structural MRI used to identify neural correlates of ideological thinking (Zmigrod, 2022, covered in Chapter 6).
+- **Cross-cultural and cross-national research:** Testing whether psychological findings replicate across cultural and national contexts — critical for claims about human universals in political psychology.
 
-## 1.4 Voter Decision-Making
+## Scope and Organization of This Course
 
-Voters rarely use comprehensive rational-actor models. Instead, they rely on:
-- **Party identification**: a social identity that biases information processing in favour of the in-party.
-- **Heuristics**: candidate appearance, viability cues, endorsements.
-- **Economic voting**: retrospective evaluation of incumbent performance ("it's the economy, stupid").
-- **Emotional responses**: enthusiasm increases participation; fear increases attention to political information.
-
-**Steenbergen et al. (2018)**: Analysed deliberative polling data to examine conditions under which citizens reason with high integrative complexity. Found that deliberative contexts (exposure to diverse views, structured dialogue) increase IC relative to ordinary political discourse.
+This course begins with foundational questions about how emotion and cognition shape political judgment (Chapters 2–3), moves through the moral and linguistic dimensions of political life (Chapters 4–5), examines the psychology of extremism and misinformation (Chapters 6–7), explores applied interventions to address polarization and democratic backsliding (Chapter 8), and concludes with a focused treatment of intergroup relations — collective narcissism, dehumanization, reconciliation, and political violence (Chapters 9–12). The unifying thread is the application of rigorous psychological science to pressing political problems.
 
 ---
 
-# Chapter 2: Political Persuasion, Propaganda, Misinformation, and Conspiracy Theories
+# Chapter 2: Emotion, Affect, and Scope Insensitivity
 
-## 2.1 Historical Change in Moral Foundations of Persuasion
+## The Centrality of Affect in Political Judgment
 
-**Buttrick, Moulder, & Oishi (2020)**: Analysed political speech and persuasion over centuries. Found that persuasive messages have historically shifted from invoking **binding moral foundations** (loyalty, authority, purity — Haidt's "groupish" foundations) toward **individualizing foundations** (care, fairness). Contemporary liberal messaging predominantly uses individualizing frames; historically, persuasion across audiences relied more on binding foundations.
-
-Implication: the most persuasive political arguments appeal to the audience's moral foundations, not the speaker's. **Cross-moral persuasion** — framing issues in the moral language of the other side — can be more effective than preaching to the converted.
-
-## 2.2 Propaganda, Misinformation, and Conspiracy Theories
+Classical theories of democratic citizenship assume that citizens form political preferences by gathering information, weighing evidence, and calculating which policies best serve their interests. Decades of research in political psychology and behavioral economics have complicated this picture. Human judgment is not primarily deliberative — it is primarily affective. People feel their way through political choices before they reason about them, and emotion often determines the direction of reasoning rather than the reverse.
 
 <div class="definition">
-<strong>Misinformation</strong>: false or inaccurate information spread regardless of intent. <strong>Disinformation</strong>: false information deliberately spread to deceive. <strong>Propaganda</strong>: communication designed to influence political beliefs and actions, often through emotionally resonant but misleading content.
+<strong>The affect heuristic</strong> (Slovic et al., 2002) refers to the tendency to use one's emotional reaction to a stimulus as a shortcut for evaluating risk, benefit, and appropriate response. Positive affect toward an option increases perceived benefit and decreases perceived risk; negative affect does the reverse, regardless of objective probabilities.
 </div>
 
-### 2.2.1 Conspiracy Theories as Adaptation to Trauma
+## Scope Insensitivity and Psychic Numbing
 
-**Bilewicz (2022)**: Conspiracy beliefs are not merely cognitive errors; they can function as adaptations to **historical trauma** (collective experiences of victimization, genocide, oppression). Groups that have experienced historical persecution show elevated conspiracy beliefs as a form of vigilance against future threats. Conspiracy theories provide explanatory frameworks for catastrophic events and maintain in-group solidarity.
+Paul Slovic's 2007 paper, "If I Look at the Mass I Will Never Act," addresses one of the most disturbing implications of affective cognition for political life: human emotional and moral responses to mass suffering do not scale with the number of victims. This is **scope insensitivity** — the finding, originally from environmental valuation studies, that people will pay approximately the same amount to save 2,000 birds as to save 200,000 birds, because the emotional response to "birds in distress" reaches its ceiling quickly regardless of magnitude.
 
-This "adaptive" account does not imply conspiracy theories are harmless — they can promote paranoid inter-group hostility — but it explains why debunking alone is ineffective.
+Applied to human suffering, this produces what Slovic calls **psychic numbing**: as the number of victims grows from one to many, the emotional response does not increase proportionally — and the data suggest it may actually decline. The graph of affect against number of victims is not linear. It is concave, flattening out near zero even as the numbers climb toward millions.
 
-### 2.2.2 Inoculation Against Misinformation
+<div class="remark">
+<strong>Why does affect not scale?</strong> Large numbers of human beings cannot be represented as concrete, individuated people. A million people is an abstraction; a single child with a name and a photograph is a person. The psychological mechanisms that generate empathy — perspective-taking, mental simulation, facial recognition — operate on individuals, not statistics. When the stimulus is "8,000 people killed," there is no face to simulate, no specific individual to feel for.
+</div>
 
-**Kozyreva et al. (2024)**: Reviewed effective interventions for reducing belief in and sharing of misinformation:
-- **Inoculation/prebunking**: Exposing people to weakened versions of misleading arguments in advance — building "cognitive immunity" — is more effective than post hoc correction.
-- **Accuracy nudges**: Simply asking people to consider whether a headline is accurate before sharing increases accuracy of sharing (Pennycook & Rand, 2021). The nudge works because accuracy is a latent goal of most news consumers — sharing doesn't usually involve accuracy deliberation, but prompting it activates existing motivations.
-- **Lateral reading**: teaching people to open new tabs and verify sources rather than evaluating content in isolation.
-- **Media literacy education**: awareness of common manipulation techniques.
+## The Identified Victim Effect
 
-### 2.2.3 The Lazy Thinker vs. Motivated Reasoner Debate
+The most powerful demonstration of scope insensitivity is the **identified victim effect**: a single, named, photographed individual elicits dramatically more charitable donations than statistical descriptions of thousands of victims. Slovic cites studies showing that:
 
-**Pennycook & Rand (2021)**: People who believe misinformation are better characterized as **lazy thinkers** (insufficiently engaging analytical thinking) than as motivated reasoners who consciously reject truth for partisan reasons. Data: analytical thinking ability predicts discernment between real and fake news; the partisan asymmetry in fake news susceptibility is explained mostly by differential engagement of analytical thinking, not differential motivated reasoning.
+- Donors gave more to help "Rokia," a seven-year-old Malian child whose photograph and story were provided, than to help "8 million children facing hunger in southern Africa."
+- Adding statistical context to Rokia's story — informing donors that Rokia was one of millions — *reduced* donations compared to the Rokia-alone condition.
 
-Policy implication: interventions promoting analytical thinking are more effective than counter-messaging. Accuracy nudges work by briefly overriding cognitive laziness.
+The identified victim functions as a cognitive anchor for empathy. Once that anchor is provided, adding statistical information about a larger population does not add empathy — it dilutes the individual's vividness and shifts processing from affective to analytic modes that are less motivating for charitable action.
+
+<div class="example">
+<strong>The baby Jessica effect:</strong> In 1987, 18-month-old Jessica McClure fell into a well in Midland, Texas. The rescue operation was broadcast live on national television. Donations and media coverage were massive. Contrast this with the response to simultaneous famines killing hundreds of thousands: minimal public engagement, modest donations, no comparable media coverage. The individual identified victim mobilizes more emotional resources than the mass tragedy.
+</div>
+
+## Collapse of Compassion
+
+Slovic introduces the phrase **collapse of compassion** to describe a related phenomenon: adding more victims to a single victim's story actually reduces emotional response. In one study, respondents shown two children in need gave *less per child* than respondents shown one child alone. Emotional engagement triggered by a single person cannot be doubled or tripled — it diffuses rather than amplifies as the group grows.
+
+This has direct implications for humanitarian advocacy. The instinct of advocates is to communicate scale — to impress donors and policymakers with the enormity of suffering. Slovic's research suggests this is psychologically counterproductive: the enormity of the numbers activates numbing precisely because large numbers signal a problem that exceeds individual imagining.
+
+## Implications for Genocide and Political Violence
+
+Perhaps the most disturbing application of psychic numbing is to the psychology of genocide response. Slovic argues that the international community's repeated failure to intervene in atrocities — from the Holocaust to Rwanda to Darfur — is not solely a failure of political will or strategic interest. It is partly a systematic feature of how human psychology processes large-scale suffering. "Never Again" may be structurally undermined by the very cognitive architecture it relies on to motivate action.
+
+Effective advocacy against atrocities may need to work against the natural tendency toward abstraction, by re-individualizing victims — creating identified proxies who can function as emotional entry points for the mass. This strategy works with the psychology of affect rather than against it.
 
 ---
 
-# Chapter 3: The Psychological Roots of Political Ideology
+# Chapter 3: Political Ideology
 
-## 3.1 Defining Political Ideology
+## Defining Ideology
 
-<div class="definition">
-<strong>Political ideology</strong> is a structured system of beliefs about how the political and social world is, how it should be, and how to get from here to there. Empirically, <strong>conservatism</strong> and <strong>liberalism</strong> consistently emerge as the primary axis of variation in mass publics, although their content varies by culture and time.
-</div>
+In political science, ideology typically refers to a coherent system of beliefs about how society should be organized — covering economic policy, social policy, the role of the state, and fundamental values. The left-right or liberal-conservative dimension is the dominant organizing axis in most Western democracies, though this single dimension cannot capture the full complexity of political belief systems.
 
-## 3.2 Jost's Dual-Process Motivational Theory (2009)
-
-**Jost (2009)** proposed that ideology serves two distinct psychological motives:
-1. **Epistemic needs**: need for certainty, order, closure, and structure. Conservatism provides cognitive clarity by endorsing tradition and resisting change.
-2. **Existential needs**: threat management, mortality salience, uncertainty reduction. Conservatism increases under threat (experimental terror management, threat priming).
-
-<div class="theorem">
-<strong>Ideology as motivated social cognition (Jost et al., 2003):</strong> Conservatism is psychologically appealing because it satisfies needs for certainty (resistance to change + cognitive closure) and threat management (system justification). This does not mean conservatives are more biased — liberals show their own motivated reasoning patterns — but the <em>content</em> of conservative ideology (hierarchy, tradition, purity) reflects specific psychological motivations.
-</div>
-
-## 3.3 Moral Foundations Theory (Haidt, Graham, & Joseph, 2009)
+Political psychologists ask a deeper question: *why* do individuals end up on one side of the ideological spectrum or the other? Jost's (2009) answer is that political ideology is not merely a set of policy preferences but a motivational system — a coherent set of psychological dispositions that orient people toward particular political worldviews through what he calls **elective affinities**.
 
 <div class="definition">
-<strong>Moral Foundations Theory (MFT)</strong> proposes that human moral psychology is built on multiple innate "foundations" that evolved to solve recurrent adaptive challenges. <strong>Liberals</strong> prioritize Care/harm and Fairness/reciprocity. <strong>Conservatives</strong> also value Loyalty/betrayal, Authority/subversion, and Purity/degradation.
+<strong>Elective affinities</strong> (Jost, 2009) are non-random associations between psychological traits and ideological orientations. They are not deterministic causal chains but systematic correlations: people with certain psychological profiles tend to "elect" ideological positions that fit those profiles, and ideological positions create social environments that reinforce compatible psychological traits.
 </div>
 
-| Foundation | Adaptive challenge | Liberal weight | Conservative weight |
-|-----------|-------------------|---------------|---------------------|
-| Care/harm | Protect vulnerable | High | Moderate |
-| Fairness/reciprocity | Cheating, exploitation | High | Moderate |
-| Loyalty/betrayal | Coalitional group solidarity | Low | High |
-| Authority/subversion | Hierarchy, respect, duty | Low | High |
-| Purity/degradation | Contamination, disgust | Low | High |
-| Liberty/oppression | Bullying, domination | Moderate | Moderate |
+## Psychological Foundations of Left-Right Ideology
 
-MFT predicts moral failures of communication: liberals speaking only in care/fairness language will not resonate with conservatives who weight loyalty/authority/purity foundations.
+Jost synthesizes a large body of research identifying stable psychological differences between people who identify as liberal versus conservative:
 
-## 3.4 Cognitive and Personality Predictors of Ideology (Zmigrod, 2022)
+**Need for Cognitive Closure (NCC):** Conservatives score higher on validated measures of NCC — the desire for clear answers, certainty, order, and closure on ambiguous questions. High-NCC individuals are uncomfortable with ambiguity and motivated to reach and maintain stable cognitive positions. This predicts preference for tradition (known to work), resistance to social change (introduces uncertainty), and acceptance of hierarchy (provides social structure and order).
 
-**Zmigrod (2022)**: Synthesized a large literature on cognitive and personality correlates of ideological orientation. Key findings:
-- **Cognitive flexibility** and **need for cognition** negatively predict conservatism.
-- **Perceptual rigidity** (tendency toward categorical, "black-or-white" thinking) predicts ideological extremism across the spectrum.
-- **Dogmatic ideological thought** (believing one's group has the uniquely correct worldview) correlates with reward sensitivity to ingroup signals and reduced sensitivity to contradictory evidence.
-- Both left-wing and right-wing extremism share a **rigid cognitive signature** distinguishable from moderate positions.
+**Threat sensitivity:** Conservatives are more responsive to environmental threats — both physical and symbolic. In high-threat environments, conservative attitudes (preference for strong security, in-group solidarity, familiar social arrangements) are especially salient. Experimental manipulation of threat salience has been shown to temporarily shift political attitudes in a conservative direction even among liberal participants.
+
+**System justification motivation:** People are motivated to perceive existing social arrangements as fair and legitimate — a tendency Jost calls **system justification**. This motivation is stronger, on average, among conservatives, predicting greater acceptance of social inequality as natural or deserved rather than unjust.
+
+**Integration with dual-process cognition:** Conservative ideology is associated with greater reliance on intuitive, affective, heuristic processing (System 1 in Kahneman's framework). Liberal ideology is associated with greater reliance on analytic, reflective processing (System 2). This is consistent with studies showing conservatives are less likely to override initial intuitions in cognitive reflection tasks.
+
+<div class="remark">
+Jost is careful to distinguish psychological correlates from psychological causes. Documenting that conservatives score higher on NCC does not mean NCC <em>causes</em> conservatism, nor does it imply conservatism is psychologically deficient. It describes a systematic covariance between psychological styles and ideological positions — an elective affinity — that requires causal explanation beyond simple correlation.
+</div>
+
+## Political Monoculture in Psychological Science
+
+A methodological problem raised by Inbar and Lammers (2012) cuts to the heart of how political psychology is practiced: the field itself is politically homogeneous in a way that may compromise its scientific credibility. Their survey of members of the Society for Personality and Social Psychology (SPSP) found that self-identified conservatives constituted approximately 6% of the sample, with liberals outnumbering conservatives roughly 14:1. This is far more skewed than either the general population or other academic disciplines.
+
+<div class="definition">
+<strong>Political monoculture</strong> in a research field refers to systematic overrepresentation of one political orientation among researchers, which may introduce correlated biases in topic selection, conceptual framing, and peer review practices.
+</div>
+
+The consequences Inbar and Lammers identify are methodologically serious:
+
+- **Topic selection bias:** Socially liberal research topics receive more systematic attention than liberal-critical topics. There is no obvious scientific reason for this asymmetry.
+- **Conceptual framing bias:** Key constructs — "prejudice," "authoritarianism," "closed-mindedness" — may be defined in ways that embed liberal assumptions. The concept of "political prejudice" has historically been studied asymmetrically, with more attention to conservative prejudice than to equivalent liberal prejudice.
+- **Peer review bias:** A substantial minority of respondents (including many liberals) admitted they would rate a conservative job candidate less favorably than an equivalent liberal candidate, suggesting ideological homogeneity partly perpetuates itself through social exclusion.
+- **Publication bias:** Research showing liberal groups in a negative light may face higher scrutiny and lower publication rates, generating a systematic file-drawer problem.
+
+Inbar and Lammers argue that addressing this requires explicit institutional commitment to ideological diversity in hiring, grant review, and the study of political psychology's own biases — making the field's self-examination a scientific priority, not merely a political one.
 
 ---
 
-# Chapter 4: Democratic Deliberation and Ideological Polarization
+# Chapter 4: Moral Foundations and Political Disagreement
 
-## 4.1 The Problem of Affective Polarization
+## The Limits of Single-Axis Moral Theory
+
+Much of Western moral philosophy since the Enlightenment has sought a unifying principle of morality — whether the maximization of welfare (utilitarianism), respect for rational autonomous persons (Kantian deontology), or virtue (Aristotelian ethics). Haidt and colleagues argue that this philosophical universalizing tendency maps onto a specifically liberal moral sensibility: a focus on harm prevention and fairness as the *only* genuine moral concerns, with other moral intuitions dismissed as mere bias or cultural convention.
+
+**Moral Foundations Theory (MFT)**, developed by Haidt, Graham, and colleagues, rejects this. It proposes that human morality rests on multiple distinct psychological systems — foundations — each with evolutionary origins, each present across cultures, and each weighting moral and political judgments differently across individuals.
+
+## The Five Moral Foundations
 
 <div class="definition">
-<strong>Affective polarization</strong> is the phenomenon in which partisans increasingly dislike and distrust those from the opposing party — independent of policy disagreements. It has grown dramatically in the United States since the 1990s and is observed in many democracies.
+<strong>Moral Foundations Theory</strong> proposes that human moral psychology is organized around five (later six) evolved systems for detecting and responding to morally relevant situations:
+
+<ol>
+<li><strong>Care/Harm:</strong> Sensitivity to suffering and vulnerability; compassion for the weak; protection from cruelty. Evolutionarily rooted in parental care and mammalian nurturing.</li>
+<li><strong>Fairness/Reciprocity:</strong> Sensitivity to cheating, exploitation, and violations of proportionality; commitment to justice and equal treatment. Rooted in coalitional reciprocity.</li>
+<li><strong>Loyalty/Betrayal:</strong> Sensitivity to group solidarity, betrayal of the in-group, and obligations to community. Rooted in coalition formation for intergroup competition.</li>
+<li><strong>Authority/Subversion:</strong> Sensitivity to hierarchy, legitimate authority, and obligations of deference. Rooted in social organization and rank-based coordination.</li>
+<li><strong>Sanctity/Purity:</strong> Sensitivity to contamination, degradation, and violation of sacred things; disgust responses. Rooted in pathogen-avoidance behavior extended into the social domain.</li>
+</ol>
+
+A sixth foundation — <strong>Liberty/Oppression</strong> — was added later, capturing resentment of coercion and domination by powerful agents.
 </div>
 
-Affective polarization has consequences beyond attitude extremism:
-- Reduces cross-party social interaction, friendship, and marriage.
-- Increases hostility toward outparty in hiring, business, and housing decisions.
-- Reduces willingness to engage in democratic compromise.
+## Liberal and Conservative Moral Palates
 
-**Jost, Baldassarri, & Druckman (2022)** reviewed evidence that affective and ideological polarization are partially independent and have different causes. Affective polarization is driven substantially by group identity and media ecosystem; ideological sorting (alignment of party and policy views) is a distinct trend.
+The central empirical finding from Haidt et al.'s (2009) large-scale survey research using the **Moral Foundations Questionnaire (MFQ)** is a systematic difference in how liberals and conservatives weight these foundations:
 
-## 4.2 The Illusion of Explanatory Depth in Politics
+- **Liberals** score high on Care and Fairness and low on Loyalty, Authority, and Sanctity. Their moral universe is organized primarily around preventing harm and ensuring justice.
+- **Conservatives** score moderately high across *all five* foundations. They share liberal concerns about care and fairness but also heavily weight loyalty, authority, and purity.
 
-**Fernbach & Van Boven (2022)** reviewed research on how asking people to explain the mechanisms of policies they support (e.g., explain exactly how a carbon tax would reduce emissions) causes them to realize their understanding is shallower than they thought (**illusion of explanatory depth**) → moderate confidence → moderate attitudes. The technique works for complex causal policies but not for moral positions (abortion, capital punishment) because those are not primarily causal-mechanical beliefs.
+Haidt describes this as a difference between a "narrow moral palate" (liberals) and a "full moral palate" (conservatives) — a framing deliberately designed to challenge the implicit assumption that liberal moral foundations are complete and others are mere bias or irrationality. Cross-cultural evidence from the MFQ supports the evolutionary universality claim: the five foundations appear across cultures, even as their relative weighting varies.
 
-Implication: political extremism about policy is partly driven by overconfident but shallow understanding. Promoting genuine deliberation (not just exchanging talking points) can moderate positions.
+<div class="example">
+<strong>The flag-burning example:</strong> A liberal asked why burning the flag is wrong might struggle to identify a victim or a violated right. A conservative finds the question obvious: burning the flag violates loyalty to the nation and desecrates a sacred symbol. Neither is reasoning poorly — they are applying different moral foundations. The liberal's moral framework lacks the categories to process the intuition the conservative is tracking.
+</div>
 
-## 4.3 Reducing Partisan Divides
+## Implications for Political Communication
 
-**Voelkel et al. (2024)** conducted a mega-study testing many interventions designed to reduce affective polarization. Key findings:
-- Some interventions reliably reduced affective polarization across partisan groups.
-- **Perspective-taking** and **empathy induction** were modestly effective.
-- **Common identity framing** (emphasizing shared American/national identity) helped.
-- No single intervention produced large effects; combinations are likely needed.
-- Notably, **accuracy about out-group views** (correcting exaggerated perceptions of partisan extremity) reduced affective polarization — many people believe the other side is more extreme than it is.
+MFT has direct implications for political persuasion across ideological divides. Haidt argues that political communication typically fails because advocates frame arguments in their own moral vocabulary rather than the audience's. When a liberal argues for environmental protection by citing harm to ecosystems, this resonates with Care/Harm foundations but leaves Authority, Loyalty, and Sanctity untouched — and these are precisely the foundations that conservative audiences weight most.
 
-**Hartman et al. (2022)**: Studied what reduces support for partisan violence. Found that **cost-framing** (emphasizing personal and collective costs of political violence) is more effective than appeals to norms or moral arguments for many individuals.
+**Moral translation** — reframing arguments in the moral vocabulary of the target audience — can substantially improve cross-ideological persuasion. Framing immigration policy in terms of national loyalty and heritage (Loyalty foundation) or framing conservation as maintaining the purity of the natural world (Sanctity foundation) increases conservative support compared to equivalent harm-focused framings.
+
+<div class="remark">
+MFT is not without critics. Some researchers argue that the "full moral palate" framing implicitly valorizes conservative moral breadth, when the data could equally be described as conservatives endorsing moral intuitions that liberals have reasoned their way beyond. The theory has also faced measurement validity challenges regarding the Sanctity and Loyalty subscales in non-WEIRD populations.
+</div>
 
 ---
 
-# Chapter 5: Authoritarianism and Political Reactions to Threat
+# Chapter 5: Political Rhetoric and Language
 
-## 5.1 Right-Wing Authoritarianism (RWA)
+## The Linguistic Turn in Political Psychology
+
+Language is the medium of political life — the vehicle through which ideology is transmitted, coalitions are formed, enemies are defined, and moral worlds are constructed. Political psychology has increasingly turned to systematic linguistic analysis, using computational methods to detect psychological patterns in large text corpora that would be invisible to human readers scanning individual documents.
+
+## Historical Change in American Political Rhetoric
+
+Buttrick et al. (2020) analyze a large corpus of American political texts — presidential speeches, congressional records, party platforms — spanning from the late eighteenth century to the early twenty-first, using the Linguistic Inquiry and Word Count (LIWC) system to measure psychological dimensions of political language over time.
 
 <div class="definition">
-<strong>Right-wing authoritarianism (RWA)</strong> (Altemeyer, 1988) is a personality dimension comprising three clusters: (a) <strong>authoritarian submission</strong> — deference to established authorities; (b) <strong>authoritarian aggression</strong> — hostility toward deviants and outgroups sanctioned by authorities; and (c) <strong>conventionalism</strong> — adherence to traditional social norms.
+<strong>LIWC (Linguistic Inquiry and Word Count)</strong> is a validated text analysis tool that classifies words into psychologically meaningful categories — emotion words, cognitive process words, social reference words, first-person pronouns, moral language, and others — enabling automated psychological analysis of large text corpora.
 </div>
 
-High-RWA individuals show:
-- Strong in-group cohesion combined with out-group hostility.
-- High compliance with legitimate authority figures and strong opposition to groups threatening social order.
-- Relatively low cognitive complexity and openness to experience.
+Three major shifts emerge from Buttrick et al.'s analysis:
 
-**Altemeyer (1988)** showed RWA predicts support for authoritarian government actions (surveillance, harsh sentencing, persecution of minorities) and hostility toward gay people, racial minorities, and non-conformists.
+**1. Rise of psychological language.** Political texts increasingly use first-person singular pronouns (I, me, my) and emotion words, centering the subjective experiences of the speaker. This represents a shift from a public/civic framing of political issues to a personal/psychological framing. Political rhetoric increasingly presents positions as expressions of personal experience and feeling rather than impersonal civic obligation.
 
-## 5.2 Left-Wing Authoritarianism (LWA)
+**2. Decline of moral duty language.** Language emphasizing obligation, duty, and civic responsibility — what political philosophers call deontological civic language — has declined relative to language emphasizing rights, identity, and personal experience. This mirrors broader cultural shifts in moral discourse described by sociologists, including Robert Bellah's analysis of American "expressive individualism."
 
-**Osborne et al. (2023)**: Developed measures of **left-wing authoritarianism** — a cluster of traits including strong submission to left-wing authorities, anti-hierarchical aggression, and left-wing conventionalism. LWA predicts support for cancelling, shaming, and using censorship against perceived right-wing enemies. Importantly, LWA correlates with anticonventionalism and rejection of traditional authority — a mirror image of RWA, not its opposite.
+**3. Rising us/them distinctions.** Language creating and emphasizing in-group/out-group boundaries has increased substantially over the past several decades, tracking the rise of affective polarization documented by survey methods. The linguistic record provides independent historical evidence of psychological shifts that corroborate and extend survey-based polarization research.
 
-General authoritarianism research now considers a **general authoritarian dynamic** involving submission, aggression, and conventionalism that can be oriented toward any ideological movement that presents itself as the legitimate authority.
+<div class="remark">
+Buttrick et al. are cautious about causal interpretation: rhetorical change may drive or reflect psychological change in political culture, and the likely answer is bidirectional feedback. The value of the linguistic analysis is its independence from survey data — it draws on a different evidentiary source to converge on the same conclusion about polarization's trajectory.
+</div>
 
-## 5.3 Political Reactivity to Threat
+## Historical Trauma and Intergroup Language
 
-**Kennedy et al. (2023)** and **Esses et al. (2015)**: Threats — economic, identity, physical, symbolic — reliably push attitudes in conservative and authoritarian directions. Mechanisms:
-- **Terror management**: mortality salience → increased worldview defence, nationalism, and prejudice.
-- **Intergroup threat theory** (Esses et al.): perceived realistic threat (resource competition) and symbolic threat (value conflict) both increase anti-immigration and exclusionary attitudes.
-- Threat sensitivity predicts the magnitude of these effects; high-RWA individuals respond most strongly to authority-backed threat communications.
+Bilewicz (2022) approaches political language from a different angle: the way that **historical trauma** — collective experiences of past atrocities, persecution, and defeat — shapes how groups talk about and relate to each other in the present. Historical trauma is not merely historical context; it is a psychologically active representation transmitted across generations that structures contemporary threat perception, intergroup communication, and political identity.
+
+<div class="definition">
+<strong>Historical trauma</strong> refers to collective psychological representations of past group suffering — atrocities, persecution, displacement, defeat — that are transmitted across generations and actively shape current intergroup threat perception, identity, and behavior, even among individuals who did not directly experience the events.
+</div>
+
+Transmission mechanisms include parental socialization (children absorbing parents' trauma narratives and threat perceptions); **postmemory** (the vivid internalization of others' traumatic memories as quasi-personal memories, identified in Holocaust survivor families); and cultural practices (ceremonies, commemorations, national holidays, and education systems that keep trauma narratives salient).
+
+A particularly important dynamic is **competitive victimhood** — the tendency for groups with strong historical trauma identities to compete over whose suffering was more severe or morally significant. This is not merely a historical dispute; it is a psychological conflict over moral standing, acknowledgment, and compensation. Competitive victimhood creates a zero-sum dynamic in which acknowledging the other group's suffering feels threatening to one's own group's moral status — making reconciliation especially difficult.
+
+For political language specifically, historical trauma means that groups interpret contemporary rhetoric through the lens of past catastrophes: minor intergroup frictions are read as harbingers of persecution, ambiguous statements are interpreted as threats, and political opponents are cast in the roles of historical persecutors. Effective intergroup communication must account for how trauma frames the reception of language.
 
 ---
 
-# Chapter 6: Social Dominance and the Psychology of Status Hierarchies
+# Chapter 6: The Psychology of Ideological Thinking and Extremism
 
-## 6.1 Social Dominance Theory
+## Ideology as Content vs. Ideology as Style
+
+Most research on political ideology focuses on *content* — what people believe, which policies they support, where they fall on left-right scales. Zmigrod's (2022) research program takes a different approach: studying ideology as a *cognitive style* — the how, rather than the what, of political belief.
+
+The central claim is that **ideological thinking** — characterized by rigidity, internal coherence, and resistance to disconfirmation — is associated with a domain-general cognitive style that cuts across ideological content. The authoritarian nationalist and the revolutionary socialist may believe entirely different things, but if both hold their beliefs with the same rigid certainty and resist updating in response to evidence, they share a common psychological profile.
 
 <div class="definition">
-<strong>Social Dominance Theory (SDT)</strong> (Sidanius & Pratto, 1999) proposes that all human societies develop <strong>group-based social hierarchies</strong>, and that individuals vary in their <strong>Social Dominance Orientation (SDO)</strong> — the degree to which they desire and support inequality among social groups.
+<strong>Domain-general cognitive rigidity</strong> refers to a characteristic pattern of information processing — reduced flexibility in task-switching, slower updating of beliefs in response to disconfirmatory evidence, stronger prior biases in probabilistic reasoning — that predicts ideological commitment across different ideological contents.
 </div>
 
-SDO has two components:
-- **SDO-Dominance**: Support for active group-based dominance and oppression.
-- **SDO-Egalitarianism**: Opposition to equality (preference for hierarchical group order).
+## Cognitive Measures of Ideological Thinking
 
-High-SDO individuals endorse hierarchy-legitimizing myths (meritocracy, genetic group differences) and are more likely to choose careers (police, military, business) that maintain hierarchy; low-SDO individuals choose hierarchy-attenuating roles (public defenders, social workers, counselors).
+Zmigrod and colleagues use standard cognitive psychology paradigms to measure cognitive flexibility in ideological and non-ideological individuals:
 
-## 6.2 Collective Narcissism and Status Threat
+- **Task-switching flexibility:** High-ideology individuals show reduced ability to shift between task rules when cue changes require switching cognitive sets.
+- **Probabilistic reversal learning:** When reward contingencies reverse, high-ideology individuals update more slowly, showing perseverative responding.
+- **Working memory updating:** High-ideology individuals show weaker ability to discard outdated information from working memory in dynamic updating tasks.
+- **Cognitive inhibition:** High-ideology individuals show stronger prepotent responses and weaker inhibitory control in go/no-go and stop-signal paradigms.
 
-**Golec de Zavala & Lantos (2020)**: **Collective narcissism** — the belief that one's group is exceptional but insufficiently recognized by others — predicts hostility toward outgroups even when group status is objectively high. Unlike secure in-group pride, collective narcissism is rooted in fragile group identity requiring external validation. It predicts authoritarianism, conspiracy beliefs, and hostility toward immigrants.
+Critically, these are not measures of intelligence. They are measures of cognitive *flexibility*, measured on tasks with no ideological content whatsoever. The finding is that ideological commitment in the political domain correlates with cognitive rigidity in purely abstract cognitive tasks.
 
-## 6.3 System Justification and Status Hierarchies
+## Neural Correlates of Ideological Thinking
 
-**Kay et al. (2023)**: Reviewed how people rationalize and even embrace existing hierarchies — including those that disadvantage their own group. The tendency to see existing hierarchies as fair and natural is driven by **cognitive consistency** motives and epistemic needs for order. Legitimizing myths reduce perceived group injustice and dampen collective action.
+Brain imaging studies reviewed by Zmigrod find structural and functional differences associated with ideological thinking in regions implicated in cognitive control:
 
-**Kachanoff et al. (2022)**: Studied conditions under which members of disadvantaged groups support vs. challenge social hierarchies. Found that perceptions of hierarchy permeability (can I succeed despite my group's low status?) increase individual mobility attempts and reduce collective action.
+- **Prefrontal cortex:** Regions supporting flexible goal-directed behavior and cognitive updating show reduced activation and, in structural analyses, reduced gray matter volume in high-ideology individuals.
+- **Striatum:** Reward prediction and habit formation circuits that support rigid, habitual responding show differential engagement.
+- **Anterior cingulate cortex:** A region critical for conflict detection and behavioral adjustment shows reduced sensitivity to conflict signals in ideological individuals — less responsiveness to cues that current behavior needs updating.
+
+<div class="remark">
+These neuroscientific findings are correlational, not causal. They document associations between ideological measures and brain structure/function but cannot establish whether cognitive rigidity precedes or follows ideological commitment. Whether rigid cognition predisposes individuals to extreme ideologies, or whether ideological immersion causes cognitive rigidification, remains an open developmental question.
+</div>
+
+## Cross-Ideological Generality
+
+A critical feature of Zmigrod's findings is that they hold across ideological content. Both **extreme left** and **extreme right** individuals score higher on cognitive rigidity measures than moderates. Religious fundamentalism and secular dogmatism show similar cognitive profiles. This cross-ideological generality is what supports the domain-general cognitive style interpretation: the feature that unites ideologues across the spectrum is not what they believe but *how* they hold beliefs.
+
+## Implications for Radicalization
+
+The domain-general cognitive style model implies that radicalization is not purely a content problem — not just a matter of individuals being exposed to extremist ideas. It partly reflects a cognitive disposition toward rigidity that may precede content. Interventions aimed at reducing radicalization might usefully target cognitive flexibility through training, environmental design, or educational approaches that cultivate deliberation and tolerance of ambiguity, in addition to content-specific counter-narratives.
 
 ---
 
-# Chapter 7: System Justification — Preference for the Status Quo
+# Chapter 7: Misinformation and Fake News
 
-## 7.1 System Justification Theory
+## The Stakes
+
+Misinformation — false or misleading information spread regardless of intent — has emerged as one of the most actively researched problems in political psychology since 2016. False beliefs about electoral fraud, vaccine safety, climate change, and political opponents affect real behavior: they shape votes, fuel political violence, undermine public health compliance, and erode trust in democratic institutions. Understanding the psychology of misinformation is both a scientific and a civic priority.
+
+## Two Models: Motivated Reasoning vs. Inattention
+
+The dominant framework in political misinformation research has been **motivated reasoning**: people believe false news because it confirms their partisan identities. On this view, ideologically consistent misinformation penetrates political cognition because critical thinking is strategically disabled — people want to believe information favoring their side and resist information that challenges it. This implies that corrections will bounce off ideologically motivated belief.
+
+Pennycook and Rand (2021) challenge this view with the **inattention hypothesis**:
 
 <div class="definition">
-<strong>System Justification Theory (SJT)</strong> (Jost & Banaji, 1994; Jost et al., 2004) proposes that people are motivated to perceive and justify the prevailing social, economic, and political arrangements as legitimate, fair, and necessary — even when doing so is against their personal or group interests. This <strong>system justification motive</strong> coexists with ego-justification (self-interest) and group-justification (in-group preference).
+<strong>The inattention hypothesis</strong> (Pennycook & Rand, 2021) proposes that susceptibility to misinformation is primarily caused not by motivated reasoning but by a failure to apply available analytic thinking to accuracy assessment. Social media platforms optimize for social engagement (likes, shares, reactions) rather than accuracy, causing accuracy goals to be chronically crowded out by social goals during information processing. Misinformation sharing results from inattention to accuracy, not from motivated belief in falsehood.
 </div>
 
-Key findings:
-- **Disadvantaged group members** often exhibit more system justification than advantaged groups (palliative function: accepting inequality reduces depression and provides cognitive closure).
-- Increases under uncertainty, threat, and mortality salience.
-- Rationalizes inequality through stereotypes ("poor people are lazy") and meritocracy myths.
+Several lines of evidence support this view:
 
-**Jost, Becker, Osborne, & Badaan (2017)**: System justification functions as a **psychological barrier to collective action** — people who justify the system feel less anger about inequality and less motivation to engage in activism. Reframing inequality as unjust disrupts system justification and can mobilize action.
+1. **People can tell.** When directly asked whether a headline is accurate — independent of whether they would share it — people correctly identify true headlines at rates well above chance, including for politically concordant misinformation. If motivated reasoning were dominant, people should be unable to accurately evaluate content aligning with their political identity. They mostly can.
 
-## 7.2 Inequality and Well-Being (Buttrick et al., 2017)
+2. **The accuracy nudge effect.** Simply asking people "Is this headline accurate?" before sharing decisions significantly reduces misinformation sharing — including politically concordant misinformation. This works by making accuracy goals salient. If motivated reasoning were the primary driver, this brief prompt should not penetrate partisan defenses. But it does.
 
-**Buttrick, Heintzelman, & Oishi (2017)**: Reviewed cross-national and longitudinal evidence on inequality and subjective well-being. Higher economic inequality is associated with lower national well-being, lower social trust, weaker community bonds, and increased status anxiety. Inequality undermines well-being through:
-- Relative deprivation and social comparison.
-- Erosion of social trust and civic participation.
-- Chronic stress from status competition.
+3. **Analytic thinking predicts less susceptibility, across parties.** Individuals who score higher on cognitive reflection tests are less susceptible to misinformation regardless of whether the misinformation is politically concordant or discordant. This is inconsistent with motivated reasoning, which predicts that analytic thinkers would be better at *rationalizing* their preferred beliefs, not better at rejecting them.
 
-The well-being cost of inequality is especially large for those at the bottom of the distribution — but even middle-class members of high-inequality societies show lower well-being than comparable citizens in more equal societies.
+## Interventions: Pre-bunking and Accuracy Nudges
 
-## 7.3 Friesen et al. (2019): Psychological Features of Political Conservatism
+Kozyreva et al. (2024) provide a comprehensive review and classification of misinformation interventions, assessing the evidence base for each:
 
-**Friesen et al. (2019)**: Conducted a large-scale study of the psychological features distinguishing social conservatism from economic conservatism. Found that:
-- **Social conservatism** (opposition to social change, support for traditional norms) is driven by system justification, disgust sensitivity, and RWA.
-- **Economic conservatism** (support for free markets, opposition to redistribution) is driven primarily by SDO and material self-interest.
-- The two dimensions have different psychological foundations and should not be conflated.
+**Prebunking/inoculation:** Drawing on McGuire's (1961) psychological inoculation theory, prebunking exposes people to weakened doses of misinformation *techniques* — emotional manipulation, false experts, conspiracy logic — before they encounter real misinformation using those techniques. The theoretical mechanism is that forewarned individuals build cognitive "antibodies" that help them recognize and resist the techniques when encountered in the wild. Field studies find that even brief inoculation interventions — including a browser-based game called *Bad News* — confer measurable resistance to real-world misinformation.
+
+**Accuracy nudges:** As demonstrated by Pennycook and Rand, accuracy-salience prompts reduce sharing. At the scale of a social media platform with hundreds of millions of users, even a small per-nudge effect size becomes a massive absolute reduction in misinformation sharing.
+
+**Labeling:** Warning labels applied by fact-checkers help, but carry a critical limitation: the **implied truth effect**. Unlabeled content appears more credible because users infer that fact-checkers would have labeled it if false. Since fact-checkers can review only a small fraction of content, this inference is frequently wrong — labeling may inadvertently raise the perceived credibility of unlabeled misinformation.
+
+**Platform design:** Structural changes to platform architecture — friction before sharing, requiring reading before sharing, reducing algorithmic amplification of emotionally engaging content — can reduce misinformation spread. These face significant commercial headwinds since emotional content drives engagement and engagement drives advertising revenue.
+
+<div class="remark">
+Kozyreva et al. emphasize that no single intervention is sufficient. The strongest evidence base supports a toolbox combining pre-bunking, accuracy nudges, and platform design changes. Field experiments at realistic scale are needed to evaluate the durability and external validity of effects found in laboratory conditions.
+</div>
 
 ---
 
-# Chapter 8: Social Movements — Framing, Solidarity, and Mobilization
+# Chapter 8: Interventions for Democratic Strengthening
 
-## 8.1 Moral Reframing for Persuasion
+## The Problem: Affective Polarization and Democratic Backsliding
 
-**Feinberg & Willer (2011)**: Showed that political arguments framed in the moral language of the target audience are more persuasive than arguments framed in the speaker's own moral language. Conservative arguments become more persuasive to liberals when framed in terms of care/fairness (vs. purity/authority); liberal arguments become more persuasive to conservatives when framed in terms of loyalty/purity (vs. care).
-
-**Feinberg & Willer (2019)**: Extended this to show that immigration reform arguments framed around patriotism and the American founding story (loyalty/authority) are more persuasive to conservatives; environmental arguments framed around pollution as contamination (purity) are more persuasive to conservatives than standard care-based framings.
-
-## 8.2 Mobilizing Collective Action (van Zomeren, 2013)
+Contemporary liberal democracies face two interrelated problems that political psychology can potentially address. **Affective polarization** — intense partisan dislike and distrust that goes beyond genuine policy disagreement — has grown substantially in the United States and other democracies since the 1980s. This is distinct from ideological polarization (actual policy divergence), which has grown more modestly. Many people hold increasing hostility toward the opposing party without large changes in their own policy views.
 
 <div class="definition">
-<strong>Collective action</strong> refers to organized effort by group members to change an unjust situation. It requires: (a) <strong>group identification</strong>; (b) perceived <strong>injustice/anger</strong>; and (c) perceived <strong>efficacy</strong> — belief that collective action can succeed.
+<strong>Affective polarization</strong> refers to the degree to which partisans dislike, distrust, and feel contempt toward supporters of the opposing party — as distinct from differences in policy preferences. It is measured by partisan feeling thermometer scales and trait ratings (e.g., how "closed-minded," "selfish," or "dishonest" are members of the opposing party?).
 </div>
 
-**van Zomeren (2013)** synthesized research on the **Social Identity Model of Collective Action (SIMCA)** and **Encapsulation Model of Social Identity in Collective Action (EMSICA)**:
-- Injustice appraisals generate anger that motivates action, but only when group identity is salient.
-- Efficacy beliefs moderate whether anger translates to action.
-- **Strong collective identities** raise participation by strengthening group norms and social pressure.
-- **Moral anger** (indignation at norm violations) is especially potent: it predicts action across a wider range of circumstances than strategic calculations.
+Alongside affective polarization, democratic commitments — support for democratic norms like accepting electoral results, protecting minority rights, and constraining executive power — have weakened in some populations. These problems are related but distinct, and may require targeted interventions.
 
-### 8.2.1 Issue Framing in Social Movements
+## The Megastudy Approach
 
-Successful social movements:
-- **Diagnose** a problem (frame injustice, assign blame).
-- **Prognose** a solution (propose collective action and demonstrate feasibility).
-- **Motivate** by connecting the cause to valued identities and moral commitments.
+Voelkel et al. (2024) deployed a **megastudy** design — simultaneously testing 25 distinct interventions in a large, nationally representative sample — allowing direct comparison of effect sizes across interventions under identical conditions. This is methodologically superior to comparing across individual RCTs conducted at different times with different samples.
 
-Frames compete in a **framing contest** — opposing forces attempt to define what a conflict is "really about" (e.g., abortion as "choice" vs. "life").
+The top-performing interventions fell into three categories:
+
+**1. Appeals to democratic norms:** Interventions communicating that most Americans — across party lines — value democratic norms reduced antidemocratic attitudes and support for norm violations. The mechanism appears to be **social norm correction**: people systematically overestimate how many fellow citizens support antidemocratic behavior. Correcting this misperception shifts behavior toward the more pro-democratic real norm.
+
+**2. Cross-partisan perspective-taking:** Brief videos showing ordinary members of the opposing party expressing mainstream, non-extremist views reduced partisan animosity by humanizing out-group members. This leverages contact theory principles — exposure to out-group heterogeneity undermines categorical stereotypes.
+
+**3. Correcting misperceptions about opponent extremity:** People systematically overestimate how extreme the typical member of the opposing party is. Providing accurate, representative information about the opposing party's composition and views reduced partisan hostility, with some effects lasting up to a month.
+
+Less effective interventions included appeals to shared American identity and generic empathy exercises, which sometimes backfired by activating rather than bridging partisan identities. Modest absolute effect sizes across interventions underscore that psychological interventions are tools, not solutions: they can contribute at the margins but cannot substitute for structural and institutional reforms.
+
+## Affective Polarization: A Review of Interventions
+
+Hartman et al. (2022) review 60+ studies of affective polarization interventions, organizing effective approaches into three levels:
+
+**Thoughts-level interventions** target beliefs and perceptions about political opponents. The most robustly effective single approach is **misperception correction** — providing accurate information about the actual views and composition of the opposing party. Reported effects include a 34% reduction in support for political violence and a 44% reduction in willingness to engage in partisan discrimination, with effects sustained for at least a month in some studies.
+
+**Relationships-level interventions** create positive contact between partisans: structured dialogue programs, common humanity framing that highlights within-group diversity of the out-party, and cross-partisan friendship-formation initiatives. These generally show smaller or more variable effects.
+
+**Institutions-level interventions** include electoral reforms (ranked-choice voting, open primaries) and media reforms that structurally reduce incentives for affective polarization. These operate on longer timescales but may produce more durable change.
+
+<div class="remark">
+Effect size heterogeneity across studies is substantial: lab effects frequently attenuate or fail to replicate in field conditions. Meta-analytic estimates are consistently more modest than headline findings from individual studies. Realistic assessment of intervention power — accounting for this attenuation — is essential for policy planning.
+</div>
 
 ---
 
-# Chapter 9: Conformity, Collaboration, and Resistance
+# Chapter 9: Collective Narcissism and Intergroup Conflict
 
-## 9.1 Social Identity and Crowd Behaviour
+## Group Identity and Its Discontents
 
-**Drury & Reicher (2009)**: Challenged traditional "contagion" theories of crowd behaviour (Le Bon's irrationalist account). Using social identity theory, they showed that crowd behaviour is **structured by shared social identity**: when participants share a strong group identity (e.g., oppressed community), collective empowerment, mutual support, and disciplined action emerge. Crowds do not "deindividuate" into irrational mobs; they act on the norms of the most salient shared identity.
+Social identity theory (Tajfel & Turner, 1979) established that group membership is a central source of self-esteem and that people are motivated to view their in-groups favorably. Substantial research shows that positive group identification — genuine pride and belonging — does not inherently predict out-group hostility. People can love their groups without hating others.
 
-**Implications for collective action**: Understanding crowd dynamics helps movements design situations that foster solidarity and disciplined action rather than violence and fragmentation.
+Golec de Zavala and Lantos (2020) introduce a conceptually distinct form of group attachment — **collective narcissism** — that reliably does predict out-group hostility and differs from positive group identification in theoretically important ways.
 
-## 9.2 Minority Influence and Social Change
+<div class="definition">
+<strong>Collective narcissism</strong> is the belief that one's group is exceptional and does not receive the recognition or respect from others that it deserves. It is a grievance-based, defensive form of group attachment rooted not in genuine pride but in frustrated entitlement and insecurity about the group's standing.
+</div>
 
-**Mucchi-Faina, Pacilli, & Pagliaro (2010)**: Reviewed processes by which **minorities** can change majority opinion. Key conditions for minority influence:
-- **Consistency**: minorities must maintain their position steadfastly over time — inconsistency signals that their position is negotiable.
-- **Distinctiveness**: the minority must be clearly identifiable.
-- **Identification**: majority members who feel some commonality with the minority are more susceptible to influence.
-- **Behavioral style**: calm, confident assertion is more effective than aggressive confrontation.
+## Measuring Collective Narcissism
 
-Minority influence typically operates through **conversion** (private attitude change that may not appear in public immediately), rather than the compliance without internalization that characterizes majority influence.
+The **Collective Narcissism Scale** developed by Golec de Zavala captures the "unrecognized greatness" component with items such as "My group deserves special treatment," "I will never be satisfied until my group gets the recognition it deserves," and "It really bothers me when outsiders criticize my group." This scale correlates only modestly with positive group identification scales, confirming discriminant validity — these are measuring different constructs.
+
+## Predictive Validity
+
+Collective narcissism uniquely predicts, controlling for positive group identification:
+
+- **Conspiracy beliefs about out-group threats:** Including anti-Semitic conspiracy theories, anti-immigrant threat beliefs, and beliefs about hostile foreign interference.
+- **Support for aggressive policies:** Including military action, punitive immigration policies, and economic sanctions.
+- **Hypersensitivity to perceived slights:** Minor ambiguous actions by out-groups are perceived as deliberate insults requiring strong responses.
+- **In-group overexclusion:** Expelling or rejecting in-group members who fail to conform to group ideology — a sign of defensive rather than secure group attachment.
+
+<div class="example">
+Cross-national evidence includes: Polish national collective narcissism predicting anti-Semitic and anti-refugee attitudes; British collective narcissism predicting Brexit support; American political collective narcissism tracking authoritarian attitudes and support for political norm violation. These replications across nations, groups (national, religious, ethnic, political), and political contexts strengthen confidence in the construct's validity and generality.
+</div>
+
+## The Frustrated Entitlement Mechanism
+
+The psychological engine of collective narcissism is **frustrated entitlement** — not high self-esteem about the group but insecurity and need for external validation of a greatness felt to be unrecognized. Collective narcissists are not simply proud of their group; they feel their group is not getting the respect it deserves from outsiders, and this unmet entitlement generates chronic hostility toward groups perceived as dismissing, ignoring, or undermining their group's status.
+
+This mechanism has important implications for intervention. Direct arguments against the group's exceptionalist beliefs are likely to backfire. Interventions that address the underlying status insecurity — by providing legitimate avenues for group status affirmation — may be more effective than those that directly challenge collective narcissistic beliefs.
+
+<div class="remark">
+Collective narcissism is politically transpartisan: it has been documented in nationalist movements across the political spectrum, in religious fundamentalist groups, and in ethnic identity movements both dominant and subordinate. It is not a feature of any particular ideology but a motivational structure that can attach to any group identity under conditions of perceived status threat.
+</div>
 
 ---
 
-# Chapter 10: Political Leadership and Collective Identities
+# Chapter 10: Dehumanization in Conflict
 
-## 10.1 Social Identity Theory of Leadership (Haslam et al., 2021)
+## What Is Dehumanization?
+
+Dehumanization — denying the full human status of other people — is one of the most potent psychological mechanisms enabling mass violence, atrocity, and sustained intergroup conflict. If the enemy is not fully human, the moral constraints against harming humans do not apply. Dehumanization has been documented as a precursor to genocide, torture, and ethnic cleansing across many historical cases.
 
 <div class="definition">
-The <strong>Social Identity Theory of Leadership</strong> (Haslam, Reicher, & Platow) proposes that effective leaders are those who: (a) are seen as prototypical group members; (b) actively <strong>define and shape group identity</strong>; (c) champion group interests; and (d) construct a compelling narrative of where the group is going.
+<strong>Dehumanization</strong> is the psychological process of attributing less-than-full human qualities to out-group members — either denying them uniquely human characteristics such as higher-order emotions (infrahumanization/mechanization) or placing them closer to the animal end of an evolutionary continuum (animalistic or blatant dehumanization).
 </div>
 
-Leadership is not primarily about personal charisma or traits but about **identity entrepreneurship**: the capacity to define, develop, and defend a social identity that energizes followers. The "great leader" is one who makes followers feel that their shared identity is meaningful and worth fighting for.
+Research distinguishes between **subtle dehumanization** (denying out-groups uniquely human emotions like nostalgia or guilt while accepting they share basic emotions) and **blatant dehumanization** (explicitly placing out-groups at lower evolutionary status). Bruneau and Kteily (2017) focus on the latter.
 
-This framework explains why populist leaders often outcompete technically superior candidates: populists are better at constructing and performing authentic group identity.
+## The Ascent Measure
 
-## 10.2 Deliberation, Voice, and Gender in Politics
+Bruneau and Kteily use an evolutionarily-grounded measure of blatant dehumanization: the **Ascent scale**, in which respondents rate in-group and out-group members on a figure depicting evolutionary ascent from a hunched, ape-like figure to an upright Homo sapiens. Lower ratings place the group closer to "animal"; higher ratings place them closer to "fully evolved human." This operationalization is deliberately unambiguous — it measures the crudest, most explicit form of dehumanization.
 
-**Mendelberg & Karpowitz (2016)**: Studied how group composition affects deliberation quality, particularly the voice and influence of women in political groups. Key findings:
-- In majority-rule groups, women speak less and are less influential than men.
-- In unanimity-rule groups, every member's contribution is necessary for consensus → women's participation increases significantly.
-- Deliberation quality (integrative complexity, consideration of minority interests) improves when women's voice is equalized.
+## Symmetric Dehumanization in Asymmetric Warfare
 
-Implications: procedural design of deliberative institutions (not just composition) determines who gets heard.
+The key finding of Bruneau and Kteily's (2017) study of the 2014 Israel-Gaza conflict is striking: despite dramatic asymmetry in military power, economic resources, and political rights, both Israelis and Palestinians dehumanized the other at nearly *identical* levels — approximately 38–40 points lower on the 100-point Ascent scale than their in-group ratings, with both placing the out-group below the scale midpoint (closer to "animal" than "fully human" in absolute terms).
 
-## 10.3 Narrative Identity and Political Leaders (McAdams, 2021)
+This challenges frameworks predicting dehumanization to be primarily a tool of the powerful against the powerless. The disadvantaged group (Palestinians, by virtually all objective metrics of power) dehumanized the more powerful group as strongly as the reverse. Symmetric dehumanization emerged despite asymmetric power.
 
-**McAdams (2021)**: Applied **narrative identity theory** to political figures. People construct their lives as personal myths — internalized stories with characters, plotlines, and themes. Political leaders' narrative identities (origin stories of redemption or contamination, themes of agency/communion) shape their policy priorities, communication style, and capacity to inspire.
+Furthermore, approximately half of each sample showed very large dehumanization effects, indicating that blatant dehumanization is not a fringe phenomenon in conflict-affected populations. It is widespread — a majority behavior, not an extremist one.
+
+## Unique Predictive Validity
+
+Above and beyond general out-group hostility, ideology, and group identification, dehumanization uniquely predicts:
+
+- Less hope for peace and less willingness to negotiate
+- Less guilt about the in-group's harmful actions in the conflict
+- Greater acceptance of collective punishment and civilian casualties
+- Greater support for military escalation and aggressive policy
+- Stronger hostility and aggression orientation
+
+These effects hold in both conflict parties, supporting the conclusion that dehumanization is a distinct psychological force that independently drives harmful behavior — not merely an epiphenomenon of general hostility.
+
+<div class="remark">
+The unique predictive validity of dehumanization implies that interventions targeting general animosity or ideological disagreement will be insufficient to reduce support for violence in conflict zones. Programs that specifically work to re-humanize the out-group — making their suffering concrete, their individuality salient, their humanity legible — are likely necessary components of effective peacebuilding.
+</div>
 
 ---
 
-# Chapter 11: Extremism, Radicalization, and Political Violence
+# Chapter 11: Reconciliation and Intergroup Healing
 
-## 11.1 Significance Quest Theory of Radicalization (Kruglanski, 2021)
+## The Difficulty of Reconciliation
 
-<div class="definition">
-<strong>Significance Quest Theory</strong> (Kruglanski, Szumowska, & Kopetz, 2021): People radicalize when they experience a <strong>significance loss</strong> (humiliation, failure, marginalization) and encounter an ideology and network that channel significance restoration through radical action. The 3N model: <strong>Need</strong> for significance + <strong>Narrative</strong> (ideology that valorizes violence) + <strong>Network</strong> (radicalizing social environment) = radicalization.
-</div>
+Reconciliation — the process by which groups that have harmed each other move toward genuine peaceful coexistence — is one of the most psychologically demanding achievements in human social life. Simply stopping violence does not produce reconciliation; many post-conflict societies maintain structural peace while sustaining deep mutual hostility, fear, and moral outrage. Understanding the psychology of reconciliation requires understanding what conflict does to each party's psychological identity.
 
-Key features:
-- Radicalization is motivationally, not pathologically, driven — it is a rational-seeming response to the need for respect, belonging, and purpose.
-- **Deradicalization** requires alternative pathways to significance, not just counter-narrative.
-- Both lone actors and group-based terrorists share the significance quest motivation.
+## The Needs-Based Model
 
-## 11.2 Social Influence in Radicalization (Littman & Paluck, 2015)
-
-**Littman & Paluck (2015)**: Emphasized the role of social norms and social influence in violent extremism. Bystander norms — what most people in a community are seen to do when they witness radicalization — are powerful moderators of whether extremism spreads. Social norm interventions showing that most community members oppose extremism can reduce its spread more effectively than direct counter-messaging.
-
-## 11.3 Dehumanization and Collective Violence (Bruneau & Kteily, 2017)
+Shnabel and Nadler's (2015) **needs-based model of reconciliation** provides a systematic account of why the psychological damage done by conflict differs by role, and why this asymmetry is critical for designing effective reconciliation interventions.
 
 <div class="definition">
-<strong>Dehumanization</strong> is the denial of uniquely human qualities or human nature to members of an outgroup. <strong>Blatant dehumanization</strong> — comparing outgroups to animals — is associated with support for aggressive policies and violence against them.
+<strong>The needs-based model of reconciliation</strong> (Shnabel & Nadler, 2015) proposes that victimization and perpetration damage different aspects of group identity:
+<ul>
+<li><strong>Victims</strong> suffer damage to <strong>agency</strong> — their sense of power, efficacy, and control. They were hurt, controlled, or humiliated, threatening their ability to act as agents in the world.</li>
+<li><strong>Perpetrators</strong> suffer damage to <strong>moral image</strong> — their sense of being good and moral agents. Having caused harm damages self-perception and moral standing in the human community.</li>
+</ul>
+These are structurally different psychological wounds requiring structurally different interventions.
 </div>
 
-**Bruneau & Kteily (2017)**: Studied dehumanization **symmetrically** in groups engaged in asymmetric conflict. Found that blatant dehumanization is:
-- Mutually reinforcing — each side's dehumanization of the other predicts the other side's retaliatory dehumanization.
-- Predicts support for aggressive military action and human rights violations.
-- More prevalent than previously believed (many people will indicate outgroups are less evolved using a "human evolution" scale).
+## Asymmetric Interventions
 
-Interventions that reduce dehumanization must address both groups' perceptions simultaneously.
+The core prescription of the needs-based model is that effective reconciliation requires **asymmetric interventions** — different messages for victims and perpetrators:
+
+- **Victims** need **empowerment messages**: communications that restore their sense of agency, efficacy, and strength. "You are capable. You are resilient. You can protect yourself."
+- **Perpetrators** need **acceptance messages**: communications that restore their moral image. "We acknowledge your humanity. You can make amends. You can be forgiven."
+
+The experimental evidence is compelling. In studies with Israeli and Palestinian participants, and with German and Jewish participants in the context of the Holocaust, participants from perpetrator groups showed increased reconciliation willingness after receiving acceptance messages (which restored threatened moral image), while victim-group participants showed increased reconciliation willingness after empowerment messages (which restored threatened agency).
+
+Critically, giving each side the *other* side's needed message — giving acceptance messages to victims, or empowerment messages to perpetrators — had no positive effect and sometimes backfired. The specificity of psychological need to conflict role is a precise prescription for how reconciliation should be designed, not merely a general observation.
+
+## Cross-Conflict Generality and Extensions
+
+The asymmetric pattern replicated across multiple historical conflicts, different national groups, and different conflict stages, suggesting that the model tracks the relational structure of the victim/perpetrator distinction rather than specific cultural features.
+
+<div class="remark">
+The needs-based model has been extended to address several additional scenarios:
+<ul>
+<li><strong>Competitive victimhood:</strong> Where both sides claim victim status, each needs empowerment, and neither is well-positioned to provide acceptance — creating a reconciliation impasse.</li>
+<li><strong>Structural inequality:</strong> Where perpetrator/victim distinctions are maintained by ongoing social structures, not only by historical events, requiring ongoing rather than one-time intervention.</li>
+<li><strong>Third-party intercessors:</strong> Who can provide needed messages to each side when direct communication between parties is impossible or counterproductive.</li>
+</ul>
+</div>
+
+The model explains why well-intentioned reconciliation initiatives often misfire: symmetric gestures — both parties simultaneously expressing remorse and forgiveness — address neither side's specific need well. Effective reconciliation must be diagnostically precise, identifying which group needs what kind of message and delivering it in ways that feel genuine rather than formulaic.
 
 ---
 
-# Chapter 12: Conflict, Peace, and Reconciliation
+# Chapter 12: Sacred Values and Political Violence
 
-## 12.1 The Needs-Based Model of Reconciliation (Shnabel & Nadler, 2015)
+## The Limits of Rational Choice in Conflict
 
-<div class="definition">
-The <strong>Needs-Based Model</strong> (Shnabel & Nadler) proposes that perpetrators and victims have different psychological needs in the aftermath of intergroup violence. <strong>Perpetrators</strong> need to have their moral image restored (they need forgiveness/moral acceptance). <strong>Victims</strong> need to regain agency and empowerment (they need acknowledgment of their power and autonomy).
-</div>
+Standard political science and economics models analyze conflict as a strategic instrument: groups weigh the costs and benefits of violent versus peaceful strategies and choose the option that best serves their interests. This rational choice framework predicts that violence support should decrease when violence is perceived as ineffective, and that material incentives can purchase compromise.
 
-Reconciliation processes work best when they address the specific need of each side:
-- Victims need perpetrators to acknowledge harm and restore their sense of agency.
-- Perpetrators need victims (or third parties) to affirm their moral worth without demanding complete self-condemnation.
-- **Apologies** must address the right need — a perpetrator apology that emphasizes how bad the perpetrator feels (focusing on their suffering) addresses their moral image need but may not restore victim agency.
+Ginges (2019) argues that these predictions fail systematically when conflicts involve **sacred values** — and that understanding why requires a different psychological framework.
 
-## 12.2 Government Apologies for Historical Injustices (Blatz, Schumann, & Ross, 2009)
-
-**Blatz et al. (2009)**: Studied the effects of government apologies (e.g., Canadian government apologies to Indigenous peoples and Japanese Canadians) on forgiveness and reconciliation. Key findings:
-- **Acknowledgment of wrongdoing** is necessary but not sufficient for reconciliation.
-- Apologies are more effective when they include: specific description of harm, acknowledgment of responsibility, expression of regret, commitment to non-recurrence, and reparations.
-- Apologies without reparative action are perceived as hollow and can increase resentment.
-- The identity of the apologizer matters: perpetrator-group members' apologies are more effective than third-party apologies.
-
-## 12.3 The Psychology of Peace (Ginges, 2019)
-
-**Ginges (2019)**: Reviewed psychological barriers to conflict resolution, particularly in protracted violent conflicts:
-- **Sacred values** — deeply held moral or religious beliefs that people treat as non-negotiable — resist rational cost-benefit trade-offs. Offering material incentives for concessions on sacred values creates "backfire effects" (increased opposition).
-- Effective peace proposals reframe concessions as moral imperatives, not compromises.
-- **Identity fusion** with the conflict group makes personal sacrifice for the group feel obligatory.
-- Psychological interventions targeting sacred values (reframing, engaging alternative religious/moral authorities) are more effective than negotiation-as-economic-exchange.
-
----
-
-# Chapter 13: Psychologically-Informed Policy Design
-
-## 13.1 Behavioural Insights and Nudge Theory (Shafir, 2014)
+## Sacred Values and Devoted Actor Theory
 
 <div class="definition">
-A <strong>nudge</strong> (Thaler & Sunstein, 2008) is a policy intervention that changes the decision environment (choice architecture) to promote better choices without restricting options or significantly changing economic incentives. It works by harnessing documented psychological biases (default effects, loss aversion, social norms) rather than assuming rational deliberation.
+<strong>Sacred values</strong> are moral commitments treated as absolute, non-negotiable, and non-tradeable for material goods. They are governed by rule-based (deontological) reasoning rather than outcome-based (consequentialist) reasoning: what matters is the inherent rightness of upholding the value, not its consequences. The value is inviolable regardless of cost.
 </div>
 
-**Shafir (2014)** reviewed how **scarcity** — resource poverty (time, money, attention) — creates a psychological "bandwidth tax" that impairs decision-making among the poor. Policy implications:
-- Simplifying bureaucratic processes reduces cognitive burden.
-- Automatic enrollment (opt-out defaults) increases savings, organ donation, and benefits participation.
-- Attention management (reminders, streamlined forms) can be as effective as large financial incentives.
+Ginges introduces the concept of the **devoted actor** — an individual committed to a sacred cause or group as an end in itself, not as an instrument for other goods. Devoted actors do not calculate the expected utility of violence; they experience violence for the cause as morally required, regardless of whether it will succeed. Their commitment is identity-fused with the cause itself.
 
-Key finding: the same low-income person makes systematically worse financial decisions when their mind is "occupied" with financial stress — not because of personality deficits but situational cognitive constraints.
+## The Material Incentive Backfire Effect
 
-## 13.2 Public Understanding of Inequality (Petersen, 2021)
+In studies with Palestinian supporters of suicide bombing, Israeli settlers resistant to leaving the West Bank, and other groups with sacred-value commitments, Ginges finds that offering material compensation for compliance with hated policies — financial payments, land grants, improved economic conditions — not only fails to reduce opposition but often **increases** it.
 
-**Petersen (2021)**: People's intuitions about economic inequality are often based on **folk economics** — evolved intuitive frameworks for small-scale, zero-sum resource division — not accurate macroeconomic models. These folk economic intuitions lead to:
-- Overestimation of the share of wealth held by the wealthiest.
-- Belief that market economies are essentially zero-sum (my gain = your loss).
-- Support for redistribution based on perceptions of exploitation rather than efficiency arguments.
+This **backfire effect** occurs because material offers contaminate the sacred meaning of the stance. For a devoted actor opposing a policy on sacred grounds, an offer of money in exchange for compliance signals that the opponent views the sacred cause as merely instrumental — a bargaining chip to be bought off. This is experienced as profoundly insulting: it confirms that the opponent fails to understand what is at stake. The result is increased opposition.
 
-Policy communication should acknowledge folk economic intuitions rather than ignore them; empirically grounded framings that engage zero-sum intuitions (showing how policy can grow the pie) outperform purely technocratic arguments.
+<div class="example">
+In studies with Palestinian respondents, a symbolic offer paired with a material offer (acknowledgment of Palestinian rights combined with an economic package) was more effective at reducing suicide bombing support than a material offer alone. The symbolic gesture of acknowledgment did more work than the material incentive, confirming that what sacred-value holders seek is recognition, not compensation.
+</div>
 
-## 13.3 The Surprising Impact of Meaning on Effort (Epley & Gneezy, 2007)
+## Insensitivity to Efficacy
 
-**Epley & Gneezy (2007)**: Reviewed research showing that **symbolic meaning** and interpersonal acknowledgment can motivate behaviour as powerfully as financial incentives. Workers perform better when they feel their work matters and when managers show they see them as individuals. Even small gestures of recognition increase prosocial behaviour and compliance with institutional requests.
+A key diagnostic signature of sacred-value reasoning is insensitivity to the perceived effectiveness of violence. If support for violence is instrumental, it should decline when violence is perceived as unlikely to succeed. If support is deontological — violence as duty — it should be insensitive to efficacy.
 
-Policy implication: policy design should consider the symbolic and social meaning of compliance requests, not just the incentive structure. People cooperate with institutions they perceive as legitimate, fair, and respectful of their identity.
+Ginges' data show that support for sacred-value violence does not decline when subjects are told the violence is unlikely to succeed. This violates expected utility theory and confirms the devoted actor model: people are not supporting violence because they think it will work. They are supporting it because it is the right thing to do for the cause.
 
-## 13.4 Applying Political Psychology: Principles for Practitioners
+## Implications for Conflict Resolution
 
-Drawing together the course, several principles guide psychologically-informed political practice:
+The sacred values framework has direct implications for negotiation and conflict resolution practice:
 
-1. **Frame strategically**: Messages that match the target audience's moral foundations are more persuasive than messages expressing the speaker's own values.
-2. **Address identity, not just interest**: Political mobilization succeeds when it engages people's sense of who they are and who they want to be.
-3. **Leverage social norms**: Perceptions of what "most people do" are often more powerful than legal commands or financial incentives.
-4. **Design for the actual psychology**: Acknowledge cognitive biases, emotional responses, and identity threats in policy design rather than assuming rational deliberation.
-5. **Attend to meaning and dignity**: People need to feel respected and that their suffering is acknowledged; procedures matter as much as outcomes.
-6. **Consider both sides of a conflict**: Interventions that treat only one side are less effective than those that address the psychological needs of all parties.
+- **Conventional bargaining theory fails** for sacred-value conflicts. Material trade-offs and compromise deals may be literally counterproductive by triggering the backfire effect.
+- **Symbolic recognition is non-optional.** Negotiations must engage the moral and symbolic dimensions of the conflict — acknowledgment, apology, legitimacy recognition, validation of the other side's sacred commitments — before or alongside material negotiations.
+- **Sequencing matters.** Material negotiations may need to be preceded by symbolic gestures that establish genuine respect for the other side's sacred values — not tolerance of them as obstacles, but recognition of them as real.
+
+<div class="remark">
+The sacred values framework suggests that some conflicts may be genuinely resistant to conventional resolution — not because the parties are irrational, but because they are rational within a moral framework that treats certain things as non-negotiable. The challenge is not to convince devoted actors to abandon their values (this is impossible and counterproductive) but to find ways of addressing the symbolic and identity dimensions of the conflict alongside material negotiations. In many cases, symbolic recognition costs little materially and achieves more than any material offer can.
+</div>

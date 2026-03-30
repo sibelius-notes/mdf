@@ -178,7 +178,7 @@ This solution exhibits *oscillatory* behaviour with amplitude growing as \( r^n 
 
 ## The Fibonacci Sequence
 
-The **Fibonacci sequence** is defined by the recurrence
+The <strong>Fibonacci sequence</strong> is defined by the recurrence
 
 \[ F_{n+1} = F_n + F_{n-1}, \quad F_0 = 0, \quad F_1 = 1. \]
 
@@ -186,11 +186,11 @@ This is a homogeneous second-order linear equation with \( p = -1 \) and \( q = 
 
 \[ m_{1,2} = \frac{1 \pm \sqrt{5}}{2}. \]
 
-The larger root \( \phi = (1 + \sqrt{5})/2 \approx 1.618 \) is the celebrated **golden ratio**. The general solution is
+The larger root \( \phi = (1 + \sqrt{5})/2 \approx 1.618 \) is the celebrated <strong>golden ratio</strong>. The general solution is
 
 \[ F_n = c_1 \phi^n + c_2 \psi^n, \quad \text{where } \psi = \frac{1 - \sqrt{5}}{2} \approx -0.618. \]
 
-Applying the initial conditions \( F_0 = 0 \) and \( F_1 = 1 \) gives \( c_1 = 1/\sqrt{5} \) and \( c_2 = -1/\sqrt{5} \), yielding **Binet's formula**:
+Applying the initial conditions \( F_0 = 0 \) and \( F_1 = 1 \) gives \( c_1 = 1/\sqrt{5} \) and \( c_2 = -1/\sqrt{5} \), yielding <strong>Binet's formula</strong>:
 
 \[ F_n = \frac{1}{\sqrt{5}} \left[ \left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n \right]. \]
 
@@ -198,7 +198,7 @@ Remarkably, this formula involving irrational numbers always produces an integer
 
 ## An Annual Plant Propagation Model
 
-Consider an annual plant species in which each individual lives for one year, produces seeds, and then dies. Let \( x_n \) denote the population size in year \( n \). Seeds germinate in the following year, and some fraction also lie dormant for an additional year. If a fraction \( a \) of seeds germinate immediately and a fraction \( b \) of *this year's* seeds lie dormant and germinate next year, the population satisfies
+Consider an annual plant species in which each individual lives for one year, produces seeds, and then dies. Let \( x_n \) denote the population size in year \( n \). Seeds germinate in the following year, and some fraction also lie dormant for an additional year. If a fraction \( a \) of seeds germinate immediately and a fraction \( b \) of <em>this year's</em> seeds lie dormant and germinate next year, the population satisfies
 
 \[ x_{n+1} = a x_n + b x_{n-1}. \]
 
@@ -218,11 +218,11 @@ has the form
 
 \[ x_n = x_n^{(h)} + x_n^{(p)}, \]
 
-where \( x_n^{(h)} \) is the general solution of the corresponding *homogeneous* equation (with \( f = 0 \)), and \( x_n^{(p)} \) is any *particular solution* of the nonhomogeneous equation. This principle of superposition holds because the equation is linear.
+where \( x_n^{(h)} \) is the general solution of the corresponding <em>homogeneous</em> equation (with \( f = 0 \)), and \( x_n^{(p)} \) is any <em>particular solution</em> of the nonhomogeneous equation. This principle of superposition holds because the equation is linear.
 
 ## Method of Undetermined Coefficients
 
-The **method of undetermined coefficients** provides particular solutions when the forcing function \( f(n) \) belongs to a class of functions that is "closed" under the operations of the difference operator. The method proceeds by guessing the form of the particular solution based on the form of \( f(n) \), and then determining the unknown coefficients by substitution.
+The <strong>method of undetermined coefficients</strong> provides particular solutions when the forcing function \( f(n) \) belongs to a class of functions that is "closed" under the operations of the difference operator. The method proceeds by guessing the form of the particular solution based on the form of \( f(n) \), and then determining the unknown coefficients by substitution.
 
 The standard cases are organised as follows.
 
@@ -249,7 +249,7 @@ The crucial subtlety arises when the *natural frequency* of the forcing function
 
 ## Vector Formulation
 
-Many models involve several interacting quantities that all evolve simultaneously in discrete time. A **linear system of difference equations** takes the form
+Many models involve several interacting quantities that all evolve simultaneously in discrete time. A <strong>linear system of difference equations</strong> takes the form
 
 \[ \mathbf{x}_{n+1} = A \mathbf{x}_n, \]
 
@@ -265,15 +265,15 @@ and the solution is
 
 \[ \mathbf{x}_n = c_1 \lambda_1^n \mathbf{v}_1 + c_2 \lambda_2^n \mathbf{v}_2 + \cdots + c_k \lambda_k^n \mathbf{v}_k. \]
 
-Each eigenvector defines an **invariant line** through the origin: if the initial condition lies exactly along \( \mathbf{v}_i \), the trajectory stays on that line and is simply scaled by \( \lambda_i \) at each step.
+Each eigenvector defines an <strong>invariant line</strong> through the origin: if the initial condition lies exactly along \( \mathbf{v}_i \), the trajectory stays on that line and is simply scaled by \( \lambda_i \) at each step.
 
 ## Stable and Unstable Eigenspaces
 
 The long-term behaviour of the system is dominated by the eigenvalue of largest modulus. If \( |\lambda_1| > |\lambda_j| \) for all \( j \neq 1 \), then for a generic initial condition the solution grows like \( |\lambda_1|^n \mathbf{v}_1 \) as \( n \to \infty \).
 
 One can partition the state space into:
-- The **stable eigenspace** \( E^s \): the span of eigenvectors corresponding to eigenvalues with \( |\lambda| < 1 \). Trajectories starting in \( E^s \) converge to the origin.
-- The **unstable eigenspace** \( E^u \): the span of eigenvectors corresponding to eigenvalues with \( |\lambda| > 1 \). Trajectories starting in \( E^u \) diverge from the origin.
+- The <strong>stable eigenspace</strong> \( E^s \): the span of eigenvectors corresponding to eigenvalues with \( |\lambda| < 1 \). Trajectories starting in \( E^s \) converge to the origin.
+- The <strong>unstable eigenspace</strong> \( E^u \): the span of eigenvectors corresponding to eigenvalues with \( |\lambda| > 1 \). Trajectories starting in \( E^u \) diverge from the origin.
 
 The origin \( \mathbf{x} = \mathbf{0} \) is a stable fixed point if all eigenvalues satisfy \( |\lambda_i| < 1 \), and unstable if any eigenvalue satisfies \( |\lambda_i| > 1 \).
 
@@ -301,15 +301,15 @@ Linear difference equations are tractable because the superposition principle ho
 ## Cobweb Diagrams
 
 ![Cobweb Diagrams for the Logistic Map](/pics/amath343/cobweb.png)
-*Figure: Cobweb diagrams for \(f_a(x) = ax(1-x)\). Left: attracting fixed point at \(a=2.5\). Right: period-2 orbit at \(a=3.5\).*
+<em>Figure: Cobweb diagrams for \(f_a(x) = ax(1-x)\). Left: attracting fixed point at \(a=2.5\). Right: period-2 orbit at \(a=3.5\).</em>
 
-For a first-order autonomous equation \( x_{n+1} = f(x_n) \), one of the most powerful visualization tools is the **cobweb diagram** (also called a *Lamerey diagram*). One plots the curve \( y = f(x) \) and the diagonal \( y = x \) in the same plane. Starting from \( x_0 \), one draws a vertical line to the curve — reaching \( (x_0, f(x_0)) = (x_0, x_1) \) — then a horizontal line to the diagonal — reaching \( (x_1, x_1) \) — then again a vertical line to the curve, and so on. The resulting "cobweb" pattern visually traces the entire orbit of \( x_0 \).
+For a first-order autonomous equation \( x_{n+1} = f(x_n) \), one of the most powerful visualization tools is the <strong>cobweb diagram</strong> (also called a <em>Lamerey diagram</em>). One plots the curve \( y = f(x) \) and the diagonal \( y = x \) in the same plane. Starting from \( x_0 \), one draws a vertical line to the curve — reaching \( (x_0, f(x_0)) = (x_0, x_1) \) — then a horizontal line to the diagonal — reaching \( (x_1, x_1) \) — then again a vertical line to the curve, and so on. The resulting "cobweb" pattern visually traces the entire orbit of \( x_0 \).
 
 Fixed points appear as intersections of \( y = f(x) \) with the diagonal \( y = x \). Near a stable fixed point, cobweb trajectories spiral inward (for complex-like dynamics) or converge monotonically (when \( f'(\bar{x}) > 0 \)). Near an unstable fixed point, they diverge.
 
 ## Fixed Points and Local Stability
 
-A **fixed point** of the map \( f : \mathbb{R} \to \mathbb{R} \) is a value \( \bar{x} \) satisfying \( f(\bar{x}) = \bar{x} \). The local stability of \( \bar{x} \) is determined by the derivative of \( f \) at that point. Linearizing the equation near \( \bar{x} \) by setting \( x_n = \bar{x} + \epsilon_n \) for small \( \epsilon_n \):
+A <strong>fixed point</strong> of the map \( f : \mathbb{R} \to \mathbb{R} \) is a value \( \bar{x} \) satisfying \( f(\bar{x}) = \bar{x} \). The local stability of \( \bar{x} \) is determined by the derivative of \( f \) at that point. Linearizing the equation near \( \bar{x} \) by setting \( x_n = \bar{x} + \epsilon_n \) for small \( \epsilon_n \):
 
 \[ \bar{x} + \epsilon_{n+1} = f(\bar{x} + \epsilon_n) \approx f(\bar{x}) + f'(\bar{x}) \epsilon_n = \bar{x} + f'(\bar{x}) \epsilon_n, \]
 
@@ -414,7 +414,7 @@ For \( f_4 \), the periodic points are dense in \( [0,1] \): near any point \( x
 
 ### Sensitive Dependence on Initial Conditions
 
-**Sensitive dependence on initial conditions** (SDIC), also known as the *butterfly effect*, means that arbitrarily close initial conditions can lead to trajectories that diverge dramatically. Formally:
+<strong>Sensitive dependence on initial conditions</strong> (SDIC), also known as the <em>butterfly effect</em>, means that arbitrarily close initial conditions can lead to trajectories that diverge dramatically. Formally:
 
 <div class="definition"><strong>Definition (SDIC).</strong> A map \( f : X \to X \) exhibits <em>sensitive dependence on initial conditions</em> if there exists \( \varepsilon > 0 \) such that for every \( x \in X \) and every \( \delta > 0 \), there exists \( y \in X \) with \( d(x,y) < \delta \) and some \( n > 0 \) such that \( d(f^n(x), f^n(y)) > \varepsilon \).</div>
 
@@ -426,7 +426,7 @@ so nearby points separate exponentially fast. While \( f_4 \) is not uniformly e
 
 ### Topological Transitivity
 
-A map is **topologically transitive** if for any two non-empty open sets \( U \) and \( V \), there exists \( n > 0 \) such that \( f^n(U) \cap V \neq \emptyset \). Intuitively, this means the map "mixes" the space: orbits starting in any region will eventually visit any other region. Transitivity rules out the possibility that the dynamics splits into two or more independent subsystems.
+A map is <strong>topologically transitive</strong> if for any two non-empty open sets \( U \) and \( V \), there exists \( n > 0 \) such that \( f^n(U) \cap V \neq \emptyset \). Intuitively, this means the map "mixes" the space: orbits starting in any region will eventually visit any other region. Transitivity rules out the possibility that the dynamics splits into two or more independent subsystems.
 
 <div class="definition"><strong>Definition (Chaos in the Sense of Devaney).</strong> A continuous map \( f : X \to X \) is <em>chaotic</em> if:
 <ol>
@@ -442,13 +442,13 @@ A map is **topologically transitive** if for any two non-empty open sets \( U \)
 
 Two other maps are important for building intuition about chaos.
 
-The **tent map** is defined by
+The <strong>tent map</strong> is defined by
 
 \[ T(x) = \begin{cases} 2x, & 0 \leq x \leq 1/2 \\ 2(1-x), & 1/2 < x \leq 1. \end{cases} \]
 
 It maps \( [0,1] \) into itself, has slope \( \pm 2 \) everywhere (away from \( x = 1/2 \)), and is conjugate to \( f_4 \) via the homeomorphism \( h(x) = \sin^2(\pi x/2) \). Because the tent map is piecewise linear with constant slope modulus 2, it is easier to analyze directly.
 
-The **Baker map** (or **doubling map**) is
+The <strong>Baker map</strong> (or <strong>doubling map</strong>) is
 
 \[ B(x) = 2x \pmod{1}, \quad x \in [0,1). \]
 
@@ -460,7 +460,7 @@ This map is essentially multiplication by 2 modulo 1: it takes the binary expans
 
 ## The Space of Binary Sequences
 
-**Symbolic dynamics** is a powerful technique that encodes the complex dynamics of a map by translating the trajectory of each initial condition into a sequence of symbols. The central object is the **space of binary sequences**
+<strong>Symbolic dynamics</strong> is a powerful technique that encodes the complex dynamics of a map by translating the trajectory of each initial condition into a sequence of symbols. The central object is the <strong>space of binary sequences</strong>
 
 \[ \Sigma_2 = \{ (b_0, b_1, b_2, \ldots) : b_i \in \{0, 1\} \text{ for all } i \geq 0 \}. \]
 
@@ -474,7 +474,7 @@ which makes \( \Sigma_2 \) a compact metric space. Two sequences are close in th
 
 ## The Bernoulli Left-Shift
 
-The **Bernoulli left-shift** \( S : \Sigma_2 \to \Sigma_2 \) is defined by
+The <strong>Bernoulli left-shift</strong> \( S : \Sigma_2 \to \Sigma_2 \) is defined by
 
 \[ S(b_0, b_1, b_2, \ldots) = (b_1, b_2, b_3, \ldots). \]
 
@@ -484,7 +484,7 @@ The shift simply discards the first symbol and advances all remaining symbols by
 <ol>
 <li><strong>Dense periodic points:</strong> The periodic sequences (sequences that eventually repeat) are dense in \( \Sigma_2 \). Any binary sequence can be approximated to arbitrary precision by a periodic binary sequence.</li>
 <li><strong>SDIC:</strong> If \( \mathbf{b} \) and \( \mathbf{c} \) differ in position \( k \), then after \( k \) shifts they differ in position 0, so \( d(S^k(\mathbf{b}), S^k(\mathbf{c})) \geq 1/2 \), regardless of how close \( \mathbf{b} \) and \( \mathbf{c} \) were initially.</li>
-<li><strong>Transitivity:</strong> There exists a single sequence \( \mathbf{b}^* \in \Sigma_2 \) whose orbit \( \{ S^n(\mathbf{b}^*) \}_{n \geq 0} \) is dense in \( \Sigma_2 \).</li>
+<li><strong>Transitivity:</strong> There exists a single sequence \( \mathbf{b}^<em> \in \Sigma_2 \) whose orbit \( \{ S^n(\mathbf{b}^</em>) \}_{n \geq 0} \) is dense in \( \Sigma_2 \).</li>
 </ol>
 </div>
 
@@ -549,41 +549,41 @@ The interval \( J_1 = (1/3, 2/3) \) maps above 1. Its preimage \( J_2 \) consist
 <div class="definition"><strong>Definition (Ternary Cantor Set).</strong> Start with \( C_0 = [0,1] \). Remove the open middle third \( (1/3, 2/3) \) to get \( C_1 = [0,1/3] \cup [2/3,1] \). Remove the open middle thirds of each remaining interval to get \( C_2 \). Continuing, the Cantor set is \( C = \bigcap_{n=0}^\infty C_n \).</div>
 
 ![Ternary Cantor Set Construction](/pics/amath343/cantor_set.png)
-*Figure: Six levels of the ternary Cantor set construction. Each stage removes the open middle third of each remaining interval.*
+<em>Figure: Six levels of the ternary Cantor set construction. Each stage removes the open middle third of each remaining interval.</em>
 
 ## Properties of the Cantor Set
 
 The Cantor set has several remarkable and at first counterintuitive properties.
 
-**Bounded and closed.** Since each \( C_n \) is a closed bounded subset of \( \mathbb{R} \), and \( C \) is an intersection of closed sets, \( C \) itself is closed and bounded.
+<strong>Bounded and closed.</strong> Since each \( C_n \) is a closed bounded subset of \( \mathbb{R} \), and \( C \) is an intersection of closed sets, \( C \) itself is closed and bounded.
 
-**Zero total length.** The total length removed in constructing \( C \) is
+<strong>Zero total length.</strong> The total length removed in constructing \( C \) is
 
 \[ \frac{1}{3} + \frac{2}{9} + \frac{4}{27} + \cdots = \frac{1/3}{1 - 2/3} = 1. \]
 
 Every bit of length is removed, yet \( C \) is nonempty (it contains the endpoints of all removed intervals, among others).
 
-**Totally disconnected.** Between any two points of \( C \), there is a removed interval. Formally, \( C \) contains no interval of positive length; every connected component of \( C \) is a single point.
+<strong>Totally disconnected.</strong> Between any two points of \( C \), there is a removed interval. Formally, \( C \) contains no interval of positive length; every connected component of \( C \) is a single point.
 
-**Perfect.** Every point of \( C \) is a limit point of \( C \): the set has no isolated points. Combined with total disconnectedness, this is a hallmark of fractal structure.
+<strong>Perfect.</strong> Every point of \( C \) is a limit point of \( C \): the set has no isolated points. Combined with total disconnectedness, this is a hallmark of fractal structure.
 
-**Uncountable.** Despite having zero length, \( C \) is uncountable. One way to see this: each point \( x \in C \) has a ternary (base-3) expansion using only the digits 0 and 2 (no 1's). The set of all such expansions bijects with the set of all binary sequences (replace 2 by 1), which is uncountable.
+<strong>Uncountable.</strong> Despite having zero length, \( C \) is uncountable. One way to see this: each point \( x \in C \) has a ternary (base-3) expansion using only the digits 0 and 2 (no 1's). The set of all such expansions bijects with the set of all binary sequences (replace 2 by 1), which is uncountable.
 
 ## Newton-Raphson Method as a Dynamical System
 
-The **Newton-Raphson method** for finding roots of a function \( f(x) \) generates the sequence
+The <strong>Newton-Raphson method</strong> for finding roots of a function \( f(x) \) generates the sequence
 
 \[ x_{n+1} = N(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}. \]
 
-This defines a discrete dynamical system with the iteration function \( N(x) \). The zeros \( x^* \) of \( f \) are precisely the fixed points of \( N \): \( N(x^*) = x^* - 0 = x^* \). The derivative of \( N \) at a simple zero is
+This defines a discrete dynamical system with the iteration function \( N(x) \). The zeros \( x^<em> \) of \( f \) are precisely the fixed points of \( N \): \( N(x^</em>) = x^<em> - 0 = x^</em> \). The derivative of \( N \) at a simple zero is
 
-\[ N'(x^*) = 1 - \frac{(f'(x^*))^2 - f(x^*) f''(x^*)}{(f'(x^*))^2} = 0, \]
+\[ N'(x^<em>) = 1 - \frac{(f'(x^</em>))^2 - f(x^<em>) f''(x^</em>)}{(f'(x^*))^2} = 0, \]
 
-showing that every simple zero of \( f \) is a *super-attracting* fixed point of \( N \) (derivative exactly zero). This is why Newton's method converges quadratically: the error at each step satisfies \( |x_{n+1} - x^*| \approx C |x_n - x^*|^2 \).
+showing that every simple zero of \( f \) is a <em>super-attracting</em> fixed point of \( N \) (derivative exactly zero). This is why Newton's method converges quadratically: the error at each step satisfies \( |x_{n+1} - x^<em>| \approx C |x_n - x^</em>|^2 \).
 
 ## Newton's Method in the Complex Plane and Julia Sets
 
-When \( f \) is a polynomial with complex roots, Newton's method becomes a map of the complex plane to itself. For \( f(z) = z^2 - 1 \), there are two roots \( z = \pm 1 \), and the plane divides into two *basins of attraction* — the set of initial conditions that converge to \( +1 \) and the set that converge to \( -1 \). The boundary between these basins (the **Julia set** of Newton's method for this \( f \)) is a fractal curve.
+When \( f \) is a polynomial with complex roots, Newton's method becomes a map of the complex plane to itself. For \( f(z) = z^2 - 1 \), there are two roots \( z = \pm 1 \), and the plane divides into two <em>basins of attraction</em> — the set of initial conditions that converge to \( +1 \) and the set that converge to \( -1 \). The boundary between these basins (the <strong>Julia set</strong> of Newton's method for this \( f \)) is a fractal curve.
 
 For \( f(z) = z^3 - 1 \) with three cube roots of unity, the basins of attraction form an intricate fractal pattern. No matter how close one looks at the boundary between two basins, one always finds a trichromatic boundary: the three colors meet at every boundary point. This is a consequence of the Julia-Fatou theory, which provides the mathematical framework for classifying the dynamics of rational maps on the Riemann sphere. The fractal self-similar structure of Julia sets provided early visual evidence of the rich complexity possible in simple nonlinear iterations.
 
@@ -593,7 +593,7 @@ For \( f(z) = z^3 - 1 \) with three cube roots of unity, the basins of attractio
 
 ## Measuring Irregular Sets
 
-Classical geometry assigns integer dimensions: a point has dimension 0, a curve has dimension 1, a surface has dimension 2, and a solid has dimension 3. But many naturally occurring sets — coastlines, river networks, lung branching patterns, the Cantor set — are far too irregular to be adequately described by integer-dimensional geometry. The concept of **fractal dimension** provides a measure of how completely an irregular set fills the space it occupies, and it need not be an integer.
+Classical geometry assigns integer dimensions: a point has dimension 0, a curve has dimension 1, a surface has dimension 2, and a solid has dimension 3. But many naturally occurring sets — coastlines, river networks, lung branching patterns, the Cantor set — are far too irregular to be adequately described by integer-dimensional geometry. The concept of <strong>fractal dimension</strong> provides a measure of how completely an irregular set fills the space it occupies, and it need not be an integer.
 
 The motivating question is: how long is the coastline of Britain? The answer depends on the resolution of measurement. If one uses measuring rods of length \( \varepsilon \), and \( N(\varepsilon) \) is the number of rods required to trace the coastline, then for a smooth curve \( N(\varepsilon) \sim 1/\varepsilon \). But for a fractal coastline, the empirical finding (Richardson's measurements, 1961) is that
 
@@ -603,7 +603,7 @@ for some \( D > 1 \). The exponent \( D \) is the fractal dimension of the coast
 
 ## Self-Similar Fractals: The von Koch Curve
 
-The **von Koch curve** is constructed iteratively. Start with a line segment of length 1. Remove its middle third and replace it with two sides of an equilateral triangle, producing four segments each of length \( 1/3 \). Repeat this process on every segment at each stage. The von Koch curve is the limit of this process.
+The <strong>von Koch curve</strong> is constructed iteratively. Start with a line segment of length 1. Remove its middle third and replace it with two sides of an equilateral triangle, producing four segments each of length \( 1/3 \). Repeat this process on every segment at each stage. The von Koch curve is the limit of this process.
 
 At stage \( n \), there are \( 4^n \) segments each of length \( (1/3)^n \), so the total length is \( (4/3)^n \to \infty \). The curve has infinite length despite fitting inside a bounded region. Now, to cover the curve with \( \varepsilon \)-balls, if \( \varepsilon = (1/3)^n \) then \( N(\varepsilon) = 4^n \). Taking logarithms:
 
@@ -617,23 +617,23 @@ For a self-similar set generated by \( n \) copies of itself, each scaled by a f
 
 \[ n \cdot r^D = 1, \]
 
-giving the **self-similar dimension**
+giving the <strong>self-similar dimension</strong>
 
 \[ D = \frac{\log n}{\log(1/r)}. \]
 
 Applying this formula:
 
-- **Ternary Cantor set:** 2 copies, scale \( r = 1/3 \), so \( D = \log 2 / \log 3 \approx 0.6309 \).
-- **von Koch curve:** 4 copies, scale \( r = 1/3 \), so \( D = \log 4 / \log 3 \approx 1.2619 \).
-- **Sierpinski triangle (gasket):** 3 copies, scale \( r = 1/2 \), so \( D = \log 3 / \log 2 \approx 1.5850 \).
-- **Sierpinski carpet:** 8 copies, scale \( r = 1/3 \), so \( D = \log 8 / \log 3 \approx 1.8928 \).
-- **Menger sponge:** 20 copies, scale \( r = 1/3 \), so \( D = \log 20 / \log 3 \approx 2.727 \).
+- <strong>Ternary Cantor set:</strong> 2 copies, scale \( r = 1/3 \), so \( D = \log 2 / \log 3 \approx 0.6309 \).
+- <strong>von Koch curve:</strong> 4 copies, scale \( r = 1/3 \), so \( D = \log 4 / \log 3 \approx 1.2619 \).
+- <strong>Sierpinski triangle (gasket):</strong> 3 copies, scale \( r = 1/2 \), so \( D = \log 3 / \log 2 \approx 1.5850 \).
+- <strong>Sierpinski carpet:</strong> 8 copies, scale \( r = 1/3 \), so \( D = \log 8 / \log 3 \approx 1.8928 \).
+- <strong>Menger sponge:</strong> 20 copies, scale \( r = 1/3 \), so \( D = \log 20 / \log 3 \approx 2.727 \).
 
 <div class="remark"><strong>Remark (Sierpinski Triangle Construction).</strong> Start with an equilateral triangle. Remove the central inverted triangle (connecting midpoints of sides). Repeat on each of the three remaining triangles. At each stage, the number of triangles triples and the side length halves, giving the dimension formula \( D = \log 3 / \log 2 \).</div>
 
 ## General Scaling with Unequal Contractions
 
-When a self-similar set is generated by \( n \) pieces with *different* scaling ratios \( r_1, r_2, \ldots, r_n \), the self-similar dimension \( D \) satisfies the **Moran equation**:
+When a self-similar set is generated by \( n \) pieces with <em>different</em> scaling ratios \( r_1, r_2, \ldots, r_n \), the self-similar dimension \( D \) satisfies the <strong>Moran equation</strong>:
 
 \[ r_1^D + r_2^D + \cdots + r_n^D = 1. \]
 
@@ -644,9 +644,9 @@ This implicit equation for \( D \) has a unique solution in \( (0, \infty) \) pr
 ## Box-Counting Dimension
 
 ![Box-Counting Dimension](/pics/amath343/fractal_dimension.png)
-*Figure: Log-log plots of \(N(\varepsilon)\) vs \(1/\varepsilon\). The slope equals the fractal dimension: \(\ln 2/\ln 3 \approx 0.631\) for the Cantor set and \(\ln 3/\ln 2 \approx 1.585\) for the Sierpinski triangle.*
+<em>Figure: Log-log plots of \(N(\varepsilon)\) vs \(1/\varepsilon\). The slope equals the fractal dimension: \(\ln 2/\ln 3 \approx 0.631\) for the Cantor set and \(\ln 3/\ln 2 \approx 1.585\) for the Sierpinski triangle.</em>
 
-For practical measurement of fractal dimension, one uses the **box-counting dimension** (also called the Minkowski-Bouligand dimension). Cover the set \( A \) with a grid of \( \varepsilon \)-boxes (squares in \( \mathbb{R}^2 \), cubes in \( \mathbb{R}^3 \)), and let \( N(\varepsilon) \) be the number of boxes that intersect \( A \). The box-counting dimension is
+For practical measurement of fractal dimension, one uses the <strong>box-counting dimension</strong> (also called the Minkowski-Bouligand dimension). Cover the set \( A \) with a grid of \( \varepsilon \)-boxes (squares in \( \mathbb{R}^2 \), cubes in \( \mathbb{R}^3 \)), and let \( N(\varepsilon) \) be the number of boxes that intersect \( A \). The box-counting dimension is
 
 \[ D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)}, \]
 
@@ -667,14 +667,14 @@ The presence of fractal geometry in nature is not coincidental. Fractal branchin
 # Chapter 12: Iterated Function Systems
 
 ![Sierpinski Triangle via IFS Chaos Game](/pics/amath343/sierpinski.png)
-*Figure: The Sierpinski triangle rendered via 60,000 random IFS iterations (chaos game).*
+<em>Figure: The Sierpinski triangle rendered via 60,000 random IFS iterations (chaos game).</em>
 
 ## Attractors from Contractions
 
-The preceding chapters have shown that fractals like the Cantor set and the von Koch curve can be constructed by repeated geometric operations — removing intervals, replacing segments with bent curves, and so on. **Iterated Function Systems** (IFS) provide a unified algebraic framework for this construction and for a much wider class of fractals, including Barnsley's famous fern.
+The preceding chapters have shown that fractals like the Cantor set and the von Koch curve can be constructed by repeated geometric operations — removing intervals, replacing segments with bent curves, and so on. <strong>Iterated Function Systems</strong> (IFS) provide a unified algebraic framework for this construction and for a much wider class of fractals, including Barnsley's famous fern.
 
 ![Barnsley Fern](/pics/amath343/barnsley_fern.png)
-*Figure: The Barnsley fern — attractor of a 4-map affine IFS, computed via 100,000 random iterations.*
+<em>Figure: The Barnsley fern — attractor of a 4-map affine IFS, computed via 100,000 random iterations.</em>
 
 ## Contraction Mappings
 
@@ -684,7 +684,7 @@ The theoretical foundation rests on the concept of a contraction mapping.
 \[ d(f(x), f(y)) \leq C \cdot d(x, y) \]
 for all \( x, y \in X \).</div>
 
-<div class="theorem"><strong>Banach Contraction Mapping Theorem.</strong> Let \( (X, d) \) be a complete metric space, and let \( f : X \to X \) be a contraction mapping with ratio \( C < 1 \). Then \( f \) has a unique fixed point \( x^* \in X \), and for any starting point \( x_0 \), the iterates \( x_n = f^n(x_0) \) converge to \( x^* \).</div>
+<div class="theorem"><strong>Banach Contraction Mapping Theorem.</strong> Let \( (X, d) \) be a complete metric space, and let \( f : X \to X \) be a contraction mapping with ratio \( C < 1 \). Then \( f \) has a unique fixed point \( x^<em> \in X \), and for any starting point \( x_0 \), the iterates \( x_n = f^n(x_0) \) converge to \( x^</em> \).</div>
 
 ## Definition of an IFS
 
@@ -710,26 +710,26 @@ One verifies that \( C = f_1(C) \cup f_2(C) \): the map \( f_1 \) maps \( C \) o
 
 The real power of IFS becomes apparent through a variety of examples.
 
-**The von Koch Curve** is the attractor of a 4-map IFS on \( \mathbb{R}^2 \), where each map is a similarity that contracts by factor \( 1/3 \) and includes appropriate rotations to arrange the four pieces in the characteristic von Koch pattern.
+<strong>The von Koch Curve</strong> is the attractor of a 4-map IFS on \( \mathbb{R}^2 \), where each map is a similarity that contracts by factor \( 1/3 \) and includes appropriate rotations to arrange the four pieces in the characteristic von Koch pattern.
 
-**Sierpinski Triangle (Gasket).** Three maps on \( \mathbb{R}^2 \), each contracting by factor \( 1/2 \) toward one vertex of an equilateral triangle:
+<strong>Sierpinski Triangle (Gasket).</strong> Three maps on \( \mathbb{R}^2 \), each contracting by factor \( 1/2 \) toward one vertex of an equilateral triangle:
 
 \[ f_i(\mathbf{x}) = \frac{1}{2}(\mathbf{x} - \mathbf{v}_i) + \mathbf{v}_i = \frac{1}{2}\mathbf{x} + \frac{1}{2}\mathbf{v}_i, \quad i = 1, 2, 3. \]
 
 The attractor is the Sierpinski triangle with dimension \( D = \log 3 / \log 2 \approx 1.585 \).
 
-**Modified Sierpinski Gaskets.** By introducing rotations and reflections into the component maps, one can create variations: the Cantor tree (maps along a line with rotations), Cantor dust (two non-collinear maps in the plane), and other variants. These demonstrate that the IFS framework is remarkably flexible: small changes in the contraction maps produce qualitatively different attractors.
+<strong>Modified Sierpinski Gaskets.</strong> By introducing rotations and reflections into the component maps, one can create variations: the Cantor tree (maps along a line with rotations), Cantor dust (two non-collinear maps in the plane), and other variants. These demonstrate that the IFS framework is remarkably flexible: small changes in the contraction maps produce qualitatively different attractors.
 
-**The Twin Dragon.** A two-map IFS in the complex plane using specific rotational contractions generates the twin dragon curve, a fractal with a characteristic winged shape that tiles the plane.
+<strong>The Twin Dragon.</strong> A two-map IFS in the complex plane using specific rotational contractions generates the twin dragon curve, a fractal with a characteristic winged shape that tiles the plane.
 
-**Tree-like IFS.** An IFS with two maps — one map pointing "up" at a slight lean, the other pointing "up" at the opposite lean — produces a fractal tree-like structure. More elaborate trees arise by using several branches with different angles and contraction ratios.
+<strong>Tree-like IFS.</strong> An IFS with two maps — one map pointing "up" at a slight lean, the other pointing "up" at the opposite lean — produces a fractal tree-like structure. More elaborate trees arise by using several branches with different angles and contraction ratios.
 
-**Barnsley's Fern.** Perhaps the most famous IFS is Barnsley's spleenwort fern, defined by four affine maps on \( \mathbb{R}^2 \):
+<strong>Barnsley's Fern.</strong> Perhaps the most famous IFS is Barnsley's spleenwort fern, defined by four affine maps on \( \mathbb{R}^2 \):
 
 \[ f_1(\mathbf{x}) = \begin{pmatrix} 0 \\ 0.16 y \end{pmatrix}, \quad f_2(\mathbf{x}) = \begin{pmatrix} 0.85x + 0.04y \\ -0.04x + 0.85y + 1.6 \end{pmatrix}, \]
 \[ f_3(\mathbf{x}) = \begin{pmatrix} 0.2x - 0.26y \\ 0.23x + 0.22y + 1.6 \end{pmatrix}, \quad f_4(\mathbf{x}) = \begin{pmatrix} -0.15x + 0.28y \\ 0.26x + 0.24y + 0.44 \end{pmatrix}. \]
 
-The attractor of this four-map IFS is a faithful model of a *Nephrolepis exaltata* fern frond. Map \( f_1 \) maps the entire fern to a short stalk; map \( f_2 \) produces the large central frond; maps \( f_3 \) and \( f_4 \) produce the lowest two leaflets. The result is visually indistinguishable from a real fern, demonstrating that biological shapes can arise from iterative self-similar processes.
+The attractor of this four-map IFS is a faithful model of a <em>Nephrolepis exaltata</em> fern frond. Map \( f_1 \) maps the entire fern to a short stalk; map \( f_2 \) produces the large central frond; maps \( f_3 \) and \( f_4 \) produce the lowest two leaflets. The result is visually indistinguishable from a real fern, demonstrating that biological shapes can arise from iterative self-similar processes.
 
 ## Computing IFS Attractors: The Random Iteration Algorithm
 
@@ -741,7 +741,7 @@ Start with any compact set \( S_0 \) (a single point suffices) and compute \( S_
 
 ### The Random Iteration Algorithm (Chaos Game)
 
-The **random iteration algorithm**, also called the **chaos game**, is far more efficient. Choose an initial point \( x_0 \in X \). At each step, select one of the \( N \) maps \( f_i \) randomly with probability \( p_i \) (where \( \sum p_i = 1 \)) and apply it: \( x_{n+1} = f_{\sigma_n}(x_n) \). The orbit \( \{x_n\}_{n \geq 0} \) is a random sequence that, with probability 1, becomes *dense* in the attractor \( A \). Plotting the orbit after a short transient reveals the shape of \( A \).
+The <strong>random iteration algorithm</strong>, also called the <strong>chaos game</strong>, is far more efficient. Choose an initial point \( x_0 \in X \). At each step, select one of the \( N \) maps \( f_i \) randomly with probability \( p_i \) (where \( \sum p_i = 1 \)) and apply it: \( x_{n+1} = f_{\sigma_n}(x_n) \). The orbit \( \{x_n\}_{n \geq 0} \) is a random sequence that, with probability 1, becomes <em>dense</em> in the attractor \( A \). Plotting the orbit after a short transient reveals the shape of \( A \).
 
 The probabilities \( p_i \) can be chosen proportional to the area scaling of each map (\( p_i \propto |\det J_{f_i}| \)), which gives a visually uniform density. For Barnsley's fern, the probabilities are \( p_1 = 0.01 \), \( p_2 = 0.85 \), \( p_3 = 0.07 \), \( p_4 = 0.07 \), corresponding to the relative sizes of the parts of the fern. The random iteration algorithm converges rapidly: just a few thousand iterates suffice to give a convincing picture.
 
@@ -753,23 +753,23 @@ Given an attractor and wishing to find the IFS that generates it, one uses the f
 
 <div class="theorem"><strong>Collage Theorem.</strong> Let \( S \) be a compact set that one wishes to approximate by the IFS attractor \( A \). If \( h(\hat{f}(S), S) \leq \varepsilon \), then \( h(A, S) \leq \varepsilon / (1 - C) \), where \( C \) is the contraction ratio of \( \hat{f} \).</div>
 
-The Collage Theorem says: to find an IFS whose attractor approximates \( S \), find maps \( f_i \) such that the *collage* \( \hat{f}(S) = f_1(S) \cup \cdots \cup f_N(S) \) closely covers \( S \). In practice, one overlays copies of \( S \) onto \( S \) itself, using scaled, rotated, and translated versions, until the copies tile \( S \) with small residual. The contraction maps corresponding to these overlays define the approximating IFS.
+The Collage Theorem says: to find an IFS whose attractor approximates \( S \), find maps \( f_i \) such that the <em>collage</em> \( \hat{f}(S) = f_1(S) \cup \cdots \cup f_N(S) \) closely covers \( S \). In practice, one overlays copies of \( S \) onto \( S \) itself, using scaled, rotated, and translated versions, until the copies tile \( S \) with small residual. The contraction maps corresponding to these overlays define the approximating IFS.
 
 ## IFS with Grey-Level Maps (IFSM)
 
-The IFS framework extends from attractors (sets) to **functions** via *IFS with grey-level maps* (IFSM). Here one specifies:
+The IFS framework extends from attractors (sets) to <strong>functions</strong> via <em>IFS with grey-level maps</em> (IFSM). Here one specifies:
 - A set of contraction maps \( f_1, \ldots, f_N \) on the base space.
-- A corresponding set of *grey-level maps* (or *shading functions*) \( \phi_i : \mathbb{R} \to \mathbb{R} \), often of the form \( \phi_i(y) = \alpha_i y + \beta_i \).
+- A corresponding set of <em>grey-level maps</em> (or <em>shading functions</em>) \( \phi_i : \mathbb{R} \to \mathbb{R} \), often of the form \( \phi_i(y) = \alpha_i y + \beta_i \).
 
 The IFSM defines an operator \( T \) acting on bounded functions \( u : X \to \mathbb{R} \) by
 
 \[ (Tu)(x) = \sum_{i : x \in f_i(X)} \phi_i(u(f_i^{-1}(x))). \]
 
-Under appropriate contractivity conditions on the \( \phi_i \) (specifically, \( \sum |\alpha_i| < 1 \)), the operator \( T \) is a contraction on the space of bounded functions, and its unique fixed point \( \bar{u} = T\bar{u} \) is the **attractor function** of the IFSM.
+Under appropriate contractivity conditions on the \( \phi_i \) (specifically, \( \sum |\alpha_i| < 1 \)), the operator \( T \) is a contraction on the space of bounded functions, and its unique fixed point \( \bar{u} = T\bar{u} \) is the <strong>attractor function</strong> of the IFSM.
 
 ### The Devil's Staircase
 
-A canonical example of an IFSM attractor is the *Devil's Staircase* (Cantor function). Consider a three-map IFSM on \( [0,1] \):
+A canonical example of an IFSM attractor is the <em>Devil's Staircase</em> (Cantor function). Consider a three-map IFSM on \( [0,1] \):
 
 \[ f_1(x) = \frac{x}{3}, \quad f_2(x) = \frac{x}{3} + \frac{1}{3}, \quad f_3(x) = \frac{x}{3} + \frac{2}{3}, \]
 
@@ -777,9 +777,9 @@ with grey-level maps \( \phi_1(y) = y/2 \), \( \phi_2(y) = 1/2 \) (constant), \(
 
 ## Fractal Image Coding
 
-The IFSM framework provides the theoretical basis for **fractal image compression** (Barnsley and Hurd, 1992; Jacquin, 1992). A grey-scale image is represented as a function \( u : [0,1]^2 \to [0,1] \), where \( u(x,y) \) gives the brightness at pixel \( (x,y) \). The image is encoded by finding an IFSM operator \( T \) such that \( Tu \approx u \), i.e., the image is (approximately) a fixed point of \( T \).
+The IFSM framework provides the theoretical basis for <strong>fractal image compression</strong> (Barnsley and Hurd, 1992; Jacquin, 1992). A grey-scale image is represented as a function \( u : [0,1]^2 \to [0,1] \), where \( u(x,y) \) gives the brightness at pixel \( (x,y) \). The image is encoded by finding an IFSM operator \( T \) such that \( Tu \approx u \), i.e., the image is (approximately) a fixed point of \( T \).
 
-In practice, the domain of the image is partitioned into *range blocks* \( R_i \) (small, non-overlapping tiles) and *domain blocks* \( D_j \) (larger tiles, possibly overlapping, from the same image). For each range block \( R_i \), one finds the domain block \( D_j \) that, after decimation (shrinking to the size of \( R_i \)) and a grey-level affine map \( \phi(y) = \alpha y + \beta \), best approximates \( R_i \) in least-squares sense. The optimal \( \alpha \) and \( \beta \) for each pair \( (R_i, D_j) \) are found by minimizing
+In practice, the domain of the image is partitioned into <em>range blocks</em> \( R_i \) (small, non-overlapping tiles) and <em>domain blocks</em> \( D_j \) (larger tiles, possibly overlapping, from the same image). For each range block \( R_i \), one finds the domain block \( D_j \) that, after decimation (shrinking to the size of \( R_i \)) and a grey-level affine map \( \phi(y) = \alpha y + \beta \), best approximates \( R_i \) in least-squares sense. The optimal \( \alpha \) and \( \beta \) for each pair \( (R_i, D_j) \) are found by minimizing
 
 \[ \| \phi(\text{decimated } D_j) - R_i \|^2. \]
 
@@ -789,4 +789,4 @@ The encoded image is then just the list of triplets \( (i, j, \alpha_i, \beta_i)
 
 ---
 
-*These notes are based on the AMATH 343 lectures by Professor E.R. Vrscay, University of Waterloo, Fall 2021. All mathematical content is drawn from the course materials; any errors in transcription or synthesis are the responsibility of the note-taker.*
+<em>These notes are based on the AMATH 343 lectures by Professor E.R. Vrscay, University of Waterloo, Fall 2021. All mathematical content is drawn from the course materials; any errors in transcription or synthesis are the responsibility of the note-taker.</em>

@@ -445,7 +445,7 @@ Tom Tyler's (2015) contribution to the psychology of prosocial behaviour concern
 Tyler's central finding, replicated across studies of legal compliance, police legitimacy, tax compliance, and organizational behaviour, is that **procedural justice judgments are more important predictors of compliance and cooperation than distributive justice judgments**:
 
 <div class="example">
-In Tyler's landmark study of Chicago residents' encounters with police and courts, people who had received unfavourable outcomes (lost their case, received a citation) nonetheless reported high satisfaction and expressed willingness to comply with the law if they felt the procedure was fair. Conversely, people who won their case but felt the process was unfair reported less satisfaction and less compliance intention. The *process* mattered more than the *outcome*.
+In Tyler's landmark study of Chicago residents' encounters with police and courts, people who had received unfavourable outcomes (lost their case, received a citation) nonetheless reported high satisfaction and expressed willingness to comply with the law if they felt the procedure was fair. Conversely, people who won their case but felt the process was unfair reported less satisfaction and less compliance intention. The <em>process</em> mattered more than the <em>outcome</em>.
 </div>
 
 ### 5.1.3 The Group Value Model

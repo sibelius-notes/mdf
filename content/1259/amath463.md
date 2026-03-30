@@ -940,7 +940,7 @@ The dynamics of Earth's atmosphere and oceans cannot be understood without accou
 \[
 \frac{D\mathbf{u}}{Dt} + 2\boldsymbol{\Omega}\times\mathbf{u} = -\frac{1}{\rho}\nabla p - \nabla\Phi + \nu\nabla^2\mathbf{u}
 \]
-where \(\Phi = gz - \frac{1}{2}|\boldsymbol{\Omega}\times\mathbf{r}|^2\) is the combined gravitational-centrifugal potential (absorbed into a modified pressure in geophysical applications), and the **Coriolis acceleration** \(2\boldsymbol{\Omega}\times\mathbf{u}\) is the key new term.
+where \(\Phi = gz - \frac{1}{2}|\boldsymbol{\Omega}\times\mathbf{r}|^2\) is the combined gravitational-centrifugal potential (absorbed into a modified pressure in geophysical applications), and the <strong>Coriolis acceleration</strong> \(2\boldsymbol{\Omega}\times\mathbf{u}\) is the key new term.
 </div>
 
 The Coriolis force acts perpendicular to the velocity: in the Northern Hemisphere it deflects moving air to the right; in the Southern Hemisphere, to the left. This deflection is responsible for the counter-clockwise rotation of Northern Hemisphere cyclones (low-pressure systems) and the clockwise rotation of anticyclones. It is also responsible for trade winds, ocean gyres, and the jet streams.

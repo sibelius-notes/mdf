@@ -1275,15 +1275,15 @@ This strategy is used repeatedly in functional analysis whenever proving complet
 <div class="proof">
 <strong>Proof for general \(\ell^p\) (\(1 < p < \infty\)).</strong> Let \((a^{(n)})\) be Cauchy in \(\ell^p\).
 
-**Step 1 (Coordinatewise convergence):** For each fixed \(k\), \(|a^{(n)}_k - a^{(m)}_k| \le \|a^{(n)} - a^{(m)}\|_p \to 0\), so \(b_k := \lim_n a^{(n)}_k\) exists.
+<strong>Step 1 (Coordinatewise convergence):</strong> For each fixed \(k\), \(|a^{(n)}_k - a^{(m)}_k| \le \|a^{(n)} - a^{(m)}\|_p \to 0\), so \(b_k := \lim_n a^{(n)}_k\) exists.
 
-**Step 2 (Membership):** Fix \(\varepsilon > 0\) and choose \(N\) with \(\|a^{(n)} - a^{(m)}\|_p < \varepsilon\) for \(n, m \ge N\). For any finite \(K\):
+<strong>Step 2 (Membership):</strong> Fix \(\varepsilon > 0\) and choose \(N\) with \(\|a^{(n)} - a^{(m)}\|_p < \varepsilon\) for \(n, m \ge N\). For any finite \(K\):
 \[
 \left(\sum_{k=1}^K |a^{(n)}_k - b_k|^p\right)^{1/p} = \lim_{m \to \infty} \left(\sum_{k=1}^K |a^{(n)}_k - a^{(m)}_k|^p\right)^{1/p} \le \varepsilon.
 \]
 Letting \(K \to \infty\): \(\|a^{(n)} - b\|_p \le \varepsilon\) for \(n \ge N\). In particular, \(a^{(n)} - b \in \ell^p\), so \(b = a^{(n)} - (a^{(n)} - b) \in \ell^p\) (since \(\ell^p\) is a vector space).
 
-**Step 3 (Norm convergence):** The estimate \(\|a^{(n)} - b\|_p \le \varepsilon\) for \(n \ge N\) is exactly convergence in the \(\ell^p\) norm.
+<strong>Step 3 (Norm convergence):</strong> The estimate \(\|a^{(n)} - b\|_p \le \varepsilon\) for \(n \ge N\) is exactly convergence in the \(\ell^p\) norm.
 </div>
 
 <div class="proof">
@@ -1296,7 +1296,7 @@ Letting \(K \to \infty\): \(\|a^{(n)} - b\|_p \le \varepsilon\) for \(n \ge N\).
 <li>\(c = \{(a_n) \in \ell^\infty : \lim a_n \text{ exists}\}\), the space of convergent sequences.</li>
 <li>\(c_0 = \{(a_n) \in \ell^\infty : \lim a_n = 0\}\), the space of sequences converging to zero.</li>
 </ul>
-Both are closed subspaces of \(\ell^\infty\) (the sup-norm limit of convergent sequences is convergent, and similarly for null sequences), hence complete Banach spaces. Neither is separable's converse: \(\ell^\infty\) itself is not separable (the uncountably many sequences of 0s and 1s are mutually at distance 1), but \(c_0\) is separable (the sequences with finitely many nonzero rational entries form a countable dense subset). This distinction matters: separable Banach spaces have better structural properties --- for instance, the dual of \(c_0\) is \(\ell^1\), and the dual of \(\ell^1\) is \(\ell^\infty\), forming a clean duality chain \(c_0 \subset c \subset \ell^\infty\) with \(c_0^* = \ell^1\) and \(\ell^{1*} = \ell^\infty\).
+Both are closed subspaces of \(\ell^\infty\) (the sup-norm limit of convergent sequences is convergent, and similarly for null sequences), hence complete Banach spaces. Neither is separable's converse: \(\ell^\infty\) itself is not separable (the uncountably many sequences of 0s and 1s are mutually at distance 1), but \(c_0\) is separable (the sequences with finitely many nonzero rational entries form a countable dense subset). This distinction matters: separable Banach spaces have better structural properties --- for instance, the dual of \(c_0\) is \(\ell^1\), and the dual of \(\ell^1\) is \(\ell^\infty\), forming a clean duality chain \(c_0 \subset c \subset \ell^\infty\) with \(c_0^<em> = \ell^1\) and \(\ell^{1</em>} = \ell^\infty\).
 </div>
 
 <div class="theorem">
@@ -1714,13 +1714,13 @@ The Cantor function provides the classic example showing that a monotone continu
 <div class="proof">
 <strong>Proof.</strong> We construct a sequence of continuous functions \(f_k: C \to X\) converging uniformly to a continuous surjection.
 
-**Base case.** Since \(X\) is compact, it has a finite \(1/2\)-net \(x_1^{(1)}, \ldots, x_{n_1}^{(1)}\) with \(n_1 \ge 2\). Partition \(C\) into \(n_1\) disjoint nonempty clopen subsets \(C_1^{(1)}, \ldots, C_{n_1}^{(1)}\) with \(\operatorname{diam}(C_i^{(1)}) \le 1/3\). (This is possible since \(C\) is perfect, compact, and totally disconnected.) Define \(f_1: C \to X\) by \(f_1|_{C_i^{(1)}} = x_i^{(1)}\). Being locally constant, \(f_1\) is continuous.
+<strong>Base case.</strong> Since \(X\) is compact, it has a finite \(1/2\)-net \(x_1^{(1)}, \ldots, x_{n_1}^{(1)}\) with \(n_1 \ge 2\). Partition \(C\) into \(n_1\) disjoint nonempty clopen subsets \(C_1^{(1)}, \ldots, C_{n_1}^{(1)}\) with \(\operatorname{diam}(C_i^{(1)}) \le 1/3\). (This is possible since \(C\) is perfect, compact, and totally disconnected.) Define \(f_1: C \to X\) by \(f_1|_{C_i^{(1)}} = x_i^{(1)}\). Being locally constant, \(f_1\) is continuous.
 
-**Inductive step.** Suppose at stage \(k\) we have a \(2^{-k}\)-net \(\{x_i^{(k)}\}_{i=1}^{n_k}\), a partition of \(C\) into disjoint clopen sets \(\{C_i^{(k)}\}\) with \(\operatorname{diam}(C_i^{(k)}) \le 3^{-k}\), and a locally constant \(f_k: C \to X\) with \(f_k|_{C_i^{(k)}} = x_i^{(k)}\). For each \(i\), refine the ball \(B(x_i^{(k)}, 2^{-k})\) by choosing a \(2^{-(k+1)}\)-net of it, giving new points \(x_j^{(k+1,i)}\). Split each \(C_i^{(k)}\) into the same number of disjoint clopen subsets of diameter \(\le 3^{-(k+1)}\). Define \(f_{k+1}\) to be constant on each new piece, mapping to the corresponding net point.
+<strong>Inductive step.</strong> Suppose at stage \(k\) we have a \(2^{-k}\)-net \(\{x_i^{(k)}\}_{i=1}^{n_k}\), a partition of \(C\) into disjoint clopen sets \(\{C_i^{(k)}\}\) with \(\operatorname{diam}(C_i^{(k)}) \le 3^{-k}\), and a locally constant \(f_k: C \to X\) with \(f_k|_{C_i^{(k)}} = x_i^{(k)}\). For each \(i\), refine the ball \(B(x_i^{(k)}, 2^{-k})\) by choosing a \(2^{-(k+1)}\)-net of it, giving new points \(x_j^{(k+1,i)}\). Split each \(C_i^{(k)}\) into the same number of disjoint clopen subsets of diameter \(\le 3^{-(k+1)}\). Define \(f_{k+1}\) to be constant on each new piece, mapping to the corresponding net point.
 
-**Convergence.** Since \(f_{k+1}(y) \in B(f_k(y), 2^{-k})\) for all \(y \in C\), we have \(\|f_{k+1} - f_k\|_\infty \le 2^{-k}\). Since \(\sum 2^{-k} < \infty\), the sequence \((f_k)\) is Cauchy in the complete space \(C(C, X)\) and converges uniformly to a continuous function \(f: C \to X\).
+<strong>Convergence.</strong> Since \(f_{k+1}(y) \in B(f_k(y), 2^{-k})\) for all \(y \in C\), we have \(\|f_{k+1} - f_k\|_\infty \le 2^{-k}\). Since \(\sum 2^{-k} < \infty\), the sequence \((f_k)\) is Cauchy in the complete space \(C(C, X)\) and converges uniformly to a continuous function \(f: C \to X\).
 
-**Surjectivity.** Let \(x \in X\). At each stage \(k\), choose \(i_k\) with \(d(x, x_{i_k}^{(k)}) \le 2^{-k}\) and pick any \(y_k \in C_{i_k}^{(k)}\). The sequence of sets \(C_{i_1}^{(1)} \supseteq C_{i_2}^{(2)} \supseteq \cdots\) is nested, nonempty, and has diameters \(\to 0\). By Cantor's Intersection Theorem, there exists \(y \in \bigcap_k C_{i_k}^{(k)}\). Then \(d(f(y), x) = \lim_k d(f_k(y), x) \le \lim_k 2^{-k} = 0\), so \(f(y) = x\).
+<strong>Surjectivity.</strong> Let \(x \in X\). At each stage \(k\), choose \(i_k\) with \(d(x, x_{i_k}^{(k)}) \le 2^{-k}\) and pick any \(y_k \in C_{i_k}^{(k)}\). The sequence of sets \(C_{i_1}^{(1)} \supseteq C_{i_2}^{(2)} \supseteq \cdots\) is nested, nonempty, and has diameters \(\to 0\). By Cantor's Intersection Theorem, there exists \(y \in \bigcap_k C_{i_k}^{(k)}\). Then \(d(f(y), x) = \lim_k d(f_k(y), x) \le \lim_k 2^{-k} = 0\), so \(f(y) = x\).
 </div>
 
 <div class="corollary">
@@ -1742,13 +1742,13 @@ The Cantor function provides the classic example showing that a monotone continu
 <div class="proof">
 <strong>Proof.</strong> Let \(X\) be such a space and \(C\) the Cantor set. We build a homeomorphism by constructing approximating sequences of maps. Since \(X\) is compact and totally disconnected, the topology of \(X\) is generated by clopen (simultaneously closed and open) sets, and \(X\) can be partitioned into finitely many nonempty disjoint clopen subsets of arbitrarily small diameter. The perfectness of \(X\) (no isolated points) is essential: it guarantees that any nonempty clopen subset can be further subdivided, since a nonempty clopen subset of a perfect compact space is itself perfect and compact, hence contains at least two points, and can be split into smaller clopen pieces.
 
-**Construction.** At the first stage, tile \(X\) with finitely many nonempty, disjoint, clopen sets \(X_1, \ldots, X_{n_1}\) of diameter at most \(1/2\), with \(n_1 \ge 2\). Partition \(C\) into the same number of disjoint clopen subsets \(C_1, \ldots, C_{n_1}\) with diameter at most \(1/3\) (this is always possible since the Cantor set is perfect and totally disconnected). Pick representative points \(x_i \in X_i\) and \(c_i \in C_i\), and define locally constant maps \(f_1: X \to C\) by \(f_1|_{X_i} = c_i\) and \(g_1: C \to X\) by \(g_1|_{C_i} = x_i\).
+<strong>Construction.</strong> At the first stage, tile \(X\) with finitely many nonempty, disjoint, clopen sets \(X_1, \ldots, X_{n_1}\) of diameter at most \(1/2\), with \(n_1 \ge 2\). Partition \(C\) into the same number of disjoint clopen subsets \(C_1, \ldots, C_{n_1}\) with diameter at most \(1/3\) (this is always possible since the Cantor set is perfect and totally disconnected). Pick representative points \(x_i \in X_i\) and \(c_i \in C_i\), and define locally constant maps \(f_1: X \to C\) by \(f_1|_{X_i} = c_i\) and \(g_1: C \to X\) by \(g_1|_{C_i} = x_i\).
 
 At the \(k\)-th stage, refine each \(X_i^{(k)}\) from the previous stage into finitely many disjoint clopen subsets of diameter at most \(2^{-k}\), and correspondingly refine each \(C_i^{(k)}\) into the same number of disjoint clopen subsets of diameter at most \(3^{-k}\). Define locally constant maps \(f_k: X \to C\) and \(g_k: C \to X\) by assigning each piece to a representative point.
 
-**Convergence.** By construction, \(\|f_k - f_{k+1}\|_\infty \le 3^{-k}\) and \(\|g_k - g_{k+1}\|_\infty \le 2^{-k}\), so both \(\sum \|f_k - f_{k+1}\|_\infty\) and \(\sum \|g_k - g_{k+1}\|_\infty\) converge. Hence \((f_k)\) and \((g_k)\) are Cauchy in the complete spaces \(C(X, C)\) and \(C(C, X)\), and converge uniformly to continuous maps \(f: X \to C\) and \(g: C \to X\).
+<strong>Convergence.</strong> By construction, \(\|f_k - f_{k+1}\|_\infty \le 3^{-k}\) and \(\|g_k - g_{k+1}\|_\infty \le 2^{-k}\), so both \(\sum \|f_k - f_{k+1}\|_\infty\) and \(\sum \|g_k - g_{k+1}\|_\infty\) converge. Hence \((f_k)\) and \((g_k)\) are Cauchy in the complete spaces \(C(X, C)\) and \(C(C, X)\), and converge uniformly to continuous maps \(f: X \to C\) and \(g: C \to X\).
 
-**Inverse maps.** At stage \(k\), \(\|g_k \circ f_k - \mathrm{id}_X\|_\infty \le \max_i \operatorname{diam}(X_i^{(k)}) \le 2^{-k} \to 0\) and similarly \(\|f_k \circ g_k - \mathrm{id}_C\|_\infty \le 3^{-k} \to 0\). Passing to limits, \(g \circ f = \mathrm{id}_X\) and \(f \circ g = \mathrm{id}_C\). Thus \(f\) and \(g\) are continuous bijections and inverses of each other, establishing the homeomorphism \(X \cong C\).
+<strong>Inverse maps.</strong> At stage \(k\), \(\|g_k \circ f_k - \mathrm{id}_X\|_\infty \le \max_i \operatorname{diam}(X_i^{(k)}) \le 2^{-k} \to 0\) and similarly \(\|f_k \circ g_k - \mathrm{id}_C\|_\infty \le 3^{-k} \to 0\). Passing to limits, \(g \circ f = \mathrm{id}_X\) and \(f \circ g = \mathrm{id}_C\). Thus \(f\) and \(g\) are continuous bijections and inverses of each other, establishing the homeomorphism \(X \cong C\).
 </div>
 
 <div class="remark">
@@ -2198,13 +2198,13 @@ Every contraction is (uniformly) continuous, and strictly decreases distances be
 \[
 d(x_n, x_m) \le \sum_{i=n}^{m-1} d(x_{i+1}, x_i) \le c^n d(x_1, x_0) \sum_{j=0}^{m-n-1} c^j \le \frac{c^n}{1-c} d(x_1, x_0).
 \]
-So \((x_n)\) is Cauchy, hence converges to some \(x^* \in X\). Since \(T\) is continuous, \(T(x^*) = T(\lim x_n) = \lim T(x_n) = \lim x_{n+1} = x^*\). For uniqueness: if \(T(a) = a\) and \(T(b) = b\), then \(d(a,b) = d(T(a), T(b)) \le c \cdot d(a,b)\) with \(c < 1\), forcing \(d(a,b) = 0\). The error bound follows by letting \(m \to \infty\) in the Cauchy estimate.
+So \((x_n)\) is Cauchy, hence converges to some \(x^<em> \in X\). Since \(T\) is continuous, \(T(x^</em>) = T(\lim x_n) = \lim T(x_n) = \lim x_{n+1} = x^*\). For uniqueness: if \(T(a) = a\) and \(T(b) = b\), then \(d(a,b) = d(T(a), T(b)) \le c \cdot d(a,b)\) with \(c < 1\), forcing \(d(a,b) = 0\). The error bound follows by letting \(m \to \infty\) in the Cauchy estimate.
 </div>
 
 <div class="remark">
-<strong>Remark (Practical significance of error bounds).</strong> The a priori bound \(d(x_n, x^*) \le \frac{c^n}{1-c} d(x_0, x_1)\) tells us in advance how many iterations are needed: to achieve accuracy \(\varepsilon\), we need \(n \ge \frac{\log(\varepsilon(1-c)/d(x_0,x_1))}{\log c}\), which is \(O(\log(1/\varepsilon))\) --- logarithmic in the desired precision. The a posteriori bound \(d(x_n, x^*) \le \frac{c}{1-c}d(x_{n-1}, x_n)\) is computable from the iterates and often sharper: once \(d(x_{n-1}, x_n)\) is observed to be small, the fixed point is nearby.
+<strong>Remark (Practical significance of error bounds).</strong> The a priori bound \(d(x_n, x^<em>) \le \frac{c^n}{1-c} d(x_0, x_1)\) tells us in advance how many iterations are needed: to achieve accuracy \(\varepsilon\), we need \(n \ge \frac{\log(\varepsilon(1-c)/d(x_0,x_1))}{\log c}\), which is \(O(\log(1/\varepsilon))\) --- logarithmic in the desired precision. The a posteriori bound \(d(x_n, x^</em>) \le \frac{c}{1-c}d(x_{n-1}, x_n)\) is computable from the iterates and often sharper: once \(d(x_{n-1}, x_n)\) is observed to be small, the fixed point is nearby.
 
-For example, with \(c = 1/2\) and \(d(x_0, x_1) = 1\): after \(n = 10\) iterations, \(d(x_{10}, x^*) \le 2^{-10}/(1 - 1/2) = 2^{-9} \approx 0.002\). After \(n = 20\): \(d(x_{20}, x^*) \le 2^{-19} \approx 10^{-6}\). The geometric convergence rate makes the theorem computationally practical.
+For example, with \(c = 1/2\) and \(d(x_0, x_1) = 1\): after \(n = 10\) iterations, \(d(x_{10}, x^<em>) \le 2^{-10}/(1 - 1/2) = 2^{-9} \approx 0.002\). After \(n = 20\): \(d(x_{20}, x^</em>) \le 2^{-19} \approx 10^{-6}\). The geometric convergence rate makes the theorem computationally practical.
 </div>
 
 <div class="theorem">
@@ -2212,7 +2212,7 @@ For example, with \(c = 1/2\) and \(d(x_0, x_1) = 1\): after \(n = 10\) iteratio
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> Since \(A\) is closed in the complete space \(X\), the subspace \(A\) is complete (Theorem 5.3). Apply the Banach Fixed-Point Theorem to \(T: A \to A\). For the second statement: the fixed point \(x^*\) of \(T\) on \(X\) satisfies \(x^* = \lim T^n(x_0)\) for any \(x_0 \in A\). Since each \(T^n(x_0) \in A\) and \(A\) is closed, \(x^* \in A\).
+<strong>Proof.</strong> Since \(A\) is closed in the complete space \(X\), the subspace \(A\) is complete (Theorem 5.3). Apply the Banach Fixed-Point Theorem to \(T: A \to A\). For the second statement: the fixed point \(x^<em>\) of \(T\) on \(X\) satisfies \(x^</em> = \lim T^n(x_0)\) for any \(x_0 \in A\). Since each \(T^n(x_0) \in A\) and \(A\) is closed, \(x^* \in A\).
 </div>
 
 ### 9.3 Newton's Method
@@ -2220,15 +2220,15 @@ For example, with \(c = 1/2\) and \(d(x_0, x_1) = 1\): after \(n = 10\) iteratio
 Newton's method is a prime application of the contraction mapping principle. The key insight is that the Newton operator \(T\) not only has a fixed point at the root, but has \(T'(x^*) = 0\), giving it "superlinear" contraction near \(x^*\).
 
 <div class="definition">
-<strong>Definition 9.3a (Quadratic Convergence).</strong> A sequence \(x_n \to x^*\) converges <em>quadratically</em> if there exists \(M > 0\) with \(|x_{n+1} - x^*| \le M|x_n - x^*|^2\) for all sufficiently large \(n\). Quadratic convergence is much faster than linear convergence (\(|x_{n+1} - x^*| \le c|x_n - x^*|\) with \(c < 1\)): if \(|x_n - x^*| \approx 10^{-k}\), then \(|x_{n+1} - x^*| \approx 10^{-2k}\), roughly doubling the number of correct digits per iteration.
+<strong>Definition 9.3a (Quadratic Convergence).</strong> A sequence \(x_n \to x^<em>\) converges <em>quadratically</em> if there exists \(M > 0\) with \(|x_{n+1} - x^</em>| \le M|x_n - x^<em>|^2\) for all sufficiently large \(n\). Quadratic convergence is much faster than linear convergence (\(|x_{n+1} - x^</em>| \le c|x_n - x^<em>|\) with \(c < 1\)): if \(|x_n - x^</em>| \approx 10^{-k}\), then \(|x_{n+1} - x^*| \approx 10^{-2k}\), roughly doubling the number of correct digits per iteration.
 </div>
 
 <div class="example">
-<strong>Example 9.3 (Newton's method).</strong> To solve \(g(x) = 0\), define \(T(x) = x - g(x)/g'(x)\). If \(x^*\) is a simple root with \(g'(x^*) \ne 0\) and \(g\) is \(C^2\), then
+<strong>Example 9.3 (Newton's method).</strong> To solve \(g(x) = 0\), define \(T(x) = x - g(x)/g'(x)\). If \(x^<em>\) is a simple root with \(g'(x^</em>) \ne 0\) and \(g\) is \(C^2\), then
 \[
 T'(x) = 1 - \frac{(g'(x))^2 - g(x)g''(x)}{(g'(x))^2} = \frac{g(x)g''(x)}{(g'(x))^2},
 \]
-so \(T'(x^*) = 0\). By continuity, \(|T'(x)| \le 1/2\) on some interval \([x^* - R, x^* + R]\), making \(T\) a contraction. The convergence is quadratic: by Taylor expansion, \(|x_{n+1} - x^*| \le \frac{|g''(\xi_n)|}{2|g'(x_n)|} |x_n - x^*|^2\).
+so \(T'(x^<em>) = 0\). By continuity, \(|T'(x)| \le 1/2\) on some interval \([x^</em> - R, x^<em> + R]\), making \(T\) a contraction. The convergence is quadratic: by Taylor expansion, \(|x_{n+1} - x^</em>| \le \frac{|g''(\xi_n)|}{2|g'(x_n)|} |x_n - x^*|^2\).
 </div>
 
 <div class="example">
@@ -2267,7 +2267,7 @@ d_H\left(\bigcup_{i=1}^n A_i,\, \bigcup_{i=1}^n B_i\right) \le \max_{1 \le i \le
 <ol>
 <li>Each \(T_i\) is a contraction on \(\mathcal{H}(X)\): \(d_H(T_i(A), T_i(B)) \le c_i \cdot d_H(A,B)\).</li>
 <li>\(\mathcal{T}\) is a contraction with constant \(c = \max_i c_i < 1\).</li>
-<li>\(\mathcal{T}\) has a unique fixed point \(K^* \in \mathcal{H}(X)\) --- the <em>attractor</em> of the IFS --- satisfying \(K^* = T_1(K^*) \cup \cdots \cup T_k(K^*)\).</li>
+<li>\(\mathcal{T}\) has a unique fixed point \(K^<em> \in \mathcal{H}(X)\) --- the <em>attractor</em> of the IFS --- satisfying \(K^</em> = T_1(K^<em>) \cup \cdots \cup T_k(K^</em>)\).</li>
 </ol>
 </div>
 
@@ -2278,7 +2278,7 @@ d_H\left(\bigcup_{i=1}^n A_i,\, \bigcup_{i=1}^n B_i\right) \le \max_{1 \le i \le
 The attractor can be approximated starting from any compact set \(K_0\): the iterates \(K_n = \mathcal{T}^n(K_0)\) converge to \(K^*\) in the Hausdorff metric. The Banach Fixed-Point Theorem gives the error bound \(d_H(K_n, K^*) \le \frac{c^n}{1-c} d_H(K_0, \mathcal{T}(K_0))\). In practice, starting from any simple compact set (a point, a line segment, or a filled triangle) and repeatedly applying \(\mathcal{T}\) produces increasingly detailed approximations of the fractal attractor.
 
 <div class="remark">
-<strong>Remark (The "address" system for IFS attractors).</strong> Each point \(x^* \in K^*\) in the attractor of an IFS with \(k\) maps can be encoded by an infinite sequence \((\omega_1, \omega_2, \ldots)\) with \(\omega_i \in \{1, \ldots, k\}\), called an <em>address</em> or <em>symbolic itinerary</em>. The point is recovered as \(x^* = \lim_{n \to \infty} T_{\omega_1} \circ T_{\omega_2} \circ \cdots \circ T_{\omega_n}(x_0)\) for any starting point \(x_0\). This encoding establishes a continuous surjection from the sequence space \(\{1, \ldots, k\}^{\mathbb{N}}\) (a Cantor-like space) onto the attractor, connecting the theory of iterated function systems to symbolic dynamics.
+<strong>Remark (The "address" system for IFS attractors).</strong> Each point \(x^<em> \in K^</em>\) in the attractor of an IFS with \(k\) maps can be encoded by an infinite sequence \((\omega_1, \omega_2, \ldots)\) with \(\omega_i \in \{1, \ldots, k\}\), called an <em>address</em> or <em>symbolic itinerary</em>. The point is recovered as \(x^* = \lim_{n \to \infty} T_{\omega_1} \circ T_{\omega_2} \circ \cdots \circ T_{\omega_n}(x_0)\) for any starting point \(x_0\). This encoding establishes a continuous surjection from the sequence space \(\{1, \ldots, k\}^{\mathbb{N}}\) (a Cantor-like space) onto the attractor, connecting the theory of iterated function systems to symbolic dynamics.
 </div>
 
 <div class="example">
@@ -2286,7 +2286,7 @@ The attractor can be approximated starting from any compact set \(K_0\): the ite
 </div>
 
 <div class="example">
-<strong>Example 9.9 (Local contraction principle).</strong> If \(T \in C^1([a,b], [a,b])\) with \(T(x^*) = x^*\) and \(|T'(x^*)| < 1\), then by continuity there exists \(\delta > 0\) such that \(\sup_{|x - x^*| \le \delta} |T'(x)| = c < 1\). By the Mean Value Theorem, \(T\) is a contraction on \(\overline{B}(x^*, \delta)\) with constant \(c\). This gives local convergence of iterates near fixed points of smooth maps and is the theoretical basis for many numerical algorithms.
+<strong>Example 9.9 (Local contraction principle).</strong> If \(T \in C^1([a,b], [a,b])\) with \(T(x^<em>) = x^</em>\) and \(|T'(x^<em>)| < 1\), then by continuity there exists \(\delta > 0\) such that \(\sup_{|x - x^</em>| \le \delta} |T'(x)| = c < 1\). By the Mean Value Theorem, \(T\) is a contraction on \(\overline{B}(x^*, \delta)\) with constant \(c\). This gives local convergence of iterates near fixed points of smooth maps and is the theoretical basis for many numerical algorithms.
 </div>
 
 <div class="remark">
@@ -2308,14 +2308,14 @@ The fact that these dimensions are non-integer is what makes fractals "fractiona
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> This is a direct consequence of the Banach Fixed-Point error estimate. Since \(\mathcal{T}\) is a contraction with constant \(c\) on the complete space \(\mathcal{H}(X)\), and \(K^* = \mathcal{T}(K^*)\):
+<strong>Proof.</strong> This is a direct consequence of the Banach Fixed-Point error estimate. Since \(\mathcal{T}\) is a contraction with constant \(c\) on the complete space \(\mathcal{H}(X)\), and \(K^<em> = \mathcal{T}(K^</em>)\):
 \[
 d_H(K_0, K^*) \le \frac{d_H(K_0, \mathcal{T}(K_0))}{1 - c} \le \frac{\varepsilon}{1 - c}.
 \]
 </div>
 
 <div class="remark">
-<strong>Remark.</strong> The Collage Theorem is the theoretical basis for <em>fractal image compression</em>: to encode an image \(K_0\), find an IFS whose attractor \(K^*\) is close to \(K_0\). The IFS (a small collection of affine maps) serves as a highly compressed representation. The collage theorem guarantees that if \(\mathcal{T}(K_0) \approx K_0\), then \(K^* \approx K_0\). This technique was developed by Barnsley and others in the 1990s.
+<strong>Remark.</strong> The Collage Theorem is the theoretical basis for <em>fractal image compression</em>: to encode an image \(K_0\), find an IFS whose attractor \(K^<em>\) is close to \(K_0\). The IFS (a small collection of affine maps) serves as a highly compressed representation. The collage theorem guarantees that if \(\mathcal{T}(K_0) \approx K_0\), then \(K^</em> \approx K_0\). This technique was developed by Barnsley and others in the 1990s.
 </div>
 
 ---
@@ -2373,13 +2373,13 @@ Having shown that completions exist, we now show they are unique up to isometry.
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> **Definition of \(\hat{f}\):** For \(a \in \hat{X}\), choose \((x_n)\) in \(X\) with \(x_n \to a\). Since \(f\) is uniformly continuous and \((x_n)\) is Cauchy, \((f(x_n))\) is Cauchy in \(Y\): given \(\varepsilon > 0\), choose \(\delta > 0\) from uniform continuity, then \(N\) with \(d(x_n, x_m) < \delta\) for \(n, m \ge N\), giving \(d(f(x_n), f(x_m)) < \varepsilon\). Since \(Y\) is complete, define \(\hat{f}(a) = \lim f(x_n)\).
+<strong>Proof.</strong> <strong>Definition of \(\hat{f}\):</strong> For \(a \in \hat{X}\), choose \((x_n)\) in \(X\) with \(x_n \to a\). Since \(f\) is uniformly continuous and \((x_n)\) is Cauchy, \((f(x_n))\) is Cauchy in \(Y\): given \(\varepsilon > 0\), choose \(\delta > 0\) from uniform continuity, then \(N\) with \(d(x_n, x_m) < \delta\) for \(n, m \ge N\), giving \(d(f(x_n), f(x_m)) < \varepsilon\). Since \(Y\) is complete, define \(\hat{f}(a) = \lim f(x_n)\).
 
-**Well-definedness:** If \((y_n)\) also converges to \(a\), then \(d(x_n, y_n) \to 0\), so \(d(f(x_n), f(y_n)) \to 0\) by uniform continuity, giving \(\lim f(x_n) = \lim f(y_n)\).
+<strong>Well-definedness:</strong> If \((y_n)\) also converges to \(a\), then \(d(x_n, y_n) \to 0\), so \(d(f(x_n), f(y_n)) \to 0\) by uniform continuity, giving \(\lim f(x_n) = \lim f(y_n)\).
 
-**Uniform continuity of \(\hat{f}\):** Given \(\varepsilon > 0\), choose \(\delta > 0\) with \(d(x,y) < \delta \implies d(f(x), f(y)) < \varepsilon\) for \(x, y \in X\). If \(d(a,b) < \delta\) in \(\hat{X}\), choose \(x_n \to a\) and \(y_n \to b\) in \(X\). Then \(d(x_n, y_n) \to d(a,b) < \delta\), so for large \(n\), \(d(f(x_n), f(y_n)) < \varepsilon\). Taking limits: \(d(\hat{f}(a), \hat{f}(b)) \le \varepsilon\).
+<strong>Uniform continuity of \(\hat{f}\):</strong> Given \(\varepsilon > 0\), choose \(\delta > 0\) with \(d(x,y) < \delta \implies d(f(x), f(y)) < \varepsilon\) for \(x, y \in X\). If \(d(a,b) < \delta\) in \(\hat{X}\), choose \(x_n \to a\) and \(y_n \to b\) in \(X\). Then \(d(x_n, y_n) \to d(a,b) < \delta\), so for large \(n\), \(d(f(x_n), f(y_n)) < \varepsilon\). Taking limits: \(d(\hat{f}(a), \hat{f}(b)) \le \varepsilon\).
 
-**Uniqueness:** If \(\hat{g}\) is another continuous extension, then \(\hat{f}\) and \(\hat{g}\) agree on the dense set \(X\), and the set \(\{a \in \hat{X} : \hat{f}(a) = \hat{g}(a)\}\) is closed (preimage of the diagonal under the continuous map \(a \mapsto (\hat{f}(a), \hat{g}(a))\)). A closed set containing a dense subset equals the whole space, so \(\hat{f} = \hat{g}\).
+<strong>Uniqueness:</strong> If \(\hat{g}\) is another continuous extension, then \(\hat{f}\) and \(\hat{g}\) agree on the dense set \(X\), and the set \(\{a \in \hat{X} : \hat{f}(a) = \hat{g}(a)\}\) is closed (preimage of the diagonal under the continuous map \(a \mapsto (\hat{f}(a), \hat{g}(a))\)). A closed set containing a dense subset equals the whole space, so \(\hat{f} = \hat{g}\).
 </div>
 
 <div class="remark">
@@ -2509,9 +2509,9 @@ The real numbers can be constructed as the completion of \(\mathbb{Q}\) with res
 <div class="proof">
 <strong>Proof (Sketch).</strong> Let \(|\cdot|\) be a nontrivial absolute value on \(\mathbb{Q}\). There are two cases:
 
-**Case 1 (Non-Archimedean):** Suppose \(|n| \le 1\) for all \(n \in \mathbb{N}\). Then \(|\cdot|\) satisfies the ultrametric inequality. The set \(\{n \in \mathbb{Z} : |n| < 1\}\) is an ideal in \(\mathbb{Z}\), hence equals \(p\mathbb{Z}\) for some prime \(p\). Write any rational \(x = p^a r/s\) with \(p \nmid rs\), giving \(|x| = |p|^a\). Setting \(\alpha = -\log|p|/\log p\), we get \(|x| = |x|_p^\alpha\).
+<strong>Case 1 (Non-Archimedean):</strong> Suppose \(|n| \le 1\) for all \(n \in \mathbb{N}\). Then \(|\cdot|\) satisfies the ultrametric inequality. The set \(\{n \in \mathbb{Z} : |n| < 1\}\) is an ideal in \(\mathbb{Z}\), hence equals \(p\mathbb{Z}\) for some prime \(p\). Write any rational \(x = p^a r/s\) with \(p \nmid rs\), giving \(|x| = |p|^a\). Setting \(\alpha = -\log|p|/\log p\), we get \(|x| = |x|_p^\alpha\).
 
-**Case 2 (Archimedean):** Suppose \(|n_0| > 1\) for some \(n_0 \in \mathbb{N}\). For any integers \(m, n \ge 2\), expand \(n\) in base \(m\) and use the triangle inequality to show that \(|n| \le n^{\log|m|/\log m}\). By symmetry, \(|m| \le m^{\log|n|/\log n}\), hence \(\log|n|/\log n = \log|m|/\log m\) is constant. This gives \(|n| = n^\alpha\) for some \(\alpha > 0\), so \(|\cdot|\) is equivalent to the usual absolute value.
+<strong>Case 2 (Archimedean):</strong> Suppose \(|n_0| > 1\) for some \(n_0 \in \mathbb{N}\). For any integers \(m, n \ge 2\), expand \(n\) in base \(m\) and use the triangle inequality to show that \(|n| \le n^{\log|m|/\log m}\). By symmetry, \(|m| \le m^{\log|n|/\log n}\), hence \(\log|n|/\log n = \log|m|/\log m\) is constant. This gives \(|n| = n^\alpha\) for some \(\alpha > 0\), so \(|\cdot|\) is equivalent to the usual absolute value.
 </div>
 
 <div class="remark">
@@ -2612,7 +2612,7 @@ Choosing \(n\) large enough makes this less than \(2\varepsilon\).
 <div class="remark">
 <strong>Remark (Polynomial interpolation and Runge's phenomenon).</strong> A natural alternative approach to polynomial approximation is interpolation: given \(n+1\) distinct points \(x_0, \ldots, x_n \in [a,b]\), the unique polynomial \(p_n \in \mathcal{P}_n\) satisfying \(p_n(x_i) = f(x_i)\) is called the <em>Lagrange interpolating polynomial</em>. One might hope that as the number of interpolation points increases, the interpolants converge uniformly to \(f\). However, this is false in general.
 
-**Runge's phenomenon** demonstrates this failure dramatically. Consider \(f(x) = 1/(1 + 25x^2)\) on \([-1,1]\) with equally spaced interpolation points \(x_k = -1 + 2k/n\). The interpolating polynomials \(p_n\) diverge near the endpoints: \(\|f - p_n\|_\infty \to \infty\) as \(n \to \infty\). The wild oscillations near \(x = \pm 1\) grow without bound. This is not a defect of the particular function --- Faber's theorem (1914) shows that for <em>any</em> array of interpolation points, there exists a continuous function whose interpolants diverge.
+<strong>Runge's phenomenon</strong> demonstrates this failure dramatically. Consider \(f(x) = 1/(1 + 25x^2)\) on \([-1,1]\) with equally spaced interpolation points \(x_k = -1 + 2k/n\). The interpolating polynomials \(p_n\) diverge near the endpoints: \(\|f - p_n\|_\infty \to \infty\) as \(n \to \infty\). The wild oscillations near \(x = \pm 1\) grow without bound. This is not a defect of the particular function --- Faber's theorem (1914) shows that for <em>any</em> array of interpolation points, there exists a continuous function whose interpolants diverge.
 
 The resolution is to use Chebyshev nodes \(x_k = \cos((2k+1)\pi/(2n+2))\), which are the roots of the Chebyshev polynomial \(T_{n+1}\). These points cluster near the endpoints of the interval, counteracting the oscillation tendency. For Lipschitz continuous functions, Chebyshev interpolation converges, and for analytic functions the convergence is exponentially fast. This connection between optimal interpolation points and the Chebyshev equioscillation theorem (Section 11.3) is one of the beautiful unifying themes of approximation theory.
 </div>
@@ -2648,7 +2648,7 @@ p_n(x) - f(x) = \int_{-1}^1 \bigl(f(x+t) - f(x)\bigr) Q_n(t)\, dt.
 \]
 Given \(\varepsilon > 0\), choose \(\delta > 0\) by uniform continuity so that \(|t| < \delta \Rightarrow |f(x+t) - f(x)| < \varepsilon\) for all \(x\). Split the integral at \(\pm\delta\): the contribution from \(|t| < \delta\) is bounded by \(\varepsilon \int Q_n = \varepsilon\), while the contribution from \(|t| \ge \delta\) is bounded by \(2\|f\|_\infty \cdot c_n(1-\delta^2)^n \to 0\). Choosing \(n\) large enough makes the total error less than \(2\varepsilon\), uniformly in \(x\).
 
-This proof is more than a curiosity: the construction \(f \mapsto f * Q_n\) is exactly a <em>convolution with an approximate identity</em>. In Fourier analysis, the Fejér kernel \(F_N(\theta) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right)^2\) plays the analogous role for trigonometric approximation — it is a non-negative kernel integrating to 1, concentrating at \(\theta = 0\), and the Cesàro means \(\sigma_N f = f * F_N\) converge uniformly to \(f\) for any \(f \in C(\mathbb{T})\). The Weierstrass theorem and Fejér's theorem are thus parallel statements in two different approximation settings.
+This proof is more than a curiosity: the construction \(f \mapsto f <em> Q_n\) is exactly a <em>convolution with an approximate identity</em>. In Fourier analysis, the Fejér kernel \(F_N(\theta) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right)^2\) plays the analogous role for trigonometric approximation — it is a non-negative kernel integrating to 1, concentrating at \(\theta = 0\), and the Cesàro means \(\sigma_N f = f </em> F_N\) converge uniformly to \(f\) for any \(f \in C(\mathbb{T})\). The Weierstrass theorem and Fejér's theorem are thus parallel statements in two different approximation settings.
 </div>
 
 ### 11.2 Best Approximation
@@ -2709,7 +2709,7 @@ This forces \(r(x_i)\) to have the same sign as \(g(x_i)\), which alternates. Th
 </div>
 
 <div class="theorem">
-<strong>Theorem 11.6d (Chebyshev).</strong> For every \(f \in C_{\mathbb{R}}[a,b]\) and \(n \ge 0\), there exists a <em>unique</em> polynomial \(p^* \in \mathcal{P}_n\) of best approximation, characterized by the property that \(f - p^*\) satisfies equioscillation of degree \(n\).
+<strong>Theorem 11.6d (Chebyshev).</strong> For every \(f \in C_{\mathbb{R}}[a,b]\) and \(n \ge 0\), there exists a <em>unique</em> polynomial \(p^<em> \in \mathcal{P}_n\) of best approximation, characterized by the property that \(f - p^</em>\) satisfies equioscillation of degree \(n\).
 </div>
 
 <div class="proof">
@@ -2973,23 +2973,23 @@ This justifies using numerical ODEs to study sensitivity to model parameters ---
 <div class="proof">
 <strong>Proof.</strong> Let \(M = \|\Phi\|_\infty = \sup |\Phi|\) and \(h = \min\{b-a, R/M\}\). We construct approximate solutions and extract a convergent subsequence.
 
-**Step 1 (Euler polygons):** For each \(n \ge 1\), define the Euler approximation \(F_n\) inductively on the partition \(t_k = a + kh/n\), \(k = 0, 1, \ldots, n\):
+<strong>Step 1 (Euler polygons):</strong> For each \(n \ge 1\), define the Euler approximation \(F_n\) inductively on the partition \(t_k = a + kh/n\), \(k = 0, 1, \ldots, n\):
 \[
 F_n(t_k) = \Gamma, \quad F_n(t_{k+1}) = F_n(t_k) + \frac{h}{n}\Phi(t_k, F_n(t_k)),
 \]
 and extend linearly between partition points. Each \(F_n\) is continuous, and \(\|F_n(t) - \Gamma\| \le M(t-a) \le Mh \le R\), so \(F_n(t) \in \overline{B}_R(\Gamma)\) for all \(t\).
 
-**Step 2 (Equicontinuity):** For any \(s, t \in [a, a+h]\),
+<strong>Step 2 (Equicontinuity):</strong> For any \(s, t \in [a, a+h]\),
 \[
 \|F_n(t) - F_n(s)\| \le M|t - s|,
 \]
 since the slope of \(F_n\) on each subinterval is bounded by \(M\). Thus \(\{F_n\}\) is equicontinuous (indeed, uniformly Lipschitz with constant \(M\)).
 
-**Step 3 (Uniform boundedness):** \(\|F_n\|_\infty \le \|\Gamma\| + R\) for all \(n\).
+<strong>Step 3 (Uniform boundedness):</strong> \(\|F_n\|_\infty \le \|\Gamma\| + R\) for all \(n\).
 
-**Step 4 (Arzela--Ascoli):** By the Arzela--Ascoli Theorem (Theorem 6.17), there exists a subsequence \(F_{n_k} \to F\) uniformly on \([a, a+h]\).
+<strong>Step 4 (Arzela--Ascoli):</strong> By the Arzela--Ascoli Theorem (Theorem 6.17), there exists a subsequence \(F_{n_k} \to F\) uniformly on \([a, a+h]\).
 
-**Step 5 (Passing to the limit):** The Euler polygon \(F_n\) satisfies
+<strong>Step 5 (Passing to the limit):</strong> The Euler polygon \(F_n\) satisfies
 \[
 F_n(t) = \Gamma + \int_a^t \Phi_n(s)\, ds
 \]
@@ -3051,8 +3051,8 @@ These converge to \(y(x) = \sin(x)\), \(z(x) = \cos(x)\). The Picard iterates re
 <div class="definition">
 <strong>Definition 12.8.</strong> A fixed point \(x^*\) of a \(C^1\) map \(T: \mathbb{R} \to \mathbb{R}\) is:
 <ul>
-<li><em>attracting</em> (stable) if \(|T'(x^*)| < 1\) --- nearby iterates converge to \(x^*\);</li>
-<li><em>repelling</em> (unstable) if \(|T'(x^*)| > 1\) --- nearby iterates move away from \(x^*\);</li>
+<li><em>attracting</em> (stable) if \(|T'(x^<em>)| < 1\) --- nearby iterates converge to \(x^</em>\);</li>
+<li><em>repelling</em> (unstable) if \(|T'(x^<em>)| > 1\) --- nearby iterates move away from \(x^</em>\);</li>
 <li><em>indeterminate</em> if \(|T'(x^*)| = 1\) --- higher-order analysis is needed.</li>
 </ul>
 </div>
@@ -3060,17 +3060,17 @@ These converge to \(y(x) = \sin(x)\), \(z(x) = \cos(x)\). The Picard iterates re
 For an attracting fixed point with \(|T'(x^*)| < 1\), continuity of \(T'\) gives an interval around \(x^*\) on which \(|T'| \le c < 1\), so by the Mean Value Theorem, \(T\) is a contraction on this interval. The Banach Fixed-Point Theorem then guarantees that iterates starting in this interval converge to \(x^*\). This principle underlies the stability theory of differential equations: fixed points of the time-\(t\) flow map determine the long-term behavior of solutions.
 
 <div class="example">
-<strong>Example 12.9.</strong> For the logistic map \(T(x) = rx(1-x)\) on \([0,1]\), the fixed point \(x^* = (r-1)/r\) has \(T'(x^*) = 2 - r\). It is attracting when \(1 < r < 3\), repelling when \(r > 3\), and at \(r = 3\) a period-doubling bifurcation occurs.
+<strong>Example 12.9.</strong> For the logistic map \(T(x) = rx(1-x)\) on \([0,1]\), the fixed point \(x^<em> = (r-1)/r\) has \(T'(x^</em>) = 2 - r\). It is attracting when \(1 < r < 3\), repelling when \(r > 3\), and at \(r = 3\) a period-doubling bifurcation occurs.
 </div>
 
 <div class="example">
-<strong>Example 12.9a (Cobweb diagrams and convergence visualization).</strong> The behavior of iterates \(x_{n+1} = T(x_n)\) can be visualized using a <em>cobweb diagram</em>: plot \(y = T(x)\) and \(y = x\); starting from \(x_0\), draw a vertical line to the graph, then a horizontal line to the diagonal, and repeat. When \(|T'(x^*)| < 1\), the cobweb spirals inward (if \(T'(x^*) < 0\)) or staircase inward (if \(T'(x^*) > 0\)) toward the fixed point. When \(|T'(x^*)| > 1\), the cobweb diverges. This gives a geometric interpretation of the contraction condition.
+<strong>Example 12.9a (Cobweb diagrams and convergence visualization).</strong> The behavior of iterates \(x_{n+1} = T(x_n)\) can be visualized using a <em>cobweb diagram</em>: plot \(y = T(x)\) and \(y = x\); starting from \(x_0\), draw a vertical line to the graph, then a horizontal line to the diagonal, and repeat. When \(|T'(x^<em>)| < 1\), the cobweb spirals inward (if \(T'(x^</em>) < 0\)) or staircase inward (if \(T'(x^<em>) > 0\)) toward the fixed point. When \(|T'(x^</em>)| > 1\), the cobweb diverges. This gives a geometric interpretation of the contraction condition.
 
-For the logistic map with \(r = 2.5\): \(x^* = 0.6\), \(T'(x^*) = -0.5\), so iterates spiral inward. With \(r = 3.5\): \(x^*\) is repelling, but a stable 2-cycle emerges. The cascade of period-doubling bifurcations at \(r = 3, 3.449, 3.544, \ldots\) converges to the Feigenbaum point \(r_\infty \approx 3.5699\), beyond which the dynamics become chaotic. The Feigenbaum constant \(\delta \approx 4.6692\), governing the rate of convergence of the bifurcation cascade, is a universal constant appearing in all one-dimensional maps with quadratic maxima --- a remarkable discovery that connects the Contraction Mapping Principle to the theory of dynamical systems.
+For the logistic map with \(r = 2.5\): \(x^<em> = 0.6\), \(T'(x^</em>) = -0.5\), so iterates spiral inward. With \(r = 3.5\): \(x^*\) is repelling, but a stable 2-cycle emerges. The cascade of period-doubling bifurcations at \(r = 3, 3.449, 3.544, \ldots\) converges to the Feigenbaum point \(r_\infty \approx 3.5699\), beyond which the dynamics become chaotic. The Feigenbaum constant \(\delta \approx 4.6692\), governing the rate of convergence of the bifurcation cascade, is a universal constant appearing in all one-dimensional maps with quadratic maxima --- a remarkable discovery that connects the Contraction Mapping Principle to the theory of dynamical systems.
 </div>
 
 <div class="remark">
-<strong>Remark (Stability in higher dimensions).</strong> The stability criterion \(|T'(x^*)| < 1\) generalizes to higher dimensions as follows. For a map \(T: \mathbb{R}^n \to \mathbb{R}^n\) with fixed point \(\mathbf{x}^*\), the iterates converge locally to \(\mathbf{x}^*\) if all eigenvalues of the Jacobian matrix \(DT(\mathbf{x}^*)\) have absolute value less than 1 (i.e., the <em>spectral radius</em> \(\rho(DT(\mathbf{x}^*)) < 1\)). This is because:
+<strong>Remark (Stability in higher dimensions).</strong> The stability criterion \(|T'(x^<em>)| < 1\) generalizes to higher dimensions as follows. For a map \(T: \mathbb{R}^n \to \mathbb{R}^n\) with fixed point \(\mathbf{x}^</em>\), the iterates converge locally to \(\mathbf{x}^<em>\) if all eigenvalues of the Jacobian matrix \(DT(\mathbf{x}^</em>)\) have absolute value less than 1 (i.e., the <em>spectral radius</em> \(\rho(DT(\mathbf{x}^*)) < 1\)). This is because:
 <ol>
 <li>For any \(\varepsilon > 0\), there exists a norm \(\|\cdot\|_\varepsilon\) on \(\mathbb{R}^n\) such that \(\|DT(\mathbf{x}^*)\|_\varepsilon \le \rho + \varepsilon\).</li>
 <li>Choosing \(\varepsilon\) so that \(\rho + \varepsilon < 1\), the map \(T\) becomes a contraction near \(\mathbf{x}^*\) in this norm.</li>

@@ -471,7 +471,7 @@ Since \(((1-C)\cdot Y)_N\) is a supermartingale null at 0, its expectation is \(
 
 Wait — let us be fully rigorous. We have \((b-a)U_N \leq (C \cdot Y)_N\), and \((C \cdot Y)_N + ((1-C) \cdot Y)_N = Y_N - Y_0\). During the non-upcrossing phases, the process either has not started an upcrossing or has completed one and is above \(b-a\). The contribution \(((1-C)\cdot Y)_N \geq -Y_0^+ - Y_N^-\). Hence \((C \cdot Y)_N \leq Y_N - Y_0 + Y_0^+ + Y_N^- = Y_N^+ + Y_N^- - Y_0 + Y_0^+ + Y_N^- - Y_N^-\). This path-by-path analysis is unwieldy; the expectation argument is cleaner.
 
-Taking expectations: \(E\left[(C \cdot Y)_N\right] \leq 0\) by Lemma 2.8, and we need a *lower* bound on \((C \cdot Y)_N\). We already have the lower bound \((b-a)U_N\). For the *upper* bound that feeds into the right-hand side, write:
+Taking expectations: \(E\left[(C \cdot Y)_N\right] \leq 0\) by Lemma 2.8, and we need a <em>lower</em> bound on \((C \cdot Y)_N\). We already have the lower bound \((b-a)U_N\). For the <em>upper</em> bound that feeds into the right-hand side, write:
 
 \[
 (b-a)E\left[U_N\right] \leq E\left[(C \cdot Y)_N\right].
@@ -643,7 +643,7 @@ E(X_T \mid \mathcal{F}_S) \leq X_S \quad \text{a.s.}
 
 <div class="proof">
 
-<strong>Proof.</strong> By the **Doob decomposition**, write \(X_n = M_n - A_n\) where \(M_n\) is a martingale and \(A_n\) is a non-negative non-decreasing previsible process with \(A_0 = 0\). The martingale \(M_n\) is closed by \(M_\infty = X_\infty + A_\infty\) (where \(A_\infty = \lim A_n\) exists since \(A_n\) is non-decreasing and bounded in \(L^1\)). The process \(A_n\) is a non-negative submartingale (in fact, non-decreasing), so \(-A_n\) is a non-negative supermartingale up to a sign — more precisely, \(A\) is non-decreasing so \(A_T \geq A_S\).
+<strong>Proof.</strong> By the <strong>Doob decomposition</strong>, write \(X_n = M_n - A_n\) where \(M_n\) is a martingale and \(A_n\) is a non-negative non-decreasing previsible process with \(A_0 = 0\). The martingale \(M_n\) is closed by \(M_\infty = X_\infty + A_\infty\) (where \(A_\infty = \lim A_n\) exists since \(A_n\) is non-decreasing and bounded in \(L^1\)). The process \(A_n\) is a non-negative submartingale (in fact, non-decreasing), so \(-A_n\) is a non-negative supermartingale up to a sign — more precisely, \(A\) is non-decreasing so \(A_T \geq A_S\).
 
 For \(A \in \mathcal{F}_S\):
 
@@ -1467,7 +1467,7 @@ The proof proceeds through several steps. We outline each one, following Rutar's
 
 <strong>Proof.</strong>
 
-**Step 1: \(L^2\) convergence of \(T_t^\Delta(M)\).**
+<strong>Step 1: \(L^2\) convergence of \(T_t^\Delta(M)\).</strong>
 
 The key identity is that for \(s \le t\),
 
@@ -1477,11 +1477,11 @@ The key identity is that for \(s \le t\),
 
 This follows because the cross-terms in the expansion of \(\sum (M_{t_{i+1}} - M_{t_i})^2\) vanish by the martingale property: if \(s \le t_i < t_{i+1}\), then \(\mathbb{E}\left[(M_{t_{i+1}} - M_{t_i})(M_{t_i} - M_{t_j}) \mid \mathcal{F}_{t_i}\right] = 0\). As a consequence, the map \(\Delta \mapsto T_t^\Delta(M)\) is Cauchy in \(L^2\): for two partitions \(\Delta\) and \(\Delta'\), one refines both and uses the identity above to control \(\mathbb{E}\left[(T_t^\Delta(M) - T_t^{\Delta'}(M))^2\right]\). The \(L^2\) limit as \(|\Delta| \to 0\) defines \(\left[M\right]_t\).
 
-**Step 2: Continuity.**
+<strong>Step 2: Continuity.</strong>
 
 By Doob's maximal inequality applied to the \(L^2\) martingale \(T_t^\Delta(M) - \left[M\right]_t\), we upgrade pointwise \(L^2\) convergence to uniform convergence in probability on compact intervals. Since each \(T_t^\Delta(M)\) is a continuous function of \(t\) (because \(M\) is continuous), the limit \(\left[M\right]\) has a continuous modification.
 
-**Step 3: \(\left[M\right]\) is increasing.**
+<strong>Step 3: \(\left[M\right]\) is increasing.</strong>
 
 For \(s < t\), the identity from Step 1 gives
 
@@ -1491,7 +1491,7 @@ For \(s < t\), the identity from Step 1 gives
 
 Since \(\left[M\right]_t - \left[M\right]_s\) is a limit of non-negative sums, it is non-negative a.s.
 
-**Step 4: \(M^2 - \left[M\right]\) is a martingale.**
+<strong>Step 4: \(M^2 - \left[M\right]\) is a martingale.</strong>
 
 We have \(T_t^\Delta(M) \to \left[M\right]_t\) in \(L^2\), and from the telescoping identity
 
@@ -1501,11 +1501,11 @@ M_t^2 = T_t^\Delta(M) + 2 \sum_{i} (M_{t_i} - M_0)(M_{t_{i+1}} - M_{t_i}) + \tex
 
 the identity \(\mathbb{E}\left[M_t^2 - T_t^\Delta(M) \mid \mathcal{F}_s\right] = M_s^2 - T_s^\Delta(M)\) passes to the limit, establishing the martingale property for \(M^2 - \left[M\right]\).
 
-**Step 5: Uniform integrability.**
+<strong>Step 5: Uniform integrability.</strong>
 
 The martingale \(M^2 - \left[M\right]\) is \(L^1\)-bounded (since \(M\) is \(L^2\)-bounded and \(\mathbb{E}\left[\left[M\right]_t\right] = \mathbb{E}\left[M_t^2\right] \le C\)), so by the martingale convergence theorem it converges a.s. and in \(L^1\), which gives uniform integrability.
 
-**Step 6: Uniqueness.**
+<strong>Step 6: Uniqueness.</strong>
 
 Suppose \(A\) is another process with the stated properties. Then \(\left[M\right] - A\) is a continuous martingale (difference of two processes for which \(M^2\) minus the process is a UI martingale) and has paths of finite variation (difference of two increasing processes). By Lemma 4.3, \(\left[M\right]_t = A_t\) for all \(t\) a.s. ∎
 
@@ -1881,7 +1881,7 @@ dZ_t = Z_t \, dX_t - \frac{1}{2} Z_t \, d\left[X\right]_t + \frac{1}{2} Z_t \, d
 
 and \(Z_0 = e^{0 - 0} = 1\).
 
-**Proof of uniqueness.** Suppose \(\tilde{Z}\) also satisfies the equation. Define \(Y_t = Z_t^{-1}\) (note \(Z_t > 0\) since it is an exponential). By Ito's formula applied to \(g(z) = 1/z\):
+<strong>Proof of uniqueness.</strong> Suppose \(\tilde{Z}\) also satisfies the equation. Define \(Y_t = Z_t^{-1}\) (note \(Z_t > 0\) since it is an exponential). By Ito's formula applied to \(g(z) = 1/z\):
 
 \[
 dY_t = -Z_t^{-2} \, dZ_t + \frac{1}{2} \cdot 2 Z_t^{-3} \, d\left[Z\right]_t = -Y_t \, dX_t + Y_t \, d\left[X\right]_t.

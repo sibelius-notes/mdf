@@ -22,11 +22,11 @@ Notice the contrast with an **ordinary differential equation** (ODE), which invo
 
 <div class="definition"><strong>Definition (Order).</strong> The <em>order</em> of a PDE is the order of the highest derivative appearing in the equation. The first example above is first order; the second and third are second order.</div>
 
-Much of this course is devoted to **linear, second-order PDEs** for two reasons: there is a reasonable mathematical theory for them, and they model an enormous variety of natural phenomena.
+Much of this course is devoted to <strong>linear, second-order PDEs</strong> for two reasons: there is a reasonable mathematical theory for them, and they model an enormous variety of natural phenomena.
 
 ## Why PDEs? The Transition from ODEs
 
-ODEs are appropriate for modelling **homogeneous** or **point-like** systems: a mass on a spring, a projectile, a pendulum, or the temperature of a body small enough to be treated as having uniform temperature throughout. The moment spatial variation matters, PDEs become necessary.
+ODEs are appropriate for modelling <strong>homogeneous</strong> or <strong>point-like</strong> systems: a mass on a spring, a projectile, a pendulum, or the temperature of a body small enough to be treated as having uniform temperature throughout. The moment spatial variation matters, PDEs become necessary.
 
 Consider the temperature of a large steel ingot cooling in air. The surface cools first, and heat is conducted from the hot interior toward the surface. The temperature \( T \) is a function of both position and time: \( T = T(\mathbf{x}, t) \). Similarly, a chemical dissolving from a lump at the bottom of an unstirred beaker creates a concentration gradient \( c = c(\mathbf{x}, t) \). In both cases, the spatial dependence is the crucial new ingredient, and PDEs are the right tool.
 
@@ -40,13 +40,13 @@ u = u(x_1, \ldots, x_n, t), \quad n = 1, 2, \text{ or } 3.
 
 ### The Heat (Diffusion) Equation
 
-For a function \( u(x,t) \) depending on one spatial variable and time, the **1D heat equation** is
+For a function \( u(x,t) \) depending on one spatial variable and time, the <strong>1D heat equation</strong> is
 
 \[
 \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}.
 \]
 
-In higher dimensions, the single second derivative in \( x \) is replaced by the **Laplacian** \( \nabla^2 u \):
+In higher dimensions, the single second derivative in \( x \) is replaced by the <strong>Laplacian</strong> \( \nabla^2 u \):
 
 \[
 \frac{\partial u}{\partial t} = k \nabla^2 u.
@@ -59,27 +59,27 @@ In two and three dimensions respectively,
 \nabla^2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}.
 \]
 
-The heat equation is **parabolic**: it has one time derivative on the left and a second spatial derivative on the right.
+The heat equation is <strong>parabolic</strong>: it has one time derivative on the left and a second spatial derivative on the right.
 
 ### The Wave Equation
 
-The **1D wave equation** is
+The <strong>1D wave equation</strong> is
 
 \[
 \frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2},
 \]
 
-and in higher dimensions, \( \partial^2 u/\partial t^2 = c^2 \nabla^2 u \). This is a **hyperbolic** PDE, characterised by two time derivatives. The constant \( c \) is the wave speed.
+and in higher dimensions, \( \partial^2 u/\partial t^2 = c^2 \nabla^2 u \). This is a <strong>hyperbolic</strong> PDE, characterised by two time derivatives. The constant \( c \) is the wave speed.
 
 ### Laplace's Equation
 
-If the heat equation is solved in the **steady state** (time-independent regime), then \( \partial u/\partial t = 0 \) and the equation reduces to **Laplace's equation**:
+If the heat equation is solved in the <strong>steady state</strong> (time-independent regime), then \( \partial u/\partial t = 0 \) and the equation reduces to <strong>Laplace's equation</strong>:
 
 \[
 \nabla^2 u = 0.
 \]
 
-This is an **elliptic** PDE. Its solutions, called **harmonic functions**, describe equilibrium temperature distributions, electrostatic potentials, and irrotational fluid flow. When sources are present, the steady-state equation becomes **Poisson's equation**:
+This is an <strong>elliptic</strong> PDE. Its solutions, called <strong>harmonic functions</strong>, describe equilibrium temperature distributions, electrostatic potentials, and irrotational fluid flow. When sources are present, the steady-state equation becomes <strong>Poisson's equation</strong>:
 
 \[
 \nabla^2 u = f(\mathbf{x}).
@@ -87,43 +87,43 @@ This is an **elliptic** PDE. Its solutions, called **harmonic functions**, descr
 
 ### The Schrödinger Equation
 
-An important linear PDE from quantum mechanics is the **Schrödinger equation** for a particle of mass \( m \) in a potential \( V(\mathbf{x}) \):
+An important linear PDE from quantum mechanics is the <strong>Schrödinger equation</strong> for a particle of mass \( m \) in a potential \( V(\mathbf{x}) \):
 
 \[
 i\hbar \frac{\partial u}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 u + V(\mathbf{x}) u,
 \]
 
-where \( \hbar = h/(2\pi) \) is the reduced Planck constant and \( u \) is the complex-valued **wavefunction**. This equation has the same structure as the heat equation (first-order in time, second-order in space), but with complex coefficients.
+where \( \hbar = h/(2\pi) \) is the reduced Planck constant and \( u \) is the complex-valued <strong>wavefunction</strong>. This equation has the same structure as the heat equation (first-order in time, second-order in space), but with complex coefficients.
 
 ## Initial and Boundary Conditions
 
 A PDE alone does not determine a unique solution; additional data must be prescribed. The appropriate type of data depends on the type of equation.
 
-- **Initial conditions** (for time-dependent problems): prescribe \( u(\mathbf{x}, 0) \), and for the wave equation, also \( u_t(\mathbf{x}, 0) \).
-- **Boundary conditions**: specify the behaviour of \( u \) on the spatial domain boundary \( \partial \Omega \).
+- <strong>Initial conditions</strong> (for time-dependent problems): prescribe \( u(\mathbf{x}, 0) \), and for the wave equation, also \( u_t(\mathbf{x}, 0) \).
+- <strong>Boundary conditions</strong>: specify the behaviour of \( u \) on the spatial domain boundary \( \partial \Omega \).
 
 The three main types of boundary conditions are:
-1. **Dirichlet**: \( u = g \) on \( \partial \Omega \) (prescribed values).
-2. **Neumann**: \( \partial u / \partial n = h \) on \( \partial \Omega \) (prescribed normal derivative, hence flux).
-3. **Robin** (mixed): \( \alpha u + \beta \partial u/\partial n = g \) on \( \partial \Omega \).
+1. <strong>Dirichlet</strong>: \( u = g \) on \( \partial \Omega \) (prescribed values).
+2. <strong>Neumann</strong>: \( \partial u / \partial n = h \) on \( \partial \Omega \) (prescribed normal derivative, hence flux).
+3. <strong>Robin</strong> (mixed): \( \alpha u + \beta \partial u/\partial n = g \) on \( \partial \Omega \).
 
 <div class="definition"><strong>Definition (Well-posedness).</strong> A problem is <em>well-posed</em> in the sense of Hadamard if: (1) a solution exists, (2) the solution is unique, and (3) the solution depends continuously on the data. Physical models that are not well-posed are suspect as mathematical formulations.</div>
 
 ## The Modelling Framework: Conservation Laws
 
-The conservation law derivation of the heat equation (given in full detail in Chapter 2) is a special case of a universal modelling template. Consider any **extensive quantity** \(u(x,t)\) — temperature, chemical concentration, traffic density, population — defined on a one-dimensional domain. The **global conservation law** for \(u\) over an arbitrary interval \([a,b]\) states:
+The conservation law derivation of the heat equation (given in full detail in Chapter 2) is a special case of a universal modelling template. Consider any <strong>extensive quantity</strong> \(u(x,t)\) — temperature, chemical concentration, traffic density, population — defined on a one-dimensional domain. The <strong>global conservation law</strong> for \(u\) over an arbitrary interval \([a,b]\) states:
 
 \[
 \frac{d}{dt}\int_a^b u\,dx = \phi(a,t) - \phi(b,t) + \int_a^b f\,dx,
 \]
 
-where \(\phi(x,t)\) is the **flux** (the rate at which \(u\) crosses the point \(x\) in the positive direction) and \(f(x,t)\) is the **source density**. Rewriting the flux terms as \(-\int_a^b \partial\phi/\partial x\,dx\) and invoking the Du Bois-Reymond lemma (since \([a,b]\) is arbitrary), one obtains the **local conservation law**:
+where \(\phi(x,t)\) is the <strong>flux</strong> (the rate at which \(u\) crosses the point \(x\) in the positive direction) and \(f(x,t)\) is the <strong>source density</strong>. Rewriting the flux terms as \(-\int_a^b \partial\phi/\partial x\,dx\) and invoking the Du Bois-Reymond lemma (since \([a,b]\) is arbitrary), one obtains the <strong>local conservation law</strong>:
 
 \[
 \frac{\partial u}{\partial t} + \frac{\partial \phi}{\partial x} = f.
 \]
 
-This is the universal skeleton of a PDE model. To close the system, one adds a **constitutive relation** specifying \(\phi\) and \(f\) in terms of \(u\). Different choices yield different PDEs:
+This is the universal skeleton of a PDE model. To close the system, one adds a <strong>constitutive relation</strong> specifying \(\phi\) and \(f\) in terms of \(u\). Different choices yield different PDEs:
 
 | Constitutive relation | Source \(f\) | PDE | Name |
 |---|---|---|---|
@@ -134,13 +134,13 @@ This is the universal skeleton of a PDE model. To close the system, one adds a *
 | \(\phi = u^2/2\) | \(0\) | \(u_t + uu_x = 0\) | Inviscid Burgers |
 | \(\phi = u^2/2 - \nu u_x\) | \(0\) | \(u_t + uu_x = \nu u_{xx}\) | Viscous Burgers |
 
-The **advection equation** \(u_t + cu_x = 0\) is the simplest first-order PDE. Its general solution is \(u(x,t) = u(x-ct, 0)\): the initial profile is carried rigidly to the right at speed \(c\), without distortion. This will be confirmed via the method of characteristics in Chapter 12.
+The <strong>advection equation</strong> \(u_t + cu_x = 0\) is the simplest first-order PDE. Its general solution is \(u(x,t) = u(x-ct, 0)\): the initial profile is carried rigidly to the right at speed \(c\), without distortion. This will be confirmed via the method of characteristics in Chapter 12.
 
-The **Fisher-KPP equation** (proposed independently by Fisher and by Kolmogorov, Petrovskii, and Piskunov in 1937) couples diffusion with logistic population growth. It supports **travelling wave solutions** — fronts that advance into unstratified territory at a minimum speed \(c^* = 2\sqrt{rD}\), determined by the interplay of diffusion and growth.
+The <strong>Fisher-KPP equation</strong> (proposed independently by Fisher and by Kolmogorov, Petrovskii, and Piskunov in 1937) couples diffusion with logistic population growth. It supports <strong>travelling wave solutions</strong> — fronts that advance into unstratified territory at a minimum speed \(c^* = 2\sqrt{rD}\), determined by the interplay of diffusion and growth.
 
-The **Burgers equation** \(u_t + uu_x = \nu u_{xx}\) combines nonlinear advection (with the solution value itself as advection speed) and linear diffusion. In the inviscid limit \(\nu \to 0\), profiles steepen and shocks form — the phenomena studied in Chapter 12. With viscosity, the Hopf-Cole transformation \(u = -2\nu(\ln v)_x\) converts it to the heat equation exactly, making Burgers the paradigm for exactly solvable nonlinear PDEs.
+The <strong>Burgers equation</strong> \(u_t + uu_x = \nu u_{xx}\) combines nonlinear advection (with the solution value itself as advection speed) and linear diffusion. In the inviscid limit \(\nu \to 0\), profiles steepen and shocks form — the phenomena studied in Chapter 12. With viscosity, the Hopf-Cole transformation \(u = -2\nu(\ln v)_x\) converts it to the heat equation exactly, making Burgers the paradigm for exactly solvable nonlinear PDEs.
 
-The recurring template — **PDE = conservation law + constitutive relation** — structures much of applied mathematics, from fluid dynamics and electromagnetism to population ecology. Every PDE studied in this course fits this mould.
+The recurring template — <strong>PDE = conservation law + constitutive relation</strong> — structures much of applied mathematics, from fluid dynamics and electromagnetism to population ecology. Every PDE studied in this course fits this mould.
 
 ## Classification of Second-Order PDEs
 
@@ -150,7 +150,7 @@ A general second-order linear PDE in two independent variables \(x\) and \(y\) t
 A u_{xx} + B u_{xy} + C u_{yy} + D u_x + E u_y + F u = G,
 \]
 
-where \(A, B, C, \ldots\) may depend on \(x\) and \(y\). The **classification** depends on the **discriminant**
+where \(A, B, C, \ldots\) may depend on \(x\) and \(y\). The <strong>classification</strong> depends on the <strong>discriminant</strong>
 
 \[
 \Delta = B^2 - 4AC.
@@ -243,7 +243,7 @@ Since this holds for every interval \( [a,b] \) and the integrand is continuous,
 
 This lemma, which converts an integral law into a pointwise (differential) law, is used repeatedly throughout the course.
 
-**Step 3: Relating energy to temperature.** Define the **specific heat** \( c(x) \) as the heat energy required to raise a unit mass by one unit of temperature, and let \( \rho(x) \) be the mass density. Then
+<strong>Step 3: Relating energy to temperature.</strong> Define the <strong>specific heat</strong> \( c(x) \) as the heat energy required to raise a unit mass by one unit of temperature, and let \( \rho(x) \) be the mass density. Then
 
 \[
 e(x,t) = c(x)\rho(x)\bigl[u(x,t) - u_0\bigr],
@@ -255,7 +255,7 @@ where \( u(x,t) \) is the temperature and \( u_0 \) is a reference temperature (
 c(x)\rho(x) \frac{\partial u}{\partial t} = -\frac{\partial \phi}{\partial x} + Q.
 \]
 
-**Step 4: Fourier's law.** From experiment, heat flows from hotter regions to colder regions, at a rate proportional to the temperature gradient:
+<strong>Step 4: Fourier's law.</strong> From experiment, heat flows from hotter regions to colder regions, at a rate proportional to the temperature gradient:
 
 <div class="definition"><strong>Definition (Fourier's Law of Heat Conduction).</strong>
 \[
@@ -263,25 +263,25 @@ c(x)\rho(x) \frac{\partial u}{\partial t} = -\frac{\partial \phi}{\partial x} + 
 \]
 where \( K_0(x) > 0 \) is the <em>thermal conductivity</em>.</div>
 
-The minus sign ensures that heat flows in the direction of decreasing temperature. Substituting into the conservation equation gives the **generalised heat equation**:
+The minus sign ensures that heat flows in the direction of decreasing temperature. Substituting into the conservation equation gives the <strong>generalised heat equation</strong>:
 
 \[
 c(x)\rho(x) \frac{\partial u}{\partial t} = \frac{\partial}{\partial x}\!\left( K_0(x) \frac{\partial u}{\partial x} \right) + Q.
 \]
 
-For a **homogeneous** rod (constant \( c, \rho, K_0 \)) with no sources (\( Q = 0 \)), this simplifies to
+For a <strong>homogeneous</strong> rod (constant \( c, \rho, K_0 \)) with no sources (\( Q = 0 \)), this simplifies to
 
 \[
 \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2},
 \]
 
-where the **thermal diffusivity** is \( k = K_0 / (c\rho) \). This is the 1D heat equation.
+where the <strong>thermal diffusivity</strong> is \( k = K_0 / (c\rho) \). This is the 1D heat equation.
 
 <div class="remark"><strong>Remark.</strong> The identical PDE describes molecular diffusion (Fick's law: \( \phi = -k\, \partial u/\partial x \) where \( u \) is concentration). Fourier's law and Fick's law are both examples of <em>transport laws</em>: the flux is proportional to the gradient of the transported quantity. The linearity of this relation — rather than a power law — is a deep empirical fact that keeps the equation tractable.</div>
 
 ## Separation of Variables: Dirichlet Boundary Conditions
 
-We solve the 1D heat equation on \( [0,L] \) with **zero-endpoint** (Dirichlet) boundary conditions:
+We solve the 1D heat equation on \( [0,L] \) with <strong>zero-endpoint</strong> (Dirichlet) boundary conditions:
 
 \[
 \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}, \quad
@@ -294,19 +294,19 @@ We assume a solution of the form \( u(x,t) = \phi(x) G(t) \). Substituting:
 \phi(x) G'(t) = k \phi''(x) G(t) \implies \frac{G'(t)}{kG(t)} = \frac{\phi''(x)}{\phi(x)} = -\lambda,
 \]
 
-where \( \lambda \) is the **separation constant**. The two ODEs are:
+where \( \lambda \) is the <strong>separation constant</strong>. The two ODEs are:
 
 \[
 G'(t) + k\lambda G(t) = 0, \qquad \phi''(x) + \lambda \phi(x) = 0, \quad \phi(0) = \phi(L) = 0.
 \]
 
-**Case \( \lambda < 0 \):** The solution for \( \phi \) grows exponentially, violating the boundary conditions (only the trivial solution survives). **Case \( \lambda = 0 \):** Similarly, only the trivial solution exists. **Case \( \lambda > 0 \):** The general solution is \( \phi(x) = C_1 \cos(\sqrt{\lambda} x) + C_2 \sin(\sqrt{\lambda} x) \). The condition \( \phi(0) = 0 \) forces \( C_1 = 0 \). The condition \( \phi(L) = 0 \) then requires \( \sin(\sqrt{\lambda} L) = 0 \), so
+<strong>Case \( \lambda < 0 \):</strong> The solution for \( \phi \) grows exponentially, violating the boundary conditions (only the trivial solution survives). <strong>Case \( \lambda = 0 \):</strong> Similarly, only the trivial solution exists. <strong>Case \( \lambda > 0 \):</strong> The general solution is \( \phi(x) = C_1 \cos(\sqrt{\lambda} x) + C_2 \sin(\sqrt{\lambda} x) \). The condition \( \phi(0) = 0 \) forces \( C_1 = 0 \). The condition \( \phi(L) = 0 \) then requires \( \sin(\sqrt{\lambda} L) = 0 \), so
 
 \[
 \sqrt{\lambda_n} L = n\pi \implies \lambda_n = \frac{n^2\pi^2}{L^2}, \quad n = 1, 2, 3, \ldots
 \]
 
-The **eigenvalues** are \( \lambda_n \) and the corresponding **eigenfunctions** are
+The <strong>eigenvalues</strong> are \( \lambda_n \) and the corresponding <strong>eigenfunctions</strong> are
 
 \[
 \phi_n(x) = \sin\!\left(\frac{n\pi x}{L}\right).
@@ -322,19 +322,19 @@ u_n(x,t) = \sin\!\left(\frac{n\pi x}{L}\right) e^{-k(n\pi/L)^2 t}, \quad n = 1, 
 
 ## Fourier Sine Series
 
-By the **principle of superposition** (valid for linear homogeneous equations), any linear combination of the \( u_n \) is also a solution. We seek coefficients \( c_n \) such that the initial condition is satisfied:
+By the <strong>principle of superposition</strong> (valid for linear homogeneous equations), any linear combination of the \( u_n \) is also a solution. We seek coefficients \( c_n \) such that the initial condition is satisfied:
 
 \[
 u(x,0) = \sum_{n=1}^{\infty} c_n \sin\!\left(\frac{n\pi x}{L}\right) = f(x).
 \]
 
-The eigenfunctions are **orthogonal** on \( [0,L] \):
+The eigenfunctions are <strong>orthogonal</strong> on \( [0,L] \):
 
 \[
 \int_0^L \sin\!\left(\frac{m\pi x}{L}\right) \sin\!\left(\frac{n\pi x}{L}\right) dx = \begin{cases} 0, & m \ne n, \\ L/2, & m = n. \end{cases}
 \]
 
-Multiplying the expansion by \( \sin(m\pi x/L) \) and integrating gives the **Fourier sine coefficients**:
+Multiplying the expansion by \( \sin(m\pi x/L) \) and integrating gives the <strong>Fourier sine coefficients</strong>:
 
 \[
 c_n = \frac{2}{L} \int_0^L f(x) \sin\!\left(\frac{n\pi x}{L}\right) dx.
@@ -362,7 +362,7 @@ The \( n \)-th mode is a standing wave in space (with \( n \) half-periods fitti
 
 ## Equilibrium Temperature Distributions
 
-A **steady-state** or **equilibrium** temperature distribution is one that is time-independent: \( u(x,t) = u_{eq}(x) \). Setting \( \partial u/\partial t = 0 \) in the 1D heat equation gives
+A <strong>steady-state</strong> or <strong>equilibrium</strong> temperature distribution is one that is time-independent: \( u(x,t) = u_{eq}(x) \). Setting \( \partial u/\partial t = 0 \) in the 1D heat equation gives
 
 \[
 k \frac{d^2 u_{eq}}{dx^2} = 0 \implies \frac{d^2 u_{eq}}{dx^2} = 0 \implies u_{eq}(x) = C_1 x + C_2.
@@ -370,7 +370,7 @@ k \frac{d^2 u_{eq}}{dx^2} = 0 \implies \frac{d^2 u_{eq}}{dx^2} = 0 \implies u_{e
 
 The equilibrium solution is always linear in \( x \); the constants are determined by the boundary conditions.
 
-For **Dirichlet conditions** \( u(0) = T_1 \), \( u(L) = T_2 \):
+For <strong>Dirichlet conditions</strong> \( u(0) = T_1 \), \( u(L) = T_2 \):
 
 \[
 u_{eq}(x) = T_1 + \frac{T_2 - T_1}{L} x.
@@ -380,7 +380,7 @@ This is a linear interpolation between the two endpoint temperatures. We expect 
 
 ## Mixed Boundary Conditions
 
-For a **mixed** problem, say \( u(0) = T_1 \) (fixed temperature at the left) and \( u'(L) = 0 \) (insulated right end), the equilibrium is
+For a <strong>mixed</strong> problem, say \( u(0) = T_1 \) (fixed temperature at the left) and \( u'(L) = 0 \) (insulated right end), the equilibrium is
 
 \[
 u_{eq}(x) = T_1,
@@ -418,7 +418,7 @@ If the rod is insulated at both ends (\( u'(0) = u'(L) = 0 \)) but has an intern
 
 ## Nonhomogeneous Boundary Conditions via Change of Variables
 
-Separation of variables requires **homogeneous** boundary conditions. For nonhomogeneous conditions \( u(0) = A \) and \( u(L) = B \), we write \( u(x,t) = u_{eq}(x) + v(x,t) \), where \( u_{eq}(x) = A + (B-A)x/L \) is the unique steady state. Then \( v \) satisfies the homogeneous conditions \( v(0) = v(L) = 0 \) and the same heat equation. We then expand \( v \) in Fourier sine series as before.
+Separation of variables requires <strong>homogeneous</strong> boundary conditions. For nonhomogeneous conditions \( u(0) = A \) and \( u(L) = B \), we write \( u(x,t) = u_{eq}(x) + v(x,t) \), where \( u_{eq}(x) = A + (B-A)x/L \) is the unique steady state. Then \( v \) satisfies the homogeneous conditions \( v(0) = v(L) = 0 \) and the same heat equation. We then expand \( v \) in Fourier sine series as before.
 
 ---
 
@@ -426,7 +426,7 @@ Separation of variables requires **homogeneous** boundary conditions. For nonhom
 
 ## Zero-Flux (Neumann) Boundary Conditions
 
-Neumann boundary conditions model an **insulated** rod: no heat flows in or out through the endpoints. The problem is
+Neumann boundary conditions model an <strong>insulated</strong> rod: no heat flows in or out through the endpoints. The problem is
 
 \[
 \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}, \quad
@@ -453,7 +453,7 @@ u(x,t) = a_0 + \sum_{n=1}^{\infty} a_n \cos\!\left(\frac{n\pi x}{L}\right) e^{-k
 
 ## Cosine Series and Conservation
 
-The initial condition \( u(x,0) = f(x) \) requires a **Fourier cosine expansion**:
+The initial condition \( u(x,0) = f(x) \) requires a <strong>Fourier cosine expansion</strong>:
 
 \[
 f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos\!\left(\frac{n\pi x}{L}\right),
@@ -471,7 +471,7 @@ As \( t \to \infty \), all the oscillatory terms decay and
 u(x,t) \to a_0 = \frac{1}{L} \int_0^L f(x)\, dx.
 \]
 
-This is the spatial **average** of the initial temperature, which is precisely what conservation of thermal energy predicts: with insulated ends, the total thermal energy \( \int_0^L u(x,t)\, dx \) is constant in time (no heat escapes), so the final uniform temperature must equal the mean of the initial distribution.
+This is the spatial <strong>average</strong> of the initial temperature, which is precisely what conservation of thermal energy predicts: with insulated ends, the total thermal energy \( \int_0^L u(x,t)\, dx \) is constant in time (no heat escapes), so the final uniform temperature must equal the mean of the initial distribution.
 
 ## Zero Eigenvalue and Non-uniqueness
 
@@ -487,7 +487,7 @@ The presence of \( \lambda_0 = 0 \) corresponds to the unique constant steady-st
 
 The derivation of the heat equation in higher dimensions follows the same logic as in one dimension, using the Divergence Theorem in place of the Fundamental Theorem of Calculus. Let \( u(\mathbf{x}, t) \) be the temperature at position \( \mathbf{x} \in \mathbb{R}^n \) and time \( t \). Let \( D \subset \mathbb{R}^n \) be an arbitrary region bounded by a surface \( S \).
 
-The **heat flux vector** \( \Phi(\mathbf{x}, t) \) is defined so that \( \Phi \cdot \hat{n}\, dS \) is the rate of outward heat flow through the surface element \( dS \) with outward unit normal \( \hat{n} \). Conservation of thermal energy states:
+The <strong>heat flux vector</strong> \( \Phi(\mathbf{x}, t) \) is defined so that \( \Phi \cdot \hat{n}\, dS \) is the rate of outward heat flow through the surface element \( dS \) with outward unit normal \( \hat{n} \). Conservation of thermal energy states:
 
 \[
 \frac{d}{dt} \iiint_D e\, dV = -\iint_S \Phi \cdot \hat{n}\, dS + \iiint_D Q\, dV.
@@ -639,7 +639,7 @@ The equation \( u_{tt} = c^2 \nabla^2 u \) in two spatial dimensions models a th
 
 ## Motivation
 
-Laplace's equation \( \nabla^2 u = 0 \) arises as the steady-state limit of the heat equation, as well as in electrostatics (electric potential \( V \) satisfies \( \nabla^2 V = -\rho/\varepsilon_0 \)), irrotational fluid flow, and gravitational potential theory. Solutions are called **harmonic functions**.
+Laplace's equation \( \nabla^2 u = 0 \) arises as the steady-state limit of the heat equation, as well as in electrostatics (electric potential \( V \) satisfies \( \nabla^2 V = -\rho/\varepsilon_0 \)), irrotational fluid flow, and gravitational potential theory. Solutions are called <strong>harmonic functions</strong>.
 
 ## Rectangle: Separation of Variables
 
@@ -679,7 +679,7 @@ For a circular disk of radius \( a \), it is natural to use polar coordinates \(
 \frac{1}{r}\frac{\partial}{\partial r}\!\left(r \frac{\partial u}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} = 0.
 \]
 
-We seek \( u(r,\theta) \) satisfying the boundary condition \( u(a,\theta) = f(\theta) \) and the conditions of **boundedness** at \( r = 0 \) and **periodicity** in \( \theta \): \( u(r,-\pi) = u(r,\pi) \).
+We seek \( u(r,\theta) \) satisfying the boundary condition \( u(a,\theta) = f(\theta) \) and the conditions of <strong>boundedness</strong> at \( r = 0 \) and <strong>periodicity</strong> in \( \theta \): \( u(r,-\pi) = u(r,\pi) \).
 
 Setting \( u = G(r)\phi(\theta) \) and separating:
 
@@ -687,19 +687,19 @@ Setting \( u = G(r)\phi(\theta) \) and separating:
 \frac{r}{G}\frac{d}{dr}\!\left(r G'\right) = -\frac{\phi''}{\phi} = \mu_n = n^2, \quad n = 0, 1, 2, \ldots
 \]
 
-The periodicity condition on \( \phi \) forces \( \mu = n^2 \) for integer \( n \), with solutions \( \phi_n(\theta) = a_n \cos n\theta + b_n \sin n\theta \). The \( G \)-equation, a **Cauchy-Euler** equation, has solutions \( r^n \) and \( r^{-n} \). Boundedness at \( r = 0 \) excludes \( r^{-n} \) for \( n \ge 1 \). The general bounded solution is
+The periodicity condition on \( \phi \) forces \( \mu = n^2 \) for integer \( n \), with solutions \( \phi_n(\theta) = a_n \cos n\theta + b_n \sin n\theta \). The \( G \)-equation, a <strong>Cauchy-Euler</strong> equation, has solutions \( r^n \) and \( r^{-n} \). Boundedness at \( r = 0 \) excludes \( r^{-n} \) for \( n \ge 1 \). The general bounded solution is
 
 \[
 u(r,\theta) = a_0 + \sum_{n=1}^{\infty} r^n \bigl(a_n \cos n\theta + b_n \sin n\theta\bigr).
 \]
 
-Applying the boundary condition \( u(a,\theta) = f(\theta) \) and extracting the Fourier coefficients gives the **Poisson integral formula** (after summing the resulting geometric series):
+Applying the boundary condition \( u(a,\theta) = f(\theta) \) and extracting the Fourier coefficients gives the <strong>Poisson integral formula</strong> (after summing the resulting geometric series):
 
 \[
 u(r,\theta) = \frac{a^2 - r^2}{2\pi} \int_{-\pi}^{\pi} \frac{f(\theta')}{a^2 - 2ar\cos(\theta - \theta') + r^2}\, d\theta'.
 \]
 
-The kernel \( P(r, \theta - \theta') = (a^2 - r^2) / (a^2 - 2ar\cos(\theta-\theta') + r^2) \) is called the **Poisson kernel**.
+The kernel \( P(r, \theta - \theta') = (a^2 - r^2) / (a^2 - 2ar\cos(\theta-\theta') + r^2) \) is called the <strong>Poisson kernel</strong>.
 
 <div class="theorem"><strong>Theorem (Mean Value Property).</strong> If \( u \) is harmonic on a disk of radius \( a \) centred at the origin, then the value of \( u \) at the centre equals the average of \( u \) over the boundary circle:
 \[
@@ -728,7 +728,7 @@ with homogeneous boundary conditions
 \beta_1 \phi(a) + \beta_2 \phi'(a) = 0, \qquad \beta_3 \phi(b) + \beta_4 \phi'(b) = 0.
 \]
 
-This is the **regular Sturm-Liouville eigenvalue problem**, provided \( p(x) > 0 \), \( \sigma(x) > 0 \), and \( p, q, \sigma \) satisfy appropriate smoothness conditions on \( [a,b] \). The standard Fourier problems (sine series, cosine series, full Fourier series) are all special cases corresponding to \( p = 1 \), \( q = 0 \), \( \sigma = 1 \).
+This is the <strong>regular Sturm-Liouville eigenvalue problem</strong>, provided \( p(x) > 0 \), \( \sigma(x) > 0 \), and \( p, q, \sigma \) satisfy appropriate smoothness conditions on \( [a,b] \). The standard Fourier problems (sine series, cosine series, full Fourier series) are all special cases corresponding to \( p = 1 \), \( q = 0 \), \( \sigma = 1 \).
 
 <div class="theorem"><strong>Theorem (Sturm-Liouville).</strong> For a regular Sturm-Liouville problem:
 <ol>
@@ -776,7 +776,7 @@ For the perturbed problem \( u'' + \lambda(1 + x/10)u = 0 \) on \( [0,\pi] \), t
 
 ## Connection to Quantum Mechanics
 
-In quantum mechanics, the time-independent **Schrödinger equation** in one dimension is
+In quantum mechanics, the time-independent <strong>Schrödinger equation</strong> in one dimension is
 
 \[
 -\frac{\hbar^2}{2m} \psi''(x) + V(x)\psi(x) = E\psi(x),
@@ -826,7 +826,7 @@ The radial equation becomes
 r^2 f'' + r f' + (\lambda r^2 - m^2) f = 0,
 \]
 
-which, under the substitution \( s = \sqrt{\lambda}\, r \), transforms to **Bessel's equation of order \( m \)**:
+which, under the substitution \( s = \sqrt{\lambda}\, r \), transforms to <strong>Bessel's equation of order \( m \)</strong>:
 
 \[
 s^2 F'' + s F' + (s^2 - m^2) F = 0.
@@ -951,15 +951,15 @@ h_t(x) = \frac{1}{\sqrt{4\pi kt}}\, e^{-x^2/(4kt)}, \quad t > 0.
 
 ## The Dirac Delta "Function"
 
-The **Dirac delta** \( \delta(x) \) is not a function in the classical sense. It is defined by its action under integration: for any continuous \( f \),
+The <strong>Dirac delta</strong> \( \delta(x) \) is not a function in the classical sense. It is defined by its action under integration: for any continuous \( f \),
 
 \[
 \int_{-\infty}^{\infty} f(x)\, \delta(x)\, dx = f(0), \qquad \int_{-\infty}^{\infty} f(x)\, \delta(x-x_0)\, dx = f(x_0).
 \]
 
-This **sifting property** expresses the fact that \( \delta(x - x_0) \) is a point mass concentrated at \( x_0 \). Informally, \( \delta(x) = 0 \) for \( x \ne 0 \) and \( \delta(0) = \infty \), with \( \int \delta(x)\, dx = 1 \).
+This <strong>sifting property</strong> expresses the fact that \( \delta(x - x_0) \) is a point mass concentrated at \( x_0 \). Informally, \( \delta(x) = 0 \) for \( x \ne 0 \) and \( \delta(0) = \infty \), with \( \int \delta(x)\, dx = 1 \).
 
-The delta function is an example of a **distribution** (generalised function) — an object defined by its integration properties rather than pointwise values.
+The delta function is an example of a <strong>distribution</strong> (generalised function) — an object defined by its integration properties rather than pointwise values.
 
 ## Fourier Transform of the Delta Function
 
@@ -975,11 +975,11 @@ This is a remarkable result: a perfectly localised spike in space (\( \delta(x) 
 f(x) = \int_{-\infty}^{\infty} \delta(\omega)\, e^{-i\omega x}\, d\omega = 1,
 \]
 
-a uniform function in space. This duality illustrates the **Heisenberg uncertainty principle**: a function that is perfectly concentrated in one domain is necessarily spread out in the other.
+a uniform function in space. This duality illustrates the <strong>Heisenberg uncertainty principle</strong>: a function that is perfectly concentrated in one domain is necessarily spread out in the other.
 
 ## Integral Representation and Completeness
 
-Substituting \( f(x) = \delta(x) \) and \( F(\omega) = 1/(2\pi) \) into the inverse Fourier transform formula yields the **integral representation** of the delta function:
+Substituting \( f(x) = \delta(x) \) and \( F(\omega) = 1/(2\pi) \) into the inverse Fourier transform formula yields the <strong>integral representation</strong> of the delta function:
 
 \[
 \delta(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i\omega x}\, d\omega,
@@ -991,17 +991,17 @@ or, with a shift,
 \delta(x - x_0) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i\omega(x - x_0)}\, d\omega.
 \]
 
-This can be viewed as a **completeness** or **resolution of the identity** relation: expressing the kernel of the identity operator in terms of the plane wave basis \( \{e^{-i\omega x}\}_{\omega \in \mathbb{R}} \). The discrete analogue is
+This can be viewed as a <strong>completeness</strong> or <strong>resolution of the identity</strong> relation: expressing the kernel of the identity operator in terms of the plane wave basis \( \{e^{-i\omega x}\}_{\omega \in \mathbb{R}} \). The discrete analogue is
 
 \[
 \delta(x - x_0) = \sum_{n=1}^{\infty} \chi_n(x_0)\, \chi_n(x),
 \]
 
-where \( \{\chi_n\} \) is an orthonormal basis on an interval — this is the **eigenfunction expansion** of the delta function, fundamental to Green's function theory.
+where \( \{\chi_n\} \) is an orthonormal basis on an interval — this is the <strong>eigenfunction expansion</strong> of the delta function, fundamental to Green's function theory.
 
 ## Green's Functions
 
-The connection to PDEs: to solve \( Lu = f \) where \( L \) is a linear differential operator, one seeks the **Green's function** \( G(x, x_0) \) satisfying \( LG = \delta(x - x_0) \) with appropriate boundary conditions. The solution is then
+The connection to PDEs: to solve \( Lu = f \) where \( L \) is a linear differential operator, one seeks the <strong>Green's function</strong> \( G(x, x_0) \) satisfying \( LG = \delta(x - x_0) \) with appropriate boundary conditions. The solution is then
 
 \[
 u(x) = \int G(x, x_0)\, f(x_0)\, dx_0.
@@ -1025,7 +1025,7 @@ with inverse \( f(\mathbf{x}) = \int_{\mathbb{R}^2} F(\boldsymbol{\omega})\, e^{
 
 ## First-Order Linear PDEs
 
-The **method of characteristics** reduces a first-order PDE to a system of ODEs. Consider the linear PDE
+The <strong>method of characteristics</strong> reduces a first-order PDE to a system of ODEs. Consider the linear PDE
 
 \[
 \frac{\partial u}{\partial t} + c(x,t) \frac{\partial u}{\partial x} = Q(x,t,u).
@@ -1037,17 +1037,17 @@ Along a curve \( x = x(t) \), the total derivative of \( u \) is
 \frac{du}{dt} = \frac{\partial u}{\partial t} + \frac{dx}{dt}\frac{\partial u}{\partial x}.
 \]
 
-If we choose the curve so that \( dx/dt = c \), then \( du/dt = Q \). The PDE reduces to the **characteristic equations**:
+If we choose the curve so that \( dx/dt = c \), then \( du/dt = Q \). The PDE reduces to the <strong>characteristic equations</strong>:
 
 \[
 \frac{dx}{dt} = c(x,t), \qquad \frac{du}{dt} = Q(x,t,u).
 \]
 
-The first equation defines the **characteristic curves** in the \( (x,t) \)-plane; along each characteristic, the second equation is an ODE for \( u \).
+The first equation defines the <strong>characteristic curves</strong> in the \( (x,t) \)-plane; along each characteristic, the second equation is an ODE for \( u \).
 
 ## Quasilinear PDEs
 
-For a **quasilinear** equation \( u_t + c(u,x,t)\, u_x = Q(u,x,t) \), the characteristics depend on the solution itself. The same procedure gives
+For a <strong>quasilinear</strong> equation \( u_t + c(u,x,t)\, u_x = Q(u,x,t) \), the characteristics depend on the solution itself. The same procedure gives
 
 \[
 \frac{dx}{dt} = c(u,x,t), \qquad \frac{du}{dt} = Q(u,x,t).
@@ -1055,7 +1055,7 @@ For a **quasilinear** equation \( u_t + c(u,x,t)\, u_x = Q(u,x,t) \), the charac
 
 ## Traffic Flow
 
-The method of characteristics finds its most vivid application in one-dimensional **traffic flow**. Let \( \rho(x,t) \) be the traffic density (cars per unit length) and \( q(x,t) \) the flux (cars per unit time). Conservation of cars on any interval \( [a,b] \) gives
+The method of characteristics finds its most vivid application in one-dimensional <strong>traffic flow</strong>. Let \( \rho(x,t) \) be the traffic density (cars per unit length) and \( q(x,t) \) the flux (cars per unit time). Conservation of cars on any interval \( [a,b] \) gives
 
 \[
 \frac{\partial \rho}{\partial t} + \frac{\partial q}{\partial x} = 0.
@@ -1067,7 +1067,7 @@ Assuming the velocity \( u = u(\rho) \) is a decreasing function of density (den
 \frac{\partial \rho}{\partial t} + q'(\rho)\frac{\partial \rho}{\partial x} = 0, \qquad c(\rho) = q'(\rho).
 \]
 
-This is a **quasilinear PDE**. The characteristic equations are \( d\rho/dt = 0 \) and \( dx/dt = c(\rho) \). Since \( \rho \) is constant along characteristics, \( c(\rho) \) is also constant, so the **characteristics are straight lines**:
+This is a <strong>quasilinear PDE</strong>. The characteristic equations are \( d\rho/dt = 0 \) and \( dx/dt = c(\rho) \). Since \( \rho \) is constant along characteristics, \( c(\rho) \) is also constant, so the <strong>characteristics are straight lines</strong>:
 
 \[
 x(t) = c(\rho(x_0, 0))\, t + x_0.
@@ -1087,9 +1087,9 @@ Note that \( c(\rho) \) can be negative for \( \rho > \rho_{\max}/2 \), correspo
 
 ## Shock Waves and the Rankine-Hugoniot Condition
 
-When initial data has a region where \( \rho(x_0, 0) > \rho(x_1, 0) \) for \( x_0 < x_1 \), the characteristics from \( x_0 \) and \( x_1 \) may converge and eventually intersect. At the intersection, \( \rho \) becomes multi-valued — the solution breaks down. This is the formation of a **shock wave**: a discontinuity in \( \rho \).
+When initial data has a region where \( \rho(x_0, 0) > \rho(x_1, 0) \) for \( x_0 < x_1 \), the characteristics from \( x_0 \) and \( x_1 \) may converge and eventually intersect. At the intersection, \( \rho \) becomes multi-valued — the solution breaks down. This is the formation of a <strong>shock wave</strong>: a discontinuity in \( \rho \).
 
-The physically correct way to handle shocks is to allow discontinuous solutions and enforce the **Rankine-Hugoniot condition**, which states that the speed \( V_s \) of the shock satisfies
+The physically correct way to handle shocks is to allow discontinuous solutions and enforce the <strong>Rankine-Hugoniot condition</strong>, which states that the speed \( V_s \) of the shock satisfies
 
 \[
 V_s = \frac{q(\rho_R) - q(\rho_L)}{\rho_R - \rho_L},
@@ -1107,21 +1107,21 @@ where \( \rho_L \) and \( \rho_R \) are the densities immediately to the left an
 
 ## Normal Mode Analysis
 
-Many PDEs of physical interest possess constant-coefficient solutions or equilibrium states whose **stability** one wants to assess: does a small perturbation decay, persist, or grow? The systematic tool is **normal mode analysis**, which exploits the translational symmetry of the coefficients to diagonalise the linearised problem.
+Many PDEs of physical interest possess constant-coefficient solutions or equilibrium states whose <strong>stability</strong> one wants to assess: does a small perturbation decay, persist, or grow? The systematic tool is <strong>normal mode analysis</strong>, which exploits the translational symmetry of the coefficients to diagonalise the linearised problem.
 
-Given a linear PDE with coefficients independent of \(x\) and \(t\), substitute the **normal mode ansatz**
+Given a linear PDE with coefficients independent of \(x\) and \(t\), substitute the <strong>normal mode ansatz</strong>
 
 \[
 u(x,t) = e^{ikx + \lambda t}
 \]
 
-where \(k \in \mathbb{R}\) is the **wavenumber** and \(\lambda \in \mathbb{C}\) is the **growth rate** to be determined. Substituting into the PDE yields an algebraic equation relating \(\lambda\) to \(k\).
+where \(k \in \mathbb{R}\) is the <strong>wavenumber</strong> and \(\lambda \in \mathbb{C}\) is the <strong>growth rate</strong> to be determined. Substituting into the PDE yields an algebraic equation relating \(\lambda\) to \(k\).
 
-**The diffusion equation** \(u_t = Du_{xx}\): substituting gives \(\lambda = -Dk^2 \le 0\) for all \(k\). Every normal mode decays exponentially, with high-wavenumber (fine-scale) modes decaying fastest. The diffusion equation is **unconditionally stable** — it smooths initial data.
+<strong>The diffusion equation</strong> \(u_t = Du_{xx}\): substituting gives \(\lambda = -Dk^2 \le 0\) for all \(k\). Every normal mode decays exponentially, with high-wavenumber (fine-scale) modes decaying fastest. The diffusion equation is <strong>unconditionally stable</strong> — it smooths initial data.
 
-**The backward heat equation** \(u_t = -Du_{xx}\): now \(\lambda = +Dk^2 > 0\), and every mode grows, with short-wavelength perturbations growing fastest. This is the mechanism behind Hadamard's ill-posedness result from Chapter 1: the backward problem is unstable in the most extreme sense.
+<strong>The backward heat equation</strong> \(u_t = -Du_{xx}\): now \(\lambda = +Dk^2 > 0\), and every mode grows, with short-wavelength perturbations growing fastest. This is the mechanism behind Hadamard's ill-posedness result from Chapter 1: the backward problem is unstable in the most extreme sense.
 
-**Reaction-diffusion** \(u_t = Du_{xx} + \alpha u\) (with \(\alpha > 0\)): the growth rate is \(\lambda = -Dk^2 + \alpha\). Long-wavelength modes (\(k^2 < \alpha/D\)) have \(\lambda > 0\) and grow, while short-wavelength modes are damped by diffusion. This competition between short-scale stabilisation and long-scale instability is the mathematical basis of **Turing instability** — the mechanism by which reaction-diffusion systems can spontaneously form spatial patterns from a uniform state.
+<strong>Reaction-diffusion</strong> \(u_t = Du_{xx} + \alpha u\) (with \(\alpha > 0\)): the growth rate is \(\lambda = -Dk^2 + \alpha\). Long-wavelength modes (\(k^2 < \alpha/D\)) have \(\lambda > 0\) and grow, while short-wavelength modes are damped by diffusion. This competition between short-scale stabilisation and long-scale instability is the mathematical basis of <strong>Turing instability</strong> — the mechanism by which reaction-diffusion systems can spontaneously form spatial patterns from a uniform state.
 
 <div class="definition"><strong>Definition (Stability).</strong> The zero solution of a linear PDE is <em>stable</em> if \(\mathrm{Re}(\lambda(k)) < 0\) for all \(k \in \mathbb{R}\), and <em>unstable</em> if \(\mathrm{Re}(\lambda(k)) > 0\) for some \(k\).</div>
 
@@ -1129,23 +1129,23 @@ The normal mode analysis for the heat equation reveals a quantitative version of
 
 ## Dispersion Relations
 
-For wave-like problems, it is natural to recast the normal mode in terms of an explicitly oscillatory form. The **travelling wave ansatz**
+For wave-like problems, it is natural to recast the normal mode in terms of an explicitly oscillatory form. The <strong>travelling wave ansatz</strong>
 
 \[
 u(x,t) = e^{i(kx - \omega t)}
 \]
 
-is related to the normal mode by \(\lambda = -i\omega\). The relationship \(\omega = \omega(k)\) — the **dispersion relation** — encodes all the wave-propagation properties of the PDE. The **phase speed**
+is related to the normal mode by \(\lambda = -i\omega\). The relationship \(\omega = \omega(k)\) — the <strong>dispersion relation</strong> — encodes all the wave-propagation properties of the PDE. The <strong>phase speed</strong>
 
 \[
 c_p = \frac{\omega}{k}
 \]
 
-is the velocity at which crests of constant phase travel. A PDE is **non-dispersive** if \(c_p\) is independent of \(k\) (all wavenumbers travel at the same speed), and **dispersive** otherwise.
+is the velocity at which crests of constant phase travel. A PDE is <strong>non-dispersive</strong> if \(c_p\) is independent of \(k\) (all wavenumbers travel at the same speed), and <strong>dispersive</strong> otherwise.
 
-**The wave equation** \(u_{tt} = c^2 u_{xx}\): substituting gives \(-\omega^2 = -c^2k^2\), so \(\omega = \pm ck\) and \(c_p = \pm c\). The wave equation is non-dispersive: initial profiles propagate without change of shape — an initial Gaussian emerges as a perfect Gaussian at any later time.
+<strong>The wave equation</strong> \(u_{tt} = c^2 u_{xx}\): substituting gives \(-\omega^2 = -c^2k^2\), so \(\omega = \pm ck\) and \(c_p = \pm c\). The wave equation is non-dispersive: initial profiles propagate without change of shape — an initial Gaussian emerges as a perfect Gaussian at any later time.
 
-**The telegrapher's equation** \(u_{tt} + 2\gamma u_t = c^2 u_{xx}\) arises in transmission line theory, modelling electromagnetic waves with resistive losses. Substituting the travelling wave ansatz:
+<strong>The telegrapher's equation</strong> \(u_{tt} + 2\gamma u_t = c^2 u_{xx}\) arises in transmission line theory, modelling electromagnetic waves with resistive losses. Substituting the travelling wave ansatz:
 
 \[
 -\omega^2 - 2i\gamma\omega = -c^2k^2 \implies \omega = -i\gamma \pm \sqrt{c^2k^2 - \gamma^2}.
@@ -1159,13 +1159,13 @@ c_p = \frac{\sqrt{c^2k^2 - \gamma^2}}{k} = c\sqrt{1 - \frac{\gamma^2}{c^2k^2}},
 
 which approaches \(c\) as \(k \to \infty\) — low-frequency waves are slower, making the telegrapher's equation dispersive and dissipative.
 
-**The Klein-Gordon equation** \(u_{tt} = c^2 u_{xx} - \alpha^2 u\) (with \(\alpha > 0\)) arises in relativistic quantum mechanics and field theory as the wave equation for massive particles. The dispersion relation is
+<strong>The Klein-Gordon equation</strong> \(u_{tt} = c^2 u_{xx} - \alpha^2 u\) (with \(\alpha > 0\)) arises in relativistic quantum mechanics and field theory as the wave equation for massive particles. The dispersion relation is
 
 \[
 \omega = \pm\sqrt{c^2k^2 + \alpha^2},
 \]
 
-giving phase speed \(c_p = \pm\sqrt{c^2 + \alpha^2/k^2}\). Remarkably, \(c_p > c\) for all finite \(k\) — the phase velocity is superluminal! However, the **group velocity**
+giving phase speed \(c_p = \pm\sqrt{c^2 + \alpha^2/k^2}\). Remarkably, \(c_p > c\) for all finite \(k\) — the phase velocity is superluminal! However, the <strong>group velocity</strong>
 
 \[
 c_g = \frac{d\omega}{dk} = \frac{c^2 k}{\sqrt{c^2k^2 + \alpha^2}} = \frac{c^2}{c_p} < c
@@ -1244,7 +1244,7 @@ The adjoint governs not just eigenvalue theory but the solvability of inhomogene
 \[
 \langle v, f \rangle = 0
 \]
-for every \(v\) in the null space of \(L^*\) (i.e., every \(v\) with \(L^*v = 0\)).</div>
+for every \(v\) in the null space of \(L^<em>\) (i.e., every \(v\) with \(L^</em>v = 0\)).</div>
 
 In words: the right-hand side \(f\) must be orthogonal to all solutions of the homogeneous adjoint problem. This is the PDE analogue of the familiar linear algebra result: the system \(A\mathbf{x} = \mathbf{b}\) has a solution if and only if \(\mathbf{b}\) is orthogonal to the null space of \(A^T\). The Fredholm alternative controls when Green's functions exist and when resonance phenomena occur (the forcing \(f\) excites a natural mode of the system, leading to the absence of bounded solutions).
 
@@ -1256,7 +1256,7 @@ In words: the right-hand side \(f\) must be orthogonal to all solutions of the h
 
 The linear wave equation \(u_{tt} = c^2 u_{xx}\) propagates all Fourier modes at the same speed \(c\) with no change in amplitude. Two physically important modifications break this ideal behaviour:
 
-**Linear dissipation** arises from resistive forces. For the advection-diffusion equation \(u_t + cu_x = \nu u_{xx}\), substituting \(u = e^{i(kx-\omega t)}\) gives
+<strong>Linear dissipation</strong> arises from resistive forces. For the advection-diffusion equation \(u_t + cu_x = \nu u_{xx}\), substituting \(u = e^{i(kx-\omega t)}\) gives
 
 \[
 -i\omega + ick = \nu(ik)^2 = -\nu k^2 \implies \omega = ck - i\nu k^2.
@@ -1264,7 +1264,7 @@ The linear wave equation \(u_{tt} = c^2 u_{xx}\) propagates all Fourier modes at
 
 The complex phase speed is \(U = \omega/k = c - i\nu k\), with a negative imaginary part proportional to \(k\). All modes are damped by the factor \(e^{-\nu k^2 t}\); short wavelengths (\(|k|\) large) decay fastest. This is dissipative but not dispersive: \(\mathrm{Re}(\omega)/k = c\) is independent of \(k\), so undamped components all travel at the same speed.
 
-**Linear dispersion** arises from higher-order spatial derivatives. For \(u_t + cu_x + \beta u_{xxx} = 0\), substituting gives
+<strong>Linear dispersion</strong> arises from higher-order spatial derivatives. For \(u_t + cu_x + \beta u_{xxx} = 0\), substituting gives
 
 \[
 -i\omega + ick + \beta(ik)^3 = 0 \implies \omega = ck - \beta k^3, \quad U = c - \beta k^2.
@@ -1274,19 +1274,19 @@ There is no damping (\(\mathrm{Im}(\omega) = 0\)), but the phase speed \(U = c -
 
 ## The Korteweg-de Vries Equation
 
-In 1895, Korteweg and de Vries derived a model for long shallow-water waves that combines **nonlinear steepening** (like Burgers' equation) with **linear dispersion** (the \(u_{xxx}\) term):
+In 1895, Korteweg and de Vries derived a model for long shallow-water waves that combines <strong>nonlinear steepening</strong> (like Burgers' equation) with <strong>linear dispersion</strong> (the \(u_{xxx}\) term):
 
 \[
 u_t + 6uu_x + u_{xxx} = 0.
 \]
 
-This is the **Korteweg-de Vries (KdV) equation**. The nonlinear term \(6uu_x\) tends to steepen wave fronts — taller parts of the wave travel faster, causing the profile to lean forward and eventually break, as in Burgers' equation. The dispersive term \(u_{xxx}\) opposes this: it spreads energy across wavenumbers, preventing blow-up. For a precise balance between the two effects, stable localised solutions exist.
+This is the <strong>Korteweg-de Vries (KdV) equation</strong>. The nonlinear term \(6uu_x\) tends to steepen wave fronts — taller parts of the wave travel faster, causing the profile to lean forward and eventually break, as in Burgers' equation. The dispersive term \(u_{xxx}\) opposes this: it spreads energy across wavenumbers, preventing blow-up. For a precise balance between the two effects, stable localised solutions exist.
 
 The motivation for the KdV equation was the solitary wave observed by John Scott Russell on the Union Canal near Edinburgh in 1834. Russell followed a hump of water on horseback for two miles, noting that it maintained its shape and speed rather than spreading out or breaking. The existence of such waves was theoretically controversial for decades; KdV resolved the puzzle by providing an equation for which exact localised solutions exist.
 
 ## The Soliton Solution
 
-We seek a **travelling wave** \(u(x,t) = f(\xi)\) with \(\xi = x - Ut\) and wave speed \(U > 0\). Substituting into KdV:
+We seek a <strong>travelling wave</strong> \(u(x,t) = f(\xi)\) with \(\xi = x - Ut\) and wave speed \(U > 0\). Substituting into KdV:
 
 \[
 -Uf' + 6ff' + f''' = 0.
@@ -1298,7 +1298,7 @@ Integrating once with respect to \(\xi\):
 f'' = Uf - 3f^2 + A
 \]
 
-for an integration constant \(A\). For a **soliton** — a localised pulse with \(f, f', f'' \to 0\) as \(|\xi| \to \infty\) — we need \(A = 0\). Multiplying by \(f'\) and integrating again:
+for an integration constant \(A\). For a <strong>soliton</strong> — a localised pulse with \(f, f', f'' \to 0\) as \(|\xi| \to \infty\) — we need \(A = 0\). Multiplying by \(f'\) and integrating again:
 
 \[
 \frac{(f')^2}{2} = \frac{Uf^2}{2} - f^3 + B,

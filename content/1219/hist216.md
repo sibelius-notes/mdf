@@ -1035,11 +1035,11 @@ The telephone monopoly would eventually fall apart in 1982. The United States De
 In the experience of the telephone, and how different national regulatory regimes gave rise to different usage cultures, we can see some parallels to debates over the Internet today. We return to these, and some broader points, in the conclusion.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/RuQzp_TI-3s?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*The History of the Telephone*
+<em>The History of the Telephone</em>
 
 ## 4e. Net Neutrality and Standards Today, or Conclusions
 
-*Figure 1: What about the parallels today? imaginima/iStock/GettyImages*
+<em>Figure 1: What about the parallels today? imaginima/iStock/GettyImages</em>
 
 What about today? In many ways, you could argue that the telecommunication industry today in Canada or the United States look a bit like the ones from a long time ago before the monopolies took hold. We had competition, right? Rogers vs. Telus, or Start Internet vs. TekSavvy. Maybe competition is too strong a word as argued in this CBC article Canadians pay some of the highest wireless prices in the world – but report says they’re worth it .
 
@@ -1061,7 +1061,7 @@ Read and Reflect: Long Before Net Neutrality Reading
 
 So let’s look at one of the short readings that I assigned you all to read this week: Long Before Net Neutrality, Rules Levelled the Landscape for Phone Services .
 
-*Figure 2: Long Before Net Neutrality. (NPR, 2015)*
+<em>Figure 2: Long Before Net Neutrality. (NPR, 2015)</em>
 
 Take a few minutes to read the article, and reflect on these questions:
 
@@ -1117,7 +1117,7 @@ For detailed instructions about how to participate, see the Group Discussion Act
 
 As we will learn about today, the idea of hypertext was formally defined in 1965 by Ted Nelson, although the idea predated it by twenty years.
 
-*Figure 1: Conceptual predecessors of hypertext . Image description (Office for Emergency Management & Library of Congress, c. 1940-1944); (Engelbart, 2008); (Gotanero, 2013)*
+<em>Figure 1: Conceptual predecessors of hypertext . Image description (Office for Emergency Management & Library of Congress, c. 1940-1944); (Engelbart, 2008); (Gotanero, 2013)</em>
 
 What is hypertext ?
 
@@ -1127,7 +1127,7 @@ A body of written or pictorial material interconnected in such a complex way tha
 
 We see hypertext everywhere. When you open up a Web Browser, you see “HTTP”
 
-*Figure 2 : Browser address bar. (Google Inc., 2018)*
+<em>Figure 2 : Browser address bar. (Google Inc., 2018)</em>
 
 HTTP stands for the Hypertext Transfer Protocol, which is the protocol that underlies communication on the World Wide Web. In a nutshell, hypertext documents use links – or hyperlinks – to connect nodes. We will talk about the specifics of the Web at the end of this lesson.
 
@@ -1139,7 +1139,7 @@ Exercise: Ten Degrees of Wikipedia
 
 You might have heard of the popular game “ Six Degrees of Kevin Bacon ”. It’s the idea that the popular actor Kevin Bacon could be connected to almost anybody else in Hollywood in six degrees.
 
-*Figure 3: Six degrees of Kevin Bacon. (Skidmore, 2014)*
+<em>Figure 3: Six degrees of Kevin Bacon. (Skidmore, 2014)</em>
 
 Let’s play a similar sort of game to remember how hyperlinks work. Wikipedia is a great example. This large, collaboratively written and edited compendium of knowledge contains a mind-boggling array of informaton on topics big, small, obscure, important, and beyond. Let’s try to begin to navigate through Wikipedia using only hyperlinks.
 
@@ -1168,7 +1168,7 @@ For example, the Web’s version of hypertext has a few unique characteristics c
 
 - The Web permits broken links : i.e. a "404"
 
-*Figure 4: 404 error page. (Google Inc., 2018)*
+<em>Figure 4: 404 error page. (Google Inc., 2018)</em>
 
 - Links are one-directional.
 
@@ -1178,7 +1178,7 @@ For example, the Web’s version of hypertext has a few unique characteristics c
 
 To understand hypertext, then, we need to go back to where it all begins.
 
-> **What your prof thinks:** The answer is “2 clicks” -> i.e. Canada -> Canada Goose
+> <strong>What your prof thinks:</strong> The answer is “2 clicks” -> i.e. Canada -> Canada Goose
 
 ## 5b. The Memex
 
@@ -1199,7 +1199,7 @@ I would like you to reflect on the article you have read by Bush. In one paragra
 
 For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
-*Figure 1: The Memex. (Bush, 1945)*
+<em>Figure 1: The Memex. (Bush, 1945)</em>
 
 Now that you have thought about the Memex, let’s reflect on a few key characteristics of the device.
 
@@ -1216,9 +1216,9 @@ We will return to the last point shortly, as it lies at the heart of the Memex�
 
 The author of “How We May Think” was Vannevar Bush. His personal biography can help us understand the significance of this idea, as well as why it appeared in the Atlantic Monthly . Bush himself would become an outsized figure in American engineering and science, participating and leading projects that would see outcomes as varied as the atomic bomb, the development of the radio, the establishment of the American National Science Foundation, and even – as we discuss in this lesson – the ancestors of the World Wide Web.
 
-*Figure 2: Vannevar Bush. (Office for Emergency Management & Library of Congress, c. 1940-1944)*
+<em>Figure 2: Vannevar Bush. (Office for Emergency Management & Library of Congress, c. 1940-1944)</em>
 
-*Figure 3: Vannevar Bush timeline. Image description . © University of Waterloo*
+<em>Figure 3: Vannevar Bush timeline. Image description . © University of Waterloo</em>
 
 The Memex continues to impact both the fields of information retrieval as well as new media.
 
@@ -1245,7 +1245,7 @@ Microfilm is scaled-down documents on a film strip. Documents are roughly reduce
 
 If you are on the University of Waterloo campus, you can visit a microfilm room in the basement of Dana Porter Library. Any university library or many large public library systems will have microfilm collections, and the rooms that contain these collections are usually some of the densest information sources! Imagine that a library wanted to keep every copy of the Toronto Star ever published: that would take up rooms if they were full size. But the whole run of a newspaper can fit on a few shelves once they have been condensed to microfilm.
 
-*Figure 4: Microfilm from the Dana Porter Library, University of Waterloo. © University of Waterloo*
+<em>Figure 4: Microfilm from the Dana Porter Library, University of Waterloo. © University of Waterloo</em>
 
 Some of the early potential of microfilm can be seen throughout the 1920s and 1930s. The Library of Congress in the United States, for example, microfilms some three million volumes from the British Library and brings them back to Washington. Now instead of having to make the long journey across the Atlantic Ocean to London, England, a researcher could now do research from the comfort in the United States. This process begins to repeat itself around the western world, leading to a massive revolution in information sharing and accessibility.
 
@@ -1270,7 +1270,7 @@ The human mind does not work that way. It operates by association. With one item
 
 (Bush, 1945)
 
-*Figure 5: Example of a semantic network in the human mind. Image description © University of Waterloo*
+<em>Figure 5: Example of a semantic network in the human mind. Image description © University of Waterloo</em>
 
 Enter the Memex then, which you have now read about. The Memex was an analog system, based on a series of photographing, microfilming, and information retrieval concepts. Crucially, there would be a hypertext component as well.
 
@@ -1309,7 +1309,7 @@ To understand Engelbart, we need to go back to the Second World War. He was stat
 
 Five years later, he has three “intellectual flashes” that shape his conceptual development of hypertext.
 
-*Figure 1: Douglas Engelbart. (Engelbart, 2008)*
+<em>Figure 1: Douglas Engelbart. (Engelbart, 2008)</em>
 
 Boosting humankind's ability to deal with complex, urgent problems would be an attractive candidate as an arena in which a young person might try to "make the most difference”.
 
@@ -1317,11 +1317,11 @@ An "aha" graphic vision surges forth of me sitting at a large CRT console, worki
 
 These visions are important. This was influenced by Engelbart’s work in the Second World War working with radar consoles – anti-aircraft operations are often seen in early cybernetic texts as the melding of man and machine – but also crucially articulated an important new paradigm of computing.
 
-*Figure 2: Mainframe computer at the University of Waterloo, 1968. © University of Waterloo*
+<em>Figure 2: Mainframe computer at the University of Waterloo, 1968. © University of Waterloo</em>
 
-*Figure 3: Waterloo punch card, 1969. © University of Waterloo*
+<em>Figure 3: Waterloo punch card, 1969. © University of Waterloo</em>
 
-*Figure 4: Information retrieval from a mainframe computer. makyzz/iStock/GettyImages; Meilun/iStock/GettyImages; jj_voodoo/iStock/GettyImages*
+<em>Figure 4: Information retrieval from a mainframe computer. makyzz/iStock/GettyImages; Meilun/iStock/GettyImages; jj_voodoo/iStock/GettyImages</em>
 
 
 ### The Mother of All Demos
@@ -1351,7 +1351,7 @@ Yet while the Mother of All Demos was so impressive, it also highlights some of 
 This was the premature death of a technological project, but the ideas would continue….
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/M5PgQS3ZBWA?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Douglas Engelbart's Mother of All Demos (1968)*
+<em>Douglas Engelbart's Mother of All Demos (1968)</em>
 
 ## 5d. Xanadu and the Web
 
@@ -1366,9 +1366,9 @@ Ted Nelson, unlike Bush and Engelbart, came at this problem a bit differently. I
 
 Nelson is a graduate student at Harvard University in 1960, studying sociology. He is having trouble keeping his notes clear and tries many methods. Many of these might be familiar to you as an undergraduate student – file cards, index tabbing, edge-notched cards. Making multiple copies of documents and then copying them multiple times to mash them up. You can imagine. None of these methods seemed to solve the major problem Nelson now saw himself as being confronted with: the need to have information in several places at one time.
 
-*Figure 1: Ted Nelson. (Gotanero, 2013)*
+<em>Figure 1: Ted Nelson. (Gotanero, 2013)</em>
 
-*Figure 2: Methods for organizing information . (MacKay, 2008); FlamingPumpkin/iStock/Getty Images; christopherhall/iStock/Getty Images*
+<em>Figure 2: Methods for organizing information . (MacKay, 2008); FlamingPumpkin/iStock/Getty Images; christopherhall/iStock/Getty Images</em>
 
 What to do?
 
@@ -1389,7 +1389,7 @@ The resulting file structure is explained and examples of its use are given. It 
 
 The costs are now down considerably. A small computer with mass memory and video-type display now costs $37,000; amortized over time this would cost less than a secretary, and several people could use it around the clock. A larger installation servicing an editorial office or a newspaper morgue, or a dozen scientists or scholars, could cost proportionately less and give more time to each user.
 
-Let me introduce the word "hypertext"***~ to mean a body of written or pictorial material interconnected in such a complex way that it could not conveniently be presented or represented on paper . It may contain summaries, or maps of its contents and their interrelations; it may contain annotations, additions and foot notes from scholars who have examined it. Let me suggest that such an object and system, properly designed and administered, could have great potential for education, increasing the student's range of choices, his sense of freedom, his motivation, and his intellectual grasp***~*. Such a system could grow indefinitely, gradually including more and more of the ~rld's written knowledge. However, its internal file structure would have to be built to accept growth, change and complex informational arrangements. The ELF is such a file structure.
+Let me introduce the word "hypertext"<strong><em>~ to mean a body of written or pictorial material interconnected in such a complex way that it could not conveniently be presented or represented on paper . It may contain summaries, or maps of its contents and their interrelations; it may contain annotations, additions and foot notes from scholars who have examined it. Let me suggest that such an object and system, properly designed and administered, could have great potential for education, increasing the student's range of choices, his sense of freedom, his motivation, and his intellectual grasp</strong></em>~*. Such a system could grow indefinitely, gradually including more and more of the ~rld's written knowledge. However, its internal file structure would have to be built to accept growth, change and complex informational arrangements. The ELF is such a file structure.
 
 Read the above passage in depth, as it provides the definition of hypertext that both inform this lecture but crucially the lectures that follow.
 
@@ -1438,7 +1438,7 @@ This week we have covered a lot of ground. As noted at the beginning of the modu
 - Understand three pivotal moments in the development of hypertext t hrough close document readings : We have read something close from each. Bush’s “As We May Think”, “Mother of All Demos” and NLS; and explorations of Ted Nelson’s pivotal 1965 ACM paper.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/72M5kcnAL-4?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Ted Nelson and Project Xanadu*
+<em>Ted Nelson and Project Xanadu</em>
 
 ---
 
@@ -1510,7 +1510,7 @@ An internet is a network of two or more networks, which is traditionally called 
 
 It is also important to recognize what the Internet is not – it is not a synonym of the World Wide Web. The Web is an information system that uses the Internet – just like email uses it, and the File Transfer Protocol uses it, or Usenet used it.
 
-*Figure 1: The Internet vs. the World Wide Web. Image description . rungrote/iStock/Getty Images*
+<em>Figure 1: The Internet vs. the World Wide Web. Image description . rungrote/iStock/Getty Images</em>
 
 
 ### Is it a Series of Tubes?
@@ -1537,7 +1537,7 @@ You have probably heard of the Central Intelligence Agency : a feature of innume
 
 You may not have heard of DARPA, or the Defence Advanced Research Projects Agency. This is a shame because this agency is arguably core to understanding how the American government responded to many of the most important problems that it faced since the end of the Second World War: from major advances in precision targeting to dealing with modern problems of command and control, which in some ways led to the development of the Internet as we know it.
 
-*Figure 1: DARPA. Evgeny Gromov/iStock/Getty Images*
+<em>Figure 1: DARPA. Evgeny Gromov/iStock/Getty Images</em>
 
 So where does the story of how the American defence industry and agencies led to the Internet begin?
 
@@ -1554,7 +1554,7 @@ Initially, the United States was not too worried about Sputnik. They had their o
 
 As you can see in the image… it did not go well. The rocket blew up, the satellite it was intended to propel into space falling instead to the earth. While the U.S. government was able to launch their Explorer satellite a month later on 31 January 1958, they were worried about their race with the Soviet Union. A new agency was thus formed to move research forward: the Advanced Research Projects Agency , or ARPA.
 
-*Figure 2: Unsuccessful launch of Vanguard. (NASA, 1957)*
+<em>Figure 2: Unsuccessful launch of Vanguard. (NASA, 1957)</em>
 
 
 ### ARPA
@@ -1583,9 +1583,9 @@ In October 1962, it became clear that the Soviet Union had placed nuclear missil
 
 The United States imposed a naval blockade of Cuba, Soviets and Americans stared down each other, and the United States military went to DEFCON 2, the second-highest alert level before nuclear war.
 
-*Figure 3: X-17 with nuclear warhead on board the USS Norton Sound. (U.S. Navy, c. 1955)*
+<em>Figure 3: X-17 with nuclear warhead on board the USS Norton Sound. (U.S. Navy, c. 1955)</em>
 
-*Figure 4 : Surface-to-air missile activity in Cuba, 5 September 1962. Image description ( Central Intelligence Agency, 1962)*
+<em>Figure 4 : Surface-to-air missile activity in Cuba, 5 September 1962. Image description ( Central Intelligence Agency, 1962)</em>
 
 This was a very complex, high-stakes operation. A lot of information was flowing around the American government and military. For the first time, computers were used in a real-time crisis: helping people decide where ships and forces should be deployed. Commanders realized that there was:
 
@@ -1605,15 +1605,15 @@ The first is J.C.R. Licklider , who would become head of the “Information Proc
 
 So Licklider has accordingly become head of the Information Processing Techniques Office. Already a believer in computers – he truly believes that in the future, people will have computers, will interact with them, and that they will be connected together. In August 1962, soon after joining ARPA, he pens a series of memos that discussed an idea of a “Galactic Network,” which would connect computers so that they could quickly share data and programs. He begins to convince others at ARPA that networked communication is very important .
 
-*Figure 1: J.C.R. Lickkider. (Grech, 2001)*
+<em>Figure 1: J.C.R. Lickkider. (Grech, 2001)</em>
 
-*Figure 2: Paul Baran. (Dharapak, n.d.)*
+<em>Figure 2: Paul Baran. (Dharapak, n.d.)</em>
 
 The second individual that is key to this is Paul Baran . You read his “On Distributed Communications” piece for this module. Baran was an electrical engineer, working on early computers, who ended up working for the RAND Corporation starting in 1959. RAND, in a nutshell, is a think-tank that does most of its contracting and consulting to the United States’ government. It is similar to ARPA in that it is flexible; it gets to explore big questions, and has the freedom to answer them.
 
 At RAND, Baran is tasked to think about communications during a nuclear war. He begins working on ways that a communication system could be made resilient – how it could be survivable. He and his colleagues do so by simulating a fake network and running computer simulations to see what would happen in the event of a nuclear attack. He finds that if you have three levels of redundancy, messages could still traverse a network. This is important because if you could survive a nuclear attack, you could then launch your nuclear missiles and kill your opponents, which in turn makes it less likely for the nuclear attack to happen in the first place (wasn’t the Cold War fun? Sigh).
 
-*Figure 3: Centralized, Decentralized, and Distributed Networks and the Effects of a Nuclear Attack. (Baran, 1964); Soloma_Poppystyle/iStock/Getty Images*
+<em>Figure 3: Centralized, Decentralized, and Distributed Networks and the Effects of a Nuclear Attack. (Baran, 1964); Soloma_Poppystyle/iStock/Getty Images</em>
 
 - A Centralized Network : All traffic flows in and out of a central hub. If you are from Toronto, this is kind of like the role of Union Station in the GO Train network. All trains go to Union Station or at least through it. If Kitchener station closes, the network is fine because it’s only that one spoke affected. If Union station has to close, the entire network fails.
 
@@ -1652,7 +1652,7 @@ Licklider inherits this machine and begins to realize that he needs to make this
 
 At this point, we have time-sharing, big computers, and conceptual ideas of networks floating around.
 
-*Figure 4: An earlier version of a bomber computer system. (Hernandez, Tech Time Warp )*
+<em>Figure 4: An earlier version of a bomber computer system. (Hernandez, Tech Time Warp )</em>
 
 
 ### The Three Terminals: Bringing it All Together
@@ -1661,9 +1661,9 @@ Enter the final big story that sees the idea of the Internet come together. Lick
 
 In this famous story, Taylor surveyed his Pentagon office in 1966. He had three different computer terminals. One was connected to a defence contractor’s network in Santa Monica, California; another to the University of California’s Berkeley campus; and the third to a network at the Massachusetts Institute of Technology near Boston. Each terminal had its own separate set of access commands and its own separate community, only accessed through physically different systems. While each was powerful in and of themselves, he wondered if there was a way to bring all three computers together – to let different networks, users, and computer types interact with each other.
 
-*Figure 5: Robert Taylor. (Campbell, 2008)*
+<em>Figure 5: Robert Taylor. (Campbell, 2008)</em>
 
-*Figure 6: Taylor's three terminals, each connecting to a different network. mayrum/iStock/Getty Images*
+<em>Figure 6: Taylor's three terminals, each connecting to a different network. mayrum/iStock/Getty Images</em>
 
 If you have these three terminals, there ought to be one terminal that goes anywhere you want to go.
 
@@ -1671,7 +1671,7 @@ If you have these three terminals, there ought to be one terminal that goes anyw
 
 Taylor hoped to build a computer network to connect the ARPA-sponsored projects together, if nothing else, to let him communicate to all of them through one terminal.
 
-*Figure 7: Taylor's vision of one terminal connecting to all three networks. mayrum/iStock/Getty Images*
+<em>Figure 7: Taylor's vision of one terminal connecting to all three networks. mayrum/iStock/Getty Images</em>
 
 It would require the three building blocks that we have spoken about to come together. These are, in essence, the building blocks of the modern Internet:
 
@@ -1691,27 +1691,27 @@ J.C.R. Licklider and Robert Taylor’s “Computer as a Communication Device” 
 
 With this basic vision of the ARPANET coming together, we should pause and return to one of the questions that I opened this module with: What is the link between the Internet and Nuclear Armageddon? We can see that it was inspired by the context of the Cold War and nuclear warfare. It is not built as a nuclear command-and-control system, but it is inspired by ideas of this, notably thanks to Baran.
 
-*Figure 1: Excerpt from "The Computer as a Communication Device," p. 32, illustrating the concept of nodes. Image description . (Licklider and Taylor, 1968)*
+<em>Figure 1: Excerpt from "The Computer as a Communication Device," p. 32, illustrating the concept of nodes. Image description . (Licklider and Taylor, 1968)</em>
 
 First, however, ARPANET needed to be transformed from vision to reality. The contract to construct ARPANET was awarded to the research firm Bolt, Beranek, and Newman Inc., or BBN. They designed a series of Interface Message Processors , or IMPs, that would route messages to where they needed to go. The IMPs would enable time-sharing on a massive scale. Crucially, this meant that computers on the ARPANET would not send messages to each other – each would be connected to an IMP which would communicate to other IMPs, and in turn, to the computers themselves. IMPs are predecessors to today’s routers , the backbone of the modern Internet.
 
 This figure explains how it might work:
 
-*Figure 2: IMPs send messages to each other. Image description . © University of Waterloo*
+<em>Figure 2: IMPs send messages to each other. Image description . © University of Waterloo</em>
 
 Note that the IMPs talk to each other, not the computers. This is essential in making the network function, as the computers – which may be running different operating systems – do not have to worry about connecting with each other, just with their attached IMP.
 
-*Figure 3: An Interface Message Processor (IMP). (FastLizard4, 2011)*
+<em>Figure 3: An Interface Message Processor (IMP). (FastLizard4, 2011)</em>
 
 Remember our distributed network – it is the IMP that makes this possible!
 
 By 1969, ARPANET is online – and is just four sites, or nodes. There is one at Stanford Research Institute (SRI) in California, one at University of California, Santa Barbara (UCSB), one at the University of California at Los Angeles (UCLA), and one at the University of Utah in Salt Lake City (UTAH). Here is what the network looked like:
 
-*Figure 4: Nodes in the ARPANET network, 1969. (Walker, 1978)*
+<em>Figure 4: Nodes in the ARPANET network, 1969. (Walker, 1978)</em>
 
 It continues to grow. It is publicly demonstrated in 1972, and by 1973, the node is quite a bit larger. In the following image, you can see Stanford, University of Southern California in Los Angeles, Case Western in Cleveland, Lincoln Labs, MIT, and BBN in Boston, Harvard, ARPA in Washington D.C., the University of Illinois in Urbana-Champaign, Illinois.
 
-*Figure 5: Nodes in the ARPANET network, 1973. Image description . (Walker, 1978)*
+<em>Figure 5: Nodes in the ARPANET network, 1973. Image description . (Walker, 1978)</em>
 
 Imagine how messages could then travel. Imagine a message being sent from SRI in Stanford, California (in the upper-left corner of the image) to ARPA in Washington, D.C. (in the mid-right). The message could go via Los Angeles (thanks to the USC node in the lower-left); Utah, Illinois, and MIT via Harvard or via Cleveland. This is the majesty of the distributed network. If nodes went down, messages could route around them. This is the Baran vision realized. If a nuclear attack, let’s say, destroyed Cleveland or Boston, messages could still find different paths. Redundancy was built into this system.
 
@@ -1723,7 +1723,7 @@ To solve that problem, ARPANET engineers looked across the Atlantic to a French 
 
 So what brings this all together into what we think of as the modern Internet? The United States had ARPANET, the French had CYCLADEs, and the British – who we have seen briefly before – had their NPL network. With these networks, there now needed to be one single standard to bring them all together. How could the U.S. computer talk to the French computer? In the next section, we will explore this single standard, which ironically, would herald the end of the ARPANET as well.
 
-*Figure 6: ARPANET in the U.S., CYCLADEs in France, and NPL in the U.K., none of which speak to each other. Image description . Yevhenii Dubinko/iStock/Getty Images*
+<em>Figure 6: ARPANET in the U.S., CYCLADEs in France, and NPL in the U.K., none of which speak to each other. Image description . Yevhenii Dubinko/iStock/Getty Images</em>
 
 ## 6e. One Protocol to Rule Them All: TCP/IP and the Birth of the Modern Internet
 
@@ -1738,7 +1738,7 @@ Processes exchange finite length LETTERS as a way of communicating; thus, letter
 
 (Cerf et. al., 1974)
 
-*Figure 1: Letters broken into fragments in a network. mayrum/iStock/Getty Images*
+<em>Figure 1: Letters broken into fragments in a network. mayrum/iStock/Getty Images</em>
 
 Impressed, the Defense Advanced Projects Agency (DARPA), ARPA’s successor, issued contracts to implement TCP/IP. While there were competing standards, TCP/IP was incorporated into the UNIX operating system, which today forms the foundation of Linux and Mac operating systems, and was also adopted as the standard for defense communications in the United States. Once TCP/IP is baked into UNIX in 1983 and declared public domain in 1989, it is increasingly present in modern computers… indeed, the flavour of UNIX that incorporates TCP/IP is the ancestor of many operating systems today, such as Apple OS, many different Linux distributions, and TCP/IP even ends up in Windows 3.1!
 
@@ -1787,7 +1787,7 @@ The reason I started with this question is that the major question we consider i
 
 Let me then start with the two main vignettes that the reading for this module, Fred Turner’s From Counterculture to Cyberculture . To me, they really do underscore the shift that is at play here – one of the most interesting transformations in the history of modern computing and technology.
 
-*Figure 1: Mario Savio addresses students at the University of California on December 7, 1964. (AP Photo / Robert. W. Klein, 1964)*
+<em>Figure 1: Mario Savio addresses students at the University of California on December 7, 1964. (AP Photo / Robert. W. Klein, 1964)</em>
 
 We open in December 1964 when Mario Savio, leader of the Free Speech Movement at Berkeley, stands and speaks before 5,000 people in the main plaza at UC Berkeley. He is denouncing the world that he sees around him, in a speech that ends up beginning to kick off the New Left in the United States – and would spread around the world.
 
@@ -1805,7 +1805,7 @@ The actual specifics of the Free Speech Movement are notterribly germane to this
 
 This was the idea that the university – just like the military, the corporate world, and other pillars of American society – were using computers to dehumanize people . That they would take the rich humanity and reduce you to the content on a punch card, a series of 1s and 0s.
 
-*Figure 2: People as punch cards. © University of Waterloo*
+<em>Figure 2: People as punch cards. © University of Waterloo</em>
 
 You might feel like this a bit in your own experience at Waterloo when you sign your emails with your student numbers – that you are not student John Smith but are instead 123 456 789.
 
@@ -1817,16 +1817,16 @@ How times have changed.
 
 Today, if you visit Apple.com, you are likely to see something like this:
 
-*Figure 3: Apple Watch Series 4 advertisement . (Apple Inc., 2018)*
+<em>Figure 3: Apple Watch Series 4 advertisement . (Apple Inc., 2018)</em>
 
 Technology is now seen as liberatory. On the HBO show Silicon Valley , they lampoon that almost every tech pitch concludes with “to make the world a better place”, whether it is through compression algorithms or new routines for pushing code up to GitHub. It is a cliché.
 
-*Figure 4: Headlines announcing startups "making the world a better place". (Choi, 2017); (52 Insights, 2017); (Biswas, 2018); (Palmer-Derrien, 2018)*
+<em>Figure 4: Headlines announcing startups "making the world a better place". (Choi, 2017); (52 Insights, 2017); (Biswas, 2018); (Palmer-Derrien, 2018)</em>
 
-*Figure 5: The perception of technology shifts from dehumanizing to liberating in 30 years. (AP Photo / Robert. W. Klein, 1964) ; (European Graduate School, 2006)*
+<em>Figure 5: The perception of technology shifts from dehumanizing to liberating in 30 years. (AP Photo / Robert. W. Klein, 1964) ; (European Graduate School, 2006)</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/SI6fgZTqk14?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Technology as a Force for Good?*
+<em>Technology as a Force for Good?</em>
 
 ## 7b. Conformity in the 1950s and 1960s
 
@@ -1839,11 +1839,11 @@ Beneath the happy veneer of American society, however, there is a growing wave o
 
 Children growing up in abundance begin to challenge this status quo in two main ways. The first was the New Left , or student radicals, who were interested in politically challenging the system .
 
-*Figure 1: A suburb in the 1950s. (Holt, 2010)*
+<em>Figure 1: A suburb in the 1950s. (Holt, 2010)</em>
 
 Children growing up in abundance begin to challenge this status quo in two main ways. The first was the New Left , or student radicals, who were interested in politically challenging the system . While they posed a significant challenge to politics, they were also mainstream: they were interested in forming political parties, influencing the vote, and mobilizing people. A parallel today might be students in the Canadian Federation of Students or the left-wing of the New Democratic Party or Democratic Party in the United States.
 
-*Figure 2: The New Left challenges the status quo politically (left image); the counterculture challenges it culturally (right image). Image description . (Mjlovas, 2005); (Life Magazine, 1969)*
+<em>Figure 2: The New Left challenges the status quo politically (left image); the counterculture challenges it culturally (right image). Image description . (Mjlovas, 2005); (Life Magazine, 1969)</em>
 
 The second way, however, is the counterculture – or “hippies” of popular parlance. These young people similarly see society as corrupt and falling apart, but unlike the politically-inclined students of the New Left, they were focused on culturally challenging the status quo . Think sex, drugs, and rock-and-roll – they might agree with New Leftists that society needs to change, but would laugh at those trying to earnestly change it through politics and just instead drop LSD. Note that I am summarizing an entire body of research here in two paragraphs – I wrote a book just on the New Left in Canada! – but it gets at the difference here. To change the world, the counterculture would look towards the mind.
 
@@ -1869,7 +1869,7 @@ Strangely enough, it will be through Steward Brand , who holds the record, (as a
 
 Brand enters our story in 1957, when he is a freshman at Stanford University in the San Francisco Bay Area. Brand is worried about the Soviet Union invading the United States: his fear is that if they were to occupy, his
 
-*Figure 3: Stewart Brand. (cellanr, 2010)*
+<em>Figure 3: Stewart Brand. (cellanr, 2010)</em>
 
 He also sees some of the same problems with the world around him – with the besuited business people who march off to work every day within the capitalist world of the United States. So what to do in this kind of world?
 
@@ -1877,7 +1877,7 @@ To shape his worldview, Brand thus looks to three major influences that impact h
 
 The first is cybernetics – the interaction of human and machine, which is discussed in this week’s readings. After Brand graduates from Stanford, he joins the U.S. Army and is posted to Fort Dix in New Jersey. A quick train ride from Manhattan, he soon begins to hang around artists and other people within the counterculture. He begins to read about cybernetics and sees people who begin to recognize that technology might be able to be used for the common good. We will return to this shortly.
 
-*Figure 4: Marshall McLuhan. (Library and Archives Canada, 1945)*
+<em>Figure 4: Marshall McLuhan. (Library and Archives Canada, 1945)</em>
 
 The second are the ideas of Marshall McLuhan . McLuhan was an English professor at the University of Toronto, and indeed had been for almost twenty years at this point, but McLuhan has begun branching out into cybernetics. In 1962, he publishes The Gutenberg Galaxy . It argues that humanity is leaving the typographic age and entering an electronic one, that type has certain characteristics (it is sequential, segmented, and leads to bureaucratization and rationalization), and that electronic technologies might be able to break this down and bring humans into a new age. Through technology, we could perhaps have a “global village”.
 
@@ -1892,7 +1892,7 @@ These three main forces – McLuhan, Native Americans, and Cybernetics – come 
 
 By March 1968, Brand realizes that many people are influenced by these three factors and are now moving out to the countryside. They are going to need things: blueprints to build their own houses, books to read to teach them how to survive, magazines to entertain them – all sorts of stuff to create new societies. He begins by creating a simple catalogue, and over the next four years, between 1968 and 1971, the catalogue would eventually grow to 448 pages. The cover image that he chooses for the first issue – the “blue marble” showing the “whole earth” – was an important one. Brand had been lobbying NASA to release a (rumoured) image of the earth since the mid-1960s, as he felt it would be an icon of unity. In spring 1969, Whole Earth Catalog would also have a similar image, speaking to Brand’s interest in this image.
 
-*Figure 5: WHOLE EARTH CATALOG 1968. Image description . (Brand, 1968)*
+<em>Figure 5: WHOLE EARTH CATALOG 1968. Image description . (Brand, 1968)</em>
 
 The Whole Earth Catalog (WEC) is a complicated document to understand. It is not quite a book or a catalogue itself, but is best understood, as Turner argues, as a network forum . It is a place where readers can exchange ideas and begin to tease out new ways of working with each other – each from their own backgrounds or disciplines. Individuals from communes participate, of course, but so to do people based in universities, science and technology, the art scene, and even the psychedelic community.
 
@@ -1934,13 +1934,13 @@ Think of this today. When you think of doing cutting-edge technological work, yo
 
 In 1972, this sort of ethos is introduced to the broader public through an article that Brand writes for Rolling Stone , entitled Spacewar: Fanatic Life and Symbolic Death amongst the Computer Bums In the article, Brand watches a group of graduate students play Spacewar , a popular video game at the time, and observes how they use computer networks to play video games against each other. This is not the AN/FSQ-35, but an exciting computer that’s letting these students invent a new collaborative culture of play using technology.
 
-*Figure 2: Spacewar brings together user friendsliness and information sharing. (Graetz, et al., 1961); (Love, 2013)*
+<em>Figure 2: Spacewar brings together user friendsliness and information sharing. (Graetz, et al., 1961); (Love, 2013)</em>
 
 Here we see two things coming together: the vision of user-friendly, time-sharing computing articulated in the NLS system , and the vision of the Whole Earth information community. Brand suggested that these were two sides of the same coin. Articles like “Spacewar” helped make computers seem human and “personal” as opposed to the impersonal mainframe. It also had the side effect of making programmers look cool!
 
 Everything looks like it is finally coming together until the economy begins to crash. Remember how I described the economic boom that started after the Second World War? By the mid-1970s, the wheels begin to come off the economy and the boom becomes bust. In 1973, the OPEC Oil Crisis sees fuel and oil prices rise dramatically (some 300% by 1974) and the North American economy enters a recession. In the United States, this is marked by an economic condition that had previously been seen as impossible: “stagflation,” where inflation and stagnant economic growth happen at the same time. The counterculture and the New Left, which had been waning by this time, largely disappear or are dramatically transformed as an effect of this economic crisis.
 
-*Figure 3: Oil prices 1970-1979. © University of Waterloo*
+<em>Figure 3: Oil prices 1970-1979. © University of Waterloo</em>
 
 Throughout the 1970s, despite economic travails throughout the United States, the computing industry keeps growing. The 1970s begin to see the rise of miniature computers, and by the late 1970s to early 1980s, computers are beginning to enter affluent middle-class homes.
 
@@ -1954,7 +1954,7 @@ Hackers believe that essential lessons can be learned about the systems – abou
 
 Levy had been part of the Whole Earth Catalog community, and showed Brand and other people in that community a copy of his book, and they decide to bring together a gathering of hackers.
 
-*Figure 1: Steven Levy. (Donck, 2006)*
+<em>Figure 1: Steven Levy. (Donck, 2006)</em>
 
 With the Hackers conference of 1984 , which would bring together figures such as Steve Wozniak, Ted Nelson, Richard Stallman, and others, Brand was back in technology. Crucially, at this conference, they tried to define a hacker – the dilemmas around openness and giving away code that continue to be at the heart of software development debates today, and beyond. While they did not come to a consensus at the Hackers conference, they began to form a group identity around the idea of a “hacker”.
 
@@ -1963,7 +1963,7 @@ With Brand, and the pivotal involvement of folks who had been part of the Whole 
 
 ### The Whole Earth ‘Lectronic Link, or WELL
 
-*Figure 2: Well Logo. (Well.com, 2016)*
+<em>Figure 2: Well Logo. (Well.com, 2016)</em>
 
 Enter the WELL, or the Whole Earth ‘Lectronic Link . Started in 1985, the WELL was designed – arguably, as Fred Turner has stressed in this week's reading – to recreate the ideas that had been at the heart of the Whole Earth Catalog in a virtual environment. In other words, to try to create community online. Many of the ideas that we take for granted around the Web and the Internet today, come out of groups like the WELL, especially the early idea of an “ electronic frontier ” and the idea of a “ virtual community ”.
 
@@ -1980,7 +1980,7 @@ If this ethos just stayed on the WELL, that would be one thing – we probably w
 
 ### The WELL Ethos Goes Mainstream in Wired Magazine
 
-*Figure 3: First cover of WIRED. (Condé Nast, 1993)*
+<em>Figure 3: First cover of WIRED. (Condé Nast, 1993)</em>
 
 Wired magazine launches in March 1993. The inaugural issue argues that:
 
@@ -2007,7 +2007,7 @@ If you have been around Internet circles, you may have run into the Electronic F
 
 (Quittner, 1994)
 
-*Figure 4: Electronic Frontier Foundation logo. (Electronic Frontier Foundation, n.d.)*
+<em>Figure 4: Electronic Frontier Foundation logo. (Electronic Frontier Foundation, n.d.)</em>
 
 ## 7e. The Political Shift: Conclusions
 
@@ -2021,7 +2021,7 @@ This dovetailed well with a right-wing vision that saw the information age as tr
 
 This all crystallized in some ways with John Perry Barlow’s A Declaration of the Independence of Cyberspace The former Grateful Dead guitarist wrote this in 1996 at the World Economic Forum in Davos, Switzerland.
 
-*Figure 1: Wired cover depicting Newt Gingrich, August 1995. (Condé Nast, 1995)*
+<em>Figure 1: Wired cover depicting Newt Gingrich, August 1995. (Condé Nast, 1995)</em>
 
 A Declaration of the Independence of Cyberspace
 
@@ -2080,7 +2080,7 @@ For detailed instructions about how to participate, see the Group Discussion Act
 
 We have come a long way in the last half century. In the late 1950s and the 1960s, influential thought-leaders like Stewart Brand and others came of age being afraid of things as wide-ranging as the Soviet Union, the bureaucracy of the United States, and the mechanical form of machinery that some feared being swallowed up by. Over the following decades, they had pushed back against these forces and ultimately saw the prospect for liberation in technology.
 
-*Figure 2: Shift in the perception of computers from oppressive to liberating in 30 years. mayrum/iStock/Getty Images; LongQuattro/iStock/Getty Images*
+<em>Figure 2: Shift in the perception of computers from oppressive to liberating in 30 years. mayrum/iStock/Getty Images; LongQuattro/iStock/Getty Images</em>
 
 When the Web began to explode in the popular consciousness and regular people began adopting networked communication, a process that we will discuss in the next module, the groundwork had been laid for how the public could imagine the online: virtual communities and electronic frontiers. But just as the communes of the 1960s had a dark side (remember, they excluded and were based in the middle-class), so too does this new world: in some cases, there were more places to work, but this was based on contracting; or having more choice, but there were also fewer ties with each other.
 
@@ -2095,7 +2095,7 @@ We have already seen some conceptual forerunners to the World Wide Web in Module
 
 The Web would change all that.
 
-*Figure 1: Conceptual predecessors of hypertext. Image description . (Office for Emergency Management & Library of Congress, c. 1940-1944); (Engelbart, 2008); (Gotanero, 2013)*
+<em>Figure 1: Conceptual predecessors of hypertext. Image description . (Office for Emergency Management & Library of Congress, c. 1940-1944); (Engelbart, 2008); (Gotanero, 2013)</em>
 
 
 ### The World of CERN: Early Moves towards the Web
@@ -2106,7 +2106,7 @@ CERN is a place that brings people together from all over the world to engage in
 
 To understand the Web, we need to go back to CERN in the 1970s and 1980s, to understand the context in which a system like the Web made sense.
 
-*Figure 2: Professor Milligan at CERN. © Ian Milligan*
+<em>Figure 2: Professor Milligan at CERN. © Ian Milligan</em>
 
 
 ### CERN in the 1970s and 1980s
@@ -2115,7 +2115,7 @@ The 1970s was a period of excitement for CERN – they were dreaming of a new go
 
 They begin to lay the plans for large colliders, and in this case, the largest one would be about 27 kilometers long – they had to do that to make gentle corners, because when you send an electron or positron around a corner, it loses energy and sends out x-rays. It accordingly has to be very, very big so that the curves are as gentle as can be. Indeed, when completed in the 2000s, it looked a lot like this:
 
-*Figure 3: Location of the 27 km-long tunnel of the Large Hadron Collider, with inset showing an internal view of the tunnel. Naeblys/iStock/GettyImages; (CERN, n.d.)*
+<em>Figure 3: Location of the 27 km-long tunnel of the Large Hadron Collider, with inset showing an internal view of the tunnel. Naeblys/iStock/GettyImages; (CERN, n.d.)</em>
 
 In order to run these theoretical experiments, you thus have to:
 
@@ -2142,9 +2142,9 @@ Into this context comes Tim Berners-Lee (b. 1955), a physicist who was trained a
 
 Responding to this, in 1980, Berners-Lee begins working on a program called ENQUIRE .
 
-*Figure 4: Tim Berners-Lee. (Clarke, 2014)*
+<em>Figure 4: Tim Berners-Lee. (Clarke, 2014)</em>
 
-*Figure 5: Enquire book cover. (Unknown, 1923)*
+<em>Figure 5: Enquire book cover. (Unknown, 1923)</em>
 
 ENQUIRE was based on an 1856 how-to book from Victorian England entitled Enquire Within Upon Everything . It is a book that tries to tell you how to do, well, everything – etiquette, recipes, laundry instructions, basic first aid, etc. The computer program ENQUIRE is accordingly designed to document everything as well – to “ document a system ”. You would create nodes and then link them together.
 
@@ -2162,7 +2162,7 @@ A user would create different nodes of information and create links between them
 
 - Who or what produced xxx?
 
-*Figure 6: An example of how data relates to each other in ENQUIRE. © Ian Milligan*
+<em>Figure 6: An example of how data relates to each other in ENQUIRE. © Ian Milligan</em>
 
 It had a few crucial characteristics that are important to understand.
 
@@ -2174,7 +2174,7 @@ It had a few crucial characteristics that are important to understand.
 
 - And, it would let people answer questions that they posed of the data within it about the system.
 
-*Figure 7: An example from the ENQUIRE manual. Image description . © University of Waterloo*
+<em>Figure 7: An example from the ENQUIRE manual. Image description . © University of Waterloo</em>
 
 We can see a few examples of this from the ENQUIRE manual .
 
@@ -2215,9 +2215,9 @@ So, Berners-Lee feels that he needs funds – and eventually a NeXT station – 
 
 We write proposals!
 
-*Figure 1: Steve Jobs with his NeXT computer. (Day in Tech History, 1988)*
+<em>Figure 1: Steve Jobs with his NeXT computer. (Day in Tech History, 1988)</em>
 
-*Figure 2: The Grant Cycle: Theory and Practice. Image description . (Cham, 2011)*
+<em>Figure 2: The Grant Cycle: Theory and Practice. Image description . (Cham, 2011)</em>
 
 
 ### Information Management: A Proposal
@@ -2263,9 +2263,9 @@ The first web server was thus launched in December 1990, providing access to inf
 
 The first catch was making sure that people who didn’t have a rare and expensive NeXT computer could access the Web! Imagine today if you wanted to use the Web you could only do so on a very high-end Apple iMac or something along those lines. Responding to this problem, a CERN intern, Nicola Pellow, developed the first “line-mode browser”. As all platforms could display and enter text on a command prompt, this was the simplest solution to let the Web run across all kinds of different computers. The Web was now cross-platform.
 
-*Figure 3: First Web Server. © Ian Milligan*
+<em>Figure 3: First Web Server. © Ian Milligan</em>
 
-*Figure 4: Screenshot of the Line Mode Browser emulator . Image description . (CERN, 2013)*
+<em>Figure 4: Screenshot of the Line Mode Browser emulator . Image description . (CERN, 2013)</em>
 
 You can check this out yourself at Line Mode Browser 2013 . Click “Launch Line Mode Browser” at the top of the page and explore it for a bit. Then reflect on what it might have been like to use the early Web:
 
@@ -2286,19 +2286,19 @@ The Web was now accessible across multiple platforms, so that most computers cou
 
 The Web has a few different birthdays: March 1989 when “Information Management: A Proposal" was Submitted; August 6, 1991 when it was made known to the world through newsgroups; and April 30, 1993 when it was declared free.
 
-*Figure 5: World Wide Web Timeline. © University of Waterloo*
+<em>Figure 5: World Wide Web Timeline. © University of Waterloo</em>
 
 Of course, the Web is only important because non-geeks end up on it! For the web to catch on and really grow, they would need graphical user interfaces on all computers, from Mac to PC alike. The line-mode browser is neat, but as described above, it is not the most user-friendly interface. While CERN was proud of the Web, it was also a bit far afield from its core mission of working with theoretical physics.
 
 The next step would be engaging with the community and volunteers to get the Web going.
 
-> **What your prof thinks:** I go back and forth on whether we should be using old browsers to view websites, or just explore them using our modern Chrome, Firefox, Safari, or Edge browsers. I suppose, to me, it depends on the question. If the aesthetic really matters, then it is worth looking at a few pages using things like the Line-Mode Browser so we can understand how people used these documents and explored them at the time. But I don’t think it scales: I would not want to do all my reading for a project using these emulators. It is like earlier historical eras. People read documents and books by candlelight, but today, I read the same books in a well-lit, air- conditioned or heated room. It is worth thinking about the material conditions that surround a historical document, but we should not obsess about it.
+> <strong>What your prof thinks:</strong> I go back and forth on whether we should be using old browsers to view websites, or just explore them using our modern Chrome, Firefox, Safari, or Edge browsers. I suppose, to me, it depends on the question. If the aesthetic really matters, then it is worth looking at a few pages using things like the Line-Mode Browser so we can understand how people used these documents and explored them at the time. But I don’t think it scales: I would not want to do all my reading for a project using these emulators. It is like earlier historical eras. People read documents and books by candlelight, but today, I read the same books in a well-lit, air- conditioned or heated room. It is worth thinking about the material conditions that surround a historical document, but we should not obsess about it.
 
 ## 8c: Accessing the Web: From Mosaic to Internet Explorer
 
 From here on, the Web begins to develop rapidly. Figure 1, for example, was uploaded in 1992. Appropriately, given the satirical cultures that would emerge on the Web over the following decades, it was an image of the CERN parody rock group: Les Horribles Cernettes .
 
-*Figure 1: The first image sent on the World Wide Web. (Bowden, 2010)*
+<em>Figure 1: The first image sent on the World Wide Web. (Bowden, 2010)</em>
 
 Things were still, stuck, however in the realm of the geeks until early 1993, when the first fully-featured and popular browser, NCSA Mosaic, arrived. This would be the shot needed to propel the Web to its current-day success.
 
@@ -2307,7 +2307,7 @@ Things were still, stuck, however in the realm of the geeks until early 1993, wh
 
 In early 1993, Marc Andreessen and Eric J. Bina, were both at the National Center for Supercomputing Applications (or NCSA, a research unit at the University of Illinois’ campus in Urbana-Champaign), they began working on a new graphical web browser. Formal teams were assembled by the NCSA to begin working on a browser for each of the three major computing platforms – UNIX, Apple, and PC.
 
-*Figure 2: Marc Andreessen and Eric Bina. (Pugliese, 2015); (Bina, n.d.)*
+<em>Figure 2: Marc Andreessen and Eric Bina. (Pugliese, 2015); (Bina, n.d.)</em>
 
 What made these browsers so special?
 
@@ -2321,13 +2321,13 @@ There was one major thing that was left out of Mosaic – it let people browse w
 
 But never mind. As the screenshot below indicates, this was a major change in how the web could be used!
 
-*Figure 3: Mosaic browser. (Calore, 2010)*
+<em>Figure 3: Mosaic browser. (Calore, 2010)</em>
 
 This program – so simple today (compared to Chrome, Safari, Firefox, or Edge today, it would seem antiquated, but also familiar ) – captured media attention. While people might have been familiar with the rough idea of the “information superhighway”, or the Internet, Mosaic seemed to be a way that anybody could use to access websites. You would click on hyperlinks to view content and images would load – in short, the web was here.
 
 You can play with Mosaic today, if you want – visit oldweb.today and you will be brought to an “emulated” version of Mosaic looking at an old version of the University of Waterloo’s website from 1996. We will be returning to these old websites at the end of this module, so stay tuned.
 
-*Figure 4: University of Waterloo's website from 1996. (Rhizome, n.d.)*
+<em>Figure 4: University of Waterloo's website from 1996. (Rhizome, n.d.)</em>
 
 
 ### Fight, Fight, Fight: Mosaic vs. CERN vs. Netscape vs… Microsoft?
@@ -2336,7 +2336,7 @@ Some of the first tensions came from CERN itself. As more and more people used M
 
 Now, after the obvious threat of a lawsuit (don’t name your company after your competitor’s product!), Mosaic Communications renames itself Netscape after their main product, Netscape Navigator. The infamous browser war has begun.
 
-*Figure 5: The short-lived Mosaic Communications Netscape Navigator 0.9. (©Netscape/Microsoft, 2008)*
+<em>Figure 5: The short-lived Mosaic Communications Netscape Navigator 0.9. (©Netscape/Microsoft, 2008)</em>
 
 The goal of Internet Explorer was to leverage Microsoft’s power as the operating system leader to become the leader in how the Web was consumed and understood. Soon, Internet Explorer was bundled with Windows versions. It quickly began to overtake Netscape: by 2003, it had something like 95% of the browser market share. This led to serious legal issues for Microsoft – the bundling of a web browser with the operating system led to the United States government alleging that Microsoft abused its dominant near-monopoly status in operating systems to run other web browsers out of business! While the initial ruling suggested that Microsoft should be forcibly broken into two components (one operating system and the other software). After appeal, the two parties settled out of court with some lesser penalties and remedies.
 
@@ -2347,7 +2347,7 @@ Netscape lives on today, of course – Netscape was bought by another web portal
 
 All of this was happening while the Web dramatically grew. The percentage of Canadians with Internet access increased from 4% in 1995, to 25% in 1998, 60% in 2001, 71% in 2005, and finally to 88% in 2015.
 
-*Figure 6: Percentage of Canadians with Internet access. © University of Waterloo*
+<em>Figure 6: Percentage of Canadians with Internet access. © University of Waterloo</em>
 
 The Web was here to stay. In the next module, we will be exploring the users of the Web and the cultures they generate: from memes, to trolling, to spam. For now, let’s begin to think ahead to what these early websites looked like, as a way to think about Assignment 2 in this course.
 
@@ -2367,7 +2367,7 @@ To visit an old website, you can visit the Internet Archive’s Wayback Machine.
 
 Internet Archive’s Wayback Machine will look something like this:
 
-*Figure 1: Screenshot of the Internet Archive’s Wayback Machine. (Internet Archive, n.d.)*
+<em>Figure 1: Screenshot of the Internet Archive’s Wayback Machine. (Internet Archive, n.d.)</em>
 
 - the University of Waterloo Library (lib.uwaterloo.ca),
 
@@ -2390,19 +2390,19 @@ Now that we have seen this, let’s look at a page.
 
 I would like you to select the University of Waterloo’s home page, and take a look at what you see here. To select the University of Waterloo’s page, you will need to click on the result like so.
 
-*Figure 2: Wayback Machine – University of Waterloo. (Internet Archive, n.d.)*
+<em>Figure 2: Wayback Machine – University of Waterloo. (Internet Archive, n.d.)</em>
 
 You will then see a graph of how often the University of Waterloo has been crawled.
 
-*Figure 3: Wayback Machine, University of Waterloo calendar. (Internet Archive, n.d.)*
+<em>Figure 3: Wayback Machine, University of Waterloo calendar. (Internet Archive, n.d.)</em>
 
 Click on the top graph to select a “year” – it shows how many times a site has been crawled – and then click on the date in the calendar to find the site. Click on October 22, 1997 and then the date that it was crawled, and you will be brought back to the University of Waterloo’s website for that date.
 
-*Figure 4: University of Waterloo homepage from October 22, 1997. (Internet Archive, n.d.)*
+<em>Figure 4: University of Waterloo homepage from October 22, 1997. (Internet Archive, n.d.)</em>
 
 Now you can also browse forward and backwards using the arrows in the top navigational bar.
 
-*Figure 5: Wayback Machine navigational bar. (Wayback Machine, "University of Waterloo Homepage")*
+<em>Figure 5: Wayback Machine navigational bar. (Wayback Machine, "University of Waterloo Homepage")</em>
 
 Pause and Reflect: The Wayback Machine
 
@@ -2419,11 +2419,11 @@ You will quickly discover that the Internet Archive’s keyword search functiona
 
 In the Wayback Machine , navigate to Yahoo.com circa 1996. As a reminder, type Yahoo.com, and then click on the earliest instance of the site that you can find. The earliest snapshot of Yahoo.com is from October 1996.
 
-*Figure 6: Yahoo homepage from October 1996. (Internet Archive, n.d.)*
+<em>Figure 6: Yahoo homepage from October 1996. (Internet Archive, n.d.)</em>
 
 Now try to navigate these directories to find sites of interest. You will notice that there are many gaps, but the information becomes far clearer and more useful the later in time you go. For example, if you go to Yahoo in 2001 , you will find even more information that works.
 
-*Figure 7: Yahoo homepage from 2001. (Internet Archive, n.d.)*
+<em>Figure 7: Yahoo homepage from 2001. (Internet Archive, n.d.)</em>
 
 I would now like you to begin to explore the Wayback Machine and sites of interest for your project.
 
@@ -2470,13 +2470,13 @@ Let’s imagine some of these early users using an example from Internet scholar
 
 If I can make a gross generalization, some of these users are, well, for lack of a better word, nerds. And nerds, of which I am one, really enjoy Monty Python. There is a famous sketch in that show about a “ Spam Restaurant ” where customers are perusing the menu and discover that almost every item in it contains the processed meat product “Spam”.
 
-*Figure 1: Computer lab, PAS Building, University of Waterloo. © University of Waterloo*
+<em>Figure 1: Computer lab, PAS Building, University of Waterloo. © University of Waterloo</em>
 
 The details of the clip are not too important, but needless to say, it involves a lot of people repeating the word SPAM over and over again.
 
 If you were working in these basement computer labs, hacking away at the terminal, and you wanted to irritate another user, you would start getting a script to write SPAM SPAM SPAM SPAM over and over again and ideally send it to your friend. Their screen would fill with the word SPAM, they would be annoyed and frustrated, but ultimately, it would be somewhat funny.
 
-*Figure 2: What early spam may have looked like. © University of Waterloo*
+<em>Figure 2: What early spam may have looked like. © University of Waterloo</em>
 
 Well, from this initial start, spam has been baked into the culture of the Web.
 
@@ -2484,10 +2484,10 @@ We see spam in our e-mail clients, we try to make sure it doesn’t interfere wi
 
 The history of spam, along with the history of memes and trolls, are a good entryway into the wild world of networked communication. Just as computer geeks in the 1980s came up with “spamming” each other, giving rise to a whole way of talking about a form of communication, people who irritated each other generated the idea of “trolling” and sending, editing, and remixing images became a way of sending cultural ideas through “memes” In this module, we explore the unique user cultures that gave rise to the Web that we know today.
 
-*Figure 3: Spam folder. Kenishirotie/iStock/Getty Images*
+<em>Figure 3: Spam folder. Kenishirotie/iStock/Getty Images</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/zLih-WQwBSc?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Web Cultures Introduction*
+<em>Web Cultures Introduction</em>
 
 ## 9b. Spam
 
@@ -2499,7 +2499,7 @@ the manipulation of information technology infrastructure to exploit existing ag
 
 The earliest spam messages predate the name “spam” itself. The first spam message was probably sent on 1 May 1978 from Gary Thuerk, a salesperson for the DEC Corporation. He took the ARPANET directory, found all of the users that lived on the West Coast, and sent a blanket message that there would be an open house for anybody to drop by.
 
-*Figure 1 . First spam message, advertising a DEC Corporation Open House event, May 1978. Image description . ((Templeton, n.d.); tovovan/iStock/Getty Images*
+<em>Figure 1 . First spam message, advertising a DEC Corporation Open House event, May 1978. Image description . ((Templeton, n.d.); tovovan/iStock/Getty Images</em>
 
 ON 2 MAY 78 DIGITAL EQUIPMENT CORPORATION (DEC) SENT OUT AN ARPANET MESSAGE ADVERTISING THEIR NEW COMPUTER SYSTEMS. THIS WAS A FLAGRANT VIOLATION OF THE USE OF ARPANET AS THE NETWORK IS TO BE USED FOR OFFICIAL U.S. GOVERNMENT BUSINESS ONLY. APPROPRIATE ACTION IS BEING TAKEN TO PRECLUDE ITS OCCURRENCE AGAIN.
 
@@ -2522,9 +2522,9 @@ It would be largely eclipsed by the Web by the late 1990s, but not totally – t
 
 In any case, on 12 April 1994, Canter and Siegel post to Usenet about the Green Card Lottery. The Green Card Lottery is an annual event that lets people potentially get a Green Card, or work visa, to come to the United States – for people in the developing world, it is a high-stakes event that could change their lives and the lives of their families forever! Canter and Siegel sent their message, advertising their services to help people get a Green Card, to 5,500 discussion groups. This matters because it was the first commercial spam sent out over the Internet (the DEC salesperson had at least just been inviting people to an open house, not directly soliciting business).
 
-*Figure 2: Green Card Lottery spam message, April 1994. Image description . oleksii arseniuk/iStock/Getty Images*
+<em>Figure 2: Green Card Lottery spam message, April 1994. Image description . oleksii arseniuk/iStock/Getty Images</em>
 
-*Figure 3: Return on investment for Green Card spam mail. © University of Waterloo*
+<em>Figure 3: Return on investment for Green Card spam mail. © University of Waterloo</em>
 
 the manipulation of information technology infrastructure to exploit existing aggregations of human attention.
 
@@ -2539,7 +2539,7 @@ It also helps us understand the development of the Web, because as we begin to s
 
 Throughout the 1990s, the Web is growing: from the first website in 1991, there were 20 by 1992, 10,000 by 1995, and millions by 1998.
 
-*Figure 4: Websites' growth from 1991 to 1998. mayrum/iStock/Getty Images*
+<em>Figure 4: Websites' growth from 1991 to 1998. mayrum/iStock/Getty Images</em>
 
 Spam becomes baked into the very essence of the Web as it grows.
 
@@ -2549,9 +2549,9 @@ Early search engines begin to crawl the Web, as they do today, and find websites
 
 Indeed, the magic of Google is that its search engine helped circumvent the problem of Spam in search engine results. Their “PageRank” algorithm in part uses hyperlinks to websites as votes for their popularity. To understand, let’s imagine two competing websites: the University of Waterloo's website and the “University of Waterloo’s Used Car Dealership” website. The first one is what people probably want to see, the second one is a spam site that is trying to trick people who want to learn about Waterloo to visit it. Under earlier models, the problem was that the used cars were appearing and the great educational experience we offer was not.
 
-*Figure 5: Link farms trick Google's "PageRank" algorithm to rank search results high. Volodymyr Kotoshchuk/iStock/Getty Images (browser); LongQuattro/iStock/Getty Images (link)*
+<em>Figure 5: Link farms trick Google's "PageRank" algorithm to rank search results high. Volodymyr Kotoshchuk/iStock/Getty Images (browser); LongQuattro/iStock/Getty Images (link)</em>
 
-*Figure 6: Weighting the value of links solves ranking problems in search results. Volodymyr Kotoshchuk/iStock/Getty Images (browser); LongQuattro/iStock/Getty Images (link)*
+<em>Figure 6: Weighting the value of links solves ranking problems in search results. Volodymyr Kotoshchuk/iStock/Getty Images (browser); LongQuattro/iStock/Getty Images (link)</em>
 
 
 ### The Evolution of Spam
@@ -2560,7 +2560,7 @@ Spam continues to evolve: when blogging was popular, spammers would post comment
 
 Now we get lots of spam messages trying to capture our accounts by making us click on links, which are getting increasingly sophisticated. There are also things like “like farms,” where people – often in places like China – set up thousands of devices to have people or algorithms click “like” in order to inflate sketchy apps in app stores or elsewhere on the Web. Indeed, today, we find ourselves dominated by spam as we increasingly have to prove that we are human.
 
-*Figure 7: Proving that we are human. (Magid, 2014)*
+<em>Figure 7: Proving that we are human. (Magid, 2014)</em>
 
 
 ### Conclusions: Spam
@@ -2579,7 +2579,7 @@ humans who do mischief using electronic communication.
 
 (Nycyk, 2018)
 
-*Figure 1: Troll. (Watson, 2015)*
+<em>Figure 1: Troll. (Watson, 2015)</em>
 
 In other words, communication that is trying to be provocative, offensive, menacing, and disruptive, done often for the amusement of the person sending it (i.e. “doing it for the lulz”). The word troll itself comes from Norse literature, where trolls are seen as “troublesome, shifting, changing and hard to pin down” (Nycyk, 2018).
 
@@ -2594,18 +2594,18 @@ I am called Troll. I didn’t get the name because I’m a fun guy. I am the the
 
 (Nycyk, 2018)
 
-*Figure 2: An online Troll . dan177/iStock/Getty Images*
+<em>Figure 2: An online Troll . dan177/iStock/Getty Images</em>
 
 Usenet groups would even begin to target each other to troll. One group, the Karl Malden Harvard group (founded by Harvard students to make fun of the Hollywood actor Karl Malden) decided to attack the Beavis ‘N Butthead Group (a TV show popular in the 1990s). They en masse came over and trolled the Beavis ‘N Butthead fans, who then retaliated and drove the Harvard students off of Usenet altogether. As we can see from this, and the troll above, increasingly we are seeing people disrupting others’ online experiences through trolling.
 
 But it is the move from Web 1.0 to Web 2.0 that really steps things up a notch. If Web 1.0 is defined on the Internet as an “information resource” (i.e. the yahoo.com directory that you saw in the last module); Web 2.0 is defined by the social network, or user-generated content. People search for content and create content. This brings user power but also troll power.
 
-*Figure 3: Web 1.0 (information resource) vs. Web 2.0 (social network). mayrum/iStock/Getty Images*
+<em>Figure 3: Web 1.0 (information resource) vs. Web 2.0 (social network). mayrum/iStock/Getty Images</em>
 
 
 ### Trolls in the Age of Social Media
 
-*Figure 4: Staying connected in the age of social media. elenabs/iStock/Getty Images*
+<em>Figure 4: Staying connected in the age of social media. elenabs/iStock/Getty Images</em>
 
 When a social media user dies, their site can become a memorial on sites like Facebook.
 
@@ -2653,7 +2653,7 @@ Sounds a bit like a gene. how about a meme?
 
 We see this definition elsewhere in the literature. Shifman defines memes as
 
-*Figure 1: Infectious digital content. A ntonioGuilleum/iStock/Getty Images*
+<em>Figure 1: Infectious digital content. A ntonioGuilleum/iStock/Getty Images</em>
 
 gene‐like infectious units of culture that spread from person to person, memes have been the subject of constant academic debate, derision, and even outright dismissal.
 
@@ -2670,7 +2670,7 @@ By the late 2000s, memes are everywhere! History can help us understand where th
 
 One of the first Internet memes is Godwin’s Law . Let’s see an example of it in action:
 
-*Figure 2: The Godwin's Law meme. Image description . (xkcd, n.d.)*
+<em>Figure 2: The Godwin's Law meme. Image description . (xkcd, n.d.)</em>
 
 As an online discussion grows longer, the probability of a comparison involving Nazis or Hitler approaches one.
 
@@ -2678,7 +2678,7 @@ As an online discussion grows longer, the probability of a comparison involving 
 
 Who was Mike Godwin? Godwin was a lawyer and frequent contributor to the Usenet groups. He was frustrated that in almost every online conversation he was in, the Nazis always were invoked. In some ways, the Nazi allegory is a meme in and of itself (“You like highways? You know who else liked highways? Hitler liked highways!!”), and so Godwin’s law was a popular counter-meme that sought to stop people from constantly invoking Nazis.
 
-*Figure 3: Mike Godwin. (Hartwell, 2013)*
+<em>Figure 3: Mike Godwin. (Hartwell, 2013)</em>
 
 Module 9d: Individual Activity: The Godwin's Law Meme
 
@@ -2700,12 +2700,12 @@ There are other early memes: from the smiley face [ :-) ], to “jumping the sha
 
 Many of these are text-based memes, of course, and by the mid-1990s, we begin to see the rise of graphical memes . The most famous is probably the “Dancing Baby,” which becomes one of the first mainstream Internet memes: it appears on the popular television show Ally McBeal , in advertisements, etc.
 
-*Figure 4: Dancing Baby meme. (Lussier et. al., 2006)*
+<em>Figure 4: Dancing Baby meme. (Lussier et. al., 2006)</em>
 
 
 ### The Problem of Meme Archives in the Digital Age
 
-*Figure 5: Osama Bin Laden and Bert. (Internet Archive, n.d.)*
+<em>Figure 5: Osama Bin Laden and Bert. (Internet Archive, n.d.)</em>
 
 However, memes present fascinating problems in the digital age, however.
 
@@ -2715,7 +2715,7 @@ Sure, it made sense that Osama Bin Laden – mastermind of the 9/11 attacks in t
 
 Well the answer is that in the late 1990s, Bert was the feature of a classic meme: “Bert is Evil”.
 
-*Figure 6: "Bert is Evil" meme. (Internet Archive, n.d.)*
+<em>Figure 6: "Bert is Evil" meme. (Internet Archive, n.d.)</em>
 
 This meme posted “Bert” with a series of villains: Bert with Hitler, Bert with the Unabomber, Bert present during the assassination of President Kennedy and, yes, Bert with Osama Bin Laden. When protesters were looking for images of Osama Bin Laden on the web, they inadvertently used pictures that included Bert. If you want to learn more, you can read the Wired article “ Osama Has a New Friend ”.
 
@@ -2752,7 +2752,7 @@ Pepe is whatever you say he is, and he and I, the creator, say that he is love .
 
 This raises a number of questions that I would like you to consider in this module’s discussion activity.
 
-*Figure 7: Pepe the frog meme. (Furie, 2005)*
+<em>Figure 7: Pepe the frog meme. (Furie, 2005)</em>
 
 Module 9 Group Discussion Activity
 
@@ -2798,7 +2798,7 @@ In this course to date, we have advanced a fairly linear narrative:
 
 - how this all came together in the “killer app” of the World Wide Web which transformed global communications.
 
-*Figure 1: ARPANET, the TCP/IP Protocol, and hypertext as leading to the WWW. Yevhenii Dubinko/iStock/GettyImages; mayrum/iStock/GettyImages; rungrote/iStock/Getty Images*
+<em>Figure 1: ARPANET, the TCP/IP Protocol, and hypertext as leading to the WWW. Yevhenii Dubinko/iStock/GettyImages; mayrum/iStock/GettyImages; rungrote/iStock/Getty Images</em>
 
 Much of this history, of course, has been based in the United States and to some degree in Western Europe. Networked communication has a different history in different parts of the world, and was also implemented or used in different ways elsewhere. In this module, we will aim to do three main things:
 
@@ -2811,7 +2811,7 @@ Much of this history, of course, has been based in the United States and to some
 
 ### The Difficulties of a Global History of the Internet
 
-*Figure 2: Sample Internet access statistics from the World Bank database. code6d/E+/Getty Images*
+<em>Figure 2: Sample Internet access statistics from the World Bank database. code6d/E+/Getty Images</em>
 
 Module 10a Individual Activity: The World Bank's database
 
@@ -2827,7 +2827,7 @@ If the Internet is a global network today, it was not historically a global netw
 
 This gave North America a critical role in the history of the Internet, and gave English a dominant position on the Web too! As there was such a head start in North America, most early Web and Internet content was in English: so even people accessing the Internet from elsewhere in the world often needed to communicate in English. As we will discuss later in this module, there are legacies of this even today.
 
-*Figure 3: Foundations of today’s Internet originate in the U.S. Yevhenii Dubinko/iStock/Getty Images*
+<em>Figure 3: Foundations of today’s Internet originate in the U.S. Yevhenii Dubinko/iStock/Getty Images</em>
 
 ## 10b. Web Alternatives: The Case of the Minitel
 
@@ -2839,16 +2839,16 @@ In 1991, most Americans had not yet heard of the internet. But all of France was
 
 (Mailland, 2017)
 
-*Figure 1: A Minitel terminal in action. Goodshoot/Getty Images*
+<em>Figure 1: A Minitel terminal in action. Goodshoot/Getty Images</em>
 
 
 ### Telephone-Based Computer Networks
 
-*Figure 2: A Minitel terminal from 1982. (Edward, 2005)*
+<em>Figure 2: A Minitel terminal from 1982. (Edward, 2005)</em>
 
 Minitel was part of an earlier wave of experimenting with networks – a technology that stretched between the late 1970s and in some cases lasted into the early 2010s: telephone-based computer networks . The two most significant examples of this were the successful Minitel network in France and the failed Prestel network (run by the British Post Office). Both systems were launched in 1978.
 
-*Figure 2: Telephone-based computer networks. © University of Waterloo*
+<em>Figure 2: Telephone-based computer networks. © University of Waterloo</em>
 
 Minitel was launched in 1978 as Télétel. Terminals were given out free. While other systems experimented with using televisions, dedicated Minitel terminals were distributed. The trial was successful, and then in 1983 the full system was launched. A few features that led to this system working really well:
 
@@ -2860,7 +2860,7 @@ Minitel was launched in 1978 as Télétel. Terminals were given out free. While 
 
 These three factors were key in driving Minitel adoption. In contrast, the British Prestel system was expensive, censored, and required a specialized engineer to handle some of the installation. This meant that while the Prestel system hung on until 1994, it only hit a peak of 90,000 subscribers. Minitel, on the other hand, had five million Minitels in action by 1989 alone!
 
-*Figure 3: Minitel (France) is free, plug and play, unregulated content versus Prestel (Britain) that is expensive, required engineer to install, and censored. © University of Waterloo*
+<em>Figure 3: Minitel (France) is free, plug and play, unregulated content versus Prestel (Britain) that is expensive, required engineer to install, and censored. © University of Waterloo</em>
 
 
 ### Vibrant User Cultures
@@ -2903,10 +2903,10 @@ I suppose, after all, it is called the World Wide Web for a reason!
 
 In any case, in 2012, Minitel was finally shut down – it was indeed, as the authors foresaw, replaced by the Web. Yet the importance of the Minitel lies in understanding that people were doing and working with things that were like the Web without the Web – and that the Web would come along and largely supplant these systems!
 
-*Figure 4: An abandoned Minitel. Florian Chouya/iStock/Getty Images*
+<em>Figure 4: An abandoned Minitel. Florian Chouya/iStock/Getty Images</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/HOhK9bgQo8g?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*The Minitel: France's Pre-Web Network*
+<em>The Minitel: France's Pre-Web Network</em>
 
 ## 10c. The Soviet Internet: A Failed Alternative to the Internet
 
@@ -2914,9 +2914,9 @@ If the Minitel represented a pre-Web technology that foreshadowed the power of n
 
 After the Second World War, which saw the defeat of Nazi Germany, Fascist Italy, and Imperial Japan by the allied powers led by the United States, the United Kingdom, and the Soviet Union, the world was uneasily carved up into spheres of influence between the capitalist west and the communist east. Part of this contest was over which system was superior: the market-driven west or the command-and-control economies of the east.
 
-*Figure 1: NATO member countries (aka Western Bloc). (Ssolbergj, 2008)*
+<em>Figure 1: NATO member countries (aka Western Bloc). (Ssolbergj, 2008)</em>
 
-*Figure 2: Warsaw Pact countries (aka Eastern Bloc). (Bjarmason, 2004)*
+<em>Figure 2: Warsaw Pact countries (aka Eastern Bloc). (Bjarmason, 2004)</em>
 
 The Internet that we know emerged out of the west, albeit not largely out of the vibrant free-market economy, but out of the state-supported defence and research establishment that led to the development of the ARPANET and then later TCP/IP. But what about the Soviet Union? If the Internet emerged out of state collaboration with researchers – with the ability for the Soviet economy to be directed in a way not possible in the United States – surely there could there be potential for the emergence of networked communication as well?
 
@@ -2929,7 +2929,7 @@ The Automation of Machines and Operations Must be Extended to the Automation of 
 
 (Khruschev, 1956)
 
-*Figure 3: Nikita Khruschev. (Junge, 1963)*
+<em>Figure 3: Nikita Khruschev. (Junge, 1963)</em>
 
 In practice, of course, things did not always work so optimally: a plant manager might not want the central planners to have the full information around their resources available, as they often tended to want to undershoot targets. The consequences for missing targets could be severe, after all, and much of their power came from having some local autonomy.
 
@@ -2937,9 +2937,9 @@ Between 1959 and 1962, the Soviet Union saw two major initial projects that atte
 
 The first was Anatoly Kitov’s Economic Automatic Management System or EASU in 1959. This was an early attempt to take small computer networks that were emerging in factories – think mainframe computers that were coordinating factory machinery – and to begin to join them together. Imagine all the tractor factories beginning to be able to communicate to see how things were working. However, his proposal sought to leverage Soviet military networks by using Ministry of Defence computers to then take all of that data and find ways to optimize and streamline production. The Soviet military did not take too kindly to this: Kitov was stripped of his Communist Party membership, removed as the director of a computer centre, and effectively ended his career. In other words, EASU was destroyed as it was seen as a threat to the Soviet military’s powerful role.
 
-*Figure 4: Anatoly Kitov. (Unknown, n.d.)*
+<em>Figure 4: Anatoly Kitov. (Unknown, n.d.)</em>
 
-*Figure 5: Alexasandr Kharkevich (Unknown, n.d.)*
+<em>Figure 5: Alexasandr Kharkevich (Unknown, n.d.)</em>
 
 Three years later in 1962, there would be another event at a national network. Alexasandr Kharkevich, a researcher in Soviet cybernetics, proposed a national communications network – the Unified Communication System or ESS . Whereas EASU had the goal of motivating production, ESS was more similar to the ARPANET: bringing researchers together, but also really just having the technical ambition of playing with large-scale networks! There was a lot of potential – a fleshed-out proposal that saw a distributed network that in some ways echoed Paul Baran’s ideas that we saw in our ARPANET module – but the project largely died when Kharkevich died in 1965. It illustrated paradoxically that individuals were very important in this Soviet system, as it could not survive the loss of one key person.
 
@@ -2954,7 +2954,7 @@ His goal was to provide information around the economy: similarly, to the EASU, 
 
 If you are trying to run a centralized economy, you can imagine how useful this would be!
 
-*Figure 6: Viktor Glushkov. (Peters, 2016)*
+<em>Figure 6: Viktor Glushkov. (Peters, 2016)</em>
 
 It had some key differences from the ARPANET. Notably, the ARPANET was all about packet switching , whereas the OGAS fundamentally needed to have a central information processor at the heart of the network. Above I referred to sending information to the “top” – there is no “top” in the ARPANET or the Internet, of course, but there would be in OGAS.
 
@@ -2985,7 +2985,7 @@ The irony, of course, is that it was the government in the United States that la
 
 What it does, however, is help complicate the narrative further and help us understand a bit more about why the ARPANET was ultimately successful!
 
-*Figure 8: ARPANET successful in the U.S., while intra-agency competition destroys OGAS in the Soviet Union. MicroStockHub/iStock/Getty Images*
+<em>Figure 8: ARPANET successful in the U.S., while intra-agency competition destroys OGAS in the Soviet Union. MicroStockHub/iStock/Getty Images</em>
 
 ## 10d. What Are the Impacts of the Internet, Starting in North America and Western Europe?
 
@@ -2995,7 +2995,7 @@ Let’s consider a keyboard.
 
 If you are using a computer right now, look down (or if you are on a mobile device, open your keyboard). Chances are you will see something that looks a lot like this:
 
-*Figure 1: Qwerty keyboard with U.S. English layout. Pavlo Stavnichuk/iStock/Getty Images*
+<em>Figure 1: Qwerty keyboard with U.S. English layout. Pavlo Stavnichuk/iStock/Getty Images</em>
 
 This layout is called the “QWERTY” layout, because the first six keys on the top row of letters spells out QWERTY. There is some debate about why we have this relatively weird layout of letters that we have largely become accustomed to, but generally, the rationale behind this layout was to distribute frequently occurring pairs of letters around the keyboard so that a typewriter wouldn’t jam if a typist were typing too quickly. There are other more efficient keyboard layouts around, but we generally use QWERTY.
 
@@ -3035,7 +3035,7 @@ Note: This is for individual reflection only; you are not required to submit you
 
 We can see in this graph that the standard quickly began to take over, allowing for greater interoperability of texts on the Web!
 
-*Figure 2: The usage of the main encodings on the Web from 2001 to 2012 as recorded by Google. (Chris55, 2016)*
+<em>Figure 2: The usage of the main encodings on the Web from 2001 to 2012 as recorded by Google. (Chris55, 2016)</em>
 
 
 ### The Internet Is Still Not Truly Global
@@ -3045,7 +3045,7 @@ Of course, we began this module by discussing how Internet usage rates differ dr
 China, of course, has seen Internet development along very different lines. The Internet first arrived in mainland China in 1994, and the “Golden Shield” program was launched in 1998, including the Great Firewall that blocks access to many websites around the world. Wikipedia maintains a fairly consistently updated list of “ Websites blocked in mainland China ”, which is a vivid illustration of how Internet access is very different in China!
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/MijmeoH9LT4?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*The Internet's Global Impact*
+<em>The Internet's Global Impact</em>
 
 ## 10e. Web around the World: Three DIY Case Studies
 
@@ -3065,9 +3065,9 @@ Case Study 1: “A Brief History of the Taiwanese Internet”
 
 This chapter, by Li Shao Liang, Lin Yi-Ren, and Arthur Hou-ming Huang, looks at early Internet cultures in Taiwan. We have seen Bulletin Board Systems, or BBSes, in the past. Throughout much of the world, BBSes were largely eclipsed by the World Wide Web and were mostly defunct by the mid-to-late 1990s. The same was not true in Taiwan, however, where BBSes continue to remain relevant as a way to organize and facilitate student activism! We can see how government policy influenced this very different culture: faster connections to Taiwanese university students, free access via dorms, and administrators selected by students let the BBSes develop a distinct culture. Thanks to conscious government and university policies, this is a really useful case study as we can see how similar technology evolved in different ways in North America and in Taiwan.
 
-*Figure 1: Prevalence of BBSes in Taiwan. Thitima Thongkham/iStock/Getty Images*
+<em>Figure 1: Prevalence of BBSes in Taiwan. Thitima Thongkham/iStock/Getty Images</em>
 
-*Figure 2: Prevalence of Intranets in Japan. v-graphix/iStock/Getty Images*
+<em>Figure 2: Prevalence of Intranets in Japan. v-graphix/iStock/Getty Images</em>
 
 Case Study 2: “Early Computer Networks in Japan, 1984-1994”
 
@@ -3077,7 +3077,7 @@ Case Study 3: "H-Mail and the Early Configuration of Online User Culture in Kore
 
 Finally, this chapter looks at Korea. Dongwon Jo argues that Internet use in South Korea primarily evolved through a public email service, H-Mail, which was launched in 1987. This was an e-mail service that served as a computer network: while it was originally designed as a broadcast service (i.e., where messages could be sent out to many users), early users managed to manipulate the system so that it became not only a standard email service but even really allowing for online communities!
 
-*Figure 3: Prevalence of the H-mail service in South Korea. Pohdee/iStock/Getty Images*
+<em>Figure 3: Prevalence of the H-mail service in South Korea. Pohdee/iStock/Getty Images</em>
 
 Once you have read your assigned chapter, you are ready to participate in the Module 10 discussion.
 
@@ -3161,13 +3161,13 @@ Our collective cultural heritage faces a serious problem in the digital age. We 
 
 The problem can be summed up in something as innocuous as a personal homepage, hosted on the free GeoCities.com service.
 
-*Figure 1: The landing page of GeoCities.com as it appeared on December 19, 1996. (Internet Archive, n.d.)*
+<em>Figure 1: The landing page of GeoCities.com as it appeared on December 19, 1996. (Internet Archive, n.d.)</em>
 
 GeoCities.com, founded in 1994, provided free websites to anybody who wanted to create one. A user would visit GeoCities.com, enter their e-mail address, and receive a free megabyte to stake their own space on the burgeoning Information Superhighway. These sites took many shapes and sizes: a Buffy the Vampire Slayer fan site, a celebration of a favourite sports team, a family tree, and even a young child’s tribute to Winnie the Pooh.
 
 Early Web users flocked to the site, as the following visualization shows:
 
-*Figure 2: Growth in GeoCities user base, 1995-1997. © Ian Milligan*
+<em>Figure 2: Growth in GeoCities user base, 1995-1997. © Ian Milligan</em>
 
 By October 1995, the first ten thousand users had created their sites. Two years later, a million had. And by 2009, seven million users had created accounts on GeoCities.com.
 
@@ -3182,13 +3182,13 @@ In 1996, Brewster Kahle and Bruce Gilliat founded the San Francisco-based Intern
 
 This can lead to some significant shifts in how we write and understand history. For example, take the popular 1990s/early 2000s electronic pet the “Tamagotchi”. A historian, before web archives, might have to rely on the Globe and Mail or the New York Times to read journalists trying to explain the phenomenon. Whereas, with Web archives, we can now go right back to sites from twenty years ago and celebrate them! We can then figure out what that trend meant about our relationship to animals, each other, and technology. For example, we can visit “ Tamagotchi World ” from 1999.
 
-*Figure 3: Brewster Kahle and Bruce Gilliat. (Telfer, 1998)*
+<em>Figure 3: Brewster Kahle and Bruce Gilliat. (Telfer, 1998)</em>
 
-*Figure 4: Screenshot of the Tamagotchi World website, February 18, 1999. (Internet Archive, n.d.)*
+<em>Figure 4: Screenshot of the Tamagotchi World website, February 18, 1999. (Internet Archive, n.d.)</em>
 
 The list continues and continues: political histories of the late 1990s from elections to early Internet censorship – dot.com businesses. For example, check out this early Amazon.com page from 1999 .
 
-*Figure 5: Screenshot of Amazon.com, August 28, 1999. (Internet Archive, n.d.)*
+<em>Figure 5: Screenshot of Amazon.com, August 28, 1999. (Internet Archive, n.d.)</em>
 
 
 ### What does this mean?
@@ -3230,7 +3230,7 @@ Since 2005, the University of Toronto Libraries have been collecting a web archi
 
 Check it out at Archive-it . When you are there, try to do a search for webpages about “Stephen Harper” who was the Prime Minister of Canada between 2006 and 2015. Here is what the results look like when I run the query (your results may be slightly different as you are running the search at a different time than I am).
 
-*Figure 1: Screenshot of search results for “Stephen Harper” on University of Toronto’s Canadian Political Parties and Political Interest Groups Web Archive. (Archive-it, n.d.)*
+<em>Figure 1: Screenshot of search results for “Stephen Harper” on University of Toronto’s Canadian Political Parties and Political Interest Groups Web Archive. (Archive-it, n.d.)</em>
 
 You will see in this case that I have received 637,078 results for pages that contain “Stephen Harper” (I put the name in quotation marks so it would search it in its entirety). In my case, the results range from Harper's Twitter webpage to a Facebook page to an archived article in the Walrus , a Canadian magazine.
 
@@ -3238,7 +3238,7 @@ These are useful results, and the search engine is extremely useful for much tar
 
 One question I often like to ask is who decides what we see ? In this case, the search engine is deciding to put Harper’s Twitter page first; his Facebook page fifth; and pages dedicated to his policies on other websites far, far lower.
 
-*Figure 2: Who decides what we see? Volodymyr Kotoshchuk/iStock/GettyImages*
+<em>Figure 2: Who decides what we see? Volodymyr Kotoshchuk/iStock/GettyImages</em>
 
 
 ### The Humanities and the World of Data: From Black Boxes to Understandable Algorithms
@@ -3251,11 +3251,11 @@ How to analyze, interpret, and exploit big data are big problems for the humanit
 
 In short, these are actually really pressing problems for humanists.
 
-*Figure 3: Search engines can operate as a black box . © University of Waterloo*
+<em>Figure 3: Search engines can operate as a black box . © University of Waterloo</em>
 
 This is because imagine a researcher using a search engine to explore old web sites. They search for “Stephen Harper” and then read the first five pages of results (because, to be honest, very few people ever go beyond even the first or second page, let alone the 10,000 th page of results!). They think they are writing their research paper on Stephen Harper, but in reality the algorithm which decided which result would be 1 st or 2 nd and which one would be 15,000 th or 20,000 th decided what the researcher would see.
 
-*Figure 4: Search engine algorithms as co-authors? © University of Waterloo*
+<em>Figure 4: Search engine algorithms as co-authors? © University of Waterloo</em>
 
 In other words, in the era of Big Data, humanists and other scholars are going to be using these very large repositories of data – and they need to understand in some ways how they work!
 
@@ -3325,7 +3325,7 @@ To do research, historians and others are increasingly working with the underlyi
 
 One of the research questions that I was exploring was the experience of youth and children in GeoCities. Until 1999, GeoCities was organized along the lines of “neighbourhoods,” which were places where people would thematically cluster websites – for example, if you wanted a website about your pet, you would create it in “Heartland”, your university in “Athens, and your favourite photographs of cars in “MotorCity”; and so forth. One of these neighbourhoods was the “Enchanted Forest”, which had hundreds of thousands of pages and millions of words largely written by children and youth between 1996 and 1999.
 
-*Figure 5: The GeoCities Enchanted Forest Homepage as it appeared April 17, 1997. (Internet Archive, n.d.)*
+<em>Figure 5: The GeoCities Enchanted Forest Homepage as it appeared April 17, 1997. (Internet Archive, n.d.)</em>
 
 I tried to start this process by using the Wayback Machine, but it was too slow. How else could I find valuable information in this neighbourhood?
 
@@ -3341,16 +3341,16 @@ It looked a bit like this:
 
 Ian Milligan. (2016, May 24). Enchanted Forest PageRank. [Video]. YouTube. https://www.youtube.com/watch?v=JRpjXe0PsqE
 
-*Figure 6: Screenshot of Enchanted Forest Awards page, January 27, 1999. (Internet Archive, n.d.)*
+<em>Figure 6: Screenshot of Enchanted Forest Awards page, January 27, 1999. (Internet Archive, n.d.)</em>
 
 We can see that it was an awards page – many people linked to it because when this page gave them an “award”, they would post it on their website and in turn, there would be a link to the site. Aha! This was an interesting characteristic of the Enchanted Forest that I ended up writing about for a peer-reviewed publication.
 
 Even more tellingly, we could see what this website became:
 
-*Figure 7: Screenshot of Enchanted Forest site, February 11, 2006, after it was acquired by Yahoo! Image description . (Internet Archive, n.d.)*
+<em>Figure 7: Screenshot of Enchanted Forest site, February 11, 2006, after it was acquired by Yahoo! Image description . (Internet Archive, n.d.)</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/JRpjXe0PsqE?rel=0" frameborder="0" allowfullscreen></iframe></div>
-*Cultural Big Data and Web Archives*
+<em>Cultural Big Data and Web Archives</em>
 
 ## 11d. Creating our Own Cultural Datasets
 
@@ -3361,7 +3361,7 @@ In Module 9 we explored some of the hands-on ways to explore web archives. In th
 
 Let’s begin with an example of social media data collecting. One popular way to collect Twitter data is using an application called twarc ".
 
-*Figure 1: twarc screenshot. (Documenting the Now, c. 2016)*
+<em>Figure 1: twarc screenshot. (Documenting the Now, c. 2016)</em>
 
 - collect all tweets that contain a given word or string (i.e. #blacklivesmatter),
 
@@ -3405,13 +3405,13 @@ You put the URL into the box, click “SAVE PAGE,” and within minutes that pag
 
 The second is a website called WebRecorder.io , which lets you record a website as it exists on the screen when you see it. For example, you can decide to record a Twitter account with this website and you not only record the tweets, but also the look and feel of the interface.
 
-*Figure 2: Screenshot of the Internet Archive’s “Save Page Now” service. (Internet Archive, n.d.)*
+<em>Figure 2: Screenshot of the Internet Archive’s “Save Page Now” service. (Internet Archive, n.d.)</em>
 
 You can see this in the screenshot below, where I have visited Webrecorder and then pasted the University of Waterloo’s Twitter account into the “URL to record” box.
 
-*Figure 3: Screenshot of the University of Waterloo’s Twitter page, captured by WebRecorder.io, May 2019. (Twitter, n.d.)*
+<em>Figure 3: Screenshot of the University of Waterloo’s Twitter page, captured by WebRecorder.io, May 2019. (Twitter, n.d.)</em>
 
-*Figure 4: Screenshot of WebRecorder.io’s “Turn on autoscroll” feature. (©University of Waterloo, 2019)*
+<em>Figure 4: Screenshot of WebRecorder.io’s “Turn on autoscroll” feature. (©University of Waterloo, 2019)</em>
 
 The page would then automatically archive the entirety of the University of Waterloo’s twitter feed, as of the moment I was recording it!
 
@@ -3433,7 +3433,7 @@ Thanks to a Facebook page, perhaps for the first time in history, an internet us
 
 These are serious matters.
 
-*Figure 1: A screenshot of the “We are all Kahled Said” Facebook page, which was instrumental during the 2011 Egyptian Revolution. (Facebook, 2019)*
+<em>Figure 1: A screenshot of the “We are all Kahled Said” Facebook page, which was instrumental during the 2011 Egyptian Revolution. (Facebook, 2019)</em>
 
 You can read more at the “ Death of Khaled Mohamed Saeed ” Wikipedia page.
 
@@ -3479,7 +3479,7 @@ In the previous modules, we were introduced to many of the earlier technologies 
 
 At the beginning of the course, you were asked to consider whether it makes sense to speak of an information revolution before we understand where we have come from. Now, after the entire semester of content, you are ready to begin to reflect on this: Do you think it’s proper to understand what’s going on as "the" information revolution? Or is it just “an” information revolution? Or is it not really a revolution at all?
 
-*Figure 1: Our connected world: "the" information revolution? Jakarin2521/iStock/Getty Images*
+<em>Figure 1: Our connected world: "the" information revolution? Jakarin2521/iStock/Getty Images</em>
 
 
 ### The Value of History
@@ -3505,18 +3505,18 @@ For detailed instructions about how to participate, see the Group Discussion Act
 
 We have covered a lot of ground in this course. We began with the earliest forms of recorded human “conversation” in the caves of Spain, Argentina, and Indonesia, to inscriptions on stone in Mesopotamia, to the Gutenberg Press, and printing objects on parchment and vellum. It was with Gutenberg that we began to muse about the potential of a “revolution”, where we could begin to think of human history as being divided into two epochs: before printing press and after printing press.
 
-*Figure 2: Timeline showing the pivotal role of the printing press (1455) in human history. Buenaventuramariano/iStock/Getty Images, Nadiinko/iStock/Getty Images*
+<em>Figure 2: Timeline showing the pivotal role of the printing press (1455) in human history. Buenaventuramariano/iStock/Getty Images, Nadiinko/iStock/Getty Images</em>
 
 We also looked at various methods of transmitting information: first through vision (the optical telegraph, long lines of towers stretching across France and England) and sound (loud bangs when clocks were synchronized), and then of course through electricity. The telegraph would eventually connect much of the world – transatlantic and transpacific cables connecting areas of the world that previously had taken weeks to communicate.
 
 And, then, of course – the “Internet” part of the course. As information density began to grow dramatically, ideas of hypertext began to dramatically challenge the linearity of text, allowing us to think conceptually about how computers could present and connect information in novel ways. In some ways, much of this potential saw fruition through the ARPANET, but ultimately through the ideas of the World Wide Web, which has reshaped our world – in a truly global fashion, as we have seen – in the few decades since its availability in 1991. In turn, all of this is further transforming how we as a society understand ourselves, as we record far more historical information than ever before.
 
-*Figure 4. If telegraphs took minutes, today we take it for granted that a smartphone can almost instantly communicate with people all over the world. Warchi/E+/Getty Images*
+<em>Figure 4. If telegraphs took minutes, today we take it for granted that a smartphone can almost instantly communicate with people all over the world. Warchi/E+/Getty Images</em>
 
 
 ### Our Lives Have Changed
 
-*Figure 5: Edgar Allan Poe. ivan-96/iStock/Getty Images*
+<em>Figure 5: Edgar Allan Poe. ivan-96/iStock/Getty Images</em>
 
 The last thing I want to leave you with, before switching gears to talk about some of the summative activities we will be doing to get ready for the final exam, is an example of the sheer quantity of data that’s now being generated every single day.
 
@@ -3524,5 +3524,5 @@ Let’s consider Edgar Allan Poe (1809-1849), the poet best known for poems like
 
 Just think. Who here has “published” more than he has? All of you. You all publish more than Edgar Allan Poe, and will leave more behind, and in theory, you have the ability to reach more people than him. You live in a world dominated by communication: through text, through images, through videos, and beyond. Of course, we might close by asking: Is that a good thing?
 
-*Figure 6: Next time you worry about how much time you spend on your phone, just think of yourself as adding to our collective historical record! skynesher/E+/Getty Images*
+<em>Figure 6: Next time you worry about how much time you spend on your phone, just think of yourself as adding to our collective historical record! skynesher/E+/Getty Images</em>
 

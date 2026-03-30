@@ -183,34 +183,34 @@ Along a linear demand curve, demand is elastic in the upper half (above the midp
 - Inelastic demand: A price cut decreases TR (quantity rises less than proportionally).
 - Unit elastic: A price cut leaves TR unchanged.
 
-The **total revenue test** is a practical shortcut — by observing how TR responds to a price change, a firm can infer its demand elasticity without formal data.
+The <strong>total revenue test</strong> is a practical shortcut — by observing how TR responds to a price change, a firm can infer its demand elasticity without formal data.
 
 ## 3.2 Income Elasticity of Demand
 
-**Income elasticity of demand** (\(\varepsilon_M\)) measures how responsive quantity demanded is to a change in consumer income:
+<strong>Income elasticity of demand</strong> (\(\varepsilon_M\)) measures how responsive quantity demanded is to a change in consumer income:
 
 \[
 \varepsilon_M = \frac{\Delta Q / \text{avg } Q}{\Delta M / \text{avg } M}
 \]
 
-- If \(\varepsilon_M > 0\): **normal good** — demand rises with income (further classified as income elastic if \(\varepsilon_M > 1\), income inelastic if \(0 < \varepsilon_M < 1\)).
-- If \(\varepsilon_M < 0\): **inferior good** — demand falls as income rises (e.g., instant noodles, generic brands). The "Dusty Noodles" story illustrates how a good consumed heavily when poor becomes less desirable as income rises.
+- If \(\varepsilon_M > 0\): <strong>normal good</strong> — demand rises with income (further classified as income elastic if \(\varepsilon_M > 1\), income inelastic if \(0 < \varepsilon_M < 1\)).
+- If \(\varepsilon_M < 0\): <strong>inferior good</strong> — demand falls as income rises (e.g., instant noodles, generic brands). The "Dusty Noodles" story illustrates how a good consumed heavily when poor becomes less desirable as income rises.
 
 ## 3.3 Cross Elasticity of Demand
 
-**Cross elasticity of demand** (\(\varepsilon_{XY}\)) measures the responsiveness of the quantity demanded of good X to a change in the price of good Y:
+<strong>Cross elasticity of demand</strong> (\(\varepsilon_{XY}\)) measures the responsiveness of the quantity demanded of good X to a change in the price of good Y:
 
 \[
 \varepsilon_{XY} = \frac{\Delta Q_X / \text{avg } Q_X}{\Delta P_Y / \text{avg } P_Y}
 \]
 
-- **Substitutes**: \(\varepsilon_{XY} > 0\). Higher price for Y makes X relatively cheaper, increasing demand for X (e.g., wakeboards and waterskis: \(\varepsilon_{XY} \approx 1.55\)).
-- **Complements**: \(\varepsilon_{XY} < 0\). Higher price for Y raises the combined cost of consuming X and Y together, reducing demand for X (e.g., hot dogs and buns).
-- **Unrelated goods**: \(\varepsilon_{XY} = 0\).
+- <strong>Substitutes</strong>: \(\varepsilon_{XY} > 0\). Higher price for Y makes X relatively cheaper, increasing demand for X (e.g., wakeboards and waterskis: \(\varepsilon_{XY} \approx 1.55\)).
+- <strong>Complements</strong>: \(\varepsilon_{XY} < 0\). Higher price for Y raises the combined cost of consuming X and Y together, reducing demand for X (e.g., hot dogs and buns).
+- <strong>Unrelated goods</strong>: \(\varepsilon_{XY} = 0\).
 
 ## 3.4 Elasticity of Supply
 
-**Elasticity of supply** (\(\varepsilon_S\)) measures the responsiveness of quantity supplied to a price change:
+<strong>Elasticity of supply</strong> (\(\varepsilon_S\)) measures the responsiveness of quantity supplied to a price change:
 
 \[
 \varepsilon_S = \frac{\Delta Q_S / \text{avg } Q_S}{\Delta P / \text{avg } P}
@@ -218,9 +218,9 @@ The **total revenue test** is a practical shortcut — by observing how TR respo
 
 Because of the law of supply, \(\varepsilon_S\) is always positive. Supply is elastic (\(\varepsilon_S > 1\)) when producers can easily adjust output; inelastic when adjustment is difficult. A supply curve passing through the origin is unit elastic regardless of slope.
 
-**Factors affecting elasticity of supply:**
-- **Resource substitution possibilities**: The easier it is to switch productive resources toward a good, the more elastic the supply.
-- **Time frame**: *Momentary* supply (immediate period) is perfectly inelastic. *Short-run* supply is somewhat elastic. *Long-run* supply is most elastic, as firms can fully adjust capacity, entry, and exit.
+<strong>Factors affecting elasticity of supply:</strong>
+- <strong>Resource substitution possibilities</strong>: The easier it is to switch productive resources toward a good, the more elastic the supply.
+- <strong>Time frame</strong>: <em>Momentary</em> supply (immediate period) is perfectly inelastic. <em>Short-run</em> supply is somewhat elastic. <em>Long-run</em> supply is most elastic, as firms can fully adjust capacity, entry, and exit.
 
 ## 3.5 Summary of Elasticities
 
@@ -239,20 +239,20 @@ Because of the law of supply, \(\varepsilon_S\) is always positive. Supply is el
 
 Scarce resources can be allocated in multiple ways:
 
-1. **Market price**: Resources go to those willing and able to pay. Efficient and impersonal; rewards willingness to pay.
-2. **Command system**: Authority figures direct resources (used in firms, militaries, and centrally planned economies). Works well where authority is clear but breaks down at large scale.
-3. **Majority rule**: Voters (through elected representatives) direct resource allocation. Works for public goods affecting many people; subject to interest-group capture.
-4. **Contest**: Resources go to winners (sales contests, sports tournaments). Useful when performance is difficult to monitor directly.
-5. **First-come, first-served**: Resources go to those who arrive earliest (queuing). Works when serving only one person at a time.
-6. **Lottery**: Random allocation (airport landing slots, some marathons). Useful when there is no good basis for distinguishing users.
-7. **Personal characteristics**: Resources distributed based on traits — often leads to discrimination.
-8. **Force**: Coercion redistributes resources; can be legitimate (taxation) or illegitimate (theft, war).
+1. <strong>Market price</strong>: Resources go to those willing and able to pay. Efficient and impersonal; rewards willingness to pay.
+2. <strong>Command system</strong>: Authority figures direct resources (used in firms, militaries, and centrally planned economies). Works well where authority is clear but breaks down at large scale.
+3. <strong>Majority rule</strong>: Voters (through elected representatives) direct resource allocation. Works for public goods affecting many people; subject to interest-group capture.
+4. <strong>Contest</strong>: Resources go to winners (sales contests, sports tournaments). Useful when performance is difficult to monitor directly.
+5. <strong>First-come, first-served</strong>: Resources go to those who arrive earliest (queuing). Works when serving only one person at a time.
+6. <strong>Lottery</strong>: Random allocation (airport landing slots, some marathons). Useful when there is no good basis for distinguishing users.
+7. <strong>Personal characteristics</strong>: Resources distributed based on traits — often leads to discrimination.
+8. <strong>Force</strong>: Coercion redistributes resources; can be legitimate (taxation) or illegitimate (theft, war).
 
 Markets use the price mechanism and are generally the most efficient allocator for private goods, but each method has applications where it works best.
 
 ## 4.2 Consumer Surplus
 
-The **demand curve** is also the **marginal benefit (MB) curve** — its vertical height at any quantity shows the maximum willingness to pay for the next unit.
+The <strong>demand curve</strong> is also the <strong>marginal benefit (MB) curve</strong> — its vertical height at any quantity shows the maximum willingness to pay for the next unit.
 
 <div class="definition"><strong>Consumer surplus (CS):</strong> the excess of the maximum amount consumers are willing to pay over the price they actually pay — the area below the demand curve and above the market price.</div>
 
@@ -260,7 +260,7 @@ When multiple consumers participate, the market demand curve is the horizontal s
 
 ## 4.3 Producer Surplus
 
-The **supply curve** is also the **marginal cost (MC) curve** — its vertical height shows the minimum price producers will accept for the next unit.
+The <strong>supply curve</strong> is also the <strong>marginal cost (MC) curve</strong> — its vertical height shows the minimum price producers will accept for the next unit.
 
 <div class="definition"><strong>Producer surplus (PS):</strong> the excess of the price received by producers over the minimum amount they require — the area above the supply curve and below the market price.</div>
 
@@ -268,31 +268,31 @@ Producer surplus measures the net gain to sellers from market participation.
 
 ## 4.4 Competitive Equilibrium and Efficiency
 
-In competitive equilibrium, the market demand curve equals the **marginal social benefit (MSB)** curve and the supply curve equals the **marginal social cost (MSC)** curve. At equilibrium, \(MSB = MSC\), which is the condition for **allocative efficiency** — the quantity that maximizes total surplus.
+In competitive equilibrium, the market demand curve equals the <strong>marginal social benefit (MSB)</strong> curve and the supply curve equals the <strong>marginal social cost (MSC)</strong> curve. At equilibrium, \(MSB = MSC\), which is the condition for <strong>allocative efficiency</strong> — the quantity that maximizes total surplus.
 
-**Total surplus = Consumer surplus + Producer surplus**
+<strong>Total surplus = Consumer surplus + Producer surplus</strong>
 
-This is maximized at the competitive equilibrium. Any output below or above equilibrium creates a **deadweight loss** — a reduction in total surplus that represents pure waste. Underproduction causes \(MSB > MSC\) (society could gain more by producing more); overproduction causes \(MSC > MSB\) (the last unit costs more than it is worth).
+This is maximized at the competitive equilibrium. Any output below or above equilibrium creates a <strong>deadweight loss</strong> — a reduction in total surplus that represents pure waste. Underproduction causes \(MSB > MSC\) (society could gain more by producing more); overproduction causes \(MSC > MSB\) (the last unit costs more than it is worth).
 
 ## 4.5 Market Failures
 
-A **market failure** occurs when a market produces less than (underproduction) or more than (overproduction) the efficient quantity, creating deadweight loss. Seven sources:
+A <strong>market failure</strong> occurs when a market produces less than (underproduction) or more than (overproduction) the efficient quantity, creating deadweight loss. Seven sources:
 
-1. **Price and quantity regulations** (price ceilings, minimum wages, production quotas)
-2. **Taxes and subsidies** (taxes lead to underproduction; subsidies to overproduction)
-3. **Externalities** (spillovers not priced by the market — pollution causes overproduction; positive externalities from education cause underproduction)
-4. **Public goods** (non-excludable and non-rival; markets underprovide — national defence)
-5. **Common resources** (non-excludable but rival; markets overprovide — overfishing)
-6. **Monopoly** (single seller restricts output, creating deadweight loss)
-7. **High transactions costs** (information asymmetries, search costs impede trade)
+1. <strong>Price and quantity regulations</strong> (price ceilings, minimum wages, production quotas)
+2. <strong>Taxes and subsidies</strong> (taxes lead to underproduction; subsidies to overproduction)
+3. <strong>Externalities</strong> (spillovers not priced by the market — pollution causes overproduction; positive externalities from education cause underproduction)
+4. <strong>Public goods</strong> (non-excludable and non-rival; markets underprovide — national defence)
+5. <strong>Common resources</strong> (non-excludable but rival; markets overprovide — overfishing)
+6. <strong>Monopoly</strong> (single seller restricts output, creating deadweight loss)
+7. <strong>High transactions costs</strong> (information asymmetries, search costs impede trade)
 
 ## 4.6 Is a Competitive Market Fair?
 
 Fairness can be judged through two lenses:
 
-**Fair results view (Utilitarianism)**: Justice requires equal outcomes. Redistributing income from rich to poor increases total happiness if the marginal utility of income is decreasing and universal. However, redistribution reduces incentives (the "big trade-off" between efficiency and equity — or "leaky bucket" — some income is lost in transfer).
+<strong>Fair results view (Utilitarianism)</strong>: Justice requires equal outcomes. Redistributing income from rich to poor increases total happiness if the marginal utility of income is decreasing and universal. However, redistribution reduces incentives (the "big trade-off" between efficiency and equity — or "leaky bucket" — some income is lost in transfer).
 
-**Fair rules view (Symmetry principle / Nozick)**: Justice requires equal rules, not equal outcomes. People should have equal economic opportunity and the right to voluntary exchange; government should protect property rights. Robert Nozick (1974) argued that free exchange of legitimately acquired property is inherently just regardless of the resulting distribution.
+<strong>Fair rules view (Symmetry principle / Nozick)</strong>: Justice requires equal rules, not equal outcomes. People should have equal economic opportunity and the right to voluntary exchange; government should protect property rights. Robert Nozick (1974) argued that free exchange of legitimately acquired property is inherently just regardless of the resulting distribution.
 
 A rent ceiling, for instance, is considered unfair by the fair-rules view because it blocks voluntary exchange. By the fair-results view, it is also often unfair because the resulting allocation (by lottery, first-come, or discrimination) does not reliably benefit the poor.
 
@@ -304,29 +304,29 @@ A rent ceiling, for instance, is considered unfair by the fair-rules view becaus
 
 <div class="definition"><strong>Price ceiling (price cap):</strong> a legal maximum price — it is illegal to charge above this level. When applied to housing, it is called a rent ceiling.</div>
 
-If a price ceiling is set *above* the equilibrium price, it has no effect. If set *below* the equilibrium price, it creates:
+If a price ceiling is set <em>above</em> the equilibrium price, it has no effect. If set <em>below</em> the equilibrium price, it creates:
 
-- **A housing shortage**: At the ceiling rent (e.g., \$1,600/month), quantity demanded (100,000 units) exceeds quantity supplied (60,000 units).
-- **Increased search activity**: Time spent searching is a real cost not captured by the regulated price. The full opportunity cost of housing = regulated rent + opportunity cost of search.
-- **A black market**: With unsatisfied demand, illegal above-ceiling transactions emerge. The black market rent can rise above the original equilibrium.
+- <strong>A housing shortage</strong>: At the ceiling rent (e.g., \$1,600/month), quantity demanded (100,000 units) exceeds quantity supplied (60,000 units).
+- <strong>Increased search activity</strong>: Time spent searching is a real cost not captured by the regulated price. The full opportunity cost of housing = regulated rent + opportunity cost of search.
+- <strong>A black market</strong>: With unsatisfied demand, illegal above-ceiling transactions emerge. The black market rent can rise above the original equilibrium.
 
-A rent ceiling is **inefficient**: the marginal social benefit of housing (from the large unsatisfied demand) exceeds its marginal social cost. A deadweight loss arises — consumer surplus falls (despite lower price, fewer units are available), producer surplus falls, and the total loss equals the deadweight loss triangle \(-(C + E)\).
+A rent ceiling is <strong>inefficient</strong>: the marginal social benefit of housing (from the large unsatisfied demand) exceeds its marginal social cost. A deadweight loss arises — consumer surplus falls (despite lower price, fewer units are available), producer surplus falls, and the total loss equals the deadweight loss triangle \(-(C + E)\).
 
-A rent ceiling is **unfair** by both views: it doesn't systematically help the poor (housing goes to those lucky in lotteries or discriminated in favour of) and it blocks voluntary exchange.
+A rent ceiling is <strong>unfair</strong> by both views: it doesn't systematically help the poor (housing goes to those lucky in lotteries or discriminated in favour of) and it blocks voluntary exchange.
 
 ## 5.2 Price Floors
 
 <div class="definition"><strong>Price floor:</strong> a legal minimum price — it is illegal to trade below this level. When applied to labour markets, it is called a minimum wage.</div>
 
-A price floor set *below* equilibrium has no effect. A floor set *above* equilibrium creates a **surplus**: at the minimum wage \(W_{min}\), the quantity of labour supplied exceeds the quantity demanded. Workers who keep their jobs earn more; workers who lose jobs earn nothing. Total employment falls. The surplus labour constitutes unemployment.
+A price floor set <em>below</em> equilibrium has no effect. A floor set <em>above</em> equilibrium creates a <strong>surplus</strong>: at the minimum wage \(W_{min}\), the quantity of labour supplied exceeds the quantity demanded. Workers who keep their jobs earn more; workers who lose jobs earn nothing. Total employment falls. The surplus labour constitutes unemployment.
 
 Welfare analysis: Consumer surplus (employer's surplus) falls by \(B + C\). Producer surplus (workers' surplus) changes by \(B - E\) (some workers gain, others lose their jobs). Total welfare loss (deadweight loss) = \(C + E\).
 
 ## 5.3 Production Quotas and Subsidies
 
-**Production quotas** set an upper limit on the quantity produced. Quotas reduce output below the competitive equilibrium: the market price rises (marginal social benefit rises), marginal cost falls (less is produced), and \(MSB > MSC\) — inefficient. Producers have an incentive to cheat by over-producing.
+<strong>Production quotas</strong> set an upper limit on the quantity produced. Quotas reduce output below the competitive equilibrium: the market price rises (marginal social benefit rises), marginal cost falls (less is produced), and \(MSB > MSC\) — inefficient. Producers have an incentive to cheat by over-producing.
 
-**Subsidies** pay producers per unit, effectively shifting the supply curve rightward: market price falls (benefits consumers), marginal cost rises (producers produce more to earn the subsidy), but \(MSC > MSB\) — inefficient overproduction results. Governments pay for the subsidy through taxes, redistributing wealth to producers.
+<strong>Subsidies</strong> pay producers per unit, effectively shifting the supply curve rightward: market price falls (benefits consumers), marginal cost rises (producers produce more to earn the subsidy), but \(MSC > MSB\) — inefficient overproduction results. Governments pay for the subsidy through taxes, redistributing wealth to producers.
 
 ## 5.4 Taxes
 
@@ -334,20 +334,20 @@ Welfare analysis: Consumer surplus (employer's surplus) falls by \(B + C\). Prod
 
 Whether a tax is levied on buyers or sellers, the outcome is identical. A \$3 tax on cigarettes (levied on sellers) shifts supply left; the price buyers pay rises from \$6 to \$8, and the price sellers keep falls from \$6 to \$5. Buyers pay \$2 more; sellers receive \$1 less. The \$3 tax burden is shared, with buyers bearing the larger share.
 
-**Tax incidence and elasticity:**
+<strong>Tax incidence and elasticity:</strong>
 
-- With **perfectly inelastic demand** (vertical demand curve), buyers pay the entire tax — their quantity is unchanged regardless of price.
-- With **perfectly elastic demand** (horizontal demand curve), sellers pay the entire tax — any price rise drives quantity to zero, so the full burden falls on sellers.
-- With **perfectly inelastic supply**, sellers pay the entire tax.
-- With **perfectly elastic supply**, buyers pay the entire tax.
+- With <strong>perfectly inelastic demand</strong> (vertical demand curve), buyers pay the entire tax — their quantity is unchanged regardless of price.
+- With <strong>perfectly elastic demand</strong> (horizontal demand curve), sellers pay the entire tax — any price rise drives quantity to zero, so the full burden falls on sellers.
+- With <strong>perfectly inelastic supply</strong>, sellers pay the entire tax.
+- With <strong>perfectly elastic supply</strong>, buyers pay the entire tax.
 
-General rule: **The more inelastic the demand (or the more elastic the supply), the larger the buyers' share**. Goods taxed in practice — alcohol, tobacco, and gasoline — have relatively inelastic demand, so buyers bear most of the tax. Workers (labour supply is relatively inelastic) bear most of the income tax burden.
+General rule: <strong>The more inelastic the demand (or the more elastic the supply), the larger the buyers' share</strong>. Goods taxed in practice — alcohol, tobacco, and gasoline — have relatively inelastic demand, so buyers bear most of the tax. Workers (labour supply is relatively inelastic) bear most of the income tax burden.
 
-Taxes create **inefficiency** (deadweight loss) unless demand or supply is perfectly inelastic. The deadweight loss equals the loss in total surplus beyond the tax revenue collected.
+Taxes create <strong>inefficiency</strong> (deadweight loss) unless demand or supply is perfectly inelastic. The deadweight loss equals the loss in total surplus beyond the tax revenue collected.
 
-Two principles of **tax fairness**:
-- **Benefits principle**: People should pay taxes equal to the benefits they receive from government services.
-- **Ability-to-pay principle**: People should pay taxes in proportion to their ability to bear the burden — higher-income individuals pay more.
+Two principles of <strong>tax fairness</strong>:
+- <strong>Benefits principle</strong>: People should pay taxes equal to the benefits they receive from government services.
+- <strong>Ability-to-pay principle</strong>: People should pay taxes in proportion to their ability to bear the burden — higher-income individuals pay more.
 
 ---
 
@@ -355,25 +355,25 @@ Two principles of **tax fairness**:
 
 ## 6.1 Consumption Choices and Utility
 
-Consumer choices are constrained by income and prices. A consumer's **budget line** shows all combinations of two goods that exactly exhaust income. If income is \$40, movies cost \$8 each, and pop costs \$4 per case, the budget equation is:
+Consumer choices are constrained by income and prices. A consumer's <strong>budget line</strong> shows all combinations of two goods that exactly exhaust income. If income is \$40, movies cost \$8 each, and pop costs \$4 per case, the budget equation is:
 
 \[
 \$8 \cdot Q_M + \$4 \cdot Q_P = \$40
 \]
 
-Points on or inside the budget line are affordable; points outside are not. The slope of the budget line is the negative of the **relative price** of movies to pop (\(-P_M/P_P = -2\)), reflecting the rate at which the market allows substitution between the two goods.
+Points on or inside the budget line are affordable; points outside are not. The slope of the budget line is the negative of the <strong>relative price</strong> of movies to pop (\(-P_M/P_P = -2\)), reflecting the rate at which the market allows substitution between the two goods.
 
-**Utility** is the subjective benefit or satisfaction from consuming goods and services. **Total utility** is cumulative satisfaction from all units consumed; it generally rises with consumption (as long as marginal utility is positive). **Marginal utility** is the additional satisfaction from one more unit:
+<strong>Utility</strong> is the subjective benefit or satisfaction from consuming goods and services. <strong>Total utility</strong> is cumulative satisfaction from all units consumed; it generally rises with consumption (as long as marginal utility is positive). <strong>Marginal utility</strong> is the additional satisfaction from one more unit:
 
 \[
 MU = \frac{\Delta TU}{\Delta Q}
 \]
 
-The **principle of diminishing marginal utility** states that as more of a good is consumed, its marginal utility decreases, *ceteris paribus*. The 1st slice of pizza is more satisfying than the 10th. This principle drives the downward slope of the demand curve.
+The <strong>principle of diminishing marginal utility</strong> states that as more of a good is consumed, its marginal utility decreases, <em>ceteris paribus</em>. The 1st slice of pizza is more satisfying than the 10th. This principle drives the downward slope of the demand curve.
 
 ## 6.2 Utility-Maximizing Choice
 
-A consumer maximizes total utility by following the **utility-maximizing rule**: spend all available income and equalize the marginal utility per dollar spent across all goods:
+A consumer maximizes total utility by following the <strong>utility-maximizing rule</strong>: spend all available income and equalize the marginal utility per dollar spent across all goods:
 
 \[
 \frac{MU_M}{P_M} = \frac{MU_P}{P_P}
@@ -387,29 +387,29 @@ In the course example, Lisa's utility is maximized when she sees 2 movies and bu
 
 Marginal utility theory predicts how consumers respond to price and income changes:
 
-**A fall in the price of movies**: Lowers \(P_M\), raising \(\frac{MU_M}{P_M}\). To restore equality, the consumer buys more movies (pushing MU down via diminishing returns) and less pop. The demand curve slopes downward.
+<strong>A fall in the price of movies</strong>: Lowers \(P_M\), raising \(\frac{MU_M}{P_M}\). To restore equality, the consumer buys more movies (pushing MU down via diminishing returns) and less pop. The demand curve slopes downward.
 
-**A rise in income**: Both goods' consumption typically rises (for normal goods), as the budget line shifts outward.
+<strong>A rise in income</strong>: Both goods' consumption typically rises (for normal goods), as the budget line shifts outward.
 
-**A rise in pop's price**: Lowers \(\frac{MU_P}{P_P}\), inducing a switch from pop to movies. Pop's quantity demanded falls — a movement along the demand curve for pop.
+<strong>A rise in pop's price</strong>: Lowers \(\frac{MU_P}{P_P}\), inducing a switch from pop to movies. Pop's quantity demanded falls — a movement along the demand curve for pop.
 
 ## 6.4 The Paradox of Value
 
-Why is water — essential for life — cheaper than diamonds, which are not? **The paradox of value** is resolved by distinguishing total utility from marginal utility. Humans consume so much water that its marginal utility is very low, even though total utility from water is enormous. Diamonds are rarely consumed, so marginal utility remains high, justifying a high price. What determines price is *marginal* utility, not *total* utility.
+Why is water — essential for life — cheaper than diamonds, which are not? <strong>The paradox of value</strong> is resolved by distinguishing total utility from marginal utility. Humans consume so much water that its marginal utility is very low, even though total utility from water is enormous. Diamonds are rarely consumed, so marginal utility remains high, justifying a high price. What determines price is <em>marginal</em> utility, not <em>total</em> utility.
 
 Equivalently, from a consumer surplus perspective: the supply of water is nearly perfectly elastic (vast supply), so the price is low and consumer surplus is large. Diamond supply is restricted, so the price is high, but consumer surplus from diamonds is relatively small.
 
 ## 6.5 Behavioural Economics and Neuroeconomics
 
-Traditional utility theory assumes perfectly rational consumers maximizing self-interest. **Behavioural economics** challenges this by documenting systematic departures from rationality:
+Traditional utility theory assumes perfectly rational consumers maximizing self-interest. <strong>Behavioural economics</strong> challenges this by documenting systematic departures from rationality:
 
-- **Bounded rationality**: The brain has limited computing power, especially under uncertainty. Consumers rely on rules of thumb, heuristics, or social cues rather than full optimization.
-- **Bounded willpower**: People make choices they know they will later regret (e.g., smoking, overeating, undersaving).
-- **Bounded self-interest**: People sometimes act to help others even at personal cost — altruism is not irrational in the social sense.
+- <strong>Bounded rationality</strong>: The brain has limited computing power, especially under uncertainty. Consumers rely on rules of thumb, heuristics, or social cues rather than full optimization.
+- <strong>Bounded willpower</strong>: People make choices they know they will later regret (e.g., smoking, overeating, undersaving).
+- <strong>Bounded self-interest</strong>: People sometimes act to help others even at personal cost — altruism is not irrational in the social sense.
 
-The **endowment effect** — the tendency to value something more highly once you own it — is a well-documented behavioural anomaly. Participants given a coffee mug resist trading it for a chocolate bar even though they would not have chosen the mug over the bar beforehand.
+The <strong>endowment effect</strong> — the tendency to value something more highly once you own it — is a well-documented behavioural anomaly. Participants given a coffee mug resist trading it for a chocolate bar even though they would not have chosen the mug over the bar beforehand.
 
-**Neuroeconomics** uses brain imaging to study which neural systems govern economic decisions. Rational deliberative choices activate the prefrontal cortex; fear-based or impulsive choices activate the hippocampus and amygdala. These findings suggest emotion and cognition both play roles in real-world economic choice.
+<strong>Neuroeconomics</strong> uses brain imaging to study which neural systems govern economic decisions. Rational deliberative choices activate the prefrontal cortex; fear-based or impulsive choices activate the hippocampus and amygdala. These findings suggest emotion and cognition both play roles in real-world economic choice.
 
 ---
 
@@ -423,32 +423,32 @@ The budget line can be expressed as a formal equation. With income \(M\), price 
 Q_P = \frac{M}{P_P} - \frac{P_M}{P_P} Q_M
 \]
 
-The vertical intercept \(M/P_P\) is **real income** expressed in units of pop — how much pop Lisa could buy if she spent all income on pop. The slope \(-P_M/P_P\) is the **relative price** of movies in terms of pop.
+The vertical intercept \(M/P_P\) is <strong>real income</strong> expressed in units of pop — how much pop Lisa could buy if she spent all income on pop. The slope \(-P_M/P_P\) is the <strong>relative price</strong> of movies in terms of pop.
 
-A change in *income* produces a **parallel shift** of the budget line (same slope, different intercept). A change in the *price* of one good **rotates** the budget line around the unchanged-good intercept. If movies become cheaper, the budget line rotates outward along the movie axis, allowing greater consumption of movies without reducing pop.
+A change in <em>income</em> produces a <strong>parallel shift</strong> of the budget line (same slope, different intercept). A change in the <em>price</em> of one good <strong>rotates</strong> the budget line around the unchanged-good intercept. If movies become cheaper, the budget line rotates outward along the movie axis, allowing greater consumption of movies without reducing pop.
 
 ## 7.2 Preferences and Indifference Curves
 
-An **indifference curve** connects all consumption bundles among which the consumer is indifferent — all bundles yielding the same total utility. Key properties:
+An <strong>indifference curve</strong> connects all consumption bundles among which the consumer is indifferent — all bundles yielding the same total utility. Key properties:
 
-- **Downward-sloping**: To remain indifferent when getting more of one good, you must give up some of the other.
-- **Bowed toward the origin (convex)**: Reflects the **diminishing marginal rate of substitution**.
-- **Cannot cross**: Two intersecting indifference curves would create logical contradictions.
-- **Higher curves are preferred**: Curves farther from the origin represent higher utility levels.
+- <strong>Downward-sloping</strong>: To remain indifferent when getting more of one good, you must give up some of the other.
+- <strong>Bowed toward the origin (convex)</strong>: Reflects the <strong>diminishing marginal rate of substitution</strong>.
+- <strong>Cannot cross</strong>: Two intersecting indifference curves would create logical contradictions.
+- <strong>Higher curves are preferred</strong>: Curves farther from the origin represent higher utility levels.
 
-The **marginal rate of substitution (MRS)** is the rate at which a consumer is willing to trade one good for another while remaining on the same indifference curve:
+The <strong>marginal rate of substitution (MRS)</strong> is the rate at which a consumer is willing to trade one good for another while remaining on the same indifference curve:
 
 \[
 MRS = -\frac{\Delta Q_P}{\Delta Q_M} = \frac{MU_M}{MU_P}
 \]
 
-A **diminishing MRS** means consumers become less willing to give up pop as they see more movies — pop becomes relatively more valuable as it becomes scarcer in the bundle. This is a direct consequence of diminishing marginal utility.
+A <strong>diminishing MRS</strong> means consumers become less willing to give up pop as they see more movies — pop becomes relatively more valuable as it becomes scarcer in the bundle. This is a direct consequence of diminishing marginal utility.
 
-A **preference map** is the full collection of indifference curves — one for every possible utility level.
+A <strong>preference map</strong> is the full collection of indifference curves — one for every possible utility level.
 
 ## 7.3 Predicting Consumer Choices
 
-The consumer's **best affordable choice** is the point on the budget line that reaches the **highest attainable indifference curve**. This occurs where the budget line is **tangent** to an indifference curve — the point where the slope of the budget line equals the slope of the indifference curve:
+The consumer's <strong>best affordable choice</strong> is the point on the budget line that reaches the <strong>highest attainable indifference curve</strong>. This occurs where the budget line is <strong>tangent</strong> to an indifference curve — the point where the slope of the budget line equals the slope of the indifference curve:
 
 \[
 \frac{P_M}{P_P} = MRS = \frac{MU_M}{MU_P}
@@ -456,23 +456,23 @@ The consumer's **best affordable choice** is the point on the budget line that r
 
 This is equivalent to the utility-maximizing rule from Chapter 6: \(\frac{MU_M}{P_M} = \frac{MU_P}{P_P}\). Both frameworks yield the same equilibrium.
 
-**Price effect**: A fall in the price of movies rotates the budget line outward. Lisa moves to a higher indifference curve, consuming more movies — tracing out her demand curve.
+<strong>Price effect</strong>: A fall in the price of movies rotates the budget line outward. Lisa moves to a higher indifference curve, consuming more movies — tracing out her demand curve.
 
-**Income effect**: A fall in income shifts the budget line inward (parallel). For normal goods, consumption of both goods falls.
+<strong>Income effect</strong>: A fall in income shifts the budget line inward (parallel). For normal goods, consumption of both goods falls.
 
-**Substitution and income effects decomposed**: The total price effect can be split into two parts using a **compensated budget line** (holding utility constant at the original level while adjusting for the price change):
+<strong>Substitution and income effects decomposed</strong>: The total price effect can be split into two parts using a <strong>compensated budget line</strong> (holding utility constant at the original level while adjusting for the price change):
 
-- **Substitution effect**: Movement along the original indifference curve to the point tangent to the new (lower) relative price. Always increases the quantity of the cheaper good (A → B, from \(X_O\) to \(X_C\)).
-- **Income effect**: Parallel shift from the compensated budget line to the final budget line (B → C, from \(X_C\) to \(X_F\)).
+- <strong>Substitution effect</strong>: Movement along the original indifference curve to the point tangent to the new (lower) relative price. Always increases the quantity of the cheaper good (A → B, from \(X_O\) to \(X_C\)).
+- <strong>Income effect</strong>: Parallel shift from the compensated budget line to the final budget line (B → C, from \(X_C\) to \(X_F\)).
 
-For **normal goods**: Both effects work in the same direction — lower price increases consumption. For **inferior goods**: The income effect is negative (as real income rises, demand falls), partially offsetting the substitution effect. For **Giffen goods**: The negative income effect dominates the substitution effect, so a price fall *decreases* quantity demanded — the demand curve slopes *upward*, violating the law of demand. Giffen goods are theoretically possible but rarely observed in practice.
+For <strong>normal goods</strong>: Both effects work in the same direction — lower price increases consumption. For <strong>inferior goods</strong>: The income effect is negative (as real income rises, demand falls), partially offsetting the substitution effect. For <strong>Giffen goods</strong>: The negative income effect dominates the substitution effect, so a price fall <em>decreases</em> quantity demanded — the demand curve slopes <em>upward</em>, violating the law of demand. Giffen goods are theoretically possible but rarely observed in practice.
 
 ## 7.4 Decomposition of a Price Change — Revisited
 
 Using standardized labeling: begin at point A on an original budget line \(BL_O\) tangent to indifference curve \(I_O\), with optimal demand \(X_O\). After a price drop for good X:
 
 1. The final budget line \(BL_F\) is flatter. Final optimal demand \(X_F\) at point C on \(I_F\).
-2. The **compensated budget line** \(BL_C\) is drawn parallel to \(BL_F\) but tangent to the original indifference curve \(I_O\) at point B, giving compensated demand \(X_C\).
+2. The <strong>compensated budget line</strong> \(BL_C\) is drawn parallel to \(BL_F\) but tangent to the original indifference curve \(I_O\) at point B, giving compensated demand \(X_C\).
 3. Substitution effect: \(X_O \to X_C\) (A to B) — always positive.
 4. Income effect: \(X_C \to X_F\) (B to C) — positive for normal goods, negative for inferior goods.
 5. For Giffen goods, the income effect dominates and \(X_F < X_O\) despite a lower price.
@@ -483,57 +483,57 @@ Using standardized labeling: begin at point A on an original budget line \(BL_O\
 
 ## 8.1 The Firm and Its Economic Goals
 
-A **firm** hires factors of production and organizes them to produce and sell goods or services. All firms aim to maximize profit. Accountants and economists measure profit differently.
+A <strong>firm</strong> hires factors of production and organizes them to produce and sell goods or services. All firms aim to maximize profit. Accountants and economists measure profit differently.
 
-**Explicit costs** are actual monetary payments for factors of production (wages, rent, raw materials). **Implicit costs** are the opportunity costs of resources the firm owns but does not pay for in cash — forgone interest on owned capital, forgone rent on owned buildings, forgone wages the owner could have earned elsewhere.
+<strong>Explicit costs</strong> are actual monetary payments for factors of production (wages, rent, raw materials). <strong>Implicit costs</strong> are the opportunity costs of resources the firm owns but does not pay for in cash — forgone interest on owned capital, forgone rent on owned buildings, forgone wages the owner could have earned elsewhere.
 
-**Accounting profit = Total revenue − Explicit costs − Conventional depreciation**
+<strong>Accounting profit = Total revenue − Explicit costs − Conventional depreciation</strong>
 
-**Economic profit = Total revenue − Total opportunity cost of production**
+<strong>Economic profit = Total revenue − Total opportunity cost of production</strong>
 
-where total opportunity cost = explicit costs + implicit costs (including **normal profit** — the minimum return to entrepreneurship required to keep the entrepreneur in the industry). Since economic profit subtracts more costs than accounting profit, economic profit ≤ accounting profit. A firm earning zero economic profit is still covering all opportunity costs including normal profit — it is not failing.
+where total opportunity cost = explicit costs + implicit costs (including <strong>normal profit</strong> — the minimum return to entrepreneurship required to keep the entrepreneur in the industry). Since economic profit subtracts more costs than accounting profit, economic profit ≤ accounting profit. A firm earning zero economic profit is still covering all opportunity costs including normal profit — it is not failing.
 
-**Normal profit** is the return to entrepreneurship treated as an opportunity cost. A firm earning zero economic profit earns exactly normal profit — owners are just as well off as in their next-best alternative.
+<strong>Normal profit</strong> is the return to entrepreneurship treated as an opportunity cost. A firm earning zero economic profit earns exactly normal profit — owners are just as well off as in their next-best alternative.
 
 The firm faces three constraints: technology constraints, information constraints, and market constraints.
 
 ## 8.2 Technological and Economic Efficiency
 
-**Technological efficiency** (productive efficiency): a firm achieves it when it cannot reduce any input without reducing output. **Economic efficiency** occurs when a firm produces a given output at minimum cost — choosing the least-cost combination of inputs. Economic efficiency requires both technological efficiency and the use of the cheapest combination of factor inputs given their prices.
+<strong>Technological efficiency</strong> (productive efficiency): a firm achieves it when it cannot reduce any input without reducing output. <strong>Economic efficiency</strong> occurs when a firm produces a given output at minimum cost — choosing the least-cost combination of inputs. Economic efficiency requires both technological efficiency and the use of the cheapest combination of factor inputs given their prices.
 
 ## 8.3 Information and Organization
 
-Firms organize production using two mechanisms: **command systems** (hierarchy — clear orders flow down) and **incentive systems** (market-like rewards align workers' interests with the firm's). Most real firms use both.
+Firms organize production using two mechanisms: <strong>command systems</strong> (hierarchy — clear orders flow down) and <strong>incentive systems</strong> (market-like rewards align workers' interests with the firm's). Most real firms use both.
 
-The **principal-agent problem** arises because owners (principals) and managers/employees (agents) have different interests. Owners want profit maximization; managers may want prestige, large budgets, or leisure. Three mechanisms address this:
-- **Ownership stakes**: Giving managers equity aligns their incentives with owners'.
-- **Incentive pay**: Tying compensation to performance.
-- **Long-term contracts**: Linking rewards to long-term firm performance.
+The <strong>principal-agent problem</strong> arises because owners (principals) and managers/employees (agents) have different interests. Owners want profit maximization; managers may want prestige, large budgets, or leisure. Three mechanisms address this:
+- <strong>Ownership stakes</strong>: Giving managers equity aligns their incentives with owners'.
+- <strong>Incentive pay</strong>: Tying compensation to performance.
+- <strong>Long-term contracts</strong>: Linking rewards to long-term firm performance.
 
 ## 8.4 Business Organization and Market Contexts
 
 Three forms of business organization:
-- **Sole proprietorship**: Single owner with unlimited personal liability; profits taxed as personal income.
-- **Partnership**: Two or more owners with unlimited personal liability; profits taxed as personal income.
-- **Corporation**: Owned by stockholders with limited liability; profits taxed twice (corporate tax + dividends tax). Corporations account for the majority of total revenue.
+- <strong>Sole proprietorship</strong>: Single owner with unlimited personal liability; profits taxed as personal income.
+- <strong>Partnership</strong>: Two or more owners with unlimited personal liability; profits taxed as personal income.
+- <strong>Corporation</strong>: Owned by stockholders with limited liability; profits taxed twice (corporate tax + dividends tax). Corporations account for the majority of total revenue.
 
 Economists measure market concentration using:
-- **Four-firm concentration ratio**: The percentage of total industry sales accounted for by the four largest firms. High ratios indicate concentrated markets (oligopoly or monopoly-like).
-- **Herfindahl-Hirschman Index (HHI)**: The sum of the squares of each firm's market share percentage. HHI < 1,500 is competitive; > 2,500 is highly concentrated; mergers raising HHI by > 200 points in concentrated markets face antitrust scrutiny.
+- <strong>Four-firm concentration ratio</strong>: The percentage of total industry sales accounted for by the four largest firms. High ratios indicate concentrated markets (oligopoly or monopoly-like).
+- <strong>Herfindahl-Hirschman Index (HHI)</strong>: The sum of the squares of each firm's market share percentage. HHI < 1,500 is competitive; > 2,500 is highly concentrated; mergers raising HHI by > 200 points in concentrated markets face antitrust scrutiny.
 
 ## 8.5 Firm's Short-Run Output
 
-The **short run** is the period in which at least one factor of production (typically capital) is fixed. The **long run** is the period in which all factors can vary. **Sunk costs** — past expenditures on plant that have no resale value — are irrelevant to current decisions.
+The <strong>short run</strong> is the period in which at least one factor of production (typically capital) is fixed. The <strong>long run</strong> is the period in which all factors can vary. <strong>Sunk costs</strong> — past expenditures on plant that have no resale value — are irrelevant to current decisions.
 
 In the short run, with labour as the variable input, three product concepts characterize production:
 
-- **Total product (TP)**: Total output produced as labour input varies.
-- **Marginal product of labour (MP)**: The additional output from one more worker: \(MP = \Delta TP / \Delta L\).
-- **Average product of labour (AP)**: Output per worker: \(AP = TP / L\).
+- <strong>Total product (TP)</strong>: Total output produced as labour input varies.
+- <strong>Marginal product of labour (MP)</strong>: The additional output from one more worker: \(MP = \Delta TP / \Delta L\).
+- <strong>Average product of labour (AP)</strong>: Output per worker: \(AP = TP / L\).
 
-Initially, additional workers increase efficiency through **specialization and division of labour**, causing *increasing marginal returns* — MP rises. Eventually, each additional worker has access to less capital and less workspace: *diminishing marginal returns* set in and MP falls.
+Initially, additional workers increase efficiency through <strong>specialization and division of labour</strong>, causing <em>increasing marginal returns</em> — MP rises. Eventually, each additional worker has access to less capital and less workspace: <em>diminishing marginal returns</em> set in and MP falls.
 
-The **law of diminishing returns**: as more of a variable input is added to a fixed input, the marginal product of the variable input eventually declines.
+The <strong>law of diminishing returns</strong>: as more of a variable input is added to a fixed input, the marginal product of the variable input eventually declines.
 
 When MP > AP, AP is rising. When MP < AP, AP is falling. When MP = AP, AP is at its maximum.
 
@@ -541,9 +541,9 @@ When MP > AP, AP is rising. When MP < AP, AP is falling. When MP = AP, AP is at 
 
 Short-run cost concepts:
 
-- **Total fixed cost (TFC)**: Costs that do not vary with output (e.g., rent on a fixed plant). A horizontal line.
-- **Total variable cost (TVC)**: Costs that vary with output (e.g., wages for labour). Rises with output; its shape mirrors the inverse of the TP curve.
-- **Total cost (TC) = TFC + TVC**
+- <strong>Total fixed cost (TFC)</strong>: Costs that do not vary with output (e.g., rent on a fixed plant). A horizontal line.
+- <strong>Total variable cost (TVC)</strong>: Costs that vary with output (e.g., wages for labour). Rises with output; its shape mirrors the inverse of the TP curve.
+- <strong>Total cost (TC) = TFC + TVC</strong>
 
 From these, per-unit cost measures:
 
@@ -551,25 +551,25 @@ From these, per-unit cost measures:
 AFC = \frac{TFC}{Q}, \quad AVC = \frac{TVC}{Q}, \quad ATC = AFC + AVC, \quad MC = \frac{\Delta TC}{\Delta Q}
 \]
 
-The **marginal cost (MC)** curve is U-shaped: it falls initially (increasing marginal returns) and then rises (diminishing marginal returns). MC intersects AVC and ATC at their minimum points. When MC < AVC (or ATC), average falls; when MC > AVC (or ATC), average rises.
+The <strong>marginal cost (MC)</strong> curve is U-shaped: it falls initially (increasing marginal returns) and then rises (diminishing marginal returns). MC intersects AVC and ATC at their minimum points. When MC < AVC (or ATC), average falls; when MC > AVC (or ATC), average rises.
 
-**Why is the ATC curve U-shaped?** Two opposing forces: (1) *spreading fixed costs* — AFC falls continuously as output rises, pulling ATC down; (2) *diminishing returns* — AVC eventually rises faster than AFC falls, pulling ATC up.
+<strong>Why is the ATC curve U-shaped?</strong> Two opposing forces: (1) <em>spreading fixed costs</em> — AFC falls continuously as output rises, pulling ATC down; (2) <em>diminishing returns</em> — AVC eventually rises faster than AFC falls, pulling ATC up.
 
 Cost curves shift when:
-- **Technology improves**: MC and ATC shift downward (more output from same resources).
-- **Input prices rise**: Variable input price increases shift AVC, ATC, and MC upward; a rise in fixed input price shifts AFC and ATC upward only.
+- <strong>Technology improves</strong>: MC and ATC shift downward (more output from same resources).
+- <strong>Input prices rise</strong>: Variable input price increases shift AVC, ATC, and MC upward; a rise in fixed input price shifts AFC and ATC upward only.
 
 ## 8.7 Firm's Long-Run Costs
 
-In the long run, all inputs are variable. The firm can choose its **plant size**. For each plant size, there is a short-run ATC curve. The **long-run average cost (LRAC) curve** is the envelope of the lowest ATC achievable for each output level across all possible plant sizes — a planning curve.
+In the long run, all inputs are variable. The firm can choose its <strong>plant size</strong>. For each plant size, there is a short-run ATC curve. The <strong>long-run average cost (LRAC) curve</strong> is the envelope of the lowest ATC achievable for each output level across all possible plant sizes — a planning curve.
 
 Three long-run cost phenomena:
 
-- **Economies of scale**: LRAC falls as output rises. Arise from specialization, indivisible fixed inputs, and efficiency gains with larger scale.
-- **Diseconomies of scale**: LRAC rises as output rises. Arise from management complexity, coordination difficulties at large scale.
-- **Constant returns to scale**: LRAC is flat.
+- <strong>Economies of scale</strong>: LRAC falls as output rises. Arise from specialization, indivisible fixed inputs, and efficiency gains with larger scale.
+- <strong>Diseconomies of scale</strong>: LRAC rises as output rises. Arise from management complexity, coordination difficulties at large scale.
+- <strong>Constant returns to scale</strong>: LRAC is flat.
 
-**Minimum efficient scale (MES)** is the smallest output at which LRAC reaches its lowest point. If MES is small relative to market demand, many firms can coexist competitively. If MES is large relative to market demand, few firms can operate efficiently — potentially a natural monopoly.
+<strong>Minimum efficient scale (MES)</strong> is the smallest output at which LRAC reaches its lowest point. If MES is small relative to market demand, many firms can coexist competitively. If MES is large relative to market demand, few firms can operate efficiently — potentially a natural monopoly.
 
 ---
 
@@ -577,42 +577,42 @@ Three long-run cost phenomena:
 
 ## 9.1 What Is Perfect Competition?
 
-**Perfect competition** is a market structure characterized by:
+<strong>Perfect competition</strong> is a market structure characterized by:
 - Many sellers of identical (homogeneous) products
 - No restrictions on entry or exit
 - No firm has advantages over others
 - Buyers and sellers are well-informed about prices
 
-These conditions mean each firm is a **price taker** — it takes the market price as given and cannot influence it. A single wheat farmer producing hundreds of hectares is inconsequential relative to total market supply. Each firm's output is a perfect substitute for every other's, so the demand curve facing an individual firm is **perfectly elastic** (horizontal) at the market price.
+These conditions mean each firm is a <strong>price taker</strong> — it takes the market price as given and cannot influence it. A single wheat farmer producing hundreds of hectares is inconsequential relative to total market supply. Each firm's output is a perfect substitute for every other's, so the demand curve facing an individual firm is <strong>perfectly elastic</strong> (horizontal) at the market price.
 
-A perfectly competitive firm's **marginal revenue (MR) = market price (P)**. Since the firm can sell all it wishes at the going price, TR = P × Q, and MR = P for every unit.
+A perfectly competitive firm's <strong>marginal revenue (MR) = market price (P)</strong>. Since the firm can sell all it wishes at the going price, TR = P × Q, and MR = P for every unit.
 
 ## 9.2 The Firm's Supply Curve
 
-A firm maximizes profit by producing the output where \(MR = MC\), which in perfect competition means \(P = MC\). The firm's supply curve is therefore its MC curve, but only the portion above **minimum AVC** — the **shutdown point**.
+A firm maximizes profit by producing the output where \(MR = MC\), which in perfect competition means \(P = MC\). The firm's supply curve is therefore its MC curve, but only the portion above <strong>minimum AVC</strong> — the <strong>shutdown point</strong>.
 
 If \(P < min(AVC)\), the firm shuts down (produces nothing) in the short run because it cannot cover even variable costs; the loss would exceed TFC. If \(P > min(AVC)\) but \(P < ATC\), the firm produces (minimizes loss by covering some fixed costs). If \(P \geq ATC\), the firm earns normal or positive economic profit.
 
-**Short-run market supply** is the horizontal sum of all firms' supply curves. Three short-run outcomes:
+<strong>Short-run market supply</strong> is the horizontal sum of all firms' supply curves. Three short-run outcomes:
 - \(P > ATC\): Economic profit → entry attracted.
 - \(P = ATC\): Zero economic profit (break-even) → stable.
 - \(P < ATC\): Economic loss → exit occurs.
 
-**Long-run equilibrium**: Entry erodes economic profits; exit eliminates losses. Long-run equilibrium requires \(P = \min(ATC)\) and zero economic profit. Firms earn exactly normal profit.
+<strong>Long-run equilibrium</strong>: Entry erodes economic profits; exit eliminates losses. Long-run equilibrium requires \(P = \min(ATC)\) and zero economic profit. Firms earn exactly normal profit.
 
-**Entry in action (the "Bling" story)**: When the sweater market becomes profitable, new firms enter, market supply increases, price falls, and economic profit is competed away — and "the bling disappears."
+<strong>Entry in action (the "Bling" story)</strong>: When the sweater market becomes profitable, new firms enter, market supply increases, price falls, and economic profit is competed away — and "the bling disappears."
 
 ## 9.3 Changes in Demand and Supply as Technology Advances
 
-An **increase in demand** shifts the market demand curve right, raising price above ATC. Economic profits attract entrants; supply increases; price falls back until zero economic profit is restored. The new equilibrium has more firms and higher total quantity, but the same long-run price (if constant-cost industry).
+An <strong>increase in demand</strong> shifts the market demand curve right, raising price above ATC. Economic profits attract entrants; supply increases; price falls back until zero economic profit is restored. The new equilibrium has more firms and higher total quantity, but the same long-run price (if constant-cost industry).
 
-A **technological advance** lowers costs for firms that adopt it. Early adopters earn economic profit, attracting imitators. Market supply increases; price falls; old-technology firms incur losses and exit or switch. In the new long-run equilibrium, all firms use new technology, zero economic profit, and the market price is lower.
+A <strong>technological advance</strong> lowers costs for firms that adopt it. Early adopters earn economic profit, attracting imitators. Market supply increases; price falls; old-technology firms incur losses and exit or switch. In the new long-run equilibrium, all firms use new technology, zero economic profit, and the market price is lower.
 
 ## 9.4 Competition and Efficiency
 
 In long-run perfectly competitive equilibrium, two efficiency conditions hold simultaneously:
-1. **Productive efficiency**: \(P = \min(ATC)\) — firms produce at the lowest possible cost.
-2. **Allocative efficiency**: \(P = MC\) — price equals marginal social cost; marginal social benefit equals marginal social cost.
+1. <strong>Productive efficiency</strong>: \(P = \min(ATC)\) — firms produce at the lowest possible cost.
+2. <strong>Allocative efficiency</strong>: \(P = MC\) — price equals marginal social cost; marginal social benefit equals marginal social cost.
 
 Total surplus is maximized. Adam Smith's "invisible hand" — the self-interest of thousands of firms and consumers, coordinated through prices — produces outcomes that maximize social welfare. This is the benchmark against which all other market structures are compared.
 
@@ -622,60 +622,60 @@ Total surplus is maximized. Adam Smith's "invisible hand" — the self-interest 
 
 ## 10.1 Monopoly and How It Arises
 
-A **monopoly** is a market with a single seller protected from competition by a barrier to entry, producing a good with no close substitutes. Unlike a price taker, a monopolist is a **price maker** — it chooses the price and quantity simultaneously (subject to the market demand constraint).
+A <strong>monopoly</strong> is a market with a single seller protected from competition by a barrier to entry, producing a good with no close substitutes. Unlike a price taker, a monopolist is a <strong>price maker</strong> — it chooses the price and quantity simultaneously (subject to the market demand constraint).
 
-**Barriers to entry** take three forms:
+<strong>Barriers to entry</strong> take three forms:
 
-1. **Natural barriers**: Economies of scale so pervasive that one firm can supply the entire market at lower cost than two or more firms — a **natural monopoly** (e.g., water supply, railways). The LRAC curve is still declining when it intersects the demand curve.
-2. **Ownership barriers**: One firm controls a critical resource (e.g., Alcoa's historical control of aluminum production; De Beers' control of diamonds).
-3. **Legal barriers**: Government-granted exclusivity through *public franchises* (Canada Post), *government licences* (medical doctors, taxicabs), *patents* (exclusive rights to inventors for a defined period), and *copyrights* (exclusive rights to authors and composers).
+1. <strong>Natural barriers</strong>: Economies of scale so pervasive that one firm can supply the entire market at lower cost than two or more firms — a <strong>natural monopoly</strong> (e.g., water supply, railways). The LRAC curve is still declining when it intersects the demand curve.
+2. <strong>Ownership barriers</strong>: One firm controls a critical resource (e.g., Alcoa's historical control of aluminum production; De Beers' control of diamonds).
+3. <strong>Legal barriers</strong>: Government-granted exclusivity through <em>public franchises</em> (Canada Post), <em>government licences</em> (medical doctors, taxicabs), <em>patents</em> (exclusive rights to inventors for a defined period), and <em>copyrights</em> (exclusive rights to authors and composers).
 
-**Price and marginal revenue for a monopoly**: Because the monopolist faces the downward-sloping market demand curve, selling more requires lowering the price on all units. Therefore, **MR < P** at every output level. If the demand curve is linear, the MR curve has the same vertical intercept but twice the slope (steeper).
+<strong>Price and marginal revenue for a monopoly</strong>: Because the monopolist faces the downward-sloping market demand curve, selling more requires lowering the price on all units. Therefore, <strong>MR < P</strong> at every output level. If the demand curve is linear, the MR curve has the same vertical intercept but twice the slope (steeper).
 
-**Monopoly always produces in the elastic portion of the demand curve**: If \(|\varepsilon_D| < 1\), reducing output would increase total revenue and reduce total cost, increasing profit — so a profit-maximizing monopolist never voluntarily produces in the inelastic range.
+<strong>Monopoly always produces in the elastic portion of the demand curve</strong>: If \(|\varepsilon_D| < 1\), reducing output would increase total revenue and reduce total cost, increasing profit — so a profit-maximizing monopolist never voluntarily produces in the inelastic range.
 
-**Profit-maximizing output**: The monopolist produces where \(MR = MC\) and charges the highest price the market will bear for that quantity — read off the demand curve. Economic profit can persist in the long run because barriers to entry protect the monopolist from competition.
+<strong>Profit-maximizing output</strong>: The monopolist produces where \(MR = MC\) and charges the highest price the market will bear for that quantity — read off the demand curve. Economic profit can persist in the long run because barriers to entry protect the monopolist from competition.
 
 ## 10.2 Single-Price Monopoly vs. Perfect Competition
 
 Compared to perfect competition, a single-price monopoly:
-- **Produces less output** (\(Q_M < Q_C\))
-- **Charges a higher price** (\(P_M > P_C\))
+- <strong>Produces less output</strong> (\(Q_M < Q_C\))
+- <strong>Charges a higher price</strong> (\(P_M > P_C\))
 
 The competitive supply curve (\(S = MC\)) is the monopolist's MC curve. Under competition, equilibrium is where \(D = MC\). Under monopoly, equilibrium is where \(MR = MC\), which occurs at a lower quantity and higher price.
 
 ## 10.3 Monopoly Inefficiency and Rent Seeking
 
-A monopoly creates **deadweight loss**: at \(Q_M < Q_C\), MSB > MSC — there are units that would create value but are not produced. Consumer surplus shrinks dramatically; producer surplus grows as the monopolist captures part of the former consumer surplus. Total surplus is less than in perfect competition by the deadweight loss triangle.
+A monopoly creates <strong>deadweight loss</strong>: at \(Q_M < Q_C\), MSB > MSC — there are units that would create value but are not produced. Consumer surplus shrinks dramatically; producer surplus grows as the monopolist captures part of the former consumer surplus. Total surplus is less than in perfect competition by the deadweight loss triangle.
 
-**Rent seeking** compounds the social cost. **Economic rent** is any surplus above opportunity cost. Firms and individuals may expend resources (lobbying, legal fees, advertising) to *acquire* or *maintain* monopoly status. These expenditures create no output — they are pure social waste. In equilibrium, rent-seeking costs can absorb the entire monopoly profit, shifting the ATC curve upward, eliminating economic profit but expanding the deadweight loss further.
+<strong>Rent seeking</strong> compounds the social cost. <strong>Economic rent</strong> is any surplus above opportunity cost. Firms and individuals may expend resources (lobbying, legal fees, advertising) to <em>acquire</em> or <em>maintain</em> monopoly status. These expenditures create no output — they are pure social waste. In equilibrium, rent-seeking costs can absorb the entire monopoly profit, shifting the ATC curve upward, eliminating economic profit but expanding the deadweight loss further.
 
 ## 10.4 Price Discrimination
 
-**Price discrimination** is charging different prices for the same good to different buyers (or for different units to the same buyer), based on differences in willingness to pay. It requires:
+<strong>Price discrimination</strong> is charging different prices for the same good to different buyers (or for different units to the same buyer), based on differences in willingness to pay. It requires:
 - Ability to identify buyers with different willingness to pay
 - Ability to prevent resale between groups
 
-Two methods: discrimination among *groups* (business vs. leisure airline passengers) and among *units* (first unit at high price, subsequent units cheaper — quantity discounts).
+Two methods: discrimination among <em>groups</em> (business vs. leisure airline passengers) and among <em>units</em> (first unit at high price, subsequent units cheaper — quantity discounts).
 
 By price discriminating, a monopolist converts consumer surplus into producer surplus. Consider an airline with MC = \$40. At a single price of \$120, it serves 8,000 passengers. By also serving leisure travellers at \$80, it expands to 12,000 passengers — both consumer surplus and producer surplus increase relative to the single-price case.
 
-**Perfect price discrimination**: Charge each buyer their exact maximum willingness to pay. In this case, MR = demand curve (the firm sells each unit for the buyer's reservation price), output expands to the point where \(P = MC\) (the efficient competitive outcome), and the monopolist captures *all* consumer surplus as producer surplus. Perfect price discrimination is efficient but maximally transfers welfare from consumers to the firm.
+<strong>Perfect price discrimination</strong>: Charge each buyer their exact maximum willingness to pay. In this case, MR = demand curve (the firm sells each unit for the buyer's reservation price), output expands to the point where \(P = MC\) (the efficient competitive outcome), and the monopolist captures <em>all</em> consumer surplus as producer surplus. Perfect price discrimination is efficient but maximally transfers welfare from consumers to the firm.
 
 ## 10.5 Monopoly Regulation
 
-**Regulation** consists of government-administered rules affecting prices, quantities, and entry.
+<strong>Regulation</strong> consists of government-administered rules affecting prices, quantities, and entry.
 
-- **Social interest theory**: Regulation corrects market failure and eliminates deadweight loss in the public interest.
-- **Capture theory**: Regulated firms eventually "capture" their regulators, turning regulation into protection for producer interests.
+- <strong>Social interest theory</strong>: Regulation corrects market failure and eliminates deadweight loss in the public interest.
+- <strong>Capture theory</strong>: Regulated firms eventually "capture" their regulators, turning regulation into protection for producer interests.
 
-**Marginal cost pricing rule**: Set \(P = MC\). This achieves allocative efficiency (\(MSB = MSC\)) but leads to economic losses for a natural monopoly (since MC < ATC along a downward-sloping LRAC). The firm may need a subsidy or be allowed to price-discriminate to cover its fixed costs.
+<strong>Marginal cost pricing rule</strong>: Set \(P = MC\). This achieves allocative efficiency (\(MSB = MSC\)) but leads to economic losses for a natural monopoly (since MC < ATC along a downward-sloping LRAC). The firm may need a subsidy or be allowed to price-discriminate to cover its fixed costs.
 
-**Average cost pricing rule** (\(P = ATC\)): Eliminates economic loss; firm breaks even. Inefficient (price > MC, so \(MSB > MSC\)) but practical. Problem: firms may inflate reported costs to justify a higher price.
+<strong>Average cost pricing rule</strong> (\(P = ATC\)): Eliminates economic loss; firm breaks even. Inefficient (price > MC, so \(MSB > MSC\)) but practical. Problem: firms may inflate reported costs to justify a higher price.
 
-**Rate of return regulation**: Firm must justify its price by demonstrating that return on capital does not exceed a target rate. Incentivizes over-investment in capital ("gold-plating").
+<strong>Rate of return regulation</strong>: Firm must justify its price by demonstrating that return on capital does not exceed a target rate. Incentivizes over-investment in capital ("gold-plating").
 
-**Price cap regulation**: Sets a maximum price the firm can charge. Gives the firm an incentive to minimize costs (keep costs below the cap to earn profit) and increase quantity. More efficient in practice than rate-of-return regulation.
+<strong>Price cap regulation</strong>: Sets a maximum price the firm can charge. Gives the firm an incentive to minimize costs (keep costs below the cap to earn profit) and increase quantity. More efficient in practice than rate-of-return regulation.
 
 ---
 
@@ -683,7 +683,7 @@ By price discriminating, a monopolist converts consumer surplus into producer su
 
 ## 11.1 What Is Monopolistic Competition?
 
-**Monopolistic competition** combines features of both perfect competition and monopoly:
+<strong>Monopolistic competition</strong> combines features of both perfect competition and monopoly:
 
 Like perfect competition:
 - Large number of firms (each with a small market share)
@@ -692,37 +692,37 @@ Like perfect competition:
 - Zero economic profit in the long run
 
 Like monopoly:
-- **Product differentiation**: Each firm sells a product that differs from competitors' — either in actual characteristics (design, reliability, service) or in perceived characteristics (brand image, packaging). This gives each firm a **downward-sloping demand curve** and therefore MR < P.
+- <strong>Product differentiation</strong>: Each firm sells a product that differs from competitors' — either in actual characteristics (design, reliability, service) or in perceived characteristics (brand image, packaging). This gives each firm a <strong>downward-sloping demand curve</strong> and therefore MR < P.
 
-Product differentiation enables competition along three dimensions: **quality** (physical attributes, reliability), **price** (firms have some pricing power due to unique products), and **marketing** (advertising, packaging, brand positioning).
+Product differentiation enables competition along three dimensions: <strong>quality</strong> (physical attributes, reliability), <strong>price</strong> (firms have some pricing power due to unique products), and <strong>marketing</strong> (advertising, packaging, brand positioning).
 
 Examples: ketchup brands, athletic shoes, laptop computers, fast-food restaurants, cell phones.
 
 ## 11.2 Price and Output in Monopolistic Competition
 
-**Short run**: A monopolistically competitive firm maximizes profit at \(MR = MC\), sets the price on the demand curve, and may earn economic profit (\(P > ATC\)) or incur a loss (\(P < ATC\)).
+<strong>Short run</strong>: A monopolistically competitive firm maximizes profit at \(MR = MC\), sets the price on the demand curve, and may earn economic profit (\(P > ATC\)) or incur a loss (\(P < ATC\)).
 
-**Long run**: Economic profits attract entry; each existing firm loses market share, its demand curve shifts left (and becomes more elastic). Entry continues until \(P = ATC\) and zero economic profit. Economic losses trigger exit; the reverse occurs until \(P = ATC\) is restored.
+<strong>Long run</strong>: Economic profits attract entry; each existing firm loses market share, its demand curve shifts left (and becomes more elastic). Entry continues until \(P = ATC\) and zero economic profit. Economic losses trigger exit; the reverse occurs until \(P = ATC\) is restored.
 
-**Comparison with perfect competition — two key differences:**
+<strong>Comparison with perfect competition — two key differences:</strong>
 
-1. **Excess capacity**: In long-run equilibrium, a monopolistically competitive firm produces less than the quantity at which ATC is minimized. The firm operates at a point to the left of minimum ATC — it has unused productive capacity. This is the cost of product variety.
+1. <strong>Excess capacity</strong>: In long-run equilibrium, a monopolistically competitive firm produces less than the quantity at which ATC is minimized. The firm operates at a point to the left of minimum ATC — it has unused productive capacity. This is the cost of product variety.
 
-2. **Markup**: \(P > MC\) because the demand curve is downward-sloping. In perfect competition, \(P = MC\).
+2. <strong>Markup</strong>: \(P > MC\) because the demand curve is downward-sloping. In perfect competition, \(P = MC\).
 
-**Efficiency**: Because \(P > MC\), \(MSB > MSC\), and the quantity produced is less than the allocatively efficient quantity. However, this inefficiency is the price of product variety — consumers value the variety more than the cost of the excess capacity. The gain from variety can offset the loss from the markup.
+<strong>Efficiency</strong>: Because \(P > MC\), \(MSB > MSC\), and the quantity produced is less than the allocatively efficient quantity. However, this inefficiency is the price of product variety — consumers value the variety more than the cost of the excess capacity. The gain from variety can offset the loss from the markup.
 
 ## 11.3 Product Development and Marketing
 
-To earn economic profits in the long run (even temporarily), monopolistically competitive firms must engage in **continuous product development**. Innovation provides a temporary competitive edge before competitors imitate. Firms invest in innovation until the marginal revenue from innovation equals its marginal cost.
+To earn economic profits in the long run (even temporarily), monopolistically competitive firms must engage in <strong>continuous product development</strong>. Innovation provides a temporary competitive edge before competitors imitate. Firms invest in innovation until the marginal revenue from innovation equals its marginal cost.
 
-**Advertising** serves multiple roles:
-- *Increases demand*: Shifts the demand curve rightward.
-- *Signals quality*: High advertising expenditure signals confidence in product quality — only a firm confident in repeat purchases would spend heavily. A low-quality firm that advertises heavily would lose money when buyers try the product and don't return.
-- *Reduces markup* (when all firms advertise): If advertising makes demand more elastic, the markup shrinks.
-- *May lower average cost*: If advertising shifts demand sufficiently, the firm produces more, spreading fixed costs over a larger output.
+<strong>Advertising</strong> serves multiple roles:
+- <em>Increases demand</em>: Shifts the demand curve rightward.
+- <em>Signals quality</em>: High advertising expenditure signals confidence in product quality — only a firm confident in repeat purchases would spend heavily. A low-quality firm that advertises heavily would lose money when buyers try the product and don't return.
+- <em>Reduces markup</em> (when all firms advertise): If advertising makes demand more elastic, the markup shrinks.
+- <em>May lower average cost</em>: If advertising shifts demand sufficiently, the firm produces more, spreading fixed costs over a larger output.
 
-**Brand names** convey information about quality and consistency. Consumers pay premiums for brands (Holiday Inn over a no-name motel) because the brand credibly signals a predictable quality experience. The value of a brand stems from the investment the firm has made in maintaining quality.
+<strong>Brand names</strong> convey information about quality and consistency. Consumers pay premiums for brands (Holiday Inn over a no-name motel) because the brand credibly signals a predictable quality experience. The value of a brand stems from the investment the firm has made in maintaining quality.
 
 ---
 
@@ -730,35 +730,35 @@ To earn economic profits in the long run (even temporarily), monopolistically co
 
 ## 12.1 What Is Oligopoly?
 
-**Oligopoly** is a market structure with a small number of firms and natural or legal barriers to entry. The key feature is **strategic interdependence**: each firm's profit depends on the actions of its rivals, and each firm chooses its strategy anticipating rivals' responses.
+<strong>Oligopoly</strong> is a market structure with a small number of firms and natural or legal barriers to entry. The key feature is <strong>strategic interdependence</strong>: each firm's profit depends on the actions of its rivals, and each firm chooses its strategy anticipating rivals' responses.
 
-A **duopoly** (two firms) captures the essence of oligopoly. Oligopoly arises naturally when minimum efficient scale is large relative to market demand — the market can only profitably support a few firms at lowest cost.
+A <strong>duopoly</strong> (two firms) captures the essence of oligopoly. Oligopoly arises naturally when minimum efficient scale is large relative to market demand — the market can only profitably support a few firms at lowest cost.
 
-Firms face a **temptation to cooperate** (form a cartel to maximize joint profit) but also a **temptation to defect** (cheat on the cartel to gain individually). This tension is the central drama of oligopoly theory.
+Firms face a <strong>temptation to cooperate</strong> (form a cartel to maximize joint profit) but also a <strong>temptation to defect</strong> (cheat on the cartel to gain individually). This tension is the central drama of oligopoly theory.
 
-A **cartel** is a group of firms that agree to restrict output, raise price, and share profits. Cartels are illegal in Canada (Competition Act, 1986) and in most countries.
+A <strong>cartel</strong> is a group of firms that agree to restrict output, raise price, and share profits. Cartels are illegal in Canada (Competition Act, 1986) and in most countries.
 
 ## 12.2 Oligopoly Games and Game Theory
 
-**Game theory** studies strategic behaviour — decisions that account for the expected responses of others. All games share four elements:
+<strong>Game theory</strong> studies strategic behaviour — decisions that account for the expected responses of others. All games share four elements:
 
-- **Rules**: The setting, available actions, and consequences.
-- **Strategies**: The possible choices for each player.
-- **Payoffs**: The outcomes for each player given the combination of strategies.
-- **Outcomes**: The resulting equilibrium.
+- <strong>Rules</strong>: The setting, available actions, and consequences.
+- <strong>Strategies</strong>: The possible choices for each player.
+- <strong>Payoffs</strong>: The outcomes for each player given the combination of strategies.
+- <strong>Outcomes</strong>: The resulting equilibrium.
 
-**The Prisoners' Dilemma**: The archetypal game theory model. Two suspects (Snake and Worm) are interrogated separately. Each can confess or deny. If one confesses and the other denies, the confessor gets 1 year and the denier gets 25. If both confess, each gets 10 years. If both deny, each gets 2 years.
+<strong>The Prisoners' Dilemma</strong>: The archetypal game theory model. Two suspects (Snake and Worm) are interrogated separately. Each can confess or deny. If one confesses and the other denies, the confessor gets 1 year and the denier gets 25. If both confess, each gets 10 years. If both deny, each gets 2 years.
 
-The **payoff matrix** is:
+The <strong>payoff matrix</strong> is:
 
 |  | Worm: Confess | Worm: Deny |
 |---|---|---|
-| **Snake: Confess** | (−10, −10) | (−1, −25) |
-| **Snake: Deny** | (−25, −1) | (−2, −2) |
+| <strong>Snake: Confess</strong> | (−10, −10) | (−1, −25) |
+| <strong>Snake: Deny</strong> | (−25, −1) | (−2, −2) |
 
-**Nash equilibrium** (named for John Nash): A situation in which each player is making the best choice given what the other player is doing — no player can benefit by unilaterally changing strategy. Here, "both confess" (−10, −10) is the Nash equilibrium because regardless of what Worm does, Snake does better confessing, and vice versa. Even though "both deny" (−2, −2) is better for both, rational self-interest prevents this cooperative outcome.
+<strong>Nash equilibrium</strong> (named for John Nash): A situation in which each player is making the best choice given what the other player is doing — no player can benefit by unilaterally changing strategy. Here, "both confess" (−10, −10) is the Nash equilibrium because regardless of what Worm does, Snake does better confessing, and vice versa. Even though "both deny" (−2, −2) is better for both, rational self-interest prevents this cooperative outcome.
 
-The **dilemma**: individually rational behaviour produces a collectively worse outcome. This is why cartels are unstable and why cooperation is difficult to sustain without enforcement.
+The <strong>dilemma</strong>: individually rational behaviour produces a collectively worse outcome. This is why cartels are unstable and why cooperation is difficult to sustain without enforcement.
 
 ## 12.3 An Oligopoly Price-Fixing Game
 
@@ -766,28 +766,28 @@ In the duopoly price-fixing game (Switchies and Gearbox), the payoff matrix (in 
 
 |  | Gearbox: Cheat | Gearbox: Comply |
 |---|---|---|
-| **Switchies: Cheat** | (0, 0) | (4.5, −1) |
-| **Switchies: Comply** | (−1, 4.5) | (2, 2) |
+| <strong>Switchies: Cheat</strong> | (0, 0) | (4.5, −1) |
+| <strong>Switchies: Comply</strong> | (−1, 4.5) | (2, 2) |
 
-Nash equilibrium: **both cheat** (0, 0). Regardless of what Gearbox does, Switchies earns more by cheating (\$0 > −\$1 if Gearbox complies; \$4.5 > \$2 if... wait — \$0 > −\$1). The dominant strategy for each firm is to cheat. If both comply, total profit is maximized (\$2m + \$2m = \$4m — monopoly profit split), but each has an incentive to deviate unilaterally.
+Nash equilibrium: <strong>both cheat</strong> (0, 0). Regardless of what Gearbox does, Switchies earns more by cheating (\$0 > −\$1 if Gearbox complies; \$4.5 > \$2 if... wait — \$0 > −\$1). The dominant strategy for each firm is to cheat. If both comply, total profit is maximized (\$2m + \$2m = \$4m — monopoly profit split), but each has an incentive to deviate unilaterally.
 
 Outcome: Both cheating produces the competitive outcome — zero economic profit — even though both firms would prefer to collude. Collusion fails in a one-shot game.
 
-**Game of Chicken** (R&D dilemma): In a situation where either firm doing R&D benefits both, there are *two* Nash equilibria: (Apple: R&D, Nokia: No R&D) and (Nokia: R&D, Apple: No R&D). The game is indeterminate; the outcome depends on first-mover advantage and strategic communication.
+<strong>Game of Chicken</strong> (R&D dilemma): In a situation where either firm doing R&D benefits both, there are <em>two</em> Nash equilibria: (Apple: R&D, Nokia: No R&D) and (Nokia: R&D, Apple: No R&D). The game is indeterminate; the outcome depends on first-mover advantage and strategic communication.
 
 ## 12.4 Repeated Games and Sequential Games
 
-When the prisoners' dilemma or oligopoly game is **repeated indefinitely**, cooperation can emerge. Players can adopt punishment strategies:
+When the prisoners' dilemma or oligopoly game is <strong>repeated indefinitely</strong>, cooperation can emerge. Players can adopt punishment strategies:
 
-- **Tit-for-tat strategy**: Cooperate this period if the rival cooperated last period; defect if the rival defected last period. Encourages ongoing cooperation because cheating triggers punishment.
-- **Trigger strategy**: Cooperate until the rival cheats; then play the Nash equilibrium (cheat) forever after. A credible threat of permanent retaliation deters cheating.
+- <strong>Tit-for-tat strategy</strong>: Cooperate this period if the rival cooperated last period; defect if the rival defected last period. Encourages ongoing cooperation because cheating triggers punishment.
+- <strong>Trigger strategy</strong>: Cooperate until the rival cheats; then play the Nash equilibrium (cheat) forever after. A credible threat of permanent retaliation deters cheating.
 
-In the duopoly example, complying in every period yields \$2m per period. Cheating yields \$4.5m in period 1 but triggers retaliation — tit-for-tat gives only \$3.5m average across two periods. Continued cooperation is more profitable than a one-time cheat. **Price wars** can emerge from tit-for-tat punishment when a demand decrease is mistaken for cheating.
+In the duopoly example, complying in every period yields \$2m per period. Cheating yields \$4.5m in period 1 but triggers retaliation — tit-for-tat gives only \$3.5m average across two periods. Continued cooperation is more profitable than a one-time cheat. <strong>Price wars</strong> can emerge from tit-for-tat punishment when a demand decrease is mistaken for cheating.
 
-**Sequential entry games** involve one firm moving first. In a **contestable market** (easy entry and exit), the incumbent firm may set a competitive price to deter entry, earning zero economic profit but preventing a competitor from entering. **Limit pricing** sets price just below the entrant's break-even point, extracting some profit while keeping potential entrants out.
+<strong>Sequential entry games</strong> involve one firm moving first. In a <strong>contestable market</strong> (easy entry and exit), the incumbent firm may set a competitive price to deter entry, earning zero economic profit but preventing a competitor from entering. <strong>Limit pricing</strong> sets price just below the entrant's break-even point, extracting some profit while keeping potential entrants out.
 
-**Canada's Competition Act (1986)** distinguishes between criminal practices (price-fixing cartels, bid-rigging, false advertising) and non-criminal but reviewable practices (mergers, abuse of dominant position, exclusive dealing). The Competition Bureau investigates and the Competition Tribunal adjudicates. High-profile Canadian cases include the 2013 chocolate price-fixing case (Hershey pled guilty; \$4M fine) and the blocking of bank mergers in the late 1990s.
+<strong>Canada's Competition Act (1986)</strong> distinguishes between criminal practices (price-fixing cartels, bid-rigging, false advertising) and non-criminal but reviewable practices (mergers, abuse of dominant position, exclusive dealing). The Competition Bureau investigates and the Competition Tribunal adjudicates. High-profile Canadian cases include the 2013 chocolate price-fixing case (Hershey pled guilty; \$4M fine) and the blocking of bank mergers in the late 1990s.
 
 ---
 
-*These notes synthesize all lecture transcripts and module pages from ECON 101 (Principles of Microeconomics), Spring 2021, University of Waterloo. All 12 chapters are covered, from the foundational concepts of scarcity and choice through the market structures of perfect competition, monopoly, monopolistic competition, and oligopoly.*
+<em>These notes synthesize all lecture transcripts and module pages from ECON 101 (Principles of Microeconomics), Spring 2021, University of Waterloo. All 12 chapters are covered, from the foundational concepts of scarcity and choice through the market structures of perfect competition, monopoly, monopolistic competition, and oligopoly.</em>

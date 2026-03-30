@@ -556,7 +556,7 @@ Since \(\mathbb{R}\) is itself a vector space, \(V^*\) is a vector space over \(
 
 <div class="theorem">
 
-<strong>Theorem 5.2 (Dual Basis).</strong> Let \(\mathcal{B} = \{\mathbf{v}_1, \ldots, \mathbf{v}_n\}\) be a basis for \(V\). For each \(i\), define \(\phi^i : V \to \mathbb{R}\) by \(\phi^i(\mathbf{v}_j) = \delta_{ij}\) (the Kronecker delta). Then \(\mathcal{B}^* = \{\phi^1, \ldots, \phi^n\}\) is a basis for \(V^*\), called the <em>dual basis</em> of \(\mathcal{B}\). In particular, \(\dim V^* = \dim V\).
+<strong>Theorem 5.2 (Dual Basis).</strong> Let \(\mathcal{B} = \{\mathbf{v}_1, \ldots, \mathbf{v}_n\}\) be a basis for \(V\). For each \(i\), define \(\phi^i : V \to \mathbb{R}\) by \(\phi^i(\mathbf{v}_j) = \delta_{ij}\) (the Kronecker delta). Then \(\mathcal{B}^<em> = \{\phi^1, \ldots, \phi^n\}\) is a basis for \(V^</em>\), called the <em>dual basis</em> of \(\mathcal{B}\). In particular, \(\dim V^* = \dim V\).
 
 </div>
 
@@ -566,7 +566,7 @@ The dual basis \(\phi^i\) is often written as a row vector: \(\phi^i\) extracts 
 
 <div class="remark">
 
-<strong>Remark 5.3 (Double Dual).</strong> There is a natural injection \(\iota : V \hookrightarrow V^{**}\) given by \(\iota(\mathbf{v})(\phi) = \phi(\mathbf{v})\). When \(V\) is finite-dimensional, \(\iota\) is an isomorphism (\(V \cong V^{**}\)) and we may identify \(V\) with its double dual. No such canonical identification exists between \(V\) and \(V^*\); an isomorphism \(V \xrightarrow{\sim} V^*\) requires choosing a basis (or an inner product).
+<strong>Remark 5.3 (Double Dual).</strong> There is a natural injection \(\iota : V \hookrightarrow V^{<strong>}\) given by \(\iota(\mathbf{v})(\phi) = \phi(\mathbf{v})\). When \(V\) is finite-dimensional, \(\iota\) is an isomorphism (\(V \cong V^{</strong>}\)) and we may identify \(V\) with its double dual. No such canonical identification exists between \(V\) and \(V^<em>\); an isomorphism \(V \xrightarrow{\sim} V^</em>\) requires choosing a basis (or an inner product).
 
 </div>
 
@@ -574,7 +574,7 @@ The dual basis \(\phi^i\) is often written as a row vector: \(\phi^i\) extracts 
 
 <div class="definition">
 
-<strong>Definition 5.4 (Transpose / Dual Map).</strong> Let \(T : V \to W\) be linear. The <em>transpose</em> (or <em>dual map</em>) of \(T\) is the linear map \(T^* : W^* \to V^*\) defined by \(T^*(\psi) = \psi \circ T\), i.e., \((T^*\psi)(\mathbf{v}) = \psi(T(\mathbf{v}))\).
+<strong>Definition 5.4 (Transpose / Dual Map).</strong> Let \(T : V \to W\) be linear. The <em>transpose</em> (or <em>dual map</em>) of \(T\) is the linear map \(T^<em> : W^</em> \to V^<em>\) defined by \(T^</em>(\psi) = \psi \circ T\), i.e., \((T^*\psi)(\mathbf{v}) = \psi(T(\mathbf{v}))\).
 
 </div>
 
@@ -582,7 +582,7 @@ The notation is natural: \(T^*\) "pulls back" functionals from \(W\) to \(V\). T
 
 <div class="theorem">
 
-<strong>Theorem 5.5.</strong> Let \([T]_{\mathcal{B}}^{\mathcal{C}} = A\). Then \([T^*]_{\mathcal{C}^*}^{\mathcal{B}^*} = A^T\).
+<strong>Theorem 5.5.</strong> Let \([T]_{\mathcal{B}}^{\mathcal{C}} = A\). Then \([T^<em>]_{\mathcal{C}^</em>}^{\mathcal{B}^*} = A^T\).
 
 </div>
 

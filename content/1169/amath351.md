@@ -30,13 +30,13 @@ The most general linear second-order ODE in \( y(x) \) is
 a_2(x)y'' + a_1(x)y' + a_0(x)y = f(x), \qquad x \in I.
 \]
 
-Assuming \( a_2(x) \) is not identically zero, we divide through to obtain the **standard** or **normalized** form:
+Assuming \( a_2(x) \) is not identically zero, we divide through to obtain the <strong>standard</strong> or <strong>normalized</strong> form:
 
 \[
 y'' + P(x)y' + Q(x)y = R(x),
 \]
 
-where \( P(x) = a_1/a_2 \), \( Q(x) = a_0/a_2 \), and \( R(x) = f/a_2 \). The **homogeneous** DE associated with this is
+where \( P(x) = a_1/a_2 \), \( Q(x) = a_0/a_2 \), and \( R(x) = f/a_2 \). The <strong>homogeneous</strong> DE associated with this is
 
 \[
 y'' + P(x)y' + Q(x)y = 0.
@@ -46,9 +46,9 @@ When \( R(x) = 0 \), the DE is said to be homogeneous. The solution structure fo
 
 ## General Solutions and Initial Value Problems
 
-In your previous course, you learned that the general solution of a second-order homogeneous constant-coefficient DE involves two arbitrary constants. The same is true for the general case: the solution space of a second-order linear homogeneous ODE is **two-dimensional**. We will prove this rigorously in Chapter 7.
+In your previous course, you learned that the general solution of a second-order homogeneous constant-coefficient DE involves two arbitrary constants. The same is true for the general case: the solution space of a second-order linear homogeneous ODE is <strong>two-dimensional</strong>. We will prove this rigorously in Chapter 7.
 
-To extract a unique solution from this two-parameter family, one imposes **initial conditions** at some point \( x_0 \in I \):
+To extract a unique solution from this two-parameter family, one imposes <strong>initial conditions</strong> at some point \( x_0 \in I \):
 
 \[
 y(x_0) = A, \qquad y'(x_0) = B,
@@ -224,11 +224,11 @@ y_G(x) = y_p(x) + c_1 y_1(x) + c_2 y_2(x).
 
 <div class="proof"><strong>Proof.</strong> For any solution \( y(x) \) of the inhomogeneous DE, define \( u = y - y_p \). Then \( u'' + Pu' + Qu = (R) - (R) = 0 \), so \( u \) is a solution of the homogeneous DE. Hence \( u = c_1 y_1 + c_2 y_2 \) for some constants, giving \( y = y_p + c_1 y_1 + c_2 y_2 \). \(\blacksquare\)</div>
 
-The crucial insight: **all the generality of the general solution resides in the homogeneous part** \( y_h \). Finding \( y_p \) by any method (undetermined coefficients, variation of parameters) suffices.
+The crucial insight: <strong>all the generality of the general solution resides in the homogeneous part</strong> \( y_h \). Finding \( y_p \) by any method (undetermined coefficients, variation of parameters) suffices.
 
 ## Reduction of Order
 
-If one solution \( y_1(x) \) to the homogeneous DE is known, a second linearly independent solution can be found by **reduction of order**. Assume \( y_2(x) = u(x)y_1(x) \) and substitute into the DE. Because \( y_1 \) satisfies the DE, the resulting equation in \( v = u' \) is first-order:
+If one solution \( y_1(x) \) to the homogeneous DE is known, a second linearly independent solution can be found by <strong>reduction of order</strong>. Assume \( y_2(x) = u(x)y_1(x) \) and substitute into the DE. Because \( y_1 \) satisfies the DE, the resulting equation in \( v = u' \) is first-order:
 
 \[
 v'y_1 + (2y_1' + Py_1)v = 0.

@@ -82,7 +82,7 @@ We take this as an axiom characterising \(\mathbb{R}\): up to isomorphism of ord
 
 <div class="remark">
 
-<strong>Remark 1.5.</strong> A useful rephrasing: \(\alpha = \sup S\) if and only if (i) \(x \le \alpha\) for all \(x \in S\), and (ii) for every \(\varepsilon > 0\) there exists \(x \in S\) with \(x > \alpha - \varepsilon\). Condition (ii) says \(\alpha\) is the *smallest* upper bound — anything strictly smaller gets beaten by some element of \(S\).
+<strong>Remark 1.5.</strong> A useful rephrasing: \(\alpha = \sup S\) if and only if (i) \(x \le \alpha\) for all \(x \in S\), and (ii) for every \(\varepsilon > 0\) there exists \(x \in S\) with \(x > \alpha - \varepsilon\). Condition (ii) says \(\alpha\) is the <em>smallest</em> upper bound — anything strictly smaller gets beaten by some element of \(S\).
 
 </div>
 
@@ -454,7 +454,7 @@ Ordinary continuity allows \(\delta\) to depend on both \(\varepsilon\) *and* th
 
 <div class="definition">
 
-<strong>Definition 3.16 (Uniform Continuity).</strong> A function \(f : [a,b] \to \mathbb{R}\) is <em>uniformly continuous</em> if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that for *all* \(x, y \in [a,b]\),
+<strong>Definition 3.16 (Uniform Continuity).</strong> A function \(f : [a,b] \to \mathbb{R}\) is <em>uniformly continuous</em> if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that for <em>all</em> \(x, y \in [a,b]\),
 \[
 |x - y| < \delta \implies |f(x) - f(y)| < \varepsilon.
 \]
@@ -463,7 +463,7 @@ Ordinary continuity allows \(\delta\) to depend on both \(\varepsilon\) *and* th
 
 <div class="example">
 
-<strong>Example 3.17.</strong> \(f(x) = x^2\) is continuous on \(\mathbb{R}\) but not uniformly continuous: for any \(\delta > 0\), taking \(x = n\) and \(y = n + \delta/2\) for large \(n\) gives \(|x - y| < \delta\) but \(|f(x) - f(y)| = |(n+\delta/2)^2 - n^2| = n\delta + \delta^2/4 \to \infty\). However, \(f(x) = x^2\) *is* uniformly continuous on any closed bounded interval.
+<strong>Example 3.17.</strong> \(f(x) = x^2\) is continuous on \(\mathbb{R}\) but not uniformly continuous: for any \(\delta > 0\), taking \(x = n\) and \(y = n + \delta/2\) for large \(n\) gives \(|x - y| < \delta\) but \(|f(x) - f(y)| = |(n+\delta/2)^2 - n^2| = n\delta + \delta^2/4 \to \infty\). However, \(f(x) = x^2\) <em>is</em> uniformly continuous on any closed bounded interval.
 
 </div>
 

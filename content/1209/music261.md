@@ -33,109 +33,109 @@ Here are three examples of arias that illustrate different approaches:
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/u0qkP1kvEdQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Monteverdi, "Vi Ricorda" from L'Orfeo*
+<em>Monteverdi, "Vi Ricorda" from L'Orfeo</em>
 
-**Handel, *Messiah* (1742), "Rejoice Greatly":** This is a **da capo aria** in A B A' form — an opening section, a contrasting section, and then a return of the opening music and words, but now more ornamented. Notice the strong meter in threes (12/8 time).
+<strong>Handel, <em>Messiah</em> (1742), "Rejoice Greatly":</strong> This is a <strong>da capo aria</strong> in A B A' form — an opening section, a contrasting section, and then a return of the opening music and words, but now more ornamented. Notice the strong meter in threes (12/8 time).
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/tktWeIQ-uaw?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Handel, "Rejoice Greatly" from Messiah*
+<em>Handel, "Rejoice Greatly" from Messiah</em>
 
-**Mozart, *Don Giovanni* (1787), "Batti, Batti" (Zerlina):** Zerlina tries to persuade her fiancé Masetto to forgive her. Notice the flowing cello accompaniment and the way Zerlina switches to a lilting dance rhythm in triple meter at the end.
+<strong>Mozart, <em>Don Giovanni</em> (1787), "Batti, Batti" (Zerlina):</strong> Zerlina tries to persuade her fiancé Masetto to forgive her. Notice the flowing cello accompaniment and the way Zerlina switches to a lilting dance rhythm in triple meter at the end.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/Isaj6kVb9Ww?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Mozart, "Batti, Batti" from Don Giovanni*
+<em>Mozart, "Batti, Batti" from Don Giovanni</em>
 
 ## Recitative
 
-**Recitative** is a reciting style — a form of sung declamation (朗唱法) that sits halfway between singing and speaking. It fits the natural accents, rhythm, pace, and inflections of words. There are no strong regular accents. It is **syllabic**, meaning there is usually just one note per syllable of text. Recitative is typically used to move the plot forward and often consists of dialogue between characters. It was essentially "invented" around 1600 and made opera possible — a more efficient style of singing that tells the story more quickly than full song.
+<strong>Recitative</strong> is a reciting style — a form of sung declamation (朗唱法) that sits halfway between singing and speaking. It fits the natural accents, rhythm, pace, and inflections of words. There are no strong regular accents. It is <strong>syllabic</strong>, meaning there is usually just one note per syllable of text. Recitative is typically used to move the plot forward and often consists of dialogue between characters. It was essentially "invented" around 1600 and made opera possible — a more efficient style of singing that tells the story more quickly than full song.
 
 The instrumental accompaniment in recitative is usually quite spare and sparse, allowing the voice to flow naturally like speech rhythms with minimal structure. Depending on the storyline, instruments can accompany recitative in two different styles:
 
-- ***Secco*** ("dry"): Simple chordal punctuation consisting of just a bass line and an instrument filling in the chords — the **basso continuo** (a sustaining bass instrument plus a chording instrument such as harpsichord or organ).
-- ***Accompagnato*** ("accompanied"): A fuller accompaniment that includes other instruments of the orchestra, creating a richer texture for moments of heightened drama.
+- <strong><em>Secco</strong></em> ("dry"): Simple chordal punctuation consisting of just a bass line and an instrument filling in the chords — the <strong>basso continuo</strong> (a sustaining bass instrument plus a chording instrument such as harpsichord or organ).
+- <strong><em>Accompagnato</strong></em> ("accompanied"): A fuller accompaniment that includes other instruments of the orchestra, creating a richer texture for moments of heightened drama.
 
 Here are two examples of recitative:
 
-**Handel, *Giulio Cesare*, Act II, sc. 1, "Eseguisti…":** Cleopatra and her friend Nireno conspire to enchant Julius Caesar. Notice how spare the accompaniment is, allowing the voices to follow natural speech rhythms in their dialogue. The accompaniment style here is *secco*.
+<strong>Handel, <em>Giulio Cesare</em>, Act II, sc. 1, "Eseguisti…":</strong> Cleopatra and her friend Nireno conspire to enchant Julius Caesar. Notice how spare the accompaniment is, allowing the voices to follow natural speech rhythms in their dialogue. The accompaniment style here is <em>secco</em>.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/vAUEpIbGArE?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Handel, "Eseguisti" recitative from Giulio Cesare*
+<em>Handel, "Eseguisti" recitative from Giulio Cesare</em>
 
-**Monteverdi, *Orfeo*, Act II:** The Messenger delivers the bad news of Eurydice's death — a long narrative, very emotionally charged scene delivered in recitative with spare accompaniment and a flexible vocal line.
+<strong>Monteverdi, <em>Orfeo</em>, Act II:</strong> The Messenger delivers the bad news of Eurydice's death — a long narrative, very emotionally charged scene delivered in recitative with spare accompaniment and a flexible vocal line.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/b2y4oIRn-3g?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Monteverdi, Orfeo, Act II — Messenger scene*
+<em>Monteverdi, Orfeo, Act II — Messenger scene</em>
 
-Handel's *Messiah*, although not an opera, uses operatic elements like recitative and aria, and serves as a great example of alternating *secco* and *accompagnato* styles of accompaniment.
+Handel's <em>Messiah</em>, although not an opera, uses operatic elements like recitative and aria, and serves as a great example of alternating <em>secco</em> and <em>accompagnato</em> styles of accompaniment.
 
-**Pergolesi, *La serva padrona* (1733):** This example demonstrates a mix of both *secco* and *accompagnato* recitative. Serpina and Uberto engage in dialogue using *secco* style. When Serpina leaves and Uberto is left to think to himself, the accompaniment shifts to *accompagnato* (around 1:00).
+<strong>Pergolesi, <em>La serva padrona</em> (1733):</strong> This example demonstrates a mix of both <em>secco</em> and <em>accompagnato</em> recitative. Serpina and Uberto engage in dialogue using <em>secco</em> style. When Serpina leaves and Uberto is left to think to himself, the accompaniment shifts to <em>accompagnato</em> (around 1:00).
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/iBhdAK4sDjY?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Pergolesi, La serva padrona — recitative scene*
+<em>Pergolesi, La serva padrona — recitative scene</em>
 
 ## Orchestra and Chorus
 
-The **orchestra** plays an important dramatic role in telling the story of an opera. It accompanies singers, plays interludes, and performs separate orchestral numbers. One of the most important orchestral elements is the **overture** — the orchestral introduction to an opera. Overtures serve different dramatic purposes depending on the era and the composer:
+The <strong>orchestra</strong> plays an important dramatic role in telling the story of an opera. It accompanies singers, plays interludes, and performs separate orchestral numbers. One of the most important orchestral elements is the <strong>overture</strong> — the orchestral introduction to an opera. Overtures serve different dramatic purposes depending on the era and the composer:
 
-**Handel, Overture to *Messiah* (1742):** A typical Baroque form with a slow opening section followed by a fast second section, both repeated.
+<strong>Handel, Overture to <em>Messiah</em> (1742):</strong> A typical Baroque form with a slow opening section followed by a fast second section, both repeated.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/yNguOV-lKCA?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Handel, Overture to Messiah*
+<em>Handel, Overture to Messiah</em>
 
-**Mozart, Overture to *Don Giovanni* (1787):** Cast in sonata form with a slow introduction (D minor/D major). It acts as a microcosm of Don Giovanni's two sides, and some of its music returns later in the opera.
+<strong>Mozart, Overture to <em>Don Giovanni</em> (1787):</strong> Cast in sonata form with a slow introduction (D minor/D major). It acts as a microcosm of Don Giovanni's two sides, and some of its music returns later in the opera.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/jyjVCbTo5F0?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Mozart, Overture to Don Giovanni*
+<em>Mozart, Overture to Don Giovanni</em>
 
-**Bizet, Prelude to *Carmen* (1875):** This acts like a medley of music to come in the opera, including the foreshadowing of a "fate" motive.
+<strong>Bizet, Prelude to <em>Carmen</em> (1875):</strong> This acts like a medley of music to come in the opera, including the foreshadowing of a "fate" motive.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/1d4-nDVCN6U?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Bizet, Prelude to Carmen*
+<em>Bizet, Prelude to Carmen</em>
 
-The **chorus** is a group of singers representing group identity, as opposed to the individual identity expressed by solo characters. Sometimes the chorus acts like a Greek chorus — empathizing with main characters and delivering the moral of the story. Other times, they simply represent the crowd.
+The <strong>chorus</strong> is a group of singers representing group identity, as opposed to the individual identity expressed by solo characters. Sometimes the chorus acts like a Greek chorus — empathizing with main characters and delivering the moral of the story. Other times, they simply represent the crowd.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/t6OsCKTdBQk?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Handel, "Glory to God" from Messiah*
+<em>Handel, "Glory to God" from Messiah</em>
 
 
-# The Birth of Opera — Monteverdi, *L'Orfeo* (1607)
+# The Birth of Opera — Monteverdi, <em>L'Orfeo</em> (1607)
 
 Readings:
-- Gardiner, John Eliot. "Monteverdi's Orfeo: 'a Brilliant and Compelling Fable to the Inalienable Power of Music.'" *The Guardian*, August 3, 2015.
-- Parakilas, James. "Opera in Princely Courts: Florence and Mantua." In *The Story of Opera*, 95–118. New York: W.W. Norton, 2013.
+- Gardiner, John Eliot. "Monteverdi's Orfeo: 'a Brilliant and Compelling Fable to the Inalienable Power of Music.'" <em>The Guardian</em>, August 3, 2015.
+- Parakilas, James. "Opera in Princely Courts: Florence and Mantua." In <em>The Story of Opera</em>, 95–118. New York: W.W. Norton, 2013.
 
 ## The Birth of Opera
 
-How did opera come into existence? The story begins in late 16<sup>th</sup>-century Florence with a group of intellectuals known as the **Florentine Camerata**. This group — which included Count Giovanni de' Bardi, Girolamo Mei, and Vincenzo Galilei (father of the astronomer Galileo) — met to discuss literature, science, and the arts. They speculated on the role of music in ancient Greek theatre and became convinced that Greek tragedies must have been sung, not merely spoken. They believed that music had the power to stir deep emotions in ancient audiences, and could do so again.
+How did opera come into existence? The story begins in late 16<sup>th</sup>-century Florence with a group of intellectuals known as the <strong>Florentine Camerata</strong>. This group — which included Count Giovanni de' Bardi, Girolamo Mei, and Vincenzo Galilei (father of the astronomer Galileo) — met to discuss literature, science, and the arts. They speculated on the role of music in ancient Greek theatre and became convinced that Greek tragedies must have been sung, not merely spoken. They believed that music had the power to stir deep emotions in ancient audiences, and could do so again.
 
-The Camerata criticized the dominant vocal style of their day — **polyphony**, in which several relatively independent melodic lines sounded simultaneously. In polyphonic music, they argued, the text was obscured. If words could not be heard clearly, the emotional power of the poetry was lost. They proposed instead a solo melody that could express poetry and emotion directly, following the natural speech inflections of gifted orators. This new style was called **monody** — a solo vocal line with light accompaniment. Composers experimented with this style in one-act mini-dramas called **intermedi**, performed between acts of spoken plays. Out of these experiments, **recitative** was born: a style of singing halfway between speech and song.
+The Camerata criticized the dominant vocal style of their day — <strong>polyphony</strong>, in which several relatively independent melodic lines sounded simultaneously. In polyphonic music, they argued, the text was obscured. If words could not be heard clearly, the emotional power of the poetry was lost. They proposed instead a solo melody that could express poetry and emotion directly, following the natural speech inflections of gifted orators. This new style was called <strong>monody</strong> — a solo vocal line with light accompaniment. Composers experimented with this style in one-act mini-dramas called <strong>intermedi</strong>, performed between acts of spoken plays. Out of these experiments, <strong>recitative</strong> was born: a style of singing halfway between speech and song.
 
 The earliest attempts at recitative were too decorated and long. Composers gradually reduced it to one note per syllable so that long speeches could be delivered in a reasonable time without sacrificing emotional impact.
 
 ## The Musical Revolution of 1600
 
-Around 1600, a musical revolution took place. The "new music" centered on monody — a single vocal line with simple accompaniment provided by the **basso continuo**: a sustaining bass instrument (such as a cello or bass viol) combined with a chording instrument (harpsichord, organ, or lute) that provided simple harmonic support over which the voice freely ranged.
+Around 1600, a musical revolution took place. The "new music" centered on monody — a single vocal line with simple accompaniment provided by the <strong>basso continuo</strong>: a sustaining bass instrument (such as a cello or bass viol) combined with a chording instrument (harpsichord, organ, or lute) that provided simple harmonic support over which the voice freely ranged.
 
 This new style divided vocal writing into two categories:
-- **Aria** (what Parakilas calls the "singing style"): used when characters are supposed to be singing — expressing emotions through fully musical, melodic delivery.
-- **Recitative** (what Parakilas calls the "acting style"): used when characters are supposed to be speaking to each other — the vocal line is bound to the words and imitates the accents of impassioned speech.
+- <strong>Aria</strong> (what Parakilas calls the "singing style"): used when characters are supposed to be singing — expressing emotions through fully musical, melodic delivery.
+- <strong>Recitative</strong> (what Parakilas calls the "acting style"): used when characters are supposed to be speaking to each other — the vocal line is bound to the words and imitates the accents of impassioned speech.
 
 As the pioneering composer Jacopo Peri described it in 1600, recitative was "midway between speaking and singing," with text that was likewise "midway between poetic meter and everyday speech." Recitative became the fundamental element of opera, later functioning as a connecting link between arias.
 
 ## Claudio Monteverdi (1567–1643)
 
-**Claudio Monteverdi** was not the composer of the first opera — that distinction belongs to Jacopo Peri's *Dafne* (1598) — but he expanded and intensified the form enormously. Already a celebrated composer of song, Monteverdi brought his extraordinary sensitivity to text and emotion to this new dramatic art form.
+<strong>Claudio Monteverdi</strong> was not the composer of the first opera — that distinction belongs to Jacopo Peri's <em>Dafne</em> (1598) — but he expanded and intensified the form enormously. Already a celebrated composer of song, Monteverdi brought his extraordinary sensitivity to text and emotion to this new dramatic art form.
 
-*L'Orfeo* (1607) was Monteverdi's first opera. He labelled it a *favola in musica* — a musical fable. The **libretto** was written by Alessandro Striggio, who deserves much of the credit for the new work. This was a text conceived from the start as an opera, not adapted from a pre-existing play.
+<em>L'Orfeo</em> (1607) was Monteverdi's first opera. He labelled it a <em>favola in musica</em> — a musical fable. The <strong>libretto</strong> was written by Alessandro Striggio, who deserves much of the credit for the new work. This was a text conceived from the start as an opera, not adapted from a pre-existing play.
 
 The first performance took place in Mantua in February 1607, during Carnival — the festive season before the church season of Lent. It was a private entertainment, staged in a room in the apartments of the Gonzaga family. The performance forces were remarkably small: seven singing roles performed by just five singers. The opera was published in 1609, allowing its innovations to spread.
 
@@ -143,30 +143,30 @@ The work is structured as a prologue followed by five acts (probably performed w
 
 ### The Orpheus Legend
 
-The story of *L'Orfeo* is based on the ancient myth of Orpheus as told by Ovid in the *Metamorphoses* (and also in Virgil's account). The Orpheus legend became the basis of some of the earliest operas, and it is easy to see why: it is a story about the power of music itself. Orpheus, the greatest musician in Greek mythology, attempts to use his art to overcome death.
+The story of <em>L'Orfeo</em> is based on the ancient myth of Orpheus as told by Ovid in the <em>Metamorphoses</em> (and also in Virgil's account). The Orpheus legend became the basis of some of the earliest operas, and it is easy to see why: it is a story about the power of music itself. Orpheus, the greatest musician in Greek mythology, attempts to use his art to overcome death.
 
 Monteverdi could empathize deeply with his protagonist. The composer had himself suffered the deaths of his wife and his ward, mirroring Orpheus's experience of devastating personal loss.
 
-The characters of *L'Orfeo* include:
-- **Allegorical characters**: "La Musica" (Music personified), "Hope"
-- **Pastoral characters**: nymphs and shepherds
-- **Underworld characters**: Charon (the Styx River boatman), Pluto and his consort Proserpina
-- **Principal characters**: Orfeo (Orpheus), Euridice (Eurydice), and Sylvia (the Messenger)
-- **Chorus**: functioning like a Greek chorus — commenting on events and empathizing with the main characters
+The characters of <em>L'Orfeo</em> include:
+- <strong>Allegorical characters</strong>: "La Musica" (Music personified), "Hope"
+- <strong>Pastoral characters</strong>: nymphs and shepherds
+- <strong>Underworld characters</strong>: Charon (the Styx River boatman), Pluto and his consort Proserpina
+- <strong>Principal characters</strong>: Orfeo (Orpheus), Euridice (Eurydice), and Sylvia (the Messenger)
+- <strong>Chorus</strong>: functioning like a Greek chorus — commenting on events and empathizing with the main characters
 
-The **orchestra** is carefully specified, with Monteverdi assigning particular instruments to different dramatic contexts — bright instruments for pastoral scenes, darker tones for the underworld.
+The <strong>orchestra</strong> is carefully specified, with Monteverdi assigning particular instruments to different dramatic contexts — bright instruments for pastoral scenes, darker tones for the underworld.
 
 ## How Does the Music Tell the Story?
 
-The central dramatic sequence of *L'Orfeo* occurs in Act II, where news of Eurydice's death arrives and Orpheus must respond. This sequence demonstrates Monteverdi's genius for using musical style itself as a dramatic tool.
+The central dramatic sequence of <em>L'Orfeo</em> occurs in Act II, where news of Eurydice's death arrives and Orpheus must respond. This sequence demonstrates Monteverdi's genius for using musical style itself as a dramatic tool.
 
 ### a) Orfeo's Aria: "Vi ricorda, o boschi ombrosi"
 
-The act opens with Orpheus singing joyfully to the wedding guests. "Vi ricorda" ("Do you remember, O shady woods…") is a song in the **singing style** — Orpheus is literally performing for his friends, recalling how unhappy he was before Eurydice and expressing his now-unbridled joy.
+The act opens with Orpheus singing joyfully to the wedding guests. "Vi ricorda" ("Do you remember, O shady woods…") is a song in the <strong>singing style</strong> — Orpheus is literally performing for his friends, recalling how unhappy he was before Eurydice and expressing his now-unbridled joy.
 
-The aria is **strophic**: the same music is used for different verses of text. There are four verses with regular meter, consistent numbers of lines, and rhyming patterns. The accompaniment is minimal — only voice and basso continuo. A regular dance rhythm shifts its beat pattern from line to line, and instrumental **ritornellos** (refrains) separate the verses.
+The aria is <strong>strophic</strong>: the same music is used for different verses of text. There are four verses with regular meter, consistent numbers of lines, and rhyming patterns. The accompaniment is minimal — only voice and basso continuo. A regular dance rhythm shifts its beat pattern from line to line, and instrumental <strong>ritornellos</strong> (refrains) separate the verses.
 
-> **Orpheus:**
+> <strong>Orpheus:</strong>
 > Vi ricorda, o boschi ombrosi, / Do you remember, O shady woods,
 > de' miei lungh' aspri tormenti, / my long, bitter torments,
 > quando i sassi ai miei lamenti / when the stones to my laments
@@ -183,15 +183,15 @@ After Orpheus finishes, a short shepherd's song comments on his happiness. This 
 
 ### c) The Messenger's Recitative: "Ahi, Caso" ("Ah, Bitter Event!")
 
-The Messenger Sylvia arrives with devastating news. This scene is delivered in the **speaking style** — recitative — reporting Eurydice's death through dialogue between the Messenger and the shepherds.
+The Messenger Sylvia arrives with devastating news. This scene is delivered in the <strong>speaking style</strong> — recitative — reporting Eurydice's death through dialogue between the Messenger and the shepherds.
 
-The forces are reduced to single voices with only basso continuo accompaniment. Monteverdi specifies an organ with wooden pipes and a **theorbo** (a large, long-necked lute) — a deliberately somber, muted sound.
+The forces are reduced to single voices with only basso continuo accompaniment. Monteverdi specifies an organ with wooden pipes and a <strong>theorbo</strong> (a large, long-necked lute) — a deliberately somber, muted sound.
 
-The scene uses **tonal centres** to convey different levels of awareness. The Messenger's entrance involves a stark shift from C major to A minor — a jarring harmonic change that signals something terrible. The shepherds, not yet understanding, respond in the previous key of C major. Only when they clue in do they repeat the Messenger's phrase and align their key with hers.
+The scene uses <strong>tonal centres</strong> to convey different levels of awareness. The Messenger's entrance involves a stark shift from C major to A minor — a jarring harmonic change that signals something terrible. The shepherds, not yet understanding, respond in the previous key of C major. Only when they clue in do they repeat the Messenger's phrase and align their key with hers.
 
-As the Messenger narrates the death of Eurydice — how a serpent bit her while she was gathering flowers — the style varies from straight narration to the highly emotive. The music becomes more **chromatic** (using notes outside the key, moving by semitone), with jarring, unexpected harmonic juxtapositions that convey enormous emotional impact.
+As the Messenger narrates the death of Eurydice — how a serpent bit her while she was gathering flowers — the style varies from straight narration to the highly emotive. The music becomes more <strong>chromatic</strong> (using notes outside the key, moving by semitone), with jarring, unexpected harmonic juxtapositions that convey enormous emotional impact.
 
-> **Messenger:**
+> <strong>Messenger:</strong>
 > In un fiorito prato / In a flowered meadow
 > Con l'altre sue compagne / with her companions
 > Giva cogliendo fiori / she was going about gathering flowers
@@ -209,11 +209,11 @@ As the Messenger narrates the death of Eurydice — how a serpent bit her while 
 
 Orpheus's response to the news is one of the most celebrated moments in early opera. This is not the singing style of "Vi ricorda" — it is the speaking style, but Orpheus can barely speak. The setting is deeply realistic: rests and breaks in the vocal line convey a man coming to terms with terrible truth.
 
-Monteverdi switches the basso continuo instruments to a wooden pipe organ and theorbo — not a rigid, rhythmic accompaniment but long, sustained notes that punctuate speech with rhythmic freedom. The music is highly **chromatic** and **dissonant**, with clashes against the bass line. In the opening measures alone, the harmony moves from G minor to E major to G minor — a wrenching progression.
+Monteverdi switches the basso continuo instruments to a wooden pipe organ and theorbo — not a rigid, rhythmic accompaniment but long, sustained notes that punctuate speech with rhythmic freedom. The music is highly <strong>chromatic</strong> and <strong>dissonant</strong>, with clashes against the bass line. In the opening measures alone, the harmony moves from G minor to E major to G minor — a wrenching progression.
 
-Each phrase builds in intensity. When Orpheus resolves to descend into Hades to retrieve Eurydice, his vocal line becomes more controlled and purposeful. The conclusion features extraordinary **word painting**: as Orpheus sings "goodbye earth, goodbye sky, goodbye sun, goodbye" ("a dio terra, a dio cielo, e sole, a dio"), the pitch rises chromatically before plunging suddenly to a dissonance against the bass.
+Each phrase builds in intensity. When Orpheus resolves to descend into Hades to retrieve Eurydice, his vocal line becomes more controlled and purposeful. The conclusion features extraordinary <strong>word painting</strong>: as Orpheus sings "goodbye earth, goodbye sky, goodbye sun, goodbye" ("a dio terra, a dio cielo, e sole, a dio"), the pitch rises chromatically before plunging suddenly to a dissonance against the bass.
 
-> **Orpheus:**
+> <strong>Orpheus:</strong>
 > Tu se' morta, mia vita, ed io respiro? / You are dead, my life, and I still breathe?
 > Tu se' da me partita / You have departed from me
 > Per mai più non tornare, ed io rimango? / never to return, and I remain?
@@ -227,9 +227,9 @@ Each phrase builds in intensity. When Orpheus resolves to descend into Hades to 
 
 ### e) The Chorus
 
-The act closes with a five-part madrigal by the chorus, functioning as a **Greek chorus**: "Ahi caso acerbo!" ("Ah, bitter turn of events!"). The first section shares in the grief, repeating the opening lines of the Messenger. The second section delivers the moral of the drama — that the pleasures of earth are fleeting — with vivid **word painting** throughout.
+The act closes with a five-part madrigal by the chorus, functioning as a <strong>Greek chorus</strong>: "Ahi caso acerbo!" ("Ah, bitter turn of events!"). The first section shares in the grief, repeating the opening lines of the Messenger. The second section delivers the moral of the drama — that the pleasures of earth are fleeting — with vivid <strong>word painting</strong> throughout.
 
-> **Chorus:**
+> <strong>Chorus:</strong>
 > Ahi caso acerbo, ahi fat'empio e crudele! / Ah, bitter event, ah, fate wicked and cruel!
 > Ahi stelle ingiuriose, ahi cielo avaro! / Ah, malicious stars, ah stingy heavens!
 > Non si fidi huom mortale / Trust not, mortal man,
@@ -239,7 +239,7 @@ The act closes with a five-part madrigal by the chorus, functioning as a **Greek
 
 ## Act III: "Possente spirto" ("Powerful Spirit")
 
-In Act III, Orpheus faces his greatest challenge. He must convince Charon, the boatman, to ferry him across the River Styx into the underworld. Orpheus pulls out all the stops — singing in an elaborate, embellished **singing style** while accompanying himself on the lyre.
+In Act III, Orpheus faces his greatest challenge. He must convince Charon, the boatman, to ferry him across the River Styx into the underworld. Orpheus pulls out all the stops — singing in an elaborate, embellished <strong>singing style</strong> while accompanying himself on the lyre.
 
 Monteverdi included two versions in the 1609 published score: a plain, spare melody and a version with elaborate vocal flourishes. The ornamented version was probably how it was performed at the première.
 
@@ -247,62 +247,62 @@ Monteverdi included two versions in the 1609 published score: a plain, spare mel
 
 ![Continuation of the 1609 score](/pics/261/261-2-orfeo-score-facsimile-2.png)
 
-The text is in **stanzaic verse** — an unusual choice, as stanzaic form was typically reserved for songs and dances rather than for principal dramatic speech. There are six stanzas in a three-line pattern, set as a **strophic progression**: the same form is used for each stanza, but with varied settings, different instruments, and intensified stages of argument.
+The text is in <strong>stanzaic verse</strong> — an unusual choice, as stanzaic form was typically reserved for songs and dances rather than for principal dramatic speech. There are six stanzas in a three-line pattern, set as a <strong>strophic progression</strong>: the same form is used for each stanza, but with varied settings, different instruments, and intensified stages of argument.
 
 Each stanza features different instrumental combinations in the ritornellos and echoes between lines:
-- **Stanzas 1–3**: Progressively more elaborate accompaniment
-- **Stanza 4** ("I am Orfeo!"): Singer and instruments overlap — a moment of heightened urgency
-- **Stanza 5** (thinking of Eurydice): Breaks the pattern — no ritornello or interludes between phrases, as emotion overwhelms formal structure
-- **Stanza 6**: Brings back the chords and melodic contour of the first four stanzas but in the unembellished acting style of stanza 5, with three violins and bass — not elaborate
+- <strong>Stanzas 1–3</strong>: Progressively more elaborate accompaniment
+- <strong>Stanza 4</strong> ("I am Orfeo!"): Singer and instruments overlap — a moment of heightened urgency
+- <strong>Stanza 5</strong> (thinking of Eurydice): Breaks the pattern — no ritornello or interludes between phrases, as emotion overwhelms formal structure
+- <strong>Stanza 6</strong>: Brings back the chords and melodic contour of the first four stanzas but in the unembellished acting style of stanza 5, with three violins and bass — not elaborate
 
 The brilliant singing does not work on Charon directly — but it lulls him to sleep, and Orpheus rows himself across. He then switches to the acting style: "Give me back my beloved!" He manages to persuade Proserpina, and Pluto grants him passage — on the condition that he must not look back at Eurydice as they ascend.
 
 
-# Baroque Opera — Handel, *Giulio Cesare in Egitto* (1724)
+# Baroque Opera — Handel, <em>Giulio Cesare in Egitto</em> (1724)
 
 Readings:
-- Parakilas, James. "Opera on Classical Subjects: Handel and Italian Opera." In *The Story of Opera*, 177–182. New York: W.W. Norton, 2013.
-- Sacher, Jack. "Giulio Cesare in Egitto." In *Opera: A Listener's Guide*, 118–129 and 136–137. New York: Schirmer Books, 1997.
+- Parakilas, James. "Opera on Classical Subjects: Handel and Italian Opera." In <em>The Story of Opera</em>, 177–182. New York: W.W. Norton, 2013.
+- Sacher, Jack. "Giulio Cesare in Egitto." In <em>Opera: A Listener's Guide</em>, 118–129 and 136–137. New York: Schirmer Books, 1997.
 
 ## Late Baroque Opera
 
-How did opera develop between Monteverdi's *Orfeo* in 1607 and the 1720s? During this period of over a century, opera spread throughout Italy, France, Germany, and England, taking on different languages and styles in each country. Most importantly, opera moved from private entertainment — performed in aristocratic apartments for a select audience — to public performances in dedicated opera houses, accessible to anyone who could afford a ticket.
+How did opera develop between Monteverdi's <em>Orfeo</em> in 1607 and the 1720s? During this period of over a century, opera spread throughout Italy, France, Germany, and England, taking on different languages and styles in each country. Most importantly, opera moved from private entertainment — performed in aristocratic apartments for a select audience — to public performances in dedicated opera houses, accessible to anyone who could afford a ticket.
 
 ## George Frideric Handel (1685–1759)
 
-**George Frideric Handel**, born in the same year as J.S. Bach, became one of the greatest composers of the Baroque era. German by birth, he spent formative years in Italy absorbing the Italian operatic tradition before settling permanently in London, where he dominated the city's operatic life.
+<strong>George Frideric Handel</strong>, born in the same year as J.S. Bach, became one of the greatest composers of the Baroque era. German by birth, he spent formative years in Italy absorbing the Italian operatic tradition before settling permanently in London, where he dominated the city's operatic life.
 
-*Giulio Cesare in Egitto* (*Julius Caesar in Egypt*) premiered at the King's Theatre in London in 1724. The **libretto** was written by Nicola Haym (1679–1729) — in Italian, as was the convention for serious opera throughout Europe. The opera is set in Egypt in 47–48 BCE and is structured in three acts, telling a story based on historical events.
+<em>Giulio Cesare in Egitto</em> (<em>Julius Caesar in Egypt</em>) premiered at the King's Theatre in London in 1724. The <strong>libretto</strong> was written by Nicola Haym (1679–1729) — in Italian, as was the convention for serious opera throughout Europe. The opera is set in Egypt in 47–48 BCE and is structured in three acts, telling a story based on historical events.
 
 ### Characters and Plot
 
-The cast of *Giulio Cesare* includes several roles originally written for **castrati** — male sopranos or altos whose voices were preserved through a medical procedure. Castrato singers were immensely popular, especially in Italy and at the Vatican, from the 16<sup>th</sup> century until as late as 1830 in opera. They were typically tall with large rib cages, projecting both virility and extraordinary vocal range. Today, these roles are performed by **countertenors** or by women.
+The cast of <em>Giulio Cesare</em> includes several roles originally written for <strong>castrati</strong> — male sopranos or altos whose voices were preserved through a medical procedure. Castrato singers were immensely popular, especially in Italy and at the Vatican, from the 16<sup>th</sup> century until as late as 1830 in opera. They were typically tall with large rib cages, projecting both virility and extraordinary vocal range. Today, these roles are performed by <strong>countertenors</strong> or by women.
 
 The last surviving castrato, Alessandro Moreschi, made a recording that still exists:
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/slhhg8sI6Ds?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Alessandro Moreschi — the last castrato (recording)*
+<em>Alessandro Moreschi — the last castrato (recording)</em>
 
 The principal characters are:
-- **Giulio Cesare** (alto castrato): Roman warrior and hero, who has conquered Pompeo and is seen as a liberator by the Egyptians
-- **Cleopatra** (female soprano): Queen of Egypt, Tolomeo's sister but not his ally
-- **Tolomeo** (alto castrato): Cleopatra's brother and the main villain of the opera
-- **Cornelia** (alto): Pompeo's beautiful widow, a Roman
-- **Sesto** (female soprano): Cornelia and Pompeo's teenage son, determined to avenge his father
-- **Nireno** (alto castrato): a eunuch loyal to Cleopatra
-- **Achilla** (bass): villain who works for Tolomeo
+- <strong>Giulio Cesare</strong> (alto castrato): Roman warrior and hero, who has conquered Pompeo and is seen as a liberator by the Egyptians
+- <strong>Cleopatra</strong> (female soprano): Queen of Egypt, Tolomeo's sister but not his ally
+- <strong>Tolomeo</strong> (alto castrato): Cleopatra's brother and the main villain of the opera
+- <strong>Cornelia</strong> (alto): Pompeo's beautiful widow, a Roman
+- <strong>Sesto</strong> (female soprano): Cornelia and Pompeo's teenage son, determined to avenge his father
+- <strong>Nireno</strong> (alto castrato): a eunuch loyal to Cleopatra
+- <strong>Achilla</strong> (bass): villain who works for Tolomeo
 - Pompeo himself is killed and beheaded by Tolomeo before the opera begins
 
 ## Opera Seria
 
-*Giulio Cesare* is an example of **opera seria** — Italian serious opera based on classical mythology or history. Opera seria follows a distinctive structural pattern built on **recitative-aria pairs** — a kinetic-static, stop-and-start alternation. Recitative is used for dialogue and moving the story forward. Arias are arrival points: a chance for characters to react and express their inner emotions. There is very little physical action on stage — most events are reported in recitative. *Giulio Cesare* contains no fewer than 29 arias!
+<em>Giulio Cesare</em> is an example of <strong>opera seria</strong> — Italian serious opera based on classical mythology or history. Opera seria follows a distinctive structural pattern built on <strong>recitative-aria pairs</strong> — a kinetic-static, stop-and-start alternation. Recitative is used for dialogue and moving the story forward. Arias are arrival points: a chance for characters to react and express their inner emotions. There is very little physical action on stage — most events are reported in recitative. <em>Giulio Cesare</em> contains no fewer than 29 arias!
 
-Opera seria uses the **da capo aria** almost exclusively. "Da capo" is Italian for "from the top" — an instruction in the score to sing from the beginning again. The da capo aria has two sections: the first section (A) is followed by a contrasting second section (B), after which section A is repeated. The form is therefore A B A'. In the repeat, the singer is expected to improvise embellishments, displaying technical virtuosity and personal artistry.
+Opera seria uses the <strong>da capo aria</strong> almost exclusively. "Da capo" is Italian for "from the top" — an instruction in the score to sing from the beginning again. The da capo aria has two sections: the first section (A) is followed by a contrasting second section (B), after which section A is repeated. The form is therefore A B A'. In the repeat, the singer is expected to improvise embellishments, displaying technical virtuosity and personal artistry.
 
 ## Act II, Scenes 1–2: Cleopatra's Seduction of Caesar
 
-The most celebrated sequence in *Giulio Cesare* occurs in Act II, where Cleopatra puts on an elaborate spectacle to enchant Caesar.
+The most celebrated sequence in <em>Giulio Cesare</em> occurs in Act II, where Cleopatra puts on an elaborate spectacle to enchant Caesar.
 
 ### What Is Happening in This Scene?
 
@@ -310,28 +310,28 @@ Cleopatra, disguised as a woman named "Lidia," plans to lure Caesar to her chamb
 
 ### The Music
 
-The scene begins with **secco recitative** — the "dry" style with only basso continuo accompaniment. Nireno and Cleopatra plot together in rapid dialogue. Cleopatra leaves, and Caesar arrives. The dialogue between all three parts can be hard to follow because they are scored for high voices — soprano and two castrati — all in a similar range.
+The scene begins with <strong>secco recitative</strong> — the "dry" style with only basso continuo accompaniment. Nireno and Cleopatra plot together in rapid dialogue. Cleopatra leaves, and Caesar arrives. The dialogue between all three parts can be hard to follow because they are scored for high voices — soprano and two castrati — all in a similar range.
 
 ![Score excerpt: "Eseguisti" recitative from Giulio Cesare, Act II](/pics/261/261-3-giulio-cesare-score-recitative.jpeg)
 
-Then a **sinfonia** (instrumental composition) begins, anticipating the main musical figure of the aria to come. But Handel does something extraordinary: Caesar interrupts the sinfonia with recitative, exclaiming at the beautiful sounds. The sinfonia resumes, and Caesar interrupts *again*. This is highly unusual — normally there are no interruptions between recitative and aria in opera seria. But Handel breaks convention to convey how overcome Caesar is with enchantment.
+Then a <strong>sinfonia</strong> (instrumental composition) begins, anticipating the main musical figure of the aria to come. But Handel does something extraordinary: Caesar interrupts the sinfonia with recitative, exclaiming at the beautiful sounds. The sinfonia resumes, and Caesar interrupts <em>again</em>. This is highly unusual — normally there are no interruptions between recitative and aria in opera seria. But Handel breaks convention to convey how overcome Caesar is with enchantment.
 
 ![Score excerpt: Sinfonia with full orchestra from Giulio Cesare](/pics/261/261-3-giulio-cesare-score-sinfonia.jpeg)
 
 ### Cleopatra's Aria: "V'adoro, pupille" ("I adore you, eyes")
 
-When Cleopatra finally sings her aria, it is a magnificent **da capo aria** in A B A' form:
+When Cleopatra finally sings her aria, it is a magnificent <strong>da capo aria</strong> in A B A' form:
 
 | Section | Description |
 |---------|------------|
-| **Sinfonia** | Instrumental introduction anticipating the aria |
+| <strong>Sinfonia</strong> | Instrumental introduction anticipating the aria |
 | [Caesar interrupts] | Recitative — dramatic effect |
-| **A** | F major, Largo tempo. Sarabande rhythm (triple meter). A four-note, dotted-rhythm motive drawn from the sinfonia. |
-| **B** | Keys shift to D minor, G minor, A minor. Constant eighth-note rhythm. The orchestra drops out, leaving only the soloists on stage. Cleopatra comes to a stop. |
+| <strong>A</strong> | F major, Largo tempo. Sarabande rhythm (triple meter). A four-note, dotted-rhythm motive drawn from the sinfonia. |
+| <strong>B</strong> | Keys shift to D minor, G minor, A minor. Constant eighth-note rhythm. The orchestra drops out, leaving only the soloists on stage. Cleopatra comes to a stop. |
 | [Caesar interrupts] | Secco recitative — for dramatic effect |
-| **A'** | "Da capo" — singer improvises added embellishments. The group of soloists on stage is integrated into the plot. |
+| <strong>A'</strong> | "Da capo" — singer improvises added embellishments. The group of soloists on stage is integrated into the plot. |
 
-> **Cleopatra** (as Virtue):
+> <strong>Cleopatra</strong> (as Virtue):
 > V'adoro pupille, / I adore you, pupils,
 > Saette d'Amore, / Cupid's darts,
 > Le vostre faville / Your sparks
@@ -343,46 +343,46 @@ When Cleopatra finally sings her aria, it is a magnificent **da capo aria** in A
 
 ## Sesto's Vengeance: "L'angue offeso" ("The Offended Serpent")
 
-In Act II, Scene 6, Sesto — the teenage son of the murdered Pompeo — vows to avenge his father's death at the hands of Tolomeo. His aria "L'angue offeso mai riposa" ("The offended serpent never rests") is a **simile aria**: Sesto compares himself to an injured snake that will not rest until it strikes back.
+In Act II, Scene 6, Sesto — the teenage son of the murdered Pompeo — vows to avenge his father's death at the hands of Tolomeo. His aria "L'angue offeso mai riposa" ("The offended serpent never rests") is a <strong>simile aria</strong>: Sesto compares himself to an injured snake that will not rest until it strikes back.
 
-This is another **da capo aria** (A B A'), set in C minor. The music is perpetual and obsessive, reflecting the serpent that "never rests":
+This is another <strong>da capo aria</strong> (A B A'), set in C minor. The music is perpetual and obsessive, reflecting the serpent that "never rests":
 
 - The two stanzas (A and B) each have three lines, with each line rhyming with its counterpart in the other stanza
 - The bass line maintains continuous eighth-note steps — a relentless coiling motion
 - The melody has an equally repetitive rhythm, evoking the serpent's coils and springs
 - The singer must compete with the violins for agility, power, and endurance — which is why the role was assigned to a highly trained Italian soprano
-- A long **melisma** (multiple notes on a single syllable) on the word "spande" ("spreads" — as in spreading venom) showcases the singer's virtuosity
+- A long <strong>melisma</strong> (multiple notes on a single syllable) on the word "spande" ("spreads" — as in spreading venom) showcases the singer's virtuosity
 - In the B section, the instruments are reduced, suggesting the need for cunning rather than brute force
 
 | Section | Italian Text | English Translation |
 |---------|-------------|-------------------|
-| **A** | *L'angue offeso mai riposa* | The offended serpent never rests |
-| | *Se il veleno pria non spande* | Until its poison seeps |
-| | *Dentro il sangue all'offensor.* | Into the blood of the offender. |
-| **B** | *Così l'alma mia non osa* | So too my spirit dares not |
-| | *Di mostrarsi altera e grande* | Show how proud and great it is |
-| | *Se non svelle l'empio cor.* | Until it plucks out the wicked heart. |
+| <strong>A</strong> | <em>L'angue offeso mai riposa</em> | The offended serpent never rests |
+| | <em>Se il veleno pria non spande</em> | Until its poison seeps |
+| | <em>Dentro il sangue all'offensor.</em> | Into the blood of the offender. |
+| <strong>B</strong> | <em>Così l'alma mia non osa</em> | So too my spirit dares not |
+| | <em>Di mostrarsi altera e grande</em> | Show how proud and great it is |
+| | <em>Se non svelle l'empio cor.</em> | Until it plucks out the wicked heart. |
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/mQiYFirLoXU?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Handel, "L'angue offeso" from Giulio Cesare — aria with score*
+<em>Handel, "L'angue offeso" from Giulio Cesare — aria with score</em>
 
 
-# The Intermezzo — Pergolesi, *La serva padrona* (1733)
+# The Intermezzo — Pergolesi, <em>La serva padrona</em> (1733)
 
 Readings:
-- Lazarevich, Gordana. "Serva padrona, La." *Grove Music Online*. 2002.
-- Parakilas, James. *The Story of Opera*, 223–25. New York: W.W. Norton, 2013.
+- Lazarevich, Gordana. "Serva padrona, La." <em>Grove Music Online</em>. 2002.
+- Parakilas, James. <em>The Story of Opera</em>, 223–25. New York: W.W. Norton, 2013.
 
 ## Pergolesi and the Intermezzo
 
-**Giovanni Battista Pergolesi** (1710–1736) died at the age of twenty-six. When one discovers just how significant a composer he was, the brevity of his life becomes all the more striking — and the question of what he might have accomplished had he lived longer becomes irresistible. Pergolesi studied at the Conservatory in Naples and left in 1731 at age twenty-one to work as a freelance composer with wealthy Neapolitan patrons. He wrote *La serva padrona* when he was just twenty-three, three years before his death. He is also celebrated for a sacred work, the *Stabat Mater*, which has entered the permanent repertory of choral music. But it is this seemingly insignificant little opera — not even a standalone work — that ended up changing the course of classical music for years to come.
+<strong>Giovanni Battista Pergolesi</strong> (1710–1736) died at the age of twenty-six. When one discovers just how significant a composer he was, the brevity of his life becomes all the more striking — and the question of what he might have accomplished had he lived longer becomes irresistible. Pergolesi studied at the Conservatory in Naples and left in 1731 at age twenty-one to work as a freelance composer with wealthy Neapolitan patrons. He wrote <em>La serva padrona</em> when he was just twenty-three, three years before his death. He is also celebrated for a sacred work, the <em>Stabat Mater</em>, which has entered the permanent repertory of choral music. But it is this seemingly insignificant little opera — not even a standalone work — that ended up changing the course of classical music for years to come.
 
-*La serva padrona* (*The Maid as Mistress*) was first performed in Naples in 1733. The **libretto** was written by G.A. Federico, derived from a play of the same name written in 1731. The work belongs to a genre called the **intermezzo** — an 18<sup>th</sup>-century genre of Italian comic opera that Parakilas aptly describes as "a tiny comic opera for a cast of three." An intermezzo is in two parts and is performed between the acts of a serious opera or play — in this case, between the acts of Pergolesi's own serious classical opera *The Prideful Prisoner*. The plots are comedies involving ordinary people — quite different from the exalted historical figures of Handel's *Giulio Cesare* — and sometimes parody the conventions of serious opera. An intermezzo is written for just two singers plus one mute, non-singing character, and its music alternates between recitative and arias, much like opera seria.
+<em>La serva padrona</em> (<em>The Maid as Mistress</em>) was first performed in Naples in 1733. The <strong>libretto</strong> was written by G.A. Federico, derived from a play of the same name written in 1731. The work belongs to a genre called the <strong>intermezzo</strong> — an 18<sup>th</sup>-century genre of Italian comic opera that Parakilas aptly describes as "a tiny comic opera for a cast of three." An intermezzo is in two parts and is performed between the acts of a serious opera or play — in this case, between the acts of Pergolesi's own serious classical opera <em>The Prideful Prisoner</em>. The plots are comedies involving ordinary people — quite different from the exalted historical figures of Handel's <em>Giulio Cesare</em> — and sometimes parody the conventions of serious opera. An intermezzo is written for just two singers plus one mute, non-singing character, and its music alternates between recitative and arias, much like opera seria.
 
 ## The Story and Characters
 
-The story of *La serva padrona* revolves around a clever servant who outwits a foolish master — a theme that would carry forward into the Classical period with Mozart and other composers. The three characters are **Uberto**, a **buffo** (comic bass) — a confirmed older bachelor of higher social class who nevertheless sings in a comic style; **Serpina**, a soprano, his maid and ward who is after his money through marriage and wants to be "the archmistress" of the household; and **Vespone**, the mute character, Uberto's valet, who gets embroiled between the two and used as a prop.
+The story of <em>La serva padrona</em> revolves around a clever servant who outwits a foolish master — a theme that would carry forward into the Classical period with Mozart and other composers. The three characters are <strong>Uberto</strong>, a <strong>buffo</strong> (comic bass) — a confirmed older bachelor of higher social class who nevertheless sings in a comic style; <strong>Serpina</strong>, a soprano, his maid and ward who is after his money through marriage and wants to be "the archmistress" of the household; and <strong>Vespone</strong>, the mute character, Uberto's valet, who gets embroiled between the two and used as a prop.
 
 In Part I, Uberto complains that Serpina has not brought him his chocolate on time and has become a dictator in his home. He tells Vespone to go and find him a wife who will be more docile and obedient. But Serpina overhears this and offers herself — to which Uberto is adamant: anybody but her.
 
@@ -392,11 +392,11 @@ In Part II, Serpina pulls Vespone aside to join her scheme. She tells Uberto she
 
 At the beginning of Part II, Serpina sings a sentimental aria titled "A Serpina penserete" ("You will think of Serpina"). She is playing on Uberto's sympathies, telling him how he will miss her and feel sorry for her after she has married the ruthless Captain Tempest — who is, of course, Vespone in disguise.
 
-The aria is a **da capo aria** (A B A') — a form normally reserved for opera seria, like the arias in Handel's *Giulio Cesare*. This is itself part of the parody: a servant singing in a form that would ordinarily belong to a master or mistress. The style, too, is strikingly different from the rest of the intermezzo. Where most of the work is frenetic and fast-paced, here Serpina slows down to a Largo tempo with long, flowing melodic lines — far longer than anything else in the piece. The music sounds so serious, so sincere, so sentimental. But is Serpina being serious?
+The aria is a <strong>da capo aria</strong> (A B A') — a form normally reserved for opera seria, like the arias in Handel's <em>Giulio Cesare</em>. This is itself part of the parody: a servant singing in a form that would ordinarily belong to a master or mistress. The style, too, is strikingly different from the rest of the intermezzo. Where most of the work is frenetic and fast-paced, here Serpina slows down to a Largo tempo with long, flowing melodic lines — far longer than anything else in the piece. The music sounds so serious, so sincere, so sentimental. But is Serpina being serious?
 
 The answer comes at the end of each stanza, when Serpina breaks into brief asides — talking to herself and to the audience, checking on her progress. In these sidebars, the music switches back to a comic style: the tempo jumps to Allegro, and the meter changes to 3/8. She is playing mind games with Uberto, laying it on thick with the serious style. Of course, Uberto does not hear these asides.
 
-> **A** (Stanza 1 — serious style, Largo):
+> <strong>A</strong> (Stanza 1 — serious style, Largo):
 > A Serpina penserete / You'll remember Serpina very well,
 > qualche volta e qualche dì, / sometimes, some days,
 > e direte: ah! poverina, / and you'll say: "Oh, poor thing,
@@ -406,7 +406,7 @@ The answer comes at the end of each stanza, when Serpina breaks into brief aside
 > Ei mi par che già pian piano / It seems to me that gradually
 > s'incomincia a intenerir. / Uberto is becoming tender-hearted.
 >
-> **B** (Stanza 2 — back to serious style):
+> <strong>B</strong> (Stanza 2 — back to serious style):
 > S'io poi fui impertinente / If I was cheeky, please excuse me;
 > mi perdoni; malamente mi guidai, / I behaved badly and I admit it, yes.
 > lo verdo sì.
@@ -417,21 +417,21 @@ The answer comes at the end of each stanza, when Serpina breaks into brief aside
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/4cQurXAzD8c?start=1600&rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Pergolesi, La serva padrona — complete performance (Diego Fasolis & I Barocchisti, with Sonya Yoncheva and Furio Zanasi). Serpina's aria begins at approximately 26:40.*
+<em>Pergolesi, La serva padrona — complete performance (Diego Fasolis & I Barocchisti, with Sonya Yoncheva and Furio Zanasi). Serpina's aria begins at approximately 26:40.</em>
 
 ## Excerpt 2a: Recitative — "Ah quanto mi sta male"
 
-After Serpina's aria, the music moves into a section of recitative that demonstrates both **secco** and **accompagnato** styles. The first part is secco recitative — spare basso continuo accompaniment only — in which Uberto and Serpina engage in brief dialogue. There are asides from both characters before Serpina leaves to go and fetch her "fiancé."
+After Serpina's aria, the music moves into a section of recitative that demonstrates both <strong>secco</strong> and <strong>accompagnato</strong> styles. The first part is secco recitative — spare basso continuo accompaniment only — in which Uberto and Serpina engage in brief dialogue. There are asides from both characters before Serpina leaves to go and fetch her "fiancé."
 
-The second part is far more dramatic. Now Uberto is alone, thinking out loud, vacillating constantly: should he marry her himself? Oh no, he could not possibly do that. Back and forth, back and forth — he is utterly confused in his feelings toward Serpina. To dramatize this inner turmoil, Pergolesi shifts to **accompanied recitative**, a style normally reserved for moments of high drama in opera seria. Here, it serves as comic exaggeration — using the conventions of serious opera to portray a man paralyzed by indecision over his maid. The orchestra interjects comments: broken chords and rushing scales that seem to mirror his conflicting feelings. The harmony modulates rapidly, reflecting Uberto's constantly changing thoughts. It is a perfect way of dramatizing confusion through accompanied recitative.
+The second part is far more dramatic. Now Uberto is alone, thinking out loud, vacillating constantly: should he marry her himself? Oh no, he could not possibly do that. Back and forth, back and forth — he is utterly confused in his feelings toward Serpina. To dramatize this inner turmoil, Pergolesi shifts to <strong>accompanied recitative</strong>, a style normally reserved for moments of high drama in opera seria. Here, it serves as comic exaggeration — using the conventions of serious opera to portray a man paralyzed by indecision over his maid. The orchestra interjects comments: broken chords and rushing scales that seem to mirror his conflicting feelings. The harmony modulates rapidly, reflecting Uberto's constantly changing thoughts. It is a perfect way of dramatizing confusion through accompanied recitative.
 
 ## Excerpt 2b: Uberto's Aria — "Son imbrogliato"
 
-Poor Uberto's confusion has reached a pitch, and of course this means he must sing an aria. "Son imbrogliato" ("I'm all mixed up") is another da capo aria, but what makes it comic is not its form — it is the way Uberto delivers it. The rapid **patter** — a style of comedic singing that would become a hallmark of later comic opera, as in Rossini's *Il barbiere di Siviglia* — and the sheer velocity of the text transform what would normally be a serious form into something hilariously frantic.
+Poor Uberto's confusion has reached a pitch, and of course this means he must sing an aria. "Son imbrogliato" ("I'm all mixed up") is another da capo aria, but what makes it comic is not its form — it is the way Uberto delivers it. The rapid <strong>patter</strong> — a style of comedic singing that would become a hallmark of later comic opera, as in Rossini's <em>Il barbiere di Siviglia</em> — and the sheer velocity of the text transform what would normally be a serious form into something hilariously frantic.
 
-The A section presents two statements of the text, each framed by a **ritornello** — an orchestral refrain that conveys Uberto's strong, mixed-up emotions alongside him. The vocal melody is built on an angular motive with unpredictable leaps and changes of direction, perfectly reflecting his indecision and paralyzed mental state. At the end of the stanza, everything slows: a pause and long notes in the lowest part of his range arrive as he tells himself, "Uberto, pensaci" — "Uberto, think of yourself." The B section provides contrast with a new key (cadencing in G minor), slower rhythms, and a minor tonality that deepens the sense of paralysis. The return of the A section is notably unembellished — quite unlike the virtuosic da capo repeats of opera seria, where singers would add elaborate ornamentation.
+The A section presents two statements of the text, each framed by a <strong>ritornello</strong> — an orchestral refrain that conveys Uberto's strong, mixed-up emotions alongside him. The vocal melody is built on an angular motive with unpredictable leaps and changes of direction, perfectly reflecting his indecision and paralyzed mental state. At the end of the stanza, everything slows: a pause and long notes in the lowest part of his range arrive as he tells himself, "Uberto, pensaci" — "Uberto, think of yourself." The B section provides contrast with a new key (cadencing in G minor), slower rhythms, and a minor tonality that deepens the sense of paralysis. The return of the A section is notably unembellished — quite unlike the virtuosic da capo repeats of opera seria, where singers would add elaborate ornamentation.
 
-> **A:**
+> <strong>A:</strong>
 > Son imbrogliato io già, / I'm all mixed up already,
 > Ho un certo che nel core, / I have a certain something in my heart,
 > Che dir per me non so, / that I cannot express,
@@ -439,35 +439,35 @@ The A section presents two statements of the text, each framed by a **ritornello
 > Sento un che poi mi dice: / I hear a voice that tells me:
 > Uberto, pensa a te. / Uberto, think of yourself.
 >
-> **B:**
+> <strong>B:</strong>
 > Io sto fra il sì e il no, / I waver between yes and no,
 > Fra il voglio e il non vorrei, / between wanting and not wanting,
 > E sempre più m'imbroglio. / and I get more and more mixed up.
 
 ## After 1733: An Extraordinary Story
 
-The afterlife of *La serva padrona* is one of the most extraordinary stories in music history. This seemingly insignificant little intermezzo — not even a standalone opera, but something performed between the acts of another work — survived in the repertory for two decades virtually intact, with very few alterations. It received performances in sixty different opera houses across Europe, from Naples to St. Petersburg.
+The afterlife of <em>La serva padrona</em> is one of the most extraordinary stories in music history. This seemingly insignificant little intermezzo — not even a standalone opera, but something performed between the acts of another work — survived in the repertory for two decades virtually intact, with very few alterations. It received performances in sixty different opera houses across Europe, from Naples to St. Petersburg.
 
-In the autumn of 1746, *La serva padrona* was performed in Paris without much notice. But in August 1752, it was performed again in Paris by an Italian comic opera troupe, this time paired with Lully's *Acis et Galatée*. Lully had been the dominant opera composer of Louis XIV's reign, holding a virtual monopoly on French opera until his death in the 1680s, and his style had lived on. Coupling the Italian comic intermezzo with a monument of the French tradition ignited a firestorm.
+In the autumn of 1746, <em>La serva padrona</em> was performed in Paris without much notice. But in August 1752, it was performed again in Paris by an Italian comic opera troupe, this time paired with Lully's <em>Acis et Galatée</em>. Lully had been the dominant opera composer of Louis XIV's reign, holding a virtual monopoly on French opera until his death in the 1680s, and his style had lived on. Coupling the Italian comic intermezzo with a monument of the French tradition ignited a firestorm.
 
-What followed was the **Querelle des Bouffons** — the "War of the Comic Actors" — a furious pamphlet war fought in newspapers and printed broadsides. On one side stood the defenders of the French tradition: partisans of Lully and Rameau who were labelled by their opponents as "intellectuals" favouring an unnatural, overly sophisticated style. On the other side stood champions of the Italian **opera buffa** style — among them the philosopher Diderot and Jean-Jacques Rousseau, who actually wrote an opera of his own modelled on *La serva padrona*. These supporters praised the simplicity, clarity, warm melodic style, and naturalism of the Italian manner. The new Italian melodic language — with its regular two-plus-two phrasing, simple harmony and accompaniment, and frequent repetition — would become the foundation of what we recognize as the early Classical style of Mozart, Haydn, and early Beethoven.
+What followed was the <strong>Querelle des Bouffons</strong> — the "War of the Comic Actors" — a furious pamphlet war fought in newspapers and printed broadsides. On one side stood the defenders of the French tradition: partisans of Lully and Rameau who were labelled by their opponents as "intellectuals" favouring an unnatural, overly sophisticated style. On the other side stood champions of the Italian <strong>opera buffa</strong> style — among them the philosopher Diderot and Jean-Jacques Rousseau, who actually wrote an opera of his own modelled on <em>La serva padrona</em>. These supporters praised the simplicity, clarity, warm melodic style, and naturalism of the Italian manner. The new Italian melodic language — with its regular two-plus-two phrasing, simple harmony and accompaniment, and frequent repetition — would become the foundation of what we recognize as the early Classical style of Mozart, Haydn, and early Beethoven.
 
-Between 1752 and 1754, the Italian troupe performed fourteen works in Paris, six of which contained Pergolesi's music. His name had become so famous that other composers attached it to their own compositions for the name recognition alone. *La serva padrona* became a model of comic opera in the later 18<sup>th</sup> century: its contrasts and mixing of serious and comic styles, its servants outwitting masters, its invitation to laugh at Uberto's expense. Without it, operas like Mozart's *Don Giovanni* — with its buffo servant, its chameleon protagonist, and its dazzling mixture of styles — would scarcely be conceivable.
+Between 1752 and 1754, the Italian troupe performed fourteen works in Paris, six of which contained Pergolesi's music. His name had become so famous that other composers attached it to their own compositions for the name recognition alone. <em>La serva padrona</em> became a model of comic opera in the later 18<sup>th</sup> century: its contrasts and mixing of serious and comic styles, its servants outwitting masters, its invitation to laugh at Uberto's expense. Without it, operas like Mozart's <em>Don Giovanni</em> — with its buffo servant, its chameleon protagonist, and its dazzling mixture of styles — would scarcely be conceivable.
 
 
-# Mozart, *Don Giovanni* (1787)
+# Mozart, <em>Don Giovanni</em> (1787)
 
 Readings:
-- Parakilas, James. *The Story of Opera*, 243–46. New York: W.W. Norton, 2013.
-- Sacher, Jack. "Don Giovanni." In *Opera: A Listener's Guide*, 174–182. New York: Schirmer Books, 1997.
+- Parakilas, James. <em>The Story of Opera</em>, 243–46. New York: W.W. Norton, 2013.
+- Sacher, Jack. "Don Giovanni." In <em>Opera: A Listener's Guide</em>, 174–182. New York: Schirmer Books, 1997.
 
 ## The Composer as Dramatist
 
-The full title of Mozart's opera is *Il dissoluto punito, ossia Il Don Giovanni* — *The Profligate Punished, or The Story of Don Juan*. The music was composed by **Wolfgang Amadeus Mozart**, working with perhaps his finest librettist, **Lorenzo Da Ponte**, with whom he had already collaborated on other operas. The work consists of an overture, two acts, and a brief epilogue. It is sung in Italian and was first performed in Prague in 1787.
+The full title of Mozart's opera is <em>Il dissoluto punito, ossia Il Don Giovanni</em> — <em>The Profligate Punished, or The Story of Don Juan</em>. The music was composed by <strong>Wolfgang Amadeus Mozart</strong>, working with perhaps his finest librettist, <strong>Lorenzo Da Ponte</strong>, with whom he had already collaborated on other operas. The work consists of an overture, two acts, and a brief epilogue. It is sung in Italian and was first performed in Prague in 1787.
 
 ![Estates Theatre in Prague](/pics/261/261-5-estates-theatre-prague.jpeg)
 
-The story is set in the city of Seville — like so many operas — and follows the legendary Don Juan, a nobleman who lives only for pleasure and the conquest of women. In the very first scene, Donna Anna chases Don Giovanni after he has tried to assault her. Her father, the Commendatore, rushes to defend her, fights a duel with Don Giovanni, and is killed — all within the first few minutes. Don Giovanni escapes, and soon encounters a woman he would like to seduce, only to discover she is Donna Elvira, a former conquest from Burgos who has been tracking him down. His servant **Leporello** — the **buffo** bass who provides much of the comic relief — then reads out Don Giovanni's catalogue of conquests: one thousand and three women across Europe, of every description.
+The story is set in the city of Seville — like so many operas — and follows the legendary Don Juan, a nobleman who lives only for pleasure and the conquest of women. In the very first scene, Donna Anna chases Don Giovanni after he has tried to assault her. Her father, the Commendatore, rushes to defend her, fights a duel with Don Giovanni, and is killed — all within the first few minutes. Don Giovanni escapes, and soon encounters a woman he would like to seduce, only to discover she is Donna Elvira, a former conquest from Burgos who has been tracking him down. His servant <strong>Leporello</strong> — the <strong>buffo</strong> bass who provides much of the comic relief — then reads out Don Giovanni's catalogue of conquests: one thousand and three women across Europe, of every description.
 
 Don Giovanni next encounters Zerlina, a peasant bride about to marry Masetto. He charms Masetto out of the way and sets about persuading Zerlina to accompany him to his villa — until Donna Elvira storms in and saves the girl. Later that evening, at a party at Don Giovanni's palace, Donna Anna recognizes him as the man who attacked her and killed her father. The remaining characters vow revenge at the end of Act I.
 
@@ -475,21 +475,21 @@ In Act II, Don Giovanni continues to evade consequences. He and Leporello find t
 
 ## Differences from Opera Seria
 
-Mozart's opera marks a significant departure from the Baroque opera seria of Handel's day. Where Baroque opera followed a stop-and-start pattern of recitative-aria pairs, Mozart's operas have dramatic continuity and forward momentum. They are still **number operas** — containing self-contained arias and ensembles that can be extracted and performed in concert — but these numbers are far more integrated into the dramatic fabric. The music is more continuous, more fast-paced. Recitative remains largely in the *secco* style with basso continuo accompaniment — a holdover from the Baroque era, with the harpsichord still filling in despite being supplanted elsewhere by the piano — but it is more emotionally charged than in earlier opera.
+Mozart's opera marks a significant departure from the Baroque opera seria of Handel's day. Where Baroque opera followed a stop-and-start pattern of recitative-aria pairs, Mozart's operas have dramatic continuity and forward momentum. They are still <strong>number operas</strong> — containing self-contained arias and ensembles that can be extracted and performed in concert — but these numbers are far more integrated into the dramatic fabric. The music is more continuous, more fast-paced. Recitative remains largely in the <em>secco</em> style with basso continuo accompaniment — a holdover from the Baroque era, with the harpsichord still filling in despite being supplanted elsewhere by the piano — but it is more emotionally charged than in earlier opera.
 
-Mozart also gives far greater importance to **ensembles** — duets, trios, and the closing sextet — as opposed to the parade of solo arias that dominated opera seria. *Giulio Cesare* had twenty-nine arias; *Don Giovanni* balances its arias with dramatically and musically significant ensemble numbers. And the characters themselves are different: not gods and heroes from mythology, but real people with complex, contradictory feelings — something that would not have been possible without the precedent set by Pergolesi's *La serva padrona* and its gift of a rich aria to a servant girl.
+Mozart also gives far greater importance to <strong>ensembles</strong> — duets, trios, and the closing sextet — as opposed to the parade of solo arias that dominated opera seria. <em>Giulio Cesare</em> had twenty-nine arias; <em>Don Giovanni</em> balances its arias with dramatically and musically significant ensemble numbers. And the characters themselves are different: not gods and heroes from mythology, but real people with complex, contradictory feelings — something that would not have been possible without the precedent set by Pergolesi's <em>La serva padrona</em> and its gift of a rich aria to a servant girl.
 
 ## Mozart the Dramatist
 
-Three hallmarks define Mozart's dramatic technique in *Don Giovanni*. The first is the **mixture and juxtaposition of opposites**: comedy and tragedy, high class and low class, opera seria and opera buffa coexist within the same scenes, sometimes in the same breath. Mozart himself labelled the work a **dramma giocoso** — Italian for "humorous drama" — meaning a comic opera that admits serious characters and themes. Don Giovanni speaks both *buffa* and *seria* depending on whom he is addressing. He is a chameleon who changes his musical colours — his style, his melodic language, his whole manner of singing — to manipulate whoever stands before him. Donna Elvira, the jilted woman from Burgos, inhabits an ambiguous space: her opening aria "Ah chi mi dice mai" is furious, with large leaps and an over-the-top, almost Baroque intensity — is she a seria character or a buffa one?
+Three hallmarks define Mozart's dramatic technique in <em>Don Giovanni</em>. The first is the <strong>mixture and juxtaposition of opposites</strong>: comedy and tragedy, high class and low class, opera seria and opera buffa coexist within the same scenes, sometimes in the same breath. Mozart himself labelled the work a <strong>dramma giocoso</strong> — Italian for "humorous drama" — meaning a comic opera that admits serious characters and themes. Don Giovanni speaks both <em>buffa</em> and <em>seria</em> depending on whom he is addressing. He is a chameleon who changes his musical colours — his style, his melodic language, his whole manner of singing — to manipulate whoever stands before him. Donna Elvira, the jilted woman from Burgos, inhabits an ambiguous space: her opening aria "Ah chi mi dice mai" is furious, with large leaps and an over-the-top, almost Baroque intensity — is she a seria character or a buffa one?
 
-The second hallmark is **ambiguity**. Zerlina, the peasant bride, presents a genuine puzzle: is she an innocent, duped girl, or a woman who knows exactly what she is doing? Mozart leaves the question open, giving performers enormous interpretive freedom. Don Giovanni himself is both surfaces simultaneously — charming on the outside, predatory underneath.
+The second hallmark is <strong>ambiguity</strong>. Zerlina, the peasant bride, presents a genuine puzzle: is she an innocent, duped girl, or a woman who knows exactly what she is doing? Mozart leaves the question open, giving performers enormous interpretive freedom. Don Giovanni himself is both surfaces simultaneously — charming on the outside, predatory underneath.
 
-The third hallmark is **ambivalence**. Donna Elvira cannot bring herself to hate Don Giovanni completely; in Act II she still harbours feelings for him. Donna Anna struggles with her own emotions, torn between grief, duty, and love. These are not the cardboard figures of opera seria but human beings caught in contradictions.
+The third hallmark is <strong>ambivalence</strong>. Donna Elvira cannot bring herself to hate Don Giovanni completely; in Act II she still harbours feelings for him. Donna Anna struggles with her own emotions, torn between grief, duty, and love. These are not the cardboard figures of opera seria but human beings caught in contradictions.
 
 ## The Overture
 
-The overture to *Don Giovanni* is a purely instrumental piece played before the curtain rises, and it functions as a microcosm of the entire opera — a mini-portrait of Don Giovanni's dual nature. It is cast in **sonata form** with a slow introduction in D minor that gives way to an Allegro exposition in D major. These two keys — D minor and D major — are dramatically significant throughout the opera. The dark, ominous music of the D minor introduction returns later in the eerie cemetery scene where Don Giovanni and Leporello encounter the Commendatore's statue, so the overture foreshadows that terrifying moment. The contrast of D minor's darkness with D major's brilliance captures the two sides of Don Giovanni: how he portrays himself and how he truly is beneath the surface.
+The overture to <em>Don Giovanni</em> is a purely instrumental piece played before the curtain rises, and it functions as a microcosm of the entire opera — a mini-portrait of Don Giovanni's dual nature. It is cast in <strong>sonata form</strong> with a slow introduction in D minor that gives way to an Allegro exposition in D major. These two keys — D minor and D major — are dramatically significant throughout the opera. The dark, ominous music of the D minor introduction returns later in the eerie cemetery scene where Don Giovanni and Leporello encounter the Commendatore's statue, so the overture foreshadows that terrifying moment. The contrast of D minor's darkness with D major's brilliance captures the two sides of Don Giovanni: how he portrays himself and how he truly is beneath the surface.
 
 The overture is also dramatically integrated in a practical sense: it does not end with a final cadence but segues directly into Scene 1, plunging the audience straight into the action.
 
@@ -517,27 +517,27 @@ Zerlina's answering phrase is revealing. She extends Don Giovanni's melody by tw
 
 As Don Giovanni urges Zerlina to trust him, the musical interaction intensifies. She responds ahead of the beat at measure 25, and their phrases begin to overlap at measure 38 — he is not giving her a chance to think, and she is rushing into the next phrase. Then, when she finally agrees to go with him, they arrive at complete musical agreement: the meter shifts to a lilting 6/8, a rural or folk-style dance tune. Not just dramatically but rhythmically and stylistically, they have merged. We have watched Zerlina move from hesitation to capitulation — or, depending on one's reading, from calculation to conquest.
 
-> **Don Giovanni:** Là ci darem la mano, / There I'll give you my hand,
+> <strong>Don Giovanni:</strong> Là ci darem la mano, / There I'll give you my hand,
 > là mi dirai di sì: / there you'll say yes:
 > vedi, non è lontano, / see, it is not far,
 > partiam, ben mio, da qui. / my love, let's leave from here.
 >
-> **Zerlina:** Vorrei e non vorrei, / Should I or shouldn't I,
+> <strong>Zerlina:</strong> Vorrei e non vorrei, / Should I or shouldn't I,
 > mi trema un poco il cor, / my heart trembles at the thought,
 > felice, è ver, sarei, / it's true, I would be happy,
 > ma può burlarmi ancor! / I can still have fun!
 >
-> **Together:** Andiam, andiam, mio bene, / Come, come, my darling,
+> <strong>Together:</strong> Andiam, andiam, mio bene, / Come, come, my darling,
 > a ristorar le pene / to restore our pleasure
 > d'un innocente amor. / of an innocent love.
 
 ## Characterization through Music: Zerlina II — "Batti, batti"
 
-Zerlina did go with Don Giovanni but managed to escape — with some help. She realizes she has betrayed Masetto, who is furious. Her aria "Batti, batti" ("Beat me, beat me") from Act I, Scene 16, is an exercise in the art of persuasion. She tells Masetto to beat her, tear out her hair, tear out her eyes — do whatever he wants — all while the music makes forgiveness irresistible. A sweet solo cello accompaniment melts the heart; gentle woodwinds and violins soothe and caress. The aria begins as a charming **gavotte** in 2/4 time, and then — once Masetto seems receptive — shifts to a pastoral melody in 6/8, exactly as Zerlina did with Don Giovanni in the duettino. Has she learned her seductive technique from the master seducer himself? The parallel is unmistakable, and it deepens our sense of Zerlina as a far fuller character than her peasant status might suggest.
+Zerlina did go with Don Giovanni but managed to escape — with some help. She realizes she has betrayed Masetto, who is furious. Her aria "Batti, batti" ("Beat me, beat me") from Act I, Scene 16, is an exercise in the art of persuasion. She tells Masetto to beat her, tear out her hair, tear out her eyes — do whatever he wants — all while the music makes forgiveness irresistible. A sweet solo cello accompaniment melts the heart; gentle woodwinds and violins soothe and caress. The aria begins as a charming <strong>gavotte</strong> in 2/4 time, and then — once Masetto seems receptive — shifts to a pastoral melody in 6/8, exactly as Zerlina did with Don Giovanni in the duettino. Has she learned her seductive technique from the master seducer himself? The parallel is unmistakable, and it deepens our sense of Zerlina as a far fuller character than her peasant status might suggest.
 
 ## Characterization through Music: Donna Anna — "Crudele! — Non mi dir"
 
-The most profound characterization in *Don Giovanni* belongs to Donna Anna. In Act II, Scene 13, Don Ottavio presses her: he will avenge her father and wants to marry her immediately. Anna replies that she is still grieving and cannot marry him now. He calls her cruel. She responds with one of the most extraordinary sequences in all of Mozart's operas — an accompanied recitative followed by the aria "Non mi dir."
+The most profound characterization in <em>Don Giovanni</em> belongs to Donna Anna. In Act II, Scene 13, Don Ottavio presses her: he will avenge her father and wants to marry her immediately. Anna replies that she is still grieving and cannot marry him now. He calls her cruel. She responds with one of the most extraordinary sequences in all of Mozart's operas — an accompanied recitative followed by the aria "Non mi dir."
 
 Donna Anna is aristocratic, a noblewoman with upper-class sensibilities. She is a classical opera character: honest, sentimental, open, unguarded, moral. Unlike so many other characters in this opera, she is not trying to persuade anyone of anything; she is simply giving us her full, honest feelings. And in the space of a single aria, we watch her undergo a transformation — the only character in the opera who genuinely changes before our ears.
 
@@ -545,7 +545,7 @@ Donna Anna is aristocratic, a noblewoman with upper-class sensibilities. She is 
 
 The recitative begins with Donna Anna's indignant exclamation — "Crudele?!" ("Cruel?!") — as she defends herself against Ottavio's accusation. The recitative is integrated with the aria: two orchestral phrases from the aria are previewed here, binding the sections together.
 
-> **Donna Anna:**
+> <strong>Donna Anna:</strong>
 > Crudele? / I, cruel?
 > Ah no, giammai mio ben! / Ah no, my dearest!
 > Troppo mi spiace allontanarti / It grieves me much to postpone
@@ -558,19 +558,19 @@ The recitative begins with Donna Anna's indignant exclamation — "Crudele?!" ("
 
 ### The Aria: "Non mi dir"
 
-The aria is in **rondò** form — a structure reserved in late 18<sup>th</sup>-century opera for sentimental statements by noble characters. It moves from a slow, simple opening to a virtuosic fast conclusion, with a quality of noble simplicity throughout.
+The aria is in <strong>rondò</strong> form — a structure reserved in late 18<sup>th</sup>-century opera for sentimental statements by noble characters. It moves from a slow, simple opening to a virtuosic fast conclusion, with a quality of noble simplicity throughout.
 
-The **Larghetto** section presents the first three couplets of text as a three-stage argument in two-line phrases. Anna sings all three couplets straight through with hardly any repetition — nothing like the da capo arias of Baroque opera. Each couplet receives a completely different melody, accompaniment, and relationship between voice and orchestra:
+The <strong>Larghetto</strong> section presents the first three couplets of text as a three-stage argument in two-line phrases. Anna sings all three couplets straight through with hardly any repetition — nothing like the da capo arias of Baroque opera. Each couplet receives a completely different melody, accompaniment, and relationship between voice and orchestra:
 
-- The **first couplet** is slow and soulful, the melody doubled by violins over a steady string accompaniment.
-- The **second couplet** is livelier, with a new melody intertwined with the orchestra.
-- The **third couplet** introduces yet another new phrase, now featuring woodwinds. It moves from major to minor and modulates throughout its repetitions — Anna's mind is in turmoil.
+- The <strong>first couplet</strong> is slow and soulful, the melody doubled by violins over a steady string accompaniment.
+- The <strong>second couplet</strong> is livelier, with a new melody intertwined with the orchestra.
+- The <strong>third couplet</strong> introduces yet another new phrase, now featuring woodwinds. It moves from major to minor and modulates throughout its repetitions — Anna's mind is in turmoil.
 
-Then comes the **Allegro moderato** — the fourth couplet — and everything shifts. A new theme arrives at a faster tempo. The bass instruments drop out entirely; Anna is accompanied only by the second violins, as though the ground has been released beneath her. The effect is buoyant, ungrounded — a release from oppression. She repeats words many times, spinning out one new musical phrase after another in what amounts to a tour de force. Here she is not speaking to Ottavio or to us; she is absorbed in her own inward, private, honest thoughts — thinking about the future, imagining that perhaps one day heaven will smile on her again.
+Then comes the <strong>Allegro moderato</strong> — the fourth couplet — and everything shifts. A new theme arrives at a faster tempo. The bass instruments drop out entirely; Anna is accompanied only by the second violins, as though the ground has been released beneath her. The effect is buoyant, ungrounded — a release from oppression. She repeats words many times, spinning out one new musical phrase after another in what amounts to a tour de force. Here she is not speaking to Ottavio or to us; she is absorbed in her own inward, private, honest thoughts — thinking about the future, imagining that perhaps one day heaven will smile on her again.
 
 The process that unfolds across this aria is remarkable: from somber to rapturous, from grief to hope, a dramatic transformation of tempo and character. In the midst of an opera dominated by power struggles and deception, Donna Anna's aria stands as a moral touchstone — a moment of unshakeable honesty in a world of darkness.
 
-> **Donna Anna** (Larghetto):
+> <strong>Donna Anna</strong> (Larghetto):
 > 1. Non mi dir, bell'idol mio, / Say not, my beloved,
 > che son io crudel con te. / that I am cruel to you.
 > 2. Tu ben sai quant'io t'amai, / You must know how much I loved you,
@@ -582,19 +582,19 @@ The process that unfolds across this aria is remarkable: from somber to rapturou
 > 4. Forse un giorno il cielo ancora / One day, perhaps, heaven again
 > sentirà pietà di me. / will smile on me.
 
-# Beethoven, *Fidelio* (1814)
+# Beethoven, <em>Fidelio</em> (1814)
 
 Readings:
-- Parakilas, James. *The Story of Opera*, 266–271. New York: W.W. Norton, 2013.
-- Robinson, Paul. "'Fidelio' and the French Revolution." *Cambridge Opera Journal* 3, no. 1 (1991): 23–48.
+- Parakilas, James. <em>The Story of Opera</em>, 266–271. New York: W.W. Norton, 2013.
+- Robinson, Paul. "'Fidelio' and the French Revolution." <em>Cambridge Opera Journal</em> 3, no. 1 (1991): 23–48.
 
 ## Beethoven's Only Opera
 
-*Fidelio* is Ludwig van Beethoven's only opera, and it did not come easily. The work has a complex background: Beethoven labored over it for roughly a decade, producing three distinct versions in 1805, 1806, and 1814. The first production was a flop — partly because the drama was not yet working effectively, and partly because Napoleon's armies had overrun Vienna, driving away many of the aristocrats and patrons who would have filled the theatre. The 1806 revision fared little better. It was only the third version, in 1814, that finally succeeded. Even the overture went through four iterations: three are called *Leonore* (from 1805–06) and one is called *Fidelio* (from 1814).
+<em>Fidelio</em> is Ludwig van Beethoven's only opera, and it did not come easily. The work has a complex background: Beethoven labored over it for roughly a decade, producing three distinct versions in 1805, 1806, and 1814. The first production was a flop — partly because the drama was not yet working effectively, and partly because Napoleon's armies had overrun Vienna, driving away many of the aristocrats and patrons who would have filled the theatre. The 1806 revision fared little better. It was only the third version, in 1814, that finally succeeded. Even the overture went through four iterations: three are called <em>Leonore</em> (from 1805–06) and one is called <em>Fidelio</em> (from 1814).
 
-The opera's origins lie in a true story from the French Revolution, in which a woman disguised herself as a man, got hired as a prison guard, and managed to free her incarcerated husband. This tale was first turned into a French libretto by Bouilly under the title *Léonore, ou l'amour conjugal* — "Leonora, or Married Love." Beethoven, deeply attracted to the story, commissioned a German translation. The German libretto was written by Sonnleithner in 1805, revised by von Breuning in 1806, and finally reworked by Treitschke for the successful 1814 version.
+The opera's origins lie in a true story from the French Revolution, in which a woman disguised herself as a man, got hired as a prison guard, and managed to free her incarcerated husband. This tale was first turned into a French libretto by Bouilly under the title <em>Léonore, ou l'amour conjugal</em> — "Leonora, or Married Love." Beethoven, deeply attracted to the story, commissioned a German translation. The German libretto was written by Sonnleithner in 1805, revised by von Breuning in 1806, and finally reworked by Treitschke for the successful 1814 version.
 
-*Fidelio* belongs to two genres simultaneously. It is a **French rescue opera** — a genre of post-revolutionary opera especially popular in Vienna around 1800, characterized by tales of undeserved suffering, sacrifice for love and noble ideals, heroic resolve, villainy, and last-minute salvation. It is also a **Singspiel** — a German opera with spoken dialogue instead of recitative. The Singspiel tradition was originally comic and sentimental, but later works — Mozart's *Die Zauberflöte* being another famous example — incorporated more serious stories.
+<em>Fidelio</em> belongs to two genres simultaneously. It is a <strong>French rescue opera</strong> — a genre of post-revolutionary opera especially popular in Vienna around 1800, characterized by tales of undeserved suffering, sacrifice for love and noble ideals, heroic resolve, villainy, and last-minute salvation. It is also a <strong>Singspiel</strong> — a German opera with spoken dialogue instead of recitative. The Singspiel tradition was originally comic and sentimental, but later works — Mozart's <em>Die Zauberflöte</em> being another famous example — incorporated more serious stories.
 
 ## Characters and Story
 
@@ -619,57 +619,57 @@ In Act II, we see Florestan for the first time, alone in the dark dungeon. He si
 
 ## Musical Organization
 
-The musical structure of *Fidelio* is somewhat more fractured and less continuous than Mozart's *Don Giovanni*. It is a **number opera** — containing self-contained musical pieces that can be extracted and performed in concert — and its spoken dialogue interrupts the musical continuity. Some critics have described its structure as "choppy." Yet Berlioz praised the final version highly, noting that the orchestration was "without a gratuitous note," that every effect was justified in the unfolding of the drama, and that the emotion was palpable in the voices.
+The musical structure of <em>Fidelio</em> is somewhat more fractured and less continuous than Mozart's <em>Don Giovanni</em>. It is a <strong>number opera</strong> — containing self-contained musical pieces that can be extracted and performed in concert — and its spoken dialogue interrupts the musical continuity. Some critics have described its structure as "choppy." Yet Berlioz praised the final version highly, noting that the orchestration was "without a gratuitous note," that every effect was justified in the unfolding of the drama, and that the emotion was palpable in the voices.
 
-Within this Singspiel framework of spoken dialogue, Beethoven reserves **accompanied recitative** for Florestan and Leonore alone — a deliberate choice that distinguishes these aristocratic protagonists from the other characters. The opera also employs **melodrama** — a technique in which the orchestra plays background music beneath spoken dialogue. This occurs in Act II, No. 12, the dungeon duet between Rocco and Leonore, where the characters speak over orchestral accompaniment that heightens the scene's tension.
+Within this Singspiel framework of spoken dialogue, Beethoven reserves <strong>accompanied recitative</strong> for Florestan and Leonore alone — a deliberate choice that distinguishes these aristocratic protagonists from the other characters. The opera also employs <strong>melodrama</strong> — a technique in which the orchestra plays background music beneath spoken dialogue. This occurs in Act II, No. 12, the dungeon duet between Rocco and Leonore, where the characters speak over orchestral accompaniment that heightens the scene's tension.
 
 ### Key Relationships
 
-Beethoven — the great symphonist — uses keys symbolically and structurally throughout *Fidelio*. The overall key of the opera is C major, which governs the triumphant finale. Individual characters are assigned their own keys: Don Pizarro is associated with D major/minor (recalling, interestingly, the keys of Don Giovanni), Leonore with E major (four sharps), and Florestan with A-flat major (four flats). Leonore and Florestan are each four accidentals away from the resolution on C major — equidistant in opposite directions, symbolizing their physical separation yet spiritual unity.
+Beethoven — the great symphonist — uses keys symbolically and structurally throughout <em>Fidelio</em>. The overall key of the opera is C major, which governs the triumphant finale. Individual characters are assigned their own keys: Don Pizarro is associated with D major/minor (recalling, interestingly, the keys of Don Giovanni), Leonore with E major (four sharps), and Florestan with A-flat major (four flats). Leonore and Florestan are each four accidentals away from the resolution on C major — equidistant in opposite directions, symbolizing their physical separation yet spiritual unity.
 
-In Act II, the key progression follows a **circle of fifths** scheme that drives toward the opera's resolution: A minor (No. 12, the Leonore–Rocco duet) moves to A major (No. 13, the Trio with Florestan), then to D major (No. 14, the Quartet with Pizarro), then to G major (No. 15, the Leonore–Florestan duet), and finally to C major (No. 16, the Finale with the Minister and all). This is no accident — the undergirding tonal structure propels the drama toward its ultimate resolution, even if the audience does not consciously register every modulation.
+In Act II, the key progression follows a <strong>circle of fifths</strong> scheme that drives toward the opera's resolution: A minor (No. 12, the Leonore–Rocco duet) moves to A major (No. 13, the Trio with Florestan), then to D major (No. 14, the Quartet with Pizarro), then to G major (No. 15, the Leonore–Florestan duet), and finally to C major (No. 16, the Finale with the Minister and all). This is no accident — the undergirding tonal structure propels the drama toward its ultimate resolution, even if the audience does not consciously register every modulation.
 
-## Beethoven, *Fidelio*, and the Revolution
+## Beethoven, <em>Fidelio</em>, and the Revolution
 
-Was Beethoven sympathetic to the French Revolution? The answer is ambivalent. In 1803, Napoleon declared himself Emperor, and Beethoven famously tore up the title page of his *Eroica* Symphony, which he had initially dedicated to Bonaparte as a heroic ideal. Yet the story is more complicated than that single dramatic gesture — Beethoven later considered other dedications to Napoleon and even planned performances of the symphony in his presence. Beethoven's general ideals were shaped by the Enlightenment: universal brotherhood, freedom, and the dignity of the individual. His *Symphony No. 9*, with its setting of Schiller's *Ode to Joy*, became a symbol of these ideals — though the Ninth has been co-opted by an extraordinarily wide range of political causes, from the Nazis to Leonard Bernstein's performance at the fall of the Berlin Wall in 1989.
+Was Beethoven sympathetic to the French Revolution? The answer is ambivalent. In 1803, Napoleon declared himself Emperor, and Beethoven famously tore up the title page of his <em>Eroica</em> Symphony, which he had initially dedicated to Bonaparte as a heroic ideal. Yet the story is more complicated than that single dramatic gesture — Beethoven later considered other dedications to Napoleon and even planned performances of the symphony in his presence. Beethoven's general ideals were shaped by the Enlightenment: universal brotherhood, freedom, and the dignity of the individual. His <em>Symphony No. 9</em>, with its setting of Schiller's <em>Ode to Joy</em>, became a symbol of these ideals — though the Ninth has been co-opted by an extraordinarily wide range of political causes, from the Nazis to Leonard Bernstein's performance at the fall of the Berlin Wall in 1989.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/GBaHPND2QJg?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Beethoven, Symphony No. 9 — "Ode to Joy" flash mob*
+<em>Beethoven, Symphony No. 9 — "Ode to Joy" flash mob</em>
 
-The prison setting of *Fidelio* would have been powerfully evocative for audiences who remembered the storming of the Bastille and the freeing of prisoners. But how revolutionary is the opera, really?
+The prison setting of <em>Fidelio</em> would have been powerfully evocative for audiences who remembered the storming of the Bastille and the freeing of prisoners. But how revolutionary is the opera, really?
 
 ### The Prisoners' Chorus: "O welche Lust!"
 
 The prisoners' chorus at the end of Act I is one of the opera's most moving passages. Set in B-flat major, it begins with extraordinary tentativeness — each voice rises in turn as the prisoners emerge into the sunlight, blinking and squinting after the darkness of their cells. The music reaches a climax and then suddenly pulls back as the prisoners remember they are being watched and fear being overheard. The harmony is close, with four vocal parts packed within the span of an octave — all men singing together — conveying a powerful spirit of brotherhood in the face of oppression.
 
-The chorus establishes a link with Florestan on a universal level: these prisoners are his fellow victims, and their yearning for freedom sets up our meeting with him at the beginning of Act II. The word *Freiheit* ("freedom") is highlighted musically throughout — in this chorus, and again in both Florestan's and Leonore's arias.
+The chorus establishes a link with Florestan on a universal level: these prisoners are his fellow victims, and their yearning for freedom sets up our meeting with him at the beginning of Act II. The word <em>Freiheit</em> ("freedom") is highlighted musically throughout — in this chorus, and again in both Florestan's and Leonore's arias.
 
-> **Chorus:**
+> <strong>Chorus:</strong>
 > Oh, what delight / to breathe the air / of freedom in our being!
 > Oh, what delight, / the sun our senses freeing: / the dungeon reeks of death.
 >
-> **First Prisoner:**
+> <strong>First Prisoner:</strong>
 > We trust that God will aid us. / We know His love has not betrayed us.
 > For hope still whispers of release, / we shall be free, we shall find peace.
 >
-> **Chorus:**
+> <strong>Chorus:</strong>
 > Oh, heaven! Rescue! / Noble theme! / Oh freedom, may we still dream?
 >
-> **Second Prisoner:**
+> <strong>Second Prisoner:</strong>
 > Speak softly, we are overheard. / The pow'rs that be hear ev'ry word.
 
 The Act II finale provides a counterpart: a hymn-like four-part chorus — now including women and men, the full community — that celebrates Leonore's heroism in C major. Its simple melody serves as a point of entry for the audience, inviting solidarity with the characters on stage.
 
 ### Characters, Social Status, and Music
 
-Paul Robinson's seminal article on *Fidelio* and the French Revolution examines the opera's characters through the lens of social class and musical portrayal. Marzelline, Jaquino, and Rocco represent a bourgeois class — and their music is correspondingly simpler. Florestan and Leonore are aristocrats, and they receive the most complex music in the entire opera, including accompanied recitative. The savior at the end is the Minister, Don Fernando — another aristocrat — whose arrival is announced by a trumpet call that divides past misery from future happiness.
+Paul Robinson's seminal article on <em>Fidelio</em> and the French Revolution examines the opera's characters through the lens of social class and musical portrayal. Marzelline, Jaquino, and Rocco represent a bourgeois class — and their music is correspondingly simpler. Florestan and Leonore are aristocrats, and they receive the most complex music in the entire opera, including accompanied recitative. The savior at the end is the Minister, Don Fernando — another aristocrat — whose arrival is announced by a trumpet call that divides past misery from future happiness.
 
 ### Two Plots, Two Spheres of Society
 
-Robinson argues convincingly that the opera contains two distinct plots and two spheres of society. The first is **classical: a domestic comedy** that occupies the beginning of the opera and does not return. This "old order" is represented by Marzelline's aria (No. 2), "O wär' ich schon mit dir vereint" ("Oh, if only I were wed to you") — an utterly charming piece, often extracted and sung in concert, in which her unchanging goal is simply to marry Fidelio. Her music is **strophic**: two verses set to the same music, moving from C minor to C major as she passes from a dreamy state to bubbling excitement. Rocco, too, belongs to this world with his "gold" aria (No. 4), "Hat man nicht auch Gold beineben" ("If a person doesn't have money as well") — equally simple, equally strophic, in B-flat major. Their music does not progress or develop; it remains fixed, reflecting characters whose goals do not change.
+Robinson argues convincingly that the opera contains two distinct plots and two spheres of society. The first is <strong>classical: a domestic comedy</strong> that occupies the beginning of the opera and does not return. This "old order" is represented by Marzelline's aria (No. 2), "O wär' ich schon mit dir vereint" ("Oh, if only I were wed to you") — an utterly charming piece, often extracted and sung in concert, in which her unchanging goal is simply to marry Fidelio. Her music is <strong>strophic</strong>: two verses set to the same music, moving from C minor to C major as she passes from a dreamy state to bubbling excitement. Rocco, too, belongs to this world with his "gold" aria (No. 4), "Hat man nicht auch Gold beineben" ("If a person doesn't have money as well") — equally simple, equally strophic, in B-flat major. Their music does not progress or develop; it remains fixed, reflecting characters whose goals do not change.
 
-> **Marzelline:**
+> <strong>Marzelline:</strong>
 > If only we could marry today, / I could express my feelings.
 > There is so much I dare not say, / so much my heart's concealing.
 > As wife, no blush need hide my face / when I desire your warm embrace:
@@ -677,7 +677,7 @@ Robinson argues convincingly that the opera contains two distinct plots and two 
 > That hope engulfs my heart with fire, / with fierce unearthly sweet desire,
 > such happiness shall bless me.
 
-The second plot is **heroic**: the story of the liberated prisoners and of Leonore. This "new order" is represented by the prisoners' chorus and, above all, by Leonore's recitative and aria (No. 9), "Abscheulicher!" — "Komm, Hoffnung" ("Vile creature!" — "Come, Hope!"). Where Marzelline simply wants to get married, Leonore's goal is loftier — she will sacrifice herself to save her husband. And where Marzelline's music remains static, Leonore's undergoes a dramatic emotional progression from despair to hope to heroic resolve.
+The second plot is <strong>heroic</strong>: the story of the liberated prisoners and of Leonore. This "new order" is represented by the prisoners' chorus and, above all, by Leonore's recitative and aria (No. 9), "Abscheulicher!" — "Komm, Hoffnung" ("Vile creature!" — "Come, Hope!"). Where Marzelline simply wants to get married, Leonore's goal is loftier — she will sacrifice herself to save her husband. And where Marzelline's music remains static, Leonore's undergoes a dramatic emotional progression from despair to hope to heroic resolve.
 
 ## Parallel Arias: Leonore and Florestan
 
@@ -689,7 +689,7 @@ Leonore's recitative begins in despair over Florestan's condition. She has overh
 
 The aria's first part is marked Adagio in 2/4 time, in E major (four sharps): "Come, hope, you faint and distant star, last ray of light for those in fear and anguish." Leonore is trying to hope. In the second part, she resolves to save her husband, and the tempo shifts to Allegro con brio in 4/4 — still in E major, but now accompanied by three obbligato French horns that give the music an unmistakably heroic character: "My inner voices fire me. I will not bend nor ever yield. Duty and love inspire me."
 
-> **Leonore** (recitative):
+> <strong>Leonore</strong> (recitative):
 > Vile murderer! Sadistic swine! / What is this plan?
 > What base, perverted act is brewing? / No cry for help, no plea for mercy,
 > does nothing touch your evil mind? / I know your heart's a sea of hatred,
@@ -697,7 +697,7 @@ The aria's first part is marked Adagio in 2/4 time, in E major (four sharps): "C
 > It sheds its rays on all mankind. / Its light is calm, serenely falling,
 > nostalgic memories recalling / of long-forgotten peaceful time.
 >
-> **Leonore** (aria):
+> <strong>Leonore</strong> (aria):
 > Come hope, you faint and distant star, / last ray of light for those in fear and anguish.
 > Oh, come, make bright my way, be it so far, / the pow'r of love will surely vanquish.
 > My inner voices fire me, / I will not bend nor ever yield:
@@ -710,15 +710,15 @@ The aria's first part is marked Adagio in 2/4 time, in E major (four sharps): "C
 
 Florestan's scene opens with an orchestral introduction that paints a picture of the dungeon's gloom and dankness — a darkness that Leonore, above ground, does not need conveyed in the same way. His recitative begins in F minor, unstable: "God! The darkest hour, when silence howls with tension. Here this lifeless waste, here nothing lives but me. Unending torture! Yet I trust in God's intention."
 
-The first part of the aria is an Adagio in 3/4 time, in A-flat major (four flats — the mirror image of Leonore's E major, equidistant from C on the opposite side). Here Florestan remembers his past happiness: "In the spring of youthful promise I had all my hopes destroyed. I spoke out the truth too rashly, now I perish in this void." In the second part, marked Poco allegro in 4/4, the key shifts to F major and the accompanying instrument changes to an oboe. Florestan sees a vision — an angel like Leonore, a creature of light whose tender caresses restore him: "What breezes are stirring to sweeten the night? What vision arises before me? Angelic, it hovers, a creature of light whose tender caresses restore me. My angel Leonora, my angel, my love who leads me to freedom in heaven above." On the word *Freiheit* — "freedom" — he hits a soaring high B-flat, a last gasp of ecstatic hope before he collapses.
+The first part of the aria is an Adagio in 3/4 time, in A-flat major (four flats — the mirror image of Leonore's E major, equidistant from C on the opposite side). Here Florestan remembers his past happiness: "In the spring of youthful promise I had all my hopes destroyed. I spoke out the truth too rashly, now I perish in this void." In the second part, marked Poco allegro in 4/4, the key shifts to F major and the accompanying instrument changes to an oboe. Florestan sees a vision — an angel like Leonore, a creature of light whose tender caresses restore him: "What breezes are stirring to sweeten the night? What vision arises before me? Angelic, it hovers, a creature of light whose tender caresses restore me. My angel Leonora, my angel, my love who leads me to freedom in heaven above." On the word <em>Freiheit</em> — "freedom" — he hits a soaring high B-flat, a last gasp of ecstatic hope before he collapses.
 
-> **Florestan** (recitative):
+> <strong>Florestan</strong> (recitative):
 > God! The darkest hour, / when silence howls with tension.
 > Here this lifeless waste, / here, nothing lives but me.
 > Unending torture! / Yet I trust in God's intention.
 > I shan't complain, / for all I suffer comes from Thee.
 >
-> **Florestan** (aria):
+> <strong>Florestan</strong> (aria):
 > In the spring of youthful promise / I had all my hopes destroyed.
 > I spoke out the truth too rashly, / now I perish in this void.
 > Though I suffer degradation, / pain and joy to me are one,
@@ -730,34 +730,34 @@ The first part of the aria is an Adagio in 3/4 time, in A-flat major (four flats
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/p17TXB3Vc38?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Beethoven, Florestan's aria from Fidelio — Ben Heppner*
+<em>Beethoven, Florestan's aria from Fidelio — Ben Heppner</em>
 
 | | Leonore (Act I, No. 9) | Florestan (Act II, No. 11) |
 |---|---|---|
-| **Status** | Her only aria | His only aria |
-| **Introduction** | — | Orchestral introduction (doom, gloom) |
-| **Recitative** | Despair over Florestan's state; unstable key to C major | Despair over dying in the dungeon; F minor, unstable |
-| **Aria Part I** | Tries to hope; Adagio, 2/4; E major (4 sharps) | Remembers past happiness; Adagio, 3/4; A-flat major (4 flats) |
-| **Aria Part II** | Resolves to save husband; Allegro con brio, 4/4; E major; French horns | Sees angel-like Leonore; Poco allegro, 4/4; F major; oboe |
+| <strong>Status</strong> | Her only aria | His only aria |
+| <strong>Introduction</strong> | — | Orchestral introduction (doom, gloom) |
+| <strong>Recitative</strong> | Despair over Florestan's state; unstable key to C major | Despair over dying in the dungeon; F minor, unstable |
+| <strong>Aria Part I</strong> | Tries to hope; Adagio, 2/4; E major (4 sharps) | Remembers past happiness; Adagio, 3/4; A-flat major (4 flats) |
+| <strong>Aria Part II</strong> | Resolves to save husband; Allegro con brio, 4/4; E major; French horns | Sees angel-like Leonore; Poco allegro, 4/4; F major; oboe |
 
 ## Conclusions: Post-Revolutionary?
 
-Robinson's analysis suggests that *Fidelio* reflects not so much the Revolution itself as a post-revolutionary — perhaps even counter-revolutionary — sensibility. The "old regime" characters (Marzelline, Rocco, Jaquino) receive simpler music and pursue goals focused on themselves. The heroes are aristocrats — Florestan and Leonore — who receive the most complex arias and the only accompanied recitative in the opera. The savior at the end is the Minister, yet another aristocrat. As Parakilas observes, "In *Fidelio* he expressed the urge for liberty so concretely in human terms yet so indefinitely in political terms." Had Beethoven written an opera that was explicitly pro-revolutionary, it would never have been produced in post-Napoleonic Vienna.
+Robinson's analysis suggests that <em>Fidelio</em> reflects not so much the Revolution itself as a post-revolutionary — perhaps even counter-revolutionary — sensibility. The "old regime" characters (Marzelline, Rocco, Jaquino) receive simpler music and pursue goals focused on themselves. The heroes are aristocrats — Florestan and Leonore — who receive the most complex arias and the only accompanied recitative in the opera. The savior at the end is the Minister, yet another aristocrat. As Parakilas observes, "In <em>Fidelio</em> he expressed the urge for liberty so concretely in human terms yet so indefinitely in political terms." Had Beethoven written an opera that was explicitly pro-revolutionary, it would never have been produced in post-Napoleonic Vienna.
 
-The emphasis throughout is personal rather than political. The opera celebrates "moments of spiritual breakthrough" — Florestan's and Leonore's monologues — and the heroism of a devoted wife. Its subtitle might well be "The Triumph of Marital Love." And there is a haunting personal connection: in a letter to a friend from 1801, Beethoven wrote, "In the springtime of my life my happiness has flown from me... and I follow my inner drive; nothing can deter me." These words echo almost verbatim in the mouths of both Florestan and Leonore. Whether consciously or not, Beethoven appears to speak through his aristocratic protagonists — making *Fidelio* not merely an opera about political freedom, but a deeply personal statement of resolve in the face of suffering.
+The emphasis throughout is personal rather than political. The opera celebrates "moments of spiritual breakthrough" — Florestan's and Leonore's monologues — and the heroism of a devoted wife. Its subtitle might well be "The Triumph of Marital Love." And there is a haunting personal connection: in a letter to a friend from 1801, Beethoven wrote, "In the springtime of my life my happiness has flown from me... and I follow my inner drive; nothing can deter me." These words echo almost verbatim in the mouths of both Florestan and Leonore. Whether consciously or not, Beethoven appears to speak through his aristocratic protagonists — making <em>Fidelio</em> not merely an opera about political freedom, but a deeply personal statement of resolve in the face of suffering.
 
 
-# Rossini, *Il barbiere di Siviglia* (1816)
+# Rossini, <em>Il barbiere di Siviglia</em> (1816)
 
 ## Gioachino Rossini (1792–1868)
 
-**Gioachino Rossini** was born in 1792 in Pesaro, Italy, to a musical family — his father was a brass player and his mother an opera singer. The family moved to Bologna, where Rossini trained at the conservatory and received his first opera commission in 1810, at the age of eighteen. His first successful opera was performed in Venice in 1812, and by 1813 two further Venetian triumphs — *Tancredi* and *L'italiana in Algeri* — had launched him into international fame. In 1815, still only twenty-two, he became musical director of the Teatro San Carlo in Naples, one of the great centers of Italian opera. *Il barbiere di Siviglia* premiered in Rome the following year.
+<strong>Gioachino Rossini</strong> was born in 1792 in Pesaro, Italy, to a musical family — his father was a brass player and his mother an opera singer. The family moved to Bologna, where Rossini trained at the conservatory and received his first opera commission in 1810, at the age of eighteen. His first successful opera was performed in Venice in 1812, and by 1813 two further Venetian triumphs — <em>Tancredi</em> and <em>L'italiana in Algeri</em> — had launched him into international fame. In 1815, still only twenty-two, he became musical director of the Teatro San Carlo in Naples, one of the great centers of Italian opera. <em>Il barbiere di Siviglia</em> premiered in Rome the following year.
 
-Rossini married the opera singer Isabella Colbran in 1822 and moved to Paris in 1824, where he secured a contract from Charles X to write five new operas per year. Then, strangely, he stopped. *Guillaume Tell* (*William Tell*), performed in Paris in 1829, was his final opera — yet he lived until 1868. He composed 39 operas in total, along with numerous chamber works, nearly 200 piano pieces, and works in other genres. If one had asked anyone in Europe in 1825 to name the greatest living composer, the answer would very likely have been Rossini. Both Beethoven and Verdi held him in the highest regard.
+Rossini married the opera singer Isabella Colbran in 1822 and moved to Paris in 1824, where he secured a contract from Charles X to write five new operas per year. Then, strangely, he stopped. <em>Guillaume Tell</em> (<em>William Tell</em>), performed in Paris in 1829, was his final opera — yet he lived until 1868. He composed 39 operas in total, along with numerous chamber works, nearly 200 piano pieces, and works in other genres. If one had asked anyone in Europe in 1825 to name the greatest living composer, the answer would very likely have been Rossini. Both Beethoven and Verdi held him in the highest regard.
 
-## *Il barbiere di Siviglia* (*The Barber of Seville*)
+## <em>Il barbiere di Siviglia</em> (<em>The Barber of Seville</em>)
 
-*Il barbiere di Siviglia* premiered in Rome on February 20, 1816. The **libretto** was written by Cesare Sterbini, based on the 1775 play *Le Barbier de Séville* by Beaumarchais — the same playwright whose sequel, *Le Mariage de Figaro*, would become the basis of Mozart's *Le nozze di Figaro*. The same Barber story had already been set as an opera by Giovanni Paisiello in 1782, and Paisiello's partisans would cause trouble at Rossini's premiere. The genre is **opera buffa** — Italian comic opera — and the work is, by all accounts, hilarious.
+<em>Il barbiere di Siviglia</em> premiered in Rome on February 20, 1816. The <strong>libretto</strong> was written by Cesare Sterbini, based on the 1775 play <em>Le Barbier de Séville</em> by Beaumarchais — the same playwright whose sequel, <em>Le Mariage de Figaro</em>, would become the basis of Mozart's <em>Le nozze di Figaro</em>. The same Barber story had already been set as an opera by Giovanni Paisiello in 1782, and Paisiello's partisans would cause trouble at Rossini's premiere. The genre is <strong>opera buffa</strong> — Italian comic opera — and the work is, by all accounts, hilarious.
 
 Rossini was only about twenty-three or twenty-four when he wrote it, and legend — probably spurious — has it that he composed the entire score in thirteen days. Even if the truth is somewhat less dramatic, only about two months elapsed between the commission and the first performance. The premiere itself was a disaster, disrupted by Paisiello's supporters and perhaps compromised by the rushed production. Nevertheless, the work was championed by both Beethoven and Verdi, who considered it the finest opera buffa ever written — not merely entertaining fluff, even if it has plenty of fluffy moments.
 
@@ -781,23 +781,23 @@ Rosina is notoriously difficult to cast. She is supposed to be about fifteen or 
 
 ## Rossini's Style and Form
 
-Rossini uses recitative in the traditional 18th-century manner — **secco recitative** with basso continuo accompaniment (harpsichord and cello), a texture that still sounds remarkably Baroque. At the other end of the spectrum is the singing of arias in the **bel canto** style — literally "beautiful singing" — which demands wide range, great agility, lyrical ability, and florid ornamentation, much of it improvised and all of it meant to sound effortless despite requiring extraordinary training. Bel canto was the defining vocal style of early 19th-century Italian opera.
+Rossini uses recitative in the traditional 18th-century manner — <strong>secco recitative</strong> with basso continuo accompaniment (harpsichord and cello), a texture that still sounds remarkably Baroque. At the other end of the spectrum is the singing of arias in the <strong>bel canto</strong> style — literally "beautiful singing" — which demands wide range, great agility, lyrical ability, and florid ornamentation, much of it improvised and all of it meant to sound effortless despite requiring extraordinary training. Bel canto was the defining vocal style of early 19th-century Italian opera.
 
-Rossini was a master of large-scale form. Where Handel's opera seria alternated individual recitatives and da capo arias in a relatively rigid stop-and-start pattern, Rossini built entire scenes around a single aria or ensemble, integrating recitative, slow and fast sections, and orchestral passages into coherent dramatic units. The plot could move forward even within arias, not just in recitative. His standard aria form is the **double aria** — a two-part structure consisting of a slow first section called the **cantabile** and a fast second section called the **cabaletta**, often separated by a transitional passage called the **tempo di mezzo** in which some change of circumstances precipitates a change in the music. A fuller scene might also include an orchestral introduction and a **scena** (recitative) before the cantabile. This same formal template could be applied to duets, trios, and other ensembles as well.
+Rossini was a master of large-scale form. Where Handel's opera seria alternated individual recitatives and da capo arias in a relatively rigid stop-and-start pattern, Rossini built entire scenes around a single aria or ensemble, integrating recitative, slow and fast sections, and orchestral passages into coherent dramatic units. The plot could move forward even within arias, not just in recitative. His standard aria form is the <strong>double aria</strong> — a two-part structure consisting of a slow first section called the <strong>cantabile</strong> and a fast second section called the <strong>cabaletta</strong>, often separated by a transitional passage called the <strong>tempo di mezzo</strong> in which some change of circumstances precipitates a change in the music. A fuller scene might also include an orchestral introduction and a <strong>scena</strong> (recitative) before the cantabile. This same formal template could be applied to duets, trios, and other ensembles as well.
 
 One thinks of the analogy of a favorite television formula: the content changes every week — every opera — but the structural framework remains, and it works every time. Rossini's formal template was adopted by other Italian composers including Bellini, Donizetti, and Verdi; it became ubiquitous in 19th-century Italian opera.
 
 ### The Overture and the Rossini Crescendo
 
-The overture to *The Barber of Seville* — also called a **sinfonia** — is one of the most famous pieces of orchestral music in the world, endlessly borrowed in popular culture. What is remarkable is that Rossini did not compose it specifically for this opera. He had already used the same overture in two previous serious operas: *Aureliano in Palmira* (1813) and *Elisabetta, regina d'Inghilterra* (1815). Unlike Beethoven, who labored over four different overtures for *Fidelio*, Rossini simply recycled an earlier one — meaning the overture's themes bear no relation to the music that follows.
+The overture to <em>The Barber of Seville</em> — also called a <strong>sinfonia</strong> — is one of the most famous pieces of orchestral music in the world, endlessly borrowed in popular culture. What is remarkable is that Rossini did not compose it specifically for this opera. He had already used the same overture in two previous serious operas: <em>Aureliano in Palmira</em> (1813) and <em>Elisabetta, regina d'Inghilterra</em> (1815). Unlike Beethoven, who labored over four different overtures for <em>Fidelio</em>, Rossini simply recycled an earlier one — meaning the overture's themes bear no relation to the music that follows.
 
-A signature device heard throughout the opera — and in the overture itself — is the **Rossini crescendo**: a passage in which the music gets faster and faster, louder and louder, with relentless repetition of a musical figure and text, building to a frenzied climax. The effect is irresistibly comic and enormously exciting.
+A signature device heard throughout the opera — and in the overture itself — is the <strong>Rossini crescendo</strong>: a passage in which the music gets faster and faster, louder and louder, with relentless repetition of a musical figure and text, building to a frenzied climax. The effect is irresistibly comic and enormously exciting.
 
 ## Figaro's Cavatina: "Largo al factotum della città"
 
-The first featured excerpt is Figaro's **cavatina** — the term for a character's first solo aria in an opera. "Largo al factotum della città" ("Make way for the city's factotum") appears in Act I, Scene 1, and it is one of the most famous arias in all of opera, endlessly parodied in popular culture.
+The first featured excerpt is Figaro's <strong>cavatina</strong> — the term for a character's first solo aria in an opera. "Largo al factotum della città" ("Make way for the city's factotum") appears in Act I, Scene 1, and it is one of the most famous arias in all of opera, endlessly parodied in popular culture.
 
-Figaro sings of his own indispensability — how good he is at what he does, how everyone needs him, how the demands never stop. He is a servant by class, but the quickest and most intelligent person on stage. The aria is built on very fast **patter** — a flood of words set to the simplest, most repetitive melody, reflecting the flood of demands that pour in from every direction. The pace becomes so frantic that the notes run ahead of the singer's ability to articulate the syllables, and he resorts to "la la la la la." The Rossini crescendo drives everything to a breathless conclusion.
+Figaro sings of his own indispensability — how good he is at what he does, how everyone needs him, how the demands never stop. He is a servant by class, but the quickest and most intelligent person on stage. The aria is built on very fast <strong>patter</strong> — a flood of words set to the simplest, most repetitive melody, reflecting the flood of demands that pour in from every direction. The pace becomes so frantic that the notes run ahead of the singer's ability to articulate the syllables, and he resorts to "la la la la la." The Rossini crescendo drives everything to a breathless conclusion.
 
 > Largo al factotum della città. / Make way for the city's factotum.
 > Largo! La la la la la la la la! / Make way!
@@ -819,13 +819,13 @@ Rosina's aria in Act I, Scene 2, is a double aria that omits the scena and the t
 | Section | Dramatic Event | Musical Features |
 |---------|---------------|-----------------|
 | Orchestral introduction | — | — |
-| **Cantabile**: "Una voce poco fa" | Lindoro will be hers | E major; slow (Andante); 3/4; virtuosic, lyrical |
-| — *change of subject* — | | |
-| **Cabaletta**: "Io sono docile" | She is very good — but if crossed, will be a viper | E major; fast (Moderato); 4/4; virtuosic; Rossini crescendo |
+| <strong>Cantabile</strong>: "Una voce poco fa" | Lindoro will be hers | E major; slow (Andante); 3/4; virtuosic, lyrical |
+| — <em>change of subject</em> — | | |
+| <strong>Cabaletta</strong>: "Io sono docile" | She is very good — but if crossed, will be a viper | E major; fast (Moderato); 4/4; virtuosic; Rossini crescendo |
 
 ### The Cantabile: "Una voce poco fa"
 
-The cantabile — "Una voce poco fa" ("A voice a while back") — is the first slow, lyrical movement of the double aria. Rosina is in her room, writing a letter to "Lindoro." The orchestra opens with a fanfare that suggests Rosina's sense of her own self-importance — she is, after all, a teenager, not a great general, but the music gives her a heroic entrance. The aria is in E major, in slow 3/4 time, and demands considerable virtuosity — an elaborate aria requiring a singer of extraordinary **coloratura** ability, meaning florid, highly ornamented vocal display that here serves not merely as decoration but as a depiction of character.
+The cantabile — "Una voce poco fa" ("A voice a while back") — is the first slow, lyrical movement of the double aria. Rosina is in her room, writing a letter to "Lindoro." The orchestra opens with a fanfare that suggests Rosina's sense of her own self-importance — she is, after all, a teenager, not a great general, but the music gives her a heroic entrance. The aria is in E major, in slow 3/4 time, and demands considerable virtuosity — an elaborate aria requiring a singer of extraordinary <strong>coloratura</strong> ability, meaning florid, highly ornamented vocal display that here serves not merely as decoration but as a depiction of character.
 
 The first six lines are set in brief phrases, syllabic, with dotted rhythms and pizzicato chords — perhaps tentative, perhaps simply a calm beginning before the storm. But then the vocal line erupts in large leaps and sudden coloratura. Rosina is determined to win Lindoro and defiant toward her guardian. Rapidly repeated notes in patter style, with violin grace notes and lightly skipping figures, add to the comic energy. The cantabile text consists of seven-syllable lines, each ending on an accented syllable.
 
@@ -833,15 +833,15 @@ The first six lines are set in brief phrases, syllabic, with dotted rhythms and 
 
 A change of subject triggers the cabaletta — "Io sono docile" ("I am docile") — the second, fast-paced movement of the double aria, beginning at approximately 3:03. The tempo and meter change from the first movement: from Andante in 3/4 to Moderato in 4/4. An orchestral introduction features flutes and clarinet presenting the melody, which Rosina then repeats — her way of trying to convince everyone of her docility, that she is a very good girl. But the music contradicts the text: elaborate embellishments suggest willfulness rather than obedience.
 
-The vocal line launches into coloratura passages of astonishing virtuosity, depicting Rosina's defiance. When she sings of being a "viper," the melody slithers down below the staff to G-sharp below middle C; when she "stings," accented high notes in the voice are punctuated by pizzicato in the orchestra. After the word *ma* ("but"), the cabaletta text repeats, and the Rossini crescendo takes over — the music speeds up, gets louder, with a constantly repeating figure that drives to a rousing coda.
+The vocal line launches into coloratura passages of astonishing virtuosity, depicting Rosina's defiance. When she sings of being a "viper," the melody slithers down below the staff to G-sharp below middle C; when she "stings," accented high notes in the voice are punctuated by pizzicato in the orchestra. After the word <em>ma</em> ("but"), the cabaletta text repeats, and the Rossini crescendo takes over — the music speeds up, gets louder, with a constantly repeating figure that drives to a rousing coda.
 
 Is Rosina a shy, innocent girl — or a beguiling, confident vixen? The music suggests she is both, all wrapped up in one extraordinary aria. The role is so demanding that singers typically add their own elaborate embellishments, sometimes to the point where Rossini himself complained that the result barely touched the notes he had written.
 
 ## Don Basilio's Aria: "La calunnia è un venticello"
 
-Don Basilio's aria in Act I, Scene 2, No. 6 — "La calunnia è un venticello" ("Slander is a little breeze") — is a masterpiece of **word painting**, in which the music literally depicts the meaning of the text. Basilio is conspiring with Dr. Bartolo to start a rumor about the Count that will drive him out of town, and he relishes the task.
+Don Basilio's aria in Act I, Scene 2, No. 6 — "La calunnia è un venticello" ("Slander is a little breeze") — is a masterpiece of <strong>word painting</strong>, in which the music literally depicts the meaning of the text. Basilio is conspiring with Dr. Bartolo to start a rumor about the Count that will drive him out of town, and he relishes the task.
 
-The aria traces the growth of a rumor from a whisper to an explosion. On the words *piano, piano* and *sottovoce* ("softly, softly... whispering"), the orchestra plays pianissimo. On *ronzando* ("buzzing"), the strings play *sul ponticello* — on the bridge — creating an eerie, buzzing sonority. As the rumor grows, the Rossini crescendo takes over, driving to fortissimo. And on the word *cannone* ("cannon"), the percussion delivers a thunderous explosion. The progression from whisper to detonation is irresistibly comic and provides a wonderful showcase for bass singers.
+The aria traces the growth of a rumor from a whisper to an explosion. On the words <em>piano, piano</em> and <em>sottovoce</em> ("softly, softly... whispering"), the orchestra plays pianissimo. On <em>ronzando</em> ("buzzing"), the strings play <em>sul ponticello</em> — on the bridge — creating an eerie, buzzing sonority. As the rumor grows, the Rossini crescendo takes over, driving to fortissimo. And on the word <em>cannone</em> ("cannon"), the percussion delivers a thunderous explosion. The progression from whisper to detonation is irresistibly comic and provides a wonderful showcase for bass singers.
 
 ## Scene Structures and the Standard Finale Form
 
@@ -852,31 +852,31 @@ The standard finale form alternates fast and slow, kinetic and static sections:
 | Movement | Name | Character |
 |----------|------|-----------|
 | — | Orchestral introduction | — |
-| — | **Scena** ("scene") | Usually recitative |
-| 1st movement | **Tempo d'attacco** ("opening movement") | Fast, kinetic |
-| 2nd movement | **Pezzo concertato** / **Largo concertato** ("concerted piece") | Slow, static |
-| 3rd movement | **Tempo di mezzo** ("middle movement") | Fast, kinetic, transitional, free in form |
-| 4th movement | **Stretta** ("tightening") | Fast, static conclusion |
+| — | <strong>Scena</strong> ("scene") | Usually recitative |
+| 1st movement | <strong>Tempo d'attacco</strong> ("opening movement") | Fast, kinetic |
+| 2nd movement | <strong>Pezzo concertato</strong> / <strong>Largo concertato</strong> ("concerted piece") | Slow, static |
+| 3rd movement | <strong>Tempo di mezzo</strong> ("middle movement") | Fast, kinetic, transitional, free in form |
+| 4th movement | <strong>Stretta</strong> ("tightening") | Fast, static conclusion |
 
-### The Act I Finale of *The Barber of Seville*
+### The Act I Finale of <em>The Barber of Seville</em>
 
-The finale begins with the Count's arrival disguised as a drunken soldier demanding to be billeted at Dr. Bartolo's house (Scena, C major). The **tempo d'attacco** (first movement, E-flat major, Allegro) brings Figaro, a knock at the door, and the arrival of soldiers (the chorus). The action stops as everyone wonders who is at the door. Bartolo complains to the official about the rowdy soldier; the official moves to arrest the Count; but the Count reveals his identity — to the sergeant alone.
+The finale begins with the Count's arrival disguised as a drunken soldier demanding to be billeted at Dr. Bartolo's house (Scena, C major). The <strong>tempo d'attacco</strong> (first movement, E-flat major, Allegro) brings Figaro, a knock at the door, and the arrival of soldiers (the chorus). The action stops as everyone wonders who is at the door. Bartolo complains to the official about the rowdy soldier; the official moves to arrest the Count; but the Count reveals his identity — to the sergeant alone.
 
-This precipitates the **pezzo concertato** — "Fredda ed immobile" ("Frozen and motionless") — the slow, static second movement (A-flat major, Andante). It is an ensemble piece in canon, almost fugue-like at the outset, in which all six soloists express their stupefaction — frozen, unable to move. Then in the **tempo di mezzo** (third movement, C major, Allegro), everyone gradually comes to, blithering and stunned, with the doctor protesting. Finally the **stretta** (fourth movement, C major, Vivace) explodes: the confusion has given everyone a headache, and the entire cast holds their heads, singing patter about hammering pain while the Rossini crescendo drives the music faster and faster to its conclusion.
+This precipitates the <strong>pezzo concertato</strong> — "Fredda ed immobile" ("Frozen and motionless") — the slow, static second movement (A-flat major, Andante). It is an ensemble piece in canon, almost fugue-like at the outset, in which all six soloists express their stupefaction — frozen, unable to move. Then in the <strong>tempo di mezzo</strong> (third movement, C major, Allegro), everyone gradually comes to, blithering and stunned, with the doctor protesting. Finally the <strong>stretta</strong> (fourth movement, C major, Vivace) explodes: the confusion has given everyone a headache, and the entire cast holds their heads, singing patter about hammering pain while the Rossini crescendo drives the music faster and faster to its conclusion.
 
 | Section | Drama | Musical Features |
 |---------|-------|-----------------|
-| **Scena** | Count arrives as drunk soldier | C major |
-| **Tempo d'attacco** (1st mvt) | Figaro arrives; soldiers (chorus) arrive | E-flat major, Allegro |
-| **Pezzo concertato** (2nd mvt) | "Fredda ed immobile" — everyone frozen | A-flat major, Andante; canon (ensemble) |
-| **Tempo di mezzo** (3rd mvt) | Everyone blithers, stunned; Bartolo protests | C major, Allegro |
-| **Stretta** (4th mvt) | Confusion gives everyone a headache | C major, Vivace; Rossini crescendo; chorus patter |
+| <strong>Scena</strong> | Count arrives as drunk soldier | C major |
+| <strong>Tempo d'attacco</strong> (1st mvt) | Figaro arrives; soldiers (chorus) arrive | E-flat major, Allegro |
+| <strong>Pezzo concertato</strong> (2nd mvt) | "Fredda ed immobile" — everyone frozen | A-flat major, Andante; canon (ensemble) |
+| <strong>Tempo di mezzo</strong> (3rd mvt) | Everyone blithers, stunned; Bartolo protests | C major, Allegro |
+| <strong>Stretta</strong> (4th mvt) | Confusion gives everyone a headache | C major, Vivace; Rossini crescendo; chorus patter |
 
 ## The Act II Trio: Form and Comedy
 
 The trio in Act II, Scene 2 — for Rosina, the Count, and Figaro — demonstrates that the double-aria form works for ensembles too, and contains what amounts to an inside musical joke. The scene takes place during a nighttime storm as the three characters attempt Rosina's escape.
 
-After recitative (complete with the twanging harpsichord of basso continuo), the Count reveals his true identity. Rosina had thought that "Lindoro" was merely leading her to the Count — but Lindoro *is* the Count. The **cantabile** (first slow movement) becomes a love duet between Rosina and the Count, with interjections from Figaro urging them to hurry up — they are languishing in their declarations of love while forgetting they actually need to escape. In the **tempo di mezzo**, something precipitates a change of circumstances: Figaro sees a lantern and two people at the door. This throws them into panic and triggers the **cabaletta** (fast second movement), in which they repeat the text "let's get out of here" over and over again in frantic haste. But meanwhile, the ladder has disappeared — they cannot leave.
+After recitative (complete with the twanging harpsichord of basso continuo), the Count reveals his true identity. Rosina had thought that "Lindoro" was merely leading her to the Count — but Lindoro <em>is</em> the Count. The <strong>cantabile</strong> (first slow movement) becomes a love duet between Rosina and the Count, with interjections from Figaro urging them to hurry up — they are languishing in their declarations of love while forgetting they actually need to escape. In the <strong>tempo di mezzo</strong>, something precipitates a change of circumstances: Figaro sees a lantern and two people at the door. This throws them into panic and triggers the <strong>cabaletta</strong> (fast second movement), in which they repeat the text "let's get out of here" over and over again in frantic haste. But meanwhile, the ladder has disappeared — they cannot leave.
 
 Here is the musical joke: the double-aria form is so ubiquitous, so expected, that the characters must complete the fast second movement before they can do anything else. They have taken too long singing the cabaletta, and now their escape route has vanished. The very conventions of Italian opera have trapped them on stage — a delicious meta-theatrical gag that rewards the audience's familiarity with the formula.
 
@@ -884,21 +884,21 @@ Here is the musical joke: the double-aria form is so ubiquitous, so expected, th
 # Verdi, Rigoletto
 
 Readings:
-- Hudson, Elizabeth. "Gilda Seduced: A Tale Untold." *Cambridge Opera Journal* 4, no. 3 (1992): 229–51.
+- Hudson, Elizabeth. "Gilda Seduced: A Tale Untold." <em>Cambridge Opera Journal</em> 4, no. 3 (1992): 229–51.
 
 ## Innocence in a Corrupt World
 
-Giuseppe Verdi (1813–1901) was the dominant figure in Italian opera for half a century after Donizetti. Born in northern Italy, the son of an innkeeper, Verdi showed musical aptitude from the start — by age nine he was working as a church organist. He pursued a career as an opera composer in Milan, but his early years were shadowed by devastating personal loss: his two children died in infancy, followed by the early death of his wife, Margherita. In the very midst of this grief, in 1842, his opera *Nabucco* launched him as a star composer, and the next eleven years became the busiest of his career. A kind of triptych of masterworks emerged — *Rigoletto* (1851), *Il trovatore* (1853), and *La traviata* (1853) — after which he gradually slowed his production of new operas. By 1871, he had retired from the stage and turned his attention to his farm.
+Giuseppe Verdi (1813–1901) was the dominant figure in Italian opera for half a century after Donizetti. Born in northern Italy, the son of an innkeeper, Verdi showed musical aptitude from the start — by age nine he was working as a church organist. He pursued a career as an opera composer in Milan, but his early years were shadowed by devastating personal loss: his two children died in infancy, followed by the early death of his wife, Margherita. In the very midst of this grief, in 1842, his opera <em>Nabucco</em> launched him as a star composer, and the next eleven years became the busiest of his career. A kind of triptych of masterworks emerged — <em>Rigoletto</em> (1851), <em>Il trovatore</em> (1853), and <em>La traviata</em> (1853) — after which he gradually slowed his production of new operas. By 1871, he had retired from the stage and turned his attention to his farm.
 
-Yet Verdi was far more than a composer. He became a national figure, closely associated with the **Risorgimento** — the ideological movement that aroused Italian national consciousness and ultimately freed the Italian states from foreign domination, uniting them politically. Camouflaged patriotic messages appeared in his historical dramas, and his operas of the 1840s featured oppressed characters and tyrants. By 1859, a nationalist rallying cry had emerged: "Viva VERDI" — an acronym for *Viva Vittorio Emanuele Re d'Italia* (Long live Victor Emmanuel, King of Italy). Verdi stood at the very centre of Italy's unification. His major works number twenty-six operas, including *Nabucco*, *Macbeth*, *Luisa Miller*, *Rigoletto*, *Il trovatore*, *La traviata*, *Les vêpres siciliennes*, *Simon Boccanegra*, *Un ballo in maschera*, *La forza del destino*, *Don Carlos*, *Aida*, *Otello*, and *Falstaff*, alongside his *Requiem* and other Latin sacred choral works. His operas remain the most frequently programmed of any opera composer to the present day.
+Yet Verdi was far more than a composer. He became a national figure, closely associated with the <strong>Risorgimento</strong> — the ideological movement that aroused Italian national consciousness and ultimately freed the Italian states from foreign domination, uniting them politically. Camouflaged patriotic messages appeared in his historical dramas, and his operas of the 1840s featured oppressed characters and tyrants. By 1859, a nationalist rallying cry had emerged: "Viva VERDI" — an acronym for <em>Viva Vittorio Emanuele Re d'Italia</em> (Long live Victor Emmanuel, King of Italy). Verdi stood at the very centre of Italy's unification. His major works number twenty-six operas, including <em>Nabucco</em>, <em>Macbeth</em>, <em>Luisa Miller</em>, <em>Rigoletto</em>, <em>Il trovatore</em>, <em>La traviata</em>, <em>Les vêpres siciliennes</em>, <em>Simon Boccanegra</em>, <em>Un ballo in maschera</em>, <em>La forza del destino</em>, <em>Don Carlos</em>, <em>Aida</em>, <em>Otello</em>, and <em>Falstaff</em>, alongside his <em>Requiem</em> and other Latin sacred choral works. His operas remain the most frequently programmed of any opera composer to the present day.
 
 ## Rigoletto: Background and Operatic Form
 
-The libretto for *Rigoletto* was written by **Francesco Maria Piave**, with whom Verdi had collaborated on several previous operas. The source was a play by Victor Hugo, *Le roi s'amuse* ("The King Amuses Himself"), which had been banned in France in 1830 — partly for political reasons, partly for the indecency of certain scenes. The opera premiered at the Teatro La Fenice in Venice on 11 March 1851, a commission that proved a huge success: the hall was sold out. Getting it to production, however, was difficult. Because of Venice's proximity to Austria, the opera world there was subject to censors, and Verdi had to change the setting — moving it to the Duchy of Mantua, Italy, in the sixteenth century, a Gonzaga dukedom long since extinct. (The Gonzaga family had also patronised Monteverdi's *L'Orfeo* in the same city two centuries earlier — a fitting connection.) Much of the more scandalous action is narrated rather than shown, another concession to the censors.
+The libretto for <em>Rigoletto</em> was written by <strong>Francesco Maria Piave</strong>, with whom Verdi had collaborated on several previous operas. The source was a play by Victor Hugo, <em>Le roi s'amuse</em> ("The King Amuses Himself"), which had been banned in France in 1830 — partly for political reasons, partly for the indecency of certain scenes. The opera premiered at the Teatro La Fenice in Venice on 11 March 1851, a commission that proved a huge success: the hall was sold out. Getting it to production, however, was difficult. Because of Venice's proximity to Austria, the opera world there was subject to censors, and Verdi had to change the setting — moving it to the Duchy of Mantua, Italy, in the sixteenth century, a Gonzaga dukedom long since extinct. (The Gonzaga family had also patronised Monteverdi's <em>L'Orfeo</em> in the same city two centuries earlier — a fitting connection.) Much of the more scandalous action is narrated rather than shown, another concession to the censors.
 
-The opera is structured in three acts: Act I has two scenes, while Acts II and III each flow continuously. *Rigoletto* sits in Verdi's middle to late period, a time when he was increasing dramatic continuity within the traditional Italian operatic forms. The units grow longer, the distinction between aria and recitative blurs — the recitative itself becomes more lyrical — and Verdi was, in his own words, sacrificing form for drama. He said he "conceived *Rigoletto* almost without arias and finales, only a series of duets without end." Relationships, rather than solo display, drive the music forward. He still adhered to the conventional forms, but they created tensions — particularly the **cabaletta**, the fast second part of a two-part aria, which sometimes sits uneasily with the dramatic action.
+The opera is structured in three acts: Act I has two scenes, while Acts II and III each flow continuously. <em>Rigoletto</em> sits in Verdi's middle to late period, a time when he was increasing dramatic continuity within the traditional Italian operatic forms. The units grow longer, the distinction between aria and recitative blurs — the recitative itself becomes more lyrical — and Verdi was, in his own words, sacrificing form for drama. He said he "conceived <em>Rigoletto</em> almost without arias and finales, only a series of duets without end." Relationships, rather than solo display, drive the music forward. He still adhered to the conventional forms, but they created tensions — particularly the <strong>cabaletta</strong>, the fast second part of a two-part aria, which sometimes sits uneasily with the dramatic action.
 
-Rather than beginning with a full overture, the opera opens with a **prelude** — a brief orchestral introduction that flows directly into the drama, much as Wagner would do. The very first notes announce the **curse motive**: a repeated dotted note on C, played by brass instruments, followed by a dissonant chord on F-sharp that resolves to a C minor chord. This motive reappears at key moments throughout the opera, haunting Rigoletto at every turn.
+Rather than beginning with a full overture, the opera opens with a <strong>prelude</strong> — a brief orchestral introduction that flows directly into the drama, much as Wagner would do. The very first notes announce the <strong>curse motive</strong>: a repeated dotted note on C, played by brass instruments, followed by a dissonant chord on F-sharp that resolves to a C minor chord. This motive reappears at key moments throughout the opera, haunting Rigoletto at every turn.
 
 ## Characters and Story
 
@@ -922,7 +922,7 @@ In Act II, at the Duke's palace, the courtiers reveal that Gilda is there. Rigol
 
 Rigoletto's soliloquy in Act I, Scene II — "Pari siamo" ("We are alike") — reveals the tormented inner world of this complex character. He has just been speaking to Sparafucile, and now he reflects on their similarity: the assassin uses a dagger, Rigoletto uses his tongue. Both inflict wounds. He is nasty, dark, and bitter, forced to wear his cap and bells, denied the common human right to weep — permitted nothing but to laugh. And yet he is tender towards his one ray of sunshine, Gilda.
 
-> **Rigoletto:**
+> <strong>Rigoletto:</strong>
 > Pari siamo!... io la lingua, egli ha il pugnale. / We are two of a kind: my weapon is my tongue, his is a dagger.
 > L'uomo son io che ride, ei quel che spegne! / I am a man of laughter, he strikes the fatal blow!
 > Quel vecchio maledivami... / The old man cursed me...
@@ -938,19 +938,19 @@ Throughout the opera, Gilda is characterised through duets with male authority f
 
 ## The Duet: Gilda and the Duke, "T'amo"
 
-The duet between Gilda and the Duke in Act I, Scene II follows the standard Italian aria form in four parts, but the form itself creates dramatic tension. It begins with a **recitative** in which the Duke sweeps in and finishes Gilda's words — she is in the middle of the word "love" when he interrupts and continues it, pouring on the charm. The **cavatina**, "È il sol dell'anima" ("Love is the sun of the soul"), is a slow, beautiful melody — but it is mostly the Duke's. Gilda interjects only afterwards, and she follows him musically, reinforcing the power imbalance between them.
+The duet between Gilda and the Duke in Act I, Scene II follows the standard Italian aria form in four parts, but the form itself creates dramatic tension. It begins with a <strong>recitative</strong> in which the Duke sweeps in and finishes Gilda's words — she is in the middle of the word "love" when he interrupts and continues it, pouring on the charm. The <strong>cavatina</strong>, "È il sol dell'anima" ("Love is the sun of the soul"), is a slow, beautiful melody — but it is mostly the Duke's. Gilda interjects only afterwards, and she follows him musically, reinforcing the power imbalance between them.
 
-> **Duke:**
+> <strong>Duke:</strong>
 > È il sol dell'anima, la vita è amore, / Love is the sunshine of the soul, 'tis life itself!
 > sua voce è il palpito del nostro core. / Its voice is the beating of our hearts.
 >
-> **Gilda** (to herself):
+> <strong>Gilda</strong> (to herself):
 > Ah, de' miei vergini sogni son queste / Ah, these are the tender, longed-for words
 > le voci tenere sì care a me! / I have heard in my maiden dreams!
 
-Then comes the **tempo di mezzo**: they are interrupted by noise outside — it might be her father returning — and the Duke must rush off. But before he leaves, Gilda asks his name, and he tells her he is "Gaultier Maldè, a poor student." Finally, the **cabaletta**, "Addio" — a fast concluding movement in which the two sing farewell together. But is this dramatically successful? They have to hurry, yet they are singing an entire movement merely to say goodbye. Is this the problem of form imposing itself on drama, or is it lovers who simply cannot part — the long goodbye? Verdi leaves this tension unresolved, and the listener must decide.
+Then comes the <strong>tempo di mezzo</strong>: they are interrupted by noise outside — it might be her father returning — and the Duke must rush off. But before he leaves, Gilda asks his name, and he tells her he is "Gaultier Maldè, a poor student." Finally, the <strong>cabaletta</strong>, "Addio" — a fast concluding movement in which the two sing farewell together. But is this dramatically successful? They have to hurry, yet they are singing an entire movement merely to say goodbye. Is this the problem of form imposing itself on drama, or is it lovers who simply cannot part — the long goodbye? Verdi leaves this tension unresolved, and the listener must decide.
 
-> **Together:**
+> <strong>Together:</strong>
 > Addio! speranza ed anima / Farewell... my heart and soul
 > sol tu sarai per me. / are set on you alone.
 > Addio! vivrà immutabile / Farewell... my love for you
@@ -958,9 +958,9 @@ Then comes the **tempo di mezzo**: they are interrupted by noise outside — it 
 
 ## Gilda's Aria: "Caro nome"
 
-Immediately following the Duke's departure, Gilda is alone, musing on the name he has given her — but we know it is a false name, and so the entire premise of her song is heartbreaking. "Caro nome" ("Dear name") is Gilda's only aria in the opera, and it is one of the most beautiful in the entire repertoire. The accompaniment is delicate, and the flute is prominent throughout — that same instrument of purity and innocence that marked her entrance into her father's soliloquy. The aria is a highly ornamented **coloratura** showpiece that soars into the upper range of the soprano voice. Gilda is the only character in the entire opera who sings with this kind of ornamentation, and it conveys both her girlishness and her isolation — she is in her own world, enchanted by a lie.
+Immediately following the Duke's departure, Gilda is alone, musing on the name he has given her — but we know it is a false name, and so the entire premise of her song is heartbreaking. "Caro nome" ("Dear name") is Gilda's only aria in the opera, and it is one of the most beautiful in the entire repertoire. The accompaniment is delicate, and the flute is prominent throughout — that same instrument of purity and innocence that marked her entrance into her father's soliloquy. The aria is a highly ornamented <strong>coloratura</strong> showpiece that soars into the upper range of the soprano voice. Gilda is the only character in the entire opera who sings with this kind of ornamentation, and it conveys both her girlishness and her isolation — she is in her own world, enchanted by a lie.
 
-> **Gilda** (alone):
+> <strong>Gilda</strong> (alone):
 > Gualtier Maldè... nome di lui sì amato, / Walter Maldè... name of the man I love,
 > ti scolpisci nel core innamorato! / be thou engraved upon my lovesick heart!
 > Caro nome che il mio cor / Beloved name, the first to move
@@ -970,9 +970,9 @@ Immediately following the Duke's departure, Gilda is alone, musing on the name h
 
 ## The Duke: "La donna è mobile"
 
-The Duke's aria "La donna è mobile" ("Woman is fickle") in Act III is one of the most instantly recognisable tunes in all of opera — used in countless commercials, nearly as ubiquitous as the Habanera from *Carmen*. The irony is devastating: the Duke, a lyric tenor who seduces, abducts, tricks, and discards women, sings about female fickleness. He is at Sparafucile's inn, drinking and singing to himself, while Rigoletto has brought Gilda to witness the Duke's faithlessness with Maddalena. The melody has a surface charm that is entirely deliberate — a **strophic** text setting (the same music for each verse) with a jaunty oom-pah-pah accompaniment in triple metre. Everything about it is breezy, shallow, and seductive, perfectly matching the character who sings it.
+The Duke's aria "La donna è mobile" ("Woman is fickle") in Act III is one of the most instantly recognisable tunes in all of opera — used in countless commercials, nearly as ubiquitous as the Habanera from <em>Carmen</em>. The irony is devastating: the Duke, a lyric tenor who seduces, abducts, tricks, and discards women, sings about female fickleness. He is at Sparafucile's inn, drinking and singing to himself, while Rigoletto has brought Gilda to witness the Duke's faithlessness with Maddalena. The melody has a surface charm that is entirely deliberate — a <strong>strophic</strong> text setting (the same music for each verse) with a jaunty oom-pah-pah accompaniment in triple metre. Everything about it is breezy, shallow, and seductive, perfectly matching the character who sings it.
 
-> **Duke:**
+> <strong>Duke:</strong>
 > La donna è mobile / Women are as fickle
 > qual piuma al vento, / as feathers in the wind,
 > muta d'accento / simple in speech,
@@ -983,37 +983,37 @@ By the end of the opera, Gilda has changed profoundly. She knows that if she kno
 # Wagner, Tristan und Isolde
 
 Readings:
-- Moss, Stephen. "Why Wagner's *Tristan und Isolde* Is the Ultimate Opera." *The Guardian*, September 23, 2016.
+- Moss, Stephen. "Why Wagner's <em>Tristan und Isolde</em> Is the Ultimate Opera." <em>The Guardian</em>, September 23, 2016.
 
 ## Richard Wagner: Life and Controversy
 
-Richard Wagner (1813–1883) is one of the most revolutionary and controversial figures in the history of music. Born in Leipzig, the ninth child of a police actuary, he began writing operas in the early 1830s and gained positions with regional opera companies. From 1839 to 1842 he worked as a music journalist in Paris, and in 1843 he was appointed second **Kapellmeister** — chapel master — for the King of Saxony in Dresden. But Wagner was politically active, and when he supported the failed insurrection of 1848–49 — part of a wave of republican revolts against European monarchs that swept through Sicily, France, Germany, Italy, and the Austrian Empire — he had to flee Germany. He settled in Switzerland, where he wrote his most important theoretical essays. Not until 1864, when he gained the support of King Ludwig II of Bavaria, could he mount the premiere of *Tristan und Isolde*, which had been completed and published in 1859 but waited five years for its first production. In 1870, he married Cosima von Bülow, daughter of Franz Liszt, making Liszt his father-in-law — the two composers shared many ideas about the music of the future.
+Richard Wagner (1813–1883) is one of the most revolutionary and controversial figures in the history of music. Born in Leipzig, the ninth child of a police actuary, he began writing operas in the early 1830s and gained positions with regional opera companies. From 1839 to 1842 he worked as a music journalist in Paris, and in 1843 he was appointed second <strong>Kapellmeister</strong> — chapel master — for the King of Saxony in Dresden. But Wagner was politically active, and when he supported the failed insurrection of 1848–49 — part of a wave of republican revolts against European monarchs that swept through Sicily, France, Germany, Italy, and the Austrian Empire — he had to flee Germany. He settled in Switzerland, where he wrote his most important theoretical essays. Not until 1864, when he gained the support of King Ludwig II of Bavaria, could he mount the premiere of <em>Tristan und Isolde</em>, which had been completed and published in 1859 but waited five years for its first production. In 1870, he married Cosima von Bülow, daughter of Franz Liszt, making Liszt his father-in-law — the two composers shared many ideas about the music of the future.
 
-Wagner's output focused almost entirely on opera — or, as he came to call it, **music drama** — and his major works include thirteen operas: *Der fliegende Holländer*, *Tannhäuser*, *Lohengrin*, the four-opera cycle *Der Ring des Nibelungen*, *Tristan und Isolde*, *Die Meistersinger von Nürnberg*, and *Parsifal*. His theoretical writings proved equally influential, particularly *The Artwork of the Future* (1850) and *Opera and Drama* (1851, revised 1868). In these works, Wagner argued that Beethoven's Ninth Symphony — with its choral finale — pointed the way forward: the symphony was dead, but music united with drama was the future. He saw himself, unsurprisingly, as Beethoven's true successor.
+Wagner's output focused almost entirely on opera — or, as he came to call it, <strong>music drama</strong> — and his major works include thirteen operas: <em>Der fliegende Holländer</em>, <em>Tannhäuser</em>, <em>Lohengrin</em>, the four-opera cycle <em>Der Ring des Nibelungen</em>, <em>Tristan und Isolde</em>, <em>Die Meistersinger von Nürnberg</em>, and <em>Parsifal</em>. His theoretical writings proved equally influential, particularly <em>The Artwork of the Future</em> (1850) and <em>Opera and Drama</em> (1851, revised 1868). In these works, Wagner argued that Beethoven's Ninth Symphony — with its choral finale — pointed the way forward: the symphony was dead, but music united with drama was the future. He saw himself, unsurprisingly, as Beethoven's true successor.
 
-Wagner also held controversial views on nationalism and antisemitism. His essay *Das Judentum in der Musik* ("Jewishness in Music," 1850, revised 1869) is a disturbing document of overt racism, singling out Mendelssohn — who had been born into a Jewish family that converted to Lutheranism when he was a boy — as a composer who, because of his Jewishness, could never reach the profundity of Beethoven or Bach. *Die Meistersinger von Nürnberg* also includes a depiction of a Jewish character that is deeply repulsive. These views have provoked an enduring and necessary debate: can we separate the art from the artist? Perhaps we cannot forgive him, but we must somehow come to terms with both the music and the man.
+Wagner also held controversial views on nationalism and antisemitism. His essay <em>Das Judentum in der Musik</em> ("Jewishness in Music," 1850, revised 1869) is a disturbing document of overt racism, singling out Mendelssohn — who had been born into a Jewish family that converted to Lutheranism when he was a boy — as a composer who, because of his Jewishness, could never reach the profundity of Beethoven or Bach. <em>Die Meistersinger von Nürnberg</em> also includes a depiction of a Jewish character that is deeply repulsive. These views have provoked an enduring and necessary debate: can we separate the art from the artist? Perhaps we cannot forgive him, but we must somehow come to terms with both the music and the man.
 
 ## Wagner and Opera: A Break with Tradition
 
-Wagner provoked powerful reactions in his own time — you were either a Wagnerite or you were adamantly opposed. His ideas dominated musical debate in the second half of the nineteenth century across all of Western Europe, not just Germany. He broke decisively with traditional operatic form, presenting his ideals in *Opera and Drama*. Rather than writing "operas," he wrote what he called music dramas — a term that shifted the focus away from any single element (singing, spectacle, poetry) and towards the unified whole.
+Wagner provoked powerful reactions in his own time — you were either a Wagnerite or you were adamantly opposed. His ideas dominated musical debate in the second half of the nineteenth century across all of Western Europe, not just Germany. He broke decisively with traditional operatic form, presenting his ideals in <em>Opera and Drama</em>. Rather than writing "operas," he wrote what he called music dramas — a term that shifted the focus away from any single element (singing, spectacle, poetry) and towards the unified whole.
 
-This idea found its fullest expression in another term Wagner coined: **Gesamtkunstwerk**, literally "total work of art." In Wagner's vision, there would be no operatic divas from Italy stepping forward for applause, no showpiece arias designed for the singer to shine at the expense of the story. Everything — action, scenery, poetry, and music — must work together, constantly mingling and reinforcing one another to serve the real essence of the drama.
+This idea found its fullest expression in another term Wagner coined: <strong>Gesamtkunstwerk</strong>, literally "total work of art." In Wagner's vision, there would be no operatic divas from Italy stepping forward for applause, no showpiece arias designed for the singer to shine at the expense of the story. Everything — action, scenery, poetry, and music — must work together, constantly mingling and reinforcing one another to serve the real essence of the drama.
 
-*Tristan und Isolde* was criticised by some as "undramatic" — and one can understand why. Very little happens on stage in the conventional sense. But what unfolds is a profound psychological and spiritual journey, especially for Tristan. The opera traces themes of conversion, revelation, and **transfiguration**: in the Act III delirium scene, Tristan goes through two spiritual cycles, revisiting his childhood, cursing the love potion, and finally arriving at the realisation that he cannot blame the potion for his feelings. He has to own his love for Isolde. This inner transformation, conveyed almost entirely through the orchestra, leads to his transfiguration — and, at the very end of the opera, to Isolde's **Liebestod** ("love-death").
+<em>Tristan und Isolde</em> was criticised by some as "undramatic" — and one can understand why. Very little happens on stage in the conventional sense. But what unfolds is a profound psychological and spiritual journey, especially for Tristan. The opera traces themes of conversion, revelation, and <strong>transfiguration</strong>: in the Act III delirium scene, Tristan goes through two spiritual cycles, revisiting his childhood, cursing the love potion, and finally arriving at the realisation that he cannot blame the potion for his feelings. He has to own his love for Isolde. This inner transformation, conveyed almost entirely through the orchestra, leads to his transfiguration — and, at the very end of the opera, to Isolde's <strong>Liebestod</strong> ("love-death").
 
 ## Aspects of Wagner's Style
 
-Several features of Wagner's musical language are essential to understanding *Tristan* and his other works.
+Several features of Wagner's musical language are essential to understanding <em>Tristan</em> and his other works.
 
-**Harmony.** Wagner's harmony is highly **chromatic** — saturated with notes outside the main key, moving through far-flung tonal regions. He introduces dissonance and eludes resolution, creating a pervasive sense of yearning. The listener is constantly led to expect a resolution that never quite arrives — or that, when it does, slides immediately into yet another dissonance. This technique is the musical embodiment of the opera's central theme: unfulfilled desire.
+<strong>Harmony.</strong> Wagner's harmony is highly <strong>chromatic</strong> — saturated with notes outside the main key, moving through far-flung tonal regions. He introduces dissonance and eludes resolution, creating a pervasive sense of yearning. The listener is constantly led to expect a resolution that never quite arrives — or that, when it does, slides immediately into yet another dissonance. This technique is the musical embodiment of the opera's central theme: unfulfilled desire.
 
-**Dramatic continuity.** Wagner conceived what he called **"endless melody"** (*unendliche Melodie*) — a melodic continuum in which the singing flows in constant flux from speech-like declamation to soaring lyrical lines with no hard boundaries between recitative and aria. The vocal setting is mostly **syllabic**, with one note per syllable, because Wagner worked so hard on the text that its clarity was paramount.
+<strong>Dramatic continuity.</strong> Wagner conceived what he called <strong>"endless melody"</strong> (<em>unendliche Melodie</em>) — a melodic continuum in which the singing flows in constant flux from speech-like declamation to soaring lyrical lines with no hard boundaries between recitative and aria. The vocal setting is mostly <strong>syllabic</strong>, with one note per syllable, because Wagner worked so hard on the text that its clarity was paramount.
 
-**Orchestra.** The orchestra in Wagner's music dramas is enormous, and Wagner was extremely specific about instrumentation — some brass instruments were even created specifically to play his music. More importantly, the orchestra functions as an actor or character in its own right, often conveying the drama more powerfully than the voices. The singers become part of a web of orchestral sound, their vocal lines interwoven with the instrumental texture rather than floating above it.
+<strong>Orchestra.</strong> The orchestra in Wagner's music dramas is enormous, and Wagner was extremely specific about instrumentation — some brass instruments were even created specifically to play his music. More importantly, the orchestra functions as an actor or character in its own right, often conveying the drama more powerfully than the voices. The singers become part of a web of orchestral sound, their vocal lines interwoven with the instrumental texture rather than floating above it.
 
-***Leitmotif.*** The **leitmotif** ("leading motive") is a short musical theme that represents a person, place, or object. Unlike the curse motive in *Rigoletto*, which appears at a few key moments, Wagner's leitmotifs pervade the entire score — at virtually any point in the music, at least one leitmotif is present. They are transformed, combined, and developed as the drama progresses, creating a dense network of musical meaning.
+<strong><em>Leitmotif.</strong></em> The <strong>leitmotif</strong> ("leading motive") is a short musical theme that represents a person, place, or object. Unlike the curse motive in <em>Rigoletto</em>, which appears at a few key moments, Wagner's leitmotifs pervade the entire score — at virtually any point in the music, at least one leitmotif is present. They are transformed, combined, and developed as the drama progresses, creating a dense network of musical meaning.
 
-**Singers.** Wagner's vocal demands require a **Heldentenor** ("heroic tenor") and a **dramatic soprano** — voices powerful enough to project over the massive orchestra. This music requires enormous stamina from singers and orchestral players alike.
+<strong>Singers.</strong> Wagner's vocal demands require a <strong>Heldentenor</strong> ("heroic tenor") and a <strong>dramatic soprano</strong> — voices powerful enough to project over the massive orchestra. This music requires enormous stamina from singers and orchestral players alike.
 
 ## Structure of Tristan und Isolde
 
@@ -1025,9 +1025,9 @@ The work consists of a Prelude plus three acts, each preceded by a short orchest
 |-----|--------|-----------|----------------|-------|-----------|
 | I | 5 | Love potion | Sailor's song | Isolde | Denial of love |
 | II | 3 | Tristan wounded | Hunting horns | Both | Attempted realisation of love (Night/Day) |
-| III | 3 | Tristan dies | Ancient tune (*alte Weise*) | Tristan | Transfiguration — Liebestod |
+| III | 3 | Tristan dies | Ancient tune (<em>alte Weise</em>) | Tristan | Transfiguration — Liebestod |
 
-The symbolism is central to the work. **Liebestod** — love-death — expresses the idea that Tristan and Isolde's love cannot be realised in the everyday world; resolution comes only in eternal love through death, not in earthly love. The opposition of **Day** (light, the torment of reality) and **Night** (death, oblivion, the realm where love can exist) runs throughout. Tristan curses the day because it torments him — he seeks the night. And threading through everything is the **constant yearning** that Wagner builds into the music itself, so that the audience feels it as powerfully as the characters do.
+The symbolism is central to the work. <strong>Liebestod</strong> — love-death — expresses the idea that Tristan and Isolde's love cannot be realised in the everyday world; resolution comes only in eternal love through death, not in earthly love. The opposition of <strong>Day</strong> (light, the torment of reality) and <strong>Night</strong> (death, oblivion, the realm where love can exist) runs throughout. Tristan curses the day because it torments him — he seeks the night. And threading through everything is the <strong>constant yearning</strong> that Wagner builds into the music itself, so that the audience feels it as powerfully as the characters do.
 
 ## Characters and Story
 
@@ -1042,19 +1042,19 @@ The symbolism is central to the work. **Liebestod** — love-death — expresses
 
 The backstory is essential. Before the opera begins, Tristan killed Morold, who was Isolde's fiancé. Isolde, not knowing the identity of his killer, nursed the wounded Tristan back to health — and by the time she discovered the truth, she had fallen in love with him. He loves her too, but neither knows the other's feelings. After returning to Cornwall, Tristan is ordered by King Marke to fetch Isolde to be the king's bride.
 
-**Act I** takes place on Tristan's ship, at sea between Ireland and Cornwall. As the ship nears port, Brangäne tells Isolde they are approaching Cornwall, which enrages her — she is being forced to marry a man she does not love. Isolde confesses to Brangäne that she loves Tristan and demands a death potion so that both she and Tristan can die. But Brangäne cannot bring herself to kill them. She substitutes the love potion. Tristan and Isolde drink, expecting death — and are consumed by relentless, overwhelming love, just as the ship pulls into Cornwall.
+<strong>Act I</strong> takes place on Tristan's ship, at sea between Ireland and Cornwall. As the ship nears port, Brangäne tells Isolde they are approaching Cornwall, which enrages her — she is being forced to marry a man she does not love. Isolde confesses to Brangäne that she loves Tristan and demands a death potion so that both she and Tristan can die. But Brangäne cannot bring herself to kill them. She substitutes the love potion. Tristan and Isolde drink, expecting death — and are consumed by relentless, overwhelming love, just as the ship pulls into Cornwall.
 
-**Act II** takes place at night, in the palace garden outside Isolde's apartment. King Marke has gone on a hunt. Isolde signals to Tristan, and they spend the night together. But Brangäne and Kurwenal warn that it is a trap — Melot is suspicious. The hunting party returns early, Tristan and Melot duel, and Tristan is mortally wounded.
+<strong>Act II</strong> takes place at night, in the palace garden outside Isolde's apartment. King Marke has gone on a hunt. Isolde signals to Tristan, and they spend the night together. But Brangäne and Kurwenal warn that it is a trap — Melot is suspicious. The hunting party returns early, Tristan and Melot duel, and Tristan is mortally wounded.
 
-**Act III** unfolds on the grounds of Tristan's castle, Kareol. He lies delirious, watched over by the faithful Kurwenal. A shepherd will signal with an ancient tune — the *alte Weise* — when Isolde's ship is sighted. During his delirium, Tristan goes through two spiritual cycles: he revisits his childhood, thinks about everything that led to drinking the potion, blames and curses the potion, desires night — then collapses. The ancient tune triggers the second cycle, in which he confronts the truth. He arrives at a moment of conversion: he cannot blame the potion or anyone else. He must own his love. He fully embraces it. Then, rising to his feet, he tears off his bandages to greet Isolde's ship. She arrives and lays him down. He dies in her arms. King Marke and his men arrive; Kurwenal kills Melot but is himself mortally wounded. Brangäne reveals the truth about the swapped potions — Marke has come to forgive, not to punish. But it is too late. Isolde collapses on Tristan's body and dies.
+<strong>Act III</strong> unfolds on the grounds of Tristan's castle, Kareol. He lies delirious, watched over by the faithful Kurwenal. A shepherd will signal with an ancient tune — the <em>alte Weise</em> — when Isolde's ship is sighted. During his delirium, Tristan goes through two spiritual cycles: he revisits his childhood, thinks about everything that led to drinking the potion, blames and curses the potion, desires night — then collapses. The ancient tune triggers the second cycle, in which he confronts the truth. He arrives at a moment of conversion: he cannot blame the potion or anyone else. He must own his love. He fully embraces it. Then, rising to his feet, he tears off his bandages to greet Isolde's ship. She arrives and lays him down. He dies in her arms. King Marke and his men arrive; Kurwenal kills Melot but is himself mortally wounded. Brangäne reveals the truth about the swapped potions — Marke has come to forgive, not to punish. But it is too late. Isolde collapses on Tristan's body and dies.
 
 ## The Prelude
 
-The Prelude to *Tristan und Isolde* is one of the decisive moments in the history of Western music. Rather than being a self-contained concert piece, it melts directly into Act I — the curtain does not rise until it ends. It opens with two **leitmotifs** that together create the famous **Tristan chord**: the first notes of the opera, built from the pitches F–B–D-sharp–G-sharp.
+The Prelude to <em>Tristan und Isolde</em> is one of the decisive moments in the history of Western music. Rather than being a self-contained concert piece, it melts directly into Act I — the curtain does not rise until it ends. It opens with two <strong>leitmotifs</strong> that together create the famous <strong>Tristan chord</strong>: the first notes of the opera, built from the pitches F–B–D-sharp–G-sharp.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/FcQeTCsQ5w4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Opening of the Prelude to Tristan und Isolde*
+<em>Opening of the Prelude to Tristan und Isolde</em>
 
 The first leitmotif (often labelled X), played by the cellos, rises from A to F and then falls chromatically — by half-step — down to D-sharp. The second leitmotif (Y) starts from G-sharp and rises chromatically to B. These two motifs are conflated in the opening bars, producing the Tristan chord — a dissonance that Wagner described as "unfulfilled yearning." Four successive dissonant sonorities "resolve" into yet further dissonance. The harmonic language is constantly churning, shifting keys, altering chords chromatically, introducing delayed resolutions, evaded cadences, and unresolved dissonance. The effect is to create in the listener an almost physical desire for resolution — a desire that Wagner systematically denies, just as the characters are denied the fulfilment of their love.
 
@@ -1068,15 +1068,15 @@ This scene is perhaps the finest example of Wagner's Gesamtkunstwerk in action. 
 
 ## Act III, Scene 3: Isolde's "Mild und leise" — The Liebestod
 
-The opera ends with Isolde's song over Tristan's body — "Mild und leise, wie er lächelt" ("Softly and gently, see him smiling"). She has arrived at Kareol, and Tristan has died in her arms. Here, the central idea of **Liebestod** reaches its fullest expression: their love can only be realised through death, transcending earthly existence.
+The opera ends with Isolde's song over Tristan's body — "Mild und leise, wie er lächelt" ("Softly and gently, see him smiling"). She has arrived at Kareol, and Tristan has died in her arms. Here, the central idea of <strong>Liebestod</strong> reaches its fullest expression: their love can only be realised through death, transcending earthly existence.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/2qAF2ab9hyg?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Waltraud Meier sings "Mild und leise" from Tristan und Isolde*
+<em>Waltraud Meier sings "Mild und leise" from Tristan und Isolde</em>
 
 The music that returns here is the theme from the Act II love duet — but now it is devoid of yearning. The anguish, the restless chromaticism, the constantly evaded cadences — all of that has been resolved. And then, at the very end, the music of the Prelude itself returns. The Tristan chord sounds one final time — and this time it resolves, clearly and unmistakably, to B major. It is only through death and transfiguration that the yearning can end. The entire harmonic architecture of the opera has been moving towards this moment: the resolution that was denied for nearly four hours of music finally arrives in the last bars.
 
-> **Isolde:**
+> <strong>Isolde:</strong>
 > Mild und leise, wie er lächelt, / Softly and gently, see him smiling,
 > wie das Auge hold er öffnet, / how the eyes that open fondly —
 > seht ihr, Freunde? Seht ihr's nicht? / see it, friends? Don't you see?
@@ -1092,18 +1092,18 @@ The music that returns here is the theme from the Act II love duet — but now i
 
 Isolde collapses on Tristan's body and dies. The orchestra holds the B major chord — pure, radiant, and still. After an entire opera built on denial, deferral, and the agony of unfulfilled longing, this final resolution is shattering in its simplicity. Wagner proved that music could embody desire itself — and that only by relinquishing that desire could peace be found.
 
-# Bizet, *Carmen*
+# Bizet, <em>Carmen</em>
 
 Readings:
-- McClary, Susan. "Images of Race, Class and Gender in Nineteenth-Century France." *Georges Bizet, Carmen*. Cambridge: Cambridge University Press, 1992. 29–43.
+- McClary, Susan. "Images of Race, Class and Gender in Nineteenth-Century France." <em>Georges Bizet, Carmen</em>. Cambridge: Cambridge University Press, 1992. 29–43.
 
 ## Introduction
 
-Georges Bizet (1838–1875) wrote what has become one of the most popular operas of all time. The music of *Carmen* has permeated popular culture so thoroughly — from movie soundtracks to fast-food commercials — that even people who have never set foot in an opera house recognize the Habanera or the Prelude. Yet when the opera premiered on March 3, 1875, at the Opera-Comique in Paris, it was a colossal failure. Bizet died only a few months later, and some have speculated that the devastating reception contributed to his early death.
+Georges Bizet (1838–1875) wrote what has become one of the most popular operas of all time. The music of <em>Carmen</em> has permeated popular culture so thoroughly — from movie soundtracks to fast-food commercials — that even people who have never set foot in an opera house recognize the Habanera or the Prelude. Yet when the opera premiered on March 3, 1875, at the Opera-Comique in Paris, it was a colossal failure. Bizet died only a few months later, and some have speculated that the devastating reception contributed to his early death.
 
-The libretto was written by Ludovic Halepy and Henri Meilhac, based on a novella by Prosper Merimee from 1845 — a story already thirty years old by the time it reached the stage. *Carmen* belongs to the genre of **opera comique**, a French genre of opera that uses spoken dialogue rather than continuous sung recitative. The work alternates between its twenty-seven musical numbers and spoken dialogue. After Bizet's death, the Vienna Court Opera shortened the dialogue and added recitative — changes not part of the original conception. The opera was not revived again in France until 1883, after which it became extraordinarily popular.
+The libretto was written by Ludovic Halepy and Henri Meilhac, based on a novella by Prosper Merimee from 1845 — a story already thirty years old by the time it reached the stage. <em>Carmen</em> belongs to the genre of <strong>opera comique</strong>, a French genre of opera that uses spoken dialogue rather than continuous sung recitative. The work alternates between its twenty-seven musical numbers and spoken dialogue. After Bizet's death, the Vienna Court Opera shortened the dialogue and added recitative — changes not part of the original conception. The opera was not revived again in France until 1883, after which it became extraordinarily popular.
 
-Susan McClary's chapter on the opera helps explain both the initial horror and the subsequent embrace. As she writes, *Carmen* engaged nearly all the controversial themes of late nineteenth-century French culture simultaneously — race, class, and gender — and its realistic treatment of these themes formed the basis of its initial horrified rejection and also set the terms of its exuberant acceptance the following year.
+Susan McClary's chapter on the opera helps explain both the initial horror and the subsequent embrace. As she writes, <em>Carmen</em> engaged nearly all the controversial themes of late nineteenth-century French culture simultaneously — race, class, and gender — and its realistic treatment of these themes formed the basis of its initial horrified rejection and also set the terms of its exuberant acceptance the following year.
 
 ## The Story and Its Characters
 
@@ -1120,51 +1120,51 @@ Carmen is the title character — a Romani woman who works in a cigarette factor
 
 In Act I, the soldiers mill about in the square near the cigarette factory. Micaela comes looking for Don Jose and is told to return when the guard changes. The men of Seville gather to watch the female workers emerge from the factory, and Carmen — the favourite of all — sings her Habanera. Only one man pays no attention to her: Don Jose. She throws a flower at him. When Micaela returns with her mother's letter, Jose is already entranced. A fight erupts in the factory, Carmen is arrested, and Don Jose is put in charge of guarding her. She seduces him, promising to be his lover if he helps her escape. He is jailed for letting her go. In Act II, at Lillas Pastia's tavern where the smugglers meet, Carmen waits for Don Jose, who has been freed. Meanwhile, the toreador Escamillo appears, biding his time. Don Jose arrives, torn between duty and infatuation. Carmen dances for him, then mocks him. His obsession deepens. By Act III, he has joined the smugglers — the only way to stay near Carmen — but his jealousy has become stifling, and she senses danger. Micaela ventures into the hills to find him, demonstrating her bravery. In Act IV, Carmen has broken with Don Jose and is now in love with Escamillo. Jose, desperate, begs her to return. She refuses — free she was born, and free she shall die. In a fury, he stabs her as the crowd inside the bullring cheers the toreador's victory. He confesses to her murder and submits to arrest.
 
-## Exoticism in *Carmen*
+## Exoticism in <em>Carmen</em>
 
-One of the most salient features of *Carmen* is its exoticism, and McClary argues that musicologists have long recognized this quality but usually treat it as unproblematic — when in fact it is deeply problematic. In nineteenth-century French culture, "orientalism" was a broad umbrella. McClary notes what she calls the radical interchangeability of exotic types for the cultural orientalist: Persian, Greek, Jewish, Spanish, and African identities all washed together in an undifferentiated realm of otherness. Carmen bears the entire burden of this otherness on her shoulders.
+One of the most salient features of <em>Carmen</em> is its exoticism, and McClary argues that musicologists have long recognized this quality but usually treat it as unproblematic — when in fact it is deeply problematic. In nineteenth-century French culture, "orientalism" was a broad umbrella. McClary notes what she calls the radical interchangeability of exotic types for the cultural orientalist: Persian, Greek, Jewish, Spanish, and African identities all washed together in an undifferentiated realm of otherness. Carmen bears the entire burden of this otherness on her shoulders.
 
 McClary suggests that there was a growing belief that Western culture was bankrupt, and the "Orient" became a kind of utopian projection — a place offering unchecked profusion of the qualities that the West had traditionally denied itself. Carmen appeals to Don Jose in part because she offers him freedom from the strictures of his bourgeois life. But the cost of that escape from respectability soon becomes clear. His descent into the underworld is dramatically conveyed through setting: from the bright public street of Act I, to the den of iniquity of Act II, to the uninhabited wilderness of Act III. He re-emerges in the light of Act IV as a dissolute common criminal.
 
 This backdrop intersects with specific historical trauma. The Franco-Prussian War of 1870–1871 had brought France particular humiliation. Napoleon III was captured, and the Paris Commune of March to May 1871 — a radical socialist, anti-religious revolutionary government — held the capital under siege for four months before being crushed in the Bloody Week. The audience, the composer, and the librettists would all have been living in the wake of this great threat to the established order. McClary suggests that this political anxiety colours the opera's treatment of Carmen as a figure who threatens patriarchal Western society simply by being who she is.
 
-The encounter in the opera is between an aristocrat of northern stock — marked as "one of us" — and a Romani woman who bears the burden of exoticism for the duration of the composition. Micaela and Don Jose come from the north and are represented with a Western European musical sound. Carmen is the racialized other who has infiltrated the home turf. In the end, Carmen herself represents virtually all available categories of otherness: the inscrutable "oriental," the menacing worker, the lawless criminal, the *femme fatale*. And Jose, child of the Enlightenment bourgeoisie who surrenders his claims to racial, class, and gender privilege because of her, must pay the consequences in the finale. Yet it is ultimately Carmen who pays with her life for Jose's identity crisis and, as McClary writes, Bizet's fantasies of alterity.
+The encounter in the opera is between an aristocrat of northern stock — marked as "one of us" — and a Romani woman who bears the burden of exoticism for the duration of the composition. Micaela and Don Jose come from the north and are represented with a Western European musical sound. Carmen is the racialized other who has infiltrated the home turf. In the end, Carmen herself represents virtually all available categories of otherness: the inscrutable "oriental," the menacing worker, the lawless criminal, the <em>femme fatale</em>. And Jose, child of the Enlightenment bourgeoisie who surrenders his claims to racial, class, and gender privilege because of her, must pay the consequences in the finale. Yet it is ultimately Carmen who pays with her life for Jose's identity crisis and, as McClary writes, Bizet's fantasies of alterity.
 
 Some audience members in the 1870s might have seen the real tragedy in Don Jose's decline and blamed Carmen for it. But ultimately, it is his jealousy that brings about her death. She is killed on stage as the bull is killed in the ring — a chilling dramatic parallel that runs through the final scene.
 
-## Realism in *Carmen*
+## Realism in <em>Carmen</em>
 
-Alongside the exotic, *Carmen* confronts its audience with the real. Women smoke and fight on stage — behaviour far removed from the feminine ideal. The settings are not beautiful: a cigarette factory, a smuggler's den. Yet these are actual places in Seville. The old tobacco factory still stands — it is a university building today — and the bullring outside Seville remains a landmark. Carmen herself has become a real figure to the city: there is a plaque marking the alleyway where she supposedly met her lovers and a statue of her outside the bullring. There is no tenderness in this story, no "true love" in the conventional sense, and the opera ends with a brutal murder committed in full view of the audience. The exotic and the real meet face to face.
+Alongside the exotic, <em>Carmen</em> confronts its audience with the real. Women smoke and fight on stage — behaviour far removed from the feminine ideal. The settings are not beautiful: a cigarette factory, a smuggler's den. Yet these are actual places in Seville. The old tobacco factory still stands — it is a university building today — and the bullring outside Seville remains a landmark. Carmen herself has become a real figure to the city: there is a plaque marking the alleyway where she supposedly met her lovers and a statue of her outside the bullring. There is no tenderness in this story, no "true love" in the conventional sense, and the opera ends with a brutal murder committed in full view of the audience. The exotic and the real meet face to face.
 
 ## The Prelude
 
-The Prelude to Act I functions somewhat like a medley, introducing music that will appear later in the opera and giving a sense of the story to come. Three themes are presented: the **corrida** (bullfight) music from Act IV, the Toreador Song from Act II, and then — in the second part of the Prelude, around 2:16 — the Carmen or **fate motive**. The other acts are preceded by shorter orchestral pieces called **entr'actes** ("between-acts"), which feature some of the opera's most familiar music.
+The Prelude to Act I functions somewhat like a medley, introducing music that will appear later in the opera and giving a sense of the story to come. Three themes are presented: the <strong>corrida</strong> (bullfight) music from Act IV, the Toreador Song from Act II, and then — in the second part of the Prelude, around 2:16 — the Carmen or <strong>fate motive</strong>. The other acts are preceded by shorter orchestral pieces called <strong>entr'actes</strong> ("between-acts"), which feature some of the opera's most familiar music.
 
 ## Carmen and Her Music
 
-Carmen's music is marked as "other" — exotic, erotic, dangerous. The fate motive contains a characteristic **augmented second** between C-sharp and B-flat, an interval associated in Western music with Jewish, Arabic, African, and Romani ("Gypsy") musical traditions. This motive is intimately bound to Carmen and to her ultimate death at the end of the opera.
+Carmen's music is marked as "other" — exotic, erotic, dangerous. The fate motive contains a characteristic <strong>augmented second</strong> between C-sharp and B-flat, an interval associated in Western music with Jewish, Arabic, African, and Romani ("Gypsy") musical traditions. This motive is intimately bound to Carmen and to her ultimate death at the end of the opera.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/zMU-GlKE52s?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*The fate motive from Carmen*
+<em>The fate motive from Carmen</em>
 
 ### The Habanera: Act I, No. 5
 
-Carmen is characterized above all by dance. Her first major number, "L'amour est un oiseau rebelle" ("Love is a rebellious bird"), is set to a **Habanera** — a Cuban dance, probably of African origin, that became popular in Spain. It is in a slow 2/4 time with a characteristic dotted rhythm. Bizet's inspiration was an early published edition by the Spanish composer Sebastian Iradier; he borrowed the melody directly, so this was not drawn from folk origins but from a published source.
+Carmen is characterized above all by dance. Her first major number, "L'amour est un oiseau rebelle" ("Love is a rebellious bird"), is set to a <strong>Habanera</strong> — a Cuban dance, probably of African origin, that became popular in Spain. It is in a slow 2/4 time with a characteristic dotted rhythm. Bizet's inspiration was an early published edition by the Spanish composer Sebastian Iradier; he borrowed the melody directly, so this was not drawn from folk origins but from a published source.
 
-Several musical features define this number. The melody is **chromatic**, descending by half-step from D down through C-sharp, C-natural, B, B-flat, A, G-sharp, G, to F, and finally to E — but the tonic note, D, is withheld. In tonal music, the listener craves resolution, and Carmen manipulates that desire just as she manipulates Don Jose's growing obsession. The strict, constant rhythm of the accompaniment provides a framework against which Carmen introduces playful eighth-note figures and triplets, bending the rhythm to her will. The chorus joins in as well, their responses giving a sense of Carmen's magnetic effect on those around her.
+Several musical features define this number. The melody is <strong>chromatic</strong>, descending by half-step from D down through C-sharp, C-natural, B, B-flat, A, G-sharp, G, to F, and finally to E — but the tonic note, D, is withheld. In tonal music, the listener craves resolution, and Carmen manipulates that desire just as she manipulates Don Jose's growing obsession. The strict, constant rhythm of the accompaniment provides a framework against which Carmen introduces playful eighth-note figures and triplets, bending the rhythm to her will. The chorus joins in as well, their responses giving a sense of Carmen's magnetic effect on those around her.
 
 The text makes her position unmistakable. Love is a rebellious bird that no one can tame. Love is a gypsy child who has never known the law. "If you love me not, then I love you. If I love you, you'd better watch out." She is being absolutely clear that she cannot be possessed — and if anyone tries, it will push her away. Don Jose, of course, does not heed the warning.
 
 ### The Seguidilla: Act I, No. 10
 
-The extra excerpt, "Pres des remparts de Seville" ("Near the walls of Seville"), provides another example of Carmen characterized through dance. Carmen has been arrested after her knife fight in the factory. Don Jose is guarding her, and she seduces him into helping her escape by promising to dance a **Seguidilla** for him at Lillas Pastia's tavern. The Seguidilla is a well-known Spanish song and dance in fast triple meter. The orchestral accompaniment imitates the strumming of a guitar, with the rhythm of castanets and flutes evoking flamenco dancing. The vocal melody is richly ornamented with **melismas** and grace notes. A flamenco-style downward cadence by half-step is a central feature of the song. The refrain is slippery and enticing: the harmony moves through different keys constantly and ends on B — musically, Carmen is hard to pin down.
+The extra excerpt, "Pres des remparts de Seville" ("Near the walls of Seville"), provides another example of Carmen characterized through dance. Carmen has been arrested after her knife fight in the factory. Don Jose is guarding her, and she seduces him into helping her escape by promising to dance a <strong>Seguidilla</strong> for him at Lillas Pastia's tavern. The Seguidilla is a well-known Spanish song and dance in fast triple meter. The orchestral accompaniment imitates the strumming of a guitar, with the rhythm of castanets and flutes evoking flamenco dancing. The vocal melody is richly ornamented with <strong>melismas</strong> and grace notes. A flamenco-style downward cadence by half-step is a central feature of the song. The refrain is slippery and enticing: the harmony moves through different keys constantly and ends on B — musically, Carmen is hard to pin down.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/bMZX5-URqYU?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Carmen sings the Seguidilla, Act I*
+<em>Carmen sings the Seguidilla, Act I</em>
 
-## Gender in *Carmen*
+## Gender in <em>Carmen</em>
 
 ### The Duet: Act I, No. 7 — "Parle-moi de ma mere!"
 
@@ -1225,12 +1225,12 @@ The offstage chorus signals the death of the bull — a dramatic parallel that i
 > Carmen will never yield!
 > Free she was born and free she will die!
 >
-> CHORUS *(in the arena)*:
+> CHORUS <em>(in the arena)</em>:
 > Hurrah! hurrah! a grand fight!
 > The tormented bull comes bounding to the attack!
 > Struck true, right to the heart -- Victory!
 >
-> JOSE *(blocking her way)*:
+> JOSE <em>(blocking her way)</em>:
 > Where are you going?
 >
 > CARMEN:
@@ -1246,7 +1246,7 @@ The offstage chorus signals the death of the bull — a dramatic parallel that i
 > CARMEN:
 > No! No! This ring that you once gave to me --
 > here, take it!
-> *(She throws it away.)*
+> <em>(She throws it away.)</em>
 >
 > CHORUS:
 > Toreador, on guard!
@@ -1256,29 +1256,29 @@ The offstage chorus signals the death of the bull — a dramatic parallel that i
 >
 > JOSE:
 > You can arrest me. I was the one who killed her!
-> *(throws himself upon Carmen's body)*
+> <em>(throws himself upon Carmen's body)</em>
 > Ah! Carmen! My adored Carmen!
 
-# Puccini, *Tosca*
+# Puccini, <em>Tosca</em>
 
 Readings:
 - "Tosca -- New Zealand Opera." OperaVision, July 29, 2020. (Read "The Story" and "Insights.")
 
 ## Giacomo Puccini (1858–1924)
 
-Giacomo Puccini was undoubtedly the most successful Italian opera composer after Verdi. He was born in 1858 in Lucca to a family of musicians — it had been the family business for about two hundred years by that point, so a career in music was in some ways inevitable. He composed and played the organ as a teenager, but when his father died when he was just five, the trajectory of his life changed. What changed it again, decisively, was attending a performance of Verdi's *Aida* in 1876. That experience convinced him to become an opera composer.
+Giacomo Puccini was undoubtedly the most successful Italian opera composer after Verdi. He was born in 1858 in Lucca to a family of musicians — it had been the family business for about two hundred years by that point, so a career in music was in some ways inevitable. He composed and played the organ as a teenager, but when his father died when he was just five, the trajectory of his life changed. What changed it again, decisively, was attending a performance of Verdi's <em>Aida</em> in 1876. That experience convinced him to become an opera composer.
 
-He joined the Milan Conservatory in 1880, supported by a scholarship from a patron in Lucca who believed in his talent. In 1884, shortly after graduating, he wrote an opera called *Le Villi* (*The Fairies*), an opera-ballet. He had entered it in a competition and did not win, but he attracted the attention of the great publisher Ricordi and of Arrigo Boito, Verdi's librettist and a composer himself. Ricordi said he would publish the work if Puccini expanded it to two acts; Boito subsidized the production. It was performed at La Scala to huge success, and Puccini's career was launched.
+He joined the Milan Conservatory in 1880, supported by a scholarship from a patron in Lucca who believed in his talent. In 1884, shortly after graduating, he wrote an opera called <em>Le Villi</em> (<em>The Fairies</em>), an opera-ballet. He had entered it in a competition and did not win, but he attracted the attention of the great publisher Ricordi and of Arrigo Boito, Verdi's librettist and a composer himself. Ricordi said he would publish the work if Puccini expanded it to two acts; Boito subsidized the production. It was performed at La Scala to huge success, and Puccini's career was launched.
 
-Not long after, he fled Lucca with a married woman, Elvira Gemignani. They were not able to marry until 1904, and their relationship was tempestuous. Around 1890, Ricordi sent him to Bayreuth to see Wagner's *Ring Cycle*, and the impact on his operatic writing was enormous — between Verdi and Wagner, he had formidable role models. In 1908, tragedy struck. Elvira became fiercely jealous of a young servant named Doria Manfredi who had been employed by the family for several years. She drove Doria from the house, threatening to kill her, and the girl subsequently took her own life. An examination confirmed she had not had a relationship with Giacomo. Elvira was charged and found guilty, though Puccini settled with the family out of court.
+Not long after, he fled Lucca with a married woman, Elvira Gemignani. They were not able to marry until 1904, and their relationship was tempestuous. Around 1890, Ricordi sent him to Bayreuth to see Wagner's <em>Ring Cycle</em>, and the impact on his operatic writing was enormous — between Verdi and Wagner, he had formidable role models. In 1908, tragedy struck. Elvira became fiercely jealous of a young servant named Doria Manfredi who had been employed by the family for several years. She drove Doria from the house, threatening to kill her, and the girl subsequently took her own life. An examination confirmed she had not had a relationship with Giacomo. Elvira was charged and found guilty, though Puccini settled with the family out of court.
 
-From 1910 to 1918, following the New York premiere of *La fanciulla del West* (*The Girl of the Golden West*), Puccini entered a creative hiatus. "Writing an opera is difficult," he admitted. He remained keenly interested in contemporary music, studying the works of Debussy, Richard Strauss, Schoenberg, and Stravinsky. In 1918 he returned to performance with *Il Trittico*, a triptych of three contrasting one-act operas — *Il Tabarro* (*The Cloak*), *Suor Angelica* (*Sister Angelica*), and *Gianni Schicchi* — first performed together in New York. In 1924, while working on *Turandot*, he was diagnosed with throat cancer. He travelled to Belgium for an operation but survived only a few days. The opera was completed by the composer Franco Alfano from Puccini's sketches and premiered posthumously at La Scala in 1926. Puccini left nine completed operas, among them *La Boheme*, *Tosca*, *Madama Butterfly*, and the three one-act operas of *Il Trittico*.
+From 1910 to 1918, following the New York premiere of <em>La fanciulla del West</em> (<em>The Girl of the Golden West</em>), Puccini entered a creative hiatus. "Writing an opera is difficult," he admitted. He remained keenly interested in contemporary music, studying the works of Debussy, Richard Strauss, Schoenberg, and Stravinsky. In 1918 he returned to performance with <em>Il Trittico</em>, a triptych of three contrasting one-act operas — <em>Il Tabarro</em> (<em>The Cloak</em>), <em>Suor Angelica</em> (<em>Sister Angelica</em>), and <em>Gianni Schicchi</em> — first performed together in New York. In 1924, while working on <em>Turandot</em>, he was diagnosed with throat cancer. He travelled to Belgium for an operation but survived only a few days. The opera was completed by the composer Franco Alfano from Puccini's sketches and premiered posthumously at La Scala in 1926. Puccini left nine completed operas, among them <em>La Boheme</em>, <em>Tosca</em>, <em>Madama Butterfly</em>, and the three one-act operas of <em>Il Trittico</em>.
 
-## *Tosca*: Introduction
+## <em>Tosca</em>: Introduction
 
-Puccini labelled *Tosca* a **melodramma** in three acts. He wrote the music in 1899 to an Italian libretto by Luigi Illica and Giuseppe Giacosa — the same team who collaborated with him on *La Boheme* and *Madama Butterfly*. The story is based on a play, *La Tosca*, by Victorien Sardou. It premiered on January 14, 1900, at the Teatro Costanzi in Rome — the very city where the story takes place.
+Puccini labelled <em>Tosca</em> a <strong>melodramma</strong> in three acts. He wrote the music in 1899 to an Italian libretto by Luigi Illica and Giuseppe Giacosa — the same team who collaborated with him on <em>La Boheme</em> and <em>Madama Butterfly</em>. The story is based on a play, <em>La Tosca</em>, by Victorien Sardou. It premiered on January 14, 1900, at the Teatro Costanzi in Rome — the very city where the story takes place.
 
-The reception was decidedly mixed. Some critics found Act II overly wordy, dismissing the opera as "three hours of noise." Others, after a London performance, called Puccini "a master in the art of poignant expression." The musicologist Joseph Kerman, writing in the 1950s, famously labelled it "a shabby little shocker." But the public loved it then and loves it still. Puccini was influenced not only by Verdi — whose shadow loomed over every Italian opera composer who followed — but profoundly by Wagner. His trip to Bayreuth to see the *Ring Cycle* left its mark on everything he wrote, and *Tosca* uses Wagnerian **leitmotifs** to identify characters, objects, and ideas.
+The reception was decidedly mixed. Some critics found Act II overly wordy, dismissing the opera as "three hours of noise." Others, after a London performance, called Puccini "a master in the art of poignant expression." The musicologist Joseph Kerman, writing in the 1950s, famously labelled it "a shabby little shocker." But the public loved it then and loves it still. Puccini was influenced not only by Verdi — whose shadow loomed over every Italian opera composer who followed — but profoundly by Wagner. His trip to Bayreuth to see the <em>Ring Cycle</em> left its mark on everything he wrote, and <em>Tosca</em> uses Wagnerian <strong>leitmotifs</strong> to identify characters, objects, and ideas.
 
 ## The Story and Its Characters
 
@@ -1300,31 +1300,31 @@ In Act II, Scarpia interrogates Cavaradossi in his chambers at the Palazzo Farne
 
 In Act III, at dawn on the ramparts of the Castel Sant'Angelo, Cavaradossi waits for execution. He bribes a jailer to deliver a farewell letter to Tosca and gives in to despair, singing his famous aria "E lucevan le stelle." Tosca appears and explains everything — she has killed Scarpia, and the execution will be a sham with blank cartridges. She tells him to fall convincingly when the soldiers fire. But the execution is real: Scarpia has betrayed her even in death. When Cavaradossi does not move, Tosca realizes the truth. Scarpia's men rush in to arrest her for his murder. She cries out, "O Scarpia, avanti a Dio!" ("Scarpia, before God!") and leaps from the battlements.
 
-## Realism in *Tosca*
+## Realism in <em>Tosca</em>
 
-The three locations of *Tosca* are real places in Rome that audiences in 1900 — and visitors today — can walk through: the church of Sant'Andrea della Valle (Act I), Scarpia's chambers in the Palazzo Farnese (Act II), and the upper ramparts of the Castel Sant'Angelo (Act III), with its famous angel statue atop the fortress. Puccini was meticulous about authenticity. He researched the exact sites and their sounds: for the Te Deum in Act I, he studied the melodies to which the hymn was set in Roman churches and adapted the music to the exact pitch of the great bell of St. Peter's Basilica, which is not far from Sant'Andrea and easily heard. The political backdrop is equally specific: Rome in June 1800, on the eve of Napoleon's victory at Marengo.
+The three locations of <em>Tosca</em> are real places in Rome that audiences in 1900 — and visitors today — can walk through: the church of Sant'Andrea della Valle (Act I), Scarpia's chambers in the Palazzo Farnese (Act II), and the upper ramparts of the Castel Sant'Angelo (Act III), with its famous angel statue atop the fortress. Puccini was meticulous about authenticity. He researched the exact sites and their sounds: for the Te Deum in Act I, he studied the melodies to which the hymn was set in Roman churches and adapted the music to the exact pitch of the great bell of St. Peter's Basilica, which is not far from Sant'Andrea and easily heard. The political backdrop is equally specific: Rome in June 1800, on the eve of Napoleon's victory at Marengo.
 
 ### Verismo
 
-*Tosca* belongs to the **verismo** movement — *verita* meaning "truth" in Italian. This was a late nineteenth-century Italian approach to opera that applied seriousness and tragedy to events and characters of everyday life, presenting extreme passion and violent action. *Tosca* exhibits verismo characteristics in abundance: an excess of emotion leading to both murder and suicide; a dramatic pace closer to a spoken play than a traditional opera (the entire action unfolds in under two hours); brutality and violence, including torture heard offstage and murder committed in full view of the audience; the sadism and lechery of Scarpia, who dominates the story even after his death; and a suicide that closes the opera with shattering finality. This unrelenting intensity contributed to a hostile reception from some critics, though the public ultimately embraced the work.
+<em>Tosca</em> belongs to the <strong>verismo</strong> movement — <em>verita</em> meaning "truth" in Italian. This was a late nineteenth-century Italian approach to opera that applied seriousness and tragedy to events and characters of everyday life, presenting extreme passion and violent action. <em>Tosca</em> exhibits verismo characteristics in abundance: an excess of emotion leading to both murder and suicide; a dramatic pace closer to a spoken play than a traditional opera (the entire action unfolds in under two hours); brutality and violence, including torture heard offstage and murder committed in full view of the audience; the sadism and lechery of Scarpia, who dominates the story even after his death; and a suicide that closes the opera with shattering finality. This unrelenting intensity contributed to a hostile reception from some critics, though the public ultimately embraced the work.
 
-## Italian Opera Structure in *Tosca*
+## Italian Opera Structure in <em>Tosca</em>
 
-By 1900, the codified forms that had governed Italian opera from Rossini forward — the solita forma of arias and duets with their distinct sections, the structured act finales — were virtually dispensed with. *Tosca* has no overture and no prelude. The opera opens with Scarpia's theme and plunges straight into the action of Angelotti running into the church. There is intense dramatic and musical continuity, with far less distinction between aria and recitative than in earlier Italian opera. Some vestiges of old forms survive — the Act I finale with its massed forces in the Te Deum, Tosca's separate aria in Act II, and Cavaradossi's arias — but these are islands in a continuous flow of music.
+By 1900, the codified forms that had governed Italian opera from Rossini forward — the solita forma of arias and duets with their distinct sections, the structured act finales — were virtually dispensed with. <em>Tosca</em> has no overture and no prelude. The opera opens with Scarpia's theme and plunges straight into the action of Angelotti running into the church. There is intense dramatic and musical continuity, with far less distinction between aria and recitative than in earlier Italian opera. Some vestiges of old forms survive — the Act I finale with its massed forces in the Te Deum, Tosca's separate aria in Act II, and Cavaradossi's arias — but these are islands in a continuous flow of music.
 
 The orchestra plays a central role, and this is where Wagner's influence is most evident. The score is vivid and highly responsive, moving the plot forward and conveying motifs and unspoken thoughts. The orchestra tells us things the characters cannot or will not say.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/i__9KC_bZLw?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Anthony Tommasini of the New York Times discusses musical motifs in Tosca*
+<em>Anthony Tommasini of the New York Times discusses musical motifs in Tosca</em>
 
-## Musical Motifs in *Tosca*
+## Musical Motifs in <em>Tosca</em>
 
-There are between fifty and sixty motifs in *Tosca*, each referring to an object, person, or idea, and most are carried by the orchestra. Like Wagner's leitmotifs, they form a dense web of musical meaning that enriches every moment of the drama.
+There are between fifty and sixty motifs in <em>Tosca</em>, each referring to an object, person, or idea, and most are carried by the orchestra. Like Wagner's leitmotifs, they form a dense web of musical meaning that enriches every moment of the drama.
 
 ### Scarpia's Motive
 
-The most immediately recognizable motif is Scarpia's. It opens the opera — he has not even appeared on stage, yet his power seizes the music from the very first bar. The motive consists of three loud, heavy, fortissimo chords: B-flat major, A-flat major, and E major triads. These three chords are drawn from the **whole-tone scale** — the collection C–D–E–F-sharp–A-flat–B-flat, in which every step is a whole tone rather than the alternating pattern of whole tones and semitones found in major and minor scales. Whole-tone passages pervade the score, and Scarpia's motive and its whole-tone underpinning mark every key moment: the opening of the opera, his entrance, the end of Act I, and every subsequent reference to him. Even after Tosca kills him at the end of Act II, his motive and whole-tone sonorities continue to dominate Act III. Puccini was very much attuned to contemporary musical developments — by the time he wrote *Tosca*, Debussy was already composing extensively with whole-tone and octatonic materials, and these sounds were part of Puccini's musical vocabulary.
+The most immediately recognizable motif is Scarpia's. It opens the opera — he has not even appeared on stage, yet his power seizes the music from the very first bar. The motive consists of three loud, heavy, fortissimo chords: B-flat major, A-flat major, and E major triads. These three chords are drawn from the <strong>whole-tone scale</strong> — the collection C–D–E–F-sharp–A-flat–B-flat, in which every step is a whole tone rather than the alternating pattern of whole tones and semitones found in major and minor scales. Whole-tone passages pervade the score, and Scarpia's motive and its whole-tone underpinning mark every key moment: the opening of the opera, his entrance, the end of Act I, and every subsequent reference to him. Even after Tosca kills him at the end of Act II, his motive and whole-tone sonorities continue to dominate Act III. Puccini was very much attuned to contemporary musical developments — by the time he wrote <em>Tosca</em>, Debussy was already composing extensively with whole-tone and octatonic materials, and these sounds were part of Puccini's musical vocabulary.
 
 ## Tosca's Act II Aria: "Vissi d'arte"
 
@@ -1353,33 +1353,33 @@ The lyrical beauty of "Vissi d'arte" stands in stark contrast to Scarpia's non-l
 
 ## The Murder Scene: Act II
 
-The action does not stop entirely with "Vissi d'arte." While Tosca agonizes, she realizes she must submit to Scarpia — yet while he is distracted writing the safe-conduct pass, she grabs a knife from the table. When he approaches, she stabs him. A distinct theme — the **murder theme** (sometimes called the "knife" theme) — frames this moment. It is in F-sharp minor, and F-sharp is one of the notes from Scarpia's whole-tone collection. The theme sounds before the murder, during it, and after — the orchestra announcing what is about to happen, and then confirming what has been done. The murder theme returns in Act III when Tosca tells Cavaradossi what she did, narrating the events and the killing. Even here, in this moment that should liberate the lovers, Scarpia's harmonic world cannot be escaped. He has already signed the real death warrant for Cavaradossi, and the bullets in the guns are not blanks. His betrayal reaches beyond the grave.
+The action does not stop entirely with "Vissi d'arte." While Tosca agonizes, she realizes she must submit to Scarpia — yet while he is distracted writing the safe-conduct pass, she grabs a knife from the table. When he approaches, she stabs him. A distinct theme — the <strong>murder theme</strong> (sometimes called the "knife" theme) — frames this moment. It is in F-sharp minor, and F-sharp is one of the notes from Scarpia's whole-tone collection. The theme sounds before the murder, during it, and after — the orchestra announcing what is about to happen, and then confirming what has been done. The murder theme returns in Act III when Tosca tells Cavaradossi what she did, narrating the events and the killing. Even here, in this moment that should liberate the lovers, Scarpia's harmonic world cannot be escaped. He has already signed the real death warrant for Cavaradossi, and the bullets in the guns are not blanks. His betrayal reaches beyond the grave.
 
 
-# Britten, *Peter Grimes* (1945)
+# Britten, <em>Peter Grimes</em> (1945)
 
 Readings:
-- Sacher, Jack. "Peter Grimes." In *Opera: A Listener's Guide*, 437–447. New York: Schirmer Books, 1997.
+- Sacher, Jack. "Peter Grimes." In <em>Opera: A Listener's Guide</em>, 437–447. New York: Schirmer Books, 1997.
 
 ## Opera, Violence, and the Victim
 
-Benjamin Britten's *Peter Grimes* is the first English-language opera in this course, and it deals with an extraordinarily difficult subject: child abuse. First performed at Sadler's Wells on June 7, 1945, it is an opera whose central character is not a hero in any conventional sense. Peter Grimes is deeply flawed — an anti-hero whose actions bring suffering to others — and the work has continued to provoke debate ever since its premiere. Opera, as a multimedia art form combining the visual, the oral, and the musical, amplifies the emotional impact of such subject matter enormously. The result is a work that is as uncomfortable as it is powerful.
+Benjamin Britten's <em>Peter Grimes</em> is the first English-language opera in this course, and it deals with an extraordinarily difficult subject: child abuse. First performed at Sadler's Wells on June 7, 1945, it is an opera whose central character is not a hero in any conventional sense. Peter Grimes is deeply flawed — an anti-hero whose actions bring suffering to others — and the work has continued to provoke debate ever since its premiere. Opera, as a multimedia art form combining the visual, the oral, and the musical, amplifies the emotional impact of such subject matter enormously. The result is a work that is as uncomfortable as it is powerful.
 
 ## Benjamin Britten
 
-**Benjamin Britten** (1913–1976) was born in Lowestoft, Suffolk, England — very close to Aldeburgh, where he eventually settled and where the opera is set. He composed from childhood and began studying at the age of twelve with the prominent British composer Frank Bridge. He later attended the Royal College of Music in London, studying with John Ireland and Arthur Benjamin, and won international acclaim for works composed during his student years.
+<strong>Benjamin Britten</strong> (1913–1976) was born in Lowestoft, Suffolk, England — very close to Aldeburgh, where he eventually settled and where the opera is set. He composed from childhood and began studying at the age of twelve with the prominent British composer Frank Bridge. He later attended the Royal College of Music in London, studying with John Ireland and Arthur Benjamin, and won international acclaim for works composed during his student years.
 
-During the early years of the Second World War, from 1939 to 1942, Britten went to the United States, where he had his first work for the stage — the operetta *Paul Bunyan*, with a libretto by W.H. Auden, with whom Britten had connected while working as a composer for radio, theatre, and cinema. A commission from the Koussevitzky Foundation brought about the composition of *Peter Grimes*, which received its premiere in 1945. Later operas include *The Rape of Lucretia* (1946), the comic opera *Albert Herring* (1947), *Billy Budd* (1951, after the Herman Melville story), *Gloriana* (1953, written for the coronation of Queen Elizabeth II), *The Turn of the Screw* (1954, after a Henry James ghost story), *A Midsummer Night's Dream* (1960), *Owen Wingrave* (for television), and *Death in Venice* (1973, after the Thomas Mann novel).
+During the early years of the Second World War, from 1939 to 1942, Britten went to the United States, where he had his first work for the stage — the operetta <em>Paul Bunyan</em>, with a libretto by W.H. Auden, with whom Britten had connected while working as a composer for radio, theatre, and cinema. A commission from the Koussevitzky Foundation brought about the composition of <em>Peter Grimes</em>, which received its premiere in 1945. Later operas include <em>The Rape of Lucretia</em> (1946), the comic opera <em>Albert Herring</em> (1947), <em>Billy Budd</em> (1951, after the Herman Melville story), <em>Gloriana</em> (1953, written for the coronation of Queen Elizabeth II), <em>The Turn of the Screw</em> (1954, after a Henry James ghost story), <em>A Midsummer Night's Dream</em> (1960), <em>Owen Wingrave</em> (for television), and <em>Death in Venice</em> (1973, after the Thomas Mann novel).
 
-Britten also composed song cycles — many of them sung by his life partner **Peter Pears**, who was also the first Peter Grimes, the role having been written expressly for him — as well as settings of English folk songs, instrumental works such as the *Simple Symphony* for strings, *The Young Person's Guide to the Orchestra*, and the *Symphony in D Major for Cello and Orchestra* (1963). His largest choral work, the *War Requiem* (1962), sets the Latin Requiem Mass text alongside poems by Wilfred Owen, the poet killed in the First World War just one week before the Armistice on November 4, 1918. Britten is widely regarded as the most prominent British composer of the mid-to-late twentieth century, and his operas were considered the finest English operas since those of Henry Purcell in the seventeenth century.
+Britten also composed song cycles — many of them sung by his life partner <strong>Peter Pears</strong>, who was also the first Peter Grimes, the role having been written expressly for him — as well as settings of English folk songs, instrumental works such as the <em>Simple Symphony</em> for strings, <em>The Young Person's Guide to the Orchestra</em>, and the <em>Symphony in D Major for Cello and Orchestra</em> (1963). His largest choral work, the <em>War Requiem</em> (1962), sets the Latin Requiem Mass text alongside poems by Wilfred Owen, the poet killed in the First World War just one week before the Armistice on November 4, 1918. Britten is widely regarded as the most prominent British composer of the mid-to-late twentieth century, and his operas were considered the finest English operas since those of Henry Purcell in the seventeenth century.
 
 Britten experienced ostracism and open hostility during his lifetime. He was a homosexual in a lifelong relationship with Peter Pears at a time when homosexuality was against the law in Britain, and he was also a pacifist — a position that attracted considerable criticism during wartime. In some ways, this personal experience of being an individual set against the masses gave him a particular, almost sympathetic understanding of Peter Grimes as an outsider against the crowd.
 
 ## A General Introduction
 
-The libretto of *Peter Grimes* is based on *The Borough*, a long poem from 1810 by **George Crabbe** that focuses as much on the community as on any individual. The scenario was prepared by Britten and Pears, and the libretto was written by **Montagu Slater**. The opera is traditional in certain respects: there are recitative sections, arias, a tempest, and a **mad scene** — a feature found in operas like Donizetti's *Lucia di Lammermoor*. These sections, however, are not specified or labelled in the score, making the music more fluid and continuous than one might expect.
+The libretto of <em>Peter Grimes</em> is based on <em>The Borough</em>, a long poem from 1810 by <strong>George Crabbe</strong> that focuses as much on the community as on any individual. The scenario was prepared by Britten and Pears, and the libretto was written by <strong>Montagu Slater</strong>. The opera is traditional in certain respects: there are recitative sections, arias, a tempest, and a <strong>mad scene</strong> — a feature found in operas like Donizetti's <em>Lucia di Lammermoor</em>. These sections, however, are not specified or labelled in the score, making the music more fluid and continuous than one might expect.
 
-Britten's style is eclectic and evocative. He draws on the full toolbox of early-twentieth-century composition for dramatic purposes, including **bitonality** — passages in which one character sings in one key while another sings simultaneously in a very different key — which appears prominently in the Prologue duet between Peter and Ellen. The whole work is tightly unified through recurring motives and through the connecting tissue of six orchestral **sea interludes** that bind the scenes together both musically and in terms of mood. Britten is also a master of English text-setting, carrying forward a tradition that reaches back to Henry Purcell in the 1680s and 1690s. The clarity and evocative quality of his word-painting is extraordinary.
+Britten's style is eclectic and evocative. He draws on the full toolbox of early-twentieth-century composition for dramatic purposes, including <strong>bitonality</strong> — passages in which one character sings in one key while another sings simultaneously in a very different key — which appears prominently in the Prologue duet between Peter and Ellen. The whole work is tightly unified through recurring motives and through the connecting tissue of six orchestral <strong>sea interludes</strong> that bind the scenes together both musically and in terms of mood. Britten is also a master of English text-setting, carrying forward a tradition that reaches back to Henry Purcell in the 1680s and 1690s. The clarity and evocative quality of his word-painting is extraordinary.
 
 And then there is the story itself — the outsider against the community. The Borough has its settled ways of thinking, and anyone who does not fit is ostracized. As Britten himself said: "It is a subject very close to my heart — the struggle of the individual against the masses. The more vicious the society, the more vicious the individual."
 
@@ -1414,25 +1414,25 @@ The opera has a crystal-clear structure: a Prologue, three acts, and two scenes 
 | Act III, Scene 1 | Street by the sea |
 | Act III, Scene 2 | Street by the sea |
 
-In the **Prologue**, Peter Grimes's apprentice has died at sea. At the town court, the coroner questions Grimes about his actions. His answers are far from satisfactory, but the court reaches the conclusion that the death was due to "accidental circumstances." The crowd of townspeople disagree, braying for his punishment. As Grimes rails against them, only Ellen Orford comforts him against the force of the crowd.
+In the <strong>Prologue</strong>, Peter Grimes's apprentice has died at sea. At the town court, the coroner questions Grimes about his actions. His answers are far from satisfactory, but the court reaches the conclusion that the death was due to "accidental circumstances." The crowd of townspeople disagree, braying for his punishment. As Grimes rails against them, only Ellen Orford comforts him against the force of the crowd.
 
-**Act I, Scene 1** finds the townspeople singing of their daily grind against the sea. We are outside the town pub, where various local figures congregate. Grimes enters, needing a new apprentice. Ned Keene has found him one from the workhouse, but Grimes needs someone to collect the boy — and no one is willing. Eventually Ellen enters and offers to get the boy, defending Grimes: "Let her among you without fault cast the first stone," she says — though it is difficult to argue that Grimes himself has not thrown a great many stones. She leaves to fetch the boy. A storm approaches. Captain Balstrode stays with Grimes, warning him of the risk of yet more tragedy with a new apprentice. Grimes retorts that he needs the boy to earn money, to gain the respect of the Borough, and to open the door for his marriage to Ellen. Balstrode thinks Grimes foolish, telling him to marry Ellen at once.
+<strong>Act I, Scene 1</strong> finds the townspeople singing of their daily grind against the sea. We are outside the town pub, where various local figures congregate. Grimes enters, needing a new apprentice. Ned Keene has found him one from the workhouse, but Grimes needs someone to collect the boy — and no one is willing. Eventually Ellen enters and offers to get the boy, defending Grimes: "Let her among you without fault cast the first stone," she says — though it is difficult to argue that Grimes himself has not thrown a great many stones. She leaves to fetch the boy. A storm approaches. Captain Balstrode stays with Grimes, warning him of the risk of yet more tragedy with a new apprentice. Grimes retorts that he needs the boy to earn money, to gain the respect of the Borough, and to open the door for his marriage to Ellen. Balstrode thinks Grimes foolish, telling him to marry Ellen at once.
 
-**Act I, Scene 2** takes place later that night at The Boar, where much of the community is holed up during the raging storm. Balstrode attempts to calm the place, particularly the drunk Bob Boles, who is making advances on one of Auntie's nieces. Keene dashes in with news that part of the cliff has fallen into the sea near Grimes's hut. Then Grimes enters, and in response to the hostility he encounters, he retreats into himself and sings the soaring reverie "Now the Great Bear and Pleiades." Boles attacks Grimes, but Balstrode holds him down. To restore the peace, Balstrode suggests a song — the lilting round "Old Joe Has Gone Fishing." Ellen then enters with the boy. The pair are freezing, but Grimes immediately drags the boy away, and the crowd is incensed as the curtain falls.
+<strong>Act I, Scene 2</strong> takes place later that night at The Boar, where much of the community is holed up during the raging storm. Balstrode attempts to calm the place, particularly the drunk Bob Boles, who is making advances on one of Auntie's nieces. Keene dashes in with news that part of the cliff has fallen into the sea near Grimes's hut. Then Grimes enters, and in response to the hostility he encounters, he retreats into himself and sings the soaring reverie "Now the Great Bear and Pleiades." Boles attacks Grimes, but Balstrode holds him down. To restore the peace, Balstrode suggests a song — the lilting round "Old Joe Has Gone Fishing." Ellen then enters with the boy. The pair are freezing, but Grimes immediately drags the boy away, and the crowd is incensed as the curtain falls.
 
-**Act II, Scene 1** takes place a few weeks later on a Sunday morning. Most of the town is at church, but Ellen sits with John, Grimes's apprentice. She longs to hear from him about his new life, but John remains silent. That longing turns to shock when she discovers a nasty bruise on his neck. Grimes enters, and Ellen confronts him — but he dismisses it as an accident. In anger, Grimes strikes Ellen and takes off with the boy to go fishing. The townspeople, leaving church, witness this. Their collective anger grows — "Grimes is at his exercise," they say — and eventually they make off like a pitchfork-wielding mob, led by Swallow, to Grimes's hut. Ellen, Auntie, and the nieces remain behind, singing despondently of how women must deal with men.
+<strong>Act II, Scene 1</strong> takes place a few weeks later on a Sunday morning. Most of the town is at church, but Ellen sits with John, Grimes's apprentice. She longs to hear from him about his new life, but John remains silent. That longing turns to shock when she discovers a nasty bruise on his neck. Grimes enters, and Ellen confronts him — but he dismisses it as an accident. In anger, Grimes strikes Ellen and takes off with the boy to go fishing. The townspeople, leaving church, witness this. Their collective anger grows — "Grimes is at his exercise," they say — and eventually they make off like a pitchfork-wielding mob, led by Swallow, to Grimes's hut. Ellen, Auntie, and the nieces remain behind, singing despondently of how women must deal with men.
 
-**Act II, Scene 2** is inside Grimes's hut. He drives John to prepare for the fishing trip, but loses himself in memories of his last apprentice and his slow realization that his dreams of happiness are never to be. The approaching mob snaps Grimes back to reality, making him paranoid and even angrier. He orders John to climb down the cliff to the boat — and the boy slips and falls, crashing to his death. Grimes follows anyway, and when the mob arrives, they find the hut empty.
+<strong>Act II, Scene 2</strong> is inside Grimes's hut. He drives John to prepare for the fishing trip, but loses himself in memories of his last apprentice and his slow realization that his dreams of happiness are never to be. The approaching mob snaps Grimes back to reality, making him paranoid and even angrier. He orders John to climb down the cliff to the boat — and the boy slips and falls, crashing to his death. Grimes follows anyway, and when the mob arrives, they find the hut empty.
 
-**Act III, Scene 1** takes place a few nights later. A dance is in full swing at the Moot Hall. Mrs. Sedley tries to convince Ned Keene that Grimes has killed his new apprentice. She hides as Ellen and Balstrode discuss Grimes's return from the sea — he had been away several nights — and disturbingly, Balstrode has found the boy's sweater washed up on the beach. Ellen realizes it is the sweater she herself knitted for John. Mrs. Sedley, overhearing all this, convinces Swallow of Grimes's guilt, and another bloodthirsty mob sets out to hunt him down.
+<strong>Act III, Scene 1</strong> takes place a few nights later. A dance is in full swing at the Moot Hall. Mrs. Sedley tries to convince Ned Keene that Grimes has killed his new apprentice. She hides as Ellen and Balstrode discuss Grimes's return from the sea — he had been away several nights — and disturbingly, Balstrode has found the boy's sweater washed up on the beach. Ellen realizes it is the sweater she herself knitted for John. Mrs. Sedley, overhearing all this, convinces Swallow of Grimes's guilt, and another bloodthirsty mob sets out to hunt him down.
 
-**Act III, Scene 2** brings the opera to its devastating close. Grimes has gone quite mad, wandering the beach, mentally reliving his past. Ellen and Balstrode find him, but he barely notices their approach. Balstrode tells him to take his boat out and sink it. Ellen says nothing. Grimes departs to the sea for one last time. The next morning the Borough awakens. The Coast Guard reports a ship sinking off the coast, but Auntie dismisses it as "one of those rumours." And that is the end.
+<strong>Act III, Scene 2</strong> brings the opera to its devastating close. Grimes has gone quite mad, wandering the beach, mentally reliving his past. Ellen and Balstrode find him, but he barely notices their approach. Balstrode tells him to take his boat out and sink it. Ellen says nothing. Grimes departs to the sea for one last time. The next morning the Borough awakens. The Coast Guard reports a ship sinking off the coast, but Auntie dismisses it as "one of those rumours." And that is the end.
 
 ## Peter Grimes as Outsider
 
-The central dramatic tension of the opera is the conflict between the **outsider** — Peter — and the **crowd** — the Borough. This is a conflict filled with contradictions, ambiguity, and complexity. Peter despises the Borough, yet he seeks their respect by earning lots of money and being seen as successful. As much as he despises them, he actually holds the same values: money and prestige are what he is after in order to somehow gain their respect. But they will never respect him. It is a catch-22 — he is an outsider and will never be an insider, nor does he truly want to be. There is something very strange about this, and yet it is profoundly human.
+The central dramatic tension of the opera is the conflict between the <strong>outsider</strong> — Peter — and the <strong>crowd</strong> — the Borough. This is a conflict filled with contradictions, ambiguity, and complexity. Peter despises the Borough, yet he seeks their respect by earning lots of money and being seen as successful. As much as he despises them, he actually holds the same values: money and prestige are what he is after in order to somehow gain their respect. But they will never respect him. It is a catch-22 — he is an outsider and will never be an insider, nor does he truly want to be. There is something very strange about this, and yet it is profoundly human.
 
-Britten depicts this outsider-versus-crowd dynamic through several musical means: **key and pitch symbolism** built on three intervals — the semitone, the tritone, and the minor ninth (an octave plus a semitone) — a **recurring motive** (called "motive X" in Sacher's reading), and the six orchestral **sea interludes** that serve as both symbolic backdrop and connective tissue.
+Britten depicts this outsider-versus-crowd dynamic through several musical means: <strong>key and pitch symbolism</strong> built on three intervals — the semitone, the tritone, and the minor ninth (an octave plus a semitone) — a <strong>recurring motive</strong> (called "motive X" in Sacher's reading), and the six orchestral <strong>sea interludes</strong> that serve as both symbolic backdrop and connective tissue.
 
 ## The Six Sea Interludes
 
@@ -1451,7 +1451,7 @@ These interludes are musically and symbolically important. They ensure that the 
 
 ## The Boar Inn Scene: "Now the Great Bear and Pleiades" and "Old Joe Has Gone Fishing"
 
-The overt dramatic and musical conflict between Peter and the Borough comes to a head in Act I, Scene 2. A storm is raging. The townsfolk have gathered at Auntie's pub, and tensions are already high. Then Peter comes bursting in and launches into a sublime, deeply introspective aria — "Now the Great Bear and Pleiades" — a soliloquy on the meaning of life. It is utterly inappropriate for the circumstances: people in a pub, already tense, already hostile toward him. The aria is poetic and deep. It begins in E major and shifts to C-sharp major, with Peter singing high notes against low strings in a kind of **canon** — one musical line imitating another while the first continues independently. He recites on a single high E until the ends of phrases. The form is roughly AABA, with the B section faster and more complex. It is extraordinarily moving, and also extraordinarily difficult to sing — the *passaggio*, the transitional area between the middle voice and the head voice, falls in a range that most tenors find treacherous. Peter Pears, for whom the role was written, had a passaggio well below this level and had no trouble, but the aria remains notoriously difficult to cast.
+The overt dramatic and musical conflict between Peter and the Borough comes to a head in Act I, Scene 2. A storm is raging. The townsfolk have gathered at Auntie's pub, and tensions are already high. Then Peter comes bursting in and launches into a sublime, deeply introspective aria — "Now the Great Bear and Pleiades" — a soliloquy on the meaning of life. It is utterly inappropriate for the circumstances: people in a pub, already tense, already hostile toward him. The aria is poetic and deep. It begins in E major and shifts to C-sharp major, with Peter singing high notes against low strings in a kind of <strong>canon</strong> — one musical line imitating another while the first continues independently. He recites on a single high E until the ends of phrases. The form is roughly AABA, with the B section faster and more complex. It is extraordinarily moving, and also extraordinarily difficult to sing — the <em>passaggio</em>, the transitional area between the middle voice and the head voice, falls in a range that most tenors find treacherous. Peter Pears, for whom the role was written, had a passaggio well below this level and had no trouble, but the aria remains notoriously difficult to cast.
 
 > Now the Great Bear and Pleiades where earth moves
 > Are drawing up the clouds of human grief
@@ -1467,106 +1467,106 @@ The overt dramatic and musical conflict between Peter and the Borough comes to a
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/W2AwaNEmX80?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Peter Pears sings "Now the Great Bear and Pleiades"*
+<em>Peter Pears sings "Now the Great Bear and Pleiades"</em>
 
-But this introspection only makes things worse. The townsfolk grow more and more tense at the inappropriateness of it, and because they simply do not like him. Balstrode, trying to diffuse the situation, suggests they all sing a sea shanty — "Old Joe Has Gone Fishing." The chorus takes it up as a collective, group response to Peter, singing in E-flat major. It is a **round** (canon) built on three musical themes, set in an unusual 7/4 meter. Where it becomes truly interesting is when Peter tries to join in. He wants to be respected by the Borough — he wants to fit in — but he cannot. He sings the wrong words, the wrong notes, the wrong rhythms, the wrong style, and the wrong key: D-flat major against the chorus's E-flat. The musical and dramatic tension between Peter and the Borough is palpable. After this, Ellen arrives with the new apprentice boy, and Peter grabs him and takes off into the stormy night.
+But this introspection only makes things worse. The townsfolk grow more and more tense at the inappropriateness of it, and because they simply do not like him. Balstrode, trying to diffuse the situation, suggests they all sing a sea shanty — "Old Joe Has Gone Fishing." The chorus takes it up as a collective, group response to Peter, singing in E-flat major. It is a <strong>round</strong> (canon) built on three musical themes, set in an unusual 7/4 meter. Where it becomes truly interesting is when Peter tries to join in. He wants to be respected by the Borough — he wants to fit in — but he cannot. He sings the wrong words, the wrong notes, the wrong rhythms, the wrong style, and the wrong key: D-flat major against the chorus's E-flat. The musical and dramatic tension between Peter and the Borough is palpable. After this, Ellen arrives with the new apprentice boy, and Peter grabs him and takes off into the stormy night.
 
 ## Key and Pitch Symbolism
 
 Britten uses keys with extraordinary symbolic precision throughout the opera, and much of this symbolism is audible even to listeners who cannot name the keys involved.
 
-Peter's **fantasy life** — his dreams of making money, marrying Ellen, and gaining the community's respect — is represented by keys with sharps: D major, E major, A major. His **conflict with outside reality** — the court, the church, the tavern, the mob — is represented by keys with flats: E-flat and B-flat. These key associations recur across different scenes, providing a consistent musical characterization.
+Peter's <strong>fantasy life</strong> — his dreams of making money, marrying Ellen, and gaining the community's respect — is represented by keys with sharps: D major, E major, A major. His <strong>conflict with outside reality</strong> — the court, the church, the tavern, the mob — is represented by keys with flats: E-flat and B-flat. These key associations recur across different scenes, providing a consistent musical characterization.
 
-Two key relationships are particularly important: the **semitone** and the **tritone**.
+Two key relationships are particularly important: the <strong>semitone</strong> and the <strong>tritone</strong>.
 
-The semitone is ubiquitous and highly symbolic. It appears from the very beginning of the opera. In the Prologue, after Peter has been acquitted, Ellen tries to give him hope while he remains dejected and angry. They sing a duet — "The Truth, the Pity" — that is **bitonal**: Peter sings in F minor while Ellen sings simultaneously in E major, a semitone apart. They are on two different planes — musically and emotionally. Eventually, Peter comes around to Ellen's key of E major, singing "My voice out of the pain" — a shift from a minor mode to a major mode that marks his tentative acceptance of her perspective. At the very beginning of their singing together, a huge interval of a **minor ninth** — an octave plus a semitone — spans the distance between their voices, conveying a sense of striving across an enormous gulf. Ellen's line is flowing and gentle; Peter's is jagged and disjunct. And remarkably, this duet is unaccompanied — just the two of them, in their own world, with nothing else breaking in.
+The semitone is ubiquitous and highly symbolic. It appears from the very beginning of the opera. In the Prologue, after Peter has been acquitted, Ellen tries to give him hope while he remains dejected and angry. They sing a duet — "The Truth, the Pity" — that is <strong>bitonal</strong>: Peter sings in F minor while Ellen sings simultaneously in E major, a semitone apart. They are on two different planes — musically and emotionally. Eventually, Peter comes around to Ellen's key of E major, singing "My voice out of the pain" — a shift from a minor mode to a major mode that marks his tentative acceptance of her perspective. At the very beginning of their singing together, a huge interval of a <strong>minor ninth</strong> — an octave plus a semitone — spans the distance between their voices, conveying a sense of striving across an enormous gulf. Ellen's line is flowing and gentle; Peter's is jagged and disjunct. And remarkably, this duet is unaccompanied — just the two of them, in their own world, with nothing else breaking in.
 
-The **tritone** functions as a symbol of social dissonance. It exposes the villagers' hypocrisy by placing the keys of their daily life and their religious life a tritone apart. In Act I, Scene 1, the townspeople go about their daily business singing in unison in A major — and this same key returns at the very end of the opera when they resume their ordinary lives after Peter's death, as though nothing has happened. But in Act II, Scene 1, their religious devotions are set in E-flat major — a tritone away from A major. The distance between their church life and their everyday life is, musically, the most dissonant interval possible. Ellen, meanwhile, sings in A major during the Sunday Morning scene, placing her a tritone away from the church congregation as well.
+The <strong>tritone</strong> functions as a symbol of social dissonance. It exposes the villagers' hypocrisy by placing the keys of their daily life and their religious life a tritone apart. In Act I, Scene 1, the townspeople go about their daily business singing in unison in A major — and this same key returns at the very end of the opera when they resume their ordinary lives after Peter's death, as though nothing has happened. But in Act II, Scene 1, their religious devotions are set in E-flat major — a tritone away from A major. The distance between their church life and their everyday life is, musically, the most dissonant interval possible. Ellen, meanwhile, sings in A major during the Sunday Morning scene, placing her a tritone away from the church congregation as well.
 
 ## Recurring Motive: "Motive X"
 
-A third musical element that traces Peter's demise is the **recurring motive** — designated "motive X" in Sacher's reading. It appears at several crucial points in the opera, each time accumulating greater dramatic weight.
+A third musical element that traces Peter's demise is the <strong>recurring motive</strong> — designated "motive X" in Sacher's reading. It appears at several crucial points in the opera, each time accumulating greater dramatic weight.
 
-**(a) Act II, Scene 1 — Peter quarrels with Ellen about the boy.** Ellen has discovered the bruise on John's neck and confronts Peter. He strikes her, singing "God have mercy upon me." The brass immediately picks up his motive in **canon** — note-for-note imitation tumbling from voice to brass, repeated obsessively over and over again.
+<strong>(a) Act II, Scene 1 — Peter quarrels with Ellen about the boy.</strong> Ellen has discovered the bruise on John's neck and confronts Peter. He strikes her, singing "God have mercy upon me." The brass immediately picks up his motive in <strong>canon</strong> — note-for-note imitation tumbling from voice to brass, repeated obsessively over and over again.
 
-**(b) "Grimes is at his exercise."** Immediately after, the townspeople take up the exact same motive and sing it obsessively. "Grimes is at his exercise" — here is Grimes at his old tricks again. The motive has passed from Peter's mouth to the Borough's, and it will not let go.
+<strong>(b) "Grimes is at his exercise."</strong> Immediately after, the townspeople take up the exact same motive and sing it obsessively. "Grimes is at his exercise" — here is Grimes at his old tricks again. The motive has passed from Peter's mouth to the Borough's, and it will not let go.
 
-**(c) Interlude IV — Peter's Tormented Mind.** This fourth sea interlude, which precedes Act II, Scene 2, takes the form of a **passacaglia** — a set of variations on a continually repeated theme heard most often in the bass line. The bass line obsessively repeats motive X in **pizzicato** low strings throughout the entire interlude, while a solo viola plays a set of nine variations above it. The form is very old, but it is extraordinarily effective here because of its obsessive, relentless quality. The motive has now sunk into the depths of the orchestra, wordless and omnipresent.
+<strong>(c) Interlude IV — Peter's Tormented Mind.</strong> This fourth sea interlude, which precedes Act II, Scene 2, takes the form of a <strong>passacaglia</strong> — a set of variations on a continually repeated theme heard most often in the bass line. The bass line obsessively repeats motive X in <strong>pizzicato</strong> low strings throughout the entire interlude, while a solo viola plays a set of nine variations above it. The form is very old, but it is extraordinarily effective here because of its obsessive, relentless quality. The motive has now sunk into the depths of the orchestra, wordless and omnipresent.
 
-**(d) Act III, Scene 1 — Ellen and Balstrode resolve to help Peter.** Even as they recognize that Peter is doomed — Balstrode has found the boy's sweater washed up on shore — they resolve to help him. In this passage, Balstrode sings motive X in its original descending form, while Ellen sings it **inverted** — ascending rather than descending. The motive has become the medium through which even sympathy and resolve are expressed.
+<strong>(d) Act III, Scene 1 — Ellen and Balstrode resolve to help Peter.</strong> Even as they recognize that Peter is doomed — Balstrode has found the boy's sweater washed up on shore — they resolve to help him. In this passage, Balstrode sings motive X in its original descending form, while Ellen sings it <strong>inverted</strong> — ascending rather than descending. The motive has become the medium through which even sympathy and resolve are expressed.
 
 ## Peter's Mad Scene: Act III, Scene 2
 
-The opera's final scene is Peter's **mad scene** — one of the most harrowing passages in twentieth-century opera. Peter is alone on the shore, his mind coming to terms with everything that has happened. The **descending semitone**, associated throughout the opera with death and suffering, is everywhere. He begins: "Steady! There you are! Nearly home!" Meanwhile, the chorus sings offstage — "Peter Grimes! Peter Grimes!" — over a dominant seventh chord, closing in on him. A **semitone sequence** descends in his vocal line, and a foghorn played by the tuba sounds the semitone E-flat to D, E-flat to D, over and over.
+The opera's final scene is Peter's <strong>mad scene</strong> — one of the most harrowing passages in twentieth-century opera. Peter is alone on the shore, his mind coming to terms with everything that has happened. The <strong>descending semitone</strong>, associated throughout the opera with death and suffering, is everywhere. He begins: "Steady! There you are! Nearly home!" Meanwhile, the chorus sings offstage — "Peter Grimes! Peter Grimes!" — over a dominant seventh chord, closing in on him. A <strong>semitone sequence</strong> descends in his vocal line, and a foghorn played by the tuba sounds the semitone E-flat to D, E-flat to D, over and over.
 
 What makes this scene so devastating is the way Peter's shattered mind reassembles fragments of earlier material — distorted, reworded, barely recognizable. He brings back "accidental circumstances" from the Prologue — the verdict on the first boy's death. He brings back "Old Joe Has Gone Fishing" from the Boar Inn scene, where he had tried to join in and failed. He brings back "Ellen, give me your hand" and "What harbour shelters peace" from Act I. And motive X returns as well. All of these fragments are broken, deformed, as though seen through the distorting lens of madness. It is a scene that is profoundly difficult to listen to.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/rCVNAYikjbE?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Peter Pears sings the Mad Scene from the 1969 BBC production of Peter Grimes*
+<em>Peter Pears sings the Mad Scene from the 1969 BBC production of Peter Grimes</em>
 
-*Peter Grimes* leaves us with the mob mentality of the Borough clearly depicted as hypocritical, and with an anti-hero who is no innocent victim — a difficult, violent character whose actions have caused the deaths of two boys. The opera does not ask us to forgive Peter Grimes. It asks us to understand how a vicious society and a vicious individual feed off each other, and how the outsider — despised, despairing, and ultimately destroyed — carries a weight that belongs to everyone.
+<em>Peter Grimes</em> leaves us with the mob mentality of the Borough clearly depicted as hypocritical, and with an anti-hero who is no innocent victim — a difficult, violent character whose actions have caused the deaths of two boys. The opera does not ask us to forgive Peter Grimes. It asks us to understand how a vicious society and a vicious individual feed off each other, and how the outsider — despised, despairing, and ultimately destroyed — carries a weight that belongs to everyone.
 
 
-# Gershwin, *Porgy and Bess* (1935)
+# Gershwin, <em>Porgy and Bess</em> (1935)
 
 Readings:
-- Hendler, Micah. "Facing the Music: Is the Classical World Ready to Show that Black Voices Matter?" *Forbes Magazine*, June 19, 2020.
-- West, Kai. "Confronting 'Porgy and Bess.'" *Arts & Culture*, University of Michigan, January 29, 2018.
+- Hendler, Micah. "Facing the Music: Is the Classical World Ready to Show that Black Voices Matter?" <em>Forbes Magazine</em>, June 19, 2020.
+- West, Kai. "Confronting 'Porgy and Bess.'" <em>Arts & Culture</em>, University of Michigan, January 29, 2018.
 
 ## Towards an American Opera
 
-For the final opera in this course, we turn to one of the most celebrated and most controversial works of American music: *Porgy and Bess* by **George Gershwin**, first performed in 1935. As the scholar Kai West has written, "Over the following 80 years, it became one of the most celebrated American works of the 20th century, while simultaneously igniting controversy every time it was performed, due to its themes, characterizations, and appropriative nature." An opera about Black Americans created by white artists, *Porgy and Bess* is both beautiful and problematic, and it forces us to confront difficult questions about race, representation, and authorship that remain unresolved.
+For the final opera in this course, we turn to one of the most celebrated and most controversial works of American music: <em>Porgy and Bess</em> by <strong>George Gershwin</strong>, first performed in 1935. As the scholar Kai West has written, "Over the following 80 years, it became one of the most celebrated American works of the 20th century, while simultaneously igniting controversy every time it was performed, due to its themes, characterizations, and appropriative nature." An opera about Black Americans created by white artists, <em>Porgy and Bess</em> is both beautiful and problematic, and it forces us to confront difficult questions about race, representation, and authorship that remain unresolved.
 
 ## George Gershwin
 
-**George Gershwin** (1898–1937) was born in Brooklyn, New York, the son of Russian Jewish immigrants. His family was not particularly musical, but they bought an old secondhand upright piano mainly for his brother Ira to learn. George took to it instead — he had discovered a player piano at a neighbour's home and taught himself to play — and his first teacher declared the boy a genius. He left school at fifteen and earned an income making player piano rolls and playing in nightclubs. He also worked as a song plugger — playing sheet music in stores so that customers could hear it before buying — a kind of purgatory that nevertheless sharpened his dexterity and his instincts. He was deeply enamoured of the music of Irving Berlin and Jerome Kern, and they inspired him to compose for the Broadway stage. His lucky break came in 1919 when Al Jolson performed his song "Swanee," which sold some two million copies of sheet music and two million recordings, making Gershwin a sensation overnight.
+<strong>George Gershwin</strong> (1898–1937) was born in Brooklyn, New York, the son of Russian Jewish immigrants. His family was not particularly musical, but they bought an old secondhand upright piano mainly for his brother Ira to learn. George took to it instead — he had discovered a player piano at a neighbour's home and taught himself to play — and his first teacher declared the boy a genius. He left school at fifteen and earned an income making player piano rolls and playing in nightclubs. He also worked as a song plugger — playing sheet music in stores so that customers could hear it before buying — a kind of purgatory that nevertheless sharpened his dexterity and his instincts. He was deeply enamoured of the music of Irving Berlin and Jerome Kern, and they inspired him to compose for the Broadway stage. His lucky break came in 1919 when Al Jolson performed his song "Swanee," which sold some two million copies of sheet music and two million recordings, making Gershwin a sensation overnight.
 
-While working with the George White Scandals, a popular variety revue, Gershwin wrote a one-act jazz opera called *Blue Monday* — not a masterpiece, but it caught the attention of the bandleader Paul Whiteman, who commissioned a piece for an upcoming concert. Gershwin forgot about it, then threw together *Rhapsody in Blue* in about three weeks. It was not even complete at the premiere in February 1924 — he improvised much of the piano part — but it became a landmark. Other important works followed: the *Concerto in F* (1925), commissioned by the Symphony Society of New York, and *An American in Paris* (1928). His Broadway successes included *Lady, Be Good* (1924), *Girl Crazy* (1930), and the political satire *Of Thee I Sing* (1931), which won a Pulitzer Prize for the writers and librettists — though not, notably, for Gershwin himself.
+While working with the George White Scandals, a popular variety revue, Gershwin wrote a one-act jazz opera called <em>Blue Monday</em> — not a masterpiece, but it caught the attention of the bandleader Paul Whiteman, who commissioned a piece for an upcoming concert. Gershwin forgot about it, then threw together <em>Rhapsody in Blue</em> in about three weeks. It was not even complete at the premiere in February 1924 — he improvised much of the piano part — but it became a landmark. Other important works followed: the <em>Concerto in F</em> (1925), commissioned by the Symphony Society of New York, and <em>An American in Paris</em> (1928). His Broadway successes included <em>Lady, Be Good</em> (1924), <em>Girl Crazy</em> (1930), and the political satire <em>Of Thee I Sing</em> (1931), which won a Pulitzer Prize for the writers and librettists — though not, notably, for Gershwin himself.
 
-The work that has proven most enduring and most respected is *Porgy and Bess*, though it was lukewarmly received at its premiere. Gershwin even spent time in the rural South to study first-hand the musical style and lifestyle in South Carolina and on the sea islands. After the premiere, theatre critics were enthusiastic, but the highbrow music critics were derisive — they thought that popular music had no place in an operatic structure. It was not until later that the work began to receive the recognition it deserved. To this day, debate persists among conductors, composers, and scholars about Gershwin's music: some find his orchestral works naively structured, conceding that if you want a melodist he is your man, but questioning whether he is truly a "composer" in the classical sense. Subsequent American composers, however, have embraced him enthusiastically.
+The work that has proven most enduring and most respected is <em>Porgy and Bess</em>, though it was lukewarmly received at its premiere. Gershwin even spent time in the rural South to study first-hand the musical style and lifestyle in South Carolina and on the sea islands. After the premiere, theatre critics were enthusiastic, but the highbrow music critics were derisive — they thought that popular music had no place in an operatic structure. It was not until later that the work began to receive the recognition it deserved. To this day, debate persists among conductors, composers, and scholars about Gershwin's music: some find his orchestral works naively structured, conceding that if you want a melodist he is your man, but questioning whether he is truly a "composer" in the classical sense. Subsequent American composers, however, have embraced him enthusiastically.
 
-And so the question arises: if *Porgy and Bess* is an opera, then what is opera? The work is **genre-bending** — ambiguous in its materials, which draw on popular music, jazz, blues, and Broadway. Gershwin wanted to enter the opera tradition — there is evidence that he studied Wagner scores — and he ended up writing something enormously popular. We can experience the work through five different filters: a **novel** (1925, by DuBose Heyward), a **play** (1927), the **opera** (1935), a **film** (1959), and a **television production** (1993). Each time the work resurfaces, it provokes controversy anew.
+And so the question arises: if <em>Porgy and Bess</em> is an opera, then what is opera? The work is <strong>genre-bending</strong> — ambiguous in its materials, which draw on popular music, jazz, blues, and Broadway. Gershwin wanted to enter the opera tradition — there is evidence that he studied Wagner scores — and he ended up writing something enormously popular. We can experience the work through five different filters: a <strong>novel</strong> (1925, by DuBose Heyward), a <strong>play</strong> (1927), the <strong>opera</strong> (1935), a <strong>film</strong> (1959), and a <strong>television production</strong> (1993). Each time the work resurfaces, it provokes controversy anew.
 
 ## An American Opera? Folk Aspects and Authenticity
 
-Is *Porgy and Bess* uniquely American, or does it traffic in racial stereotypes? The answer, uncomfortably, may be both. In 1936, in a review in the Black journal *Opportunity*, Hal Johnson wrote: "What we are to consider is not a Black opera by Gershwin, but Gershwin's idea of what a Black opera should be." Harold Cruse in the 1960s attacked certain aspects of the work more forcefully, arguing that it must be criticized from the Black point of view as "the most perfect symbol of the Black creative artist's cultural denial, degradation, exclusion, exploitation, and acceptance of white paternalism," and he recommended that it be permanently boycotted. The scholar Naomi Andre, who has done extensive work on Black opera, has written that *Porgy and Bess* is "a double-edged sword — for many people it has heartfelt melodies and terrible stereotypes... It shows an inner depth to its main characters and also dooms them to terrible outcomes."
+Is <em>Porgy and Bess</em> uniquely American, or does it traffic in racial stereotypes? The answer, uncomfortably, may be both. In 1936, in a review in the Black journal <em>Opportunity</em>, Hal Johnson wrote: "What we are to consider is not a Black opera by Gershwin, but Gershwin's idea of what a Black opera should be." Harold Cruse in the 1960s attacked certain aspects of the work more forcefully, arguing that it must be criticized from the Black point of view as "the most perfect symbol of the Black creative artist's cultural denial, degradation, exclusion, exploitation, and acceptance of white paternalism," and he recommended that it be permanently boycotted. The scholar Naomi Andre, who has done extensive work on Black opera, has written that <em>Porgy and Bess</em> is "a double-edged sword — for many people it has heartfelt melodies and terrible stereotypes... It shows an inner depth to its main characters and also dooms them to terrible outcomes."
 
-The language and setting carry the weight of these tensions. The opera uses the **Gullah dialect** — a very old language from South Carolina and the surrounding sea islands, derived from Elizabethan English and African dialects — and is set in **Catfish Row**, Charleston, South Carolina, based on a real community called Cabbage Row. Gershwin went to Charleston, attended church services, absorbed the musical idiom — but he wrote his own music rather than using existing African American melodies, even as his subtitle claimed folk authenticity. The mixture of creators mirrors the American melting pot in microcosm: a southern white novelist and playwright (DuBose Heyward, working with his wife), a New York City Jewish songwriter and lyricist team (the Gershwin brothers), and almost exclusively Black characters and singers. The music is derived from blues and jazz — improvisation, ornament, pitch inflections on the third and seventh scale degrees, and pervasive syncopation. Whether this constitutes a genuine embrace of African American musical traditions or an appropriation of them is a question that cannot be answered simply, and every new production must confront it.
+The language and setting carry the weight of these tensions. The opera uses the <strong>Gullah dialect</strong> — a very old language from South Carolina and the surrounding sea islands, derived from Elizabethan English and African dialects — and is set in <strong>Catfish Row</strong>, Charleston, South Carolina, based on a real community called Cabbage Row. Gershwin went to Charleston, attended church services, absorbed the musical idiom — but he wrote his own music rather than using existing African American melodies, even as his subtitle claimed folk authenticity. The mixture of creators mirrors the American melting pot in microcosm: a southern white novelist and playwright (DuBose Heyward, working with his wife), a New York City Jewish songwriter and lyricist team (the Gershwin brothers), and almost exclusively Black characters and singers. The music is derived from blues and jazz — improvisation, ornament, pitch inflections on the third and seventh scale degrees, and pervasive syncopation. Whether this constitutes a genuine embrace of African American musical traditions or an appropriation of them is a question that cannot be answered simply, and every new production must confront it.
 
 ## Characters and Story
 
-The characters are all inhabitants of a tenement in Charleston called Catfish Row. They are farmers, fishermen, some of them involved with drugs — each one quite poor but trying to get by. The principal figures include **Porgy**, a disabled man who begs for a living and is in love with Bess; **Bess**, who is Crown's woman; **Crown**, a tough dock worker who kills Robbins in a craps game; **Serena**, Robbins's wife; **Clara**, whose husband Jake is a fisherman and who sings the lullaby "Summertime" at the very beginning; and **Sportin' Life**, the drug dealer. There is also a white police officer who makes an appearance, but this is primarily an African American community.
+The characters are all inhabitants of a tenement in Charleston called Catfish Row. They are farmers, fishermen, some of them involved with drugs — each one quite poor but trying to get by. The principal figures include <strong>Porgy</strong>, a disabled man who begs for a living and is in love with Bess; <strong>Bess</strong>, who is Crown's woman; <strong>Crown</strong>, a tough dock worker who kills Robbins in a craps game; <strong>Serena</strong>, Robbins's wife; <strong>Clara</strong>, whose husband Jake is a fisherman and who sings the lullaby "Summertime" at the very beginning; and <strong>Sportin' Life</strong>, the drug dealer. There is also a white police officer who makes an appearance, but this is primarily an African American community.
 
-**Act I.** As the action begins, we hear a piano playing the blues. Clara sings "Summertime" to her baby. Men return from work and there is a noisy craps game. When Bess and Crown show up, there is trouble. Crown picks a fight with Robbins and kills him with a cotton hook. The crowd scatters and Crown takes off, leaving Bess to fend for herself. She bangs on doors trying to find someone to take her in, but everyone turns her away — except Porgy, who silently invites her into his room. In the second scene, everyone gathers at Robbins's wake. The police show up needing a suspect and accuse old Peter the Honeyman, hauling him off as a material witness even though Crown is the real murderer. Serena sings the plaintive "My Man's Gone Now," and Bess, now living with Porgy, leads everyone in a spiritual, "Heading for the Promised Land."
+<strong>Act I.</strong> As the action begins, we hear a piano playing the blues. Clara sings "Summertime" to her baby. Men return from work and there is a noisy craps game. When Bess and Crown show up, there is trouble. Crown picks a fight with Robbins and kills him with a cotton hook. The crowd scatters and Crown takes off, leaving Bess to fend for herself. She bangs on doors trying to find someone to take her in, but everyone turns her away — except Porgy, who silently invites her into his room. In the second scene, everyone gathers at Robbins's wake. The police show up needing a suspect and accuse old Peter the Honeyman, hauling him off as a material witness even though Crown is the real murderer. Serena sings the plaintive "My Man's Gone Now," and Bess, now living with Porgy, leads everyone in a spiritual, "Heading for the Promised Land."
 
-**Act II.** About a month later, Jake and his fishermen prepare their boat. Porgy is in good spirits and sings "I Got Plenty o' Nuthin'." Sportin' Life shows up peddling drugs, but Maria tells him in no uncertain terms that he and his business are not welcome. A phony lawyer offers to sell Bess a divorce from Crown — even though the two were never married — and Porgy pays up, making his relationship with Bess seem more official. When Sportin' Life confronts Bess and offers her cocaine, she refuses, saying she is staying with Porgy and living decent. The whole community plans a picnic on Kittiwah Island. Porgy cannot board the boat but urges Bess to go without him, and they sing the duet "Bess, You Is My Woman Now." In Scene 2, out on Kittiwah Island, Sportin' Life entertains the picnickers with "It Ain't Necessarily So." When everyone heads for the boat home, Bess lags behind and is confronted by Crown, who has been hiding on the island. She tells him she is with Porgy now, but Crown laughs it off, overpowers her, and drags her into the underbrush. In Scene 3, back at Catfish Row, Bess has returned after Crown kept her on the island for two days. She is delirious and unconscious. Serena prays for her health. As the prayers conclude, street vendors make their rounds — a strawberry woman, the Honeyman, a crab man. Finally Bess comes around and calls out to Porgy. He knows she has been with Crown, but it makes no difference — he still wants her to stay. Bess tells him Crown will be coming for her. Porgy tells her not to worry, and Bess sings the beautiful "I Loves You, Porgy." In Scene 4, a hurricane strikes. The people of Catfish Row gather in Serena's room to wait out the storm, worried about Jake, who is still out on the water. Crown arrives, mocking the hurricane and God's power. When Jake's boat is spotted upside down in the harbour, Clara runs out into the storm. Bess screams for a man to go after her, and Crown is the only one who responds.
+<strong>Act II.</strong> About a month later, Jake and his fishermen prepare their boat. Porgy is in good spirits and sings "I Got Plenty o' Nuthin'." Sportin' Life shows up peddling drugs, but Maria tells him in no uncertain terms that he and his business are not welcome. A phony lawyer offers to sell Bess a divorce from Crown — even though the two were never married — and Porgy pays up, making his relationship with Bess seem more official. When Sportin' Life confronts Bess and offers her cocaine, she refuses, saying she is staying with Porgy and living decent. The whole community plans a picnic on Kittiwah Island. Porgy cannot board the boat but urges Bess to go without him, and they sing the duet "Bess, You Is My Woman Now." In Scene 2, out on Kittiwah Island, Sportin' Life entertains the picnickers with "It Ain't Necessarily So." When everyone heads for the boat home, Bess lags behind and is confronted by Crown, who has been hiding on the island. She tells him she is with Porgy now, but Crown laughs it off, overpowers her, and drags her into the underbrush. In Scene 3, back at Catfish Row, Bess has returned after Crown kept her on the island for two days. She is delirious and unconscious. Serena prays for her health. As the prayers conclude, street vendors make their rounds — a strawberry woman, the Honeyman, a crab man. Finally Bess comes around and calls out to Porgy. He knows she has been with Crown, but it makes no difference — he still wants her to stay. Bess tells him Crown will be coming for her. Porgy tells her not to worry, and Bess sings the beautiful "I Loves You, Porgy." In Scene 4, a hurricane strikes. The people of Catfish Row gather in Serena's room to wait out the storm, worried about Jake, who is still out on the water. Crown arrives, mocking the hurricane and God's power. When Jake's boat is spotted upside down in the harbour, Clara runs out into the storm. Bess screams for a man to go after her, and Crown is the only one who responds.
 
-**Act III.** The people pray for Clara, Jake, and Crown — all three seem to have been lost in the hurricane. But that night Crown reappears, planning to take Bess away. Porgy is waiting. The two fight, and as Crown underestimates Porgy's strength, Porgy kills him. In Scene 2, the police take Porgy away to identify Crown's body. Sportin' Life tells him that when a killer looks at his victim's body, the wound will bleed. With Porgy gone, Sportin' Life tempts Bess with cocaine and the promise of New York — "There's a Boat Dat's Leavin' Soon for New York." Bess resists but eventually gives in and goes with him. In the final scene, Porgy returns triumphantly from jail — he has made money shooting dice — and has brought gifts, including a new red dress for Bess. But she is not there. His friends tell him he is better off without her, but Porgy demands to know where she is. They tell him she has gone to New York with Sportin' Life. Determined to find her, Porgy collects his crutch and sets off in the final number, "Oh Lawd, I'm on My Way." The opera ends on an inconclusive but hopeful note — a man who has barely been outside Catfish Row heading off to find Bess in New York.
+<strong>Act III.</strong> The people pray for Clara, Jake, and Crown — all three seem to have been lost in the hurricane. But that night Crown reappears, planning to take Bess away. Porgy is waiting. The two fight, and as Crown underestimates Porgy's strength, Porgy kills him. In Scene 2, the police take Porgy away to identify Crown's body. Sportin' Life tells him that when a killer looks at his victim's body, the wound will bleed. With Porgy gone, Sportin' Life tempts Bess with cocaine and the promise of New York — "There's a Boat Dat's Leavin' Soon for New York." Bess resists but eventually gives in and goes with him. In the final scene, Porgy returns triumphantly from jail — he has made money shooting dice — and has brought gifts, including a new red dress for Bess. But she is not there. His friends tell him he is better off without her, but Porgy demands to know where she is. They tell him she has gone to New York with Sportin' Life. Determined to find her, Porgy collects his crutch and sets off in the final number, "Oh Lawd, I'm on My Way." The opera ends on an inconclusive but hopeful note — a man who has barely been outside Catfish Row heading off to find Bess in New York.
 
-## What Is Opera? The Question *Porgy and Bess* Forces Us to Ask
+## What Is Opera? The Question <em>Porgy and Bess</em> Forces Us to Ask
 
-*Porgy and Bess* challenges the very definition of opera. Why is it not a musical? Musical theatre tends to feature spoken dialogue, a focus on dance, popular music or a belt singing style, the language of the audience, performers who are actors first and singers second, and a Broadway venue. There are of course exceptions and overlaps between opera and musicals, but the distinction matters because it comes down to what Gershwin intended to write versus what the audience expected from him. He was pretty clear about what he wanted. The audience expected something different — and that mismatch partly explains the lukewarm initial reception.
+<em>Porgy and Bess</em> challenges the very definition of opera. Why is it not a musical? Musical theatre tends to feature spoken dialogue, a focus on dance, popular music or a belt singing style, the language of the audience, performers who are actors first and singers second, and a Broadway venue. There are of course exceptions and overlaps between opera and musicals, but the distinction matters because it comes down to what Gershwin intended to write versus what the audience expected from him. He was pretty clear about what he wanted. The audience expected something different — and that mismatch partly explains the lukewarm initial reception.
 
 Seven criteria help us evaluate the question:
 
-**1. Composer's credentials.** Gershwin had a reputation for writing musical theatre, popular tunes, and Tin Pan Alley songs. Despite *Rhapsody in Blue* and the *Concerto in F*, he had no rigorous classical training, which called his legitimacy as an opera composer into question. Even admirers of his work sometimes conceded his genius as a melodist while questioning his credentials as a classical composer.
+<strong>1. Composer's credentials.</strong> Gershwin had a reputation for writing musical theatre, popular tunes, and Tin Pan Alley songs. Despite <em>Rhapsody in Blue</em> and the <em>Concerto in F</em>, he had no rigorous classical training, which called his legitimacy as an opera composer into question. Even admirers of his work sometimes conceded his genius as a melodist while questioning his credentials as a classical composer.
 
-**2. Intentions — Subtitle: "An American Folk Opera."** The subtitle announces Gershwin's intent clearly. He had gone to Charleston, attended church services, and absorbed the musical idiom — but he wrote his own music rather than using existing melodies, drawing criticism especially because the subtitle claims folk authenticity for original compositions. He was self-consciously forming a new tradition.
+<strong>2. Intentions — Subtitle: "An American Folk Opera."</strong> The subtitle announces Gershwin's intent clearly. He had gone to Charleston, attended church services, and absorbed the musical idiom — but he wrote his own music rather than using existing melodies, drawing criticism especially because the subtitle claims folk authenticity for original compositions. He was self-consciously forming a new tradition.
 
-**3. Initial venue.** After a Boston tryout — the usual route for Broadway works — *Porgy and Bess* was performed at the Alvin Theatre on Broadway, not at the Metropolitan Opera. In truth, Gershwin could not have had it performed at the Met or any opera house even if he had wanted to, because Black performers would not have been welcome there. The Met did not stage the work until 1985 — fifty years after the premiere.
+<strong>3. Initial venue.</strong> After a Boston tryout — the usual route for Broadway works — <em>Porgy and Bess</em> was performed at the Alvin Theatre on Broadway, not at the Metropolitan Opera. In truth, Gershwin could not have had it performed at the Met or any opera house even if he had wanted to, because Black performers would not have been welcome there. The Met did not stage the work until 1985 — fifty years after the premiere.
 
-**4a. Structure and form.** The opera contains elements unmistakably associated with opera: recitative, arias, duets, **reminiscence themes**, and **leitmotifs**. There is evidence that Gershwin studied Wagner scores before composing it.
+<strong>4a. Structure and form.</strong> The opera contains elements unmistakably associated with opera: recitative, arias, duets, <strong>reminiscence themes</strong>, and <strong>leitmotifs</strong>. There is evidence that Gershwin studied Wagner scores before composing it.
 
-**4b. Continuous music.** The original version uses recitative throughout — not spoken dialogue — making the music more continuous than even *Carmen* or *Fidelio*. However, in 1941, four years after Gershwin's death, the recitative was stripped out and replaced with spoken dialogue, fundamentally altering the work's identity. That was not Gershwin's intent.
+<strong>4b. Continuous music.</strong> The original version uses recitative throughout — not spoken dialogue — making the music more continuous than even <em>Carmen</em> or <em>Fidelio</em>. However, in 1941, four years after Gershwin's death, the recitative was stripped out and replaced with spoken dialogue, fundamentally altering the work's identity. That was not Gershwin's intent.
 
-**4c. Separable numbers, but integrated.** The opera produced a string of hits — "Summertime," "I Got Plenty o' Nuthin'," "Bess, You Is My Woman Now," "It Ain't Necessarily So," "I Loves You, Porgy" — that entered the popular canon and have been covered by countless artists. But the existence of extractable songs does not disqualify a work from being an opera. Handel's operas of the 1720s produced arias that became more attached to the singers who performed them than to the works they came from, and were extracted and performed independently. The separability of individual numbers is not unique to Broadway.
+<strong>4c. Separable numbers, but integrated.</strong> The opera produced a string of hits — "Summertime," "I Got Plenty o' Nuthin'," "Bess, You Is My Woman Now," "It Ain't Necessarily So," "I Loves You, Porgy" — that entered the popular canon and have been covered by countless artists. But the existence of extractable songs does not disqualify a work from being an opera. Handel's operas of the 1720s produced arias that became more attached to the singers who performed them than to the works they came from, and were extracted and performed independently. The separability of individual numbers is not unique to Broadway.
 
-**5. Use of the orchestra.** The orchestra is of full operatic proportions — symphonic instruments, not a pit band. It provides continuity, responding fluidly and constantly to what is happening on stage, gluing scenes together. As Gershwin himself put it, the orchestra provides "sustained symphonic music to unify entire scenes." Its role is similar to that of a Puccinian or Wagnerian orchestra.
+<strong>5. Use of the orchestra.</strong> The orchestra is of full operatic proportions — symphonic instruments, not a pit band. It provides continuity, responding fluidly and constantly to what is happening on stage, gluing scenes together. As Gershwin himself put it, the orchestra provides "sustained symphonic music to unify entire scenes." Its role is similar to that of a Puccinian or Wagnerian orchestra.
 
-**6. Singers and singing style.** Gershwin insisted on operatically trained African American singers — not Broadway-style performers and emphatically not white singers in blackface. The original cast were classical singers who performed recitals alongside their operatic work. The Gershwin family's contract includes a clause, still in effect, stipulating that the opera may only be performed by Black singers and actors.
+<strong>6. Singers and singing style.</strong> Gershwin insisted on operatically trained African American singers — not Broadway-style performers and emphatically not white singers in blackface. The original cast were classical singers who performed recitals alongside their operatic work. The Gershwin family's contract includes a clause, still in effect, stipulating that the opera may only be performed by Black singers and actors.
 
-**7. Characterization.** Gershwin uses leitmotifs to define his characters, much as Wagner does. Porgy's leitmotif is a descent from B to E, with an ornament on the third of the scale (a grace note on F-sharp) and a syncopated descending third from G to E. Whenever Porgy enters or is referred to, this motive sounds. Sportin' Life's music takes Porgy's theme and transforms it: the clean descent becomes a **descending tritone** — the devil in music — with added triplets that give it a jazzy swing, **blue notes**, **chromatic** twists, **scat** singing, and **call and response**. Sportin' Life is entertaining but menacing, and his musical characterization — built on the tritone and chromatic distortion — marks him unmistakably as the villain.
+<strong>7. Characterization.</strong> Gershwin uses leitmotifs to define his characters, much as Wagner does. Porgy's leitmotif is a descent from B to E, with an ornament on the third of the scale (a grace note on F-sharp) and a syncopated descending third from G to E. Whenever Porgy enters or is referred to, this motive sounds. Sportin' Life's music takes Porgy's theme and transforms it: the clean descent becomes a <strong>descending tritone</strong> — the devil in music — with added triplets that give it a jazzy swing, <strong>blue notes</strong>, <strong>chromatic</strong> twists, <strong>scat</strong> singing, and <strong>call and response</strong>. Sportin' Life is entertaining but menacing, and his musical characterization — built on the tritone and chromatic distortion — marks him unmistakably as the villain.
 
 ## "It Ain't Necessarily So": Sportin' Life's Song
 
@@ -1590,42 +1590,42 @@ The song is musically vivid: a descending tritone in the opening phrase, pervasi
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/2Ijhn3FlDQs?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*"It Ain't Necessarily So" from the 1959 film, performed by Sammy Davis Jr.*
+<em>"It Ain't Necessarily So" from the 1959 film, performed by Sammy Davis Jr.</em>
 
 ## Operatic Elements in Act II, Scene 3: Bess's Delirium
 
 Act II, Scene 3, is a long continuous scene that demonstrates nearly every operatic device in Gershwin's toolbox. Bess has returned from Kittiwah Island after being held by Crown for two days. She is delirious and unconscious at Porgy's place. The scene unfolds through a series of interconnected musical passages that should be heard without interruption.
 
-The scene opens with a **recitative passage** involving Bess, Serena, Maria, Peter, and Porgy. Bess's recitative is soaring and lyrical even in her delirium — her unconscious interjections contrast sharply with the more speech-like delivery of the other characters. Serena's line — "Well, if it ain't ole Peter!" — sits closer to natural speech, while Peter's "De white folk put me in..." has a more regular phrase structure. The contrasting states of mind are vivid.
+The scene opens with a <strong>recitative passage</strong> involving Bess, Serena, Maria, Peter, and Porgy. Bess's recitative is soaring and lyrical even in her delirium — her unconscious interjections contrast sharply with the more speech-like delivery of the other characters. Serena's line — "Well, if it ain't ole Peter!" — sits closer to natural speech, while Peter's "De white folk put me in..." has a more regular phrase structure. The contrasting states of mind are vivid.
 
-Porgy sings "I think dat maybe she goin' to sleep now" — and notice how the music changes, both his tone and the orchestra, as he greets Peter. Then comes **Serena's prayer** over Bess — "Oh, Doctor Jesus" — in which the orchestra sustains a central note while Serena sings a **melismatic** chant structure with inflections around that central pitch. Others interject simultaneously, imitating liturgical practice. The orchestral transition leads us into the next section.
+Porgy sings "I think dat maybe she goin' to sleep now" — and notice how the music changes, both his tone and the orchestra, as he greets Peter. Then comes <strong>Serena's prayer</strong> over Bess — "Oh, Doctor Jesus" — in which the orchestra sustains a central note while Serena sings a <strong>melismatic</strong> chant structure with inflections around that central pitch. Others interject simultaneously, imitating liturgical practice. The orchestral transition leads us into the next section.
 
-Then come the **street vendors' calls** — one of the most remarkable passages in the opera. A strawberry woman cries her wares with distinctive pitch inflections on "Strawberries"; Peter the Honeyman makes his rounds; the **crab man** sells devil crabs and she-crabs with vivid melodic inflections. These are imitations of authentic Charleston street calls, transformed into musical material. A bell chimes five times as the crab man leaves, and at that moment Bess begins to stir — "Porgy, Porgy..." — and Porgy responds with "Thank Gawd."
+Then come the <strong>street vendors' calls</strong> — one of the most remarkable passages in the opera. A strawberry woman cries her wares with distinctive pitch inflections on "Strawberries"; Peter the Honeyman makes his rounds; the <strong>crab man</strong> sells devil crabs and she-crabs with vivid melodic inflections. These are imitations of authentic Charleston street calls, transformed into musical material. A bell chimes five times as the crab man leaves, and at that moment Bess begins to stir — "Porgy, Porgy..." — and Porgy responds with "Thank Gawd."
 
-A recitative passage follows in which the orchestra invokes the theme of "Bess, You Is My Woman Now." Bess confesses she is lonesome, and Porgy reassures her — "Gawd give cripple to understan' many things He ain't give strong men" — all over sustained orchestral accompaniment. This leads into the final section: a **lyrical operatic duet** between Bess and Porgy in **rondo form** (ABACA). Bess sings "I wants to stay here" (A), then "Someday I know he's coming back to call me" (B); Porgy interjects "If dere warn't no Crown, Bess"; Bess returns with "I loves you, Porgy" (A); Porgy sings "There, there, Bess" (C); and finally they sing together with Bess's lyrical A theme — "I loves you, Porgy" — bringing the scene to its emotional climax.
+A recitative passage follows in which the orchestra invokes the theme of "Bess, You Is My Woman Now." Bess confesses she is lonesome, and Porgy reassures her — "Gawd give cripple to understan' many things He ain't give strong men" — all over sustained orchestral accompaniment. This leads into the final section: a <strong>lyrical operatic duet</strong> between Bess and Porgy in <strong>rondo form</strong> (ABACA). Bess sings "I wants to stay here" (A), then "Someday I know he's coming back to call me" (B); Porgy interjects "If dere warn't no Crown, Bess"; Bess returns with "I loves you, Porgy" (A); Porgy sings "There, there, Bess" (C); and finally they sing together with Bess's lyrical A theme — "I loves you, Porgy" — bringing the scene to its emotional climax.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/tYuO5gSJNQU?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Act II, Scene 3 — Part I*
+<em>Act II, Scene 3 — Part I</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/NNYCt1ju8fo?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Act II, Scene 3 — Part II*
+<em>Act II, Scene 3 — Part II</em>
 
-This single scene contains continuous music with recitative and orchestra; a range of singing from operatic soaring lines to natural speech; imitated speech patterns, authentic street calls, and liturgical music; and the full apparatus of operatic musical forms — aria, recitative, leitmotifs and reminiscence motives, and a duet in rondo form. Whatever one calls *Porgy and Bess*, this scene is as operatic as anything in Puccini or Wagner.
+This single scene contains continuous music with recitative and orchestra; a range of singing from operatic soaring lines to natural speech; imitated speech patterns, authentic street calls, and liturgical music; and the full apparatus of operatic musical forms — aria, recitative, leitmotifs and reminiscence motives, and a duet in rondo form. Whatever one calls <em>Porgy and Bess</em>, this scene is as operatic as anything in Puccini or Wagner.
 
 ## A Problematic Masterpiece
 
-Despite Gershwin's credentials, or perhaps because of them, *Porgy and Bess* remains a deeply problematic work. His intentions were clearly operatic — the subtitle, the orchestral writing, the use of leitmotifs, the insistence on operatically trained Black singers — and the music is undeniably powerful. But the work carries an inescapable history: it is an opera about Black Americans created by white artists, filled with stereotypes that coexist alongside moments of genuine depth and beauty. Every time it is performed, the performers and the audience must confront that history anew. Even the Metropolitan Opera's recent productions have prompted Black performers to question whether they feel affirmed and recognized. As Naomi Andre has observed, it is a product of its original time — the early 1930s, during the Depression and Jim Crow — but it has encountered continual resistance from that day to the present, as race relations in the United States remain complicated.
+Despite Gershwin's credentials, or perhaps because of them, <em>Porgy and Bess</em> remains a deeply problematic work. His intentions were clearly operatic — the subtitle, the orchestral writing, the use of leitmotifs, the insistence on operatically trained Black singers — and the music is undeniably powerful. But the work carries an inescapable history: it is an opera about Black Americans created by white artists, filled with stereotypes that coexist alongside moments of genuine depth and beauty. Every time it is performed, the performers and the audience must confront that history anew. Even the Metropolitan Opera's recent productions have prompted Black performers to question whether they feel affirmed and recognized. As Naomi Andre has observed, it is a product of its original time — the early 1930s, during the Depression and Jim Crow — but it has encountered continual resistance from that day to the present, as race relations in the United States remain complicated.
 
-Opera is visceral. As a multimedia art form, it is extraordinarily powerful in its emotional impact, and it deals with the human condition — with humanity and human beings in all their foibles, imperfections, and passions. *Porgy and Bess*, like *Peter Grimes*, refuses to let us look away from difficult truths. That is what opera does at its best.
+Opera is visceral. As a multimedia art form, it is extraordinarily powerful in its emotional impact, and it deals with the human condition — with humanity and human beings in all their foibles, imperfections, and passions. <em>Porgy and Bess</em>, like <em>Peter Grimes</em>, refuses to let us look away from difficult truths. That is what opera does at its best.
 
 
 # Appendix: Guest Session — Life in Opera
 
-*A conversation with Adrian Kramer (tenor) and Lucia Cesaroni (soprano), recorded via Zoom during the Fall 2020 term.*
+<em>A conversation with Adrian Kramer (tenor) and Lucia Cesaroni (soprano), recorded via Zoom during the Fall 2020 term.</em>
 
-During the course, Dr. Gray arranged a live video session with two professional opera singers — **Adrian Kramer**, a tenor, and **Lucia Cesaroni**, a soprano — both based internationally and performing on stages across North America and Europe. The session took the form of a Q&A with students, covering the realities of life as a working opera singer. What follows is a synthesis of their conversation.
+During the course, Dr. Gray arranged a live video session with two professional opera singers — <strong>Adrian Kramer</strong>, a tenor, and <strong>Lucia Cesaroni</strong>, a soprano — both based internationally and performing on stages across North America and Europe. The session took the form of a Q&A with students, covering the realities of life as a working opera singer. What follows is a synthesis of their conversation.
 
 ## How They Got into Opera
 
@@ -1649,9 +1649,9 @@ The key to breaking into the American and European markets, they explained, is s
 
 ## Voice Types and the Fach System
 
-A student asked about voice classification, and Adrian — who transitioned from baritone to tenor — had strong views. The German **Fach** system categorizes voices into specific types (lyric tenor, dramatic soprano, etc.) for casting purposes, but Adrian sees it as "trying to make science out of something that's a little bit more of a fluid art." His own **passaggio** — the transition point between chest voice and upper range — falls right between the typical baritone and tenor zones. Learning to sing as a tenor actually made him a better and healthier singer overall.
+A student asked about voice classification, and Adrian — who transitioned from baritone to tenor — had strong views. The German <strong>Fach</strong> system categorizes voices into specific types (lyric tenor, dramatic soprano, etc.) for casting purposes, but Adrian sees it as "trying to make science out of something that's a little bit more of a fluid art." His own <strong>passaggio</strong> — the transition point between chest voice and upper range — falls right between the typical baritone and tenor zones. Learning to sing as a tenor actually made him a better and healthier singer overall.
 
-Lucia noted that women cross Fach boundaries more frequently — she has performed *Carmen* one night with a soprano in the title role and the next night with a mezzo. Both singers argued for greater imagination in casting: listening to the individual artist rather than plugging voices into predetermined categories.
+Lucia noted that women cross Fach boundaries more frequently — she has performed <em>Carmen</em> one night with a soprano in the title role and the next night with a mezzo. Both singers argued for greater imagination in casting: listening to the individual artist rather than plugging voices into predetermined categories.
 
 ## Diversity in Opera
 

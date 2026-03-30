@@ -18,7 +18,7 @@ prof: Siobhan Sutherland
 ### What Is Abnormal Behaviour?
 
 <div class="definition">
-**Psychopathology** is the scientific study of the origins, symptoms, and development of psychological disorders. A **psychological disorder** is a pattern of behavioural, cognitive, or emotional symptoms that causes significant distress or impairment and deviates from cultural norms.
+<strong>Psychopathology</strong> is the scientific study of the origins, symptoms, and development of psychological disorders. A <strong>psychological disorder</strong> is a pattern of behavioural, cognitive, or emotional symptoms that causes significant distress or impairment and deviates from cultural norms.
 </div>
 
 The **4 Ds** framework helps operationalize abnormality:
@@ -35,7 +35,7 @@ No single criterion is sufficient; clinicians weigh all four in context.
 ### Historical Perspectives
 
 <div class="remark">
-Early explanations were **supernatural**: ancient cultures attributed mental illness to demonic possession, requiring exorcism or trephination (boring holes in the skull to release spirits).
+Early explanations were <strong>supernatural</strong>: ancient cultures attributed mental illness to demonic possession, requiring exorcism or trephination (boring holes in the skull to release spirits).
 </div>
 
 The **Greek-Roman** era introduced naturalistic models. Hippocrates proposed that mental illness stemmed from imbalances among four **humours** — blood, phlegm, yellow bile, and black bile — anticipating biological psychiatry.
@@ -72,7 +72,7 @@ A person with a genetic predisposition to depression (diathesis) may remain well
 ### Goals of Clinical Assessment
 
 <div class="definition">
-**Clinical assessment** is the systematic collection of information to understand an individual's psychological functioning, determine diagnosis, and guide treatment planning. **Reliability** (consistency) and **validity** (accuracy) are the two pillars of sound assessment.
+<strong>Clinical assessment</strong> is the systematic collection of information to understand an individual's psychological functioning, determine diagnosis, and guide treatment planning. <strong>Reliability</strong> (consistency) and <strong>validity</strong> (accuracy) are the two pillars of sound assessment.
 </div>
 
 ### Assessment Methods
@@ -96,7 +96,7 @@ A person with a genetic predisposition to depression (diathesis) may remain well
 The **DSM-5-TR** (2022) uses a **categorical** approach: a disorder is present if a minimum number of criteria are met for a specified duration. It abandoned multiaxial coding in DSM-5 but retains dimensional severity ratings.
 
 <div class="remark">
-Critics note high **comorbidity** rates challenge categorical boundaries; dimensional models (e.g., the HiTOP hierarchy) may better reflect psychopathology's structure.
+Critics note high <strong>comorbidity</strong> rates challenge categorical boundaries; dimensional models (e.g., the HiTOP hierarchy) may better reflect psychopathology's structure.
 </div>
 
 **Diagnostic reliability** is quantified with Cohen's kappa (\(\kappa\)):
@@ -122,7 +122,7 @@ Despite limitations, diagnosis serves communication, research, and insurance fun
 ### Why Research Methods Matter
 
 <div class="definition">
-**Empirically supported treatments (ESTs)** require rigorous research evidence. Understanding methodology helps clinicians evaluate whether a treatment claim is trustworthy.
+<strong>Empirically supported treatments (ESTs)</strong> require rigorous research evidence. Understanding methodology helps clinicians evaluate whether a treatment claim is trustworthy.
 </div>
 
 ### Research Designs
@@ -176,7 +176,7 @@ Participants must provide **informed consent**, researchers must minimize harm, 
 ### Overview of Anxiety
 
 <div class="definition">
-**Anxiety** is a future-oriented emotional state of tension and apprehension. **Fear** is an immediate alarm response to perceived threat. **Anxiety disorders** occur when fear/anxiety is disproportionate, persistent, and impairing.
+<strong>Anxiety</strong> is a future-oriented emotional state of tension and apprehension. <strong>Fear</strong> is an immediate alarm response to perceived threat. <strong>Anxiety disorders</strong> occur when fear/anxiety is disproportionate, persistent, and impairing.
 </div>
 
 Anxiety involves three response systems: **cognitive** (worry, catastrophizing), **physiological** (autonomic arousal, HPA axis activation), and **behavioural** (avoidance, escape).
@@ -188,7 +188,7 @@ Intense, irrational fear of a specific object or situation (animals, blood-injec
 ### Social Anxiety Disorder (SAD)
 
 <div class="definition">
-**Social anxiety disorder** is marked fear of social or performance situations where scrutiny may occur, driven by fear of embarrassment or negative evaluation.
+<strong>Social anxiety disorder</strong> is marked fear of social or performance situations where scrutiny may occur, driven by fear of embarrassment or negative evaluation.
 </div>
 
 Prevalence ~7%. **Clark and Wells' (1995) cognitive model** highlights self-focused attention and post-event processing as maintaining factors. Treatment: **CBT** with exposure + cognitive restructuring; SSRIs/SNRIs for pharmacotherapy.
@@ -220,7 +220,7 @@ The **fear circuit** (amygdala → locus coeruleus → hypothalamus) is hyperrea
 ### OCD
 
 <div class="definition">
-**Obsessions** are recurrent, intrusive, unwanted thoughts, images, or urges causing marked anxiety. **Compulsions** are repetitive behaviours or mental acts performed to neutralize obsessional distress or prevent dreaded outcomes.
+<strong>Obsessions</strong> are recurrent, intrusive, unwanted thoughts, images, or urges causing marked anxiety. <strong>Compulsions</strong> are repetitive behaviours or mental acts performed to neutralize obsessional distress or prevent dreaded outcomes.
 </div>
 
 Prevalence ~2%. Ego-dystonic quality distinguishes obsessions from overvalued ideas. Common themes: contamination, harm, symmetry/order, forbidden thoughts (sexual, religious, aggressive).
@@ -255,7 +255,7 @@ OCD-spectrum disorders share the feature of repetitive behaviours, but differ in
 ### Major Depressive Disorder (MDD)
 
 <div class="definition">
-**MDD** requires ≥5 symptoms for ≥2 weeks, including depressed mood or **anhedonia** (loss of pleasure), plus changes in weight/sleep/psychomotor activity, fatigue, worthlessness/guilt, concentration difficulties, and suicidal ideation.
+<strong>MDD</strong> requires ≥5 symptoms for ≥2 weeks, including depressed mood or <strong>anhedonia</strong> (loss of pleasure), plus changes in weight/sleep/psychomotor activity, fatigue, worthlessness/guilt, concentration difficulties, and suicidal ideation.
 </div>
 
 12-month prevalence ~7%; 2:1 female-to-male ratio. **Specifiers** include: with anxious distress, melancholic features, psychotic features, peripartum onset, seasonal pattern.
@@ -276,9 +276,9 @@ Depressed mood more days than not for ≥2 years (adults), with ≥2 additional 
 ### Bipolar Disorders
 
 <div class="definition">
-**Bipolar I**: ≥1 **manic episode** (elevated/irritable mood + ↑ energy for ≥7 days; 3+ of: grandiosity, decreased sleep, pressured speech, racing thoughts, distractibility, goal-directed activity, risky behaviour).
-**Bipolar II**: hypomanic episodes + MDD; no full mania.
-**Cyclothymia**: hypomanic and depressive symptoms for ≥2 years without meeting full criteria.
+<strong>Bipolar I</strong>: ≥1 <strong>manic episode</strong> (elevated/irritable mood + ↑ energy for ≥7 days; 3+ of: grandiosity, decreased sleep, pressured speech, racing thoughts, distractibility, goal-directed activity, risky behaviour).
+<strong>Bipolar II</strong>: hypomanic episodes + MDD; no full mania.
+<strong>Cyclothymia</strong>: hypomanic and depressive symptoms for ≥2 years without meeting full criteria.
 </div>
 
 Heritability \(h^2 \approx 0.75{-}0.93\) — among the highest in psychiatry. Kindling model: early episodes sensitize the brain to future episodes. **Lithium** remains first-line mood stabilizer; valproate, lamotrigine, and atypical antipsychotics are alternatives. Psychoeducation and CBT reduce relapse.
@@ -294,7 +294,7 @@ Risk factors: prior attempt, hopelessness, social isolation, substance use, male
 ### PTSD
 
 <div class="definition">
-**Post-Traumatic Stress Disorder (PTSD)** develops after exposure to actual or threatened death, serious injury, or sexual violence, and involves four symptom clusters: intrusion, avoidance, negative cognitions/mood, and hyperarousal — lasting >1 month and causing significant impairment.
+<strong>Post-Traumatic Stress Disorder (PTSD)</strong> develops after exposure to actual or threatened death, serious injury, or sexual violence, and involves four symptom clusters: intrusion, avoidance, negative cognitions/mood, and hyperarousal — lasting >1 month and causing significant impairment.
 </div>
 
 Lifetime prevalence ~6.8% general population; much higher in combat veterans, sexual assault survivors, and first responders. Only ~20% of trauma-exposed individuals develop PTSD — resilience is the norm.
@@ -331,7 +331,7 @@ Develop in children following severe neglect; reflect disruption of attachment s
 ### Anorexia Nervosa (AN)
 
 <div class="definition">
-**AN** is characterized by restriction of energy intake leading to significantly low body weight, intense fear of weight gain, and distorted body image or denial of the seriousness of low weight.
+<strong>AN</strong> is characterized by restriction of energy intake leading to significantly low body weight, intense fear of weight gain, and distorted body image or denial of the seriousness of low weight.
 </div>
 
 Prevalence ~0.9% in women; female-to-male ~10:1. Highest mortality of any psychiatric disorder (\(\approx 5{-}10\%\) per decade); causes include starvation complications and suicide. Subtypes: **restricting** vs. **binge-eating/purging**.
@@ -351,7 +351,7 @@ Serotonin dysfunction implicated in AN and BN. **Restraint theory** (Herman & Po
 ### Sleep–Wake Disorders
 
 <div class="definition">
-**Insomnia disorder**: difficulty initiating or maintaining sleep, or early awakening, ≥3 nights/week for ≥3 months, with daytime impairment. **Hypersomnolence disorder**: excessive sleepiness despite adequate sleep. **Narcolepsy**: recurrent lapses into sleep, often with **cataplexy** (sudden loss of muscle tone triggered by emotion), caused by hypocretin/orexin deficiency.
+<strong>Insomnia disorder</strong>: difficulty initiating or maintaining sleep, or early awakening, ≥3 nights/week for ≥3 months, with daytime impairment. <strong>Hypersomnolence disorder</strong>: excessive sleepiness despite adequate sleep. <strong>Narcolepsy</strong>: recurrent lapses into sleep, often with <strong>cataplexy</strong> (sudden loss of muscle tone triggered by emotion), caused by hypocretin/orexin deficiency.
 </div>
 
 **Obstructive Sleep Apnea (OSA)**: repeated upper airway collapse during sleep → arousals → daytime somnolence; treated with CPAP.
@@ -369,7 +369,7 @@ Serotonin dysfunction implicated in AN and BN. **Restraint theory** (Herman & Po
 ### Overview
 
 <div class="definition">
-A **personality disorder** is an enduring pattern of inner experience and behaviour that deviates markedly from cultural expectations, is pervasive and inflexible, is stable across time, and causes distress or impairment.
+A <strong>personality disorder</strong> is an enduring pattern of inner experience and behaviour that deviates markedly from cultural expectations, is pervasive and inflexible, is stable across time, and causes distress or impairment.
 </div>
 
 DSM-5 lists 10 PDs in three **clusters**:
@@ -407,7 +407,7 @@ The DSM-5 Section III proposes a **dimensional–categorical hybrid** model rati
 ### Definitions and Classification
 
 <div class="definition">
-**Substance use disorder (SUD)** is a cluster of cognitive, behavioural, and physiological symptoms indicating continued use despite significant problems. Severity is determined by the number of 11 criteria met: mild (2–3), moderate (4–5), severe (≥6).
+<strong>Substance use disorder (SUD)</strong> is a cluster of cognitive, behavioural, and physiological symptoms indicating continued use despite significant problems. Severity is determined by the number of 11 criteria met: mild (2–3), moderate (4–5), severe (≥6).
 </div>
 
 Key criteria include: taking more than intended, failed attempts to cut down, craving, tolerance (**\(\uparrow\) dose needed for same effect**), withdrawal (**physiological syndrome on cessation**), and continued use despite negative consequences.
@@ -445,7 +445,7 @@ Only **behavioural addiction** in DSM-5. Shares neurobiological features with su
 ### Schizophrenia
 
 <div class="definition">
-**Schizophrenia** requires ≥2 of the following for ≥1 month (≥1 must be from the first three): **delusions**, **hallucinations**, **disorganized speech**, grossly disorganized or catatonic behaviour, **negative symptoms** — with continuous signs for ≥6 months.
+<strong>Schizophrenia</strong> requires ≥2 of the following for ≥1 month (≥1 must be from the first three): <strong>delusions</strong>, <strong>hallucinations</strong>, <strong>disorganized speech</strong>, grossly disorganized or catatonic behaviour, <strong>negative symptoms</strong> — with continuous signs for ≥6 months.
 </div>
 
 Prevalence ~1% worldwide, similar across cultures. Onset typically late adolescence/early adulthood; earlier in males (18–25) than females (25–35).
@@ -486,7 +486,7 @@ Prevalence ~1% worldwide, similar across cultures. Onset typically late adolesce
 ### Sexual Dysfunctions
 
 <div class="definition">
-**Sexual dysfunctions** are clinically significant disturbances in sexual response or pleasure causing distress or interpersonal difficulty.
+<strong>Sexual dysfunctions</strong> are clinically significant disturbances in sexual response or pleasure causing distress or interpersonal difficulty.
 </div>
 
 | Dysfunction | Description |
@@ -504,7 +504,7 @@ Biopsychosocial factors include: vascular disease, hormonal imbalance, medicatio
 ### Gender Dysphoria
 
 <div class="definition">
-**Gender dysphoria** is the distress arising from incongruence between one's experienced/expressed gender and assigned gender at birth, lasting ≥6 months.
+<strong>Gender dysphoria</strong> is the distress arising from incongruence between one's experienced/expressed gender and assigned gender at birth, lasting ≥6 months.
 </div>
 
 Separate criteria for children vs. adolescents/adults. Treatment: gender-affirming care (social transition, hormone therapy, surgery), psychotherapy for co-occurring distress. High rates of comorbid depression and anxiety; affirmative care significantly reduces suicide risk.
@@ -532,7 +532,7 @@ Treatments: cognitive-behavioural relapse prevention, anti-androgen pharmacother
 ### Attention-Deficit/Hyperactivity Disorder (ADHD)
 
 <div class="definition">
-**ADHD** is characterized by persistent patterns of **inattention** and/or **hyperactivity–impulsivity** that interfere with functioning across two or more settings, with several symptoms present before age 12.
+<strong>ADHD</strong> is characterized by persistent patterns of <strong>inattention</strong> and/or <strong>hyperactivity–impulsivity</strong> that interfere with functioning across two or more settings, with several symptoms present before age 12.
 </div>
 
 Three presentations: *primarily inattentive*, *primarily hyperactive–impulsive*, *combined*. Prevalence ~7% children, ~4% adults; 3:1 male-to-female ratio (but females underdiagnosed). Heritability \(h^2 \approx 0.76\); genes implicated include **DRD4**, **DAT1**.
@@ -544,7 +544,7 @@ Three presentations: *primarily inattentive*, *primarily hyperactive–impulsive
 ### Autism Spectrum Disorder (ASD)
 
 <div class="definition">
-**ASD** is defined by persistent deficits in **social communication and interaction** across multiple contexts, plus restricted, repetitive patterns of behaviour, interests, or activities — present from early development.
+<strong>ASD</strong> is defined by persistent deficits in <strong>social communication and interaction</strong> across multiple contexts, plus restricted, repetitive patterns of behaviour, interests, or activities — present from early development.
 </div>
 
 Prevalence ~1 in 36 (US CDC 2023). Male-to-female ratio ~4:1; females often present with more camouflaging, leading to underdiagnosis. DSM-5 collapsed previous subtypes (Autistic Disorder, Asperger's, PDD-NOS) into a single spectrum with severity levels.
@@ -572,7 +572,7 @@ Heritability \(h^2 > 0.80\); hundreds of risk genes identified — no single "au
 ### Overview
 
 <div class="definition">
-**Neurocognitive disorders (NCDs)** are characterized by acquired decline in cognitive function from a previous level of performance, affecting one or more cognitive domains: complex attention, executive function, learning/memory, language, perceptual-motor function, social cognition.
+<strong>Neurocognitive disorders (NCDs)</strong> are characterized by acquired decline in cognitive function from a previous level of performance, affecting one or more cognitive domains: complex attention, executive function, learning/memory, language, perceptual-motor function, social cognition.
 </div>
 
 **Major NCD (Dementia)**: significant cognitive decline impairing independence in daily activities.

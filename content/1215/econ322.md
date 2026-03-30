@@ -18,9 +18,9 @@ A classic motivating example is the relationship between an individual's level o
 
 <div class="definition"><strong>Macroeconometrics:</strong> The branch of econometrics concerned with aggregate relationships — for instance, the effect of interest rate changes on inflation, or the relationship between government spending and GDP growth.</div>
 
-In all of these settings, the econometric story is structurally similar. There is some **population** — which, in the case of time-series data, is sometimes called a **data generating process** — within which there exists a true relationship between the variables of interest. That true relationship is governed by **population parameters**, such as \(\beta\), which quantifies the average effect of one additional year of education on wages. Alongside the systematic component, there are idiosyncratic factors — where the individual lives, their career ambitions, their work ethic — which also influence wages but are not directly observable. These are grouped together in what is called the **population error** \(U\).
+In all of these settings, the econometric story is structurally similar. There is some <strong>population</strong> — which, in the case of time-series data, is sometimes called a <strong>data generating process</strong> — within which there exists a true relationship between the variables of interest. That true relationship is governed by <strong>population parameters</strong>, such as \(\beta\), which quantifies the average effect of one additional year of education on wages. Alongside the systematic component, there are idiosyncratic factors — where the individual lives, their career ambitions, their work ethic — which also influence wages but are not directly observable. These are grouped together in what is called the <strong>population error</strong> \(U\).
 
-The fundamental problem in econometrics is that we almost never have access to the entire population. We instead work with a **sample**, and by applying our econometric tools to this sample, we hope to produce estimates that are close to the true population parameters. The gap between a sample estimate and the true population value is called **sampling error**, and the science of econometrics is largely concerned with developing estimators that minimise this gap and allow reliable inference about what is actually going on at the population level.
+The fundamental problem in econometrics is that we almost never have access to the entire population. We instead work with a <strong>sample</strong>, and by applying our econometric tools to this sample, we hope to produce estimates that are close to the true population parameters. The gap between a sample estimate and the true population value is called <strong>sampling error</strong>, and the science of econometrics is largely concerned with developing estimators that minimise this gap and allow reliable inference about what is actually going on at the population level.
 
 ## 1.2 Econometrics vs. Hard Science
 
@@ -28,11 +28,11 @@ One of the most important conceptual distinctions in econometrics is the differe
 
 In economics, this level of experimental control is almost never feasible — and often morally impermissible. Consider the canonical example of estimating the effect of military participation on lifetime earnings. The ideal experiment would require taking a single individual, cloning them precisely, sending one copy into the military and keeping the other as a civilian, and then comparing their lifetime incomes decades later. By comparing these two versions of the same person, one could isolate the causal effect of military service. In practice this is impossible.
 
-Instead, econometricians must rely on **non-experimental data**: a cross-section of individuals for whom we observe both whether they served in the military and what their lifetime earnings turned out to be. The naive approach — comparing average earnings between veterans and civilians — is misleading because of **reverse causality**. Individuals who choose to enlist in the military may already have lower lifetime earnings capacity to begin with: they may be less academically oriented, or they may simply value financial wealth less than civic duty. Thus the observed gap in earnings between veterans and civilians reflects two things simultaneously: the causal effect of military service itself, and the pre-existing differences in earnings potential between those who self-select into the military and those who do not.
+Instead, econometricians must rely on <strong>non-experimental data</strong>: a cross-section of individuals for whom we observe both whether they served in the military and what their lifetime earnings turned out to be. The naive approach — comparing average earnings between veterans and civilians — is misleading because of <strong>reverse causality</strong>. Individuals who choose to enlist in the military may already have lower lifetime earnings capacity to begin with: they may be less academically oriented, or they may simply value financial wealth less than civic duty. Thus the observed gap in earnings between veterans and civilians reflects two things simultaneously: the causal effect of military service itself, and the pre-existing differences in earnings potential between those who self-select into the military and those who do not.
 
 <div class="definition"><strong>Omitted Variable Bias / Reverse Causality:</strong> A situation in which the observed association between two variables is contaminated by a third factor — either a variable correlated with both the treatment and the outcome, or the outcome causally influencing the treatment — making it impossible to estimate the causal effect from the raw correlation alone.</div>
 
-The solution econometricians often seek is a **natural experiment**: a situation in the real world that closely approximates the randomised assignment of a laboratory experiment. Lottery-based military conscription, for instance, randomly assigns some individuals to serve regardless of their pre-existing preferences or earnings potential, allowing researchers to estimate the causal effect of service on income in a much cleaner way. The search for credible natural experiments is one of the central concerns of modern empirical economics.
+The solution econometricians often seek is a <strong>natural experiment</strong>: a situation in the real world that closely approximates the randomised assignment of a laboratory experiment. Lottery-based military conscription, for instance, randomly assigns some individuals to serve regardless of their pre-existing preferences or earnings potential, allowing researchers to estimate the causal effect of service on income in a much cleaner way. The search for credible natural experiments is one of the central concerns of modern empirical economics.
 
 ---
 
@@ -40,33 +40,33 @@ The solution econometricians often seek is a **natural experiment**: a situation
 
 ## 2.1 Populations and Samples
 
-To understand what econometrics is trying to accomplish, it is essential to be precise about the distinction between populations and samples. A **population** encompasses all objects that share the characteristics of interest — for instance, all individuals under 18 years of age in the United Kingdom, or all products manufactured by a given company.
+To understand what econometrics is trying to accomplish, it is essential to be precise about the distinction between populations and samples. A <strong>population</strong> encompasses all objects that share the characteristics of interest — for instance, all individuals under 18 years of age in the United Kingdom, or all products manufactured by a given company.
 
-Within that population, we hypothesise a **population process** linking two variables of interest. Returning to the education-wages example: each individual \(i\) in the population has their own education level \(x_i\) and their own wages \(y_i\). For that individual, we might imagine a relationship of the form
+Within that population, we hypothesise a <strong>population process</strong> linking two variables of interest. Returning to the education-wages example: each individual \(i\) in the population has their own education level \(x_i\) and their own wages \(y_i\). For that individual, we might imagine a relationship of the form
 
 \[ y_i = \alpha + \beta x_i + U_i \]
 
-where \(\beta\) captures how wages respond to education for that individual. Because every individual is different, each person effectively has their own \(\beta_i\): one person might see a \$25 wage gain per extra year of education, while another sees a \$75 gain. When we aggregate across all individuals in the population, the **population parameter** \(\beta\) represents the average effect of one additional year of education on wages across everyone in the population.
+where \(\beta\) captures how wages respond to education for that individual. Because every individual is different, each person effectively has their own \(\beta_i\): one person might see a \$25 wage gain per extra year of education, while another sees a \$75 gain. When we aggregate across all individuals in the population, the <strong>population parameter</strong> \(\beta\) represents the average effect of one additional year of education on wages across everyone in the population.
 
-The fundamental difficulty is that we rarely observe the entire population. In practice, econometrics works with a **sample** — perhaps 1,000 individuals drawn (ideally, randomly) from the population. For the same reasons that the sample is not an exact replica of the population, the **sample parameter** \(\hat{\beta}_S\) that we estimate from the sample will differ from the true population parameter \(\beta_P\). This discrepancy is **sampling error**: the unavoidable result of making inferences about a large population from a small, imperfect subset.
+The fundamental difficulty is that we rarely observe the entire population. In practice, econometrics works with a <strong>sample</strong> — perhaps 1,000 individuals drawn (ideally, randomly) from the population. For the same reasons that the sample is not an exact replica of the population, the <strong>sample parameter</strong> \(\hat{\beta}_S\) that we estimate from the sample will differ from the true population parameter \(\beta_P\). This discrepancy is <strong>sampling error</strong>: the unavoidable result of making inferences about a large population from a small, imperfect subset.
 
 The central task of econometrics is therefore: given that we only have a sample of data, how do we construct an estimator — a mathematical function that takes sample data as input — that produces an estimate of the population parameter that is as reliable and accurate as possible?
 
 ## 2.2 The Population Regression Function
 
-The **Population Regression Function (PRF)** formalises the idea that there is a systematic relationship between a dependent variable \(Y\) and an independent variable \(X\) at the population level. For the education-wages example:
+The <strong>Population Regression Function (PRF)</strong> formalises the idea that there is a systematic relationship between a dependent variable \(Y\) and an independent variable \(X\) at the population level. For the education-wages example:
 
 \[ Y_i = \alpha + \beta X_i + U_i \]
 
-Here \(Y_i\) is the wage of individual \(i\), \(X_i\) is their years of education, \(\alpha\) is the intercept (the expected wage when education is zero), \(\beta\) is the slope (the average change in wages per one additional year of education), and \(U_i\) is the **disturbance term** or **population error**.
+Here \(Y_i\) is the wage of individual \(i\), \(X_i\) is their years of education, \(\alpha\) is the intercept (the expected wage when education is zero), \(\beta\) is the slope (the average change in wages per one additional year of education), and \(U_i\) is the <strong>disturbance term</strong> or <strong>population error</strong>.
 
 The disturbance term \(U_i\) captures all the factors that also influence wages but that we are not explicitly modelling. An individual with 15 years of education who becomes a senior investment banker might earn \$5,000 per week — well above the average for their education level. Another individual with the same 15 years of education who becomes a government economic advisor might earn only \$1,000 per week. The idiosyncratic choices and circumstances that led these two people to different positions — their interests, values, social networks — are all absorbed into \(U_i\).
 
-A key assumption about the disturbance term is that the errors \(U_i\) are **independently and identically distributed (i.i.d.)** with mean zero and constant variance \(\sigma^2\):
+A key assumption about the disturbance term is that the errors \(U_i\) are <strong>independently and identically distributed (i.i.d.)</strong> with mean zero and constant variance \(\sigma^2\):
 
 \[ U_i \overset{i.i.d.}{\sim} (0, \sigma^2) \]
 
-The assumption \(\mathbb{E}[U_i \mid X_i] = 0\) (zero conditional mean) means that, regardless of the level of education, the average of all the unobserved factors affecting wages is zero. **Independence** means that knowing one person's error term tells us nothing about another person's error term. **Identically distributed** means all error terms are drawn from the same underlying process, so the variance of wages around the regression line is constant regardless of education level — an assumption sometimes called **homoskedasticity**.
+The assumption \(\mathbb{E}[U_i \mid X_i] = 0\) (zero conditional mean) means that, regardless of the level of education, the average of all the unobserved factors affecting wages is zero. <strong>Independence</strong> means that knowing one person's error term tells us nothing about another person's error term. <strong>Identically distributed</strong> means all error terms are drawn from the same underlying process, so the variance of wages around the regression line is constant regardless of education level — an assumption sometimes called <strong>homoskedasticity</strong>.
 
 Taking the conditional expectation of the PRF:
 
@@ -76,13 +76,13 @@ because \(\mathbb{E}[U_i \mid X_i] = 0\). This conditional expectation is the po
 
 ## 2.3 OLS Estimator Basics
 
-Since we only have a sample, not the full population, we need an **estimator** — a mathematical function that takes sample data as input and outputs an estimate of the population parameter. The most widely used estimator in econometrics is the **Ordinary Least Squares (OLS)** estimator.
+Since we only have a sample, not the full population, we need an <strong>estimator</strong> — a mathematical function that takes sample data as input and outputs an estimate of the population parameter. The most widely used estimator in econometrics is the <strong>Ordinary Least Squares (OLS)</strong> estimator.
 
-The intuition behind OLS is geometric: given a scatter plot of \(n\) observed data points \((x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)\), we want to find the line \(\hat{y}_i = \hat{\alpha} + \hat{\beta} x_i\) that fits the data as closely as possible. The **residual** for observation \(i\) is the gap between the actual observed value and the fitted value:
+The intuition behind OLS is geometric: given a scatter plot of \(n\) observed data points \((x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)\), we want to find the line \(\hat{y}_i = \hat{\alpha} + \hat{\beta} x_i\) that fits the data as closely as possible. The <strong>residual</strong> for observation \(i\) is the gap between the actual observed value and the fitted value:
 
 \[ \hat{u}_i = y_i - \hat{\alpha} - \hat{\beta} x_i \]
 
-OLS chooses \(\hat{\alpha}\) and \(\hat{\beta}\) to minimise the **Sum of Squared Residuals (SSR)**:
+OLS chooses \(\hat{\alpha}\) and \(\hat{\beta}\) to minimise the <strong>Sum of Squared Residuals (SSR)</strong>:
 
 \[ \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} \hat{u}_i^2 = \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} (y_i - \hat{\alpha} - \hat{\beta} x_i)^2 \]
 
@@ -94,7 +94,7 @@ Taking first-order conditions with respect to \(\hat{\alpha}\) and \(\hat{\beta}
 
 where \(\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i\) and \(\bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i\) are the sample means. The OLS slope estimator can also be written as the ratio of the sample covariance between \(x\) and \(y\) to the sample variance of \(x\).
 
-The OLS estimator can equivalently be derived as the solution to the **sample moment conditions** (population counterparts of \(\mathbb{E}[u] = 0\) and \(\mathbb{E}[uX] = 0\)):
+The OLS estimator can equivalently be derived as the solution to the <strong>sample moment conditions</strong> (population counterparts of \(\mathbb{E}[u] = 0\) and \(\mathbb{E}[uX] = 0\)):
 
 \[ \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{\alpha} - \hat{\beta} x_i) = 0 \]
 
@@ -102,9 +102,9 @@ The OLS estimator can equivalently be derived as the solution to the **sample mo
 
 These two equations (the first-order conditions of the SSR minimisation) imply that the OLS residuals always sum to zero (\(\sum \hat{u}_i = 0\)) and are orthogonal to \(x\) (\(\sum \hat{u}_i x_i = 0\)). In practice these sums are not exactly zero but only to numerical precision (e.g., of order \(10^{-12}\)).
 
-**The unfeasible case (no variation in \(x\)):** If all observations have the same value of \(x_i\), then \(\sum(x_i - \bar{x})^2 = 0\) and the slope is undefined — there are infinitely many lines that fit the data. In R, `lm()` returns `NA` for the slope in this case. This is the simplest example of perfect collinearity.
+<strong>The unfeasible case (no variation in \(x\)):</strong> If all observations have the same value of \(x_i\), then \(\sum(x_i - \bar{x})^2 = 0\) and the slope is undefined — there are infinitely many lines that fit the data. In R, `lm()` returns `NA` for the slope in this case. This is the simplest example of perfect collinearity.
 
-An important conceptual distinction must be drawn between the **estimator** — the mathematical function \(\hat{\beta}_{OLS}(\cdot)\), which is a rule for constructing an estimate from any given dataset — and the **estimate** \(\hat{\beta}^* \), which is a specific numerical value (say, \$47 per year of education) produced when that rule is applied to a particular sample. The estimator is a random variable (its value changes from sample to sample); the estimate is a realisation of that random variable.
+An important conceptual distinction must be drawn between the <strong>estimator</strong> — the mathematical function \(\hat{\beta}_{OLS}(\cdot)\), which is a rule for constructing an estimate from any given dataset — and the <strong>estimate</strong> \(\hat{\beta}^* \), which is a specific numerical value (say, \$47 per year of education) produced when that rule is applied to a particular sample. The estimator is a random variable (its value changes from sample to sample); the estimate is a realisation of that random variable.
 
 ## 2.5 Goodness of Fit: SST, SSE, SSR, and R²
 
@@ -112,28 +112,28 @@ A fundamental decomposition of total variation in \(y\) is:
 
 \[ \underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SST}} = \underbrace{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}_{\text{SSE}} + \underbrace{\sum_{i=1}^n \hat{u}_i^2}_{\text{SSR}} \]
 
-where **SST** (Total Sum of Squares) measures total variation in \(y\), **SSE** (Explained Sum of Squares) is the variation explained by the regression, and **SSR** (Sum of Squared Residuals) is the unexplained residual variation. Note that \(\bar{\hat{y}} = \bar{y}\) (a direct consequence of the OLS first-order conditions), which is why the "explained" and "residual" components are orthogonal and the decomposition holds exactly.
+where <strong>SST</strong> (Total Sum of Squares) measures total variation in \(y\), <strong>SSE</strong> (Explained Sum of Squares) is the variation explained by the regression, and <strong>SSR</strong> (Sum of Squared Residuals) is the unexplained residual variation. Note that \(\bar{\hat{y}} = \bar{y}\) (a direct consequence of the OLS first-order conditions), which is why the "explained" and "residual" components are orthogonal and the decomposition holds exactly.
 
-The **R-squared** (\(R^2\)) is defined as the fraction of total variation explained by the model:
+The <strong>R-squared</strong> (\(R^2\)) is defined as the fraction of total variation explained by the model:
 
 \[ R^2 = \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\text{SSR}}{\text{SST}} \]
 
 \(R^2 \in [0, 1]\) always. \(R^2 = 0\) means the regressors explain nothing; \(R^2 = 1\) means a perfect fit with zero residuals. In the simple bivariate regression, \(R^2\) equals the square of the sample correlation between \(x\) and \(y\): \(R^2 = [\widehat{\text{Corr}}(x,y)]^2\).
 
-**Caveats about \(R^2\):**
+<strong>Caveats about \(R^2\):</strong>
 - A high \(R^2\) does not imply causality or good model specification.
-- Adding any regressor to the model always (weakly) increases \(R^2\), even if the variable is irrelevant noise. This motivates the **adjusted \(R^2\)** (see Tutorial 9 / Unit 4).
+- Adding any regressor to the model always (weakly) increases \(R^2\), even if the variable is irrelevant noise. This motivates the <strong>adjusted \(R^2\)</strong> (see Tutorial 9 / Unit 4).
 - \(R^2\) cannot be directly compared between models with different dependent variables (e.g., a level model vs. a log model).
 
-**Standard Error of the Regression (SER):** The SER measures the average magnitude of the residuals in units of \(y\):
+<strong>Standard Error of the Regression (SER):</strong> The SER measures the average magnitude of the residuals in units of \(y\):
 
 \[ \text{SER} = \hat{\sigma} = \sqrt{\frac{\text{SSR}}{n - k - 1}} \]
 
-where \(k\) is the number of slope coefficients and the denominator \(n - k - 1\) is the **degrees of freedom**. For a simple regression (\(k = 1\)), this is \(\sqrt{\text{SSR}/(n-2)}\). Dividing by \(n-2\) rather than \(n\) corrects for the fact that two parameters (\(\hat{\alpha}, \hat{\beta}\)) have been estimated, consuming two degrees of freedom. For large \(n\), the distinction is negligible.
+where \(k\) is the number of slope coefficients and the denominator \(n - k - 1\) is the <strong>degrees of freedom</strong>. For a simple regression (\(k = 1\)), this is \(\sqrt{\text{SSR}/(n-2)}\). Dividing by \(n-2\) rather than \(n\) corrects for the fact that two parameters (\(\hat{\alpha}, \hat{\beta}\)) have been estimated, consuming two degrees of freedom. For large \(n\), the distinction is negligible.
 
 ## 2.4 OLS Estimator Properties
 
-What makes OLS a good estimator? We evaluate estimators along three key dimensions: **unbiasedness**, **consistency**, and **efficiency**.
+What makes OLS a good estimator? We evaluate estimators along three key dimensions: <strong>unbiasedness</strong>, <strong>consistency</strong>, and <strong>efficiency</strong>.
 
 <div class="definition"><strong>Unbiasedness:</strong> An estimator \(\hat{\beta}\) is unbiased if, in expectation over all possible samples, it equals the true population parameter: \(\mathbb{E}[\hat{\beta}] = \beta_P\). This means that even though any single estimate will differ from \(\beta_P\) due to sampling error, if we were to take infinitely many samples and average our estimates, we would recover the true value exactly.</div>
 
@@ -141,7 +141,7 @@ What makes OLS a good estimator? We evaluate estimators along three key dimensio
 
 <div class="definition"><strong>Efficiency:</strong> Among all unbiased estimators, the most efficient one has the smallest variance. A smaller variance in the sampling distribution means that any given estimate is likely to be closer to the true population parameter.</div>
 
-The **Gauss-Markov Theorem** establishes when OLS achieves all three of these properties simultaneously. Under the classical linear regression assumptions — (1) the model is correctly specified (linear in parameters), (2) the error term has zero conditional mean \(\mathbb{E}[U_i \mid X_i] = 0\), (3) homoskedasticity \(\text{Var}(U_i \mid X_i) = \sigma^2\), (4) no perfect multicollinearity among regressors, and (5) the observations are i.i.d. — OLS is the **Best Linear Unbiased Estimator (BLUE)**: it is the most efficient (lowest variance) among all linear unbiased estimators.
+The <strong>Gauss-Markov Theorem</strong> establishes when OLS achieves all three of these properties simultaneously. Under the classical linear regression assumptions — (1) the model is correctly specified (linear in parameters), (2) the error term has zero conditional mean \(\mathbb{E}[U_i \mid X_i] = 0\), (3) homoskedasticity \(\text{Var}(U_i \mid X_i) = \sigma^2\), (4) no perfect multicollinearity among regressors, and (5) the observations are i.i.d. — OLS is the <strong>Best Linear Unbiased Estimator (BLUE)</strong>: it is the most efficient (lowest variance) among all linear unbiased estimators.
 
 When we apply OLS to a sample and obtain \(\hat{\beta}_{OLS}\), we can show that:
 
@@ -161,41 +161,41 @@ This expression has intuitive implications. First, a larger error variance \(\si
 
 ## 3.1 Hypothesis Testing: Motivation and the Sampling Distribution
 
-A point estimate such as \(\hat{\beta}_{OLS} = 0.1\) answers the question "what is our best guess of the population parameter?" but it cannot answer the deeper question: "is this effect real, or did it arise merely by chance due to the particular sample we happened to draw?" **Hypothesis testing** is the formal statistical framework for making statements about population parameters based on sample evidence.
+A point estimate such as \(\hat{\beta}_{OLS} = 0.1\) answers the question "what is our best guess of the population parameter?" but it cannot answer the deeper question: "is this effect real, or did it arise merely by chance due to the particular sample we happened to draw?" <strong>Hypothesis testing</strong> is the formal statistical framework for making statements about population parameters based on sample evidence.
 
 The setup is always the same: there is some population in which the true parameter \(\beta_P\) exists. We have drawn a sample and computed \(\hat{\beta}^* = 0.1\). Now, is this value surprising if in fact the true effect were zero? Could we have obtained 0.1 purely by sampling a weird subset of the population?
 
-To answer this, we need the **sampling distribution** of \(\hat{\beta}_{OLS}\). It can be shown — via asymptotic theory — that as \(n \to \infty\):
+To answer this, we need the <strong>sampling distribution</strong> of \(\hat{\beta}_{OLS}\). It can be shown — via asymptotic theory — that as \(n \to \infty\):
 
 \[ \hat{\beta}_{OLS} \overset{a}{\sim} \mathcal{N}\left(\beta_P, \frac{\sigma^2}{\sum(x_i - \bar{x})^2}\right) \]
 
-The problem is that this distribution depends on \(\sigma^2\), the variance of the population error, which we do not observe. We must estimate \(\sigma^2\) from the data. Replacing \(\sigma^2\) with its sample estimator \(\hat{\sigma}^2\) introduces additional uncertainty, and as a result the standardised statistic no longer follows a normal distribution but instead follows a **t-distribution**:
+The problem is that this distribution depends on \(\sigma^2\), the variance of the population error, which we do not observe. We must estimate \(\sigma^2\) from the data. Replacing \(\sigma^2\) with its sample estimator \(\hat{\sigma}^2\) introduces additional uncertainty, and as a result the standardised statistic no longer follows a normal distribution but instead follows a <strong>t-distribution</strong>:
 
 \[ t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})} \sim t_{n-k} \]
 
 where \(\beta_0\) is the hypothesised null value (typically zero), \(\widehat{SE}(\hat{\beta}_{OLS})\) is the estimated standard error of the OLS estimator, \(n\) is the number of observations, and \(k\) is the number of regressors including the constant.
 
-The **t-distribution** resembles the standard normal but has heavier tails, reflecting the additional uncertainty introduced by estimating \(\sigma^2\). Crucially, as \(n \to \infty\) (so the degrees of freedom grow), the t-distribution converges exactly to the standard normal.
+The <strong>t-distribution</strong> resembles the standard normal but has heavier tails, reflecting the additional uncertainty introduced by estimating \(\sigma^2\). Crucially, as \(n \to \infty\) (so the degrees of freedom grow), the t-distribution converges exactly to the standard normal.
 
 ## 3.2 Constructing a Hypothesis Test
 
 The general procedure for a hypothesis test in regression is as follows.
 
-**Step 1 — Specify the null and alternative hypotheses.** The null hypothesis \(H_0\) specifies a particular value for the population parameter, most commonly:
+<strong>Step 1 — Specify the null and alternative hypotheses.</strong> The null hypothesis \(H_0\) specifies a particular value for the population parameter, most commonly:
 
 \[ H_0: \beta_P = 0 \]
 
-The alternative hypothesis \(H_1\) specifies the region of departures from \(H_0\) that we would find economically meaningful. For a **two-tailed test**, \(H_1: \beta_P \neq 0\), meaning we care about both positive and negative effects. For a **one-tailed test**, either \(H_1: \beta_P > 0\) or \(H_1: \beta_P < 0\).
+The alternative hypothesis \(H_1\) specifies the region of departures from \(H_0\) that we would find economically meaningful. For a <strong>two-tailed test</strong>, \(H_1: \beta_P \neq 0\), meaning we care about both positive and negative effects. For a <strong>one-tailed test</strong>, either \(H_1: \beta_P > 0\) or \(H_1: \beta_P < 0\).
 
-**Step 2 — Compute the t-statistic.** Under \(H_0: \beta_P = \beta_0\):
+<strong>Step 2 — Compute the t-statistic.</strong> Under \(H_0: \beta_P = \beta_0\):
 
 \[ t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})} \]
 
 Most statistical software assumes \(\beta_0 = 0\) by default, so the t-statistic reported in regression output is simply \(t = \hat{\beta}^* / \widehat{SE}(\hat{\beta}_{OLS})\).
 
-**Step 3 — Determine the critical value.** Look up the critical value \(t_{\text{crit}}\) from a t-distribution table with \(n - k\) degrees of freedom and the chosen significance level \(\alpha\) (typically 0.05). For a two-tailed test, we use the \(\alpha/2\) percentile; for a one-tailed test, the \(\alpha\) percentile.
+<strong>Step 3 — Determine the critical value.</strong> Look up the critical value \(t_{\text{crit}}\) from a t-distribution table with \(n - k\) degrees of freedom and the chosen significance level \(\alpha\) (typically 0.05). For a two-tailed test, we use the \(\alpha/2\) percentile; for a one-tailed test, the \(\alpha\) percentile.
 
-**Step 4 — Make a decision.** Reject \(H_0\) if \(|t| > t_{\text{crit}}\) (two-tailed) or \(t > t_{\text{crit}}\) (one-tailed, upper). A commonly used rule of thumb is that if the absolute value of the t-statistic exceeds approximately 2, the coefficient is statistically significant at the 5% level.
+<strong>Step 4 — Make a decision.</strong> Reject \(H_0\) if \(|t| > t_{\text{crit}}\) (two-tailed) or \(t > t_{\text{crit}}\) (one-tailed, upper). A commonly used rule of thumb is that if the absolute value of the t-statistic exceeds approximately 2, the coefficient is statistically significant at the 5% level.
 
 As a worked example: suppose we have estimated the effect of TV advertising spend on company sales, obtaining a coefficient of 10 with a standard error of 3. The t-statistic is \(t = 10/3 \approx 3.33\). With, say, 30 degrees of freedom and a one-tailed test at the 5% level, the critical value is approximately 1.70. Since \(3.33 > 1.70\), we reject \(H_0: \beta_{TV} = 0\) and conclude that TV advertising has a statistically significant positive effect on sales.
 
@@ -211,13 +211,13 @@ and obtain \(\hat{\beta}_1 = 10\) with \(\widehat{SE}(\hat{\beta}_1) = 3\). The 
 
 The degrees of freedom for this statistic are \(n - k\), where \(k\) is the total number of parameters estimated (including the constant). Looking up the t-distribution at a 5% significance level for a one-tailed test with the appropriate degrees of freedom gives a critical value of approximately 1.7. Because \(3.33 > 1.7\), we reject the null hypothesis and conclude, with statistical confidence, that TV advertising spending positively and significantly affects weekly sales.
 
-It is important to remember that this inference is only valid if the model has been correctly specified — that is, if we have included all variables that are both important determinants of sales and correlated with TV spending, so that the OLS estimator is unbiased. Ignoring relevant variables leads to the **omitted variable bias** discussed in Unit 4.
+It is important to remember that this inference is only valid if the model has been correctly specified — that is, if we have included all variables that are both important determinants of sales and correlated with TV spending, so that the OLS estimator is unbiased. Ignoring relevant variables leads to the <strong>omitted variable bias</strong> discussed in Unit 4.
 
 ## 3.4 Confidence Intervals
 
-A **confidence interval** for a regression coefficient provides a range of plausible values for the population parameter, rather than just a single point estimate. A \(95\%\) confidence interval for \(\beta_P\) is constructed as:
+A <strong>confidence interval</strong> for a regression coefficient provides a range of plausible values for the population parameter, rather than just a single point estimate. A \(95\%\) confidence interval for \(\beta_P\) is constructed as:
 
-\[ \left[\hat{\beta}^* - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^* + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right] \]
+\[ \left[\hat{\beta}^<em> - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^</em> + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right] \]
 
 where \(t_{\alpha/2, \, n-k}\) is the \((1 - \alpha/2)\) percentile (i.e., the 97.5th percentile for a 95% interval) of the t-distribution with \(n - k\) degrees of freedom. The choice of the 97.5th percentile arises because the two tails each contribute \(2.5\%\) probability, totalling the \(5\%\) outside the 95% region.
 
@@ -231,13 +231,13 @@ The width of the confidence interval is determined by the standard error of the 
 
 ## 4.1 Omitted Variable Bias: The Problem
 
-One of the most pernicious threats to valid econometric inference is **omitted variable bias (OVB)**, which arises when an important determinant of the dependent variable is excluded from the regression model and that omitted variable is correlated with one of the included regressors.
+One of the most pernicious threats to valid econometric inference is <strong>omitted variable bias (OVB)</strong>, which arises when an important determinant of the dependent variable is excluded from the regression model and that omitted variable is correlated with one of the included regressors.
 
 To see the mechanism concretely, consider the goal of estimating the effect of education on wages. Suppose we estimate the simple regression:
 
 \[ \text{Wage}_i = \alpha + \beta_1 \text{Education}_i + U_i \]
 
-The population, however, contains a richer truth: wages are also determined by an individual's innate **ability**, denoted \(A_i\), which affects earnings positively:
+The population, however, contains a richer truth: wages are also determined by an individual's innate <strong>ability</strong>, denoted \(A_i\), which affects earnings positively:
 
 \[ \text{Wage}_i = \alpha + \beta_1 \text{Education}_i + \beta_2 A_i + V_i \]
 
@@ -257,12 +257,12 @@ Taking expectations (and using the fact that \(V_i\) is orthogonal to education 
 
 \[ \mathbb{E}[\hat{\beta}_1] = \beta_1 + \beta_2 \cdot \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}}) \cdot \mathbb{E}[A_i]}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2} \]
 
-The second term is the **bias**. Its sign depends on (a) the sign of \(\beta_2\) — the effect of the omitted variable on the dependent variable — and (b) the sign of the correlation between the omitted variable and the included regressor. In our example:
+The second term is the <strong>bias</strong>. Its sign depends on (a) the sign of \(\beta_2\) — the effect of the omitted variable on the dependent variable — and (b) the sign of the correlation between the omitted variable and the included regressor. In our example:
 
 - \(\beta_2 > 0\): ability increases wages
 - \(\text{Corr}(\text{Education}, \text{Ability}) > 0\): more able people get more education
 
-Both factors are positive, so the bias term is **positive**, meaning \(\mathbb{E}[\hat{\beta}_1] > \beta_{1,P}\). Our estimate of the return to education is **upwardly biased** because it is inadvertently capturing part of the return to ability. We are over-attributing the earnings of high-ability individuals (who also happen to be highly educated) to education, when part of that earnings premium is really due to ability.
+Both factors are positive, so the bias term is <strong>positive</strong>, meaning \(\mathbb{E}[\hat{\beta}_1] > \beta_{1,P}\). Our estimate of the return to education is <strong>upwardly biased</strong> because it is inadvertently capturing part of the return to ability. We are over-attributing the earnings of high-ability individuals (who also happen to be highly educated) to education, when part of that earnings premium is really due to ability.
 
 A general rule for the direction of OVB: if the omitted variable positively affects \(Y\) and is positively correlated with the included regressor, the bias is upward. If the signs are opposite, the bias is downward. The table below summarises:
 
@@ -277,24 +277,24 @@ The solution to OVB is to include the omitted variable if it can be measured, or
 
 Chaussé's Topic 3 formally enumerates the six classical assumptions for the multiple regression model \(y = \beta_0 + \beta_1 x_1 + \cdots + \beta_k x_k + u\):
 
-- **A1 — Linear in parameters:** The model is correctly specified as linear in the \(\beta_j\)'s (though \(x_j\)'s may be nonlinear functions of underlying variables).
-- **A2 — Random sampling:** The observations \(\{y_i, x_{1i}, \ldots, x_{ki}\}\) are independently and identically distributed (i.i.d.), which holds under simple random sampling.
-- **A3 — No perfect collinearity:** No regressor is an exact linear combination of other regressors. If this fails, OLS cannot be computed.
-- **A4 — Zero conditional mean:** \(\mathbb{E}[u \mid x_1, \ldots, x_k] = 0\). This is the key identifying assumption; it ensures OLS is unbiased.
-- **A5 — Homoskedasticity:** \(\text{Var}(u_i \mid x_1, \ldots, x_k) = \sigma^2\) for all \(i\). If violated, OLS is still unbiased but no longer BLUE.
-- **A6 — Normality of errors:** \(u_i \mid \{x_1, \ldots, x_k\} \sim \mathcal{N}(0, \sigma^2)\). Required for exact finite-sample t and F distributions; in large samples, A6 is not needed (see Unit 10 on asymptotic theory).
+- <strong>A1 — Linear in parameters:</strong> The model is correctly specified as linear in the \(\beta_j\)'s (though \(x_j\)'s may be nonlinear functions of underlying variables).
+- <strong>A2 — Random sampling:</strong> The observations \(\{y_i, x_{1i}, \ldots, x_{ki}\}\) are independently and identically distributed (i.i.d.), which holds under simple random sampling.
+- <strong>A3 — No perfect collinearity:</strong> No regressor is an exact linear combination of other regressors. If this fails, OLS cannot be computed.
+- <strong>A4 — Zero conditional mean:</strong> \(\mathbb{E}[u \mid x_1, \ldots, x_k] = 0\). This is the key identifying assumption; it ensures OLS is unbiased.
+- <strong>A5 — Homoskedasticity:</strong> \(\text{Var}(u_i \mid x_1, \ldots, x_k) = \sigma^2\) for all \(i\). If violated, OLS is still unbiased but no longer BLUE.
+- <strong>A6 — Normality of errors:</strong> \(u_i \mid \{x_1, \ldots, x_k\} \sim \mathcal{N}(0, \sigma^2)\). Required for exact finite-sample t and F distributions; in large samples, A6 is not needed (see Unit 10 on asymptotic theory).
 
 Under A1–A5, OLS is BLUE (Gauss-Markov). Under A1–A6, OLS is the best unbiased estimator (BUE) overall, not just among linear estimators.
 
-**A weaker sufficient condition for consistency** (replacing A4): A4\('\): \(\mathbb{E}[u] = 0\) and \(\text{Cov}(x_j, u) = 0\) for all \(j\). This is weaker than full zero conditional mean but still ensures unbiasedness of OLS.
+<strong>A weaker sufficient condition for consistency</strong> (replacing A4): A4\('\): \(\mathbb{E}[u] = 0\) and \(\text{Cov}(x_j, u) = 0\) for all \(j\). This is weaker than full zero conditional mean but still ensures unbiasedness of OLS.
 
 ## 4.4 Multicollinearity
 
-**Multicollinearity** refers to the situation in which two or more of the explanatory variables in a regression are highly correlated with one another. This is distinct from **perfect collinearity**, in which one regressor is an exact linear function of another (which would prevent OLS from being estimated at all). In the case of multicollinearity, estimation is still possible — but it becomes very imprecise.
+<strong>Multicollinearity</strong> refers to the situation in which two or more of the explanatory variables in a regression are highly correlated with one another. This is distinct from <strong>perfect collinearity</strong>, in which one regressor is an exact linear function of another (which would prevent OLS from being estimated at all). In the case of multicollinearity, estimation is still possible — but it becomes very imprecise.
 
 Consider a model explaining a company's sales using both TV advertising spend and radio advertising spend as regressors. If the company tends to run TV and radio campaigns simultaneously, these two variables will be highly correlated. Intuitively, to estimate the separate effect of TV advertising, one would ideally observe cases where TV spend increases while radio spend stays constant — and similarly for radio. High multicollinearity means there are few such "controlled" observations in the data.
 
-The practical manifestation in regression output is that the **standard errors** of the multicollinear coefficients become very large. Even if the model as a whole has high explanatory power (high \(R^2\)), the individual coefficients may each be statistically insignificant when tested individually. This occurs because OLS cannot reliably apportion the joint effect of the two collinear variables between them. The estimate for the effect of TV might range widely depending on which particular sample is drawn.
+The practical manifestation in regression output is that the <strong>standard errors</strong> of the multicollinear coefficients become very large. Even if the model as a whole has high explanatory power (high \(R^2\)), the individual coefficients may each be statistically insignificant when tested individually. This occurs because OLS cannot reliably apportion the joint effect of the two collinear variables between them. The estimate for the effect of TV might range widely depending on which particular sample is drawn.
 
 <div class="definition"><strong>Multicollinearity:</strong> High correlation between two or more explanatory variables in a regression model, resulting in inflated standard errors for the affected coefficients and difficulty in separately identifying their individual effects on the dependent variable.</div>
 
@@ -310,7 +310,7 @@ In a multiple regression model with several explanatory variables:
 
 \[ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_k X_{ki} + U_i \]
 
-each coefficient \(\beta_j\) is interpreted as the **partial effect** of variable \(X_j\) on \(Y\), holding all other explanatory variables constant. This is sometimes called the **ceteris paribus** interpretation. Mathematically, it is the partial derivative of the conditional expectation of \(Y\) with respect to \(X_j\):
+each coefficient \(\beta_j\) is interpreted as the <strong>partial effect</strong> of variable \(X_j\) on \(Y\), holding all other explanatory variables constant. This is sometimes called the <strong>ceteris paribus</strong> interpretation. Mathematically, it is the partial derivative of the conditional expectation of \(Y\) with respect to \(X_j\):
 
 \[ \frac{\partial \mathbb{E}[Y \mid X_1, \ldots, X_k]}{\partial X_j} = \beta_j \]
 
@@ -318,7 +318,7 @@ For example, in a model explaining house prices as a function of both the number
 
 \[ \text{Price}_i = \alpha + \beta_1 \text{Bedrooms}_i + \beta_2 \text{SqMetres}_i + U_i \]
 
-\(\beta_1\) represents the expected increase in house price for one additional bedroom, **holding square meterage constant**. Without the "holding constant" clause, \(\beta_1\) cannot be cleanly interpreted because larger houses tend to have both more bedrooms and more square metres, confounding the two effects.
+\(\beta_1\) represents the expected increase in house price for one additional bedroom, <strong>holding square meterage constant</strong>. Without the "holding constant" clause, \(\beta_1\) cannot be cleanly interpreted because larger houses tend to have both more bedrooms and more square metres, confounding the two effects.
 
 This partial-effects interpretation is one of the primary motivations for using multiple regression rather than a series of bivariate regressions. By including all relevant control variables, we hold them constant and isolate the marginal effect of the variable of interest.
 
@@ -328,9 +328,9 @@ This partial-effects interpretation is one of the primary motivations for using 
 
 ## 5.1 Introduction to F-Statistics
 
-The t-test developed in Unit 3 is designed for testing a single restriction on a single population parameter, such as \(H_0: \beta_j = 0\). When we wish to test whether **multiple** coefficients are simultaneously zero — a **joint hypothesis** — the t-test is insufficient, because conducting multiple individual t-tests inflates the probability of incorrectly rejecting at least one true null hypothesis.
+The t-test developed in Unit 3 is designed for testing a single restriction on a single population parameter, such as \(H_0: \beta_j = 0\). When we wish to test whether <strong>multiple</strong> coefficients are simultaneously zero — a <strong>joint hypothesis</strong> — the t-test is insufficient, because conducting multiple individual t-tests inflates the probability of incorrectly rejecting at least one true null hypothesis.
 
-The appropriate tool for joint hypothesis testing is the **F-test**, which uses the **F-statistic**. The null hypothesis for a standard F-test of overall model significance is:
+The appropriate tool for joint hypothesis testing is the <strong>F-test</strong>, which uses the <strong>F-statistic</strong>. The null hypothesis for a standard F-test of overall model significance is:
 
 \[ H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0 \]
 
@@ -338,8 +338,8 @@ The appropriate tool for joint hypothesis testing is the **F-test**, which uses 
 
 The construction of the F-statistic rests on comparing two regressions:
 
-1. The **unrestricted model**: the full regression including all regressors, yielding sum of squared residuals \(\text{SSR}_U\).
-2. The **restricted model**: the regression that imposes \(H_0\), yielding sum of squared residuals \(\text{SSR}_R\).
+1. The <strong>unrestricted model</strong>: the full regression including all regressors, yielding sum of squared residuals \(\text{SSR}_U\).
+2. The <strong>restricted model</strong>: the regression that imposes \(H_0\), yielding sum of squared residuals \(\text{SSR}_R\).
 
 Because adding regressors always reduces (or at worst leaves unchanged) the SSR, we always have \(\text{SSR}_R \geq \text{SSR}_U\). The question is whether the reduction is large enough to be statistically significant — that is, whether including those extra variables genuinely improves the model's fit, or whether the reduction is only what we would expect even if those variables were irrelevant noise.
 
@@ -347,7 +347,7 @@ The F-statistic is:
 
 \[ F = \frac{(\text{SSR}_R - \text{SSR}_U) / q}{\text{SSR}_U / (n - k - 1)} \]
 
-where \(q\) is the number of restrictions being tested (the number of coefficients set to zero under \(H_0\)), \(n\) is the number of observations, and \(k\) is the number of slope coefficients in the unrestricted model. Under \(H_0\) and the classical regression assumptions, this statistic follows an **F-distribution** with \((q, \, n - k - 1)\) degrees of freedom.
+where \(q\) is the number of restrictions being tested (the number of coefficients set to zero under \(H_0\)), \(n\) is the number of observations, and \(k\) is the number of slope coefficients in the unrestricted model. Under \(H_0\) and the classical regression assumptions, this statistic follows an <strong>F-distribution</strong> with \((q, \, n - k - 1)\) degrees of freedom.
 
 <div class="definition"><strong>F-Distribution:</strong> A continuous probability distribution that is the ratio of two independent chi-squared random variables, each divided by their respective degrees of freedom. It is strictly positive and skewed to the right, and it depends on two parameters: the numerator degrees of freedom \(d_1\) and denominator degrees of freedom \(d_2\).</div>
 
@@ -385,19 +385,19 @@ Suppose with \(n = 30\) observations, \(\text{SSR}_U = 110\) and \(\text{SSR}_R 
 
 \[ F = \frac{(120 - 110)/2}{110/26} = \frac{5}{4.23} \approx 1.18 \]
 
-With the critical value for \(F_{2, 26}\) at the 5% level being approximately 3.37, the computed F-statistic of 1.18 does not exceed this threshold. We therefore **fail to reject** \(H_0\) and cannot conclude that class size and number of siblings jointly explain variation in SAT scores at the 5% significance level. In a case this marginal, it is especially important to consult the F-table rather than relying on approximations.
+With the critical value for \(F_{2, 26}\) at the 5% level being approximately 3.37, the computed F-statistic of 1.18 does not exceed this threshold. We therefore <strong>fail to reject</strong> \(H_0\) and cannot conclude that class size and number of siblings jointly explain variation in SAT scores at the 5% significance level. In a case this marginal, it is especially important to consult the F-table rather than relying on approximations.
 
 ## 5.4 Testing Non-Standard Hypotheses
 
 Not all economically interesting hypotheses are of the form \(\beta_j = 0\). Consider the hypothesis that a two-year college degree has the same return as a four-year degree: \(H_0: \beta_{jc} = \beta_{univ}\). There are three equivalent approaches:
 
-**Direct t-test:** Compute the t-statistic using the variance-covariance matrix of \(\hat{\beta}\):
+<strong>Direct t-test:</strong> Compute the t-statistic using the variance-covariance matrix of \(\hat{\beta}\):
 
 \[ t = \frac{\hat{\beta}_{jc} - \hat{\beta}_{univ}}{\sqrt{\widehat{\text{Var}}(\hat{\beta}_{jc}) + \widehat{\text{Var}}(\hat{\beta}_{univ}) - 2\widehat{\text{Cov}}(\hat{\beta}_{jc}, \hat{\beta}_{univ})}} \]
 
 This requires `vcov(res)` to extract the full covariance matrix.
 
-**F-test approach:** Compare the unrestricted model (with both `jc` and `univ`) against the restricted model (with their sum `jc + univ` as a single regressor):
+<strong>F-test approach:</strong> Compare the unrestricted model (with both `jc` and `univ`) against the restricted model (with their sum `jc + univ` as a single regressor):
 
 ```r
 res_u <- lm(lwage ~ jc + univ + exper, data = data)
@@ -406,7 +406,7 @@ res_r <- lm(lwage ~ I(jc + univ) + exper, data = data)
 
 The F-statistic is \(F = t^2\) when there is one restriction.
 
-**Indirect (reparametrisation) t-test:** Rewrite the model so the coefficient of interest directly appears. Replace `jc` by `jc` and `jc + univ` (or similarly), so the coefficient on `jc` in the new model equals \(\beta_{jc} - \beta_{univ}\), and its t-statistic directly tests the hypothesis.
+<strong>Indirect (reparametrisation) t-test:</strong> Rewrite the model so the coefficient of interest directly appears. Replace `jc` by `jc` and `jc + univ` (or similarly), so the coefficient on `jc` in the new model equals \(\beta_{jc} - \beta_{univ}\), and its t-statistic directly tests the hypothesis.
 
 For the two-year vs. four-year example with \(n = 6763\):
 \[ \widehat{\log(\text{wage})} = 1.472 + 0.067\,jc + 0.077\,univ + 0.005\,exper \]
@@ -426,7 +426,7 @@ An illuminating relationship exists between the F-test and the t-test: when the 
 
 That is, an F-statistic with one numerator degree of freedom and \(n-k-1\) denominator degrees of freedom equals the square of the t-statistic with \(n-k-1\) degrees of freedom. This means that for testing the significance of a single coefficient, the two tests yield exactly the same conclusion, and the t-test is preferred purely for convenience (it does not require running an auxiliary restricted regression).
 
-The F-test becomes essential when testing **joint restrictions** — that is, when we wish to ask "are these variables, taken together, significant?" The F-test properly accounts for the correlations among coefficient estimates and avoids the multiple-testing inflation that would arise from running many individual t-tests.
+The F-test becomes essential when testing <strong>joint restrictions</strong> — that is, when we wish to ask "are these variables, taken together, significant?" The F-test properly accounts for the correlations among coefficient estimates and avoids the multiple-testing inflation that would arise from running many individual t-tests.
 
 ---
 
@@ -434,11 +434,11 @@ The F-test becomes essential when testing **joint restrictions** — that is, wh
 
 ## Random Variables and Expected Values
 
-Econometrics is built on probability theory. A **random variable** \(X\) is a variable whose value is determined by a random experiment. For our purposes, we work exclusively with continuous random variables, characterised by a probability density function \(f(x)\) that satisfies:
+Econometrics is built on probability theory. A <strong>random variable</strong> \(X\) is a variable whose value is determined by a random experiment. For our purposes, we work exclusively with continuous random variables, characterised by a probability density function \(f(x)\) that satisfies:
 
 \[ f(x) \geq 0 \quad \text{and} \quad \int_{-\infty}^{\infty} f(x) \, dx = 1 \]
 
-The **expected value** (or **population mean**) of a random variable is:
+The <strong>expected value</strong> (or <strong>population mean</strong>) of a random variable is:
 
 \[ \mathbb{E}[X] = \int_{-\infty}^{\infty} x \, f(x) \, dx \]
 
@@ -446,9 +446,9 @@ Because integration is a linear operator, the expected value inherits a linearit
 
 \[ \mathbb{E}[a + bX + cY] = a + b\,\mathbb{E}[X] + c\,\mathbb{E}[Y] \]
 
-for any scalars \(a, b, c\) and random variables \(X, Y\). Critically, linearity does **not** extend to non-linear functions: in general, \(\mathbb{E}[g(X)] \neq g(\mathbb{E}[X])\) unless \(g\) is linear. In particular, \(\mathbb{E}[X^2] \neq (\mathbb{E}[X])^2\).
+for any scalars \(a, b, c\) and random variables \(X, Y\). Critically, linearity does <strong>not</strong> extend to non-linear functions: in general, \(\mathbb{E}[g(X)] \neq g(\mathbb{E}[X])\) unless \(g\) is linear. In particular, \(\mathbb{E}[X^2] \neq (\mathbb{E}[X])^2\).
 
-The **variance** of \(X\) measures the dispersion of \(X\) around its mean:
+The <strong>variance</strong> of \(X\) measures the dispersion of \(X\) around its mean:
 
 \[ \text{Var}(X) = \mathbb{E}\left[(X - \mathbb{E}[X])^2\right] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \]
 
@@ -458,17 +458,17 @@ Key variance properties are:
 
 \[ \text{Var}(aX + bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \, \text{Cov}(X,Y) \]
 
-The **covariance** between two random variables \(X\) and \(Y\) is:
+The <strong>covariance</strong> between two random variables \(X\) and \(Y\) is:
 
 \[ \text{Cov}(X, Y) = \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] \]
 
 If \(X\) and \(Y\) tend to move together (both above their means at the same time), the covariance is positive. If they tend to move in opposite directions, the covariance is negative.
 
-**Independence** between \(X\) and \(Y\) means that knowing the value of one provides no information about the other. Independence is a stronger condition than zero correlation: if \(X \perp Y\), then \(\text{Cov}(X, Y) = 0\), but not vice versa. Independence implies that \(\text{Cov}(g(X), h(Y)) = 0\) for all functions \(g\) and \(h\).
+<strong>Independence</strong> between \(X\) and \(Y\) means that knowing the value of one provides no information about the other. Independence is a stronger condition than zero correlation: if \(X \perp Y\), then \(\text{Cov}(X, Y) = 0\), but not vice versa. Independence implies that \(\text{Cov}(g(X), h(Y)) = 0\) for all functions \(g\) and \(h\).
 
 ## The Normal Distribution
 
-The **normal distribution** is the most important distribution in econometrics. We write \(X \sim \mathcal{N}(\mu, \sigma^2)\) to mean that \(X\) is normally distributed with mean \(\mu\) and variance \(\sigma^2\). The normal distribution is characterised by its perfect bell-shaped, symmetric density centred at \(\mu\); knowing \(\mu\) and \(\sigma^2\) completely describes the distribution.
+The <strong>normal distribution</strong> is the most important distribution in econometrics. We write \(X \sim \mathcal{N}(\mu, \sigma^2)\) to mean that \(X\) is normally distributed with mean \(\mu\) and variance \(\sigma^2\). The normal distribution is characterised by its perfect bell-shaped, symmetric density centred at \(\mu\); knowing \(\mu\) and \(\sigma^2\) completely describes the distribution.
 
 A crucial closure property of the normal is that linear combinations of independent normal random variables are also normal. If \(X \sim \mathcal{N}(\mu_X, \sigma^2_X)\) and \(Y \sim \mathcal{N}(\mu_Y, \sigma^2_Y)\) are independent, then:
 
@@ -478,7 +478,7 @@ This property is the reason why OLS estimators (which are linear functions of th
 
 ## The Chi-Squared Distribution
 
-The **chi-squared distribution** \(\chi^2(d)\) with \(d\) degrees of freedom is defined as the sum of \(d\) independent squared standard normal random variables:
+The <strong>chi-squared distribution</strong> \(\chi^2(d)\) with \(d\) degrees of freedom is defined as the sum of \(d\) independent squared standard normal random variables:
 
 \[ Z = \sum_{i=1}^{d} X_i^2, \quad X_i \overset{i.i.d.}{\sim} \mathcal{N}(0,1) \implies Z \sim \chi^2(d) \]
 
@@ -486,7 +486,7 @@ Properties: \(\mathbb{E}[Z] = d\) and \(\text{Var}(Z) = 2d\). The chi-squared di
 
 ## The t-Distribution
 
-The **t-distribution** with \(d\) degrees of freedom arises as the ratio of a standard normal to the square root of a chi-squared divided by its degrees of freedom:
+The <strong>t-distribution</strong> with \(d\) degrees of freedom arises as the ratio of a standard normal to the square root of a chi-squared divided by its degrees of freedom:
 
 \[ T = \frac{X}{\sqrt{Y/d}}, \quad X \sim \mathcal{N}(0,1), \quad Y \sim \chi^2(d), \quad X \perp Y \implies T \sim t_d \]
 
@@ -496,7 +496,7 @@ The t-distribution is the distribution of the OLS t-statistic under the null hyp
 
 ## The F-Distribution
 
-The **F-distribution** with degrees of freedom \(d_1\) and \(d_2\) is defined as the ratio of two independent chi-squared random variables, each divided by its degrees of freedom:
+The <strong>F-distribution</strong> with degrees of freedom \(d_1\) and \(d_2\) is defined as the ratio of two independent chi-squared random variables, each divided by its degrees of freedom:
 
 \[ F = \frac{X/d_1}{Y/d_2}, \quad X \sim \chi^2(d_1), \quad Y \sim \chi^2(d_2), \quad X \perp Y \implies F \sim F(d_1, d_2) \]
 
@@ -504,7 +504,7 @@ The F-distribution is strictly positive and skewed to the right. It is the sampl
 
 ## Conditional Expectation and the Law of Iterated Expectations
 
-The **conditional expectation** \(\mathbb{E}[Y \mid X]\) is the expected value of \(Y\) given that \(X\) is fixed at a particular value. When \(X\) is treated as a known constant, all of the usual properties of expectation apply with \(X\) treated as a scalar. In particular:
+The <strong>conditional expectation</strong> \(\mathbb{E}[Y \mid X]\) is the expected value of \(Y\) given that \(X\) is fixed at a particular value. When \(X\) is treated as a known constant, all of the usual properties of expectation apply with \(X\) treated as a scalar. In particular:
 
 \[ \mathbb{E}[a + bX + cY \mid X] = a + bX + c\,\mathbb{E}[Y \mid X] \]
 
@@ -516,24 +516,24 @@ The zero conditional mean assumption \(\mathbb{E}[U \mid X] = 0\) is the core id
 
 ## Tutorial 1: Installing R and RStudio
 
-**R** is a free, open-source statistical programming language. It is a scripting language with a vast ecosystem of user-contributed packages (over 1,300 at the time of these tutorials). R is used at scale by organisations including Google, Facebook, Twitter, and the New York Times for data analysis and visualisation.
+<strong>R</strong> is a free, open-source statistical programming language. It is a scripting language with a vast ecosystem of user-contributed packages (over 1,300 at the time of these tutorials). R is used at scale by organisations including Google, Facebook, Twitter, and the New York Times for data analysis and visualisation.
 
 To install R, go to `r-project.org`, select your operating system (Windows, Mac, or Linux), and download the base installation. For Windows users, selecting the `base` option and following the prompts through the installer is sufficient. After installation, it is recommended to create a dedicated working directory (e.g., `C:\Users\<name>\R\`) and configure the R shortcut to launch from that directory, so that all data files and workspace files are kept together.
 
-**RStudio** is an integrated development environment (IDE) for R that makes working with R far more productive. Download it from `rstudio.com`. RStudio provides:
-- A **console** for running R commands interactively
-- A **source editor** for writing and saving scripts
-- A **workspace panel** showing all currently defined objects
-- A **history panel** tracking all commands entered
-- A **file browser** for navigating directories and setting the working directory
-- A **plots panel** for visualising output
-- Integrated **help** and **code completion** (via the Tab key)
+<strong>RStudio</strong> is an integrated development environment (IDE) for R that makes working with R far more productive. Download it from `rstudio.com`. RStudio provides:
+- A <strong>console</strong> for running R commands interactively
+- A <strong>source editor</strong> for writing and saving scripts
+- A <strong>workspace panel</strong> showing all currently defined objects
+- A <strong>history panel</strong> tracking all commands entered
+- A <strong>file browser</strong> for navigating directories and setting the working directory
+- A <strong>plots panel</strong> for visualising output
+- Integrated <strong>help</strong> and <strong>code completion</strong> (via the Tab key)
 
-RStudio also supports **projects**, which save the workspace, history, and layout so that you can resume exactly where you left off.
+RStudio also supports <strong>projects</strong>, which save the workspace, history, and layout so that you can resume exactly where you left off.
 
 ## Tutorial 2: Scalars and Vectors in R
 
-R uses the `<-` operator for assignment (the `=` operator also works). R is **case-sensitive**, so `a` and `A` are different objects.
+R uses the `<-` operator for assignment (the `=` operator also works). R is <strong>case-sensitive</strong>, so `a` and `A` are different objects.
 
 ```r
 # Assigning a scalar
@@ -613,7 +613,7 @@ a[c("Ron", "Tom")]
 
 ## Tutorial 4: Objects in R
 
-Every object in R has at least two attributes: **mode** (the type of data — `numeric`, `character`, `logical`) and **length** (the number of elements). A vector can only contain elements of the same mode; if you mix types, R automatically coerces them (e.g., mixing numeric and character produces a character vector).
+Every object in R has at least two attributes: <strong>mode</strong> (the type of data — `numeric`, `character`, `logical`) and <strong>length</strong> (the number of elements). A vector can only contain elements of the same mode; if you mix types, R automatically coerces them (e.g., mixing numeric and character produces a character vector).
 
 ```r
 a <- c(1, 2, 3)
@@ -635,7 +635,7 @@ ls()            # only a remains
 
 ## Tutorial 5: Arrays and Matrices
 
-A **matrix** is a two-dimensional array. Elements are filled column-by-column by default.
+A <strong>matrix</strong> is a two-dimensional array. Elements are filled column-by-column by default.
 
 ```r
 # Create a vector and give it dimensions (turns it into a matrix)
@@ -699,7 +699,7 @@ mean(chessplayer$Rating)
 ?read.table
 ```
 
-The working directory determines where R looks for files. Set it in RStudio via **Session > Set Working Directory**, or in code with `setwd("path/to/directory")`.
+The working directory determines where R looks for files. Set it in RStudio via <strong>Session > Set Working Directory</strong>, or in code with `setwd("path/to/directory")`.
 
 ## Tutorial 7: Scatter Plots
 
@@ -740,7 +740,7 @@ colours()
 
 ## Tutorial 8: Simple Linear Regression in R
 
-Simple linear regression in R uses the `lm()` function (linear model). The first argument is a **formula** of the form `y ~ x`, where `y` is the dependent variable and `x` is the explanatory variable.
+Simple linear regression in R uses the `lm()` function (linear model). The first argument is a <strong>formula</strong> of the form `y ~ x`, where `y` is the dependent variable and `x` is the explanatory variable.
 
 ```r
 # Import data (lung capacity dataset)
@@ -836,9 +836,9 @@ plot(model2)
 # 4. Residuals vs Leverage (influential observations)
 ```
 
-The slope for `Age` in `model1` is the **partial effect** of age on lung capacity, holding height constant. As noted in Tutorial 9, age and height are highly correlated, which is a source of multicollinearity: the individual slopes should not be interpreted as pure causal effects of each variable alone.
+The slope for `Age` in `model1` is the <strong>partial effect</strong> of age on lung capacity, holding height constant. As noted in Tutorial 9, age and height are highly correlated, which is a source of multicollinearity: the individual slopes should not be interpreted as pure causal effects of each variable alone.
 
-The **adjusted \(R^2\)**:
+The <strong>adjusted \(R^2\)</strong>:
 
 \[ \bar{R}^2 = 1 - \frac{\text{SSR}/(n-k-1)}{\text{SST}/(n-1)} \]
 
@@ -862,7 +862,7 @@ where salary is in thousands of dollars and sales in millions. Multiplying salar
 
 ## 6.2 Standardised (Beta) Coefficients
 
-When comparing the relative importance of several regressors that are measured in different units, raw OLS coefficients are not directly comparable. **Standardised coefficients** (also called beta coefficients) are obtained by first standardising all variables to have mean zero and standard deviation one before running the regression. The resulting coefficient on variable \(j\) gives the expected change in \(Y\) (in standard deviation units of \(Y\)) for a one-standard-deviation increase in \(X_j\), holding all other regressors fixed.
+When comparing the relative importance of several regressors that are measured in different units, raw OLS coefficients are not directly comparable. <strong>Standardised coefficients</strong> (also called beta coefficients) are obtained by first standardising all variables to have mean zero and standard deviation one before running the regression. The resulting coefficient on variable \(j\) gives the expected change in \(Y\) (in standard deviation units of \(Y\)) for a one-standard-deviation increase in \(X_j\), holding all other regressors fixed.
 
 In R, this is accomplished via `scale()`:
 
@@ -933,7 +933,7 @@ Once a regression has been estimated, it can be used for prediction. There are t
 
 <div class="definition"><strong>Confidence interval for the average prediction:</strong> Gives a range for the expected value \(\mathbb{E}[Y \mid X = X^*]\). This is tighter because it concerns only the uncertainty about the regression line itself.</div>
 
-<div class="definition"><strong>Prediction interval for a single new observation:</strong> Gives a range for a new individual realisation \(Y^* = \hat{Y}^* + u^*\). This is wider because it adds the variance of the idiosyncratic error \(u^*\).</div>
+<div class="definition"><strong>Prediction interval for a single new observation:</strong> Gives a range for a new individual realisation \(Y^<em> = \hat{Y}^</em> + u^<em>\). This is wider because it adds the variance of the idiosyncratic error \(u^</em>\).</div>
 
 Formally, the prediction interval is:
 
@@ -953,17 +953,17 @@ Omitting the correction factor \(e^{\hat{\sigma}^2/2}\) systematically underesti
 
 ## 7.1 Binary (Dummy) Variables
 
-A **dummy variable** (or indicator variable) takes only two values: 1 if some condition holds, 0 otherwise. For example, in a housing price regression, `colonial` = 1 if the house is colonial style, 0 otherwise. The regression
+A <strong>dummy variable</strong> (or indicator variable) takes only two values: 1 if some condition holds, 0 otherwise. For example, in a housing price regression, `colonial` = 1 if the house is colonial style, 0 otherwise. The regression
 
 \[ \text{price}_i = \beta_0 + \beta_1 \text{colonial}_i + u_i \]
 
 gives \(\hat{\beta}_0 = \bar{Y}_{\text{non-colonial}}\) (the average price of non-colonial houses, i.e., the intercept for the base group) and \(\hat{\beta}_1 = \bar{Y}_{\text{colonial}} - \bar{Y}_{\text{non-colonial}}\) (the difference in means). This is exactly equivalent to the pooled two-sample t-test with equal variance. The t-statistic on \(\hat{\beta}_1\) tests \(H_0: \mu_{\text{colonial}} = \mu_{\text{non-colonial}}\).
 
-**The dummy variable trap:** If you have a categorical variable with \(m\) categories (e.g., season: spring, summer, autumn, winter), you should include \(m - 1\) dummy variables. Including all \(m\) creates **perfect collinearity** (the sum of all category dummies equals 1, identical to the constant term), so OLS cannot be estimated. The omitted category is the **reference group** or **base category**, and all other coefficients are interpreted relative to it.
+<strong>The dummy variable trap:</strong> If you have a categorical variable with \(m\) categories (e.g., season: spring, summer, autumn, winter), you should include \(m - 1\) dummy variables. Including all \(m\) creates <strong>perfect collinearity</strong> (the sum of all category dummies equals 1, identical to the constant term), so OLS cannot be estimated. The omitted category is the <strong>reference group</strong> or <strong>base category</strong>, and all other coefficients are interpreted relative to it.
 
 ## 7.2 Interaction Terms: Allowing Slopes to Differ
 
-**Interaction terms** between a dummy variable \(D\) and a continuous variable \(X\) allow the slope of \(X\) to differ across groups. Consider:
+<strong>Interaction terms</strong> between a dummy variable \(D\) and a continuous variable \(X\) allow the slope of \(X\) to differ across groups. Consider:
 
 \[ Y_i = \beta_0 + \beta_1 X_i + \beta_2 D_i + \beta_3 (D_i \cdot X_i) + u_i \]
 
@@ -993,15 +993,15 @@ The controlled gap (approximately 26% lower earnings for women with otherwise si
 
 ## 7.4 The Linear Probability Model (LPM)
 
-When the dependent variable is binary (\(Y_i \in \{0, 1\}\)), applying OLS directly is called the **Linear Probability Model**. The predicted value \(\hat{Y}_i\) is interpreted as the estimated probability that \(Y_i = 1\):
+When the dependent variable is binary (\(Y_i \in \{0, 1\}\)), applying OLS directly is called the <strong>Linear Probability Model</strong>. The predicted value \(\hat{Y}_i\) is interpreted as the estimated probability that \(Y_i = 1\):
 
 \[ \Pr(Y_i = 1 \mid X_i) = \beta_0 + \beta_1 X_i + \cdots + \beta_k X_{ki} \]
 
 The coefficient \(\beta_j\) is the marginal effect of \(X_j\) on the probability of \(Y = 1\), holding other regressors fixed.
 
-**Advantages of LPM:** Simple to estimate and interpret; partial effects are directly given by the coefficients.
+<strong>Advantages of LPM:</strong> Simple to estimate and interpret; partial effects are directly given by the coefficients.
 
-**Problems with LPM:**
+<strong>Problems with LPM:</strong>
 1. Predicted probabilities can fall outside \([0, 1]\) — logically inconsistent.
 2. The error term is heteroskedastic by construction, since \(\text{Var}(u_i \mid X_i) = p_i(1 - p_i)\) where \(p_i = \hat{Y}_i\), so standard errors need to be robust.
 3. The linear approximation may be poor at extreme values.
@@ -1018,22 +1018,22 @@ Dummy variables representing participation in a programme (e.g., job training gr
 
 ## 8.1 What Heteroskedasticity Is and Why It Matters
 
-**Heteroskedasticity** occurs when the variance of the error term is not constant across observations:
+<strong>Heteroskedasticity</strong> occurs when the variance of the error term is not constant across observations:
 
 \[ \text{Var}(u_i \mid X_i) = \sigma_i^2 \quad (\text{varies with } i) \]
 
 instead of the homoskedastic assumption \(\text{Var}(u_i \mid X_i) = \sigma^2\).
 
 Under heteroskedasticity:
-1. OLS estimators remain **unbiased and consistent** (assumptions A1–A4 are not violated).
-2. OLS is **no longer BLUE**: it is no longer the most efficient linear unbiased estimator. Weighted Least Squares (WLS) with weights \(w_i = 1/\sigma_i^2\) is more efficient.
-3. The usual OLS standard error formula \(\hat{\sigma}^2 / \text{SST}_x\) is **invalid**: it over- or understates the true sampling variation, leading to incorrect t-statistics and F-statistics.
+1. OLS estimators remain <strong>unbiased and consistent</strong> (assumptions A1–A4 are not violated).
+2. OLS is <strong>no longer BLUE</strong>: it is no longer the most efficient linear unbiased estimator. Weighted Least Squares (WLS) with weights \(w_i = 1/\sigma_i^2\) is more efficient.
+3. The usual OLS standard error formula \(\hat{\sigma}^2 / \text{SST}_x\) is <strong>invalid</strong>: it over- or understates the true sampling variation, leading to incorrect t-statistics and F-statistics.
 
 A simulation makes this vivid. With homoskedastic errors, the reported standard error is close to the true sampling standard deviation of \(\hat{\beta}_1\). With heteroskedastic errors (variance proportional to \(|X_i|\)), the true standard deviation of \(\hat{\beta}_1\) is much larger than what OLS reports, causing invalid inference.
 
 ## 8.2 Heteroskedasticity-Robust Standard Errors
 
-The solution to invalid standard errors under heteroskedasticity is to use **heteroskedasticity-robust** (or **sandwich**) standard errors. The standard OLS variance estimator
+The solution to invalid standard errors under heteroskedasticity is to use <strong>heteroskedasticity-robust</strong> (or <strong>sandwich</strong>) standard errors. The standard OLS variance estimator
 
 \[ \widehat{\text{Var}}_{\text{OLS}}(\hat{\beta}_1) = \frac{\hat{\sigma}^2}{\sum(x_i - \bar{x})^2} \]
 
@@ -1056,7 +1056,7 @@ Robust standard errors do not change the OLS coefficient estimates; they only af
 
 ### Breusch-Pagan (BP) Test
 
-The **Breusch-Pagan test** formally tests \(H_0: \text{Var}(u_i \mid X) = \sigma^2\) (homoskedasticity). The procedure:
+The <strong>Breusch-Pagan test</strong> formally tests \(H_0: \text{Var}(u_i \mid X) = \sigma^2\) (homoskedasticity). The procedure:
 
 1. Estimate the original regression and save squared residuals \(\hat{u}_i^2\).
 2. Regress \(\hat{u}_i^2\) on all regressors (and any other suspected drivers of variance).
@@ -1066,19 +1066,19 @@ In R: `bptest(res)` from the `lmtest` package implements the studentised version
 
 ### White Test
 
-The **White test** is a more general test that also detects non-linear forms of heteroskedasticity. It regresses \(\hat{u}_i^2\) on all regressors, their squares, and their cross-products. A shortcut version regresses \(\hat{u}_i^2\) on \(\hat{Y}_i\) and \(\hat{Y}_i^2\) (the "special White test").
+The <strong>White test</strong> is a more general test that also detects non-linear forms of heteroskedasticity. It regresses \(\hat{u}_i^2\) on all regressors, their squares, and their cross-products. A shortcut version regresses \(\hat{u}_i^2\) on \(\hat{Y}_i\) and \(\hat{Y}_i^2\) (the "special White test").
 
 If the BP or White test rejects \(H_0\), the appropriate response is to use robust standard errors (or to model the heteroskedasticity explicitly via GLS).
 
 ## 8.4 Generalised Least Squares (GLS) and Weighted Least Squares (WLS)
 
-If the form of heteroskedasticity is known — say, \(\text{Var}(u_i \mid X_i) = \sigma^2 h(X_i)\) for some known function \(h\) — we can achieve efficiency by dividing the entire regression equation by \(\sqrt{h(X_i)}\). This is equivalent to **Weighted Least Squares (WLS)** with weights \(w_i = 1/h(X_i)\):
+If the form of heteroskedasticity is known — say, \(\text{Var}(u_i \mid X_i) = \sigma^2 h(X_i)\) for some known function \(h\) — we can achieve efficiency by dividing the entire regression equation by \(\sqrt{h(X_i)}\). This is equivalent to <strong>Weighted Least Squares (WLS)</strong> with weights \(w_i = 1/h(X_i)\):
 
 \[ \min_{\beta} \sum_{i=1}^n \frac{(y_i - \beta_0 - \beta_1 x_{1i} - \cdots)^2}{h(x_i)} \]
 
 The WLS estimator is BLUE under the correctly specified heteroskedastic model.
 
-When the form of \(h\) is unknown, it must be estimated. **Feasible GLS (FGLS)** estimates \(h\) in a first stage by regressing \(\log(\hat{u}_i^2)\) on the regressors, exponentiating the fitted values to get \(\hat{h}_i\), and then running WLS with weights \(1/\hat{h}_i$.
+When the form of \(h\) is unknown, it must be estimated. <strong>Feasible GLS (FGLS)</strong> estimates \(h\) in a first stage by regressing \(\log(\hat{u}_i^2)\) on the regressors, exponentiating the fitted values to get \(\hat{h}_i\), and then running WLS with weights \(1/\hat{h}_i$.
 
 ```r
 lu2 <- log(residuals(res)^2)
@@ -1095,7 +1095,7 @@ FGLS is asymptotically more efficient than OLS but is not guaranteed to be bette
 
 ## 9.1 Functional Form Misspecification
 
-If the true relationship between \(Y\) and \(X\) is nonlinear but the estimated model is linear, the model is **misspecified**. A simulation example: if the true DGP is
+If the true relationship between \(Y\) and \(X\) is nonlinear but the estimated model is linear, the model is <strong>misspecified</strong>. A simulation example: if the true DGP is
 
 \[ y = 1 + x_1 + x_2 - 0.3 x_2^2 + u \]
 
@@ -1105,7 +1105,7 @@ Functional form misspecification is therefore a special case of omitted variable
 
 ### RESET Test (Regression Equation Specification Error Test)
 
-The **Ramsey RESET test** provides a general test for functional form misspecification:
+The <strong>Ramsey RESET test</strong> provides a general test for functional form misspecification:
 
 1. Estimate the original model and save fitted values \(\hat{Y}_i\).
 2. Regress \(Y_i\) on all original regressors plus \(\hat{Y}_i^2, \hat{Y}_i^3, \ldots\)
@@ -1120,18 +1120,18 @@ resettest(res)
 
 ## 9.2 Influential Observations and Outliers
 
-An **outlier** is an observation with an extreme residual; an **influential observation** is one whose removal substantially changes the regression estimates. These are distinct concepts: an outlier in \(Y\) may or may not be influential, depending on whether its \(X\) value is extreme.
+An <strong>outlier</strong> is an observation with an extreme residual; an <strong>influential observation</strong> is one whose removal substantially changes the regression estimates. These are distinct concepts: an outlier in \(Y\) may or may not be influential, depending on whether its \(X\) value is extreme.
 
-**Cook's distance** measures the influence of each observation by computing the change in all fitted values when that observation is deleted. A large Cook's distance (greater than 1, or larger than \(4/n\) as a rule of thumb) flags an observation as potentially influential.
+<strong>Cook's distance</strong> measures the influence of each observation by computing the change in all fitted values when that observation is deleted. A large Cook's distance (greater than 1, or larger than \(4/n\) as a rule of thumb) flags an observation as potentially influential.
 
 ```r
 plot(res, 4)   # Cook's distance plot
 ```
 
-**Strategies for handling outliers:**
+<strong>Strategies for handling outliers:</strong>
 1. Check whether the observation is a data entry error.
 2. Consider an alternative functional form (e.g., log transformation) that reduces leverage of extreme values.
-3. Use **Least Absolute Deviations (LAD)** regression, also called **median regression**, which minimises \(\sum |\hat{u}_i|\) rather than \(\sum \hat{u}_i^2\). LAD is robust to outliers in \(Y\) because extreme residuals are not squared.
+3. Use <strong>Least Absolute Deviations (LAD)</strong> regression, also called <strong>median regression</strong>, which minimises \(\sum |\hat{u}_i|\) rather than \(\sum \hat{u}_i^2\). LAD is robust to outliers in \(Y\) because extreme residuals are not squared.
 
 ```r
 library(quantreg)
@@ -1159,9 +1159,9 @@ The interaction coefficient \(-0.184\) indicates that the return to education is
 
 ## 10.1 Large-Sample (Asymptotic) Theory
 
-The classical assumptions (A1–A6) include normality of the error term (A6). However, for many applications — especially with non-normal data — normality is unrealistic. The **asymptotic** properties of OLS rely on weaker assumptions and on the **Central Limit Theorem (CLT)**.
+The classical assumptions (A1–A6) include normality of the error term (A6). However, for many applications — especially with non-normal data — normality is unrealistic. The <strong>asymptotic</strong> properties of OLS rely on weaker assumptions and on the <strong>Central Limit Theorem (CLT)</strong>.
 
-**Key asymptotic theorems** (Wooldridge Chapter 5 / Chaussé Topic 3):
+<strong>Key asymptotic theorems</strong> (Wooldridge Chapter 5 / Chaussé Topic 3):
 
 <div class="definition"><strong>Theorem 1 (Consistency):</strong> Under assumptions A1–A4, the OLS estimator \(\hat{\beta}_j\) is consistent for all \(j\). This result also holds under the weaker assumption A4': \(\mathbb{E}[u] = 0\) and \(\text{Cov}(x_j, u) = 0\) for all \(j\) (zero mean and zero covariance, but not necessarily full zero conditional mean).</div>
 
@@ -1175,7 +1175,7 @@ That is, the standardised OLS estimator is asymptotically standard normal, regar
 
 ## 10.2 Bootstrap Inference
 
-The **bootstrap** is a simulation-based method for conducting inference when the standard asymptotic approximations may be unreliable — for example, when the sample size is small, the error distribution is highly non-normal (skewed or heavy-tailed), or when the estimator of interest has no closed-form standard error.
+The <strong>bootstrap</strong> is a simulation-based method for conducting inference when the standard asymptotic approximations may be unreliable — for example, when the sample size is small, the error distribution is highly non-normal (skewed or heavy-tailed), or when the estimator of interest has no closed-form standard error.
 
 ### 10.2.1 Bootstrap Critical Values for Hypothesis Tests
 
@@ -1184,13 +1184,13 @@ The standard t-test uses critical values from the t-distribution (or normal). Th
 1. Compute the test statistic from the original sample:
 \[ t = \frac{\bar{x} - c}{s/\sqrt{n}} \]
 
-2. Generate \(B\) **bootstrap samples** by sampling with replacement from the original data \(\{x_1, \ldots, x_n\}\).
+2. Generate \(B\) <strong>bootstrap samples</strong> by sampling with replacement from the original data \(\{x_1, \ldots, x_n\}\).
 
 3. For each bootstrap sample \(b\), compute the bootstrap test statistic:
-\[ t^*_b = \frac{\bar{x}^*_b - \bar{x}}{s^*_b/\sqrt{n}} \]
+\[ t^<em>_b = \frac{\bar{x}^</em>_b - \bar{x}}{s^*_b/\sqrt{n}} \]
 Note: the null value \(c\) is replaced by \(\bar{x}\), so the distribution of \(t^*\) is centred under what the data imply.
 
-4. Use the empirical 2.5th and 97.5th percentiles of \(\{t^*_1, \ldots, t^*_B\}\) as the bootstrap critical values. Reject if \(t\) falls outside this range.
+4. Use the empirical 2.5th and 97.5th percentiles of \(\{t^<em>_1, \ldots, t^</em>_B\}\) as the bootstrap critical values. Reject if \(t\) falls outside this range.
 
 ```r
 set.seed(112233)
@@ -1210,10 +1210,10 @@ quantile(teststar, c(0.025, 0.975))   # Bootstrap critical values
 
 A simulation study comparing rejection rates across five data distributions (Normal, Uniform, Chi-squared, t, Binomial) and three inferential methods (standard normal, t-distribution, bootstrap) reveals:
 
-- For **normally distributed** data: the t-distribution is most accurate; the normal slightly over-rejects in small samples; bootstrap is acceptable.
-- For **skewed distributions** (e.g., chi-squared): the t-distribution over-rejects (actual rejection rate above 5% at small \(n\)); the bootstrap is much better calibrated.
-- For **heavy-tailed distributions** (e.g., t with 3 df): the bootstrap can over-reject if \(n\) is small, because bootstrap samples drawn from a heavy-tailed empirical distribution may miss the tail behaviour.
-- For **discrete distributions** (e.g., Binomial): the bootstrap can under-reject because the discreteness prevents the 2.5th and 97.5th quantiles from being achieved exactly.
+- For <strong>normally distributed</strong> data: the t-distribution is most accurate; the normal slightly over-rejects in small samples; bootstrap is acceptable.
+- For <strong>skewed distributions</strong> (e.g., chi-squared): the t-distribution over-rejects (actual rejection rate above 5% at small \(n\)); the bootstrap is much better calibrated.
+- For <strong>heavy-tailed distributions</strong> (e.g., t with 3 df): the bootstrap can over-reject if \(n\) is small, because bootstrap samples drawn from a heavy-tailed empirical distribution may miss the tail behaviour.
+- For <strong>discrete distributions</strong> (e.g., Binomial): the bootstrap can under-reject because the discreteness prevents the 2.5th and 97.5th quantiles from being achieved exactly.
 
 In general, the bootstrap improves on the t-distribution when the data are skewed or non-normal and \(n\) is moderate (40–100+). The t-distribution is preferred for small samples from symmetric distributions.
 
@@ -1241,7 +1241,7 @@ The bootstrap standard error is the standard deviation of the bootstrap distribu
 
 ## 11.1 The 2016 US Presidential Election: Fair Model
 
-The **Fair model** (Ray Fair, Yale) predicts the Democratic share of the two-party presidential vote using macroeconomic variables. The model estimated on elections from 1916–2012 is:
+The <strong>Fair model</strong> (Ray Fair, Yale) predicts the Democratic share of the two-party presidential vote using macroeconomic variables. The model estimated on elections from 1916–2012 is:
 
 \[ \widehat{VP} = 47.754 + 0.667\,I \cdot G - 0.690\,I \cdot P + 0.968\,I \cdot Z + 3.008\,\text{DPER} - 3.805\,\text{DUR} - 1.563\,I + 4.892\,\text{WAR} \]
 
@@ -1273,24 +1273,24 @@ predict(res, newdata = newdat, interval = "prediction")
 
 The model predicted a Democratic vote share of 43.99% — below 50% — correctly predicting a Republican victory. However, the wide prediction interval \([37.6\%, 50.4\%]\) illustrates substantial uncertainty. The confidence interval for the average prediction is much narrower at \([40.8\%, 47.2\%]\), but both intervals included values above and below 50%, making the prediction inherently uncertain.
 
-The Redskins Rule (if Washington Redskins win their last home game before the election, the incumbent party wins) predicted a Democratic victory in 2016 — and was wrong. This illustrates the danger of **spurious correlations**: a relationship that has held historically by chance (19 of 21 elections correct up to 2012) need not reflect any causal mechanism and will eventually fail.
+The Redskins Rule (if Washington Redskins win their last home game before the election, the incumbent party wins) predicted a Democratic victory in 2016 — and was wrong. This illustrates the danger of <strong>spurious correlations</strong>: a relationship that has held historically by chance (19 of 21 elections correct up to 2012) need not reflect any causal mechanism and will eventually fail.
 
 ## 11.2 Campus Crime: Applying Two-Sample Tests
 
 Using the Wooldridge campus crime dataset (\(n = 97\) universities), we can apply the statistical tools from Unit 1/Topic 1:
 
-**Test 1:** Is the mean crime count equal to 350? (\(H_0: \mu = 350\) vs \(H_1: \mu > 350\))
+<strong>Test 1:</strong> Is the mean crime count equal to 350? (\(H_0: \mu = 350\) vs \(H_1: \mu > 350\))
 \[ t = \frac{\sqrt{97}(\bar{x} - 350)}{s} = 0.95 < 1.645 \]
 Fail to reject at 5%.
 
-**Test 2:** Is mean crime equal in private vs public universities? (two-sample test with unequal variances)
+<strong>Test 2:</strong> Is mean crime equal in private vs public universities? (two-sample test with unequal variances)
 \[ t = \frac{\bar{x}_{\text{private}} - \bar{x}_{\text{public}}}{\sqrt{s_{\text{pr}}^2/n_{\text{pr}} + s_{\text{pu}}^2/n_{\text{pu}}}} = -4.85 \]
 Strongly reject \(H_0\): public universities have far more crimes on average. But the mean enrollment is also much larger in public universities (17,473 vs 6,183). After normalising by enrollment (crimes per 100 students), the test statistic is only \(-0.19\), failing to reject — students in public and private universities are equally likely to be crime victims per capita.
 
-**Test 3:** Is the variance of crime equal across sectors? (F-test for equality of variances)
+<strong>Test 3:</strong> Is the variance of crime equal across sectors? (F-test for equality of variances)
 \[ F = \frac{s_{\text{public}}^2}{s_{\text{private}}^2} = \frac{477.95^2}{129.44^2} = 13.63 \]
 Compared to the critical value \(F_{0.95}(n_{\text{pu}}-1, n_{\text{pr}}-1) \approx 2.47\), we strongly reject \(H_0: \sigma_{\text{pr}}^2 = \sigma_{\text{pu}}^2\). Crime counts are much more dispersed in public universities.
 
 ---
 
-*These notes were compiled from 32 lecture and tutorial transcripts for ECON 322: Introduction to Econometrics, Spring 2021, University of Waterloo (Term 1215), and enriched with content from the Chaussé lecture slides (Topic 1–9, Bootstrap, Election) and Stock & Watson textbook chapters 4–7.*
+<em>These notes were compiled from 32 lecture and tutorial transcripts for ECON 322: Introduction to Econometrics, Spring 2021, University of Waterloo (Term 1215), and enriched with content from the Chaussé lecture slides (Topic 1–9, Bootstrap, Election) and Stock & Watson textbook chapters 4–7.</em>

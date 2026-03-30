@@ -276,11 +276,11 @@ where \(a\) and \(b\) are complex coefficients. You may also see \(|{+}\rangle =
 
 ### Three Stern-Gerlach Experiments
 
-**Experiment 1:** Prepare \(|{+}\rangle\) in Analyzer 1, measure again with Analyzer 2 along the same \(z\)-axis. Result: 100% probability of measuring \(|{+}\rangle\). Measurement of a definite eigenstate returns a definite result.
+<strong>Experiment 1:</strong> Prepare \(|{+}\rangle\) in Analyzer 1, measure again with Analyzer 2 along the same \(z\)-axis. Result: 100% probability of measuring \(|{+}\rangle\). Measurement of a definite eigenstate returns a definite result.
 
-**Experiment 2:** Prepare \(|{+}\rangle_z\), then measure along the \(x\)-axis. Result: 50%/50% probability of \(|{+}\rangle_x\) or \(|{-}\rangle_x\). The state \(|{+}\rangle_z\) is a superposition of the \(x\)-eigenstates.
+<strong>Experiment 2:</strong> Prepare \(|{+}\rangle_z\), then measure along the \(x\)-axis. Result: 50%/50% probability of \(|{+}\rangle_x\) or \(|{-}\rangle_x\). The state \(|{+}\rangle_z\) is a superposition of the \(x\)-eigenstates.
 
-**Experiment 3:** Prepare \(|{+}\rangle_z\), measure \(S_x\) to obtain \(|{+}\rangle_x\), then measure \(S_z\) again. Result: 50%/50% for \(|{\pm}\rangle_z\). **The measurement of \(S_x\) disturbs our knowledge of \(S_z\).** Measurements of orthogonal spin components are **incompatible**—measuring one destroys information about the other. The order of measurements matters.
+<strong>Experiment 3:</strong> Prepare \(|{+}\rangle_z\), measure \(S_x\) to obtain \(|{+}\rangle_x\), then measure \(S_z\) again. Result: 50%/50% for \(|{\pm}\rangle_z\). <strong>The measurement of \(S_x\) disturbs our knowledge of \(S_z\).</strong> Measurements of orthogonal spin components are <strong>incompatible</strong>—measuring one destroys information about the other. The order of measurements matters.
 
 ---
 
@@ -288,7 +288,7 @@ where \(a\) and \(b\) are complex coefficients. You may also see \(|{+}\rangle =
 
 ### Experiment 4: The Absence of "Which-Path" Information
 
-In Experiment 4, we combine both output ports of the \(x\)-analyzer (Analyzer 2) and feed them into Analyzer 3 (oriented along \(z\)) without measuring which port the spin exited from. Classically, based on Experiments 3A and 3B, we would expect 50% probability to exit the \(|{-}\rangle\) port of A3. But the quantum result is that **100% of spins exit the \(|{+}\rangle\) port of A3, and 0% exit \(|{-}\rangle\).**
+In Experiment 4, we combine both output ports of the \(x\)-analyzer (Analyzer 2) and feed them into Analyzer 3 (oriented along \(z\)) without measuring which port the spin exited from. Classically, based on Experiments 3A and 3B, we would expect 50% probability to exit the \(|{-}\rangle\) port of A3. But the quantum result is that <strong>100% of spins exit the \(|{+}\rangle\) port of A3, and 0% exit \(|{-}\rangle\).</strong>
 
 It is as if Analyzer 2 was not there. By not observing which path the spin takes, the two paths interfere. This is analogous to Young's double-slit experiment with light.
 
@@ -318,17 +318,17 @@ r_1 - r_2 \approx \frac{hx}{l}, \qquad I(P) = \left(\frac{A}{2}\right)^2\left[1 
 
 The key distinction between classical and quantum probability:
 
-**Classical:** probabilities add directly.
+<strong>Classical:</strong> probabilities add directly.
 \[
 P_{\mathrm{classical}} = |a_1 e^{i\phi_1}|^2 + |a_2 e^{i\phi_2}|^2 = a_1^2 + a_2^2
 \]
 
-**Quantum:** probability amplitudes add first, then square.
+<strong>Quantum:</strong> probability amplitudes add first, then square.
 \[
 P_{\mathrm{quantum}} = |a_1 e^{i\phi_1} + a_2 e^{i\phi_2}|^2 = a_1^2 + a_2^2 + 2a_1 a_2\cos(\phi_1 - \phi_2)
 \]
 
-The cross-term \(2a_1 a_2\cos(\phi_1 - \phi_2)\) is the **interference term**. If you place a detector to determine which slit a photon passes through, the interference disappears and you recover classical probabilities. The act of observation **collapses the wavefunction** to a definite path, destroying the superposition.
+The cross-term \(2a_1 a_2\cos(\phi_1 - \phi_2)\) is the <strong>interference term</strong>. If you place a detector to determine which slit a photon passes through, the interference disappears and you recover classical probabilities. The act of observation <strong>collapses the wavefunction</strong> to a definite path, destroying the superposition.
 
 ---
 
@@ -336,7 +336,7 @@ The cross-term \(2a_1 a_2\cos(\phi_1 - \phi_2)\) is the **interference term**. I
 
 ### Hilbert Space
 
-The ket \(|\psi\rangle\) belongs to a **Hilbert space**: a complete, complex, inner-product vector space that generalizes Euclidean space. For a spin-\(\frac{1}{2}\) particle, the Hilbert space is 2-dimensional, spanned by \(|{+}\rangle\) and \(|{-}\rangle\). Any state can be written:
+The ket \(|\psi\rangle\) belongs to a <strong>Hilbert space</strong>: a complete, complex, inner-product vector space that generalizes Euclidean space. For a spin-\(\frac{1}{2}\) particle, the Hilbert space is 2-dimensional, spanned by \(|{+}\rangle\) and \(|{-}\rangle\). Any state can be written:
 
 \[
 |\psi\rangle = a|{+}\rangle + b|{-}\rangle
@@ -344,19 +344,19 @@ The ket \(|\psi\rangle\) belongs to a **Hilbert space**: a complete, complex, in
 
 ### Inner Product and Bras
 
-The **bra** \(\langle\psi|\) is the conjugate transpose (Hermitian transpose) of \(|\psi\rangle\):
+The <strong>bra</strong> \(\langle\psi|\) is the conjugate transpose (Hermitian transpose) of \(|\psi\rangle\):
 
 \[
-\langle\psi| = (|\psi\rangle)^\dagger = a^*\langle{+}| + b^*\langle{-}|
+\langle\psi| = (|\psi\rangle)^\dagger = a^<em>\langle{+}| + b^</em>\langle{-}|
 \]
 
-The **inner product** \(\langle\phi|\psi\rangle\) measures the projection of \(|\phi\rangle\) onto \(|\psi\rangle\). The basis vectors satisfy:
+The <strong>inner product</strong> \(\langle\phi|\psi\rangle\) measures the projection of \(|\phi\rangle\) onto \(|\psi\rangle\). The basis vectors satisfy:
 
 \[
 \langle{+}|{+}\rangle = \langle{-}|{-}\rangle = 1 \quad (\text{unit norm}), \qquad \langle{+}|{-}\rangle = \langle{-}|{+}\rangle = 0 \quad (\text{orthogonality})
 \]
 
-The **probability amplitudes** are:
+The <strong>probability amplitudes</strong> are:
 
 \[
 a = \langle{+}|\psi\rangle, \qquad b = \langle{-}|\psi\rangle
@@ -378,12 +378,12 @@ The normalization constant \(C\) for a state \(|\psi\rangle = 3|{+}\rangle + 2i|
 |\psi\rangle_N = \frac{1}{\sqrt{13}}\left(3|{+}\rangle + 2i|{-}\rangle\right)
 \]
 
-**Important:** An overall phase factor \(e^{i\theta}\) does not change measurement probabilities, since \(|e^{i\theta}\langle a|\psi\rangle|^2 = |\langle a|\psi\rangle|^2\). We can always choose the overall phase to be real and positive.
+<strong>Important:</strong> An overall phase factor \(e^{i\theta}\) does not change measurement probabilities, since \(|e^{i\theta}\langle a|\psi\rangle|^2 = |\langle a|\psi\rangle|^2\). We can always choose the overall phase to be real and positive.
 
 ### Matrix Notation
 
 \[
-|{+}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \quad |{-}\rangle = \begin{pmatrix}0\\1\end{pmatrix}, \quad |\psi\rangle = \begin{pmatrix}a\\b\end{pmatrix}, \quad \langle\psi| = \begin{pmatrix}a^* & b^*\end{pmatrix}
+|{+}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \quad |{-}\rangle = \begin{pmatrix}0\\1\end{pmatrix}, \quad |\psi\rangle = \begin{pmatrix}a\\b\end{pmatrix}, \quad \langle\psi| = \begin{pmatrix}a^<em> & b^</em>\end{pmatrix}
 \]
 
 ---
@@ -414,7 +414,7 @@ Given two complete bases \(\{|a\rangle\}\) and \(\{|b\rangle\}\), the transforma
 |\psi\rangle_b = U|\psi\rangle_a
 \]
 
-The transformation matrix is **unitary**: \(UU^\dagger = U^\dagger U = \mathbf{1}\), \(U^\dagger = U^{-1}\). Unitarity ensures that inner products (and hence probabilities) are preserved.
+The transformation matrix is <strong>unitary</strong>: \(UU^\dagger = U^\dagger U = \mathbf{1}\), \(U^\dagger = U^{-1}\). Unitarity ensures that inner products (and hence probabilities) are preserved.
 
 For the transformation from \(S_z\) to \(S_x\) eigenbasis:
 
@@ -432,11 +432,11 @@ U_{z\to x} = \frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1 \\ 1 & -1\end{pmatrix}
 
 <div class="theorem"><strong>Postulate 3:</strong> The only possible result of a measurement of an observable is one of the eigenvalues \(a_n\) of the corresponding operator \(\hat{A}\).</div>
 
-Physical observables are represented by **Hermitian matrices**: \(\hat{A} = \hat{A}^\dagger\), where \((\hat{A}^\dagger)_{ij} = A^*_{ji}\). Key properties:
+Physical observables are represented by <strong>Hermitian matrices</strong>: \(\hat{A} = \hat{A}^\dagger\), where \((\hat{A}^\dagger)_{ij} = A^*_{ji}\). Key properties:
 
-1. **Real eigenvalues**: Hermitian matrices guarantee that measurement outcomes are real.
-2. **Orthogonal eigenvectors**: Eigenvectors with distinct eigenvalues are orthonormal.
-3. **Diagonal in eigenbasis**: \(A_{nm} = \langle a_n|\hat{A}|a_m\rangle = a_n\,\delta_{nm}\).
+1. <strong>Real eigenvalues</strong>: Hermitian matrices guarantee that measurement outcomes are real.
+2. <strong>Orthogonal eigenvectors</strong>: Eigenvectors with distinct eigenvalues are orthonormal.
+3. <strong>Diagonal in eigenbasis</strong>: \(A_{nm} = \langle a_n|\hat{A}|a_m\rangle = a_n\,\delta_{nm}\).
 
 ### Pauli Matrices and Spin Operators
 
@@ -446,7 +446,7 @@ The three components of the spin-\(\frac{1}{2}\) angular momentum operator in th
 S_z = \frac{\hbar}{2}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}, \qquad S_x = \frac{\hbar}{2}\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}, \qquad S_y = \frac{\hbar}{2}\begin{pmatrix}0 & -i \\ i & 0\end{pmatrix}
 \]
 
-These are related to the **Pauli matrices** \(\sigma_i\) by \(S_i = \hbar\sigma_i/2\):
+These are related to the <strong>Pauli matrices</strong> \(\sigma_i\) by \(S_i = \hbar\sigma_i/2\):
 
 \[
 \sigma_x = \begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}, \qquad \sigma_y = \begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}, \qquad \sigma_z = \begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}
@@ -460,7 +460,7 @@ Each Pauli matrix squares to the identity: \(\sigma_i^2 = \mathbf{1}\).
 
 ### The Projection Operator
 
-The **projection operator** onto state \(|a_n\rangle\) is:
+The <strong>projection operator</strong> onto state \(|a_n\rangle\) is:
 
 \[
 \hat{P}_n := |a_n\rangle\langle a_n|
@@ -472,7 +472,7 @@ Its expectation value for state \(|\psi\rangle\) equals the probability:
 \langle\psi|\hat{P}_n|\psi\rangle = |\langle a_n|\psi\rangle|^2 = P_n
 \]
 
-**Completeness** of projection operators:
+<strong>Completeness</strong> of projection operators:
 
 \[
 \sum_n \hat{P}_n = \sum_n |a_n\rangle\langle a_n| = \mathbf{1}
@@ -492,9 +492,9 @@ Any observable can be reconstructed from its eigenvalues and projection operator
 
 <div class="theorem"><strong>Postulate 5:</strong> After a measurement of observable \(\hat{A}\) that yields result \(a_n\), the quantum system is in the state \(|\psi_f\rangle = \hat{P}_n|\psi_i\rangle / \sqrt{\langle\psi_i|\hat{P}_n|\psi_i\rangle}\).</div>
 
-The measurement **projects** (collapses) the state onto the eigenstate \(|a_n\rangle\). All subsequent measurements with \(\hat{A}\) will yield \(a_n\) with certainty.
+The measurement <strong>projects</strong> (collapses) the state onto the eigenstate \(|a_n\rangle\). All subsequent measurements with \(\hat{A}\) will yield \(a_n\) with certainty.
 
-**Application to S-G Experiment 4:** When both ports of the \(x\)-analyzer are combined without observation:
+<strong>Application to S-G Experiment 4:</strong> When both ports of the \(x\)-analyzer are combined without observation:
 
 \[
 |\psi_2\rangle = \left(|{+}\rangle_x{}_x\langle{+}| + |{-}\rangle_x{}_x\langle{-}|\right)|{+}\rangle = \mathbf{1}|{+}\rangle = |{+}\rangle
@@ -520,7 +520,7 @@ The orthogonal state is:
 |\psi_-(θ,\phi)\rangle = \sin\!\left(\frac{\theta}{2}\right)|{+}\rangle - \cos\!\left(\frac{\theta}{2}\right)e^{i\phi}|{-}\rangle
 \]
 
-The angles \(\theta\) and \(\phi\) parameterize the unit sphere — the **Bloch sphere** — named after Felix Bloch. Every point on the Bloch sphere's surface represents a distinct spin-\(\frac{1}{2}\) state. The north pole \(\theta=0\) is \(|{+}\rangle\), and the equator (\(\theta=\pi/2\)) contains the \(S_x\) and \(S_y\) eigenstates.
+The angles \(\theta\) and \(\phi\) parameterize the unit sphere — the <strong>Bloch sphere</strong> — named after Felix Bloch. Every point on the Bloch sphere's surface represents a distinct spin-\(\frac{1}{2}\) state. The north pole \(\theta=0\) is \(|{+}\rangle\), and the equator (\(\theta=\pi/2\)) contains the \(S_x\) and \(S_y\) eigenstates.
 
 ### Angular Momentum as Generator of Rotation
 
@@ -542,13 +542,13 @@ This operator rotates the state \(|\psi_+(θ,\phi)\rangle\) counterclockwise abo
 \hat{R}_z(\phi_0)|\psi_+(θ,\phi)\rangle = e^{-i\phi_0/2}|\psi_+(θ,\phi+\phi_0)\rangle
 \]
 
-**The spinor property:** A rotation by \(2\pi\) does not return a spin-\(\frac{1}{2}\) state to itself — it picks up a sign:
+<strong>The spinor property:</strong> A rotation by \(2\pi\) does not return a spin-\(\frac{1}{2}\) state to itself — it picks up a sign:
 
 \[
 \hat{R}_z(2\pi)|\psi_+(θ,\phi)\rangle = e^{-i\pi}|\psi_+(θ,\phi)\rangle = -|\psi_+(θ,\phi)\rangle
 \]
 
-A rotation by \(4\pi\) is needed to fully recover the original state. This **spinor** property has no classical analogue.
+A rotation by \(4\pi\) is needed to fully recover the original state. This <strong>spinor</strong> property has no classical analogue.
 
 ---
 
@@ -558,7 +558,7 @@ A rotation by \(4\pi\) is needed to fully recover the original state. This **spi
 
 ### The Commutator
 
-The **commutator** of operators \(\hat{A}\) and \(\hat{B}\) is:
+The <strong>commutator</strong> of operators \(\hat{A}\) and \(\hat{B}\) is:
 
 \[
 [\hat{A}, \hat{B}] := \hat{A}\hat{B} - \hat{B}\hat{A}
@@ -588,7 +588,7 @@ where \(\varepsilon_{123} = \varepsilon_{231} = \varepsilon_{312} = +1\) and \(\
 
 ### The Expectation Value
 
-The **expectation value** of observable \(\hat{A}\) for state \(|\psi\rangle\) is:
+The <strong>expectation value</strong> of observable \(\hat{A}\) for state \(|\psi\rangle\) is:
 
 \[
 \langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \sum_n a_n P_n = \sum_n a_n |\langle a_n|\psi\rangle|^2
@@ -619,7 +619,7 @@ For the states \(|{\pm}\rangle\): \(\Delta S_z = 0\) (definite outcome), but \(\
 
 ### Derivation Sketch
 
-1. **Cauchy-Schwarz inequality:** For any \(|\alpha\rangle\) and \(|\beta\rangle\): \(\langle\alpha|\alpha\rangle\langle\beta|\beta\rangle \geq |\langle\alpha|\beta\rangle|^2\).
+1. <strong>Cauchy-Schwarz inequality:</strong> For any \(|\alpha\rangle\) and \(|\beta\rangle\): \(\langle\alpha|\alpha\rangle\langle\beta|\beta\rangle \geq |\langle\alpha|\beta\rangle|^2\).
 2. Set \(|\alpha\rangle = \Delta A|\psi\rangle\) and \(|\beta\rangle = \Delta B|\psi\rangle\), so \(\langle\alpha|\alpha\rangle = \langle(\Delta A)^2\rangle\) and \(\langle\beta|\beta\rangle = \langle(\Delta B)^2\rangle\).
 3. Write \(\Delta A\,\Delta B = \frac{1}{2}[A,B] + \frac{1}{2}\{\Delta A,\Delta B\}\).
 4. The commutator \([A,B]\) of two Hermitian operators is anti-Hermitian (imaginary expectation value), while the anti-commutator \(\{A,B\}\) is Hermitian (real expectation value). Taking the modulus squared and dropping the anti-commutator term (which only strengthens the inequality) gives the result.
@@ -632,19 +632,19 @@ For the state \(|{+}\rangle\) with \(\langle S_z\rangle = \hbar/2\):
 \Delta S_x\,\Delta S_y \geq \frac{1}{2}|\langle[S_x, S_y]\rangle| = \frac{\hbar}{2}|\langle S_z\rangle| = \frac{\hbar^2}{4}
 \]
 
-Indeed, \(\Delta S_x = \Delta S_y = \hbar/2\), so \(\Delta S_x\,\Delta S_y = \hbar^2/4\). The bound is **saturated**. We can never simultaneously know all three components of angular momentum. Only the **magnitude** \(|\mathbf{S}| = \sqrt{3}\,\hbar/2\) is simultaneously definite with any one component.
+Indeed, \(\Delta S_x = \Delta S_y = \hbar/2\), so \(\Delta S_x\,\Delta S_y = \hbar^2/4\). The bound is <strong>saturated</strong>. We can never simultaneously know all three components of angular momentum. Only the <strong>magnitude</strong> \(|\mathbf{S}| = \sqrt{3}\,\hbar/2\) is simultaneously definite with any one component.
 
 ---
 
 ## Interaction-Free Measurement: The Elitzur-Vaidman Bomb Tester
 
-One of the most striking consequences of quantum superposition is that it permits **interaction-free measurement** — detecting the presence of an object without a single photon ever touching it. The Elitzur-Vaidman bomb problem, first proposed in 1993, provides a vivid illustration.
+One of the most striking consequences of quantum superposition is that it permits <strong>interaction-free measurement</strong> — detecting the presence of an object without a single photon ever touching it. The Elitzur-Vaidman bomb problem, first proposed in 1993, provides a vivid illustration.
 
 ### The Setup
 
 Consider a factory that produces bombs fitted with optical fuses so sensitive that a single photon striking the fuse detonates the bomb. Unfortunately, some bombs are defective — their fuses do not work. The challenge is to identify working bombs without detonating them.
 
-Classically this is impossible: any photon that tests the fuse either detonates the bomb (confirming it works) or passes through (leaving us uncertain). Quantum mechanics, however, offers a way out using a **Mach-Zehnder interferometer** — two 50-50 beam splitters connected by two paths.
+Classically this is impossible: any photon that tests the fuse either detonates the bomb (confirming it works) or passes through (leaving us uncertain). Quantum mechanics, however, offers a way out using a <strong>Mach-Zehnder interferometer</strong> — two 50-50 beam splitters connected by two paths.
 
 ### Without the Bomb
 
@@ -660,23 +660,23 @@ The output state is:
 |\text{out}\rangle = B_2 B_1 |\text{down}\rangle = |\text{up}\rangle
 \]
 
-Due to destructive interference in the lower output port, the photon *always* exits upward and arrives at Detector 1. Detector 2 never clicks.
+Due to destructive interference in the lower output port, the photon <em>always</em> exits upward and arrives at Detector 1. Detector 2 never clicks.
 
 ### With a Working Bomb
 
 Now place a working bomb in the upper path. If the photon takes the upper path (probability 1/2), the bomb detonates. If it takes the lower path (probability 1/2), the bomb is untouched — but the superposition is destroyed because the upper path has been blocked. Without interference, the photon at \(B_2\) has equal probability of reaching either detector.
 
 The three outcomes are:
-- **Bomb explodes** (50%): the photon hit the fuse.
-- **Detector 1 clicks** (25%): indistinguishable from a defective bomb — no information gained.
-- **Detector 2 clicks** (25%): this *never* happens without the bomb. The photon reached Detector 2 without touching the bomb, yet we know with certainty that the bomb is live.
+- <strong>Bomb explodes</strong> (50%): the photon hit the fuse.
+- <strong>Detector 1 clicks</strong> (25%): indistinguishable from a defective bomb — no information gained.
+- <strong>Detector 2 clicks</strong> (25%): this <em>never</em> happens without the bomb. The photon reached Detector 2 without touching the bomb, yet we know with certainty that the bomb is live.
 
 | Bomb Status | Explodes | Detector 1 | Detector 2 |
 | :--- | :--- | :--- | :--- |
 | Defective | — | 100% | 0% |
 | Working | 50% | 25% | 25% |
 
-A click at Detector 2 constitutes **interaction-free measurement**: we have certified a bomb as working using a photon that never interacted with it. The mere *possibility* of interaction — the bomb's capacity to absorb a photon on one path — is enough to destroy the interference that would otherwise prevent Detector 2 from firing.
+A click at Detector 2 constitutes <strong>interaction-free measurement</strong>: we have certified a bomb as working using a photon that never interacted with it. The mere <em>possibility</em> of interaction — the bomb's capacity to absorb a photon on one path — is enough to destroy the interference that would otherwise prevent Detector 2 from firing.
 
 Starting with 70% working bombs, a single pass yields 17.5% certified working bombs (without detonation), 47.5% undetermined, and 35% exploded. By recycling the undetermined bombs through repeated trials, the yield improves further. Remarkably, more sophisticated schemes using the quantum Zeno effect can push the success rate arbitrarily close to 100%.
 
@@ -710,7 +710,7 @@ After all \(n\) segments (each followed by a measurement), the total survival pr
 P_{\text{survive}}^{(n)} = \cos^{2n}\!\left(\frac{\pi}{2n}\right) \approx 1 - \frac{\pi^2}{4n}
 \]
 
-where the last approximation uses \(\cos\theta \approx 1 - \theta^2/2\) for small \(\theta\). As \(n \to \infty\), the survival probability approaches 1: *all atoms emerge in the \(|{+}\rangle\) state*, even though the magnetic field is trying to flip them.
+where the last approximation uses \(\cos\theta \approx 1 - \theta^2/2\) for small \(\theta\). As \(n \to \infty\), the survival probability approaches 1: <em>all atoms emerge in the \(|{+}\rangle\) state</em>, even though the magnetic field is trying to flip them.
 
 ### Physical Interpretation
 
@@ -724,15 +724,15 @@ In essence, frequent measurement interrupts the coherent buildup of the \(|{-}\r
 
 ### Pure and Mixed Ensembles
 
-So far we have described particles in a definite quantum state \(|\psi\rangle\) — a **pure state**. However, a statistical mixture of different quantum states (a **mixed state** or mixed ensemble) cannot be described by a single ket. This situation arises whenever we lack complete information about which quantum state a particle is in — for example, the silver atoms exiting an oven in the Stern-Gerlach experiment are in random spin orientations with no phase coherence between them.
+So far we have described particles in a definite quantum state \(|\psi\rangle\) — a <strong>pure state</strong>. However, a statistical mixture of different quantum states (a <strong>mixed state</strong> or mixed ensemble) cannot be described by a single ket. This situation arises whenever we lack complete information about which quantum state a particle is in — for example, the silver atoms exiting an oven in the Stern-Gerlach experiment are in random spin orientations with no phase coherence between them.
 
-The **density operator** (or **density matrix**) \(\hat{\rho}\) provides a unified description that handles both pure and mixed situations:
+The <strong>density operator</strong> (or <strong>density matrix</strong>) \(\hat{\rho}\) provides a unified description that handles both pure and mixed situations:
 
 \[
 \hat{\rho} = \begin{cases} |\psi\rangle\langle\psi| & \text{pure state} \\[4pt] \displaystyle\sum_k p_k|\psi_k\rangle\langle\psi_k| & \text{mixed state, with } \sum_k p_k = 1 \end{cases}
 \]
 
-The density operator is always **Hermitian** (\(\hat{\rho} = \hat{\rho}^\dagger\)), which can be verified directly: \(\rho_{ij}^* = \langle j|\hat{\rho}|i\rangle^* = \langle i|\hat{\rho}^\dagger|j\rangle = \rho_{ji}\).
+The density operator is always <strong>Hermitian</strong> (\(\hat{\rho} = \hat{\rho}^\dagger\)), which can be verified directly: \(\rho_{ij}^<em> = \langle j|\hat{\rho}|i\rangle^</em> = \langle i|\hat{\rho}^\dagger|j\rangle = \rho_{ji}\).
 
 ### Formal Properties
 
@@ -758,7 +758,7 @@ where \(\hat{P}_\phi = |\phi\rangle\langle\phi|\) is the projection operator.</d
 
 ### Worked Examples
 
-**Example 1 — Pure spin-up state.** For \(\hat{\rho}_+ = |{+}\rangle\langle{+}|\):
+<strong>Example 1 — Pure spin-up state.</strong> For \(\hat{\rho}_+ = |{+}\rangle\langle{+}|\):
 \[
 \hat{\rho}_+ = \begin{pmatrix}1\\0\end{pmatrix}\begin{pmatrix}1&0\end{pmatrix} = \begin{pmatrix}1&0\\0&0\end{pmatrix}
 \]
@@ -766,13 +766,13 @@ Expectation of \(S_z\): \(\langle S_z\rangle = \mathrm{Tr}\!\left(S_z\,\hat{\rho
 
 Expectation of \(S_x\): \(\langle S_x\rangle = \mathrm{Tr}(S_x\,\hat{\rho}_+) = 0\). (Verify: off-diagonal \(S_x\) paired with diagonal \(\hat{\rho}_+\) gives zero trace.)
 
-**Example 2 — Maximally mixed ensemble.** Suppose a beam contains equal proportions of \(|{+}\rangle\) and \(|{-}\rangle\) atoms with no phase coherence:
+<strong>Example 2 — Maximally mixed ensemble.</strong> Suppose a beam contains equal proportions of \(|{+}\rangle\) and \(|{-}\rangle\) atoms with no phase coherence:
 \[
 \hat{\rho}_{\mathrm{mix}} = \frac{1}{2}|{+}\rangle\langle{+}| + \frac{1}{2}|{-}\rangle\langle{-}| = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{\mathbf{1}}{2}
 \]
-Check: \(\mathrm{Tr}(\hat{\rho}^2) = \mathrm{Tr}\!\left(\frac{1}{4}\mathbf{1}\right) = \frac{1}{2} < 1\) — confirming this is mixed. The expectation value \(\langle S_{\hat{n}}\rangle = \mathrm{Tr}(S_{\hat{n}}\,\hat{\rho}_{\mathrm{mix}}) = 0\) for **any** direction \(\hat{n}\). This is the defining property of a maximally mixed ensemble: no measurement in any direction reveals a preferred orientation.
+Check: \(\mathrm{Tr}(\hat{\rho}^2) = \mathrm{Tr}\!\left(\frac{1}{4}\mathbf{1}\right) = \frac{1}{2} < 1\) — confirming this is mixed. The expectation value \(\langle S_{\hat{n}}\rangle = \mathrm{Tr}(S_{\hat{n}}\,\hat{\rho}_{\mathrm{mix}}) = 0\) for <strong>any</strong> direction \(\hat{n}\). This is the defining property of a maximally mixed ensemble: no measurement in any direction reveals a preferred orientation.
 
-**Example 3 — A partially polarized ensemble.** If \(3/4\) of atoms are spin-up and \(1/4\) spin-down:
+<strong>Example 3 — A partially polarized ensemble.</strong> If \(3/4\) of atoms are spin-up and \(1/4\) spin-down:
 \[
 \hat{\rho} = \frac{3}{4}\begin{pmatrix}1&0\\0&0\end{pmatrix} + \frac{1}{4}\begin{pmatrix}0&0\\0&1\end{pmatrix} = \begin{pmatrix}3/4&0\\0&1/4\end{pmatrix}
 \]
@@ -788,7 +788,7 @@ The density matrix is the correct language for describing any real experimental 
 
 ### Time Evolution Operator
 
-By analogy with rotation (where angular momentum generates spatial rotations) and translation (where linear momentum generates spatial translations), the **energy operator** — the Hamiltonian \(H\) — generates **translation in time**.
+By analogy with rotation (where angular momentum generates spatial rotations) and translation (where linear momentum generates spatial translations), the <strong>energy operator</strong> — the Hamiltonian \(H\) — generates <strong>translation in time</strong>.
 
 The infinitesimal time-evolution operator is:
 
@@ -802,7 +802,7 @@ The time evolution of a quantum system is determined by its Hamiltonian (total e
 
 ### Time-Independent Hamiltonians
 
-When \(H\) does not depend on time, the energy eigenstates \(|E_n\rangle\) satisfy \(H|E_n\rangle = E_n|E_n\rangle\) and are **stationary states**: a system that starts in \(|E_n\rangle\) remains in \(|E_n\rangle\) for all time (acquiring only an overall phase).
+When \(H\) does not depend on time, the energy eigenstates \(|E_n\rangle\) satisfy \(H|E_n\rangle = E_n|E_n\rangle\) and are <strong>stationary states</strong>: a system that starts in \(|E_n\rangle\) remains in \(|E_n\rangle\) for all time (acquiring only an overall phase).
 
 For a general initial state \(|\psi(0)\rangle = \sum_n c_n|E_n\rangle\), the solution is:
 
@@ -820,7 +820,7 @@ For a two-level superposition \(|\psi(0)\rangle = c_1|E_1\rangle + c_2|E_2\rangl
 |\langle\psi(0)|\psi(t)\rangle|^2 = |c_1|^4 + |c_2|^4 + 2|c_1|^2|c_2|^2\cos\left[(\omega_2 - \omega_1)t\right]
 \]
 
-with \(\omega_n = E_n/\hbar\). This oscillation frequency \(\omega_{21} = (E_2 - E_1)/\hbar\) is the **Bohr frequency** corresponding to the energy difference between the levels.
+with \(\omega_n = E_n/\hbar\). This oscillation frequency \(\omega_{21} = (E_2 - E_1)/\hbar\) is the <strong>Bohr frequency</strong> corresponding to the energy difference between the levels.
 
 <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1.5em auto">
   <defs>
@@ -873,7 +873,7 @@ In the \(\{|1\rangle, |2\rangle\}\) basis, the Hamiltonian matrix is:
 H = \begin{pmatrix} \langle 1|H|1\rangle & \langle 1|H|2\rangle \\ \langle 2|H|1\rangle & \langle 2|H|2\rangle \end{pmatrix} = \begin{pmatrix} E_0 & -A \\ -A & E_0 \end{pmatrix}
 \]
 
-The diagonal elements are \(E_0\) (both configurations have equal energy by symmetry). The off-diagonal element \(-A < 0\) is the **tunneling matrix element** — it represents the amplitude for the nitrogen atom to tunnel from one side to the other through the potential barrier separating the two configurations.
+The diagonal elements are \(E_0\) (both configurations have equal energy by symmetry). The off-diagonal element \(-A < 0\) is the <strong>tunneling matrix element</strong> — it represents the amplitude for the nitrogen atom to tunnel from one side to the other through the potential barrier separating the two configurations.
 
 ### Diagonalization: Energy Eigenstates
 
@@ -892,7 +892,7 @@ The two energy levels are split symmetrically around \(E_0\). The corresponding 
 |II\rangle = \frac{1}{\sqrt{2}}\bigl(|1\rangle - |2\rangle\bigr), \quad E_{II} = E_0 + A
 \]
 
-The lower-energy state \(|I\rangle\) is the **symmetric** (even-parity) combination and the higher-energy state \(|II\rangle\) is the **antisymmetric** (odd-parity) combination. This energy ordering makes physical sense: the symmetric state has a wavefunction that is non-zero at the barrier peak, "sampling" less of the repulsive region, while the antisymmetric state has a node at the barrier and pays a larger kinetic energy penalty.
+The lower-energy state \(|I\rangle\) is the <strong>symmetric</strong> (even-parity) combination and the higher-energy state \(|II\rangle\) is the <strong>antisymmetric</strong> (odd-parity) combination. This energy ordering makes physical sense: the symmetric state has a wavefunction that is non-zero at the barrier peak, "sampling" less of the repulsive region, while the antisymmetric state has a node at the barrier and pays a larger kinetic energy penalty.
 
 ### Time Evolution and Inversion Oscillation
 
@@ -920,11 +920,11 @@ and the probability below:
 P_2(t) = |\langle 2|\psi(t)\rangle|^2 = \sin^2\!\left(\frac{At}{\hbar}\right)
 \]
 
-The nitrogen atom **oscillates** between the two configurations with angular frequency \(\omega = 2A/\hbar\), or inversion frequency \(\nu = A/(\pi\hbar)\). For ammonia, \(A \approx 3.84 \times 10^{-5}\ \mathrm{eV}\), giving \(\nu \approx 23.87\ \mathrm{GHz}\) — in the microwave range.
+The nitrogen atom <strong>oscillates</strong> between the two configurations with angular frequency \(\omega = 2A/\hbar\), or inversion frequency \(\nu = A/(\pi\hbar)\). For ammonia, \(A \approx 3.84 \times 10^{-5}\ \mathrm{eV}\), giving \(\nu \approx 23.87\ \mathrm{GHz}\) — in the microwave range.
 
 ### Application: The Maser
 
-This inversion frequency is precisely what made ammonia the active medium of the first **maser** (Microwave Amplification by Stimulated Emission of Radiation), built by Townes and colleagues in 1954. By selecting molecules in the upper energy state \(|II\rangle\) and placing them in a microwave cavity resonant at \(2A/\hbar\), they achieved stimulated emission at the inversion frequency — the working principle that would later be extended to optical frequencies to create the laser. Townes shared the 1964 Nobel Prize in Physics for this work.
+This inversion frequency is precisely what made ammonia the active medium of the first <strong>maser</strong> (Microwave Amplification by Stimulated Emission of Radiation), built by Townes and colleagues in 1954. By selecting molecules in the upper energy state \(|II\rangle\) and placing them in a microwave cavity resonant at \(2A/\hbar\), they achieved stimulated emission at the inversion frequency — the working principle that would later be extended to optical frequencies to create the laser. Townes shared the 1964 Nobel Prize in Physics for this work.
 
 ---
 
@@ -942,7 +942,7 @@ For a static field \(\mathbf{B} = B_0\hat{z}\), \(H = -\omega_0 S_z\) with \(\om
 
 ### Larmor Precession
 
-Starting from an arbitrary initial state, the expectation value of the spin vector precesses about \(\hat{z}\) at the **Larmor frequency** \(\omega_0 = \gamma B_0\):
+Starting from an arbitrary initial state, the expectation value of the spin vector precesses about \(\hat{z}\) at the <strong>Larmor frequency</strong> \(\omega_0 = \gamma B_0\):
 
 \[
 \langle S_x(t)\rangle = \langle S_x(0)\rangle\cos(\omega_0 t) + \langle S_y(0)\rangle\sin(\omega_0 t)
@@ -960,7 +960,7 @@ Adding a circularly polarized oscillating field perpendicular to \(B_0\):
 
 The full Hamiltonian is \(H(t) = -\omega_0 S_z - \omega_1\left[\cos(\omega t)S_x - \sin(\omega t)S_y\right]\) with \(\omega_1 = \gamma B_1\).
 
-In a **rotating frame** (transforming away the time-dependence), the effective Hamiltonian becomes time-independent. At **resonance** (\(\omega = \omega_0\)), the oscillating field drives complete spin-flips between \(|{+}\rangle\) and \(|{-}\rangle\) — the phenomenon of **Rabi oscillations**, foundational to NMR, MRI, and quantum computing.
+In a <strong>rotating frame</strong> (transforming away the time-dependence), the effective Hamiltonian becomes time-independent. At <strong>resonance</strong> (\(\omega = \omega_0\)), the oscillating field drives complete spin-flips between \(|{+}\rangle\) and \(|{-}\rangle\) — the phenomenon of <strong>Rabi oscillations</strong>, foundational to NMR, MRI, and quantum computing.
 
 The transition probability oscillates as:
 
@@ -986,15 +986,15 @@ Since the global phase factor \(e^{-i\Delta t/\hbar}\) cancels in all expectatio
 
 ### Neutrino Oscillations
 
-**Neutrinos** are relativistic leptons that interact only via the weak force. Three flavours exist — the electron neutrino \(\nu_e\), the muon neutrino \(\nu_\mu\), and the tau neutrino \(\nu_\tau\) — produced in reactions like:
+<strong>Neutrinos</strong> are relativistic leptons that interact only via the weak force. Three flavours exist — the electron neutrino \(\nu_e\), the muon neutrino \(\nu_\mu\), and the tau neutrino \(\nu_\tau\) — produced in reactions like:
 
 \[
 p \to n + e^+ + \nu_e, \qquad \pi^+ \to \mu^+ + \nu_\mu
 \]
 
-The three flavour states span a vector space: \(|\psi\rangle = \alpha|\nu_e\rangle + \beta|\nu_\mu\rangle + \gamma|\nu_\tau\rangle\). A deep puzzle emerged when solar neutrino experiments detected only about a third of the predicted electron neutrinos. Quantum mechanics explains this through **neutrino oscillations** — flavour states are not energy eigenstates.
+The three flavour states span a vector space: \(|\psi\rangle = \alpha|\nu_e\rangle + \beta|\nu_\mu\rangle + \gamma|\nu_\tau\rangle\). A deep puzzle emerged when solar neutrino experiments detected only about a third of the predicted electron neutrinos. Quantum mechanics explains this through <strong>neutrino oscillations</strong> — flavour states are not energy eigenstates.
 
-In the simplified two-flavour case (neglecting \(\nu_\tau\) for solar neutrinos), the flavour eigenstates are related to the mass eigenstates \(|\nu_1\rangle\), \(|\nu_2\rangle\) by a **mixing angle** \(\theta\):
+In the simplified two-flavour case (neglecting \(\nu_\tau\) for solar neutrinos), the flavour eigenstates are related to the mass eigenstates \(|\nu_1\rangle\), \(|\nu_2\rangle\) by a <strong>mixing angle</strong> \(\theta\):
 
 \[
 |\nu_e\rangle = \cos\frac{\theta}{2}\,|\nu_1\rangle + \sin\frac{\theta}{2}\,|\nu_2\rangle, \qquad |\nu_\mu\rangle = \sin\frac{\theta}{2}\,|\nu_1\rangle - \cos\frac{\theta}{2}\,|\nu_2\rangle
@@ -1022,7 +1022,7 @@ Experimental measurements give \(m_1^2 - m_2^2 \approx 8 \times 10^{-5}\ \mathrm
 
 ### Quantum Clocks
 
-A **quantum clock** exploits the Bohr frequency of a two-level system to measure time with extraordinary precision. The idea is conceptually identical to a pendulum clock, but with a quantum oscillator replacing the mechanical one.
+A <strong>quantum clock</strong> exploits the Bohr frequency of a two-level system to measure time with extraordinary precision. The idea is conceptually identical to a pendulum clock, but with a quantum oscillator replacing the mechanical one.
 
 Consider an atom with ground state \(|g\rangle\) (energy \(E_g\)) and excited state \(|e\rangle\) (energy \(E_e\)). The Hamiltonian is \(H = E_g|g\rangle\langle g| + E_e|e\rangle\langle e|\). Prepare the atom in the equal superposition \(|\psi(0)\rangle = (|e\rangle + |g\rangle)/\sqrt{2}\) by applying a \(\pi/2\)-pulse (a 90° rotation on the Bloch sphere using a resonant field along the \(y\)-axis):
 
@@ -1048,7 +1048,7 @@ By repeating this protocol many times and measuring \(P(g)\), one determines \(\
 
 ## The Bloch Vector: General Theory
 
-The Bloch sphere representation introduced earlier can be formalized using the density matrix and Pauli operators. For any spin-\(\frac{1}{2}\) state (pure or mixed), the **Bloch vector** \(\vec{v}\) is defined by:
+The Bloch sphere representation introduced earlier can be formalized using the density matrix and Pauli operators. For any spin-\(\frac{1}{2}\) state (pure or mixed), the <strong>Bloch vector</strong> \(\vec{v}\) is defined by:
 
 \[
 \vec{v} = \begin{pmatrix}\langle\sigma_x\rangle \\ \langle\sigma_y\rangle \\ \langle\sigma_z\rangle\end{pmatrix} = \frac{2}{\hbar}\begin{pmatrix}\langle S_x\rangle \\ \langle S_y\rangle \\ \langle S_z\rangle\end{pmatrix}
@@ -1060,7 +1060,7 @@ The density matrix can be expressed compactly in terms of the Bloch vector:
 \rho = \frac{1}{2}\left(\mathbf{1} + \vec{v}\cdot\vec{\sigma}\right)
 \]
 
-For a **pure state**, \(|\vec{v}| = 1\) (the Bloch vector sits on the surface of the unit sphere). For a **mixed state**, \(|\vec{v}| < 1\) (the vector lies inside the sphere). The completely mixed state has \(\vec{v} = \vec{0}\) and \(\rho = \mathbf{1}/2\).
+For a <strong>pure state</strong>, \(|\vec{v}| = 1\) (the Bloch vector sits on the surface of the unit sphere). For a <strong>mixed state</strong>, \(|\vec{v}| < 1\) (the vector lies inside the sphere). The completely mixed state has \(\vec{v} = \vec{0}\) and \(\rho = \mathbf{1}/2\).
 
 The expectation value of spin along an arbitrary direction \(\hat{n}\) follows directly:
 
@@ -1098,7 +1098,7 @@ where \(x \in (-\infty, \infty)\). The position eigenvalues form a continuous sp
 
 ### The Wavefunction
 
-The **wavefunction** is defined as the projection of the state \(|\psi\rangle\) onto a position eigenstate:
+The <strong>wavefunction</strong> is defined as the projection of the state \(|\psi\rangle\) onto a position eigenstate:
 
 \[
 \psi(x) := \langle x|\psi\rangle
@@ -1116,7 +1116,7 @@ The probability of finding the particle in the region \([x_1, x_2]\) is:
 P(x_1, x_2) = \int_{x_1}^{x_2}|\psi(x)|^2\,dx
 \]
 
-The **normalization condition** requires:
+The <strong>normalization condition</strong> requires:
 
 \[
 \langle\psi|\psi\rangle = \int_{-\infty}^{\infty}|\psi(x)|^2\,dx = 1
@@ -1130,7 +1130,7 @@ The inner product of two position eigenstates is:
 \langle x|x'\rangle = \delta(x - x')
 \]
 
-where \(\delta(x - x')\) is the **Dirac-delta function**, satisfying:
+where \(\delta(x - x')\) is the <strong>Dirac-delta function</strong>, satisfying:
 
 \[
 \int_{-\infty}^{\infty}\delta(x - x')\,dx = 1, \qquad \int_{-\infty}^{\infty}\delta(x - x')f(x)\,dx = f(x')
@@ -1180,7 +1180,7 @@ which leads to the fundamental canonical commutation relation:
 [\hat{x}, \hat{p}] = i\hbar
 \]
 
-This is the origin of the **Heisenberg uncertainty principle** for position and momentum:
+This is the origin of the <strong>Heisenberg uncertainty principle</strong> for position and momentum:
 
 \[
 \Delta x\,\Delta p \geq \frac{\hbar}{2}
@@ -1200,7 +1200,7 @@ Replacing classical observables \(p\) and \(x\) with operators:
 H = \frac{\hat{p}^2}{2m} + V(\hat{x})
 \]
 
-In the position basis, this becomes the **time-independent Schrödinger equation**:
+In the position basis, this becomes the <strong>time-independent Schrödinger equation</strong>:
 
 \[
 H\psi(x) = -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi(x) = E\psi(x)
@@ -1220,21 +1220,21 @@ The infinite potential forces \(\psi = 0\) outside the well. Inside, the solutio
 k_n = \frac{n\pi}{L}, \quad n = 1, 2, 3, \ldots
 \]
 
-The normalized **energy eigenfunctions** are:
+The normalized <strong>energy eigenfunctions</strong> are:
 
 \[
 \phi_n(x) = \sqrt{\frac{2}{L}}\sin\!\left(\frac{n\pi x}{L}\right), \quad 0 \leq x \leq L
 \]
 
-The **energy eigenvalues** are:
+The <strong>energy eigenvalues</strong> are:
 
 \[
 E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2\pi^2 n^2}{2mL^2} = \frac{h^2 n^2}{8mL^2}
 \]
 
 Several remarkable features:
-- The energy is **quantized**; only discrete energies are allowed.
-- The ground state (\(n=1\)) has a non-zero **zero-point energy** \(E_1 = \hbar^2\pi^2/(2mL^2)\), a direct consequence of the uncertainty principle.
+- The energy is <strong>quantized</strong>; only discrete energies are allowed.
+- The ground state (\(n=1\)) has a non-zero <strong>zero-point energy</strong> \(E_1 = \hbar^2\pi^2/(2mL^2)\), a direct consequence of the uncertainty principle.
 - Eigenfunctions alternate between even and odd symmetry about the centre of the well.
 - For an electron confined to \(L \approx 2\)Å, \(E_1 \approx 9.4\ \mathrm{eV}\), close to the hydrogen binding energy of 13.6 eV.
 
@@ -1242,35 +1242,35 @@ Several remarkable features:
 
 ## The Finite Square Well
 
-For the **finite square well** \(V(x) = -V_0\) for \(-a < x < a\) (and \(0\) outside), the wavefunctions in the classically forbidden regions are now exponentially decaying rather than strictly zero:
+For the <strong>finite square well</strong> \(V(x) = -V_0\) for \(-a < x < a\) (and \(0\) outside), the wavefunctions in the classically forbidden regions are now exponentially decaying rather than strictly zero:
 
 \[
 \phi_{\mathrm{out}}(x) \propto e^{-\kappa |x|}, \qquad \kappa = \sqrt{\frac{2m(V_0 - |E|)}{\hbar^2}}
 \]
 
-inside the well, oscillatory solutions match smoothly to the decaying exponentials via continuity of \(\psi\) and \(\psi'\) at the boundaries. This **evanescent penetration** into the classically forbidden region has no classical analogue.
+inside the well, oscillatory solutions match smoothly to the decaying exponentials via continuity of \(\psi\) and \(\psi'\) at the boundaries. This <strong>evanescent penetration</strong> into the classically forbidden region has no classical analogue.
 
 The number of bound states (states with \(E < 0\)) is finite and depends on the depth and width of the well. As \(V_0 \to \infty\), the finite-well results converge to the infinite-well results.
 
 ### The Parity Operator and Symmetry Simplifications
 
-The eigenfunctions of the infinite square well alternate between even and odd symmetry. This pattern is no accident — it is a consequence of the **parity operator** \(\hat{\Pi}\), defined by:
+The eigenfunctions of the infinite square well alternate between even and odd symmetry. This pattern is no accident — it is a consequence of the <strong>parity operator</strong> \(\hat{\Pi}\), defined by:
 
 \[
 \hat{\Pi}|x\rangle = |-x\rangle
 \]
 
-The parity operator reflects the coordinate through the origin. If the potential is symmetric, \(V(-x) = V(x)\), then \(\hat{\Pi}\) commutes with the Hamiltonian: \([\hat{\Pi}, H] = 0\). By the theorem that commuting Hermitian operators share eigenstates, every energy eigenfunction must also be an eigenstate of parity — that is, either **symmetric** (even parity, \(\hat{\Pi}\psi = +\psi\)) or **antisymmetric** (odd parity, \(\hat{\Pi}\psi = -\psi\)).
+The parity operator reflects the coordinate through the origin. If the potential is symmetric, \(V(-x) = V(x)\), then \(\hat{\Pi}\) commutes with the Hamiltonian: \([\hat{\Pi}, H] = 0\). By the theorem that commuting Hermitian operators share eigenstates, every energy eigenfunction must also be an eigenstate of parity — that is, either <strong>symmetric</strong> (even parity, \(\hat{\Pi}\psi = +\psi\)) or <strong>antisymmetric</strong> (odd parity, \(\hat{\Pi}\psi = -\psi\)).
 
 For the symmetric finite square well centered at the origin (\(-a < x < a\)), this dramatically simplifies the boundary-matching problem. Instead of solving for four unknown coefficients, we can treat the symmetric and antisymmetric cases separately:
 
-**Symmetric solutions** (\(\psi(-x) = \psi(x)\)):
+<strong>Symmetric solutions</strong> (\(\psi(-x) = \psi(x)\)):
 
 \[
 \psi_E(x) = \begin{cases}A_+ e^{\kappa x}, & x \leq -a \\ B\cos(kx), & |x| < a \\ A_+ e^{-\kappa x}, & x \geq a\end{cases}
 \]
 
-**Antisymmetric solutions** (\(\psi(-x) = -\psi(x)\)):
+<strong>Antisymmetric solutions</strong> (\(\psi(-x) = -\psi(x)\)):
 
 \[
 \psi_E(x) = \begin{cases}A_+ e^{\kappa x}, & x \leq -a \\ B\sin(kx), & |x| < a \\ -A_+ e^{-\kappa x}, & x \geq a\end{cases}
@@ -1296,7 +1296,7 @@ A general state at \(t = 0\) is \(|\psi(0)\rangle = \sum_n c_n|E_n\rangle\). The
 \psi(x, t) = \sum_n c_n\,\phi_n(x)\,e^{-iE_n t/\hbar}
 \]
 
-The probability density \(|\psi(x,t)|^2\) evolves in time for superposition states. The probability to find the particle in a region oscillates at the **Bohr frequencies** \(\omega_{nm} = (E_n - E_m)/\hbar\).
+The probability density \(|\psi(x,t)|^2\) evolves in time for superposition states. The probability to find the particle in a region oscillates at the <strong>Bohr frequencies</strong> \(\omega_{nm} = (E_n - E_m)/\hbar\).
 
 ### Position-Momentum Uncertainty in the Square Well
 
@@ -1326,7 +1326,7 @@ The Hamiltonian is:
 H = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2
 \]
 
-We introduce the **lowering (annihilation) operator** \(\hat{a}\) and **raising (creation) operator** \(\hat{a}^\dagger\):
+We introduce the <strong>lowering (annihilation) operator</strong> \(\hat{a}\) and <strong>raising (creation) operator</strong> \(\hat{a}^\dagger\):
 
 \[
 \hat{a} = \sqrt{\frac{m\omega}{2\hbar}}\!\left(\hat{x} + \frac{i\hat{p}}{m\omega}\right), \qquad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\!\left(\hat{x} - \frac{i\hat{p}}{m\omega}\right)
@@ -1344,7 +1344,7 @@ The Hamiltonian factorizes as:
 H = \hbar\omega\!\left(\hat{a}^\dagger\hat{a} + \frac{1}{2}\right) = \hbar\omega\!\left(\hat{N} + \frac{1}{2}\right)
 \]
 
-where \(\hat{N} = \hat{a}^\dagger\hat{a}\) is the **number operator**.
+where \(\hat{N} = \hat{a}^\dagger\hat{a}\) is the <strong>number operator</strong>.
 
 ### The Energy Spectrum
 
@@ -1360,7 +1360,7 @@ The energy spectrum is:
 \boxed{E_n = \hbar\omega\!\left(n + \frac{1}{2}\right), \quad n = 0, 1, 2, \ldots}
 \]
 
-The energy levels are **equally spaced** by \(\hbar\omega\). The non-zero **zero-point energy** \(E_0 = \hbar\omega/2\) is a profound quantum effect—even at absolute zero, the oscillator retains kinetic energy.
+The energy levels are <strong>equally spaced</strong> by \(\hbar\omega\). The non-zero <strong>zero-point energy</strong> \(E_0 = \hbar\omega/2\) is a profound quantum effect—even at absolute zero, the oscillator retains kinetic energy.
 
 The raising and lowering operators act as:
 
@@ -1386,7 +1386,7 @@ Solving and normalizing:
 \psi_0(x) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{m\omega x^2}{2\hbar}\right)
 \]
 
-This is a **Gaussian** — the QHO ground state is a Gaussian centered at the origin.
+This is a <strong>Gaussian</strong> — the QHO ground state is a Gaussian centered at the origin.
 
 ### Higher Eigenfunctions
 
@@ -1396,7 +1396,7 @@ Excited states are obtained by applying \(\hat{a}^\dagger\):
 \psi_n(x) = \frac{1}{\sqrt{n!}}\left(\hat{a}^\dagger\right)^n\psi_0(x) = \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}H_n\!\left(\sqrt{\frac{m\omega}{\hbar}}x\right)\exp\!\left(-\frac{m\omega x^2}{2\hbar}\right)
 \]
 
-where \(H_n\) are the **Hermite polynomials** (\(H_0 = 1\), \(H_1 = 2\xi\), \(H_2 = 4\xi^2 - 2\), \ldots).
+where \(H_n\) are the <strong>Hermite polynomials</strong> (\(H_0 = 1\), \(H_1 = 2\xi\), \(H_2 = 4\xi^2 - 2\), \ldots).
 
 ### Position-Momentum Uncertainty for the QHO
 
@@ -1410,13 +1410,13 @@ For the \(n\)-th energy eigenstate:
 \Delta x\,\Delta p = \frac{\hbar(2n+1)}{2} \geq \frac{\hbar}{2}
 \]
 
-The ground state saturates the uncertainty principle: \(\Delta x\,\Delta p = \hbar/2\). The ground state is a **minimum-uncertainty state**.
+The ground state saturates the uncertainty principle: \(\Delta x\,\Delta p = \hbar/2\). The ground state is a <strong>minimum-uncertainty state</strong>.
 
 ---
 
 ## The Quantum Harmonic Oscillator III — Classical Comparison
 
-At large quantum numbers, the QHO probability density \(|\psi_n(x)|^2\) increasingly resembles the classical probability distribution: a particle spending more time where it moves slowly (near the turning points). This is the **correspondence principle** — quantum mechanics approaches classical mechanics in the limit of large quantum numbers.
+At large quantum numbers, the QHO probability density \(|\psi_n(x)|^2\) increasingly resembles the classical probability distribution: a particle spending more time where it moves slowly (near the turning points). This is the <strong>correspondence principle</strong> — quantum mechanics approaches classical mechanics in the limit of large quantum numbers.
 
 Classically, the probability density is \(\rho(x) = 1/(\pi\sqrt{A^2 - x^2})\) for amplitude \(A\). For large \(n\), the quantum density (averaged over rapid oscillations) converges to this classical distribution.
 
@@ -1432,17 +1432,17 @@ For \(V(x) = 0\), the Schrödinger equation gives oscillatory solutions:
 \phi_k(x) = A\,e^{ikx}, \qquad k = \pm\sqrt{\frac{2mE}{\hbar^2}}, \qquad E = \frac{\hbar^2 k^2}{2m}
 \]
 
-Free particle **momentum eigenstates** in the position basis:
+Free particle <strong>momentum eigenstates</strong> in the position basis:
 
 \[
 \langle x|p\rangle = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}
 \]
 
-These satisfy the **Dirac-delta normalization** \(\langle p|p'\rangle = \delta(p-p')\) — they are not square-integrable and hence not physically normalizable. The de Broglie relation \(p = \hbar k\) connects wave vector and momentum.
+These satisfy the <strong>Dirac-delta normalization</strong> \(\langle p|p'\rangle = \delta(p-p')\) — they are not square-integrable and hence not physically normalizable. The de Broglie relation \(p = \hbar k\) connects wave vector and momentum.
 
 ### Fourier Transform
 
-The wavefunction in position space and momentum space are related by the **Fourier transform**:
+The wavefunction in position space and momentum space are related by the <strong>Fourier transform</strong>:
 
 \[
 \psi(x) = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{\psi}(p)\,e^{ipx/\hbar}\,dp
@@ -1456,7 +1456,7 @@ The wavefunction in position space and momentum space are related by the **Fouri
 
 ## The Wave Packet
 
-A **wave packet** is a superposition of momentum eigenstates that is localized in space:
+A <strong>wave packet</strong> is a superposition of momentum eigenstates that is localized in space:
 
 \[
 \psi(x, t) = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{\psi}(p)\,e^{i(px - E(p)t)/\hbar}\,dp
@@ -1466,17 +1466,17 @@ The position and momentum uncertainties of a wave packet satisfy \(\Delta x\,\De
 
 ### Group Velocity
 
-The **group velocity** of the wave packet (velocity of the envelope) is:
+The <strong>group velocity</strong> of the wave packet (velocity of the envelope) is:
 
 \[
 v_g = \frac{d\omega}{dk}\bigg|_{k_0} = \frac{p_0}{m}
 \]
 
-This matches the classical velocity of a particle with momentum \(p_0\), consistent with Ehrenfest's theorem. The **phase velocity** \(v_p = \omega/k = \hbar k/(2m)\) is half the group velocity.
+This matches the classical velocity of a particle with momentum \(p_0\), consistent with Ehrenfest's theorem. The <strong>phase velocity</strong> \(v_p = \omega/k = \hbar k/(2m)\) is half the group velocity.
 
 ### Dispersion
 
-For a free particle, \(\omega = \hbar k^2/(2m)\), so different momentum components travel at different speeds. The wave packet **spreads** in time:
+For a free particle, \(\omega = \hbar k^2/(2m)\), so different momentum components travel at different speeds. The wave packet <strong>spreads</strong> in time:
 
 \[
 \Delta x(t) = \sqrt{(\Delta x_0)^2 + \left(\frac{\hbar t}{2m\,\Delta x_0}\right)^2}
@@ -1524,7 +1524,7 @@ Inside a well (region 2, \(E > -V_0\)):
 \phi_2(x) = C\,e^{ik_2 x} + D\,e^{-ik_2 x}, \qquad k_2 = \sqrt{\frac{2m(E+V_0)}{\hbar^2}}
 \]
 
-The **transmission coefficient** \(T\) and **reflection coefficient** \(R\) are defined from the probability current fluxes, with \(R + T = 1\) (conservation of probability).
+The <strong>transmission coefficient</strong> \(T\) and <strong>reflection coefficient</strong> \(R\) are defined from the probability current fluxes, with \(R + T = 1\) (conservation of probability).
 
 For the finite square well of width \(2a\):
 
@@ -1532,7 +1532,7 @@ For the finite square well of width \(2a\):
 T = \frac{4k_1^2 k_2^2}{4k_1^2 k_2^2 + (k_1^2 - k_2^2)^2\sin^2(2k_2 a)}
 \]
 
-**Resonances:** When \(2k_2 a = n\pi\), \(T = 1\) (perfect transmission). This is the quantum analogue of anti-reflection coatings in optics.
+<strong>Resonances:</strong> When \(2k_2 a = n\pi\), \(T = 1\) (perfect transmission). This is the quantum analogue of anti-reflection coatings in optics.
 
 ---
 
@@ -1558,7 +1558,7 @@ The wavefunction is exponentially damped inside the barrier. The transmission pr
 T \approx e^{-2\kappa(2a)} = e^{-4a\sqrt{2m(V_0-E)}/\hbar} \quad \text{(thick barrier)}
 \]
 
-Even though the particle has insufficient energy to classically surmount the barrier, it has a non-zero probability of appearing on the other side — **quantum tunneling**. This is a purely quantum phenomenon with no classical analogue.
+Even though the particle has insufficient energy to classically surmount the barrier, it has a non-zero probability of appearing on the other side — <strong>quantum tunneling</strong>. This is a purely quantum phenomenon with no classical analogue.
 
 Tunneling is responsible for:
 - Radioactive alpha decay (Gamow theory)
@@ -1584,7 +1584,7 @@ In an STM, a sharp metal tip is brought within a few angstroms of a conducting s
 
 ### Einstein-Podolsky-Rosen Paradox
 
-Einstein, Podolsky, and Rosen (1935) challenged whether quantum mechanics provides a complete description of reality. They considered an **entangled** system — a particle pair in the spin singlet state:
+Einstein, Podolsky, and Rosen (1935) challenged whether quantum mechanics provides a complete description of reality. They considered an <strong>entangled</strong> system — a particle pair in the spin singlet state:
 
 \[
 |s=0, m=0\rangle = \frac{1}{\sqrt{2}}\left(|{+}\rangle_1|{-}\rangle_2 - |{-}\rangle_1|{+}\rangle_2\right)
@@ -1596,7 +1596,7 @@ In this state, neither particle has a definite spin projection. If observer A me
 
 ### Bell Inequalities
 
-John Bell (1964) showed that any **local hidden variable** theory — one in which particle properties are fixed at creation and carried locally — makes predictions that differ from quantum mechanics. The beautiful thing about Bell's argument is that it requires only counting, not any sophisticated physics.
+John Bell (1964) showed that any <strong>local hidden variable</strong> theory — one in which particle properties are fixed at creation and carried locally — makes predictions that differ from quantum mechanics. The beautiful thing about Bell's argument is that it requires only counting, not any sophisticated physics.
 
 #### The Hidden Variable Hypothesis
 
@@ -1617,9 +1617,9 @@ Note that particle 2's values are always opposite to particle 1's along each axi
 
 #### The Bell Inequality (Counting Argument)
 
-Observer A measures along one of \(\hat{a}\), \(\hat{b}\), \(\hat{c}\) chosen at random; Observer B independently chooses a measurement axis. There are 9 axis-pair combinations. When A and B choose the **same** axis, the outcomes are always opposite (types 1–8 all give opposite results along matching axes). When they choose **different** axes, the fraction of "same" outcomes depends on the type distribution.
+Observer A measures along one of \(\hat{a}\), \(\hat{b}\), \(\hat{c}\) chosen at random; Observer B independently chooses a measurement axis. There are 9 axis-pair combinations. When A and B choose the <strong>same</strong> axis, the outcomes are always opposite (types 1–8 all give opposite results along matching axes). When they choose <strong>different</strong> axes, the fraction of "same" outcomes depends on the type distribution.
 
-For any type distribution, the fraction of measurements with **same outcomes** when different axes are chosen satisfies:
+For any type distribution, the fraction of measurements with <strong>same outcomes</strong> when different axes are chosen satisfies:
 
 \[
 \langle P_{\text{same}}\rangle_{\text{LHV}} \leq \frac{4}{9} \approx 0.44
@@ -1635,7 +1635,7 @@ Quantum mechanics makes a precise prediction for the singlet state \(|s=0, m=0\r
 P(+\hat{z},\ +\hat{n}) = P(-\hat{z},\ -\hat{n}) = \frac{1}{2}\sin^2\!\frac{\theta}{2}, \qquad P(+\hat{z},\ -\hat{n}) = P(-\hat{z},\ +\hat{n}) = \frac{1}{2}\cos^2\!\frac{\theta}{2}
 \]
 
-The probability of **same** outcomes is therefore:
+The probability of <strong>same</strong> outcomes is therefore:
 
 \[
 P_s(\theta) = \sin^2\!\frac{\theta}{2}
@@ -1653,48 +1653,48 @@ Averaging over the nine axis combinations (1/3 probability of same axis giving \
 \langle P_{\text{same}}\rangle_{\text{QM}} = \frac{1}{3}(0) + \frac{2}{3}\!\left(\frac{3}{4}\right) = \frac{1}{2}
 \]
 
-**Quantum mechanics predicts \(\langle P_{\text{same}}\rangle = 0.5\), which exceeds the local hidden variable bound of \(4/9 \approx 0.44\).** This difference — 0.5 vs. 0.44 — is measurable.
+<strong>Quantum mechanics predicts \(\langle P_{\text{same}}\rangle = 0.5\), which exceeds the local hidden variable bound of \(4/9 \approx 0.44\).</strong> This difference — 0.5 vs. 0.44 — is measurable.
 
 #### The Experimental Verdict
 
 Alain Aspect and colleagues (1982) performed the decisive test, measuring photon polarization correlations in entangled pairs while rapidly switching the measurement axes to prevent any signal from traveling between the detectors. The results unambiguously violated Bell's inequality and agreed with the quantum prediction. Subsequent experiments by Zeilinger (1998) and others closed successive "loopholes" — the detection loophole, the locality loophole, the freedom-of-choice loophole — until by the 2010s the case was airtight.
 
-**Local hidden variable theories are experimentally ruled out.** The universe cannot be simultaneously local (no faster-than-light influences) and realistic (properties exist prior to measurement). Aspect, Clauser, and Zeilinger were awarded the 2022 Nobel Prize in Physics for this work. The properties of entangled particles are genuinely undetermined until measurement — quantum randomness is irreducible.
+<strong>Local hidden variable theories are experimentally ruled out.</strong> The universe cannot be simultaneously local (no faster-than-light influences) and realistic (properties exist prior to measurement). Aspect, Clauser, and Zeilinger were awarded the 2022 Nobel Prize in Physics for this work. The properties of entangled particles are genuinely undetermined until measurement — quantum randomness is irreducible.
 
 ---
 
 # Summary of Key Postulates
 
-1. **State:** The state of a quantum system is a normalized ket \(|\psi\rangle\) in a Hilbert space.
-2. **Observables:** Physical observables correspond to Hermitian operators.
-3. **Eigenvalues:** The only possible measurement outcomes are eigenvalues of the corresponding operator.
-4. **Born Rule:** The probability of outcome \(a_n\) is \(P_n = |\langle a_n|\psi\rangle|^2\).
-5. **Collapse:** After measuring \(a_n\), the state collapses to \(|a_n\rangle\) (projected and renormalized).
-6. **Schrödinger Equation:** \(i\hbar\,\partial_t|\psi\rangle = H|\psi\rangle\) governs time evolution.
+1. <strong>State:</strong> The state of a quantum system is a normalized ket \(|\psi\rangle\) in a Hilbert space.
+2. <strong>Observables:</strong> Physical observables correspond to Hermitian operators.
+3. <strong>Eigenvalues:</strong> The only possible measurement outcomes are eigenvalues of the corresponding operator.
+4. <strong>Born Rule:</strong> The probability of outcome \(a_n\) is \(P_n = |\langle a_n|\psi\rangle|^2\).
+5. <strong>Collapse:</strong> After measuring \(a_n\), the state collapses to \(|a_n\rangle\) (projected and renormalized).
+6. <strong>Schrödinger Equation:</strong> \(i\hbar\,\partial_t|\psi\rangle = H|\psi\rangle\) governs time evolution.
 
 ---
 
 # Summary of Key Equations
 
-**Spin-\(\frac{1}{2}\) eigenstates:**
+<strong>Spin-\(\frac{1}{2}\) eigenstates:</strong>
 \[
 S_z: \quad |{\pm}\rangle; \qquad S_x: \quad |{\pm}\rangle_x = \frac{1}{\sqrt{2}}(|{+}\rangle \pm |{-}\rangle); \qquad S_y: \quad |{\pm}\rangle_y = \frac{1}{\sqrt{2}}(|{+}\rangle \pm i|{-}\rangle)
 \]
 
-**Uncertainty principles:**
+<strong>Uncertainty principles:</strong>
 \[
 \Delta x\,\Delta p \geq \frac{\hbar}{2}, \qquad \Delta S_x\,\Delta S_y \geq \frac{\hbar}{2}|\langle S_z\rangle|
 \]
 
-**Schrödinger equation in position space:**
+<strong>Schrödinger equation in position space:</strong>
 \[
 i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2} + V(x)\psi
 \]
 
-**Infinite square well:** \(E_n = h^2n^2/(8mL^2)\), \(\phi_n(x) = \sqrt{2/L}\sin(n\pi x/L)\)
+<strong>Infinite square well:</strong> \(E_n = h^2n^2/(8mL^2)\), \(\phi_n(x) = \sqrt{2/L}\sin(n\pi x/L)\)
 
-**Quantum harmonic oscillator:** \(E_n = \hbar\omega(n + \frac{1}{2})\), ground state \(\psi_0 \propto e^{-m\omega x^2/(2\hbar)}\)
+<strong>Quantum harmonic oscillator:</strong> \(E_n = \hbar\omega(n + \frac{1}{2})\), ground state \(\psi_0 \propto e^{-m\omega x^2/(2\hbar)}\)
 
-**Angular momentum commutation:** \([S_i, S_j] = i\hbar\,\varepsilon_{ijk}S_k\)
+<strong>Angular momentum commutation:</strong> \([S_i, S_j] = i\hbar\,\varepsilon_{ijk}S_k\)
 
-**Position-momentum commutation:** \([\hat{x}, \hat{p}] = i\hbar\)
+<strong>Position-momentum commutation:</strong> \([\hat{x}, \hat{p}] = i\hbar\)

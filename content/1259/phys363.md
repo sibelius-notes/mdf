@@ -147,7 +147,7 @@ The potential energy is \(V = \int \rho g y\, ds = \int \rho g y\sqrt{1+y'^2}\, 
 
 \[y = a\cosh\!\left(\frac{x-b}{a}\right) + c,\]
 
-where \(a = -\lambda/\rho g\). This **catenary** shape arises naturally whenever a flexible chain or cable hangs under its own weight.
+where \(a = -\lambda/\rho g\). This <strong>catenary</strong> shape arises naturally whenever a flexible chain or cable hangs under its own weight.
 </div>
 
 ### Holonomic Constraints via Lagrange Multipliers

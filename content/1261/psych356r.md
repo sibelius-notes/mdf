@@ -236,7 +236,7 @@ Modern personality assessment uses **self-report questionnaires** with Likert-ty
 The **correlational design** examines the statistical relationship between two or more variables as they naturally occur, without experimental manipulation. It is the default design in personality research because most individual difference variables cannot be experimentally assigned (you cannot randomly assign people to be introverts).
 
 <div class="definition">
-<strong>Pearson's r</strong> (correlation coefficient) ranges from \(-1\) to \(+1\). Its square, \(r^2\), is the **coefficient of determination** — the proportion of variance in one variable explained by the other.
+<strong>Pearson's r</strong> (correlation coefficient) ranges from \(-1\) to \(+1\). Its square, \(r^2\), is the <strong>coefficient of determination</strong> — the proportion of variance in one variable explained by the other.
 </div>
 
 **Key limitation**: Correlation does not establish causation. Three alternative explanations always exist for any correlation between X and Y: X causes Y; Y causes X; or a third variable Z causes both.
@@ -312,7 +312,7 @@ Meta-analytic methods have been essential for settling personality debates — f
 **Person-centered** approaches (cluster analysis, Q-sort methodology, narrative analysis) treat persons as the unit of analysis, identifying typologies or understanding the configuration of traits within individuals.
 
 <div class="example">
-<strong>Block's Q-sort:</strong> Jack Block's (1971) longitudinal research used the **California Q-Sort** — 100 personality-descriptive statements sorted into a forced-normal distribution by clinicians — to track personality development from childhood through adulthood. This idiographic measurement preserved configural information lost in nomothetic scale scores.
+<strong>Block's Q-sort:</strong> Jack Block's (1971) longitudinal research used the <strong>California Q-Sort</strong> — 100 personality-descriptive statements sorted into a forced-normal distribution by clinicians — to track personality development from childhood through adulthood. This idiographic measurement preserved configural information lost in nomothetic scale scores.
 </div>
 
 ## 3.8 Ethical Considerations in Personality Research
@@ -746,7 +746,7 @@ Self-esteem should be distinguished from:
 **Mark Leary and colleagues** proposed **sociometer theory** as a functional account of self-esteem:
 
 <div class="definition">
-<strong>Sociometer theory</strong> (Leary et al., 1995) proposes that self-esteem is not an end in itself but functions as a psychological **meter** that monitors the degree to which one is included and valued by others. Low self-esteem signals social exclusion risk; high self-esteem signals successful social acceptance and inclusion.
+<strong>Sociometer theory</strong> (Leary et al., 1995) proposes that self-esteem is not an end in itself but functions as a psychological <strong>meter</strong> that monitors the degree to which one is included and valued by others. Low self-esteem signals social exclusion risk; high self-esteem signals successful social acceptance and inclusion.
 </div>
 
 **Key evidence**: Self-esteem drops in response to social exclusion, rejection, and criticism; increases in response to social acceptance and positive evaluation. People are especially motivated to protect self-esteem when social exclusion is threatened.
@@ -898,7 +898,7 @@ Key narrative constructs:
 Mischel's **delay of gratification** paradigm (the "marshmallow test") showed that preschool children's capacity to wait for a larger reward predicted SAT scores, social competence, and other outcomes in adulthood — though the effect sizes in later, larger, better-controlled studies are smaller than original reports suggested (Watts, Duncan, & Quan, 2018).
 
 <div class="remark">
-The **ego depletion** model (Baumeister et al.) proposed that self-control draws on a limited resource that is depleted by use — leading to poorer self-regulation on subsequent tasks. This model has faced serious replication difficulties in recent meta-analyses, and is now considered controversial or refuted in its original strong form.
+The <strong>ego depletion</strong> model (Baumeister et al.) proposed that self-control draws on a limited resource that is depleted by use — leading to poorer self-regulation on subsequent tasks. This model has faced serious replication difficulties in recent meta-analyses, and is now considered controversial or refuted in its original strong form.
 </div>
 
 ## 9.6 Personality and the Unconscious

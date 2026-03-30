@@ -606,7 +606,7 @@ The chain rule from multivariable calculus generalizes beautifully to manifolds.
 <div class="theorem">
 <strong>Theorem 3.7 (Chain Rule for Pushforwards).</strong> If \(F \colon M \to N\) and \(G \colon N \to P\) are smooth maps, then for every \(p \in M\),
 \[
-(G \circ F)_{*,p} = G_{*,F(p)} \circ F_{*,p}.
+(G \circ F)_{<em>,p} = G_{</em>,F(p)} \circ F_{*,p}.
 \]
 Moreover, \((\mathrm{id}_M)_{*,p} = \mathrm{id}_{T_pM}\).
 </div>
@@ -614,17 +614,17 @@ Moreover, \((\mathrm{id}_M)_{*,p} = \mathrm{id}_{T_pM}\).
 <div class="proof">
 <strong>Proof.</strong> For any \(v \in T_pM\) and \(h \in C^\infty(P)\):
 \[
-(G \circ F)_{*,p}(v)(h) = v(h \circ G \circ F) = F_{*,p}(v)(h \circ G) = G_{*,F(p)}(F_{*,p}(v))(h).
+(G \circ F)_{<em>,p}(v)(h) = v(h \circ G \circ F) = F_{</em>,p}(v)(h \circ G) = G_{<em>,F(p)}(F_{</em>,p}(v))(h).
 \]
 The identity statement is immediate: \((\mathrm{id}_M)_{*,p}(v)(f) = v(f \circ \mathrm{id}_M) = v(f)\). \(\blacksquare\)
 </div>
 
 <div class="corollary">
-<strong>Corollary 3.8.</strong> If \(F \colon M \to N\) is a diffeomorphism, then \(F_{*,p} \colon T_pM \to T_{F(p)}N\) is a linear isomorphism for every \(p \in M\), with \((F_{*,p})^{-1} = (F^{-1})_{*,F(p)}\).
+<strong>Corollary 3.8.</strong> If \(F \colon M \to N\) is a diffeomorphism, then \(F_{<em>,p} \colon T_pM \to T_{F(p)}N\) is a linear isomorphism for every \(p \in M\), with \((F_{</em>,p})^{-1} = (F^{-1})_{*,F(p)}\).
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> From the chain rule: \(F_{*,p} \circ (F^{-1})_{*,F(p)} = (F \circ F^{-1})_{*,F(p)} = (\mathrm{id}_N)_{*,F(p)} = \mathrm{id}_{T_{F(p)}N}\), and similarly \((F^{-1})_{*,F(p)} \circ F_{*,p} = \mathrm{id}_{T_pM}\). \(\blacksquare\)
+<strong>Proof.</strong> From the chain rule: \(F_{<em>,p} \circ (F^{-1})_{</em>,F(p)} = (F \circ F^{-1})_{<em>,F(p)} = (\mathrm{id}_N)_{</em>,F(p)} = \mathrm{id}_{T_{F(p)}N}\), and similarly \((F^{-1})_{<em>,F(p)} \circ F_{</em>,p} = \mathrm{id}_{T_pM}\). \(\blacksquare\)
 </div>
 
 In categorical language, the tangent space construction is a *functor* from the category of smooth manifolds (with smooth maps) to the category of vector spaces (with linear maps): it sends each manifold to a family of vector spaces and each smooth map to a family of linear maps, respecting composition and identities.
@@ -952,7 +952,7 @@ By Proposition 4.6 again, \([X_1,X_2]\) is \(F\)-related to \([Y_1,Y_2]\). \(\bl
 </div>
 
 <div class="corollary">
-<strong>Corollary 4.11.</strong> If \(F \colon M \to N\) is a diffeomorphism, then \(F_*[X,Y] = [F_*X, F_*Y]\) for all \(X, Y \in \Gamma(TM)\). That is, the pushforward by a diffeomorphism is a <strong>Lie algebra homomorphism</strong>.
+<strong>Corollary 4.11.</strong> If \(F \colon M \to N\) is a diffeomorphism, then \(F_<em>[X,Y] = [F_</em>X, F_*Y]\) for all \(X, Y \in \Gamma(TM)\). That is, the pushforward by a diffeomorphism is a <strong>Lie algebra homomorphism</strong>.
 </div>
 
 ### 4.7 Lie Groups and Lie Algebras
@@ -991,7 +991,7 @@ The condition of left-invariance means that \(X\) is \(L_g\)-related to itself f
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> The map \(\mathrm{ev}_e\) is clearly linear. It is injective because a left-invariant vector field is determined by its value at \(e\) (since \(X_g = (L_g)_{*,e}(X_e)\) for all \(g\)). It is surjective because, given \(v \in T_eG\), the formula \(\tilde{v}_g = (L_g)_{*,e}(v)\) defines a left-invariant vector field (one must check smoothness, which follows from smoothness of the multiplication map). \(\blacksquare\)
+<strong>Proof.</strong> The map \(\mathrm{ev}_e\) is clearly linear. It is injective because a left-invariant vector field is determined by its value at \(e\) (since \(X_g = (L_g)_{<em>,e}(X_e)\) for all \(g\)). It is surjective because, given \(v \in T_eG\), the formula \(\tilde{v}_g = (L_g)_{</em>,e}(v)\) defines a left-invariant vector field (one must check smoothness, which follows from smoothness of the multiplication map). \(\blacksquare\)
 </div>
 
 <div class="definition">
@@ -1044,15 +1044,15 @@ is a Lie algebra homomorphism from \(\mathfrak{g}\) to \(\mathfrak{h}\) (under t
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> We must show that if \(X, Y\) are left-invariant vector fields on \(G\), then the left-invariant vector fields on \(H\) corresponding to \(\Phi_{*,e}(X_e)\) and \(\Phi_{*,e}(Y_e)\) have bracket equal to the left-invariant vector field corresponding to \(\Phi_{*,e}([X,Y]_e)\).
+<strong>Proof.</strong> We must show that if \(X, Y\) are left-invariant vector fields on \(G\), then the left-invariant vector fields on \(H\) corresponding to \(\Phi_{<em>,e}(X_e)\) and \(\Phi_{</em>,e}(Y_e)\) have bracket equal to the left-invariant vector field corresponding to \(\Phi_{*,e}([X,Y]_e)\).
 
 The key observation is that because \(\Phi\) is a group homomorphism, we have \(\Phi \circ L_g = L_{\Phi(g)} \circ \Phi\) for all \(g \in G\). Taking the pushforward at \(h \in G\):
 \[
-\Phi_{*,gh} \circ (L_g)_{*,h} = (L_{\Phi(g)})_{*,\Phi(h)} \circ \Phi_{*,h}.
+\Phi_{<em>,gh} \circ (L_g)_{</em>,h} = (L_{\Phi(g)})_{<em>,\Phi(h)} \circ \Phi_{</em>,h}.
 \]
 In particular, if \(X\) is left-invariant on \(G\) and we define \(\tilde{X}\) on \(H\) by \(\tilde{X}_{\Phi(g)} = \Phi_{*,g}(X_g)\), then for any \(k = \Phi(g) \in \Phi(G)\):
 \[
-(L_k)_{*,e}(\Phi_{*,e}(X_e)) = (L_{\Phi(g)})_{*,e}(\Phi_{*,e}(X_e)) = \Phi_{*,g}((L_g)_{*,e}(X_e)) = \Phi_{*,g}(X_g).
+(L_k)_{<em>,e}(\Phi_{</em>,e}(X_e)) = (L_{\Phi(g)})_{<em>,e}(\Phi_{</em>,e}(X_e)) = \Phi_{<em>,g}((L_g)_{</em>,e}(X_e)) = \Phi_{*,g}(X_g).
 \]
 This shows \(X\) is \(\Phi\)-related to the left-invariant vector field \(\tilde{X}\) on \(H\) determined by \(\tilde{X}_e = \Phi_{*,e}(X_e)\). Similarly, \(Y\) is \(\Phi\)-related to \(\tilde{Y}\). By Theorem 4.10, \([X,Y]\) is \(\Phi\)-related to \([\tilde{X}, \tilde{Y}]\). Evaluating at \(e\):
 \[
@@ -1086,7 +1086,7 @@ Having developed the theory of tangent vectors and the tangent bundle in previou
 Let \( V \) be a finite-dimensional real vector space. Recall from linear algebra:
 
 <div class="definition">
-<strong>Definition 5.1 (Dual Space).</strong> The <strong>dual space</strong> of \( V \), denoted \( V^* \), is the vector space of all linear maps \( \omega \colon V \to \mathbb{R} \). Elements of \( V^* \) are called <strong>covectors</strong>, <strong>linear functionals</strong>, or <strong>linear forms</strong> on \( V \).
+<strong>Definition 5.1 (Dual Space).</strong> The <strong>dual space</strong> of \( V \), denoted \( V^<em> \), is the vector space of all linear maps \( \omega \colon V \to \mathbb{R} \). Elements of \( V^</em> \) are called <strong>covectors</strong>, <strong>linear functionals</strong>, or <strong>linear forms</strong> on \( V \).
 </div>
 
 ![Covectors as hyperplanes: a covector ω in V* defines level sets (hyperplanes) in V, with ω(v) measuring how many hyperplanes the vector v crosses](/pics/pmath465/covector-hyperplanes.svg)
@@ -1104,7 +1104,7 @@ Now we bring this construction to manifolds. At each point \( p \) of a smooth m
 <div class="definition">
 <strong>Definition 5.2 (Cotangent Space).</strong> Let \( M \) be a smooth manifold and \( p \in M \). The <strong>cotangent space</strong> of \( M \) at \( p \) is the dual space
 \[
-T_p^*M = (T_pM)^*.
+T_p^<em>M = (T_pM)^</em>.
 \]
 Elements of \( T_p^*M \) are called <strong>tangent covectors</strong> at \( p \).
 </div>
@@ -1136,13 +1136,13 @@ Just as we assembled all tangent spaces into the tangent bundle \( TM \), we now
 <div class="definition">
 <strong>Definition 5.3 (Cotangent Bundle).</strong> The <strong>cotangent bundle</strong> of a smooth \( n \)-manifold \( M \) is the disjoint union
 \[
-T^*M = \bigsqcup_{p \in M} T_p^*M = \{ (p, \omega) : p \in M, \, \omega \in T_p^*M \}.
+T^<em>M = \bigsqcup_{p \in M} T_p^</em>M = \{ (p, \omega) : p \in M, \, \omega \in T_p^*M \}.
 \]
 It carries a natural projection \( \pi \colon T^*M \to M \) defined by \( \pi(p, \omega) = p \).
 </div>
 
 <div class="proposition">
-<strong>Proposition 5.4.</strong> If \( M \) is a smooth \( n \)-manifold, then \( T^*M \) has a natural structure as a smooth \( 2n \)-manifold, and the projection \( \pi \colon T^*M \to M \) is a smooth surjective map. Moreover, \( T^*M \) is a smooth vector bundle of rank \( n \) over \( M \).
+<strong>Proposition 5.4.</strong> If \( M \) is a smooth \( n \)-manifold, then \( T^<em>M \) has a natural structure as a smooth \( 2n \)-manifold, and the projection \( \pi \colon T^</em>M \to M \) is a smooth surjective map. Moreover, \( T^*M \) is a smooth vector bundle of rank \( n \) over \( M \).
 </div>
 
 The smooth structure is constructed exactly as for the tangent bundle. Given a smooth chart \( (U, \varphi) \) for \( M \) with coordinates \( (x^1, \ldots, x^n) \), we define a chart \( (\pi^{-1}(U), \tilde{\varphi}) \) for \( T^*M \) by
@@ -1262,11 +1262,11 @@ One of the most important features distinguishing covectors from vectors is that
 <div class="definition">
 <strong>Definition 5.11 (Pullback of a Covector).</strong> Let \( F \colon M \to N \) be a smooth map, and let \( p \in M \). The <strong>pullback</strong> (or <strong>codifferential</strong>) at \( p \) is the linear map
 \[
-F^* \colon T_{F(p)}^*N \to T_p^*M
+F^<em> \colon T_{F(p)}^</em>N \to T_p^*M
 \]
 defined by
 \[
-(F^*\omega)(X_p) = \omega(F_{*,p} X_p)
+(F^<em>\omega)(X_p) = \omega(F_{</em>,p} X_p)
 \]
 for all \( \omega \in T_{F(p)}^*N \) and \( X_p \in T_pM \).
 </div>
@@ -1276,7 +1276,7 @@ for all \( \omega \in T_{F(p)}^*N \) and \( X_p \in T_pM \).
 Note the directions carefully: the pushforward goes "forward" from \( T_pM \) to \( T_{F(p)}N \), while the pullback goes "backward" from \( T_{F(p)}^*N \) to \( T_p^*M \). This is the standard contravariance of the dual space construction in linear algebra.
 
 <div class="remark">
-<strong>Remark 5.12.</strong> In terms of the transpose (adjoint) of a linear map, \( F^* = (F_{*,p})^T \). That is, the pullback is the transpose of the pushforward, which is the standard construction of the dual map in linear algebra.
+<strong>Remark 5.12.</strong> In terms of the transpose (adjoint) of a linear map, \( F^<em> = (F_{</em>,p})^T \). That is, the pullback is the transpose of the pushforward, which is the standard construction of the dual map in linear algebra.
 </div>
 
 The pointwise pullback extends to 1-forms: if \( \omega \) is a 1-form on \( N \), we define the **pullback 1-form** \( F^*\omega \) on \( M \) by
@@ -1297,9 +1297,9 @@ The following proposition lists the key properties of pullback.
 <strong>Proposition 5.13 (Properties of Pullback).</strong> Let \( F \colon M \to N \) be a smooth map. Then:
 <ol>
 <li>\( F^* \colon \Omega^1(N) \to \Omega^1(M) \) is \( \mathbb{R} \)-linear.</li>
-<li>\( F^*(h\omega) = (h \circ F)(F^*\omega) \) for all \( h \in C^\infty(N) \), \( \omega \in \Omega^1(N) \).</li>
+<li>\( F^<em>(h\omega) = (h \circ F)(F^</em>\omega) \) for all \( h \in C^\infty(N) \), \( \omega \in \Omega^1(N) \).</li>
 <li><strong>Naturality with respect to \( d \):</strong> \( F^*(dh) = d(h \circ F) \) for all \( h \in C^\infty(N) \).</li>
-<li>If \( G \colon N \to P \) is another smooth map, then \( (G \circ F)^* = F^* \circ G^* \).</li>
+<li>If \( G \colon N \to P \) is another smooth map, then \( (G \circ F)^<em> = F^</em> \circ G^* \).</li>
 <li>\( (\mathrm{id}_M)^* = \mathrm{id}_{\Omega^1(M)} \).</li>
 </ol>
 </div>
@@ -1307,7 +1307,7 @@ The following proposition lists the key properties of pullback.
 <div class="proof">
 <strong>Proof.</strong> We prove property (3), the naturality with respect to \( d \), as it is the most important. For any \( p \in M \) and \( X_p \in T_pM \),
 \[
-(F^*(dh))_p(X_p) = (dh)_{F(p)}(F_{*,p}X_p) = (F_{*,p}X_p)(h) = X_p(h \circ F) = d(h \circ F)_p(X_p).
+(F^<em>(dh))_p(X_p) = (dh)_{F(p)}(F_{</em>,p}X_p) = (F_{*,p}X_p)(h) = X_p(h \circ F) = d(h \circ F)_p(X_p).
 \]
 Since this holds for all \( X_p \), we conclude \( F^*(dh) = d(h \circ F) \). The other properties are straightforward. \( \square \)
 </div>
@@ -1327,7 +1327,7 @@ F^*\omega = (\omega_j \circ F) \frac{\partial F^j}{\partial x^i} \, dx^i.
 <div class="example">
 <strong>Example 5.14.</strong> Let \( F \colon \mathbb{R}^2 \to \mathbb{R}^3 \) be given by \( F(s,t) = (s^2, st, t^2) \), and let \( \omega = z \, dx + x \, dy - y \, dz \) be a 1-form on \( \mathbb{R}^3 \). We compute the pullback \( F^*\omega \). We have \( x = s^2, y = st, z = t^2 \), so:
 \[
-F^*(dx) = d(s^2) = 2s \, ds, \qquad F^*(dy) = d(st) = t \, ds + s \, dt, \qquad F^*(dz) = d(t^2) = 2t \, dt.
+F^<em>(dx) = d(s^2) = 2s \, ds, \qquad F^</em>(dy) = d(st) = t \, ds + s \, dt, \qquad F^*(dz) = d(t^2) = 2t \, dt.
 \]
 Therefore,
 \[
@@ -1437,7 +1437,7 @@ In multivariable calculus, the behaviour of a smooth map \( F \colon \mathbb{R}^
 <div class="definition">
 <strong>Definition 6.1 (Rank of a Smooth Map).</strong> Let \( F \colon M \to N \) be a smooth map between smooth manifolds. The <strong>rank</strong> of \( F \) at \( p \in M \) is the rank of the linear map \( F_{*,p} \colon T_pM \to T_{F(p)}N \), that is,
 \[
-\operatorname{rank}_p F = \dim F_{*,p}(T_pM) = \operatorname{rank}(F_{*,p}).
+\operatorname{rank}_p F = \dim F_{<em>,p}(T_pM) = \operatorname{rank}(F_{</em>,p}).
 \]
 If \( \dim M = m \) and \( \dim N = n \), then \( 0 \le \operatorname{rank}_p F \le \min(m, n) \).
 </div>
@@ -1591,7 +1591,7 @@ Moreover, the tangent space to the level set at any point \( p \in F^{-1}(c) \) 
 <div class="proposition">
 <strong>Proposition 6.19.</strong> If \( c \) is a regular value of \( F \colon M \to N \) and \( S = F^{-1}(c) \), then for each \( p \in S \),
 \[
-T_p S = \ker F_{*,p} = \{ v \in T_pM : F_{*,p}(v) = 0 \}.
+T_p S = \ker F_{<em>,p} = \{ v \in T_pM : F_{</em>,p}(v) = 0 \}.
 \]
 </div>
 
@@ -1620,7 +1620,7 @@ the orthogonal complement of \( p \) in \( \mathbb{R}^{n+1} \).
 \[
 O(n) = \Phi^{-1}(I_n).
 \]
-One computes \( \Phi_{*,A}(B) = B^T A + A^T B \). When \( A \in O(n) \), this becomes \( \Phi_{*,A}(B) = B^T A + A^T B \). For any symmetric matrix \( S \), the matrix \( B = \frac{1}{2}AS \) satisfies \( \Phi_{*,A}(B) = S \), so \( \Phi_{*,A} \) is surjective. Hence \( I_n \) is a regular value, and \( O(n) \) is a smooth submanifold of \( M(n, \mathbb{R}) \cong \mathbb{R}^{n^2} \) of dimension
+One computes \( \Phi_{<em>,A}(B) = B^T A + A^T B \). When \( A \in O(n) \), this becomes \( \Phi_{</em>,A}(B) = B^T A + A^T B \). For any symmetric matrix \( S \), the matrix \( B = \frac{1}{2}AS \) satisfies \( \Phi_{<em>,A}(B) = S \), so \( \Phi_{</em>,A} \) is surjective. Hence \( I_n \) is a regular value, and \( O(n) \) is a smooth submanifold of \( M(n, \mathbb{R}) \cong \mathbb{R}^{n^2} \) of dimension
 \[
 \dim O(n) = n^2 - \frac{n(n+1)}{2} = \frac{n(n-1)}{2}.
 \]
@@ -1809,11 +1809,11 @@ In the context of tangent spaces, we form tensor products of copies of \( V = T_
 <div class="definition">
 <strong>Definition 8.2 (Mixed Tensors).</strong> A tensor of <strong>type \( (k, \ell) \)</strong> (or a <strong>\( (k, \ell) \)-tensor</strong>) on a vector space \( V \) is an element of
 \[
-T^{(k,\ell)}(V) = \underbrace{V^* \otimes \cdots \otimes V^*}_{k} \otimes \underbrace{V \otimes \cdots \otimes V}_{\ell}.
+T^{(k,\ell)}(V) = \underbrace{V^<em> \otimes \cdots \otimes V^</em>}_{k} \otimes \underbrace{V \otimes \cdots \otimes V}_{\ell}.
 \]
 Equivalently, a \( (k, \ell) \)-tensor is a multilinear map
 \[
-\sigma \colon \underbrace{V \times \cdots \times V}_{k} \times \underbrace{V^* \times \cdots \times V^*}_{\ell} \to \mathbb{R}.
+\sigma \colon \underbrace{V \times \cdots \times V}_{k} \times \underbrace{V^<em> \times \cdots \times V^</em>}_{\ell} \to \mathbb{R}.
 \]
 The number \( k \) is the <strong>covariant order</strong> (number of "covector slots") and \( \ell \) is the <strong>contravariant order</strong> (number of "vector slots"). The sum \( k + \ell \) is the <strong>total order</strong> of the tensor.
 </div>
@@ -1825,7 +1825,7 @@ The number \( k \) is the <strong>covariant order</strong> (number of "covector 
 <li>\( T^{(1,0)}(V) = V^* \) (covectors / linear forms)</li>
 <li>\( T^{(0,1)}(V) = V \) (vectors)</li>
 <li>\( T^{(1,1)}(V) = V^* \otimes V \cong \operatorname{End}(V) \) (linear endomorphisms)</li>
-<li>\( T^{(2,0)}(V) = V^* \otimes V^* \) (bilinear forms)</li>
+<li>\( T^{(2,0)}(V) = V^<em> \otimes V^</em> \) (bilinear forms)</li>
 </ul>
 </div>
 
@@ -1897,7 +1897,7 @@ Many of the most important tensors in geometry possess symmetry properties.
 <li><strong>symmetric</strong> if \( \sigma(v_1, \ldots, v_k) \) is unchanged under any permutation of its arguments;</li>
 <li><strong>alternating</strong> (or <strong>skew-symmetric</strong>, or <strong>antisymmetric</strong>) if \( \sigma(v_1, \ldots, v_k) \) changes sign under any transposition of two arguments.</li>
 </ul>
-The space of symmetric covariant \( k \)-tensors is denoted \( \Sigma^k(V^*) \), and the space of alternating covariant \( k \)-tensors is denoted \( \Lambda^k(V^*) \).
+The space of symmetric covariant \( k \)-tensors is denoted \( \Sigma^k(V^<em>) \), and the space of alternating covariant \( k \)-tensors is denoted \( \Lambda^k(V^</em>) \).
 </div>
 
 There are natural projection operators:
@@ -1994,7 +1994,7 @@ In matrix form, \( g_{ij} = \frac{\delta_{ij}}{(x^n)^2} \). This metric has cons
 <div class="example">
 <strong>Example 8.14 (Pullback Metrics).</strong> More generally, if \( F \colon M \to (N, h) \) is a smooth immersion and \( (N, h) \) is a Riemannian manifold, then the <strong>pullback metric</strong> \( g = F^*h \) defined by
 \[
-g_p(v, w) = h_{F(p)}(F_{*,p}v, F_{*,p}w)
+g_p(v, w) = h_{F(p)}(F_{<em>,p}v, F_{</em>,p}w)
 \]
 is a Riemannian metric on \( M \). (Positive definiteness uses the injectivity of \( F_{*,p} \).) This is how the round metric on \( S^n \) is defined, and more generally how any submanifold of a Riemannian manifold inherits a Riemannian metric.
 </div>
@@ -2002,7 +2002,7 @@ is a Riemannian metric on \( M \). (Positive definiteness uses the injectivity o
 <div class="example">
 <strong>Example 8.15 (Product Metrics).</strong> If \( (M_1, g_1) \) and \( (M_2, g_2) \) are Riemannian manifolds, the <strong>product metric</strong> on \( M_1 \times M_2 \) is defined by
 \[
-g = \pi_1^* g_1 + \pi_2^* g_2,
+g = \pi_1^<em> g_1 + \pi_2^</em> g_2,
 \]
 where \( \pi_i \colon M_1 \times M_2 \to M_i \) are the projections. In terms of the natural splitting \( T_{(p,q)}(M_1 \times M_2) \cong T_pM_1 \oplus T_qM_2 \), vectors from different factors are orthogonal. The flat torus \( \mathbb{T}^n = \mathbb{R}^n / \mathbb{Z}^n \) with its standard flat metric is a product of circles with the standard metric.
 </div>
@@ -2224,7 +2224,7 @@ The metric matrix is \( (g_{ij}) = \operatorname{diag}(1, r^2) \), and the inver
 <div class="definition">
 <strong>Definition 8.28 (Isometry).</strong> Let \( (M, g) \) and \( (N, h) \) be Riemannian manifolds. A diffeomorphism \( F \colon M \to N \) is an <strong>isometry</strong> if \( F^*h = g \), i.e.,
 \[
-h_{F(p)}(F_{*,p}v, F_{*,p}w) = g_p(v, w)
+h_{F(p)}(F_{<em>,p}v, F_{</em>,p}w) = g_p(v, w)
 \]
 for all \( p \in M \) and \( v, w \in T_pM \). More generally, a smooth map \( F \colon M \to N \) is a <strong>local isometry</strong> if every point \( p \in M \) has a neighbourhood \( U \) such that \( F|_U \colon U \to F(U) \) is an isometry onto its image.
 </div>
@@ -2276,7 +2276,7 @@ One readily checks that \( \operatorname{Alt}\, \alpha \) is indeed alternating,
 The tensor product of two alternating tensors is generally not alternating. To obtain an alternating tensor from the product, we apply the alternation operator with appropriate normalization.
 
 <div class="definition">
-<strong>Definition 9.2 (Wedge product).</strong> Given \( \alpha \in \Lambda^k(V^*) \) and \( \beta \in \Lambda^\ell(V^*) \), their <strong>wedge product</strong> (or <strong>exterior product</strong>) is the alternating \( (k+\ell) \)-tensor
+<strong>Definition 9.2 (Wedge product).</strong> Given \( \alpha \in \Lambda^k(V^<em>) \) and \( \beta \in \Lambda^\ell(V^</em>) \), their <strong>wedge product</strong> (or <strong>exterior product</strong>) is the alternating \( (k+\ell) \)-tensor
 \[
 \alpha \wedge \beta = \frac{(k+\ell)!}{k!\, \ell!} \operatorname{Alt}(\alpha \otimes \beta).
 \]
@@ -2290,7 +2290,7 @@ The combinatorial prefactor ensures that the wedge product of basis covectors ag
 The wedge product satisfies several fundamental algebraic properties.
 
 <div class="proposition">
-<strong>Proposition 9.3 (Properties of the wedge product).</strong> Let \( \alpha \in \Lambda^k(V^*) \), \( \beta \in \Lambda^\ell(V^*) \), and \( \gamma \in \Lambda^m(V^*) \). Then:
+<strong>Proposition 9.3 (Properties of the wedge product).</strong> Let \( \alpha \in \Lambda^k(V^<em>) \), \( \beta \in \Lambda^\ell(V^</em>) \), and \( \gamma \in \Lambda^m(V^*) \). Then:
 <ol>
 <li><strong>Bilinearity:</strong> \( \wedge \) is bilinear in each factor.</li>
 <li><strong>Associativity:</strong> \( (\alpha \wedge \beta) \wedge \gamma = \alpha \wedge (\beta \wedge \gamma) \).</li>
@@ -2427,10 +2427,10 @@ for all \( p \in M \) and \( v_1, \ldots, v_k \in T_pM \).
 <div class="proposition">
 <strong>Proposition 9.10 (Properties of pullback).</strong> Let \( F \colon M \to N \) be smooth. Then:
 <ol>
-<li>\( F^*(\alpha \wedge \beta) = (F^*\alpha) \wedge (F^*\beta) \) for all forms \( \alpha, \beta \) on \( N \).</li>
-<li>\( d(F^*\omega) = F^*(d\omega) \) for all \( \omega \in \Omega^k(N) \), i.e., pullback commutes with the exterior derivative.</li>
-<li>\( (G \circ F)^* = F^* \circ G^* \) for smooth maps \( F \colon M \to N \) and \( G \colon N \to P \).</li>
-<li>\( (\mathrm{Id}_M)^* = \mathrm{Id}_{\Omega^*(M)} \).</li>
+<li>\( F^<em>(\alpha \wedge \beta) = (F^</em>\alpha) \wedge (F^*\beta) \) for all forms \( \alpha, \beta \) on \( N \).</li>
+<li>\( d(F^<em>\omega) = F^</em>(d\omega) \) for all \( \omega \in \Omega^k(N) \), i.e., pullback commutes with the exterior derivative.</li>
+<li>\( (G \circ F)^<em> = F^</em> \circ G^* \) for smooth maps \( F \colon M \to N \) and \( G \colon N \to P \).</li>
+<li>\( (\mathrm{Id}_M)^<em> = \mathrm{Id}_{\Omega^</em>(M)} \).</li>
 </ol>
 </div>
 
@@ -2770,17 +2770,17 @@ Smooth maps between manifolds induce maps on cohomology that go in the "reverse"
 <div class="proposition">
 <strong>Proposition 11.5 (Functoriality).</strong> Let \( F \colon M \to N \) be a smooth map. The pullback \( F^* \colon \Omega^k(N) \to \Omega^k(M) \) satisfies:
 <ol>
-<li>\( F^* \) maps closed forms to closed forms (since \( d \circ F^* = F^* \circ d \)).</li>
-<li>\( F^* \) maps exact forms to exact forms (since \( F^*(d\eta) = d(F^*\eta) \)).</li>
+<li>\( F^<em> \) maps closed forms to closed forms (since \( d \circ F^</em> = F^* \circ d \)).</li>
+<li>\( F^<em> \) maps exact forms to exact forms (since \( F^</em>(d\eta) = d(F^*\eta) \)).</li>
 </ol>
 Therefore \( F^* \) descends to a well-defined linear map on cohomology,
 \[
-F^* \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M), \quad [\omega] \mapsto [F^*\omega].
+F^<em> \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M), \quad [\omega] \mapsto [F^</em>\omega].
 \]
 Moreover:
 <ul>
-<li>\( (G \circ F)^* = F^* \circ G^* \) on cohomology.</li>
-<li>\( (\mathrm{Id}_M)^* = \mathrm{Id}_{H^*_{\text{dR}}(M)} \).</li>
+<li>\( (G \circ F)^<em> = F^</em> \circ G^* \) on cohomology.</li>
+<li>\( (\mathrm{Id}_M)^<em> = \mathrm{Id}_{H^</em>_{\text{dR}}(M)} \).</li>
 </ul>
 </div>
 
@@ -2799,7 +2799,7 @@ De Rham cohomology is invariant under a much weaker equivalence than diffeomorph
 <div class="theorem">
 <strong>Theorem 11.8 (Homotopy invariance of de Rham cohomology).</strong> If \( F, G \colon M \to N \) are smoothly homotopic, then
 \[
-F^* = G^* \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M)
+F^<em> = G^</em> \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M)
 \]
 for all \( k \). Consequently, homotopy equivalent manifolds have isomorphic de Rham cohomology.
 </div>
@@ -2849,7 +2849,7 @@ The Mayer–Vietoris sequence is the primary computational tool for de Rham coho
 <div class="theorem">
 <strong>Theorem 11.11 (Mayer–Vietoris sequence).</strong> Let \( M = U \cup V \) where \( U, V \subset M \) are open. There is a long exact sequence of vector spaces:
 \[
-\cdots \to H^{k-1}_{\text{dR}}(U \cap V) \xrightarrow{\delta^*} H^k_{\text{dR}}(M) \xrightarrow{(i^*, j^*)} H^k_{\text{dR}}(U) \oplus H^k_{\text{dR}}(V) \xrightarrow{k^* - \ell^*} H^k_{\text{dR}}(U \cap V) \xrightarrow{\delta^*} H^{k+1}_{\text{dR}}(M) \to \cdots
+\cdots \to H^{k-1}_{\text{dR}}(U \cap V) \xrightarrow{\delta^<em>} H^k_{\text{dR}}(M) \xrightarrow{(i^</em>, j^<em>)} H^k_{\text{dR}}(U) \oplus H^k_{\text{dR}}(V) \xrightarrow{k^</em> - \ell^<em>} H^k_{\text{dR}}(U \cap V) \xrightarrow{\delta^</em>} H^{k+1}_{\text{dR}}(M) \to \cdots
 \]
 where \( i, j \) are the inclusions of \( U, V \) into \( M \), and \( k, \ell \) are the inclusions of \( U \cap V \) into \( U, V \) respectively. The map \( \delta^* \) is the <strong>connecting homomorphism</strong>.
 </div>
@@ -2871,7 +2871,7 @@ The Mayer–Vietoris sequence is extremely powerful because it reduces the compu
 \[
 0 \to H^0_{\text{dR}}(S^1) \to H^0_{\text{dR}}(U) \oplus H^0_{\text{dR}}(V) \to H^0_{\text{dR}}(U \cap V) \xrightarrow{\delta^*} H^1_{\text{dR}}(S^1) \to 0.
 \]
-This is \( 0 \to \mathbb{R} \to \mathbb{R}^2 \to \mathbb{R}^2 \xrightarrow{\delta^*} H^1_{\text{dR}}(S^1) \to 0 \). The map \( \mathbb{R}^2 \to \mathbb{R}^2 \) has rank 1 (one can verify), so \( \ker \delta^* \) is 1-dimensional and \( H^1_{\text{dR}}(S^1) \cong \mathbb{R} \). This confirms our earlier observation that the angle form \( d\theta \) represents a nontrivial cohomology class.
+This is \( 0 \to \mathbb{R} \to \mathbb{R}^2 \to \mathbb{R}^2 \xrightarrow{\delta^<em>} H^1_{\text{dR}}(S^1) \to 0 \). The map \( \mathbb{R}^2 \to \mathbb{R}^2 \) has rank 1 (one can verify), so \( \ker \delta^</em> \) is 1-dimensional and \( H^1_{\text{dR}}(S^1) \cong \mathbb{R} \). This confirms our earlier observation that the angle form \( d\theta \) represents a nontrivial cohomology class.
 </div>
 
 ![Cohomology of S^1: H^0 ≅ R, H^1 ≅ R, computed via Mayer-Vietoris with two contractible arcs](/pics/pmath465/cohomology-circle.svg)
@@ -2895,7 +2895,7 @@ This can be proved using the Künneth formula for de Rham cohomology: if \( M \)
 \[
 H^k_{\text{dR}}(M \times N) \cong \bigoplus_{p+q=k} H^p_{\text{dR}}(M) \otimes H^q_{\text{dR}}(N).
 \]
-For \( T^n \), this gives \( H^*_{\text{dR}}(T^n) \cong \Lambda^*(\mathbb{R}^n) \), the exterior algebra on \( n \) generators of degree 1. The generators of \( H^1_{\text{dR}}(T^n) \) are represented by the \( n \) angle forms \( d\theta^1, \ldots, d\theta^n \), and the generators in higher degree are their wedge products.
+For \( T^n \), this gives \( H^<em>_{\text{dR}}(T^n) \cong \Lambda^</em>(\mathbb{R}^n) \), the exterior algebra on \( n \) generators of degree 1. The generators of \( H^1_{\text{dR}}(T^n) \) are represented by the \( n \) angle forms \( d\theta^1, \ldots, d\theta^n \), and the generators in higher degree are their wedge products.
 </div>
 
 ### 11.8 Top Cohomology and Degree Theory
@@ -3120,7 +3120,7 @@ The Lie bracket measures the failure of two flows to commute. When the bracket v
 </div>
 
 <div class="proof">
-<strong>Proof sketch of (1) \( \Leftrightarrow \) (4).</strong> If the flows commute, then \( (\Theta_t)_* W = W \), so \( \mathcal{L}_V W = \frac{d}{dt}\big|_0 (\Theta_{-t})_* W = 0 = [V,W] \). Conversely, if \( [V,W] = 0 \), consider \( \alpha(t) = (\Theta_{-t})_* W_{\Theta_t(p)} \). Then \( \alpha'(t) = (\Theta_{-t})_* (\mathcal{L}_V W)_{\Theta_t(p)} = 0 \), so \( \alpha(t) \) is constant, meaning \( (\Theta_t)_* W = W \). This implies \( \Theta_t \) preserves the integral curves of \( W \), which gives commutativity of the flows.
+<strong>Proof sketch of (1) \( \Leftrightarrow \) (4).</strong> If the flows commute, then \( (\Theta_t)_<em> W = W \), so \( \mathcal{L}_V W = \frac{d}{dt}\big|_0 (\Theta_{-t})_</em> W = 0 = [V,W] \). Conversely, if \( [V,W] = 0 \), consider \( \alpha(t) = (\Theta_{-t})_<em> W_{\Theta_t(p)} \). Then \( \alpha'(t) = (\Theta_{-t})_</em> (\mathcal{L}_V W)_{\Theta_t(p)} = 0 \), so \( \alpha(t) \) is constant, meaning \( (\Theta_t)_* W = W \). This implies \( \Theta_t \) preserves the integral curves of \( W \), which gives commutativity of the flows.
 </div>
 
 <div class="example">

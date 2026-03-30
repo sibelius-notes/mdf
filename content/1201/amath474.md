@@ -31,7 +31,7 @@ is the **velocity phase space**, or the **tangent fibre bundle** to \(\mathcal{Q
 The bridge between the Lagrangian and Hamiltonian formulations is the **Legendre transform**. Its role is to trade the velocity variables \(\dot{q}^a\) for the momentum variables \(p_a\), passing from the tangent bundle \(\mathsf{T}\mathcal{Q}\) to the cotangent bundle \(\mathsf{T}^*\mathcal{Q}\). Understanding this transform abstractly pays dividends throughout the course.
 
 <div class="definition">
-<strong>Legendre transform.</strong> Let \(V\) be a vector space and \(l : V \to \mathbb{R}\) a convex function. Define \(f(\mathsf{p}, \mathsf{v}) := p_a v^a - l(\mathsf{v})\) for \(\mathsf{p} \in V^*\). The Legendre transform of \(l\) is the function \(h : V^* \to \mathbb{R}\) defined by
+<strong>Legendre transform.</strong> Let \(V\) be a vector space and \(l : V \to \mathbb{R}\) a convex function. Define \(f(\mathsf{p}, \mathsf{v}) := p_a v^a - l(\mathsf{v})\) for \(\mathsf{p} \in V^<em>\). The Legendre transform of \(l\) is the function \(h : V^</em> \to \mathbb{R}\) defined by
 \[
 h(\mathsf{p}) := \max_{\mathsf{v} \in V} f(\mathsf{p}, \mathsf{v}).
 \]

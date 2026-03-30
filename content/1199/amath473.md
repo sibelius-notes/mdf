@@ -140,9 +140,9 @@ A particularly important class of linear operators consists of those that map ve
 </div>
 
 <div class="example">
-<strong>Example in \(\mathbb{C}^3\).</strong> Represent \(y \in \mathbb{C}^3\) as a column vector. A linear functional \(\hat{A}\) must produce a scalar, so it must be a row vector, say \(\hat{A} = (x_1^*, x_2^*, x_3^*)\), so that
+<strong>Example in \(\mathbb{C}^3\).</strong> Represent \(y \in \mathbb{C}^3\) as a column vector. A linear functional \(\hat{A}\) must produce a scalar, so it must be a row vector, say \(\hat{A} = (x_1^<em>, x_2^</em>, x_3^*)\), so that
 \[
-(x_1^*, x_2^*, x_3^*) \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = x_1^* y_1 + x_2^* y_2 + x_3^* y_3 \in \mathbb{C}.
+(x_1^<em>, x_2^</em>, x_3^<em>) \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = x_1^</em> y_1 + x_2^<em> y_2 + x_3^</em> y_3 \in \mathbb{C}.
 \]
 Row vectors are precisely the linear functionals on the space of column vectors.
 </div>
@@ -209,7 +209,7 @@ for all \(|u\rangle, |v\rangle \in \mathrm{Dom}(\hat{H})\).
 The distinction between Hermitian and self-adjoint is subtle but physically important. In finite-dimensional Hilbert spaces the two coincide: every operator acts on the entire space, so the domain condition is automatic. In infinite dimensions it is not. For example, the operator \(i\partial_x\) on \(L^2([0,1])\) is Hermitian but not self-adjoint; it can be made self-adjoint by imposing specific boundary conditions, which effectively restricts the domain. In quantum mechanics, self-adjoint operators are the physically meaningful observables — the spectral theorem applies fully only to self-adjoint operators.
 
 <div class="remark">
-<strong>Remark.</strong> Kempf illuminates the meaning of Hermitian observables via Dirac's logic for why \(k = i\hbar\) must be imaginary. If \(\hat{x}\) and \(\hat{p}\) are observables, their measurement outcomes must be real, so we require \(\hat{x}^\dagger = \hat{x}\) and \(\hat{p}^\dagger = \hat{p}\). Now take the Hermitian conjugate of \(\hat{x}\hat{p} - \hat{p}\hat{x} = k\): since \((AB)^\dagger = B^\dagger A^\dagger\), one finds \(\hat{p}\hat{x} - \hat{x}\hat{p} = k^*\), i.e., the left side changes sign, so \(-k = k^*\). A complex number that equals minus its own conjugate must be purely imaginary. As Kempf puts it: "quite paradoxically, quantum mechanics must necessarily contain complex numbers in order to be able to make real-valued predictions for experiments." The imaginary unit in \([\hat{x}, \hat{p}] = i\hbar\) is not a convention — it is forced by the requirement that position and momentum measurements yield real numbers.
+<strong>Remark.</strong> Kempf illuminates the meaning of Hermitian observables via Dirac's logic for why \(k = i\hbar\) must be imaginary. If \(\hat{x}\) and \(\hat{p}\) are observables, their measurement outcomes must be real, so we require \(\hat{x}^\dagger = \hat{x}\) and \(\hat{p}^\dagger = \hat{p}\). Now take the Hermitian conjugate of \(\hat{x}\hat{p} - \hat{p}\hat{x} = k\): since \((AB)^\dagger = B^\dagger A^\dagger\), one finds \(\hat{p}\hat{x} - \hat{x}\hat{p} = k^<em>\), i.e., the left side changes sign, so \(-k = k^</em>\). A complex number that equals minus its own conjugate must be purely imaginary. As Kempf puts it: "quite paradoxically, quantum mechanics must necessarily contain complex numbers in order to be able to make real-valued predictions for experiments." The imaginary unit in \([\hat{x}, \hat{p}] = i\hbar\) is not a convention — it is forced by the requirement that position and momentum measurements yield real numbers.
 </div>
 
 <div class="definition">
@@ -242,7 +242,7 @@ This theorem is what makes Hermitian operators suitable to represent physical ob
 
 <em>Proof.</em> Using the Hermitian property:
 \[
-\langle\lambda_1|\hat{H}|\lambda_2\rangle = \langle\lambda_2|\hat{H}|\lambda_1\rangle^* \implies \langle\lambda_1|\lambda_2\rangle\lambda_2 = \langle\lambda_2|\lambda_1\rangle^*\lambda_1^* .
+\langle\lambda_1|\hat{H}|\lambda_2\rangle = \langle\lambda_2|\hat{H}|\lambda_1\rangle^<em> \implies \langle\lambda_1|\lambda_2\rangle\lambda_2 = \langle\lambda_2|\lambda_1\rangle^</em>\lambda_1^* .
 \]
 Since \(\lambda_1^* = \lambda_1\) by Theorem 1, this gives
 \[
@@ -457,7 +457,7 @@ A crucial fact connects self-adjoint and unitary operators. The complex exponent
 Conversely, every unitary operator can be written as the exponential of some self-adjoint operator. The time-evolution operator \(\hat{U}(t) = e^{-i\hat{H}t/\hbar}\) is the central example in non-relativistic quantum mechanics.
 
 <div class="definition">
-<strong>Definition (Anti-linear map).</strong> A map \(F: V \to W\) is <strong>anti-linear</strong> if \(F[a|v_1\rangle + b|v_2\rangle] = a^* F[|v_1\rangle] + b^* F[|v_2\rangle]\).
+<strong>Definition (Anti-linear map).</strong> A map \(F: V \to W\) is <strong>anti-linear</strong> if \(F[a|v_1\rangle + b|v_2\rangle] = a^<em> F[|v_1\rangle] + b^</em> F[|v_2\rangle]\).
 
 <strong>Definition (Anti-unitary operator).</strong> An <strong>anti-unitary operator</strong> \(\bar{\hat{U}}\) is a bounded anti-linear operator satisfying \(\bar{\hat{U}}\bar{\hat{U}}^\dagger = \bar{\hat{U}}^\dagger\bar{\hat{U}} = \hat{\mathbf{1}}\) and \(\langle \bar{\hat{U}}x, \bar{\hat{U}}y\rangle = \langle x, y\rangle^*\).
 </div>
@@ -577,7 +577,7 @@ where \(\Delta_A = \sqrt{\langle\hat{A}^2\rangle - \langle\hat{A}\rangle^2}\) is
 \[
 \Delta_X\,\Delta_P \geq \frac{1}{2} .
 \]
-This is Heisenberg's uncertainty principle. The result is state-independent: for every state \(|\psi\rangle\) and every pair of conjugate observables satisfying the canonical commutation relation, the product of their standard deviations is bounded below by \(\tfrac{1}{2}\). States that achieve equality — Gaussian wavepackets, or coherent states — are called **minimum uncertainty states**.
+This is Heisenberg's uncertainty principle. The result is state-independent: for every state \(|\psi\rangle\) and every pair of conjugate observables satisfying the canonical commutation relation, the product of their standard deviations is bounded below by \(\tfrac{1}{2}\). States that achieve equality — Gaussian wavepackets, or coherent states — are called <strong>minimum uncertainty states</strong>.
 </div>
 
 The physical content is this: position and momentum are not independent degrees of freedom in quantum mechanics but are linked by the Fourier transform. A state sharply peaked in position is broadly spread in momentum (a narrow spike has a wide Fourier transform), and vice versa. The uncertainty relation makes this precise and quantitative.
@@ -740,7 +740,7 @@ for all observables \(\hat{u}_1, \hat{u}_2, \hat{v}_1, \hat{v}_2\). This must ho
 \]
 for some constant \(k\) that commutes with all observables. Setting \(k = 0\) recovers classical mechanics. Any nonzero \(k\) introduces genuine non-commutativity — and the Poisson algebra structure of the equations of motion is preserved exactly.
 
-<strong>The factor of \(i\) comes from hermiticity.</strong> The constant \(k\) must be imaginary. To see why: position and momentum observables must satisfy \(\hat{x}^\dagger = \hat{x}\) and \(\hat{p}^\dagger = \hat{p}\) (so that measurement outcomes are real). Taking the adjoint of \(\hat{x}\hat{p} - \hat{p}\hat{x} = k\{x, p\} = k\) gives \(\hat{p}\hat{x} - \hat{x}\hat{p} = k^*\), i.e., \(-(\hat{x}\hat{p} - \hat{p}\hat{x}) = k^*\). Together with the original equation: \(-k = k^*\), so \(k\) is purely imaginary. Nature chooses \(k = i\hbar\), and the CCRs follow:
+<strong>The factor of \(i\) comes from hermiticity.</strong> The constant \(k\) must be imaginary. To see why: position and momentum observables must satisfy \(\hat{x}^\dagger = \hat{x}\) and \(\hat{p}^\dagger = \hat{p}\) (so that measurement outcomes are real). Taking the adjoint of \(\hat{x}\hat{p} - \hat{p}\hat{x} = k\{x, p\} = k\) gives \(\hat{p}\hat{x} - \hat{x}\hat{p} = k^<em>\), i.e., \(-(\hat{x}\hat{p} - \hat{p}\hat{x}) = k^</em>\). Together with the original equation: \(-k = k^*\), so \(k\) is purely imaginary. Nature chooses \(k = i\hbar\), and the CCRs follow:
 \[
 [\hat{x}_i^{(r)},\, \hat{p}_j^{(s)}] = i\hbar\,\delta_{ij}\delta^{rs}, \qquad [\hat{x}_i^{(r)},\, \hat{x}_j^{(s)}] = 0, \qquad [\hat{p}_i^{(r)},\, \hat{p}_j^{(s)}] = 0 .
 \]
@@ -2562,7 +2562,7 @@ Kempf gives a particularly clean statistical argument for why bosons "prefer" to
 \[ P(\text{same state, bosons}) = \frac{2}{3} > \frac{1}{2} = P(\text{same state, distinguishable}). \]
 
 <div class="remark">
-<strong>Remark (Kempf — Bose enhancement verbal explanation).</strong> "Just like fermions cannot be in the same state, bosons actually *want* to be in the same state — not just can, it is preferred for them to be in the same state. If you expose a bunch of identical bosons to a heat bath, they are more likely to be found in the same state than they would be if they were not bosons. For large numbers of identical bosons, this enhancement is dramatic. The combinatorial factor that ordinarily drives the system to explore many different states collapses — because symmetrization forces you to count only symmetric states — and what remains is the exponential suppression from the Boltzmann factor. The competition that normally prevents condensation is removed: almost all the bosons pile into the ground state. This is Bose-Einstein condensation."
+<strong>Remark (Kempf — Bose enhancement verbal explanation).</strong> "Just like fermions cannot be in the same state, bosons actually <em>want</em> to be in the same state — not just can, it is preferred for them to be in the same state. If you expose a bunch of identical bosons to a heat bath, they are more likely to be found in the same state than they would be if they were not bosons. For large numbers of identical bosons, this enhancement is dramatic. The combinatorial factor that ordinarily drives the system to explore many different states collapses — because symmetrization forces you to count only symmetric states — and what remains is the exponential suppression from the Boltzmann factor. The competition that normally prevents condensation is removed: almost all the bosons pile into the ground state. This is Bose-Einstein condensation."
 </div>
 
 More precisely: for \( N \) identical bosons in equilibrium, the density matrix \( \hat{\rho} = e^{-\beta\hat{H}}/Z \) must be evaluated in the symmetric subspace. The degeneracy factor (number of ways to distribute \( N \) distinguishable particles across energy levels with given occupation numbers) is \( N! / \prod_k n_k! \). For identical bosons, this combinatorial factor collapses: the system only counts *distinct* symmetric states, removing the \( N! \) enhancement. The Boltzmann exponential \( e^{-\beta E} \) now wins over entropy, driving the system toward the ground state.
@@ -2713,7 +2713,7 @@ This is precisely the **Euler–Lagrange equation** — the condition that \( x(
 The fluctuations around the classical path give the leading quantum corrections. For a quadratic action (free particle, harmonic oscillator), the path integral is exactly Gaussian and can be evaluated in closed form; the result reproduces the exact Green's functions. For anharmonic potentials, one expands around the classical path and obtains a perturbation series — the Feynman diagram expansion.
 
 <div class="remark">
-<strong>Remark (Kempf — the "least action" principle is really the "critical action" principle).</strong> "Coming from quantum mechanics, we can now understand more deeply why classical mechanics has the action principle. When you look at the path integral, you see that it has a very oscillatory integrand. Most contributions cancel by destructive interference — they are as much positive as they are negative in the complex plane. The dominant contribution comes from those paths for which the action does not vary to first order, because those paths are reinforced by their neighbors: the nearby paths also contribute nearly the same action with the same sign, so they add up rather than canceling. Therefore the dominant path is not necessarily the one of *least* action — it is the one of *critical* (stationary) action. Take, for example, a particle moving relativistically in curved spacetime: it follows the path of *maximum* proper time, not minimum. The reason people call it the least action principle is historical habit. What Feynman's path integral reveals is that classical mechanics should really be called the critical action principle. Quantum fluctuations are contributions from the non-extremal paths — as much as they contribute, quantum mechanics deviates from classical mechanics."
+<strong>Remark (Kempf — the "least action" principle is really the "critical action" principle).</strong> "Coming from quantum mechanics, we can now understand more deeply why classical mechanics has the action principle. When you look at the path integral, you see that it has a very oscillatory integrand. Most contributions cancel by destructive interference — they are as much positive as they are negative in the complex plane. The dominant contribution comes from those paths for which the action does not vary to first order, because those paths are reinforced by their neighbors: the nearby paths also contribute nearly the same action with the same sign, so they add up rather than canceling. Therefore the dominant path is not necessarily the one of <em>least</em> action — it is the one of <em>critical</em> (stationary) action. Take, for example, a particle moving relativistically in curved spacetime: it follows the path of <em>maximum</em> proper time, not minimum. The reason people call it the least action principle is historical habit. What Feynman's path integral reveals is that classical mechanics should really be called the critical action principle. Quantum fluctuations are contributions from the non-extremal paths — as much as they contribute, quantum mechanics deviates from classical mechanics."
 </div>
 
 ---

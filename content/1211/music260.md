@@ -53,7 +53,7 @@ The score also gives us the key signature, time signature, and tempo indication 
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/NWEVKyEwi4A?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Beethoven, Symphony No. 5, Mvt. I — score with audio*
+<em>Beethoven, Symphony No. 5, Mvt. I — score with audio</em>
 
 ## Instruments of the Orchestra
 
@@ -72,7 +72,7 @@ Philharmonia Orchestra — video guide to the instruments of the orchestra:
 
 The origins of the symphony are quite fascinating, and notice that we have the power of audiences to make up this story — just as Paul Bekker said, it is really the story of audiences.
 
-If we go to 1730 in Italy, we find the development of organizations called **Philharmonic Societies** — amateur music-making organizations that put on public concerts. This is all happening in the context of the **Enlightenment**, which Jeffrey Langford dates from about the 1720s to 1800. The Enlightenment brought ideals of liberty, social equality, and economic power for the middle class. It was no longer just royalty who were patrons — the middle class had money to spend on concert tickets and instruments for music-making at home. This drove the formation of ensembles in the Philharmonic Societies: string players, wind players, and brass players who needed ensemble music for groups with more than one person per part.
+If we go to 1730 in Italy, we find the development of organizations called <strong>Philharmonic Societies</strong> — amateur music-making organizations that put on public concerts. This is all happening in the context of the <strong>Enlightenment</strong>, which Jeffrey Langford dates from about the 1720s to 1800. The Enlightenment brought ideals of liberty, social equality, and economic power for the middle class. It was no longer just royalty who were patrons — the middle class had money to spend on concert tickets and instruments for music-making at home. This drove the formation of ensembles in the Philharmonic Societies: string players, wind players, and brass players who needed ensemble music for groups with more than one person per part.
 
 The Italian opera orchestra was also developing, with strings and some optional winds becoming the standard form. Orchestras at the time were smaller than what we think of now — perhaps 15 instrumentalists in a court, up to about 40 in an opera orchestra. The symphony and the orchestra were born together out of Enlightenment ideals and the tastes of a growing middle-class audience.
 
@@ -80,44 +80,44 @@ The Italian opera orchestra was also developing, with strings and some optional 
 
 The origins of the symphony go hand-in-hand with the development of 18<sup>th</sup>-century musical style, really emerging around the 1730s. The Enlightenment brought an emphasis on a newer, simpler musical style characterized by naturalness and simplicity. The audience for this music was less well educated than their royal counterparts. They found the music of J.S. Bach, for example, old-fashioned by the 1730s — difficult, learned, and turgid. They wanted something lighter, easier to hear, easier to understand.
 
-This new style emerged in the Italian **opera buffa** (comic opera) houses of the early 18<sup>th</sup> century. The French term used to describe it was **galant** — meaning fashionable, chic, very of the moment. It featured simpler texture (melody plus accompaniment rather than the thick counterpoint of Bach), simpler diatonic harmony, and melodies built up of two- and four-bar phrases that get repeated. Giovanni Battista Pergolesi, whose work we will hear, is given a great deal of credit for pioneering this style. The famous *Querelle des Bouffons* (War of the Buffoons) of the 1750s was fought over music in this very style from the 1730s.
+This new style emerged in the Italian <strong>opera buffa</strong> (comic opera) houses of the early 18<sup>th</sup> century. The French term used to describe it was <strong>galant</strong> — meaning fashionable, chic, very of the moment. It featured simpler texture (melody plus accompaniment rather than the thick counterpoint of Bach), simpler diatonic harmony, and melodies built up of two- and four-bar phrases that get repeated. Giovanni Battista Pergolesi, whose work we will hear, is given a great deal of credit for pioneering this style. The famous <em>Querelle des Bouffons</em> (War of the Buffoons) of the 1750s was fought over music in this very style from the 1730s.
 
 ## Origins of the Term
 
-The word "symphony" comes from the Greek: *syn* + *phonē* = "to sound together." The Italian term **sinfonia** was used rather loosely in the 17<sup>th</sup> and 18<sup>th</sup> centuries as an interchangeable, generic label applied to various genres involving a large group of instruments and often voices. Heinrich Schütz used "sacred symphony" (*Symphoniae sacrae*, 1619) for what were essentially Latin motets with instrumental accompaniment. Handel used "Pastoral Symphony" for an instrumental interlude in *Messiah*. The term appeared as an opening instrumental introduction to Italian operas and to Bach's cantatas. It could even refer to the instrumental introduction to an aria. Essentially, it seems to have been applied to any piece for instruments sounding together.
+The word "symphony" comes from the Greek: <em>syn</em> + <em>phonē</em> = "to sound together." The Italian term <strong>sinfonia</strong> was used rather loosely in the 17<sup>th</sup> and 18<sup>th</sup> centuries as an interchangeable, generic label applied to various genres involving a large group of instruments and often voices. Heinrich Schütz used "sacred symphony" (<em>Symphoniae sacrae</em>, 1619) for what were essentially Latin motets with instrumental accompaniment. Handel used "Pastoral Symphony" for an instrumental interlude in <em>Messiah</em>. The term appeared as an opening instrumental introduction to Italian operas and to Bach's cantatas. It could even refer to the instrumental introduction to an aria. Essentially, it seems to have been applied to any piece for instruments sounding together.
 
 ## Antecedents of the Symphony
 
 Several earlier genres contributed to what the symphony became:
 
-- **Italian opera overtures**: three contrasting sections in fast–slow–fast arrangement, with contrasts of tempo, meter, and key — probably the most direct antecedent
-- **Ripieno concerto**: large ensemble music without soloists, often in three movements
-- **Trio sonatas**: the arrangement of three significant parts (two melody parts and a bass) influenced symphonic texture
-- **Baroque dance suite**: the two-part or **binary form**, with a repeated first section moving away from the tonic and a second section returning to it, likely gave birth to what we now call **sonata form**
+- <strong>Italian opera overtures</strong>: three contrasting sections in fast–slow–fast arrangement, with contrasts of tempo, meter, and key — probably the most direct antecedent
+- <strong>Ripieno concerto</strong>: large ensemble music without soloists, often in three movements
+- <strong>Trio sonatas</strong>: the arrangement of three significant parts (two melody parts and a bass) influenced symphonic texture
+- <strong>Baroque dance suite</strong>: the two-part or <strong>binary form</strong>, with a repeated first section moving away from the tonic and a second section returning to it, likely gave birth to what we now call <strong>sonata form</strong>
 
 ## The Overture-Symphony
 
-The earliest form of what we would identify as a symphony is the **overture-symphony**. The Philharmonic Societies needed music to play in concert, and all they had to do was extract an overture (sinfonia) from a popular Italian opera and perform it in concert. As demand grew, composers began writing new pieces specifically in the style of the Italian opera overture — and the independent symphony was born.
+The earliest form of what we would identify as a symphony is the <strong>overture-symphony</strong>. The Philharmonic Societies needed music to play in concert, and all they had to do was extract an overture (sinfonia) from a popular Italian opera and perform it in concert. As demand grew, composers began writing new pieces specifically in the style of the Italian opera overture — and the independent symphony was born.
 
 ## Pergolesi and the Italian Sinfonia
 
-**Giovanni Battista Pergolesi** (1710–1736) died at just 26 but left an enormous mark. His overture to the opera seria *L'Olimpiade* (1735) is a perfect example of the early Italian overture-symphony. Pergolesi was internationally renowned, and this overture was copied out by many — even Jean-Jacques Rousseau had a copy made.
+<strong>Giovanni Battista Pergolesi</strong> (1710–1736) died at just 26 but left an enormous mark. His overture to the opera seria <em>L'Olimpiade</em> (1735) is a perfect example of the early Italian overture-symphony. Pergolesi was internationally renowned, and this overture was copied out by many — even Jean-Jacques Rousseau had a copy made.
 
 <p align="center">♪ <i>Pergolesi, L'Olimpiade — Overture</i> ♪</p>
 
-The overture has three distinct sections that continue without a break: fast (0:00) – slow (1:28) – fast/dance-like (3:57). Each section has its own **binary form**, though not always with strict repeats like Baroque dance suites. The musical material consists of small, simple contrasting motifs — often outlining the triad, with scalar passages, arpeggios, and repeated figuration. These are not full-blown memorable themes you would hum leaving the concert hall, but they work together beautifully.
+The overture has three distinct sections that continue without a break: fast (0:00) – slow (1:28) – fast/dance-like (3:57). Each section has its own <strong>binary form</strong>, though not always with strict repeats like Baroque dance suites. The musical material consists of small, simple contrasting motifs — often outlining the triad, with scalar passages, arpeggios, and repeated figuration. These are not full-blown memorable themes you would hum leaving the concert hall, but they work together beautifully.
 
-The score does not have the standard orchestral arrangement we discussed: trumpets appear at the top instead of in the middle, winds often double the string parts rather than having independent lines, and the bassoon part is not even written out — it was simply assumed the instrument would play along with the **basso continuo** (harpsichord and bass instrument providing harmonic support). No clarinets — that came later.
+The score does not have the standard orchestral arrangement we discussed: trumpets appear at the top instead of in the middle, winds often double the string parts rather than having independent lines, and the bassoon part is not even written out — it was simply assumed the instrument would play along with the <strong>basso continuo</strong> (harpsichord and bass instrument providing harmonic support). No clarinets — that came later.
 
 ![Pergolesi, L'Olimpiade — manuscript score](/pics/260/260-1b-pergolesi-manuscript.png)
 
 ## Sammartini and the Concert Symphony
 
-**Giovanni Sammartini** (Milan, 1700–1775) was a real pioneer in creating independent concert symphonies — works written specifically for the concert, not extracted from operas. Stationed in Milan, he wrote about 70 symphonies for the concert-going public.
+<strong>Giovanni Sammartini</strong> (Milan, 1700–1775) was a real pioneer in creating independent concert symphonies — works written specifically for the concert, not extracted from operas. Stationed in Milan, he wrote about 70 symphonies for the concert-going public.
 
 <p align="center">♪ <i>Sammartini, Symphony in F, I</i> ♪</p>
 
-His orchestra in the 1730s was mainly strings; from about 1740 he added oboes and a horn. Like the opera overture, his symphonies have three movements (fast–slow–fast, the last in a dance meter), but these are now three *separate movements* rather than three sections within one continuous piece — an important expansion. Each movement is in **simple binary form**: the A section starts in the tonic, presents several musical ideas, and moves to the dominant by the end; then it is repeated. The B section often starts with material from the beginning, passes through several modulations, and returns to the tonic for the conclusion; it is also repeated.
+His orchestra in the 1730s was mainly strings; from about 1740 he added oboes and a horn. Like the opera overture, his symphonies have three movements (fast–slow–fast, the last in a dance meter), but these are now three <em>separate movements</em> rather than three sections within one continuous piece — an important expansion. Each movement is in <strong>simple binary form</strong>: the A section starts in the tonic, presents several musical ideas, and moves to the dominant by the end; then it is repeated. The B section often starts with material from the beginning, passes through several modulations, and returns to the tonic for the conclusion; it is also repeated.
 
 ![Sammartini, Symphony in F — opening section](/pics/260/260-1b-sammartini-score.png)
 
@@ -125,26 +125,26 @@ In Sammartini's Symphony in F, the first movement's opening section (exposition)
 
 ## Stamitz and the Mannheim School
 
-The symphony expanded beyond Italy into Germany and Austria. One of the greatest centers was **Mannheim**, seat of the Elector Karl Theodor of the Rhine Palatinate. Karl Theodor was a great lover of music who made Mannheim a real cultural center, putting on public concerts and assembling the finest musicians from across Europe.
+The symphony expanded beyond Italy into Germany and Austria. One of the greatest centers was <strong>Mannheim</strong>, seat of the Elector Karl Theodor of the Rhine Palatinate. Karl Theodor was a great lover of music who made Mannheim a real cultural center, putting on public concerts and assembling the finest musicians from across Europe.
 
-**Johann Stamitz** (1717–1757) arrived in Mannheim in 1742 as a violinist, became concertmaster within a couple of years, and by 1750 was director of instrumental music. Working with the best orchestra in Europe, he produced a series of innovations that transformed the symphony.
+<strong>Johann Stamitz</strong> (1717–1757) arrived in Mannheim in 1742 as a violinist, became concertmaster within a couple of years, and by 1750 was director of instrumental music. Working with the best orchestra in Europe, he produced a series of innovations that transformed the symphony.
 
-**Orchestral innovations:**
+<strong>Orchestral innovations:</strong>
 - Doubled the size of the orchestra from about 20 to 40 musicians
 - Gave winds and brass increasing independence rather than merely doubling string lines
 - Achieved extraordinary precision — the English historian Charles Burney called the Mannheim orchestra "an army of generals"
-- Developed the famous **Mannheim crescendo**: a very precise, gradual crescendo, often with strings playing tremolo, creating tremendous excitement that stunned audiences
+- Developed the famous <strong>Mannheim crescendo</strong>: a very precise, gradual crescendo, often with strings playing tremolo, creating tremendous excitement that stunned audiences
 
-**Formal innovations:**
-- **Standardized four movements** for the symphony: fast–slow–minuet–fast (inserting a minuet dance movement as the third). This four-movement format would be used by Haydn, Mozart, and even Beethoven (who later replaced the minuet with a scherzo)
-- Advanced **sonata form** in the first movement with clearly contrasting themes: a principal theme, a secondary theme, and a closing theme in the exposition
-- Complicated the recapitulation: rather than returning to the first theme when the tonic comes back, Stamitz starts the recapitulation with the *second* theme in the tonic, then closes the movement with the first theme — reordering the return of themes
+<strong>Formal innovations:</strong>
+- <strong>Standardized four movements</strong> for the symphony: fast–slow–minuet–fast (inserting a minuet dance movement as the third). This four-movement format would be used by Haydn, Mozart, and even Beethoven (who later replaced the minuet with a scherzo)
+- Advanced <strong>sonata form</strong> in the first movement with clearly contrasting themes: a principal theme, a secondary theme, and a closing theme in the exposition
+- Complicated the recapitulation: rather than returning to the first theme when the tonic comes back, Stamitz starts the recapitulation with the <em>second</em> theme in the tonic, then closes the movement with the first theme — reordering the return of themes
 
 ![Stamitz, Symphony in D — themes](/pics/260/260-1b-stamitz-themes.png)
 
 <p align="center">♪ <i>Stamitz, Symphony in D, Op. 3, No. 2 — I. Allegro</i> ♪</p>
 
-The remaining movements follow what became the norm for the rest of the Classical period: a slow second movement in a contrasting key (the subdominant, G major) in simple binary form; a **minuet and trio** in the tonic, where the minuet has its own binary form and the trio has its own, with a *minuet da capo* (return to the beginning) at the end; and a fast final movement in simple binary form and triple meter.
+The remaining movements follow what became the norm for the rest of the Classical period: a slow second movement in a contrasting key (the subdominant, G major) in simple binary form; a <strong>minuet and trio</strong> in the tonic, where the minuet has its own binary form and the trio has its own, with a <em>minuet da capo</em> (return to the beginning) at the end; and a fast final movement in simple binary form and triple meter.
 
 ## Review of Sonata Form
 
@@ -152,13 +152,13 @@ Since sonata form will be central to understanding every symphony we study, a qu
 
 ![Sonata form diagram](/pics/260/260-sonata-form-diagram.png)
 
-**Sonata form** is a two-part (binary) structure that became the standard first-movement form of classical symphonies, string quartets, and keyboard sonatas. The two sections are marked by repeat signs:
+<strong>Sonata form</strong> is a two-part (binary) structure that became the standard first-movement form of classical symphonies, string quartets, and keyboard sonatas. The two sections are marked by repeat signs:
 
-**Exposition** (first section): Opens with a **first theme** (or theme group) in the tonic key. A **transition** modulates to a new key — usually the dominant if in a major key, or the relative major if in a minor key. The **second theme** appears in this new key, followed by a **closing theme** that confirms the new key. The entire exposition is typically repeated.
+<strong>Exposition</strong> (first section): Opens with a <strong>first theme</strong> (or theme group) in the tonic key. A <strong>transition</strong> modulates to a new key — usually the dominant if in a major key, or the relative major if in a minor key. The <strong>second theme</strong> appears in this new key, followed by a <strong>closing theme</strong> that confirms the new key. The entire exposition is typically repeated.
 
-**Development** (beginning of second section): Takes material from the exposition and manipulates it through modulation — passing through multiple keys in what is the freest, most unstable part of the entire form. A **re-transition** leads back to the tonic.
+<strong>Development</strong> (beginning of second section): Takes material from the exposition and manipulates it through modulation — passing through multiple keys in what is the freest, most unstable part of the entire form. A <strong>re-transition</strong> leads back to the tonic.
 
-**Recapitulation** (second half of the second section): The first theme returns in the tonic key. The transition is rewritten so that the second and closing themes now also remain in the tonic. A **codetta** or **coda** ("tail") may be added to drive home the arrival of the tonic.
+<strong>Recapitulation</strong> (second half of the second section): The first theme returns in the tonic key. The transition is rewritten so that the second and closing themes now also remain in the tonic. A <strong>codetta</strong> or <strong>coda</strong> ("tail") may be added to drive home the arrival of the tonic.
 
 The key scheme is the crucial element: we start in the tonic, move away from it, and return. As we will see, different composers handle every aspect of this scheme differently — and those differences are what make the history of the symphony so fascinating.
 
@@ -169,27 +169,27 @@ The key scheme is the crucial element: we start in the tonic, move away from it,
 
 ![Joseph Haydn](/pics/260/260-2a-haydn-portrait.jpeg)
 
-The most celebrated composer of his day, Joseph Haydn was essentially a servant of a noble family. He showed aptitude for music early, serving as a choirboy in Vienna where he sang and played harpsichord and violin. When his voice broke at 17, he was released from his chapel work and had to support himself. He eventually secured excellent patronages, the best being with the **Esterházy family** in 1761.
+The most celebrated composer of his day, Joseph Haydn was essentially a servant of a noble family. He showed aptitude for music early, serving as a choirboy in Vienna where he sang and played harpsichord and violin. When his voice broke at 17, he was released from his chapel work and had to support himself. He eventually secured excellent patronages, the best being with the <strong>Esterházy family</strong> in 1761.
 
-The Esterházys were a powerful Hungarian noble family, generous patrons devoted to music. The Prince himself was an accomplished musician who played a stringed instrument called the **baryton**, and Haydn wrote many trios so that the Prince could perform. Haydn's duties included composing, conducting, training and supervising music personnel, and even keeping the instruments in repair. He directed a small orchestra — but thanks to the generous patronage, he had the best musicians from anywhere in Europe.
+The Esterházys were a powerful Hungarian noble family, generous patrons devoted to music. The Prince himself was an accomplished musician who played a stringed instrument called the <strong>baryton</strong>, and Haydn wrote many trios so that the Prince could perform. Haydn's duties included composing, conducting, training and supervising music personnel, and even keeping the instruments in repair. He directed a small orchestra — but thanks to the generous patronage, he had the best musicians from anywhere in Europe.
 
 Still, he was a servant. His symphonies provided a useful craft. This was before the age when musicians were thought of as artists, even though Haydn was highly regarded.
 
-In 1766, the family moved to **Eszterháza**, a remote country estate. Haydn was isolated — far from Vienna and the great musical centers. But he made the best of it, experimenting constantly with his fantastic orchestra. In 1779, a new contract finally allowed him to publish his works. Before this, the Esterházys owned the copyright to everything he wrote. Publication brought fame throughout Europe — people would buy the music, play it, and the best musicians came to know his name.
+In 1766, the family moved to <strong>Eszterháza</strong>, a remote country estate. Haydn was isolated — far from Vienna and the great musical centers. But he made the best of it, experimenting constantly with his fantastic orchestra. In 1779, a new contract finally allowed him to publish his works. Before this, the Esterházys owned the copyright to everything he wrote. Publication brought fame throughout Europe — people would buy the music, play it, and the best musicians came to know his name.
 
 He met Mozart in 1784, and there was apparently much mutual admiration between the two. Finally, in 1790, he was released from the Esterházy patronage and traveled to London twice in the 1790s, gaining enormous recognition.
 
-*Fun fact: Haydn's skull was separated from his body for 145 years. He died in 1809, the age of phrenology, when people believed the shape of the skull revealed a person's characteristics. Someone exhumed him and removed his head to study a genius's cranium. This was only discovered about ten years later when the Esterházys wanted to give him a more proper burial. First they were given the wrong skull — a man too young — then an old man's skull that managed to satisfy them. The full story is recounted in an article called "[Don't Lose Your Head](http://www.interlude.hk/front/dont-lose-your-head-haydns-skull/)."*
+<em>Fun fact: Haydn's skull was separated from his body for 145 years. He died in 1809, the age of phrenology, when people believed the shape of the skull revealed a person's characteristics. Someone exhumed him and removed his head to study a genius's cranium. This was only discovered about ten years later when the Esterházys wanted to give him a more proper burial. First they were given the wrong skull — a man too young — then an old man's skull that managed to satisfy them. The full story is recounted in an article called "[Don't Lose Your Head](http://www.interlude.hk/front/dont-lose-your-head-haydns-skull/)."</em>
 
 ## Haydn's Contributions to the Symphony
 
 Even in his early symphonies, Haydn made contributions that transformed the genre. Symphonies were central to his output — he composed at least 106 of them. When he started, the symphony was considered a light, galant, overture-style work. He brought it to the level of a much more sophisticated, serious genre that was a real test of a composer's ability. The function changed: symphonies were written not just for amateurs to enjoy but for connoisseurs who could appreciate what lay beneath the surface — things requiring musical expertise to catch.
 
-One of the most salient features of Haydn's works is his **wit** — a sophisticated sense of humor and love of musical surprises. The *Surprise Symphony* is the famous example, but we will encounter plenty of others.
+One of the most salient features of Haydn's works is his <strong>wit</strong> — a sophisticated sense of humor and love of musical surprises. The <em>Surprise Symphony</em> is the famous example, but we will encounter plenty of others.
 
 ## The Sonata Cycle
 
-Haydn used a fairly standard format for his symphonies, the **sonata cycle** of four movements:
+Haydn used a fairly standard format for his symphonies, the <strong>sonata cycle</strong> of four movements:
 
 | Movement | Tempo | Character | Key |
 |----------|-------|-----------|-----|
@@ -202,53 +202,53 @@ Sometimes the second and third movements are swapped — the minuet and trio may
 
 ## Symphony No. 6 in D major, "Le matin" (1761)
 
-Haydn's sixth symphony is linked to Symphonies No. 7 and No. 8 — *Le midi* (Afternoon) and *Le soir* (Evening), respectively. For all intents and purposes, this is a **stile galant** symphony: homophonic textures, simpler diatonic harmonies, and themes without as strong a melodic profile as his later works.
+Haydn's sixth symphony is linked to Symphonies No. 7 and No. 8 — <em>Le midi</em> (Afternoon) and <em>Le soir</em> (Evening), respectively. For all intents and purposes, this is a <strong>stile galant</strong> symphony: homophonic textures, simpler diatonic harmonies, and themes without as strong a melodic profile as his later works.
 
-But it is also a **programmatic symphony**. The title *Le matin* (Morning) is realized in the slow introduction to the first movement, which provides a musical analogy for sunrise: the bright key of D major (considered very bright in the Classical period), a crescendo (growing louder), and a melody that rises. The music paints the morning.
+But it is also a <strong>programmatic symphony</strong>. The title <em>Le matin</em> (Morning) is realized in the slow introduction to the first movement, which provides a musical analogy for sunrise: the bright key of D major (considered very bright in the Classical period), a crescendo (growing louder), and a melody that rises. The music paints the morning.
 
 <p align="center">♪ <i>Haydn, Symphony No. 6 "Le matin" — I. Adagio–Allegro</i> ♪</p>
 
 The most unusual feature is the extensive use of solos throughout:
-- **Movement II** features solo violin and cello marked *concertante* — almost like a concerto
-- **Movement III** (Minuet and Trio): the trio section is entirely a duet between solo bassoon and double bass — instruments usually relegated to accompaniment, here showcased as soloists, probably attesting to the exceptional ability of Haydn's musicians
-- **Movement IV** has solos for flute, violin, and cello, with a cadenza-like passage for solo violin in the development section
+- <strong>Movement II</strong> features solo violin and cello marked <em>concertante</em> — almost like a concerto
+- <strong>Movement III</strong> (Minuet and Trio): the trio section is entirely a duet between solo bassoon and double bass — instruments usually relegated to accompaniment, here showcased as soloists, probably attesting to the exceptional ability of Haydn's musicians
+- <strong>Movement IV</strong> has solos for flute, violin, and cello, with a cadenza-like passage for solo violin in the development section
 
-The first-movement sonata form is basic — an exposition with contrasting first and second themes, a development section not as extensive as later symphonies — but the humor is sophisticated. In the recapitulation, where we expect the flute to play the main theme in the tonic, the *horns* start playing it instead. Anybody listening would have fear in their hearts — remember, horns at this time had no valves, just crooks, and this fast stepwise passage was beyond their capability. But it is a **false recapitulation** — a joke. Haydn restarts the recapitulation with the flutes, who play the theme with no problem. This kind of sophisticated humor is for the connoisseur, including his boss, the Prince.
+The first-movement sonata form is basic — an exposition with contrasting first and second themes, a development section not as extensive as later symphonies — but the humor is sophisticated. In the recapitulation, where we expect the flute to play the main theme in the tonic, the <em>horns</em> start playing it instead. Anybody listening would have fear in their hearts — remember, horns at this time had no valves, just crooks, and this fast stepwise passage was beyond their capability. But it is a <strong>false recapitulation</strong> — a joke. Haydn restarts the recapitulation with the flutes, who play the theme with no problem. This kind of sophisticated humor is for the connoisseur, including his boss, the Prince.
 
 ## Symphony No. 44 in E minor, "Trauersinfonie" (1772)
 
-The *Trauersinfonie* (Mourning Symphony) is a very different work, written in a style called **Sturm und Drang** (Storm and Stress). This was a brief movement in literature, the fine arts, and music during the 1760s–1780s that reacted against the objectivity and rational Classical style, featuring extreme emotions and shocking novelty. It also mirrored the **Empfindsamer Stil** (sensitive style) of C.P.E. Bach — characterized by minor modes, surprising turns of harmony, and sudden dynamic changes.
+The <em>Trauersinfonie</em> (Mourning Symphony) is a very different work, written in a style called <strong>Sturm und Drang</strong> (Storm and Stress). This was a brief movement in literature, the fine arts, and music during the 1760s–1780s that reacted against the objectivity and rational Classical style, featuring extreme emotions and shocking novelty. It also mirrored the <strong>Empfindsamer Stil</strong> (sensitive style) of C.P.E. Bach — characterized by minor modes, surprising turns of harmony, and sudden dynamic changes.
 
 <p align="center">♪ <i>Haydn, Symphony No. 44 "Trauersinfonie" — I. Allegro con brio</i> ♪</p>
 
 Musical characteristics of Sturm und Drang in this symphony:
-- **Minor mode**: Almost all Classical music is in major. Minor is immediately noticeable, and it changes the sonata form key structure — the second theme goes to the **relative major** (in E minor, that is G major) rather than the dominant
-- **Counterpoint**: Much more independence between the lines than the typical homophonic galant texture
-- **Dramatic dynamic changes**: Sudden shifts in volume
-- **Syncopation**: Creates rhythmic drive and tension
+- <strong>Minor mode</strong>: Almost all Classical music is in major. Minor is immediately noticeable, and it changes the sonata form key structure — the second theme goes to the <strong>relative major</strong> (in E minor, that is G major) rather than the dominant
+- <strong>Counterpoint</strong>: Much more independence between the lines than the typical homophonic galant texture
+- <strong>Dramatic dynamic changes</strong>: Sudden shifts in volume
+- <strong>Syncopation</strong>: Creates rhythmic drive and tension
 
 The orchestra is standard — four-part strings, two horns, two oboes. But there are several notable features:
 
-**Movement I** (E minor, sonata form): This is a **monothematic sonata form** — there is no contrasting second theme. Instead, the first theme is repeated in the new key (G major). This is almost exclusively a Haydn technique. Without a contrasting second theme, the focus falls entirely on the change of key as the dramatic element. The transition of the exposition uses counterpoint, adding to the seriousness. Most significantly, we see the emergence of a real **development section** — not just a brief modulatory passage, but genuine manipulation of exposition material through modulation. The main theme appears in the dominant, then through sequencing ends up in A minor. A one-bar segment from the transition is modulated and passed between pairs of instruments. The development is dramatically larger than anything in Symphony No. 6.
+<strong>Movement I</strong> (E minor, sonata form): This is a <strong>monothematic sonata form</strong> — there is no contrasting second theme. Instead, the first theme is repeated in the new key (G major). This is almost exclusively a Haydn technique. Without a contrasting second theme, the focus falls entirely on the change of key as the dramatic element. The transition of the exposition uses counterpoint, adding to the seriousness. Most significantly, we see the emergence of a real <strong>development section</strong> — not just a brief modulatory passage, but genuine manipulation of exposition material through modulation. The main theme appears in the dominant, then through sequencing ends up in A minor. A one-bar segment from the transition is modulated and passed between pairs of instruments. The development is dramatically larger than anything in Symphony No. 6.
 
-The recapitulation pauses on a diminished chord, and then a 17-bar **coda** drives home the tonic by articulating the first theme in E minor.
+The recapitulation pauses on a diminished chord, and then a 17-bar <strong>coda</strong> drives home the tonic by articulating the first theme in E minor.
 
-**Movement II** (Minuet and Trio, E minor): Placed second rather than third — an unusual arrangement. The minuet uses counterpoint from the very first bar: a **canon at the octave** between the violins and the basses at a one-bar interval. It is more developed than most minuets, using material from the first part in the second part. The trio provides contrast in E major with a simpler two-part structure.
+<strong>Movement II</strong> (Minuet and Trio, E minor): Placed second rather than third — an unusual arrangement. The minuet uses counterpoint from the very first bar: a <strong>canon at the octave</strong> between the violins and the basses at a one-bar interval. It is more developed than most minuets, using material from the first part in the second part. The trio provides contrast in E major with a simpler two-part structure.
 
 ![Canon at the octave — Haydn, Symphony No. 44, Minuet](/pics/260/260-2a-haydn44-canon.png)
 
-**Movement III** (Adagio, E major): A gentle slow movement with muted strings (*con sordino*) in simple binary form — maximum contrast after the intensity of the first two movements.
+<strong>Movement III</strong> (Adagio, E major): A gentle slow movement with muted strings (<em>con sordino</em>) in simple binary form — maximum contrast after the intensity of the first two movements.
 
-**Movement IV** (Presto, E minor, sonata form): Another monothematic form, but different from the first movement — the primary theme is developed all the way to the end of the exposition rather than simply restated in the new key. In the recapitulation, Haydn **disguises the return of the tonic**: it does not coincide with the arrival of the main theme, again working against audience expectations.
+<strong>Movement IV</strong> (Presto, E minor, sonata form): Another monothematic form, but different from the first movement — the primary theme is developed all the way to the end of the exposition rather than simply restated in the new key. In the recapitulation, Haydn <strong>disguises the return of the tonic</strong>: it does not coincide with the arrival of the main theme, again working against audience expectations.
 
 ## Summary: Haydn's Early Contributions
 
 Even in these early symphonies, we can see Haydn transforming the genre:
 
-- **Programmatic features** — *Le matin* and its companion symphonies use musical analogy
-- **Monothematic sonata forms** — shifting the drama from thematic contrast to key relationships
-- **Contrapuntal textures** — reintroducing a technique that galant audiences found old-fashioned
-- **Sophisticated humor** — false recapitulations, disguised returns, musical jokes for connoisseurs
+- <strong>Programmatic features</strong> — <em>Le matin</em> and its companion symphonies use musical analogy
+- <strong>Monothematic sonata forms</strong> — shifting the drama from thematic contrast to key relationships
+- <strong>Contrapuntal textures</strong> — reintroducing a technique that galant audiences found old-fashioned
+- <strong>Sophisticated humor</strong> — false recapitulations, disguised returns, musical jokes for connoisseurs
 
 At the end of the day, what is really most important is that this music is so vital and full of life, and still has much to offer us today. We will see how Haydn took it from this point in his later symphonies.
 
@@ -261,7 +261,7 @@ Haydn's symphonic career spanned from 1758 to 1795. One difficulty with studying
 
 Over his career, the orchestra gradually expanded. The bass parts gained independence — the bassoon gradually stopped merely doubling the bass line and acquired its own voice. The cello also gained some independence, though not consistently. By the London symphonies, Haydn had a full woodwind section: two flutes became regular from Symphonies 93–98, and two clarinets were added from Symphonies 99–104.
 
-A turning point came in 1779 when the Esterházys lifted restrictions on Haydn's contract. Previously, the family owned all his compositions. After 1774, his responsibilities had shifted toward opera, meaning fewer symphonies. But the new contract allowed him to obtain a publisher — **Artaria** — and pirated copies and unauthorized performances of his works had already been spreading his fame. He composed the **Paris Symphonies** (Nos. 82–87) and the Tost Symphonies (Nos. 88–89) on commission. As his music reached a broader public, his themes became more popular and folk-like in character — an early form of musical nationalism, reflecting the tastes of a wider audience beyond the aristocratic salon.
+A turning point came in 1779 when the Esterházys lifted restrictions on Haydn's contract. Previously, the family owned all his compositions. After 1774, his responsibilities had shifted toward opera, meaning fewer symphonies. But the new contract allowed him to obtain a publisher — <strong>Artaria</strong> — and pirated copies and unauthorized performances of his works had already been spreading his fame. He composed the <strong>Paris Symphonies</strong> (Nos. 82–87) and the Tost Symphonies (Nos. 88–89) on commission. As his music reached a broader public, his themes became more popular and folk-like in character — an early form of musical nationalism, reflecting the tastes of a wider audience beyond the aristocratic salon.
 
 ## Symphony No. 92 in G major, "Oxford" (1789)
 
@@ -269,29 +269,29 @@ Symphony No. 92 was commissioned by Count d'Ogny and originally written in 1789.
 
 <p align="center">♪ <i>Haydn, Symphony No. 92 "Oxford" — I. Adagio–Allegro</i> ♪</p>
 
-**Movement I** (Sonata form, monothematic): Opens with a slow introduction. The exposition presents the primary theme, which then reappears as the second theme in the new key — monothematic, as in Symphony No. 44. But now there is a contrasting closing theme in a more popular, folk-like style. The development manipulates and modulates themes from the exposition using contrapuntal techniques, including a canon built from a fragment of the opening theme. The recapitulation brings deliberate alterations to thwart expectations: the second theme appears as the first theme in G *minor* rather than major, then develops and modulates using the first theme and part of the closing theme in place of the transition. The tonic returns late, with the closing theme, followed by an unexpected coda that brings back the first theme.
+<strong>Movement I</strong> (Sonata form, monothematic): Opens with a slow introduction. The exposition presents the primary theme, which then reappears as the second theme in the new key — monothematic, as in Symphony No. 44. But now there is a contrasting closing theme in a more popular, folk-like style. The development manipulates and modulates themes from the exposition using contrapuntal techniques, including a canon built from a fragment of the opening theme. The recapitulation brings deliberate alterations to thwart expectations: the second theme appears as the first theme in G <em>minor</em> rather than major, then develops and modulates using the first theme and part of the closing theme in place of the transition. The tonic returns late, with the closing theme, followed by an unexpected coda that brings back the first theme.
 
-**Movement II** (Adagio, D major, ABA' form): A departure from the usual binary form. This is a songlike, lyrical movement with an 8-bar theme in folk-like style. The A section presents a *cantabile* theme stated by violin I, then repeated with subtle tints from flute, bassoons, and horns. The B section (*minore*) erupts in D minor — *tutti*, *forte*, with added trumpet and timpani, like a sudden return of Sturm und Drang. This B section itself has a three-part form with a contrasting wind passage in D major at its center. The A section returns in abbreviated form, followed by an epilogue featuring the winds.
+<strong>Movement II</strong> (Adagio, D major, ABA' form): A departure from the usual binary form. This is a songlike, lyrical movement with an 8-bar theme in folk-like style. The A section presents a <em>cantabile</em> theme stated by violin I, then repeated with subtle tints from flute, bassoons, and horns. The B section (<em>minore</em>) erupts in D minor — <em>tutti</em>, <em>forte</em>, with added trumpet and timpani, like a sudden return of Sturm und Drang. This B section itself has a three-part form with a contrasting wind passage in D major at its center. The A section returns in abbreviated form, followed by an epilogue featuring the winds.
 
-**Movement III** (Minuet and Trio, G major, ABA form): Both sections in **rounded binary form** (‖: a :‖: b a :‖). Haydn's humor is on full display through rhythm and meter. The minuet uses awkward 6-bar phrases instead of the expected 4-bar phrases. At m.13, *sforzando* accents on beat 3 with sudden silence. The trio also has 6-bar phrases with *sforzando* horn accents on beat 3 tied over the barline, throwing off the audience's sense of the downbeat. At m.72, counterpoint with *sforzando* creates metric confusion.
+<strong>Movement III</strong> (Minuet and Trio, G major, ABA form): Both sections in <strong>rounded binary form</strong> (‖: a :‖: b a :‖). Haydn's humor is on full display through rhythm and meter. The minuet uses awkward 6-bar phrases instead of the expected 4-bar phrases. At m.13, <em>sforzando</em> accents on beat 3 with sudden silence. The trio also has 6-bar phrases with <em>sforzando</em> horn accents on beat 3 tied over the barline, throwing off the audience's sense of the downbeat. At m.72, counterpoint with <em>sforzando</em> creates metric confusion.
 
-**Movement IV** (**Rondo-Sonata**, ABACABA): A hybrid of sonata form and rondo form. From the rondo perspective: A = rondo theme, B = episode of contrasting material in different keys. From the sonata perspective: A = primary theme, B = second theme and closing theme in the dominant (D major), C = development section with modulation. It is also monothematic — the B section differs from A only in the closing theme. The development (C) presents the primary theme truncated three times, each followed by a pause. Extra appearances of the primary theme at the end of the exposition and recapitulation blur the boundary between forms.
+<strong>Movement IV</strong> (<strong>Rondo-Sonata</strong>, ABACABA): A hybrid of sonata form and rondo form. From the rondo perspective: A = rondo theme, B = episode of contrasting material in different keys. From the sonata perspective: A = primary theme, B = second theme and closing theme in the dominant (D major), C = development section with modulation. It is also monothematic — the B section differs from A only in the closing theme. The development (C) presents the primary theme truncated three times, each followed by a pause. Extra appearances of the primary theme at the end of the exposition and recapitulation blur the boundary between forms.
 
 ## Symphony No. 104 in D major, "London" (1795)
 
-In 1790, Prince Nikolaus died. His son Anton disbanded the musical staff, though Haydn remained nominally Kapellmeister with no duties and a salary. Free at last, Haydn left for Vienna. The English impresario **Peter Salomon** commissioned him as composer-in-residence for a series of 12 concerts. Haydn's two London trips (1791–92 and 1794–95) produced 12 symphonies (Nos. 93–104). These concerts marked a shift in the esteem of symphonies: rather than opening a concert, the symphony became the featured work of the second half. The orchestra grew to include pairs of flutes, clarinets, and trumpets — the standard classical orchestra.
+In 1790, Prince Nikolaus died. His son Anton disbanded the musical staff, though Haydn remained nominally Kapellmeister with no duties and a salary. Free at last, Haydn left for Vienna. The English impresario <strong>Peter Salomon</strong> commissioned him as composer-in-residence for a series of 12 concerts. Haydn's two London trips (1791–92 and 1794–95) produced 12 symphonies (Nos. 93–104). These concerts marked a shift in the esteem of symphonies: rather than opening a concert, the symphony became the featured work of the second half. The orchestra grew to include pairs of flutes, clarinets, and trumpets — the standard classical orchestra.
 
 Symphony No. 104 was Haydn's last symphony, composed in London and premiered at the King's Theatre in May 1795 in an all-Haydn concert that Haydn himself conducted. Despite being the last of twelve London symphonies, it alone earned the nickname "London."
 
 <p align="center">♪ <i>Haydn, Symphony No. 104 "London" — I. Adagio–Allegro</i> ♪</p>
 
-**Movement I** (Slow introduction – monothematic sonata form): The most striking feature is the strong **thematic connections** across the entire symphony — what later theorists would call **thematic transformation** and **developing variation**. The slow introduction opens with a fanfare tinged with D minor, and its intervals are thematically linked to the primary theme, transition, and closing theme of the exposition. The primary theme reappears as the second theme in A major, with flute and oboe added for color. The development section works with the intervals of a major and minor second. The recapitulation incorporates the development theme into the transition and coda.
+<strong>Movement I</strong> (Slow introduction – monothematic sonata form): The most striking feature is the strong <strong>thematic connections</strong> across the entire symphony — what later theorists would call <strong>thematic transformation</strong> and <strong>developing variation</strong>. The slow introduction opens with a fanfare tinged with D minor, and its intervals are thematically linked to the primary theme, transition, and closing theme of the exposition. The primary theme reappears as the second theme in A major, with flute and oboe added for color. The development section works with the intervals of a major and minor second. The recapitulation incorporates the development theme into the transition and coda.
 
-**Movement II** (G major, hybrid of variation form and ABA form): The opening section (A) is in rounded binary form. Its opening theme uses almost the same intervals as the primary theme from the first movement — demonstrating long-range continuity across movements; all four movements belong together. Section B shifts to G minor with new material featuring wide leaps, a sudden pause at m.56, and contrasting themes. Section A' returns with a coda.
+<strong>Movement II</strong> (G major, hybrid of variation form and ABA form): The opening section (A) is in rounded binary form. Its opening theme uses almost the same intervals as the primary theme from the first movement — demonstrating long-range continuity across movements; all four movements belong together. Section B shifts to G minor with new material featuring wide leaps, a sudden pause at m.56, and contrasting themes. Section A' returns with a coda.
 
-**Movement III** (Minuet and Trio, D major): The main theme is again derived from intervals of the primary theme from Movement I. Haydn thwarts the metrical regularity of the dance with *sforzando* on the third beat and a sudden two-bar pause (mm.45–46). The second part of the minuet consists of development of the theme rather than a rounded binary return. The trio is in B-flat major — an unusual key choice that creates harmonic distance.
+<strong>Movement III</strong> (Minuet and Trio, D major): The main theme is again derived from intervals of the primary theme from Movement I. Haydn thwarts the metrical regularity of the dance with <em>sforzando</em> on the third beat and a sudden two-bar pause (mm.45–46). The second part of the minuet consists of development of the theme rather than a rounded binary return. The trio is in B-flat major — an unusual key choice that creates harmonic distance.
 
-**Movement IV** (Monothematic sonata form): The primary theme is based on a **Croatian folksong**, accompanied by a drone ("bagpipe") bass. Its intervals — fifths and major/minor seconds — echo the first movement's theme. The transition is also derived from those same intervals. The closing theme is the only unrelated material. The development and recapitulation are fairly standard, but the coda is expanded in length, making the conclusion more serious and weighty than the folk-song opening might suggest.
+<strong>Movement IV</strong> (Monothematic sonata form): The primary theme is based on a <strong>Croatian folksong</strong>, accompanied by a drone ("bagpipe") bass. Its intervals — fifths and major/minor seconds — echo the first movement's theme. The transition is also derived from those same intervals. The closing theme is the only unrelated material. The development and recapitulation are fairly standard, but the coda is expanded in length, making the conclusion more serious and weighty than the folk-song opening might suggest.
 
 
 # Mozart and the Symphony
@@ -304,17 +304,17 @@ Symphony No. 104 was Haydn's last symphony, composed in London and premiered at 
 
 Mozart was a child prodigy who received thorough training from his father Leopold. By age 5 he was an accomplished keyboard and violin player. Leopold toured Mozart and his older sister Nannerl throughout Europe, exposing the young Wolfgang to many musical styles — including the music of J.C. Bach in London in 1764. At age 6, performing for Empress Maria Theresa, the precocious boy leapt into her lap and kissed her on the cheek.
 
-Mozart started in the court of the Bishop of Salzburg, his father's patron. In 1781, after a final break with the Archbishop of Salzburg, he moved to **Vienna** as a freelance musician — performing, teaching, and publishing. Financial difficulties dogged him throughout. He was a friend of Haydn, and there was much mutual respect. Through his supporter **Baron van Swieten**, he was exposed to the music of J.S. Bach, which deepened his interest in counterpoint. He died young of a fever — not poisoning — at 35, leaving over 600 works including operas, symphonies, sonatas, and concertos.
+Mozart started in the court of the Bishop of Salzburg, his father's patron. In 1781, after a final break with the Archbishop of Salzburg, he moved to <strong>Vienna</strong> as a freelance musician — performing, teaching, and publishing. Financial difficulties dogged him throughout. He was a friend of Haydn, and there was much mutual respect. Through his supporter <strong>Baron van Swieten</strong>, he was exposed to the music of J.S. Bach, which deepened his interest in counterpoint. He died young of a fever — not poisoning — at 35, leaving over 600 works including operas, symphonies, sonatas, and concertos.
 
 ## Mozart's Symphonies: Overview
 
-Mozart's works are catalogued by **K numbers** (after Ludwig von Köchel, who catalogued them in 1862). As with Haydn, there are discrepancies, spurious works, and inaccurate designations.
+Mozart's works are catalogued by <strong>K numbers</strong> (after Ludwig von Köchel, who catalogued them in 1862). As with Haydn, there are discrepancies, spurious works, and inaccurate designations.
 
-**Early symphonies**: Mozart copied the symphonies of other composers (e.g., J.C. Bach in London) in the galant style that dominated the early part of his career. Symphonies in this period had a utilitarian function — they were used to quiet the audience or close concerts. The orchestra accompanied soloists; the symphony was not yet the main event.
+<strong>Early symphonies</strong>: Mozart copied the symphonies of other composers (e.g., J.C. Bach in London) in the galant style that dominated the early part of his career. Symphonies in this period had a utilitarian function — they were used to quiet the audience or close concerts. The orchestra accompanied soloists; the symphony was not yet the main event.
 
-**Early maturity** (early 1770s): Encountering Haydn's music had a big impact. Mozart expanded the development section considerably. *Symphony No. 25 in G minor* (one of only two minor-key symphonies) is in the Sturm und Drang style with syncopation, driving rhythms, and sharp contrasts. *Symphony No. 29* is modeled on the Mannheim style.
+<strong>Early maturity</strong> (early 1770s): Encountering Haydn's music had a big impact. Mozart expanded the development section considerably. <em>Symphony No. 25 in G minor</em> (one of only two minor-key symphonies) is in the Sturm und Drang style with syncopation, driving rhythms, and sharp contrasts. <em>Symphony No. 29</em> is modeled on the Mannheim style.
 
-**Vienna years** (1781–91): After breaking with Salzburg, Mozart gave subscription concerts where he performed his own piano concertos with guest artists. Symphonies were used to open and close these concerts — he may even have reused previously composed ones. Between 1783 and 1788, he wrote six new symphonies (Nos. 35–41). His friendship with Haydn and the influence of J.S. Bach's music profoundly shaped these late works.
+<strong>Vienna years</strong> (1781–91): After breaking with Salzburg, Mozart gave subscription concerts where he performed his own piano concertos with guest artists. Symphonies were used to open and close these concerts — he may even have reused previously composed ones. Between 1783 and 1788, he wrote six new symphonies (Nos. 35–41). His friendship with Haydn and the influence of J.S. Bach's music profoundly shaped these late works.
 
 ## Symphony No. 35 in D major, K. 385 ("Haffner")
 
@@ -322,21 +322,21 @@ The Haffner family had commissioned a serenade from Mozart in 1776 for a wedding
 
 <p align="center">♪ <i>Mozart, Symphony No. 35 "Haffner" — I. Allegro con spirito</i> ♪</p>
 
-**Movement I** demonstrates that this is no longer background music — it requires careful listening. The form includes a development section with a canon (Example 2.24b in the textbook), showing the increasing sophistication Mozart brought to the genre.
+<strong>Movement I</strong> demonstrates that this is no longer background music — it requires careful listening. The form includes a development section with a canon (Example 2.24b in the textbook), showing the increasing sophistication Mozart brought to the genre.
 
-**Movement IV** is a simple rondo (ABABABA) with no development section — still closer to the lightness of a serenade than a fully serious symphonic finale.
+<strong>Movement IV</strong> is a simple rondo (ABABABA) with no development section — still closer to the lightness of a serenade than a fully serious symphonic finale.
 
 ## Symphony No. 38 in D major, K. 504 ("Prague")
 
-Written in 1787, this was Mozart's first concert after the wildly successful production of *The Marriage of Figaro* in Prague (December 1786). It represents Mozart realizing the full potential of the symphonic genre — beyond a concert opener, this is a weighty, serious work that requires attentive listening. It is the most complex symphony Mozart had written to date, deeply influenced by Haydn.
+Written in 1787, this was Mozart's first concert after the wildly successful production of <em>The Marriage of Figaro</em> in Prague (December 1786). It represents Mozart realizing the full potential of the symphonic genre — beyond a concert opener, this is a weighty, serious work that requires attentive listening. It is the most complex symphony Mozart had written to date, deeply influenced by Haydn.
 
 <p align="center">♪ <i>Mozart, Symphony No. 38 "Prague" — I. Adagio–Allegro</i> ♪</p>
 
-**Movement I**: A long, dramatic slow introduction in D minor leads to the exposition in D major. The sonata form is monothematic: the first theme (not especially lyrical) reappears in the new key, but then a surprising new lyrical second theme emerges. The recapitulation is remarkable — rather than simply restating the exposition in the tonic, it becomes a "**second development**" with modulations that undermine tonal stability. The longer proportions of the sonata form demand more than mere restatement.
+<strong>Movement I</strong>: A long, dramatic slow introduction in D minor leads to the exposition in D major. The sonata form is monothematic: the first theme (not especially lyrical) reappears in the new key, but then a surprising new lyrical second theme emerges. The recapitulation is remarkable — rather than simply restating the exposition in the tonic, it becomes a "<strong>second development</strong>" with modulations that undermine tonal stability. The longer proportions of the sonata form demand more than mere restatement.
 
-The influence of **J.S. Bach** (transmitted through Baron van Swieten via C.P.E. Bach) is evident in the transition and development sections, which use counterpoint extensively. This is a mature sonata form — difficult for the orchestra, difficult for the audience.
+The influence of <strong>J.S. Bach</strong> (transmitted through Baron van Swieten via C.P.E. Bach) is evident in the transition and development sections, which use counterpoint extensively. This is a mature sonata form — difficult for the orchestra, difficult for the audience.
 
-The Prague Symphony has only **three movements** — no minuet. The minuet was in a state of flux in the 1780s. It may have been considered too simplistic in form compared to the other movements, or it may have carried sociological baggage as a vestige of aristocratic dance culture.
+The Prague Symphony has only <strong>three movements</strong> — no minuet. The minuet was in a state of flux in the 1780s. It may have been considered too simplistic in form compared to the other movements, or it may have carried sociological baggage as a vestige of aristocratic dance culture.
 
 ## Symphony No. 41 in C major, K. 551 ("Jupiter")
 
@@ -344,24 +344,24 @@ Written in the summer of 1788, the Jupiter Symphony is Mozart's crowning achieve
 
 <p align="center">♪ <i>Mozart, Symphony No. 41 "Jupiter" — IV. Molto Allegro</i> ♪</p>
 
-The four movements are: I. Allegro vivace (sonata form), II. Andante cantabile, III. Menuetto: Allegretto, IV. Molto Allegro (sonata form). The first movement has **opera characteristics** — a mix of serious and comic, highbrow and lowbrow, with themes borrowed from previously written arias.
+The four movements are: I. Allegro vivace (sonata form), II. Andante cantabile, III. Menuetto: Allegretto, IV. Molto Allegro (sonata form). The first movement has <strong>opera characteristics</strong> — a mix of serious and comic, highbrow and lowbrow, with themes borrowed from previously written arias.
 
-**Movement IV** is the crown jewel — steeped in history and referencing past traditions as an homage. It invokes **learned counterpoint**: the primary theme's first four notes reference counterpoint treatises going back to **Fux** (1725), using the same extension as Mozart's main theme. References to Bach themes are woven throughout.
+<strong>Movement IV</strong> is the crown jewel — steeped in history and referencing past traditions as an homage. It invokes <strong>learned counterpoint</strong>: the primary theme's first four notes reference counterpoint treatises going back to <strong>Fux</strong> (1725), using the same extension as Mozart's main theme. References to Bach themes are woven throughout.
 
-The exposition presents contrasting themes, but all three are constructed from **five short interrelated motives** arranged differently:
-- **Motive a**: the 4-note theme borrowed from Fux
-- **Motive b**: a contrasting thematic idea in the first theme group
+The exposition presents contrasting themes, but all three are constructed from <strong>five short interrelated motives</strong> arranged differently:
+- <strong>Motive a</strong>: the 4-note theme borrowed from Fux
+- <strong>Motive b</strong>: a contrasting thematic idea in the first theme group
 - Additional motives that provide the building blocks for the entire movement
 
-A fugue-like section appears before the second theme. But it is the **coda** (m.356) that is truly extraordinary: a **five-voice fugato** — like a miniature fugue, presenting themes in counterpoint. Beginning at m.372, each voice introduces all the motives in turn, passed from cello to viola to violin II to violin I to bass. Galant-style ideas appear in perfectly strict fugue — a **reconciliation between the learned and the galant styles** that defined the century. One theme (b) is left out of the fugato and functions as a return to symphonic style (m.402).
+A fugue-like section appears before the second theme. But it is the <strong>coda</strong> (m.356) that is truly extraordinary: a <strong>five-voice fugato</strong> — like a miniature fugue, presenting themes in counterpoint. Beginning at m.372, each voice introduces all the motives in turn, passed from cello to viola to violin II to violin I to bass. Galant-style ideas appear in perfectly strict fugue — a <strong>reconciliation between the learned and the galant styles</strong> that defined the century. One theme (b) is left out of the fugato and functions as a return to symphonic style (m.402).
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/CJkUpFWAIm4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Mozart, Symphony No. 40 in G minor — London Mozart Players*
+<em>Mozart, Symphony No. 40 in G minor — London Mozart Players</em>
 
 ## Mozart's Legacy
 
-Mozart's late-style symphonies were highly complex. They were criticized by critics, baffled audiences, and challenged orchestras who might have had only one rehearsal and needed to sight-read. But they marked a critical **transition in the symphonic genre**: "from utilitarian music to art music" — from a genre of little significance to a work on which composers labored carefully. The next stage would be Beethoven's treatment of the symphony.
+Mozart's late-style symphonies were highly complex. They were criticized by critics, baffled audiences, and challenged orchestras who might have had only one rehearsal and needed to sight-read. But they marked a critical <strong>transition in the symphonic genre</strong>: "from utilitarian music to art music" — from a genre of little significance to a work on which composers labored carefully. The next stage would be Beethoven's treatment of the symphony.
 
 
 # Classicism to Romanticism — Beethoven
@@ -372,41 +372,41 @@ Mozart's late-style symphonies were highly complex. They were criticized by crit
 
 Beethoven represents the great transition from classicism to romanticism in symphonic music. We focus on his Symphony No. 3 ("Eroica") and Symphony No. 5 — works that fundamentally altered what a symphony could be.
 
-Beethoven took the classical model of Haydn and Mozart and made radical alterations: vastly expanded proportions, longer development sections, expanded orchestration, and a new conception of the symphony as a vehicle for personal expression. His nine symphonies became monuments, each pointing in a different direction. The *Eroica* was originally dedicated to Napoleon, whom Beethoven admired as an embodiment of Enlightenment ideals — until Napoleon crowned himself Emperor, at which point Beethoven famously scratched out the dedication.
+Beethoven took the classical model of Haydn and Mozart and made radical alterations: vastly expanded proportions, longer development sections, expanded orchestration, and a new conception of the symphony as a vehicle for personal expression. His nine symphonies became monuments, each pointing in a different direction. The <em>Eroica</em> was originally dedicated to Napoleon, whom Beethoven admired as an embodiment of Enlightenment ideals — until Napoleon crowned himself Emperor, at which point Beethoven famously scratched out the dedication.
 
 ![Eroica title page](/pics/260/260-4a-eroica-title.jpeg)
 
 ## Symphony No. 3 in E-flat major, "Eroica" (1803)
 
-The *Eroica* was revolutionary in scale and ambition. It is nearly twice as long as any previous symphony.
+The <em>Eroica</em> was revolutionary in scale and ambition. It is nearly twice as long as any previous symphony.
 
 <p align="center">♪ <i>Beethoven, Symphony No. 3 "Eroica" — I. Allegro con brio</i> ♪</p>
 
-**Movement I** (Sonata form, E-flat major): Two opening chords announce the key, then the primary theme enters in the cellos — a simple triadic melody that becomes the basis for enormous development. The exposition has multiple themes and a highly dramatic development section that is the longest and most complex to date, featuring a new theme that appears only in the development. The recapitulation is altered significantly, and a massive coda functions almost as a second development section.
+<strong>Movement I</strong> (Sonata form, E-flat major): Two opening chords announce the key, then the primary theme enters in the cellos — a simple triadic melody that becomes the basis for enormous development. The exposition has multiple themes and a highly dramatic development section that is the longest and most complex to date, featuring a new theme that appears only in the development. The recapitulation is altered significantly, and a massive coda functions almost as a second development section.
 
-**Movement II** (*Marcia funebre*, C minor): A funeral march — unprecedented in a symphony. Its somber grandeur and emotional depth set a new standard for the slow movement.
+<strong>Movement II</strong> (<em>Marcia funebre</em>, C minor): A funeral march — unprecedented in a symphony. Its somber grandeur and emotional depth set a new standard for the slow movement.
 
-**Movement III** (Scherzo, E-flat major): Beethoven replaces the minuet with a **scherzo** — faster, more energetic, more dramatic. This would become standard in his later symphonies.
+<strong>Movement III</strong> (Scherzo, E-flat major): Beethoven replaces the minuet with a <strong>scherzo</strong> — faster, more energetic, more dramatic. This would become standard in his later symphonies.
 
-**Movement IV** (Finale): A set of variations on a theme Beethoven had used before, building to a triumphant conclusion. The finale's weight and complexity match the first movement, establishing the four-movement symphony as a dramatic arc.
+<strong>Movement IV</strong> (Finale): A set of variations on a theme Beethoven had used before, building to a triumphant conclusion. The finale's weight and complexity match the first movement, establishing the four-movement symphony as a dramatic arc.
 
 ## Symphony No. 5 in C minor (1808)
 
-Perhaps the most famous symphony ever written, the Fifth is built almost entirely from its iconic four-note opening motif: *short-short-short-long*.
+Perhaps the most famous symphony ever written, the Fifth is built almost entirely from its iconic four-note opening motif: <em>short-short-short-long</em>.
 
 <p align="center">♪ <i>Beethoven, Symphony No. 5 — I. Allegro con brio</i> ♪</p>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/NWEVKyEwi4A?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Beethoven, Symphony No. 5 — score with audio*
+<em>Beethoven, Symphony No. 5 — score with audio</em>
 
-**Movement I** (Sonata form, C minor): The four-note motif permeates every aspect of the movement — it appears in the primary theme, the transition, and even the second theme's accompaniment. The development is extensive and dramatic. The recapitulation includes a brief oboe cadenza — an unprecedented moment of individual expression within the orchestral texture.
+<strong>Movement I</strong> (Sonata form, C minor): The four-note motif permeates every aspect of the movement — it appears in the primary theme, the transition, and even the second theme's accompaniment. The development is extensive and dramatic. The recapitulation includes a brief oboe cadenza — an unprecedented moment of individual expression within the orchestral texture.
 
-**Movement II** (Andante con moto, A-flat major): A theme and variations movement with two contrasting themes, offering lyrical respite from the intensity of the first movement.
+<strong>Movement II</strong> (Andante con moto, A-flat major): A theme and variations movement with two contrasting themes, offering lyrical respite from the intensity of the first movement.
 
-**Movement III** (Scherzo, C minor): The scherzo's mysterious opening in the low strings leads to a boisterous trio. Crucially, the scherzo leads directly into the finale without a break (**attacca**) — a dramatic transition from darkness to light.
+<strong>Movement III</strong> (Scherzo, C minor): The scherzo's mysterious opening in the low strings leads to a boisterous trio. Crucially, the scherzo leads directly into the finale without a break (<strong>attacca</strong>) — a dramatic transition from darkness to light.
 
-**Movement IV** (Allegro, C major): The triumphant finale bursts forth in blazing C major, with trombones appearing in a symphony for the first time. The journey from C minor to C major — from darkness to triumph — became one of the most powerful narratives in all of music. Beethoven expanded the orchestra to include piccolo, contrabassoon, and trombones, instruments not previously used in symphonic writing.
+<strong>Movement IV</strong> (Allegro, C major): The triumphant finale bursts forth in blazing C major, with trombones appearing in a symphony for the first time. The journey from C minor to C major — from darkness to triumph — became one of the most powerful narratives in all of music. Beethoven expanded the orchestra to include piccolo, contrabassoon, and trombones, instruments not previously used in symphonic writing.
 
 Beethoven's symphonies cast a long shadow. Every subsequent composer had to reckon with what he had done to the genre.
 
@@ -417,25 +417,25 @@ Beethoven's symphonies cast a long shadow. Every subsequent composer had to reck
 
 ![Schubert](/pics/260/260-5a-schubert-portrait.jpeg)
 
-**Romanticism** was a movement in the arts and literature originating in the late 18<sup>th</sup> century that emphasized inspiration, subjectivity, and the primacy of the individual. It contrasted with classicism by reacting against order and restraint, rejecting the purely rational. In music from the 1820s onward, Romanticism meant freedom from inherited forms and procedures. Its roots lay in late-18<sup>th</sup>-century literature and painting — Romantic novels by Goethe, painters like Henri Fuseli, and the philosophy of Jean-Jacques Rousseau. From Beethoven, Romantic composers inherited the idea of the unique message, personal style, and the composer as "artist."
+<strong>Romanticism</strong> was a movement in the arts and literature originating in the late 18<sup>th</sup> century that emphasized inspiration, subjectivity, and the primacy of the individual. It contrasted with classicism by reacting against order and restraint, rejecting the purely rational. In music from the 1820s onward, Romanticism meant freedom from inherited forms and procedures. Its roots lay in late-18<sup>th</sup>-century literature and painting — Romantic novels by Goethe, painters like Henri Fuseli, and the philosophy of Jean-Jacques Rousseau. From Beethoven, Romantic composers inherited the idea of the unique message, personal style, and the composer as "artist."
 
-The new Romantic style brought changes to symphonic music: large-scale forms with unusual numbers of movements, **attacca** connections between movements, **cyclical works** (thematic material recurring across movements), new variations of sonata form, expanded orchestras with new timbres, chromatic and adventurous harmony, lyrical and expressive melodies, programmatic content, and the use of folk music and national elements.
+The new Romantic style brought changes to symphonic music: large-scale forms with unusual numbers of movements, <strong>attacca</strong> connections between movements, <strong>cyclical works</strong> (thematic material recurring across movements), new variations of sonata form, expanded orchestras with new timbres, chromatic and adventurous harmony, lyrical and expressive melodies, programmatic content, and the use of folk music and national elements.
 
 ## Franz Schubert (1797–1828)
 
-Schubert was Viennese, a child who studied piano, singing, violin, organ, and counterpoint, with composition lessons from Salieri. In 1818, he published his first music and turned entirely to composition as a freelance composer earning income from publications. His songs were performed at intimate gatherings called **Schubertiads**. His last years were clouded by illness; he died at just 31 (possibly of syphilis or mercury treatment used to treat it). Despite his short life, Schubert was extraordinarily prolific: over 600 **Lieder** (songs), two song cycles, 9 symphonies, 35 chamber works, 22 piano sonatas, 17 operas/Singspiels, 6 masses, and 200 other choral works.
+Schubert was Viennese, a child who studied piano, singing, violin, organ, and counterpoint, with composition lessons from Salieri. In 1818, he published his first music and turned entirely to composition as a freelance composer earning income from publications. His songs were performed at intimate gatherings called <strong>Schubertiads</strong>. His last years were clouded by illness; he died at just 31 (possibly of syphilis or mercury treatment used to treat it). Despite his short life, Schubert was extraordinarily prolific: over 600 <strong>Lieder</strong> (songs), two song cycles, 9 symphonies, 35 chamber works, 22 piano sonatas, 17 operas/Singspiels, 6 masses, and 200 other choral works.
 
 ## Symphony No. 8 in B minor, "Unfinished" (1822)
 
-Schubert's *Unfinished Symphony* has only two completed movements — one of music's great mysteries. It is the first great Romantic symphony, introducing a new lyrical expressiveness to the genre.
+Schubert's <em>Unfinished Symphony</em> has only two completed movements — one of music's great mysteries. It is the first great Romantic symphony, introducing a new lyrical expressiveness to the genre.
 
 <p align="center">♪ <i>Schubert, Symphony No. 8 "Unfinished" — I. Allegro moderato</i> ♪</p>
 
-**Movement I** (Sonata form, B minor): Opens with a mysterious pianissimo theme in the low strings, followed by one of the most famous melodies in all of music — the lyrical second theme in the cellos. The development is dramatic and turbulent. The contrast between the dark opening and the singing second theme epitomizes the Romantic approach: personal expression and emotional depth over classical balance.
+<strong>Movement I</strong> (Sonata form, B minor): Opens with a mysterious pianissimo theme in the low strings, followed by one of the most famous melodies in all of music — the lyrical second theme in the cellos. The development is dramatic and turbulent. The contrast between the dark opening and the singing second theme epitomizes the Romantic approach: personal expression and emotional depth over classical balance.
 
-**Movement II** (Andante con moto, E major): A serene, hymn-like movement that provides emotional contrast. Schubert's gift for melody — honed through hundreds of songs — transforms the symphonic slow movement into something almost vocal in character.
+<strong>Movement II</strong> (Andante con moto, E major): A serene, hymn-like movement that provides emotional contrast. Schubert's gift for melody — honed through hundreds of songs — transforms the symphonic slow movement into something almost vocal in character.
 
-Schubert also wrote the *Great* Symphony No. 9 in C major, a work of enormous proportions that looks forward to the expanded symphonies of Bruckner and Mahler. Its "heavenly lengths" (as Schumann described them) pushed the boundaries of what a symphony could contain.
+Schubert also wrote the <em>Great</em> Symphony No. 9 in C major, a work of enormous proportions that looks forward to the expanded symphonies of Bruckner and Mahler. Its "heavenly lengths" (as Schumann described them) pushed the boundaries of what a symphony could contain.
 
 
 # Mendelssohn and Schumann
@@ -444,9 +444,9 @@ Schubert also wrote the *Great* Symphony No. 9 in C major, a work of enormous pr
 
 ![Mendelssohn](/pics/260/260-5bc-mendelssohn-portrait.jpeg)
 
-Mendelssohn was a child prodigy from a wealthy, cultured family. He was a brilliant pianist, conductor, and composer who helped revive interest in the music of J.S. Bach (conducting the *St. Matthew Passion* in 1829). He wrote five symphonies, including the *Italian* (No. 4 in A major) and the *Scottish* (No. 3 in A minor), both inspired by his travels.
+Mendelssohn was a child prodigy from a wealthy, cultured family. He was a brilliant pianist, conductor, and composer who helped revive interest in the music of J.S. Bach (conducting the <em>St. Matthew Passion</em> in 1829). He wrote five symphonies, including the <em>Italian</em> (No. 4 in A major) and the <em>Scottish</em> (No. 3 in A minor), both inspired by his travels.
 
-Mendelssohn's symphonies are notable for their lyrical melodies, brilliant orchestration, and formal clarity — he honored classical forms while infusing them with Romantic color and sentiment. The *Italian Symphony* captures the warmth and energy of Italy, while the *Scottish Symphony* evokes the misty landscapes of Scotland.
+Mendelssohn's symphonies are notable for their lyrical melodies, brilliant orchestration, and formal clarity — he honored classical forms while infusing them with Romantic color and sentiment. The <em>Italian Symphony</em> captures the warmth and energy of Italy, while the <em>Scottish Symphony</em> evokes the misty landscapes of Scotland.
 
 ## Robert Schumann (1810–1856)
 
@@ -454,7 +454,7 @@ Mendelssohn's symphonies are notable for their lyrical melodies, brilliant orche
 
 Schumann was primarily known as a piano composer and music critic before turning to orchestral music. He wrote four symphonies, all marked by Romantic expressiveness and innovative formal thinking.
 
-**Symphony No. 4 in D minor** (1841, revised 1851) is particularly important for the history of the symphony. Schumann connected all four movements without breaks, playing them **attacca** as a continuous work. The thematic material is **cyclical** — motives from the first movement return throughout the symphony, creating organic unity. This approach — treating the multi-movement symphony as a single, continuous narrative — influenced Liszt, Bruckner, and many later composers.
+<strong>Symphony No. 4 in D minor</strong> (1841, revised 1851) is particularly important for the history of the symphony. Schumann connected all four movements without breaks, playing them <strong>attacca</strong> as a continuous work. The thematic material is <strong>cyclical</strong> — motives from the first movement return throughout the symphony, creating organic unity. This approach — treating the multi-movement symphony as a single, continuous narrative — influenced Liszt, Bruckner, and many later composers.
 
 <p align="center">♪ <i>Schumann, Symphony No. 4 — I. Ziemlich langsam–Lebhaft</i> ♪</p>
 
@@ -467,37 +467,37 @@ Schumann's orchestration has sometimes been criticized as thick or heavy, but hi
 
 ![Berlioz](/pics/260/260-6a-berlioz-portrait.jpeg)
 
-The 19<sup>th</sup>-century orchestra became central to public concert life. The number of orchestras increased significantly — some amateur, some professional. The **London Philharmonic** (founded 1813), the **New York Philharmonic** (1842), and the **Vienna Philharmonic** (1842) were among the professional orchestras established during this period. Most major cities in Europe and the Americas had orchestras providing regular concert series.
+The 19<sup>th</sup>-century orchestra became central to public concert life. The number of orchestras increased significantly — some amateur, some professional. The <strong>London Philharmonic</strong> (founded 1813), the <strong>New York Philharmonic</strong> (1842), and the <strong>Vienna Philharmonic</strong> (1842) were among the professional orchestras established during this period. Most major cities in Europe and the Americas had orchestras providing regular concert series.
 
-The orchestra's size and composition grew enormously. New and redesigned instruments expanded the palette: woodwinds received elaborate key systems by mid-century; **valves were added to horns and trumpets**, freeing them from the crook system that had limited their range. Winds and brass became more equal to strings, other percussion joined the timpani, and the orchestra grew from 40 to 90 players by the end of the century. By the 1840s, **conductors** were considered interpreters of the music — part of the Romantic cult of the individual.
+The orchestra's size and composition grew enormously. New and redesigned instruments expanded the palette: woodwinds received elaborate key systems by mid-century; <strong>valves were added to horns and trumpets</strong>, freeing them from the crook system that had limited their range. Winds and brass became more equal to strings, other percussion joined the timpani, and the orchestra grew from 40 to 90 players by the end of the century. By the 1840s, <strong>conductors</strong> were considered interpreters of the music — part of the Romantic cult of the individual.
 
 ## Hector Berlioz (1803–1869)
 
-Berlioz was French — a brilliant orchestrator, music critic, and conductor. In 1830 he won the Prix de Rome. His influences included Beethoven's symphonies, Shakespeare's plays, and an obsession with **Harriet Smithson**, an Irish actress. His major works include three operas, four symphonies, and over 30 choral works.
+Berlioz was French — a brilliant orchestrator, music critic, and conductor. In 1830 he won the Prix de Rome. His influences included Beethoven's symphonies, Shakespeare's plays, and an obsession with <strong>Harriet Smithson</strong>, an Irish actress. His major works include three operas, four symphonies, and over 30 choral works.
 
-## *Symphonie fantastique* (1830)
+## <em>Symphonie fantastique</em> (1830)
 
-The *Symphonie fantastique* reconceived the symphony as a programmatic work. Berlioz distributed a **semi-autobiographical program** to the audience describing a young artist's opium-fueled obsession with a woman — based on his infatuation with Harriet Smithson.
+The <em>Symphonie fantastique</em> reconceived the symphony as a programmatic work. Berlioz distributed a <strong>semi-autobiographical program</strong> to the audience describing a young artist's opium-fueled obsession with a woman — based on his infatuation with Harriet Smithson.
 
-The beloved is represented by a musical melody called the **idée fixe** — a recurring theme that is transformed throughout all five movements. This was revolutionary: a single melodic idea serving as a narrative thread across an entire symphony.
+The beloved is represented by a musical melody called the <strong>idée fixe</strong> — a recurring theme that is transformed throughout all five movements. This was revolutionary: a single melodic idea serving as a narrative thread across an entire symphony.
 
-The symphony has **five movements** (like Beethoven's Pastoral Symphony No. 6), uses the outlines of a traditional symphony, and employs a huge orchestra of over 100 players with novel effects.
+The symphony has <strong>five movements</strong> (like Beethoven's Pastoral Symphony No. 6), uses the outlines of a traditional symphony, and employs a huge orchestra of over 100 players with novel effects.
 
 <p align="center">♪ <i>Berlioz, Symphonie fantastique — I. Rêveries – Passions</i> ♪</p>
 
-**Movement I, "Dreams and Passions"**: Slow introduction, sonata-form Allegro. The idée fixe appears as a long, arching, sweet melody in flute and strings.
+<strong>Movement I, "Dreams and Passions"</strong>: Slow introduction, sonata-form Allegro. The idée fixe appears as a long, arching, sweet melody in flute and strings.
 
-**Movement II, "A Ball"**: A waltz depicting a scene at a ball, with harps adding color. The idée fixe appears briefly among the dancers.
+<strong>Movement II, "A Ball"</strong>: A waltz depicting a scene at a ball, with harps adding color. The idée fixe appears briefly among the dancers.
 
-**Movement III, "In the Country"**: A pastoral Adagio in 6/8. Opens with an English horn and offstage oboe in dialogue — piping shepherds. The idée fixe appears in flute and oboe but does not finish — drowned out by cellos and basses. The second shepherd does not answer. Thunder rumbles in the timpani.
+<strong>Movement III, "In the Country"</strong>: A pastoral Adagio in 6/8. Opens with an English horn and offstage oboe in dialogue — piping shepherds. The idée fixe appears in flute and oboe but does not finish — drowned out by cellos and basses. The second shepherd does not answer. Thunder rumbles in the timpani.
 
-**Movement IV, "March to the Scaffold"**: The artist dreams of his own execution. A grim march leads to the scaffold. The idée fixe appears briefly — then is abruptly "truncated" by a guillotine chord.
+<strong>Movement IV, "March to the Scaffold"</strong>: The artist dreams of his own execution. A grim march leads to the scaffold. The idée fixe appears briefly — then is abruptly "truncated" by a guillotine chord.
 
-**Movement V, "Dream of a Witches' Sabbath"**: The most radical movement. The idée fixe returns as a grotesque, distorted caricature in the E-flat clarinet — the beloved transformed into a cackling witch. Church bells toll a funeral knell. The **Dies irae** ("Day of Wrath") — a well-known Catholic chant from the Mass for the Dead — is quoted, first in tubas and bassoons, then in faster diminution. A witches' round dance begins with fugal entries and offbeat accents. Strings play **col legno** (striking with the wood of the bow rather than the hair). The Dies irae and the round dance combine in a terrifying climax.
+<strong>Movement V, "Dream of a Witches' Sabbath"</strong>: The most radical movement. The idée fixe returns as a grotesque, distorted caricature in the E-flat clarinet — the beloved transformed into a cackling witch. Church bells toll a funeral knell. The <strong>Dies irae</strong> ("Day of Wrath") — a well-known Catholic chant from the Mass for the Dead — is quoted, first in tubas and bassoons, then in faster diminution. A witches' round dance begins with fugal entries and offbeat accents. Strings play <strong>col legno</strong> (striking with the wood of the bow rather than the hair). The Dies irae and the round dance combine in a terrifying climax.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/5HgqPpjIH5c?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Berlioz, Symphonie fantastique — complete performance*
+<em>Berlioz, Symphonie fantastique — complete performance</em>
 
 
 # Liszt and the Symphonic Poem
@@ -506,19 +506,19 @@ The symphony has **five movements** (like Beethoven's Pastoral Symphony No. 6), 
 
 ![Liszt](/pics/260/260-6b-liszt-portrait.jpeg)
 
-Liszt had a career as a concert virtuoso that generated hysteria like a rock star. In 1848, he became court music director at Weimar, ceased touring, and turned to composing, conducting, and teaching. He made Weimar a center of new music, championing Wagner and Berlioz. He was a leading figure of the **"New German School"** — advocates of the "music of the future."
+Liszt had a career as a concert virtuoso that generated hysteria like a rock star. In 1848, he became court music director at Weimar, ceased touring, and turned to composing, conducting, and teaching. He made Weimar a center of new music, championing Wagner and Berlioz. He was a leading figure of the <strong>"New German School"</strong> — advocates of the "music of the future."
 
 ## The Symphonic Poem
 
-Between 1848 and 1858, Liszt composed 12 **symphonic poems** — one-movement programmatic works for orchestra. This new genre offered an alternative to the multi-movement symphony, allowing musical form to follow a narrative or poetic idea rather than traditional structural conventions.
+Between 1848 and 1858, Liszt composed 12 <strong>symphonic poems</strong> — one-movement programmatic works for orchestra. This new genre offered an alternative to the multi-movement symphony, allowing musical form to follow a narrative or poetic idea rather than traditional structural conventions.
 
-## *Les préludes* (1854)
+## <em>Les préludes</em> (1854)
 
 Liszt's most famous symphonic poem had a complicated genesis: it began as an orchestral overture to a choral work, was transformed into a symphonic poem, and then had a program by Lamartine's poem attached after the fact (with Princess Carolyne fashioning the program text in the score).
 
 <p align="center">♪ <i>Liszt, Les préludes</i> ♪</p>
 
-The form is a **giant compound sonata form** — similar to Schumann's Fourth Symphony in that sections of exposition, development, and recapitulation correspond roughly to individual movements:
+The form is a <strong>giant compound sonata form</strong> — similar to Schumann's Fourth Symphony in that sections of exposition, development, and recapitulation correspond roughly to individual movements:
 
 | Section | Function | Character |
 |---------|----------|-----------|
@@ -527,9 +527,9 @@ The form is a **giant compound sonata form** — similar to Schumann's Fourth Sy
 | III | Development 2 | "Pastoral" |
 | IV | Recapitulation | "Glory" |
 
-A slow introduction in C major presents a **3-note motive** that is transformed throughout the entire work. The primary theme is derived from this introductory motive through **thematic transformation** — the process of modifying a theme or motive into new themes, providing unity, variety, and narrative logic. The 3-note motive is modified and expanded, taking on different characters in each section.
+A slow introduction in C major presents a <strong>3-note motive</strong> that is transformed throughout the entire work. The primary theme is derived from this introductory motive through <strong>thematic transformation</strong> — the process of modifying a theme or motive into new themes, providing unity, variety, and narrative logic. The 3-note motive is modified and expanded, taking on different characters in each section.
 
-Liszt also wrote programmatic symphonies — the *Faust Symphony* (1854) and *Dante Symphony* (1856) — but it was the symphonic poem that became his most influential contribution. Composers across Europe adopted the genre. His thematic transformation technique and chromatic harmonies helped form Wagner's style after 1854. Most significantly, Liszt challenged the legacy of Beethoven and impacted every symphonic composer for the rest of the 19<sup>th</sup> century.
+Liszt also wrote programmatic symphonies — the <em>Faust Symphony</em> (1854) and <em>Dante Symphony</em> (1856) — but it was the symphonic poem that became his most influential contribution. Composers across Europe adopted the genre. His thematic transformation technique and chromatic harmonies helped form Wagner's style after 1854. Most significantly, Liszt challenged the legacy of Beethoven and impacted every symphonic composer for the rest of the 19<sup>th</sup> century.
 
 
 # Brahms
@@ -540,7 +540,7 @@ Liszt also wrote programmatic symphonies — the *Faust Symphony* (1854) and *Da
 
 By 1850, concerts increasingly focused on musical classics — the proportion of older works grew, fed by a new field of musicology that unearthed, published, and studied earlier music. The increasing supply of older repertory paradoxically posed problems for living composers: some created works in the Classical tradition (Brahms), while others saw Beethoven's legacy pointing in a different direction (Wagner).
 
-In the German-speaking lands, the dispute polarized around **Brahms and Wagner**, embodying fundamental dichotomies: **absolute versus program music**, tradition versus innovation, classical genres and forms versus new ones.
+In the German-speaking lands, the dispute polarized around <strong>Brahms and Wagner</strong>, embodying fundamental dichotomies: <strong>absolute versus program music</strong>, tradition versus innovation, classical genres and forms versus new ones.
 
 ## Johannes Brahms (1833–1897)
 
@@ -557,17 +557,17 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 
 <p align="center">♪ <i>Brahms, Symphony No. 1 — I. Un poco sostenuto–Allegro</i> ♪</p>
 
-**Movement I**: Slow introduction in C minor – sonata form. The thematic material from the introduction is transformed into subsequent themes, demonstrating what Arnold Schoenberg would later call **developing variation** — "a process in which the variation of the features of a basic unit produces all the thematic transformations that provide for contrasts, variety, logic and unity."
+<strong>Movement I</strong>: Slow introduction in C minor – sonata form. The thematic material from the introduction is transformed into subsequent themes, demonstrating what Arnold Schoenberg would later call <strong>developing variation</strong> — "a process in which the variation of the features of a basic unit produces all the thematic transformations that provide for contrasts, variety, logic and unity."
 
-**Movement II** (Andante sostenuto, E major, ABA form): Lyrical themes in a warm, expansive slow movement.
+<strong>Movement II</strong> (Andante sostenuto, E major, ABA form): Lyrical themes in a warm, expansive slow movement.
 
-**Movement III** (Allegretto, A-flat major, 2/4): Brahms replaces the scherzo with a lyrical **intermezzo** — gentler than Beethoven's scherzos, in duple rather than triple meter. ABA form.
+<strong>Movement III</strong> (Allegretto, A-flat major, 2/4): Brahms replaces the scherzo with a lyrical <strong>intermezzo</strong> — gentler than Beethoven's scherzos, in duple rather than triple meter. ABA form.
 
-**Movement IV**: Slow introduction in C minor – sonata movement in C major. The horns usher in C major in the slow introduction. The exposition begins with a main theme that is a direct reference to the "Ode to Joy" from Beethoven's Ninth Symphony — Brahms deliberately inviting the comparison. The journey from C minor to C major parallels Beethoven's Fifth.
+<strong>Movement IV</strong>: Slow introduction in C minor – sonata movement in C major. The horns usher in C major in the slow introduction. The exposition begins with a main theme that is a direct reference to the "Ode to Joy" from Beethoven's Ninth Symphony — Brahms deliberately inviting the comparison. The journey from C minor to C major parallels Beethoven's Fifth.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/EGRqIGOAPcE?rel=0&start=1980" frameborder="0" allowfullscreen></iframe></div>
 
-*Brahms, Symphony No. 1 — IV. Adagio–Allegro non troppo*
+<em>Brahms, Symphony No. 1 — IV. Adagio–Allegro non troppo</em>
 
 
 # Dvořák and Nationalism
@@ -576,29 +576,29 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 
 ![Dvořák](/pics/260/260-8a-dvorak-portrait.jpeg)
 
-**Nationalism** in music emerged after the defeat of the Holy Roman Empire by Napoleon in 1806, fueled by Enlightenment ideals of freedom, justice, equality, and the importance of common people. Composers sought musical independence from Austro-German domination. Many nationalists avoided the symphony and large-scale forms altogether, preferring more flexible forms like the symphonic poem (Liszt) and programmatic titles.
+<strong>Nationalism</strong> in music emerged after the defeat of the Holy Roman Empire by Napoleon in 1806, fueled by Enlightenment ideals of freedom, justice, equality, and the importance of common people. Composers sought musical independence from Austro-German domination. Many nationalists avoided the symphony and large-scale forms altogether, preferring more flexible forms like the symphonic poem (Liszt) and programmatic titles.
 
-In **Czechoslovakia** (Bohemia, Moravia), **Bedřich Smetana** (1824–84) wrote eight nationalist operas including *The Bartered Bride* (1866) and the cycle of six tone poems *Má vlast* (1874–79). No. 2, *The Moldau*, traces the flow of a river from mountains to sea through landscapes in music — a narrative form that did not depend on traditional construction.
+In <strong>Czechoslovakia</strong> (Bohemia, Moravia), <strong>Bedřich Smetana</strong> (1824–84) wrote eight nationalist operas including <em>The Bartered Bride</em> (1866) and the cycle of six tone poems <em>Má vlast</em> (1874–79). No. 2, <em>The Moldau</em>, traces the flow of a river from mountains to sea through landscapes in music — a narrative form that did not depend on traditional construction.
 
 ## Antonín Dvořák (1841–1904)
 
-Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream symphonic principles. He did not avoid German genres — he wrote 9 non-program symphonies, admired Beethoven, and had the support of Brahms. His first four symphonies were not published until the 1960s–70s. His *Symphony No. 9, "From the New World"* (1893), composed during his time in America, incorporated African-American spiritual style — its second movement melody was later set to words as "Goin' Home" (1922).
+Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream symphonic principles. He did not avoid German genres — he wrote 9 non-program symphonies, admired Beethoven, and had the support of Brahms. His first four symphonies were not published until the 1960s–70s. His <em>Symphony No. 9, "From the New World"</em> (1893), composed during his time in America, incorporated African-American spiritual style — its second movement melody was later set to words as "Goin' Home" (1922).
 
 ## Symphony No. 8 in G major (1889)
 
 <p align="center">♪ <i>Dvořák, Symphony No. 8 — I. Allegro con brio</i> ♪</p>
 
-**Movement I** (Sonata form): Rich in folk music and pastoral elements. Opens with a motto theme in G minor/B-flat major. The primary themes feature parallel thirds and many singable melodies, avoiding complex Germanic development in favor of melodic abundance.
+<strong>Movement I</strong> (Sonata form): Rich in folk music and pastoral elements. Opens with a motto theme in G minor/B-flat major. The primary themes feature parallel thirds and many singable melodies, avoiding complex Germanic development in favor of melodic abundance.
 
-**Movement II** (A–A<sup>1</sup> form, E-flat major): Shows the influence of Brahms's **developing variation** technique — themes 2, 3, and 4 are all derived from theme 1. Theme 2 has modal inflections (alternating E-flat and E-natural).
+<strong>Movement II</strong> (A–A<sup>1</sup> form, E-flat major): Shows the influence of Brahms's <strong>developing variation</strong> technique — themes 2, 3, and 4 are all derived from theme 1. Theme 2 has modal inflections (alternating E-flat and E-natural).
 
-**Movement III**: Replaces the scherzo with a **Ländler** — a couples' dance in triple meter similar to a waltz. Two parts: A (G minor), B (G major), repeated. Themes built on antecedent-consequent 8-bar phrases.
+<strong>Movement III</strong>: Replaces the scherzo with a <strong>Ländler</strong> — a couples' dance in triple meter similar to a waltz. Two parts: A (G minor), B (G major), repeated. Themes built on antecedent-consequent 8-bar phrases.
 
-**Movement IV** (ABA form — not sonata form): A short fanfare introduces variations on a theme in G major. Section B has two themes, one folklike and one more developed. Dvořák also wrote five programmatic overtures, eight tone poems on Czech literary subjects, Slavonic Dances and Rhapsodies, and a Czech Suite — nationalist works seeking his own voice while retaining elements of the Germanic tradition.
+<strong>Movement IV</strong> (ABA form — not sonata form): A short fanfare introduces variations on a theme in G major. Section B has two themes, one folklike and one more developed. Dvořák also wrote five programmatic overtures, eight tone poems on Czech literary subjects, Slavonic Dances and Rhapsodies, and a Czech Suite — nationalist works seeking his own voice while retaining elements of the Germanic tradition.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/6O2-nNMdSU0?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Dvořák, Symphony No. 8 — complete*
+<em>Dvořák, Symphony No. 8 — complete</em>
 
 
 # Tchaikovsky
@@ -607,33 +607,33 @@ Dvořák was a nationalist composer who, unlike Smetana, embraced mainstream sym
 
 ![Tchaikovsky](/pics/260/260-8b-tchaikovsky-portrait.jpeg)
 
-Russia was a center of musical nationalism. Two main approaches emerged: the **nationalists** (who idealized Russia's distinctiveness) and the **internationalists** or "westernizers" (who adapted Western European models). This distinction played out in the rivalry between conservatories on the Western model and **"The Mighty Five"** (Balakirev, Borodin, Cui, Mussorgsky, Rimsky-Korsakov), who opposed Western academic training.
+Russia was a center of musical nationalism. Two main approaches emerged: the <strong>nationalists</strong> (who idealized Russia's distinctiveness) and the <strong>internationalists</strong> or "westernizers" (who adapted Western European models). This distinction played out in the rivalry between conservatories on the Western model and <strong>"The Mighty Five"</strong> (Balakirev, Borodin, Cui, Mussorgsky, Rimsky-Korsakov), who opposed Western academic training.
 
 ## Pyotr Ilyich Tchaikovsky (1840–1893)
 
-Tchaikovsky was the most prominent Russian composer of the 19<sup>th</sup> century. He sought to reconcile national and internationalist tendencies, drawing on models from Beethoven, Schubert, and Schumann alongside Russian folk and popular music. His operas are based on novels of Alexander Pushkin. His ballets — *Swan Lake* (1876), *The Sleeping Beauty* (1889), *The Nutcracker* (1892) — achieved spectacular success. He wrote six symphonies (1866–1893).
+Tchaikovsky was the most prominent Russian composer of the 19<sup>th</sup> century. He sought to reconcile national and internationalist tendencies, drawing on models from Beethoven, Schubert, and Schumann alongside Russian folk and popular music. His operas are based on novels of Alexander Pushkin. His ballets — <em>Swan Lake</em> (1876), <em>The Sleeping Beauty</em> (1889), <em>The Nutcracker</em> (1892) — achieved spectacular success. He wrote six symphonies (1866–1893).
 
 ## Symphony No. 4 in F minor, Op. 36 (1877–78)
 
-Composed during stressful personal circumstances, this symphony was supported by a wealthy benefactress, **Nadezhda von Meck**, who provided a stipend. They never met but exchanged extensive letters discussing his music. The "fate" motive — a brass fanfare opening the symphony — became one of the most recognizable themes in symphonic literature.
+Composed during stressful personal circumstances, this symphony was supported by a wealthy benefactress, <strong>Nadezhda von Meck</strong>, who provided a stipend. They never met but exchanged extensive letters discussing his music. The "fate" motive — a brass fanfare opening the symphony — became one of the most recognizable themes in symphonic literature.
 
 <p align="center">♪ <i>Tchaikovsky, Symphony No. 4 — I. Andante sostenuto–Moderato con anima</i> ♪</p>
 
-**Movement I** (Modified sonata form, F minor): The "fate" motive (brass fanfare in F minor) reappears in the development, recapitulation, and coda. The exposition has four themes in unusual keys (F minor, A-flat minor, B major), with two contrasting second themes. The development introduces a new theme — perhaps Germanic development at odds with nationalist tendencies. The recapitulation starts the second theme in D minor.
+<strong>Movement I</strong> (Modified sonata form, F minor): The "fate" motive (brass fanfare in F minor) reappears in the development, recapitulation, and coda. The exposition has four themes in unusual keys (F minor, A-flat minor, B major), with two contrasting second themes. The development introduces a new theme — perhaps Germanic development at odds with nationalist tendencies. The recapitulation starts the second theme in D minor.
 
-**Movement II** (B-flat minor, ABA form): Two contrasting themes with folk-like inflections. The A section features a melancholy oboe solo. The B section (F major) presents a folk-like theme.
+<strong>Movement II</strong> (B-flat minor, ABA form): Two contrasting themes with folk-like inflections. The A section features a melancholy oboe solo. The B section (F major) presents a folk-like theme.
 
-**Movement III** (Scherzo, F major): Remarkable for orchestration — the scherzo section is for strings alone, featuring virtuosic **pizzicato** (plucking the strings). The trio (A major) showcases virtuosic winds with a piccolo solo and added brass.
+<strong>Movement III</strong> (Scherzo, F major): Remarkable for orchestration — the scherzo section is for strings alone, featuring virtuosic <strong>pizzicato</strong> (plucking the strings). The trio (A major) showcases virtuosic winds with a piccolo solo and added brass.
 
-**Movement IV** (Allegro con fuoco, F major): Opens with fiery 16<sup>th</sup>-note scales in strings and winds in unison. The main theme quotes the Russian folk song **"In the Field Stood a Birch Tree"** in A minor. A contrasting folklike theme alternates with variations of the two themes, interrupted by the opening figure. The "fate" motive returns at the end.
+<strong>Movement IV</strong> (Allegro con fuoco, F major): Opens with fiery 16<sup>th</sup>-note scales in strings and winds in unison. The main theme quotes the Russian folk song <strong>"In the Field Stood a Birch Tree"</strong> in A minor. A contrasting folklike theme alternates with variations of the two themes, interrupted by the opening figure. The "fate" motive returns at the end.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/KqV0RGR3Oh8?rel=0&start=2540" frameborder="0" allowfullscreen></iframe></div>
 
-*Tchaikovsky, Symphony No. 4 — "fate" motive return at 42:20*
+<em>Tchaikovsky, Symphony No. 4 — "fate" motive return at 42:20</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/ZNl4kOp9mMk?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*"In the Field Stood a Birch Tree" — folk song*
+<em>"In the Field Stood a Birch Tree" — folk song</em>
 
 
 # Mahler
@@ -642,7 +642,7 @@ Composed during stressful personal circumstances, this symphony was supported by
 
 ![Mahler](/pics/260/260-9-mahler-portrait.png)
 
-Mahler was the leading Austro-German composer of symphonies after Brahms and Bruckner. His primary career was as a professional opera and orchestral conductor — from 1897 to 1907 he directed the **Vienna State Opera**. He composed mainly during summers, writing only songs and orchestral works: 9 symphonies (a 10<sup>th</sup> left unfinished), and 5 works for voice and orchestra. He revised works repeatedly, retouching orchestration throughout his life.
+Mahler was the leading Austro-German composer of symphonies after Brahms and Bruckner. His primary career was as a professional opera and orchestral conductor — from 1897 to 1907 he directed the <strong>Vienna State Opera</strong>. He composed mainly during summers, writing only songs and orchestral works: 9 symphonies (a 10<sup>th</sup> left unfinished), and 5 works for voice and orchestra. He revised works repeatedly, retouching orchestration throughout his life.
 
 Mahler conceived the symphony as a world — extending Beethoven's concept. His style was eclectic, embracing stylistic opposites (sweet and crude, grand and brutal). He drew on Austrian folk songs, dances, and nostalgia for rural scenes and simpler times. His instrumentation employed large numbers of performers with great imagination in combining instruments. His first four symphonies had detailed programs, which he later suppressed.
 
@@ -652,17 +652,17 @@ The symphony went through multiple versions: first performed in Budapest in 1889
 
 <p align="center">♪ <i>Mahler, Symphony No. 1 — I. Langsam, schleppend</i> ♪</p>
 
-**Movement I, "Spring and No End"**: The slow introduction in D minor is reminiscent of Beethoven's Ninth — a pedal point on A in string harmonics, motives built on descending intervals of a fourth, interspersed with brass fanfares and cuckoo calls in the clarinet. The **unorthodox sonata form** exposition presents Theme 1 from Mahler's own song "Ging heut' morgen übers Feld" ("Went This Morning Through the Field"). The development introduces motives from the slow introduction plus three new themes of "heroic striving" — mixing thematic development with thematic statement, almost a second exposition.
+<strong>Movement I, "Spring and No End"</strong>: The slow introduction in D minor is reminiscent of Beethoven's Ninth — a pedal point on A in string harmonics, motives built on descending intervals of a fourth, interspersed with brass fanfares and cuckoo calls in the clarinet. The <strong>unorthodox sonata form</strong> exposition presents Theme 1 from Mahler's own song "Ging heut' morgen übers Feld" ("Went This Morning Through the Field"). The development introduces motives from the slow introduction plus three new themes of "heroic striving" — mixing thematic development with thematic statement, almost a second exposition.
 
-**Movement II (originally III), "Under Full Sail"**: Takes the place of the scherzo, but in the style of a **Ländler** (folk waltz popular in 19<sup>th</sup>-century Austria). Three Ländler sections, each in ABA form.
+<strong>Movement II (originally III), "Under Full Sail"</strong>: Takes the place of the scherzo, but in the style of a <strong>Ländler</strong> (folk waltz popular in 19<sup>th</sup>-century Austria). Three Ländler sections, each in ABA form.
 
-**Movement III (originally IV), "Funeral in Callot's Manner"**: ABA' form featuring a **funeral march** — Mahler's obsession with death rendered through ironic parody with multiple associations: Callot's 17<sup>th</sup>-century etchings of grotesque dwarfs; a drawing of a "hunter's funeral procession" by M. von Schwind. The main theme is a **minor-key version of "Frère Jacques"** — a children's song transformed into a funeral march, played as a canon (round) starting with solo bass, tuba, and bassoon. A sentimental section in Hungarian rhapsody style follows, then a passage "with parody" featuring E-flat clarinets that trivializes the funeral march. The middle section (B) returns to the final stanza of Mahler's song "The Two Blue Eyes," referring to the Linden tree.
+<strong>Movement III (originally IV), "Funeral in Callot's Manner"</strong>: ABA' form featuring a <strong>funeral march</strong> — Mahler's obsession with death rendered through ironic parody with multiple associations: Callot's 17<sup>th</sup>-century etchings of grotesque dwarfs; a drawing of a "hunter's funeral procession" by M. von Schwind. The main theme is a <strong>minor-key version of "Frère Jacques"</strong> — a children's song transformed into a funeral march, played as a canon (round) starting with solo bass, tuba, and bassoon. A sentimental section in Hungarian rhapsody style follows, then a passage "with parody" featuring E-flat clarinets that trivializes the funeral march. The middle section (B) returns to the final stanza of Mahler's song "The Two Blue Eyes," referring to the Linden tree.
 
-**Movement IV (originally V), "From Purgatory to Paradise"**: An unorthodox sonata form depicting the hero's struggle between purgatory and paradise. The main theme relates to Theme 6 from the first movement. Themes 2 and 3 represent paradise. The development introduces three new bold, heroic themes alongside the three from the exposition, creating a conflict between paradise and purgatory themes. The symphony concludes with heroic triumph — what Langford describes as "statement of conflict, interaction, dramatic outcome."
+<strong>Movement IV (originally V), "From Purgatory to Paradise"</strong>: An unorthodox sonata form depicting the hero's struggle between purgatory and paradise. The main theme relates to Theme 6 from the first movement. Themes 2 and 3 represent paradise. The development introduces three new bold, heroic themes alongside the three from the exposition, creating a conflict between paradise and purgatory themes. The symphony concludes with heroic triumph — what Langford describes as "statement of conflict, interaction, dramatic outcome."
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/cQFjDBFXN7g?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Mahler, Symphony No. 1 — complete*
+<em>Mahler, Symphony No. 1 — complete</em>
 
 
 # Elgar and the Modern Symphony
@@ -671,7 +671,7 @@ The symphony went through multiple versions: first performed in Budapest in 1889
 
 ![Elgar](/pics/260/260-10a-elgar-portrait.jpg)
 
-Elgar is best known for *Pomp and Circumstance* (1901) and the *Enigma Variations* (1899), which brought him his first great success (the "Nimrod" variation remains one of the most beloved pieces in the orchestral repertoire).
+Elgar is best known for <em>Pomp and Circumstance</em> (1901) and the <em>Enigma Variations</em> (1899), which brought him his first great success (the "Nimrod" variation remains one of the most beloved pieces in the orchestral repertoire).
 
 ## Symphony No. 1 in A-flat major, Op. 55 (1908)
 
@@ -679,15 +679,15 @@ Premiered December 3, 1908 in Manchester with the Hallé Orchestra conducted by 
 
 <p align="center">♪ <i>Elgar, Symphony No. 1 — I. Andante. Nobilmente e semplice</i> ♪</p>
 
-The symphony is in **cyclic form** — the introduction's "**Nobilmente**" (noble) theme is transformed throughout all four movements and returns in the finale as a complete, grandiose statement.
+The symphony is in <strong>cyclic form</strong> — the introduction's "<strong>Nobilmente</strong>" (noble) theme is transformed throughout all four movements and returns in the finale as a complete, grandiose statement.
 
-**Movement I** (Sonata form): The noble theme introduces the work, then an abrupt *appassionato* theme in D minor launches the exposition. A lyrical second theme is interrupted by the first theme. The development works with both the noble theme and the first theme. The recapitulation and closing bring the noble theme down to the last desks of the violins — an exquisite fading.
+<strong>Movement I</strong> (Sonata form): The noble theme introduces the work, then an abrupt <em>appassionato</em> theme in D minor launches the exposition. A lyrical second theme is interrupted by the first theme. The development works with both the noble theme and the first theme. The recapitulation and closing bring the noble theme down to the last desks of the violins — an exquisite fading.
 
-**Movement II** (Allegro molto, F-sharp minor): A scherzo-like movement with a march-like theme alternating with a contrasting second theme. It slows and fades directly into Movement III (**attacca**), with the opening theme undergoing thematic transformation.
+<strong>Movement II</strong> (Allegro molto, F-sharp minor): A scherzo-like movement with a march-like theme alternating with a contrasting second theme. It slows and fades directly into Movement III (<strong>attacca</strong>), with the opening theme undergoing thematic transformation.
 
-**Movement III** (Adagio, D major): Complete tranquility. Ends with a new theme marked "very expressive and sustained," derived from the "Nimrod" variation of the *Enigma Variations*.
+<strong>Movement III</strong> (Adagio, D major): Complete tranquility. Ends with a new theme marked "very expressive and sustained," derived from the "Nimrod" variation of the <em>Enigma Variations</em>.
 
-**Movement IV** (Lento – Allegro, sonata form): A slow introduction in D minor recalls a theme from the development of Movement I. A dark march in bassoons and pizzicato strings builds to the return of the **Nobilmente theme in full** — marked "Grandioso" — bringing the symphony to a triumphant, uplifting close.
+<strong>Movement IV</strong> (Lento – Allegro, sonata form): A slow introduction in D minor recalls a theme from the development of Movement I. A dark march in bassoons and pizzicato strings builds to the return of the <strong>Nobilmente theme in full</strong> — marked "Grandioso" — bringing the symphony to a triumphant, uplifting close.
 
 ## "The Modern Symphony" (1909)
 
@@ -695,7 +695,7 @@ An article written a few weeks after the premiere addressed England's reputation
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/DUbZTGJnS1U?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Elgar, Symphony No. 1 — complete*
+<em>Elgar, Symphony No. 1 — complete</em>
 
 
 # Sibelius
@@ -704,27 +704,27 @@ An article written a few weeks after the premiere addressed England's reputation
 
 ![Sibelius](/pics/260/260-10b-sibelius-portrait.jpeg)
 
-Finland's leading composer, Sibelius became a Finnish patriot who sought to create a national style. His series of symphonic poems, including *Finlandia* (1899), established him as the nation's leading composer. He wrote seven symphonies (1899–1924), and his music was popular in Finland, Britain, and the United States. By the 1910s he was regarded as conservative, though he used techniques now seen as progressive. He stopped composing by the late 1920s, living another three decades in silence.
+Finland's leading composer, Sibelius became a Finnish patriot who sought to create a national style. His series of symphonic poems, including <em>Finlandia</em> (1899), established him as the nation's leading composer. He wrote seven symphonies (1899–1924), and his music was popular in Finland, Britain, and the United States. By the 1910s he was regarded as conservative, though he used techniques now seen as progressive. He stopped composing by the late 1920s, living another three decades in silence.
 
 ## Symphony No. 5 in E-flat major, Op. 82 (1919)
 
-Sibelius's symphonies seem traditional in their formal outlines and orchestration, but they are modern in their manipulation of thematic materials — specifically **developing variation** (a technique also used by Brahms and Mahler) in which short motives are later expanded and reinterpreted through variations.
+Sibelius's symphonies seem traditional in their formal outlines and orchestration, but they are modern in their manipulation of thematic materials — specifically <strong>developing variation</strong> (a technique also used by Brahms and Mahler) in which short motives are later expanded and reinterpreted through variations.
 
 <p align="center">♪ <i>Sibelius, Symphony No. 5 — I. Tempo molto moderato</i> ♪</p>
 
-**Movement I**: Two movements welded into one. The opening presents a series of motives that are systematically varied:
-- **Motive 1**: leap up a 4<sup>th</sup> – 2<sup>nd</sup> – 4<sup>th</sup> (spanning an octave)
-- **Motive 2**: expands the melodic turn
-- **Motive 3**: turns the opening three notes upside down (inversion)
-- **Motive 4**: rhythmically expands the melodic turn
+<strong>Movement I</strong>: Two movements welded into one. The opening presents a series of motives that are systematically varied:
+- <strong>Motive 1</strong>: leap up a 4<sup>th</sup> – 2<sup>nd</sup> – 4<sup>th</sup> (spanning an octave)
+- <strong>Motive 2</strong>: expands the melodic turn
+- <strong>Motive 3</strong>: turns the opening three notes upside down (inversion)
+- <strong>Motive 4</strong>: rhythmically expands the melodic turn
 
-The development repeats these motives in order with slight modifications — not a re-exposition but genuine development. A *largamente* section transforms motive 3 in a backward and upside-down version. A truncated recapitulation of the first theme transitions to a "**Scherzo**" (originally the separate second movement) with a change of tempo and meter (Allegro moderato, 3/4). The scherzo's main theme is a version of elements from the opening, followed by further modifications and thematic transformations. The coda returns motive 1 to end the movement.
+The development repeats these motives in order with slight modifications — not a re-exposition but genuine development. A <em>largamente</em> section transforms motive 3 in a backward and upside-down version. A truncated recapitulation of the first theme transitions to a "<strong>Scherzo</strong>" (originally the separate second movement) with a change of tempo and meter (Allegro moderato, 3/4). The scherzo's main theme is a version of elements from the opening, followed by further modifications and thematic transformations. The coda returns motive 1 to end the movement.
 
 This approach is similar to Schumann's Fourth Symphony — a superficial similarity to a multi-movement symphony, but all thematic material grows organically from the opening motives. Sibelius was nationalist in his symphonic poems but universal in his symphonies — traditional genre, modernized to create something new.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/nkzrSZKA4cM?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Sibelius, Symphony No. 5 — complete*
+<em>Sibelius, Symphony No. 5 — complete</em>
 
 
 # Prokofiev and Neoclassicism
@@ -733,35 +733,35 @@ This approach is similar to Schumann's Fourth Symphony — a superficial similar
 
 ![Prokofiev](/pics/260/260-11a-prokofiev-portrait.jpeg)
 
-Prokofiev studied at the St. Petersburg Conservatory (1904–14) in piano, composition, and conducting, establishing himself as an avant-garde figure. After the Russian Revolution, he left for the USA, Germany, and Paris. In 1936 he returned to the USSR, and in 1948 was labelled a "formalist" and censured. He died on the same day as Stalin in 1953. He wrote seven symphonies, ballets (*Romeo and Juliet*, *Cinderella*), operas, and piano works.
+Prokofiev studied at the St. Petersburg Conservatory (1904–14) in piano, composition, and conducting, establishing himself as an avant-garde figure. After the Russian Revolution, he left for the USA, Germany, and Paris. In 1936 he returned to the USSR, and in 1948 was labelled a "formalist" and censured. He died on the same day as Stalin in 1953. He wrote seven symphonies, ballets (<em>Romeo and Juliet</em>, <em>Cinderella</em>), operas, and piano works.
 
 ## Neoclassicism and the Symphony
 
-In 1917, Prokofiev wrote his *Classical Symphony* (No. 1) in "the style of Haydn, if he had lived into the 20<sup>th</sup> century." This work set the standard for **neoclassicism** — the resurrection of compositional traits from the late 18<sup>th</sup> century as a reaction against late-Romantic excess: exaggerated large orchestras, lush orchestration, chromaticism, programmatic content, and over-emotional sound. Neoclassicism offered leaner, smaller ensembles, a more transparent style, and no program.
+In 1917, Prokofiev wrote his <em>Classical Symphony</em> (No. 1) in "the style of Haydn, if he had lived into the 20<sup>th</sup> century." This work set the standard for <strong>neoclassicism</strong> — the resurrection of compositional traits from the late 18<sup>th</sup> century as a reaction against late-Romantic excess: exaggerated large orchestras, lush orchestration, chromaticism, programmatic content, and over-emotional sound. Neoclassicism offered leaner, smaller ensembles, a more transparent style, and no program.
 
 ## Symphony No. 1 in D major, "Classical" (1917)
 
 <p align="center">♪ <i>Prokofiev, Symphony No. 1 "Classical" — I. Allegro</i> ♪</p>
 
 The "Classical Symphony" as a neoclassical work:
-- **Small orchestra**: strings, pairs of winds, trumpets, horns, and timpani
-- **Transparent texture** and limited timbres
-- **Simpler tonal style** (D major)
-- **Four movements**: fast–slow–dance–fast
-- **2- and 4-bar easily remembered themes**
+- <strong>Small orchestra</strong>: strings, pairs of winds, trumpets, horns, and timpani
+- <strong>Transparent texture</strong> and limited timbres
+- <strong>Simpler tonal style</strong> (D major)
+- <strong>Four movements</strong>: fast–slow–dance–fast
+- <strong>2- and 4-bar easily remembered themes</strong>
 - Truly neoclassical: reminds the listener of the 18<sup>th</sup> century, but with modern reinterpretation
 
-**Movement I** (D major, sonata form): Classical scheme with two primary themes in D (including a "rocket" theme) and a second theme in A major with large leaps — a modern reinterpretation of classical convention.
+<strong>Movement I</strong> (D major, sonata form): Classical scheme with two primary themes in D (including a "rocket" theme) and a second theme in A major with large leaps — a modern reinterpretation of classical convention.
 
-**Movement II** (Larghetto, A major): An unusual rondo form for a classical slow movement (A-B-A-B'-A). Theme A is a violin melody in a very high register. Theme B provides contrast with a marching 16<sup>th</sup>-note figure.
+<strong>Movement II</strong> (Larghetto, A major): An unusual rondo form for a classical slow movement (A-B-A-B'-A). Theme A is a violin melody in a very high register. Theme B provides contrast with a marching 16<sup>th</sup>-note figure.
 
-**Movement III** (D major): Replaces the 18<sup>th</sup>-century minuet with a rustic **gavotte** in duple meter (rather than the expected triple). The main theme features large octave leaps and accents. This music was later expanded for the ballet *Romeo and Juliet*.
+<strong>Movement III</strong> (D major): Replaces the 18<sup>th</sup>-century minuet with a rustic <strong>gavotte</strong> in duple meter (rather than the expected triple). The main theme features large octave leaps and accents. This music was later expanded for the ballet <em>Romeo and Juliet</em>.
 
-**Movement IV** (D major, Molto vivace, sonata form): A rather standard sonata form with Theme 1 developed through the exposition, Theme 2 in the dominant, a short development, and a regular recapitulation.
+<strong>Movement IV</strong> (D major, Molto vivace, sonata form): A rather standard sonata form with Theme 1 developed through the exposition, Theme 2 in the dominant, a short development, and a regular recapitulation.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/3eGcFsdnY7I?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Prokofiev, Classical Symphony — complete*
+<em>Prokofiev, Classical Symphony — complete</em>
 
 
 # Shostakovich
@@ -770,38 +770,38 @@ The "Classical Symphony" as a neoclassical work:
 
 ![Shostakovich](/pics/260/260-11b-shostakovich-portrait.jpg)
 
-The Soviet government controlled all aspects of the arts. After the 1917 Revolution, musical institutions were nationalized and concert programming was strictly regulated. By 1923, two competing composers' organizations had been founded. In 1929, Stalin consolidated power and suppressed dissent, establishing the **Union of Soviet Composers** in 1933 to enforce unified cultural policy.
+The Soviet government controlled all aspects of the arts. After the 1917 Revolution, musical institutions were nationalized and concert programming was strictly regulated. By 1923, two competing composers' organizations had been founded. In 1929, Stalin consolidated power and suppressed dissent, establishing the <strong>Union of Soviet Composers</strong> in 1933 to enforce unified cultural policy.
 
-The official artistic doctrine was **socialist realism**: a realistic style that showed socialism in a positive light, celebrated revolutionary ideology and heroes, and aimed to strengthen the Soviet state through directly accessible techniques. In music, this meant: simple, accessible, melodic, folk-like, comprehensible; dissonance was acceptable only if its meaning was clear. In February 1935, a state-sponsored conference on "Soviet Symphonism" made these expectations explicit.
+The official artistic doctrine was <strong>socialist realism</strong>: a realistic style that showed socialism in a positive light, celebrated revolutionary ideology and heroes, and aimed to strengthen the Soviet state through directly accessible techniques. In music, this meant: simple, accessible, melodic, folk-like, comprehensible; dissonance was acceptable only if its meaning was clear. In February 1935, a state-sponsored conference on "Soviet Symphonism" made these expectations explicit.
 
 ## Dmitri Shostakovich (1906–1975)
 
-Shostakovich stayed in Russia, working within the Soviet system. He was popular until January 1936, when Stalin walked out of a performance of his opera *Lady Macbeth of the Mtsensk District*. The official newspaper *Pravda* denounced the work under the headline **"Chaos Instead of Music."** Shostakovich withdrew his Fourth Symphony in December 1936. His Fifth Symphony adopted a more moderate style — described as "a Soviet artist's practical reply to just criticism." In 1948, another crackdown denounced him alongside Prokofiev; he was eventually "rehabilitated."
+Shostakovich stayed in Russia, working within the Soviet system. He was popular until January 1936, when Stalin walked out of a performance of his opera <em>Lady Macbeth of the Mtsensk District</em>. The official newspaper <em>Pravda</em> denounced the work under the headline <strong>"Chaos Instead of Music."</strong> Shostakovich withdrew his Fourth Symphony in December 1936. His Fifth Symphony adopted a more moderate style — described as "a Soviet artist's practical reply to just criticism." In 1948, another crackdown denounced him alongside Prokofiev; he was eventually "rehabilitated."
 
 ## Symphony No. 4 in C minor, Op. 43 (1936)
 
-The withdrawn Fourth Symphony is enormous in scale, with an extremely large orchestra of 130 players. Its form is atypical: three movements, with the first and third each lasting about 30 minutes and a short scherzo between them. The strong influence of **Mahler** pervades the work.
+The withdrawn Fourth Symphony is enormous in scale, with an extremely large orchestra of 130 players. Its form is atypical: three movements, with the first and third each lasting about 30 minutes and a short scherzo between them. The strong influence of <strong>Mahler</strong> pervades the work.
 
 <p align="center">♪ <i>Shostakovich, Symphony No. 4 — I. Allegretto poco moderato</i> ♪</p>
 
-**Movement I** (Allegretto poco moderato – Presto, sonata form): An alarm-like opening leads to a brutal march as the first theme. The second theme emerges through several attempts in the bassoons with interjections from the basses. The development section features a **parody of theme 1** (a banal polka) and a return of the opening alarm. The recapitulation presents themes in reverse order, with the first theme sounding defeated.
+<strong>Movement I</strong> (Allegretto poco moderato – Presto, sonata form): An alarm-like opening leads to a brutal march as the first theme. The second theme emerges through several attempts in the bassoons with interjections from the basses. The development section features a <strong>parody of theme 1</strong> (a banal polka) and a return of the opening alarm. The recapitulation presents themes in reverse order, with the first theme sounding defeated.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=440" frameborder="0" allowfullscreen></iframe></div>
 
-*Shostakovich, Symphony No. 4 — II, second theme at 7:20*
+<em>Shostakovich, Symphony No. 4 — II, second theme at 7:20</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=600" frameborder="0" allowfullscreen></iframe></div>
 
-*Development section at 10:00*
+<em>Development section at 10:00</em>
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0&start=1149" frameborder="0" allowfullscreen></iframe></div>
 
-*Return of opening alarm at 19:09*
+<em>Return of opening alarm at 19:09</em>
 
-**Movement II** (8-minute scherzo): A **Ländler**-style dance in straightforward ABAB form. Opens with a solo for violas. Ends with clock-like percussion.
+<strong>Movement II</strong> (8-minute scherzo): A <strong>Ländler</strong>-style dance in straightforward ABAB form. Opens with a solo for violas. Ends with clock-like percussion.
 
-**Movement III** (Largo – Allegro): Very large and deliberately difficult to analyze — defying conventional formal categories. A funeral march in the bassoon (derived from Mahler's First Symphony?) gives way to rhapsodic passages. Two codas conclude the work: first, a brass chorale that is festive, alluding to Stravinsky's "Gloria" from *Oedipus Rex*; then a pessimistic turn to C minor with allusions to Tchaikovsky and Mahler. The symphony ends with a C minor triad sustained for four minutes — one of the most extraordinary endings in the symphonic literature, a sound that simply refuses to resolve or depart, hanging in the air like a question that cannot be answered.
+<strong>Movement III</strong> (Largo – Allegro): Very large and deliberately difficult to analyze — defying conventional formal categories. A funeral march in the bassoon (derived from Mahler's First Symphony?) gives way to rhapsodic passages. Two codas conclude the work: first, a brass chorale that is festive, alluding to Stravinsky's "Gloria" from <em>Oedipus Rex</em>; then a pessimistic turn to C minor with allusions to Tchaikovsky and Mahler. The symphony ends with a C minor triad sustained for four minutes — one of the most extraordinary endings in the symphonic literature, a sound that simply refuses to resolve or depart, hanging in the air like a question that cannot be answered.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/SUv68X_yRSo?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-*Shostakovich, Symphony No. 4 — complete*
+<em>Shostakovich, Symphony No. 4 — complete</em>

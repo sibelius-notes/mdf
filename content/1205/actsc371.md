@@ -17,17 +17,17 @@ The distinction matters for welfare accounting. When a share of Royal Bank chang
 
 <div class="remark"><strong>Remark.</strong> A common confusion is to treat financial wealth and real wealth as the same thing. In aggregate, they are not. If every household's stock portfolio doubles overnight, aggregate real output does not change. Financial claims are zero-sum in aggregate (every asset is someone's liability, or a claim on something real), while real assets are not. The financial crisis of 2008 illustrated the distinction sharply: financial asset prices collapsed, which in turn disrupted real investment, credit allocation, and output — the channel from financial disruption to real disruption is through the allocation and intermediation functions, not because financial assets are themselves productive.</div>
 
-Financial assets serve two essential economic functions. First, they allow **consumption timing**: a household that earns income in working years but wishes to consume in retirement holds financial claims that transfer purchasing power forward in time; a corporation that invests now to generate future cash flows issues securities that transfer the funding backward. Second, they allow **risk allocation**: financial contracts allow parties with comparative advantages in bearing different risks to specialize accordingly — an insurance company can bear longevity risk that individuals cannot efficiently self-insure.
+Financial assets serve two essential economic functions. First, they allow <strong>consumption timing</strong>: a household that earns income in working years but wishes to consume in retirement holds financial claims that transfer purchasing power forward in time; a corporation that invests now to generate future cash flows issues securities that transfer the funding backward. Second, they allow <strong>risk allocation</strong>: financial contracts allow parties with comparative advantages in bearing different risks to specialize accordingly — an insurance company can bear longevity risk that individuals cannot efficiently self-insure.
 
 ## A History of Investment Markets
 
 The history of organized capital markets spans more than four millennia, but the essential architecture of modern markets emerged in the seventeenth century.
 
-The **Code of Hammurabi** (c. 1754 BC) codified interest on loans of grain and silver with specified collateral terms and dispute resolution procedures — the earliest written legal framework for financial contracts. Medieval Italian merchant bankers in Venice and Genoa developed the **bill of exchange** (an instrument combining the functions of a loan, a currency exchange, and a payment order) and **marine insurance** to allow long-distance trade to scale beyond individual merchant capacity.
+The <strong>Code of Hammurabi</strong> (c. 1754 BC) codified interest on loans of grain and silver with specified collateral terms and dispute resolution procedures — the earliest written legal framework for financial contracts. Medieval Italian merchant bankers in Venice and Genoa developed the <strong>bill of exchange</strong> (an instrument combining the functions of a loan, a currency exchange, and a payment order) and <strong>marine insurance</strong> to allow long-distance trade to scale beyond individual merchant capacity.
 
-The **Dutch East India Company (VOC)** issued the world's first publicly traded shares on the Amsterdam Stock Exchange in **1602**. The immediate consequence was speculative excess: the tulip mania of **1637** — in which forward contracts on a single tulip bulb sold for prices exceeding a skilled craftsman's annual wage before collapsing to near zero — established a recurring template. Financial innovation enables genuine economic activity; speculative excess follows; the bubble collapses; regulation and institutional reform ensue.
+The <strong>Dutch East India Company (VOC)</strong> issued the world's first publicly traded shares on the Amsterdam Stock Exchange in <strong>1602</strong>. The immediate consequence was speculative excess: the tulip mania of <strong>1637</strong> — in which forward contracts on a single tulip bulb sold for prices exceeding a skilled craftsman's annual wage before collapsing to near zero — established a recurring template. Financial innovation enables genuine economic activity; speculative excess follows; the bubble collapses; regulation and institutional reform ensue.
 
-The **New York Stock Exchange** was founded in **1792** under the Buttonwood Agreement among 24 brokers. The **Toronto Stock Exchange** began operations in **1861** with 18 listed companies. The modern U.S. securities regulatory framework was built almost entirely in response to the **Crash of 1929** and ensuing Great Depression: the Securities Act of 1933 introduced mandatory disclosure for new securities issues, and the Securities Exchange Act of 1934 established the Securities and Exchange Commission and regulated secondary market trading. **Black Monday** (October 19, 1987) saw the Dow Jones Industrial Average fall 22.6% in a single session, without obvious economic cause, forcing a rethink of market microstructure and circuit breakers. The **dot-com bubble and crash** (1995–2002) and the **global financial crisis** (2008–2009) each added further layers to the regulatory framework and to investors' understanding of systemic risk.
+The <strong>New York Stock Exchange</strong> was founded in <strong>1792</strong> under the Buttonwood Agreement among 24 brokers. The <strong>Toronto Stock Exchange</strong> began operations in <strong>1861</strong> with 18 listed companies. The modern U.S. securities regulatory framework was built almost entirely in response to the <strong>Crash of 1929</strong> and ensuing Great Depression: the Securities Act of 1933 introduced mandatory disclosure for new securities issues, and the Securities Exchange Act of 1934 established the Securities and Exchange Commission and regulated secondary market trading. <strong>Black Monday</strong> (October 19, 1987) saw the Dow Jones Industrial Average fall 22.6% in a single session, without obvious economic cause, forcing a rethink of market microstructure and circuit breakers. The <strong>dot-com bubble and crash</strong> (1995–2002) and the <strong>global financial crisis</strong> (2008–2009) each added further layers to the regulatory framework and to investors' understanding of systemic risk.
 
 ## The Structure of the Investment Industry
 
@@ -37,7 +37,7 @@ The investment process involves two separable decisions, and understanding their
 
 Empirical research by Brinson, Hood, and Beebower (1986) found that asset allocation explains approximately 90% of the variation in long-run portfolio returns across institutional investors. Security selection, despite commanding the majority of active management fees, accounts for a relatively modest fraction of total return variation. This finding motivates the emphasis in portfolio theory on the asset class level before the individual security level.
 
-**Financial intermediaries** — commercial banks, investment banks, mutual funds, pension funds, insurance companies, hedge funds — exist to solve information and scale problems that individual investors cannot solve efficiently. A retail investor cannot profitably assess the creditworthiness of thousands of corporate and government borrowers; a bank can, and pays for this expertise with the spread between lending and deposit rates. A small investor cannot achieve meaningful diversification with high transaction costs; a mutual fund can pool assets to reduce average transaction costs and achieve diversification.
+<strong>Financial intermediaries</strong> — commercial banks, investment banks, mutual funds, pension funds, insurance companies, hedge funds — exist to solve information and scale problems that individual investors cannot solve efficiently. A retail investor cannot profitably assess the creditworthiness of thousands of corporate and government borrowers; a bank can, and pays for this expertise with the spread between lending and deposit rates. A small investor cannot achieve meaningful diversification with high transaction costs; a mutual fund can pool assets to reduce average transaction costs and achieve diversification.
 
 ---
 
@@ -47,15 +47,15 @@ Financial instruments can be broadly classified by maturity (short vs. long term
 
 ## The Money Market
 
-The **money market** encompasses short-term debt instruments with maturities of one year or less. The combination of short maturities, high credit quality, and liquid secondary markets makes these instruments close substitutes for cash.
+The <strong>money market</strong> encompasses short-term debt instruments with maturities of one year or less. The combination of short maturities, high credit quality, and liquid secondary markets makes these instruments close substitutes for cash.
 
 <div class="definition"><strong>Definition 2.1 (Treasury Bill).</strong> A <strong>Treasury bill (T-bill)</strong> is a short-term government debt obligation issued at a discount to face value. The Government of Canada sells T-bills with maturities of 91, 182, and 364 days. The investor's return is the difference between the purchase price and face value received at maturity. T-bills are considered the closest available approximation to a <strong>risk-free asset</strong>: default risk is negligible, and short maturity minimizes interest rate risk.</div>
 
-The yield on a T-bill is most naturally expressed as a **bond equivalent yield** to facilitate comparison with other instruments:
+The yield on a T-bill is most naturally expressed as a <strong>bond equivalent yield</strong> to facilitate comparison with other instruments:
 
 \[ y_{BEY} = \frac{F - P}{P} \times \frac{365}{T} \]
 
-where \(F\) is face value, \(P\) is purchase price, and \(T\) is days to maturity. Alternatively, the **bank discount yield** convention divides by face value rather than price:
+where \(F\) is face value, \(P\) is purchase price, and \(T\) is days to maturity. Alternatively, the <strong>bank discount yield</strong> convention divides by face value rather than price:
 
 \[ y_{BD} = \frac{F - P}{F} \times \frac{360}{T} \]
 
@@ -71,7 +71,7 @@ The BEY exceeds the BD yield because it divides by the actual price paid and use
 
 <div class="definition"><strong>Definition 2.3 (Commercial Paper).</strong> <strong>Commercial paper</strong> is a short-term unsecured promissory note issued by a corporation to fund short-term operating needs such as inventory and accounts receivable. Maturities typically range from a few days to 270 days. Only firms with strong credit ratings can access the commercial paper market; lower-rated firms must use bank credit lines or asset-backed commercial paper programs.</div>
 
-<div class="definition"><strong>Definition 2.4 (Repurchase Agreement).</strong> A <strong>repurchase agreement (repo)</strong> is the sale of securities with a simultaneous agreement to repurchase them at a specified price and date. From the seller's perspective, it is secured short-term borrowing: the securities serve as collateral. The interest rate is the **repo rate** — the difference between the sale and repurchase prices expressed as an annualized rate. A **reverse repo** is the mirror transaction from the buyer/lender's perspective.</div>
+<div class="definition"><strong>Definition 2.4 (Repurchase Agreement).</strong> A <strong>repurchase agreement (repo)</strong> is the sale of securities with a simultaneous agreement to repurchase them at a specified price and date. From the seller's perspective, it is secured short-term borrowing: the securities serve as collateral. The interest rate is the <strong>repo rate</strong> — the difference between the sale and repurchase prices expressed as an annualized rate. A <strong>reverse repo</strong> is the mirror transaction from the buyer/lender's perspective.</div>
 
 Repos are used extensively by securities dealers for overnight financing of inventory, by banks for short-term liquidity management, and by central banks for implementing monetary policy (an open market purchase of securities is equivalent to a reverse repo from the central bank's perspective).
 
@@ -79,15 +79,15 @@ Repos are used extensively by securities dealers for overnight financing of inve
 
 <div class="definition"><strong>Definition 2.5 (Bond).</strong> A <strong>bond</strong> is a debt security in which the issuer (borrower) promises to make periodic coupon payments of amount \(C\) and to repay the face value (par value) \(F\) at maturity date \(T\). The <strong>coupon rate</strong> is \(C/F\), expressed as an annual percentage of face value. In North America, coupons are conventionally paid semi-annually.</div>
 
-**Government of Canada bonds** are the reference instruments for domestic fixed income: they carry sovereign credit (negligible default risk), trade in deep and liquid markets, and define the risk-free rate for longer maturities. **Provincial bonds** carry slightly higher yields reflecting less liquidity and in principle somewhat higher credit risk. **Corporate bonds** carry further premiums reflecting issuer-specific default risk.
+<strong>Government of Canada bonds</strong> are the reference instruments for domestic fixed income: they carry sovereign credit (negligible default risk), trade in deep and liquid markets, and define the risk-free rate for longer maturities. <strong>Provincial bonds</strong> carry slightly higher yields reflecting less liquidity and in principle somewhat higher credit risk. <strong>Corporate bonds</strong> carry further premiums reflecting issuer-specific default risk.
 
 <div class="definition"><strong>Definition 2.6 (Indenture and Covenants).</strong> The <strong>indenture</strong> is the legal contract governing a bond issue. It specifies coupon rate, maturity, call and put provisions, sinking fund requirements, and protective <strong>covenants</strong> — restrictions on the issuer's behaviour intended to protect bondholders. Affirmative covenants specify what the issuer must do (maintain insurance, provide audited financials); negative covenants specify what the issuer must not do (take on additional debt beyond specified limits, sell core assets without bondholder consent).</div>
 
 <div class="definition"><strong>Definition 2.7 (Callable and Putable Bonds).</strong> A <strong>callable bond</strong> grants the issuer the right to retire the bond early at a specified <strong>call price</strong> (typically at a premium to par). This benefits the issuer — it can refinance at lower rates if rates fall — and must be compensated by a higher coupon to investors. A <strong>putable bond</strong> grants the holder the right to sell the bond back to the issuer at par before maturity, protecting against rising rates. Callable and putable bonds are said to have <strong>embedded options</strong>.</div>
 
-**Floating-rate bonds** set coupons periodically based on a reference rate (SOFR, formerly LIBOR) plus a fixed spread. They trade near par because their coupons adjust to market rates, making them less sensitive to interest rate moves than fixed-coupon bonds.
+<strong>Floating-rate bonds</strong> set coupons periodically based on a reference rate (SOFR, formerly LIBOR) plus a fixed spread. They trade near par because their coupons adjust to market rates, making them less sensitive to interest rate moves than fixed-coupon bonds.
 
-**Mortgage-backed securities (MBS)** are bonds whose cash flows derive from a pool of mortgage loans. Securitization converts illiquid individual mortgages into tradeable claims, improving the allocation of mortgage risk. The 2008 financial crisis illustrated the hazard when the complexity of re-securitized MBS (collateralized debt obligations, or CDOs) makes the underlying risk impossible to assess accurately.
+<strong>Mortgage-backed securities (MBS)</strong> are bonds whose cash flows derive from a pool of mortgage loans. Securitization converts illiquid individual mortgages into tradeable claims, improving the allocation of mortgage risk. The 2008 financial crisis illustrated the hazard when the complexity of re-securitized MBS (collateralized debt obligations, or CDOs) makes the underlying risk impossible to assess accurately.
 
 ## Equity Markets
 
@@ -99,7 +99,7 @@ Repos are used extensively by securities dealers for overnight financing of inve
 
 ## Stock Market Indices
 
-A **stock market index** is a number designed to summarize the performance of a specified set of securities. The construction methodology determines the index's economic meaning and its practical use as a benchmark.
+A <strong>stock market index</strong> is a number designed to summarize the performance of a specified set of securities. The construction methodology determines the index's economic meaning and its practical use as a benchmark.
 
 <div class="definition"><strong>Definition 2.11 (Price-Weighted Index).</strong> A <strong>price-weighted index</strong> sums the prices of its constituent stocks and divides by a divisor adjusted for stock splits and changes in composition. Each stock's weight equals its price divided by the sum of all prices. A stock trading at \$200 has twice the weight of one trading at \$100, regardless of the firms' relative sizes. The <strong>Dow Jones Industrial Average (DJIA)</strong> and the <strong>Nikkei 225</strong> are price-weighted.</div>
 
@@ -109,7 +109,7 @@ A **stock market index** is a number designed to summarize the performance of a 
 \[ w_i = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j} \]
 The <strong>S&P 500</strong>, the <strong>S&P/TSX Composite</strong>, and the <strong>MSCI World</strong> are cap-weighted.</div>
 
-Cap-weighted indices have two practical advantages: they are **self-rebalancing** (as prices change, weights naturally adjust with no trading required) and they are **passively replicable** (an investor holding all constituents in proportion to their market caps holds the index, with zero turnover). The disadvantage is that overvalued stocks automatically receive higher weights.
+Cap-weighted indices have two practical advantages: they are <strong>self-rebalancing</strong> (as prices change, weights naturally adjust with no trading required) and they are <strong>passively replicable</strong> (an investor holding all constituents in proportion to their market caps holds the index, with zero turnover). The disadvantage is that overvalued stocks automatically receive higher weights.
 
 ---
 
@@ -121,11 +121,11 @@ Understanding how securities markets operate — how prices are discovered, how 
 
 <div class="definition"><strong>Definition 3.1 (Initial Public Offering).</strong> An <strong>initial public offering (IPO)</strong> is the first sale of a company's equity securities to the public. The issuer engages an <strong>investment bank</strong> as <strong>underwriter</strong>. In a <strong>firm commitment</strong> arrangement, the bank purchases the entire offering from the issuer at a fixed price and resells to the public at a slightly higher offering price, bearing the price risk if the offering is poorly received. In a <strong>best efforts</strong> arrangement, the bank acts only as agent, committing to best efforts at sale but not bearing unsold inventory risk.</div>
 
-The IPO process begins with preparation of a **prospectus** — a detailed disclosure document filed with the relevant securities regulator — describing the company's business, financial statements, risk factors, and intended use of proceeds. The investment bank then conducts a **roadshow**, presenting to institutional investors and building a **book** of intended orders. The final offering price is set based on this information through a process called **book building**.
+The IPO process begins with preparation of a <strong>prospectus</strong> — a detailed disclosure document filed with the relevant securities regulator — describing the company's business, financial statements, risk factors, and intended use of proceeds. The investment bank then conducts a <strong>roadshow</strong>, presenting to institutional investors and building a <strong>book</strong> of intended orders. The final offering price is set based on this information through a process called <strong>book building</strong>.
 
 <div class="definition"><strong>Definition 3.2 (IPO Underpricing).</strong> <strong>IPO underpricing</strong> is the empirical observation that the average first-day return on IPO stocks significantly exceeds zero — the offering price is set below the first-day closing market price. In the U.S. and Canada, average first-day returns have historically been 10–20%, representing money left on the table by the issuer.</div>
 
-Two prominent theories explain IPO underpricing. The **winner's curse** (Rock, 1986) argues that informed investors bid aggressively for attractive offerings and stay away from unattractive ones. Uninformed investors, not knowing which offerings are attractive, submit bids to all offerings and are crowded out of good ones (informed investors take the full allocation) but receive full allocations of bad ones. To attract uninformed investors, issuers must underprice enough to compensate for the adverse allocation they systematically receive. The **information revelation** theory (Benveniste and Spindt, 1989) argues that underpricing compensates institutional investors for truthfully revealing positive private information during book building.
+Two prominent theories explain IPO underpricing. The <strong>winner's curse</strong> (Rock, 1986) argues that informed investors bid aggressively for attractive offerings and stay away from unattractive ones. Uninformed investors, not knowing which offerings are attractive, submit bids to all offerings and are crowded out of good ones (informed investors take the full allocation) but receive full allocations of bad ones. To attract uninformed investors, issuers must underprice enough to compensate for the adverse allocation they systematically receive. The <strong>information revelation</strong> theory (Benveniste and Spindt, 1989) argues that underpricing compensates institutional investors for truthfully revealing positive private information during book building.
 
 ## Market Structure
 
@@ -154,7 +154,7 @@ Two prominent theories explain IPO underpricing. The **winner's curse** (Rock, 1
 At \(P^*\), the equity in the account equals \(\bar{m}\) times the position value.</div>
 
 <div class="proof"><strong>Derivation.</strong> The loan outstanding is fixed at \(L = (1-m)P_0 N\). At stock price \(P\), the equity is \(E = PN - L = PN - (1-m)P_0 N\). The margin ratio is \(E/(PN) = 1 - (1-m)P_0/P\). Setting this equal to \(\bar{m}\):
-\[ 1 - \frac{(1-m)P_0}{P^*} = \bar{m} \implies P^* = \frac{(1-m)P_0}{1 - \bar{m}} \qquad \square \]</div>
+\[ 1 - \frac{(1-m)P_0}{P^<em>} = \bar{m} \implies P^</em> = \frac{(1-m)P_0}{1 - \bar{m}} \qquad \square \]</div>
 
 <div class="example"><strong>Example 3.1.</strong> An investor buys 100 shares of a stock at \$50 with 50% initial margin, borrowing \$2,500. The loan is fixed at \$2,500. The maintenance margin is 25%. The margin call trigger price is:
 \[ P^* = \frac{(1 - 0.5) \times 50}{1 - 0.25} = \frac{25}{0.75} = \$33.33 \]
@@ -242,7 +242,7 @@ The most widely used risk-adjusted performance measure is the ratio of expected 
 
 <div class="definition"><strong>Definition 4.7 (Sharpe Ratio).</strong> The <strong>Sharpe ratio</strong> (reward-to-variability ratio) of a portfolio \(p\) is:
 \[ S_p = \frac{E(r_p) - r_f}{\sigma_p} \]
-where \(r_f\) is the risk-free rate. The Sharpe ratio measures the additional expected return earned per unit of standard deviation — it is the slope of the **Capital Allocation Line** (defined in Chapter 5).</div>
+where \(r_f\) is the risk-free rate. The Sharpe ratio measures the additional expected return earned per unit of standard deviation — it is the slope of the <strong>Capital Allocation Line</strong> (defined in Chapter 5).</div>
 
 The Sharpe ratio is the appropriate performance measure when the portfolio being evaluated represents the investor's entire risky portfolio — i.e., when it has no diversification relationship with other holdings. When the portfolio is a component of a larger portfolio, the appropriate measure is the information ratio or Treynor ratio (which uses beta-adjusted risk).
 
@@ -316,7 +316,7 @@ When investors can combine any number of risky assets freely, the full opportuni
 
 <div class="definition"><strong>Definition 5.5 (Efficient Frontier).</strong> The <strong>minimum-variance frontier</strong> is the set of portfolios with the minimum variance achievable for each level of expected return. The <strong>efficient frontier</strong> is the upper portion of the minimum-variance frontier — the set of portfolios that, for each level of variance, offer the maximum expected return. No rational, risk-averse investor would hold a portfolio strictly below the efficient frontier, as it is dominated by a frontier portfolio.</div>
 
-The **minimum-variance portfolio (MVP)** is the leftmost point on the frontier — the portfolio with the lowest achievable variance across all risky portfolios. For two assets, the MVP weight is:
+The <strong>minimum-variance portfolio (MVP)</strong> is the leftmost point on the frontier — the portfolio with the lowest achievable variance across all risky portfolios. For two assets, the MVP weight is:
 
 \[ w_1^{MVP} = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}} \]
 
@@ -330,7 +330,7 @@ This is the most powerful theorem in classical portfolio theory. It implies that
 
 ## Assumptions and the Market Portfolio
 
-The **Capital Asset Pricing Model (CAPM)**, developed by Sharpe (1964), Lintner (1965), and Mossin (1966), uses the two-fund separation theorem to derive equilibrium expected returns for all risky assets.
+The <strong>Capital Asset Pricing Model (CAPM)</strong>, developed by Sharpe (1964), Lintner (1965), and Mossin (1966), uses the two-fund separation theorem to derive equilibrium expected returns for all risky assets.
 
 <div class="definition"><strong>Definition 7.1 (CAPM Assumptions).</strong> The CAPM rests on the following idealized conditions:
 <ol>
@@ -340,7 +340,7 @@ The **Capital Asset Pricing Model (CAPM)**, developed by Sharpe (1964), Lintner 
 <li>Investors can borrow and lend unlimited amounts at the common risk-free rate \(r_f\).</li>
 </ol></div>
 
-Under these assumptions, the two-fund separation theorem implies every investor holds the same risky portfolio. Since investors collectively own the economy's entire stock of risky assets, the common risky portfolio must be the **market portfolio**:
+Under these assumptions, the two-fund separation theorem implies every investor holds the same risky portfolio. Since investors collectively own the economy's entire stock of risky assets, the common risky portfolio must be the <strong>market portfolio</strong>:
 
 <div class="definition"><strong>Definition 7.2 (Market Portfolio).</strong> The <strong>market portfolio</strong> \(M\) contains every risky asset in the economy, weighted by its market capitalization:
 \[ w_i^M = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j} \]
@@ -382,7 +382,7 @@ If the analyst estimates the stock's true expected return at 14%, the stock has 
 \[ \sigma_i^2 = \underbrace{\beta_i^2 \sigma_M^2}_{\text{systematic risk}} + \underbrace{\sigma^2(\varepsilon_i)}_{\text{idiosyncratic risk}} \]
 Only systematic risk (the first component) commands a risk premium. Idiosyncratic risk averages to zero in a diversified portfolio and earns no expected return compensation.</div>
 
-The **coefficient of determination** \(R^2 = \beta_i^2\sigma_M^2/\sigma_i^2\) measures what fraction of the asset's variance is systematic. A well-diversified portfolio has \(R^2\) near 1; an individual stock might have \(R^2\) of 20–50%.
+The <strong>coefficient of determination</strong> \(R^2 = \beta_i^2\sigma_M^2/\sigma_i^2\) measures what fraction of the asset's variance is systematic. A well-diversified portfolio has \(R^2\) near 1; an individual stock might have \(R^2\) of 20–50%.
 
 ---
 
@@ -483,7 +483,7 @@ The forward rate (4.00%) exceeds the current 1-year spot (3.00%) and 2-year spot
 
 ## Bootstrapping the Spot Curve
 
-In practice, the zero-coupon spot curve must be extracted from coupon bond prices through a procedure called **bootstrapping**:
+In practice, the zero-coupon spot curve must be extracted from coupon bond prices through a procedure called <strong>bootstrapping</strong>:
 
 <div class="definition"><strong>Definition 13.4 (Bootstrapping).</strong> <strong>Bootstrapping</strong> is the iterative extraction of spot rates from a sequence of coupon bond prices. Starting with the shortest maturity bond (a single cash flow), solve for \(y_1\). For the next bond, discount the near-term coupons using already-extracted spot rates, and solve for the next spot rate. Continue iteratively to build out the full spot curve.</div>
 
@@ -511,7 +511,7 @@ The forward rate embeds both the expected future short rate and a risk premium t
 
 ## Duration
 
-The central risk of bond investing is **interest rate risk** — the inverse relationship between bond prices and yields means that rising rates cause portfolio losses. Duration is the tool for measuring and managing this risk:
+The central risk of bond investing is <strong>interest rate risk</strong> — the inverse relationship between bond prices and yields means that rising rates cause portfolio losses. Duration is the tool for measuring and managing this risk:
 
 <div class="definition"><strong>Definition 14.1 (Macaulay Duration).</strong> The <strong>Macaulay duration</strong> of a bond is the weighted average time to receipt of all cash flows, where weights are the present values of cash flows as fractions of total price:
 \[ D = \sum_{t=1}^{T} t \cdot \frac{CF_t/(1+y)^t}{P} = \sum_{t=1}^{T} t \cdot w_t \]
@@ -647,7 +647,7 @@ Note that the terminal value accounts for \$18.44/\$21.89 = 84% of total value �
 
 ## Price Ratios
 
-The **price-to-earnings (P/E) ratio** is the most widely used equity valuation metric. The Gordon model implies a theoretical P/E:
+The <strong>price-to-earnings (P/E) ratio</strong> is the most widely used equity valuation metric. The Gordon model implies a theoretical P/E:
 
 <div class="definition"><strong>Definition 16.6 (P/E Ratio and PVGO).</strong> The <strong>price-to-earnings ratio</strong> is \(P/E = P_0/E_1\). For the Gordon growth model with payout ratio \(d = D_1/E_1\):
 \[ \frac{P_0}{E_1} = \frac{d}{k - g} \]
@@ -659,7 +659,7 @@ where \(E_1/k\) is the value of the stock as a no-growth perpetuity and \(\text{
 
 # Chapter 18: Options and Other Derivatives Markets
 
-Derivatives are financial contracts whose payoffs depend on the values of underlying assets. They serve two distinct social purposes: **hedging** (reducing existing exposures) and **price discovery** (aggregating information about future asset prices). This chapter covers the institutional mechanics of options markets and the fundamental pricing relationships that constrain option values.
+Derivatives are financial contracts whose payoffs depend on the values of underlying assets. They serve two distinct social purposes: <strong>hedging</strong> (reducing existing exposures) and <strong>price discovery</strong> (aggregating information about future asset prices). This chapter covers the institutional mechanics of options markets and the fundamental pricing relationships that constrain option values.
 
 ## Option Fundamentals
 
@@ -790,7 +790,7 @@ Hedge ratio: \(\Delta = (15-0)/(120-80) = 15/40 = 0.375\). A portfolio long 0.37
 
 ## The Black-Scholes Formula
 
-As the number of binomial periods increases and the time step shrinks to zero, the binomial model converges to the **Black-Scholes formula**:
+As the number of binomial periods increases and the time step shrinks to zero, the binomial model converges to the <strong>Black-Scholes formula</strong>:
 
 <div class="theorem"><strong>Theorem 19.3 (Black-Scholes Option Pricing Model).</strong> Assume the stock price follows a geometric Brownian motion with continuously compounded drift \(\mu\) and volatility \(\sigma\), and that the risk-free rate is \(r\) (continuously compounded). For a European call on a non-dividend paying stock:
 \[ C = S_0 N(d_1) - Xe^{-rT}N(d_2) \]
@@ -827,7 +827,7 @@ By put-call parity: \(P = 4.82 + 50e^{-0.025} - 50 = 4.82 - 1.23 = \$3.59\).</di
 
 <div class="definition"><strong>Definition 19.5 (Implied Volatility).</strong> The <strong>implied volatility</strong> of an option is the value of \(\sigma\) that, when input into the Black-Scholes formula, produces the observed market price. Implied volatility is the market's consensus forecast of the stock's future realized volatility embedded in option prices.</div>
 
-The empirical finding that implied volatility varies systematically across strikes — the **volatility smile** or **volatility skew** — is evidence against the log-normal assumption. For equity index options, implied volatility typically decreases with strike (a skew): out-of-the-money puts carry higher implied volatility than at-the-money or out-of-the-money calls. This reflects investors' willingness to pay a premium to hedge against market crashes — the left tail of the return distribution is fatter than the log-normal model predicts.
+The empirical finding that implied volatility varies systematically across strikes — the <strong>volatility smile</strong> or <strong>volatility skew</strong> — is evidence against the log-normal assumption. For equity index options, implied volatility typically decreases with strike (a skew): out-of-the-money puts carry higher implied volatility than at-the-money or out-of-the-money calls. This reflects investors' willingness to pay a premium to hedge against market crashes — the left tail of the return distribution is fatter than the log-normal model predicts.
 
 ---
 
@@ -835,11 +835,11 @@ The empirical finding that implied volatility varies systematically across strik
 
 ## Futures and Forwards: Institutional Background
 
-<div class="definition"><strong>Definition 20.1 (Forward Contract).</strong> A <strong>forward contract</strong> is a privately negotiated agreement to buy or sell a specified asset at a specified price (the **forward price**) at a specified future date (the **delivery date**). Forwards are customized to the parties' needs and traded over the counter (OTC). Because they are bilateral agreements with no intermediary guarantee, they expose each party to **counterparty credit risk** — the risk that the other party defaults before delivery.</div>
+<div class="definition"><strong>Definition 20.1 (Forward Contract).</strong> A <strong>forward contract</strong> is a privately negotiated agreement to buy or sell a specified asset at a specified price (the <strong>forward price</strong>) at a specified future date (the <strong>delivery date</strong>). Forwards are customized to the parties' needs and traded over the counter (OTC). Because they are bilateral agreements with no intermediary guarantee, they expose each party to <strong>counterparty credit risk</strong> — the risk that the other party defaults before delivery.</div>
 
-<div class="definition"><strong>Definition 20.2 (Futures Contract).</strong> A <strong>futures contract</strong> is a standardized exchange-traded agreement to buy or sell a specified quantity of an asset at a specified price on a specified future date. The exchange's **clearinghouse** stands between all buyers and sellers, guaranteeing performance and eliminating counterparty risk. Futures are marked to market daily — gains and losses are settled in cash each evening through the clearinghouse.</div>
+<div class="definition"><strong>Definition 20.2 (Futures Contract).</strong> A <strong>futures contract</strong> is a standardized exchange-traded agreement to buy or sell a specified quantity of an asset at a specified price on a specified future date. The exchange's <strong>clearinghouse</strong> stands between all buyers and sellers, guaranteeing performance and eliminating counterparty risk. Futures are marked to market daily — gains and losses are settled in cash each evening through the clearinghouse.</div>
 
-<div class="definition"><strong>Definition 20.3 (Marking to Market and Margin).</strong> In futures markets, the <strong>initial margin</strong> is a good-faith deposit required when the contract is entered. Each day, gains or losses are credited or debited to the margin account based on the change in futures price (daily settlement). If the margin account falls below the <strong>maintenance margin</strong>, a **margin call** requires the account to be topped back up to the initial margin level. If the investor fails to meet a margin call, the position is closed.</div>
+<div class="definition"><strong>Definition 20.3 (Marking to Market and Margin).</strong> In futures markets, the <strong>initial margin</strong> is a good-faith deposit required when the contract is entered. Each day, gains or losses are credited or debited to the margin account based on the change in futures price (daily settlement). If the margin account falls below the <strong>maintenance margin</strong>, a <strong>margin call</strong> requires the account to be topped back up to the initial margin level. If the investor fails to meet a margin call, the position is closed.</div>
 
 <div class="example"><strong>Example 20.1.</strong> An investor enters a long futures contract on 100 barrels of crude oil at \$80/barrel. Initial margin = \$3,000; maintenance margin = \$2,500. If the futures price falls to \$77, the daily loss is \(100 \times (-3) = -\$300\), reducing the margin account from \$3,000 to \$2,700. The next day, price falls to \$75: daily loss = \$200, margin account = \$2,500 (exactly at maintenance). One more day with any decline triggers a margin call to restore the account to \$3,000.</div>
 
@@ -860,7 +860,7 @@ Both arbitrage opportunities are eliminated only when \(F_0 = S_0(1+r_f)^T\). \(
 \[ F_0 = S_0 e^{(r + u - d)T} \]
 where \(u\) is the continuously compounded storage cost (for commodities) or zero for financial assets, and \(d\) is the continuous dividend yield (for stocks or indices) or convenience yield (for commodities). The term \(r + u - d\) is the <strong>net cost of carry</strong>.</div>
 
-<div class="definition"><strong>Definition 20.6 (Basis and Convergence).</strong> The <strong>basis</strong> is defined as \(S_0 - F_0\). For non-dividend-paying assets, basis = \(-S_0 r_f T < 0\) (futures exceed spot price, called **contango**). For dividend-paying assets or commodities with high convenience yield, \(d > r + u\) and the basis can be positive (futures below spot, called **backwardation**). At expiry, the futures price converges to the spot price: \(F_T = S_T\).</div>
+<div class="definition"><strong>Definition 20.6 (Basis and Convergence).</strong> The <strong>basis</strong> is defined as \(S_0 - F_0\). For non-dividend-paying assets, basis = \(-S_0 r_f T < 0\) (futures exceed spot price, called <strong>contango</strong>). For dividend-paying assets or commodities with high convenience yield, \(d > r + u\) and the basis can be positive (futures below spot, called <strong>backwardation</strong>). At expiry, the futures price converges to the spot price: \(F_T = S_T\).</div>
 
 ## Hedging with Futures
 
@@ -874,11 +874,11 @@ where \(\rho_{SF}\) is the correlation between spot and futures price changes.</
 \[ \text{Var}(\Delta S - h\Delta F) = \sigma_S^2 - 2h\sigma_{SF} + h^2\sigma_F^2 \]
 Differentiating with respect to \(h\) and setting to zero: \(-2\sigma_{SF} + 2h\sigma_F^2 = 0 \implies h^* = \sigma_{SF}/\sigma_F^2 = \rho_{SF}\sigma_S/\sigma_F\). \(\square\)</div>
 
-<div class="remark"><strong>Remark.</strong> The hedge ratio equals one (a unit hedge) only when spot and futures prices are perfectly correlated and have equal volatility. In practice, the hedged asset often differs from the futures contract's underlying in grade, location, or timing — introducing **basis risk**. Basis risk means the hedge cannot be perfect even with the optimal ratio. The hedging effectiveness \(R^2 = \rho_{SF}^2\) measures the fraction of spot price variance eliminated by the optimal hedge.</div>
+<div class="remark"><strong>Remark.</strong> The hedge ratio equals one (a unit hedge) only when spot and futures prices are perfectly correlated and have equal volatility. In practice, the hedged asset often differs from the futures contract's underlying in grade, location, or timing — introducing <strong>basis risk</strong>. Basis risk means the hedge cannot be perfect even with the optimal ratio. The hedging effectiveness \(R^2 = \rho_{SF}^2\) measures the fraction of spot price variance eliminated by the optimal hedge.</div>
 
 ## Swap Markets
 
-<div class="definition"><strong>Definition 20.9 (Interest Rate Swap).</strong> An <strong>interest rate swap</strong> is an agreement in which two counterparties exchange periodic interest payments on a specified <strong>notional principal</strong>. In a <strong>plain vanilla swap</strong>, one party pays a fixed rate (the **swap rate**) while the other pays a floating rate (typically SOFR), both applied to the same notional. The notional itself is never exchanged — only the net interest difference changes hands.</div>
+<div class="definition"><strong>Definition 20.9 (Interest Rate Swap).</strong> An <strong>interest rate swap</strong> is an agreement in which two counterparties exchange periodic interest payments on a specified <strong>notional principal</strong>. In a <strong>plain vanilla swap</strong>, one party pays a fixed rate (the <strong>swap rate</strong>) while the other pays a floating rate (typically SOFR), both applied to the same notional. The notional itself is never exchanged — only the net interest difference changes hands.</div>
 
 <div class="example"><strong>Example 20.2.</strong> Company A has issued \$10 million in floating-rate debt at SOFR + 1%. It fears rising rates. It enters a 3-year swap in which it pays a fixed rate of 4% and receives SOFR on a \$10 million notional. Net position:
 <ul>
@@ -890,6 +890,6 @@ The floating-rate debt has been effectively converted to 5% fixed-rate, eliminat
 \[ \sum_{t=1}^{T} \frac{k \cdot \text{Notional}}{(1+y_t)^t} = \text{Notional} - \frac{\text{Notional}}{(1+y_T)^T} \]
 where \(k\) is the swap rate (annual fixed coupon as a fraction of notional) and \(y_t\) are the relevant spot rates. This shows that a pay-fixed swap is equivalent to a long position in a floating-rate bond and a short position in a fixed-rate bond.</div>
 
-<div class="definition"><strong>Definition 20.11 (Credit Default Swap).</strong> A <strong>credit default swap (CDS)</strong> is a bilateral contract in which the <strong>protection buyer</strong> pays periodic premiums (the **CDS spread**, in basis points per annum on notional) to the <strong>protection seller</strong>, who in return agrees to pay the notional (minus recovery value) if a specified <strong>reference entity</strong> defaults. The CDS spread is a direct market measure of credit risk: a wider spread reflects higher perceived default probability. CDSs allow credit risk to be separated from interest rate risk and transferred to parties who wish to take credit exposure, or used to hedge credit exposure by bond holders.</div>
+<div class="definition"><strong>Definition 20.11 (Credit Default Swap).</strong> A <strong>credit default swap (CDS)</strong> is a bilateral contract in which the <strong>protection buyer</strong> pays periodic premiums (the <strong>CDS spread</strong>, in basis points per annum on notional) to the <strong>protection seller</strong>, who in return agrees to pay the notional (minus recovery value) if a specified <strong>reference entity</strong> defaults. The CDS spread is a direct market measure of credit risk: a wider spread reflects higher perceived default probability. CDSs allow credit risk to be separated from interest rate risk and transferred to parties who wish to take credit exposure, or used to hedge credit exposure by bond holders.</div>
 
 <div class="remark"><strong>Remark.</strong> The financial crisis of 2008 demonstrated the systemic dangers of concentrated, opaque CDS positions. AIG had written credit protection on hundreds of billions of mortgage-related CDOs; when housing prices fell and CDO values collapsed, AIG faced margin calls it could not meet, triggering a government bailout. The episode illustrated that derivative markets can transfer risk efficiently in normal conditions but can create dangerous concentrations when many institutions hold similar positions on the same side of a trade.</div>

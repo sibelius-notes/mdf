@@ -58,7 +58,7 @@ Every metric space gives a topology (the **metric topology**), but there are two
 
 <div class="example">
 
-<strong>Example 1.3.</strong> Let \(X = \{1, 2, 3\}\). The collections \(\mathcal{R} = \{\emptyset, \{1\}, X\}\), \(\mathcal{S} = \{\emptyset, \{1\}, \{1,2\}, X\}\), and \(\mathcal{T} = \{\emptyset, \{1\}, \{1,2\}, \{1,3\}, X\}\) are all topologies on \(X\). However, \(\mathcal{B} = \{\emptyset, \{1\}, \{2\}, X\}\) is *not* a topology because \(\{1\} \cup \{2\} = \{1,2\} \notin \mathcal{B}\).
+<strong>Example 1.3.</strong> Let \(X = \{1, 2, 3\}\). The collections \(\mathcal{R} = \{\emptyset, \{1\}, X\}\), \(\mathcal{S} = \{\emptyset, \{1\}, \{1,2\}, X\}\), and \(\mathcal{T} = \{\emptyset, \{1\}, \{1,2\}, \{1,3\}, X\}\) are all topologies on \(X\). However, \(\mathcal{B} = \{\emptyset, \{1\}, \{2\}, X\}\) is <em>not</em> a topology because \(\{1\} \cup \{2\} = \{1,2\} \notin \mathcal{B}\).
 
 </div>
 
@@ -123,7 +123,7 @@ Specifying every open set in a topology can be unwieldy. A **basis** provides a 
 1. For every \(a \in X\), there exists \(B \in \mathcal{B}\) with \(a \in B\).
 2. For every \(a \in X\) and \(C, D \in \mathcal{B}\) with \(a \in C \cap D\), there exists \(B \in \mathcal{B}\) with \(a \in B \subseteq C \cap D\).
 
-The topology **generated** by \(\mathcal{B}\) consists of all sets \(U\) such that for every \(a \in U\), there exists \(B \in \mathcal{B}\) with \(a \in B \subseteq U\). Equivalently, the topology consists of all unions of elements of \(\mathcal{B}\).
+The topology <strong>generated</strong> by \(\mathcal{B}\) consists of all sets \(U\) such that for every \(a \in U\), there exists \(B \in \mathcal{B}\) with \(a \in B \subseteq U\). Equivalently, the topology consists of all unions of elements of \(\mathcal{B}\).
 
 </div>
 
@@ -205,7 +205,7 @@ Continuity can also be verified locally: if \(X\) is covered by open sets \(\{A_
 
 - The circle \(x^2 + y^2 = 1\) is homeomorphic to the ellipse \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) via \(f(x,y) = (ax, by)\).
 
-- The unit sphere \(S^n = \{x \in \mathbb{R}^{n+1} \mid \|x\| = 1\}\) with the north pole removed is homeomorphic to \(\mathbb{R}^n\) via **stereographic projection**: \(f(x) = \left(\frac{x_1}{1-x_{n+1}}, \ldots, \frac{x_n}{1-x_{n+1}}\right)\).
+- The unit sphere \(S^n = \{x \in \mathbb{R}^{n+1} \mid \|x\| = 1\}\) with the north pole removed is homeomorphic to \(\mathbb{R}^n\) via <strong>stereographic projection</strong>: \(f(x) = \left(\frac{x_1}{1-x_{n+1}}, \ldots, \frac{x_n}{1-x_{n+1}}\right)\).
 
 </div>
 
@@ -293,7 +293,7 @@ A particularly clean source of quotient spaces comes from group actions.
 
 <div class="definition">
 
-<strong>Definition 2.8.</strong> An <strong>action</strong> of a group \(G\) on a space \(X\) is a map \(G \times X \to X\), written \((g, x) \mapsto gx\), satisfying \(1 \cdot x = x\) and \((gh)x = g(hx)\). The **orbit space** \(X/G\) is the quotient by the equivalence relation \(x \sim y \iff gx = y\) for some \(g \in G\).
+<strong>Definition 2.8.</strong> An <strong>action</strong> of a group \(G\) on a space \(X\) is a map \(G \times X \to X\), written \((g, x) \mapsto gx\), satisfying \(1 \cdot x = x\) and \((gh)x = g(hx)\). The <strong>orbit space</strong> \(X/G\) is the quotient by the equivalence relation \(x \sim y \iff gx = y\) for some \(g \in G\).
 
 </div>
 
@@ -419,7 +419,7 @@ Compactness is perhaps the most important topological property. It is a topologi
 
 <div class="definition">
 
-<strong>Definition 3.11.</strong> An <strong>open cover</strong> of \(X\) is a collection \(\mathcal{S}\) of open sets whose union is \(X\). A <strong>subcover</strong> is a subcollection that still covers \(X\). The space \(X\) is <strong>compact</strong> if every open cover has a **finite** subcover.
+<strong>Definition 3.11.</strong> An <strong>open cover</strong> of \(X\) is a collection \(\mathcal{S}\) of open sets whose union is \(X\). A <strong>subcover</strong> is a subcollection that still covers \(X\). The space \(X\) is <strong>compact</strong> if every open cover has a <strong>finite</strong> subcover.
 
 </div>
 
@@ -495,10 +495,10 @@ How "large" is a topology? The countability axioms measure this using the lens o
 
 <strong>Definition 4.1.</strong> A topological space \(X\) is:
 
-- **First-countable** if every point has a countable neighbourhood basis (a countable collection of open sets such that every neighbourhood of the point contains one of them).
-- **Second-countable** if the topology has a countable basis.
-- **Separable** if \(X\) has a countable dense subset.
-- **Lindelöf** if every open cover has a countable subcover.
+- <strong>First-countable</strong> if every point has a countable neighbourhood basis (a countable collection of open sets such that every neighbourhood of the point contains one of them).
+- <strong>Second-countable</strong> if the topology has a countable basis.
+- <strong>Separable</strong> if \(X\) has a countable dense subset.
+- <strong>Lindelöf</strong> if every open cover has a countable subcover.
 
 </div>
 
@@ -506,7 +506,7 @@ These properties are ordered by strength: second-countable implies all the other
 
 <div class="example">
 
-<strong>Example 4.2.</strong> The Sorgenfrey line \(\mathbb{R}_\ell\) is first-countable, Lindelöf, and separable (the rationals are dense), but *not* second-countable. This shows the equivalences for metric spaces do not hold in general. Even worse, the Sorgenfrey plane \(\mathbb{R}_\ell \times \mathbb{R}_\ell\) is not Lindelöf, showing that the Lindelöf property is not preserved by products.
+<strong>Example 4.2.</strong> The Sorgenfrey line \(\mathbb{R}_\ell\) is first-countable, Lindelöf, and separable (the rationals are dense), but <em>not</em> second-countable. This shows the equivalences for metric spaces do not hold in general. Even worse, the Sorgenfrey plane \(\mathbb{R}_\ell \times \mathbb{R}_\ell\) is not Lindelöf, showing that the Lindelöf property is not preserved by products.
 
 </div>
 
@@ -697,7 +697,7 @@ Think of \(s\) as a "time" parameter: at time \(s = 0\) we have the path \(\alph
 
 <div class="definition">
 
-<strong>Definition 6.3.</strong> Let \(X\) be a topological space and \(a \in X\). The <strong>fundamental group</strong> of \(X\) at \(a\) is the set \(\pi_1(X, a)\) of homotopy classes of loops at \(a\), with the group operation given by **concatenation**: if \(\alpha\) is a loop at \(a\) and \(\beta\) is a loop at \(a\), the product path \(\alpha \beta\) first traverses \(\alpha\) at double speed, then \(\beta\) at double speed:
+<strong>Definition 6.3.</strong> Let \(X\) be a topological space and \(a \in X\). The <strong>fundamental group</strong> of \(X\) at \(a\) is the set \(\pi_1(X, a)\) of homotopy classes of loops at \(a\), with the group operation given by <strong>concatenation</strong>: if \(\alpha\) is a loop at \(a\) and \(\beta\) is a loop at \(a\), the product path \(\alpha \beta\) first traverses \(\alpha\) at double speed, then \(\beta\) at double speed:
 
 \[(\alpha \beta)(t) = \begin{cases} \alpha(2t) & \text{if } 0 \leq t \leq \tfrac{1}{2}, \\ \beta(2t - 1) & \text{if } \tfrac{1}{2} \leq t \leq 1. \end{cases}\]
 
@@ -750,13 +750,13 @@ The fundamental group is not just an invariant of spaces — it is **functorial*
 
 <div class="definition">
 
-<strong>Definition 6.7.</strong> A continuous map \(f: (X, a) \to (Y, b)\) (with \(f(a) = b\)) induces a group homomorphism \(f_*: \pi_1(X, a) \to \pi_1(Y, b)\) given by \(f_*([\alpha]) = [f \circ \alpha]\).
+<strong>Definition 6.7.</strong> A continuous map \(f: (X, a) \to (Y, b)\) (with \(f(a) = b\)) induces a group homomorphism \(f_<em>: \pi_1(X, a) \to \pi_1(Y, b)\) given by \(f_</em>([\alpha]) = [f \circ \alpha]\).
 
 </div>
 
 <div class="theorem">
 
-<strong>Theorem 6.8.</strong> We have \(\mathrm{id}_* = \mathrm{id}\) and \((g \circ f)_* = g_* \circ f_*\). Consequently, if \(f: (X, a) \to (Y, b)\) is a homeomorphism, then \(f_*\) is a group isomorphism.
+<strong>Theorem 6.8.</strong> We have \(\mathrm{id}_<em> = \mathrm{id}\) and \((g \circ f)_</em> = g_<em> \circ f_</em>\). Consequently, if \(f: (X, a) \to (Y, b)\) is a homeomorphism, then \(f_*\) is a group isomorphism.
 
 </div>
 
@@ -820,7 +820,7 @@ If \(A\) is a deformation retract of \(X\), then \(A \simeq X\) and \(\pi_1(X, a
 
 - The origin \(\{0\}\) is a strong deformation retract of \(\mathbb{R}^n\) (via \(F(s, x) = (1-s)x\)).
 - The sphere \(S^{n-1}\) is a strong deformation retract of \(\mathbb{R}^n \setminus \{0\}\) (via \(F(s, x) = \frac{(1-s)x + s \cdot x/\|x\|}{1} \cdot \|x\|^{1-s}\), or more simply, by normalizing: \(F(s, x) = ((1-s) + s/\|x\|)x\)).
-- The figure-eight space \(8\) and the theta space \(\Theta\) are both strong deformation retracts of \(\mathbb{C} \setminus \{\pm i\}\). They are homotopy equivalent but *not* homeomorphic (removing the crossing point of \(8\) disconnects it into four arcs, but no point removal disconnects \(\Theta\) into four pieces).
+- The figure-eight space \(8\) and the theta space \(\Theta\) are both strong deformation retracts of \(\mathbb{C} \setminus \{\pm i\}\). They are homotopy equivalent but <em>not</em> homeomorphic (removing the crossing point of \(8\) disconnects it into four arcs, but no point removal disconnects \(\Theta\) into four pieces).
 
 ![The figure-eight and theta space: homotopy equivalent but not homeomorphic](/pics/367/figure-eight-theta.svg)
 
@@ -844,7 +844,7 @@ The computation \(\pi_1(S^1) \cong \mathbb{Z}\) has remarkable consequences.
 
 <div class="proof">
 
-<strong>Proof.</strong> If \(r: D^2 \to S^1\) were a retraction, then \(r_* \circ i_*: \pi_1(S^1) \to \pi_1(S^1)\) would be the identity. But \(i_*: \pi_1(S^1) \to \pi_1(D^2)\) maps \(\mathbb{Z}\) to \(0\), so \(r_* \circ i_*\) is the zero map — a contradiction. ∎
+<strong>Proof.</strong> If \(r: D^2 \to S^1\) were a retraction, then \(r_<em> \circ i_</em>: \pi_1(S^1) \to \pi_1(S^1)\) would be the identity. But \(i_<em>: \pi_1(S^1) \to \pi_1(D^2)\) maps \(\mathbb{Z}\) to \(0\), so \(r_</em> \circ i_*\) is the zero map — a contradiction. ∎
 
 </div>
 
@@ -896,7 +896,7 @@ The free product satisfies the universal property: for any group \(H\) and homom
 
 <div class="example">
 
-<strong>Example 8.2.</strong> The free product \(G * H\) consists of alternating strings of non-identity elements from \(G\) and \(H\): \(\emptyset, a_1, b_1, a_1 b_1, b_1 a_1, a_1 b_1 a_2, \ldots\) It is generally non-abelian even if \(G\) and \(H\) are abelian: in \(\mathbb{Z} * \mathbb{Z}\), the element \(ab\) is not equal to \(ba\).
+<strong>Example 8.2.</strong> The free product \(G <em> H\) consists of alternating strings of non-identity elements from \(G\) and \(H\): \(\emptyset, a_1, b_1, a_1 b_1, b_1 a_1, a_1 b_1 a_2, \ldots\) It is generally non-abelian even if \(G\) and \(H\) are abelian: in \(\mathbb{Z} </em> \mathbb{Z}\), the element \(ab\) is not equal to \(ba\).
 
 </div>
 
@@ -1077,7 +1077,7 @@ In a locally path-connected space, the connected components equal the path-compo
 
 given by \(p \mapsto p_*(\pi_1(\tilde{X}, \tilde{a}))\). In particular:
 
-- The **universal cover** corresponds to the trivial subgroup \(H = \{e\}\). It is the unique simply connected covering space.
+- The <strong>universal cover</strong> corresponds to the trivial subgroup \(H = \{e\}\). It is the unique simply connected covering space.
 - The identity covering \(X \to X\) corresponds to the whole group \(\pi_1(X, a)\).
 - An \(n\)-fold covering corresponds to a subgroup of index \(n\).
 
@@ -1111,7 +1111,7 @@ The higher homotopy groups are functorial (a continuous map \(f: X \to Y\) induc
 
 <div class="example">
 
-<strong>Example 11.2.</strong> The spheres \(S^n\) have a single "essential" map in dimension \(n\): the identity map \(S^n \to S^n\) is not null-homotopic, giving \(\pi_n(S^n) \cong \mathbb{Z}\). But here is a surprise: \(\pi_3(S^2) \cong \mathbb{Z}\) as well! The generator is the **Hopf fibration** \(h: S^3 \to S^2\), one of the most beautiful maps in all of mathematics. Viewing \(S^3 \subseteq \mathbb{C}^2\) and \(S^2 = \mathbb{CP}^1\), it sends \((z_1, z_2) \mapsto [z_1 : z_2]\). Every fibre \(h^{-1}(p)\) is a circle, and any two such fibres are linked in \(S^3\). This linking is what makes \(h\) topologically non-trivial.
+<strong>Example 11.2.</strong> The spheres \(S^n\) have a single "essential" map in dimension \(n\): the identity map \(S^n \to S^n\) is not null-homotopic, giving \(\pi_n(S^n) \cong \mathbb{Z}\). But here is a surprise: \(\pi_3(S^2) \cong \mathbb{Z}\) as well! The generator is the <strong>Hopf fibration</strong> \(h: S^3 \to S^2\), one of the most beautiful maps in all of mathematics. Viewing \(S^3 \subseteq \mathbb{C}^2\) and \(S^2 = \mathbb{CP}^1\), it sends \((z_1, z_2) \mapsto [z_1 : z_2]\). Every fibre \(h^{-1}(p)\) is a circle, and any two such fibres are linked in \(S^3\). This linking is what makes \(h\) topologically non-trivial.
 
 </div>
 
@@ -1147,7 +1147,7 @@ where \(Z_n = \ker \partial_n\) are the <strong>cycles</strong> (chains without 
 
 \[H_k(S^n) = \begin{cases} \mathbb{Z} & \text{if } k = 0 \text{ or } k = n, \\ 0 & \text{otherwise.} \end{cases}\]
 
-The generator of \(H_n(S^n)\) is called the **fundamental class** — it represents the sphere "wrapping once around itself." For the torus, \(H_0(T^2) \cong \mathbb{Z}\), \(H_1(T^2) \cong \mathbb{Z}^2\), and \(H_2(T^2) \cong \mathbb{Z}\). The two generators of \(H_1\) correspond to the two independent loops on the torus.
+The generator of \(H_n(S^n)\) is called the <strong>fundamental class</strong> — it represents the sphere "wrapping once around itself." For the torus, \(H_0(T^2) \cong \mathbb{Z}\), \(H_1(T^2) \cong \mathbb{Z}^2\), and \(H_2(T^2) \cong \mathbb{Z}\). The two generators of \(H_1\) correspond to the two independent loops on the torus.
 
 </div>
 
@@ -1171,7 +1171,7 @@ Where homology assigns groups, **cohomology** assigns *dual* groups — and gain
 
 <div class="definition">
 
-<strong>Definition 11.5.</strong> The <strong>\(n\)-th cohomology group</strong> with coefficients in a ring \(R\) is \(H^n(X; R) = \operatorname{Hom}(H_n(X), R)\) (roughly speaking). The <strong>cup product</strong> \(\smile: H^p(X) \times H^q(X) \to H^{p+q}(X)\) makes the **cohomology ring** \(H^*(X) = \bigoplus_n H^n(X)\) into a graded-commutative ring.
+<strong>Definition 11.5.</strong> The <strong>\(n\)-th cohomology group</strong> with coefficients in a ring \(R\) is \(H^n(X; R) = \operatorname{Hom}(H_n(X), R)\) (roughly speaking). The <strong>cup product</strong> \(\smile: H^p(X) \times H^q(X) \to H^{p+q}(X)\) makes the <strong>cohomology ring</strong> \(H^*(X) = \bigoplus_n H^n(X)\) into a graded-commutative ring.
 
 </div>
 
@@ -1220,7 +1220,7 @@ The **orbit** of a point \(x\) is the set \(\mathcal{O}(x) = \{T^n x \mid n \geq
 
 <div class="example">
 
-<strong>Example 12.2 (Irrational rotation).</strong> Let \(X = S^1\) (the unit circle in \(\mathbb{C}\)) and \(T(z) = e^{2\pi i \alpha} z\) for some irrational \(\alpha\). Then every orbit is dense in \(S^1\) — the sequence \(1, e^{2\pi i\alpha}, e^{4\pi i\alpha}, \ldots\) visits every arc of the circle. This is the **equidistribution theorem** of Weyl: the points are not only dense, they are uniformly distributed. Contrast this with the case of rational \(\alpha = p/q\), where every orbit is periodic with period \(q\).
+<strong>Example 12.2 (Irrational rotation).</strong> Let \(X = S^1\) (the unit circle in \(\mathbb{C}\)) and \(T(z) = e^{2\pi i \alpha} z\) for some irrational \(\alpha\). Then every orbit is dense in \(S^1\) — the sequence \(1, e^{2\pi i\alpha}, e^{4\pi i\alpha}, \ldots\) visits every arc of the circle. This is the <strong>equidistribution theorem</strong> of Weyl: the points are not only dense, they are uniformly distributed. Contrast this with the case of rational \(\alpha = p/q\), where every orbit is periodic with period \(q\).
 
 </div>
 
@@ -1248,7 +1248,7 @@ One of the most profound ideas in topological dynamics is the use of **ultrafilt
 
 <div class="definition">
 
-<strong>Definition 12.5.</strong> An <strong>ultrafilter</strong> on \(\mathbb{N}\) is a collection \(p\) of subsets of \(\mathbb{N}\) that is closed under finite intersections and supersets, contains no empty set, and is "maximal" in the sense that for every \(A \subseteq \mathbb{N}\), either \(A \in p\) or \(\mathbb{N} \setminus A \in p\). The **principal ultrafilters** are those of the form \(p_n = \{A \subseteq \mathbb{N} \mid n \in A\}\). All others are called **free ultrafilters** (their existence requires the Axiom of Choice).
+<strong>Definition 12.5.</strong> An <strong>ultrafilter</strong> on \(\mathbb{N}\) is a collection \(p\) of subsets of \(\mathbb{N}\) that is closed under finite intersections and supersets, contains no empty set, and is "maximal" in the sense that for every \(A \subseteq \mathbb{N}\), either \(A \in p\) or \(\mathbb{N} \setminus A \in p\). The <strong>principal ultrafilters</strong> are those of the form \(p_n = \{A \subseteq \mathbb{N} \mid n \in A\}\). All others are called <strong>free ultrafilters</strong> (their existence requires the Axiom of Choice).
 
 </div>
 
