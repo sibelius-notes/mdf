@@ -21,14 +21,10 @@ This course surveys medieval monsters through the lenses of multiple academic di
 ## 1a. Context: The Middle Ages and Periodization
 
 
-
 ### Overview
 
 
-This is a course on medieval monsters. The purpose of the course is twofold:
-
-- First, it aims to show how medieval people viewed their world by analyzing their monstrosities– those things which, by their very nature, exceeded the boundaries of the normal. In good anthropological fashion, though, by looking to the extreme we are able to see the limits of the acceptable.
-- Second, this course demonstrates how aninterdisciplinary field of research operates. It does this by providing examples by and from scholars who research in different disciplines. Unlike most other courses you will take, this one was not developed by a single expert. Rather, a team of scholars – all dedicated to understanding the Middle Ages in different ways – worked collaboratively to generate the course content. This course truly is an example of interdisciplinary research and teaching!
+Studying medieval monsters serves two interrelated purposes. The first is to illuminate how medieval people structured their understanding of the world: by examining what exceeded the boundaries of the normal, we can trace the limits of the acceptable. As in anthropology generally, looking to the extreme reveals the contours of the centre. The second purpose is to demonstrate how an **interdisciplinary** field of research operates in practice. Medieval Studies brings together historians, archaeologists, literary scholars, art historians, musicologists, philosophers, and theologians — each with distinct methodologies and source traditions. Because monsters appear across all of these disciplines, they make an ideal common ground for observing cross-disciplinary collaboration.
 
 
 ### Medieval Studies and Interdisciplinarity
@@ -61,22 +57,18 @@ In general, then, beginning in the 1920s and right up to this day, scholars inte
 More recently, newer fields such as the **digital humanities**, **environmental studies**, and **popular culture** continue to expand the boundaries of Medieval Studies’ collaboration. Today, Medieval Studies is a shining example of how scholars with very different methodological training, who rely on very different sources of evidence, and who are interested often in very different questions, can collaborate effectively.
 
 
-
-
 *(Pontifical Institute of Medieval Studies, c. 1929)*
-
-
 
 
 *(Unknown, c. 1200-1299)*
 
-Each module in this course presents a different monster as studied by a different scholar and discipline. In this course you will see how archaeologists view giants, how intellectual historians might view dragons or conjured spirits, or how literary scholars conceive of so-called wild people. In every module, you will learn about a different “monster” from the Middle Ages, but also, importantly, about how different disciplines ascribe and derive meaning about the medieval past.
+Each module presents a different monster as studied by a different scholar and discipline — how archaeologists interpret giants, how intellectual historians approach dragons or conjured spirits, or how literary scholars conceive of wild people. The monsters themselves vary, but so do the disciplinary lenses used to examine them, making the comparative dimension as instructive as the individual cases.
 
 
 ### The Middle Ages and Historical Periodization
 
 
-This course presumes a basic working knowledge of the Middle Ages, or, at the very least, a willingness to do some light independent background reading and to fill in any gaps in your knowledge. You may, from time to time, need to research a term that scholars take for granted. For example, if you are unfamiliar with the papacy and the popes, or with the Crusades, or with words such as ecclesiastical or liturgical, then you may need to look up such terms. That’s okay. These are general concepts required to access the more specialized information contained in the course. Wherever possible, we have tried to use plain language or to define terms.
+These notes presuppose a basic familiarity with the broad outlines of medieval history. Specialist terms such as “ecclesiastical,” “liturgical,” or “scholasticism” are generally defined on first use; a general reference like the “Middle Ages” article on Wikipedia or the Oxford Dictionary of the Middle Ages can fill in broader context.
 
 
 ##### Additional Resource
@@ -94,7 +86,7 @@ You also should begin the course with a general sense of what we mean when we re
 #### A Note on Referencing Historical Eras: BC / BCE and AD / CE
 
 
-Basically, you should understand for this course that the Roman Empire was at its height in the first century CE, that is to say, the first century of the “**Common Era**,” **(CE)** or what used to be referred to by Christians as **Anno Domini**, the Year of the Lord, or “**AD**” for short. This dating system differentiates CE from **BCE**, meaning simply **Before the Common Era**, or, what Christians previously referred to as the era **Before Christ**, or “**BC**.” In any event, in the first century CE, the Roman Empire comprised all of Europe, including parts of Britain, and much of the Middle East and North Africa. The **Map of Roman Empire at its Height, 116 CE** shows how widespread and universal the Roman Empire was in the first and second centuries CE.
+Broadly speaking, the Roman Empire was at its height in the first century CE — that is, the first century of the **Common Era** (CE), the modern successor to the Christian dating system that used **AD** (*Anno Domini*, Year of the Lord) and **BC** (Before Christ). The corresponding secular terms are **BCE** (Before the Common Era) and **CE**. In the first and second centuries CE, the Roman Empire encompassed all of Europe, including parts of Britain, as well as much of the Middle East and North Africa.
 
 
 #### The Roman Empire
@@ -105,8 +97,6 @@ The Roman Empire, though, collapsed due to external and internal pressures. Exte
 In western Europe, that is to say in what is today Britain, France, the Low Countries, Germany, Spain, Portugal, Italy, Poland, and their neighbour states, the former Roman lands were replaced by newer Germanic “barbarian” kingdoms. As foreign peoples migrated into the old imperial lands, they set up their own nations in the heart of western Europe. This also happened in the less Romanized northern regions of western Europe, in modern day Scandinavia (Finland, Sweden, and Norway) and also in Iceland.
 
 
-
-
 (Coldeel, 2009)
 
 Farther to the East, however, especially in areas around modern-day Turkey and the Middle East, Roman traditions evolved and continued on for much longer. In fact, though the western capital city of Rome was conquered by the Visigoths (a Germanic tribe) in the year 410 CE and then, more thoroughly, by the Vandals (another Germanic tribe) in 476, the eastern capital city of Constantinople (modern day Istanbul) remained intact for almost another thousand years. The last remnants of the eastern portion of the former Roman Empire only fell to the Ottoman Turks in 1453 CE.
@@ -114,8 +104,6 @@ Farther to the East, however, especially in areas around modern-day Turkey and t
 Nonetheless, if we set aside for a moment what happened in the Near and Middle East, and focus on western Europe, Roman ways transitioned as new cultures established themselves. This initial period of resettling older western Roman lands, settling new nations, and implanting new cultures in western Europe lasted from about 500 to about 800. This is what we call the **early Middle Ages**.
 
 Over time, if Rome became a distant memory, many Roman institutions continued on in Germanic lands, though sometimes in modified forms, and this helped to provide continuity and richness to the newly forming nations of western Europe. Rome’s official religion since the first quarter of the fourth-century CE, Christianity, survived thanks to the conversion of the so-called barbarian kingdoms. With Christianity came the vast administrative network of the **Roman Catholic Church**, which promoted education for its administrators, constructed monumental buildings, and developed a complicated legal system based on Roman traditions, among others. And, of course, the common tongue of Rome, its *lingua franca*, **Latin**, remained the language of European education. So, over time, as the barbarian kingdoms stabilized, new hybrid cultures flourished in western Europe. The second map below, **Simplified Map of Europe circa 998CE**, shows how much more complex Europe had become by about the year 1000. Compare that map to the earlier one, **Map of Roman Empire at its Height, 116 CE**, in which all of Europe was controlled by Rome and you will immediately see how much more fractured European politics had become in a period of about 500 years.
-
-
 
 
 (Roke 2006)
@@ -131,8 +119,6 @@ Finally, after about 1200, though, conditions began to change in Europe. For one
 Why do we call this era “the Middle Ages”? Simply, because it is the 1,000 era between the end of the ancient world, and the start of the modern period. It is, literally, in the middle. Since, however, this age has three distinct phases (early, high, and late), in English, anyway, we refer to the Middle Ages, plural.
 
 
-
-
 Timeline of the Ancient, Middle, and Modern Ages. Image Description
 © University of Waterloo, derived from Biw3ds/iStock/Getty Images and Hampi/iStock/Getty Images.
 
@@ -142,8 +128,7 @@ The English adjective “medieval,” which describes the period, comes directly
 #### Summary
 
 
-As you read through the various modules in this course, and learn about different ways scholars “see” medieval monsters, you should keep this very broad and very general European history in mind. The Ancient world of Egypt, Greece, or Rome ended by about 500. Between 500-800, new cultures established themselves on the soils of western Europe, hybrids of Germanic and Roman civilizations that were characteristic of the early Middle Ages. Between about 800 and roughly 1250, this pan-European culture became well established. It was characterized by the domination of chivalric culture, knights, horses, and crusades, and by a population boom leading to ever greater advances and stability: the high Middle Ages. Between roughly 1250 and 1500, this world fragmented, in part due to changes in natural environment, in part because any organism can only sustain itself for so long before problems of internal cohesion cause it to fracture and break apart. That was certainly the case in the late Middle Ages. As you study, think about where each monster fits in time. Was it a product of the Roman world? Of the high medieval world? Or of the decaying late medieval?
-
+When reading about medieval monsters across different modules, it helps to keep this broad chronological framework in mind. The Ancient world of Egypt, Greece, or Rome ended by roughly 500 CE. Between 500 and 800, new cultures established themselves on the soils of western Europe — hybrids of Germanic and Roman civilizations characteristic of the early Middle Ages. Between about 800 and 1250, a pan-European culture became well established, characterized by chivalric culture, knights, crusades, and a population boom: the high Middle Ages. Between roughly 1250 and 1500, this world fragmented due to environmental changes, internal pressures, and social upheaval — the late Middle Ages. Each category of monster tends to cluster in particular periods, and placing it chronologically sharpens the historical analysis.
 
 
 **Works Cited**
@@ -161,7 +146,6 @@ Unknown. n.d. "Medieval Studies" Wikipedia. Retrieved from: https://en.wikipedi
 
 
 ## 1b. Here There Be Monsters
-
 
 
 ### Introduction to Medieval Monsters
@@ -184,8 +168,6 @@ Adam also wrote that the cynocephali had their dog-heads situated on their torso
 Still, cynocephali, along with pygmies (miniature wild humanoids), giants (oversized humanoids), himantopodes (men whose feet faced backward), panotii (humanoids with oversized ears), monoculi (humanoids with one eye), and bleymae (also spelled blemmya, headless men whose faces were on their bodies), they remained popular in medieval books.
 
 
-
-
 (Unknown, 1397)
 
 
@@ -202,23 +184,12 @@ Finally, Friedman concludes that medieval descriptions of monsters serve altoget
 Taken more positively, monstrosity informs how medieval people saw themselves in relation to a larger world, a world that, unlike for us today, remained deeply mysterious and unknown, if not unknowable. The **otherness**or alterity of monsters reflected medieval peoples’ **sense of the normal**, the **safe**, the **knowable**, even the **good**. Through monsters, we see, therefore, the contours of medieval people’s world, their (and its) boundaries. So, by crossing into the world of monsters, we understand better how medieval people understood themselves.
 
 
-##### Required Reading Break
-
-
-Take some time now to read through this website and article published by the British Museum. While you read, be sure to explore some of the digitized manuscripts and study their illuminations!
-
 - Bovey, Alixe. “Medieval monsters,” 30 April 2015.
 
-
-##### Check Your Understanding
-
-
-**1) In the thirteenth-century miscellany of Peraldus, a Christian knight on horseback faces off against the Seven Deadly Sins and their sub-vices. How are the Seven Deadly Sins personified? As…**
 
 **2) The first-century Roman author who described monsters living at the edges of the known world was:**
 
 **3) A medieval book that contains detailed evidence of animals ranging from real-world to fantastical examples is called a…**
-
 
 
 **Works Cited**
@@ -232,11 +203,10 @@ Unknown. 1397. "p.67: Illumination of Jesus Christ surrounded by cynocephali." T
 ## 1c. Disciplinary Lenses
 
 
-
 ### Overview of Interdisciplinarity Across Modules
 
 
-As noted, every field of study has its own rules, its own methodologies (ways of working), its preferred data sets (sources of information), and, therefore, its own unique way of training students. Throughout this course, you will experience several of them. The plan is as follows:
+Every field of study has its own rules, its preferred sources, and its own ways of deriving meaning from evidence. The modules below survey several of these disciplinary lenses in turn, each illustrated through a specific category of medieval monster:
 
 
 #### Medieval Giants
@@ -290,7 +260,7 @@ Ann Marie Rasmussen in the ninth module, **wild people**, explores the boundarie
 #### Medieval Conceptions of the Devil
 
 
-In the tenth module, Andy Stumph demonstrates how philosophers and theologians approach the topic of the medieval conceptions of the devil, the ultimate medieval monster. Here you will see mapped out a methodology aligned closely with that of medieval thinkers. Unlike some of the other scientific approaches taken in this course, theology allows you to ask similar questions to those posed by medieval thinkers, providing an opportunity for our world – and theirs – to align.
+In Module 10, Andy Stumph demonstrates how philosophers and theologians approach the medieval concept of the devil, the ultimate medieval monster. Theological methodology shares something with medieval thinkers themselves: it allows the analyst to ask questions similar to those posed by the authors under examination, bringing the worlds of scholar and subject unusually close together.
 
 
 #### Political Monsters
@@ -299,19 +269,17 @@ In the tenth module, Andy Stumph demonstrates how philosophers and theologians a
 Though, by the eleventh module, political monsters, you will have explored literary approaches to the past using continental sources, this will be your first opportunity to read monsters using medieval English literature. Here, to wrap up our survey of monstrosity, Norm Klassen, an expert on the works of Geoffrey Chaucer, forces us to think broadly about monstrosity. He uses examples from *The Canterbury Tales* in contrast to a much earlier poem, the Old English *Beowulf*. Through this comparison, you will have a unique opportunity to read a word from the early Middle Ages against one composed in the late Middle Ages, bookending medieval English culture.
 
 
-
-
 (Skelton, 1908)
 
-Over the course of these modules, you will be exposed to many different kinds of monsters and, equally importantly, to many different kinds of scholarly disciplines. Each module will flag for you the disciplinary “lens” being featured.
+The modules that follow survey many different kinds of monsters and, equally, many different scholarly disciplines. Each module highlights the disciplinary lens being applied.
 
-All of the expert medievalists who contributed to the design of this course believe in cross-disciplinary collaboration and in the **core mission of Medieval Studies**: that, individually, medieval scholars have developed various approaches to the source material transmitted by that lost world. When we work together, though, when we share our different ways of “seeing” the past, then we gain a much richer, more holistic understanding of the Middle Ages.
+The scholars who contributed to these modules share a commitment to cross-disciplinary collaboration and to the **core mission of Medieval Studies**: that while individual scholars develop distinct approaches to the sources that survive from that lost world, working across disciplines and sharing different ways of “seeing” the past produces a richer, more holistic understanding of the Middle Ages.
 
 
 ### The Historical Disciplinary Lens
 
 
-We will end this brief introduction to Medieval Studies and to the study of medieval monsters by providing an example of one of the disciplinary methodologies you will encounter in this course. You have now read about the various experts and their fields of study, but there is a utility in mapping out in detail how a discipline works. The example used is one that may already be accessible to you from previous courses: the discipline of history.
+As a concrete illustration of how a disciplinary methodology operates, it is useful to trace the procedures of one discipline in detail. The example that follows is history — the most immediately accessible of the medieval disciplines — before turning to the specialized work of archaeology, literary studies, musicology, and the rest.
 
 Historians engage the present in a dialogue about the past to understand the future. We read the evidence left behind by previous people and cultures to understand their world and, though it, our own. This approach was summed beautifully by the famous French historian, **Fernand Braudel** (1902-1985). In his published essay **On History**, Braudel explained to his French students the value of studying a foreign landscape to understand their own world better:
 
@@ -331,8 +299,8 @@ The overarching goal of historical study and analysis is to inculcate what we ca
 
 For further reading on historical consciousness, see:
 
-- Seixas, Peter. "What is Historical Consciousness," in Ruth Sandwell (ed.),To the Past: History Education, Public Memory & Citizenship in Canada.University of Toronto Press, 2006. pp. 1-22. [Course Reserves]
-- Stearns, Peter N., Peter Seixas and Sam Wineburg (eds.),Knowing, Teaching & Learning history: National and International Perspectives.New York University Press, 2000. [Course Reserves]
+- Seixas, Peter. "What is Historical Consciousness," in Ruth Sandwell (ed.),To the Past: History Education, Public Memory & Citizenship in Canada.University of Toronto Press, 2006. pp. 1-22.
+- Stearns, Peter N., Peter Seixas and Sam Wineburg (eds.),Knowing, Teaching & Learning history: National and International Perspectives.New York University Press, 2000.
 
 Both these concepts mean that readers of history will come to know and understand past events, that they will develop the ability to appreciate continuity and change over time, that they can appreciate that there are many ways to see the past, that they will know how to interpret evidence appropriately, that they will make connections, and that they will grapple with causation and motivation.
 
@@ -343,8 +311,6 @@ Historians, much like physicians, accept that the historical arts are diagnostic
 But here’s the catch. Two doctors who receive the same data may arrive at a totally difference diagnosis.
 
 Patients know this and will often seek a second opinion for this reason. While most doctors might agree on any given diagnosis, some will always dissent.
-
-
 
 
 *(Unknonwn, c. 1300)*
@@ -372,16 +338,9 @@ Even so, remember: another historian, faced with the same evidence, might choose
 So, at the end of the day, the study of history remains deeply subjective. Sure, it tells us about things that actually happened, but so does Wikipedia or the newspaper. The analysis, the story written by historians to give those events meaning, is interpretive. It is crafted by skilled thinkers, who study primary and secondary evidence, who read across disciplines, and who attempt to formulate a meaningful narrative that advances our understanding of the past, but which can equally help train us to “read” the present more accurately.
 
 
-##### Check Your Understanding
-
-
-**1) Historians rely on two fundamentally different type of evidence, namely…**
-
 **2) An example of a work of English poetry from the Early Middle Ages is…**
 
 **3) A great French historian once advised his students to live in London so that they could…**
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -412,10 +371,7 @@ This module, written by an environmental historian, draws on perspectives from a
 ## 2a. Giants in Mythology
 
 
-
 ### Different Cultural Portrayals of Giants
-
-
 
 
 *(Reynolds, c. 1769)*
@@ -431,13 +387,9 @@ Giants were often portrayed, especially in European traditions, as creatures wit
 Modern authors have begun to nuance views of giants to some extent. When Roald Dahl, for example, wrote his beloved children's book, *The BFG*(an acronym for "The Big Friendly Giant"), he clearly did not agree with that Burke quote. Although that work still portrays most giants as simple beings with limited vocabularies and a fondness for eating humans, the BFG himself eats vegetables, sends good dreams to children at night, and is protective of his human friend, Sophie (see the figure, **The BFG**, below).
 
 
-
-
 (Walt Disney Pictures, 2016)
 
 Ancient myths, however, overwhelmingly portrayed giants as violent antagonists and an existential threat to the world. The Gigantes of Greek mythology waged a famous war, the Gigantomachy, against the Olympian gods and only suffered defeat once Hercules intervened to assist his kin. The figure below, **Gigantomachy,** depicts, on the left, Hekate (Goddess) fighting Klytios (Giant); on the right, Otos (Giant) against Artemis (Goddess), while her hunting dog bites another giant on the neck. The giants in this frieze does not depict the giants as particularly large, which demonstrates how Greek giants were noted predominately for their strength and aggression, not necessarily massive size.
-
-
 
 
 (Pergamon Museum, c.188 BC)
@@ -445,8 +397,6 @@ Ancient myths, however, overwhelmingly portrayed giants as violent antagonists a
 The giants, afterwards buried under the earth, were considered the cause of volcanoes and earthquakes by the ancient Greeks. The Norse foretold that at the end of the world, during Ragnarök, giants would rise up against the gods and storm Asgard. Volcanic eruptions also played an important role in that narrative and may have influenced or inspired ancient Norse perceptions of giants.
 
 In the Hebrew Bible, giants often appeared as antagonists who attacked the people of Israel or attempted to prevent them from accomplishing their goals. For example, a race of gigantic people called the Nephilim reputedly blocked Moses’ entry into Canaan. Most famously, the Philistine giant Goliath challenged the Hebrew army until he was defeated in single combat by David.
-
-
 
 
 (Dollman, c.1909)
@@ -464,36 +414,21 @@ It can be exceedingly difficult to determine where myths originate. Tracing fami
 People in the Middle Ages, like in any other era, drew heavily on familiar stories when trying to explain their world. Biblical narratives especially influenced medieval culture in many respects, including conceptions of supernatural beings. The stories of Gog and Magog, later combined into one giant named Gogmagog, represent a clear example of this. Gog and Magog, according to some other legends, were trapped behind a wall in the Caucasus by Alexander the Great. Other medieval myths stated that they would escape from the Caucasus during the Apocalypse (Lindquist and Mittman 15). Gog and Magog were so prominent in medieval myths, that they are even represented in many medieval maps of the world. They are described in one corner of the famous Hereford "mappa mundi", pictured below in the figure, **Hereford Mappa Mundi,** and also in maps by the noted Arab cartographer Muhammad al-Idrisi, pictured below in the figure, **Al-Idrisi World Map**.
 
 
-
-
 (Richard of Haldingham, c.1300)
-
-
 
 
 (al-Idrisi, c.1154)
 
 
-##### Required Reading Break
-
-
-Read this article about how medieval society incorporated some of these biblical stories.
-
-- Scherb, Victor I. "Assimilating Giants: The Appropriation of Gog and Magog in Medieval and Early Modern England."The Journal of Medieval and Early Modern Studies, vol. 32, no. 1, 2002, pp. 59-84.[Course Reserves]
+- Scherb, Victor I. "Assimilating Giants: The Appropriation of Gog and Magog in Medieval and Early Modern England."The Journal of Medieval and Early Modern Studies, vol. 32, no. 1, 2002, pp. 59-84.
 
 Classical myths significantly influenced the development of medieval European cultural traditions, including a common theme of heroes overcoming giants. Many prominent Western figures, both historical and mythical, were purported to have fought with giants, including Hercules, Alexander the Great, and King Arthur.
-
-
 
 
 (Wace, c.1350)
 
 
-##### Check Your Understanding
-
-
 **Gog and Magog, originally mentioned in the Hebrew Bible as a race of people, were later appropriated by medieval writers in order to:**
-
 
 
 **Works Cited**
@@ -523,18 +458,13 @@ Walt Disney Pictures. *The BFG* [Movie Still]. 2016. Stephen Spielburg. https://
 ## 2b. Giants, Geography, and Climate
 
 
-
 ### Using Giants to Help Explain the Natural World
 
 
 Myths about giants did not come only from other cultural traditions, but also developed independently based on local ruins, geography, and climate. Stories of long-disappeared gigantic races were used to explain the existence of massive structures and the presence of enormous natural features that defied their understanding of human construction capabilities. For example, the Aztecs credited a race of ancient giants with building Teotihuacan (see the figure **The Pyramid of the Sun** below). Some early medieval northern European writers referred to the remnants of grand Roman architecture as the product of gigantic construction (Grammaticus 24-5).
 
 
-
-
 (Case, 2015)
-
-
 
 
 (SofiLayla, 2019)
@@ -542,15 +472,7 @@ Myths about giants did not come only from other cultural traditions, but also de
 Many ancient writers mention massive bones found in the earth, which they ascribed to lost species of giants. Some modern scientists have suggested that Ice Age-era mammal bones, found buried in the ground, led to stories trying to explain how such large skeletons could exist (Romano and Avanzini 116-17). Remember, dinosaur bones weren’t even “discovered” until the 1820s, and so ancient people had little conception of past, long-extinct species of animals.
 
 
-##### Required Reading Break
-
-
-Read this article theorizing the connection between giant myths and gigantic bones.
-
-- Romano, Marco, and Marco Avanzini. "The skeleton of Cyclops and Lestrigons: misinterpretations of Quaternary vertebrates as remains of the mythological giants."Historical Biology, vol. 31, no. 2, 2019, pp. 116-139.[Course Reserves]
-
-
-##### Check Your Understanding
+- Romano, Marco, and Marco Avanzini. "The skeleton of Cyclops and Lestrigons: misinterpretations of Quaternary vertebrates as remains of the mythological giants."Historical Biology, vol. 31, no. 2, 2019, pp. 116-139.
 
 
 **Medieval people who found huge skeletons used all of the following explanations, except that:**
@@ -558,11 +480,7 @@ Read this article theorizing the connection between giant myths and gigantic bon
 Landscapes and natural phenomena have always stimulated curiosity and inspired various explanations for their existence. Giants have captivated the imaginations of people for millennia. Stories of giants are common throughout many Indo-European cultural traditions as beings of awesome primeval power, closely tied to nature. The Norse, for example, equated giants with representations of the raw power of nature, and thus many different places in Iceland and Scandinavia are named after giants. Tales of gigantic heroes from an earlier, mythical era are furthermore often linked to notable features in the landscape. This gave ancient peoples the most obvious explanation for inexplicable geological phenomena from a previous age. The most famous theme of these myths revolves around legendary battles where giants threw massive stones at each other. This helped explain the awe-inspiring placement of some geologic formations, the most famous of which is Giant’s Causeway in Northern Ireland (see the figure **The Giants’ Causeway in Northern Ireland**).
 
 
-
-
 (Moore, n.d.)
-
-
 
 
 (Moore, n.d.)
@@ -576,7 +494,6 @@ In the British Isles, myths of giants, based on both natural phenomena and class
 
 
 Two long-since-vanished images of giants, carved into the hillside outside Plymouth until the early seventeenth century, may have commemorated the supposed site where Corineus cast Gogmagog into the sea. The legend then says the sea was stained with his blood; in parts of Devon, near Plymouth, naturally red rocks can give the appearance that there is blood washing up on shore (Clark 120). Furthermore, some medieval commentators believed that the Plymouth figures represented Gog and Magog, the two biblical giants we discussed previously. Although they remained invisible for centuries, other lost or nearly lost images of giants in the English countryside have been revealed with the use of infrared photography, in addition to resistivity surveys. We will explore some of these studies in the next section of this module.
-
 
 
 **Works Cited**
@@ -602,10 +519,7 @@ SofiLayla. *Syria Apamea Roman Ruins Sky Blue*. 2019. *Pixabay.* Accessed 16 De
 ## 2c. Case Study: Archaeology and the Giant Hill Figures of England
 
 
-
 ### Giants in the Hills
-
-
 
 
 Markrhiggins/iStock/Getty Images
@@ -617,11 +531,7 @@ These hill figures are in reality large images made visible by cutting shapes in
 Those numerous images tend to be incredibly large and durable (they’re carved on an isolated, dry, almost windless desert plateau) though not nearly as clear or bright as the English examples. The most recognizable of these figures thus tend to be located on the quintessential Downs of England, due to the vibrant white chalk contained beneath the vegetation. You will no doubt be familiar with images of the famous White Cliffs of Dover, the Seven Sisters, or Beachy Head (see the figure **Beachy Head**).
 
 
-
-
 (Leupold-Löwenthal, 2008)
-
-
 
 
 (Silly Little Man, 2011)
@@ -631,11 +541,7 @@ That same material lies below much of the grass in Southern England and provides
 Many different figures have captivated the imaginations of observers, among locals and tourists alike. They vary greatly in size, shape, theme, and likely provenance. They tend to depict animals, but there a few noteworthy human examples as well. Their similarities involve the methods of creation and maintenance, and especially, the way that they dominate their respective landscapes. You can see these hill figures from remarkably far away. Some famous examples include the Fovant Regimental Badges (see the figure, **Fovant Regimental Badges Hill Figures in England**, an obviously modern example), and the Osmington White Horse (see the figure, **Osmington White Horse Hill Figure in England,** also well known as a modern cutting, this one a depiction of King George III).
 
 
-
-
 (Steel, 2009)
-
-
 
 
 (Poliphilo, 2014)
@@ -643,21 +549,13 @@ Many different figures have captivated the imaginations of observers, among loca
 By far the most common hill figures in England are those that represent horses, as can be seen in Figure 5. Many of them are well documented as modern creations, either themselves unique or as imitations of other older representations. Some of these include: the Marlborough White Horse, (see the figure, **The Marlborough White Horse**) the Cherhill White Horse, (see the figure, **The Cherhill White Horse**) the Mormond Hill White Horse (see the figure, **The Mormond Hill White Horse**) in Scotland (one of the very few such figures in Scotland), and the Westbury White Horse (see the figure, **The Westbury White Horse**), which some people believe may actually be much older than the other ones.
 
 
-
-
 (Marshall, 2007)
-
-
 
 
 (Schildiecom, 2015)
 
 
-
-
 (Downer, 2007)
-
-
 
 
 (Kuc, 2016)
@@ -699,8 +597,6 @@ The only one that’s solely modern is the use of concrete, specifically white-p
 The Uffington White Horse, depicted in the figure, **The Uffington White Horse**, the notable exception to the other more modern copycats or creations, is widely considered to be ancient, probably the first (or at least the oldest surviving such figure). It has inspired uncountable lookalikes, legends, and theories about its origins. I should mention the complexity, or ambiguity, of periodization for the origin of these images. Even if the trenches for Uffington were in fact dug 3000 years ago, the site requires constant maintenance even to this day (Brown 38). If vegetation is not cleared regularly from within the outline of the horse, it could vanish, as many other images are now known to have done. Within just a decade of neglect, the horse image would become unrecognizable. Local groups of enthusiasts have kept up this tradition for centuries (if not millennia).
 
 
-
-
 (NASA, 2008)
 
 
@@ -708,8 +604,6 @@ The Uffington White Horse, depicted in the figure, **The Uffington White Horse*
 
 
 Images of humans carved into hillsides are far rarer, though two famous examples survive to this day: the Long Man of Wilmington in East Sussex and the Cerne Abbas Giant in Dorset. The one I’m personally most familiar with, and have hiked to numerous times, is the Long Man.
-
-
 
 
 Markrhiggins/iStock/Getty Images
@@ -721,32 +615,7 @@ An even more famous Giant hill figure, and the other notable surviving humanoid 
 It’s somewhat smaller than the Long Man, standing at 180 feet (55 metres) high, though he’s holding a 120 feet long club that adds to the height. Like many other hill figures, the Giant was long considered to be an ancient creation. There are numerous theories as to the inspiration for the image. The first commentaries we have, including an edition of William Camden’s Britannica, posit a Saxon god with some variation of the name “Helis”. Over time these theories have been updated to suggest either a Celtic origin (based on similar contemporary depictions elsewhere) or a Romano-British interpretation of Hercules. This latter Herculean theory, first suggested by William Stukeley in the late eighteenth century and supported by some early twentieth-century archaeologists, was strengthened by two rounds of resistivity surveys (one in the late 1970s and another in the mid-1990s) along with corresponding drill samples. Resistivity surveys, which are used for the purpose of mapping archaeological features by introducing electrical currents into the ground and testing the voltage resistance, in these cases revealed a missing carving of an animal-skin cloak draped over the arm of the figure, similar to the Nemean Lion-skin cloak of Hercules lore (though it could also represent an ancient Celtic hunter for example). Similar to legends of the Long Man, local lore has long held that it could represent the mythical burial place of a giant.
 
 
-
-
-RMAX/iStock/Getty Images
-
-
-*[Interactive 3D model: https://sketchfab.com/models/d51238668ec840b58a039b5061b9f89c/embed?preload=1&ui_controls=1&ui_infos=1&ui_inspector=1&ui_stop=1&ui_watermark=1&ui_watermark_link=1]*
-
-
-Browser does not support script.
-
-Browser does not support script.
-
-The Cerne Giant. **This interactive 3D model of the Cerne Abbas Giant really helps to show the scale of this hill figure. You can interact with it by zooming in and out and rotating the model to see it from all sides.**
-
-Smiling Ottor on SketchFab. (2019, August). Cerne Giant by Smiling Otter on Sketchfab. Retrieved from https://sketchfab.com/3d-models/cerne-giant-d51238668ec840b58a039b5061b9f89c
-
-
-##### Required Reading Break
-
-
-Read this article on the Long Man explaining how modern archaeological methods can help us reconstruct changes to these figures over time.
-
-- Castledon, Rodney. "Shape-shifting: The Changing Outline of the Long Man of Wilmington."Sussex Archaeological Collections, vol. 140, 2002, pp. 83-95.[Course Reserves]
-
-
-##### Check Your Understanding
+- Castledon, Rodney. "Shape-shifting: The Changing Outline of the Long Man of Wilmington."Sussex Archaeological Collections, vol. 140, 2002, pp. 83-95.
 
 
 **Modern archaeological tools, such as resistivity surveys, have reconstructed the shape of the Long Man of Wilmington before it was bricked in 1873-1874, and have shown that:**
@@ -778,18 +647,12 @@ Is it possible that most, if not virtually all, of these hill figures are in rea
 Firstly, Victorian gentlemen were well-known pranksters. Take as just one example the creation of entire houses that from a distance seem to be full-size, but up close you realize that they’re basically a façade meant to trick party guests into thinking there’s a guest house on the property. These are commonly known as follies. The folly at Herstmonceux Castle in East Sussex looks like a full guest house but is actually only several metres deep (see the figures **Herstmonceux Castle** **from Walled Garden** and **Herstmonceux Castle Close-up**).
 
 
-
-
 (Oast House Archive, 2010)
-
-
 
 
 (Oast House Archive, 2010)
 
 It’s not a big leap to assume that many of these figures could plausibly have been the creation of several generations of adventurous schoolchildren brought up on the tales and myths of an ancient past. It wouldn’t be out of character, even in a modern context. To this day, English authorities deal with constant reports of vandalism and copycat ventures regarding the hill figures. The most common and prominent of these involve the addition of genitalia onto the images, one example being the Long Man from 2010 (see the figure **Long Man or Wilmington Hill Defaced in 2010**).
-
-
 
 
 (Purvis, 2010)
@@ -803,8 +666,6 @@ Secondly, and in a related note, Georgian and Victorian society had very complex
 Many contemporary couples thus used the site as the locus for a complex fertility ritual, including dancing around some form of maypole. Victorian illustrators often consciously left the phallus out of contemporary drawings yet allowed postcards of it to pass freely through the mail system as the “only indecent photo” to make it through. The Cerne Abbas Giant has thus been referred to as having “the most famous phallus in England”.
 
 
-
-
 (SiGarb, 2005)
 
 
@@ -814,11 +675,7 @@ Many contemporary couples thus used the site as the locus for a complex fertilit
 The third significant element relates to the early modern fascination with antiquity and cultural myths. No one needs to go see the Elgin Marbles or the Rosetta Stone at the British Museum to understand that generations of British imperialists were obsessed with the histories and myths of other, past cultures. They wanted to trace the origins and development of human civilization, including their own. They were obsessed with ancient and classical myths and often sought to immortalize important characters and events from antiquity. Remember, that Geoffrey of Monmouth had declared that before Trojans settled Britain, the island was known as Albion and inhabited by races of giants.  At the same time as the British empire was expanding and spreading its cultural narratives, starting in the early eighteenth century, sketches and descriptions of the giant hill figures began to appear with remarkable regularity (see figures **Sketch of Cerne Hill Giant** and **The Wanderings of a Pen and Pencil**).
 
 
-
-
 (Sydenham, c.1842)
-
-
 
 
 (Palmer, Crowquill and Bissett, 1846)
@@ -830,9 +687,6 @@ A 2003 archaeological dig claims to have confirmed that the Long Man of Wilmingt
 
 
 Let’s now discuss the most famous example of a modern theory for a supposedly ancient figure. The Cerne Abbas Giant, the most famous example of a supposedly ancient mythical figure, may indeed be an example of an early modern satire. The prevailing theory now is that the Giant may have been created to mock none other than Oliver Cromwell. There is evidence that servants of Lord Denzil Holles, who owned the estate, may have created the satirical image to mock their lord’s major rival during the English Civil War. The timing makes sense, since no mention of the Giant occurs before 1694. If you take into account that Cromwell was often called “England’s Hercules” by his enemies, then it’s plausible that the most famous “ancient” human hill figure may in fact be an early modern satire after all.
-
-
-##### Check Your Understanding
 
 
 **Comparing three different scholarly perspectives provides us plausible explanations for how people construct and share myths. Why did medieval people tell so many stories about giants and include them in their art and their maps?**
@@ -847,8 +701,6 @@ Let’s now discuss the most famous example of a modern theory for a supposedly 
 - Long considered to be ancient in originMany are near Iron Age barrows, for example
 - Recent research has challenged assumptions that they are ancientAlmost no surviving references before the seventeenth centuryThey would require constant maintenance for centuries
 - Archaeological methods can help us investigate their origins
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -908,15 +760,12 @@ Sydenham, John. *A drawing of the Cerne Abbas Giant in John Sydenham's Baal Duro
 ## 3a. Introduction
 
 
-
 ### Werewolves as Shape-shifters
 
 
 The idea that some humans **shape-shift**, whether purposefully or because of a curse, is ancient and near universal. It is reported by many classical authors and from folklore throughout the world. The adjective, **berserk**, for example, meaning wild and enraged (“he went berserk”), is derived from the Old Norse word, **berserkr**, thought by some to mean “bear-shirt.” Others say that the word means “bare-shirted”, i.e. bare chested. In Old Norse texts, berserkers were warriors who fought in a terrifying, trance-like, frenzied state of ferocity; regardless of the correct etymology of the word they can be imagined as shape-shifters who took on the guise (“shirt”) of bears while fighting. Shape-shifters are traditionally perceived as monsters. Our module treats one of the most familiar shape-shifters, the werewolf, a creature who is part human and part wolf, and focusses on one remarkable werewolf story from twelfth-century France.
 
 “**Werewolf**” is a compound word made up of two elements, ‘wolf,’ (the animal), and ‘were’, which is an ancient, now extinct Old English word meaning ‘man’ that is cognate (having the same linguistic derivation as another word; in this case, descending from a shared ancestor) with the Latin word, ‘vir.’ Werewolves are shape-shifting monsters. Traditionally they are said to appear now in their human, now in the wolf guise, their physical appearance entirely altering from one shape to the other and attended by a transformation from a human to an animal state of cognition, volition, and consciousness.
-
-
 
 
 (Cranach the Elder, 1472-1553)
@@ -944,9 +793,6 @@ myodfw. (2019, October 24). <em>What to expect if you encounter a wolf.</em> [Vi
 The modern biologists who have reintroduced wolves into the Pacific Northwest, for example, treat wolves with respect and find much to admire about them. The situation in Oregon, however, where huge swathes of wilderness make human-wolf encounters unlikely, is no longer the rule in many places such as parts of Ontario or Vancouver Island. There, steady human encroachment on wild places brings humans and wolves repeatedly into contact, resulting in some wolves becoming used to or even habituated to human beings and exhibiting bold, adaptative behaviors such as attacking pets or stalking unwitting humans.
 
 
-##### Required Reading Break
-
-
 Mackinnon, J.B., “[No One’s Afraid of the Big Bad Wolf ­– And That’s a Problem](https://www.smithsonianmag.com/science-nature/can-wolves-and-humans-coexist-180965337/),” <em>Smithsonian Magazine Online</em>, 23. October 2017.
 
 At the same time and regardless of modern scientific and environmental realities, the wolf occupies a singular place in human legend and folklore as a powerful and feared creature, often perceived as an embodiment of <strong>greed</strong>, <strong>savagery</strong>, and <strong>wickedness</strong>. The Latin proverb, <em>homo homini lupus</em> (man is a wolf to man), still in use today, uses this understanding of the wolf to express the dark view of human nature that human beings prey savagely upon one another. In his poetic translation of the old English epic, <strong>Beowulf</strong>, the Nobel Prize winning Irish poet Seamus Heaney selected language evoking ravenous and cruel wolfishness when translating the lines of the poem in which the monster, Grendel, attacks the great hall, Hereot, for the first time: “In off the moors, down through the mist bands God-cursed Grendel came greedily loping. The bane of the race of man roamed forth hunting for a prey in the high hall.” (<em>Beowulf</em>, lines 710-714, p. 49). In traditional lycanthropy (the study of werewolves), it is this loathsome and terrifying creature that appears when the werewolf inhabits his or her wolf guise or skin.
@@ -967,13 +813,6 @@ Students interested in the history of wolves in Europe are directed to the publi
 Werewolves are an enduring element in popular culture today. The idea of shape-shifting was taken to new, imaginative lengths in the NBC series, <em>Grimm</em> (2011-2017), which is a kind of crime drama with a supernatural twist: most of the criminals are shape-shifters (although, as the viewer discovers, not all shape-shifters are criminals), and the police detective whose special powers of detection lead him into this supernatural world is partnered there by a werewolf who has tamed his savage side by becoming vegetarian.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Scientific and folkloristic understandings of wolves</strong>
-
-
-
 <strong>Works Cited</strong>
 
 
@@ -983,7 +822,6 @@ Heaney, Seamus, translator. <em>Beowulf</em>. Norton, 2000, lines 710-714, p. 49
 
 
 ## 3b. Philology: Marie de France as a Case Study for Working with Medieval Sources
-
 
 
 ### What is Philology?
@@ -1084,8 +922,6 @@ The answers obtained reveal surprising and nuanced glimpses into medieval life. 
 Harley 978, by contrast, is small, plain, and a bit messy. It is a good example of the most common kind of manuscript from the high and late Middle Ages: serviceable, without pictures (which in manuscripts are called illuminations), meant to be used. These manuscripts do not survive well into our times; their value lay primarily in the uses to which their medieval owners put them. Richly illuminated manuscripts, which were rarer to begin with, have survived into our times in relatively larger numbers because of their value as treasury or as status symbols.
 
 
-
-
 (Lindisfarne Gospels, ca. 700 CE)
 
 This skewed survival has helped to created a false vision of the high and late Middle Ages as a largely bookless world in which manuscripts were lavish, rare, cult-like objects. The historical reality is different. The beautiful liturgical manuscripts and illuminated secular manuscripts produced for elites existed in a sea of manuscripts such as Harley 978 that were produced at low cost by scribes in commercial workshops.
@@ -1101,8 +937,6 @@ With its many unusual texts, Harley 978 is a good example of a compilation manu
 In addition to musical texts, a calendar with prognostications, and medical texts, all these mostly though not exclusively in Latin, the manuscript includes poetry (love poetry; satirical and ribald poetry; laments) in Latin, English, and Anglo-Norman, short tales or <em>lais</em>in Anglo-Norman, including those by Marie de France as well as some in Latin, fables in Anglo-Norman also attributed to Marie de France, and other miscellaneous texts such as an Anglo-Norman treatise on hawking.
 
 
-
-
 (Harley MS 978, 1245)
 
 The British Library catalogue entry for Harley 978 also provides an exhaustive bibliography of scholarship on every text found in the manuscript. One of the English texts in Harley 978 is arguably the most famous surviving song in Middle English, the round ‘sumer is icumen in.’
@@ -1111,9 +945,7 @@ The British Library catalogue entry for Harley 978 also provides an exhaustive b
 ##### Additional Resource
 
 
-Famous surviving song in Middle English found in Harley 978, the round ‘[sumer is icumen in](https://greblweb-naxosmusiclibrary-com.proxy.lib.uwaterloo.ca/catalogue/item.asp?cid=WW-2002).’ <em>You can listen to this song at the following link or you can access it through Course Reserves.</em>
 
-<strong>Please Note:</strong> You will need your library card barcode number and password to access this resource. It can also be found in Course Reserves. The library's Naxos license allows for up to 15 simultaneous listeners at a time. If you have trouble accessing the resource, try again after a few minutes.
 
 Remember that we must not confuse the maker or makers of Harley 978, which in this case was written by different scribes, with the person who might have commissioned and first owned it. Because of the brilliant codicological detective work on Harley 978 done by Andrew Taylor, a Canadian scholar of medieval English literature, referenced in Additional Resources at the end of this section, we are in the unusual position of being able to catch a glimpse of that original owner and his intellectual tastes. Taylor identifies the probable first owner of the manuscript as a Benedictine monk with worldly tastes named William of Winchester (flourished 1260s to 1280s), who was probably educated at Oxford and who was accused in a surviving letter written by his bishop of carrying on an affair with a nun (see Taylor, pages 110-121). This attribution is widely accepted by scholars, and is summarized in the British Library catalogue entry under ownership. Finally, it is unlikely that Harley 978 was written in a monastic setting. The evidence points rather to its having been produced in Oxford, which had a well-established commercial trade in creating manuscripts.
 
@@ -1125,7 +957,6 @@ While the many gaps and inconclusive statements in this information might not sa
 
 - Pickens, Rupert T. “Reading Harley 978: Marie de France in Context.”Courtly Arts and the Art of Courtliness, edited by Keith Busby and Christopher Kleinhenz, Brewer, 2006, pp. 527-542.
 
-The meticulous philological analysis of Harley 978 by Andrew Taylor, is available in the Course Reserves, as an optional reading.
 
 - Taylor, Andrew.Textual Situations: Three Medieval Manuscripts and Their Readers. University of Pennsylvania Press, 2002.Chapter 3. British Library MS Harley 978,pp. 76-136.
 
@@ -1192,13 +1023,7 @@ The topic remains one of scholarly disagreement, and that is a good thing. Debat
 - Kinoshita, Sharon and Peggy McCracken. “Posterity: The Afterlives of Marie’s Works.”Marie de France: A Critical Companion, Boydell, 2012, pp. 201-218.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Marie de France was probably</strong>
-
 <strong>2. Harley MS 978 is</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -1218,11 +1043,7 @@ Unknown. 1245. "Sumer Is Icumen In, in a Miscellany." British Library. <em>Harle
 ## 3c. Interpretation: Nature and Culture
 
 
-
 ### What are Stories Good For? Marie’s Prologue
-
-
-##### Required Reading Break
 
 
 - Marie de France. “Prologue.”Lais of Marie de France.Edited by Robert Hanning and Joan Ferrante, Grand Rapids, MI, 1978.pp. 28-29pp. 92-100pp. 100-104
@@ -1260,9 +1081,6 @@ Dedications such the one that closes the prologue are standard fare in medieval 
 ### Close Reading: Nature and Culture
 
 
-##### Required Reading Break
-
-
 - Marie de France. “Bisclavret.”Lais of Marie de France.Edited by Robert Hanning and Joan Ferrante, Grand Rapids, MI, 1978, pp. 92-104.
 
 Stories and literary texts set the stage for us to ponder dilemmas of the human condition that transcend time and place and to reflect on the historically and socially inflected circumstances in which they were written and read. One such dilemma is the fraught relationship between nature and culture for human beings: to what extent are our appetites and drives based in nature and instinct? To what extent are they harmful to the self or to others? How are behaviours and beliefs that limit or constrain instinct taught and shared? What is virtue? What kinds of virtuous relationships do individuals and society value, and how do we know when others are truly enacting them?
@@ -1270,13 +1088,8 @@ Stories and literary texts set the stage for us to ponder dilemmas of the human 
 <em>Bisclavret</em> does not deliver simple, unambiguous, or doctrinal answers to these questions. Rather, it tells a story in a way that invites readers to explore these  issues through discussion and debate by setting up conventional expectations and then confounding or challenging them. These moments are deliberate, yet subtle, and they demand that the reader slow down while reading and attend carefully to the evidence presented in the story. This reading process is often called close reading. Especially important for close reading is that the reader pay attention to the ways in which the text bewilders, confuses, or puzzles them. Schooling too often trains us to skip over what we don’t understand in order to arrive at some kind of conclusion or interpretation, however half-baked, or to come up with a pronouncement that perforce is based more on our own, limited knowledge and preconceptions and less on what the text is actually telling us. Close reading asks readers to refrain from such interpretive moves and instead to describe and explore the puzzles and gaps the text creates for them. Because <em>Bisclavret</em> is so short I invite you to return now to the text and to have it open as you read this section of the module.
 
 
-
-
 The start of Bisclavret in Harley MS 978. Folio 131v.
 (Unknown, ca. 1261-1265)
-
-
-##### Required Reading Break
 
 
 You should now return to the text or have it open so that you can follow along
@@ -1319,13 +1132,7 @@ The following contains an edition of <em>Bisclavret,</em>which has the original
 - The Lais of Marie de France: Text and Translation. Edited and translated by Claire M. Waters, Broadview, 2018.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Marie de France’s work suggests that she viewed composing, hearing, and reading literary texts:</strong>
-
 <strong>2. Close reading means</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -1335,7 +1142,6 @@ Unknown. ca. 1261-1265. "Harley MS 978." British Library. <em>Folio 131v.</em> L
 
 
 ## 3d. Adaptation
-
 
 
 ### Adapting Works of the Human Imagination Across Time, Space, and Media
@@ -1399,13 +1205,6 @@ Hutcheon defines adaptation as an extended, acknowledged, and recognizable trans
 Finally, there are many possible synonyms for “<strong>transposition</strong>,” trans-coding being one of them. What Hutcheon is avoiding here is using the word “translation.” Her theory of adaptation rules out translation (i.e., rendering works out of one language and into another) as adaptation, in large part because successful translations are in fact bound by the fidelity principle. (This stance does not mean that Hutcheon denigrates the enormous knowledge and creativity that are necessary to produce outstanding translations.)
 
 
-##### Check Your Understanding
-
-
-<strong>1. According to the theorist Linda Hutcheon, an adaptation is</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
-
 
 
 <strong>Works Cited</strong>
@@ -1426,7 +1225,6 @@ There are no additional references for this section.
 ## 4a. The Ass in Music
 
 
-
 ### Satire Expressed in Deformed Genres
 
 
@@ -1439,8 +1237,6 @@ In music, the <strong>ass</strong> most often symbolized the deformed singer. In
 
 
 The ass appears in the lyrics of many songs criticizing political leaders and clergy, two groups who held power and authority. Occasionally, university professors were the subject of satire as well. The <strong>Carmina Burana</strong> (Songs of Benediktbeuern) contains one such satire in which an ass appears in the lyrics. The <em>Carmina Burana</em> was a hefty collection of songs and poetry (c. 1230) written by some disgruntled university students known as the goliards (after a lewd and drunken mythical Bishop Golias). One of these poems laments the current state of learning among university students by invoking the great symbol of the world up-side-down: the ass (translated as donkey below) singing and playing the lute.
-
-
 
 
 <em>(Church of Saint-Pierre-de-la-Tour d'Aulnay,c. 1120-1140)</em>
@@ -1464,8 +1260,6 @@ Review the surviving original manuscript of the <em>Carmina Burana.</em>It is h
 The symbol of the ass also appeared in an inverted <strong>sacred ritual</strong> the week after Christmas celebrated in northern France. As the authoritative and politically sanctioned institution, the Catholic Church controlled religious beliefs and practices through its sacred rituals, known as the liturgy: the daily cycle of prayer services called the <strong>Divine Office</strong>, and the celebration of the sacrifice of Jesus Christ called the <strong>Mass</strong>. These daily rituals were organized throughout the year by feast days that celebrated events in the life of Jesus Christ and his followers. The Feast of the Ass, celebrated on the day of Jesus Christ's Circumcision on January 1, turned the major festivities of the previous week of Christmas up-side-down. One of the young boys of the choir dressed up and acted as bishop, the most significant and dignified church position in the region. The parody of the bishop's role was taken a step further by introducing a donkey into the most sacred ritual of the mass. While ostensibly brought in as a re-enactment of the story of Jesus Christ's flight to Egypt, the donkey's presence also symbolized the parodic nature of the celebration. In one version of the mass, the choir was to add braying sounds to the end of every song of the mass, turning the core music of the mass into the absurdly ugly "he-haw," making everyone a bad singer in the reckoning of Guido of Arezzo. At the end of the mass, everyone was to turn to the ass and genuflect after singing a song of praise to him in an act of mis-directed reverence, singing a <strong>conductus</strong>:
 
 
-
-
 <em>(Maître de Fauvel, c. 1318-1320)</em>
 
 
@@ -1478,12 +1272,7 @@ The symbol of the ass also appeared in an inverted <strong>sacred ritual</strong
 What marks the Song of the Ass as satire, rather than only a silly song, is the music. The <strong>conductus</strong> was a genre of music that developed in the late eleventh century to be sung in the sacred rituals of the Catholic Church, but it took second place to <strong>plainchant</strong>, the main music of all sacred rituals. Plainchant has a distinctive sound even today because it is sung without instruments, monophonically (all voices singing the same melody), and with flexible rhythm.
 
 
-
-
 <em>(Aboense, c. 1301-1400)</em>
-
-
-##### Required Listening Break
 
 
 Plainchant is still sung in Latin today, particularly by monastic communities. Listen to these nuns at the at the Abbey of Notre-Dame de Fidélité sing a short chant for the Mass at the most intimate part of the ritual, when the body and blood of Jesus Christ is eaten in the form of bread and wine (the Eucharist). As you listen, try to identify the flexible rhythm and monophonic song.
@@ -1503,14 +1292,7 @@ You can also check out the app [Neumz](https://neumz.com/), created by the nuns 
 The conductus was similarly sung in the sacred rituals in Latin, but the text was accented poetry, and the music gave one syllable for every note, making it sound more like a popular song, as in <em>Florebit</em> <em>olim</em>. In <em>Orientis</em> <em>partibus</em>, the popular style was amplified through the incessant seven syllable lines that all rhyme in each stanza. The melody repeats for each stanza with a simple rounded tune that begins and ends in the same place, completed with the <strong>refrain</strong>, a short line repeated at the end of every stanza. In this case the music of the refrain, "Go, Sir Ass, Go!", mimics the opening line of music. The result is a mockery of a genre of music that was already on the fringes of acceptable ritual music.
 
 
-##### Required Listening Break
-
-
-Listen for the incessant rhymes and accents that give a feeling of regular rhythm to this song.
-
-- Orientis partibus, sung by the Boston Camerata directed by Joel Cohen, onWorlds of Early Christmas Music, Erato 825646759675, 2010, Naxos Music Library.You can listen to this song at the following link or you can access it through Course Reserves.
-
-<em>Please Note: The University of Waterloo Library has a license that allows for 15 simultaneous listeners to this resource. If you have difficulty accessing the resource, please wait a few moments and try again.</em>
+- Orientis partibus, sung by the Boston Camerata directed by Joel Cohen, onWorlds of Early Christmas Music, Erato 825646759675, 2010, Naxos Music Library.
 
 
 ### Ritual Context for Music
@@ -1519,19 +1301,10 @@ Listen for the incessant rhymes and accents that give a feeling of regular rhyth
 There is folly in this praise of the ass. What makes it monstrous is the humanization of the beast. To hail the lowly donkey as "Sir Ass" is to disorder the world, putting the human lower than the lowliest beast. While the short invective in the refrain might seem insignificant, it was no doubt the most memorable. Refrains were commonly added on to Christmas songs as a way of celebrating with extra jubilation. The refrain "Go, Sir Ass, Go" thus was characteristic of other Christmas season conductus and plainchants in its form, but the text, combining the common goad for a donkey with hailing him as a lord, points to the fundamental irrationality of the song. Some bishops strongly disapproved of the folly in the Feast of the Ass, and heavily censured the ritual in order to maintain control and order. What survives of this ritual is likely a tamed version of what was often performed. In fact, it is possible that the Feast of the Ass was a Christianized version of a more grotesque New Year's celebration, in which people dressed as wild beasts, disrupting the sacred order of creation. Understanding the roles of the singers and other clergy involved in the ritual, as well as its function within the ritual is key to uncovering the monstrous nature of the ass lauded in <em>Orientis partibus</em>. Each of these participants in the Feast of the Ass had symbollic signficance, allowing the ritual, including the music, to be "read" as a sacred text revealing the true nature of the world.
 
 
-##### Required Reading Break
-
-
-Read this article on how the ass in the Feast of the Ass was a symbol of a deformed, irrational world.
-
 - Ahn, Dongmyung. “Beastly yet Lofty Burdens: The Donkey and the Subdeacon in the Middle Ages.” L’Humain et l’Animal Dans La France Médiévale (XIIe-XVe s.), January 1, 2014, 145–60.
 
 
-##### Check Your Understanding
-
-
 <strong>The subdeacon and ass were compared to each other in the Feast of the Ass because</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -1565,11 +1338,10 @@ Williams, David. <em>Deformed Discourse the Function of the Monster in Mediaeval
 
 Zayaruznaya, Anna. <em>The Monstrous New Art: Divided Forms in the Late Medieval Motet.</em> Music in Context. Cambridge: University Press, 2015.
 
-<em>Orientis partibus</em>, sung by the Boston Camerata directed by Joel Cohen, on <em>Worlds of Early Christmas Music</em>, Erato 825646759675, 2010, Naxos Music Library: https://greblweb.nml3.naxosmusiclibrary.com/streamw.asp?ver=2.0&s=157321%2FCGUCnmlPD08%2F2306028
+<em>Orientis partibus</em>, sung by the Boston Camerata directed by Joel Cohen, on <em>Worlds of Early Christmas Music</em>, Erato 825646759675, 2010, Naxos Music Library.
 
 
 ## 4b. The Monstrous Horse in Musical Symbols
-
 
 
 ### Musical Destruction of Fauvel
@@ -1578,8 +1350,6 @@ Zayaruznaya, Anna. <em>The Monstrous New Art: Divided Forms in the Late Medieval
 Another beast related to the ass is the subject of the most prized collection of music from around 1317, the <strong>Roman de Fauvel</strong>. This lavish manuscript, carefully composed by a group of scribes, artists, poets, and musicians, is a scathing critique of the king of France, <strong>Philippe IV</strong> (1285-1314), and his chancellor, <strong>Enguerrand de Marigny</strong> (1260-1315), in the form of a satire. The literary genre of this satire is a <strong>romance</strong>, a genre of vernacular literature upholding the values of courtly love and the predecessor to the modern novel. It is the medium in which the characters of <strong>Arthurian legends</strong>, still well known today, were developed. Romances frequently recounted musical performances in which the characters would pause for musical entertainment in the form of song. These moments give us some idea of how music that was not recorded in notation might have shaped aristocratic life. But in the <em>Roman de Fauvel</em>, music and image are harnessed along with the word to provide the fullest possible indictment of the king and those he placed in office.
 
 Fauvel is a horse that fools people into fawning over him, to the extent that he moves from the proper place for a horse, a stable, to a palace. In character with a romance, he attempts to court a woman, <strong>Lady Fortune</strong>, who is a symbol of the unpredictable turns of life. She denies him her hand, but nonetheless helps him find better fortune. Spurned by Lady Fortune he finds a Vice to wed instead - Vaine Gloire (vainglory, vanity). By the time he wins over Vaine Gloire he has morphed into a <strong>hybrid beast</strong> - sometimes a horse with hands, sometimes a human with hooves.
-
-
 
 
 Opening folio (page) of the Roman de Fauvel. This folio is found in the most extensive copy held at the Paris Bibliotheque Nationale, fr. 146, fol. The central image of Fauvel is framed by music on both sides.
@@ -1597,8 +1367,6 @@ His match with Vaine Gloire is appropriate, since Fauvel's name itself is an acr
 Virtues and vices in the Middle Ages were not only guideposts for being a decent person, they were also the qualities of the Divine. As a symbol of vice, Fauvel's hybrid nature was an image of depravity: a creature that had lost it proper form, and therefore fallen away from God. This monstrous creature might itself have been conceived as a means not just of criticizing the King, but also of revealing the true nature of God, since <strong>Thomas Aquinas</strong> (1225-1274), writing only a few years earlier, said:
 
 
-
-
 <em>(Maître de Fauvel, c. 1318-1320)</em>
 
 
@@ -1606,8 +1374,6 @@ Virtues and vices in the Middle Ages were not only guideposts for being a decent
 
 
 A satirical monster like Fauvel might have been funny, but the truth underlying him was grave.
-
-
 
 
 (MFR, 2016)
@@ -1625,15 +1391,6 @@ Music theory, much like mathematics, developed a method of explaining the phenom
 The compositional process used the tools of theory to create and record new musical works. In the case of the isorhythmic motet, the composer built a three parts with different French texts above a snippet of a melody (called a <strong>color</strong>) taken from a Latin chant, called the <strong>tenor</strong>. Although the original melody from the chant did not have a clear rhythm, the composer created a repeating rhythmic pattern, called a <strong>talea</strong>. This treatment of the tenor in a composed color and talea is the definition of the isorhythmic motet. More than simply a way of structuring the music, the talea and color also themselves could have hidden symbols.
 
 
-##### Required Listening Break
-
-
-Think of the tune for "Happy Birthday". Now think of a rhythmic pattern, like long-short-short-long. Now sing the melody of "Happy Birthday" with the talea you have just composed. If you use the rhythmic pattern long-short-short-long, it should sound like this:
-
-Download MP3 © Course Author(s) and University of Waterloo.
-
-Browser does not support script.
-
 <strong>Johannes de Grocheo</strong> (1255-1320), writing roughly at the same time the <em>Roman de Fauvel</em> was composed, thought the very definition of the motet made it suitable only for certain audiences:
 
 
@@ -1641,9 +1398,6 @@ Browser does not support script.
 
 
 The community <em>Johannes de Grocheo</em> imagines enjoying these motets may have grasped the meaning of the multiple texts performed at once and the literary and musical quotations that further revealed the meaning of the music. But there were sometimes musical symbols that could only be revealed through study of the notation.
-
-
-##### Required Listening Break
 
 
 Now that you know the construction of the isorhythmic motet, listen to Tribum/Quoniam/Merito by Phillipe de Vitry. The triplum (top part) begins first with a quick rhythm, then is followed by the duplum (middle part) at a similar speed. Finally the tenor enters singing on "oh" in the slower sustained notes of the color, with a consistent three beat pattern. See if you can identify each part.
@@ -1661,19 +1415,12 @@ Ensemble La Rota - Topic. (2015, January 29). <em>Tribum que / Quoniam secta / M
 We take as an example a famous motet near the end of the <em>Roman</em>, known by the <strong>incipits</strong> (beginning words) of the <strong>three voice parts</strong>: Tribum / Quoniam / Merito. The lower two parts frame an image of the <strong>Fountain of Youth</strong>, in which the human spawn of Fauvel and Vaine Gloire are eternally renewed. In the right column, a short musical piece imitating chant compares the Fountain of Youth to a <strong>baptismal font</strong>, the Christian ritual washing. It mimics the chant for baptism but with the words, "This fount, this water of degeneration, this damning wave. Amen." Even after Fauvel's less than laudable marriage to Vain Gloire and the defeat of all his Vices by the Virtues in a tournament (typical of the climax of romances), Fauvel still seems to win in the end. His hybrid form has so changed that he spawns not beast but human flesh that will never die.
 
 
-
-
 <em>(Maître de Fauvel, c. 1318-1320)</em>
-
-
 
 
 <em>(de Lorris and de Meung, c. 1200-1304)</em>
 
 But the motet embedded in this page lays bare the belly of this monster. Although it does not speak directly of Fauvel, there is another monster hiding in its midst. The duplum text speaks of a fox (Fauvel, aka Enguerrand de Marigny), which gnaws on the cocks [a play on the same word for the French] while the blind lion rules [Philipe IV]. If it is not clear who the fox is in this motet, his identity is revealed in the final motet two folios later. In the triplum of that motet, the fox is compared with the most dreadful monster of all: the dragon of the Apocalypse as recorded in Revelation 12:9 and 12. In this vision of the Apocalypse, the dragon represents the ultimate evil force, Satan. In <em>Tribum/Quoniam/Merito</em>, the fox instead devours the French people while the one who is supposed to rule over them turns a blind eye.
-
-
-##### Required Reading Break
 
 
 This isorhythmic motet has further hidden meanings in the tenor, structure, and textual allusions that can only be discovered through textual and musical analysis. Read the below analysis in which the author considers the compositional process, the structure, the textual analysis, and quotations in both text and music to piece together the hidden message.
@@ -1693,16 +1440,9 @@ For more on the connection between Fauvel and the just disciples of Christ, see:
 - Roesner, Edward H. “Labouring in the Midst of Wolves: Reading a Group of 'Fauvel' Motets”.Early Music History, vol. 22, Cambridge University Press, 2003, pp. 169–245.
 
 
-##### Check Your Understanding
-
-
-<strong>1) A isorhythmic motet uses notes of a plainchant in a</strong>
-
 <strong>2) The isorhythmic motet Tribum/Quoniam/Merito hides the monstrous nature of Fauvel</strong>
 
 <strong>3) The Roman de Fauvel is an unusual romance because:</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -1713,8 +1453,7 @@ Johannes de Grocheo, <em>De musica</em>, trans. Albert Seay (Colorado Springs: T
 
 St. Thomas Aquinas, <em>Summa theologiae</em>, trans. Thomas Gilby (London and New York: Eyre and Spottiswoode, 1964), la I, art. 9; the passage is reprinted in Alastair J. Minnis and Alexander B. Scott, <em>Medieval Literary Theory and Criticism</em> c. 1100-c. 1375, 2d ed. (Oxford: Clarendon, 1991), 239-40.
 
-Heu Fortuna. " Tribum que / Quoniam secta / Merito hec patimur - Tribum quem non abhorruit" Ensemble La Rota. ATMA Classique, 2007. Naxos: https://greblweb.nml3.naxosmusiclibrary.com/streamw.asp?ver=2.0&s=157321%2FCGUCnmlPD08%2F222448
-
+Heu Fortuna. " Tribum que / Quoniam secta / Merito hec patimur - Tribum quem non abhorruit" Ensemble La Rota. ATMA Classique, 2007. 
 Bent, Margaret. "Fauvel and Marigny: which came first?." <em>Fauvel Studies: Allegory, Chronicle, Music, and Image in Paris—Bibliothèque Nationale de France, MS français</em> <em>146</em>, edited by Margaret Bent and Andrew Wathey, Oxford, 1998, pp. 35-52.
 
 “Damien Kempf on Twitter: ‘The Lute Player @BIUSteGenevieve, Ms. 143, 14th c. Https://T.Co/HPXiQvyPMy’ / Twitter.” <em>Twitter. twitter.com</em>, https://twitter.com/damienkempf/status/743471704165523456/photo/1. Accessed 3 June 2020.
@@ -1761,7 +1500,6 @@ This module examines the subject of ghosts and revenants —the returned dead—
 ## 5a. Introduction
 
 
-
 ### Studying Medieval Ghosts and Revenants: Sources, Methods, and Focus
 
 
@@ -1794,8 +1532,6 @@ Studying medieval ghost stories is as illuminating as it is entertaining. By con
 This sociocultural approach borrows methods from the <strong>Annales school</strong> of history. Lucien Febvre (1878-1956) and Marc Bloch (1886-1944) first established the <em>Annales</em>school of history through their journal, <em>Annales d’histoire économique et sociale,</em>which promoted a study of social history over a long period. Focusing primarily on medieval and early modern Europe, scholars of the <em>Annales</em> school rejected earlier approaches to history that focused on the “great men” of the past, and instead sought to retrieve the history of ordinary people through broad study. They employed the methods of anthropology, sociology, geography, psychology, and economics to access the social structures that underpinned medieval society. First-generation <em>Annalistes</em>approached history primarily from a socioeconomic perspective, but, overtime, the emphasis shifted toward a sociocultural perspective. Later <em>Annalistes</em>like Emmanuel Le Roy Ladurie and Philippe Ariès championed the study of cultural mentalities (<strong>mentalités</strong>), which understands history as a construction of perceptions and not just of events. Although, in recent years, studies of <em>mentalités</em>have been criticized for their attempt to identify universal systems of belief, their emphasis on the social structures and patterns that shaped medieval practices continue to provide useful methods for sociocultural studies of the Middle Ages. This module reconstructs the <em>mentalités</em>that underpin medieval beliefs in ghosts and revenants.
 
 
-
-
 (Unknown 1878-1956)
 
 
@@ -1826,8 +1562,6 @@ Yet, even if much of medieval Europe shared the same learned understandings of d
 An examination of these beliefs – and their differences – within their historical contexts reveals that medieval tales about the returned dead served multiple functions in medieval society. When employed in prescriptive discourses like theology and pastoral literature, they served an edifying function, first, as a tool for conversion, and, later, as a tool for educating the laity about proper Christian belief and practice. When employed in folk culture, they reveal a preoccupation with the dangers of a “bad death,” the antithesis of the concept of the “good death” that developed in the later Middle Ages.
 
 
-
-
 <em>(Maître du Pierre Michault de Guyot Le Peley, c. 1475-1480)</em>
 
 
@@ -1856,8 +1590,6 @@ Although Augustine’s conceptualization of death dominated early Christian disc
 Theological articulation of death as an event subsisted until the sixth century, when it was reformulated under a new agenda, most notably, by <strong>Pope Gregory I “the Great”</strong> (540—604). Gregory revived the ancient belief – rejected so passionately by Augustine and Tertullian – that death was <strong>a gradual process</strong>. According to the tales recounted in Gregory’s <em>Dialogues,</em>the souls of the dead may remain for a period and interact with the living; they may return to the living after having departed; they may be corporeal, or they may be incorporeal. Although how and why they appear may vary, all served an instructive function in the <em>Dialogues</em>of Gregory the Great: they attested to the eternal nature of the human soul and the existence of an afterlife.
 
 
-
-
 <em>(Crivelli, c. 1435-1495)</em>
 
 In his <em>Dialogues,</em>for example, he recounts the tale of a ghostly encounter by a certain Bishop Felix. According to this story, Bishop Felix, the pastor of the Church of St. John in Tauriana, used to frequent a certain place where there were hot waters in which he could bathe. There, he was always met by a man ready to attend to him. He helped him take off his shoes, held his clothes, and otherwise attended to him. To show his gratitude, one day, the priest brought with him two eucharistic loaves for the attendant. After the attendant had helped him, the priest offered him the loaves. When presented with the gifts, the attendant said, sadly,
@@ -1875,8 +1607,6 @@ Gregory thus reformulated persistent ancient beliefs in death as a process withi
 
 
 By the late twelfth century, medical interpretations supported the Augustinian view that death was a single, instantaneous event. This period witnessed the revival of classical medical texts from ancient Greece and Rome. Although these texts had largely been lost to Western Europe in the Early Middle Ages, they survived in the Arab world, where learned scholars continued to work with and comment on them. Increased cultural contact between Western Europe and Arabic cultures in the twelfth century resulted in the transmission of classical medical works to the West, where they were incorporated into the scholastic curriculum of the universities.
-
-
 
 
 <em>(Legrand, c. 1475-1500)</em>
@@ -1900,11 +1630,7 @@ These examples, whose theories align with those of other treatises from this per
 Still, from the year 1000 onward, ghost stories proliferated in medieval Europe.
 
 
-##### Check Your Understanding
-
-
 <strong>True or False: By the sixth century, the idea that death was a gradual process completely replaced the idea that death was a discrete event.</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -1926,7 +1652,6 @@ Unknown. 1878-1956. "Lucien Febvre [Professeur à la Faculté des lettres de Str
 
 
 ## 5b. Medieval Tales of the Restless Dead
-
 
 
 ### Overview
@@ -1953,8 +1678,6 @@ Communities of revenants could also be harmful to individuals and communities of
 Perhaps one of the most notable communities of revenants in medieval sources is that of Hellequin’s Army. Although references to spectral armies appear in other sources, the first reference to <strong>Hellequin’s Army</strong>, specifically, appears in the <em>Ecclesiastical History</em> of <strong>Orderic Vitalis</strong> (1075—1142) and refers to an army or band of the undead who roamed the French countryside. Although the origin of the term <em>Hellequin</em>is unclear, it is possible that it derived from the Old French <strong>hèle-chien</strong><em>,</em>hunting dog, or as a diminutive of the German word from the underworld, <strong>Helle</strong><em>.</em>The tale is rooted in the folklore of Northern Europe and may have derived from myths of the pagan god, <strong>Wotan</strong>, as a wandering huntsman.
 
 
-
-
 <em>(Limbourg, Limbourg and Limbourg, c. 1411-1416)</em>
 
 According to Orderic’s account, one night, a young priest named Walchelin, who served the church of Bonneval, was returning from a visit paid to a sick parishioner when he heard the approach of a great army. Just as Walchelin sought cover under some trees, a giant man armed with a mace appeared before him and ordered him to watch the approach of the army. The army was composed of various groups. The first group comprised individuals on foot, some of whom he recognized as recently deceased neighbours, accompanied by beasts of burden. They were followed by a band of bearers carrying around fifty biers, on which sat dwarfs with large heads. Two Ethiopian demons were carrying a tree trunk on which a poor man sat being tortured. The next group comprised women on horseback, many of whom Walchelin recognized as having lived lives of debauchery; they were pierced with burning nails and crying out their sins. The women were followed by a band of clergyman, who begged Walchelin to pray for them. Then appeared the largest group, the knights.
@@ -1974,8 +1697,6 @@ In fourteenth-century Montaillou, people believed that the spirits of the dead c
 In Alès, around the same time that Arnaud Gélis was communicating with the spirits of Montaillou, Jean Gobi was called in as an interlocutor between the living and the dead in the haunting of a widow by the spirit of her dead husband, Gui de Corvo. Eight days after Gui’s death, his widow became frightened by the noises and moans that she heard in her bedchamber. She turned, first, to the city consuls and, then, to the prior of the Dominicans, Jean Gobi, for help. The woman confessed to Jean that she and her husband had committed a sin in the bed where he continued to haunt her, a sin which they had both confessed before his death, but for which neither had been absolved. The reader never learns the nature of the sin, as it was protected by secrecy of confession. Jean agreed to visit and inspect the house. Accompanied by a master in theology, a lector in theology from the convent, a notary, and two hundred armed guards provided by the mayor of Alès, Jean spent two nights in the house, during which he conversed with the ghost of Gui de Corvo, whose voice his widow identified for Jean. The notary recorded their dialogue, which included discussions of the Gui’s nature and his state, the location and temporality of purgatory, and the role of angels and demons in the hereafter and at the time of Judgement. From Jean’s interrogation, we learn that Gui is a “good spirit,” and their dialogue confirms his incorporeal nature: when Jean asks him sign himself, he says that he cannot, as he has no hands; when he asks him how can hear, if he has no ears, he replies that he does so “by the power of God.” Gui implores Jean to say one hundred masses for him, in order to lessen his suffering (which they do). When his ghost has been appeased and he departs, leaving his widow at peace, Jean concludes the exchange by imploring the widow to lead a holy life from that day forward. (de Beaulieu 2003)
 
 
-
-
 <em>(Marmion c. 1455-1457)</em>
 
 The incorporeal nature of ghosts like Gui de Corvo and Barcelona meant that, at times, they could possess the bodies of the living. The exact nature of the spirits that possessed the bodies of the living, however, was a subject of contention in medieval society. While popular belief asserted that it was the ghosts of the recently deceased, learned others rejected this belief, arguing, instead, that spirits possessing the living could only be those of demons. The tale recounted by Jerome de Raggiolo, in his fourteenth-century <em>Miracles of John Gualbert</em>(d. 1073)<em>,</em>illustrates the attempt that authors made to reconcile these dissonant discourses:
@@ -1991,11 +1712,7 @@ Amongst the miracles of Nicholas of Tolentino we find tales of his role in the e
 As these tales of possession reveal, although the ghosts of the Mediterranean appeared primarily in spirit form, they could also assume corporeal form through the possession of the living. Through their stolen bodies, these ghosts could inflict harm on their hosts, both spiritually and bodily. Ghosts could also rely on the abilities of those gifted with the ability to communicate with them, the <em>amariés</em>like Arnaud Gélis. The purposes of the ghosts’ returns to the living reflects the functions that ghost stories served in medieval societies and will be explored in the next section of this module.
 
 
-##### Check Your Understanding
-
-
 <strong>The main difference between the restless dead in Northern versus Mediterranean Europe is:</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -2021,7 +1738,6 @@ Schmitt, Jean-Claude. 1998. <em>Ghosts in the Middle Ages: The Living and the De
 ## 5c. Conclusion
 
 
-
 ### The Function of Ghost Stories in Medieval Society
 
 
@@ -2034,8 +1750,6 @@ The previous section examined the form that the returned dead took in medieval s
 Much of Christian doctrine is concerned with what transpires after death. Since ghosts and revenants attest to life after death, they served as invaluable instruments for the Church, first, for teaching newly converted societies about proper Christian belief and, later, for reforming beliefs and practices that did not conform with the official teachings of the Church. We find in tales of the returned dead expressions of medieval Christian soteriology and eschatology, both as the Church prescribed it and as it was interpreted by the laity. <strong>Soteriology</strong> refers to beliefs and doctrines about salvation. <strong>Eschatology</strong> is a branch of Christian theology concerned with the “last things” or end times.
 
 Medieval Christian soteriology asserted that the soul lived on eternally, either in torment or in bliss. In early Christianity, souls could go either to heaven or hell. Those who attained salvation, by living good lives and atoning for their sins, went to heaven. Those who did not suffered in hell. <strong>Prayer</strong>, <strong>confession</strong>, <strong>atonement</strong>, and <strong>penance</strong> in this life helped individuals to attain salvation in the next. In the late twelfth century, the doctrine of <strong>purgatory</strong> developed, which created a space in which the souls of those not fully absolved at death would remain temporarily to atone for their sins before receiving entrance to heaven. <strong>Indulgences</strong>, which granted either the partial remission (a partial indulgence) or complete remission (a plenary indulgence) of one’s sins, could also reduce the amount of punishment a soul would have to undergo before attaining salvation. Indulgences could be obtained either through prayer or the performance of good works, although, increasingly in the later Middle Ages, they could also be purchased. The living could also lessen the time that souls of individuals spent in purgatory through prayer and the recitation of masses in their name.
-
-
 
 
 <em>(Lochner, c. 1400-1451)</em>
@@ -2055,8 +1769,6 @@ The eternal life of the soul (and, eventually, of the body) was thus central to 
 We can also see the use of the returned dead as <strong>instruments of conversion</strong> in Thietmar of Merseburg’s tale. Thietmar was a frontier bishop. He served as the second bishop of Merseburg from 1009 until death in 1018, which was a period of Germanic conquest and Christianization of (predominantly) pagan Slavic lands. It is clear from Thietmar’s reference to the destruction of the churches by the Slavs in Walseben and Deventer that the revenants played a role in the Church’s conversion efforts in the region. As Thietmar himself tells his reader, he recounts his tales of the returned dead “so that none of the faithful in Christ should doubt the future resurrection of the dead, but should eagerly desire the joys of blessed immortality…” (Thietmar of Merseburg, <em>Chronicon</em>, Book I, Chapter 7, trans. Joynes, <em>Medieval Ghost Stories,</em>17). In these tales, Thietmar is able to reconstruct local pagan beliefs about the return of the dead within the Christian framework provided earlier by Gregory the Great to affirm the doctrine of the resurrection, which, he claimed, locals had failed to grasp.
 
 Even after regions had been converted to Christianity, Church officials continued to use tales of the returned dead as <strong>instruments of edification</strong>. They could be used to instruct the laity in proper Christian belief and practice and to reform beliefs and practices that ran contrary to these teachings. Orderic Vitalis’ account of Hellequin’s Army, for example, affirms the doctrine of purgatory. The revenants of the army wander for years through the countryside, suffering the physical burdens of their moral sins and atoning for their wrongdoings and unable to reach heaven. This would have communicated to the reader the importance of living a good life, free of sin, while their pleas to Walchelin for prayers would have communicated the power that the living had to ease the plight of the suffering dead. In a second example, this one by a thirteenth-century tale by an anonymous English Franciscan, a woman was murdered in her bedroom by a burglar. A few days later, she appeared to her sister and told her that she is horribly burned because, on feast days, she used to leave church before receiving Communion. The function of the returned dead in this tale is clear: the author uses her to teach the reader the importance of receiving Communion for the salvation of one’s soul.
-
-
 
 
 <em>(Angelico, c. 1395-1455)</em>
@@ -2088,8 +1800,6 @@ A good death, generally, included:
 - Testament: A testament ensured that the last wishes of the dying could be known and executed by those who survived them. Testaments usually included donations to be made to the needy or to the charitable institutions who supported the needy, for the salvation of the benefactors soul, as well as assignment of deceased’s possessions.
 
 
-
-
 (University of Sheffield, 2016)
 
 The idea of dying a good death reached its fullest expression in the genre of the <strong>artes moriendi</strong><em>,</em>manuals on the art of dying well, in the early fifteenth century.
@@ -2101,12 +1811,7 @@ The business of the restless dead could also touch more directly on spiritual af
 While such tales of the restless dead could be used by Church officials as a means to educate the laity in proper beliefs and practices, for them to be effective tools required that the laity accept the possibility of their horrors: People needed to fear a bad death in order for tales of a bad death to serve as an effective tool of edification. We can thus understand medieval ghost stories not only as tools of edification but also as expressions of anxieties about death and dying a good death in medieval society.
 
 
-
-
 <em>(Lotter, M., c. 1500)</em>
-
-
-##### Check Your Understanding
 
 
 <strong>Tales about the returned dead were used, in the Middle Ages:</strong>
@@ -2128,22 +1833,12 @@ The <strong>Eyrbyggja Saga</strong> tells of Thorolf Half-Foot, who returned fro
 <strong>Archaeological evidence</strong> of <strong>deviant burial practices</strong> corroborates the beliefs in revenants espoused in these writings. Such deviant burial practices – that is, burial practices which differed in some way from the normative burial practices of a given society – included liminal burials, decapitation, staking, weighting, ligation, and dismemberment, amongst others. The assigned reading by Stephen Gordon explores evidence – and the implications – of such burial practices.
 
 
-##### Required Reading Break
-
-
-Read this article on archaeological evidence of deviant burials for insight into the practices that accompanied beliefs in revenants:
-
 - Stephen Gordon, “Dealing with the Undead in the Later Middle Ages,” inDealing with the Dead: Mortality and Community in Medieval and Early Modern Europe, ed. Thea Tomaini (Leiden: Brill, 2018), p.97-128.
 
 This module has examined the subject of the returned dead through three lens: intellectual history, sociocultural history, and archaeology. An intellectual lens, which we applied to the tales themselves, allowed us to see <em>what</em>people believed about the returned dead. A sociocultural lens, which we applied to beliefs and practices about death and dying in medieval society, allowed us to see <em>why</em>people believed what that they did about the returned dead. And an archaeological lens, which we applied to the study of physical remains, allowed us to see <em>how</em>people practiced what they believed about the returned. Together, these perspectives allow us to recreate the mentalities that constructed these beliefs and practices and that underpinned medieval societies more broadly.  As Jean-Claude Schmitt has noted, “the dead had no other existence than that which the living gave them. The individual and social imaginary (dreams, tales, shared beliefs), the socialized speech (at mourning, in preaching), made ghosts move and speak” (Schmitt, 224).
 
 
-##### Check Your Understanding
-
-
 <strong>Which type of archaeological evidence best illustrates medieval beliefs in the returned dead?</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -2182,7 +1877,6 @@ This module applies a historical lens to explore the topic of dragons. Historian
 ## 6a. General Introduction and Argument
 
 
-
 ### Dragons in the Middle Ages
 
 
@@ -2214,7 +1908,6 @@ The consequence of this commonality was such that, even though the three great r
 Everyone in the Middle Ages, no matter where they lived, was likely to encounter a dragon at some point in their lives. Though these encounters existed in the imagination, the universality of the creature was so dominant that dragons afford us an interesting and rather unique window through which to perceive a general medieval culture.
 
 
-
 <strong>Works Cited</strong>
 
 
@@ -2222,7 +1915,6 @@ There are no additional citations for this section.
 
 
 ## 6b. Dragons in Medieval Myth
-
 
 
 ### The Ancient Tradition: Ancient Greece
@@ -2241,24 +1933,14 @@ If you are unfamiliar with the following terms, check out the resources at the f
 - Tiamat
 
 
-##### Required Reading Break
-
-
 Take a moment now to read the primary source written by Hesiod over two thousand years ago to understand how ancient Europeans came to provide a sort of genealogy for dragons.
 
 - Hesiod,Theogony, 270 – 336 which appears as “1. Hesiod’s influential genealogy of the great dragons,” in Daniel Ogden,Dragons, Serpents, and Slayers in the Classical and Early Christian Worlds: A Sourcebook(Oxford: OUP, 2013).pp. 13 – 14.
 
 
-##### Check Your Understanding
-
-
-<strong>1) In Greek mythology, who are the parents of the largest sea monsters?</strong>
-
 <strong>2) Of all the monstrous creatures named, in her death, only one gave life to winged horse who flew up to Zeus, king of the Greek gods, to bear his lightning. They are:</strong>
 
 <strong>3) Which mythical Greek creature had the head of a lion, a goat, and a snake?</strong>
-
-
 
 
 <em>(Pollaiolo, c. 1475)</em>
@@ -2272,14 +1954,10 @@ The Greeks were neither the first nor the only ancient civilization to have a he
 Moreover, the hydra was far from the only dragon to lurk in Greek mythology. There was also <strong>Ladon</strong>, who hid in a tree to guard his golden apples, much as <strong>Aeetes</strong>’ dragon did to guard his golden fleece. The god of war, <strong>Ares</strong>, famously deployed his own dragon to battle Cadmus when he attempted to found Thebes. After slaying that dragon, <strong>Cadmus</strong> planted its teeth and grew an army of bronze warriors. Ares eventually got revenge on Cadmus by transforming him and his wife, <strong>Harmonia</strong>, into dragons. And, let us not forget the Greek boy <strong>Perseus</strong>, who created wings and flew over a serpentine monster before turning it to stone with the severed head of <strong>Medussa</strong>.
 
 
-
-
 <em>(Mattielli, c. 1678/1688-1748)</em>
 
 
 ### The Ancient Tradition: The Romans
-
-
 
 
 <em>(Jan van der Straet, c. 1596)</em>
@@ -2327,8 +2005,6 @@ In the first century, a Jewish reformer in Nazareth attracted followers and, aft
 By the fourth century, Christianity had spread far beyond Palestine and the Levant, its birthplace, and had diverged significantly and permanently from its Jewish origins, except, importantly, for the first five books of its scriptures. Though fourth-century Christians no longer practised universal circumcision, observed Jewish dietary laws, or celebrated Jewish holidays, they retained a common culture through the Pentateuch, the first five books of the Bible, which continued to be held sacred by fourth-century Jews. This means that, even after Christianity split from Judaism, there was a <strong>common mythological foundation</strong> which both cultures recognized as essentially historic and factual.
 
 
-
-
 <em>(Book of Hours, c. 1400)</em>
 
 If fourth-century Jews continued to read these common creation stories in Hebrew, Christianity underwent yet another linguistic revision.
@@ -2363,8 +2039,6 @@ The <strong>first creation story</strong> in Genesis is not as important to us a
 <strong>The second creation story,</strong> which begins in Gen. 2:5 is <strong>more human-centered</strong>, or anthropomorphic. In the verses which follow, God is no longer a booming cosmic voice who speaks powerful words to create, but a kindly gardener. He fashions the first man, Adam, <em>de limo terrae</em>, from the slime of the earth, and breaths into his face the breath of life (<em>et inspiravit in faciem eius spiraculum vitae</em>). Through the <strong>breath of life</strong>, God imbues man with a human soul. God-the-gardener then raises trees in his garden, divides rivers, and puts man into this paradise for pleasure (<em>in paradiso voluptatis</em>) and to care for it (<em>custodiret illum</em>). But, while he tells man he can eat of every tree in paradise, he shall not eat of the <strong>tree of the knowledge of good and evil</strong> lest he die (<em>de lingo scientiae boni et mali ne comedas in quocumque enim die comederis ex eo morte morieris</em>).
 
 
-
-
 <em>(Unknown. c. 1350-1400)</em>
 
 The anthropomorphic creation story then has god say that it is not good for man to be alone (<em>dixit quoque Dominus Deus non est bonum esse hominem solum</em>) and so god-the-gardener casts the man, Adam, into a deep sleep, takes one of his ribs, and filled up flesh for it, creating woman, Eve (<em>inmisit ergo Dominus Deus soporem in Adam cumque obdormisset tulit unam de costis eius et replevit carnem pro eat et aedificavit Domainus Deus costam quam tulerat de Adam in mulierem</em>).
@@ -2372,8 +2046,6 @@ The anthropomorphic creation story then has god say that it is not good for man 
 As the story continues to unfold in Gen. 3, we meet the serpent, more subtle than any of the beasts of the earth which the Lord God had made (<em>serpens erat callidior cunctis animantibus terrae quae fecerat Dominsu Deus</em>). The serpent challenges the notion that the man and woman will die if they eat the fruit of the Tree of the Knowledge of Good and Evil. Rather, he tells the woman, Eve, her eyes will be opened and she shall be as gods, knowing good and evil (<em>aperientur oculi vestry et eritis sicut dii scientes bonum et malum</em>).
 
 Eve is tempted, eats the forbidden fruit, and then gives it to her husband Adam, to try.
-
-
 
 
 (Document sans titre, n.d.)
@@ -2393,8 +2065,6 @@ According Jewish and Christian creation stories, drawing on ancient Middle Easte
 - embodiment of forces that distances humans from god.
 
 
-
-
 (Masaccio, c. 1427)
 
 
@@ -2408,8 +2078,6 @@ If the opening book of the Bible laid the foundation for an association between 
 The Book of Revelation is a mystical text, difficult to interpret, and rich in allegory and imagery. According to Rev. 12, at the end of human history there will come a great sign in the sky: a pregnant woman dressed in the sun with the moon at her feet and on her head a crown of twelve stars.
 
 
-
-
 <em>(Berry Apocalypse, c. 1415)</em>
 
 Along with the woman will come another sign:
@@ -2419,8 +2087,6 @@ Along with the woman will come another sign:
 
 
 Chapter 20 of Revelation then tells us that <strong>a great battle</strong> will ensue which mirrors a battle which took place at the dawn of time: the war in heaven which led to <strong>Lucifer</strong>, God’s angelic bringer of light, being cast out of heaven along with all the other rebellious angels. According to Revelation, the <strong>archangel Michael</strong>, whom we shall see below, will, at the end of time, once again lead the heavenly host against the devil, who is clearly identified as a dragon. Revelation says that Michael and the heavenly host will cast out “the old serpent, who is called the devil and Satan, he who had seduced the whole world.”
-
-
 
 
 <em>(Yolande de Soissons Psalter-Hours, c. 1350)</em>
@@ -2451,23 +2117,14 @@ If you are unfamiliar with the following terms, check out the resources at the f
 - Questions of Bartholomew
 
 
-##### Required Reading Break
-
-
 The Gospel of Bartholomew is an early Christian text that is not part of official scripture and that Jerome chose not to include in his Vulgate Bible (nor is it contained in any version of the Bible). Texts such as these which groups choose not to include in their official or canonical scriptures are deemed apocrypha. Still, despite its official exclusion from the Christian Bible, this apocryphal text remained popular and circulated fairly broadly but which the institutional Church decided was not canonical. Jerome knew of the Questions in the fourth century, and early copies survive today in Greek, Latin, and Slavonic ranging in age from the fifth to the ninth centuries CE. A later copy, preserved from the monastery of Monte Amiati dates to the eleventh century.
 
 - Excerpt from the Questions of Bartholomew.Read section IV starting at 7 (“When Jesus appeared again, Bartholomew saith unto him …”) down to the end of 46 (“Bartholomew saith: Be still (be muzzled) though dragon of the pit.”
 
 
-##### Check Your Understanding
-
-
-<strong>1) Who is Beliar, who is summoned and held aloft by 660 angels and bound in fiery chains?</strong>
-
 <strong>2) According to this story, who is the first angel formed by God?</strong>
 
 <strong>3) If Beliar was able, he tells Bartholomew he would like to …</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -2507,13 +2164,10 @@ Yolande de Soissons. <em>Psalter-Hours</em> (Morgan Library, M.729, fol. 404v). 
 ## 6c. The Battle of Good vs. Evil: Saintly Dragonslayers
 
 
-
 ### Medieval Saints
 
 
 For medieval Christians who hoped for eternal life after death, the goal was to <strong>live as pure a life as possible</strong> to foster proximity to god. People who supposedly did this the most successfully served as role models for ordinary, less capable and more worldly, men and women. Medieval Christians recognized the very pure, the especially good, with a special title: <strong>saint</strong>, from the Latin <em>sanctus</em> meaning ‘holy.’ The <strong>Catholic Church</strong> conferred (and still confers) the mantle of sainthood on certain noble individuals who then serve as focal points for veneration or worship.
-
-
 
 
 (Hours of Henry VIII, France, c.1500)
@@ -2555,8 +2209,6 @@ If you are unfamiliar with the following terms, check out the resources at the f
 Margaret’s tale was recorded in the ninth century by the <strong>Frankish Benedictine</strong> monk, <strong>Rabanus Maurus</strong> (<em>c.</em> 780 – 856), a famous encyclopedist who enjoyed cataloguing data for posterity.It was common in the Middle Ages to record the lives and miracles of holy people, a genre called by its Latin name, <em>Vita</em>. The study of saints’ lives, (in Latin <em>vita</em>in the singular, <em>vitae</em> in the plural), is known as <strong>hagiography</strong>, from the Greek roots meaning, literally, the study of the holy. After the mid-thirteenth century, the most famous collections of saints’ lives was a book known commonly as the <strong>Legenda aurea</strong> or <strong>The Golden Legend</strong>, believed to be assembled by <strong>Jacobus (or James) de Voragine</strong> (1230 – 1298).
 
 
-
-
 <em>(Unknown. </em>Portrait of Margaret of Antioch<em>, c. 1500)</em>
 
 
@@ -2571,27 +2223,17 @@ If you are unfamiliar with the following terms, check out the resources at the f
 - Jacobus (or James) de Voragine
 
 
-##### Required Reading Break
-
-
 Take a moment now to read the version of Margaret’s life as it appears in <em>The Golden Legend</em> of Jacobus de Voragine.
 
 - The Golden Legend or Lives of the Saints. Compiled by Jacobus de Voragine, Archbishop of Genoa, 1275.  First Edition Published 1470. Englished by William Caxton, First Edition 1483, Edited by F.S. Ellis, Temple Classics, 1900 (Reprinted 1922, 1931.)
 - Read just the section titled “Here followeth the glorious Life and passion of the Blessed Virgin and Martyr S. Margaret, and first of her name.”
 
 
-##### Check Your Understanding
-
-
-<strong>1) Margaret comes from the ancient Persian word for "pearl," which medieval people believed had the power to…</strong>
-
 <strong>2) How did the imprisoned Margaret defend herself against the dragon? She …</strong>
 
 <strong>3) Because she refused the provost’s advances, Margaret was …</strong>
 
 Margaret was among the most famous of all medieval saints. In the first decades of the thirteenth century, the Catholic Church assigned her a Feast Day in its liturgical calendar, ensuring that Christians everywhere celebrate her with annual devotions. During the <strong>Hundred Years’ War</strong> between England and France (1337 – 1453), <strong>Joan of Arc</strong> (1412 – 1431) claimed that Margaret was one of three saintly guides who had spoken to her to deliver the divine mission which led her to take up arms against the English and, ultimately, to be burnt at the stake. Margaret was so beloved that, still today, hundreds of churches in England alone are named for her. She is still venerated by the Roman Catholic Church, the Anglican Church, and several major denominations of orthodox and Coptic Churches. In the Eastern rites, she is known as St. Marina.
-
-
 
 
 <em>(Unknown. </em>Book of Hours,Use of Bayeux,<em> c. 1400-1425)</em>
@@ -2606,20 +2248,12 @@ If you are unfamiliar with the following terms, check out the resources at the f
 - Joan of Arc
 
 
-##### Required Listening Break
-
-
 View and listen to the description at the link below, from London’s Victoria and Albert museum, of the St. Margaret altarpiece. This is a stunning sixteenth-century work of religious art that depicts, much like a graphic novel today, the various “scenes” from Margaret’s Vita.
 
 Pay particular attention to discern how it is that Margaret became the patron saint of childbirth.
 
 - The St. Margaret Altarpiece
 
-
-##### Check Your Understanding
-
-
-<strong>1) What is the statue of Margaret holding in her right hand?</strong>
 
 <strong>2) Margaret was believed to have burst from the belly of a dragon who had swallowed her and was, thus, invoked by…</strong>
 
@@ -2628,16 +2262,10 @@ Pay particular attention to discern how it is that Margaret became the patron sa
 Because of her popularity, Margaret is one of the most artistically depicted medieval saints. All across Europe and the Near East, Christians would have recognized very readily by her <strong>iconography</strong> (the symbols normally depicted with a divine or holy figure that help identify them without words). It is no surprise that in the altarpiece preserved at the Victoria & Albert Museum, or in the following examples, Margaret was very often depicted with the evil creature she purportedly vanquished; the dragon.
 
 
-
-
 <em>(Unknown. </em>Miniature Margaret with Cross Staff<em>, c. 1500)</em>
 
 
-
-
 <em>(Unknown. </em>Margaret in the Round<em>, c. 1500)</em>
-
-
 
 
 <em>(Unknown. </em>Miniature of St. Margaret<em>, c. 1500)</em>
@@ -2646,7 +2274,7 @@ Because of her popularity, Margaret is one of the most artistically depicted med
 ##### Additional Resources
 
 
-The following readings are additional optional readings, which you can find in Course Reserves. You can learn more about the artistic representation of St. Margaret in this article, which catalogues the fourteenth-century painted murals in the English Church of St. Mary at Tarrant Crawford.
+You can learn more about the artistic representation of St. Margaret in this article, which catalogues the fourteenth-century painted murals in the English Church of St. Mary at Tarrant Crawford.
 
 - Jenny C. Bledsoe, “The Cult of St. Margaret of Antioch at Tarrant Crawford: The Saint's Didactic Body and Its Resonance for Religious Women”Journal of Medieval Religious Cultures, vol. 39, No. 2, 2013.pp. 173-206
 
@@ -2665,8 +2293,6 @@ On how art historians identify Margaret through her iconography, see:
 According to the Vita he presented, Jacobus de Voragine reports that St. George <strong>was born a knight in Cappadocia</strong>. George travelled to Lydda, to the <strong>city of Silene</strong> (in earlier versions, he was a Roman soldier born to Christian parents). There the townspeople lived near a stagnant pond with a dragon which terrorized them. The dragon “<strong>venomed the people with his breath</strong>” until the locals began to pay it tribute, sheep or virgins. The townspeople had settled on a lottery system, to help pick the next sacrifice but, one day, the king’s daughter drew the unlucky lot. The king begged his people to spare her, and offered all his wealth, but a deal was a deal. And so, the poor king dressed his fair daughter like a bride and sent her off to be eaten by the dragon. It was then that George happened to pass her by on his horse. He saw the girl weeping and asked what was wrong. She told him to move on, not to risk staying with her. As they spoke, though, the dragon appeared. George, in good knightly fashion, charged the beast and skewered it with his spear. He then asked the princess for her girdle, her belt, which he used as a leash so the girl could lead the dragon around like a tamed pet. Which she did. When she re-entered the city, the people were terrified. George told the king and the inhabitants of the city that if they were baptized and became Christians, he would slay the beast. They were and he did, cutting off the serpent’s head.
 
 
-
-
 (Jacobus de Voragine, 1382)
 
 Though the dragon tale is the major event in George’s Vita, it is important to note that, like so many other medieval saints, Christians believe he was <strong>martyred by decapitation</strong> (like the dragon he slew).
@@ -2680,14 +2306,10 @@ See for yourself how easy it is to identify George in late medieval works of art
 First, consider this religious icon, a painting used to focus devotion, contained in the British Museum, to St. George.
 
 
-
-
 The Miracle of St. George and the Dragon
 (Unknown. The Miracle of St. George and the Dragon, c. 1500)
 
 Now, study this illumination from a fifteenth-century Flemish Book of Hours, a popular prayer book from the Middle Ages, contained in the Getty Museum.
-
-
 
 
 St. George and the Dragon
@@ -2696,22 +2318,16 @@ St. George and the Dragon
 Compare them to the sixteenth-century marble relief sculpture of St. George preserved at the Louvre in Paris.
 
 
-
-
 St. George and the Dragon
 (Michel Colombe, 1508)
 
 And then contrast it to the fifteenth-century statue of St. George at The Metropolitan Museum of Art, which leaves out the horse, but in which the artist was careful to include the knight’s lance, a weapon only used from horseback.
 
 
-
-
 St. George
 (Unknown, 1475)
 
 George’s legend, and, remember, it is far from certain that this story relates to an actual historical person, extends back to the <strong>first 500 years of Christianity</strong> and the oldest written fragments are in Greek, though another older record text alludes to a similar character. His popularity continues long after the Middle Ages. He is still the <strong>patron saint</strong> of the British royal family and of all of England, where his standard, a <strong>red cross on a white field</strong> (see figure, <strong>The St. George’s Cross</strong>), forms the heart of the <strong>Union Jack flag</strong> (as well as the flags of some former British colonies such as Australia and New Zealand). George is also patron saint of Malta, Portugal, and of the Spanish regions of Aragon and Catalonia, where his cross appears on the flag of the city of Barcelona.
-
-
 
 
 The St. George's Cross
@@ -2759,8 +2375,6 @@ So, based on these few lines of scripture, medieval tradition bestowed upon <str
 He is called the <strong>Archangel</strong>, because he holds a position above all other angels, though, notably, the famous medieval philosopher, Thomas Aquinas, did not hold this view. Early in his cult, Michael was associated with <strong>healing</strong> and was invoked in times of plague to defend the sick. Elsewhere, he became associated with <strong>sailors</strong> and still today visitors travel to <strong>Mont-Saint-Michel</strong>, the famous medieval abbey in Normandy.
 
 
-
-
 (Rosser1954, 2019)
 
 
@@ -2796,15 +2410,8 @@ Next, compare what you just saw to this medieval pilgrim’s badge, a sort of br
 The point here is that Michael is clearly associated in the medieval mind with dragons but nowhere else is the dragon so directly <strong>linked with the embodiment of evil</strong>. Of all the saints who encountered, tamed, and slew dragons, the dragon sometimes represented with the fictional Michael most directly brings us back to the ancient struggle between the forces of order and light and those of chaos and darkness. Ironically, in the archangel, we are able to see the stripping away of Christianization and the return to ancient myth: Hercules killing the hydra, Marduk against Tiamat, Ra against Apep.
 
 
-
-
 (Unknown, n.d.)
 
-
-##### Check Your Understanding
-
-
-<em>For the following questions check your understanding by trying to answer the questions yourself before clicking to reveal the answer.</em>
 
 <strong>1) Where does the altarpiece depicting St. Michael come from?</strong>
 
@@ -2819,7 +2426,6 @@ It is difficult today to image how a work of art impacted its viewer hundreds of
 <strong>3) What is the story, at its most basic level, about?</strong>
 
 Though we may no longer share the same belief system as medieval people, at the most basic element, we can still relate to their human struggles. Just as Hollywood movies depict over and over the battle between good and evil, so, too, did medieval myths.
-
 
 
 <strong>Works Cited</strong>
@@ -2861,10 +2467,7 @@ Unknown. c. 1500. <em>The Miracle of St. George and the Dragon</em>. The Briti
 ## 6d. Comparing Cultures
 
 
-
 ### Dragons in Judaism
-
-
 
 
 (Peraldus, 1236)
@@ -2905,8 +2508,6 @@ Islam grew up in regions that had already had <strong>dragons since the Bronze A
 For many years, Islamic scholarship focused on the <strong>wickedness</strong> which dragons represented. In this, they focused on the same tradition as scholarship on the Christian tradition. More recently, <strong>Prof. Abbas Daneshvari</strong> has attempted to show that dragons in Islam could represent <strong>both light AND darkness</strong>, both <strong>good AND evil</strong>; dragon fire could, according to Daneshvari, be both <strong>hellfire and divine radiance</strong>.
 
 
-
-
 <em>(Unknown, c. 1650 – 1700)</em>
 
 In the words of another scholar of Islamic dragons, Dr. Sara Kuehn:
@@ -2931,13 +2532,7 @@ If you are unfamiliar with the following terms, check out the resources at the f
 So, despite the existence of pre-Islamic traditions which continued on into the Islamic age, of positive dragons, Muslims also understood quite clearly the Christian equation of serpents, dragons, and evil. Sharing a common scriptural tradition helped.
 
 
-##### Check Your Understanding
-
-
-<strong>1) How did early Muslims learn of dragons?</strong>
-
 <strong>2) How does Islam portray serpents?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -2959,7 +2554,6 @@ Peraldus. c. 1236. <em>Theological miscellany, including the Summa de vitiis</e
 ## 6e. Conclusion
 
 
-
 ### Summary
 
 
@@ -2978,8 +2572,6 @@ There were indeed dragons everywhere in the Middle Ages. As a final thought, tho
 A 2008 exhibit at Stanford University, entitled “Dragons Unearthed” explored this theme. It presented a 66-mllion-year-old dragon-like dinosaur called the Dracorex. Adrienne Mayor has argued that dragon tales may have been sparked by the discovery of dinosaur bones near the Himalayas.
 
 
-
-
 <em>(Harley MS 3244, c. 1236-1250)</em>
 
 
@@ -2987,8 +2579,6 @@ A 2008 exhibit at Stanford University, entitled “Dragons Unearthed” explored
 
 
 For more on dragon tales and dinosaur bones read the following optional article: “[Dinosaurs and Dragons, Oh My!](https://shc.stanford.edu/news/research/dinosaurs-and-dragons-oh-my%e2%80%a8)”.
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -3012,7 +2602,6 @@ Harley MS 3244. <em>Dragon illustration in 13th century manuscript</em>. c. 1236
 
 
 ## 7a. Introduction
-
 
 
 ### Defining Magic
@@ -3064,7 +2653,6 @@ With a good grounding in the background material covered so far, the module turn
 - Are there any commonalities between the various rituals that involve summoned spirits?
 
 
-
 <strong>Works Cited</strong>
 
 
@@ -3072,7 +2660,6 @@ None for this page.
 
 
 ## 7b. Introduction to Magic
-
 
 
 ### Defining Magic: General and Historical Perspectives
@@ -3105,7 +2692,6 @@ Note that several other human activities overlap with portions of this definitio
 Since we are dealing with magical practices based on what was written down in books that happen to have survived over the centuries, the individuals who wrote these books (as well as their intended audiences) were by definition literate. Therefore, everything contained in this unit assumes that those involved in any respect were from sufficiently elevated social classes to have learned how to read and write. The corollary to this statement is that what we are discussing here by definition excludes the widespread beliefs, practices, and superstitions of the lower classes who made up the majority of the European population throughout the Middle Ages.
 
 
-
 <strong>Works Cited</strong>
 
 
@@ -3113,7 +2699,6 @@ None for this page.
 
 
 ## 7c. The Medieval Written Sources
-
 
 
 ### Introduction to Magic Texts
@@ -3164,15 +2749,9 @@ The theoretical passages are those that received the most substantial paring dow
 The <em>Picatrix</em> presents <strong>magic as the culmination of human science</strong>. As will be seen below under various sections of the “Intellectual Framework” that lies behind the operation of magic, practitioners needed to be thoroughly versed in every branch of human knowledge in order to perform their rituals correctly, with the right ingredients, at the right times.
 
 
-##### Required Reading Break
-
-
 The following excerpts are drawn from the introduction to the English translation of the <em>Picatrix</em>. The first one provides additional background information about how the text evolved from its original version in Arabic into Latin, and thence how that text came into our hands today. The second one illuminates the distinction between “black magic” as it is understood in the popular imagination nowadays, and the term “nigromancia”, which is the Latin term used in the <em>Picatrix</em> itself to refer to “magic”.
 
 - Dan Attrell and David Porreca,Picatrix. A Medieval Treatise on Astral Magic, University Park, PA: The Pennsylvania State University Press (2019):Introductionpp. 1-7;pp. 10-12 [section entitled “Onnigromancia”].
-
-
-##### Check Your Understanding
 
 
 <strong>Summoning spirits relates to magic in the same way that</strong>
@@ -3182,9 +2761,6 @@ The following excerpts are drawn from the introduction to the English translatio
 
 
 The text of the <strong>Munich Handbook</strong> survives in a single manuscript held in Munich (hence the name), and presents a series of forty-seven sections, most of them detailed <strong>recipe-like instructions</strong> for magical rituals. The text is in Latin and was compiled from numerous sources during the middle decades of the fifteenth century – precisely the time frame when the <em>Picatrix</em> became widely known. It was compiled by a Bavarian cleric of lower rank whose precise identity remains unknown.
-
-
-##### Required Reading Break
 
 
 The following excerpts drawn from the editor’s introduction to the text provide
@@ -3199,11 +2775,7 @@ Richard, Kieckhefer, <em>Forbidden Rites. A Necromancer’s Handbook of the Fif
 - pp. 34-39 [section entitled “The Composition of the Munich Handbook”].
 
 
-##### Check Your Understanding
-
-
 <strong>The Picatrix and the Munich Handbook share which of the following characteristics?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -3213,7 +2785,6 @@ None for this page.
 
 
 ## 7d. Intellectual Frameworks
-
 
 
 ### An Introduction to Intellectual Frameworks
@@ -3279,11 +2850,7 @@ Below the Moon, everything was thought to be composed of some varying mixture of
 Each of which was characterized by a pair or properties, temperature and moisture (i.e., earth is cold and dry, water is cold and wet, fire is hot and dry, air is hot and wet).
 
 
-
-
 (Bruno, 1576)
-
-
 
 
 The Properties of the Four Elements. Each element was characterized by two properties, temperature and degree of moisture.
@@ -3298,14 +2865,9 @@ The more important constellations were considered those that the planets travele
 attributed certain properties and governances that were projected downward onto Earth. The fact that distant objects in the heavens could have influence over affairs on Earth via invisible correspondences was justified by observation: the Moon and the Sun clearly show their invisible influence via a phenomenon as widespread and powerful as the tides, so why wouldn’t such an influence extend to other earthly affairs?
 
 
-
-
 shaunl/E+/Getty Images
 
 In addition to the roles of the Zodiacal constellations and the seven planets, there was an additional layer to the Medieval understanding of celestial influences on earthly life that drew its origin from.
-
-
-##### Required Reading Break
 
 
 This following excerpt, drawn from the introduction to the English translation of the <em>Picatrix</em> provides a more elaborate description of the cosmological framework that the author of the text assumed as an intellectual starting-point for the practice of astral magic.
@@ -3323,9 +2885,6 @@ It is important to note that modern notions of causality do not apply in the int
 The <em>Picatrix</em> expresses this notion of connectedness between things that share qualities in this way (4.5.11, p.244): “It is said in the books of the wise that the binding of spirits with harmonies and appropriate substances consists primarily in love.” What the author means by “love” here is a sense of natural attraction of like to like – similar things, like members of the same species, come together naturally due to their natural affinities. The magical practitioner, however, is aware of the <em>hidden</em> natural connections that unite things that, on the surface, seem vastly different (e.g., the links that connect planets to specific animals to specific plants to specific gemstones).
 
 What lies beyond the firmament, however, is of particular interest because it is in that realm that the overlay of Christian theology has its greatest impact.
-
-
-##### Check Your Understanding
 
 
 <strong>Which of the following is an example of analogical thinking?</strong>
@@ -3349,8 +2908,6 @@ The universe was thought to be Earth-centred physically, but the physical world 
 Like God, the firmament of fixed stars is basically changeless. Unlike God, who is everywhere at once and therefore motionless, the firmament has only one form of motion: its perceived nightly drift across the sky. Moving outward from God, but inward through each of the planets in turn, each planet moves more and more quickly until one reaches the Moon, which manifests the greatest amount of change of any of the celestial objects and is also the farthest of them from God. Moreover, <strong>distance from God</strong> was not only a question of motion, but also of physical density and resistance to the passage of light. As a result, each of the four elements was thought to have its own “<strong>home</strong>”, or proper place, that was stacked in order of increasing density as one moved from the sphere of the Moon downward toward Earth.
 
 
-
-
 Four Spheres of the Sublunar Realm. A graphic representation of the four spheres of the sublunar (or, material) realm, with Earth at the centre, followed by water, air, and fire.
 © University of Waterloo
 
@@ -3361,9 +2918,6 @@ This model based on how the physical “density” of the four elements interact
 Among other things, the importance of all the above lies in the fact that the spirits that are being summoned in the context of the <em>Picatrix</em> and the <em>Munich Handbook</em> (and in summoning magic beyond these two books) are being summoned from some place, and that place is generally thought to be beyond the firmament.
 
 
-##### Check Your Understanding
-
-
 <strong>In the Medieval intellectual framework, distance from God equates with</strong>
 
 
@@ -3371,8 +2925,6 @@ Among other things, the importance of all the above lies in the fact that the sp
 
 
 Another component of the intellectual framework that is the backdrop of how magic was thought to operate was the notion of a <strong>hierarchy of being</strong> (also known as a “great chain of being”) that was deduced from the writings of <strong>Plato</strong> (428/27 or 424/23 – 348/47 BC) and elaborated by later generations of his intellectual successors, such as <strong>Plotinus</strong> (c. 204/5 – 270), <strong>Porphyry</strong> (c. 234 – c. 305), <strong>Iamblichus</strong> (c. 245 – c. 325), and <strong>Proclus</strong> (412 – 485). This hierarchy can be conceived as a pyramid (or as a ladder) that ranks everything in the universe according to the <strong>type of soul</strong> it was thought to have, and the <strong>type of motion</strong> of which it was capable, since one of the defining characteristics of a soul is precisely its capacity to imbue motion to whatever matter it inhabits. The Latin word for soul, <strong>anima</strong>, is the source of our word “animate”, which means “capable of movement”. Therefore, types of soul and types of motion amount to the same thing in this scheme. The hierarchy of being is illustrated in the figure, <strong>The Neoplatonic Hierarchy of Being</strong>.
-
-
 
 
 The Neoplatonic Hierarchy of Being. This schematic representation summarizes the notions encompassed under the Neoplatonic Hierarchy of Being.
@@ -3385,12 +2937,8 @@ Humans are the only beings in the hierarchy who have simultaneously a rational s
 In the second illustration of the hierarchy of being, Great Chain of Being, taken from a 1579 drawing, we see the full scheme, including its Christian adaptations, integrated and illustrated in one place: God at the very top, followed by choirs of angels, people, animals, plants, inert matter, and at the very bottom, hell, complete with the fallen angels (on the right) taking a swift route downward. Note that each main layer in this hierarchy could be subdivided according to the same principles: birds can fly, and therefore are superior to other animals because of their capacity to be physically closer to God; by virtue of their tallness, trees are superior to shrubs, which are in turn superior to grasses, which are above mosses and lichens. Incidentally, when applied to humans, the hierarchy of being also helped to justify and reinforce notions of social and racial hierarchy, with the figureheads of the Christian Church poised naturally (from their perspective) at the top.
 
 
-
-
 The Rational Soul Can Project Itself Anywhere. People have a rational soul, because we have the ability to reason and thereby our minds can go anywhere via our imagination and memory.
 romulof/iStock/Getty Images
-
-
 
 
 <strong>Great Chain of Being</strong>. 1579 drawing of the Great Chain of Being from [Didacus Valades](https://es.wikipedia.org/wiki/Diego_de_Valad%C3%A9s), <em>Rhetorica Christiana.</em>
@@ -3426,9 +2974,6 @@ Note that the regularity – and therefore the predictability – of the planets
 It is important to note that the model described above is a simplified synthesis of notions that were never described as succinctly in any ancient or medieval source. The <em>Picatrix</em> itself contains three separate descriptions of a “hierarchy of being”, none of which are identical at the level of detail.
 
 
-##### Check Your Understanding
-
-
 <strong>Which of the following statements does <em>not</em> apply to the Neoplatonic Hierarchy of Being?</strong>
 
 
@@ -3453,19 +2998,12 @@ When extended by Christian thinkers (such as <strong>Robert Grosseteste</strong>
 Al-Kindī’s theory of rays that emanate from every thing in the universe also helps explain the frequent need for <strong>animal sacrifice</strong> as part of magical rituals. Indeed, the act of ritually slaying an animal was thought to sever the link between that creature’s body and soul, producing a sort of invisible explosion of rays. These rays would bear with them in a concentrated burst the essence and inherent properties of that animal. This explosion, when conducted at the astrologically appropriate moment and accompanied by the appropriately corresponding prayers, gestures, actions, locations, other ingredients/components, and <strong>suffumigations</strong> (i.e., the kind of animal being sacrificed matches with the right planet that is positioned in the right constellation and not cancelled out by other planets or constellations, with the practitioner reciting the prayers directed at drawing down the influence of that specific planet while burning specially concocted blends of incense that are made of the right kinds of herbs, resins, congealed liquids, and/or animal parts [the resulting smoke is what is known as the ‘suffumigation’], all of which have some analogical link with each other that harmonize and collectively amplify the power and effectiveness of each individual part), harnesses the combined influences of all those factors to produce the practitioner’s desired effect. Knowledge of these combinations (which can be represented as vertical lines running through the hierarchy of being) is what magical practitioners claimed as their specialty.
 
 
-##### Required Reading Break
-
-
 The following reading provides a fuller description of Al-Kindī’s ideas on celestial rays and how these were thought to provide the basis for magical operations.
 
 - Liana, Saif, “Arabic Theories of Astral Magic: The De radiis and thePicatrix,”Arabic Influences on Early Modern Occult Philosophy. Palgrave Macmillan (2015)pp. 30-36
 
 
-##### Check Your Understanding
-
-
 <strong>Medieval theories take the properties of which of the following things as a model for explaining celestial influences upon earthly events?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -3477,7 +3015,6 @@ Valades, Didacus. 1579. "Great Chain of Being." <em>Rhetorica Christina.</em> 
 
 
 ## 7e. Spirits and Summoning
-
 
 
 ### Defining Spirits
@@ -3506,15 +3043,9 @@ Please note here that these exclusions are imposed by the need to set up our own
 > If you gaze into that [ritually prepared] mirror and guard it well, know that through it you will bring together men,winds, spirits, demons, the living, and the dead.All shall be obedient to you and heed your command. … Suffumigate with those things, and instruct the winds of your desires; they shall enact your will. Guard this, and heed everything I have said. You will thereby have power overwinds,humans, anddemons, and you will do what you wish. [emphasis mine](Picatrix, 4.7.23, p.255)
 
 
-##### Required Reading Break
-
-
 The following excerpt provides a deeper understanding of the intersection between Aristotle’s philosophy and the Arabic thinkers who assumed the existence and power of celestial influences on Earth. The passage specifically addresses the planetary spirits that feature so prominently in the <em>Picatrix</em>.
 
 - Liana Saif, “From Ġāyat al-ḥakīm to Šams al-maʿārif: Ways of Knowing and Paths of Power in Medieval Islam,”Arabica, 64 (2017).pp. 299-309.
-
-
-##### Check Your Understanding
 
 
 <strong>From a Medieval person’s viewpoint, which of the following statements does <em>not</em> apply to spirits?</strong>
@@ -3540,19 +3071,11 @@ In the introduction to his edition of the text, Richard Kieckhefer provides a go
 Excerpts from twelve of the thirteen rituals that involve spirits appear below, translated by Richard Kieckhefer in the introductory portions of his edition. The <strong>excerpted passages</strong> below are intended to show the nature of the spirits, how they are conjured, for what purpose, and how they interact with the operator and any others present.
 
 
-##### Required Reading Break
-
-
-Read the following excerpted passages from the <em>Munich Handbook</em>. The main task for students will be to compare the role of spirits as they appear in the <em>Munich Handbook</em> with what one can observe from the assortment of selections from the recently published English translation of the <em>Picatrix</em> by Attrell and Porreca that appear in the next section.
-
 - Richard, Kieckhefer,Forbidden Rites. A Necromancer’s Handbook of the Fifteenth Century, University Park, PA: The Pennsylvania State University Press (1998):No. 1 For Gaining Knowledge of the Seven Liberal Arts (pp.117-119)No. 3 For Arousing a Woman’s Love (pp.82-85)No. 5 For Arousing Hatred Between Friends (pp.72-73)No. 6 For Obtaining a Banquet (pp.47-50)No. 7 For Obtaining a Castle (pp.50-53)No. 9 For Obtaining a Horse (pp.54-56)No. 10 For Resuscitating a Dead Person (pp.61-63)No. 11 For Invisibility (pp. 59-60)Notes to pp.47-63 are on pp.66-68No. 13 For Constraining a Man, Woman, Spirit, or Beast (pp. 89-90)No. 18 The Mirror of Floron, for Revelation of Past, Present, and Future (pp.104-105)No. 27 For Obtaining Information About a Theft by Gazing into a Fingernail (pp.108-110)No. 41 For Discovering Hidden Treasure in Sleep (pp.114-115)
 
 Then read the following chapters. The first of the chapters listed below provides a detailed overview of how spirits are summoned in the <em>Munich Handbook</em>, showing the common elements that feature in all of the rituals that involve the summoning of spirits. The second chapter deals specifically with a prominent sub-set of these spirits, namely, demons.
 
 - Richard, Kieckhefer,Forbidden Rites. A Necromancer’s Handbook of the Fifteenth Century, University Park, PA: The Pennsylvania State University Press (1998): 126-169.Ch. 6 Formulas for Commanding Spirits: Conjurations and ExorcismsCh. 7 Demons and Daimons: The Spirits Conjured
-
-
-##### Check Your Understanding
 
 
 <strong>Spirits in the Munich Handbook take which of the following statements forms:</strong>
@@ -3648,22 +3171,14 @@ Note that neither of the names (aside from Aristotle) mentioned in the passage a
 > When the Moon is in Capricorn. When the Moon is in Capricorn and you wish to draw upon her strength and power – when the Sun is sitting in the sign of Cancer, enter a house that can only fit two individuals, and cover it for seven days with odoriferous branches (that is, on each day, renew the covering with fresh branches). On each and every one of those seven days, suffumigate the house with aloewood and incense. After these seven days, enter the house dressed in the most beautiful red clothes. See to it that the house be covered with a board or something similar. Whenever you wish, uncover it and say: “Heyterim heyterim falsari falsari tifrat tifrat.” Afterward, leave the house, and walk around it seventy times. Then suffumigate the house for one hour with 2 oz. of aloewood in a silver censer. Next, go outside, and go around the house again seventy times as before. Once finished, make your sacrifice with the cock that we have often mentioned above, then enter the house again. There, you will find a seated man to whom you should say: “I conjure you by the beautiful and luminous Moon, ornate and honoured, so that you may speak to me.” Once that man addressed you, state to him your desire, and it will be accomplished with effect.(Picatrix4.2.12, pp.228-229)
 
 
-##### Required Reading Break
-
-
 This excerpt examines the particularly hazardous ingredients that feature prominently in the rituals one finds in the <em>Picatrix</em>, in particular those used in suffumigations. It offers a much-needed warning against trying any of the formulas, since many are truly dangerous.
 
 - Dan Attrell and David Porreca,Picatrix. A Medieval Treatise on Astral Magic, University Park, PA: The Pennsylvania State University Press (2019):Introductionpp. 26-30 [section entitled “Psychoactive and/or Poisonous Substances in thePicatrix”].
 
 
-##### Check Your Understanding
-
-
 <strong>The process of summoning spirits in the Munich Handbook resembles what we observe in the Picatrix in which of the following ways?</strong>
 
 <strong>Which among the following would <em>not</em> be a factor to take into consideration when conducting a magical ritual?</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -3688,7 +3203,6 @@ This module has been composed by a literary comparatist and makes a comparative 
 ## 8a. Introduction to Dante's Inferno
 
 
-
 ### Introduction to Dante’s Demonic Monsters
 
 
@@ -3701,21 +3215,13 @@ It is essential that you read the <strong>Required Resources</strong>listed at 
 As with his other major works (be they in Latin or Italian) <strong>Dante Alighieri (1265-1321)</strong>, through his <em>Comedy</em>’s plots, thoughts, and characters, provides us with an accurate idea of the European <strong>forma mentis</strong>(mental framework or habit) of his times.  His strong engagement in Florentine politics (Florence was not a city but an independent city state or republic), his political rivalries that caused his exile for life, his ideal world order, his love for this human woman (Beatrice) who will become a saint and his guide through most of <strong>Paradiso</strong>, his courageous attempt to reform the Church, his profound Christian faith, his desire to express them all in a brand <strong>new language (Italian)</strong> that would be able to best popularize them, these were the issues that fuelled his life and imagination.
 
 
-
-
 (Dore, 1832-83)
-
-
 
 
 (Daddi, B., 1342)
 
 
-
-
 (Holiday, H., 1882-84)
-
-
 
 
 (Caetani di Sermoneta, 1855)
@@ -3733,15 +3239,6 @@ As with his other major works (be they in Latin or Italian) <strong>Dante Aligh
 In medieval religiosity the personification of evil, the devil himself, with the devastating effects he can have on our eternal lives, plays a role of fundamental importance.  People’s supreme terror of the devil, in their daily living, becomes nothing short of an obsession in the Italian Middle Ages, a terror quite visible in the innumerable paintings and sculptures occupying religious and urban spaces of the Italian city states, which demonstrate vividly the dangers and horrors of eternal damnation with bestial demons tormenting the living and punishing the dead.  Dante’s early readers and contemporaries were terrorized by the punishments of hell. They also believed demons operated cunningly in their midst, on earth, always battling against the forces of good in order to win more souls for Hell. Dante draws freely from such popular beliefs by inserting them also into the context of the <strong>doctrine of medieval theology</strong>.  For instance, from the <strong>Book of Revelation</strong>, and from the abundant fire and brimstone sermons heard daily at church, every medieval man, woman, and child knew of the <strong>great battle in Heaven between God and the rebel angels</strong> headed by <strong>Lucifer</strong>, or <strong>Satan</strong>, himself. It is the <strong>quintessential</strong>battle of good against evil which ends with Satan, the king of evil, and his army of rebel angels, being thrown away from Heaven and, like a meteorite rushing through space, hitting finally our planet with such force that Satan encases himself forever right at the centre of the earth (the farthest point from the presence of God in Dante’s <strong>medieval cosmology</strong>).  And the hierarchy of demons Satan mutely, despairingly, and bestially rules over for eternity will form some of his most beast-like guardian monsters.
 
 
-##### Check Your Understanding
-
-
-<strong>1. In writing his Inferno, Dante brings together</strong>
-
-
-##### Required Reading Break
-
-
 Ensure you read attentively the following before proceeding to the next page of this module:
 
 - Mills Chiarenza, Marguerite.The Divine Comedy: Tracing God’s Art.  Twayne Publishers, 1989.pp.1-7 (on the historical context of theInferno)pp. 19-35 (on the structure of theInferno)
@@ -3755,7 +3252,6 @@ Ensure you read attentively the following before proceeding to the next page of 
 The following resource are not required, but will enrich your understanding of this module and the required readings. This resource provides excellent additional notes that you may find helpful as you study the different monsters in Dante’s <em>Inferno.</em>
 
 - Durling, Robert, M., translator.Inferno.  Dante Alighieri, Oxford University Press, 1996.Durling’s Introduction to his edition ofInfernois also excellent, pp. 3-24.As you go through some of the demonic monsters in this module you may find some of Durling’s “Additional Notes” informative, including the following:pp. 552-555 (Note 2)pp. 567-568 (Note 9)pp. 577-578 (Note 14)
-
 
 
 <strong>Works Cited</strong>
@@ -3773,16 +3269,10 @@ Holiday, Henry. 1882-1884. <em>Dante and Beatrice.</em> Walker Art Gallery, Live
 ## 8b. Charon
 
 
-
 ### Introduction to the Demonic Ferryman
 
 
-##### Required Reading Break
-
-
 - Pinsky, Robert, translator.Inferno.  By Dante Alighieri, Farrar, Straus and Giroux, 1996.By now you should have read Cantos 1, 2, and 3 in their entirety.In this section we'll focus onvv. 67-99 of Canto 3 (p. 23)p. 310 (Notes)
-
-
 
 
 (Doré, Gustave. 1832-83)
@@ -3818,17 +3308,10 @@ If you are unfamiliar with the following term, check out the resources at the fo
 Already with this very first monster guardian we meet in Hell we sense, through the brief dramatic sketches of Dante’s pen, the awesomeness, the monumental violence, the furious brutality and the desperate vitality (both in Charon’s grotesque appearance and in his movements fuelled by eternal anger) that will characterize the infernal gestures of the other monster demons we shall meet, satanic figures such as <strong>Minos</strong>, <strong>Cerberus</strong>, <strong>Plutus</strong>, <strong>Phlegyas</strong>, <strong>Geryon</strong>, and the ultimate and greatest monster sinner of them all, <strong>Satan</strong> (also called <strong>Lucifer</strong>).
 
 
-##### Check Your Understanding
-
-
-<strong>1. Charon strikes the damned</strong>
-
-
 ##### Additional Resources
 
 
 - Durling, Robert, M., translator.Inferno.  Dante Alighieri, Oxford University Press, 1996.pp. 551-552 (Additional Note 1)
-
 
 
 <strong>Works Cited</strong>
@@ -3840,16 +3323,10 @@ Doré, Gustave. 1832-83. "Plate X: Canto III: Charon herds the sinners onto his 
 ## 8c. Minos
 
 
-
 ### Infernal Judge
 
 
-##### Required Reading Break
-
-
 - Pinsky, Robert, translator.Inferno.  By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read Cantos 4 and 5 in their entirety (pp. 26-43)Pay special attention to vv. 1-23 of Canto 5 (p. 37)pp. 310-313 (Notes).
-
-
 
 
 (Doré, G., 1832-83)
@@ -3882,13 +3359,6 @@ As always, these demonic and monstrous guardians in Dante’s <em>Inferno</em>�
 Examples, these, of satanic verses, perversions of Christ’s teachings about the dire consequences of a sinful life.  This type of linguistic deviance is the monster’s food.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Hell’s gate inscription tells us to</strong>
-
-
-
 <strong>Works Cited</strong>
 
 
@@ -3900,17 +3370,11 @@ Doré, Gustave. 1832-83. "Plate XIII: Canto V: Minos judges the sinners." <em>Da
 ## 8d. Cerberus
 
 
-
 ### The Three-Headed Dog
-
-
-##### Required Reading Break
 
 
 - Pinsky, Robert, translator.Inferno.  By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read vv. 12-32 of Canto 6 (pp. 45-47)pp. 314-315 (Notes)
 - Read John Freccero’s Foreword (pp. ix-xvii).While it does not generally deal with the subject at hand it will be of great help in putting it in context. Freccero is one of the leading American Dantists.
-
-
 
 
 (Doré, G., 1832-83)
@@ -3948,13 +3412,6 @@ Of course, one shouldn’t forget the <strong>revisionist stance</strong> that
 Interestingly, in the <em>Aeneid</em>, it is the <strong>Sybil</strong> that placates the “gran vermo” Cerberus (the great worm) by throwing some sort of honied cake at the beast (Dante incidentally will use “vermo” also for Satan in the abyss of Hell). As one would expect, the commentaries abound as to what this Dantean variant of throwing earth might signify.
 
 
-##### Check Your Understanding
-
-
-<strong>1. For the geography of his Inferno Dante draws most freely from</strong>
-
-
-
 <strong>Works Cited</strong>
 
 
@@ -3968,16 +3425,10 @@ Durling, Robert. M., translator.  <em>Inferno.</em> ByDante Alighieri, Oxford
 ## 8e. Plutus
 
 
-
 ### The Great Enemy of Humanity
 
 
-##### Required Reading Break
-
-
 - Pinsky, Robert, translator.Inferno. By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read vv. 1-13 of Canto 7 (p. 53)p. 316 (Notes)
-
-
 
 
 (Doré, G., 1832-83)
@@ -4015,13 +3466,6 @@ The inarticulateness of this savage beast and the Latin poet’s mention of the 
 In fact, if there seems to be little vitality in the demon Plutus, compared to the previous monsters so far encountered, there is certainly a great degree of monumental stupidity about him.  An inarticulateness and stupidity which foreshadow in many ways those of the supreme monster of evil, Satan.  Indeed, Plutus is indistinguishable and anonymous as a monster as the meaningless jabbering he spurts out and as the nondescript victims he torments. <strong>Plutus is the pagan god of wealth</strong> and so Dante, in plucking him from the often misread pages of mythology, places him in his medieval Christian architecture of Hell <strong>to guard the prodigal and the miserly</strong>.  Again, he debases the somewhat dignified and majestic standing this god of riches had maintained throughout centuries of literary and artistic canon, transforming him into a demonic monster, and the sinners he guards over and torments, through the implacable law of <em>contrapasso</em>, into senseless dancers in their greed and in their dissipation.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Plutus is the great enemy of humanity because of his</strong>
-
-
-
 <strong>Works Cited</strong>
 
 
@@ -4035,21 +3479,13 @@ Momigliano, Attilio, ed. <em>Inferno</em>. By Dante Alighieri, Firenze: Sanso
 ## 8f. Phlegyas
 
 
-
 ### The Monstrous Sentinel of the Styx
-
-
-##### Required Reading Break
 
 
 - Pinsky, Robert, translator.Inferno. By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read vv. 13-25 of Canto 8 (p.61)p. 317 (Notes)
 
 
-
-
 (Doré, G., 1832-83)
-
-
 
 
 (Delacroix, E., 1822)
@@ -4083,13 +3519,6 @@ In usual fashion, Virgil placates the demoniacal boatman’s ire by admonishing 
 In <strong>Greek mythology</strong> Phlegyas was the king of Thessaly who avenged his daughter’s rape by the god Apollo by burning the god’s temple at Delphi.  As Durling suggests (p. 135), Dante associated the character’s name with the <strong>Greek root word for fire</strong>.  Apollo eventually killed Phlegyas, imprisoning him in the pit of the classical underworld.  <strong>Virgil remodels his figure</strong> and reputation by casting him as an exemplary figure in <strong>Aeneid VI</strong> where, as a somewhat miserable spirit in Hades, the shade teaches all souls to study justice and to honour the immortal gods.  <strong>Dante degrades him</strong> by reinventing him as a monstrously furious guardian of the fetid swamp where the souls of the <strong>wrathful and the slothful</strong> are immersed.  While Dante is normally able to stroke with a word or two (at times a verse or two, at times more) a poetically and potent dramatized drawing of the physical appearance of the infernal monster guardians he encounters, in this instance we have to rely on the fury and violence of the damned themselves in the Styx in order to imagine properly the presence of the guardian who represents the monstrous personification of the collective sin therein punished.  And so we also discern Phlegyas’ monstrous appearance from the words Dante uses when he is finally able to recognize an old compatriot of his who surfaces from underneath the filth of the river “coated with mud” and “so brutally foul.” Artists and painters throughout the centuries have also been able to portray the monster <strong>from the violence of the words</strong> (“now get out”) that he angrily spits out to the poets, having ferried them across the Styx.
 
 
-##### Check Your Understanding
-
-
-<strong>1. Dante associated the name of Phlegyas with</strong>
-
-
-
 <strong>Works Cited</strong>
 
 
@@ -4103,17 +3532,11 @@ Doré, Gustave. 1832-83. <em>The Styx-Phlegyas.</em>Retrieved from: https://www
 ## 8g. Geryon
 
 
-
 ### The Fraudulent Monster
-
-
-##### Required Reading Break
 
 
 - Pinsky, Robert, translator.Inferno. By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read vv.  1-26 (p. 135) and vv. 70-127 (pp. 139-141) of Canto 17pp. 330-331 (Notes)
 - Durling, Robert, M., translator.Inferno.  Dante Alighieri, Oxford University Press, 1996.pp. 560-563 (Additional Notes 6)
-
-
 
 
 (Doré, 1832-83)
@@ -4141,17 +3564,10 @@ Perched on the edge of the abyss, the demoniacally imposing figure of Geryon, it
 Geryon’s <strong>tripartite monstrous body</strong> is meant to signify (as always, the number 3 has a particular symbolic valence in the entire <em>Divine Comedy</em>) <strong>a satanic version of the Christian trinity</strong>, prefiguring the degraded and depraved humanity of <strong>Malebolge</strong>, Dante’s medieval invention of the evil pouches in Hell.  At the end, upon Dante’s return from the circle of the usurers, Geryon (whose name is finally pronounced in <strong>v. 87</strong>) is given stern directions (with a multitude of mythical allusions to flawed flights) by Virgil on how to properly descend the two poets to the bottom of the infernal abyss.  Geryon obeys the orders of the master of good reason to the letter but, remaining angry and disillusioned at his useless transport (didn’t gain any souls for Hell), unloads the poets and his bent-up frustration by vanishing “like an arrow from the string.”
 
 
-##### Check Your Understanding
-
-
-<strong>1. In medieval symbolism, a cord often represented:</strong>
-
-
 ##### Additional Resources
 
 
 Friedman, John B. “Antichrist and the Iconography of Dante’s Geryon.” <em>Journal of the Warburg and Courtault Institutes</em>. 1972. 35: pp. 108-22.
-
 
 
 <strong>Works Cited</strong>
@@ -4165,17 +3581,11 @@ Sinclair, John, D., translator. <em>Inferno.</em>By Dante Alighieri, Oxford Uni
 ## 8h. Satan
 
 
-
 ### Supreme Evil
-
-
-##### Required Reading Break
 
 
 - Pinsky, Robert, translator.Inferno. By Dante Alighieri, Farrar, Straus and Giroux, 1996.Read vv.  31-68 of Canto 34 (pp 297-299)pp. 354-355 (Notes)
 - Durling, Robert, M., translator.Inferno.  Dante Alighieri, Oxford University Press, 1996.pp. 576-577 (Additional Notes 13)pp. 580-783 (and Additional Notes 16)
-
-
 
 
 (Doré, G., 1832-83)
@@ -4212,13 +3622,6 @@ In his idealistic view of world order, as he makes clear in some of his other wo
 - Freccero, John. “The Sign of Satan.”Modern Language Notes. 1965. 80: pp. 11-26.
 
 
-##### Check Your Understanding
-
-
-<strong>1. The satanic three faces of the emperor of Hell signify</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
-
 
 
 <strong>Works Cited</strong>
@@ -4244,7 +3647,6 @@ This module introduces you to perspectives from the discipline of art history , 
 ## 9a. Who or What Are Wild People?
 
 
-
 ### Introducing Wild People
 
 
@@ -4259,11 +3661,7 @@ The term “wild men” or “wild man” is much more common than “wild peopl
 In medieval visual culture, wild men, women, and children are easy to spot.  The same size and with the same anatomy as human beings, wild people were covered from head to foot with fur and so, like animals and beasts, they went unclothed. Wild people inhabited forests, apparently living off hunting and gathering; I have yet to see or read of medieval wild people who were imagined cultivating crops, and only rarely are they shown using any tool other than the ubiquitous wooden club which is the wild man’s most common attribute. Like human beings and indeed, like many mammals, wild people were imagined to be living in small family groups; the wild people in the figure on the module landing page, <strong>Wild Family</strong>, are a kind of nuclear family as are the wild people in the figure <strong>Alexander the Great Encounters Wild People</strong>.
 
 
-
-
 <em>(Unknown, c. 1400-1449)</em>
-
-
 
 
 <em>(Unknown, c. 1450-1460)</em>
@@ -4279,29 +3677,19 @@ Note that this Latin language religious manuscript features a visual program of 
 The figure of the wild man is related in various ways to other monsters already studied in this course. Like werewolves, wild men live in the forests and the wilderness, away from human civilization, although, unlike werewolves, they do not shapeshift into an animal (see <strong>Werewolves Module</strong>). Late medieval wild men also overlap with the figure of the giant, as giants are often furry and scantily clothed (if not naked) and are often shown fighting with clubs (see the <strong>Giants Module</strong>) (see the figure <strong>The Homo Selvadego</strong>). Wild men show up among the satirical monsters of the Middle Ages as well, including those in the <strong>Roman du Fauvel fol. 34r.</strong>, shown in the figure here (also see the <strong>Satirical Monsters Module</strong>).
 
 
-
-
 <em>(Unknown, c. 1325-1350)</em>
-
-
 
 
 The Taymouth Hours, fol. 62r. Latin Book of Hours (use of Sarumi), Latin prayer for the Virgin Mary. 1325-1350, England, 194 folios, parchment, copiously illuminated, 11.5 x 17 cm. London, British Library, Yates Thompson MS 13, ff. 62r.
 (Unknown, c. 1325-1350)
 
 
-
-
 <em>(Romeri c. 1400-1499)</em>
-
-
 
 
 <em>(de Fauvel, R.,  c. 1318-1320)</em>
 
 Wild men are also related to the Green men found in medieval sculpture and architectural ornament, identified through foliated and bearded faces emerging from vine-like tangles of vegetation (see the <strong>Cadney Green Man</strong> figure). One of the most famous medieval stories featuring a wild-man-like figure is <em>Sir Gawain and the Green Knight</em>, an early fourteenth-century work of Middle English alliterative verse which is discussed in the <strong>Required Reading</strong> by Susan Crane (which you’ll read in a later section of this module). As is indicated by the title, its green man has lost many of his wild man qualities; he is a knight. Beyond the fact that he lives in a trackless wilderness, is green like the verdant forest rather than furry like forest animals, and possesses the magical ability to be decapitated and then reattach his severed head, the Green Knight is in virtually every other way the mirror, or double, of Sir Gawain and the other Arthurian knights whose feast he joins, uninvited, on New Year’s Day.
-
-
 
 
 (Croft, 2013)
@@ -4323,8 +3711,6 @@ How might we think about the existence of wild men figures across time and cultu
 If it is intellectually unproductive to think of the figure of the wild man as simply being derived from older traditions, what approaches might be taken by students who wished to pursue this question further? The modern discipline of psychology is a scientific field of inquiry but some of its subfields such as Freudian and Jungian thought, usually more prominent outside of the modern departments of psychology than within them, have suggested models for thinking about universals of human culture are ultimately derived from human cognition, emotion, and social development. Approaches from the modern discipline of anthropology offer especially robust theories for thinking about alterity and similarity in human cultures.
 
 
-
-
 The Madness of Nebuchadnezzar. Latin Commentary on the Book of Revelation by Beatus of Liébana (730-785), manuscript illumination on parchment, the mad Nebuchanezzar. Early 13th century, Burgos (ES), 167 leaves, parchment,  44 x 30.5 cm.  Bibliothèque nationale de France, MS NAL 2290 f. 19r. 
 (Beatus, c. 1200-1250)
 
@@ -4339,20 +3725,13 @@ To what extent are medieval wild men monsters at all? This question is raised im
 In many medieval images, stories, and performances, it seems as if wild men and human beings are different branches of the same big dysfunctional family. Wild men are strong and ferocious, but they are also innocent, in the sense that they are natural creatures. In the later middle ages, wild men often represented a kind of libidinous freedom, animal-like in the sense that their strength and sexuality was unconstrained by social norms and conventions. The unfettered sexuality of the wild man could represent erotic freedom and pleasure, but it could also be seen as a danger. The threatening aspect of the wild man was enacted in the marginalia (small drawings in the margins of medieval manuscripts) of the religious, Latin-language manuscripts shown here, sometimes in narrative sequences that proceed over several pages. The British Library has an older blog post about these wild men stories, in which wild men pursue human women in what the blog post calls “wooing” or courtship stories, although we might be more likely to call this attempted rape.
 
 
-
-
 <em>(Beatus, c. 1300-1340)</em>
-
-
 
 
 The Smithfield Decretals, fol. 72r. Latin decretals of Gregory IX with gloss of Bernard of Parma (the “Smithfield Decretals”), manuscript illumination on parchment,. Ca.1300-1340, Southern France (probably Toulouse),314 folios, parchment, copiously illuminated,  ca. 28.5 x 45 cm (text space). London, British Library, Royal MS 10 E IV, f 72r.
 (Beatus, c. 1300-1340)
 
 The wild men in the marginalia of the Taymouth Hours and the Smithfield decretals re-appear on successive pages in ways suggesting narrative sequences told in pictures. In these stories, the human women are saved from the wodewoses by human men who sometimes slay the woodwoses, rather in the manner of Saint George, for example, saving the lady from a dragon. The threat of a wild man is different, however, than the threat of a <strong>dragon</strong>, because in this imagined world, intercourse and therefore offspring between human and wild people is possible, and even natural. There is an ambivalence or ambiguity about the strength and potency of wild men. The clerics for whom the manuscripts of the <strong>Taymouth Hours</strong> and the <strong>Smithfield Decretals</strong>were made might have disparaged the implicit violence and sexuality of wild men, but secular men might have been more positive about claiming the drive, freedom, and strength of the wild men. Who knows if there might be a wild man in your lineage, and would that be such a bad thing?
-
-
-##### Required Reading Break
 
 
 Please now read the following.
@@ -4368,13 +3747,7 @@ The following is a supplementary resource on the behaviour and habits of Wodewos
 - Mary Wellesley, “A Field Guide to Wodewoses” British Library, 2016, https://blogs.bl.uk/digitisedmanuscripts/2016/09/a-field-guide-to-wodewoses.html
 
 
-##### Check Your Understanding
-
-
-<strong>1) Which book of the Old Testament features the mad, or wild, King Nebuchanezzar II of Babylonia?</strong>
-
 <strong>2) What are medieval marginalia?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -4398,7 +3771,6 @@ Unknown. c. 1400-1449. "Wild man with club over his shoulder." Radboud Universit
 
 
 ## 9b. Looking at Wild People
-
 
 
 ### Introduction to Close Looking
@@ -4434,8 +3806,6 @@ Unknown. c. 1400-1449. "Wild man with club over his shoulder." Radboud Universit
 ### An Example of Close Looking: The Tapestry ofDer Busant
 
 
-
-
 Der Busant. Upper Rhenish tapestry, woven with linen warp and wool, silk, linen, cotton, and metallic wefts, two scenes from Der Busant (The Buzzard). 1480-1490, Strasbourg (FR), 79 x 113 cm.  New York, Metropolitan Museum of Art, 1985.358.
 (Unknown, c. 1480-1490)
 
@@ -4452,13 +3822,7 @@ While this tapestry can be used as a gateway to explore the culture surrounding 
 Modern symbols of luxury—a yacht, an expensive car, an exclusive vacation—are different than in the past. Tapestries are no longer symbols of wealth in western culture. The Industrial Revolution created mechanized weaving, embroidery, and dyeing and so a tapestry could be produced on a mass scale at a small fraction of the cost of a medieval one. And while handmade tapestries are still expensive, they are used in terms of art alone, serving no function in keeping a room warm.
 
 
-##### Check Your Understanding
-
-
-<strong>1) Which is not a formal characteristic of art?</strong>
-
 <strong>2) Is the "Der Busant" tapestry woven?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -4468,7 +3832,6 @@ Unknown. c. 1480-1490. "Der Busant." The Metropolitan Museum of Art. <em>The Met
 
 
 ## 9c. Material Contexts
-
 
 
 ### Modern Contexts
@@ -4499,13 +3862,9 @@ The process of creating a book was laborious. Usually, the book was first design
 For our purposes, it is critically important to study the contexts in which images of wild men appear. What kinds of texts does the manuscript contain? What languages is it in? For whom was it intended? Answering these questions can provide fascinating und unexpected contexts for the images of wild men.
 
 
-
-
 <strong>Wodwose surrounded by dogs.</strong> Marginalia from Queen Mary Psalter, Latin psalterr, fol. 173r. featuring Psalm 70:7-13. 1310-1320, London/Westminster, 196 folios, vellum, copiously illumininations, 17.5 x 27.5 cm.  London, British Library, Royal MS 2 B VII, f. 173r.fol. 173r.
 
 <em>(Unknown, c. 1310-1320)</em>
-
-
 
 
 Queen Mary Psalter, fol. 173r. Latin psalterr, full page featuring Psalm 70:7-13. 1310-1320, London/Westminster, 196 folios, vellum, copiously illuminated, 17.5 x 27.5 cm.  London, British Library, Royal MS 2 B VII, f. 173r.
@@ -4516,8 +3875,6 @@ Queen Mary Psalter, fol. 173r. Latin psalterr, full page featuring Psalm 70:7-1
 
 
 Panel broadly refers to painting executed on a rigid support, which in the Middle Ages were wood panels that had been sawed, planed and sized from specific, suitable trees, usually close-grained hardwoods. There were no standard sizes so deciding on the size, shape, and number of wooden panels for a composition was part of the artistic process. Medieval altarpieces often used multiple panels (hence the terms diptych, meaning two-panelled, and triptych, meaning three-panelled), while late medieval portraits normally used single panels. There is one example of an oil painting in this module, the Portrait of Oswolt Krel by Albrecht Dürer (see the figure here). It is a triptych done on wood. Prior to the application of paint, the wood would have been prepared by a member of Dürer’s workshop. The first step in this process included the removal of all gum and resin through boiling or steaming. The panel would then have been coated with size and gesso, a cover that would have smoothed the surface and helped to prevent splitting once the paint and wood had fully dried.
-
-
 
 
 Portrait of Oswolt Krel by Albrecht Dürer, flanked by wild men holding the heraldic arms of Krel, a German merchant (on left) and his wife, Agathe von Esendorf (right), oil on oak panel, 1499, Germany, central panel, 50 x 39 cm; side panels, 50 x 16 cm. Munich, Alte Pinakothek, WAF 230.
@@ -4538,11 +3895,7 @@ While oil painting in Europe can be traced back to the twelfth century, the expe
 Medieval <strong>stone carvers</strong> required both physical strength and precision. Very hard, stone is nevertheless brittle due to its crystalline structure, and so it is far more difficult to carve than wood. Stone carvings were created by expert craftsmen who, despite dedicating a lifetime to the mastery of their craft, often remain anonymous. Fine medieval stonework often survives today in a weathered and often plain, white state, so it is important to remember that these sculptures were once highly polished, painted, and even gilded.
 
 
-
-
 (Croft, 2008)
-
-
 
 
 <em>(Unknown,  c. 1236-1245)</em>
@@ -4566,11 +3919,6 @@ Follow this link to view a reconstruction of the medieval colours of Amiens Cath
 Stone walls were cold and so the dwellings of the wealthy were often hung with woven tapestries, which provided both beauty and warmth. Tapestries were the preserve of the rich throughout the Middle Ages; their creation was incredibly labour intensive and they required far more material than other traditional forms of art. Of these materials, threads were the most prominent and could be made of wool, linen, silk, and fine metals (including gold thread).
 
 
-##### Required Reading Break
-
-
-Read this article about the process of creating a medieval tapestry by the MET:
-
 - How Medieval and Renaissance Tapestries Were Made
 
 If you wish, connect it to the tapestry depiction of the wild prince from <em>Der Busant</em> (see <em>Der Busant</em>Tapestry).
@@ -4584,8 +3932,6 @@ In the craft of engraving, a tool is used to gouge sharp lines into a metal pla
 As well as advertising his talent, the expert detail of Dürer’s piece orients the viewer's interpretation by using the <em>memento mori</em>(“remember death”) theme with the skull on the shield.
 
 Throughout his life, Dürer used engraving as a means to economic success as an artist because the medium allows for multiple prints to be created from the same plate.
-
-
 
 
 Albrecht Dürer, engraved print, woman embraced from behind by a wild man, in front of them imaginary heraldic imagery. 1503, Nüremberg, paper, 24.3 x 17.9 cm. New York, Metropolitan Museum of Art, 19.73.113.
@@ -4610,20 +3956,11 @@ ClarkArtInstitute. "Inside Albrecht's Studio - Engraving." [Video.] YouTube. 3:3
 While Dürer’s engravings may have reached larger audiences than manuscripts, frescos, tapestries, and paintings, <strong>medieval badges</strong>were the most accessible images for regular people in the Middle Ages. Although a handful of badges survive that were made of precious materials and aimed at the wealthy, the vast majority of badges were made of lead-tin alloy, which is inexpensive. These pewter badges were mass-produced by pouring molten pewter into stone molds, and the resulting objects were cheap to buy. The majority of surviving badges were religious in nature. They featured an image of a saint or relic that was linked to a specific holy site. Such religious badges were mainly produced for pilgrims. Secular badges were also produced for a variety of political and cultural purposes, and some of these were bawdy. Badges of wild people are secular badges that are often bawdy or vulgar, as the figures Wild Man with Club<strong>,</strong> Naked <strong>Wild Man Wearing Hood</strong>, and <strong>Wild Man in Rectangular Frame</strong> suggest. The contexts to which they might have belonged are discussed in the next section.
 
 
+<em>(Unknown, c. 1375-1424)</em>
 
 
 <em>(Unknown, c. 1375-1424)</em>
 
-
-
-
-<em>(Unknown, c. 1375-1424)</em>
-
-
-##### Check Your Understanding
-
-
-<strong>1) What is vellum?</strong>
 
 <strong>2) What is the main difference between medieval and modern paper?</strong>
 
@@ -4636,7 +3973,6 @@ While Dürer’s engravings may have reached larger audiences than manuscripts, 
 Examine this step-by-step explanation by the British Library of how medieval illuminated codices were created and watch the accompanying videos:
 
 - How to make a medieval manuscript.
-
 
 
 <strong>Works Cited</strong>
@@ -4672,7 +4008,6 @@ Wellesley, Mary.  “A Field Guide to Wodewoses.”  British Library: Mediev
 ## 9d. Cultural Contexts
 
 
-
 ### Stories of Wild Men and Wild Women
 
 
@@ -4691,8 +4026,6 @@ Medieval frescoes depicting the beginning of the Yvain/Iwein story were painted 
 The figure of the Wild Man of Rodenegg shows the wild man in the Rodenegg frescoes pointing to the viewer’s left. The image has a dual purpose. It shows the wild man doing what he does in the story: giving directions. The gesture also directs the viewer to the next visual frame in the fresco's pictorial sequence. Here a damaged image shows Iwein framed by trees and initiating the adventure by pouring water on the fountain.
 
 This wild man looks formidable and wild, with a broad, naked chest and unruly red hair. Are his features racialized, and to what extent might the choices made here be those of the restorer, who would have known the medieval sources? In many medieval stories the physical appearance of wild women draws on a variety of racial, gendered, age-related, or ability stereotypes to create a female figure who is considered loathsome, that is to say, unappealing and frightening.
-
-
 
 
 (Stullkowski 2006)
@@ -4738,21 +4071,14 @@ In the Middle Ages, charivari was a boisterous, noisy, mock serenade or dance 
 A fictional representation of a charivari wild man dance appears in a German-language manuscript from around the year 1400. It illustrates the German version of a medieval prose romance, *Pontus and Sidonia**,<em> which was translated from French by the archduchess Eleonore of Austria in 1456. The story follows the romance of Pontus, the son of a Galatian King, and Sidonia, a daughter of the King of Brittany, who is betrothed to Genelet. At the wedding of Sidonia and Genelet, Pontus and his men disguise themselves as wild men and create a charivari (from the perspective of the story, the proposed marriage is unsuitable because Sidonia is in love with Pontus). The wild men wear greenish costumes whose “scales” probably attempt to represent bunches of tow or shrubbery--fur or vegetation?--and as noisemakers they have bells tied to their limbs (see figure, Charivari in </em>Pontus and Sidona*).
 
 
-
-
 Charivari in Pontus and Sidona. German manuscript illumination on parchment, detail of Pontus and his men, dressed as wild men, performing at the wedding of Sidonia and Genelet above a section of the prose romance. C. 1475, Workshop of Ludwig Henfflin, Stuttgart (Germany), 140 leaves, paper, 131 colored pen drawings, 30,1 x 21 cm. Heidelberg, Universitätsbibliothek Heidelberg, cpg 142, fol. 122r.
 (Unknown, c. 1475)
 
 Perhaps the most famous medieval charivari event, however, was a real one that ended in disaster. At a wedding feast held in 1393 in honor of the remarriage of one of the French queen’s ladies in waiting, the French king Charles VI and five of his male courtiers dressed up in elaborate wild men costumes made of linen soaked in resin into which flax had been attached, which made the costumes shaggy. Disaster struck when a torch accidentally set on fire first one and then rapidly all of the resin-soaked costumes. Four of the wild men perished; one saved himself by jumping into a vat of wine. Charles VI survived because of the quick thinking of his cousin, the Duchess of Berry, who had called him over to ask his identity, and is said to have thrown her skirts over him to protect him. This terrible mishap was included in Jean Froissant’s <em>Chronicles</em>, from which the figure, Bal des Ardents (the ball of the burning men) is taken.
 
 
-
-
 Bal des Ardents. Manuscript illumination of nobles dressed as wild men catching fire in 1393 at court of Charles VI of France, in Jean Froissart, Chroniques. C. 1470-1472, Bruges (The Netherlands), 200 folios, parchment, 12 large and 39 small minatures plus copious decoration, 420 x 315 mm. London, British Library, Harley MS 4380, f. 1r.
 (Harley MS 4380, f. 1r, c. 1470-1472)
-
-
-##### Required Reading Break
 
 
 Now complete the following readings.
@@ -4761,15 +4087,9 @@ Now complete the following readings.
 - Sarah Westphal-Wihl, “Wild Women,” inWomen and Gender in Medieval Europe: An Encyclopedia, edited by Margaret Schaus (New York: Routledge, 2006), pp. 836-37.
 
 
-##### Check Your Understanding
-
-
-<strong>1) Is the unnamed wild man the enemy of Yvain/Iwein?</strong>
-
 <strong>2) What is the occupation of the man who shelters the princess in Der Busant?</strong>
 
 <strong>3) During the disastrous Bal des Ardents of 1393:</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -4787,10 +4107,7 @@ Unknown. c. 1475. "Pontus und Sidonia." Universitätsbibliothek Heidelberg. <em
 ## 9e. Albrecht Dürer's Portrait of Oswolt Krel
 
 
-
 ### Looking Closely at the Portrait of Oswolt Krel
-
-
 
 
 Portrait of Oswolt Krel by Albrecht Dürer, flanked by wild men holding the heraldic arms of Krel, a German merchant (on left) and his wife, Agathe von Esendorf (right). 1499, Germany, oil on oak panel, central panel, 50 x 39 cm; side panels, 50 x 16 cm. Munich, Alte Pinakothek, WAF 230.
@@ -4840,16 +4157,9 @@ In this portrait, Dürer is using the motif of the furry wild man to individuate
 Dürer, who used fur in other portraits, including self-portraits, here uses the wild man motif and its association with fur to create a new, heroic ideal that celebrated the power of assertive, creative, masculine animality.
 
 
-##### Check Your Understanding
-
-
-<strong>1) How does Albrecht Dürer differ from the other artists in this module?</strong>
-
 <strong>2) Who was Oswolt Krel?</strong>
 
 <strong>3) Which type of space was the Portrait of Oswolt Krell likely intended for?</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -4876,10 +4186,7 @@ This module follows the approach of the famous Christian theologian, Thomas Aqui
 ## 10a. Situating Devil-Theology
 
 
-
 ### Biblical Sources
-
-
 
 
 <em>(Pacher, c. 1471-1475)</em>
@@ -4895,11 +4202,7 @@ Historically, Christian theology has held a very high view of <strong>Scripture
 The passage just quoted contains or alludes to many of the key <strong>biblical data</strong> theologians had to consider in giving an account of the devil. The biblical authors considered the devil to be the adversary of both God and human beings. The devil was an angelic being, created by God, who rebelled and fell from his exalted place in heaven, taking a large number of other angels with him (<strong>patristic</strong> and medieval theologians read Ezekiel 28:11-19 as giving further information about this). In relation to human beings, the devil’s goal is to destroy, and his main method is deception. The author of the Gospel of John reports Jesus’ characterization of the devil as follows: “He was a murderer from the beginning and does not stand in the truth, because there is no truth in him. When he lies, he speaks according to his own nature, for he is a liar and the father of lies” (John 8:44, NRSVCE). We see the devil at work in prompting Judas Iscariot to betray Jesus (John 13:27), and in tempting Jesus in the wilderness (Matthew 4:1-11). <strong>The Lord’s Prayer</strong> famously teaches Christians to pray, “…do not bring us to the time of trial, but rescue us from the evil one” (Matthew 5:13), suggesting that the temptations of the devil (the evil one) are a constant concern for believers. Finally, from the perspective of New Testament authors, the devil should be considered a defeated foe – already substantially defeated by Christ through his death by crucifixion (see Hebrews 2:12), and to be defeated with finality at Christ’s <strong>second coming</strong> (Revelation 20:10). Clarifying exactly what powers the devil continues to have and exercise in the time in-between the first and second coming of Christ is one of the many thorny problems for diabology.
 
 
-
-
 <em>(Master, c. 1413-1415)</em>
-
-
 
 
 <em>(Unknown, c. 1430)</em>
@@ -4923,8 +4226,6 @@ Of course, biblical texts and accounts need to be interpreted if we are to say w
 From the beginning and throughout its history, the mainstream church had to define its views (the teachings of Christ and his apostles) over against alternative perspectives that deviated in significant ways. Further complicating the situation, as the Christian faith grew and spread over the centuries, it incorporated an increasingly wide diversity of people groups (including Celtic, Germanic, Slavic and older, pre-Christian Mediterranean and Anglo-Saxon). These “pagans” who had now become Christians naturally blended their previous beliefs and traditions with the Christian story. The results did not always align well with received apostolic teaching. In order to clarify, communicate, and defend the “truths of the Christian faith” against <strong>heresy</strong>, church leaders and church councils formulated <strong>creeds</strong> and doctrinal statements. In this way an <strong>orthodoxy</strong> was established, and standards were set up for judging who was “inside” and who was “outside” the faith.
 
 
-
-
 (Unknown, n.d.)
 
 
@@ -4941,21 +4242,12 @@ The church councils most important in regard to Christian teaching on the devil 
 ### Theological Diabology and Other Views of the Devil
 
 
-##### Required Reading Break
-
-
-Read the below chapter on medieval theologians’ views of the devil from a book by a medieval historian.
-
 - Jeffrey, Russell. “The Devil and the Scholars,” inLucifer: The Devil in the Middle Ages, Cornell University Press, 1984, pp. 159-207.
 
 Medieval theologians strove to formulate their teachings within a nexus of authorities including biblical texts, theological commentary from patristic and other preceding theologians, and conciliar statements formed in opposition to heresies. The major theologians often got involved in controversies over doctrinal matters as the church sought to address the latest issues. With the rise of Universities and <strong>scholasticism</strong> in eleventh- and twelfth-century Europe, theological accounts were also increasingly constrained by methodological considerations. Scholastic theologians in the high middle ages were required to produce biblical commentaries and to comment on the primary theological textbook, the <em>Sentences</em> of Peter Lombard (1095-1160). In both their theological treatises and their public <strong>academic disputations</strong>, they tended to proceed dialectically, dealing with one statement after another by carefully examining and weighing arguments in favour of and against the statement in question and proceeding to a resolution.
 
 
-
-
 <em>(Heliodorus, c. 100 BCE)</em>
-
-
 
 
 <em>(Fortuna and Ursem, c. 500BC -  1050 AD)</em>
@@ -4971,20 +4263,12 @@ Popular stories of the lives of saints, used by preachers as examples for edific
 By contrast, scholastic theologians employed reason and sometimes abstract logical argumentation and cosmological speculation about the nature of the devil and his relation to God, the world and human beings. “In asking how Lucifer fell,” says Russell, “we ask how evil initially entered the cosmos, and we can confront the nature of evil abstracted from historical or mythological circumstances” (Russell, 162). For example, Anselm of Canterbury (1033-1109) used the free choice of the devil to explain how evil entered the world and to absolve God of responsibility for moral evil. According to this account, the devil, having sinned freely without any cause or explanation, then tempted the first human beings, who also freely sinned. This <strong>original sin</strong> of the first human parents brought disharmony and alienation from God into the human race. Incapable of repaying the debt incurred through our sin, God, by offering God’s self in Christ, restores humanity to harmony with God. Russell contends that in describing salvation this way, scholastic theologians made the role of the devil relatively superfluous (Russell, 170-172). Further, although the devil did tempt Adam and Eve, they could have fallen without this temptation. In contrast to popular accounts which put the devil at centre stage, theological accounts of both human sin and human salvation can be given without any necessary appeal to the devil.
 
 
-
-
 <em>(Grünewald, c. 1510-1515)</em>
 
 When we examine Thomas Aquinas’s diabological theology in relation to the problem of evil later on in this module, it will be important to try to see to what extent the devil still plays an important theological role. Russell discusses Aquinas’s views on evil and the devil (see pp. 193-207). After a more in-depth look at the problem of evil (the next module page), we will examine Aquinas’s views for ourselves (the third module page).
 
 
-##### Check Your Understanding
-
-
-<strong>1) What is diabology?</strong>
-
 <strong>2) Scholastic medieval diabologies differ from popular medieval depictions of the devil (in religion or in art) in that they…</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -5014,7 +4298,6 @@ Unknown. <em>The Fall of the Rebel Angels</em>. The J. Paul Getty Museum, Avigno
 ## 10b. Diabology and the Problem of Evil
 
 
-
 ### The Philosophical Problem of Evil
 
 
@@ -5028,8 +4311,6 @@ The problem of evil arises for anyone who wants to hold that the following four 
 As an example of evil, let’s take the dropping of the atomic bomb on Hiroshima by American President Harry Truman on August 6, 1945. The act of bombing Hiroshima can be understood as evil from a few different angles. For one thing, this act caused massive amounts of harm and suffering to the people of Hiroshima. It is traditional to distinguish <strong>natural evil</strong>, that is, evil in the form of pain and suffering, from <strong>moral evil</strong>, the evil of the will that chooses things that are morally wrong. In deciding to drop the bomb, Truman and his advisers arguably acted with deplorable disregard for the lives of the civilians who would become sick and die from the explosion or from the ensuing radiation poisoning. Their act, therefore, was morally evil.
 
 
-
-
 (Caron and Levy, 1945)
 
 If God is perfectly good, we would expect that God would not want anything evil to exist, and so would try to prevent evil in either of its forms (natural or moral) from occurring. For instance, a perfectly good God would not want the atom bomb to be dropped on Hiroshima, wanting neither the suffering of the bombing victims nor the morally evil choice that preceded it. Now it may be that God is perfectly good but is <em>not able</em> to prevent evil. In that case, we can understand how the existence of evil is compatible with the existence of God; God does not <em>want</em> the bomb to be dropped, but God <em>does not have the power</em> to stop the Truman administration from dropping it. Medieval historian Jeffrey Russell argued that the dualist heresy of the Cathars involved this sort of response to the problem of evil; it arose from an effort “to save the goodness of God by limiting his power, to account for the conflict between good and evil that we observe in life, and to respond to the conflict between the two that we perceive within ourselves” (Russell, Lucifer: The Devil in the Middle Ages 187). In other words, the Cathars tried to show how evil is compatible with a perfectly good God by presenting God’s power (and hence, God’s ability to prevent evil) as limited by the power of the devil.
@@ -5038,11 +4319,6 @@ On the other hand, it could be that God is <em>able</em> to prevent evil, but <e
 
 For the Christian theist (or any other theist who holds that statements 1 through 4 above are true) evil is not compatible with God in either of these ways. For such theists, God is capable of preventing evil <em>and</em> perfectly good <em>and</em> knows all things. But how then can evil exist? More strongly, it seems that the existence of evil – something we are all aware of – shows that a perfectly good God who is capable of preventing evil <em>cannot</em> exist. And that, at a first approximation, is the problem of evil. It is an ancient problem, first appearing in the writings of the Greek Philosopher Epicurus in the third century BC, and has been discussed in every age since that time.
 
-
-##### Required Reading Break
-
-
-Read the below article by a contemporary theologian explaining why the problem of evil is a problem that theologians must face.
 
 - Herbert, McCabe, OP, “The Statement of the Problem,”God and Evil in the Theology of St. Thomas Aquinas, New York, NY, Continuum International Publishing Group (2010): 1-12.
 
@@ -5067,20 +4343,12 @@ Russell notes that the logic of Christian theological thought in this area gravi
 Given the attention paid to the devil in the biblical texts (see the previous page of this module), it is clear that no Christian theological account of evil would be complete without showing the relation between evil and the devil. But if evil is nothingness, then what can we mean by saying that the devil is evil, or that the devil tempts us to do evil? Another module in this course [the module on demons by Gabriel Niccoli] touched on the way the link between the devil and nothingness played itself out in a famous late-medieval literary representation of the devil. In his <em>Divine Comedy</em>, Dante locates Lucifer in a frozen lake in a dark cave at the center of the earth, the lowest place in the entire cosmos, where he acts like a black hole sucking down all goodness, life, and colour into the cold darkness (Russell, Lucifer: The Devil in the Middle Ages 216-233). Dante’s devil is ugly, futile, empty, blind and stupid, isolated and shut off from reality, and filled with meaningless hatred. He is the very opposite of the beautiful expansive light, openness and freedom of the Creator, whose love is infinite and whose justice and truth govern the cosmos, bringing life and sustaining community.
 
 
-
-
 <em>(Doré, c. 1861-1868)</em>
 
 But if the devil and evil are identified with nothingness, what are we to make of the seemingly real and palpable threat of both? Here we have located one of the central tensions involved in attempting to give a theological account of evil. Certain key Christian doctrines seem to require that we understand evil as some sort of non-being. But other important Christian teachings urge us to be on constant alert against the very active and potentially devastating works of the devil and his demons. It is now time to turn to an attempt to bring both aspects together by one of the greatest theologians of the medieval period.
 
 
-##### Check Your Understanding
-
-
-<strong>1) According to the philosophical problem of evil, God’s existence is incompatible with the existence of evil because</strong>
-
 <strong>2) Why did Christian theologians conclude that evil is nothing or non-being?</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -5096,7 +4364,6 @@ Russell, J. B. (1984). <em>Lucifer: The Devil in the Middle Ages.</em> Ithaca, N
 ## 10c. The Devil and Aquinas' Theory of Evil
 
 
-
 ### Who is Thomas Aquinas?
 
 
@@ -5105,8 +4372,6 @@ Here we will examine a theological case study, focusing on the role of the devil
 Thomas Aquinas had his own share of experience resisting the devil’s temptation. His family opposed his decision to lead a religious life. To compel him to take a more “worldly” path, they had the young Aquinas locked in a castle for a year, and reportedly even sent in a prostitute to help lure him away from his devotion, which of course included a vow of <strong>celibacy</strong>. According to the story, Aquinas drove her away with a hot fire iron.
 
 In his voluminous theological writings, Aquinas had much to say about the nature of angelic beings, including the fallen ones, of whom Lucifer was understood to be the chief. But to understand his view of the devil, we have to situate his diabology within the larger context of his attempt to grapple with the nature of evil, its origin and its place within creation. So what did Aquinas have to say in response to the theological problem of evil?
-
-
 
 
 <em>(Gessi, c. 1588-1649)</em>
@@ -5212,9 +4477,6 @@ A12: Whether the demons can change man's intellect?
 The chart lists all the articles for questions 1 and 16 only, and the first five articles for question 3, since those will be our focus. As you can see, Aquinas pays most attention in this work to sin (moral evil) in human beings; fourteen of the total sixteen topic areas (“questions”) are concerned with this. But the first question (on the nature of evil) gives the basic outline of his metaphysical solution to the problem of evil, and the last question (on the demons) and some of the articles in question 3 enable us to bring the devil and other demons into connection with that problem. The following summary of Aquinas’s account of the devil in relation to evil, based on the relevant articles from the <em>QDM</em>, is not meant as a substitute for reading the texts for yourselves, but as a synthetic guide to the main points contained in them. Reading Aquinas for the first time can be quite daunting; my hope is that these summaries will help you to focus on the main points being made in the text.
 
 
-##### Required Reading Break
-
-
 Thomas, Aquinas, <em>On Evil</em>, R. Regan trans., B. Davies, ed., Oxford University Press (2003).
 
 <strong>Please note:</strong> I have made the entirety of each article available to you, but you need only to read the “Answer” section of each one, where Aquinas states his own position.
@@ -5238,8 +4500,6 @@ Together, the five articles that make up Question 1 present Aquinas’s metaphys
 The first article of Question 1 asks whether evil is anything at all, and Aquinas argues that evil itself is not an entity (a real being), though evil things (the things that we can properly call evil) are entities. To understand this we first have to say what “good” is. Aquinas follows <strong>Aristotle</strong> (“The Philosopher”) in defining the good as what is desirable. And, he thinks, since evil is contrary to what is desirable, it can’t be a being. This is because Aquinas thinks being and goodness always go together, so that if something is a being, then it is good, and if something is good, then it is a being. The reason for this is that all being has been created by God, who is the supreme good, and who is ultimately desired in and behind all desire. But the supreme good can only produce good things. It follows that whatever exists is good, and we can only speak of evil as a sort of non-being.
 
 In his reply to the first objection, Aquinas spells out more fully what he means by calling evil a non-being or non-entity: “what is evil… absolutely… consists of something being deprived of a particular good that is required for its perfection. For example, sickness is evil for an animal because it deprives the animal of the balance of fluids that is required for the perfection of the animal’s existing” (<em>On Evil</em>, 59). The sick animal, insofar as it exists, is good. But we can call it a “bad” animal insofar as it is lacking something important that it needs to exist as the kind of animal it is. Similarly, Aquinas writes, “blindness itself is not an entity, but the subject that blindness befalls [that is, the eye] is” (ibid). Because the blind eye exists, it is good, but it is also “evil” in a certain respect, namely because it lacks the ability to see, which is a perfection that belongs to the eye according to its <strong>nature</strong>.
-
-
 
 
 (Rembrandt, 1653)
@@ -5277,8 +4537,6 @@ In response to the objections, Aquinas argues that sin does not flow from human 
 We must say, however, that there is a sense in which acts of sin <em>do</em> come from God, as Aquinas states in his response in article 2. For acts are things that exist, and everything that exists comes from God. And further, God is the “first mover,” the ultimate source of every motion in the universe, whether the motion of material things or of spiritual things.
 
 
-
-
 (Blake, 1794)
 
 How then can we avoid saying that God is responsible for the sinful acts of human beings? Here is how Aquinas puts it:
@@ -5296,8 +4554,6 @@ In this way Aquinas seeks to hold together the core theological teaching that Go
 But what about the devil? Can we shift the blame for sin from human beings to a demonic source? Aquinas argues in article 3 that although the devil “can cause sin as one who disposes or persuades internally or externally, or even as one who commands… he cannot cause sin as an efficient cause” (<em>On Evil,</em> 151). In other words, the devil never has direct control over the human will; he can make things appear good to us, but we are never necessitated by such persuasion to choose those things. Aquinas has more to say about the nature of the devil’s persuasion in article 4. In his view, the devil can persuade us “externally” or “visibly,” by actually appearing to us and speaking to us in some form, as in the gospels he appears to Christ in order to tempt him. But the devil also has the ability to persuade us “internally” or “invisibly,” not by directly putting thoughts into our minds, but by making “impressions on the internal sense powers” (<em>On Evil,</em> 155). The idea here is that the fallen angels (the devil and his demons) retain their angelic ability to control matter, and can therefore exercise control over physiological aspects of our brains (what Aquinas refers to as “internal vapors and fluids”), thereby manipulating our emotions and passions and making impressions on our imagination. According to article 5, because the devil tempted the first human beings to sin, he is indirectly involved in all human sin. And yet the devil’s active persuasion is not directly involved every time people sin; human beings can sin simply “due to the freedom of human beings to choose and to the corruption of the flesh” (<em>On Evil,</em> 158).
 
 To sum up, God creates human beings who have the potential to sin, but is not causally responsible for their sin. And the devil’s persuasion is involved directly or indirectly in every human sin, and yet the devil cannot force anyone to sin. Due to space constraints we cannot delve any further into such interesting topics as original sin, the nature of free will, or the seven deadly sins, all of which are covered elsewhere in the <em>QDM</em>. Instead, we continue the theme of the devil, skipping forward to the final question, composed of 16 articles and containing the most sustained presentation of diabology in Aquinas’s writings.
-
-
 
 
 (Breughel the Elder, 1558)
@@ -5323,8 +4579,6 @@ The point of article 2 is to establish that the devils were created good, and so
 Next, in article 4, he considers the timing of the devil’s sin – since the angels are immaterial and to some extent eternal beings, their way of knowing and their decision making is different than ours. The options, then, are (1) that the devil sinned in the first moment of his creation, or (2) that the devil sinned after the first moment of his creation. Aquinas opts for (2) based on considerations about angelic knowledge – it would have taken time for the angels to move from a natural knowledge of their own nature, which would give them no reason to sin, to contemplation of God who is supernatural, that is, above their own nature and the nature of any created thing (<em>On Evil,</em> 464). Finally, article 5 establishes that after sinning once, the devils cannot by free choice return to good. Unlike human beings, who have the option to repent of their sin, the sin of the devils is a once-for-all event. This follows, again, from the distinctive nature of knowledge and will in angels. The evil angels choose to turn away from God, and the good angels choose to turn toward God, and from that moment on both are irrevocably fixed in their choice.
 
 
-
-
 (Blake, 1825)
 
 
@@ -5346,21 +4600,12 @@ Aquinas clearly accepts all four of the statements that generate the problem of 
 Coming back to the overall structure of the <em>De malo</em>, we have to note that the compatibility of a good, almighty and all-knowing God with the evils of suffering was not the problem that truly vexed Aquinas. For him, the real problem of evil is the problem of <em>avoiding evil</em> in our own actions. This helps to explain why so much of this treatise on evil is given over to explaining what sin is (both original sin and sin as chosen by us), what kinds of sin there are, the relation of free choice to sin, and what are the deadliest of sins. In this module we did not have the time to go into these topics in-depth. But we saw that Aquinas is clear that sin (moral evil) is our own responsibility. We cannot blame it on God, though God created us, because God created us good and our defection from good is our own responsibility. And we cannot blame our sins on the devil or the other demons because, although they have power to tempt us, they do not have the power to move our will to sin – only we have that power within us. According to Aquinas, the two kinds of evil we need to concern ourselves with are moral evil and punishment, the latter being God’s response, in God’s justice and desire for our good, to moral evil, in the hope of turning us from the evil path. In conclusion, we might say that for Aquinas, it is not the devil outside us that we most need to worry about, but the devil inside us.
 
 
-
-
 <em>(Botticelli, c. 1490-1494)</em>
 
-
-##### Check Your Understanding
-
-
-<strong>1) For Aquinas, to characterize evil as a privation means that:</strong>
 
 <strong>2) According to Aquinas’s theory of moral evil, responsibility for human sin rests with:</strong>
 
 <strong>3) Which of the following states something about the devil’s role (or the role of the devils, plural) in Aquinas’s theory of evil?</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -5396,7 +4641,6 @@ Rembrandt. <em>Aristotle with a Bust of Homer</em>. Metropolitan Museum of Art. 
 ## 11a. Confronting Monsters in a Literary Way
 
 
-
 ### LookingAtor LookingWith?
 
 
@@ -5423,8 +4667,6 @@ We might assume that we don’t have the Sophists’ problem. After all, we can 
 Monsters, it should be noted, aren’t all bad. Not only do we occasionally like a good scare, the monstrous can unsettle us, and that can be a good thing. It can jolt us out of our complacency. To use an important “literary” word, it can <strong>defamiliarize</strong> our reality so that we can see dimensions that have become obscured (Milbank, 29–55). We get used to looking at things in the same old way and lose touch with their reality. Poetry specializes in the activity of seeing familiar things in a new way. That doesn’t make it private and subjective (at least in the popular sense of the word). As Seamus Heaney, a great translator of <em>Beowulf</em>, once said,
 
 
-
-
 <strong>Heaney and Helmet.</strong> Seamus Heaney, an important translator of <em>Beowulf</em>, holds up medieval helmet.
 
 (Diary of an Autodiadact, 2020)
@@ -5438,11 +4680,7 @@ Monsters may be a diversion, but they are not necessarily a deception. Monsters 
 So here you are, a non-specialist, with every bit as much right as anyone else, to ask deeply human questions in your own way along with what medieval texts have asked in their own way, in common reflection on a reality that has monstrous dimensions (for good, and for ill).
 
 
-##### Check Your Understanding
-
-
 <strong>Defamiliarization means realizing that:</strong>
-
 
 
 <strong>Works Cited</strong>
@@ -5460,15 +4698,12 @@ Milbank, Alison. <em>Chesterton and Tolkien as Theologians: The Fantasy of the R
 ## 11b. A Monstrous Threat to Community in Beowulf
 
 
-
 ### Context
 
 
 <em>Beowulf</em> is a long poem—over three thousand lines long. We can’t read it all here, though it is well worth one’s doing so! In fact, the whole corpus of extant literature written in Old English  (works written between the middle of the fifth century and the 1066 <strong>Battle of Hastings</strong>) only amounts to about as much as a week-end edition of the <em>Toronto Star</em>. I want to focus on the episode involving the monster Grendel. He attacks the hall built by Hrothgar, who then seeks help from Beowulf; the latter comes across the sea from the land of the Geats and confronts the monster the next time he attacks, ripping off his whole arm, leaving him to die when he flees back to the “<strong>mere-pool</strong>” from which he came.
 
 Before we get into some of the main features of that episode, though, we should be mindful of the context. A glance at the whole can help us with specifics. J.R.R. Tolkien, who was a trained philologist and professor of English Language and Literature at Oxford University, once wrote an essay about Beowulf called “<strong>The Monster and the Critics.</strong>” He has this to say about the poem as a whole:
-
-
 
 
 (AP Images, n.d.)
@@ -5478,9 +4713,6 @@ Before we get into some of the main features of that episode, though, we should 
 
 
 I love the simple elegance of this sketch, given with emphasis on a human life and heroic achievement. In all, Beowulf faces three monsters: Grendel; Grendel’s mother (or “dam”) (1250–1649), and then, “half a century” (2206) later, “the hoard-guarding Dragon of a high barrow” (2210; 2206–3034). We will look only at the first one, Grendel.
-
-
-##### Required Reading Break
 
 
 Now please read the following selection of <em>Beowulf</em> in any modern English translation.
@@ -5511,12 +4743,7 @@ The beginning of the poem opens up another question too, the difference <strong
 > This unhappy beinghad long lived in the land of monsterssince the Creator cast them outas kindred of Cain. For that killing of Abelthe eternal Lord took vengeance.There was no joy of that feud: far from mankindGod drove him out for his deed of shame!From Cain came down all kinds misbegotten– ogres and elves and evil shades –as also the Giants, who joined in longwars with God. He gave them their reward.(103–13)
 
 
-##### Required Reading Break
-
-
 Other references to hell (eg 178), the “Prince of Heaven” (181), “grace” (317), “Holy God” (382), and the general claim that “The Almighty Lord / has ruled the affairs of the race of men / thus from the beginning” (700–702) further establish a mythic contrast of good and evil in Christian terms. Beowulf himself becomes a muted Christ-figure in the tradition of the warrior saviour (<em>Christus Victor</em>) illustrated so magnificently by “[The Dream of the Rood](https://anglosaxonpoetry.camden.rutgers.edu/dream-of-the-rood/).”
-
-
 
 
 (Skelton, n.d.)
@@ -5528,9 +4755,6 @@ The poem locates the <strong>problem of evil</strong> in a human context in two 
 
 
 The poet is ambivalent about the relationship between the Christian <strong>metanarrative</strong> and the prevailing local culture of retribution and fatedness, expressed in the terms “wergild” and “wyrd” that run through that culture. A metanarrative is a controlling story by which a culture explains significant features of reality to itself, including: where have we come from; where are we going; what’s wrong; what’s the solution; what time is it? The weight of history (including, ironically, the history yet to come) lies heavily on this poem. Not incidentally, “wyrd” (fatedness) gives us Shakespeare’s “weird sisters,” the witches of <strong>Macbeth</strong> who can (cryptically) see what is to come. "Wyrd" also yields the modern notion of the weird, which might be awkward, embarrassing, uncanny, or monstrous. Further questions that emerge in the poem include that of the relationship between freedom and fate. Do we control our futures as individuals and as communities, or is everything that is to be already written in the stars? Given the violence in the story, both on Grendel’s part and on Beowulf’s, one might ask another, related question: is the future going to be violent no matter how we confront it?
-
-
-##### Check Your Understanding
 
 
 <strong>Which of the following details from the poem indicates the influence of the Judeo-Christian scriptures on "Beowulf":</strong>
@@ -5562,23 +4786,14 @@ At its best, Heorot is the place of “sorrow forgotten / the condition of men�
 The society is riven; people retreat into themselves, a denial of the very meaning of existence in heroic society, which is manifest in a complex network of ties and interrelationships. A carpet page, such as those from the Lindisfarne Gospels, illustrates an outlook that emphasizes such rich connections. The poem <em>Beowulf</em> itself, like those carpet pages, represents the interwovenness of life: in being a poem of epic length, comprehensive in scope, interlaced by alliteration, and marked by the rhythmic movement of beat and <em>caesura</em> (pause). The very existence of the poem is an affirmation of sociality.
 
 
-
-
 <em>(Matthew Cross Carpet Page f 26v, c. 8<sup>th</sup> century)</em>
 
-
-##### Check Your Understanding
-
-
-<strong>A potent physical symbol of life together in early medieval society is:</strong>
 
 This monstrous terrorizing is what the hero Beowulf sets to rights. Physically, he destroys the monster by dismembering him. He also vindicates himself, fulfilling the promise of his reputation as “for main strength of all men foremost” (95) and making good on his request “that I alone may be allowed, with my loyal and determined / crew of companions, to cleanse your hall Heorot” (431–32). But Beowulf’s achievement is expressed in other terms as well. Old English poetry is highly structured. The episode of the killing of Grendel is carefully nested in <strong>mirroring</strong> actions and speeches on either side of the central action to resolve the threat to Heorot. Whereas Grendel brings chaos and random destruction, Beowulf restores the possibility of order. It’s not just that the winners get to tell the history, though that is also true, it’s that the poet gets to organize events, and the place is restored where the telling of stories can take place.
 
 There’s an unfortunate irony here. The structure of the poem is primarily an oral one. The fact that our knowledge of the poem comes to us through a single manuscript, BL MS Cotton Vitellius A xv fol. 132a–201b, a manuscript that survived a major fire, is something of a miracle. At the same time, the manuscript bespeaks the lostness of the sort of society that could produce it.
 
 The story is not only one of loss, though. Imaginative works like Tolkien’s <em>The Hobbit</em> perpetuate meditation on the nature of heroism and the monstrous, while it and <em>The Lord of the Rings</em> remind us of the importance of fellowship and of social bonds.
-
-
 
 
 This is the first page of BL MS Cotton Vitellius A xv fol. 132a–201b, the only surviving manuscript copy of Beowulf.
@@ -5593,7 +4808,6 @@ This is the first page of BL MS Cotton Vitellius A xv fol. 132a–201b, the only
 (Jackson, 2001)
 
 It is well-known that, for Tolkien, technology and industry represent a monstrous threat to the placid quietness of shire life in Middle Earth (Jacobs). As nostalgic as his vision may be, he is struggling valiantly to remind us of dimensions of being of which we have lost sight. The retrieval of the medieval world, not only by writers like Tolkien but in various ways (one thinks especially of video games), suggests an openness to change on our part, as well as a tacit recognition of the presence of the past within us. It may be the case that, in our fascination with medieval monsters, we perceive a relatively safe space to consider threats that are closer to hand. It may also be true that we find there a vision for a solution that is so surprising that it might seem to us fantastical, outrageous, or even monstrous. The extent to which the medieval political vision strikes us as a threat may reveal to us as in a magic mirror the deformed shape of our own political discourse. Be careful when you go looking for monsters. You may not like what you find.
-
 
 
 <strong>Works Cited</strong>
@@ -5629,7 +4843,6 @@ Tolkien, J.R.R. “<em>Beowulf</em>: The Monsters and the Critics.” Joseph F. 
 ## 11c. Tyrannical Monsters in The Canterbury Tales
 
 
-
 ### The Canterbury Tales
 
 
@@ -5640,8 +4853,6 @@ We turn our attention now to political monsters in <em>The Canterbury Tales</em
 
 
 <em>The Canterbury Tales</em> consists of a story-telling contest set in spring, while the people who are doing the tale-telling are on pilgrimage towards Canterbury. They are pilgrims. Chaucer, imagining himself to be a pilgrim, one “with ful devout courage” (1.22) (with a truly devout heart), joins a group of “nine and twenty” when they come into the pub where he is staying. He’s something of a Strider figure, but not for long. He has a chat with them “everichon” (1.31) (every one), and agrees to join them. Subsequently, the host of the pub in which they are staying suggests the contest and joins them.
-
-
 
 
 The Ellesmere Manuscript. These are the opening lines of The Canterbury Tales in the Ellesmere ms (Ellesmere 26.C.9), one of two manuscripts dating to within ten years of Chaucer’s death.
@@ -5663,8 +4874,6 @@ A Knight kicks things off and tells a tale set in ancient Greece. This is a stri
 
 
 > The pagan outlook, and the strong sense of man’s tragic position, make the tale especially suitable for the beginning of pilgrimage(Westlund 527)
-
-
 
 
 Detail from the Ellesemere Manuscript. A page of the Ellesemere manuscript containing the opening lines of the Knight’s tale and accompanied by an illustration of a knight on a horse.
@@ -5704,16 +4913,8 @@ Dante adored the ancient writer Vergil, a Roman rather than a Greek writer, but 
 Lots of details here sound like they could presage the gospel story of Christ: the role of a Virgin (the Virgin Mary?); an offspring sent from heaven (the Christmas story of the birth of Jesus?); setting things right and establishing a “golden people” (the beginnings of the Christian Church and the promise of the Apocalypse?). Vergil lived and wrote before the birth of Christ and had as his patron the emperor Octavian (or Augustus). The baby of his eclogue probably has something to do with this court. Furthermore, the figure of Saturn is associated with the return of a golden age and with a golden people. People like Dante read the eclogue as a prophecy almost as weighty as a biblical one. Dante makes Vergil his personal guide through the universe in his most famous poem, <em>The Divine Comedy</em>. It’s another pilgrimage poem of sorts, though on a more cosmic scale than Chaucer’s. But, for Dante, because Vergil is pre-Christian, the pagan poet cannot show heaven to his Christian counterpart. (For that, Dante will need a Christian guide, his beloved Beatrice.) This cultural trope shows the role of Saturn in the medieval imagination and the artistic sense of a comprehensive pilgrimage involving movement from a pagan Greek <em>mentalité</em> to arrival or the anticipation of arrival within a Christian one.
 
 
-##### Check Your Understanding
-
-
 <strong>Which of the following statements is most true of the symbolic meaning of pilgrimage for Chaucer in "The Canterbury Tales:?</strong>
 
-
-##### Required Reading Break
-
-
-Read Geoffrey Chaucer, “The Knight’s Tale,” especially:
 
 - Lines: 859­–1032,
 - Lines: 1649–1913,
@@ -5759,11 +4960,7 @@ This Fury upsets the horse that bears the knight who has just won the hand of th
 We have seen that Saturn is associated with the possible return of a golden age. He’s also the god of “shit happens.” He is the Titan who eats his children when he is told that one of them will usurp his power. (This comes up in the module on giants, as you may have noticed.) Numerous works of art have depicted this side of Saturn. Here are two of my favourites:
 
 
-
-
 (Francisco de Goya, 1819-1823)
-
-
 
 
 (Rubens, Peter Paul, 1636
@@ -5799,9 +4996,6 @@ For further discussion on typology and its significance, see the following two a
 - Steinmetz, David. “The Superiority of Pre-Critical Exegesis.” inThe Theological Interpretation of Scripture: Classic and Contemporary Readings, edited by Stephen Fowl, Blackwell, 1997, pp. 26-38.
 
 
-##### Check Your Understanding
-
-
 <strong>For Chaucer, Saturn is important because:</strong>
 
 
@@ -5811,11 +5005,7 @@ For further discussion on typology and its significance, see the following two a
 The theme of the monstrous tyrant is one to which Chaucer returns at least three other times in the course of <em>The</em> <em>Canterbury Tales</em>. Perhaps the most obvious, and the nearest analogue to the Knight’s Tale, is the Physician’s Tale. It opens with a reference to the ancient classical writer Livy and proceeds to tell that ancient historian’s political story about arbitrary rule, of which he is anxious. As in the Knight’s Tale, Chaucer makes an allusion to a story in the Hebrew Scriptures about a very imperfect leader. Other medieval Christian writers retell Livy’s story too, but Chaucer’s updates draw particular attention to the figure of Mary, who gives birth to Jesus. Chaucer is once again pointing in the direction of a different narrative tradition to suggest a future hope for the resolution of political anxiety.
 
 
-
-
 <em>(Unknown c. 1450-1500)</em>
-
-
 
 
 (Hooper 1868)
@@ -5829,8 +5019,6 @@ Two other tales take a similar tack. In one, the Clerk’s Tale, a marquis and 
 > Even if her husband was absent,If noble men or others of her countryWere angry, she would unite them,Such wise and opportune words had she,And decisions of such great equity,That she was heaven sent, so men thought,People to save and every wrong to amend.(4.435–41)
 
 
-
-
 (Hooper 1868)
 
 The leader becomes a monster, testing his wife absurdly, and his people support him willy-nilly (where have we seen that in recent years?). The wife, meanwhile, is as if “from hevene sent” and has the right words. She is the model of what appropriate rule could look like. She represents political hope.
@@ -5842,8 +5030,6 @@ That’s the issue in another tale, too, the Second Nun’s. On the surface, it
 
 
 > Within the blissful cloister of your sidesTook man’s shape the eternal love and peaceThat of the triune compass lord and guide is,Whom earth and sea and heaven without ceaseIndeed praise; and you, spotless virgin,Bore of your body—and remained maiden pure—The creator of every creature.(8.43–49)
-
-
 
 
 (Hooper 1868)
@@ -5864,7 +5050,6 @@ The repetition of the word “hem” (them) is insistent. The focus is on the pe
 The heroine of this story, St Cecilia, herself has words with which to confront the tyrant, but Chaucer’s real stroke of genius is to contrast the image of the tyrant as a bladder full of air with the image he borrows from Dante of Jesus in the womb of Mary. Jesus in the Gospel of John is called the Word: “In the beginning was the Word…” (Jn 1:1). If Almachius is a bladder full of empty words, Mary is full of the Word who for Chaucer, as for Dante, is the true sovereign over all of life.
 
 For Chaucer, the most concerning monster is the tyrant. He is a political poet, concerned about the ever-present possibility of political arrangements sliding into authoritarianism and, ultimately, tyranny. Amid the realities of his lived experience and as someone with a view to both cultural history and to political philosophy, Chaucer provides a vision of hope that such monsters can indeed be vanquished. The vision he imagines looks a lot like a democratic society, functioning with warts and all.
-
 
 
 <strong>Works Cited</strong>
@@ -5914,7 +5099,6 @@ Westlund, Joseph. “The Knight’s Tale as an Impetus for Pilgrimage.” <em>P
 ## 11d. Reflection: The Monstrous and Creative Freedom
 
 
-
 ### The Monstrous and Creative Freedom
 
 
@@ -5923,8 +5107,6 @@ The monstrosity of <strong>political tyranny</strong> has implications for sto
 The standard thinking in the medieval Christian worldview is that people are, indeed, free. This idea comes under pressure from time to time, both within Christianity and from outside of it. One common dissenting view is that humans are merely the products of their material environment. The chemistry within them may foster the illusion of personality and of freedom, but they are really nothing more than the by-product of a deterministic, mechanical, and impersonal universe. From within Christianity, the notion of <strong>creaturely freedom</strong>comes most under pressure shortly after the close of the Middle Ages. Reformation-era thinkers such as <strong>Martin</strong> <strong>Luther,</strong> <strong>John</strong><strong>Calvin</strong>, and (especially) some of Calvin’s followers, severely question the notion of freedom in practical, everyday terms.
 
 For the creative writer working with the standard Christian understanding that humans are free, the task then is to <strong>replicate</strong> such freedom in their creative works. I used to think that this was merely a poetic way of talking, a rhapsodic flight of fancy, creative licence. However, I have come to see that it goes hand-in-hand with a particular view of the relationship between the Creator and the created universe, and that all creators participate in the sort of activity by which they themselves came to be created. This, at least, is the view of <strong>Tolkien</strong>, and it is the view of writers like <strong>Dorothy Sayers</strong> as well. Both of them were excellent medievalists. Dorothy Sayers wrote the following about artists:
-
-
 
 
 <em>(The Dorothy L Sayers Society, c. 1950)</em>
@@ -5938,8 +5120,6 @@ Sayers wrote plays, detective fiction, and the translation and notes for a stand
 The impulse to replicate freedom lies behind the saying common in courses on creative writing, “Show, don’t tell.” The imitator of the God of freedom cannot propagandize, they can only propose a world for their readers and their characters to inhabit. One of the best discussions of this issue that I know of occurs in a book about <strong>Dostoevsky</strong>, whose approach closely resembles Chaucer’s. The book is by <strong>Rowan Williams</strong>, who was once the Archbishop of Canterbury, so there’s another link in my argument to <em>The Canterbury Tales</em> (if you’re looking for one!). Williams is both a theologian and a Fellow of England’s Royal Society of Literature for his work in the arts.
 
 
-
-
 (National Assembly for Wales, 2012)
 
 
@@ -5951,14 +5131,7 @@ Williams begins with the demonic or the monstrous. In this context, it is the op
 For the <em>Beowulf</em>-poet, for Chaucer, and for Dostoevsky, the monstrous is ultimately the denial of freedom. It represents a lurking threat in the political sphere and is an issue that the artist must parry as well. Its opposite is rhetorical wisdom and the freedom to say more. If the monstrous, positively, is defamiliarization, then the monstrous can be an expression of such freedom. In art and in politics alike, speech properly generates responsiveness and further tale-telling. For Chaucer and for the <em>Beowulf</em> poet alike, our words resonate with the creative energy of the universe itself and with its Creator, who addresses and sustains it with his Word.
 
 
-##### Check Your Understanding
-
-
-<strong>1) The notion of freedom through dialogue means:</strong>
-
 <strong>2) Which of the following is a manifestation of the demonic (or the monstrous) in language:</strong>
-
-Once you have completed reviewing all of this week’s content, return to the module page.
 
 
 
@@ -5988,80 +5161,27 @@ Williams, Rowan. “Introduction.” <em>Dostoevsky: Language, Faith, and Ficti
 ## 12a. Final Summary
 
 
-
 ### Medieval People and their Monsters
 
 
-This course has differed from almost any other Arts course by demonstrating, within one semester, how a broad variety of academic disciplines operate. This may be the first time you have been exposed to the different ways that professors conduct their own research. For continuity in this course, these approaches have all been centred around a common theme: medieval monsters. This subject has also served to introduce you more generally to the <strong>Middle Ages</strong> – a topic about which all of the authors of this course are quite passionate! Using monsters to educate you about medieval society enabled us to achieve one of the primary goals of this course: to demonstrate how we can come to understand historical cultures not just by looking directly at the ordinary, but also at what they considered <strong>extraordinary</strong>. The characteristics of monsters could vary widely. Some, like giants and dragons, manifested as larger-than-life creatures out of myth. Others, such as summoned spirits or ghosts/revenants, represented a connection – for good or ill – with a supernatural realm. Still other tales, say of werewolves and wild people, served as dire warnings of humans transformed into less “rational” beings. Medieval authors, artists, and musicians also used “monstrous” characters to make broader satirical and political statements. And in still other examples, monsters took on the form of those figures most feared by medieval people: demons and the Devil himself. Such constructions of the “<strong>monstrous</strong>” all give us insight into the <strong>medieval worldview</strong>. Studying monsters, thus, can illuminate for us how their “otherness” reflected medieval peoples’ <strong>conceptions of normality</strong>.
+Medieval monsters are a remarkably effective lens for understanding medieval culture precisely because they sit at the boundary of the thinkable. We can come to understand historical societies not just by looking at the ordinary but by examining what those societies considered <strong>extraordinary</strong>. The characteristics of monsters varied widely. Some, like giants and dragons, manifested as larger-than-life creatures out of myth. Others, such as summoned spirits or revenants, represented a connection — for good or ill — with a supernatural realm. Tales of werewolves and wild men served as warnings about the fragility of human rationality. Medieval authors, artists, and musicians also deployed "monstrous" figures to make satirical and political statements, while demons and the Devil embodied the most profound fears of the age. Taken together, these constructions of the <strong>monstrous</strong> illuminate the <strong>medieval worldview</strong>: by charting what medieval people feared and imagined, we map the contours of what they valued and considered normal.
 
 
-> We make our own monsters, then fear them for what they show us about ourselves.Carey and Gross, 2011
+> We make our own monsters, then fear them for what they show us about ourselves. — Carey and Gross, 2011
 
 
 ### Scholars and their Disciplines
 
 
-Most importantly for this course, the modules have demonstrated to you how an <strong>interdisciplinary</strong> field of research functions. In the introduction, you were introduced to some background on the Middle Ages and Medieval Studies in general. The course modules then presented a holistic picture of medieval society by exposing you to a broad and varied overview of different disciplines, each with its own methodologies, datasets, and perspectives. There are many ways to study past cultures. Some scholars utilize a <strong>range of sources or methods</strong> in order to analyze the context beyond what one type of document may reveal. This could mean, for example, drawing on tools from such disciplines as archaeology, anthropology, or geography. Other scholars, in contrast, demonstrate expertise in one source or type of sources to show finer detail. This requires an intimate knowledge of a specific subject and <strong>close reading</strong> of the relevant sources, based on clear disciplinary guidelines. Still other scholars look for common themes or ideas across time and space. This often involves <strong>comparing and contrasting</strong> the same type of source through different eras, regions, or authors. All of these approaches, and more, are encapsulated within the broad umbrella of Medieval Studies program at the University of Waterloo – the core mission of which is cross-disciplinary collaboration.
+The study of medieval monsters draws on an unusually wide range of scholarly disciplines, each with its own methodologies, source traditions, and analytical frameworks. Some scholars utilize a <strong>range of sources or methods</strong> to reconstruct the broader cultural context — drawing on archaeology, anthropology, or geography to situate textual evidence within a material world. Others demonstrate expertise in a single source type, applying <strong>close reading</strong> to reveal finer detail than any survey could capture. Still others trace common themes across time and space, <strong>comparing and contrasting</strong> the same category of source across eras, regions, or authors. All of these approaches have their own strengths and limitations, which vary with the subject, context, and available evidence.
 
-The paragraph above is just a quick overview of some of the perspectives that you have encountered in this course. They are all much more complex than this brief summation implies, of course; they each have their own strengths and weaknesses, and those can change based on the subject, context, and the types of source material available. The availability of sources alone can vary widely. For example, see the <strong>Medieval European Manuscript Production</strong> graph below.
-
-<strong>Note</strong>: you can customize your view of the graph below by selecting a "Grouped" or "Stacked" view, as well as by selecting or removing which country's data is included. Hover over the colour-coded sections of the bar graph to view the estimated results for each country's manuscript production.
+One index of that variable evidence base is manuscript production. The number of surviving medieval manuscripts differs dramatically by time period and region. Scholars working on the British Isles have far fewer records available than those working on France or Italy, and the gap between the early Middle Ages (sixth to eighth centuries) and the high and late medieval periods (ninth to fifteenth centuries) is enormous. These disparities in source survival shape the questions scholars can ask and the conclusions they can draw.
 
 
-<em>[Interactive chart]</em>
+### The Shoulders of Giants
 
 
-Browser does not support script.
-
-Browser does not support script.
-
-Medieval European Manuscript Production. Shows estimated numbers of manuscripts produced in Europe between the sixth and fifteenth centuries. Results are colour-coded based on country of origin. Note: this does not mean that nearly all of these survive today, only that at least that many were created (as far as we know). The actual numbers produced are likely higher. (Roser, 2013).
-
-(Buringh and Van Zanden, 2009)
-
-This should give you some idea of how the availability of primary material varies widely based on chronology and geography. Scholars who study the British Isles, say, have far fewer medieval records to use than those who look at France or Italy. The same variability applies to chronology. Compare the numbers of manuscripts from the early (sixth to eight centuries), the high (ninth to twelfth), and the late (thirteenth to fifteenth) Middle Ages. These are just some of the many things that scholars must consider when selecting a time and place to study.
-
-Now, it is your task to craft a well-argued essay that utilizes all that you have learned in this course.
-
-By this point in the course students should be able to:
-
-- identify and differentiate a variety of disciplinary approaches associated with the broad field of Medieval Studies,
-- describe and explain how those different approaches, by studying medieval monsters, provide insight into medieval society and how these insights can apply in the present day,
-- demonstrate understanding of the importance of diverse types of primary sources and replicate how experts engage them using disciplinary and multi-disciplinary methodologies,
-- summarize, appraise, and distinguish between scholarly debates, discussions, or problems within Medieval Studies, and
-- construct a methodology and communicate a thesis/argument effectively, drawing on evidence from primary and secondary sources.
-
-
-### Showing What You Have Learned
-
-
-The final essay for this course gives you the opportunity to combine all of the <strong>skills</strong> you learned this term through the <strong>Short Writing Assignments</strong> and incorporate <strong>concepts and disciplinary approaches</strong> from across the <strong>modules</strong>. It is a significant and rigorous assignment, though hopefully you will all enjoy writing it. This is your chance to show off all of the skills and knowledge that you’ve acquired this term!
-
-For this assignment, you should demonstrate the ability to:
-
-- formulate a thesisand provide structured support,
-- incorporate academic support, drawing on resources from the course,
-- situate their thesis within a broader context, drawing connections across modules and resources in the course.
-
-Be sure to craft a strong thesis and stick to it throughout the essay, while providing clear supporting evidence based on course concepts. You should make extensive use of information from readings and supplementary sources provided in this course. Remember to situate the argument within a broader context and keep in mind how different disciplines would approach the topic. Consistent and accurate formatting and grammar also help make your points more effective. See the <strong>Final Writing Assignment</strong> document for more information.
-
-
-### Final Thoughts
-
-
-Thank you all for being part of this special course designed by all the faculty of the Medieval Studies program at the University of Waterloo. We greatly enjoyed putting together this course for you and we hope that you all benefitted from such a range of expertise. We are all passionate about the Middle Ages and we each find our own ways to study it and to show our research. Hopefully, this will inspire you all to appreciate and enjoy Medieval Studies as well. As all scholars do, we owe a great debt to those who came before and provided us with much of the foundational knowledge and methodological tools that we have tried to impart on you here. In this way, you can continue to pass it forward to the next generation. As the saying goes, we are all merely dwarfs standing on the shoulders of giants.
-
-While made most famous by Isaac Newton’s quote, “If I have seen further, it is by standing on the shoulders of Giants,” it was originally a medieval metaphor.
-
-For over eight hundred years this expression has inspired scholars to build on the foundations of their predecessors, as we hope this course inspires you to do the same.
-
-
-
-
-Sitting on the Shoulder of a Giant. Medieval manuscript representation, c. 1410, of a Greek myth wherein the blind giant Orion carries his servant Cedalion on his shoulders, in order to act as his eyes.
-(Unknown, c. 1410)
-
-
+Medieval scholarship builds, as all scholarship does, on the foundations laid by those who came before. The phrase "standing on the shoulders of giants" — most often attributed to Isaac Newton's 1675 letter to Robert Hooke — was itself originally a medieval metaphor. It is traced to the twelfth-century philosopher Bernard of Chartres, who used it to describe how the thinkers of his age, however limited, could see further than the ancients precisely because they built upon ancient foundations. For over eight hundred years, the expression has captured the cumulative, collaborative nature of intellectual inquiry.
 
 <strong>Works Cited</strong>
 
