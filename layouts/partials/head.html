@@ -1,5 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ if .IsHome }}
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+{{ else }}
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow,noarchive">
+{{ end }}
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="icon" href="/favicon.ico">
 
