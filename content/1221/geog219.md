@@ -10,13 +10,7 @@ subjects: "GEOG"
 
 Those who fail to learn from history are doomed to repeat it. There are still some — a very few now — people alive today who remember the 1918 (Spanish) Influenza Epidemic: 500 million sick, 50 million dead. Of course, we didn't have GIS systems and Johns Hopkins maps on the internet to track all this, so these are likely underestimates, and there was also a World War going on at the same time. What we experience with respect to COVID-19 is not that dissimilar from what happened then — a US president who refused to acknowledge the pandemic, anti-mask rallies, economies faltering, and families being torn apart by sickness and death. History also tells us that the 1918 flu was not necessarily the first pandemic that "took down" a society. Some historians believe that the fall of the Roman Empire was due to a widespread deadly disease (Wazer, 2020).
 
-## Learning Outcomes
-
-Upon completing this module, you should be able to demonstrate an understanding of the role of history and the lessons learned that can help us contextualize the present and future of pandemics.
-
-## Module Activities
-
-There is no lecture for Module 1. Students read Viboud & Lessler's 2018 article on the 1918 influenza pandemic and Little's 2020 piece on "mask slackers" and "deadly spit" campaigns to shame people into following public health rules during the Spanish flu.
+Relevant readings include Viboud & Lessler's 2018 article on the 1918 influenza pandemic and Little's 2020 piece on "mask slackers" and "deadly spit" campaigns to shame people into following public health rules during the Spanish flu.
 
 **Watch:**
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/FS1DDn2eklU?rel=0" frameborder="0" allowfullscreen></iframe></div>
@@ -30,7 +24,7 @@ There is no lecture for Module 1. Students read Viboud & Lessler's 2018 article 
 
 ## Introduction
 
-<strong>Epidemiology</strong> is critical to the management of public health crises and drives many policy decisions. During COVID-19, epidemiology led to the implementation of public health measures such as social distancing and mask wearing. In this module, we go over key terms in epidemiology and discuss how epidemiology is used in the management of pandemics.
+<strong>Epidemiology</strong> is critical to the management of public health crises and drives many policy decisions. During COVID-19, epidemiology led to the implementation of public health measures such as social distancing and mask wearing. This module covers key terms in epidemiology and discusses how epidemiology is used in the management of pandemics.
 
 ## What is Epidemiology?
 
@@ -229,7 +223,7 @@ The way we display data tells a story and influences how we interpret it. <stron
 
 ## Introduction
 
-Geographers use a variety of approaches and techniques to understand our world. In this module, we discuss the qualitative theories and methodologies applied by geographers and review how qualitative approaches can help us understand not just the <em>what</em>, but the <em>how</em> and the <em>why</em> — the meanings, stories, perspectives, and experiences of individuals and populations in the context of a global pandemic.
+Geographers use a variety of approaches and techniques to understand our world. This module discusses the qualitative theories and methodologies applied by geographers and reviews how qualitative approaches can help us understand not just the <em>what</em>, but the <em>how</em> and the <em>why</em> — the meanings, stories, perspectives, and experiences of individuals and populations in the context of a global pandemic.
 
 ## What Counts as Data?
 
@@ -279,13 +273,7 @@ From the height of the third wave in Ontario in April 2021, frontline stories il
 
 ## Introduction
 
-Living through a global pandemic is not easy, and we as well as policymakers have had to make a lot of decisions and engage in debates: to lock down or not to lock down; to vaccinate or not vaccinate; to provide paid sick days or not; and so on. In this module, students engage in a range of debates related to the global pandemic.
-
-This week is dedicated to a week-long debate. Student groups are assigned a debate topic and participate in a modified <strong>Oxford-style debate</strong> in an online forum.
-
-## Learning Outcomes
-
-Upon completing this module, students should be able to: demonstrate skills in argument building; think critically about the advantages and disadvantages of different policy directions; and engage in and learn from a modified Oxford-style debate in an online format.
+Living through a global pandemic is not easy, and policymakers have had to make a lot of decisions and engage in debates: to lock down or not to lock down; to vaccinate or not vaccinate; to provide paid sick days or not; and so on. The following section presents key arguments on both sides of several pandemic policy debates.
 
 ---
 
@@ -293,7 +281,7 @@ Upon completing this module, students should be able to: demonstrate skills in a
 
 ## Introduction
 
-The world is not fair — it is full of inequalities and inequities. "We're all in the same boat" became a saying during the pandemic. But we are not all in the same boat. We may all be in the same storm, but some of us are in a yacht, some on a raft, some in a rowboat, and some are just clinging to a piece of wood. In this module, we focus on pandemic inequalities at the local level using two case examples.
+The world is not fair — it is full of inequalities and inequities. "We're all in the same boat" became a saying during the pandemic. But we are not all in the same boat. We may all be in the same storm, but some of us are in a yacht, some on a raft, some in a rowboat, and some are just clinging to a piece of wood. This module focuses on pandemic inequalities at the local level using two case examples.
 
 ## Inequality vs. Equity
 
@@ -382,11 +370,11 @@ As Nobel prize-winning economist Joseph Stiglitz observed: "While the pandemic h
 
 ## Introduction
 
-Although pandemics impact all people, each segment of society is affected differently. In this module, we explore the gender dimension of pandemics and discuss why it is important to consider a "gender lens" when studying and developing policies for pandemic management.
+Although pandemics impact all people, each segment of society is affected differently. This module explores the gender dimension of pandemics and discusses why it is important to consider a "gender lens" when studying and developing policies for pandemic management.
 
 ## Key Terms
 
-Definitions in this module are borrowed from the World Health Organization. As a <strong>binary concept</strong>, <strong>sex</strong> refers to the biological characteristics that define humans as female or male — though these sets of characteristics are not mutually exclusive, as there are individuals who possess both. <strong>Gender</strong> refers to the socially constructed characteristics of women and men — the norms, roles, and relationships of and between groups of women and men — which vary from society to society and can change over time.
+The following definitions are borrowed from the World Health Organization. As a <strong>binary concept</strong>, <strong>sex</strong> refers to the biological characteristics that define humans as female or male — though these sets of characteristics are not mutually exclusive, as there are individuals who possess both. <strong>Gender</strong> refers to the socially constructed characteristics of women and men — the norms, roles, and relationships of and between groups of women and men — which vary from society to society and can change over time.
 
 As a <strong>non-binary concept</strong>, <strong>gender identity</strong> is each person's deeply felt internal and individual experience of gender, which may or may not correspond with the sex assigned at birth. Gender identity exists on a spectrum. When an individual's gender identity differs from their sex at birth, they are commonly considered <strong>transgender</strong> or <strong>gender fluid</strong>. When gender identity aligns with sex at birth, they are commonly considered <strong>cisgender</strong>.
 

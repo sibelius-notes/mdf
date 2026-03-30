@@ -20,18 +20,6 @@ This course traces the history of information and communication technology from 
 
 
 
-### Review the Syllabus
-
-Now that you have watched the introductory video, I would like you to review the syllabus in depth. In general, you will see the pattern we fall into throughout the course.
-
-- Once a week, I will post an announcement in LEARN that contains all of the information about the week’s readings and remind you about the discussion activities.
-
-- There will usually be a discussion activity where you will engage with your classmates.
-
-- There will be some longer-form assignments to help you explore course themes in a more creative and expressive format.
-
-Material in the lecture modules and readings will be assessed on a final exam.
-
 ## 1b. An Early History of Communication
 
 Humans have long wanted to communicate with each other. We often communicate to each other through our voices. If we all ended up in the same physical space, we would probably talk to each other, tell stories, joke, laugh, etc. Indeed, many early cultures operate in a story telling narrative tradition. Stories are passed down from generations to the next, perhaps changing along the way, representing a proud oral tradition that has implications today for legal systems.
@@ -121,25 +109,6 @@ By the time we get into the sixth century, monastic institutions begin to preser
 
 In other words, we can communicate with each other over time and space, but it’s slow and limited by our muscles.
 
-Now that you have had a chance to review the syllabus and this opening module, I would like you to participate in our opening discussion activity.
-
-Module 1 Class Discussion Activity
-
-The entire class will participate in the Module 1 Discussion.
-
-Please answer the following three questions:
-
-- Who are you?
-
-- What program are you in?
-
-- Reflect on the following open-ended prompt in no more than 100-150 words: The Internet is the most disruptive invention of the last 100 years . Yes or No? Give two or three reasons to support your argument.
-
-Note that there is no “right” answer and the reflection question itself can be called out as problematic. But as you think on this, reflect. Were you on the fence? Was it easy to write down two or three reasons? Or hard?
-
-Be sure to post your responses in the Introduce Yourself Discussion Topic by the date specified in the Course Schedule.
-
-Discussion activities for Modules 2-12 will take place within your groups for the remainder of the course.
 
 ---
 
@@ -373,14 +342,6 @@ With Gutenberg, the media ecosystem begins to expand. Before printing, if you wa
 
 What about today? Should we, as the reading suggests, consider the Internet or Web to be revolutionary in the same way that the Printing Press was? Is the Web a new medium transforming the nature of human thought?
 
-Module 2 Group Discussion Activity
-
-For this week's discussion, reflect on the following questions, and post your responses in the Printing Press Discussion Topic by the date indicated in the Course Schedule.
-
-- Is it appropriate to draw parallels with the invention of the Internet?
-
-- Does history help us in this respect, or does it obscure?
-
 It is a complicated question. Certainly, we all write even more today than ever before.
 
 At an accelerating pace, people are having conversations by writing in a growing number of social media, including emails, blogs, chats and texting on mobile phones.
@@ -389,7 +350,7 @@ At an accelerating pace, people are having conversations by writing in a growing
 
 As the computer scientists Carenini, Murray, and Ng have noted above, we live in a world dominated by “text” – from the texts you send to your friends to Tweets, Instagram captions, e-mails to your instructors, and beyond.
 
-Indeed, some of the work that I, the professor designing this course, work on explores this medium shift!
+Indeed, some of Ian Milligan's own research explores this medium shift.
 
 As part of my research, I work on GeoCities.com, which was a service that existed between 1994 and 2009. It allowed anyone to create their own website. People could create a website on any topic they wanted to, such as their love of the Toronto Maple Leafs, or their family tree, or how much they loved Winnie the Pooh, or even early forms of blogging or explaining their life to other people online. What really makes me curious about GeoCities is the sheer scale of it, especially compared with the amount of information historians usually find in libraries and archives. For example, 10,000 users created pages by October 1995, 100,000 by August 1996, 1,000,000 by October 1997, and by 2009 some 7,000,000 users had created about 186,000,000 “pages” of content.
 
@@ -500,7 +461,7 @@ What do those numbers mean?
 
 #### Cataloguing Books
 
-In practice, what those numbers mean is that when the publisher was sending the book Networked to print, they worked with the Library of Congress to classify the book. Books will have the same call number around the world! I would like you to open up the following resource: Library of Congress Classification System
+In practice, what those numbers mean is that when the publisher was sending the book Networked to print, they worked with the Library of Congress to classify the book. Books will have the same call number around the world! The Library of Congress Classification System illustrates the point.
 
 Now let's go see how the book Electronic Commerce and Case Law got its classification. We first go to
 
@@ -513,31 +474,6 @@ KE -- Law, Canada
 And
 
 KE1-9450 is -- Law of Canada, Federal Law
-
-Exercise: Cataloguing Networked
-
-Let’s look up the other book ( Networked ) . Please use the above Library of Congress resource to find what HM 741 is. Remember to follow the links at the Library of Congress Classification Outline .
-
-Jot down your answer here.
-
-(Example: if KE1-9450 was “Law of Canada, Federal Law” what is HM 741?)
-
-Module 3b Individual Activity: Cataloguing books
-
-I would now like you to imagine how to catalogue the following book: Before the Crash .
-
-Try to classify it using the Library of Congress Classification Guide . Assign it a fictional call number based on your best guess of how to interpret it. Answer the following questions:
-
-- What fictional LC call number would you assign this book?
-
-- What are the categories for the codes that you assigned?
-
-- Did you consider any other options? Was it difficult to arrive at this call number? Are there any unique challenges associated with trying to catalogue "video games" in the Library of Congress?
-
-I look forward to reading your thoughts in an informal paragraph or so, and I hope that this provides insight into the power and possibilities of library cataloguing!
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
 
 ### Module Conclusion: What Happened to the Library of Alexandria?
 
@@ -703,41 +639,7 @@ This idea of the universal library is with us today, and this is why the library
 
 *Figure 2: Preservation Center. On the right is the outer shell, on the left is the inner concrete shell. © Ian Milligan*
 
-Module 3 Group Discussion Activity
-
-Take some time now to participate in the Module 3 discussion.
-
-There are many different "kinds of libraries," today. I'd like you to reflect on four different types of library, and analyze them using the questions outlined below. They are all a bit different: a traditional library like the Dana Porter Library at the University of Waterloo, the Internet Archive, Project Gutenberg, and JSTOR.
-
-How do I participate in this activity?
-
-1. Your first step is to visit each of the following four libraries:
-
-University of Waterloo's Library
-
-The Internet Archive
-
-Project Gutenberg
-
-JSTOR
-
-Note about the Dana Porter , the University of Waterloo’s Library : If you’ve been to Dana Porter or DC Library in person, you can reflect on your engagement there in person, but if not perhaps you can think of another university library you might have been to (or, at least, read about or seen in some media).
-
-Engage with each of these for a few minutes, until you feel that you've gotten a handle on them.
-
-2. Next, spend a bit of time analyzing these libraries. What makes each a library? When you're playing with them, I encourage you to try to look for things that interest you. Get a feel for the interfaces, and reflect on what you're doing. If you're stumped on what to search for, you could look up topics pertaining to some of the modules we covered today: Thomas Jefferson, for example, or the War of 1812 or the Library of Alexandria. What sorts of things do you find? What sorts of things do you not find that you might expect to? How do these sources dovetail with what we talked about in the course, specifically the ideal of a "universal library" of knowledge? Don’t spend more than ten minutes on each one to both analyze and write it up.
-
-3. Then, in your small groups, reflect on the following questions and post your responses in the What is a Library? Discussion Topic by the deadline specified in the Course Schedule:
-
-- How do the four libraries compare to the ones we’ve studied in this module? What makes each one similar to the Library of Alexandria or Jefferson’s Universal Library?
-
-- How are the libraries different from the ones we’ve studied in this module? What makes each one different from the Library of Alexandria or Jefferson’s Universal Library?
-
-- How does this help us understand how libraries have evolved since Alexandria?
-
-- How durable are each of these libraries? Could they last?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
+The idea of the universal library persists today in institutions like the Internet Archive, Project Gutenberg, and university libraries. Each approaches the ideal differently — varying in scope, durability, and accessibility — but all inherit the ambition that began in Alexandria.
 
 ---
 
@@ -1057,51 +959,7 @@ Those who cannot remember the past are condemned to repeat it.
 
 Historians have a love-hate relationship with this quote by George Santayana. On the one hand, historians like it as it speaks to the rhetorical power of history, but in other ways, historians worry about being perceived as mystical soothsayers. Historians understand the past, which might help illustrate the present, but we of course cannot see the future. To use a Canadian example, I – and others – often think of historians as great sports commentators. If you watch enough hockey, when the Leafs play the Islanders, you will not know who is going to win. However, you will have enough informed expertise to understand the basic structure of the game, what might happen, when to be surprised, etc. In short, an informed opinion.
 
-Read and Reflect: Long Before Net Neutrality Reading
-
-So let’s look at one of the short readings that I assigned you all to read this week: Long Before Net Neutrality, Rules Levelled the Landscape for Phone Services .
-
-<em>Figure 2: Long Before Net Neutrality. (NPR, 2015)</em>
-
-Take a few minutes to read the article, and reflect on these questions:
-
-- What is this article’s argument?
-
-- How does the author use history to support that argument?
-
-- What evidence do they use?
-
-- Are you convinced?
-
-- Is this a responsible use of history?
-
-Then move on to the Module 4 Discussion below.
-
-Module 4 Group Discussion Activity
-
-This week, we are going to think collectively about the power of historical arguments to inform contemporary debates. Your instructor will post one of the following four historical articles in your group's Historical Argument Discussion Topic , by the deadline indicated in the Course Schedule:
-
-- The Debate Over Net Neutrality Has Its Roots in the Fight Over Radio Freedom
-
-- How the FCC's Net Neutrality Plan Breaks With 50 Years of History
-
-- Ten parallels between the telegraph and the Internet in international politics
-
-- Net Neutrality: Lessons from the Past
-
-Read the article assigned to your group, and write a short response to the followng questions:
-
-- What is this article’s argument?
-
-- How does the author use history to support that argument?
-
-- What evidence do they use?
-
-- Are you convinced?
-
-- Is this a responsible use of history?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
+NPR’s 2015 article "Long Before Net Neutrality, Rules Levelled the Landscape for Phone Services" exemplifies this historical-argument strategy, drawing direct parallels between early telephone regulation and contemporary net neutrality debates.
 
 ---
 
@@ -1133,34 +991,11 @@ HTTP stands for the Hypertext Transfer Protocol, which is the protocol that unde
 
 You may also see HTTPS, which stands for Hypertext Transfer Protocol Secure. This is an extension of the original protocol that allows for better privacy and authenticity.
 
-Let’s begin by just reminding ourselves a bit about the power of links in a short exercise.
-
-Exercise: Ten Degrees of Wikipedia
-
-You might have heard of the popular game “ Six Degrees of Kevin Bacon ”. It’s the idea that the popular actor Kevin Bacon could be connected to almost anybody else in Hollywood in six degrees.
-
-<em>Figure 3: Six degrees of Kevin Bacon. (Skidmore, 2014)</em>
-
-Let’s play a similar sort of game to remember how hyperlinks work. Wikipedia is a great example. This large, collaboratively written and edited compendium of knowledge contains a mind-boggling array of informaton on topics big, small, obscure, important, and beyond. Let’s try to begin to navigate through Wikipedia using only hyperlinks.
-
-Please navigate to the University of Waterloo’s Wikipedia page . Those of you who are on our campus, or know a little bit about it, know that we have a fun problem with Canada Geese. Yet on the University of Waterloo’s Wikipedia page, there is (as of writing) no link or even mention of our infamous waterfowl. Using only links, I would like you to find yourselves on the Canada Goose page.
-
-What’s the quickest route you could find?
-
-The answer is “2 clicks” -> i.e. Canada -> Canada Goose
-
-Exercise: Ten Degrees from "Canada"
-
-Now let’s see how far we can go on Wikipedia. I would like you to begin on the Canada Wikipedia page. Now click one of the links on that page, and jot down the URL and the name of the page. Do this sequentially until you've visited 10 pages in total. Once you are done, you will have a sense of the strangest place you can find.
-
-The above examples reflect the power of hypertext. Before hypertext, if you were reading a book about the University of Waterloo and then wanted to learn about geese, you probably had to put down the book, go to the library, pick up the book, and read it. As they are on disparate topics, they would undoubtedly be on different floors of a large research library like Dana Porter.
-
-In short, hypertext has revolutionized how we consume and use information.
-
+The power of links is easy to demonstrate. On Wikipedia, one can navigate from the University of Waterloo to the Canada Goose article in just two clicks (via the “Canada” article). Before hypertext, moving between such disparate topics would have required physically walking between different floors of a research library. Hypertext has revolutionized how we consume and use information.
 
 #### Conclusion
 
-Hypertext, which we will be discussing in this module, is today synonymous with the Web. If you think about hypertext, you may be thinking about the Web. Conversely, if you are thinking about the Web, you are probably thinking about hypertext (and even if this isn’t how you normally thought of the Web after our last exercise, you hopefully are).
+Hypertext is today synonymous with the Web. The two concepts are nearly inseparable in popular imagination.
 
 Yet this module demonstrates that the World Wide Web is one particular implementation of hypertext as a concept. It is the most successful and distributed model of hypertext, but that does not mean that it is the “best” in any way. Indeed, history can show us how hypertext can be different!
 
@@ -1185,23 +1020,13 @@ To understand hypertext, then, we need to go back to where it all begins.
 
 ### Introduction to the Memex
 
-Many of the technologies discussed in this course do not have clear genealogies. For example, in Module Three, we discussed how the telephone and telegraph have very scattered origin stories. Yet when scholars look at hypertext and begin to trace citations and ideas, they continue to come back to the same origin story: Vannevar Bush and the Memex.
+Many of the technologies discussed in these notes do not have clear genealogies. For example, in Module Three, we discussed how the telephone and telegraph have very scattered origin stories. Yet when scholars look at hypertext and begin to trace citations and ideas, they continue to come back to the same origin story: Vannevar Bush and the Memex.
 
 The Memex was introduced by Bush in a July 1945 article in The Atlantic Monthly , entitled “As We May Think”. If you haven’t read the article, please do so now.
 
-Module 5b Individual Activity: The Memex
-
-I would like you to reflect on the article you have read by Bush. In one paragraph, please describe the following:
-
-- What is the Memex?
-
-- How does the Memex work?
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
 <em>Figure 1: The Memex. (Bush, 1945)</em>
 
-Now that you have thought about the Memex, let’s reflect on a few key characteristics of the device.
+Key characteristics of the Memex:
 
 - It was based on microfilm to store and record information.
 
@@ -1277,22 +1102,6 @@ Enter the Memex then, which you have now read about. The Memex was an analog sys
 As I noted above, the most important part of the Memex is the concept of hypertext. Bush doesn’t call it that – the term “hypertext” itself won’t be defined until 1965 – but the basic building blocks are there. A user would link concepts together, and these links were a critical part of the Memex. There is even a rudimentary machine learning idea here: a user would draw connections between people, places, and other concepts, and the Memex itself might learn how to do it as well.
 
 While the Memex was a private network, these links would form a giant record of your actions.
-
-Module 5 Group Discussion Activity
-
-I'd like you to take some time now to discuss Bush's "As We May Think". Select and reflect on at least three of the following five questions, and post your responses in the As We May Think Discussion Topic .
-
-- Is “As We May Think” still relevant today?
-
-- What did Bush predict that came true?
-
-- Is the Memex comparable to systems that we have today?
-
-- How can machines help people think?
-
-- Why does the Memex matter?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
 ## 5c. oN-Line System (NLS)
 
@@ -1425,7 +1234,7 @@ While Xanadu’s dream continues on, the Web will ultimately become the dominant
 
 In this module, I have only provided a few examples of hypertext. At Wikipedia, there is a well-maintained list of other forms of Hypertext implementations – if you are curious, please feel free to check it out.
 
-The next logical step for us in this course, will be the World Wide Web. In the “Birth of the Web” module, we will explore the link between these earlier hypertext modules and the Web. In a nutshell, Tim Berners-Lee would develop the World Wide Web while he was a physicist at the European Organization for Nuclear Research or CERN in Geneva, Switzerland. Berners-Lee will find himself in a complex, ever-changing environment of people coming and going, and will begin to create ideas of bringing order to chaos in 1980.
+The next logical step is the World Wide Web. In the “Birth of the Web” module, we will explore the link between these earlier hypertext modules and the Web. In a nutshell, Tim Berners-Lee would develop the World Wide Web while he was a physicist at the European Organization for Nuclear Research or CERN in Geneva, Switzerland. Berners-Lee will find himself in a complex, ever-changing environment of people coming and going, and will begin to create ideas of bringing order to chaos in 1980.
 
 Through this module, however, hopefully you can see that the history of the Web cannot be seen as just beginning with Tim Berners-Lee and his specific implementation of hypertext in 1989. It comes from a rich heritage dating back Vannevar Bush and his 1945 “As We May Think”; Douglas Engelbart and the oN-Line System (NLS); and Ted Nelson and Project Xanadu.
 
@@ -1625,17 +1434,7 @@ This starts a whole process going.
 
 To use a distributed network, you need to use packets. Baran introduces these in his document as well, as you would need to break a big message down into smaller parts. In his idea, each packet would be 1024 “bits” of computer information. Think of these as postcards: the start of the message, the address, some other metadata, some text, and then the end of the message. We will talk more about these packets soon, as they are conceptually key to how the Internet works today.
 
-Module 6c Individual Activity: Baran reading
-
-Let’s take a quick break. You have all read the Baran reading. Answer the following questions related to this reading:
-
-- How much of Baran’s vision resonates with you today?
-
-- What are his major arguments?
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
-The network we are building towards in this lecture, however, is called the ARPAnet and not the RANDnet. While Baran advanced an interesting idea, it was never built. The Air Force read the RAND report, was interested, but then a bureaucratic reorganization meant that the agency who would build this network ended up being the Defence Communications Agency. Baran was worried that a Pentagon agency like that would not let him actually build something great, so he decides to pull the plug and wait until a more competent agency comes along.
+The network being built towards in this lecture, however, is called the ARPAnet and not the RANDnet. While Baran advanced an interesting idea, it was never built. The Air Force read the RAND report, was interested, but then a bureaucratic reorganization meant that the agency who would build this network ended up being the Defence Communications Agency. Baran was worried that a Pentagon agency like that would not let him actually build something great, so he decides to pull the plug and wait until a more competent agency comes along.
 
 Eventually, that would be ARPA, when they read his material.
 
@@ -1758,15 +1557,7 @@ The Internet begins to grow from this point.
 
 We have covered a lot of ground in this module, from the advent of the Cold War and the Space Race, to the White Elephant dropped on the doorstep of ARPA, and to the three terminals that Robert Taylor looked at with frustration to wonder whether there was a way to connect them all together.
 
-At the beginning of this module, we explored the idea of the Internet being designed to resist Nuclear Armageddon. I have tried to contest that narrative a bit, but throughout my words and the readings, you can probably find a way to make a competing argument. I would like you to try to do that in the Module 6 Discussion Activity.
-
-Module 6 Group Discussion Activity
-
-For this discussion, I'd like you to imagine that you’re going to write an imaginary essay with two or three main arguments. What would you argue if somebody asked you to explain why the Internet was created?
-
-Go to the Why Was the Internet Created? Discussion Topic and advance your thesis and structure. This will serve both to chat a bit about the history of the Internet, but also give us a chance to workshop our theses for our final research paper!
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
+At the beginning of this module, we explored the idea of the Internet being designed to resist nuclear armageddon. The reality is more nuanced — and the readings offer evidence that supports a competing argument.
 
 ---
 
@@ -1775,15 +1566,7 @@ For detailed instructions about how to participate, see the Group Discussion Act
 
 ## 7a. Introduction: Is Technology a Force For Good?
 
-Pause and Reflect: A Force for Good?
-
-Before we go back in time to the 1950s and 1960s, I would like to begin this module with a question. Take two minutes to reflect on and answer the following question:
-
-“Technology is a force for good.” Do you agree with that statement? Why?
-
-Note: This is for individual reflection only; you are not required to submit your answers.
-
-The reason I started with this question is that the major question we consider in this module is the transition between seeing technology as an oppressive force to seeing it as a liberatory one. This will have profound impact on how audiences receive the Internet and Web (and how they are understood today).
+The major question considered in this module is the transition between seeing technology as an oppressive force and seeing it as a liberatory one. This shift would have a profound impact on how audiences received the Internet and Web (and how they are understood today).
 
 Let me then start with the two main vignettes that the reading for this module, Fred Turner’s From Counterculture to Cyberculture . To me, they really do underscore the shift that is at play here – one of the most interesting transformations in the history of modern computing and technology.
 
@@ -1908,7 +1691,6 @@ Reflect on and respond to the following questions; they will help inform your re
 
 - How is it a catalogue? How is it different from a traditional catalogue?
 
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
 The Whole Earth Catalog lets readers imagine a community, as people all over the United States can chat and recommend products – in other words, they can communicate! It strikes a chord, and by 1971, 1,072 items are in the final catalogue and more importantly two and a half million copies are sold in total.
 
@@ -2059,23 +1841,6 @@ We will create a civilization of the Mind in Cyberspace. May it be more humane a
 
 (Barlow, 1996)
 
-Module 7 Group Discussion Activity
-
-Take a few minutes to read John Perry Barlow’s “Declaration of the Independence of Cyberspace,” referenced above, and reflect on the following questions. Then provide your thoughts in the Independence of Cyberspace Discussion Topic , making sure to connect his rhetoric to the earlier documents you’ve read in this module, including the "Whole Earth Catalog" and the evolving rhetoric around technology since the 1960s.
-
-- What is Barlow arguing?
-
-- What evidence does he use?
-
-- Do you find it a persuasive read?
-
-- What political position does he adopt?
-
-- Connect it to one of the other documents that you have read in this module. Is it more of the same, or something different?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
-
 ### So, what does this all mean?
 
 We have come a long way in the last half century. In the late 1950s and the 1960s, influential thought-leaders like Stewart Brand and others came of age being afraid of things as wide-ranging as the Soviet Union, the bureaucracy of the United States, and the mechanical form of machinery that some feared being swallowed up by. Over the following decades, they had pushed back against these forces and ultimately saw the prospect for liberation in technology.
@@ -2222,21 +1987,7 @@ We write proposals!
 
 ### Information Management: A Proposal
 
-Module 8b Individual Activity: How Berners-Lee conceptualizes the Web in his proposal to CERN
-
-One of your readings for this module was the proposal that Berners-Lee wrote in March 1989 to secure funding for this computer: Information Management: A Proposal .
-
-I would like you to read this proposal and respond to the following questions:
-
-- Where does the idea of a “Web” come from?
-
-- Are there any significant differences in how the Web works today with how it is outlined in the proposal?
-
-- What is wrong with trees or keyword-based systems?
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
-As Gillies and Cailliau note,
+Berners-Lee wrote the proposal in March 1989 to secure funding: “Information Management: A Proposal.” As Gillies and Cailliau note,
 
 the proposal contained all the ideas that would eventually make the World Wide Web. It even anticipated the sort of problems the Web would encounter as it spread about the globe.
 
@@ -2267,13 +2018,7 @@ The first catch was making sure that people who didn’t have a rare and expensi
 
 <em>Figure 4: Screenshot of the Line Mode Browser emulator . Image description . (CERN, 2013)</em>
 
-You can check this out yourself at Line Mode Browser 2013 . Click “Launch Line Mode Browser” at the top of the page and explore it for a bit. Then reflect on what it might have been like to use the early Web:
-
-- How is exploring a website different in the Line Mode Browser than in one of today's browsers?
-
-- What do we gain from “using a site” like this?
-
-- Should historians begin to view old documents through emulators like this?
+A working emulation of the line-mode browser is available at Line Mode Browser 2013, offering a sense of what it was like to navigate the early Web through a purely text-based interface.
 
 I go back and forth on whether we should be using old browsers to view websites, or just explore them using our modern Chrome, Firefox, Safari, or Edge browsers. I suppose, to me, it depends on the question. If the aesthetic really matters, then it is worth looking at a few pages using things like the Line-Mode Browser so we can understand how people used these documents and explored them at the time. But I don’t think it scales: I would not want to do all my reading for a project using these emulators.
 
@@ -2349,7 +2094,7 @@ All of this was happening while the Web dramatically grew. The percentage of Can
 
 <em>Figure 6: Percentage of Canadians with Internet access. © University of Waterloo</em>
 
-The Web was here to stay. In the next module, we will be exploring the users of the Web and the cultures they generate: from memes, to trolling, to spam. For now, let’s begin to think ahead to what these early websites looked like, as a way to think about Assignment 2 in this course.
+The Web was here to stay. In the next module, we will be exploring the users of the Web and the cultures they generate: from memes, to trolling, to spam. For now, let’s begin to think ahead to what these early websites looked like, as a way to think about the aesthetics and design of the early Web.
 
 ## 8d. Accessing the Early Web as a Historical Resource
 
@@ -2384,34 +2129,19 @@ The trick is in the structure of the URL that is being searched. The Internet Ar
 This is important because you might think you are keyword searching everything , but you are only searching for small amount. However, the keyword search can help you find websites, you just need to dig a bit deeper! In other words, it can find CNN, but it can’t find specific stories about goats or the University of Waterloo.
 
 
-### Let’s Look at a Page
+### Using the Wayback Machine
 
-Now that we have seen this, let’s look at a page.
-
-I would like you to select the University of Waterloo’s home page, and take a look at what you see here. To select the University of Waterloo’s page, you will need to click on the result like so.
+Selecting a domain such as the University of Waterloo homepage reveals a graph of how often the site has been crawled. Clicking a year and then a date in the calendar brings up the archived version of the site for that date.
 
 <em>Figure 2: Wayback Machine – University of Waterloo. (Internet Archive, n.d.)</em>
 
-You will then see a graph of how often the University of Waterloo has been crawled.
-
 <em>Figure 3: Wayback Machine, University of Waterloo calendar. (Internet Archive, n.d.)</em>
-
-Click on the top graph to select a “year” – it shows how many times a site has been crawled – and then click on the date in the calendar to find the site. Click on October 22, 1997 and then the date that it was crawled, and you will be brought back to the University of Waterloo’s website for that date.
 
 <em>Figure 4: University of Waterloo homepage from October 22, 1997. (Internet Archive, n.d.)</em>
 
-Now you can also browse forward and backwards using the arrows in the top navigational bar.
+The navigational bar at the top allows browsing forward and backward through archived versions.
 
-<em>Figure 5: Wayback Machine navigational bar. (Wayback Machine, "University of Waterloo Homepage")</em>
-
-Pause and Reflect: The Wayback Machine
-
-I would like you to take a few minutes now to play with this system.
-
-Try to find some sites of interest. Do you see anything that you thought would be collected? Anything that was not? Can you find your favourite band, or restaurant, or school?
-
-Note: This is for individual reflection only; you are not required to submit your answers.
-
+<em>Figure 5: Wayback Machine navigational bar. (Wayback Machine, “University of Waterloo Homepage”)</em>
 
 ### Finding Sites
 
@@ -2427,31 +2157,7 @@ Now try to navigate these directories to find sites of interest. You will notice
 
 I would now like you to begin to explore the Wayback Machine and sites of interest for your project.
 
-Now that you have got the hang of the Wayback Machine, I would like you to engage in a discussion in your small groups, as a way to begin to prepare for your final essay.
-
-Module 8 Group Discussion Activity
-
-Before you get started on this week's discussion activity, first look at some old university webpages from the 1990s:
-
-- If you are stumped, choose one like the University of Toronto, Laurier, York, Western, Alberta, Calgary, Dalhousie, or University of British Columbia – but the more creative the more fun! Feel free to explore universities in other countries too.
-
-- Try to be creative in what universities you look at!
-
-Then answer the following questions in The Early Web Discussion Topic .
-
-- What has changed from what you would see on a modern page today?
-
-- What’s the same?
-
-- What can we learn about this as a primary source about what life was like in the 1990s?
-
-- What can we not learn? What do we need to be careful about thinking about?
-
-These sorts of questions will help get you ready for the final assignment.
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
-Over the coming week, please begin to think about your essay.
+Exploring old university webpages from the 1990s through the Wayback Machine — from the University of Toronto to Dalhousie or the University of British Columbia — reveals what has changed and what has stayed the same, and illustrates what archived websites can and cannot tell us about life in that era.
 
 ---
 
@@ -2613,11 +2319,7 @@ Trolls began to use coding scripts and other tools to keep making fun of her on 
 
 This is beginning of “mass trolling” on social media sites like Facebook and Twitter. 4Chan assumes particular significance here, in part because it allows people to be anonymous unlike almost every other site, letting it become the epicentre of anonymous attacks! Another factor has been the rise of state actors such as Russia, who have arguably orchestrated large-scale troll attacks during events such as the 2016 U.S. Presidential election. Indeed, the Washington Post ’s timeline of “ How Russian Trolls Allegedly Tried to Throw the 2016 Election to Trump ” makes for fascinating reading about how trolls are now increasingly central to our lives, both online and off.
 
-I would like you to read this short excerpt from an article, which is a fascinating and provocative defence of trolls, and answer the questions below.
-
-Pause and Reflect: “Into the Wild Online,” A Mild Defence of Trolling
-
-Read the following section from Andreas Birkbak, Into the Wild Online: Learning from Internet Trolls :
+A fascinating and provocative defence of trolls appears in Andreas Birkbak's “Into the Wild Online: Learning from Internet Trolls”:
 
 Lakoff and Johnson (1980) offer an anecdote about how an Iranian student understood the phrase the ‘solution of our problems’ as referring to not a means of solving problems, but a boiled-down and concentrated version of the problems in question. ‘Solution’ was understood as a chemical metaphor, referring to a liquid mixture, rather than in the everyday sense. This metaphorical accident is suggestive of a way to think about problems not as things to be overcome, but things that can be ‘catalyzed’ or not (to stay with the chemical metaphor). Pursuing this idea, Lakoff and Johnson propose that “the reappearance of a problem is viewed as a natural occurrence rather than a failure on your part to find ‘the right way to solve it’.”[20]
 
@@ -2680,21 +2382,11 @@ Who was Mike Godwin? Godwin was a lawyer and frequent contributor to the Usenet 
 
 <em>Figure 3: Mike Godwin. (Hartwell, 2013)</em>
 
-Module 9d: Individual Activity: The Godwin's Law Meme
+In 1994, Godwin wrote an article in *Wired* magazine (“Meme, Counter-Meme”) describing his project in memetic engineering:
 
-In 1994, he wrote an article in Wired magazine (“ Meme, Counter-Meme ”) about this:
-
-It was back in 1990 that I set out on a project in memetic engineering. The Nazi-comparison meme, I'd decided, had gotten out of hand – in countless Usenet newsgroups, in many conferences on the Well, and on every BBS that I frequented, the labeling of posters or their ideas as "similar to the Nazis" or "Hitler-like" was a recurrent and often predictable event. It was the kind of thing that made you wonder how debates had ever occurred without having that handy rhetorical hammer.
+It was back in 1990 that I set out on a project in memetic engineering. The Nazi-comparison meme, I'd decided, had gotten out of hand – in countless Usenet newsgroups, in many conferences on the Well, and on every BBS that I frequented, the labeling of posters or their ideas as “similar to the Nazis” or “Hitler-like” was a recurrent and often predictable event. It was the kind of thing that made you wonder how debates had ever occurred without having that handy rhetorical hammer.
 
 (Godwin, 1994)
-
-Take a few minutes to read the article, and answer the following questions:
-
-- What argument does Godwin use in the article?
-
-- How did his meme spread?
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
 There are other early memes: from the smiley face [ :-) ], to “jumping the shark,” to the Bechdel Test, to the “Know Your Meme” website. Feel free to Google these if you are curious to learn more.
 
@@ -2733,9 +2425,6 @@ This, to me, raises several questions:
 
 - What should we do about Memes?
 
-We will revisit these questions in this module’s discussion activity.
-
-
 ### Can You Kill a Meme?
 
 The last question I want to leave this module with is,
@@ -2750,24 +2439,9 @@ Pepe is whatever you say he is, and he and I, the creator, say that he is love .
 
 (Furie, 2016)
 
-This raises a number of questions that I would like you to consider in this module’s discussion activity.
+These cases raise important questions about meme ownership, consent, and whether such material should be preserved for study or taken offline for privacy.
 
 <em>Figure 7: Pepe the frog meme. (Furie, 2005)</em>
-
-Module 9 Group Discussion Activity
-
-Reflect on the following questions, and post your responses in the Memes Discussion Topic .
-
-- Who owns a meme?
-
-- What do you do if a meme has a person in it who hasn’t given consent?
-
-- Should we leave these online for study or take them offline for privacy?
-
-- How do we even study such a rapidly-evolving field?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
 
 ### Conclusions
 
@@ -2788,7 +2462,7 @@ In the next module, we turn to the international dimensions of the Web: How it h
 
 ## 10a. Introduction
 
-In this course to date, we have advanced a fairly linear narrative:
+To this point, these notes have advanced a fairly linear narrative:
 
 - the development of the ARPANET and other communications networks,
 
@@ -2813,17 +2487,7 @@ Much of this history, of course, has been based in the United States and to some
 
 <em>Figure 2: Sample Internet access statistics from the World Bank database. code6d/E+/Getty Images</em>
 
-Module 10a Individual Activity: The World Bank's database
-
-Explore the World Bank’s database , and then answer the following questions:
-
-- What surprises you?
-
-- Do you think it is accurate to speak of the Internet as a global network?
-
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
-If the Internet is a global network today, it was not historically a global network. While some countries like France (as we discuss in Module 10b), had their own networks, most countries saw the advent of networked communication when they joined the U.S.-led Internet. Accordingly, histories have traditionally focused on what we have seen in the previous modules: the story of the ARPANET and TCP/IP.
+The World Bank’s database on Internet access worldwide reveals striking disparities. If the Internet is a global network today, it was not historically a global network. While some countries like France (as we discuss in Module 10b), had their own networks, most countries saw the advent of networked communication when they joined the U.S.-led Internet. Accordingly, histories have traditionally focused on what we have seen in the previous modules: the story of the ARPANET and TCP/IP.
 
 This gave North America a critical role in the history of the Internet, and gave English a dominant position on the Web too! As there was such a head start in North America, most early Web and Internet content was in English: so even people accessing the Internet from elsewhere in the world often needed to communicate in English. As we will discuss later in this module, there are legacies of this even today.
 
@@ -3049,9 +2713,7 @@ China, of course, has seen Internet development along very different lines. The 
 
 ## 10e. Web around the World: Three DIY Case Studies
 
-For this module you may have seen the extensive list of readings and become a bit scared – fear not. This week’s discussion activity largely revolves around three case studies of how the Internet has been received differently in three different Asian countries: Taiwan, Japan, and Korea.
-
-You will be assigned ONE of the following readings:
+This section examines three case studies of how the Internet has been received differently in three Asian countries: Taiwan, Japan, and Korea. The key readings are:
 
 - Li Shao Liang et al, "A Brief History of the Taiwanese Internet".
 
@@ -3080,35 +2742,6 @@ Finally, this chapter looks at Korea. Dongwon Jo argues that Internet use in Sou
 <em>Figure 3: Prevalence of the H-mail service in South Korea. Pohdee/iStock/Getty Images</em>
 
 Once you have read your assigned chapter, you are ready to participate in the Module 10 discussion.
-
-Module 10 Group Discussion Activity
-
-Each discussion group has been assigned to read one of the following three chapters:
-
-- Liang, Li Shao et al. "A Brief History of the Taiwanese Internet".
-
-- McClelland, Mark. "Early Computer Networks in Japan, 1984-1994".
-
-- Dongwon, Jo. "H-Mail and the Early Configuration of Online User Culture in Korea".
-
-Go to your LEARN discussion group to find out which chapter you’ve been assigned to read.
-
-Next, I would like you to address the following questions in a short discussion post. Aim for around 250 words, and then respond to at least one other post this week as well. Post your responses in the Web Around the World Discussion Topic .
-
-- What technology is actually being discussed?
-
-- What is the role of the user in the development and/or adoption of the technology?
-
-- Does the perceived use differ from the actual use?
-
-- What role does language play?
-
-- How does this history differ from the North American Internet/Web narrative? What similarities do you see?
-
-- Does the technology change users’ offline lives in any way? How?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
-
 
 ### Conclusions
 
@@ -3143,17 +2776,7 @@ After watching the documentary, take some time to reflect on the following quest
 
 - What are your thoughts about the video in general?
 
-Note: This is for individual reflection only; you are not required to submit your answer.
-
-We have seen the kind of rhetoric referenced in the video before, notably in Module 3, where we saw the Library of Alexandria that sought to be a universal repository of knowledge in the western world. The Internet Archive today tries to fill this role, as do other major cultural institutions around the world. In this module, we will be exploring what this means:
-
-- first, what web archives are,
-
-- second, why they matter, and
-
-- third, what this means for our world today where everything online, potentially, could end up in one of these repositories of knowledge.
-
-This module also relates directly to the essay that you are writing for this course, which uses web archives as the main source. It is an opportunity to reflect on some of the bigger issues you may be encountering during your research and writing process.
+The Internet Archive today tries to fill the role of a universal repository, as do other major cultural institutions around the world. This module explores what web archives are, why they matter, and what it means for our world that everything online could potentially end up in one of these repositories of knowledge.
 
 ## 11b. A Quick Introduction to Web Archives
 
@@ -3207,7 +2830,7 @@ The list goes on and on. If you want, you can be part of the historical record w
 
 Pause and Reflect: A Vitual Time Capsule
 
-Let’s finish this section with a quick thought exercise. Imagine a researcher in fifty years trying to reconstruct what life is like today. What three websites would help reconstruct your world? Keep a record of your selections somewhere, as they will be part of the discussion activity for this week.
+A useful thought exercise: imagine a researcher in fifty years trying to reconstruct what life is like today. What three websites would help reconstruct this world?
 
 Then, think about the following questions:
 
@@ -3273,7 +2896,7 @@ Let’s imagine, then, that we are researchers and we have begun to explore thes
 
 A thought experiment can help bring this into relief.
 
-Module 11c Individual Activity: Privacy and research – Where do you draw the line?
+### Privacy and Research
 
 Imagine a researcher in 50 years trying to see what life is like in 2018. What three public websites would make you feel like your privacy was violated if they used them for research?
 
@@ -3283,7 +2906,6 @@ Include the following in your response:
 
 - How should we deal with this problem? Just not collect? Anonymize the data? Wait until you are really old, or dead?
 
-For instructions about how to submit this activity, refer to the Individual Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
 We sometimes have difficulty understanding how best to use this material in research. One common refrain is that it’s public material, and thus we don’t think that there are serious ethical concerns with using it. But imagine all of the times that you’re in public but it would be inappropriate for somebody to listen or use what you are saying. If you are meeting at a coffee shop with a friend, and I sit at the next table and eavesdrop and then publish what you were saying. Even though the meeting was “public” it isn’t ethical to publish your conversation.
 
@@ -3293,20 +2915,7 @@ Similarly, if you used Twitter or Instagram and suddenly the University of Water
 
 - Scale at Work . If I take the tweets of hundreds or even thousands of people, or their websites, privacy is less of a concern – not entirely – than if I was just focusing on one or two websites.
 
-Pause and Reflect
-
-With these two considerations in mind (expectation of privacy and scale at work), imagine I begin collecting every single webpage that mentions the word “Waterloo”. Then answer the following four questions:
-
-- Is this ethical?
-
-- Should I try to get consent from people?
-
-- How can I store this information?
-
-- What does this mean for the study of history?
-
-Note: This is for individual reflection only; you are not required to submit your answers.
-
+These two considerations raise challenging questions: if a researcher begins collecting every single webpage that mentions “Waterloo”, is that ethical? Should consent be sought? How should the information be stored? What does this mean for the study of history?
 
 #### Problem 2: Scale
 
@@ -3354,7 +2963,7 @@ Even more tellingly, we could see what this website became:
 
 ## 11d. Creating our Own Cultural Datasets
 
-In Module 9 we explored some of the hands-on ways to explore web archives. In this section, I will present a mixture of hands-on and conceptual examples to see how these data are created – which can help inform the discussion activity that we will be having later.
+Module 9 explored some of the hands-on ways to explore web archives. This section presents a mixture of hands-on and conceptual examples to see how these data are created.
 
 
 ### Twitter
@@ -3417,10 +3026,6 @@ The page would then automatically archive the entirety of the University of Wate
 
 Take some time to explore these two tools: try saving a website with the Internet Archive , and then with WebRecorder.io . Any reactions or thoughts as you do so?
 
-Note: This is for individual reflection only; you are not required to submit your answers.
-
-We have had lots of food for thought as we have moved though the module. In the conclusions section, let’s revisit some of these major issues and bring them into relief through a discussion activity.
-
 ## 11e. Conclusions
 
 If you ever wonder about just how important these new and emerging forms of communication are, you can refer back to the main reading for this module: Zeynep Tufekci’s Twitter and Tear Gas: The Power and Fragility of Networked Protest . It really does show that Twitter and other forms of social media are not just for sharing pictures of breakfast, but are major sites to bring diverse and powerful groups of people together to effect meaningful change.
@@ -3449,17 +3054,6 @@ While there has been lots of hesitation, I do want to underscore the advantages.
 
 The era of “dead white men” being the main voices in our historical record may be over and this should be a good thing.
 
-Module 11 Group Discussion Activity
-
-For the Module 11 discussion activity, I would like you to reflect on the prompts that you've responded to throughout the module. Post your responses to the following questions in the Three Websites Discussion Topic .
-
-- Imagine a researcher in fifty years trying to reconstruct what life is like today. What three websites would you select to help reconstruct your world?
-
-- What website would you feel most uncomfortable with if it was preserved? Why?
-
-- How, in a paragraph, do you think we should be handling the ethical concerns you outlined in your previous answer? Be prepared to discuss with your classmates the ethical pros and cons of preserving and working with this type of material.
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated on the Course Schedule.
 
 ---
 
@@ -3468,48 +3062,37 @@ For detailed instructions about how to participate, see the Group Discussion Act
 
 ## 12a. Conclusion
 
-You have made it to the last module of the course! What we will do in this module is present some closing remarks that summarize where we have been in this course. Then, we will turn to the final exam and some of the methods with which you can approach studying. We hope that you have had as much fun moving your way through this course as we did creating it.
+This concluding module presents closing remarks that summarize the major themes covered throughout these notes.
 
 
 ### The Information Revolution
 
-We began this course in Module 1 by reflecting on the idea of the “disruptive information age”. I argued that while there’s a lot of hype and discourse around how today we are in this crazy age where everything is different and better than what has come before, and that we are living through a revolution the likes of which humanity has never seen. In fact, once we begin thinking historically, a very different picture begins to emerge.
+Module 1 began by reflecting on the idea of the “disruptive information age”. While there is much hype and discourse around how today everything is different and better than what has come before, and that we are living through a revolution the likes of which humanity has never seen, once we begin thinking historically, a very different picture begins to emerge.
 
 In the previous modules, we were introduced to many of the earlier technologies that had similar rhetoric around disruption and innovation: the printing press, the telegraph, the phone, and the conceptual idea of hypertext. Hopefully, we have now been able to complicate and form a more complete picture of what we mean by the “information age” or the “information revolution”. Remember, if you are calling something a revolution, you are making a historical claim!
 
-At the beginning of the course, you were asked to consider whether it makes sense to speak of an information revolution before we understand where we have come from. Now, after the entire semester of content, you are ready to begin to reflect on this: Do you think it’s proper to understand what’s going on as "the" information revolution? Or is it just “an” information revolution? Or is it not really a revolution at all?
+A key question emerges: is it proper to understand what is going on as “the” information revolution? Or is it just “an” information revolution? Or is it not really a revolution at all?
 
 <em>Figure 1: Our connected world: "the" information revolution? Jakarin2521/iStock/Getty Images</em>
 
 
 ### The Value of History
 
-In my opening remarks in Module 1, I introduced a quotation from ex-Uber engineer Anthony Levandowski who wrote the following in a New Yorker article entitled “ Did Uber Steal Google’s Intellectual Property?"
+Module 1 opened with a quotation from ex-Uber engineer Anthony Levandowski who wrote the following in a New Yorker article entitled “ Did Uber Steal Google’s Intellectual Property?"
 
 I don’t even know why we study history. It’s entertaining, I guess — the dinosaurs and the Neanderthals and the Industrial Revolution, and stuff like that. But what already happened doesn’t really matter. You don’t need to know that history to build on what they made. In technology, all that matters is tomorrow.
 
 (Levandowski, 2018)
 
-Module 12 Group Discussion Activity
-
-In your final discussion activity, reflect on the following, and post your responses in the Information Revolution? Discussion Topic .
-
-- Do you first think that it is proper to understand our contemporary moment as "the" information revolution?
-
-- And, do you think we need history to understand today – and tomorrow?
-
-For detailed instructions about how to participate, see the Group Discussion Activities page. Be sure to post your responses by the date indicated in the Course Schedule.
-
-
 ### We’ve Come a Long Way…
 
-We have covered a lot of ground in this course. We began with the earliest forms of recorded human “conversation” in the caves of Spain, Argentina, and Indonesia, to inscriptions on stone in Mesopotamia, to the Gutenberg Press, and printing objects on parchment and vellum. It was with Gutenberg that we began to muse about the potential of a “revolution”, where we could begin to think of human history as being divided into two epochs: before printing press and after printing press.
+These notes have covered a lot of ground. We began with the earliest forms of recorded human “conversation” in the caves of Spain, Argentina, and Indonesia, to inscriptions on stone in Mesopotamia, to the Gutenberg Press, and printing objects on parchment and vellum. It was with Gutenberg that we began to muse about the potential of a “revolution”, where we could begin to think of human history as being divided into two epochs: before printing press and after printing press.
 
 <em>Figure 2: Timeline showing the pivotal role of the printing press (1455) in human history. Buenaventuramariano/iStock/Getty Images, Nadiinko/iStock/Getty Images</em>
 
 We also looked at various methods of transmitting information: first through vision (the optical telegraph, long lines of towers stretching across France and England) and sound (loud bangs when clocks were synchronized), and then of course through electricity. The telegraph would eventually connect much of the world – transatlantic and transpacific cables connecting areas of the world that previously had taken weeks to communicate.
 
-And, then, of course – the “Internet” part of the course. As information density began to grow dramatically, ideas of hypertext began to dramatically challenge the linearity of text, allowing us to think conceptually about how computers could present and connect information in novel ways. In some ways, much of this potential saw fruition through the ARPANET, but ultimately through the ideas of the World Wide Web, which has reshaped our world – in a truly global fashion, as we have seen – in the few decades since its availability in 1991. In turn, all of this is further transforming how we as a society understand ourselves, as we record far more historical information than ever before.
+And, then, of course – the “Internet” portion. As information density began to grow dramatically, ideas of hypertext began to dramatically challenge the linearity of text, allowing us to think conceptually about how computers could present and connect information in novel ways. In some ways, much of this potential saw fruition through the ARPANET, but ultimately through the ideas of the World Wide Web, which has reshaped our world – in a truly global fashion, as we have seen – in the few decades since its availability in 1991. In turn, all of this is further transforming how we as a society understand ourselves, as we record far more historical information than ever before.
 
 <em>Figure 4. If telegraphs took minutes, today we take it for granted that a smartphone can almost instantly communicate with people all over the world. Warchi/E+/Getty Images</em>
 
@@ -3518,11 +3101,11 @@ And, then, of course – the “Internet” part of the course. As information d
 
 <em>Figure 5: Edgar Allan Poe. ivan-96/iStock/Getty Images</em>
 
-The last thing I want to leave you with, before switching gears to talk about some of the summative activities we will be doing to get ready for the final exam, is an example of the sheer quantity of data that’s now being generated every single day.
+A final example underscores the sheer quantity of data now being generated every single day.
 
 Let’s consider Edgar Allan Poe (1809-1849), the poet best known for poems like “The Raven”. He is one of the most celebrated and influential American writers of the nineteenth century. If you are a literary scholar and you want to study Poe, you have 422 letters written by him to figure out his life.
 
-Just think. Who here has “published” more than he has? All of you. You all publish more than Edgar Allan Poe, and will leave more behind, and in theory, you have the ability to reach more people than him. You live in a world dominated by communication: through text, through images, through videos, and beyond. Of course, we might close by asking: Is that a good thing?
+Consider: most people alive today have already “published” more than Poe ever did, and will leave more behind. We live in a world dominated by communication — through text, through images, through videos, and beyond. The question remains: is that a good thing?
 
 <em>Figure 6: Next time you worry about how much time you spend on your phone, just think of yourself as adding to our collective historical record! skynesher/E+/Getty Images</em>
 
