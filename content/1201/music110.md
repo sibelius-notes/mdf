@@ -647,7 +647,7 @@ It's clearly gamelan.
     - polyrhythm
 
 # Midterm Exam
-Test 1. Check my [review notes](https://notes.sibeliusp.com/pdfs/1201/mus110_unit1.pdf).
+Test 1. Check my [review notes](https://pdf.sibeliusp.com/1201/mus110_unit1.pdf).
 
 # Western European Music: Is Music a Universal Language?
 Classical music is dead. ? The limit.
