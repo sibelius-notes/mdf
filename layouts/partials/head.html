@@ -7,7 +7,13 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="googlebot" content="noindex,nofollow,noarchive">
 {{ end }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+{{ $pageTitle := .Site.Title }}
+{{ if eq .Kind "404" }}
+  {{ $pageTitle = printf "404 Page Not Found | %s" .Site.Title }}
+{{ else if not .IsHome }}
+  {{ $pageTitle = printf "%s | %s" .Title .Site.Title }}
+{{ end }}
+<title>{{ $pageTitle }}</title>
 <link rel="icon" href="/favicon.ico">
 
 <!-- KaTeX -->

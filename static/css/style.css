@@ -163,6 +163,73 @@ body {
 .content > article > p { margin-bottom: 1rem; }
 .content > article > ul { padding-left: 1.5rem; margin-bottom: 1rem; }
 
+/* === 404 Page === */
+.error-page {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.error-code {
+  margin-bottom: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sidebar-active);
+}
+.error-page > h1 {
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  line-height: 0.95;
+  color: var(--heading);
+  margin-bottom: 0;
+}
+.error-copy {
+  max-width: 42rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.error-action-primary,
+.error-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: border-color 0.15s, color 0.15s, background 0.15s, transform 0.1s;
+}
+.error-action-primary {
+  background: var(--link);
+  border-color: var(--link);
+  color: #fff;
+}
+.error-action-primary:hover {
+  background: var(--link-hover);
+  border-color: var(--link-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.error-action-secondary {
+  background: var(--bg-card);
+  color: var(--heading);
+}
+.error-action-secondary:hover {
+  border-color: var(--link);
+  color: var(--link);
+  transform: translateY(-1px);
+}
+
 /* === Course Grid === */
 .course-grid {
   display: grid;
@@ -461,4 +528,7 @@ sup { font-size: 0.75em; }
   .course-content h3 { font-size: 1rem; }
   .course-grid { grid-template-columns: 1fr; }
   .search-overlay { left: 0; padding: 1rem; }
+  .error-page { min-height: auto; }
+  .error-page > h1 { line-height: 1; }
+  .error-actions { flex-direction: column; }
 }
