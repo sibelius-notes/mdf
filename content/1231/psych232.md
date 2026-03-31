@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 232: Psychology of Evil"
+subjects: "PSYCH"
 prof: "Christopher Burris"
 ---
 

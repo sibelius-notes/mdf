@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 420: Introduction to Computational Neuroscience Methods"
+subjects: "PSYCH"
 prof: "Britt Anderson"
 ---
 

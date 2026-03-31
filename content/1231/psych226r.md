@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 226R: Positive Psychology"
+subjects: "PSYCH"
 prof: "Denise Marigold"
 ---
 

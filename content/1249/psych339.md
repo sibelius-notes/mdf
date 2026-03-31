@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 339: Personnel Psychology"
+subjects: "PSYCH"
 prof: "James Beck"
 ---
 

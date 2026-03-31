@@ -1,5 +1,6 @@
 ---
 title: "ANTH 465: Borders, Boundaries, and Crossings"
+subjects: "ANTH"
 prof: "Dr. Veronica Ferreri"
 ---
 

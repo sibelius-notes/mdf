@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 218: Psychology of Death and Dying"
+subjects: "PSYCH"
 prof: "Christopher Burris"
 ---
 

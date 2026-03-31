@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 318: Psychosexual Organization"
+subjects: "PSYCH"
 prof: "BJ Rye"
 ---
 

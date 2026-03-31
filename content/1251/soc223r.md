@@ -1,5 +1,6 @@
 ---
 title: "SOC 223R: Deviance: Perspectives and Processes"
+subjects: "SOC"
 prof: "Neisha Cushing"
 ---
 

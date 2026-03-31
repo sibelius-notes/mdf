@@ -1,5 +1,6 @@
 ---
 title: "GERON 352: Sociology of Aging"
+subjects: "GERON"
 prof: "Elena Neiterman"
 ---
 

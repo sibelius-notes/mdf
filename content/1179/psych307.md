@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 307: Human Neuropsychology"
+subjects: "PSYCH"
 prof: "James Danckert"
 ---
 

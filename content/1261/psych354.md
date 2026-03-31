@@ -1,5 +1,6 @@
 ---
 title: "PSYCH 354: Interpersonal Relations"
+subjects: "PSYCH"
 prof: "Dr. John K. Rempel"
 ---
 
