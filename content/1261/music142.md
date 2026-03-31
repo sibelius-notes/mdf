@@ -84,13 +84,13 @@ This is also why vocal style matters so much. In a lot of postwar American pop, 
 
 Two technical ideas often come up in discussions of enka. One is the use of pentatonic resources often glossed through the **yonanuki** scale family, where certain scale degrees are omitted to create a characteristic Japanese melodic profile. The other is **kobushi**, a style of vocal ornamentation and wavering inflection that helps produce the intense, crying quality listeners associate with the genre. I am simplifying here, but the important point is that enka's emotional effect is not only in the lyric. It is built into the pitch language and vocal delivery.
 
-That combination made figures such as **Misora Hibari** culturally enormous. She was not just a hit singer. She became, for many listeners, an emblem of continuity. Once a singer reaches that level, the star is no longer just performing songs. The star is performing a public emotional archive.
+That combination made figures such as **Misora Hibari (美空云雀)** culturally enormous. She was not just a hit singer. She became, for many listeners, an emblem of continuity. Once a singer reaches that level, the star is no longer just performing songs. The star is performing a public emotional archive.
 
 And what is the archive preserving? Often a lost hometown, lost love, patient suffering, or an idealized rural Japan remembered from within an urban-industrial present. That is one reason enka stayed so powerful among older postwar audiences. It gave them a language for feeling dislocated by modernization while still participating in the modern media system itself.
 
 So right from the beginning, Japanese popular music is giving us a theme that will return throughout this course: modern popular music does not always sound modernist. Sometimes its power comes from how effectively it packages loss.
 
-Listening: Misora Hibari, later-career enka recordings. Listen for vibrato, ornament, and the way emotional intensity is staged as dignity rather than collapse.
+Listening: Misora Hibari (美空云雀), later-career enka recordings. Listen for vibrato, ornament, and the way emotional intensity is staged as dignity rather than collapse.
 
 ## Part B: Kayokyoku, Postwar Mainstream, and the Idol System
 
@@ -104,7 +104,7 @@ If you want a concrete institutional symbol of this world, think of **Johnny's**
 
 By the late 1960s, **Group Sounds** brought the British beat-group format into the Japanese market. Again, this is not a trivial footnote. In Music 140, the British Invasion was one of the key moments when American popular music got reflected back to itself from abroad. Group Sounds is a similar reminder that global pop is often made through echo and return. The Japanese market did not passively receive the Beatles era. It answered it.
 
-And from there the field keeps widening. Idol culture becomes more organized, youth marketing intensifies, and the distinction between singer, actor, television personality, and commercial symbol gets thinner. Figures such as **Matsuda Seiko** became especially important because they stabilized the female idol as a major commercial role: carefully branded, highly visible, and able to operate simultaneously through records, television, and youth fashion culture.
+And from there the field keeps widening. Idol culture becomes more organized, youth marketing intensifies, and the distinction between singer, actor, television personality, and commercial symbol gets thinner. Figures such as **Matsuda Seiko (松田圣子)** became especially important because they stabilized the female idol as a major commercial role: carefully branded, highly visible, and able to operate simultaneously through records, television, and youth fashion culture.
 
 By the time we get to later J-pop, this ecosystem is already in place.
 
@@ -124,11 +124,11 @@ And it is important to tie that fantasy to history. City pop is inseparable from
 
 Now we can talk directly about **city pop**. One reason this genre fascinates people now is that it sounds like a dream of late twentieth-century urban life: polished bass lines, clean drums, jazz and soft-rock harmony, relaxed but technically careful singing, and arrangements that suggest highways, neon, night air, expensive stereos, and a middle-class consumer future.
 
-Artists such as **Tatsuro Yamashita**, **Mariya Takeuchi**, **Taeko Onuki**, and **Anri** helped define that sound world. The important thing is not that they all sound the same. The important thing is that they helped stabilize a style in which affluence, metropolitan cool, and studio refinement all reinforced one another. If enka sounded like memory, city pop sounded like mobility.
+Artists such as **Tatsuro Yamashita (山下达郎)**, **Mariya Takeuchi (竹内玛莉亚)**, **Taeko Onuki (大贯妙子)**, and **Anri (杏里)** helped define that sound world. The important thing is not that they all sound the same. The important thing is that they helped stabilize a style in which affluence, metropolitan cool, and studio refinement all reinforced one another. If enka sounded like memory, city pop sounded like mobility.
 
-Mariya Takeuchi's **"Plastic Love"** is the standard contemporary reference point, and for good reason. The harmony loops with the polished inevitability of sophisticated adult pop, the groove is light but insistent, and the song's emotional distance is part of its charm. The famous opening progression often gets heard through a smooth cycle like `Fm7 - Bb7 - Ebmaj7 - Abmaj7`, which immediately tells you this is not rock minimalism. It is harmony as atmosphere.
+Mariya Takeuchi (竹内玛莉亚)'s **"Plastic Love"** is the standard contemporary reference point, and for good reason. The harmony loops with the polished inevitability of sophisticated adult pop, the groove is light but insistent, and the song's emotional distance is part of its charm. The famous opening progression often gets heard through a smooth cycle like `Fm7 - Bb7 - Ebmaj7 - Abmaj7`, which immediately tells you this is not rock minimalism. It is harmony as atmosphere.
 
-And Mariya Takeuchi is a particularly good artist through whom to hear city pop because her career contains several Japanese pop histories at once. Her official biography notes that she studied in the United States as an exchange student, debuted in 1978, and scored major early pop success before stepping back from relentless live activity. That background matters. She belongs to a generation of Japanese artists whose ears were already shaped by transpacific listening habits, and who could therefore absorb soft rock, AOR, Brill Building-style craftsmanship, and Japanese pop sensibility without feeling they were crossing some unbridgeable boundary.
+And Mariya Takeuchi (竹内玛莉亚) is a particularly good artist through whom to hear city pop because her career contains several Japanese pop histories at once. Her official biography notes that she studied in the United States as an exchange student, debuted in 1978, and scored major early pop success before stepping back from relentless live activity. That background matters. She belongs to a generation of Japanese artists whose ears were already shaped by transpacific listening habits, and who could therefore absorb soft rock, AOR, Brill Building-style craftsmanship, and Japanese pop sensibility without feeling they were crossing some unbridgeable boundary.
 
 Official discography pages matter here too. They show that **"Plastic Love"** was on the 1984 album *Variety* and then appeared as a 12-inch single in 1985. Warner's later reissue page is revealing because it explicitly frames the song as a beloved city-pop classic that, decades later, is still generating covers and worldwide affection. That tells us the song's afterlife is not a fan myth. Even the label recognizes it as a transgenerational object now.
 
@@ -140,9 +140,9 @@ But city pop also teaches us something crucial about the digital era. Its curren
 
 So city pop has two lives. It first belongs to the late-Shōwa Japanese commercial world. Then it belongs to the internet's nostalgic archive. Both lives are real. The second did not erase the first; it reframed it.
 
-And from there the chapter closes on an East Asian circulation question. Japanese styles did not stay inside Japan. Japanese songs were covered in Taiwan and Hong Kong. The Japanese market shaped what listeners in other Sinophone markets heard as modern, stylish, and commercially viable. This is one reason **Teresa Teng's** Japanese career matters, and one reason **Faye Wong's** relation to Japanese pop aesthetics matters too. Cultural theorist Koichi Iwabuchi's argument about Japanese "cultural odorlessness" is useful here: some Japanese media could travel because it seemed modern and adaptable without always announcing itself as aggressively national.
+And from there the chapter closes on an East Asian circulation question. Japanese styles did not stay inside Japan. Japanese songs were covered in Taiwan and Hong Kong. The Japanese market shaped what listeners in other Sinophone markets heard as modern, stylish, and commercially viable. This is one reason **Teresa Teng (邓丽君)**'s Japanese career matters, and one reason **Faye Wong (王菲)**'s relation to Japanese pop aesthetics matters too. Cultural theorist Koichi Iwabuchi's argument about Japanese "cultural odorlessness" is useful here: some Japanese media could travel because it seemed modern and adaptable without always announcing itself as aggressively national.
 
-Listening: Mariya Takeuchi, "Plastic Love"; Tatsuro Yamashita, selected 1980s tracks.
+Listening: Mariya Takeuchi (竹内玛莉亚), "Plastic Love"; Tatsuro Yamashita (山下达郎), selected 1980s tracks.
 
 ---
 
@@ -178,7 +178,7 @@ The **Oricon** charts matter here not just as charts, but as evidence of a robus
 
 This is where Music 141's technology story needs refinement. The move from CD to MP3 to streaming was real, but it was not identical everywhere. IFPI's reports continue to show Asia's centrality to physical sales, and Japan remained one of the key reasons why. In other words, format history is regional history.
 
-Artists such as **Utada Hikaru**, **Ayumi Hamasaki**, and **Mr. Children** belong in this discussion not simply because they sold well, but because they reveal the strength of a large domestic field. A market this strong produces its own classics, its own arguments, and its own timeline.
+Artists such as **Utada Hikaru (宇多田光)**, **Ayumi Hamasaki (滨崎步)**, and **Mr. Children** belong in this discussion not simply because they sold well, but because they reveal the strength of a large domestic field. A market this strong produces its own classics, its own arguments, and its own timeline.
 
 Utada is especially important because **First Love** became the best-selling album in Japanese history. Oricon reporting on later chart records still uses Utada's run as a benchmark. That tells you how canonical that album remained. And again, the point is not just sales. It is that one domestic market was large enough to produce an album whose symbolic weight did not depend on Anglo-American crossover.
 
@@ -202,7 +202,7 @@ Listening:
 
 ## Part C: Hatsune Miku and the New Idea of the Pop Star
 
-Now we get to one of the most important figures in the whole course, even though she is not a person. **Hatsune Miku** was released by Crypton Future Media in 2007 as a singing voice synthesizer built around a character design and a vocal identity. On the official Crypton pages, Miku is described not just as software but as the center of a worldwide creator culture: over 100,000 songs, 170,000 uploaded YouTube videos, and a huge participatory community built through remixing, illustration, performance, and circulation.
+Now we get to one of the most important figures in the whole course, even though she is not a person. **Hatsune Miku (初音未来)** was released by Crypton Future Media in 2007 as a singing voice synthesizer built around a character design and a vocal identity. On the official Crypton pages, Miku is described not just as software but as the center of a worldwide creator culture: over 100,000 songs, 170,000 uploaded YouTube videos, and a huge participatory community built through remixing, illustration, performance, and circulation.
 
 Why does that matter so much? Because Miku changes the direction of authorship. In older pop systems, the label and manager usually build a star around a performer. In the Miku ecosystem, the character becomes a kind of shared instrument, and thousands of creators can write into that instrument. The "star" is no longer anchored to one body.
 
@@ -212,19 +212,19 @@ Crypton's decision to encourage participatory creation also matters. The Miku co
 
 The underlying synthesis engine came out of **Yamaha's Vocaloid** technology, but the cultural breakthrough happened on platforms such as **Niconico**, where "producer" culture became visible. Users did not simply download a voicebank and disappear into private composition. They uploaded, commented, remixed, animated, and collaboratively canonized songs.
 
-This is why it makes sense to describe Vocaloid as a democratizing force in songwriting, at least relative to older label pipelines. The threshold for participation dropped. And once that happened in Japan, related virtual-singer ecosystems could spread elsewhere, including Chinese-language platforms and characters such as **Luo Tianyi**.
+This is why it makes sense to describe Vocaloid as a democratizing force in songwriting, at least relative to older label pipelines. The threshold for participation dropped. And once that happened in Japan, related virtual-singer ecosystems could spread elsewhere, including Chinese-language platforms and characters such as **Luo Tianyi (洛天依)**.
 
 ## Part D: Contemporary Japan, Anime, and Internet-Native Pop
 
 The current Japanese scene is complicated, but one pattern is unmistakable: internet-native production and anime-linked circulation now sit much closer to the center of the market than they once did. The path from online culture to mass recognition is far shorter than it was in the broadcast era.
 
-That helps explain artists such as **Ado**, **YOASOBI**, **Kenshi Yonezu**, and **Fujii Kaze**. They are not interchangeable artists, but together they show how Japanese pop can move through streaming, social media, animation, and singer-songwriter traditions all at once. Anime is especially important here. It is not just another promotional outlet. It is one of the major engines through which Japanese music reaches global listeners.
+That helps explain artists such as **Ado**, **YOASOBI (夜游人)**, **Kenshi Yonezu (米津玄师)**, and **Fujii Kaze (藤井风)**. They are not interchangeable artists, but together they show how Japanese pop can move through streaming, social media, animation, and singer-songwriter traditions all at once. Anime is especially important here. It is not just another promotional outlet. It is one of the major engines through which Japanese music reaches global listeners.
 
 Yonezu is particularly revealing because he first became widely known online under the name **Hachi** in the Vocaloid world before turning into one of Japan's biggest solo artists. That arc summarizes a huge structural change in the industry: internet-native creativity can now lead directly into mainstream stardom.
 
 Likewise, **Ado's "Usseewa"** became a generational flashpoint because of its abrasive energy and anti-authoritarian attitude, while **YOASOBI's "Idol"** showed how tightly anime circulation and chart success can now work together. **Fujii Kaze**, meanwhile, represents a different lane: jazz-soul-pop fluency and singer-songwriter musicianship inside a market still large enough to reward that path.
 
-And again, Fujii Kaze deserves more than a passing mention. The official profile is unusually helpful because it maps the whole emergence clearly. Fujii grew up on classical piano under his father's influence, uploaded piano covers to YouTube from the age of twelve, and only later entered the professional industry after those videos attracted attention. That is an archetypal 2020s origin story: not a club scene, not a TV talent show, not a trainee system, but an internet archive of visible practice.
+And again, Fujii Kaze (藤井风) deserves more than a passing mention. The official profile is unusually helpful because it maps the whole emergence clearly. Fujii grew up on classical piano under his father's influence, uploaded piano covers to YouTube from the age of twelve, and only later entered the professional industry after those videos attracted attention. That is an archetypal 2020s origin story: not a club scene, not a TV talent show, not a trainee system, but an internet archive of visible practice.
 
 This matters because you can hear that background in the music. Fujii does not sound like a pure idol vocalist, nor like a straightforward rock frontman. He sounds like a pianist with wide ears: jazz voicings, soul phrasing, pop hooks, gospel-like uplift, and an unusual comfort moving between groove and prayerful stillness. In a lot of Japanese mainstream history, those worlds sat somewhat apart. Fujii makes them coexist naturally.
 
@@ -236,7 +236,7 @@ Fujii's later international rise also tells us something important about the pre
 
 That distinction matters. It suggests that Japan's supposed "self-sufficient domestic market" does not mean inward-looking isolation. It means Japan can generate artists whose local grounding is strong enough that international circulation does not need to erase it.
 
-So if Utada represents a cross-Pacific J-pop modernity of late-1990s and 2000s transformation, Fujii Kaze represents a 2020s version: pianist-rooted, spiritually inflected, internet-native, globally legible without sounding flattened for export.
+So if Utada Hikaru (宇多田光) represents a cross-Pacific J-pop modernity of late-1990s and 2000s transformation, Fujii Kaze (藤井风) represents a 2020s version: pianist-rooted, spiritually inflected, internet-native, globally legible without sounding flattened for export.
 
 Listening:
 - a piano-cover clip from Fujii's pre-debut YouTube phase
@@ -260,7 +260,7 @@ This is exactly the kind of genre Music 142 cares about. Trot is not just music.
 
 And yet trot survived all of those arguments. In fact, it revived. Recent television competitions and variety culture helped return it to major public visibility. A genre once written off as old-fashioned became newly available as nostalgia, camp, emotional authenticity, and national memory all at once.
 
-In Korean discussions you will often see the term **ppongjjak** used for the characteristic two-beat feel associated with trot. And if you want concrete names, **Lee Mi-ja** and her famous association with songs such as **"Camellia Lady"** become crucial to the canon, as does the major male-star lineage represented by **Na Hoon-a**. These artists helped stabilize trot as an emotional mainstream before the idol era displaced it from the youth center.
+In Korean discussions you will often see the term **ppongjjak** used for the characteristic two-beat feel associated with trot. And if you want concrete names, **Lee Mi-ja (李美子)** and her famous association with songs such as **"Camellia Lady"** become crucial to the canon, as does the major male-star lineage represented by **Na Hoon-a (罗勋儿)**. These artists helped stabilize trot as an emotional mainstream before the idol era displaced it from the youth center.
 
 The 2020s **Mr. Trot** revival matters for the same reason city pop's online return mattered in Japan: it proves older genres are never simply dead. Under the right media conditions, they come back carrying new meanings.
 
@@ -276,11 +276,11 @@ So before K-pop becomes a system, there is already a Korean emotional grammar in
 
 ## Part C: Shin Joong-hyun, Kim Min-ki, and Protest
 
-Now let us turn to two crucial figures. **Shin Joong-hyun** is widely remembered as a pioneer of Korean rock. *Korea JoongAng Daily* describes him as a "pioneer of the rock genre" in Korea, and the Berklee honorary degree article explicitly links him to the foundation on which later South Korean popular music was built.
+Now let us turn to two crucial figures. **Shin Joong-hyun (申重铉)** is widely remembered as a pioneer of Korean rock. *Korea JoongAng Daily* describes him as a "pioneer of the rock genre" in Korea, and the Berklee honorary degree article explicitly links him to the foundation on which later South Korean popular music was built.
 
 Shin matters for another reason too: the dictatorship understood that music mattered. Reporting in *The Guardian* and *Korea JoongAng Daily* recounts the famous episode in which the Park Chung-hee regime asked Shin to write a song praising the president. He refused. Instead he wrote "Beautiful Rivers and Mountains," and the consequences were severe: blacklisting, bans, repression, and later torture and imprisonment under authoritarian rule. That is not peripheral context. That is the point. The state knew songs mattered.
 
-**Kim Min-ki** gives us a parallel but different story. *The Korea Times* described "Morning Dew" as a powerful symbol of resistance against dictatorship in South Korea. When a single song becomes shorthand for democratization, it stops being just repertoire. It becomes civic memory.
+**Kim Min-ki (金敏基)** gives us a parallel but different story. *The Korea Times* described "Morning Dew" as a powerful symbol of resistance against dictatorship in South Korea. When a single song becomes shorthand for democratization, it stops being just repertoire. It becomes civic memory.
 
 At this point the comparison to earlier courses should be obvious. This chapter sits in the same structural space as American protest folk in Music 140 and Chinese rock in Music 141. The names and sounds change. The pattern does not. Under pressure, popular music becomes one of the places where a society rehearses dissent.
 
@@ -288,7 +288,7 @@ At this point the comparison to earlier courses should be obvious. This chapter 
 
 From the outside, people often mistake K-pop for the whole of Korean popular music. But long before the current idol era, Korean **ballads** were already central to mainstream listening. They dominated radio, television, and drama soundtracks, and they established a set of vocal expectations: controlled but intense delivery, emotional directness, and the importance of melodic climax.
 
-Artists such as **Shin Seung-hun** and **Lee Moon-sae** help make that tradition concrete. And when we jump forward into Korean R&B and adjacent scenes, singers such as **Crush**, **DEAN**, and **Heize** show that the ballad habit did not disappear. It got translated into smoother, groove-oriented, urban contemporary forms.
+Artists such as **Shin Seung-hun (申升勋)** and **Lee Moon-sae (李文世)** help make that tradition concrete. And when we jump forward into Korean R&B and adjacent scenes, singers such as **Crush**, **DEAN**, and **Heize** show that the ballad habit did not disappear. It got translated into smoother, groove-oriented, urban contemporary forms.
 
 This matters because K-pop did not emerge on empty ground. It emerged in a culture already comfortable with vocal melodrama, carefully trained performance, and strong audiovisual mediation. Even when idol tracks lean dance-oriented, the Korean market never fully abandons the ballad ideal.
 
@@ -470,7 +470,7 @@ Concrete examples help here: singer-songwriters such as **Prateek Kuhad**, elect
 
 ## Part A: The Jay Chou Breakthrough
 
-Music 141 already gave serious attention to Teresa Teng, Lo Ta-yu, Jonathan Lee, David Tao, Cantopop, and Cui Jian. But one name remained too large to leave mostly implicit: **Jay Chou**.
+Music 141 already gave serious attention to Teresa Teng (邓丽君), Lo Ta-yu (罗大佑), Jonathan Lee (李宗盛), David Tao (陶喆), Cantopop, and Cui Jian (崔健). But one name remained too large to leave mostly implicit: **Jay Chou (周杰伦)**.
 
 Jay Chou matters because he reorganized early twenty-first-century Mandopop around a new kind of center. *TIME Asia* put him on its cover in March 2003 and called him "Asia's hottest pop star." That piece is valuable not because magazines are always right, but because it captures the scale of the moment. By the early 2000s, Chou was no longer just a successful singer. He had become a regional event.
 
@@ -506,7 +506,7 @@ The textbook example is often "East Wind Breaks," because it helped establish th
 
 ## Part D: JJ Lin and the Other Axis of Mandopop
 
-If Jay Chou represents one major axis of Mandopop, **JJ Lin** represents another. The most useful way to hear Lin is comparatively. If Jay is often discussed through groove, production personality, and stylistic surprise, JJ is often discussed through melodic strength, vocal control, and emotional directness.
+If Jay Chou (周杰伦) represents one major axis of Mandopop, **JJ Lin (林俊杰)** represents another. The most useful way to hear Lin is comparatively. If Jay is often discussed through groove, production personality, and stylistic surprise, JJ is often discussed through melodic strength, vocal control, and emotional directness.
 
 That difference matters because it proves Mandopop did not move into the 2000s with a single ideal of excellence. Several ideals coexisted. Taiwan, Singapore, Hong Kong, and the mainland all interacted with those ideals differently, but listeners could still hear the contrast clearly.
 
@@ -516,7 +516,7 @@ If you want concrete song anchors, **"Jiangnan"** became one of the signatures o
 
 So Chapter 7 is really about field formation. Jay Chou did not rule a vacuum. He ruled a crowded, multilingual, regionally networked pop world in which JJ Lin helped define a parallel mainstream.
 
-The industrial triangle also matters. **Taiwan** retained enormous prestige as a creative center, the **Golden Melody Awards** remained a key canon-forming institution, **Hong Kong** retained symbolic and bilingual importance through figures such as **Eason Chan**, and the mainland's scale increasingly reshaped the economics. Once platforms such as **QQ Music** and **NetEase Cloud Music** entered the center of monetization, the triangle became even more unequal and more interconnected at the same time.
+The industrial triangle also matters. **Taiwan** retained enormous prestige as a creative center, the **Golden Melody Awards** remained a key canon-forming institution, **Hong Kong** retained symbolic and bilingual importance through figures such as **Eason Chan (陈奕迅)**, and the mainland's scale increasingly reshaped the economics. Once platforms such as **QQ Music** and **NetEase Cloud Music** entered the center of monetization, the triangle became even more unequal and more interconnected at the same time.
 
 ---
 
@@ -524,9 +524,9 @@ The industrial triangle also matters. **Taiwan** retained enormous prestige as a
 
 ## Part A: Female Soloists After Faye Wong
 
-One consequence of compressed music history is that women often get reduced to one or two canonical names. Music 141 already gave real weight to **Faye Wong**, but the decades after her cannot be told through a single line of descent. The field widened too much.
+One consequence of compressed music history is that women often get reduced to one or two canonical names. Music 141 already gave real weight to **Faye Wong (王菲)**, but the decades after her cannot be told through a single line of descent. The field widened too much.
 
-That is why this chapter deliberately makes space for later female stars such as **G.E.M.**, **Bibi Zhou**, **A-Lin**, **Hebe Tien**, and **Angela Zhang**. I am not claiming they all belong to the same style or career model. The point is more basic: Chinese-language popular music after 2000 continued to be shaped by female singers who changed expectations around vocal power, stage image, songwriting participation, and audience address.
+That is why this chapter deliberately makes space for later female stars such as **G.E.M. (邓紫棋)**, **Bibi Zhou (周笔畅)**, **A-Lin (黄丽玲)**, **Hebe Tien (田馥甄)**, and **Angela Zhang (张韶涵)**. I am not claiming they all belong to the same style or career model. The point is more basic: Chinese-language popular music after 2000 continued to be shaped by female singers who changed expectations around vocal power, stage image, songwriting participation, and audience address.
 
 This correction matters historically. If we only tell the story through male producer-auteurs and male band scenes, we produce a distorted archive. The mainstream was never that male.
 
@@ -548,7 +548,7 @@ This is another pattern Music 140 and Music 141 already taught us. Jazz sits jus
 
 In the Chinese context, that side position is especially revealing. It tells us which forms of cosmopolitanism are celebrated, tolerated, or periodically made difficult.
 
-If you want names, **Coco Zhao** is one useful marker for post-reform Chinese jazz visibility, and **JZ Festival Shanghai** is one of the clearest institutional signs that jazz became publicly legible again in the reform era. Jazz also matters because of its indirect relation to pop craftsmanship: artists such as **David Tao** and **Khalil Fong** show what happens when jazz-inflected ears enter mainstream songwriting.
+If you want names, **Coco Zhao (赵可)** is one useful marker for post-reform Chinese jazz visibility, and **JZ Festival Shanghai** is one of the clearest institutional signs that jazz became publicly legible again in the reform era. Jazz also matters because of its indirect relation to pop craftsmanship: artists such as **David Tao (陶喆)** and **Khalil Fong (方大同)** show what happens when jazz-inflected ears enter mainstream songwriting.
 
 This is why Shanghai matters symbolically even when we are talking about later decades. "Jazz in China" almost always carries a ghost history of pre-1949 urban modernity. When jazz reappears after Mao, it does not return to a blank slate. It returns to a city and a national memory that already know it once stood for glamour, foreignness, danger, and sophistication.
 
@@ -558,11 +558,11 @@ And that is exactly why jazz remains useful in this course: it lets us hear popu
 
 If mainstream C-pop is one story, the **indie ecosystem** is another. The important point is not that indie opposes the mainstream in some pure way. The important point is that indie scenes keep locality alive inside large-scale media systems.
 
-This is where bands such as **No Party For Cao Dong**, **Sunset Rollercoaster**, **Chinese Football**, and **My Little Airport** become important. Again, not because they are stylistically identical, but because together they reveal a field of non-mainstream prestige across Taipei, Wuhan, Hong Kong, and other scene networks.
+This is where bands such as **No Party For Cao Dong (草东没有派对)**, **Sunset Rollercoaster (落日飞车)**, **Chinese Football (中国足球)**, and **My Little Airport (我的小机场)** become important. Again, not because they are stylistically identical, but because together they reveal a field of non-mainstream prestige across Taipei, Wuhan, Hong Kong, and other scene networks.
 
-The recent success of No Party For Cao Dong helps make the point concrete. Reporting by *Taiwan News* on the 2024 Golden Melody Awards emphasized the band's sweep of major categories, including Best Band and Best Mandarin Album. That matters because it shows indie prestige entering major institutional recognition rather than staying permanently underground.
+The recent success of No Party For Cao Dong (草东没有派对) helps make the point concrete. Reporting by *Taiwan News* on the 2024 Golden Melody Awards emphasized the band's sweep of major categories, including Best Band and Best Mandarin Album. That matters because it shows indie prestige entering major institutional recognition rather than staying permanently underground.
 
-The plan also correctly pointed to **"Mountain Sea"** as a key song for Cao Dong because it became, for many younger listeners, a generational anthem of fatigue, defiance, and emotional exhaustion. Meanwhile **Sunset Rollercoaster** reopened a Taipei city-pop-inflected softness, **Chinese Football** represented the Wuhan emo and math-rock lane, and **My Little Airport** made Hong Kong indie inseparable from local politics and irony.
+The plan also correctly pointed to **"Mountain Sea"** as a key song for Cao Dong because it became, for many younger listeners, a generational anthem of fatigue, defiance, and emotional exhaustion. Meanwhile **Sunset Rollercoaster (落日飞车)** reopened a Taipei city-pop-inflected softness, **Chinese Football (中国足球)** represented the Wuhan emo and math-rock lane, and **My Little Airport (我的小机场)** made Hong Kong indie inseparable from local politics and irony.
 
 Festivals matter here too. They turn dispersed listeners into temporary publics, and temporary publics into scenes.
 
