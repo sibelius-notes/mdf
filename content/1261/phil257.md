@@ -6,11 +6,19 @@ subjects: "PHIL"
 
 ## Sources and References
 
-**Primary readings** — Benacerraf, Paul, and Hilary Putnam, eds. *Philosophy of Mathematics: Selected Readings*, 2nd ed. Cambridge University Press, 1984. (Contains Hilbert, Heyting, and Benacerraf selections.)
+**Primary anthology**
+- Paul Benacerraf and Hilary Putnam (eds.), *Philosophy of Mathematics: Selected Readings*, 2nd ed. (Cambridge University Press, 1984) — contains Hilbert, Heyting, and Benacerraf selections
 
-**Supplementary texts** — Stillwell, John. *Roads to Infinity: The Mathematics of Truth and Proof*. A K Peters/CRC Press, 2010. — Shapiro, Stewart. *Thinking About Mathematics: The Philosophy of Mathematics*. Oxford University Press, 2000. — Iemhoff, Rosalie. "Intuitionism in the Philosophy of Mathematics." *Stanford Encyclopedia of Philosophy*, 2020. — Linnebo, Øystein. "Platonism in the Philosophy of Mathematics." *Stanford Encyclopedia of Philosophy*, 2018. — Friend, Michèle. *Introducing Philosophy of Mathematics*. Acumen, 2007.
+**Supplementary texts**
+- John Stillwell, *Roads to Infinity: The Mathematics of Truth and Proof* (A K Peters/CRC Press, 2010)
+- Stewart Shapiro, *Thinking About Mathematics: The Philosophy of Mathematics* (Oxford University Press, 2000)
+- Michèle Friend, *Introducing Philosophy of Mathematics* (Acumen, 2007)
+- Rosalie Iemhoff, "Intuitionism in the Philosophy of Mathematics," *Stanford Encyclopedia of Philosophy*, 2020
+- Øystein Linnebo, "Platonism in the Philosophy of Mathematics," *Stanford Encyclopedia of Philosophy*, 2018
 
-**Online resources** — Stanford Encyclopedia of Philosophy (plato.stanford.edu): entries on Logicism and Neologicism, Hilbert's Program, Gödel's Incompleteness Theorems, Indispensability Arguments in the Philosophy of Mathematics, Naturalism in the Philosophy of Mathematics, Logical Pluralism, Philosophy of Mathematics (general entry). — Internet Encyclopedia of Philosophy: entries on Mathematical Platonism, Structuralism in the Philosophy of Mathematics.
+**Primary journal articles** — Benacerraf (1973), Maddy (1992), Tanswell (2015), De Toffoli (2021), Mangraviti (2024), Islami (2017), Finn (2021), Humphreys (2009), Calude & Longo (2017), Lehet (2021), Carter (2024), Yablo (2005), Burgess (2004), Bangu (2009)
+
+**Online resources** — Stanford Encyclopedia of Philosophy (plato.stanford.edu): entries on Logicism and Neologicism, Formalism, Hilbert's Program, Gödel's Incompleteness Theorems, Intuitionism, Indispensability Arguments in the Philosophy of Mathematics, Naturalism in the Philosophy of Mathematics, Logical Pluralism, Philosophy of Mathematics (general entry). — Internet Encyclopedia of Philosophy: entries on Mathematical Platonism, Structuralism in the Philosophy of Mathematics.
 
 ---
 
@@ -22,7 +30,7 @@ Philosophy of mathematics asks foundational questions about the nature, scope, a
 
 The first cluster is **ontological**: What are mathematical objects? Do numbers, sets, and functions exist? If they exist, are they abstract (outside space and time, causally inert) or concrete? If they do not exist, what are mathematical statements about? This cluster leads directly to positions like Platonism (mathematical objects exist independently of minds), nominalism (they do not), and structuralism (mathematics is about structures, not objects).
 
-The second cluster is **epistemological**: How do we know mathematical truths? If mathematical objects are abstract, we cannot perceive them or causally interact with them — so what explains mathematical knowledge? This question motivates much of the course, culminating in the Benacerraf dilemma (Chapter 4).
+The second cluster is **epistemological**: How do we know mathematical truths? If mathematical objects are abstract, we cannot perceive them or causally interact with them — so what explains mathematical knowledge? This question motivates much of the course, culminating in the Benacerraf dilemma (Chapter 5).
 
 The third cluster is **semantic**: What do mathematical statements mean? Are they true or false? Is "2+2=4" true in the same sense that "there are brown dogs" is true? Or do mathematical sentences have a different semantic status — perhaps they are rules, or useful fictions, or tautologies?
 
@@ -48,7 +56,7 @@ This paradox, along with Burali-Forti's paradox about the set of all ordinals an
 
 ## 1.3 Gödel's Results: A Preview
 
-Stillwell's chapters on Gödel prepare the reader for the most dramatic result of the foundations crisis. In 1931, Kurt Gödel proved two incompleteness theorems that shattered Hilbert's formalist program. The first shows that any consistent formal system strong enough to express elementary arithmetic contains true statements that cannot be proved within the system. The second shows that no such system can prove its own consistency. These results are examined philosophically in Chapter 2.
+Stillwell's chapters on Gödel prepare the reader for the most dramatic result of the foundations crisis. In 1931, Kurt Gödel proved two incompleteness theorems that shattered Hilbert's formalist program. The first shows that any consistent formal system strong enough to express elementary arithmetic contains true statements that cannot be proved within the system. The second shows that no such system can prove its own consistency. These results are examined philosophically in Chapter 3.
 
 <div class="remark">
 The course returns repeatedly to a single overarching tension: mathematics seems to be both <strong>certain</strong> (we feel we cannot be wrong about 2+2=4) and <strong>mysterious</strong> (we cannot fully explain how we know it, or what it is about). The foundational crisis, Gödel's theorems, the Benacerraf dilemma, and debates about proof and explanation are all attempts to negotiate this tension.
@@ -56,9 +64,51 @@ The course returns repeatedly to a single overarching tension: mathematics seems
 
 ---
 
-# Chapter 2: Hilbert's Formalism and Gödel's Incompleteness Theorems
+# Chapter 2: Logicism — Is Mathematics Just Logic?
 
-## 2.1 Hilbert's Program
+## 2.1 Frege's Project
+
+Gottlob Frege's *Foundations of Arithmetic* (1884) proposes that arithmetic is reducible to pure logic. If every arithmetical concept can be defined in purely logical terms and every arithmetical theorem derived from purely logical axioms, then arithmetic has the same epistemic status as logic — knowable a priori, necessarily true, and not dependent on spatial or temporal intuition.
+
+Frege's key move is to define number in terms of the concept of **equinumerosity**: two concepts \(F\) and \(G\) are equinumerous if there is a one-to-one correspondence between their extensions. The number \(n\) is then defined as the extension of the concept "equinumerous with \(F\)," for any \(F\) that has \(n\) members. This is **Hume's Principle**: the number of \(F\)s equals the number of \(G\)s if and only if \(F\) and \(G\) are equinumerous.
+
+<div class="definition">
+<strong>Frege's logicism.</strong> Arithmetic (and by extension all of mathematics) is reducible to logic: all mathematical truths are logical truths, and all mathematical objects are definable in purely logical terms.
+</div>
+
+Frege's argument that numbers are **objects** (not properties or concepts) relies on the grammatical parallel between "the number of planets is eight" and "the capital of France is Paris." Just as "Paris" refers to an object, "eight" refers to an object. Numbers are abstract objects — they have no spatial location, no causal powers — but they are genuinely objects.
+
+## 2.2 The Problem of Mathematical Objects
+
+Frege's logicism raises the question: what *kind* of objects are numbers? They cannot be physical objects — the number 3 does not occupy any region of space. Frege says they are **abstract objects** that exist in a "third realm" distinct from both the physical world and the mental world of subjective ideas.
+
+This position is called **Platonism** (or mathematical realism): mathematical objects exist independently of minds and language, in an abstract domain.
+
+<div class="remark">
+<strong>The epistemological problem.</strong> Abstract objects pose an immediate epistemological puzzle. Our ordinary routes to knowledge involve causal interaction with the world: perception, testimony, inference from physical evidence. But abstract objects are causally inert — they have no powers and do not enter into causal relations. How, then, can we have knowledge of them? This is the kernel of Benacerraf's challenge (Chapter 5).
+</div>
+
+## 2.3 Russell's Paradox and the Collapse of Naïve Logicism
+
+In 1902 Bertrand Russell discovered a contradiction at the heart of Frege's system. Consider the set of all sets that do not contain themselves:
+
+\[ R = \{x : x \notin x\} \]
+
+If \(R \in R\), then by definition \(R \notin R\). If \(R \notin R\), then by definition \(R \in R\). Either assumption leads to its negation — a contradiction.
+
+Russell's Paradox shows that **unrestricted comprehension** — the principle that any predicate defines a set — is inconsistent. Frege's Basic Law V, which asserts that every concept has an extension (a set of objects falling under it), is inconsistent.
+
+The paradox forced a fundamental revision of the foundations of logic. Russell's own response was the **theory of types**: sets are arranged in a hierarchy of types, and a set can only contain objects of lower type, blocking the self-referential construction. This avoids the paradox but introduces significant complexity.
+
+<div class="remark">
+<strong>Impact on logicism.</strong> Russell's Paradox did not immediately refute logicism, but it showed that the relevant "logic" must be a structured, type-theoretic system — not the simple, universal logic Frege had envisioned. Whether type theory counts as "logic" in any illuminating sense became contentious.
+</div>
+
+---
+
+# Chapter 3: Hilbert's Formalism and Gödel's Incompleteness Theorems
+
+## 3.1 Hilbert's Program
 
 David Hilbert's "On the Infinite" (1926) is the canonical statement of **mathematical formalism** and the ambitions of what came to be called **Hilbert's program**. Writing against the backdrop of the foundations crisis, Hilbert sought a definitive resolution: mathematics would be placed on an unassailable foundation by formalizing all of mathematics into a rigorous axiomatic system and then proving — by purely finitary, combinatorial means — that this system is consistent.
 
@@ -76,7 +126,7 @@ The goal: show that ideal mathematics, though it speaks of infinite objects, is 
 
 Hilbert's program required both: a system complete enough to decide all mathematical questions, and consistent enough that its results could be trusted.
 
-## 2.2 Gödel's Incompleteness Theorems
+## 3.2 Gödel's Incompleteness Theorems
 
 In 1931, Kurt Gödel published his incompleteness results and demolished Hilbert's program. The two incompleteness theorems are among the most philosophically significant results in the history of mathematics.
 
@@ -92,7 +142,7 @@ The key technical innovation is **Gödel numbering**: assigning a natural number
 
 This directly refutes Hilbert's program: the consistency proof Hilbert sought cannot be carried out within the very system whose consistency is in question. Any consistency proof requires a stronger system — which itself cannot prove its own consistency, and so on.
 
-## 2.3 Philosophical Significance: Feferman's Analysis
+## 3.3 Philosophical Significance: Feferman's Analysis
 
 Solomon Feferman's paper "The Nature and Significance of Gödel's Incompleteness Theorems" is a careful philosophical assessment of what the results do and do not show.
 
@@ -105,14 +155,14 @@ Feferman argues against several overreaching interpretations:
 What the results do establish is more modest but profound: the mathematical universe cannot be exhausted by any single, finitely specifiable set of axioms. There is an irreducible **openness** to mathematical truth. For Hilbert's goal of a complete, decidable axiomatization of all mathematics, Gödel's theorems are fatal.
 
 <div class="remark">
-The incompleteness theorems also sharpen the epistemological puzzle at the heart of the course. If there are true mathematical statements that cannot be proved in any given system, then mathematical truth outruns provability — and the question of how we know mathematical truths becomes more urgent, not less. This connects directly to the Benacerraf dilemma in Chapter 4.
+The incompleteness theorems also sharpen the epistemological puzzle at the heart of the course. If there are true mathematical statements that cannot be proved in any given system, then mathematical truth outruns provability — and the question of how we know mathematical truths becomes more urgent, not less. This connects directly to the Benacerraf dilemma in Chapter 5.
 </div>
 
 ---
 
-# Chapter 3: Mathematical Intuitionism and Constructivism
+# Chapter 4: Mathematical Intuitionism and Constructivism
 
-## 3.1 Brouwer's Intuitionism
+## 4.1 Brouwer's Intuitionism
 
 **Intuitionism** is the most radical of the three foundational schools. Its founder, L.E.J. Brouwer, held that mathematics is a languageless mental construction: mathematical objects are mental constructions, mathematical truth is constructibility, and the logic of mathematics must be revised to reflect this.
 
@@ -126,7 +176,7 @@ Brouwer's key claims:
 <strong>Goldbach's Conjecture.</strong> Every even number greater than 2 is the sum of two primes. This is currently unproved. A classical mathematician says it is either true or false. An intuitionist says neither can be asserted until a proof or a disproof is constructed.
 </div>
 
-## 3.2 Heyting's Formalization
+## 4.2 Heyting's Formalization
 
 Arend Heyting, Brouwer's student, gave intuitionism its formal shape. His two assigned texts — "The Intuitionistic Foundations of Mathematics" and "Disputation" — present the intuitionistic position both rigorously and accessibly.
 
@@ -145,7 +195,7 @@ In "Disputation," Heyting employs a dialogue between a classical mathematician (
 
 Under this interpretation, \(P \lor \neg P\) is not a logical law: having neither a proof of \(P\) nor a refutation of \(P\) means \(P \lor \neg P\) is not assertible.
 
-## 3.3 Constructive Mathematics and Its Consequences
+## 4.3 Constructive Mathematics and Its Consequences
 
 **Constructivism** is broader than Brouwer's intuitionism: it includes any approach that requires explicit constructions as witnesses for existential claims. The constructive requirement has significant bite:
 
@@ -158,14 +208,14 @@ Constructivism is motivated by the view that mathematical existence claims requi
 The price of constructivism is substantial: large parts of classical analysis, topology, and algebra must be either abandoned or extensively reworked. Among the classically valid principles that intuitionistic logic rejects: the law of excluded middle, proof by contradiction (in certain forms), and the axiom of choice (in its unrestricted form).
 
 <div class="remark">
-Intuitionism's revision of logic anticipates the logical pluralism discussed in Chapter 6. If different domains of discourse (finite vs. infinite mathematics) require different logics, the question arises whether there is a single correct logic at all. Heyting's work is thus both a contribution to the foundations crisis and a precursor to later debates about logical normativity.
+Intuitionism's revision of logic anticipates the logical pluralism discussed in Chapter 8. If different domains of discourse (finite vs. infinite mathematics) require different logics, the question arises whether there is a single correct logic at all. Heyting's work is thus both a contribution to the foundations crisis and a precursor to later debates about logical normativity.
 </div>
 
 ---
 
-# Chapter 4: Mathematical Truth and the Benacerraf Dilemma
+# Chapter 5: Mathematical Truth and the Benacerraf Dilemma
 
-## 4.1 The Semantic Requirement
+## 5.1 The Semantic Requirement
 
 Paul Benacerraf's 1973 paper "Mathematical Truth" remains the single most influential paper in the philosophy of mathematics. Its central argument — the **Benacerraf dilemma** — sets the agenda for virtually all subsequent work in the field.
 
@@ -173,13 +223,13 @@ Benacerraf begins with a semantic constraint: any adequate account of mathematic
 
 This Tarskian requirement is not merely conventional. If mathematical sentences had a fundamentally different semantic structure, we would need a special semantics for mathematics. This would be philosophically suspicious: why should mathematics require different semantic treatment? If we apply uniform semantics, the sentence "There are prime numbers greater than 100" is true in virtue of there being objects — numbers — with certain properties. Mathematical truth requires mathematical objects.
 
-## 4.2 The Epistemological Requirement
+## 5.2 The Epistemological Requirement
 
 The second constraint is epistemological: any adequate account of mathematical knowledge must fit into a general theory of knowledge. Benacerraf adopts a broadly **causal theory of knowledge**: for S to know that P, S must be appropriately causally connected to the facts that make P true.
 
 This is a plausible constraint on empirical knowledge. I know there is a tree in my garden because light reflected from the tree causes visual experiences in me; my belief is causally connected to its truth-maker. For mathematical knowledge, the causal account requires that mathematicians be causally connected to mathematical truth-makers.
 
-## 4.3 The Dilemma
+## 5.3 The Dilemma
 
 The two requirements are in tension:
 
@@ -201,7 +251,7 @@ Neither horn of the dilemma is comfortable:
 
 - **Formalism or nominalism** (accept horn 2, reject horn 1): Mathematics is formal symbol manipulation with no real referents. This makes mathematical knowledge tractable (it is rule-following) but destroys the semantic parallel with empirical language. "2+2=4" turns out not to be true in any robust sense — it is merely a theorem of a formal system. But this seems to misrepresent mathematical practice and mathematical truth.
 
-## 4.4 Structuralism and Other Responses
+## 5.4 Structuralism and Other Responses
 
 Benacerraf elsewhere (in "What Numbers Could Not Be," 1965) argues that numbers cannot be identified with any particular set-theoretic construction. The von Neumann ordinals and the Zermelo numerals both correctly model the natural numbers — yet they are different sets. If numbers were sets, there would be a fact about which construction they are. Since there is no such fact, numbers are not sets.
 
@@ -213,9 +263,9 @@ No response to the Benacerraf dilemma is entirely satisfying, and this is a genu
 
 ---
 
-# Chapter 5: Indispensability, Naturalism, and Mathematical Practice
+# Chapter 6: Indispensability, Naturalism, and Mathematical Practice
 
-## 5.1 The Quine-Putnam Indispensability Argument
+## 6.1 The Quine-Putnam Indispensability Argument
 
 One influential response to the Benacerraf dilemma bypasses the causal epistemology entirely. The **Quine-Putnam indispensability argument** argues that we are justified in believing in mathematical entities for the same reason we are justified in believing in electrons and quarks: they are indispensable to our best scientific theories.
 
@@ -230,7 +280,7 @@ One influential response to the Benacerraf dilemma bypasses the causal epistemol
 
 The argument is naturalistic in spirit: it grounds mathematical ontology in scientific practice rather than in a priori philosophical reasoning. It avoids the causal epistemology problem by treating mathematics like theoretical physics — justified holistically by the success of the theories in which it appears. On Quine's holism, the whole web of belief (including mathematics) is confirmed or disconfirmed together by experience.
 
-## 5.2 Maddy's Critique: The Argument from Scientific Practice
+## 6.2 Maddy's Critique: The Argument from Scientific Practice
 
 Penelope Maddy's 1992 paper "Indispensability and Practice" is a sustained attack on the indispensability argument from the perspective of what scientists and mathematicians actually do.
 
@@ -248,7 +298,7 @@ Maddy's second objection concerns **set-theoretic excess**. If the indispensabil
 <strong>Large cardinals.</strong> A measurable cardinal is an uncountable cardinal \(\kappa\) admitting a countably complete nonprincipal ultrafilter. Their existence cannot be proved in ZFC. Yet set theorists investigate their properties extensively — not because physics needs them, but because they illuminate the structure of the set-theoretic universe. The indispensability argument would label this investigation unjustified; mathematicians do not agree.
 </div>
 
-## 5.3 Maddy's Naturalism
+## 6.3 Maddy's Naturalism
 
 Maddy is herself a naturalist — she holds that philosophy should defer to scientific and mathematical practice rather than imposing prior philosophical constraints on them. Her critique of the indispensability argument is thus an internal critique: she argues that genuine attention to practice, rather than a schematic philosophical argument about practice, undermines the argument's premises.
 
@@ -262,9 +312,42 @@ Mathematical naturalism is Maddy's preferred position. It implies that the corre
 
 ---
 
-# Chapter 6: Logical Pluralism and Its Limits
+# Chapter 7: Fictionalism — Are Mathematical Statements Not True After All?
 
-## 6.1 What Is Logical Pluralism?
+## 7.1 The Fictionalist Position
+
+Fictionalism holds that mathematical statements should be interpreted at face value — "there are infinitely many prime numbers" does indeed assert the existence of infinitely many prime numbers — but since no such objects exist, the statement is **false** (or more carefully, true only within a fiction, just as "Sherlock Holmes lived at 221B Baker Street" is true within Conan Doyle's fiction).
+
+The fictionalist motivation is epistemological: if abstract objects would be unknowable, the most parsimonious response is to deny that they exist, while explaining why mathematical discourse is nonetheless useful.
+
+## 7.2 Yablo — The Myth of the Seven
+
+Stephen Yablo's "The Myth of the Seven" (in *Fictionalism in Metaphysics*, Oxford, 2005) develops a sophisticated fictionalist position. Yablo distinguishes between:
+
+- **Literal content**: What is literally asserted (e.g., that a certain number exists).
+- **Real content**: The concrete, nominalistic fact the assertion is being used to communicate.
+
+Consider "The number of planets is eight." The real content is a claim about how many planets there are, which could in principle be stated without numbers. The reference to the number 8 is a **convenient representational aid**, not a genuine ontological commitment. Mathematical objects function like the characters of a myth — indispensable for organizing and communicating thought, but not literally real.
+
+<div class="remark">
+<strong>Hermeneutic vs. revolutionary fictionalism.</strong> Yablo's version is <em>hermeneutic</em>: he claims that ordinary speakers are not actually committed to the existence of numbers, because the real content of their assertions does not require numbers. <em>Revolutionary</em> fictionalism, by contrast, holds that speakers are mistakenly committed to numbers and should revise their beliefs.
+</div>
+
+## 7.3 Burgess — The Challenge to Fictionalism
+
+John Burgess's "Mathematics and Bleak House" (*Philosophia Mathematica*, 2004) presses fictionalism from two angles.
+
+First, **the Dickens objection**: In Bleak House, the legal case is treated as real within the fiction; no reader thinks it is literally unresolved. But mathematical "fictions" are not treated as fictions by mathematicians — they are asserted sincerely and relied upon in scientific inference. The fictionalist must explain why mathematical assertions differ from sincere first-person assertions.
+
+Second, **the nominalization challenge**: Fictionalists owe us a complete nominalistic reformulation of scientific theories — a version of physics, chemistry, and biology that quantifies only over physical, concrete objects. Hartry Field attempted this for Newtonian mechanics, but the project faces immense technical difficulties for modern physics.
+
+Burgess concludes that fictionalism is a philosophical position that cannot be adequately defended without a completed nominalization program, which remains unachieved.
+
+---
+
+# Chapter 8: Logical Pluralism and Its Limits
+
+## 8.1 What Is Logical Pluralism?
 
 **Logical pluralism** is the view that there is more than one correct logic — more than one system of inference that is genuinely valid. This is a surprising thesis: logic is usually conceived as the science of what follows from what, implying a unique answer. Pluralism challenges this.
 
@@ -276,7 +359,7 @@ The main pluralist position in contemporary philosophy is **Beall and Restall's*
 
 On this view, all three logics are correct — they are correct relative to their respective case types. Logical pluralism is not relativism but the recognition that "follows from" has multiple coherent precisifications.
 
-## 6.2 Finn's Constraint: Modus Ponens and Universal Instantiation
+## 8.2 Finn's Constraint: Modus Ponens and Universal Instantiation
 
 Suki Finn's 2021 paper "Limiting Logical Pluralism" accepts that some pluralism is defensible but argues it cannot be unlimited. Her thesis: any candidate for a logic must validate **modus ponens** (MP) and **universal instantiation** (UI) as necessary conditions for counting as a logic in the relevant sense.
 
@@ -292,7 +375,7 @@ Finn's argument for MP: without MP, the concept of logical consequence collapses
 
 Finn's argument for UI: without UI, generality is undermined. Logical reasoning applies to all instances of a general claim. Without UI, universal quantification loses its force. The generality that characterizes logical reasoning — that valid inference holds in all cases — requires UI.
 
-## 6.3 Implications: Moderate Pluralism
+## 8.3 Implications: Moderate Pluralism
 
 The constraint rules out the most radical candidate logics while preserving the standard alternatives:
 
@@ -307,14 +390,14 @@ The constraint rules out the most radical candidate logics while preserving the 
 What is ruled out is the unlimited proliferation of "logics" to include any deviant formal system. Pluralism is true — classical, intuitionistic, and relevant logic are all legitimate — but it is bounded by meta-logical constraints defining what a logic is.
 
 <div class="remark">
-Finn's result connects to a broader theme in the course: even revisionary or pluralist positions in the philosophy of mathematics and logic are constrained by structural requirements that cannot be abandoned without changing the subject. Mangraviti's framework in Chapter 9 identifies seven dimensions of dominant mathematics; Finn identifies the non-negotiable core of logical systems. Both show that pluralism has limits.
+Finn's result connects to a broader theme in the course: even revisionary or pluralist positions in the philosophy of mathematics and logic are constrained by structural requirements that cannot be abandoned without changing the subject. Mangraviti's framework in Chapter 11 identifies seven dimensions of dominant mathematics; Finn identifies the non-negotiable core of logical systems. Both show that pluralism has limits.
 </div>
 
 ---
 
-# Chapter 7: The Applicability of Mathematics
+# Chapter 9: The Applicability of Mathematics
 
-## 7.1 Wigner's Puzzle
+## 9.1 Wigner's Puzzle
 
 Eugene Wigner's 1960 paper "The Unreasonable Effectiveness of Mathematics in the Natural Sciences" identifies one of the deepest and least understood facts about the relationship between mathematics and physics. Wigner was a physicist; his examples are drawn from the history of theoretical physics, and his tone is one of genuine intellectual astonishment.
 
@@ -332,7 +415,7 @@ Wigner distinguishes two miracles. The first is that nature is governed by mathe
 
 Wigner explicitly declines to offer a resolution, calling the effectiveness a "gift" that "we neither understand nor deserve."
 
-## 7.2 Islami's Response: Invariance
+## 9.2 Islami's Response: Invariance
 
 Arezoo Islami's 2017 paper "A Match Not Made in Heaven" reframes Wigner's puzzle as an **epistemological** rather than metaphysical problem. The question is not "why does abstract mathematics objectively fit physical reality?" but "why are we able to find the right mathematical tools?" And this question has a tractable answer: **invariance**.
 
@@ -346,7 +429,7 @@ The mathematics that encodes invariance — **Lie groups**, **representations of
 
 Islami's argument shifts what remains mysterious: not "why does abstract math fit physics?" but "why does nature have the symmetry structure it has?" The latter is a residual mystery, but a better-posed and more tractable question.
 
-## 7.3 What Remains Puzzling
+## 9.3 What Remains Puzzling
 
 Even after invariance is invoked, Islami does not claim to dissolve all of Wigner's puzzle. She shifts the residual mystery from epistemology to metaphysics: the question of why the physical world has the particular symmetry structure it does remains open. A realist can say that nature's symmetries are objective features that mathematics captures; an anti-realist can say that symmetry requirements are constraints we impose, and the applicable mathematics follows from our representational choices.
 
@@ -354,9 +437,9 @@ The exchange between Wigner and Islami illustrates a general philosophical metho
 
 ---
 
-# Chapter 8: Proofs, Formal Derivations, and Fallibilism
+# Chapter 10: Proofs, Formal Derivations, and Fallibilism
 
-## 8.1 Two Conceptions of Proof
+## 10.1 Two Conceptions of Proof
 
 The concept of **proof** is central to mathematics. But there are two distinct pictures of what a proof is:
 
@@ -365,7 +448,7 @@ The concept of **proof** is central to mathematics. But there are two distinct p
 
 The relationship between these two notions — whether informal proofs are reliable in virtue of being translatable into formal derivations — is the subject of the two assigned papers.
 
-## 8.2 Tanswell: The Overgeneration Problem
+## 10.2 Tanswell: The Overgeneration Problem
 
 Fenner Tanswell's 2015 paper "A Problem with the Dependence of Informal Proofs on Formal Proofs" targets **derivationism**: the view that informal proofs are correct in virtue of being translatable into formal derivations in a system like ZFC.
 
@@ -381,7 +464,7 @@ Tanswell also identifies an **undergeneration problem**: some informal arguments
 Together, overgeneration and undergeneration show that formal derivability is neither necessary nor sufficient for mathematical proof as practiced. The standards of acceptable proof are richer, more contextual, and more community-dependent than derivationism allows.
 </div>
 
-## 8.3 De Toffoli: Fallibilism and Simil-Proofs
+## 10.3 De Toffoli: Fallibilism and Simil-Proofs
 
 Silvia De Toffoli's 2021 paper "Groundwork for a Fallibilist Account of Mathematics" challenges the assumption that mathematical knowledge is infallible — that proved theorems are known with certainty.
 
@@ -399,9 +482,9 @@ The fallibilist account holds that mathematical justification comes in degrees. 
 
 ---
 
-# Chapter 9: Alternative Mathematics and Indigenous Perspectives
+# Chapter 11: Alternative Mathematics and Indigenous Perspectives
 
-## 9.1 Dominant Mathematics and Its Ideology
+## 11.1 Dominant Mathematics and Its Ideology
 
 Philosophy of mathematics has historically focused on a single conception of mathematics: abstract, deductive, formal, universal, and value-neutral. The readings for this section examine challenges to this conception from two directions — a systematic framework for alternative mathematics, and an Indigenous epistemological critique of STEM education.
 
@@ -419,7 +502,7 @@ Franci Mangraviti's 2024 paper "Critical Math Kinds: A Framework for the Philoso
 
 These seven dimensions are not logically independent — a challenge to one often implicates others — but they provide a principled taxonomy of what counts as mainstream mathematical ideology.
 
-## 9.2 Critical Math Kinds
+## 11.2 Critical Math Kinds
 
 Mangraviti defines a **critical math kind** (CMK) as a mathematical practice whose practitioners collectively and self-consciously destabilize one or more of these seven dimensions in a way that is visible and contested within the mathematical community. The definition is explicitly relative to time and society: what is a CMK in one context may be absorbed into the mainstream in another.
 
@@ -436,7 +519,7 @@ The framework distinguishes genuine CMKs from alternatives that were merely temp
 - **Feminist philosophy of mathematics** challenges objectivity and ethical neutrality — a progressive CMK.
 - **Paraconsistent mathematics** challenges classical logic and the primacy of consistency — potentially a progressive CMK.
 
-## 9.3 STEM as Place: Indigenous Perspectives
+## 11.3 STEM as Place: Indigenous Perspectives
 
 Nicol, Thom, Doolittle, Glanfield, and Ghostkeeper's 2023 paper "Mathematics Education for STEM as Place" argues for a fundamental reconceptualization of STEM education drawing on Canadian Indigenous epistemologies.
 
@@ -454,9 +537,9 @@ In Mangraviti's terms, the "STEM as place" vision is a progressive CMK: it simul
 
 ---
 
-# Chapter 10: Computer Simulation, Machine Learning, and Big Data
+# Chapter 12: Computer Simulation, Machine Learning, and Big Data
 
-## 10.1 Computer Simulation as a New Method
+## 12.1 Computer Simulation as a New Method
 
 Paul Humphreys' 2009 paper "The Philosophical Novelty of Computer Simulation Methods" argues that computer simulation is a genuinely new kind of scientific method — not reducible to either classical experiment or mathematical analysis.
 
@@ -472,7 +555,7 @@ The philosophically significant feature is what Humphreys calls **essential epis
 
 Standard scientific verification requires being able to trace the reasoning from assumptions to conclusion. Essential opacity undermines this in a novel way: unlike a proof with a gap, a simulation's output cannot in principle be verified by tracing through the steps. This requires new epistemological standards — cross-model comparison, sensitivity analysis, benchmarking against known cases — that represent a genuine departure from pre-computational science.
 
-## 10.2 The Deluge of Spurious Correlations
+## 12.2 The Deluge of Spurious Correlations
 
 Cristian Calude and Giuseppe Longo's 2017 paper "The Deluge of Spurious Correlations in Big Data" offers a mathematically grounded critique of the "end of theory" thesis — the claim (associated with Chris Anderson's 2008 *Wired* essay) that big data renders scientific theorizing obsolete. With enough data, the thesis holds, correlation replaces causation and theory is unnecessary.
 
@@ -496,9 +579,9 @@ Humphreys and Calude-Longo converge on a theme: the epistemological demands of c
 
 ---
 
-# Chapter 11: Mathematical Explanation and Understanding
+# Chapter 13: Mathematical Explanation and Understanding
 
-## 11.1 Explanation Beyond Proof
+## 13.1 Explanation Beyond Proof
 
 The course closes by asking: what is it to understand mathematics, and what makes a mathematical argument explanatory? These questions distinguish between knowing that a theorem is true (having a proof) and understanding why it is true. Not every proof explains.
 
@@ -512,7 +595,7 @@ The course closes by asking: what is it to understand mathematics, and what make
 
 The distinction motivates a philosophy of mathematical explanation that goes beyond formal derivability.
 
-## 11.2 Lehet's Framework: Familiarity and Understanding
+## 13.2 Lehet's Framework: Familiarity and Understanding
 
 Ellen Lehet's 2021 paper "Mathematical Explanation in Practice" develops an **understanding-first** approach. Following Inglis and Mejía-Ramos, Lehet holds that mathematical explanation is whatever produces mathematical understanding — so the right question is: what is mathematical understanding?
 
@@ -530,7 +613,7 @@ Lehet's key innovation: explanation is not limited to proofs. **Definitions** ca
 
 These diagrams answer "What is going on here?" independently of formal justification. They are not mere heuristic aids but genuine sources of mathematical understanding.
 
-## 11.3 Carter's Five-Dimensional Framework
+## 13.3 Carter's Five-Dimensional Framework
 
 Jessica Carter's 2024 paper "Mathematical Understanding — Common Themes in Philosophy and Mathematics Education" maps the concept of understanding across three communities: philosophers of mathematics, mathematical practitioners, and mathematics educators. The survey reveals genuine diversity that Carter organizes using a five-dimensional framework:
 
@@ -549,7 +632,7 @@ Despite the diversity, Carter identifies two convergences across all three commu
 1. **Relations**: Understanding is repeatedly characterized as seeing **connections** — between results, methods, representations, concepts. Isolated knowledge of facts is not understanding; understanding involves grasping how things hang together.
 2. **Visual re-presentation**: Multiple traditions converge on the importance of re-presenting mathematical content visually as a powerful route to understanding. This connects directly to Lehet's account of explanatory diagrams and to De Toffoli's work on visual reasoning as a form of simil-proof.
 
-## 11.4 Synthesis: The Epistemology of Mathematical Practice
+## 13.4 Synthesis: The Epistemology of Mathematical Practice
 
 The readings across Chapters 8 through 11 converge on a revised picture of mathematical epistemology:
 
