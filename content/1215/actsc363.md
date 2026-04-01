@@ -4,21 +4,6 @@ prof: "Mirabelle Huynh"
 subjects: "ACTSC"
 ---
 
-**Instructor:** Mirabelle Huynh | Spring 2021 | University of Waterloo
-
----
-
-## Table of Contents
-
-1. [Introduction](#chapter-1-introduction)
-2. [Review of Probability](#chapter-2-review-of-probability)
-3. [Frequency Distributions](#chapter-3-frequency-distributions)
-4. [Severity Distributions](#chapter-4-severity-distributions)
-5. [Aggregate Loss/Payment Distributions](#chapter-5-aggregate-losspayment-distributions)
-6. [Loss Reserving](#chapter-6-loss-reserving)
-
----
-
 ## Chapter 1: Introduction
 
 This course presents tools for modelling the loss and assessing the risk of a portfolio of insurance business. The first part constructs mathematical models to predict insurance loss — primarily in a non-life insurance framework — and highlights key characteristics and limitations. We examine the effects of **policy adjustments** (deductibles, limits, coinsurance) and their impact on risk mitigation. The **collective risk model** is used throughout to model the aggregate amount of claims arising from a portfolio over a given time period. Quantitative risk measures (VaR, TVaR, stop-loss moments) and stochastic reserving are outside the scope of this course and are covered in ACTSC 431 and ACTSC 463 respectively.

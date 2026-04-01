@@ -4,12 +4,6 @@ prof: ""
 subjects: "PSYCH"
 ---
 
-## Course Overview
-
-PSYCH 390 is a research methods course focused on the scientific study of human memory. The course covers both the architecture of memory systems and the practical factors — attention, organisation, meaning, context — that determine how well information is encoded and retrieved. Throughout, real-world applications in medicine, advertising, education, and healthy aging are used to illustrate how basic science matters.
-
----
-
 ## Unit 1: Memory in the Real World and Why It Fails
 
 ### Memory as a Reconstructive Process

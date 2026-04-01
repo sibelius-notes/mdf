@@ -4,14 +4,6 @@ prof: "Nathan Funk"
 subjects: "PACS"
 ---
 
-# Course Overview
-
-PACS 201, *Roots of Conflict, Violence, and Peace*, is the first of three introductory core courses in the Peace and Conflict Studies Program at the University of Waterloo. The course was originally developed by **Nathan Funk** and redeveloped for its online format by Rachel Reist and Alexandra Bly with support from the Centre for Extended Learning. Over twelve modules it introduces students to foundational concepts and competing paradigms in peace and conflict studies, asking three overarching questions: What do we mean when we speak of peace, conflict, and violence? What are the major schools of thought for analyzing the sources of violent conflict? And how do our understandings of conflict and violence relate to understandings of power?
-
-The course situates itself within a broad intellectual tradition that insists conflict is not inherently bad — it is dual-natured, carrying both danger and opportunity — but that the ways societies choose to handle conflict determine whether it becomes constructive or destructive. By the end of the course, students are expected to discuss issues using peace-and-conflict themes and concepts, examine diverse perspectives on dealing with conflict, identify approaches to peaceful change, evaluate strengths and weaknesses of major theories, and apply conceptual tools to contemporary situations.
-
----
-
 # Module 1: Conflict, Violence, and Peace
 
 ## What Is Conflict?

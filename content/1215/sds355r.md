@@ -1,16 +1,12 @@
 ---
 title: "SDS 355R: Resilience and Social Support"
+prof: "Dr. Jim Perretta"
 subjects: "SDS"
----
-
-**University of Waterloo — Spring 2021**
-**Instructor:** Dr. Jim Perretta
-
 ---
 
 ## Module 1: Positive Psychology and the Strengths-Based Model
 
-### Introduction to the Course
+### Resilience as a Strengths-Based Field
 
 This course is built on a deceptively simple but powerful premise: every human being, no matter what circumstances they face, possesses strengths that can be identified, cultivated, and mobilized. SDS 355R examines resilience and social support from multiple levels of analysis — individual, family, community, and cultural — drawing on the science of positive psychology, developmental research, and social work practice. The goal is not merely to understand human suffering, but to understand what enables people to *thrive* despite adversity.
 

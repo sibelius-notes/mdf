@@ -4,21 +4,17 @@ prof: "Roland Robinson"
 subjects: "INDG"
 ---
 
-INDG 201 / CDNST 201 is an introductory survey of the history, cultures, and contemporary circumstances of Indigenous Peoples within the territory currently known as Canada. The course is structured around Lisa Monchalin's *The Colonial Problem: An Indigenous Perspective on Crime and Justice in Canada* (University of Toronto Press, 2016) and is taught at the University of Waterloo, housed in the Indigenous Studies Programme at St. Paul's University College. The class meets on the Dish with One Spoon Territory — the traditional lands of the Attawandaron (Neutral) Nation, the Anishinaabeg/Anishinabek (Three Fires Confederacy and Mississauga), the Rotinonshón:ni Six Nations Confederacy, and the Wyandot People. The University of Waterloo sits within Block 2 of the Haldimand Tract, land promised to the Six Nations by the British Crown in 1784.
+These notes survey the history, cultures, and contemporary circumstances of Indigenous Peoples within the territory currently known as Canada. They draw heavily on Lisa Monchalin's *The Colonial Problem: An Indigenous Perspective on Crime and Justice in Canada* (University of Toronto Press, 2016) and situate the discussion on the Dish with One Spoon Territory — the traditional lands of the Attawandaron (Neutral) Nation, the Anishinaabeg/Anishinabek (Three Fires Confederacy and Mississauga), the Rotinonshón:ni Six Nations Confederacy, and the Wyandot People, within Block 2 of the Haldimand Tract promised to the Six Nations by the British Crown in 1784.
 
 ---
 
-# Unit 1: Course Introduction and Instructor Positionality
+# Unit 1: Indigenous Studies and Positionality
 
-## Who Is Roland Robinson?
+## Positionality
 
-The instructor, Rowland Keshena Robinson, opens the first meeting by situating himself clearly within the subject matter. He is a member of the **Menominee Nation of Wisconsin**, an Algonkian-speaking Nation closely related to the Anishinaabeg, Shawnee, Kickapoo, Mi'kmaq, Lenape, and other Algonkian-speaking Nations of the Great Lakes, southern Quebec, the American Northeast, and Atlantic Canada. His mother is Menominee; his father is Bermudian. He was born and raised in Bermuda — which was governed by a form of white-minority government until 1998 — and he grew up spending summers on and around the Menominee reservation in northern Wisconsin as well as in Milwaukee. He considers himself both a Native North American and a West Indian person. He arrived in Canada in 2005 to study Anthropology and Sociology at the University of Waterloo, continuing through a Master's degree in Public Issues Anthropology and a PhD in Sociology, both at Waterloo, which he completed in February 2020.
-
-This act of self-introduction is not incidental. It is a pedagogical practice rooted in the concept of **positionality** — the acknowledgement that every scholar, teacher, and student comes to knowledge from a specific social location shaped by race, nationality, gender, class, and lived experience. Robinson's positionality as a Native person, an immigrant, a person who grew up under colonial governance in Bermuda, and a scholar trained in critical Native theory directly shapes how this course is designed and what it foregrounds.
+Positionality is the acknowledgement that every scholar, teacher, and student comes to knowledge from a specific social location shaped by race, nationality, gender, class, and lived experience. In Indigenous studies, this matters because questions of land, sovereignty, law, and history are never approached from a neutral nowhere; standpoint shapes what gets emphasized, what gets taken for granted, and what kinds of relations to knowledge are treated as legitimate.
 
 <div class="definition"><strong>Positionality:</strong> The social and political context that shapes an individual's identity, including race, class, gender, sexuality, and ability. Acknowledging positionality is a fundamental practice in Indigenous studies, feminist scholarship, and other critical fields because it makes visible the standpoint from which knowledge is produced and communicated.</div>
-
-Robinson's research focuses on critical Native theory, decolonial theory, theories of race and racialization, settler colonialism, semiotics, cultural production, Marxism, political ontology, epistemology, sovereignty, the state, and socio-legal theory. This theoretical breadth means the course is not simply descriptive history — it asks students to think analytically about power, structure, and the processes through which Indigenous Peoples have been governed, dispossessed, and simultaneously continued to resist and persist.
 
 ## What Is Indigenous Studies?
 
@@ -28,15 +24,7 @@ In the Canadian context, the term <strong>Indigenous</strong> is increasingly us
 
 <div class="definition"><strong>Indigenous Peoples (in Canada):</strong> A collective term referring to the original inhabitants of the territory now called Canada and their descendants. Under the Canadian Constitution Act (1982), Section 35, "Aboriginal peoples of Canada" includes First Nations (status and non-status), Métis, and Inuit. The term "Indigenous" has largely replaced "Aboriginal" in common usage and is preferred by many communities and scholars.</div>
 
-The course description frames its central question clearly: what has shaped, and what continues to shape, the relationship between Indigenous Peoples and the broader Canadian state and society? That relationship cannot be understood without sustained attention to <strong>colonialism</strong> — the specific historical process through which European empires claimed sovereignty over Indigenous territories, restructured Indigenous political, economic, and cultural life, and created the legal and institutional apparatus that continues to govern Indigenous Peoples today.
-
-## The Course Structure and Its Logic
-
-The course works sequentially through Monchalin's <em>The Colonial Problem</em>, which is itself an unusual textbook: written by an Indigenous scholar from the Niagara region of Ontario, it frames crime, justice, policing, and law not as abstract institutions but as instruments and legacies of colonial power. The chapters move from Indigenous worldviews and governance, through the history of colonialism and treaties, through assimilation policies, and into contemporary issues including violence against Indigenous women, corporate-state collusion, land claims, and Indigenous justice alternatives.
-
-Robinson structures the weekly sessions not as traditional lectures but as dialogical discussions, what he describes as "group office hours." Students are expected to come having done the readings, prepared to ask questions and make comments. This pedagogical choice reflects a principle drawn from Indigenous education philosophies: knowledge is not simply transmitted from an authority to passive recipients but is collectively worked through in community.
-
-A general course content trigger warning applies throughout: the materials include discussions of colonial violence, assimilation policies (including the residential school system and its harms), intergenerational trauma, and violence against Indigenous women, girls, and two-spirit people. Students are encouraged to practice self-care and to communicate with the instructor about alternative arrangements where needed.
+The central question is what has shaped, and what continues to shape, the relationship between Indigenous Peoples and the broader Canadian state and society. That relationship cannot be understood without sustained attention to <strong>colonialism</strong> — the specific historical process through which European empires claimed sovereignty over Indigenous territories, restructured Indigenous political, economic, and cultural life, and created the legal and institutional apparatus that continues to govern Indigenous Peoples today.
 
 ---
 

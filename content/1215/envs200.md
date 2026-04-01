@@ -4,11 +4,11 @@ prof: "University of Waterloo"
 subjects: "ENVS"
 ---
 
-## Course Overview
+## Ecology as a Scientific Field
 
-ENVS 200 Field Ecology at the University of Waterloo is an introductory course that uses ecology as its organizing lens. Ecology itself derives from the Greek *oikos* ("house") and *logos* ("study of"), and at its core it is the scientific study of the distribution and abundance of organisms, the interactions that determine those patterns, and the relationships between organisms and the transformation of energy and matter through environments. A simpler framing comes from ecologist Robert Ricklefs: ecology is "the study of the natural environment, particularly the interrelations between organisms and their surroundings." Either way, the field is defined by interconnection. As the first law of ecology holds — popularized by ecologist Garrett Hardin — "everything is connected to everything else," and "we can never do merely one thing."
+Ecology derives from the Greek *oikos* ("house") and *logos* ("study of"), and at its core it is the scientific study of the distribution and abundance of organisms, the interactions that determine those patterns, and the relationships between organisms and the transformation of energy and matter through environments. A simpler framing comes from ecologist Robert Ricklefs: ecology is "the study of the natural environment, particularly the interrelations between organisms and their surroundings." Either way, the field is defined by interconnection. As the first law of ecology holds — popularized by ecologist Garrett Hardin — "everything is connected to everything else," and "we can never do merely one thing."
 
-The course is organized around a principle of **ecoliteracy**: the goal of becoming a citizen who can identify and explain the main principles of ecology, demonstrate how those principles apply to real-world situations including human–nature interactions, and analyze the elements of scientific inquiry as they pertain to ecological questions. The textbook used is *Essentials of Ecology* (4th edition) by Begon, Howarth, and Townsend. Laboratory work runs in parallel with lectures, offering hands-on field experience in local ecosystems including the University of Waterloo campus, Laurel Creek watershed, local woodlots, and wetlands.
+An ecoliterate approach aims to identify and explain the main principles of ecology, demonstrate how those principles apply to real-world situations including human–nature interactions, and analyze the elements of scientific inquiry as they pertain to ecological questions.
 
 ---
 

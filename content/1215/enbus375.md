@@ -1,10 +1,8 @@
 ---
 title: "ENBUS 375: Business and Environment"
-prof: ""
+prof: "Dr. Jennifer Lynes"
 subjects: "ENBUS"
 ---
-
-**Instructor:** Dr. Jennifer Lynes, Associate Professor, School of Environment, Enterprise and Development (SEED), University of Waterloo. Office hours: Wednesdays 10:00 am to 12:00 pm.
 
 This course explores the idea of "fashion" — including trends in clothing, accessories, footwear and cosmetics — through a lens of sustainability. The course weaves together the history of consumer culture, the mechanics of the fashion industry, the environmental and social costs of how clothing is produced and discarded, and emerging alternatives ranging from ethical sourcing to the minimalist movement and circular economy design.
 
@@ -12,9 +10,9 @@ This course explores the idea of "fashion" — including trends in clothing, acc
 
 # Looking Inward — What Is Fashion and What Is in Your Closet?
 
-## Introduction to the Course
+## Introduction
 
-The first week of ENBUS 375 invites students to begin not with grand theory but with a deeply personal act: taking an inventory of their own wardrobe. Before analyzing global supply chains or the ideology of consumption, the course grounds itself in the concrete reality of what each of us actually owns and wears. The assignment for this week asks students to catalogue their clothing — how many items they have, where each was made, how long they have had it, and how often they actually wear it. This apparently simple exercise quickly reveals something surprising: most of us own far more than we use, and we know remarkably little about where our clothes came from.
+A useful way to begin thinking about fashion is with the ordinary contents of a wardrobe. Once we look closely at what we own, where it was made, how long we have had it, and how often we actually wear it, the fashion system stops being abstract and becomes materially visible.
 
 **Fashion** can be defined broadly as a popular or widely accepted style or practice at a particular time. In its most familiar sense it refers to clothing, footwear, accessories, and cosmetics — but the concept extends to furniture, language, and social behavior. What distinguishes fashion from clothing as a purely functional category is its relationship to time, status, identity, and social meaning. Fashion, by definition, changes. A garment that is fashionable this season will not be fashionable next season; the very impermanence is structural to the concept.
 

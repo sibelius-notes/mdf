@@ -4,7 +4,7 @@ prof: "Christine Dupont"
 subjects: "BIOL"
 ---
 
-## Introduction to the Course
+## Introduction
 
 Genetics is the study of heredity — how traits are transmitted from parents to offspring, how genes determine the characteristics of living organisms, and how genetic information varies within and among populations. The field traces its modern origins to a series of brilliant experiments conducted in the nineteenth and twentieth centuries, yet it remains one of the most rapidly evolving areas of contemporary biology. These notes approach genetics both mechanistically and conceptually, explaining not merely what patterns of inheritance exist, but *why* they exist, grounding every principle in the molecular architecture of the chromosome and the mechanics of cell division.
 

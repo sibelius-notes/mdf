@@ -6,8 +6,6 @@ prof: "Britt Anderson"
 
 ## Sources and References
 
-**Primary textbook** — None required (instructor's online book used as supplementary reference, available through the university library)
-
 **Supplementary texts** — Dayan & Abbott, *Theoretical Neuroscience*; Izhikevich, *Dynamical Systems in Neuroscience*; Gerstner et al., *Neuronal Dynamics*; Haykin, *Neural Networks and Learning Machines*; Hertz, Krogh & Palmer, *Introduction to the Theory of Neural Computation*
 
 **Online resources** — Course GitHub repository (Comp-Neuro-420, racket-book branch); MIT OpenCourseWare Computational Neuroscience resources; Neuromatch Academy open materials; Scholarpedia articles on computational neuroscience models

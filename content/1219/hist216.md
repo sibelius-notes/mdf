@@ -12,15 +12,7 @@ This course traces the history of information and communication technology from 
 # Module 1: Communication Before the Digital Age
 
 
-## 1a. Welcome to the Course
-
-
-### Introduction
-
-
-
-
-## 1b. An Early History of Communication
+## 1a. An Early History of Communication
 
 Humans have long wanted to communicate with each other. We often communicate to each other through our voices. If we all ended up in the same physical space, we would probably talk to each other, tell stories, joke, laugh, etc. Indeed, many early cultures operate in a story telling narrative tradition. Stories are passed down from generations to the next, perhaps changing along the way, representing a proud oral tradition that has implications today for legal systems.
 
@@ -3108,4 +3100,3 @@ Let’s consider Edgar Allan Poe (1809-1849), the poet best known for poems like
 Consider: most people alive today have already “published” more than Poe ever did, and will leave more behind. We live in a world dominated by communication — through text, through images, through videos, and beyond. The question remains: is that a good thing?
 
 <em>Figure 6: Next time you worry about how much time you spend on your phone, just think of yourself as adding to our collective historical record! skynesher/E+/Getty Images</em>
-

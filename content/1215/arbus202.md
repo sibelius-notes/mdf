@@ -4,33 +4,6 @@ prof: ""
 subjects: "ARBUS"
 ---
 
-# Course Overview
-
-ARBUS 202 / PHIL 215 — Professional and Business Ethics is an introductory course offered at the University of Waterloo, developed by Dr. Gregory Andres. The course runs across twelve modules and is designed to bridge ethical theory with practical application in professional and business contexts. It is simultaneously a philosophy course and a practical guide for navigating the ethical terrain of organizational life.
-
-The overarching premise of the course rejects a pervasive false dichotomy: the idea that making money and being ethical are mutually exclusive pursuits. Students are shown that it is entirely possible to be profitable, competitive, and successful in business without violating ethical principles, engaging in deception, or exploiting the environment. Ethics is not an obstacle to business success; it is, in many respects, a precondition for sustainable success.
-
-**Ethics**, broadly speaking, is the branch of philosophy concerned with analyzing the principles that govern the moral evaluation of human conduct. Because human beings are, in part, economic animals who trade with one another in the pursuit of mutual benefit, and because our actions inevitably affect the well-being of others, business and professional activity falls squarely within the domain of ethical analysis.
-
-The course assumes **moral pluralism** — the view that there is a plurality of moral principles, each capturing something important about what matters morally. These principles may sometimes be consistent with one another and sometimes in tension, but all deserve serious consideration. This assumption licenses a pluralistic methodology: the course draws on multiple ethical frameworks rather than dogmatically committing to a single theory.
-
-Key topics across the twelve modules include:
-
-- Fundamentals of moral theory (utilitarianism, deontology, virtue ethics, ethics of care)
-- Ethical decision-making frameworks
-- Corporate social responsibility (CSR) and the social role of profit
-- Equality, fairness, and discrimination
-- Social action problems and game theory
-- Markets and the environment
-- Advertising ethics
-- Governance and the principal-agent problem
-- Strategic negotiation
-- Codes of ethics and whistleblowing
-
-By the end of the course, students should be able to understand and apply multiple moral theories, identify ethical problems in complex professional contexts, evaluate alternative courses of action, and defend a plausible ethical position.
-
----
-
 # Module 1: Introduction and Basic Concepts
 
 ## The Nature of Applied Ethics
