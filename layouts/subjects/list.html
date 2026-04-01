@@ -1,8 +1,9 @@
 {{ define "main" }}
 <article>
   <h1>Other Subjects</h1>
+  {{ $otherSubjectsGroupingThreshold := default 10 .Site.Params.other_subjects_grouping_threshold }}
   {{ range .Data.Terms.ByCount }}
-    {{ if le .Count 4 }}
+    {{ if le .Count $otherSubjectsGroupingThreshold }}
     {{ $code := .Page.Title | upper }}
     {{ $name := $code }}
     {{ with index $.Site.Data.subjects $code }}{{ $name = .name }}{{ end }}

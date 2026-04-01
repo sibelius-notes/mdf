@@ -1,8 +1,9 @@
 {{ define "main" }}
 <article>
   <h1>Other Terms</h1>
+  {{ $otherTermsGroupingThreshold := default 10 .Site.Params.other_terms_grouping_threshold }}
   {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
-    {{ if le (len .Pages) 4 }}
+    {{ if le (len .Pages) $otherTermsGroupingThreshold }}
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <div class="course-grid">
     {{ range .Pages.ByTitle }}

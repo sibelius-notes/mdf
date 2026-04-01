@@ -10,12 +10,14 @@
     <button class="nav-toggle-btn" data-target="subjects">By Subject</button>
   </div>
   <ul class="nav-list" id="nav-terms">
+    {{ $otherTermsGroupingThreshold := default 10 .Site.Params.other_terms_grouping_threshold }}
+    {{ $otherSubjectsGroupingThreshold := default 10 .Site.Params.other_subjects_grouping_threshold }}
     {{ $currentSection := "" }}
     {{ with .FirstSection }}{{ with .File }}{{ $currentSection = .ContentBaseName }}{{ end }}{{ end }}
     {{ $smallTermCount := 0 }}
     {{ $smallTermActive := eq .RelPermalink "/terms/" }}
     {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
-      {{ if gt (len .Pages) 10 }}
+      {{ if gt (len .Pages) $otherTermsGroupingThreshold }}
     <li>
       <a href="{{ .RelPermalink }}"{{ if and .File (eq .File.ContentBaseName $currentSection) }} class="active"{{ end }}>
         {{ .Title }}
@@ -39,7 +41,7 @@
     {{ $smallSubjCount := 0 }}
     {{ $smallSubjActive := eq $currentPath "/subjects/" }}
     {{ range .Site.Taxonomies.subjects.ByCount }}
-      {{ if gt .Count 10 }}
+      {{ if gt .Count $otherSubjectsGroupingThreshold }}
     <li>
       {{ $code := .Page.Title | upper }}
       {{ $label := $code }}
