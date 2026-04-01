@@ -6,7 +6,7 @@ subjects: "AMATH"
 
 ## Sources and References
 
-**Primary textbook** — No required textbook; readings posted on LEARN.
+**Primary textbook** — No required textbook.
 **Supplementary texts** — Pierrehumbert, R. T. (2010). *Principles of Planetary Climate*. Cambridge University Press; Strogatz, S. H. (2018). *Nonlinear Dynamics and Chaos*, 2nd ed. CRC Press (for dynamical systems sections); Northrop, M., & Hufbauer, G. C. (Eds.) (2019). *Playing It Cool: High-value Strategies for Reducing Greenhouse Gas Emissions*. (Economics.)
 **Online resources** — IPCC Assessment Reports (ipcc.ch); NOAA Climate.gov; NASA GISS Surface Temperature Analysis (data.giss.nasa.gov); NCAR Climate Data Guide (climatedataguide.ucar.edu); Fourier Analysis MIT OCW 18.03 notes.
 

@@ -15,7 +15,7 @@ These notes synthesize material from the following textbooks and standard refere
 - H. Goldstein, C. P. Poole, and J. L. Safko, *Classical Mechanics*, 3rd ed. (Addison-Wesley, 2002)
 - L. D. Landau and E. M. Lifshitz, *Mechanics*, Course of Theoretical Physics Vol. 1, 3rd ed. (Butterworth-Heinemann, 1976)
 
-**Online lecture notes**
+**Online resources**
 - D. Tong, *Classical Dynamics* (University of Cambridge, 2005) — damtp.cam.ac.uk/user/tong/dynamics.html
 - R. Fitzpatrick, *Classical Mechanics* (University of Texas) — farside.ph.utexas.edu/teaching/336k/Newtonhtml
 

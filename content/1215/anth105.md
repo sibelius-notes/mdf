@@ -8,8 +8,6 @@ Humans began making tools more than 2.5 million years ago. Written out, that num
 
 This course is organized around two questions: *How did people live in prehistoric times and places? And how do we know?* Without written records, the only way to learn about prehistoric cultures is through the material remains they left behind — the artifacts, structures, food remains, and features that archaeologists excavate from the ground. The course focuses on a small number of specific sites drawn from across the world and across deep time, arranged not from oldest to newest, but from the most familiar to the most remote from our own experience.
 
-The required book is Paul Bahn, *Archaeology: A Very Short Introduction* (Oxford University Press, 2012). Eight journal articles covering specific archaeological sites form the second half of the readings. Importantly, the lectures and readings are designed to *complement* each other rather than overlap: very little of what the lectures cover appears in the readings, and the readings will not be discussed at length in the lectures. Both are assessed separately, so both must be done.
-
 ---
 
 # Module 1: Course Introduction
@@ -26,12 +24,6 @@ The course will proceed, in general, from sites and ways of life that seem somew
 2. Describe the methods and techniques used to learn about the prehistoric past
 3. Outline how those methods have been employed at each of the sites studied
 4. Summarize what has been learned about the people who lived at those sites
-
-## Unit 2: About the Professor
-
-Prof. Robert Park is an **anthropological archaeologist** — the most all-encompassing kind, and the type that studies prehistory specifically. His teaching assistant is Jennifer Cullison, who is working toward a master's degree.
-
-Park began his career working for the Ontario government as an archaeologist, with early projects in southern Ontario. He then spent a field season in Yukon at a place called Macmillan Pass. But most of his research career has been spent in **the Canadian Far North** — Nunavut and the Northwest Territories — working in the Arctic archaeology of both prehistoric and historical Indigenous peoples. One of his own excavation sites, **Porton Point**, will be the subject of a full module in this course.
 
 ## Unit 3: The Prehistoric Places We'll Be Studying
 
@@ -69,19 +61,6 @@ Across the 13 modules of this course, Prof. Park introduces the following sites 
 **Module 13 — Earliest toolmakers:**
 - **Olorgesailie** (near Nairobi, Kenya) — early human behavior in the Great Rift Valley
 - **FLK West, Olduvai Gorge** (Tanzania) — the Great Rift Valley; site of the earliest stone tools
-
-## Unit 4: Reviewing the Course Outline
-
-The course unfolds across 13 weekly modules. Assessment is based on four online open-book quizzes, a midterm exam, a final exam, two sets of reflections, and a research assignment.
-
-
-**Reflections** are written twice during the course. They require students to reflect in some way on what they've been learning; specific instructions are provided in each module.
-
-**The research assignment** involves reading an additional journal article about an archaeological site and reporting on it; details are provided when it is assigned.
-
-A critical point: **the lectures and readings cover almost entirely different material.** The readings are tested in the quizzes and exams but are not discussed at length in the lectures. The lectures provide context, narrative, and analysis that does not appear in the readings. Students who do only one or the other will be underprepared for the assessments.
-
----
 
 # Module 2: The Discovery of Prehistory
 

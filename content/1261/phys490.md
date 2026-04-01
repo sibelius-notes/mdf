@@ -6,7 +6,7 @@ subjects: "PHYS"
 
 ## Sources and References
 
-**Primary textbook** — Course lecture notes by Gang Xu and Dan Wohns (posted on LEARN).
+**Primary textbook** — None assigned.
 **Supplementary texts** — MacKenzie, R. (2000). *Path Integral Methods and Applications*. arXiv:quant-ph/0004090; Tong, D. *Lectures on Supersymmetric Quantum Mechanics* (damtp.cam.ac.uk/user/tong/susy.html); Polchinski, J. (1998). *String Theory*, Vols. 1–2. Cambridge University Press; Peskin, M. E., & Schroeder, D. V. (1995). *An Introduction to Quantum Field Theory*. Westview Press (renormalization).
 **Online resources** — Tong, D. *String Theory Lecture Notes* (damtp.cam.ac.uk/user/tong/string.html); PIRSA lectures from Perimeter Institute (pirsa.org); arXiv hep-th.
 

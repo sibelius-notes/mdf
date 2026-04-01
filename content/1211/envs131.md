@@ -32,7 +32,7 @@ The **FAST framework** is a practical tool for organizing rhetorical considerati
 <strong>FAST</strong> stands for Format, Audience, Style, and Tone. Format refers to the structural conventions of the document type — a business letter looks different from a press release, which looks different from an email. Audience, as discussed above, shapes all other decisions. Style refers to the overall register of language — formal versus informal, technical versus accessible, first-person versus third-person. Tone refers to the emotional quality or attitude conveyed — urgent, sympathetic, authoritative, apologetic, enthusiastic. Style and tone are related but distinguishable: style is more structural, tone is more affective.
 </div>
 
-The professor would return to FAST repeatedly throughout the course, treating it as a pre-writing checklist rather than a post-writing evaluation rubric. Students were advised to consciously answer each FAST question before beginning any assignment.
+The professor would return to FAST repeatedly throughout the course, treating it as a pre-writing checklist rather than a post-writing evaluation rubric.
 
 **Business writing** encompasses a wide range of professional document types. The course covered emails, press releases, business letters, and memos as primary forms. Each has its own format conventions. A professional email requires a clear subject line that signals the purpose of the message, an appropriate salutation, concise paragraphs that respect the reader's time, a specific call to action or request, and a professional signature. A press release has an inverted-pyramid structure in which the most important information appears in the first paragraph and supporting details follow in decreasing order of importance — because journalists scanning a press release will often read only the first paragraph before deciding whether the story merits further attention.
 
@@ -49,8 +49,6 @@ A significant portion of the third session was devoted to **academic integrity**
 The distinction between **paraphrasing** and **quoting** is foundational. A paraphrase is a restatement of an idea in one's own words, still requiring an in-text citation. A direct quotation reproduces the source text verbatim and requires both quotation marks and a citation. Students were advised that heavy reliance on direct quotation is often a sign that the writer does not fully understand the material; demonstrating comprehension typically means paraphrasing and synthesizing, with selective quotation for passages where the exact wording is significant.
 
 **In-text citations** in academic writing typically follow author-date conventions (such as APA) or author-page conventions (such as MLA). The professor advised students to begin learning citation software early in their university career, noting that tools like Zotero or Mendeley will save significant time on longer papers and theses. The important practice is to link every claim back to its source in a way that allows a reader to verify it.
-
-Return of the email assignment prompted substantial discussion of format. Common problems in student emails included unclear or generic subject lines, inappropriate salutations (treating email like a text message), paragraphs that buried the purpose, and missing professional signatures. The professor reiterated that a business email is a form of persuasion: even an administrative email implicitly argues that the reader should take the requested action, and it needs to establish enough ethos to motivate that action.
 
 The session also introduced **active and passive voice** as a rhetorical choice with ethical implications.
 
@@ -86,7 +84,6 @@ The press release was introduced with a case study: the **Mount Polley mining di
 A <strong>press release</strong> is a formal written statement issued to journalists and news organizations announcing something newsworthy. Its structure follows the <strong>inverted pyramid</strong>: the most critical information (who, what, when, where, why) occupies the opening paragraph, with supporting detail, context, and quotations from organizational spokespeople following in decreasing order of importance. The document ends with a standard boilerplate paragraph about the organization. This structure exists because journalists and editors are time-constrained: they need to be able to assess newsworthiness within seconds of picking up the document.
 </div>
 
-Two guest speakers appeared in this session: **Michelle from The Radical**, which is the Faculty of Environment student publication at UW, and **Melissa from Invigorate**, the Faculty of Environment's annual festival of arts and ideas. Both organizations were presented as campus engagement options for students fulfilling the community engagement requirement in the B or higher pathways.
 
 ---
 

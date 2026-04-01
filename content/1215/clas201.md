@@ -4,7 +4,7 @@ prof: ""
 subjects: "CLAS"
 ---
 
-CLAS 201 at the University of Waterloo is officially titled *Ancient Greek Society* and is taught by Dr. Lisa Trentin, a specialist in the visual culture and social history of ancient Rome whose research has focused on marginalized bodies and the representation of identity, and who has excavated at Pompeii.
+CLAS 201 at the University of Waterloo is officially titled *Ancient Greek Society*.
 
 The organizing question of the course is deceptively simple: **who were the Greeks?** Answering it requires grappling with problems of identity, evidence, and legacy that are far from resolved. Greek civilization produced democracy, tragedy, systematic philosophy, and the Olympic Games. It also produced institutionalized slavery, the legal exclusion of women from political life, and the massacres of entire populations for strategic advantage. The course does not paper over this complexity. Instead, it uses the lens of **Self vs. Other** — the way the Greeks defined themselves against various categories of excluded or opposed groups — as its central analytical framework throughout all twelve weeks.
 
@@ -27,17 +27,6 @@ The <strong>Self vs. Other</strong> framework is the course's spine. It shapes n
 The framework draws on a strand of modern scholarship influenced by anthropology and postcolonial theory, which emphasizes that identity is never self-evident or given but is always performed, contested, and constructed in relation to what it excludes. Applying this lens to ancient Greece is productive precisely because the Greeks were so explicit about the boundaries they drew: their language encoded the distinction between <strong>Hellenes</strong> and <strong>barbaroi</strong> (non-Greek-speakers), between <strong>polites</strong> (citizen) and <strong>xenos</strong> (foreigner/stranger), between <strong>eleutherios</strong> (free) and <strong>doulos</strong> (slave).
 
 # Welcome and Introduction
-
-## Week 1i — Welcome
-
-The first lecture is largely administrative, introducing students to the instructor and the structure of the course. Dr. Trentin's own scholarly background is relevant context: her research specializes in the visual culture and social history of ancient Rome, with a particular focus on the representation of the body and the construction of identity through bodily imagery. Her monograph <em>The Hunchback in Hellenistic and Roman Art</em> (2015) examines how deformed and disabled bodies were represented in antiquity and what those representations reveal about ancient attitudes toward physical difference and social marginality. She has also published an adult coloring book on Classical Sculpture (2017) and is a trained field archaeologist who has excavated at Pompeii.
-
-This background shapes the course's methodological sensibility. A scholar who has spent years thinking about how marginalized bodies are depicted in ancient art brings particular acuity to the question of how the Greeks represented the <strong>Other</strong> — the foreign, the female, the enslaved, the disabled. The Self vs. Other framework is not merely a pedagogical convenience but reflects genuine concerns in current classical scholarship.
-
-The syllabus is described in the lecture as a "contract" for the course. Students are reminded of three practical requirements. First, the required textbook (<em>Classics in Translation</em>) must be obtained, and readings should be completed before reviewing lecture slides. Second, all assessments — assignments, tests, and the final exam — are due on Thursdays. Third, additional information sheets for each assessment component are posted on LEARN and should be consulted carefully. The course runs entirely online due to the COVID-19 pandemic, with all content asynchronous and office hours held via Zoom.
-
-<div class="definition"><strong>Asynchronous online delivery:</strong> a mode of course delivery in which there are no required real-time sessions; students access pre-recorded lectures, readings, and materials at times of their choosing within weekly windows, rather than attending class at a fixed hour.</div>
-
 
 ## Week 1ii — Introduction: Who Were the Greeks?
 

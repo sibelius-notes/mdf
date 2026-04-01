@@ -10,7 +10,7 @@ prof: "Christopher Burris"
 
 **Supplementary texts** — Burris, C. T. (2022). *Evil in Mind: The psychology of harming others*. Oxford University Press.
 
-**Online resources** — University of Waterloo PSYCH 232 course outlines (Fall 2007, Winter 2020, Winter 2023); APA PsycINFO; Frontiers in Psychology.
+**Online resources** — APA PsycINFO; Frontiers in Psychology.
 
 **Assigned readings** —
 - Govrin, A. (2018). The cognition of severe moral failure: A novel approach to the perception of evil. *Frontiers in Psychology*, 9, 557.

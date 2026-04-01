@@ -17,7 +17,7 @@ subjects: "PHYS"
 - G. Carleo et al., "Machine learning and the physical sciences," *Rev. Mod. Phys.* 91 (2019), 045002
 
 **Online resources**
-- Stanford CS229 lecture notes — cs229.stanford.edu
+- Stanford CS229 materials — cs229.stanford.edu
 - UBC CPSC 340/540 notes — cs.ubc.ca
 
 ---

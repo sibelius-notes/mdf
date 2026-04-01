@@ -10,7 +10,6 @@ subjects: "PSYCH"
 - American Psychiatric Association. *Diagnostic and Statistical Manual of Mental Disorders* (DSM-5-TR). APA Press, 2022.
 - World Health Organization. *ICD-11 for Mortality and Morbidity Statistics*. WHO, 2022.
 - Kring, A. M., Johnson, S. L., Davison, G. C., & Neale, J. M. *Abnormal Psychology* (14th ed.). Wiley.
-- Lecture slides and notes, PSYCH 257, University of Waterloo.
 
 ---
 
