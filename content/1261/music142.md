@@ -390,7 +390,7 @@ We need a producer-composer figure to stand for the adventurous side of Hindi fi
 
 Burman's importance lies not only in hitmaking, but in method. He was associated with eclectic orchestration, with bringing rock and other non-Indian pop timbres into the soundtrack more aggressively, and with treating the studio as an active compositional space. That matters because it disrupts the stereotype that film music is formulaic by nature.
 
-The canonical example from the Claude plan was **"Dum Maro Dum"** from 1971, and it is a good example because you can hear psychedelic rock color, fuzzed electric guitar, and an unmistakably cinematic sense of texture working alongside Indian melodic habit. Burman's partnerships with lyricists such as **Gulzar** also matter because soundtrack meaning was never just about sound. It was about how poetry, image, and arrangement locked together.
+The canonical example was **"Dum Maro Dum"** from 1971, and it is a good example because you can hear psychedelic rock color, fuzzed electric guitar, and an unmistakably cinematic sense of texture working alongside Indian melodic habit. Burman's partnerships with lyricists such as **Gulzar** also matter because soundtrack meaning was never just about sound. It was about how poetry, image, and arrangement locked together.
 
 In historical terms, Burman occupies the same kind of role that Music 141 assigned to producers such as Quincy Jones. He shows what happens when arranging, recording, groove, and timbral imagination become central to mass popular form.
 
@@ -476,7 +476,7 @@ Jay Chou matters because he reorganized early twenty-first-century Mandopop arou
 
 The article also helps us hear what was new. Critics and collaborators emphasized the way Chou mixed Western instruments with Chinese instruments and Chinese pentatonic melodic habits with contemporary R&B and pop production. That matters historically because it places him directly after, but not inside, the path opened by David Tao.
 
-The Claude plan wanted an album-by-album approach, and that instinct was right. Chou's early sequence - `Jay` (2000), `Fantasy` (2001), `Eight Dimensions` (2002), `Ye Hui Mei` (2003), `Common Jasmine Orange` (2004), `November's Chopin` (2005) - matters because listeners could hear rapid evolution in public. This was not one viral album. It was a sustained run.
+Chou's early sequence - `Jay` (2000), `Fantasy` (2001), `Eight Dimensions` (2002), `Ye Hui Mei` (2003), `Common Jasmine Orange` (2004), `November's Chopin` (2005) - matters because listeners could hear rapid evolution in public. This was not one viral album. It was a sustained run.
 
 David Tao helped normalize contemporary R&B vocabulary in Mandopop. Jay Chou took that opening and made it stranger, murkier, more producer-centered, more rhythmically slippery, and much harder to imitate well.
 
@@ -753,7 +753,7 @@ The best single image for this course is not a tree with pure roots. It is a tra
 
 Japan sends and receives influence. Korea adapts and exports. Indian music travels through film, diaspora, and streaming. Chinese-language pop forms a regional triangle rather than a single national line. Cumbia crosses borders almost compulsively. Reggaeton emerges through routes. Gamelan influences both local ritual life and Western art-music listening.
 
-The specific chains from the Claude plan still help:
+The specific chains still help:
 - Japan -> Taiwan/Hong Kong -> mainland China
 - enka -> trot -> later East Asian ballad feeling
 - Bollywood and Punjabi forms -> bhangra -> Western club and hip hop contexts

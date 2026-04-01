@@ -1,5 +1,5 @@
 ---
-title: "STAT 433: Applied Probability"
+title: "STAT 433: Stochastic Processes 2"
 prof: "Steve Drekic"
 subjects: "STAT"
 ---

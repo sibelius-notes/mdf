@@ -15,7 +15,7 @@
     {{ $smallTermCount := 0 }}
     {{ $smallTermActive := eq .RelPermalink "/terms/" }}
     {{ range sort (where .Site.Sections "Kind" "section") ".Params.nav_order" "desc" }}
-      {{ if gt (len .Pages) 4 }}
+      {{ if gt (len .Pages) 10 }}
     <li>
       <a href="{{ .RelPermalink }}"{{ if and .File (eq .File.ContentBaseName $currentSection) }} class="active"{{ end }}>
         {{ .Title }}
@@ -39,7 +39,7 @@
     {{ $smallSubjCount := 0 }}
     {{ $smallSubjActive := eq $currentPath "/subjects/" }}
     {{ range .Site.Taxonomies.subjects.ByCount }}
-      {{ if gt .Count 4 }}
+      {{ if gt .Count 10 }}
     <li>
       {{ $code := .Page.Title | upper }}
       {{ $label := $code }}

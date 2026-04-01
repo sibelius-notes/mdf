@@ -1,14 +1,11 @@
 ---
-title: "STAT 333: Applied Probability"
+title: "STAT 333: Stochastic Processes 1"
 prof: "Steve Drakich"
 subjects: "STAT"
 ---
 
 # Introduction
 
-STAT 333, *Applied Probability*, is a third-year course at the University of Waterloo taught in Spring 2020 by Professor Steve Drakich. Despite its title, the course is more theoretical than strictly applied—at its core, it is an introduction to **stochastic processes**, with particular emphasis on processes that possess a regenerative or memoryless character.
-
-The prerequisite is STAT 230 (introductory probability) with a grade of at least 60%, together with solid backgrounds in calculus (differentiation, integration, limits, series, exponential functions) and linear algebra (solving systems of linear equations, matrix multiplication, determinants, inverses). The course builds cumulatively on all of this background.
 
 The four chapters of the course are:
 1. **Chapter 1** — Review of elementary probability theory.
