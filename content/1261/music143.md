@@ -671,7 +671,6 @@ No account of the contemporary singer-songwriter tradition would be complete wit
 The **auteur ideal** that runs through this entire chapter — the idea that the most important thing in popular music is the individual vision, expressed in one's own words and one's own voice — is simultaneously the singer-songwriter tradition's greatest strength and its most problematic assumption. It tends to romanticize solitude and suffering, to privilege a certain kind of artistic biography over others, to make commercial success seem like a form of compromise. The cabin in Wisconsin, the coffeehouses of Greenwich Village, the death at twenty-six or thirty or thirty-four — these become part of the music's meaning in ways that can distort our listening. The tradition has also been accused, with some justice, of prioritizing certain voices over others: it was built substantially on a white, male, middle-class idea of what the personal lyric should sound like, and the figures who complicated that — Buffy Sainte-Marie, Tracy Chapman, Phoebe Bridgers — have had to work against the genre's own assumptions. The tradition is vital and ongoing and genuinely important. It is also worth examining with clear eyes. The songs themselves — the best of them, from Mitchell's "The Last Time I Saw Richard" to Chapman's "Fast Car" to Buckley's "Hallelujah" to Apple's "Fetch the Bolt Cutters" — repay that examination with interest. They have earned the listening.
 # Chapter 8: Progressive Rock — When Rock Reached for Art
 
-**MUSIC 143 | Era: 1967–1980, with legacy**
 
 ---
 
@@ -780,8 +779,6 @@ The ultimate argument for prog's historical importance may be this: it insisted 
 The irony is that punk, which defined itself as prog's antithesis, also benefited from this. Punk could not have been as effective a statement of deliberate simplicity if prog had not first established complexity as the norm. You cannot perform an act of reduction against a baseline that doesn't exist. Johnny Rotten's "I Hate Pink Floyd" t-shirt is, in this reading, a backhanded tribute: it acknowledges that Pink Floyd mattered enough to be worth hating. And the musicians who came after punk — the ones who figured out how to combine punk's directness and prog's ambition, who wanted the energy of the Ramones and the conceptual scope of *The Dark Side of the Moon* — found that both traditions had something to offer. The history of serious rock music since 1980 is substantially a history of negotiating between those two poles. Prog established one of them. That is enough to matter.
 # Chapter 9: Doo-Wop, Girl Groups, and the Wall of Sound Revisited
 
-**MUSIC 143 — Popular Music in Historical Context**
-**Era: 1950–1965**
 
 > *A note on coverage:* MUSIC 140 addressed doo-wop and girl groups within broader chapters on the rise of rock and roll and the Brill Building songwriting machine. Both topics received competent but necessarily compressed treatment there. This chapter gives them the extended examination they deserve — not because the earlier course got it wrong, but because these traditions are dense enough, and influential enough, to reward a second, slower look. We also go considerably deeper into Phil Spector than MUSIC 140's survey could afford.
 
@@ -876,10 +873,6 @@ The **boy band** phenomenon, which MUSIC 141 addresses in its treatment of 1990s
 The longevity of the vocal harmony tradition in American popular music is, when you step back from the individual examples and look at the whole arc, something genuinely remarkable. From the gospel quartets of the 1930s and 1940s to the Ink Spots to the Platters to the Shirelles to the Ronettes to the Four Seasons to the Beach Boys to the Backstreet Boys to Pentatonix, the thread holds. The technology changes — from the acoustic recording of the Mills Brothers to the Wall of Sound to digital audio workstations — but the fundamental act does not: people placing their voices in harmonic relationship to one another, finding in that relationship something that neither voice could find alone. The psychological appeal of this act is not mysterious. Harmony requires listening — real listening, the kind where you hear what someone else is doing and adjust what you are doing in response. It requires subordinating individual expression to a collective result. And it produces, when it works, a kind of beauty that seems to be available only through cooperation — a beauty that is not diminished by being shared but multiplied by it.
 
 What the doo-wop era contributed to this tradition, beyond its specific harmonic vocabulary and its beloved recordings, was the demonstration that this music did not require institutional support or professional training or expensive equipment. It required only voices and the willingness to listen to each other. That message — you already have what you need; the instrument is you — is one of the most democratically radical statements that popular music has ever made, and it resonates as clearly in the YouTube videos of university a cappella groups today as it did in the hallways of the Bronx and Harlem and South Philadelphia in 1952. The harmonics have not changed. The human impulse behind them has not changed. Only the street corners are different.
-
----
-
-*End of Chapter 9*
 
 ---
 
@@ -1011,7 +1004,6 @@ The Allman Brothers Band's influence on what we now call the **jam band** scene 
 The arc of this chapter is, in the end, a story about what happened to the utopian energy of the 1960s counterculture when it met the reality of the 1970s. Some of it curdled (Sly Stone's *Riot*). Some of it doubled down on darkness until the darkness consumed it (Morrison, Joplin, Hendrix — the 27 Club). Some of it retreated to simplicity and tradition as a way of staying honest (the Band, CCR). Some of it expanded into community ritual that outlasted the original moment (the Grateful Dead, the jam band world). And some of it got complicated by the regional politics of the American South in ways that neither the musicians nor their audiences have fully worked through (Southern rock and the Confederate flag). These are not stories with clean endings. They are ongoing arguments about what American music is for, and they are very much still being had.
 # Chapter 11: Reggae, Ska, and Caribbean Music — The Island Sound
 
-**MUSIC 143 | Era: 1950s–Present**
 **Theme: Jamaica's outsized influence on world popular music**
 
 ---
@@ -1327,7 +1319,6 @@ There is a final irony here that Chapter 13 is perhaps uniquely positioned to ar
 This is not quite a circle, because history doesn't actually move in circles — things change with each revolution, accumulating rather than simply returning. It is more like a spiral: the same territories visited at a higher altitude, with more complexity, more agency, more mutual recognition than before. What Chapter 13 asks you to take away is not just a set of names and dates and genres — though those matter — but an understanding that African popular music has always been a living, developing, globally engaged tradition with its own logic and its own momentum. It did not wait for the West to discover it. It was always there, doing its own thing. We are only now, finally, being asked to pay full attention.
 # Chapter 14: Middle Eastern and North African Music — The Missing Continent
 
-*MUSIC 143 Course Notes*
 
 ---
 
@@ -1442,7 +1433,6 @@ The "world music" category deserves particular scrutiny. It was invented by West
 This course has tried to push back against that collapse, and this chapter is the most ambitious attempt in that effort. A single chapter on MENA music cannot do justice to any of these traditions individually, let alone to all of them together. What it can do — what we hope it has done — is make you curious. Make you go find Umm Kulthum's performance of *Inta Omri* and sit with the full forty-five minutes of it. Make you look up Fairuz and understand why people say her voice is the sound of morning. Make you find *Afrique Victime* and listen to Mdou Moctar play guitar until you stop being surprised that you had never heard him before and start being grateful that you have found him now. The music is there. It has always been there. The question is only whether we choose to listen.
 # Chapter 15: Convergences — When Parallel Traditions Collide
 
-*MUSIC 143 Course Notes*
 
 ---
 
@@ -1570,8 +1560,3 @@ The purpose of studying music history is not to file everything in the right box
 
 That is what music is for. Not any particular music — all of it. The rock narrative is one story about that. This course has been four more. There are dozens of others we did not have time for, and there are stories that do not exist yet because the music that will generate them has not been made. When it is made, whoever you are by then, you will be better equipped to hear it clearly than you would have been without all of this. That is the argument for why studying parallel traditions matters. That is the argument this course has been making all along.
 
----
-
-*End of Chapter 15*
-
-*End of MUSIC 143 Course Notes*
