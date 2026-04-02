@@ -1,7 +1,6 @@
 ---
 title: "MUSIC 143: The Other Side of the Record"
 subjects: "MUSIC"
-prof: "Simon Wood"
 ---
 
 MUSIC 140 told the story of popular music as the story of rock and roll. That is one legitimate throughline --- but it is not the only one. By organizing around rock's rise, MUSIC 140 necessarily sidelined entire parallel traditions that were equally massive, equally influential, and in some cases older and more commercially successful. Country music has outsold rock in many decades. Jazz was America's art music export to the world. Gospel was the spiritual engine powering soul, rock, and hip hop. Reggae shaped punk and hip hop in ways those genres rarely acknowledge. Progressive rock achieved remarkable commercial success in the early 1970s, alongside country, soul, and the emerging disco market. The singer-songwriter tradition produced some of the most enduring catalogs of the entire popular music era. And African popular music fed back into every Western genre that had originally drawn from African roots.
