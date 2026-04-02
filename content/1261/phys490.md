@@ -125,8 +125,8 @@ To derive the equations of motion from \(\delta S = 0\), consider a small variat
 Now \(\delta \dot{q} = d(\delta q)/dt\), so we integrate the second term by parts:
 \[
 \int_{t_i}^{t_f} \frac{\partial L}{\partial \dot{q}}\,\frac{d(\delta q)}{dt}\, dt
-= \left[\frac{\partial L}{\partial \dot{q}}\,\delta q\right]_{t_i}^{t_f}
-- \int_{t_i}^{t_f} \frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot{q}}\right)\delta q\, dt.
+= \left[\frac{\partial L}{\partial \dot{q}}\,\delta q\right]_{t_i}^{t_f} -
+\int_{t_i}^{t_f} \frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot{q}}\right)\delta q\, dt.
 \]
 The boundary term vanishes because \(\delta q\) vanishes at the endpoints. Combining the two terms:
 \[
@@ -1048,6 +1048,7 @@ In the next chapter, we will carry out the mode expansion in detail, impose the 
 <div class="remark">
 <strong>Remark (The road ahead).</strong> Everything we have done in this chapter is classical. The real surprises of string theory come from quantization. The zero-point energies of infinitely many oscillator modes must be regularized, and the requirement that the quantum theory be consistent — free of anomalies, with a positive-definite Hilbert space — uniquely determines the spacetime dimension and constrains the spectrum. The classical theory we have developed is the scaffold on which the quantum theory is built.
 </div>
+
 # Chapter 2: Classical String Solutions and Boundary Conditions
 
 In Chapter 1, we arrived at the Polyakov action for the relativistic string and showed that, in conformal gauge, the equations of motion reduce to a free two-dimensional wave equation for the embedding coordinates \( X^\mu(\tau,\sigma) \). We also encountered the Virasoro constraints, which encode the residual gauge symmetry of the worldsheet theory. In this chapter, we take the next natural step: we solve the wave equation explicitly, classify the allowed boundary conditions, and extract the physical content of the solutions. Along the way, we will meet the two fundamental string topologies (closed and open), discover that boundary conditions force us to introduce extended objects called **D-branes**, and write down the mode expansions that form the starting point for quantization.
@@ -2701,6 +2702,7 @@ The tachyon in the bosonic string spectrum is a serious problem, signaling that 
 <div class="example">
 <strong>Problem 3.6 (D-brane gauge symmetry).</strong> Consider two parallel D24-branes separated by a distance \(d\) in \(\tilde X^{25}\). An open string stretched between them has mass contribution \(d^2/(2\pi\alpha')^2\) from the stretching. Find the condition on \(d\) for the first excited state to be massless. What gauge symmetry enhancement occurs at that point?
 </div>
+
 # Chapter 4: Renormalization and Regularization
 
 ## 4.1 Why Study Renormalization Outside Quantum Field Theory
