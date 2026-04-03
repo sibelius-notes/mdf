@@ -456,6 +456,10 @@ If \(M\) is a smooth submanifold of \(\mathbb{R}^N\), we have an intuitive pictu
 
 We follow Lee's approach and adopt the algebraic definition, then show it is equivalent to the others. The key insight is that a tangent vector should be determined by how it acts on smooth functions — that is, by the directional derivatives it computes.
 
+Why adopt the algebraic definition? On a submanifold of \(\mathbb{R}^N\) we can identify a tangent vector at \(p\) with an element of \(\mathbb{R}^N\) — but an abstract manifold comes with no ambient space to house such arrows. The geometric definition (equivalence classes of curves) is appealingly concrete, but working with equivalence classes is cumbersome. The derivation definition sidesteps both difficulties: it is purely intrinsic, works on any smooth manifold, and immediately gives the tangent space the structure of a vector space in a clean way. The price is a moment of abstraction; the reward is a definition that generalises effortlessly to the tangent bundle, to pushforwards, and eventually to the entire tensor calculus.
+
+To see why derivations capture the right concept, think about what a tangent vector \(v\) at \(p \in \mathbb{R}^n\) actually does to a smooth function \(f\): it computes the directional derivative \(D_v f(p) = \sum_i v^i \frac{\partial f}{\partial x^i}(p)\). This operation is \(\mathbb{R}\)-linear in \(f\) and satisfies the Leibniz rule \(D_v(fg)(p) = f(p)D_v g + g(p) D_v f\). Crucially, this Leibniz rule — and nothing else — distinguishes first-order differential operators (directional derivatives) from higher-order ones (Laplacian, etc.). On an abstract manifold, the Leibniz rule is exactly the right axiom to impose on a "tangent vector acting on functions," because it forces the operator to be local (its value at \(p\) depends only on the germ of \(f\) at \(p\)) and to compute a genuine first-order directional derivative in any coordinate system.
+
 ### 3.2 Derivations and the Tangent Space
 
 <div class="definition">
@@ -575,6 +579,12 @@ So \(F_{*,p}(v) \in T_{F(p)}N\).
 
 The power of the pushforward becomes concrete when we compute it in coordinates. The result is exactly the Jacobian matrix, confirming that the pushforward is the correct generalization of the total derivative.
 
+Before stating the proposition, let us make the connection vivid with a simple example. Consider \(F \colon \mathbb{R}^2 \to \mathbb{R}^2\) defined by \(F(x,y) = (x^2 - y^2, 2xy)\) (which is complex squaring under the identification \(\mathbb{R}^2 \cong \mathbb{C}\)). In the standard coordinates, the pushforward at a point \((x,y)\) is represented by the Jacobian:
+\[
+[F_{*,(x,y)}] = \begin{pmatrix} 2x & -2y \\ 2y & 2x \end{pmatrix}.
+\]
+The basis vector \(\frac{\partial}{\partial x}\big|_{(x,y)}\) maps to \(2x\frac{\partial}{\partial u}\big|_{F(x,y)} + 2y\frac{\partial}{\partial v}\big|_{F(x,y)}\), and \(\frac{\partial}{\partial y}\big|_{(x,y)}\) maps to \(-2y\frac{\partial}{\partial u}\big|_{F(x,y)} + 2x\frac{\partial}{\partial v}\big|_{F(x,y)}\). This is the linear approximation to \(F\) at \((x,y)\) — the best linear map from \(T_{(x,y)}\mathbb{R}^2\) to \(T_{F(x,y)}\mathbb{R}^2\) approximating \(F\) near that point.
+
 <div class="proposition">
 <strong>Proposition 3.6 (Pushforward in Coordinates).</strong> Let \(F \colon M \to N\) be smooth, \(p \in M\), \((U, \varphi) = (U, x^1, \ldots, x^m)\) a chart around \(p\), and \((V, \psi) = (V, y^1, \ldots, y^n)\) a chart around \(F(p)\). Write the coordinate representation of \(F\) as
 \[
@@ -625,6 +635,18 @@ The identity statement is immediate: \((\mathrm{id}_M)_{*,p}(v)(f) = v(f \circ \
 
 <div class="proof">
 <strong>Proof.</strong> From the chain rule: \(F_{<em>,p} \circ (F^{-1})_{</em>,F(p)} = (F \circ F^{-1})_{<em>,F(p)} = (\mathrm{id}_N)_{</em>,F(p)} = \mathrm{id}_{T_{F(p)}N}\), and similarly \((F^{-1})_{<em>,F(p)} \circ F_{</em>,p} = \mathrm{id}_{T_pM}\). \(\blacksquare\)
+</div>
+
+<div class="example">
+<strong>Example 3.7a (Differential of the inclusion \(\iota \colon S^n \hookrightarrow \mathbb{R}^{n+1}\)).</strong> Let \(\iota \colon S^n \hookrightarrow \mathbb{R}^{n+1}\) be the inclusion. We compute the pushforward \(\iota_{*,p} \colon T_p S^n \to T_p \mathbb{R}^{n+1}\) at a point \(p \in S^n\).
+
+Working in the stereographic chart \((U_N, \sigma_N)\) around a point \(p \neq N\), with coordinates \(u = (u^1, \ldots, u^n)\), the inclusion in these coordinates is the map \(\hat{\iota} = \iota \circ \sigma_N^{-1} \colon \mathbb{R}^n \to \mathbb{R}^{n+1}\),
+\[
+\hat{\iota}(u) = \sigma_N^{-1}(u) = \frac{1}{|u|^2+1}(2u^1, \ldots, 2u^n, |u|^2 - 1).
+\]
+The Jacobian of \(\hat{\iota}\) at \(u\) is an \((n+1) \times n\) matrix with full rank \(n\) (since \(\hat{\iota}\) is an immersion). Each column \(\frac{\partial \hat{\iota}}{\partial u^k}\) is a tangent vector to \(S^n\) in the ambient \(\mathbb{R}^{n+1}\).
+
+More conceptually: by the regular level set theorem (Example 6.20), \(T_p S^n = p^\perp\), the orthogonal complement of \(p\) in \(\mathbb{R}^{n+1}\). The pushforward \(\iota_{*,p}\) is simply the inclusion of this subspace into \(\mathbb{R}^{n+1}\). Concretely, if \(v \in T_pS^n\) is the velocity of a curve \(\gamma\) on \(S^n\) at \(p\), then \(\iota_{*,p}(v) = \gamma'(0)\) regarded as a vector in \(\mathbb{R}^{n+1}\). The condition \(\gamma(t) \in S^n\) forces \(\gamma(t) \cdot \gamma(t) = 1\), differentiating: \(2\gamma(0) \cdot \gamma'(0) = 0\), so \(\gamma'(0) \perp p\). Thus \(\iota_{*,p}(T_pS^n) = p^\perp \subset \mathbb{R}^{n+1}\), confirming that the differential of the inclusion is injective and identifies \(T_pS^n\) with the hyperplane perpendicular to the position vector.
 </div>
 
 In categorical language, the tangent space construction is a *functor* from the category of smooth manifolds (with smooth maps) to the category of vector spaces (with linear maps): it sends each manifold to a family of vector spaces and each smooth map to a family of linear maps, respecting composition and identities.
@@ -735,6 +757,12 @@ We topologize \(TM\) by declaring \(W \subseteq TM\) to be open if \(\tilde{\var
 <strong>Example 3.14.</strong> The tangent bundle of \(\mathbb{R}^n\) is \(T\mathbb{R}^n \cong \mathbb{R}^n \times \mathbb{R}^n \cong \mathbb{R}^{2n}\). The tangent bundle of \(S^1\) is \(TS^1 \cong S^1 \times \mathbb{R}\) (the circle is "parallelizable"). In contrast, \(TS^2\) is not trivial — this is the content of the <strong>hairy ball theorem</strong>, which states that there is no nowhere-vanishing continuous tangent vector field on \(S^2\).
 </div>
 
+<div class="remark">
+<strong>Remark (The tangent bundle as phase space in classical mechanics).</strong> The tangent bundle \(TM\) has a natural physical interpretation: if \(M\) is the configuration space of a classical mechanical system — the manifold of all possible positions — then \(TM\) is the **velocity phase space**, whose points are pairs \((q, \dot{q})\) of a position and a velocity. A classical Lagrangian \(L \colon TM \to \mathbb{R}\) is a smooth function on the tangent bundle; Lagrangian mechanics takes place on \(TM\). In contrast, Hamiltonian mechanics takes place on the cotangent bundle \(T^*M\) (momentum phase space), as we will discuss in Chapter 5. For example, if \(M = \mathbb{R}^3\) (the configuration space of a particle in 3-space), then \(TM \cong \mathbb{R}^6\) with coordinates \((x, y, z, \dot{x}, \dot{y}, \dot{z})\). If \(M = SO(3)\) (the configuration space of a rigid body in 3-space, parametrised by rotations), then \(TM\) is a 6-dimensional manifold encoding both the orientation and the angular velocity of the body.
+
+The non-triviality of \(TS^2\) has a direct physical consequence via the hairy ball theorem: you cannot comb a sphere flat. More precisely, there is no continuous, nowhere-vanishing tangent vector field on \(S^2\). Applied to fluid dynamics on the Earth (modeled as \(S^2\)), this means every steady-state wind pattern on the globe must have at least one point where the wind speed is zero (an eye of a storm, or a still point).
+</div>
+
 ![Examples of tangent bundles: TS^1 is a cylinder (trivial), while TS^2 is non-trivial by the hairy ball theorem](/pics/pmath465/tangent-bundle-examples.svg)
 
 ## Chapter 4: Vector Fields on Manifolds
@@ -834,6 +862,8 @@ If \(F\) is a diffeomorphism, then for any \(X \in \Gamma(TM)\), there is a uniq
 
 We now come to one of the most important algebraic structures in differential geometry: the Lie bracket of vector fields. The Lie bracket measures the failure of two flows to commute and provides the tangent bundle with a rich algebraic structure that goes far beyond its mere vector space or module structure.
 
+To motivate the definition geometrically: suppose we flow along \(X\) for time \(\sqrt{t}\), then along \(Y\) for time \(\sqrt{t}\), then backward along \(X\) for time \(\sqrt{t}\), and finally backward along \(Y\) for time \(\sqrt{t}\). If the two flows commuted, we would return exactly to the starting point for every \(t\). In fact, the displacement from the starting point is approximately \(t \cdot [X, Y]_p\) as \(t \to 0\). The Lie bracket thus measures, to first order, the failure of the two flows to trace out a closed parallelogram. This geometric interpretation will be made precise when we discuss flows and the Lie derivative in Chapter 12.
+
 Given two vector fields \(X, Y \in \Gamma(TM)\), each acts as a derivation of \(C^\infty(M)\). The composition \(X \circ Y\) (meaning \(f \mapsto X(Yf)\)) is, in general, *not* a derivation because it involves second-order derivatives. However, the commutator \(XY - YX\) miraculously cancels the second-order terms and produces a derivation.
 
 <div class="definition">
@@ -889,6 +919,31 @@ Relabelling the summation index \(j\) as \(k\) gives the stated formula. \(\blac
 
 <div class="remark">
 <strong>Remark.</strong> In particular, coordinate vector fields always commute: \(\left[\frac{\partial}{\partial x^i}, \frac{\partial}{\partial x^j}\right] = 0\) for all \(i, j\). This is because the component functions of \(\frac{\partial}{\partial x^i}\) in the \(x\)-coordinates are constants (\(\delta^k_i\)), so all partial derivatives of the components vanish. Conversely, a classical theorem states that commuting vector fields can always be "straightened" simultaneously into coordinate vector fields (this is the Frobenius theorem).
+</div>
+
+<div class="example">
+<strong>Example 4.8a (Concrete Lie bracket computations on \(\mathbb{R}^2\)).</strong> Let \(x, y\) be standard coordinates on \(\mathbb{R}^2\). Consider the vector fields
+\[
+X = \frac{\partial}{\partial x}, \qquad Y = x\frac{\partial}{\partial y}.
+\]
+To compute \([X, Y]\) we apply the coordinate formula. Here \(X^1 = 1, X^2 = 0\) and \(Y^1 = 0, Y^2 = x\). The only nonzero partial derivative of the components of \(Y\) is \(\frac{\partial Y^2}{\partial x} = 1\). The only nonzero partial derivative of the components of \(X\) is zero everywhere. Thus
+\[
+[X, Y]^1 = X^1 \frac{\partial Y^1}{\partial x} + X^2 \frac{\partial Y^1}{\partial y} - Y^1 \frac{\partial X^1}{\partial x} - Y^2 \frac{\partial X^1}{\partial y} = 1 \cdot 0 + 0 - 0 - 0 = 0,
+\]
+\[
+[X, Y]^2 = X^1 \frac{\partial Y^2}{\partial x} + X^2 \frac{\partial Y^2}{\partial y} - Y^1 \frac{\partial X^2}{\partial x} - Y^2 \frac{\partial X^2}{\partial y} = 1 \cdot 1 + 0 - 0 - 0 = 1.
+\]
+Hence \([X, Y] = \frac{\partial}{\partial y}\). We can verify this directly: for any \(f \in C^\infty(\mathbb{R}^2)\),
+\[
+[X, Y](f) = X(Y(f)) - Y(X(f)) = \frac{\partial}{\partial x}\!\left(x \frac{\partial f}{\partial y}\right) - x\frac{\partial}{\partial y}\!\left(\frac{\partial f}{\partial x}\right) = \frac{\partial f}{\partial y} + x\frac{\partial^2 f}{\partial x \partial y} - x\frac{\partial^2 f}{\partial y \partial x} = \frac{\partial f}{\partial y}.
+\]
+The second-order terms cancel, leaving \(\frac{\partial}{\partial y}\), as expected.
+
+Now consider the rotation vector field on \(\mathbb{R}^2\): \(R = -y\frac{\partial}{\partial x} + x\frac{\partial}{\partial y}\), and the radial dilation \(D = x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y}\). Applying the formula:
+\[
+[R, D]^1 = R^1 \frac{\partial D^1}{\partial x} + R^2 \frac{\partial D^1}{\partial y} - D^1 \frac{\partial R^1}{\partial x} - D^2 \frac{\partial R^1}{\partial y} = (-y)(1) + (x)(0) - (x)(0) - (y)(-1) = -y + y = 0.
+\]
+Similarly \([R, D]^2 = 0\), so \([R, D] = 0\). This makes geometric sense: the flow of \(D\) is radial dilation \((x,y) \mapsto (e^t x, e^t y)\), the flow of \(R\) is rotation, and radial dilations and rotations commute.
 </div>
 
 ### 4.5 Properties of the Lie Bracket
@@ -1157,6 +1212,8 @@ The first \( n \) coordinates locate the base point \( p \) in \( M \), while th
 
 The cotangent bundle plays a fundamental role in Hamiltonian mechanics, where the phase space of a classical mechanical system is naturally \( T^*M \) rather than \( TM \). It also carries a canonical symplectic structure (the canonical 2-form), though we will not develop this in the present course.
 
+To see why \(T^*M\) is the natural home for Hamiltonian mechanics rather than \(TM\): the momentum of a particle is not a velocity vector (contravariant object) but rather a linear functional on velocity space — it tells you how much kinetic energy a unit velocity in a given direction generates. More precisely, for a Lagrangian \(L \colon TM \to \mathbb{R}\), the **Legendre transform** sends a tangent vector \((q, \dot{q}) \in TM\) to the covector \(p = \frac{\partial L}{\partial \dot{q}} \in T^*_q M\), and the Hamiltonian \(H \colon T^*M \to \mathbb{R}\) is defined by \(H(q, p) = p(\dot{q}) - L(q, \dot{q})\). Hamilton's equations then become the flow of the Hamiltonian vector field on \(T^*M\), which is symplectic. The canonical 1-form \(\lambda = p_i\,dq^i\) (the tautological 1-form, or Liouville form) on \(T^*M\) and the canonical symplectic form \(\omega = -d\lambda = dq^i \wedge dp_i\) are intrinsic structures that exist on any cotangent bundle and require no additional geometric input.
+
 ### 5.3 Covector Fields and 1-Forms
 
 <div class="definition">
@@ -1357,6 +1414,28 @@ In local coordinates, if \( \omega = \omega_i \, dx^i \) and \( \gamma(t) = (x^1
 This is a coordinate-independent quantity: one can verify directly that the integral does not depend on the choice of coordinates, because the transformation laws for covector components and tangent vector components cancel. This is precisely why 1-forms (not vector fields) are the correct objects to integrate along curves.
 
 The line integral is also invariant under orientation-preserving reparametrisation of the curve, and reverses sign under orientation-reversing reparametrisation.
+
+<div class="example">
+<strong>Example 5.15a (Explicit line integral computation).</strong> Let \(M = \mathbb{R}^2 \setminus \{0\}\) and consider the 1-form
+\[
+\omega = \frac{-y\,dx + x\,dy}{x^2+y^2}.
+\]
+We compute the line integral of \(\omega\) along the unit circle \(\gamma \colon [0, 2\pi] \to \mathbb{R}^2\), \(\gamma(t) = (\cos t, \sin t)\). We have \(\gamma'(t) = (-\sin t, \cos t)\), so
+\[
+\omega_{\gamma(t)}(\gamma'(t)) = \frac{-\sin t \cdot (-\sin t) + \cos t \cdot \cos t}{\cos^2 t + \sin^2 t} = \frac{\sin^2 t + \cos^2 t}{1} = 1.
+\]
+Therefore
+\[
+\int_\gamma \omega = \int_0^{2\pi} 1\,dt = 2\pi.
+\]
+Now suppose instead we take the straight-line path \(\sigma \colon [0,1] \to \mathbb{R}^2 \setminus \{0\}\), \(\sigma(t) = (1, t)\) from \((1,0)\) to \((1,1)\). Then \(\sigma'(t) = (0,1)\), and
+\[
+\omega_{\sigma(t)}(\sigma'(t)) = \frac{-t \cdot 0 + 1 \cdot 1}{1 + t^2} = \frac{1}{1+t^2},
+\]
+so \(\int_\sigma \omega = \int_0^1 \frac{dt}{1+t^2} = \arctan(1) - \arctan(0) = \pi/4\).
+
+These two computations illustrate an important point: the value of \(\int_\gamma \omega\) depends on the path, not just the endpoints, because \(\omega\) is closed but not exact on \(\mathbb{R}^2 \setminus \{0\}\). On the contractible domain \(\mathbb{R}^2 \setminus \{(-\infty, 0]\}\) (for instance), \(\omega\) equals \(d(\text{arg})\) where \(\text{arg}\) is the argument function, so the integral is path-independent there. But on the full punctured plane, the winding number of the path around the origin contributes multiples of \(2\pi\) to the integral.
+</div>
 
 <div class="theorem">
 <strong>Theorem 5.16 (Fundamental Theorem for Line Integrals).</strong> If \( f \in C^\infty(M) \) and \( \gamma \colon [a,b] \to M \) is a smooth curve, then
@@ -1776,6 +1855,46 @@ This theorem is remarkable because it requires no smoothness hypothesis: one sta
 
 <div class="example">
 <strong>Example 7.18.</strong> The irrational-slope line on the torus \( \mathbb{T}^2 \) from Example 6.14 is an immersed Lie subgroup (isomorphic to \( (\mathbb{R}, +) \)) that is dense, hence <strong>not</strong> closed and <strong>not</strong> an embedded submanifold. This shows that the hypothesis of closedness in Cartan's theorem is necessary.
+</div>
+
+### 7.7 The Whitney Embedding Theorem
+
+One of the most fundamental — and reassuring — results in the theory of smooth manifolds is that every abstract smooth manifold can be faithfully realised as a submanifold of some Euclidean space. This is the content of Whitney's embedding theorems. From a foundational perspective the result tells us that the category of smooth manifolds is no larger than the category of smooth submanifolds of \(\mathbb{R}^N\); the abstract definition we have been using all along does not secretly produce "exotic" objects that cannot be concretely visualised.
+
+We distinguish two versions, which differ markedly in difficulty.
+
+<div class="theorem">
+<strong>Theorem 7.19 (Whitney Weak Embedding Theorem, 1944).</strong> Every smooth \( n \)-manifold admits a smooth embedding into \( \mathbb{R}^{2n+1} \).
+</div>
+
+<div class="theorem">
+<strong>Theorem 7.20 (Whitney Strong Embedding Theorem, 1944).</strong> Every smooth \( n \)-manifold admits a smooth embedding into \( \mathbb{R}^{2n} \).
+</div>
+
+The strong theorem is essentially sharp: \( \mathbb{RP}^2 \) does not embed in \( \mathbb{R}^3 \), confirming that \( 2n \) cannot in general be reduced to \( 2n - 1 \).
+
+**Proof strategy for the weak theorem.** The argument for Theorem 7.19 proceeds in two main steps.
+
+*Step 1: Constructing an injective immersion into some \( \mathbb{R}^N \).* Since \( M \) is second countable, it admits a countable atlas \(\{(U_\alpha, \varphi_\alpha)\}\). Using a **partition of unity** \(\{\rho_\alpha\}\) subordinate to this cover, one defines a map \( F \colon M \to \mathbb{R}^N \) (for sufficiently large \( N \)) by assembling the locally-defined data \( \rho_\alpha \varphi_\alpha \) into a single globally-defined map. One verifies that \( F \) is an injective immersion: injectivity follows from the identity of the partition of unity, and the immersion property (injectivity of \( dF_p \) for all \( p \)) follows because at least one bump function \( \rho_\alpha \) is nonzero near each point, making the derivative of the local coordinate factor injective.
+
+*Step 2: Reducing the target dimension to \( 2n+1 \) via Sard's theorem.* At this stage \( N \) may be very large. The reduction is achieved by repeatedly projecting onto hyperplanes. For a unit vector \( v \in \mathbb{R}^N \), consider the orthogonal projection \( \pi_v \colon \mathbb{R}^N \to v^\perp \cong \mathbb{R}^{N-1} \). The composition \( \pi_v \circ F \) is still an injective immersion provided \( v \) is not in the **secant variety** \(\{ \frac{F(p) - F(q)}{|F(p)-F(q)|} : p \neq q \}\) (which has dimension \( 2n < N-1 \) for \( N > 2n+1 \)) and not in the **tangential variety** \(\{ dF_p(w)/|dF_p(w)| : w \in T_pM \setminus \{0\} \}\) (dimension \( 2n-1 \)). By **Sard's theorem**, the set of "bad" directions has measure zero in \( S^{N-1} \), so almost every projection is still an injective immersion. Iterating this argument reduces \( N \) to \( 2n+1 \). If \( M \) is compact, injectivity of \( F \) together with compactness automatically makes \( F \) a proper embedding.
+
+<div class="remark">
+<strong>Remark.</strong> For non-compact \( M \), one additionally arranges properness by multiplying by a proper smooth function (an exhaustion function), ensuring that the image is a closed submanifold and not merely an injectively immersed one.
+</div>
+
+**The strong theorem and Whitney's trick.** Reducing the target dimension from \( 2n+1 \) to \( 2n \) requires a fundamentally different argument. The projection trick can still eliminate one more dimension at the immersion level — by Sard's theorem, a generic projection of an injective immersion into \( \mathbb{R}^{2n+1} \) yields an immersion into \( \mathbb{R}^{2n} \) — but the resulting map may no longer be injective: it can have a finite number of transverse double points (self-intersections). Whitney's celebrated **Whitney trick** (or **Whitney's cancellation lemma**) is a delicate geometric manoeuvre that eliminates pairs of self-intersection points by constructing an embedded "Whitney disc" and performing a controlled isotopy along it. The argument works in full generality only when \( n \geq 2 \) (for \( n = 1 \), smooth curves in \( \mathbb{R}^2 \) need not embed, but they do embed in \( \mathbb{R}^2 = \mathbb{R}^{2 \cdot 1} \) by a separate argument). The Whitney trick is also one of the key tools in Smale's proof of the \( h \)-cobordism theorem and in surgery theory.
+
+<div class="corollary">
+<strong>Corollary 7.21.</strong> Every compact smooth \( n \)-manifold is diffeomorphic to a compact embedded submanifold of \( \mathbb{R}^{2n} \). In particular, every compact smooth manifold admits a Riemannian metric (induced from the standard inner product on the ambient Euclidean space).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By Theorem 7.20, there exists a smooth embedding \( F \colon M \hookrightarrow \mathbb{R}^{2n} \). Since \( M \) is compact, \( F \) is automatically proper, so \( F(M) \) is a compact embedded submanifold of \( \mathbb{R}^{2n} \), and \( F \) is a diffeomorphism onto its image. The pullback \( F^* g_{\text{Eucl}} \) of the standard metric is a Riemannian metric on \( M \).
+</div>
+
+<div class="remark">
+<strong>Remark (Existence of Riemannian metrics via partitions of unity).</strong> In fact, one does not need the Whitney theorem to construct Riemannian metrics: a direct partition-of-unity argument on any second-countable smooth manifold produces a Riemannian metric without first embedding into Euclidean space. The corollary above instead highlights the geometric content — every compact manifold sits inside a standard Euclidean space in a globally well-behaved way.
 </div>
 
 ---
@@ -2392,6 +2511,18 @@ This corresponds to the divergence \( \nabla \cdot \mathbf{F} \).</li>
 The identity \( d^2 = 0 \) unifies the classical vector calculus identities \( \nabla \times (\nabla f) = 0 \) and \( \nabla \cdot (\nabla \times \mathbf{F}) = 0 \).
 </div>
 
+<div class="remark">
+<strong>Remark (The de Rham complex and the topology of \(\mathbb{R}^3\)).</strong> The chain of maps
+\[
+\Omega^0(\mathbb{R}^3) \xrightarrow{d} \Omega^1(\mathbb{R}^3) \xrightarrow{d} \Omega^2(\mathbb{R}^3) \xrightarrow{d} \Omega^3(\mathbb{R}^3)
+\]
+corresponds (via the musical isomorphisms of a Riemannian metric on \(\mathbb{R}^3\)) to
+\[
+C^\infty(\mathbb{R}^3) \xrightarrow{\nabla} \mathfrak{X}(\mathbb{R}^3) \xrightarrow{\nabla \times} \mathfrak{X}(\mathbb{R}^3) \xrightarrow{\nabla \cdot} C^\infty(\mathbb{R}^3).
+\]
+The identity \(d^2 = 0\) says "\(\text{curl} \circ \text{grad} = 0\)" and "\(\text{div} \circ \text{curl} = 0\)." The cohomology groups \(H^k_{\text{dR}}(\mathbb{R}^3)\) all vanish for \(k \geq 1\) (by the Poincaré lemma), which expresses the familiar facts: every irrotational vector field on \(\mathbb{R}^3\) has a potential, and every divergence-free vector field on \(\mathbb{R}^3\) is a curl. On a non-contractible domain these facts can fail, and the failures are measured by \(H^1\) and \(H^2\) respectively.
+</div>
+
 ![The de Rham complex: Ω^0 → Ω^1 → Ω^2 → Ω^3, with d^2 = 0 unifying grad, curl, div](/pics/pmath465/exterior-derivative-chain.svg)
 
 ### 9.5 The Invariant Formula for the Exterior Derivative
@@ -2558,6 +2689,50 @@ where \( g_{ij} = g\bigl(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial
 <strong>Example 10.7.</strong> On \( \mathbb{R}^n \) with the Euclidean metric, \( dV_g = dx^1 \wedge \cdots \wedge dx^n \). On \( S^2 \) with the round metric in spherical coordinates \( (\theta, \phi) \), we have \( dV_g = \sin\theta\, d\theta \wedge d\phi \).
 </div>
 
+<div class="example">
+<strong>Example 10.7a (Integrating a 2-form over \(S^2\)).</strong> We compute the integral of the 2-form
+\[
+\omega = x\,dy \wedge dz + y\,dz \wedge dx + z\,dx \wedge dy
+\]
+(where \(x, y, z\) are the standard coordinates on \(\mathbb{R}^3\) restricted to \(S^2 \subset \mathbb{R}^3\)) over the unit sphere \(S^2\) with the outward orientation.
+
+We use spherical coordinates \(x = \sin\theta\cos\phi\), \(y = \sin\theta\sin\phi\), \(z = \cos\theta\), where \(\theta \in (0,\pi)\) and \(\phi \in (0, 2\pi)\). First, we compute the pullbacks of the coordinate differentials:
+\[
+dx = \cos\theta\cos\phi\,d\theta - \sin\theta\sin\phi\,d\phi,
+\]
+\[
+dy = \cos\theta\sin\phi\,d\theta + \sin\theta\cos\phi\,d\phi,
+\]
+\[
+dz = -\sin\theta\,d\theta.
+\]
+We compute \(dy \wedge dz\):
+\[
+dy \wedge dz = (\cos\theta\sin\phi\,d\theta + \sin\theta\cos\phi\,d\phi) \wedge (-\sin\theta\,d\theta)
+= -\sin^2\theta\cos\phi\,d\phi \wedge d\theta = \sin^2\theta\cos\phi\,d\theta \wedge d\phi.
+\]
+Similarly, \(dz \wedge dx = \sin^2\theta\sin\phi\,d\theta \wedge d\phi\) and \(dx \wedge dy = \sin\theta\cos\theta\,d\theta \wedge d\phi\) — but we can compute the sum more efficiently. Note that
+\[
+x\,dy \wedge dz + y\,dz \wedge dx + z\,dx \wedge dy
+\]
+restricted to \(S^2\) equals the Riemannian volume form \(\sin\theta\,d\theta \wedge d\phi\). Indeed, the form \(\omega\) is the standard area form on the sphere; one can verify:
+\[
+x \cdot \sin^2\theta\cos\phi + y \cdot \sin^2\theta\sin\phi + z \cdot \sin\theta\cos\theta
+\]
+\[
+= \sin^2\theta\cos^2\phi + \sin^2\theta\sin^2\phi + \cos^2\theta\sin\theta
+= \sin^2\theta + \cos^2\theta\sin\theta.
+\]
+A cleaner approach: the outward unit normal to \(S^2\) at a point \((x,y,z)\) is \(\nu = (x,y,z)\) itself, and the area form equals the contraction \(\iota_\nu(dx \wedge dy \wedge dz)\), which gives precisely \(\omega\). Therefore
+\[
+\int_{S^2} \omega = \int_{S^2} dV_{g_{S^2}} = \text{area of } S^2 = 4\pi.
+\]
+This is consistent with the divergence theorem: \(d\omega = (1+1+1)\,dx \wedge dy \wedge dz = 3\,dV_{\mathbb{R}^3}\), so
+\[
+\int_{S^2} \omega = \int_{B^3} d\omega = 3 \cdot \text{vol}(B^3) = 3 \cdot \frac{4\pi}{3} = 4\pi. \qquad \checkmark
+\]
+</div>
+
 ### 10.4 Integration of Differential Forms
 
 We are now in a position to define integration of differential forms on oriented manifolds. The key observation is that an \( n \)-form on an oriented \( n \)-manifold can be integrated using partitions of unity, because a top-degree form transforms under coordinate changes by the absolute value of the Jacobian determinant (with the correct sign, thanks to orientation).
@@ -2679,6 +2854,23 @@ This is Stokes's theorem with \( \omega = F^1\, dy \wedge dz + F^2\, dz \wedge d
 
 ![The divergence theorem: the triple integral of div F over a region Ω equals the flux of F through the boundary ∂Ω](/pics/pmath465/divergence-theorem.svg)
 
+<div class="example">
+<strong>Example 10.12a (Stokes' theorem on the upper hemisphere).</strong> Let \(M = \{(x,y,z) \in S^2 : z \geq 0\}\) be the closed upper hemisphere, oriented by the outward normal. Its boundary is \(\partial M = \{(x,y,z) \in S^2 : z = 0\} = S^1\) (the equatorial circle), oriented counterclockwise when viewed from above.
+
+Consider the 1-form \(\omega = -y\,dx + x\,dy\) on \(\mathbb{R}^3\). We compute both sides of Stokes' theorem \(\int_M d\omega = \int_{\partial M} \omega\).
+
+**Right-hand side:** Parametrise \(\partial M\) by \(\gamma(t) = (\cos t, \sin t, 0)\), \(t \in [0, 2\pi]\). Then
+\[
+\int_{\partial M} \omega = \int_0^{2\pi} (-\sin t)(-\sin t) + (\cos t)(\cos t)\,dt = \int_0^{2\pi} 1\,dt = 2\pi.
+\]
+
+**Left-hand side:** We compute \(d\omega = d(-y\,dx + x\,dy) = -dy \wedge dx + dx \wedge dy = 2\,dx \wedge dy\). We integrate over the upper hemisphere using the parametrisation \(F(\theta, \phi) = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)\) for \(\theta \in [0, \pi/2]\), \(\phi \in [0, 2\pi]\). The pullback of \(dx \wedge dy\) under \(F\) is \(\cos\theta\sin\theta\,d\theta \wedge d\phi\) (the \(z\)-component of the area form). Hence
+\[
+\int_M d\omega = \int_0^{2\pi}\int_0^{\pi/2} 2\cos\theta\sin\theta\,d\theta\,d\phi = 2\pi \int_0^{\pi/2} \sin(2\theta)\,d\theta = 2\pi \cdot \left[-\frac{\cos(2\theta)}{2}\right]_0^{\pi/2} = 2\pi \cdot 1 = 2\pi. \checkmark
+\]
+Both sides equal \(2\pi\), confirming Stokes' theorem.
+</div>
+
 ### 10.8 Divergence and the Divergence Theorem on Riemannian Manifolds
 
 On a Riemannian manifold \( (M, g) \), one can define the divergence of a vector field and state the divergence theorem in a coordinate-free manner.
@@ -2726,6 +2918,8 @@ We denote the space of closed \( k \)-forms by \( Z^k(M) = \ker(d \colon \Omega^
 </div>
 
 Since \( d^2 = 0 \), every exact form is closed: \( B^k(M) \subseteq Z^k(M) \). The central question of de Rham cohomology is: **is every closed form exact?** The answer depends on the topology of \( M \). The discrepancy between closed and exact forms measures the "nontrivial topology" (holes, cycles) of the manifold.
+
+To ground the discussion in physics: in electrostatics, the electric field \(\mathbf{E}\) satisfies \(\nabla \times \mathbf{E} = 0\) (i.e., the 1-form \(E_x\,dx + E_y\,dy + E_z\,dz\) is closed). The question "can \(\mathbf{E}\) be written as \(-\nabla \phi\) for a global potential \(\phi\)?" (i.e., "is the closed 1-form exact?") depends on the topology of the domain. In simply connected space (\(\mathbb{R}^3\) or any contractible region), the Poincaré lemma says yes. But if the domain has a "hole" — such as the region \(\mathbb{R}^3 \setminus \{\text{line}\}\) around an infinite wire — then closed forms need not be exact, and a global potential may not exist. De Rham cohomology is precisely the algebraic gadget that measures this obstruction: \(H^1_{\text{dR}}(M) = 0\) if and only if every closed 1-form on \(M\) is exact, i.e., every irrotational vector field has a global potential.
 
 <div class="example">
 <strong>Example 11.2.</strong> Consider the 1-form \( \omega = \frac{-y\, dx + x\, dy}{x^2 + y^2} \) on \( \mathbb{R}^2 \setminus \{0\} \). A direct computation shows \( d\omega = 0 \), so \( \omega \) is closed. However, \( \omega \) is not exact: if we integrate \( \omega \) around the unit circle, we get
@@ -2922,6 +3116,75 @@ for all \( \omega \in \Omega^n(N) \).
 </div>
 
 The degree is always an integer, and it counts (with signs according to orientation) the number of preimages of a regular value. It is a homotopy invariant: homotopic maps have the same degree.
+
+### 11.9 Poincaré Duality
+
+Poincaré duality is the crowning theorem of the de Rham theory of compact orientable manifolds. It reveals a striking symmetry among the cohomology groups: the \( k \)-th and \( (n-k) \)-th de Rham cohomology groups of a compact oriented \( n \)-manifold are canonically dual to each other. This symmetry has deep consequences for the topology of such manifolds and is one of the primary reasons that compact orientable manifolds are so well-behaved compared to their non-compact or non-orientable counterparts.
+
+**The Poincaré pairing.** Let \( M \) be a compact, connected, oriented, smooth manifold of dimension \( n \), without boundary. For \( 0 \leq k \leq n \), define the **Poincaré pairing**
+
+\[
+\langle \cdot, \cdot \rangle \colon H^k_{\text{dR}}(M) \times H^{n-k}_{\text{dR}}(M) \to \mathbb{R}, \qquad \langle [\alpha], [\beta] \rangle = \int_M \alpha \wedge \beta.
+\]
+
+We must first verify that this is well-defined, i.e., that the integral depends only on the cohomology classes \( [\alpha] \) and \( [\beta] \), not on the choice of representatives. Suppose \( \alpha' = \alpha + d\mu \) is another representative of \( [\alpha] \), where \( d\beta = 0 \). Then
+
+\[
+\int_M \alpha' \wedge \beta = \int_M \alpha \wedge \beta + \int_M d\mu \wedge \beta = \int_M \alpha \wedge \beta + \int_M d(\mu \wedge \beta),
+\]
+
+where we used \( d\mu \wedge \beta = d(\mu \wedge \beta) \pm \mu \wedge d\beta = d(\mu \wedge \beta) \) since \( d\beta = 0 \). By Stokes' theorem and the fact that \( \partial M = \emptyset \), the last integral vanishes. An analogous argument handles a change of representative for \( [\beta] \). Hence the Poincaré pairing is well-defined.
+
+<div class="theorem">
+<strong>Theorem 11.17 (Poincaré Duality).</strong> Let \( M \) be a compact, connected, oriented smooth \( n \)-manifold without boundary. Then for each \( 0 \leq k \leq n \), the Poincaré pairing
+\[
+\langle \cdot, \cdot \rangle \colon H^k_{\text{dR}}(M) \times H^{n-k}_{\text{dR}}(M) \to \mathbb{R}
+\]
+is <strong>nondegenerate</strong>. Consequently, there is a canonical isomorphism
+\[
+H^k_{\text{dR}}(M) \cong \bigl(H^{n-k}_{\text{dR}}(M)\bigr)^*.
+\]
+Since the de Rham cohomology groups are finite-dimensional (which follows from the fact that compact manifolds admit finite good covers), this implies
+\[
+H^k_{\text{dR}}(M) \cong H^{n-k}_{\text{dR}}(M).
+\]
+</div>
+
+<div class="remark">
+<strong>Remark (On nondegeneracy).</strong> Showing that the Poincaré pairing is nondegenerate — i.e., that for each nonzero \( [\alpha] \in H^k_{\text{dR}}(M) \) there exists \( [\beta] \in H^{n-k}_{\text{dR}}(M) \) with \( \langle [\alpha], [\beta] \rangle \neq 0 \) — is the hard part of the theorem. There are two principal approaches. The first uses <strong>Hodge theory</strong>: on a Riemannian manifold, every de Rham cohomology class has a unique harmonic representative, and the Hodge star operator \( \star \colon \Omega^k \to \Omega^{n-k} \) maps harmonic \( k \)-forms to harmonic \( (n-k) \)-forms, giving an explicit isomorphism. The second approach uses a <strong>Mayer–Vietoris induction</strong>: one verifies nondegeneracy for contractible open sets (where both sides vanish except in degree 0), and then bootstraps using the five lemma applied to the Mayer–Vietoris sequence to handle general compact manifolds built from such pieces.
+</div>
+
+**Consequences for Betti numbers.** The **Betti numbers** of \( M \) are \( b_k = \dim H^k_{\text{dR}}(M) \). Poincaré duality immediately yields
+\[
+b_k = b_{n-k} \quad \text{for all } 0 \leq k \leq n.
+\]
+This symmetry of Betti numbers is a powerful constraint on the topology of compact oriented manifolds.
+
+<div class="corollary">
+<strong>Corollary 11.18.</strong> Let \( M \) be a compact, connected, oriented smooth \( n \)-manifold without boundary with \( n \) odd. Then the Euler characteristic \( \chi(M) = \sum_{k=0}^n (-1)^k b_k = 0 \).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> By Poincaré duality, \( b_k = b_{n-k} \). Pairing the terms in the alternating sum:
+\[
+\chi(M) = \sum_{k=0}^n (-1)^k b_k = \sum_{k=0}^{(n-1)/2} \bigl[ (-1)^k b_k + (-1)^{n-k} b_{n-k} \bigr] = \sum_{k=0}^{(n-1)/2} b_k \bigl[ (-1)^k + (-1)^{n-k} \bigr].
+\]
+Since \( n \) is odd, \( (-1)^{n-k} = (-1)^n (-1)^{-k} = -(-1)^{-k} = -(-1)^k \cdot (-1)^{2k} / (-1)^{2k} \); more directly, \( (-1)^k + (-1)^{n-k} = (-1)^k(1 + (-1)^n) = (-1)^k(1-1) = 0 \). Hence every term vanishes and \( \chi(M) = 0 \).
+</div>
+
+**Examples.**
+
+<div class="example">
+<strong>Example 11.19 (Spheres).</strong> For \( S^n \) (\( n \geq 1 \)), the de Rham cohomology is \( H^0_{\text{dR}}(S^n) \cong \mathbb{R} \), \( H^n_{\text{dR}}(S^n) \cong \mathbb{R} \), and \( H^k_{\text{dR}}(S^n) = 0 \) for \( 0 < k < n \). The Betti numbers are \( b_0 = b_n = 1 \) and \( b_k = 0 \) otherwise. This is perfectly symmetric about \( n/2 \): \( b_k = b_{n-k} \) for all \( k \), as Poincaré duality predicts. For \( n \) odd, the Euler characteristic \( \chi(S^n) = 1 + (-1)^n = 1 - 1 = 0 \), consistent with Corollary 11.18.
+</div>
+
+<div class="example">
+<strong>Example 11.20 (The torus \( T^2 \)).</strong> For \( T^2 = S^1 \times S^1 \), by the Künneth formula (or direct computation using the de Rham complex), \( \dim H^0_{\text{dR}}(T^2) = 1 \), \( \dim H^1_{\text{dR}}(T^2) = 2 \), \( \dim H^2_{\text{dR}}(T^2) = 1 \). The Betti numbers \( (b_0, b_1, b_2) = (1, 2, 1) \) are symmetric: \( b_0 = b_2 = 1 \) and \( b_1 = b_1 = 2 \), consistent with Poincaré duality. The Euler characteristic is \( \chi(T^2) = 1 - 2 + 1 = 0 \), which can also be confirmed geometrically.
+</div>
+
+<div class="remark">
+<strong>Remark (Non-orientable manifolds).</strong> Poincaré duality fails for non-orientable manifolds. The simplest example is \( \mathbb{RP}^2 \): one computes \( H^0_{\text{dR}}(\mathbb{RP}^2) \cong \mathbb{R} \) and \( H^1_{\text{dR}}(\mathbb{RP}^2) = 0 \) and \( H^2_{\text{dR}}(\mathbb{RP}^2) = 0 \) (the top cohomology vanishes because \( \mathbb{RP}^2 \) is non-orientable and compact). Since \( b_0 = 1 \) but \( b_2 = 0 \), we have \( b_0 \neq b_2 \), violating the symmetry that Poincaré duality would predict. In the non-orientable setting, a version of Poincaré duality can be recovered using cohomology with coefficients in the orientation sheaf, but this requires the machinery of sheaf theory and falls outside the scope of these notes.
+</div>
 
 ---
 
@@ -3156,6 +3419,14 @@ This identity is used constantly in applications to fluid dynamics, where it des
 
 The Frobenius theorem is one of the fundamental results in differential geometry. It provides a necessary and sufficient condition for a family of subspaces of the tangent bundle to be "integrable" — that is, to arise as the tangent spaces to a foliation of the manifold by submanifolds.
 
+To motivate the theorem, consider the following question: given a system of first-order PDEs of the form
+\[
+\frac{\partial F}{\partial x^i} = f_i(x^1, \ldots, x^n), \quad i = 1, \ldots, n,
+\]
+when does a solution \(F\) exist? The necessary condition is obvious: the mixed partial derivatives must be equal, so \(\frac{\partial f_i}{\partial x^j} = \frac{\partial f_j}{\partial x^i}\) — i.e., the 1-form \(\omega = f_i\,dx^i\) must be closed. In the Frobenius context, this integrability condition is the requirement that the distribution defined by the 1-form be involutive.
+
+In geometric control theory, a distribution \(D\) describes the "allowed directions of motion" at each point of the configuration space. A car, for instance, can move forward or backward and can turn, but it cannot slide sideways — this non-holonomic constraint is captured by a non-integrable distribution. The Frobenius theorem says: if \(D\) is involutive, then you are confined to a single "integral manifold" (a leaf of the foliation) and cannot reach the whole manifold. If \(D\) is non-involutive (like the car), you may be able to access all of the configuration space by combining the allowed motions cleverly. The contact structure on \(\mathbb{R}^3\) (Example 12.27 below) is the archetypal non-integrable distribution, arising in the geometry of rolling without slipping and in thermodynamics.
+
 <div class="definition">
 <strong>Definition 12.20 (Tangent distribution).</strong> A <strong>tangent distribution</strong> (or simply a <strong>distribution</strong>) of rank \( k \) on a smooth manifold \( M \) is a smooth assignment \( p \mapsto D_p \), where \( D_p \subseteq T_pM \) is a \( k \)-dimensional linear subspace for each \( p \), and "smooth" means that near each point, \( D \) can be locally spanned by \( k \) smooth vector fields.
 </div>
@@ -3200,6 +3471,40 @@ V_i = \frac{\partial}{\partial y^i}, \quad i = 1, \ldots, k.
 This is a generalization of the canonical form theorem (which handles the case \( k = 1 \)) and is proved similarly, using the commutativity of the flows to construct the coordinate chart.
 
 ![The Frobenius theorem: an involutive distribution is integrable, foliation of M by integral submanifolds (leaves)](/pics/pmath465/frobenius-foliation.svg)
+
+**The differential-forms (Pfaffian system) formulation of Frobenius.** There is a completely equivalent reformulation of the Frobenius theorem in the language of differential forms, which is often more convenient in practice — especially in the study of PDEs and geometric structures.
+
+A rank-\(k\) distribution \( D \) on an \(n\)-manifold \( M \) can be locally described not by giving \(k\) spanning vector fields, but by giving \(n - k\) linearly independent 1-forms that annihilate \( D \). Concretely, near any point \( p \in M \), there exist smooth 1-forms \( \theta^1, \ldots, \theta^{n-k} \) such that
+
+\[
+D_q = \ker \theta^1_q \cap \ker \theta^2_q \cap \cdots \cap \ker \theta^{n-k}_q \quad \text{for all } q \text{ near } p.
+\]
+
+The collection \( \{\theta^1, \ldots, \theta^{n-k}\} \) is called a **Pfaffian system** (or a **codistribution**) defining \( D \). The ideal in the exterior algebra generated by \( \theta^1, \ldots, \theta^{n-k} \) is denoted \( \mathcal{I}(D^\perp) \).
+
+<div class="theorem">
+<strong>Theorem 12.25\( {}' \) (Frobenius Theorem — differential forms version).</strong> Let \( D \) be a smooth rank-\( k \) distribution on a smooth \( n \)-manifold \( M \), locally defined by the Pfaffian system \( \{\theta^1, \ldots, \theta^{n-k}\} \). Then \( D \) is involutive (equivalently, integrable) if and only if
+\[
+d\theta^i \equiv 0 \pmod{\theta^1, \ldots, \theta^{n-k}} \quad \text{for each } i = 1, \ldots, n-k.
+\]
+That is, each \( d\theta^i \) lies in the ideal \( \mathcal{I}(D^\perp) \) — meaning there exist smooth 1-forms \( \alpha^i{}_j \) such that \( d\theta^i = \sum_j \alpha^i{}_j \wedge \theta^j \).
+</div>
+
+This formulation is equivalent to the vector-field version: the condition \( d\theta^i(X, Y) = 0 \) for all \( X, Y \in D \) is exactly the statement that \( [X, Y] \in D \) whenever \( X, Y \in D \) (by Cartan's formula and the definition of the annihilator).
+
+<div class="example">
+<strong>Example 12.27 (The standard contact structure on \( \mathbb{R}^3 \)).</strong> Consider \( \mathbb{R}^3 \) with coordinates \( (x, y, z) \) and the 1-form
+\[
+\theta = dz - y\, dx.
+\]
+The distribution \( D = \ker \theta \) is a rank-2 distribution on \( \mathbb{R}^3 \) (at each point, \( D_p \) is the 2-dimensional subspace of \( T_p \mathbb{R}^3 \) on which \( \theta \) vanishes). We test integrability using the forms criterion. Compute:
+\[
+d\theta = d(dz - y\, dx) = -dy \wedge dx = dx \wedge dy.
+\]
+We ask: does \( d\theta \) lie in the ideal generated by \( \theta \)? An element of this ideal has the form \( \alpha \wedge \theta \) for some 1-form \( \alpha \). But \( \alpha \wedge \theta \) always contains a \( dz \) or \( dx \) factor (from \( \theta = dz - y\,dx \)), while \( d\theta = dx \wedge dy \) involves only \( dx \) and \( dy \). One can check directly that \( d\theta \wedge \theta = (dx \wedge dy) \wedge (dz - y\,dx) = dx \wedge dy \wedge dz \neq 0 \), so \( d\theta \notin \mathcal{I}(\theta) \). By the Frobenius theorem (forms version), \( D \) is <em>not integrable</em>. This distribution is precisely the <strong>standard contact structure</strong> on \( \mathbb{R}^3 \), a fundamental example in contact geometry and geometric control theory.
+</div>
+
+**Foliations.** When a distribution \( D \) is integrable (equivalently, involutive), the Frobenius theorem guarantees the existence of integral submanifolds through every point. The collection of all maximal connected integral submanifolds is called a **foliation** of \( M \), and each maximal integral submanifold is called a **leaf** of the foliation. Thus, an integrable rank-\(k\) distribution partitions \( M \) into a disjoint union of immersed \(k\)-dimensional submanifolds — the leaves — that fit together smoothly in the sense that local coordinates can be chosen making the leaves locally look like parallel \(k\)-dimensional planes in \(\mathbb{R}^n\). The Reeb foliation of \( S^3 \) and the fibres of a submersion \( f \colon M \to N \) (which form a foliation of \( M \) of rank \( \dim M - \dim N \)) are canonical examples.
 
 ### 12.8 Affine Connections and Covariant Derivatives
 
