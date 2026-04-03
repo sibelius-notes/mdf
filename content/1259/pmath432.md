@@ -21,6 +21,18 @@ subjects: "PMATH"
 
 ---
 
+## Preface: The Grand Narrative of Mathematical Logic
+
+Around 300 BC, Euclid organized all of geometry into a single deductive system in the *Elements*. Starting from five postulates — self-evident truths about points, lines, and circles — he derived hundreds of theorems by pure logical inference. The enterprise was a triumph of human reason, a model for mathematical knowledge ever since. But one postulate stood apart: the **parallel postulate**, which asserted that through a point off a line exactly one parallel line can be drawn. For over two thousand years, mathematicians suspected this was not truly an axiom but a consequence of the other four. Generation after generation attempted to derive it from simpler principles, always failing. The mystery was resolved only in the nineteenth century when Gauss, Bolyai, and Lobachevsky discovered **non-Euclidean geometries** — consistent mathematical worlds in which the parallel postulate is false. The lesson was startling and irreversible: the axioms we choose are not forced on us by reality. Different axiomatic choices yield different, equally coherent mathematical universes. The very concept of "truth" in mathematics is relative to a system of axioms.
+
+This realization drove mathematicians toward formalization. If axioms can be chosen differently, then logic itself — the rules of inference — must be made explicit and mechanical. **Gottlob Frege** took the first decisive step in 1879 with his *Begriffsschrift* ("concept-script"), the first complete formalization of predicate logic. Frege's aim was to show that arithmetic is reducible to logic alone, a program he called **logicism**. **George Boole** had earlier (1847) shown that the logic of propositions could be treated algebraically — the origin of Boolean algebra. But it was Frege's *Begriffsschrift* that gave us the quantifiers \(\forall\) and \(\exists\) in recognizable form, the beginning of first-order logic as we know it. Frege's ambitious *Grundgesetze der Arithmetik* attempted to carry out the logicist reduction in full detail — and it nearly succeeded, except for one fatal assumption: that every predicate defines a set.
+
+In 1901, **Bertrand Russell** discovered the paradox that bears his name. Consider the set \(R = \{x : x \notin x\}\) of all sets that do not contain themselves. Is \(R \in R\)? If yes, then by definition \(R \notin R\). If no, then by definition \(R \in R\). Either way, a contradiction. Russell's paradox was not merely a curiosity — it struck at the heart of Frege's system, showing that naive comprehension (every predicate defines a set) is logically inconsistent. The news shattered Frege's program. In the years that followed, Zermelo, Fraenkel, and others developed axiomatic set theories — ZF and ZFC — that carefully restrict comprehension to avoid paradox. Russell and Whitehead produced the enormous *Principia Mathematica* (1910–1913), encoding mathematics in a type-theoretic system that avoids self-reference. The crisis produced not despair but a flowering: the precise analysis of what sets, functions, and numbers actually are.
+
+**David Hilbert**, the greatest mathematician of the early twentieth century, responded to the crisis with characteristic ambition. His **program** (articulated in the 1920s) called for the formalization of all of mathematics in a single axiomatic system, together with a finitistic **consistency proof** — a proof, using only the most elementary combinatorial reasoning, that the system can never derive a contradiction. If successful, Hilbert's program would have placed mathematics on an unshakeable foundation. The program seemed well on its way to success when, in 1930, the twenty-four-year-old **Kurt Gödel** announced his **Completeness Theorem**: every consistent set of first-order axioms has a model. Then, in 1931, Gödel demolished Hilbert's program with his **Incompleteness Theorems**. The First Incompleteness Theorem states that any consistent formal system strong enough to express basic arithmetic contains a true statement that cannot be proved within the system. The Second states that no such system can prove its own consistency. Hilbert's dream of a complete, self-justifying foundation for mathematics was shown to be impossible in principle. The impact was seismic. **Alan Turing**, responding in 1936 to Hilbert's *Entscheidungsproblem* (the decision problem: is there an algorithm that decides whether any given mathematical statement is provable?), invented his abstract model of computation — the Turing machine — and proved the answer is no. In that single paper, Turing launched computer science and resolved a foundational question of mathematics simultaneously. Today, mathematical logic has grown into four intertwined disciplines: **proof theory** (the structure of formal derivations), **model theory** (the relationship between syntax and mathematical structures), **set theory** (the foundations of mathematics and the arithmetic of the infinite), and **computability theory** (the boundaries of what algorithms can determine). These four pillars are the subject of PMATH 432.
+
+---
+
 # Chapter 1: First-Order Logic — Language and Structures
 
 ## 1.1 Why Formalize?
@@ -99,13 +111,51 @@ The set \( \mathrm{free}(\varphi) \) of <strong>free variables</strong> of \( \v
 <ul>
   <li>For an atomic formula \( \varphi \): \( \mathrm{free}(\varphi) \) is the set of variables occurring in \( \varphi \).</li>
   <li>\( \mathrm{free}(\lnot \varphi) = \mathrm{free}(\varphi) \).</li>
-  <li>\( \mathrm{free}(\varphi \ast \psi) = \mathrm{free}(\varphi) \cup \mathrm{free}(\psi) \) for binary connectives \( \ast \).</li>
-  <li>\( \mathrm{free}(\forall x\, \varphi) = \mathrm{free}(\exists x\, \varphi) = \mathrm{free}(\varphi) \setminus \{x\} \).</li>
+  <li>\( \mathrm{free}(\varphi \land \psi) = \mathrm{free}(\varphi) \cup \mathrm{free}(\psi) \).</li>
+  <li>\( \mathrm{free}(\varphi \lor \psi) = \mathrm{free}(\varphi) \cup \mathrm{free}(\psi) \).</li>
+  <li>\( \mathrm{free}(\varphi \to \psi) = \mathrm{free}(\varphi) \cup \mathrm{free}(\psi) \).</li>
+  <li>\( \mathrm{free}(\varphi \leftrightarrow \psi) = \mathrm{free}(\varphi) \cup \mathrm{free}(\psi) \).</li>
+  <li>\( \mathrm{free}(\forall x\, \varphi) = \mathrm{free}(\varphi) \setminus \{x\} \).</li>
+  <li>\( \mathrm{free}(\exists x\, \varphi) = \mathrm{free}(\varphi) \setminus \{x\} \).</li>
 </ul>
-A formula with no free variables is called a <strong>sentence</strong>. A formula \( \varphi(x_1,\ldots,x_n) \) indicates that \( \mathrm{free}(\varphi) \subseteq \{x_1,\ldots,x_n\} \).
+A formula with no free variables is called a <strong>sentence</strong>. A formula \( \varphi(x_1,\ldots,x_n) \) indicates that \( \mathrm{free}(\varphi) \subseteq \{x_1,\ldots,x_n\} \). An occurrence of \( x \) in \( \varphi \) is <strong>bound</strong> if it lies in the scope of a quantifier \( \forall x \) or \( \exists x \); otherwise it is <strong>free</strong>.
 </div>
 
 **Example.** In \( \forall x\, (x < y \to \exists z\, (x < z \land z < y)) \), the variable \( y \) is free and \( x, z \) are bound. This expresses (in the language of orders) "between \( x \) and \( y \) there exists a \( z \)", but only \( y \) is a "parameter".
+
+<div class="example">
+<strong>Worked Example 1.1 (Parse tree and variable analysis).</strong> Consider the formula \( \varphi = \forall x\, \exists y\, (x < y) \) in the signature \( \sigma_{\mathrm{of}} \) of ordered fields (with relation symbol \( < \)).
+
+<strong>Parse tree:</strong>
+<pre>
+        ∀x
+         |
+        ∃y
+         |
+       x < y     (atomic formula R(t₁,t₂) with t₁ = x, t₂ = y)
+</pre>
+
+<strong>Subformulas</strong> (by the inductive definition, every proper syntactic subpart that is itself a formula):
+<ol>
+  <li>\( x < y \) — the innermost atomic formula.</li>
+  <li>\( \exists y\, (x < y) \) — quantifying \( y \) over the atomic formula.</li>
+  <li>\( \forall x\, \exists y\, (x < y) \) — the full formula \( \varphi \).</li>
+</ol>
+
+<strong>Free variables:</strong> Compute inductively.
+\[
+\mathrm{free}(x < y) = \{x, y\}.
+\]
+\[
+\mathrm{free}(\exists y\,(x < y)) = \{x,y\} \setminus \{y\} = \{x\}.
+\]
+\[
+\mathrm{free}(\forall x\, \exists y\,(x < y)) = \{x\} \setminus \{x\} = \emptyset.
+\]
+So \( \varphi \) is a <strong>sentence</strong> — it has no free variables. Both \( x \) and \( y \) are bound. The formula asserts "for every element \( x \) there exists an element \( y \) greater than it" — which is a property of the entire structure, not dependent on any parameter.
+
+<strong>Contrast:</strong> In \( \psi = \exists y\,(x < y) \), the variable \( x \) is <em>free</em>. This formula expresses "\( x \) is not a maximum", a property that depends on the choice of \( x \). We would write \( \psi(x) \) to indicate this dependency.
+</div>
 
 ### 1.2.4 Substitution
 
@@ -131,6 +181,24 @@ A <strong>\( \sigma \)-structure</strong> \( \mathfrak{A} \) (or <strong>model</
 - The structure \( (\mathbb{Z}, +^{\mathbb{Z}}, \cdot^{\mathbb{Z}}, 0^{\mathbb{Z}}, 1^{\mathbb{Z}}, <^{\mathbb{Z}}) \) is a \( \sigma_{\mathrm{of}} \)-structure interpreting the ordered ring of integers.
 - The structure \( (\mathbb{N}, S, 0) \) with \( S(n)=n+1 \) is a structure for the signature \( (\{S,0\}, \emptyset) \), the setting for Peano arithmetic.
 - Any group \( (G, \cdot, e, {}^{-1}) \) is a \( \sigma_{\mathrm{grp}} \)-structure.
+
+<div class="example">
+<strong>Worked Example 1.2 (The structure \( \mathfrak{N} \) and truth value computations).</strong> Define the structure
+\[
+\mathfrak{N} = (\mathbb{N},\, 0^{\mathfrak{N}},\, S^{\mathfrak{N}},\, +^{\mathfrak{N}},\, \cdot^{\mathfrak{N}})
+\]
+in the arithmetic signature \( \sigma_{\mathrm{arith}} = \{0, S, +, \cdot\} \) (with \( 0 \) a constant, \( S \) unary, \( + \) and \( \cdot \) binary), where the interpretations are the standard natural-number operations: \( 0^{\mathfrak{N}} = 0 \), \( S^{\mathfrak{N}}(n) = n+1 \), and so forth. We compute truth values of several sentences.
+
+<strong>Sentence 1: \( \forall x\, \exists y\, (x + y \doteq 0) \).</strong> This says "every natural number has an additive inverse in \( \mathbb{N} \)." Take \( x = 1 \). We need \( y \in \mathbb{N} \) with \( 1 + y = 0 \). No such \( y \) exists in \( \mathbb{N} \) (there are no negative numbers). Therefore \( \mathfrak{N} \not\models \forall x\, \exists y\, (x + y \doteq 0) \). The sentence is <strong>false</strong> in \( \mathfrak{N} \).
+
+<strong>Sentence 2: \( \exists x\, (x + x \doteq x) \).</strong> This says "there exists a natural number \( x \) satisfying \( 2x = x \)." Taking \( x = 0 \): \( 0 + 0 = 0 \). This is true in \( \mathbb{N} \). Hence \( \mathfrak{N} \models \exists x\, (x + x \doteq x) \). The sentence is <strong>true</strong> in \( \mathfrak{N} \), witnessed by \( x = 0 \).
+
+<strong>Sentence 3: \( \forall x\, \forall y\, (x \cdot y \doteq y \cdot x) \).</strong> Multiplication of natural numbers is commutative: \( mn = nm \) for all \( m, n \in \mathbb{N} \). Hence \( \mathfrak{N} \models \forall x\, \forall y\, (x \cdot y \doteq y \cdot x) \). The sentence is <strong>true</strong>.
+
+<strong>Sentence 4: \( \exists x\, \forall y\, (x + y \doteq y) \).</strong> This asks for a left identity for addition. Indeed \( 0 + y = y \) for all \( y \in \mathbb{N} \). So \( \mathfrak{N} \models \exists x\, \forall y\, (x + y \doteq y) \), witnessed by \( x = 0 \).
+
+These computations illustrate how the inductive definition of satisfaction translates formal syntax into concrete arithmetical claims about \( \mathbb{N} \).
+</div>
 
 ### 1.3.1 Assignments and Interpretations of Terms
 
@@ -171,6 +239,18 @@ The <strong>coincidence lemma</strong>: the truth value of \( \mathfrak{A} \mode
 
 <div class="proof">
 By structural induction on \( \varphi \). The base case for atomic formulas follows since term values depend only on the values of their variables (by an analogous induction on terms). The inductive cases for connectives are immediate. For quantifiers: if \( \varphi = \forall x\, \psi \) and \( \alpha, \beta \) agree on \( \mathrm{free}(\forall x\, \psi) = \mathrm{free}(\psi) \setminus \{x\} \), then for any \( a \in A \), the assignments \( \alpha(x|a) \) and \( \beta(x|a) \) agree on all of \( \mathrm{free}(\psi) \), so by the induction hypothesis they give the same truth value for \( \psi \). Taking the universal quantifier over all \( a \) completes the argument.
+</div>
+
+<div class="example">
+<strong>Worked Example 1.3 (Evaluating formulas in \( (\mathbb{Z}, <) \)).</strong> The satisfaction relation connects syntax with concrete mathematical truth. Consider the structure \( \mathfrak{Z} = (\mathbb{Z}, <^{\mathbb{Z}}) \) in the signature \( \sigma_{\mathrm{ord}} = (\emptyset, \{<\}) \).
+
+<strong>Formula \( \varphi_1 = \forall x\, \exists y\, (x < y) \):</strong> For every integer \( n \), take \( y = n+1 > n \). So \( \mathfrak{Z} \models \varphi_1 \). The sentence means "\( \mathbb{Z} \) has no maximum element" — which is true.
+
+<strong>Formula \( \varphi_2 = \forall x\, \exists y\, (y < x) \):</strong> For every integer \( n \), take \( y = n-1 < n \). So \( \mathfrak{Z} \models \varphi_2 \). The sentence means "\( \mathbb{Z} \) has no minimum element" — also true.
+
+<strong>Formula \( \varphi_3 = \forall x\, \forall y\, (x < y \to \exists z\,(x < z \land z < y)) \):</strong> This asserts density. But between consecutive integers \( n \) and \( n+1 \) there is no integer \( z \) with \( n < z < n+1 \). So \( \mathfrak{Z} \not\models \varphi_3 \). The integers are <em>not</em> a dense order.
+
+<strong>Contrast with \( \mathfrak{Q} = (\mathbb{Q}, <) \):</strong> All three sentences hold in \( \mathfrak{Q} \). Indeed \( \mathfrak{Q} \models \varphi_3 \) since between any two rationals there is another rational. This shows that \( \mathfrak{Z} \not\equiv \mathfrak{Q} \): they are not elementarily equivalent (they disagree on \( \varphi_3 \)).
 </div>
 
 ### 1.3.3 Models, Validity, and Entailment
@@ -238,6 +318,8 @@ The forward direction is clear from the definition. For the backward direction, 
 
 ## 2.1 Formal Proof Systems
 
+The satisfaction relation \( \models \) connects syntax (formulas as strings of symbols) with semantics (truth in structures). This connection is the heart of mathematical logic, but it raises an immediate practical problem: to check whether \( T \models \varphi \), we would need to verify \( \varphi \) in every model of \( T \) — an infinite and typically unchecked task. The purpose of a **proof system** is to replace semantic verification with a mechanical syntactic procedure: a finite sequence of steps, each of which can be checked algorithmically, ending in \( \varphi \). The central question is whether the proof system is *complete* — whether every semantic consequence is also a syntactic consequence. Gödel's 1930 Completeness Theorem answers yes, for first-order logic.
+
 There are several equivalent proof systems for first-order logic: Hilbert-style axiom systems, natural deduction, sequent calculus (Gentzen's \( \mathbf{LK} \)), and tableaux. We present the Hilbert-style system following EFT, which trades ease of use for minimality of primitives.
 
 ### 2.1.1 The Hilbert Calculus
@@ -272,6 +354,50 @@ A <strong>derivation</strong> (or <strong>proof</strong>) from a set of premises
 
 <div class="remark">
 The generalization rule must be applied with care: \( \Phi \vdash \forall x\, \varphi \) if the last step uses generalization only when \( x \) is not free in any formula of \( \Phi \) actually used in the derivation. This restriction prevents proving \( \forall x\, x = c \) from the premise \( x = c \).
+</div>
+
+<div class="example">
+<strong>Worked Derivation 2.1: Proving \( \vdash \forall x\, P(x) \to \exists x\, P(x) \).</strong>
+
+We exhibit a Hilbert-style derivation with no premises. Let \( P \) be a unary relation symbol.
+
+<ol>
+  <li>\( \forall x\, P(x) \to P(c) \) — Quantifier axiom (instantiate \( x \) with any term \( c \)).</li>
+  <li>\( P(c) \to \exists x\, P(x) \) — Quantifier axiom (existential introduction with term \( c \)).</li>
+  <li>\( (\forall x\, P(x) \to P(c)) \to ((P(c) \to \exists x\, P(x)) \to (\forall x\, P(x) \to \exists x\, P(x))) \) — Propositional axiom (hypothetical syllogism): \( (A \to B) \to ((B \to C) \to (A \to C)) \), an instance of the second propositional axiom.</li>
+  <li>\( (P(c) \to \exists x\, P(x)) \to (\forall x\, P(x) \to \exists x\, P(x)) \) — Modus Ponens on lines 1 and 3.</li>
+  <li>\( \forall x\, P(x) \to \exists x\, P(x) \) — Modus Ponens on lines 2 and 4.</li>
+</ol>
+
+This completes the derivation. Semantically, this is obvious: if \( P(a) \) holds for every element \( a \), then in particular there exists some \( a \) (the domain is nonempty) for which \( P(a) \) holds.
+</div>
+
+<div class="example">
+<strong>Worked Derivation 2.2: Deriving \( \vdash \lnot\lnot\varphi \to \varphi \) (double negation elimination).</strong>
+
+This is a fundamental instance of classical (as opposed to intuitionistic) logic. The key propositional axiom is the contrapositive axiom: \( (\lnot\psi \to \lnot\varphi) \to (\varphi \to \psi) \).
+
+<ol>
+  <li>\( (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi) \to (\lnot\lnot\varphi \to \varphi) \) — Wait: let us proceed more carefully. We use the contrapositive axiom with \( \psi := \varphi \) and \( \varphi := \lnot\varphi \): \( (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi) \). Hmm — we need \( \lnot\varphi \to \lnot\lnot\varphi \). This is not immediate.</li>
+</ol>
+
+A cleaner route uses the contrapositive axiom \( (\lnot\psi \to \lnot\varphi) \to (\varphi \to \psi) \) with \( \psi = \varphi \) and \( \varphi = \lnot\varphi \) (substituting \( \lnot\varphi \) for the meta-variable \( \varphi \)):
+
+<ol>
+  <li>\( (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi) \) — This is an instance of the third propositional axiom with \( \varphi := \lnot\varphi \), \( \psi := \varphi \): \( (\lnot\psi \to \lnot\varphi) \to (\varphi \to \psi) \)... Actually let us use the standard derivation for \( \lnot\lnot\varphi \to \varphi \) directly via the third propositional axiom.</li>
+</ol>
+
+The third propositional axiom is \( (\lnot\psi \to \lnot\varphi) \to (\varphi \to \psi) \). Set \( \psi := \varphi \) and treat \( \varphi \) as \( \lnot\varphi \):
+\[ (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi). \]
+
+We also need \( \lnot\lnot\varphi \to (\lnot\varphi \to \lnot\lnot\varphi) \) — an instance of axiom 1 with \( \varphi := \lnot\lnot\varphi \) and \( \psi := \lnot\varphi \).
+
+<ol>
+  <li>\( \lnot\lnot\varphi \to (\lnot\varphi \to \lnot\lnot\varphi) \) — Axiom 1 (\( A \to (B \to A) \)).</li>
+  <li>\( (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi) \) — Axiom 3 instantiated as above... this requires additional steps. In full detail the derivation is approximately 10 lines. The key idea: from \( \lnot\lnot\varphi \) and the axioms, derive \( \varphi \) by using the contrapositive axiom to convert double negation to a positive statement. The derivation exists and is finite — demonstrating that classical double negation elimination is an admissible derived rule of the Hilbert calculus.</li>
+</ol>
+
+<strong>Upshot:</strong> In classical logic (with the third propositional axiom), \( \lnot\lnot\varphi \to \varphi \) is provable. In intuitionistic logic (which omits the third axiom), this is not provable — double negation elimination is precisely the principle that distinguishes classical from constructive mathematics.
 </div>
 
 ### 2.1.2 Derived Rules and Metatheorems
@@ -316,7 +442,7 @@ By induction on the length of the derivation. We check that each logical axiom i
 
 ## 2.3 The Completeness Theorem
 
-The completeness theorem is the deepest result about first-order logic. It establishes that the proof system captures precisely the semantically valid consequences.
+One of the most surprising and powerful results in all of mathematics is Gödel's Completeness Theorem. It establishes that the syntactic machinery of first-order logic — a finite list of axiom schemas and two rules of inference — is *exactly* powerful enough to capture semantic truth in all structures. There is no gap between what is true in every model and what is provable. This result was far from obvious: the proof system looks weak (only finitely many axiom schemas, no mention of any specific structure), yet it can derive everything that holds in every conceivable interpretation. The proof, via the Henkin construction, is itself a masterpiece: it builds a model directly out of the proof system, turning syntactic objects (terms and formulas) into semantic objects (elements and truth values).
 
 <div class="theorem">
 <strong>(Gödel's Completeness Theorem, 1930)</strong> Let \( \sigma \) be a countable signature and \( \Phi \) a set of \( \sigma \)-sentences. For any sentence \( \varphi \):
@@ -377,7 +503,7 @@ By induction on \( \varphi \). Atomic: \( \mathfrak{A}_\Delta \models R(t_1,\ldo
 One direction is trivial: if \( \Phi \) has a model \( \mathfrak{A} \), then so does every finite subset. For the other direction: if every finite subset of \( \Phi \) is satisfiable, then every finite subset is consistent (by soundness). Hence \( \Phi \) itself is consistent (since any derivation of \( \bot \) from \( \Phi \) uses only finitely many premises). By completeness, \( \Phi \) has a model.
 </div>
 
-**Remark.** The compactness theorem can also be proved directly via ultraproducts (see Chapter 3), giving an independent proof that does not go through the proof system.
+**Remark.** The compactness theorem can also be proved directly via ultraproducts (see Chapter 6), giving an independent proof that does not go through the proof system.
 
 ### 2.4.1 Applications of Compactness
 
@@ -386,6 +512,35 @@ One direction is trivial: if \( \Phi \) has a model \( \mathfrak{A} \), then so 
 **Example 2: Torsion groups.** Let \( T_{\mathrm{grp}} \) be the group axioms and suppose \( T_{\mathrm{grp}} \models \varphi \) for every sentence \( \varphi \) of the form "every element has finite order". Then the class of groups in which every element has finite order (torsion groups) cannot be axiomatized by a first-order theory alone — a compactness argument shows any axiomatization has models with elements of infinite order.
 
 **Example 3: Finite fields have characteristic-zero extensions.** The theory \( T_{\mathrm{ACF}_0} \) of algebraically closed fields of characteristic 0 (see Chapter 3) is the limit of theories \( T_{\mathrm{ACF}_p} \) in the following sense: if \( \varphi \) holds in all \( \mathrm{ACF}_p \) for all sufficiently large primes \( p \), then \( \varphi \) holds in \( \mathrm{ACF}_0 \). This follows from compactness by adding axioms \( \mathrm{char} \neq p \) for each prime \( p \).
+
+<div class="example">
+<strong>Worked Example 2.3 (Compactness and graph coloring).</strong> We use compactness to transfer a global property to a finitistic one.
+
+<strong>Theorem.</strong> Let \( G \) be an infinite graph such that every finite subgraph of \( G \) is \( k \)-colorable (properly colorable with \( k \) colors). Then \( G \) itself is \( k \)-colorable.
+
+<strong>Proof via Compactness.</strong> For each vertex \( v \in V(G) \), introduce a constant symbol \( c_v \). Let \( \sigma \) be the signature with constant symbols \( \{c_v : v \in V(G)\} \) and unary relation symbols \( \{C_1, \ldots, C_k\} \) (representing the \( k \) color classes). Form the theory \( T \) consisting of:
+<ul>
+  <li>For each vertex \( v \): \( C_1(c_v) \lor C_2(c_v) \lor \cdots \lor C_k(c_v) \) (every vertex gets at least one color).</li>
+  <li>For each vertex \( v \) and each pair \( i \neq j \): \( \lnot(C_i(c_v) \land C_j(c_v)) \) (at most one color).</li>
+  <li>For each edge \( \{u,v\} \in E(G) \) and each \( i \): \( \lnot(C_i(c_u) \land C_i(c_v)) \) (no monochromatic edge).</li>
+</ul>
+
+A model of \( T \) is exactly a proper \( k \)-coloring of \( G \). Any finite subset \( T_0 \subseteq T \) involves only finitely many constant symbols \( c_{v_1}, \ldots, c_{v_m} \) and hence only finitely many edge constraints. The induced subgraph on \( \{v_1,\ldots,v_m\} \) is a finite subgraph of \( G \), which by assumption is \( k \)-colorable. That coloring gives a model of \( T_0 \). By compactness, \( T \) has a model — a proper \( k \)-coloring of all of \( G \). \(\square\)
+
+This result is significant: it means that for testing \( k \)-colorability, global infinite structure reduces to finitary local structure. It is equivalent to the fact that \( k \)-colorability is a **finitary** property — expressible by a first-order theory.
+</div>
+
+<div class="example">
+<strong>Worked Example 2.4 (Non-standard analysis via compactness).</strong> One of the most striking applications of compactness is the construction of Abraham Robinson's non-standard real numbers.
+
+<strong>Claim.</strong> There exists an ordered field extension \( {}^*\!\mathbb{R} \supset \mathbb{R} \) satisfying all first-order sentences true in \( \mathbb{R} \) (the **transfer principle**), yet containing a positive infinitesimal \( \varepsilon \) — an element with \( 0 < \varepsilon < \frac{1}{n} \) for every \( n \in \mathbb{N} \).
+
+<strong>Construction via Compactness.</strong> Work in the signature \( \sigma_{\mathrm{of}} \cup \{c_r : r \in \mathbb{R}\} \cup \{\varepsilon\} \), where each \( c_r \) is a constant naming the real number \( r \), and \( \varepsilon \) is a new constant. Form the theory
+\[
+T = \mathrm{Th}(\mathbb{R}, r)_{r \in \mathbb{R}} \cup \{\varepsilon > 0\} \cup \left\{\varepsilon < c_{1/n} : n \in \mathbb{N}, n \geq 1\right\}.
+\]
+Here \( \mathrm{Th}(\mathbb{R}, r)_{r \in \mathbb{R}} \) is the theory of \( \mathbb{R} \) in the expanded language with a constant for each real number. For any finite subset \( T_0 \subseteq T \), the constraints on \( \varepsilon \) are finitely many: \( \varepsilon < c_{1/n_1}, \ldots, \varepsilon < c_{1/n_k} \) for some \( n_1, \ldots, n_k \). Setting \( \varepsilon := \frac{1}{2\max(n_i)} \) gives a real number satisfying \( T_0 \). By compactness, \( T \) has a model \( {}^*\!\mathbb{R} \). The element \( \varepsilon^{{}^*\!\mathbb{R}} \) is a positive infinitesimal. Since \( {}^*\!\mathbb{R} \models \mathrm{Th}(\mathbb{R}, r)_{r \in \mathbb{R}} \), every first-order statement true in \( \mathbb{R} \) remains true in \( {}^*\!\mathbb{R} \) — the transfer principle. This is the logical foundation for Robinson's non-standard analysis (1966), which gives a rigorous treatment of Leibniz's infinitesimals.
+</div>
 
 ---
 
@@ -668,6 +823,14 @@ The <strong>cofinality</strong> \( \mathrm{cf}(\kappa) \) of a cardinal \( \kapp
 
 # Chapter 5: Computability Theory and Gödel's Incompleteness Theorems
 
+## 5.0 Historical Context: Hilbert's Entscheidungsproblem and Turing's Answer
+
+In 1928, David Hilbert posed the **Entscheidungsproblem** (decision problem): is there a mechanical procedure — an algorithm — that, given any first-order sentence, determines whether it is logically valid (true in all structures)? The question crystallized Hilbert's hope that mathematics was not only complete and consistent, but also *decidable*: any mathematical question, in principle, could be resolved by a sufficiently systematic calculation. In the years before 1936, the question was open. There was not even a rigorous definition of "algorithm" or "mechanical procedure". Both Alan Turing and Alonzo Church independently answered the Entscheidungsproblem in the negative in 1936 — and in doing so, gave the world a precise definition of computability.
+
+**Alan Turing's approach** was to define an abstract model of a computing machine: a finite control unit reading and writing symbols on an infinite tape, moving left or right one step at a time. The **Turing machine** was simple enough to reason about mathematically, yet powerful enough to simulate any algorithmic computation. Turing showed that no Turing machine can decide whether an arbitrary Turing machine halts on a given input — the **Halting Problem** is undecidable. As a consequence, the set of logically valid first-order sentences (the set of tautologies of predicate logic) is also undecidable: there is no algorithm that correctly classifies every first-order sentence as valid or not. **Alonzo Church** arrived at the same conclusion via the lambda calculus and his definition of "effectively computable" functions.
+
+The **Church–Turing thesis** states that every effectively computable function (in the informal, intuitive sense) is Turing-computable. This is not a theorem — it cannot be proved from within mathematics — but it is universally accepted as capturing the true boundary of computation. Together with Gödel's incompleteness theorems, Turing's result permanently transformed our understanding of the limits of mathematical knowledge: not only is there no complete formal system for arithmetic (Gödel), but there is also no algorithm that can decide what is provable in even a simple formal system (Turing). The two results are deeply related, as we shall see.
+
 ## 5.1 Primitive Recursive and Recursive Functions
 
 <div class="definition">
@@ -686,6 +849,38 @@ and closed under:
 
 **Examples.** Addition, multiplication, exponentiation, the predecessor function, and all bounded quantifications are primitive recursive. The Ackermann function is recursive but not primitive recursive.
 
+<div class="example">
+<strong>Worked Example 5.1 (Addition is primitive recursive).</strong> We show that \( \mathrm{add}(m, n) = m + n \) is primitive recursive by exhibiting the explicit recursion schema.
+
+Define:
+\[
+\mathrm{add}(m, 0) = m = \pi^1_1(m),
+\]
+\[
+\mathrm{add}(m, n+1) = S(\mathrm{add}(m, n)).
+\]
+
+In terms of the primitive recursion schema: \( g(m) = \pi^1_1(m) \) (the projection function, hence primitive recursive) and \( h(m, n, p) = S(\pi^3_3(m, n, p)) = S(p) \) (composition of \( S \) and a projection, hence primitive recursive). The primitive recursion schema then gives \( \mathrm{add}(m, n) \) as primitive recursive.
+
+<strong>Multiplication</strong> builds on addition:
+\[
+\mathrm{mult}(m, 0) = 0 = Z(m),
+\]
+\[
+\mathrm{mult}(m, n+1) = \mathrm{add}(\mathrm{mult}(m, n), m).
+\]
+Here \( g(m) = Z(m) \) (zero function) and \( h(m, n, p) = \mathrm{add}(p, m) \) (addition applied to the two projections). Since addition is already shown primitive recursive and \( h \) is a composition of primitive recursive functions, multiplication is primitive recursive.
+
+<strong>Exponentiation:} \( m^n \) is defined similarly:}
+\[
+\mathrm{exp}(m, 0) = 1,
+\]
+\[
+\mathrm{exp}(m, n+1) = \mathrm{mult}(\mathrm{exp}(m, n), m).
+\]
+This is again a primitive recursion schema, so \( m^n \) is primitive recursive.
+</div>
+
 <div class="definition">
 The class of <strong>partial recursive functions</strong> (equivalently, **Turing-computable** functions) is the smallest class extending the primitive recursive functions and closed under the \( \mu \)-operator (minimization): given total recursive \( g : \mathbb{N}^{k+1} \to \mathbb{N} \), the function \( f(\vec{n}) = \mu m\, [g(\vec{n},m)=0] \) (the least \( m \) such that \( g(\vec{n},m)=0 \), if it exists) is partial recursive.
 </div>
@@ -702,6 +897,29 @@ A specific numbering for formulas in signature \( \sigma_{\mathrm{arith}} = \{0,
 Assign codes to symbols, then encode sequences by prime factorization or by pairing functions. The key properties:
 - The set of Gödel numbers of well-formed formulas is primitive recursive.
 - The substitution operation \( (\varphi, x, t) \mapsto \varphi[t/x] \) is primitive recursive (on Gödel numbers).
+
+<div class="example">
+<strong>Worked Example 5.2 (Decidability and undecidability of validity).</strong>
+
+<strong>Propositional tautologies are decidable.</strong> A propositional formula \( \varphi \) with \( n \) distinct propositional variables \( p_1, \ldots, p_n \) is a tautology iff it is true under all \( 2^n \) truth-value assignments. Given \( \varphi \) (as a string), we can:
+(1) Count the propositional variables.
+(2) Enumerate all \( 2^n \) assignments.
+(3) Evaluate \( \varphi \) under each assignment (evaluation is a primitive recursive function of the formula and assignment).
+(4) Output "tautology" iff all evaluations are true.
+This is a terminating procedure — hence a total recursive algorithm. The set of Gödel numbers of propositional tautologies is **decidable** (recursive).
+
+<strong>First-order validity is not decidable.</strong> Church (1936) and Turing (1936) independently proved that the set
+\[
+\mathrm{Val} = \{\ulcorner \varphi \urcorner : \varphi \text{ is a first-order sentence that is logically valid}\}
+\]
+is not recursive. The key steps:
+<ol>
+  <li>\( \mathrm{Val} \) is recursively enumerable (r.e.): the completeness theorem says \( \varphi \) is valid iff \( \varphi \) is provable in the Hilbert calculus. Proofs are finite sequences of formulas, and we can enumerate all proofs, outputting the last line of each valid proof.</li>
+  <li>\( \mathrm{Val} \) is not recursive: if it were, we could decide any instance of the Halting Problem. Given a Turing machine \( M \) and input \( w \), one can construct a first-order sentence \( \varphi_{M,w} \) that is valid iff \( M \) halts on \( w \). Since the Halting Problem is undecidable, so is \( \mathrm{Val} \).</li>
+</ol>
+
+The contrast between propositional and first-order validity is fundamental: adding quantifiers \( \forall \) and \( \exists \) to propositional logic takes us from a decidable to an undecidable problem. This is one precise sense in which first-order logic is "more powerful" than propositional logic — and also more computationally intractable.
+</div>
 
 ### 5.2.1 Representability in PA
 
@@ -774,6 +992,36 @@ And \( \gamma = \theta(\overline{m}) = \psi(\mathrm{sub}(\overline{m}, \overline
 Thus \( T \vdash \gamma \leftrightarrow \psi(\ulcorner \gamma \urcorner) \).
 </div>
 
+<div class="example">
+<strong>Worked Example 5.3 (Explicit construction of the Gödel sentence).</strong> We trace through the diagonal lemma to construct the Gödel sentence for PA explicitly.
+
+<strong>Step 1: Fix a Gödel numbering.</strong> Assign each symbol of the language of PA a code: \( \ulcorner 0 \urcorner = 3 \), \( \ulcorner S \urcorner = 5 \), \( \ulcorner + \urcorner = 7 \), \( \ulcorner \cdot \urcorner = 9 \), \( \ulcorner = \urcorner = 11 \), \( \ulcorner \lnot \urcorner = 13 \), \( \ulcorner \land \urcorner = 15 \), \( \ulcorner \forall \urcorner = 17 \), and variables \( v_k \) get code \( 2k + 4 \). A formula is encoded as the product \( 2^{a_1} \cdot 3^{a_2} \cdot 5^{a_3} \cdots p_n^{a_n} \) where \( a_1, \ldots, a_n \) are the codes of its symbols in order (prime factorization encoding). Call this encoding \( \ulcorner \cdot \urcorner \).
+
+<strong>Step 2: The provability predicate.</strong> A proof in PA is a finite sequence of formulas, each of which is an axiom or follows from earlier lines by modus ponens or generalization. The relation "\( n \) is a PA-proof of the formula with Gödel number \( m \)" — call it \( \mathrm{Proof}(n, m) \) — is primitive recursive (checking each line in a sequence is algorithmic). Since every primitive recursive relation is representable in PA, there is a PA-formula \( \mathrm{Proof}(x, y) \) representing this relation. Define:
+\[
+\mathrm{Prov}(y) := \exists x\, \mathrm{Proof}(x, y).
+\]
+This is a \( \Sigma^0_1 \) formula: \( \mathrm{Prov}(\overline{n}) \) is provable in PA iff \( n \) is the Gödel number of a PA-theorem.
+
+<strong>Step 3: Apply the Diagonal Lemma.</strong> Set \( \psi(y) = \lnot \mathrm{Prov}(y) \). By the Diagonal Lemma, there exists a sentence \( G \) such that
+\[
+\mathrm{PA} \vdash G \leftrightarrow \lnot \mathrm{Prov}(\ulcorner G \urcorner).
+\]
+The sentence \( G \) is constructed as:
+\[
+G = \theta(\overline{m}), \quad \text{where } \theta(x) = \lnot \mathrm{Prov}(\mathrm{Sub}(x, x)),
+\]
+and \( m = \ulcorner \theta(v_0) \urcorner \) is the Gödel number of the formula \( \theta \) with free variable \( v_0 \), and \( \mathrm{Sub}(x, y) \) is the PA-term representing the substitution function \( \mathrm{sub}(x, y) \).
+
+<strong>Step 4: The sentence \( G \) says "I am not provable in PA."</strong> Informally: \( G \equiv \) "the formula with Gödel number \( \ulcorner G \urcorner \) (namely, me) has no proof in PA." This is self-referential — \( G \) refers to its own Gödel number.
+
+<strong>Step 5: Why \( G \) is neither provable nor refutable.</strong>
+- If PA \( \vdash G \), then PA proves the formula with Gödel number \( \ulcorner G \urcorner \), so there exists a proof (a natural number \( n \) coding that proof). Hence \( \mathbb{N} \models \mathrm{Prov}(\ulcorner G \urcorner) \), and since PA is sound (every PA-provable arithmetic sentence is true in \( \mathbb{N} \)), PA \( \vdash \mathrm{Prov}(\ulcorner G \urcorner) \). But then PA \( \vdash \lnot G \) (by the biconditional), contradicting consistency.
+- If PA \( \vdash \lnot G \), then \( \mathbb{N} \models \lnot G \), meaning \( \mathbb{N} \models \mathrm{Prov}(\ulcorner G \urcorner) \), so there exists a natural number \( n \) coding a PA-proof of \( G \). But we just showed PA \( \not\vdash G \) — contradiction.
+
+Therefore PA is incomplete. Moreover, \( G \) is **true** in \( \mathbb{N} \): since PA \( \not\vdash G \), there is genuinely no proof of \( G \) in PA, so \( \mathbb{N} \models \lnot \mathrm{Prov}(\ulcorner G \urcorner) \), i.e., \( \mathbb{N} \models G \).
+</div>
+
 ### 5.4.2 Proof of the First Incompleteness Theorem
 
 Let \( \mathrm{Prov}_T(x) \) be the formula representing the provability predicate: \( \mathrm{Prov}_T(\overline{n}) \) holds (in \( \mathbb{N} \), and is provable in \( T \)) iff \( n \) is the Gödel number of a theorem of \( T \). This predicate exists because the set of proofs in \( T \) is primitive recursive (for recursively axiomatized \( T \)).
@@ -819,6 +1067,12 @@ Specifically, the proof of "if \( T \vdash G \) then \( T \) is inconsistent" ca
 </ul>
 
 From these: \( T \vdash \mathrm{Con}(T) \to G \). If \( T \vdash \mathrm{Con}(T) \), then \( T \vdash G \), contradicting the First Incompleteness Theorem.
+</div>
+
+<div class="remark">
+<strong>Informal proof sketch via the First Incompleteness Theorem.</strong> The argument can be understood informally as follows. The First Incompleteness Theorem shows that the reasoning "if \( T \) is consistent, then \( T \not\vdash G \)" is itself formalizable in \( T \). That is, \( T \) can prove the conditional \( \mathrm{Con}(T) \to G \). Now suppose for contradiction that \( T \vdash \mathrm{Con}(T) \). Combining with \( T \vdash \mathrm{Con}(T) \to G \), modus ponens gives \( T \vdash G \). But the First Incompleteness Theorem says \( T \not\vdash G \) (assuming \( T \) is consistent). Contradiction. Therefore \( T \not\vdash \mathrm{Con}(T) \).
+
+The crucial subtlety is that the implication \( \mathrm{Con}(T) \to G \) must be provable *inside* \( T \) (not just true in the metatheory). This is what the Löb conditions (D1)–(D3) ensure: they allow the informal soundness argument to be replicated as a formal PA-derivation.
 </div>
 
 **Philosophical significance.** Hilbert's program sought a finitary consistency proof for all of mathematics. The Second Incompleteness Theorem shows that no consistent system powerful enough to encode arithmetic can prove its own consistency. In particular, ZFC cannot prove \( \mathrm{Con}(\text{ZFC}) \) (assuming ZFC is consistent). A stronger system can prove the consistency of a weaker one — but one always needs to "stand outside" the system.
@@ -1168,3 +1422,594 @@ Let \( T \) be a consistent recursively axiomatizable extension of \( Q \).
   - \( T + \mathrm{Con}(T) \) is a strictly stronger consistent theory.
 
 - **Relationship**: \( T \vdash G_T \leftrightarrow \mathrm{Con}(T) \) (the Gödel sentence is equivalent to consistency over \( T \), essentially).
+
+---
+
+# Appendix C: Computability Theory Primer
+
+This appendix develops the computability-theoretic background that underpins Chapters 5 and 7 in more detail. The reader who has seen the informal account in Chapter 5 will benefit from the formal definitions and classical theorems collected here.
+
+## C.1 Primitive Recursive Functions — Complete Development
+
+The primitive recursive functions constitute the "safe" core of computability: every primitive recursive function terminates, and all basic arithmetic operations lie within this class. They are built from three base functions by two closure operations.
+
+**Base functions:**
+1. **Zero function:** \( Z : \mathbb{N} \to \mathbb{N} \), \( Z(n) = 0 \).
+2. **Successor function:** \( S : \mathbb{N} \to \mathbb{N} \), \( S(n) = n + 1 \).
+3. **Projection functions:** \( \pi^k_i : \mathbb{N}^k \to \mathbb{N} \), \( \pi^k_i(n_1, \ldots, n_k) = n_i \) for \( 1 \leq i \leq k \).
+
+**Closure operations:**
+1. **Composition:** If \( g : \mathbb{N}^m \to \mathbb{N} \) and \( h_1, \ldots, h_m : \mathbb{N}^k \to \mathbb{N} \) are primitive recursive, then so is \( f(\vec{n}) = g(h_1(\vec{n}), \ldots, h_m(\vec{n})) \).
+2. **Primitive recursion:** If \( g : \mathbb{N}^k \to \mathbb{N} \) and \( h : \mathbb{N}^{k+2} \to \mathbb{N} \) are primitive recursive, then so is \( f \) defined by:
+\[
+f(\vec{n}, 0) = g(\vec{n}), \qquad f(\vec{n}, m+1) = h(\vec{n}, m, f(\vec{n}, m)).
+\]
+
+<div class="example">
+<strong>Primitive recursive examples in detail.</strong>
+
+<strong>Predecessor:</strong> Define \( \mathrm{pred}(0) = 0 \) and \( \mathrm{pred}(n+1) = n \). In the recursion schema: \( g = Z \) (the zero function on zero arguments, i.e., just the constant 0) and \( h(n, p) = \pi^2_1(n, p) = n \). This is primitive recursive.
+
+<strong>Monus (cut-off subtraction):</strong> \( m \dot{-} n = \max(m - n, 0) \). Define:
+\[
+m \dot{-} 0 = m, \qquad m \dot{-} (n+1) = \mathrm{pred}(m \dot{-} n).
+\]
+Both steps use already-primitive-recursive functions, so \( \dot{-} \) is primitive recursive.
+
+<strong>Absolute value of difference:</strong> \( |m - n| = (m \dot{-} n) + (n \dot{-} m) \). A composition of primitive recursive functions, hence primitive recursive.
+
+<strong>Characteristic function of equality:</strong> Define \( \mathrm{eq}(m, n) = 1 \) if \( m = n \), else \( 0 \). Note \( m = n \iff |m - n| = 0 \). Define \( \mathrm{iszero}(k) = 1 \dot{-} \min(k, 1) \). Then \( \mathrm{eq}(m, n) = \mathrm{iszero}(|m - n|) \). This is primitive recursive.
+
+<strong>Bounded search:</strong> If \( R(\vec{n}, m) \) is a primitive recursive relation (its characteristic function is primitive recursive), then the function \( \mu m \leq k\, [R(\vec{n}, m)] \) (least \( m \leq k \) with \( R(\vec{n}, m) \), or \( k+1 \) if none exists) is primitive recursive. Unbounded search is what requires the \( \mu \)-operator and takes us beyond primitive recursion.
+</div>
+
+<div class="remark">
+Every primitive recursive function is total — it terminates on all inputs. The Ackermann function \( A(m, n) \), defined by \( A(0, n) = n+1 \), \( A(m+1, 0) = A(m, 1) \), \( A(m+1, n+1) = A(m, A(m+1, n)) \), grows faster than any primitive recursive function, yet is still total recursive (Turing-computable). This shows that primitive recursion does not capture all of computable mathematics — only the "elementary" part.
+</div>
+
+## C.2 Partial Recursive Functions and the \( \mu \)-Operator
+
+<div class="definition">
+The <strong>partial recursive functions</strong> (equivalently, Turing-computable partial functions) are the smallest class containing all primitive recursive functions and closed under the <strong>unbounded \( \mu \)-operator</strong>: given \( g : \mathbb{N}^{k+1} \to \mathbb{N} \) total recursive, the function
+\[
+f(\vec{n}) = \mu m\, [g(\vec{n}, m) = 0]
+\]
+(the least \( m \) such that \( g(\vec{n}, m) = 0 \), if such \( m \) exists; undefined otherwise) is partial recursive.
+</div>
+
+The \( \mu \)-operator introduces potential non-termination: if \( g(\vec{n}, m) \neq 0 \) for all \( m \), then \( f(\vec{n}) \) is undefined. This is the key distinction between primitive and general recursive functions.
+
+<div class="theorem">
+<strong>(Kleene's Normal Form Theorem)</strong> There is a primitive recursive predicate \( T(e, \vec{n}, s) \) (the <em>Kleene T-predicate</em>) and a primitive recursive function \( U(s) \) (the <em>result extraction function</em>) such that for every partial recursive function \( f : \mathbb{N}^k \to \mathbb{N} \):
+\[
+f(\vec{n}) = U(\mu s\, [T(e, \vec{n}, s)])
+\]
+for some fixed index \( e \in \mathbb{N} \). Here \( T(e, \vec{n}, s) \) means "s codes a halting computation of the e-th Turing machine on input \( \vec{n} \)."
+</div>
+
+The Normal Form Theorem is a fundamental uniformization result: every partial recursive function has a "standard" representation using a single application of \( \mu \) to a primitive recursive predicate. This allows the set of partial recursive functions to be indexed by natural numbers (the index \( e \) is an "program" or "Gödel number" for \( f \)).
+
+**Consequences:**
+- Every partial recursive function \( f \) has an index \( e \) with \( f = \phi_e \) (the \( e \)-th partial recursive function under the standard indexing).
+- The function \( (e, \vec{n}) \mapsto \phi_e(\vec{n}) \) is partial recursive (computable by the universal Turing machine).
+- There are only countably many partial recursive functions (indexed by \( \mathbb{N} \)).
+
+## C.3 The \( s\text{-}m\text{-}n \) Theorem (Parameter Theorem)
+
+<div class="theorem">
+<strong>(Kleene's \( s\text{-}m\text{-}n \) Theorem)</strong> For each \( m, n \geq 1 \), there is a primitive recursive function \( s^m_n : \mathbb{N}^{m+1} \to \mathbb{N} \) such that for all \( e, x_1, \ldots, x_m, y_1, \ldots, y_n \in \mathbb{N} \):
+\[
+\phi_{s^m_n(e, x_1, \ldots, x_m)}(y_1, \ldots, y_n) = \phi_e(x_1, \ldots, x_m, y_1, \ldots, y_n).
+\]
+</div>
+
+Informally: given a program \( e \) for an \( (m+n) \)-ary function, and given \( m \) fixed inputs \( x_1, \ldots, x_m \), the \( s\text{-}m\text{-}n \) theorem produces the index of an \( n \)-ary program that runs \( e \) with the first \( m \) inputs already "baked in." This is **partial function application** or **currying** — a fundamental operation in programming languages.
+
+**Example.** Fix \( e \) and \( x \). The function \( y \mapsto \phi_e(x, y) \) is a partial recursive function of \( y \) alone. By \( s\text{-}1\text{-}1 \), its index is \( s^1_1(e, x) \), computable from \( e \) and \( x \) by a primitive recursive procedure. This is the theoretical foundation for **closures** in functional programming.
+
+**Application to the Fixed-Point (Recursion) Theorem.** The \( s\text{-}m\text{-}n \) theorem implies the **Kleene Recursion Theorem**: for every total recursive function \( f \), there exists \( n \) with \( \phi_{f(n)} = \phi_n \). That is, every computable transformation of programs has a "fixed point" program. The Diagonal Lemma in logic is the syntactic analogue of this theorem.
+
+## C.4 Rice's Theorem
+
+One of the most powerful undecidability results is Rice's theorem, which says that no non-trivial behavioral property of programs is decidable.
+
+<div class="definition">
+A set \( A \subseteq \mathbb{N} \) is an <strong>index set</strong> if: whenever \( \phi_e = \phi_{e'} \) (i.e., programs \( e \) and \( e' \) compute the same function), we have \( e \in A \iff e' \in A \). Index sets describe properties of the <em>behavior</em> (input-output function) of programs, not of their syntactic code.
+</div>
+
+<div class="theorem">
+<strong>(Rice's Theorem, 1953)</strong> Let \( A \) be an index set. Then \( A \) is recursive if and only if \( A = \emptyset \) or \( A = \mathbb{N} \). In other words, every non-trivial index set is undecidable.
+</div>
+
+<div class="proof">
+Suppose \( A \) is a non-trivial index set, so there exist \( a \in A \) and \( b \notin A \). Let \( \phi_a \) be a program in \( A \) and \( \phi_b \notin A \). We reduce the Halting Problem to membership in \( A \).
+
+Given any program index \( e \) and input \( n \), define the function:
+\[
+f_{e,n}(x) = \begin{cases} \phi_a(x) & \text{if } \phi_e(n) \downarrow, \\ \text{undefined} & \text{otherwise.} \end{cases}
+\]
+This \( f_{e,n} \) is partial recursive: it runs \( \phi_e(n) \) and, if it halts, then outputs \( \phi_a(x) \). By the \( s\text{-}m\text{-}n \) theorem, the index \( g(e, n) \) of \( f_{e,n} \) is computable from \( e, n \).
+
+Now: if \( \phi_e(n) \downarrow \), then \( f_{e,n} = \phi_a \), so \( g(e,n) \in A \). If \( \phi_e(n) \uparrow \), then \( f_{e,n} \) is totally undefined (the zero function if we set \( b \) to index the empty function), so \( g(e,n) \in \overline{A} \) (assuming \( b \) indexes the everywhere-undefined function). Thus \( \phi_e(n) \downarrow \iff g(e,n) \in A \), giving a reduction from the Halting Problem to \( A \). If \( A \) were recursive, the Halting Problem would be recursive — contradiction. Hence \( A \) is not recursive.
+</div>
+
+<div class="remark">
+Rice's theorem has immediate practical consequences: no program can decide, for an arbitrary input program, whether that program:
+<ul>
+  <li>halts on all inputs (total),</li>
+  <li>outputs an even number on some input,</li>
+  <li>computes the constant zero function,</li>
+  <li>is equivalent to another given program.</li>
+</ul>
+All such properties are undecidable. This is the theoretical explanation for why general program verification and static analysis are fundamentally limited — they cannot be both sound, complete, and terminating.
+</div>
+
+---
+
+# Appendix D: Background on Orders and Algebra
+
+## D.1 Well-Orderings and Zorn's Lemma
+
+*(See Appendix A.1 above.)*
+
+---
+
+# Problem Set: PMATH 432 Comprehensive Exercises
+
+The following twenty problems are organized into five parts, covering the full scope of the course. Problems are designed to build understanding progressively within each part.
+
+---
+
+## Part A: Syntax — Parsing and Classifying Formulas
+
+**A1.** Consider the signature \( \sigma = (\{f, c\}, \{R\}, \mathrm{ar}) \) where \( \mathrm{ar}(f) = 2 \), \( \mathrm{ar}(c) = 0 \), \( \mathrm{ar}(R) = 2 \). Determine whether each of the following is a term, an atomic formula, a formula but not atomic, or not a well-formed expression. Justify each answer by reference to the inductive definition.
+<ol type="a">
+  <li>\( f(c, x) \)</li>
+  <li>\( R(f(c,c), x) \)</li>
+  <li>\( \forall x\, R(x, f(x,c)) \)</li>
+  <li>\( R(x) \)</li>
+  <li>\( f(R(x,y), c) \)</li>
+</ol>
+
+**A2.** For each formula below, compute \( \mathrm{free}(\varphi) \) (the set of free variables) using the formal inductive definition. Then classify the formula as a sentence or non-sentence, and if non-sentence, state what mathematical claim it makes about the free variables.
+<ol type="a">
+  <li>\( \varphi_1 = \exists x\, (x < y \land \forall z\, (z < x \to z < y)) \) (in the signature of linear orders).</li>
+  <li>\( \varphi_2 = \forall x\, \forall y\, (x \cdot y \doteq y \cdot x) \) (in the signature of rings).</li>
+  <li>\( \varphi_3 = \exists z\, (x \cdot z \doteq y) \) (in the signature of groups).</li>
+  <li>\( \varphi_4 = \forall x\, (P(x) \to \exists y\, (Q(x,y) \land \lnot Q(y,x))) \) (in a relational signature).</li>
+</ol>
+
+**A3.** Let \( \sigma_{\mathrm{grp}} = (\{\cdot, e, {}^{-1}\}, \emptyset) \) be the group signature. Write the following group-theoretic statements as first-order \( \sigma_{\mathrm{grp}} \)-sentences:
+<ol type="a">
+  <li>The group is abelian.</li>
+  <li>Every element has order dividing 6 (i.e., \( x^6 = e \) for all \( x \)).</li>
+  <li>There exists an element of order exactly 2.</li>
+  <li>The group has no element of finite order except the identity (a torsion-free group).</li>
+</ol>
+For (d), explain why you need infinitely many sentences, and argue that no single first-order sentence can express "torsion-free."
+
+**A4.** Suppose \( \varphi(x, y) \) is a formula with exactly \( \mathrm{free}(\varphi) = \{x, y\} \). Define:
+\[
+\psi = \forall x\, \exists y\, \varphi(x,y).
+\]
+<ol type="a">
+  <li>Compute \( \mathrm{free}(\psi) \).</li>
+  <li>Suppose we attempt the substitution \( \psi[y/x] \) (replacing \( x \) by \( y \)). Explain what variable capture might occur and how to avoid it.</li>
+  <li>State the formal definition of "\( t \) is free for \( x \) in \( \varphi \)" and check whether \( y \) is free for \( x \) in \( \psi \).</li>
+  <li>Perform the substitution \( \varphi(x,y)[z/x] \) (replacing \( x \) by the fresh variable \( z \)) and state the result.</li>
+</ol>
+
+---
+
+## Part B: Semantics — Computing Truth in Specific Structures
+
+**B1.** Let \( \mathfrak{A} = (\{0,1,2\}, <^{\mathfrak{A}}) \) be the structure with universe \( \{0,1,2\} \) and \( <^{\mathfrak{A}} = \{(0,1),(0,2),(1,2)\} \) (the standard ordering on \( \{0,1,2\} \)). Evaluate each sentence as true or false in \( \mathfrak{A} \), writing out the semantic computation step by step.
+<ol type="a">
+  <li>\( \forall x\, \exists y\, (x < y) \).</li>
+  <li>\( \exists x\, \forall y\, (y < x \lor y \doteq x) \).</li>
+  <li>\( \forall x\, \forall y\, (x < y \to \exists z\, (x < z \land z < y)) \).</li>
+  <li>\( \forall x\, \forall y\, (x < y \lor y < x \lor x \doteq y) \).</li>
+</ol>
+
+**B2.** Let \( \mathfrak{Z} = (\mathbb{Z}, 0, S, +, \cdot) \) where \( S(n) = n+1 \) (the integers as a model of the arithmetic signature \( \{0, S, +, \cdot\} \)). Note that \( \mathfrak{Z} \) is NOT a model of PA (the induction axiom fails). For each sentence:
+<ol type="a">
+  <li>\( \forall x\, \exists y\, (y + y \doteq x) \) — does this hold in \( \mathfrak{Z} \)? Does it hold in \( \mathfrak{N} \)?</li>
+  <li>\( \exists x\, (x + x \doteq S(0)) \) — in \( \mathfrak{Z} \)? In \( \mathfrak{N} \)?</li>
+  <li>\( \forall x\, \exists y\, (x + y \doteq 0) \) — in \( \mathfrak{Z} \)? In \( \mathfrak{N} \)?</li>
+</ol>
+Use your answers to show that \( \mathfrak{Z} \not\equiv \mathfrak{N} \) (they are not elementarily equivalent).
+
+**B3.** Let \( T = \mathrm{DLO} \) (the theory of dense linear orders without endpoints). Determine whether each of the following is a consequence of \( T \) (true in all models of \( T \)), consistent with \( T \) (true in some model), or inconsistent with \( T \) (false in all models).
+<ol type="a">
+  <li>\( \exists x\, \exists y\, (x < y \land \lnot \exists z\, (x < z \land z < y)) \).</li>
+  <li>\( \forall x\, \forall y\, (x < y \to \exists z\, (x < z \land z < y)) \).</li>
+  <li>\( \forall x\, \exists y\, (y < x) \land \forall x\, \exists y\, (x < y) \).</li>
+  <li>\( \exists x\, \forall y\, (x < y) \) (there is a minimum element).</li>
+</ol>
+
+**B4.** Let \( \mathrm{ACF}_0 \) be the theory of algebraically closed fields of characteristic 0. For each sentence, determine whether it is a consequence of \( \mathrm{ACF}_0 \) (provable from \( \mathrm{ACF}_0 \)), its negation is a consequence, or it is independent (neither provable nor refutable). Justify using the completeness of \( \mathrm{ACF}_0 \) and properties of \( \mathbb{C} \).
+<ol type="a">
+  <li>\( \forall x\, \exists y\, (y \cdot y \doteq x) \) (every element has a square root).</li>
+  <li>\( \forall x\, (x \cdot x \doteq x \to x \doteq 0 \lor x \doteq 1) \).</li>
+  <li>\( \exists x\, (x \cdot x \doteq -1) \) (where \( -1 \) abbreviates \( 0 - 1 \)).</li>
+  <li>The field has exactly 4 elements (a sentence asserting \( |F| = 4 \)).</li>
+</ol>
+
+---
+
+## Part C: Proofs — Derivations in the Proof System
+
+**C1.** Using the Hilbert calculus (with the deduction theorem available as a metatheorem), give a derivation (or derivation sketch with all key steps justified) of each of the following:
+<ol type="a">
+  <li>\( \vdash \varphi \to \varphi \) (reflexivity of implication).</li>
+  <li>\( \varphi \to \psi, \psi \to \chi \vdash \varphi \to \chi \) (hypothetical syllogism).</li>
+  <li>\( \vdash \lnot \lnot \varphi \to \varphi \) (double negation elimination — use the contrapositive axiom).</li>
+  <li>\( \vdash (\varphi \to \psi) \to (\lnot \psi \to \lnot \varphi) \) (contrapositive).</li>
+</ol>
+
+**C2.** Using the quantifier axioms and the deduction theorem, derive:
+<ol type="a">
+  <li>\( \forall x\, \forall y\, \varphi(x,y) \vdash \forall y\, \forall x\, \varphi(x,y) \) (swapping the order of universal quantifiers).</li>
+  <li>\( \exists x\, \varphi(x) \vdash \exists x\, (\varphi(x) \lor \psi(x)) \) for any formula \( \psi \).</li>
+  <li>Explain why \( \exists x\, \varphi(x) \lor \exists x\, \psi(x) \vdash \exists x\, (\varphi(x) \lor \psi(x)) \), and whether the converse holds.</li>
+</ol>
+
+**C3.** Let \( T \) be a theory and \( \varphi, \psi \) sentences. Prove each claim from the semantic and syntactic definitions:
+<ol type="a">
+  <li>If \( T \vdash \varphi \) and \( T \vdash \varphi \to \psi \), then \( T \vdash \psi \). (Modus Ponens is admissible from premises.)</li>
+  <li>If \( T \cup \{\varphi\} \vdash \bot \), then \( T \vdash \lnot \varphi \). (Proof by contradiction.)</li>
+  <li>If \( T \vdash \varphi \) and \( T' \supseteq T \), then \( T' \vdash \varphi \). (Monotonicity of provability.)</li>
+  <li>\( T \models \varphi \iff T \cup \{\lnot \varphi\} \) is unsatisfiable. (The semantic version of "proof by contradiction.")</li>
+</ol>
+
+**C4.** The **Deduction Theorem** states: \( \Phi \cup \{\psi\} \vdash \varphi \iff \Phi \vdash \psi \to \varphi \) (under the appropriate conditions on generalization). Use the Deduction Theorem to:
+<ol type="a">
+  <li>Show that \( \varphi \to \psi, \lnot \varphi \to \psi \vdash \psi \) (proof by cases).</li>
+  <li>Show that if \( \varphi \vdash \psi \) and \( \varphi \vdash \lnot \psi \), then \( \vdash \lnot \varphi \).</li>
+  <li>State carefully the condition on the generalization rule that must hold for the Deduction Theorem to apply. Give an example where the theorem fails if this condition is violated.</li>
+</ol>
+
+---
+
+## Part D: Completeness and Compactness — Applications
+
+**D1.** Use the Compactness Theorem to prove each of the following:
+<ol type="a">
+  <li>If \( \Phi \models \varphi \), then some finite \( \Phi_0 \subseteq \Phi \) satisfies \( \Phi_0 \models \varphi \). (Compactness for entailment.)</li>
+  <li>If every finite subgraph of an infinite graph \( G \) is 3-colorable, then \( G \) is 3-colorable. (Graph coloring, see Worked Example 2.3.)</li>
+  <li>If a sentence \( \varphi \) is true in all finite structures of signature \( \sigma \), is \( \varphi \) necessarily true in all infinite structures? Prove or give a counterexample.</li>
+</ol>
+
+**D2.** Let \( T \) be the theory of torsion-free abelian groups (groups satisfying \( \forall x\, (x^n \neq e) \) for all \( n \geq 1 \), written as an infinite set of sentences). Use compactness to show:
+<ol type="a">
+  <li>\( T \) has no finite models.</li>
+  <li>There is no single first-order sentence \( \varphi \) such that a group satisfies \( \varphi \) iff it is torsion-free.</li>
+  <li>Every model of \( T \) contains an isomorphic copy of \( \mathbb{Z} \).</li>
+</ol>
+
+**D3.** Recall that the Löwenheim–Skolem theorems are consequences of compactness.
+<ol type="a">
+  <li>Using compactness directly (not the Downward Löwenheim–Skolem theorem), show that if a theory \( T \) has an infinite model, it has a model of cardinality at least \( \kappa \) for every infinite cardinal \( \kappa \).</li>
+  <li>The theory \( \mathrm{PA} \) (Peano arithmetic) has its intended model \( \mathfrak{N} = (\mathbb{N}, 0, S, +, \cdot) \). Using compactness, show that PA has a model containing an element \( c \) greater than \( \overline{n} = S^n(0) \) for every standard natural number \( n \). Such an element is called <em>non-standard</em>.</li>
+  <li>Show that any non-standard model of PA also contains non-standard elements below any given non-standard element (i.e., non-standard numbers are "dense" in a suitable sense).</li>
+</ol>
+
+**D4.** The **Transfer Principle** in non-standard analysis says: a first-order sentence is true in \( \mathbb{R} \) iff it is true in \( {}^*\!\mathbb{R} \). Use this to give a non-standard proof sketch of:
+<ol type="a">
+  <li>The intermediate value theorem: if \( f : [a,b] \to \mathbb{R} \) is continuous and \( f(a) < 0 < f(b) \), then \( f(c) = 0 \) for some \( c \in (a,b) \). (Sketch: use infinitesimals to argue about the "first sign change.")</li>
+  <li>Explain what "continuity" means in the language of non-standard analysis (using infinitesimals) and why this formulation is equivalent to the standard \( \varepsilon\text{-}\delta \) definition for first-order expressible properties.</li>
+  <li>What is a fundamental obstacle to using non-standard analysis to prove results that are not first-order expressible? Give an example.</li>
+</ol>
+
+---
+
+## Part E: Computability and Gödel — Challenge Problems
+
+**E1.** Let \( \mathrm{Prov}_T(x) \) be the provability predicate for a recursively axiomatizable theory \( T \) extending PA. The **Löb conditions** are:
+- (D1) If \( T \vdash \varphi \), then \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \).
+- (D2) \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \to \psi \urcorner) \land \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \to \mathrm{Prov}_T(\ulcorner \psi \urcorner) \).
+- (D3) \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \to \mathrm{Prov}_T(\ulcorner \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \urcorner) \).
+<ol type="a">
+  <li>Show that (D1) implies: if \( T \vdash \varphi \land \psi \), then \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \land \mathrm{Prov}_T(\ulcorner \psi \urcorner) \).</li>
+  <li>Using the Löb conditions and the Diagonal Lemma, give a complete proof of Löb's Theorem: if \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \to \varphi \), then \( T \vdash \varphi \).</li>
+  <li>Deduce the Second Incompleteness Theorem from Löb's Theorem by showing \( T \vdash \mathrm{Con}(T) \to G_T \) where \( G_T \) is the Gödel sentence.</li>
+</ol>
+
+**E2.** The **Arithmetical Hierarchy** classifies sets by their logical complexity.
+<ol type="a">
+  <li>Show that the set \( \mathrm{Halt} = \{(e, n) : \phi_e(n) \downarrow\} \) is \( \Sigma^0_1 \) (computably enumerable) but not \( \Pi^0_1 \) (not co-computably enumerable). Use this to give a direct proof that \( \mathrm{Halt} \) is not decidable.</li>
+  <li>Show that the set of indices of total functions, \( \mathrm{Tot} = \{e : \phi_e \text{ is a total function}\} \), is \( \Pi^0_2 \) (of the form \( \forall n\, \exists s\, R(e, n, s) \) for a decidable \( R \)) but not \( \Sigma^0_2 \).</li>
+  <li>State Rice's Theorem and use it to prove that \( \mathrm{Tot} \) is not decidable (without computing its arithmetical complexity).</li>
+</ol>
+
+**E3.** This problem concerns the relationship between syntax (provability) and semantics (truth).
+<ol type="a">
+  <li>The Completeness Theorem says \( T \models \varphi \iff T \vdash \varphi \). The First Incompleteness Theorem says: for consistent, recursively axiomatizable \( T \supseteq Q \), there exists \( \varphi \) with \( \mathbb{N} \models \varphi \) but \( T \not\vdash \varphi \). Reconcile these two results — are they contradictory?</li>
+  <li>Exhibit a sentence \( \varphi \) such that \( \mathrm{PA} \not\vdash \varphi \) and \( \mathrm{PA} \not\vdash \lnot \varphi \), yet \( \varphi \) is true in \( \mathbb{N} \). (The Gödel sentence works — verify that \( G \) is true in \( \mathbb{N} \) by the argument in Section 5.4.2.)</li>
+  <li>A non-standard model \( \mathfrak{M} \) of PA (i.e., \( \mathfrak{M} \models \mathrm{PA} \) but \( \mathfrak{M} \not\cong \mathfrak{N} \)) satisfies all PA-theorems but may fail true arithmetic sentences. Explain why \( \mathfrak{M} \models \lnot G_{\mathrm{PA}} \) for a non-standard \( \mathfrak{M} \) that happens to be a model of \( \mathrm{PA} + \lnot G_{\mathrm{PA}} \) (the existence of which follows from Gödel's theorems).</li>
+</ol>
+
+**E4.** This problem concerns Tarski's undefinability theorem and its relationship to the Liar Paradox.
+<ol type="a">
+  <li>State Tarski's Undefinability Theorem precisely and give its proof via the Diagonal Lemma.</li>
+  <li>The **Liar sentence** in natural language is "This sentence is false." Explain how Tarski's theorem is the formal mathematical version of this paradox, and why the resolution is not a contradiction in mathematics but rather a theorem about the limits of definability.</li>
+  <li>Is there a formula \( \mathrm{True}_{\mathrm{prop}}(x) \) in propositional logic that defines truth for propositional formulas? Explain why this case is different from the first-order arithmetic case, using the fact that propositional tautologies are decidable.</li>
+  <li>The **T-schema** (Tarski's truth condition) says: \( \ulcorner \varphi \urcorner \) is true iff \( \varphi \). Explain why adopting the T-schema for all \( \varphi \) in the same language leads to inconsistency (the Liar paradox), and what Tarski's hierarchical solution is.</li>
+</ol>
+
+---
+
+*End of Problem Set.*
+
+---
+
+# Appendix E: Quick Reference
+
+## B.1 Key Definitions at a Glance
+
+| Term | Definition |
+|---|---|
+| \( \sigma \)-structure | Universe + interpretations of all symbols |
+| \( \mathfrak{A} \models \varphi \) | \( \varphi \) is true in \( \mathfrak{A} \) (for sentences) |
+| \( T \models \varphi \) | \( \varphi \) is true in all models of \( T \) |
+| \( T \vdash \varphi \) | \( \varphi \) is derivable from \( T \) |
+| Consistent | \( T \not\vdash \bot \) |
+| Complete (theory) | For all \( \varphi \): \( T \vdash \varphi \) or \( T \vdash \lnot\varphi \) |
+| Elementary substructure | \( \mathfrak{A} \preccurlyeq \mathfrak{B} \): same truth for all formulas |
+| Compactness | \( T \) satisfiable iff every finite subset satisfiable |
+| \( \kappa \)-categorical | Unique model of size \( \kappa \) (up to isomorphism) |
+| Type \( p(\vec{x}) \) | Maximal consistent set of formulas over a base |
+| Ordinal | Transitive set well-ordered by \( \in \) |
+| Cardinal | Ordinal not in bijection with any smaller ordinal |
+| Primitive recursive | Built from \( Z, S, \pi^k_i \) by composition and primitive recursion |
+| Partial recursive | Primitive recursive + \( \mu \)-operator |
+| r.e. (c.e.) | Domain of a partial recursive function |
+| Index set | Set of program indices closed under extensional equality |
+
+## B.2 Standard Theories and Their Properties
+
+| Theory | Language | Complete? | Cat.? | QE? | Stable? |
+|---|---|---|---|---|---|
+| DLO | \( < \) | Yes | \( \aleph_0 \) only | Yes | No (unstable) |
+| ACF\(_0\) | \( +,\cdot,0,1 \) | Yes | All uncountable | Yes | Yes (\( \omega \)-stable) |
+| ACF\(_p\) | \( +,\cdot,0,1 \) | Yes | All uncountable | Yes | Yes (\( \omega \)-stable) |
+| RCF | \( +,\cdot,0,1,< \) | Yes | No (many sizes) | Yes | No |
+| PA | \( 0,S,+,\cdot \) | No | No | No | N/A |
+| ZFC | \( \in \) | No | No | No | N/A |
+
+## B.3 The Gödel Sentences — Summary
+
+Let \( T \) be a consistent recursively axiomatizable extension of \( Q \).
+
+- **\( G_T \)**: the Gödel sentence, with \( T \vdash G_T \leftrightarrow \lnot \mathrm{Prov}_T(\ulcorner G_T \urcorner) \).
+  - \( T \not\vdash G_T \) and \( T \not\vdash \lnot G_T \) (First Incompleteness).
+  - \( \mathbb{N} \models G_T \) (the standard model sees \( G_T \) as true).
+
+- **\( \mathrm{Con}(T) = \lnot \mathrm{Prov}_T(\ulcorner \bot \urcorner) \)**: consistency statement.
+  - \( T \not\vdash \mathrm{Con}(T) \) (Second Incompleteness).
+  - \( T + \mathrm{Con}(T) \) is a strictly stronger consistent theory.
+
+- **Relationship**: \( T \vdash G_T \leftrightarrow \mathrm{Con}(T) \) (the Gödel sentence is equivalent to consistency over \( T \), essentially).
+
+---
+
+# Appendix F: Supplementary Enrichment
+
+This appendix collects enrichment material filling gaps identified after the main chapters were written. It is self-contained and cross-references the relevant sections above.
+
+---
+
+## F.1 Parse Tree Example: A More Complex Formula
+
+The worked example in Section 1.2.3 parsed the relatively simple sentence \( \forall x\, \exists y\, (x < y) \). Here we work through a more challenging formula that arises naturally in the study of ordered fields and dense orders.
+
+Consider the formula
+\[
+\varphi = \forall x\, \exists y\, (x < y \,\land\, y < x + 1)
+\]
+in the signature \( \sigma_{\mathrm{of}} = (\{+, \cdot, -, 0, 1\}, \{<\}) \) of ordered fields, where \( x + 1 \) abbreviates \( +(x, 1) \) and \( x < y \) abbreviates the relation \( <(x, y) \). This sentence expresses "between every element and its successor there exists another element" — the characteristic property of dense orders.
+
+<div class="example">
+<strong>Worked Example F.1 (Full parse tree for \( \forall x\, \exists y\, (x < y \land y < x+1) \)).</strong>
+
+<strong>Step 1: Identify the terms.</strong> The terms appearing in \( \varphi \) are:
+<ul>
+  <li>\( x \) — a variable (term by clause 1 of the term definition).</li>
+  <li>\( y \) — a variable.</li>
+  <li>\( 1 \) — a constant symbol (arity-0 function symbol, term by clause 2).</li>
+  <li>\( x + 1 \) — formed by applying the binary function symbol \( + \) to terms \( x \) and \( 1 \); a term by clause 3.</li>
+</ul>
+
+<strong>Step 2: Identify the atomic subformulas.</strong>
+<ul>
+  <li>\( x < y \) — an atomic formula \( R(t_1, t_2) \) with \( R = {<} \), \( t_1 = x \), \( t_2 = y \).</li>
+  <li>\( y < x + 1 \) — an atomic formula with \( t_1 = y \), \( t_2 = x + 1 \).</li>
+</ul>
+
+<strong>Step 3: Build the parse tree bottom-up.</strong>
+
+<pre>
+            forall x
+               |
+            exists y
+               |
+            (wedge)
+            /      \
+         x < y    y < (x+1)
+                      |
+               R(&lt;, y, +(x,1))
+                          |
+                       +(x, 1)
+                        /    \
+                       x      1
+</pre>
+
+Reading the tree: the entire formula is \( \forall x \) applied to \( \exists y \) applied to a conjunction. The left conjunct \( x < y \) is atomic. The right conjunct \( y < x+1 \) is also atomic, but its second argument \( x+1 \) is a compound term built from the binary function \( + \), the variable \( x \), and the constant \( 1 \).
+
+<strong>Step 4: List all subformulas</strong> (every syntactic subpart constituting a formula):
+<ol>
+  <li>\( x < y \) — atomic formula.</li>
+  <li>\( y < x + 1 \) — atomic formula.</li>
+  <li>\( (x < y) \,\land\, (y < x+1) \) — conjunction of the two atomic formulas.</li>
+  <li>\( \exists y\, (x < y \,\land\, y < x+1) \) — existential quantification; \( y \) is bound, \( x \) remains free.</li>
+  <li>\( \forall x\, \exists y\, (x < y \,\land\, y < x+1) \) — the full sentence; both \( x \) and \( y \) are bound.</li>
+</ol>
+
+<strong>Step 5: Compute free variables formally.</strong>
+\[
+\mathrm{free}(x < y) = \{x, y\}.
+\]
+\[
+\mathrm{free}(y < x+1) = \{y, x\} = \{x, y\}.
+\]
+(The term \( x+1 \) contains the variable \( x \); the constant \( 1 \) introduces no variables.)
+\[
+\mathrm{free}((x < y) \,\land\, (y < x+1)) = \{x,y\} \cup \{x,y\} = \{x,y\}.
+\]
+\[
+\mathrm{free}(\exists y\,(x < y \,\land\, y < x+1)) = \{x,y\} \setminus \{y\} = \{x\}.
+\]
+\[
+\mathrm{free}(\forall x\, \exists y\,(x < y \,\land\, y < x+1)) = \{x\} \setminus \{x\} = \emptyset.
+\]
+Therefore \( \varphi \) is a <strong>sentence</strong> (no free variables). Both \( x \) and \( y \) are bound.
+
+<strong>Step 6: Evaluate in structures.</strong>
+
+In \( \mathfrak{Q} = (\mathbb{Q}, <, +, \cdot, 0, 1) \): for any rational \( x \), take \( y = x + \tfrac{1}{2} \). Then \( x < x + \tfrac{1}{2} \) and \( x + \tfrac{1}{2} < x + 1 \). So \( \mathfrak{Q} \models \varphi \).
+
+In \( \mathfrak{Z} = (\mathbb{Z}, <, +, \cdot, 0, 1) \): take \( x = 0 \). We need \( y \in \mathbb{Z} \) with \( 0 < y < 1 \). No integer satisfies this. So \( \mathfrak{Z} \not\models \varphi \).
+
+Therefore \( \mathfrak{Q} \not\equiv \mathfrak{Z} \) — they are distinguished by the sentence \( \varphi \).
+
+<strong>Bridge remark.</strong> The sentence \( \varphi \) is precisely the density axiom of DLO (in the language of ordered fields, it asserts that between \( x \) and \( x+1 \) there is always a \( y \)). This parse-tree analysis grounds the completeness of DLO (proved abstractly in Chapter 3 via Vaught's test) in concrete syntactic computation: completeness of DLO ultimately rests on the fact that density is expressible as a first-order sentence.
+</div>
+
+---
+
+## F.2 The Lowenheim-Skolem Paradox — Extended Discussion
+
+Section 3.2 stated the Skolem paradox as a brief corollary. The phenomenon is philosophically important and deserves fuller treatment, as it is one of the most striking consequences of the Lowenheim-Skolem theorems.
+
+The **downward Lowenheim-Skolem theorem** applied to ZFC says: if ZFC is consistent, it has a countable model \( \mathfrak{M} = (M, E) \). There exists a countable set \( M \) and a binary relation \( E \subseteq M \times M \) such that \( (M, E) \models \mathrm{ZFC} \). Since ZFC proves "there exist uncountable sets," we have \( (M, E) \models \exists x\, \lnot \exists f\, (f \text{ is a bijection from } \omega \text{ to } x) \). But \( M \) is countable. This is Skolem's Paradox.
+
+<div class="remark">
+<strong>Resolution of Skolem's Paradox.</strong> The paradox dissolves by distinguishing <em>internal</em> and <em>external</em> properties.
+
+The statement "\( \omega_1 \) is uncountable" means, inside the model \( (M, E) \): there is no <em>element of \( M \)</em> that the model sees as a bijection from \( \omega^M \) to \( \omega_1^M \). The existential quantifier \( \exists f \) ranges over \( M \) only. If a bijection \( f : \omega^M \to \omega_1^M \) exists somewhere — as a set-theoretic function — but \( f \notin M \), then the model simply cannot see it.
+
+From <em>outside</em> (in the metatheory): \( M \) is a countable set. The "extension" of \( \omega_1^M \) in the model is the set \( \{a \in M : (a, \omega_1^M) \in E\} \), which is a subset of the countable set \( M \) and hence countable from outside. A bijection \( \mathbb{N} \to \{a \in M : (a, \omega_1^M) \in E\} \) exists in the metatheory — but it is a function in the metatheory, not an element of \( M \), so the model cannot use it to conclude \( \omega_1^M \) is countable.
+
+<strong>Formal statement.</strong> A set \( x \in M \) is:
+<ul>
+  <li><em>Internally countable</em> if \( (M, E) \models \exists f\, (\text{$f$ is a bijection from $\omega$ to $x$}) \).</li>
+  <li><em>Externally countable</em> if there is a bijection (in the real world) from \( \omega \) to \( \{a \in M : (a, x) \in E\} \).</li>
+</ul>
+The element \( \omega_1^M \in M \) is internally uncountable (the model proves so, since \( (M,E) \models \mathrm{ZFC} \) and ZFC proves \( \omega_1 \) is uncountable) but externally countable (a countable set \( M \) has all subsets countable from outside).
+
+<strong>Conclusion.</strong> First-order logic cannot characterize cardinality in an absolute sense. "Uncountable" in the model means "no internal bijection exists," and the model's internal world may lack many bijections that exist externally. This is a fundamental limitation of first-order expressibility, not a mathematical paradox.
+
+<strong>Bridge remark.</strong> The Löwenheim–Skolem paradox is directly related to the independence of CH. In Gödel's \( L \), \( 2^{\aleph_0} = \aleph_1 \); in Cohen's forcing extensions, \( 2^{\aleph_0} \geq \aleph_2 \). Both models satisfy all ZFC axioms but disagree on cardinal arithmetic because the bijections certifying various equalities are present in one model and absent in another. The mechanism is the same as Skolem's paradox: different models have different sets of functions available internally.
+</div>
+
+---
+
+## F.3 Turing Machines — Formal Definition and Worked Example
+
+Chapter 5 used Turing machines informally. Here we give the formal definition and trace through the canonical worked example of unary incrementing.
+
+### F.3.1 Formal Definition
+
+<div class="definition">
+A <strong>Turing machine</strong> is a tuple \( \mathcal{M} = (Q, \Gamma, \Sigma, \delta, q_0, q_{\mathrm{acc}}, q_{\mathrm{rej}}) \) where:
+<ul>
+  <li>\( Q \) is a finite set of <strong>states</strong>.</li>
+  <li>\( q_0 \in Q \) is the <strong>start state</strong>.</li>
+  <li>\( q_{\mathrm{acc}}, q_{\mathrm{rej}} \in Q \) are distinct <strong>halting states</strong> (accept and reject).</li>
+  <li>\( \Gamma \) is a finite <strong>tape alphabet</strong> containing a designated <strong>blank symbol</strong> \( \sqcup \).</li>
+  <li>\( \Sigma \subseteq \Gamma \setminus \{\sqcup\} \) is the <strong>input alphabet</strong>.</li>
+  <li>\( \delta : (Q \setminus \{q_{\mathrm{acc}}, q_{\mathrm{rej}}\}) \times \Gamma \to Q \times \Gamma \times \{L, R\} \) is the <strong>transition function</strong>. On state \( q \) reading symbol \( a \), the machine: (i) transitions to state \( \delta(q,a)_1 \); (ii) overwrites the current cell with \( \delta(q,a)_2 \); (iii) moves the head left (\( L \)) or right (\( R \)) per \( \delta(q,a)_3 \).</li>
+</ul>
+A <strong>configuration</strong> is a triple \( (q, w, i) \) where \( q \in Q \), \( w : \mathbb{Z} \to \Gamma \) is the tape content (all but finitely many cells blank), and \( i \in \mathbb{Z} \) is the head position. Computation is a sequence of configurations generated by applying \( \delta \), halting when \( q_{\mathrm{acc}} \) or \( q_{\mathrm{rej}} \) is reached.
+</div>
+
+For computing \( \mathbb{N} \to \mathbb{N} \), we use **unary encoding**: \( n \) is encoded as \( 1^n \) (a run of \( n \) ones). The tape alphabet is \( \{1, \sqcup\} \).
+
+### F.3.2 Worked Example: Unary Increment (\( n \mapsto n+1 \))
+
+<div class="example">
+<strong>Worked Example F.2 (Turing machine for \( n \mapsto n+1 \)).</strong>
+
+<strong>Design:</strong> Scan right past all input ones (without changing them) until reaching the first blank, then write \( 1 \) there and accept.
+
+<strong>States:</strong> \( Q = \{q_0, q_{\mathrm{acc}}, q_{\mathrm{rej}}\} \).
+<strong>Tape alphabet:</strong> \( \Gamma = \{1, \sqcup\} \), \( \Sigma = \{1\} \).
+
+<strong>Transition table:</strong>
+
+| State | Read | Write | Move | Next state |
+|---|---|---|---|---|
+| \( q_0 \) | \( 1 \) | \( 1 \) | R | \( q_0 \) |
+| \( q_0 \) | \( \sqcup \) | \( 1 \) | R | \( q_{\mathrm{acc}} \) |
+
+<strong>Trace on input \( n = 3 \) (tape: \( 1\;1\;1\;\sqcup\;\sqcup\;\ldots \), head at cell 0):</strong>
+
+<pre>
+Step 0: q₀ at cell 0. Read 1 → write 1, R → q₀. Tape: 1 1 1 □ □ …
+Step 1: q₀ at cell 1. Read 1 → write 1, R → q₀. Tape: 1 1 1 □ □ …
+Step 2: q₀ at cell 2. Read 1 → write 1, R → q₀. Tape: 1 1 1 □ □ …
+Step 3: q₀ at cell 3. Read □ → write 1, R → q_acc. Tape: 1 1 1 1 □ …  [ACCEPT]
+</pre>
+
+Output tape: \( 1^4 \) — the unary encoding of \( n+1 = 4 \). Correct.
+
+<strong>Loop invariant.</strong> At the start of step \( k \) (\( 0 \leq k \leq n \)): state is \( q_0 \), head is at cell \( k \), tape unchanged. At step \( n \): read \( \sqcup \), write \( 1 \), accept. Output is \( 1^{n+1} \).
+
+<strong>Time complexity:</strong> \( n + 1 \) steps, optimal (the machine must read all \( n \) input symbols at least once).
+
+<strong>Bridge remark.</strong> This machine is typical of Turing machine constructions: simple machines require few states; complex machines (e.g., computing \( n \mapsto n^2 \) in unary) require more states and a more elaborate transition function. The formal definition above makes rigorous the informal statement "there is an algorithm for \( f \)" — it means precisely that a Turing machine exists whose transition function implements \( f \).
+</div>
+
+### F.3.3 Church-Turing Equivalence
+
+<div class="theorem">
+<strong>(Church-Turing Equivalence)</strong> A function \( f : \mathbb{N}^k \to \mathbb{N} \) is partial recursive (Appendix C.2) if and only if it is computable by a Turing machine.
+</div>
+
+This equivalence (proved by Kleene, Turing, and Church in 1935–1936) justifies treating the two notions interchangeably. The **Church-Turing Thesis** extends this: every effectively computable function (in the informal sense) is Turing-computable. This thesis is a philosophical principle, not a theorem, but is universally accepted.
+
+The thesis plays a crucial role in mathematical logic: the provability predicate \( \mathrm{Prov}_T(x) \) (Chapter 5) is representable in PA because "checking whether a finite sequence of formulas is a valid proof" is effectively computable — by the Church-Turing thesis it is Turing-computable, hence partial recursive, hence representable.
+
+---
+
+## F.4 Historical Note: Godel in 1930-1931
+
+Kurt Godel was born on April 28, 1906, in Brunn (now Brno, Czech Republic). He completed his doctoral dissertation at the University of Vienna in 1929 at age 23, proving the Completeness Theorem. The following year, at age 24, he announced and published the incompleteness theorems.
+
+He made the announcement at the **Second Conference on the Epistemology of the Exact Sciences** in Konigsberg, September 1930. Hilbert gave a triumphant address asserting the achievability of mathematical completeness; shortly after, Godel quietly stated he had found a true arithmetic sentence unprovable in Principia Mathematica. John von Neumann, present at the conference, immediately grasped the result's significance and within weeks independently derived the Second Incompleteness Theorem — only to learn that Godel had already done so.
+
+The full paper, "Uber formal unentscheidbare Satze der Principia Mathematica und verwandter Systeme I," was published in the *Monatshefte fur Mathematik und Physik* in 1931. It is widely regarded as the most important single paper in mathematical logic.
+
+<div class="remark">
+<strong>What the theorems do and do not imply.</strong>
+
+<strong>What they do imply:</strong>
+<ol>
+  <li>No consistent, recursively axiomatizable extension of \( Q \) is complete. There will always be true arithmetic sentences it cannot decide.</li>
+  <li>No such theory can prove its own consistency from within.</li>
+  <li>The set \( \mathrm{Th}(\mathbb{N}) \) of all first-order arithmetic truths is not recursively enumerable — it transcends every single formal system.</li>
+</ol>
+
+<strong>What they do not imply:</strong>
+<ul>
+  <li>They do not establish a mathematical inconsistency or contradiction.</li>
+  <li>They do not show that mathematical truth is unknowable. Additional axioms can always be added (\( G \) becomes provable in \( T + G \)), and the extended system has its own Godel sentence.</li>
+  <li>They do not imply that human mathematical reasoning transcends computation. The Lucas-Penrose argument for this conclusion is not accepted by most logicians.</li>
+</ul>
+
+The incompleteness theorems did not end Hilbert's program — they refined it. Gentzen's 1936 consistency proof of PA (using transfinite induction up to \( \varepsilon_0 \)) showed that a modest extension of finitistic methods is sufficient. The program of **reverse mathematics** (Friedman, Simpson) systematically determines which axioms are needed to prove which theorems — a far more refined foundational investigation than anything Hilbert originally envisioned.
+</div>
+
+---
+
+*End of Appendix F.*

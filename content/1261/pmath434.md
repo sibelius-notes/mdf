@@ -12,6 +12,26 @@ subjects: "PMATH"
 
 ---
 
+## Prologue: The Story of Set Theory
+
+### I. Cantor's Paradise
+
+In the 1870s, Georg Cantor set out to understand the structure of the real line — specifically, whether different infinite subsets of \(\mathbb{R}\) could have genuinely different sizes. What he discovered was not just a theorem about the reals but a wholly new mathematical universe. By 1874 he had shown that the real numbers are uncountable, meaning no list can exhaust them; by 1891 he had proved his diagonal argument, establishing that the power set of any set strictly exceeds it in size. Cantor defined "sets" naively: a set is any collection of objects we can think of as a whole. He called this the "paradise" of the infinite, and David Hilbert would later declare that no one should be able to expel mathematicians from this paradise. The theory developed rapidly — transfinite ordinals, cardinal arithmetic, the continuum hypothesis — building an intricate edifice on this naive foundation.
+
+### II. Russell's Paradox and the Crisis of Foundations
+
+In 1901, Bertrand Russell discovered a fatal crack in Cantor's paradise. Consider the collection \(R = \{x : x \notin x\}\) — the set of all sets that do not contain themselves. Does \(R\) contain itself? If \(R \in R\), then by definition \(R \notin R\). If \(R \notin R\), then by definition \(R \in R\). Either way, we have a contradiction. The paradox is not a marginal puzzle: it shows that unrestricted set formation — the principle that any property defines a set — is simply inconsistent. Similar paradoxes followed: Burali-Forti's paradox showed that the collection of all ordinals cannot be a set, and Cantor himself found the paradox of the set of all sets. Frege, who had just finished a grand logicist program to build arithmetic from pure logic, received Russell's letter and wrote in response that the foundations of his edifice had been shaken. The paradise needed walls.
+
+### III. Zermelo and Fraenkel: Building the Walls
+
+Ernst Zermelo responded in 1908 with the first axiomatic system for set theory. Rather than allowing any collection to be a set, Zermelo restricted set-formation: new sets can only be carved out of existing sets (Separation), or assembled from existing sets by explicit construction rules (Pairing, Union, Power Set, Infinity). The key insight was that Russell's paradox requires forming a set from nothing — and Zermelo's axioms prevent this. Abraham Fraenkel and Thoralf Skolem later strengthened Zermelo's system by adding the Replacement schema, which allows the image of any definable function on a set to itself be a set. The resulting system — Zermelo–Fraenkel set theory with the Axiom of Choice, abbreviated **ZFC** — became the universally adopted foundation. It was strong enough to formalize all of ordinary mathematics, yet specific enough to be consistent (as far as anyone can tell).
+
+### IV. Independence: Gödel, Cohen, and the Undecidable
+
+The axiomatic cure raised a new question: which mathematical statements are actually *decided* by ZFC? Kurt Gödel showed in 1938 that the Axiom of Choice and the Generalized Continuum Hypothesis are both *consistent* with ZFC — he constructed the **constructible universe** \(L\), a minimal inner model in which both hold. This showed ZFC cannot *disprove* CH. Then in 1963, Paul Cohen invented an entirely new technique — **forcing** — to show that CH is also *unprovable* from ZFC. By adding "generic" reals to a model of ZFC, Cohen built extensions where \(2^{\aleph_0}\) takes any prescribed value. Together, Gödel and Cohen showed that CH is *independent* of ZFC: it can neither be proved nor disproved. This was not an anomaly. Hundreds of natural mathematical statements — Suslin's hypothesis, the existence of Whitehead groups, the behavior of cardinal arithmetic at singular cardinals — turned out to be similarly independent. Set theory was revealed not as a fixed truth but as a landscape of possible mathematical universes, with ZFC marking the shared terrain and the independence results charting the regions where different choices lead to different worlds. This course explores that landscape.
+
+---
+
 # Chapter 1: Axioms of Set Theory (ZFC)
 
 Set theory serves as a universal foundation for mathematics. Every mathematical object — numbers, functions, topological spaces, groups — can be encoded as a set, and all of mathematics can in principle be derived from a small list of axioms about sets. The standard axiom system is **Zermelo–Fraenkel set theory with the Axiom of Choice**, abbreviated **ZFC**. It was assembled in its modern form during the first three decades of the twentieth century, with contributions from Ernst Zermelo (1908), Abraham Fraenkel, Thoralf Skolem, and John von Neumann.
@@ -22,6 +42,8 @@ The language of ZFC is first-order logic with a single binary predicate \(\in\) 
 
 ### Extensionality
 
+Two sets are purely *extensional* objects — they are determined entirely by what they contain, not by how they are described or named. A list and the same list in a different order are the same set; a set defined by one formula and the same set defined by another formula are identical. This is the most fundamental structural principle of set theory, making sets radically different from intensional objects like properties or concepts.
+
 <div class="axiom">
 <strong>Axiom of Extensionality.</strong> Two sets are equal if and only if they have the same elements:
 \[ \forall x \, \forall y \, \bigl( x = y \leftrightarrow \forall z\,(z \in x \leftrightarrow z \in y) \bigr). \]
@@ -30,6 +52,8 @@ The language of ZFC is first-order logic with a single binary predicate \(\in\) 
 This axiom makes sets purely extensional objects: a set is determined entirely by its members, not by how it is described or constructed.
 
 ### Empty Set and Pairing
+
+We need a starting point — a set that exists without requiring any prior set to carve it from. The empty set \(\emptyset\) is this ground floor. From it, via Pairing and Union, we can construct any finite set. Without an empty set axiom, we could not even begin: the existential quantifier in all other axioms would be vacuously true in the empty model.
 
 <div class="axiom">
 <strong>Axiom of Empty Set.</strong> There exists a set with no elements:
@@ -47,6 +71,8 @@ Taking \(a = b\) yields the singleton \(\{a\}\).
 
 ### Union and Power Set
 
+Union lets us "flatten" a collection of sets: from the family \(\{\{1,2\}, \{2,3\}\}\) we form \(\{1,2,3\}\). This is essential for constructing infinite sets by taking limits along a sequence of approximations. Power Set is the engine of cardinality growth: starting from \(\omega\), a single application gives \(\mathcal{P}(\omega)\), which by Cantor's theorem is strictly larger. Iterating produces a hierarchy of ever-larger infinities that far outpaces any constructive procedure.
+
 <div class="axiom">
 <strong>Axiom of Union.</strong> For any set \(F\), there exists a set \(\bigcup F\) consisting of all elements of elements of \(F\):
 \[ \forall F \, \exists A \, \forall x \, \bigl(x \in A \leftrightarrow \exists y\,(x \in y \land y \in F)\bigr). \]
@@ -57,7 +83,13 @@ Taking \(a = b\) yields the singleton \(\{a\}\).
 \[ \forall X \, \exists P \, \forall u \, \bigl(u \in P \leftrightarrow u \subseteq X\bigr). \]
 </div>
 
+<div class="remark">
+The Power Set axiom is what allows us to "jump" to higher cardinalities. Starting from \(\omega\), we get \(\mathcal{P}(\omega)\), then \(\mathcal{P}(\mathcal{P}(\omega))\), and so on — each step producing a set strictly larger than the previous. This is how the hierarchy of infinite cardinalities \(\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots\) arises within ZFC.
+</div>
+
 ### Separation (Comprehension Schema)
+
+Separation is Zermelo's direct response to Russell's paradox. Rather than allowing any property to define a set outright, Separation only permits us to *filter* an existing set. We cannot form \(\{x : \varphi(x)\}\) from nothing — we can only form \(\{x \in X : \varphi(x)\}\) from a set \(X\) we already possess. This single restriction defuses all the classical paradoxes.
 
 <div class="axiom">
 <strong>Axiom Schema of Separation.</strong> For any set \(X\) and any formula \(\varphi(x)\) (with parameters), there exists the set of all elements of \(X\) satisfying \(\varphi\):
@@ -70,7 +102,15 @@ This is a schema — one axiom for each formula \(\varphi\). It avoids Russell's
 <strong>Russell's Paradox.</strong> Define \(R = \{x : x \notin x\}\). Then \(R \in R \leftrightarrow R \notin R\), a contradiction. Separation prevents this: we can only form \(\{x \in X : x \notin x\}\), which is a subset of \(X\) and does not lead to a paradox.
 </div>
 
+<div class="example">
+<strong>Separation in action: the even natural numbers.</strong> We want to form the set \(E = \{n \in \omega : n \text{ is even}\}\). The formula \(\varphi(n)\) is \(\exists m \in \omega \, (n = m + m)\), which asserts \(n\) is twice some natural number. By Separation applied to the set \(\omega\) and the formula \(\varphi\):
+\[ E = \{n \in \omega : \exists m \in \omega \, (n = m + m)\} = \{0, 2, 4, 6, \ldots\}. \]
+This is a perfectly legitimate set in ZFC. Notice that we never tried to form a set of "all even numbers" out of nothing — we always worked *inside* the pre-existing set \(\omega\). The Russell paradox would require us to form \(R = \{x : x \notin x\}\) where \(x\) ranges over all sets — but no such universal set exists in ZFC. The moment we restrict to \(\{x \in X : x \notin x\}\) for any fixed set \(X\), we merely get a subset of \(X\), and the argument \(R \in R \leftrightarrow R \notin R\) no longer fires: the resulting set is simply \(X \setminus \{x \in X : x \in x\}\), a perfectly harmless set.
+</div>
+
 ### Replacement (Fraenkel's Axiom Schema)
+
+Fraenkel observed that Zermelo's original axioms could not form the set \(\{\omega, \mathcal{P}(\omega), \mathcal{P}(\mathcal{P}(\omega)), \ldots\}\) — an infinite "tower" built by iterating the power set operation starting from \(\omega\). The problem is that such a set requires applying a function (\(x \mapsto \mathcal{P}(x)\)) to the set \(\omega\) and collecting all the resulting values. Separation alone cannot do this: it can only filter what is already there. Replacement adds the power to *define new sets by applying functions to existing sets*, as long as the function is definable by a formula.
 
 <div class="axiom">
 <strong>Axiom Schema of Replacement.</strong> If \(\varphi(x, y)\) defines a class-function (i.e., for every \(x\) there is at most one \(y\) with \(\varphi(x,y)\)), then the image of any set under this function is a set:
@@ -78,6 +118,10 @@ This is a schema — one axiom for each formula \(\varphi\). It avoids Russell's
 </div>
 
 Replacement is strictly stronger than Separation and is needed to construct, for example, the set \(\{\omega, \mathcal{P}(\omega), \mathcal{P}(\mathcal{P}(\omega)), \ldots\}\).
+
+<div class="example">
+<strong>Replacement building the tower of power sets.</strong> Define \(f: \omega \to V\) by \(f(0) = \omega\) and \(f(n+1) = \mathcal{P}(f(n))\). The formula \(\varphi(n, y)\) expressing "\(y = f(n)\)" is definable by a transfinite recursion expressible in ZFC. By Replacement applied to the set \(\omega\), the image \(\{f(n) : n \in \omega\} = \{\omega, \mathcal{P}(\omega), \mathcal{P}(\mathcal{P}(\omega)), \ldots\}\) is a set. Its union \(V_{\omega + \omega} = \bigcup_{n \in \omega} f(n)\) is then also a set by Union. Without Replacement, \(V_{\omega+\omega}\) is not constructible from the other axioms.
+</div>
 
 ### Infinity
 
@@ -133,6 +177,8 @@ This follows from the Axiom of Regularity by \(\in\)-induction: if every element
 # Chapter 2: Ordinal Numbers
 
 Ordinals are the backbone of transfinite mathematics. They generalize the natural numbers to the infinite, providing canonical representatives for well-ordered sets and a framework for transfinite induction and recursion.
+
+Think of ordinals as measuring *positions* rather than sizes: first, second, third, and then, after all finite positions are exhausted, a new position \(\omega\) that comes after all of them — followed by \(\omega+1\), \(\omega+2\), and eventually \(\omega \cdot 2\), \(\omega^2\), \(\omega^\omega\), and so on. The ordinals form an absolute backbone for all of set theory: every well-ordered set is isomorphic to a unique ordinal, so ordinals are the canonical "names" for the order-types of well-ordered sets.
 
 ## Well-Orderings and Order Types
 
@@ -203,6 +249,30 @@ Ordinal arithmetic is defined by transfinite recursion and differs from cardinal
 Ordinal addition and multiplication are associative but not commutative. For example, \(1 + \omega = \omega \neq \omega + 1\) and \(2 \cdot \omega = \omega \neq \omega \cdot 2 = \omega + \omega\). The right-hand side governs "how many copies of \(\alpha\)" appear, while the left-hand side shifts the type.
 </div>
 
+<div class="example">
+<strong>Non-commutativity of ordinal addition: \(\omega + 1 \neq 1 + \omega\).</strong>
+
+By definition, \(1 + \omega = \sup_{n < \omega}(1 + n) = \sup_{n < \omega}(n+1) = \omega\). The sequence \(1+0, 1+1, 1+2, \ldots = 1, 2, 3, \ldots\) has supremum \(\omega\). So \(1 + \omega = \omega\).
+
+On the other hand, \(\omega + 1 = \omega \cup \{\omega\} = \{0, 1, 2, \ldots, \omega\}\), the first ordinal beyond \(\omega\). Its order type is \(\omega + 1\): it has a last element (namely \(\omega\)), while \(\omega\) does not. So \(\omega + 1 \neq \omega = 1 + \omega\).
+
+Intuitively: \(1 + \omega\) means "place a single point before an \(\omega\)-sequence" — but that single point gets absorbed into the sequence, giving an \(\omega\)-sequence again. But \(\omega + 1\) means "place a single point *after* an \(\omega\)-sequence" — this adds a genuine last element, changing the order type.
+</div>
+
+<div class="example">
+<strong>Ordinal multiplication: \(\omega^2 = \omega \cdot \omega\) as a limit.</strong>
+
+By definition, \(\omega \cdot \omega = \sup_{n < \omega} \omega \cdot n\). The sequence is:
+\[ \omega \cdot 0 = 0, \quad \omega \cdot 1 = \omega, \quad \omega \cdot 2 = \omega + \omega, \quad \omega \cdot 3 = \omega + \omega + \omega, \quad \ldots \]
+The supremum is \(\omega^2 = \omega \cdot \omega\), whose elements are all ordinals of the form \(\omega \cdot m + k\) for \(m, k < \omega\). This is the order type of \(\omega \times \omega\) under the lexicographic order. Each "row" \(\{m\} \times \omega\) is an \(\omega\)-sequence, and there are \(\omega\) many rows — giving \(\omega^2\) in total.
+</div>
+
+<div class="example">
+<strong>The ordinal \(\omega^\omega\) and the fixed point \(\varepsilon_0\).</strong>
+
+The ordinal \(\omega^\omega = \sup_{n < \omega} \omega^n\) is the order type of all finite sequences of natural numbers ordered lexicographically. Above \(\omega^\omega\) comes \(\omega^{\omega^\omega}\), and iterating gives a sequence \(\omega^\omega, \omega^{\omega^\omega}, \ldots\) whose supremum is \(\varepsilon_0 = \omega^{\omega^{\omega^{\cdots}}}\), the first ordinal \(\alpha\) satisfying \(\omega^\alpha = \alpha\). Every countable ordinal can be uniquely written in Cantor Normal Form (described below), and \(\varepsilon_0\) is the "boundary" of that form — all ordinals below it have normal form with base \(\omega\), while \(\varepsilon_0\) itself is a fixed point.
+</div>
+
 ### Cantor Normal Form
 
 <div class="theorem">
@@ -211,11 +281,19 @@ Ordinal addition and multiplication are associative but not commutative. For exa
 where \(\beta_1 > \beta_2 > \cdots > \beta_n \geq 0\) are ordinals and \(k_1, \ldots, k_n \geq 1\) are natural numbers.
 </div>
 
+<div class="remark">
+The Cantor Normal Form is the analogue of base-\(\omega\) expansion for ordinals. For ordinals \(\alpha < \varepsilon_0\), all the exponents \(\beta_i\) are themselves less than \(\alpha\), so the Normal Form is "genuinely finite" — it is a finite tree of natural numbers. The ordinal \(\varepsilon_0\) is the least ordinal whose Normal Form involves exponents as large as itself, making it the natural boundary of the induction.
+
+Bridge remark: Cantor Normal Form will reappear in the proof of termination for Goodstein sequences and in the study of ordinal notations used in proof theory. In PCF theory (Chapter 21), a similar decomposition governs the generators of \(\mathrm{pcf}(A)\).
+</div>
+
 ---
 
 # Chapter 3: Cardinal Numbers
 
 While ordinals measure the <em>type</em> of a well-ordering, cardinals measure <em>size</em>. Two sets have the same cardinality if there is a bijection between them, regardless of any ordering.
+
+Cardinals are the answer to the question "how many elements does this set have?" For finite sets, the answer is a natural number. For infinite sets, the answer is one of the *alephs* \(\aleph_0, \aleph_1, \aleph_2, \ldots\) — a new hierarchy of infinite quantities that Cantor first discovered and that set theory now systematically studies.
 
 ## Cardinality and the Schröder–Bernstein Theorem
 
@@ -229,6 +307,22 @@ Two sets \(A\) and \(B\) are <strong>equinumerous</strong> (written \(|A| = |B|\
 
 <div class="proof">
 Suppose \(f: A \hookrightarrow B\) and \(g: B \hookrightarrow A\) are injections. Define \(C_0 = A \setminus g(B)\) and \(C_{n+1} = g(f(C_n))\). Let \(C = \bigcup_n C_n\). Define \(h: A \to B\) by \(h(x) = f(x)\) if \(x \in C\), and \(h(x) = g^{-1}(x)\) if \(x \notin C\). One verifies that \(h\) is well-defined and is a bijection.
+</div>
+
+<div class="example">
+<strong>Worked application: \(|(0,1)| = |[0,1]|\).</strong>
+
+We construct explicit injections in both directions and apply Schröder–Bernstein.
+
+*Injection \(f: (0,1) \hookrightarrow [0,1]\)*: Simply take \(f(x) = x\). This is an injection from the open interval into the closed interval.
+
+*Injection \(g: [0,1] \hookrightarrow (0,1)\)*: We need to send \([0,1]\) injectively into \((0,1)\). Define \(g(x) = \frac{1}{4} + \frac{x}{2}\). Then \(g\) maps \([0,1]\) bijectively onto \([\frac{1}{4}, \frac{3}{4}] \subset (0,1)\). In particular \(g\) is an injection from \([0,1]\) into \((0,1)\).
+
+By Schröder–Bernstein, \(|(0,1)| = |[0,1]|\). Concretely, the bijection \(h\) constructed in the proof sends the "problematic" points \(\{0, 1, g(0), g(1), g(g(0)), g(g(1)), \ldots\} = \{0, 1, 1/4, 3/4, 3/8, 5/8, \ldots\}\) via \(f\) (i.e., \(h(x) = x\) on this countable set) and all other points via \(g^{-1}\) (i.e., \(h(x) = 2x - 1/2\) off this set). The result is a genuine bijection \([0,1] \to (0,1)\).
+</div>
+
+<div class="remark">
+The Schröder–Bernstein theorem is noteworthy for not requiring the Axiom of Choice. The proof is constructive: given the two injections, we build the bijection by explicit partition. This contrasts with the comparability of cardinals (any two sets can be compared in size), which *does* require AC. Bridge remark: Schröder–Bernstein will reappear in Chapter 17 when we compare the sizes of large cardinal ultrafilters and their ultrapowers.
 </div>
 
 ## Infinite Cardinals and Alephs
@@ -273,6 +367,18 @@ For infinite cardinals \(\kappa\), \(\kappa + \kappa = \kappa \cdot \kappa = \ka
 
 <div class="proof">
 The key step is showing \(\kappa \cdot \kappa = \kappa\) for all infinite \(\kappa\), proved by well-ordering \(\kappa \times \kappa\) by the canonical pair ordering and applying transfinite induction.
+</div>
+
+<div class="example">
+<strong>The cardinality of \(\mathbb{R}\).</strong>
+
+We claim \(|\mathbb{R}| = |\mathcal{P}(\omega)| = 2^{\aleph_0}\).
+
+*Step 1: \(|\mathbb{R}| = |(0,1)|\)*. The map \(x \mapsto \frac{1}{\pi}\arctan(x) + \frac{1}{2}\) is a bijection \(\mathbb{R} \to (0,1)\).
+
+*Step 2: \(|(0,1)| = |\mathcal{P}(\omega)|\)*. Every real in \((0,1)\) has a binary expansion \(0.b_0 b_1 b_2 \ldots\) with \(b_i \in \{0,1\}\). Ignoring the ambiguity at dyadic rationals (which form a countable set), this gives a bijection between \((0,1)\) and \(2^\omega = \{f : \omega \to 2\}\). And \(|2^\omega| = |\mathcal{P}(\omega)|\) via \(f \leftrightarrow \{n : f(n) = 1\}\).
+
+*Step 3: \(|\mathbb{R}^2| = |\mathbb{R}|\)*. We need an injection \(\mathbb{R}^2 \hookrightarrow \mathbb{R}\). Given two reals \(x = 0.a_0 a_1 a_2 \ldots\) and \(y = 0.b_0 b_1 b_2 \ldots\) in \((0,1)\), interleave their binary expansions to get \(0.a_0 b_0 a_1 b_1 a_2 b_2 \ldots \in (0,1)\). This is an injection \((0,1)^2 \hookrightarrow (0,1)\), and the reverse injection is trivial (embed via first coordinate). By Schröder–Bernstein, \(|(0,1)^2| = |(0,1)|\), so \(|\mathbb{R}^2| = |\mathbb{R}|\). By induction, \(|\mathbb{R}^n| = |\mathbb{R}|\) for all finite \(n\), and even \(|\mathbb{R}^\omega| = |\mathbb{R}|\) since \((2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0}\).
 </div>
 
 ### Cofinality
@@ -850,6 +956,30 @@ These principles have major consequences: \(\Diamond \Rightarrow\) Suslin tree e
 
 Forcing, invented by Paul Cohen in 1963, is the technique for proving that mathematical statements are unprovable from ZFC. It works by constructing new models of set theory — "generic extensions" — by adjoining new sets to an existing model.
 
+## Intuitive Introduction to Forcing
+
+Cohen's method of forcing is the most powerful technique in modern set theory, and it deserves an extended intuitive preparation before the technical machinery. The basic question is: how do we build a model of ZFC in which \(2^{\aleph_0} = \aleph_2\), given that we are living inside some existing model \(M\) where perhaps \(2^{\aleph_0} = \aleph_1\)?
+
+We cannot simply "add" new real numbers to \(M\) from inside \(M\) — if the new reals existed in \(M\), they would already be there. Instead, Cohen's idea is to reason *about* a hypothetical extension \(M[G]\) from within \(M\), by specifying what properties the new object \(G\) should have, without actually constructing \(G\).
+
+Think of forcing conditions as *finite approximations* to the new object we want to add. A **forcing poset** \(\mathbb{P}\) consists of these approximations, ordered so that stronger conditions (lower in the order) provide more information. A **generic filter** \(G\) is a coherent collection of conditions — one from each "dense" set of conditions in \(\mathbb{P}\) — whose union describes the new object completely.
+
+The key insight is: \(G\) need not exist in \(M\). If \(M\) is countable, then \(\mathbb{P}\) has countably many dense sets (as elements of \(M\)), and by a combinatorial argument (Rasiowa–Sikorski), a filter meeting all of them exists — but lives *outside* \(M\). We adjoin \(G\) to \(M\) to form \(M[G]\), and the **forcing relation** \(p \Vdash \varphi\) (defined inside \(M\)) tells us exactly which sentences will be true in \(M[G]\): \(\varphi\) holds in \(M[G]\) if and only if some condition \(p\) in \(G\) forces \(\varphi\).
+
+<div class="example">
+<strong>Adding a Cohen real.</strong> The simplest forcing is Cohen forcing to add a single new real. The forcing poset is:
+\[ \mathbb{P} = (2^{<\omega}, \supseteq) \]
+consisting of all finite binary strings \(s: n \to 2\) (for \(n \in \omega\)), ordered by reverse extension: \(s \leq t\) (i.e., \(s\) is stronger) if and only if \(s \supseteq t\) as functions. Intuitively, longer strings provide more information.
+
+A generic filter \(G\) picks one finite string from each dense set. The *dense* sets ensure that:
+- For each \(n \in \omega\), some string in \(G\) has length \(> n\) (so \(\bigcup G\) is a total function \(\omega \to 2\)).
+- For each condition \(s \in \mathbb{P}\) and each \(k \in \{0,1\}\), there is a condition in \(G\) extending \(s^\frown k\) (so \(\bigcup G\) genuinely branches).
+
+The new real is \(g = \bigcup G \in 2^\omega\). This \(g\) is not in the ground model \(M\): for each real \(r \in M \cap 2^\omega\), the set \(D_r = \{s \in \mathbb{P} : s \not\subseteq r\}\) is dense (since any finite approximation can be extended to disagree with \(r\) somewhere), so \(G\) meets \(D_r\), meaning \(g \neq r\). The generic real \(g\) is thus genuinely new — not just a re-description of something already in \(M\).
+
+This forcing does not collapse cardinals (it is ccc: any antichain in \(2^{<\omega}\) is countable, since two compatible strings can always be extended to a common string). The extension \(M[G]\) satisfies all the same cardinal arithmetic as \(M\), but now contains a new real \(g \notin M\).
+</div>
+
 ## The Basic Setup
 
 Let \(M\) be a countable transitive model of ZFC (a **ground model**). A **partial order** (or **forcing notion**) is a set \(\mathbb{P} = (P, \leq)\) with a maximum element \(\mathbf{1}\). Elements of \(\mathbb{P}\) are **conditions**; we think of stronger conditions as providing more information.
@@ -962,6 +1092,8 @@ Forcing is used to establish the independence of many statements:
 
 Large cardinal axioms assert the existence of cardinals with properties so strong that their existence cannot be proved (or even shown consistent) in ZFC alone. They form a natural well-ordered hierarchy of consistency strength, calibrating the "strength" of mathematical theories.
 
+Large cardinal axioms extend the ZFC axioms *upward* — they assert the existence of very large sets whose existence cannot be proved in ZFC but whose consistency we nonetheless believe (based on the coherence of the resulting theory and its fruitful consequences). Each large cardinal axiom is a bet on the richness of the set-theoretic universe, and the remarkable empirical fact is that all such axioms studied so far are linearly ordered by consistency strength: for any two large cardinal axioms \(\Phi\) and \(\Psi\), either ZFC + \(\Phi\) proves the consistency of ZFC + \(\Psi\), or vice versa.
+
 ## Inaccessible Cardinals
 
 <div class="definition">
@@ -972,6 +1104,8 @@ An uncountable cardinal \(\kappa\) is <strong>strongly inaccessible</strong> if:
 </ol>
 A cardinal is <strong>weakly inaccessible</strong> if it is regular and a weak limit (i.e., \(\lambda < \kappa \Rightarrow \lambda^+ < \kappa\), i.e., no predecessor).
 </div>
+
+Inaccessible cardinals are significant because they are precisely the cardinals \(\kappa\) such that \(V_\kappa\) is a model of ZFC. In this sense, they are "ZFC-absolute" — they look like the entire set-theoretic universe from within their own level.
 
 <div class="theorem">
 If \(\kappa\) is strongly inaccessible, then \(V_\kappa \models \mathsf{ZFC}\). In particular, the existence of an inaccessible cardinal implies the consistency of ZFC, so by Gödel's incompleteness theorem, ZFC cannot prove the existence of an inaccessible cardinal.
@@ -1054,6 +1188,14 @@ An uncountable cardinal \(\delta\) is a <strong>Woodin cardinal</strong> if for 
 
 <div class="theorem">
 The existence of infinitely many Woodin cardinals implies the consistency of all \(\mathbf{\Sigma}^1_2\) statements that are consistent, and more: it implies <strong>Projective Determinacy (PD)</strong>, which asserts that all projective sets of reals are determined (every infinite two-player game on natural numbers where the winning condition is projective is determined).
+</div>
+
+<div class="remark">
+<strong>The large cardinal hierarchy as a spectrum.</strong> The following diagram places the major large cardinal notions in order of consistency strength, from weakest to strongest:
+
+\[ \text{inaccessible} \prec \text{Mahlo} \prec \text{weakly compact} \prec \text{measurable} \prec \text{Woodin} \prec \text{supercompact} \]
+
+Each "\(\prec\)" means "strictly weaker in consistency strength." Woodin cardinals sit between measurable and supercompact in a deep sense: they are strong enough to imply projective determinacy (which requires infinitely many Woodin cardinals) but not strong enough to imply the existence of a supercompact. Above supercompact in the hierarchy come extendible, huge, and rank-into-rank cardinals — with Kunen's Inconsistency placing an absolute upper bound by showing there is no elementary embedding \(j: V \to V\) in ZFC.
 </div>
 
 ## The Large Cardinal Hierarchy
@@ -1139,6 +1281,10 @@ Forcing axioms arise from a simple but powerful idea: rather than adding a singl
 </div>
 
 Note that MA at \(\aleph_0\) (i.e., when \(|\mathcal{D}| \leq \aleph_0\)) is provable in ZFC — this is the content of the Rasiowa–Sikorski lemma. The axiom becomes interesting and independent when we demand this for families of size \(\aleph_1, \aleph_2, \ldots\) up to \(2^{\aleph_0}\). We write \(\text{MA}_\kappa\) for the statement restricted to \(|\mathcal{D}| \leq \kappa\); then MA is \(\text{MA}_{<2^{\aleph_0}}\).
+
+<div class="remark">
+<strong>Intuition via Baire Category.</strong> MA(\(\aleph_1\)) says that all ccc posets of size \(\leq \aleph_1\) behave like the poset of open dense sets in a Baire space: if we intersect fewer than \(2^{\aleph_0}\) many "dense open conditions," we still find a common point. This is a generalized completeness assertion: the universe is rich enough that no \(< 2^{\aleph_0}\)-bounded conspiracy of conditions can prevent the existence of a generic filter. It is a consistency result that lives naturally in the ZFC + \(2^{\aleph_0} > \aleph_1\) world — indeed, MA implies \(\neg\)CH.
+</div>
 
 <div class="theorem">
 <strong>Theorem (Consequences of MA).</strong>
@@ -1415,6 +1561,37 @@ The analogous result for cofinality \(\omega\) is false: Magidor showed that sta
 
 This is a ZFC result — no large cardinals. It shows that even though \(2^{\aleph_\omega}\) can exceed \(\aleph_{\omega+1}\), it cannot be arbitrarily large: it is bounded below \(\aleph_{\omega_4}\). The proof uses Shelah's PCF theory.
 
+<div class="example">
+<strong>Worked computation under GCH: \(\mathrm{pcf}(\{\aleph_1, \aleph_2, \aleph_3\})\).</strong>
+
+Let \(A = \{\aleph_1, \aleph_2, \aleph_3\}\). We want to determine the possible cofinalities of \(\prod A / D\) as \(D\) ranges over ultrafilters on \(A\).
+
+Since \(A\) is a finite set of three elements, the ultrafilters on \(A\) are exactly the three principal ultrafilters \(D_1, D_2, D_3\) concentrated on \(\aleph_1, \aleph_2, \aleph_3\) respectively. (There are no non-principal ultrafilters on a finite set.)
+
+For a principal ultrafilter \(D_i\) concentrated on \(\aleph_i\):
+\[ \prod A / D_i \cong \aleph_i \]
+since every function \(f \in \prod A\) is identified with its value \(f(\aleph_i)\), giving a structure of order type \(\aleph_i\).
+
+Therefore \(\mathrm{cf}(\prod A / D_i) = \mathrm{cf}(\aleph_i)\). Under GCH, all \(\aleph_i\) for \(i \geq 1\) are regular (since \(\aleph_i = \omega_i\) and successor cardinals are regular), so:
+\[ \mathrm{pcf}(\{\aleph_1, \aleph_2, \aleph_3\}) = \{\aleph_1, \aleph_2, \aleph_3\} \subseteq [\aleph_1, \aleph_3] \subseteq [\aleph_1, \aleph_4]. \]
+
+In the general infinite case, for \(A = \{\aleph_1, \aleph_2, \ldots, \aleph_n, \ldots\}_{n < \omega}\) (the first \(\omega\) uncountable cardinals), the ultrafilters on this countable set include non-principal ones, and the pcf can extend up to \(\aleph_{\omega_4}\) — this is the content of Shelah's theorem. The pcf generators for this larger set are the subsets \(B_\lambda \subseteq A\) that "generate" each possible cofinality \(\lambda\), and their existence is guaranteed by the pcf structure theorem.
+</div>
+
+<div class="example">
+<strong>Tracing Shelah's bound: why \(\aleph_\omega^{\aleph_0} < \aleph_{\omega_4}\) under \(2^{\aleph_n} < \aleph_\omega\).</strong>
+
+Assume \(2^{\aleph_n} < \aleph_\omega\) for all \(n < \omega\) (i.e., GCH holds cofinally below \(\aleph_\omega\)). We want to bound \(\aleph_\omega^{\aleph_0}\).
+
+*Step 1: Represent the product.* We have \(\aleph_\omega^{\aleph_0} = |\prod_{n < \omega} \aleph_\omega|  \leq |\prod_{n < \omega} \aleph_{n+1}|\) (since \(\aleph_\omega = \sup_{n} \aleph_n\) and replacing each factor by a larger cardinal). The key object is \(\prod_{n<\omega} \aleph_{n+1}\) with the eventual domination order.
+
+*Step 2: PCF bound.* By Shelah's pcf theorem, the exact upper bound of this product (the maximum possible cofinality of \(\prod_{n<\omega} \aleph_{n+1} / D\) over all ultrafilters \(D\)) equals the true cofinality of the product. Shelah shows this true cofinality is in \(\mathrm{pcf}(\{\aleph_1, \aleph_2, \ldots\})\).
+
+*Step 3: The \(\aleph_{\omega_4}\) bound.* Using the pcf generators \(B_\lambda\) for the set \(\{\aleph_n : n \geq 1\}\), Shelah proves that \(\max(\mathrm{pcf}(\{\aleph_n : n \geq 1\})) < \aleph_{\omega_4}\). The argument uses a covering argument: if some \(\lambda \geq \aleph_{\omega_4}\) were in \(\mathrm{pcf}\), one could derive a contradiction with the assumption \(2^{\aleph_n} < \aleph_\omega\) for all \(n\) via the pcf structure theorem and König's theorem applied to cofinalities.
+
+The conclusion is \(\aleph_\omega^{\aleph_0} \leq \max(\mathrm{pcf}(\{\aleph_n\})) < \aleph_{\omega_4}\), which is Shelah's celebrated bound — a ZFC theorem with no large cardinal hypotheses.
+</div>
+
 ## Section 21.3: PCF Theory
 
 Let \(A\) be a set of regular cardinals with \(|A| < \min(A)\). The key object is the product \(\prod A = \prod_{\lambda \in A} \lambda\) ordered by eventual domination: \(f <^* g\) iff \(f(\lambda) < g(\lambda)\) for all but finitely many (or more generally, all but boundedly many) \(\lambda \in A\).
@@ -1468,3 +1645,1159 @@ SCH follows from GCH, and also from the existence of large cardinals in certain 
 <div class="remark">
 <strong>Remark.</strong> PCF theory thus reveals a deep structure in singular cardinal arithmetic. Unlike regular cardinals, singular cardinals are subject to ZFC constraints — they cannot behave arbitrarily. Shelah's machinery of pcf generators and scales (exact upper bounds in \(\prod A\)) provides the technical backbone of all modern work on singular cardinal combinatorics, including recent results on the consistency strength of the failure of SCH at accessible cardinals.
 </div>
+
+---
+
+# Appendix A: Timeline of Set Theory
+
+The following chronological table traces the development of set theory from its origins to modern research frontiers.
+
+| Year | Event |
+|------|-------|
+| 1874 | Cantor proves the reals are uncountable (first uncountability proof, using a nested interval argument) |
+| 1878 | Cantor conjectures the Continuum Hypothesis in a letter to Dedekind |
+| 1879–1884 | Cantor develops transfinite ordinals and cardinals in a series of papers |
+| 1891 | Cantor's diagonal argument; proves \(|X| < |\mathcal{P}(X)|\) for any set \(X\) |
+| 1895–1897 | Cantor publishes the *Beiträge*, his systematic treatment of cardinals and ordinals |
+| 1897 | Burali-Forti paradox: the collection of all ordinals is not a set |
+| 1899 | Cantor discovers the paradox of the set of all sets (in correspondence with Dedekind) |
+| 1900 | Hilbert lists the Continuum Hypothesis as the first of his 23 problems |
+| 1901 | Russell's paradox: \(R = \{x : x \notin x\}\) leads to contradiction |
+| 1903 | Russell publishes *The Principles of Mathematics*; paradox becomes widely known |
+| 1905 | König attempts to prove \(2^{\aleph_0} \neq \aleph_\omega\); error found by Zermelo |
+| 1906 | Schröder–Bernstein theorem proved independently by Bernstein and Schröder |
+| 1908 | Zermelo publishes the first axiomatization of set theory (Z); proves Well-Ordering Theorem using AC |
+| 1910–1913 | Whitehead and Russell publish *Principia Mathematica*; type theory as alternative foundation |
+| 1914 | Hausdorff introduces partially ordered sets, study of order types |
+| 1922 | Fraenkel adds Replacement schema to Zermelo's axioms (ZF) |
+| 1922 | Skolem argues for first-order formulation; notes Löwenheim–Skolem theorem |
+| 1923 | von Neumann introduces ordinals as sets; the "von Neumann ordinals" |
+| 1925 | von Neumann proves the Well-Ordering Theorem using only ZF + AC |
+| 1930 | Zermelo publishes revised axioms including Regularity |
+| 1930 | Ulam asks the measure problem: which cardinals admit \(\sigma\)-additive measures on all subsets? |
+| 1935 | Gödel introduces the constructible universe \(L\) |
+| 1938 | Gödel proves \(\mathsf{Con}(\mathsf{ZF}) \Rightarrow \mathsf{Con}(\mathsf{ZFC} + \mathsf{GCH})\) using \(L\) |
+| 1939 | Gödel proves AC holds in \(L\) |
+| 1943 | Gödel conjectures independence of CH from ZFC |
+| 1950 | Erdős and Rado develop infinite Ramsey theory; partition calculus |
+| 1953 | Kleene introduces the arithmetical and analytical hierarchies (descriptive set theory) |
+| 1957 | Scott shows measurable cardinals imply \(V \neq L\) |
+| 1961 | Hanf and Scott develop large cardinal theory; Hanf numbers |
+| 1963 | Cohen invents forcing; proves \(\mathsf{Con}(\mathsf{ZFC}) \Rightarrow \mathsf{Con}(\mathsf{ZFC} + \lnot\mathsf{CH})\) |
+| 1963 | Cohen proves independence of AC from ZF (using forcing and symmetric models) |
+| 1964 | Lévy and Solovay: forcing preserves measurability if the forcing is small |
+| 1965 | Solovay proves every \(\Sigma^1_2\) set of reals is Lebesgue measurable if a measurable cardinal exists |
+| 1967 | Jensen's fine structure theory of \(L\); introduction of \(\Diamond\) and \(\square\) |
+| 1967 | Solovay and Tennenbaum prove consistency of Suslin's Hypothesis via iterated forcing |
+| 1970 | Easton's theorem: \(2^\kappa\) can be almost anything for regular \(\kappa\) |
+| 1971 | Jensen proves \(\Diamond\) holds in \(L\); Suslin trees exist in \(L\) |
+| 1971 | Silver proves GCH cannot first fail at a singular of uncountable cofinality |
+| 1974 | Martin's Axiom + ¬CH is proved consistent (Solovay–Tennenbaum) |
+| 1975 | Martin proves Borel Determinacy in ZFC |
+| 1976 | Silver proves \(0^\#\) exists iff there are uncountably many Silver indiscernibles |
+| 1978 | Magidor proves SCH can fail at \(\aleph_\omega\) from supercompact |
+| 1980 | Foreman, Magidor, Shelah prove consistency of Martin's Maximum (MM) |
+| 1984 | Shelah introduces PCF theory; bounds \(\aleph_\omega^{\aleph_0} < \aleph_{\omega_4}\) |
+| 1985 | Shelah's *Cardinal Arithmetic* develops the full pcf machinery |
+| 1987 | Woodin introduces Woodin cardinals |
+| 1988 | Martin–Steel theorem: infinitely many Woodin cardinals imply Projective Determinacy |
+| 1988 | Foreman–Magidor–Shelah: Martin's Maximum consistent from supercompact |
+| 1992 | Shelah–Woodin: failure of SCH implies large cardinal strength |
+| 1994 | Woodin: \(\text{AD}^{L(\mathbb{R})}\) equiconsistent with infinitely many Woodin cardinals |
+| 1999 | Woodin announces \(\Omega\)-logic and the case for \(V = \text{Ultimate-}L\) |
+| 2000 | Shelah: many ZFC non-equivalent combinatorial principles at \(\aleph_1\) |
+| 2003 | Viale proves the singular compactness theorem for SCH |
+| 2005 | Goldstern–Shelah: many separation results in the Cichoń diagram |
+| 2010 | Magidor–Shelah: structure of pcf under failure of SCH |
+| 2013 | Malliaris–Shelah prove \(\mathfrak{p} = \mathfrak{t}\) using Keisler's order |
+| 2014 | Goldstern–Kellner–Mejía–Shelah: all Cichoń characteristics consistently distinct |
+| 2016 | Woodin's Ultimate-\(L\) program: conjecture that a canonical inner model satisfying GCH exists at the level of supercompact cardinals |
+| 2017 | Asperó–Schindler: Martin's Maximum\(^{++}\) implies Woodin's axiom \((*)\ |
+| 2020 | Recent advances in descriptive inner model theory: connection between HOD and canonical models under determinacy |
+| 2024 | Active research: inner model theory at the supercompact level, fine structure beyond Woodin cardinals, Ultimate-\(L\) program |
+
+---
+
+# Appendix B: Problem Sets
+
+The following problems are organized by topic and difficulty. Problems in Part A and B are accessible after Chapters 1–5. Problems in Part C require the forcing machinery of Chapter 14. Problems in Part D are research-adjacent and require the full course.
+
+## Part A: ZFC and Ordinal Arithmetic (5 problems)
+
+<div class="example">
+<strong>Problem A1.</strong> (Separation and Russell's Paradox) Let \(X\) be any set. Show that the set \(R_X = \{x \in X : x \notin x\}\) exists by Separation. Prove that \(R_X \notin X\). Conclude that there is no "universal set" (a set containing all sets) in ZFC.
+</div>
+
+<div class="example">
+<strong>Problem A2.</strong> (Ordinal arithmetic) Compute the following ordinals in Cantor Normal Form. Justify each step from the definition of ordinal arithmetic:
+<ol>
+<li>\(\omega \cdot 3 + \omega^2 \cdot 2 + 1\) (write in decreasing exponent order)</li>
+<li>\((\omega + 1) \cdot \omega\) — show this equals \(\omega^2\)</li>
+<li>\(\omega^\omega + \omega^3 \cdot 5 + \omega \cdot 7 + 3\)</li>
+</ol>
+For (2): use the definition of multiplication \(\alpha \cdot \lambda = \sup_{\beta < \lambda} \alpha \cdot \beta\) and compute \((\omega+1) \cdot n\) for each \(n \in \omega\), then take the supremum.
+</div>
+
+<div class="example">
+<strong>Problem A3.</strong> (Transfinite induction) Prove that ordinal addition is associative: \((\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)\) for all ordinals \(\alpha, \beta, \gamma\). (Hint: fix \(\alpha, \beta\) and induct on \(\gamma\), handling the cases \(\gamma = 0\), \(\gamma\) successor, and \(\gamma\) limit separately.)
+</div>
+
+<div class="example">
+<strong>Problem A4.</strong> (von Neumann hierarchy) Show that for all ordinals \(\alpha\):
+<ol>
+<li>\(|V_\alpha| = \beth_\alpha\), where \(\beth_0 = \aleph_0\), \(\beth_{\alpha+1} = 2^{\beth_\alpha}\), and \(\beth_\lambda = \sup_{\alpha < \lambda} \beth_\alpha\) for limit \(\lambda\).</li>
+<li>\(V_\omega\) is a model of all ZFC axioms except Infinity.</li>
+<li>If \(\kappa\) is strongly inaccessible, then \(|V_\kappa| = \kappa\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem A5.</strong> (Replacement) Let \(f: \omega \to \omega\) be defined by \(f(n) = n^2\). Using the Replacement schema, show that \(\{n^2 : n \in \omega\} = \{0, 1, 4, 9, 16, \ldots\}\) is a set. Then use Union to form the set of all perfect squares as a subset of \(\omega\), and verify this is the same as the set produced by Separation with the formula \(\varphi(m) = \exists n \in \omega \, (m = n \cdot n)\).
+</div>
+
+## Part B: Cardinals and the Continuum Hypothesis (5 problems)
+
+<div class="example">
+<strong>Problem B1.</strong> (Cardinality computations) Prove the following, constructing explicit bijections or applying Schröder–Bernstein where appropriate:
+<ol>
+<li>\(|\mathbb{Q}| = \aleph_0\)</li>
+<li>\(|\mathbb{R} \setminus \mathbb{Q}| = 2^{\aleph_0}\)</li>
+<li>\(|\mathcal{P}(\mathbb{N})| = |\mathbb{R}|\)</li>
+<li>The set of all continuous functions \(f: \mathbb{R} \to \mathbb{R}\) has cardinality \(2^{\aleph_0}\)</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem B2.</strong> (König's Theorem applications) Use König's Theorem to prove:
+<ol>
+<li>\(2^{\aleph_0} \neq \aleph_\omega\)</li>
+<li>\(\aleph_\omega^{\aleph_0} > \aleph_\omega\)</li>
+<li>For any infinite cardinal \(\kappa\), \(\kappa^{\mathrm{cf}(\kappa)} > \kappa\). (This shows the continuum function is "discontinuous" at singular cardinals.)</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem B3.</strong> (GCH consequences) Assume GCH. Show:
+<ol>
+<li>\(\aleph_{\omega}^{\aleph_1} = \aleph_{\omega+1}\) (Hint: \(\mathrm{cf}(\aleph_\omega) = \omega < \aleph_1\), so use the GCH cardinal exponentiation formula.)</li>
+<li>For any infinite cardinal \(\kappa\) and \(\lambda \leq \kappa\): \(\kappa^\lambda = \kappa^+\) if \(\lambda\) is cofinal in \(\kappa\), and \(\kappa^\lambda = \kappa\) otherwise.</li>
+<li>Under GCH, the cardinal characteristics of the continuum all equal \(\aleph_1\): \(\mathfrak{b} = \mathfrak{d} = \mathfrak{p} = \mathfrak{t} = \aleph_1\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem B4.</strong> (Cofinality and singular cardinals) 
+<ol>
+<li>Prove that \(\mathrm{cf}(\aleph_{\omega_1}) = \omega_1\). Is \(\aleph_{\omega_1}\) regular or singular?</li>
+<li>Show that for any limit cardinal \(\kappa\), \(\mathrm{cf}(\kappa) \leq \kappa\).</li>
+<li>Prove that if \(\kappa\) is a singular cardinal, then \(\kappa\) is not measurable. (Hint: a measurable cardinal must be regular.)</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem B5.</strong> (Consistency strength) 
+<ol>
+<li>Show that CH is equivalent to: every uncountable subset of \(\mathbb{R}\) has cardinality \(\mathfrak{c}\). (Hint: use the Cantor–Bendixson theorem and properties of closed sets.)</li>
+<li>Show that MA implies \(\neg\)CH. (Hint: under MA, apply MA to the poset of finite partial functions \(2^{<\aleph_1} \to 2\); derive that \(2^{\aleph_0} \geq \aleph_2\).)</li>
+<li>State (without proof) why the existence of an inaccessible cardinal implies \(\mathrm{Con}(\mathsf{ZFC})\), and why this means ZFC alone cannot prove the existence of an inaccessible.</li>
+</ol>
+</div>
+
+## Part C: Forcing and Generic Extensions (5 problems)
+
+<div class="example">
+<strong>Problem C1.</strong> (Cohen forcing basics) Let \(\mathbb{P} = (2^{<\omega}, \supseteq)\) be Cohen forcing.
+<ol>
+<li>Show that \(\mathbb{P}\) is ccc: any antichain in \(\mathbb{P}\) is countable.</li>
+<li>For each \(n \in \omega\), show that the set \(D_n = \{s \in 2^{<\omega} : |s| > n\}\) is dense in \(\mathbb{P}\).</li>
+<li>For each \(t \in 2^{<\omega}\), show that \(E_t = \{s \in 2^{<\omega} : s \supseteq t\}\) is dense in \(\mathbb{P}\).</li>
+<li>If \(G\) is an \(M\)-generic filter over \(\mathbb{P}\), show that \(g = \bigcup G\) is a total function \(\omega \to 2\).</li>
+<li>Show that \(g \notin M\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem C2.</strong> (Forcing relation) Let \(\mathbb{P}\) be any partial order and \(M\) a ground model. Prove:
+<ol>
+<li>If \(p \Vdash \varphi\) and \(q \leq p\), then \(q \Vdash \varphi\). (Monotonicity)</li>
+<li>No condition forces both \(\varphi\) and \(\lnot \varphi\). (Consistency)</li>
+<li>For every formula \(\varphi\) with names as parameters, the set \(\{p \in \mathbb{P} : p \Vdash \varphi \text{ or } p \Vdash \lnot\varphi\}\) is dense. (Decidability)</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem C3.</strong> (Cardinal preservation) Let \(M\) be a ground model and \(\mathbb{P}\) a ccc forcing notion.
+<ol>
+<li>Show that if \(\kappa\) is a regular cardinal in \(M\) and \(f: \omega \to \kappa\) is in \(M[G]\), then \(f \in M\). (Hint: use ccc to "predict" \(f\) from a name with countably many possibilities.)</li>
+<li>Conclude that ccc forcings do not collapse \(\omega_1\).</li>
+<li>Show that \(\omega_1^{M[G]} = \omega_1^M\) for any ccc forcing \(\mathbb{P}\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem C4.</strong> (Adding \(\aleph_2\) Cohen reals) Let \(M\) be a countable transitive model of ZFC + GCH, and let \(\mathbb{P} = \mathrm{Add}(\omega, \aleph_2^M)\) be Cohen forcing.
+<ol>
+<li>Show that for each \(\alpha < \aleph_2^M\), the set \(r_\alpha = \{n \in \omega : G(\alpha, n) = 1\}\) is a real in \(M[G]\).</li>
+<li>Show that the map \(\alpha \mapsto r_\alpha\) is injective in \(M[G]\). (Hint: for \(\alpha \neq \beta\), show the set of conditions where \(r_\alpha\) and \(r_\beta\) differ is dense.)</li>
+<li>Conclude that \(M[G] \models 2^{\aleph_0} \geq \aleph_2\).</li>
+<li>Since \(\mathbb{P}\) is ccc, we have \(\aleph_2^{M[G]} = \aleph_2^M\), so \(M[G] \models 2^{\aleph_0} \geq \aleph_2 = \aleph_2^{M[G]}\), giving \(\neg\mathsf{CH}\) in \(M[G]\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem C5.</strong> (Collapsing cardinals) Let \(\mathbb{P} = \mathrm{Col}(\omega, \omega_1)\) be the Lévy collapse: conditions are finite partial functions \(p: \omega \to \omega_1\), ordered by extension.
+<ol>
+<li>Show that \(\mathbb{P}\) is not ccc. (Hint: find an uncountable antichain.)</li>
+<li>Show that if \(G\) is \(M\)-generic over \(\mathbb{P}\), then \(\bigcup G: \omega \to \omega_1^M\) is a surjection, hence \(\omega_1^M\) is countable in \(M[G]\).</li>
+<li>Conclude that \(\omega_1^{M[G]} < \omega_1^M\): the forcing collapses \(\omega_1\).</li>
+<li>Explain why this does not contradict the ZFC theorem "\(\omega_1\) is uncountable": the statement "\(\omega_1^M\) is uncountable" is a statement about \(M\), while \(M[G]\) sees additional countable sequences not in \(M\).</li>
+</ol>
+</div>
+
+## Part D: Large Cardinals — Challenge Problems (5 problems)
+
+<div class="example">
+<strong>Problem D1.</strong> (Inaccessibles and \(V_\kappa\)) Let \(\kappa\) be a strongly inaccessible cardinal.
+<ol>
+<li>Verify that \(V_\kappa\) satisfies each of the ZFC axioms when quantifiers are restricted to \(V_\kappa\). Be explicit about which properties of \(\kappa\) are used for each axiom.</li>
+<li>Show that the statement "\(\kappa\) is inaccessible" is a \(\Pi_1\) statement (it can be expressed as a universal statement about sets of rank less than \(\kappa\)), and use this to argue that any elementary embedding \(j: V \to M\) with critical point \(\lambda\) satisfies \(j(\kappa)\) is inaccessible in \(M\).</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem D2.</strong> (Measurable cardinals and \(0^\#\)) Suppose \(\kappa\) is measurable with ultrafilter \(\mathcal{U}\).
+<ol>
+<li>Using Łoś's Theorem, show that the ultrapower \(j: V \to \mathrm{Ult}(V, \mathcal{U})\) is a well-defined elementary embedding.</li>
+<li>Show that the critical point of \(j\) is exactly \(\kappa\): that is, \(j(\alpha) = \alpha\) for all \(\alpha < \kappa\), and \(j(\kappa) > \kappa\).</li>
+<li>Show that \(j(\kappa)\) is inaccessible in \(\mathrm{Ult}(V, \mathcal{U})\), hence measurable cardinals are limits of inaccessible cardinals.</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem D3.</strong> (Woodin cardinals and stationary tower forcing) State (without full proof) the definition of a Woodin cardinal. Then:
+<ol>
+<li>Show that every Woodin cardinal is a limit of measurable cardinals. (Hint: for each function \(f: \delta \to \delta\), find a measurable \(\kappa < \delta\) closed under \(f\).)</li>
+<li>Explain the key step of Martin–Steel: why the existence of infinitely many Woodin cardinals implies all projective sets are determined. (Sketch the "generic absoluteness" argument.)</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem D4.</strong> (PCF and singular cardinals) Assume \(2^{\aleph_n} < \aleph_\omega\) for all \(n < \omega\).
+<ol>
+<li>Show that \(\mathrm{cf}(\aleph_\omega^{\aleph_0}) > \aleph_\omega\) using König's theorem. (This shows \(\aleph_\omega^{\aleph_0} \neq \aleph_\omega\).)</li>
+<li>Using the definition of \(\mathrm{pcf}(A)\) for \(A = \{\aleph_1, \aleph_2, \ldots\}\), explain why \(\aleph_\omega^{\aleph_0} \leq \max(\mathrm{pcf}(A))\).</li>
+<li>State Shelah's theorem that \(\max(\mathrm{pcf}(\{\aleph_n : 1 \leq n < \omega\})) < \aleph_{\omega_4}\), and explain the role of the pcf generators in this bound.</li>
+</ol>
+</div>
+
+<div class="example">
+<strong>Problem D5.</strong> (Ultimate-L and the future of set theory) This problem asks for mathematical literacy rather than formal proof.
+<ol>
+<li>State Gödel's program: he hoped that large cardinal axioms would eventually decide CH. Explain why the independence of CH from ZFC + measurable cardinal (shown by Cohen's method) complicated this program.</li>
+<li>Woodin's \(\Omega\)-logic is a semantic notion of logical consequence that is invariant under set-forcing. State (informally) the conjecture that \(\mathsf{CH}\) is \(\Omega\)-provable from large cardinal axioms, and what this would mean philosophically.</li>
+<li>State the conjecture (Asperó–Schindler 2017, partially resolved) that Martin's Maximum\(^{++}\) is equivalent to Woodin's axiom \((*)\), and explain what this suggests about the "right" value of \(2^{\aleph_0}\) from the perspective of forcing axioms.</li>
+</ol>
+</div>
+
+---
+
+# Chapter 22: Ordinal and Cardinal Arithmetic — Deep Dives
+
+This chapter consolidates and extends the arithmetic introduced in Chapters 2 and 3, providing additional worked examples, proofs of key structural theorems, and connections to the later forcing and large-cardinal material.
+
+## Section 22.1: Non-Commutativity of Ordinal Multiplication
+
+Ordinal multiplication, like ordinal addition, fails to commute in general. The failure is perhaps even more striking than for addition: whereas \(1 + \omega = \omega\) says "prepending a single point is absorbed into an \(\omega\)-sequence," the failure \(2 \cdot \omega \neq \omega \cdot 2\) says something deeper about the structure of infinite repeated concatenations.
+
+<div class="example">
+<strong>Worked example: \(\omega \cdot 2\) versus \(2 \cdot \omega\).</strong>
+
+Recall the definition: \(\alpha \cdot \beta\) is defined by transfinite recursion on \(\beta\):
+\[
+\alpha \cdot 0 = 0, \quad \alpha \cdot (\beta + 1) = \alpha \cdot \beta + \alpha, \quad \alpha \cdot \lambda = \sup_{\xi < \lambda} \alpha \cdot \xi \text{ for limit } \lambda.
+\]
+
+*Computing \(\omega \cdot 2\)*:
+\[
+\omega \cdot 2 = \omega \cdot (1 + 1) = \omega \cdot 1 + \omega = \omega + \omega.
+\]
+Concretely, \(\omega \cdot 2 = \omega + \omega = \{0, 1, 2, \ldots, \omega, \omega+1, \omega+2, \ldots\}\). This is the order type of two disjoint copies of \(\omega\) placed one after the other: the first copy \(\{0, 1, 2, \ldots\}\) followed by a second copy \(\{\omega, \omega+1, \omega+2, \ldots\}\). It has no largest element and is a limit ordinal.
+
+*Computing \(2 \cdot \omega\)*:
+\[
+2 \cdot \omega = \sup_{n < \omega} 2 \cdot n.
+\]
+Now \(2 \cdot n = n + n = 2n\) (a finite even number), so the sequence is \(0, 2, 4, 6, \ldots\). The supremum is \(\omega\). Thus \(2 \cdot \omega = \omega\).
+
+*Summary*:
+\[
+\omega \cdot 2 = \omega + \omega \neq \omega = 2 \cdot \omega.
+\]
+
+*Intuition*: \(\omega \cdot 2\) means "two copies of \(\omega\)" — a genuine \(\omega + \omega\). But \(2 \cdot \omega\) means "\(\omega\) copies of 2" — and \(\omega\) pairs \(\{0,1\}, \{2,3\}, \{4,5\}, \ldots\) placed end-to-end produce an order of type \(\omega\), not \(\omega \cdot 2\). In general, \(\alpha \cdot \beta\) is the order type of \(\beta\) disjoint copies of \(\alpha\) placed in sequence; since we take the \(\beta\)-many copies in the \(\beta\)-order, it is the \(\beta\)-fold concatenation of \(\alpha\). The key asymmetry is that multiplication is "left-repeated addition": \(\omega \cdot n\) means \(n\) copies of \(\omega\), while \(n \cdot \omega\) means \(\omega\) copies of the \(n\)-element ordinal — which is just \(\omega\) itself.
+</div>
+
+<div class="example">
+<strong>General pattern: \(\alpha \cdot \omega = \omega\) whenever \(\alpha\) is finite and nonzero.</strong>
+
+For any \(n \geq 1\):
+\[
+n \cdot \omega = \sup_{k < \omega} n \cdot k = \sup_{k < \omega} nk = \omega,
+\]
+since the finite products \(n \cdot 0, n \cdot 1, n \cdot 2, \ldots = 0, n, 2n, \ldots\) are cofinal in \(\omega\). Thus "any finite positive ordinal times \(\omega\) equals \(\omega\)." By contrast, \(\omega \cdot n = \omega + \omega + \cdots + \omega\) (\(n\) times), which grows without bound as \(n \to \omega\). This illustrates why the left factor governs the "block size" and the right factor governs the "number of blocks."
+</div>
+
+## Section 22.2: The Diagonal Argument and \(2^{\aleph_0} > \aleph_0\)
+
+Cantor's diagonal argument is the most elegant proof in all of mathematics. It deserves a fully explicit presentation.
+
+<div class="theorem">
+<strong>Cantor's Diagonal Theorem.</strong> \(2^{\aleph_0} > \aleph_0\). Equivalently, the set \(2^\omega = \{f : \omega \to \{0,1\}\}\) of all infinite binary sequences is uncountable.
+</div>
+
+<div class="proof">
+Suppose for contradiction that \(2^\omega\) is countable: enumerate it as \(f_0, f_1, f_2, \ldots\) Define the **diagonal sequence** \(d: \omega \to \{0,1\}\) by
+\[
+d(n) = 1 - f_n(n).
+\]
+That is, \(d\) disagrees with \(f_n\) at position \(n\) for every \(n\). Then \(d \in 2^\omega\), but \(d \neq f_n\) for any \(n\) (since \(d(n) \neq f_n(n)\)). This contradicts the assumption that \(f_0, f_1, f_2, \ldots\) is an enumeration of all of \(2^\omega\). Therefore \(2^\omega\) is uncountable.
+</div>
+
+<div class="example">
+<strong>Explicit diagonal: the first few rows.</strong>
+
+Imagine the following (hypothetical) list of binary sequences:
+\[
+\begin{array}{c|cccccc}
+n & 0 & 1 & 2 & 3 & 4 & \cdots \\ \hline
+f_0 & \mathbf{0} & 1 & 1 & 0 & 1 & \cdots \\
+f_1 & 1 & \mathbf{1} & 0 & 1 & 0 & \cdots \\
+f_2 & 0 & 0 & \mathbf{1} & 1 & 1 & \cdots \\
+f_3 & 1 & 1 & 0 & \mathbf{0} & 0 & \cdots \\
+f_4 & 0 & 1 & 1 & 1 & \mathbf{1} & \cdots \\
+\vdots & & & & & & \ddots
+\end{array}
+\]
+The diagonal entries (bolded) are \(f_0(0) = 0, f_1(1) = 1, f_2(2) = 1, f_3(3) = 0, f_4(4) = 1, \ldots\) The diagonal sequence \(d\) flips each: \(d = 1, 0, 0, 1, 0, \ldots\) This sequence \(d\) differs from every \(f_n\) in the list, showing the list was incomplete.
+</div>
+
+<div class="remark">
+The same argument shows \(|\mathbb{R}| > \aleph_0\) directly, by working with decimal expansions (with care about non-uniqueness at terminating decimals). The identification \(|\mathbb{R}| = 2^{\aleph_0} = |\mathcal{P}(\omega)|\) (via binary expansions and the bijection \(f \leftrightarrow \{n : f(n) = 1\}\)) then gives \(|\mathbb{R}| > \aleph_0 = |\mathbb{N}|\). Bridge remark: the diagonal argument is the prototype for the proof of Cantor's theorem (\(|X| < |\mathcal{P}(X)|\)) and for Gödel's diagonal lemma in incompleteness theory. It reappears in forcing as the argument that a Cohen real \(g \notin M\): for each \(r \in M\), the set \(D_r = \{s \in 2^{<\omega} : s \text{ disagrees with } r \text{ somewhere}\}\) is dense, so \(g \neq r\).
+</div>
+
+## Section 22.3: Ordinal Exponentiation and \(\varepsilon_0\)
+
+<div class="example">
+<strong>\(\omega^\omega\) as the smallest ordinal exceeding all finite towers.</strong>
+
+By definition, \(\omega^\omega = \sup_{n < \omega} \omega^n\). We compute the first few values:
+\[
+\omega^0 = 1, \quad \omega^1 = \omega, \quad \omega^2 = \omega \cdot \omega, \quad \omega^3 = \omega^2 \cdot \omega, \quad \ldots
+\]
+Each \(\omega^n\) is a limit ordinal strictly greater than all \(\omega^k\) for \(k < n\). The ordinal \(\omega^\omega\) is then the supremum of the sequence \(1, \omega, \omega^2, \omega^3, \ldots\) — the smallest ordinal greater than each \(\omega^n\).
+
+To visualize: \(\omega^n\) is the order type of \(n\)-tuples of natural numbers under the lexicographic order. So \(\omega^2\) consists of all pairs \((a, b)\) ordered lexicographically, \(\omega^3\) consists of all triples, etc. The ordinal \(\omega^\omega\) consists of all finite sequences of natural numbers, ordered lexicographically: first by length, then lexicographically within each length class. Every countable ordinal below \(\omega^\omega\) has a Cantor Normal Form using only finitely many \(\omega^n\) terms — \(\omega^\omega\) is the first ordinal whose normal form requires arbitrarily large exponents.
+</div>
+
+<div class="example">
+<strong>The fixed point \(\varepsilon_0 = \omega^{\omega^{\omega^{\cdots}}}\).</strong>
+
+Define a sequence \(\alpha_0 = \omega\) and \(\alpha_{n+1} = \omega^{\alpha_n}\):
+\[
+\alpha_0 = \omega, \quad \alpha_1 = \omega^\omega, \quad \alpha_2 = \omega^{\omega^\omega}, \quad \alpha_3 = \omega^{\omega^{\omega^\omega}}, \quad \ldots
+\]
+Set \(\varepsilon_0 = \sup_{n < \omega} \alpha_n\). Then:
+\[
+\omega^{\varepsilon_0} = \omega^{\sup_n \alpha_n} = \sup_n \omega^{\alpha_n} = \sup_n \alpha_{n+1} = \varepsilon_0.
+\]
+So \(\varepsilon_0\) is a fixed point of \(\alpha \mapsto \omega^\alpha\): it satisfies \(\omega^{\varepsilon_0} = \varepsilon_0\). It is the *least* such fixed point, since any fixed point \(\beta\) of \(\alpha \mapsto \omega^\alpha\) must satisfy \(\beta \geq \omega^0 = 1\), \(\beta = \omega^\beta \geq \omega\), \(\beta = \omega^\beta \geq \omega^\omega\), etc., giving \(\beta \geq \varepsilon_0\) by induction.
+
+In proof theory, \(\varepsilon_0\) is the "proof-theoretic ordinal" of Peano Arithmetic: transfinite induction up to \(\varepsilon_0\) is exactly what PA cannot prove, but ZFC can. This gives a precise measure of the strength of first-order arithmetic relative to set theory.
+</div>
+
+## Section 22.4: The Hartogs Number and Well-Orderability
+
+<div class="definition">
+The <strong>Hartogs number</strong> \(\aleph(X)\) of a set \(X\) is the least ordinal \(\alpha\) such that there is no injection \(\alpha \hookrightarrow X\). Equivalently, \(\aleph(X)\) is the least ordinal that cannot be embedded into \(X\).
+</div>
+
+<div class="theorem">
+For any set \(X\), \(\aleph(X)\) is a cardinal (the least cardinal not embeddable into \(X\)), and \(\aleph(X)\) exists without assuming AC.
+</div>
+
+<div class="proof">
+The set \(\{\alpha \in \mathbf{Ord} : \exists \text{ injection } \alpha \hookrightarrow X\}\) is a set by Replacement (the injections live in \(\mathcal{P}(X \times X)\)), and is an initial segment of the ordinals, hence is an ordinal \(\alpha_0\). Set \(\aleph(X) = \alpha_0\).
+</div>
+
+<div class="example">
+\(\aleph(\omega) = \omega_1\): the least ordinal not embeddable into \(\omega\) is \(\omega_1\) (the first uncountable ordinal). More generally, \(\aleph(\aleph_\alpha) = \aleph_{\alpha+1}\) under AC. Without AC, the Hartogs number provides a canonical successor operation that bypasses the need for well-ordering.
+</div>
+
+<div class="remark">
+The Hartogs number is critical in the development of cardinals without AC. Under AC, every set is well-orderable and \(|X| = \aleph(X)\) iff \(X\) is an infinite cardinal. Without AC, there may be sets of incomparable cardinalities, but the Hartogs number always gives a strictly larger set. This is used in the proof of the Schröder–Bernstein theorem from trichotomy: if cardinals are linearly ordered, then every infinite cardinal has a definite successor. Bridge remark: Hartogs numbers appear in the forcing context when working in symmetric models — models where AC may fail. In such models, the Hartogs number of the set of added reals can be collapsed, producing strange cardinals.
+</div>
+
+---
+
+# Chapter 23: Set-Theoretic Topology and the Real Line
+
+The real line is the primary testing ground for set-theoretic questions. Many combinatorial principles — CH, MA, PFA — have beautiful and surprising consequences for the topology of \(\mathbb{R}\) and related spaces. This chapter explores those connections.
+
+## Section 23.1: Suslin's Problem
+
+Suslin's Problem asks whether every complete dense linear order without endpoints that satisfies the **countable chain condition** (every family of disjoint open intervals is countable) must be isomorphic to \(\mathbb{R}\). The real line itself satisfies all these hypotheses — but are there "Suslin lines" that look locally like \(\mathbb{R}\) but are not \(\mathbb{R}\)?
+
+<div class="definition">
+A <strong>Suslin line</strong> is a complete dense linear order without endpoints that satisfies the ccc but is not separable (i.e., has no countable dense subset). Equivalently, it satisfies all the hypotheses of the characterization of \(\mathbb{R}\) by Cantor except for separability.
+</div>
+
+<div class="theorem">
+The existence of a Suslin line is independent of ZFC:
+<ul>
+<li>A Suslin line exists if and only if a Suslin tree exists.</li>
+<li>Suslin trees exist in Gödel's \(L\) (indeed, \(\Diamond \Rightarrow\) Suslin tree).</li>
+<li>Martin's Axiom + \(\neg\)CH implies there are no Suslin lines (Solovay–Tennenbaum, 1971).</li>
+</ul>
+</div>
+
+<div class="proof">
+(Sketch of the equivalence) Given a Suslin tree \(T\), form the set of maximal branches of \(T\) with the lexicographic order — this is a Suslin line. Conversely, given a Suslin line \(L\), form a tree whose nodes are closed intervals of \(L\) ordered by reverse inclusion — this is a Suslin tree. The ccc of \(L\) ensures the tree has no uncountable antichain.
+</div>
+
+<div class="remark">
+The independence of Suslin's Problem was the first natural topological question shown to be independent of ZFC by forcing. It motivated the development of iterated forcing (Solovay–Tennenbaum) and is a touchstone example for the interaction between combinatorial set theory and topology. Bridge remark: The same methods (iterated ccc forcing) were later used to prove the consistency of MA + ¬CH, which in turn implies many topological regularity properties.
+</div>
+
+## Section 23.2: The Baire Category Theorem and Cardinal Characteristics
+
+The Baire Category Theorem states that in a complete metric space, any countable intersection of dense open sets is dense. Cardinal characteristics of the continuum measure how far this result can be extended.
+
+<div class="theorem">
+<strong>Baire Category Theorem.</strong> Let \(X\) be a complete metric space (or compact Hausdorff space). If \(\{U_n : n < \omega\}\) is a countable family of dense open sets, then \(\bigcap_n U_n\) is dense.
+</div>
+
+<div class="remark">
+Martin's Axiom extends this: under MA, if \(\{D_\alpha : \alpha < \kappa\}\) is a family of fewer than \(2^{\aleph_0}\) dense open sets in a compact space satisfying ccc, then \(\bigcap_\alpha D_\alpha\) is nonempty. This is precisely why MA implies that every set of reals of size \(< 2^{\aleph_0}\) is meager (it is contained in the complement of a family of fewer than \(2^{\aleph_0}\) dense open sets).
+
+The cardinal \(\text{cov}(\mathcal{M})\) (covering number of the meager ideal) measures the minimum number of meager sets needed to cover \(\mathbb{R}\). Under ZFC alone, \(\aleph_1 \leq \text{cov}(\mathcal{M}) \leq 2^{\aleph_0}\), and MA implies \(\text{cov}(\mathcal{M}) = 2^{\aleph_0}\). This is one face of the Cichoń diagram.
+</div>
+
+## Section 23.3: Measure Theory and the Null Ideal
+
+<div class="definition">
+The <strong>Lebesgue null ideal</strong> \(\mathcal{N}\) on \(\mathbb{R}\) consists of all sets of Lebesgue measure zero. The four Cichoń characteristics of \(\mathcal{N}\) are:
+<ul>
+<li>\(\text{add}(\mathcal{N})\): the least \(\kappa\) such that \(\kappa\) null sets can cover a non-null set.</li>
+<li>\(\text{cov}(\mathcal{N})\): the least \(\kappa\) such that \(\kappa\) null sets cover \(\mathbb{R}\).</li>
+<li>\(\text{non}(\mathcal{N})\): the least cardinality of a non-null set (i.e., the least size of a set of positive outer measure).</li>
+<li>\(\text{cof}(\mathcal{N})\): the cofinality of \(\mathcal{N}\) (the least size of a cofinal subfamily).</li>
+</ul>
+</div>
+
+<div class="example">
+<strong>Random real forcing and the null ideal.</strong> Let \(\mathbb{B}\) be the measure algebra (Borel sets modulo null sets, with the Boolean operations), ordered by \(B \leq C\) iff \(B \subseteq C\) up to a null set. This is the "random real forcing." Adding a single random real \(r\) over a ground model \(M\) produces a real that avoids every null Borel set coded in \(M\): for every Borel null set \(N \in M\), the condition "\(r \notin N\)" is forced. This is the set-theoretic explanation of why a "randomly chosen" real has measure-theoretic regularity properties. In terms of the Cichoń diagram, iterating random real forcing \(\aleph_2\) times (with countable support) produces a model where \(\text{cov}(\mathcal{N}) = \aleph_2 = 2^{\aleph_0}\) while \(\text{non}(\mathcal{N}) = \aleph_1\).
+</div>
+
+## Section 23.4: The Continuum Hypothesis and Topology
+
+<div class="theorem">
+Under CH, every separable metrizable space of size \(\leq \aleph_1 = \mathfrak{c}\) is homeomorphic to a subspace of the Cantor set \(2^\omega\). (This follows from the universality of the Cantor set for separable metrizable spaces combined with CH giving \(\aleph_1 = \mathfrak{c}\).)
+</div>
+
+<div class="theorem">
+Under MA + \(\neg\)CH: there exist two sets of reals \(A, B \subseteq \mathbb{R}\), each of cardinality \(\aleph_1 < \mathfrak{c}\), whose union is not a measure-zero set. This fails under CH.
+</div>
+
+<div class="remark">
+These results illustrate how the value of \(2^{\aleph_0}\) affects the topological structure of \(\mathbb{R}\). Under CH, the real line is "thin": every uncountable set is as large as possible. Under MA + \(\neg\)CH, there is a rich spectrum of intermediate cardinalities, and topological properties become more nuanced.
+</div>
+
+---
+
+# Chapter 24: Inner Models and the Fine Structure of L
+
+## Section 24.1: The Condensation Lemma — Full Proof
+
+The Condensation Lemma is the key tool for proving GCH in \(L\). We give a more detailed presentation than in Chapter 13.
+
+<div class="theorem">
+<strong>Condensation Lemma.</strong> Let \(\alpha\) be an ordinal and \(M \prec (L_\alpha, \in)\) an elementary substructure. Let \(\pi: M \to \bar{M}\) be the Mostowski collapse. Then \(\bar{M} = L_\beta\) for some \(\beta \leq \alpha\).
+</div>
+
+<div class="proof">
+Since \(\pi\) is the Mostowski collapse, \(\bar{M}\) is a transitive set and \(\pi\) is an isomorphism \((M, \in) \cong (\bar{M}, \in)\). The key observation is that \(\bar{M}\) is a transitive model of "\(V = L\)" (relativized to \(\bar{M}\)), because \(M \prec L_\alpha\) and \(L_\alpha\) satisfies "\(V = L\)." Since \(\bar{M}\) is transitive and satisfies "\(V = L\)," every element of \(\bar{M}\) is constructible, so \(\bar{M} \subseteq L\). Moreover, \(\bar{M}\) is closed under the constructibility operations, so it is an initial segment of the constructible hierarchy: if \(\beta = \mathbf{Ord} \cap \bar{M}\) (the ordinals of \(\bar{M}\)), then \(\bar{M} = L_\beta\).
+</div>
+
+<div class="remark">
+The Condensation Lemma is what makes \(L\) so canonical. It says that any "internal view" of \(L\) that is consistent with first-order logic must itself be a level of \(L\). This is the set-theoretic analogue of the statement that any elementary substructure of a well-founded model is again well-founded — but much stronger. Bridge remark: the failure of condensation in forcing extensions (i.e., \(V[G] \not\models V = L\) typically) is precisely why forcing can produce models of \(\neg\)GCH. In a forcing extension, the Mostowski collapse of an elementary substructure need not land in \(L\), so the argument breaks down.
+</div>
+
+## Section 24.2: The Global Square \(\square_\kappa\)
+
+<div class="definition">
+Let \(\kappa\) be an uncountable cardinal. The <strong>square principle \(\square_\kappa\)</strong> asserts: there exists a sequence \(\langle C_\alpha : \alpha \in \text{Lim}(\kappa^+) \rangle\) (where \(\text{Lim}(\kappa^+)\) is the set of limit ordinals below \(\kappa^+\)) such that:
+<ol>
+<li>Each \(C_\alpha\) is a club in \(\alpha\).</li>
+<li>If \(\text{cf}(\alpha) < \kappa\), then \(|C_\alpha| < \kappa\).</li>
+<li>Coherence: if \(\beta\) is a limit point of \(C_\alpha\), then \(C_\beta = C_\alpha \cap \beta\).</li>
+</ol>
+Such a sequence is called a <strong>\(\square_\kappa\)-sequence</strong>.
+</div>
+
+<div class="theorem">
+\(\square_\kappa\) holds in \(L\) for every regular uncountable cardinal \(\kappa\). Moreover, \(\square_\kappa\) implies that there is no Kurepa tree at \(\kappa^+\).
+</div>
+
+<div class="theorem">
+The failure of \(\square_\kappa\) has large cardinal strength: if \(\square_\kappa\) fails for some regular \(\kappa\), then there exist inner models with measurable cardinals.
+</div>
+
+<div class="remark">
+\(\square_\kappa\) is a "coherence" principle that imposes global order on the combinatorics of \(\kappa^+\). Its failure is closely tied to the reflection properties of large cardinals: supercompact cardinals imply the failure of many instances of \(\square\), and forcing axioms like PFA are inconsistent with \(\square_{\aleph_1}\). The interaction between \(\square\), forcing axioms, and inner models is a central theme of contemporary set theory. Bridge remark: \(\square_\kappa\) will appear again in Chapter 25 in the context of the Mitchell order and inner model theory.
+</div>
+
+## Section 24.3: Core Model Theory (Overview)
+
+The **core model** \(K\) (or **Dodd–Jensen core model**) is a canonical inner model that extends \(L\) to accommodate measurable cardinals and beyond.
+
+<div class="definition">
+The <strong>core model</strong> \(K\) is (informally) the largest canonical inner model that does not contain too many large cardinals. More precisely, \(K\) is constructed from an **extender sequence** — a coherent system of ultrafilters encoding the large cardinal structure below some threshold.
+</div>
+
+The core model has several key properties:
+<ul>
+<li>\(L \subseteq K \subseteq V\).</li>
+<li>\(K\) satisfies GCH.</li>
+<li>Covering theorem: if there is no inner model with a measurable cardinal, then for every uncountable set \(X\) of ordinals, there exists \(Y \in K\) with \(X \subseteq Y\) and \(|Y| = |X|\).</li>
+<li>The \(\square_\kappa\) holds in \(K\) for all uncountable \(\kappa\).</li>
+</ul>
+
+<div class="remark">
+Core model theory is a technical and active area of research. The goal is to construct, for each level of the large cardinal hierarchy, a canonical inner model that "explains" that level. This has been achieved through measurable cardinals (Mitchell), strong cardinals (Steel), Woodin cardinals (Steel–Woodin), and is being extended toward supercompact cardinals (the "Ultimate-\(L\)" program of Woodin). Each step requires increasingly sophisticated fine structure theory and extender technology.
+</div>
+
+---
+
+# Chapter 25: Advanced Forcing Techniques
+
+## Section 25.1: Iterated Forcing
+
+Single forcing extensions are powerful, but many independence results require adding many generic objects simultaneously or sequentially. Iterated forcing formalizes the process of forcing repeatedly.
+
+<div class="definition">
+A <strong>two-step forcing iteration</strong> is a pair \((\mathbb{P}, \dot{\mathbb{Q}})\) where \(\mathbb{P}\) is a forcing notion and \(\dot{\mathbb{Q}}\) is a \(\mathbb{P}\)-name for a forcing notion. The iteration \(\mathbb{P} * \dot{\mathbb{Q}}\) consists of pairs \((p, \dot{q})\) with \(p \in \mathbb{P}\) and \(\dot{q}\) a \(\mathbb{P}\)-name for a condition in \(\dot{\mathbb{Q}}\), ordered by \((p, \dot{q}) \leq (p', \dot{q}')\) iff \(p \leq p'\) and \(p \Vdash_{\mathbb{P}} \dot{q} \leq \dot{q}'\).
+</div>
+
+<div class="theorem">
+If \(G * H\) is \(M\)-generic for \(\mathbb{P} * \dot{\mathbb{Q}}\), then \(G\) is \(M\)-generic for \(\mathbb{P}\) and \(H\) is \(M[G]\)-generic for \(\dot{\mathbb{Q}}^G\), and \(M[G * H] = M[G][H]\).
+</div>
+
+<div class="definition">
+A <strong>finite support iteration</strong> of length \(\alpha\) is a sequence \(\langle \mathbb{P}_\beta, \dot{\mathbb{Q}}_\beta : \beta < \alpha \rangle\) where each \(\mathbb{P}_\beta\) is defined as the inverse limit of the previous stages, and conditions are functions \(p: \alpha \to V\) with finite support (finitely many non-trivial coordinates).
+</div>
+
+<div class="theorem">
+<strong>Finite support iterations preserve the ccc:</strong> if each \(\dot{\mathbb{Q}}_\beta\) is forced to be ccc, then the finite support iteration of length \(\alpha\) is also ccc.
+</div>
+
+<div class="proof">
+(Sketch) Suppose \(\{p_\gamma : \gamma < \omega_1\}\) is an antichain in the iteration \(\mathbb{P}_\alpha\). Since each condition has finite support, and there are only countably many possible finite sets of coordinates, by the \(\Delta\)-system lemma there is an uncountable subfamily \(A\) of conditions whose supports form a \(\Delta\)-system with root \(r\). By the ccc of each iterand, one can find compatible conditions in \(A\), contradicting the antichain property.
+</div>
+
+<div class="example">
+<strong>Building a model of MA + \(\neg\)CH.</strong> Start from a model \(M\) of ZFC + GCH. Perform a finite support iteration of length \(\aleph_2^M\), at each stage adding a generic filter for a ccc poset coding one of the \(\aleph_2\) many dense sets we need to meet. The result is a model where every ccc poset with \(\aleph_1\) many dense subsets has a generic filter — that is, MA holds. Since we performed \(\aleph_2\) many stages of adding Cohen reals (at the appropriate stages), \(2^{\aleph_0} = \aleph_2\) in the extension. So MA + \(\neg\)CH holds in \(M[G]\).
+</div>
+
+## Section 25.2: Proper Forcing in Detail
+
+<div class="definition">
+A forcing notion \(\mathbb{P}\) is <strong>proper</strong> if for every sufficiently large regular cardinal \(\theta\) and every countable elementary submodel \(M \prec H(\theta)\) with \(\mathbb{P} \in M\), every condition \(p \in \mathbb{P} \cap M\) has an extension \(q \leq p\) that is \((M, \mathbb{P})\)-generic: for every dense \(D \in M\), the set \(D \cap M\) is predense below \(q\).
+</div>
+
+<div class="remark">
+The definition says: a proper forcing lets us extend any condition to one that is "compatible with all the demands coming from \(M\)." Proper forcings do not collapse \(\omega_1\): the \((M, \mathbb{P})\)-generic condition ensures that the filter \(G\) will meet all dense sets in \(M\), preserving all the "small" structure of \(M\) at \(\omega_1\).
+
+Every ccc forcing is proper (trivially), and every countably closed forcing (\(\omega\)-closed: any countable descending chain has a lower bound) is proper. The class of proper forcings is closed under countable support iterations (by Shelah's theorem), making it the natural setting for long iterations without collapsing \(\omega_1\).
+</div>
+
+<div class="example">
+<strong>Sacks forcing is proper.</strong> Sacks forcing \(\mathbb{S}\) consists of all perfect trees \(T \subseteq 2^{<\omega}\) (every node has two extensions), ordered by inclusion (smaller tree = stronger condition). A generic filter \(G\) over \(\mathbb{S}\) determines a real \(r = \bigcap_{T \in G} [T]\) (the unique branch through all trees in \(G\)). Sacks forcing is proper: given a countable model \(M \prec H(\theta)\) and a Sacks condition \(T \in M\), one can construct a "fusion sequence" (a decreasing sequence of trees in \(M\) whose intersection is a perfect tree that is \((M, \mathbb{S})\)-generic). The resulting real \(r\) is a **Sacks real** or **minimal real**: it generates no intermediate degrees — any real definable from \(r\) over \(M\) is either already in \(M\) or computes \(r\).
+</div>
+
+## Section 25.3: Forcing and Stationary Sets
+
+<div class="definition">
+A forcing notion \(\mathbb{P}\) <strong>preserves stationary subsets of \(\omega_1\)</strong> if whenever \(S \subseteq \omega_1\) is stationary in the ground model, \(S\) remains stationary in any generic extension \(M[G]\).
+</div>
+
+<div class="theorem">
+Any proper forcing preserves stationary subsets of \(\omega_1\). In particular, adding Cohen reals, random reals, and Sacks reals all preserve stationarity.
+</div>
+
+<div class="example">
+<strong>Lévy collapse destroys stationarity.</strong> Let \(\mathbb{P} = \text{Col}(\omega, \omega_1)\) be the Lévy collapse, which collapses \(\omega_1\) to be countable. In the extension \(M[G]\), the former \(\omega_1\) is countable, so every subset of \(\omega_1^M\) becomes countable in \(M[G]\) — in particular, a set that was stationary in \(\omega_1^M\) is no longer stationary (since \(\omega_1^M\) is no longer uncountable). This is a non-proper forcing: the Lévy collapse collapses \(\omega_1\), which is the prototypical violation of properness.
+</div>
+
+<div class="theorem">
+<strong>Shelah's theorem.</strong> A forcing notion \(\mathbb{P}\) is proper if and only if it does not destroy stationarity of any subset of \([\lambda]^\omega\) for any uncountable \(\lambda\).
+</div>
+
+## Section 25.4: Large Cardinals and Forcing
+
+<div class="theorem">
+<strong>Lévy–Solovay Theorem.</strong> Let \(\kappa\) be a measurable cardinal and \(\mathbb{P}\) a forcing notion with \(|\mathbb{P}| < \kappa\). Then \(\kappa\) remains measurable in any generic extension \(M[G]\). More generally, any large cardinal property expressible by an elementary embedding \(j: V \to M\) with critical point \(\kappa\) is preserved by small forcing.
+</div>
+
+<div class="proof">
+(Sketch) Let \(\mathcal{U}\) be a \(\kappa\)-complete ultrafilter on \(\kappa\) in the ground model \(M\). Since \(|\mathbb{P}| < \kappa\) and \(\mathcal{U}\) is \(\kappa\)-complete, the filter \(\mathcal{U}\) generates a \(\kappa\)-complete ultrafilter in \(M[G]\): for any name \(\dot{A}\) for a subset of \(\kappa\), the set \(\{p \in G : p \Vdash \check{\alpha} \in \dot{A}\}\) is determined by the ultrafilter condition. The \(\kappa\)-completeness uses \(|\mathbb{P}| < \kappa\).
+</div>
+
+<div class="remark">
+The Lévy–Solovay theorem shows that "small" forcing cannot create or destroy large cardinals. To change the large cardinal structure, one needs forcings of size at least \(\kappa\). For example, to make \(\kappa\) non-measurable, one must force with a poset of size \(\geq \kappa\) — such as the Lévy collapse \(\text{Col}(\omega, \kappa)\), which makes \(\kappa\) countable. This is the starting point for Solovay's model: collapsing an inaccessible to \(\omega_1\) gives a model where all sets of reals are Lebesgue measurable (since the former inaccessible "looks measurable" from the perspective of reals).
+</div>
+
+---
+
+# Chapter 26: Descriptive Set Theory — Advanced Topics
+
+## Section 26.1: Uniformization and the Axiom of Choice
+
+<div class="definition">
+A set \(P \subseteq X \times Y\) is <strong>uniformized</strong> if there exists a function \(f: \text{proj}_X(P) \to Y\) such that the graph of \(f\) is a subset of \(P\) (i.e., \((x, f(x)) \in P\) for all \(x \in \text{proj}_X(P)\)). The <strong>uniformization problem</strong> asks: for which classes of sets does uniformization hold?
+</div>
+
+<div class="theorem">
+<strong>Kondo's Uniformization Theorem.</strong> Every coanalytic (\(\Pi^1_1\)) set \(P \subseteq X \times Y\) can be uniformized by a coanalytic function. More precisely, there exists a \(\Pi^1_1\) function \(f\) such that \(\text{graph}(f) \subseteq P\) and \(\text{dom}(f) = \text{proj}_X(P)\).
+</div>
+
+<div class="remark">
+The uniformization theorem is a descriptive-set-theoretic form of the Axiom of Choice: rather than asserting the existence of an arbitrary choice function, it asserts the existence of a "definable" choice function. Under PD (Projective Determinacy), the uniformization theorem extends through all levels of the projective hierarchy: every \(\Pi^1_{2n+1}\) set can be uniformized by a \(\Pi^1_{2n+1}\) function, and every \(\Sigma^1_{2n}\) set can be uniformized by a \(\Sigma^1_{2n}\) function (for \(n \geq 1\)).
+</div>
+
+## Section 26.2: The Perfect Set Theorem for Analytic Sets
+
+<div class="theorem">
+<strong>Perfect Set Theorem (Suslin, 1917).</strong> Every uncountable analytic set contains a perfect subset (a nonempty closed set with no isolated points) and hence has cardinality \(2^{\aleph_0}\).
+</div>
+
+<div class="proof">
+Let \(A = p[T]\) be an analytic set represented as the projection of a tree \(T \subseteq \omega^{<\omega} \times \omega^{<\omega}\). Suppose \(A\) is uncountable. We build a perfect set \(P \subseteq A\) by a Cantor-scheme argument: we construct a binary tree of finite conditions \((s_\sigma)_{\sigma \in 2^{<\omega}}\) in \(T\) such that \(s_{\sigma^\frown 0}\) and \(s_{\sigma^\frown 1}\) project to distinct elements of \(A\). The closure of the set of all projections of infinite branches through the \(s_\sigma\) is the desired perfect set. The construction uses the fact that \(T\) has uncountably many branches (since \(A\) is uncountable) and Koenig's Lemma–type arguments for splitting.
+</div>
+
+<div class="remark">
+The Perfect Set Theorem implies, under ZFC alone, that every analytic set satisfies CH "locally": it is either countable or has the full cardinality of the continuum. There is no analytic set of size \(\aleph_1\) when \(\aleph_1 < 2^{\aleph_0}\). This is a partial vindication of CH for definable sets — even if CH fails globally, it holds for all projections of Borel sets. Bridge remark: Under PD, the same holds for all projective sets: every projective set is either countable or contains a perfect subset.
+</div>
+
+## Section 26.3: Wadge Degrees
+
+<div class="definition">
+For \(A, B \subseteq \omega^\omega\), we say \(A\) is <strong>Wadge reducible</strong> to \(B\) (written \(A \leq_W B\)) if there exists a continuous function \(f: \omega^\omega \to \omega^\omega\) such that \(A = f^{-1}(B)\). The <strong>Wadge degree</strong> of \(A\) is its equivalence class under mutual Wadge reducibility.
+</div>
+
+<div class="theorem">
+<strong>Wadge's Lemma.</strong> Assuming AD, for any two sets \(A, B \subseteq \omega^\omega\), either \(A \leq_W B\) or \(\omega^\omega \setminus B \leq_W A\). In other words, Wadge degrees are linearly pre-ordered under AD.
+</div>
+
+<div class="theorem">
+<strong>Martin–Monk Theorem.</strong> Assuming AD, the Wadge hierarchy is well-founded and of length \(\theta\) (the supremum of all ordinals onto which \(\mathbb{R}\) can be surjected).
+</div>
+
+<div class="remark">
+The Wadge hierarchy is an extremely refined complexity hierarchy for subsets of \(\omega^\omega\), going far beyond the Borel and projective hierarchies. Under ZFC + AD (which is consistent), every set of reals has a precise location in this hierarchy. The Wadge degrees provide a canonical "ruler" for the complexity of definable sets of reals, and their structure is deeply connected to the combinatorics of ordinals up to \(\theta\).
+</div>
+
+---
+
+# Chapter 27: The Set-Theoretic Multiverse
+
+## Section 27.1: The Multiverse View of Set Theory
+
+Traditional set theory takes a "universist" view: there is one true universe \(V\) of all sets, and the axioms of ZFC plus large cardinals describe it. But the profusion of independence results — CH, GCH, Suslin's hypothesis, the Whitehead problem, and hundreds more — has led some set theorists to advocate for a "multiverse" view.
+
+The **set-theoretic multiverse** is the collection of all possible universes of set theory — all models of ZFC, all forcing extensions, all inner models, and all their combinations. Rather than asking "what is true?" we ask "what is true in which universes?" and study the structure of the multiverse itself.
+
+<div class="definition">
+A <strong>set-theoretic multiverse</strong> is a collection \(\mathcal{M}\) of models of ZFC closed under certain operations:
+<ul>
+<li>Forcing extensions: if \(M \in \mathcal{M}\) and \(G\) is \(M\)-generic for some \(\mathbb{P} \in M\), then \(M[G] \in \mathcal{M}\).</li>
+<li>Inner models: if \(M \in \mathcal{M}\), then \(L^M\) (the constructible universe as computed in \(M\)) is in \(\mathcal{M}\).</li>
+<li>Ground models: if \(M[G] \in \mathcal{M}\) for some generic \(G\), then \(M \in \mathcal{M}\).</li>
+</ul>
+</div>
+
+## Section 27.2: Hamkins's Multiverse Axioms
+
+Joel David Hamkins proposed a formal theory of the set-theoretic multiverse, characterized by "multiverse axioms" describing the richness and variety of the multiverse. Key axioms include:
+
+<ul>
+<li><strong>Well-foundedness mirage:</strong> Every universe appears ill-founded from the perspective of some other universe.</li>
+<li><strong>Forcing extension axiom:</strong> For every universe \(M\) and every forcing \(\mathbb{P} \in M\), there is a forcing extension \(M[G] \in \mathcal{M}\).</li>
+<li><strong>Ground model axiom:</strong> Every universe is a forcing extension of some inner model.</li>
+<li><strong>Countability:</strong> Every universe appears countable from the perspective of some larger universe.</li>
+</ul>
+
+<div class="remark">
+The multiverse view is philosophically heterodox: it denies that there is a unique "correct" universe of set theory. Hamkins argues that our intuitions about "the" universe of sets are actually intuitions about the multiverse — we naturally reason about forcing extensions and inner models, and the "truth" is spread across all universes. Critics (including Woodin) argue that the Ultimate-\(L\) program will eventually produce a canonical universe satisfying all natural mathematical principles, restoring the universist picture at a higher level of generality.
+</div>
+
+## Section 27.3: Woodin's \(\Omega\)-Logic and the Search for New Axioms
+
+<div class="definition">
+A sentence \(\varphi\) is <strong>\(\Omega\)-provable</strong> from a theory \(T\) (written \(T \vdash_\Omega \varphi\)) if for every complete Boolean algebra \(\mathbb{B}\) and every countable transitive model \(M\) of \(T\), we have \(V^\mathbb{B} \models \varphi\) (i.e., \(\varphi\) holds in every generic extension). \(\Omega\)-logic is thus the "forcing-invariant" fragment of set-theoretic reasoning.
+</div>
+
+<div class="theorem">
+Under the existence of a proper class of Woodin cardinals:
+<ol>
+<li>The set of \(\Omega\)-provable sentences is recursively enumerable (has an explicit enumeration).</li>
+<li>Every \(\Sigma^2_1\) sentence that is \(\Omega\)-consistent is \(\Omega\)-provable from ZFC + large cardinals.</li>
+<li>CH is \(\Omega\)-independent of ZFC: both CH and \(\neg\)CH are \(\Omega\)-consistent.</li>
+</ol>
+</div>
+
+<div class="remark">
+Woodin's \(\Omega\)-conjecture asserts that \(\Omega\)-logic is complete for \(\Sigma^2_1\) sentences under large cardinal axioms: every \(\Sigma^2_1\) sentence is either \(\Omega\)-provable or \(\Omega\)-refutable. If true, this would mean that large cardinal axioms completely determine the theory of \(H(\omega_2)\) (the collection of sets hereditarily of size \(\leq \aleph_1\)), a major step toward resolving CH. The conjecture remains open but has profound implications for the foundations of set theory.
+</div>
+
+---
+
+# Appendix C: Hints and Selected Solutions to Problem Sets
+
+## Part A Hints
+
+**A1.** For the second part, assume \(R_X \in X\). Then ask: is \(R_X \in R_X\)?  If \(R_X \in R_X\), then by definition of \(R_X\) (as \(\{x \in X : x \notin x\}\)), we get \(R_X \notin R_X\) — contradiction. If \(R_X \notin R_X\), then \(R_X \in X\) and \(R_X \notin R_X\), so by definition \(R_X \in R_X\) — contradiction. Either way contradicts the assumption, so \(R_X \notin X\).
+
+**A2.** For part (2): compute \((\omega+1) \cdot n\) by induction. \((\omega+1) \cdot 1 = \omega + 1\). \((\omega+1) \cdot 2 = (\omega+1) \cdot 1 + (\omega+1) = \omega + 1 + \omega + 1 = \omega \cdot 2 + 1\) (since \(1 + \omega = \omega\)). In general, \((\omega+1) \cdot n = \omega \cdot n + 1\). Then \((\omega+1) \cdot \omega = \sup_{n < \omega} (\omega \cdot n + 1) = \sup_{n < \omega} \omega \cdot n = \omega^2\), since \(\omega \cdot n + 1 < \omega \cdot (n+1)\) and \(\sup_n \omega \cdot n = \omega^2\).
+
+**A3.** The base cases \(\gamma = 0\): \((\alpha + \beta) + 0 = \alpha + \beta = \alpha + (\beta + 0)\). Successor: \((\alpha + \beta) + (\gamma + 1) = ((\alpha + \beta) + \gamma) + 1 = (\alpha + (\beta + \gamma)) + 1 = \alpha + ((\beta + \gamma) + 1) = \alpha + (\beta + (\gamma + 1))\). Limit: \((\alpha + \beta) + \lambda = \sup_{\xi < \lambda} ((\alpha + \beta) + \xi) = \sup_{\xi < \lambda} (\alpha + (\beta + \xi)) = \alpha + \sup_{\xi < \lambda} (\beta + \xi) = \alpha + (\beta + \lambda)\).
+
+**A4.** For (1): use induction. \(|V_0| = |\emptyset| = 0 = \beth_0\)... wait, \(\beth_0 = \aleph_0\) and \(|V_\omega| = \aleph_0\). Adjust: \(|V_n| = n\) for finite \(n\), \(|V_\omega| = \aleph_0 = \beth_0\), \(|V_{\omega+1}| = |\mathcal{P}(V_\omega)| = 2^{\aleph_0} = \beth_1\), etc. So \(|V_{\omega+\alpha}| = \beth_\alpha\) for all \(\alpha \geq 0\).
+
+**A5.** Replacement gives \(\text{Im}(f) = \{n^2 : n \in \omega\}\) as a set. Separation with \(\varphi(m) = \exists n \in \omega\,(m = n \cdot n)\) applied to \(\omega\) gives \(\{m \in \omega : \exists n \in \omega\,(m = n \cdot n)\}\). These are the same set: a natural number \(m\) is in the image of \(n \mapsto n^2\) iff there exists \(n\) with \(m = n^2\), i.e., iff \(m\) is a perfect square.
+
+## Part B Hints
+
+**B1.** For (3): use the binary expansion bijection \(\mathcal{P}(\mathbb{N}) \to [0,1]\) via \(A \mapsto \sum_{n \in A} 2^{-(n+1)}\). This is not quite a bijection (dyadic rationals have two representations), but the set of exceptions is countable, so Schröder–Bernstein applies. For (4): a continuous function is determined by its values on \(\mathbb{Q}\), giving an injection \(C(\mathbb{R}, \mathbb{R}) \hookrightarrow \mathbb{R}^\mathbb{Q}\). Since \(|\mathbb{R}^\mathbb{Q}| = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}\) and the constant functions give an injection \(\mathbb{R} \hookrightarrow C(\mathbb{R},\mathbb{R})\), Schröder–Bernstein gives \(|C(\mathbb{R},\mathbb{R})| = 2^{\aleph_0}\).
+
+**B2.** For (1): König's theorem says \(\sum_{n < \omega} \aleph_n < \prod_{n < \omega} \aleph_{n+1}\), i.e., \(\aleph_\omega < \aleph_\omega^{\aleph_0}\) (a weaker form). For the specific claim that \(2^{\aleph_0} \neq \aleph_\omega\): suppose \(2^{\aleph_0} = \aleph_\omega\). Then \(2^{\aleph_0} = \aleph_\omega\), but \(\text{cf}(\aleph_\omega) = \omega\), so by König, \(\aleph_\omega^{\text{cf}(\aleph_\omega)} = \aleph_\omega^\omega > \aleph_\omega\). But \(\aleph_\omega^\omega = (2^{\aleph_0})^\omega = 2^{\aleph_0 \cdot \omega} = 2^{\aleph_0} = \aleph_\omega\), contradiction.
+
+**B3.** For (1): by the GCH exponentiation formula, since \(\text{cf}(\aleph_\omega) = \omega \leq \aleph_1\), we are in the case \(\text{cf}(\lambda) \leq \kappa \leq \lambda\) with \(\kappa = \aleph_1\) and \(\lambda = \aleph_\omega\). Wait — the formula gives \(\kappa^\lambda = \lambda^+\) if \(\kappa \leq \text{cf}(\lambda)\) and \(\kappa^\lambda = \lambda\) if \(\text{cf}(\lambda) < \kappa \leq \lambda\). Here \(\aleph_\omega^{\aleph_1}\): \(\kappa = \aleph_\omega\), \(\lambda = \aleph_1\). Since \(\lambda = \aleph_1 < \aleph_\omega = \kappa\), this falls under the case of exponentiating a larger cardinal to a smaller one. Under GCH: \(\kappa^\lambda = \kappa^+\) if \(\text{cf}(\kappa) \leq \lambda\), i.e., \(\omega \leq \aleph_1\) — true. So \(\aleph_\omega^{\aleph_1} = \aleph_{\omega+1}\). ✓
+
+## Part C Hints
+
+**C1.** For (1) (ccc): any antichain in \(2^{<\omega}\) consists of pairwise incompatible strings. Two strings are incompatible iff neither extends the other. Any antichain of binary strings is countable because: map each string \(s\) of length \(n\) to the interval \([0.\underbrace{s}_n, 0.\underbrace{s}_n + 2^{-n})\) in \([0,1]\). Pairwise incompatible strings map to disjoint intervals, and \([0,1]\) contains only countably many disjoint sub-intervals (since \(\mathbb{R}\) is second-countable). For (5) (\(g \notin M\)): for each \(r \in M \cap 2^\omega\), the set \(D_r = \{s \in 2^{<\omega} : \exists n\,(s(n) \neq r(n))\}\) is dense (any string can be extended to disagree with \(r\) somewhere). Since \(G\) is \(M\)-generic, \(G \cap D_r \neq \emptyset\), so \(g = \bigcup G\) disagrees with \(r\). Since this holds for all \(r \in M\), \(g \notin M\).
+
+**C2.** For (1): if \(p \Vdash \varphi\) and \(q \leq p\), then any generic \(G\) containing \(q\) also contains \(p\) (since \(G\) is upward closed under \(\geq\)). Since \(p \in G\) and \(p \Vdash \varphi\), the Truth Lemma gives \(M[G] \models \varphi\). Since \(G\) was arbitrary, \(q \Vdash \varphi\). For (3): given \(\varphi\), the set \(\{p : p \Vdash \varphi \text{ or } p \Vdash \neg\varphi\}\) is dense because: if \(p\) does not force \(\neg\varphi\), then there exists \(q \leq p\) forcing \(\varphi\) (by definition of forcing for negation).
+
+## Part D Hints
+
+**D1.** For (1): for each ZFC axiom, identify which property of \(\kappa\) is needed. Infinity: \(\omega \in V_\kappa\) since \(\kappa > \omega\). Replacement: if \(\varphi\) defines a function on a set \(x \in V_\kappa\), the image has rank \(\leq \sup_{y \in x} (\text{rank}(\varphi(y))+1)\); regularity of \(\kappa\) ensures this sup is \(< \kappa\) since it is the union of \(|x| < \kappa\) many ordinals each \(< \kappa\). Power set: for \(x \in V_\kappa\), \(\mathcal{P}(x) \in V_\kappa\) because \(|\mathcal{P}(x)| = 2^{|x|} < \kappa\) (strong limit property).
+
+**D2.** For (2): \(j(\alpha) = \alpha\) for \(\alpha < \kappa\) because the equivalence class of the constant function \(c_\alpha: \kappa \to \{\alpha\}\) satisfies \([c_\alpha] = j(\alpha)\), and \([c_\alpha]\) computes to \(\alpha\) by Łoś's theorem and the fact that \(\alpha < \kappa\). For \(j(\kappa) > \kappa\): consider the equivalence class \([\text{id}]\) where \(\text{id}: \kappa \to \kappa\) is the identity. By Łoś, \([\text{id}] < j(\kappa) = [c_\kappa]\)... actually \(j(\kappa)\) is the equivalence class of the constant function \(c_\kappa\), and \([\text{id}] < [c_\kappa]\) because \(\{\alpha < \kappa : \text{id}(\alpha) < \kappa\} = \kappa \in \mathcal{U}\). Moreover \(\kappa = [\hat{\kappa}]\) where \(\hat{\kappa}\) is the constant-\(\kappa\) function. The actual critical point calculation uses the fact that \(j(\kappa) = [\text{id}_\kappa]\) in many standard ultrapower constructions, giving \(j(\kappa) > \kappa\).
+
+---
+
+# Appendix D: Notation and Conventions
+
+The following table collects the principal notation used throughout these notes.
+
+| Symbol | Meaning |
+|--------|---------|
+| \(\in\) | Set membership |
+| \(\subseteq\) | Subset (not necessarily proper) |
+| \(\subsetneq\) | Proper subset |
+| \(\emptyset\) | Empty set |
+| \(\mathcal{P}(X)\) | Power set of \(X\) |
+| \(\bigcup X\) | Union of all elements of \(X\) |
+| \(\bigcap X\) | Intersection of all elements of \(X\) (for \(X \neq \emptyset\)) |
+| \(\omega\) | The first infinite ordinal (= set of natural numbers) |
+| \(\omega_\alpha, \aleph_\alpha\) | The \(\alpha\)-th infinite cardinal |
+| \(\mathbf{Ord}\) | The proper class of all ordinals |
+| \(\mathbf{Card}\) | The proper class of all cardinals |
+| \(V_\alpha\) | The \(\alpha\)-th level of the von Neumann hierarchy |
+| \(L_\alpha\) | The \(\alpha\)-th level of the constructible hierarchy |
+| \(\text{cf}(\alpha)\) | Cofinality of the ordinal/cardinal \(\alpha\) |
+| \(|X|\) | Cardinality of \(X\) |
+| \(\kappa^+\) | Successor cardinal of \(\kappa\) |
+| \(\beth_\alpha\) | The \(\alpha\)-th beth number (\(\beth_0 = \aleph_0\), \(\beth_{\alpha+1} = 2^{\beth_\alpha}\)) |
+| \(\mathfrak{c}\) | Cardinality of the continuum \(= 2^{\aleph_0}\) |
+| \(\mathfrak{b}, \mathfrak{d}, \mathfrak{p}, \mathfrak{t}, \mathfrak{s}, \mathfrak{r}\) | Cardinal characteristics of the continuum |
+| \(\Diamond\) | Diamond principle (Jensen) |
+| \(\square_\kappa\) | Square principle at \(\kappa\) (Jensen) |
+| \(p \Vdash \varphi\) | Condition \(p\) forces formula \(\varphi\) |
+| \(M[G]\) | Generic extension of \(M\) by \(G\) |
+| \(\text{Ult}(V, \mathcal{U})\) | Ultrapower of \(V\) by ultrafilter \(\mathcal{U}\) |
+| \(j: V \to M\) | Elementary embedding (large cardinal embedding) |
+| \(\text{crit}(j)\) | Critical point of elementary embedding \(j\) |
+| \(\text{pcf}(A)\) | Set of possible cofinalities of products of sets in \(A\) |
+| \(\Sigma^1_n, \Pi^1_n, \Delta^1_n\) | Levels of the projective hierarchy |
+| \(\mathbf{\Sigma}^0_\alpha, \mathbf{\Pi}^0_\alpha\) | Levels of the Borel hierarchy |
+| AD | Axiom of Determinacy |
+| PD | Projective Determinacy |
+| CH | Continuum Hypothesis (\(2^{\aleph_0} = \aleph_1\)) |
+| GCH | Generalized Continuum Hypothesis |
+| SCH | Singular Cardinal Hypothesis |
+| MA | Martin's Axiom |
+| PFA | Proper Forcing Axiom |
+| MM | Martin's Maximum |
+
+---
+
+# Appendix E: Index of Major Theorems
+
+The following index lists the major theorems, lemmas, and definitions of these notes by name and section.
+
+| Theorem / Lemma | Section | Statement (brief) |
+|-----------------|---------|-------------------|
+| Extensionality Axiom | Ch.1 | Sets equal iff same members |
+| Separation Schema | Ch.1 | \(\{x \in X : \varphi(x)\}\) is a set |
+| Replacement Schema | Ch.1 | Image of set under class-function is a set |
+| Russell's Paradox | Ch.1 | \(R = \{x:x\notin x\}\) is contradictory |
+| Von Neumann Hierarchy | Ch.1 | \(V = \bigcup_\alpha V_\alpha\) covers all sets |
+| Transfinite Induction | Ch.2 | Induction over all ordinals |
+| Transfinite Recursion | Ch.2 | Definitions by recursion over ordinals |
+| Cantor Normal Form | Ch.2 | Unique base-\(\omega\) expansion for ordinals |
+| Schröder–Bernstein | Ch.3 | Two injections imply bijection |
+| Cantor's Theorem | Ch.3 | \(|X| < |\mathcal{P}(X)|\) for all \(X\) |
+| Cantor Diagonal Argument | Ch.3 | \(2^\omega\) is uncountable |
+| König's Theorem | Ch.3 | \(\sum \kappa_i < \prod \lambda_i\) when \(\kappa_i < \lambda_i\) |
+| Zorn's Lemma | Ch.5 | Equivalent to AC: maximal elements exist |
+| Well-Ordering Theorem | Ch.5 | Equivalent to AC: every set well-orderable |
+| Cantor–Bendixson | Ch.11 | Every closed set = perfect + countable |
+| Perfect Set Theorem | Ch.11, Ch.26 | Uncountable analytic sets contain perfect subsets |
+| Suslin's Theorem | Ch.11, Ch.19 | \(\Delta^1_1\) = Borel sets |
+| Mostowski Collapse | Ch.12 | Well-founded extensional structure collapses to transitive set |
+| Reflection Principle | Ch.12 | Every formula reflects to some \(V_\alpha\) |
+| Löwenheim–Skolem | Ch.12 | Every ZFC model has countable elementary substructure |
+| Condensation Lemma | Ch.13, Ch.24 | Elementary substructures of \(L_\alpha\) collapse to \(L_\beta\) |
+| GCH in L | Ch.13 | \(L \models 2^{\aleph_\kappa} = \aleph_{\kappa+1}\) |
+| Forcing Theorem | Ch.14 | \(M[G]\models\varphi\) iff some \(p\in G\) forces \(\varphi\) |
+| Rasiowa–Sikorski | Ch.14 | Generic filters exist for countably many dense sets |
+| Cohen's Theorem | Ch.14 | CH is independent of ZFC |
+| ccc Preservation | Ch.14, Ch.25 | ccc forcings preserve all cardinals |
+| Lévy–Solovay | Ch.25 | Small forcing preserves large cardinals |
+| Łoś's Theorem | Ch.7 | Ultrapower elementarily extends base structure |
+| Scott's Theorem | Ch.10 | Measurable cardinal implies \(V \neq L\) |
+| Jensen's Covering | Ch.10 | If no \(0^\#\), then \(L\) covers \(V\) |
+| Fodor's Lemma | Ch.8 | Regressive function on stationary set has stationary fiber |
+| Solovay Splitting | Ch.8 | Every stationary set splits into \(\kappa\) stationary parts |
+| Martin–Steel | Ch.17, Ch.19 | \(\infty\) Woodin cardinals \(\Rightarrow\) PD |
+| Silver's Theorem | Ch.21 | GCH cannot first fail at a singular of uncountable cofinality |
+| Shelah's Bound | Ch.21 | \(\aleph_\omega^{\aleph_0} < \aleph_{\omega_4}\) |
+| Malliaris–Shelah | Ch.20 | \(\mathfrak{p} = \mathfrak{t}\) |
+| Borel Determinacy | Ch.19 | Every Borel game is determined (Martin, ZFC) |
+| Kondo Uniformization | Ch.26 | Every \(\Pi^1_1\) set uniformizable by a \(\Pi^1_1\) function |
+| Wadge's Lemma | Ch.26 | Under AD, Wadge degrees are linearly ordered |
+
+---
+
+# Chapter 28: Model-Theoretic Tools in Set Theory
+
+Set theory and model theory are deeply intertwined. The tools of model theory — elementary embeddings, compactness, Löwenheim–Skolem — both motivate and are used in set-theoretic arguments. This chapter collects the principal model-theoretic ideas used throughout these notes and develops them further.
+
+## Section 28.1: Elementarity and the Tarski–Vaught Test
+
+<div class="definition">
+Let \((M, \in)\) and \((N, \in)\) be structures for the language of set theory. A function \(j: M \to N\) is an <strong>elementary embedding</strong> if for every formula \(\varphi(x_1, \ldots, x_n)\) and every \(a_1, \ldots, a_n \in M\):
+\[ M \models \varphi(a_1, \ldots, a_n) \iff N \models \varphi(j(a_1), \ldots, j(a_n)). \]
+We write \(j: M \prec N\) to indicate that \(j\) is an elementary embedding.
+</div>
+
+<div class="theorem">
+<strong>Tarski–Vaught Test.</strong> A substructure \(M \subseteq N\) (in the sense of the language of set theory) is an elementary substructure \(M \prec N\) if and only if: for every formula \(\varphi(x, y_1, \ldots, y_n)\) and \(a_1, \ldots, a_n \in M\), if \(N \models \exists x\, \varphi(x, a_1, \ldots, a_n)\), then there exists \(b \in M\) with \(N \models \varphi(b, a_1, \ldots, a_n)\).
+</div>
+
+<div class="proof">
+(\(\Rightarrow\)) If \(M \prec N\) and \(N \models \exists x\,\varphi(x,\vec{a})\) for \(\vec{a} \in M\), then \(M \models \exists x\,\varphi(x,\vec{a})\) (by elementarity), so there exists \(b \in M\) with \(M \models \varphi(b,\vec{a})\), hence \(N \models \varphi(b,\vec{a})\). (\(\Leftarrow\)) Induction on the complexity of \(\varphi\). The only non-trivial case is the existential quantifier, which is handled exactly by the Tarski–Vaught condition.
+</div>
+
+<div class="example">
+<strong>Elementary chains.</strong> Suppose \(M_0 \prec M_1 \prec M_2 \prec \cdots\) is an elementary chain of transitive models of ZFC. Then the union \(M_\omega = \bigcup_{n < \omega} M_n\) is also a model of ZFC, and \(M_n \prec M_\omega\) for each \(n\). This is the **Elementary Chain Lemma** and is used, for example, to build "long" forcing iterations: at limit stages, take the union of the elementary chain of ground models and intermediate extensions.
+</div>
+
+## Section 28.2: The Compactness Theorem and Its Set-Theoretic Uses
+
+<div class="theorem">
+<strong>Compactness Theorem.</strong> A first-order theory \(T\) has a model if and only if every finite subset of \(T\) has a model.
+</div>
+
+<div class="example">
+<strong>Non-standard models of arithmetic.</strong> Let \(T = \text{PA} \cup \{c > n : n \in \omega\}\), where \(c\) is a new constant and each "\(c > n\)" is a sentence asserting \(c\) exceeds the \(n\)-th numeral. Every finite subset of \(T\) has a model (take the standard natural numbers and interpret \(c\) as a sufficiently large number). By Compactness, \(T\) has a model — a non-standard model of arithmetic containing an element \(c\) larger than every standard natural number. This is the prototypical application of Compactness: by adding infinitely many sentences forcing a new element to exist, we produce a "non-standard" object that cannot exist in the intended structure.
+
+The same trick is used in set theory: add sentences asserting the existence of a transitive model of ZFC containing a specific sequence of large cardinals, and use compactness to deduce the existence of such a model. This is the basis of the "reflection argument" for large cardinals.
+</div>
+
+<div class="example">
+<strong>Compactness and large cardinals.</strong> Let \(T = \text{ZFC} \cup \{\text{"there exists an inaccessible cardinal"}\} \cup \{\text{"}\kappa\text{ is not inaccessible"} : \kappa < \alpha\}\) for each ordinal \(\alpha\). If each finite subset of \(T\) has a model, then by Compactness, \(T\) has a model — a model of ZFC with an inaccessible cardinal above all "small" ordinals, giving a model with a "very large" inaccessible. This shows that if inaccessibles exist, there are "many" of them (in various non-standard models). The same argument, applied more carefully, gives models with arbitrarily large inaccessibles from a single one.
+</div>
+
+## Section 28.3: Löwenheim–Skolem and Skolem's Paradox
+
+<div class="theorem">
+<strong>Upward Löwenheim–Skolem.</strong> If a theory \(T\) has an infinite model, then for every cardinal \(\kappa \geq |T| + \aleph_0\), \(T\) has a model of size \(\kappa\).
+</div>
+
+<div class="theorem">
+<strong>Downward Löwenheim–Skolem.</strong> If \(M\) is a model of a theory \(T\) of size \(\kappa\) and \(A \subseteq M\) with \(|A| \leq \lambda \leq \kappa\), then there exists an elementary substructure \(N \prec M\) with \(A \subseteq N\) and \(|N| = \lambda\).
+</div>
+
+<div class="remark">
+<strong>Skolem's Paradox.</strong> By the Downward Löwenheim–Skolem theorem applied to ZFC, there exists a countable transitive model \(M\) of ZFC. But ZFC proves the existence of uncountable sets (e.g., \(\mathbb{R}\)). So \(M \models \text{"}\mathbb{R}\text{ is uncountable"}\). Yet \(M\) itself is countable from the outside — \(M\) contains only countably many elements!
+
+The resolution: "uncountable" is a relative notion. \(M \models \text{"}\mathbb{R}\text{ is uncountable"}\) means there is no bijection \(\omega \to \mathbb{R}^M\) in \(M\). But from outside \(M\), we can see that \(M\) is countable — we just cannot "see" any bijection \(\omega \to \mathbb{R}^M\) that is an element of \(M\). The bijection exists in \(V\), but not in \(M\), so \(M\) correctly (from its own perspective) sees \(\mathbb{R}^M\) as uncountable.
+
+This is the foundational insight behind forcing: a Cohen generic real \(g\) is "new" relative to \(M\) because \(g \notin M\), even though from outside \(M\) (i.e., from \(V\)), \(g\) is just another element of \(2^\omega\). The model \(M[G]\) "knows about" \(g\) and is therefore a larger universe.
+</div>
+
+## Section 28.4: Ehrenfeucht–Mostowski Models and Indiscernibles
+
+<div class="definition">
+Let \(M\) be a structure and \(I \subseteq M\) an ordered set. A sequence \((a_i)_{i \in I}\) of elements of \(M\) is a <strong>set of indiscernibles</strong> for \(M\) if for any formula \(\varphi(x_1, \ldots, x_n)\) and any two increasing sequences \(i_1 < \cdots < i_n\) and \(j_1 < \cdots < j_n\) from \(I\):
+\[ M \models \varphi(a_{i_1}, \ldots, a_{i_n}) \iff M \models \varphi(a_{j_1}, \ldots, a_{j_n}). \]
+</div>
+
+<div class="theorem">
+<strong>Ehrenfeucht–Mostowski Theorem.</strong> Let \(T\) be a theory with an infinite model and \(I\) any linearly ordered set. Then there is a model of \(T\) that contains a set of indiscernibles of order type \(I\).
+</div>
+
+<div class="example">
+<strong>Silver indiscernibles and \(0^\#\).</strong> In the theory of \(L\), the **Silver indiscernibles** are an uncountable set \(I \subset \mathbf{Ord}\) such that: for any formula \(\varphi(x_1, \ldots, x_n)\) and increasing sequences from \(I\), \(L \models \varphi(a_{i_1}, \ldots, a_{i_n})\) iff \(L \models \varphi(a_{j_1}, \ldots, a_{j_n})\). The existence of Silver indiscernibles for \(L\) is equivalent to the existence of \(0^\#\) (zero-sharp). The set of formulas true of increasing indiscernibles in \(L\) is the complete theory of the Silver indiscernibles, encoded as a real — this is \(0^\#\). Its existence implies \(V \neq L\) (since \(L\) cannot define its own indiscernibles).
+</div>
+
+---
+
+# Chapter 29: Applications of Set Theory in Mathematics
+
+## Section 29.1: Algebra — Whitehead Groups and Shelah's Theorem
+
+<div class="definition">
+An abelian group \(A\) is a <strong>Whitehead group</strong> if \(\text{Ext}^1(A, \mathbb{Z}) = 0\), i.e., every short exact sequence \(0 \to \mathbb{Z} \to B \to A \to 0\) splits. Free abelian groups are Whitehead. The **Whitehead Problem** asks: is every Whitehead group free?
+</div>
+
+<div class="theorem">
+<strong>Shelah (1974).</strong> The Whitehead Problem is independent of ZFC:
+<ul>
+<li>Assuming V = L (or just \(\Diamond\)), every Whitehead group of cardinality \(\aleph_1\) is free.</li>
+<li>Assuming MA + \(\neg\)CH, there exists a non-free Whitehead group of cardinality \(\aleph_1\).</li>
+</ul>
+</div>
+
+<div class="remark">
+Shelah's theorem was the first algebraic statement shown to be independent of ZFC, and it remains one of the most striking applications of set-theoretic methods to "classical" mathematics. The proof under MA uses the fact that MA provides generic filters for the right posets; the proof under \(\Diamond\) uses \(\Diamond\)-sequences to build a free resolution. This showed that the Axiom of Choice and its refinements (like \(\Diamond\)) are not just foundational abstractions — they have concrete algebraic consequences.
+</div>
+
+## Section 29.2: Analysis — The Banach–Tarski Paradox
+
+<div class="theorem">
+<strong>Banach–Tarski Paradox.</strong> There exists a decomposition of the unit ball \(B^3 \subset \mathbb{R}^3\) into finitely many pieces that can be reassembled (using rotations and translations) into two copies of \(B^3\).
+</div>
+
+<div class="proof">
+(Outline) The proof uses the Axiom of Choice to pick representatives from orbits under a free group action on the sphere \(S^2\). The free group \(F_2 = \langle a, b \rangle\) acts on \(S^2\) by rotations (choosing \(a\) and \(b\) to generate a free group of rotations), partitioning \(S^2\) into orbits. Use AC to pick one representative from each orbit. The Hausdorff paradox (the precursor to Banach–Tarski) shows \(S^2\) can be decomposed into four pieces \(A, B, C, D\) with \(A \cup B \cup C \equiv B \cup C\) and \(A \equiv D\). This gives the decomposition of the sphere, and the ball follows.
+</div>
+
+<div class="remark">
+The Banach–Tarski paradox shows that the Axiom of Choice implies the existence of non-measurable sets in \(\mathbb{R}^3\) — indeed, the pieces of the Banach–Tarski decomposition cannot all be Lebesgue measurable. Solovay's theorem (1970) shows that in a model where all sets of reals are Lebesgue measurable (built by collapsing an inaccessible), the Banach–Tarski paradox fails. More precisely, DC (Dependent Choice) is consistent with "all sets of reals are measurable," but full AC is not. This illustrates the trade-off between the Axiom of Choice and measurability.
+</div>
+
+## Section 29.3: Topology — The Normal Moore Space Conjecture
+
+<div class="definition">
+A topological space \(X\) is <strong>normal</strong> if any two disjoint closed sets can be separated by disjoint open sets. It is a <strong>Moore space</strong> if it has a development: a sequence of open covers \(\mathcal{G}_n\) such that for each \(x \in X\) and open \(U \ni x\), there exists \(n\) with \(\{G \in \mathcal{G}_n : x \in G\} \subseteq U\).
+</div>
+
+The **Normal Moore Space Conjecture (NMSC)** asserts that every normal Moore space is metrizable. It was a major open problem in topology from the 1930s to the 1980s.
+
+<div class="theorem">
+The Normal Moore Space Conjecture is independent of ZFC:
+<ul>
+<li>Under MA + \(\neg\)CH, every separable normal Moore space is metrizable (a partial result).</li>
+<li>Under certain forcing extensions (adding \(\aleph_2\) many Cohen reals to a model with a measurable cardinal), NMSC holds.</li>
+<li>Under \(V = L\), there exist non-metrizable normal Moore spaces (constructed using a \(\Diamond^+\)-sequence).</li>
+</ul>
+</div>
+
+<div class="remark">
+The proof that NMSC is consistent (Nyikos, 1980) requires the consistency of a measurable cardinal — the first topological theorem to have such a strong large cardinal requirement. This was a major advance in the application of set theory to topology and demonstrated that large cardinal axioms can have concrete topological consequences. The proof uses a forcing extension that adds many reals while preserving the measurable cardinal structure.
+</div>
+
+## Section 29.4: Analysis — Every Set of Reals is Measurable (Solovay's Model)
+
+<div class="theorem">
+<strong>Solovay's Theorem (1970).</strong> Assume the existence of an inaccessible cardinal \(\kappa\). Then there is a model of ZF + DC in which every set of reals is Lebesgue measurable, has the Baire property, and has the perfect set property.
+</div>
+
+<div class="proof">
+(Sketch) Start from a model \(M\) with an inaccessible \(\kappa\). Perform the Lévy collapse \(\text{Col}(\omega, {<}\kappa)\): conditions are finite partial functions assigning to each ordinal \(\alpha < \kappa\) a countable ordinal, ordered by extension. This forces \(\kappa\) to become \(\omega_1\) in the extension \(M[G]\). Now pass to the submodel \(N = L(\mathbb{R})^{M[G]}\) (the smallest model of ZF containing \(\mathbb{R}^{M[G]}\)). In \(N\): every set of reals is definable from a real and an ordinal, and the collapse of \(\kappa\) ensures every such set is measurable (using the fact that the Lévy collapse is "homogeneous" — the generic behaves symmetrically over the ground model, allowing a measure-theoretic averaging argument).
+</div>
+
+<div class="remark">
+Solovay's model shows that the non-measurable sets produced by AC (like the Vitali set and the Banach–Tarski pieces) are not provably necessary — they can be eliminated by working in ZF + DC with a different choice of axioms. The inaccessible cardinal is known to be necessary: Shelah showed that the consistency of "every set of reals is measurable" (over ZF + DC) implies the consistency of an inaccessible cardinal. This is one of the deepest consistency strength calibrations in descriptive set theory: the "correct" axioms for analysis (measurability of all sets of reals) require exactly an inaccessible cardinal.
+</div>
+
+---
+
+# Chapter 30: Open Problems and Current Research Frontiers
+
+## Section 30.1: The Inner Model Problem
+
+The central open problem in inner model theory is:
+
+**The Inner Model Problem for a Supercompact Cardinal:** Construct a canonical inner model \(L[\vec{E}]\) that contains a supercompact cardinal, satisfies GCH, and has a fine structure theory analogous to Jensen's fine structure for \(L\).
+
+This is Woodin's "Ultimate-\(L\)" program. The conjecture is:
+
+<div class="definition">
+<strong>Woodin's Ultimate-\(L\) Conjecture.</strong> There exists a canonical inner model \(L_{\text{ult}}\) (\text{Ultimate-}L) satisfying:
+<ol>
+<li>\(L_{\text{ult}} \models\) GCH.</li>
+<li>\(L_{\text{ult}}\) contains a supercompact cardinal.</li>
+<li>\(V = L_{\text{ult}}\) is \(\Omega\)-consistent with all large cardinal axioms (i.e., forcing over \(L_{\text{ult}}\) cannot produce large cardinals inconsistent with those already present).</li>
+<li>If \(V = L_{\text{ult}}\), then CH holds.</li>
+</ol>
+</div>
+
+If the Ultimate-\(L\) conjecture is correct, it would resolve CH in favor of GCH — the universe of sets, at its canonical core, satisfies the Continuum Hypothesis. Woodin believes this program is on the verge of completion (as of 2020s), though the full construction remains incomplete.
+
+## Section 30.2: The \(\mathfrak{p} = \mathfrak{t}\) Theorem and Keisler's Order
+
+The theorem \(\mathfrak{p} = \mathfrak{t}\) (Malliaris–Shelah, 2016) was proved using an unexpected tool: **Keisler's order**, a pre-order on theories based on the saturation of their ultrapowers.
+
+<div class="definition">
+<strong>Keisler's Order.</strong> For complete theories \(T_1\) and \(T_2\), we say \(T_1 \leq_K T_2\) (in Keisler's order) if for every regular ultrafilter \(\mathcal{D}\) on \(\omega\) and every pair of models \(M_1 \models T_1\), \(M_2 \models T_2\), if \(M_2^\omega/\mathcal{D}\) is \(\aleph_1\)-saturated then so is \(M_1^\omega/\mathcal{D}\).
+</div>
+
+The proof of \(\mathfrak{p} = \mathfrak{t}\) goes: the equality is equivalent to saying that certain ultrafilters (called "OK" ultrafilters) are exactly the regular ultrafilters. This equivalence is proved by analyzing the Keisler order position of the theory of dense linear orders, which is the minimum theory in Keisler's order. The deep model theory of ultrafilters — specifically, the distinction between "good" and "OK" ultrafilters — turns out to capture exactly the combinatorial distinction between \(\mathfrak{p}\) and \(\mathfrak{t}\).
+
+## Section 30.3: The Cichoń Maximum
+
+<div class="definition">
+The <strong>Cichoń maximum</strong> is the model in which all four characteristics of the null ideal and all four of the meager ideal are pairwise distinct (and the Cichoń diagram is "saturated" with no unexpected equalities).
+</div>
+
+<div class="theorem">
+<strong>Goldstern–Kellner–Mejía–Shelah (2017).</strong> It is consistent that all ten characteristics in the Cichoń diagram are pairwise distinct:
+\[
+\aleph_1 < \text{add}(\mathcal{N}) < \text{cov}(\mathcal{N}) < \mathfrak{b} < \text{non}(\mathcal{M}) < \text{cov}(\mathcal{M}) < \mathfrak{d} < \text{non}(\mathcal{N}) < \text{cof}(\mathcal{N}) < 2^{\aleph_0}.
+\]
+</div>
+
+<div class="proof">
+(Outline) The proof uses a sophisticated finite support iteration using three different types of reals — Cohen reals, random reals, and Hechler reals — at different stages of the iteration, combined with careful tracking of which forcing adds which reals and how these affect the cardinal characteristics. The key technical innovation is the use of "creature forcing" (a flexible framework for adding reals with prescribed combinatorial properties) to control all ten characteristics simultaneously.
+</div>
+
+## Section 30.4: The HOD Conjecture
+
+<div class="definition">
+The <strong>HOD Conjecture</strong> (Woodin) asserts: assuming the existence of an extendible cardinal, there is a supercompact cardinal \(\kappa\) such that \(V_\kappa \subseteq \text{HOD}\). Equivalently, every set of rank \(< \kappa\) is ordinal definable.
+</div>
+
+If the HOD Conjecture holds, then HOD and \(V\) are "close" near the supercompact cardinal, and many set-theoretic questions become decidable. The conjecture would imply that assuming large cardinals, the set-theoretic universe converges toward a canonical form — contrary to the multiverse view.
+
+Woodin has announced a proof of the HOD Conjecture from appropriate large cardinal hypotheses (as of early 2020s), but the details remain under verification by the community.
+
+## Section 30.5: Cardinal Arithmetic at Singular Cardinals
+
+<div class="remark">
+Despite Shelah's PCF theory, many questions about singular cardinal arithmetic remain open:
+<ul>
+<li>Can \(\text{pp}(\aleph_\omega) = \aleph_{\omega_1}\)? (pp = pseudopower; consistent upper bounds of \(\aleph_{\omega_4}\) are known, but the true maximum is unclear.)</li>
+<li>Is it consistent that \(\aleph_\omega^{\aleph_0} = \aleph_{\omega+1}\) (i.e., GCH holds at \(\aleph_\omega\)) together with the failure of SCH at some other singular cardinal?</li>
+<li>What is the exact consistency strength of the failure of SCH at \(\aleph_{\omega_1}\)?</li>
+</ul>
+These questions are at the frontier of PCF theory and large cardinal theory, requiring both sophisticated forcing techniques and inner model theory.
+</div>
+
+---
+
+# Final Remarks: The Unity of Set Theory
+
+We close with a reflection on the remarkable unity of the material covered in this course. What appears at first glance to be a collection of unrelated topics — ordinals, cardinals, forcing, large cardinals, descriptive set theory — is in fact a tightly woven tapestry.
+
+The **ordinal hierarchy** (Chapter 2) provides the backbone along which everything else is built. The **cumulative hierarchy** \(V = \bigcup_\alpha V_\alpha\) (Chapter 1) gives a stratification of all mathematical objects. The **cardinal hierarchy** (Chapter 3) measures the sizes of these levels and leads immediately to the central problem of the course: what is the relationship between \(\aleph_1\) and \(2^{\aleph_0}\)?
+
+**Forcing** (Chapter 14) answers: both \(\aleph_1 = 2^{\aleph_0}\) (under GCH) and \(\aleph_2 = 2^{\aleph_0}\) (Cohen's model) are consistent. But forcing is not just a tool for independence results — it is a universe-building machine, producing new models with rich properties.
+
+**Large cardinals** (Chapters 10, 17) provide the consistency strength backbone: they are what makes forcing extensions "rich" in a controlled way, and they imply structural regularity properties (like determinacy for projective sets) that ZFC alone cannot provide.
+
+**Descriptive set theory** (Chapters 11, 19, 26) makes this regularity concrete: under large cardinal axioms, all projective sets of reals are measurable, have the Baire property, and are determined. These are the precise mathematical consequences of placing the universe "high" in the large cardinal hierarchy.
+
+**Inner models** (Chapter 13, 24) provide the "skeleton": canonical minimal models that satisfy GCH and contain exactly as many large cardinals as prescribed. The **core model** program seeks to build, for each large cardinal, a canonical inner model that "explains" it — just as \(L\) explains the universe without large cardinals.
+
+The **forcing axioms** (Chapter 18) represent another extreme: rather than restricting to minimal models, they assert that the universe is as "generic" as possible — as rich as if many generic objects had been added. MA, PFA, and MM push the universe toward a canonical "maximal" form, in opposition to the canonical "minimal" form of \(L\).
+
+The deep conjecture of Woodin's Ultimate-\(L\) program is that these two extremes converge: the "correct" universe satisfies both "enough large cardinals" and "GCH" — and therefore resolves all outstanding questions including CH. Whether this vision is realized will be the defining question of set theory in the coming decades.
+
+This course has given you the tools to understand — and perhaps contribute to — this profound inquiry into the nature of mathematical infinity.
+
+\[ \star \quad \star \quad \star \]
+
+---
+
+# Appendix F: Glossary of Key Terms
+
+The following definitions provide quick reference for the major concepts introduced throughout the course.
+
+**Absolute formula.** A formula \(\varphi\) is absolute for a transitive model \(M\) if \(\varphi\) holds in \(M\) exactly when it holds in \(V\). All \(\Delta_0\) formulas are absolute; \(\Sigma_1\) formulas are upward absolute; \(\Pi_1\) formulas are downward absolute.
+
+**Aleph numbers.** The alephs \(\aleph_0, \aleph_1, \aleph_2, \ldots\) are the infinite cardinals in increasing order. \(\aleph_0 = \omega\) is the smallest infinite cardinal; \(\aleph_{\alpha+1} = \omega_{\alpha+1}\) is the successor of \(\aleph_\alpha\); for limit \(\lambda\), \(\aleph_\lambda = \sup_{\alpha < \lambda} \aleph_\alpha\).
+
+**Antichain.** In a partial order, a set of pairwise incompatible elements. The countable chain condition (ccc) requires every antichain to be countable.
+
+**Beth numbers.** The beths \(\beth_0 = \aleph_0\), \(\beth_{\alpha+1} = 2^{\beth_\alpha}\), and \(\beth_\lambda = \sup_{\alpha < \lambda} \beth_\alpha\) for limit \(\lambda\). Under GCH, \(\beth_\alpha = \aleph_\alpha\) for all \(\alpha\).
+
+**Cardinal.** An ordinal \(\kappa\) not in bijection with any smaller ordinal. Every infinite cardinal is a limit ordinal. The finite cardinals are the natural numbers.
+
+**Closed unbounded (club).** A subset \(C\) of a regular uncountable cardinal \(\kappa\) that is unbounded in \(\kappa\) and closed under limits below \(\kappa\).
+
+**Cofinality.** The cofinality \(\text{cf}(\alpha)\) of a limit ordinal \(\alpha\) is the least ordinal \(\delta\) such that there is an unbounded function \(f: \delta \to \alpha\). A cardinal \(\kappa\) is regular if \(\text{cf}(\kappa) = \kappa\).
+
+**Condition.** An element of a forcing poset. Conditions represent "finite approximations" to the generic object being added. Stronger conditions (lower in the order) provide more information.
+
+**Constructible universe (\(L\)).** The smallest inner model of ZFC, defined by \(L = \bigcup_\alpha L_\alpha\) where \(L_0 = \emptyset\), \(L_{\alpha+1} = \text{Def}(L_\alpha)\) (definable subsets of \(L_\alpha\)), and \(L_\lambda = \bigcup_{\alpha < \lambda} L_\alpha\) for limits. \(L \models \text{GCH}\).
+
+**Dense set.** In a forcing poset, a set \(D\) such that every condition has an extension in \(D\).
+
+**Elementary embedding.** A map \(j: M \to N\) preserving all first-order formulas. An elementary embedding is a "truth-preserving" map between models. Large cardinals are characterized by the existence of non-trivial elementary embeddings.
+
+**Filter (on a poset).** A non-empty upward-closed set closed under finite meets (greatest lower bounds). A generic filter meets every dense set in the ground model.
+
+**Forcing.** Cohen's technique for building new models of ZFC by adjoining a generic object \(G\) to a ground model \(M\), producing \(M[G]\). The forcing relation \(p \Vdash \varphi\) encodes what is "forced" to be true in \(M[G]\).
+
+**Generic filter.** An \(M\)-generic filter for a poset \(\mathbb{P}\) is a filter \(G \subseteq \mathbb{P}\) meeting every dense set that is an element of \(M\).
+
+**HOD.** Hereditarily ordinal definable sets: the inner model of all sets whose entire transitive closure consists of ordinal-definable sets. \(L \subseteq \text{HOD} \subseteq V\), and \(\text{HOD} \models \text{AC}\).
+
+**Inaccessible cardinal.** An uncountable regular strong limit cardinal \(\kappa\): \(\text{cf}(\kappa) = \kappa\) and \(2^\lambda < \kappa\) for all \(\lambda < \kappa\). The level \(V_\kappa\) of the cumulative hierarchy satisfies all of ZFC.
+
+**Inner model.** A transitive class \(M\) containing all ordinals and satisfying ZFC (with quantifiers restricted to \(M\)). Inner models include \(L\), \(\text{HOD}\), and models \(L[\vec{E}]\) built from extender sequences.
+
+**Large cardinal.** A cardinal whose existence cannot be proved in ZFC but whose consistency is generally assumed. Large cardinals form a well-ordered hierarchy by consistency strength: inaccessible, Mahlo, weakly compact, measurable, strong, Woodin, supercompact, extendible, huge, rank-into-rank.
+
+**Measurable cardinal.** A cardinal \(\kappa\) admitting a non-principal \(\kappa\)-complete ultrafilter. Equivalently, there is an elementary embedding \(j: V \to M\) with critical point \(\kappa\). Measurable cardinals imply \(V \neq L\) (Scott's theorem).
+
+**Ordinal.** A transitive set well-ordered by membership. The ordinals are \(0 = \emptyset\), \(1 = \{0\}\), \(2 = \{0,1\}\), \(\ldots, \omega, \omega+1, \ldots, \omega \cdot 2, \ldots, \omega^\omega, \ldots\). Each ordinal is the set of all smaller ordinals.
+
+**PCF (possible cofinalities).** For a set \(A\) of regular cardinals with \(|A| < \min(A)\), \(\text{pcf}(A) = \{\text{cf}(\prod A / D) : D\text{ is an ultrafilter on }A\}\). PCF theory governs singular cardinal arithmetic.
+
+**Projective determinacy (PD).** The assertion that every two-player game on \(\omega\) with a projective winning condition is determined (one player has a winning strategy). Follows from infinitely many Woodin cardinals; implies all projective sets are measurable and have the Baire property.
+
+**Rank.** The rank of a set \(x\) is the least ordinal \(\alpha\) with \(x \in V_{\alpha+1}\). Every set has a rank by the Axiom of Regularity.
+
+**Regular cardinal.** A cardinal \(\kappa\) with \(\text{cf}(\kappa) = \kappa\). Successor cardinals are always regular (under AC); limit cardinals may or may not be.
+
+**Stationary set.** A subset \(S\) of a regular uncountable cardinal \(\kappa\) that intersects every club in \(\kappa\). The club filter on \(\kappa\) is dual to the non-stationary ideal.
+
+**Transitive set.** A set \(M\) such that every element of an element of \(M\) is itself an element of \(M\): \(x \in y \in M \Rightarrow x \in M\). Transitive sets are the natural "building blocks" for models of set theory.
+
+**Ultrafilter.** A maximal filter; equivalently, a filter \(\mathcal{U}\) on a set \(I\) such that for every \(A \subseteq I\), either \(A \in \mathcal{U}\) or \(I \setminus A \in \mathcal{U}\). Non-principal ultrafilters (whose existence requires AC) are the foundation of ultrapower constructions.
+
+**Well-ordering.** A linear order in which every non-empty subset has a least element. The ordinals are canonical representatives for well-order types. By the Well-Ordering Theorem (equivalent to AC), every set can be well-ordered.
+
+**Woodin cardinal.** An uncountable cardinal \(\delta\) such that for every function \(f: \delta \to \delta\), there is a cardinal \(\kappa < \delta\) closed under \(f\) and an elementary embedding \(j: V \to M\) with critical point \(\kappa\) and \(V_{j(f)(\kappa)} \subseteq M\). Infinitely many Woodin cardinals imply projective determinacy.
+
+**ZFC.** Zermelo–Fraenkel set theory with the Axiom of Choice. The standard foundation for mathematics, consisting of the axioms of Extensionality, Empty Set, Pairing, Union, Power Set, Separation, Replacement, Infinity, Regularity, and Choice. All of ordinary mathematics can be formalized within ZFC.
+
+---
+
+*These notes cover the material of PMATH 434 (Set Theory) at the University of Waterloo. The primary reference is Jech's* Set Theory *(3rd ed., Springer, 2003). For forcing, see Kunen's* Set Theory *or Chow's* A Beginner's Guide to Forcing. *For large cardinals, see Kanamori's* The Higher Infinite *(2nd ed., Springer, 2003).*
