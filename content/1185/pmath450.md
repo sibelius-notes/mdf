@@ -12,6 +12,10 @@ These notes cover PMATH 450 (Spring 2018), taught by Prof. Stephen New. The cour
 
 ---
 
+> **Course revision note.** This Spring 2018 offering covers the foundational development of Lebesgue measure and integration, \(L^p\) spaces, Hilbert spaces, and Fourier analysis on the circle. A revised Spring 2025 offering ([PMATH 450: Measure Theory](/1255/pmath450/)) drops the Lebesgue measure construction and Fourier analysis in favour of more advanced measure-theoretic topics: Signed Measures, the Hahn and Jordan Decompositions, the Radon-Nikodym Theorem, the Lebesgue Decomposition, duality of \(L^p\) spaces, reflexivity, and weak convergence. If you need those topics, refer to those notes.
+
+---
+
 # Chapter 0: Foundations (Set Theory and Order)
 
 Before developing measure theory, it is worth collecting the foundational tools from set theory that appear throughout the course. The Axiom of Choice and its equivalents — Zorn's Lemma and the Well-Ordering Principle — are invoked at several key points: in the construction of a Vitali non-measurable set, in the existence of a Hilbert basis for every inner product space, and in the construction of a basis for every vector space.

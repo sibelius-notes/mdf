@@ -22,6 +22,8 @@ name = "Business, Entrepreneurship & Technology"
 name = "Biology"
 [CHEM]
 name = "Chemistry"
+[CI]
+name = "Cultural Identities"
 [CIVE]
 name = "Civil Engineering"
 [CLAS]
@@ -50,6 +52,8 @@ name = "Environment & Resource Studies"
 name = "Fine Arts"
 [GEOG]
 name = "Geography"
+[GERON]
+name = "Gerontology"
 [GSJ]
 name = "Gender & Social Justice"
 [HIST]

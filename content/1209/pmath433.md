@@ -3,6 +3,11 @@ title: "PMATH 433/733: Set Theory and Model Theory"
 prof: "R. Moosa"
 subjects: "PMATH"
 ---
+
+> **Course revision note.** This Fall 2020 offering of PMATH 433/733 combines Set Theory (ZFC axioms, ordinals, cardinals, cardinal arithmetic) with an introduction to Model Theory in a single course. A revised Winter 2025 offering ([PMATH 433: Model Theory](/1251/pmath433/)) dropped the Set Theory component entirely and covers Model Theory in much greater depth — adding chapters on Omitting Types, Interpretations and Imaginaries, Strongly Minimal Sets, the Zilber Trichotomy, and Stability Theory. If you need that extended model-theoretic content, refer to those notes.
+
+---
+
 # Chapter 1: Set Theory
 
 ## First Axioms
