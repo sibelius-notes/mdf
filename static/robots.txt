@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /$
-Allow: /css/
-Allow: /favicon.ico
-Disallow: /
+Allow: /

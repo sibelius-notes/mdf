@@ -1,12 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{ if .IsHome }}
-<meta name="robots" content="index,follow">
-<meta name="googlebot" content="index,follow">
-{{ else }}
-<meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="googlebot" content="noindex,nofollow,noarchive">
-{{ end }}
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
 {{ $pageTitle := .Site.Title }}
 {{ if eq .Kind "404" }}
   {{ $pageTitle = printf "404 Page Not Found | %s" .Site.Title }}
