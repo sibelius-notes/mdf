@@ -243,7 +243,7 @@ giving
 p_{1,2} = \frac{1}{2}\left(\frac{a+1}{a} \pm \frac{\sqrt{(a+1)(a-3)}}{a}\right).
 \]
 
-These are real and distinct precisely when \(a > 3\), confirming the bifurcation at \(a = 3$.
+These are real and distinct precisely when \(a > 3\), confirming the bifurcation at \(a = 3\).
 
 ## Stability of the Two-Cycle
 

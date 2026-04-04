@@ -1923,7 +1923,7 @@ Let \(T = \mathrm{Th}(\mathbb{R}, +, \cdot, <, 0, 1, (r)_{r \in \mathbb{R}})\) b
 \[
 T' = T \cup \{\epsilon > 0\} \cup \{0 < \epsilon < r : r \in \mathbb{R},\, r > 0\}.
 \]
-Every finite subset of \(T'$ is consistent: given finitely many conditions \(0 < \epsilon < r_1, \ldots, 0 < \epsilon < r_k\), we can interpret \(\epsilon\) as any positive real number smaller than \(\min(r_1, \ldots, r_k)\) — for instance, \(\min(r_1, \ldots, r_k) / 2\). By compactness, \(T'\) is consistent, and has a model \(\mathbb{R}^*\).
+Every finite subset of \(T'\) is consistent: given finitely many conditions \(0 < \epsilon < r_1, \ldots, 0 < \epsilon < r_k\), we can interpret \(\epsilon\) as any positive real number smaller than \(\min(r_1, \ldots, r_k)\) — for instance, \(\min(r_1, \ldots, r_k) / 2\). By compactness, \(T'\) is consistent, and has a model \(\mathbb{R}^*\).
 
 The model \(\mathbb{R}^*\) is an ordered field (since it is a model of \(T\), which includes all ordered field axioms) and contains an element \(\epsilon = \epsilon^{\mathbb{R}^*}\) satisfying \(0 < \epsilon < r\) for every positive standard real \(r\). This \(\epsilon\) is a genuine positive element of the field \(\mathbb{R}^*\) but is smaller than every standard positive real — it is an **infinitesimal**.
 

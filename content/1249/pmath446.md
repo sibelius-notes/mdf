@@ -1405,7 +1405,7 @@ Geometrically, flatness corresponds to "continuous variation of fibers." If \(f:
 </ol>
 </div>
 
-**The local criterion for flatness.** Condition (3) says that every relation in \(M$ can be "explained" by relations in \(R\). Intuitively, \(M\) is flat if it does not "create new relations" beyond those in \(R\). This is the algebraic version of saying that \(M\) varies "without jumping."
+**The local criterion for flatness.** Condition (3) says that every relation in \(M\) can be "explained" by relations in \(R\). Intuitively, \(M\) is flat if it does not "create new relations" beyond those in \(R\). This is the algebraic version of saying that \(M\) varies "without jumping."
 
 **Flat vs. free.** Over a local ring, flat \(\Leftrightarrow\) free (for finitely generated modules, by Nakayama). Over a general ring, flat is weaker than free or projective. For example, \(\mathbb{Q}\) is a flat \(\mathbb{Z}\)-module (it is a localization) but not free (it is not even finitely generated). The module \(\prod_{n=1}^\infty \mathbb{Z}/n\) is not flat over \(\mathbb{Z}\) (it has torsion, and torsion modules over \(\mathbb{Z}\) are not flat unless they are zero).
 
@@ -2442,7 +2442,7 @@ This appendix collects the major theorems of the course in one place for referen
 
 **Hilbert Basis Theorem.** If \(R\) is Noetherian, then \(R[x]\) is Noetherian. *Proved:* Chapter 7 and Appendix B.4. *Applied:* Every ideal in \(k[x_1,\ldots,x_n]\) is finitely generated; every algebraic variety is cut out by finitely many equations.
 
-**Nakayama's Lemma.** If \(R\) is a ring, \(I \subseteq J(R)\), and \(M\) is a finitely generated \(R\)-module with \(IM = M\), then \(M = 0$. *Proved:* Chapter 6 and Chapter 33. *Applied:* generators of modules over local rings, flatness equals freeness over local rings, completions, lifting idempotents.
+**Nakayama's Lemma.** If \(R\) is a ring, \(I \subseteq J(R)\), and \(M\) is a finitely generated \(R\)-module with \(IM = M\), then \(M = 0\). *Proved:* Chapter 6 and Chapter 33. *Applied:* generators of modules over local rings, flatness equals freeness over local rings, completions, lifting idempotents.
 
 **Lasker-Noether (Primary Decomposition).** Every ideal in a Noetherian ring has an irredundant primary decomposition with uniquely determined associated primes. *Proved:* Chapter 17 and Chapter 30. *Applied:* irreducible decomposition of varieties, associated primes and embedded components, symbolic powers.
 

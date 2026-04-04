@@ -2677,7 +2677,7 @@ This factorization holds because the primes of \(\mathbb{Z}[\zeta_k]\) over each
 - The principal character contributes \(L(s,\chi_0) = \zeta(s)\cdot\prod_{p\mid k}(1-p^{-s})\), which has a simple pole at \(s=1\).
 - All other factors \(L(s,\chi)\) for \(\chi \neq \chi_0\) are entire functions of \(s\).
 
-The product \(\prod_\chi L(s,\chi)\) therefore has a simple pole at \(s=1$ (from \(L(s,\chi_0)\)) times holomorphic functions from the others. If any non-principal \(L(s,\chi)\) vanished at \(s=1\), the product would have a zero cancelling the pole, making \(\zeta_K(1)\) finite and nonzero — but \(\zeta_K\) has a simple pole at \(s=1\) with a nonzero residue (the analytic class number formula). Contradiction. Hence \(L(1,\chi) \neq 0\) for all non-principal \(\chi\). \(\square\)
+The product \(\prod_\chi L(s,\chi)\) therefore has a simple pole at \(s=1\) (from \(L(s,\chi_0)\)) times holomorphic functions from the others. If any non-principal \(L(s,\chi)\) vanished at \(s=1\), the product would have a zero cancelling the pole, making \(\zeta_K(1)\) finite and nonzero — but \(\zeta_K\) has a simple pole at \(s=1\) with a nonzero residue (the analytic class number formula). Contradiction. Hence \(L(1,\chi) \neq 0\) for all non-principal \(\chi\). \(\square\)
 
 ## 14.4 Precise Statement of Dirichlet's Theorem
 
@@ -3454,7 +3454,7 @@ The following problems are representative of the difficulty and style of PMATH 4
 
 **E1.** Let \(\pi_2(x)\) be the number of twin prime pairs \((p,p+2)\) with \(p \leq x\). Using the fact that for a prime \(p \neq 2,3\) to have \(p+2\) also prime, we need \(p \equiv 1 \pmod 6\) (since \(p \equiv 5 \pmod 6\) would make \(p+2 \equiv 1 \pmod 6\) prime only if ...), apply the Legendre sieve to show \(\pi_2(x) = O(x/(\log x)^2)\). (This matches the conjectured asymptotics \(\sim C_2 x/(\log x)^2\).)
 
-**E2.** Goldbach's comet: define \(G(n)\) to be the number of ways of writing the even integer \(n = p+q\) with \(p,q$ prime. Using the circle method heuristic (not a proof), argue that \(G(n) \approx 2C_2 n/(\log n)^2\) for \(C_2 = \prod_{p>2}(1-1/(p-1)^2)\). Compute \(C_2\) numerically to 3 decimal places.
+**E2.** Goldbach's comet: define \(G(n)\) to be the number of ways of writing the even integer \(n = p+q\) with \(p,q\) prime. Using the circle method heuristic (not a proof), argue that \(G(n) \approx 2C_2 n/(\log n)^2\) for \(C_2 = \prod_{p>2}(1-1/(p-1)^2)\). Compute \(C_2\) numerically to 3 decimal places.
 
 **E3.** Show that the Bombieri–Vinogradov theorem (Theorem 10.9) implies: for any \(A>0\) and \(B = B(A)\), the number of "exceptional" moduli \(q \leq Q\) for which \(|\pi(x;q,a) - \mathrm{li}(x)/\varphi(q)| > x/((\log x)^{A+1})\) for some \(a\) with \(\gcd(a,q)=1\) is at most \((\log x)^B\).
 

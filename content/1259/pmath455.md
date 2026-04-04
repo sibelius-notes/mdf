@@ -674,7 +674,7 @@ The mixed area \(V(P,Q)\) has a beautiful formula: if \(P\) has edges with outer
 \[
 2V(P,Q) = \sum_{i=1}^m h_Q(u_i) \cdot \ell_i.
 \]
-This formula says: the mixed area is obtained by taking each edge of \(P$ (with length \(\ell_i\) and outward normal \(u_i\)) and multiplying by how far \(Q\) extends in that direction (\(h_Q(u_i)\)), then summing. It is the "shadow" of \(Q\) in the directions of the edges of \(P\), weighted by edge length.
+This formula says: the mixed area is obtained by taking each edge of \(P\) (with length \(\ell_i\) and outward normal \(u_i\)) and multiplying by how far \(Q\) extends in that direction (\(h_Q(u_i)\)), then summing. It is the "shadow" of \(Q\) in the directions of the edges of \(P\), weighted by edge length.
 
 For \(P = Q = \mathbb{B}^2\): the "edges" are infinitesimal arcs, and the formula becomes \(2V(\mathbb{B}^2, \mathbb{B}^2) = \int_{\mathbb{S}^1} h_{\mathbb{B}^2}(u) \,d\sigma(u) = \int_{\mathbb{S}^1} 1\, d\sigma = 2\pi = 2 \cdot \mathrm{Area}(\mathbb{B}^2) = 2\pi\). Good, consistent.
 

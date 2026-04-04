@@ -269,16 +269,26 @@ Numerically: \(3\sqrt{2} \approx 4.24\), \(\sqrt{10} \approx 3.16\), denominator
 
 The Euler line passes through \(o = (2,1)\), \(g = (5/3, 1)\), \(h = (1,1)\). Note all have \(y=1\)! The Euler line is the horizontal line \(y=1\). The incentre at \((1.46, 1.05)\) does not lie on this line (its \(y\)-coordinate is slightly different). ✓</div>
 
-<pre>
-Euler line diagram (horizontal in this example):
-         h=(1,1)     g=(5/3,1)      o=(2,1)
-            |             |              |
-  --*--------*-------------*-------------*-----  (y=1)
-    w=(1,3)  H             G             O
-
-  Triangle vertices: u=(0,0), v=(4,0), w=(1,3)
-  (H, G, O collinear, HG:GO = 2:1)
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 420 80" width="420" height="80" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Euler line -->
+  <line x1="20" y1="40" x2="400" y2="40" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- H point -->
+  <circle cx="90" cy="40" r="4" fill="#e05"/>
+  <text x="90" y="30" text-anchor="middle" fill="#e05" font-size="12">H</text>
+  <text x="90" y="58" text-anchor="middle" fill="#555" font-size="11">(1,1)</text>
+  <!-- G point -->
+  <circle cx="210" cy="40" r="4" fill="#27c"/>
+  <text x="210" y="30" text-anchor="middle" fill="#27c" font-size="12">G</text>
+  <text x="210" y="58" text-anchor="middle" fill="#555" font-size="11">(5/3,1)</text>
+  <!-- O point -->
+  <circle cx="300" cy="40" r="4" fill="#2a2"/>
+  <text x="300" y="30" text-anchor="middle" fill="#2a2" font-size="12">O</text>
+  <text x="300" y="58" text-anchor="middle" fill="#555" font-size="11">(2,1)</text>
+  <!-- Label -->
+  <text x="210" y="75" text-anchor="middle" fill="#333" font-size="11">Euler line y=1 · H, G, O collinear · HG:GO = 2:1</text>
+</svg>
+</div>
 
 ![Triangle with centroid G (blue), circumcenter O (green), incenter I (red), orthocenter H (orange) marked](/pics/pmath321/triangle-centers.svg)
 
@@ -320,23 +330,60 @@ The isometries of the plane fall into five types, classified by whether they fix
 
 Translations and rotations preserve orientation; reflections and glide reflections reverse it.
 
-<pre>
-Isometries of the plane:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 500 200" width="500" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+  </defs>
 
-ROTATION (about a point P):        REFLECTION (in a line L):
-       .  A'                                A        A'
-      /                                     |       /
-     / θ                               L    |      /
-    P----A                                  |     /
-                                            L    /
-(A rotates to A' about P by θ)        (A reflects to A' across L)
+  <!-- ROTATION -->
+  <text x="60" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Rotation</text>
+  <circle cx="60" cy="100" r="2" fill="#333"/>
+  <text x="60" y="115" text-anchor="middle" fill="#333" font-size="11">P</text>
+  <circle cx="100" cy="100" r="4" fill="#27c"/>
+  <text x="108" y="103" fill="#27c" font-size="11">A</text>
+  <circle cx="72" cy="68" r="4" fill="#e05"/>
+  <text x="76" y="62" fill="#e05" font-size="11">A′</text>
+  <path d="M98,92 A38,38 0 0,0 74,72" stroke="#333" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
+  <text x="60" y="140" text-anchor="middle" fill="#555" font-size="10">A→A′ about P by θ</text>
 
-TRANSLATION (by vector u):          GLIDE REFLECTION (reflect then slide):
-A ----u----> A'                     A    ---slide--->  A''
-   (no fixed points)                |                   |
-                                    v reflect            |
-                                    A' ---------> A''  (same as above)
-</pre>
+  <!-- REFLECTION -->
+  <text x="185" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Reflection</text>
+  <line x1="185" y1="30" x2="185" y2="130" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="185" y="145" text-anchor="middle" fill="#888" font-size="11">L</text>
+  <circle cx="155" cy="80" r="4" fill="#27c"/>
+  <text x="143" y="84" fill="#27c" font-size="11">A</text>
+  <circle cx="215" cy="80" r="4" fill="#e05"/>
+  <text x="220" y="84" fill="#e05" font-size="11">A′</text>
+  <line x1="157" y1="80" x2="213" y2="80" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="185" y="160" text-anchor="middle" fill="#555" font-size="10">A→A′ across L</text>
+
+  <!-- TRANSLATION -->
+  <text x="330" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Translation</text>
+  <circle cx="285" cy="80" r="4" fill="#27c"/>
+  <text x="278" y="75" fill="#27c" font-size="11">A</text>
+  <circle cx="375" cy="80" r="4" fill="#e05"/>
+  <text x="378" y="75" fill="#e05" font-size="11">A′</text>
+  <line x1="291" y1="80" x2="369" y2="80" stroke="#333" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <text x="330" y="72" text-anchor="middle" fill="#333" font-size="11">u</text>
+  <text x="330" y="100" text-anchor="middle" fill="#555" font-size="10">no fixed points</text>
+
+  <!-- GLIDE REFLECTION -->
+  <text x="440" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Glide Refl.</text>
+  <line x1="440" y1="30" x2="440" y2="145" stroke="#888" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <circle cx="415" cy="60" r="4" fill="#27c"/>
+  <text x="403" y="64" fill="#27c" font-size="11">A</text>
+  <circle cx="465" cy="60" r="4" fill="#a50"/>
+  <text x="468" y="64" fill="#a50" font-size="11">A′</text>
+  <circle cx="465" cy="110" r="4" fill="#e05"/>
+  <text x="468" y="114" fill="#e05" font-size="11">A″</text>
+  <line x1="417" y1="60" x2="463" y2="60" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="465" y1="64" x2="465" y2="106" stroke="#333" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <text x="440" y="160" text-anchor="middle" fill="#555" font-size="10">reflect then slide</text>
+</svg>
+</div>
 
 ![Four isometries of ℝ²: rotation, reflection, translation, and glide reflection (blue = original, red dashed = image)](/pics/pmath321/isometries.svg)
 
@@ -385,34 +432,30 @@ Spherical geometry lives on the unit sphere \(S^2\), where "straight lines" beco
 
 Having developed the full toolkit of Euclidean geometry, we now ask: what happens when we replace the flat plane \(\mathbb{R}^2\) with a curved surface? The sphere \(S^2 \subset \mathbb{R}^3\) is the most natural first candidate, and we already have all the tools — dot products, cross products, projections — to work with it.
 
-<pre>
-The unit sphere S² in ℝ³:
-
-              N=(0,0,1) (North Pole)
-                  *
-                 /|\
-                / | \
-               /  |  \
-              /   |   \
-             / equator \
-            *----*----*-----*
-           /   (great  \   /
-          /    circle)  \ /
-         /               *
-        *      center    |
-         \      (0,0,0)  |
-          \              |
-           *----*----*---*
-            \   |   /
-             \  |  /
-              \ | /
-               \|/
-                *
-              S=(0,0,-1) (South Pole)
-
-Great circle = intersection of S² with a plane through origin.
-Spherical distance d_S(u,v) = angle between u and v.
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 260 280" width="260" height="280" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="13">
+  <!-- Sphere outline -->
+  <circle cx="130" cy="140" r="90" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Equator (ellipse) -->
+  <ellipse cx="130" cy="140" rx="90" ry="25" fill="none" stroke="#27c" stroke-width="1.3" stroke-dasharray="6,4"/>
+  <!-- Prime meridian arc (full great circle, front half solid, back dashed) -->
+  <path d="M130,50 Q165,140 130,230" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M130,50 Q95,140 130,230" fill="none" stroke="#888" stroke-width="1"/>
+  <!-- Vertical axis -->
+  <line x1="130" y1="30" x2="130" y2="260" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <!-- North Pole -->
+  <circle cx="130" cy="50" r="4" fill="#e05"/>
+  <text x="142" y="48" fill="#e05" font-size="12">N = (0,0,1)</text>
+  <!-- South Pole -->
+  <circle cx="130" cy="230" r="4" fill="#e05"/>
+  <text x="142" y="234" fill="#e05" font-size="12">S = (0,0,−1)</text>
+  <!-- Center -->
+  <circle cx="130" cy="140" r="3" fill="#333"/>
+  <text x="137" y="137" fill="#555" font-size="11">(0,0,0)</text>
+  <!-- Label -->
+  <text x="130" y="270" text-anchor="middle" fill="#27c" font-size="11">equator (great circle)</text>
+</svg>
+</div>
 
 <div class="definition"><strong>Definition 2.1 (Unit Sphere and Spherical Distance):</strong> The unit sphere is
 \[ S^2 = \left\{ \mathbf{u} \in \mathbb{R}^3 \mid |\mathbf{u}| = 1 \right\}. \]
@@ -470,28 +513,32 @@ Now that we have a notion of distance on \(S^2\), we can ask: what plays the rol
 \[ L_\mathbf{u} = \left\{ \mathbf{x} \in S^2 \mid \mathbf{x}\cdot\mathbf{u} = 0 \right\} = C\!\left(\mathbf{u}, \tfrac{\pi}{2}\right). \]
 Two lines are orthogonal when their poles are orthogonal.</div>
 
-<pre>
-Great circles on S²:
-
-         N (north pole)
-         *
-        /|\
-       / | \
-      /  |  \   meridian (great circle)
-     /   |   \      through N and S
-    *----+----*  ← equator (great circle)
-     \   |   /
-      \  |  /
-       \ | /
-        \|/
-         *
-         S (south pole)
-
-The equator L_{(0,0,1)} = { x ∈ S² : x₃ = 0 }
-Any meridian = L_{(sinφ, -cosφ, 0)} for some φ.
-Two distinct great circles always meet in ± antipodal points.
-(No parallels! Unlike Euclidean geometry.)
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 280 260" width="280" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Sphere -->
+  <circle cx="140" cy="125" r="95" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Equator -->
+  <ellipse cx="140" cy="125" rx="95" ry="26" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <text x="242" y="122" fill="#27c" font-size="11">equator</text>
+  <!-- Meridian 1 (front) -->
+  <path d="M140,30 Q175,125 140,220" fill="none" stroke="#e05" stroke-width="1.3"/>
+  <!-- Meridian 1 (back, dashed) -->
+  <path d="M140,30 Q105,125 140,220" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,4"/>
+  <text x="178" y="75" fill="#e05" font-size="11">meridian</text>
+  <!-- Second meridian (different longitude) -->
+  <path d="M140,30 Q165,100 185,125 Q165,150 140,220" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- North pole -->
+  <circle cx="140" cy="30" r="4" fill="#333"/>
+  <text x="148" y="28" fill="#333" font-size="12">N</text>
+  <!-- South pole -->
+  <circle cx="140" cy="220" r="4" fill="#333"/>
+  <text x="148" y="230" fill="#333" font-size="12">S</text>
+  <!-- Intersection point of equator and meridian -->
+  <circle cx="235" cy="125" r="3" fill="#888"/>
+  <!-- Note -->
+  <text x="140" y="250" text-anchor="middle" fill="#555" font-size="11">Any two great circles meet at two antipodal points</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 2.9 (Properties of Spherical Lines):</strong>
 <ol>
@@ -538,21 +585,33 @@ so \(\alpha = \pi/2\). By symmetry \(\beta = \gamma = \pi/2\) as well.
 
 The angle sum is \(\alpha + \beta + \gamma = 3\pi/2\), and the area (by Girard's theorem) is \(3\pi/2 - \pi = \pi/2\). Note the total sphere area is \(4\pi\), and this triangle covers \(1/8\) of the sphere — which makes geometric sense since the three coordinate planes divide the sphere into 8 octants.</div>
 
-<pre>
-Spherical triangle on S²:
-
-                w = (0,0,1) = N
-               /\
-              /  \   b = π/2
-             /    \
-            / α=π/2\
-           *--------*
-          u=(1,0,0)   v=(0,1,0)
-         a = b = c = π/2
-         α = β = γ = π/2
-         Angle sum = 3π/2 > π  ✓ (positive curvature)
-         Area = π/2 = spherical excess
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 280 260" width="280" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Sphere outline -->
+  <circle cx="140" cy="130" r="95" fill="none" stroke="#ccc" stroke-width="1"/>
+  <!-- Equator (partial, behind triangle) -->
+  <ellipse cx="140" cy="175" rx="95" ry="22" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Triangle edges (great circle arcs approximated) -->
+  <!-- u=(1,0,0) → v=(0,1,0): arc on equatorial plane -->
+  <path d="M200,175 Q140,145 80,175" fill="none" stroke="#e05" stroke-width="2"/>
+  <!-- u=(1,0,0) → w=(0,0,1): meridian arc -->
+  <path d="M200,175 Q185,100 140,45" fill="none" stroke="#e05" stroke-width="2"/>
+  <!-- v=(0,1,0) → w=(0,0,1): another meridian arc -->
+  <path d="M80,175 Q95,100 140,45" fill="none" stroke="#e05" stroke-width="2"/>
+  <!-- Vertices -->
+  <circle cx="140" cy="45" r="5" fill="#27c"/>
+  <text x="148" y="40" fill="#27c" font-size="12">w=(0,0,1)</text>
+  <circle cx="200" cy="175" r="5" fill="#27c"/>
+  <text x="206" y="180" fill="#27c" font-size="12">u=(1,0,0)</text>
+  <circle cx="80" cy="175" r="5" fill="#27c"/>
+  <text x="10" y="180" fill="#27c" font-size="12">v=(0,1,0)</text>
+  <!-- Angle labels -->
+  <text x="152" y="62" fill="#e05" font-size="11">α=π/2</text>
+  <!-- Caption -->
+  <text x="140" y="220" text-anchor="middle" fill="#333" font-size="11">a=b=c=π/2 · α=β=γ=π/2</text>
+  <text x="140" y="236" text-anchor="middle" fill="#333" font-size="11">Angle sum 3π/2 &gt; π · Area = π/2</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 2.18 (Area of Spherical Triangles — Girard's Theorem):</strong> The area of a positively oriented spherical triangle \([\mathbf{u},\mathbf{v},\mathbf{w}]\) with interior angles \(\alpha, \beta, \gamma\) is
 \[ A = (\alpha + \beta + \gamma) - \pi. \]
@@ -572,21 +631,39 @@ More carefully: \(W_\alpha \cup W_\beta \cup W_\gamma = S^2\) and the overlaps a
 wait, each overlap (triangle) is covered three times instead of once, so we add \(2A\) for \(T\) and \(2A\) for \(T'\):
 \[4\alpha + 4\beta + 4\gamma = 4\pi + 4A \implies A = \alpha + \beta + \gamma - \pi.\]</div>
 
-<pre>
-The lune proof for Girard's theorem:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 360 200" width="360" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Lune W_α: shaded region between two great semicircles -->
+  <!-- Left sphere showing the lune -->
+  <circle cx="90" cy="100" r="75" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Lune shading: between two meridians at angle α -->
+  <path d="M90,25 Q130,100 90,175 Q90,100 90,25" fill="#bdf" fill-opacity="0.6" stroke="none"/>
+  <path d="M90,25 Q130,100 90,175" fill="none" stroke="#27c" stroke-width="2"/>
+  <path d="M90,25 Q50,100 90,175" fill="none" stroke="#27c" stroke-width="2"/>
+  <!-- Triangle T inside lune -->
+  <path d="M90,25 Q110,90 120,140 Q90,125 60,140 Q70,90 90,25" fill="#27c" fill-opacity="0.35" stroke="#27c" stroke-width="1"/>
+  <text x="90" y="105" text-anchor="middle" fill="#27c" font-size="11">T</text>
+  <!-- Angle α label -->
+  <text x="128" y="65" fill="#333" font-size="13">α</text>
+  <text x="90" y="185" text-anchor="middle" fill="#333" font-size="11">Lune W_α, area = 4α</text>
 
-    Lune W_α (between the two great circles through v and w):
-    ┌────────────────────────────────────────────┐
-    │                                            │
-    │    Great circle                            │
-    │    through v,w  ←→ α ←→  Great circle     │
-    │                                            │
-    │  T (triangle)   T' (antipodal triangle)    │
-    │                                            │
-    └────────────────────────────────────────────┘
-    Area(W_α) = 4α.  Three lunes cover S² with T counted 3×,
-    so 4α+4β+4γ = 4π + 2·(area T) + 2·(area T') = 4π + 4A.
-</pre>
+  <!-- Divider -->
+  <line x1="185" y1="10" x2="185" y2="190" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Right: schematic of three lunes covering sphere -->
+  <circle cx="275" cy="100" r="75" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Lune 1 (α) -->
+  <path d="M275,25 Q315,100 275,175 Q235,100 275,25" fill="#bdf" fill-opacity="0.3" stroke="#27c" stroke-width="1.2"/>
+  <!-- Lune 2 (β) rotated -->
+  <path d="M275,25 Q325,60 340,100 Q325,140 275,175 Q285,100 275,25" fill="#fdb" fill-opacity="0.3" stroke="#e80" stroke-width="1.2"/>
+  <!-- Lune 3 (γ) rotated -->
+  <path d="M275,25 Q225,60 210,100 Q225,140 275,175 Q265,100 275,25" fill="#dfd" fill-opacity="0.3" stroke="#282" stroke-width="1.2"/>
+  <!-- Triangle in center -->
+  <path d="M275,50 Q305,115 245,115 Z" fill="#77c" fill-opacity="0.5" stroke="#27c" stroke-width="1.5"/>
+  <text x="275" y="95" text-anchor="middle" fill="#27c" font-size="11" font-weight="bold">T</text>
+  <text x="275" y="185" text-anchor="middle" fill="#333" font-size="11">4α+4β+4γ = 4π+4A</text>
+</svg>
+</div>
 
 This is one of the most beautiful theorems in geometry: the area of a spherical triangle is completely determined by its angle sum, with no reference to side lengths. Girard's theorem was proved by Albert Girard in 1629, though the result was likely known to Thomas Harriot independently around the same time. It was later generalized to all curved surfaces by Gauss and Bonnet.
 
@@ -699,24 +776,37 @@ This is why the gnomonic projection is used in navigation charts where straight-
 ![Stereographic projection: from north pole N, point P on sphere maps to σ(P) on the equatorial plane ℂ](/pics/pmath321/stereographic-projection.svg)
 \[ \phi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right), \qquad \psi(u,v) = \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1}\right). \]
 
-<pre>
-Stereographic projection from N = (0,0,1):
-
-    N =(0,0,1)
-    *
-    |  \
-    |    \
-    |      \      P = (x,y,z) on sphere
-    |        * P
-    |          \
-    +-----------*---------  z=0 plane (equatorial plane)
-                σ(P) = (x/(1-z), y/(1-z))
-
-  The south pole (0,0,-1) maps to the origin.
-  Points near N go to infinity.
-  Great circles not through N map to circles in the plane.
-  Great circles through N map to straight lines.
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 320 250" width="320" height="250" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e05"/>
+    </marker>
+  </defs>
+  <!-- Sphere -->
+  <ellipse cx="130" cy="110" rx="85" ry="85" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Equatorial plane z=0 -->
+  <line x1="20" y1="190" x2="300" y2="190" stroke="#27c" stroke-width="1.5"/>
+  <text x="302" y="195" fill="#27c" font-size="11">z=0</text>
+  <!-- North pole N -->
+  <circle cx="130" cy="25" r="4" fill="#333"/>
+  <text x="138" y="23" fill="#333" font-size="12">N=(0,0,1)</text>
+  <!-- South pole projects to origin -->
+  <circle cx="130" cy="190" r="3" fill="#555"/>
+  <text x="107" y="208" fill="#555" font-size="10">S→origin</text>
+  <!-- Point P on sphere -->
+  <circle cx="185" cy="95" r="4" fill="#e05"/>
+  <text x="193" y="92" fill="#e05" font-size="12">P</text>
+  <!-- Projection ray from N through P to plane -->
+  <line x1="130" y1="25" x2="248" y2="190" stroke="#e05" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
+  <!-- σ(P) on the plane -->
+  <circle cx="248" cy="190" r="4" fill="#e05"/>
+  <text x="252" y="185" fill="#e05" font-size="11">σ(P)</text>
+  <!-- Label formula -->
+  <text x="130" y="230" text-anchor="middle" fill="#333" font-size="11">σ(x,y,z) = (x/(1−z), y/(1−z))</text>
+  <text x="130" y="245" text-anchor="middle" fill="#555" font-size="10">Circles on sphere → circles/lines in plane · Conformal</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 2.54:</strong> The inverse stereographic projection \(\psi: \mathbb{R}^2 \to S^2\) is a local scaling near \((u,v)\) of scaling factor \(c = \frac{2}{u^2+v^2+1}\). In particular, stereographic projection is conformal (angle-preserving).</div>
 
@@ -763,28 +853,29 @@ A point in the affine chart \(U_3 = \{[x,y,z] : z\neq 0\}\) can be written as \(
 
 <div class="definition"><strong>Definition 3.9 (Projective Line):</strong> A projective line in \(\mathbb{P}^2\) is the set of all lines through the origin in \(\mathbb{R}^3\) which lie in a given plane through the origin. Each projective line corresponds to a Euclidean plane through the origin and has a pole \(\mathbf{u} \in \mathbb{P}^2\) (the line perpendicular to the plane). We write \(L_\mathbf{u}\) for the line with pole \(\mathbf{u}\). Note that \(L_\mathbf{u} = C(\mathbf{u}, \pi/2)\).</div>
 
-<pre>
-The projective plane P²:
-
-Affine view (z ≠ 0 chart):
-
-      "line at infinity"
-      L_{(0,0,1)} = { [x,y,0] }
-         ...P_∞ = [1,0,0]...P_∞' = [0,1,0]...
-  ─────────────────────────────────────────
-  │                                        │
-  │  (u,v) ↔ [u,v,1]                      │
-  │                                        │
-  │  "Ordinary" affine plane ℝ²            │
-  │                                        │
-  │  Parallel lines: y = 2x + 1           │
-  │                  y = 2x + 3           │
-  │  both meet at [1,2,0] at infinity     │
-  │                                        │
-  ─────────────────────────────────────────
-
-In P²: any two distinct lines meet in exactly one point.
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 360 240" width="360" height="240" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Affine plane box -->
+  <rect x="20" y="40" width="320" height="160" fill="#f9f9f9" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <!-- Line at infinity (top border) -->
+  <rect x="20" y="20" width="320" height="20" fill="#bdf" fill-opacity="0.6" stroke="#27c" stroke-width="1.2"/>
+  <text x="180" y="34" text-anchor="middle" fill="#27c" font-size="11">Line at infinity L_{(0,0,1)} = { [x,y,0] }</text>
+  <text x="60" y="34" fill="#27c" font-size="10">P_∞=[1,0,0]</text>
+  <text x="260" y="34" fill="#27c" font-size="10">P_∞′=[0,1,0]</text>
+  <!-- Two parallel lines converging to point at infinity -->
+  <line x1="40" y1="200" x2="180" y2="30" stroke="#e05" stroke-width="1.5"/>
+  <line x1="100" y1="200" x2="180" y2="30" stroke="#e80" stroke-width="1.5"/>
+  <!-- Convergence point -->
+  <circle cx="180" cy="30" r="4" fill="#e05"/>
+  <!-- Labels for the lines -->
+  <text x="30" y="200" fill="#e05" font-size="10">y=2x+1</text>
+  <text x="96" y="210" fill="#e80" font-size="10">y=2x+3</text>
+  <!-- "ordinary" label -->
+  <text x="180" y="130" text-anchor="middle" fill="#555" font-size="11">Affine plane ℝ² = {[u,v,1]}</text>
+  <text x="180" y="148" text-anchor="middle" fill="#555" font-size="11">Parallel lines meet at [1,2,0] ∈ L_∞</text>
+  <text x="180" y="220" text-anchor="middle" fill="#333" font-size="11">In ℙ²: any two distinct lines meet in exactly one point</text>
+</svg>
+</div>
 
 ![Projective plane: parallel lines (railway tracks) converge to a point at infinity P_∞ on the line at infinity](/pics/pmath321/projective-infinity.svg)
 
@@ -856,29 +947,42 @@ Check that lines \(uu'\), \(vv'\), \(ww'\) pass through \(p = [1,1,1]\):
 
 By Desargues' theorem, the points \(a = (vw)\cap(v'w')\), \(b = (wu)\cap(w'u')\), \(c = (uv)\cap(u'v')\) should be collinear. We can verify this computationally using cross products in homogeneous coordinates.</div>
 
-<pre>
-Desargues' Theorem:
-
-         p (center of perspectivity)
-         *
-        /|\
-       / | \
-      /  |  \
-     /   |   \
-    u    |    v
-    *    |    *
-   / \   |   / \
-  /   \  |  /   \
- /   u'\ | /v'   \
-*-------*|*-------*
-         w
-         *
-         |
-         w'
-         *
- (Lines uu', vv', ww' all pass through p)
- (Intersections of corresponding sides are collinear)
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 320 290" width="320" height="290" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Center of perspectivity p -->
+  <circle cx="160" cy="20" r="4" fill="#333"/>
+  <text x="168" y="18" fill="#333" font-size="12">p</text>
+  <!-- Triangle uvw (outer) -->
+  <circle cx="70" cy="120" r="4" fill="#27c"/>
+  <text x="56" y="118" fill="#27c" font-size="12">u</text>
+  <circle cx="250" cy="120" r="4" fill="#27c"/>
+  <text x="255" y="118" fill="#27c" font-size="12">v</text>
+  <circle cx="160" cy="190" r="4" fill="#27c"/>
+  <text x="166" y="202" fill="#27c" font-size="12">w</text>
+  <!-- Triangle u'v'w' (inner) -->
+  <circle cx="112" cy="160" r="4" fill="#e05"/>
+  <text x="98" y="158" fill="#e05" font-size="12">u′</text>
+  <circle cx="208" cy="160" r="4" fill="#e05"/>
+  <text x="213" y="158" fill="#e05" font-size="12">v′</text>
+  <circle cx="160" cy="230" r="4" fill="#e05"/>
+  <text x="166" y="244" fill="#e05" font-size="12">w′</text>
+  <!-- Lines from p through corresponding vertices -->
+  <line x1="160" y1="20" x2="70" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="160" y1="20" x2="250" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="160" y1="20" x2="160" y2="230" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Outer triangle edges -->
+  <line x1="70" y1="120" x2="250" y2="120" stroke="#27c" stroke-width="1.5"/>
+  <line x1="70" y1="120" x2="160" y2="190" stroke="#27c" stroke-width="1.5"/>
+  <line x1="250" y1="120" x2="160" y2="190" stroke="#27c" stroke-width="1.5"/>
+  <!-- Inner triangle edges -->
+  <line x1="112" y1="160" x2="208" y2="160" stroke="#e05" stroke-width="1.5"/>
+  <line x1="112" y1="160" x2="160" y2="230" stroke="#e05" stroke-width="1.5"/>
+  <line x1="208" y1="160" x2="160" y2="230" stroke="#e05" stroke-width="1.5"/>
+  <!-- Pascal/Desargues collinear line -->
+  <line x1="20" y1="270" x2="300" y2="270" stroke="#2a2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="160" y="286" text-anchor="middle" fill="#2a2" font-size="11">a, b, c collinear (Desargues line)</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 3.36 (Pappus' Theorem):</strong> Let \(L\) and \(L'\) be distinct lines in \(\mathbb{P}^2\), with distinct points \(u,v,w \in L\) and \(u',v',w' \in L'\). Define \(a = (vw')\cap(wv')\), \(b = (wu')\cap(uw')\), \(c = (uv')\cap(vu')\). Then \(a, b, c\) are collinear.</div>
 
@@ -945,7 +1049,7 @@ After surveying the positively curved world of the sphere and the "flat" project
 </ul>
 In both cases \(F^2 = I\), so the map is its own inverse.</div>
 
-Geometrically, circle inversion sends points inside \(C\) to points outside \(C\) and vice versa, fixing points on \(C$ itself. Points close to the center \(a\) map to points far away, and points far from \(a\) map to points close to \(a\). The center itself has no image (it maps to "infinity"), which is why the domain excludes \(a\).
+Geometrically, circle inversion sends points inside \(C\) to points outside \(C\) and vice versa, fixing points on \(C\) itself. Points close to the center \(a\) map to points far away, and points far from \(a\) map to points close to \(a\). The center itself has no image (it maps to "infinity"), which is why the domain excludes \(a\).
 
 <div class="example"><strong>Example 4.1a (Inverting a point through a circle).</strong>
 
@@ -964,23 +1068,35 @@ Invert a point on \(C\): \(\mathbf{x} = (2, 0)\),
 \[F_C((2,0)) = \frac{4}{4}(2,0) = (2,0).\]
 Points on the circle are fixed. ✓</div>
 
-<pre>
-Circle inversion through circle C (centre O, radius r):
-
-                          x' = F_C(x)
-  .............           |
- .       r     .          |
-.   O----*-----|--------->* x
- .  (center)  .  r²/|x|
-  .............
-
-Key properties:
-- If |x| < r, then |F_C(x)| = r²/|x| > r (inside → outside)
-- If |x| > r, then |F_C(x)| < r (outside → inside)
-- If |x| = r, then F_C(x) = x (boundary fixed)
-- F_C(F_C(x)) = x (involution)
-- Lines and circles map to lines and circles
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 380 180" width="380" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Circle C -->
+  <circle cx="110" cy="90" r="70" fill="none" stroke="#27c" stroke-width="1.8"/>
+  <!-- Center O -->
+  <circle cx="110" cy="90" r="3" fill="#333"/>
+  <text x="100" y="106" fill="#333" font-size="12">O</text>
+  <!-- Radius label -->
+  <line x1="110" y1="90" x2="180" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="142" y="84" fill="#888" font-size="11">r</text>
+  <!-- x inside circle -->
+  <circle cx="145" cy="90" r="4" fill="#e05"/>
+  <text x="148" y="82" fill="#e05" font-size="12">x</text>
+  <!-- x' = F_C(x) outside circle -->
+  <circle cx="280" cy="90" r="4" fill="#27c"/>
+  <text x="284" y="82" fill="#27c" font-size="12">x′=F_C(x)</text>
+  <!-- Arrow from x to x' -->
+  <line x1="151" y1="90" x2="274" y2="90" stroke="#333" stroke-width="1.3" marker-end="url(#arr3)"/>
+  <text x="212" y="80" text-anchor="middle" fill="#333" font-size="11">r²/|x|</text>
+  <!-- Key properties -->
+  <text x="190" y="130" text-anchor="middle" fill="#333" font-size="11">inside → outside · boundary fixed · F_C²=I</text>
+  <text x="190" y="148" text-anchor="middle" fill="#555" font-size="10">Circles and lines map to circles and lines (generalized circles)</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 4.6 (Reflections Preserve Lines and Circles):</strong> Reflection in a line or circle maps lines and circles to lines and circles. Specifically for the inversion \(F_C\) in circle \(C\) centred at \(a\) of radius \(r\):
 <ol>
@@ -1020,27 +1136,29 @@ The choice of conformal factor \(\frac{2}{1-|\mathbf{x}|^2}\) is not arbitrary: 
 \[K = -\frac{1}{2}\Delta \log\left(\frac{2}{1-|\mathbf{x}|^2}\right)^2 = -1.\]
 The conformality of the model — hyperbolic angles equal Euclidean angles — is what gives the Poincaré disc its aesthetic appeal in Escher's famous "Circle Limit" drawings.
 
-<pre>
-The Poincaré disc model H²:
-
-       ___________
-      /     |     \        Boundary S¹ = "infinity"
-     /  \   |   /  \       (infinitely far in hyperbolic metric)
-    |    \  |  /    |
-    |     \ | /     |      ← Hyperbolic lines:
-    |------\|/------|        * diameters of the disc
-    |      /|\      |        * arcs of circles meeting S¹ at right angles
-    |     / | \     |
-    |    /  |  \    |
-     \  /   |   \  /
-      \/____________/
-
-  Center 0: "origin" of H²
-  All geodesics are arcs orthogonal to S¹
-  Triangles have angle sum < π
-  More triangles fit around a vertex than in Euclidean space
-  (negative curvature = "more room" than flat space)
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 320 310" width="320" height="310" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- Boundary circle S¹ -->
+  <circle cx="160" cy="150" r="120" fill="#fafff8" stroke="#333" stroke-width="2"/>
+  <text x="255" y="50" fill="#333" font-size="11">S¹ = ∞</text>
+  <!-- Diameter geodesic (horizontal) -->
+  <line x1="40" y1="150" x2="280" y2="150" stroke="#e05" stroke-width="1.5"/>
+  <!-- Diameter geodesic (vertical) -->
+  <line x1="160" y1="30" x2="160" y2="270" stroke="#e05" stroke-width="1.5"/>
+  <!-- Arc geodesic 1: circle orthogonal to S¹ -->
+  <path d="M40,150 A110,110 0 0,1 230,60" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <!-- Arc geodesic 2 -->
+  <path d="M280,150 A110,110 0 0,0 90,60" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <!-- Arc geodesic 3 -->
+  <path d="M100,270 A95,95 0 0,1 220,270" fill="none" stroke="#2a2" stroke-width="1.5"/>
+  <!-- Origin -->
+  <circle cx="160" cy="150" r="4" fill="#333"/>
+  <text x="166" y="147" fill="#333" font-size="11">0</text>
+  <!-- Labels -->
+  <text x="160" y="295" text-anchor="middle" fill="#e05" font-size="11">— diameters (geodesics)</text>
+  <text x="160" y="310" text-anchor="middle" fill="#27c" font-size="11">— arcs orthogonal to S¹ (geodesics)</text>
+</svg>
+</div>
 
 <div class="definition"><strong>Definition 4.13 (Hyperbolic Lines):</strong> A hyperbolic line in \(\mathbb{H}^2\) is a set which is either:
 <ul>
@@ -1070,23 +1188,39 @@ This gives three types of pairs of lines — a fundamental departure from Euclid
 
 The three-way classification of line pairs is a hallmark of hyperbolic geometry. Given a line \(L\) and a point \(p \notin L\), there are infinitely many lines through \(p\) that do not intersect \(L\) — they divide into two families of asymptotic lines bordering a continuous band of ultraparallel lines. This is the negation of Euclid's parallel postulate.
 
-<pre>
-The three types of pairs of hyperbolic lines:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 480 210" width="480" height="210" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- INTERSECTING -->
+  <text x="75" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Intersecting</text>
+  <text x="75" y="32" text-anchor="middle" fill="#555" font-size="10">(meet inside H²)</text>
+  <circle cx="75" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Two lines crossing inside -->
+  <path d="M20,80 A90,90 0 0,1 130,80" fill="none" stroke="#e05" stroke-width="1.8"/>
+  <path d="M20,150 A90,90 0 0,0 130,150" fill="none" stroke="#27c" stroke-width="1.8"/>
+  <circle cx="75" cy="115" r="3" fill="#333"/>
 
-   INTERSECTING         ASYMPTOTIC           ULTRAPARALLEL
-   (meet inside H²)    (meet on S¹)          (no meeting)
+  <!-- ASYMPTOTIC -->
+  <text x="240" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Asymptotic</text>
+  <text x="240" y="32" text-anchor="middle" fill="#555" font-size="10">(meet on S¹)</text>
+  <circle cx="240" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Two lines meeting at boundary -->
+  <path d="M185,155 A60,60 0 0,1 295,75" fill="none" stroke="#e05" stroke-width="1.8"/>
+  <path d="M185,155 A120,120 0 0,0 295,75" fill="none" stroke="#27c" stroke-width="1.8"/>
+  <circle cx="295" cy="75" r="4" fill="#333"/>
+  <text x="302" y="71" fill="#555" font-size="10">on S¹</text>
 
-      ___                  ___                   ___
-     /   \                /   \                 /   \
-    | /\  |              |/    |               | | | |
-    |/  \ |             /|     |               | | | |
-    |\  / |            | |\    |               | | | |
-    | \/ |             |  |\   |               | | | |
-     \___/              \___\  /                \___|_/
-                          \.../
-                           \./
-                            (meeting on boundary S¹)
-</pre>
+  <!-- ULTRAPARALLEL -->
+  <text x="405" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Ultraparallel</text>
+  <text x="405" y="32" text-anchor="middle" fill="#555" font-size="10">(no meeting)</text>
+  <circle cx="405" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Two non-meeting arcs -->
+  <path d="M350,80 A80,80 0 0,1 350,150" fill="none" stroke="#e05" stroke-width="1.8"/>
+  <path d="M460,80 A80,80 0 0,0 460,150" fill="none" stroke="#27c" stroke-width="1.8"/>
+
+  <!-- Caption -->
+  <text x="240" y="200" text-anchor="middle" fill="#555" font-size="11">Three types of line pairs in ℍ²</text>
+</svg>
+</div>
 
 ## 4.3 Geodesics and Distance
 
@@ -1154,25 +1288,41 @@ Hyperbolic triangles have interior angle sum strictly less than \(\pi\), and the
 
 Horocycles and hypercycles are the hyperbolic analogues of circles and lines in the Euclidean sense: a horocycle is orthogonal to all hyperbolic lines through its "centre at infinity," while a hypercycle is the locus of points at constant distance from a given hyperbolic line.
 
-<pre>
-Horocycles and hypercycles in H²:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 380 230" width="380" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- HOROCYCLE -->
+  <text x="90" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Horocycle</text>
+  <text x="90" y="32" text-anchor="middle" fill="#555" font-size="10">(tangent to S¹)</text>
+  <!-- Disc -->
+  <circle cx="90" cy="120" r="80" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Horocycle: circle tangent to S¹ at bottom (from inside) -->
+  <circle cx="90" cy="160" r="40" fill="none" stroke="#e05" stroke-width="1.8"/>
+  <!-- Tangent point -->
+  <circle cx="90" cy="200" r="4" fill="#e05"/>
+  <text x="98" y="215" fill="#e05" font-size="10">tangent pt on S¹</text>
+  <text x="90" y="105" text-anchor="middle" fill="#e05" font-size="10">horocycle</text>
 
-      Horocycle                 Hypercycle
-    (tangent to S¹)          (chord of S¹)
+  <!-- Divider -->
+  <line x1="195" y1="10" x2="195" y2="220" stroke="#ddd" stroke-width="1"/>
 
-       ___                       ___
-      /   \                     /   \
-     | .  .|                   |  __ |
-     |  \/  |                  | /  \|
-      \.._./                   |/    |
-       \   /                   |\    |
-        \_|/                   | \__/|
-          *                     \___/
-      (touches S¹)         (cuts S¹ in 2 points)
-
-Horocycle = "circle with center on S¹" (infinite radius)
-Hypercycle = equidistant curve from a geodesic
-</pre>
+  <!-- HYPERCYCLE -->
+  <text x="295" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Hypercycle</text>
+  <text x="295" y="32" text-anchor="middle" fill="#555" font-size="10">(chord of S¹)</text>
+  <!-- Disc -->
+  <circle cx="295" cy="120" r="80" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Geodesic (hyperbolic line, diameter) -->
+  <line x1="215" y1="120" x2="375" y2="120" stroke="#888" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <!-- Hypercycle: arc of circle crossing S¹ at two points -->
+  <path d="M215,80 A120,120 0 0,1 375,80" fill="none" stroke="#27c" stroke-width="1.8"/>
+  <!-- Two intersection points with S¹ -->
+  <circle cx="215" cy="80" r="4" fill="#27c"/>
+  <circle cx="375" cy="80" r="4" fill="#27c"/>
+  <text x="215" y="68" fill="#27c" font-size="10">on S¹</text>
+  <text x="355" y="68" fill="#27c" font-size="10">on S¹</text>
+  <text x="295" y="68" text-anchor="middle" fill="#27c" font-size="10">hypercycle</text>
+  <text x="295" y="215" text-anchor="middle" fill="#555" font-size="10">equidistant from geodesic</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 4.33 (Hyperbolic Trigonometry Laws):</strong> For a triangle in \(\mathbb{H}^2\) with edge lengths \(a,b,c\) and interior angles \(\alpha, \beta, \gamma\):
 <ol>
@@ -1281,20 +1431,57 @@ For \(t = 1\): \(f(z) = \frac{(2+i)z-i}{iz+(2-i)}\). Fixed point: only \(z=1\). 
 \[f(z) = \frac{z + r}{rz + 1}, \quad 0 < r < 1.\]
 Fixed points: \(z = \pm 1\) (on \(S^1\)). This translates along the real diameter by a hyperbolic distance of \(2\tanh^{-1}(r)\).</div>
 
-<pre>
-The three isometry types in H²:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 500 220" width="500" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
+  <defs>
+    <marker id="arr4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#e05"/>
+    </marker>
+    <marker id="arr5" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2a2"/>
+    </marker>
+  </defs>
 
-ELLIPTIC (rotation):          PARABOLIC (horolation):       HYPERBOLIC (translation):
-      ___                           ___                           ___
-     /   \                         /   \                         /   \
-    | /-->|                       |/~~\ |                       |---> |
-    |/    |                       | \/ |                        |     |
-    |\    |                       |    |                        |     |
-    | \<--|                        \___*                         *---*
-     \___/                       (fixed pt.                    (two fixed
-                                   on S¹)                       pts on S¹)
-   (orbits = circles)          (orbits = horocycles)        (orbits = hypercycles)
-</pre>
+  <!-- ELLIPTIC -->
+  <text x="83" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Elliptic (rotation)</text>
+  <circle cx="83" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Circular orbits -->
+  <circle cx="83" cy="110" r="25" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <circle cx="83" cy="110" r="45" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <!-- Arrow on orbit -->
+  <path d="M108,110 A25,25 0 0,1 83,85" fill="none" stroke="#e05" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Fixed point -->
+  <circle cx="83" cy="110" r="4" fill="#333"/>
+  <text x="91" y="107" fill="#333" font-size="10">fixed pt</text>
+  <text x="83" y="195" text-anchor="middle" fill="#555" font-size="10">orbits = circles</text>
+
+  <!-- PARABOLIC -->
+  <text x="250" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Parabolic (horolation)</text>
+  <circle cx="250" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Horocycle orbits (circles tangent to S¹ at fixed pt) -->
+  <circle cx="250" cy="165" r="25" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <circle cx="250" cy="155" r="35" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <!-- Fixed point on S¹ (bottom) -->
+  <circle cx="250" cy="180" r="4" fill="#333"/>
+  <text x="258" y="195" fill="#333" font-size="10">fixed pt on S¹</text>
+  <text x="250" y="208" text-anchor="middle" fill="#555" font-size="10">orbits = horocycles</text>
+
+  <!-- HYPERBOLIC -->
+  <text x="417" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Hyperbolic (translation)</text>
+  <circle cx="417" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Axis geodesic -->
+  <line x1="347" y1="110" x2="487" y2="110" stroke="#888" stroke-width="1.3" stroke-dasharray="4,3"/>
+  <!-- Translation arrow along axis -->
+  <line x1="385" y1="110" x2="430" y2="110" stroke="#2a2" stroke-width="2" marker-end="url(#arr5)"/>
+  <!-- Hypercycle orbits -->
+  <path d="M347,80 A120,120 0 0,1 487,80" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <path d="M347,140 A120,120 0 0,0 487,140" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <!-- Two fixed points on S¹ -->
+  <circle cx="347" cy="110" r="4" fill="#333"/>
+  <circle cx="487" cy="110" r="4" fill="#333"/>
+  <text x="417" y="195" text-anchor="middle" fill="#555" font-size="10">orbits = hypercycles · two fixed pts on S¹</text>
+</svg>
+</div>
 
 <div class="theorem"><strong>Theorem 4.40 (Perpendicular Bisector Locus):</strong> For \(\mathbf{u}, \mathbf{v} \in \mathbb{H}^2\) with \(\mathbf{u} \neq \mathbf{v}\), let \(L\) be the perpendicular bisector (the hyperbolic line with \(F_L(\mathbf{u}) = \mathbf{v}\)). Then for \(\mathbf{x} \in \mathbb{H}^2\):
 \[ d_H(\mathbf{x},\mathbf{u}) = d_H(\mathbf{x},\mathbf{v}) \iff \mathbf{x} \in L. \]
@@ -1312,24 +1499,38 @@ The Poincaré disc is one of several equivalent models. Each model of the hyperb
 
 <strong>Poincaré Upper Half-Plane Model:</strong> Let \(\mathbb{U}^2 = \{(x,y) \mid y > 0\}\). Let \(C = C_E((0,1), \sqrt{2})\) and \(L\) be the \(x\)-axis; then \(S = F_L \circ F_C\) maps \(\mathbb{H}^2\) to \(\mathbb{U}^2\). In \(\mathbb{U}^2\), the metric is \(ds = \frac{d_E s}{y}\). Geodesics are vertical lines and upper semicircles with centres on the \(x\)-axis. Angles are Euclidean.
 
-<pre>
-The upper half-plane model U²:
-
-    y
-    ^
-    |    .      .  Geodesics:
-    |   / \    /\    vertical lines (x = const.)
-    |  /   \  /  \   and semicircles with center on x-axis
-    | /     \/    \
-    |/              \
-----*--------*-------*-------> x
-    a        b        c
-  (boundary = x-axis, the "real line", is infinity)
-
-Metric: ds = dE_s / y  (distances shrink near the x-axis)
-Isometries = Möbius transformations with real coefficients:
-  z ↦ (az+b)/(cz+d),  a,b,c,d ∈ ℝ, ad-bc > 0
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 360 240" width="360" height="240" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- x-axis (boundary = infinity) -->
+  <line x1="20" y1="185" x2="340" y2="185" stroke="#333" stroke-width="1.5" marker-end="url(#arr6)"/>
+  <text x="344" y="189" fill="#333" font-size="12">x</text>
+  <!-- y-axis -->
+  <line x1="50" y1="200" x2="50" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arr6)"/>
+  <text x="45" y="16" fill="#333" font-size="12">y</text>
+  <!-- Boundary label -->
+  <text x="180" y="202" text-anchor="middle" fill="#e05" font-size="11">boundary (x-axis = ∞)</text>
+  <!-- Vertical geodesic 1 -->
+  <line x1="110" y1="185" x2="110" y2="30" stroke="#27c" stroke-width="1.5"/>
+  <!-- Vertical geodesic 2 -->
+  <line x1="200" y1="185" x2="200" y2="30" stroke="#27c" stroke-width="1.5"/>
+  <!-- Semicircle geodesic -->
+  <path d="M110,185 A70,70 0 0,1 250,185" fill="none" stroke="#e80" stroke-width="1.5"/>
+  <!-- Another semicircle -->
+  <path d="M160,185 A45,45 0 0,1 250,185" fill="none" stroke="#2a2" stroke-width="1.5"/>
+  <!-- Labels on axes -->
+  <text x="110" y="200" text-anchor="middle" fill="#555" font-size="11">a</text>
+  <text x="200" y="200" text-anchor="middle" fill="#555" font-size="11">b</text>
+  <text x="250" y="200" text-anchor="middle" fill="#555" font-size="11">c</text>
+  <!-- Caption -->
+  <text x="180" y="218" text-anchor="middle" fill="#27c" font-size="11">— vertical lines (geodesics)</text>
+  <text x="180" y="232" text-anchor="middle" fill="#e80" font-size="11">— semicircles centred on x-axis (geodesics)</text>
+</svg>
+</div>
 
 <strong>Minkowski (Hyperboloid) Model:</strong> Define the Minkowski quadratic form \(Q(x,y,t) = x^2 + y^2 - t^2\) on \(\mathbb{R}^3\). The model is the upper sheet of the hyperboloid:
 \[ \mathbb{M}^2 = \left\{ (x,y,t) \in \mathbb{R}^3 \mid x^2 + y^2 - t^2 = -1,\; t > 0 \right\}. \]
@@ -1337,28 +1538,41 @@ A stereographic-like projection from \((0,0,-1)\) maps \(\mathbb{M}^2\) to \(\ma
 
 The Minkowski model makes explicit the parallel with spherical geometry: just as \(S^2\) is the set of unit vectors for the Euclidean inner product \(\langle\mathbf{x},\mathbf{y}\rangle = x_1y_1+x_2y_2+x_3y_3\), the hyperboloid \(\mathbb{M}^2\) is the set of "unit vectors" for the Minkowski inner product \(\langle (x,y,t), (x',y',t') \rangle = xx' + yy' - tt'\). The sign change in the time coordinate is precisely what switches from positive to negative curvature.
 
-<pre>
-The hyperboloid model M²:
-
-         t
-         ^        upper sheet
-         |       /
-         |    z=t (hyperboloid: x²+y²-t²=-1, t>0)
-         |   /  *---*
-         |  /  * | * *
-         | /  *  |   *
-         |/  *   |    *
-         O---*---+----*---> x (t=0 plane)
-         |\  *   |    *
-         | \ *   |   *
-         |  * *--|--*
-         |   *---*
-         |
-    lower sheet (t<0, not used)
-
-Geodesics = intersections with planes through origin.
-Projection from (0,0,-1) onto z=0 disc gives Poincaré model.
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 320 280" width="320" height="280" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="130" y1="250" x1="130" y1="250" x2="130" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr7)"/>
+  <text x="134" y="15" fill="#aaa" font-size="12">t</text>
+  <line x1="40" y1="180" x2="290" y2="180" stroke="#aaa" stroke-width="1" marker-end="url(#arr7)"/>
+  <text x="292" y="184" fill="#aaa" font-size="12">x</text>
+  <!-- t=0 plane label -->
+  <text x="38" y="178" fill="#aaa" font-size="10">t=0</text>
+  <!-- Upper sheet of hyperboloid (x²+y²-t²=-1, t>0) -->
+  <!-- Hyperbola-like curve (approximated) -->
+  <path d="M40,180 Q80,140 130,80 Q180,140 220,180" fill="none" stroke="#27c" stroke-width="2"/>
+  <!-- Cross-section ellipses (latitude lines) -->
+  <ellipse cx="130" cy="110" rx="45" ry="12" fill="none" stroke="#27c" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <ellipse cx="130" cy="145" rx="70" ry="18" fill="none" stroke="#27c" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Geodesic: intersection with plane through origin -->
+  <path d="M70,165 Q130,80 190,165" fill="none" stroke="#e05" stroke-width="1.5"/>
+  <!-- Origin -->
+  <circle cx="130" cy="180" r="3" fill="#333"/>
+  <text x="136" y="185" fill="#333" font-size="11">O</text>
+  <!-- Upper sheet label -->
+  <text x="225" y="95" fill="#27c" font-size="11">upper sheet</text>
+  <text x="225" y="108" fill="#27c" font-size="10">x²+y²−t²=−1</text>
+  <text x="225" y="121" fill="#27c" font-size="10">t&gt;0</text>
+  <!-- Lower sheet label -->
+  <text x="50" y="230" fill="#aaa" font-size="10">lower sheet (not used)</text>
+  <!-- Caption -->
+  <text x="130" y="268" text-anchor="middle" fill="#333" font-size="11">Geodesics = plane sections through O</text>
+</svg>
+</div>
 
 <strong>Klein Model:</strong> The unit disc \(\mathbb{K}^2 = \{(x,y) \mid x^2+y^2 < 1\}\) with a different metric defined so that the gnomic projection from \(\mathbb{M}^2\) is an isometry. In the Klein model, geodesics are Euclidean straight-line segments, but angles are not the same as Euclidean angles.
 
@@ -1399,25 +1613,45 @@ The three geometries of this course are distinguished by a single number: the cu
 
 The discovery that multiple consistent geometries exist — with different curvatures, different parallel postulates, different triangle angle sums — transformed mathematics and physics. Riemann's 1854 generalization ("On the Hypotheses Which Lie at the Foundations of Geometry") introduced the concept of a Riemannian manifold: any space with a locally Euclidean metric. Einstein's general relativity (1915) uses this framework, modeling spacetime as a 4-dimensional Riemannian (actually pseudo-Riemannian) manifold whose curvature is determined by the distribution of mass-energy. The universe itself is a non-Euclidean geometry, and the question of its curvature (positive, zero, or negative) is an open problem in cosmology.</div>
 
-<pre>
-The curvature spectrum:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 480 200" width="480" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <!-- K < 0: Hyperbolic disc -->
+  <text x="80" y="18" text-anchor="middle" fill="#27c" font-weight="bold" font-size="13">K &lt; 0</text>
+  <text x="80" y="32" text-anchor="middle" fill="#27c" font-size="11">(hyperbolic)</text>
+  <circle cx="80" cy="100" r="55" fill="#e8f0ff" stroke="#27c" stroke-width="2"/>
+  <!-- Many geodesics in Poincaré disc style -->
+  <line x1="25" y1="100" x2="135" y2="100" stroke="#27c" stroke-width="1.2"/>
+  <path d="M25,75 A60,60 0 0,1 135,75" fill="none" stroke="#27c" stroke-width="1"/>
+  <path d="M25,125 A60,60 0 0,0 135,125" fill="none" stroke="#27c" stroke-width="1"/>
+  <path d="M55,45 A60,60 0 0,1 55,155" fill="none" stroke="#27c" stroke-width="1"/>
+  <path d="M105,45 A60,60 0 0,0 105,155" fill="none" stroke="#27c" stroke-width="1"/>
+  <text x="80" y="163" text-anchor="middle" fill="#27c" font-size="10">Angle sum &lt; π</text>
+  <text x="80" y="176" text-anchor="middle" fill="#27c" font-size="10">∞ many parallels</text>
+  <text x="80" y="189" text-anchor="middle" fill="#27c" font-size="10">Exponential growth</text>
 
-   K < 0              K = 0              K > 0
-  (hyperbolic)      (Euclidean)        (spherical)
+  <!-- K = 0: Euclidean flat triangle -->
+  <text x="240" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="13">K = 0</text>
+  <text x="240" y="32" text-anchor="middle" fill="#333" font-size="11">(Euclidean)</text>
+  <rect x="185" y="55" width="110" height="90" fill="#f5f5e8" stroke="#888" stroke-width="2"/>
+  <line x1="240" y1="55" x2="185" y2="145" stroke="#888" stroke-width="1"/>
+  <line x1="240" y1="55" x2="295" y2="145" stroke="#888" stroke-width="1"/>
+  <text x="240" y="163" text-anchor="middle" fill="#555" font-size="10">Angle sum = π</text>
+  <text x="240" y="176" text-anchor="middle" fill="#555" font-size="10">Exactly one parallel</text>
+  <text x="240" y="189" text-anchor="middle" fill="#555" font-size="10">Polynomial growth</text>
 
-     ___               ___                 .
-    /   \             |   |               / \
-   | << |             |   |             /   \
-   |    |             |   |            |     |
-   | >> |             |   |             \   /
-    \___/              ---                \_/
-
-  More room          Flat               Less room
-  Angle sum < π      Angle sum = π      Angle sum > π
-  Exponential growth Linear growth      Bounded size
-  Infinitely many    Exactly one        No parallels
-  parallels          parallel
-</pre>
+  <!-- K > 0: Spherical -->
+  <text x="400" y="18" text-anchor="middle" fill="#e05" font-weight="bold" font-size="13">K &gt; 0</text>
+  <text x="400" y="32" text-anchor="middle" fill="#e05" font-size="11">(spherical)</text>
+  <circle cx="400" cy="100" r="55" fill="#ffe8e8" stroke="#e05" stroke-width="2"/>
+  <!-- Latitude lines on sphere suggestion -->
+  <ellipse cx="400" cy="100" rx="55" ry="14" fill="none" stroke="#e05" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <ellipse cx="400" cy="72" rx="40" ry="10" fill="none" stroke="#e05" stroke-width="1" stroke-dasharray="3,3"/>
+  <ellipse cx="400" cy="128" rx="40" ry="10" fill="none" stroke="#e05" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="400" y="163" text-anchor="middle" fill="#e05" font-size="10">Angle sum &gt; π</text>
+  <text x="400" y="176" text-anchor="middle" fill="#e05" font-size="10">No parallels</text>
+  <text x="400" y="189" text-anchor="middle" fill="#e05" font-size="10">Bounded size</text>
+</svg>
+</div>
 
 ---
 
@@ -1622,17 +1856,47 @@ The \(\{4,5\}\) tessellation: squares with 5 meeting at each vertex. Each square
 
 The \(\{3,7\}\) tessellation: equilateral triangles with 7 at each vertex. Each triangle has angle \(2\pi/7 \approx 51.4°\), so angle sum \(\approx 154.3° < 180°\), and area \(= \pi - 3\cdot 2\pi/7 = \pi/7\).</div>
 
-<pre>
-Regular tessellations:
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 480 200" width="480" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
+  <!-- EUCLIDEAN {4,4}: grid of squares -->
+  <text x="80" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Euclidean {4,4}</text>
+  <!-- 3x3 grid of squares -->
+  <rect x="20" y="25" width="120" height="120" fill="#f0f8f0" stroke="#2a2" stroke-width="1.2"/>
+  <line x1="60" y1="25" x2="60" y2="145" stroke="#2a2" stroke-width="1.2"/>
+  <line x1="100" y1="25" x2="100" y2="145" stroke="#2a2" stroke-width="1.2"/>
+  <line x1="20" y1="65" x2="140" y2="65" stroke="#2a2" stroke-width="1.2"/>
+  <line x1="20" y1="105" x2="140" y2="105" stroke="#2a2" stroke-width="1.2"/>
+  <text x="80" y="161" text-anchor="middle" fill="#2a2" font-size="11">squares, 4/vertex</text>
+  <text x="80" y="174" text-anchor="middle" fill="#2a2" font-size="11">1/4+1/4 = 1/2 ✓</text>
 
-EUCLIDEAN {4,4}:        SPHERICAL {3,4} (cube):     HYPERBOLIC {4,5}:
-┌──┬──┬──┐                    *                         ___
-├──┼──┼──┤                   /|\                       /   \___
-├──┼──┼──┤                  / | \                    _/___/   \
-└──┴──┴──┘               *---+---*               ___/   \___/
-(squares, 4 per vertex)   (triangles, 4 per vertex)  (squares, 5 per vertex)
-1/4+1/4 = 1/2 ✓         1/3+1/4 > 1/2 ✓          1/4+1/5 < 1/2 ✓
-</pre>
+  <!-- SPHERICAL {3,4}: cube skeleton on sphere -->
+  <text x="240" y="16" text-anchor="middle" fill="#e05" font-weight="bold" font-size="12">Spherical {3,4}</text>
+  <circle cx="240" cy="85" r="60" fill="#fff0f0" stroke="#e05" stroke-width="1.5"/>
+  <!-- Cube skeleton projected onto sphere: octahedron faces -->
+  <polygon points="240,30 180,100 240,140 300,100" fill="none" stroke="#e05" stroke-width="1.5"/>
+  <polygon points="240,30 300,100 240,140 180,100" fill="none" stroke="#e05" stroke-width="1.5"/>
+  <line x1="240" y1="30" x2="240" y2="140" stroke="#e05" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="180" y1="100" x2="300" y2="100" stroke="#e05" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="240" y="161" text-anchor="middle" fill="#e05" font-size="11">triangles, 4/vertex</text>
+  <text x="240" y="174" text-anchor="middle" fill="#e05" font-size="11">1/3+1/4 &gt; 1/2 ✓</text>
+
+  <!-- HYPERBOLIC {4,5}: squares in Poincaré disc -->
+  <text x="400" y="16" text-anchor="middle" fill="#27c" font-weight="bold" font-size="12">Hyperbolic {4,5}</text>
+  <circle cx="400" cy="85" r="60" fill="#f0f4ff" stroke="#333" stroke-width="1.8"/>
+  <!-- Smaller squares near center -->
+  <rect x="378" y="63" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <rect x="400" y="63" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <rect x="378" y="85" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <rect x="400" y="85" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
+  <!-- Peripheral smaller squares (shrinking toward boundary) -->
+  <rect x="357" y="63" width="12" height="12" fill="none" stroke="#27c" stroke-width="1"/>
+  <rect x="357" y="85" width="12" height="12" fill="none" stroke="#27c" stroke-width="1"/>
+  <rect x="422" y="63" width="12" height="12" fill="none" stroke="#27c" stroke-width="1"/>
+  <rect x="422" y="85" width="12" height="12" fill="none" stroke="#27c" stroke-width="1"/>
+  <text x="400" y="161" text-anchor="middle" fill="#27c" font-size="11">squares, 5/vertex</text>
+  <text x="400" y="174" text-anchor="middle" fill="#27c" font-size="11">1/4+1/5 &lt; 1/2 ✓</text>
+</svg>
+</div>
 
 ### A.4.3 Hyperbolic Area of Ideal Polygons
 
@@ -1709,21 +1973,36 @@ Before Poincaré's disc model, Beltrami (1868) showed that a surface in \(\mathb
 
 The pseudosphere has a cusp (singular point) at the point of rotation on the \(x\)-axis, so it only models a portion of the hyperbolic plane — a doubly asymptotic strip. Nevertheless, it provides valuable intuition: the surface curves "saddle-like" at every point, with positive curvature in one direction and negative in the other (though the Gaussian curvature, the product of the principal curvatures, is \(-1\)).
 
-<pre>
-The Pseudosphere (surface of revolution of the tractrix):
-
-        |                  The pseudosphere narrows
-        |   ___            to a cusp at the right.
-       _|__/   \___
-      / |   \      \___    It "opens up" to the left
-     /  |    \         \   and has a horn shape.
-    |   |     \         |
-    |   |      \        |
-    (tractrix)   (surface)
-
-Gaussian curvature K = -1 everywhere (except the cusp).
-Only models a portion of H² (not the full hyperbolic plane).
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 360 200" width="360" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr8" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="20" y1="100" x2="340" y2="100" stroke="#aaa" stroke-width="1" marker-end="url(#arr8)"/>
+  <text x="342" y="104" fill="#aaa" font-size="11">x</text>
+  <line x1="40" y1="180" x2="40" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr8)"/>
+  <text x="36" y="16" fill="#aaa" font-size="11">y</text>
+  <!-- Tractrix curve (top profile) -->
+  <path d="M40,40 C80,42 130,55 180,75 C220,90 260,98 295,100" fill="none" stroke="#e05" stroke-width="2"/>
+  <!-- Tractrix curve (bottom profile) -->
+  <path d="M40,160 C80,158 130,145 180,125 C220,110 260,102 295,100" fill="none" stroke="#e05" stroke-width="2"/>
+  <!-- Cusp point -->
+  <circle cx="295" cy="100" r="4" fill="#e05"/>
+  <text x="298" y="96" fill="#e05" font-size="11">cusp</text>
+  <!-- Fill the pseudosphere -->
+  <path d="M40,40 C80,42 130,55 180,75 C220,90 260,98 295,100 C260,102 220,110 180,125 C130,145 80,158 40,160 Z" fill="#fde" fill-opacity="0.4"/>
+  <!-- Latitude lines on surface -->
+  <ellipse cx="100" cy="100" rx="5" ry="30" fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,3"/>
+  <ellipse cx="160" cy="100" rx="5" ry="20" fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,3"/>
+  <ellipse cx="220" cy="100" rx="4" ry="10" fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Labels -->
+  <text x="50" y="175" fill="#555" font-size="11">tractrix profile</text>
+  <text x="160" y="185" text-anchor="middle" fill="#333" font-size="11">K = −1 everywhere (except cusp)</text>
+</svg>
+</div>
 
 ## A.6 The Parallel Postulate — Five Equivalent Forms
 
@@ -1998,25 +2277,52 @@ In the upper half-plane, horocycles based at \(\infty\) are horizontal lines \(\
 <div class="definition"><strong>Definition B.4 (Fundamental Domain for \(\mathrm{SL}(2,\mathbb{Z})\)).</strong> The standard fundamental domain for the modular group \(\Gamma = \mathrm{PSL}(2,\mathbb{Z})\) acting on \(\mathbb{U}^2\) is:
 \[\mathcal{F} = \left\{z \in \mathbb{U}^2 : |z| \geq 1,\; -\frac{1}{2} \leq \mathrm{Re}(z) \leq \frac{1}{2}\right\}.\]</div>
 
-<pre>
-Fundamental domain F of PSL(2,Z):
-
-   Im(z)
-     ^
-     |
-   2 +        ...
-     |       .   .
-   1 +   ...     ...
-     |  .           .
-     | .             .
-     *...___________...*
-    -1/2    (0,1)    1/2   -> Re(z)
-
-The two sides x=-1/2 and x=1/2 are identified by z ↦ z+1.
-The bottom arc |z|=1 from e^{2πi/3} to e^{πi/3} is identified
-by z ↦ -1/z.
-Every orbit of Γ on U² has exactly one representative in F.
-</pre>
+<div style="text-align:center; margin: 1em 0;">
+<svg viewBox="0 0 300 230" width="300" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+  <defs>
+    <marker id="arr9" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="20" y1="180" x2="280" y2="180" stroke="#aaa" stroke-width="1" marker-end="url(#arr9)"/>
+  <text x="282" y="184" fill="#aaa" font-size="11">Re(z)</text>
+  <line x1="150" y1="190" x2="150" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr9)"/>
+  <text x="154" y="16" fill="#aaa" font-size="11">Im(z)</text>
+  <!-- Fundamental domain F: shaded region -->
+  <!-- Left side x = -1/2 (mapped to x=90 in SVG where 1 unit = 120px) -->
+  <!-- Right side x = 1/2 (mapped to x=210) -->
+  <!-- Bottom arc |z|=1, from angle 120° to 60° -->
+  <!-- Center (0,0) in complex plane = (150, 180) in SVG. 1 unit = 120px. -->
+  <!-- Arc: center (150,180), r=120, from angle 60° (1/6) to 120° (1/3) above real axis -->
+  <!-- Points: e^{iπ/3} = (cos60°,sin60°) = (0.5, √3/2) → SVG: (150+60, 180-104) = (210,76) -->
+  <!-- e^{2iπ/3} = (-0.5, √3/2) → SVG: (90, 76) -->
+  <path d="M90,180 L90,76 A120,120 0 0,1 210,76 L210,180" fill="#e8f0ff" fill-opacity="0.7" stroke="none"/>
+  <!-- Left boundary (identified) -->
+  <line x1="90" y1="76" x2="90" y2="180" stroke="#e05" stroke-width="2"/>
+  <!-- Right boundary (identified) -->
+  <line x1="210" y1="76" x2="210" y2="180" stroke="#e05" stroke-width="2"/>
+  <!-- Bottom arc -->
+  <path d="M90,76 A120,120 0 0,1 210,76" fill="none" stroke="#27c" stroke-width="2"/>
+  <!-- Axis ticks and labels -->
+  <line x1="90" y1="178" x2="90" y2="182" stroke="#555" stroke-width="1"/>
+  <text x="90" y="194" text-anchor="middle" fill="#555" font-size="11">−½</text>
+  <line x1="210" y1="178" x2="210" y2="182" stroke="#555" stroke-width="1"/>
+  <text x="210" y="194" text-anchor="middle" fill="#555" font-size="11">½</text>
+  <line x1="148" y1="76" x2="152" y2="76" stroke="#555" stroke-width="1"/>
+  <text x="135" y="80" fill="#555" font-size="11">i</text>
+  <!-- Special points -->
+  <circle cx="90" cy="76" r="3" fill="#27c"/>
+  <circle cx="210" cy="76" r="3" fill="#27c"/>
+  <text x="75" y="70" fill="#27c" font-size="10">e^{2πi/3}</text>
+  <text x="210" y="70" fill="#27c" font-size="10">e^{πi/3}</text>
+  <!-- Label for region -->
+  <text x="150" y="130" text-anchor="middle" fill="#333" font-size="12" font-style="italic">ℱ</text>
+  <!-- Identification labels -->
+  <text x="150" y="213" text-anchor="middle" fill="#e05" font-size="10">sides identified: z↦z+1</text>
+  <text x="150" y="225" text-anchor="middle" fill="#27c" font-size="10">arc identified: z↦−1/z</text>
+</svg>
+</div>
 
 The fundamental domain \(\mathcal{F}\) is the hyperbolic analogue of a parallelogram fundamental domain for a lattice in Euclidean space. The quotient \(\mathbb{U}^2/\Gamma\) is the modular surface, which has finite hyperbolic area \(\pi/3\) — computed by integrating \(dx\,dy/y^2\) over \(\mathcal{F}\).
 

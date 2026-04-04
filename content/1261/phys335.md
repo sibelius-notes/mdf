@@ -936,7 +936,7 @@ where the **saturation current** is
 
 Here \(A\) is the junction area, \(D_{e,h}\) are electron and hole diffusion coefficients, and \(L_{e,h} = \sqrt{D_{e,h}\tau_{e,h}}\) are minority carrier diffusion lengths. The derivation assumes that minority carriers (electrons on the p-side, holes on the n-side) injected across the depletion region diffuse away and recombine exponentially over the diffusion length.
 
-The exponential \(I$-$V\) characteristic is the ideal rectifier: the diode conducts readily in forward bias (where \(I \approx I_0 e^{eV/k_BT}\)) and barely in reverse bias (where \(I \approx -I_0\)). The rectification ratio at \(|V| = 0.5\) V can be \(\sim 10^8\) — an extraordinary range.
+The exponential \(I\text{-}V\) characteristic is the ideal rectifier: the diode conducts readily in forward bias (where \(I \approx I_0 e^{eV/k_BT}\)) and barely in reverse bias (where \(I \approx -I_0\)). The rectification ratio at \(|V| = 0.5\) V can be \(\sim 10^8\) — an extraordinary range.
 
 ### Light-Emitting Diodes and Solar Cells
 
@@ -986,7 +986,7 @@ From the crystal structure we inferred the bonding — ionic, van der Waals, cov
 
 The electrons in a crystal are governed by the Pauli principle and the periodic potential of the lattice. The Sommerfeld free electron model — electrons as a Fermi gas — correctly predicts the linear electronic heat capacity, the Wiedemann-Franz law, and many transport properties of simple metals. The key refinement is Bloch's theorem: the eigenstates in a periodic potential are not plane waves but Bloch waves \(\psi_{n\mathbf{k}} = e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})\), leading to the band structure picture. Band gaps open at Brillouin zone boundaries where standing waves form. The question of how the band structure fills up with electrons determines whether a material is a metal, insulator, or semiconductor.
 
-Finally, semiconductor physics applies band theory to technologically vital materials. Doping shifts the Fermi level to create n-type or p-type semiconductors; p-n junctions are the basis of diodes, transistors, LEDs, and solar cells. The physics of these devices, from the built-in potential to the exponential \(I$-$V\) curve, all follow from the basic statistical mechanics of electrons and holes in bands separated by a gap.
+Finally, semiconductor physics applies band theory to technologically vital materials. Doping shifts the Fermi level to create n-type or p-type semiconductors; p-n junctions are the basis of diodes, transistors, LEDs, and solar cells. The physics of these devices, from the built-in potential to the exponential \(I\text{-}V\) curve, all follow from the basic statistical mechanics of electrons and holes in bands separated by a gap.
 
 This progression — from geometry to forces to vibrations to electrons to bands to devices — is one of the most beautiful narratives in physics, and it stands as a monument to the power of combining symmetry, quantum mechanics, and statistical mechanics to understand the material world.
 

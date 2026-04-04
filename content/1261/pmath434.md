@@ -716,7 +716,7 @@ Every measurable cardinal is inaccessible (hence much larger than anything prova
 </div>
 
 <div class="proof">
-Let \(\kappa\) be measurable with witnessing ultrafilter \(\mathcal{U}\). Suppose \(\kappa = \lambda^+\) for some cardinal \(\lambda < \kappa\). Write \(\kappa = \bigcup_{\alpha < \lambda} A_\alpha\) as a union of \(\lambda < \kappa\) sets each of size \(\lambda\). Since \(\mathcal{U}\) is \(\kappa\)-complete, it is also \(\lambda^+\)-complete; taking the \(\lambda\)-fold intersection of complements, we get a contradiction. For strong limit: if \(2^\lambda < \kappa\) for all \(\lambda < \kappa$, this follows from the fact that every set of size \(< \kappa\) is measure 0.
+Let \(\kappa\) be measurable with witnessing ultrafilter \(\mathcal{U}\). Suppose \(\kappa = \lambda^+\) for some cardinal \(\lambda < \kappa\). Write \(\kappa = \bigcup_{\alpha < \lambda} A_\alpha\) as a union of \(\lambda < \kappa\) sets each of size \(\lambda\). Since \(\mathcal{U}\) is \(\kappa\)-complete, it is also \(\lambda^+\)-complete; taking the \(\lambda\)-fold intersection of complements, we get a contradiction. For strong limit: if \(2^\lambda < \kappa\) for all \(\lambda < \kappa\), this follows from the fact that every set of size \(< \kappa\) is measure 0.
 </div>
 
 ## The Ultrapower Construction and Scott's Theorem
@@ -985,7 +985,7 @@ This forcing does not collapse cardinals (it is ccc: any antichain in \(2^{<\ome
 Let \(M\) be a countable transitive model of ZFC (a **ground model**). A **partial order** (or **forcing notion**) is a set \(\mathbb{P} = (P, \leq)\) with a maximum element \(\mathbf{1}\). Elements of \(\mathbb{P}\) are **conditions**; we think of stronger conditions as providing more information.
 
 <div class="definition">
-Two conditions \(p, q \in \mathbb{P}\) are <strong>compatible</strong> if there exists \(r \leq p, q$; otherwise they are <strong>incompatible</strong> (written \(p \perp q\)). An <strong>antichain</strong> is a set of pairwise incompatible conditions. \(\mathbb{P}\) satisfies the <strong>countable chain condition (ccc)</strong> if every antichain is countable.
+Two conditions \(p, q \in \mathbb{P}\) are <strong>compatible</strong> if there exists \(r \leq p, q\); otherwise they are <strong>incompatible</strong> (written \(p \perp q\)). An <strong>antichain</strong> is a set of pairwise incompatible conditions. \(\mathbb{P}\) satisfies the <strong>countable chain condition (ccc)</strong> if every antichain is countable.
 </div>
 
 <div class="definition">
@@ -1712,7 +1712,7 @@ The following chronological table traces the development of set theory from its 
 | 2013 | Malliaris–Shelah prove \(\mathfrak{p} = \mathfrak{t}\) using Keisler's order |
 | 2014 | Goldstern–Kellner–Mejía–Shelah: all Cichoń characteristics consistently distinct |
 | 2016 | Woodin's Ultimate-\(L\) program: conjecture that a canonical inner model satisfying GCH exists at the level of supercompact cardinals |
-| 2017 | Asperó–Schindler: Martin's Maximum\(^{++}\) implies Woodin's axiom \((*)\ |
+| 2017 | Asperó–Schindler: Martin's Maximum\(^{++}\) implies Woodin's axiom \((*)\) |
 | 2020 | Recent advances in descriptive inner model theory: connection between HOD and canonical models under determinacy |
 | 2024 | Active research: inner model theory at the supercompact level, fine structure beyond Woodin cardinals, Ultimate-\(L\) program |
 

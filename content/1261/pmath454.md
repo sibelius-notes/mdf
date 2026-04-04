@@ -486,7 +486,7 @@ This follows from Hilbert space theory: the exponentials \(\{e^{inx}\}\) form a 
 <strong>Theorem (M. Riesz, \(L^p\) Convergence).</strong> For \(1 < p < \infty\) and \(f \in L^p(\mathbb{T})\), \(S_N f \to f\) in \(L^p\). Equivalently, the Hilbert transform is bounded on \(L^p(\mathbb{T})\).
 </div>
 
-The proof of M. Riesz's theorem requires deeper methods — specifically, the boundedness of the conjugate function operator (Hilbert transform) on \(L^p\) for \(1 < p < \infty\). This fails at the endpoints: the Hilbert transform is not bounded on \(L^1$ or \(L^\infty\).
+The proof of M. Riesz's theorem requires deeper methods — specifically, the boundedness of the conjugate function operator (Hilbert transform) on \(L^p\) for \(1 < p < \infty\). This fails at the endpoints: the Hilbert transform is not bounded on \(L^1\) or \(L^\infty\).
 
 **Failure of \(L^1\) convergence**: Du Bois-Reymond constructed a continuous function whose Fourier series diverges at a point. By a Baire category argument (Banach–Steinhaus theorem applied to the diverging Lebesgue constants), one can show that for a generic \(f \in C(\mathbb{T})\), the Fourier series diverges on a dense set.
 
@@ -1172,7 +1172,7 @@ The Haar measure is the natural notion of "size" on \(G\), analogous to Lebesgue
 <strong>Definition (Dual Group / Pontryagin Dual).</strong> For an LCA group \(G\), the <strong>Pontryagin dual</strong> \(\hat{G}\) is the group of continuous group homomorphisms \(\chi : G \to \mathbb{T}\), called <strong>characters</strong>, equipped with the compact-open topology and pointwise multiplication \((\chi_1\chi_2)(g) = \chi_1(g)\chi_2(g)\).
 </div>
 
-The characters \(\chi : G \to \mathbb{T}\) are the "pure frequencies" on \(G$. They generalize:
+The characters \(\chi : G \to \mathbb{T}\) are the "pure frequencies" on \(G\). They generalize:
 - On \(\mathbb{T}\): characters are \(\chi_n(\theta) = e^{in\theta}\) for \(n \in \mathbb{Z}\), so \(\hat{\mathbb{T}} = \mathbb{Z}\).
 - On \(\mathbb{R}\): characters are \(\chi_\xi(x) = e^{2\pi ix\xi}\) for \(\xi \in \mathbb{R}\), so \(\hat{\mathbb{R}} = \mathbb{R}\).
 - On \(\mathbb{Z}\): characters are \(\chi_\theta(n) = e^{in\theta}\) for \(\theta \in \mathbb{T}\), so \(\hat{\mathbb{Z}} = \mathbb{T}\).
