@@ -58,7 +58,7 @@ where \(R_n\) and \(L_n\) are the right- and left-hand Riemann sums for the regu
 
 This theorem also holds if \(f\) is bounded and has finitely many discontinuities on \([a,b]\).
 
-![Left, right, and midpoint Riemann sums](/static/pics/math138/riemann_sums.png)
+![Left, right, and midpoint Riemann sums](/pics/math138/riemann_sums.png)
 
 ## 1.3 Properties of the Definite Integral
 
@@ -591,7 +591,7 @@ For positive series, the partial sums are non-decreasing, so the series either c
 
 </div>
 
-![Integral test: bars aₙ vs continuous f(x)](/static/pics/math138/integral_test.png)
+![Integral test: bars aₙ vs continuous f(x)](/pics/math138/integral_test.png)
 
 ## 5.7 Alternating Series
 
@@ -822,7 +822,7 @@ for all \(x \in I\).
 Key Taylor series (valid for all \(x \in \mathbb{R}\)):
 \[e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}, \quad \sin(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}.\]
 
-![Taylor partial sums for sin(x): n=1,3,5,7](/static/pics/math138/taylor_sin.png)
+![Taylor partial sums for sin(x): n=1,3,5,7](/pics/math138/taylor_sin.png)
 
 ## 6.9 Binomial Series
 

@@ -101,7 +101,7 @@ The Lebesgue measure on \({\mathbb R}\) begins to take shape here: one defines \
 
 To handle countable operations — essential for all limiting arguments in analysis — we need the stronger notion of a **sigma-algebra**. A collection \({\mathcal M} \subseteq 2^X\) is a sigma-algebra if it is an algebra that is additionally closed under countable unions:
 
-![Sigma-algebra hierarchy: ℱ ⊆ σ(ℱ) ⊆ Borel ℬ ⊆ Lebesgue measurable sets (nested ovals)](/static/pics/pmath451/sigma-algebra-hierarchy.svg)
+![Sigma-algebra hierarchy: ℱ ⊆ σ(ℱ) ⊆ Borel ℬ ⊆ Lebesgue measurable sets (nested ovals)](/pics/pmath451/sigma-algebra-hierarchy.svg)
 
 - **(Sigma-AS3)** If \((A_n)_{n=1}^\infty\) is any sequence of sets in \({\mathcal M}\), then \(\bigcup_{n=1}^\infty A_n \in {\mathcal M}\).
 
@@ -172,7 +172,7 @@ Then \(\mu = \nu\) on all of \({\mathcal M} = \sigma\text{-Alg}({\mathcal P})\).
 
 **Theorem 5.10. (Carathéodory Extension Theorem.)** Let \(\rho_o : {\mathcal U} \to [0,\infty]\) be a pre-measure on an algebra \({\mathcal U}\). Then there exists a positive measure \(\rho : \sigma\text{-Alg}({\mathcal U}) \to [0,\infty]\) extending \(\rho_o\). If \(\rho_o\) is sigma-finite (i.e., \(X = \bigcup_n U_n\) with \(\rho_o(U_n) < \infty\), then this extension is unique.
 
-![Carathéodory Extension: pre-measure μ₀ on algebra 𝒜 → outer measure μ* on 2^X → measure μ on σ(𝒜) (unique if σ-finite)](/static/pics/pmath451/caratheodory-extension.svg)
+![Carathéodory Extension: pre-measure μ₀ on algebra 𝒜 → outer measure μ* on 2^X → measure μ on σ(𝒜) (unique if σ-finite)](/pics/pmath451/caratheodory-extension.svg)
 
 **Corollary 5.12.** Every increasing cadlag function \(G : {\mathbb R} \to {\mathbb R}\) with \(G(0) = 0\) determines a unique Lebesgue-Stieltjes measure satisfying \(\mu((a,b]) = G(b) - G(a)\). In the special case \(G(x) = x\), we get the **Lebesgue measure** \(\mu_{\mathrm{Leb}}\).
 
@@ -218,7 +218,7 @@ C_\alpha = \bigcap_{n=1}^\infty C_{\alpha,n}.
 \]
 When \(\alpha = 1\), the set \(C = C_1\) is the classical **Cantor middle-thirds set**.
 
-![Cantor set construction: first 4 iterations of middle-third removal (n=0 to n=3)](/static/pics/pmath451/cantor-set.png)
+![Cantor set construction: first 4 iterations of middle-third removal (n=0 to n=3)](/pics/pmath451/cantor-set.png)
 
 The construction removes precisely prescribed amounts of length at each stage. The key properties of \(C_\alpha\) are as follows.
 

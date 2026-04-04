@@ -187,7 +187,7 @@ The "if" direction (Proposition 3.2) follows immediately from the integration-by
 
 **Lemma 3.3 (du Bois-Reymond).** If \(h \in C[a,b]\) and \(\int_a^b h(x)v'(x)\,dx = 0\) for all \(v \in A\), then \(h\) is constant on \([a,b]\).
 
-![Arc-length functional $J[y]=\int_0^1\sqrt{1+y'^2}\,dx$: several paths from $(0,0)$ to $(1,1)$ with their $J$ values (left); functional value vs perturbation amplitude $A$, minimized at $A=0$ (straight line, right).](/static/pics/amath456/euler_lagrange_functional.png)
+![Arc-length functional $J[y]=\int_0^1\sqrt{1+y'^2}\,dx$: several paths from $(0,0)$ to $(1,1)$ with their $J$ values (left); functional value vs perturbation amplitude $A$, minimized at $A=0$ (straight line, right).](/pics/amath456/euler_lagrange_functional.png)
 
 ## 3.2 Simplifications
 
@@ -543,7 +543,7 @@ The PMP provides *necessary* conditions. It was introduced to handle cases where
 
 ## 10.4 Bang-Bang Control
 
-![Bang-bang control for double integrator $\ddot{y}=u$, $|u|\leq1$: phase plane $(y_1,y_2)$ showing switching curve (red parabolas), $u=-1$ trajectories (blue arcs), $u=+1$ trajectories (green arcs), and target origin.](/static/pics/amath456/bangbang_phase.png)
+![Bang-bang control for double integrator $\ddot{y}=u$, $|u|\leq1$: phase plane $(y_1,y_2)$ showing switching curve (red parabolas), $u=-1$ trajectories (blue arcs), $u=+1$ trajectories (green arcs), and target origin.](/pics/amath456/bangbang_phase.png)
 
 When \(H\) is linear in \(u\) and \(U = [M_1, M_2]\), the optimal control always takes the extreme values:
 
@@ -621,7 +621,7 @@ and \(A - BR^{-1}B^T P\) is **Hurwitz** (all eigenvalues with negative real part
 
 **Theorem 11.2.** Suppose the ARE admits a symmetric positive semi-definite solution \(P\) such that \(A - BR^{-1}B^T P\) is Hurwitz. Then the feedback law \(u = Kx = -R^{-1}B^T Px\) stabilizes the system and minimizes the LQR cost, with optimal cost \(J^* = x_0^T P x_0\).
 
-![Scalar LQR ($a=-0.5$, $R=1$): Riccati ODE solution $P(t)$ converging to steady-state $P^*$ for different $q$ values (left); optimal feedback gain $K^*=P^*$ and cost-to-go vs state weight $q$ (right).](/static/pics/amath456/lqr_riccati.png)
+![Scalar LQR ($a=-0.5$, $R=1$): Riccati ODE solution $P(t)$ converging to steady-state $P^*$ for different $q$ values (left); optimal feedback gain $K^*=P^*$ and cost-to-go vs state weight $q$ (right).](/pics/amath456/lqr_riccati.png)
 
 The ARE is the equilibrium condition of the DRE: \(\dot{P} = 0\). Under appropriate conditions (stabilizability and detectability), the DRE solution \(P(t; T)\) converges as \(T \to \infty\) to the stabilizing solution of the ARE.
 

@@ -157,7 +157,7 @@ Now we establish the second link in the chain, which is the deepest result in th
 
 <div class="remark"><strong>Remark.</strong> The implications ED \(\Rightarrow\) PID \(\Rightarrow\) UFD are strict. One can show that the ring \(\mathbb{Z}\left[\frac{1+\sqrt{-19}}{2}\right]\) is a PID but not a Euclidean domain under any norm. Similarly, the polynomial ring \(\mathbb{Z}[x]\) is a UFD but not a PID (since the ideal \(\langle 2, x \rangle\) is not principal).</div>
 
-![Ring hierarchy: ED ⊊ PID ⊊ UFD ⊊ Integral Domain as nested ovals with examples](/static/pics/pmath441/ring-hierarchy.svg)
+![Ring hierarchy: ED ⊊ PID ⊊ UFD ⊊ Integral Domain as nested ovals with examples](/pics/pmath441/ring-hierarchy.svg)
 
 <div class="example"><strong>Example.</strong> For each \(d \in \{-2, -1, 2, 3\}\), the ring \(\mathbb{Z}[\sqrt{d}]\) is a Euclidean domain with Euclidean norm \(N(a + b\sqrt{d}) = |a^2 - db^2|\).</div>
 
@@ -523,11 +523,11 @@ When \(H \trianglelefteq G\), the restriction map \(\operatorname{Gal}(L/K) \to 
 
 <div class="example"><strong>Example.</strong> Consider the normal closure \(H = \mathbb{Q}(\sqrt[3]{2}, \omega)/\mathbb{Q}\). This is a Galois extension of degree 6. The Galois group \(\operatorname{Gal}(H/\mathbb{Q})\) is isomorphic to \(S_3\), the symmetric group on three elements, since the automorphisms permute the three roots \(\sqrt[3]{2}, \omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}\) of \(x^3 - 2\). The subgroup lattice of \(S_3\) has subgroups \(\{e\}\), three copies of \(\mathbb{Z}/2\mathbb{Z}\), one copy of \(\mathbb{Z}/3\mathbb{Z}\) (which is normal), and \(S_3\) itself. These correspond, respectively, to the intermediate fields \(H\), three quadratic extensions, the unique intermediate field \(\mathbb{Q}(\omega)\) (which is normal over \(\mathbb{Q}\), consistent with \(\mathbb{Z}/3\mathbb{Z} \trianglelefteq S_3\)), and \(\mathbb{Q}\).</div>
 
-![Field extension tower: ℚ ⊂ ℚ(∛2) ⊂ ℚ(∛2,ω) with degrees [3] and [2], total [ℚ(∛2,ω):ℚ] = 6](/static/pics/pmath441/field-extension-tower.svg)
+![Field extension tower: ℚ ⊂ ℚ(∛2) ⊂ ℚ(∛2,ω) with degrees [3] and [2], total [ℚ(∛2,ω):ℚ] = 6](/pics/pmath441/field-extension-tower.svg)
 
-![Galois group Gal(ℚ(∛2,ω)/ℚ) ≅ S₃ = D₃: 6 elements {e, r, r², s, sr, sr²} with rotation (blue) and reflection (red) arrows](/static/pics/pmath441/galois-s3-cayley.svg)
+![Galois group Gal(ℚ(∛2,ω)/ℚ) ≅ S₃ = D₃: 6 elements {e, r, r², s, sr, sr²} with rotation (blue) and reflection (red) arrows](/pics/pmath441/galois-s3-cayley.svg)
 
-![Subgroup lattice of ℤ₁₂: ℤ₁₂ ← ℤ₆, ℤ₄ ← ℤ₃, ℤ₂ ← {0}](/static/pics/pmath441/subgroup-lattice-z12.svg)
+![Subgroup lattice of ℤ₁₂: ℤ₁₂ ← ℤ₆, ℤ₄ ← ℤ₃, ℤ₂ ← {0}](/pics/pmath441/subgroup-lattice-z12.svg)
 
 <div class="example"><strong>Example.</strong> The extension \(\mathbb{Q}(\sqrt[3]{2})/\mathbb{Q}\) has degree 3, but \(|\operatorname{Aut}_\mathbb{Q}(\mathbb{Q}(\sqrt[3]{2}))| = 1\), dramatically illustrating the failure of the Galois correspondence for non-normal extensions. There are three \(\mathbb{Q}\)-embeddings of \(\mathbb{Q}(\sqrt[3]{2})\) into \(\mathbb{C}\), but only one (the identity) maps \(\mathbb{Q}(\sqrt[3]{2})\) back into itself, since the other two send \(\sqrt[3]{2}\) to a complex, non-real conjugate.</div>
 # Chapter 3: Algebraic Integers and Number Fields

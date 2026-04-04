@@ -237,7 +237,7 @@ Writing \( z = x + iy \) with \( i = (0,1) \), we have \( i^2 = -1 \). Complex n
 
 The polar form \( z = re^{i\theta} \) shows that multiplication in \( \mathbb{C} \) combines magnitudes and adds angles: \( zw = rse^{i(\theta + \phi)} \). This geometric interpretation — multiplication is a simultaneous scaling and rotation — is at the heart of why analytic functions preserve angles (conformality).
 
-![Complex plane: point z=a+bi, modulus |z|, and argument θ](/static/pics/pmath352/complex-plane.svg)
+![Complex plane: point z=a+bi, modulus |z|, and argument θ](/pics/pmath352/complex-plane.svg)
 
 <div class="proposition" markdown="1">
 <strong>Proposition 3.1.3 (Algebraic Properties).</strong> For \( z, w \in \mathbb{C} \):
@@ -344,7 +344,7 @@ The CRE are necessary but not sufficient on their own — differentiability of \
 where \( h = h_1 + ih_2 \). Using the CRE, the Jacobian matrix is \( \begin{pmatrix} u_x & -v_x \\ v_x & u_x \end{pmatrix} \), which corresponds to multiplication by the complex number \( u_x + iv_x \). Thus \( \frac{f(z_0+h) - f(z_0)}{h} \to u_x + iv_x \). \( \square \)
 </div>
 
-![Cauchy–Riemann level curves: u(x,y) and v(x,y) as orthogonal families for f(z)=z²](/static/pics/pmath352/cauchy-riemann-levelcurves.png)
+![Cauchy–Riemann level curves: u(x,y) and v(x,y) as orthogonal families for f(z)=z²](/pics/pmath352/cauchy-riemann-levelcurves.png)
 
 ## 4.3 Properties of Analytic Functions
 
@@ -481,7 +481,7 @@ More generally, \( \oint_{|z-z_0|=r} (z-z_0)^n\, dz = \begin{cases} 2\pi i & n =
 
 This calculation is fundamental: it explains why the coefficient \( c_{-1} \) in a Laurent expansion (the residue) is the only term that contributes to a contour integral. All other powers \( (z - z_0)^n \) with \( n \neq -1 \) have an antiderivative near \( z_0 \) and integrate to zero around any loop.
 
-![Closed contour C in complex plane encircling a pole z₀, illustrating the contour integral](/static/pics/pmath352/contour-integral.svg)
+![Closed contour C in complex plane encircling a pole z₀, illustrating the contour integral](/pics/pmath352/contour-integral.svg)
 
 ## 6.2 Antiderivatives and Path Independence
 
@@ -810,7 +810,7 @@ Pole of order 2 at \( z = 1 \):
 
 The Residue Theorem is remarkable for what it ignores: the shape of the contour, the behavior of \( f \) far from the singularities, the exact values of \( f \) anywhere away from the poles. The entire integral depends only on the residues — purely local algebraic data at the singularities. This reduction of a global analytic question to local algebraic data is the hallmark of complex analysis.
 
-![Keyhole contour for branch-cut integrals: large arc C_R, small arc ε→0, segments above and below the branch cut](/static/pics/pmath352/keyhole-contour.svg)
+![Keyhole contour for branch-cut integrals: large arc C_R, small arc ε→0, segments above and below the branch cut](/pics/pmath352/keyhole-contour.svg)
 
 ## 9.3 Applications to Real Integrals
 
@@ -871,7 +871,7 @@ Conformal mappings are the geometric objects of complex analysis. An analytic fu
 
 Why does \( f'(z_0) \neq 0 \) imply angle preservation? Because locally, \( f \) looks like multiplication by the complex number \( f'(z_0) \), which is a rotation by \( \arg f'(z_0) \) composed with a scaling by \( |f'(z_0)| \). Rotations and scalings preserve angles, so the differential of \( f \) at \( z_0 \) preserves angles. At a point where \( f'(z_0) = 0 \), angles are multiplied by the order of the zero, leading to angle-multiplying maps rather than angle-preserving ones.
 
-![Conformal map w=z²: rectangular grid in the z-plane maps to curved curvilinear grid in the w-plane](/static/pics/pmath352/conformal-map-z2.png)
+![Conformal map w=z²: rectangular grid in the z-plane maps to curved curvilinear grid in the w-plane](/pics/pmath352/conformal-map-z2.png)
 
 <div class="theorem" markdown="1">
 <strong>Theorem 10.1.2 (Open Mapping Theorem).</strong> A non-constant analytic function on a domain \( D \) maps open sets to open sets.
@@ -994,7 +994,7 @@ The Monodromy Theorem explains in precise terms why branch cuts exist. The logar
 
 ## 11.3 Riemann Surfaces
 
-![Riemann surface for √z: two sheets (arg ∈ (−π,π) and arg ∈ (π,3π)) connected along the branch cut z ∈ (−∞,0)](/static/pics/pmath352/riemann-surface-sqrt.svg)
+![Riemann surface for √z: two sheets (arg ∈ (−π,π) and arg ∈ (π,3π)) connected along the branch cut z ∈ (−∞,0)](/pics/pmath352/riemann-surface-sqrt.svg)
 
 The multi-valuedness of \( \log z \) and of algebraic functions is not a pathology — it is geometry. A Riemann surface is a space on which a multi-valued function becomes single-valued by "unfolding" the sheets of the multi-valuedness. This is the natural home for functions like \( \log z \), \( z^{1/n} \), and the roots of polynomial equations, and it connects complex analysis to algebraic geometry and topology.
 

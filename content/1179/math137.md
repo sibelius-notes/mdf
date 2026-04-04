@@ -160,7 +160,7 @@ A recursively defined sequence specifies each term in terms of previous terms. F
 
 For example, since \(-1/n \le \sin(n)/n \le 1/n\) and both bounds converge to \(0\), the Squeeze Theorem gives \(\lim_{n\to\infty} \sin(n)/n = 0\).
 
-![Squeeze theorem for sin(n)/n](/static/pics/math137/squeeze.png)
+![Squeeze theorem for sin(n)/n](/pics/math137/squeeze.png)
 
 ## 1.4 Monotone Convergence Theorem
 
@@ -197,7 +197,7 @@ For example, since \(-1/n \le \sin(n)/n \le 1/n\) and both bounds converge to \(
 
 </div>
 
-![Monotone convergence: increasing bounded sequence](/static/pics/math137/monotone_conv.png)
+![Monotone convergence: increasing bounded sequence](/pics/math137/monotone_conv.png)
 
 ## 1.5 Introduction to Series
 
@@ -875,7 +875,7 @@ Key examples centered at \(a = 0\):
 - \(\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} - \cdots\)
 - \(\cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} - \cdots\)
 
-![Taylor polynomials for eˣ: T₁, T₂, T₃, T₅](/static/pics/math137/taylor_exp.png)
+![Taylor polynomials for eˣ: T₁, T₂, T₃, T₅](/pics/math137/taylor_exp.png)
 
 ## 5.2 Taylor's Theorem and Errors in Approximations
 

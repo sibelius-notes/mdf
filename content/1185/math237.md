@@ -266,7 +266,7 @@ z = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x - a) + \frac{\partial f}{\part
 
 </div>
 
-![Tangent plane to surface at a point](/static/pics/math237/tangent_plane.png)
+![Tangent plane to surface at a point](/pics/math237/tangent_plane.png)
 
 ## 5.2 Differentiability and Continuity
 
@@ -365,7 +365,7 @@ Choosing \(\hat{\mathbf{u}} = \hat{\mathbf{i}}\) or \(\hat{\mathbf{u}} = \hat{\m
 
 </div>
 
-![Gradient vector field with contours](/static/pics/math237/gradient_field.png)
+![Gradient vector field with contours](/pics/math237/gradient_field.png)
 
 ## 7.3 The Gradient Vector in Three Dimensions
 
@@ -491,7 +491,7 @@ or at least one of \(f_x\) or \(f_y\) does not exist at \((a,b)\).
 
 </div>
 
-![Saddle point z=x²−y² with level curves](/static/pics/math237/saddle_level.png)
+![Saddle point z=x²−y² with level curves](/pics/math237/saddle_level.png)
 
 ## 9.2 The Second Derivative Test
 

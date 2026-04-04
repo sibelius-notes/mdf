@@ -509,7 +509,7 @@ and \(|R_1(\mathbf{x})| \leq M\|\mathbf{x}-\mathbf{a}\|^2\) for some constant \(
 
 *Proof.* By Taylor's theorem, \(f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) = \frac{1}{2}\mathbf{h}^T Hf(\mathbf{c})\mathbf{h}\) for \(\mathbf{c}\) near \(\mathbf{a}\). If \(H\) is positive definite, by continuity of the second partials, \(Hf(\mathbf{c})\) remains positive definite for \(\|\mathbf{h}\|\) small, so \(f(\mathbf{a}+\mathbf{h}) > f(\mathbf{a})\). The other cases are similar. \(\square\)
 
-![Hessian positive vs negative definite: bowl and cap shapes](/static/pics/math247/hessian_bowl_cap.png)
+![Hessian positive vs negative definite: bowl and cap shapes](/pics/math247/hessian_bowl_cap.png)
 
 For \(n = 2\), the test reduces to: let \(D = f_{xx}f_{yy} - f_{xy}^2 = \det Hf\). Then \(D > 0, f_{xx} > 0\) gives a minimum; \(D > 0, f_{xx} < 0\) gives a maximum; \(D < 0\) gives a saddle; \(D = 0\) is inconclusive.
 

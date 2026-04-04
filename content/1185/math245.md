@@ -452,7 +452,7 @@ Now check: \(A V = A[\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n] = [\sigma_1 \ma
 
 The geometric meaning: \(V^T\) rotates the domain, \(\Sigma\) scales each coordinate (zeroing out the null-space directions), and \(U\) rotates the codomain. Every linear map is, in the right pair of orthonormal frames, a diagonal scaling.
 
-![SVD geometry: unit circle maps to ellipse](/static/pics/math245/svd_geometry.png)
+![SVD geometry: unit circle maps to ellipse](/pics/math245/svd_geometry.png)
 
 ## 5.3 Applications
 

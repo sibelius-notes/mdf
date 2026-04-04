@@ -203,7 +203,7 @@ One might wonder whether every subset of \(\mathbb{R}\) is measurable — would 
 
 *Proof.* The standard Cantor set \(C\) has \(\lambda(C) = 0\), so every subset of \(C\) is measurable. Since \(|C| = 2^{\aleph_0}\), the number of subsets of \(C\) is \(2^{2^{\aleph_0}}\).
 
-![Cantor set: 4 iterations of middle-third removal, showing the fractal dust that remains at each stage](/static/pics/pmath450/cantor-set.png)
+![Cantor set: 4 iterations of middle-third removal, showing the fractal dust that remains at each stage](/pics/pmath450/cantor-set.png)
 
 **1.18 Theorem.** There exists a **non-measurable** subset of \(\mathbb{R}\).
 
@@ -243,7 +243,7 @@ The concepts in this section provide a topological counterpart to measure-theore
 
 **1.33 Example.** Every countable set is first category (each singleton is nowhere dense), so \(\mathbb{Q}\) is first category and \(\mathbb{Q}^c\) is residual.
 
-![Baire category: nowhere dense sets N₁ (red), N₂ (blue) scattered on ℝ; countable union of nowhere dense sets cannot fill ℝ](/static/pics/pmath450/baire-nowhere-dense.svg)
+![Baire category: nowhere dense sets N₁ (red), N₂ (blue) scattered on ℝ; countable union of nowhere dense sets cannot fill ℝ](/pics/pmath450/baire-nowhere-dense.svg)
 
 **1.36 Theorem** (Baire Category Theorem). *(1)* Every first-category set has empty interior. *(2)* Every residual set is dense. *(3)* A countable intersection of dense open sets is dense.
 
@@ -275,7 +275,7 @@ Before building the Lebesgue integral, it is helpful to recall the Riemann theor
 
 This theorem gives a clean measure-theoretic characterization of Riemann integrability: a function is Riemann integrable precisely when it is continuous almost everywhere. This also makes it transparent why functions with "too many" discontinuities fail to be Riemann integrable.
 
-![Lebesgue vs. Riemann: a densely-discontinuous function f (not Riemann integrable) whose Lebesgue integral equals 0.5](/static/pics/pmath450/lebesgue-vs-riemann.png)
+![Lebesgue vs. Riemann: a densely-discontinuous function f (not Riemann integrable) whose Lebesgue integral equals 0.5](/pics/pmath450/lebesgue-vs-riemann.png)
 
 **2.8 Example.** The Dirichlet function \(f = \chi_{\mathbb{Q} \cap [0,1]}\) is discontinuous everywhere and hence *not* Riemann integrable.
 
@@ -494,7 +494,7 @@ and let \(L^p(A) = \{f \in \mathcal{M}(A) : \|f\|_p < \infty\}/{\sim}\) where \(
 
 The identification of functions that agree almost everywhere is essential: without it, \(\|\cdot\|_p\) would not be a genuine norm (it would fail to separate points, since any function modified on a null set has the same \(p\)-norm). With this identification, elements of \(L^p\) are equivalence classes of functions rather than individual functions — a subtlety that is important to keep in mind.
 
-![Unit balls in ℝ² for ℓ¹ (diamond), ℓ² (circle), and ℓ∞ (square) norms](/static/pics/pmath450/lp-unit-balls.png)
+![Unit balls in ℝ² for ℓ¹ (diamond), ℓ² (circle), and ℓ∞ (square) norms](/pics/pmath450/lp-unit-balls.png)
 
 **3.15 Lemma.** If \(f\) is measurable, then \(\{|f| > \|f\|_\infty\}\) has measure zero (the essential supremum is achieved a.e.).
 
