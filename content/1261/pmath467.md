@@ -12,7 +12,7 @@ subjects: "PMATH"
 
 ---
 
-## Historical and Motivational Overview
+# Historical and Motivational Overview
 
 The central question of topology is deceptively simple: when are two spaces "the same"? In the late eighteenth and early nineteenth centuries, mathematicians had no systematic language to answer this question. The first deep hint that global shape carries algebraic content came from Leonhard Euler's 1752 observation that for any convex polyhedron, the alternating sum \( V - E + F = 2 \) is always two. Euler's formula was not merely a curiosity about polyhedra; it was the first instance of a topological invariant — a number attached to a space that does not change under continuous deformations. In the 1860s, August Möbius and Johann Benedict Listing independently studied surfaces and introduced the notion of orientability, recognising that the Möbius band and the sphere are genuinely different kinds of objects. These investigations culminated in Henri Poincaré's landmark 1895 memoir *Analysis Situs*, which laid the foundations of what we now call algebraic topology. Poincaré introduced the **Betti numbers** as counts of independent cycles in each dimension, and he introduced the **fundamental group** as a way to detect one-dimensional "holes" that cannot be filled. His work made it clear that topological problems could be translated, at least in part, into problems about groups and linear algebra.
 
@@ -22,7 +22,7 @@ By the middle of the twentieth century, algebraic topology had become a mature m
 
 ---
 
-## Chapter 0: Geometric Notions and CW Complexes
+# Chapter 0: Geometric Notions and CW Complexes
 
 Before introducing algebraic invariants, one must have a precise vocabulary for the spaces and maps being studied. The key notion is that of **homotopy equivalence**: two spaces are homotopy equivalent if each can be continuously deformed into the other, in a sense made precise below. This is a strictly weaker relation than homeomorphism — for instance, any contractible space is homotopy equivalent to a point, even though it may not be homeomorphic to one. The second foundational ingredient is the language of **CW complexes**, introduced by J. H. C. Whitehead in his 1949 paper "Combinatorial Homotopy I". CW complexes provide a cell-by-cell description of spaces like spheres, projective spaces, and surfaces that is ideally suited to homological computation. Nearly every space that arises in practice is either a CW complex or homotopy equivalent to one.
 
@@ -147,11 +147,15 @@ The operations of wedge sum, smash product, and suspension are the basic "buildi
 
 ---
 
-## Chapter 1: The Fundamental Group
+# Chapter 1: The Fundamental Group
 
 The fundamental group \( \pi_1(X, x_0) \) is the first and most accessible algebraic invariant of a topological space. The idea, due to Poincaré in *Analysis Situs*, is to study loops at a basepoint up to continuous deformation. Two spaces with non-isomorphic fundamental groups cannot be homeomorphic — or even homotopy equivalent — so the fundamental group is a powerful tool for distinguishing spaces. For instance, the circle \( S^1 \) and the disk \( D^2 \) are not homotopy equivalent: \( \pi_1(S^1) \cong \mathbb{Z} \) while \( \pi_1(D^2) = 0 \). Poincaré's original insight was that loops representing different "winding numbers" around a hole are genuinely different, and the group structure captures how loops can be concatenated.
 
 The computation of \( \pi_1(S^1) \cong \mathbb{Z} \) is the cornerstone theorem of this chapter. Its proof uses the theory of **covering spaces** — in particular, the covering \( p : \mathbb{R} \to S^1 \) given by \( p(t) = e^{2\pi i t} \). The integers index the sheets of this cover, and the winding number of a loop at 1 is the integer endpoint of its unique lift starting at 0. This connection between covering spaces and the fundamental group will be vastly generalised in Chapter 2.
+
+Historically, the notion of a fundamental group crystallised slowly. Poincaré defined it in *Analysis Situs* (1895) as the group of "paths returning to the basepoint up to continuous deformation," but his original definition was imprecise about basepoints and path-homotopy. The modern definition, with path-homotopy fixing endpoints and the group operation given by concatenation, was established by the early twentieth century through the work of Tietze, Seifert, and Reidemeister. Reidemeister's introduction of **presentations** of groups by generators and relations (1927) provided the algebraic language needed to express the outputs of van Kampen's theorem precisely.
+
+The fundamental group is both the simplest and the most non-abelian of the invariants studied in this course. It is sensitive to 1-dimensional topology: adding a 1-cell to a CW complex introduces a new generator of \( \pi_1 \), while adding a 2-cell kills a relation. This generator-relation structure — visible in the van Kampen theorem of Chapter 2 — means that every finitely presented group arises as \( \pi_1 \) of some compact space (in fact, of some compact 4-manifold). In contrast, homology groups are abelian and lose the non-commutative information; the passage from \( \pi_1 \) to \( H_1 \) is precisely abelianisation, as we prove in Chapter 5.
 
 ## Section 1.1: Paths and the Fundamental Group
 
@@ -329,17 +333,43 @@ The results in this section all follow the same template: use the functor \( \pi
 <em>Proof.</em> Define \( g : S^1 \to \mathbb{R} \) by \( g(x) = f(x) - f(-x) \). Then \( g(-x) = f(-x) - f(x) = -g(x) \), so \( g \) is an <em>odd</em> function. Pick any \( x_0 \in S^1 \). The values \( g(x_0) \) and \( g(-x_0) = -g(x_0) \) have opposite signs (or both are zero, in which case we are done). Moving continuously from \( x_0 \) to \( -x_0 \) along the upper semicircle, \( g \) changes continuously from \( g(x_0) \) to \( -g(x_0) \). By the Intermediate Value Theorem, there exists a point \( x^* \) on this arc with \( g(x^*) = 0 \), i.e., \( f(x^*) = f(-x^*) \). \( \square \)
 </div>
 
+<div class="example">
+<strong>Example (Torus Knot Complement and \( \pi_1 \)):</strong> The <em>trefoil knot</em> is a \( (2,3) \) torus knot — it winds twice around the torus in one direction and three times in the other. The fundamental group of its complement in \( S^3 \) is \( \pi_1(S^3 \setminus K_{2,3}) \cong \langle a, b \mid a^2 = b^3 
+angle \). Observe that this group is non-abelian: \( a \) and \( b \) do not commute in general (the element \( a^2 = b^3 \) is central, but \( ab 
+eq ba \)). More generally, the complement of the \( (p,q) \) torus knot has \( \pi_1 \cong \langle a,b \mid a^p = b^q 
+angle \). The abelianisation is \( \langle a,b \mid a^p = b^q, ab = ba 
+angle \cong \mathbb{Z} \) (generated by a meridian), confirming \( H_1(S^3 \setminus K) \cong \mathbb{Z} \) for any knot. The non-trivial \( \pi_1 \) detects the knotting: the unknot has \( \pi_1 \cong \mathbb{Z} \), while the trefoil has \( \pi_1 
+ot\cong \mathbb{Z} \), so trefoil and unknot are genuinely different knots.
+</div>
+
+<div class="example">
+<strong>Example (Van Kampen Preview: Two Loops Attached):</strong> Let \( X = S^1 ee S^1 \) — two circles joined at a point. As computed in Chapter 2, van Kampen gives \( \pi_1(X) \cong F_2 = \langle a, b 
+angle \), the free group on two generators. Now consider attaching a 2-cell along the commutator \( aba^{-1}b^{-1} \): the resulting space \( Y = (S^1 ee S^1) \cup_{aba^{-1}b^{-1}} e^2 \) has \( \pi_1(Y) \cong F_2 / \langle\!\langle aba^{-1}b^{-1} 
+angle\!
+angle \cong \mathbb{Z}^2 \), since killing the commutator abelianises \( F_2 \). Thus \( Y \simeq T^2 \): attaching the 2-cell turns the figure-eight into a torus. This illustrates the general principle: adding 2-cells kills relations in \( \pi_1 \), while adding 1-cells adds generators.
+</div>
+
 <div class="remark">
-<strong>Remark (Summary of Chapter 1 and Preview of Chapter 2):</strong> We have established three fundamental results using \( \pi_1 \): (1) \( \pi_1(S^1) \cong \mathbb{Z} \) via the exponential covering; (2) the Brouwer fixed-point theorem in dimension 2; (3) the Fundamental Theorem of Algebra. The common thread is that \( \pi_1 \) is a functor — topological facts about maps are reflected in algebraic facts about induced homomorphisms. In Chapter 2, we will systematically exploit this functoriality via van Kampen's theorem to compute \( \pi_1 \) of surfaces, knot complements, and spaces built from pieces. The covering space theory will refine the connection between \( \pi_1(X) \) and the covers of \( X \) from a single example (\( \mathbb{R} \to S^1 \)) to a complete classification.
+<strong>Remark (Non-Homeomorphism of \( \mathbb{R} \) and \( \mathbb{R}^2 \) via \( \pi_1 \)):</strong> A classical application of \( \pi_1 \) is distinguishing \( \mathbb{R} \) and \( \mathbb{R}^2 \). Suppose for contradiction that \( f : \mathbb{R} 	o \mathbb{R}^2 \) is a homeomorphism. Choose any point \( x_0 \in \mathbb{R} \); then \( f \) restricts to a homeomorphism \( \mathbb{R} \setminus \{x_0\} 	o \mathbb{R}^2 \setminus \{f(x_0)\} \). But \( \mathbb{R} \setminus \{x_0\} \) has two path-connected components (it is disconnected), while \( \mathbb{R}^2 \setminus \{f(x_0)\} \simeq S^1 \) is path-connected. A homeomorphism must preserve path-connectedness and the number of components, contradiction. More precisely, \( \pi_1(\mathbb{R} \setminus \{x_0\}) = 0 \) (it is two contractible rays) while \( \pi_1(\mathbb{R}^2 \setminus \{f(x_0)\}) \cong \mathbb{Z} 
+eq 0 \), providing an algebraic proof. The same argument, using \( H_k \) instead of \( \pi_1 \), will distinguish \( \mathbb{R}^n \) and \( \mathbb{R}^m \) for all \( n 
+eq m \) via invariance of domain (Chapter 5).
+</div>
+
+<div class="remark">
+<strong>Remark (Summary of Chapter 1 and Preview of Chapter 2):</strong> We have established three fundamental results using \( \pi_1 \): (1) \( \pi_1(S^1) \cong \mathbb{Z} \) via the exponential covering; (2) the Brouwer fixed-point theorem in dimension 2; (3) the Fundamental Theorem of Algebra. The common thread is that \( \pi_1 \) is a functor — topological facts about maps are reflected in algebraic facts about induced homomorphisms. In Chapter 2, we will systematically exploit this functoriality via van Kampen's theorem to compute \( \pi_1 \) of surfaces, knot complements, and spaces built from pieces. The covering space theory will refine the connection between \( \pi_1(X) \) and the covers of \( X \) from a single example (\( \mathbb{R} 	o S^1 \)) to a complete classification.
 </div>
 
 ---
 
-## Chapter 2: Van Kampen's Theorem and Covering Spaces
+# Chapter 2: Van Kampen's Theorem and Covering Spaces
 
 Van Kampen's theorem, in its simplest form, tells us how to compute the fundamental group of a space assembled from two pieces. Seifert stated a version in 1930 and van Kampen gave the general formulation in 1933. The theorem converts the topological problem of computing \( \pi_1 \) into a purely algebraic one involving amalgamated free products. It is the primary computational tool for fundamental groups of surfaces, knot complements, and graphs of spaces.
 
 Covering space theory provides a deep bridge between topology and group theory: the connected covering spaces of a "nice" space \( X \) are classified (up to isomorphism over \( X \)) by the conjugacy classes of subgroups of \( \pi_1(X) \). This classification theorem was known in spirit to Poincaré and was made rigorous by Seifert and Threlfall in the 1930s. The universality of the infinite cyclic cover \( \mathbb{R} \to S^1 \) and the infinite tree covering \( S^1 \vee S^1 \) illustrates the power of the theory. The classification will be made fully precise once we study lifting criteria.
+
+From a historical perspective, covering spaces were first studied systematically by Poincaré in the context of Riemann surfaces and monodromy of differential equations. The monodromy of an analytic continuation around a branch point is precisely an element of the deck transformation group of the corresponding covering. The algebraic theory of covering spaces — linking them to subgroups of \( \pi_1 \) — was developed by Reidemeister and Schreier in the 1920s, and Schreier's use of coset graphs to study subgroups of free groups (the **Schreier coset graph**) is a direct topological construction that we will see in Section 2.4. The phrase "covering space" itself entered standard use with the textbook of Seifert and Threlfall (*Lehrbuch der Topologie*, 1934).
+
+A key structural point of this chapter is the **Galois correspondence**: the lattice of subgroups of \( \pi_1(X) \) is in order-reversing bijection with the lattice of covering spaces of \( X \) (ordered by factoring through maps over \( X \)). This mirrors exactly the Galois correspondence in field theory, where intermediate fields correspond to subgroups of the Galois group. Indeed, van Kampen's theorem for a space assembled from pieces corresponds to the amalgamated-product structure of the Galois group for a composite field extension. This algebraic parallel runs throughout modern topology and motivates the more abstract treatment via groupoids and \( \infty \)-categories in current research.
 
 ## Section 2.1: Free Products and Amalgamated Products
 
@@ -352,11 +382,30 @@ The universal property of the free product states that the free product is the "
 </div>
 
 <div class="definition">
-<strong>Definition (Amalgamated Free Product):</strong> Given group homomorphisms \( i : A \to G \) and \( j : A \to H \), the <em>amalgamated free product</em> is:
+<strong>Definition (Amalgamated Free Product):</strong> Given group homomorphisms \( i : A 	o G \) and \( j : A 	o H \), the <em>amalgamated free product</em> is:
 \[
-G *_A H = (G * H) \big/ \langle i(a) j(a)^{-1} : a \in A \rangle^{\mathrm{normal}}.
+G *_A H = (G * H) ig/ \langle i(a) j(a)^{-1} : a \in A 
+angle^{\mathrm{normal}}.
 \]
-It is the pushout in the category of groups along \( A \to G \) and \( A \to H \).
+It is the pushout in the category of groups along \( A 	o G \) and \( A 	o H \).
+</div>
+
+<div class="example">
+<strong>Example (Free Product \( \mathbb{Z} * \mathbb{Z} \) and Reduced Words):</strong> Let \( G = \langle a 
+angle \cong \mathbb{Z} \) and \( H = \langle b 
+angle \cong \mathbb{Z} \). The free product \( \mathbb{Z} * \mathbb{Z} = \langle a, b 
+angle = F_2 \) is the free group on two generators. Its elements are <em>reduced words</em> — finite alternating strings of powers of \( a \) and powers of \( b \) with no cancellation, for example:
+\[
+a^2 b^{-1} a b^3, \quad b^2 a^{-1} b^2 a, \quad a^{-3} b a^{-1} b^{-2} a.
+\]
+The word \( aba^{-1}b^2a \) is reduced (the letters alternate between \( a \)-powers and \( b \)-powers). The word \( ab^0a \) reduces to \( a^2 \) by removing the trivial \( b^0 = e_H \). Multiplication is concatenation followed by reduction: \( (a^2 b)(b^{-1} a^3) = a^2 (b \cdot b^{-1}) a^3 = a^5 \). This group is non-abelian: \( ab 
+eq ba \) (the words \( ab \) and \( ba \) are both reduced and distinct). The free product \( G * H \) with no amalgamation over any nontrivial group is the "most non-commutative" way to combine \( G \) and \( H \).
+</div>
+
+<div class="remark">
+<strong>Remark (Universal Property of Free Products):</strong> The free product \( G * H \) is characterised by its universal property: given any group \( K \) and homomorphisms \( \phi_G : G 	o K \) and \( \phi_H : H 	o K \), there is a unique homomorphism \( \Phi : G * H 	o K \) extending both. This is the group-theoretic analogue of the universal property of the wedge sum \( X ee Y \): a map from \( X ee Y \) is the same as a pair of maps from \( X \) and from \( Y \). Van Kampen's theorem (Section 2.2) exploits this universal property: when \( X = U \cup V \) with \( U \cap V \) contractible, the map \( \pi_1(U) * \pi_1(V) 	o \pi_1(X) \) is an isomorphism precisely because the universal property of \( \pi_1(X) \) matches that of the free product.
+
+For the amalgamated product \( G *_A H \), the universal property reads: homomorphisms \( G *_A H 	o K \) correspond bijectively to pairs of homomorphisms \( \phi_G : G 	o K \) and \( \phi_H : H 	o K \) such that \( \phi_G \circ i = \phi_H \circ j \) (i.e., the two copies of \( A \) are sent to the same subgroup of \( K \)). Topologically, this says that a map from \( X \cup_Z Y \) is a pair of maps from \( X \) and \( Y \) that agree on the common subspace \( Z \).
 </div>
 
 ## Section 2.2: The Seifert–van Kampen Theorem
@@ -490,6 +539,31 @@ There are no other covering spaces of \( S^1 \) (up to isomorphism).
 One can verify these generate no relations: the Schreier process gives these three elements as a free basis for \( H \), and a reduced word in \( \{a^2, b, aba^{-1}\} \) and their inverses projects to a reduced word in \( F_2 \), hence is nontrivial.
 </div>
 
+<div class="theorem">
+<strong>Theorem (Nielsen–Schreier, Proof Sketch):</strong> Every subgroup of a free group is free. More precisely, if \( H \leq F_k \) has finite index \( n = [F_k : H] \), then \( H \) is a free group of rank \( 1 + n(k-1) \).
+</div>
+
+<div class="proof">
+<em>Proof sketch.</em> Realise \( F_k = \pi_1(igvee^k S^1) \) as the fundamental group of a wedge of \( k \) circles. The subgroup \( H \leq F_k \) corresponds (by covering space theory) to a connected covering space \( p : 	ilde X 	o igvee^k S^1 \). Since \( igvee^k S^1 \) is a graph (a 1-dimensional CW complex), its covering space \( 	ilde X \) is also a graph. Every connected graph \( 	ilde X \) has fundamental group \( \pi_1(	ilde X) \cong F_m \) for some \( m \) (a free group, since graphs deformation retract onto wedges of circles). Thus \( H \cong \pi_1(	ilde X) \) is free.
+
+To compute the rank: the graph \( 	ilde X \) has \( n \) vertices (one per coset of \( H \) in \( F_k \), i.e., one per sheet of the cover) and \( nk \) edges (each of the \( k \) edge-types in the base lifts to \( n \) edges). By the formula for graphs, \( \pi_1(	ilde X) \cong F_{E - V + 1} = F_{nk - n + 1} = F_{1 + n(k-1)} \). \( \square \)
+</div>
+
+<div class="remark">
+<strong>Remark (Rank Formula and Index):</strong> The formula \( \mathrm{rank}(H) = 1 + [F_k : H](\mathrm{rank}(F_k) - 1) \) is called the <em>Schreier index formula</em>. It has the following special cases:
+<ul>
+<li>An index-\( n \) subgroup of \( F_2 \) has rank \( 1 + n \). So index-2 subgroups of \( F_2 \) are free of rank 3, index-3 subgroups have rank 4, etc.</li>
+<li>A subgroup of index \( n \) in \( \mathbb{Z} = F_1 \) has rank \( 1 + n \cdot 0 = 1 \), so it is \( \cong \mathbb{Z} \) — consistent with the fact that subgroups of \( \mathbb{Z} \) are cyclic.</li>
+<li>The formula diverges as \( n 	o \infty \): an infinite-index subgroup can have infinite rank (or finite rank, depending on the subgroup).</li>
+</ul>
+</div>
+
+<div class="example">
+<strong>Example (Commutator Subgroup of \( F_2 \) is Free of Infinite Rank):</strong> Let \( F_2 = \langle a, b 
+angle \) and let \( [F_2, F_2] \) be its commutator subgroup (generated by all elements \( [g,h] = ghg^{-1}h^{-1} \)). The abelianisation \( F_2 / [F_2, F_2] \cong \mathbb{Z}^2 \), which is infinite, so \( [F_2, F_2] \) has infinite index in \( F_2 \). By Nielsen–Schreier, \( [F_2, F_2] \) is free. One can show it is free of countably infinite rank, with a free basis given by the elements \( \{a^m b^n a^{-m} b^{-n}\}_{(m,n) 
+eq (0,0)} \) (suitably chosen to avoid redundancy). The Schreier coset graph for the commutator subgroup is the Cayley graph of \( \mathbb{Z}^2 \) with respect to the generators \( \{a,b,a^{-1},b^{-1}\} \): an infinite grid. This grid has infinitely many independent cycles (one for each square), confirming the infinite rank.
+</div>
+
 <div class="remark">
 <strong>Remark (Knot Groups):</strong> The complement of a knot \( K \subset S^3 \) has a finitely presented fundamental group called the <em>knot group</em>. The Wirtinger presentation expresses it with one generator per arc in a knot diagram and one relation per crossing. For the trefoil knot, one obtains \( \pi_1(S^3 \setminus K) \cong \langle a, b \mid a^2 = b^3 \rangle \). This group is non-abelian, which shows the trefoil is non-trivially knotted. The abelianisation of any knot group is \( \mathbb{Z} \) (generated by a meridian), so knot groups are distinguished by their higher commutator quotients and the structure of their covering spaces. This connection between covering spaces, fundamental groups, and knot theory is one of the principal themes of 3-dimensional topology.
 </div>
@@ -508,11 +582,15 @@ One of these is a consequence of the other two (a general fact about Wirtinger p
 
 ---
 
-## Chapter 3: Homology — Simplicial and Cellular
+# Chapter 3: Homology — Simplicial and Cellular
 
 The fundamental group detects one-dimensional holes in a space, but higher-dimensional holes require new invariants. A 2-sphere has no 1-dimensional hole — every loop is contractible — yet it is far from contractible; the "2-dimensional hole" enclosed by the sphere is invisible to \( \pi_1 \). **Homology groups** solve this problem: \( H_n(X) \) detects \( n \)-dimensional holes by measuring \( n \)-cycles (closed \( n \)-chains) modulo those which are boundaries of \( (n+1) \)-chains. The algebraic structure (\( \partial^2 = 0 \)) ensures this quotient is a well-defined abelian group.
 
 The history of homology is intertwined with the history of modern algebra. Poincaré defined Betti numbers informally in 1895 as the "number of independent \( k \)-cycles," but the definition was imprecise. Emmy Noether's insight (communicated at a Göttingen seminar in 1925) was that Betti numbers and torsion coefficients should be unified as the rank and torsion of a single abelian group, the **homology group**. This point of view made the tools of abstract algebra directly applicable, and within a decade Vietoris, Čech, and Eilenberg had extended Noether's groups to very general settings.
+
+There are three main approaches to defining homology groups, all yielding the same answer for spaces with enough structure. **Simplicial homology** uses a triangulation of \( X \) into simplices; it is easiest to compute by hand. **Cellular homology** uses a CW structure, requiring only one generator per cell rather than per simplex; it is the most efficient for CW complexes. **Singular homology** (Chapter 4) uses all continuous maps \( \Delta^n 	o X \) without any decomposition requirement; it is the most general and most theoretically powerful. This chapter focuses on the first two, which share the same algebraic blueprint: a chain complex built from formal linear combinations of cells, with boundary maps computed by the alternating-sign face formula.
+
+The key algebraic fact underlying all of homology is the identity \( \partial^2 = 0 \), and understanding why this holds geometrically — "the boundary of a boundary is empty" — is the conceptual core of the subject. The sign convention \( (-1)^i \) in the boundary formula is not arbitrary: it is precisely what makes adjacent face maps cancel in pairs when composed. The resulting quotient \( \ker \partial_n / \mathrm{im}\, \partial_{n+1} \) measures precisely the cycles that do not bound — the "holes" of dimension \( n \). Chapter 3 provides the computational toolkit; Chapter 4 provides the theoretical justification.
 
 ## Section 3.1: Delta-Complexes and Simplicial Homology
 
@@ -734,11 +812,15 @@ since each factor \( H_{j_i}(S^1) \) is \( \mathbb{Z} \) (for \( j_i = 0 \) or \
 
 ---
 
-## Chapter 4: Singular Homology
+# Chapter 4: Singular Homology
 
 Simplicial and cellular homology require the space to have a CW structure or triangulation. **Singular homology**, introduced by Eilenberg in 1944, works for any topological space whatsoever: a singular \( n \)-simplex is simply any continuous map \( \sigma : \Delta^n \to X \), with no injectivity or linearity required. The resulting chain groups are enormous (typically uncountably generated) but the homology groups they produce are both computable and functorial, and they agree with the cellular computation for CW complexes.
 
 The key results of this chapter — homotopy invariance, the long exact sequence of a pair, excision, and the Mayer–Vietoris sequence — form the axiomatic backbone of any homology theory. Eilenberg and Steenrod showed in 1945 that these four properties, together with a normalisation condition, uniquely characterise singular homology among "ordinary" homology theories. This "axiomatic" characterisation is the deepest structural insight of the subject.
+
+From a historical standpoint, singular homology resolved a problem that had vexed topologists since Poincaré: how to define homology groups for spaces that admit no triangulation. Eilenberg's 1944 paper introduced singular chains as a way to encode all continuous maps into a space, not just linear ones. This "singular" approach was immediately recognised as the right foundation: singular homology agrees with simplicial homology on triangulable spaces (by the simplicial approximation theorem), is functorial for all continuous maps (not just simplicial maps), and satisfies excision without any smoothness hypothesis. The name "singular" reflects the fact that a singular simplex can be a highly non-injective, pathological map — the word is used in the sense of "general," contrasting with the "non-singular" (embedded, linear) simplices of the simplicial theory.
+
+The axiomatic approach to homology, developed by Eilenberg and Steenrod in their 1952 book *Foundations of Algebraic Topology*, identifies the minimal set of properties that characterise a homology theory: the homotopy axiom, the exactness axiom (long exact sequence of a pair), the excision axiom, and the dimension axiom (normalisation at a point). Any functor from spaces to graded abelian groups satisfying these axioms on finite CW complexes is isomorphic to singular homology. This uniqueness is what justifies computing homology by any convenient method — simplicial, cellular, or singular — and always getting the same answer.
 
 ## Section 4.1: Singular Chains and Homology
 
@@ -755,7 +837,35 @@ where \( \delta_i : \Delta^{n-1} \to \Delta^n \) is the \( i \)-th face inclusio
 </div>
 
 <div class="remark">
-<strong>Remark (Size):</strong> For any non-empty space, \( C_n(X) \) is uncountably generated when \( X \) has more than one point (since there are uncountably many continuous maps \( \Delta^n \to X \)). Nevertheless, the homology groups are often finitely generated. The key point is that most singular simplices cancel in the quotient \( H_n \), and the algebraic structure of the boundary maps forces remarkable cancellation.
+<strong>Remark (Size):</strong> For any non-empty space, \( C_n(X) \) is uncountably generated when \( X \) has more than one point (since there are uncountably many continuous maps \( \Delta^n 	o X \)). Nevertheless, the homology groups are often finitely generated. The key point is that most singular simplices cancel in the quotient \( H_n \), and the algebraic structure of the boundary maps forces remarkable cancellation.
+</div>
+
+<div class="remark">
+<strong>Remark (Standard Simplex and Face Maps):</strong> The standard \( n \)-simplex is
+\[
+\Delta^n = \{(t_0, t_1, \ldots, t_n) \in \mathbb{R}^{n+1} : t_i \geq 0,\ t_0 + t_1 + \cdots + t_n = 1\},
+\]
+with vertices \( e_0 = (1,0,\ldots,0) \), \( e_1 = (0,1,0,\ldots,0) \), \ldots, \( e_n = (0,\ldots,0,1) \). The <em>\( i \)-th face map</em> \( \delta_i : \Delta^{n-1} 	o \Delta^n \) embeds \( \Delta^{n-1} \) as the face of \( \Delta^n \) opposite vertex \( e_i \), by inserting a zero in position \( i \):
+\[
+\delta_i(t_0, \ldots, t_{n-1}) = (t_0, \ldots, t_{i-1}, 0, t_i, \ldots, t_{n-1}).
+\]
+For example, \( \delta_0 : \Delta^1 	o \Delta^2 \) maps the edge \( [e_0, e_1] \) to the face \( [e_1, e_2] \) of the triangle \( \Delta^2 \) (the face opposite \( e_0 \)). The face maps satisfy the <em>cosimplicial identities</em>: \( \delta_j \circ \delta_i = \delta_{i+1} \circ \delta_j \) for \( i \geq j \). These identities are precisely what makes \( \partial^2 = 0 \) hold.
+</div>
+
+<div class="example">
+<strong>Example (\( \partial^2 = 0 \): Explicit Alternating Sign Cancellation):</strong> We verify \( \partial_1 \circ \partial_2 = 0 \) for a singular 2-simplex \( \sigma : \Delta^2 	o X \). By definition:
+\[
+\partial_2(\sigma) = \sigma \circ \delta_0 - \sigma \circ \delta_1 + \sigma \circ \delta_2,
+\]
+where \( \delta_0, \delta_1, \delta_2 : \Delta^1 	o \Delta^2 \) are the three face inclusions. Applying \( \partial_1 \) to each term:
+\[
+\partial_1(\sigma \circ \delta_i) = (\sigma \circ \delta_i) \circ \delta_1 - (\sigma \circ \delta_i) \circ \delta_0 = \sigma \circ \delta_i \circ \delta_1 - \sigma \circ \delta_i \circ \delta_0.
+\]
+So \( \partial_1(\partial_2(\sigma)) = (\sigma \circ \delta_0 \circ \delta_1 - \sigma \circ \delta_0 \circ \delta_0) - (\sigma \circ \delta_1 \circ \delta_1 - \sigma \circ \delta_1 \circ \delta_0) + (\sigma \circ \delta_2 \circ \delta_1 - \sigma \circ \delta_2 \circ \delta_0) \). Using the cosimplicial identity \( \delta_j \delta_i = \delta_{i+1} \delta_j \) for \( j \leq i \), one finds: \( \delta_0 \delta_1 = \delta_2 \delta_0 \), \( \delta_1 \delta_0 = \delta_1 \delta_0 \) (same), \( \delta_0 \delta_0 = \delta_1 \delta_0 \), \( \delta_1 \delta_1 = \delta_2 \delta_1 \), \( \delta_2 \delta_0 = \delta_1 \delta_0 \), \( \delta_2 \delta_1 = \delta_2 \delta_1 \). Collecting terms, every composition \( \sigma \circ \delta_j \circ \delta_i \) appears exactly twice with opposite signs, giving \( \partial_1 \circ \partial_2 = 0 \). The general proof for \( \partial_{n-1} \circ \partial_n \) follows the same sign-cancellation pattern.
+</div>
+
+<div class="remark">
+<strong>Remark (Why Integer Coefficients):</strong> The chain groups \( C_n(X) \) are defined as <em>free abelian</em> groups — formal integer linear combinations \( \sum n_i \sigma_i \) with \( n_i \in \mathbb{Z} \). This is not just a convention; the integer coefficients are essential for detecting torsion (e.g., the \( \mathbb{Z}/2 \) in \( H_1(\mathbb{RP}^2) \)). If one used \( \mathbb{Q} \) or \( \mathbb{R} \) coefficients, all torsion information would vanish (since \( \mathbb{Z}/k \otimes \mathbb{Q} = 0 \)), and one would lose the distinction between, say, \( S^2 \) (with \( H_1 = 0 \)) and \( \mathbb{RP}^2 \) (with \( H_1 = \mathbb{Z}/2 \)). Using \( \mathbb{Z}/2 \) coefficients erases orientation information but retains \( \mathbb{Z}/2 \)-torsion. The Universal Coefficient Theorem (Section 4.5) precisely quantifies how homology with different coefficient groups are related.
 </div>
 
 ## Section 4.2: Homotopy Invariance
@@ -780,6 +890,24 @@ where \( v_j = (e_j, 0) \) and \( w_j = (e_j, 1) \). For a singular \( n \)-simp
 P(\sigma) = \sum_{i=0}^n (-1)^i H \circ (\sigma \times \mathrm{id}) \circ \iota_i,
 \]
 where \( \iota_i : \Delta^{n+1} \to \Delta^n \times [0,1] \) is the affine map sending vertices \( 0,\ldots,n+1 \) to \( v_0,\ldots,v_i,w_i,\ldots,w_n \). Then a direct computation using the face maps of \( \Delta^{n+1} \) shows \( \partial P(\sigma) + P(\partial \sigma) = g_*(\sigma) - f_*(\sigma) \). For any cycle \( z \in \ker \partial_n \), this gives \( g_*(z) - f_*(z) = \partial(P(z)) \in \mathrm{im}\, \partial_{n+1} \), so \( [g_*(z)] = [f_*(z)] \) in \( H_n(Y) \). \( \square \)
+</div>
+
+<div class="remark">
+<strong>Remark (Geometric Meaning of Chain Homotopies):</strong> A chain homotopy \( P_n : C_n(X) 	o C_{n+1}(Y) \) should be thought of geometrically as a "prism" construction. Given a singular \( n \)-simplex \( \sigma : \Delta^n 	o X \) and a homotopy \( H : X 	imes [0,1] 	o Y \), the map \( H \circ (\sigma 	imes \mathrm{id}) : \Delta^n 	imes [0,1] 	o Y \) sweeps out a "prism" over \( \sigma \). The prism \( \Delta^n 	imes [0,1] \) is triangulated as a union of \( (n+1) \) simplices of dimension \( n+1 \):
+\[
+\Delta^n 	imes [0,1] = igcup_{i=0}^n \left[ v_0, \ldots, v_i, w_i, \ldots, w_n ight],
+\]
+where \( v_j = (e_j, 0) \) are the "bottom" vertices and \( w_j = (e_j, 1) \) are the "top" vertices. The chain homotopy \( P(\sigma) \) is the alternating sum of the \( (n+1) \) singular \( (n+1) \)-simplices obtained by restricting \( H \circ (\sigma 	imes \mathrm{id}) \) to each piece of this triangulation. The algebraic identity \( \partial P + P \partial = g_* - f_* \) then encodes the fact that the boundary of the prism consists of the top face (\( g \circ \sigma \)), the bottom face (\( f \circ \sigma \)), and the lateral faces (which contribute the \( P \partial \) term).
+</div>
+
+<div class="remark">
+<strong>Remark (Corollary: Contractible Spaces Have Trivial Homology):</strong> The most important consequence of homotopy invariance is that contractible spaces have the same homology as a point: \( H_n(X) = 0 \) for \( n \geq 1 \) and \( H_0(X) \cong \mathbb{Z} \) whenever \( X \) is contractible. In particular:
+<ul>
+<li>\( \mathbb{R}^n \) is contractible (via the straight-line homotopy \( H(x,t) = (1-t)x \)), so \( 	ilde H_k(\mathbb{R}^n) = 0 \) for all \( k \).</li>
+<li>\( \mathbb{R}^n \setminus \{0\} \simeq S^{n-1} \) (via the deformation retraction \( x \mapsto x/|x| \)), so \( H_k(\mathbb{R}^n \setminus \{0\}) \cong H_k(S^{n-1}) \), giving \( \mathbb{Z} \) in degrees 0 and \( n-1 \) and 0 elsewhere.</li>
+<li>Any convex subset of \( \mathbb{R}^n \) is contractible. Any tree is contractible.</li>
+</ul>
+These facts make it possible to compute the homology of complicated spaces by decomposing them into contractible pieces and applying Mayer–Vietoris.
 </div>
 
 ## Section 4.3: Long Exact Sequence of a Pair
@@ -812,9 +940,23 @@ where \( i : A \hookrightarrow X \) and \( j : (X, \emptyset) \hookrightarrow (X
 <strong>Theorem (Good Pairs and Quotients):</strong> If \( (X, A) \) is a <em>good pair</em> (meaning \( A \) is a closed subspace that is a deformation retract of some open neighbourhood), then the quotient map \( (X,A) \to (X/A, A/A) \) induces an isomorphism \( H_n(X, A) \cong \tilde H_n(X/A) \).
 </div>
 
+<div class="example">
+<strong>Example (Computing \( H_*(S^n) \) via the Pair \( (D^n, S^{n-1}) \)):</strong> Since \( (D^n, S^{n-1}) \) is a good pair (any collar neighbourhood of \( S^{n-1} \) in \( D^n \) serves), the good pair isomorphism gives \( H_k(D^n, S^{n-1}) \cong \tilde H_k(S^n) \). The long exact sequence of the pair (for \( k \geq 1 \), using \( H_k(D^n) = 0 \)) gives:
+\[
+0 = H_k(D^n) \to H_k(D^n, S^{n-1}) \xrightarrow{\partial_*} H_{k-1}(S^{n-1}) \to H_{k-1}(D^n) = 0,
+\]
+so \( H_k(D^n, S^{n-1}) \cong H_{k-1}(S^{n-1}) \). Hence \( \tilde H_k(S^n) \cong \tilde H_{k-1}(S^{n-1}) \). Inducting from \( \tilde H_1(S^1) \cong \mathbb{Z} \) gives \( \tilde H_k(S^n) \cong \mathbb{Z} \) for \( k = n \) and \( 0 \) otherwise.
+</div>
+
+<div class="remark">
+<strong>Remark (Excision: Geometric Picture):</strong> The excision theorem says: if \( Z \subseteq A \subseteq X \) with \( \bar{Z} \subseteq \mathrm{int}(A) \), then \( H_n(X \setminus Z, A \setminus Z) \cong H_n(X, A) \). Geometrically, relative cycles in \( X \) that only touch \( A \) at their boundary cannot "see" a subspace \( Z \) well inside \( A \). Barycentric subdivision makes simplices arbitrarily small, ensuring subdivided simplices avoid \( Z \) (by the Lebesgue number lemma). For good pairs \( (X,A) \) this combines with the long exact sequence to give the very useful formula \( H_n(X, A) \cong \tilde H_n(X/A) \): for example \( H_n(D^n, S^{n-1}) \cong \tilde H_n(S^n) \cong \mathbb{Z} \) in degree \( n \).
+</div>
+
 ## Section 4.4: The Mayer–Vietoris Sequence
 
 The Mayer–Vietoris sequence is the homological analogue of van Kampen's theorem: it computes the homology of a union \( X = A \cup B \) in terms of the homologies of \( A \), \( B \), and \( A \cap B \). The key difference from van Kampen is that the Mayer–Vietoris sequence works in all dimensions simultaneously and produces abelian groups, while van Kampen works for the fundamental group (which can be non-abelian). The Mayer–Vietoris sequence is in fact a consequence of the short exact sequence of chain complexes \( 0 \to C_*(A \cap B) \to C_*(A) \oplus C_*(B) \to C_*(A+B) \to 0 \) and the barycentric subdivision argument showing that \( H_*(A+B) \cong H_*(X) \) (where \( C_*(A+B) \) consists of chains that are sums of chains in \( A \) and chains in \( B \)).
+
+The derivation is a direct application of the Snake Lemma. The subchain complex \( C_*(A+B) \subseteq C_*(X) \) consists of chains expressible as \( \alpha + \beta \) with \( \alpha \in C_*(A) \) and \( \beta \in C_*(B) \). The inclusion \( \Phi : C_*(A \cap B) \to C_*(A) \oplus C_*(B) \) sends \( \sigma \mapsto (\sigma, -\sigma) \), and the map \( \Psi : C_*(A) \oplus C_*(B) \to C_*(A+B) \) sends \( (\alpha, \beta) \mapsto \alpha + \beta \). One checks that the sequence \( 0 \to C_*(A \cap B) \xrightarrow{\Phi} C_*(A) \oplus C_*(B) \xrightarrow{\Psi} C_*(A+B) \to 0 \) is exact (surjectivity of \( \Psi \) is by definition; injectivity and exactness at the middle follow from the sign convention). The Snake Lemma then gives the long exact sequence in homology; the identification \( H_*(A+B) \cong H_*(X) \) follows from barycentric subdivision (any singular simplex in \( X \) can be subdivided until each piece lies in \( A \) or \( B \)). The naturality of Mayer–Vietoris says that a map of pairs \( f : (X; A, B) \to (X'; A', B') \) (with \( f(A) \subseteq A' \) and \( f(B) \subseteq B' \)) induces a chain map between the two long exact sequences, with all squares commuting. This naturality is used in the proof of the Künneth formula and in comparing Mayer–Vietoris sequences for different decompositions of the same space.
 
 <div class="theorem">
 <strong>Theorem (Mayer–Vietoris):</strong> Let \( X = A \cup B \) with \( A, B \) open (or both subcomplexes of a CW complex). There is a natural long exact sequence:
@@ -869,6 +1011,26 @@ H_2(A \cap B) \to H_2(A) \oplus H_2(B) \to H_2(T_f) \to H_1(A \cap B) \xrightarr
 With \( A \simeq B \simeq S^1 \), \( A \cap B \simeq S^1 \sqcup S^1 \), the map \( \Phi : \mathbb{Z}^2 \to \mathbb{Z}^2 \) is the matrix \( \begin{pmatrix} 1 & d \\ -1 & -1 \end{pmatrix} \). Computing, \( H_1(T_f) \cong \mathbb{Z}^2 / \mathrm{im}(\Phi) \cong \mathbb{Z} \oplus \mathbb{Z}/(d-1) \) for \( d \neq 1 \), and \( H_1(T_{\mathrm{id}}) \cong \mathbb{Z}^2 \) (the torus).
 </div>
 
+<div class="example">
+<strong>Example (Homology of \( \mathbb{RP}^2 \) via Mayer–Vietoris):</strong> Decompose \( \mathbb{RP}^2 \) as the union of a Möbius band \( M \) and a disk \( D \). Specifically, \( \mathbb{RP}^2 \) is formed from a Möbius band (which deformation retracts to its core circle \( S^1 \)) and a disk \( D^2 \) (contractible), glued along their boundaries \( S^1 \). So \( A = M \simeq S^1 \), \( B = D^2 \simeq * \), and \( A \cap B \simeq S^1 \) (the boundary circle). The Mayer–Vietoris sequence in degree 2:
+\[
+0 = H_2(S^1) \to H_2(M) \oplus H_2(D^2) \to H_2(\mathbb{RP}^2) \to H_1(S^1) \xrightarrow{\Phi} H_1(M) \oplus H_1(D^2).
+\]
+Here \( H_2(M) = 0 \) (the Möbius band is non-compact and homotopy equivalent to \( S^1 \)), \( H_2(D^2) = 0 \), \( H_1(S^1) \cong \mathbb{Z} \), \( H_1(M) \cong \mathbb{Z} \) (generated by the core circle), and \( H_1(D^2) = 0 \). The map \( \Phi : H_1(S^1) \to H_1(M) \) is induced by the inclusion of the boundary \( \partial M \cong S^1 \hookrightarrow M \); since the boundary of a Möbius band goes around the core circle twice, \( \Phi \) is multiplication by 2. The exact sequence gives:
+\[
+0 \to H_2(\mathbb{RP}^2) \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to H_1(\mathbb{RP}^2) \to 0.
+\]
+Reading off: \( H_2(\mathbb{RP}^2) = \ker(\times 2) = 0 \) and \( H_1(\mathbb{RP}^2) = \mathrm{coker}(\times 2) = \mathbb{Z}/2 \), confirming our cellular computation.
+</div>
+
+<div class="example">
+<strong>Example (Homology of the Klein Bottle via Mayer–Vietoris):</strong> The Klein bottle \( K \) can be decomposed as the union of two Möbius bands glued along their boundary circles. Let \( A \simeq S^1 \) and \( B \simeq S^1 \) (two Möbius bands, each homotopy equivalent to their core circle), with \( A \cap B \simeq S^1 \) (their common boundary). The Mayer–Vietoris sequence in degree 1:
+\[
+H_1(S^1) \xrightarrow{\Phi} H_1(S^1) \oplus H_1(S^1) \to H_1(K) \to H_0(S^1) \xrightarrow{\Psi} H_0(S^1) \oplus H_0(S^1).
+\]
+The map \( \Phi : \mathbb{Z} \to \mathbb{Z}^2 \) sends the boundary generator to \( (2, -2) \) (the boundary goes around each core circle twice, with opposite orientations due to the Klein bottle's non-orientability). From the exact sequence: \( H_1(K) \cong \mathbb{Z}^2 / \langle (2,-2) \rangle \cong \mathbb{Z} \oplus \mathbb{Z}/2 \). In degree 2: \( H_2(K) = 0 \) since \( K \) is non-orientable (there is no fundamental class over \( \mathbb{Z} \)). This matches the cellular computation.
+</div>
+
 ## Section 4.5: Homology with Coefficients and Universal Coefficients
 
 <div class="definition">
@@ -909,11 +1071,15 @@ In particular, \( H_n(X; \mathbb{Q}) \cong H_n(X) \otimes_{\mathbb{Z}} \mathbb{Q
 
 ---
 
-## Chapter 5: Applications of Homology
+# Chapter 5: Applications of Homology
 
 The abstract machinery of homology groups pays off in a series of striking applications. The Brouwer fixed-point theorem, which holds in all dimensions and resisted purely topological proofs for decades, follows immediately once one knows \( \tilde H_*(D^n) = 0 \) and \( \tilde H_n(S^{n-1}) \neq 0 \). The hairy ball theorem, Borsuk–Ulam, and invariance of domain follow from degree theory. Lefschetz's fixed-point theorem uses the full power of homology with rational coefficients to detect fixed points via a trace formula.
 
 The history of these applications is itself a story of the power of new algebraic tools. Brouwer proved his fixed-point theorem in 1912 using techniques that were essentially homological but had not yet been formalised. Lefschetz developed his fixed-point theorem in the 1920s using intersection theory, and the modern homological proof came later. The Borsuk–Ulam theorem (1933) and the hairy ball theorem were among the first results that could be proved cleanly and in full generality once singular homology was available.
+
+The logical flow of Chapter 5 is: first establish the bridge between homotopy and homology (\( H_1 \cong \pi_1^{\mathrm{ab}} \)), then harvest fixed-point theorems from the non-vanishing of \( H_{n-1}(S^{n-1}) \), then use degree theory to study maps between spheres, and finally deploy local homology groups to prove invariance of domain and the Jordan–Brouwer separation theorem. Each application follows the same template introduced in Section 1.3: assume the topological conclusion fails, construct a map with algebraically impossible properties (a retraction onto a sphere from a contractible space, or an odd-degree map that must have even degree), and derive a contradiction. The elegance of these proofs lies in how a single algebraic number — the degree, or a single Lefschetz number — encodes enough information to force a geometric conclusion.
+
+A particularly striking feature is the contrast with the situation in dimension 1: in Chapter 1 we needed the full covering-space machinery (path lifting, homotopy lifting) to prove \( \pi_1(S^1) \cong \mathbb{Z} \) and then deduce the Brouwer fixed-point theorem in dimension 2. In Chapter 5, the same result in all dimensions follows from one line: \( H_{n-1}(S^{n-1}) \cong \mathbb{Z} \) (computed in Chapter 3) and the functoriality of homology. This compression of proof — many lines of geometric argument replaced by one line of algebraic functoriality — illustrates why the development of homology was such a profound advance.
 
 ## Section 5.1: Abelianisation and \( H_1 \)
 
@@ -935,6 +1101,18 @@ Surjectivity: every element of \( H_1(X) \) is represented by a sum of loops (an
 <strong>Example (Surfaces):</strong> For the genus-\( g \) surface \( \Sigma_g \), we have \( \pi_1(\Sigma_g) = \langle a_1,b_1,\ldots,a_g,b_g \mid \prod [a_i,b_i] = 1 \rangle \). The abelianisation kills the single relation \( \prod [a_i,b_i] = 1 \) (which already becomes trivial in the abelianisation since all commutators vanish), giving \( \pi_1(\Sigma_g)^{\mathrm{ab}} \cong \mathbb{Z}^{2g} \). This matches \( H_1(\Sigma_g) \cong \mathbb{Z}^{2g} \).
 </div>
 
+<div class="example">
+<strong>Example (Figure-Eight \( S^1 \vee S^1 \)):</strong> The figure-eight has \( \pi_1(S^1 \vee S^1) \cong F_2 = \langle a, b \rangle \). The abelianisation is \( F_2^{\mathrm{ab}} = \langle a, b \mid ab = ba \rangle \cong \mathbb{Z}^2 \). By the theorem, \( H_1(S^1 \vee S^1) \cong \mathbb{Z}^2 \). This matches the Mayer–Vietoris computation (Section 4.4b) and can also be seen directly from the cellular chain complex: the figure-eight has one 0-cell and two 1-cells \( a, b \) with \( \partial_1(a) = \partial_1(b) = 0 \) (both endpoints identified), giving \( H_1 = \ker \partial_1 = \mathbb{Z}^2 \).
+</div>
+
+<div class="remark">
+<strong>Remark (Surjectivity of the Hurewicz Map for \( H_1 \)):</strong> The proof that \( \phi : \pi_1(X)^{\mathrm{ab}} \to H_1(X) \) is surjective works as follows. Any class in \( H_1(X) \) is represented by a 1-cycle \( z = \sum n_i \sigma_i \), where each \( \sigma_i : [0,1] \to X \) is a singular 1-simplex (path) and \( \partial z = 0 \) (the boundary cancels). The vanishing boundary condition means the endpoints of the paths cancel: for each vertex \( v \), the total coefficient of \( v \) in \( \partial z \) is zero. By standard combinatorics, any such cycle is a linear combination of <em>loops</em> — concatenations of paths that return to their starting point. Choose a basepoint \( x_0 \) and, for each vertex \( v \), a path \( \gamma_v \) from \( x_0 \) to \( v \). Replace each path \( \sigma_i : v_0 \to v_1 \) by the loop \( \gamma_{v_0} \cdot \sigma_i \cdot \bar\gamma_{v_1} \). The homology class is unchanged (since the extra paths cancel in the cycle). Each such loop is now a loop based at \( x_0 \), hence in the image of \( \pi_1(X, x_0) \to H_1(X) \). Since the boundary map kills the extra paths, surjectivity follows.
+</div>
+
+<div class="remark">
+<strong>Remark (Corollary — \( H_1 \) of Surfaces):</strong> For the genus-\( g \) orientable surface \( \Sigma_g \), the fundamental group \( \pi_1(\Sigma_g) \) has abelianisation \( \mathbb{Z}^{2g} \). By the theorem, \( H_1(\Sigma_g) \cong \mathbb{Z}^{2g} \), a free abelian group on \( 2g \) generators corresponding to the \( 2g \) handle directions. This matches the cellular computation. For the non-orientable surface \( N_k \) (connected sum of \( k \) projective planes), \( \pi_1(N_k)^{\mathrm{ab}} \cong \mathbb{Z}^{k-1} \oplus \mathbb{Z}/2 \), so \( H_1(N_k) \cong \mathbb{Z}^{k-1} \oplus \mathbb{Z}/2 \), where the \( \mathbb{Z}/2 \) torsion detects non-orientability.
+</div>
+
 ## Section 5.2: Brouwer Fixed-Point Theorem (All Dimensions)
 
 <div class="theorem">
@@ -947,6 +1125,18 @@ Surjectivity: every element of \( H_1(X) \) is represented by a sum of loops (an
 r(x) = x + t(x)(x - f(x))
 \]
 for the appropriate \( t(x) > 0 \) such that \( |r(x)| = 1 \). Since \( f(x) \neq x \), this is well-defined and continuous. For \( x \in S^{n-1} \), the ray from \( f(x) \) through \( x \) hits \( S^{n-1} \) at \( x \) first, so \( r|_{S^{n-1}} = \mathrm{id} \). Then \( r \circ i = \mathrm{id}_{S^{n-1}} \) where \( i : S^{n-1} \hookrightarrow D^n \), giving \( r_* \circ i_* = \mathrm{id} \) on \( H_{n-1}(S^{n-1}) \cong \mathbb{Z} \). But \( i_* \) factors through \( H_{n-1}(D^n) = 0 \) (since \( D^n \) is contractible), giving \( r_* \circ i_* = 0 \neq \mathrm{id} \). Contradiction. \( \square \)
+</div>
+
+<div class="remark">
+<strong>Remark (Historical Note on Brouwer):</strong> Luitzen Egbertus Jan Brouwer proved his fixed-point theorem in 1912, before the formalism of singular homology was available. His original proof used what we would now recognise as degree theory for maps of simplicial complexes, carried out in an elaborate combinatorial framework. The clean modern proof — using the fact that \( \tilde H_{n-1}(S^{n-1}) \neq 0 \) while \( \tilde H_{n-1}(D^n) = 0 \) — became available only after Noether's reformulation of Betti numbers as homology groups. Brouwer's theorem resisted elementary proof (i.e., without algebraic topology) for many decades; the first combinatorial proof not using homology (Sperner's lemma approach) appeared in 1928, due to Knaster, Kuratowski, and Mazurkiewicz.
+</div>
+
+<div class="remark">
+<strong>Remark (Geometric Intuition in Dimension 2):</strong> In dimension 2, the retraction argument has a vivid geometric picture. If \( f : D^2 \to D^2 \) had no fixed point, one could draw, at each point \( x \), the unique ray from \( f(x) \) through \( x \) until it hits the boundary circle. This gives a continuous map \( r : D^2 \to S^1 \) that is the identity on \( S^1 \). But a "retraction" of the disk onto its boundary circle is topologically impossible: the boundary circle is a 1-dimensional hole, and you cannot continuously project all of the disk (with no holes) onto just its boundary without "tearing" something. Algebraically, this impossibility is exactly the statement \( H_1(D^2) = 0 \neq \mathbb{Z} = H_1(S^1) \).
+</div>
+
+<div class="remark">
+<strong>Remark (Corollary: \( D^n \not\cong S^{n-1} \)):</strong> The Brouwer fixed-point theorem immediately implies that \( D^n \) is not homeomorphic to \( S^{n-1} \) for any \( n \geq 1 \). The disk has the fixed-point property (every self-map has a fixed point), while the sphere does not: the antipodal map \( A : S^{n-1} \to S^{n-1} \) has no fixed points (since \( A(x) = -x \neq x \) for all \( x \in S^{n-1} \)). Since the fixed-point property is a topological invariant (a homeomorphism maps fixed points to fixed points), the two spaces cannot be homeomorphic. This argument also shows \( S^{n-1} \) is not a retract of \( D^n \) (which was the key step in the proof above).
 </div>
 
 ## Section 5.3: Degree Theory and the Hairy Ball Theorem
@@ -977,6 +1167,30 @@ Since \( |H(x,t)|^2 = \cos^2(\pi t) + \sin^2(\pi t) = 1 \), we have \( H(x,t) \i
 
 <div class="remark">
 <strong>Remark:</strong> The hairy ball theorem shows that one cannot comb a sphere flat without creating a cowlick. For odd spheres \( S^{2k+1} \), a nowhere-vanishing vector field does exist: on \( S^{2k+1} \subset \mathbb{C}^{k+1} \), define \( v(z_1, \ldots, z_{k+1}) = (iz_1, \ldots, iz_{k+1}) \). This is tangent to the sphere and nowhere vanishing. Thus \( S^{2k+1} \) is "parallelisable" in the weakest sense.
+</div>
+
+<div class="theorem">
+<strong>Theorem (Suspension Formula for Degree):</strong> If \( f : S^{n-1} \to S^{n-1} \) is a continuous map, then its suspension \( Sf : S^n \to S^n \) satisfies \( \deg(Sf) = \deg(f) \).
+</div>
+
+<div class="proof">
+<em>Proof.</em> The suspension \( Sf \) is defined by \( Sf(x, t) = (f(x), t) \) on \( S^n \cong S^{n-1} * \{N, S\} \) (the unreduced suspension). On homology, the suspension isomorphism \( \tilde H_n(S^n) \cong \tilde H_{n-1}(S^{n-1}) \) is natural, meaning the square with \( (Sf)_* \) and \( f_* \) commutes. Since \( f_* = \deg(f) \cdot \mathrm{id} \) on \( H_{n-1}(S^{n-1}) \) and \( (Sf)_* = \deg(Sf) \cdot \mathrm{id} \) on \( H_n(S^n) \), naturality gives \( \deg(Sf) = \deg(f) \). \( \square \)
+</div>
+
+<div class="example">
+<strong>Example (Degree of \( z \mapsto z^n \) on \( S^1 \)):</strong> Consider the map \( f_n : S^1 \to S^1 \) given by \( f_n(z) = z^n \) (viewing \( S^1 \subset \mathbb{C} \)). For any regular value \( w \in S^1 \) (all values are regular), the preimage \( f_n^{-1}(w) \) consists of exactly \( n \) points \( \{w^{1/n} e^{2\pi i k/n} : k = 0, \ldots, n-1\} \). At each preimage point, the local orientation is preserved (the map \( z \mapsto z^n \) is orientation-preserving near each \( n \)-th root for \( n > 0 \)), so each preimage contributes \( +1 \) to the degree. By the local degree formula:
+\[
+\deg(f_n) = \sum_{k=0}^{n-1} (+1) = n.
+\]
+For \( n < 0 \), the map \( z \mapsto z^n = \bar z^{|n|} \) reverses orientation, giving \( \deg(f_n) = n \). For \( n = 0 \), \( f_0 \) is constant with degree 0. This confirms the Hurewicz isomorphism \( \pi_1(S^1) \cong H_1(S^1) \cong \mathbb{Z} \), with the generator \( [z \mapsto z] \) having degree 1.
+</div>
+
+<div class="theorem">
+<strong>Theorem (Borsuk Odd Mapping Theorem):</strong> If \( f : S^n \to S^n \) is an odd map (\( f(-x) = -f(x) \) for all \( x \)), then \( \deg(f) \) is odd.
+</div>
+
+<div class="proof">
+<em>Proof sketch.</em> The proof uses \( \mathbb{Z}/2 \)-cohomology. Consider the induced map \( f^* : H^*(S^n; \mathbb{Z}/2) \to H^*(S^n; \mathbb{Z}/2) \). The odd condition means \( f \) descends to a map \( \bar f : \mathbb{RP}^n \to \mathbb{RP}^n \) on the quotient by the antipodal involution. Studying \( \bar f^* \) on \( H^*(\mathbb{RP}^n; \mathbb{Z}/2) \cong \mathbb{Z}/2\left[\alpha\right]/(\alpha^{n+1}) \) forces \( \bar f^*(\alpha) = \alpha \) (the generator cannot map to zero, as then \( \bar f^* \) would be zero on \( H^n \), contradicting the non-vanishing of \( f^*[\iota_n] \)). This implies \( \deg(f) \equiv 1 \pmod{2} \), i.e., \( \deg(f) \) is odd. \( \square \)
 </div>
 
 ## Section 5.3b: Jordan–Brouwer Separation Theorem
@@ -1030,6 +1244,14 @@ From the second row, \( H_0(S^n \setminus S) \) maps injectively to \( \mathbb{Z
 <strong>Remark (Applications of Borsuk–Ulam):</strong> The Borsuk–Ulam theorem has elegant applications. (1) <em>Ham Sandwich Theorem:</em> Given \( n \) measurable "sandwiches" in \( \mathbb{R}^n \), there exists a hyperplane bisecting all of them simultaneously. (2) Every continuous map \( S^2 \to \mathbb{R}^2 \) maps some pair of antipodal points to the same point — so at any instant, there are two antipodal points on the Earth with the same temperature and pressure.
 </div>
 
+<div class="proof">
+<em>Proof of the Ham Sandwich Theorem (using Borsuk–Ulam).</em> Let \( A_1, \ldots, A_n \subseteq \mathbb{R}^n \) be bounded measurable sets. For each unit vector \( u \in S^{n-1} \) and scalar \( t \in \mathbb{R} \), the hyperplane \( \{x : x \cdot u = t\} \) divides \( \mathbb{R}^n \) into two half-spaces. For each \( i \), there is a unique \( t_i(u) \) such that the hyperplane \( \{x \cdot u = t_i(u)\} \) bisects \( A_i \). Define \( f : S^{n-1} \to \mathbb{R}^{n-1} \) by \( f(u) = (t_1(u) - t_1(-u), \ldots, t_{n-1}(u) - t_{n-1}(-u)) \). Then \( f(-u) = -f(u) \) (odd map). By Borsuk–Ulam, there exists \( u^* \in S^{n-1} \) with \( f(u^*) = 0 \), meaning \( t_i(u^*) = t_i(-u^*) \) for \( i = 1, \ldots, n-1 \). Choosing the single bisecting hyperplane for \( A_n \) in direction \( u^* \) simultaneously bisects all \( n \) sets. \( \square \)
+</div>
+
+<div class="remark">
+<strong>Remark (Lusternik–Schnirelmann and Covers of \( S^2 \)):</strong> The Lusternik–Schnirelmann theorem (a consequence of Borsuk–Ulam) states: if \( S^n \) is covered by \( n+1 \) open (or closed) sets \( U_1, \ldots, U_{n+1} \), then at least one \( U_i \) contains a pair of antipodal points \( \{x, -x\} \). For \( n = 2 \): if \( S^2 = U_1 \cup U_2 \cup U_3 \), at least one \( U_i \) contains an antipodal pair. This has applications in combinatorics (Kneser's conjecture, proved by Lovász in 1978 using topology) and in geometry (the width of a convex body). For \( S^1 \): if \( S^1 = U_1 \cup U_2 \) (two open sets), at least one contains an antipodal pair — this is just the Borsuk–Ulam theorem in dimension 1 (any odd function \( S^1 \to \mathbb{R} \) vanishes somewhere).
+</div>
+
 ## Section 5.5: The Lefschetz Fixed-Point Theorem
 
 The Lefschetz fixed-point theorem is the most powerful fixed-point theorem in topology. While the Brouwer theorem says "any map \( D^n \to D^n \) has a fixed point" without giving more information, the Lefschetz theorem provides an algebraic obstruction: if \( L(f) \neq 0 \), then \( f \) has a fixed point, and the computation of \( L(f) \) is a purely algebraic exercise.
@@ -1079,6 +1301,18 @@ Since \( L(A) = 0 \), the theorem does not guarantee a fixed point — and indee
 <em>Proof sketch.</em> For any \( x \in U \), we must show \( f(x) \) is an interior point of \( f(U) \). Choose a small closed ball \( \bar B \subset U \) around \( x \). By excision and the long exact sequence of the pair \( (\mathbb{R}^n, \mathbb{R}^n \setminus \{f(x)\}) \), one shows using the local homology groups \( H_n(\mathbb{R}^n, \mathbb{R}^n \setminus \{y\}) \cong \mathbb{Z} \) that the image of the sphere \( f(\partial \bar B) \) separates \( f(x) \) from the complement of \( f(\bar B) \) in \( \mathbb{R}^n \). By the Jordan–Brouwer separation theorem (proved via homology), \( \mathbb{R}^n \setminus f(\partial \bar B) \) has two components, one of which is bounded and contains \( f(x) \). Hence \( f(x) \in \mathrm{int}(f(\bar B)) \subseteq \mathrm{int}(f(U)) \). \( \square \)
 </div>
 
+<div class="remark">
+<strong>Remark (Local Homology Groups):</strong> The key tool in invariance of domain is the <em>local homology group</em> of a point \( x \in M \) in an \( n \)-manifold:
+\[
+H_k(M, M \setminus \{x\}) \cong H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \cong \tilde H_{k-1}(S^{n-1}) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n, \end{cases}
+\]
+where the first isomorphism uses excision (any small ball around \( x \) looks like \( \mathbb{R}^n \)) and the second uses the long exact sequence of the pair \( (\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \). These local homology groups are topological invariants: if \( f : M \to N \) is a homeomorphism, then \( f_* : H_k(M, M \setminus \{x\}) \to H_k(N, N \setminus \{f(x)\}) \) is an isomorphism. Since the local homology of an \( n \)-manifold point is \( \mathbb{Z} \) in degree \( n \) and 0 otherwise, any homeomorphism between an \( m \)-manifold and an \( n \)-manifold forces \( m = n \). This proves the <em>invariance of dimension</em>: \( \mathbb{R}^m \cong \mathbb{R}^n \) as topological spaces implies \( m = n \).
+</div>
+
+<div class="remark">
+<strong>Remark (Jordan–Brouwer as Corollary):</strong> The Jordan–Brouwer separation theorem (Section 5.3b) is a corollary of invariance of domain: if \( S \subset S^n \) is homeomorphic to \( S^{n-1} \), then \( S \) is an \( (n-1) \)-manifold embedded in \( S^n \). The local homology at each point of \( S \) is \( \mathbb{Z} \) in degree \( n-1 \). The complement \( S^n \setminus S \) has \( H_0 \cong \mathbb{Z}^2 \) (two components) by a Mayer–Vietoris argument using Alexander duality. This abstract argument replaces the concrete geometric intuition of "a closed curve divides the plane," providing a proof that works in all dimensions simultaneously.
+</div>
+
 ## Section 5.7: Classification of Compact Surfaces
 
 <div class="theorem">
@@ -1118,11 +1352,15 @@ For a connected \( T^2 \), \( f_*|_{H_0} = 1 \) (since any continuous map of a c
 
 ---
 
-## Chapter 6: Higher Homotopy Groups
+# Chapter 6: Higher Homotopy Groups
 
 The fundamental group captures 1-dimensional "holes" and loops, but does not see higher-dimensional topology. The \( n \)-sphere \( S^n \) for \( n \geq 2 \) has trivial fundamental group — every loop is contractible — yet it is far from contractible. The missing invariants are the **higher homotopy groups** \( \pi_n(X, x_0) \), introduced by Hurewicz in 1935. These groups measure \( n \)-dimensional "holes" in a way analogous to \( \pi_1 \), but with much richer and less tractable structure.
 
 The computation of homotopy groups of spheres remains one of the central unsolved problems of algebraic topology. While \( \pi_n(S^n) \cong \mathbb{Z} \) is a classical result (Brouwer, degree theory), already \( \pi_3(S^2) \cong \mathbb{Z} \) is surprising: a 3-dimensional sphere wraps non-trivially around a 2-sphere. This was discovered by Hopf in 1931 via the **Hopf fibration** \( S^3 \to S^2 \), the archetypal example of a fibre bundle. The long exact sequence of a fibration is the main computational tool: it reduces the computation of \( \pi_*(S^2) \) to that of \( \pi_*(S^3) \) and \( \pi_*(S^1) \). The interplay of fibrations, homotopy groups, and homology (via Hurewicz) constitutes the deep fabric of this chapter.
+
+Higher homotopy groups were introduced by Witold Hurewicz in two landmark 1935 papers, answering questions left open by Poincaré and Čech. Hurewicz proved the key theorem bearing his name — that in a highly connected space, the first nonvanishing homotopy group equals the first nonvanishing homology group — and used it to compute \( \pi_n(S^n) \cong \mathbb{Z} \) for all \( n \). The non-abelianness of \( \pi_1 \) had been a source of richness in Chapter 2; by contrast, \( \pi_n \) for \( n \geq 2 \) is always abelian (Eckmann–Hilton), making these groups computationally more tractable in principle, yet the groups \( \pi_k(S^n) \) for \( k > n \) exhibit remarkable complexity, with no closed-form pattern known.
+
+The central organising principle of this chapter is the **long exact sequence of a fibration**, which splits the computation of \( \pi_*(E) \) into contributions from the base \( B \) and fibre \( F \). This sequence is the homotopy-theoretic counterpart of the Mayer–Vietoris sequence for homology, but it is generally harder to use because the terms are non-abelian for small dimensions and the maps between them carry more structure than simple homomorphisms. The Hopf fibration is the primary worked example, giving \( \pi_3(S^2) \cong \mathbb{Z} \) in a few lines once \( \pi_3(S^3) \cong \mathbb{Z} \) is known. Eilenberg–MacLane spaces \( K(\pi,n) \) arise as the "simplest" spaces with a single nonzero homotopy group, and the classification of maps into them via cohomology (Section 6.5b) is one of the deepest theorems of the course.
 
 ## Section 6.1: Definition and Basic Properties
 
@@ -1152,6 +1390,30 @@ The identity element is the constant map to \( x_0 \), and the inverse of \( [f]
 <strong>Remark (Contrast with \( \pi_1 \)):</strong> The group \( \pi_1(X) \) can be non-abelian (as we saw: \( \pi_1(S^1 \vee S^1) = F_2 \), \( \pi_1(\Sigma_g) \) for \( g \geq 2 \) is non-abelian). The abelianness of \( \pi_n \) for \( n \geq 2 \) reflects the extra room available in higher dimensions. The Eckmann–Hilton argument is a purely algebraic phenomenon: any two group structures on a set that distribute over each other and share an identity must coincide and be abelian.
 </div>
 
+<div class="remark">
+<strong>Remark (\( \pi_n(S^n) \cong \mathbb{Z} \) for All \( n \)):</strong> By the Hurewicz theorem (Section 6.4), the sphere \( S^n \) is \( (n-1) \)-connected and \( H_n(S^n) \cong \mathbb{Z} \), so the Hurewicz isomorphism gives \( \pi_n(S^n) \cong \mathbb{Z} \). The generator is the identity map \( \mathrm{id}_{S^n} \in \pi_n(S^n) \), corresponding to the degree-1 map. More generally, the degree map \( \deg : \pi_n(S^n) \to \mathbb{Z} \) (sending \( [f] \) to \( \deg(f) \)) is an isomorphism: two maps \( S^n \to S^n \) are homotopic if and only if they have the same degree (a deep result using the Hurewicz theorem and the fact that \( S^n \) is \( (n-1) \)-connected).
+</div>
+
+<div class="remark">
+<strong>Remark (Table of \( \pi_k(S^n) \) for Small Values):</strong> The following table collects known homotopy groups of spheres for small \( k \) and \( n \). Entries marked \( \mathbb{Z} \) or \( \mathbb{Z}/m \) are the group itself; \( 0 \) denotes the trivial group.
+
+| \( \pi_k(S^n) \) | \( n=1 \) | \( n=2 \) | \( n=3 \) | \( n=4 \) |
+|---|---|---|---|---|
+| \( k=1 \) | \( \mathbb{Z} \) | 0 | 0 | 0 |
+| \( k=2 \) | 0 | \( \mathbb{Z} \) | 0 | 0 |
+| \( k=3 \) | 0 | \( \mathbb{Z} \) | \( \mathbb{Z} \) | 0 |
+| \( k=4 \) | 0 | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z} \) |
+| \( k=5 \) | 0 | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) |
+| \( k=6 \) | 0 | \( \mathbb{Z}/12 \) | \( \mathbb{Z}/12 \) | \( \mathbb{Z}/2 \) |
+| \( k=7 \) | 0 | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z} \oplus \mathbb{Z}/12 \) |
+
+Note that \( \pi_k(S^2) \cong \pi_k(S^3) \) for all \( k \geq 3 \) (a consequence of the Hopf fibration, Section 6.3). The stable range \( \pi_{n+k}(S^n) \) for \( k \) fixed and \( n \) large is the stable homotopy group \( \pi_k^{\mathrm{st}} \) (Section 6.6).
+</div>
+
+<div class="remark">
+<strong>Remark (Action of \( \pi_1 \) on \( \pi_n \)):</strong> For \( n \geq 2 \), the group \( \pi_n(X, x_0) \) is not just an abelian group — it is a module over the group ring \( \mathbb{Z}[\pi_1(X, x_0)] \). The action of a loop \( [\gamma] \in \pi_1(X, x_0) \) on \( [f] \in \pi_n(X, x_0) \) is defined by "transporting" the map \( f : S^n \to X \) around the loop \( \gamma \): conjugate \( f \) by a homotopy that drags the basepoint around \( \gamma \) and back. In formulas, \( [\gamma] \cdot [f] = [\gamma \cdot f \cdot \bar\gamma] \) where \( \gamma \cdot f \cdot \bar\gamma \) denotes the composite obtained by attaching \( \gamma \) as a "whisker" at the basepoint. For simply connected spaces \( \pi_1 = 0 \), this action is trivial and \( \pi_n \) is just an abelian group. For non-simply-connected spaces (e.g., \( S^1 \) with \( \pi_1 = \mathbb{Z} \)), the action can be nontrivial: for the torus \( T^2 \), \( \pi_1 \cong \mathbb{Z}^2 \) acts trivially on \( \pi_2(T^2) = 0 \), but for more complex spaces the action is a significant piece of structure.
+</div>
+
 ## Section 6.2: Homotopy Groups of \( S^1 \)
 
 The vanishing of \( \pi_n(S^1) \) for \( n \geq 2 \) is one of the most elegant consequences of covering space theory. It says that the circle, despite being a "nontrivial" 1-dimensional space, looks contractible from the perspective of maps from spheres of dimension \( \geq 2 \). This is because the universal cover \( \mathbb{R} \) is contractible, and any map \( S^n \to S^1 \) with \( n \geq 2 \) must lift to \( \mathbb{R} \) (since \( \pi_n(S^n) \to \pi_n(S^1) \) and \( \pi_1(S^n) = 0 \) for \( n \geq 2 \) implies the lifting criterion is satisfied), and then is null-homotopic in \( \mathbb{R} \).
@@ -1179,6 +1441,21 @@ By exactness, \( \pi_n(S^1) = 0 \).
 0 = \pi_1(\mathbb{R}) \to \pi_1(S^1) \xrightarrow{\partial} \pi_0(\mathbb{Z}) \to \pi_0(\mathbb{R}) = 0.
 \]
 Here \( \pi_0(\mathbb{Z}) = \mathbb{Z} \) (the path components of \( \mathbb{Z} \) are the individual integers). Exactness forces \( \partial : \pi_1(S^1) \xrightarrow{\sim} \mathbb{Z} \) to be an isomorphism, recovering \( \pi_1(S^1) \cong \mathbb{Z} \). \( \square \)
+</div>
+
+<div class="theorem">
+<strong>Theorem (Lifting Criterion for Covering Spaces):</strong> Let \( p : (\tilde X, \tilde x_0) \to (X, x_0) \) be a covering map, and let \( f : (Y, y_0) \to (X, x_0) \) be a continuous map with \( Y \) path-connected and locally path-connected. A lift \( \tilde f : (Y, y_0) \to (\tilde X, \tilde x_0) \) exists if and only if:
+\[
+f_*(\pi_1(Y, y_0)) \subseteq p_*(\pi_1(\tilde X, \tilde x_0)).
+\]
+</div>
+
+<div class="remark">
+<strong>Remark (Maps from \( S^n \) to \( S^1 \) for \( n \geq 2 \) Lift to \( \mathbb{R} \)):</strong> The lifting criterion gives an immediate proof that \( \pi_n(S^1) = 0 \) for \( n \geq 2 \). Any map \( f : S^n \to S^1 \) satisfies the lifting criterion for the universal cover \( p : \mathbb{R} \to S^1 \): we need \( f_*(\pi_1(S^n)) \subseteq p_*(\pi_1(\mathbb{R})) = \{0\} \), and this holds since \( \pi_1(S^n) = 0 \) for \( n \geq 2 \) (every loop in \( S^n \) is contractible, as \( S^n \) minus a point is homeomorphic to \( \mathbb{R}^n \), which is simply connected). So every \( f : S^n \to S^1 \) lifts to a map \( \tilde f : S^n \to \mathbb{R} \). Since \( \mathbb{R} \) is contractible, \( \tilde f \) is null-homotopic, and projecting via \( p \) gives \( f = p \circ \tilde f \simeq p \circ c = c_{x_0} \) (constant). Hence every map \( S^n \to S^1 \) is null-homotopic, i.e., \( \pi_n(S^1) = 0 \).
+</div>
+
+<div class="remark">
+<strong>Remark (\( K(\pi, 1) \) Spaces Have \( \pi_n = 0 \) for \( n \geq 2 \)):</strong> More generally, for any \( K(\pi,1) \) space \( X \) (a space with \( \pi_1(X) = \pi \) and universal cover \( \tilde X \) contractible), the same argument shows \( \pi_n(X) = 0 \) for all \( n \geq 2 \). The universal cover is contractible iff all higher homotopy groups of \( \tilde X \) vanish, and since \( \pi_n(\tilde X) \cong \pi_n(X) \) for \( n \geq 2 \) (covering maps are local homeomorphisms), we get \( \pi_n(X) = 0 \). Examples of \( K(\pi,1) \) spaces include: \( S^1 = K(\mathbb{Z},1) \), \( \mathbb{RP}^\infty = K(\mathbb{Z}/2, 1) \), closed hyperbolic manifolds \( K(\pi_1(M), 1) \) (since their universal cover is \( \mathbb{H}^n \cong \mathbb{R}^n \)), and graphs \( K(F_k, 1) = \bigvee^k S^1 \). The homotopy type of a \( K(\pi,1) \) is completely determined by \( \pi \), making such spaces the "classifying spaces" for the group \( \pi \).
 </div>
 
 ## Section 6.3: The Hopf Fibration and \( \pi_3(S^2) \)
@@ -1244,8 +1521,20 @@ The proof of the Hurewicz theorem is by induction on \( n \), using the long exa
 <strong>Theorem (Hurewicz):</strong> If \( X \) is \( (n-1) \)-connected (i.e., path-connected and \( \pi_k(X) = 0 \) for all \( 1 \leq k \leq n-1 \)) with \( n \geq 2 \), then \( H_k(X) = 0 \) for \( 1 \leq k \leq n-1 \), and the Hurewicz homomorphism \( h_n : \pi_n(X) \xrightarrow{\sim} H_n(X) \) is an isomorphism.
 </div>
 
+<div class="theorem">
+<strong>Theorem (Relative Hurewicz):</strong> Let \( (X, A) \) be a pair with \( A \) and \( X \) path-connected, and suppose the inclusion \( A \hookrightarrow X \) induces isomorphisms \( \pi_k(A) \xrightarrow{\sim} \pi_k(X) \) for all \( k < n \) (i.e., the pair is \( (n-1) \)-connected). Then \( H_k(X, A) = 0 \) for \( k < n \), and the Hurewicz map \( \pi_n(X, A) \to H_n(X, A) \) is an isomorphism.
+</div>
+
 <div class="remark">
 <strong>Remark (Relative Hurewicz and Whitehead):</strong> The relative Hurewicz theorem states: if \( (X,A) \) is \( (n-1) \)-connected (with \( A, X \) path-connected, \( A \hookrightarrow X \) inducing isomorphisms on \( \pi_k \) for \( k < n \)), then \( H_k(X,A) = 0 \) for \( k < n \) and \( \pi_n(X,A) \to H_n(X,A) \) is an isomorphism. This is the key technical ingredient in the proof of Whitehead's theorem, connecting the homotopy and homological perspectives. The Hurewicz theorem is the "bridge" from homotopy to homology, and its applications permeate modern homotopy theory.
+</div>
+
+<div class="example">
+<strong>Example (\( \pi_n(S^n) \cong \mathbb{Z} \) via Hurewicz):</strong> The sphere \( S^n \) is \( (n-1) \)-connected: the sphere minus a point is homeomorphic to \( \mathbb{R}^n \), so any map from \( S^k \) with \( k < n \) can be perturbed to miss a point (by general position, since \( k < n \)) and hence is contractible in \( \mathbb{R}^n \). By the Hurewicz theorem (absolute version), \( \pi_n(S^n) \cong H_n(S^n) \cong \mathbb{Z} \). The generator corresponds to the identity map \( \mathrm{id}_{S^n} \), with Hurewicz image the fundamental class \( [S^n] \in H_n(S^n) \). The integer \( \deg(f) \) for a map \( f : S^n \to S^n \) is precisely the image \( h_n([f]) \in \mathbb{Z} \) of its homotopy class under the Hurewicz isomorphism.
+</div>
+
+<div class="remark">
+<strong>Remark (Corollary: Acyclic Simply-Connected Spaces are Contractible):</strong> If \( X \) is a simply connected CW complex with \( H_n(X; \mathbb{Z}) = 0 \) for all \( n \geq 1 \), then \( X \) is contractible. Proof: since \( X \) is simply connected, \( \pi_1 = 0 \). By Hurewicz, the first nonvanishing homotopy group equals the first nonvanishing homology group. But all homology groups vanish, so by induction (applying Hurewicz at each level) all \( \pi_n = 0 \). By Whitehead's theorem (Section 6.5), a CW complex with all \( \pi_n = 0 \) is contractible. This corollary is a standard tool for recognising contractible spaces without geometric intuition.
 </div>
 
 ## Section 6.5: Whitehead's Theorem
@@ -1267,8 +1556,18 @@ Whitehead's theorem has a useful corollary: a CW complex is contractible if and 
 3. The resulting homotopy inverse \( g : Y \to X \) is constructed explicitly. \( \square \)
 </div>
 
+<div class="theorem">
+<strong>Theorem (Cellular Approximation):</strong> Any continuous map \( f : X \to Y \) between CW complexes is homotopic to a cellular map (a map sending \( X^n \) to \( Y^n \) for all \( n \)).
+</div>
+
+<div class="remark">
+<strong>Remark (Whitehead's Theorem via Cellular Approximation):</strong> Cellular approximation is used in the proof of Whitehead's theorem as follows. Given a weak homotopy equivalence \( f : X \to Y \) between connected CW complexes, replace \( f \) by a cellular map (by cellular approximation). One then shows by induction on skeleta that \( f \) can be made into a homotopy equivalence skeleton by skeleton: the induction step at the \( n \)-skeleton uses the fact that \( f_* : \pi_n(X) \to \pi_n(Y) \) is an isomorphism to extend a partial homotopy inverse across the new \( n \)-cells. The relative Hurewicz theorem provides the algebraic input at each step.
+</div>
+
 <div class="remark">
 <strong>Remark (CW Hypothesis is Essential):</strong> Whitehead's theorem fails for general topological spaces. The Warsaw circle (the closure of the graph of \( \sin(1/x) \) for \( x > 0 \), completed by a vertical arc) has trivial homotopy groups but is not contractible. The CW complex hypothesis ensures enough "room" to build the homotopy inverse. This is one reason CW complexes are the natural setting for modern homotopy theory: they are simultaneously flexible enough to model all weak homotopy types and rigid enough for Whitehead's theorem to provide algebraic control.
+
+The distinction between a <em>weak homotopy equivalence</em> (isomorphism on all \( \pi_n \)) and a <em>homotopy equivalence</em> (having a homotopy inverse) is important for non-CW spaces. Every CW complex is weakly homotopy equivalent to a CW complex (by CW approximation: given any space \( X \), one can build a CW complex \( X_{\mathrm{CW}} \) and a weak equivalence \( X_{\mathrm{CW}} \to X \)). Whitehead's theorem then says that on the CW-approximation, weak equivalence upgrades to genuine equivalence. In practice, most spaces of geometric interest are already CW complexes (or homotopy equivalent to one), making this distinction moot for computations.
 </div>
 
 ## Section 6.5b: Eilenberg–MacLane Spaces
@@ -1300,7 +1599,19 @@ where \( [X, K(G,n)] \) denotes the set of homotopy classes of maps from \( X \)
 </div>
 
 <div class="remark">
-<strong>Remark (Significance):</strong> The representability theorem has profound consequences. It means that any natural transformation between cohomology theories arises from a map between Eilenberg–MacLane spaces. This is the foundation of the theory of **cohomology operations** (Steenrod squares, Steenrod powers), which provide additional algebraic structure on \( H^*(X;\mathbb{Z}/p) \) beyond the cup product. The Steenrod algebra is the algebra of all natural cohomology operations, and understanding it is one of the central problems of homotopy theory. For the purposes of this course, the representability theorem explains why \( K(\mathbb{Z},2) = \mathbb{CP}^\infty \) plays the role of a "classifying space" for complex line bundles, with \( H^2(X;\mathbb{Z}) \cong [X, \mathbb{CP}^\infty] \) classifying line bundles over \( X \).
+<strong>Remark (Significance):</strong> The representability theorem has profound consequences. It means that any natural transformation between cohomology theories arises from a map between Eilenberg–MacLane spaces. This is the foundation of the theory of <strong>cohomology operations</strong> (Steenrod squares, Steenrod powers), which provide additional algebraic structure on \( H^*(X;\mathbb{Z}/p) \) beyond the cup product. The Steenrod algebra is the algebra of all natural cohomology operations, and understanding it is one of the central problems of homotopy theory. For the purposes of this course, the representability theorem explains why \( K(\mathbb{Z},2) = \mathbb{CP}^\infty \) plays the role of a "classifying space" for complex line bundles, with \( H^2(X;\mathbb{Z}) \cong [X, \mathbb{CP}^\infty] \) classifying line bundles over \( X \).
+</div>
+
+<div class="remark">
+<strong>Remark (Existence of \( K(\pi,n) \) via Killing Homotopy Groups):</strong> For any abelian group \( \pi \) and \( n \geq 1 \), one constructs \( K(\pi,n) \) by a two-step process. First, build a space \( X_n \) with \( \pi_n(X_n) = \pi \) and \( \pi_k(X_n) = 0 \) for \( k < n \): take a wedge of \( n \)-spheres indexed by generators of \( \pi \), then attach \( (n+1) \)-cells to impose the relations in \( \pi \). Second, kill all higher homotopy groups \( \pi_k \) for \( k > n \): for each \( k > n \), for each generator \( [f] \) of \( \pi_k(X_n) \), attach a \( (k+1) \)-cell via \( f \). This does not change \( \pi_j \) for \( j \leq k \) (attaching cells of dimension \( \geq k+1 \) does not affect \( \pi_j \) for \( j \leq k \) by cellular approximation). The resulting direct limit (after countably many such steps) is a \( K(\pi,n) \). It is a CW complex with infinitely many cells in general.
+</div>
+
+<div class="remark">
+<strong>Remark (Uniqueness of \( K(\pi,n) \)):</strong> The Eilenberg–MacLane space \( K(\pi,n) \) is unique up to homotopy equivalence. If \( X \) and \( Y \) both have \( \pi_n = \pi \) and all other homotopy groups zero, then by Whitehead's theorem (applied to a cellular approximation of the natural map \( X \to K(\pi,n) \) constructed using the representability theorem), \( X \simeq Y \simeq K(\pi,n) \). This uniqueness means that \( K(\pi,n) \) is a homotopy-theoretic invariant of \( (\pi, n) \), not depending on the choice of construction.
+</div>
+
+<div class="example">
+<strong>Example (\( K(\mathbb{Z}/n, 1) \) as a Lens Space):</strong> For cyclic groups \( \mathbb{Z}/n \), the Eilenberg–MacLane space \( K(\mathbb{Z}/n, 1) \) is the <em>lens space</em> \( L(n,1) \), defined as the quotient \( S^\infty / (\mathbb{Z}/n) \) where \( \mathbb{Z}/n \) acts on \( S^\infty \subset \mathbb{C}^\infty \) by \( \zeta \cdot (z_0, z_1, \ldots) = (\zeta z_0, \zeta z_1, \ldots) \) with \( \zeta = e^{2\pi i/n} \). The finite-dimensional lens space \( L(n,1) = S^{2m+1}/(\mathbb{Z}/n) \) (using only the first \( m+1 \) coordinates) serves as a finite approximation. The infinite lens space has \( \pi_1 = \mathbb{Z}/n \) and universal cover \( S^\infty \), which is contractible (it is the direct limit of \( S^{2m+1} \) which are \( (2m) \)-connected). So \( L(\infty, 1) = S^\infty/(\mathbb{Z}/n) = K(\mathbb{Z}/n, 1) \). For \( n = 2 \): \( K(\mathbb{Z}/2, 1) = \mathbb{RP}^\infty \), consistent with the example in Section 6.5b.
 </div>
 
 ## Section 6.6: Stable Homotopy Groups and the Freudenthal Theorem
@@ -1354,11 +1665,15 @@ The Hurewicz and Whitehead theorems provide the strongest bridges: for highly co
 
 ---
 
-## Chapter 7: Cohomology — An Introduction
+# Chapter 7: Cohomology — An Introduction
 
 The dual perspective to homology is cohomology. While homology assigns to each space a sequence of abelian groups \( H_n(X) \) measuring \( n \)-dimensional "holes," cohomology assigns groups \( H^n(X) \) that measure \( n \)-dimensional "cocycles" — functions on chains. The switch from homology to cohomology is algebraically analogous to the switch from a vector space to its dual, but the topological content is different and often richer: cohomology admits a **cup product** making \( H^*(X) = \bigoplus_n H^n(X) \) into a graded ring, not just a graded abelian group. This ring structure distinguishes spaces that homology cannot.
 
 Historically, cohomology was introduced in the 1930s by Alexander and Čech, motivated by duality theorems (Poincaré duality, Alexander duality) connecting the homology and cohomology of manifolds and their complements. The cup product was formalised by Kolmogorov and Alexander in 1936, and the full structure of the cohomology ring became a central tool with the work of Cartan, Serre, and Steenrod in the 1950s. The cohomology ring is strictly more powerful than homology: for instance, \( S^2 \times S^4 \) and \( \mathbb{CP}^3 \) have the same homology groups (\( \mathbb{Z} \) in degrees 0, 2, 4, 6) but different cohomology rings (the former has no nonzero cup product \( H^2 \otimes H^2 \to H^4 \), the latter does).
+
+The passage from homology to cohomology can be understood as a dualisation: instead of measuring chains (formal sums of simplices) and their boundaries, cohomology measures cochains (functions assigning a coefficient to each simplex) and their coboundaries. This dualisation has a striking consequence — cohomology is **contravariant**: a map \( f : X \to Y \) induces \( f^* : H^*(Y) \to H^*(X) \) going backwards. This contravariance is not a defect but a feature: it means that cohomology classes on \( Y \) can be "pulled back" to \( X \) along \( f \), making cohomology the natural home for characteristic classes, obstruction theory, and the representability theorem (\( H^n(X;G) \cong [X, K(G,n)] \)). The cup product, defined at the cochain level by the front-back face formula, passes to cohomology and makes \( H^*(X;R) \) into a graded ring — a structure with no natural homology counterpart.
+
+The chapter is organised around three key ideas. First, Section 7.1 introduces cochain complexes and cohomology groups, relating them to homology via the Universal Coefficient Theorem. Second, Section 7.2 introduces the cup product and computes the cohomology rings of tori and projective spaces, showing how the ring structure distinguishes spaces. Third, Section 7.3 proves Poincaré duality for closed oriented manifolds, using the cap product to identify homology and cohomology in complementary degrees. Together these sections reveal cohomology as the richer, more structured cousin of homology — and the natural home for the global invariants (intersection forms, characteristic classes, Euler classes) that govern manifold topology.
 
 ## Section 7.1: Cochain Complexes and Cohomology
 
@@ -1387,6 +1702,26 @@ For \( G = \mathbb{Z} \), \( H^n(X;\mathbb{Z}) \cong \mathrm{Hom}(H_n(X),\mathbb
 <li>\( H^n(\mathbb{CP}^k;\mathbb{Z}) = \mathbb{Z} \) for \( n \) even with \( 0 \leq n \leq 2k \); \( 0 \) otherwise.</li>
 </ul>
 Note that \( H^1(\mathbb{RP}^2;\mathbb{Z}) = 0 \) while \( H_1(\mathbb{RP}^2;\mathbb{Z}) = \mathbb{Z}/2 \): the UCT gives \( H^1 = \mathrm{Hom}(\mathbb{Z}/2, \mathbb{Z}) \oplus \mathrm{Ext}^1(\mathbb{Z},\mathbb{Z}) = 0 \oplus 0 = 0 \), and \( H^2 = \mathrm{Hom}(0,\mathbb{Z}) \oplus \mathrm{Ext}^1(\mathbb{Z}/2,\mathbb{Z}) = 0 \oplus \mathbb{Z}/2 = \mathbb{Z}/2 \). The torsion moves up one degree in cohomology.
+</div>
+
+<div class="remark">
+<strong>Remark (Why Dualise? Cohomology Has Cup Products):</strong> The primary motivation for passing from homology to cohomology is the existence of the cup product: cohomology \( H^*(X; R) \) is a graded ring, while homology is only a graded abelian group. The cup product is defined at the cochain level and passes to cohomology because of the coboundary formula; it makes the cohomology of a space into a graded-commutative ring. This ring structure carries information that homology groups alone cannot: for instance, \( H^*(\mathbb{CP}^2; \mathbb{Z}) \cong \mathbb{Z}[\alpha]/(\alpha^3) \) with \( \alpha \in H^2 \) (so \( \alpha^2 \neq 0 \in H^4 \)) while \( H^*(S^2 \vee S^4; \mathbb{Z}) \) has the same homology groups but \( \alpha \cup \alpha = 0 \) (since the cup product of two \( H^2 \) classes in a wedge is zero). Thus the cohomology ring distinguishes \( \mathbb{CP}^2 \) from \( S^2 \vee S^4 \).
+</div>
+
+<div class="remark">
+<strong>Remark (Contravariance and Functoriality):</strong> A continuous map \( f : X \to Y \) induces a cochain map \( f^\# : C^*(Y; G) \to C^*(X; G) \) by precomposition: \( (f^\# \phi)(\sigma) = \phi(f \circ \sigma) \) for a singular simplex \( \sigma : \Delta^n \to X \). This cochain map descends to a ring homomorphism \( f^* : H^*(Y; G) \to H^*(X; G) \) on cohomology. The ring homomorphism property means \( f^*(\alpha \cup \beta) = f^*(\alpha) \cup f^*(\beta) \), which is an additional constraint not available for homology. The contravariance (arrows reverse) reflects the fact that a map \( X \to Y \) allows one to "pull back" functions on \( Y \) to functions on \( X \), not the other way around.
+</div>
+
+<div class="remark">
+<strong>Remark (Kronecker Pairing):</strong> The natural pairing between cohomology and homology is the <em>Kronecker pairing</em>:
+\[
+\langle \cdot, \cdot \rangle : H^n(X; G) \otimes H_n(X; \mathbb{Z}) \to G, \quad \langle [\phi], [\sigma] \rangle = \phi(\sigma),
+\]
+where \( \phi \in C^n(X; G) \) is a cocycle and \( \sigma \in C_n(X) \) is a cycle. This is well-defined: if \( \phi' = \phi + \delta \psi \) is cohomologous, then \( \phi'(\sigma) = \phi(\sigma) + \delta\psi(\sigma) = \phi(\sigma) + \psi(\partial \sigma) = \phi(\sigma) \) (since \( \sigma \) is a cycle, \( \partial \sigma = 0 \)). Similarly, if \( \sigma' = \sigma + \partial \tau \), then \( \phi(\sigma') = \phi(\sigma) + \phi(\partial \tau) = \phi(\sigma) + \delta\phi(\tau) = \phi(\sigma) \) (since \( \phi \) is a cocycle, \( \delta\phi = 0 \)). The Universal Coefficient Theorem gives: \( H^n(X; \mathbb{Z}) / \mathrm{torsion} \cong \mathrm{Hom}(H_n(X), \mathbb{Z}) \), so over \( \mathbb{Q} \), the Kronecker pairing is a perfect duality \( H^n(X;\mathbb{Q}) \otimes H_n(X;\mathbb{Q}) \to \mathbb{Q} \).
+</div>
+
+<div class="example">
+<strong>Example (Cocycle Counting Winding on \( S^1 \)):</strong> On \( S^1 \), the fundamental 1-cocycle is the cochain \( \phi \in C^1(S^1; \mathbb{Z}) \) that counts the "signed winding" of a singular 1-simplex (path) around the circle. Precisely, for a path \( \sigma : [0,1] \to S^1 \), define \( \phi(\sigma) \) to be the winding number: the integer \( \tilde\sigma(1) - \tilde\sigma(0) \in \mathbb{Z} \) where \( \tilde\sigma \) is the unique lift of \( \sigma \) to \( \mathbb{R} \). This is a cocycle (\( \delta\phi = 0 \)) because for any 2-simplex \( \tau : \Delta^2 \to S^1 \), the boundary \( \partial \tau = \tau|_{[v_1,v_2]} - \tau|_{[v_0,v_2]} + \tau|_{[v_0,v_1]} \) has \( \phi(\partial \tau) = 0 \) (the winding numbers telescope). The class \( [\phi] \in H^1(S^1; \mathbb{Z}) \cong \mathbb{Z} \) is the generator, paired with the fundamental class \( [S^1] \in H_1(S^1) \cong \mathbb{Z} \) by \( \langle [\phi], [S^1] \rangle = 1 \).
 </div>
 
 ## Section 7.2: The Cup Product
@@ -1443,6 +1778,34 @@ The generator of \( H^1_{\mathrm{dR}}(S^1) \) is the form \( d\theta / (2\pi) \)
 
 <div class="remark">
 <strong>Remark (de Rham vs. Singular Cohomology):</strong> De Rham cohomology has two advantages over singular cohomology: it is computable using calculus (via integration), and it comes with additional structure from the wedge product of forms (which corresponds to the cup product under the de Rham isomorphism). Its disadvantage is that it only works for smooth manifolds and only gives real (not integer) cohomology, so it loses torsion information. For many geometric applications (characteristic classes, index theory), the smooth structure is available and the de Rham perspective is most natural.
+</div>
+
+<div class="theorem">
+<strong>Theorem (Poincaré Lemma):</strong> For all \( k \geq 1 \), every closed \( k \)-form on \( \mathbb{R}^n \) is exact: \( H^k_{\mathrm{dR}}(\mathbb{R}^n) = 0 \). Equivalently, \( H^0_{\mathrm{dR}}(\mathbb{R}^n) = \mathbb{R} \) (constants) and \( H^k_{\mathrm{dR}}(\mathbb{R}^n) = 0 \) for \( k \geq 1 \).
+</div>
+
+<div class="proof">
+<em>Proof.</em> The key is that \( \mathbb{R}^n \) is contractible. The homotopy \( H : \mathbb{R}^n \times [0,1] \to \mathbb{R}^n \), \( H(x,t) = tx \), from the identity to the constant map at 0, induces a chain homotopy \( K : \Omega^k(\mathbb{R}^n) \to \Omega^{k-1}(\mathbb{R}^n) \) at the level of differential forms, given by the formula:
+\[
+(K\omega)(x) = \int_0^1 t^{k-1} i_{\partial/\partial t} \omega(tx) \, dt,
+\]
+where \( i_{\partial/\partial t} \) denotes interior multiplication (contraction with the vector field \( \partial/\partial t \)). One verifies \( d(K\omega) + K(d\omega) = \omega - c_0^*\omega \) where \( c_0 : \mathbb{R}^n \to \{0\} \) is the constant map. For a closed form \( \omega \) (\( d\omega = 0 \)) with \( k \geq 1 \), this gives \( d(K\omega) = \omega \), so \( \omega \) is exact. \( \square \)
+</div>
+
+<div class="example">
+<strong>Example (De Rham Cohomology of \( T^2 \)):</strong> The torus \( T^2 = \mathbb{R}^2 / \mathbb{Z}^2 \) has coordinates \( (\theta_1, \theta_2) \in [0,1]^2 / \partial \). Its de Rham cohomology, computed by the de Rham theorem and the known cohomology of \( T^2 \), is:
+\[
+H^0_{\mathrm{dR}}(T^2) = \mathbb{R}, \quad H^1_{\mathrm{dR}}(T^2) = \mathbb{R}^2, \quad H^2_{\mathrm{dR}}(T^2) = \mathbb{R}.
+\]
+The generators are: \( H^0 \) generated by the constant function \( 1 \); \( H^1 \) generated by the closed 1-forms \( d\theta_1 \) and \( d\theta_2 \) (closed since \( d^2 = 0 \), not exact since their periods around the respective loops are 1 and not 0); \( H^2 \) generated by the volume form \( d\theta_1 \wedge d\theta_2 \). These classes correspond under the de Rham theorem \( H^k_{\mathrm{dR}} \cong H^k(T^2; \mathbb{R}) \) to the singular cohomology generators we computed algebraically.
+</div>
+
+<div class="theorem">
+<strong>Theorem (De Rham Isomorphism):</strong> For a smooth manifold \( M \), the integration pairing \( \int : H^k_{\mathrm{dR}}(M) \to H^k(M; \mathbb{R}) \) defined by \( [\omega] \mapsto \left( [\sigma] \mapsto \int_\sigma \omega \right) \) is an isomorphism of \( \mathbb{R} \)-vector spaces.
+</div>
+
+<div class="remark">
+<strong>Remark (Integration as the Pairing):</strong> The de Rham isomorphism sends a closed \( k \)-form \( \omega \) to the singular cohomology class that evaluates a \( k \)-cycle \( \sigma \) by integrating \( \omega \) over \( \sigma \). The fact that this is well-defined (independent of the representative cycle and the representative form) follows from Stokes' theorem: if \( \omega \) is exact (\( \omega = d\eta \)), then \( \int_\sigma \omega = \int_\sigma d\eta = \int_{\partial \sigma} \eta = 0 \) for any cycle \( \sigma \) (since \( \partial \sigma = 0 \)). Conversely, if \( \sigma = \partial \tau \) is a boundary, then \( \int_\sigma \omega = \int_{\partial \tau} \omega = \int_\tau d\omega = 0 \) for any closed form \( \omega \) (\( d\omega = 0 \)). The Stokes theorem is thus the dual of the identity \( \partial^2 = 0 \), and the de Rham theorem is the statement that these two dualities give isomorphic cohomology theories.
 </div>
 
 ## Section 7.3: Poincaré Duality
@@ -1531,6 +1894,28 @@ h_n : \pi_n(X) \xrightarrow{\sim} H_n(X).
 \]
 
 Each of these sequences encodes a fundamental relationship between algebraic invariants. The long exact sequence of a pair measures the "relative" contribution of a subspace; Mayer–Vietoris decomposes a space into simpler pieces; the fibration sequence relates the topology of a total space to that of its base and fibre; and the Hurewicz isomorphism connects the homotopy-theoretic and homological perspectives on connectivity. Together they constitute the computational spine of algebraic topology: every computation in this course reduces to reading off one of these sequences, computing its terms, and deducing the unknown groups from exactness.
+
+**Gysin sequence (for sphere bundles):** Let \( S^{n-1} \hookrightarrow E \xrightarrow{\pi} B \) be a sphere bundle (a fibre bundle with fibre \( S^{n-1} \)) over a compact oriented manifold \( B \). The **Gysin sequence** is the long exact sequence in cohomology:
+\[
+\cdots \to H^k(E) \xrightarrow{\pi^*} H^{k-n}(B) \xrightarrow{\cup e} H^k(B) \xrightarrow{\pi_!} H^k(E) \to \cdots
+\]
+where \( e \in H^n(B) \) is the **Euler class** of the bundle and \( \pi_! \) is the Gysin (integration along fibres) map. The Gysin sequence is derived from the Thom isomorphism \( H^k(E, E_0) \cong H^{k-n}(B) \) (where \( E_0 \) is the complement of the zero section) combined with the long exact sequence of the pair \( (E, E_0) \). It is used to compute the cohomology of projective bundles, sphere bundles, and, in particular, to derive relations in the cohomology ring of Grassmannians.
+
+<div class="remark">
+<strong>Remark (Serre Spectral Sequence):</strong> The Serre spectral sequence is a vast generalisation of both the Mayer–Vietoris sequence and the Gysin sequence. Given a fibration \( F \to E \to B \) (over a simply connected base, for simplicity), it provides a spectral sequence \( E_2^{p,q} = H^p(B; H^q(F)) \) converging to \( H^{p+q}(E) \). The \( E_2 \)-page is the cohomology of the base with coefficients in the cohomology of the fibre; successive differentials \( d_r : E_r^{p,q} \to E_r^{p+r, q-r+1} \) encode how the fibration "twists" the fibre cohomology over the base. The Mayer–Vietoris sequence arises as the special case of a fibration over \( S^1 \) (a mapping torus fibration), where the spectral sequence degenerates at \( E_2 \). The Serre spectral sequence was developed by Jean-Pierre Serre in 1951 in his thesis on the homotopy groups of spheres, and remains one of the most powerful computational tools in algebraic topology.
+</div>
+
+**Summary table of key exact sequences:**
+
+| Sequence | Input data | Output | Primary use |
+|---|---|---|---|
+| Long exact of pair | Pair \( (X,A) \) | Sequence relating \( H_*(A), H_*(X), H_*(X,A) \) | Relative homology, computing \( H_*(X/A) \) |
+| Mayer–Vietoris | Cover \( X = A \cup B \) | Sequence relating \( H_*(A \cap B), H_*(A), H_*(B), H_*(X) \) | Cutting into simpler pieces |
+| Long exact of fibration | Fibration \( F \to E \to B \) | Sequence relating \( \pi_*(F), \pi_*(E), \pi_*(B) \) | Computing homotopy groups |
+| Hurewicz isomorphism | \( (n-1) \)-connected \( X \) | \( \pi_n(X) \cong H_n(X) \) | Connecting \( \pi \) and \( H \) |
+| UCT (homology) | Space \( X \), group \( G \) | Short exact \( H_n \otimes G \to H_n(X;G) \to \mathrm{Tor}(H_{n-1},G) \) | Changing coefficients |
+| UCT (cohomology) | Space \( X \), group \( G \) | Short exact \( \mathrm{Ext}(H_{n-1},G) \to H^n(X;G) \to \mathrm{Hom}(H_n,G) \) | Cohomology from homology |
+| Gysin sequence | Sphere bundle \( S^{n-1} \to E \to B \) | Sequence with Euler class action | Characteristic classes |
 
 ---
 
@@ -1627,3 +2012,48 @@ Each of these sequences encodes a fundamental relationship between algebraic inv
 **Weak homotopy equivalence** — A map inducing isomorphisms on all homotopy groups; a homotopy equivalence between CW complexes by Whitehead's theorem.
 
 **Winding number** — The degree of a loop in \( S^1 \); gives the isomorphism \( \pi_1(S^1) \cong \mathbb{Z} \).
+
+---
+
+## Appendix C: Common Computations at a Glance
+
+The following summary collects the most frequently computed homology and homotopy groups. All homology is with \( \mathbb{Z} \) coefficients unless noted.
+
+**Homology of standard spaces:**
+
+| Space | \( H_0 \) | \( H_1 \) | \( H_2 \) | \( H_n \) (general) |
+|---|---|---|---|---|
+| Point \( * \) | \( \mathbb{Z} \) | 0 | 0 | 0 for \( n \geq 1 \) |
+| \( S^k \) | \( \mathbb{Z} \) | \( \mathbb{Z} \) if \( k=1 \) | \( \mathbb{Z} \) if \( k=2 \) | \( \mathbb{Z} \) if \( n=k \); 0 if \( 0 < n \neq k \) |
+| \( D^k \) | \( \mathbb{Z} \) | 0 | 0 | 0 for \( n \geq 1 \) (contractible) |
+| \( T^2 \) | \( \mathbb{Z} \) | \( \mathbb{Z}^2 \) | \( \mathbb{Z} \) | 0 for \( n \geq 3 \) |
+| \( \Sigma_g \) | \( \mathbb{Z} \) | \( \mathbb{Z}^{2g} \) | \( \mathbb{Z} \) | 0 for \( n \geq 3 \) |
+| \( \mathbb{RP}^2 \) | \( \mathbb{Z} \) | \( \mathbb{Z}/2 \) | 0 | 0 for \( n \geq 3 \) |
+| \( \mathbb{CP}^n \) | \( \mathbb{Z} \) | 0 | \( \mathbb{Z} \) | \( \mathbb{Z} \) if \( n = 2k \leq 2n \); 0 else |
+| \( K \) (Klein) | \( \mathbb{Z} \) | \( \mathbb{Z} \oplus \mathbb{Z}/2 \) | 0 | 0 for \( n \geq 3 \) |
+
+**Homotopy groups of spheres (low range):**
+
+| | \( \pi_1 \) | \( \pi_2 \) | \( \pi_3 \) | \( \pi_4 \) | \( \pi_5 \) |
+|---|---|---|---|---|---|
+| \( S^1 \) | \( \mathbb{Z} \) | 0 | 0 | 0 | 0 |
+| \( S^2 \) | 0 | \( \mathbb{Z} \) | \( \mathbb{Z} \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) |
+| \( S^3 \) | 0 | 0 | \( \mathbb{Z} \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) |
+| \( S^n \) (\( n \geq 4 \)) | 0 | 0 | 0 | \( \mathbb{Z} \) | \( \mathbb{Z}/2 \) |
+
+Note: \( \pi_k(S^2) \cong \pi_k(S^3) \) for all \( k \geq 3 \) by the Hopf fibration long exact sequence.
+
+**Fundamental groups and abelianisations:**
+
+| Space | \( \pi_1 \) | \( \pi_1^{\mathrm{ab}} = H_1 \) |
+|---|---|---|
+| \( S^1 \) | \( \mathbb{Z} \) | \( \mathbb{Z} \) |
+| \( T^2 \) | \( \mathbb{Z}^2 \) | \( \mathbb{Z}^2 \) |
+| \( \Sigma_g \) | \( \langle a_i,b_i \mid \prod[a_i,b_i] \rangle \) | \( \mathbb{Z}^{2g} \) |
+| \( \mathbb{RP}^2 \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) |
+| \( \mathbb{RP}^n \), \( n \geq 2 \) | \( \mathbb{Z}/2 \) | \( \mathbb{Z}/2 \) |
+| \( S^1 \vee S^1 \) | \( F_2 \) | \( \mathbb{Z}^2 \) |
+| Klein bottle | \( \langle a,b \mid abab^{-1} \rangle \) | \( \mathbb{Z} \oplus \mathbb{Z}/2 \) |
+| Trefoil complement | \( \langle a,b \mid a^2 = b^3 \rangle \) | \( \mathbb{Z} \) |
+
+These tables summarise the computations of Chapters 1–6 and provide a quick reference for applying the exact sequences of Chapter 4 and the applications of Chapter 5.

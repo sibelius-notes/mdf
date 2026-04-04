@@ -2293,4 +2293,3 @@ All three have consistent axiom systems, consistent models, and rich theorems. T
 The tools we have developed — dot products, cross products, projections, isometries, circle inversions, Möbius transformations — are not just for geometry. They appear throughout mathematics: in quantum mechanics (Hilbert spaces), complex analysis (Möbius transformations), coding theory (orthogonal matrices), computer graphics (quaternions and rotations), and number theory (modular forms and hyperbolic surfaces).
 
 Non-Euclidean geometry is not a curiosity. It is the foundation of modern geometry and mathematical physics.</div>
-</pre>
