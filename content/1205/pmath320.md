@@ -28,24 +28,24 @@ The first four postulates are short, local, and intuitively obvious. The fifth i
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="13">
   <!-- Top line (transversal cuts here) -->
-  <line x1="10" y1="55" x2="310" y2="55" stroke="#333" stroke-width="1.5"/>
+  <line x1="10" y1="55" x2="310" y2="55" stroke="currentColor" stroke-width="1.5"/>
   <!-- Bottom line -->
-  <line x1="10" y1="130" x2="310" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="10" y1="130" x2="310" y2="130" stroke="currentColor" stroke-width="1.5"/>
   <!-- Left angled line (converging) -->
-  <line x1="60" y1="55" x2="155" y2="130" stroke="#555" stroke-width="1.5"/>
+  <line x1="60" y1="55" x2="155" y2="130" stroke="#999" stroke-width="1.5"/>
   <!-- Right angled line (converging) -->
-  <line x1="220" y1="55" x2="155" y2="130" stroke="#555" stroke-width="1.5"/>
+  <line x1="220" y1="55" x2="155" y2="130" stroke="#999" stroke-width="1.5"/>
   <!-- Angle arcs -->
   <path d="M75,55 A15,15 0 0,1 63,63" fill="none" stroke="#e06" stroke-width="1.2"/>
   <path d="M208,55 A15,15 0 0,0 220,63" fill="none" stroke="#e06" stroke-width="1.2"/>
   <!-- Labels -->
-  <text x="55" y="48" text-anchor="middle" fill="#333">α</text>
-  <text x="232" y="48" text-anchor="middle" fill="#333">β</text>
+  <text x="55" y="48" text-anchor="middle" fill="currentColor">α</text>
+  <text x="232" y="48" text-anchor="middle" fill="currentColor">β</text>
   <!-- Intersection point label -->
   <circle cx="155" cy="130" r="3" fill="#c00"/>
-  <text x="162" y="148" fill="#555" font-size="11">meet here if α+β &lt; 180°</text>
+  <text x="162" y="148" fill="currentColor" font-size="11">meet here if α+β &lt; 180°</text>
   <!-- Annotations -->
-  <text x="160" y="170" text-anchor="middle" fill="#555" font-size="11">α + β &lt; 180° → lines converge on this side</text>
+  <text x="160" y="170" text-anchor="middle" fill="currentColor" font-size="11">α + β &lt; 180° → lines converge on this side</text>
 </svg>
 </div>
 
@@ -117,20 +117,20 @@ This means that Euclidean geometry, properly axiomatized, has essentially one mo
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 260 200" width="260" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="13">
   <!-- Triangle ABC -->
-  <polygon points="130,20 30,170 230,170" fill="none" stroke="#333" stroke-width="1.5"/>
+  <polygon points="130,20 30,170 230,170" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Labels -->
-  <text x="130" y="14" text-anchor="middle" fill="#333">C</text>
-  <text x="18" y="175" text-anchor="middle" fill="#333">A</text>
-  <text x="242" y="175" text-anchor="middle" fill="#333">B</text>
+  <text x="130" y="14" text-anchor="middle" fill="currentColor">C</text>
+  <text x="18" y="175" text-anchor="middle" fill="currentColor">A</text>
+  <text x="242" y="175" text-anchor="middle" fill="currentColor">B</text>
   <!-- Point D on AB -->
-  <circle cx="130" cy="170" r="3" fill="#333"/>
-  <text x="130" y="188" text-anchor="middle" fill="#333">D</text>
+  <circle cx="130" cy="170" r="3" fill="currentColor"/>
+  <text x="130" y="188" text-anchor="middle" fill="currentColor">D</text>
   <!-- Line ℓ entering at D and exiting through AC -->
   <line x1="55" y1="95" x2="190" y2="170" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="175" y="92" fill="#c00" font-size="12">ℓ</text>
   <!-- Arrow indicating D -->
-  <text x="130" y="158" text-anchor="middle" fill="#555" font-size="10">↑ ℓ enters</text>
-  <text x="160" y="148" fill="#555" font-size="10">exits via AC or BC</text>
+  <text x="130" y="158" text-anchor="middle" fill="currentColor" font-size="10">↑ ℓ enters</text>
+  <text x="160" y="148" fill="currentColor" font-size="10">exits via AC or BC</text>
 </svg>
 </div>
 </div>
@@ -182,28 +182,28 @@ On the positive side, many constructions are possible. Here is the classic const
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 300 200" width="300" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="13">
   <!-- Vertex A -->
-  <circle cx="60" cy="110" r="3" fill="#333"/>
-  <text x="46" y="114" fill="#333">A</text>
+  <circle cx="60" cy="110" r="3" fill="currentColor"/>
+  <text x="46" y="114" fill="currentColor">A</text>
   <!-- Ray AB (upper) -->
-  <line x1="60" y1="110" x2="160" y2="30" stroke="#333" stroke-width="1.5"/>
-  <text x="165" y="28" fill="#333">B</text>
+  <line x1="60" y1="110" x2="160" y2="30" stroke="currentColor" stroke-width="1.5"/>
+  <text x="165" y="28" fill="currentColor">B</text>
   <!-- Ray AC (lower) -->
-  <line x1="60" y1="110" x2="270" y2="110" stroke="#333" stroke-width="1.5"/>
-  <text x="274" y="114" fill="#333">C</text>
+  <line x1="60" y1="110" x2="270" y2="110" stroke="currentColor" stroke-width="1.5"/>
+  <text x="274" y="114" fill="currentColor">C</text>
   <!-- Point D on AB -->
-  <circle cx="115" cy="68" r="3" fill="#555"/>
-  <text x="120" y="66" fill="#555">D</text>
+  <circle cx="115" cy="68" r="3" fill="currentColor"/>
+  <text x="120" y="66" fill="currentColor">D</text>
   <!-- Point E on AC -->
-  <circle cx="185" cy="110" r="3" fill="#555"/>
-  <text x="188" y="126" fill="#555">E</text>
+  <circle cx="185" cy="110" r="3" fill="currentColor"/>
+  <text x="188" y="126" fill="currentColor">E</text>
   <!-- Circle around A (arc through D and E) -->
   <circle cx="60" cy="110" r="75" fill="none" stroke="#88a" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- Point F (intersection of circles centered at D and E) -->
   <circle cx="150" cy="135" r="3" fill="#c00"/>
   <text x="155" y="150" fill="#c00">F</text>
   <!-- Circles centered at D and E through F -->
-  <circle cx="115" cy="68" r="70" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,4"/>
-  <circle cx="185" cy="110" r="70" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,4"/>
+  <circle cx="115" cy="68" r="70" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="3,4"/>
+  <circle cx="185" cy="110" r="70" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="3,4"/>
   <!-- Bisector AF -->
   <line x1="60" y1="110" x2="200" y2="160" stroke="#c00" stroke-width="1.5"/>
   <text x="205" y="165" fill="#c00" font-size="11">bisector AF</text>
@@ -218,58 +218,104 @@ On the positive side, Gauss proved that the regular \(n\)-gon is constructible i
 
 Paper folding — **origami** — gives a different and strictly more powerful construction system than straightedge and compass. The ancient Chinese and Japanese paper-folding traditions were primarily artistic, but their mathematical power was not recognized until the 20th century. The **Huzita-Hatori axioms** (named after Humiaki Huzita, who identified six axioms in 1991, and Koshiro Hatori, who added the seventh in 2003) describe the seven fundamental fold operations that are physically realizable with a flat sheet of paper:
 
-**H1.** Given two points, there is a fold passing through both.
-**H2.** Given two points, there is a fold that places one point onto the other.
-**H3.** Given two lines, there is a fold that places one line onto the other.
-**H4.** Given a point and a line, there is a fold perpendicular to the line passing through the point.
-**H5.** Given two points \(P_1, P_2\) and a line \(\ell\), there is a fold that places \(P_1\) onto \(\ell\) and passes through \(P_2\).
-**H6.** Given two points \(P_1, P_2\) and two lines \(\ell_1, \ell_2\), there is a fold that simultaneously places \(P_1\) onto \(\ell_1\) and \(P_2\) onto \(\ell_2\).
-**H7.** Given a point \(P\) and two lines \(\ell_1, \ell_2\), there is a fold that places \(P\) onto \(\ell_1\) and is perpendicular to \(\ell_2\).
+- **H1.** Given two points, there is a fold passing through both.
+- **H2.** Given two points, there is a fold that places one point onto the other.
+- **H3.** Given two lines, there is a fold that places one line onto the other.
+- **H4.** Given a point and a line, there is a fold perpendicular to the line passing through the point.
+- **H5.** Given two points \(P_1, P_2\) and a line \(\ell\), there is a fold that places \(P_1\) onto \(\ell\) and passes through \(P_2\).
+- **H6.** Given two points \(P_1, P_2\) and two lines \(\ell_1, \ell_2\), there is a fold that simultaneously places \(P_1\) onto \(\ell_1\) and \(P_2\) onto \(\ell_2\).
+- **H7.** Given a point \(P\) and two lines \(\ell_1, \ell_2\), there is a fold that places \(P\) onto \(\ell_1\) and is perpendicular to \(\ell_2\).
 
 <div style="text-align:center; margin: 1em 0;">
-<svg viewBox="0 0 500 200" width="500" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+<svg viewBox="0 0 500 335" width="500" height="335" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
+
+  <!-- === ROW 1: H1, H2, H3, H4 (each ~125px wide) === -->
+
   <!-- H1: fold through two points -->
-  <text x="10" y="15" font-weight="bold" fill="#333">H1</text>
-  <circle cx="30" cy="40" r="4" fill="#333"/>
-  <text x="38" y="44" fill="#333">P1</text>
-  <circle cx="30" cy="90" r="4" fill="#333"/>
-  <text x="38" y="94" fill="#333">P2</text>
-  <line x1="30" y1="10" x2="30" y2="130" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="8" y="148" fill="#555" font-size="10">fold line</text>
+  <text x="5" y="14" font-weight="bold" fill="currentColor">H1</text>
+  <circle cx="42" cy="38" r="4" fill="currentColor"/>
+  <text x="49" y="42" fill="currentColor">P1</text>
+  <circle cx="78" cy="92" r="4" fill="currentColor"/>
+  <text x="85" y="96" fill="currentColor">P2</text>
+  <!-- fold line through P1 and P2, extended -->
+  <line x1="24" y1="14" x2="96" y2="116" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="5" y="140" fill="currentColor" font-size="10">fold thru P1, P2</text>
 
-  <!-- H2: fold mapping P1 to P2 -->
-  <text x="130" y="15" font-weight="bold" fill="#333">H2</text>
-  <circle cx="145" cy="50" r="4" fill="#333"/>
-  <text x="152" y="44" fill="#333">P1</text>
-  <circle cx="230" cy="50" r="4" fill="#333"/>
-  <text x="235" y="44" fill="#333">P2</text>
-  <!-- perpendicular bisector fold line -->
-  <line x1="188" y1="10" x2="188" y2="130" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="145" y1="50" x2="230" y2="50" stroke="#aaa" stroke-width="1"/>
-  <circle cx="188" cy="50" r="2" fill="#c00"/>
-  <text x="120" y="148" fill="#555" font-size="10">⊥ bisector of P1P2</text>
+  <!-- H2: perpendicular bisector fold -->
+  <text x="130" y="14" font-weight="bold" fill="currentColor">H2</text>
+  <circle cx="148" cy="58" r="4" fill="currentColor"/>
+  <text x="155" y="52" fill="currentColor">P1</text>
+  <circle cx="232" cy="58" r="4" fill="currentColor"/>
+  <text x="236" y="52" fill="currentColor">P2</text>
+  <line x1="148" y1="58" x2="232" y2="58" stroke="#777" stroke-width="1"/>
+  <line x1="190" y1="16" x2="190" y2="115" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <circle cx="190" cy="58" r="2.5" fill="#c00"/>
+  <text x="125" y="140" fill="currentColor" font-size="10">⊥ bisector of P1P2</text>
 
-  <!-- H4: perpendicular to ℓ through P -->
-  <text x="270" y="15" font-weight="bold" fill="#333">H4</text>
-  <line x1="260" y1="70" x2="360" y2="70" stroke="#333" stroke-width="1.5"/>
-  <text x="362" y="74" fill="#333">ℓ</text>
-  <circle cx="310" cy="110" r="4" fill="#333"/>
-  <text x="316" y="114" fill="#333">P</text>
-  <line x1="310" y1="20" x2="310" y2="140" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="268" y="148" fill="#555" font-size="10">fold ⊥ to ℓ thru P</text>
+  <!-- H3: fold mapping one line onto the other (angle bisector) -->
+  <!-- ℓ1 and ℓ2 are symmetric about y=66; horizontal fold at y=66 maps ℓ1 to ℓ2 -->
+  <text x="255" y="14" font-weight="bold" fill="currentColor">H3</text>
+  <line x1="257" y1="92" x2="363" y2="40" stroke="currentColor" stroke-width="1.5"/>
+  <text x="365" y="44" fill="currentColor" font-size="11">ℓ1</text>
+  <line x1="257" y1="40" x2="363" y2="92" stroke="#999" stroke-width="1.5"/>
+  <text x="365" y="96" fill="currentColor" font-size="11">ℓ2</text>
+  <line x1="255" y1="66" x2="365" y2="66" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="252" y="140" fill="currentColor" font-size="10">fold maps ℓ1 → ℓ2</text>
 
-  <!-- H6: cubic fold -->
-  <text x="390" y="15" font-weight="bold" fill="#333">H6</text>
-  <circle cx="400" cy="40" r="4" fill="#333"/>
-  <text x="407" y="44" fill="#333">P1</text>
-  <circle cx="470" cy="40" r="4" fill="#333"/>
-  <text x="476" y="44" fill="#333">P2</text>
-  <line x1="395" y1="70" x2="395" y2="130" stroke="#333" stroke-width="1.5"/>
-  <text x="383" y="68" fill="#333" font-size="11">ℓ1</text>
-  <line x1="475" y1="70" x2="475" y2="130" stroke="#333" stroke-width="1.5"/>
-  <text x="478" y="68" fill="#333" font-size="11">ℓ2</text>
-  <line x1="395" y1="100" x2="475" y2="80" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="390" y="148" fill="#555" font-size="10">P1→ℓ1 and P2→ℓ2</text>
+  <!-- H4: fold perpendicular to ℓ through P -->
+  <text x="380" y="14" font-weight="bold" fill="currentColor">H4</text>
+  <line x1="378" y1="60" x2="495" y2="60" stroke="currentColor" stroke-width="1.5"/>
+  <text x="497" y="64" fill="currentColor" font-size="11">ℓ</text>
+  <circle cx="435" cy="98" r="4" fill="currentColor"/>
+  <text x="442" y="102" fill="currentColor">P</text>
+  <line x1="435" y1="16" x2="435" y2="122" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="378" y="140" fill="currentColor" font-size="10">fold ⊥ to ℓ thru P</text>
+
+  <!-- === ROW 2: H5, H6, H7 (y offset +165, each ~165px wide) === -->
+
+  <!-- H5: fold through P2 placing P1 onto ℓ -->
+  <text x="5" y="179" font-weight="bold" fill="currentColor">H5</text>
+  <line x1="5" y1="290" x2="158" y2="290" stroke="currentColor" stroke-width="1.5"/>
+  <text x="160" y="294" fill="currentColor" font-size="11">ℓ</text>
+  <circle cx="38" cy="200" r="4" fill="currentColor"/>
+  <text x="45" y="204" fill="currentColor">P1</text>
+  <circle cx="88" cy="248" r="4" fill="currentColor"/>
+  <text x="95" y="252" fill="currentColor">P2</text>
+  <!-- fold line through P2; schematic showing P1 is reflected to a point on ℓ -->
+  <line x1="12" y1="218" x2="148" y2="270" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- image of P1 on ℓ (schematic) -->
+  <circle cx="112" cy="290" r="3" fill="#c00"/>
+  <text x="5" y="318" fill="currentColor" font-size="10">thru P2, P1 → ℓ</text>
+
+  <!-- H6: fold placing P1 onto ℓ1 and P2 onto ℓ2 simultaneously -->
+  <text x="175" y="179" font-weight="bold" fill="currentColor">H6</text>
+  <circle cx="202" cy="200" r="4" fill="currentColor"/>
+  <text x="209" y="204" fill="currentColor">P1</text>
+  <circle cx="312" cy="200" r="4" fill="currentColor"/>
+  <text x="317" y="204" fill="currentColor">P2</text>
+  <line x1="188" y1="228" x2="188" y2="295" stroke="currentColor" stroke-width="1.5"/>
+  <text x="172" y="226" fill="currentColor" font-size="11">ℓ1</text>
+  <line x1="326" y1="228" x2="326" y2="295" stroke="#999" stroke-width="1.5"/>
+  <text x="329" y="226" fill="currentColor" font-size="11">ℓ2</text>
+  <line x1="188" y1="268" x2="326" y2="248" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="175" y="318" fill="currentColor" font-size="10">P1 → ℓ1 and P2 → ℓ2</text>
+
+  <!-- H7: fold placing P onto ℓ1, perpendicular to ℓ2 -->
+  <!-- Setup: ℓ1 horizontal at y=268, ℓ2 vertical at x=440 -->
+  <!-- P at (382,200); fold horizontal at y=234 maps P to P'=(382,268) on ℓ1, and is ⊥ to ℓ2 -->
+  <text x="348" y="179" font-weight="bold" fill="currentColor">H7</text>
+  <line x1="340" y1="268" x2="492" y2="268" stroke="currentColor" stroke-width="1.5"/>
+  <text x="494" y="272" fill="currentColor" font-size="11">ℓ1</text>
+  <line x1="440" y1="185" x2="440" y2="298" stroke="#999" stroke-width="1.5"/>
+  <text x="443" y="183" fill="currentColor" font-size="11">ℓ2</text>
+  <circle cx="382" cy="200" r="4" fill="currentColor"/>
+  <text x="389" y="204" fill="currentColor">P</text>
+  <!-- fold: horizontal at y=234, perpendicular to vertical ℓ2 -->
+  <line x1="340" y1="234" x2="492" y2="234" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- P' = image of P on ℓ1 -->
+  <circle cx="382" cy="268" r="3" fill="#c00"/>
+  <text x="340" y="318" fill="currentColor" font-size="10">P → ℓ1, fold ⊥ ℓ2</text>
+
 </svg>
 </div>
 
@@ -303,22 +349,22 @@ Degenerate cases (point, line, pair of lines) occur when the plane passes throug
 <svg viewBox="0 0 380 260" width="380" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#555"/>
+      <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Cone axis -->
-  <line x1="130" y1="10" x2="130" y2="250" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="130" y1="10" x2="130" y2="250" stroke="#777" stroke-width="1" stroke-dasharray="4,3"/>
   <text x="136" y="248" fill="#aaa" font-size="10">axis</text>
   <!-- Apex -->
-  <circle cx="130" cy="20" r="3" fill="#333"/>
-  <text x="138" y="22" fill="#333">apex</text>
+  <circle cx="130" cy="20" r="3" fill="currentColor"/>
+  <text x="138" y="22" fill="currentColor">apex</text>
   <!-- Upper nappe left edge -->
-  <line x1="130" y1="20" x2="30" y2="200" stroke="#333" stroke-width="1.5"/>
+  <line x1="130" y1="20" x2="30" y2="200" stroke="currentColor" stroke-width="1.5"/>
   <!-- Upper nappe right edge -->
-  <line x1="130" y1="20" x2="230" y2="200" stroke="#333" stroke-width="1.5"/>
+  <line x1="130" y1="20" x2="230" y2="200" stroke="currentColor" stroke-width="1.5"/>
   <!-- Lower nappe (mirror) -->
-  <line x1="130" y1="20" x2="30" y2="-40" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="130" y1="20" x2="230" y2="-40" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="130" y1="20" x2="30" y2="-40" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="130" y1="20" x2="230" y2="-40" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
 
   <!-- Ellipse plane (cuts upper nappe at angle) -->
   <ellipse cx="130" cy="95" rx="55" ry="14" fill="none" stroke="#2a7" stroke-width="2"/>
@@ -334,7 +380,7 @@ Degenerate cases (point, line, pair of lines) occur when the plane passes throug
   <text x="245" y="183" fill="#c00" font-size="12">HYPERBOLA</text>
 
   <!-- Legend note -->
-  <text x="10" y="248" fill="#555" font-size="10">Angle of cutting plane determines conic type</text>
+  <text x="10" y="248" fill="currentColor" font-size="10">Angle of cutting plane determines conic type</text>
 </svg>
 </div>
 
@@ -411,26 +457,26 @@ The ellipse passes through \((\pm 5, 0)\) on the \(x\)-axis and \((0, \pm 4)\) o
   <!-- Ellipse x²/25 + y²/16 = 1, a=5, b=4, scaled: 1 unit = 28px, center at (150,110) -->
   <ellipse cx="150" cy="110" rx="140" ry="112" fill="none" stroke="#2255cc" stroke-width="2"/>
   <!-- Axes -->
-  <line x1="10" y1="110" x2="290" y2="110" stroke="#bbb" stroke-width="1"/>
-  <line x1="150" y1="5" x2="150" y2="215" stroke="#bbb" stroke-width="1"/>
+  <line x1="10" y1="110" x2="290" y2="110" stroke="#777" stroke-width="1"/>
+  <line x1="150" y1="5" x2="150" y2="215" stroke="#777" stroke-width="1"/>
   <!-- Foci F1=(-3,0) and F2=(3,0), scaled 28px/unit -->
   <circle cx="66" cy="110" r="4" fill="#c00"/>
   <text x="50" y="128" fill="#c00">F1</text>
-  <text x="40" y="140" fill="#555" font-size="10">(-3,0)</text>
+  <text x="40" y="140" fill="currentColor" font-size="10">(-3,0)</text>
   <circle cx="234" cy="110" r="4" fill="#c00"/>
   <text x="238" y="128" fill="#c00">F2</text>
-  <text x="228" y="140" fill="#555" font-size="10">(3,0)</text>
+  <text x="228" y="140" fill="currentColor" font-size="10">(3,0)</text>
   <!-- Vertices -->
-  <circle cx="10" cy="110" r="3" fill="#333"/>
-  <text x="2" y="106" fill="#333" font-size="10">(-5,0)</text>
-  <circle cx="290" cy="110" r="3" fill="#333"/>
-  <text x="264" y="106" fill="#333" font-size="10">(5,0)</text>
-  <circle cx="150" cy="-2" r="3" fill="#333"/>
-  <text x="156" y="6" fill="#333" font-size="10">(0,4)</text>
-  <circle cx="150" cy="222" r="3" fill="#333"/>
-  <text x="156" y="218" fill="#333" font-size="10">(0,-4)</text>
+  <circle cx="10" cy="110" r="3" fill="currentColor"/>
+  <text x="2" y="106" fill="currentColor" font-size="10">(-5,0)</text>
+  <circle cx="290" cy="110" r="3" fill="currentColor"/>
+  <text x="264" y="106" fill="currentColor" font-size="10">(5,0)</text>
+  <circle cx="150" cy="-2" r="3" fill="currentColor"/>
+  <text x="156" y="6" fill="currentColor" font-size="10">(0,4)</text>
+  <circle cx="150" cy="222" r="3" fill="currentColor"/>
+  <text x="156" y="218" fill="currentColor" font-size="10">(0,-4)</text>
   <!-- Label -->
-  <text x="150" y="210" text-anchor="middle" fill="#555" font-size="11">a=5, b=4, c=3, e=3/5; PF1+PF2=10</text>
+  <text x="150" y="210" text-anchor="middle" fill="currentColor" font-size="11">a=5, b=4, c=3, e=3/5; PF1+PF2=10</text>
 </svg>
 </div>
 
@@ -446,34 +492,34 @@ An elegant alternative description: the ellipse is the set of points \(P\) such 
   <ellipse cx="80" cy="80" rx="55" ry="40" fill="none" stroke="#2255cc" stroke-width="1.8"/>
   <circle cx="58" cy="80" r="3" fill="#c00"/><text x="42" y="78" fill="#c00">F1</text>
   <circle cx="102" cy="80" r="3" fill="#c00"/><text x="105" y="78" fill="#c00">F2</text>
-  <text x="80" y="140" text-anchor="middle" fill="#333" font-size="10">Ellipse x²/25+y²/16=1</text>
-  <text x="80" y="152" text-anchor="middle" fill="#555" font-size="9">a=5, b=4, e=0.6</text>
+  <text x="80" y="140" text-anchor="middle" fill="currentColor" font-size="10">Ellipse x²/25+y²/16=1</text>
+  <text x="80" y="152" text-anchor="middle" fill="currentColor" font-size="9">a=5, b=4, e=0.6</text>
 
   <!-- PARABOLA (top-right) -->
-  <line x1="280" y1="20" x2="280" y2="155" stroke="#bbb" stroke-width="1"/>
+  <line x1="280" y1="20" x2="280" y2="155" stroke="#777" stroke-width="1"/>
   <path d="M280,80 Q330,60 360,20 M280,80 Q330,100 360,155" fill="none" stroke="#e70" stroke-width="1.8"/>
   <circle cx="295" cy="80" r="3" fill="#c00"/>
   <text x="300" y="78" fill="#c00">F(2,0)</text>
-  <line x1="265" y1="20" x2="265" y2="155" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="230" y="165" fill="#555" font-size="9">directrix x=-2</text>
-  <text x="310" y="165" text-anchor="middle" fill="#333" font-size="10">Parabola y²=8x</text>
+  <line x1="265" y1="20" x2="265" y2="155" stroke="#777" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="230" y="165" fill="currentColor" font-size="9">directrix x=-2</text>
+  <text x="310" y="165" text-anchor="middle" fill="currentColor" font-size="10">Parabola y²=8x</text>
 
   <!-- HYPERBOLA (bottom-left) -->
-  <line x1="80" y1="180" x2="80" y2="270" stroke="#bbb" stroke-width="1"/>
-  <line x1="10" y1="225" x2="160" y2="225" stroke="#bbb" stroke-width="1"/>
+  <line x1="80" y1="180" x2="80" y2="270" stroke="#777" stroke-width="1"/>
+  <line x1="10" y1="225" x2="160" y2="225" stroke="#777" stroke-width="1"/>
   <!-- Left branch -->
   <path d="M35,185 Q55,220 35,265" fill="none" stroke="#e33" stroke-width="1.8"/>
   <!-- Right branch -->
   <path d="M125,185 Q105,220 125,265" fill="none" stroke="#e33" stroke-width="1.8"/>
   <circle cx="55" cy="225" r="3" fill="#c00"/><text x="36" y="222" fill="#c00" font-size="9">F1</text>
   <circle cx="105" cy="225" r="3" fill="#c00"/><text x="108" y="222" fill="#c00" font-size="9">F2</text>
-  <text x="80" y="280" text-anchor="middle" fill="#333" font-size="10">Hyperbola x²/9−y²/16=1</text>
+  <text x="80" y="280" text-anchor="middle" fill="currentColor" font-size="10">Hyperbola x²/9−y²/16=1</text>
 
   <!-- CIRCLE (bottom-right) -->
   <circle cx="380" cy="225" r="50" fill="none" stroke="#2a7" stroke-width="1.8"/>
   <circle cx="380" cy="225" r="3" fill="#c00"/><text x="385" y="228" fill="#c00">O</text>
-  <text x="380" y="280" text-anchor="middle" fill="#333" font-size="10">Circle x²+y²=25</text>
-  <text x="380" y="292" text-anchor="middle" fill="#555" font-size="9">e=0 (degenerate ellipse)</text>
+  <text x="380" y="280" text-anchor="middle" fill="currentColor" font-size="10">Circle x²+y²=25</text>
+  <text x="380" y="292" text-anchor="middle" fill="currentColor" font-size="9">e=0 (degenerate ellipse)</text>
 </svg>
 </div>
 </div>
@@ -580,8 +626,8 @@ If \(\gcd(n, k) = d > 1\), the result is a **compound** of \(d\) copies of \(\{n
   <g transform="translate(70,95)">
     <polygon points="0,-60 57,18 -35,48 -35,-48 57,-18"
       fill="none" stroke="#2255cc" stroke-width="1.8"/>
-    <text x="0" y="80" text-anchor="middle" fill="#333">{5/2} pentagram</text>
-    <text x="0" y="93" text-anchor="middle" fill="#555" font-size="10">every 2nd vertex</text>
+    <text x="0" y="80" text-anchor="middle" fill="currentColor">{5/2} pentagram</text>
+    <text x="0" y="93" text-anchor="middle" fill="currentColor" font-size="10">every 2nd vertex</text>
   </g>
   <!-- {8/3} Octagram: connect every 3rd vertex of regular octagon -->
   <!-- vertices at 22.5+k*45, radius 58, center (210,95) -->
@@ -600,8 +646,8 @@ If \(\gcd(n, k) = d > 1\), the result is a **compound** of \(d\) copies of \(\{n
     <line x1="54" y1="22" x2="-22" y2="-54" stroke="#e70" stroke-width="1.8"/>
     <line x1="-22" y1="-54" x2="-22" y2="54" stroke="#e70" stroke-width="1.8"/>
     <line x1="-22" y1="54" x2="54" y2="-22" stroke="#e70" stroke-width="1.8"/>
-    <text x="0" y="80" text-anchor="middle" fill="#333">{8/3} octagram</text>
-    <text x="0" y="93" text-anchor="middle" fill="#555" font-size="10">every 3rd vertex</text>
+    <text x="0" y="80" text-anchor="middle" fill="currentColor">{8/3} octagram</text>
+    <text x="0" y="93" text-anchor="middle" fill="currentColor" font-size="10">every 3rd vertex</text>
   </g>
   <!-- {7/3} Heptagram: connect every 3rd vertex of regular heptagon -->
   <!-- vertices at 90+k*360/7, radius 58, center (350,95) -->
@@ -617,8 +663,8 @@ If \(\gcd(n, k) = d > 1\), the result is a **compound** of \(d\) copies of \(\{n
     <line x1="34" y1="47" x2="55" y2="-17" stroke="#c00" stroke-width="1.8"/>
     <line x1="55" y1="-17" x2="-21" y2="-56" stroke="#c00" stroke-width="1.8"/>
     <line x1="-21" y1="-56" x2="0" y2="-58" stroke="#c00" stroke-width="1.8"/>
-    <text x="0" y="80" text-anchor="middle" fill="#333">{7/3} heptagram</text>
-    <text x="0" y="93" text-anchor="middle" fill="#555" font-size="10">every 3rd vertex</text>
+    <text x="0" y="80" text-anchor="middle" fill="currentColor">{7/3} heptagram</text>
+    <text x="0" y="93" text-anchor="middle" fill="currentColor" font-size="10">every 3rd vertex</text>
   </g>
 </svg>
 </div>
@@ -676,78 +722,78 @@ So there are exactly **five** convex regular polyhedra. No more, no fewer.
   <g transform="translate(55,20)">
     <!-- 4 vertices: top A, front-left B, front-right C, back D -->
     <!-- A=(50,10), B=(10,110), C=(90,110), D=(50,75) -->
-    <line x1="50" y1="10" x2="10" y2="110" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="10" x2="90" y2="110" stroke="#333" stroke-width="1.5"/>
-    <line x1="10" y1="110" x2="90" y2="110" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="10" x2="50" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="10" y1="110" x2="50" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="90" y1="110" x2="50" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="50" y="6" text-anchor="middle" fill="#333">A</text>
-    <text x="2" y="116" fill="#333">B</text>
-    <text x="92" y="116" fill="#333">C</text>
-    <text x="52" y="70" fill="#888">D</text>
-    <text x="50" y="135" text-anchor="middle" fill="#333" font-weight="bold">Tetrahedron {3,3}</text>
-    <text x="50" y="148" text-anchor="middle" fill="#555">V=4, E=6, F=4</text>
+    <line x1="50" y1="10" x2="10" y2="110" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="10" x2="90" y2="110" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="10" y1="110" x2="90" y2="110" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="10" x2="50" y2="75" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="10" y1="110" x2="50" y2="75" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="90" y1="110" x2="50" y2="75" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="50" y="6" text-anchor="middle" fill="currentColor">A</text>
+    <text x="2" y="116" fill="currentColor">B</text>
+    <text x="92" y="116" fill="currentColor">C</text>
+    <text x="52" y="70" fill="currentColor">D</text>
+    <text x="50" y="135" text-anchor="middle" fill="currentColor" font-weight="bold">Tetrahedron {3,3}</text>
+    <text x="50" y="148" text-anchor="middle" fill="currentColor">V=4, E=6, F=4</text>
   </g>
 
   <!-- CUBE -->
   <g transform="translate(200,20)">
     <!-- Front face: (10,60),(90,60),(90,130),(10,130) -->
     <!-- Back face offset by (30,-25) -->
-    <rect x="10" y="65" width="80" height="70" fill="none" stroke="#333" stroke-width="1.5"/>
-    <rect x="35" y="35" width="80" height="70" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+    <rect x="10" y="65" width="80" height="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="35" y="35" width="80" height="70" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
     <!-- Connecting edges -->
-    <line x1="10" y1="65" x2="35" y2="35" stroke="#333" stroke-width="1.5"/>
-    <line x1="90" y1="65" x2="115" y2="35" stroke="#333" stroke-width="1.5"/>
-    <line x1="90" y1="135" x2="115" y2="105" stroke="#333" stroke-width="1.5"/>
-    <line x1="10" y1="135" x2="35" y2="105" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="62" y="155" text-anchor="middle" fill="#333" font-weight="bold">Cube {4,3}</text>
-    <text x="62" y="168" text-anchor="middle" fill="#555">V=8, E=12, F=6</text>
+    <line x1="10" y1="65" x2="35" y2="35" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="90" y1="65" x2="115" y2="35" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="90" y1="135" x2="115" y2="105" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="10" y1="135" x2="35" y2="105" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="62" y="155" text-anchor="middle" fill="currentColor" font-weight="bold">Cube {4,3}</text>
+    <text x="62" y="168" text-anchor="middle" fill="currentColor">V=8, E=12, F=6</text>
   </g>
 
   <!-- OCTAHEDRON -->
   <g transform="translate(370,20)">
     <!-- Top (50,10), Bottom (50,140), Left (10,75), Right (90,75), Front (50,95), Back (50,55) -->
-    <line x1="50" y1="10" x2="10" y2="75" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="10" x2="90" y2="75" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="10" x2="50" y2="95" stroke="#333" stroke-width="1.5"/>
-    <line x1="10" y1="75" x2="50" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="90" y1="75" x2="50" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="95" x2="50" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="10" y1="75" x2="50" y2="95" stroke="#333" stroke-width="1.5"/>
-    <line x1="90" y1="75" x2="50" y2="95" stroke="#333" stroke-width="1.5"/>
-    <line x1="50" y1="55" x2="10" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="50" y1="55" x2="90" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="50" y1="10" x2="50" y2="55" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="50" y="155" text-anchor="middle" fill="#333" font-weight="bold">Octahedron {3,4}</text>
-    <text x="50" y="168" text-anchor="middle" fill="#555">V=6, E=12, F=8</text>
+    <line x1="50" y1="10" x2="10" y2="75" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="10" x2="90" y2="75" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="10" x2="50" y2="95" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="10" y1="75" x2="50" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="90" y1="75" x2="50" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="95" x2="50" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="10" y1="75" x2="50" y2="95" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="90" y1="75" x2="50" y2="95" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="50" y1="55" x2="10" y2="75" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="50" y1="55" x2="90" y2="75" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="50" y1="10" x2="50" y2="55" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="50" y="155" text-anchor="middle" fill="currentColor" font-weight="bold">Octahedron {3,4}</text>
+    <text x="50" y="168" text-anchor="middle" fill="currentColor">V=6, E=12, F=8</text>
   </g>
 
   <!-- DODECAHEDRON (top view schematic) -->
   <g transform="translate(60,200)">
     <!-- Rough pentagon-based top view -->
-    <polygon points="50,0 95,35 78,90 22,90 5,35" fill="none" stroke="#333" stroke-width="1.5"/>
-    <polygon points="50,15 80,38 70,72 30,72 20,38" fill="none" stroke="#555" stroke-width="1"/>
-    <line x1="50" y1="0" x2="50" y2="15" stroke="#555" stroke-width="1"/>
-    <line x1="95" y1="35" x2="80" y2="38" stroke="#555" stroke-width="1"/>
-    <line x1="78" y1="90" x2="70" y2="72" stroke="#555" stroke-width="1"/>
-    <line x1="22" y1="90" x2="30" y2="72" stroke="#555" stroke-width="1"/>
-    <line x1="5" y1="35" x2="20" y2="38" stroke="#555" stroke-width="1"/>
-    <text x="50" y="105" text-anchor="middle" fill="#333" font-weight="bold">Dodecahedron {5,3}</text>
-    <text x="50" y="118" text-anchor="middle" fill="#555">V=20, E=30, F=12</text>
+    <polygon points="50,0 95,35 78,90 22,90 5,35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="50,15 80,38 70,72 30,72 20,38" fill="none" stroke="#999" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="15" stroke="#999" stroke-width="1"/>
+    <line x1="95" y1="35" x2="80" y2="38" stroke="#999" stroke-width="1"/>
+    <line x1="78" y1="90" x2="70" y2="72" stroke="#999" stroke-width="1"/>
+    <line x1="22" y1="90" x2="30" y2="72" stroke="#999" stroke-width="1"/>
+    <line x1="5" y1="35" x2="20" y2="38" stroke="#999" stroke-width="1"/>
+    <text x="50" y="105" text-anchor="middle" fill="currentColor" font-weight="bold">Dodecahedron {5,3}</text>
+    <text x="50" y="118" text-anchor="middle" fill="currentColor">V=20, E=30, F=12</text>
   </g>
 
   <!-- ICOSAHEDRON (top view schematic) -->
   <g transform="translate(340,200)">
     <!-- Triangle arrangement suggesting icosahedron -->
-    <polygon points="50,5 90,70 10,70" fill="none" stroke="#333" stroke-width="1.5"/>
-    <polygon points="50,30 75,75 25,75" fill="none" stroke="#555" stroke-width="1"/>
-    <line x1="50" y1="5" x2="50" y2="30" stroke="#555" stroke-width="1"/>
-    <line x1="90" y1="70" x2="75" y2="75" stroke="#555" stroke-width="1"/>
-    <line x1="10" y1="70" x2="25" y2="75" stroke="#555" stroke-width="1"/>
-    <line x1="50" y1="30" x2="50" y2="5" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="50" y="105" text-anchor="middle" fill="#333" font-weight="bold">Icosahedron {3,5}</text>
-    <text x="50" y="118" text-anchor="middle" fill="#555">V=12, E=30, F=20</text>
+    <polygon points="50,5 90,70 10,70" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="50,30 75,75 25,75" fill="none" stroke="#999" stroke-width="1"/>
+    <line x1="50" y1="5" x2="50" y2="30" stroke="#999" stroke-width="1"/>
+    <line x1="90" y1="70" x2="75" y2="75" stroke="#999" stroke-width="1"/>
+    <line x1="10" y1="70" x2="25" y2="75" stroke="#999" stroke-width="1"/>
+    <line x1="50" y1="30" x2="50" y2="5" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="50" y="105" text-anchor="middle" fill="currentColor" font-weight="bold">Icosahedron {3,5}</text>
+    <text x="50" y="118" text-anchor="middle" fill="currentColor">V=12, E=30, F=20</text>
   </g>
 </svg>
 </div>
@@ -791,9 +837,9 @@ In the Kepler-Poinsot polyhedra, the faces either are star polygons (pentagrammi
     <!-- Inner pentagon -->
     <polygon points="0,-25 24,-8 15,20 -15,20 -24,-8"
       fill="none" stroke="#88a" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="0" y="90" text-anchor="middle" fill="#333">{5/2,5}</text>
-    <text x="0" y="103" text-anchor="middle" fill="#555" font-size="9">Small Stellated</text>
-    <text x="0" y="114" text-anchor="middle" fill="#555" font-size="9">Dodecahedron</text>
+    <text x="0" y="90" text-anchor="middle" fill="currentColor">{5/2,5}</text>
+    <text x="0" y="103" text-anchor="middle" fill="currentColor" font-size="9">Small Stellated</text>
+    <text x="0" y="114" text-anchor="middle" fill="currentColor" font-size="9">Dodecahedron</text>
   </g>
 
   <!-- Great Dodecahedron {5,5/2} — pentagonal faces, indented -->
@@ -806,9 +852,9 @@ In the Kepler-Poinsot polyhedra, the faces either are star polygons (pentagrammi
     <line x1="52" y1="-18" x2="-32" y2="47" stroke="#e70" stroke-width="1"/>
     <line x1="52" y1="-18" x2="-52" y2="-18" stroke="#e70" stroke-width="1"/>
     <line x1="32" y1="47" x2="-52" y2="-18" stroke="#e70" stroke-width="1"/>
-    <text x="0" y="80" text-anchor="middle" fill="#333">{5,5/2}</text>
-    <text x="0" y="93" text-anchor="middle" fill="#555" font-size="9">Great Dodecahedron</text>
-    <text x="0" y="104" text-anchor="middle" fill="#555" font-size="9">indented pentagonal faces</text>
+    <text x="0" y="80" text-anchor="middle" fill="currentColor">{5,5/2}</text>
+    <text x="0" y="93" text-anchor="middle" fill="currentColor" font-size="9">Great Dodecahedron</text>
+    <text x="0" y="104" text-anchor="middle" fill="currentColor" font-size="9">indented pentagonal faces</text>
   </g>
 
   <!-- Great Stellated Dodecahedron {5/2,3} — sharper star spikes -->
@@ -817,9 +863,9 @@ In the Kepler-Poinsot polyhedra, the faces either are star polygons (pentagrammi
       fill="none" stroke="#c00" stroke-width="1.5"/>
     <polygon points="0,-30 28,-10 17,25 -17,25 -28,-10"
       fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="0" y="95" text-anchor="middle" fill="#333">{5/2,3}</text>
-    <text x="0" y="108" text-anchor="middle" fill="#555" font-size="9">Great Stellated</text>
-    <text x="0" y="119" text-anchor="middle" fill="#555" font-size="9">Dodecahedron</text>
+    <text x="0" y="95" text-anchor="middle" fill="currentColor">{5/2,3}</text>
+    <text x="0" y="108" text-anchor="middle" fill="currentColor" font-size="9">Great Stellated</text>
+    <text x="0" y="119" text-anchor="middle" fill="currentColor" font-size="9">Dodecahedron</text>
   </g>
 </svg>
 </div>
@@ -851,14 +897,14 @@ How does one visualize a four-dimensional polytope? The key insight is that we s
 <svg viewBox="0 0 320 260" width="320" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Outer cube (large) -->
   <!-- Front face: (30,100),(170,100),(170,210),(30,210) -->
-  <rect x="30" y="100" width="140" height="110" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="30" y="100" width="140" height="110" fill="none" stroke="currentColor" stroke-width="2"/>
   <!-- Back face (offset): (90,30),(230,30),(230,140),(90,140) -->
-  <rect x="90" y="30" width="140" height="110" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="90" y="30" width="140" height="110" fill="none" stroke="currentColor" stroke-width="2"/>
   <!-- Connecting edges (outer cube) -->
-  <line x1="30" y1="100" x2="90" y2="30" stroke="#333" stroke-width="2"/>
-  <line x1="170" y1="100" x2="230" y2="30" stroke="#333" stroke-width="2"/>
-  <line x1="170" y1="210" x2="230" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="30" y1="210" x2="90" y2="140" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="30" y1="100" x2="90" y2="30" stroke="currentColor" stroke-width="2"/>
+  <line x1="170" y1="100" x2="230" y2="30" stroke="currentColor" stroke-width="2"/>
+  <line x1="170" y1="210" x2="230" y2="140" stroke="currentColor" stroke-width="2"/>
+  <line x1="30" y1="210" x2="90" y2="140" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,3"/>
 
   <!-- Inner cube (small, centered) -->
   <!-- Front: (90,125),(150,125),(150,175),(90,175) -->
@@ -872,19 +918,19 @@ How does one visualize a four-dimensional polytope? The key insight is that we s
   <line x1="90" y1="175" x2="110" y2="155" stroke="#2255cc" stroke-width="1.5"/>
 
   <!-- Edges connecting outer to inner cube (the 4D connections) -->
-  <line x1="30" y1="100" x2="90" y2="125" stroke="#888" stroke-width="1"/>
-  <line x1="170" y1="100" x2="150" y2="125" stroke="#888" stroke-width="1"/>
-  <line x1="170" y1="210" x2="150" y2="175" stroke="#888" stroke-width="1"/>
-  <line x1="30" y1="210" x2="90" y2="175" stroke="#888" stroke-width="1"/>
-  <line x1="90" y1="30" x2="110" y2="105" stroke="#888" stroke-width="1"/>
-  <line x1="230" y1="30" x2="170" y2="105" stroke="#888" stroke-width="1"/>
-  <line x1="230" y1="140" x2="170" y2="155" stroke="#888" stroke-width="1"/>
-  <line x1="90" y1="140" x2="110" y2="155" stroke="#888" stroke-width="1"/>
+  <line x1="30" y1="100" x2="90" y2="125" stroke="#999" stroke-width="1"/>
+  <line x1="170" y1="100" x2="150" y2="125" stroke="#999" stroke-width="1"/>
+  <line x1="170" y1="210" x2="150" y2="175" stroke="#999" stroke-width="1"/>
+  <line x1="30" y1="210" x2="90" y2="175" stroke="#999" stroke-width="1"/>
+  <line x1="90" y1="30" x2="110" y2="105" stroke="#999" stroke-width="1"/>
+  <line x1="230" y1="30" x2="170" y2="105" stroke="#999" stroke-width="1"/>
+  <line x1="230" y1="140" x2="170" y2="155" stroke="#999" stroke-width="1"/>
+  <line x1="90" y1="140" x2="110" y2="155" stroke="#999" stroke-width="1"/>
 
   <!-- Labels -->
-  <text x="160" y="228" text-anchor="middle" fill="#333">Outer cube</text>
+  <text x="160" y="228" text-anchor="middle" fill="currentColor">Outer cube</text>
   <text x="160" y="241" text-anchor="middle" fill="#2255cc" font-size="10">Inner cube (same size in 4D)</text>
-  <text x="160" y="255" text-anchor="middle" fill="#555" font-size="10">V=16, E=32, F=24, C=8; χ=0</text>
+  <text x="160" y="255" text-anchor="middle" fill="currentColor" font-size="10">V=16, E=32, F=24, C=8; χ=0</text>
 </svg>
 </div>
 
@@ -933,39 +979,39 @@ After adding all edges, we have \(V\) vertices, \(E\) edges, and \(F\) faces, wi
 <svg viewBox="0 0 440 200" width="440" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Left: Flattened cube graph (3x3 grid of 4x4 vertices) -->
   <g transform="translate(20,20)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Cube flattened</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Cube flattened</text>
     <!-- 4x4 grid of vertices at spacing 40 -->
     <!-- Row 0: y=20, Row 1: y=60, Row 2: y=100, Row 3: y=140 -->
     <!-- Col 0: x=20, Col 1: x=60, Col 2: x=100, Col 3: x=140 -->
     <!-- Horizontal edges -->
-    <line x1="20" y1="20" x2="140" y2="20" stroke="#333" stroke-width="1.5"/>
-    <line x1="20" y1="60" x2="140" y2="60" stroke="#333" stroke-width="1.5"/>
-    <line x1="20" y1="100" x2="140" y2="100" stroke="#333" stroke-width="1.5"/>
-    <line x1="20" y1="140" x2="140" y2="140" stroke="#333" stroke-width="1.5"/>
+    <line x1="20" y1="20" x2="140" y2="20" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="20" y1="60" x2="140" y2="60" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="20" y1="100" x2="140" y2="100" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="20" y1="140" x2="140" y2="140" stroke="currentColor" stroke-width="1.5"/>
     <!-- Vertical edges -->
-    <line x1="20" y1="20" x2="20" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="60" y1="20" x2="60" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="100" y1="20" x2="100" y2="140" stroke="#333" stroke-width="1.5"/>
-    <line x1="140" y1="20" x2="140" y2="140" stroke="#333" stroke-width="1.5"/>
+    <line x1="20" y1="20" x2="20" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="60" y1="20" x2="60" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="100" y1="20" x2="100" y2="140" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="140" y1="20" x2="140" y2="140" stroke="currentColor" stroke-width="1.5"/>
     <!-- Vertex dots -->
-    <circle cx="20" cy="20" r="3" fill="#333"/><circle cx="60" cy="20" r="3" fill="#333"/>
-    <circle cx="100" cy="20" r="3" fill="#333"/><circle cx="140" cy="20" r="3" fill="#333"/>
-    <circle cx="20" cy="60" r="3" fill="#333"/><circle cx="60" cy="60" r="3" fill="#333"/>
-    <circle cx="100" cy="60" r="3" fill="#333"/><circle cx="140" cy="60" r="3" fill="#333"/>
-    <circle cx="20" cy="100" r="3" fill="#333"/><circle cx="60" cy="100" r="3" fill="#333"/>
-    <circle cx="100" cy="100" r="3" fill="#333"/><circle cx="140" cy="100" r="3" fill="#333"/>
-    <circle cx="20" cy="140" r="3" fill="#333"/><circle cx="60" cy="140" r="3" fill="#333"/>
-    <circle cx="100" cy="140" r="3" fill="#333"/><circle cx="140" cy="140" r="3" fill="#333"/>
-    <text x="80" y="165" text-anchor="middle" fill="#555">V=8, E=12, F=6</text>
+    <circle cx="20" cy="20" r="3" fill="currentColor"/><circle cx="60" cy="20" r="3" fill="currentColor"/>
+    <circle cx="100" cy="20" r="3" fill="currentColor"/><circle cx="140" cy="20" r="3" fill="currentColor"/>
+    <circle cx="20" cy="60" r="3" fill="currentColor"/><circle cx="60" cy="60" r="3" fill="currentColor"/>
+    <circle cx="100" cy="60" r="3" fill="currentColor"/><circle cx="140" cy="60" r="3" fill="currentColor"/>
+    <circle cx="20" cy="100" r="3" fill="currentColor"/><circle cx="60" cy="100" r="3" fill="currentColor"/>
+    <circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="3" fill="currentColor"/>
+    <circle cx="20" cy="140" r="3" fill="currentColor"/><circle cx="60" cy="140" r="3" fill="currentColor"/>
+    <circle cx="100" cy="140" r="3" fill="currentColor"/><circle cx="140" cy="140" r="3" fill="currentColor"/>
+    <text x="80" y="165" text-anchor="middle" fill="currentColor">V=8, E=12, F=6</text>
     <text x="80" y="178" text-anchor="middle" fill="#2a7">8−12+6=2 ✓</text>
   </g>
 
   <!-- Arrow -->
-  <text x="220" y="100" text-anchor="middle" fill="#333" font-size="18">→</text>
+  <text x="220" y="100" text-anchor="middle" fill="currentColor" font-size="18">→</text>
 
   <!-- Right: Spanning tree (7 edges, 1 face) -->
   <g transform="translate(250,20)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Spanning tree</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Spanning tree</text>
     <!-- Only 7 edges forming a tree (no cycles) -->
     <!-- Row 0: top row, connected -->
     <line x1="20" y1="20" x2="60" y2="20" stroke="#c00" stroke-width="2"/>
@@ -981,7 +1027,7 @@ After adding all edges, we have \(V\) vertices, \(E\) edges, and \(F\) faces, wi
     <circle cx="20" cy="60" r="3" fill="#c00"/><circle cx="60" cy="60" r="3" fill="#c00"/>
     <circle cx="60" cy="100" r="3" fill="#c00"/><circle cx="100" cy="100" r="3" fill="#c00"/>
     <circle cx="100" cy="140" r="3" fill="#c00"/><circle cx="140" cy="140" r="3" fill="#c00"/>
-    <text x="80" y="165" text-anchor="middle" fill="#555">V=8, E=7, F=1</text>
+    <text x="80" y="165" text-anchor="middle" fill="currentColor">V=8, E=7, F=1</text>
     <text x="80" y="178" text-anchor="middle" fill="#2a7">8−7+1=2 ✓</text>
   </g>
 </svg>
@@ -1002,18 +1048,18 @@ Another clean proof of Euler's formula uses **stereographic projection**. Take t
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 280 230" width="280" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Sphere (circle) -->
-  <circle cx="140" cy="110" r="90" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <circle cx="140" cy="110" r="90" fill="none" stroke="#777" stroke-width="1.5"/>
   <!-- Equatorial plane -->
-  <line x1="30" y1="110" x2="250" y2="110" stroke="#333" stroke-width="2"/>
-  <text x="254" y="114" fill="#333">equatorial plane</text>
+  <line x1="30" y1="110" x2="250" y2="110" stroke="currentColor" stroke-width="2"/>
+  <text x="254" y="114" fill="currentColor">equatorial plane</text>
   <!-- North pole -->
   <circle cx="140" cy="20" r="4" fill="#c00"/>
   <text x="148" y="18" fill="#c00">N</text>
   <!-- South pole -->
-  <circle cx="140" cy="200" r="3" fill="#333"/>
-  <text x="148" y="204" fill="#555">S</text>
+  <circle cx="140" cy="200" r="3" fill="currentColor"/>
+  <text x="148" y="204" fill="currentColor">S</text>
   <!-- Axis -->
-  <line x1="140" y1="20" x2="140" y2="200" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="140" y1="20" x2="140" y2="200" stroke="#777" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- Point P on sphere -->
   <circle cx="185" cy="55" r="4" fill="#2255cc"/>
   <text x="192" y="53" fill="#2255cc">P</text>
@@ -1022,7 +1068,7 @@ Another clean proof of Euler's formula uses **stereographic projection**. Take t
   <!-- P' on equatorial plane -->
   <circle cx="220" cy="110" r="4" fill="#e70"/>
   <text x="225" y="108" fill="#e70">P′</text>
-  <text x="140" y="225" text-anchor="middle" fill="#555" font-size="10">NP projected → P′ on equatorial plane</text>
+  <text x="140" y="225" text-anchor="middle" fill="currentColor" font-size="10">NP projected → P′ on equatorial plane</text>
 </svg>
 </div>
 
@@ -1050,7 +1096,7 @@ For \(E\) to be a positive integer, the denominator \(2p + 2q - pq\) must be pos
   <!-- Truncated tetrahedron: front-facing hexagonal face + triangular faces -->
   <!-- Central hexagon (front) -->
   <polygon points="120,30 160,55 160,105 120,130 80,105 80,55"
-    fill="none" stroke="#333" stroke-width="2"/>
+    fill="none" stroke="currentColor" stroke-width="2"/>
   <!-- Top triangular face (truncated corner) -->
   <polygon points="120,30 148,10 92,10"
     fill="none" stroke="#2255cc" stroke-width="1.5"/>
@@ -1062,13 +1108,13 @@ For \(E\) to be a positive integer, the denominator \(2p + 2q - pq\) must be pos
   <line x1="185" y1="115" x2="160" y2="105" stroke="#2255cc" stroke-width="1.5"/>
   <line x1="190" y1="75" x2="160" y2="55" stroke="#2255cc" stroke-width="1.5"/>
   <!-- Bottom hexagonal face hint -->
-  <line x1="80" y1="105" x2="60" y2="120" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="120" y1="130" x2="120" y2="150" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="160" y1="105" x2="180" y2="120" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="80" y1="105" x2="60" y2="120" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="120" y1="130" x2="120" y2="150" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="160" y1="105" x2="180" y2="120" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
   <!-- Labels -->
-  <text x="120" y="80" text-anchor="middle" fill="#555" font-size="10">hexagon</text>
-  <text x="120" y="168" text-anchor="middle" fill="#333">Truncated Tetrahedron</text>
-  <text x="120" y="180" text-anchor="middle" fill="#555">V=12, E=18, F=8</text>
+  <text x="120" y="80" text-anchor="middle" fill="currentColor" font-size="10">hexagon</text>
+  <text x="120" y="168" text-anchor="middle" fill="currentColor">Truncated Tetrahedron</text>
+  <text x="120" y="180" text-anchor="middle" fill="currentColor">V=12, E=18, F=8</text>
   <text x="120" y="192" text-anchor="middle" fill="#2a7">12−18+8=2 ✓</text>
 </svg>
 </div>
@@ -1093,54 +1139,54 @@ For Platonic solids with Schläfli symbol \(\{p, q\}\), the dual has Schläfli s
 <svg viewBox="0 0 420 200" width="420" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- CUBE (left) -->
   <g transform="translate(20,20)">
-    <text x="80" y="-5" text-anchor="middle" fill="#333" font-weight="bold">Cube {4,3}</text>
+    <text x="80" y="-5" text-anchor="middle" fill="currentColor" font-weight="bold">Cube {4,3}</text>
     <!-- Front face -->
-    <rect x="20" y="20" width="90" height="90" fill="none" stroke="#333" stroke-width="1.8"/>
+    <rect x="20" y="20" width="90" height="90" fill="none" stroke="currentColor" stroke-width="1.8"/>
     <!-- Back face -->
-    <rect x="50" y="0" width="90" height="90" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+    <rect x="50" y="0" width="90" height="90" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
     <!-- Connecting edges -->
-    <line x1="20" y1="20" x2="50" y2="0" stroke="#333" stroke-width="1.8"/>
-    <line x1="110" y1="20" x2="140" y2="0" stroke="#333" stroke-width="1.8"/>
-    <line x1="110" y1="110" x2="140" y2="90" stroke="#333" stroke-width="1.8"/>
-    <line x1="20" y1="110" x2="50" y2="90" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="20" y1="20" x2="50" y2="0" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="110" y1="20" x2="140" y2="0" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="110" y1="110" x2="140" y2="90" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="20" y1="110" x2="50" y2="90" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
     <!-- Face centers (to become octahedron vertices) -->
     <circle cx="65" cy="55" r="4" fill="#c00"/>
     <circle cx="95" cy="45" r="4" fill="#c00"/>
     <circle cx="95" cy="55" r="4" fill="#c00" opacity="0.4"/>
-    <text x="80" y="128" text-anchor="middle" fill="#555">V=8, E=12, F=6</text>
+    <text x="80" y="128" text-anchor="middle" fill="currentColor">V=8, E=12, F=6</text>
     <text x="80" y="141" text-anchor="middle" fill="#c00" font-size="10">● = face centers → oct. vertices</text>
   </g>
 
   <!-- Arrow -->
-  <text x="210" y="90" text-anchor="middle" fill="#333" font-size="18">⟺</text>
-  <text x="210" y="105" text-anchor="middle" fill="#555" font-size="10">dual</text>
+  <text x="210" y="90" text-anchor="middle" fill="currentColor" font-size="18">⟺</text>
+  <text x="210" y="105" text-anchor="middle" fill="currentColor" font-size="10">dual</text>
 
   <!-- OCTAHEDRON (right) -->
   <g transform="translate(240,20)">
-    <text x="80" y="-5" text-anchor="middle" fill="#333" font-weight="bold">Octahedron {3,4}</text>
+    <text x="80" y="-5" text-anchor="middle" fill="currentColor" font-weight="bold">Octahedron {3,4}</text>
     <!-- Top -->
-    <circle cx="80" cy="5" r="3" fill="#333"/>
+    <circle cx="80" cy="5" r="3" fill="currentColor"/>
     <!-- Bottom -->
-    <circle cx="80" cy="145" r="3" fill="#333"/>
+    <circle cx="80" cy="145" r="3" fill="currentColor"/>
     <!-- Left/Right/Front/Back -->
-    <circle cx="20" cy="75" r="3" fill="#333"/>
-    <circle cx="140" cy="75" r="3" fill="#333"/>
+    <circle cx="20" cy="75" r="3" fill="currentColor"/>
+    <circle cx="140" cy="75" r="3" fill="currentColor"/>
     <!-- Front and back mid vertices -->
     <circle cx="80" cy="55" r="3" fill="#aaa"/>
     <circle cx="80" cy="95" r="3" fill="#aaa"/>
     <!-- Visible edges -->
-    <line x1="80" y1="5" x2="20" y2="75" stroke="#333" stroke-width="1.8"/>
-    <line x1="80" y1="5" x2="140" y2="75" stroke="#333" stroke-width="1.8"/>
-    <line x1="80" y1="5" x2="80" y2="55" stroke="#333" stroke-width="1.8"/>
-    <line x1="20" y1="75" x2="80" y2="145" stroke="#333" stroke-width="1.8"/>
-    <line x1="140" y1="75" x2="80" y2="145" stroke="#333" stroke-width="1.8"/>
-    <line x1="80" y1="95" x2="80" y2="145" stroke="#333" stroke-width="1.8"/>
-    <line x1="20" y1="75" x2="80" y2="55" stroke="#333" stroke-width="1.8"/>
-    <line x1="140" y1="75" x2="80" y2="55" stroke="#333" stroke-width="1.8"/>
-    <line x1="20" y1="75" x2="80" y2="95" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="140" y1="75" x2="80" y2="95" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="80" y1="55" x2="80" y2="5" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="80" y="163" text-anchor="middle" fill="#555">V=6, E=12, F=8</text>
+    <line x1="80" y1="5" x2="20" y2="75" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="80" y1="5" x2="140" y2="75" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="80" y1="5" x2="80" y2="55" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="20" y1="75" x2="80" y2="145" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="140" y1="75" x2="80" y2="145" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="80" y1="95" x2="80" y2="145" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="20" y1="75" x2="80" y2="55" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="140" y1="75" x2="80" y2="55" stroke="currentColor" stroke-width="1.8"/>
+    <line x1="20" y1="75" x2="80" y2="95" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="140" y1="75" x2="80" y2="95" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="80" y1="55" x2="80" y2="5" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="80" y="163" text-anchor="middle" fill="currentColor">V=6, E=12, F=8</text>
   </g>
 </svg>
 </div>
@@ -1167,37 +1213,37 @@ Examples include:
   <!-- Truncated icosahedron schematic: top pentagon, surrounding hexagons, bottom pentagon -->
   <!-- Top pentagon (centered at 130,50, radius 35) -->
   <polygon points="130,15 163,37 150,75 110,75 97,37"
-    fill="#222" stroke="#333" stroke-width="1.5" fill-opacity="0.15"/>
-  <text x="130" y="52" text-anchor="middle" fill="#333" font-size="9">pent.</text>
+    fill="currentColor" stroke="currentColor" stroke-width="1.5" fill-opacity="0.15"/>
+  <text x="130" y="52" text-anchor="middle" fill="currentColor" font-size="9">pent.</text>
   <!-- Six surrounding hexagons (approximate positions) -->
   <!-- Upper-left hex -->
   <polygon points="80,37 97,37 110,75 90,90 65,80 62,55"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Upper hex -->
   <polygon points="110,75 150,75 163,110 130,125 97,110"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Upper-right hex -->
   <polygon points="150,75 163,37 188,55 192,80 175,90 163,110"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Lower-left hex -->
   <polygon points="65,80 90,90 97,110 75,125 52,115 50,92"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Lower-right hex -->
   <polygon points="175,90 192,80 210,92 208,115 185,125 163,110"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Bottom-left hex -->
   <polygon points="75,125 97,110 130,125 118,160 85,160 68,143"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Bottom-right hex -->
   <polygon points="130,125 163,110 185,125 180,150 150,162 118,160"
-    fill="none" stroke="#555" stroke-width="1.2"/>
+    fill="none" stroke="#999" stroke-width="1.2"/>
   <!-- Bottom pentagon -->
   <polygon points="85,160 118,160 150,162 138,195 97,195"
-    fill="#222" stroke="#333" stroke-width="1.5" fill-opacity="0.15"/>
-  <text x="118" y="183" text-anchor="middle" fill="#333" font-size="9">pent.</text>
+    fill="currentColor" stroke="currentColor" stroke-width="1.5" fill-opacity="0.15"/>
+  <text x="118" y="183" text-anchor="middle" fill="currentColor" font-size="9">pent.</text>
   <!-- Labels -->
-  <text x="130" y="215" text-anchor="middle" fill="#333">Truncated Icosahedron (soccer ball)</text>
-  <text x="130" y="227" text-anchor="middle" fill="#555">V=60, E=90, F=32; 60−90+32=2 ✓</text>
+  <text x="130" y="215" text-anchor="middle" fill="currentColor">Truncated Icosahedron (soccer ball)</text>
+  <text x="130" y="227" text-anchor="middle" fill="currentColor">V=60, E=90, F=32; 60−90+32=2 ✓</text>
 </svg>
 </div>
 </div>
@@ -1229,25 +1275,25 @@ The **orientation-preserving** isometries (translations and rotations) form a su
 <svg viewBox="0 0 460 220" width="460" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <defs>
     <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,1 L8,4 L0,7 Z" fill="#555"/>
+      <path d="M0,1 L8,4 L0,7 Z" fill="currentColor"/>
     </marker>
   </defs>
 
   <!-- TRANSLATION -->
   <g transform="translate(10,10)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Translation</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Translation</text>
     <circle cx="15" cy="50" r="4" fill="#2255cc"/>
     <text x="8" y="45" fill="#2255cc">P</text>
     <circle cx="95" cy="50" r="4" fill="#c00"/>
     <text x="98" y="45" fill="#c00">P′</text>
-    <line x1="20" y1="50" x2="88" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-    <text x="52" y="40" text-anchor="middle" fill="#555">v</text>
-    <text x="55" y="80" text-anchor="middle" fill="#555" font-size="10">P → P + v</text>
+    <line x1="20" y1="50" x2="88" y2="50" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <text x="52" y="40" text-anchor="middle" fill="currentColor">v</text>
+    <text x="55" y="80" text-anchor="middle" fill="currentColor" font-size="10">P → P + v</text>
   </g>
 
   <!-- ROTATION -->
   <g transform="translate(140,10)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Rotation</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Rotation</text>
     <circle cx="55" cy="60" r="4" fill="#e70"/>
     <text x="60" y="58" fill="#e70">C</text>
     <circle cx="30" cy="30" r="4" fill="#2255cc"/>
@@ -1255,42 +1301,42 @@ The **orientation-preserving** isometries (translations and rotations) form a su
     <circle cx="85" cy="30" r="4" fill="#c00"/>
     <text x="88" y="28" fill="#c00">P′</text>
     <!-- Arc from P to P' around C -->
-    <path d="M30,30 A35,35 0 0,1 85,30" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-    <text x="55" y="15" text-anchor="middle" fill="#555">θ</text>
-    <text x="55" y="90" text-anchor="middle" fill="#555" font-size="10">rotation by θ about C</text>
+    <path d="M30,30 A35,35 0 0,1 85,30" fill="none" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <text x="55" y="15" text-anchor="middle" fill="currentColor">θ</text>
+    <text x="55" y="90" text-anchor="middle" fill="currentColor" font-size="10">rotation by θ about C</text>
   </g>
 
   <!-- REFLECTION -->
   <g transform="translate(270,10)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Reflection</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Reflection</text>
     <circle cx="30" cy="30" r="4" fill="#2255cc"/>
     <text x="18" y="28" fill="#2255cc">P</text>
-    <line x1="55" y1="10" x2="55" y2="100" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
-    <text x="62" y="50" fill="#333">ℓ</text>
+    <line x1="55" y1="10" x2="55" y2="100" stroke="currentColor" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="62" y="50" fill="currentColor">ℓ</text>
     <circle cx="80" cy="30" r="4" fill="#c00"/>
     <text x="83" y="28" fill="#c00">P′</text>
-    <line x1="30" y1="30" x2="80" y2="30" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="55" y="110" text-anchor="middle" fill="#555" font-size="10">P → Mℓ(P)</text>
+    <line x1="30" y1="30" x2="80" y2="30" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="55" y="110" text-anchor="middle" fill="currentColor" font-size="10">P → Mℓ(P)</text>
   </g>
 
   <!-- GLIDE REFLECTION (bottom row, spanning) -->
   <g transform="translate(10,130)">
-    <text x="220" y="0" text-anchor="middle" fill="#333" font-weight="bold">Glide Reflection</text>
-    <line x1="10" y1="40" x2="420" y2="40" stroke="#333" stroke-width="2"/>
-    <text x="425" y="44" fill="#333">ℓ</text>
+    <text x="220" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Glide Reflection</text>
+    <line x1="10" y1="40" x2="420" y2="40" stroke="currentColor" stroke-width="2"/>
+    <text x="425" y="44" fill="currentColor">ℓ</text>
     <!-- P above line -->
     <circle cx="50" cy="15" r="4" fill="#2255cc"/>
     <text x="55" y="13" fill="#2255cc">P</text>
     <!-- Reflect to P' below -->
     <circle cx="50" cy="65" r="4" fill="#aaa"/>
     <text x="55" y="70" fill="#aaa">P′</text>
-    <line x1="50" y1="15" x2="50" y2="63" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="50" y1="15" x2="50" y2="63" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
     <!-- Translate P' to P'' along ℓ -->
     <circle cx="200" cy="65" r="4" fill="#c00"/>
     <text x="205" y="70" fill="#c00">P″</text>
-    <line x1="55" y1="65" x2="195" y2="65" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-    <text x="125" y="80" text-anchor="middle" fill="#555">+ translation v along ℓ</text>
-    <text x="220" y="95" text-anchor="middle" fill="#555" font-size="10">reflect across ℓ, then translate parallel to ℓ</text>
+    <line x1="55" y1="65" x2="195" y2="65" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <text x="125" y="80" text-anchor="middle" fill="currentColor">+ translation v along ℓ</text>
+    <text x="220" y="95" text-anchor="middle" fill="currentColor" font-size="10">reflect across ℓ, then translate parallel to ℓ</text>
   </g>
 </svg>
 </div>
@@ -1312,53 +1358,53 @@ Isometries combine in non-obvious ways. Here are some key composition rules:
 <svg viewBox="0 0 420 220" width="420" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- LEFT: Parallel reflections → translation -->
   <g transform="translate(10,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">Parallel reflections → translation</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Parallel reflections → translation</text>
     <!-- Two parallel lines ℓ₁ and ℓ₂ -->
-    <line x1="50" y1="15" x2="50" y2="170" stroke="#333" stroke-width="1.8" stroke-dasharray="5,3"/>
-    <text x="45" y="12" fill="#333">ℓ₁</text>
-    <line x1="130" y1="15" x2="130" y2="170" stroke="#333" stroke-width="1.8" stroke-dasharray="5,3"/>
-    <text x="135" y="12" fill="#333">ℓ₂</text>
+    <line x1="50" y1="15" x2="50" y2="170" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="45" y="12" fill="currentColor">ℓ₁</text>
+    <line x1="130" y1="15" x2="130" y2="170" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="135" y="12" fill="currentColor">ℓ₂</text>
     <!-- Distance labels -->
-    <line x1="50" y1="155" x2="130" y2="155" stroke="#555" stroke-width="1"/>
-    <text x="90" y="170" text-anchor="middle" fill="#555" font-size="10">d</text>
+    <line x1="50" y1="155" x2="130" y2="155" stroke="#999" stroke-width="1"/>
+    <text x="90" y="170" text-anchor="middle" fill="currentColor" font-size="10">d</text>
     <!-- P, P', P'' -->
     <circle cx="20" cy="80" r="4" fill="#2255cc"/>
     <text x="6" y="78" fill="#2255cc">P</text>
     <circle cx="80" cy="80" r="4" fill="#aaa"/>
-    <text x="84" y="78" fill="#555">P′</text>
+    <text x="84" y="78" fill="currentColor">P′</text>
     <circle cx="180" cy="80" r="4" fill="#c00"/>
     <text x="184" y="78" fill="#c00">P″</text>
     <!-- Dotted arrows -->
-    <line x1="24" y1="80" x2="76" y2="80" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="84" y1="80" x2="176" y2="80" stroke="#555" stroke-width="1.5"/>
-    <text x="130" y="72" text-anchor="middle" fill="#555" font-size="10">→ translation 2d</text>
+    <line x1="24" y1="80" x2="76" y2="80" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="84" y1="80" x2="176" y2="80" stroke="#999" stroke-width="1.5"/>
+    <text x="130" y="72" text-anchor="middle" fill="currentColor" font-size="10">→ translation 2d</text>
   </g>
 
   <!-- RIGHT: Intersecting reflections → rotation -->
   <g transform="translate(230,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">Intersecting reflections → rotation</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Intersecting reflections → rotation</text>
     <!-- Intersection center -->
     <circle cx="90" cy="100" r="4" fill="#e70"/>
     <text x="96" y="98" fill="#e70">O</text>
     <!-- ℓ₁: going upper-left -->
-    <line x1="90" y1="100" x2="30" y2="30" stroke="#333" stroke-width="1.8" stroke-dasharray="5,3"/>
-    <text x="24" y="26" fill="#333">ℓ₁</text>
+    <line x1="90" y1="100" x2="30" y2="30" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="24" y="26" fill="currentColor">ℓ₁</text>
     <!-- ℓ₂: going upper-right -->
-    <line x1="90" y1="100" x2="150" y2="30" stroke="#333" stroke-width="1.8" stroke-dasharray="5,3"/>
-    <text x="152" y="26" fill="#333">ℓ₂</text>
+    <line x1="90" y1="100" x2="150" y2="30" stroke="currentColor" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="152" y="26" fill="currentColor">ℓ₂</text>
     <!-- Angle θ label -->
-    <path d="M75,85 A20,20 0 0,1 105,85" fill="none" stroke="#555" stroke-width="1"/>
-    <text x="90" y="80" text-anchor="middle" fill="#555" font-size="10">θ</text>
+    <path d="M75,85 A20,20 0 0,1 105,85" fill="none" stroke="#999" stroke-width="1"/>
+    <text x="90" y="80" text-anchor="middle" fill="currentColor" font-size="10">θ</text>
     <!-- P above ℓ₁, P' between lines, P'' above ℓ₂ -->
     <circle cx="45" cy="60" r="4" fill="#2255cc"/>
     <text x="30" y="58" fill="#2255cc">P</text>
     <circle cx="80" cy="55" r="4" fill="#aaa"/>
-    <text x="65" y="53" fill="#555">P′</text>
+    <text x="65" y="53" fill="currentColor">P′</text>
     <circle cx="130" cy="60" r="4" fill="#c00"/>
     <text x="135" y="58" fill="#c00">P″</text>
-    <line x1="49" y1="60" x2="76" y2="55" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="84" y1="55" x2="126" y2="60" stroke="#555" stroke-width="1.5"/>
-    <text x="90" y="145" text-anchor="middle" fill="#555" font-size="10">P → P″ = rotation by 2θ about O</text>
+    <line x1="49" y1="60" x2="76" y2="55" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="84" y1="55" x2="126" y2="60" stroke="#999" stroke-width="1.5"/>
+    <text x="90" y="145" text-anchor="middle" fill="currentColor" font-size="10">P → P″ = rotation by 2θ about O</text>
   </g>
 </svg>
 </div>
@@ -1401,10 +1447,10 @@ These correspond to rotational orders 1, 2, 3, 4, and 6 only. \(\square\)
   <!-- Two pentagons side by side with a gap between them -->
   <!-- Pentagon 1: center (70,80), radius 50 -->
   <polygon points="70,30 117,62 100,118 40,118 23,62"
-    fill="#dde6ff" stroke="#333" stroke-width="1.5"/>
+    fill="#dde6ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Pentagon 2: center (200,80), radius 50 -->
   <polygon points="200,30 247,62 230,118 170,118 153,62"
-    fill="#dde6ff" stroke="#333" stroke-width="1.5"/>
+    fill="#dde6ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Gap indicator -->
   <path d="M117,62 L153,62 L170,118 L100,118 Z"
     fill="#ffd" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,3"/>
@@ -1413,8 +1459,8 @@ These correspond to rotational orders 1, 2, 3, 4, and 6 only. \(\square\)
   <!-- Angle label at shared vertex -->
   <circle cx="117" cy="62" r="3" fill="#e70"/>
   <circle cx="153" cy="62" r="3" fill="#e70"/>
-  <text x="135" y="50" text-anchor="middle" fill="#555" font-size="10">3×108°=324°; gap of 36°</text>
-  <text x="135" y="168" text-anchor="middle" fill="#555">Pentagons cannot tile the plane</text>
+  <text x="135" y="50" text-anchor="middle" fill="currentColor" font-size="10">3×108°=324°; gap of 36°</text>
+  <text x="135" y="168" text-anchor="middle" fill="currentColor">Pentagons cannot tile the plane</text>
 </svg>
 </div>
 </div>
@@ -1433,27 +1479,27 @@ The first symbol (p or c) indicates a primitive or centered lattice. The number 
 <svg viewBox="0 0 500 300" width="500" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- p1: simple translation tiling -->
   <g transform="translate(10,20)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">p1</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">translation only</text>
-    <rect x="10" y="18" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="18" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="18" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <rect x="10" y="48" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="48" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="48" width="30" height="30" fill="#e8f0ff" stroke="#555" stroke-width="1"/>
-    <text x="55" y="92" text-anchor="middle" fill="#555" font-size="9">no rotation/reflection</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p1</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">translation only</text>
+    <rect x="10" y="18" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="18" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="18" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <rect x="10" y="48" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="48" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="48" width="30" height="30" fill="#e8f0ff" stroke="#999" stroke-width="1"/>
+    <text x="55" y="92" text-anchor="middle" fill="currentColor" font-size="9">no rotation/reflection</text>
   </g>
 
   <!-- p4: 4-fold rotation -->
   <g transform="translate(140,20)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">p4</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">90° rotation centers</text>
-    <rect x="10" y="18" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="18" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="18" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
-    <rect x="10" y="48" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="48" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="48" width="30" height="30" fill="#ffeedd" stroke="#555" stroke-width="1"/>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p4</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">90° rotation centers</text>
+    <rect x="10" y="18" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="18" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="18" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
+    <rect x="10" y="48" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="48" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="48" width="30" height="30" fill="#ffeedd" stroke="#999" stroke-width="1"/>
     <!-- Rotation centers at each vertex -->
     <circle cx="10" cy="18" r="3" fill="#c00"/><circle cx="40" cy="18" r="3" fill="#c00"/>
     <circle cx="70" cy="18" r="3" fill="#c00"/><circle cx="100" cy="18" r="3" fill="#c00"/>
@@ -1464,14 +1510,14 @@ The first symbol (p or c) indicates a primitive or centered lattice. The number 
 
   <!-- p2: 180° rotation -->
   <g transform="translate(270,20)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">p2</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">180° rotation centers</text>
-    <rect x="10" y="18" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="18" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="18" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
-    <rect x="10" y="48" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="48" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="48" width="30" height="30" fill="#eeffee" stroke="#555" stroke-width="1"/>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p2</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">180° rotation centers</text>
+    <rect x="10" y="18" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="18" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="18" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
+    <rect x="10" y="48" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="48" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="48" width="30" height="30" fill="#eeffee" stroke="#999" stroke-width="1"/>
     <!-- 180° centers at edge midpoints -->
     <circle cx="25" cy="18" r="3" fill="#2a7"/><circle cx="55" cy="18" r="3" fill="#2a7"/>
     <circle cx="25" cy="33" r="3" fill="#2a7"/><circle cx="55" cy="33" r="3" fill="#2a7"/>
@@ -1480,12 +1526,12 @@ The first symbol (p or c) indicates a primitive or centered lattice. The number 
 
   <!-- pm: mirror reflections -->
   <g transform="translate(10,150)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">pm</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">reflection in parallel lines</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">pm</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">reflection in parallel lines</text>
     <!-- Tiles with vertical mirror lines -->
-    <rect x="10" y="18" width="30" height="55" fill="#ffe8ff" stroke="#555" stroke-width="1"/>
-    <rect x="40" y="18" width="30" height="55" fill="#ffe8ff" stroke="#555" stroke-width="1"/>
-    <rect x="70" y="18" width="30" height="55" fill="#ffe8ff" stroke="#555" stroke-width="1"/>
+    <rect x="10" y="18" width="30" height="55" fill="#ffe8ff" stroke="#999" stroke-width="1"/>
+    <rect x="40" y="18" width="30" height="55" fill="#ffe8ff" stroke="#999" stroke-width="1"/>
+    <rect x="70" y="18" width="30" height="55" fill="#ffe8ff" stroke="#999" stroke-width="1"/>
     <!-- Mirror lines -->
     <line x1="10" y1="15" x2="10" y2="78" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,2"/>
     <line x1="40" y1="15" x2="40" y2="78" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,2"/>
@@ -1496,19 +1542,19 @@ The first symbol (p or c) indicates a primitive or centered lattice. The number 
 
   <!-- p6mm: highest symmetry -->
   <g transform="translate(180,150)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">p6mm (highest symmetry)</text>
-    <text x="80" y="12" text-anchor="middle" fill="#555" font-size="9">6-fold rotation + 6 reflection axes</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p6mm (highest symmetry)</text>
+    <text x="80" y="12" text-anchor="middle" fill="currentColor" font-size="9">6-fold rotation + 6 reflection axes</text>
     <!-- Hexagonal tiling pattern -->
-    <polygon points="80,25 110,42 110,75 80,92 50,75 50,42" fill="#fff8cc" stroke="#333" stroke-width="1.5"/>
-    <polygon points="80,25 50,42 20,25 20,-8 50,-25 80,-8" fill="#fff8cc" stroke="#333" stroke-width="1.5"/>
-    <polygon points="80,25 110,42 140,25 140,-8 110,-25 80,-8" fill="#fff8cc" stroke="#333" stroke-width="1.5"/>
+    <polygon points="80,25 110,42 110,75 80,92 50,75 50,42" fill="#fff8cc" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="80,25 50,42 20,25 20,-8 50,-25 80,-8" fill="#fff8cc" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="80,25 110,42 140,25 140,-8 110,-25 80,-8" fill="#fff8cc" stroke="currentColor" stroke-width="1.5"/>
     <!-- Center rotation marker -->
     <circle cx="80" cy="58" r="5" fill="#c00" fill-opacity="0.5"/>
     <!-- Mirror lines through center -->
     <line x1="80" y1="25" x2="80" y2="92" stroke="#c00" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
     <line x1="50" y1="42" x2="110" y2="75" stroke="#c00" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
     <line x1="110" y1="42" x2="50" y2="75" stroke="#c00" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
-    <text x="80" y="110" text-anchor="middle" fill="#555" font-size="9">hexagonal tiling has p6mm symmetry</text>
+    <text x="80" y="110" text-anchor="middle" fill="currentColor" font-size="9">hexagonal tiling has p6mm symmetry</text>
   </g>
 </svg>
 </div>
@@ -1541,52 +1587,52 @@ Notice the parallel with the Platonic solid condition: replacing \(> 1/2\) (stri
 <svg viewBox="0 0 480 180" width="480" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- TRIANGULAR TILING {3,6} -->
   <g transform="translate(10,15)">
-    <text x="70" y="0" text-anchor="middle" fill="#333" font-weight="bold">Triangular {3,6}</text>
+    <text x="70" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Triangular {3,6}</text>
     <!-- 4 rows of triangles -->
-    <line x1="0" y1="30" x2="140" y2="30" stroke="#333" stroke-width="1.2"/>
-    <line x1="0" y1="70" x2="140" y2="70" stroke="#333" stroke-width="1.2"/>
-    <line x1="0" y1="110" x2="140" y2="110" stroke="#333" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="140" y2="30" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="0" y1="70" x2="140" y2="70" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="0" y1="110" x2="140" y2="110" stroke="currentColor" stroke-width="1.2"/>
     <!-- Vertical and diagonal lines -->
-    <line x1="0" y1="30" x2="0" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="35" y1="30" x2="35" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="70" y1="30" x2="70" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="105" y1="30" x2="105" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="140" y1="30" x2="140" y2="110" stroke="#333" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="0" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="35" y1="30" x2="35" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="70" y1="30" x2="70" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="105" y1="30" x2="105" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="140" y1="30" x2="140" y2="110" stroke="currentColor" stroke-width="1.2"/>
     <!-- Diagonals -->
-    <line x1="0" y1="110" x2="35" y2="30" stroke="#333" stroke-width="1.2"/>
-    <line x1="35" y1="110" x2="70" y2="30" stroke="#333" stroke-width="1.2"/>
-    <line x1="70" y1="110" x2="105" y2="30" stroke="#333" stroke-width="1.2"/>
-    <line x1="105" y1="110" x2="140" y2="30" stroke="#333" stroke-width="1.2"/>
-    <line x1="0" y1="70" x2="35" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="35" y1="70" x2="70" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="70" y1="70" x2="105" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="105" y1="70" x2="140" y2="110" stroke="#333" stroke-width="1.2"/>
-    <text x="70" y="130" text-anchor="middle" fill="#555" font-size="10">6 triangles/vertex</text>
+    <line x1="0" y1="110" x2="35" y2="30" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="35" y1="110" x2="70" y2="30" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="70" y1="110" x2="105" y2="30" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="105" y1="110" x2="140" y2="30" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="0" y1="70" x2="35" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="35" y1="70" x2="70" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="70" y1="70" x2="105" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="105" y1="70" x2="140" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <text x="70" y="130" text-anchor="middle" fill="currentColor" font-size="10">6 triangles/vertex</text>
     <text x="70" y="142" text-anchor="middle" fill="#2a7" font-size="10">6×60°=360° ✓</text>
   </g>
 
   <!-- SQUARE TILING {4,4} -->
   <g transform="translate(180,15)">
-    <text x="70" y="0" text-anchor="middle" fill="#333" font-weight="bold">Square {4,4}</text>
-    <rect x="0" y="20" width="140" height="90" fill="none" stroke="#333" stroke-width="1.2"/>
-    <line x1="35" y1="20" x2="35" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="70" y1="20" x2="70" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="105" y1="20" x2="105" y2="110" stroke="#333" stroke-width="1.2"/>
-    <line x1="0" y1="50" x2="140" y2="50" stroke="#333" stroke-width="1.2"/>
-    <line x1="0" y1="80" x2="140" y2="80" stroke="#333" stroke-width="1.2"/>
-    <text x="70" y="130" text-anchor="middle" fill="#555" font-size="10">4 squares/vertex</text>
+    <text x="70" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Square {4,4}</text>
+    <rect x="0" y="20" width="140" height="90" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="35" y1="20" x2="35" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="70" y1="20" x2="70" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="105" y1="20" x2="105" y2="110" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="0" y1="50" x2="140" y2="50" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="0" y1="80" x2="140" y2="80" stroke="currentColor" stroke-width="1.2"/>
+    <text x="70" y="130" text-anchor="middle" fill="currentColor" font-size="10">4 squares/vertex</text>
     <text x="70" y="142" text-anchor="middle" fill="#2a7" font-size="10">4×90°=360° ✓</text>
   </g>
 
   <!-- HEXAGONAL TILING {6,3} -->
   <g transform="translate(355,15)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Hexagonal {6,3}</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Hexagonal {6,3}</text>
     <!-- Partial hexagonal tiling: 3 hexagons -->
-    <polygon points="55,22 80,35 80,62 55,75 30,62 30,35" fill="#fffde0" stroke="#333" stroke-width="1.5"/>
-    <polygon points="55,22 30,35 5,22 5,-5 30,-18 55,-5" fill="#fffde0" stroke="#333" stroke-width="1.5"/>
-    <polygon points="55,22 80,35 105,22 105,-5 80,-18 55,-5" fill="#fffde0" stroke="#333" stroke-width="1.5"/>
-    <polygon points="55,75 80,62 105,75 105,102 80,115 55,102" fill="#fffde0" stroke="#333" stroke-width="1.5"/>
-    <text x="55" y="132" text-anchor="middle" fill="#555" font-size="10">3 hexagons/vertex</text>
+    <polygon points="55,22 80,35 80,62 55,75 30,62 30,35" fill="#fffde0" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="55,22 30,35 5,22 5,-5 30,-18 55,-5" fill="#fffde0" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="55,22 80,35 105,22 105,-5 80,-18 55,-5" fill="#fffde0" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="55,75 80,62 105,75 105,102 80,115 55,102" fill="#fffde0" stroke="currentColor" stroke-width="1.5"/>
+    <text x="55" y="132" text-anchor="middle" fill="currentColor" font-size="10">3 hexagons/vertex</text>
     <text x="55" y="144" text-anchor="middle" fill="#2a7" font-size="10">3×120°=360° ✓</text>
   </g>
 </svg>
@@ -1602,37 +1648,37 @@ Notice the parallel with the Platonic solid condition: replacing \(> 1/2\) (stri
   <!-- Trihexagonal tiling: alternating triangles and hexagons -->
   <!-- Central hexagon -->
   <polygon points="130,55 157,70 157,100 130,115 103,100 103,70"
-    fill="#e8f4ff" stroke="#333" stroke-width="1.5"/>
+    fill="#e8f4ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Triangles on alternating edges of the central hexagon -->
   <!-- Top triangle -->
   <polygon points="130,55 157,70 103,70"
-    fill="#ffe8e8" stroke="#333" stroke-width="1.5"/>
+    fill="#ffe8e8" stroke="currentColor" stroke-width="1.5"/>
   <!-- Bottom triangle -->
   <polygon points="130,115 157,100 103,100"
-    fill="#ffe8e8" stroke="#333" stroke-width="1.5"/>
+    fill="#ffe8e8" stroke="currentColor" stroke-width="1.5"/>
   <!-- Upper-right hex -->
   <polygon points="157,70 184,55 211,70 211,100 184,115 157,100"
-    fill="#e8f4ff" stroke="#333" stroke-width="1.5"/>
+    fill="#e8f4ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Upper-right triangle -->
   <polygon points="157,70 157,100 184,55"
-    fill="#ffe8e8" stroke="#333" stroke-width="1.5"/>
+    fill="#ffe8e8" stroke="currentColor" stroke-width="1.5"/>
   <!-- Upper-left hex -->
   <polygon points="103,70 76,55 49,70 49,100 76,115 103,100"
-    fill="#e8f4ff" stroke="#333" stroke-width="1.5"/>
+    fill="#e8f4ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Upper-left triangle -->
   <polygon points="103,70 103,100 76,55"
-    fill="#ffe8e8" stroke="#333" stroke-width="1.5"/>
+    fill="#ffe8e8" stroke="currentColor" stroke-width="1.5"/>
   <!-- Bottom hexagon -->
   <polygon points="130,115 157,100 157,130 130,145 103,130 103,100"
-    fill="#e8f4ff" stroke="#333" stroke-width="1.5"/>
+    fill="#e8f4ff" stroke="currentColor" stroke-width="1.5"/>
   <!-- Mark a vertex -->
   <circle cx="157" cy="70" r="4" fill="#c00"/>
   <!-- Angle labels at that vertex -->
   <text x="166" y="67" fill="#c00" font-size="9">△ 60°</text>
   <!-- Labels -->
-  <text x="130" y="165" text-anchor="middle" fill="#555">Trihexagonal tiling 3.6.3.6</text>
-  <text x="130" y="178" text-anchor="middle" fill="#333">At each vertex: 60°+120°+60°+120°=360°</text>
-  <text x="130" y="191" text-anchor="middle" fill="#555" font-size="10">blue = hexagons, pink = triangles</text>
+  <text x="130" y="165" text-anchor="middle" fill="currentColor">Trihexagonal tiling 3.6.3.6</text>
+  <text x="130" y="178" text-anchor="middle" fill="currentColor">At each vertex: 60°+120°+60°+120°=360°</text>
+  <text x="130" y="191" text-anchor="middle" fill="currentColor" font-size="10">blue = hexagons, pink = triangles</text>
 </svg>
 </div>
 </div>
@@ -1645,8 +1691,8 @@ Notice the parallel with the Platonic solid condition: replacing \(> 1/2\) (stri
 <svg viewBox="0 0 340 180" width="340" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Thick rhombus: angles 72° and 108° -->
   <g transform="translate(30,20)">
-    <text x="60" y="0" text-anchor="middle" fill="#333" font-weight="bold">Thick rhombus</text>
-    <text x="60" y="12" text-anchor="middle" fill="#555" font-size="10">angles 72° and 108°</text>
+    <text x="60" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Thick rhombus</text>
+    <text x="60" y="12" text-anchor="middle" fill="currentColor" font-size="10">angles 72° and 108°</text>
     <!-- Rhombus with wider angle -->
     <polygon points="60,30 100,55 60,105 20,55"
       fill="#dde6ff" stroke="#2255cc" stroke-width="2"/>
@@ -1659,8 +1705,8 @@ Notice the parallel with the Platonic solid condition: replacing \(> 1/2\) (stri
 
   <!-- Thin rhombus: angles 36° and 144° -->
   <g transform="translate(200,20)">
-    <text x="60" y="0" text-anchor="middle" fill="#333" font-weight="bold">Thin rhombus</text>
-    <text x="60" y="12" text-anchor="middle" fill="#555" font-size="10">angles 36° and 144°</text>
+    <text x="60" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Thin rhombus</text>
+    <text x="60" y="12" text-anchor="middle" fill="currentColor" font-size="10">angles 36° and 144°</text>
     <!-- Rhombus with narrower angle -->
     <polygon points="60,25 90,60 60,105 30,60"
       fill="#ffeedd" stroke="#e70" stroke-width="2"/>
@@ -1671,7 +1717,7 @@ Notice the parallel with the Platonic solid condition: replacing \(> 1/2\) (stri
     <text x="22" y="72" fill="#2a7" font-size="9">144°</text>
   </g>
 
-  <text x="170" y="158" text-anchor="middle" fill="#555" font-size="11">With matching rules → aperiodic tiling only</text>
+  <text x="170" y="158" text-anchor="middle" fill="currentColor" font-size="11">With matching rules → aperiodic tiling only</text>
 </svg>
 </div>
 
@@ -1757,9 +1803,9 @@ This means the hexagonal packing covers about 90.69% of the plane — the most e
     fill="none" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,2"/>
   <text x="120" y="50" text-anchor="middle" fill="#c00" font-size="9">fund. domain</text>
 
-  <text x="160" y="130" text-anchor="middle" fill="#333">Hexagonal circle packing</text>
-  <text x="160" y="143" text-anchor="middle" fill="#555">Each circle touches 6 neighbors</text>
-  <text x="160" y="156" text-anchor="middle" fill="#555">Density = π/(2√3) ≈ 90.69%</text>
+  <text x="160" y="130" text-anchor="middle" fill="currentColor">Hexagonal circle packing</text>
+  <text x="160" y="143" text-anchor="middle" fill="currentColor">Each circle touches 6 neighbors</text>
+  <text x="160" y="156" text-anchor="middle" fill="currentColor">Density = π/(2√3) ≈ 90.69%</text>
 </svg>
 </div>
 </div>
@@ -1791,7 +1837,7 @@ Both achieve density
 <svg viewBox="0 0 420 200" width="420" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- FCC (ABC stacking) — left panel -->
   <g transform="translate(10,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">FCC (ABCABC stacking)</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">FCC (ABCABC stacking)</text>
     <!-- Layer A (bottom): y=160, x=20,60,100,140 -->
     <circle cx="20" cy="160" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
     <circle cx="60" cy="160" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
@@ -1808,12 +1854,12 @@ Both achieve density
     <circle cx="86" cy="84" r="16" fill="#ffe8ff" stroke="#a0a" stroke-width="1.5"/>
     <circle cx="126" cy="84" r="16" fill="#ffe8ff" stroke="#a0a" stroke-width="1.5"/>
     <text x="158" y="88" fill="#a0a" font-size="10">C</text>
-    <text x="90" y="185" text-anchor="middle" fill="#555" font-size="10">Each layer offset by 1/3</text>
+    <text x="90" y="185" text-anchor="middle" fill="currentColor" font-size="10">Each layer offset by 1/3</text>
   </g>
 
   <!-- HCP (ABABAB stacking) — right panel -->
   <g transform="translate(230,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">HCP (ABABAB stacking)</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">HCP (ABABAB stacking)</text>
     <!-- Layer A (bottom): y=160 -->
     <circle cx="20" cy="160" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
     <circle cx="60" cy="160" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
@@ -1831,10 +1877,10 @@ Both achieve density
     <circle cx="100" cy="84" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
     <circle cx="140" cy="84" r="16" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
     <text x="158" y="88" fill="#2255cc" font-size="10">A</text>
-    <text x="90" y="185" text-anchor="middle" fill="#555" font-size="10">Layers A and B alternate</text>
+    <text x="90" y="185" text-anchor="middle" fill="currentColor" font-size="10">Layers A and B alternate</text>
   </g>
 
-  <text x="210" y="198" text-anchor="middle" fill="#333">Both FCC and HCP achieve density π/(3√2) ≈ 74.05%</text>
+  <text x="210" y="198" text-anchor="middle" fill="currentColor">Both FCC and HCP achieve density π/(3√2) ≈ 74.05%</text>
 </svg>
 </div>
 
@@ -1870,32 +1916,32 @@ The 12 touching spheres can be arranged in the FCC configuration (vertices of a 
 <svg viewBox="0 0 420 200" width="420" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Left: Cuboctahedron arrangement (FCC), 12 touching spheres schematic -->
   <g transform="translate(10,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">Cuboctahedron (FCC)</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Cuboctahedron (FCC)</text>
     <!-- Central sphere -->
     <circle cx="90" cy="100" r="22" fill="#dde6ff" stroke="#2255cc" stroke-width="2"/>
     <text x="90" y="104" text-anchor="middle" fill="#2255cc" font-size="10">center</text>
     <!-- 12 surrounding spheres (approximate 2D projection) -->
     <!-- Top/bottom -->
-    <circle cx="90" cy="48" r="16" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <circle cx="90" cy="152" r="16" fill="#eef" stroke="#555" stroke-width="1.2"/>
+    <circle cx="90" cy="48" r="16" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <circle cx="90" cy="152" r="16" fill="#eef" stroke="#999" stroke-width="1.2"/>
     <!-- Left/right -->
-    <circle cx="38" cy="100" r="16" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <circle cx="142" cy="100" r="16" fill="#eef" stroke="#555" stroke-width="1.2"/>
+    <circle cx="38" cy="100" r="16" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <circle cx="142" cy="100" r="16" fill="#eef" stroke="#999" stroke-width="1.2"/>
     <!-- Diagonals (showing 8 more approximately) -->
-    <circle cx="52" cy="60" r="14" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <circle cx="128" cy="60" r="14" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <circle cx="52" cy="140" r="14" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <circle cx="128" cy="140" r="14" fill="#eef" stroke="#555" stroke-width="1.2"/>
-    <text x="90" y="178" text-anchor="middle" fill="#555">12 spheres touch center</text>
-    <text x="90" y="190" text-anchor="middle" fill="#555" font-size="9">vertices of a cuboctahedron</text>
+    <circle cx="52" cy="60" r="14" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <circle cx="128" cy="60" r="14" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <circle cx="52" cy="140" r="14" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <circle cx="128" cy="140" r="14" fill="#eef" stroke="#999" stroke-width="1.2"/>
+    <text x="90" y="178" text-anchor="middle" fill="currentColor">12 spheres touch center</text>
+    <text x="90" y="190" text-anchor="middle" fill="currentColor" font-size="9">vertices of a cuboctahedron</text>
   </g>
 
   <!-- Arrow -->
-  <text x="210" y="100" text-anchor="middle" fill="#555" font-size="16">≅</text>
+  <text x="210" y="100" text-anchor="middle" fill="currentColor" font-size="16">≅</text>
 
   <!-- Right: Icosahedral arrangement -->
   <g transform="translate(230,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">Icosahedral arrangement</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Icosahedral arrangement</text>
     <!-- Central sphere -->
     <circle cx="90" cy="100" r="22" fill="#ffeedd" stroke="#e70" stroke-width="2"/>
     <text x="90" y="104" text-anchor="middle" fill="#e70" font-size="10">center</text>
@@ -1908,8 +1954,8 @@ The 12 touching spheres can be arranged in the FCC configuration (vertices of a 
     <circle cx="125" cy="58" r="14" fill="#fff0dd" stroke="#c60" stroke-width="1.2"/>
     <circle cx="55" cy="142" r="14" fill="#fff0dd" stroke="#c60" stroke-width="1.2"/>
     <circle cx="125" cy="142" r="14" fill="#fff0dd" stroke="#c60" stroke-width="1.2"/>
-    <text x="90" y="178" text-anchor="middle" fill="#555">same count: 12</text>
-    <text x="90" y="190" text-anchor="middle" fill="#555" font-size="9">gaps between neighbors → not rigid</text>
+    <text x="90" y="178" text-anchor="middle" fill="currentColor">same count: 12</text>
+    <text x="90" y="190" text-anchor="middle" fill="currentColor" font-size="9">gaps between neighbors → not rigid</text>
   </g>
 </svg>
 </div>
@@ -1983,14 +2029,14 @@ The determination of kissing numbers in other dimensions (especially 5, 6, 7) re
 <svg viewBox="0 0 460 180" width="460" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <defs>
     <marker id="axarr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,1 L8,4 L0,7 Z" fill="#555"/>
+      <path d="M0,1 L8,4 L0,7 Z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Axes -->
-  <line x1="30" y1="130" x2="440" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#axarr)"/>
-  <line x1="30" y1="130" x2="30" y2="20" stroke="#555" stroke-width="1.5" marker-end="url(#axarr)"/>
-  <text x="445" y="134" fill="#555" font-size="10">dim n</text>
-  <text x="32" y="18" fill="#555" font-size="10">κₙ</text>
+  <line x1="30" y1="130" x2="440" y2="130" stroke="#999" stroke-width="1.5" marker-end="url(#axarr)"/>
+  <line x1="30" y1="130" x2="30" y2="20" stroke="#999" stroke-width="1.5" marker-end="url(#axarr)"/>
+  <text x="445" y="134" fill="currentColor" font-size="10">dim n</text>
+  <text x="32" y="18" fill="currentColor" font-size="10">κₙ</text>
 
   <!-- Data points: (dim, kissing) scaled to SVG -->
   <!-- x: dim 1→50, 2→90, 3→130, 4→170, 8→280, 24→430 (log-ish) -->
@@ -1998,44 +2044,44 @@ The determination of kissing numbers in other dimensions (especially 5, 6, 7) re
 
   <!-- dim 1: κ=2 -->
   <circle cx="50" cy="127" r="5" fill="#2255cc"/>
-  <text x="44" y="145" fill="#333" font-size="9">n=1</text>
+  <text x="44" y="145" fill="currentColor" font-size="9">n=1</text>
   <text x="44" y="155" fill="#2255cc" font-size="9">κ=2</text>
 
   <!-- dim 2: κ=6 -->
   <circle cx="90" cy="123" r="5" fill="#2255cc"/>
-  <text x="84" y="145" fill="#333" font-size="9">n=2</text>
+  <text x="84" y="145" fill="currentColor" font-size="9">n=2</text>
   <text x="84" y="155" fill="#2255cc" font-size="9">κ=6</text>
 
   <!-- dim 3: κ=12 -->
   <circle cx="130" cy="116" r="5" fill="#2255cc"/>
-  <text x="120" y="145" fill="#333" font-size="9">n=3</text>
+  <text x="120" y="145" fill="currentColor" font-size="9">n=3</text>
   <text x="120" y="155" fill="#2255cc" font-size="9">κ=12</text>
 
   <!-- dim 4: κ=24 -->
   <circle cx="170" cy="110" r="5" fill="#2255cc"/>
-  <text x="160" y="145" fill="#333" font-size="9">n=4</text>
+  <text x="160" y="145" fill="currentColor" font-size="9">n=4</text>
   <text x="160" y="155" fill="#2255cc" font-size="9">κ=24</text>
 
   <!-- dims 5,6,7: unknown (shown as ranges) -->
   <rect x="205" y="100" width="8" height="15" fill="#aaa" opacity="0.5"/>
-  <text x="196" y="145" fill="#555" font-size="9">n=5</text>
-  <text x="190" y="155" fill="#555" font-size="9">40–44</text>
+  <text x="196" y="145" fill="currentColor" font-size="9">n=5</text>
+  <text x="190" y="155" fill="currentColor" font-size="9">40–44</text>
   <rect x="235" y="95" width="8" height="20" fill="#aaa" opacity="0.5"/>
-  <text x="226" y="145" fill="#555" font-size="9">n=6</text>
-  <text x="220" y="155" fill="#555" font-size="9">72–78</text>
+  <text x="226" y="145" fill="currentColor" font-size="9">n=6</text>
+  <text x="220" y="155" fill="currentColor" font-size="9">72–78</text>
   <rect x="265" y="88" width="8" height="28" fill="#aaa" opacity="0.5"/>
-  <text x="256" y="145" fill="#555" font-size="9">n=7</text>
-  <text x="250" y="155" fill="#555" font-size="9">126–134</text>
+  <text x="256" y="145" fill="currentColor" font-size="9">n=7</text>
+  <text x="250" y="155" fill="currentColor" font-size="9">126–134</text>
 
   <!-- dim 8: κ=240 (big jump) -->
   <circle cx="300" cy="68" r="6" fill="#c00"/>
-  <text x="290" y="145" fill="#333" font-size="9">n=8</text>
+  <text x="290" y="145" fill="currentColor" font-size="9">n=8</text>
   <text x="285" y="155" fill="#c00" font-size="9">κ=240</text>
   <text x="300" y="58" text-anchor="middle" fill="#c00" font-size="9">E₈!</text>
 
   <!-- dim 24: κ=196560 (huge jump) -->
   <circle cx="420" cy="30" r="6" fill="#a00"/>
-  <text x="400" y="145" fill="#333" font-size="9">n=24</text>
+  <text x="400" y="145" fill="currentColor" font-size="9">n=24</text>
   <text x="390" y="155" fill="#a00" font-size="9">κ=196560</text>
   <text x="420" y="22" text-anchor="middle" fill="#a00" font-size="9">Leech!</text>
 
@@ -2043,7 +2089,7 @@ The determination of kissing numbers in other dimensions (especially 5, 6, 7) re
   <polyline points="50,127 90,123 130,116 170,110 300,68 420,30"
     fill="none" stroke="#2255cc" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <text x="230" y="174" text-anchor="middle" fill="#555" font-size="10">Exact values known only for n = 1,2,3,4,8,24</text>
+  <text x="230" y="174" text-anchor="middle" fill="currentColor" font-size="10">Exact values known only for n = 1,2,3,4,8,24</text>
 </svg>
 </div>
 
@@ -2070,13 +2116,13 @@ d(z, w) = 2\,\text{arctanh}\left(\frac{|z - w|}{|1 - \bar{z}w|}\right).
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 300" width="320" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Boundary circle (circle at infinity) -->
-  <circle cx="160" cy="148" r="130" fill="#f8f8ff" stroke="#333" stroke-width="2"/>
-  <text x="160" y="10" text-anchor="middle" fill="#555" font-size="10">circle at infinity (∂𝔻)</text>
+  <circle cx="160" cy="148" r="130" fill="#f8f8ff" stroke="currentColor" stroke-width="2"/>
+  <text x="160" y="10" text-anchor="middle" fill="currentColor" font-size="10">circle at infinity (∂𝔻)</text>
 
   <!-- L4: a "line" (arc of circle meeting ∂D perpendicularly) — large arc, bottom area -->
   <!-- As a diameter (simplest line): vertical through center -->
-  <line x1="160" y1="18" x2="160" y2="278" stroke="#333" stroke-width="1.5"/>
-  <text x="172" y="165" fill="#333">L4</text>
+  <line x1="160" y1="18" x2="160" y2="278" stroke="currentColor" stroke-width="1.5"/>
+  <text x="172" y="165" fill="currentColor">L4</text>
 
   <!-- Point P: off to the left of L4 -->
   <circle cx="110" cy="120" r="4" fill="#c00"/>
@@ -2096,8 +2142,8 @@ d(z, w) = 2\,\text{arctanh}\left(\frac{|z - w|}{|1 - \bar{z}w|}\right).
   <text x="240" y="56" fill="#2a7">L1</text>
 
   <!-- Through P, L2 and L3 are both parallel to L4 (non-intersecting) -->
-  <text x="160" y="292" text-anchor="middle" fill="#555" font-size="10">Through P: infinitely many lines parallel to L4</text>
-  <text x="160" y="304" text-anchor="middle" fill="#555" font-size="10">Hyperbolic geometry violates Euclid's 5th postulate</text>
+  <text x="160" y="292" text-anchor="middle" fill="currentColor" font-size="10">Through P: infinitely many lines parallel to L4</text>
+  <text x="160" y="304" text-anchor="middle" fill="currentColor" font-size="10">Hyperbolic geometry violates Euclid's 5th postulate</text>
 </svg>
 </div>
 
@@ -2120,9 +2166,9 @@ In **elliptic geometry**, there are no parallel lines — any two distinct lines
 <svg viewBox="0 0 380 240" width="380" height="240" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Left: sphere with great circle (equator) as "line" -->
   <g transform="translate(10,10)">
-    <text x="90" y="0" text-anchor="middle" fill="#333" font-weight="bold">Spherical Geometry</text>
+    <text x="90" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Spherical Geometry</text>
     <!-- Sphere outline -->
-    <circle cx="90" cy="120" r="90" fill="#f0f4ff" stroke="#333" stroke-width="1.5"/>
+    <circle cx="90" cy="120" r="90" fill="#f0f4ff" stroke="currentColor" stroke-width="1.5"/>
     <!-- Equator (great circle as "line") -->
     <ellipse cx="90" cy="120" rx="90" ry="25" fill="none" stroke="#2255cc" stroke-width="2"/>
     <text x="168" y="124" fill="#2255cc" font-size="10">equator</text>
@@ -2135,22 +2181,22 @@ In **elliptic geometry**, there are no parallel lines — any two distinct lines
     <!-- Meridian (another great circle) -->
     <line x1="90" y1="30" x2="90" y2="210" stroke="#e70" stroke-width="1.5" stroke-dasharray="4,3"/>
     <!-- Note -->
-    <text x="90" y="235" text-anchor="middle" fill="#555" font-size="10">Any two great circles intersect</text>
+    <text x="90" y="235" text-anchor="middle" fill="currentColor" font-size="10">Any two great circles intersect</text>
   </g>
 
   <!-- Right: spherical triangle with 270° angle sum -->
   <g transform="translate(215,10)">
-    <text x="75" y="0" text-anchor="middle" fill="#333" font-weight="bold">Spherical Triangle</text>
+    <text x="75" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Spherical Triangle</text>
     <!-- Sphere -->
-    <circle cx="75" cy="120" r="75" fill="#fff8ee" stroke="#aaa" stroke-width="1.2"/>
+    <circle cx="75" cy="120" r="75" fill="#fff8ee" stroke="#777" stroke-width="1.2"/>
     <!-- Equatorial arc (flat base of triangle) -->
-    <ellipse cx="75" cy="170" rx="75" ry="18" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <ellipse cx="75" cy="170" rx="75" ry="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,2"/>
     <!-- North pole -->
     <circle cx="75" cy="45" r="4" fill="#c00"/>
     <text x="80" y="43" fill="#c00" font-size="10">N</text>
     <!-- Two base points on equator -->
-    <circle cx="20" cy="170" r="4" fill="#333"/>
-    <circle cx="130" cy="170" r="4" fill="#333"/>
+    <circle cx="20" cy="170" r="4" fill="currentColor"/>
+    <circle cx="130" cy="170" r="4" fill="currentColor"/>
     <!-- Two meridians from N to equator -->
     <line x1="75" y1="45" x2="20" y2="170" stroke="#2255cc" stroke-width="1.8"/>
     <line x1="75" y1="45" x2="130" y2="170" stroke="#2255cc" stroke-width="1.8"/>
@@ -2165,7 +2211,7 @@ In **elliptic geometry**, there are no parallel lines — any two distinct lines
     <text x="75" y="35" text-anchor="middle" fill="#e70" font-size="10">90°</text>
     <text x="10" y="178" fill="#e70" font-size="10">90°</text>
     <text x="130" y="178" fill="#e70" font-size="10">90°</text>
-    <text x="75" y="210" text-anchor="middle" fill="#333">∠sum = 270° &gt; 180°!</text>
+    <text x="75" y="210" text-anchor="middle" fill="currentColor">∠sum = 270° &gt; 180°!</text>
   </g>
 </svg>
 </div>
@@ -2197,20 +2243,20 @@ The ordinary Euclidean plane \(\mathbb{R}^2\) embeds into \(\mathbb{P}^2\) via \
 <svg viewBox="0 0 340 260" width="340" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <defs>
     <marker id="prarr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,1 L8,4 L0,7 Z" fill="#555"/>
+      <path d="M0,1 L8,4 L0,7 Z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Circle at infinity (boundary of projective plane schematic) -->
-  <circle cx="170" cy="130" r="115" fill="#f8f8ff" stroke="#333" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="170" y="10" text-anchor="middle" fill="#555" font-size="10">line at infinity ℓ∞</text>
+  <circle cx="170" cy="130" r="115" fill="#f8f8ff" stroke="currentColor" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="170" y="10" text-anchor="middle" fill="currentColor" font-size="10">line at infinity ℓ∞</text>
 
   <!-- Ordinary plane interior -->
-  <rect x="80" y="60" width="180" height="140" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="170" y="90" text-anchor="middle" fill="#888" font-size="9">ordinary plane (Z≠0)</text>
+  <rect x="80" y="60" width="180" height="140" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="170" y="90" text-anchor="middle" fill="currentColor" font-size="9">ordinary plane (Z≠0)</text>
 
   <!-- Axes of ordinary plane -->
-  <line x1="170" y1="60" x2="170" y2="200" stroke="#bbb" stroke-width="1"/>
-  <line x1="80" y1="130" x2="260" y2="130" stroke="#bbb" stroke-width="1"/>
+  <line x1="170" y1="60" x2="170" y2="200" stroke="#777" stroke-width="1"/>
+  <line x1="80" y1="130" x2="260" y2="130" stroke="#777" stroke-width="1"/>
 
   <!-- Two families of parallel lines converging to points at infinity -->
   <!-- Horizontal lines → point [1:0:0] at right -->
@@ -2229,8 +2275,8 @@ The ordinary Euclidean plane \(\mathbb{R}^2\) embeds into \(\mathbb{P}^2\) via \
   <line x1="80" y1="200" x2="255" y2="65" stroke="#2a7" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#prarr)"/>
   <line x1="100" y1="200" x2="275" y2="65" stroke="#2a7" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#prarr)"/>
 
-  <text x="170" y="245" text-anchor="middle" fill="#555">Parallel lines meet at a point at infinity</text>
-  <text x="170" y="257" text-anchor="middle" fill="#555" font-size="10">In ℙ², no two distinct lines are parallel</text>
+  <text x="170" y="245" text-anchor="middle" fill="currentColor">Parallel lines meet at a point at infinity</text>
+  <text x="170" y="257" text-anchor="middle" fill="currentColor" font-size="10">In ℙ², no two distinct lines are parallel</text>
 </svg>
 </div>
 
@@ -2280,7 +2326,7 @@ Brianchon discovered his theorem in 1806 not by independent geometric insight bu
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 340 280" width="340" height="280" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Conic (ellipse) -->
-  <ellipse cx="170" cy="140" rx="110" ry="80" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <ellipse cx="170" cy="140" rx="110" ry="80" fill="none" stroke="#777" stroke-width="1.5"/>
   <!-- Six points on the ellipse (at angles 0°, 60°, 120°, 180°, 240°, 300°) -->
   <!-- A,B,C,D,E,F in order around ellipse -->
   <!-- A: 70°, B: 130°, C: 190°, D: 250°, E: 310°, F: 10° (approx) -->
@@ -2367,10 +2413,10 @@ Computing all three centroids \(w_1, w_2, w_3\) and checking \(|w_1 - w_2| = |w_
 <svg viewBox="0 0 300 260" width="300" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Original triangle ABC -->
   <!-- A=(60,180), B=(150,60), C=(240,180) -->
-  <polygon points="60,180 150,60 240,180" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="48" y="188" fill="#333">A</text>
-  <text x="147" y="52" fill="#333">B</text>
-  <text x="244" y="188" fill="#333">C</text>
+  <polygon points="60,180 150,60 240,180" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="48" y="188" fill="currentColor">A</text>
+  <text x="147" y="52" fill="currentColor">B</text>
+  <text x="244" y="188" fill="currentColor">C</text>
 
   <!-- Equilateral triangle on AB (exterior) -->
   <!-- AB midpoint=(105,120), perpendicular out -->
@@ -2395,7 +2441,7 @@ Computing all three centroids \(w_1, w_2, w_3\) and checking \(|w_1 - w_2| = |w_
   <polygon points="85,113 220,110 150,200" fill="none" stroke="#c00" stroke-width="2.5"/>
 
   <text x="150" y="245" text-anchor="middle" fill="#c00" font-weight="bold">Napoleon's equilateral triangle (★ ★ ★)</text>
-  <text x="150" y="258" text-anchor="middle" fill="#555" font-size="10">centroids of exterior equilateral triangles</text>
+  <text x="150" y="258" text-anchor="middle" fill="currentColor" font-size="10">centroids of exterior equilateral triangles</text>
 </svg>
 </div>
 
@@ -2422,10 +2468,10 @@ The nine-point circle has radius \(R/2\) where \(R\) is the circumradius of \(\t
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 290" width="320" height="290" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Triangle ABC: A=(160,20), B=(30,240), C=(290,240) -->
-  <polygon points="160,20 30,240 290,240" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="158" y="13" text-anchor="middle" fill="#333">A</text>
-  <text x="18" y="248" fill="#333">B</text>
-  <text x="294" y="248" fill="#333">C</text>
+  <polygon points="160,20 30,240 290,240" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="158" y="13" text-anchor="middle" fill="currentColor">A</text>
+  <text x="18" y="248" fill="currentColor">B</text>
+  <text x="294" y="248" fill="currentColor">C</text>
 
   <!-- Midpoints of sides -->
   <circle cx="95" cy="130" r="4" fill="#2255cc"/>
@@ -2441,12 +2487,12 @@ The nine-point circle has radius \(R/2\) where \(R\) is the circumradius of \(\t
   <text x="166" y="172" fill="#e70" font-size="10">H</text>
 
   <!-- Altitude from A to BC (foot H_A on BC at x=160) -->
-  <line x1="160" y1="20" x2="160" y2="240" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="160" y1="20" x2="160" y2="240" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
   <circle cx="160" cy="240" r="4" fill="#c00"/>
   <text x="168" y="253" fill="#c00" font-size="9">H_A</text>
 
   <!-- Altitude from B to AC -->
-  <line x1="30" y1="240" x2="225" y2="130" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="30" y1="240" x2="225" y2="130" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
   <!-- foot approx on AC -->
   <circle cx="188" cy="152" r="3" fill="#c00"/>
   <text x="192" y="148" fill="#c00" font-size="9">H_C</text>
@@ -2460,7 +2506,7 @@ The nine-point circle has radius \(R/2\) where \(R\) is the circumradius of \(\t
   <circle cx="160" cy="150" r="95" fill="none" stroke="#c00" stroke-width="1.5" stroke-dasharray="6,3"/>
 
   <text x="160" y="272" text-anchor="middle" fill="#c00">Nine-point circle (radius R/2)</text>
-  <text x="160" y="284" text-anchor="middle" fill="#555" font-size="10">M_A,M_B,M_C, H_A,H_B,H_C, E_A,E_B,E_C all lie on it</text>
+  <text x="160" y="284" text-anchor="middle" fill="currentColor" font-size="10">M_A,M_B,M_C, H_A,H_B,H_C, E_A,E_B,E_C all lie on it</text>
 </svg>
 </div>
 
@@ -2481,10 +2527,10 @@ In any (non-equilateral) triangle, the circumcenter \(O\), the centroid \(G\), a
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 250" width="320" height="250" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Triangle A=(160,25), B=(50,210), C=(270,210) -->
-  <polygon points="160,25 50,210 270,210" fill="none" stroke="#333" stroke-width="1.8"/>
-  <text x="157" y="18" text-anchor="middle" fill="#333">A</text>
-  <text x="35" y="220" fill="#333">B</text>
-  <text x="272" y="220" fill="#333">C</text>
+  <polygon points="160,25 50,210 270,210" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="157" y="18" text-anchor="middle" fill="currentColor">A</text>
+  <text x="35" y="220" fill="currentColor">B</text>
+  <text x="272" y="220" fill="currentColor">C</text>
 
   <!-- Circumcenter O (for this triangle, equilateral-ish: ≈ center) -->
   <circle cx="160" cy="148" r="4" fill="#2255cc"/>
@@ -2510,7 +2556,7 @@ In any (non-equilateral) triangle, the circumcenter \(O\), the centroid \(G\), a
   <text x="175" y="118" fill="#c00">Euler line</text>
 
   <!-- Bottom: 1D schematic of the Euler line -->
-  <line x1="40" y1="235" x2="280" y2="235" stroke="#333" stroke-width="1.5"/>
+  <line x1="40" y1="235" x2="280" y2="235" stroke="currentColor" stroke-width="1.5"/>
   <circle cx="80" cy="235" r="4" fill="#2255cc"/>
   <text x="75" y="248" fill="#2255cc" font-size="10">O</text>
   <circle cx="140" cy="235" r="4" fill="#2a7"/>
@@ -2521,8 +2567,8 @@ In any (non-equilateral) triangle, the circumcenter \(O\), the centroid \(G\), a
   <circle cx="220" cy="235" r="4" fill="#e70"/>
   <text x="215" y="248" fill="#e70" font-size="10">H</text>
   <!-- Trisection marks -->
-  <text x="110" y="232" text-anchor="middle" fill="#555" font-size="9">|OG|</text>
-  <text x="180" y="222" text-anchor="middle" fill="#555" font-size="9">OG:GH = 1:2</text>
+  <text x="110" y="232" text-anchor="middle" fill="currentColor" font-size="9">|OG|</text>
+  <text x="180" y="222" text-anchor="middle" fill="currentColor" font-size="9">OG:GH = 1:2</text>
 </svg>
 </div>
 
@@ -2561,7 +2607,7 @@ This is often called the "Leonardo theorem" because da Vinci apparently knew (in
   <!-- Regular hexagon centered at (130,95), radius 65 -->
   <!-- Vertices at 0°,60°,...,300°: (195,95),(162,151.5),(98,151.5),(65,95),(98,38.5),(162,38.5) -->
   <polygon points="195,95 162,151.5 98,151.5 65,95 98,38.5 162,38.5"
-    fill="#fff8cc" stroke="#333" stroke-width="2"/>
+    fill="#fff8cc" stroke="currentColor" stroke-width="2"/>
   <!-- 3 axes through opposite vertices -->
   <line x1="195" y1="95" x2="65" y2="95" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="162" y1="38.5" x2="98" y2="151.5" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
@@ -2580,7 +2626,7 @@ This is often called the "Leonardo theorem" because da Vinci apparently knew (in
   <text x="55" y="174" fill="#c00" font-size="10">3 vertex axes</text>
   <line x1="20" y1="185" x2="50" y2="185" stroke="#2255cc" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="55" y="189" fill="#2255cc" font-size="10">3 edge-midpoint axes</text>
-  <text x="130" y="200" text-anchor="middle" fill="#333">D₆: 6 reflection axes, order 12</text>
+  <text x="130" y="200" text-anchor="middle" fill="currentColor">D₆: 6 reflection axes, order 12</text>
 </svg>
 </div>
 </div>
@@ -2708,8 +2754,8 @@ The 240 roots form a highly symmetric arrangement: the symmetry group of \(E_8\)
     <circle cx="55" cy="90" r="2"/><circle cx="90" cy="55" r="2"/>
     <circle cx="210" cy="55" r="2"/><circle cx="245" cy="90" r="2"/>
   </g>
-  <text x="150" y="285" text-anchor="middle" fill="#333">E₈ root system projected to 2D</text>
-  <text x="150" y="298" text-anchor="middle" fill="#555" font-size="10">240 roots with 8-fold symmetry (actual symmetry order ≈ 7×10⁸)</text>
+  <text x="150" y="285" text-anchor="middle" fill="currentColor">E₈ root system projected to 2D</text>
+  <text x="150" y="298" text-anchor="middle" fill="currentColor" font-size="10">240 roots with 8-fold symmetry (actual symmetry order ≈ 7×10⁸)</text>
 </svg>
 </div>
 
@@ -2770,10 +2816,10 @@ This theorem unifies many classical concurrency results:
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 280 230" width="280" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Triangle A=(140,20), B=(30,200), C=(250,200) -->
-  <polygon points="140,20 30,200 250,200" fill="none" stroke="#333" stroke-width="1.8"/>
-  <text x="138" y="13" text-anchor="middle" fill="#333">A</text>
-  <text x="16" y="210" fill="#333">B</text>
-  <text x="252" y="210" fill="#333">C</text>
+  <polygon points="140,20 30,200 250,200" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="138" y="13" text-anchor="middle" fill="currentColor">A</text>
+  <text x="16" y="210" fill="currentColor">B</text>
+  <text x="252" y="210" fill="currentColor">C</text>
 
   <!-- Point of concurrency P (centroid approximately) -->
   <circle cx="140" cy="140" r="4" fill="#c00"/>
@@ -2797,8 +2843,8 @@ This theorem unifies many classical concurrency results:
   <line x1="250" y1="200" x2="85" y2="110" stroke="#2255cc" stroke-width="1.5"/>
 
   <!-- Formula -->
-  <text x="140" y="218" text-anchor="middle" fill="#333" font-size="11">BD/DC · CE/EA · AF/FB = 1</text>
-  <text x="140" y="230" text-anchor="middle" fill="#555" font-size="10">⟺ cevians AD, BE, CF are concurrent</text>
+  <text x="140" y="218" text-anchor="middle" fill="currentColor" font-size="11">BD/DC · CE/EA · AF/FB = 1</text>
+  <text x="140" y="230" text-anchor="middle" fill="currentColor" font-size="10">⟺ cevians AD, BE, CF are concurrent</text>
 </svg>
 </div>
 
@@ -2831,12 +2877,12 @@ The Simson line is one of the most beautiful theorems in elementary geometry. As
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 300 250" width="300" height="250" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Circumcircle -->
-  <circle cx="150" cy="125" r="105" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <circle cx="150" cy="125" r="105" fill="none" stroke="#777" stroke-width="1.5"/>
   <!-- Triangle A=(55,195), B=(245,195), C=(120,22) inscribed in circle -->
-  <polygon points="55,195 245,195 120,22" fill="none" stroke="#333" stroke-width="1.8"/>
-  <text x="40" y="205" fill="#333">A</text>
-  <text x="248" y="205" fill="#333">B</text>
-  <text x="122" y="15" fill="#333">C</text>
+  <polygon points="55,195 245,195 120,22" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="40" y="205" fill="currentColor">A</text>
+  <text x="248" y="205" fill="currentColor">B</text>
+  <text x="122" y="15" fill="currentColor">C</text>
 
   <!-- Point P on circumcircle (top-right area) -->
   <circle cx="240" cy="60" r="5" fill="#c00"/>
@@ -2864,7 +2910,7 @@ The Simson line is one of the most beautiful theorems in elementary geometry. As
   <line x1="130" y1="72" x2="230" y2="210" stroke="#c00" stroke-width="2"/>
   <text x="75" y="72" fill="#c00">Simson line</text>
 
-  <text x="150" y="240" text-anchor="middle" fill="#555" font-size="10">Pa, Pb, Pc collinear — the Simson line of P</text>
+  <text x="150" y="240" text-anchor="middle" fill="currentColor" font-size="10">Pa, Pb, Pc collinear — the Simson line of P</text>
 </svg>
 </div>
 
@@ -2936,53 +2982,53 @@ Modern geometry is characterized by its connections to algebra, topology, analys
 <svg viewBox="0 0 420 340" width="420" height="340" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="webArr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,1 L8,4 L0,7 Z" fill="#555"/>
+      <path d="M0,1 L8,4 L0,7 Z" fill="currentColor"/>
     </marker>
   </defs>
 
   <!-- Top row: AXIOMS, CONICS, POLYTOPES -->
   <rect x="10" y="15" width="90" height="55" rx="6" fill="#e8f0ff" stroke="#2255cc" stroke-width="1.5"/>
   <text x="55" y="36" text-anchor="middle" fill="#2255cc" font-weight="bold">AXIOMS</text>
-  <text x="55" y="50" text-anchor="middle" fill="#555" font-size="10">Ch. 1</text>
-  <text x="55" y="62" text-anchor="middle" fill="#555" font-size="9">Hilbert, Wantzel</text>
+  <text x="55" y="50" text-anchor="middle" fill="currentColor" font-size="10">Ch. 1</text>
+  <text x="55" y="62" text-anchor="middle" fill="currentColor" font-size="9">Hilbert, Wantzel</text>
 
   <rect x="165" y="15" width="90" height="55" rx="6" fill="#fff0e0" stroke="#e70" stroke-width="1.5"/>
   <text x="210" y="36" text-anchor="middle" fill="#e70" font-weight="bold">CONICS</text>
-  <text x="210" y="50" text-anchor="middle" fill="#555" font-size="10">Ch. 2</text>
-  <text x="210" y="62" text-anchor="middle" fill="#555" font-size="9">Apollonius, Kepler</text>
+  <text x="210" y="50" text-anchor="middle" fill="currentColor" font-size="10">Ch. 2</text>
+  <text x="210" y="62" text-anchor="middle" fill="currentColor" font-size="9">Apollonius, Kepler</text>
 
   <rect x="320" y="15" width="90" height="55" rx="6" fill="#e8ffe8" stroke="#2a7" stroke-width="1.5"/>
   <text x="365" y="36" text-anchor="middle" fill="#2a7" font-weight="bold">POLYTOPES</text>
-  <text x="365" y="50" text-anchor="middle" fill="#555" font-size="10">Ch. 3</text>
-  <text x="365" y="62" text-anchor="middle" fill="#555" font-size="9">Plato, Schläfli</text>
+  <text x="365" y="50" text-anchor="middle" fill="currentColor" font-size="10">Ch. 3</text>
+  <text x="365" y="62" text-anchor="middle" fill="currentColor" font-size="9">Plato, Schläfli</text>
 
   <!-- Arrows from top row to POLYHEDRA -->
-  <line x1="55" y1="70" x2="170" y2="125" stroke="#555" stroke-width="1.2" marker-end="url(#webArr)"/>
-  <line x1="210" y1="70" x2="210" y2="120" stroke="#555" stroke-width="1.2" marker-end="url(#webArr)"/>
-  <line x1="365" y1="70" x2="255" y2="125" stroke="#555" stroke-width="1.2" marker-end="url(#webArr)"/>
+  <line x1="55" y1="70" x2="170" y2="125" stroke="#999" stroke-width="1.2" marker-end="url(#webArr)"/>
+  <line x1="210" y1="70" x2="210" y2="120" stroke="#999" stroke-width="1.2" marker-end="url(#webArr)"/>
+  <line x1="365" y1="70" x2="255" y2="125" stroke="#999" stroke-width="1.2" marker-end="url(#webArr)"/>
 
   <!-- POLYHEDRA -->
   <rect x="130" y="125" width="160" height="55" rx="6" fill="#fff0f8" stroke="#a0a" stroke-width="1.5"/>
   <text x="210" y="146" text-anchor="middle" fill="#a0a" font-weight="bold">POLYHEDRA</text>
-  <text x="210" y="160" text-anchor="middle" fill="#555" font-size="10">Ch. 4</text>
-  <text x="210" y="172" text-anchor="middle" fill="#555" font-size="9">Euler's formula, Duality</text>
+  <text x="210" y="160" text-anchor="middle" fill="currentColor" font-size="10">Ch. 4</text>
+  <text x="210" y="172" text-anchor="middle" fill="currentColor" font-size="9">Euler's formula, Duality</text>
 
   <!-- Arrow down to SYMMETRIES -->
-  <line x1="210" y1="180" x2="210" y2="215" stroke="#555" stroke-width="1.2" marker-end="url(#webArr)"/>
+  <line x1="210" y1="180" x2="210" y2="215" stroke="#999" stroke-width="1.2" marker-end="url(#webArr)"/>
 
   <!-- SYMMETRIES -->
   <rect x="110" y="215" width="200" height="55" rx="6" fill="#fffde0" stroke="#bb7" stroke-width="1.5"/>
   <text x="210" y="236" text-anchor="middle" fill="#bb7" font-weight="bold">SYMMETRIES</text>
-  <text x="210" y="250" text-anchor="middle" fill="#555" font-size="10">Ch. 5</text>
-  <text x="210" y="262" text-anchor="middle" fill="#555" font-size="9">17 wallpaper groups, Penrose</text>
+  <text x="210" y="250" text-anchor="middle" fill="currentColor" font-size="10">Ch. 5</text>
+  <text x="210" y="262" text-anchor="middle" fill="currentColor" font-size="9">17 wallpaper groups, Penrose</text>
 
   <!-- Arrow down to SPHERE PACKING -->
-  <line x1="210" y1="270" x2="210" y2="305" stroke="#555" stroke-width="1.2" marker-end="url(#webArr)"/>
+  <line x1="210" y1="270" x2="210" y2="305" stroke="#999" stroke-width="1.2" marker-end="url(#webArr)"/>
 
   <!-- SPHERE PACKING -->
   <rect x="90" y="305" width="240" height="30" rx="6" fill="#ffe8e8" stroke="#c00" stroke-width="1.5"/>
   <text x="210" y="316" text-anchor="middle" fill="#c00" font-weight="bold">SPHERE PACKING</text>
-  <text x="210" y="328" text-anchor="middle" fill="#555" font-size="9">Ch. 6 — Hales, Viazovska, E₈, Leech</text>
+  <text x="210" y="328" text-anchor="middle" fill="currentColor" font-size="9">Ch. 6 — Hales, Viazovska, E₈, Leech</text>
 </svg>
 </div>
 
@@ -3048,7 +3094,7 @@ At \(\theta = 90°\): \(r = 2/(1 + 0) = 2\) AU. So when the comet is directly ab
 <svg viewBox="0 0 320 220" width="320" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <defs>
     <marker id="orbarr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,1 L8,4 L0,7 Z" fill="#555"/>
+      <path d="M0,1 L8,4 L0,7 Z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Sun at focus (left) -->
@@ -3069,24 +3115,24 @@ At \(\theta = 90°\): \(r = 2/(1 + 0) = 2\) AU. So when the comet is directly ab
   <path d="M80,20 Q150,75 135,130 Q150,185 80,240" fill="none" stroke="#2255cc" stroke-width="2" marker-end="url(#orbarr)"/>
 
   <!-- Perihelion point -->
-  <circle cx="135" cy="130" r="4" fill="#333"/>
-  <text x="138" y="125" fill="#333" font-size="10">perihelion r=1 AU</text>
+  <circle cx="135" cy="130" r="4" fill="currentColor"/>
+  <text x="138" y="125" fill="currentColor" font-size="10">perihelion r=1 AU</text>
 
   <!-- Comet at θ=90° -->
   <circle cx="80" cy="20" r="5" fill="#c00"/>
   <text x="88" y="18" fill="#c00" font-size="10">comet r=2 AU (θ=90°)</text>
 
   <!-- Axis direction θ=0 -->
-  <line x1="80" y1="130" x2="290" y2="130" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#orbarr)"/>
+  <line x1="80" y1="130" x2="290" y2="130" stroke="#777" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#orbarr)"/>
   <text x="275" y="125" fill="#aaa" font-size="9">θ=0</text>
 
   <!-- Distance lines -->
-  <line x1="80" y1="130" x2="135" y2="130" stroke="#555" stroke-width="1"/>
-  <text x="107" y="145" text-anchor="middle" fill="#555" font-size="9">1 AU</text>
-  <line x1="80" y1="130" x2="80" y2="20" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="60" y="78" fill="#555" font-size="9">2 AU</text>
+  <line x1="80" y1="130" x2="135" y2="130" stroke="#999" stroke-width="1"/>
+  <text x="107" y="145" text-anchor="middle" fill="currentColor" font-size="9">1 AU</text>
+  <line x1="80" y1="130" x2="80" y2="20" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="60" y="78" fill="currentColor" font-size="9">2 AU</text>
 
-  <text x="160" y="205" text-anchor="middle" fill="#333">Parabolic orbit: r = 2/(1+cosθ)</text>
+  <text x="160" y="205" text-anchor="middle" fill="currentColor">Parabolic orbit: r = 2/(1+cosθ)</text>
 </svg>
 </div>
 </div>
@@ -3158,29 +3204,29 @@ The formula is \(E = \frac{2}{\frac{2}{p} - 1 + \frac{2}{q}} = \frac{2pq}{2q - p
 <svg viewBox="0 0 380 180" width="380" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- p6 fundamental domain: 60° sector of hexagonal cell -->
   <g transform="translate(20,15)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">p6 fundamental domain</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p6 fundamental domain</text>
     <!-- Hexagon for reference -->
     <polygon points="80,30 113,48.5 113,85 80,103.5 47,85 47,48.5"
-      fill="#fff8cc" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
     <!-- 60° sector (one triangle of the 6) -->
     <polygon points="80,67 80,30 113,48.5"
       fill="#ffe0a0" stroke="#e70" stroke-width="2"/>
     <!-- Center rotation symbol -->
     <circle cx="80" cy="67" r="5" fill="#e70" fill-opacity="0.6"/>
     <text x="85" y="64" fill="#e70" font-size="9">60°</text>
-    <text x="80" y="130" text-anchor="middle" fill="#555">no reflection axes</text>
-    <text x="80" y="143" text-anchor="middle" fill="#555" font-size="9">6-fold rotation only</text>
+    <text x="80" y="130" text-anchor="middle" fill="currentColor">no reflection axes</text>
+    <text x="80" y="143" text-anchor="middle" fill="currentColor" font-size="9">6-fold rotation only</text>
   </g>
 
   <!-- Divider -->
-  <line x1="190" y1="20" x2="190" y2="155" stroke="#ddd" stroke-width="1"/>
+  <line x1="190" y1="20" x2="190" y2="155" stroke="#666" stroke-width="1"/>
 
   <!-- p6mm fundamental domain: 30° right-triangle sector (1/12 of hex) -->
   <g transform="translate(210,15)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">p6mm fundamental domain</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">p6mm fundamental domain</text>
     <!-- Hexagon for reference -->
     <polygon points="80,30 113,48.5 113,85 80,103.5 47,85 47,48.5"
-      fill="#fff8cc" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
     <!-- 30° right-triangle (1/12 of hex cell) -->
     <polygon points="80,67 80,30 113,48.5"
       fill="#d0e8ff" stroke="#2255cc" stroke-width="2"/>
@@ -3192,8 +3238,8 @@ The formula is \(E = \frac{2}{\frac{2}{p} - 1 + \frac{2}{q}} = \frac{2pq}{2q - p
     <!-- Center rotation symbol -->
     <circle cx="80" cy="67" r="4" fill="#2255cc" fill-opacity="0.6"/>
     <!-- Labels for 6 reflection axes hint -->
-    <text x="80" y="130" text-anchor="middle" fill="#555">6 reflection axes</text>
-    <text x="80" y="143" text-anchor="middle" fill="#555" font-size="9">fundamental domain = 1/12 of hex cell</text>
+    <text x="80" y="130" text-anchor="middle" fill="currentColor">6 reflection axes</text>
+    <text x="80" y="143" text-anchor="middle" fill="currentColor" font-size="9">fundamental domain = 1/12 of hex cell</text>
     <text x="80" y="155" text-anchor="middle" fill="#2255cc" font-size="9">highest symmetry wallpaper group</text>
   </g>
 </svg>
@@ -3253,7 +3299,7 @@ Shechtman was awarded the Nobel Prize in Chemistry in 2011, and quasicrystals ha
 <svg viewBox="0 0 400 220" width="400" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Crystal diffraction: 4-fold symmetric spots (square lattice) -->
   <g transform="translate(20,20)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Crystal (periodic)</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Crystal (periodic)</text>
     <!-- Square lattice of diffraction spots -->
     <g fill="#2255cc">
       <circle cx="30" cy="30" r="4"/><circle cx="60" cy="30" r="4"/>
@@ -3265,16 +3311,16 @@ Shechtman was awarded the Nobel Prize in Chemistry in 2011, and quasicrystals ha
       <circle cx="30" cy="120" r="4"/><circle cx="60" cy="120" r="4"/>
       <circle cx="90" cy="120" r="4"/><circle cx="120" cy="120" r="4"/>
     </g>
-    <text x="75" y="145" text-anchor="middle" fill="#555" font-size="10">4-fold symmetric spots</text>
-    <text x="75" y="158" text-anchor="middle" fill="#555" font-size="9">lattice: f(r+T)=f(r)</text>
+    <text x="75" y="145" text-anchor="middle" fill="currentColor" font-size="10">4-fold symmetric spots</text>
+    <text x="75" y="158" text-anchor="middle" fill="currentColor" font-size="9">lattice: f(r+T)=f(r)</text>
   </g>
 
   <!-- Divider -->
-  <line x1="195" y1="15" x2="195" y2="195" stroke="#ddd" stroke-width="1"/>
+  <line x1="195" y1="15" x2="195" y2="195" stroke="#666" stroke-width="1"/>
 
   <!-- Quasicrystal diffraction: 10-fold symmetric spots -->
   <g transform="translate(215,20)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Quasicrystal</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Quasicrystal</text>
     <!-- 10-fold arrangement of diffraction spots: 1 center + rings -->
     <!-- Center -->
     <circle cx="80" cy="75" r="6" fill="#c00"/>
@@ -3305,7 +3351,7 @@ Shechtman was awarded the Nobel Prize in Chemistry in 2011, and quasicrystals ha
       <circle cx="38" cy="128" r="3"/>
     </g>
     <text x="80" y="158" text-anchor="middle" fill="#c00" font-size="10">10-fold symmetric!</text>
-    <text x="80" y="170" text-anchor="middle" fill="#555" font-size="9">aperiodic: no translation T</text>
+    <text x="80" y="170" text-anchor="middle" fill="currentColor" font-size="9">aperiodic: no translation T</text>
   </g>
 </svg>
 </div>
@@ -3347,8 +3393,8 @@ A **net** of a polyhedron is a planar figure obtained by cutting along some edge
 <svg viewBox="0 0 520 300" width="520" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- Tetrahedron net: 4 triangles in a row/fan -->
   <g transform="translate(10,10)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Tetrahedron net</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">(1 of 2 nets)</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Tetrahedron net</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">(1 of 2 nets)</text>
     <!-- Central triangle -->
     <polygon points="55,25 25,73 85,73" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
     <!-- Left flap -->
@@ -3357,27 +3403,27 @@ A **net** of a polyhedron is a planar figure obtained by cutting along some edge
     <polygon points="85,73 55,25 100,73" fill="#e8f0ff" stroke="#2255cc" stroke-width="1.5"/>
     <!-- Bottom flap -->
     <polygon points="25,73 85,73 55,121" fill="#c8d8ff" stroke="#2255cc" stroke-width="1.5"/>
-    <text x="55" y="135" text-anchor="middle" fill="#555" font-size="9">4 triangles</text>
+    <text x="55" y="135" text-anchor="middle" fill="currentColor" font-size="9">4 triangles</text>
   </g>
 
   <!-- Cube net: cross shape -->
   <g transform="translate(135,10)">
-    <text x="55" y="0" text-anchor="middle" fill="#333" font-weight="bold">Cube net</text>
-    <text x="55" y="12" text-anchor="middle" fill="#555" font-size="9">(cross, 1 of 11)</text>
+    <text x="55" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Cube net</text>
+    <text x="55" y="12" text-anchor="middle" fill="currentColor" font-size="9">(cross, 1 of 11)</text>
     <rect x="30" y="18" width="30" height="30" fill="#ffeedd" stroke="#e70" stroke-width="1.5"/>
     <rect x="0" y="48" width="30" height="30" fill="#ffeedd" stroke="#e70" stroke-width="1.5"/>
     <rect x="30" y="48" width="30" height="30" fill="#ffd0aa" stroke="#e70" stroke-width="1.5"/>
     <rect x="60" y="48" width="30" height="30" fill="#ffeedd" stroke="#e70" stroke-width="1.5"/>
     <rect x="90" y="48" width="30" height="30" fill="#ffeedd" stroke="#e70" stroke-width="1.5"/>
     <rect x="30" y="78" width="30" height="30" fill="#ffeedd" stroke="#e70" stroke-width="1.5"/>
-    <text x="55" y="122" text-anchor="middle" fill="#555" font-size="9">6 squares (cross)</text>
+    <text x="55" y="122" text-anchor="middle" fill="currentColor" font-size="9">6 squares (cross)</text>
     <text x="55" y="133" text-anchor="middle" fill="#e70" font-size="9">↑ top    ↓ bottom</text>
   </g>
 
   <!-- Octahedron net: zig-zag row of 8 triangles -->
   <g transform="translate(275,10)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Octahedron net</text>
-    <text x="80" y="12" text-anchor="middle" fill="#555" font-size="9">(zig-zag strip, 1 of 11)</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Octahedron net</text>
+    <text x="80" y="12" text-anchor="middle" fill="currentColor" font-size="9">(zig-zag strip, 1 of 11)</text>
     <!-- Two rows of 4 alternating triangles -->
     <polygon points="10,50 30,18 50,50" fill="#e8ffe8" stroke="#2a7" stroke-width="1.5"/>
     <polygon points="30,18 50,50 70,18" fill="#c8ffc8" stroke="#2a7" stroke-width="1.5"/>
@@ -3387,13 +3433,13 @@ A **net** of a polyhedron is a planar figure obtained by cutting along some edge
     <polygon points="110,18 130,50 150,18" fill="#c8ffc8" stroke="#2a7" stroke-width="1.5"/>
     <polygon points="130,50 150,18 170,50" fill="#e8ffe8" stroke="#2a7" stroke-width="1.5"/>
     <polygon points="150,18 170,50 190,18" fill="#c8ffc8" stroke="#2a7" stroke-width="1.5"/>
-    <text x="100" y="68" text-anchor="middle" fill="#555" font-size="9">8 triangles in zig-zag</text>
+    <text x="100" y="68" text-anchor="middle" fill="currentColor" font-size="9">8 triangles in zig-zag</text>
   </g>
 
   <!-- Dodecahedron net hint (2 caps of pentagons) -->
   <g transform="translate(10,160)">
-    <text x="80" y="0" text-anchor="middle" fill="#333" font-weight="bold">Dodecahedron net</text>
-    <text x="80" y="12" text-anchor="middle" fill="#555" font-size="9">(1 of 43,380 nets)</text>
+    <text x="80" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Dodecahedron net</text>
+    <text x="80" y="12" text-anchor="middle" fill="currentColor" font-size="9">(1 of 43,380 nets)</text>
     <!-- Top cap pentagon -->
     <polygon points="80,25 105,42 96,70 64,70 55,42" fill="#ffe8ff" stroke="#a0a" stroke-width="1.5"/>
     <text x="80" y="52" text-anchor="middle" fill="#a0a" font-size="9">P</text>
@@ -3402,13 +3448,13 @@ A **net** of a polyhedron is a planar figure obtained by cutting along some edge
     <polygon points="105,42 130,55 135,85 110,100 80,90" fill="#eeddff" stroke="#a0a" stroke-width="1.2"/>
     <polygon points="80,90 50,100 45,130 80,140 115,130" fill="#ffe8ff" stroke="#a0a" stroke-width="1.5"/>
     <text x="80" y="122" text-anchor="middle" fill="#a0a" font-size="9">P</text>
-    <text x="80" y="150" text-anchor="middle" fill="#555" font-size="9">12 pentagons total</text>
+    <text x="80" y="150" text-anchor="middle" fill="currentColor" font-size="9">12 pentagons total</text>
   </g>
 
   <!-- Icosahedron net: two rows of triangles -->
   <g transform="translate(200,165)">
-    <text x="130" y="0" text-anchor="middle" fill="#333" font-weight="bold">Icosahedron net</text>
-    <text x="130" y="12" text-anchor="middle" fill="#555" font-size="9">(1 of 43,380 nets)</text>
+    <text x="130" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Icosahedron net</text>
+    <text x="130" y="12" text-anchor="middle" fill="currentColor" font-size="9">(1 of 43,380 nets)</text>
     <!-- Two rows of 10 triangles -->
     <!-- Row 1 (top): 10 triangles -->
     <g fill="#fff0e0" stroke="#c60" stroke-width="1.2">
@@ -3436,7 +3482,7 @@ A **net** of a polyhedron is a planar figure obtained by cutting along some edge
       <polygon points="130,40 145,65 160,40"/>
       <polygon points="160,40 145,65 175,65"/>
     </g>
-    <text x="93" y="82" text-anchor="middle" fill="#555" font-size="9">20 triangles in double row</text>
+    <text x="93" y="82" text-anchor="middle" fill="currentColor" font-size="9">20 triangles in double row</text>
   </g>
 </svg>
 </div>
@@ -3454,62 +3500,62 @@ The **rhombic dodecahedron** (the dual of the cuboctahedron) has a special prope
 <svg viewBox="0 0 400 220" width="400" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- LEFT: Side view of rhombic dodecahedron (diamond-like silhouette) -->
   <g transform="translate(30,15)">
-    <text x="70" y="0" text-anchor="middle" fill="#333" font-weight="bold">Side view</text>
+    <text x="70" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Side view</text>
     <!-- Top vertex -->
     <circle cx="70" cy="20" r="4" fill="#2255cc"/>
     <!-- Upper-left and upper-right vertices -->
-    <circle cx="30" cy="80" r="4" fill="#333"/>
-    <circle cx="110" cy="80" r="4" fill="#333"/>
+    <circle cx="30" cy="80" r="4" fill="currentColor"/>
+    <circle cx="110" cy="80" r="4" fill="currentColor"/>
     <!-- Left and right mid vertices -->
-    <circle cx="20" cy="120" r="4" fill="#333"/>
-    <circle cx="120" cy="120" r="4" fill="#333"/>
+    <circle cx="20" cy="120" r="4" fill="currentColor"/>
+    <circle cx="120" cy="120" r="4" fill="currentColor"/>
     <!-- Lower-left and lower-right vertices -->
-    <circle cx="30" cy="160" r="4" fill="#333"/>
-    <circle cx="110" cy="160" r="4" fill="#333"/>
+    <circle cx="30" cy="160" r="4" fill="currentColor"/>
+    <circle cx="110" cy="160" r="4" fill="currentColor"/>
     <!-- Bottom vertex -->
     <circle cx="70" cy="200" r="4" fill="#2255cc"/>
     <!-- Top edges -->
-    <line x1="70" y1="20" x2="30" y2="80" stroke="#333" stroke-width="1.5"/>
-    <line x1="70" y1="20" x2="110" y2="80" stroke="#333" stroke-width="1.5"/>
+    <line x1="70" y1="20" x2="30" y2="80" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="70" y1="20" x2="110" y2="80" stroke="currentColor" stroke-width="1.5"/>
     <!-- Middle rhombus -->
-    <line x1="30" y1="80" x2="20" y2="120" stroke="#333" stroke-width="1.5"/>
-    <line x1="110" y1="80" x2="120" y2="120" stroke="#333" stroke-width="1.5"/>
-    <line x1="20" y1="120" x2="30" y2="160" stroke="#333" stroke-width="1.5"/>
-    <line x1="120" y1="120" x2="110" y2="160" stroke="#333" stroke-width="1.5"/>
+    <line x1="30" y1="80" x2="20" y2="120" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="110" y1="80" x2="120" y2="120" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="20" y1="120" x2="30" y2="160" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="120" y1="120" x2="110" y2="160" stroke="currentColor" stroke-width="1.5"/>
     <!-- Horizontal rhombus edges -->
-    <line x1="30" y1="80" x2="110" y2="80" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="20" y1="120" x2="120" y2="120" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="30" y1="160" x2="110" y2="160" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="30" y1="80" x2="110" y2="80" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="20" y1="120" x2="120" y2="120" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="30" y1="160" x2="110" y2="160" stroke="#777" stroke-width="1" stroke-dasharray="3,2"/>
     <!-- Bottom edges -->
-    <line x1="30" y1="160" x2="70" y2="200" stroke="#333" stroke-width="1.5"/>
-    <line x1="110" y1="160" x2="70" y2="200" stroke="#333" stroke-width="1.5"/>
-    <text x="70" y="215" text-anchor="middle" fill="#555" font-size="10">12 rhombic faces</text>
+    <line x1="30" y1="160" x2="70" y2="200" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="110" y1="160" x2="70" y2="200" stroke="currentColor" stroke-width="1.5"/>
+    <text x="70" y="215" text-anchor="middle" fill="currentColor" font-size="10">12 rhombic faces</text>
   </g>
 
   <!-- Divider -->
-  <line x1="195" y1="10" x2="195" y2="210" stroke="#ddd" stroke-width="1"/>
+  <line x1="195" y1="10" x2="195" y2="210" stroke="#666" stroke-width="1"/>
 
   <!-- RIGHT: Top view (hexagonal cross-section pattern) -->
   <g transform="translate(215,15)">
-    <text x="85" y="0" text-anchor="middle" fill="#333" font-weight="bold">Top view (Voronoi cell of FCC)</text>
+    <text x="85" y="0" text-anchor="middle" fill="currentColor" font-weight="bold">Top view (Voronoi cell of FCC)</text>
     <!-- Hexagonal arrangement showing top-view cross-section -->
     <!-- Central hexagon -->
     <polygon points="85,55 115,72 115,107 85,124 55,107 55,72"
       fill="#e8f0ff" stroke="#2255cc" stroke-width="2"/>
     <!-- Surrounding tiles (showing tessellation) -->
     <polygon points="85,55 115,72 145,55 145,20 115,3 85,20"
-      fill="#fff8cc" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
     <polygon points="115,72 145,55 175,72 175,107 145,124 115,107"
-      fill="#fff8cc" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
     <polygon points="85,124 115,107 115,142 85,159 55,142 55,107"
-      fill="#fff8cc" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
     <polygon points="55,72 85,55 85,20 55,3 25,20 25,55"
-      fill="#fff8cc" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+      fill="#fff8cc" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
     <!-- Center dot -->
     <circle cx="85" cy="90" r="4" fill="#c00"/>
     <text x="91" y="93" fill="#c00" font-size="9">FCC point</text>
-    <text x="85" y="178" text-anchor="middle" fill="#555" font-size="10">Copies tile ℝ³ without gaps</text>
-    <text x="85" y="190" text-anchor="middle" fill="#555" font-size="9">Wigner-Seitz cell of FCC lattice</text>
+    <text x="85" y="178" text-anchor="middle" fill="currentColor" font-size="10">Copies tile ℝ³ without gaps</text>
+    <text x="85" y="190" text-anchor="middle" fill="currentColor" font-size="9">Wigner-Seitz cell of FCC lattice</text>
   </g>
 </svg>
 </div>
@@ -3540,34 +3586,34 @@ This sequence — octahedron, cuboctahedron, octahedron — is the 4D analog of 
   <!-- Vertical sweep arrow on left -->
   <defs>
     <marker id="swArr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#555"/>
+      <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"/>
     </marker>
   </defs>
-  <line x1="20" y1="20" x2="20" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#swArr)"/>
-  <text x="12" y="120" fill="#555" font-size="10" transform="rotate(-90,12,120)">sweep direction</text>
+  <line x1="20" y1="20" x2="20" y2="210" stroke="#999" stroke-width="1.5" marker-end="url(#swArr)"/>
+  <text x="12" y="120" fill="currentColor" font-size="10" transform="rotate(-90,12,120)">sweep direction</text>
 
   <!-- Layer 1: single vertex (top) -->
   <g transform="translate(50,15)">
-    <text x="0" y="12" fill="#555" font-size="10" font-weight="bold">Layer 1</text>
-    <text x="90" y="12" fill="#555" font-size="10">single vertex</text>
+    <text x="0" y="12" fill="currentColor" font-size="10" font-weight="bold">Layer 1</text>
+    <text x="90" y="12" fill="currentColor" font-size="10">single vertex</text>
     <circle cx="45" cy="8" r="5" fill="#2255cc"/>
   </g>
 
   <!-- Layer 2: small triangular cross-section -->
   <g transform="translate(50,55)">
-    <text x="0" y="12" fill="#555" font-size="10" font-weight="bold">Layer 2</text>
-    <text x="90" y="12" fill="#555" font-size="10">triangular cross-section (3 vertices)</text>
+    <text x="0" y="12" fill="currentColor" font-size="10" font-weight="bold">Layer 2</text>
+    <text x="90" y="12" fill="currentColor" font-size="10">triangular cross-section (3 vertices)</text>
     <!-- Small triangle -->
     <polygon points="45,20 30,42 60,42" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
-    <circle cx="45" cy="20" r="3" fill="#333"/>
-    <circle cx="30" cy="42" r="3" fill="#333"/>
-    <circle cx="60" cy="42" r="3" fill="#333"/>
+    <circle cx="45" cy="20" r="3" fill="currentColor"/>
+    <circle cx="30" cy="42" r="3" fill="currentColor"/>
+    <circle cx="60" cy="42" r="3" fill="currentColor"/>
   </g>
 
   <!-- Layer 3: cuboctahedron (middle, largest cross-section) -->
   <g transform="translate(50,115)">
-    <text x="0" y="12" fill="#555" font-size="10" font-weight="bold">Layer 3</text>
-    <text x="90" y="12" fill="#333" font-size="10">cuboctahedron (12V, 24E, 8△+6□)</text>
+    <text x="0" y="12" fill="currentColor" font-size="10" font-weight="bold">Layer 3</text>
+    <text x="90" y="12" fill="currentColor" font-size="10">cuboctahedron (12V, 24E, 8△+6□)</text>
     <!-- Cuboctahedron schematic: square + triangles alternating -->
     <!-- Square face in center -->
     <rect x="28" y="22" width="34" height="34" fill="#fff0cc" stroke="#e70" stroke-width="1.5"/>
@@ -3581,18 +3627,18 @@ This sequence — octahedron, cuboctahedron, octahedron — is the 4D analog of 
 
   <!-- Layer 4: mirror of Layer 2 -->
   <g transform="translate(50,200)">
-    <text x="0" y="12" fill="#555" font-size="10" font-weight="bold">Layer 4</text>
-    <text x="90" y="12" fill="#555" font-size="10">mirror of Layer 2</text>
+    <text x="0" y="12" fill="currentColor" font-size="10" font-weight="bold">Layer 4</text>
+    <text x="90" y="12" fill="currentColor" font-size="10">mirror of Layer 2</text>
     <polygon points="45,20 30,42 60,42" fill="#dde6ff" stroke="#2255cc" stroke-width="1.5"/>
-    <circle cx="45" cy="20" r="3" fill="#333"/>
-    <circle cx="30" cy="42" r="3" fill="#333"/>
-    <circle cx="60" cy="42" r="3" fill="#333"/>
+    <circle cx="45" cy="20" r="3" fill="currentColor"/>
+    <circle cx="30" cy="42" r="3" fill="currentColor"/>
+    <circle cx="60" cy="42" r="3" fill="currentColor"/>
   </g>
 
   <!-- Layer 5: single antipodal vertex (bottom) — placed below layer 4 label -->
   <g transform="translate(50,248)">
-    <text x="0" y="12" fill="#555" font-size="10" font-weight="bold">Layer 5</text>
-    <text x="90" y="12" fill="#555" font-size="10">antipodal vertex</text>
+    <text x="0" y="12" fill="currentColor" font-size="10" font-weight="bold">Layer 5</text>
+    <text x="90" y="12" fill="currentColor" font-size="10">antipodal vertex</text>
     <circle cx="45" cy="8" r="5" fill="#2255cc"/>
   </g>
 </svg>

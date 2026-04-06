@@ -272,21 +272,21 @@ The Euler line passes through \(o = (2,1)\), \(g = (5/3, 1)\), \(h = (1,1)\). No
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 420 80" width="420" height="80" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Euler line -->
-  <line x1="20" y1="40" x2="400" y2="40" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="20" y1="40" x2="400" y2="40" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- H point -->
   <circle cx="90" cy="40" r="4" fill="#e05"/>
   <text x="90" y="30" text-anchor="middle" fill="#e05" font-size="12">H</text>
-  <text x="90" y="58" text-anchor="middle" fill="#555" font-size="11">(1,1)</text>
+  <text x="90" y="58" text-anchor="middle" fill="currentColor" font-size="11">(1,1)</text>
   <!-- G point -->
   <circle cx="210" cy="40" r="4" fill="#27c"/>
   <text x="210" y="30" text-anchor="middle" fill="#27c" font-size="12">G</text>
-  <text x="210" y="58" text-anchor="middle" fill="#555" font-size="11">(5/3,1)</text>
+  <text x="210" y="58" text-anchor="middle" fill="currentColor" font-size="11">(5/3,1)</text>
   <!-- O point -->
   <circle cx="300" cy="40" r="4" fill="#2a2"/>
   <text x="300" y="30" text-anchor="middle" fill="#2a2" font-size="12">O</text>
-  <text x="300" y="58" text-anchor="middle" fill="#555" font-size="11">(2,1)</text>
+  <text x="300" y="58" text-anchor="middle" fill="currentColor" font-size="11">(2,1)</text>
   <!-- Label -->
-  <text x="210" y="75" text-anchor="middle" fill="#333" font-size="11">Euler line y=1 · H, G, O collinear · HG:GO = 2:1</text>
+  <text x="210" y="75" text-anchor="middle" fill="currentColor" font-size="11">Euler line y=1 · H, G, O collinear · HG:GO = 2:1</text>
 </svg>
 </div>
 
@@ -334,54 +334,54 @@ Translations and rotations preserve orientation; reflections and glide reflectio
 <svg viewBox="0 0 500 200" width="500" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
 
   <!-- ROTATION -->
-  <text x="60" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Rotation</text>
-  <circle cx="60" cy="100" r="2" fill="#333"/>
-  <text x="60" y="115" text-anchor="middle" fill="#333" font-size="11">P</text>
+  <text x="60" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Rotation</text>
+  <circle cx="60" cy="100" r="2" fill="currentColor"/>
+  <text x="60" y="115" text-anchor="middle" fill="currentColor" font-size="11">P</text>
   <circle cx="100" cy="100" r="4" fill="#27c"/>
   <text x="108" y="103" fill="#27c" font-size="11">A</text>
   <circle cx="72" cy="68" r="4" fill="#e05"/>
   <text x="76" y="62" fill="#e05" font-size="11">A′</text>
-  <path d="M98,92 A38,38 0 0,0 74,72" stroke="#333" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
-  <text x="60" y="140" text-anchor="middle" fill="#555" font-size="10">A→A′ about P by θ</text>
+  <path d="M98,92 A38,38 0 0,0 74,72" stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
+  <text x="60" y="140" text-anchor="middle" fill="currentColor" font-size="10">A→A′ about P by θ</text>
 
   <!-- REFLECTION -->
-  <text x="185" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Reflection</text>
-  <line x1="185" y1="30" x2="185" y2="130" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="185" y="145" text-anchor="middle" fill="#888" font-size="11">L</text>
+  <text x="185" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Reflection</text>
+  <line x1="185" y1="30" x2="185" y2="130" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="185" y="145" text-anchor="middle" fill="currentColor" font-size="11">L</text>
   <circle cx="155" cy="80" r="4" fill="#27c"/>
   <text x="143" y="84" fill="#27c" font-size="11">A</text>
   <circle cx="215" cy="80" r="4" fill="#e05"/>
   <text x="220" y="84" fill="#e05" font-size="11">A′</text>
-  <line x1="157" y1="80" x2="213" y2="80" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="185" y="160" text-anchor="middle" fill="#555" font-size="10">A→A′ across L</text>
+  <line x1="157" y1="80" x2="213" y2="80" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="185" y="160" text-anchor="middle" fill="currentColor" font-size="10">A→A′ across L</text>
 
   <!-- TRANSLATION -->
-  <text x="330" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Translation</text>
+  <text x="330" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Translation</text>
   <circle cx="285" cy="80" r="4" fill="#27c"/>
   <text x="278" y="75" fill="#27c" font-size="11">A</text>
   <circle cx="375" cy="80" r="4" fill="#e05"/>
   <text x="378" y="75" fill="#e05" font-size="11">A′</text>
-  <line x1="291" y1="80" x2="369" y2="80" stroke="#333" stroke-width="1.5" marker-end="url(#arr1)"/>
-  <text x="330" y="72" text-anchor="middle" fill="#333" font-size="11">u</text>
-  <text x="330" y="100" text-anchor="middle" fill="#555" font-size="10">no fixed points</text>
+  <line x1="291" y1="80" x2="369" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <text x="330" y="72" text-anchor="middle" fill="currentColor" font-size="11">u</text>
+  <text x="330" y="100" text-anchor="middle" fill="currentColor" font-size="10">no fixed points</text>
 
   <!-- GLIDE REFLECTION -->
-  <text x="440" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Glide Refl.</text>
-  <line x1="440" y1="30" x2="440" y2="145" stroke="#888" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="440" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Glide Refl.</text>
+  <line x1="440" y1="30" x2="440" y2="145" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
   <circle cx="415" cy="60" r="4" fill="#27c"/>
   <text x="403" y="64" fill="#27c" font-size="11">A</text>
   <circle cx="465" cy="60" r="4" fill="#a50"/>
   <text x="468" y="64" fill="#a50" font-size="11">A′</text>
   <circle cx="465" cy="110" r="4" fill="#e05"/>
   <text x="468" y="114" fill="#e05" font-size="11">A″</text>
-  <line x1="417" y1="60" x2="463" y2="60" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="465" y1="64" x2="465" y2="106" stroke="#333" stroke-width="1.2" marker-end="url(#arr1)"/>
-  <text x="440" y="160" text-anchor="middle" fill="#555" font-size="10">reflect then slide</text>
+  <line x1="417" y1="60" x2="463" y2="60" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="465" y1="64" x2="465" y2="106" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <text x="440" y="160" text-anchor="middle" fill="currentColor" font-size="10">reflect then slide</text>
 </svg>
 </div>
 
@@ -435,14 +435,14 @@ Having developed the full toolkit of Euclidean geometry, we now ask: what happen
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 260 280" width="260" height="280" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="13">
   <!-- Sphere outline -->
-  <circle cx="130" cy="140" r="90" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="130" cy="140" r="90" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Equator (ellipse) -->
   <ellipse cx="130" cy="140" rx="90" ry="25" fill="none" stroke="#27c" stroke-width="1.3" stroke-dasharray="6,4"/>
   <!-- Prime meridian arc (full great circle, front half solid, back dashed) -->
-  <path d="M130,50 Q165,140 130,230" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <path d="M130,50 Q95,140 130,230" fill="none" stroke="#888" stroke-width="1"/>
+  <path d="M130,50 Q165,140 130,230" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M130,50 Q95,140 130,230" fill="none" stroke="#999" stroke-width="1"/>
   <!-- Vertical axis -->
-  <line x1="130" y1="30" x2="130" y2="260" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="130" y1="30" x2="130" y2="260" stroke="#777" stroke-width="0.8" stroke-dasharray="3,3"/>
   <!-- North Pole -->
   <circle cx="130" cy="50" r="4" fill="#e05"/>
   <text x="142" y="48" fill="#e05" font-size="12">N = (0,0,1)</text>
@@ -450,8 +450,8 @@ Having developed the full toolkit of Euclidean geometry, we now ask: what happen
   <circle cx="130" cy="230" r="4" fill="#e05"/>
   <text x="142" y="234" fill="#e05" font-size="12">S = (0,0,−1)</text>
   <!-- Center -->
-  <circle cx="130" cy="140" r="3" fill="#333"/>
-  <text x="137" y="137" fill="#555" font-size="11">(0,0,0)</text>
+  <circle cx="130" cy="140" r="3" fill="currentColor"/>
+  <text x="137" y="137" fill="currentColor" font-size="11">(0,0,0)</text>
   <!-- Label -->
   <text x="130" y="270" text-anchor="middle" fill="#27c" font-size="11">equator (great circle)</text>
 </svg>
@@ -516,7 +516,7 @@ Two lines are orthogonal when their poles are orthogonal.</div>
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 280 260" width="280" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Sphere -->
-  <circle cx="140" cy="125" r="95" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="140" cy="125" r="95" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Equator -->
   <ellipse cx="140" cy="125" rx="95" ry="26" fill="none" stroke="#27c" stroke-width="1.5"/>
   <text x="242" y="122" fill="#27c" font-size="11">equator</text>
@@ -526,17 +526,17 @@ Two lines are orthogonal when their poles are orthogonal.</div>
   <path d="M140,30 Q105,125 140,220" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,4"/>
   <text x="178" y="75" fill="#e05" font-size="11">meridian</text>
   <!-- Second meridian (different longitude) -->
-  <path d="M140,30 Q165,100 185,125 Q165,150 140,220" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+  <path d="M140,30 Q165,100 185,125 Q165,150 140,220" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="4,4"/>
   <!-- North pole -->
-  <circle cx="140" cy="30" r="4" fill="#333"/>
-  <text x="148" y="28" fill="#333" font-size="12">N</text>
+  <circle cx="140" cy="30" r="4" fill="currentColor"/>
+  <text x="148" y="28" fill="currentColor" font-size="12">N</text>
   <!-- South pole -->
-  <circle cx="140" cy="220" r="4" fill="#333"/>
-  <text x="148" y="230" fill="#333" font-size="12">S</text>
+  <circle cx="140" cy="220" r="4" fill="currentColor"/>
+  <text x="148" y="230" fill="currentColor" font-size="12">S</text>
   <!-- Intersection point of equator and meridian -->
-  <circle cx="235" cy="125" r="3" fill="#888"/>
+  <circle cx="235" cy="125" r="3" fill="currentColor"/>
   <!-- Note -->
-  <text x="140" y="250" text-anchor="middle" fill="#555" font-size="11">Any two great circles meet at two antipodal points</text>
+  <text x="140" y="250" text-anchor="middle" fill="currentColor" font-size="11">Any two great circles meet at two antipodal points</text>
 </svg>
 </div>
 
@@ -588,9 +588,9 @@ The angle sum is \(\alpha + \beta + \gamma = 3\pi/2\), and the area (by Girard's
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 280 260" width="280" height="260" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Sphere outline -->
-  <circle cx="140" cy="130" r="95" fill="none" stroke="#ccc" stroke-width="1"/>
+  <circle cx="140" cy="130" r="95" fill="none" stroke="#666" stroke-width="1"/>
   <!-- Equator (partial, behind triangle) -->
-  <ellipse cx="140" cy="175" rx="95" ry="22" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <ellipse cx="140" cy="175" rx="95" ry="22" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="4,4"/>
   <!-- Triangle edges (great circle arcs approximated) -->
   <!-- u=(1,0,0) → v=(0,1,0): arc on equatorial plane -->
   <path d="M200,175 Q140,145 80,175" fill="none" stroke="#e05" stroke-width="2"/>
@@ -608,8 +608,8 @@ The angle sum is \(\alpha + \beta + \gamma = 3\pi/2\), and the area (by Girard's
   <!-- Angle labels -->
   <text x="152" y="62" fill="#e05" font-size="11">α=π/2</text>
   <!-- Caption -->
-  <text x="140" y="220" text-anchor="middle" fill="#333" font-size="11">a=b=c=π/2 · α=β=γ=π/2</text>
-  <text x="140" y="236" text-anchor="middle" fill="#333" font-size="11">Angle sum 3π/2 &gt; π · Area = π/2</text>
+  <text x="140" y="220" text-anchor="middle" fill="currentColor" font-size="11">a=b=c=π/2 · α=β=γ=π/2</text>
+  <text x="140" y="236" text-anchor="middle" fill="currentColor" font-size="11">Angle sum 3π/2 &gt; π · Area = π/2</text>
 </svg>
 </div>
 
@@ -635,7 +635,7 @@ wait, each overlap (triangle) is covered three times instead of once, so we add 
 <svg viewBox="0 0 360 200" width="360" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Lune W_α: shaded region between two great semicircles -->
   <!-- Left sphere showing the lune -->
-  <circle cx="90" cy="100" r="75" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="90" cy="100" r="75" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Lune shading: between two meridians at angle α -->
   <path d="M90,25 Q130,100 90,175 Q90,100 90,25" fill="#bdf" fill-opacity="0.6" stroke="none"/>
   <path d="M90,25 Q130,100 90,175" fill="none" stroke="#27c" stroke-width="2"/>
@@ -644,14 +644,14 @@ wait, each overlap (triangle) is covered three times instead of once, so we add 
   <path d="M90,25 Q110,90 120,140 Q90,125 60,140 Q70,90 90,25" fill="#27c" fill-opacity="0.35" stroke="#27c" stroke-width="1"/>
   <text x="90" y="105" text-anchor="middle" fill="#27c" font-size="11">T</text>
   <!-- Angle α label -->
-  <text x="128" y="65" fill="#333" font-size="13">α</text>
-  <text x="90" y="185" text-anchor="middle" fill="#333" font-size="11">Lune W_α, area = 4α</text>
+  <text x="128" y="65" fill="currentColor" font-size="13">α</text>
+  <text x="90" y="185" text-anchor="middle" fill="currentColor" font-size="11">Lune W_α, area = 4α</text>
 
   <!-- Divider -->
-  <line x1="185" y1="10" x2="185" y2="190" stroke="#ddd" stroke-width="1"/>
+  <line x1="185" y1="10" x2="185" y2="190" stroke="#666" stroke-width="1"/>
 
   <!-- Right: schematic of three lunes covering sphere -->
-  <circle cx="275" cy="100" r="75" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="275" cy="100" r="75" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Lune 1 (α) -->
   <path d="M275,25 Q315,100 275,175 Q235,100 275,25" fill="#bdf" fill-opacity="0.3" stroke="#27c" stroke-width="1.2"/>
   <!-- Lune 2 (β) rotated -->
@@ -661,7 +661,7 @@ wait, each overlap (triangle) is covered three times instead of once, so we add 
   <!-- Triangle in center -->
   <path d="M275,50 Q305,115 245,115 Z" fill="#77c" fill-opacity="0.5" stroke="#27c" stroke-width="1.5"/>
   <text x="275" y="95" text-anchor="middle" fill="#27c" font-size="11" font-weight="bold">T</text>
-  <text x="275" y="185" text-anchor="middle" fill="#333" font-size="11">4α+4β+4γ = 4π+4A</text>
+  <text x="275" y="185" text-anchor="middle" fill="currentColor" font-size="11">4α+4β+4γ = 4π+4A</text>
 </svg>
 </div>
 
@@ -784,16 +784,16 @@ This is why the gnomonic projection is used in navigation charts where straight-
     </marker>
   </defs>
   <!-- Sphere -->
-  <ellipse cx="130" cy="110" rx="85" ry="85" fill="none" stroke="#333" stroke-width="1.5"/>
+  <ellipse cx="130" cy="110" rx="85" ry="85" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Equatorial plane z=0 -->
   <line x1="20" y1="190" x2="300" y2="190" stroke="#27c" stroke-width="1.5"/>
   <text x="302" y="195" fill="#27c" font-size="11">z=0</text>
   <!-- North pole N -->
-  <circle cx="130" cy="25" r="4" fill="#333"/>
-  <text x="138" y="23" fill="#333" font-size="12">N=(0,0,1)</text>
+  <circle cx="130" cy="25" r="4" fill="currentColor"/>
+  <text x="138" y="23" fill="currentColor" font-size="12">N=(0,0,1)</text>
   <!-- South pole projects to origin -->
-  <circle cx="130" cy="190" r="3" fill="#555"/>
-  <text x="107" y="208" fill="#555" font-size="10">S→origin</text>
+  <circle cx="130" cy="190" r="3" fill="currentColor"/>
+  <text x="107" y="208" fill="currentColor" font-size="10">S→origin</text>
   <!-- Point P on sphere -->
   <circle cx="185" cy="95" r="4" fill="#e05"/>
   <text x="193" y="92" fill="#e05" font-size="12">P</text>
@@ -803,8 +803,8 @@ This is why the gnomonic projection is used in navigation charts where straight-
   <circle cx="248" cy="190" r="4" fill="#e05"/>
   <text x="252" y="185" fill="#e05" font-size="11">σ(P)</text>
   <!-- Label formula -->
-  <text x="130" y="230" text-anchor="middle" fill="#333" font-size="11">σ(x,y,z) = (x/(1−z), y/(1−z))</text>
-  <text x="130" y="245" text-anchor="middle" fill="#555" font-size="10">Circles on sphere → circles/lines in plane · Conformal</text>
+  <text x="130" y="230" text-anchor="middle" fill="currentColor" font-size="11">σ(x,y,z) = (x/(1−z), y/(1−z))</text>
+  <text x="130" y="245" text-anchor="middle" fill="currentColor" font-size="10">Circles on sphere → circles/lines in plane · Conformal</text>
 </svg>
 </div>
 
@@ -856,7 +856,7 @@ A point in the affine chart \(U_3 = \{[x,y,z] : z\neq 0\}\) can be written as \(
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 360 240" width="360" height="240" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Affine plane box -->
-  <rect x="20" y="40" width="320" height="160" fill="#f9f9f9" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <rect x="20" y="40" width="320" height="160" fill="#f9f9f9" stroke="#777" stroke-width="1.2" rx="4"/>
   <!-- Line at infinity (top border) -->
   <rect x="20" y="20" width="320" height="20" fill="#bdf" fill-opacity="0.6" stroke="#27c" stroke-width="1.2"/>
   <text x="180" y="34" text-anchor="middle" fill="#27c" font-size="11">Line at infinity L_{(0,0,1)} = { [x,y,0] }</text>
@@ -871,9 +871,9 @@ A point in the affine chart \(U_3 = \{[x,y,z] : z\neq 0\}\) can be written as \(
   <text x="30" y="200" fill="#e05" font-size="10">y=2x+1</text>
   <text x="96" y="210" fill="#e80" font-size="10">y=2x+3</text>
   <!-- "ordinary" label -->
-  <text x="180" y="130" text-anchor="middle" fill="#555" font-size="11">Affine plane ℝ² = {[u,v,1]}</text>
-  <text x="180" y="148" text-anchor="middle" fill="#555" font-size="11">Parallel lines meet at [1,2,0] ∈ L_∞</text>
-  <text x="180" y="220" text-anchor="middle" fill="#333" font-size="11">In ℙ²: any two distinct lines meet in exactly one point</text>
+  <text x="180" y="130" text-anchor="middle" fill="currentColor" font-size="11">Affine plane ℝ² = {[u,v,1]}</text>
+  <text x="180" y="148" text-anchor="middle" fill="currentColor" font-size="11">Parallel lines meet at [1,2,0] ∈ L_∞</text>
+  <text x="180" y="220" text-anchor="middle" fill="currentColor" font-size="11">In ℙ²: any two distinct lines meet in exactly one point</text>
 </svg>
 </div>
 
@@ -950,8 +950,8 @@ By Desargues' theorem, the points \(a = (vw)\cap(v'w')\), \(b = (wu)\cap(w'u')\)
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 290" width="320" height="290" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Center of perspectivity p -->
-  <circle cx="160" cy="20" r="4" fill="#333"/>
-  <text x="168" y="18" fill="#333" font-size="12">p</text>
+  <circle cx="160" cy="20" r="4" fill="currentColor"/>
+  <text x="168" y="18" fill="currentColor" font-size="12">p</text>
   <!-- Triangle uvw (outer) -->
   <circle cx="70" cy="120" r="4" fill="#27c"/>
   <text x="56" y="118" fill="#27c" font-size="12">u</text>
@@ -967,9 +967,9 @@ By Desargues' theorem, the points \(a = (vw)\cap(v'w')\), \(b = (wu)\cap(w'u')\)
   <circle cx="160" cy="230" r="4" fill="#e05"/>
   <text x="166" y="244" fill="#e05" font-size="12">w′</text>
   <!-- Lines from p through corresponding vertices -->
-  <line x1="160" y1="20" x2="70" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="160" y1="20" x2="250" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="160" y1="20" x2="160" y2="230" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="160" y1="20" x2="70" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="160" y1="20" x2="250" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="160" y1="20" x2="160" y2="230" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- Outer triangle edges -->
   <line x1="70" y1="120" x2="250" y2="120" stroke="#27c" stroke-width="1.5"/>
   <line x1="70" y1="120" x2="160" y2="190" stroke="#27c" stroke-width="1.5"/>
@@ -1072,17 +1072,17 @@ Points on the circle are fixed. ✓</div>
 <svg viewBox="0 0 380 180" width="380" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Circle C -->
   <circle cx="110" cy="90" r="70" fill="none" stroke="#27c" stroke-width="1.8"/>
   <!-- Center O -->
-  <circle cx="110" cy="90" r="3" fill="#333"/>
-  <text x="100" y="106" fill="#333" font-size="12">O</text>
+  <circle cx="110" cy="90" r="3" fill="currentColor"/>
+  <text x="100" y="106" fill="currentColor" font-size="12">O</text>
   <!-- Radius label -->
-  <line x1="110" y1="90" x2="180" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="142" y="84" fill="#888" font-size="11">r</text>
+  <line x1="110" y1="90" x2="180" y2="90" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="142" y="84" fill="currentColor" font-size="11">r</text>
   <!-- x inside circle -->
   <circle cx="145" cy="90" r="4" fill="#e05"/>
   <text x="148" y="82" fill="#e05" font-size="12">x</text>
@@ -1090,11 +1090,11 @@ Points on the circle are fixed. ✓</div>
   <circle cx="280" cy="90" r="4" fill="#27c"/>
   <text x="284" y="82" fill="#27c" font-size="12">x′=F_C(x)</text>
   <!-- Arrow from x to x' -->
-  <line x1="151" y1="90" x2="274" y2="90" stroke="#333" stroke-width="1.3" marker-end="url(#arr3)"/>
-  <text x="212" y="80" text-anchor="middle" fill="#333" font-size="11">r²/|x|</text>
+  <line x1="151" y1="90" x2="274" y2="90" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr3)"/>
+  <text x="212" y="80" text-anchor="middle" fill="currentColor" font-size="11">r²/|x|</text>
   <!-- Key properties -->
-  <text x="190" y="130" text-anchor="middle" fill="#333" font-size="11">inside → outside · boundary fixed · F_C²=I</text>
-  <text x="190" y="148" text-anchor="middle" fill="#555" font-size="10">Circles and lines map to circles and lines (generalized circles)</text>
+  <text x="190" y="130" text-anchor="middle" fill="currentColor" font-size="11">inside → outside · boundary fixed · F_C²=I</text>
+  <text x="190" y="148" text-anchor="middle" fill="currentColor" font-size="10">Circles and lines map to circles and lines (generalized circles)</text>
 </svg>
 </div>
 
@@ -1139,8 +1139,8 @@ The conformality of the model — hyperbolic angles equal Euclidean angles — i
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 320 310" width="320" height="310" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- Boundary circle S¹ -->
-  <circle cx="160" cy="150" r="120" fill="#fafff8" stroke="#333" stroke-width="2"/>
-  <text x="255" y="50" fill="#333" font-size="11">S¹ = ∞</text>
+  <circle cx="160" cy="150" r="120" fill="#fafff8" stroke="currentColor" stroke-width="2"/>
+  <text x="255" y="50" fill="currentColor" font-size="11">S¹ = ∞</text>
   <!-- Diameter geodesic (horizontal) -->
   <line x1="40" y1="150" x2="280" y2="150" stroke="#e05" stroke-width="1.5"/>
   <!-- Diameter geodesic (vertical) -->
@@ -1152,8 +1152,8 @@ The conformality of the model — hyperbolic angles equal Euclidean angles — i
   <!-- Arc geodesic 3 -->
   <path d="M100,270 A95,95 0 0,1 220,270" fill="none" stroke="#2a2" stroke-width="1.5"/>
   <!-- Origin -->
-  <circle cx="160" cy="150" r="4" fill="#333"/>
-  <text x="166" y="147" fill="#333" font-size="11">0</text>
+  <circle cx="160" cy="150" r="4" fill="currentColor"/>
+  <text x="166" y="147" fill="currentColor" font-size="11">0</text>
   <!-- Labels -->
   <text x="160" y="295" text-anchor="middle" fill="#e05" font-size="11">— diameters (geodesics)</text>
   <text x="160" y="310" text-anchor="middle" fill="#27c" font-size="11">— arcs orthogonal to S¹ (geodesics)</text>
@@ -1191,34 +1191,34 @@ The three-way classification of line pairs is a hallmark of hyperbolic geometry.
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 480 210" width="480" height="210" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- INTERSECTING -->
-  <text x="75" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Intersecting</text>
-  <text x="75" y="32" text-anchor="middle" fill="#555" font-size="10">(meet inside H²)</text>
-  <circle cx="75" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="75" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Intersecting</text>
+  <text x="75" y="32" text-anchor="middle" fill="currentColor" font-size="10">(meet inside H²)</text>
+  <circle cx="75" cy="115" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Two lines crossing inside -->
   <path d="M20,80 A90,90 0 0,1 130,80" fill="none" stroke="#e05" stroke-width="1.8"/>
   <path d="M20,150 A90,90 0 0,0 130,150" fill="none" stroke="#27c" stroke-width="1.8"/>
-  <circle cx="75" cy="115" r="3" fill="#333"/>
+  <circle cx="75" cy="115" r="3" fill="currentColor"/>
 
   <!-- ASYMPTOTIC -->
-  <text x="240" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Asymptotic</text>
-  <text x="240" y="32" text-anchor="middle" fill="#555" font-size="10">(meet on S¹)</text>
-  <circle cx="240" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="240" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Asymptotic</text>
+  <text x="240" y="32" text-anchor="middle" fill="currentColor" font-size="10">(meet on S¹)</text>
+  <circle cx="240" cy="115" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Two lines meeting at boundary -->
   <path d="M185,155 A60,60 0 0,1 295,75" fill="none" stroke="#e05" stroke-width="1.8"/>
   <path d="M185,155 A120,120 0 0,0 295,75" fill="none" stroke="#27c" stroke-width="1.8"/>
-  <circle cx="295" cy="75" r="4" fill="#333"/>
-  <text x="302" y="71" fill="#555" font-size="10">on S¹</text>
+  <circle cx="295" cy="75" r="4" fill="currentColor"/>
+  <text x="302" y="71" fill="currentColor" font-size="10">on S¹</text>
 
   <!-- ULTRAPARALLEL -->
-  <text x="405" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Ultraparallel</text>
-  <text x="405" y="32" text-anchor="middle" fill="#555" font-size="10">(no meeting)</text>
-  <circle cx="405" cy="115" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="405" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Ultraparallel</text>
+  <text x="405" y="32" text-anchor="middle" fill="currentColor" font-size="10">(no meeting)</text>
+  <circle cx="405" cy="115" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Two non-meeting arcs -->
   <path d="M350,80 A80,80 0 0,1 350,150" fill="none" stroke="#e05" stroke-width="1.8"/>
   <path d="M460,80 A80,80 0 0,0 460,150" fill="none" stroke="#27c" stroke-width="1.8"/>
 
   <!-- Caption -->
-  <text x="240" y="200" text-anchor="middle" fill="#555" font-size="11">Three types of line pairs in ℍ²</text>
+  <text x="240" y="200" text-anchor="middle" fill="currentColor" font-size="11">Three types of line pairs in ℍ²</text>
 </svg>
 </div>
 
@@ -1291,10 +1291,10 @@ Horocycles and hypercycles are the hyperbolic analogues of circles and lines in 
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 380 230" width="380" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <!-- HOROCYCLE -->
-  <text x="90" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Horocycle</text>
-  <text x="90" y="32" text-anchor="middle" fill="#555" font-size="10">(tangent to S¹)</text>
+  <text x="90" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Horocycle</text>
+  <text x="90" y="32" text-anchor="middle" fill="currentColor" font-size="10">(tangent to S¹)</text>
   <!-- Disc -->
-  <circle cx="90" cy="120" r="80" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="90" cy="120" r="80" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Horocycle: circle tangent to S¹ at bottom (from inside) -->
   <circle cx="90" cy="160" r="40" fill="none" stroke="#e05" stroke-width="1.8"/>
   <!-- Tangent point -->
@@ -1303,15 +1303,15 @@ Horocycles and hypercycles are the hyperbolic analogues of circles and lines in 
   <text x="90" y="105" text-anchor="middle" fill="#e05" font-size="10">horocycle</text>
 
   <!-- Divider -->
-  <line x1="195" y1="10" x2="195" y2="220" stroke="#ddd" stroke-width="1"/>
+  <line x1="195" y1="10" x2="195" y2="220" stroke="#666" stroke-width="1"/>
 
   <!-- HYPERCYCLE -->
-  <text x="295" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Hypercycle</text>
-  <text x="295" y="32" text-anchor="middle" fill="#555" font-size="10">(chord of S¹)</text>
+  <text x="295" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Hypercycle</text>
+  <text x="295" y="32" text-anchor="middle" fill="currentColor" font-size="10">(chord of S¹)</text>
   <!-- Disc -->
-  <circle cx="295" cy="120" r="80" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="295" cy="120" r="80" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Geodesic (hyperbolic line, diameter) -->
-  <line x1="215" y1="120" x2="375" y2="120" stroke="#888" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="215" y1="120" x2="375" y2="120" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
   <!-- Hypercycle: arc of circle crossing S¹ at two points -->
   <path d="M215,80 A120,120 0 0,1 375,80" fill="none" stroke="#27c" stroke-width="1.8"/>
   <!-- Two intersection points with S¹ -->
@@ -1320,7 +1320,7 @@ Horocycles and hypercycles are the hyperbolic analogues of circles and lines in 
   <text x="215" y="68" fill="#27c" font-size="10">on S¹</text>
   <text x="355" y="68" fill="#27c" font-size="10">on S¹</text>
   <text x="295" y="68" text-anchor="middle" fill="#27c" font-size="10">hypercycle</text>
-  <text x="295" y="215" text-anchor="middle" fill="#555" font-size="10">equidistant from geodesic</text>
+  <text x="295" y="215" text-anchor="middle" fill="currentColor" font-size="10">equidistant from geodesic</text>
 </svg>
 </div>
 
@@ -1443,43 +1443,43 @@ Fixed points: \(z = \pm 1\) (on \(S^1\)). This translates along the real diamete
   </defs>
 
   <!-- ELLIPTIC -->
-  <text x="83" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Elliptic (rotation)</text>
-  <circle cx="83" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="83" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Elliptic (rotation)</text>
+  <circle cx="83" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Circular orbits -->
   <circle cx="83" cy="110" r="25" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <circle cx="83" cy="110" r="45" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <!-- Arrow on orbit -->
   <path d="M108,110 A25,25 0 0,1 83,85" fill="none" stroke="#e05" stroke-width="1.5" marker-end="url(#arr4)"/>
   <!-- Fixed point -->
-  <circle cx="83" cy="110" r="4" fill="#333"/>
-  <text x="91" y="107" fill="#333" font-size="10">fixed pt</text>
-  <text x="83" y="195" text-anchor="middle" fill="#555" font-size="10">orbits = circles</text>
+  <circle cx="83" cy="110" r="4" fill="currentColor"/>
+  <text x="91" y="107" fill="currentColor" font-size="10">fixed pt</text>
+  <text x="83" y="195" text-anchor="middle" fill="currentColor" font-size="10">orbits = circles</text>
 
   <!-- PARABOLIC -->
-  <text x="250" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Parabolic (horolation)</text>
-  <circle cx="250" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="250" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Parabolic (horolation)</text>
+  <circle cx="250" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Horocycle orbits (circles tangent to S¹ at fixed pt) -->
   <circle cx="250" cy="165" r="25" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <circle cx="250" cy="155" r="35" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <!-- Fixed point on S¹ (bottom) -->
-  <circle cx="250" cy="180" r="4" fill="#333"/>
-  <text x="258" y="195" fill="#333" font-size="10">fixed pt on S¹</text>
-  <text x="250" y="208" text-anchor="middle" fill="#555" font-size="10">orbits = horocycles</text>
+  <circle cx="250" cy="180" r="4" fill="currentColor"/>
+  <text x="258" y="195" fill="currentColor" font-size="10">fixed pt on S¹</text>
+  <text x="250" y="208" text-anchor="middle" fill="currentColor" font-size="10">orbits = horocycles</text>
 
   <!-- HYPERBOLIC -->
-  <text x="417" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Hyperbolic (translation)</text>
-  <circle cx="417" cy="110" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="417" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Hyperbolic (translation)</text>
+  <circle cx="417" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Axis geodesic -->
-  <line x1="347" y1="110" x2="487" y2="110" stroke="#888" stroke-width="1.3" stroke-dasharray="4,3"/>
+  <line x1="347" y1="110" x2="487" y2="110" stroke="#999" stroke-width="1.3" stroke-dasharray="4,3"/>
   <!-- Translation arrow along axis -->
   <line x1="385" y1="110" x2="430" y2="110" stroke="#2a2" stroke-width="2" marker-end="url(#arr5)"/>
   <!-- Hypercycle orbits -->
   <path d="M347,80 A120,120 0 0,1 487,80" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <path d="M347,140 A120,120 0 0,0 487,140" fill="none" stroke="#e05" stroke-width="1.3" stroke-dasharray="5,3"/>
   <!-- Two fixed points on S¹ -->
-  <circle cx="347" cy="110" r="4" fill="#333"/>
-  <circle cx="487" cy="110" r="4" fill="#333"/>
-  <text x="417" y="195" text-anchor="middle" fill="#555" font-size="10">orbits = hypercycles · two fixed pts on S¹</text>
+  <circle cx="347" cy="110" r="4" fill="currentColor"/>
+  <circle cx="487" cy="110" r="4" fill="currentColor"/>
+  <text x="417" y="195" text-anchor="middle" fill="currentColor" font-size="10">orbits = hypercycles · two fixed pts on S¹</text>
 </svg>
 </div>
 
@@ -1503,15 +1503,15 @@ The Poincaré disc is one of several equivalent models. Each model of the hyperb
 <svg viewBox="0 0 360 240" width="360" height="240" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- x-axis (boundary = infinity) -->
-  <line x1="20" y1="185" x2="340" y2="185" stroke="#333" stroke-width="1.5" marker-end="url(#arr6)"/>
-  <text x="344" y="189" fill="#333" font-size="12">x</text>
+  <line x1="20" y1="185" x2="340" y2="185" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr6)"/>
+  <text x="344" y="189" fill="currentColor" font-size="12">x</text>
   <!-- y-axis -->
-  <line x1="50" y1="200" x2="50" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arr6)"/>
-  <text x="45" y="16" fill="#333" font-size="12">y</text>
+  <line x1="50" y1="200" x2="50" y2="20" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr6)"/>
+  <text x="45" y="16" fill="currentColor" font-size="12">y</text>
   <!-- Boundary label -->
   <text x="180" y="202" text-anchor="middle" fill="#e05" font-size="11">boundary (x-axis = ∞)</text>
   <!-- Vertical geodesic 1 -->
@@ -1523,9 +1523,9 @@ The Poincaré disc is one of several equivalent models. Each model of the hyperb
   <!-- Another semicircle -->
   <path d="M160,185 A45,45 0 0,1 250,185" fill="none" stroke="#2a2" stroke-width="1.5"/>
   <!-- Labels on axes -->
-  <text x="110" y="200" text-anchor="middle" fill="#555" font-size="11">a</text>
-  <text x="200" y="200" text-anchor="middle" fill="#555" font-size="11">b</text>
-  <text x="250" y="200" text-anchor="middle" fill="#555" font-size="11">c</text>
+  <text x="110" y="200" text-anchor="middle" fill="currentColor" font-size="11">a</text>
+  <text x="200" y="200" text-anchor="middle" fill="currentColor" font-size="11">b</text>
+  <text x="250" y="200" text-anchor="middle" fill="currentColor" font-size="11">c</text>
   <!-- Caption -->
   <text x="180" y="218" text-anchor="middle" fill="#27c" font-size="11">— vertical lines (geodesics)</text>
   <text x="180" y="232" text-anchor="middle" fill="#e80" font-size="11">— semicircles centred on x-axis (geodesics)</text>
@@ -1542,13 +1542,13 @@ The Minkowski model makes explicit the parallel with spherical geometry: just as
 <svg viewBox="0 0 320 280" width="320" height="280" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Axes -->
-  <line x1="130" y1="250" x1="130" y1="250" x2="130" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr7)"/>
+  <line x1="130" y1="250" x1="130" y1="250" x2="130" y2="20" stroke="#777" stroke-width="1" marker-end="url(#arr7)"/>
   <text x="134" y="15" fill="#aaa" font-size="12">t</text>
-  <line x1="40" y1="180" x2="290" y2="180" stroke="#aaa" stroke-width="1" marker-end="url(#arr7)"/>
+  <line x1="40" y1="180" x2="290" y2="180" stroke="#777" stroke-width="1" marker-end="url(#arr7)"/>
   <text x="292" y="184" fill="#aaa" font-size="12">x</text>
   <!-- t=0 plane label -->
   <text x="38" y="178" fill="#aaa" font-size="10">t=0</text>
@@ -1561,8 +1561,8 @@ The Minkowski model makes explicit the parallel with spherical geometry: just as
   <!-- Geodesic: intersection with plane through origin -->
   <path d="M70,165 Q130,80 190,165" fill="none" stroke="#e05" stroke-width="1.5"/>
   <!-- Origin -->
-  <circle cx="130" cy="180" r="3" fill="#333"/>
-  <text x="136" y="185" fill="#333" font-size="11">O</text>
+  <circle cx="130" cy="180" r="3" fill="currentColor"/>
+  <text x="136" y="185" fill="currentColor" font-size="11">O</text>
   <!-- Upper sheet label -->
   <text x="225" y="95" fill="#27c" font-size="11">upper sheet</text>
   <text x="225" y="108" fill="#27c" font-size="10">x²+y²−t²=−1</text>
@@ -1570,7 +1570,7 @@ The Minkowski model makes explicit the parallel with spherical geometry: just as
   <!-- Lower sheet label -->
   <text x="50" y="230" fill="#aaa" font-size="10">lower sheet (not used)</text>
   <!-- Caption -->
-  <text x="130" y="268" text-anchor="middle" fill="#333" font-size="11">Geodesics = plane sections through O</text>
+  <text x="130" y="268" text-anchor="middle" fill="currentColor" font-size="11">Geodesics = plane sections through O</text>
 </svg>
 </div>
 
@@ -1630,14 +1630,14 @@ The discovery that multiple consistent geometries exist — with different curva
   <text x="80" y="189" text-anchor="middle" fill="#27c" font-size="10">Exponential growth</text>
 
   <!-- K = 0: Euclidean flat triangle -->
-  <text x="240" y="18" text-anchor="middle" fill="#333" font-weight="bold" font-size="13">K = 0</text>
-  <text x="240" y="32" text-anchor="middle" fill="#333" font-size="11">(Euclidean)</text>
-  <rect x="185" y="55" width="110" height="90" fill="#f5f5e8" stroke="#888" stroke-width="2"/>
-  <line x1="240" y1="55" x2="185" y2="145" stroke="#888" stroke-width="1"/>
-  <line x1="240" y1="55" x2="295" y2="145" stroke="#888" stroke-width="1"/>
-  <text x="240" y="163" text-anchor="middle" fill="#555" font-size="10">Angle sum = π</text>
-  <text x="240" y="176" text-anchor="middle" fill="#555" font-size="10">Exactly one parallel</text>
-  <text x="240" y="189" text-anchor="middle" fill="#555" font-size="10">Polynomial growth</text>
+  <text x="240" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="13">K = 0</text>
+  <text x="240" y="32" text-anchor="middle" fill="currentColor" font-size="11">(Euclidean)</text>
+  <rect x="185" y="55" width="110" height="90" fill="#f5f5e8" stroke="#999" stroke-width="2"/>
+  <line x1="240" y1="55" x2="185" y2="145" stroke="#999" stroke-width="1"/>
+  <line x1="240" y1="55" x2="295" y2="145" stroke="#999" stroke-width="1"/>
+  <text x="240" y="163" text-anchor="middle" fill="currentColor" font-size="10">Angle sum = π</text>
+  <text x="240" y="176" text-anchor="middle" fill="currentColor" font-size="10">Exactly one parallel</text>
+  <text x="240" y="189" text-anchor="middle" fill="currentColor" font-size="10">Polynomial growth</text>
 
   <!-- K > 0: Spherical -->
   <text x="400" y="18" text-anchor="middle" fill="#e05" font-weight="bold" font-size="13">K &gt; 0</text>
@@ -1859,7 +1859,7 @@ The \(\{3,7\}\) tessellation: equilateral triangles with 7 at each vertex. Each 
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 480 200" width="480" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
   <!-- EUCLIDEAN {4,4}: grid of squares -->
-  <text x="80" y="16" text-anchor="middle" fill="#333" font-weight="bold" font-size="12">Euclidean {4,4}</text>
+  <text x="80" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Euclidean {4,4}</text>
   <!-- 3x3 grid of squares -->
   <rect x="20" y="25" width="120" height="120" fill="#f0f8f0" stroke="#2a2" stroke-width="1.2"/>
   <line x1="60" y1="25" x2="60" y2="145" stroke="#2a2" stroke-width="1.2"/>
@@ -1882,7 +1882,7 @@ The \(\{3,7\}\) tessellation: equilateral triangles with 7 at each vertex. Each 
 
   <!-- HYPERBOLIC {4,5}: squares in Poincaré disc -->
   <text x="400" y="16" text-anchor="middle" fill="#27c" font-weight="bold" font-size="12">Hyperbolic {4,5}</text>
-  <circle cx="400" cy="85" r="60" fill="#f0f4ff" stroke="#333" stroke-width="1.8"/>
+  <circle cx="400" cy="85" r="60" fill="#f0f4ff" stroke="currentColor" stroke-width="1.8"/>
   <!-- Smaller squares near center -->
   <rect x="378" y="63" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
   <rect x="400" y="63" width="22" height="22" fill="none" stroke="#27c" stroke-width="1.5"/>
@@ -1977,13 +1977,13 @@ The pseudosphere has a cusp (singular point) at the point of rotation on the \(x
 <svg viewBox="0 0 360 200" width="360" height="200" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr8" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Axes -->
-  <line x1="20" y1="100" x2="340" y2="100" stroke="#aaa" stroke-width="1" marker-end="url(#arr8)"/>
+  <line x1="20" y1="100" x2="340" y2="100" stroke="#777" stroke-width="1" marker-end="url(#arr8)"/>
   <text x="342" y="104" fill="#aaa" font-size="11">x</text>
-  <line x1="40" y1="180" x2="40" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr8)"/>
+  <line x1="40" y1="180" x2="40" y2="20" stroke="#777" stroke-width="1" marker-end="url(#arr8)"/>
   <text x="36" y="16" fill="#aaa" font-size="11">y</text>
   <!-- Tractrix curve (top profile) -->
   <path d="M40,40 C80,42 130,55 180,75 C220,90 260,98 295,100" fill="none" stroke="#e05" stroke-width="2"/>
@@ -1999,8 +1999,8 @@ The pseudosphere has a cusp (singular point) at the point of rotation on the \(x
   <ellipse cx="160" cy="100" rx="5" ry="20" fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,3"/>
   <ellipse cx="220" cy="100" rx="4" ry="10" fill="none" stroke="#c88" stroke-width="1" stroke-dasharray="3,3"/>
   <!-- Labels -->
-  <text x="50" y="175" fill="#555" font-size="11">tractrix profile</text>
-  <text x="160" y="185" text-anchor="middle" fill="#333" font-size="11">K = −1 everywhere (except cusp)</text>
+  <text x="50" y="175" fill="currentColor" font-size="11">tractrix profile</text>
+  <text x="160" y="185" text-anchor="middle" fill="currentColor" font-size="11">K = −1 everywhere (except cusp)</text>
 </svg>
 </div>
 
@@ -2281,13 +2281,13 @@ In the upper half-plane, horocycles based at \(\infty\) are horizontal lines \(\
 <svg viewBox="0 0 300 230" width="300" height="230" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
   <defs>
     <marker id="arr9" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
   <!-- Axes -->
-  <line x1="20" y1="180" x2="280" y2="180" stroke="#aaa" stroke-width="1" marker-end="url(#arr9)"/>
+  <line x1="20" y1="180" x2="280" y2="180" stroke="#777" stroke-width="1" marker-end="url(#arr9)"/>
   <text x="282" y="184" fill="#aaa" font-size="11">Re(z)</text>
-  <line x1="150" y1="190" x2="150" y2="20" stroke="#aaa" stroke-width="1" marker-end="url(#arr9)"/>
+  <line x1="150" y1="190" x2="150" y2="20" stroke="#777" stroke-width="1" marker-end="url(#arr9)"/>
   <text x="154" y="16" fill="#aaa" font-size="11">Im(z)</text>
   <!-- Fundamental domain F: shaded region -->
   <!-- Left side x = -1/2 (mapped to x=90 in SVG where 1 unit = 120px) -->
@@ -2305,19 +2305,19 @@ In the upper half-plane, horocycles based at \(\infty\) are horizontal lines \(\
   <!-- Bottom arc -->
   <path d="M90,76 A120,120 0 0,1 210,76" fill="none" stroke="#27c" stroke-width="2"/>
   <!-- Axis ticks and labels -->
-  <line x1="90" y1="178" x2="90" y2="182" stroke="#555" stroke-width="1"/>
-  <text x="90" y="194" text-anchor="middle" fill="#555" font-size="11">−½</text>
-  <line x1="210" y1="178" x2="210" y2="182" stroke="#555" stroke-width="1"/>
-  <text x="210" y="194" text-anchor="middle" fill="#555" font-size="11">½</text>
-  <line x1="148" y1="76" x2="152" y2="76" stroke="#555" stroke-width="1"/>
-  <text x="135" y="80" fill="#555" font-size="11">i</text>
+  <line x1="90" y1="178" x2="90" y2="182" stroke="#999" stroke-width="1"/>
+  <text x="90" y="194" text-anchor="middle" fill="currentColor" font-size="11">−½</text>
+  <line x1="210" y1="178" x2="210" y2="182" stroke="#999" stroke-width="1"/>
+  <text x="210" y="194" text-anchor="middle" fill="currentColor" font-size="11">½</text>
+  <line x1="148" y1="76" x2="152" y2="76" stroke="#999" stroke-width="1"/>
+  <text x="135" y="80" fill="currentColor" font-size="11">i</text>
   <!-- Special points -->
   <circle cx="90" cy="76" r="3" fill="#27c"/>
   <circle cx="210" cy="76" r="3" fill="#27c"/>
   <text x="75" y="70" fill="#27c" font-size="10">e^{2πi/3}</text>
   <text x="210" y="70" fill="#27c" font-size="10">e^{πi/3}</text>
   <!-- Label for region -->
-  <text x="150" y="130" text-anchor="middle" fill="#333" font-size="12" font-style="italic">ℱ</text>
+  <text x="150" y="130" text-anchor="middle" fill="currentColor" font-size="12" font-style="italic">ℱ</text>
   <!-- Identification labels -->
   <text x="150" y="213" text-anchor="middle" fill="#e05" font-size="10">sides identified: z↦z+1</text>
   <text x="150" y="225" text-anchor="middle" fill="#27c" font-size="10">arc identified: z↦−1/z</text>
