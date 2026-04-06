@@ -6,4 +6,5 @@ migrate.py
 migrate.sh
 firebase-debug.log
 .codex
+tmp/
 
