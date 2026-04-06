@@ -36,19 +36,59 @@ Yet this promise is deeply contested. As Cathy O'Neil demonstrates in *Weapons o
 
 ## O'Neil and the Concept of Weapons of Math Destruction
 
-O'Neil introduces the term **Weapons of Math Destruction** (数学杀伤性武器, or WMDs) to designate algorithmic systems that share three dangerous characteristics: they are **opaque** (不透明的), meaning that the people affected by them cannot understand how decisions are made; they are **scalable** (可规模化的), meaning they can be applied to millions of people simultaneously, amplifying any embedded biases; and they are **unregulated** (无监管的), meaning there is no external check on their accuracy or fairness.
+O'Neil introduces the term **Weapons of Math Destruction** (数学杀伤性武器, or WMDs) to designate algorithmic systems that share three dangerous characteristics: they are **opaque** (不透明的), meaning that the people affected by them cannot understand how decisions are made; they are **scalable** (可规模化的), meaning they can be applied to millions of people simultaneously, amplifying any embedded biases; and they are **damaging** (有害的), meaning they cause concrete harm---especially to those who are already marginalized or disadvantaged.
 
 <div class="definition">
-<strong>Weapon of Math Destruction (WMD):</strong> A mathematical model or algorithm that is opaque, scalable, and damaging, and that encodes prejudice, misunderstanding, or bias into software systems that increasingly manage human lives.
+<strong>Weapon of Math Destruction (WMD):</strong> A mathematical model or algorithm that is opaque, scalable, and damaging, and that encodes prejudice, misunderstanding, or bias into software systems that increasingly manage human lives. The three features are mutually reinforcing: opacity prevents accountability, scale magnifies harm, and the resulting damage is borne disproportionately by those least able to contest it.
 </div>
 
-O'Neil argues that WMDs create **pernicious feedback loops** (恶性反馈循环). Consider a predictive policing algorithm trained on historical arrest data: if past policing concentrated on certain neighbourhoods (often due to racial profiling), the algorithm will direct future policing resources to those same areas, generating more arrests there, which in turn confirms the algorithm's predictions. The model does not detect crime; it detects policing patterns. The result is a self-reinforcing cycle that entrenches existing inequalities while wearing the mask of mathematical objectivity.
+### The Three Key Features in Detail
 
-<div class="example">
-<strong>Example --- Teacher Evaluation Models:</strong> O'Neil examines how value-added models used to evaluate public school teachers in the United States produced wildly inconsistent scores that could swing dramatically from year to year. A teacher rated excellent one year might be rated among the worst the next, not because her teaching changed, but because the model was poorly designed. Yet the scores had real consequences: teachers were fired on the basis of opaque models they could not contest. The model's opacity and scalability made it a WMD.
+**Opacity** is the first and most philosophically significant feature. Opacity means that neither the people subject to algorithmic decisions nor the public institutions that oversee them can examine the model's inner workings. A defendant sentenced partly on the basis of a risk score cannot learn why the score is high. A job applicant rejected by an automated screening tool receives no explanation. Opacity forecloses the possibility of contest, appeal, or improvement. It also enables those who benefit from the algorithm's outputs to disclaim responsibility for its harms: the system made the decision, not the human operator.
+
+**Scale** transforms a flawed model from a local problem into a systemic one. A biased human hiring manager can harm dozens of candidates per year; a biased automated hiring algorithm can harm millions. O'Neil's central insight is that scale does not merely multiply existing harms---it qualitatively changes their character. When enough people are subjected to the same flawed model simultaneously, the result is a systematic restructuring of life chances across an entire population.
+
+**Damage** is the criterion that distinguishes a WMD from a merely imperfect algorithm. Not every algorithm that produces errors is a WMD. An algorithm that optimizes the scheduling of delivery trucks may be inaccurate but causes little damage. WMDs are those whose errors hurt people: the person wrongly denied parole, the teacher wrongly fired, the loan applicant wrongly judged uncreditworthy. And crucially, the people who are hurt are rarely those who designed, deployed, or profit from the algorithm.
+
+### Specific Examples from *Weapons of Math Destruction*
+
+**Recidivism scoring** is O'Neil's paradigmatic case. Tools like COMPAS produce risk scores predicting the likelihood that a defendant will reoffend, scores that inform bail and sentencing decisions. O'Neil argues that these tools are WMDs: the scoring methodology is proprietary and opaque; the same model is applied to hundreds of thousands of defendants; and an incorrectly high score can result in years of unjust detention. The model uses inputs like employment history, residential stability, and responses to attitude surveys---all of which correlate with race---to predict behaviour while ostensibly not using race.
+
+**Teacher evaluation models** provide a second case study. In the years following the No Child Left Behind Act, many US school districts adopted **value-added models** (增值模型) to evaluate teacher effectiveness based on student test score gains. O'Neil documents the case of a Washington, DC teacher who received an excellent evaluation one year and was rated among the worst performers the next, with no change in her actual teaching. The model's volatility---caused by its technical design, not by any real variation in teacher quality---destroyed careers while operating in complete opacity. Teachers could not appeal because they could not understand the model, let alone identify its errors.
+
+**Insurance pricing** rounds out the picture. Insurers in the United States increasingly use algorithmic pricing models that incorporate credit scores, shopping behaviour, and other proxies to determine premiums. O'Neil demonstrates that these models systematically charge higher premiums to poor customers, who tend to have lower credit scores not because they are riskier drivers but because of unrelated financial pressures. The algorithm thus extracts higher payments from those least able to afford them, concentrating economic harm in communities already experiencing financial precarity.
+
+## The Feedback Loop Problem
+
+One of O'Neil's most powerful arguments concerns **pernicious feedback loops** (恶性反馈循环): the way WMDs do not merely reflect existing inequality but actively entrench and deepen it. The mechanism is straightforward but devastating in its implications.
+
+Consider a predictive policing algorithm trained on historical arrest data. If past policing concentrated on certain neighbourhoods---often due to racial profiling---the algorithm will direct future policing resources to those same areas. More police in those areas means more arrests there, which generates more data confirming the algorithm's prediction that crime is concentrated in those areas. The model does not detect crime; it detects policing patterns, and it uses those patterns to intensify the policing. The result is a self-reinforcing cycle that deepens residential criminalization while wearing the mask of mathematical objectivity.
+
+The same dynamic operates in credit markets. An applicant from a low-income neighbourhood is scored as a poor credit risk partly because her neighbours have historically defaulted at higher rates. If she is denied credit, she cannot invest in education or business development that might raise her income. Her financial situation stagnates or worsens. Next year's model will rate her even more poorly. The algorithm does not merely measure poverty; it perpetuates it.
+
+O'Neil contrasts this with the **virtuous cycle** (良性循环) available to those who receive positive algorithmic assessments. A high credit score produces access to low-interest loans, which produces stable finances, which produces an even higher credit score. The same structural logic that traps the poor in disadvantage propels the already-advantaged further ahead. WMDs thus function as mechanisms of **cumulative disadvantage** (累积性不利), systematically widening the gap between those who benefit from algorithmic systems and those who are harmed by them.
+
+## Automation Bias
+
+A further problem O'Neil identifies---and that has been extensively studied in the psychology and HCI literatures---is **automation bias** (自动化偏见): the tendency of human operators to over-trust algorithmic outputs and to defer to them even when common sense or direct observation would suggest a different conclusion.
+
+When a judge is presented with a risk score of 8.5 out of 10 for a defendant, the precision of the number creates a powerful impression of certainty. The score appears objective, scientific, and authoritative in a way that a colleague's verbal assessment would not. Research shows that humans systematically overweight such quantitative outputs and underweight their own contextual knowledge and moral judgment. The algorithmic score becomes a social fact that is difficult to contest, not because it is accurate, but because contesting it requires challenging the authority of a system that is opaque and ostensibly scientific.
+
+Automation bias has several practical consequences. It reduces the effective accountability of algorithmic systems: if human operators simply defer to algorithmic outputs, then in practice there is no human check on the algorithm's decisions. It shifts moral responsibility in ways that benefit those who deploy the system: when things go wrong, the algorithm is blamed, not the humans who built it, deployed it, and refused to override it. And it concentrates the costs of algorithmic error on those who lack the social capital to challenge technical authority---typically the same marginalized communities who are most often subjected to harmful algorithmic decisions.
+
+## Pasquale's Black Box Society
+
+Frank Pasquale's *The Black Box Society* (2015) offers a complementary analysis that deepens O'Neil's critique. Where O'Neil focuses primarily on the harms of specific algorithmic systems, Pasquale is concerned with the broader **political economy of algorithmic opacity** (算法不透明性的政治经济学).
+
+Pasquale's central argument is that the opacity of algorithmic systems is not accidental but structural: it reflects and reinforces asymmetries of power between the corporations that deploy algorithms and the individuals and communities subject to them. Banks, insurers, employers, and government agencies know everything about us; we know almost nothing about how they make the decisions that shape our lives. This asymmetry is, on Pasquale's analysis, a form of power---the power to see without being seen, to judge without being judged.
+
+<div class="definition">
+<strong>Black Box Society:</strong> A social order in which consequential decisions about individuals and communities are made by opaque automated systems whose inner workings are inaccessible to those affected, creating radical asymmetries of information and power between the institutions that deploy algorithmic systems and the people subject to them.
 </div>
 
-A recurring theme in O'Neil's analysis is that WMDs disproportionately harm the poor and members of marginalized racial groups. A lending algorithm that uses zip code as a predictive variable effectively encodes racial segregation, since zip codes in the United States correlate strongly with race. A student from a poor neighbourhood denied a loan because the model deems her "too risky" is cut off from the education that might lift her out of poverty, generating a vicious spiral of disadvantage.
+Pasquale argues that the remedy requires not just better algorithms but democratic accountability: algorithmic systems that exercise public power should be subject to public scrutiny. The opacity that currently shields corporate and governmental algorithms from accountability is a political choice, not a technical necessity, and challenging it requires political mobilization, not merely technical improvement.
+
+Together, O'Neil's and Pasquale's analyses establish a foundational claim for this course: algorithmic systems are not neutral technical tools but political instruments, and their fairness cannot be assessed in isolation from the social, economic, and political structures in which they operate.
 
 ## Hacker: From Algorithmic Discrimination to Algorithmic Fairness
 
@@ -69,15 +109,37 @@ Critics of utilitarianism have long argued that such an approach ignores conside
 
 # Chapter 2: Discrimination in the Age of Algorithms
 
+## The Legal Framework: Disparate Treatment and Disparate Impact
+
+Before examining Kleinberg et al.'s arguments, it is essential to understand the legal landscape of anti-discrimination law in the United States, because algorithmic systems both operate within that landscape and expose its limitations.
+
+American anti-discrimination law, primarily under Title VII of the Civil Rights Act of 1964, the Fair Housing Act, and the Equal Credit Opportunity Act, recognizes two distinct theories of discrimination.
+
+**Disparate treatment** (差别对待) is intentional discrimination: treating a person less favourably because of their membership in a protected class (race, sex, national origin, religion, colour). To establish a disparate treatment claim, the plaintiff must show that the defendant acted *because of* the protected characteristic. Discriminatory intent is the central element. This framework is well-suited to cases where an employer explicitly refuses to hire women or where a landlord refuses to rent to Black applicants. It is poorly suited to algorithmic discrimination, where no human need form a discriminatory intent for a discriminatory outcome to occur.
+
+**Disparate impact** (差别影响) is a more powerful doctrine for the algorithmic context. Established by the Supreme Court in *Griggs v. Duke Power Co.* (1971) and codified in the Civil Rights Act of 1991, disparate impact allows plaintiffs to challenge facially neutral practices that disproportionately harm members of a protected class, *without* proving intent. A facially neutral employment test that disqualifies Black applicants at a higher rate than white applicants may constitute unlawful discrimination even if the employer had no discriminatory intent, unless the employer can show that the test is justified by business necessity.
+
+<div class="definition">
+<strong>Disparate Treatment (差别对待):</strong> Intentional discrimination against a person because of their membership in a protected class. The plaintiff must show discriminatory motivation. <strong>Disparate Impact (差别影响):</strong> A facially neutral practice that disproportionately harms members of a protected class. No intent need be shown; the plaintiff establishes a statistical disparity, and the burden then shifts to the defendant to justify the practice as a business necessity.
+</div>
+
+### The Failure of These Standards in Algorithmic Contexts
+
+Both legal doctrines face significant challenges when applied to algorithmic systems. Disparate treatment doctrine requires proof of discriminatory intent, which is nearly impossible to establish when bias emerges from data patterns rather than human decisions. A company that deploys a biased hiring algorithm can truthfully say that no one intended to discriminate.
+
+Disparate impact doctrine is more promising but also encounters difficulties. First, plaintiffs must identify the specific employment practice causing the disparity. With complex algorithmic systems, isolating the contribution of any particular feature or model component is technically difficult. Second, the business necessity defence is broad and difficult to overcome: if an algorithm is more predictive than available alternatives, courts may accept this as a business necessity even if the algorithm produces significant racial disparities. Third, many algorithmic systems are deployed by government agencies, and disparate impact doctrine does not apply to constitutional equal protection claims against the government, which still requires proof of discriminatory intent under *Washington v. Davis* (1976).
+
+### Connecting Legal Standards to Algorithmic Fairness Metrics
+
+The legal dichotomy between disparate treatment and disparate impact maps, imperfectly, onto the technical distinction between **individual fairness** and **group fairness** in the algorithmic fairness literature. Disparate treatment doctrine is concerned with whether an individual was treated differently because of a protected characteristic---analogous to individual fairness. Disparate impact doctrine is concerned with whether a practice produces disproportionate group-level outcomes---analogous to group fairness metrics such as demographic parity.
+
+Kleinberg et al.'s impossibility theorems (discussed below) show that satisfying disparate impact standards (demographic parity) simultaneously with accuracy-based standards (calibration) is mathematically impossible when base rates differ across groups. This result has direct legal significance: it implies that courts and regulators must make normative choices about which legal standard to prioritize, and these choices cannot be avoided by appeals to technical neutrality.
+
 ## Kleinberg et al.: Algorithms as Tools for Transparency
 
 Jon Kleinberg, Jens Ludwig, Sendhil Mullainathan, and Cass Sunstein advance a provocative thesis: contrary to widespread concern, the age of algorithms can actually make it *easier* to detect and prove discrimination. Their argument begins from the observation that human decision-making is notoriously opaque. When a hiring manager rejects a candidate, it is often impossible to determine whether the decision was motivated by legitimate considerations, unconscious bias, or deliberate prejudice. People may not be aware of their own biases, and even when they are, they can easily dissemble.
 
 Algorithms, by contrast, require **explicitness** (明确性). An algorithm must be given a defined objective function, a specified set of input variables, and a transparent set of rules for combining them. This very specificity, Kleinberg et al. argue, creates new opportunities for scrutiny. One can examine which variables the algorithm uses, test whether protected characteristics or their proxies influence outputs, and compare outcomes across groups in ways that are simply impossible with human decision-makers.
-
-<div class="definition">
-<strong>Disparate Impact (差别影响):</strong> A legal doctrine under which a facially neutral practice can be deemed discriminatory if it disproportionately harms members of a protected class, regardless of whether discrimination was intended.
-</div>
 
 ### The Transparency Argument
 
@@ -88,6 +150,34 @@ The authors identify several dimensions along which algorithms provide transpare
 3. **Output transparency**: We can systematically compare outcomes across demographic groups and conduct counterfactual analyses.
 
 This transparency makes it possible, in principle, to subject algorithmic decisions to rigorous anti-discrimination scrutiny. If an algorithm produces worse outcomes for one racial group, we can investigate precisely which inputs and which aspects of the model are responsible, and we can test counterfactual scenarios in which group membership is varied while other factors are held constant.
+
+### The Kleinberg et al. Impossibility Theorems
+
+Beyond the transparency argument, Kleinberg et al. establish formal impossibility results that connect directly to the legal standards discussed above. They prove that under realistic conditions---specifically, when the base rate of the predicted outcome differs across demographic groups---it is mathematically impossible for an algorithm to simultaneously satisfy:
+
+1. **Demographic parity**: Equal positive prediction rates across groups.
+2. **Equalized odds**: Equal true positive and false positive rates across groups.
+3. **Calibration**: The same positive predictive value across groups (a score of 0.7 means 70% risk for all groups).
+
+This result, independently derived by Chouldechova (2017) and Kleinberg, Mullainathan, and Raghavan (2016), means that legal standards requiring demographic parity (a disparate impact test) and legal standards requiring calibration (an accuracy-based defence) are in irreducible conflict when the underlying recidivism rates differ between racial groups. Any algorithm that satisfies one criterion will necessarily violate the other.
+
+<div class="remark">
+<strong>Remark:</strong> The impossibility theorem does not tell us which fairness criterion to choose; it tells us that the choice is unavoidable. This is a philosophical and legal problem, not a technical one. The mathematics reveals the shape of the dilemma but cannot resolve it. Resolution requires deciding what justice demands in the specific context---a decision that lies beyond the reach of algorithms.
+</div>
+
+### The COMPAS Case Study
+
+The most prominent real-world illustration of these issues is the COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) recidivism risk assessment tool, developed by Northpointe (now Equivant). COMPAS produces a score from 1 to 10 predicting the likelihood that a defendant will reoffend within two years, and this score is used by judges in bail and sentencing decisions in numerous US jurisdictions.
+
+In May 2016, the investigative news organization ProPublica published an analysis of COMPAS scores for approximately 7,000 defendants in Broward County, Florida. ProPublica's central finding was that COMPAS produced systematically higher **false positive rates** (假阳性率) for Black defendants than for white defendants: Black defendants who did not go on to reoffend within two years were nearly twice as likely as similarly situated white defendants to be classified as high-risk. At the same time, white defendants who did go on to reoffend were more likely than Black defendants to be classified as low-risk---a higher **false negative rate** (假阴性率) for white defendants.
+
+Northpointe responded by pointing out that COMPAS was in fact *calibrated*: among defendants receiving any given risk score, Black and white defendants reoffended at approximately equal rates. A score of 7 meant roughly the same probability of reoffending regardless of race. Northpointe argued that calibration is the appropriate standard of fairness for a risk prediction tool.
+
+The disagreement between ProPublica and Northpointe is not a factual dispute but a normative one---and it is precisely the disagreement predicted by the impossibility theorem. Because Black defendants in Broward County had higher observed recidivism rates (partly reflecting over-policing and other structural factors), a calibrated model will necessarily assign higher scores to Black defendants and will therefore produce higher false positive rates for Black defendants than for white defendants. You can have calibration or equal false positive rates, but not both when base rates differ.
+
+<div class="example">
+<strong>Example --- The COMPAS Disagreement:</strong> Imagine two defendants, one Black and one white, both scored 7 out of 10 by COMPAS. In a calibrated model, both face approximately the same probability of reoffending. But because Black defendants receive high scores more often (due to higher base rates in the training data), a Black defendant with a score of 7 is more likely to be a false positive---someone who will not actually reoffend---than a white defendant with the same score. Whether this constitutes discrimination depends entirely on which fairness standard one adopts, and the impossibility theorem shows that no algorithm can satisfy both standards simultaneously.
+</div>
 
 ### Algorithms as a Positive Force
 
@@ -140,36 +230,124 @@ Johnson's central contribution is what she calls **the Proxy Problem** (代理�
 
 The Proxy Problem generates a dilemma that admits of no purely algorithmic solution. Attempts to discourage reliance on proxy attributes risk a tradeoff with judgment accuracy: removing zip code from a credit model may make the model less predictive for everyone, while retaining it perpetuates racial disparities. This tradeoff is not merely a technical challenge but a normative one, requiring value judgments about how to balance accuracy against equity.
 
-### The COMPAS Case
+## Ajunwa: "Neutral" Criteria as Race and Gender Proxies
 
-Johnson uses the COMPAS recidivism prediction algorithm as a primary case study. COMPAS, which stands for Correctional Offender Management Profiling for Alternative Sanctions, produces risk scores used by judges in bail and sentencing decisions. A 2016 ProPublica investigation found that COMPAS produced significantly higher false-positive rates for Black defendants: Black defendants who did not go on to reoffend were more likely to be classified as high-risk than similarly situated white defendants. This disparity, Johnson argues, illustrates the Proxy Problem in action: the algorithm's input features served as proxies for race, producing racially disparate outcomes despite the absence of race as an explicit input.
+Ifeoma Ajunwa's analysis of algorithmic hiring provides rich documentation of how criteria that appear facially neutral function in practice as proxies for race and gender. Her account extends the proxy problem analysis beyond zip codes to the full range of features modern hiring algorithms deploy.
 
-## Prince and Schwarcz: Proxy Discrimination as a Structural Phenomenon
+Ajunwa identifies names as a particularly significant proxy. Research in audit studies (notably the famous Bertrand and Mullainathan study, "Are Emily and Greg More Employable than Lakisha and Jamal?") demonstrates that resumes with stereotypically Black names receive significantly fewer callbacks than identical resumes with stereotypically white names. An automated system trained on callback rates will learn to treat name-associated signals as predictors of success, effectively encoding racial discrimination into a "neutral" criterion.
 
-Anya Prince and Daniel Schwarcz provide a legal analysis of **proxy discrimination** (代理歧视), arguing that AI and big data represent a qualitative shift in the risk of unintentional proxy discrimination. Their central insight is that proxy discrimination is a particularly pernicious subset of **disparate impact** (差别影响): it arises when a facially neutral practice disproportionately harms members of a protected class *and* the usefulness of that practice derives, at least in part, from the very correlation that produces the disparate impact.
+Similarly, educational institution names function as proxies. Historically Black Colleges and Universities (HBCUs) produce graduates who are on average just as qualified as graduates of predominantly white institutions, but an algorithm trained on historical hiring outcomes---where HBCU graduates faced discrimination---will learn to downweight HBCU credentials. The algorithm treats institutional affiliation as predictive of job performance when in fact it is predictive of historical discrimination.
 
-### Why AI Intensifies the Problem
+<div class="example">
+<strong>Example --- Zip Code as Race Proxy:</strong> A credit-scoring algorithm that uses residential zip code as a feature will assign lower scores to applicants from predominantly Black or Latino neighbourhoods. This correlation between zip code and race is not coincidental: it is the direct product of decades of racially discriminatory housing policy, including redlining (discussed below), exclusionary zoning, and racially targeted predatory lending. The algorithm does not use race; it uses the spatial footprint of racism.
+</div>
 
-Prince and Schwarcz argue that AI systems are inherently structured to engage in proxy discrimination whenever they are deprived of information about protected characteristics. When an algorithm cannot use race directly, it will find other variables that correlate with race and use those instead---not out of any discriminatory intent, but because those correlations are genuinely predictive. The algorithm is simply doing what it is designed to do: finding the best available predictors of the target variable. If race is predictive (because of systemic discrimination), and direct use of race is prohibited, the algorithm will route around the prohibition by exploiting proxies.
+## Redlining and Its Digital Successor
+
+The history of **redlining** (红线政策) is essential context for understanding digital proxy discrimination. Beginning in the 1930s, the Home Owners' Loan Corporation (HOLC), a New Deal-era federal agency, created residential security maps of American cities that colour-coded neighbourhoods by perceived investment risk. Neighbourhoods populated predominantly by Black residents, immigrants, or the poor were coloured red and rated "hazardous." Banks and federal mortgage insurers used these maps to deny mortgages and investment to redlined areas, systematically preventing Black families from accumulating housing wealth.
+
+The effects of redlining persist: studies have shown that HOLC-redlined neighbourhoods remain significantly poorer, less healthy, and less educated than neighbourhoods that received higher ratings, even seventy years later. The spatial structure of racial inequality that redlining created is now encoded in the data that algorithmic systems use.
+
+**Digital redlining** is the contemporary practice of using proxies that track the spatial and social footprint of historical redlining to produce similar exclusionary effects. An insurance pricing algorithm that charges higher premiums to residents of formerly redlined neighbourhoods is not legally discriminating by race---no one's race appears in the model---but it is producing outcomes that are racially discriminatory in origin and effect. The digital form is more insidious than the original: it is hidden within complex models, protected by trade-secret law, and legitimated by the apparent objectivity of data-driven methods.
+
+## Prince and Schwarcz: A Framework for Impermissible Proxy Use
+
+Anya Prince and Daniel Schwarcz build a systematic legal framework for identifying when proxy discrimination is impermissible. Their central insight is that not all use of correlated variables constitutes wrongful discrimination, and the challenge is to identify the conditions under which it does.
+
+Prince and Schwarcz distinguish three types of correlation between a facially neutral variable and a protected characteristic:
+
+1. **Causally proximate correlation**: The protected characteristic directly causes variation in the variable (e.g., race directly causes differential access to wealth-building opportunities). Using such a variable is more likely to constitute wrongful discrimination because the protected characteristic is embedded in the causal story.
+
+2. **Causally distal correlation**: The correlation is mediated by many intervening causal factors (e.g., credit score correlates with race because of a long causal chain involving historical discrimination, but the correlation is not due to any direct causal relationship). Using such variables may or may not constitute wrongful proxy discrimination depending on context.
+
+3. **Spurious correlation**: The correlation holds in the training data but does not reflect any genuine underlying causal relationship; it is an artefact of biased data collection or historical contingency.
+
+### When Proxy Use Is Impermissible
+
+Prince and Schwarcz propose that proxy use is impermissible when (a) the variable correlates substantially with a protected characteristic, (b) the correlation derives substantially from historical discrimination rather than from legitimate variation in the predicted outcome, and (c) alternative variables exist that would allow comparable predictive accuracy without the discriminatory proxy effect.
+
+This framework is more nuanced than a simple prohibition on correlated variables. It acknowledges that some correlations between neutral variables and protected characteristics are legitimate (e.g., language proficiency may correlate with national origin but also be a genuine qualification for certain roles) while identifying conditions under which the use of such correlations constitutes unjustifiable proxy discrimination.
+
+### The Disparate Impact vs. Proxy Discrimination Distinction
+
+Prince and Schwarcz draw a conceptual distinction between **disparate impact** and **proxy discrimination** that is important for both legal and philosophical analysis. **Disparate impact** is the broader category: any facially neutral practice that produces disproportionate harm to a protected class. **Proxy discrimination** is a subset of disparate impact: it occurs when a facially neutral practice produces disparate impact *and* the predictive usefulness of that practice derives substantially from the very correlation with the protected characteristic that generates the disparate impact.
+
+This distinction matters because it affects the appropriate remedy. For generic disparate impact, the question is whether the practice is justified by business necessity. For proxy discrimination, the question is sharper: the practice derives its value *from* the discriminatory correlation, which means that justifying it by that value is essentially justifying discrimination by its discriminatory effectiveness.
 
 <div class="remark">
 <strong>Remark:</strong> This analysis reveals a deep irony: the legal prohibition on using protected characteristics in decision-making, which was designed to prevent discrimination, can actually exacerbate proxy discrimination in the algorithmic context. By forcing algorithms to use proxies instead of the characteristic itself, the prohibition makes discrimination harder to detect while doing nothing to eliminate it.
 </div>
 
-### Three Regulatory Strategies
+## The Statistical Discrimination Literature
 
-Prince and Schwarcz evaluate three potential responses:
+The proxy discrimination problem has roots in a longstanding economic literature on **statistical discrimination** (统计性歧视), pioneered by Kenneth Arrow in the 1970s. Arrow's framework distinguishes two types of rational employer behaviour:
 
-1. **Data collection and reporting**: Allow or require algorithms to collect data on protected characteristics for the purpose of monitoring and reporting outcomes to regulators. This approach does not use the data in decision-making but uses it to detect disparities.
+**Taste-based discrimination** (趣味性歧视): An employer discriminates because of a personal aversion to certain groups, paying a wage premium to preferred workers. This form of discrimination is inefficient and should be competed away in a competitive market (though historical evidence suggests it is not).
 
-2. **Ethical algorithms**: Use statistical techniques to identify and correct for correlations between facially neutral variables and protected characteristics, effectively "debiasing" the model.
+**Statistical discrimination**: An employer uses group membership as an inexpensive proxy for information about individual productivity that would be costly to observe directly. If, on average, group A has higher productivity than group B, a rational profit-maximizing employer will prefer group A members even when no information about the individual is available. This discrimination can persist even without any animus.
 
-3. **Permissive regulation**: Instead of prohibiting the use of protected characteristics and then struggling with proxies, allow all variables and instead directly regulate outcomes, prohibiting all forms of discrimination except those specifically authorized.
+### Normative Problems with Statistical Discrimination
 
-Each strategy involves significant tradeoffs between accuracy, fairness, privacy, and administrability. Prince and Schwarcz argue that simple solutions---such as banning obvious proxies---are likely to be ineffective because AI systems can find and exploit less obvious proxies that human regulators would never anticipate.
+Arrow's framework was intended descriptively, but it has important normative implications that have been extensively debated. Statistical discrimination is normatively problematic for several reasons:
+
+First, it treats individuals as representatives of group averages rather than as individuals with their own particular characteristics. A job applicant rejected because his group has, on average, lower measured productivity is harmed by being evaluated on the basis of characteristics he does not possess. This is a paradigm violation of the principle that individuals should be judged on their own merits.
+
+Second, statistical discrimination is self-perpetuating: if members of group B are denied investment and opportunity because they are stereotyped as less productive, they will in fact become less productive (through the mechanism of reduced human capital investment). The stereotype becomes self-fulfilling. Arrow's own analysis recognized this dynamic.
+
+Third, the "statistical" character of such discrimination provides a cloak of rationality that shields it from moral criticism. If the group averages are real (even if produced by discrimination), the employer can claim to be acting rationally and on the basis of accurate information. This claim is technically correct while being morally evasive.
+
+## Proxy Discrimination Across Domains
+
+Proxy discrimination is not limited to employment and credit. It operates across the full range of domains in which algorithmic systems are deployed.
+
+**Credit scoring**: FICO and similar credit scores aggregate payment history, debt levels, length of credit history, and other financial variables into a single number. These variables are not racially neutral: they reflect the effects of historical discrimination in housing, employment, and lending. Research by the National Community Reinvestment Coalition has documented that credit scores systematically underestimate the creditworthiness of Black and Latino borrowers by failing to incorporate alternative data (such as rent payment history) that would be more predictive for those historically excluded from traditional credit markets.
+
+**Hiring algorithms**: As documented by Ajunwa and others, name, educational institution, zip code, employment gaps (correlated with caregiving responsibilities and thus with gender), and social media activity all function as proxies for protected characteristics in automated hiring systems.
+
+**Targeted advertising**: Facebook's advertising platform was found by ProPublica and others to permit advertisers to exclude users from seeing ads for housing, credit, and employment based on characteristics correlated with race. Because Facebook's categories (such as "Multicultural Affinity: African-American") were derived from user behaviour rather than stated race, advertisers could engage in racial targeting while claiming not to use race. Facebook settled a lawsuit with the National Fair Housing Alliance in 2019 and agreed to restructure its advertising system.
 
 
 # Chapter 4: Defining and Measuring Algorithmic Fairness
+
+## Formal Fairness Metrics
+
+The algorithmic fairness literature has developed a precise mathematical vocabulary for specifying what it means for an algorithm to treat groups equitably. Let *A* denote the protected attribute (e.g., race: 0 = white, 1 = Black), *Y* the true outcome (e.g., 1 = will reoffend, 0 = will not reoffend), and *Ŷ* the algorithm's predicted outcome or classification. Let *S* denote a continuous score (e.g., a risk score from 1 to 10).
+
+The three most widely discussed fairness metrics are:
+
+| Fairness Metric | Formal Definition | Intuition |
+|---|---|---|
+| **Demographic Parity** | P(Ŷ = 1 \| A = 0) = P(Ŷ = 1 \| A = 1) | Both groups receive positive predictions at equal rates |
+| **Equalized Odds** | P(Ŷ = 1 \| Y = y, A = 0) = P(Ŷ = 1 \| Y = y, A = 1) for y ∈ {0,1} | Equal true positive rates *and* equal false positive rates across groups |
+| **Calibration / Predictive Parity** | P(Y = 1 \| S = s, A = 0) = P(Y = 1 \| S = s, A = 1) | A score of *s* means the same probability of the outcome for both groups |
+
+**Demographic parity** (人口统计均等) is the simplest and most direct equity criterion: both groups should be selected, classified, or approved at the same rate. It is the closest analogue to a disparate impact standard in anti-discrimination law. Its limitation is that it does not condition on actual outcomes---a fully accurate algorithm could violate demographic parity if the true rates of the predicted behaviour differ across groups.
+
+**Equalized odds** (均等机会), introduced by Hardt, Price, and Srebro (2016), is more demanding: it requires both equal true positive rates (both groups equally benefit from correct positive classifications) and equal false positive rates (both groups bear the same burden of incorrect positive classifications). In the recidivism context, equalized odds would require that the probability of being classified as high-risk is the same for those who will reoffend *and* the probability of being incorrectly classified as high-risk is the same for those who will not reoffend, across racial groups.
+
+**Calibration** (校准) / predictive parity requires that the meaning of a score be the same for all groups: a risk score of 7 should mean a 70% probability of reoffending whether the defendant is Black or white. This is the standard Northpointe used to defend COMPAS.
+
+## The Chouldechova/Kleinberg Impossibility Theorem
+
+Alexandra Chouldechova (2017) and Kleinberg, Mullainathan, and Raghavan (2016), working independently, proved the central impossibility result that structures the entire algorithmic fairness debate.
+
+**Theorem (informal):** If the base rates of the predicted outcome differ between groups (P(Y = 1 | A = 0) ≠ P(Y = 1 | A = 1)), then no non-trivial algorithm can simultaneously satisfy demographic parity, equalized odds, and calibration.
+
+Chouldechova's version of the result applies specifically to recidivism prediction and shows that if a classifier is calibrated and has unequal prevalence across groups, then it must have unequal false positive rates and/or false negative rates---precisely the disagreement between ProPublica and Northpointe.
+
+The impossibility theorem reveals that the choice among fairness metrics is irreducibly normative. The question "which fairness metric should we use?" cannot be answered by mathematics; it requires a substantive moral and political judgment about what we owe to different groups in the specific decision context. In the bail context, one might argue that the harm of a false positive (incorrectly detaining an innocent person) is more severe than the harm of a false negative (incorrectly releasing someone who will reoffend), which would favour equalized false positive rates over calibration.
+
+## The Ground Truth Problem
+
+A subtler issue in recidivism prediction---one that undermines the entire enterprise in a more fundamental way---is what philosophers and statisticians call the **ground truth problem** (基准真相问题).
+
+Recidivism prediction algorithms are evaluated against a ground truth: did the defendant reoffend? But the data used to answer this question is not neutral. "Reoffending" in the dataset means "being arrested again for a new crime." But arrest rates are themselves shaped by policing practices. Communities that are more heavily policed will generate more arrests, even if the underlying rate of criminal behaviour is the same as in less-policed communities.
+
+This creates a fundamental circularity: the algorithm predicts the probability of arrest, using historical arrest rates as the training signal. It is then evaluated against future arrest rates. The entire system is circular with respect to the quantity it purports to measure---actual criminal behaviour---because actual criminal behaviour is never directly observed. Only policing-mediated arrest is observed. An algorithm that is highly accurate in predicting future arrests may be highly accurate in predicting future policing rather than future crime.
+
+<div class="definition">
+<strong>Ground Truth Circularity (基准真相循环):</strong> The problem that arises when the outcome variable used to train and evaluate a predictive algorithm is itself a product of the social processes the algorithm is supposed to predict. In recidivism prediction, arrest rates are used as proxies for criminal behaviour, but arrest rates reflect policing practices that are themselves racially biased, creating a self-referential system that predicts policing rather than crime.
+</div>
 
 ## Hellman: Conceptual Foundations of Fairness Measurement
 
@@ -183,9 +361,13 @@ Hellman identifies two dominant families of fairness metrics:
 
 2. **Error-rate-based measures** (错误率度量): These require equality in the rates of specific types of errors across groups. The two most important error-rate metrics are **false positive rate parity** (假阳性率均等)---the same proportion of each group should be incorrectly classified as positive---and **false negative rate parity** (假阴性率均等)---the same proportion of each group should be incorrectly classified as negative.
 
-<div class="definition">
-<strong>Impossibility Result (不可能性结果):</strong> A mathematical theorem demonstrating that it is impossible to simultaneously satisfy certain fairness metrics except in trivial cases. Specifically, an algorithm cannot simultaneously achieve equal predictive values and equal error rates across groups unless the base rates (the actual prevalence of the predicted outcome) are equal across groups, or the algorithm achieves perfect prediction.
-</div>
+### Hellman's Expressive and Dignitary Account
+
+Hellman's most significant philosophical contribution is her analysis of when discrimination is *wrong*, which she develops in contrast to purely statistical or outcome-based accounts. Drawing on her broader work in anti-discrimination theory, she argues that discrimination is wrong when it **demeans** or **degrades** the person discriminated against---when it treats them as if they were of lesser moral worth or as if their individual characteristics do not matter.
+
+On this **dignitary account** (尊严性解释), the wrongness of discrimination does not depend solely on its effects. An action can demean even if it produces no material harm, and an action can avoid demeaning even if it produces statistical disparities. Applied to algorithmic systems, the dignitary account suggests that the fundamental question is not whether the algorithm produces equal outcomes across groups but whether it treats individuals as bearers of dignity whose particular characteristics matter, rather than as interchangeable representatives of group statistics.
+
+Hellman argues that calibration-based defences of algorithms that produce disparate error rates fail the dignitary test. Even if a calibrated model is epistemically accurate in the sense that scores mean the same thing for all groups, the fact that one group bears a disproportionate burden of false positives means that individual members of that group are being incorrectly and harmfully classified at higher rates. The dignitary harm lies in this systematic misclassification, not merely in the aggregate statistical pattern.
 
 ### Three Contributions
 
@@ -209,18 +391,6 @@ Pessach and Shmueli identify several sources of algorithmic bias:
 - **Representation bias**: The training data fails to adequately represent certain populations, leading to worse performance for underrepresented groups.
 - **Measurement bias**: The features used as proxies for the construct of interest may systematically distort the construct in ways that differ across groups.
 - **Aggregation bias**: A one-size-fits-all model may fail to capture group-specific patterns, performing well on average but poorly for specific subgroups.
-
-### Fairness Definitions
-
-The survey catalogs the major mathematical definitions of fairness:
-
-- **Demographic parity** (人口统计均等): The probability of a positive outcome should be equal across groups. Formally: P(Y-hat = 1 | A = 0) = P(Y-hat = 1 | A = 1), where A is the protected attribute and Y-hat is the predicted outcome.
-- **Equalized odds** (均等机会): The true positive rate and false positive rate should be equal across groups, conditional on the actual outcome.
-- **Predictive rate parity** (预测率均等): The positive predictive value---the probability that a person classified as positive is actually positive---should be equal across groups.
-
-### The Impossibility Theorem
-
-A central result in the algorithmic fairness literature, which Pessach and Shmueli explain, is the **impossibility theorem** (不可能性定理): except in degenerate cases, no algorithm can simultaneously satisfy demographic parity, equalized odds, and predictive rate parity. This result implies that any practical fairness intervention requires choosing among competing fairness criteria, and this choice is irreducibly normative.
 
 ### Fairness-Enhancing Mechanisms
 
@@ -253,9 +423,29 @@ Frye's most celebrated contribution is the **birdcage metaphor** (鸟笼比喻) 
 
 Frye introduces the concept of the **double bind** (双重困境): oppressive systems create situations where every available option for the oppressed leads to negative consequences. A woman who is assertive is penalized for being "aggressive"; a woman who is deferential is penalized for lacking leadership qualities. The system is structured so that no available choice leads to a good outcome, creating the illusion of choice while ensuring continued subordination.
 
-### Implications for Algorithmic Fairness
+### Young's Five Faces of Oppression
 
-Frye's structural analysis has direct implications for algorithmic fairness. If oppression is systemic rather than individual, then removing individual biases from algorithms is insufficient. An algorithm that treats every individual "equally" will still produce oppressive outcomes if it operates within and draws data from an oppressive social structure. The birdcage cannot be dismantled one wire at a time; similarly, algorithmic fairness cannot be achieved by addressing one variable at a time while leaving the structural context intact.
+Political philosopher Iris Marion Young develops Frye's structural analysis in her influential book *Justice and the Politics of Difference* (1990), identifying five distinct "faces" of oppression that together constitute the full phenomenology of structural subordination. Each face has a distinctive algorithmic expression.
+
+**Exploitation** (剥削) refers to the transfer of the results of labour from one social group to another. In algorithmic systems, exploitation manifests when the data produced by users' activities---data generated through their labour and creativity---is appropriated by platform companies to train models that are then used to extract further value from those same users, often without compensation or meaningful consent.
+
+**Marginalization** (边缘化) refers to the expulsion of a category of people from participation in social life. Algorithmic marginalization occurs when systems perform poorly for underrepresented groups (e.g., facial recognition failing on dark-skinned faces), when recommendation algorithms steer marginalized groups away from economic opportunities, or when automated systems simply fail to serve communities that lack the digital infrastructure or data density to be legible to the model.
+
+**Powerlessness** (无权力) refers to the lack of authority, status, and sense of self that characterizes the lives of those who are neither exploited nor marginalizers but simply have no power. Algorithmic powerlessness arises from the opacity and inscrutability of algorithmic systems: people subject to consequential algorithmic decisions often have no ability to understand, contest, or appeal those decisions.
+
+**Cultural imperialism** (文化帝国主义) refers to the universalization of a dominant group's experience and culture, rendering the perspectives of other groups invisible or deviant. Algorithmic cultural imperialism occurs when AI systems encode the values, aesthetics, and epistemologies of dominant groups as universal standards, treating everything else as noise or error. Natural language processing systems trained primarily on English-language text fail on other languages and dialects. Image recognition systems trained on Western datasets misclassify culturally specific objects.
+
+**Violence** (暴力) refers to systematic and unprovoked attacks on persons or their property motivated by hatred of the social group they belong to. The algorithmic dimension of violence includes predictive policing systems that direct law enforcement violence toward specific communities, facial recognition systems that contribute to wrongful arrests and the violence of incarceration, and content moderation algorithms that systematically fail to remove violent content targeting marginalized groups while over-removing content from those same groups.
+
+## Pessach and Shmueli: Detecting Structural Discrimination
+
+Dana Pessach and Erez Shmueli's framework goes beyond cataloguing sources of bias to offer a methodology for detecting structural discrimination in algorithmic systems. Their approach recognizes that structural discrimination---discrimination that results from the embedding of algorithms within discriminatory social structures---is fundamentally different from the forms of bias that standard fairness metrics detect.
+
+Standard fairness metrics compare outcomes for groups defined by protected characteristics: do Black and white defendants receive different scores? But structural discrimination may operate across multiple characteristics simultaneously, in ways that are invisible if you examine each characteristic separately. A hiring algorithm that disadvantages applicants from low-income neighbourhoods who attended community colleges and have employment gaps---a combination of characteristics that correlates strongly with race and gender---may not show a statistically significant disparity on any single dimension while producing substantial combined disadvantage.
+
+Pessach and Shmueli propose **intersectional fairness analysis** (交叉性公平分析): examining outcomes for individuals defined by the intersection of multiple protected characteristics, not just by single characteristics in isolation. This approach, which draws on Kimberlé Crenshaw's foundational concept of **intersectionality** (交叉性) in legal theory, is better suited to detect the complex, multi-dimensional character of structural discrimination.
+
+They also emphasize the importance of **counterfactual fairness** (反事实公平性): an individual should not be treated differently by an algorithm if, in a counterfactual world where their protected characteristics were different, the outcome would be different. Counterfactual fairness is a formal tool for operationalizing the principle that protected characteristics should not influence decisions, but implementing it requires a causal model of the data-generating process---a model that must make controversial assumptions about the structure of social causation.
 
 ## Mills: White Supremacy as a Political System
 
@@ -307,9 +497,11 @@ Rawls's **theory of justice as fairness** (作为公平的正义) holds that jus
 1. **Equal basic liberties** (平等基本自由): Each person has an equal right to the most extensive scheme of basic liberties compatible with a similar scheme for all.
 2. **The difference principle** (差异原则): Social and economic inequalities are permitted only if they benefit the least advantaged members of society, subject to **fair equality of opportunity** (公平的机会平等, FEO).
 
-### Shelby's Extension
+### Shelby's Extension and Ideal Theory as Goal-Setting
 
 Shelby argues that Rawls's **fair equality of opportunity** principle can be extended to address racial inequality without fundamentally altering the Rawlsian framework. On this view, racial discrimination violates FEO because it distributes social positions on the basis of morally arbitrary characteristics rather than talent and effort. A Rawlsian approach would therefore condemn racial discrimination as a violation of basic justice and would support robust institutional interventions to ensure that race does not determine life prospects.
+
+Crucially, Shelby offers a partial defence of ideal theory not as a description of the actual world but as a **regulative ideal** (调节性理想)---a goal that guides action even when it cannot be fully achieved. On this reading, developing principles for a fully just society is not a distraction from addressing current injustice but a precondition for it: without a vision of the just society we are trying to build, we cannot identify what counts as progress or set an appropriate direction for reform.
 
 Shelby draws a distinction between **racial injustice** (种族不正义) as discrimination and **racist injustice** (种族主义不正义) as oppression, arguing that Rawls's framework can accommodate both: discrimination violates FEO, while oppression violates the basic structure's commitment to treating all persons as free and equal.
 
@@ -317,27 +509,25 @@ Shelby draws a distinction between **racial injustice** (种族不正义) as dis
 <strong>Ideal Theory (理想理论):</strong> A mode of political theorizing that develops principles of justice for a perfectly just society---one characterized by full compliance with just institutions and favourable social conditions. Ideal theory asks: what would a fully just society look like? <strong>Non-ideal theory</strong> (非理想理论), by contrast, addresses questions of justice under conditions of partial compliance, historical injustice, and non-ideal circumstances.
 </div>
 
-## Mills: Against Ideal Theory
+## Mills: Against Ideal Theory and White Ignorance
 
-Charles Mills launches a sustained critique of Shelby's approach, arguing that the Rawlsian framework cannot be successfully deployed for racial justice without radical revision. Mills raises five central objections:
+Charles Mills launches a sustained critique of Shelby's approach, arguing that the Rawlsian framework cannot be successfully deployed for racial justice without radical revision. Mills's critique operates on multiple levels.
 
-### 1. Rawls's Own Silence
-
-Rawls himself never applied his framework to racial justice, despite having ample opportunity to do so. Mills argues that this silence is not accidental but reveals something about the framework's limitations: it was designed to theorize justice under idealized conditions and is poorly equipped to address the messy realities of racial injustice.
-
-### 2. The Ideal Theory Problem
+### The Ideal Theory Problem
 
 Mills's most fundamental objection concerns the distinction between **ideal theory** and **non-ideal theory**. Rawls developed his principles for an idealized, perfectly just society. But racial injustice is a product of profoundly non-ideal conditions: centuries of slavery, colonialism, and systemic discrimination. Mills argues that ideal theory "obscures the realities of white supremacy and leads people to ignore or misperceive racial injustice." The idealizing assumptions strip away the very features of the social world---racial hierarchy, accumulated disadvantage, epistemic distortion---that any theory of racial justice must address.
 
-### 3. The Priority of Rectificatory Justice
+### White Ignorance as Epistemic Concept
+
+In work that extends beyond the Shelby debate, Mills develops the concept of **white ignorance** (白人无知) as a structural feature of societies organized around racial domination. White ignorance is not merely the absence of information; it is a socially produced and maintained system of not-knowing that enables the reproduction of racial hierarchy. White people in racially unjust societies are systematically wrong about the history of racial injustice, the mechanisms by which it operates, and their own complicity in it---not through individual cognitive failure but through structural features of how knowledge is produced and distributed.
+
+White ignorance has direct implications for AI: the designers, funders, and deployers of algorithmic systems are overwhelmingly white, and the decisions they make---about what to optimize, whose harms to prioritize, what counts as a problem worth solving---are shaped by structural white ignorance. The gaps in AI ethics that Birhane et al. document (see Chapter 9) are, on Mills's analysis, predictable products of white ignorance.
+
+### The Priority of Rectificatory Justice
 
 Mills emphasizes that racial justice requires **rectificatory justice** (矫正正义)---corrective measures to address historical wrongs---not merely forward-looking principles for distributing opportunities. The pressing question is not "what principles should govern a perfectly just society?" but "what do we owe to those whose ancestors were enslaved, dispossessed, and systematically exploited?" Rawls's framework, designed for ideal conditions, has no obvious place for such backward-looking considerations.
 
-### 4. Class versus Race
-
-Mills argues that Shelby's attempt to assimilate racial injustice to class injustice---treating race as merely one factor that affects one's position in the social hierarchy---fails to capture the distinctive character of racial oppression. Racial injustice is not simply a matter of unequal distribution; it involves a distinctive kind of status hierarchy, epistemic violence, and cultural erasure that cannot be reduced to economic inequality.
-
-### 5. The Ideology of Ideal Theory
+### The Ideology of Ideal Theory
 
 Most provocatively, Mills argues that ideal theory is not merely inadequate but actively harmful: it functions as an **ideology** (意识形态) that serves to maintain white supremacy by diverting philosophical attention away from the real structures of racial domination. By focusing on what a perfectly just society would look like, ideal theory renders invisible the mechanisms of racial injustice that actually exist.
 
@@ -345,8 +535,96 @@ Most provocatively, Mills argues that ideal theory is not merely inadequate but 
 <strong>Remark:</strong> The Shelby-Mills debate has direct implications for algorithmic fairness. Approaches that define fairness in ideal-theoretic terms---for example, by asking what outcomes a fair algorithm would produce in a just society---risk the same idealization problem that Mills identifies. If algorithms are deployed in a profoundly unjust society, defining fairness by reference to ideal conditions may produce interventions that are inadequate or even counterproductive.
 </div>
 
+## Frye: Anti-Subordination vs. Anti-Classification
+
+Marilyn Frye's analysis of sexism as structural oppression connects to a foundational debate in constitutional law and political philosophy between two competing anti-discrimination principles: **anti-classification** (反分类) and **anti-subordination** (反从属化).
+
+The **anti-classification principle** holds that the law should be colour-blind and sex-blind: decision-makers should not classify people by race or sex, period. On this view, any use of race in decision-making---whether to disadvantage or advantage members of a racial group---is presumptively unconstitutional. This principle is associated with formal equality: treat like cases alike, and the relevant question is whether race was used, not what effect that use had.
+
+The **anti-subordination principle** holds that the fundamental wrong of racial and sex discrimination is the social and institutional subordination of certain groups. On this view, what matters is not whether race was used but whether the practice reinforces or perpetuates the subordination of a historically oppressed group. Race-conscious policies designed to remedy subordination (affirmative action) are permissible or even required; race-neutral policies that perpetuate subordination are prohibited.
+
+Frye's structural analysis of sexism supports the anti-subordination principle: if oppression is systemic rather than a matter of individual decisions, then eliminating classification without eliminating subordination accomplishes nothing. An algorithm that never explicitly uses race but reproduces racial subordination through proxy variables satisfies the anti-classification principle while violating the anti-subordination principle.
+
+## Toward a Non-Ideal Theory of Algorithmic Fairness
+
+Fazelpour and Lipton's work (discussed in Chapter 7) represents one attempt to develop what a non-ideal approach to algorithmic fairness would look like. But the Mills-Shelby debate suggests that any genuinely non-ideal theory of algorithmic fairness must incorporate several elements that mainstream approaches lack:
+
+1. **Historical accountability**: The algorithm must be evaluated in light of the history of discrimination that shaped the data it uses. An algorithm that perpetuates the effects of redlining is not merely producing disparate impact; it is reproducing a specific historical injustice.
+
+2. **Structural causation**: The theory must attend to the structural causes of the disparities the algorithm reflects, not merely to the statistical patterns. Two algorithms might produce identical statistical disparities for different structural reasons, and the appropriate remedies would differ accordingly.
+
+3. **Rectificatory dimension**: In some contexts, a genuinely fair algorithm may need to be explicitly rectificatory---designed to counteract the effects of historical discrimination---rather than merely neutral. This connects directly to the debate about algorithmic affirmative action in Chapter 7.
+
+4. **Epistemic humility**: Non-ideal theory requires acknowledgment of what we do not know, including what we do not know because of structural white ignorance. Algorithmic systems built without adequate consultation with affected communities will reflect the ignorance of their designers.
+
 
 # Chapter 7: Algorithmic Affirmative Action
+
+## The Legal Landscape for Affirmative Action
+
+Any discussion of algorithmic affirmative action must begin with the legal context established by decades of Supreme Court jurisprudence. American affirmative action law has evolved through a series of landmark decisions that define the conditions under which race-conscious policies are constitutionally permissible.
+
+*Regents of the University of California v. Bakke* (1978) produced no majority opinion but established that race could be considered as one factor among many in university admissions (Justice Powell's opinion), while rigid racial quotas were impermissible. *Grutter v. Bollinger* (2003) upheld the University of Michigan Law School's holistic admissions process, which used race as one factor in the interest of achieving a diverse student body. The majority opinion by Justice O'Connor endorsed the "diversity rationale"---the educational benefits of a racially diverse student body---as a compelling state interest sufficient to justify race-conscious admissions.
+
+*Students for Fair Admissions v. Harvard and UNC* (2023) effectively overruled *Grutter*, holding that race-conscious admissions programs at Harvard and the University of North Carolina violated the Equal Protection Clause. The Court's opinion by Chief Justice Roberts held that universities' admissions programs lacked sufficiently measurable objectives, involved racial stereotyping, and had no logical end point. The decision applies to public universities under the Fourteenth Amendment and to private universities under Title VI of the Civil Rights Act.
+
+<div class="remark">
+<strong>Remark:</strong> The SFFA decision does not directly govern employment or criminal justice contexts, and its implications for algorithmic systems are still being worked out. But it significantly restricts the range of race-conscious policies legally available in higher education and may signal broader judicial scepticism about race-conscious decision-making in other domains.
+</div>
+
+## The Philosophical Debate: Diversity Rationale vs. Remedial Rationale
+
+Philosophers have long debated two distinct justifications for affirmative action, which correspond loosely to the legal landscape.
+
+The **diversity rationale** (多样性论证) holds that affirmative action is justified because racial diversity produces educational or social benefits: diverse groups make better decisions, expose students to different perspectives, and prepare graduates for participation in a diverse society. On this view, the beneficiary of affirmative action is not the historically disadvantaged individual but the institution and society as a whole. Diversity is an instrument for achieving better collective outcomes.
+
+The **remedial rationale** (补救性论证) holds that affirmative action is justified as a remedy for past discrimination: those who have been systematically disadvantaged by historical injustice are owed compensatory measures as a matter of rectificatory justice. On this view, the beneficiary is the individual who was wronged (or whose group was wronged), and affirmative action is a form of repair.
+
+These two rationales have different implications for the design of affirmative action policies. The diversity rationale supports race-conscious policies only when and insofar as they produce measurable diversity benefits; it has no implications for contexts where diversity benefits are not demonstrable. The remedial rationale supports race-conscious policies in all contexts where historical discrimination has produced ongoing disadvantage, regardless of whether diversity benefits accrue.
+
+## Translating Affirmative Action to Algorithmic Contexts
+
+Affirmative action arguments do not translate straightforwardly to algorithmic contexts, and understanding why illuminates both the philosophical debate and the distinctive character of algorithmic decision-making.
+
+Classical affirmative action involves human decision-makers who consciously take race into account when selecting among candidates. The philosophical debate concerns whether this race-consciousness is permissible or required. In algorithmic contexts, the question is more complex: should an algorithm's training procedure, objective function, or post-processing step explicitly account for race in order to produce more equitable outcomes?
+
+Chander's "viral discrimination" framework (discussed in Chapter 7's original content) provides one answer: because historical discrimination has infected training data, race-conscious algorithmic design is necessary to break the cycle of discrimination. But this argument requires careful specification of *how* race-consciousness should be implemented and *what* it should be designed to achieve.
+
+## Huq: When Is It Permissible to Use Race in an Algorithm?
+
+Aziz Huq's analysis of racial equity in algorithmic criminal justice provides the most sustained philosophical treatment of the question. Huq argues that the legal standard developed for traditional affirmative action---strict scrutiny, requiring a compelling interest and narrowly tailored means---is poorly suited to evaluate algorithmic uses of race, for several reasons.
+
+First, algorithmic race-consciousness is not analogous to human race-consciousness. An algorithm that uses race as an input feature to equalize error rates across groups is not "treating people differently because of their race" in the same sense as a human decision-maker who consciously prefers or disfavours racial group members. The algorithm is using race as a technical instrument to correct for structural patterns, not as a basis for moral judgment about individuals.
+
+Second, the goal of algorithmic race-consciousness is typically not to benefit any individual because of their race but to ensure that algorithmic systems do not impose disproportionate burdens on members of historically disadvantaged groups. This goal is better understood as harm prevention than as preferential treatment.
+
+Third, the alternative---algorithmic race-blindness---does not produce race-neutral outcomes when the training data reflects racial disparities. Race-blind algorithms in a race-structured world will reproduce racial stratification. The choice is not between race-consciousness and neutrality but between explicit race-consciousness (designed to counteract structural disadvantage) and implicit race-consciousness (encoded in proxies that correlate with race).
+
+<div class="definition">
+<strong>Algorithmic Affirmative Action (算法平权行动):</strong> The deliberate use of race (or other protected characteristics) in the design, training, or post-processing of algorithms in order to counteract the discriminatory effects of historical bias in training data and to produce more equitable outcomes across racial groups. Huq argues this may be permissible when the goal is harm prevention rather than preferential treatment.
+</div>
+
+## The Classification vs. Subordination Distinction Applied
+
+The anti-classification / anti-subordination distinction (introduced in Chapter 6) is directly applicable to the algorithmic affirmative action debate.
+
+Under the **anti-classification** view, using race in an algorithm is presumptively impermissible because it classifies people by race, regardless of whether the purpose is to advantage or disadvantage members of a group. This view corresponds to a colour-blind algorithmic ideal: the best algorithm is one that does not use race or its proxies.
+
+Under the **anti-subordination** view, the question is not whether race is used but whether the algorithm reinforces or undermines racial subordination. An algorithm that uses race to equalize false positive rates across groups---reducing the burden of unjust detention on Black defendants---does not reinforce racial subordination; it combats it. An algorithm that ignores race but reproduces the patterns of racial subordination encoded in its training data does reinforce subordination, even if it never explicitly classifies by race.
+
+Huq's analysis supports the anti-subordination view: the permissibility of using race in an algorithm should be evaluated by its effect on racial stratification over time, not merely by whether race appears in the model.
+
+## The Meritocracy Objection and Responses
+
+A common objection to algorithmic affirmative action---as to affirmative action generally---is the **meritocracy objection** (精英主义反对): preferences that select less qualified candidates over more qualified ones violate the principle that positions should be allocated on the basis of merit, and undermining meritocracy harms both the individuals passed over and the efficiency of institutions.
+
+Several responses to the meritocracy objection are available in the algorithmic context:
+
+**The credential critique**: The objection assumes that existing metrics of "merit" are genuine measures of relevant qualifications. But as O'Neil and Ajunwa document, the credentials and test scores used to define merit are themselves shaped by structural inequality. An applicant whose test scores are lower because she attended an underfunded school that was underfunded because of redlining is not less meritorious; she is less advantaged. Algorithms that use such credentials as measures of merit are not selecting for genuine merit but for the cumulative effects of structural privilege.
+
+**The predictive accuracy critique**: Algorithms optimized for predictive accuracy on historically biased data are not selecting the most capable candidates; they are selecting the candidates most similar to those who have succeeded under conditions of historical discrimination. In a counterfactual world without historical discrimination, different candidates might have succeeded.
+
+**The systemic efficiency argument**: Even on purely efficiency grounds, algorithmic affirmative action may be justified. If discrimination has prevented talented members of disadvantaged groups from developing their full potential, then correcting for that discrimination will improve the quality of selections, not diminish it. Algorithmic affirmative action may produce better outcomes than biased meritocracy.
 
 ## Fazelpour and Lipton: Algorithmic Fairness from a Non-Ideal Perspective
 
@@ -395,30 +673,82 @@ Chander observes an irony: law has historically turned to algorithms precisely i
 
 # Chapter 8: Criminal Justice and Algorithmic Bias
 
+## COMPAS: A Sustained Case Study
+
+The **COMPAS** (Correctional Offender Management Profiling for Alternative Sanctions) risk assessment tool is the most extensively analysed case in the algorithmic fairness literature, and it repays sustained examination because it illuminates nearly every theoretical issue raised in this course.
+
+### How COMPAS Works
+
+COMPAS was developed by Northpointe (now Equivant) as a commercial risk assessment tool for use at multiple stages of the criminal justice process---pretrial detention, sentencing, and parole. The instrument produces a risk score from 1 to 10 based on responses to a 137-question survey administered to defendants. The questionnaire covers topics including criminal history, peer relationships, residential stability, education and employment history, and attitudes toward criminal behaviour.
+
+Crucially, COMPAS does not directly ask about race. Yet the inputs it uses---residential history, employment stability, educational attainment, family criminal history---all correlate with race in the United States because of structural inequalities produced by decades of discriminatory policy. The algorithm thus encodes racial information through proxies, exactly as Prince and Schwarcz's framework would predict.
+
+### The ProPublica Analysis
+
+In May 2016, ProPublica journalists Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner published "Machine Bias," an analysis of COMPAS scores for approximately 7,214 defendants in Broward County, Florida. Their principal findings:
+
+- Black defendants were nearly twice as likely as white defendants to be falsely flagged as future criminals (**false positive rate** of 44.9% for Black defendants vs. 23.5% for white defendants).
+- White defendants were more likely than Black defendants to be incorrectly flagged as low risk despite going on to reoffend (**false negative rate** of 47.7% for white defendants vs. 28.0% for Black defendants).
+
+ProPublica presented these findings as evidence that COMPAS is racially biased, producing systematically worse outcomes for Black defendants through a pattern of over-classifying them as high-risk and under-classifying white defendants as low-risk.
+
+### Northpointe's Response
+
+Northpointe responded that COMPAS is **calibrated**: among defendants receiving any given score, Black and white defendants reoffend at approximately the same rate. A score of 7 predicts the same probability of reoffending regardless of race. Northpointe argued that calibration is the appropriate standard for a risk prediction instrument: it means the instrument is measuring the same thing for all groups and is not systematically over- or under-predicting for any group.
+
+### What the Disagreement Reveals
+
+The ProPublica-Northpointe dispute is not a factual disagreement but a normative one. Both parties' empirical claims are correct. Because Black defendants in Broward County had higher observed recidivism rates (reflecting higher rates of policing and arrest, not necessarily higher rates of criminal behaviour), a calibrated instrument will necessarily produce higher scores for Black defendants on average, and this mathematical consequence produces the higher false positive rates ProPublica documented.
+
+The Chouldechova impossibility theorem shows that both parties are defending different but mathematically coherent fairness criteria that cannot simultaneously be satisfied when base rates differ. The question of which criterion is appropriate is a philosophical question about what justice requires in the context of pretrial detention. Given that false positives lead to unjust incarceration---a severe deprivation of liberty---there is a strong argument that minimizing false positive rate disparities should take priority over calibration. But this is an argument from moral premises, not from mathematics.
+
+## The Dressel and Farid Study
+
+A further disturbing finding comes from Dressel and Farid's 2018 study published in *Science Advances*. They found that COMPAS's predictions for two-year recidivism were no more accurate than predictions made by untrained volunteers recruited through an online crowdsourcing platform and given only the defendant's age, sex, and prior criminal record. Both COMPAS and the human volunteers achieved approximately 65% accuracy.
+
+This finding undermines a key claim made for risk assessment tools: that their superior predictive power justifies their use despite concerns about fairness. If humans can match algorithmic accuracy with just three variables, then the elaborate technical machinery of COMPAS---and the opacity it creates---provides no accuracy benefit. It adds complexity, legitimizes decisions through a veneer of scientific objectivity, and forecloses appeal, while delivering no measurable improvement in prediction.
+
+<div class="definition">
+<strong>Automation Bias in Criminal Justice:</strong> The tendency of judges and other criminal justice actors to defer to algorithmic risk scores even when those scores provide no more information than is available from simple heuristics. The algorithmic score functions as social proof---its quantitative precision creates an appearance of authority that is not supported by actual predictive superiority.
+</div>
+
+## Birhane's Relational Ethics Critique
+
+Abeba Birhane brings a relational and Ubuntu-inspired ethical framework to bear on criminal justice AI that offers a fundamental challenge to the individualist premises of mainstream algorithmic fairness analysis.
+
+The dominant frameworks in algorithmic fairness treat the individual as the basic unit of analysis. Fairness is assessed by comparing outcomes for individuals across groups: does individual *i* of race *A* receive the same score as a comparable individual *j* of race *B*? The goal is to ensure that similarly situated individuals are treated similarly. This is an essentially individualist framework.
+
+**Ubuntu ethics** (乌班图伦理学), rooted in sub-Saharan African philosophical traditions, holds that persons are fundamentally relational beings: *umuntu ngumuntu ngabantu* (a person is a person through other persons). Identity, wellbeing, and moral status are constituted through relationships and community, not through the properties of isolated individuals. The Ubuntu framework shifts the unit of analysis from the individual to the relationship and the community.
+
+Birhane argues that this relational perspective reveals dimensions of algorithmic harm that individualist frameworks miss. Criminal justice algorithms that are "fair" at the individual level---producing equal error rates across racial groups---may still damage communities by breaking social bonds, disrupting families, and destabilizing communities through mass incarceration. These community-level harms are invisible to individual-focused fairness metrics.
+
+Furthermore, Birhane argues that the categories used in criminal justice algorithms---arrest records, residential stability, employment history---encode an individualist account of crime and punishment that misrepresents the structural and relational causes of behaviour. Treating recidivism as a property of individuals, to be predicted from individual attributes, ignores the relational and structural conditions that shape behaviour.
+
+## Pretrial Detention and Bail Algorithms
+
+One of the most consequential applications of algorithmic risk assessment is in **pretrial detention** (审前羁押): the decision whether to detain defendants before trial or release them pending trial, and on what conditions.
+
+The bail system in the United States has been criticized for decades as producing racially and economically disparate outcomes. Defendants who cannot afford cash bail are detained even for minor offences; wealthier defendants with equal or greater flight risk are released. Algorithmic risk assessment tools were adopted partly as a reform measure---replacing cash bail with risk-based decisions about who poses a genuine flight or public safety risk.
+
+But algorithmic bail tools inherit the racial disparities of the system they were meant to reform. Because historical bail and pretrial detention decisions were racially disparate, training data for bail algorithms reflects those disparities. The Arnold Foundation's Public Safety Assessment (PSA), used in jurisdictions across the United States, has been found to produce racially disparate results in multiple studies, classifying Black defendants as higher risk than white defendants with comparable criminal histories.
+
+Moreover, the use of algorithms in bail decisions may produce **due process** (正当程序) concerns. Defendants have a constitutional right to a bail hearing before an impartial judicial officer. When that officer defers to an algorithmic risk score, the effective decision-maker is the algorithm---an opaque system whose methodology the defendant cannot examine or contest.
+
+## Predictive Policing and Feedback Loops
+
+**Predictive policing** (预测性警务) tools direct police resources to locations predicted to experience crime. ShotSpotter, PredPol (now Geolitica), and similar systems use historical crime and arrest data to identify "hot spots" where crime is predicted to be concentrated.
+
+The feedback loop problem is acute in predictive policing. If the training data consists of arrest records (rather than actual crime, which is often unobserved), and if arrest patterns are shaped by prior policing decisions (which often reflected racial bias), then the predictive model will direct police to areas that are already heavily policed. More policing generates more arrests, which strengthens the model's predictions, which directs more policing. The result is a self-amplifying loop that concentrates police presence in communities of colour while reducing it in whiter, wealthier areas.
+
+As Huq argues, evaluating predictive policing tools by their short-term accuracy is insufficient. An accurate tool that predicts arrests in over-policed areas is reinforcing a discriminatory policing pattern, not identifying genuine crime patterns. The appropriate evaluation requires attending to the long-term, dynamic effects of algorithmic policing on communities.
+
 ## Huq: Racial Equity in Algorithmic Criminal Justice
 
 Aziz Huq provides a sustained analysis of algorithmic tools in the criminal justice system, examining their interaction with the enduring racial dimensions of American criminal justice. His analysis is distinctive in its focus on the *dynamic* effects of algorithmic systems and its critique of existing legal frameworks for evaluating them.
 
-### The Deployment Landscape
-
-Algorithmic tools are now deployed across multiple stages of the criminal justice process:
-
-- **Predictive policing**: Algorithms that predict where crimes are likely to occur, directing police resources to those areas.
-- **Bail decisions**: Risk assessment tools that predict whether a defendant will fail to appear or commit a new offence if released before trial.
-- **Sentencing**: Risk assessment tools that predict the likelihood of recidivism, informing judges' sentencing decisions.
-- **Parole**: Tools that assess the risk of reoffending to inform parole decisions.
-
 ### Constitutional Inadequacy
 
 Huq argues that existing **constitutional doctrine** (宪法原则) is poorly suited to evaluate the racial effects of algorithmic criminal justice. The Equal Protection Clause, as interpreted by the Supreme Court, requires proof of **discriminatory intent** (歧视意图)---deliberate purpose to discriminate on the basis of race. But algorithmic discrimination typically occurs without any discriminatory intent on the part of the algorithm's designers or users. The algorithm discriminates because it was trained on biased data, not because anyone intended it to discriminate. Constitutional doctrine, focused on intent, cannot capture this form of discrimination.
-
-<div class="definition">
-<strong>Discriminatory Intent Doctrine (歧视意图原则):</strong> The constitutional standard requiring that a plaintiff challenging a facially neutral government action as racially discriminatory must prove that the action was motivated by a deliberate purpose to discriminate on the basis of race. This standard is widely criticized as inadequate to address structural and systemic forms of discrimination.
-</div>
-
-### Technical Fairness Standards
-
-Huq also evaluates emerging technical standards of **algorithmic fairness** (算法公平性), finding them valuable but insufficient. Mathematical fairness criteria, such as equalized odds or predictive rate parity, capture important aspects of racial equity but cannot encompass the full range of concerns. They focus on static, point-in-time comparisons and fail to account for the dynamic, long-term effects of algorithmic systems on racial stratification.
 
 ### A Dynamic Perspective
 
@@ -467,6 +797,16 @@ Birhane et al. call for an AI ethics that is sensitive to **structural and histo
 <strong>Remark:</strong> Birhane et al.'s critique of the AI ethics field mirrors Mills's critique of ideal theory in political philosophy: both argue that the dominant frameworks in their respective fields systematically obscure the realities of oppression by operating at a level of abstraction that renders invisible the specific experiences of those who are most affected. Just as Mills argues that ideal theory functions as ideology, Birhane et al. suggest that abstract, decontextualized AI ethics can function to legitimate algorithmic systems while providing little benefit to those they harm.
 </div>
 
+## Birhane's Relational Ubuntu Ethics
+
+Birhane's philosophical framework draws explicitly on **Ubuntu ethics** (乌班图伦理学), an African communal ethical tradition whose central insight is expressed in the Nguni proverb *umuntu ngumuntu ngabantu*: a person is a person through other persons. This relational ontology stands in fundamental contrast to the Western liberal individualism that underlies mainstream algorithmic fairness.
+
+Mainstream algorithmic fairness asks: is this individual being treated fairly compared to other individuals? Ubuntu ethics asks: is this community flourishing? Are the relationships that constitute persons being respected and strengthened? Are people being enabled to participate in the communal life through which they realize their humanity?
+
+These are not merely different emphases within a shared framework; they reflect fundamentally different ontologies of what a person is. The individual of liberal political philosophy is a bearer of rights and interests who pre-exists social relations; the person of Ubuntu ethics is constituted *through* social relations and cannot be understood apart from them. Algorithmic systems that treat people as collections of individual attributes---historical records, demographic characteristics, survey responses---misrepresent the relational character of human beings and thereby systematically distort their assessments of individual situations.
+
+Birhane applies this framework to criminal justice AI with particular force. A risk assessment that treats a defendant as a bundle of risk factors---criminal history, employment status, residential stability---without attending to the relational context of her life (the family circumstances that shaped her history, the community supports that might prevent reoffending, the relational damage that incarceration would cause) is producing a profoundly impoverished and distorted assessment. The Ubuntu perspective demands that algorithmic systems attend to the relational and communal dimensions of human life, not merely its individual attributes.
+
 ## Hampton: Black Feminist Musings on Algorithmic Oppression
 
 Lelia Hampton brings **Black feminist theory** (黑人女性主义理论) to bear on algorithmic oppression, drawing on the tradition of feminist science and technology studies to argue that algorithmic systems cannot be understood apart from the structures of racial and gender oppression in which they are embedded.
@@ -474,6 +814,8 @@ Lelia Hampton brings **Black feminist theory** (黑人女性主义理论) to bea
 ### Historical Continuities
 
 Hampton situates algorithmic oppression within a longer history of **scientific oppression** (科学压迫) against marginalized communities. From scientific racism and eugenics to contemporary algorithmic discrimination, she traces continuities in the use of ostensibly objective, scientific methods to justify and perpetuate the subordination of Black people, women, and other marginalized groups. Algorithms are not a new phenomenon but the latest iteration of a long tradition of using the authority of science to naturalize social hierarchy.
+
+The history Hampton traces is not merely analogical; it is causal. The same institutions that developed and deployed scientific racism in the nineteenth and early twentieth centuries later developed the data-driven and actuarial methods that became the precursors of contemporary algorithmic risk assessment. The genealogy of the COMPAS-style instrument runs through the eugenicist Earnest Hooton's criminal anthropology, through the actuarial instruments developed by prediction researchers in the mid-twentieth century, through the risk assessment boom of the 1990s. Hampton's historical method reveals continuities that purely synchronic analyses of algorithmic fairness cannot see.
 
 ### Invisibility and Hypervisibility
 
@@ -499,6 +841,30 @@ Hampton concludes with a call that echoes abolitionist traditions in Black femin
 <strong>Algorithmic Oppression (算法压迫):</strong> The systematic use of algorithmic systems to reinforce, reproduce, and extend existing structures of social domination, particularly along the axes of race, gender, class, and coloniality. Algorithmic oppression is not a failure of technology but a function of the social structures within which technology operates.
 </div>
 
+## Vowel and Indigenous Data Sovereignty
+
+Chelsea Vowel's analysis of Indigenous structural oppression connects to the emerging movement for **Indigenous data sovereignty** (原住民数据主权): the claim that Indigenous peoples have rights over the collection, ownership, and application of data about their communities.
+
+The **CARE principles** for Indigenous data governance---Collective benefit, Authority to control, Responsibility, and Ethics---articulate a framework for Indigenous data sovereignty that stands in productive tension with the dominant frameworks of algorithmic fairness. Where mainstream fairness frameworks ask how data should be processed to produce equitable outcomes, Indigenous data sovereignty frameworks ask prior questions: who has the right to collect this data? For whose benefit? On whose terms? With what accountability to the communities whose lives the data represents?
+
+These are questions that algorithmic fairness frameworks typically take for granted: they assume that data has already been collected and that the task is to process it fairly. But from an Indigenous data sovereignty perspective, the act of data collection itself is a political act, and algorithmic systems built on data collected without Indigenous consent or control reproduce colonial patterns of extraction and control even when they satisfy mainstream fairness criteria.
+
+Vowel's analysis also highlights the importance of **data categories** (数据类别) as a site of political contestation. The categories used in algorithmic systems---race, ethnicity, nationality, tribal membership---are not neutral descriptors but political constructs that reflect particular histories of power. Administrative categories derived from the Indian Act, census categories that flatten the diversity of Indigenous nations, crime data that reflects the overcriminalization of Indigenous peoples: all of these encode colonial priorities into the data that algorithmic systems process.
+
+## Synthesizing Conclusion: From Fairness to Justice
+
+The perspectives assembled in this final chapter---Birhane's relational Ubuntu ethics, Hampton's Black feminist abolitionism, Vowel's Indigenous data sovereignty---converge on a challenge to the foundational assumptions of mainstream algorithmic fairness.
+
+Mainstream algorithmic fairness assumes that the goal is to make existing decision-making systems work more equitably: the same processes (lending, hiring, criminal justice), the same objectives (profit maximization, recidivism prediction, creditworthiness assessment), but with fairer outcomes across demographic groups. The task is technical and incremental: identify bias, measure it, correct it.
+
+The critical perspectives in this chapter reject this framing. They argue that the decision-making systems themselves---the processes, the objectives, the institutions within which they are embedded---are expressions of structures of domination. Making them more technically equitable, without transforming the structures they serve, is at best palliative and at worst a legitimating gesture that makes oppressive systems harder to contest by giving them a veneer of fairness.
+
+Hampton's abolitionist conclusion is the most radical expression of this critique: the goal should not be fair algorithms within oppressive institutions but the transformation of those institutions. Birhane's relational ethics points toward a reconstruction of the goals of algorithmic systems---from individual risk prediction to community flourishing. Vowel's sovereignty framework demands that the communities most affected by algorithmic systems have genuine authority over them, not merely nominal inclusion.
+
 <div class="remark">
-<strong>Remark:</strong> Hampton's analysis represents a significant departure from the dominant frameworks in algorithmic fairness. Where mainstream approaches seek to make algorithms fairer within existing social structures, Hampton questions whether fairness within fundamentally unjust structures is meaningful. Her Black feminist perspective insists that the problem is not algorithms per se but the structures of oppression that algorithms encode and perpetuate. This represents a move from reformist to transformative or abolitionist approaches to AI ethics---a move that challenges the entire enterprise of "fair machine learning" as currently conceived.
+<strong>Remark:</strong> The tension between the reformist and transformative positions is not merely academic. It has practical implications for how we evaluate proposed interventions. A reformist perspective will welcome bias audits, fairness constraints, and diversity initiatives as meaningful progress. A transformative perspective will evaluate these measures by whether they reduce the actual subordination of marginalized communities or merely make their subordination more technically sophisticated. Both perspectives have something to teach: the reformist perspective ensures that we make practical improvements in the near term; the transformative perspective ensures that we do not mistake near-term improvements for the achievement of justice.
 </div>
+
+Hampton's analysis represents a significant departure from the dominant frameworks in algorithmic fairness. Where mainstream approaches seek to make algorithms fairer within existing social structures, Hampton questions whether fairness within fundamentally unjust structures is meaningful. Her Black feminist perspective insists that the problem is not algorithms per se but the structures of oppression that algorithms encode and perpetuate. This represents a move from reformist to transformative or abolitionist approaches to AI ethics---a move that challenges the entire enterprise of "fair machine learning" as currently conceived.
+
+The task this course has set is not to resolve this tension but to understand it clearly enough to reason about it carefully. The goal of fairness and anti-discrimination in AI is not a simple technical problem with a technical solution; it is a site where the deepest questions of political philosophy---about justice, oppression, identity, and the good society---are being worked out in code, data, and institutional practice.

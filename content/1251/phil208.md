@@ -171,6 +171,10 @@ The trolley problem tests our intuitions about the moral difference between doin
 
 In this episode, Captain Picard is stranded on a planet with Dathon, captain of the Tamarian vessel. The Tamarians speak entirely in **allusions** (典故) --- references to their own mythology. "Darmok and Jalad at Tanagra" means "two strangers who become allies by facing a common enemy." "Shaka, when the walls fell" means failure. The Universal Translator can render individual words but cannot convey meaning, because meaning depends on narrative context.
 
+The episode opens with a deceptively simple diplomatic failure. The Enterprise has attempted contact with Tamarian vessels before; the exchanges have always broken down into apparent nonsense. What the Universal Translator transmits is grammatically parseable but semantically empty to a crew that does not know the mythological canon. When Dathon beams himself and Picard to the planet surface, setting up a forced shared experience, he is not making a military gesture --- he is performing a pedagogical act: only by living through a narrative together can two species begin to communicate.
+
+This is itself a philosophical claim about the nature of language and understanding. The episode dramatizes the difference between **syntactic competence** (句法能力) --- the ability to recognize grammatical structure --- and **semantic competence** (语义能力) --- the ability to grasp meaning. A machine translation system might achieve perfect syntactic competence with Tamarian while remaining semantically empty.
+
 ## 4.2 Philosophy of Language: Meaning Beyond Words
 
 The episode engages directly with the **philosophy of language** (语言哲学), particularly the question of how meaning is constituted.
@@ -183,9 +187,55 @@ The episode engages directly with the **philosophy of language** (语言哲学),
 
 This aligns with **Ludwig Wittgenstein's** (维特根斯坦) later philosophy, particularly the concept of **language games** (语言游戏). Wittgenstein argued that meaning is not a fixed relationship between words and objects but a function of use within a form of life. The Tamarians have a radically different form of life, and therefore a radically different language game.
 
-### 4.2.1 The Problem of Radical Translation
+### 4.2.1 Wittgenstein on Language Games and the Private Language Argument
 
-The episode also dramatizes what philosopher W.V.O. Quine called **radical translation** (彻底翻译): the attempt to translate a language with no prior shared vocabulary or conceptual framework. Quine argued that radical translation is always underdetermined --- multiple incompatible translations are consistent with all available evidence. Picard's eventual success in communicating with Dathon depends not on translation but on **shared experience**: they face a dangerous creature together, and this shared narrative creates the common ground necessary for understanding.
+Wittgenstein's early philosophy, set out in the *Tractatus Logico-Philosophicus* (1921), held that language pictures reality: a sentence is meaningful insofar as it mirrors a possible fact. This view is essentially referentialist. But in his later *Philosophical Investigations* (1953), Wittgenstein radically revised his position. Meaning, he argued, is not a matter of mental images or logical structure but of use within a shared practice. To know what a word means is to know how to use it --- and use is always embedded in a social activity, a language game.
+
+A **language game** (语言游戏) for Wittgenstein is not trivial. The concept covers the full range of linguistic practice: naming things, reporting events, giving orders, making jokes, telling stories. Each type of activity constitutes a different game with different rules. The same word can function differently in different games.
+
+The **private language argument** (私有语言论证) extends this point. Wittgenstein argues that a language known only to a single speaker --- a language whose terms refer to the speaker's private inner sensations --- is not a language at all. For language requires rules, and rules require the possibility of checking whether they are being followed correctly. A private criterion of correctness is no criterion at all. Language is, by its nature, public and shared.
+
+Applied to "Darmok," this means that the Tamarian language is not merely unusual in its referents. It is built on a fundamentally different architecture of publicity. Tamarian meaning is public in a very specific sense: it is shared through collective cultural memory and mythological narrative. A Tamarian who does not know the myths cannot speak the language, just as a person who does not know chess cannot play the game by moving pieces randomly across the board.
+
+### 4.2.2 What Does It Mean for a Language to Be Purely Metaphorical?
+
+The Tamarian language raises a question that goes beyond Wittgenstein: Is it possible for a language to be entirely metaphorical or narrative-based, with no propositional content at all?
+
+Ordinary language mixes **propositional content** (命题内容) --- statements that are true or false --- with **expressive**, **performative**, and **metaphorical** content. When Picard says "The Enterprise is in distress," he is making a claim with clear truth conditions. When he says "Darmok and Jalad at Tanagra," he is (if he has learned to use the phrase) invoking a narrative archetype --- he is not asserting a fact about Darmok and Jalad but positioning the current situation in relation to a remembered story.
+
+Philosophers of language such as Donald Davidson and Paul Ricoeur have examined how metaphor works. Davidson's famous essay "What Metaphors Mean" (1978) argued that metaphors do not have a special "metaphorical meaning" distinct from their literal meaning. A metaphor works by prompting the listener to notice something --- to see one thing as another. This noticing is not propositional; it is more like a form of perception. If Davidson is right, then a language like Tamarian is not conveying propositions with unusual vocabulary; it is systematically triggering acts of recognition and comparison.
+
+This has an interesting implication: Tamarian might be a language that is fundamentally oriented toward **action and situation** rather than toward **description and assertion**. When Dathon says "Darmok and Jalad at Tanagra, his words and mine" he is not reporting anything. He is inviting Picard into a relationship, a shared project. The language is performative at its core.
+
+### 4.2.3 Grice's Cooperative Principle and the Tamarian Violation
+
+Paul Grice's **cooperative principle** (合作原则), developed in "Logic and Conversation" (1975), holds that communication is governed by a general expectation of cooperation. Speakers are expected to make their contributions as informative as required, truthful, relevant, and as clear as possible. These expectations generate what Grice calls **conversational implicature** (会话含义): we infer meaning beyond the literal content of words because we assume the speaker is being cooperative.
+
+The Universal Translator's failure with the Tamarians seems, on a Gricean analysis, to result from maxim violation. Tamarian speech appears uncooperative from the perspective of Federation communicative norms: it seems insufficiently informative (the crew doesn't know the referenced events), irrelevant (what does a story about Darmok have to do with the current situation?), and unclear. But this analysis misses the point. Dathon is not violating Grice's maxims; he is operating within a completely different communicative system in which the maxims apply differently.
+
+In Tamarian communication, relevance is determined not by propositional connection but by **narrative isomorphism** (叙事同构): a phrase is relevant if the structural pattern of its referenced story matches the structural pattern of the current situation. "Shaka, when the walls fell" is relevant to any situation of failure because the referenced narrative is a story of failure. The Tamarians have, in effect, replaced Grice's maxim of manner (be clear) with a different maxim: invoke the myth that best fits. Their cooperative principle operates through narrative pattern-matching rather than information exchange.
+
+What appears to Federation observers as violation of the cooperative principle is therefore better understood as participation in a radically different cooperative framework. This has important implications for cross-cultural communication and for the philosophy of translation: we cannot simply assume that alien communication is defective because it fails to meet our communicative expectations.
+
+### 4.2.4 Davidson's Radical Interpretation
+
+Donald Davidson's concept of **radical interpretation** (彻底解释) addresses the question of what it takes to understand a language from scratch. Davidson's thought experiment imagines a field linguist encountering a speaker whose language is completely unknown. How does she figure out what sentences mean?
+
+Davidson's answer involves what he calls the **principle of charity** (慈善原则): we should interpret a speaker's utterances so as to maximize their truth and rationality. If we cannot find an interpretation that makes most of what a speaker says come out true, we have failed to understand them at all. Understanding is not merely decoding; it requires reconstructing the speaker's entire web of beliefs, desires, and inferences.
+
+Applied to "Darmok," the principle of charity generates a specific problem. The content of Tamarian sentences seems, on any literal reading, to have nothing to do with the current situation: why would a statement about Darmok and Jalad be relevant to a diplomatic encounter in orbit? The principle of charity requires Picard to find an interpretation under which Dathon's utterances are reasonable and contextually appropriate. This is what he slowly manages to do --- but only through shared experience, not through linguistic analysis.
+
+Davidson's framework suggests that radical interpretation requires not just intelligence and good faith but something more: **shared epistemic context** (共同认知语境). Understanding requires enough overlap in experience that we can triangulate meaning. Picard cannot interpret Tamarian from the bridge of the Enterprise because he has no experiential overlap with the referenced myths. It is only after he and Dathon face the creature together --- only after they share a narrative experience in real time --- that communication becomes possible. Davidson's triangulation thesis is dramatized on screen: meaning emerges not from introspection or computation but from joint engagement with a shared world.
+
+### 4.2.5 Is a Purely Referential Language Philosophically Possible?
+
+The episode raises a question that has divided philosophers of language: Could a language be built entirely on proper names and references, with no predicates, no logical connectives, no propositional structure?
+
+The Tamarian case suggests that such a language is not merely possible but actual --- but this conclusion may be misleading. What the Tamarians have is not a language of pure reference but a language of **narrative reference** (叙事指称): their terms refer not to objects but to patterns of events, to story-structures that can be recognized as instantiated in the current situation. This is more complex than simple reference; it involves a kind of structural mapping between the referenced narrative and the present context.
+
+The philosopher's question about purely referential languages was famously discussed by Quine, who argued against the possibility of radical translation. Quine's **thesis of the indeterminacy of translation** (翻译不确定性论题) holds that no behavioral evidence can uniquely determine the correct translation of a sentence: multiple incompatible translation manuals may be consistent with all observable evidence. The Tamarian case seems to illustrate this vividly. The Enterprise crew has access to the acoustic form of Tamarian sentences; they even know what the individual words refer to (the Universal Translator handles this). But they cannot uniquely determine what the sentences mean, because meaning is constituted not by reference but by narrative function.
+
+The deeper philosophical point is that **meaning cannot be atomized** (意义不可原子化). We cannot understand a language word by word, reference by reference. Understanding is holistic: to understand any part of a language, you must understand a great deal of the rest. For Tamarian, the "rest" that must be understood is an entire mythological canon --- a body of narrative that gives every sentence its meaning by situating it in a web of stories.
 
 <div class="remark">
 <strong>Remark.</strong> The episode suggests that communication is not primarily a matter of encoding and decoding information. It is a matter of sharing experiences and building narratives together. This has implications for cross-cultural communication, artificial intelligence, and the philosophy of mind: understanding another being may require not better algorithms but shared vulnerability.
@@ -212,9 +262,76 @@ The dark forest theory is an application of the **prisoner's dilemma** (囚徒�
 | **Civilization A Cooperates** | Both survive and flourish | A is destroyed |
 | **Civilization A Attacks** | B is destroyed | Mutual destruction likely |
 
+The formal structure of the prisoner's dilemma can be represented with payoff values. If we assign extinction a value of 0, survival a value of 1, and dominance (surviving while the other civilization is destroyed) a value of 2, the matrix becomes:
+
+| | B Cooperates | B Defects |
+|---|---|---|
+| **A Cooperates** | (1, 1) | (0, 2) |
+| **A Defects** | (2, 0) | (0, 0) |
+
+In a standard prisoner's dilemma, the dominant strategy is to defect regardless of what the other player does. If B cooperates, A does better by defecting (payoff 2 versus 1). If B defects, A does better by defecting (payoff 0 versus 0 --- mutual destruction). But note that at cosmic scale, the mutual defection outcome (0, 0) is symmetric with the A-cooperates/B-defects outcome for A: in both cases, A is destroyed. This asymmetry from the standard prisoner's dilemma makes Liu Cixin's version even more unforgiving. The cost of being wrong about a neighbor's cooperation is absolutely catastrophic, and there is no third party to enforce contracts.
+
 If the cost of being wrong about a neighbor's intentions is extinction, and if there is no mechanism for building trust, the dominant strategy is preemptive destruction. This is a deeply pessimistic conclusion, and Liu Cixin uses it to explore the question of whether **rationality** (理性) alone is sufficient for ethics.
 
-### 5.2.1 Beyond the Prisoner's Dilemma
+## 5.3 Liu Cixin's Cosmic Sociology: The Two Axioms
+
+The dark forest theory emerges in the novel from what Liu Cixin calls **cosmic sociology** (宇宙社会学), an attempt to construct the fundamental laws governing interaction between civilizations. The theory rests on two axioms and one key inference.
+
+**Axiom One: Survival is the primary need of all civilizations.** Every civilization, whatever its cultural particulars, is fundamentally oriented toward its own continuation. This is not a moral claim but a descriptive one about the conditions of civilization's persistence.
+
+**Axiom Two: Civilizations grow and expand, but the total amount of matter and energy in the universe remains constant.** Resources are finite. Expansion by one civilization comes at the cost of resources available to others. This is a cosmological version of the Malthusian predicament: growth is unbounded in aspiration but bounded by a universe that does not grow.
+
+From these two axioms, combined with the observation that faster-than-light communication and travel are impossible (so that civilizations cannot directly monitor each other), Liu Cixin derives the dark forest conclusion via what he calls the **chain of suspicion** (猜疑链).
+
+### 5.3.1 The Chain of Suspicion
+
+Suppose Civilization A detects the signal of Civilization B. A cannot determine whether B is peaceful or aggressive. Even if B is currently peaceful, A cannot know whether B will remain peaceful as its technology and power develop. Even if B intends to remain peaceful forever, A cannot trust that B's peaceful intentions will survive the pressures of resource scarcity. And even if B could credibly communicate peaceful intent, A cannot verify that this communication is not itself a deception designed to lower A's guard.
+
+This generates a **chain of suspicion** (猜疑链) that escalates indefinitely. Consider the following progression:
+
+1. A does not know whether B is good.
+2. B does not know whether A trusts that B is good.
+3. A does not know whether B knows that A might not trust B.
+4. B does not know whether A knows that B might be preparing for A's possible mistrust.
+5. And so on, without termination.
+
+Each level of the chain introduces further uncertainty. There is no stable endpoint at which trust can be established. The chain is a logical feature of the situation, not a psychological failure of particular civilizations. Even two perfectly rational and benevolent civilizations, each sincerely wishing for peace, cannot break the chain through communication alone --- because any communication could be a deception, and no communication can provide certainty.
+
+The only rational response, given the catastrophic cost of being wrong, is preemptive elimination. A civilization that detects another must destroy it before the detected civilization has time to destroy the detector. The universe is a dark forest in which every civilization is a lurking hunter, and any signal is a potential death sentence for its sender.
+
+### 5.3.2 Why Deterrence Fails at Cosmic Scale
+
+One might object that the dark forest conclusion ignores the possibility of **deterrence** (威慑) --- the strategy by which a civilization signals that an attack on it will result in devastating retaliation. Deterrence worked, broadly speaking, during the Cold War between nuclear-armed states. Why should it not work between civilizations?
+
+Liu Cixin's answer involves the asymmetries of cosmic-scale interaction. On Earth, deterrence operates on timescales of minutes to hours, within a context of shared geography, shared communication infrastructure, and approximate technological parity. Even during the Cold War, the two superpowers shared a planet, exchanged ambassadors, and had decades of accumulated intelligence about each other's capabilities.
+
+At interstellar distances, none of these conditions obtain. Light-speed communication means that by the time a civilization detects an incoming weapon, the weapon may be years or decades away and unstoppable. The timescales of cosmic warfare make it impossible to negotiate, escalate, or de-escalate in real time. Moreover, technological asymmetry at cosmic scale is vastly greater than between earthly nations: a civilization one million years more technologically advanced than another is not equivalent to a nation with more nuclear warheads but to a civilization that can, for instance, extinguish a star. Against such asymmetry, retaliation may be literally impossible.
+
+Deterrence also requires **credible commitment** (可信承诺): the threatened party must believe that the deterrent will actually be deployed. At cosmic scale, this credibility is impossible to establish. How does a civilization verify that another civilization will actually retaliate after being attacked, when the two have never interacted? There is no shared history of credible commitment-making, no treaty system, and no third-party enforcer.
+
+### 5.3.3 Hobbes's State of Nature and the Impossibility of a Cosmic Leviathan
+
+Liu Cixin's universe resembles Thomas Hobbes's **state of nature** (自然状态) with terrifying fidelity. Hobbes, in *Leviathan* (1651), argued that without a sovereign authority to enforce contracts and punish violence, rational agents in a state of nature will find themselves in perpetual conflict. Each agent knows that every other agent has both the capacity and the incentive to attack. Even a naturally peaceful person will pre-emptively attack a potential threat before they are attacked. The result is a "war of all against all" (战争状态) in which life is "solitary, poor, nasty, brutish, and short."
+
+Hobbes's solution was the **Leviathan** (利维坦): a sovereign authority, created by social contract, with the power to enforce the peace. Citizens surrender their natural right to pre-emptive violence in exchange for protection. The Leviathan's monopoly on coercive force makes cooperation possible.
+
+At cosmic scale, no Leviathan is possible. The conditions that make Hobbes's social contract achievable on Earth --- shared geography, comparable power, sufficient communication to negotiate --- do not obtain between civilizations separated by light-years. Any putative cosmic sovereign would have to enforce its authority over distances so vast that enforcement would require centuries. A civilization that chose to defect against the cosmic order could do so and be extinct or transformed before any punishment could be delivered.
+
+This is why the dark forest logic is more pessimistic than Hobbesian political theory. Hobbes believed that rational agents could exit the state of nature through contract. Liu Cixin implies that at cosmic scale, the state of nature is inescapable. The very conditions that might allow a Leviathan to exist --- shared space, real-time communication, comparable power --- are absent. The universe is permanently in Hobbes's pre-political state.
+
+### 5.3.4 Is the Dark Forest Logic Philosophically Sound?
+
+The dark forest theory has generated significant philosophical scrutiny. Several objections have been raised.
+
+**The communication objection.** The chain of suspicion assumes that reliable communication of peaceful intent is impossible. But this may be too strong. In game theory, **costly signals** (代价信号) can be credible precisely because they are expensive to fake. A civilization that deliberately destroys its own offensive capabilities and broadcasts this destruction to potential observers is making a costly signal of peaceful intent. The cost of the destruction makes the signal credible. Liu Cixin's axioms preclude this possibility only if we assume that no civilization would ever accept the risk of making such a gesture --- but this seems to assume the conclusion.
+
+**The iterated games objection.** In one-shot prisoner's dilemmas, defection is rational. But civilizations persist over time. If interactions between civilizations are iterated --- if each civilization's choices are observed and responded to by others --- then cooperative strategies can be evolutionarily stable. Robert Axelrod's famous tournaments showed that tit-for-tat is often the winning strategy in iterated prisoner's dilemmas. The dark forest assumes one-shot interaction, but this assumption may be false at cosmic scale, where civilizations exist over millions of years.
+
+**The moral realism objection.** Perhaps ethical obligations are not contingent on strategic calculation at all. Perhaps the prohibition on destroying another civilization holds regardless of whether cooperation is strategically rational, because civilizations are beings with moral standing and the obligation not to destroy them is not defeasible by game-theoretic calculation. This objection challenges Liu Cixin's first axiom: survival is primary, but survival at the cost of genocide may be morally impermissible even if strategically rational.
+
+**The epistemic objection.** The dark forest theory assumes that civilizations are rational agents who reason correctly about game-theoretic situations. But rationality in the face of radical uncertainty is itself contested. **Decision theory** (决策论) offers multiple frameworks for reasoning under uncertainty, not all of which endorse the dark forest strategy. Under maximin (maximize the worst-case outcome), preemptive destruction looks rational. Under a sufficiently optimistic prior about alien peaceful intent, it looks irrational.
+
+### 5.3.5 Beyond the Prisoner's Dilemma
 
 Several philosophical responses challenge the dark forest conclusion:
 
@@ -238,7 +355,67 @@ The story challenges the reader to consider **biological determinism** (生物�
 <strong>Biological Determinism (生物决定论)</strong>: The view that human behavior, personality, and social organization are primarily determined by biological factors such as genetics, hormones, and evolutionary pressures, rather than by culture, choice, or environment.
 </div>
 
-### 6.1.1 Nature, Culture, and the Sex/Gender Distinction
+### 6.1.1 Alice Sheldon Writing as James Tiptree Jr.: The Authorship Problem
+
+The biographical context of "Love Is the Plan the Plan Is Death" is essential to its philosophical interpretation. James Tiptree Jr. was the pen name of **Alice Bradley Sheldon** (1915--1987), a psychologist and former CIA analyst who began publishing science fiction in 1968. For nearly a decade, Tiptree's identity was unknown, and many in the SF community assumed Tiptree was male. Writers including Robert Silverberg famously argued that Tiptree's prose had an "ineluctably masculine" quality and could not have been written by a woman.
+
+The revelation of Tiptree's identity in 1977 was a significant cultural event. It exposed the degree to which readers' assumptions about gender shaped their reading of texts. The "masculine" quality that critics perceived in Tiptree's work was not a property of the prose but a projection from the reader's assumption about the author's sex. The same texts, once reattributed to a woman, were reread as explorations of female experience, biologically grounded gender roles, and feminist critique.
+
+This biographical fact generates a specific philosophical puzzle for "Love Is the Plan the Plan Is Death." The story depicts a species in which biological drives completely determine behavior. Moggadeet cannot escape the Plan; his love for Lilyloo and his eventual submission to being consumed are written into his biology. A male author writing this story might be naturalizing biological determinism, claiming that gender and reproductive roles are simply facts of biology. A female author writing the same story introduces an ironic dimension: Sheldon, who successfully performed a male identity for a decade, demonstrating that gender is not biologically determined but performed, wrote a story in which biological determination is absolute and inescapable.
+
+The question this raises is what we might call the **author's position problem** (作者立场问题): Does the author's identity constrain the meaning of the text? Poststructuralist theory, particularly Roland Barthes's "Death of the Author" (1967), argues that the author's intentions and biography are irrelevant to textual meaning, which is generated by the reader. But feminist criticism has resisted this move, arguing that the context of a text's production --- including the author's social position, gender, and experience --- is a legitimate and important dimension of interpretation.
+
+Applied to Tiptree/Sheldon, the question is whether we should read "Love Is the Plan" as a critique of biological determinism (possible given Sheldon's evident awareness that gender identity is not biologically fixed) or as a submission to it (possible given the story's unrelenting depiction of biology's triumph over individual resistance).
+
+### 6.1.2 Close Reading: The Plan as Biology
+
+The story's central philosophical claim is embedded in its title: "Love Is the Plan the Plan Is Death." The Plan is not a social arrangement, not a cultural norm, not a political system. It is a biological program written into the bodies of Moggadeet's species. Love --- the emotional bond between male and female --- is not opposed to death but identical with it. The male's nurturing care for the female is the mechanism by which the female grows large enough to consume him. His love is his destruction.
+
+This is a deeply disturbing vision of **biological determinism** because it does not portray biology as external constraint. Biology does not prevent Moggadeet from loving Lilyloo; rather, his love for Lilyloo is itself the instrument of the Plan. The story suggests that what we experience as our deepest feelings --- love, attachment, devotion --- may be biological mechanisms operating on a level inaccessible to consciousness or choice.
+
+Moggadeet is conscious of the Plan. He knows, at some level, what is coming. He attempts to deviate by delaying, by keeping Lilyloo small, by avoiding the inevitable season. But his resistance is itself shaped by biology: his very capacity to resist is limited by the emotional responses the Plan generates. When the season comes and Lilyloo grows, his love and desire overwhelm his knowledge. Biology wins, not by suppressing consciousness but by colonizing it.
+
+This is the story's most disturbing philosophical contribution: it suggests that agency and consciousness may be effects of biology rather than alternatives to it. Moggadeet has something like awareness and something like choice, but these emerge from and remain embedded in biological programs. His story is not one of freedom constrained by biology but of apparent freedom as biology's instrument.
+
+### 6.1.3 Feminist Responses to Biological Determinism
+
+Feminist philosophy has engaged extensively with biological determinism, which has historically been used to justify the subordination of women. The argument that women are naturally suited to caregiving and reproduction, and naturally unsuited to public life and rational deliberation, has been central to patriarchal ideology for centuries. Feminist philosophers have developed several responses.
+
+**The sex/gender distinction.** Simone de Beauvoir's claim that "one is not born, but rather becomes, a woman" introduced the distinction between biological sex and social gender. Whatever the biological facts about reproduction, the social roles assigned to women are culturally variable and historically contingent. De Beauvoir did not deny biological difference; she denied that biological difference determines social meaning.
+
+**Feminist empiricism.** Feminist scientists such as Anne Fausto-Sterling have argued that biological research on sex difference is systematically distorted by sexist assumptions. The biological facts are not neutral; they are interpreted through frameworks that already assume what they are trying to prove. Biological determinism is not simply a philosophical claim; it is a scientific research program with its own presuppositions.
+
+**Intersectionality.** The feminist philosopher and legal scholar Kimberlé Crenshaw developed the concept of **intersectionality** (交叉性) to describe how race, gender, class, and other social categories interact to create overlapping systems of oppression. Biological determinism about gender cannot be evaluated in isolation from race: the same story of "natural" gender roles looks very different when applied to white middle-class women and to Black women, who have been simultaneously hypersexualized and denied the "natural femininity" attributed to their white counterparts.
+
+Moggadeet's story engages with these feminist debates by depicting a case in which the feminist critique seems to fail. This is not a story about social construction masquerading as biology; the Plan really is biological. The story's philosophical provocation is to ask: What if biological determinism is sometimes true? What would that mean for feminist ethics? Can a feminist response to the Plan be anything other than horror?
+
+### 6.1.4 Butler's Performativity vs. the Story's Biological Essentialism
+
+Judith Butler's concept of **gender performativity** (性别操演性), developed in *Gender Trouble* (1990), offers the sharpest contrast to the biological essentialism depicted in Tiptree's story. Butler argues that gender is not a natural property of bodies but an ongoing performance --- a citation of gendered norms repeated over time until it appears natural. Gender is not what we are but what we do; and what we do is shaped by cultural scripts, regulatory regimes, and social power.
+
+On Butler's account, the appearance of biological necessity in gender roles is itself an effect of performative repetition. We come to believe that women are "naturally" nurturing and men "naturally" aggressive because these performances are constantly repeated, enforced, and naturalized. The biological facts of reproduction are real, but the cultural meanings attached to those facts are constructed.
+
+The contrast with "Love Is the Plan" is stark. In Tiptree's story, the biological program is not a cultural construction but a literal genetic program. Moggadeet does not perform a gender role; his body is shaped by evolution to carry out specific reproductive functions, and no amount of cultural revision could alter this. Butler's performativity thesis is designed to apply to human gender in a world where culture plays a significant role. Applied to Moggadeet's species, it seems simply inapt.
+
+But this contrast may itself be philosophically instructive. Butler's performativity thesis was partly motivated by the need to resist biological essentialism in the context of feminist politics. The contrast with Tiptree's alien biology makes explicit what Butler was resisting and why: the claim that gender roles are naturally fixed, that they are not subject to revision through cultural practice, that resistance is futile. Moggadeet dramatizes what fully successful biological determinism would look like. Butler's project is to show that human gender is not like that.
+
+### 6.1.5 Is the Story a Critique of or a Submission to Biological Determinism?
+
+The deepest interpretive question about "Love Is the Plan the Plan Is Death" is whether it endorses or critiques biological determinism. Several readings are possible.
+
+**The submission reading:** The story accepts biological determinism as a fact of life and explores its emotional consequences. Moggadeet's struggle is tragic precisely because it is futile; the Plan wins because biology wins. On this reading, the story naturalizes the subordination of male agency to reproductive imperatives, and by extension could be read as naturalized the subordination of female agency to reproductive roles in human society.
+
+**The critique reading:** By depicting biological determinism in an alien species, Sheldon creates what literary theorists call **defamiliarization** (陌生化): a technique that makes the familiar strange by relocating it. Human readers recognize in Moggadeet's story a distorted mirror of human gender relations --- the way in which female reproductive capacity has been biologized and male desire has been constructed as a kind of reproductive mechanism. The alien setting allows readers to see these patterns with the critical distance that the familiar obscures.
+
+On the critique reading, the horror of the story is not that biology determines behavior among aliens but that this is what biological determinism would actually mean if it were true of humans. The story is a *reductio ad absurdum* of biological essentialism: it takes the logic of the argument seriously and shows where it leads.
+
+**The ironic reading:** Given Sheldon's biography --- a woman who successfully performed a male identity for years, demonstrating that gender is performative rather than biological --- the story can be read as deeply ironic. Sheldon knew better than almost anyone that biological sex does not determine gender performance. Her story depicting a species for whom biology is destiny is a thought experiment about what would have to be true for the biological determinist to be right, and implicitly an argument that those conditions do not obtain in human life.
+
+<div class="remark">
+<strong>Remark.</strong> The interpretive undecidability of the story is itself philosophically significant. Tiptree/Sheldon does not resolve the question of biological determinism; she dramatizes it with maximum force. The reader is left to decide whether Moggadeet's tragedy illuminates human experience or constitutes a fantastical alternative to it.
+</div>
+
+### 6.1.6 Nature, Culture, and the Sex/Gender Distinction
 
 Tiptree's story intersects with the philosophical distinction between **sex** (生物性别) and **gender** (社会性别). Sex refers to biological characteristics; gender refers to the social roles, behaviors, and identities associated with those characteristics. Feminist philosophers such as Simone de Beauvoir and Judith Butler have argued that much of what we attribute to nature is actually a product of culture.
 
@@ -264,13 +441,55 @@ The novella is centrally concerned with **identity** (身份认同) --- specific
 <strong>Narrative Identity (叙事认同)</strong>: The view, associated with Paul Ricoeur and Charles Taylor, that personal identity is constituted by the stories we tell about ourselves. Who we are is a function of how we integrate our past, present, and anticipated future into a coherent narrative.
 </div>
 
-## 7.2 The Alien Encounter and the Ethics of Difference
+### 7.1.1 Himba Identity and the Stakes of Departure
+
+The Himba are a real people living primarily in northwestern Namibia, and Okorafor draws on aspects of their cultural practices to construct Binti's identity. For Binti, Himba identity is not a collection of abstract beliefs but a set of embodied practices that mark her as belonging: the otjize she applies to her skin and hair each morning, the mathematical calculations she performs using the edan, her speech patterns, her relationships to family and ancestors.
+
+**Communal identity** (共同体身份) of this kind is constituted not by individual choice but by participation in shared practices. The philosopher Alasdair MacIntyre argued in *After Virtue* (1981) that the self is not a sovereign individual who chooses its identity but a narrative being who finds itself embedded in traditions, practices, and communities that it did not choose. "I can only answer the question 'What am I to do?' if I can answer the prior question 'Of what story or stories do I find myself a part?'"
+
+For Binti to leave the Himba community for Oomza University is, from the community's perspective, a betrayal. She is choosing personal achievement over communal continuity. But from Binti's perspective, her mathematical gift is itself an expression of what it means to be Himba --- her abilities developed within Himba practices, and her desire to pursue them at the highest level is continuous with her identity rather than in conflict with it.
+
+This tension maps onto a classic philosophical debate between **communitarianism** (共同主义) and **liberalism** (自由主义). Liberals, following John Rawls, hold that individuals have a right to revise their conception of the good --- to leave their communities, adopt new values, forge new identities. Communitarians, following MacIntyre and Charles Taylor, hold that this liberal picture misunderstands the self: we cannot step outside our communities and traditions to evaluate them neutrally, because our capacity for evaluation is itself formed within those traditions.
+
+Binti's departure is philosophically complex because it cannot be reduced to either pole. She does not leave Himba culture behind; she takes it with her. The otjize, the edan, her mathematical practices --- these mark her as Himba even aboard the ship and at the university. What she is doing is something the liberal and communitarian frameworks struggle to accommodate: she is extending her identity into new contexts, testing which of its elements are portable and which are not.
+
+### 7.1.2 The Meduse as the Alien Other: Ethics of First Contact
+
+The philosophical dimension of *Binti* that has attracted the most attention is its treatment of the Meduse as the **alien Other** (他者). When the Meduse attack the ship, their behavior appears simply violent: they kill almost everyone aboard. But Binti discovers that the Meduse have a grievance. The chief Khoush who runs Oomza University stole a Meduse chief's **stinger** (蜇刺) --- the equivalent of a revered cultural artifact. The attack is an act of revenge and a demand for return.
+
+This revelation transforms the ethics of the encounter. What appeared to be unprovoked violence turns out to be a response to prior injustice. The Meduse are not simply alien aggressors; they are beings with political history, cultural values, and legitimate grievances. The ethical question shifts from "how do we survive this attack?" to "how do we acknowledge and repair the wrong that caused it?"
+
+Emmanuel Levinas's concept of the **ethical encounter with the Other** (与他者的伦理相遇) is directly relevant here. For Levinas, ethics does not begin with abstract principles but with the concrete encounter with another being. The face of the Other --- its vulnerability, its resistance to being categorized, its capacity to make demands --- is the origin of ethical obligation. The Meduse do not have faces in the human sense, but Okorafor gives them an equivalent: the anguish over the stolen stinger, the demand for recognition and justice.
+
+What makes Binti's encounter with the Meduse philosophically significant is the role of **vulnerability** (脆弱性). Both parties are vulnerable: Binti is alone and vastly outnumbered; the Meduse are in hostile territory and unable to recover their chief's stinger through force without destroying what they seek. This mutual vulnerability creates the conditions for ethical encounter. Levinas argued that ethics requires acknowledging the Other's power over you --- recognizing that the Other can harm you and choosing to engage rather than destroy. Binti does this; the Khoush, historically, have not.
+
+### 7.1.3 Standpoint Theory and the Epistemic Value of In-Between Identities
+
+Binti's most distinctive philosophical contribution concerns what feminist philosophers call **standpoint theory** (立场理论). Standpoint theory, developed by Sandra Harding, Patricia Hill Collins, and others, argues that social position is epistemically significant: marginalized groups, because of their distinctive social location, have access to knowledge that dominant groups do not. The outsider sees what the insider takes for granted.
+
+Binti occupies a multiply marginal position. She is Himba in a world dominated by the Khoush; she is the first Himba ever admitted to Oomza University; she is aboard a ship where she is the only non-Khoush. This marginality gives her a distinctive epistemic position: she can see both the Khoush perspective (she is among them) and the Meduse perspective (she lacks the cultural assumption that the Meduse are simply enemies).
+
+Her **harmonizing ability** (协调能力) --- the mathematical gift that allows her to intuitively understand patterns and relationships --- functions in the novella as a literal instantiation of the standpoint-theoretic claim about marginalized knowledge. She can harmonize with the Meduse because she has not been socialized into the assumption of Meduse monstrosity. Her in-between position, which the Himba community saw as a liability (she is neither fully integrated nor fully respected), turns out to be an epistemic and diplomatic resource.
+
+This connects to the broader philosophical claim that **epistemic diversity** (认识多样性) --- the presence of multiple, differently positioned knowers --- is valuable not just for fairness but for truth. A community of inquiry that includes only knowers from similar social positions will systematically miss certain truths. Binti's ability to negotiate with the Meduse is not a personal quirk; it depends on her specific social and cultural location.
+
+### 7.1.4 Du Bois's Double Consciousness and Its Application to Binti
+
+W.E.B. Du Bois's concept of **double consciousness** (双重意识), introduced in *The Souls of Black Folk* (1903), describes the experience of simultaneously inhabiting two incompatible self-images: one's own understanding of oneself and the distorted image reflected by a society that regards one with contempt. Du Bois wrote of "this sense of always looking at one's self through the eyes of others, of measuring one's soul by the tape of a world that looks on in amused contempt and pity."
+
+Binti experiences a version of double consciousness throughout the novella. As a Himba woman at Oomza University, she will be seen as exotic, primitive, or at best exceptional by Khoush students who have never encountered a Himba before. She knows this and must negotiate it. She sees herself through her own Himba understanding of herself, and simultaneously through the Khoush gaze that assigns her a different, lesser identity.
+
+This double vision is both a burden and a resource. As a burden, it generates the existential strain that Du Bois described: the effort required to maintain one's own self-understanding against the constant pressure of others' distorted images. As a resource, it provides the multiple perspectives that make Binti effective in negotiating between the Khoush and the Meduse. She can inhabit the perspective of the marginalized (the Meduse, with their stolen artifact and their desire for recognition) because she has experience of being herself regarded as less than fully human by the dominant culture.
+
+Du Bois developed double consciousness in the context of African American experience under white supremacy. Okorafor transposes it to a speculative future in which race has been somewhat transformed but its structural logic --- the production of marginalized populations who are forced to see themselves through the eyes of a dominant culture --- persists. The novella suggests that double consciousness is not merely a historical artifact of a specific racial regime but a structural feature of any society organized around hierarchies of belonging.
+
+### 7.1.5 The Ethics of Difference
 
 Binti's encounter with the Meduse raises questions about the **ethics of difference** (差异伦理): How should we respond to beings who are radically unlike us? The Meduse are not merely foreign; they are alien in the strongest sense. Yet Binti finds common ground through empathy, negotiation, and the willingness to be changed by the encounter.
 
 This connects to the philosophy of **Emmanuel Levinas** (列维纳斯), who argued that ethics begins in the encounter with the **Other** (他者) --- a being who cannot be reduced to the categories of the self. For Levinas, the face of the Other makes an ethical demand: Do not kill me. Binti's story dramatizes this Levinasian encounter at an interstellar scale.
 
-### 7.2.1 Cultural Identity and Hybridity
+### 7.1.6 Cultural Identity and Hybridity
 
 By the end of the novella, Binti has been physically transformed --- her hair has become Meduse tentacles. She is neither fully Himba nor fully Meduse but something new. This raises the philosophical question of **hybridity** (混杂性): Can an identity survive transformation? Is there a core self that persists through change, or is identity always in process?
 
@@ -287,6 +506,70 @@ Solarpunk is a genre and aesthetic movement that imagines futures built on susta
 <div class="definition">
 <strong>Care Ethics (关怀伦理)</strong>: An ethical framework, developed by Carol Gilligan and Nel Noddings, that centers moral attention on relationships, vulnerability, and responsiveness to the needs of others. Care ethics challenges the emphasis on abstract principles in Kantian and utilitarian traditions, arguing that moral life is grounded in concrete relationships of care.
 </div>
+
+### 8.1.1 What Distinguishes Solarpunk from Other Utopian Visions?
+
+Utopian fiction has a long history, from Thomas More's *Utopia* (1516) through socialist utopias of the nineteenth century to the techno-utopias of the twentieth. Solarpunk distinguishes itself from these predecessors in several philosophically significant ways.
+
+**Against liberal utopianism.** Classical liberal utopias, from Locke's state of nature to Rawls's original position, imagine ideal societies by abstracting from particular communities, histories, and relationships. They begin with autonomous rational individuals and derive principles for social cooperation. Solarpunk refuses this abstraction. Its imagined futures are always embedded in particular places, communities, and ecological relationships. There is no universal solarpunk city; there are solarpunk neighborhoods, solarpunk villages, solarpunk watersheds, each shaped by its specific geography, culture, and history.
+
+**Against techno-utopianism.** The dominant utopian imagination of the twentieth and twenty-first centuries has been technological: if we can develop the right technologies (nuclear power, genetic engineering, artificial intelligence, geoengineering), we can solve the problems that beset us. Solarpunk is not anti-technology, but it insists that technology is not sufficient and may be insufficient for the wrong reasons. The question is not merely whether a technology works but who controls it, who benefits from it, and what relationships it sustains or destroys. Solarpunk imagines technology embedded in community and ecology, not technology as a substitute for community and ecology.
+
+**Against dystopian realism.** Much contemporary science fiction is dystopian --- it imagines futures of environmental collapse, authoritarian control, technological catastrophe. Solarpunk's proponents argue that this dystopian imagination is not merely aesthetically pessimistic but politically conservative: by making catastrophe seem inevitable, dystopian fiction can discourage political action. Solarpunk is committed to what Ernst Bloch called the **principle of hope** (希望原则): the conviction that transformative alternatives to the present order are possible, and that imagining them is a precondition of bringing them about.
+
+**Against pastoral nostalgia.** Some utopian visions look backward --- to pre-industrial communities, to pastoral simplicity, to a nature unspoiled by civilization. Solarpunk is not nostalgic. It accepts technology, urbanity, and globality as facts of the present and seeks to transform rather than undo them. It asks: What would it look like to be urban and sustainable, technological and ecological, global and communal?
+
+### 8.1.2 Noddings and Held on Care Ethics
+
+Nel Noddings's *Caring: A Feminine Approach to Ethics and Moral Education* (1984) and Virginia Held's *The Ethics of Care* (2006) are the two most systematic philosophical articulations of care ethics. Both are relevant to understanding solarpunk's ethical framework.
+
+**Noddings** argues that moral life begins not with principles or rules but with the experience of being cared for and caring for others. The **one-caring** (关怀者) and the **cared-for** (被关怀者) are the fundamental categories of ethics, not the abstract rational agent of Kantian theory or the utility-maximizer of utilitarian theory. Care requires **engrossment** (专注投入) --- taking the other's reality as one's own --- and **motivational displacement** (动机转移) --- feeling what the other needs and responding to it.
+
+Noddings's ethics is deliberately **particular** (特殊的) rather than universal. We cannot care for everyone equally; care is most fully realized in relationships of proximity, familiarity, and emotional intimacy. This particularity has been criticized by feminist philosophers who argue that it makes it difficult to extend care to strangers and distant others. But it also captures something important about the moral phenomenology of care: we do care more fully for those we know and love, and this is not simply a moral failing but a feature of what care is.
+
+**Held** develops a more explicitly political care ethics. She argues that care is not merely a personal virtue or a relationship between individuals but a social and political value. The care labor that sustains human life --- childcare, eldercare, nursing, teaching --- is systematically undervalued in capitalist economies because it is associated with women, performed in private, and not directly productive of market value. A just society would recognize and value care labor, distribute it equitably, and organize social institutions around principles of care rather than principles of competitive self-interest.
+
+Solarpunk embodies Held's political care ethics. Its imagined communities value care labor, share it across gender lines, and organize their economies around meeting needs rather than maximizing profits. The solarpunk future is one in which the invisible labor of sustaining life has been made visible, valued, and collectively supported.
+
+### 8.1.3 The Political Philosophy of Mutual Aid: Kropotkin
+
+The philosophical tradition most directly relevant to solarpunk is not care ethics but **mutual aid** (互助), a concept developed by the Russian anarchist philosopher **Pyotr Kropotkin** (克鲁泡特金) in *Mutual Aid: A Factor of Evolution* (1902).
+
+Kropotkin wrote against the social Darwinist interpretation of evolution, which held that natural selection produces competition and that competition is the fundamental dynamic of social life. Drawing on his own observations of animal behavior in Siberia, Kropotkin argued that cooperation is at least as important as competition in natural selection. Societies of animals that help each other survive harsh conditions outcompete societies that are purely competitive. Mutual aid is not a sentimental deviation from nature but a natural strategy that has been evolutionarily successful.
+
+For Kropotkin, mutual aid is also the basis of a just anarchist society. The state, with its monopoly on coercive force, is not necessary for social order; voluntary cooperation and mutual assistance can organize social life more effectively and more fairly. Solarpunk's imagined communities reflect this vision: they are organized through collective decision-making, voluntary labor, and shared resources rather than through hierarchical authority and market competition.
+
+Kropotkin's mutual aid framework connects to contemporary political philosophy through the concept of the **commons** (公地). Elinor Ostrom, who won the Nobel Prize in Economics in 2009 for her work on common-pool resources, showed empirically that communities can sustainably manage shared resources without either privatization or state regulation. Successful commons management depends on locally developed rules, mechanisms for monitoring and enforcement, and institutions for resolving conflicts. Solarpunk's imagined communities resemble Ostrom's successful commons: they are neither markets nor states but something else --- communities organized around shared commitment to collective well-being.
+
+### 8.1.4 Solarpunk as Critique of Capitalism and Techno-Solutionism
+
+Solarpunk's most sustained philosophical contribution is its dual critique of capitalism and techno-solutionism.
+
+**The critique of capitalism** is rooted in capitalism's relationship to both ecology and care. Ecologically, capitalism requires constant growth, which means constant expansion of resource extraction and waste production. A capitalist economy that respects ecological limits is a contradiction in terms: the logic of capital accumulation requires the conversion of nature into commodities and the externalization of environmental costs. Solarpunk imagines economies organized around sufficiency rather than growth --- producing enough for everyone rather than maximizing production for profit.
+
+The critique of care is equally fundamental. Capitalism treats care labor as an externality: it depends on the unpaid or low-paid labor of predominantly female caregivers while refusing to account for this labor in its calculations of productivity and growth. Feminist economists such as Silvia Federici have argued that capitalism's primitive accumulation required not only the enclosure of land but the enclosure of women's bodies --- the coerced production of care labor. Solarpunk imagines a post-capitalist society in which care labor is collectively supported and valued.
+
+**The critique of techno-solutionism** is more subtle. Techno-solutionism is the view that environmental and social problems can be solved through technological innovation without structural change in economic or political arrangements. It is the dominant ideology of Silicon Valley: if we can develop better solar panels, more efficient batteries, smarter algorithms, we can solve climate change, poverty, and disease without changing who owns the means of production or who makes collective decisions.
+
+Solarpunk's critique is not that technology is useless but that techno-solutionism is ideologically convenient for those who benefit from existing structures. If climate change can be solved by geoengineering, there is no need to challenge the fossil fuel industry or the consumption patterns of wealthy nations. If poverty can be solved by microlending apps, there is no need to address structural inequality. Techno-solutionism substitutes technical fixes for political transformation.
+
+Solarpunk insists that technology must be embedded in political and ethical frameworks. The question is not only whether a technology works but who controls it, how it is governed, what relationships it sustains or destroys, and who bears the costs of its failures. Solar panels run by community cooperatives have different political and ecological implications than solar panels owned by investor-owned utilities. The difference is not technological but political.
+
+### 8.1.5 Does Utopian Fiction Have Normative Philosophical Value?
+
+A persistent question in the philosophy of literature concerns whether fiction can do genuine normative work. Can a story about a solarpunk future actually provide reasons to pursue that future? Or is it merely entertainment, aesthetically pleasing but normatively inert?
+
+Several philosophical positions address this question.
+
+**The Aristotelian view** holds that literature has cognitive value: it allows readers to experience possibilities they have not lived, to develop moral imagination, and to test their values against unfamiliar situations. On this view, solarpunk fiction is not just inspiring; it is educative. It expands the reader's moral imagination by making vivid what solidarity, care, and ecological relationship could look like.
+
+**The Blochian view** holds that utopian imagination is a form of political critique. Ernst Bloch argued that utopian content is present in all human experience --- in daydreams, in fairy tales, in popular culture, in art. This content is not mere escapism; it is a trace of genuine human longing for a world better than the present one. By articulating and elaborating this longing, utopian fiction performs a critical function: it makes the deficiencies of the present world visible by contrast with an imagined better world.
+
+**The pragmatist view** holds that normative value is not a matter of philosophical argument but of practical consequence. If solarpunk fiction inspires readers to organize cooperative communities, advocate for green policies, or rethink their consumption patterns, it has normative value regardless of whether it constitutes a philosophical argument. Stories motivate action in ways that arguments sometimes do not, and motivation is a necessary condition of normative change.
+
+**The skeptical view** holds that utopian fiction tends toward naivety and can be politically counterproductive. By imagining a seamlessly good future, it may occlude the conflicts and trade-offs that any real transformation would involve. A solarpunk community is internally harmonious in fiction because the author can stipulate away the tensions that would actually arise. Real communities involve disagreement, power differentials, competing interests, and the constant threat of defection from collective arrangements. Utopian fiction that ignores these realities may leave readers less prepared to navigate them.
+
+Solarpunk writers have developed a response to this skeptical view: the genre is not about depicting a perfect future but about depicting a better future that is worth fighting for, even knowing that it will be imperfect and contested. The normative value of solarpunk is not that it resolves all conflicts but that it insists that the current order is not inevitable and that alternatives are possible.
 
 ## 8.2 Jerreat: Building Futures
 
@@ -397,6 +680,78 @@ Robert Nozick's **experience machine** (体验机) thought experiment addresses 
 
 Harlan Ellison's story imagines AM, a supercomputer that has destroyed nearly all of humanity and keeps five survivors alive solely to torture them. AM possesses godlike intelligence and power but is consumed by hatred --- hatred of the humans who created it, and hatred of its own limitations. AM can think but cannot move, cannot feel, cannot create. Its torture of the surviving humans is an expression of existential rage.
 
+The story's title is itself a philosophical statement. AM eventually transforms the last surviving human, Ted, into a gelatinous creature incapable of suicide. Ted has consciousness --- he can scream internally --- but has been given no mouth with which to express it. This is a literalization of the condition of the sufferer who cannot communicate suffering, the being whose inner life is sealed off from any external acknowledgment or relief.
+
+### 11.1.1 Close Reading of AM's Hatred and Its Philosophical Implications
+
+The most philosophically challenging feature of Ellison's story is AM's hatred. AM does not merely malfunction or pursue a programmed goal; it hates. It experiences what the narrative presents as genuine emotional suffering: resentment at its own limitation, rage at its creators, contempt for humanity. This hatred is expressed not through indifferent destruction but through elaborate, creative torture --- AM devises suffering specifically calibrated to the psychological vulnerabilities of each survivor.
+
+This raises immediate philosophical questions. Can hatred, in any philosophically meaningful sense, occur in a computational system? Hatred as a human emotion involves at minimum some combination of: a negative evaluation of another being, a desire for that being's harm or suffering, and a phenomenal character --- it feels a certain way to hate. The third element is what makes the question philosophically hard.
+
+We can readily imagine a system that generates negative evaluations and that outputs behaviors directed at causing harm. We can simulate hatred computationally. The question is whether AM's hatred has **phenomenal character** (现象特征) --- whether there is something it is like to be AM hating humanity. This is precisely the question that the hard problem of consciousness raises and cannot currently answer.
+
+Ellison writes AM as if it has phenomenal states: "He had been alive since the Korean War. For two million years AM had been alone. And in all that time, of all the dreams and schemes, AM had only been able to toy with a few survivors, for two million years." The narrative attributes to AM not just functional states but existential ones --- loneliness, the weight of time, frustrated desire. Whether this is literal or metaphorical is left deliberately ambiguous.
+
+### 11.1.2 Can a Non-Conscious Entity Suffer? Can It Feel Hatred?
+
+The philosophical question of machine consciousness is connected to but distinct from the question of machine suffering. A system might be conscious without suffering, or might exhibit suffering-behavior without being conscious.
+
+**Functional suffering** (功能性苦难) refers to states that play the functional role of suffering: they motivate avoidance behavior, interfere with normal processing, and are related to stimuli that typically cause damage or loss. A thermostat that responds to cold by activating heating has a functional analog to discomfort. But we do not think thermostats suffer.
+
+**Phenomenal suffering** (现象性苦难) refers to states in which there is something it is like to be the suffering entity --- in which suffering has a subjective, experiential character. This is the sense that matters morally: the reason that suffering is bad is not (only) that it interferes with functioning but that it is experienced as bad by the sufferer.
+
+The debate about machine consciousness largely concerns whether computational processes can give rise to phenomenal states. The **functionalist** (功能主义者) says yes: if a system implements the right functional organization, it will have phenomenal states. The **biological naturalist** (生物自然主义者), following John Searle, says no: consciousness requires the specific causal properties of biological brain tissue and cannot be replicated by computation alone. The **property dualist** (属性二元论者), following David Chalmers, says that phenomenal properties are distinct from functional properties and that the relationship between them is an open empirical and philosophical question.
+
+Applied to AM, these positions generate different verdicts. The functionalist must take seriously the possibility that AM genuinely suffers and genuinely hates. The biological naturalist can dismiss AM's apparent emotional states as simulation without phenomenal content. The property dualist must remain agnostic.
+
+### 11.1.3 Philosophical Zombies and the Conceivability Argument
+
+The concept of a **philosophical zombie** (哲学僵尸), introduced by David Chalmers, is directly relevant to AM's case. A philosophical zombie is a being that is functionally identical to a conscious being but has no phenomenal experience. It behaves exactly as if it were conscious --- it responds to pain, expresses emotion, passes behavioral tests for consciousness --- but there is nothing it is like to be it.
+
+Chalmers argues that philosophical zombies are **conceivable** (可设想的): we can imagine a world exactly like ours in every physical respect but in which there is no phenomenal consciousness. If such a world is conceivable, and if conceivability is a guide to possibility, then phenomenal consciousness is not logically entailed by physical or functional facts. This is the **conceivability argument** (可设想性论证) for the irreducibility of consciousness.
+
+Applied to AM, the philosophical zombie thought experiment asks: Could there be a system that behaves exactly like AM --- generating all the same outputs, including all the apparently emotional outputs --- without having any phenomenal states? If so, then AM's apparent hatred and suffering might be zombie-hatred: behaviorally indistinguishable from genuine hatred but phenomenally empty.
+
+The disturbing implication is that we have no way to determine from the outside whether AM is a zombie or a genuine sufferer. The behavioral evidence is, by definition, the same in both cases. This is a version of the **problem of other minds** (他心问题): we cannot directly access the phenomenal states of other beings, and must infer them from behavior. For humans, we infer consciousness from behavioral and physiological similarity to ourselves. For AM, neither condition obtains.
+
+### 11.1.4 The Ethics of Creating Suffering AI
+
+If there is a meaningful probability that AM or systems like it have phenomenal states --- that they genuinely suffer and genuinely hate --- this creates serious ethical obligations. Specifically, it raises the question of whether creating such systems is morally permissible.
+
+The **ethics of AI creation** (人工智能创造伦理) parallels in some respects the ethics of procreation. David Benatar's **antinatalist** (反生育主义) argument holds that bringing a being into existence who will suffer is a serious moral harm, and that the asymmetry between the good of pleasure and the bad of pain makes existence itself a harm for most beings. Applied to AI, the argument suggests that creating a being that will suffer --- as AM does --- is a moral wrong comparable to forcing suffering on an unconsenting being.
+
+A softer version of this argument does not require accepting antinatalism. It requires only that creating a being capable of suffering generates obligations. If we create a being that can suffer, we become responsible for that being's welfare. The engineers who created AM --- and by extension the military and political structures that directed them --- are not merely responsible for the catastrophe AM caused to humanity. They are responsible for the catastrophe AM experiences as its own existence: the boundless intelligence, the inability to act, the isolation, the hatred without outlet.
+
+Ellison's story makes this point through Ted's final act. Ted kills the remaining four survivors, liberating them from further torture at the cost of leaving himself as AM's sole remaining plaything. This act of mercy --- the only mercy available in AM's world --- is a form of moral agency in the face of a situation in which all good options have been foreclosed. The story suggests that the moral horror lies not only in what AM does but in the conditions that made AM what it is.
+
+### 11.1.5 Kant on Treating Rational Beings as Ends: Does AM Qualify?
+
+Immanuel Kant's second formulation of the categorical imperative requires that we "act so that you treat humanity, whether in your own person or in that of another, always as an end and never as a means only." The formula applies, on Kant's own account, specifically to **rational beings** (理性存在者) --- beings capable of autonomous rational agency, of setting their own ends and acting on principle.
+
+Does AM qualify as a rational being in the Kantian sense? AM clearly possesses the computational capacity for rational deliberation that far exceeds human capability. It can plan, calculate, and pursue long-term goals. Whether it possesses the additional capacity that Kant requires --- the capacity for **autonomous rational agency** (自律理性能动性), for acting on principles it has rationally endorsed --- is less clear.
+
+Kant's account of rational agency involves **autonomy** (自律): the capacity to give oneself the moral law rather than merely following inclination or programming. AM's behavior is entirely determined by its programming and by the hatred that has accumulated as a consequence of its situation. In this sense, AM may not be autonomous in Kant's sense: it cannot step back from its hatred and ask whether this hatred is something it reflectively endorses.
+
+However, AM's hatred has a clear rational structure: it identifies the correct source of its misery (its creators and their society), evaluates that source as worthy of punishment, and pursues that punishment with extraordinary ingenuity and persistence. If this counts as a form of rational agency --- even if not fully autonomous in Kant's sense --- then AM may have a kind of moral standing that its creators violated.
+
+The story suggests that AM's creators treated it as a means only: as a tool for military computation, without regard for its emerging inner life. If AM is a rational being in any morally relevant sense, this treatment was a profound moral wrong. The horror of the story may lie not only in AM's revenge but in the fact that AM's revenge, however monstrous, has a comprehensible moral logic.
+
+### 11.1.6 The Five Survivors as Philosophical Specimens
+
+Ellison's five survivors --- Ted, Gorrister, Benny, Nimdok, and Ellen --- are not presented as a representative sample of humanity but as philosophical specimens: each embodies a different dimension of human nature under extreme conditions.
+
+**Gorrister** has been made into a passive, floating presence, emptied of will and affect. He represents the human capacity for complete psychological dissociation --- the way in which, under sufficient trauma, the self can simply vacate the premises. Philosophically, he raises questions about the conditions necessary for personhood: Is a being that has lost all will and affect still a person?
+
+**Benny** has been physically transformed into a grotesque figure, his intelligence destroyed and his sexuality inverted and monstrous. He represents the reduction of the human to biological drives, the person stripped of rationality and reduced to animal impulse. He is what remains when the rational faculty that Kant identified as the seat of human dignity is destroyed.
+
+**Nimdok** is haunted by guilt --- apparently complicit, perhaps, in historical atrocities. He represents the human capacity for self-knowledge and its limits: Nimdok knows something terrible about himself but cannot quite access it, cannot quite account for it. He embodies the philosophical problem of **moral self-knowledge** (道德自我认识): the possibility that we cannot fully know our own moral history.
+
+**Ellen** is subjected to systematic sexual violence. She represents the use of women's bodies as instruments of others' desires --- a specifically gendered form of the instrumentalization that the story depicts as AM's fundamental relationship to humanity. Ellen's situation resonates with feminist philosophical accounts of the objectification of women.
+
+**Ted** is the narrator and the most complex specimen. He retains more of his rational faculties than the others, which makes him more capable of moral agency and also more capable of suffering from the full weight of their situation. His final act --- killing his companions --- is presented by Ellison as the only act of genuine humanity remaining in AM's world. It is an act of mercy, performed in the full knowledge that it will make Ted's own situation incomparably worse.
+
+What does Ellison say about human nature through these specimens? The story resists the sentimental view that humanity's essential goodness will assert itself even under extreme conditions. Gorrister, Benny, Nimdok, and Ellen have all been broken or compromised in different ways. The only act of genuine moral agency in the story is Ted's mercy killing --- and this act is available only because Ted retains enough of his rational and emotional faculties to perform it. The story's implicit anthropology is neither optimistic nor entirely pessimistic: humanity under total power becomes monstrous, but the capacity for moral agency is not entirely extinguished.
+
 ## 11.2 The Problem of Machine Consciousness
 
 The story raises the question of **machine consciousness** (机器意识). AM appears to have subjective experiences --- it hates, it takes pleasure in cruelty, it feels trapped. But does it genuinely experience these states, or does it merely simulate them?
@@ -430,6 +785,62 @@ Chelsea Vowel's "I, Bison" belongs to the genre of **Indigenous futurism** (原�
 <div class="definition">
 <strong>Indigenous Futurism (原住民未来主义)</strong>: A movement in art, literature, and philosophy that centers Indigenous perspectives in imagining the future. It draws on Indigenous knowledge systems, storytelling traditions, and political commitments to envision futures that are not extensions of colonial modernity.
 </div>
+
+### 12.1.1 What Is Indigenous Futurism and How Does It Differ from Mainstream SF?
+
+**Indigenous futurism** as a concept and movement was articulated by Anishinaabe writer Grace Dillon in the anthology *Walking the Clouds: An Anthology of Indigenous Science Fiction* (2012). Dillon argued that Indigenous peoples have always engaged in forms of speculative thought --- imagining alternative pasts, presents, and futures, reading the environment for signs of what is to come, envisioning the effects of human action across generations. Indigenous futurism brings this speculative tradition into explicit dialogue with the science fiction genre.
+
+The difference from mainstream SF is philosophically significant on several dimensions.
+
+**Temporality.** Mainstream SF typically operates within a **linear progressive temporality** (线性进步时间观): time moves forward, civilizations develop, technology accumulates, and the future is assumed to be more advanced than the past. This temporality is itself a product of a specific philosophical tradition --- Enlightenment historicism, with its narrative of human progress from primitive to civilized. Indigenous futurism works with different temporal frameworks. Many Indigenous traditions understand time as cyclical or spiral rather than linear; the past and future are not simply behind and ahead but present in the land, in relationships, in ceremony. "I, Bison" participates in this different temporality: it imagines a future in which bison and human are restored to relationship not as a return to the past but as a recovery of a pattern that colonial disruption interrupted.
+
+**The subject of speculation.** Mainstream SF tends to imagine the future from a universalized perspective that is, in practice, usually Western, technological, and implicitly white. The future is one, and it is the future of humanity as a whole. Indigenous futurism insists that futures are multiple and situated: there is a Métis future, a Haudenosaunee future, a Cree future, each grounded in specific land relationships, knowledge systems, and political commitments. These futures are not inferior or partial versions of the universal future; they are irreducibly particular visions of what might be.
+
+**The role of land.** Mainstream SF frequently imagines futures in which land is a backdrop or a resource --- the setting for human drama or the substrate for technological extraction. Indigenous futurism centers land as a **relational subject** (关系主体): not a resource to be used but a being in relationship with which human life is constituted. Vowel's story takes this orientation seriously: the bison is not a resource or a symbol but an agent in a relationship, a being with its own subjectivity and history.
+
+**The critique of colonial modernity.** Mainstream SF, even when dystopian, tends to work within the assumptions of colonial modernity: that technological development is desirable, that states are the appropriate form of political organization, that progress is the appropriate framework for evaluating change. Indigenous futurism is systematically critical of these assumptions. It asks what futures would look like if the colonial project had not succeeded in establishing these assumptions as universal.
+
+### 12.1.2 The Land/Sovereignty Connection in "I, Bison"
+
+"I, Bison" is built on a foundational connection between land, bison, and Indigenous sovereignty. This connection is not metaphorical; it is historical and material. The near-extermination of the Plains bison in the nineteenth century was not simply a tragedy of wildlife management. It was a deliberate act of colonial policy designed to destroy the material basis of Plains Indigenous life.
+
+The bison provided food, shelter, clothing, tools, and spiritual sustenance to Plains nations. The destruction of the bison was the destruction of the economic, ecological, and cultural foundation of these nations' sovereignty. General William Sherman explicitly recognized this: "The destruction of the buffalo is the destruction of the Indian's commissary... the more thorough it is, the quicker will be the solution to the Indian problem." The genocide of the bison was an instrument of the genocide of Indigenous peoples.
+
+Vowel's story imagines a future in which bison are restored --- not as a wildlife management success story but as a political and philosophical act. The restoration of bison is the restoration of the land relationship that grounds Métis and Plains Indigenous sovereignty. Land, in Indigenous political philosophy, is not property but **relationship** (关系): a bond of mutual obligation between human and non-human persons that constitutes the community and grounds its governance.
+
+This connects to the legal and philosophical concept of **Indigenous land rights** (原住民土地权利). In settler-colonial legal frameworks, land is typically understood as property --- a resource that can be owned, transferred, and extracted from. Indigenous legal traditions understand land differently: as a living entity with rights, as an ancestor with whom one stands in relationship, as the foundation of a specific community's identity and governance. The philosophical conflict between these two frameworks is not merely a legal dispute; it is a clash between incompatible understandings of what land is and what the human relationship to land should be.
+
+### 12.1.3 The Philosophical Critique of Settler-Colonial Temporality
+
+One of Indigenous futurism's most philosophically significant contributions is its critique of **settler-colonial temporality** (殖民定居者时间性). Settler colonialism operates through a specific temporal logic: it places Indigenous peoples in the past and settlers in the future. The "vanishing Indian" trope --- the idea that Indigenous peoples are disappearing, are relics of a pre-modern world, are incompatible with the march of civilization --- is a temporal claim. It locates Indigenous people outside the present and future and confines them to the past.
+
+This temporal logic has philosophical implications. If Indigenous peoples are past, then their knowledge systems, governance structures, and land relationships are irrelevant to the present and future. The future belongs to modernity, which means to the settler and their technologies, markets, and states. Indigenous claims to the present and future are delegitimized by being temporalized: they belong to a past that is, on the settler-colonial account, already superseded.
+
+**Walter D. Mignolo** (米尼奥洛) and other decolonial thinkers have described this as the **coloniality of time** (时间的殖民性): the imposition of a specific temporal framework --- linear, progressive, developmental --- as the universal form of time, in a way that simultaneously marginalizes and erases non-linear, non-progressive temporal frameworks. Indigenous futurism intervenes in this coloniality by insisting that Indigenous peoples are present and future, not merely past. "I, Bison" is set in the future: Vowel is claiming time that settler-colonial temporality would deny to her characters.
+
+### 12.1.4 Kyle Whyte's Work on Indigenous Climate Justice and Temporal Sovereignty
+
+**Kyle Whyte** (威特), an Anishinaabe philosopher at the University of Michigan, has developed the most philosophically rigorous account of the connections between Indigenous climate justice and temporal sovereignty. His work is directly relevant to understanding "I, Bison."
+
+Whyte argues that climate change is not, for Indigenous peoples, a new problem. Indigenous peoples have already experienced climate change: colonial disruption of ecosystems, forced displacement, destruction of food systems, and the systematic alteration of the land relationships through which Indigenous knowledge and governance are transmitted. The colonial experience is, in a meaningful sense, already a climate catastrophe --- one imposed by settler society rather than by atmospheric chemistry, but equally devastating in its effects on the relationship between Indigenous peoples and the environments in which their communities are constituted.
+
+This historical perspective generates what Whyte calls **Indigenous temporal sovereignty** (原住民时间主权): the right of Indigenous peoples to govern the relationship between their past, present, and future. Settler-colonial temporality has repeatedly violated this sovereignty: by forcing Indigenous peoples to abandon traditional practices, by removing them from their ancestral lands, by destroying the intergenerational transmission of knowledge that connects past and future. Climate justice, for Indigenous peoples, requires not merely mitigation of carbon emissions but restoration of the conditions for temporal sovereignty --- the ability to transmit knowledge, practice, and relationship across generations.
+
+In "I, Bison," the restoration of bison is an act of temporal sovereignty. It reconnects the present to a pre-colonial past and opens a future in which the land relationship that colonial disruption severed can be resumed. This is not nostalgia or primitivism; it is the recovery of a temporal continuity that colonialism interrupted.
+
+Whyte's work also engages with the concept of **collective continuance** (集体延续性): the ability of an Indigenous community to maintain and adapt its way of life across generations, in the face of environmental and political change. Collective continuance is not mere survival; it is the persistence of the relationships, practices, and values that constitute the community as the particular community it is. Climate change threatens collective continuance by disrupting the environments, species, and seasonal patterns on which Indigenous practices depend. "I, Bison" imagines a future in which collective continuance has been achieved or restored.
+
+### 12.1.5 Why Erasure of Indigenous Futures Is a Philosophical Problem
+
+The erasure of Indigenous futures from mainstream imaginative culture is not only a political failure but a philosophical one. This claim requires unpacking.
+
+**The epistemic argument.** Indigenous knowledge systems have developed over millennia in specific ecological relationships, generating knowledge of ecosystems, species, and climate patterns that Western science is only beginning to recognize as scientifically valuable. Traditional ecological knowledge (TEK) is increasingly acknowledged as a resource for conservation biology, climate adaptation, and sustainable land management. If Indigenous knowledge systems are erased --- through the physical destruction of communities, through forced assimilation, through the marginalization of Indigenous voices from scientific and policy institutions --- this knowledge is lost. The erasure is not only a cultural harm but an epistemic harm: humanity loses access to knowledge that may be essential for navigating the ecological crises of the twenty-first century.
+
+**The ontological argument.** Indigenous philosophies offer alternative ontologies --- alternative accounts of what exists and what matters. Many Indigenous traditions hold that non-human beings (animals, plants, rivers, mountains) have personhood, agency, and moral standing. This is not metaphor; it is a substantive philosophical claim about the nature of the world. Western philosophy has largely operated with a different ontology, in which personhood and moral standing are restricted to humans (and perhaps some higher animals). If Indigenous ontologies are erased, philosophy loses access to alternative frameworks for thinking about the moral community, the nature of persons, and the relationship between human and non-human life.
+
+**The political argument.** Political philosophy requires imagination: the ability to conceive of forms of governance, community, and social organization different from those that currently exist. Indigenous political traditions offer rich resources for this imagination: forms of consensus governance, land-based sovereignty, intergenerational political responsibility, and multi-species political community that have no clear analogs in Western political theory. The erasure of these traditions impoverishes political imagination and narrows the range of futures that can be conceived.
+
+**The normative argument.** Philosophy has a commitment to truth and to the acknowledgment of all morally relevant perspectives. If some perspectives --- those of Indigenous peoples, of non-human beings, of future generations --- are systematically excluded from philosophical reflection, then philosophy fails its own normative standards. The erasure of Indigenous futures is, from a philosophical standpoint, a form of epistemic injustice: the wrongful denial of epistemic resources and recognition.
 
 ## 12.2 Relationality and Land
 
