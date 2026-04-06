@@ -1,4 +1,11 @@
-{{- /* Study time uses prose at 180 wpm, then adds overhead for inline/display math and LaTeX command density. */ -}}
+{{- /*
+  Study time estimation — handles CJK and Latin prose separately:
+    • CJK characters  → 300 cpm  (academic Chinese reading speed)
+    • Latin/other words → 180 wpm  (English reading speed)
+  Then adds overhead for inline/display math and LaTeX command density.
+  Hugo's countwords uses whitespace-splitting, which massively undercounts
+  Chinese text (no spaces between chars), so we count CJK chars via findRE.
+*/ -}}
 {{- $raw := .RawContent -}}
 {{- $plain := .Plain -}}
 {{- $inlinePattern := `(?s)\\\(.*?\\\)` -}}
@@ -15,17 +22,30 @@
 {{- $prosePlain := replaceRE $envPattern " " $plainWithoutDisplayMath -}}
 
 {{- $mathContent := delimit (append (append $inlineMatches $displayMatches) $envMatches) " " -}}
-{{- $proseWords := countwords $prosePlain -}}
+
+{{- /* Count CJK characters (CJK Unified Ideographs blocks) */ -}}
+{{- $cjkChars := len (findRE `[\x{4e00}-\x{9fff}\x{3400}-\x{4dbf}\x{f900}-\x{faff}]` $prosePlain) -}}
+
+{{- /* Strip CJK from prosePlain so countwords only sees Latin/numeric tokens */ -}}
+{{- $latinPlain := replaceRE `[\x{4e00}-\x{9fff}\x{3400}-\x{4dbf}\x{f900}-\x{faff}]` "" $prosePlain -}}
+{{- $latinWords := countwords $latinPlain -}}
+
 {{- $inlineEquations := len $inlineMatches -}}
 {{- $displayEquations := add (len $displayMatches) (len $envMatches) -}}
 {{- $mathCommands := len (findRE `\\[A-Za-z]+` $mathContent) -}}
 
-{{- $proseSeconds := div (mul $proseWords 60) 180 -}}
+{{- /* 300 cpm for CJK; 180 wpm for Latin */ -}}
+{{- $cjkSeconds := div (mul $cjkChars 60) 300 -}}
+{{- $latinSeconds := div (mul $latinWords 60) 180 -}}
+{{- $proseSeconds := add $cjkSeconds $latinSeconds -}}
 {{- $inlineSeconds := mul $inlineEquations 2 -}}
 {{- $displaySeconds := mul $displayEquations 20 -}}
 {{- $commandSeconds := div $mathCommands 2 -}}
 {{- $studySeconds := add (add $proseSeconds $inlineSeconds) (add $displaySeconds $commandSeconds) -}}
 {{- $studyMinutes := div (add $studySeconds 59) 60 -}}
+
+{{- /* proseWords kept for display: CJK chars + latin words */ -}}
+{{- $proseWords := add $cjkChars $latinWords -}}
 
 {{- return (dict
   "display_equations" $displayEquations
