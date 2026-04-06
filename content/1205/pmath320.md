@@ -228,19 +228,14 @@ Paper folding — **origami** — gives a different and strictly more powerful c
 
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 500 335" width="500" height="335" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="12">
-
-  <!-- === ROW 1: H1, H2, H3, H4 (each ~125px wide) === -->
-
   <!-- H1: fold through two points -->
   <text x="5" y="14" font-weight="bold" fill="currentColor">H1</text>
   <circle cx="42" cy="38" r="4" fill="currentColor"/>
   <text x="49" y="42" fill="currentColor">P1</text>
   <circle cx="78" cy="92" r="4" fill="currentColor"/>
   <text x="85" y="96" fill="currentColor">P2</text>
-  <!-- fold line through P1 and P2, extended -->
   <line x1="24" y1="14" x2="96" y2="116" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="5" y="140" fill="currentColor" font-size="10">fold thru P1, P2</text>
-
   <!-- H2: perpendicular bisector fold -->
   <text x="130" y="14" font-weight="bold" fill="currentColor">H2</text>
   <circle cx="148" cy="58" r="4" fill="currentColor"/>
@@ -251,9 +246,7 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <line x1="190" y1="16" x2="190" y2="115" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <circle cx="190" cy="58" r="2.5" fill="#c00"/>
   <text x="125" y="140" fill="currentColor" font-size="10">⊥ bisector of P1P2</text>
-
-  <!-- H3: fold mapping one line onto the other (angle bisector) -->
-  <!-- ℓ1 and ℓ2 are symmetric about y=66; horizontal fold at y=66 maps ℓ1 to ℓ2 -->
+  <!-- H3: ℓ1 and ℓ2 symmetric about y=66; horizontal fold maps ℓ1 to ℓ2 -->
   <text x="255" y="14" font-weight="bold" fill="currentColor">H3</text>
   <line x1="257" y1="92" x2="363" y2="40" stroke="currentColor" stroke-width="1.5"/>
   <text x="365" y="44" fill="currentColor" font-size="11">ℓ1</text>
@@ -261,7 +254,6 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <text x="365" y="96" fill="currentColor" font-size="11">ℓ2</text>
   <line x1="255" y1="66" x2="365" y2="66" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="252" y="140" fill="currentColor" font-size="10">fold maps ℓ1 → ℓ2</text>
-
   <!-- H4: fold perpendicular to ℓ through P -->
   <text x="380" y="14" font-weight="bold" fill="currentColor">H4</text>
   <line x1="378" y1="60" x2="495" y2="60" stroke="currentColor" stroke-width="1.5"/>
@@ -270,9 +262,6 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <text x="442" y="102" fill="currentColor">P</text>
   <line x1="435" y1="16" x2="435" y2="122" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="378" y="140" fill="currentColor" font-size="10">fold ⊥ to ℓ thru P</text>
-
-  <!-- === ROW 2: H5, H6, H7 (y offset +165, each ~165px wide) === -->
-
   <!-- H5: fold through P2 placing P1 onto ℓ -->
   <text x="5" y="179" font-weight="bold" fill="currentColor">H5</text>
   <line x1="5" y1="290" x2="158" y2="290" stroke="currentColor" stroke-width="1.5"/>
@@ -281,12 +270,9 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <text x="45" y="204" fill="currentColor">P1</text>
   <circle cx="88" cy="248" r="4" fill="currentColor"/>
   <text x="95" y="252" fill="currentColor">P2</text>
-  <!-- fold line through P2; schematic showing P1 is reflected to a point on ℓ -->
   <line x1="12" y1="218" x2="148" y2="270" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- image of P1 on ℓ (schematic) -->
   <circle cx="112" cy="290" r="3" fill="#c00"/>
   <text x="5" y="318" fill="currentColor" font-size="10">thru P2, P1 → ℓ</text>
-
   <!-- H6: fold placing P1 onto ℓ1 and P2 onto ℓ2 simultaneously -->
   <text x="175" y="179" font-weight="bold" fill="currentColor">H6</text>
   <circle cx="202" cy="200" r="4" fill="currentColor"/>
@@ -299,10 +285,7 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <text x="329" y="226" fill="currentColor" font-size="11">ℓ2</text>
   <line x1="188" y1="268" x2="326" y2="248" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="175" y="318" fill="currentColor" font-size="10">P1 → ℓ1 and P2 → ℓ2</text>
-
-  <!-- H7: fold placing P onto ℓ1, perpendicular to ℓ2 -->
-  <!-- Setup: ℓ1 horizontal at y=268, ℓ2 vertical at x=440 -->
-  <!-- P at (382,200); fold horizontal at y=234 maps P to P'=(382,268) on ℓ1, and is ⊥ to ℓ2 -->
+  <!-- H7: ℓ1 horizontal at y=268, ℓ2 vertical at x=440; fold horizontal at y=234 maps P→ℓ1 and is ⊥ ℓ2 -->
   <text x="348" y="179" font-weight="bold" fill="currentColor">H7</text>
   <line x1="340" y1="268" x2="492" y2="268" stroke="currentColor" stroke-width="1.5"/>
   <text x="494" y="272" fill="currentColor" font-size="11">ℓ1</text>
@@ -310,12 +293,9 @@ Paper folding — **origami** — gives a different and strictly more powerful c
   <text x="443" y="183" fill="currentColor" font-size="11">ℓ2</text>
   <circle cx="382" cy="200" r="4" fill="currentColor"/>
   <text x="389" y="204" fill="currentColor">P</text>
-  <!-- fold: horizontal at y=234, perpendicular to vertical ℓ2 -->
   <line x1="340" y1="234" x2="492" y2="234" stroke="#c00" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- P' = image of P on ℓ1 -->
   <circle cx="382" cy="268" r="3" fill="#c00"/>
   <text x="340" y="318" fill="currentColor" font-size="10">P → ℓ1, fold ⊥ ℓ2</text>
-
 </svg>
 </div>
 
