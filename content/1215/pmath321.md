@@ -337,7 +337,6 @@ Translations and rotations preserve orientation; reflections and glide reflectio
       <path d="M0,0 L0,6 L8,3 z" fill="currentColor"/>
     </marker>
   </defs>
-
   <!-- ROTATION -->
   <text x="60" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Rotation</text>
   <circle cx="60" cy="100" r="2" fill="currentColor"/>
@@ -348,7 +347,6 @@ Translations and rotations preserve orientation; reflections and glide reflectio
   <text x="76" y="62" fill="#e05" font-size="11">A′</text>
   <path d="M98,92 A38,38 0 0,0 74,72" stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
   <text x="60" y="140" text-anchor="middle" fill="currentColor" font-size="10">A→A′ about P by θ</text>
-
   <!-- REFLECTION -->
   <text x="185" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Reflection</text>
   <line x1="185" y1="30" x2="185" y2="130" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
@@ -359,7 +357,6 @@ Translations and rotations preserve orientation; reflections and glide reflectio
   <text x="220" y="84" fill="#e05" font-size="11">A′</text>
   <line x1="157" y1="80" x2="213" y2="80" stroke="#777" stroke-width="1" stroke-dasharray="3,3"/>
   <text x="185" y="160" text-anchor="middle" fill="currentColor" font-size="10">A→A′ across L</text>
-
   <!-- TRANSLATION -->
   <text x="330" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Translation</text>
   <circle cx="285" cy="80" r="4" fill="#27c"/>
@@ -369,7 +366,6 @@ Translations and rotations preserve orientation; reflections and glide reflectio
   <line x1="291" y1="80" x2="369" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr1)"/>
   <text x="330" y="72" text-anchor="middle" fill="currentColor" font-size="11">u</text>
   <text x="330" y="100" text-anchor="middle" fill="currentColor" font-size="10">no fixed points</text>
-
   <!-- GLIDE REFLECTION -->
   <text x="440" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Glide Refl.</text>
   <line x1="440" y1="30" x2="440" y2="145" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
@@ -646,10 +642,8 @@ wait, each overlap (triangle) is covered three times instead of once, so we add 
   <!-- Angle α label -->
   <text x="128" y="65" fill="currentColor" font-size="13">α</text>
   <text x="90" y="185" text-anchor="middle" fill="currentColor" font-size="11">Lune W_α, area = 4α</text>
-
   <!-- Divider -->
   <line x1="185" y1="10" x2="185" y2="190" stroke="#666" stroke-width="1"/>
-
   <!-- Right: schematic of three lunes covering sphere -->
   <circle cx="275" cy="100" r="75" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- Lune 1 (α) -->
@@ -1198,7 +1192,6 @@ The three-way classification of line pairs is a hallmark of hyperbolic geometry.
   <path d="M20,80 A90,90 0 0,1 130,80" fill="none" stroke="#e05" stroke-width="1.8"/>
   <path d="M20,150 A90,90 0 0,0 130,150" fill="none" stroke="#27c" stroke-width="1.8"/>
   <circle cx="75" cy="115" r="3" fill="currentColor"/>
-
   <!-- ASYMPTOTIC -->
   <text x="240" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Asymptotic</text>
   <text x="240" y="32" text-anchor="middle" fill="currentColor" font-size="10">(meet on S¹)</text>
@@ -1208,7 +1201,6 @@ The three-way classification of line pairs is a hallmark of hyperbolic geometry.
   <path d="M185,155 A120,120 0 0,0 295,75" fill="none" stroke="#27c" stroke-width="1.8"/>
   <circle cx="295" cy="75" r="4" fill="currentColor"/>
   <text x="302" y="71" fill="currentColor" font-size="10">on S¹</text>
-
   <!-- ULTRAPARALLEL -->
   <text x="405" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Ultraparallel</text>
   <text x="405" y="32" text-anchor="middle" fill="currentColor" font-size="10">(no meeting)</text>
@@ -1216,7 +1208,6 @@ The three-way classification of line pairs is a hallmark of hyperbolic geometry.
   <!-- Two non-meeting arcs -->
   <path d="M350,80 A80,80 0 0,1 350,150" fill="none" stroke="#e05" stroke-width="1.8"/>
   <path d="M460,80 A80,80 0 0,0 460,150" fill="none" stroke="#27c" stroke-width="1.8"/>
-
   <!-- Caption -->
   <text x="240" y="200" text-anchor="middle" fill="currentColor" font-size="11">Three types of line pairs in ℍ²</text>
 </svg>
@@ -1301,10 +1292,8 @@ Horocycles and hypercycles are the hyperbolic analogues of circles and lines in 
   <circle cx="90" cy="200" r="4" fill="#e05"/>
   <text x="98" y="215" fill="#e05" font-size="10">tangent pt on S¹</text>
   <text x="90" y="105" text-anchor="middle" fill="#e05" font-size="10">horocycle</text>
-
   <!-- Divider -->
   <line x1="195" y1="10" x2="195" y2="220" stroke="#666" stroke-width="1"/>
-
   <!-- HYPERCYCLE -->
   <text x="295" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Hypercycle</text>
   <text x="295" y="32" text-anchor="middle" fill="currentColor" font-size="10">(chord of S¹)</text>
@@ -1441,7 +1430,6 @@ Fixed points: \(z = \pm 1\) (on \(S^1\)). This translates along the real diamete
       <path d="M0,0 L0,6 L7,3 z" fill="#2a2"/>
     </marker>
   </defs>
-
   <!-- ELLIPTIC -->
   <text x="83" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Elliptic (rotation)</text>
   <circle cx="83" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -1454,7 +1442,6 @@ Fixed points: \(z = \pm 1\) (on \(S^1\)). This translates along the real diamete
   <circle cx="83" cy="110" r="4" fill="currentColor"/>
   <text x="91" y="107" fill="currentColor" font-size="10">fixed pt</text>
   <text x="83" y="195" text-anchor="middle" fill="currentColor" font-size="10">orbits = circles</text>
-
   <!-- PARABOLIC -->
   <text x="250" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Parabolic (horolation)</text>
   <circle cx="250" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -1465,7 +1452,6 @@ Fixed points: \(z = \pm 1\) (on \(S^1\)). This translates along the real diamete
   <circle cx="250" cy="180" r="4" fill="currentColor"/>
   <text x="258" y="195" fill="currentColor" font-size="10">fixed pt on S¹</text>
   <text x="250" y="208" text-anchor="middle" fill="currentColor" font-size="10">orbits = horocycles</text>
-
   <!-- HYPERBOLIC -->
   <text x="417" y="16" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="12">Hyperbolic (translation)</text>
   <circle cx="417" cy="110" r="70" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -1628,7 +1614,6 @@ The discovery that multiple consistent geometries exist — with different curva
   <text x="80" y="163" text-anchor="middle" fill="#27c" font-size="10">Angle sum &lt; π</text>
   <text x="80" y="176" text-anchor="middle" fill="#27c" font-size="10">∞ many parallels</text>
   <text x="80" y="189" text-anchor="middle" fill="#27c" font-size="10">Exponential growth</text>
-
   <!-- K = 0: Euclidean flat triangle -->
   <text x="240" y="18" text-anchor="middle" fill="currentColor" font-weight="bold" font-size="13">K = 0</text>
   <text x="240" y="32" text-anchor="middle" fill="currentColor" font-size="11">(Euclidean)</text>
@@ -1638,7 +1623,6 @@ The discovery that multiple consistent geometries exist — with different curva
   <text x="240" y="163" text-anchor="middle" fill="currentColor" font-size="10">Angle sum = π</text>
   <text x="240" y="176" text-anchor="middle" fill="currentColor" font-size="10">Exactly one parallel</text>
   <text x="240" y="189" text-anchor="middle" fill="currentColor" font-size="10">Polynomial growth</text>
-
   <!-- K > 0: Spherical -->
   <text x="400" y="18" text-anchor="middle" fill="#e05" font-weight="bold" font-size="13">K &gt; 0</text>
   <text x="400" y="32" text-anchor="middle" fill="#e05" font-size="11">(spherical)</text>
@@ -1868,7 +1852,6 @@ The \(\{3,7\}\) tessellation: equilateral triangles with 7 at each vertex. Each 
   <line x1="20" y1="105" x2="140" y2="105" stroke="#2a2" stroke-width="1.2"/>
   <text x="80" y="161" text-anchor="middle" fill="#2a2" font-size="11">squares, 4/vertex</text>
   <text x="80" y="174" text-anchor="middle" fill="#2a2" font-size="11">1/4+1/4 = 1/2 ✓</text>
-
   <!-- SPHERICAL {3,4}: cube skeleton on sphere -->
   <text x="240" y="16" text-anchor="middle" fill="#e05" font-weight="bold" font-size="12">Spherical {3,4}</text>
   <circle cx="240" cy="85" r="60" fill="#fff0f0" stroke="#e05" stroke-width="1.5"/>
@@ -1879,7 +1862,6 @@ The \(\{3,7\}\) tessellation: equilateral triangles with 7 at each vertex. Each 
   <line x1="180" y1="100" x2="300" y2="100" stroke="#e05" stroke-width="1.2" stroke-dasharray="4,3"/>
   <text x="240" y="161" text-anchor="middle" fill="#e05" font-size="11">triangles, 4/vertex</text>
   <text x="240" y="174" text-anchor="middle" fill="#e05" font-size="11">1/3+1/4 &gt; 1/2 ✓</text>
-
   <!-- HYPERBOLIC {4,5}: squares in Poincaré disc -->
   <text x="400" y="16" text-anchor="middle" fill="#27c" font-weight="bold" font-size="12">Hyperbolic {4,5}</text>
   <circle cx="400" cy="85" r="60" fill="#f0f4ff" stroke="currentColor" stroke-width="1.8"/>
