@@ -180,6 +180,39 @@ Two students, Alice and Bob, must each decide whether to exert effort on a joint
 
 Shirking is always individually optimal: 70 > 60 if Bob works, and 50 > 40 if Bob shirks. Yet both working (60, 60) is better for both than both shirking (50, 50). A professor who monitors individual effort can break this trap. So can repeated interaction — if the students must work together again in future, the threat of uncooperative behaviour in later projects can sustain effort today.
 
+## Contributing to a Public Good
+
+The prisoner's dilemma captures the tension between individual incentives and collective welfare in a two-person setting, but many of the most consequential strategic dilemmas involve larger groups. Consider \(n\) players, each deciding simultaneously whether to **contribute** to a **public good** or to **free-ride**. Contributing costs each contributor \(c > 0\), but a contribution generates a total benefit \(b > c\) that is shared equally among all \(n\) players regardless of who contributed. Thus each player who contributes pays \(c\) and every player (contributors and free-riders alike) receives \(b/n\) per contribution.
+
+Start with \(n = 2\). Label the actions C (contribute) and N (not contribute). If both contribute, each gets \(2 \cdot b/2 - c = b - c\). If exactly one contributes, the contributor gets \(b/2 - c\) while the free-rider gets \(b/2\). If neither contributes, each gets 0. Arrange these payoffs in a matrix:
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Contribute</th>
+      <th>Not</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2">Player 1</th>
+      <th>Contribute</th>
+      <td>\(b - c,\; b - c\)</td>
+      <td>\(b/2 - c,\; b/2\)</td>
+    </tr>
+    <tr>
+      <th>Not</th>
+      <td>\(b/2,\; b/2 - c\)</td>
+      <td>\(0,\; 0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+Because \(b/n < c\) whenever \(b < nc\) — and since we assumed \(b > c\) but made no assumption that \(b > nc\) — the private marginal benefit of contributing, \(b/n\), may well fall short of the cost \(c\). In the standard formulation where \(c > b/n\), Not is a **strictly dominant strategy** for every player: regardless of what others do, contributing costs you more than the \(b/n\) share of benefit you personally receive. The unique Nash Equilibrium is therefore (N, N, \(\ldots\), N) — nobody contributes. Yet universal contribution yields each player \(nb/n - c = b - c > 0\), which Pareto-dominates the equilibrium payoff of 0. This is the \(n\)-person prisoner's dilemma.
+
+The public-good game differs from the **Volunteer's Dilemma** studied later in Chapter 10. In the Volunteer's Dilemma, the good is binary — either someone volunteers and the good is provided, or no one does and it is not — and a single volunteer suffices. Here, contributions are cumulative: each additional contributor increases the total benefit. This distinction matters for real-world applications. Climate-treaty contributions, open-source software development, and neighbourhood upkeep all have public-good structures where each incremental contribution helps, even if the individually rational choice is to free-ride. Designing institutions that change the payoffs — taxes, subsidies, peer monitoring, or linking the game to future interactions — is central to public economics precisely because the equilibrium of the unmodified game is so bleak (see Osborne, Problem 33.1).
+
 ## Battle of the Sexes
 
 Not all strategic games are prisoners' dilemmas. **Battle of the Sexes** (BoS) is a **coordination game** — players prefer to coordinate their actions rather than each pursuing their own preference independently. Barb prefers Ballet; Sam prefers Soccer. But both would rather attend the wrong event together than their preferred event alone. They have forgotten to coordinate before parting, and cell phones have not yet been invented.
@@ -337,6 +370,62 @@ One approach is to check every action profile and rule out those where some play
 <strong>Stag Hunt with many players.</strong> Consider the Stag Hunt with \(n\) hunters. There are exactly two Nash Equilibria: everyone hunts Stag, or everyone hunts Hare. Under the all-Stag profile, each hunter receives the highest possible payoff and no one can improve by switching to Hare (which would leave them with nothing). Under the all-Hare profile, any hunter who deviates to Stag gets nothing (since no one else cooperates) — not an improvement. No other profile is a NE: in any profile with at least one Stag-hunter and at least one Hare-hunter, the Stag-hunter can profitably switch to Hare.
 
 <strong>Guessing two-thirds of the average.</strong> In the game introduced in Lecture 1 — choose an integer from 1 to 100, win if you're closest to two-thirds of the average — rational reasoning leads to a unique Nash Equilibrium. With two players, the action "1" weakly dominates all others: regardless of the opponent's choice, choosing 1 wins or ties but never strictly loses. With three players, the unique NE can be found by iteratively eliminating weakly dominated strategies, converging to all players choosing 1. We analyze this formally using best response functions in the next chapter.
+
+## Selfish and Altruistic Social Behaviour
+
+Up to now we have assumed that each player cares only about her own material payoff. But what if players also care — positively or negatively — about what happens to others? Modifying preferences in this way can dramatically change the strategic landscape and, in particular, can transform the set of Nash Equilibria.
+
+The simplest formalization proceeds as follows. Suppose two players face a game with material payoff functions \(w_1\) and \(w_2\). Instead of maximizing \(w_i\) directly, player \(i\) maximizes a **modified utility**:
+
+\[
+u_i = w_i + \alpha_i \, w_j
+\]
+
+where \(\alpha_i\) is a parameter capturing player \(i\)'s attitude toward the other. When \(\alpha_i > 0\), the player is **altruistic** — she places positive weight on the other's material well-being. When \(\alpha_i < 0\), the player is **spiteful** — she derives disutility from the other's success.
+
+Consider the Prisoner's Dilemma with the familiar material payoffs: (Quiet, Quiet) gives each 2, (Fink, Quiet) gives the fink 3 and the other 0, and (Fink, Fink) gives each 1. Under standard selfish preferences (\(\alpha = 0\)), Fink is strictly dominant and the unique NE is (Fink, Fink). Now suppose both players are altruistic with common parameter \(\alpha > 0\). Player 1's modified payoff from (Q, Q) is \(2 + 2\alpha\), from (F, Q) is \(3 + 0\alpha = 3\), from (Q, F) is \(0 + 3\alpha\), and from (F, F) is \(1 + \alpha\). Player 1 prefers Q to F when the other plays Q if \(2 + 2\alpha > 3\), i.e., \(\alpha > 1/2\). She prefers Q to F when the other plays F if \(0 + 3\alpha > 1 + \alpha\), i.e., \(\alpha > 1/2\). So whenever \(\alpha > 1/2\), Quiet becomes a strictly dominant strategy, and the unique NE flips to (Quiet, Quiet). Altruism strong enough to outweigh the temptation to defect restores cooperation.
+
+Conversely, introducing spite can destroy cooperation even in games where it would otherwise emerge. In a coordination game like the Stag Hunt, where (Stag, Stag) is an equilibrium under selfish preferences, sufficiently negative \(\alpha\) can make each player prefer the outcome where the other fails, undermining the incentive to coordinate on the efficient outcome.
+
+The broader lesson is that **preferences are not fixed features of the environment — they are modeling choices**, and the Nash Equilibrium concept adapts seamlessly to richer preference specifications. Social norms, cultural values, and institutional design can all be understood as mechanisms that shift \(\alpha\), changing the equilibrium of the underlying game without changing the rules. A society that cultivates reciprocity effectively raises \(\alpha\), making cooperative equilibria sustainable in situations that would otherwise be prisoners' dilemmas. This perspective connects game theory to the economics of institutions and the psychology of prosocial behavior (see Osborne, Problem 27.2).
+
+## Equilibrium in a Single Population
+
+In the strategic games we have studied so far, each player occupies a distinct role — Suspect 1 versus Suspect 2, Firm versus Union, Player 1 versus Player 2. But many real strategic interactions involve anonymous participants drawn from the same pool. Drivers on a highway choose whether to speed or obey the limit; pedestrians decide whether to walk on the left or the right; animals compete for food using aggressive or passive strategies. In these settings it is natural to model the interaction as a **symmetric game** in which a single large population of identical players is randomly matched in pairs.
+
+A **symmetric strategic game** is one where every player has the same action set and the payoff depends only on the actions chosen, not on which player chose which action. Formally, if \(u(a, a')\) is the payoff to a player choosing action \(a\) when the opponent chooses \(a'\), symmetry requires that if we swapped labels, payoffs would be the same function of actions. A **symmetric Nash Equilibrium** is an action \(a^*\) such that \(a^*\) is a best response to itself:
+
+\[
+u(a^*, a^*) \geq u(a, a^*) \quad \text{for all actions } a.
+\]
+
+This captures a **population equilibrium**: if everyone in the population plays \(a^*\), no individual drawn at random can do better by deviating. The concept is closely related to the idea of an **evolutionarily stable strategy** (ESS) from biology — an ESS is a symmetric NE with an additional stability condition ensuring that small groups of mutants cannot invade.
+
+The canonical example is the **Hawk-Dove game**. Two animals contest a resource of value \(v\). Each chooses Hawk (fight) or Dove (yield). If both play Dove, they share the resource: each gets \(v/2\). If one plays Hawk and the other Dove, the Hawk takes the entire resource and the Dove gets 0. If both play Hawk, they fight; each gets \((v - c)/2\), where \(c > 0\) is the cost of fighting. When \(c > v\) (fighting is very costly), the payoff matrix is:
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Hawk</th>
+      <th>Dove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hawk</th>
+      <td>\(\frac{v-c}{2},\; \frac{v-c}{2}\)</td>
+      <td>\(v,\; 0\)</td>
+    </tr>
+    <tr>
+      <th>Dove</th>
+      <td>\(0,\; v\)</td>
+      <td>\(\frac{v}{2},\; \frac{v}{2}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+Neither (Hawk, Hawk) nor (Dove, Dove) is a symmetric NE when \(c > v\). Playing Hawk against a Hawk-playing population yields \((v-c)/2 < 0\), so a Dove mutant would invade. Playing Dove against a Dove-playing population yields \(v/2\), but a Hawk mutant would get \(v > v/2\), so Dove is not stable either. The symmetric equilibrium must be in **mixed strategies**: each animal plays Hawk with probability \(p^* = v/c\). In a population interpretation, this means a fraction \(v/c\) of the population adopts the Hawk strategy and the rest play Dove. This mixed equilibrium is the unique symmetric NE and, when supplemented with the ESS invasion criterion, is evolutionarily stable (see Osborne, Problem 52.2 and Section 2.10).
 
 ---
 
@@ -883,6 +972,16 @@ Another important extension replaces the deterministic vote rule with <strong>pr
 
 The starkest departure from reality in Hotelling's model is its assumption that candidates are purely office-motivated — they care only about winning, not about what policy gets implemented. A richer model would give each candidate an intrinsic preference over policy and allow them to trade off ideological purity against electoral success. Such models typically predict incomplete convergence: candidates differentiate their platforms enough to satisfy their partisan bases while still moving toward the centre to pick up swing voters. This is more consistent with observed patterns in most liberal democracies.
 
+## Competition in Product Characteristics
+
+The Hotelling spatial model is not confined to politics. Its earliest and most natural application is to **firms choosing product characteristics**. Imagine a street one mile long, with consumers uniformly distributed along it. Each consumer wants to buy exactly one unit of a product, and her ideal product corresponds to her location on the street. Two firms simultaneously choose where on the interval \([0, 1]\) to locate. Each consumer buys from whichever firm is closer (splitting evenly if equidistant), and each firm wants to maximize its market share.
+
+The strategic logic is identical to the political competition model. If Firm 1 locates at \(x_1\) and Firm 2 at \(x_2 > x_1\), then all consumers to the left of the midpoint \((x_1 + x_2)/2\) buy from Firm 1 and all those to the right buy from Firm 2. Each firm can increase its share by moving toward the other, capturing additional consumers on the far side while losing none — because any consumer between the two firms who was already closest to you remains closest after you move inward. By exactly the same median-voter reasoning as in the political model, the unique Nash Equilibrium has both firms locating at the centre: \(x_1^* = x_2^* = 1/2\). This is the principle of **minimum differentiation** — competitive pressure drives firms to offer virtually identical products.
+
+The prediction is strikingly visible in everyday life. Fast-food restaurants cluster at highway exits. Gas stations sit on opposite corners of the same intersection. Major television networks schedule near-identical programming in the same time slots. Cereal manufacturers crowd the sweet-and-crunchy segment of product space, leaving unusual flavour profiles underrepresented. In each case, firms could serve consumers better by differentiating, but the competitive incentive to steal market share by moving toward the rival dominates.
+
+An important caveat arises when firms compete on **price** as well as location. D'Aspremont, Gabszewicz, and Thisse (1979) showed that if firms first choose locations and then compete in prices, the minimum-differentiation result can reverse: firms **maximally differentiate**, locating at opposite ends of the line. The intuition is that proximity triggers fierce price competition that erodes profits, so firms spread apart to soften the price war. The contrast between the pure-location model (minimum differentiation) and the location-then-price model (maximum differentiation) illustrates a fundamental theme in industrial organization: the relationship between product positioning and the intensity of competition depends critically on which dimensions of strategy are in play (see Osborne, Problem 76.1).
+
 ## Real-World Applications and Limitations
 
 Despite its simplicity, Hotelling's model has been remarkably influential in shaping how political scientists and economists think about party competition. It predicts that competitive pressure should push parties toward the centre — a tendency observable in many two-party systems, where both major parties often appear to adopt surprisingly similar positions on many issues.
@@ -1011,6 +1110,16 @@ A <strong>war of attrition</strong> is a dynamic game in which two or more playe
 The war of attrition appears in biology (competing animals waiting each other out for a resource), industrial organization (firms burning money in a declining market, each hoping the rival exits first), and patent races (firms investing in R&D hoping the competitor stops first). It also models political standoffs — budget negotiations, trade disputes, and military standoffs all have war-of-attrition structures.
 
 In the symmetric Nash Equilibrium of the two-player war of attrition, each player randomizes their concession time according to an exponential distribution. The key result is that the expected total waiting cost equals the value of the prize — all the surplus is dissipated in waiting. This is directly analogous to the all-pay auction, in which every bidder pays their bid regardless of outcome and equilibrium total payments equal the prize value. Both games illustrate the principle that competition for a fixed prize can consume the entire value of that prize through the costs of competing.
+
+## The Third-Price Auction
+
+The second-price (Vickrey) auction has a beautifully clean dominant-strategy property: every bidder optimally bids her true valuation, regardless of what others do. One might wonder whether this elegant property extends to other auction formats in which the winner pays less than her own bid. The **third-price auction** — in which the highest bidder wins but pays the third-highest bid — shows that it does not.
+
+Suppose there are \(n \geq 3\) bidders with valuations \(v_1 > v_2 > \cdots > v_n > 0\). Each bidder submits a sealed bid; the highest bidder wins the object and pays the third-highest bid. First, observe that bidding one's true valuation is **not** a dominant strategy. Consider bidder 2 with valuation \(v_2\). If bidder 1 bids \(v_1\) and bidder 3 bids \(v_3\), then by bidding \(v_2\), bidder 2 loses (since \(v_2 < v_1\)) and gets payoff 0. But if bidder 2 bids above \(v_1\), she wins and pays \(v_3\), earning a positive surplus \(v_2 - v_3 > 0\). So overbidding is profitable — truth-telling is not dominant.
+
+We can construct a Nash Equilibrium as follows. Let bidder 1 bid \(v_1\), let bidder 2 bid any amount \(b_2 \geq v_1\) (for instance, \(b_2 = v_1\)), and let every other bidder \(i \geq 3\) bid \(v_i\). In this profile, bidder 2 wins (or ties with bidder 1) and pays the third-highest bid, which is \(v_3\). Bidder 2's payoff is \(v_2 - v_3 > 0\). No bidder can profitably deviate: bidder 1 could win by outbidding bidder 2, but would still pay \(v_3\), earning \(v_1 - v_3\) — yet this requires bidding higher than \(b_2\), and since bidder 2 may bid arbitrarily high, the equilibrium is sustained. Bidders \(i \geq 3\) cannot win without bidding above \(v_1\), and winning at a price of \(v_3\) (or higher) when your valuation is at most \(v_3\) yields non-positive surplus.
+
+The lesson for **mechanism design** is sobering. The second-price auction's dominant-strategy incentive compatibility is a special and fragile property. Moving to a third-price format — which might seem like a minor tweak — destroys truthful bidding, introduces overbidding, and generates equilibria where the "wrong" bidder wins the object. Auction designers cannot casually assume that any "pay less than your bid" format will inherit the Vickrey auction's virtues (see Osborne, Problem 88.1).
 
 ---
 
@@ -1417,6 +1526,22 @@ The practical procedure for finding all MSNE of a finite game proceeds in stages
 
 The key discipline is to remember that a player's equilibrium mix is determined by the condition that it keeps the <strong>other</strong> player indifferent — not by any optimality condition on the mixer's own payoff. Once you internalize this, the computation becomes routine.
 
+## The Interpretation of Mixed Strategy Equilibrium
+
+Mixed strategy Nash equilibria raise a deep conceptual question: do people actually randomize? The mathematical apparatus tells us that in games like Matching Pennies or Battle of the Sexes, equilibrium requires players to mix over their actions with specific probabilities. But what does this mean in practice? There are three leading interpretations, each illuminating a different aspect of strategic uncertainty.
+
+**Interpretation 1: Deliberate randomization.** In some settings, players genuinely benefit from being unpredictable. A poker player who always bluffs is easily exploited; one who never bluffs leaves money on the table. By mixing — sometimes bluffing, sometimes not — the player prevents opponents from exploiting any detectable pattern. Similarly, a soccer player taking a penalty kick should not always aim left, because the goalkeeper would anticipate this. Laboratory evidence from penalty kicks, tennis serves, and auditing games confirms that professionals' choice frequencies closely match MSNE predictions. In these competitive zero-sum-like environments, deliberate randomization is both plausible and empirically supported.
+
+**Interpretation 2: Population frequencies.** Rather than thinking of a single player randomizing, we can interpret the MSNE probabilities as describing the **fraction of a large population** that plays each pure strategy. If two-thirds of a population plays action A and one-third plays action B, and individuals are randomly matched, then from any one player's perspective, the opponent's action is uncertain in exactly the way a mixed strategy describes. Under this interpretation, every individual plays a pure strategy — there is no coin-flipping — but the aggregate distribution of behavior in the population matches the MSNE mixing probabilities. This interpretation is especially natural in biological and evolutionary applications, where "strategies" are inherited traits rather than conscious choices.
+
+**Interpretation 3: Harsanyi's purification theorem.** The most profound interpretation was proposed by John Harsanyi in 1973. Suppose that each player's payoffs are not known exactly by the other players. Instead, each player \(i\) has a small private **perturbation** \(\epsilon_i\) to her payoffs — perhaps player \(i\) slightly prefers one action over another for idiosyncratic reasons unknown to opponents. Formally, we model this as a Bayesian game in which each player observes her own perturbation but not the other's, and the perturbations are drawn from a continuous distribution with small support.
+
+Harsanyi showed that as the perturbations shrink to zero, the Bayesian Nash equilibria of the perturbed game converge to the mixed strategy Nash equilibrium of the original (unperturbed) game. The striking implication is that **every player is playing a pure strategy** — each chooses the action that is optimal given her particular realization of the perturbation. But because the perturbations are private information, from an outsider's perspective (or from any one player's perspective regarding the other), behavior appears random. The mixed equilibrium is the **limit of pure-strategy equilibria** in nearby games of incomplete information.
+
+To see this concretely, consider Battle of the Sexes. Barb and Sam normally prefer to coordinate, but suppose each has a small private shock: with some tiny probability, Barb has an unusually strong preference for Ballet that makes her choose Ballet regardless, and similarly Sam may have a shock pushing him to Soccer. Each player, knowing her own shock but not the other's, plays a pure best response. When the shocks are very small, the fraction of realizations in which Barb chooses Ballet (from Sam's perspective) approximates the MSNE mixing probability. As the variance of the shocks shrinks to zero, the equilibrium of the Bayesian game converges exactly to the fully mixed MSNE.
+
+The **purification theorem** resolves much of the philosophical discomfort with mixed strategies. Players need not literally flip coins or consult random-number generators. They simply need to have slight private information — which is essentially always the case in practice — and the "randomness" in the equilibrium arises naturally from the other player's uncertainty about this private information. The mixed equilibrium is best understood not as a prescription to randomize, but as a summary of the strategic uncertainty that persists in equilibrium when players have even slightly imperfect knowledge of each other's exact preferences (see Osborne, Section 4.10).
+
 ---
 
 # Chapter 10: Applications of Mixed Strategies
@@ -1782,6 +1907,30 @@ Note that \(n/(n-1)\) is a decreasing function of \(n\): it starts at 2 when \(n
 Two interpretations of the symmetric MSNE are possible. One interpretation is that each individual genuinely randomizes — flipping an internal coin with bias \(p^<em>\) every time they witness a crime. A perhaps more natural interpretation is that \(p^</em>\) is the <strong>fraction of the population</strong> that would call given their particular personal costs and values. In a large population, some people have low \(c/v\) ratios and almost always call; others have high ratios and almost never do. The equilibrium \(p^*\) describes the average behavior of this population.
 
 Social psychologists have proposed three mechanisms for the bystander effect: <strong>diffusion of responsibility</strong> (each person feels less morally obligated when others are present), <strong>audience inhibition</strong> (fear of embarrassment if it turns out not to be an emergency), and <strong>social influence</strong> (inferring from others' inaction that intervention is unnecessary). Game theory suggests a fourth mechanism — <strong>strategic free-riding</strong> — that operates even when all of these psychological factors are absent. The bystander effect is a prediction of rational equilibrium behavior, and that makes it robust across a wide range of settings and motivations.
+
+## Heterogeneous Witnesses in the Volunteer's Dilemma
+
+The symmetric Volunteer's Dilemma assumes all witnesses face the same cost of calling. But in reality, some witnesses bear higher costs than others — a nurse may find it much easier to provide emergency medical assistance than a bystander with no training, or a person standing next to a phone pays less than someone who would have to run several blocks. How does this **heterogeneity** affect the mixed strategy equilibrium, and which witness is more likely to volunteer?
+
+Consider two witnesses, person 1 with cost \(c_1\) and person 2 with cost \(c_2\), where \(0 < c_1 < c_2 < v\) (both costs are below the value of the public good being provided, and person 1 has the lower cost). In any mixed strategy Nash equilibrium, each person must be indifferent between calling and not calling. Person \(i\) is indifferent when:
+
+\[
+v - c_i = v \cdot p_j
+\]
+
+where \(p_j\) is the probability that the other person calls. This gives:
+
+\[
+p_j = 1 - \frac{c_i}{v}
+\]
+
+So person 2 calls with probability \(p_2 = 1 - c_1/v\) and person 1 calls with probability \(p_1 = 1 - c_2/v\). Since \(c_1 < c_2\), we have \(1 - c_1/v > 1 - c_2/v\), which means \(p_2 > p_1\). The person with the **lower** cost of calling volunteers with **lower** probability in equilibrium.
+
+This result is counterintuitive at first glance — shouldn't the person who finds it cheaper to help be more willing to do so? The resolution lies in the logic of mixed equilibria. Because person 1's cost is low, person 2 knows that person 1 has a strong incentive to call. This makes person 2 more comfortable free-riding, so person 2 calls less often... but wait, that is not what we found. Let us be precise: the equilibrium probability with which person \(i\) calls is determined by the condition that makes the **other** person indifferent. Person 1's low cost means person 2 needs a higher probability of someone else calling to be indifferent — and that higher probability comes from person 2 herself calling more. The algebra confirms: \(p_2 = 1 - c_1/v\) is large precisely because \(c_1\) is small.
+
+For a numerical example, let \(v = 10\), \(c_1 = 2\), \(c_2 = 6\). Then \(p_1 = 1 - 6/10 = 0.4\) and \(p_2 = 1 - 2/10 = 0.8\). The low-cost person calls only 40% of the time, while the high-cost person calls 80% of the time. The probability that nobody calls is \((1 - p_1)(1 - p_2) = 0.6 \times 0.2 = 0.12\), compared to \((1 - p^*)^2\) in the symmetric case. Heterogeneity here actually reduces the chance of the public good going unprovided, because the asymmetry in costs generates asymmetry in equilibrium behavior that is more efficient than symmetric mixing.
+
+The general lesson reinforces a recurring theme: in mixed strategy equilibria, a player's mixing probability is pinned down by the **other** player's indifference condition, not by her own costs. Changes to your own cost affect the other player's equilibrium behavior, not yours. This feature — which often generates surprising comparative statics — is one of the most important conceptual insights from the theory of mixed strategies (see Osborne, Problem 132.2).
 
 ---
 
@@ -2172,6 +2321,39 @@ Crucially, in the Stackelberg SPE, Firm 1 is not playing a best response to Firm
 
 If Firm 1 could freely revise its output after seeing Firm 2's response, the game would collapse to Cournot — the first-stage choice would be irrelevant. The first-mover advantage is generated by <em>credible commitment</em>.
 
+
+## Firm-Union Bargaining
+
+Backward induction finds natural application in labor economics. Consider a simple model of wage negotiation between a **union** and a **firm**. The union moves first, demanding a wage \(w \geq 0\). The firm observes the demand and either **accepts** or **rejects**. If the firm rejects, both parties receive a payoff of 0 (the factory shuts down, no production occurs). If the firm accepts, it hires \(L\) workers at wage \(w\) per worker and produces output \(f(L)\), where \(f\) is an increasing, concave production function. The firm's profit is \(f(L) - wL\) and the union's payoff is \(wL\) (total wages paid to its members).
+
+To find the **subgame perfect equilibrium**, we apply backward induction. At the second stage, the firm accepts the demand \(w\) if and only if \(f(L) - wL \geq 0\), i.e., \(w \leq f(L)/L\). The critical threshold is the **average product of labor**, \(f(L)/L\). Any wage demand at or below this level leaves the firm with non-negative profit, so it accepts. Any demand above it makes the firm prefer shutdown.
+
+The union, anticipating this, chooses the highest wage the firm will accept: \(w^* = f(L)/L\). At this wage, the firm is exactly indifferent between accepting and rejecting, and (by convention, or by the union shading its demand down by an infinitesimal amount) the firm accepts. The SPE outcome is:
+
+\[
+w^* = \frac{f(L)}{L}, \quad \text{firm accepts}, \quad \pi_{\text{firm}} = 0, \quad \pi_{\text{union}} = f(L).
+\]
+
+The union extracts **all the surplus**. This is a direct analogue of the ultimatum game: the proposer (union) captures the entire pie because the responder (firm) is indifferent between accepting and rejecting the most aggressive feasible offer. The result depends critically on the structure of the game — the union has all the bargaining power because it moves first and the firm has no opportunity to make a counteroffer.
+
+In practice, of course, bargaining rarely gives one side everything. Introducing **counteroffers** — the firm can reject and propose an alternative wage, then the union can accept or reject, and so on — changes the game fundamentally. As we will see in the Rubinstein bargaining model in the next chapter, the division of surplus in a counteroffer game depends on the players' relative patience (discount factors). The more patient party captures a larger share. The firm-union model with a single take-it-or-leave-it offer is the limiting case where the proposer is infinitely patient relative to the responder (see Osborne, Problem 177.1).
+
+## Sequential Bertrand Duopoly
+
+In Chapter 12 we saw how moving from simultaneous to sequential quantity competition (Cournot to Stackelberg) gave the first mover a strategic advantage. Does the same logic apply to **price competition**? The answer, perhaps surprisingly, is no.
+
+Consider two firms producing a homogeneous product with identical constant marginal cost \(c\) and facing a linear demand function \(Q = \alpha - p\) (with \(\alpha > c\)). In the **sequential Bertrand** game, Firm 1 sets a price \(p_1\) first. Firm 2 observes \(p_1\) and then sets \(p_2\). Consumers buy from the cheapest firm (splitting equally if prices are tied).
+
+We solve by backward induction. **Firm 2's best response** given \(p_1\):
+- If \(p_1 > c\): Firm 2 undercuts slightly, setting \(p_2 = p_1 - \epsilon\) for infinitesimally small \(\epsilon > 0\), capturing the entire market at a price above cost. Firm 2's profit is approximately \((p_1 - c)(\alpha - p_1) > 0\).
+- If \(p_1 = c\): Firm 2 sets \(p_2 = c\) (or any \(p_2 \geq c\)), earning zero profit either way.
+- If \(p_1 < c\): Firm 2 sets \(p_2 = c\) (or above), conceding the market to Firm 1 who is selling below cost.
+
+**Firm 1's problem**: Firm 1 anticipates that any price \(p_1 > c\) will be undercut, giving Firm 1 zero sales and zero profit. Setting \(p_1 < c\) yields negative profit. Setting \(p_1 = c\) yields zero profit. Therefore Firm 1's best strategy is \(p_1 = c\), and Firm 2 responds with \(p_2 = c\). The **subgame perfect equilibrium** is \((p_1^*, p_2^*) = (c, c)\) — the same outcome as the simultaneous Bertrand equilibrium. Sequentiality provides **no first-mover advantage**.
+
+The contrast with the Cournot-to-Stackelberg transition is instructive. In quantity competition, quantities are **strategic substitutes**: when Firm 1 increases output, Firm 2's best response is to decrease output. The first mover exploits this by committing to a large quantity, knowing the follower will accommodate by producing less. In price competition, prices are **strategic complements**: when Firm 1 raises its price, Firm 2's best response is to raise its price too (or in the homogeneous-good case, to undercut by just enough). The follower does not accommodate the leader — it exploits any price above cost by undercutting. Commitment to a high price is not valuable because it invites undercutting rather than matching.
+
+This result underscores a general principle in sequential games: **first-mover advantage depends on the nature of strategic interaction**, not merely on the order of moves. When the follower's best response is to reduce its own action (strategic substitutes), the leader benefits from moving first. When the follower's best response is to match or slightly undercut (strategic complements), sequentiality confers no advantage — and may even be a disadvantage if the leader's choice is publicly observed before it can be revised (see Osborne, Problem 192.1).
 
 ---
 
