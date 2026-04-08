@@ -158,8 +158,14 @@ body {
 /* === Homepage === */
 .content > article > h1 { font-size: 2rem; color: var(--heading); margin-bottom: 0.5rem; }
 .content > article > h2 { font-size: 1.3rem; color: var(--heading); margin-top: 1.5rem; margin-bottom: 0.5rem; }
-.content > article a { color: var(--link); text-decoration: none; }
-.content > article a:hover { color: var(--link-hover); text-decoration: underline; }
+.content > article a:not(.error-action-primary):not(.error-action-secondary) {
+  color: var(--link);
+  text-decoration: none;
+}
+.content > article a:not(.error-action-primary):not(.error-action-secondary):hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
 .content > article > p { margin-bottom: 1rem; }
 .content > article > ul { padding-left: 1.5rem; margin-bottom: 1rem; }
 
@@ -214,19 +220,29 @@ body {
   border-color: var(--link);
   color: #fff;
 }
-.error-action-primary:hover {
+.error-action-primary:hover,
+.error-action-primary:visited,
+.error-action-primary:focus-visible {
   background: var(--link-hover);
   border-color: var(--link-hover);
   color: #fff;
+}
+.error-action-primary:hover,
+.error-action-primary:focus-visible {
   transform: translateY(-1px);
 }
 .error-action-secondary {
   background: var(--bg-card);
   color: var(--heading);
 }
-.error-action-secondary:hover {
+.error-action-secondary:hover,
+.error-action-secondary:visited,
+.error-action-secondary:focus-visible {
   border-color: var(--link);
   color: var(--link);
+}
+.error-action-secondary:hover,
+.error-action-secondary:focus-visible {
   transform: translateY(-1px);
 }
 
