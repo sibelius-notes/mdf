@@ -23,6 +23,7 @@ subjects = ["BIOL", "CHEM", "EARTH", "PHYS", "SCI"]
 
 [pure_applied_sciences]
 name = "Pure & Applied Sciences"
+nav_name = "Pure & Applied Sci."
 order = 3
 # Official UW Pure & Applied Sciences list (beyond Pure Sciences)
 # Plus related Health/Science subjects not on the official list

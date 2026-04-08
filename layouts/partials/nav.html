@@ -57,7 +57,7 @@
       {{ $divPath := printf "/categories/%s/" $div.key }}
     <li>
       <a href="{{ $divPath }}"{{ if eq $currentPath $divPath }} class="active"{{ end }}>
-        {{ $div.name }} <span class="nav-count">({{ $subjCount }})</span>
+        {{ with $div.nav_name }}{{ . }}{{ else }}{{ $div.name }}{{ end }} <span class="nav-count">({{ $subjCount }})</span>
       </a>
     </li>
       {{ end }}

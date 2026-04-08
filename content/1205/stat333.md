@@ -1,19 +1,9 @@
 ---
 title: "STAT 333: Stochastic Processes 1"
-prof: "Steve Drakich"
+prof: "Steve Drekic"
 subjects: "STAT"
 ---
 
-# Introduction
-
-
-The four chapters of the course are:
-1. **Chapter 1** — Review of elementary probability theory.
-2. **Chapter 2** — Conditional distributions and conditional expectations.
-3. **Chapter 3** — Discrete-time Markov chains (the largest chapter).
-4. **Chapter 4** — The exponential distribution and the Poisson process.
-
----
 
 # Chapter 1: Review of Elementary Probability
 
