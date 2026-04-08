@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article>
+  {{ $divKey := .Params.division }}
+  {{ $div := index .Site.Data.divisions $divKey }}
+  <h1>{{ $div.name }}</h1>
+  {{/* Build subject grid — each card links to the subject's taxonomy page */}}
+  {{ $taxMap := dict }}
+  {{ range .Site.Taxonomies.subjects.ByCount }}
+    {{ $taxMap = merge $taxMap (dict (.Page.Title) .) }}
+  {{ end }}
+  <div class="course-grid">
+  {{ range $div.subjects }}
+    {{ $code := . | upper }}
+    {{ with index $taxMap $code }}
+      {{ $name := $code }}
+      {{ with index $.Site.Data.subjects $code }}
+        {{ $name = .name }}
+      {{ end }}
+    <a href="{{ .Page.RelPermalink }}" class="course-card">
+      <span class="course-code">{{ $name }}</span>
+      <span class="course-name">{{ $code }}</span>
+      <span class="course-words">{{ .Count }} {{ if eq .Count 1 }}course{{ else }}courses{{ end }}</span>
+    </a>
+    {{ end }}
+  {{ end }}
+  </div>
+</article>
+{{ end }}

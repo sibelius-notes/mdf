@@ -1,0 +1,40 @@
+# Academic divisions for sidebar grouping
+# Based on UWaterloo CS breadth/depth requirements + custom Maths division
+# See also: subject-changes.md for renamed subject codes
+
+[humanities]
+name = "Humanities"
+order = 1
+subjects = [
+  "ARTS", "CI", "CLAS", "EASIA", "ENGL", "FINE", "HIST",
+  "MEDVL", "MUSIC", "PHIL", "RS", "VCULT",
+]
+
+[pure_sciences]
+name = "Pure Sciences"
+order = 2
+subjects = ["BIOL", "CHEM", "EARTH", "PHYS", "SCI"]
+
+[pure_applied_sciences]
+name = "Pure & Applied Sciences"
+order = 3
+subjects = ["AHS", "ENVS", "ERS", "GERON", "KIN", "PHARM"]
+
+[social_sciences]
+name = "Social Sciences"
+order = 4
+subjects = [
+  "AFM", "ANTH", "ARBUS", "BET", "ECON", "ENBUS", "GEOG",
+  "GSJ", "HRM", "INDG", "LS", "MGMT", "MSCI", "PACS", "PSCI",
+  "PSYCH", "REC", "SDS", "SMF", "SRF", "SOC", "SOCWK", "STV",
+]
+
+[mathematics]
+name = "Mathematics"
+order = 5
+subjects = ["ACTSC", "AMATH", "CO", "CS", "MATH", "PMATH", "STAT"]
+
+[others]
+name = "Others"
+order = 6
+subjects = ["CIVE", "INTEG", "NE", "SYDE"]

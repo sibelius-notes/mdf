@@ -7,11 +7,10 @@
   </div>
   <div class="nav-toggle">
     <button class="nav-toggle-btn active" data-target="terms">By Term</button>
-    <button class="nav-toggle-btn" data-target="subjects">By Subject</button>
+    <button class="nav-toggle-btn" data-target="categories">By Category</button>
   </div>
   <ul class="nav-list" id="nav-terms">
     {{ $otherTermsGroupingThreshold := default 10 .Site.Params.other_terms_grouping_threshold }}
-    {{ $otherSubjectsGroupingThreshold := default 10 .Site.Params.other_subjects_grouping_threshold }}
     {{ $currentSection := "" }}
     {{ with .FirstSection }}{{ with .File }}{{ $currentSection = .ContentBaseName }}{{ end }}{{ end }}
     {{ $smallTermCount := 0 }}
@@ -24,7 +23,7 @@
       </a>
     </li>
       {{ else }}
-        {{ $smallTermCount = add $smallTermCount (len .Pages) }}
+        {{ $smallTermCount = add $smallTermCount 1 }}
         {{ if and .File (eq .File.ContentBaseName $currentSection) }}{{ $smallTermActive = true }}{{ end }}
       {{ end }}
     {{ end }}
@@ -37,32 +36,31 @@
     {{ end }}
   </ul>
   {{ $currentPath := .RelPermalink }}
-  <ul class="nav-list" id="nav-subjects" style="display:none">
-    {{ $smallSubjCount := 0 }}
-    {{ $smallSubjActive := eq $currentPath "/subjects/" }}
+  <ul class="nav-list" id="nav-categories" style="display:none">
+    {{/* Build a map of subject code (uppercase) → taxonomy entry */}}
+    {{ $taxMap := dict }}
     {{ range .Site.Taxonomies.subjects.ByCount }}
-      {{ if gt .Count $otherSubjectsGroupingThreshold }}
-    <li>
-      {{ $code := .Page.Title | upper }}
-      {{ $label := $code }}
-      {{ with index $.Site.Data.subjects $code }}
-        {{ if .short }}{{ $label = .short }}{{ else }}{{ $label = .name }}{{ end }}
-      {{ end }}
-      <a href="{{ .Page.RelPermalink }}"{{ if eq $currentPath .Page.RelPermalink }} class="active"{{ end }}>
-        {{ $label }} <span class="nav-count">({{ .Count }})</span>
-      </a>
-    </li>
-      {{ else }}
-        {{ $smallSubjCount = add $smallSubjCount .Count }}
-        {{ if eq $currentPath .Page.RelPermalink }}{{ $smallSubjActive = true }}{{ end }}
-      {{ end }}
+      {{ $taxMap = merge $taxMap (dict (.Page.Title) .) }}
     {{ end }}
-    {{ if gt $smallSubjCount 0 }}
+    {{/* Render each division as a simple nav link */}}
+    {{ $divSlice := slice }}
+    {{ range $k, $v := .Site.Data.divisions }}
+      {{ $divSlice = $divSlice | append (merge $v (dict "key" $k)) }}
+    {{ end }}
+    {{ range sort $divSlice "order" }}
+      {{ $div := . }}
+      {{ $subjCount := 0 }}
+      {{ range $div.subjects }}
+        {{ if index $taxMap (. | upper) }}{{ $subjCount = add $subjCount 1 }}{{ end }}
+      {{ end }}
+      {{ if gt $subjCount 0 }}
+      {{ $divPath := printf "/categories/%s/" $div.key }}
     <li>
-      <a href="/subjects/" class="nav-grouped{{ if $smallSubjActive }} active{{ end }}">
-        Other Subjects <span class="nav-count">({{ $smallSubjCount }})</span>
+      <a href="{{ $divPath }}"{{ if eq $currentPath $divPath }} class="active"{{ end }}>
+        {{ $div.name }} <span class="nav-count">({{ $subjCount }})</span>
       </a>
     </li>
+      {{ end }}
     {{ end }}
   </ul>
   <div class="sidebar-search">
@@ -83,19 +81,18 @@
 <script>
 (function() {
   var mode = localStorage.getItem('navMode') || 'terms';
-  // Auto-detect subject pages
   var p = window.location.pathname;
-  if (p.indexOf('/subjects/') === 0) mode = 'subjects';
+  if (p.indexOf('/categories/') === 0 || p.indexOf('/subjects/') === 0) mode = 'categories';
   if (p === '/terms/' || p === '/terms') mode = 'terms';
   var btns = document.querySelectorAll('.nav-toggle-btn');
   var termList = document.getElementById('nav-terms');
-  var subjectList = document.getElementById('nav-subjects');
+  var catList = document.getElementById('nav-categories');
 
   function setMode(m) {
     mode = m;
     localStorage.setItem('navMode', m);
     termList.style.display = m === 'terms' ? '' : 'none';
-    subjectList.style.display = m === 'subjects' ? '' : 'none';
+    catList.style.display = m === 'categories' ? '' : 'none';
     btns.forEach(function(b) {
       b.classList.toggle('active', b.dataset.target === m);
     });

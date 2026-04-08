@@ -146,6 +146,12 @@ body {
   font-weight: 600;
 }
 
+/* Category card subject name */
+.course-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 /* === Main Content === */
 .content {
   flex: 1;
