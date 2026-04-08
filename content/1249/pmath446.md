@@ -4,7 +4,7 @@ prof: "Ben Webster"
 subjects: "PMATH"
 ---
 
-*These notes synthesize material from multiple sources: Ben Webster's PMATH 446/646 lectures at the University of Waterloo, David Eisenbud's* Commutative Algebra: with a View Toward Algebraic Geometry *(Springer GTM 150, the primary textbook), Mel Hochster's commutative algebra lecture notes (University of Michigan), Pete Clark's commutative algebra notes (University of Georgia), and MIT OpenCourseWare 18.705. All enrichment attempts to preserve the spirit of Webster's course.*
+*These notes synthesize material from multiple sources: David Eisenbud's* Commutative Algebra: with a View Toward Algebraic Geometry *(Springer GTM 150, the primary textbook), Mel Hochster's commutative algebra lecture notes (University of Michigan), Pete Clark's commutative algebra notes (University of Georgia), and MIT OpenCourseWare 18.705.*
 
 ---
 

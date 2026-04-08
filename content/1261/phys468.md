@@ -8,7 +8,7 @@ subjects: "PHYS"
 
 **Primary textbook** — Majidy, S., Wilson, E., & Laflamme, R. (2024). *Building Quantum Computers: A Practical Introduction*. Cambridge University Press. (QA76.889 M35, Davis Library.)
 **Supplementary texts** — Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information*, 10th anniversary ed. Cambridge University Press; Griffiths, D. J., & Schroeter, D. F. (2018). *Introduction to Quantum Mechanics*, 3rd ed. Cambridge University Press.
-**Online resources** — Qiskit textbook (qiskit.org/learn); IBM Quantum Experience; IQC Lecture Notes Series (iqc.uwaterloo.ca); arXiv quant-ph.
+**Online resources** — Qiskit textbook (qiskit.org/learn); IBM Quantum Experience; arXiv quant-ph.
 
 ---
 

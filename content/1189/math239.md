@@ -5,7 +5,7 @@ subjects: "MATH"
 
 # MATH 239 -- Introduction to Combinatorics
 
-These course notes follow the official text for MATH 239, Fall 2018, from the Department of Combinatorics and Optimization at the University of Waterloo. The material divides into two major parts: **Enumeration** (formal power series, compositions, binary strings, recurrences) and **Graph Theory** (structure, planarity, matchings). Every numbered definition, theorem, lemma, proposition, and corollary from the course notes is recorded below.
+These notes cover two major parts: **Enumeration** (formal power series, compositions, binary strings, recurrences) and **Graph Theory** (structure, planarity, matchings). Every numbered definition, theorem, lemma, proposition, and corollary is recorded below.
 
 ---
 

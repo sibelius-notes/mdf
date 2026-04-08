@@ -68,7 +68,7 @@ QRM treats risk management as a quantitative science using the language of proba
 
 Several challenges define the QRM programme. **Extremes matter**: models must address unexpected, abnormal, or extreme outcomes. As Lord Turner (2009) wrote, price movements during the crisis were often of a size whose probability was calculated by models to be "almost infinitesimally small," suggesting that models systematically underestimated fat-tail events. **Interdependence and concentration of risks**: risk is multivariate in nature; we care about aggregate risk depending on high-dimensional vectors of risk factors, and are especially concerned with dependence between extremes when many risk factors move against us simultaneously. **The problem of scale**: detailed multivariate models for all risk factors are infeasible; dimension reduction is essential. **Interdisciplinarity**: QRM draws on mathematical finance, statistics, financial econometrics, financial economics, and actuarial mathematics simultaneously.
 
-*Remark:* More details on Sections 2.3 and 3.1 can be found in the "Chapter 1 Supplement" on Learn. For a broader overview of QRM, the lecture by Dr. Paul Embrechts (a leading researcher in the field) is highly recommended.
+*Remark:* For a broader overview of QRM, the lecture by Dr. Paul Embrechts (a leading researcher in the field) is highly recommended.
 
 ---
 

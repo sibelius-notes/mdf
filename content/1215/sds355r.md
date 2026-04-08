@@ -422,4 +422,4 @@ There's nothing more you have to do
 
 ---
 
-*Course content © University of Waterloo and Dr. Jim Perretta. These notes are for personal study use only.*
+

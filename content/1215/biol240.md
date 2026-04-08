@@ -732,4 +732,4 @@ It is also worth noting that Gram staining a pure culture of unknown bacteria is
 
 ---
 
-<em>Notes compiled from lecture transcripts, module HTML content, and course materials for BIOL 240, Spring 2021, University of Waterloo. Textbook: Wessner, Dupont, Charles, Neufeld, Microbiology 3rd ed., Wiley 2020.</em>
+

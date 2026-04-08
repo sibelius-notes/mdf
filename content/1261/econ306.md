@@ -6,8 +6,6 @@ subjects: "ECON"
 
 ## Sources and References
 
-**Primary textbook** — Forand, J.G., *ECON 306 Lecture Notes* (University of Waterloo, Winter 2026). Posted on LEARN.
-
 **Supplementary texts** — Mankiw, N.G., *Macroeconomics*, 10th ed. (Worth, 2019); Abel, Bernanke & Croushore, *Macroeconomics*, 9th ed. (Pearson, 2017); Blanchard, O., *Macroeconomics*, 8th ed. (Pearson, 2020).
 
 **Online resources** — MIT OpenCourseWare 14.02 (Principles of Macroeconomics) and 14.452 (Advanced Macroeconomics); Federal Reserve Bank of St. Louis FRED database; Bank of Canada research notes.

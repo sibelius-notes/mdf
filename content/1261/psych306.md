@@ -6,7 +6,7 @@ subjects: "PSYCH"
 
 ## Sources and References
 
-Primary textbook: Jeremy M. Wolfe et al., *Sensation and Perception*, 7th ed. (Oxford University Press, 2025). ISBN 9780197663844. Chapter coverage follows the Winter 2026 lecture schedule as taught by Dr. Clara Colombatto at the University of Waterloo.
+Primary textbook: Jeremy M. Wolfe et al., *Sensation and Perception*, 7th ed. (Oxford University Press, 2025). ISBN 9780197663844.
 
 ---
 

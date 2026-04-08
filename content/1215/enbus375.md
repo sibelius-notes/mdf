@@ -526,4 +526,4 @@ The question is not whether change is possible, but what forms it will take, who
 
 ---
 
-<em>Course notes compiled from lecture transcripts, slide decks, and documentary materials for ENBUS 375: Fashion, Style & Sustainability, Spring 2021, University of Waterloo. Instructor: Dr. Jennifer Lynes.</em>
+

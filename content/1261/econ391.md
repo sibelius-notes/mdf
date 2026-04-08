@@ -6,8 +6,6 @@ subjects: "ECON"
 
 ## Sources and References
 
-**Primary textbook** — Forand, Jean Guillaume. *ECON 391 Lecture Notes* (course notes, University of Waterloo).
-
 **Supplementary texts** — Varian, Hal R. *Intermediate Microeconomics: A Modern Approach*, 9th ed. Norton, 2014. Nechyba, Thomas J. *Microeconomics: An Intuitive Approach with Calculus*, South-Western, 2011. Perloff, Jeffrey M. *Microeconomics: Theory and Applications with Calculus*, 4th ed. Pearson, 2018. Eaton, Eaton, and Allen, *Microeconomics: Theory with Applications*.
 
 **Online resources** — MIT OCW 14.04 (Intermediate Microeconomic Theory); Andreu Mas-Colell, Michael Whinston, and Jerry Green, *Microeconomic Theory* (MWG), Oxford, 1995 (graduate reference for proofs); Arrow, K.J. and G. Debreu, "Existence of an Equilibrium for a Competitive Economy," *Econometrica*, 1954.

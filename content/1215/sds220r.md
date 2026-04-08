@@ -564,4 +564,4 @@ The course asks: Why is it important to know about changing concepts of childhoo
 
 ---
 
-*Prepared from SDS 220R Spring 2021 lecture materials, University of Waterloo (Renison University College). Course author: Kristina Llewellyn, Associate Professor, Social Development Studies.*
+

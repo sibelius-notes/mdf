@@ -4,7 +4,7 @@ prof: "Stephen New"
 subjects: "PMATH"
 ---
 
-*These notes cover PMATH 321: Non-Euclidean Geometry at the University of Waterloo. The course surveys three geometries — Euclidean, spherical, projective, and hyperbolic — and classifies their isometries. Historical context and worked examples have been added to supplement the lecture material.*
+*These notes are based on [Stephen New's PMATH 321 lecture notes](https://www.math.uwaterloo.ca/~snew/PMATH321/index.html), surveying three geometries — Euclidean, spherical, projective, and hyperbolic — and classifying their isometries. Historical context and worked examples are included throughout.*
 
 ---
 

@@ -6,8 +6,6 @@ subjects: "ECON"
 
 ## Sources and References
 
-**Primary materials** — Li, Anqi. Lecture handouts (self-contained, posted on LEARN).
-
 **Supplementary texts** — Osborne, Martin J. *An Introduction to Game Theory*. Oxford University Press, 2004. Fudenberg, Drew and Jean Tirole. *Game Theory*. MIT Press, 1991 (graduate treatment). Milgrom, Paul. *Putting Auction Theory to Work*. Cambridge University Press, 2004. Roth, Alvin E. and Marilda A. Oliveira Sotomayor. *Two-Sided Matching: A Study in Game-Theoretic Modeling and Analysis*. Cambridge University Press, 1992.
 
 **Online resources** — MIT OCW 14.121 (Microeconomic Theory I); MIT OCW 14.122 (Microeconomic Theory II); Myerson, R.B. "Optimal Auction Design," *Mathematics of Operations Research*, 1981; Vickrey, W. "Counterspeculation, Auctions, and Competitive Sealed Tenders," *Journal of Finance*, 1961; Gale, D. and L. Shapley. "College Admissions and the Stability of Marriage," *American Mathematical Monthly*, 1962.

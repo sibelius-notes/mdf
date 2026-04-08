@@ -169,7 +169,7 @@ Lyell capitalized on the moment by publishing *Geological Evidences of the Antiq
 
 # Modules 3–13: Course Overview
 
-*Only Modules 1–2 are in the zip archive. The following summarizes the course's remaining content from the course outline, with site details from Prof. Park's Unit 3 lecture.*
+*The following summarizes the course's remaining content.*
 
 ## Module 3: Anthropology and Ethnographic Analogy
 

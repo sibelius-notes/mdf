@@ -648,5 +648,5 @@ He is realistic that overcoming these differences will not happen overnight, yet
 ---
 
 <div>
-<strong>Sources and References:</strong> Notes compiled from SOC 204R: Youth and Society, University of Waterloo (Renison University College), Fall 2021. Course author: Nicole Sanderson, Social Development Studies, Renison. Primary textbook: Côté, J. E. (2014). <em>Youth Studies: Fundamental Issues and Debates</em>. Palgrave Macmillan. Supplementary sources include Tilleczek (2011), Côté &amp; Allahar (2006), Arnett (2000; 2004), Lareau (2003), Freire (1970), Taylor &amp; Peter (2011), and additional readings as assigned.
+<strong>Sources and References:</strong> Primary textbook: Côté, J. E. (2014). <em>Youth Studies: Fundamental Issues and Debates</em>. Palgrave Macmillan. Supplementary sources include Tilleczek (2011), Côté &amp; Allahar (2006), Arnett (2000; 2004), Lareau (2003), Freire (1970), Taylor &amp; Peter (2011), and additional readings as assigned.
 </div>

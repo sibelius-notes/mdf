@@ -557,4 +557,4 @@ As Waterloo's population continues to grow, understanding this hidden geological
 
 ---
 
-<em>These notes synthesize lecture content from EARTH 121: Our Earth, University of Waterloo, Online, Spring 2021.</em>
+

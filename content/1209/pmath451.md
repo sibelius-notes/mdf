@@ -4,7 +4,7 @@ prof: "Alexandru Nica"
 subjects: "PMATH"
 ---
 
-These notes follow the Fall 2020 offering of PMath 451/651 (Measure and Integration) at the University of Waterloo, taught by Professor Alexandru Nica. The course develops abstract measure and integration theory from first principles, beginning with algebras of sets and culminating in the Radon-Nikodym theorem and the Fubini-Tonelli theorem on product measures. The "work-out files" Nica distributes are already written in a conversational, proof-driven style, and these notes aim to preserve that spirit while providing a unified reference for the full twenty-lecture arc.
+These notes develop abstract measure and integration theory from first principles, beginning with algebras of sets and culminating in the Radon-Nikodym theorem and the Fubini-Tonelli theorem on product measures.
 
 ---
 

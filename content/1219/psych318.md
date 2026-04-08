@@ -8,7 +8,7 @@ prof: "BJ Rye"
 
 **Primary textbook** — Nelson textbook (for genital development and biological foundations of sex differentiation)
 **Supplementary texts** — Course readings drawn from peer-reviewed journal articles and edited volumes in psychology, sexology, and gender studies
-**Online resources** — University of Waterloo Library electronic course reserves; APA and CPA practice guidelines
+**Online resources** — APA and CPA practice guidelines
 **Assigned readings** — Hunter; Drescher; Muñoz et al.; Schneider et al.; LGBT Concerns Committee; Webb et al.; Nelson; Mazur et al.; Liao; Zucker; Glicksman; Mizock et al.; Carabez et al.; Meier & Harris; De Vries & Cohen-Kettenis; Hegarty et al.; Sánchez & Vilian; Bockting & Coleman; Alford-Harkey & Haffner; Ellis; Cohen & Savin-Williams; Sánchez & Pankey; Eliason & Schope; Savin-Williams; Patterson; Herek; Riggle et al.; Simoni & Walters
 
 ---

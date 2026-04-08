@@ -698,4 +698,4 @@ Several integrative themes cut across the content domains covered in this course
 
 ---
 
-<em>These notes synthesize lectures from PSYCH 211: Developmental Psychology, University of Waterloo, Fall 2020. Additional coverage of research methods, neuroscience, and applied developmental science can be found in the course textbook.</em>
+

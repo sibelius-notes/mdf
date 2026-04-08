@@ -6,8 +6,6 @@ subjects: "ECON"
 
 ## Sources and References
 
-**Primary textbook** — Lecture slides and notes by Derek Stacey (University of Waterloo, Winter 2026), posted on LEARN.
-
 **Supplementary texts** — Pissarides, C.A., *Equilibrium Unemployment Theory*, 2nd ed. (MIT Press, 2000); Mortensen, D.T. & Pissarides, C.A., "Job Creation and Job Destruction in the Theory of Unemployment," *Review of Economic Studies* 61 (1994); Romer, D., *Advanced Macroeconomics*, 4th ed. (McGraw-Hill, 2012), Ch. 10–11.
 
 **Key papers (search-and-matching literature):**

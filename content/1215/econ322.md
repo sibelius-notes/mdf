@@ -1293,4 +1293,4 @@ Compared to the critical value \(F_{0.95}(n_{\text{pu}}-1, n_{\text{pr}}-1) \app
 
 ---
 
-<em>These notes were compiled from 32 lecture and tutorial transcripts for ECON 322: Introduction to Econometrics, Spring 2021, University of Waterloo (Term 1215), and enriched with content from the Chaussé lecture slides (Topic 1–9, Bootstrap, Election) and Stock & Watson textbook chapters 4–7.</em>
+

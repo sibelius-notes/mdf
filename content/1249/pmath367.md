@@ -4,7 +4,7 @@ prof: "Stephen New"
 subjects: "PMATH"
 ---
 
-These notes are based on the Fall 2024 lecture notes by Stephen New at the University of Waterloo, substantially enriched with motivation, examples, and narrative to serve as a self-contained introduction to point-set and elementary algebraic topology. The reader is assumed to have experience with real analysis (metric spaces, continuity, compactness) and basic group theory.
+These notes are based on [Stephen New's PMATH 367 lecture notes](https://www.math.uwaterloo.ca/~snew/PMATH367/index.html), substantially enriched with motivation, examples, and narrative. The reader is assumed to have experience with real analysis (metric spaces, continuity, compactness) and basic group theory.
 
 ---
 

@@ -652,4 +652,4 @@ The French and Canadian political debates around the headscarf and niqab raise d
 
 ---
 
-*Notes compiled from the lectures of Alice Kuzniar, VCULT 100 / FINE 102: World Cinema and Visual Culture, University of Waterloo, Fall 2021 (Term 1219).*
+

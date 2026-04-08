@@ -477,4 +477,4 @@ Statistics Canada's Data portal (formerly CANSIM) provides thousands of macroeco
 
 ---
 
-*These notes synthesize the course outlines and assigned textbook materials from ECON 102 (Introduction to Macroeconomics) at the University of Waterloo, drawing on both the Fall 2025 and Winter 2026 sections. All 13 chapters are covered, from the foundational concepts of GDP measurement and labour markets through the AS-AD model, expenditure multipliers, business-cycle theory, and applied macroeconomic data analysis.*
+

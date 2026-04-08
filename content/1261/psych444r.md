@@ -10,7 +10,7 @@ subjects: "PSYCH"
 
 **Supplementary texts** — Dweck, C. S. (2006). *Mindset: The New Psychology of Success*. Random House. | Seligman, M. E. P. (2011). *Flourish: A Visionary New Understanding of Happiness and Well-being*. Free Press. | Steele, C. M. (2010). *Whistling Vivaldi: How Stereotypes Affect Us and What We Can Do*. W. W. Norton. | Lyubomirsky, S. (2008). *The How of Happiness*. Penguin Press. | McGonigal, K. (2015). *The Upside of Stress*. Avery.
 
-**Online resources** — APA PsycINFO database; published RCT datasets from Open Science Framework (OSF); University of Waterloo course lecture materials (PSYCH 444R, Winter 2026); Stanford Social Psychological Answers to Real-world Questions (SPARQ) practitioner briefs.
+**Online resources** — APA PsycINFO database; published RCT datasets from Open Science Framework (OSF); Stanford Social Psychological Answers to Real-world Questions (SPARQ) practitioner briefs.
 
 ---
 

@@ -978,4 +978,4 @@ Cultural practices around death and mourning vary enormously and serve important
 
 ---
 
-<em>Notes compiled from course materials by Hsiao d'Ailly and Debbie Wang, and from the textbook HDEV (6th ed.) by Spencer A. Rathus. SDS 150R, Spring 2021, Renison University College, University of Waterloo.</em>
+

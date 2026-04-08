@@ -790,4 +790,4 @@ In the duopoly example, complying in every period yields \$2m per period. Cheati
 
 ---
 
-<em>These notes synthesize all lecture transcripts and module pages from ECON 101 (Principles of Microeconomics), Spring 2021, University of Waterloo. All 12 chapters are covered, from the foundational concepts of scarcity and choice through the market structures of perfect competition, monopoly, monopolistic competition, and oligopoly.</em>
+

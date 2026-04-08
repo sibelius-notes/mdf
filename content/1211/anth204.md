@@ -821,4 +821,4 @@ Alexis Dolphin's own research includes work on the **Barqa Landscape Project in 
 
 ---
 
-*These notes synthesize all 26 lectures of ANTH 204: Biological Anthropology, taught by Alexis Dolphin at the University of Waterloo, Winter 2021. The course textbook is Larsen's* Our Origins.
+
