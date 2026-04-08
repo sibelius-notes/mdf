@@ -3,15 +3,35 @@
   {{ $code := .Title | upper }}
   {{ $name := "" }}
   {{ with index .Site.Data.subjects $code }}{{ $name = .name }}{{ end }}
+  {{ $pages := .Pages.ByTitle }}
+  {{ if eq $code "SRF" }}
+    {{ $sorted := slice }}
+    {{ range .Pages }}
+      {{ $sortKey := printf "999999-%s" (.Title | lower) }}
+      {{ $courseIDs := findRE `\d+[A-Za-z]*` .Title 1 }}
+      {{ if gt (len $courseIDs) 0 }}
+        {{ $courseID := index $courseIDs 0 }}
+        {{ $digits := index (findRE `\d+` $courseID 1) 0 }}
+        {{ $suffixMatches := findRE `[A-Za-z]+$` $courseID 1 }}
+        {{ $suffix := "" }}
+        {{ if gt (len $suffixMatches) 0 }}{{ $suffix = lower (index $suffixMatches 0) }}{{ end }}
+        {{ $sortKey = printf "%06d-%s-%s" (int $digits) $suffix (.Title | lower) }}
+      {{ end }}
+      {{ $sorted = $sorted | append (dict "page" . "sortKey" $sortKey) }}
+    {{ end }}
+    {{ $pages = sort $sorted "sortKey" }}
+  {{ end }}
   <h1>{{ $code }}{{ with $name }}: {{ . }}{{ end }}</h1>
   <div class="course-grid">
-  {{ range .Pages.ByTitle }}
-    {{ $study := partialCached "study-stats.html" . .RelPermalink }}
-    <a href="{{ .RelPermalink }}" class="course-card">
-      <span class="course-code">{{ .Title }}</span>
+  {{ range $pages }}
+    {{ $page := . }}
+    {{ if eq $code "SRF" }}{{ $page = .page }}{{ end }}
+    {{ $study := partialCached "study-stats.html" $page $page.RelPermalink }}
+    <a href="{{ $page.RelPermalink }}" class="course-card">
+      <span class="course-code">{{ $page.Title }}</span>
       <span class="course-meta">
-        <span class="course-term-badge">{{ .CurrentSection.Title }}</span>
-        {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+        <span class="course-term-badge">{{ $page.CurrentSection.Title }}</span>
+        {{ with $page.Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
       </span>
       <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short") }}</span>
     </a>
