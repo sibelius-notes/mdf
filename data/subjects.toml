@@ -1,12 +1,19 @@
 # Subject code → full name mapping
 # Used for display in sidebar and subject pages
+#
+# Renamed codes:
+#   RS  → RCS  (Religious Studies → Religion, Culture & Spirituality)
+#   SMF → SRF  (Sexuality, Marriage & Family → Sexualities, Relationships & Families)
+#   MGMT/MSCI → MSE (Management Sciences → Management Science & Engineering)
+#   AHS — discontinued subject code (not in current UW calendar)
 
 [ACTSC]
 name = "Actuarial Science"
 [AFM]
-name = "Accounting & Finance"
+name = "Accounting & Financial Management"
 [AHS]
 name = "Applied Health Sciences"
+note = "Renamed to HEALTH"
 [AMATH]
 name = "Applied Mathematics"
 short = "Applied Math"
@@ -45,13 +52,13 @@ name = "Environment & Business"
 [ENGL]
 name = "English"
 [ENVS]
-name = "Environmental Studies"
+name = "Environment & Sustainability"
 [ERS]
-name = "Environment & Resource Studies"
+name = "Environment, Resources & Sustainability"
 [FINE]
 name = "Fine Arts"
 [GEOG]
-name = "Geography"
+name = "Geography & Environmental Management"
 [GERON]
 name = "Gerontology"
 [GSJ]
@@ -63,7 +70,7 @@ name = "Human Resources Management"
 [INDG]
 name = "Indigenous Studies"
 [INTEG]
-name = "Integrated Studies"
+name = "Knowledge Integration"
 [KIN]
 name = "Kinesiology"
 [LS]
@@ -75,8 +82,12 @@ short = "Math"
 name = "Medieval Studies"
 [MGMT]
 name = "Management Sciences"
+note = "Renamed to MSE"
+[MSE]
+name = "Management Science & Engineering"
 [MSCI]
 name = "Management Sciences"
+note = "Renamed to MSE"
 [MUSIC]
 name = "Music"
 [NE]
@@ -96,21 +107,25 @@ short = "Pure Math"
 name = "Political Science"
 [PSYCH]
 name = "Psychology"
+[RCS]
+name = "Religion, Culture & Spirituality"
 [REC]
 name = "Recreation & Leisure Studies"
 [RS]
 name = "Religious Studies"
+note = "Renamed to RCS"
 [SCI]
 name = "Science"
 [SDS]
 name = "Social Development Studies"
 [SMF]
 name = "Sexuality, Marriage & Family"
-[SRF]
-name = "Sexuality, Relationships & Family"
-short = "Sex, Rel. & Fam"
+note = "Renamed to SRF"
 [SOC]
 name = "Sociology"
+[SRF]
+name = "Sexualities, Relationships & Families"
+short = "Sex, Rel. & Fam"
 [STAT]
 name = "Statistics"
 [STV]

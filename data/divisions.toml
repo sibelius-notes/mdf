@@ -1,40 +1,61 @@
 # Academic divisions for sidebar grouping
-# Based on UWaterloo CS breadth/depth requirements + custom Maths division
-# See also: subject-changes.md for renamed subject codes
+# Based on UW CS breadth/depth requirements:
+# https://cs.uwaterloo.ca/current-undergraduate-students/majors/breadth-and-depth-requirements
+# See also: ../static/subject-changes.md for renamed subject codes
 
 [humanities]
 name = "Humanities"
 order = 1
+# Official UW Humanities list (language courses included for completeness)
 subjects = [
-  "ARTS", "CI", "CLAS", "EASIA", "ENGL", "FINE", "HIST",
-  "MEDVL", "MUSIC", "PHIL", "RS", "VCULT",
+  "ARCH", "ARTS", "BLKST", "CDNST", "CHINA", "CI", "CLAS", "CMW", "COMMST",
+  "CROAT", "DAC", "DUTCH", "EASIA", "ENGL", "FINE", "FR", "GBDA", "GER",
+  "GRK", "HHUM", "HIST", "HUMSC", "ITAL", "ITALST", "JAPAN", "JS", "KOREA",
+  "LAT", "MEDVL", "MENN", "MUSIC", "PHIL", "PORT", "RCS", "REES", "RS",
+  "RUSS", "SI", "SPAN", "THPERF", "VCULT",
 ]
 
 [pure_sciences]
 name = "Pure Sciences"
 order = 2
+# Official UW Pure Sciences list
 subjects = ["BIOL", "CHEM", "EARTH", "PHYS", "SCI"]
 
 [pure_applied_sciences]
 name = "Pure & Applied Sciences"
 order = 3
-subjects = ["AHS", "ENVS", "ERS", "GERON", "KIN", "PHARM"]
+# Official UW Pure & Applied Sciences list (beyond Pure Sciences)
+# Plus related Health/Science subjects not on the official list
+subjects = [
+  "AHS", "ENVS", "ERS", "GERON", "HEALTH", "HLTH", "KIN", "MEDSCI",
+  "MNS", "OPTOM", "PHARM", "PLAN", "SCBUS",
+]
 
 [social_sciences]
 name = "Social Sciences"
 order = 4
+# Official UW Social Sciences list + related subjects
 subjects = [
-  "AFM", "ANTH", "ARBUS", "BET", "ECON", "ENBUS", "GEOG",
-  "GSJ", "HRM", "INDG", "LS", "MGMT", "MSCI", "PACS", "PSCI",
-  "PSYCH", "REC", "SDS", "SMF", "SRF", "SOC", "SOCWK", "STV",
+  "AFM", "ANTH", "ARBUS", "BET", "BUS", "COMM", "ECON", "ENBUS", "GA",
+  "GEOG", "GSJ", "HRTS", "HRM", "INDENT", "INDEV", "INDG", "INNOV",
+  "LS", "MGMT", "MSE", "MSCI", "PACS", "PSCI", "PSYCH", "REC", "SDS",
+  "SFM", "SMF", "SOC", "SOCWK", "SRF", "STV", "SWREN",
 ]
 
 [mathematics]
 name = "Mathematics"
 order = 5
-subjects = ["ACTSC", "AMATH", "CO", "CS", "MATH", "PMATH", "STAT"]
+# Faculty of Math subjects (not in UW breadth/depth divisions)
+subjects = [
+  "ACTSC", "AMATH", "CFM", "CO", "COGSCI", "CS", "DATSC", "GDS",
+  "MATBUS", "MATH", "PMATH", "STAT",
+]
 
 [others]
 name = "Others"
 order = 6
-subjects = ["CIVE", "INTEG", "NE", "SYDE"]
+# Engineering + cross-faculty subjects not in breadth/depth divisions
+subjects = [
+  "AE", "AVIA", "BME", "CHE", "CIVE", "ECE", "ENVE", "GENE", "GEOE",
+  "INTEG", "ME", "MTE", "NE", "SE", "SYDE",
+]
