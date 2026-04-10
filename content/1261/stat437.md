@@ -714,7 +714,7 @@ The weights \( \hat{\pi}_{ij}^{-1} \) upweight observations from subjects who we
 
 **Estimation of weights**: For monotone dropout, fit a logistic regression for the probability of dropout at each visit given the dropout history and observed outcomes:
 \[
-\text{logit}\, P(R_{ij} = 0 \mid R_{i,j-1} = 1, \mathbf{Y}_i^{\text{obs}}_{<j}, x_i) = \gamma_0 + \gamma_1 Y_{i,j-1} + \gamma^T x_i
+\text{logit}\, P(R_{ij} = 0 \mid R_{i,j-1} = 1, \mathbf{Y}_i^{\text{obs}}_{\lt j}, x_i) = \gamma_0 + \gamma_1 Y_{i,j-1} + \gamma^T x_i
 \]
 
 The cumulative probability of remaining observed up to time \( j \) is:

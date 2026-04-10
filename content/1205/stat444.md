@@ -1,14 +1,128 @@
 ---
-title: "STAT 444: Statistical Learning / Nonparametric Regression"
+title: "STAT 444: Statistical Learning — Advanced Regression"
 prof: "Reza Ramezan"
 subjects: "STAT"
 ---
 
 These notes cover classical multiple regression through modern nonparametric smoothing methods, culminating in applications to neural spike-train data from computational neuroscience.
 
+> **Source credits:**
+> - *STAT 444/844 Course Notes* by Richard Wu (Kun Liang, Winter 2019, University of Waterloo): [richardwu.ca/notes/stat444-notes.pdf](https://www.richardwu.ca/notes/stat444-notes.pdf)
+> - *Statistical Learning: Function Estimation* (STAT 444/844, 2017) by R. Wayne Oldford, University of Waterloo: [sas.uwaterloo.ca/~rwoldfor/courses/AdvancedRegression/Lectures/2017/](https://sas.uwaterloo.ca/~rwoldfor/courses/AdvancedRegression/Lectures/2017/)
+
 ---
 
-# Module 2: Multiple Regression Review
+# Chapter 1: Simple Linear Regression
+
+## The Regression Problem
+
+**Statistical learning** is concerned with estimating an unknown function \( f \) relating inputs \( x \in \mathbb{R}^p \) to a response \( Y \in \mathbb{R} \). The fundamental model is:
+
+\[
+Y = f(x) + \varepsilon
+\]
+
+where \( f(x) = E[Y \mid X = x] \) is the **regression function** — the optimal predictor of \( Y \) given \( X = x \) under squared-error loss — and \( \varepsilon \) satisfies \( E[\varepsilon \mid X] = 0 \), \( \mathrm{Var}(\varepsilon \mid X) = \sigma^2 \).
+
+The goal is to estimate \( f \) from training data \( \{(x_1, Y_1), \ldots, (x_n, Y_n)\} \), yielding \( \hat{f} \) useful for **prediction** at new inputs or for **inference** about the input–output relationship.
+
+**Parametric methods** restrict \( f \) to a finite-dimensional family (e.g.\ the linear model). They are efficient when correctly specified but incur irreducible bias when misspecified.
+
+**Nonparametric methods** impose only smoothness constraints on \( f \), allowing consistent estimation under broad conditions at the cost of requiring larger samples and greater computational effort. This course develops nonparametric regression from its parametric foundations.
+
+## Simple Linear Regression
+
+With a single predictor the model is:
+
+\[
+Y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \quad \varepsilon_i \overset{iid}{\sim} \mathcal{N}(0, \sigma^2), \quad i = 1, \ldots, n
+\]
+
+**OLS estimators** minimise the residual sum of squares \( \mathrm{RSS} = \sum_{i=1}^n (Y_i - \beta_0 - \beta_1 x_i)^2 \):
+
+\[
+\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}}, \qquad \hat{\beta}_0 = \bar{Y} - \hat{\beta}_1 \bar{x}
+\]
+
+where \( S_{xx} = \sum_i (x_i - \bar{x})^2 \) and \( S_{xy} = \sum_i (x_i - \bar{x})(Y_i - \bar{Y}) \).
+
+Under the Gaussian model the OLS estimators coincide with the MLEs and are unbiased:
+
+\[
+E[\hat{\beta}_1] = \beta_1, \quad \mathrm{Var}(\hat{\beta}_1) = \frac{\sigma^2}{S_{xx}}; \qquad E[\hat{\beta}_0] = \beta_0, \quad \mathrm{Var}(\hat{\beta}_0) = \sigma^2\!\left(\frac{1}{n} + \frac{\bar{x}^2}{S_{xx}}\right)
+\]
+
+The unbiased estimator of \( \sigma^2 \) uses \( n - 2 \) degrees of freedom:
+
+\[
+\hat{\sigma}^2 = \frac{\mathrm{RSS}}{n - 2}
+\]
+
+Inference uses the pivot \( (\hat{\beta}_j - \beta_j)/\mathrm{SE}(\hat{\beta}_j) \sim t_{n-2} \).
+
+## ANOVA Decomposition
+
+The total variation in the response decomposes as:
+
+\[
+\underbrace{\sum_i (Y_i - \bar{Y})^2}_{\mathrm{TSS}} = \underbrace{\sum_i (\hat{Y}_i - \bar{Y})^2}_{\mathrm{RegSS}} + \underbrace{\sum_i (Y_i - \hat{Y}_i)^2}_{\mathrm{RSS}}
+\]
+
+The **coefficient of determination** \( R^2 = \mathrm{RegSS}/\mathrm{TSS} \) measures the proportion of variance explained by the regression. For SLR, \( R^2 = r_{xy}^2 \) where \( r_{xy} \) is the sample correlation. The overall F-statistic:
+
+\[
+F = \frac{\mathrm{RegSS}/1}{\mathrm{RSS}/(n-2)} \sim F_{1,\,n-2} \quad \text{under } H_0: \beta_1 = 0
+\]
+
+is equivalent to the two-sided t-test on \( \hat{\beta}_1 \).
+
+## Prediction
+
+For a new observation \( Y_{\mathrm{new}} \) at \( x_{\mathrm{new}} \), two intervals follow from the \( t_{n-2} \) distribution:
+
+**Confidence interval** for the mean response \( E[Y \mid X = x_{\mathrm{new}}] \):
+
+\[
+\hat{Y}_{\mathrm{new}} \pm t_{n-2,\,\alpha/2}\; \hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_{\mathrm{new}} - \bar{x})^2}{S_{xx}}}
+\]
+
+**Prediction interval** for an individual future observation (wider, adds \( \hat\sigma^2 \) for the new error):
+
+\[
+\hat{Y}_{\mathrm{new}} \pm t_{n-2,\,\alpha/2}\; \hat{\sigma}\sqrt{1 + \frac{1}{n} + \frac{(x_{\mathrm{new}} - \bar{x})^2}{S_{xx}}}
+\]
+
+Both intervals widen as \( x_{\mathrm{new}} \) moves away from \( \bar{x} \), reflecting greater extrapolation uncertainty.
+
+## Notation and Matrix Preliminaries
+
+Throughout these notes the following conventions are used:
+
+- **Capital letters** denote matrices or vectors: \( A, X, \Sigma \).
+- **Lower-case letters** denote scalars: \( a, x, \sigma \).
+- All vectors are column vectors; the transpose of \( A \) is \( A^T \).
+
+**Quadratic form.** If \( A = (a_{ij})_{n\times n} \) is symmetric (\( a_{ij} = a_{ji} \)), then
+\[
+f = Y^T A Y = \sum_i \sum_j a_{ij} y_i y_j
+\]
+is called a **quadratic form**.
+
+**Trace.** \( \mathrm{tr}(A_{m\times m}) = \sum_{i=1}^m a_{ii} \). Key property: \( \mathrm{tr}(BC) = \mathrm{tr}(CB) \).
+
+**Rank.** \( \mathrm{rank}(A) \) is the maximum number of linearly independent columns (equivalently, rows) of \( A \).
+
+**Eigenvectors and eigenvalues.** A non-zero vector \( \vec{v}_i \) is an **eigenvector** of \( A_{m\times m} \) if \( A\vec{v}_i = \lambda_i \vec{v}_i \); \( \lambda_i \) is the corresponding **eigenvalue**.
+
+**Idempotent matrices.** A matrix \( A \) is **idempotent** if \( AA = A \). Notable results:
+1. All eigenvalues of an idempotent matrix are either 0 or 1.
+2. If \( A \) is idempotent, there exists an orthogonal \( P \) such that \( A = P\Lambda P^T \) where \( \Lambda \) is diagonal with 1s then 0s; consequently \( \mathrm{tr}(A) = \mathrm{rank}(A) \).
+
+These facts are used repeatedly: the hat matrix \( H = X(X^TX)^{-1}X^T \) is symmetric and idempotent, so \( \mathrm{df} = \mathrm{tr}(H) = \mathrm{rank}(H) = p+1 \).
+
+---
+
+# Chapter 2: Multiple Regression Review
 
 ## The Linear Model and OLS
 
@@ -63,6 +177,16 @@ and the unbiased estimator of \(\sigma^2 \) is:
 \]
 
 The denominator \(n - p - 1 \) accounts for the \(p + 1 \) degrees of freedom consumed by estimating \(\boldsymbol{\beta} \).
+
+## Geometric Interpretation
+
+A linear model is a linear combination of **generator functions** \( g_1, \ldots, g_k \):
+\[
+\mu(x) = \beta_1 g_1(x) + \beta_2 g_2(x) + \cdots + \beta_k g_k(x)
+\]
+where \( g_1, \ldots, g_k \) can be arbitrary continuous functions (e.g.\ \( g_j(x) = x^{j-1} \) for polynomial regression). All possible linear combinations of these generators form a **subspace**; the generators are a **basis** for this subspace. The generators must be **linearly independent**; otherwise the parameterisation is ill-defined.
+
+Geometrically, \( \hat{\mathbf{y}} = \mathbf{H}\mathbf{y} \) is the **projection** of \( \mathbf{y} \) onto \( C(\mathbf{X}) \), the column space of \( \mathbf{X} \). The residuals \( \mathbf{e} = (\mathbf{I} - \mathbf{H})\mathbf{y} \) are therefore **orthogonal** to \( C(\mathbf{X}) \), i.e.\ \( \mathbf{X}^\top \mathbf{e} = \mathbf{0} \). The degrees of freedom of the model is \( \mathrm{df} = \mathrm{tr}(\mathbf{H}) = p + 1 \).
 
 ## Sampling Distributions and Inference
 
@@ -146,7 +270,7 @@ Observations with \(D_i > 4/(n-p-1) \) are conventionally flagged as influential
 
 ---
 
-# Module 3: The Bias-Variance Trade-Off
+# Chapter 3: The Bias-Variance Trade-Off
 
 ## Error Decomposition
 
@@ -195,11 +319,39 @@ For the OLS estimator specifically, the Gauss-Markov theorem guarantees that it 
 
 ---
 
-# Module 4: Cross-Validation
+# Chapter 4: Cross-Validation
+
+## Training Error vs Test Error
+
+Suppose the true model is \( y_i = f(x_i) + \varepsilon_i \) with training set \( T = \{(x_i, y_i)\}_{i=1}^n \) and fitted function \( \hat f \).
+
+**Test error** (conditional on the training set \( T \)):
+\[
+\mathrm{Err}_T = \mathbb{E}\!\left[(Y - \hat f(X))^2 \mid T\right]
+\]
+where the expectation is over the true joint distribution of \( (X,Y) \).
+
+**Expected test error** (averaged also over random training sets):
+\[
+\mathrm{Err} = \mathbb{E}\!\left[(Y - \hat f(X))^2\right] = \mathbb{E}[\mathrm{Err}_T]
+\]
+
+**Training error**:
+\[
+\overline{\mathrm{Err}} = \frac{1}{n}\sum_{i=1}^n (y_i - \hat f(x_i))^2 = \frac{\mathrm{RSS}}{n}
+\]
+
+Training error uses the same data twice (to fit \( \hat f \) and to evaluate it) and systematically underestimates \( \mathrm{Err} \). As model complexity grows, \( \overline{\mathrm{Err}} \) decreases monotonically while \( \mathrm{Err} \) is U-shaped — the classic bias-variance trade-off in action.
+
+**Information criteria** provide in-sample estimates of test error. With \( d \) free parameters:
+\[
+\mathrm{AIC} = 2d + n\log(\mathrm{RSS}), \qquad \mathrm{BIC} = d\log(n) + n\log(\mathrm{RSS})
+\]
+BIC imposes a heavier penalty and favours sparser models for large \( n \). These are only meaningful for **comparing models on the same training sample**; absolute values are not interpretable.
 
 ## The Need for Out-of-Sample Evaluation
 
-A model's training error (evaluated on the same data used to fit it) systematically underestimates the **generalisation error** (performance on new observations). Cross-validation is the standard remedy: it estimates out-of-sample performance by partitioning the available data so that evaluation never occurs on training observations.
+Cross-validation estimates \( \mathrm{Err} \) by partitioning data so that evaluation never occurs on training observations.
 
 ## k-Fold Cross-Validation
 
@@ -209,17 +361,19 @@ In **k-fold cross-validation**, the data is randomly divided into \(k \) equal-s
 \text{CV}_k = \frac{1}{n}\sum_{i=1}^n \left(y_i - \hat f^{(-\kappa(i))}(x_i)\right)^2
 \]
 
-where \(\hat f^{(-\kappa(i))} \) denotes the fit computed with fold \(\kappa(i) \) omitted. Common choices are \(k = 5 \) or \(k = 10 \), which balance computational cost against bias.
+where \(\hat f^{(-\kappa(i))} \) denotes the fit computed with fold \(\kappa(i) \) omitted. Common choices are \(k = 5 \) or \(k = 10 \): small \(k\) has lower variance but larger bias; large \(k\) (e.g. LOO) is nearly unbiased for \(\mathrm{Err}\) but has high variance since the \(n\) training sets are nearly identical.
 
 ## Leave-One-Out Cross-Validation
 
-**Leave-one-out cross-validation (LOOCV)** takes \(k = n \): each observation is held out in turn. For linear smoothers (where \(\hat{\mathbf{y}} = \mathbf{S}\mathbf{y} \) for some smoother matrix \(\mathbf{S} \), there is a remarkable computational shortcut that avoids refitting the model \(n \) times. For OLS, \(\mathbf{S} = \mathbf{H} \), and the shortcut formula is:
-
+**Leave-one-out cross-validation (LOOCV)** takes \(k = n \): each observation is held out in turn. LOO CV is approximately unbiased for \(\mathrm{Err}\). To see why, let \(\hat f^{-i}(x_i)\) denote the fitted value at \(x_i\) with observation \(i\) omitted. Then:
 \[
-\text{CV}_{\text{LOO}} = \frac{1}{n}\sum_{i=1}^n \left(\frac{e_i}{1 - h_{ii}}\right)^2
+\mathbb{E}\!\left[(y_i - \hat f^{-i}(x_i))^2\right] \approx \sigma^2 + \mathbb{E}\!\left[(f(x_i) - \hat f^{-i}(x_i))^2\right]
 \]
-
-where \(e_i = y_i - \hat y_i \) is the ordinary residual and \(h_{ii} \) is the \(i \)th diagonal of the hat matrix. Observations with high leverage \(h_{ii} \to 1 \) receive very large weight in LOOCV — the model fits them almost exactly, so leaving them out would dramatically change the fit.
+which is approximately \(\mathrm{Err}\) up to the constant \(\sigma^2\). Naively, LOO requires refitting \(n\) times. For any **linear smoother** \(\hat{\mathbf{y}} = \mathbf{S}\mathbf{y}\), there is a shortcut that avoids this:
+\[
+\text{CV}_{\text{LOO}} = \frac{1}{n}\sum_{i=1}^n \left(\frac{y_i - \hat f(x_i)}{1 - s_{ii}}\right)^2
+\]
+where \(s_{ii}\) is the \(i\)th diagonal of \(\mathbf{S}\). For OLS, \(\mathbf{S} = \mathbf{H}\) and \(s_{ii} = h_{ii}\). Observations with high leverage \(h_{ii} \to 1\) receive very large weight — the model fits them almost exactly, so leaving them out would dramatically change the fit.
 
 ## Generalised Cross-Validation
 
@@ -241,7 +395,7 @@ This formulation is particularly important for smoothing splines and kernel regr
 
 ---
 
-# Module 5: Variable Selection
+# Chapter 5: Variable Selection
 
 ## The Challenge of Many Predictors
 
@@ -279,7 +433,7 @@ All these **in-sample** criteria are proxies for out-of-sample performance. They
 
 ---
 
-# Module 6: Weighted Least Squares
+# Chapter 6: Weighted Least Squares
 
 ## Heteroscedastic Errors
 
@@ -295,7 +449,18 @@ where \(\mathbf{W} = \text{diag}(w_1, \ldots, w_n) \). The WLS estimator has the
 \hat{\boldsymbol{\beta}}_{\text{WLS}} = (\mathbf{X}^\top\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{W}\mathbf{y}
 \]
 
-and satisfies \(\hat{\boldsymbol{\beta}}_{\text{WLS}} \sim \mathcal{N}(\boldsymbol{\beta}, \sigma^2(\mathbf{X}^\top\mathbf{W}\mathbf{X})^{-1}) \). Observations with larger \(w_i \) are more precise and thus receive greater influence on the fit.
+**Derivation.** Differentiating the weighted objective and setting to zero:
+\[
+\frac{dS(\boldsymbol{\beta})}{d\boldsymbol{\beta}} = -2\mathbf{Y}^T\mathbf{W}\mathbf{X} + 2\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{W}\mathbf{X} = 0 \implies \hat{\boldsymbol{\beta}}_{\text{WLS}} = (\mathbf{X}^\top\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{W}\mathbf{y}
+\]
+
+*Alternative proof.* Let \( Y^* = W^{1/2}Y \) and \( X^* = W^{1/2}X \). Minimising \( (Y - X\boldsymbol{\beta})^TW(Y - X\boldsymbol{\beta}) \) is equivalent to minimising \( (Y^* - X^*\boldsymbol{\beta})^T(Y^* - X^*\boldsymbol{\beta}) \), which is OLS on the transformed data. The OLS solution gives \( \hat{\boldsymbol{\beta}} = (X^{*T}X^*)^{-1}X^{*T}Y^* = (X^TWX)^{-1}X^TWY \).
+
+**BLUE property.** When \( \mathrm{Var}(\varepsilon_i) = \sigma_i^2 \) (heteroscedastic but uncorrelated errors), setting \( w_i = 1/\sigma_i^2 \) gives the **Best Linear Unbiased Estimator (BLUE)** of \( \boldsymbol{\beta} \) — the unbiased linear estimator with smallest variance.
+
+**Local regression application.** WLS enables **local regression**: to estimate \( f(x) \) at a query point \( x \), assign weight \( w_i \propto K((x_i - x)/h) \) that decreases with distance from \( x \). This is the foundation of kernel-weighted local polynomial regression (Chapter 8–9).
+
+The WLS estimator satisfies \(\hat{\boldsymbol{\beta}}_{\text{WLS}} \sim \mathcal{N}(\boldsymbol{\beta}, \sigma^2(\mathbf{X}^\top\mathbf{W}\mathbf{X})^{-1}) \). Observations with larger \(w_i \) are more precise and thus receive greater influence on the fit.
 
 ## Common Weighting Schemes
 
@@ -318,11 +483,26 @@ yields a transformed model \(\tilde{\mathbf{y}} = \tilde{\mathbf{X}}\boldsymbol{
 
 ---
 
-# Module 7: Robust Regression
+# Chapter 7: Robust Regression
 
 ## The Failure of OLS under Contamination
 
 OLS minimises the sum of **squared** residuals, which means even a single extreme outlier can dramatically distort the estimated regression line. The squared loss function gives unbounded influence to large residuals. **Robust regression** seeks estimators that are resistant to a small fraction of contaminated observations.
+
+## The Discrepancy Function Framework
+
+The **discrepancy function** for a fit \(\boldsymbol{\beta}\) is:
+\[
+S(\boldsymbol{\beta}) = \sum_{i=1}^n \rho(y_i - \mathbf{x}_i^T\boldsymbol{\beta}) = \sum_{i=1}^n \rho(r_i)
+\]
+where \(\rho\) is a real-valued **loss function** and \(r_i\) is the residual for observation \(i\). Taking the derivative and setting to zero:
+\[
+\frac{dS(\boldsymbol{\beta})}{d\boldsymbol{\beta}} = -\sum_{i=1}^n \psi(r_i)\mathbf{x}_i^T = \mathbf{0}^T, \qquad \psi = \rho'
+\]
+
+**Connection to log-likelihood.** For a linear model with \( f(y_i \mid \mathbf{x}_i, \boldsymbol{\beta}, \sigma^2) = \mathcal{N}(\mathbf{x}_i^T\boldsymbol{\beta}, \sigma^2) \), the log-likelihood contribution is \( l_i(\boldsymbol{\beta}) = -r_i^2/(2\sigma^2) + C \). Thus minimising the discrepancy function \( S(\boldsymbol{\beta}) \) is equivalent to maximising the log-likelihood when \( \rho(r) = -l(r) \). Setting \( \rho(r) = r^2 \) recovers OLS; choosing a different \( \rho \) corresponds to a different distributional assumption or robustification goal.
+
+**Definition.** The estimator \(\hat{\boldsymbol{\beta}}\) that minimises \(\sum_{i=1}^n \rho(r_i)\) is called the **M-estimator** (maximum-likelihood type estimator).
 
 ## M-Estimators
 
@@ -340,12 +520,21 @@ where \(\hat\sigma \) is a robust scale estimate (typically the **median absolut
 
 Different choices of \(\psi \) define different M-estimators:
 
-**Huber's ψ** is piecewise linear, behaving like OLS for small residuals and like LAD (L1) for large ones:
+**Huber's loss** uses \(\rho(r) = \tfrac{1}{2}r^2\) for small residuals and transitions to linear growth for large ones:
+\[
+\rho_H(r) = \begin{cases} \tfrac{1}{2}r^2 & |r| \leq c \\ c(|r| - \tfrac{1}{2}c) & |r| > c \end{cases}
+\]
+giving:
+\[
+\psi_H(r) = \begin{cases} r & |r| \leq c \\ c\,\mathrm{sign}(r) & |r| > c \end{cases}, \qquad
+w_H(r) = \frac{\psi_H(r)}{r} = \begin{cases} 1 & |r| \leq c \\ c/|r| & |r| > c \end{cases}
+\]
+The weight function \(w_H\) is 1 for inliers and decays as \(c/|r|\) for outliers — large residuals receive less weight but are not completely discarded. Huber suggested \(c = 1.345\), which achieves **95% asymptotic efficiency** relative to OLS when the true distribution is Gaussian. Since all recommended constants assume \(\mathrm{Var}(\varepsilon) = 1\), in practice residuals must be scaled: use \(r_i' = r_i/\hat{s}\) where \(\hat{s} = \mathrm{MAD}/0.6745\) (for the standard normal, \(\mathrm{MAD} = 0.6745\)).
 
+**Huber's ψ** (restating in the standardised parameterisation used with IRLS):
 \[
 \psi_H(u) = \begin{cases} u & |u| \leq k \\ k\,\mathrm{sign}(u) & |u| > k \end{cases}
 \]
-
 with the default tuning constant \(k = 1.345 \) (giving 95% efficiency at the normal model).
 
 **Hampel's ψ** adds a descending limb for very large residuals, giving them declining weight:
@@ -402,13 +591,46 @@ The M-estimating equations can be rewritten as a WLS problem by defining weights
 \sum_{i=1}^n w_i r_i \mathbf{x}_i = \mathbf{0}
 \]
 
-The **Iteratively Reweighted Least Squares (IRLS)** algorithm alternates between:
-1. Computing weights \(w_i^{(t)} = \psi(r_i^{(t)}/\hat\sigma^{(t)})/r_i^{(t)} \),
-2. Solving the WLS problem \(\hat{\boldsymbol{\beta}}^{(t+1)} = (\mathbf{X}^\top\mathbf{W}^{(t)}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{W}^{(t)}\mathbf{y} \),
+The M-estimating equations can be rewritten as a WLS problem. Writing \( \psi(r_i)/r_i \cdot r_i \mathbf{x}_i = \mathbf{0} \) and defining weight \( w_i = \psi(r_i)/r_i \):
+\[
+\sum_{i=1}^n w_i(y_i - \mathbf{x}_i^T\boldsymbol{\beta})\mathbf{x}_i = \mathbf{0} \implies \hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^T\mathbf{W}\mathbf{y}, \quad \mathbf{W} = \mathrm{diag}(w_1,\ldots,w_n)
+\]
+But the weights themselves depend on \(\boldsymbol{\beta}\) through the residuals. The **Iteratively Reweighted Least Squares (IRLS)** algorithm resolves this by iterating:
 
-until convergence. Each iteration is a standard WLS computation, making IRLS straightforward to implement.
+**Initialization:** Set \(j = 0\), choose initial \(\hat{\boldsymbol{\beta}}^{(0)}\) (e.g.\ OLS).
+
+**Step 1:** Compute residuals \(\; r_i^{(j)} = y_i - \mathbf{x}_i^T\hat{\boldsymbol{\beta}}^{(j)}, \quad i = 1,\ldots,n\).
+
+**Step 2:** Update weights \(\; w_i^{(j)} = \psi(r_i^{(j)})/r_i^{(j)}\), form \(\mathbf{W}^{(j)} = \mathrm{diag}(w_1^{(j)},\ldots,w_n^{(j)})\).
+
+**Step 3:** Update estimate \(\; \hat{\boldsymbol{\beta}}^{(j+1)} = (\mathbf{X}^T\mathbf{W}^{(j)}\mathbf{X})^{-1}\mathbf{X}^T\mathbf{W}^{(j)}\mathbf{y}\).
+
+**Step 4:** Set \(j = j+1\). Repeat until \(\|\hat{\boldsymbol{\beta}}^{(j+1)} - \hat{\boldsymbol{\beta}}^{(j)}\| \leq \epsilon\).
+
+Each iteration is a standard WLS computation. **Why IRLS?** For ordinary Gaussian OLS with \(\rho(r) = r^2\), the weights are constant (\(w_i = 1\)) and IRLS converges immediately to OLS. IRLS is needed when (1) the loss \(\rho\) is non-quadratic (e.g.\ robust regression), or (2) the response distribution is non-Gaussian — as in **generalised linear models** (STAT 431/831), where the canonical link function leads to a non-quadratic log-likelihood.
 
 ## The Breakdown Point and High-Breakdown Estimators
+
+**Sensitivity curve.** To see how sensitive a statistic \(T_n(y_1,\ldots,y_n)\) is to an individual data point, define:
+\[
+SC(y) = \frac{T_n(y_1,\ldots,y_{n-1},y) - T_{n-1}(y_1,\ldots,y_{n-1})}{1/n}
+\]
+which measures the change in \(T_n\) (including one new point \(y\)) relative to \(T_{n-1}\) (without it), normalised by contamination size \(1/n\). For the sample mean, \(SC(y) = y - \bar{y}_{n-1}\), which is **unbounded** in \(y\) — a single arbitrarily large observation can shift the mean arbitrarily far.
+
+**Formal breakdown point.** Let \(\tilde{z}_i = (x_{i1},\ldots,x_{ip},y_i)^T\) be the \(i\)th data vector, \(Z = (\tilde{z}_1,\ldots,\tilde{z}_n)\) the full dataset, and \(T\) the statistic of interest. The **worst error** from swapping \(m\) data vectors is:
+\[
+e(m; T, Z) = \sup_{Z_m^*} \|T(Z_m^*) - T(Z)\|
+\]
+where \(Z_m^*\) is \(Z\) with any \(m\) of its data vectors replaced. The **breakdown point** is:
+\[
+\mathrm{BP}(T) = \min\left\{\frac{m}{n} \;\middle|\; e(m; T, Z) = \infty\right\}
+\]
+i.e.\ the smallest proportion of points that can be replaced to make the statistic arbitrarily bad.
+
+**Examples:**
+- **Sample mean**: \(\mathrm{BP} = 1/n \to 0\) — a single observation can send it to infinity.
+- **Median**: \(\mathrm{BP} = 1/2\) — at least half the points must be corrupted to break it.
+- **\(k\%\) trimmed mean**: discard lowest and highest \(k\%\) of \(y_i\)'s; \(\mathrm{BP} = k\%\).
 
 The **breakdown point** of an estimator is the smallest fraction of contaminated observations needed to make the estimate arbitrarily bad. OLS has a breakdown point of \(1/n \to 0 \): a single outlier can be arbitrarily influential. M-estimators improve on this but still have breakdown points tending to zero for regression.
 
@@ -418,7 +640,11 @@ The **breakdown point** of an estimator is the smallest fraction of contaminated
 \hat{\boldsymbol{\beta}}_{\text{LMS}} = \arg\min_{\boldsymbol{\beta}} \;\text{median}_i\, r_i^2(\boldsymbol{\beta})
 \]
 
-**Least Trimmed Squares (LTS)** minimises the sum of the \(\lceil n/2 \rceil \) smallest squared residuals, discarding the largest half. Both LMS and LTS achieve a **breakdown point of approximately 50%**: up to nearly half the data can be arbitrarily contaminated without breaking the estimator. This comes at the cost of efficiency (LTS is only 7% as efficient as OLS at the Gaussian model), so LTS is typically used as a **preliminary estimator** to identify outliers, followed by OLS or M-estimation on the cleaned data.
+**Least Trimmed Squares (LTS)** minimises the sum of the \(k\) smallest squared residuals:
+\[
+\hat{\boldsymbol{\beta}}_{\mathrm{LTS}} = \arg\min_{\boldsymbol{\beta}} \sum_{i=1}^k r_{(i)}^2(\boldsymbol{\beta})
+\]
+where \(r_{(1)}^2 \leq \cdots \leq r_{(n)}^2\) are the order statistics of squared residuals. With \(k = \lceil n/2 \rceil\), the breakdown point is \((n - k + 1)/n \approx 1/2\): up to nearly half the data can be arbitrarily contaminated without breaking the estimator. This comes at the cost of efficiency (LTS is only 7% as efficient as OLS at the Gaussian model), so LTS is typically used as a **preliminary estimator** to identify outliers, followed by OLS or M-estimation on the cleaned data.
 
 ## The Sensitivity Curve
 
@@ -426,7 +652,7 @@ The **influence function** (or **sensitivity curve**) describes how an estimator
 
 ---
 
-# Module 8: Piecewise Regression and Local Methods
+# Chapter 8: Piecewise Regression and Local Methods
 
 ## Indicator Basis Functions
 
@@ -472,7 +698,7 @@ where \(K_h(\cdot) = K(\cdot/h)/h \) is a kernel that downweights distant observ
 
 ---
 
-# Module 9: Smoothing Methods
+# Chapter 9: Smoothing Methods
 
 ## The Linear Basis Expansion Framework
 
@@ -494,7 +720,11 @@ The model is then linear in \(\boldsymbol{\beta} \), and OLS or penalised regres
 
 The resulting spline function is a piecewise polynomial of degree \(q \) that is \((q-1) \)-times continuously differentiable at each knot. Cubic splines (\(q=3 \) are the most popular: they are smooth to the eye (continuous up to the second derivative) while being computationally and analytically tractable.
 
-**Natural cubic splines** add two additional boundary constraints: the function must be **linear** beyond the outermost knots \(t_1 \) and \(t_K \) (i.e., \(f''(x) = 0 \) for \(x < t_1 \) and \(x > t_K \). These constraints reduce the effective degrees of freedom from \(K + q + 1 \) to \(K \) and improve behaviour at the boundaries where data is sparse. Natural cubic splines are asymptotically optimal among all smoothers in MISE.
+**Natural cubic splines (NCS)** add two boundary constraints: the spline is **linear** outside the boundary knots \(t_1, t_k\). A general cubic spline has \(k + 4\) parameters; requiring linearity outside imposes 4 constraints (\(\beta_2 = \beta_3 = 0\) for \(x < t_1\) and \(\sum_{j=1}^k \beta_{j+3} = 0\), \(\sum_{j=1}^k \beta_{j+3} t_j = 0\) for \(x > t_k\)), leaving \(k\) free parameters. The NCS basis is:
+\[
+N_1(x) = 1,\quad N_2(x) = x,\quad N_j(x) = d_{j-2}(x) - d_{k-1}(x)\quad j = 3,\ldots,k
+\]
+where \(d_j(x) = \dfrac{(x-t_j)_+^3 - (x-t_k)_+^3}{t_k - t_j}\). Any NCS can be expressed as \(f(x) = \sum_{j=1}^k \beta_j N_j(x)\), and the model is fit by OLS on the design matrix \(X_{ij} = N_j(x_i)\). NCS is asymptotically optimal among all smoothers in MISE and is the "smoothest" interpolator (see §Smoothing Splines).
 
 **B-splines** (basis splines) provide a numerically superior representation of the same spline space. Each B-spline basis function is locally supported (non-zero only on a few consecutive knot intervals), making the resulting design matrix banded and linear system computationally efficient. The B-spline basis is preferable to the truncated power basis for numerical implementation, though both span the same function space.
 
@@ -515,6 +745,42 @@ The smoothing spline estimator is a **linear smoother**: \(\hat{\mathbf{y}} = \m
 \]
 
 Here \(\mathbf{N} \) is the matrix of natural spline basis functions evaluated at the data points, and \(\boldsymbol{\Omega}_N \) is the penalty matrix with entries \(\{\boldsymbol{\Omega}_N\}_{jk} = \int N_j''(t)N_k''(t)\,dt \).
+
+## Smoothing Spline: Matrix Form
+
+Expressing the NCS as \(\hat{f}_\lambda(x) = \sum_j \beta_j N_j(x)\), the penalised criterion becomes:
+\[
+S(\boldsymbol{\beta}) = (Y - X\boldsymbol{\beta})^T(Y - X\boldsymbol{\beta}) + \lambda \boldsymbol{\beta}^T N \boldsymbol{\beta}
+\]
+where \(X_{ij} = N_j(x_i)\) and the roughness penalty matrix \(N_{jl} = \int_{-\infty}^\infty N''_j(x)N''_l(x)\,dx\). Setting \(dS/d\boldsymbol{\beta} = 0\):
+\[
+\hat{\boldsymbol{\beta}}_\lambda = (X^TX + \lambda N)^{-1}X^TY, \qquad \hat{Y}_\lambda = X(X^TX + \lambda N)^{-1}X^TY = A_\lambda Y
+\]
+The **effective degrees of freedom** is \(\mathrm{df}_\lambda = \mathrm{tr}(A_\lambda)\). As \(\lambda \to \infty\), \(\mathrm{df}_\lambda \to 2\) (intercept + slope only).
+
+**Reinsch form.** When the \(x_i\) values are distinct, \(X\) is square. The smoother matrix can then be written in the compact **Reinsch form**:
+\[
+S_\lambda = (I + \lambda K)^{-1}, \qquad K = (X^T)^{-1}NX^{-1}
+\]
+where \(K\) is the **roughness penalty matrix** (does not depend on \(\lambda\)). This form shows that the smoother matrix is the matrix inverse of a simple perturbation of the identity.
+
+**Penalty form.** Eigendecompose \(K = VDV^T\) with \(D = \mathrm{diag}(d_1,\ldots,d_n)\), \(d_i \geq 0\). Then:
+\[
+S_\lambda = V(I + \lambda D)^{-1}V^T, \qquad \rho_i(\lambda) = \frac{1}{1 + \lambda d_{n-i+1}}
+\]
+Note that \(d_{n-1} = d_n = 0\) so \(\rho_1(\lambda) = \rho_2(\lambda) = 1\): the first two eigenvectors (intercept and linear trend) are **never shrunk**, regardless of \(\lambda\). All other components are shrunk toward zero as \(\lambda\) increases.
+
+**Projection vs. shrinking smoothers.** For OLS (and regression splines):
+\[
+\hat{Y} = \sum_{i=1}^n \rho_i \langle \vec{u}_i, Y\rangle \vec{u}_i, \qquad \rho_i = \begin{cases} 1 & i = 1,\ldots,p \\ 0 & i = p+1,\ldots,n \end{cases}
+\]
+OLS **hard-thresholds** the eigenvector basis: it keeps the first \(p\) eigenvectors at full weight and discards the rest entirely. For this reason, OLS and regression splines are called **projection smoothers**.
+
+Smoothing splines instead use \(\rho_i(\lambda) = 1/(1+\lambda d_{n-i+1}) \in (0,1]\): every eigenvector is retained but **shrunk** toward zero, with rougher (higher-frequency) components shrunk more. Smoothing splines are therefore **shrinking smoothers**. The effective df is:
+\[
+\mathrm{df}_\lambda = \mathrm{tr}(S_\lambda) = \sum_{i=1}^n \frac{1}{1+\lambda d_i}
+\]
+For a target \(\mathrm{df}_\lambda\), solve for \(\lambda\) by linear search (the \(d_i\)'s are fixed).
 
 ## Eigendecomposition of the Smoother Matrix
 
@@ -609,7 +875,16 @@ The additive assumption sacrifices interaction terms but allows the model to han
 
 ## Kernel Smoothing and the Nadaraya-Watson Estimator
 
-**Kernel regression** estimates \(f(x) = E[y|X=x] \) directly as a locally weighted average. The **Nadaraya-Watson estimator** is:
+**Kernel regression** estimates \(f(x) = E[y|X=x] \) directly as a locally weighted average. A **kernel** \(K(t)\) must satisfy:
+\[
+\int K(t)\,dt = 1, \qquad \int t K(t)\,dt = 0, \qquad \int t^2 K(t)\,dt < \infty
+\]
+The first two conditions standardise \(K\); the third ensures weights are not too concentrated at the extremes. For bandwidth \(h\), the normalised weight assigned to neighbour \(x_i\) when estimating at \(x\) is:
+\[
+w_i = \frac{K\!\left(\frac{x_i - x}{h}\right)}{\sum_{j=1}^N K\!\left(\frac{x_j - x}{h}\right)}
+\]
+
+The **Nadaraya-Watson estimator** is:
 
 \[
 \hat f(x) = \frac{\sum_{i=1}^n K_h(x_i - x)\, y_i}{\sum_{i=1}^n K_h(x_i - x)}
@@ -627,6 +902,22 @@ h_i(x) = \text{(distance to the }\lfloor \alpha n \rfloor\text{-th nearest neigh
 
 The span \(\alpha \in (0,1] \) controls smoothness: large \(\alpha \) uses more neighbours and produces smoother fits. LOESS is the default smoother in R's `geom_smooth()` with `method="loess"`.
 
+## Local Linear Regression as a Linear Smoother
+
+Local linear regression is a linear smoother. For target point \(x\), it solves:
+\[
+\arg\min_{\alpha,\beta} \sum_{i=1}^n k_h(x - x_i)(y_i - \alpha - \beta x_i)^2
+\]
+Let \(B = [1\;x_1;\;\ldots;\;1\;x_n]^T\) (\(n\times 2\)) and \(W(x) = \mathrm{diag}(k_h(x-x_1),\ldots,k_h(x-x_n))\). The fitted value at \(x\) is:
+\[
+\hat{f}(x) = (1,x)(B^TW(x)B)^{-1}B^TW(x)Y = l^T(x)Y
+\]
+where \(l^T(x) = (1,x)(B^TW(x)B)^{-1}B^TW(x)\). Stacking these row-vectors:
+\[
+L_h = [l^T(x_1);\;\ldots;\;l^T(x_n)], \qquad \hat{Y}_h = L_h Y, \qquad \mathrm{df}_h = \mathrm{tr}(L_h)
+\]
+so local linear regression is indeed a linear smoother with smoother matrix \(L_h\), and GCV/LOOCV can be applied using the diagonal entries of \(L_h\).
+
 ## Comparing LOESS and Smoothing Splines via SVD
 
 Both LOESS and smoothing splines are linear smoothers: \(\hat{\mathbf{y}} = \mathbf{S}\mathbf{y} \). The SVD of \(\mathbf{S} \) reveals their structure:
@@ -639,7 +930,7 @@ For a **symmetric** smoother matrix (smoothing splines), \(\mathbf{U} = \mathbf{
 
 ---
 
-# Module 10: Shrinkage Estimators
+# Chapter 10: Shrinkage Estimators
 
 ## Ridge Regression
 
@@ -753,7 +1044,7 @@ coef(cv_fit, s = "lambda.1se")
 
 ---
 
-# Module 11: Kernel Density Estimation
+# Chapter 11: Kernel Density Estimation
 
 ## The Kernel Density Estimator
 
@@ -851,7 +1142,7 @@ where \(\hat f_{h,-i} \) is the leave-one-out density estimate. The first term (
 
 ---
 
-# Module 12: Estimating an Intensity Function
+# Chapter 12: Estimating an Intensity Function
 
 ## Neural Spike Trains
 
