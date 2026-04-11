@@ -44,6 +44,8 @@ jobs:
           TZ: America/Toronto
           BASE_URL: "${{ steps.pages.outputs.base_url }}/"
         run: hugo --gc --minify --baseURL "$BASE_URL"
+      - name: Build Pagefind search index
+        run: npx pagefind --site public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

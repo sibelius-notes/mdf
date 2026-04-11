@@ -1,32 +1,47 @@
 {{ define "main" }}
-<article class="search-page">
+<article class="search-page" data-pagefind-ignore>
   <h1>Search</h1>
   <input type="text" id="search-input" placeholder="Search all course notes..." autofocus>
   <div id="search-results"></div>
 </article>
 
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 <script>
 (function() {
   var input = document.getElementById('search-input');
   var resultsEl = document.getElementById('search-results');
-  var fuse = null;
+  var pf = null;
+  var pfLoading = false;
 
-  fetch('/index.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      fuse = new Fuse(data, {
-        keys: [
-          { name: 'title', weight: 3 },
-          { name: 'prof', weight: 1 },
-          { name: 'content', weight: 1 }
-        ],
-        threshold: 0.3,
-        ignoreLocation: true,
-        includeMatches: true,
-        minMatchCharLength: 2
-      });
+  // Safely render Pagefind excerpts: only <mark> tags are preserved via DOM, all else is plain text.
+  function renderExcerpt(html) {
+    var frag = document.createDocumentFragment();
+    var parts = html.split(/(<mark>[\s\S]*?<\/mark>)/);
+    parts.forEach(function(part) {
+      if (part.startsWith('<mark>') && part.endsWith('</mark>')) {
+        var mark = document.createElement('mark');
+        mark.textContent = part.slice(6, -7);
+        frag.appendChild(mark);
+      } else {
+        frag.appendChild(document.createTextNode(part));
+      }
     });
+    return frag;
+  }
+
+  async function initPagefind() {
+    if (pf || pfLoading) return;
+    pfLoading = true;
+    try {
+      pf = await import('/pagefind/pagefind.js');
+      await pf.init();
+    } catch (e) {
+      console.error('Pagefind failed to load:', e);
+      pf = null;
+    }
+    pfLoading = false;
+  }
+
+  initPagefind();
 
   var debounceTimer;
   input.addEventListener('input', function() {
@@ -34,13 +49,22 @@
     debounceTimer = setTimeout(doSearch, 200);
   });
 
-  function doSearch() {
+  async function doSearch() {
     var query = input.value.trim();
     resultsEl.textContent = '';
-    if (!fuse || query.length < 2) return;
+    if (query.length < 2) return;
 
-    var results = fuse.search(query, { limit: 30 });
-    if (results.length === 0) {
+    await initPagefind();
+    if (!pf) {
+      var err = document.createElement('p');
+      err.className = 'no-results';
+      err.textContent = 'Search index unavailable — run: npx pagefind --site public';
+      resultsEl.appendChild(err);
+      return;
+    }
+
+    var search = await pf.search(query);
+    if (search.results.length === 0) {
       var noRes = document.createElement('p');
       noRes.className = 'no-results';
       noRes.textContent = 'No results found.';
@@ -48,41 +72,28 @@
       return;
     }
 
-    results.forEach(function(r) {
-      var item = r.item;
+    var top = search.results.slice(0, 30);
+    var dataItems = await Promise.all(top.map(function(r) { return r.data(); }));
+
+    dataItems.forEach(function(data) {
       var link = document.createElement('a');
-      link.href = item.url;
+      link.href = data.url;
       link.className = 'search-result';
 
       var titleSpan = document.createElement('span');
       titleSpan.className = 'sr-title';
-      titleSpan.textContent = item.title;
+      titleSpan.textContent = data.meta.title || data.url;
       link.appendChild(titleSpan);
 
-      var metaSpan = document.createElement('span');
-      metaSpan.className = 'sr-meta';
-      metaSpan.textContent = item.term + (item.prof ? ' · ' + item.prof : '');
-      link.appendChild(metaSpan);
-
-      var snippet = getSnippet(item.content, query);
-      if (snippet) {
+      if (data.excerpt) {
         var snippetSpan = document.createElement('span');
         snippetSpan.className = 'sr-snippet';
-        snippetSpan.textContent = snippet;
+        snippetSpan.appendChild(renderExcerpt(data.excerpt));
         link.appendChild(snippetSpan);
       }
 
       resultsEl.appendChild(link);
     });
-  }
-
-  function getSnippet(text, query) {
-    if (!text) return '';
-    var idx = text.toLowerCase().indexOf(query.toLowerCase());
-    if (idx === -1) return '';
-    var start = Math.max(0, idx - 60);
-    var end = Math.min(text.length, idx + query.length + 120);
-    return (start > 0 ? '...' : '') + text.substring(start, end) + (end < text.length ? '...' : '');
   }
 })();
 </script>
