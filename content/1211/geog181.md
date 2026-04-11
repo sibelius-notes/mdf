@@ -49,6 +49,7 @@ Also the Universal Transverse Mercator (UTM) projection
 Note the difference between accuracy and precision; error and uncertainty.
 
 We can use math to find the extent of distortion on a location:
+
 \[
 \large \text {Scale factor} = {\text {Local Scale} \over \text {Principal Scale}}
 \]

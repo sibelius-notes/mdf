@@ -103,6 +103,7 @@ Throughout these notes the following conventions are used:
 - All vectors are column vectors; the transpose of \( A \) is \( A^T \).
 
 **Quadratic form.** If \( A = (a_{ij})_{n\times n} \) is symmetric (\( a_{ij} = a_{ji} \)), then
+
 \[
 f = Y^T A Y = \sum_i \sum_j a_{ij} y_i y_j
 \]
@@ -181,6 +182,7 @@ The denominator \(n - p - 1 \) accounts for the \(p + 1 \) degrees of freedom co
 ## Geometric Interpretation
 
 A linear model is a linear combination of **generator functions** \( g_1, \ldots, g_k \):
+
 \[
 \mu(x) = \beta_1 g_1(x) + \beta_2 g_2(x) + \cdots + \beta_k g_k(x)
 \]
@@ -326,17 +328,20 @@ For the OLS estimator specifically, the Gauss-Markov theorem guarantees that it 
 Suppose the true model is \( y_i = f(x_i) + \varepsilon_i \) with training set \( T = \{(x_i, y_i)\}_{i=1}^n \) and fitted function \( \hat f \).
 
 **Test error** (conditional on the training set \( T \)):
+
 \[
 \mathrm{Err}_T = \mathbb{E}\!\left[(Y - \hat f(X))^2 \mid T\right]
 \]
 where the expectation is over the true joint distribution of \( (X,Y) \).
 
 **Expected test error** (averaged also over random training sets):
+
 \[
 \mathrm{Err} = \mathbb{E}\!\left[(Y - \hat f(X))^2\right] = \mathbb{E}[\mathrm{Err}_T]
 \]
 
 **Training error**:
+
 \[
 \overline{\mathrm{Err}} = \frac{1}{n}\sum_{i=1}^n (y_i - \hat f(x_i))^2 = \frac{\mathrm{RSS}}{n}
 \]
@@ -344,6 +349,7 @@ where the expectation is over the true joint distribution of \( (X,Y) \).
 Training error uses the same data twice (to fit \( \hat f \) and to evaluate it) and systematically underestimates \( \mathrm{Err} \). As model complexity grows, \( \overline{\mathrm{Err}} \) decreases monotonically while \( \mathrm{Err} \) is U-shaped — the classic bias-variance trade-off in action.
 
 **Information criteria** provide in-sample estimates of test error. With \( d \) free parameters:
+
 \[
 \mathrm{AIC} = 2d + n\log(\mathrm{RSS}), \qquad \mathrm{BIC} = d\log(n) + n\log(\mathrm{RSS})
 \]
@@ -366,10 +372,12 @@ where \(\hat f^{(-\kappa(i))} \) denotes the fit computed with fold \(\kappa(i) 
 ## Leave-One-Out Cross-Validation
 
 **Leave-one-out cross-validation (LOOCV)** takes \(k = n \): each observation is held out in turn. LOO CV is approximately unbiased for \(\mathrm{Err}\). To see why, let \(\hat f^{-i}(x_i)\) denote the fitted value at \(x_i\) with observation \(i\) omitted. Then:
+
 \[
 \mathbb{E}\!\left[(y_i - \hat f^{-i}(x_i))^2\right] \approx \sigma^2 + \mathbb{E}\!\left[(f(x_i) - \hat f^{-i}(x_i))^2\right]
 \]
 which is approximately \(\mathrm{Err}\) up to the constant \(\sigma^2\). Naively, LOO requires refitting \(n\) times. For any **linear smoother** \(\hat{\mathbf{y}} = \mathbf{S}\mathbf{y}\), there is a shortcut that avoids this:
+
 \[
 \text{CV}_{\text{LOO}} = \frac{1}{n}\sum_{i=1}^n \left(\frac{y_i - \hat f(x_i)}{1 - s_{ii}}\right)^2
 \]
@@ -450,6 +458,7 @@ where \(\mathbf{W} = \text{diag}(w_1, \ldots, w_n) \). The WLS estimator has the
 \]
 
 **Derivation.** Differentiating the weighted objective and setting to zero:
+
 \[
 \frac{dS(\boldsymbol{\beta})}{d\boldsymbol{\beta}} = -2\mathbf{Y}^T\mathbf{W}\mathbf{X} + 2\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{W}\mathbf{X} = 0 \implies \hat{\boldsymbol{\beta}}_{\text{WLS}} = (\mathbf{X}^\top\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{W}\mathbf{y}
 \]
@@ -492,10 +501,12 @@ OLS minimises the sum of **squared** residuals, which means even a single extrem
 ## The Discrepancy Function Framework
 
 The **discrepancy function** for a fit \(\boldsymbol{\beta}\) is:
+
 \[
 S(\boldsymbol{\beta}) = \sum_{i=1}^n \rho(y_i - \mathbf{x}_i^T\boldsymbol{\beta}) = \sum_{i=1}^n \rho(r_i)
 \]
 where \(\rho\) is a real-valued **loss function** and \(r_i\) is the residual for observation \(i\). Taking the derivative and setting to zero:
+
 \[
 \frac{dS(\boldsymbol{\beta})}{d\boldsymbol{\beta}} = -\sum_{i=1}^n \psi(r_i)\mathbf{x}_i^T = \mathbf{0}^T, \qquad \psi = \rho'
 \]
@@ -521,10 +532,12 @@ where \(\hat\sigma \) is a robust scale estimate (typically the **median absolut
 Different choices of \(\psi \) define different M-estimators:
 
 **Huber's loss** uses \(\rho(r) = \tfrac{1}{2}r^2\) for small residuals and transitions to linear growth for large ones:
+
 \[
 \rho_H(r) = \begin{cases} \tfrac{1}{2}r^2 & |r| \leq c \\ c(|r| - \tfrac{1}{2}c) & |r| > c \end{cases}
 \]
 giving:
+
 \[
 \psi_H(r) = \begin{cases} r & |r| \leq c \\ c\,\mathrm{sign}(r) & |r| > c \end{cases}, \qquad
 w_H(r) = \frac{\psi_H(r)}{r} = \begin{cases} 1 & |r| \leq c \\ c/|r| & |r| > c \end{cases}
@@ -532,6 +545,7 @@ w_H(r) = \frac{\psi_H(r)}{r} = \begin{cases} 1 & |r| \leq c \\ c/|r| & |r| > c \
 The weight function \(w_H\) is 1 for inliers and decays as \(c/|r|\) for outliers — large residuals receive less weight but are not completely discarded. Huber suggested \(c = 1.345\), which achieves **95% asymptotic efficiency** relative to OLS when the true distribution is Gaussian. Since all recommended constants assume \(\mathrm{Var}(\varepsilon) = 1\), in practice residuals must be scaled: use \(r_i' = r_i/\hat{s}\) where \(\hat{s} = \mathrm{MAD}/0.6745\) (for the standard normal, \(\mathrm{MAD} = 0.6745\)).
 
 **Huber's ψ** (restating in the standardised parameterisation used with IRLS):
+
 \[
 \psi_H(u) = \begin{cases} u & |u| \leq k \\ k\,\mathrm{sign}(u) & |u| > k \end{cases}
 \]
@@ -592,6 +606,7 @@ The M-estimating equations can be rewritten as a WLS problem by defining weights
 \]
 
 The M-estimating equations can be rewritten as a WLS problem. Writing \( \psi(r_i)/r_i \cdot r_i \mathbf{x}_i = \mathbf{0} \) and defining weight \( w_i = \psi(r_i)/r_i \):
+
 \[
 \sum_{i=1}^n w_i(y_i - \mathbf{x}_i^T\boldsymbol{\beta})\mathbf{x}_i = \mathbf{0} \implies \hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^T\mathbf{W}\mathbf{y}, \quad \mathbf{W} = \mathrm{diag}(w_1,\ldots,w_n)
 \]
@@ -612,16 +627,19 @@ Each iteration is a standard WLS computation. **Why IRLS?** For ordinary Gaussia
 ## The Breakdown Point and High-Breakdown Estimators
 
 **Sensitivity curve.** To see how sensitive a statistic \(T_n(y_1,\ldots,y_n)\) is to an individual data point, define:
+
 \[
 SC(y) = \frac{T_n(y_1,\ldots,y_{n-1},y) - T_{n-1}(y_1,\ldots,y_{n-1})}{1/n}
 \]
 which measures the change in \(T_n\) (including one new point \(y\)) relative to \(T_{n-1}\) (without it), normalised by contamination size \(1/n\). For the sample mean, \(SC(y) = y - \bar{y}_{n-1}\), which is **unbounded** in \(y\) — a single arbitrarily large observation can shift the mean arbitrarily far.
 
 **Formal breakdown point.** Let \(\tilde{z}_i = (x_{i1},\ldots,x_{ip},y_i)^T\) be the \(i\)th data vector, \(Z = (\tilde{z}_1,\ldots,\tilde{z}_n)\) the full dataset, and \(T\) the statistic of interest. The **worst error** from swapping \(m\) data vectors is:
+
 \[
 e(m; T, Z) = \sup_{Z_m^*} \|T(Z_m^*) - T(Z)\|
 \]
 where \(Z_m^*\) is \(Z\) with any \(m\) of its data vectors replaced. The **breakdown point** is:
+
 \[
 \mathrm{BP}(T) = \min\left\{\frac{m}{n} \;\middle|\; e(m; T, Z) = \infty\right\}
 \]
@@ -641,6 +659,7 @@ The **breakdown point** of an estimator is the smallest fraction of contaminated
 \]
 
 **Least Trimmed Squares (LTS)** minimises the sum of the \(k\) smallest squared residuals:
+
 \[
 \hat{\boldsymbol{\beta}}_{\mathrm{LTS}} = \arg\min_{\boldsymbol{\beta}} \sum_{i=1}^k r_{(i)}^2(\boldsymbol{\beta})
 \]
@@ -721,6 +740,7 @@ The model is then linear in \(\boldsymbol{\beta} \), and OLS or penalised regres
 The resulting spline function is a piecewise polynomial of degree \(q \) that is \((q-1) \)-times continuously differentiable at each knot. Cubic splines (\(q=3 \) are the most popular: they are smooth to the eye (continuous up to the second derivative) while being computationally and analytically tractable.
 
 **Natural cubic splines (NCS)** add two boundary constraints: the spline is **linear** outside the boundary knots \(t_1, t_k\). A general cubic spline has \(k + 4\) parameters; requiring linearity outside imposes 4 constraints (\(\beta_2 = \beta_3 = 0\) for \(x < t_1\) and \(\sum_{j=1}^k \beta_{j+3} = 0\), \(\sum_{j=1}^k \beta_{j+3} t_j = 0\) for \(x > t_k\)), leaving \(k\) free parameters. The NCS basis is:
+
 \[
 N_1(x) = 1,\quad N_2(x) = x,\quad N_j(x) = d_{j-2}(x) - d_{k-1}(x)\quad j = 3,\ldots,k
 \]
@@ -749,34 +769,40 @@ Here \(\mathbf{N} \) is the matrix of natural spline basis functions evaluated a
 ## Smoothing Spline: Matrix Form
 
 Expressing the NCS as \(\hat{f}_\lambda(x) = \sum_j \beta_j N_j(x)\), the penalised criterion becomes:
+
 \[
 S(\boldsymbol{\beta}) = (Y - X\boldsymbol{\beta})^T(Y - X\boldsymbol{\beta}) + \lambda \boldsymbol{\beta}^T N \boldsymbol{\beta}
 \]
 where \(X_{ij} = N_j(x_i)\) and the roughness penalty matrix \(N_{jl} = \int_{-\infty}^\infty N''_j(x)N''_l(x)\,dx\). Setting \(dS/d\boldsymbol{\beta} = 0\):
+
 \[
 \hat{\boldsymbol{\beta}}_\lambda = (X^TX + \lambda N)^{-1}X^TY, \qquad \hat{Y}_\lambda = X(X^TX + \lambda N)^{-1}X^TY = A_\lambda Y
 \]
 The **effective degrees of freedom** is \(\mathrm{df}_\lambda = \mathrm{tr}(A_\lambda)\). As \(\lambda \to \infty\), \(\mathrm{df}_\lambda \to 2\) (intercept + slope only).
 
 **Reinsch form.** When the \(x_i\) values are distinct, \(X\) is square. The smoother matrix can then be written in the compact **Reinsch form**:
+
 \[
 S_\lambda = (I + \lambda K)^{-1}, \qquad K = (X^T)^{-1}NX^{-1}
 \]
 where \(K\) is the **roughness penalty matrix** (does not depend on \(\lambda\)). This form shows that the smoother matrix is the matrix inverse of a simple perturbation of the identity.
 
 **Penalty form.** Eigendecompose \(K = VDV^T\) with \(D = \mathrm{diag}(d_1,\ldots,d_n)\), \(d_i \geq 0\). Then:
+
 \[
 S_\lambda = V(I + \lambda D)^{-1}V^T, \qquad \rho_i(\lambda) = \frac{1}{1 + \lambda d_{n-i+1}}
 \]
 Note that \(d_{n-1} = d_n = 0\) so \(\rho_1(\lambda) = \rho_2(\lambda) = 1\): the first two eigenvectors (intercept and linear trend) are **never shrunk**, regardless of \(\lambda\). All other components are shrunk toward zero as \(\lambda\) increases.
 
 **Projection vs. shrinking smoothers.** For OLS (and regression splines):
+
 \[
 \hat{Y} = \sum_{i=1}^n \rho_i \langle \vec{u}_i, Y\rangle \vec{u}_i, \qquad \rho_i = \begin{cases} 1 & i = 1,\ldots,p \\ 0 & i = p+1,\ldots,n \end{cases}
 \]
 OLS **hard-thresholds** the eigenvector basis: it keeps the first \(p\) eigenvectors at full weight and discards the rest entirely. For this reason, OLS and regression splines are called **projection smoothers**.
 
 Smoothing splines instead use \(\rho_i(\lambda) = 1/(1+\lambda d_{n-i+1}) \in (0,1]\): every eigenvector is retained but **shrunk** toward zero, with rougher (higher-frequency) components shrunk more. Smoothing splines are therefore **shrinking smoothers**. The effective df is:
+
 \[
 \mathrm{df}_\lambda = \mathrm{tr}(S_\lambda) = \sum_{i=1}^n \frac{1}{1+\lambda d_i}
 \]
@@ -876,10 +902,12 @@ The additive assumption sacrifices interaction terms but allows the model to han
 ## Kernel Smoothing and the Nadaraya-Watson Estimator
 
 **Kernel regression** estimates \(f(x) = E[y|X=x] \) directly as a locally weighted average. A **kernel** \(K(t)\) must satisfy:
+
 \[
 \int K(t)\,dt = 1, \qquad \int t K(t)\,dt = 0, \qquad \int t^2 K(t)\,dt < \infty
 \]
 The first two conditions standardise \(K\); the third ensures weights are not too concentrated at the extremes. For bandwidth \(h\), the normalised weight assigned to neighbour \(x_i\) when estimating at \(x\) is:
+
 \[
 w_i = \frac{K\!\left(\frac{x_i - x}{h}\right)}{\sum_{j=1}^N K\!\left(\frac{x_j - x}{h}\right)}
 \]
@@ -905,14 +933,17 @@ The span \(\alpha \in (0,1] \) controls smoothness: large \(\alpha \) uses more 
 ## Local Linear Regression as a Linear Smoother
 
 Local linear regression is a linear smoother. For target point \(x\), it solves:
+
 \[
 \arg\min_{\alpha,\beta} \sum_{i=1}^n k_h(x - x_i)(y_i - \alpha - \beta x_i)^2
 \]
 Let \(B = [1\;x_1;\;\ldots;\;1\;x_n]^T\) (\(n\times 2\)) and \(W(x) = \mathrm{diag}(k_h(x-x_1),\ldots,k_h(x-x_n))\). The fitted value at \(x\) is:
+
 \[
 \hat{f}(x) = (1,x)(B^TW(x)B)^{-1}B^TW(x)Y = l^T(x)Y
 \]
 where \(l^T(x) = (1,x)(B^TW(x)B)^{-1}B^TW(x)\). Stacking these row-vectors:
+
 \[
 L_h = [l^T(x_1);\;\ldots;\;l^T(x_n)], \qquad \hat{Y}_h = L_h Y, \qquad \mathrm{df}_h = \mathrm{tr}(L_h)
 \]

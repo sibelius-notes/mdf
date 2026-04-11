@@ -41,12 +41,14 @@ The six constants \(p_0, p_1, p_2, q_0, q_1, q_2 \geq 0\) characterise the mater
 Before analysing the general ODE, it is instructive to study the two elementary building blocks.
 
 An **elastic spring** obeys Hooke's law:
+
 \[
 f_{sp}(t) = G\, r_{sp}(t)
 \]
 where \(G\) [N/m] is the stiffness. The response is instantaneous and reversible; there is no memory whatsoever.
 
 A **viscous dashpot** (a piston moving through oil) obeys:
+
 \[
 f_{dp}(t) = \eta\, \frac{dr_{dp}}{dt}(t)
 \]
@@ -208,6 +210,7 @@ F(s) = \mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt
 </div>
 
 The two most essential rules are the **differentiation rule**:
+
 \[
 \mathcal{L}\!\left\{\frac{df}{dt}\right\} = s F(s) - f(0), \qquad \mathcal{L}\!\left\{\frac{d^2f}{dt^2}\right\} = s^2 F(s) - s f(0) - f'(0)
 \]
@@ -361,6 +364,7 @@ This linear approximation is valid for metals under service loads, geological ro
 The extension to three dimensions requires the machinery of **tensors**. The essential tool is the **Einstein summation convention**: a repeated index in a term implies summation over that index, so \(a_{ij} b_j \equiv \sum_{j=1}^{3} a_{ij} b_j\).
 
 The **Kronecker delta** plays the role of the identity:
+
 \[
 \delta_{ij} = \begin{cases} 1 & i = j \\ 0 & i \neq j \end{cases}, \qquad \delta_{ij} a_j = a_i
 \]
@@ -402,6 +406,7 @@ This is the symmetric part of the displacement gradient. The diagonal components
 </div>
 
 The symmetry \(e_{ij} = e_{ji}\) follows immediately from the definition. The **volumetric strain** (dilatation) is the trace:
+
 \[
 e_{kk} = e_{11} + e_{22} + e_{33} = \nabla \cdot \mathbf{u}
 \]
@@ -541,10 +546,12 @@ Any symmetric tensor can be split uniquely into an isotropic part (proportional 
 where \(s_{ij} = \tau_{ij} - \frac{1}{3}\tau_{kk}\delta_{ij}\) and \(\varepsilon_{ij} = e_{ij} - \frac{1}{3}e_{kk}\delta_{ij}\) are deviatoric (trace-free). The trace \(e_{kk} = \nabla \cdot \mathbf{u}\) measures volumetric change; the deviatoric part measures shape change at constant volume.
 
 The Hooke's law constitutive relation decouples beautifully under this decomposition. The dilatational part gives:
+
 \[
 \tau_{kk} = 3K\, e_{kk}
 \]
 where \(K = \lambda + 2\mu/3\) is the **bulk modulus**. The deviatoric part gives:
+
 \[
 s_{ij} = 2\mu\, \varepsilon_{ij}
 \]
@@ -628,6 +635,7 @@ Fluids resist not strain but **rate of strain**. The velocity gradient tensor \(
 \]
 
 where
+
 \[
 \dot{e}_{ij} = \frac{1}{2}\!\left(u_{i,j} + u_{j,i}\right) \quad [s^{-1}]
 \]
@@ -649,6 +657,7 @@ The first fundamental law is that matter is neither created nor destroyed. For a
 \frac{D\rho}{Dt} + \rho(\nabla \cdot \mathbf{u}) = 0
 \]
 For an <strong>incompressible fluid</strong> (\(\rho = \text{const}\)):
+
 \[
 \nabla \cdot \mathbf{u} = 0
 \]
@@ -659,6 +668,7 @@ Incompressibility is an excellent approximation for liquids and for gas flows at
 ## 6.2 Conservation of Momentum and the Euler Equations
 
 Newton's second law for a fluid element, expressed using the material derivative:
+
 \[
 \rho\, \frac{D\mathbf{u}}{Dt} = -\rho\nabla\Pi + \nabla \cdot \boldsymbol{\tau}
 \]
@@ -679,6 +689,7 @@ Despite neglecting viscosity entirely, the Euler equations describe a vast range
 ## 6.3 Vorticity and Potential Flow
 
 The **vorticity** \(\boldsymbol{\omega} = \nabla \times \mathbf{u}\) is the most important diagnostic of a flow's rotational character. Taking the curl of the Euler equations:
+
 \[
 \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega} \cdot \nabla)\mathbf{u}
 \]
@@ -698,6 +709,7 @@ Substituting into incompressibility: \(\nabla^2\phi = 0\) — the potential sati
 The theory of potential flow is therefore the theory of harmonic functions, enriched with physical boundary conditions. On a solid boundary: \(\partial\phi/\partial n = 0\) (no normal flow through the wall). Far from a finite body: \(\mathbf{u} \to \mathbf{U}_\infty\) (uniform stream).
 
 For irrotational flows, the Bernoulli equation gives the pressure directly from the velocity potential:
+
 \[
 \frac{\partial\phi}{\partial t} + \frac{1}{2}|\nabla\phi|^2 + \tilde{p} = \text{const}
 \]
@@ -828,6 +840,7 @@ This **parabolic profile** is the hallmark of Poiseuille (pressure-driven) flow.
 </figure>
 
 For flow in a circular pipe of radius \(R\) — **Hagen–Poiseuille flow** — the analogous result is:
+
 \[
 u(r) = \frac{1}{4\nu}\left(-\frac{dp}{dz}\right)(R^2 - r^2)
 \]
@@ -1189,6 +1202,7 @@ For a **perfect conductor** (\(\sigma\to\infty\)) we must have \(\mathbf{E} + \m
 \mathbf{f} = \mathbf{J}\times\mathbf{B}
 \]
 This force couples the electromagnetic field to the fluid momentum equation. Using the MHD Ampère law \(\mathbf{J} = \nabla\times\mathbf{B}/\mu_0\), we can write the Lorentz force entirely in terms of \(\mathbf{B}\):
+
 \[
 \mathbf{f} = \frac{1}{\mu_0}(\nabla\times\mathbf{B})\times\mathbf{B} = -\nabla\!\left(\frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B}\cdot\nabla)\mathbf{B}
 \]

@@ -186,6 +186,7 @@ with inner product \( \langle x, y \rangle = \sum_{n \geq 1} r_n x_n \overline{y
 \bigoplus_p X_n := \left\{ (x_n) \in X : \|(x_n)\|_p := \left(\sum_n \|x_n\|_n^p\right)^{1/p} < \infty \right\},
 \]
 and the <strong>\( \ell^\infty \)-direct sum</strong> is
+
 \[
 \bigoplus_\infty X_n := \left\{ (x_n) \in X : \|(x_n)\|_\infty := \sup_n \|x_n\|_n < \infty \right\}.
 \]

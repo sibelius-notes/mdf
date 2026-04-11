@@ -39,6 +39,7 @@ Every statistical investigation follows five stages: **Problem**, **Plan**, **Da
 </div>
 
 The two most important population quantities are the **population mean** and the **population variance**:
+
 \[
 \mu = \frac{1}{N}\sum_{i=1}^{N} y_i, \qquad \sigma^2 = \frac{\sum_{i=1}^{N}(y_i - \mu)^2}{N-1}.
 \]
@@ -46,6 +47,7 @@ The two most important population quantities are the **population mean** and the
 Note that the population variance uses \(N-1\) in the denominator, following the convention in Lohr (2022). The **population total** is \(\tau = N\mu = \sum_{i=1}^{N} y_i\).
 
 When \(y_i \in \{0,1\}\), the population mean becomes a **population proportion**:
+
 \[
 \pi = \frac{1}{N}\sum_{i=1}^{N} y_i.
 \]
@@ -62,6 +64,7 @@ When \(y_i \in \{0,1\}\), the population mean becomes a **population proportion*
 \pi_i = P(i \in \mathcal{S}) = \sum_{\mathcal{S} \ni i} P(\mathcal{S}).
 \]
 The <strong>second-order inclusion probability</strong> for units \(i\) and \(j\) is
+
 \[
 \pi_{ij} = P(i \in \mathcal{S} \text{ and } j \in \mathcal{S}).
 \]
@@ -69,6 +72,7 @@ Note that \(\pi_{ii} = \pi_i\).
 </div>
 
 It is useful to introduce a **sample membership indicator**:
+
 \[
 I_i = \begin{cases} 1 & \text{if unit } i \text{ is in the sample,} \\ 0 & \text{otherwise.} \end{cases}
 \]
@@ -84,6 +88,7 @@ The cornerstone of design-based inference is the Horvitz-Thompson (HT) estimator
 \hat{\tau}_{\text{HT}} = \sum_{i \in \mathcal{S}} \frac{y_i}{\pi_i} = \sum_{i=1}^{N} \frac{I_i\, y_i}{\pi_i}.
 \]
 This estimator is <strong>design-unbiased</strong>:
+
 \[
 E[\hat{\tau}_{\text{HT}}] = \sum_{i=1}^{N} \frac{y_i}{\pi_i}\, E[I_i] = \sum_{i=1}^{N} y_i = \tau.
 \]
@@ -116,10 +121,12 @@ P(\mathcal{S}) = \frac{1}{\binom{N}{n}}.
 </div>
 
 Under SRS, the first-order inclusion probability for every unit is
+
 \[
 \pi_i = \frac{\binom{N-1}{n-1}}{\binom{N}{n}} = \frac{n}{N},
 \]
 and the second-order inclusion probability is
+
 \[
 \pi_{ij} = \frac{\binom{N-2}{n-2}}{\binom{N}{n}} = \frac{n(n-1)}{N(N-1)}, \quad i \neq j.
 \]
@@ -127,10 +134,12 @@ and the second-order inclusion probability is
 ## 2.2 The HT Estimator under SRS
 
 Since every \(\pi_i = n/N\), the HT estimator of the total simplifies to
+
 \[
 \hat{\tau}_{\text{HT}} = \sum_{i \in \mathcal{S}} \frac{y_i}{n/N} = N \bar{y},
 \]
 and the HT estimator of the mean is just the sample mean:
+
 \[
 \hat{\mu}_{\text{HT}} = \bar{y} = \frac{1}{n}\sum_{i \in \mathcal{S}} y_i.
 \]
@@ -156,11 +165,13 @@ Substituting \(\text{Var}(I_i) = \frac{n}{N}\bigl(1 - \frac{n}{N}\bigr)\) and \(
 </div>
 
 An unbiased estimator of the variance is
+
 \[
 \widehat{\text{Var}}(\bar{y}) = \left(1 - \frac{n}{N}\right)\frac{s^2}{n}, \qquad s^2 = \frac{\sum_{i \in \mathcal{S}}(y_i - \bar{y})^2}{n-1}.
 \]
 
 For **proportions**, when \(y_i \in \{0,1\}\), the sample proportion \(\hat{\pi} = \bar{y}\) estimates \(\pi\), with
+
 \[
 \hat{\sigma}^2 = \frac{n}{n-1}\hat{\pi}(1-\hat{\pi}) \quad \text{(for large } n \text{, approximately } \hat{\pi}(1-\hat{\pi})).
 \]
@@ -168,10 +179,12 @@ For **proportions**, when \(y_i \in \{0,1\}\), the sample proportion \(\hat{\pi}
 ## 2.4 Sample Size Determination
 
 To guarantee a margin of error \(E\) at confidence level \(1-\alpha\), set
+
 \[
 E = c\,\frac{\hat{\sigma}}{\sqrt{n}}\sqrt{1 - \frac{n}{N}},
 \]
 where \(c = z_{\alpha/2}\). Solving for \(n\):
+
 \[
 n = \left(\frac{E^2}{c^2 \sigma^2} + \frac{1}{N}\right)^{-1}.
 \]
@@ -193,15 +206,18 @@ Without the fpc (treating \(N \to \infty\)), one would need \(n = 1.96^2 \cdot 9
 ## 2.5 CLT for Finite Populations and Confidence Intervals
 
 Under SRS, as \(n\) and \(N\) both grow (with \(n/N \to f \in (0,1)\)), the sample mean is asymptotically normal:
+
 \[
 \frac{\bar{y} - \mu}{\sqrt{(1 - n/N)\,\sigma^2/n}} \;\xrightarrow{d}\; \mathcal{N}(0,1).
 \]
 
 A \(100(1-\alpha)\%\) confidence interval for \(\mu\) is
+
 \[
 \bar{y} \;\pm\; z_{\alpha/2}\,\frac{\hat{\sigma}}{\sqrt{n}}\,\sqrt{1 - \frac{n}{N}},
 \]
 and for \(\pi\):
+
 \[
 \hat{\pi} \;\pm\; z_{\alpha/2}\,\sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}\left(1-\frac{n}{N}\right)}.
 \]
@@ -219,6 +235,7 @@ Stratification divides the population into non-overlapping subgroups (strata) an
 </div>
 
 The **stratum weight** is \(w_h = N_h / N\). The population mean can be written as a weighted combination of stratum means:
+
 \[
 \mu = \sum_{h=1}^{H} w_h \mu_h, \qquad \mu_h = \frac{1}{N_h}\sum_{i \in U_h} y_i.
 \]
@@ -226,6 +243,7 @@ The **stratum weight** is \(w_h = N_h / N\). The population mean can be written 
 ## 3.2 The HT Estimator under Stratified SRS
 
 Under stratified SRS, the inclusion probability for unit \(i\) in stratum \(h\) is \(\pi_i = n_h / N_h\). The HT estimator of the mean is the **stratified mean**:
+
 \[
 \hat{\mu}_{\text{str}} = \sum_{h=1}^{H} w_h \bar{y}_h, \qquad \bar{y}_h = \frac{1}{n_h}\sum_{i \in \mathcal{S}_h} y_i.
 \]
@@ -239,11 +257,13 @@ where \(\sigma_h^2\) is the population variance within stratum \(h\).
 </div>
 
 An unbiased variance estimator is obtained by substituting sample variances:
+
 \[
 \widehat{\text{Var}}(\hat{\mu}_{\text{str}}) = \sum_{h=1}^{H} w_h^2\,\frac{s_h^2}{n_h}\left(1 - \frac{n_h}{N_h}\right).
 \]
 
 A confidence interval for \(\mu\) is
+
 \[
 \hat{\mu}_{\text{str}} \;\pm\; z_{\alpha/2}\,\sqrt{\widehat{\text{Var}}(\hat{\mu}_{\text{str}})}.
 \]
@@ -286,10 +306,12 @@ In practice, the stratum variances are unknown. A common approach is to take a s
 </div>
 
 The poststratified estimator is
+
 \[
 \hat{\mu}_{\text{post}} = \sum_{h=1}^{H} w_h \bar{y}_h,
 \]
 which looks identical to \(\hat{\mu}_{\text{str}}\) but differs because \(n_h\) is random. The estimated variance is
+
 \[
 \widehat{\text{Var}}(\hat{\mu}_{\text{post}}) = \sum_{h=1}^{H} w_h^2\left(1 - \frac{n_h}{N_h}\right)\frac{s_h^2}{n_h}.
 \]
@@ -331,11 +353,13 @@ When a variable \(x\) correlated with the response \(y\) is known for the entire
 ## 4.1 The Regression Estimator
 
 Suppose \(y_i\) is linearly related to \(x_i\):
+
 \[
 y_i = \alpha + \beta(x_i - \bar{x}) + R_i, \qquad R_i \sim \mathcal{N}(0, \sigma^2).
 \]
 
 Using least squares on the sample,
+
 \[
 \hat{\alpha} = \bar{y}, \qquad \hat{\beta} = \frac{s_{xy}}{s_x^2} = \frac{\sum_{i \in \mathcal{S}} y_i(x_i - \bar{x})}{\sum_{i \in \mathcal{S}} (x_i - \bar{x})^2},
 \]
@@ -352,6 +376,7 @@ When the sample mean of \(x\) equals the population mean (\(\bar{x} = \mu_x\)), 
 
 <div class="remark">
 The regression estimator is <strong>approximately unbiased</strong> (biased for finite \(n\), unbiased in the limit). Its approximate variance is
+
 \[
 \text{Var}(\hat{\mu}_{\text{reg}}) \approx \left(1 - \frac{n}{N}\right)\frac{\sigma_r^2}{n},
 \]
@@ -359,6 +384,7 @@ where \(\sigma_r^2\) is the variance of the residuals \(r_i = y_i - \hat{\alpha}
 </div>
 
 A confidence interval is
+
 \[
 \hat{\mu}_{\text{reg}} \;\pm\; c\,\frac{\hat{\sigma}_r}{\sqrt{n}}\,\sqrt{1 - \frac{n}{N}}, \qquad \hat{\sigma}_r^2 = \frac{\sum_{i \in \mathcal{S}} (r_i - \bar{r})^2}{n-1}.
 \]
@@ -373,11 +399,13 @@ A confidence interval is
 </div>
 
 The ratio model assumes that the variance of \(y_i\) increases with \(x_i\). To handle this heteroscedasticity, divide by \(\sqrt{x_i}\) to equalize variances:
+
 \[
 \frac{y_i}{\sqrt{x_i}} = \beta\sqrt{x_i} + \frac{R_i}{\sqrt{x_i}}, \qquad \frac{R_i}{\sqrt{x_i}} \sim \mathcal{N}(0, \sigma^2).
 \]
 
 Using least squares on the transformed model (with no intercept) gives \(\hat{\beta} = \bar{y}/\bar{x}\). The confidence interval is
+
 \[
 \hat{\mu}_{\text{ratio}} \;\pm\; c\,\frac{\hat{\sigma}_{\text{ratio}}}{\sqrt{n}}\,\sqrt{1 - \frac{n}{N}},
 \]
@@ -388,15 +416,18 @@ where \(\hat{\sigma}_{\text{ratio}}^2 = W/(n-1)\) and \(W\) is the residual sum 
 When the goal is to estimate the mean of a subgroup (e.g., the mean grade of male students), ratio estimation applies naturally. If \(z_i\) is a binary indicator for subgroup membership, the subgroup mean is \(\theta = \mu / \pi\) where \(\mu\) is the average of \(y_i z_i\) and \(\pi\) is the proportion of units in the subgroup. The estimate is \(\hat{\theta} = \hat{\mu}/\hat{\pi}\).
 
 Using Taylor's approximation for the ratio \(\tilde{\mu}/\tilde{\pi}\) about \((\mu, \pi)\):
+
 \[
 \frac{\tilde{\mu}}{\tilde{\pi}} \approx \frac{\mu}{\pi} + \frac{1}{\pi}(\tilde{\mu} - \mu) - \frac{\mu}{\pi^2}(\tilde{\pi} - \pi),
 \]
 which yields
+
 \[
 \text{Var}\!\left(\frac{\tilde{\mu}}{\tilde{\pi}}\right) \approx \frac{1}{\pi^2}\,\text{Var}\!\left(\tilde{\mu} - \frac{\mu}{\pi}\tilde{\pi}\right).
 \]
 
 A confidence interval is
+
 \[
 \hat{\theta} \;\pm\; c\,\frac{1}{\hat{\pi}}\,\frac{\hat{\sigma}_{\text{ratio}}}{\sqrt{n}}\,\sqrt{1 - \frac{n}{N}}, \qquad \hat{\sigma}_{\text{ratio}}^2 = \frac{\sum_{i \in \mathcal{S}}(y_i - \hat{\theta} z_i)^2}{n-1}.
 \]
@@ -438,16 +469,19 @@ In many practical surveys, a list of individual units does not exist, but a list
 </div>
 
 If clusters are selected by SRS of clusters, each cluster has inclusion probability \(\pi_j^{(c)} = m/M\). The HT estimator of the population total is
+
 \[
 \hat{\tau}_{\text{cl}} = \frac{M}{m}\sum_{j \in \mathcal{S}_c} t_j, \qquad t_j = \sum_{i \in C_j} y_i,
 \]
 where \(t_j\) is the \(j\)-th cluster total. The variance under SRS of clusters is
+
 \[
 \text{Var}(\hat{\tau}_{\text{cl}}) = M^2 \frac{1 - f_c}{m}\, S_t^2, \qquad S_t^2 = \frac{1}{M-1}\sum_{j=1}^{M}(t_j - \bar{t})^2,
 \]
 where \(f_c = m/M\) and \(\bar{t} = \tau/M\). The estimated variance replaces \(S_t^2\) with the sample variance of observed cluster totals \(s_t^2\).
 
 For the population mean \(\bar{y} = \tau/N\), the natural estimator is \(\hat{\bar{y}}_{\text{cl}} = \hat{\tau}_{\text{cl}}/N\) when \(N\) is known. When \(N\) is unknown, the **ratio estimator of the mean** is
+
 \[
 \hat{\bar{y}}_r = \frac{\sum_{j \in \mathcal{S}_c} t_j}{\sum_{j \in \mathcal{S}_c} N_j}.
 \]
@@ -455,11 +489,13 @@ For the population mean \(\bar{y} = \tau/N\), the natural estimator is \(\hat{\b
 ### Design Effect for Cluster Sampling
 
 The **design effect** (deff) compares the variance of a cluster design to the variance of an SRS of the same total sample size \(n\):
+
 \[
 \text{deff} = \frac{\text{Var}_{\text{cluster}}(\hat{\bar{y}})}{\text{Var}_{\text{SRS}}(\hat{\bar{y}})}.
 \]
 
 For clusters of equal size \(N_j = \bar{N}\), the design effect is approximately
+
 \[
 \text{deff} \approx 1 + (\bar{N} - 1)\rho,
 \]
@@ -480,17 +516,20 @@ Thus the effective sample size is only \(600/2.45 \approx 245\), and the cluster
 </div>
 
 Under **SRS-SRS** (SRS at both stages), the inclusion probability for unit \(i\) in cluster \(j\) is
+
 \[
 \pi_{ij} = \frac{m}{M}\cdot\frac{n_j}{N_j}.
 \]
 
 The Horvitz-Thompson estimator of the population total is
+
 \[
 \hat{\tau} = \frac{M}{m}\sum_{j=1}^{m}\frac{N_j}{n_j}\sum_{i \in \mathcal{S}_j} y_{ij} = \frac{M}{m}\sum_{j=1}^{m} N_j \bar{y}_j,
 \]
 where \(\bar{y}_j\) is the sample mean within cluster \(j\).
 
 The variance decomposes into a **between-cluster** component and a **within-cluster** component:
+
 \[
 \text{Var}(\hat{\tau}) = M^2 \frac{1 - f_c}{m}\, S_b^2 + \frac{M}{m}\sum_{j=1}^{M} N_j^2 \frac{1 - f_j}{n_j}\, S_{wj}^2,
 \]
@@ -507,6 +546,7 @@ When the first stage uses **stratified SRS of clusters** and the second stage us
 Suppose the \(M\) clusters are partitioned into \(H\) strata, with stratum \(h\) containing \(M_h\) clusters. We select \(m_h\) clusters from stratum \(h\) by SRS, and then subsample \(n_{hj}\) units within each selected cluster.
 
 The estimator of the total is
+
 \[
 \hat{\tau}_{\text{STSRS-SRS}} = \sum_{h=1}^{H} \frac{M_h}{m_h} \sum_{j=1}^{m_h} N_{hj}\,\bar{y}_{hj},
 \]
@@ -524,10 +564,12 @@ p_j = \frac{M_j}{\sum_{k=1}^{M} M_k}.
 </div>
 
 Under **PPS with replacement** (drawing \(m\) clusters independently with probabilities \(p_j\)), the **Hansen-Hurwitz estimator** of the population total is
+
 \[
 \hat{\tau}_{\text{HH}} = \frac{1}{m}\sum_{k=1}^{m}\frac{t_{j_k}}{p_{j_k}},
 \]
 where \(j_k\) is the cluster selected on the \(k\)-th draw and \(t_{j_k}\) is its cluster total. This estimator is unbiased with variance
+
 \[
 \text{Var}(\hat{\tau}_{\text{HH}}) = \frac{1}{m}\sum_{j=1}^{M} p_j\!\left(\frac{t_j}{p_j} - \tau\right)^{\!2}.
 \]
@@ -545,6 +587,7 @@ If \(t_j/p_j\) is approximately constant across clusters (i.e., cluster totals a
 ## 6.1 Sampling Weights
 
 Every probability sampling design assigns each unit a known inclusion probability \(\pi_i\). The **sampling weight** of unit \(i\) is \(d_i = 1/\pi_i\), representing the number of population units that unit \(i\) represents. The HT estimator can then be written compactly as
+
 \[
 \hat{\tau}_{\text{HT}} = \sum_{i \in \mathcal{S}} d_i\, y_i.
 \]
@@ -554,6 +597,7 @@ In complex surveys, weights undergo several adjustments:
 ### Base Weights and Weight Adjustments
 
 The **base weight** (or design weight) is simply \(d_i = 1/\pi_i\). In practice, the final weight applied to each respondent is
+
 \[
 w_i = d_i \times a_i \times g_i,
 \]
@@ -562,6 +606,7 @@ where \(a_i\) is a **nonresponse adjustment** factor and \(g_i\) is a **calibrat
 ### Calibration and Post-Stratification Weights
 
 If external information is available --- for instance, census counts by age-sex groups --- the weights can be **calibrated** so that the survey-weighted totals match the known population totals. For \(K\) calibration groups with known sizes \(N_k\), the calibrated weight for unit \(i\) in group \(k\) is
+
 \[
 w_i^{\text{cal}} = d_i \times \frac{N_k}{\sum_{j \in \mathcal{S} \cap \text{group } k} d_j}.
 \]
@@ -586,6 +631,7 @@ Two types of nonresponse:
 <li>Phase 2: Draw a subsample of \(m\) non-respondents and follow up intensively (e.g., in-person interviews).</li>
 </ul>
 The adjusted estimator is
+
 \[
 \hat{\mu} = \frac{n_R}{n}\hat{\mu}_R + \frac{n - n_R}{n}\hat{\mu}_m,
 \]
@@ -597,6 +643,7 @@ This estimator is approximately unbiased for the population mean, as the follow-
 ### Nonresponse Weight Adjustment
 
 When follow-up of non-respondents is not feasible, a common approach is **response propensity weighting**. If units are grouped into **response homogeneity groups** (RHGs) where the response probability \(\phi_k\) is approximately constant within group \(k\), the adjusted weight is
+
 \[
 w_i^{\text{adj}} = \frac{d_i}{\hat{\phi}_k}, \qquad \hat{\phi}_k = \frac{\sum_{j \in \mathcal{S} \cap \text{group } k} R_j \, d_j}{\sum_{j \in \mathcal{S} \cap \text{group } k} d_j},
 \]
@@ -609,6 +656,7 @@ For complex designs (stratification + clustering + unequal weights), analytic va
 ### Linearization (Taylor Series)
 
 For a nonlinear estimator \(\hat{\theta} = g(\hat{\tau}_1, \hat{\tau}_2, \ldots)\), approximate by the first-order Taylor expansion about the true values:
+
 \[
 \hat{\theta} \approx g(\tau_1, \tau_2, \ldots) + \sum_k \frac{\partial g}{\partial \tau_k}\bigg|_{\boldsymbol{\tau}} (\hat{\tau}_k - \tau_k).
 \]
@@ -654,6 +702,7 @@ for \(i = 1, \ldots, t\) and \(j = 1, \ldots, r\), where \(\mu\) is the overall 
 </div>
 
 The least-squares estimates are:
+
 \[
 \hat{\mu} = \bar{y}_{++}, \qquad \hat{\tau}_i = \bar{y}_{i+} - \bar{y}_{++}, \qquad \hat{\sigma}^2 = \frac{W}{n - q + c} = \frac{W}{tr - t},
 \]
@@ -662,11 +711,13 @@ where \(W = \sum_{ij}(y_{ij} - \hat{\mu} - \hat{\tau}_i)^2\) is the residual sum
 The **estimator** of \(\tau_i\) is \(\tilde{\tau}_i = \bar{Y}_{i+} - \bar{Y}_{++}\). It is unbiased: \(E[\tilde{\tau}_i] = \tau_i\).
 
 For the **variance** of the estimators:
+
 \[
 \text{Var}(\tilde{\mu}) = \frac{\sigma^2}{tr}, \qquad \text{Var}(\tilde{\tau}_i) = \frac{\sigma^2}{2r}.
 \]
 
 A confidence interval for \(\tau_i\) is
+
 \[
 \hat{\tau}_i \;\pm\; t^*\,\sqrt{\frac{\hat{\sigma}^2}{2r}}, \qquad t^* \sim t(n - q + c).
 \]
@@ -699,6 +750,7 @@ F = \frac{\text{MS(Trt)}}{\text{MS(Res)}} \sim F(t-1, n-t).
 
 <div class="remark">
 The expected value of \(F\) is
+
 \[
 E[\tilde{F}] = 1 + \frac{r\sum_{i=1}^{t}\tau_i^2}{(t-1)\sigma^2}.
 \]
@@ -722,6 +774,7 @@ The estimator is \(\hat{\theta} = \sum a_i \hat{\tau}_i\), which is unbiased wit
 ### Tukey's Honestly Significant Difference
 
 When all pairwise comparisons \(\tau_i - \tau_j\) are of interest, Tukey's method controls the **familywise error rate** (the probability of at least one false rejection). The simultaneous confidence intervals are
+
 \[
 (\hat{\tau}_i - \hat{\tau}_j) \;\pm\; q_{\alpha}(t, n-t)\,\frac{\hat{\sigma}}{\sqrt{r}},
 \]
@@ -772,6 +825,7 @@ The LS estimates are \(\hat{\mu} = \bar{y}_{+++}\) and \(\hat{\tau}_{ij} = \bar{
 ## 8.2 Interaction
 
 **Interaction** means that the effect of one factor depends on the level of the other. If the main effects of factor A are denoted \(\alpha_i\) and the main effects of factor B are \(\beta_j\), the full model is
+
 \[
 Y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + R_{ijk},
 \]
@@ -804,10 +858,12 @@ Test \(H_0: \text{no interaction}\) using \(F = \text{MS(A:B)} / \text{MS(Res)}\
 ## 8.4 Sum of Squares Decomposition
 
 In a balanced design (equal replication \(r\) in every cell), the treatment sum of squares decomposes cleanly:
+
 \[
 \text{SS(Trt)} = \text{SS(A)} + \text{SS(B)} + \text{SS(A:B)},
 \]
 where
+
 \[
 \text{SS(A)} = r\ell_2 \sum_{i=1}^{\ell_1}(\bar{y}_{i++} - \bar{y}_{+++})^2, \qquad \text{SS(B)} = r\ell_1 \sum_{j=1}^{\ell_2}(\bar{y}_{+j+} - \bar{y}_{+++})^2,
 \]
@@ -852,6 +908,7 @@ At \(\alpha = 0.05\): irrigation is significant (\(F_{1,18} = 18.75\), \(p < 0.0
 ## 8.5 Multiple Comparisons in Two-Way Designs
 
 When a main effect is significant, **pairwise comparisons** identify which levels differ. Tukey's HSD can be applied within each significant factor. For factor A with \(\ell_1\) levels:
+
 \[
 \bar{y}_{i++} - \bar{y}_{i'++} \pm q_{\alpha, \ell_1, \nu}\sqrt{\frac{\text{MS(Res)}}{r\ell_2}},
 \]
@@ -887,6 +944,7 @@ for \(i = 1, \ldots, t\) and \(j = 1, \ldots, r\), where \(\beta_j\) is the effe
 ## 9.2 Analysis of the RCBD
 
 The LS estimates are:
+
 \[
 \hat{\mu} = \bar{y}_{++}, \qquad \hat{\tau}_i = \bar{y}_{i+} - \bar{y}_{++}, \qquad \hat{\beta}_j = \bar{y}_{+j} - \bar{y}_{++},
 \]
@@ -910,11 +968,13 @@ The F test for block effects is \(F = \text{MS(Block)}/\text{MS(Res)} \sim F(r-1
 ## 9.3 Treatment Comparisons in RCBD
 
 The difference in treatment effects is estimated by \(\hat{\tau}_i - \hat{\tau}_j = \bar{y}_{i+} - \bar{y}_{j+}\). Because each treatment appears in every block, the block effects cancel in the difference, giving
+
 \[
 \text{Var}(\hat{\tau}_i - \hat{\tau}_j) = \frac{2\sigma^2}{r}.
 \]
 
 A \((1-\alpha)\) confidence interval for \(\tau_i - \tau_j\) is
+
 \[
 (\bar{y}_{i+} - \bar{y}_{j+}) \;\pm\; t_{\alpha/2,(r-1)(t-1)}\,\sqrt{\frac{2\,\text{MS(Res)}}{r}}.
 \]
@@ -940,6 +1000,7 @@ If blocks are not effective (the block effect is not significant), the RCBD may 
 ## 9.5 Latin Squares
 
 A **Latin square** design controls for two blocking factors simultaneously. For \(t\) treatments, a \(t \times t\) Latin square assigns each treatment exactly once to each row and each column. The model is
+
 \[
 Y_{ijk} = \mu + \tau_i + \beta_j + \gamma_k + R_{ijk},
 \]
@@ -983,16 +1044,19 @@ Factorial designs study the effects of multiple factors simultaneously. **Two-le
 </div>
 
 The **main effect of A** is the average difference in response when A changes from low to high:
+
 \[
 \text{ME}(A) = \frac{1}{2}[(\bar{y}_{ab} + \bar{y}_{a}) - (\bar{y}_{b} + \bar{y}_{(1)})].
 \]
 
 The **main effect of B** is defined analogously. The **interaction effect AB** measures how the effect of A changes across levels of B:
+
 \[
 \text{Int}(AB) = \frac{1}{2}[(\bar{y}_{ab} - \bar{y}_{b}) - (\bar{y}_{a} - \bar{y}_{(1)})].
 \]
 
 Under the CRD model, the ANOVA table decomposes \(\text{SS(Trt)}\) into:
+
 \[
 \text{SS(Trt)} = \text{SS(A)} + \text{SS(B)} + \text{SS(AB)},
 \]

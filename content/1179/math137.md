@@ -641,6 +641,7 @@ In Leibniz notation: \(\frac{dz}{dx} = \frac{dz}{dy}\cdot\frac{dy}{dx}\).
 ## 3.9 Derivatives of Other Trigonometric Functions
 
 From the quotient rule and the derivatives of \(\sin\) and \(\cos\):
+
 \[
 \frac{d}{dx}\tan(x) = \sec^2(x), \quad \frac{d}{dx}\cot(x) = -\csc^2(x),
 \]
@@ -664,6 +665,7 @@ Key consequences: \(\frac{d}{dx}\ln(x) = \frac{1}{x}\).
 ## 3.11 Derivatives of Inverse Trigonometric Functions
 
 Using the Chain Rule and Inverse Function Theorem:
+
 \[
 \frac{d}{dx}\arcsin(x) = \frac{1}{\sqrt{1-x^2}}, \quad \frac{d}{dx}\arccos(x) = \frac{-1}{\sqrt{1-x^2}}, \quad \frac{d}{dx}\arctan(x) = \frac{1}{1+x^2}.
 \]

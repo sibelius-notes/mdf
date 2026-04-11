@@ -171,6 +171,7 @@ This is proved by covering the compact support of \(f\) by finitely many transla
 The key idea behind the construction of Haar measure is to approximate the "size" of one function by how many translates of another are needed to cover it. This ratio should be independent of the reference function chosen, and as the covering function narrows to a point, the ratio converges to the integral we seek.
 
 For \(f, \phi \in C_c^+(G)\), define the **covering number**:
+
 \[
 (f : \phi) = \inf\left\{\sum_{j=1}^n c_j : \exists x_1, \ldots, x_n \in G,\ c_j > 0,\ f \leq \sum_{j=1}^n c_j (\phi \cdot x_j)\right\}.
 \]
@@ -179,14 +180,17 @@ To see why this infimum is finite: since \(\mathrm{supp}(f)\) is compact, it is 
 The covering number is left-invariant: \((f \cdot x : \phi) = (f : \phi)\) for all \(x \in G\), since translating \(f\) does not change how many translates of \(\phi\) are needed. It is also subadditive: \((f_1 + f_2 : \phi) \leq (f_1 : \phi) + (f_2 : \phi)\), and it satisfies the key transitivity bound \((f : \phi) \leq (f : g)(g : \phi)\).
 
 Fix a reference function \(\psi_0 \in C_c^+(G)\) and normalize:
+
 \[
 I_\phi(f) = \frac{(f : \phi)}{(\psi_0 : \phi)}.
 \]
 Since \((\psi_0 : \phi)(f : \psi_0)^{-1} \leq (f : \phi) \leq (f : \psi_0)(\psi_0 : \phi)^{-1} \cdot (\psi_0 : \phi)\), we get the uniform bound
+
 \[
 (f : \psi_0)^{-1} \leq I_\phi(f) \leq (f : \psi_0).
 \]
 The family \((I_\phi(f))_\phi\) thus lies in the bounded interval \([(f:\psi_0)^{-1}, (f:\psi_0)]\) for each fixed \(f \in C_c^+(G)\). By Tychonoff's theorem, the product space
+
 \[
 \prod_{f \in C_c^+(G)} \left[\frac{1}{(f:\psi_0)},\, (f:\psi_0)\right]
 \]
@@ -206,10 +210,12 @@ is compact. The net of "covering approximations" \(\bigl(I_\phi(f)\bigr)_{f \in 
 f_i \leq \sum_j c_j (g_i(x_j) + \varepsilon)(\phi \cdot x_j),
 \]
 and summing over \(i = 1, 2\) and using \(g_1 + g_2 \leq 1\):
+
 \[
 (f_1 : \phi) + (f_2 : \phi) \leq (f_1 + f_2 + \delta h : \phi)(1 + 2\varepsilon).
 \]
 Normalizing by \((\psi_0 : \phi)\) and taking \(\delta \to 0\), then \(\varepsilon \to 0\), gives near-additivity: for each \(\varepsilon > 0\) there is a neighborhood \(\mathcal{U}\) of \(e\) such that when \(\mathrm{supp}(\phi) \subseteq \mathcal{U}\),
+
 \[
 I_\phi(f_1) + I_\phi(f_2) \leq I_\phi(f_1 + f_2) + \varepsilon.
 \]
@@ -287,50 +293,61 @@ Local finiteness: for any compact \(K\), pick \(f \in C_c^+(G)\) with \(f \geq \
 J = \int_G \int_G f(y) g(y^{-1}x)\, dm(y)\, dm'(x).
 \]
 By Fubini's theorem (justified because all integrands are nonneg and compactly supported),
+
 \[
 J = \int_G f(y) \left(\int_G g(y^{-1}x)\, dm'(x)\right) dm(y).
 \]
 By left invariance of \(m'\), the inner integral equals \(\int_G g(x)\, dm'(x) = \int g\, dm'\), which is independent of \(y\). Hence \(J = \left(\int f\, dm\right)\left(\int g\, dm'\right)\).
 
 On the other hand, substituting \(x = yz\) (which is a measure-preserving change of variables by left invariance of both \(m\) and \(m'\)):
+
 \[
 J = \int_G \int_G f(y) g(z)\, dm(y)\, dm'(z) \cdot \frac{dm(yz)}{dm(z)}\ \bigg|\ \text{(but we computed differently)}.
 \]
 More directly, swap the order:
+
 \[
 J = \int_G g(z) \left(\int_G f(y)\, dm(y)\right) dm'(z) = \left(\int f\, dm\right)\left(\int g\, dm'\right).
 \]
 Wait — that gives the same thing. Let us instead substitute \(y \mapsto xy^{-1}\) in the original (using left-invariance of \(m'\) by \(x \mapsto xy^{-1}\)):
 
 Actually the cleanest argument is:
+
 \[
 \int_G \int_G f(y) g(y^{-1}x)\, dm(y)\, dm'(x) = \left(\int_G f\, dm\right) \cdot \left(\int_G g\, dm'\right).
 \]
 Interchanging the order via Fubini and making the substitution \(x \mapsto yx\) in the \(m'\)-integral (using left invariance of \(m'\)):
+
 \[
 \int_G \int_G f(y) g(y^{-1}x)\, dm'(x)\, dm(y) = \int_G f(y) \left(\int_G g(x)\, dm'(x)\right) dm(y) = \left(\int_G f\, dm\right)\left(\int_G g\, dm'\right).
 \]
 Symmetrically, using left invariance of \(m\) with the substitution \(y \mapsto xy\) in the \(m\)-integral:
+
 \[
 \int_G \int_G f(y) g(y^{-1}x)\, dm(y)\, dm'(x) = \int_G \left(\int_G f(xy) g(y^{-1})\, dm(y)\right) dm'(x) = \left(\int_G g^{\vee} f\, dm\right)\left(\int_G dm'(x)\right)?
 \]
 Hmm, let us be more careful. Define \(\tilde{f}(x) = f(x^{-1})\). The key identity comes from computing
+
 \[
 \int_G \left(\int_G f(y) g(y^{-1}x)\, dm(y)\right) dm'(x) = \int_G (f * g)(x)\, dm'(x)
 \]
 in two ways:
+
 \[
 = \left(\int_G f\, dm\right)\!\left(\int_G g\, dm'\right)
 \]
 (by left invariance of \(m'\), substituting \(x \mapsto yx\) inside the outer integral and then separating) and also
+
 \[
 = \left(\int_G f\, dm'\right)^{-1}\!\cdot\!\left(\int_G g\, dm\right) \cdot c
 \]
 after a parallel computation with the roles of \(m\) and \(m'\) swapped. More precisely, performing the computation with the roles reversed:
+
 \[
 \int_G \left(\int_G g(y) f(y^{-1}x)\, dm'(y)\right) dm(x) = \left(\int_G g\, dm'\right)\!\left(\int_G f\, dm\right).
 \]
 Since the integrand \((y, x) \mapsto f(y)g(y^{-1}x)\) is the same up to relabeling, setting the two double-integral computations equal gives:
+
 \[
 \frac{\int_G g\, dm'}{\int_G g\, dm} = \frac{\int_G f\, dm'}{\int_G f\, dm}.
 \]
@@ -373,6 +390,7 @@ Right Haar measure on \(\mathrm{GL}_n(\mathbb{R})\) is similarly \(d_r A = |\det
 <strong>Example 2.7 (Haar measure on \(p\)-adic groups).</strong> The \(p\)-adic number field \(\mathbb{Q}_p\) is an important example of a non-archimedean locally compact group. As a set, \(\mathbb{Q}_p\) is the completion of \(\mathbb{Q}\) with respect to the \(p\)-adic absolute value \(|x|_p = p^{-v_p(x)}\) where \(v_p(x)\) is the \(p\)-adic valuation (the largest power of \(p\) dividing the numerator of \(x\) minus the power dividing the denominator). The ring of integers \(\mathbb{Z}_p = \{x \in \mathbb{Q}_p : |x|_p \leq 1\}\) is a compact open subgroup.
 
 Haar measure on \(\mathbb{Q}_p\): since \(\mathbb{Q}_p\) is abelian, Haar measure is bi-invariant. The standard normalization is \(m(\mathbb{Z}_p) = 1\). The key property is ultrametricity: \(|x + y|_p \leq \max(|x|_p, |y|_p)\), which implies that the open balls \(B(a, p^{-k}) = \{x : |x-a|_p < p^{-k}\} = a + p^k\mathbb{Z}_p\) form a partition of \(\mathbb{Q}_p\) into clopen sets. The Haar measure of each ball:
+
 \[
 m(a + p^k \mathbb{Z}_p) = m(p^k \mathbb{Z}_p) = p^{-k} m(\mathbb{Z}_p) = p^{-k}.
 \]
@@ -381,6 +399,7 @@ This is because \(\mathbb{Z}_p\) decomposes as a disjoint union of \(p\) transla
 The Fourier analysis on \(\mathbb{Q}_p\) uses the additive character \(\psi : \mathbb{Q}_p \to \mathbb{T}\) defined by \(\psi(x) = e^{2\pi i \{x\}_p}\) where \(\{x\}_p\) is the "fractional part" of \(x\) in \(\mathbb{Q}_p\): for \(x = \sum_{k = -N}^\infty a_k p^k\), set \(\{x\}_p = \sum_{k=-N}^{-1} a_k p^k \in \mathbb{Q}\). The characters of \(\mathbb{Q}_p\) are \(\sigma_a : x \mapsto \psi(ax)\) for \(a \in \mathbb{Q}_p\), and the dual group is \(\hat{\mathbb{Q}}_p \cong \mathbb{Q}_p\) — just as for \(\mathbb{R}\). The Pontryagin dual of \(\mathbb{Z}_p\) is \(\mathbb{Q}_p / \mathbb{Z}_p \cong \mathbb{Z}[1/p]/\mathbb{Z}\), the Prüfer \(p\)-group.
 
 The Fourier transform on \(\mathbb{Q}_p\) satisfies an exact inversion formula (without issues at zero), and the Fourier transform of the indicator of a ball is:
+
 \[
 \widehat{\mathbf{1}_{p^k\mathbb{Z}_p}}(a) = \int_{p^k\mathbb{Z}_p} \psi(ax)\, dm(x) = p^{-k} \mathbf{1}_{p^{-k}\mathbb{Z}_p}(a).
 \]
@@ -418,6 +437,7 @@ The modular function classifies how asymmetrically a group behaves under its own
 The simplest non-unimodular example is the **affine group of the line** (also called the \(ax + b\) group): its elements are pairs \((a, b)\) with \(a > 0\), \(b \in \mathbb{R}\), multiplying by \((a,b)(c,d) = (ac, ad+b)\). Left Haar measure is \(d_\ell = a^{-2}\, da\, db\) and right Haar measure is \(d_r = a^{-1}\, da\, db\). The modular function is \(\Delta(a,b) = a^{-1}\). To verify: \(m_\ell(E \cdot (c,d)) = m_\ell\{(ac, ad+b) : (a,b) \in E\}\), and computing the Jacobian of the change of variables \((a,b) \mapsto (ac, ad+b)\) gives a factor of \(c^2\) for Lebesgue measure \(da\, db\), which divided by the weight \(a^{-2}\) produces \(\Delta(c,d) = c^{-1}\).
 
 The key integration formulas expressing how Haar measure transforms are:
+
 \[
 \int_G f(xy)\, dm(x) = \Delta(y)^{-1} \int_G f(x)\, dm(x),
 \]
@@ -457,6 +477,7 @@ which is just Fubini. For \(G = \mathbb{R}^\times\) and \(H = \{+1, -1\}\), the 
 <strong>Example 3.5 (Weil formula for the sphere).</strong> One of the most important applications of the Weil integration formula is the disintegration of Lebesgue measure on \(\mathbb{R}^n\) into spherical layers. Take \(G = (\mathbb{R}^n, +)\) and \(H = \{0\}\) (trivial), so \(G/H = \mathbb{R}^n\) trivially. Instead, consider the polar coordinate decomposition: write \(G = \mathbb{R}^n \setminus \{0\}\) and \(H = \mathbb{R}^+\) acting by dilation \(x \mapsto rx\). The quotient is \(G/H \cong S^{n-1}\), the unit sphere.
 
 More precisely, consider the multiplicative group \(G' = (\mathbb{R}^+, \cdot)\) acting on \(\mathbb{R}^n \setminus \{0\}\) by \((r, x) \mapsto rx\). The orbit of any \(x\) is the ray \(\{rx : r > 0\}\), and the orbit space is \(S^{n-1}\). The stabilizer of any point on \(S^{n-1}\) is trivial. By the Weil formula applied to the "polar" decomposition \(\mathbb{R}^n \setminus \{0\} \cong (0,\infty) \times S^{n-1}\):
+
 \[
 \int_{\mathbb{R}^n} f(x)\, dx = \int_0^\infty \int_{S^{n-1}} f(r\omega) r^{n-1}\, d\sigma(\omega)\, dr,
 \]
@@ -465,6 +486,7 @@ where \(d\sigma\) is the surface measure on \(S^{n-1}\) normalized so that \(\si
 The compatibility condition \(\Delta_G|_H = \Delta_H\) is automatically satisfied here: both \(\mathbb{R}^n\) (additive) and the dilation action are unimodular, so the Weil formula applies with a genuine \(G'\)-invariant measure on \(S^{n-1}\), which is exactly the surface measure \(d\sigma\).
 
 As an application, compute the Fourier transform of a radial function \(f(x) = F(|x|)\):
+
 \[
 \hat{f}(\xi) = \int_{\mathbb{R}^n} F(|x|) e^{-ix\cdot\xi}\, dx = \int_0^\infty F(r) r^{n-1} \int_{S^{n-1}} e^{-ir\omega\cdot\xi}\, d\sigma(\omega)\, dr.
 \]
@@ -474,6 +496,7 @@ The inner integral \(\int_{S^{n-1}} e^{-ir\omega\cdot\xi}\, d\sigma(\omega)\) de
 ### 3.3 Convolution of Measures
 
 Let \(M(G)\) denote the Banach space of complex Radon measures on \(G\), i.e., the dual of \(C_0(G)\) (continuous functions vanishing at infinity). The **convolution** of \(\mu, \nu \in M(G)\) is the unique measure defined by
+
 \[
 \int_G f\, d(\mu * \nu) = \int_G \int_G f(xy)\, d\mu(x)\, d\nu(y), \quad f \in C_0(G).
 \]
@@ -500,6 +523,7 @@ Commutativity: \(\mu * \nu = \nu * \mu\) iff \(\int f(xy)\, d\mu(x)\, d\nu(y) = 
 ### 3.4 The \(L^1\) Group Algebra
 
 Haar measure allows us to embed \(L^1(G)\) into \(M(G)\) as the closed ideal of absolutely continuous measures: \(f \mapsto f\, dm\). The **convolution** of \(f, g \in L^1(G)\) is the function
+
 \[
 (f * g)(x) = \int_G f(y) g(y^{-1}x)\, dm(y),
 \]
@@ -522,10 +546,12 @@ which is defined for \(m\)-a.e. \(x\) by Fubini's theorem. This is the translati
 By left invariance of \(m\), the inner integral \(\int |g(y^{-1}x)|\, dm(x) = \|g\|_1\) for all \(y\). Hence \(\|f*g\|_1 \leq \|f\|_1 \|g\|_1\).
 
 For (2), compute \((f*g)^*(x) = \Delta(x)^{-1}\overline{(f*g)(x^{-1})}\). Expanding:
+
 \[
 (f*g)(x^{-1}) = \int f(y)g(y^{-1}x^{-1})\, dm(y).
 \]
 Substituting \(y \mapsto xy^{-1}\) (with Jacobian \(\Delta(xy^{-1}) = \Delta(x)\Delta(y)^{-1}\) from the right-integration formula):
+
 \[
 = \int f(xy^{-1}) g\bigl((xy^{-1})^{-1}x^{-1}\bigr) \Delta(x)^{-1}\Delta(y)\, dm(y) = \Delta(x)^{-1} \int f(xy^{-1})g(yx^{-1})\Delta(y)\, dm(y).
 \]
@@ -550,6 +576,7 @@ Since \(L^1(G)\) has no unit when \(G\) is not discrete, the question arises: do
 (e_U * f)(x) - f(x) = \int_U \frac{1}{m(U)}\bigl[f(y^{-1}x) - f(x)\bigr]\, dm(y).
 \]
 By the triangle inequality:
+
 \[
 \|e_U * f - f\|_1 \leq \frac{1}{m(U)}\int_U \|y \cdot f - f\|_1\, dm(y) \leq \sup_{y \in U} \|y \cdot f - f\|_1,
 \]
@@ -580,10 +607,12 @@ By the strong continuity of \(\pi\) and the fact that \(e_\alpha \to \delta_e\) 
 <strong>Proof.</strong> The proof uses an iterated contraction argument. Given \(x \in \mathcal{X}\) and the approximate identity \((e_\alpha)\) with \(\|e_\alpha\| \leq C\), we construct a sequence in \(\mathcal{A}\) that converges to some \(a\), and simultaneously track how \(x\) "factors" through the approximate identity.
 
 Fix \(\varepsilon > 0\). By the approximate identity property, there exists \(u_1 \in \mathcal{A}\) with \(\|u_1\| \leq C\) and \(\|u_1 x - x\| < \varepsilon/2\). Set \(x_1 = x\) and write
+
 \[
 x = u_1 x_1 + (x - u_1 x_1) = u_1 x_1 + r_1, \quad \|r_1\| < \varepsilon/2.
 \]
 Now apply the approximate identity to \(x_1\) again (in the module): find \(u_2\) with \(\|u_2\| \leq C\) such that \(\|u_2 x_1 - x_1\| < \varepsilon/4C\). Set \(x_2 = x_1 + r_1/u_1 \approx x_1\) (adjusted). The iteration produces a sequence \((a_k)\) in \(\mathcal{A}\) with:
+
 \[
 \|a_{k+1} - a_k\| \leq C \cdot 2^{-k}, \quad \|a_k x - x\| \leq 2^{-k}.
 \]
@@ -640,6 +669,7 @@ These decompositions interact with the algebra structure:
 - The intersection \(M_a(G) \cap M_d(G) = \{0\}\) when \(G\) is not discrete.
 
 A measure \(\mu \in M(G)\) belongs to \(L^1(G)\) if and only if \(\mu\) is absolutely continuous with respect to \(m\). The function \(f = d\mu/dm\) then represents \(\mu\) in the function model. When \(G\) is compact and \(m(G) = 1\), we have the continuous inclusions
+
 \[
 C(G) \subseteq L^\infty(G) \subseteq L^2(G) \subseteq L^1(G) \subseteq M(G),
 \]
@@ -671,6 +701,7 @@ Continuity in the strong operator topology means: for each \(\xi \in \mathcal{H}
 </div>
 
 Given a unitary representation \(\pi : G \to \mathcal{U}(\mathcal{H})\), one extends it to an algebra homomorphism \(\pi_1 : L^1(G) \to \mathcal{B}(\mathcal{H})\) by the Bochner integral
+
 \[
 \pi_1(f) = \int_G f(x) \pi(x)\, dm(x), \quad f \in L^1(G).
 \]
@@ -694,6 +725,7 @@ with the action \((\mathrm{Ind}_H^G \tau)(g) f(x) = f(g^{-1}x)\).
 </div>
 
 The induced representation is the "right" way to extend a representation from a subgroup to the whole group. It satisfies the **Frobenius reciprocity**:
+
 \[
 \mathrm{Hom}_G(\mathrm{Ind}_H^G \tau,\, \pi) \cong \mathrm{Hom}_H(\tau,\, \pi|_H)
 \]
@@ -739,10 +771,12 @@ i.e., multiplication by the character \(e^{i\hbar z + i\hbar x \cdot \xi}\) foll
 The Stone-von Neumann theorem says: every representation \(\pi_\hbar\) for a given \(\hbar \neq 0\) is equivalent to the Schrödinger representation, regardless of the realization. This is the mathematical theorem underlying the fact that the Heisenberg commutation relations have an essentially unique representation — a fact fundamental to quantum mechanics.
 
 The Fourier analysis on \(\mathbb{H}_n\) (the theory of the "Fourier-Weyl transform") assigns to each \(f \in L^1(\mathbb{H}_n)\) a family of operators:
+
 \[
 \hat{f}(\hbar) = \int_{\mathbb{H}_n} f(x,y,z)\, \pi_\hbar(x,y,z)\, dx\, dy\, dz \in \mathcal{B}(L^2(\mathbb{R}^n)).
 \]
 The Plancherel formula reads:
+
 \[
 \|f\|_{L^2(\mathbb{H}_n)}^2 = \int_{\mathbb{R}^\times} \|\hat{f}(\hbar)\|_{\mathrm{HS}}^2 |\hbar|^n\, d\hbar,
 \]
@@ -822,6 +856,7 @@ This is the "limit" of finite sums \(\sum_{i,j} \phi(x_i^{-1}x_j) f(x_i)\overlin
 \langle L_x f, L_x f\rangle_\phi = \int\!\!\int \phi(z^{-1}w) f(x^{-1}z)\overline{f(x^{-1}w)}\, dm(z)\, dm(w).
 \]
 Substituting \(z \mapsto xz\), \(w \mapsto xw\) and using left invariance of \(m\):
+
 \[
 = \int\!\!\int \phi((xz)^{-1}(xw)) f(z)\overline{f(w)}\, dm(z)\, dm(w) = \int\!\!\int \phi(z^{-1}w)f(z)\overline{f(w)}\, dm(z)\, dm(w) = \langle f, f\rangle_\phi.
 \]
@@ -856,6 +891,7 @@ The GNS construction parametrizes cyclic representations by positive definite fu
 \|f\|_{C^*(G)} = \sup\{ \|\pi_1(f)\|_{\mathcal{B}(\mathcal{H})} : \pi : G \to \mathcal{U}(\mathcal{H}) \text{ unitary representation} \},
 \]
 where \(\pi_1 : L^1(G) \to \mathcal{B}(\mathcal{H})\) is the integrated form. The <em>reduced group C*-algebra</em> \(C^*_r(G)\) is the completion of \(L^1(G)\) under the norm
+
 \[
 \|f\|_{C^*_r(G)} = \|\lambda_1(f)\|_{\mathcal{B}(L^2(G))},
 \]
@@ -938,6 +974,7 @@ The proof of (3) uses the Neumann series: if \(|\lambda| > \|a\|\), then \(\lamb
 <strong>Example 5.5b (Gelfand spectrum of \(\ell^1(\mathbb{Z})\)).</strong> The Banach algebra \(\ell^1(\mathbb{Z})\) with convolution product \((f * g)(n) = \sum_{k \in \mathbb{Z}} f(k)g(n-k)\) has a natural unital extension \(\ell^1(\mathbb{Z})^+ = \ell^1(\mathbb{Z}) + \mathbb{C}\delta_0\) (since \(\ell^1(\mathbb{Z})\) already has a unit: \(\delta_0(n) = \mathbf{1}_{n=0}\) acts as the convolution identity). Its Gelfand spectrum is computed as follows.
 
 A character \(\chi : \ell^1(\mathbb{Z}) \to \mathbb{C}\) is determined by the value \(z = \chi(\delta_1) \in \mathbb{C}\), where \(\delta_1\) is the sequence \(\delta_1(n) = \mathbf{1}_{n=1}\). Since convolution of \(\delta_m\) and \(\delta_n\) gives \(\delta_{m+n}\), we have \(\chi(\delta_n) = z^n\). By \(|\chi(a)| \leq \|a\|\), we need \(|z^n| \leq \|\delta_n\|_1 = 1\) for all \(n \in \mathbb{Z}\), forcing \(|z| = 1\). Conversely, for any \(z = e^{i\theta} \in \mathbb{T}\), the functional \(\chi_\theta(f) = \sum_{n \in \mathbb{Z}} f(n) e^{in\theta} = \hat{f}(\theta)\) is a character. So:
+
 \[
 \widehat{\ell^1(\mathbb{Z})} \cong \mathbb{T}, \quad \chi_\theta \leftrightarrow e^{i\theta}.
 \]
@@ -1072,6 +1109,7 @@ The identification \(\hat{\mathbb{R}} \cong \mathbb{R}\) explains why the classi
 The density of \(\mathcal{A}(\hat{G})\) in \(C_0(\hat{G})\) follows from Stone-Weierstrass: \(\mathcal{A}(\hat{G})\) is a conjugate-closed, point-separating subalgebra. This is the abstract Gelfand transform at work — the Fourier transform *is* the Gelfand transform for \(L^1(G)\).
 
 The key algebraic identity is:
+
 \[
 \widehat{f * g} = \hat{f} \cdot \hat{g}, \quad \widehat{f^*} = \overline{\hat{f}}.
 \]
@@ -1096,6 +1134,7 @@ The measure \(\mu\) is unique, and \(\|\phi\|_\infty = \phi(e) = \mu(\hat{G})\).
 \]
 
 (\(\Rightarrow\)) By the GNS construction (Theorem 4.6), since \(G\) is abelian, the GNS representation \((\pi_\phi, \mathcal{H}_\phi)\) also commutes with itself: for all \(x, y \in G\), \(\pi_\phi(x)\pi_\phi(y) = \pi_\phi(xy) = \pi_\phi(yx) = \pi_\phi(y)\pi_\phi(x)\). So \(\pi_\phi(G)\) is a commutative family of unitary operators on \(\mathcal{H}_\phi\). By the spectral theorem for commutative families of unitaries, there is a spectral measure \(E\) on the joint spectrum of the operators — which coincides with \(\hat{G}\) since the characters are the joint eigenvectors — such that \(\pi_\phi(x) = \int_{\hat{G}} \sigma(x)\, dE(\sigma)\). Setting \(\mu = \langle E(\cdot)\xi_\phi, \xi_\phi\rangle\) (a positive measure) gives
+
 \[
 \phi(x) = \langle \pi_\phi(x)\xi_\phi, \xi_\phi\rangle = \int_{\hat{G}} \sigma(x)\, d\mu(\sigma).
 \]
@@ -1200,10 +1239,12 @@ In the classical case \(G = \mathbb{R}\), the dual Haar measure is \(d\xi/2\pi\)
 **Number-theoretic applications: Tate's thesis.** The most profound application of Pontryagin duality in modern mathematics is John Tate's 1950 thesis, which used the harmonic analysis on the adèle group \(\mathbb{A}_\mathbb{Q}\) to give a clean, functorial proof of the functional equation and analytic continuation of the Riemann zeta function and its generalizations (Hecke \(L\)-functions).
 
 The **adèle ring** \(\mathbb{A}_\mathbb{Q}\) is the restricted product:
+
 \[
 \mathbb{A}_\mathbb{Q} = \mathbb{R} \times' \prod_p \mathbb{Q}_p = \left\{(x_\infty, x_2, x_3, x_5, \ldots) : x_v \in \mathbb{Q}_v,\, x_p \in \mathbb{Z}_p \text{ for all but finitely many } p\right\},
 \]
 equipped with the restricted product topology. As an abelian locally compact group (under addition), \(\mathbb{A}_\mathbb{Q}\) is self-dual: \(\widehat{\mathbb{A}_\mathbb{Q}} \cong \mathbb{A}_\mathbb{Q}\), via the character \(\psi_a(x) = e^{2\pi i \{a_\infty x_\infty\}} \prod_p e^{-2\pi i \{a_p x_p\}_p}\). The diagonal embedding \(\mathbb{Q} \hookrightarrow \mathbb{A}_\mathbb{Q}\) realizes \(\mathbb{Q}\) as a discrete cocompact subgroup (by the product formula \(\prod_v |x|_v = 1\)), and the Poisson summation formula on \(\mathbb{A}_\mathbb{Q}/\mathbb{Q}\) becomes:
+
 \[
 \sum_{q \in \mathbb{Q}} f(q) = \frac{1}{\mathrm{vol}(\mathbb{A}_\mathbb{Q}/\mathbb{Q})} \sum_{q \in \mathbb{Q}} \hat{f}(q), \quad f \in \mathcal{S}(\mathbb{A}_\mathbb{Q}).
 \]
@@ -1254,6 +1295,7 @@ One of the most beautiful results in harmonic analysis is the Poisson summation 
 \sum_{\gamma \in \Gamma} f(\gamma) = \frac{1}{[\hat{G} : \Gamma^\perp]} \sum_{\chi \in \Gamma^\perp} \hat{f}(\chi).
 \]
 In the classical case \(G = \mathbb{R}\), \(\Gamma = \mathbb{Z}\), \(\Gamma^\perp = 2\pi\mathbb{Z} \subset \hat{\mathbb{R}} \cong \mathbb{R}\):
+
 \[
 \sum_{n \in \mathbb{Z}} f(n) = \sum_{k \in \mathbb{Z}} \hat{f}(2\pi k).
 \]
@@ -1272,12 +1314,14 @@ Setting \(x = 0\): \(F(0) = \sum_{n} f(n) = \sum_k c_k = \sum_k \hat{f}(2\pi k)\
 The Poisson summation formula has profound applications. Let us work out several explicitly.
 
 **Application 1: Jacobi's theta function and the functional equation.** Set \(f(x) = e^{-\pi t x^2}\) for \(t > 0\). The Fourier transform is \(\hat{f}(\xi) = t^{-1/2} e^{-\pi \xi^2 / t}\) (by the Gaussian calculation in Example 6.11 with \(a = \pi t\) and with the \(\xi \mapsto \xi/(2\pi)\) change from our convention). Applying Poisson summation:
+
 \[
 \theta(t) = \sum_{n \in \mathbb{Z}} e^{-\pi n^2 t} = \sum_{k \in \mathbb{Z}} \hat{f}(k) = t^{-1/2} \sum_{k \in \mathbb{Z}} e^{-\pi k^2 / t} = t^{-1/2} \theta(1/t).
 \]
 This is the **functional equation of the Jacobi theta function**: \(\theta(t) = t^{-1/2}\theta(1/t)\). It is the backbone of Riemann's proof of the analytic continuation and functional equation of the zeta function. Riemann sets \(\xi(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s)\) and expresses \(\xi(s)\) as a Mellin transform of \(\theta(t) - 1\). The functional equation \(\theta(t) = t^{-1/2}\theta(1/t)\) then gives the symmetry \(\xi(s) = \xi(1-s)\), i.e., the functional equation \(\zeta(s) = 2^s \pi^{s-1} \sin(\pi s/2)\Gamma(1-s)\zeta(1-s)\).
 
 **Application 2: Multi-dimensional lattice sums.** For \(G = \mathbb{R}^n\) and the standard lattice \(\Gamma = \mathbb{Z}^n\), the dual lattice is \((\mathbb{Z}^n)^\perp = \mathbb{Z}^n\) (since the characters of \(\mathbb{R}^n\) taking integer values on \(\mathbb{Z}^n\) are exactly \(x \mapsto e^{2\pi i k \cdot x}\) for \(k \in \mathbb{Z}^n\)). Poisson summation gives:
+
 \[
 \sum_{n \in \mathbb{Z}^n} f(n) = \sum_{k \in \mathbb{Z}^n} \hat{f}(k).
 \]
@@ -1286,6 +1330,7 @@ For \(f(x) = e^{-\pi t |x|^2}\), both sides are the \(n\)-dimensional theta func
 **Application 3: Counting lattice points in a ball.** Let \(r_k(n)\) be the number of ways to represent \(n\) as a sum of \(k\) squares: \(r_k(n) = |\{(m_1,\ldots,m_k) \in \mathbb{Z}^k : m_1^2 + \cdots + m_k^2 = n\}|\). The generating function is \(\theta(t)^k = \sum_{n=0}^\infty r_k(n) e^{-\pi n t}\). Poisson summation applied to \(f(x) = e^{-\pi t |x|^2}\) gives the theta function identity, and Mellin transforms of both sides yield the Dirichlet series \(\sum_n r_k(n)/n^s\). For \(k = 4\), Jacobi's four-square theorem states \(r_4(n) = 8\sum_{4 \nmid d \mid n} d\), which is proved via the Poisson summation formula and the theory of modular forms.
 
 **Application 4: The Sampling Theorem.** Suppose \(f \in L^2(\mathbb{R})\) is **bandlimited**: \(\hat{f}(\xi) = 0\) for \(|\xi| > B\) (frequency bandwidth \(B\)). The Nyquist-Shannon sampling theorem asserts that \(f\) is completely determined by its values at the sampling points \(\{n/(2B)\}_{n \in \mathbb{Z}}\), and the reconstruction formula is:
+
 \[
 f(x) = \sum_{n \in \mathbb{Z}} f\!\left(\frac{n}{2B}\right) \mathrm{sinc}(2Bx - n), \quad \mathrm{sinc}(u) = \frac{\sin(\pi u)}{\pi u}.
 \]
@@ -1297,6 +1342,7 @@ This follows from Poisson summation: the "sampling" of \(f\) at rate \(1/(2B)\) 
 \sum_{\lambda \in \Lambda} f(\lambda) = \frac{1}{\mathrm{vol}(\mathbb{R}^n / \Lambda)} \sum_{\mu \in \Lambda^*} \hat{f}(\mu),
 \]
 where \(\Lambda^* = \{\xi \in \mathbb{R}^n : \langle \xi, \lambda\rangle \in \mathbb{Z}\, \forall \lambda \in \Lambda\}\) is the dual lattice. For a lattice with Gram matrix \(A\) (i.e., \(\mathrm{vol}(\mathbb{R}^n/\Lambda)^2 = \det A\)), this gives the theta series identity:
+
 \[
 \theta_\Lambda(t) = (\det A)^{-1/2} t^{-n/2} \theta_{\Lambda^*}(1/t).
 \]
@@ -1315,6 +1361,7 @@ For a non-abelian locally compact group, the Pontryagin dual \(\hat{G}\) is repl
 B(G) = \{\phi : G \to \mathbb{C} : \phi(x) = \langle \pi(x)\xi, \eta\rangle \text{ for some unitary rep. } (\pi, \mathcal{H}),\, \xi, \eta \in \mathcal{H}\}.
 \]
 Equivalently, \(B(G)\) is the linear span of the cone \(P(G)\) of continuous positive definite functions. The norm is
+
 \[
 \|\phi\|_{B(G)} = \inf\{\|\xi\|\|\eta\| : \phi(x) = \langle \pi(x)\xi, \eta\rangle,\, \pi \text{ unitary}\}.
 \]
@@ -1347,11 +1394,13 @@ where \(VN(G) = \lambda(G)'' \subset \mathcal{B}(L^2(G))\) is the von Neumann al
 </div>
 
 The duality \(A(G)^* \cong VN(G)\) is the non-abelian analogue of \(L^1(\hat{G})^* \cong L^\infty(\hat{G})\). The pairing is:
+
 \[
 \langle \phi, T \rangle = \langle T\xi, \eta \rangle_{L^2(G)}, \quad \phi(x) = \langle \lambda(x)\xi, \eta\rangle \in A(G),\, T \in VN(G).
 \]
 
 This makes \(A(G)\) into a *completely contractive Banach algebra* — a structure that lies at the heart of Operator Space Theory, and is exactly the area in which Nico Spronk has made major contributions. The operator space structure on \(A(G)\) (discovered by Ruan in 1995) reveals that the multiplier algebra of \(A(G)\) in the operator space category is the Fourier-Stieltjes algebra \(B(G)\), giving the elegant duality
+
 \[
 \mathrm{CB}(A(G)) \cong B(G),
 \]
@@ -1379,6 +1428,7 @@ Conversely, if \(A(G)\) has a bounded approximate identity \((\phi_\alpha)\), on
 Leptin's theorem is a striking reformulation of amenability in terms of the harmonic-analytic structure of the Fourier algebra. Amenability is usually defined via invariant means (Definition 8.1 below) or Følner sequences; Leptin's theorem shows it is equivalently characterized by the existence of a bounded approximate identity in \(A(G)\) — a purely Banach-algebraic condition.
 
 **The Herz restriction theorem** complements Eymard's theory. For a closed subgroup \(H \leq G\), restriction to \(H\) gives a norm-decreasing algebra homomorphism \(A(G) \to A(H)\):
+
 \[
 \phi \mapsto \phi|_H, \quad \|\phi|_H\|_{A(H)} \leq \|\phi\|_{A(G)}.
 \]
@@ -1436,6 +1486,7 @@ where \(P_v = \langle \cdot, v\rangle v\) is the orthogonal projection onto the 
 So \(K_\xi \pi(y) = \pi(y) K_\xi\) for all \(y \in G\), i.e., \(K_\xi\) intertwines \(\pi\) with itself.
 
 Now apply the <strong>spectral theorem for compact self-adjoint operators</strong>: write
+
 \[
 K_\xi = \sum_{\lambda \neq 0} \lambda P_\lambda,
 \]
@@ -1455,6 +1506,7 @@ We write \(\hat{G} = \mathrm{Irr}(G)/{\approx}\) for the set of unitary equivale
 ### 7.2 Matrix Coefficient Functions and Schur Orthogonality
 
 Fix a compact group \(G\) with normalized Haar measure \(m(G) = 1\). For \(\pi \in \hat{G}\), the **matrix coefficients** are the functions \(\pi_{ij}(x) = \langle \pi(x)e_j, e_i \rangle : G \to \mathbb{C}\) for an orthonormal basis \((e_i)\) of \(\mathcal{H}_\pi\). More invariantly, for any \(\xi, \eta \in \mathcal{H}_\pi\) we set \(\phi^\pi_{\xi,\eta}(x) = \langle \pi(x)\xi, \eta\rangle\). Let
+
 \[
 T_\pi = \mathrm{span}\{\phi^\pi_{\xi,\eta} : \xi, \eta \in \mathcal{H}_\pi\}
 \]
@@ -1511,10 +1563,12 @@ is a dense subspace of \(L^2(G)\). Equivalently, \(\bigoplus_{\pi \in \hat{G}} T
 <strong>Proof of Peter-Weyl (density in \(L^2(G)\)).</strong> By the Schur orthogonality relations, the spaces \(T_\pi\) are mutually orthogonal in \(L^2(G)\). Let \(T(G)^\perp\) be the orthogonal complement of \(\bigoplus_\pi T_\pi\) in \(L^2(G)\). We need to show \(T(G)^\perp = \{0\}\).
 
 Suppose \(f \in T(G)^\perp\), meaning \(\int_G f(x)\overline{\phi^\pi_{\xi,\eta}(x)}\, dm(x) = 0\) for all \(\pi \in \hat{G}\), \(\xi, \eta \in \mathcal{H}_\pi\). This means \(\langle \pi_1(f)\xi, \eta\rangle = 0\) for all \(\xi, \eta\), so \(\pi_1(f) = 0\) for every finite-dimensional representation \(\pi\). In particular, the convolution operator
+
 \[
 (f * g)(x) = \int_G f(y^{-1}x) g(y)\, dm(y)
 \]
 satisfies \(\pi_1(f * g) = \pi_1(f)\pi_1(g) = 0\) for every \(\pi\). Now consider the convolution operator \(T_f : L^2(G) \to L^2(G)\) given by \(T_f(h) = f * h\). This operator is compact (since \(L^2\)-convolution by an \(L^2\) function is compact on a compact group) and commutes with left translations:
+
 \[
 T_f(\lambda(x)h) = f * (x\cdot h) = x \cdot (f * h) = \lambda(x)(T_f h).
 \]
@@ -1526,6 +1580,7 @@ Taking \(h = \check{f}\) gives \((f * \check{f})(e) = \|f\|_2^2 = 0\), so \(f = 
 The Peter-Weyl theorem is the compact group analogue of the classical Plancherel theorem. For \(G = \mathbb{T}\), the irreducible representations are \(\sigma_n : z \mapsto z^n\) for \(n \in \mathbb{Z}\) (each one-dimensional, \(d_n = 1\)), and \(T(G) = \mathrm{span}\{e^{in\theta}\}_{n \in \mathbb{Z}}\) — the density statement becomes the classical completeness of the Fourier series basis in \(L^2(\mathbb{T})\).
 
 For \(G = \mathrm{SU}(2)\), the irreducible representations \(\pi_\ell\) have dimensions \(d_\ell = 2\ell + 1\) for \(\ell = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \ldots\), and the matrix coefficients of \(\pi_\ell\) restricted to the maximal torus \(\mathbb{T} \subset \mathrm{SU}(2)\) are the characters \(e^{i k\theta}\) for \(k = -\ell, -\ell+1, \ldots, \ell\). The full Peter-Weyl decomposition is:
+
 \[
 L^2(\mathrm{SU}(2)) \cong \bigoplus_{\ell=0,\tfrac{1}{2},1,\ldots} \mathcal{H}_\ell \otimes \mathcal{H}_\ell^*,
 \]
@@ -1543,12 +1598,14 @@ For \(G = \mathrm{SO}(3)\), only integer-spin representations appear (\(\ell = 0
 </div>
 
 The matrix \(\hat{f}(\pi)\) is an operator (not a number!) because \(\pi(x^{-1})\) is a \(d_\pi \times d_\pi\) matrix. The defining property is: for any \(\xi, \eta \in \mathcal{H}_\pi\),
+
 \[
 \langle \hat{f}(\pi)\xi, \eta\rangle = \int_G f(x)\langle \pi(x^{-1})\xi, \eta\rangle\, dm(x) = \int_G f(x) \overline{\langle \pi(x)\eta, \xi\rangle}\, dm(x).
 \]
 The Fourier transform satisfies \(\widehat{f * g}(\pi) = \hat{g}(\pi)\hat{f}(\pi)\) (note the reversal of order: convolution on the left in \(L^1(G)\) becomes operator composition on the right in \(M_{d_\pi}(\mathbb{C})\)).
 
 The Fourier inversion formula reconstructs \(f\) from its Fourier transforms:
+
 \[
 f(x) = \sum_{\pi \in \hat{G}} d_\pi\, \mathrm{tr}\!\left(\hat{f}(\pi)\,\pi(x)\right), \quad \text{convergence in } L^2(G).
 \]
@@ -1560,6 +1617,7 @@ In matrix form: \(f(x) = \sum_\pi d_\pi \sum_{i,j} \hat{f}(\pi)_{ij}\, \pi(x)_{j
 \|f\|_{L^2(G)}^2 = \sum_{\pi \in \hat{G}} d_\pi\, \|\hat{f}(\pi)\|_{\mathrm{HS}}^2
 \]
 where \(\|A\|_{\mathrm{HS}}^2 = \mathrm{tr}(A^*A) = \sum_{i,j} |A_{ij}|^2\) is the Hilbert-Schmidt norm. The Fourier transform extends to an isometric isomorphism
+
 \[
 L^2(G) \cong \bigoplus_{\pi \in \hat{G}} M_{d_\pi}(\mathbb{C})
 \]
@@ -1591,12 +1649,14 @@ Peter-Weyl for \(\mathbb{T}\) is exactly the completeness of the Fourier series 
 \]
 
 The character of \(\pi_\ell\) is the function \(\chi_\ell(g) = \mathrm{tr}(\pi_\ell(g))\). On the maximal torus \(T = \{e^{i\theta} \in \mathrm{SU}(2) : e^{i\theta} = \mathrm{diag}(e^{i\theta}, e^{-i\theta})\}\):
+
 \[
 \chi_\ell(e^{i\theta}) = \sum_{k=-\ell}^{\ell} e^{2ik\theta} = \frac{\sin((2\ell+1)\theta)}{\sin\theta},
 \]
 which is the Chebyshev-like formula for the character. The Weyl character formula, which expresses characters in terms of weights, is the main computational tool in representation theory of compact Lie groups.
 
 The Peter-Weyl decomposition for \(\mathrm{SU}(2)\) is:
+
 \[
 L^2(\mathrm{SU}(2)) \cong \bigoplus_{\ell = 0, 1/2, 1, \ldots} \mathbb{C}^{2\ell+1} \otimes \mathbb{C}^{2\ell+1},
 \]
@@ -1628,16 +1688,19 @@ The **character** of an irreducible representation \(\pi\) is the function \(\ch
 </div>
 
 The character theory of compact groups is a powerful tool for decomposing representations. Given any unitary representation \((\pi, \mathcal{H})\), the multiplicity of \(\pi_j \in \hat{G}\) in \(\pi\) is:
+
 \[
 m_j = \langle \chi_\pi, \chi_{\pi_j}\rangle_{L^2(G)} = \int_G \chi_\pi(x)\overline{\chi_{\pi_j}(x)}\, dm(x),
 \]
 and the complete decomposition is \(\pi \cong \bigoplus_{\pi_j \in \hat{G}} m_j\, \pi_j\). This is the Fourier analysis of representations: the character \(\chi_\pi\) is the "spectrum" of the representation \(\pi\).
 
 **Clebsch-Gordan Formula for SU(2).** As an application of character theory, we determine how the tensor product of two irreducible representations of \(\mathrm{SU}(2)\) decomposes. The character of \(\pi_\ell\) on the maximal torus is \(\chi_\ell(\theta) = \frac{\sin((2\ell+1)\theta)}{\sin\theta}\). The character of \(\pi_\ell \otimes \pi_{\ell'}\) is the product:
+
 \[
 \chi_\ell(\theta)\chi_{\ell'}(\theta) = \frac{\sin((2\ell+1)\theta)\sin((2\ell'+1)\theta)}{\sin^2\theta}.
 \]
 To decompose this into irreducibles, we use the product-to-sum formula \(\sin A \sin B = \frac{1}{2}[\cos(A-B) - \cos(A+B)]\):
+
 \[
 \chi_\ell \cdot \chi_{\ell'} = \sum_{j = |\ell - \ell'|}^{\ell + \ell'} \chi_j,
 \]
@@ -1687,6 +1750,7 @@ The Sugiura theorem is the non-abelian Paley-Wiener theorem. It is important in 
 **Connection to spectral synthesis.** Sugiura's theorem also clarifies when "spectral synthesis" holds for the compact group \(G\). The closed ideals in \(C^\infty(G)\) under convolution correspond (via Fourier transform) to closed subsets of \(\hat{G}\) — i.e., to subsets \(S \subseteq \hat{G}\) where all elements of the ideal have vanishing Fourier matrices at each \(\pi \in S\). Since \(\hat{G}\) is discrete for compact \(G\), every closed subset is automatically a union of singleton sets, and spectral synthesis holds trivially: every closed ideal is the intersection of the maximal ideals indexed by \(S\). This contrasts sharply with the non-compact case (such as \(\mathbb{R}^n\) for \(n \geq 3\)), where spectral synthesis can fail due to the topology of \(\hat{G} = \mathbb{R}^n\).
 
 **Fourier series on SO(3).** The group \(\mathrm{SO}(3)\) has \(\mathrm{SU}(2)\) as its double cover, with kernel \(\{\pm I\}\). The irreducible representations of \(\mathrm{SO}(3)\) are the integer-spin representations \(\pi_\ell\) for \(\ell = 0, 1, 2, \ldots\) (the half-integer spins are representations of \(\mathrm{SU}(2)\) that do not descend to \(\mathrm{SO}(3)\)). The Hilbert space \(L^2(S^2)\), where \(S^2 = \mathrm{SO}(3)/\mathrm{SO}(2)\) is the 2-sphere, decomposes as:
+
 \[
 L^2(S^2) \cong \bigoplus_{\ell = 0}^{\infty} V_\ell,
 \]
@@ -1704,6 +1768,7 @@ For a compact group \(G\), define the convolution operator \(L_f : L^2(G) \to L^
 L_f|_{\mathcal{H}_\pi \otimes \mathcal{H}_\pi^*} = \hat{f}(\pi) \otimes I_{\mathcal{H}_\pi^*},
 \]
 where \(\hat{f}(\pi) = \int_G f(x)\pi(x^{-1})\, dm(x) \in M_{d_\pi}(\mathbb{C})\) is the Fourier transform of \(f\) at \(\pi\). Consequently:
+
 \[
 \|L_f\|_{\mathcal{B}(L^2(G))} = \sup_{\pi \in \hat{G}} \|\hat{f}(\pi)\|_{\mathrm{op}}, \quad \text{and} \quad \|L_f\|_{\mathrm{HS}} = \|f\|_{L^2(G)}.
 \]
@@ -1715,6 +1780,7 @@ where \(\hat{f}(\pi) = \int_G f(x)\pi(x^{-1})\, dm(x) \in M_{d_\pi}(\mathbb{C})\
 (L_f \pi_{ij})(x) = (f * \pi_{ij})(x) = \int_G f(y)\pi_{ij}(y^{-1}x)\, dm(y).
 \]
 By the matrix multiplication rule \(\pi_{ij}(y^{-1}x) = \sum_k \pi_{ik}(y^{-1})\pi_{kj}(x) = \sum_k \overline{\pi_{ki}(y)}\pi_{kj}(x)\):
+
 \[
 (f * \pi_{ij})(x) = \sum_k \pi_{kj}(x) \int_G f(y)\overline{\pi_{ki}(y)}\, dm(y) = \sum_k \pi_{kj}(x)\, \overline{\widehat{f}(\pi)_{ki}^*} = \sum_k [\hat{f}(\pi)]_{ik}\, \pi_{kj}(x).
 \]
@@ -1724,6 +1790,7 @@ So \(L_f\) maps \(\pi_{kj}(\cdot)\) to \(\sum_i [\hat{f}(\pi)]_{ik} \pi_{ij}(\cd
 This proposition is the compact group analogue of the classical fact that convolution operators on \(L^2(\mathbb{R}^n)\) are Fourier multipliers: \(\widehat{L_f g}(\xi) = \hat{f}(\xi)\hat{g}(\xi)\). For compact groups, the "multiplier" is not a scalar function on \(\hat{G}\) but a *matrix-valued* function \(\pi \mapsto \hat{f}(\pi) \in M_{d_\pi}(\mathbb{C})\).
 
 **Functional calculus.** Since \(L^2(G) = \bigoplus_\pi \mathcal{H}_\pi \otimes \mathcal{H}_\pi^*\) and \(L_f\) acts blockwise by \(\hat{f}(\pi)\), we can define a "spectral functional calculus" for self-adjoint convolution operators. If \(f = \bar{f}^* := \check{\bar{f}}\) (i.e., \(f\) is self-adjoint: \(f(x^{-1}) = \overline{f(x)}\)), then \(L_f\) is self-adjoint and \(\hat{f}(\pi) = \hat{f}(\pi)^*\) (Hermitian) for each \(\pi\). The spectrum of \(L_f\) on \(L^2(G)\) is:
+
 \[
 \sigma(L_f) = \overline{\bigcup_{\pi \in \hat{G}} \sigma(\hat{f}(\pi))} \subset \mathbb{R},
 \]
@@ -1737,6 +1804,7 @@ a closed subset of \([-\|f\|_1, \|f\|_1]\). The spectral projections of \(L_f\) 
 where \(\lambda_\pi \geq 0\) is the <strong>Casimir eigenvalue</strong> of \(\pi\) (the value by which the Casimir element of the universal enveloping algebra acts on \(\mathcal{H}_\pi\)). For \(G = \mathrm{SU}(2)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\). For \(G = \mathrm{SO}(3)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\) for integer \(\ell\). For \(G = \mathbb{T}^n\), \(\lambda_{e_{\mathbf{k}}} = |\mathbf{k}|^2\) for \(\mathbf{k} \in \mathbb{Z}^n\).
 
 The heat kernel of \(\Delta_G\) at time \(t > 0\) is:
+
 \[
 k_t(x) = \sum_{\pi \in \hat{G}} d_\pi e^{-\lambda_\pi t} \chi_\pi(x) = \sum_{\pi \in \hat{G}} d_\pi e^{-\lambda_\pi t} \mathrm{tr}(\pi(x)),
 \]
@@ -1795,6 +1863,7 @@ The non-amenability of \(\mathbb{F}_2\) is the group-theoretic shadow of the Ban
 <strong>Proof.</strong> We use the Følner criterion: \(\mathbb{F}_2\) is amenable iff for every finite \(K \subset \mathbb{F}_2\) and \(\varepsilon > 0\), there exists a finite set \(F \subset \mathbb{F}_2\) with \(|KF \triangle F| < \varepsilon |F|\).
 
 We will show this fails for \(K = \{a, b\}\). Every element of \(\mathbb{F}_2\) is a reduced word in \(a, a^{-1}, b, b^{-1}\). Partition \(\mathbb{F}_2\) into five sets based on the first letter of the reduced word:
+
 \[
 W(a) = \{\text{words beginning with } a\}, \quad W(a^{-1}) = \{\text{words beginning with } a^{-1}\},
 \]
@@ -1804,16 +1873,19 @@ W(b) = \{\text{words beginning with } b\}, \quad W(b^{-1}) = \{\text{words begin
 Note: \(\mathbb{F}_2 = W(a) \sqcup W(a^{-1}) \sqcup W(b) \sqcup W(b^{-1}) \sqcup \{e\}\).
 
 The key observation is:
+
 \[
 \mathbb{F}_2 = W(a) \sqcup a^{-1} W(a^{-1}) \cup \{e\} = aW(a^{-1}) \sqcup W(a).
 \]
 More precisely: multiplying \(W(a^{-1})\) on the left by \(a^{-1}\) gives \(a^{-1} W(a^{-1}) \subseteq W(a^{-1})\), and \(W(a) \cup a^{-1}W(a^{-1}) = \mathbb{F}_2 \setminus (\{e\} \cup W(b) \cup W(b^{-1}))\). Actually, the key identity is:
+
 \[
 aW(a^{-1}) = \mathbb{F}_2 \setminus W(a),
 \]
 since \(a \cdot (a^{-1} w) = w\) gives all words not starting with \(a\) (except we need to be careful about the identity).
 
 The precise Hausdorff paradox: \(\mathbb{F}_2\) can be partitioned into sets \(A, B, C, D\) such that \(A \cup aA = \mathbb{F}_2 = B \cup bB\). This gives the "paradoxical decomposition": \(\mathbb{F}_2 = A \cup aA = B \cup bB\), so left-multiplying \(A\) by \(a\) and \(B\) by \(b\) "doubles" the group. Concretely, take \(A = W(a^{-1}) \cup \{e\}\) and note:
+
 \[
 A \sqcup aA = (W(a^{-1}) \cup \{e\}) \sqcup (a W(a^{-1}) \cup \{a\}) = W(a^{-1}) \cup \{e\} \cup (W(a) \setminus \{a, \ldots\}) \cup \{a\}.
 \]
@@ -1839,6 +1911,7 @@ B^3 = (g_1 A_1 \sqcup \cdots \sqcup g_j A_j) \sqcup (g_{j+1} A_{j+1} \sqcup \cdo
 </div>
 
 The connection to amenability: the key input is that \(\mathrm{SO}(3)\) contains a copy of \(\mathbb{F}_2\) as a subgroup. Explicitly, the matrices
+
 \[
 a = \begin{pmatrix} 1/3 & -2\sqrt{2}/3 & 0 \\ 2\sqrt{2}/3 & 1/3 & 0 \\ 0 & 0 & 1\end{pmatrix}, \quad b = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1/3 & -2\sqrt{2}/3 \\ 0 & 2\sqrt{2}/3 & 1/3\end{pmatrix}
 \]
@@ -1900,6 +1973,7 @@ The three conditions — invariant mean, Reiter's condition, and Følner's condi
 <strong>Proof of (1) \(\Rightarrow\) (2).</strong> Given an invariant mean \(M\) and a compact \(K\), \(\varepsilon > 0\), the key idea is to approximate \(M\) by finitely additive measures supported on large compact sets, then "smear" them into \(L^1\) functions.
 
 By the Markov-Kakutani fixed point theorem, the space of left-invariant means is a nonempty convex weak-\(*\) compact subset of the unit ball of \((L^\infty)^*\). Given \(K\) and \(\varepsilon\), consider the set
+
 \[
 S = \{f \in L^1(G) : f \geq 0,\, \|f\|_1 = 1\}.
 \]
@@ -1912,6 +1986,7 @@ If not, for every \(f \in S\) there exists \(x_f \in K\) with \(\|x_f \cdot f - 
 m(xF_\alpha \triangle F_\alpha) = \int_0^\infty m(\{y : \mathbf{1}_{xF_\alpha}(y) \neq \mathbf{1}_{F_\alpha}(y)\})\, dt \leq \|x \cdot f_\alpha - f_\alpha\|_1 \to 0.
 \]
 More carefully: for any measurable \(F\) with \(0 < m(F) < \infty\) and indicator function \(\phi = m(F)^{-1}\mathbf{1}_F\),
+
 \[
 m(xF \triangle F)/m(F) = \|x \cdot \phi - \phi\|_1.
 \]
@@ -1922,6 +1997,7 @@ If we could directly take \(f_\alpha = \phi_{F_\alpha}\) we would be done. The i
 M_\alpha(f) = \frac{1}{m(F_\alpha)} \int_{F_\alpha} f\, dm.
 \]
 Each \(M_\alpha\) is a positive linear functional on \(L^\infty(G)\) with \(M_\alpha(\mathbf{1}) = 1\). Left invariance: for \(x \in K\),
+
 \[
 |M_\alpha(x \cdot f) - M_\alpha(f)| = \left|\frac{1}{m(F_\alpha)}\int (f(x^{-1}y) - f(y))\, dm(y)\right| \leq \frac{\|f\|_\infty \cdot m(xF_\alpha \triangle F_\alpha)}{m(F_\alpha)} \to 0.
 \]
@@ -2018,6 +2094,7 @@ The random walk is **recurrent** if \(\sum_{n=1}^\infty \mu^{*n}(U) = \infty\) f
 <li>If \(G\) is non-amenable, then every symmetric random walk on \(G\) is transient: the walk escapes to infinity at positive speed.</li>
 </ol>
 More precisely: for a finitely generated group, the <em>spectral radius</em> of the random walk (the norm of the convolution operator \(\lambda_\mu : f \mapsto \mu * f\) on \(L^2(G)\)) satisfies
+
 \[
 \rho(G, \mu) = \limsup_{n \to \infty} \mu^{*n}(\{e\})^{1/n} \leq 1,
 \]
@@ -2105,6 +2182,7 @@ The transition from abstract to geometric harmonic analysis is not a sharp break
 **The surface measure as Haar measure.** The unit sphere \(S^{n-1} \subset \mathbb{R}^n\) is a homogeneous space for the orthogonal group \(\mathrm{O}(n)\): for any two unit vectors \(e_1, e_2 \in S^{n-1}\), there exists a rotation \(R \in \mathrm{O}(n)\) with \(Re_1 = e_2\). The stabilizer of the north pole \(e_n = (0,\ldots,0,1)\) is \(\mathrm{O}(n-1)\), so \(S^{n-1} \cong \mathrm{O}(n)/\mathrm{O}(n-1)\).
 
 By the Weil integration formula (Theorem 3.3), integration on \(S^{n-1}\) disintegrates as:
+
 \[
 \int_{\mathrm{O}(n)} f(R)\, dm_{\mathrm{O}(n)}(R) = \int_{S^{n-1}} \int_{\mathrm{O}(n-1)} f(R_e \circ S)\, dm_{\mathrm{O}(n-1)}(S)\, d\sigma(e),
 \]
@@ -2229,6 +2307,7 @@ The measure \(\mu\) satisfying \(\mu(B(x,r)) \leq Cr^s\) is called a **Frostman 
 The proof of the "only if" direction constructs the measure by a compactness argument: define \(\mu_k\) to be the measure that assigns mass \(2^{-ks}\) to each dyadic cube of side \(2^{-k}\) that intersects \(E\), then extract a weak-* limit along a suitable subsequence. The Hausdorff dimension condition ensures the total mass stays bounded away from zero.
 
 **The energy integral.** An equivalent and analytically powerful reformulation uses the **\(s\)-energy** of a measure:
+
 \[
 I_s(\mu) = \int_{\mathbb{R}^n}\int_{\mathbb{R}^n} \frac{d\mu(x)\, d\mu(y)}{|x-y|^s}.
 \]
@@ -2244,12 +2323,14 @@ Heuristically, \(I_s(\mu) < \infty\) means the mass of \(\mu\) is not too concen
 This follows from Frostman's lemma together with the equivalence between the measure condition \(\mu(B(x,r)) \leq r^s\) and \(I_s(\mu) < \infty\) (the latter is the statement that the \(s\)-dimensional Riesz energy of \(\mu\) is finite, which by a standard calculation is equivalent to the Frostman condition up to an absolute constant).
 
 **Connection to Fourier analysis.** The \(s\)-energy has a beautiful Fourier-analytic representation. Using the identity \(|x|^{-s} = c_{n,s} \int_{\mathbb{R}^n} |\xi|^{s-n} e^{ix\cdot\xi}\, d\xi\) (valid for \(0 < s < n\)),
+
 \[
 I_s(\mu) = c_{n,s} \int_{\mathbb{R}^n} |\hat{\mu}(\xi)|^2\, |\xi|^{s-n}\, d\xi.
 \]
 This is a weighted \(L^2\) norm of the Fourier transform of \(\mu\). A measure \(\mu\) has finite \(s\)-energy if and only if \(\hat{\mu} \in L^2(\mathbb{R}^n, |\xi|^{s-n}d\xi)\), i.e., if the Fourier transform of \(\mu\) has sufficient decay at high frequencies. This connects the Hausdorff dimension of the support to the rate of decay of the Fourier transform of a measure supported there — a bridge that appears in the restriction problem and in the proof of the Davies theorem for 2D Kakeya sets.
 
 **The Fourier dimension.** Define the **Fourier dimension** of \(E\) as
+
 \[
 \dim_F(E) = \sup\bigl\{s \geq 0 : \exists\, \mu \text{ supported on } E \text{ with } |\hat{\mu}(\xi)| \leq C(1+|\xi|)^{-s/2}\bigr\}.
 \]
@@ -2260,6 +2341,7 @@ The relevance to Kakeya: a Besicovitch set \(E \subset \mathbb{R}^2\) satisfies 
 ### 9.4 The Kakeya Maximal Function
 
 A more quantitative version of the Kakeya problem is the study of the **Kakeya maximal function**. For \(\delta > 0\) and a unit vector \(e \in S^{n-1}\), let \(T^e_\delta(a)\) denote the \(\delta\)-tube centered at \(a\) in direction \(e\): a cylinder of length 1, radius \(\delta\), and axis in direction \(e\). The Kakeya maximal function of \(f \in L^1_{\mathrm{loc}}(\mathbb{R}^n)\) is
+
 \[
 \mathcal{K}_\delta f(e) = \sup_{a \in \mathbb{R}^n} \frac{1}{|T^e_\delta(a)|} \int_{T^e_\delta(a)} |f(x)|\, dx,
 \]
@@ -2311,6 +2393,7 @@ One of the landmark partial results before Wang-Zahl is Wolff's 1995 proof that 
 <strong>Proof (discrete version).</strong> Let \(\mathcal{T}\) be a collection of \(\delta\)-tubes in \(\mathbb{R}^3\), one per direction in a \(\delta\)-separated set \(\Omega \subset S^2\) (so \(|\Omega| \sim \delta^{-2}\)), all intersecting a common ball \(B_1\). Let \(E = \bigcup_{T \in \mathcal{T}} T\) and suppose for contradiction that \(|E| \ll \delta^{5/2 - n\varepsilon}\) for some small \(\varepsilon > 0\).
 
 Since each tube \(T\) has volume \(\delta^2\), the total "weighted volume" is \(\sum_T |T| = \delta^{-2} \cdot \delta^2 = 1\). By averaging over the common intersection point:
+
 \[
 \sum_T \int_T \mathbf{1}_E\, dm = \sum_T |T| = 1.
 \]
@@ -2327,12 +2410,14 @@ Combining: \(M \sim \delta^{-2} \cdot \delta^3 / |E| = \delta / |E|\), so \(|E| 
 <strong>Full argument.</strong> The key is not just one bush but a maximal bush: one finds the point \(x_0 \in E\) through which the *most* tubes pass. If \(M_0\) is that maximum multiplicity, then \(|\Omega| = \delta^{-2}\) tubes total pass through some point in \(E\), and \(E\) has at most \(|E|/\delta^3\) disjoint balls of radius \(\delta\), so the average multiplicity per ball is \(\delta^{-2} / (|E|/\delta^3) = \delta / |E|\). But the maximum is at least the average: \(M_0 \geq \delta/|E|\).
 
 The \(M_0\) tubes through the bush point \(x_0\) are contained in a ball \(B_1\) of radius 1 centered at \(x_0\). In the plane containing \(x_0\) and any two of the tube directions, the 2D Kakeya bound gives a volume contribution of \(\Omega(M_0^2 \cdot \delta / |E|) \cdot \delta\). More carefully: the contribution of the bush to the \((n-1)\)-dimensional cross section at each height along the tubes gives a set of area \(\geq M_0 \delta^{1 - 1/n}\) (by the inductive Kakeya bound). Integrating over height and using \(M_0 \geq \delta/|E|\):
+
 \[
 |E| \geq M_0 \cdot \delta^{1 - 1/n + 1} \cdot 1 = M_0 \delta^{2 - 1/n} \geq \frac{\delta}{|E|} \cdot \delta^{2-1/n} = \frac{\delta^{3-1/n}}{|E|},
 \]
 giving \(|E|^2 \geq \delta^{3-1/n}\), i.e., \(|E| \geq \delta^{(3-1/n)/2}\). For \(n = 3\): \(|E| \geq \delta^{(3-1/3)/2} = \delta^{4/3}\)... 
 
 The actual Wolff argument is more subtle and goes through a double-counting of pairs of tubes that share a common point. The key inequality that gives \(5/2\) is:
+
 \[
 \text{(\# pairs of intersecting tubes)} \lesssim |E|^2 / \delta^5,
 \]
@@ -2350,6 +2435,7 @@ The Wolff argument requires tracking multiplicities carefully through a sophisti
 Before entering the Fourier restriction problem, we develop the classical tools that will be used throughout Chapter 10 and beyond: the Hardy-Littlewood maximal function, the Calderón-Zygmund decomposition, singular integral operators, and the interpolation theorems that convert weak-type estimates into strong \(L^p\) bounds. These are, in a sense, the analytic infrastructure on which Part II is built.
 
 **The Hardy-Littlewood maximal function.** The **Hardy-Littlewood maximal function** of a locally integrable function \(f: \mathbb{R}^n \to \mathbb{C}\) is
+
 \[
 Mf(x) = \sup_{r > 0} \frac{1}{|B(x,r)|} \int_{B(x,r)} |f(y)|\, dy,
 \]
@@ -2389,10 +2475,12 @@ The maximal function is the prototype for all pointwise control in harmonic anal
 The construction: apply the dyadic decomposition of \(\mathbb{R}^n\) into cubes \(Q\) of side length \(2^{-N}\) (for large \(N\)). Start with cubes so small that \(\langle|f|\rangle_Q \leq \lambda\). Bisect iteratively; stop bisecting a cube \(Q\) as soon as \(\langle|f|\rangle_Q > \lambda\). The "stopped" cubes are the bad cubes \(\{Q_j\}\). On their union, \(f\) is large; outside their union, \(f \leq \lambda\) a.e. by the Lebesgue differentiation theorem.
 
 **Calderón-Zygmund kernels and operators.** A kernel \(K: \mathbb{R}^n \times \mathbb{R}^n \setminus \{\text{diagonal}\} \to \mathbb{C}\) is a **Calderón-Zygmund kernel** if it satisfies the size condition
+
 \[
 |K(x,y)| \leq \frac{A}{|x-y|^n},
 \]
 and the smoothness (gradient) conditions
+
 \[
 |\nabla_x K(x,y)| + |\nabla_y K(x,y)| \leq \frac{A}{|x-y|^{n+1}}, \quad x \neq y.
 \]
@@ -2510,6 +2598,7 @@ The leading term has magnitude \(\lambda^{-n/2}\): the larger the dimension, the
 \rho\sqrt{1 - |\omega'|^2} = \rho - \frac{\rho|\omega'|^2}{2} + O(\rho|\omega'|^4).
 \]
 The phase has a non-degenerate critical point at \(\omega' = 0\) with Hessian equal to \(-\rho \cdot I_{n-1}\), giving \(|\det \mathrm{Hess}| = \rho^{n-1}\). By the stationary phase theorem with \(\lambda = \rho\) and \(n-1\) integration variables:
+
 \[
 \int_{B(0,1)} e^{-i\rho\sqrt{1-|\omega'|^2}}\psi(\omega')\, d\omega' \sim \left(\frac{2\pi}{\rho}\right)^{(n-1)/2} \frac{e^{-i\rho} \cdot 1}{\rho^{(n-1)/2}} \psi(0) = C \rho^{-(n-1)/2} e^{-i\rho}.
 \]
@@ -2535,6 +2624,7 @@ The proof is a clean application of the \(TT^*\) method:
 <strong>Proof of Tomas-Stein.</strong> Dualizing, the restriction estimate \(\|\hat{f}|_S\|_{L^2(S)} \lesssim \|f\|_{L^p}\) is equivalent to the extension estimate \(\|Eg\|_{L^{p'}} \lesssim \|g\|_{L^2(S)}\) where \(Eg(x) = \int_S g(\omega)e^{ix\cdot\omega}\, d\sigma(\omega)\) and \(p' = p/(p-1)\). Applying the \(TT^*\) method: \(\|Eg\|_{L^{p'}}^2 = \|Eg \cdot Eg\|_{L^{p'/2}} \leq \|Eg\|_{L^{p'}}\|EE^*Eg\|_{L^{p'}}\) (by Hölder), so it suffices to bound \(\|EE^*\|_{L^p \to L^{p'}}\).
 
 The operator \(EE^*\) acts by convolution with the inverse Fourier transform of the surface measure: \((EE^*f)(x) = \int f(y) \hat{\sigma}(x-y)\, dy\). The key estimate is that the Fourier transform of surface measure satisfies
+
 \[
 |\hat{\sigma}(\xi)| \lesssim (1 + |\xi|)^{-(n-1)/2}.
 \]
@@ -2546,6 +2636,7 @@ With this decay, Young's convolution inequality gives \(\|EE^*f\|_{L^{p'}} \less
 ### 10.3 Fourier Multipliers and the Mihlin-Hörmander Theorem
 
 Before stating the restriction conjecture, it is instructive to understand a related family of operators: **Fourier multipliers**. These operators act on functions by multiplying their Fourier transform by a fixed function \(m : \mathbb{R}^n \to \mathbb{C}\), called the **symbol** or **multiplier**:
+
 \[
 (T_m f)\widehat{\;}(\xi) = m(\xi)\hat{f}(\xi).
 \]
@@ -2567,6 +2658,7 @@ The Mihlin condition says \(m\) is "homogeneous of degree 0" in a Sobolev sense:
 <strong>Proof sketch.</strong> The proof proceeds via the Calderón-Zygmund theory of singular integrals. The convolution kernel \(K = \check{m}\) satisfies two conditions:
 (1) <em>Fourier estimate</em>: \(\hat{K} = m \in L^\infty\), giving \(L^2\) boundedness.
 (2) <em>Size/smoothness estimate</em>: The Mihlin condition on \(m\) translates (via the Fourier transform and integration by parts) into pointwise estimates on \(K\):
+
 \[
 |K(x)| \lesssim |x|^{-n}, \quad |\nabla K(x)| \lesssim |x|^{-n-1}, \quad x \neq 0.
 \]
@@ -2594,6 +2686,7 @@ for all \(p \leq \frac{2n}{n+1}\).
 The Tomas-Stein theorem gives the estimate for \(p \leq \frac{2(n+1)}{n+3}\); the conjecture extends this to the larger range \(p \leq \frac{2n}{n+1}\). In dimension \(n = 2\), the conjecture is fully known (Zygmund, 1974). In higher dimensions, the best results before 2000 gave the Tomas-Stein exponent.
 
 To see why the critical exponent is \(p = 2n/(n+1)\), consider the Knapp example: take \(g\) to be the indicator function of a spherical cap \(\tau\) of radius \(\delta \ll 1\) centered at the north pole of \(S^{n-1}\), and let \(f\) be its inverse Fourier transform:
+
 \[
 f(x) = \int_\tau e^{ix\cdot\xi}\, d\sigma(\xi).
 \]
@@ -2606,12 +2699,14 @@ The restriction conjecture remains open in general, but dramatic progress has be
 The wave packet decomposition of §10.5 is an instance of a general principle: functions can be simultaneously localized in both space and frequency, at the cost of errors controlled by the Heisenberg uncertainty principle. The systematic framework for this is **Littlewood-Paley theory**, which decomposes a function into frequency-localized pieces at dyadic scales and then recovers \(L^p\) norms from the resulting square function. We develop this here, as it provides the precise language for the geometric arguments in Chapter 11 and Chapter 13.
 
 **Dyadic frequency decomposition.** Fix a radial function \(\varphi \in C_c^\infty(\mathbb{R}^n)\) with \(\varphi(\xi) = 1\) for \(|\xi| \leq 1\) and \(\varphi(\xi) = 0\) for \(|\xi| \geq 2\). Define the dyadic Littlewood-Paley pieces by their Fourier multipliers:
+
 \[
 \widehat{P_k f}(\xi) = \left[\varphi\!\left(\tfrac{\xi}{2^k}\right) - \varphi\!\left(\tfrac{\xi}{2^{k-1}}\right)\right]\hat{f}(\xi), \quad k \geq 1, \qquad \widehat{P_{\leq 0} f}(\xi) = \varphi(\xi)\hat{f}(\xi).
 \]
 Each \(P_k f\) has Fourier support in the dyadic annulus \(\{2^{k-1} \leq |\xi| \leq 2^{k+1}\}\), and the Littlewood-Paley decomposition gives \(f = P_{\leq 0} f + \sum_{k \geq 1} P_k f\) in \(L^2(\mathbb{R}^n)\) (and in the tempered distribution sense). For \(p = 2\), the Plancherel theorem and the approximate orthogonality of the frequency annuli give \(\sum_{k \geq 0} \|P_k f\|_{L^2}^2 \approx \|f\|_{L^2}^2\). The nontrivial content is that this holds in \(L^p\) for all \(1 < p < \infty\).
 
 **The square function.** Define the **Littlewood-Paley square function**
+
 \[
 Sf(x) = \left(\sum_{k \geq 0} |P_k f(x)|^2\right)^{1/2}.
 \]
@@ -2624,6 +2719,7 @@ c_p \|f\|_{L^p(\mathbb{R}^n)} \leq \|Sf\|_{L^p(\mathbb{R}^n)} \leq C_p \|f\|_{L^
 </div>
 
 The proof uses two ingredients. First, for \(p = 2\), both inequalities are immediate from Plancherel and the disjoint support of the frequency projections. For general \(p\), the key tool is Stein's **vector-valued Calderón-Zygmund theorem**: the map \(f \mapsto (P_k f)_{k \geq 0}\) is a vector-valued singular integral operator with kernel taking values in \(\ell^2\), and the Calderón-Zygmund theory of §9.6 extends to this setting. A more elementary approach uses the **Khintchine inequality**: for independent Rademacher random variables \(\epsilon_k = \pm 1\),
+
 \[
 \mathbb{E}_\epsilon \left|\sum_k \epsilon_k a_k\right|^p \sim_p \left(\sum_k |a_k|^2\right)^{p/2},
 \]
@@ -2632,6 +2728,7 @@ which converts the square function estimate into an average over randomized sign
 The Littlewood-Paley theorem has an important consequence: the \(L^p\) norm of \(f\) is controlled by the \(L^p\) norm of the function \(x \mapsto \|(\hat{f}(\xi) \mathbf{1}_{|\xi| \sim 2^k})_{k}\|_{\ell^2}\). This means that functions with very different frequency supports contribute independently to the \(L^p\) norm, even for \(p \neq 2\). It is this property that makes Littlewood-Paley theory indispensable in restriction and decoupling estimates.
 
 **The uncertainty principle, quantitatively.** The Heisenberg uncertainty principle in \(\mathbb{R}^n\) states: for \(f \in L^2(\mathbb{R}^n)\),
+
 \[
 \|xf\|_{L^2} \cdot \|\xi \hat{f}\|_{L^2} \geq \frac{n}{2}\|f\|_{L^2}^2.
 \]
@@ -2640,6 +2737,7 @@ A sharper version says: if \(f\) is concentrated in a ball \(B(x_0, R)\) in the 
 For the restriction problem, the relevant version is anisotropic: a function \(f\) with Fourier support in a cap \(\tau \subseteq S^{n-1}\) of angular radius \(\delta\) must, by uncertainty, be spread over a tube of dimensions \(\sim \delta^{-1} \times \cdots \times \delta^{-1} \times \delta^{-2}\) in physical space (one long axis of length \(\delta^{-2}\), and \((n-1)\) short axes of width \(\delta^{-1}\)). The long axis points in the direction of the center of \(\tau\), and the width \(\delta^{-1}\) in the perpendicular directions is determined by the angular uncertainty \(\delta\). This is the **wave packet geometry** that underlies §10.5.
 
 **Almost-orthogonality and decoupling.** A key consequence of Littlewood-Paley theory is that functions with disjoint frequency supports are almost orthogonal in \(L^p\): if \(\hat{f}_j\) are supported in disjoint dyadic annuli, then
+
 \[
 \left\|\sum_j f_j\right\|_{L^p}^2 \lesssim \left\|\left(\sum_j |f_j|^2\right)^{1/2}\right\|_{L^p}^2 \lesssim \sum_j \|f_j\|_{L^p}^2
 \]
@@ -2688,6 +2786,7 @@ with the Plancherel-type orthogonality \(\sum_{T \in \mathcal{T}} |c_T|^2 \sim \
 The decomposition is essentially a partition of unity in phase space (position × frequency), adapted to the curvature of the sphere. It makes rigorous the intuition that "the function \(f\) is made up of wave packets, each propagating in a specific direction."
 
 **How wave packets connect restriction to Kakeya.** The key insight is the propagation property of wave packets: at time \(t = 0\), the wave packet \(\psi_T\) is concentrated near the center \(x_T\). At later "times" (i.e., after applying the solution operator to the free Schrödinger or wave equation), each \(\psi_T\) propagates in the direction \(e_T\). The physical realization is: the function \(f = \sum c_T \psi_T\) satisfies
+
 \[
 |f(x)| \lesssim \sum_{T \ni x} |c_T|,
 \]
@@ -2714,6 +2813,7 @@ The half-century between Tomas-Stein (1975) and Wang-Zahl (2024) saw dramatic bu
 **The Bourgain programme (1991–2000).** Jean Bourgain broke the Tomas-Stein exponent in 1991 using new combinatorial arguments, proving restriction estimates beyond the \(p \leq \frac{2(n+1)}{n+3}\) range. The key innovation was the **broad-narrow decomposition**: a function \(f\) with Fourier transform supported on \(S^{n-1}\) can be split into a "narrow" part (concentrated near a small cap, hence behaving like a lower-dimensional problem) and a "broad" part (spread across many caps, amenable to multilinear estimates). By iterating this decomposition, Bourgain obtained new exponents in dimensions \(n = 3\) and \(n = 4\).
 
 **Wolff's bilinear approach (2001).** Building on Bourgain's framework, Wolff introduced the **bilinear restriction estimate**: instead of bounding \(\|\hat{f}\cdot\hat{g}\|_{L^q(S^{n-1} \times S^{n-1})}\) for a single function, one bounds
+
 \[
 \|Ef \cdot Eg\|_{L^p(\mathbb{R}^n)} \lesssim \|f\|_{L^2(S^{n-1})} \|g\|_{L^2(S^{n-1})}
 \]
@@ -2733,6 +2833,7 @@ The critical exponent is \(p = 3/2 = 2n/(n+1)\bigl|_{n=3}\), the full restrictio
 **Guth's polynomial partitioning (2016).** The most dramatic pre-Wang-Zahl progress was Guth's 2016 paper, which introduced **polynomial partitioning** to the restriction problem. The idea: given a large collection of wave packets, partition \(\mathbb{R}^n\) using a polynomial \(P\) of degree \(D\) into \(\sim D^n\) cells, each containing a comparable fraction of the wave packets. The partition controls the interaction between distant wave packets: wave packets in different cells are approximately independent, so their combined \(L^p\) norm can be bounded by a sum-of-squares type estimate.
 
 The formal argument: for the extension operator \(Ef(x) = \int_S f(\omega) e^{ix\cdot\omega}\, d\sigma(\omega)\), decompose \(\mathbb{R}^n\) using a polynomial \(P\) of degree \(D\) into cells \(O_1, \ldots, O_{D^n}\). Each cell \(O_j\) satisfies:
+
 \[
 \|Ef\|_{L^p(O_j)}^p \lesssim D^{-n} \|Ef\|_{L^p(\mathbb{R}^n)}^p \quad \text{(equidistribution)}.
 \]
@@ -2795,6 +2896,7 @@ The multilinear Kakeya inequality is an inequality about overlapping tubes in \(
 |E|^{n-1} \leq \prod_{j=1}^n |\pi_j(E)|.
 \]
 Equivalently, for measurable sets \(E \subseteq \mathbb{R}^n\):
+
 \[
 |E|^{n-1} \leq \prod_{j=1}^n |\pi_j(E)|,
 \]
@@ -2809,18 +2911,22 @@ where \(|\cdot|\) denotes Lebesgue measure on the appropriate dimension.
 The second factor is bounded by \(|\pi_2(E)|^{1/2} \cdot |\pi_1(E)|^{1/2}\) by Fubini and the projection bound \(\int |\{y:(x,y)\in E\}|\,dx = |E|\). This gives \(|E|^2 \leq |\pi_1(E)||\pi_2(E)|\).
 
 For general \(n\): write \(E = \bigcup_{x_n = k} E_k\) where \(E_k = \{(x_1,\ldots,x_{n-1}) : (x_1,\ldots,x_{n-1}, k) \in E\}\). By the inductive hypothesis applied to \(E_k \subseteq \mathbb{Z}^{n-1}\):
+
 \[
 |E_k|^{n-2} \leq \prod_{j=1}^{n-1} |\pi_j(E_k)|.
 \]
 Now sum over \(k\) using Hölder's inequality with exponents \((n-1, n-1, \ldots, n-1)\) applied to the \(n-1\) factors:
+
 \[
 |E| = \sum_k |E_k| \leq \left(\sum_k |E_k|^{n-2}\right)^{1/(n-1)}\left(\sum_k 1\right)^{(n-2)/(n-1)} \cdot \ldots
 \]
 The argument requires the refined inequality:
+
 \[
 |E|^{n-1} = \left(\sum_k |E_k|\right)^{n-1} \leq \left(\sum_k \prod_{j=1}^{n-1} |\pi_j(E_k)|^{1/(n-2)}\right)^{n-1}.
 \]
 Applying the Loomis-Whitney inequality at the \((n-1)\)-level and then using the fact that \(\pi_j(E_k) \subseteq \pi_j(E)\) for each \(k\) (since projecting onto the \(j\)-th coordinate hyperplane and then to \(\mathbb{Z}^{n-2}\) can only decrease the size), one obtains:
+
 \[
 |E|^{n-1} \leq \prod_{j=1}^{n-1} |\pi_j(E)| \cdot \left(\sum_k 1\right) = |\pi_n(E)| \prod_{j=1}^{n-1} |\pi_j(E)|.
 \]
@@ -2836,35 +2942,42 @@ The Loomis-Whitney inequality says the volume of a set is controlled by the prod
 ### 11.2 The Heat-Flow Proof
 
 An elegant proof of the multilinear Kakeya inequality was given by Guth using a heat-flow argument. Let \(G_1, \ldots, G_n : \mathbb{R}^n \to (0,\infty)\) be smooth positive functions and define
+
 \[
 I(t) = \int_{\mathbb{R}^n} \prod_{j=1}^n (G_j \ast \phi_t)(x)^{1/(n-1)}\, dx,
 \]
 where \(\phi_t(x) = (4\pi t)^{-n/2} e^{-|x|^2/4t}\) is the heat kernel. As \(t \to \infty\), each \(G_j \ast \phi_t\) converges to a constant \(\bar{G}_j\), and \(I(t) \to \prod_j \bar{G}_j^{1/(n-1)} \cdot \text{Vol}(\text{support})\).
 
 Guth's key computation shows \(I'(t) \leq 0\) when the \(G_j\) are "transversally positioned." Let us carry out the differentiation explicitly. Write \(u_j = G_j * \phi_t\) so that \(\partial_t u_j = \Delta u_j\) (the heat equation). Then:
+
 \[
 I'(t) = \int_{\mathbb{R}^n} \frac{d}{dt} \prod_{j=1}^n u_j(x)^{1/(n-1)}\, dx = \frac{1}{n-1}\int_{\mathbb{R}^n} \prod_{j=1}^n u_j^{1/(n-1)} \cdot \sum_{j=1}^n \frac{\Delta u_j}{u_j}\, dx.
 \]
 Now integrate by parts twice (using the fact that \(\phi_t\) decays rapidly): \(\int \prod_j u_j^{1/(n-1)} \frac{\Delta u_j}{u_j} = -\int \nabla \left(\prod_j u_j^{1/(n-1)}\right) \cdot \nabla \log u_j\).
 
 Expanding the gradient of the product:
+
 \[
 \nabla \prod_j u_j^{1/(n-1)} = \frac{1}{n-1} \prod_j u_j^{1/(n-1)} \cdot \sum_k \nabla \log u_k.
 \]
 So:
+
 \[
 I'(t) = -\frac{1}{(n-1)^2} \int \prod_j u_j^{1/(n-1)} \left(\sum_k \nabla \log u_k\right) \cdot \sum_j \nabla \log u_j.
 \]
 More carefully, keeping all terms, Guth computes:
+
 \[
 I'(t) = \frac{1}{n-1} \int \prod_j u_j^{1/(n-1)} \sum_j \frac{\Delta u_j}{u_j} = \frac{1}{n-1}\int \prod_j u_j^{1/(n-1)}\left[-\frac{|\nabla u_j|^2}{u_j^2} \cdot \text{(positive)} + \text{boundary terms} = 0\right].
 \]
 
 The key point is more subtle: one uses the **arithmetic-geometric mean inequality** applied to the matrix of inner products of the gradients. Write \(v_j = \nabla \log u_j\) (the "velocity field" of \(\log u_j\) under the heat flow). The heat equation gives \(\partial_t \log u_j = \frac{\Delta u_j}{u_j} = \frac{\Delta u_j}{u_j}\), and the correct formula is:
+
 \[
 (n-1) I'(t) = \int \prod_j u_j^{1/(n-1)} \left[\sum_j \text{tr}(H_j) - \text{tr}\!\left(\left(\sum_j v_j \otimes v_j\right)^{1/2}\right)\right]
 \]
 where \(H_j = D^2 \log u_j\) is the Hessian of \(\log u_j\). The transversality condition says: the vectors \(d_j\) (principal directions of the \(j\)-th tube family) span \(\mathbb{R}^n\), and for each \(j\), the directions of \(\nabla \log u_j\) are approximately aligned with \(d_j\). This transversality, combined with the AM-GM inequality applied to the eigenvalues of the Hessian matrices, gives:
+
 \[
 \sum_j \text{tr}(H_j) \leq \text{tr}\!\left(\left(\sum_j v_j \otimes v_j\right)^{1/2}\right),
 \]
@@ -2889,22 +3002,26 @@ The proof has two layers: wave packet decomposition, and an application of the m
 **Proof sketch via wave packet decomposition.**
 
 *Step 1: Wave packets and tube decomposition.* For each \(j\), decompose \(f_j = \sum_T f_{j,T}\) using the wave packet decomposition (Theorem 10.5), where \(T\) ranges over a finitely overlapping collection of tubes of length 1 and radius \(R^{-1/2}\) in direction \(e_T \in S_j\). Each term \(Ef_{j,T}\) is concentrated near the tube \(T\). More precisely:
+
 \[
 |Ef_{j,T}(x)| \lesssim |c_{j,T}| \cdot (1 + R^{1/2} \mathrm{dist}(x, T))^{-N}
 \]
 for every \(N > 0\). So \(|Ef_j(x)| \lesssim \sum_T |c_{j,T}| \cdot \mathbf{1}_{T}(x) + \text{rapid decay}\), where the sum is over tubes \(T\) passing through \(x\).
 
 *Step 2: Pointwise product estimate.* At each \(x \in \mathbb{R}^n\), select one dominant tube \(T_j(x)\) per surface index \(j\) (the tube contributing most to \(|Ef_{j}(x)|\)). Then:
+
 \[
 \prod_{j=1}^n |Ef_j(x)|^{1/(n-1)} \lesssim \prod_{j=1}^n |c_{j,T_j(x)}|^{1/(n-1)}.
 \]
 The tubes \(T_1(x), \ldots, T_n(x)\) point in directions \(e_{T_j(x)} \in S_j\), and by the transversality assumption on \(S_1, \ldots, S_n\), these directions are \(\nu\)-transversal (their outer normals span \(\mathbb{R}^n\)).
 
 *Step 3: Applying multilinear Kakeya.* Write
+
 \[
 \int_{\mathbb{R}^n} \prod_{j=1}^n |Ef_j|^{2/(n-1)}\, dx = \int_{\mathbb{R}^n} \prod_{j=1}^n\!\left(\sum_{T : T \ni x} |c_{j,T}|^2\right)^{1/(n-1)} dx + \text{error},
 \]
 where we used Cauchy-Schwarz to bound the cross-terms. The functions \(G_j(x) = \sum_{T \ni x} |c_{j,T}|^2\) are averages of indicator functions of tubes pointing in the direction \(S_j\). Since the tubes are transversal (from different surfaces), Theorem 11.2 (multilinear Kakeya) applies:
+
 \[
 \int_{\mathbb{R}^n} \prod_{j=1}^n G_j(x)^{1/(n-1)}\, dx \lesssim_\nu \prod_{j=1}^n \left(\sum_T |c_{j,T}|^2 \cdot |T|\right)^{1/(n-1)}.
 \]
@@ -2928,6 +3045,7 @@ One of the most powerful techniques in the modern theory of the restriction prob
 \|Ef_1 \cdot Ef_2\|_{L^{p/2}(\mathbb{R}^n)} \lesssim \|f_1\|_{L^2(S^{n-1})} \|f_2\|_{L^2(S^{n-1})}
 \]
 for all pairs \((f_1, f_2)\) whose Fourier supports \(\tau_1, \tau_2 \subset S^{n-1}\) are \(\nu\)-transversal (separated in angle by at least \(\nu\)). Then the linear restriction estimate
+
 \[
 \|Ef\|_{L^p(\mathbb{R}^n)} \lesssim_\nu \|f\|_{L^2(S^{n-1})}
 \]
@@ -2939,10 +3057,12 @@ The proof uses a Whitney decomposition of the sphere into pairs of transversal c
 **Step 1: Whitney decomposition.** Decompose \(S^{n-1}\) into finitely overlapping caps \(\{\tau_j\}\) of diameter \(\delta\). For each pair \((j, k)\) with \(|\tau_j - \tau_k| \geq \nu\) (transversal pair), the bilinear hypothesis applies. For "nearby" pairs with \(|\tau_j - \tau_k| < \nu\), the functions \(Ef_j\) and \(Ef_k\) are nearly parallel in frequency and can be treated together by a single application of the restriction estimate at finer scale \(\delta\).
 
 **Step 2: Square-function estimate.** Write
+
 \[
 |Ef(x)|^2 = \left|\sum_j Ef_j(x)\right|^2 = \sum_{j,k} Ef_j(x) \overline{Ef_k(x)}.
 \]
 Separate the sum into transversal pairs (where bilinear estimates apply) and nearby pairs (handled by orthogonality). The bilinear estimate in the transversal region gives:
+
 \[
 \left\|\sum_{j,k : |\tau_j - \tau_k| \geq \nu} Ef_j \cdot \overline{Ef_k}\right\|_{L^{p/2}} \lesssim \left(\sum_j \|f_j\|_{L^2}^2\right)^{1/2} \left(\sum_k \|f_k\|_{L^2}^2\right)^{1/2} = \|f\|_{L^2}^2.
 \]
@@ -2982,6 +3102,7 @@ This proof is astonishing in its simplicity. It uses no deep analysis — just l
 Guth and Katz used the polynomial method over \(\mathbb{R}\) to solve the joints problem (2010) and then to prove that the number of distinct distances determined by \(N\) points in the plane is \(\Omega(N/\sqrt{\log N})\), essentially resolving the Erdős distinct distances problem (Guth-Katz, 2015). Their methods introduced three fundamental tools that have since become central to geometric harmonic analysis:
 
 **Tool 1: The polynomial ham-sandwich theorem.** Any \(n\) finite measures \(\mu_1, \ldots, \mu_n\) in \(\mathbb{R}^n\) can be simultaneously bisected by a single polynomial hypersurface of degree \(D\). More precisely, there exists a polynomial \(P\) of degree \(\leq D\) such that each measure is cut in half by \(\{P = 0\}\):
+
 \[
 \mu_j(\{P > 0\}) = \mu_j(\{P < 0\}) = \frac{1}{2}\mu_j(\mathbb{R}^n), \quad j = 1, \ldots, n.
 \]
@@ -3077,12 +3198,14 @@ Before tracing the history of progress on the Kakeya conjecture, we collect a fe
 **Sumsets and doubling constants.** For finite sets \(A, B \subseteq \mathbb{R}\) (or more generally in any abelian group), the **sumset** is \(A + B = \{a + b : a \in A, b \in B\}\). The **additive doubling constant** of \(A\) is \(K = |A + A| / |A|\). When \(K\) is small, \(A\) has strong additive structure: \(K = 1\) means \(A\) is an arithmetic progression, and the Freiman-Ruzsa theorem says small doubling forces \(A\) to be close (in density) to a generalized arithmetic progression. When \(K\) is large, \(A\) is "additively spread out" — it behaves like a generic set.
 
 **Additive energy.** The **additive energy** of a pair of finite sets \(A, B\) is
+
 \[
 E(A, B) = |\{(a_1, a_2, b_1, b_2) \in A^2 \times B^2 : a_1 + b_1 = a_2 + b_2\}|.
 \]
 We write \(E(A) = E(A, A)\). By the Cauchy-Schwarz inequality, \(|A + B|^2 \geq |A|^2|B|^2 / E(A,B)\), which gives the contrapositive: if \(|A+B|\) is small, then \(E(A,B)\) must be large. Heuristically, high additive energy means many quadruples with a linear relation, i.e., \(A\) has a large structured subset.
 
 **The Plünnecke-Ruzsa inequality.** If \(|A + A| \leq K|A|\), then for all integers \(m, \ell \geq 0\),
+
 \[
 |mA - \ell A| \leq K^{m+\ell} |A|,
 \]
@@ -3186,6 +3309,7 @@ This bound is sharp: the three constraints are achieved by different constructio
 The proof occupies a paper of approximately 130 pages (arXiv:2404.09011). We outline the main ideas.
 
 **Step 1: Discretization.** The Kakeya conjecture is equivalent (via Frostman's lemma and standard pigeonholing) to the following discretized statement: for every \(\varepsilon > 0\) and every collection \(\mathcal{T}\) of \(\delta\)-tubes in \(\mathbb{R}^3\) (each tube of dimensions \(1 \times \delta \times \delta\)) with one tube per direction in a \(\delta\)-separated set \(\Omega \subset S^2\) (so \(|\Omega| \sim \delta^{-2}\)),
+
 \[
 \left|\bigcup_{T \in \mathcal{T}} T\right| \geq \delta^{3\varepsilon} \cdot \delta^2 \cdot |\mathcal{T}| = \delta^{3\varepsilon} \cdot \delta^2 \cdot \delta^{-2} = \delta^{3\varepsilon}.
 \]
@@ -3226,12 +3350,14 @@ The key claim is: the projection \(\pi\left(\bigcup_{T \in \mathcal{T}} T\right)
 The core of the Wang-Zahl paper is the proof of Theorem 13.2. We sketch the key technique.
 
 **Multi-scale energy decomposition.** For an \((s, t)\)-Furstenberg set \(E\) with associated line family \(\{\ell_e\}_{e \in \Omega}\), define the **\(\alpha\)-energy** at scale \(\rho\):
+
 \[
 \mathcal{E}_\alpha(\mu, \rho) = \int\!\!\int |x - y|^{-\alpha}\, d\mu(x)\, d\mu(y) \cdot \rho^{-\alpha},
 \]
 where \(\mu\) is a positive measure on \(E\). The energy captures how "concentrated" \(\mu\) is at scale \(\rho\): if \(\mu\) is spread out (dimension \(> \alpha\)), the energy is bounded; if it concentrates, the energy blows up.
 
 The Furstenberg structure constrains the energy: for each line \(\ell_e\) in the family, the 1D restriction \(\mu|_{\ell_e}\) must have dimension \(\geq s\), so \(\mathcal{E}_{s'}(\mu|_{\ell_e}, \rho) \lesssim 1\) for \(s' < s\). Integrating over the \(t\)-dimensional direction family gives:
+
 \[
 \mathcal{E}_{s+t}(\mu, 1) \lesssim \int_{e \in \Omega} \mathcal{E}_s(\mu|_{\ell_e}, 1)\, d\sigma(e) \lesssim 1
 \]
@@ -3240,23 +3366,27 @@ The Furstenberg structure constrains the energy: for each line \(\ell_e\) in the
 For the \((3s+t)/2\) bound, one needs a more refined multi-scale analysis. The key is a Cauchy-Schwarz argument at an intermediate scale \(\rho\), which we now make explicit.
 
 **The \((3s+t)/2\) bound via multi-scale Cauchy-Schwarz.** Fix an \((s,t)\)-Furstenberg set \(E\) with line family \(\{\ell_e\}_{e \in \Omega}\) where \(\dim_H \Omega \geq t\). Let \(\mu\) be a positive measure on \(E\) with \(\mu(E) = 1\). For each scale \(\rho \in (0,1]\) and each direction \(e \in \Omega\), let \(\mu_e^\rho\) denote the "slice" of \(\mu\) restricted to the \(\rho\)-neighborhood of \(\ell_e\), and define the **local line energy** at scale \(\rho\):
+
 \[
 \Lambda_s(\rho) = \int_{e \in \Omega} \mathcal{E}_s(\mu_e^\rho, \rho)\, d\sigma_\Omega(e),
 \]
 where \(\sigma_\Omega\) is the natural measure on the direction set \(\Omega\) and \(\mathcal{E}_s(\mu_e^\rho, \rho) = \iint |x - y|^{-s} d\mu_e^\rho(x)\, d\mu_e^\rho(y) / \rho^{-s}\) is the normalized \(s\)-energy on the line slice at scale \(\rho\).
 
 The Furstenberg structure implies \(\mathcal{E}_s(\mu_e^\rho, \rho) \lesssim 1\) uniformly in \(e\) and \(\rho\) (since each slice \(\ell_e \cap E\) has dimension \(\geq s\)). Integrating over the \(t\)-dimensional family \(\Omega\):
+
 \[
 \Lambda_s(\rho) \lesssim \sigma_\Omega(\Omega) \lesssim \rho^{-t} \text{ (by the Hausdorff dimension of } \Omega \text{)}.
 \]
 
 Now apply Cauchy-Schwarz in the \(e\)-integration. For any pair of directions \(e, e'\) with \(|e - e'| \sim \rho\) (i.e., directions at angular scale \(\rho\)), the two lines \(\ell_e\) and \(\ell_{e'}\) are nearly parallel and can intersect at most once (in a ball of radius \(\rho\)). The key estimate is:
+
 \[
 \mathcal{E}_{s+t}(\mu, \rho) \leq C \left(\mathcal{E}_s(\mu, \rho)^{1/2} \cdot \Lambda_t(\rho)^{1/2} + \text{lower order}\right).
 \]
 This estimate follows from a bilinear decomposition: write \(\iint |x-y|^{-(s+t)}\, d\mu(x)\, d\mu(y)\) by grouping pairs \((x,y)\) according to whether \(x, y\) lie on lines at angular distance \(\leq \rho\) or \(> \rho\). For the first group, use the 1D energy along each line (controlled by \(\mathcal{E}_s\)); for the second group, use transversality of the lines and the dimension of \(\Omega\) (controlled by \(\Lambda_t\)).
 
 Iterating this estimate: at the optimal scale \(\rho^* = \delta^{(t-s)/(2s+t)}\) (chosen to balance the two terms), one obtains:
+
 \[
 \dim_H E \geq \frac{3s + t}{2},
 \]

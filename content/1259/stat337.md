@@ -187,11 +187,13 @@ Consider two cities. City X has a young population; City Y has an old population
 | 65+ | 0.25 | 30.0 | 25.0 |
 
 Directly standardized rate for City X:
+
 \[
 (0.40)(1.0) + (0.35)(4.0) + (0.25)(30.0) = 0.4 + 1.4 + 7.5 = 9.3 \text{ per 1,000}
 \]
 
 Directly standardized rate for City Y:
+
 \[
 (0.40)(1.5) + (0.35)(3.5) + (0.25)(25.0) = 0.6 + 1.225 + 6.25 = 8.075 \text{ per 1,000}
 \]
@@ -387,6 +389,7 @@ When comparing proportions across two groups in a 2x2 table, the chi-squared tes
 <strong>Pearson's chi-squared test</strong> for a 2x2 table tests the null hypothesis that disease risk is the same in the exposed and unexposed groups (i.e., \( H_0: \text{RR} = 1 \)).
 
 The test statistic is
+
 \[
 \chi^2 = \sum_{\text{cells}} \frac{(O_i - E_i)^2}{E_i},
 \]
@@ -401,6 +404,7 @@ For small samples (any expected cell count less than 5), Fisher's exact test sho
 Using the smoking/lung cancer data above:
 
 Expected count for smokers with lung cancer under \( H_0 \):
+
 \[
 E_{11} = \frac{(2000)(130)}{7000} = 37.14
 \]
@@ -522,6 +526,7 @@ Multiple linear regression provides a more flexible alternative to stratificatio
 
 <div class="definition">
 The <strong>multiple linear regression model</strong> for an outcome \( Y \) with predictors \( X_1, X_2, \ldots, X_p \) is
+
 \[
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon,
 \]
@@ -598,6 +603,7 @@ The odds of exposure among cases is \( a/c \). The odds of exposure among contro
 \]
 
 Under the <strong>rare disease assumption</strong> (prevalence less than about 10%), the OR approximates the RR. This is because when disease is rare, \( a \ll b \) and \( c \ll d \), so \( a + b \approx b \) and \( c + d \approx d \), and
+
 \[
 \text{RR} = \frac{a/(a+b)}{c/(c+d)} \approx \frac{a/b}{c/d} = \frac{ad}{bc} = \text{OR}.
 \]
@@ -632,6 +638,7 @@ A 95% confidence interval for the OR is constructed as follows:
 \]
 
 where
+
 \[
 \text{SE}(\ln \text{OR}) = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}.
 \]
@@ -690,6 +697,7 @@ In a <strong>1:1 matched case-control study</strong>, we classify the matched pa
 | Case Unexposed | y (discordant) | z (concordant) |
 
 The <strong>matched OR</strong> is computed only from discordant pairs:
+
 \[
 \text{OR}_{\text{matched}} = \frac{x}{y}
 \]
@@ -719,11 +727,13 @@ A 1:1 matched case-control study (matched on age and sex) investigates cell phon
 | Case: light user | 25 | 130 |
 
 Matched OR:
+
 \[
 \text{OR} = \frac{65}{25} = 2.6
 \]
 
 McNemar's test:
+
 \[
 \chi^2 = \frac{(65 - 25)^2}{65 + 25} = \frac{1600}{90} = 17.78
 \]
@@ -747,6 +757,7 @@ The left-hand side is the log-odds (logit) of disease. The key property is that 
 <strong>Example: Logistic regression for CHD risk.</strong>
 
 A logistic regression model predicting coronary heart disease (CHD) yields:
+
 \[
 \ln\left(\frac{P(\text{CHD})}{1-P(\text{CHD})}\right) = -6.0 + 0.05 \cdot \text{Age} + 0.7 \cdot \text{Smoking} + 0.02 \cdot \text{SBP}
 \]
@@ -754,6 +765,7 @@ A logistic regression model predicting coronary heart disease (CHD) yields:
 where Smoking = 1 for current smokers, 0 otherwise.
 
 The adjusted OR for smoking:
+
 \[
 \text{OR}_{\text{smoking}} = e^{0.7} = 2.01
 \]
@@ -1144,17 +1156,20 @@ Standard statistical methods (e.g., comparing mean times using a t-test) cannot 
 
 <div class="definition">
 The <strong>survival function</strong> \( S(t) \) gives the probability of surviving beyond time \( t \):
+
 \[
 S(t) = P(T > t),
 \]
 where \( T \) is the random variable representing the time to the event. \( S(0) = 1 \) (everyone is alive at time 0) and \( S(t) \) is a non-increasing function.
 
 The <strong>hazard function</strong> (hazard rate, instantaneous failure rate) \( h(t) \) gives the instantaneous rate of the event occurring at time \( t \), given survival up to that time:
+
 \[
 h(t) = \lim_{\Delta t \to 0} \frac{P(t \leq T < t + \Delta t \mid T \geq t)}{\Delta t}
 \]
 
 The relationship between the survival function and the cumulative hazard function \( H(t) = \int_0^t h(u)\, du \) is:
+
 \[
 S(t) = e^{-H(t)}
 \]
@@ -1201,6 +1216,7 @@ For the age interval 60--65 (\( n = 5 \)), suppose the observed mortality rate i
 \]
 
 If \( l_{60} = 85{,}000 \), then the number dying in this interval is:
+
 \[
 {}_5d_{60} = 85{,}000 \times 0.0952 = 8{,}092
 \]
@@ -1222,22 +1238,26 @@ For each interval \( i \):
 </ul>
 
 The <strong>effective number at risk</strong> (actuarial adjustment) is:
+
 \[
 n_i' = n_i - \frac{w_i}{2}
 \]
 This assumes withdrawals are uniformly distributed within the interval.
 
 The estimated probability of the event in interval \( i \) is:
+
 \[
 \hat{q}_i = \frac{d_i}{n_i'}
 \]
 
 The estimated survival probability through interval \( i \) is:
+
 \[
 \hat{p}_i = 1 - \hat{q}_i
 \]
 
 The cumulative survival probability to the end of interval \( i \) is:
+
 \[
 \hat{S}(t_i) = \prod_{j=1}^{i} \hat{p}_j
 \]
@@ -1328,15 +1348,18 @@ At each distinct event time \( t_j \), construct a 2x2 table:
 | Total | \( d_j \) | \( n_j - d_j \) | \( n_j \) |
 
 The expected number of events in Group 1 at time \( t_j \) under \( H_0 \) is:
+
 \[
 E_{1j} = \frac{n_{1j} \cdot d_j}{n_j}
 \]
 
 The log-rank test statistic is:
+
 \[
 \chi^2 = \frac{\left(\sum_j d_{1j} - \sum_j E_{1j}\right)^2}{\sum_j V_{1j}},
 \]
 where
+
 \[
 V_{1j} = \frac{n_{1j} \cdot n_{2j} \cdot d_j \cdot (n_j - d_j)}{n_j^2(n_j - 1)}.
 \]

@@ -59,6 +59,7 @@ A straightforward induction shows that any finite intersection of elements of \(
 The next lemma gives the payoff: elementary families yield a completely explicit description of the algebra they generate, paralleling the semi-algebra trick of Proposition 1.7.
 
 **Lemma.** If \({\mathcal E}\) is an elementary family on \(X\), then
+
 \[
 \mathrm{Alg}({\mathcal E}) = \left\{ \bigsqcup_{i=1}^n E_i : n \in {\mathbb N},\; E_1, \ldots, E_n \in {\mathcal E} \text{ pairwise disjoint} \right\}.
 \]
@@ -108,6 +109,7 @@ To handle countable operations — essential for all limiting arguments in analy
 A pair \((X, {\mathcal M})\) is called a **measurable space**.
 
 **Definition 3.4.** A **positive measure** on \((X, {\mathcal M})\) is a function \(\mu : {\mathcal M} \to [0, \infty]\) satisfying \(\mu(\emptyset) = 0\) and countable additivity: whenever \((A_n)_{n=1}^\infty\) is a pairwise disjoint sequence in \({\mathcal M}\),
+
 \[
 \mu\!\left(\bigcup_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \mu(A_n).
 \]
@@ -120,6 +122,7 @@ A triple \((X, {\mathcal M}, \mu)\) is called a **measure space**.
 Two central propositions capture the "continuity" of a positive measure.
 
 **Proposition 3.7. (Increasing chains.)** If \((A_n)_{n=1}^\infty\) is an increasing chain (i.e., \(A_1 \subseteq A_2 \subseteq \cdots\) of sets in \({\mathcal M}\), then
+
 \[
 \mu\!\left(\bigcup_{n=1}^\infty A_n\right) = \lim_{n\to\infty} \mu(A_n).
 \]
@@ -142,6 +145,7 @@ For a metric space \((X, d)\), the **Borel sigma-algebra** \({\mathcal B}_X\) is
 **Definition 4.10.** A **Lebesgue-Stieltjes measure** on \({\mathbb R}\) is a positive measure \(\mu : {\mathcal B}_{\mathbb R} \to [0,\infty]\) that assigns finite measure to every bounded interval.
 
 Given such a measure, one defines its **associated centred function** \(G_\mu : {\mathbb R} \to {\mathbb R}\):
+
 \[
 G_\mu(x) = \begin{cases} \mu((0, x]) & \text{if } x > 0, \\ 0 & \text{if } x = 0, \\ -\mu((x, 0]) & \text{if } x < 0. \end{cases}
 \]
@@ -190,6 +194,7 @@ The proof of Theorem 5.10 introduces the powerful tool of **outer measures**.
 Note that an outer measure is defined on *all* subsets of \(X\), not just measurable ones.
 
 **The construction.** Given a pre-measure \(\rho_o\) on an algebra \({\mathcal U}\), define for any \(A \subseteq X\):
+
 \[
 \mu^*(A) = \inf\!\left\{\sum_{n=1}^\infty \rho_o(U_n) : U_n \in {\mathcal U},\; A \subseteq \bigcup_{n=1}^\infty U_n\right\}.
 \]
@@ -209,10 +214,12 @@ Fix a parameter \(0 < \alpha \le 1\). Begin with the unit interval \(I_{0,1} = [
 Having constructed \(2^m\) closed intervals \(I_{m,1}, \ldots, I_{m,2^m}\), each of length at most \(1/2^m\), proceed inductively: from each \(I_{m,k}\) remove the open middle sub-interval \(J_{m,k}\) of length \(\alpha / 3^{m+1}\). This produces \(2^{m+1}\) closed intervals at stage \(m+1\).
 
 Define the compact sets
+
 \[
 C_{\alpha,n} = \bigcup_{k=1}^{2^n} I_{n,k},
 \]
 and set
+
 \[
 C_\alpha = \bigcap_{n=1}^\infty C_{\alpha,n}.
 \]
@@ -225,6 +232,7 @@ The construction removes precisely prescribed amounts of length at each stage. T
 **Property 1: \(C_\alpha\) is nowhere dense.** Let \(x \in C_\alpha\) and \(\varepsilon > 0\). Choose \(n\) large enough so that \(1/2^n < 2\varepsilon\). Then the interval \((x - \varepsilon, x + \varepsilon)\) has length \(2\varepsilon > 1/2^n\), so it must meet at least one of the removed open intervals \(J_{n,k}\). Hence \((x - \varepsilon, x + \varepsilon) \cap ({\mathbb R} \setminus C_\alpha) \ne \emptyset\), which shows that \(C_\alpha\) has empty interior and its closure (itself, since it is closed) contains no open interval.
 
 **Property 2: \(\lambda(C_\alpha) = 1 - \alpha\).** The total length removed is
+
 \[
 \lambda([0,1] \setminus C_\alpha) = \sum_{n=0}^{\infty} 2^n \cdot \frac{\alpha}{3^{n+1}} = \frac{\alpha}{3} \sum_{n=0}^{\infty} \left(\frac{2}{3}\right)^n = \frac{\alpha}{3} \cdot \frac{1}{1 - 2/3} = \alpha.
 \]
@@ -242,6 +250,7 @@ Write \(I_{n,k} = [a_{n,k}, b_{n,k}]\) for the closed intervals at stage \(n\). 
 - \(\varphi_{\alpha,n}(x) = 1\) for \(x \ge 1\).
 
 Each \(\varphi_{\alpha,n}\) is continuous and non-decreasing. The successive approximations satisfy \(\|\varphi_{\alpha,n} - \varphi_{\alpha,n+1}\|_\infty \le 1/2^n\), so the sequence converges uniformly. Define
+
 \[
 \varphi_\alpha := \lim_{n \to \infty} \varphi_{\alpha,n}.
 \]
@@ -252,6 +261,7 @@ The locally finite Borel measure \(\mu_{\varphi_\alpha}\) determined by \(\varph
 #### Singular Measures
 
 The decisive observation is that the Cantor function \(\varphi_\alpha\) is constant on each removed open interval \(J_{m,k}\), so the measure \(\mu_{\varphi_\alpha}\) assigns zero mass to every such interval. Since the complement \([0,1] \setminus C_\alpha = \bigsqcup_{m,k} J_{m,k}\), we get
+
 \[
 \mu_{\varphi_\alpha}({\mathbb R} \setminus C_\alpha) = 0 \quad \text{and} \quad \mu_{\varphi_\alpha}(C_\alpha) = \mu_{\varphi_\alpha}({\mathbb R}) = 1.
 \]
@@ -274,6 +284,7 @@ The Carathéodory extension produces Lebesgue measure from the length function o
 Part (i) is immediate from the construction: the pre-measure \(\lambda_0((a, b]) = b - a\) is visibly translation-invariant, and the Carathéodory outer measure inherits this invariance because translating a cover produces a cover of the same total length.
 
 *Proof sketch for (ii).* Let \(\mu\) be translation-invariant and locally finite. By the Lebesgue-Stieltjes correspondence, \(\mu = \mu_F\) for some right-continuous non-decreasing function \(F\) with \(F(0) = 0\). Translation invariance of \(\mu\) means that for all \(x, y \in {\mathbb R}\),
+
 \[
 F(x + y) - F(x) = \mu((x, x + y]) = \mu((0, y]) = F(y).
 \]
@@ -290,6 +301,7 @@ This characterization has a satisfying conceptual interpretation. Among all the 
 #### The Definition and Basic Structure
 
 **Definition 7.1.** Let \((X, {\mathcal M})\) be a measurable space. A function \(f : X \to {\mathbb R}\) is **measurable** (with respect to \({\mathcal M}\) and the Borel sigma-algebra \({\mathcal B}_{\mathbb R}\) if
+
 \[
 f^{-1}(B) \in {\mathcal M} \text{ for every } B \in {\mathcal B}_{\mathbb R}.
 \]
@@ -344,6 +356,7 @@ Let \((X, {\mathcal M}, \mu)\) be a measure space. We write \(\mathrm{Bor}^+(X, 
 #### The L⁺ Functional on Simple Functions
 
 **Definition 9.3.** For a non-negative simple function \(s = \sum_{i=1}^k c_i \chi_{A_i}\) with the \(A_i\) disjoint and covering \(X\), define:
+
 \[
 L^+_s(s) := \sum_{i=1}^k c_i \cdot \mu(A_i) \in [0,\infty].
 \]
@@ -357,6 +370,7 @@ This does not depend on which canonical form is chosen for \(s\).
 #### Extension to All of L⁺
 
 **Definition 9.9.** For a general \(f \in \mathrm{Bor}^+(X, {\mathbb R})\), define:
+
 \[
 L^+(f) := \sup\!\left\{ L^+_s(s) : s \text{ simple}, 0 \le s \le f \right\} \in [0,\infty].
 \]
@@ -370,11 +384,13 @@ L^+(f) := \sup\!\left\{ L^+_s(s) : s \text{ simple}, 0 \le s \le f \right\} \in 
 #### Statement and Proof
 
 **Theorem 10.4. (Monotone Convergence Theorem / MCT.)** Let \((f_n)_{n=1}^\infty\) be an increasing sequence in \(\mathrm{Bor}^+(X, {\mathbb R})\) with pointwise limit \(f = \lim_n f_n\). Then:
+
 \[
 L^+(f) = \lim_{n\to\infty} L^+(f_n).
 \]
 
 Equivalently (using the standard integral notation),
+
 \[
 \int_X f\, d\mu = \lim_{n\to\infty} \int_X f_n\, d\mu.
 \]
@@ -392,6 +408,7 @@ The MCT makes \(L^+\) additive on all of \(\mathrm{Bor}^+(X,{\mathbb R})\) — *
 #### Positive and Negative Parts
 
 For any \(f \in \mathrm{Bor}(X, {\mathbb R})\), define the positive and negative parts:
+
 \[
 f^+(x) = \max(f(x), 0), \qquad f^-(x) = \max(-f(x), 0).
 \]
@@ -402,6 +419,7 @@ Both \(f^+\) and \(f^-\) lie in \(\mathrm{Bor}^+(X, {\mathbb R})\), and \(f = f^
 **Definition 11.3.** A function \(f \in \mathrm{Bor}(X, {\mathbb R})\) is called **integrable** (or in \(L^1(\mu)\) if both \(L^+(f^+) < \infty\) and \(L^+(f^-) < \infty\), equivalently if \(L^+(|f|) < \infty\).
 
 **Definition/Theorem 11.6. (The integral functional.)** For \(f \in L^1(\mu)\) define:
+
 \[
 L(f) = \int_X f\, d\mu := L^+(f^+) - L^+(f^-) \in {\mathbb R}.
 \]
@@ -427,17 +445,20 @@ Given a measure space \((X, {\mathcal M}, \mu)\), we introduce the following not
 For \(f \in {\mathcal M}^{\mathbb R}(X, {\mathcal M})\), the **positive part** \(f^+ = \max\{f, 0\}\) and the **negative part** \(f^- = \max\{-f, 0\}\) both belong to \({\mathcal M}^+(X, {\mathcal M})\), with the decomposition \(f = f^+ - f^-\) and \(|f| = f^+ + f^-\). For a complex-valued \(f \in {\mathcal M}(X, {\mathcal M})\), the absolute value function \(|\cdot| : {\mathbb C} \to [0, \infty)\) is continuous and hence Borel measurable, so the composition \(|f| \in {\mathcal M}^+(X, {\mathcal M})\).
 
 We define the space of **\(\mu\)-Lebesgue integrable** functions as:
+
 \[
 {\mathcal L}(\mu) = {\mathcal L}(X, {\mathcal M}, \mu) = \left\{ f \in {\mathcal M}(X, {\mathcal M}) : \int_X |f|\, d\mu < \infty \right\}.
 \]
 
 For \(f \in {\mathcal L}(\mu)\), the integral is defined by decomposing into real and imaginary parts:
+
 \[
 \int_X f\, d\mu = \int_X (\operatorname{Re} f)^+\, d\mu - \int_X (\operatorname{Re} f)^-\, d\mu + i\left(\int_X (\operatorname{Im} f)^+\, d\mu - \int_X (\operatorname{Im} f)^-\, d\mu\right).
 \]
 Each of the four integrals on the right is finite because \((\operatorname{Re} f)^\pm \le |f|\) and \((\operatorname{Im} f)^\pm \le |f|\), so the integrability of \(|f|\) controls all four pieces.
 
 **Proposition.** If \(f, g \in {\mathcal L}(\mu)\) and \(c \in {\mathbb C}\), then \(f + g \in {\mathcal L}(\mu)\), \(cf \in {\mathcal L}(\mu)\), and the integral is linear:
+
 \[
 \int_X (f + g)\, d\mu = \int_X f\, d\mu + \int_X g\, d\mu, \qquad \int_X (cf)\, d\mu = c \int_X f\, d\mu.
 \]
@@ -447,6 +468,7 @@ Each of the four integrals on the right is finite because \((\operatorname{Re} f
 The following estimate is the complex analogue of Proposition 11.7:
 
 **Proposition.** For any \(f \in {\mathcal L}(\mu)\),
+
 \[
 \left|\int_X f\, d\mu\right| \le \int_X |f|\, d\mu.
 \]
@@ -462,6 +484,7 @@ The extension to complex-valued functions is essential for Fourier analysis and 
 #### Reverse MCT and the Dominated Convergence Theorem
 
 **Theorem 12.1. (Lebesgue Dominated Convergence Theorem / LDCT.)** Suppose \((f_n)\) is a sequence in \(L^1(\mu)\) with \(f_n \to f\) pointwise, and suppose there exists a **dominating function** \(g \in L^1(\mu)\) with \(|f_n| \le g\) for all \(n\). Then \(f \in L^1(\mu)\) and:
+
 \[
 \lim_{n\to\infty} \int_X f_n\, d\mu = \int_X f\, d\mu.
 \]
@@ -473,6 +496,7 @@ The proof uses the **reverse MCT** (**Lemma 12.5**): if \((h_n)\) is a decreasin
 #### Fatou's Lemma
 
 The **Trick of Fatou** (**Proposition 12.7**): if \((f_n)\) is a sequence in \(\mathrm{Bor}^+(X,{\mathbb R})\), then:
+
 \[
 L^+\!\left(\liminf_{n\to\infty} f_n\right) \le \liminf_{n\to\infty} L^+(f_n).
 \]
@@ -499,19 +523,23 @@ exists.
 \]
 
 Then the function \(F : (a, b) \to {\mathbb C}\) defined by
+
 \[
 F(s) = \int_X f(x, s)\, d\mu(x)
 \]
 is differentiable on \((a, b)\), and
+
 \[
 F'(s) = \int_X \frac{\partial f}{\partial s}(x, s)\, d\mu(x).
 \]
 
 *Proof sketch.* Fix \(s \in (a, b)\) and let \((h_n)\) be any sequence with \(h_n \to 0\). Consider the difference quotients
+
 \[
 \varphi_n(x) = \frac{f(x, s + h_n) - f(x, s)}{h_n}.
 \]
 By hypothesis (2), \(\varphi_n(x) \to \frac{\partial f}{\partial s}(x, s)\) for each \(x\). By the mean value theorem applied to the real and imaginary parts, there exists \(\xi\) between \(s\) and \(s + h_n\) such that \(|\varphi_n(x)| \le |\frac{\partial f}{\partial s}(x, \xi)| \le g(x)\). Since \(g \in {\mathcal L}(\mu)\), the LDCT applies to the sequence \((\varphi_n)\), yielding
+
 \[
 \lim_{n \to \infty} \int_X \varphi_n\, d\mu = \int_X \frac{\partial f}{\partial s}(x, s)\, d\mu(x).
 \]
@@ -530,6 +558,7 @@ More generally, the same argument shows that if all partial derivatives up to or
 #### The Lᵖ Spaces
 
 **Definition 13.1.** For \(1 \le p < \infty\), define:
+
 \[
 L^p(\mu) := \left\{ f \in \mathrm{Bor}(X, {\mathbb R}) : \int_X |f|^p\, d\mu < \infty \right\},
 \]
@@ -542,6 +571,7 @@ and equip it with the **Lᵖ seminorm** \(\|f\|_p := \left(\int |f|^p\, d\mu\rig
 **Conjugate exponents**: \(p\) and \(q\) are **conjugate** if \(1/p + 1/q = 1\) (with the convention \(1/\infty = 0\), so 1 and ∞ are conjugate).
 
 **Proposition 13.6. (Hölder's Inequality.)** For conjugate exponents \(p, q\), and functions \(f \in L^p(\mu)\), \(g \in L^q(\mu)\):
+
 \[
 \int_X |fg|\, d\mu \le \|f\|_p \cdot \|g\|_q.
 \]
@@ -553,6 +583,7 @@ For \(p = q = 2\), Hölder's inequality becomes the **Cauchy-Schwarz inequality*
 #### Minkowski's Inequality
 
 **Proposition 13.7. (Minkowski's Inequality.)** For \(f, g \in L^p(\mu)\) with \(1 \le p \le \infty\):
+
 \[
 \|f + g\|_p \le \|f\|_p + \|g\|_p.
 \]
@@ -600,14 +631,17 @@ Almost uniform convergence is strictly stronger than pointwise a.e. convergence 
 **Theorem (Egoroff).** Suppose \((X, {\mathcal M}, \mu)\) is a finite measure space, \((f_n) \subseteq {\mathcal M}(X, {\mathcal M})\), \(f \in {\mathcal M}(X, {\mathcal M})\), and \(\lim_{n \to \infty} f_n = f\) \(\mu\)-a.e. Then \(f_n \to f\) \(\mu\)-almost uniformly.
 
 *Proof.* Let \(N = \{x : \lim f_n(x) \text{ does not exist or } \ne f(x)\}\), so \(\mu(N) = 0\). For \(k, n \in {\mathbb N}\), define
+
 \[
 E_{n,k} = \bigcup_{m=n}^{\infty} \left\{x : |f_m(x) - f(x)| \ge \frac{1}{k}\right\}.
 \]
 Each \(E_{n,k} \in {\mathcal M}\), the sequence \(E_{1,k} \supseteq E_{2,k} \supseteq \cdots\) is decreasing in \(n\), and \(\bigcap_{n=1}^{\infty} E_{n,k} \subseteq N\). Since \(\mu(X) < \infty\), the continuity-from-above property of measures (Proposition 3.9) gives
+
 \[
 \lim_{n \to \infty} \mu(E_{n,k}) = \mu\!\left(\bigcap_{n=1}^{\infty} E_{n,k}\right) = 0.
 \]
 Given \(\varepsilon > 0\), for each \(k \in {\mathbb N}\) choose \(n_k\) such that \(\mu(E_{n_k, k}) < \varepsilon / 2^k\). Set \(E = \bigcup_{k=1}^{\infty} E_{n_k, k}\), so that
+
 \[
 \mu(E) \le \sum_{k=1}^{\infty} \mu(E_{n_k, k}) < \sum_{k=1}^{\infty} \frac{\varepsilon}{2^k} = \varepsilon.
 \]
@@ -622,11 +656,13 @@ Egoroff's theorem has important consequences. For instance, it provides a quick 
 A natural question is how the Lebesgue integral relates to the Riemann integral from elementary analysis. The answer is reassuring: when the Riemann integral exists, it agrees with the Lebesgue integral. This means that the Lebesgue theory is a genuine extension of the classical theory, not a rival to it.
 
 **Corollary.** If \(f : [a, b] \to {\mathbb R}\) is Riemann integrable, then \(f \in L([a, b], {\mathcal B}([a, b]), \lambda)\) and the Lebesgue integral equals the Riemann integral:
+
 \[
 \int_{[a,b]} f\, d\lambda = \int_a^b f(x)\, dx.
 \]
 
 *Proof sketch.* The upper and lower Riemann sums produce decreasing and increasing sequences of simple functions \(\psi_n \ge f \ge \varphi_n\) with \(\int (\psi_n - \varphi_n)\, d\lambda \to 0\) (this is precisely Riemann integrability). Since \(\varphi_n \le \varphi_{n+1} \le \psi_{n+1} \le \psi_n\), the pointwise limits exist \(\lambda\)-a.e. with the integrable majorant \(|\psi_1| + |\varphi_1|\). By the LDCT, \(f = \lim \varphi_{n_j}\) \(\lambda\)-a.e. and
+
 \[
 \int_{[a,b]} f\, d\lambda = \lim_{j \to \infty} \int_{[a,b]} \varphi_{n_j}\, d\lambda = \text{Riemann integral}.
 \]
@@ -642,6 +678,7 @@ The converse fails: there exist Lebesgue-integrable functions that are not Riema
 #### Inner Product Structure of L²
 
 **Proposition/Definition 15.2.** On \(L^2(\mu)\), define the inner product:
+
 \[
 \langle f, g \rangle := \int_X f(x)\, g(x)\, d\mu(x).
 \]
@@ -738,6 +775,7 @@ The Hahn decomposition reveals that a signed measure concentrates its positivity
 #### Density Integration and the Radon-Nikodym Preliminary Version
 
 **Remark 16.5/16.6.** If \(\mu\) is a positive measure and \(h \in \mathrm{Bor}^+(X,{\mathbb R})\), one defines a new measure \(\nu\) by the formula \(d\nu(x) = h(x)\, d\mu(x)\), meaning:
+
 \[
 \nu(A) = \int_A h\, d\mu = \int_X \chi_A(x)\, h(x)\, d\mu(x), \quad \forall A \in {\mathcal M}.
 \]
@@ -756,6 +794,7 @@ The function \(h\) is called the **density** of \(\nu\) with respect to \(\mu\).
 #### Absolute Continuity
 
 **Definition 17.1.** A positive measure \(\nu\) on \((X, {\mathcal M})\) is **absolutely continuous** with respect to \(\mu\), written \(\nu \ll \mu\), if:
+
 \[
 \mu(A) = 0 \Rightarrow \nu(A) = 0, \quad \forall A \in {\mathcal M}.
 \]
@@ -773,6 +812,7 @@ The word "continuity" is justified by **Proposition 17.3**: if \(\nu(X) < \infty
 #### The Connecting Function
 
 **Proposition/Definition 17.9.** Given any two finite positive measures \(\mu, \nu\) (no relation assumed), there exists a **connecting function** \(g \in \mathrm{Bor}(X,{\mathbb R})\) with \(0 \le g(x) \le 1\) such that:
+
 \[
 \int_X f\, g\, d\mu = \int_X f\,(1-g)\, d\nu, \quad \forall f \text{ bounded, } f \in \mathrm{Bor}^+(X,{\mathbb R}).
 \]
@@ -828,6 +868,7 @@ This chain rule is the measure-theoretic analogue of the change-of-variables for
 #### The Product Measurable Space
 
 **Definition 18.1.** Given measurable spaces \((X, {\mathcal M})\) and \((Y, {\mathcal N})\), a **measurable rectangle** is any set of the form \(A \times B\) with \(A \in {\mathcal M}\), \(B \in {\mathcal N}\). The **product sigma-algebra** is:
+
 \[
 {\mathcal M} \times {\mathcal N} := \sigma\text{-Alg}(\{A \times B : A \in {\mathcal M},\, B \in {\mathcal N}\}).
 \]
@@ -841,6 +882,7 @@ This chain rule is the measure-theoretic analogue of the change-of-variables for
 #### Existence of the Product Measure
 
 **Theorem 18.6.** Let \(\mu : {\mathcal M} \to [0,\infty)\) and \(\nu : {\mathcal N} \to [0,\infty)\) be finite positive measures. There exists a unique positive measure \(\mu \times \nu : {\mathcal M} \times {\mathcal N} \to [0,\infty)\) satisfying:
+
 \[
 (\mu \times \nu)(A \times B) = \mu(A) \cdot \nu(B), \quad \forall A \in {\mathcal M},\, B \in {\mathcal N}.
 \]
@@ -870,6 +912,7 @@ This chain rule is the measure-theoretic analogue of the change-of-variables for
 #### Computing µ×ν by Slicing
 
 **Proposition 19.5.** Let \(E \in {\mathcal M} \times {\mathcal N}\). Then the functions \(x \mapsto \nu(E_{[x]})\) and \(y \mapsto \mu(E^{[y]})\) are both measurable and non-negative, and:
+
 \[
 (\mu \times \nu)(E) = \int_X \nu(E_{[x]})\, d\mu(x) = \int_Y \mu(E^{[y]})\, d\nu(y).
 \]
@@ -877,6 +920,7 @@ This chain rule is the measure-theoretic analogue of the change-of-variables for
 The proof proceeds via **Dynkin's π-λ theorem** applied to the collection of "good" sets \({\mathcal G}\) for which the statement holds (**Lemma 19.8**). The collection \({\mathcal G}\) is stable under complements (I), finite disjoint unions (II), and increasing chains (III) — making it a **λ-system**. Since \({\mathcal G}\) contains all measurable rectangles (**Lemma 19.9**) and \({\mathcal R}\) is a π-system, **Lemma 19.11** (Dynkin's π-λ theorem in λ-system form) gives \({\mathcal G} \supseteq \sigma\text{-Alg}({\mathcal R}) = {\mathcal M} \times {\mathcal N}\).
 
 **Exercise 19.7** shows a beautiful application of this slicing technique: if \((X, {\mathcal M}, \mu)\) is a probability space and \(f \in \mathrm{Bor}^+(X,{\mathbb R})\) is bounded by \(c\), then:
+
 \[
 \int_X f\, d\mu = \int_0^c \mu(\{f \ge t\})\, dt.
 \]
@@ -885,6 +929,7 @@ This converts an abstract integral into a classical Lebesgue integral, and follo
 #### Theorem of Tonelli (Finite, Bounded Case)
 
 **Theorem 19.12. (Tonelli.)** Let \(\mu, \nu\) be finite measures and \(f \in \mathrm{Bor}^+(X \times Y, {\mathbb R})\) bounded. Then:
+
 \[
 \int_{X \times Y} f(x,y)\, d(\mu \times \nu)(x,y) = \int_X\!\!\left(\int_Y f(x,y)\, d\nu(y)\right) d\mu(x) = \int_Y\!\!\left(\int_X f(x,y)\, d\mu(x)\right) d\nu(y).
 \]
@@ -933,6 +978,7 @@ Every finite measure space is sigma-finite (take \(U_n = X\)). The Lebesgue meas
 #### Theorem of Fubini
 
 **Definition 20.9. (Iterated integral.)** For \(f \in \mathrm{Bor}(X \times Y, {\mathbb R})\), the **iterated integral** "integrate first \(y\), then \(x\)" is:
+
 \[
 \iint f(x,y)\, d\nu(y)\, d\mu(x) := \int_X\!\!\left(\int_Y f_{[x]}(y)\, d\nu(y)\right) d\mu(x),
 \]
@@ -941,6 +987,7 @@ provided the inner integral exists for a.e.-\(\mu\) value of \(x\) and the outer
 **Remark 20.11.** The iterated integral may exist in one order but not the other, and they may differ if both exist — pathologies are possible without an integrability hypothesis on \(f\). Fubini rules this out.
 
 **Theorem 20.12. (Fubini.)** Let \(f \in L^1(\mu \times \nu)\). Then both iterated integrals exist and equal the double integral:
+
 \[
 \iint f(x,y)\, d\nu(y)\, d\mu(x) = \int_{X \times Y} f\, d(\mu \times \nu) = \iint f(x,y)\, d\mu(x)\, d\nu(y).
 \]
@@ -948,6 +995,7 @@ provided the inner integral exists for a.e.-\(\mu\) value of \(x\) and the outer
 *Proof.* Write \(f = f^+ - f^-\). Since \(f \in L^1\), both \(\int f^\pm\, d(\mu \times \nu) < \infty\). Apply Tonelli's Theorem 20.8 to \(f^+\) and \(f^-\) separately (finite integral forces us into case 3 of Tonelli), then subtract.
 
 **Remark 20.13. (Warning.)** The converse of Fubini is false: iterated integrals can exist and be equal without \(f \in L^1(\mu \times \nu)\). When using Fubini to swap integration order, one must first verify integrability — usually done by applying Tonelli to \(|f|\):
+
 \[
 \int_{X \times Y} |f|\, d(\mu \times \nu) = \iint |f(x,y)|\, d\nu(y)\, d\mu(x).
 \]
@@ -964,6 +1012,7 @@ Recall that \({\mathcal B}({\mathbb R}) \otimes \cdots \otimes {\mathcal B}({\ma
 The Fubini-Tonelli theorem immediately gives us the ability to compute \(d\)-dimensional integrals as iterated one-dimensional integrals, in any order we please.
 
 **Fubini-Tonelli in coordinates.** For suitable \(f\),
+
 \[
 \int_{\mathbb{R}^d} f\, d\lambda_d = \int_{\mathbb{R}} \cdots \int_{\mathbb{R}} f(x_1, \ldots, x_d)\, dx_{\sigma(1)} \cdots dx_{\sigma(d)}
 \]
@@ -1052,6 +1101,7 @@ For \(x \in {\mathbb R}^d\) and \(r > 0\), let \(B_r(x) = \{y \in {\mathbb R}^d 
 The averaging operator computes the mean value of \(f\) over a ball of radius \(r\) centered at \(x\). As \(r \to 0\), we expect this average to converge to \(f(x)\) — at least for "nice" functions. The Hardy-Littlewood maximal function captures the worst-case behavior of these averages.
 
 **Definition.** The **Hardy-Littlewood maximal function** of \(f \in L_{\mathrm{loc}}(\lambda_d)\) is
+
 \[
 Hf(x) = \sup_{r > 0} A_r|f|(x).
 \]
@@ -1066,6 +1116,7 @@ The maximal function \(Hf(x)\) records the largest possible average of \(|f|\) o
 The covering lemma is a purely geometric result — it extracts a "well-separated" subcollection of balls that still captures a definite fraction of the total volume. The constant \(3^d\) arises because each selected ball, when tripled in radius, swallows all the balls it displaced during the greedy selection.
 
 **Theorem (Hardy-Littlewood Maximal Inequality).** If \(f \in L^1(\lambda_d)\) and \(\alpha > 0\), then
+
 \[
 \lambda_d\!\left(\{Hf > \alpha\}\right) \le \frac{3^d}{\alpha} \int_{\mathbb{R}^d} |f|\, d\lambda_d.
 \]
@@ -1077,6 +1128,7 @@ The maximal inequality is a "weak type (1,1)" estimate: it controls the *size* o
 ### The Lebesgue Differentiation Theorem
 
 **Theorem (Lebesgue Differentiation).** If \(f \in L_{\mathrm{loc}}(\lambda_d)\), then
+
 \[
 \lim_{r \to 0^+} A_r f(x) = f(x) \quad \text{for } \lambda_d\text{-a.e. } x \in \mathbb{R}^d.
 \]
@@ -1086,10 +1138,12 @@ In other words, the average value of \(f\) over a ball centered at \(x\) converg
 *Proof.* It suffices to prove the result for \(f \in L^1(\lambda_d)\) (the general case follows by localizing to balls \(B_N(0)\) and using \(f \cdot \mathbf{1}_{B_N} \in L^1\)).
 
 Since \({\mathbb R}^d = \bigcup B_N(0)\), we may assume \(f \in L^1\). Given \(\varepsilon > 0\), choose \(h \in C_c({\mathbb R}^d)\) with \(\int |f - h|\, d\lambda_d < \varepsilon\) (by density of \(C_c\) in \(L^1\) for Radon measures). Since \(h\) is continuous, \(A_r h(x) \to h(x)\) pointwise. Now:
+
 \[
 |A_r f(x) - f(x)| \le A_r|f - h|(x) + |A_r h(x) - h(x)| + |h(x) - f(x)|.
 \]
 For the first term: \(\limsup_{r \to 0} A_r|f-h|(x) \le H(f-h)(x)\). By the maximal inequality:
+
 \[
 \lambda_d(\{H(f-h) > \alpha\}) \le \frac{3^d}{\alpha} \|f - h\|_1 < \frac{3^d \varepsilon}{\alpha}.
 \]
@@ -1098,6 +1152,7 @@ The second term \(\to 0\) for all \(x\). So \(\limsup |A_r f(x) - f(x)| \le H(f-
 The Lebesgue differentiation theorem recovers \(f\) from its integral by a limiting averaging process — a perfect analogue of the fundamental theorem of calculus, which recovers \(f\) from its antiderivative \(F\) by differentiation: \(F'(x) = \lim (F(x+h) - F(x))/h = \lim (1/h) \int_x^{x+h} f(t)\, dt = f(x)\) a.e. The multidimensional version replaces one-sided limits of difference quotients with symmetric averages over shrinking balls.
 
 **Corollary (Markov's Inequality).** For \(f \in L^1({\mathbb R}^d)\) and \(\alpha > 0\),
+
 \[
 \lambda_d(f^{-1}((\alpha,\infty])) \le \frac{1}{\alpha} \int_{f^{-1}((\alpha,\infty])} |f|\, d\lambda_d \le \frac{1}{\alpha} \int |f|\, d\lambda_d.
 \]

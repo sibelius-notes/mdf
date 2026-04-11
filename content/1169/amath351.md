@@ -61,6 +61,7 @@ where \( A, B \in \mathbb{R} \). Geometrically, this selects the unique solution
 y_G(x) = c_1 \cos x + c_2 \sin x - \frac{1}{3}\cos 2x.
 \]
 Imposing \( y(0) = 2 \), \( y'(0) = 5 \) yields the unique solution
+
 \[
 y(x) = \frac{7}{3}\cos x + 5\sin x - \frac{1}{3}\cos 2x.
 \]
@@ -182,6 +183,7 @@ The Wronskian is the key tool for detecting linear independence of solutions to 
 \frac{dW}{dx} + P(x)W = 0,
 \]
 whose general solution is
+
 \[
 W(x) = A \exp\!\left(-\int P(x)\,dx\right).
 \]
@@ -297,22 +299,27 @@ The practical procedure: substitute \( y = \sum_{n=0}^{\infty} a_n x^n \) into t
 y''(x) = \sum_{n=0}^{\infty}(n+2)(n+1)a_{n+2}x^n.
 \]
 Substituting and collecting gives
+
 \[
 \sum_{n=0}^{\infty}\bigl[(n+2)(n+1)a_{n+2} + a_n\bigr]x^n = 0.
 \]
 The recurrence relation is
+
 \[
 a_{n+2} = -\frac{1}{(n+2)(n+1)}a_n, \qquad n = 0, 1, 2, \ldots
 \]
 The even-indexed coefficients are
+
 \[
 a_{2k} = \frac{(-1)^k}{(2k)!}a_0
 \]
 and the odd-indexed coefficients are
+
 \[
 a_{2k+1} = \frac{(-1)^k}{(2k+1)!}a_1.
 \]
 The two linearly independent solutions are therefore
+
 \[
 y_1(x) = \sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k} = \cos x, \qquad y_2(x) = \sum_{k=0}^{\infty}\frac{(-1)^k}{(2k+1)!}x^{2k+1} = \sin x,
 \]
@@ -385,16 +392,19 @@ where \( p_0 = \lim_{x \to 0} xP(x) \) and \( q_0 = \lim_{x \to 0} x^2 Q(x) \). 
 The nature of the second linearly independent solution depends on the difference \( r_1 - r_2 \):
 
 **Case 1:** \( r_1 - r_2 \notin \mathbb{Z}_{\geq 0} \) (the roots differ by a non-integer). Two independent Frobenius series solutions exist:
+
 \[
 y_1(x) = x^{r_1}\sum_{n=0}^{\infty}a_n x^n, \qquad y_2(x) = x^{r_2}\sum_{n=0}^{\infty}b_n x^n.
 \]
 
 **Case 2:** \( r_1 = r_2 \) (equal roots). One Frobenius solution exists for \( r_1 \); the second involves a logarithm:
+
 \[
 y_2(x) = y_1(x)\ln x + x^{r_1}\sum_{n=1}^{\infty}c_n x^n.
 \]
 
 **Case 3:** \( r_1 - r_2 = N \in \mathbb{Z}^+ \) (roots differ by a positive integer). The first solution corresponds to \( r_1 \); the second may or may not involve a logarithm:
+
 \[
 y_2(x) = Cy_1(x)\ln x + x^{r_2}\sum_{n=0}^{\infty}d_n x^n.
 \]
@@ -529,11 +539,13 @@ u(r, \theta, t) = v(r, \theta)\cos\omega t
 yields the Helmholtz equation \( \nabla^2 v + a^2 v = 0 \) with \( a^2 = \omega^2/K \). A further separation \( v(r,\theta) = R(r)S(\theta) \) gives:
 
 **Angular part:**
+
 \[
 S(\theta) = c_1\cos(m\theta) + c_2\sin(m\theta), \qquad m = 0, 1, 2, \ldots
 \]
 
 **Radial part:** With the change of variables \( s = ar \),
+
 \[
 s^2 R'' + sR' + (s^2 - m^2)R = 0,
 \]
@@ -554,6 +566,7 @@ The **clamping condition** \( u(R_0, \theta, t) = 0 \) requires \( J_m(aR_0) = 0
 **Case \( m = 1 \) (diametric nodal line):** Now \( S(\theta) = \cos\theta \), which changes sign across the diameter \( \theta = \pi/2 \). The clamping condition requires \( J_1(aR_0) = 0 \), giving frequencies \( \omega_{1,k} = (x_{1,k}/R_0)\sqrt{T/\rho} \). The first zero of \( J_1 \) is \( x_{1,1} \approx 3.8317 \). Each higher mode adds a nodal circle combined with the diameter.
 
 As \( k \to \infty \), consecutive frequencies become asymptotically equally spaced:
+
 \[
 \omega_{m,k+1} - \omega_{m,k} \to \frac{\pi}{R_0}\sqrt{\frac{T}{\rho}}, \qquad k \to \infty.
 \]
@@ -614,6 +627,7 @@ The space \( F \) used here is the space of continuous functions on \( [x_0, x_1
 </div>
 
 The contractivity estimate follows from:
+
 \[
 d_\infty(Tu, Tv) \leq K|x_1 - x_0|\,d_\infty(u, v).
 \]
@@ -719,6 +733,7 @@ e^{tA} = Pe^{tD}P^{-1}, \qquad e^{tD} = \mathrm{diag}(e^{\lambda_1 t}, \ldots, e
 \mathbf{x}(t) = c_1\begin{pmatrix}1\\2\end{pmatrix}e^{3t} + c_2\begin{pmatrix}1\\-2\end{pmatrix}e^{-t}.
 \]
 The fundamental matrix \( \Phi(t, 0) \) is found by solving for the two solutions satisfying \( \mathbf{X}_1(0) = \mathbf{e}_1 \) and \( \mathbf{X}_2(0) = \mathbf{e}_2 \):
+
 \[
 \Phi(t,0) = \begin{pmatrix} \frac{1}{2}e^{3t} + \frac{1}{2}e^{-t} & \frac{1}{4}e^{3t} - \frac{1}{4}e^{-t} \\ e^{3t} - e^{-t} & \frac{1}{2}e^{3t} + \frac{1}{2}e^{-t} \end{pmatrix}.
 \]
@@ -866,14 +881,17 @@ The first term gives the particular solution (driven by \( u \)); the second giv
 (s^2+3s+2)Y(s) - (s+5) = \frac{1}{s-1}.
 \]
 Thus
+
 \[
 Y(s) = \frac{s+5}{(s+1)(s+2)} + \frac{1}{(s-1)(s+1)(s+2)}.
 \]
 Partial fractions give
+
 \[
 Y(s) = \frac{7/2}{s+1} - \frac{8/3}{s+2} + \frac{1/6}{s-1},
 \]
 and inverting:
+
 \[
 y(t) = \frac{7}{2}e^{-t} - \frac{8}{3}e^{-2t} + \frac{1}{6}e^{t}.
 \]
@@ -947,6 +965,7 @@ This follows from the sifting property: \( \mathcal{L}[\delta(t-a)] = \int_0^\in
 m\frac{dv}{dt} = I\delta(t-a), \qquad v(0) = v_0.
 \]
 Taking LTs: \( msV(s) - mv_0 = Ie^{-as} \), so
+
 \[
 V(s) = \frac{v_0}{s} + \frac{I}{m}\cdot\frac{e^{-as}}{s}.
 \]
@@ -958,6 +977,7 @@ Inverting: \( v(t) = v_0 + (I/m)H(t-a) \), a step change in velocity at \( t = a
 \frac{dx}{dt} = -kx + A\delta(t-a), \qquad x(0) = x_0.
 \]
 Taking LTs: \( (s+k)X(s) = x_0 + Ae^{-as} \), giving \( X(s) = \frac{x_0}{s+k} + \frac{Ae^{-as}}{s+k} \). By the convolution theorem (or second shift theorem):
+
 \[
 x(t) = x_0 e^{-kt} + Ae^{-k(t-a)}H(t-a).
 \]
@@ -1086,6 +1106,7 @@ with corresponding eigenfunctions \( u_n(x) \) forming a complete orthogonal set
 u_m''u_n - u_m u_n'' + (\lambda_m - \lambda_n)q(x)u_m u_n = 0.
 \]
 Integrate over \( [a,b] \). The first two terms form the derivative of the Wronskian \( W(u_m, u_n) \), and integration by parts gives a boundary term that vanishes because \( u_m(a) = u_m(b) = u_n(a) = u_n(b) = 0 \). Therefore:
+
 \[
 (\lambda_m - \lambda_n)\int_a^b u_m u_n q\,dx = 0.
 \]
@@ -1143,6 +1164,7 @@ Partial sums satisfy the **Bessel inequality**: \( \sum_{n=1}^{N} c_n^2 N_n \leq
 N_n = \int_0^\pi \sin^2 nx\,dx = \frac{\pi}{2}.
 \]
 The expansion becomes the <strong>Fourier sine series</strong>:
+
 \[
 f(x) = \sum_{n=1}^{\infty} c_n \sin nx, \qquad c_n = \frac{2}{\pi}\int_0^\pi f(x)\sin nx\,dx.
 \]
@@ -1232,11 +1254,13 @@ Let \( s = \omega(\epsilon)\tau \). In terms of \( s \):
 Substitute \( \omega = 1 + \omega_1\epsilon + \cdots \) and \( x = x_0 + \epsilon x_1 + \cdots \):
 
 **Order \( \epsilon^0 \):**
+
 \[
 x_0'' + x_0 = 0, \qquad x_0(0) = A, \quad x_0'(0) = 0 \implies x_0(s) = A\cos s.
 \]
 
 **Order \( \epsilon^1 \):**
+
 \[
 x_1'' + x_1 = -2\omega_1 x_0'' - x_0^3 = 2\omega_1 A\cos s - A^3\cos^3 s.
 \]

@@ -36,10 +36,12 @@ An **attribute** of a population is any real-valued function of the population v
 <strong>Example 1.1 (Common population attributes).</strong>
 
 The population mean is defined by
+
 \[
 \bar{y}_U = \frac{1}{N}\sum_{i=1}^{N} y_i.
 \]
 The population variance is
+
 \[
 S^2_U = \frac{1}{N-1}\sum_{i=1}^{N}(y_i - \bar{y}_U)^2.
 \]
@@ -385,10 +387,12 @@ This guarantees sufficient decrease at each step while avoiding the cost of exac
 <strong>Example 3.1 (Gradient descent for logistic regression).</strong>
 
 In logistic regression, the negative log-likelihood is
+
 \[
 f(\boldsymbol{\beta}) = -\sum_{i=1}^{n}\bigl[y_i\,\mathbf{x}_i^T\boldsymbol{\beta} - \ln(1 + e^{\mathbf{x}_i^T\boldsymbol{\beta}})\bigr].
 \]
 The gradient is
+
 \[
 \nabla f(\boldsymbol{\beta}) = -\sum_{i=1}^{n}(y_i - p_i)\mathbf{x}_i = -\mathbf{X}^T(\mathbf{y} - \mathbf{p}),
 \]
@@ -441,6 +445,7 @@ Writing \(\mathbf{U}(\boldsymbol{\theta}) = \nabla\ell(\boldsymbol{\theta})\) fo
 Let \(y_1, \ldots, y_n \overset{\text{iid}}{\sim} \text{Poisson}(\lambda)\). The log-likelihood is \(\ell(\lambda) = -n\lambda + \ln(\lambda)\sum y_i - \sum\ln(y_i!)\). The score is \(U(\lambda) = -n + \sum y_i/\lambda\) and the observed information is \(\mathcal{J}(\lambda) = \sum y_i/\lambda^2\).
 
 The Newton-Raphson update is
+
 \[
 \lambda^{(t+1)} = \lambda^{(t)} + \frac{-n + \sum y_i/\lambda^{(t)}}{\sum y_i/(\lambda^{(t)})^2} = \lambda^{(t)} + \frac{(\lambda^{(t)})^2(\sum y_i - n\lambda^{(t)})}{\lambda^{(t)}\sum y_i} = \frac{\sum y_i}{n} = \bar{y}.
 \]
@@ -508,6 +513,7 @@ Observations with large residuals receive small weights, naturally down-weightin
 <strong>Example 3.3 (IRLS for logistic regression).</strong>
 
 For logistic regression with \(g(\mu) = \ln(\mu/(1-\mu))\), the working weights are \(w_i = \mu_i(1-\mu_i)\) where \(\mu_i = 1/(1+e^{-\mathbf{x}_i^T\boldsymbol{\beta}})\), and the working response is \(z_i = \mathbf{x}_i^T\boldsymbol{\beta} + (y_i - \mu_i)/[\mu_i(1-\mu_i)]\). Each IRLS iteration solves
+
 \[
 \boldsymbol{\beta}^{(t+1)} = (\mathbf{X}^T\mathbf{W}^{(t)}\mathbf{X})^{-1}\mathbf{X}^T\mathbf{W}^{(t)}\mathbf{z}^{(t)}.
 \]
@@ -578,6 +584,7 @@ where \(S^2_U = \frac{1}{N-1}\sum_{i=1}^{N}(y_i - \bar{y}_U)^2\) and the factor 
 <strong>Example 4.1 (SRSWOR).</strong>
 
 A population of \(N = 1000\) households has mean income \(\bar{y}_U = 65\) (thousands) and variance \(S^2_U = 400\). We draw an SRSWOR of size \(n = 100\). The variance of the sample mean is
+
 \[
 \text{Var}(\bar{y}_s) = \frac{400}{100}\left(1 - \frac{100}{1000}\right) = 4 \times 0.9 = 3.6.
 \]
@@ -665,10 +672,12 @@ where \(\pi_i > 0\) is the inclusion probability of unit \(i\).
 <strong>Proof of unbiasedness of the HT estimator.</strong>
 
 Let \(\delta_i = \mathbf{1}(i \in s)\) denote the inclusion indicator for unit \(i\). Then \(E[\delta_i] = \pi_i\). We can write the HT estimator as a sum over all population units:
+
 \[
 \hat{\tau}_{\text{HT}} = \sum_{i \in s}\frac{y_i}{\pi_i} = \sum_{i=1}^{N}\delta_i\frac{y_i}{\pi_i}.
 \]
 Taking expectations (over the randomness of the sampling design):
+
 \[
 E[\hat{\tau}_{\text{HT}}] = \sum_{i=1}^{N}\frac{y_i}{\pi_i}E[\delta_i] = \sum_{i=1}^{N}\frac{y_i}{\pi_i}\cdot\pi_i = \sum_{i=1}^{N}y_i = \tau.
 \]
@@ -685,6 +694,7 @@ The HT estimator of the population mean is simply \(\hat{\bar{y}}_{\text{HT}} = 
 \text{Var}(\hat{\tau}_{\text{HT}}) = \sum_{i=1}^{N}\sum_{j=1}^{N}(\pi_{ij} - \pi_i\pi_j)\frac{y_i}{\pi_i}\frac{y_j}{\pi_j}.
 \]
 This can be rewritten as
+
 \[
 \text{Var}(\hat{\tau}_{\text{HT}}) = \sum_{i=1}^{N}\frac{1-\pi_i}{\pi_i}y_i^2 + \sum_{i=1}^{N}\sum_{\substack{j=1 \\ j \neq i}}^{N}\frac{\pi_{ij} - \pi_i\pi_j}{\pi_i\pi_j}y_iy_j.
 \]
@@ -724,6 +734,7 @@ where \(z_{\alpha/2}\) is the standard normal critical value. When \(N\) is larg
 <strong>Example 4.3 (Sample size calculation).</strong>
 
 We wish to estimate the mean income of a population of \(N = 10{,}000\) to within \(e = 2\) thousand dollars with 95% confidence. A pilot study suggests \(S_U = 20\). The required sample size is
+
 \[
 n = \frac{1.96^2 \times 20^2}{2^2 + 1.96^2 \times 20^2/10000} = \frac{1536.64}{4 + 0.1537} = \frac{1536.64}{4.1537} \approx 370.
 \]
@@ -773,6 +784,7 @@ T-like measures are useful because they are **pivotal** or approximately pivotal
 <strong>Example 5.1 (Two-sample T-like statistic).</strong>
 
 To compare means of two populations with samples \(\mathbf{x} = (x_1, \ldots, x_{n_1})\) and \(\mathbf{y} = (y_1, \ldots, y_{n_2})\), the Welch T-like statistic is
+
 \[
 T = \frac{\bar{x} - \bar{y}}{\sqrt{s_x^2/n_1 + s_y^2/n_2}}.
 \]
@@ -1124,6 +1136,7 @@ The expected prediction error can be decomposed into three components. For a reg
 E\bigl[(Y_0 - \hat{f}(\mathbf{x}_0))^2\bigr] = \text{Var}(\varepsilon) + \bigl[\text{Bias}(\hat{f}(\mathbf{x}_0))\bigr]^2 + \text{Var}(\hat{f}(\mathbf{x}_0)),
 \]
 where
+
 \[
 \text{Bias}(\hat{f}(\mathbf{x}_0)) = E[\hat{f}(\mathbf{x}_0)] - f(\mathbf{x}_0)
 \]
@@ -1136,6 +1149,7 @@ is the bias of the prediction at \(\mathbf{x}_0\), and \(\text{Var}(\hat{f}(\mat
 E[(Y_0 - \hat{f})^2] = E[(f + \varepsilon - \hat{f})^2] = E[(f - \hat{f})^2] + E[\varepsilon^2] + 2E[\varepsilon(f - \hat{f})].
 \]
 Since \(\varepsilon\) is independent of \(\hat{f}\) and has mean zero, the cross-term vanishes. For the first term:
+
 \[
 E[(f - \hat{f})^2] = (f - E[\hat{f}])^2 + E[(\hat{f} - E[\hat{f}])^2] = \text{Bias}^2 + \text{Var}(\hat{f}).
 \]
@@ -1170,6 +1184,7 @@ In **LOOCV**, each observation is left out one at a time. For \(i = 1, \ldots, n
 
 <div class="remark">
 For linear models with squared-error loss, there is a shortcut that avoids refitting \(n\) times:
+
 \[
 \text{CV}_{(n)} = \frac{1}{n}\sum_{i=1}^{n}\left(\frac{y_i - \hat{y}_i}{1 - h_{ii}}\right)^2,
 \]

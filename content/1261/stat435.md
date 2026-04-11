@@ -238,11 +238,13 @@ where \( A_2 = 3/(d_2\sqrt{n}) \), and \( D_3 \), \( D_4 \) are tabulated consta
 \]
 
 **R chart**:
+
 \[
 \text{UCL}_R = 2.114 \times 0.342 = 0.723, \qquad \text{LCL}_R = 0 \times 0.342 = 0
 \]
 
 **\(\bar{X}\) chart**:
+
 \[
 \text{UCL}_{\bar{X}} = 20.07 + 0.577 \times 0.342 = 20.27
 \]
@@ -251,6 +253,7 @@ where \( A_2 = 3/(d_2\sqrt{n}) \), and \( D_3 \), \( D_4 \) are tabulated consta
 \]
 
 **Process standard deviation estimate**:
+
 \[
 \hat{\sigma} = \frac{0.342}{2.326} = 0.147 \text{ mm}
 \]
@@ -275,6 +278,7 @@ where \( \bar{S} = \frac{1}{m}\sum S_i \) and constants \( A_3, B_3, B_4 \) depe
 When only one measurement per time period is available (e.g., destructive testing, slow processes), use the *individuals and moving range (I–MR)* chart.
 
 The moving range of span 2:
+
 \[
 MR_i = |X_i - X_{i-1}|, \qquad i = 2, 3, \ldots, m
 \]
@@ -327,6 +331,7 @@ where <em>p</em> is the probability of a signal on any one subgroup. When the pr
 </div>
 
 For a shift of \( \delta\sigma \) in the mean:
+
 \[
 p = \Phi\!\left(-3 + \delta\sqrt{n}\right) + \Phi\!\left(-3 - \delta\sqrt{n}\right)
 \]
@@ -364,6 +369,7 @@ Let \( D_i \) be the number of nonconforming units in a subgroup of size \( n_i 
 Under a binomial model, \( E[\hat{p}] = p \) and \( \text{Var}[\hat{p}] = p(1-p)/n \). The centre line is \( \bar{p} = \sum D_i / \sum n_i \) (weighted average).
 
 For constant \( n \):
+
 \[
 \text{UCL}_p = \bar{p} + 3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}, \qquad \text{LCL}_p = \bar{p} - 3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}
 \]
@@ -449,6 +455,7 @@ Standard parameterisation: \( k = 0.5 \) (detects 1σ shifts quickly), \( h = 4 
 <strong>CUSUM ARL Calculation</strong>: For the tabular CUSUM with <em>k</em> = 0.5, <em>h</em> = 5, and a process shift of <em>δ</em> = 1.0σ, the ARL is approximately <strong>10.4</strong> — compared to ARL ≈ 44 for the Shewhart chart with individual observations. This illustrates the CUSUM's superiority for detecting persistent small shifts.
 
 The ARL for a one-sided CUSUM is obtained from the integral equation of Siegmund (1985):
+
 \[
 \text{ARL}(\delta) \approx \frac{1 - e^{-2\lambda(h+1.166)}}{\lambda + \frac{1}{2}\lambda^2}  + \frac{1}{\delta}\left(h + 1.166\right)
 \]
@@ -690,11 +697,13 @@ A single sampling plan is characterised by two numbers: sample size \( n \) and 
 ### 6.2.1 OC Curve via Binomial and Poisson
 
 Under exact binomial sampling:
+
 \[
 P_a(p) = P(D \leq c \mid n, p) = \sum_{d=0}^{c}\binom{n}{d}p^d(1-p)^{n-d}
 \]
 
 For large \( n \) and small \( p \) (\( np \leq 5 \)), the Poisson approximation \( D \sim \text{Poisson}(np) \) gives:
+
 \[
 P_a(p) \approx e^{-np}\sum_{d=0}^{c}\frac{(np)^d}{d!}
 \]
@@ -797,16 +806,19 @@ This directly motivates minimising \( \tau^2 = \sigma^2 + (\mu - T)^2 \), the qu
 Taguchi defined signal-to-noise (S/N) ratios to simultaneously pursue small variance and correct mean in a single objective. Three cases:
 
 **Nominal-is-best (NB)**: response should equal a target value.
+
 \[
 \eta_{NB} = 10\log_{10}\!\left(\frac{\bar{y}^2}{s^2}\right) \qquad [\text{dB}]
 \]
 
 **Smaller-is-better (SB)**: response should be as small as possible (e.g., shrinkage, defect rate).
+
 \[
 \eta_{SB} = -10\log_{10}\!\left(\frac{1}{n}\sum_{i=1}^n y_i^2\right) \qquad [\text{dB}]
 \]
 
 **Larger-is-better (LB)**: response should be as large as possible (e.g., strength, yield).
+
 \[
 \eta_{LB} = -10\log_{10}\!\left(\frac{1}{n}\sum_{i=1}^n \frac{1}{y_i^2}\right) \qquad [\text{dB}]
 \]
@@ -849,6 +861,7 @@ The S/N ratio is computed across the outer array replicates for each inner array
 | 8 | + | + | + | 0.49 | 0.57 | 0.530 | 0.057 | 19.4 |
 
 **S/N computation for Run 5** (nominal-is-best):
+
 \[
 \eta = 10\log_{10}\!\left(\frac{0.500^2}{0.057^2}\right) = 10\log_{10}(76.9) = 18.9 \text{ dB}
 \]

@@ -104,6 +104,7 @@ Before defining the Lebesgue measure, it is instructive to understand what the c
 **1.1 Definition.** When \(I\) is a bounded interval \((a,b)\), \([a,b)\), \((a,b]\), or \([a,b]\) with \(a \leq b\), we define \(|I| = b - a\). For unbounded intervals we set \(|I| = \infty\).
 
 **1.2 Definition.** For a bounded set \(A \subseteq \mathbb{R}\), the **Jordan outer content** of \(A\) is
+
 \[
   c^*(A) = \inf\!\left\{ \sum_{k=1}^{n} |I_k| \;\middle|\; n \in \mathbb{Z}^+,\, \text{each } I_k \text{ is a bounded open interval, and } A \subseteq \bigcup_{k=1}^{n} I_k \right\}.
 \]
@@ -133,6 +134,7 @@ The boundary condition makes intuitive sense: a set has Jordan content precisely
 The key insight of Lebesgue is to replace finite covers by countably infinite covers. This single change allows us to handle countable sets correctly and produces a far richer theory. Every countable set — including \(\mathbb{Q}\) — will now have measure zero, since we can cover the \(n\)-th element with an interval of length \(\varepsilon/2^n\) and make the total as small as we like.
 
 **1.8 Definition.** For any \(A \subseteq \mathbb{R}\) (not necessarily bounded), the **Lebesgue outer measure** of \(A\) is
+
 \[
   \lambda^*(A) = \inf\!\left\{ \sum_{n=1}^{\infty} |I_n| \;\middle|\; \text{each } I_n \text{ is a bounded open interval and } A \subseteq \bigcup_{n=1}^{\infty} I_n \right\}.
 \]
@@ -157,6 +159,7 @@ Property (4) is the hallmark of the Lebesgue theory: every countable set is negl
 Outer measure is defined for all subsets, but it is only countably additive on a restricted class of sets. The Carathéodory criterion identifies exactly which sets are "well-behaved" enough to serve as the domain of a genuine measure. The idea is that a set \(A\) is measurable if it cleanly splits every other set \(X\) into two pieces whose outer measures add correctly.
 
 **1.10 Definition.** A set \(A \subseteq \mathbb{R}\) is **Lebesgue measurable** when for every \(X \subseteq \mathbb{R}\),
+
 \[
   \lambda^*(X) = \lambda^*(X \cap A) + \lambda^*(X \setminus A).
 \]
@@ -176,6 +179,7 @@ This simplification is extremely useful in practice: to prove a set is measurabl
 7. *(Countable additivity)* If \(A_1, A_2, \ldots\) are measurable and disjoint, then \(\lambda\!\left(\bigcup_{k=1}^\infty A_k\right) = \sum_{k=1}^\infty \lambda(A_k)\).
 
 *Key step in the proof of (4):* To show \(A \cup B\) is measurable, write for any \(X\):
+
 \[
   \lambda^*(X) = \lambda^*(X \cap A) + \lambda^*((X \setminus A) \cap B) + \lambda^*(X \setminus (A \cup B)) \geq \lambda^*(X \cap (A \cup B)) + \lambda^*(X \setminus (A \cup B)),
 \]
@@ -364,6 +368,7 @@ Working with extended reals allows us to handle limits of sequences of functions
 **2.16 Definition.** A function \(f: A \subseteq \mathbb{R} \to [-\infty, \infty]\) is **measurable** when \(f^{-1}(U)\) is measurable for every open set \(U \subseteq [-\infty, \infty]\). (In particular, the domain \(A\) must be measurable.)
 
 **2.18 Theorem.** For measurable \(A\) and \(f: A \to [-\infty,\infty]\), the following are equivalent:
+
 \[
 f \text{ is measurable} \iff f^{-1}(a,\infty] \text{ is measurable for all } a \in \mathbb{R} \iff f^{-1}[a,\infty] \text{ is measurable for all } a \in \mathbb{R}.
 \]
@@ -373,6 +378,7 @@ This equivalence is very practical: to check that a function is measurable, it s
 **2.19 Theorem.** Characteristic functions, continuous functions, and monotone functions are measurable.
 
 **2.20 Definition.** For \(f: A \to [-\infty,\infty]\), define the positive and negative parts:
+
 \[
 f^+ = \max(f, 0), \quad f^- = \max(-f, 0).
 \]
@@ -397,6 +403,7 @@ With measurable functions in hand, we build the Lebesgue integral in three steps
 **2.25 Definition.** A **simple function** on measurable \(A\) is \(s = \sum_{k=1}^n c_k \chi_{A_k}\), where the \(A_k\) are disjoint measurable sets partitioning \(A\).
 
 **2.26 Definition.** For a non-negative simple function \(s = \sum_{k=1}^n c_k \chi_{A_k}\), the **Lebesgue integral** is
+
 \[
 \int_A s \,d\lambda = \sum_{k=1}^n c_k \lambda(A_k).
 \]
@@ -404,6 +411,7 @@ With measurable functions in hand, we build the Lebesgue integral in three steps
 The definition for simple functions is exactly what one would expect: multiply the value on each piece by the measure of that piece. Now that we have the integral for simple functions, we can define it for all non-negative measurable functions by approximation.
 
 **2.29 Definition.** For a non-negative measurable function \(f: A \to [0,\infty]\), the **Lebesgue integral** is
+
 \[
 \int_A f \,d\lambda = \sup\!\left\{ \int_A s \;\middle|\; s \text{ is a non-negative simple function with } s \leq f \right\}.
 \]
@@ -417,6 +425,7 @@ This canonical approximation shows that the supremum in the definition of the in
 The convergence theorems are the heart of the Lebesgue theory. They answer the question: when can we exchange a limit with an integral? The Riemann theory allows this only under very restrictive conditions (uniform convergence). The Lebesgue theory provides far more general and flexible answers, which is one of the primary reasons it superseded the Riemann theory in modern analysis.
 
 **2.31 Theorem** (Fatou's Lemma). If \(f_n: A \to [0,\infty]\) are non-negative measurable, then
+
 \[
 \int_A \liminf_{n\to\infty} f_n \leq \liminf_{n\to\infty} \int_A f_n.
 \]
@@ -426,6 +435,7 @@ The convergence theorems are the heart of the Lebesgue theory. They answer the q
 Fatou's Lemma is a one-sided inequality: the integral of the liminf is at most the liminf of the integrals. The inequality can be strict — consider functions that concentrate their mass near a single point that shifts to infinity. Fatou is often used as a stepping stone toward the stronger results that follow.
 
 **2.33 Theorem** (Lebesgue's Monotone Convergence Theorem). If \(f_n: A \to [0,\infty]\) are non-negative measurable with \(f_n(x) \nearrow f(x)\) for all \(x \in A\), then
+
 \[
 \int_A f = \lim_{n\to\infty} \int_A f_n.
 \]
@@ -433,6 +443,7 @@ Fatou's Lemma is a one-sided inequality: the integral of the liminf is at most t
 The Monotone Convergence Theorem says: if functions increase pointwise to a limit, then their integrals converge to the integral of the limit. There is no uniform convergence required, and the limiting integral is allowed to be infinite. This is already a major improvement over the Riemann theory.
 
 **2.35 Corollary.** For non-negative measurable \(f_n\),
+
 \[
 \int_A \sum_{n=1}^\infty f_n = \sum_{n=1}^\infty \int_A f_n.
 \]
@@ -440,6 +451,7 @@ The Monotone Convergence Theorem says: if functions increase pointwise to a limi
 This corollary shows that for non-negative functions, integration and infinite summation can always be interchanged. It plays an important role in the proof of Fubini's theorem and in many other arguments throughout analysis.
 
 **2.38 Definition.** For measurable \(f: A \to [-\infty,\infty]\), we say \(f\) is **(Lebesgue) integrable** when both \(\int_A f^+\) and \(\int_A f^-\) are finite, and define
+
 \[
 \int_A f = \int_A f^+ - \int_A f^-.
 \]
@@ -448,6 +460,7 @@ Equivalently, \(f\) is integrable if and only if \(|f|\) is integrable.
 Now we arrive at the most important convergence theorem, which is the workhorse of modern analysis. The key idea is that if all functions in the sequence are bounded in absolute value by a single integrable function, then pointwise convergence implies convergence of integrals.
 
 **2.41 Theorem** (Lebesgue's Dominated Convergence Theorem). Let \(f_n: A \to [-\infty,\infty]\) be measurable, and suppose \(f(x) = \lim_{n\to\infty} f_n(x)\) exists for all \(x \in A\). If there is an integrable function \(g: A \to [0,\infty]\) with \(|f_n(x)| \leq g(x)\) for all \(n\) and \(x\), then
+
 \[
 \lim_{n\to\infty} \int_A f_n = \int_A f.
 \]
@@ -481,12 +494,14 @@ Completeness is the essential property that distinguishes spaces suitable for an
 We introduce the discrete and continuous \(L^p\) spaces in parallel. The sequence space \(\ell^p\) is a useful finite-dimensional prototype, while \(L^p(A)\) is the main object of study. The passage from \(\ell^p\) to \(L^p\) replaces sums with integrals and requires all the Lebesgue machinery we have developed.
 
 **3.12 Definition.** For sequences \(x = (x_1, x_2, \ldots) \in \mathbb{R}^\omega\) and \(1 \leq p < \infty\), define
+
 \[
 \|x\|_p = \left(\sum_{k=1}^\infty |x_k|^p\right)^{1/p}, \quad \|x\|_\infty = \sup_k |x_k|,
 \]
 and let \(\ell^p = \{x : \|x\|_p < \infty\}\), \(\ell^\infty = \{x : \|x\|_\infty < \infty\}\).
 
 **3.13 Definition.** For measurable \(A \subseteq \mathbb{R}\), define
+
 \[
 \|f\|_p = \left(\int_A |f|^p\right)^{1/p}, \quad \|f\|_\infty = \inf\{a \geq 0 : \lambda(\{|f| > a\}) = 0\},
 \]
@@ -505,6 +520,7 @@ To prove that \(L^p\) is a normed space, we need two fundamental inequalities. H
 **3.16 Definition.** We say \(p, q \in [1,\infty]\) are **conjugate** when \(1/p + 1/q = 1\) (with convention \(1/\infty = 0\).
 
 **3.17 Lemma** (Young's Inequality). For \(p, q \in (1,\infty)\) conjugate and \(a, b \geq 0\),
+
 \[
 ab \leq \frac{a^p}{p} + \frac{b^q}{q}.
 \]
@@ -691,11 +707,13 @@ Orthogonality is the central geometric concept in Hilbert space theory. Two vect
 **4.6 Definition.** A subset \(A \subseteq W\) is **orthogonal** if \(\langle u,v\rangle = 0\) for distinct \(u,v \in A\), and **orthonormal** if additionally \(\|u\| = 1\) for all \(u \in A\).
 
 **4.7 Theorem.** An orthogonal set of nonzero vectors is linearly independent. If \(\{u_1,\ldots,u_n\}\) is orthogonal and \(x \in \operatorname{span}\{u_1,\ldots,u_n\}\), then
+
 \[
 x = \sum_{k=1}^n \frac{\langle x, u_k\rangle}{\|u_k\|^2} u_k.
 \]
 
 **4.8 Theorem** (Gram–Schmidt). Given a countable ordered basis \(\{u_1, u_2, \ldots\}\) for an inner product space, define \(v_1 = u_1\) and
+
 \[
 v_n = u_n - \sum_{k=1}^{n-1} \frac{\langle u_n, v_k\rangle}{\|v_k\|^2} v_k \quad (n \geq 2).
 \]
@@ -710,6 +728,7 @@ A key failure of Gram–Schmidt in infinite dimensions: in a non-complete inner 
 **4.27 Theorem** (Closest Point / Projection). Let \(H\) be a Hilbert space and \(S \subseteq H\) be **closed** and **convex**. Then for every \(a \in H\) there exists a **unique** \(b \in S\) minimizing \(\|b - a\|\).
 
 *Proof.* Let \(d = \inf_{x \in S} \|x - a\|\) and choose \(x_n \in S\) with \(\|x_n - a\| \to d\). The parallelogram law gives
+
 \[
 \|x_k - x_\ell\|^2 = 2\|x_k-a\|^2 + 2\|x_\ell - a\|^2 - 4\left\|\frac{x_k+x_\ell}{2} - a\right\|^2 \leq 2\|x_k-a\|^2 + 2\|x_\ell-a\|^2 - 4d^2,
 \]
@@ -765,11 +784,13 @@ The Hilbert space theory of Chapter 4 guarantees the \(L^2\) convergence of Four
 A **\(2\pi\)-periodic function** \(f: \mathbb{R} \to \mathbb{C}\) is determined by its values on \([-\pi, \pi)\), or equivalently on the circle \(\mathbb{T} = \mathbb{R}/2\pi\mathbb{Z}\). We write \(L^p(\mathbb{T})\) or \(L^p[-\pi,\pi]\) for the corresponding \(L^p\) space.
 
 **Definition 31.1** (Real trigonometric polynomial). A function of the form
+
 \[
 f(x) = a_0 + \sum_{n=1}^m a_n \cos nx + \sum_{n=1}^m b_n \sin nx.
 \]
 
 **Definition 33.1** (Complex trigonometric polynomial). A function of the form \(f(x) = \sum_{n=-\ell}^\ell c_n e^{inx}\), where
+
 \[
 e^{inx} = \cos nx + i\sin nx, \quad \cos nx = \frac{e^{inx}+e^{-inx}}{2}, \quad \sin nx = \frac{e^{inx}-e^{-inx}}{2i}.
 \]
@@ -783,21 +804,25 @@ The density of trigonometric polynomials in \(L^p(\mathbb{T})\) is the key fact 
 ## Fourier Series in \(L^2\)
 
 The set \(\{1, \cos nx, \sin nx : n \in \mathbb{Z}^+\}\) is orthogonal in \(L^2[-\pi,\pi]\), with
+
 \[
 \|1\|_2^2 = 2\pi, \quad \|\cos nx\|_2^2 = \|\sin nx\|_2^2 = \pi.
 \]
 Normalizing, \(\left\{\frac{1}{\sqrt{2\pi}},\ \frac{1}{\sqrt{\pi}}\cos nx,\ \frac{1}{\sqrt{\pi}}\sin nx\right\}\) is an orthonormal set whose span is dense (the trigonometric polynomials are dense), so it is a **Hilbert basis** for \(L^2[-\pi,\pi]\).
 
 By Parseval's identity / the Hilbert basis theorem, every \(f \in L^2[-\pi,\pi]\) satisfies
+
 \[
 f(x) = a_0 + \sum_{n=1}^\infty (a_n \cos nx + b_n \sin nx) \quad \text{in } L^2,
 \]
 where the **Fourier coefficients** are
+
 \[
 a_0 = \frac{1}{2\pi}\int_{-\pi}^\pi f(x)\,dx, \quad a_n = \frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos nx\,dx, \quad b_n = \frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin nx\,dx.
 \]
 
 In **complex notation**, the set \(\{e^{inx}/\sqrt{2\pi} : n \in \mathbb{Z}\}\) is a Hilbert basis for \(L^2(\mathbb{T},\mathbb{C})\), and
+
 \[
 f(x) = \sum_{n=-\infty}^\infty c_n e^{inx} \quad \text{in } L^2(\mathbb{T}), \quad \text{where} \quad c_n = \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^\pi f(t)e^{-int}\,dt.
 \]
@@ -807,14 +832,17 @@ The \(L^2\) convergence of the Fourier series is a direct consequence of Chapter
 ## Partial Sums and the Dirichlet Kernel
 
 **Notation 34.2.** The **\(\ell\)-th partial sum** of the Fourier series of \(f \in L^1(\mathbb{T})\) is
+
 \[
 S_\ell(f)(x) = \sum_{n=-\ell}^\ell c_n e^{inx}.
 \]
 Computing explicitly:
+
 \[
 S_\ell(f)(x) = \frac{1}{\pi}\int_{-\pi}^\pi f(t)\D_\ell(x-t)\,dt,
 \]
 where the **Dirichlet kernel** is
+
 \[
 D_\ell(u) = \frac{1}{2}\sum_{n=-\ell}^\ell e^{inu} = \begin{cases} \dfrac{\sin((\ell+\frac{1}{2})u)}{2\sin(\frac{u}{2})} & u \neq 0, \\ \ell + \frac{1}{2} & u = 0. \end{cases}
 \]
@@ -827,10 +855,12 @@ The Dirichlet kernel is a convolution kernel: the partial sum \(S_\ell(f)\) is t
 The partial sums \(S_\ell(f)\) need not converge pointwise for \(f \in L^1\). **Cesàro summation** is more robust:
 
 **Notation 34.2.** The **\(m\)-th Cesàro mean** is
+
 \[
 \sigma_m(f)(x) = \frac{1}{m+1}\sum_{\ell=0}^m S_\ell(f)(x) = \frac{1}{\pi}\int_{-\pi}^\pi f(t)\K_m(x-t)\,dt,
 \]
 where the **Fejér kernel** is
+
 \[
 K_m(u) = \frac{1}{m+1}\sum_{\ell=0}^m D_\ell(u) = \begin{cases} \dfrac{1}{2(m+1)}\cdot\dfrac{\sin^2(\frac{(m+1)u}{2})}{\sin^2(\frac{u}{2})} & u \neq 0, \\ \dfrac{m+1}{2} & u = 0. \end{cases}
 \]
@@ -850,6 +880,7 @@ The non-negativity of the Fejér kernel is the key property that makes Cesàro m
 **Theorem 35.1** (Riemann–Lebesgue Lemma). If \(f \in L^1(\mathbb{T})\), then \(\lim_{n \to \infty} c_n(f) = 0\).
 
 *Proof.* Given \(\varepsilon > 0\), choose a trigonometric polynomial \(g = \sum_{n=-\ell}^\ell a_n e^{inx}\) with \(\|f-g\|_1 < 2\pi\varepsilon\). For \(|n| > \ell\), \(c_n(g) = 0\), so
+
 \[
 |c_n(f)| = |c_n(f-g)| \leq \frac{1}{2\pi}\|f-g\|_1 < \varepsilon. \qquad\square
 \]
@@ -859,12 +890,14 @@ The Riemann–Lebesgue Lemma states that the Fourier coefficients of any \(L^1\)
 ## Fejér's Theorem
 
 **Theorem 35.2** (Fejér). Let \(f \in L^1(\mathbb{T})\) and \(a \in \mathbb{T}\). Suppose the one-sided limits \(f(a^+) = \lim_{t \to 0^+} f(a+t)\) and \(f(a^-) = \lim_{t \to 0^+} f(a-t)\) both exist in \(\mathbb{C}\). Then
+
 \[
 \lim_{m \to \infty} \sigma_m(f)(a) = \frac{f(a^+) + f(a^-)}{2}.
 \]
 Moreover, if \(f\) is continuous on a closed interval \(I\), the convergence is **uniform** on \(I\).
 
 *Proof sketch.* Write
+
 \[
 \sigma_m(f)(a) - \frac{f(a^+)+f(a^-)}{2} = \frac{1}{\pi}\int_0^\pi [(f(a+t)+f(a-t)) - (f(a^+)+f(a^-))]K_m(t)\,dt.
 \]
@@ -883,10 +916,12 @@ The power of Fourier analysis becomes most visible in its applications. The Four
 ### Forced Damped Oscillator
 
 Consider the ODE \(y'' + 2y' + 10y = g(t)\) where \(g\) is a \(2\pi\)-periodic even function (a "triangle wave"). The homogeneous solution \(y_h = e^{-t}(A\cos 3t + B\sin 3t) \to 0\) as \(t \to \infty\). For each Fourier mode \(\cos nt\), a particular solution is
+
 \[
 y_n = A_n \cos nt + B_n \sin nt, \quad A_n = \frac{10-n^2}{(10-n^2)^2+4n^2}, \quad B_n = \frac{2n}{(10-n^2)^2+4n^2}.
 \]
 The Fourier series of the triangle wave has \(a_n = 4/(\pi n^2)\) for odd \(n\) (and 0 for even \(n\), so the general solution is
+
 \[
 y = e^{-t}(A\cos 3t + B\sin 3t) + \sum_{n=1}^\infty \frac{4}{\pi n^2}(A_n \cos nt + B_n \sin nt).
 \]
@@ -896,6 +931,7 @@ Notice how the Fourier method reduces a linear ODE with a complicated periodic f
 ### Vibrating String
 
 The wave equation \(u_{tt} = c^2 u_{xx}\) on \([0,\pi]\) with fixed endpoints \(u(0,t) = u(\pi,t) = 0\) and initial data \(u(x,0) = g(x)\), \(u_t(x,0) = h(x)\) is solved by separation of variables. The eigenvalue problem \(X'' = -n^2 X\), \(X(0) = X(\pi) = 0\) has solutions \(X_n(x) = \sin nx\), and the general solution is
+
 \[
 u(x,t) = \sum_{n=1}^\infty \sin(nx)(A_n \cos nct + B_n \sin nct),
 \]
@@ -984,6 +1020,7 @@ is a positive summability kernel. Consequently \(\sigma_N(f) = F_N <em> f \to f\
 ## The Dirichlet Kernel and Divergence of Fourier Series
 
 The partial sums \(S_N(f)(x) = \frac{1}{2\pi}\int f(t) D_N(x-t)\,dt\) involve the Dirichlet kernel
+
 \[
 D_N(t) = \sum_{n=-N}^N e^{int} = \frac{\sin((N+\tfrac{1}{2})t)}{\sin(t/2)}.
 \]
@@ -1008,20 +1045,24 @@ The functional analysis argument is non-constructive. We now give an explicit co
 </div>
 
 *Construction.* Starting from the sequence \(g_n \in C(\mathbb{T})\) with \(\|g_n\|_\infty = 1\) and \(|S_n(g_n)(0)| \geq \frac{1}{2}\|D_n\|_1 \geq C\log n\), define trigonometric polynomial building blocks
+
 \[
 f_n := \sigma_{2n^2}(g_n) = F_{2n^2} * g_n,
 \]
 where \(F_k\) is the \(k\)-th Fejér kernel. Then \(f_n\) is a trigonometric polynomial of degree at most \(2n^2\), \(\|f_n\|_\infty \leq 1\), and one checks:
+
 \[
 |S_n(f_n)(0)| \geq |S_n(g_n)(0)| - 1 \geq C'\log n
 \]
 for some constant \(C' > 0\) and all sufficiently large \(n\). Set \(n_k = 2^{3^k}\) and define
+
 \[
 f(t) = \sum_{k=1}^\infty \frac{1}{k^2} f_{n_k}(n_k t).
 \]
 Since \(\|f_{n_k}\|_\infty \leq 1\), the Weierstrass \(M\)-test gives \(f \in C(\mathbb{T})\). Let \(G_k(t) = f_{n_k}(n_k t)\); the Fourier coefficients of \(G_k\) are supported on \(n_k \mathbb{Z}\), so for \(N < n_k\) the partial sum \(S_N(G_k)\) is the constant \(\hat{G}_k(0) = \hat{f}_{n_k}(0)\).
 
 *Proof of divergence.* For \(k \geq M+1\), we have \(n_M^2 < n_k\), so \(S_{n_M^2}(G_k)(t) = \hat{G}_k(0)\). For \(k \leq M-1\), \(G_k\) is a trigonometric polynomial of degree at most \(2n_k^3 < n_M^2\), so \(S_{n_M^2}(G_k) = G_k\). By linearity:
+
 \[
 S_{n_M^2}(f)(0) = \sum_{k=1}^{M-1} \frac{G_k(0)}{k^2} + \frac{S_{n_M}(f_{n_M})(0)}{M^2} + \sum_{k=M+1}^\infty \frac{\hat{f}_{n_k}(0)}{k^2}.
 \]
@@ -1066,6 +1107,7 @@ Despite the existence of divergent Fourier series for continuous functions, ther
 |f(a+t) - f(a^+)| \leq c|t|, \quad |f(a-t) - f(a^-)| \leq c|t| \quad \text{for all } 0 < t < \delta.
 \]
 Then
+
 \[
 S_n(f)(a) \to \frac{f(a^+) + f(a^-)}{2}.
 \]
@@ -1093,6 +1135,7 @@ The deepest convergence result is that Fourier series converge in \(L^p\) norm f
 \widehat{H(f)}(n) = (-i)\operatorname{sgn}(n)\hat{f}(n),
 \]
 where \(\operatorname{sgn}(n) = 1\) for \(n > 0\), \(\operatorname{sgn}(0) = 0\), and \(\operatorname{sgn}(n) = -1\) for \(n < 0\). Explicitly,
+
 \[
 H(f)(t) = \sum_{j=1}^\infty (-i)\hat{f}(j)e^{ijt} + \sum_{j=-\infty}^{-1} (i)\hat{f}(j)e^{ijt} = 2\operatorname{Im}\left(\sum_{j=1}^\infty \hat{f}(j)e^{ijt}\right).
 \]
@@ -1108,6 +1151,7 @@ The Hilbert transform multiplies positive Fourier modes by \(-i\) and negative F
 f + iH(f) = \hat{f}(0) + 2\sum_{j=1}^\infty \hat{f}(j)e^{ijt}.
 \]
 The partial sums satisfy
+
 \[
 S_{N-1}(f) = \frac{-1}{2i}\left[e^{-iNt}H(e^{iNt}f) - e^{iNt}H(e^{-iNt}f)\right] + \text{(boundary terms)}.
 \]
@@ -1130,6 +1174,7 @@ Consequently, if \(H : L^p \to L^p\) is bounded, then \(\|S_N(f)\|_p \leq (1 + \
 </div>
 
 *Proof.* Without loss of generality assume \(\hat{f}(0) = 0\) and \(f\) is real-valued. Then \(f + iH(f) = 2\sum_{j=1}^\infty \hat{f}(j)e^{ijt}\), so \(\int_\mathbb{T} (f+iHf)^{2k} = 0\) (all Fourier coefficients of the \(2k\)-th power are positive-frequency). Taking the real part and expanding via the binomial theorem yields
+
 \[
 \int_\mathbb{T} |Hf|^{2k} \leq \sum_{m=1}^k \binom{2k}{2m} \int_\mathbb{T} |f|^{2m}|Hf|^{2k-2m}.
 \]
@@ -1179,6 +1224,7 @@ Let us package the Fourier transform as a linear map between Banach spaces. Defi
 \]
 
 That \(\Lambda\) is linear follows immediately from the linearity of the Lebesgue integral. That \(\Lambda\) is bounded — indeed, with \(\|\Lambda\| \leq 1\) — follows from the estimate
+
 \[
 |\hat{f}(n)| = \left|\int_{\mathbb{T}} f(t) e^{-2\pi i n t}\,dt\right| \leq \int_{\mathbb{T}} |f(t)|\,dt = \|f\|_1,
 \]
@@ -1201,6 +1247,7 @@ The key lemma shows that if the image of the closed unit ball under a bounded li
 </div>
 
 *Proof.* The hypothesis \(Y_1 \subseteq \overline{T(X_m)}\) implies \(Y_r \subseteq \overline{T(X_{rm})}\) for all \(r > 0\) by scaling. Choose \(y \in Y_1\). Since \(y \in Y_1 \subseteq \overline{T(X_m)}\), there exists \(x_1 \in X_m\) with \(\|y - Tx_1\| < 1/2\). Since \(y - Tx_1 \in Y_{1/2} \subseteq \overline{T(X_{m/2})}\), there exists \(x_2 \in X_{m/2}\) with \(\|(y - Tx_1) - Tx_2\| < 1/4\). Continuing inductively, we find \(x_n \in X_{m/2^{n-1}}\) such that
+
 \[
 \left\|y - \sum_{j=1}^n Tx_j\right\| < \frac{1}{2^n}.
 \]
@@ -1211,14 +1258,17 @@ Since \(\sum_{n=1}^\infty \|x_n\| \leq \sum_{n=1}^\infty m/2^{n-1} = 2m\), and \
 </div>
 
 *Proof.* Since \(T\) is surjective, \(Y = T(X) = \bigcup_{n=1}^\infty \overline{T(X_n)}\). Now \(Y\) is a complete metric space, so by the **Baire Category Theorem**, some \(\overline{T(X_m)}\) has nonempty interior: there exists \(y \in \mathrm{int}(\overline{T(X_m)}) \cap \overline{T(X_m)}\). Choose \(\delta > 0\) so that \(B^Y(y, \delta) \subseteq \overline{T(X_m)}\). Then
+
 \[
 B^Y(0, \delta) \subseteq -y + \overline{T(X_m)} \subseteq \overline{T(X_m)} + \overline{T(X_m)} \subseteq \overline{T(X_{2m})},
 \]
 so \(Y_{\delta/2} \subseteq \overline{T(X_{2m})}\). By Lemma 7.1, \(Y_{\delta/2} \subseteq T(X_{4m})\), i.e.
+
 \[
 T(X_r) \supseteq Y_{r\delta/8m} \quad \text{for all } r > 0.
 \]
 Now let \(G \subseteq X\) be open and \(y = Tx \in T(G)\). Choose \(\varepsilon > 0\) with \(x + B^X(0, \varepsilon) \subseteq G\). Then
+
 \[
 T(G) \supseteq y + T\!\left(B^X(0, \varepsilon)\right) \supseteq y + T(X_{\varepsilon/2}) \supseteq y + Y_{\varepsilon\delta/16m} = B^Y\!\left(y,\, \tfrac{\varepsilon\delta}{16m}\right).
 \]
@@ -1243,10 +1293,12 @@ We can now answer the question about Fourier coefficients.
 *Proof.* We established that \(\Lambda\) is continuous, linear, and injective. Suppose for contradiction that \(\Lambda\) were surjective. By the Inverse Mapping Theorem, \(\Lambda^{-1}: c_0(\mathbb{Z}, \mathbb{C}) \to L^1(\mathbb{T})\) would be continuous.
 
 Recall from Section 6.2 the Dirichlet kernels \(D_N = \sum_{n=-N}^{N} e^{2\pi i n \cdot}\). Their Fourier coefficients are
+
 \[
 d_N := \Lambda([D_N]) = (\ldots, 0, \underbrace{1, 1, \ldots, 1}_{2N+1 \text{ ones}}, 0, \ldots),
 \]
 so \(\|d_N\|_\infty = 1\) for all \(N\). Each \(d_N\) is finitely supported, hence in \(c_0\). But the divergence of the Dirichlet kernel norms — proved in Section 6.2 using the harmonic series — gives
+
 \[
 \|\Lambda^{-1}(d_N)\|_1 = \|D_N\|_1 \to \infty \quad \text{as } N \to \infty.
 \]

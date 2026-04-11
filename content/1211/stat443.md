@@ -659,6 +659,7 @@ For the Johnson and Johnson quarterly earnings series, the data exhibit exponent
 ## State-Space Representation and ETS Models
 
 Rearranging the SES equations:
+
 \[
 X_t = \ell_{t-1} + \varepsilon_t \quad \text{(Observation)}, \qquad \ell_t = \ell_{t-1} + \alpha \varepsilon_t \quad \text{(State)}.
 \]
@@ -674,6 +675,7 @@ where \( Y_t \) is an unobserved state vector, \( A_t \) is a known measurement 
 </div>
 
 Every ARMA model, exponential smoothing model, and GARCH model has a state-space formulation. For ARMA(\(p,q\)) with \( r = \max(p, q+1) \):
+
 \[
 Y_t = [\theta_{r-1}, \theta_{r-2}, \ldots, \theta_0] \mathbf{X}_t \quad \text{(observation)}, \qquad \mathbf{X}_{t+1} = C \mathbf{X}_t + \mathbf{e} W_t \quad \text{(state)}
 \]
@@ -682,6 +684,7 @@ where \( C \) is a companion matrix. This unifying framework enables likelihood 
 The **ETS (Error/Trend/Seasonal) taxonomy** classifies exponential smoothing models by their error type (Additive/Multiplicative), trend type (None/Additive/Additive Damped/Multiplicative), and seasonal type (None/Additive/Multiplicative). AIC computed from the Gaussian state-space likelihood is used to select among ETS variants.
 
 **Multiplicative errors** arise when the noise is proportional to the level:
+
 \[
 \varepsilon_t = \frac{X_t - \ell_{t-1}}{\ell_{t-1}}, \quad X_t = \ell_{t-1}(1 + \varepsilon_t), \quad \ell_t = \ell_{t-1}(1 + \alpha \varepsilon_t).
 \]
@@ -829,16 +832,19 @@ Given observations \( Y_1, \ldots, Y_t \), the Kalman filter computes the optima
 Denote \( X_t^s = \mathbb{E}[X_t \mid Y_k, k \leq s] \) and \( P_t^s = \mathbb{E}[(X_t - X_t^s)(X_t - X_t^s)^\top] \). With initial conditions \( X_0^0 \) and \( P_0^0 \):
 
 **Prediction step** (propagate state forward):
+
 \[
 X_t^{t-1} = \Phi X_{t-1}^{t-1} + \xi u_t, \qquad P_t^{t-1} = \Phi P_{t-1}^{t-1} \Phi^\top + Q.
 \]
 
 **Update step** (incorporate new observation \( Y_t \)):
+
 \[
 X_t^t = X_t^{t-1} + K_t(Y_t - A_t X_t^{t-1} - \Gamma u_t), \qquad P_t^t = (I - K_t A_t) P_t^{t-1}
 \]
 
 where the **Kalman gain** is:
+
 \[
 K_t = P_t^{t-1} A_t^\top \left[A_t P_t^{t-1} A_t^\top + R\right]^{-1}.
 \]

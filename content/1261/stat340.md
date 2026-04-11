@@ -36,10 +36,12 @@ In a **deterministic** simulation all input quantities and relationships are fix
 </div>
 
 The central idea is deceptively simple. Suppose we wish to evaluate a quantity \(\theta\) that can be expressed as
+
 \[
 \theta = E[g(X)]
 \]
 for some random variable \(X\) with known distribution and some function \(g\). If we can generate independent realisations \(X_1, X_2, \ldots, X_n\) of \(X\), then the **sample mean**
+
 \[
 \hat{\theta}_n = \frac{1}{n}\sum_{i=1}^{n} g(X_i)
 \]
@@ -54,6 +56,7 @@ Since all Monte Carlo methods are implemented on digital computers, understandin
 ### Binary Representation of Integers
 
 Every non-negative integer \(n\) can be written uniquely in base 2 as
+
 \[
 n = \sum_{k=0}^{K} b_k \, 2^k, \qquad b_k \in \{0,1\}.
 \]
@@ -67,6 +70,7 @@ To convert a decimal integer to binary, one repeatedly divides by 2 and records 
 ### Binary Representation of Fractions
 
 A real number between 0 and 1 can be expressed in binary as
+
 \[
 0.d_1 d_2 d_3 \cdots = \sum_{k=1}^{\infty} d_k \, 2^{-k}, \qquad d_k \in \{0,1\}.
 \]
@@ -91,6 +95,7 @@ Modern computers store floating-point numbers according to the IEEE 754 standard
 | Mantissa (significand) | 52 | Fractional part of the normalised form |
 
 A normalised double-precision number represents
+
 \[
 (-1)^{s} \times 1.d_1 d_2 \cdots d_{52} \times 2^{e - 1023}
 \]
@@ -236,6 +241,7 @@ No deterministic generator is truly random, so we subject PRNGs to a battery of 
 ### Chi-Squared Goodness-of-Fit Test
 
 Partition \([0,1)\) into \(k\) equal subintervals. Generate \(n\) values and let \(O_j\) be the observed count in the \(j\)-th subinterval. The expected count is \(E_j = n/k\). The test statistic is
+
 \[
 \chi^2 = \sum_{j=1}^{k} \frac{(O_j - E_j)^2}{E_j}.
 \]
@@ -256,6 +262,7 @@ The serial test checks for independence between consecutive values. Partition \(
 ### Runs Test
 
 A **run** is a maximal sequence of consecutive values that are all increasing (a run up) or all decreasing (a run down). Under true independence, the expected number and lengths of runs follow known distributions. Let \(R\) be the total number of runs (up and down combined) in a sequence of \(n\) values. For large \(n\),
+
 \[
 E[R] = \frac{2n - 1}{3}, \qquad \text{Var}(R) = \frac{16n - 29}{90}.
 \]
@@ -378,6 +385,7 @@ The expected number of iterations until acceptance is \(c\).
 P(\text{accept}) = P\!\left(U \leq \frac{f(Y)}{c\,g(Y)}\right) = \int_{-\infty}^{\infty} \frac{f(y)}{c\,g(y)}\, g(y)\, dy = \frac{1}{c}\int_{-\infty}^{\infty} f(y)\, dy = \frac{1}{c}.
 \]
 The conditional density of the accepted value at \(x\) is, by Bayes' theorem,
+
 \[
 \frac{g(x) \cdot \frac{f(x)}{c\,g(x)}}{1/c} = f(x).
 \]
@@ -401,6 +409,7 @@ Since each trial is independent and succeeds with probability \(1/c\), the numbe
 ### Composition (Mixture) Method
 
 If the target density can be written as a **mixture**
+
 \[
 f(x) = \sum_{j=1}^{k} p_j \, f_j(x), \qquad p_j \geq 0, \quad \sum_{j=1}^{k} p_j = 1,
 \]
@@ -434,6 +443,7 @@ The preprocessing step constructs the table so that the correct PMF is reproduce
 Several specialised methods exist for generating standard normal variates:
 
 The **Box--Muller transform** generates two independent standard normals from two independent uniforms. If \(U_1, U_2 \sim \text{Uniform}(0,1)\), then
+
 \[
 Z_1 = \sqrt{-2\ln U_1}\,\cos(2\pi U_2), \qquad Z_2 = \sqrt{-2\ln U_1}\,\sin(2\pi U_2)
 \]
@@ -444,6 +454,7 @@ are independent \(N(0,1)\) random variables.
 </div>
 
 The **Polar method** (Marsaglia, 1964) avoids the costly trigonometric evaluations in Box--Muller. Generate \(V_1, V_2\) independently from \(\text{Uniform}(-1, 1)\). Compute \(S = V_1^2 + V_2^2\). If \(S \geq 1\), reject and repeat. Otherwise set
+
 \[
 Z_1 = V_1 \sqrt{\frac{-2\ln S}{S}}, \qquad Z_2 = V_2 \sqrt{\frac{-2\ln S}{S}}.
 \]
@@ -482,6 +493,7 @@ Generate \(Z_1, Z_2 \sim N(0,1)\) independently. Then \(X_1 = Z_1\) and \(X_2 = 
 ### Conditional Distribution Method
 
 For a random vector \((X_1, X_2, \ldots, X_d)\), one can factorise the joint density using the chain rule of probability:
+
 \[
 f(x_1, \ldots, x_d) = f_1(x_1)\, f_2(x_2 \mid x_1)\, f_3(x_3 \mid x_1, x_2) \cdots f_d(x_d \mid x_1, \ldots, x_{d-1}).
 \]
@@ -502,6 +514,7 @@ If the marginals are continuous, then \(C\) is unique. Conversely, for any copul
 ### Gaussian Copula
 
 The Gaussian copula is derived from the multivariate normal distribution. If \(\mathbf{R}\) is a correlation matrix, the Gaussian copula is
+
 \[
 C_R^{\text{Ga}}(u_1, \ldots, u_d) = \Phi_R(\Phi^{-1}(u_1), \ldots, \Phi^{-1}(u_d)),
 \]
@@ -526,6 +539,7 @@ The \(t\) copula allows for heavier tails and stronger tail dependence than the 
 ### Archimedean Copulas
 
 An **Archimedean copula** has the form
+
 \[
 C(u_1, \ldots, u_d) = \psi(\psi^{-1}(u_1) + \cdots + \psi^{-1}(u_d)),
 \]
@@ -571,6 +585,7 @@ W(1.00) = -0.060 + 0.5(0.44) = 0.160
 </div>
 
 **Geometric Brownian motion** (used in the Black--Scholes model for stock prices) is
+
 \[
 S(t) = S(0)\exp\!\left(\left(\mu - \tfrac{\sigma^2}{2}\right)t + \sigma W(t)\right),
 \]
@@ -593,15 +608,18 @@ For a **non-homogeneous Poisson process** with time-varying rate \(\lambda(t) \l
 ## 4.1 Monte Carlo Estimators for Integrals
 
 The fundamental Monte Carlo integration problem is to estimate
+
 \[
 \theta = \int_a^b h(x)\, dx.
 \]
 By writing \(\theta = (b-a)\, E[h(U)]\) where \(U \sim \text{Uniform}(a,b)\), the **sample-mean estimator** is
+
 \[
 \hat{\theta}_n = \frac{b-a}{n}\sum_{i=1}^{n} h(U_i), \qquad U_i \sim \text{Uniform}(a,b) \text{ iid}.
 \]
 
 More generally, to estimate \(\theta = E[g(X)]\) where \(X\) has density \(f\), we generate \(X_1, \ldots, X_n\) iid from \(f\) and compute
+
 \[
 \hat{\theta}_n = \frac{1}{n}\sum_{i=1}^{n} g(X_i).
 \]
@@ -609,6 +627,7 @@ More generally, to estimate \(\theta = E[g(X)]\) where \(X\) has density \(f\), 
 ### Multidimensional Integration
 
 A major advantage of Monte Carlo over deterministic quadrature rules is its **dimension independence**. For a standard Gaussian quadrature rule over \([0,1]^s\) with \(k\) points per dimension, the total number of function evaluations is \(k^s\), which grows exponentially with dimension (the **curse of dimensionality**). In contrast, the MC estimator
+
 \[
 \hat\theta = \frac{1}{n}\sum_{i=1}^n g(\boldsymbol{X}_i), \qquad \boldsymbol{X}_i \sim f_{\boldsymbol{X}},
 \]
@@ -646,6 +665,7 @@ With more samples, this estimate converges to the true value.
 ### Unbiasedness
 
 The sample-mean estimator is **unbiased**:
+
 \[
 E[\hat{\theta}_n] = \frac{1}{n}\sum_{i=1}^{n} E[g(X_i)] = E[g(X)] = \theta.
 \]
@@ -657,6 +677,7 @@ By the **strong law of large numbers**, \(\hat{\theta}_n \to \theta\) almost sur
 ### Mean Squared Error
 
 The **mean squared error** (MSE) of an estimator \(\hat{\theta}\) is
+
 \[
 \text{MSE}(\hat{\theta}) = E[(\hat{\theta} - \theta)^2] = \text{Var}(\hat{\theta}) + (\text{Bias}(\hat{\theta}))^2.
 \]
@@ -677,6 +698,7 @@ Equivalently, \(\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{d} N(0, \sigma^2)
 </div>
 
 This result is the theoretical foundation for constructing confidence intervals. Since \(\sigma^2\) is typically unknown, we estimate it by the **sample variance**
+
 \[
 S_n^2 = \frac{1}{n-1}\sum_{i=1}^{n}(g(X_i) - \hat{\theta}_n)^2.
 \]
@@ -684,6 +706,7 @@ S_n^2 = \frac{1}{n-1}\sum_{i=1}^{n}(g(X_i) - \hat{\theta}_n)^2.
 ### Confidence Intervals
 
 An approximate \((1-\alpha)\)-level confidence interval for \(\theta\) is
+
 \[
 \hat{\theta}_n \pm z_{\alpha/2}\, \frac{S_n}{\sqrt{n}},
 \]
@@ -699,6 +722,7 @@ where \(z_{\alpha/2}\) is the \((1-\alpha/2)\)-quantile of the standard normal d
 ### Determining Sample Size
 
 To achieve a confidence interval of half-width \(\varepsilon\) at confidence level \(1 - \alpha\), we need
+
 \[
 n \geq \left(\frac{z_{\alpha/2}\, S}{\varepsilon}\right)^2.
 \]
@@ -709,6 +733,7 @@ In practice, one runs a pilot study to estimate \(S\), then determines the requi
 ### Estimating \(\pi\)
 
 One of the most classical Monte Carlo experiments estimates \(\pi\) via the area of a quarter circle. Generate \((U_1, U_2)\) uniformly on \([0,1]^2\) and check whether \(U_1^2 + U_2^2 \leq 1\). Since the area of the quarter circle is \(\pi/4\),
+
 \[
 \hat{\pi}_n = \frac{4}{n}\sum_{i=1}^{n} \mathbf{1}(U_{1i}^2 + U_{2i}^2 \leq 1).
 \]
@@ -717,10 +742,12 @@ This is a hit-or-miss estimator.
 ### Option Pricing
 
 In finance, the price of a European call option under the Black--Scholes model is
+
 \[
 C = e^{-rT}\, E[\max(S(T) - K, 0)],
 \]
 where \(S(T) = S_0 \exp\!\left((r - \sigma^2/2)T + \sigma\sqrt{T}\, Z\right)\) and \(Z \sim N(0,1)\). A Monte Carlo estimator generates \(n\) independent copies of \(Z\), computes each payoff, and averages:
+
 \[
 \hat{C}_n = \frac{e^{-rT}}{n}\sum_{i=1}^{n}\max(S_0 e^{(r-\sigma^2/2)T + \sigma\sqrt{T}Z_i} - K,\, 0).
 \]
@@ -758,6 +785,7 @@ For a pseudo-random sequence, \(D_n^* = O(\sqrt{\log\log n/n})\) almost surely (
 ### Halton Sequence
 
 The **Halton sequence** in dimension \(s\) is constructed by combining van der Corput sequences in \(s\) different prime bases. For base \(b\), the van der Corput sequence for integer \(n\) with base-\(b\) representation \(n = \sum_k d_k b^k\) is
+
 \[
 v_b(n) = \sum_k d_k b^{-(k+1)}.
 \]
@@ -806,6 +834,7 @@ If we can arrange \(\text{Cov}(\hat{\theta}_1, \hat{\theta}_2) < 0\), the varian
 </div>
 
 The standard implementation: if \(U_1, \ldots, U_n\) are iid \(\text{Uniform}(0,1)\), the crude estimator uses \(2n\) samples. The antithetic estimator uses:
+
 \[
 \hat{\theta}_{\text{AV}} = \frac{1}{2n}\left(\sum_{i=1}^{n} g(U_i) + \sum_{i=1}^{n} g(1 - U_i)\right) = \frac{1}{n}\sum_{i=1}^{n} \frac{g(U_i) + g(1-U_i)}{2}.
 \]
@@ -825,6 +854,7 @@ Since \(1 - U_i \sim \text{Uniform}(0,1)\) whenever \(U_i\) does, both halves ar
 \text{Var}\!\left(\frac{e^U + e^{1-U}}{2}\right) / n.
 \]
 One can compute: \(E[(e^U + e^{1-U})/2] = e - 1\), and
+
 \[
 \text{Var}\!\left(\frac{e^U + e^{1-U}}{2}\right) = \frac{1}{4}\left(\text{Var}(e^U) + \text{Var}(e^{1-U}) + 2\text{Cov}(e^U, e^{1-U})\right).
 \]
@@ -838,6 +868,7 @@ Since \(\text{Cov}(e^U, e^{1-U}) = E[e^U e^{1-U}] - (E[e^U])^2 = E[e] - (e-1)^2 
 ### Method
 
 Partition \([0,1)\) into \(k\) strata \([0, 1/k), [1/k, 2/k), \ldots, [(k-1)/k, 1)\). Within stratum \(j\), generate \(n_j\) samples uniformly. The stratified estimator of \(\theta = \int_0^1 g(u)\, du\) is
+
 \[
 \hat{\theta}_{\text{str}} = \sum_{j=1}^{k} \frac{1}{k} \cdot \frac{1}{n_j}\sum_{i=1}^{n_j} g\!\left(\frac{j-1+U_{ji}}{k}\right),
 \]
@@ -868,10 +899,12 @@ This is closer to the true value \(e - 1 = 1.71828\) than a typical crude estima
 ### Derivation
 
 Suppose we wish to estimate \(\theta = E_f[g(X)] = \int g(x) f(x)\, dx\). Let \(h\) be another density with \(h(x) > 0\) whenever \(g(x) f(x) \neq 0\). Then
+
 \[
 \theta = \int g(x) f(x)\, dx = \int g(x) \frac{f(x)}{h(x)} h(x)\, dx = E_h\!\left[g(X)\frac{f(X)}{h(X)}\right].
 \]
 The **importance sampling estimator** is
+
 \[
 \hat{\theta}_{\text{IS}} = \frac{1}{n}\sum_{i=1}^{n} g(X_i)\, \frac{f(X_i)}{h(X_i)}, \qquad X_i \sim h \text{ iid}.
 \]
@@ -904,6 +937,7 @@ where \(\phi\) is the standard normal density. The weight ratio simplifies to \(
 ## 5.5 Control Variates
 
 The **control variate** technique exploits known quantities to reduce variance. Suppose we estimate \(\theta = E[Y]\) and have access to another random variable \(C\) (the "control") whose expected value \(\mu_C = E[C]\) is known. The **control variate estimator** is
+
 \[
 Y^{(c)} = Y - \beta(C - \mu_C),
 \]
@@ -915,10 +949,12 @@ for some constant \(\beta\). Since \(E[Y^{(c)}] = E[Y] = \theta\) regardless of 
 \text{Var}(Y^{(c)}) = \text{Var}(Y) - 2\beta\,\text{Cov}(Y,C) + \beta^2\,\text{Var}(C).
 \]
 Minimising over \(\beta\) yields the optimal coefficient
+
 \[
 \beta^* = \frac{\text{Cov}(Y,C)}{\text{Var}(C)},
 \]
 and the resulting variance is
+
 \[
 \text{Var}(Y^{(c^*)}) = \text{Var}(Y)(1 - \rho_{Y,C}^2),
 \]
@@ -955,6 +991,7 @@ Different importance sampling densities can be used within different strata, opt
 ### European Options
 
 For a European call option under the Black--Scholes model, the Monte Carlo estimator is
+
 \[
 \hat{C} = \frac{e^{-rT}}{n}\sum_{i=1}^{n} \max(S_0 e^{(r - \sigma^2/2)T + \sigma\sqrt{T}Z_i} - K,\, 0).
 \]
@@ -971,6 +1008,7 @@ A knock-out barrier option becomes worthless if the stock price crosses a barrie
 ## 5.8 Rare Event Simulation
 
 Estimating probabilities of rare events \(\theta = P(A)\) with \(\theta \ll 1\) is challenging for crude Monte Carlo because the relative error is
+
 \[
 \frac{\sqrt{\text{Var}(\mathbf{1}_A)}}{\theta\sqrt{n}} = \frac{\sqrt{\theta(1-\theta)}}{\theta\sqrt{n}} \approx \frac{1}{\sqrt{\theta \cdot n}},
 \]
@@ -1000,6 +1038,7 @@ which requires \(n = O(1/\theta)\) samples for a fixed relative error.
 ## 5.10 Common Random Numbers
 
 When comparing two system configurations (e.g., two scheduling policies for a factory), **common random numbers** (CRN) uses the same stream of uniform random numbers for both systems. This induces positive correlation between the two outputs \(Y_1\) and \(Y_2\), so the variance of the difference \(Y_1 - Y_2\) is
+
 \[
 \text{Var}(Y_1 - Y_2) = \text{Var}(Y_1) + \text{Var}(Y_2) - 2\,\text{Cov}(Y_1, Y_2).
 \]

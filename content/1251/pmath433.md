@@ -393,6 +393,7 @@ Let \( T \) be a complete theory, \( M \models T \), and \( A \subseteq M \). A 
 
 <div class="definition">
 Let \( \bar{b} \in M^n \). The <strong>type of \( \bar{b} \) over \( A \)</strong> in \( M \) is
+
 \[
 \mathrm{tp}^M(\bar{b}/A) = \{\varphi(\bar{x}) \in \mathcal{L}(A) : M \models \varphi(\bar{b})\}.
 \]
@@ -431,6 +432,7 @@ This formula (together with the RCF axioms) implies every other formula in \( p 
 <strong>Types and automorphisms in ACF: \( \mathrm{tp}(i/\mathbb{Q}) = \mathrm{tp}(-i/\mathbb{Q}) \) in \( \mathbb{C} \).</strong> The previous example showed that in RCF, \( \mathrm{tp}(\sqrt{2}/\mathbb{Q}) \neq \mathrm{tp}(-\sqrt{2}/\mathbb{Q}) \) because the formula \( x > 0 \) distinguishes them. This raises the question: are there cases where conjugate elements <em>do</em> have the same type?
 
 Work in the theory \( \mathrm{ACF}_0 \), with the monster model \( \mathbb{C} \). Consider the imaginary unit \( i = \sqrt{-1} \in \mathbb{C} \) and its conjugate \( -i \). Both satisfy the same minimal polynomial \( x^2 + 1 = 0 \) over \( \mathbb{Q} \). In the language \( \mathcal{L}_{\mathrm{rings}} = \{+, \cdot, -, 0, 1\} \) — which does <em>not</em> include an ordering — we claim:
+
 \[
 \mathrm{tp}(i/\mathbb{Q}) = \mathrm{tp}(-i/\mathbb{Q}) \quad \text{in } \mathbb{C} \models \mathrm{ACF}_0.
 \]
@@ -532,6 +534,7 @@ Since DLO has QE, this agreement on quantifier-free formulas gives \(\mathrm{tp}
 <strong>Claim: \(\lvert S_1(\{a\})\rvert = 3\) in DLO.</strong>
 
 The three types are:
+
 \[
 p_{<a}(x) = \{x < a\} \cup \{\text{all consequences}\}, \quad p_{=a}(x) = \{x = a\}, \quad p_{>a}(x) = \{a < x\} \cup \{\text{all consequences}\}.
 \]
@@ -554,6 +557,7 @@ So every type in \(S_1(\{a\})\) is isolated, which is consistent with the fact t
 <strong>Claim: \(\lvert S_1(\{a, b\})\rvert = 5\) in DLO (when \(a < b\)).</strong>
 
 The five types correspond to the five "intervals" (or points) determined by \(a\) and \(b\):
+
 \[
 p_1: x < a, \quad p_2: x = a, \quad p_3: a < x < b, \quad p_4: x = b, \quad p_5: b < x.
 \]
@@ -581,6 +585,7 @@ The concept of isolation is central to the omitting types theorem and to the dis
 
 <div class="definition">
 Let \(T\) be a complete theory and \(A\) a set of parameters. A complete type \(p(\bar{x}) \in S_n(A)\) is <strong>isolated</strong> (equivalently, <strong>principal</strong>) if there exists a single formula \(\varphi(\bar{x}) \in p\) such that
+
 \[
 T \cup \mathrm{Diag}_{\mathrm{el}}(A) \models \varphi(\bar{x}) \to \psi(\bar{x})
 \]
@@ -740,6 +745,7 @@ The attempt to interpret \(\mathbb{N}\) in \(\mathbb{R}\) proceeds as follows. B
 <strong>Attempted interpretation of \(\mathbb{N}\) in \((\mathbb{R}, +, \cdot, <, 0, 1)\).</strong>
 
 Define the domain of the intended copy of \(\mathbb{N}\) as:
+
 \[
 D = \bigl\{x \in \mathbb{R} : x \geq 0 \;\wedge\; \exists y_1 \exists y_2 \exists y_3 \exists y_4\,(y_1^2 + y_2^2 + y_3^2 + y_4^2 = x \;\wedge\; y_1^2 = y_1 \cdot y_1 \;\wedge\; \ldots)\bigr\}.
 \]
@@ -1055,6 +1061,7 @@ The contrast with ACF\(_0\): in ACF\(_0 \), the type \( S_1(\emptyset) \) has ex
 | NSOP | No formula has the strict order property | Simple theories (e.g., ACFA) | Many theories |
 
 The containments are:
+
 \[
 \omega\text{-stable} \;\subsetneq\; \text{superstable} \;\subsetneq\; \text{stable} \;\subsetneq\; \text{NIP} \;\subsetneq\; \text{NSOP}.
 \]
@@ -1106,6 +1113,7 @@ These problems develop fluency with the QE test and its applications to specific
 **Problem A.1.** Let \( T = \mathrm{DLO} \) and let \( \varphi(x, y) = \exists z\, (x < z \wedge z < y) \). Use the QE for DLO to find an equivalent quantifier-free formula. What is the definable set \( \{(a, b) \in \mathbb{Q}^2 : \varphi(a, b)\} \)?
 
 **Problem A.2.** Let \( K \) be an algebraically closed field and consider the formula
+
 \[
 \varphi(a, b, c) = \exists x\, (x^2 + ax + b = 0 \wedge x \neq c).
 \]
@@ -1920,6 +1928,7 @@ One of the most striking applications of compactness in model theory is the cons
 <strong>Construction of a non-standard model of the reals containing infinitesimals.</strong>
 
 Let \(T = \mathrm{Th}(\mathbb{R}, +, \cdot, <, 0, 1, (r)_{r \in \mathbb{R}})\) be the complete theory of the real numbers with a constant for each real. This is a theory in an uncountable language. We add a new constant symbol \(\epsilon\) and consider the expanded theory:
+
 \[
 T' = T \cup \{\epsilon > 0\} \cup \{0 < \epsilon < r : r \in \mathbb{R},\, r > 0\}.
 \]

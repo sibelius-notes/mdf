@@ -40,18 +40,21 @@ These axioms abstract the essential features of ordinary Euclidean distance whil
 **Euclidean spaces.** The space \(\mathbb{R}^n\) with distance \(d(\mathbf{x}, \mathbf{y}) = \|\mathbf{x} - \mathbf{y}\|_2 = \left(\sum_{i=1}^n (x_i - y_i)^2\right)^{1/2}\) is the prototype. The triangle inequality in this setting is the classical Cauchy-Schwarz inequality applied to vectors.
 
 **The space \(C[a,b]\).** Consider the set of all continuous real-valued functions on a closed interval \([a,b]\). The **supremum metric** (or uniform metric) is defined by
+
 \[
 d_\infty(f, g) = \sup_{x \in [a,b]} |f(x) - g(x)|.
 \]
 This metric measures how far apart two functions are at their worst-case point. The induced notion of convergence is uniform convergence.
 
 **The \(L^p\) metrics.** For \(p \geq 1\), one can define
+
 \[
 d_p(f,g) = \left(\int_a^b |f(x) - g(x)|^p \, dx\right)^{1/p}
 \]
 on suitable spaces of integrable functions. The case \(p=2\) is particularly important and corresponds to the energy of the difference signal.
 
 **Sequence spaces.** The space \(\ell^p\) consists of all sequences \(\{a_k\}_{k=1}^\infty\) of real (or complex) numbers with \(\sum_k |a_k|^p < \infty\), equipped with the distance
+
 \[
 d_p(\mathbf{a}, \mathbf{b}) = \left(\sum_{k=1}^\infty |a_k - b_k|^p\right)^{1/p}.
 \]
@@ -94,12 +97,14 @@ Every norm induces a metric via \(d(u,v) = \|u - v\|\), so every normed space is
 ### 3.2 The \(p\)-Norms
 
 For vectors \(\mathbf{x} = (x_1, \ldots, x_n) \in \mathbb{R}^n\) and \(1 \leq p < \infty\), the \(p\)-norm is
+
 \[
 \|\mathbf{x}\|_p = \left(\sum_{i=1}^n |x_i|^p\right)^{1/p}.
 \]
 The limiting case \(p \to \infty\) gives the supremum norm \(\|\mathbf{x}\|_\infty = \max_i |x_i|\). The triangle inequality for \(p\)-norms with \(p \geq 1\) is known as **Minkowski's inequality**.
 
 For function spaces on an interval \([a,b]\), the \(L^p\) norm is
+
 \[
 \|f\|_p = \left(\int_a^b |f(x)|^p \, dx\right)^{1/p},
 \]
@@ -130,12 +135,14 @@ An **inner product** on a vector space \(V\) over \(\mathbb{C}\) is a function \
 3. \(\langle v, v \rangle \geq 0\), with equality iff \(v = 0\).
 
 Every inner product induces a norm via \(\|v\| = \sqrt{\langle v, v \rangle}\). The fundamental inequality governing inner product spaces is the **Cauchy-Schwarz inequality**:
+
 \[
 |\langle u, v \rangle| \leq \|u\| \, \|v\|,
 \]
 with equality if and only if \(u\) and \(v\) are linearly dependent.
 
 For functions \(f, g \in L^2[a,b]\), the standard inner product is
+
 \[
 \langle f, g \rangle = \int_a^b f(x) \overline{g(x)} \, dx.
 \]
@@ -146,6 +153,7 @@ For sequences in \(\ell^2\), the inner product is \(\langle \mathbf{a}, \mathbf{
 Two vectors \(u\) and \(v\) are **orthogonal**, written \(u \perp v\), if \(\langle u, v \rangle = 0\). A set of vectors \(\{e_k\}\) is **orthonormal** if \(\langle e_j, e_k \rangle = \delta_{jk}\) (the Kronecker delta), that is, each vector has unit norm and distinct vectors are orthogonal.
 
 The **Gram-Schmidt process** transforms any linearly independent set \(\{v_1, v_2, \ldots\}\) into an orthonormal set \(\{e_1, e_2, \ldots\}\) spanning the same subspace. The algorithm proceeds by setting
+
 \[
 \tilde{e}_k = v_k - \sum_{j=1}^{k-1} \langle v_k, e_j \rangle e_j, \qquad e_k = \frac{\tilde{e}_k}{\|\tilde{e}_k\|}.
 \]
@@ -170,6 +178,7 @@ The projection theorem is the mathematical foundation of best approximation: giv
 ### 4.4 Orthonormal Bases and Parseval's Identity
 
 An **orthonormal basis** (or **complete orthonormal system**) for a Hilbert space \(H\) is a countable orthonormal set \(\{e_k\}_{k=1}^\infty\) such that every \(f \in H\) can be written as
+
 \[
 f = \sum_{k=1}^\infty \langle f, e_k \rangle e_k,
 \]
@@ -197,16 +206,19 @@ The approximation error satisfies \(\|f - P_{V_N} f\|^2 = \|f\|^2 - \sum_{k=1}^N
 ### 5.1 The Trigonometric System
 
 The most classical example of an orthonormal basis for \(L^2[-\pi, \pi]\) (or equivalently \(L^2[0, 2\pi]\)) is the **trigonometric system**. Define
+
 \[
 e_k(x) = \frac{1}{\sqrt{2\pi}} e^{ikx}, \quad k \in \mathbb{Z}.
 \]
 One verifies that \(\langle e_j, e_k \rangle = \frac{1}{2\pi} \int_{-\pi}^{\pi} e^{i(j-k)x} dx = \delta_{jk}\), so this is indeed an orthonormal set. The remarkable fact — the content of the completeness theorem — is that these functions form a basis for all of \(L^2[-\pi, \pi]\).
 
 Given a function \(f \in L^2[-\pi, \pi]\), its **Fourier series** is
+
 \[
 f(x) \sim \sum_{k=-\infty}^{\infty} c_k e^{ikx}, \quad c_k = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-ikx} dx.
 \]
 The equivalence can also be expressed using real trigonometric functions. If \(f\) is real-valued, one writes
+
 \[
 f(x) \sim \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(kx) + b_k \sin(kx)\right),
 \]
@@ -217,12 +229,14 @@ where \(a_k = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(kx) \, dx\) and \(b_k = \f
 The convergence properties of Fourier series are subtle and depend both on the type of convergence considered and on the smoothness of \(f\).
 
 **\(L^2\) convergence.** Since \(\{e_k\}\) forms a complete orthonormal system in \(L^2[-\pi,\pi]\), the Fourier series of any \(f \in L^2[-\pi,\pi]\) converges to \(f\) in the \(L^2\) norm:
+
 \[
 \left\|f - \sum_{|k| \leq N} c_k e^{ikx}\right\|_{L^2} \to 0 \quad \text{as } N \to \infty.
 \]
 This is a direct consequence of Parseval's identity and the best approximation property of orthogonal projections.
 
 **Pointwise convergence.** \(L^2\) convergence does not imply pointwise convergence. However, if \(f\) is **piecewise \(C^1\)** — continuous except at finitely many jump discontinuities, with a piecewise-continuous derivative — then the Fourier series converges at every point \(x\):
+
 \[
 \frac{a_0}{2} + \sum_{k=1}^{\infty}(a_k \cos kx + b_k \sin kx) = \frac{f(x^+) + f(x^-)}{2},
 \]
@@ -249,6 +263,7 @@ This connection between smoothness and frequency-domain decay is fundamental. Fu
 When the Fourier series partial sum is used to approximate a function with a jump discontinuity, a characteristic overshoot appears near the discontinuity that does not diminish as the number of terms increases — it merely becomes more localized. This is the **Gibbs phenomenon**: the partial sum overshoots the true function value by approximately \(9\%\) of the jump height on each side of the discontinuity, regardless of how many terms are included.
 
 For the square wave, which takes value \(+1\) on \((0,\pi)\) and \(-1\) on \(-\pi, 0)\), the partial sum with \(N\) terms reads
+
 \[
 S_N(x) = \frac{4}{\pi}\sum_{k=0}^{N-1} \frac{\sin((2k+1)x)}{2k+1}.
 \]
@@ -259,6 +274,7 @@ The Gibbs phenomenon is not a failure of the Fourier series per se — the serie
 ### 5.5 Parseval's Theorem for Fourier Series
 
 For a function \(f \in L^2[-\pi,\pi]\) with Fourier coefficients \(c_k\), **Parseval's theorem** states:
+
 \[
 \frac{1}{2\pi}\int_{-\pi}^{\pi} |f(x)|^2 \, dx = \sum_{k=-\infty}^{\infty} |c_k|^2.
 \]
@@ -276,6 +292,7 @@ In signal processing language, this says that the total power of the signal equa
 In practice, signals are sampled at finitely many points, and one works with vectors in \(\mathbb{C}^N\) rather than functions in \(L^2\). The **Discrete Fourier Transform (DFT)** is the analogue of the Fourier series for such finite discrete signals.
 
 Given a vector \(\mathbf{x} = (x_0, x_1, \ldots, x_{N-1}) \in \mathbb{C}^N\), its DFT is the vector \(\hat{\mathbf{x}} = (\hat{x}_0, \hat{x}_1, \ldots, \hat{x}_{N-1}) \in \mathbb{C}^N\) defined by
+
 \[
 \hat{x}_k = \sum_{n=0}^{N-1} x_n \, \omega^{-kn}, \quad k = 0, 1, \ldots, N-1,
 \]
@@ -294,6 +311,7 @@ The DFT has several equivalent formulations that differ in sign conventions and 
 **Version 3** (symmetric/unitary): Both analysis and synthesis include a factor of \(1/\sqrt{N}\).
 
 In the unitary (Version 3) convention, the DFT matrix
+
 \[
 \mathbf{F}_N = \frac{1}{\sqrt{N}} \left[\omega^{-jk}\right]_{j,k=0}^{N-1}
 \]
@@ -310,6 +328,7 @@ The DFT possesses a rich set of algebraic properties that make it useful for com
 **Circular shift.** If \(\mathbf{y}\) is obtained from \(\mathbf{x}\) by a circular shift of \(m\) positions — \(y_n = x_{n-m \mod N}\) — then \(\hat{y}_k = \omega^{-km} \hat{x}_k\). A time shift corresponds to multiplication by a phase factor in the frequency domain.
 
 **Circular convolution.** Define the circular convolution of \(\mathbf{x}\) and \(\mathbf{y}\) by
+
 \[
 (\mathbf{x} * \mathbf{y})_n = \sum_{m=0}^{N-1} x_m y_{n-m \mod N}.
 \]
@@ -322,6 +341,7 @@ Then \(\widehat{\mathbf{x} * \mathbf{y}} = \hat{\mathbf{x}} \cdot \hat{\mathbf{y
 Direct computation of the DFT requires \(O(N^2)\) operations (multiplications and additions). The **Fast Fourier Transform (FFT)** is an algorithm that exploits the recursive structure of the DFT matrix when \(N\) is a power of 2, reducing the complexity to \(O(N \log N)\).
 
 The key observation is that the DFT of a length-\(N\) sequence can be expressed in terms of two DFTs of length \(N/2\), applied to the even-indexed and odd-indexed subsequences respectively:
+
 \[
 \hat{x}_k = \hat{x}_k^{\text{even}} + \omega^{-k} \hat{x}_k^{\text{odd}}, \quad k = 0, 1, \ldots, \frac{N}{2}-1.
 \]
@@ -351,6 +371,7 @@ The procedure is: compute the DFT, zero out or attenuate the high-frequency comp
 ### 7.3 The 2D DFT and Image Processing
 
 For two-dimensional signals — images — the 2D DFT is the natural extension. For an \(M \times N\) image represented as a matrix \(\mathbf{X}\), the 2D DFT is
+
 \[
 \hat{X}_{jk} = \sum_{m=0}^{M-1}\sum_{n=0}^{N-1} X_{mn} \, e^{-2\pi i(jm/M + kn/N)}.
 \]
@@ -361,6 +382,7 @@ Low-frequency components (near the center of the 2D spectrum in the shifted conv
 ### 7.4 The Discrete Cosine Transform and JPEG Compression
 
 The **Discrete Cosine Transform (DCT)** is a relative of the DFT that uses only real-valued cosine functions and is particularly well-suited to images with natural boundary behavior. The DCT-II applied to a vector \(\mathbf{x} \in \mathbb{R}^N\) produces coefficients
+
 \[
 \hat{x}_k = \sqrt{\frac{2}{N}} c_k \sum_{n=0}^{N-1} x_n \cos\!\left(\frac{\pi k (2n+1)}{2N}\right),
 \]
@@ -375,10 +397,12 @@ The **JPEG compression standard** exploits the DCT in a blockwise fashion. The i
 ### 8.1 Definition and Basic Properties
 
 The **Continuous Fourier Transform (CFT)** of a function \(f \in L^1(\mathbb{R})\) is
+
 \[
 \hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) e^{-2\pi i \xi x} \, dx,
 \]
 where \(\xi\) is the frequency variable. (There are several common conventions for the placement of \(2\pi\) factors; this course uses the symmetric convention with \(e^{-2\pi i \xi x}\).) The inverse transform is
+
 \[
 f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2\pi i \xi x} \, d\xi.
 \]
@@ -393,6 +417,7 @@ The CFT shares many properties with the DFT:
 ### 8.2 The Gaussian and Its Transform
 
 The **Gaussian function** \(g(x) = e^{-\pi x^2}\) is a fixed point of the Fourier transform: \(\hat{g}(\xi) = e^{-\pi \xi^2}\). More generally, for \(\sigma > 0\),
+
 \[
 g_\sigma(x) = e^{-\pi x^2/\sigma^2} \implies \hat{g}_\sigma(\xi) = \sigma \, e^{-\pi \sigma^2 \xi^2}.
 \]
@@ -404,10 +429,12 @@ A narrow Gaussian in time has a wide Fourier transform, and vice versa. This rec
 ### 8.3 The Plancherel and Parseval Theorems
 
 For functions in \(L^1(\mathbb{R}) \cap L^2(\mathbb{R})\), the Fourier transform extends to an isometric isomorphism on \(L^2(\mathbb{R})\). **Plancherel's theorem** states:
+
 \[
 \int_{-\infty}^{\infty} |f(x)|^2 \, dx = \int_{-\infty}^{\infty} |\hat{f}(\xi)|^2 \, d\xi,
 \]
 i.e., \(\|f\|_{L^2} = \|\hat{f}\|_{L^2}\). The more general **Parseval's theorem** (for the inner product) states:
+
 \[
 \int_{-\infty}^{\infty} f(x)\overline{g(x)} \, dx = \int_{-\infty}^{\infty} \hat{f}(\xi)\overline{\hat{g}(\xi)} \, d\xi.
 \]
@@ -421,10 +448,12 @@ These relations are essential for understanding the Fourier transform of periodi
 ### 8.5 The Heat Equation and Diffusion
 
 The Fourier transform provides an elegant method for solving linear PDEs with constant coefficients. Consider the **heat equation** on \(\mathbb{R}\):
+
 \[
 \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}, \quad u(x, 0) = f(x).
 \]
 Taking the Fourier transform in \(x\), the derivative \(\partial^2/\partial x^2\) becomes multiplication by \(-(2\pi\xi)^2\), giving \(\partial_t \hat{u}(\xi, t) = -(2\pi\xi)^2 \hat{u}(\xi, t)\). This ODE in \(t\) has solution \(\hat{u}(\xi, t) = \hat{f}(\xi) e^{-(2\pi\xi)^2 t}\). Inverting,
+
 \[
 u(x, t) = f * G_t(x), \quad G_t(x) = \frac{1}{\sqrt{4\pi t}} e^{-x^2/(4t)},
 \]
@@ -469,6 +498,7 @@ Before digital-to-analog conversion, discrete sample values must be interpolated
 ### 9.3 The Uncertainty Principle
 
 A fundamental limitation on signal representations is the **Heisenberg uncertainty principle**: a function cannot be simultaneously localized in both time and frequency. To quantify this, define the **time spread** and **frequency spread** of a signal \(f \in L^2(\mathbb{R})\):
+
 \[
 \Delta_t^2 = \frac{\int t^2 |f(t)|^2 \, dt}{\int |f(t)|^2 \, dt}, \qquad \Delta_\xi^2 = \frac{\int \xi^2 |\hat{f}(\xi)|^2 \, d\xi}{\int |\hat{f}(\xi)|^2 \, d\xi},
 \]
@@ -491,6 +521,7 @@ The proof uses integration by parts and the Cauchy-Schwarz inequality. The resul
 The global nature of the Fourier transform — each coefficient \(\hat{f}(\xi)\) depends on the entire signal \(f(t)\) — makes it ill-suited to signals whose frequency content changes over time. The **Short-Time Fourier Transform (STFT)** or **Gabor transform** addresses this by first multiplying \(f\) by a localized window function before Fourier transforming.
 
 Let \(g(t)\) be a window function, typically a Gaussian or a smooth bump function. The STFT of \(f\) is
+
 \[
 (\mathcal{G}f)(b, \xi) = \int_{-\infty}^{\infty} f(t) \, g(t - b) \, e^{-2\pi i \xi t} \, dt,
 \]
@@ -520,12 +551,14 @@ The simplest wavelet system, and the key pedagogical example, is the **Haar syst
 Consider approximating a function \(f \in L^2[0,1]\) by piecewise-constant functions at various resolutions. At resolution \(j\), one divides \([0,1]\) into \(2^j\) equal subintervals of width \(2^{-j}\), and approximates \(f\) by its average value on each subinterval.
 
 **The Haar scaling function** is the characteristic function of the unit interval:
+
 \[
 \varphi(t) = \chi_{[0,1)}(t) = \begin{cases} 1 & 0 \leq t < 1 \\ 0 & \text{otherwise.}\end{cases}
 \]
 Its translates and dilates \(\varphi_{jk}(t) = 2^{j/2} \varphi(2^j t - k)\) for \(k = 0, 1, \ldots, 2^j - 1\) form an orthonormal basis for the space \(V_j\) of piecewise-constant functions at resolution \(j\).
 
 **The space \(V_j\).** Formally, \(V_j = \overline{\operatorname{span}}\{\varphi_{jk} : k \in \mathbb{Z}\}\) is the closed subspace of \(L^2(\mathbb{R})\) consisting of functions that are constant on each interval \([k \cdot 2^{-j}, (k+1) \cdot 2^{-j})\). The approximation of \(f\) in \(V_j\) is
+
 \[
 f_j(t) = \sum_k a_{jk} \varphi_{jk}(t), \quad a_{jk} = \langle f, \varphi_{jk} \rangle = 2^{j/2} \int_{k \cdot 2^{-j}}^{(k+1) \cdot 2^{-j}} f(t) \, dt.
 \]
@@ -536,12 +569,14 @@ As \(j \to \infty\), \(f_j \to f\) in \(L^2\). As \(j \to -\infty\), \(f_j \to 0
 The spaces \(V_j\) are nested: \(V_0 \subset V_1 \subset V_2 \subset \cdots\), because any piecewise-constant function at resolution \(j\) is also piecewise-constant at the finer resolution \(j+1\). The detail added when going from resolution \(j\) to resolution \(j+1\) lives in the **orthogonal complement** \(W_j = V_{j+1} \ominus V_j\), defined by the condition \(V_{j+1} = V_j \oplus W_j\) (orthogonal direct sum).
 
 The **Haar mother wavelet** is the function
+
 \[
 \psi(t) = \begin{cases} +1 & 0 \leq t < 1/2 \\ -1 & 1/2 \leq t < 1 \\ 0 & \text{otherwise.}\end{cases}
 \]
 The family \(\psi_{jk}(t) = 2^{j/2}\psi(2^j t - k)\) is an orthonormal basis for \(W_j\). One can verify directly: \(\langle \psi_{j k}, \psi_{j' k'} \rangle = \delta_{jj'}\delta_{kk'}\) for all \(j, j', k, k'\).
 
 The spaces satisfy the fundamental decomposition:
+
 \[
 L^2(\mathbb{R}) = \bigoplus_{j=-\infty}^{\infty} W_j = \cdots \oplus W_{-1} \oplus W_0 \oplus W_1 \oplus \cdots
 \]
@@ -552,6 +587,7 @@ Equivalently, \(V_j = V_0 \oplus W_0 \oplus W_1 \oplus \cdots \oplus W_{j-1}\) f
 For practical computation on signals of length \(N = 2^J\) (indexed \(0, 1, \ldots, N-1\)), one works with the finite discrete Haar system. Given a signal vector \(\mathbf{a}_J = (a_{J,0}, a_{J,1}, \ldots, a_{J,N-1})\), the **Haar wavelet analysis (decomposition) algorithm** computes detail coefficients at each level:
 
 At each scale \(j\) from \(J\) down to \(1\):
+
 \[
 a_{j-1,k} = \frac{1}{\sqrt{2}}\left(a_{j,2k} + a_{j,2k+1}\right), \quad b_{j-1,k} = \frac{1}{\sqrt{2}}\left(a_{j,2k} - a_{j,2k+1}\right).
 \]
@@ -564,6 +600,7 @@ These detail and approximation coefficients organize naturally into a **wavelet 
 The inverse transform reconstructs the original signal from the wavelet coefficients:
 
 At each scale \(j\) from \(1\) up to \(J\):
+
 \[
 a_{j,2k} = \frac{1}{\sqrt{2}}\left(a_{j-1,k} + b_{j-1,k}\right), \quad a_{j,2k+1} = \frac{1}{\sqrt{2}}\left(a_{j-1,k} - b_{j-1,k}\right).
 \]
@@ -598,12 +635,14 @@ The Haar system satisfies all five axioms with \(\varphi = \chi_{[0,1)}\).
 ### 11.2 The Scaling Equation (Two-Scale Relation)
 
 A fundamental consequence of the nesting and scaling properties is the **scaling equation** (also called the **two-scale relation** or **refinement equation**). Since \(\varphi \in V_0 \subset V_1\) and \(V_1\) has orthonormal basis \(\{2^{1/2}\varphi(2t-k)\}_{k \in \mathbb{Z}}\), we can expand:
+
 \[
 \varphi(t) = \sqrt{2} \sum_{k} h_k \, \varphi(2t - k).
 \]
 The real numbers \(\{h_k\}\) are the **scaling coefficients**. For the Haar scaling function, \(h_0 = h_1 = 1/\sqrt{2}\) and \(h_k = 0\) for \(k \notin \{0,1\}\).
 
 The scaling equation determines the scaling function (up to normalization): given the coefficients \(\{h_k\}\), one can construct \(\varphi\) by iteration. Taking the Fourier transform of the scaling equation:
+
 \[
 \hat{\varphi}(\xi) = H(\xi/2) \hat{\varphi}(\xi/2), \quad H(\xi) = \frac{1}{\sqrt{2}} \sum_k h_k e^{-2\pi i k \xi},
 \]
@@ -612,6 +651,7 @@ where \(H(\xi)\) is the (normalized) **discrete Fourier transform of the filter 
 ### 11.3 The Wavelet Function and the QMF Conditions
 
 Define the **wavelet detail spaces** \(W_j = V_{j+1} \ominus V_j\). Since \(\varphi\) generates \(V_0\) and \(V_1 = V_0 \oplus W_0\), one constructs the **mother wavelet** \(\psi \in W_0\) via
+
 \[
 \psi(t) = \sqrt{2} \sum_k g_k \, \varphi(2t - k), \quad g_k = (-1)^k h_{1-k}.
 \]
@@ -630,12 +670,14 @@ Equivalently, conditions 1 and 2 state that \(|H(\xi)|^2 + |H(\xi + 1/2)|^2 = 1\
 For a general MRA, the analysis and synthesis algorithms are identical in structure to the Haar case, but use the general filter coefficients \(\{h_k\}\) and \(\{g_k\}\) instead of the simple averages and differences.
 
 **Analysis (decomposition):** At each level \(j\), given approximation coefficients \(\{a_{j,k}\}\):
+
 \[
 a_{j-1,m} = \sum_k h_{k-2m} \, a_{j,k}, \quad b_{j-1,m} = \sum_k g_{k-2m} \, a_{j,k}.
 \]
 In signal processing terms, this is **filtering** \(\{a_{j,k}\}\) with the low-pass filter \(\{h_k\}\) and high-pass filter \(\{g_k\}\), followed by **downsampling** (keeping every other sample).
 
 **Synthesis (reconstruction):** At each level \(j\), given coefficients \(\{a_{j-1,m}\}\) and \(\{b_{j-1,m}\}\):
+
 \[
 a_{j,k} = \sum_m h_{k-2m} \, a_{j-1,m} + \sum_m g_{k-2m} \, b_{j-1,m}.
 \]
@@ -646,6 +688,7 @@ The filter bank interpretation makes the connection to digital signal processing
 ### 11.5 The Shannon MRA
 
 An important theoretical example is the **Shannon MRA**, where the scaling function is
+
 \[
 \varphi(t) = \operatorname{sinc}(t) = \frac{\sin(\pi t)}{\pi t}.
 \]
@@ -660,6 +703,7 @@ The Shannon MRA satisfies all five MRA axioms. However, the sinc scaling functio
 ### 12.1 The Wavelet Function and Its Zero-Mean Property
 
 In any MRA, the mother wavelet \(\psi\) has zero mean:
+
 \[
 \int_{-\infty}^{\infty} \psi(t) \, dt = 0.
 \]
@@ -668,6 +712,7 @@ This follows from the QMF conditions: \(\sum_k g_k = \sum_k (-1)^k h_{1-k} = 0\)
 ### 12.2 Vanishing Moments
 
 The **vanishing moments** property is a key measure of wavelet quality. A wavelet \(\psi\) has \(M\) **vanishing moments** if
+
 \[
 \int_{-\infty}^{\infty} t^k \psi(t) \, dt = 0, \quad k = 0, 1, 2, \ldots, M-1.
 \]
@@ -676,6 +721,7 @@ In other words, \(\psi\) is orthogonal to all polynomials of degree less than \(
 The zero-mean condition is the \(k=0\) case. The number of vanishing moments measures how "smooth" the wavelet's interaction with the signal is: if a signal is locally well-approximated by a polynomial of degree less than \(M\), its wavelet coefficients at fine scales will be small.
 
 More precisely, the wavelet coefficient \(b_{j,k} = \langle f, \psi_{jk} \rangle\) satisfies
+
 \[
 |b_{j,k}| \leq C \cdot 2^{-j(M + 1/2)} \|f^{(M)}\|_{L^2},
 \]
@@ -691,6 +737,7 @@ for any function \(f\) whose \(M\)-th derivative is in \(L^2\). Wavelet coeffici
 **Daubechies-2 (D2) = Haar.** The simplest case uses \(h_0 = h_1 = 1/\sqrt{2}\), giving \(M=1\) vanishing moment. The scaling function is the unit step and the wavelet is the Haar function.
 
 **Daubechies-4 (D4).** Uses \(N=4\) scaling coefficients:
+
 \[
 h_0 = \frac{1+\sqrt{3}}{4\sqrt{2}}, \quad h_1 = \frac{3+\sqrt{3}}{4\sqrt{2}}, \quad h_2 = \frac{3-\sqrt{3}}{4\sqrt{2}}, \quad h_3 = \frac{1-\sqrt{3}}{4\sqrt{2}}.
 \]
@@ -718,6 +765,7 @@ The Daubechies scaling functions and wavelets are continuous for \(N \geq 4\), b
 For signal processing, the smoothness of the wavelet affects the perceptual quality of compressed or denoised signals: smooth wavelets produce cleaner reconstructions, while the Haar wavelet's discontinuities can introduce blocking artifacts.
 
 The connection between vanishing moments, Hölder regularity, and approximation power is made precise by the **approximation theorem**: if the MRA wavelet has \(M\) vanishing moments, then
+
 \[
 \|f - P_{V_j} f\|_{L^2} \leq C \cdot 2^{-jM} \|f^{(M)}\|_{L^2}
 \]
@@ -726,10 +774,12 @@ for any \(f \in H^M(\mathbb{R})\) (the Sobolev space of \(M\)-times weakly diffe
 ### 12.6 Fourier Analysis of MRA
 
 The MRA structure has an elegant description in the Fourier domain. The orthonormality of the integer translates \(\{\varphi(\cdot - k)\}_{k \in \mathbb{Z}}\) is equivalent to
+
 \[
 \sum_{k \in \mathbb{Z}} |\hat{\varphi}(\xi + k)|^2 = 1 \quad \text{for a.e. } \xi.
 \]
 The scaling equation \(\hat{\varphi}(\xi) = H(\xi/2)\hat{\varphi}(\xi/2)\) gives
+
 \[
 \sum_k |\hat{\varphi}(\xi + k)|^2 = |H(\xi/2)|^2 \sum_k |\hat{\varphi}(\xi/2 + k)|^2 + |H(\xi/2 + 1/2)|^2 \sum_k |\hat{\varphi}(\xi/2 + 1/2 + k)|^2 = 1,
 \]

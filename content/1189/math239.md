@@ -87,6 +87,7 @@ Having set up the formal framework, we turn to the first substantial counting pr
 </div>
 
 Unlike partitions of an integer — where order is irrelevant and \((2,1)\) and \((1,2)\) are the same — compositions are ordered tuples: \((2,1)\) and \((1,2)\) are distinct compositions of 3. The empty tuple \(()\) is the unique composition of 0, with zero parts. A composition of \(n\) with \(k\) parts is equivalently a way of placing \(k-1\) dividers among \(n-1\) gaps in a row of \(n\) unit squares, which gives the classical formula: the number of compositions of \(n\) (for \(n \ge 1\)) is \(2^{n-1}\), since each composition corresponds to choosing which of the \(n-1\) gaps between units receive a divider. The generating series for the number of compositions of \(n\) is
+
 \[
 \sum_{n \ge 0} 2^{n-1} x^n = \frac{1}{1-2x} \quad (\text{adjusting for } n=0).
 \]
@@ -194,6 +195,7 @@ There is, however, an important caveat: both lemmas require the decomposition to
 The combination of the Sum and Product Lemmas with the geometric series formula \(\frac{1}{1-r} = \sum_{n \ge 0} r^n\) leads to the Kleene-star construction, which is the engine behind most of the generating series computations in Part I.
 
 If \(S\) is a set with weight function \(w\) having no elements of weight 0, define \(S^0 = \{\varepsilon\}\) (a single empty tuple), \(S^1 = S\), \(S^2 = S \times S\), and so on. The Kleene star is then
+
 \[
 S^* = S^0 \cup S^1 \cup S^2 \cup S^3 \cup \cdots,
 \]
@@ -217,18 +219,21 @@ The proof is a one-line calculation. Since the sets \(S^0, S^1, S^2, \ldots\) ar
 The condition that \(S\) has no weight-0 elements is essential. If \(S\) contained an element of weight 0, then \(S^*\) would contain infinitely many tuples of weight 0 (one for each number of copies of that element), and the weight function would not be a valid weight function for a generating series.
 
 A typical application: the set \(\{0,1\}^*\) of all binary strings, weighted by length, has generating series
+
 \[
 \Phi(x) = \frac{1}{1-2x},
 \]
 since there are \(2^n\) binary strings of length \(n\). More generally, decomposing a set of strings by their structure (first character, last block, etc.) yields a system of equations whose solution is a rational function of \(x\).
 
 The String Lemma applied to compositions is equally clean. The set \(C\) of all compositions is \((\mathbb{Z}_{>0})^*\), the Kleene star of the positive integers. With weight function \(w(n) = n\), the generating series for a single positive integer part is \(\Phi_{\mathbb{Z}_{>0}}(x) = x + x^2 + x^3 + \cdots = \frac{x}{1-x}\). The String Lemma then gives
+
 \[
 \Phi_C(x) = \frac{1}{1 - \frac{x}{1-x}} = \frac{1-x}{1-2x},
 \]
 and extracting the coefficient of \(x^n\) for \(n \ge 1\) recovers the classical formula \(2^{n-1}\) compositions of \(n\).
 
 For constrained compositions — say, compositions with only odd parts — one simply replaces \(\mathbb{Z}_{>0}\) by the set of odd positive integers \(T = \{1, 3, 5, \ldots\}\), whose generating series is \(\Phi_T(x) = x + x^3 + x^5 + \cdots = \frac{x}{1-x^2}\). The String Lemma immediately gives
+
 \[
 \Phi_{T^*}(x) = \frac{1}{1 - \frac{x}{1-x^2}} = \frac{1-x^2}{1-x^2-x}.
 \]
@@ -249,6 +254,7 @@ The String Lemma handles sets that are Kleene stars of simpler sets. But many in
 A recursive decomposition describes a set of strings \(S\) in terms of itself: typically, it says that a string in \(S\) is either a small base string or is built by concatenating a smaller string in \(S\) with some fixed pieces. Such a description leads to an equation satisfied by \(\Phi_S(x)\), which can then be solved for \(\Phi_S(x)\) as a rational function.
 
 Nelson's Lecture 13 illustrates this with the decomposition \(S = \{\varepsilon\} \cup (S \cdot \{0\}) \cup (S \cdot \{1\})\). Translating to generating series: if \(F(x) = \Phi_S(x)\), then
+
 \[
 F(x) = 1 + F(x) \cdot x + F(x) \cdot x = 1 + 2x \cdot F(x),
 \]
@@ -271,6 +277,7 @@ To extract the coefficient \([x^n]\) from a rational generating series, we use p
 q(x) = (1-r_1 x)^{m_1}(1-r_2 x)^{m_2}\cdots(1-r_k x)^{m_k}
 \]
 with \(r_1, \ldots, r_k\) distinct and nonzero, then there exist unique constants \(A_{i,j}\) such that
+
 \[
 \frac{p(x)}{q(x)} = \sum_{i=1}^{k}\sum_{j=1}^{m_i} \frac{A_{i,j}}{(1-r_i x)^j}.
 \]
@@ -278,6 +285,7 @@ with \(r_1, \ldots, r_k\) distinct and nonzero, then there exist unique constant
 </div>
 
 The key identity used to extract coefficients is:
+
 \[
 [x^n]\frac{1}{(1-rx)^j} = \binom{n+j-1}{j-1}r^n.
 \]
@@ -307,6 +315,7 @@ for \(n \ge d\), with given initial conditions. Then the generating series \(A(x
 The roots of the characteristic polynomial \(x^d - c_1 x^{d-1} - \cdots - c_d = 0\) determine the closed-form solution via partial fractions.
 
 The Fibonacci sequence is the canonical example. Setting \(a_0 = a_1 = 1\) and \(a_n = a_{n-1} + a_{n-2}\) for \(n \ge 2\), the theorem gives
+
 \[
 A(x) = \frac{1}{1 - x - x^2}.
 \]
@@ -329,6 +338,7 @@ Before stating the theorem, it is useful to recall where binomial coefficients c
 \frac{1}{(1-x)^k} = \sum_{n \ge 0}\binom{n+k-1}{k-1}x^n.
 \]
 More generally, for a positive integer \(k\),
+
 \[
 (1+x)^k = \sum_{n=0}^{k}\binom{k}{n}x^n.
 \]
@@ -351,6 +361,7 @@ The negative binomial series \(\frac{1}{(1-x)^k} = \sum_{n \ge 0}\binom{n+k-1}{k
 The positive binomial theorem \((1+x)^k = \sum_{n=0}^k \binom{k}{n}x^n\) is the finite case. Its combinatorial proof is equally direct: the coefficient of \(x^n\) in the product \((1+x)(1+x)\cdots(1+x)\) (\(k\) factors) counts the number of ways to choose \(x\) from exactly \(n\) of the \(k\) factors, which is \(\binom{k}{n}\). Nelson uses induction on \(k\) and Pascal's identity to give a rigorous formal-power-series proof.
 
 Together, these two formulas supply the coefficient-extraction identity
+
 \[
 [x^n]\frac{1}{(1-rx)^j} = \binom{n+j-1}{j-1}r^n
 \]
@@ -361,6 +372,7 @@ used in Section 2.1, by substituting \(rx\) for \(x\) in the negative binomial e
 The generating-series framework extends naturally to tracking multiple statistics simultaneously. By introducing a second variable to mark occurrences of a pattern or structure, one obtains a bivariate generating series from which one can extract both the count of objects and statistical information about them.
 
 The central technique is to differentiate the bivariate series with respect to the marking variable and evaluate at 1. If \(\Phi_S(x, y) = \sum_{\sigma \in S} x^{w(\sigma)} y^{\chi(\sigma)}\), then
+
 \[
 \frac{\partial}{\partial y}\Phi_S(x, y)\Big|_{y=1} = \sum_{\sigma \in S} \chi(\sigma) x^{w(\sigma)},
 \]
@@ -685,6 +697,7 @@ As an application, the lectures prove that the \(n\)-cube is connected: fix the 
 Equivalently, a component is a maximal connected subgraph. A connected graph has exactly one component; a disconnected graph has at least two. Notice that no edge of \(G\) can join a vertex inside a component to a vertex outside that component — if such an edge existed, the component could be enlarged, contradicting maximality. This observation leads to the concept of cuts.
 
 Given a subset \(X \subseteq V(G)\), the **cut induced by \(X\)** is the set of edges with exactly one end in \(X\):
+
 \[
 \partial(X) = \bigl\{\{u,v\} \in E(G) : u \in X,\, v \notin X\bigr\}.
 \]
@@ -829,10 +842,12 @@ Now for the fundamental counting property of trees:
 **Inductive step:** Suppose the result holds for all trees with fewer than \(m \ge 1\) edges. Let \(T\) be a tree with \(m\) edges, and let \(e\) be any edge of \(T\). By Lemma 5.1.4, \(e\) is a bridge, so \(T - e\) has exactly two components (by Lemma 4.10.2); call them \(T_1\) and \(T_2\). Each \(T_i\) is a connected subgraph of \(T\); since \(T\) is acyclic and each \(T_i\) is a subgraph of \(T\), each \(T_i\) is also acyclic. Hence \(T_1\) and \(T_2\) are both trees, each with fewer edges than \(T\).
 
 By the induction hypothesis:
+
 \[
 |E(T_1)| = |V(T_1)| - 1 \quad \text{and} \quad |E(T_2)| = |V(T_2)| - 1.
 \]
 Adding these and using \(|E(T)| = |E(T_1)| + |E(T_2)| + 1\) (the removed edge \(e\) contributes the \(+1\)) and \(|V(T)| = |V(T_1)| + |V(T_2)|\):
+
 \[
 |E(T)| = \bigl(|V(T_1)| - 1\bigr) + \bigl(|V(T_2)| - 1\bigr) + 1 = |V(T_1)| + |V(T_2)| - 1 = |V(T)| - 1. \quad \square
 \]

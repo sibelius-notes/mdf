@@ -370,6 +370,7 @@ or in the Horvitz-Thompson form:
 \[ \hat{E}^{\text{IPW}}[Y^a] = \frac{1}{n} \sum_{i=1}^n \frac{\mathbf{1}(A_i = a)}{P(A_i \mid \mathbf{L}_i)} Y_i \]
 
 **Consistency proof sketch**: Under conditional exchangeability and positivity,
+
 \[
 E\left[\frac{\mathbf{1}(A=a)}{P(A=a \mid \mathbf{L})} Y\right]
 = E\left[\frac{\mathbf{1}(A=a)}{P(A=a \mid \mathbf{L})} Y^a\right]

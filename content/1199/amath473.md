@@ -72,6 +72,7 @@ For the vectors \(x = (i, 0, 1)^\top\) and \(y = (1, 1, 0)^\top\), we get \(\lan
 </div>
 
 The inner product equips \(V\) with a natural notion of length. The **norm** of a vector \(x\) is
+
 \[
 \|x\| = +\sqrt{\langle x, x \rangle},
 \]
@@ -183,12 +184,14 @@ Every linear operator on a Hilbert space comes equipped with a companion operato
 \langle w, \hat{O} v \rangle = \langle \hat{O}^\dagger w, v \rangle
 \]
 for all \(v \in V\), \(w \in W\). In bra-ket language: if \(\hat{O}|v\rangle = |u\rangle\), then \(\langle v|\hat{O}^\dagger = \langle u|\), and equivalently,
+
 \[
 \langle w|\hat{O}|v\rangle = \langle v|\hat{O}^\dagger|w\rangle^* .
 \]
 </div>
 
 Two properties of the adjoint are indispensable and worth memorizing:
+
 \[
 (cA)^\dagger = c^* A^\dagger, \qquad (AB)^\dagger = B^\dagger A^\dagger .
 \]
@@ -245,6 +248,7 @@ This theorem is what makes Hermitian operators suitable to represent physical ob
 \langle\lambda_1|\hat{H}|\lambda_2\rangle = \langle\lambda_2|\hat{H}|\lambda_1\rangle^<em> \implies \langle\lambda_1|\lambda_2\rangle\lambda_2 = \langle\lambda_2|\lambda_1\rangle^</em>\lambda_1^* .
 \]
 Since \(\lambda_1^* = \lambda_1\) by Theorem 1, this gives
+
 \[
 \langle\lambda_1|\lambda_2\rangle(\lambda_2 - \lambda_1) = 0 .
 \]
@@ -276,6 +280,7 @@ This is one of the most-used identities in quantum information and quantum optic
 </div>
 
 **Orthonormal bases.** The Hilbert spaces arising in quantum mechanics are separable, meaning they admit a countable (possibly infinite) orthonormal basis. A set of linearly independent vectors \(\mathcal{B} = \{|e_i\rangle\}\) with \(\langle e_i | e_j \rangle = \delta_{ij}\) is an **orthonormal basis** if every vector \(|v\rangle \in V\) can be expanded as
+
 \[
 |v\rangle = \sum_i \langle e_i | v \rangle\, |e_i\rangle = \sum_i |e_i\rangle\langle e_i|\, |v\rangle .
 \]
@@ -291,12 +296,14 @@ The coefficients \(v_i = \langle e_i|v\rangle\) are the coordinates of \(|v\rang
 This relation is one of the most powerful tools in quantum mechanics. Inserting it between operators or in inner products is the standard technique for changing basis, computing traces, and deriving the Fourier transform as a basis change (see §1.2).
 
 **Matrix elements.** Given an operator \(\hat{O}: V \to W\) and orthonormal bases \(\{|e_i\rangle\}\) of \(V\) and \(\{|d_i\rangle\}\) of \(W\), the matrix elements are
+
 \[
 O_{ij} = \langle d_i|\hat{O}|e_j\rangle \in \mathbb{C} .
 \]
 The matrix \(\{O_{ij}\}\) eats column vectors in the \(|e_j\rangle\) basis and returns column vectors in the \(|d_i\rangle\) basis. It is worth emphasizing: an abstract operator \(\hat{O}\) and its matrix representation are distinct objects. A vector \(|x\rangle \in \mathbb{C}^3\) is not a triple of numbers — given a basis, it can be represented by three numbers, but this representation changes when the basis changes.
 
 **Trace.** The **trace** of an operator \(\hat{O}\) is the sum of its eigenvalues, which in any orthonormal basis equals
+
 \[
 \mathrm{Tr}\,\hat{O} = \sum_i \langle e_i|\hat{O}|e_i\rangle .
 \]
@@ -317,12 +324,14 @@ Acting on \(|v\rangle = (v_x, v_y, v_z)^\top\) gives \(\hat{P}_{xy}|v\rangle = (
 </div>
 
 **The spectral theorem.** For a self-adjoint operator \(\hat{A}\) on a Hilbert space whose eigenvectors form an orthonormal basis (i.e., when the discrete spectrum exhausts the dimension), the operator can be written as a weighted sum of projectors onto its eigenspaces:
+
 \[
 \hat{A} = \sum_i \lambda_i \hat{P}_i ,
 \]
 where \(\hat{P}_i\) is the projector onto the eigenspace of eigenvalue \(\lambda_i\). More generally, accounting for degeneracy, one writes \(\hat{A} = \sum_i \lambda_i |{\lambda_i}\rangle\langle\lambda_i|\). This **spectral decomposition** is the backbone of the probability interpretation of quantum mechanics.
 
 **Functions of operators.** The spectral decomposition immediately allows the definition of functions of operators. If \(f: \mathbb{R} \to \mathbb{C}\) is any function, then
+
 \[
 f(\hat{A}) = \sum_i f(\lambda_i)\,\hat{P}_i .
 \]
@@ -340,6 +349,7 @@ This definition is consistent with the Taylor-series definition for analytic \(f
 \hat{\sigma}_x = |0\rangle\langle 1| + |1\rangle\langle 0| , \qquad \hat{\sigma}_y = i|0\rangle\langle 1| - i|1\rangle\langle 0| , \qquad \hat{\sigma}_z = -|0\rangle\langle 0| + |1\rangle\langle 1| .
 \]
 In the canonical matrix representation \(|0\rangle = (0,1)^\top\), \(|1\rangle = (1,0)^\top\):
+
 \[
 \hat{\sigma}_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad \hat{\sigma}_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad \hat{\sigma}_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .
 \]
@@ -387,18 +397,22 @@ The Pauli operators satisfy the commutation relations \([\hat{\sigma}_x, \hat{\s
 **Continuous spectra and the rigged Hilbert space.** Everything above assumed a discrete (countable) spectrum. But the most important operators in quantum mechanics — position and momentum — have continuous spectra. The position operator \(\hat{X}\) acts on functions by multiplication: \(\hat{X}\phi(x) = x\phi(x)\). Its eigenvalue equation \(\hat{X}\phi = x_0\phi\) has formal solutions \(\phi(x) = \delta(x - x_0)\), which are not normalizable in \(L^2(\mathbb{R})\).
 
 Dirac's treatment is to work formally with continuous eigenstates \(|x_0\rangle\) satisfying
+
 \[
 \hat{X}|x_0\rangle = x_0|x_0\rangle ,
 \]
 with delta-function normalization
+
 \[
 \langle x_0|x_0'\rangle = \delta(x_0 - x_0') , \qquad \delta(x-x_0) = \frac{1}{2\pi}\int_{-\infty}^{\infty} dp\, e^{ip(x-x_0)} ,
 \]
 continuous completeness relation
+
 \[
 \hat{\mathbf{1}} = \int_{-\infty}^{\infty} dx_0\,|x_0\rangle\langle x_0| ,
 \]
 and spectral decomposition
+
 \[
 \hat{X} = \int_{-\infty}^{\infty} dx_0\, x_0\, |x_0\rangle\langle x_0| .
 \]
@@ -445,12 +459,14 @@ Equivalently, \(\hat{U}^{-1} = \hat{U}^\dagger\).
 </div>
 
 Unitary operators preserve the inner product:
+
 \[
 \langle \hat{U}x, \hat{U}y\rangle = \langle x|\hat{U}^\dagger\hat{U}|y\rangle = \langle x|y\rangle .
 \]
 This means they preserve all probabilities and all expectation values: they are the quantum analogue of orthogonal transformations (rotations and reflections) in Euclidean geometry.
 
 A crucial fact connects self-adjoint and unitary operators. The complex exponential of a self-adjoint operator is unitary:
+
 \[
 \hat{U} = e^{i\hat{H}} \implies \hat{U}^\dagger = e^{-i\hat{H}}, \quad \hat{U}\hat{U}^\dagger = e^{i\hat{H}}e^{-i\hat{H}} = \hat{\mathbf{1}} .
 \]
@@ -471,19 +487,23 @@ Anti-unitary operators implement time-reversal symmetry: the complex conjugation
 The abstract Hilbert space formalism becomes concrete when we choose a basis. For a particle on a line, the two most natural bases are the eigenstates of the position operator and the eigenstates of the momentum operator. Choosing between them corresponds to the familiar dichotomy between the position-space wavefunction \(\psi(x)\) and the momentum-space wavefunction \(\tilde{\psi}(p)\).
 
 Let \(|\psi\rangle \in L^2(\mathbb{R})\) be an abstract state vector. The **position representation** is the set of coordinates of \(|\psi\rangle\) in the continuous basis of position eigenstates \(\{|x\rangle\}\):
+
 \[
 \psi(x) = \langle x|\psi\rangle .
 \]
 Just as the components \(v_i = \langle e_i|v\rangle\) of a finite-dimensional vector are its coordinates in a discrete basis, \(\psi(x)\) is the "continuum of coordinates" of \(|\psi\rangle\) in the position eigenbasis. The action of the position operator \(\hat{X}\) in this representation is simply multiplication:
+
 \[
 \hat{X}\psi(x) = \langle x|\hat{X}|\psi\rangle = x\langle x|\psi\rangle = x\psi(x) .
 \]
 The \(L^2\) inner product is recovered via the continuous completeness relation:
+
 \[
 \langle\varphi|\psi\rangle = \int_{-\infty}^{\infty} dx\,\langle\varphi|x\rangle\langle x|\psi\rangle = \int_{-\infty}^{\infty} dx\,\varphi(x)^*\psi(x) .
 \]
 
 The **momentum operator** \(\hat{P}\) is defined in the position representation by its action:
+
 \[
 \langle x|\hat{P}|\psi\rangle = -i\partial_x \psi(x) .
 \]
@@ -493,19 +513,23 @@ The **momentum operator** \(\hat{P}\) is defined in the position representation 
 </div>
 
 The eigenstates of \(\hat{P}\) satisfy \(\hat{P}|p\rangle = p|p\rangle\). To find their position-space form \(\langle x|p\rangle\), we solve
+
 \[
 \langle x|\hat{P}|p\rangle = p\langle x|p\rangle \implies -i\partial_x\langle x|p\rangle = p\langle x|p\rangle ,
 \]
 which gives \(\langle x|p\rangle = c(p)\,e^{ipx}\). Delta-normalization \(\langle p|p'\rangle = \delta(p-p')\) fixes the constant via
+
 \[
 \delta(p-p') = \int_{-\infty}^{\infty} dx\,\langle p|x\rangle\langle x|p'\rangle = c^*(p)c(p')\int_{-\infty}^{\infty} dx\,e^{i(p'-p)x} = c^*(p)c(p')\cdot 2\pi\delta(p-p') ,
 \]
 so \(c(p) = 1/\sqrt{2\pi}\) and
+
 \[
 \langle x|p\rangle = \frac{1}{\sqrt{2\pi}}\,e^{ipx} .
 \]
 
 The **momentum representation** is then
+
 \[
 \tilde{\psi}(p) = \langle p|\psi\rangle = \int_{-\infty}^{\infty} dx\,\langle p|x\rangle\langle x|\psi\rangle = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} dx\,e^{-ipx}\psi(x) .
 \]
@@ -531,6 +555,7 @@ With the mathematical machinery in place, we can state the foundational postulat
 P(A = a_i) = |\langle a_i|v\rangle|^2 .
 \]
 The expectation value of \(\hat{A}\) in state \(|v\rangle\) is accordingly
+
 \[
 \langle\hat{A}\rangle = \langle v|\hat{A}|v\rangle .
 \]
@@ -545,20 +570,24 @@ These three postulates are the mathematical skeleton of quantum mechanics. Postu
 One of the most profound consequences of the commutator structure of quantum mechanics is the existence of fundamental lower bounds on the simultaneous spread of two non-commuting observables. These bounds are not a statement about the precision of instruments; they are a mathematical property of the state and the operators.
 
 Let \(\hat{A}\) and \(\hat{B}\) be two observables (self-adjoint operators) satisfying
+
 \[
 [\hat{A}, \hat{B}] = i\hat{C} ,
 \]
 where the factor of \(i\) is chosen so that \(\hat{C}\) is self-adjoint (since \([\hat{A},\hat{B}]^\dagger = [\hat{B}^\dagger, \hat{A}^\dagger] = [\hat{B},\hat{A}] = -[\hat{A},\hat{B}]\), we have \((i\hat{C})^\dagger = -i\hat{C} = -(i\hat{C})\), so \(\hat{C}^\dagger = \hat{C}\)). In an arbitrary state \(|\psi\rangle\), define
+
 \[
 \hat{A}_0 = \hat{A} - \langle\hat{A}\rangle\hat{\mathbf{1}}, \quad \hat{B}_0 = \hat{B} - \langle\hat{B}\rangle\hat{\mathbf{1}} ,
 \]
 so that \(\Delta_A^2 = \langle\psi|\hat{A}_0^2|\psi\rangle\) and \(\Delta_B^2 = \langle\psi|\hat{B}_0^2|\psi\rangle\) are the variances.
 
 For any operator \(\hat{T}\), the operator \(\hat{T}\hat{T}^\dagger\) is non-negative: \(\langle\psi|\hat{T}\hat{T}^\dagger|\psi\rangle \geq 0\). Choose \(\hat{T} = \hat{A}_0 + i\omega\hat{B}_0\) with \(\omega \in \mathbb{R}\). Then:
+
 \[
 \langle\psi|\hat{T}\hat{T}^\dagger|\psi\rangle = \langle\psi|\hat{A}_0^2|\psi\rangle - i\omega\langle\psi|[\hat{A}_0, \hat{B}_0]|\psi\rangle + \omega^2\langle\psi|\hat{B}_0^2|\psi\rangle \geq 0 .
 \]
 Since \([\hat{A}_0, \hat{B}_0] = [\hat{A}, \hat{B}] = i\hat{C}\), this becomes
+
 \[
 \Delta_A^2 + \omega\langle\hat{C}\rangle + \omega^2 \Delta_B^2 \geq 0 .
 \]
@@ -586,20 +615,24 @@ The physical content is this: position and momentum are not independent degrees 
 <strong>Remark (Time-energy uncertainty relation).</strong> The Robertson inequality gives uncertainty relations between pairs of <em>observables</em>. Time, however, is not an operator in non-relativistic quantum mechanics — it enters as a classical parameter in the Schrödinger equation. The time-energy uncertainty relation \(\Delta t\,\Delta H \geq \hbar/2\) therefore requires a separate derivation, and its meaning differs subtly from \(\Delta x\,\Delta p \geq \hbar/2\).
 
 The operative definition of \(\Delta t\) is as follows. Fix any observable \(\hat{f}(t)\) and an initial state \(|\psi\rangle\). Define the <strong>characteristic time</strong> \(\Delta t\) as the minimum time the system must evolve for the expectation value \(\bar{f}(t)\) to shift by more than the time-averaged standard deviation \(\overline{\Delta f}\):
+
 \[
 \Delta t := \frac{\displaystyle\int_{t_0}^{t_0+\Delta t} \Delta f(t)\,dt}{\bigl|\bar{f}(t_0+\Delta t) - \bar{f}(t_0)\bigr|} .
 \]
 Informally, \(\Delta t\) is the shortest time interval over which the dynamics of \(\hat{f}\) becomes distinguishable from quantum noise. For times shorter than \(\Delta t\), the spread of measurement outcomes at two different times overlaps, and one cannot tell whether the system has evolved; for times longer than \(\Delta t\), the evolution is visible above the quantum fluctuations.
 
 To derive the bound, apply the Robertson inequality to the pair \((\hat{f}(t), \hat{H})\):
+
 \[
 \Delta f(t)\,\Delta H \geq \tfrac{1}{2}\bigl|\langle\psi|[\hat{f}(t), \hat{H}]|\psi\rangle\bigr| .
 \]
 The Heisenberg equation of motion gives \([\hat{f}(t), \hat{H}] = i\hbar\,\dot{\hat{f}}(t)\), so
+
 \[
 \Delta f(t)\,\Delta H \geq \frac{\hbar}{2}\biggl|\frac{d\bar{f}}{dt}\biggr| .
 \]
 Integrating from \(t_0\) to \(t_0 + \Delta t\) and using the definition of \(\Delta t\) above immediately yields
+
 \[
 \boxed{\Delta t\,\Delta H \geq \frac{\hbar}{2}.}
 \]
@@ -652,6 +685,7 @@ where \(|0\rangle\) and \(|1\rangle\) are the eigenstates of \(\hat{\sigma}_z\) 
 <strong>Step 1: Measure \(\hat{\sigma}_z\), ask for outcome \(+1\).</strong>
 
 Since \(\hat{\sigma}_z = |1\rangle\langle 1| - |0\rangle\langle 0|\), the projector onto the \(+1\) eigenspace is \(\hat{P}_1^z = |1\rangle\langle 1|\). By Born's rule:
+
 \[
 p(\sigma_z = +1) = \langle\psi|\hat{P}_1^z|\psi\rangle = |\langle 1|\psi\rangle|^2 = |b|^2 .
 \]
@@ -659,6 +693,7 @@ p(\sigma_z = +1) = \langle\psi|\hat{P}_1^z|\psi\rangle = |\langle 1|\psi\rangle|
 <strong>Step 2: Post-measurement state.</strong>
 
 Applying the projection rule:
+
 \[
 |\psi'\rangle = \frac{\hat{P}_1^z|\psi\rangle}{\sqrt{|b|^2}} = \frac{b}{|b|}|1\rangle \equiv |1\rangle ,
 \]
@@ -667,16 +702,19 @@ where we used the fact that states differing only by a global phase are physical
 <strong>Step 3: Measure \(\hat{\sigma}_x\), ask for outcome \(-1\).</strong>
 
 We recall \(\hat{\sigma}_x = |0\rangle\langle 1| + |1\rangle\langle 0|\). Its eigenvectors are
+
 \[
 |{+}\rangle = \frac{1}{\sqrt{2}}(|1\rangle + |0\rangle), \quad |{-}\rangle = \frac{1}{\sqrt{2}}(|1\rangle - |0\rangle),
 \]
 with eigenvalues \(+1\) and \(-1\) respectively. (Verification: \(\hat{\sigma}_x|{-}\rangle = \frac{1}{\sqrt{2}}(\hat{\sigma}_x|1\rangle - \hat{\sigma}_x|0\rangle) = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) = -|{-}\rangle\). \(\checkmark\))
 
 The projector onto the \(-1\) eigenspace is
+
 \[
 \hat{P}_{-1}^x = |{-}\rangle\langle{-}| = \frac{1}{2}(|1\rangle\langle 1| + |0\rangle\langle 0| - |0\rangle\langle 1| - |1\rangle\langle 0|) .
 \]
 Applying Born's rule to the post-first-measurement state \(|\psi'\rangle = |1\rangle\):
+
 \[
 p(\sigma_x = -1) = \langle 1|\hat{P}_{-1}^x|1\rangle = \frac{1}{2}(|{}\langle 1|1\rangle|^2 + |\langle 1|0\rangle|^2 - \ldots) = \frac{1}{2} .
 \]
@@ -704,6 +742,7 @@ The POVM framework resolves this by working directly with probabilities, without
 \hat{E}_n = \hat{M}_n^\dagger\hat{M}_n .
 \]
 Each \(\hat{E}_n\) is positive semidefinite (all eigenvalues non-negative), and the set satisfies the completeness relation \(\sum_n \hat{E}_n = \hat{\mathbf{1}}\). The measurement probabilities are then
+
 \[
 p(n) = \langle\psi|\hat{E}_n|\psi\rangle .
 \]
@@ -735,6 +774,7 @@ where \(\{f, g\}\) is the Poisson bracket, satisfying antisymmetry, linearity, t
 \{\hat{u}_1, \hat{v}_1\}(\hat{v}_2\hat{u}_2 - \hat{u}_2\hat{v}_2) = (\hat{v}_1\hat{u}_1 - \hat{u}_1\hat{v}_1)\{\hat{u}_2, \hat{v}_2\}
 \]
 for all observables \(\hat{u}_1, \hat{u}_2, \hat{v}_1, \hat{v}_2\). This must hold for every choice of variables, which forces a very rigid relationship between the commutator and the Poisson bracket:
+
 \[
 \hat{v}\hat{u} - \hat{u}\hat{v} = k\,\{\hat{u}, \hat{v}\}
 \]
@@ -781,10 +821,12 @@ Recall from Block I the definitions of these two operator classes:
 - An **anti-unitary** operator is anti-linear: \(\bar{U}(a|\psi\rangle + b|\phi\rangle) = a^*\bar{U}|\psi\rangle + b^*\bar{U}|\phi\rangle\), and satisfies \(\langle \bar{U}\psi | \bar{U}\phi \rangle = \langle \psi | \phi \rangle^*\).
 
 That both cases preserve the modulus of the inner product is easy to verify. For the unitary case:
+
 \[
 |\psi'\rangle = \hat{U}|\psi\rangle, \quad |\phi'\rangle = \hat{U}|\phi\rangle \implies \langle\psi'|\phi'\rangle = \langle\psi|\hat{U}^\dagger\hat{U}|\phi\rangle = \langle\psi|\phi\rangle,
 \]
 so not only the modulus but the inner product itself is preserved. For the anti-unitary case:
+
 \[
 \langle\psi'|\phi'\rangle = \langle\psi|\phi\rangle^*,
 \]
@@ -797,18 +839,22 @@ so the inner product is complex-conjugated, but its modulus is unchanged.
 #### §4.2 The Square of an Anti-Unitary Operator
 
 A useful structural fact is that the square of any anti-unitary operator is unitary. To see why, let \(\bar{U}\) be anti-unitary and define
+
 \[
 |\gamma\rangle = |\bar{U}\psi\rangle, \qquad |\eta\rangle = |\bar{U}\phi\rangle.
 \]
 Applying \(\bar{U}\) again:
+
 \[
 \langle \bar{U}\gamma | \bar{U}\eta \rangle = \langle \gamma | \eta \rangle^*.
 \]
 On the other hand, tracing back through the definitions gives
+
 \[
 \langle \gamma | \eta \rangle = \langle \bar{U}\psi | \bar{U}\phi \rangle = \langle \psi | \phi \rangle^*,
 \]
 and therefore
+
 \[
 \langle \bar{U}^2\psi | \bar{U}^2\phi \rangle = \langle \psi | \phi \rangle.
 \]
@@ -817,10 +863,12 @@ So \(\bar{U}^2\) preserves inner products exactly, making it unitary. This has a
 #### §4.3 Transformation of Operators Under Unitary Symmetries
 
 When the state vectors of the Hilbert space transform under a unitary operator as
+
 \[
 |\psi'\rangle = \hat{U}|\psi\rangle,
 \]
 the operators representing observables transform by conjugation:
+
 \[
 \hat{O}' = \hat{U}\hat{O}\hat{U}^\dagger.
 \]
@@ -839,6 +887,7 @@ for all \(s\).
 </div>
 
 That \(\hat{H}\) must be self-adjoint follows directly from the unitarity of \(\hat{U}(s)\):
+
 \[
 \hat{U}^\dagger(s) = \hat{U}^{-1}(s) = e^{-i\hat{H}s} \implies (e^{i\hat{H}s})^\dagger = e^{-i\hat{H}^\dagger s} = e^{-i\hat{H}s},
 \]
@@ -865,12 +914,14 @@ The generator \(\hat{K}\) specifies the direction of change in Hilbert space: it
 The laws of physics must be invariant under the symmetries of spacetime. In the non-relativistic regime, these symmetries constitute the **Galilean group**: the set of all transformations of space and time that preserve the structure of Newtonian mechanics. If we change our reference frame to that of another observer moving at constant velocity, performing a spatial translation, a rotation, or a shift in the time origin, the laws of physics — and in particular the probability distributions of all observables — must remain the same.
 
 In \(3+1\) dimensions, if \(\boldsymbol{x}\) is a 3-component spatial vector and \(t\) is time, the most general Galilean transformation from \((\boldsymbol{x}, t)\) to \((\boldsymbol{x}', t')\) takes the form:
+
 \[
 \boldsymbol{x} \to \boldsymbol{x}' = R\boldsymbol{x} + \boldsymbol{a} + \boldsymbol{v}t, \qquad t \to t' = t + s.
 \]
 Here \(R\) is a rotation matrix, \(\boldsymbol{a}\) is a spatial displacement, \(\boldsymbol{v}\) is the velocity of a uniformly moving reference frame (a boost), and \(s\) is a time shift. We write a Galilean transformation compactly as \(\tau = \tau\{\boldsymbol{x},t\}\), a transformation depending on the parameters \(R, \boldsymbol{a}, \boldsymbol{v}, s\).
 
 The composition rule for two Galilean transformations \(\tau_1\{R_1, \boldsymbol{a}_1, \boldsymbol{v}_1, s_1\}\) and \(\tau_2\{R_2, \boldsymbol{a}_2, \boldsymbol{v}_2, s_2\}\) is another Galilean transformation \(\tau_3 = \tau_2\tau_1\) with parameters:
+
 \[
 R_3 = R_2 R_1, \qquad \boldsymbol{a}_3 = \boldsymbol{a}_2 + R_2\boldsymbol{a}_1 + \boldsymbol{v}_2 s_1, \qquad \boldsymbol{v}_3 = \boldsymbol{v}_2 + R_2\boldsymbol{v}_1, \qquad s_3 = s_2 + s_1.
 \]
@@ -883,6 +934,7 @@ Since the Galilean group is a continuous symmetry group and since, by Wigner's t
 **Galilean transformations are represented by unitary operators on the Hilbert space.**
 
 Explicitly:
+
 \[
 |\psi\rangle \to |\psi'\rangle = \hat{U}(\tau)|\psi\rangle, \qquad \hat{O} \to \hat{O}' = \hat{U}(\tau)\hat{O}\hat{U}^\dagger(\tau).
 \]
@@ -930,12 +982,14 @@ The phase \(\omega(\tau_2, \tau_1) \in \mathbb{R}\) cannot depend on the state \
 #### §5.3 Generators of the Galilean Group
 
 In 3+1 dimensions, the Galilean group has **10 independent parameters**: 3 for spatial displacements, 3 for rotations, 3 for boosts, and 1 for time shifts. Because the group is continuous and the representation is unitary, the most general Galilean transformation operator can be written as a product of ten exponentials:
+
 \[
 \hat{U}(\tau) = \prod_{\mu=1}^{10} e^{is_\mu\hat{K}_\mu},
 \]
 where the \(\hat{K}_\mu\) are Hermitian operators called the **generators** of the Galilean group corresponding to the different independent transformations, and \(s_\mu\) are the corresponding parameters.
 
 For infinitesimally small parameters \(s_\mu = \epsilon \ll 1\), the general infinitesimal unitary transformation is:
+
 \[
 \hat{U} = \mathbb{1} + i\sum_{\mu=1}^{10}\epsilon\hat{K}_\mu + \mathcal{O}(\epsilon^2).
 \]
@@ -952,16 +1006,19 @@ The ten generators \(\{-\hat{J}_\alpha, -\hat{P}_\alpha, \hat{G}_\alpha, \hat{H}
 #### §5.4 The Lie Algebra of the Galilean Group
 
 The composition rule (2.2.1) imposes strong constraints on the generators. Consider the sequence of operations: apply \(\hat{U}_{K_\nu}\) for infinitesimal parameter \(\epsilon\), then \(\hat{U}_{K_\mu}\) for infinitesimal \(\epsilon\), then their inverses in reverse order. Using the Baker-Campbell-Hausdorff formula to second order:
+
 \[
 e^{i\epsilon\hat{K}_\mu}e^{i\epsilon\hat{K}_\nu}e^{-i\epsilon\hat{K}_\mu}e^{-i\epsilon\hat{K}_\nu} = \mathbb{1} + \epsilon^2(\hat{K}_\mu\hat{K}_\nu - \hat{K}_\nu\hat{K}_\mu) + \mathcal{O}(\epsilon^3) = \mathbb{1} + \epsilon^2[\hat{K}_\mu, \hat{K}_\nu] + \mathcal{O}(\epsilon^3). \tag{2.2.2}
 \]
 
 By the group property (2.2.1), any sequence of Galilean transformations is equivalent to another Galilean transformation up to a phase. There must therefore exist 11 parameters \(\{\omega, s_\mu\}\) making a single transformation plus a phase, \(e^{i\omega}U(\tau)\), equal to (2.2.2). These parameters are also infinitesimal (order \(\epsilon^2\)), so expanding:
+
 \[
 e^{i\omega}\hat{U}(\tau) = \mathbb{1} + i\sum_{\mu=1}^{10}s_\mu\hat{K}_\mu + i\omega\mathbb{1} + \mathcal{O}(\epsilon^3). \tag{2.2.3}
 \]
 
 Equating (2.2.2) and (2.2.3) requires that the commutator of two generators be a linear combination of generators plus a possible multiple of the identity:
+
 \[
 \left[\hat{K}_\mu, \hat{K}_\nu\right] = i\sum_\lambda c^\lambda_{\mu\nu}\hat{K}_\lambda + ib_{\mu\nu}\mathbb{1}. \tag{2.2.4}
 \]
@@ -991,6 +1048,7 @@ The full set of commutation relations among the ten generators can be computed f
 Here the repetition of index \(\gamma\) on the right-hand side is a sum over that index (Einstein convention), and \(\varepsilon_{\alpha\beta}{}^\gamma\) is the fully antisymmetric Levi-Civita symbol. The constant \(M\) appearing in \([\hat{G}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}M\mathbb{1}\) is the **mass** of the particle — it enters as a central extension of the Galilean algebra, directly related to the projective phase in (2.2.1).
 
 The derivation of the rotation commutation relations is particularly instructive. The rotation matrices about the three spatial axes are:
+
 \[
 R_1(\theta) = \begin{pmatrix}1&0&0\\0&\cos\theta&-\sin\theta\\0&\sin\theta&\cos\theta\end{pmatrix}, \quad
 R_2(\theta) = \begin{pmatrix}\cos\theta&0&\sin\theta\\0&1&0\\-\sin\theta&0&\cos\theta\end{pmatrix}, \quad
@@ -998,10 +1056,12 @@ R_3(\theta) = \begin{pmatrix}\cos\theta&-\sin\theta&0\\\sin\theta&\cos\theta&0\\
 \]
 
 Expanding for small \(\theta = \epsilon \ll 1\):
+
 \[
 R_\alpha(\theta) = \mathbb{1} + \theta M_\alpha + \mathcal{O}(\theta^2),
 \]
 where \(M_\alpha = (dR_\alpha/d\theta)|_{\theta=0}\) are the infinitesimal generators of rotations in 3-space:
+
 \[
 M_1 = \begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix}, \quad
 M_2 = \begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix}, \quad
@@ -1009,20 +1069,24 @@ M_3 = \begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}. \tag{2.2.5}
 \]
 
 Performing two infinitesimal rotations with respect to the \(x\) and \(y\) axes and undoing them:
+
 \[
 R_2(-\epsilon)R_1(-\epsilon)R_2(\epsilon)R_1(\epsilon) = \mathbb{1} - \epsilon^2[M_1, M_2] = \mathbb{1} - \epsilon^2 M_3 = R_3(-\epsilon^2).
 \]
 The corresponding unitary operators must satisfy the same relation up to a phase, and to second order in \(\epsilon\) this forces:
+
 \[
 [\hat{J}_1, \hat{J}_2] = i\hat{J}_3 + \omega_{12}\mathbb{1}.
 \]
 
 By cyclic permutation and anti-symmetry of the commutator, the full rotation algebra is:
+
 \[
 [\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{J}_\gamma + i\varepsilon_{\alpha\beta}{}^\gamma b_\gamma\mathbb{1}.
 \]
 
 The multiples of the identity can be absorbed by redefining \(J_\gamma + b_\gamma \to J_\gamma\). This redefinition changes the unitary transformation \(U(R_\gamma) = e^{-i\theta J_\gamma}\) by an overall phase factor \(e^{i\theta b_\gamma}\), which has no physical consequence since the global phase of a state vector is unobservable. We therefore set:
+
 \[
 [\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{J}_\gamma.
 \]
@@ -1034,25 +1098,30 @@ This is the standard angular momentum algebra of quantum mechanics — derived h
 To derive the equations of motion and the explicit form of the Hamiltonian, we also need to know how the generators act on the position eigenstates. The key step is to work out how the position operator \(\hat{X}\) commutes with each generator.
 
 **Position-momentum commutator.** Apply the spatial translation \(\boldsymbol{x} \to \boldsymbol{x}' = \boldsymbol{x} + \boldsymbol{a}\) to the position eigenstates:
+
 \[
 |\boldsymbol{x}\rangle \to |\boldsymbol{x}\rangle' = e^{-i\boldsymbol{a}\cdot\hat{P}}|\boldsymbol{x}\rangle = |\boldsymbol{x}+\boldsymbol{a}\rangle,
 \]
 where we have used the eigenvalue equation \(\hat{X}|\boldsymbol{x}\rangle = \boldsymbol{x}|\boldsymbol{x}\rangle$. Under the same transformation, the position operator becomes:
+
 \[
 \hat{X} \to \hat{X}' = e^{-i\boldsymbol{a}\cdot\hat{P}}\hat{X}e^{i\boldsymbol{a}\cdot\hat{P}}. \tag{2.2.7}
 \]
 
 The transformed operator acting on the transformed eigenvector gives:
+
 \[
 \hat{X}'|\boldsymbol{x}'\rangle = e^{-i\boldsymbol{a}\cdot\hat{P}}\hat{X}e^{i\boldsymbol{a}\cdot\hat{P}}e^{-i\boldsymbol{a}\cdot\hat{P}}|\boldsymbol{x}\rangle = \boldsymbol{x}e^{-i\boldsymbol{a}\cdot\hat{P}}|\boldsymbol{x}\rangle = \boldsymbol{x}|\boldsymbol{x}'\rangle. \tag{2.2.8}
 \]
 
 But \(\hat{X}|\boldsymbol{x}'\rangle = (\boldsymbol{x}+\boldsymbol{a})|\boldsymbol{x}'\rangle\), and comparing this with (2.2.8) we find:
+
 \[
 \hat{X}' = \hat{X} - \boldsymbol{a}\mathbb{1}. \tag{2.2.9}
 \]
 
 Taking a series expansion in (2.2.7) to first order in \(\boldsymbol{a}\) and equating with (2.2.9):
+
 \[
 [\hat{X}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}\mathbb{1}. \tag{2.2.10}
 \]
@@ -1066,16 +1135,19 @@ There is a second consequence that follows immediately. Taking the trace of both
 </div>
 
 As a consistency check, let us verify directly that the exponential \(e^{-ix_0\hat{P}}\) does implement a spatial translation. In the position representation, inserting a resolution of the identity in momentum eigenstates:
+
 \[
 \psi_{x_0}(x) = \langle x|e^{-ix_0\hat{P}}|\psi\rangle = \int dp\,\langle x|e^{-ix_0\hat{P}}|p\rangle\langle p|\psi\rangle = \int dp\,e^{-ix_0 p}\langle x|p\rangle\psi(p).
 \]
 Using \(\langle x|p\rangle = \frac{1}{\sqrt{2\pi}}e^{ipx}\):
+
 \[
 \psi_{x_0}(x) = \frac{1}{\sqrt{2\pi}}\int dp\,e^{ip(x-x_0)}\psi(p) = \psi(x - x_0),
 \]
 confirming that \(e^{-ix_0\hat{P}}\) translates the wavefunction by \(x_0\).
 
 **Position-rotation commutator.** An analogous calculation for an infinitesimal rotation of magnitude \(\theta \ll 1\) acting as \(\boldsymbol{x} \to \boldsymbol{x}' = \boldsymbol{x} + \theta\hat{n}\times\boldsymbol{x}\), with corresponding action \(|\boldsymbol{x}\rangle \to |\boldsymbol{x}\rangle' = e^{-i\theta\hat{n}\cdot\hat{J}}|\boldsymbol{x}\rangle\), yields:
+
 \[
 [\hat{J}_\alpha, \hat{X}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{X}_\gamma. \tag{2.2.11}
 \]
@@ -1083,6 +1155,7 @@ confirming that \(e^{-ix_0\hat{P}}\) translates the wavefunction by \(x_0\).
 This says that the components of \(\hat{X}\) transform under rotations as the components of a 3-vector — as one would physically require.
 
 **Position-boost commutator.** A boost in direction \(\alpha\) is proportional to a translation in momentum space. Since the boost generator \(\hat{G}_\alpha\) shifts velocity (and hence momentum) rather than position, it commutes with the position operator:
+
 \[
 [\hat{G}_\alpha, \hat{X}_\beta] = 0. \tag{2.2.12}
 \]
@@ -1094,11 +1167,13 @@ This says that the components of \(\hat{X}\) transform under rotations as the co
 #### §6.1 From Time Shifts to the Schrödinger Equation
 
 The time translation \(t \to t' = t + s\) is represented in the Hilbert space by the unitary operator \(\hat{U}_s = e^{is\hat{H}}\). Applied to a state at time \(t_0\):
+
 \[
 |\psi(t_0)\rangle \to e^{is\hat{H}}|\psi(t_0)\rangle = |\psi(t_0 - s)\rangle.
 \]
 
 Renaming \(-s = t\) and setting \(t_0 = 0\), we get \(|\psi(t)\rangle = e^{-it\hat{H}}|\psi(0)\rangle\). Differentiating with respect to time:
+
 \[
 \frac{d}{dt}|\psi(t)\rangle = -i\hat{H}e^{-it\hat{H}}|\psi(0)\rangle \implies \frac{d}{dt}|\psi(t)\rangle = -i\hat{H}|\psi(t)\rangle. \tag{2.3.1}
 \]
@@ -1112,15 +1187,18 @@ Consider the simplest quantum system: a free particle whose only degrees of free
 **Determining the boost generator \(\hat{G}\).** From the commutation relation \([\hat{G}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}M\mathbb{1}\) (which has the same structure as \([\hat{X}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}\mathbb{1}\)), the combination \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with all components of \(\hat{P}\). From (2.2.12), \(\hat{G}_\alpha\) also commutes with \(\hat{X}\), and so does \(M\hat{X}_\alpha\). Thus \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with both \(\hat{X}\) and \(\hat{P}\), and by irreducibility must be a multiple of the identity: \(\hat{G}_\alpha - M\hat{X}_\alpha = c_\alpha\mathbb{1}\), giving \(\hat{G}_\alpha = M\hat{X}_\alpha + c_\alpha\mathbb{1}\).
 
 However, the commutation relation \([\hat{J}_\alpha, \hat{G}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{G}_\gamma\) tells us that \(\hat{G}\) must transform as a 3-vector under rotations. The constant term \(c_\alpha\mathbb{1}\) commutes with \(\hat{J}_\alpha\), so it cannot contribute to a 3-vector transformation. Therefore \(c_\alpha = 0\), giving:
+
 \[
 \hat{G}_\alpha = M\hat{X}_\alpha. \tag{2.3.2}
 \]
 
 **Determining the rotation generator \(\hat{J}\).** Consider the proposal \(\hat{J} = \hat{X}\times\hat{P}\) (orbital angular momentum). Using \([\hat{J}_\alpha, \hat{P}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{P}_\gamma\) and the canonical commutation relations, one verifies that \(\hat{J} - \hat{X}\times\hat{P}\) commutes with the entire irreducible set \(\{\hat{X}, \hat{P}\}\), and is therefore a multiple of the identity:
+
 \[
 \hat{J}_\alpha = (\hat{X}\times\hat{P})_\alpha + c_\alpha\mathbb{1}.
 \]
 Again, for \([\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{J}_\gamma\) to be satisfied, one shows that \(c_\alpha = 0\). Therefore:
+
 \[
 \hat{\boldsymbol{J}} = \hat{X}\times\hat{P}. \tag{2.3.3}
 \]
@@ -1128,16 +1206,19 @@ Again, for \([\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gam
 For a free particle with no internal degrees of freedom, the angular momentum is purely orbital.
 
 **Determining the Hamiltonian \(\hat{H}\).** We use the commutation relation \([\hat{G}_\alpha, \hat{H}] = i\hat{P}_\alpha\) and substitute (2.3.2) to obtain:
+
 \[
 [M\hat{X}_\alpha, \hat{H}] = i\hat{P}_\alpha \implies [\hat{X}_\alpha, \hat{H}] = \frac{i\hat{P}_\alpha}{M}.
 \]
 
 It is straightforward to verify that \(\hat{H} = \hat{\boldsymbol{P}}\cdot\hat{\boldsymbol{P}}/2M\) satisfies this equation:
+
 \[
 \left[\hat{X}_\alpha, \frac{\hat{P}^2}{2M}\right] = \frac{1}{2M}[\hat{X}_\alpha, \hat{P}_\beta\hat{P}_\beta] = \frac{1}{2M}\cdot 2i\hat{P}_\alpha = \frac{i\hat{P}_\alpha}{M}. \checkmark
 \]
 
 The difference \(\hat{H} - \hat{P}^2/2M\) commutes with \(\hat{X}_\alpha\), and from the Galilean relation \([\hat{P}_\alpha, \hat{H}] = 0\) it also commutes with \(\hat{P}_\alpha\). By irreducibility it is therefore a multiple of the identity, so:
+
 \[
 \hat{H} = \frac{\hat{\boldsymbol{P}}\cdot\hat{\boldsymbol{P}}}{2M} + E_0\mathbb{1}. \tag{2.3.4}
 \]
@@ -1153,10 +1234,12 @@ The difference \(\hat{H} - \hat{P}^2/2M\) commutes with \(\hat{X}_\alpha\), and 
 When the particle has internal degrees of freedom — such as spin — the position and momentum operators no longer form an irreducible set. The Hilbert space decomposes as \(\mathcal{H} = \mathcal{H}_\text{orbital}\otimes\mathcal{H}_\text{internal}\), and there exist operators (acting on \(\mathcal{H}_\text{internal}\)) that commute with both \(\hat{X}\) and \(\hat{P}\).
 
 Internal degrees of freedom are, by definition, independent of the centre-of-mass degrees of freedom. Any operator that commutes with both \(\hat{X}\) and \(\hat{P}\) acts only on the internal space. In particular, the rotation generator acquires an extra term:
+
 \[
 \hat{\boldsymbol{J}} = \hat{X}\times\hat{P} + \hat{\boldsymbol{S}},
 \]
 where \(\hat{\boldsymbol{S}}\) satisfies \([\hat{X}, \hat{S}] = [\hat{P}, \hat{S}] = 0\) and represents the **spin angular momentum**. The operator \(\hat{J}\) must still satisfy the Galilean rotation algebra \([\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{J}_\gamma\). Since \(\hat{X}\times\hat{P}\) already satisfies this algebra on its own, the spin operators must satisfy independently:
+
 \[
 [\hat{S}_\alpha, \hat{S}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{S}_\gamma. \tag{2.3.5}
 \]
@@ -1192,6 +1275,7 @@ This is again the angular momentum algebra, now for the spin degrees of freedom.
 </svg>
 
 For the boost generator, the argument from §6.2 shows that \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with \(\hat{P}$ but is no longer necessarily a multiple of the identity — it could be a function of the internal operators. Since it must be a 3-vector under rotations, and the only 3-vector function of \(\hat{S}\) is \(\hat{S}\) itself (since cross products of \(\hat{S}\) are proportional to \(\hat{S}\) given \(\hat{S}\times\hat{S} = i\hat{S}\)), we would have \(\hat{G}_\alpha = M\hat{X}_\alpha + c\hat{S}_\alpha\). However, the commutation relation \([\hat{G}_\alpha, \hat{G}_\beta] = 0\) imposes \(c = 0\), because the three components of \(\hat{S}\) do not commute with each other. Therefore even in the presence of spin:
+
 \[
 \hat{G}_\alpha = M\hat{X}_\alpha.
 \]
@@ -1201,6 +1285,7 @@ The Hamiltonian argument from §6.2 carries through identically, giving \(\hat{H
 #### §6.4 Particle in an External Field
 
 When a particle interacts with an external potential, the time-shift symmetry is broken: the laws of physics are no longer invariant under shifts of the time origin, because the external field introduces a preferred time origin. This means the Hamiltonian is no longer invariant under time translations, and in particular the commutation relations involving \(\hat{H}\) change:
+
 \[
 [\hat{P}_\alpha, \hat{H}] \neq 0, \qquad [\hat{G}_\alpha, \hat{H}] \neq i\hat{P}_\alpha, \qquad [\hat{J}_\alpha, \hat{H}] \neq 0.
 \]
@@ -1208,41 +1293,49 @@ When a particle interacts with an external potential, the time-shift symmetry is
 The remaining Galilean symmetries (spatial translations in the absence of a spatially-varying potential, rotations in the absence of a preferred direction, boosts between inertial frames) may still be respected, but the time-translation subgroup is broken by the interaction.
 
 To determine the most general form of \(\hat{H}\) consistent with the remaining Galilean symmetries, introduce the **velocity operator** \(\hat{V}\), defined by the requirement that its expectation value equals the time derivative of the expectation value of position:
+
 \[
 \frac{d}{dt}\langle\hat{X}\rangle = \langle\hat{V}\rangle.
 \]
 
 Computing the left side using the Schrödinger equation (2.3.1):
+
 \[
 \frac{d}{dt}\langle\psi(t)|\hat{X}|\psi(t)\rangle = i\langle\psi(t)|[\hat{H}, \hat{X}]|\psi(t)\rangle,
 \]
 giving:
+
 \[
 \hat{V} = i[\hat{H}, \hat{X}]. \tag{2.3.7}
 \]
 
 Under a boost by velocity \(\boldsymbol{v}\), the velocity operator changes as a boost changes the velocity of a particle — by subtracting \(\boldsymbol{v}\):
+
 \[
 e^{i\boldsymbol{v}\cdot\hat{G}}\hat{V}e^{-i\boldsymbol{v}\cdot\hat{G}} = \hat{V} - \boldsymbol{v}\mathbb{1}.
 \]
 
 This is the quantum analogue of the Galilean velocity addition law. Expanding to first order in \(\boldsymbol{v}\):
+
 \[
 [i\boldsymbol{v}\cdot\hat{G}, \hat{V}_\alpha] = -v_\alpha\mathbb{1} \implies [\hat{G}_\alpha, \hat{V}_\beta] = i\delta_{\alpha\beta}\mathbb{1}. \tag{2.3.8}
 \]
 
 This has exactly the same algebraic form as the canonical commutation relation \([\hat{X}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}\mathbb{1}\). Using \(\hat{G}_\alpha = M\hat{X}_\alpha\) and the Galilean commutation relations, one finds that \(\hat{V}_\alpha - \hat{P}_\alpha/M\) commutes with all components of \(\hat{G}\). Since \(\hat{G} = M\hat{X}\) and \(\{\hat{X}_1, \hat{X}_2, \hat{X}_3\}\) is a complete set of commuting operators (for a particle with no extra degrees of freedom), any operator commuting with all components of \(\hat{X}\) must be a function of \(\hat{X}\). Therefore:
+
 \[
 \hat{V} = \frac{\hat{P}}{M} - \boldsymbol{A}(\hat{X}),
 \]
 where \(\boldsymbol{A}(\hat{X})\) is some operator-valued function of position.
 
 Substituting into (2.3.7) and solving for \(\hat{H}\), a particular solution is:
+
 \[
 \hat{H}_0 = \frac{[\hat{P} - \boldsymbol{A}(\hat{X})]^2}{2M}.
 \]
 
 The difference \(\hat{H} - \hat{H}_0\) commutes with \(\hat{X}\) (by (2.3.7)) and also with \(\hat{P}\) (from the Galilean relation), so it must be a function of \(\hat{X}\) only. Therefore the most general Hamiltonian for a particle with no internal degrees of freedom interacting with an external field is:
+
 \[
 \hat{H} = \frac{[\hat{P} - \boldsymbol{A}(\hat{X})]^2}{2M} + W(\hat{X}). \tag{2.3.9}
 \]
@@ -1258,15 +1351,18 @@ This is the Hamiltonian of a charged particle in an electromagnetic field, where
 In classical mechanics, Noether's theorem states that every continuous symmetry of the action corresponds to a conserved quantity. Quantum mechanics has an exact analogue, which can be derived directly from the structure of unitary operators and the Schrödinger equation.
 
 Consider a unitary transformation \(\hat{U}(s) = e^{is\hat{K}}\) with self-adjoint generator \(\hat{K} = \hat{K}^\dagger\). Suppose that the Hamiltonian is invariant under this transformation — that is, the generator of time evolution looks the same in the transformed frame:
+
 \[
 \hat{U}(s)\hat{H}\hat{U}^\dagger(s) = \hat{H}. \tag{2.4.1}
 \]
 
 Since this must hold for all values of the parameter \(s\), it is equivalent to demanding invariance at the infinitesimal level. Expanding (2.4.1) to first order in \(s\):
+
 \[
 (1 + is\hat{K})\hat{H}(1 - is\hat{K}) = \hat{H} \implies is[\hat{K}, \hat{H}] = 0,
 \]
 giving:
+
 \[
 [\hat{H}, \hat{K}] = 0. \tag{2.4.2}
 \]
@@ -1284,16 +1380,19 @@ The Hermitian generators of a symmetry transformation can typically be identifie
 </div>
 
 **Proof.** Differentiate \(\langle\hat{K}\rangle_t = \langle\psi(t)|\hat{K}|\psi(t)\rangle\) with respect to time:
+
 \[
 \frac{d}{dt}\langle\psi(t)|\hat{K}|\psi(t)\rangle = \left[\frac{d}{dt}\langle\psi(t)|\right]\hat{K}|\psi(t)\rangle + \langle\psi(t)|\hat{K}\left[\frac{d}{dt}|\psi(t)\rangle\right].
 \]
 
 Using the Schrödinger equation \(\frac{d}{dt}|\psi(t)\rangle = -i\hat{H}|\psi(t)\rangle\) and its adjoint \(\frac{d}{dt}\langle\psi(t)| = i\langle\psi(t)|\hat{H}\):
+
 \[
 \frac{d}{dt}\langle\hat{K}\rangle_t = i\langle\psi(t)|\hat{H}\hat{K}|\psi(t)\rangle - i\langle\psi(t)|\hat{K}\hat{H}|\psi(t)\rangle = i\langle\psi(t)|[\hat{H}, \hat{K}]|\psi(t)\rangle.
 \]
 
 Since \([\hat{H}, \hat{K}] = 0\) by hypothesis:
+
 \[
 \frac{d}{dt}\langle\hat{K}\rangle_t = 0.
 \]
@@ -1440,10 +1539,12 @@ Kempf's way of putting it: "Why does a logarithm appear here? How do these innoc
 </ol>
 
 Axiom (iii) is the deepest: it says that ignorance about independent situations should add up, not multiply or satisfy some other rule. Shannon showed that these three axioms, taken together, force the form
+
 \[
 H(p_1,\ldots,p_n) = -K \sum_i p_i \log p_i
 \]
 for some positive constant \(K\) (which fixes the units — bits if \(\log = \log_2\), nats if \(\log = \ln\)). This is not a choice or a convention; it is a theorem. Any other formula would violate at least one of the axioms. The additivity axiom is particularly revealing: if we compute \(H\) for the product distribution \(\tilde{p}_{ij} = p_i q_j\), then
+
 \[
 H(\{\tilde{p}_{ij}\}) = -\sum_{i,j} p_i q_j \log(p_i q_j) = -\sum_i p_i \log p_i - \sum_j q_j \log q_j = H(\{p_i\}) + H(\{q_j\}),
 \]
@@ -1498,6 +1599,7 @@ whose solution is
 \hat{\rho}_\beta = \frac{e^{-\beta\hat{H}}}{Z(\beta)}, \qquad Z(\beta) = \operatorname{Tr}\bigl(e^{-\beta\hat{H}}\bigr),
 \]
 where \(Z(\beta)\) is the partition function. The Lagrange multiplier \(\beta\) is determined by the constraint \(\langle\hat{H}\rangle = E\) via
+
 \[
 E = \frac{\partial}{\partial\beta}\log Z(\beta).
 \]
@@ -1642,12 +1744,14 @@ With a narrow Heisenberg cut, the system is a small quantum object and its inter
 #### 10.5.2 Expanding the Cut: Decoherence Without New Postulates
 
 The resolution emerges when we widen the Heisenberg cut to include both the system \(S\) and the measuring apparatus (or environment particle) \(E\). The combined system \(SE\) is governed by its own Schrödinger equation with total Hamiltonian
+
 \[
 \hat{H}_\text{total} = \hat{H}_S \otimes \mathbb{1}_E + \mathbb{1}_S \otimes \hat{H}_E + \hat{H}_\text{int}.
 \]
 The interaction Hamiltonian \(\hat{H}_\text{int}\) couples the degrees of freedom of \(S\) and \(E\). The combined system \(SE\) evolves unitarily — no collapse, no non-unitary step. A unitary evolution can never map a pure state to a mixed state: if the initial joint state is \(|\Psi_0\rangle_{SE}\), then \(|\Psi(t)\rangle_{SE} = \hat{U}(t)|\Psi_0\rangle_{SE}\) remains pure for all time.
 
 The mixed character of the system \(S\) arises only when we perform the partial trace over \(E\):
+
 \[
 \hat{\rho}_S(t) = \operatorname{Tr}_E\bigl(|\Psi(t)\rangle\langle\Psi(t)|\bigr).
 \]
@@ -1836,14 +1940,17 @@ An important caveat: the entanglement entropy is a valid measure only for **pure
 <strong>Remark (\(S(\hat{\rho}_A) = S(\hat{\rho}_B)\) for Pure Composite States — Proof via Schmidt Decomposition).</strong> The definition of entanglement entropy uses \(S(\hat{\rho}_A)\), but the formula also writes \(S(\hat{\rho}_B)\) as if the two are equal. This equality is often stated without justification, but it follows neatly from the Schmidt decomposition.
 
 For any pure state \(|\psi_{AB}\rangle \in \mathcal{H}_A \otimes \mathcal{H}_B\), the Schmidt decomposition guarantees the existence of orthonormal sets \(\{|a_i\rangle\} \subset \mathcal{H}_A\) and \(\{|b_i\rangle\} \subset \mathcal{H}_B\), and non-negative real numbers \(\{\lambda_i\}\) with \(\sum_i \lambda_i = 1\), such that
+
 \[
 |\psi_{AB}\rangle = \sum_i \sqrt{\lambda_i}\,|a_i\rangle \otimes |b_i\rangle.
 \]
 Computing the reduced states directly from this decomposition:
+
 \[
 \hat{\rho}_A = \operatorname{Tr}_B(|\psi_{AB}\rangle\langle\psi_{AB}|) = \sum_i \lambda_i\,|a_i\rangle\langle a_i|, \qquad \hat{\rho}_B = \operatorname{Tr}_A(|\psi_{AB}\rangle\langle\psi_{AB}|) = \sum_i \lambda_i\,|b_i\rangle\langle b_i|.
 \]
 Both \(\hat{\rho}_A\) and \(\hat{\rho}_B\) are already diagonal, and their eigenvalue spectra are both equal to \(\{\lambda_i\}\) — the same set of Schmidt coefficients. Since the von Neumann entropy depends only on the eigenvalues,
+
 \[
 S(\hat{\rho}_A) = -\sum_i \lambda_i \log\lambda_i = S(\hat{\rho}_B).
 \]
@@ -1892,6 +1999,7 @@ For two-qubit systems, another widely used measure is the **concurrence**, which
 \tilde{\rho} = (\hat{\sigma}_y \otimes \hat{\sigma}_y)\,\hat{\rho}^*\,(\hat{\sigma}_y \otimes \hat{\sigma}_y),
 \]
 where \(\hat{\rho}^*\) is the complex conjugate in the computational basis. Let \(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \lambda_4\) be the square roots of the eigenvalues of \(\hat{\rho}\tilde{\rho}\). The <strong>concurrence</strong> is
+
 \[
 \mathcal{C}(\hat{\rho}) = \max(0,\, \lambda_1 - \lambda_2 - \lambda_3 - \lambda_4).
 \]
@@ -2101,16 +2209,19 @@ unless \( [\hat{H}_0, \hat{V}] = 0 \). Handwaving descriptions of the interactio
 <strong>Remark (The Green's function / Feynman picture).</strong> The Schrödinger, Heisenberg, and Dirac pictures all share a common strategy: they avoid computing \( \hat{U}(t, t_0) \) directly by bracketing it with either states or operators. A fourth approach — the <strong>Feynman picture</strong> or <strong>Green's function method</strong> — does the opposite: it directly computes \( \hat{U}(t, t_0) \) itself.
 
 In the position representation, the time evolution operator becomes the <strong>propagator</strong> (also called the position-basis Green's function):
+
 \[
 G(x, x', t) \;:=\; \langle x \,|\, \hat{U}(t, t_0) \,|\, x' \rangle.
 \]
 The physical interpretation is immediate: \( G(x, x', t) \) is the <strong>probability amplitude</strong> for a particle located at \( x' \) at time \( t_0 \) to be found at \( x \) at time \( t \). The probability is \( |G(x,x',t)|^2 \). Given \( G \), the time evolution of any initial wavefunction \( \psi_0(x') \) follows by superposition:
+
 \[
 \psi(x, t) = \int G(x, x', t)\, \psi_0(x')\, dx'.
 \]
 Crucially, this is a solution for <em>all</em> initial conditions simultaneously — a single computation of \( G \) unlocks the full dynamics of the system.
 
 What equation does \( G \) satisfy? Since \( \hat{U} \) obeys \( i\hbar\, \partial_t \hat{U} = \hat{H}\hat{U} \), and taking a matrix element between \( \langle x| \) and \( |x'\rangle \), the propagator satisfies the <strong>Schrödinger equation as a Green's function equation</strong>:
+
 \[
 i\hbar\,\frac{\partial}{\partial t}G(x, x', t) = \hat{H}\!\left(x,\, -i\hbar\frac{\partial}{\partial x}\right) G(x, x', t),
 \qquad G(x, x', t_0) = \delta(x - x').
@@ -2384,6 +2495,7 @@ The E2 term is a matrix element of a rank-2 tensor operator, selecting \( \Delta
 <strong>Remark (Why classical EM fields work — coherent states and the semiclassical approximation).</strong> Throughout Chapters 16 and 17 we have written a classical electromagnetic wave \( A(x,t) \) directly into the electron's Hamiltonian. This might seem unjustified: the electromagnetic field is a quantum system in its own right, and when a quantum electron and a quantum field interact, one generically expects entanglement to develop between them — meaning neither subsystem evolves unitarily on its own.
 
 The reason the classical approximation is so effective can be understood through the concept of <strong>coherent states</strong>. A coherent state \( |\alpha\rangle \) of a field mode is an eigenstate of the annihilation (field-amplitude) operator: \( \hat{a}|\alpha\rangle = \alpha|\alpha\rangle \). If the electromagnetic field is in such a state, the interaction Hamiltonian between the electron (system A) and the field (system B) takes the schematic form \( \hat{H}_{\mathrm{int}} = \hat{Q} \otimes \hat{R} \), where \( \hat{R} \) involves the field amplitude operator. Acting on the field being in eigenstate \( |\alpha\rangle \), this gives
+
 \[
 \hat{H}_{\mathrm{int}}\bigl(|\phi\rangle \otimes |\alpha\rangle\bigr) = \alpha\, \hat{Q}|\phi\rangle \otimes |\alpha\rangle,
 \]
@@ -2615,16 +2727,19 @@ In 1948, Richard Feynman introduced a **third formulation**: the **path integral
 To appreciate what is distinctive about quantum mechanics, let us first recall how ordinary (classical) probabilities combine. There are two fundamental rules:
 
 **Rule 1 — Alternatives (mutually exclusive outcomes):** If an event can happen in one of several mutually exclusive ways, probabilities add:
+
 \[
 \mathrm{prob}(A_1 \text{ or } A_2) = \mathrm{prob}(A_1) + \mathrm{prob}(A_2).
 \]
 
 **Rule 2 — Conditionals (sequences of events):** If event \( B \) can only happen after event \( A \), probabilities multiply:
+
 \[
 \mathrm{prob}(A \text{ and then } B) = \mathrm{prob}(A)\cdot \mathrm{prob}(B \,|\, A).
 \]
 
 Consider a concrete illustration. A neon atom is emitted at position \( x_e \) at time \( t_0 \), inside a box of helium gas. The helium atoms constantly collide with the neon atom, jostling it along a **random walk**. Crucially, each helium collision constitutes a measurement of the neon atom's approximate position — the environment continuously probes the neon atom's location. At an intermediate time \( t' \) (with \( t_0 < t' < t \)), the neon is at some position \( x' \). At time \( t \), a detector at \( x_d \) checks whether the neon has arrived. Applying the two classical rules, we sum over all intermediate positions:
+
 \[
 \mathrm{prob}\bigl[(x_e, t_0) \to (x_d, t)\bigr] = \int \mathrm{prob}\bigl[(x_e,t_0)\to(x', t')\bigr]\, \mathrm{prob}\bigl[(x',t') \to (x_d, t)\bigr]\, d^3x'.
 \]
@@ -2637,11 +2752,13 @@ Conditionals multiply and alternatives integrate. This is the **Chapman–Kolmog
 Now remove the helium gas. The neon atom propagates freely, unobserved and undisturbed. In quantum mechanics, the object that encodes the dynamics is no longer a probability but a **probability amplitude**: a complex number whose squared modulus gives the probability.
 
 Recall from §14.4 that the propagator \( G(x_d, x_e, t, t_0) = \langle x_d |\hat{U}(t,t_0)|x_e\rangle \) is the probability amplitude for the particle to travel from \( x_e \) at \( t_0 \) to \( x_d \) at \( t \):
+
 \[
 \mathrm{prob}\bigl[(x_e, t_0) \to (x_d, t)\bigr] = \bigl|G(x_d, x_e, t, t_0)\bigr|^2.
 \]
 
 What rules do probability amplitudes obey? Using the composition law \( \hat{U}(t,t_0) = \hat{U}(t,t')\hat{U}(t',t_0) \) and inserting a resolution of the identity at the intermediate time \( t' \):
+
 \[
 G(x_d, x_e, t, t_0) = \int G(x_d, x', t, t')\, G(x', x_e, t', t_0)\, d^3x'.
 \]
@@ -2655,6 +2772,7 @@ G(x_d, x_e, t, t_0) = \int G(x_d, x', t, t')\, G(x', x_e, t', t_0)\, d^3x'.
 </div>
 
 The crucial difference from the classical case is this: since probability amplitudes are complex numbers, adding them before squaring is not the same as squaring and adding:
+
 \[
 |c_1 + c_2|^2 \;\neq\; |c_1|^2 + |c_2|^2 \quad \text{in general.}
 \]
@@ -2669,6 +2787,7 @@ The cross term \( 2\,\mathrm{Re}(c_1 \bar{c}_2) \) is the **interference** betwe
 ### §20.4 — The Path Integral
 
 Feynman's key insight is to insert not one but \( N-1 \) intermediate time slices \( t_0 < t_1 < t_2 < \cdots < t_{N-1} < t \) and apply the amplitude composition rule at each:
+
 \[
 G(x_f, x_i, t) = \int \cdots \int G(x_f, x_{N-1}, \epsilon) \cdots G(x_1, x_i, \epsilon)\, dx_1\, dx_2 \cdots dx_{N-1},
 \]
@@ -2679,12 +2798,14 @@ where \( \epsilon = (t - t_0)/N \) is the duration of each time step. Each strin
 \]
 
 where \( \mathcal{D}[x(\tau)] \) denotes the measure on path space (the limit of \( dx_1\,dx_2\cdots dx_{N-1} \) with appropriate normalization factors), and
+
 \[
 S[x(\tau)] = \int_{t_0}^t \mathcal{L}\!\left(x(\tau), \dot{x}(\tau)\right) d\tau
 \]
 is the **classical action** of the path — the time integral of the Lagrangian \( \mathcal{L} = T - V \). Each path is weighted by the pure phase \( e^{iS/\hbar} \): a complex number of unit modulus rotating at a rate determined by the classical action of that path.
 
 **Derivation sketch for a free particle.** For a single time step of duration \( \epsilon \to 0 \), the Hamiltonian is \( \hat{H} = \hat{p}^2/2m \) and the propagator is
+
 \[
 \langle x_{k+1}|\,e^{-i\epsilon\hat{H}/\hbar}\,|x_k\rangle = \sqrt{\frac{m}{2\pi i\hbar\epsilon}}\exp\!\left(\frac{im(x_{k+1}-x_k)^2}{2\hbar\epsilon}\right).
 \]
@@ -2701,6 +2822,7 @@ The exponent is \( (i/\hbar)\cdot \epsilon\cdot \tfrac{1}{2}m(\Delta x/\epsilon)
 The path integral \( G = \int \mathcal{D}[x]\, e^{iS[x]/\hbar} \) sums contributions from all paths connecting the endpoints — including wildly oscillating ones. Why, then, does a macroscopic particle follow the unique classical trajectory?
 
 The answer lies in the **method of stationary phase** (the real-variable analogue is Laplace's method). For a rapidly oscillating integrand \( e^{i f(x)/\hbar} \), the contributions from most points cancel by destructive interference — the phase is different for neighboring paths and they tend to cancel. The <em>only</em> paths that escape cancellation are those near a **stationary point** of the phase, i.e., near a path where
+
 \[
 \frac{\delta S}{\delta x(\tau)} = 0.
 \]
@@ -2721,6 +2843,7 @@ The fluctuations around the classical path give the leading quantum corrections.
 ### §20.6 — The Path Integral in Quantum Field Theory
 
 The path integral formulation is not merely an elegant alternative for quantum mechanics. It is the **natural language of quantum field theory (QFT)**. In QFT, the object analogous to the particle path \( x(\tau) \) is the field configuration \( \phi(x,t) \): the integration variable becomes a function of spacetime. The generating functional of QFT is
+
 \[
 Z[J] = \int \mathcal{D}[\phi]\; \exp\!\left(\frac{i}{\hbar}\int d^4x\;\bigl[\mathcal{L}(\phi, \partial_\mu\phi) + J(x)\phi(x)\bigr]\right),
 \]

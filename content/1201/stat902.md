@@ -107,6 +107,7 @@ ranging over all \(n \ge 1\) and all choices \(t_1, \ldots, t_n \in T\).
 Two processes are said to have the **same distribution** if all of their finite-dimensional distributions agree. This is the weakest of the equivalence relations we will consider. Kolmogorov's extension theorem guarantees that any consistent family of finite-dimensional distributions can be realized as the law of some stochastic process on a suitable probability space, but it says nothing about path regularity.
 
 It is often useful to impose moment conditions uniformly across the index set. We say that a process \(\{X_t\}_{t \in T}\) satisfies a **uniform \(L^p\) condition** (for \(p \ge 1\)) if
+
 \[
 \sup_{t \in T} \mathbb{E}\bigl[|X_t|^p\bigr] < \infty.
 \]

@@ -35,6 +35,7 @@ The repeated index \(\mu\) is a *dummy index* and may be freely renamed without 
 **The Levi-Civita symbol.** The fully antisymmetric symbol \(\varepsilon_{\mu_1 \cdots \mu_n}\) takes value \(+1\) if the indices are an even permutation of \(1,2,\ldots,n\), value \(-1\) for an odd permutation, and \(0\) if any two indices repeat. It is not a tensor (it does not transform with \(n\) copies of the Jacobian), but \(\sqrt{|\det g|}\,\varepsilon_{\mu_1\cdots\mu_n}\) is a tensor density — important when we reach integration on manifolds.
 
 A useful determinant identity:
+
 \[
 \det M = \varepsilon^{i_1 \cdots i_n} M_{1 i_1} M_{2 i_2} \cdots M_{n i_n}
 \]
@@ -52,6 +53,7 @@ A useful determinant identity:
 **A common source of errors.** When working with the Einstein convention, beginners often write expressions like \(A^\mu B^\mu\) (both up) thinking this is a dot product. It is not a valid Einstein-summed expression, and more importantly, it is not invariant under coordinate changes. The invariant contraction is always one up, one down: \(A^\mu B_\mu\).
 
 **The Levi-Civita tensor vs. symbol.** The distinction matters in curved spacetime. The *symbol* \(\varepsilon_{\mu_1\cdots\mu_n}\) is defined to have the same numerical values \(\pm 1, 0\) in every coordinate system — it is *not* a tensor. The *tensor* (also called the volume form) is:
+
 \[
 \epsilon_{\mu_1\cdots\mu_n} = \sqrt{|\det g|}\,\varepsilon_{\mu_1\cdots\mu_n}
 \]
@@ -94,6 +96,7 @@ If \(\widetilde{\Lambda}^\mu{}_\nu\) is the Jacobian of the coordinate change \(
 where \(\Lambda = (\widetilde\Lambda^{-1})^\top\). The two matrices are inverses of each other, guaranteeing that the contraction \(\omega_\mu v^\mu\) is coordinate-independent — it is a *scalar*.
 
 **Basis vectors and dual basis.** Given a basis \(\{e_a\}\) for the tangent space, there is a unique *dual basis* \(\{e^a\}\) for the cotangent space satisfying:
+
 \[
 \langle e^a, e_b \rangle = \delta^a{}_b
 \]
@@ -112,6 +115,7 @@ The basis vectors transform with \(\Lambda\); the dual basis transforms with \(\
 **Example: Spherical coordinates.** In \(\mathbb{R}^3\) with coordinates \((r, \theta, \phi)\), the metric is \(g_{ij} = \operatorname{diag}(1, r^2, r^2\sin^2\theta)\). A vector with contravariant components \(v^r = 1, v^\theta = v^\phi = 0\) has covariant components \(v_r = g_{rr}v^r = 1\), \(v_\theta = g_{\theta\theta}v^\theta = 0\), \(v_\phi = 0\). But a vector with \(v^\theta = 1\) has covariant component \(v_\theta = r^2\). This is why the gradient formula in spherical coordinates looks different from Cartesian — the covariant components of the gradient (which are just partial derivatives, \(\partial_\mu f\)) need to be converted to contravariant components using the inverse metric before they represent the "direction of steepest ascent" in the ordinary sense.
 
 **The metric as the bridge.** The metric tensor \(g_{\mu\nu}\) provides the canonical isomorphism between \(T_pM\) and \(T^*_pM\):
+
 \[
 \flat: T_pM \to T^*_pM, \quad v^\mu \mapsto v_\mu = g_{\mu\nu}v^\nu \quad\text{(lowering)}
 \]
@@ -203,6 +207,7 @@ is invariant under all Lorentz transformations. Its sign classifies the separati
 **Length contraction.** A rod at rest in \(S'\) with endpoints at \(x'_1 = 0\) and \(x'_2 = L'\). Measured simultaneously in \(S\): \(\Delta x = L'/\gamma\). Moving rods are shorter.
 
 **Invariant formulation.** All of SR can be expressed via the Minkowski metric. Two events with coordinate difference \(dx^\mu\):
+
 \[
 ds^2 = \eta_{\mu\nu}\, dx^\mu\, dx^\nu = -c^2\, dt^2 + dx^2 + dy^2 + dz^2
 \]
@@ -253,6 +258,7 @@ u^\mu = \frac{dx^\mu}{d\tau} = \left(\gamma c,\; \gamma \vec{v}\right)
 \]
 
 Its norm is fixed:
+
 \[
 u^\mu u_\mu = \eta_{\mu\nu} u^\mu u^\nu = -c^2
 \]
@@ -266,6 +272,7 @@ This is a constraint, not a dynamical equation. It says that all massive particl
 **Four-acceleration.** \(a^\mu = du^\mu/d\tau\). Differentiating \(u^\mu u_\mu = -c^2\): \(u_\mu a^\mu = 0\) — four-acceleration is always orthogonal to four-velocity. Its magnitude is the proper acceleration: \(a^\mu a_\mu = \alpha^2 \geq 0\). For an inertial observer \(\alpha = 0\); for an accelerating observer \(\alpha \neq 0\).
 
 **Rapidity revisited.** A boost with speed \(v\) can be written as a hyperbolic rotation with rapidity \(\xi = \operatorname{arctanh}(v/c)\). Then \(\gamma = \cosh\xi\) and \(\gamma v/c = \sinh\xi\). The four-velocity of a particle moving at speed \(v\) in the \(x\)-direction is:
+
 \[
 u^\mu = c(\cosh\xi,\, \sinh\xi,\, 0,\, 0)
 \]
@@ -285,11 +292,13 @@ The utility of rapidity is that rapidities add for collinear boosts: an observer
 This is the *east coast* convention (also called the "mostly plus" convention). The professor explicitly warns: "Some books use the opposite sign — west coast convention — and you will get all your results with the wrong sign if you mix them. Choose one and be consistent."
 
 The metric raises and lowers indices:
+
 \[
 v_\mu = \eta_{\mu\nu} v^\nu, \qquad v^\mu = \eta^{\mu\nu} v_\nu
 \]
 
 **Lorentz group.** The Lorentz group \(O(1,3)\) consists of all linear transformations \(\Lambda\) preserving \(\eta\):
+
 \[
 \Lambda^\rho{}_\mu\, \eta_{\rho\sigma}\, \Lambda^\sigma{}_\nu = \eta_{\mu\nu}
 \]
@@ -305,16 +314,19 @@ It has four connected components. The *proper orthochronous* Lorentz group \(SO^
 Rapidities add: \(\xi_{13} = \xi_{12} + \xi_{23}\) for collinear boosts. The professor demonstrates in Mathematica (Lecture 9): computing the product of two non-collinear boosts reveals a *rotation* in the result — this is **Thomas precession**, a purely relativistic kinematic effect with real consequences for electron spin in atoms.
 
 **Poincaré group.** The Poincaré group extends the Lorentz group by including spacetime translations. Its generators are:
+
 \[
 \hat{P}_\mu = -i\partial_\mu \quad\text{(four translations)}, \qquad \hat{M}_{\rho\sigma} \quad\text{(six Lorentz generators)}
 \]
 
 The 10 generators span the Lie algebra with commutation relations:
+
 \[
 [\hat{P}_\mu, \hat{P}_\nu] = 0, \qquad [\hat{M}_{\rho\sigma}, \hat{P}_\mu] = i(\eta_{\sigma\mu}\hat{P}_\rho - \eta_{\rho\mu}\hat{P}_\sigma)
 \]
 
 **Thomas precession.** When two non-collinear Lorentz boosts are composed, the result is a Lorentz boost combined with a spatial rotation — the *Thomas-Wigner rotation* or Thomas precession. In Lecture 9, the professor demonstrates this numerically in Mathematica: take a boost in the \(x\)-direction, then a boost in the \(y\)-direction. The composition is not a pure boost; there is an additional rotation of the spatial axes. The Thomas precession angle for a particle moving in a circular orbit at speed \(v\) with period \(T\) is:
+
 \[
 \Omega_\text{Thomas} = -\gamma^2 \frac{\vec a \times \vec v}{c^2(\gamma+1)} \approx -\frac{\vec a \times \vec v}{2c^2} \quad (\text{for } v \ll c)
 \]
@@ -400,6 +412,7 @@ The acceleration horizon in Rindler spacetime is a preview of the event horizon 
 </div>
 
 **Uniformly accelerated observer: worldline in detail.** An observer starting at \(x_0 = c^2/a\) at \(t=0\) with proper acceleration \(a\):
+
 \[
 x(\tau) = \frac{c^2}{a}\cosh\!\left(\frac{a\tau}{c}\right), \quad t(\tau) = \frac{c}{a}\sinh\!\left(\frac{a\tau}{c}\right)
 \]
@@ -407,6 +420,7 @@ x(\tau) = \frac{c^2}{a}\cosh\!\left(\frac{a\tau}{c}\right), \quad t(\tau) = \fra
 The worldline satisfies \(x^2 - c^2t^2 = c^4/a^2\) — a hyperbola in spacetime. The proper time and coordinate time are related by \(t = (c/a)\sinh(a\tau/c)\); for small \(v/c\), \(\tau \approx t\) as expected.
 
 **Gravitational time dilation from SR.** The Rindler metric teaches us that clocks at different Rindler positions \(\xi\) tick at different rates. Two clocks separated by \(\Delta\xi\) at positions \(\xi_1\) and \(\xi_2\) have a proper time ratio:
+
 \[
 \frac{d\tau_2}{d\tau_1} = \frac{1 + a\xi_2/c^2}{1 + a\xi_1/c^2}
 \]
@@ -478,6 +492,7 @@ The charts provide coordinates: if \(p \in U_\alpha\) then \(\phi_\alpha(p) = (x
 **Curves on a manifold.** A smooth curve is a smooth map \(\gamma: \mathbb{R} \to M\).
 
 **Vectors as derivations.** A tangent vector at \(p\) is a linear map from smooth functions to reals satisfying the Leibniz rule:
+
 \[
 v: C^\infty(M) \to \mathbb{R}, \qquad v(fg) = f(p)\,v(g) + g(p)\,v(f)
 \]
@@ -485,6 +500,7 @@ v: C^\infty(M) \to \mathbb{R}, \qquad v(fg) = f(p)\,v(g) + g(p)\,v(f)
 Every tangent vector is the tangent to some curve through \(p\): \(v[f] = \frac{d}{dt}(f\circ\gamma)\big|_{t=0}\).
 
 **Coordinate basis.** In a chart, the partial derivatives \(\partial_\mu := \partial/\partial x^\mu\) form a basis for the tangent space \(T_pM\):
+
 \[
 v = v^\mu \partial_\mu, \qquad v^\mu = v[x^\mu]
 \]
@@ -492,6 +508,7 @@ v = v^\mu \partial_\mu, \qquad v^\mu = v[x^\mu]
 The tangent space \(T_pM\) is an \(n\)-dimensional real vector space.
 
 **Lie bracket.** The commutator of two vector fields:
+
 \[
 [v,w][f] = v[w[f]] - w[v[f]], \qquad [v,w]^\mu = v^\nu \partial_\nu w^\mu - w^\nu \partial_\nu v^\mu
 \]
@@ -499,11 +516,13 @@ The tangent space \(T_pM\) is an \(n\)-dimensional real vector space.
 **Coordinate vs. non-coordinate bases.** A basis \(\{e_a\}\) is a coordinate basis if and only if \([e_a, e_b] = 0\) for all pairs. The orthonormal polar basis \(\{\hat{e}_r, \hat{e}_\theta\}\) is not a coordinate basis — this is why gradient, divergence, and Laplacian formulas look complicated in polar coordinates.
 
 **Explicit example (from Lecture 15).** The professor works through the following example. On \(\mathbb{R}^2\), consider the two vector fields:
+
 \[
 e_1 = y\partial_x + \partial_y, \qquad e_2 = \partial_y
 \]
 
 These span the tangent space at every point (for \(y \neq 0\)) and form a valid basis. But:
+
 \[
 [e_1, e_2] = [y\partial_x + \partial_y, \partial_y] = -\partial_x \neq 0
 \]
@@ -527,6 +546,7 @@ In GR, equations involving tensors hold *as identities of tensor fields* — the
 
 <div class="definition">
 A <strong>one-form</strong> (covector) at \(p\) is a real-valued linear functional on \(T_pM\):
+
 \[
 \omega: T_pM \to \mathbb{R}
 \]
@@ -538,11 +558,13 @@ The professor is emphatic: "One-forms and vectors live in different spaces. You 
 </div>
 
 **Dual basis.** Given coordinates \(x^\mu\), the dual basis \(\{dx^\mu\}\) satisfies:
+
 \[
 \langle dx^\mu, \partial_\nu \rangle = \delta^\mu{}_\nu
 \]
 
 **Differential of a function.** For any smooth \(f: M \to \mathbb{R}\), the differential \(df\) is the one-form:
+
 \[
 \langle df, v \rangle = v[f], \qquad (df)_\mu = \partial_\mu f
 \]
@@ -587,6 +609,7 @@ Now consider \(f = r^2\). Then \(df = 2r\,dr\). The one-form components are \((d
 
 <div class="definition">
 A <strong>tensor of type \((r,s)\)</strong> at \(p\) is a multilinear map:
+
 \[
 T: \underbrace{T^*_pM \times \cdots}_{r} \times \underbrace{T_pM \times \cdots}_{s} \to \mathbb{R}
 \]
@@ -618,12 +641,14 @@ Scalar fields are type \((0,0)\), vector fields type \((1,0)\), one-form fields 
 **n-forms.** An \(n\)-form is a fully antisymmetric covariant tensor of type \((0,n)\).
 
 **Wedge product.** \(dx^\mu \wedge dx^\nu = dx^\mu \otimes dx^\nu - dx^\nu \otimes dx^\mu\). The wedge product of a \(k\)-form and a \(p\)-form is a \((k+p)\)-form, fully antisymmetrized. The wedge product is graded-commutative:
+
 \[
 \alpha \wedge \beta = (-1)^{kp}\,\beta \wedge \alpha
 \]
 for a \(k\)-form \(\alpha\) and \(p\)-form \(\beta\). In particular, \(dx^\mu \wedge dx^\mu = 0\) (no repeated forms). This is why antisymmetry produces the Jacobian determinant in multivariable integration.
 
 **Exterior derivative.** The operator \(d\) maps \(n\)-forms to \((n+1)\)-forms:
+
 \[
 (d\sigma)_{\mu_0\cdots\mu_n} = (n+1)\,\partial_{[\mu_0}\sigma_{\mu_1\cdots\mu_n]}, \qquad d^2 = 0
 \]
@@ -648,6 +673,7 @@ where \(\star\) is the Hodge dual. The conservation of charge follows automatica
 **de Rham cohomology.** The \(k\)-th de Rham cohomology group is \(H^k_{dR}(M) = \ker(d:\ \Omega^k \to \Omega^{k+1}) / \text{im}(d:\ \Omega^{k-1} \to \Omega^k)\), i.e., closed forms modulo exact forms. For \(S^2\): \(H^0 = \mathbb{R}\), \(H^1 = 0\), \(H^2 = \mathbb{R}\). The non-trivial \(H^2\) captures the fact that the area form on \(S^2\) is closed (no 3-forms on a 2-manifold) but not exact (there is no 1-form whose exterior derivative is the area form — which would require \(S^2\) to have a "hole"). The de Rham theorem connects this algebra to the topology of the manifold via integration.
 
 **Integration.** The integral of a one-form \(\omega\) along a curve \(\gamma(s)\):
+
 \[
 \int_\gamma \omega = \int_{s_1}^{s_2} \omega_\mu \frac{dx^\mu}{ds}\, ds \quad\text{(parameter-independent)}
 \]
@@ -655,6 +681,7 @@ where \(\star\) is the Hodge dual. The conservation of charge follows automatica
 If \(\omega = df\): integral equals \(f(\gamma(s_2)) - f(\gamma(s_1))\) — Fundamental Theorem of Calculus on manifolds.
 
 The *volume form* on an oriented \(n\)-manifold with metric \(g\) is the canonical \(n\)-form:
+
 \[
 \operatorname{vol} = \sqrt{|\det g|}\; dx^1 \wedge dx^2 \wedge \cdots \wedge dx^n
 \]
@@ -666,6 +693,7 @@ In thermodynamics: internal energy \(U\) is a state function, so \(dU\) is exact
 </div>
 
 The change-of-variables formula in multivariable calculus (with the Jacobian determinant) is a direct consequence of the antisymmetry of the wedge product: \(dx \wedge dy = r\, dr \wedge d\theta\) in polar coordinates. Stokes' theorem in its most general form states:
+
 \[
 \int_M d\omega = \int_{\partial M} \omega
 \]
@@ -704,6 +732,7 @@ The professor's key slogan: "Covariant objects (one-forms, tensors with lower in
 </div>
 
 **Local flows of vector fields.** Every smooth vector field \(v\) generates a local flow \(\phi_t: M \to M\), defined by the ODE:
+
 \[
 \frac{d}{dt}\phi_t(p) = v(\phi_t(p)), \quad \phi_0(p) = p
 \]
@@ -716,6 +745,7 @@ This is just integrating the vector field as a system of differential equations.
 \]
 
 In full index notation for a general \((1,1)\) tensor:
+
 \[
 (\mathcal{L}_v T)^\mu{}_\nu = v^\rho \partial_\rho T^\mu{}_\nu - T^\rho{}_\nu \partial_\rho v^\mu + T^\mu{}_\rho \partial_\nu v^\rho
 \]
@@ -743,6 +773,7 @@ An <strong>affine connection</strong> \(\nabla\) assigns to each pair \((X, Y)\)
 </div>
 
 **Christoffel symbols.** In a coordinate basis: \(\nabla_\mu \partial_\nu = \Gamma^\rho{}_{\mu\nu}\,\partial_\rho\). The covariant derivative of a vector:
+
 \[
 (\nabla_\mu V)^\nu = \partial_\mu V^\nu + \Gamma^\nu{}_{\mu\rho}\, V^\rho
 \]
@@ -768,6 +799,7 @@ These can be verified by the formula \(\Gamma^\rho{}_{\mu\nu} = \frac{1}{2}g^{\r
 ### Chapter 15. Parallel Transport and Geodesics
 
 **Parallel transport.** A vector \(V\) is parallel transported along a curve \(\gamma(\lambda)\) if:
+
 \[
 \nabla_{\dot\gamma} V = 0 \implies \frac{dV^\mu}{d\lambda} + \Gamma^\mu{}_{\nu\rho}\,\dot\gamma^\nu\, V^\rho = 0
 \]
@@ -776,6 +808,7 @@ This is a system of ODEs: given \(V\) at one point, it propagates uniquely along
 
 <div class="definition">
 A <strong>geodesic</strong> is a curve whose tangent vector is parallel-transported along itself:
+
 \[
 \nabla_{\dot\gamma}\dot\gamma = 0 \implies \ddot x^\mu + \Gamma^\mu{}_{\nu\rho}\,\dot x^\nu \dot x^\rho = 0
 \]
@@ -786,6 +819,7 @@ Geodesics are the "straightest possible curves." In Riemannian geometry they als
 The professor illustrates with walking on a sphere keeping the nose forward without rotating the head: return to the starting point and the nose points in a different direction. This holonomy is governed by the Riemann tensor.
 
 **Holonomy and curvature.** The angle by which a vector rotates when parallel-transported around a closed loop is called the *holonomy*. For a small loop enclosing area element \(\delta\Sigma^{\mu\nu}\), the rotation of a vector \(V^\rho\) is:
+
 \[
 \delta V^\rho = R^\rho{}_{\sigma\mu\nu}\, V^\sigma\, \delta\Sigma^{\mu\nu}
 \]
@@ -820,11 +854,13 @@ This is the definition of curvature in terms of holonomy — entirely equivalent
 ### Chapter 16. Curvature: The Riemann Tensor
 
 **Riemann tensor.** Measures the failure of covariant derivatives to commute:
+
 \[
 [\nabla_a, \nabla_b]\,\omega_c = R^d{}_{abc}\,\omega_d
 \]
 
 In components:
+
 \[
 R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}
 \]
@@ -840,6 +876,7 @@ For \(n=4\): 20 algebraically independent components. The last identity is the d
 **Ricci tensor:** \(R_{ac} = R^b{}_{abc}\) (symmetric). **Ricci scalar:** \(R = g^{ac}R_{ac}\).
 
 **Weyl tensor** \(C_{abcd}\): the traceless part of the Riemann tensor:
+
 \[
 R_{abcd} = C_{abcd} + \frac{1}{n-2}\left(g_{ac}R_{bd} - g_{bc}R_{ad} - g_{ad}R_{bc} + g_{bd}R_{ac}\right) - \frac{R}{(n-1)(n-2)}\left(g_{ac}g_{bd} - g_{ad}g_{bc}\right)
 \]
@@ -847,6 +884,7 @@ R_{abcd} = C_{abcd} + \frac{1}{n-2}\left(g_{ac}R_{bd} - g_{bc}R_{ad} - g_{ad}R_{
 The Weyl tensor encodes tidal deformation of shapes without volume change. In vacuum (where \(R_{ab} = 0\)), the Weyl tensor is the *only* nonzero part of the curvature — it carries gravitational wave content and tidal forces. The Schwarzschild metric has zero Ricci tensor but nonzero Weyl tensor; the gravitational field of a star in vacuum is pure Weyl curvature.
 
 **Einstein tensor:**
+
 \[
 G_{ab} = R_{ab} - \frac{1}{2}Rg_{ab}, \qquad \nabla^a G_{ab} = 0 \;\text{(contracted Bianchi identity)}
 \]
@@ -854,6 +892,7 @@ G_{ab} = R_{ab} - \frac{1}{2}Rg_{ab}, \qquad \nabla^a G_{ab} = 0 \;\text{(contra
 The contracted Bianchi identity \(\nabla^a G_{ab} = 0\) is an identity — it holds for any metric, without needing the Einstein equations. When the Einstein equations are imposed (\(G_{ab} = 8\pi G_N T_{ab}\)), it immediately implies \(\nabla^a T_{ab} = 0\): the stress-energy tensor is automatically conserved. This is not a separate assumption (Postulate 2) but rather a consequence of the geometric identity plus the Einstein equations.
 
 **Geodesic deviation equation.** For two neighbouring geodesics with separation vector \(\xi^\mu\):
+
 \[
 \frac{D^2\xi^\mu}{d\tau^2} = R^\mu{}_{\nu\rho\sigma}\,u^\nu\, u^\rho\, \xi^\sigma
 \]
@@ -904,6 +943,7 @@ Take the combination (second + third − first), use torsion-freeness \(\Gamma^\
 **Geodesics as proper-length extrema.** For a Riemannian metric (positive definite), geodesics *minimise* arc length between nearby points. For a Lorentzian metric, timelike geodesics *maximise* proper time — the straightest worldline has the most elapsed proper time. This is why the twin who stays home (straight worldline) ages more than the twin who travels (bent worldline). For spacelike geodesics, the arc length is a saddle point in general.
 
 **Proper distance and proper time.** Along a curve \(\gamma\) with tangent \(\dot\gamma\):
+
 \[
 L[\gamma] = \int \sqrt{|g_{\mu\nu}\dot x^\mu \dot x^\nu|}\, d\lambda
 \]
@@ -915,6 +955,7 @@ This is reparametrisation-invariant. The convention is to use the arc length par
 ### Chapter 18. Isometries and Killing Vectors
 
 **Isometry.** A diffeomorphism \(\phi: M \to M\) is an isometry if \(\phi^* g = g\). The one-parameter group generated by vector field \(k\) is a group of isometries if and only if \(k\) satisfies the **Killing equation**:
+
 \[
 \nabla_a k_b + \nabla_b k_a = 0
 \]
@@ -922,11 +963,13 @@ This is reparametrisation-invariant. The convention is to use the arc length par
 For torsion-free connections, this is equivalent to \(\mathcal{L}_k g = 0\).
 
 **Conserved quantities along geodesics.** If \(k^a\) is a Killing vector and \(v^a\) is tangent to a geodesic, then:
+
 \[
 Q = k_a v^a = \text{constant along the geodesic}
 \]
 
 *Proof.* Along the geodesic \(u^\mu = \dot x^\mu\):
+
 \[
 \frac{d}{d\tau}(k_\mu u^\mu) = u^\nu \nabla_\nu(k_\mu u^\mu) = u^\nu(\nabla_\nu k_\mu)u^\mu + k_\mu u^\nu \nabla_\nu u^\mu = u^\nu u^\mu \nabla_{(\nu}k_{\mu)} + 0
 \]
@@ -969,6 +1012,7 @@ The WEP has been tested to one part in \(10^{13}\) by Eötvös-type experiments.
 **Tidal forces and the need for local frames.** There is a subtle but essential qualification to the equivalence principle: it can only hold *locally*. Consider a large enough falling elevator — particles near the floor and near the ceiling experience slightly different gravitational accelerations, since gravity weakens with distance. These *tidal forces*, caused by the non-uniformity of the field, are not removable by any choice of freely-falling frame. Two nearby freely-falling particles that begin at rest relative to each other will slowly drift apart (or together) as they fall, revealing the curvature lurking beneath the locally flat appearance of spacetime. Tidal forces measure the second derivative of the gravitational potential, which is precisely the Riemann curvature tensor. This is why the equivalence principle must be stated carefully: *in a sufficiently small, local* freely-falling frame, spacetime looks flat to first order. The word "local" carries the entire weight.
 
 **The Pound-Rebka experiment.** The equivalence principle carries a sharp quantitative prediction — that clocks at different heights in a gravitational field tick at different rates — which can be derived without any differential geometry. The argument runs as follows. Consider observers \(A\) (at height \(h\)) and \(B\) (at height \(0\)) inside an accelerating rocket with acceleration \(g\). Let \(A\) emit a light signal of wavelength \(\lambda_A\). By the time the signal reaches \(B\), the rocket has accelerated, Doppler-shifting the signal. In the non-relativistic regime, the received wavelength is:
+
 \[
 \lambda_B = \lambda_A\!\left(1 - \frac{gh}{c^2}\right)
 \]
@@ -977,6 +1021,7 @@ The signal is *blue-shifted*: the lower observer receives more cycles per second
 **Early attempts at a relativistic theory of gravity.** Before arriving at general relativity in November 1915, Einstein had to navigate a thicket of plausible-but-wrong theories. The history is instructive because it shows that the tensor field equations were not logically inevitable — and that the key discriminating experiment was the bending of light.
 
 In 1907, Nordstrom proposed the simplest scalar theory: replace the Newtonian Poisson equation with the covariant version
+
 \[
 \Box\,\phi = 4\pi G\, T^\alpha{}_\alpha
 \]
@@ -985,6 +1030,7 @@ where \(\Box = \eta^{\mu\nu}\partial_\mu\partial_\nu\) is the Minkowski d'Alembe
 The lesson is clean: the source of gravity cannot be merely the trace of the stress-energy tensor. The full symmetric tensor \(T_{\mu\nu}\) must source the geometry, which is why the Einstein equations couple the Ricci tensor — not a scalar — to the complete stress-energy content of matter.
 
 **The static weak-field metric.** The equivalence principle arguments also constrain the form of the metric in a weak, static gravitational field with Newtonian potential \(\phi\). Matching the Pound-Rebka time dilation to the \(g_{00}\) component, and requiring that the geodesic equation reduce to Newton's law \(\ddot{\vec{x}} = -\nabla\phi\), forces:
+
 \[
 d\tau^2 = \left(1 + \frac{2\phi}{c^2}\right)c^2\,dt^2 - \left(1 - \frac{2\phi}{c^2}\right)\!\left(dx^2 + dy^2 + dz^2\right)
 \]
@@ -1019,6 +1065,7 @@ The left side is purely geometric; the right side encodes matter and energy. Mat
 ### Chapter 20. The Stress-Energy Tensor and Energy Conditions
 
 **Perfect fluid stress-energy tensor:**
+
 \[
 T_{ab} = (\rho + p)\,u_a u_b + p\,g_{ab}
 \]
@@ -1083,10 +1130,12 @@ where \(d\Omega^2 = d\theta^2 + \sin^2\theta\,d\phi^2\). The metric is asymptoti
 **Derivation.** It is worth understanding where this metric comes from — Schwarzschild obtained it within weeks of Einstein's November 1915 paper, while serving in the German army on the Eastern Front, before dying of illness the following year. The derivation is a beautiful illustration of how symmetry alone constrains a solution.
 
 We seek the most general metric consistent with spherical symmetry and time-translational invariance (static field). Spherical symmetry forces the angular part to be \(r^2 d\Omega^2\). Staticity eliminates any \(dt\,dr\) cross terms (by time-reversal invariance). The most general ansatz is therefore:
+
 \[
 ds^2 = -e^{2\alpha(r)}\,dt^2 + e^{2\beta(r)}\,dr^2 + r^2\,d\Omega^2
 \]
 with two undetermined functions \(\alpha(r)\) and \(\beta(r)\). Outside the source there is no matter, so the vacuum Einstein equations \(R_{\mu\nu} = 0\) apply. Computing the Ricci tensor from the Christoffel symbols of this ansatz, the \(tt\) and \(rr\) components give:
+
 \[
 R_{tt} = 0 \implies e^{2(\alpha-\beta)}\!\left(\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right) = 0
 \]
@@ -1094,16 +1143,19 @@ R_{tt} = 0 \implies e^{2(\alpha-\beta)}\!\left(\alpha'' + (\alpha')^2 - \alpha'\
 R_{rr} = 0 \implies -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r} = 0
 \]
 Adding the two equations (after multiplying the first through by \(e^{2(\beta-\alpha)}\)) the second-derivative terms cancel, leaving simply \(\alpha' + \beta' = 0\). Integrating and imposing the Minkowski boundary condition at infinity:
+
 \[
 \alpha(r) = -\beta(r)
 \]
 With this relation, the \(\theta\theta\) component \(R_{\theta\theta} = 0\) reduces to:
+
 \[
 \partial_r\!\left(r\, e^{2\alpha}\right) = 1
 \]
 Integrating: \(r\,e^{2\alpha} = r - R_s\) for an integration constant \(R_s\), so \(e^{2\alpha} = 1 - R_s/r\), and the metric follows. The constant is fixed by the weak-field limit: \(g_{tt} \approx -(1 + 2\phi/c^2)\) with \(\phi = -G_N M/r\) gives \(R_s = 2G_N M/c^2\). Birkhoff's theorem guarantees this is the *unique* vacuum spherically symmetric solution — even for a pulsating source.
 
 **Newtonian limit.** For \(R_s/r \ll 1\), approximate \((1-R_s/r)^{-1} \approx 1 + R_s/r\) and match with the Newtonian potential \(\phi = -G_N M/r\):
+
 \[
 R_s = \frac{2G_N M}{c^2}
 \]
@@ -1117,6 +1169,7 @@ E = -\left(1 - \frac{R_s}{r}\right)\dot t \quad\text{(energy)}, \qquad L = r^2\d
 \]
 
 The normalization constraint \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -1\) gives an effective potential equation:
+
 \[
 \frac{1}{2}\dot r^2 + V(r) = \frac{1}{2}E^2, \qquad V(r) = \frac{1}{2} - \frac{G_N M}{r} + \frac{L^2}{2r^2} - \frac{G_N M L^2}{r^3}
 \]
@@ -1124,24 +1177,29 @@ The normalization constraint \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -1\) gives an ef
 The last term is the GR correction; the rest matches Newtonian mechanics.
 
 **Gravitational redshift.** Since the Schwarzschild metric is independent of \(t\), the vector field \(\xi^\mu = (1,0,0,0)\) is a Killing vector: \(\nabla_{(\mu}\xi_{\nu)} = 0\). For any photon moving along a null geodesic with four-momentum \(p^\mu\), the quantity \(\xi^\mu p_\mu\) is conserved along the geodesic. The proof is immediate: differentiating along the geodesic with tangent \(V^\mu\),
+
 \[
 \nabla_V(\xi^\mu p_\mu) = (\nabla_V \xi^\mu)p_\mu + \xi^\mu(\nabla_V p_\mu) = V^\alpha V^\beta \nabla_\alpha \xi_\beta + 0
 \]
 where the second term vanishes by the geodesic equation. The first term vanishes because \(\nabla_\alpha \xi_\beta\) is antisymmetric (Killing equation) while \(V^\alpha V^\beta\) is symmetric — their contraction is zero. Thus \(\xi^\mu p_\mu = \text{const}\) along any photon worldline.
 
 Now consider a stationary observer at Schwarzschild radius \(r\). Their four-velocity is:
+
 \[
 u^\mu = \left(1 - \frac{R_s}{r}\right)^{-1/2}\!\xi^\mu
 \]
 (normalised so that \(g_{\mu\nu}u^\mu u^\nu = -1\)). The energy measured by this observer is \(E(r) = -u^\mu p_\mu\), so:
+
 \[
 E(r) = \left(1 - \frac{R_s}{r}\right)^{-1/2}\!(-\xi^\mu p_\mu)
 \]
 Since \(\xi^\mu p_\mu\) is the same at \(r_1\) and \(r_2\), the ratio of measured energies is:
+
 \[
 \frac{E_1}{E_2} = \sqrt{\frac{1 - R_s/r_2}{1 - R_s/r_1}}
 \]
 For two stationary observers at radii \(r_1 < r_2\):
+
 \[
 \frac{E_2}{E_1} = \sqrt{\frac{1 - R_s/r_1}{1 - R_s/r_2}}
 \]
@@ -1150,6 +1208,7 @@ Since \(r_1 < r_2\), we have \(E_2 < E_1\): the photon loses energy climbing out
 GPS correction: satellite clocks at \(r_2 \approx 4.2\times 10^7\) m run \(\approx 0.53\) ns/s faster than Earth clocks due to gravitational time dilation. There is also a competing special-relativistic effect: the satellite's orbital speed (\(v \approx 3.9\) km/s) causes time dilation that slows the clock by \(\approx -0.22\) ns/s. The net correction is \(+0.31\) ns/s. Accumulated over 24 hours: \(\approx 27 \mu\)s. At 30 cm per 1 ns timing error, ignoring GR would cause GPS to accumulate a position error of \(\sim 8\) km per day. GPS would be useless within hours without relativistic corrections.
 
 **Precession of Mercury's perihelion.** The GR correction to the potential makes orbits precess. To leading order in \(G_N^2M^2/L^2\):
+
 \[
 \Delta\phi = \frac{6\pi G_N M}{(1-e^2)a}
 \]
@@ -1159,22 +1218,27 @@ For Mercury: \(\Delta\phi \approx 43''\)/century. This matched the long-standing
 **Derivation of perihelion precession.** The result \(\Delta\phi = 6\pi G_N M/[(1-e^2)a]\) is not obvious — it emerges from a perturbative analysis of the radial geodesic equation. Let us trace the argument.
 
 The orbit lies in the equatorial plane \(\theta = \pi/2\). The Killing vectors give two conserved quantities along a timelike geodesic:
+
 \[
 E = \left(1 - \frac{R_s}{r}\right)\dot t, \qquad L = r^2\dot\phi
 \]
 The normalisation condition \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -1\) yields, after multiplying through by \((1 - R_s/r)\):
+
 \[
 -E^2 + \dot r^2 + \frac{L^2}{r^2}\!\left(1 - \frac{R_s}{r}\right) = -\!\left(1 - \frac{R_s}{r}\right)
 \]
 Rearranging into the form of a one-dimensional energy equation:
+
 \[
 \frac{1}{2}\dot r^2 + V(r) = \mathcal{E}, \qquad V(r) = \frac{1}{2} - \frac{R_s}{2r} + \frac{L^2}{2r^2} - \frac{R_s L^2}{2r^3}, \qquad \mathcal{E} = \frac{1}{2}E^2
 \]
 The GR correction to the Newtonian effective potential is the last term \(-R_s L^2/(2r^3)\), which falls off faster than the \(1/r^2\) centrifugal barrier. To convert this to an orbit equation, write \(r\) as a function of \(\phi\) via \(\dot r = (dr/d\phi)\dot\phi = (dr/d\phi)L/r^2\), multiply through by \(\dot\phi^{-2} = r^4/L^2\), and introduce the substitution \(x = 2L^2/(R_s r)\). The orbit equation becomes:
+
 \[
 \frac{d^2 x}{d\phi^2} - 1 + x = \frac{3}{4}\frac{R_s^2}{L^2}\,x^2
 \]
 The right-hand side is the GR perturbation; in the Newtonian limit it vanishes and the equation is that of a simple harmonic oscillator in \(x\) (giving closed ellipses, \(x_0 = 1 + e\cos\phi\)). Treating the RHS as small, write \(x = x_0 + x_1\) and substitute. The driven harmonic oscillator equation for \(x_1\) has a resonant (secular) term \(\propto \cos\phi\) which causes the orbit to fail to close. Solving:
+
 \[
 x \approx 1 + e\cos\!\left[(1 - \alpha)\phi\right], \qquad \alpha = \frac{3}{4}\frac{R_s^2}{L^2} \approx \frac{3R_s}{(1-e^2)a}
 \]
@@ -1201,20 +1265,24 @@ For null geodesics, the analogous unstable circular orbit (photon sphere) is at 
 where \(b = L/E\) is the impact parameter. The Newtonian prediction gives only *half* this angle. Eddington's 1919 solar eclipse measurement confirmed the GR value, making Einstein world-famous. The deflection for rays grazing the Sun is \(\approx 1.75''\).
 
 **Derivation of light deflection.** The geodesic analysis for null rays parallels the timelike case but with the normalisation \(g_{\mu\nu}\dot x^\mu\dot x^\nu = 0\). For radial motion in the equatorial plane the conserved quantities are still \(E = (1 - R_s/r)\dot t\) and \(L = r^2\dot\phi\), and the null condition gives:
+
 \[
 \frac{1}{b^2} = \frac{\dot r^2}{L^2} + W_\text{eff}(r), \qquad W_\text{eff}(r) = \frac{1}{r^2}\!\left(1 - \frac{R_s}{r}\right)
 \]
 where \(b = L/E\) is the impact parameter (the perpendicular distance from the source to the undeflected ray at large \(r\)). For a ray approaching from \(r = \infty\), passing closest approach \(r_1\), and escaping to \(r = \infty\), the total angular change is:
+
 \[
 \Delta\phi = 2\int_{r_1}^{\infty} \frac{dr}{r^2}\!\left(\frac{1}{b^2} - W_\text{eff}(r)\right)^{-1/2}
 \]
 If there were no deflection, \(\Delta\phi = \pi\). The deflection angle is \(\delta\phi = \Delta\phi - \pi\). Expanding to first order in \(R_s/r\) (weak-field limit), the integral can be evaluated by treating \(R_s\) as a small parameter. Writing the unperturbed solution \(r = d/\sin\phi\) (straight-line trajectory with impact parameter \(d \approx b\)):
+
 \[
 \delta\phi = \frac{2R_s}{b} = \frac{4G_N M}{bc^2}
 \]
 The factor of 2 relative to the Newtonian result arises because both the \(g_{tt}\) and \(g_{rr}\) components of the metric contribute equally to the deflection — the spatial curvature doubles the answer. Newtonian gravity only modifies \(g_{tt}\) (the gravitational potential) but leaves spatial geometry flat; GR curves both time and space, giving the full deflection. Eddington's eclipse measurement was the first direct test of this spatial curvature contribution, and it gave a result consistent with GR and inconsistent with the Newtonian (half) value.
 
 **Gravitational lensing.** Light deflection by massive objects acts like a gravitational lens. For a point mass lens at distance \(D_L\) with a source at \(D_S\), the angular radius of the Einstein ring (perfect alignment) is:
+
 \[
 \theta_E = \sqrt{\frac{4G_N M}{c^2}\frac{D_{LS}}{D_L D_S}}
 \]
@@ -1222,6 +1290,7 @@ The factor of 2 relative to the Newtonian result arises because both the \(g_{tt
 Gravitational lensing is used to map dark matter distributions in galaxy clusters, detect exoplanets via microlensing, and measure the Hubble constant through time delays.
 
 **Effective potential for null geodesics.** For massless particles in Schwarzschild:
+
 \[
 V_\text{null}(r) = \frac{L^2}{2r^2}\left(1 - \frac{R_s}{r}\right)
 \]
@@ -1250,6 +1319,7 @@ The maximum of \(V_\text{null}\) occurs at \(r = 3R_s/2\) — the *photon sphere
 ### Chapter 23. Schwarzschild Black Holes
 
 **Distinguishing singularities.** The Schwarzschild metric diverges at \(r = R_s\) and \(r = 0\). Compute the Kretschmann scalar (coordinate-independent):
+
 \[
 K = R^{\mu\nu\rho\sigma}R_{\mu\nu\rho\sigma} = \frac{12 R_s^2}{r^6}
 \]
@@ -1259,18 +1329,22 @@ At \(r = 0\): \(K \to \infty\) — genuine curvature singularity. At \(r = R_s\)
 **Eddington-Finkelstein coordinates.** The coordinate singularity at \(r = R_s\) can be removed by a clever change of variables. The idea, due to Eddington (1924) and rediscovered by Finkelstein (1958), is to trade the Schwarzschild time \(t\) for a coordinate adapted to ingoing null geodesics.
 
 Start with flat Minkowski space in spherical coordinates: \(ds^2 = -dt^2 + dr^2 + r^2 d\Omega^2\). Introduce \(v = t + r\); then \(dv = dt + dr\) and the metric becomes \(ds^2 = -dv^2 + 2\,dv\,dr + r^2 d\Omega^2\), which is regular everywhere. For the Schwarzschild spacetime the analogous substitution is:
+
 \[
 v = t + r + R_s\ln\!\left|\frac{r}{R_s} - 1\right|
 \]
 The logarithm is chosen precisely so that the singular factor \((1-R_s/r)^{-1}\) in the Schwarzschild \(dr^2\) coefficient cancels. In these ingoing Eddington-Finkelstein (EF) coordinates \((v, r, \theta, \phi)\), the metric becomes:
+
 \[
 ds^2 = -\!\left(1 - \frac{R_s}{r}\right)dv^2 + 2\,dv\,dr + r^2\,d\Omega^2
 \]
 The metric component \(g_{rr} = 0\) and \(g_{vr} = 1\); there is no factor of \((1-R_s/r)^{-1}\) anywhere. At \(r = R_s\) the metric is perfectly smooth. The matrix representation is:
+
 \[
 g_{\alpha\beta} = \begin{pmatrix}-(1-R_s/r) & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & r^2 \end{pmatrix}
 \]
 To understand the causal structure, look at radial null geodesics in EF coordinates (set \(d\Omega^2 = 0\)). The condition \(ds^2 = 0\) gives:
+
 \[
 \left(1 - \frac{R_s}{r}\right)dv^2 - 2\,dv\,dr = 0 \implies dv\!\left[\left(1 - \frac{R_s}{r}\right)dv - 2\,dr\right] = 0
 \]
@@ -1279,6 +1353,7 @@ The two families of null rays are: (i) \(dv = 0\), i.e., \(v = \text{const}\) �
 The EF chart covers only the exterior region and the black hole interior (\(r > 0\)). It does not naturally describe the white hole region. To expose the full maximal extension — all four quadrants of the Kruskal diagram — one needs the Kruskal-Szekeres coordinates.
 
 **Kruskal-Szekeres coordinates** \((T, X)\) are regular at the horizon:
+
 \[
 ds^2 = \frac{4R_s^3}{r}e^{-r/R_s}\left(-dT^2 + dX^2\right) + r^2 d\Omega^2
 \]
@@ -1294,6 +1369,7 @@ The horizon \(r = R_s\) corresponds to \(T = \pm X\) — perfectly regular.
 **Inside the horizon.** For \(r < R_s\), \(\partial_r\) is timelike and \(\partial_t\) is spacelike. The singularity at \(r=0\) is not in "another place" but in *Alice's future* — every timelike geodesic inside reaches \(r = 0\) in finite proper time. The singularity is inevitable.
 
 Time for Alice to fall from the horizon to the singularity:
+
 \[
 \Delta\tau \approx \frac{\pi M}{c}\left(\frac{M}{M_\odot}\right) \times 10^{-5}\text{ s}
 \]
@@ -1325,6 +1401,7 @@ For the most massive known black holes (\(\sim 10^{10} M_\odot\)): approximately
 </div>
 
 **Hawking radiation.** Quantum field theory in curved spacetime predicts that black holes radiate thermally with temperature:
+
 \[
 T_H = \frac{\hbar c^3}{8\pi G_N M k_B} \approx \frac{6 \times 10^{-8}\,\text{K}}{M/M_\odot}
 \]
@@ -1334,6 +1411,7 @@ For stellar black holes (\(M \sim 10 M_\odot\)), \(T_H \sim 10^{-9}\,\text{K}\) 
 **Ergosphere (Kerr black holes).** Rotating black holes (Kerr metric, 1963) have an ergosphere — a region outside the horizon where no stationary observer can exist (the frame-dragging is so strong that you cannot remain at rest). The Penrose process extracts energy from the black hole's rotation by splitting a particle in the ergosphere: one fragment falls in carrying negative energy (as measured at infinity), the other escapes with more energy than the original particle had. The maximum extractable fraction of a Kerr black hole's mass is \(1 - 1/\sqrt{2} \approx 29\%\).
 
 The Kerr metric in Boyer-Lindquist coordinates:
+
 \[
 ds^2 = -\left(1 - \frac{R_s r}{\Sigma}\right)c^2 dt^2 - \frac{2aR_s r \sin^2\theta}{\Sigma}c\, dt\, d\phi + \frac{\Sigma}{\Delta}dr^2 + \Sigma\, d\theta^2 + \left(r^2 + a^2 + \frac{aR_s r\sin^2\theta}{\Sigma}\right)\sin^2\theta\, d\phi^2
 \]
@@ -1363,6 +1441,7 @@ These two demands, together with the requirement that the spacetime be time-orie
 **Comoving coordinates and proper distance.** In FLRW, comoving coordinates \((r, \theta, \phi)\) are fixed to the matter distribution — they label galaxies by their positions at some reference time. The *proper distance* between two comoving points at time \(t\) is \(d(t) = a(t)r\). The *comoving distance* \(r\) is constant in time; the proper distance grows with the expansion. The *Hubble law* \(v = Hd\) arises from differentiating: \(\dot d = \dot a r = (a/a) ar = Hd\). The recession velocity can exceed \(c\) for large distances — this is not a violation of relativity because it is not a motion through space but an expansion of space itself. No information travels faster than light.
 
 **Cosmological redshift.** A photon emitted with wavelength \(\lambda_e\) at scale factor \(a_e\) is received with wavelength \(\lambda_r\) at scale factor \(a_r\):
+
 \[
 1 + z = \frac{\lambda_r}{\lambda_e} = \frac{a_r}{a_e}
 \]
@@ -1370,6 +1449,7 @@ These two demands, together with the requirement that the spacetime be time-orie
 The redshift \(z\) directly measures the ratio of scale factors, not a Doppler shift (though both descriptions are valid in the limit of small distances). The CMB was emitted at \(z \approx 1100\), when the universe was \(\approx 380\,000\) years old and the scale factor was \(1/1101\) of its present value.
 
 **Maximal symmetry.** A manifold of dimension \(n\) can have at most \(n(n+1)/2\) independent Killing vectors. When this maximum is achieved, the space is called *maximally symmetric*. In that case, the Riemann tensor is completely determined by a single constant \(k\):
+
 \[
 R_{\alpha\beta\gamma\delta} = \frac{k}{n(n-1)}\left(g_{\alpha\gamma}g_{\beta\delta} - g_{\alpha\delta}g_{\beta\gamma}\right)
 \]
@@ -1426,12 +1506,14 @@ The \(\rho \propto a^{-3(1+w)}\) scaling follows from stress-energy conservation
 Since \(\rho_R \propto a^{-4}\) and \(\rho_M \propto a^{-3}\), radiation dominates at early times (small \(a\)) and matter dominates at later times. Eventually, as \(a\) grows, the cosmological constant wins. The universe passes through three eras: radiation-dominated \(\to\) matter-dominated \(\to\) \(\Lambda\)-dominated — and we live near the transition between the latter two.
 
 **The deceleration parameter.** It is useful to introduce the dimensionless deceleration parameter:
+
 \[
 q(t) = -\frac{a\ddot a}{\dot a^2} = -\frac{\ddot a/a}{H^2}
 \]
 A universe decelerating under gravity has \(q > 0\); one accelerating under dark energy has \(q < 0\). The Raychaudhuri equation shows \(q = \frac{1}{2}(1 + 3w)\Omega\) in a flat single-component universe — so matter (\(w=0\)) gives \(q = 1/2\) (decelerating), radiation (\(w=1/3\)) gives \(q = 1\) (more decelerating), and a cosmological constant (\(w=-1\)) gives \(q = -1\) (exponential acceleration). Current measurements give \(q_0 \approx -0.55\), confirming the accelerating expansion discovered by Riess, Perlmutter, and Schmidt in 1998.
 
 **The Einstein Universe and the static solution.** Before Hubble's discovery, Einstein believed the universe to be static (\(\dot a = 0\)) and eternal. Substituting \(\dot a = \ddot a = 0\) and \(\dot\rho = 0\) into the Friedmann equations with a cosmological constant:
+
 \[
 \frac{k}{a_0^2} = \frac{8\pi G}{3}\rho_0 + \frac{\Lambda}{3}, \qquad 0 = -4\pi G(\rho_0 + 3P_0) + \Lambda
 \]
@@ -1461,6 +1543,7 @@ For dust (\(P_0 = 0\)) the second equation gives \(\Lambda = 4\pi G\rho_0 > 0\),
 **The cosmological constant problem.** The observed value of \(\Lambda\) corresponds to an energy density \(\rho_\Lambda \approx 7 \times 10^{-27}\) kg/m³. Quantum field theory predicts zero-point energy contributions of order \(\rho_\text{vac} \sim E_\text{Planck}^4/(\hbar c)^3 \approx 10^{97}\) kg/m³. The ratio is \(10^{124}\) — the worst fine-tuning problem in all of physics. No satisfactory resolution is known.
 
 **The flatness problem and inflation.** The Friedmann equation can be written as:
+
 \[
 \Omega_\text{total} - 1 = \frac{kc^2}{a^2 H^2}
 \]
@@ -1497,11 +1580,13 @@ For a matter-dominated universe, the right side grows as \(\propto t^{2/3}\), me
 ### Chapter 25. Gravitational Waves and Linearised Gravity
 
 **Linearised gravity.** Write the metric as \(g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}\) where \(|h_{\mu\nu}| \ll 1\). Work to first order in \(h\). Under an infinitesimal gauge transformation \(x^\mu \to x^\mu + \xi^\mu\):
+
 \[
 h_{\mu\nu} \to h_{\mu\nu} - \partial_\mu \xi_\nu - \partial_\nu \xi_\mu
 \]
 
 This is the linearised diffeomorphism invariance. By choosing appropriate \(\xi^\mu\) (*harmonic gauge*, also called Lorenz gauge), the linearised Einstein equations simplify to:
+
 \[
 \Box \bar h_{\mu\nu} = -\frac{16\pi G_N}{c^4} T_{\mu\nu}
 \]
@@ -1509,11 +1594,13 @@ This is the linearised diffeomorphism invariance. By choosing appropriate \(\xi^
 where \(\bar h_{\mu\nu} = h_{\mu\nu} - \frac{1}{2}\eta_{\mu\nu}h\) is the trace-reversed perturbation and \(\Box = \eta^{\mu\nu}\partial_\mu\partial_\nu\) is the flat-space d'Alembertian. This is a wave equation!
 
 **Gravitational wave solutions.** In vacuum (\(T_{\mu\nu} = 0\)), plane wave solutions exist:
+
 \[
 h_{\mu\nu} = \text{Re}\left[A_{\mu\nu} e^{ik_\rho x^\rho}\right], \qquad k^\mu k_\mu = 0
 \]
 
 Residual gauge freedom allows us to impose *transverse-traceless (TT) gauge*: \(h^\mu{}_\nu k^\nu = 0\) and \(h^\mu{}_\mu = 0\). For a wave propagating in the \(z\)-direction, the only independent components are:
+
 \[
 h_+\begin{pmatrix}0&0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&0\end{pmatrix}e^{i\omega(t-z/c)} + h_\times\begin{pmatrix}0&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&0\end{pmatrix}e^{i\omega(t-z/c)}
 \]
@@ -1521,6 +1608,7 @@ h_+\begin{pmatrix}0&0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&0\end{pmatrix}e^{i\omega(t-z
 The two polarisations \(h_+\) and \(h_\times\) squeeze and stretch space perpendicular to the propagation direction.
 
 **Effect on test masses.** The geodesic deviation equation in TT gauge gives the relative acceleration of two free particles separated by \(\xi^i\):
+
 \[
 \ddot\xi^x = \frac{1}{2}\ddot h_{xx}\xi^x, \qquad \ddot\xi^y = \frac{1}{2}\ddot h_{yy}\xi^y = -\frac{1}{2}\ddot h_{xx}\xi^y
 \]
@@ -1528,6 +1616,7 @@ The two polarisations \(h_+\) and \(h_\times\) squeeze and stretch space perpend
 A ring of test particles in the \(x\)-\(y\) plane oscillates in the characteristic \(+\) pattern for the \(h_+\) polarisation. LIGO/Virgo detectors measure this strain: \(h = \Delta L/L \sim 10^{-21}\) for binary black hole mergers at cosmological distances.
 
 **Quadrupole radiation formula.** For a slowly-moving source, the leading-order gravitational wave power is:
+
 \[
 P = \frac{G_N}{5c^5}\left\langle \dddot Q_{ij}\dddot Q^{ij}\right\rangle
 \]
@@ -1543,11 +1632,13 @@ where \(Q_{ij} = \int \rho(x_i x_j - \frac{1}{3}\delta_{ij}r^2)\,d^3x\) is the m
 ## Appendix: Key Reference Formulas
 
 **Christoffel symbols (Levi-Civita connection):**
+
 \[
 \Gamma^\rho{}_{\mu\nu} = \frac{1}{2}g^{\rho\sigma}\bigl(\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu}\bigr)
 \]
 
 **Riemann tensor:**
+
 \[
 R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}
 \]
@@ -1557,6 +1648,7 @@ R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu 
 **Einstein tensor:** \(G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}\), satisfies \(\nabla^\mu G_{\mu\nu} = 0\)
 
 **Einstein equations (natural units \(c=1\)):**
+
 \[
 G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G_N\, T_{\mu\nu}
 \]

@@ -21,6 +21,7 @@ prof: "Liqun Diao"
 Before launching into the theory of sufficient statistics, it is worth reviewing the notational conventions that will be used throughout these notes. We write \(E_\theta\), \(\operatorname{Var}_\theta\), and \(P_\theta\) to indicate that the expectation, variance, and probability are computed under the assumption that the parameter is \(\theta\). The **parameter space** \(\Omega\) may be a subset of the real line, a Euclidean space, or a more abstract space. When we write \(\theta = (\theta_1, \ldots, \theta_k)\), we mean a vector parameter, and the model may be called a **\(k\)-parameter family**.
 
 The joint density of an iid sample \(X_1, \ldots, X_n\) with common marginal density \(f_\theta\) is
+
 \[
 f_\theta(x_1, \ldots, x_n) = \prod_{i=1}^n f_\theta(x_i).
 \]
@@ -74,6 +75,7 @@ The function \(g\) depends on the data only through \(T(x)\), and \(h\) is free 
 P_\theta(X = x \mid T = t) = \frac{P_\theta(X = x,\; T = t)}{P_\theta(T = t)} = \frac{g(t;\theta)\,h(x)}{\sum_{x': T(x')=t} g(t;\theta)\,h(x')} = \frac{h(x)}{\sum_{x': T(x')=t} h(x')},
 \]
 which is independent of \(\theta\), confirming sufficiency. Conversely, if the conditional distribution does not depend on \(\theta\), write
+
 \[
 f_\theta(x) = P_\theta(X = x) = P_\theta(T = T(x))\cdot P_\theta(X = x \mid T = T(x)).
 \]
@@ -85,12 +87,14 @@ The factorization theorem was proved independently by Fisher (1922) in a special
 ### Applying the Factorization Theorem
 
 **Example: Poisson iid sample.** For \(X_1, \ldots, X_n \overset{\text{iid}}{\sim} \text{Poi}(\theta)\):
+
 \[
 f_\theta(x_1, \ldots, x_n) = \prod_{i=1}^n \frac{e^{-\theta}\theta^{x_i}}{x_i!} = e^{-n\theta}\,\theta^{\sum_{i=1}^n x_i} \cdot \prod_{i=1}^n \frac{1}{x_i!}.
 \]
 Setting \(g(t;\theta) = e^{-n\theta}\theta^t\) and \(h(x) = \prod (x_i!)^{-1}\), sufficiency of \(T = \sum_{i=1}^n X_i\) follows immediately.
 
 **Example: Normal two-parameter model.** For \(X_i \overset{\text{iid}}{\sim} N(\mu, \sigma^2)\):
+
 \[
 f_{\mu,\sigma^2}(x) = (2\pi\sigma^2)^{-n/2}\exp\!\left\{-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right\}.
 \]
@@ -125,6 +129,7 @@ so the conditional distribution \(f_\theta(x \mid T = t) = H(x, y_t)/\sum_{x': T
 The practical procedure: compute the likelihood ratio \(f_\theta(x)/f_\theta(y)\) and identify which combinations of \(x\) and \(y\) make this ratio parameter-free. The resulting equivalence classes are the level sets of the minimal sufficient statistic.
 
 **Example: \(N(\theta, \theta^2)\).** Here both mean and variance depend on \(\theta\). The likelihood ratio
+
 \[
 \frac{f_\theta(x)}{f_\theta(y)} = \exp\!\left\{\frac{1}{2\theta^2}\!\left(\sum y_i^2 - \sum x_i^2\right) + \frac{1}{\theta}\!\left(\sum x_i - \sum y_i\right)\right\}
 \]
@@ -143,6 +148,7 @@ The vector \((T_1(X), \ldots, T_k(X))\) is the <em>natural sufficient statistic<
 </div>
 
 By the factorization theorem, \((T_1(X), \ldots, T_k(X))\) is immediately seen to be sufficient. The **canonical** or **natural parameter** form is obtained by letting \(\eta_j = q_j(\theta)\) be the new parameter:
+
 \[
 f_\eta(x) = C(\eta)\exp\!\left\{\sum_{j=1}^k \eta_j\,T_j(x)\right\} h(x).
 \]
@@ -174,6 +180,7 @@ Distributions that are *not* exponential family include the Cauchy family (for w
 ### Two-Parameter Exponential Family and the Bivariate Normal
 
 For the **bivariate normal distribution** \((X_1, X_2)^T \sim \text{MVN}(\mu, \Sigma)\) with
+
 \[
 \Sigma = \begin{pmatrix}\sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2\end{pmatrix},
 \]
@@ -188,6 +195,7 @@ The exponential family representation may not be unique: multiplying \(T_j\) by 
 ### Differentiating Under the Integral in Exponential Families
 
 One of the most useful properties of regular exponential families is that all moments of the sufficient statistic \(T\) can be obtained by differentiating the log-normalizing constant \(-\log C(\eta)\):
+
 \[
 E_\eta[T_j(X)] = \frac{\partial}{\partial\eta_j}[-\log C(\eta)] = -\frac{\partial\log C}{\partial\eta_j},
 \]
@@ -265,12 +273,14 @@ The Rao-Blackwell theorem tells us to always condition on the sufficient statist
 3. **Verify** the expectation. The resulting \(h(T)\) is the UMVUE by Lehmann-Scheffé.
 
 **Example: UMVUE of \(\theta^2\) for Bernoulli.** For \(X_1, \ldots, X_n \overset{\text{iid}}{\sim} \text{Ber}(\theta)\), the complete sufficient statistic is \(T = \sum X_i \sim \text{Bin}(n,\theta)\). Take \(W = X_1 X_2\) (unbiased for \(\theta^2\)). Then
+
 \[
 E[X_1 X_2 \mid T = t] = P(X_1 = 1, X_2 = 1 \mid \textstyle\sum X_i = t) = \frac{\binom{n-2}{t-2}}{\binom{n}{t}} = \frac{t(t-1)}{n(n-1)}.
 \]
 So the UMVUE of \(\theta^2\) is \(T(T-1)/(n(n-1))\).
 
 **Example: UMVUE of \(e^{-\theta}\) for Poisson.** For \(X_i \overset{\text{iid}}{\sim} \text{Poi}(\theta)\), \(T = \sum X_i \sim \text{Poi}(n\theta)\). Take \(W = \mathbf{1}_{X_1 = 0}\) (unbiased for \(e^{-\theta}\)). Then
+
 \[
 E[\mathbf{1}_{X_1=0} \mid T = t] = P(X_1 = 0 \mid \textstyle\sum X_i = t).
 \]
@@ -302,6 +312,7 @@ Basu's theorem is one of the most elegant results in all of mathematical statist
 g(t) = P(U \in B \mid T = t) - P(U \in B).
 \]
 By sufficiency, \(P(U \in B \mid T = t)\) is \(\theta\)-free; by ancillarity, \(P(U \in B)\) is \(\theta\)-free. So \(g(T)\) is a valid statistic. Now:
+
 \[
 E_\theta[g(T)] = E_\theta[P(U \in B \mid T)] - P(U \in B) = P_\theta(U \in B) - P_\theta(U \in B) = 0
 \]
@@ -319,6 +330,7 @@ for all \(\theta\). By completeness of \(T\), we conclude \(g(T) = 0\) a.s., i.e
 ## Method of Moments
 
 The **method of moments** is the oldest systematic estimation procedure, attributed to Karl Pearson (1894). For a model with \(k\) unknown parameters, the method equates the first \(k\) theoretical moments to the corresponding sample moments:
+
 \[
 E_\theta[X^j] = \frac{1}{n}\sum_{i=1}^n X_i^j, \quad j = 1, \ldots, k.
 \]
@@ -348,10 +360,12 @@ For differentiable log-likelihoods on an open parameter space, \(\hat\theta\) so
 ### MLE in Exponential Families
 
 For a regular exponential family in canonical form \(f_\eta(x) = C(\eta)\exp\{\sum_j \eta_j T_j(x)\}h(x)\), the log-likelihood for iid data is
+
 \[
 \ell(\eta) = n\log C(\eta) + \sum_{j=1}^k \eta_j \sum_{i=1}^n T_j(X_i).
 \]
 The score equations \(\partial\ell/\partial\eta_j = 0\) become **moment equations**:
+
 \[
 E_{\hat\eta}[T_j(X)] = \frac{1}{n}\sum_{i=1}^n T_j(x_i), \quad j = 1, \ldots, k.
 \]
@@ -368,6 +382,7 @@ Proof: When \(g\) is one-to-one, substitute and observe the same maximizer works
 ### Numerical Computation: Newton-Raphson
 
 When the score equation \(S(\theta) = 0\) has no analytic solution, **Newton-Raphson** iteration is used. Starting from an initial estimate \(\theta^{(0)}\):
+
 \[
 \theta^{(k+1)} = \theta^{(k)} + \frac{S(\theta^{(k)})}{I(\theta^{(k)})}.
 \]
@@ -376,6 +391,7 @@ The algorithm replaces the log-likelihood by its second-order Taylor approximati
 ### The EM Algorithm
 
 The **EM (Expectation-Maximization) algorithm** of Dempster, Laird, and Rubin (1977) computes MLEs when the data are incomplete. Let \(X\) be the **complete data** with density \(f_\theta(x)\) and \(Y = Y(X)\) be the **observed (incomplete) data**. The key identity connecting the two log-likelihoods is:
+
 \[
 \frac{\partial}{\partial\theta}\log g_\theta(y) = E_\theta\!\left[S(\theta; X) \mid Y = y\right],
 \]
@@ -410,16 +426,19 @@ Together, these say: in a complete sufficient family, find any unbiased estimato
 The method shines when estimating nonlinear functions of the parameter. The key technique is to find a simple unbiased estimator \(W\) and compute \(E[W \mid T]\), exploiting the conditional distribution of \(W\) given \(T\).
 
 **UMVUE of \(\Phi(c - \theta)\) in the normal model.** For \(X_i \overset{\text{iid}}{\sim} N(\theta, 1)\), we want the UMVUE of \(P(X_1 \leq c) = \Phi(c - \theta)\). The complete sufficient statistic is \(\bar{X}\). Take \(W = \mathbf{1}_{X_1 \leq c}\), which is unbiased for \(\Phi(c - \theta)\). We need \(E[\mathbf{1}_{X_1 \leq c} \mid \bar{X}]\). Since
+
 \[
 X_1 \mid \bar{X} = \bar{x} \sim N\!\left(\bar{x},\; 1 - \frac{1}{n}\right),
 \]
 we get \(E[\mathbf{1}_{X_1 \leq c} \mid \bar{X}] = \Phi\!\left(\frac{c - \bar{X}}{\sqrt{1 - 1/n}}\right)\). This is the UMVUE of \(\Phi(c - \theta)\).
 
 **UMVUE of \((1+\theta)e^{-\theta}\) for Poisson.** For \(X_i \overset{\text{iid}}{\sim} \text{Poi}(\theta)\), note that \((1+\theta)e^{-\theta} = P(X \leq 1)\). Taking \(W = \mathbf{1}_{X_1 \leq 1}\) and conditioning on \(T = \sum X_i\):
+
 \[
 E[\mathbf{1}_{X_1 \leq 1} \mid T = t] = P(X_1 \in \{0,1\} \mid T = t).
 \]
 Using the fact that \((X_1 \mid T = t) \sim \text{Bin}(t, 1/n)\):
+
 \[
 = (1-1/n)^t + t(1/n)(1-1/n)^{t-1} = (1-1/n)^{t-1}\!\left[(1-1/n) + t/n\right].
 \]
@@ -474,6 +493,7 @@ E_\theta[S(\theta; X)] = 0 \qquad \text{and} \qquad \operatorname{Var}_\theta[S(
 0 = \frac{\partial}{\partial\theta}\int f_\theta\, dx = \int \frac{\partial f_\theta}{\partial\theta}\, dx = \int \frac{\partial\log f_\theta}{\partial\theta}\, f_\theta\, dx = E_\theta[S(\theta; X)].
 \]
 Differentiate once more:
+
 \[
 0 = \int \frac{\partial^2\log f_\theta}{\partial\theta^2}\, f_\theta\, dx + \int \!\left(\frac{\partial\log f_\theta}{\partial\theta}\right)^{\!2} f_\theta\, dx = E_\theta\!\left[\frac{\partial^2\ell}{\partial\theta^2}\right] + E_\theta[S^2].
 \]
@@ -549,6 +569,7 @@ The CRLB is attained if and only if the model is an exponential family and \(T(X
 ### Hodge's Superefficient Estimator
 
 For some time it was believed that no estimator could have variance below \(1/\mathcal{I}(\theta)\) at any \(\theta\). Hodges showed this is false: define
+
 \[
 T_n(X) = \begin{cases} \bar{X}/2 & \text{if } |\bar{X}| \leq n^{-1/4} \\ \bar{X} & \text{otherwise}\end{cases}
 \]
@@ -557,11 +578,13 @@ for iid \(N(\theta, 1)\). Then \(\operatorname{Var}_\theta(T_n) \approx 1/(4n)\)
 ## Multiparameter Fisher Information
 
 When \(\theta = (\theta_1, \ldots, \theta_k)^T \in \mathbb{R}^k\), the score is the gradient \(S(\theta) = \nabla_\theta \ell(\theta)\) and the **Fisher information matrix** is
+
 \[
 \mathcal{I}(\theta) = E_\theta[S(\theta)S(\theta)^T] = \left[-E_\theta\!\left(\frac{\partial^2\ell}{\partial\theta_i\partial\theta_j}\right)\right]_{i,j=1}^k.
 \]
 
 For any unbiased estimator \(T(X)\) of a scalar function \(\tau(\theta)\) with gradient \(D(\theta) = \nabla_\theta \tau\):
+
 \[
 \operatorname{Var}_\theta(T) \geq D(\theta)^T\, \mathcal{I}(\theta)^{-1}\, D(\theta).
 \]
@@ -710,6 +733,7 @@ If \(P_{\theta_0}(X \in R) = \alpha\), then \(R\) is the <em>most powerful test<
 \int_{R \cap \bar{R}^*} f_{\theta_0}\, dx \leq \int_{\bar R \cap R^*} f_{\theta_0}\, dx. \tag{*}
 \]
 On \(R \cap \bar{R}^*\): the likelihood ratio exceeds \(k\), so \(f_{\theta_1}(x) > k\, f_{\theta_0}(x)\). On \(\bar R \cap R^*\): the ratio is at most \(k\), so \(f_{\theta_1}(x) \leq k\, f_{\theta_0}(x)\). Therefore:
+
 \[
 P_{\theta_1}(R) - P_{\theta_1}(R^*) = \int_{R \cap \bar{R}^*} f_{\theta_1}\, dx - \int_{\bar{R} \cap R^*} f_{\theta_1}\, dx \geq k\!\left(\int_{R \cap \bar{R}^*} f_{\theta_0}\, dx - \int_{\bar{R} \cap R^*} f_{\theta_0}\, dx\right) \geq 0
 \]
@@ -719,6 +743,7 @@ using (*) in the last step.
 The NP lemma delivers a remarkably clean message: among all tests with the same Type I error rate, the one based on the likelihood ratio maximizes power. The likelihood ratio \(f_{\theta_1}(x)/f_{\theta_0}(x)\) is the sufficient statistic for the problem of testing two simple hypotheses.
 
 **Example: Normal mean.** For \(X_i \overset{\text{iid}}{\sim} N(\theta, \sigma^2)\) known \(\sigma^2\), testing \(H_0: \theta = 0\) vs. \(H_1: \theta = \theta_1 > 0\):
+
 \[
 \frac{f_{\theta_1}(x)}{f_0(x)} = \exp\!\left\{\frac{\theta_1}{\sigma^2}\sum x_i - \frac{n\theta_1^2}{2\sigma^2}\right\}.
 \]
@@ -731,6 +756,7 @@ This is increasing in \(\sum x_i = n\bar{x}\), so the NP critical region is \(\{
 </div>
 
 Every one-parameter regular exponential family has MLR in its natural sufficient statistic \(T(X)\), because
+
 \[
 \frac{f_{\eta_1}(x)}{f_{\eta_0}(x)} \propto \exp\{(\eta_1 - \eta_0)T(x)\},
 \]
@@ -747,6 +773,7 @@ which is increasing in \(T(x)\) when \(\eta_1 > \eta_0\).
 ## UMP Unbiased Tests in Exponential Families
 
 For a one-parameter exponential family with natural sufficient statistic \(T\) and natural parameter \(\eta\), the UMPU test of \(H_0: \eta = \eta_0\) vs. \(H_1: \eta \neq \eta_0\) has critical region
+
 \[
 R = \{x : T(x) < c_1\} \cup \{x : T(x) > c_2\}
 \]
@@ -767,6 +794,7 @@ A central practical problem in experimental design is determining how large a sa
 \]
 
 Setting \(\beta(\mu_1) = 1 - \beta_0\) (desired power) and solving:
+
 \[
 n = \left\lceil\frac{(z_\alpha + z_{\beta_0})^2\sigma^2}{(\mu_1 - \mu_0)^2}\right\rceil.
 \]
@@ -819,6 +847,7 @@ The degrees of freedom \(k - q\) equal the number of constraints imposed by \(H_
 ### Applications of Wilks' Theorem
 
 **Normal mean with unknown variance.** Test \(H_0: \mu = 0\) vs. \(H_1: \mu \neq 0\) for \(X_i \overset{\text{iid}}{\sim} N(\mu, \sigma^2)\). Here \(\Omega \subseteq \mathbb{R}^2\) (\(k=2\)), \(\Omega_0 = \{0\} \times (0,\infty)\) (\(q=1\)), so \(k-q=1\). The GLR statistic simplifies to
+
 \[
 \Lambda = \left(1 + \frac{T^2}{n-1}\right)^{n/2}, \quad T = \frac{\bar{X}\sqrt{n}}{S}.
 \]
@@ -827,6 +856,7 @@ For any finite \(n\), the exact test rejects when \(T^2 > F_{1-\alpha}(1, n-1)\)
 **Likelihood ratio test for normal mean vs. normal variance.** Consider \(X_i \overset{\text{iid}}{\sim} N(\mu, \sigma^2)\) and test \(H_0: \mu = \mu_0, \sigma^2 = \sigma_0^2\) vs. \(H_1: (\mu, \sigma^2) \neq (\mu_0, \sigma_0^2)\). Here \(k=2, q=0\), giving \(2\log\Lambda \overset{d}{\to} \chi^2(2)\). This test simultaneously checks both parameters.
 
 **Multinomial goodness-of-fit.** For a multinomial with \(m\) categories and \(n\) observations, testing \(H_0: p_j = p_j(\theta)\) for some parametric model. The GLRT statistic is
+
 \[
 G^2 = 2\sum_{j=1}^m O_j \log\frac{O_j}{E_j},
 \]
@@ -835,6 +865,7 @@ where \(E_j = n\,p_j(\hat\theta)\) are expected counts and \(O_j\) observed. Und
 ## The Wald Test
 
 The **Wald test** does not require fitting the restricted model \(\hat\theta_0\), using only the unrestricted MLE:
+
 \[
 W = (\hat\theta - \theta_0)^T\, \mathcal{I}(\hat\theta)\, (\hat\theta - \theta_0) \overset{d}{\to} \chi^2(k) \quad \text{under } H_0: \theta = \theta_0.
 \]
@@ -845,6 +876,7 @@ The Wald test is computationally convenient but can have poor coverage propertie
 ## The Score Test (Rao Test)
 
 The **score test** requires only the restricted MLE \(\hat\theta_0\). Under \(H_0: \theta = \theta_0\):
+
 \[
 R = S(\theta_0)^T\, \mathcal{I}(\theta_0)^{-1}\, S(\theta_0) \overset{d}{\to} \chi^2(k).
 \]
@@ -873,11 +905,13 @@ For small samples in non-normal models, exact conditional tests (when available)
 ## Bayesian Inference: Conjugate Priors and Point Estimation
 
 Bayesian inference provides an alternative to the frequentist UMVUE and MLE framework. The key concept is the **posterior distribution**: given data \(x\) and prior \(\pi(\theta)\), the posterior is
+
 \[
 \pi(\theta \mid x) \propto L(\theta; x)\,\pi(\theta).
 \]
 
 A **conjugate prior** is one where the posterior is in the same family as the prior. For exponential family models, conjugate priors always exist and take the form
+
 \[
 \pi_{\eta_0, \tau_0}(\theta) \propto C(\eta)^{\tau_0}\exp\{\eta_0^T\theta\},
 \]
@@ -895,6 +929,7 @@ where \(\eta_0, \tau_0\) are hyperparameters. After observing data with sufficie
 The **Bayes estimator** minimizing posterior MSE is the posterior mean \(\tilde\theta = E[\theta \mid X]\). For squared error loss, the Bayes estimator is always the posterior mean. For absolute error loss, it is the posterior median. The **Jeffreys prior** is \(\pi(\theta) \propto [\mathcal{I}(\theta)]^{1/2}\), which is invariant under reparameterization and serves as a "default" noninformative prior.
 
 For the normal model with prior \(\theta \sim N(\mu_0, \tau_0^2)\) and \(X_i \overset{\text{iid}}{\sim} N(\theta, \sigma^2)\), the posterior mean is
+
 \[
 \tilde\theta = \frac{n/\sigma^2}{n/\sigma^2 + 1/\tau_0^2}\bar{X} + \frac{1/\tau_0^2}{n/\sigma^2 + 1/\tau_0^2}\mu_0,
 \]
@@ -903,6 +938,7 @@ a weighted average of the data mean and the prior mean. As \(n \to \infty\), the
 ## From Tests to Confidence Sets
 
 The test-inversion method converts any family of hypothesis tests into confidence sets. For a one-parameter model, inverting the acceptance regions \(A(\theta_0) = \{x : H_0:\theta=\theta_0 \text{ not rejected}\}\) over all \(\theta_0\) yields a \((1-\alpha)\) confidence set:
+
 \[
 C(x) = \{\theta_0 : x \in A(\theta_0)\}.
 \]
@@ -916,12 +952,14 @@ A **pivot** \(Q(X, \theta)\) is a function of data and parameter whose distribut
 **Normal mean, known variance.** \(Q = \sqrt{n}(\bar{X} - \mu)/\sigma \sim N(0,1)\). Solving gives \(C = [\bar{X} - z_{\alpha/2}\sigma/\sqrt{n},\; \bar{X} + z_{\alpha/2}\sigma/\sqrt{n}]\).
 
 **Normal mean, unknown variance.** \(Q = \sqrt{n}(\bar{X} - \mu)/S \sim t(n-1)\). Solving gives the **Student \(t\)-interval**:
+
 \[
 C = \left[\bar{X} - t_{\alpha/2, n-1}\frac{S}{\sqrt{n}},\; \bar{X} + t_{\alpha/2, n-1}\frac{S}{\sqrt{n}}\right].
 \]
 This is the prototypical frequentist confidence interval and the unique UMVUE-based shortest interval for the normal mean.
 
 **Normal variance.** \(Q = (n-1)S^2/\sigma^2 \sim \chi^2(n-1)\). Solving gives
+
 \[
 C = \left[\frac{(n-1)S^2}{\chi^2_{\alpha/2, n-1}},\; \frac{(n-1)S^2}{\chi^2_{1-\alpha/2, n-1}}\right].
 \]
@@ -932,12 +970,14 @@ Because the \(\chi^2\) distribution is asymmetric, the equal-tail CI is not the 
 ### Wald Intervals
 
 The asymptotic normality of the MLE gives the **Wald interval** for a scalar parameter \(\theta\):
+
 \[
 C_n = \left[\hat\theta_n \pm z_{\alpha/2}\,\frac{1}{\sqrt{n\,\mathcal{I}(\hat\theta_n)}}\right].
 \]
 Replacing the Fisher information by the observed information \(-\ell''(\hat\theta)/n\) gives an equivalent interval. The Wald interval is first-order correct: \(P_\theta(\theta \in C_n) = 1-\alpha + O(1/\sqrt{n})\).
 
 **Delta method intervals.** For a function \(g(\theta)\) with \(g'(\hat\theta) \neq 0\):
+
 \[
 g(\hat\theta) \pm z_{\alpha/2}\,\frac{|g'(\hat\theta)|}{\sqrt{n\,\mathcal{I}(\hat\theta)}}.
 \]
@@ -946,6 +986,7 @@ For example, a CI for \(e^{-\lambda}\) from Poisson data: \(e^{-\bar{X}} \pm z_{
 ### Likelihood Ratio Intervals
 
 From Wilks' theorem, the **likelihood ratio confidence set** is
+
 \[
 C_n = \left\{\theta_0 : 2[\ell(\hat\theta) - \ell(\theta_0)] \leq \chi^2_\alpha(1)\right\} = \left\{\theta_0 : \frac{L(\theta_0)}{L(\hat\theta)} \geq e^{-\chi^2_\alpha(1)/2}\right\}.
 \]
@@ -957,6 +998,7 @@ This is the set of parameter values whose relative likelihood exceeds \(\exp(-\c
 ### Profile Likelihood Intervals
 
 When there are nuisance parameters \(\lambda\), inference on a scalar \(\psi = \psi(\theta)\) uses the **profile log-likelihood**:
+
 \[
 \ell_p(\psi) = \max_{\lambda:\, \psi(\theta)=\psi}\, \ell(\theta, \lambda).
 \]
@@ -965,6 +1007,7 @@ The profile likelihood CI is \(\{\psi_0 : 2[\ell_p(\hat\psi) - \ell_p(\psi_0)] \
 ## Bayesian Credible Intervals
 
 In Bayesian inference, a **credible interval** (or **credible region** in higher dimensions) of level \(1-\alpha\) is any set \(C\) satisfying
+
 \[
 P(\theta \in C \mid X = x) = \int_C \pi(\theta \mid x)\, d\theta = 1-\alpha,
 \]
@@ -983,6 +1026,7 @@ For a location family pivot \(T - \theta \sim G\) (distribution-free of \(\theta
 ## Simultaneous Inference
 
 When constructing intervals for multiple parameters or an entire regression function, marginal \((1-\alpha)\) intervals do not control the **familywise error rate** (FWER): the probability that at least one interval fails to cover its target. **Scheffé bands** for linear contrasts in a normal linear model are:
+
 \[
 \left|a^T\hat\theta - a^T\theta\right| \leq \sqrt{k\, F_\alpha(k, n-p)}\cdot\sqrt{a^T(X^TX)^{-1}a\cdot\hat\sigma^2}
 \]
@@ -1024,10 +1068,12 @@ For practical recommendations: use the likelihood ratio interval when the full l
 ## Bayesian Hypothesis Testing
 
 The Bayesian approach to hypothesis testing is coherent and avoids some of the logical difficulties of p-values. Given prior probabilities \(\pi_0 = P(H_0)\) and \(\pi_1 = 1 - \pi_0 = P(H_1)\), the **posterior odds** after observing data \(x\) are:
+
 \[
 \frac{P(H_1 \mid x)}{P(H_0 \mid x)} = \frac{P(x \mid H_1)}{P(x \mid H_0)} \cdot \frac{\pi_1}{\pi_0} = B_{10} \cdot \frac{\pi_1}{\pi_0},
 \]
 where \(B_{10} = P(x \mid H_1)/P(x \mid H_0)\) is the **Bayes factor**. The Bayes factor compares the marginal likelihoods of the data under the two hypotheses, integrating out unknown parameters under each:
+
 \[
 P(x \mid H_j) = \int L(\theta_j; x)\, \pi_j(\theta_j)\, d\theta_j.
 \]
@@ -1095,6 +1141,7 @@ where \(\mathcal{I}_1(\theta_0) = E_{\theta_0}[S_1(\theta_0; X)^2]\) is the sing
 This result says the MLE is **asymptotically efficient**: its asymptotic variance equals the Cramér-Rao lower bound \(1/(n\mathcal{I}_1(\theta))\). No consistent estimator can have a smaller asymptotic variance (a consequence of Le Cam's theory of local asymptotic normality).
 
 By the delta method, for any smooth function \(g\):
+
 \[
 \sqrt{n}\,[g(\hat\theta_n) - g(\theta_0)] \overset{d}{\to} N\!\left(0,\; \frac{[g'(\theta_0)]^2}{\mathcal{I}_1(\theta_0)}\right).
 \]
@@ -1102,10 +1149,12 @@ By the delta method, for any smooth function \(g\):
 ### Multiparameter Asymptotics
 
 For \(\theta \in \mathbb{R}^k\):
+
 \[
 \sqrt{n}\,(\hat\theta_n - \theta_0) \overset{d}{\to} \text{MVN}\!\left(0,\; \mathcal{I}_1(\theta_0)^{-1}\right).
 \]
 For a scalar function \(\tau(\theta)\) with gradient \(D(\theta_0) = \nabla\tau(\theta_0)\):
+
 \[
 \sqrt{n}\,[\tau(\hat\theta_n) - \tau(\theta_0)] \overset{d}{\to} N\!\left(0,\; D(\theta_0)^T\mathcal{I}_1(\theta_0)^{-1}D(\theta_0)\right).
 \]
@@ -1127,6 +1176,7 @@ The BLUE is generally not the same as the UMVUE. The UMVUE requires the full dis
 **Equivariance** (or **invariance**) is a structural constraint on estimators based on the symmetry of the problem. For a **location family** \(\{f(x-\theta);\, \theta \in \mathbb{R}\}\), an estimator \(T(X)\) is **location equivariant** if \(T(X + c\mathbf{1}) = T(X) + c\) for any constant \(c\). The sample mean and sample median are both location equivariant; the geometric mean is not.
 
 The best location equivariant estimator (minimum risk equivariant, or MRE) minimizes the risk \(E_\theta[\rho(T(X) - \theta)]\) uniformly over all equivariant estimators. For squared error loss in a location family, the MRE is the Pitman estimator:
+
 \[
 T^*(X) = \frac{\int \theta\, \prod f(x_i - \theta)\, d\theta}{\int \prod f(x_i - \theta)\, d\theta},
 \]
@@ -1137,12 +1187,14 @@ For a **scale family** \(\{\sigma^{-n}\prod f(x_i/\sigma);\, \sigma > 0\}\), sca
 ## Estimating Equations and M-Estimators
 
 An **estimating equation** is a condition on the data and parameter that defines an estimator implicitly:
+
 \[
 \sum_{i=1}^n \psi(X_i, \theta) = 0.
 \]
 The MLE is the special case \(\psi(x, \theta) = S(\theta; x) = \partial\log f_\theta(x)/\partial\theta\). The sample mean satisfies \(\psi(x, \theta) = x - \theta\). The **method of moments** equations are estimating equations with \(\psi(x, \theta) = g(x) - E_\theta[g(X)]\).
 
 An estimator defined by an estimating equation is called an **M-estimator** (maximum-likelihood-type). Under regularity conditions, M-estimators satisfy:
+
 \[
 \sqrt{n}(\hat\theta_n - \theta_0) \overset{d}{\to} N\!\left(0,\; \frac{E_{\theta_0}[\psi^2(X,\theta_0)]}{[E_{\theta_0}[\partial\psi/\partial\theta(X,\theta_0)]]^2}\right).
 \]
@@ -1181,6 +1233,7 @@ Common exact pivots:
 - \(F = S_1^2/S_2^2 \sim F(m-1, n-1)\) for comparing two normal variances.
 
 An **asymptotic pivot** is a function whose distribution converges (as \(n \to \infty\)) to a known distribution independent of \(\theta\). The three main asymptotic pivots for regular models are:
+
 \[
 Q_1 = \sqrt{n\mathcal{I}(\hat\theta)}\,(\hat\theta - \theta) \overset{d}{\to} N(0,1), \quad Q_2 = \sqrt{I(\hat\theta)}\,(\hat\theta - \theta) \overset{d}{\to} N(0,1), \quad Q_3 = -2\log R(\theta) \overset{d}{\to} \chi^2(1),
 \]
@@ -1189,6 +1242,7 @@ where \(R(\theta) = L(\theta)/L(\hat\theta)\) is the relative likelihood. The pi
 ## Second-Order Asymptotics and Bartlett Correction
 
 First-order asymptotics (\(O(n^{-1/2})\) coverage accuracy) are sometimes insufficient for small to moderate samples. **Bartlett correction** provides a second-order (\(O(n^{-1})\)) adjustment to the GLRT statistic. Specifically, if \(E_\theta[2\log\Lambda] = k(1 + c(\theta)/n + O(n^{-2}))\) under \(H_0\), then the corrected statistic
+
 \[
 \tilde W = \frac{2\log\Lambda}{1 + \hat c/n}
 \]
@@ -1209,15 +1263,18 @@ The **shift-exponential model** \(\text{Exp}(1, \theta)\) with density \(e^{-(x-
 ## Worked Example: Logistic Regression (Worked Example from McLeish Notes)
 
 Consider binary outcomes \(Y_{ij} \sim \text{Bin}(1, p_i)\) where the probability of success depends on a covariate \(x_i\) through the logistic model:
+
 \[
 p_i = \frac{e^{\alpha + \beta(x_i - \bar x)}}{1 + e^{\alpha + \beta(x_i - \bar x)}}.
 \]
 
 The log-likelihood is \(\ell(\alpha, \beta) = \sum_i \sum_j [y_{ij}(\alpha + \beta(x_i-\bar x)) - \log(1 + e^{\alpha + \beta(x_i-\bar x)})]\). The score equations are
+
 \[
 \frac{\partial\ell}{\partial\alpha} = \sum_i(y_{i\cdot} - n_i p_i) = 0, \qquad \frac{\partial\ell}{\partial\beta} = \sum_i(x_i - \bar x)(y_{i\cdot} - n_i p_i) = 0.
 \]
 These have no closed-form solution and must be solved by Newton-Raphson. The observed (and expected) Fisher information matrix is
+
 \[
 \mathcal{I}(\alpha,\beta) = \sum_i n_i p_i(1-p_i)\begin{pmatrix}1 & x_i - \bar x \\ x_i - \bar x & (x_i-\bar x)^2\end{pmatrix}.
 \]
@@ -1225,6 +1282,7 @@ These have no closed-form solution and must be solved by Newton-Raphson. The obs
 To test \(H_0: \beta = 0\) (no covariate effect), the Wald test uses \(Z = \hat\beta / \widehat{\text{SE}}(\hat\beta) \overset{d}{\to} N(0,1)\). The score test uses \(R = [S_\beta(\alpha_0, 0)]^2 / [\mathcal{I}^{-1}(\alpha_0, 0)]_{22}\) where \(\alpha_0\) is the MLE of \(\alpha\) under \(\beta = 0\). The GLRT uses \(2[\ell(\hat\alpha,\hat\beta) - \ell(\hat\alpha_0, 0)] \overset{d}{\to} \chi^2(1)\). All three are asymptotically equivalent and give the same limiting power against local alternatives \(\beta = h/\sqrt{n}\).
 
 The **profile likelihood** for \(\beta\) eliminates the nuisance parameter \(\alpha\) by substituting \(\hat\alpha(\beta) = \arg\max_\alpha \ell(\alpha, \beta)\):
+
 \[
 \ell_p(\beta) = \max_\alpha \ell(\alpha, \beta).
 \]
@@ -1233,6 +1291,7 @@ The profile likelihood CI for \(\beta\) is \(\{|\beta_0| : 2[\ell_p(\hat\beta) -
 ## Connections to Information Theory
 
 The Fisher information has a deep connection to information theory. The **Kullback-Leibler divergence** between distributions \(P_\theta\) and \(P_{\theta+d\theta}\) for infinitesimally close parameters satisfies:
+
 \[
 \text{KL}(P_\theta \| P_{\theta+d\theta}) = \tfrac{1}{2}\mathcal{I}(\theta)(d\theta)^2 + O((d\theta)^3).
 \]
@@ -1271,18 +1330,21 @@ This example integrates the main themes of the course for a single parametric pr
 **UMVUEs.** Since \(E[\bar{X}] = \mu\) and \(E[S^2] = \sigma^2\), the UMVUEs of \(\mu\) and \(\sigma^2\) are \(\bar{X}\) and \(S^2\). Basu's theorem (T complete suff., \(S^2\) ancillary for \(\mu\)) gives \(\bar{X} \perp S^2\). The UMVUE of \(\sigma\) is \(c_n S\) where \(c_n = \sqrt{(n-1)/2}\, \Gamma((n-1)/2) / \Gamma(n/2)\).
 
 **Fisher information.** The Fisher information matrix for \((\mu, \sigma^2)\) is diagonal:
+
 \[
 \mathcal{I}(\mu, \sigma^2) = \begin{pmatrix} n/\sigma^2 & 0 \\ 0 & n/(2\sigma^4) \end{pmatrix}.
 \]
 The CRLB for \(\mu\) is \(\sigma^2/n\), achieved by \(\bar{X}\). The CRLB for \(\sigma^2\) is \(2\sigma^4/n\), while \(\operatorname{Var}(S^2) = 2\sigma^4/(n-1) > 2\sigma^4/n\). So \(S^2\) does not achieve the CRLB for \(\sigma^2\) — this is not a contradiction since the family is a two-parameter exponential family but \(\sigma^2\) is not the natural parameter.
 
 **Hypothesis test for \(\mu\).** Test \(H_0: \mu = \mu_0\) vs. \(H_1: \mu \neq \mu_0\). The GLRT statistic:
+
 \[
 \Lambda = \left(1 + \frac{n(\bar{X}-\mu_0)^2}{(n-1)S^2}\right)^{n/2}, \quad T = \frac{(\bar{X} - \mu_0)\sqrt{n}}{S} \sim t(n-1) \text{ under } H_0.
 \]
 The test rejects when \(|T| > t_{\alpha/2, n-1}\). This is also the UMPU test for this problem (within the class of tests depending only on \(\bar{X}\) and \(S^2\), this two-sided \(t\)-test is uniformly most powerful among unbiased tests). Power against \(\mu = \mu_1\) is \(P(|T'| > t_{\alpha/2, n-1})\) where \(T' \sim t'(n-1, \delta)\), the non-central \(t\) with non-centrality parameter \(\delta = \sqrt{n}(\mu_1 - \mu_0)/\sigma\).
 
 **Confidence interval.** Inverting the \(t\)-test gives the \((1-\alpha)\) CI:
+
 \[
 \bar{X} \pm t_{\alpha/2, n-1}\frac{S}{\sqrt{n}}.
 \]

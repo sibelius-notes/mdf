@@ -395,6 +395,7 @@ It is the pushout in the category of groups along \( A 	o G \) and \( A 	o H \).
 angle \cong \mathbb{Z} \) and \( H = \langle b 
 angle \cong \mathbb{Z} \). The free product \( \mathbb{Z} * \mathbb{Z} = \langle a, b 
 angle = F_2 \) is the free group on two generators. Its elements are <em>reduced words</em> — finite alternating strings of powers of \( a \) and powers of \( b \) with no cancellation, for example:
+
 \[
 a^2 b^{-1} a b^3, \quad b^2 a^{-1} b^2 a, \quad a^{-3} b a^{-1} b^{-2} a.
 \]
@@ -700,6 +701,7 @@ Thus \( H_*(K) : \mathbb{Z}, \mathbb{Z} \oplus \mathbb{Z}/2, 0, 0, \ldots \). Th
 \partial_2(U) = \sum_{i=1}^g (a_i + b_i - a_i - b_i) = 0.
 \]
 All \( \partial_1 = 0 \) (as before). So all boundary maps vanish, and:
+
 \[
 H_0(\Sigma_g) = \mathbb{Z}, \quad H_1(\Sigma_g) = \mathbb{Z}^{2g}, \quad H_2(\Sigma_g) = \mathbb{Z}, \quad H_n(\Sigma_g) = 0 \text{ for } n \geq 3.
 \]
@@ -733,10 +735,12 @@ where \( \phi_{\alpha\beta} : S^{n-1} \to S^{n-1} \) is the composition of the a
 <li>\( d_2 : C_2 \to C_1 \): The attaching map of \( e^2 \) is the double covering \( S^1 \to \mathbb{RP}^1 \cong S^1 \), given by \( z \mapsto z^2 \), which has degree 2. So \( d_2(e^2) = 2e^1 \).</li>
 </ul>
 The cellular chain complex is:
+
 \[
 0 \to \mathbb{Z} \xrightarrow{d_2 = 2} \mathbb{Z} \xrightarrow{d_1 = 0} \mathbb{Z} \to 0.
 \]
 Reading off:
+
 \[
 H_0(\mathbb{RP}^2) = \mathbb{Z}/\mathrm{im}(d_1) = \mathbb{Z}/0 = \mathbb{Z},
 \]
@@ -756,10 +760,12 @@ H_2(\mathbb{RP}^2) = \ker(d_2)/0 = 0 \quad \text{(since } d_2 = 2 \text{ is inje
 <li>\( d_3 = 0 \): The attaching map of \( e^3 \) is the double cover \( S^2 \to \mathbb{RP}^2 \). The composition with the quotient \( \mathbb{RP}^2 \to \mathbb{RP}^2/\mathbb{RP}^1 \cong S^2 \) is a map of degree \( 1 + (-1) = 0 \) (the two hemispheres map with opposite orientations but the same sign under the antipodal identification), so \( d_3 = 0 \).</li>
 </ul>
 The cellular chain complex is:
+
 \[
 0 \to \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \to 0.
 \]
 Reading off (\( C_3 \xrightarrow{d_3=0} C_2 \xrightarrow{d_2=2} C_1 \xrightarrow{d_1=0} C_0 \)):
+
 \[
 H_0 = \mathbb{Z}, \quad H_1 = \ker(d_1)/\mathrm{im}(d_2) = \mathbb{Z}/2\mathbb{Z}, \quad H_2 = \ker(d_2)/\mathrm{im}(d_3) = 0, \quad H_3 = \ker(d_3) = \mathbb{Z}.
 \]
@@ -793,6 +799,7 @@ H_0 = \mathbb{Z}, \quad H_1 = \ker(d_1)/\mathrm{im}(d_2) = \mathbb{Z}/2\mathbb{Z
 H_n(X \times Y;\mathbb{Z}) \cong \bigoplus_{k=0}^n H_k(X;\mathbb{Z}) \otimes H_{n-k}(Y;\mathbb{Z}).
 \]
 In general, there is a correction term involving \( \mathrm{Tor} \), but for spaces with free homology (like \( S^n \), \( T^n \), \( \mathbb{CP}^n \)), the Künneth formula gives an exact computation. For instance:
+
 \[
 H_k(T^n) = H_k((S^1)^n) \cong \bigoplus_{j_1 + \cdots + j_n = k,\, j_i \in \{0,1\}} H_{j_1}(S^1) \otimes \cdots \otimes H_{j_n}(S^1) \cong \mathbb{Z}^{\binom{n}{k}},
 \]
@@ -846,6 +853,7 @@ where \( \delta_i : \Delta^{n-1} \to \Delta^n \) is the \( i \)-th face inclusio
 \Delta^n = \{(t_0, t_1, \ldots, t_n) \in \mathbb{R}^{n+1} : t_i \geq 0,\ t_0 + t_1 + \cdots + t_n = 1\},
 \]
 with vertices \( e_0 = (1,0,\ldots,0) \), \( e_1 = (0,1,0,\ldots,0) \), \ldots, \( e_n = (0,\ldots,0,1) \). The <em>\( i \)-th face map</em> \( \delta_i : \Delta^{n-1} 	o \Delta^n \) embeds \( \Delta^{n-1} \) as the face of \( \Delta^n \) opposite vertex \( e_i \), by inserting a zero in position \( i \):
+
 \[
 \delta_i(t_0, \ldots, t_{n-1}) = (t_0, \ldots, t_{i-1}, 0, t_i, \ldots, t_{n-1}).
 \]
@@ -858,6 +866,7 @@ For example, \( \delta_0 : \Delta^1 	o \Delta^2 \) maps the edge \( [e_0, e_1] \
 \partial_2(\sigma) = \sigma \circ \delta_0 - \sigma \circ \delta_1 + \sigma \circ \delta_2,
 \]
 where \( \delta_0, \delta_1, \delta_2 : \Delta^1 	o \Delta^2 \) are the three face inclusions. Applying \( \partial_1 \) to each term:
+
 \[
 \partial_1(\sigma \circ \delta_i) = (\sigma \circ \delta_i) \circ \delta_1 - (\sigma \circ \delta_i) \circ \delta_0 = \sigma \circ \delta_i \circ \delta_1 - \sigma \circ \delta_i \circ \delta_0.
 \]
@@ -882,10 +891,12 @@ So \( \partial_1(\partial_2(\sigma)) = (\sigma \circ \delta_0 \circ \delta_1 - \
 <em>Proof.</em> Let \( H : X \times [0,1] \to Y \) be a homotopy from \( f \) to \( g \). We construct a <em>chain homotopy</em> — a collection of homomorphisms \( P_n : C_n(X) \to C_{n+1}(Y) \) satisfying \( \partial P_n + P_{n-1} \partial = g_* - f_* \) on \( C_n(X) \).
 
 The maps \( P_n \) come from the "prism" decomposition of \( \Delta^n \times [0,1] \). The prism \( \Delta^n \times [0,1] \) can be triangulated as a union of \( (n+1) \) simplices of dimension \( n+1 \):
+
 \[
 \Delta^n \times [0,1] = \bigcup_{i=0}^n [v_0,\ldots,v_i,w_i,\ldots,w_n],
 \]
 where \( v_j = (e_j, 0) \) and \( w_j = (e_j, 1) \). For a singular \( n \)-simplex \( \sigma : \Delta^n \to X \), define:
+
 \[
 P(\sigma) = \sum_{i=0}^n (-1)^i H \circ (\sigma \times \mathrm{id}) \circ \iota_i,
 \]
@@ -895,7 +906,8 @@ where \( \iota_i : \Delta^{n+1} \to \Delta^n \times [0,1] \) is the affine map s
 <div class="remark">
 <strong>Remark (Geometric Meaning of Chain Homotopies):</strong> A chain homotopy \( P_n : C_n(X) 	o C_{n+1}(Y) \) should be thought of geometrically as a "prism" construction. Given a singular \( n \)-simplex \( \sigma : \Delta^n 	o X \) and a homotopy \( H : X 	imes [0,1] 	o Y \), the map \( H \circ (\sigma 	imes \mathrm{id}) : \Delta^n 	imes [0,1] 	o Y \) sweeps out a "prism" over \( \sigma \). The prism \( \Delta^n 	imes [0,1] \) is triangulated as a union of \( (n+1) \) simplices of dimension \( n+1 \):
 \[
-\Delta^n 	imes [0,1] = igcup_{i=0}^n \left[ v_0, \ldots, v_i, w_i, \ldots, w_n ight],
+\Delta^n 	imes [0,1] = igcup_{i=0}^n \left[ v_0, \ldots, v_i, w_i, \ldots, w_n 
+ight],
 \]
 where \( v_j = (e_j, 0) \) are the "bottom" vertices and \( w_j = (e_j, 1) \) are the "top" vertices. The chain homotopy \( P(\sigma) \) is the alternating sum of the \( (n+1) \) singular \( (n+1) \)-simplices obtained by restricting \( H \circ (\sigma 	imes \mathrm{id}) \) to each piece of this triangulation. The algebraic identity \( \partial P + P \partial = g_* - f_* \) then encodes the fact that the boundary of the prism consists of the top face (\( g \circ \sigma \)), the bottom face (\( f \circ \sigma \)), and the lateral faces (which contribute the \( P \partial \) term).
 </div>
@@ -980,6 +992,7 @@ By exactness, \( H_k(S^n) \cong H_{k-1}(S^{n-1}) \) for \( k \geq 2 \). By induc
 \underbrace{H_2(A \cap B)}_{=0} \to \underbrace{H_2(A)}_{=0} \oplus \underbrace{H_2(B)}_{=0} \to H_2(T^2) \xrightarrow{\partial} H_1(A \cap B) \xrightarrow{\Phi} H_1(A) \oplus H_1(B).
 \]
 The map \( \Phi : H_1(S^1) \to H_1(S^1 \vee S^1) \oplus H_1(*) \cong \mathbb{Z}^2 \oplus 0 \). The inclusion \( A \cap B \simeq S^1 \hookrightarrow A \simeq S^1 \vee S^1 \) sends the boundary circle to the commutator \( aba^{-1}b^{-1} \) in \( \pi_1 \), which maps to \( a + b - a - b = 0 \) in \( H_1(A) \cong \mathbb{Z}^2 \). So \( \Phi = 0 \), and the sequence gives an isomorphism \( H_2(T^2) \xrightarrow{\sim} \ker \Phi = \mathbb{Z} \). For degree 1:
+
 \[
 \underbrace{H_1(A \cap B)}_{\mathbb{Z}} \xrightarrow{0} \underbrace{H_1(A) \oplus H_1(B)}_{\mathbb{Z}^2 \oplus 0} \to H_1(T^2) \to \underbrace{H_0(A \cap B)}_{\mathbb{Z}} \to \underbrace{H_0(A) \oplus H_0(B)}_{\mathbb{Z} \oplus \mathbb{Z}}.
 \]
@@ -994,6 +1007,7 @@ Since \( A \) and \( B \) are connected, the last map \( \mathbb{Z} \to \mathbb{
 H_n(A \cap B) \to H_n(A) \oplus H_n(B) \to H_n(X) \to H_{n-1}(A \cap B).
 \]
 Since \( A \cap B \) is contractible, \( H_n(A \cap B) = 0 \) for \( n \geq 1 \), and the sequence gives \( H_n(X) \cong H_n(A) \oplus H_n(B) \) for \( n \geq 1 \). Thus:
+
 \[
 H_1(S^1 \vee S^2) \cong H_1(S^1) \oplus H_1(S^2) = \mathbb{Z} \oplus 0 = \mathbb{Z},
 \]
@@ -1017,6 +1031,7 @@ With \( A \simeq B \simeq S^1 \), \( A \cap B \simeq S^1 \sqcup S^1 \), the map 
 0 = H_2(S^1) \to H_2(M) \oplus H_2(D^2) \to H_2(\mathbb{RP}^2) \to H_1(S^1) \xrightarrow{\Phi} H_1(M) \oplus H_1(D^2).
 \]
 Here \( H_2(M) = 0 \) (the Möbius band is non-compact and homotopy equivalent to \( S^1 \)), \( H_2(D^2) = 0 \), \( H_1(S^1) \cong \mathbb{Z} \), \( H_1(M) \cong \mathbb{Z} \) (generated by the core circle), and \( H_1(D^2) = 0 \). The map \( \Phi : H_1(S^1) \to H_1(M) \) is induced by the inclusion of the boundary \( \partial M \cong S^1 \hookrightarrow M \); since the boundary of a Möbius band goes around the core circle twice, \( \Phi \) is multiplication by 2. The exact sequence gives:
+
 \[
 0 \to H_2(\mathbb{RP}^2) \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to H_1(\mathbb{RP}^2) \to 0.
 \]
@@ -1214,10 +1229,12 @@ H_k(S^n, S^n \setminus S) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n
 H_1(S^n) = 0 \to H_1(S^n, S^n \setminus S) = 0 \to \tilde H_0(S^n \setminus S) \to \tilde H_0(S^n) = 0.
 \]
 Wait, we need the segment:
+
 \[
 H_n(S^n) \cong \mathbb{Z} \to H_n(S^n, S^n \setminus S) \cong \mathbb{Z} \xrightarrow{\partial_*} H_{n-1}(S^n \setminus S) \to H_{n-1}(S^n) = 0,
 \]
 and
+
 \[
 0 = H_1(S^n) \to H_1(S^n, S^n \setminus S) = 0 \to H_0(S^n \setminus S) \to H_0(S^n) \cong \mathbb{Z}.
 \]
@@ -1497,10 +1514,12 @@ We know:
 <li>\( \pi_3(S^3) \cong \mathbb{Z} \) (Hurewicz: \( S^3 \) is 2-connected and \( H_3(S^3) \cong \mathbb{Z} \)).</li>
 </ul>
 The sequence simplifies around the relevant terms:
+
 \[
 0 = \pi_3(S^1) \to \pi_3(S^3) \xrightarrow{p_*} \pi_3(S^2) \to \pi_2(S^1) = 0.
 \]
 By exactness, \( p_* : \pi_3(S^3) \xrightarrow{\sim} \pi_3(S^2) \) is an isomorphism. Therefore:
+
 \[
 \pi_3(S^2) \cong \pi_3(S^3) \cong \mathbb{Z},
 \]
@@ -1643,6 +1662,7 @@ This theorem implies that the groups \( \pi_{n+k}(S^k) \) stabilise as \( k \to 
 \cdots \to \pi_n(S^1) \to \pi_n(S^3) \to \pi_n(S^2) \to \pi_{n-1}(S^1) \to \cdots
 \]
 For \( n \geq 3 \), since \( \pi_n(S^1) = 0 \), this gives \( \pi_n(S^3) \cong \pi_n(S^2) \) for \( n \geq 3 \). So the homotopy groups of \( S^2 \) and \( S^3 \) are isomorphic in all degrees \( \geq 3 \):
+
 \[
 \pi_4(S^2) \cong \pi_4(S^3) \cong \mathbb{Z}/2, \quad \pi_5(S^2) \cong \pi_5(S^3) \cong \mathbb{Z}/2, \quad \pi_6(S^2) \cong \pi_6(S^3) \cong \mathbb{Z}/12.
 \]
@@ -1763,6 +1783,7 @@ where \( \alpha \in H^2(\mathbb{CP}^n;\mathbb{Z}) \cong \mathbb{Z} \) is the gen
 ## Section 7.2b: De Rham Cohomology (Comparison)
 
 For smooth manifolds, there is a third approach to cohomology — de Rham cohomology — using differential forms. The de Rham cohomology groups \( H^k_{\mathrm{dR}}(M) \) are defined as the closed \( k \)-forms modulo the exact \( k \)-forms:
+
 \[
 H^k_{\mathrm{dR}}(M) = \ker(d : \Omega^k(M) \to \Omega^{k+1}(M)) / \mathrm{im}(d : \Omega^{k-1}(M) \to \Omega^k(M)).
 \]
@@ -1874,21 +1895,25 @@ This symmetry \( H^k \cong H_{2-k} \) is a manifestation of the "self-duality" o
 For reference, here are the most important long exact sequences used throughout this course.
 
 **Long exact sequence of a pair:**
+
 \[
 \cdots \to H_n(A) \xrightarrow{i_*} H_n(X) \xrightarrow{j_*} H_n(X,A) \xrightarrow{\partial_*} H_{n-1}(A) \to \cdots
 \]
 
 **Mayer–Vietoris sequence (\( X = A \cup B \), open):**
+
 \[
 \cdots \to H_n(A \cap B) \xrightarrow{\Phi} H_n(A) \oplus H_n(B) \xrightarrow{\Psi} H_n(X) \xrightarrow{\partial} H_{n-1}(A \cap B) \to \cdots
 \]
 
 **Long exact sequence of a fibration \( F \hookrightarrow E \xrightarrow{p} B \):**
+
 \[
 \cdots \to \pi_n(F) \xrightarrow{i_*} \pi_n(E) \xrightarrow{p_*} \pi_n(B) \xrightarrow{\partial} \pi_{n-1}(F) \to \cdots \to \pi_0(E) \to \pi_0(B)
 \]
 
 **Hurewicz isomorphism** (for \( (n-1) \)-connected \( X \), \( n \geq 2 \)):
+
 \[
 h_n : \pi_n(X) \xrightarrow{\sim} H_n(X).
 \]
@@ -1896,6 +1921,7 @@ h_n : \pi_n(X) \xrightarrow{\sim} H_n(X).
 Each of these sequences encodes a fundamental relationship between algebraic invariants. The long exact sequence of a pair measures the "relative" contribution of a subspace; Mayer–Vietoris decomposes a space into simpler pieces; the fibration sequence relates the topology of a total space to that of its base and fibre; and the Hurewicz isomorphism connects the homotopy-theoretic and homological perspectives on connectivity. Together they constitute the computational spine of algebraic topology: every computation in this course reduces to reading off one of these sequences, computing its terms, and deducing the unknown groups from exactness.
 
 **Gysin sequence (for sphere bundles):** Let \( S^{n-1} \hookrightarrow E \xrightarrow{\pi} B \) be a sphere bundle (a fibre bundle with fibre \( S^{n-1} \)) over a compact oriented manifold \( B \). The **Gysin sequence** is the long exact sequence in cohomology:
+
 \[
 \cdots \to H^k(E) \xrightarrow{\pi^*} H^{k-n}(B) \xrightarrow{\cup e} H^k(B) \xrightarrow{\pi_!} H^k(E) \to \cdots
 \]

@@ -17,6 +17,7 @@ prof: "Samuel Wong"
 Regression analysis is the study of how a **response variable** (also called the dependent variable) relates to one or more **explanatory variables** (also called independent variables, predictors, or covariates). We denote the response by \(Y\) and the predictors by \(x_1, x_2, \ldots, x_p\). A **regression model** captures the functional relationship between the response and the predictors, and in this course the focus is on models that are *linear in the parameters*.
 
 A general **linear model** takes the form
+
 \[
 Y = \beta_0 + \beta_1 x_1 + \cdots + \beta_p x_p + \varepsilon,
 \]
@@ -25,6 +26,7 @@ where \(\beta_0\) is the intercept, \(\beta_1, \ldots, \beta_p\) are regression 
 ## 1.2 The Simple Linear Regression Model
 
 When there is only one explanatory variable, the model becomes the **simple linear regression** (SLR) model. For data pairs \((x_i, y_i)\), \(i = 1, \ldots, n\), we write
+
 \[
 Y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \qquad \varepsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2).
 \]
@@ -37,6 +39,7 @@ The standard assumptions, often remembered by the acronym **LINE**, are:
 4. **Equal variance** (homoscedasticity): \(\operatorname{Var}(\varepsilon_i) = \sigma^2\) for all \(i\).
 
 Under these assumptions, each observation satisfies
+
 \[
 Y_i \overset{\text{indep}}{\sim} \mathcal{N}(\beta_0 + \beta_1 x_i, \, \sigma^2).
 \]
@@ -51,10 +54,12 @@ Here \(\beta_0, \beta_1, \sigma^2\) are fixed but unknown parameters; \(\varepsi
 ### Sample Correlation
 
 Before fitting a model, it is wise to examine the **sample correlation coefficient**, which measures the strength and direction of the linear association between \(x\) and \(y\):
+
 \[
 r = \frac{S_{xy}}{\sqrt{S_{xx} \, S_{yy}}},
 \]
 where
+
 \[
 S_{xx} = \sum_{i=1}^n (x_i - \bar{x})^2, \qquad S_{xy} = \sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y}), \qquad S_{yy} = \sum_{i=1}^n (y_i - \bar{y})^2.
 \]
@@ -79,6 +84,7 @@ S(\beta_0, \beta_1) = \sum_{i=1}^n \bigl(y_i - (\beta_0 + \beta_1 x_i)\bigr)^2.
 
 <div class="proof">
 Taking partial derivatives and setting them to zero:
+
 \[
 \frac{\partial S}{\partial \beta_0} = -2 \sum_{i=1}^n \bigl(y_i - \beta_0 - \beta_1 x_i\bigr) = 0 \quad \Longrightarrow \quad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}.
 \]
@@ -86,6 +92,7 @@ Taking partial derivatives and setting them to zero:
 \frac{\partial S}{\partial \beta_1} = -2 \sum_{i=1}^n x_i \bigl(y_i - \beta_0 - \beta_1 x_i\bigr) = 0.
 \]
 Substituting the expression for \(\hat{\beta}_0\) into the second equation and simplifying yields
+
 \[
 \hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{S_{xy}}{S_{xx}}.
 \]
@@ -94,10 +101,12 @@ Substituting the expression for \(\hat{\beta}_0\) into the second equation and s
 ### Equivalence with Maximum Likelihood
 
 Under the normal error assumption, the joint likelihood of \(Y_1, \ldots, Y_n\) is
+
 \[
 L(\beta_0, \beta_1, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\!\left(-\frac{(y_i - \beta_0 - \beta_1 x_i)^2}{2\sigma^2}\right).
 \]
 The log-likelihood is
+
 \[
 \ell(\beta_0, \beta_1, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln(\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2.
 \]
@@ -110,6 +119,7 @@ The <strong>fitted values</strong> are \(\hat{\mu}_i = \hat{\beta}_0 + \hat{\bet
 </div>
 
 Two fundamental constraints on the residuals follow directly from the normal equations:
+
 \[
 \sum_{i=1}^n e_i = 0, \qquad \sum_{i=1}^n x_i e_i = 0.
 \]
@@ -118,6 +128,7 @@ These constraints reduce the degrees of freedom from \(n\) to \(n - 2\), since t
 ### Estimating the Error Variance
 
 The unbiased estimator of \(\sigma^2\) is
+
 \[
 \hat{\sigma}^2 = \frac{\text{SS(Res)}}{n - 2} = \frac{\sum_{i=1}^n e_i^2}{n - 2}.
 \]
@@ -139,10 +150,12 @@ In particular, both estimators are unbiased: \(\mathbb{E}[\hat{\beta}_1] = \beta
 
 <div class="proof">
 Write \(\hat{\beta}_1 = \sum_{i=1}^n a_i Y_i\) where \(a_i = (x_i - \bar{x})/S_{xx}\). Then
+
 \[
 \mathbb{E}[\hat{\beta}_1] = \sum a_i(\beta_0 + \beta_1 x_i) = \beta_0 \underbrace{\sum a_i}_{=0} + \beta_1 \underbrace{\sum a_i x_i}_{=1} = \beta_1.
 \]
 For the variance, independence of the \(Y_i\) gives
+
 \[
 \operatorname{Var}(\hat{\beta}_1) = \sum a_i^2 \sigma^2 = \sigma^2 \frac{\sum (x_i - \bar{x})^2}{S_{xx}^2} = \frac{\sigma^2}{S_{xx}}.
 \]
@@ -156,6 +169,7 @@ The <strong>standard error</strong> of \(\hat{\beta}_1\) is \(\operatorname{SE}(
 </div>
 
 Since \(\text{SS(Res)}/\sigma^2 \sim \chi^2(n-2)\) and is independent of \(\hat{\beta}_1\), we obtain
+
 \[
 T = \frac{\hat{\beta}_1 - \beta_1}{\operatorname{SE}(\hat{\beta}_1)} \sim t(n-2).
 \]
@@ -163,6 +177,7 @@ T = \frac{\hat{\beta}_1 - \beta_1}{\operatorname{SE}(\hat{\beta}_1)} \sim t(n-2)
 ### Confidence Intervals
 
 A \(100(1-\alpha)\%\) confidence interval for \(\beta_1\) is
+
 \[
 \hat{\beta}_1 \pm t_{1-\alpha/2, \, n-2} \cdot \operatorname{SE}(\hat{\beta}_1),
 \]
@@ -171,6 +186,7 @@ where \(t_{1-\alpha/2, \, n-2}\) is the appropriate quantile of the \(t\)-distri
 ### Hypothesis Testing
 
 To test \(H_0\colon \beta_1 = 0\) against \(H_A\colon \beta_1 \neq 0\), compute the test statistic
+
 \[
 t = \frac{\hat{\beta}_1}{\operatorname{SE}(\hat{\beta}_1)} \sim t(n-2) \quad \text{under } H_0.
 \]
@@ -183,12 +199,14 @@ A \(100(1-\alpha)\%\) confidence interval and a hypothesis test at the \(\alpha\
 ## 1.5 ANOVA Decomposition for SLR
 
 The total variability in the response can be decomposed as
+
 \[
 \underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SS(Total)}} = \underbrace{\sum_{i=1}^n (\hat{\mu}_i - \bar{y})^2}_{\text{SS(Reg)}} + \underbrace{\sum_{i=1}^n (y_i - \hat{\mu}_i)^2}_{\text{SS(Res)}}.
 \]
 This identity holds because the cross-product term vanishes: \(\sum e_i(\hat{\mu}_i - \bar{y}) = 0\), a consequence of the orthogonality of the residual and fitted value vectors.
 
 The **coefficient of determination** is
+
 \[
 R^2 = \frac{\text{SS(Reg)}}{\text{SS(Total)}} = 1 - \frac{\text{SS(Res)}}{\text{SS(Total)}},
 \]
@@ -199,10 +217,12 @@ and represents the proportion of variability in \(Y\) explained by the linear mo
 ### Confidence Interval for the Mean Response
 
 For a new value \(x_0\), the estimated mean response is \(\hat{\mu}_0 = \hat{\beta}_0 + \hat{\beta}_1 x_0\). Its distribution is
+
 \[
 \hat{\mu}_0 \sim \mathcal{N}\!\left(\mu_0, \; \sigma^2\!\left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)\right),
 \]
 so a \(100(1-\alpha)\%\) confidence interval for the mean response \(\mu_0 = \beta_0 + \beta_1 x_0\) is
+
 \[
 \hat{\mu}_0 \pm t_{1-\alpha/2,\,n-2}\;\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}.
 \]
@@ -210,10 +230,12 @@ so a \(100(1-\alpha)\%\) confidence interval for the mean response \(\mu_0 = \be
 ### Prediction Interval for a New Observation
 
 For a future observation \(Y_0 \sim \mathcal{N}(\beta_0 + \beta_1 x_0, \sigma^2)\), the prediction error \(Y_0 - \hat{\mu}_0\) has variance
+
 \[
 \operatorname{Var}(Y_0 - \hat{\mu}_0) = \sigma^2 + \sigma^2\!\left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right) = \sigma^2\!\left(1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right).
 \]
 A \(100(1-\alpha)\%\) **prediction interval** for \(Y_0\) is
+
 \[
 \hat{\mu}_0 \pm t_{1-\alpha/2,\,n-2}\;\hat{\sigma}\sqrt{1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}.
 \]
@@ -229,6 +251,7 @@ The prediction interval is always wider than the confidence interval for the mea
 ## 1.7 Correlation and the Pearson Coefficient
 
 The **Pearson correlation coefficient** between \(X\) and \(Y\) is
+
 \[
 \rho = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\,\text{Var}(Y)}}.
 \]
@@ -238,6 +261,7 @@ Its sample estimate is \(r = S_{xy}/\sqrt{S_{xx} S_{yy}}\), which satisfies \(-1
 ### Testing \(H_0\colon \rho = 0\)
 
 Under the assumption of bivariate normality, the statistic
+
 \[
 T = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}} \sim t(n-2) \quad \text{under } H_0\colon \rho = 0
 \]
@@ -246,6 +270,7 @@ is identical to the t-test for \(H_0\colon \beta_1 = 0\) in SLR. Thus testing ze
 ### Confidence Interval for \(\rho\)
 
 For general \(\rho \neq 0\), the distribution of \(r\) is skewed, making a direct CI difficult. Fisher's **z-transformation** stabilises the variance:
+
 \[
 z = \frac{1}{2}\ln\!\left(\frac{1+r}{1-r}\right) = \tanh^{-1}(r).
 \]
@@ -264,14 +289,17 @@ The transformed statistic satisfies \(z \approx \mathcal{N}(\tanh^{-1}(\rho), 1/
 ## 2.1 Matrix Formulation
 
 When there are \(p\) predictors, the model for \(n\) observations is
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \cdots + \beta_p x_{ip} + \varepsilon_i, \qquad \varepsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2),
 \]
 which can be written compactly as
+
 \[
 \boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\varepsilon},
 \]
 where
+
 \[
 \boldsymbol{Y} = \begin{bmatrix} Y_1 \\ \vdots \\ Y_n \end{bmatrix}_{n \times 1}, \quad
 X = \begin{bmatrix} 1 & x_{11} & \cdots & x_{1p} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n1} & \cdots & x_{np} \end{bmatrix}_{n \times (p+1)}, \quad
@@ -285,6 +313,7 @@ The matrix \(X\) is called the **design matrix**. Under the model assumptions, \
 
 <div class="definition">
 For a <strong>random vector</strong> \(\boldsymbol{Y} = (Y_1, \ldots, Y_n)^\top\), the <strong>mean vector</strong> is \(\mathbb{E}[\boldsymbol{Y}] = (\mathbb{E}[Y_1], \ldots, \mathbb{E}[Y_n])^\top\) and the <strong>covariance matrix</strong> is the \(n \times n\) matrix with \((i,j)\) entry \(\operatorname{Cov}(Y_i, Y_j)\):
+
 \[
 \operatorname{Var}(\boldsymbol{Y}) = \mathbb{E}\!\left[(\boldsymbol{Y} - \mathbb{E}[\boldsymbol{Y}])(\boldsymbol{Y} - \mathbb{E}[\boldsymbol{Y}])^\top\right].
 \]
@@ -292,6 +321,7 @@ This matrix is symmetric and positive semi-definite.
 </div>
 
 Key properties for a constant matrix \(A\) and a constant vector \(\boldsymbol{b}\):
+
 \[
 \mathbb{E}[A\boldsymbol{Y} + \boldsymbol{b}] = A\mathbb{E}[\boldsymbol{Y}] + \boldsymbol{b}, \qquad \operatorname{Var}(A\boldsymbol{Y} + \boldsymbol{b}) = A\operatorname{Var}(\boldsymbol{Y})A^\top.
 \]
@@ -300,6 +330,7 @@ Key properties for a constant matrix \(A\) and a constant vector \(\boldsymbol{b
 
 <div class="definition">
 A random vector \(\boldsymbol{Y}\) has a <strong>multivariate normal distribution</strong> \(\text{MVN}(\boldsymbol{\mu}, \Sigma)\) if its density is
+
 \[
 f(\boldsymbol{y}; \boldsymbol{\mu}, \Sigma) = \frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}} \exp\!\left\{-\frac{1}{2}(\boldsymbol{y} - \boldsymbol{\mu})^\top \Sigma^{-1}(\boldsymbol{y} - \boldsymbol{\mu})\right\}.
 \]
@@ -322,10 +353,12 @@ Important properties of the MVN:
 
 <div class="proof">
 The sum of squares function is
+
 \[
 S(\boldsymbol{\beta}) = (\boldsymbol{y} - X\boldsymbol{\beta})^\top(\boldsymbol{y} - X\boldsymbol{\beta}) = \boldsymbol{y}^\top\boldsymbol{y} - 2\boldsymbol{\beta}^\top X^\top \boldsymbol{y} + \boldsymbol{\beta}^\top X^\top X \boldsymbol{\beta}.
 \]
 Taking the matrix derivative and setting it to zero:
+
 \[
 \frac{\partial S}{\partial \boldsymbol{\beta}} = -2X^\top \boldsymbol{y} + 2X^\top X \boldsymbol{\beta} = \boldsymbol{0} \quad \Longrightarrow \quad \hat{\boldsymbol{\beta}} = (X^\top X)^{-1}X^\top \boldsymbol{y}.
 \]
@@ -333,11 +366,13 @@ The invertibility of \(X^\top X\) requires the columns of \(X\) to be linearly i
 </div>
 
 The fitted values and residuals are
+
 \[
 \hat{\boldsymbol{\mu}} = X\hat{\boldsymbol{\beta}}, \qquad \boldsymbol{e} = \boldsymbol{y} - \hat{\boldsymbol{\mu}}.
 \]
 
 The unbiased estimator of \(\sigma^2\) is
+
 \[
 \hat{\sigma}^2 = \frac{\boldsymbol{e}^\top \boldsymbol{e}}{n - p - 1} = \frac{\text{SS(Res)}}{n - p - 1}.
 \]
@@ -346,6 +381,7 @@ The unbiased estimator of \(\sigma^2\) is
 
 <div class="definition">
 The <strong>hat matrix</strong> is defined as
+
 \[
 H = X(X^\top X)^{-1}X^\top.
 \]
@@ -360,6 +396,7 @@ Key properties of \(H\):
 4. \(\operatorname{tr}(H) = p + 1\) and \(\operatorname{tr}(I - H) = n - (p + 1)\).
 
 The fitted values and residuals, viewed as random vectors, have the distributions:
+
 \[
 \hat{\boldsymbol{\mu}} \sim \text{MVN}(X\boldsymbol{\beta}, \sigma^2 H), \qquad \boldsymbol{e} \sim \text{MVN}(\boldsymbol{0}, \sigma^2(I - H)).
 \]
@@ -374,6 +411,7 @@ Moreover, \(\hat{\boldsymbol{\beta}}\) and \(\boldsymbol{e}\) are independent, w
 \hat{\boldsymbol{\beta}} \sim \text{MVN}\!\left(\boldsymbol{\beta}, \; \sigma^2 (X^\top X)^{-1}\right).
 \]
 In particular, for each coefficient \(j = 0, 1, \ldots, p\),
+
 \[
 \hat{\beta}_j \sim \mathcal{N}\!\left(\beta_j, \; \sigma^2 V_{jj}\right),
 \]
@@ -382,6 +420,7 @@ where \(V_{jj} = [(X^\top X)^{-1}]_{jj}\).
 
 <div class="proof">
 Since \(\hat{\boldsymbol{\beta}} = (X^\top X)^{-1}X^\top \boldsymbol{Y}\) is a linear transformation of the MVN vector \(\boldsymbol{Y}\):
+
 \[
 \mathbb{E}[\hat{\boldsymbol{\beta}}] = (X^\top X)^{-1}X^\top \mathbb{E}[\boldsymbol{Y}] = (X^\top X)^{-1}X^\top X\boldsymbol{\beta} = \boldsymbol{\beta}.
 \]
@@ -393,10 +432,12 @@ Since \(\hat{\boldsymbol{\beta}} = (X^\top X)^{-1}X^\top \boldsymbol{Y}\) is a l
 ### Confidence Intervals and Hypothesis Tests for Individual Coefficients
 
 The standard error of \(\hat{\beta}_j\) is \(\operatorname{SE}(\hat{\beta}_j) = \hat{\sigma}\sqrt{V_{jj}}\). The pivotal quantity
+
 \[
 T = \frac{\hat{\beta}_j - \beta_j}{\operatorname{SE}(\hat{\beta}_j)} \sim t(n - p - 1)
 \]
 yields a \(100(1-\alpha)\%\) confidence interval
+
 \[
 \hat{\beta}_j \pm t_{1-\alpha/2, \, n-p-1}\;\operatorname{SE}(\hat{\beta}_j).
 \]
@@ -417,11 +458,13 @@ Among all unbiased linear estimators of \(\boldsymbol{\beta}\), the OLS estimato
 For a new covariate vector \(\boldsymbol{x}_0 = (1, x_{01}, \ldots, x_{0p})\), the predicted mean response is \(\hat{\mu}_0 = \boldsymbol{x}_0 \hat{\boldsymbol{\beta}}\).
 
 A \(100(1-\alpha)\%\) **confidence interval for the mean** response at \(\boldsymbol{x}_0\) is
+
 \[
 \hat{\mu}_0 \pm t_{1-\alpha/2, \, n-p-1}\;\hat{\sigma}\sqrt{\boldsymbol{x}_0 (X^\top X)^{-1} \boldsymbol{x}_0^\top}.
 \]
 
 A \(100(1-\alpha)\%\) **prediction interval** for a new observation at \(\boldsymbol{x}_0\) is
+
 \[
 \hat{\mu}_0 \pm t_{1-\alpha/2, \, n-p-1}\;\hat{\sigma}\sqrt{1 + \boldsymbol{x}_0 (X^\top X)^{-1} \boldsymbol{x}_0^\top}.
 \]
@@ -436,6 +479,7 @@ The prediction interval is wider because the variance of the prediction error is
 \text{SS(Total)} = \text{SS(Reg)} + \text{SS(Res)},
 \]
 where
+
 \[
 \text{SS(Total)} = \sum_{i=1}^n (y_i - \bar{y})^2, \quad \text{SS(Reg)} = \sum_{i=1}^n (\hat{\mu}_i - \bar{y})^2, \quad \text{SS(Res)} = \sum_{i=1}^n (y_i - \hat{\mu}_i)^2.
 \]
@@ -449,11 +493,13 @@ where
 ### Overall F-Test
 
 To test whether *any* predictor is related to the response, we test
+
 \[
 H_0\colon \beta_1 = \beta_2 = \cdots = \beta_p = 0 \qquad \text{vs.} \qquad H_A\colon \text{at least one } \beta_j \neq 0.
 \]
 
 Under \(H_0\), the reduced model is \(Y_i = \beta_0 + \varepsilon_i\), so \(\text{SS(Res)}_A = \text{SS(Total)}\). The F-statistic is
+
 \[
 F = \frac{\text{SS(Reg)}/p}{\text{SS(Res)}/(n-p-1)} = \frac{\text{MS(Reg)}}{\text{MS(Res)}} \sim F(p, n-p-1) \quad \text{under } H_0.
 \]
@@ -461,6 +507,7 @@ F = \frac{\text{SS(Reg)}/p}{\text{SS(Res)}/(n-p-1)} = \frac{\text{MS(Reg)}}{\tex
 ### Partial F-Test (Comparing Nested Models)
 
 More generally, to test \(H_0\colon A\boldsymbol{\beta} = \boldsymbol{0}\) where \(A\) is an \(\ell \times (p+1)\) matrix of rank \(\ell\) specifying \(\ell\) linear constraints, fit both the full model and the reduced model (under \(H_0\)). The test statistic is
+
 \[
 F = \frac{(\text{SS(Res)}_A - \text{SS(Res)})/\ell}{\text{SS(Res)}/(n-p-1)} \sim F(\ell, n-p-1) \quad \text{under } H_0.
 \]
@@ -546,6 +593,7 @@ A one-way ANOVA comparing \(k\) group means is equivalent to a regression model 
 ### Comparing Two Non-Reference Groups
 
 To test \(H_0\colon \beta_j = \beta_k\), the standard error of the contrast is
+
 \[
 \operatorname{SE}(\hat{\beta}_j - \hat{\beta}_k) = \hat{\sigma}\sqrt{V_{jj} + V_{kk} - 2V_{jk}},
 \]
@@ -554,11 +602,13 @@ where \(V = (X^\top X)^{-1}\).
 ## 3.2 Interaction Terms
 
 An **interaction** between two predictors means the effect of one predictor on the response depends on the level of the other. For continuous predictors \(x_1\) and \(x_2\), the interaction model is
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i1} x_{i2} + \varepsilon_i.
 \]
 
 This can be rewritten as
+
 \[
 Y_i = \beta_0 + (\beta_1 + \beta_3 x_{i2}) x_{i1} + \beta_2 x_{i2} + \varepsilon_i,
 \]
@@ -567,6 +617,7 @@ showing that the slope of \(Y\) with respect to \(x_1\) changes with \(x_2\).
 ### Interactions with Categorical Variables
 
 When a categorical variable interacts with a continuous variable, the model allows different slopes for different groups. For example, with a continuous predictor \(x_1\) and a categorical predictor (using indicator \(x_2\)):
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i1} x_{i2} + \varepsilon_i.
 \]
@@ -580,6 +631,7 @@ The <strong>hierarchical principle</strong> dictates that if an interaction term
 ## 3.3 Analysis of Covariance (ANCOVA)
 
 **Analysis of covariance** combines a continuous predictor (the covariate) with a categorical predictor to adjust group comparisons for differences in the covariate. The ANCOVA model with one covariate \(x_1\) and a binary group indicator \(x_2\) (no interaction) is
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \varepsilon_i.
 \]
@@ -591,6 +643,7 @@ Under this model the two groups have **parallel regression lines** with differen
 </div>
 
 When we allow the groups to have different slopes, the **interaction ANCOVA** model is
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 (x_{i1} x_{i2}) + \varepsilon_i.
 \]
@@ -599,6 +652,7 @@ The group difference \(\beta_2 + \beta_3 x_1\) now varies with the covariate, an
 ## 3.4 General Linear Hypotheses and Extra Sum of Squares
 
 Any hypothesis expressible as \(H_0\colon C\boldsymbol{\beta} = \boldsymbol{0}\) for a matrix \(C\) of rank \(r\) can be tested with the partial F-statistic:
+
 \[
 F = \frac{(\text{SS(Reg, Full)} - \text{SS(Reg, Reduced)})/r}{\text{SS(Res, Full)}/(n - p - 1)} \sim F(r, n - p - 1).
 \]
@@ -611,6 +665,7 @@ The numerator, \(\text{SS(Reg, Full)} - \text{SS(Reg, Reduced)}\), is the **extr
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3} + \varepsilon_i.
 \]
 To test whether processing method matters at all (\(H_0\colon \beta_2 = \beta_3 = 0\)):
+
 \[
 C = \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix},
 \]
@@ -640,6 +695,7 @@ The fundamental purpose of residual analysis is to assess whether the LINE assum
 ### Ordinary vs. Studentized Residuals
 
 The ordinary residuals \(e_i\) satisfy \(e_i \sim \mathcal{N}(0, \sigma^2(1 - h_{ii}))\), where \(h_{ii}\) is the \(i\)-th diagonal element of the hat matrix. Since the variances differ, it is more informative to examine **studentized residuals**:
+
 \[
 r_i = \frac{e_i}{\hat{\sigma}\sqrt{1 - h_{ii}}}.
 \]
@@ -667,6 +723,7 @@ Using a first-order Taylor expansion, if \(\operatorname{Var}(Y_i) = h(\mu_i)\si
 ### Box-Cox Transformations
 
 The **Box-Cox** family of power transformations is
+
 \[
 g(y_i) = \begin{cases} (y_i^\lambda - 1)/\lambda & \lambda \neq 0 \\ \ln(y_i) & \lambda = 0 \end{cases}.
 \]
@@ -679,6 +736,7 @@ After transforming the response, the interpretation of coefficients changes. For
 ### Transforming Predictors and Adding Polynomial Terms
 
 Nonlinearity can also be addressed by transforming predictors (e.g., \(\ln(x_j)\), \(\sqrt{x_j}\)) or by adding polynomial terms:
+
 \[
 Y_i = \beta_0 + \beta_1 x_i + \beta_2 x_i^2 + \varepsilon_i.
 \]
@@ -687,6 +745,7 @@ This model is still *linear in the parameters* \(\beta_0, \beta_1, \beta_2\) and
 ## 4.3 Weighted Least Squares
 
 When the error variances are known to differ across observations, \(\operatorname{Var}(\varepsilon_i) = \sigma_i^2\), **weighted least squares** (WLS) provides more efficient estimates by minimizing
+
 \[
 \sum_{i=1}^n w_i (y_i - \boldsymbol{x}_i^\top \boldsymbol{\beta})^2, \qquad w_i = \frac{1}{\sigma_i^2}.
 \]
@@ -721,6 +780,7 @@ An observation is an **outlier** if its studentized residual is unusually large,
 ### Externally Studentized (Jackknife) Residuals
 
 To address the masking issue, **leave-one-out** (or jackknife) residuals use \(\hat{\sigma}_{(-i)}^2\) (the error variance estimate computed without observation \(i\)):
+
 \[
 r_{i(-i)} = \frac{e_i}{\hat{\sigma}_{(-i)}\sqrt{1 - h_{ii}}} = r_i \left[\frac{n - p - 2}{n - p - 1 - r_i^2}\right]^{1/2}.
 \]
@@ -729,10 +789,12 @@ This can be computed from a single model fit without refitting \(n\) times.
 ### Cook's Distance
 
 **Cook's distance** combines leverage and residual size into a single measure of influence:
+
 \[
 D_i = \frac{h_{ii}}{1 - h_{ii}} \cdot \frac{r_i^2}{p + 1}.
 \]
 Values of \(D_i\) near or exceeding 1 indicate a highly influential observation whose removal would substantially change the fitted model. Cook's distance can also be expressed as
+
 \[
 D_i = \frac{(\hat{\boldsymbol{\beta}} - \hat{\boldsymbol{\beta}}_{(-i)})^\top (X^\top X)(\hat{\boldsymbol{\beta}} - \hat{\boldsymbol{\beta}}_{(-i)})}{(p+1)\hat{\sigma}^2},
 \]
@@ -778,6 +840,7 @@ When diagnostic plots reveal assumption violations, several remedies are availab
 ### Robust Regression
 
 When errors are heavy-tailed or outliers cannot be removed, **robust regression** minimises a robust loss function instead of sum of squares. The **M-estimator** with Huber loss
+
 \[
 \rho_k(e) = \begin{cases} e^2/2 & |e| \leq k \\ k|e| - k^2/2 & |e| > k \end{cases}
 \]
@@ -800,10 +863,12 @@ Given \(p\) candidate predictors, there are \(2^p\) possible subsets of predicto
 ### Adjusted \(R^2\)
 
 Since \(R^2\) can only increase when predictors are added, the **adjusted** \(R^2\) penalizes for model complexity:
+
 \[
 R^2_{\text{adj}} = 1 - \frac{\text{SS(Res)}/(n - k - 1)}{\text{SS(Total)}/(n - 1)} = 1 - \frac{\hat{\sigma}^2}{s^2},
 \]
 where \(k\) is the number of predictors in the model and \(s^2 = \text{SS(Total)}/(n-1)\) is the sample variance of \(Y\). Equivalently,
+
 \[
 R^2_{\text{adj}} = R^2 - \frac{k}{n - k - 1}(1 - R^2).
 \]
@@ -815,6 +880,7 @@ Maximizing \(R^2_{\text{adj}}\) is equivalent to minimizing \(\hat{\sigma}^2\). 
 \text{AIC} = 2q - 2\ln L(\hat{\theta}),
 \]
 where \(q = p + 2\) is the total number of estimated parameters (including the intercept and \(\sigma^2\)), and \(L(\hat{\theta})\) is the maximized likelihood. For comparing nested normal-error models, differences in AIC simplify to
+
 \[
 \text{AIC} = n \ln\!\left(\frac{\text{SS(Res)}}{n}\right) + 2q.
 \]
@@ -830,6 +896,7 @@ BIC applies a stronger penalty than AIC (since \(\ln n > 2\) for \(n \geq 8\)), 
 ### Mallow's \(C_p\)
 
 For a model with \(k\) predictors,
+
 \[
 C_p = \frac{\text{SS(Res)}_k}{\text{MS(Res)}_{\text{full}}} + 2(k + 1) - n,
 \]
@@ -868,10 +935,12 @@ After using data to select a model, the usual inference (p-values, confidence in
 
 <div class="definition">
 The <strong>variance inflation factor</strong> for the \(j\)-th predictor is
+
 \[
 \text{VIF}_j = \frac{1}{1 - R_j^2},
 \]
 where \(R_j^2\) is the coefficient of determination from regressing \(x_j\) on all other predictors. The variance of \(\hat{\beta}_j\) can be expressed as
+
 \[
 \operatorname{Var}(\hat{\beta}_j) = \frac{\hat{\sigma}^2}{\sum_{i=1}^n (x_{ij} - \bar{x}_j)^2} \cdot \text{VIF}_j.
 \]
@@ -890,6 +959,7 @@ Guidelines:
 ## 6.1 Prediction Error and Overfitting
 
 Criteria like \(R^2\) measure *in-sample* fit. A model that fits the training data too closely (overfitting) will perform poorly on new data. The key quantity is the **mean squared prediction error** (MSPE):
+
 \[
 \text{MSPE} = \mathbb{E}\!\left[(Y_{\text{new}} - \hat{y}_{\text{new}})^2\right],
 \]
@@ -898,6 +968,7 @@ which we wish to estimate honestly.
 ## 6.2 Holdout Validation
 
 Split the data into a **training set** (used to fit the model) and a **test set** (used to evaluate prediction):
+
 \[
 \text{MSE}_{\text{test}} = \frac{1}{n_{\text{test}}} \sum_{i \in S_{\text{test}}} (y_i - \hat{y}_i)^2.
 \]
@@ -906,15 +977,18 @@ The disadvantage is that a large portion of data is not used for fitting, potent
 ## 6.3 Leave-One-Out Cross-Validation (LOOCV)
 
 For each observation \(i\), fit the model on all data except \((x_i, y_i)\), then predict \(\hat{y}_{i(-i)}\). The LOOCV estimate of prediction error is
+
 \[
 \text{MSE}_{\text{CV}} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_{i(-i)})^2.
 \]
 
 A remarkable computational shortcut for linear regression avoids fitting \(n\) separate models: the LOOCV error for the \(i\)-th observation equals the PRESS residual squared:
+
 \[
 y_i - \hat{y}_{i(-i)} = \frac{e_i}{1 - h_{ii}},
 \]
 where \(e_i\) is the ordinary residual and \(h_{ii}\) is the leverage. Thus
+
 \[
 \text{MSE}_{\text{CV}} = \frac{1}{n}\sum_{i=1}^n \left(\frac{e_i}{1 - h_{ii}}\right)^2,
 \]
@@ -928,6 +1002,7 @@ Randomly partition the data into \(K\) roughly equal subsets (folds). For each f
 2. Predict the held-out fold and compute \(\text{MSE}_k = \frac{1}{n_k}\sum_{i \in S_k}(y_i - \hat{y}_i)^2\).
 
 The overall CV estimate is
+
 \[
 \text{MSE}_{\text{CV}} = \frac{1}{K}\sum_{k=1}^K \text{MSE}_k.
 \]
@@ -950,6 +1025,7 @@ A common mistake is to use the CV error of the selected model as the final estim
 ### The One-Standard-Error Rule
 
 When multiple models have similar CV errors, the **one-standard-error rule** recommends choosing the simplest model whose CV error is within one standard error of the minimum:
+
 \[
 \text{select the most parsimonious model with} \quad \widehat{\text{MSPE}} \leq \widehat{\text{MSPE}}_{\min} + \widehat{\text{SE}}_{\min}.
 \]
@@ -964,6 +1040,7 @@ This guards against overfitting by preferring simpler models when the evidence f
 ## 6.6 Bias-Variance Tradeoff
 
 The expected prediction error for a new observation at \(\boldsymbol{x}_0\) decomposes as
+
 \[
 \mathbb{E}\!\left[(Y_0 - \hat{y}_0)^2\right] = \operatorname{Var}(Y_0) + \operatorname{Bias}^2(\hat{y}_0) + \operatorname{Var}(\hat{y}_0).
 \]
@@ -1014,10 +1091,12 @@ A GLM consists of three components:
 ## 7.3 Logistic Regression
 
 When \(Y_i \in \{0, 1\}\) is a **binary response** with \(P(Y_i = 1) = \pi_i\), we model \(\pi_i\) as a function of the predictors using the **logit link**:
+
 \[
 \ln\!\left(\frac{\pi_i}{1 - \pi_i}\right) = \boldsymbol{x}_i^\top \boldsymbol{\beta}.
 \]
 Equivalently, the **sigmoid function** gives
+
 \[
 \pi_i = \frac{e^{\boldsymbol{x}_i^\top \boldsymbol{\beta}}}{1 + e^{\boldsymbol{x}_i^\top \boldsymbol{\beta}}}.
 \]
@@ -1027,6 +1106,7 @@ Since \(Y_i \sim \text{Bernoulli}(\pi_i)\), we have \(\mathbb{E}[Y_i] = \pi_i\) 
 ### Parameter Estimation
 
 The log-likelihood for logistic regression is
+
 \[
 \ell(\boldsymbol{\beta}) = \sum_{i=1}^n \bigl[y_i \ln(\pi_i) + (1 - y_i)\ln(1 - \pi_i)\bigr] = \sum_{i=1}^n \bigl[y_i \boldsymbol{x}_i^\top \boldsymbol{\beta} - \ln(1 + e^{\boldsymbol{x}_i^\top \boldsymbol{\beta}})\bigr].
 \]
@@ -1045,6 +1125,7 @@ In logistic regression, \(\beta_j\) represents the change in the <strong>log-odd
 ### Binomial Count Data
 
 When the response is a count of successes out of \(n_i\) trials, \(Y_i \sim \text{Binomial}(n_i, \pi_i)\), the same logit link applies. The log-likelihood becomes
+
 \[
 \ell(\boldsymbol{\beta}) = \sum_{i=1}^m \bigl[y_i \ln(\pi_i) + (n_i - y_i)\ln(1 - \pi_i)\bigr] + C.
 \]
@@ -1052,6 +1133,7 @@ When the response is a count of successes out of \(n_i\) trials, \(Y_i \sim \tex
 ## 7.4 Poisson Regression
 
 For count data without a fixed number of trials, the **Poisson regression** model uses \(Y_i \sim \text{Poisson}(\mu_i)\) with the **log link**:
+
 \[
 \ln(\mu_i) = \boldsymbol{x}_i^\top \boldsymbol{\beta},
 \]
@@ -1062,6 +1144,7 @@ The coefficient \(\beta_j\) has a multiplicative interpretation: a one-unit incr
 ### Offset Terms
 
 When counts are observed over varying exposure periods or areas, an **offset** adjusts for differing exposure. If \(t_i\) is the exposure time for unit \(i\) and \(\lambda_i\) is the rate per unit time, then \(\mu_i = t_i \lambda_i\) and
+
 \[
 \ln(\mu_i) = \ln(t_i) + \boldsymbol{x}_i^\top \boldsymbol{\beta},
 \]
@@ -1071,6 +1154,7 @@ where \(\ln(t_i)\) is the offset (a known constant, not an estimated coefficient
 <strong>Bicycle accident counts.</strong> We model the number of bicycle accidents \(Y_i\) at 30 intersections as a function of traffic volume (\(x_1\), in thousands of vehicles/day) and presence of a bike lane (\(x_2 = 1\) if yes). Intersections are observed for varying numbers of months, so \(\ln(\text{months}_i)\) is included as an offset.
 
 Fitted Poisson model:
+
 \[
 \ln(\hat\mu_i) = -2.10 + 0.31 x_{i1} - 0.47 x_{i2} + \ln(\text{months}_i).
 \]
@@ -1089,6 +1173,7 @@ A likelihood ratio test comparing this model to the intercept-only model gives \
 ### Wald Statistic
 
 For large samples, the MLE \(\hat{\beta}_j\) is approximately normal:
+
 \[
 z = \frac{\hat{\beta}_j}{\operatorname{SE}(\hat{\beta}_j)} \;\dot{\sim}\; \mathcal{N}(0, 1) \quad \text{under } H_0\colon \beta_j = 0.
 \]
@@ -1097,6 +1182,7 @@ The squared Wald statistic \(z^2 \sim \chi^2_1\) can also be used.
 ### Deviance
 
 The **deviance** measures goodness of fit by comparing the fitted model to the saturated model (a model with one parameter per observation):
+
 \[
 D = 2\bigl[\ell(\text{saturated}) - \ell(\text{fitted})\bigr].
 \]
@@ -1105,6 +1191,7 @@ For a well-fitting model, \(D/(n - p - 1) \approx 1\). More precisely, under the
 ### Comparing Models via Deviance
 
 To compare a reduced model (with deviance \(D_{\text{red}}\)) against a full model (deviance \(D_{\text{full}}\)):
+
 \[
 D_{\text{red}} - D_{\text{full}} = 2\bigl[\ell(\text{full}) - \ell(\text{reduced})\bigr] \;\dot{\sim}\; \chi^2(df_{\text{red}} - df_{\text{full}}).
 \]
@@ -1113,6 +1200,7 @@ This is the **likelihood ratio test** and is analogous to the partial F-test in 
 ### AIC for GLMs
 
 Model selection in GLMs also uses AIC:
+
 \[
 \text{AIC} = 2(p + 1) - 2\ell(\hat{\boldsymbol{\beta}}).
 \]
@@ -1123,6 +1211,7 @@ Lower AIC is preferred. Stepwise selection can be carried out using AIC as the c
 Ordinary residuals \(y_i - \hat\mu_i\) are not meaningful for GLMs because the variance of \(Y_i\) depends on \(\mu_i\). Instead, standardised residuals are based on the **Pearson residual** or **deviance residual**.
 
 The **Pearson residual** for observation \(i\) is
+
 \[
 r_i^P = \frac{y_i - \hat\mu_i}{\sqrt{V(\hat\mu_i)}},
 \]

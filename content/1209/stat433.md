@@ -19,6 +19,7 @@ A **random variable** \(X : \Omega \to \mathbb{R}\) is a measurable function. It
 ## Conditional Expectation Given a \(\sigma\)-Field
 
 The abstract definition of conditional expectation: given sub-\(\sigma\)-field \(\mathcal{G} \subseteq \mathcal{F}\), the conditional expectation \(E[X \mid \mathcal{G}]\) is the unique \(\mathcal{G}\)-measurable random variable satisfying
+
 \[
 \int_G E[X \mid \mathcal{G}] \, dP = \int_G X \, dP \quad \text{for all } G \in \mathcal{G}.
 \]
@@ -36,6 +37,7 @@ The key properties:
 ## Multivariate Normal Distribution
 
 A random vector \(\mathbf{X} \sim N_k(\boldsymbol{\mu}, \Sigma)\) if every linear combination \(\mathbf{a}^T \mathbf{X}\) is univariate normal. The density is
+
 \[
 f(\mathbf{x}) = \frac{1}{(2\pi)^{k/2} |\Sigma|^{1/2}} \exp\!\left\{-\tfrac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu})\right\}.
 \]
@@ -52,6 +54,7 @@ Key facts: (i) **Closure under linear maps**: \(A\mathbf{X} + \mathbf{b} \sim N(
 ![Simple random walk: 5 sample paths for N=100 steps](/pics/stat433/random_walk_paths.png)
 
 The **simple random walk** \(\{S_n\}_{n \geq 0}\) has \(S_0 = 0\) and \(S_n = \xi_1 + \cdots + \xi_n\) where \(\xi_i\) are iid with \(P(\xi_i = +1) = p\) and \(P(\xi_i = -1) = q = 1-p\). To go from position \(a\) to position \(b\) in \(n\) steps requires \(u\) up-steps and \(d\) down-steps satisfying \(u + d = n\) and \(u - d = b - a\), giving \(u = (n+b-a)/2\). The number of such paths is \(\binom{n}{u}\), so:
+
 \[
 P(S_n = b \mid S_0 = a) = \binom{n}{\frac{n+b-a}{2}} p^{\frac{n+b-a}{2}} q^{\frac{n+a-b}{2}}.
 \]
@@ -59,6 +62,7 @@ P(S_n = b \mid S_0 = a) = \binom{n}{\frac{n+b-a}{2}} p^{\frac{n+b-a}{2}} q^{\fra
 **Example**: With \(p = 1/2\), what is \(P(S_4 = 0)\)? We need \(u = 2\) up-steps out of 4, so \(P(S_4 = 0) = \binom{4}{2}(1/2)^4 = 6/16 = 3/8\).
 
 For the return probability \(u_{2n} = P(S_{2n} = 0)\), Stirling gives
+
 \[
 u_{2n} = \binom{2n}{n}\frac{1}{4^n} \approx \frac{1}{\sqrt{\pi n}}.
 \]
@@ -73,6 +77,7 @@ The key idea: a path from \((0, a)\) to \((n, b)\) with \(a, b > 0\) that **touc
 - all unrestricted paths from \((0, -a)\) (n, b)\).
 
 Therefore:
+
 \[
 P(S_1 \neq 0, \ldots, S_n \neq 0, S_n = b \mid S_0 = a) = P(S_n = b \mid S_0 = a) - P(S_n = b \mid S_0 = -a).
 \]
@@ -86,6 +91,7 @@ P(S_1 \neq 0, \ldots, S_n \neq 0, S_n = b \mid S_0 = a) = P(S_n = b \mid S_0 = a
 **Theorem**: This probability is \((a - b)/(a + b)\).
 
 In random walk language: if \(S_n = b > 0\) (net displacement \(b\) after \(n\) steps), the probability that the walk stays strictly positive throughout is:
+
 \[
 P(S_1 > 0, \ldots, S_n > 0 \mid S_0 = 0, S_n = b) = \frac{b}{n}.
 \]
@@ -95,6 +101,7 @@ P(S_1 > 0, \ldots, S_n > 0 \mid S_0 = 0, S_n = b) = \frac{b}{n}.
 ## First Passage Times
 
 The **first passage time** to level \(b > 0\) is \(T_b = \min\{n \geq 1 : S_n = b\}\). From the ballot theorem, the probability that the first passage occurs exactly at step \(n\) is:
+
 \[
 f_n(b) = P(T_b = n) = \frac{b}{n} P(S_n = b \mid S_0 = 0).
 \]
@@ -102,6 +109,7 @@ f_n(b) = P(T_b = n) = \frac{b}{n} P(S_n = b \mid S_0 = 0).
 **Intuition**: Among all paths from 0 to \(b\) in \(n\) steps, the fraction that first hit \(b\) at the final step is exactly \(b/n\) — a consequence of a cyclic symmetry (cycle lemma).
 
 **Example**: For \(b = 1\), \(n = 3\), symmetric walk:
+
 \[
 f_3(1) = \frac{1}{3} P(S_3 = 1) = \frac{1}{3}\binom{3}{2}(1/2)^3 = \frac{1}{3} \cdot \frac{3}{8} = \frac{1}{8}.
 \]
@@ -114,6 +122,7 @@ The **generating function** for first passage to level 1 is \(\Lambda(s) = \frac
 ## Recurrence and Transience of the Random Walk
 
 The probability of ever returning to the origin is:
+
 \[
 P(\text{return to 0}) = F(1) = 1 - |p - q|.
 \]
@@ -126,6 +135,7 @@ P(\text{return to 0}) = F(1) = 1 - |p - q|.
 ## Arcsine Laws
 
 The **arcsine law** is one of the most counterintuitive results in probability. Let \(L_{2n}\) be the time of the last zero of \(S\) up to time \(2n\). The distribution is:
+
 \[
 P(L_{2n} = 2k) = u_{2k} \cdot u_{2n-2k} \quad \text{for } k = 0, 1, \ldots, n.
 \]
@@ -146,6 +156,7 @@ In the limit, \(L_{2n}/(2n) \to \text{Arcsine}(0,1)\) distribution with density 
 ![Arcsine law: density of proportion of time in positive half](/pics/stat433/arcsine_law.png)
 
 The probability of spending less than 10% of the time positive or more than 90% is:
+
 \[
 P(L_{2n}/(2n) \leq 0.1) + P(L_{2n}/(2n) \geq 0.9) \approx 2 \cdot \frac{2}{\pi}\arcsin(\sqrt{0.1}) \approx 40.5\%.
 \]
@@ -158,23 +169,27 @@ There is roughly a 40% chance the walk spends almost all its time on one side.
 ## Probability Generating Functions
 
 The **probability generating function** (PGF) of a non-negative integer-valued random variable \(X\) is
+
 \[
 G(s) = E[s^X] = \sum_{k=0}^\infty p_k s^k, \quad |s| \leq 1.
 \]
 
 The PGF encodes the entire distribution: \(p_k = G^{(k)}(0)/k!\). Moments come from derivatives at \(s = 1\):
+
 \[
 E[X] = G'(1), \qquad E[X(X-1)] = G''(1), \qquad \text{Var}(X) = G''(1) + G'(1) - [G'(1)]^2.
 \]
 The PGF of a sum of independent variables is the product: \(G_{X+Y}(s) = G_X(s) G_Y(s)\).
 
 **Example — Geometric distribution**: \(X \sim \text{Geometric}(p)\) with \(P(X = k) = (1-p)^{k-1}p\) for \(k \geq 1\).
+
 \[
 G(s) = \sum_{k=1}^\infty (1-p)^{k-1} p \cdot s^k = \frac{ps}{1-(1-p)s}.
 \]
 Then \(G'(s) = \frac{p}{[1-(1-p)s]^2}\), so \(E[X] = G'(1) = p/p^2 = 1/p\). ✓
 
 **Example — Poisson distribution**: \(X \sim \text{Poisson}(\lambda)\).
+
 \[
 G(s) = \sum_{k=0}^\infty \frac{\lambda^k e^{-\lambda}}{k!} s^k = e^{-\lambda} \sum_{k=0}^\infty \frac{(\lambda s)^k}{k!} = e^{\lambda(s-1)}.
 \]
@@ -187,6 +202,7 @@ A **renewal event** is an event that can occur repeatedly over discrete time, wi
 - \(f_n = P(\text{first recurrence at time } n)\) for \(n \geq 1\).
 
 The renewal equation connects these: every occurrence at time \(n\) either is the first recurrence (contribution \(f_n\)) or is a recurrence following an earlier occurrence at time \(k\):
+
 \[
 u_n = \sum_{k=1}^n f_k u_{n-k}, \quad n \geq 1.
 \]
@@ -229,10 +245,12 @@ The sequence oscillates but converges toward \(0.6\). ✓
 ## Galton-Watson Process
 
 A **Galton-Watson process** \(\{Z_n\}_{n \geq 0}\) models a population where each individual independently produces offspring with PGF \(G(s) = \sum_{k=0}^\infty p_k s^k\). Starting from \(Z_0 = 1\):
+
 \[
 Z_{n+1} = \sum_{i=1}^{Z_n} \xi_i^{(n)}, \quad \xi_i^{(n)} \overset{\text{iid}}{\sim} \{p_k\}.
 \]
 The PGF of \(Z_n\) is the \(n\)-fold iterate \(G_n = G \circ G \circ \cdots \circ G\). Mean and variance:
+
 \[
 E[Z_n] = \mu^n, \qquad \text{Var}(Z_n) = \begin{cases} \sigma^2 \mu^{n-1} \dfrac{\mu^n - 1}{\mu - 1} & \mu \neq 1 \\ n\sigma^2 & \mu = 1 \end{cases}
 \]
@@ -266,6 +284,7 @@ The extinction probability \(\eta = P(\exists n : Z_n = 0)\) satisfies the fixed
 ## The Markov Property
 
 A process \(\{X_n\}_{n \geq 0}\) on countable state space \(S\) is a **DTMC** if:
+
 \[
 P(X_{n+1} = j \mid X_n = i, X_{n-1} = i_{n-1}, \ldots, X_0 = i_0) = P(X_{n+1} = j \mid X_n = i) = p_{ij}.
 \]
@@ -278,12 +297,14 @@ The matrix \(P = (p_{ij})\) is **stochastic**: \(p_{ij} \geq 0\) and each row su
 ## A Worked Example: Two-State Chain
 
 Consider the weather chain with states \(S = \{0 = \text{Sunny}, 1 = \text{Rainy}\}\) and transition matrix
+
 \[
 P = \begin{pmatrix} 0.8 & 0.2 \\ 0.4 & 0.6 \end{pmatrix}.
 \]
 This means: given a sunny day, the next day is sunny with probability 0.8; given a rainy day, the next day is sunny with probability 0.4.
 
 **Two-step transitions**: \(P^2 = P \cdot P\):
+
 \[
 p_{00}^{(2)} = (0.8)(0.8) + (0.2)(0.4) = 0.64 + 0.08 = 0.72.
 \]
@@ -348,16 +369,19 @@ The classic **gambler's ruin** problem illustrates recurrence, first passage, an
 **Setup**: A gambler starts with \$\(k\) and plays repeatedly, winning \$1 with probability \(p\) and losing \$1 with probability \(q = 1-p\). The game ends when wealth reaches 0 (ruin) or \(N\) (goal). Let \(r_k = P(\text{ruin} \mid \text{start at } k)\).
 
 **First-step analysis**: For \(0 < k < N\),
+
 \[
 r_k = p \cdot r_{k+1} + q \cdot r_k + \text{...wait, no:} \quad r_k = p \cdot r_{k+1} + q \cdot r_{k-1},
 \]
 with boundary conditions \(r_0 = 1\) and \(r_N = 0\). The general solution (for \(p \neq q\)) is \(r_k = A + B(q/p)^k\). Using boundary conditions:
+
 \[
 r_k = \frac{(q/p)^k - (q/p)^N}{1 - (q/p)^N}.
 \]
 For \(p = q = 1/2\): \(r_k = 1 - k/N\) (linear). For \(p > q\): \((q/p)^k < 1\), so as \(N \to \infty\), \(r_k \to (q/p)^k\). There is positive probability of never being ruined.
 
 **Example**: \(p = 0.6\), \(q = 0.4\), \(k = 5\), \(N = 10\): \(q/p = 2/3\).
+
 \[
 r_5 = \frac{(2/3)^5 - (2/3)^{10}}{1 - (2/3)^{10}} = \frac{0.1317 - 0.01734}{1 - 0.01734} \approx \frac{0.1143}{0.9827} \approx 0.116.
 \]
@@ -374,12 +398,14 @@ A distribution \(\pi\) is **stationary** if \(\pi P = \pi\), i.e., \(\pi_j = \su
 **How to find \(\pi\)**: Solve the linear system \(\pi P = \pi\) with normalization \(\sum \pi_j = 1\). In matrix form, \(\pi(P - I) = \mathbf{0}\) — replace one equation with \(\sum \pi_j = 1\).
 
 **Example — Two-state weather chain**:
+
 \[
 P = \begin{pmatrix} 0.8 & 0.2 \\ 0.4 & 0.6 \end{pmatrix}.
 \]
 Balance equations: \(\pi_0 = 0.8\pi_0 + 0.4\pi_1\) and \(\pi_1 = 0.2\pi_0 + 0.6\pi_1\). From the first: \(0.2\pi_0 = 0.4\pi_1\), so \(\pi_0 = 2\pi_1\). With \(\pi_0 + \pi_1 = 1\): \(\pi_0 = 2/3\), \(\pi_1 = 1/3\). In the long run, 2/3 of days are sunny.
 
 **Example — Three-state chain**: States \(\{A, B, C\}\) with
+
 \[
 P = \begin{pmatrix} 0 & 1/2 & 1/2 \\ 1/3 & 1/3 & 1/3 \\ 1/2 & 1/2 & 0 \end{pmatrix}.
 \]
@@ -420,6 +446,7 @@ p_{ij}^{(n)} \to \pi_j \quad \text{as } n \to \infty, \quad \text{for all } i, j
 **Example — Two-state chain, convergence rate**: The eigenvalues of the weather chain \(P\) are \(\lambda_1 = 1\) and \(\lambda_2 = 0.8 - 0.4 = 0.4\) (the second eigenvalue equals the trace minus 1 divided appropriately). The rate of convergence is \(|\lambda_2|^n = 0.4^n\).
 
 Explicitly:
+
 \[
 P^n = \begin{pmatrix} 2/3 & 1/3 \\ 2/3 & 1/3 \end{pmatrix} + 0.4^n \begin{pmatrix} 1/3 & -1/3 \\ -2/3 & 2/3 \end{pmatrix}.
 \]
@@ -436,6 +463,7 @@ For \(n = 5\): \(0.4^5 = 0.01024\), so the deviation from stationarity is about 
 ## Time Reversal
 
 If an irreducible positive recurrent chain runs in equilibrium (\(X_0 \sim \pi\)), the **time-reversed chain** \(Y_n = X_{N-n}\) is also Markov with transition probabilities:
+
 \[
 q_{ij} = \frac{\pi_j p_{ji}}{\pi_i}.
 \]
@@ -445,6 +473,7 @@ q_{ij} = \frac{\pi_j p_{ji}}{\pi_i}.
 ## Detailed Balance and Reversibility
 
 The chain is **reversible** if the forward and reversed transitions agree: \(q_{ij} = p_{ij}\) for all \(i,j\), equivalently:
+
 \[
 \pi_i p_{ij} = \pi_j p_{ji} \quad \text{for all } i,j.
 \]
@@ -461,6 +490,7 @@ These are the **detailed balance equations**. They say the probability flux from
 ## Birth-Death Chains and Detailed Balance
 
 For a birth-death chain with \(p_{i,i+1} = \lambda_i\) and \(p_{i,i-1} = \mu_i\), detailed balance gives \(\pi_i \lambda_i = \pi_{i+1} \mu_{i+1}\), so:
+
 \[
 \pi_n = \pi_0 \cdot \frac{\lambda_0 \lambda_1 \cdots \lambda_{n-1}}{\mu_1 \mu_2 \cdots \mu_n}.
 \]
@@ -473,6 +503,7 @@ All birth-death chains satisfy detailed balance and are therefore reversible.
 ## Using Detailed Balance to Find \(\pi\): A Full Example
 
 **Chain on \(\{0,1,2,3\}\)**:
+
 \[
 p_{01} = 0.3, \; p_{10} = 0.5, \; p_{12} = 0.5, \; p_{21} = 0.4, \; p_{23} = 0.6, \; p_{32} = 1.
 \]
@@ -490,6 +521,7 @@ Normalization: \(\pi_0(1 + 0.6 + 0.75 + 0.45) = 1 \Rightarrow \pi_0 = 1/2.8 \app
 ## Definition and Setup
 
 A **discrete phase-type (DPH) distribution** is the absorption time of a finite DTMC with transient states \(\{1, \ldots, m\}\) and one or more absorbing states. The transition matrix has block form:
+
 \[
 P = \begin{pmatrix} Q & \tilde{q}\mathbf{e}' \\ \mathbf{0} & 1 \end{pmatrix}
 \]
@@ -514,6 +546,7 @@ E[T] = \alpha_0'(I-Q)^{-1}\mathbf{1}
 **Setup**: A system has two transient phases. From phase 1, with probability 0.3 the system is completed (absorbed) and with probability 0.7 it moves to phase 2. From phase 2, with probability 0.5 the system is completed and with probability 0.5 it returns to phase 1. Let \(T\) be the total time until completion, starting always in phase 1.
 
 So \(m = 2\), \(\alpha_0 = (1, 0)\),
+
 \[
 Q = \begin{pmatrix} 0 & 0.7 \\ 0.5 & 0 \end{pmatrix}, \quad \tilde{q} = \begin{pmatrix} 0.3 \\ 0.5 \end{pmatrix}.
 \]
@@ -526,6 +559,7 @@ Q = \begin{pmatrix} 0 & 0.7 \\ 0.5 & 0 \end{pmatrix}, \quad \tilde{q} = \begin{p
 **Check**: \(P(T=1) + P(T=2) + P(T=3) + \cdots = 0.3 + 0.35 + \cdots\). We have \(P(T > 2) = \alpha_0' Q^2 \mathbf{1} = (1,0)(Q^2)\mathbf{1}\). Since \(Q^2 = 0.35 I\), \(P(T > 2) = 0.35\). Then \(P(T=1)+P(T=2) = 1 - 0.35 = 0.65\). ✓ (\(0.3 + 0.35 = 0.65\).)
 
 **Mean**:
+
 \[
 I - Q = \begin{pmatrix}1 & -0.7 \\ -0.5 & 1\end{pmatrix}, \quad (I-Q)^{-1} = \frac{1}{1 - 0.35}\begin{pmatrix}1 & 0.7 \\ 0.5 & 1\end{pmatrix} = \frac{1}{0.65}\begin{pmatrix}1 & 0.7 \\ 0.5 & 1\end{pmatrix}.
 \]
@@ -542,6 +576,7 @@ Check: \(P(T=k) = 1 \cdot (1-p)^{k-1} \cdot p\). ✓ Mean: \(E[T] = 1 \cdot (1-(
 ## Closure Under Independent Sum
 
 If \(X \sim \mathrm{DPH}_m(\alpha, Q)\) and \(Y \sim \mathrm{DPH}_n(\beta, R)\) are independent, then \(Z = X + Y \sim \mathrm{DPH}_{m+n}(\gamma, C)\) where:
+
 \[
 \gamma = (\alpha, \mathbf{0}), \qquad C = \begin{pmatrix} Q & \tilde{q}\beta' \\ \mathbf{0} & R \end{pmatrix}.
 \]
@@ -549,6 +584,7 @@ If \(X \sim \mathrm{DPH}_m(\alpha, Q)\) and \(Y \sim \mathrm{DPH}_n(\beta, R)\) 
 **Interpretation**: The combined chain first runs through the \(X\)-phases (governed by \(Q\)). When it would be absorbed (with probability \(\tilde{q}_i\) from state \(i\)), instead of absorbing it jumps to start the \(Y\)-chain in state \(j\) with probability \(\beta_j\). It then runs through the \(Y\)-phases (governed by \(R\)) until true absorption.
 
 **Example**: \(X \sim \text{Geom}(p)\) and \(Y \sim \text{Geom}(q)\) independent. Then \(Z = X + Y \sim \mathrm{DPH}_2\) with:
+
 \[
 C = \begin{pmatrix} 1-p & p \\ 0 & 1-q \end{pmatrix}, \quad \gamma = (1,0).
 \]
@@ -570,6 +606,7 @@ The **Poisson process** \(\{N(t)\}_{t \geq 0}\) counts events occurring in conti
 </div>
 
 **Proof sketch**: Let \(p_k(t) = P(N(t) = k)\). From the axioms:
+
 \[
 p_k(t+h) = p_k(t)(1-\lambda h) + p_{k-1}(t)\lambda h + o(h).
 \]
@@ -616,12 +653,14 @@ A CTMC \(\{X(t)\}_{t \geq 0}\) on countable state space \(S\) satisfies the Mark
 ## Infinitesimal Generator
 
 The local behaviour is captured by the **generator matrix** \(G = (g_{ij})\):
+
 \[
 g_{ij} = \lim_{h \downarrow 0} \frac{P_{ij}(h) - \delta_{ij}}{h}.
 \]
 For \(i \neq j\): \(g_{ij} \geq 0\) is the **transition rate** from \(i\) to \(j\). For \(i = j\): \(g_{ii} = -v_i \leq 0\) where \(v_i = \sum_{j \neq i} g_{ij}\) is the total **exit rate** from state \(i\). Row sums equal zero: \(g_{ii} + \sum_{j \neq i} g_{ij} = 0\).
 
 **Small-\(h\) expansions**:
+
 \[
 P_{ii}(h) = 1 - v_i h + o(h), \qquad P_{ij}(h) = g_{ij} h + o(h), \; i \neq j.
 \]
@@ -631,12 +670,14 @@ P_{ii}(h) = 1 - v_i h + o(h), \qquad P_{ij}(h) = g_{ij} h + o(h), \; i \neq j.
 **Sojourn time in state \(i\)**: The time spent in state \(i\) before jumping is \(\text{Exp}(v_i)\). This follows from the memoryless property and the small-\(h\) approximation: the probability of still being in state \(i\) at time \(h\) given just arrived is \(e^{-v_i h}\).
 
 **Embedded (skeleton) DTMC**: When the chain leaves state \(i\), it jumps to \(j \neq i\) with probability:
+
 \[
 \hat{p}_{ij} = \frac{g_{ij}}{v_i}.
 \]
 The sequence of visited states forms a DTMC with transition matrix \(\hat{P}\) (no self-loops: \(\hat{p}_{ii} = 0\)).
 
 **Example — Two-state CTMC**: States \(\{0, 1\}\) with generator:
+
 \[
 G = \begin{pmatrix} -\alpha & \alpha \\ \beta & -\beta \end{pmatrix}.
 \]
@@ -645,15 +686,18 @@ State 0 exits at rate \(\alpha\) (always to state 1) and state 1 exits at rate \
 ## Kolmogorov Equations and Matrix Exponential
 
 **Backward equations**: \(P'(t) = G P(t)\). **Forward equations**: \(P'(t) = P(t) G\). Both have the solution:
+
 \[
 P(t) = e^{tG} = \sum_{n=0}^\infty \frac{(tG)^n}{n!}.
 \]
 
 **Example — Two-state CTMC**: The generator has eigenvalues \(0\) and \(-(\alpha+\beta)\). Diagonalizing:
+
 \[
 P(t) = \frac{1}{\alpha+\beta}\begin{pmatrix}\beta & \alpha \\ \beta & \alpha\end{pmatrix} + \frac{e^{-(\alpha+\beta)t}}{\alpha+\beta}\begin{pmatrix}\alpha & -\alpha \\ -\beta & \beta\end{pmatrix}.
 \]
 Explicitly:
+
 \[
 P_{00}(t) = \frac{\beta}{\alpha+\beta} + \frac{\alpha}{\alpha+\beta}e^{-(\alpha+\beta)t}, \quad P_{01}(t) = \frac{\alpha}{\alpha+\beta} - \frac{\alpha}{\alpha+\beta}e^{-(\alpha+\beta)t}.
 \]
@@ -665,15 +709,18 @@ P_{00}(t) = \frac{\beta}{\alpha+\beta} + \frac{\alpha}{\alpha+\beta}e^{-(\alpha+
 ## Uniformization
 
 For finite CTMCs with bounded rates, **uniformization** converts CTMC calculations to DTMC calculations. Let \(\Lambda = \max_i v_i\). Define the uniformized DTMC:
+
 \[
 \hat{P}_{ij} = \frac{g_{ij}}{\Lambda} + \delta_{ij}\left(1 - \frac{v_i}{\Lambda}\right).
 \]
 Then if \(M(t) \sim \text{Poisson}(\Lambda t)\) is independent:
+
 \[
 P_{ij}(t) = \sum_{n=0}^\infty \frac{(\Lambda t)^n e^{-\Lambda t}}{n!} \hat{p}_{ij}^{(n)}.
 \]
 
 **Example**: For the two-state CTMC above with \(\alpha = 2\), \(\beta = 3\): \(\Lambda = 3\). The uniformized DTMC has:
+
 \[
 \hat{P} = \begin{pmatrix} 1-2/3 & 2/3 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1/3 & 2/3 \\ 1 & 0 \end{pmatrix}.
 \]
@@ -698,17 +745,20 @@ The mean CTMC return time: \(E[R_{ii}] = \mu_i^{\text{embedded}} / v_i\) — the
 ## Stationary Distribution
 
 A distribution \(\pi\) is stationary for the CTMC if \(\pi G = \mathbf{0}\) and \(\sum_j \pi_j = 1\). In component form: \(\sum_i \pi_i g_{ij} = 0\) for all \(j\), i.e.,
+
 \[
 \pi_j v_j = \sum_{i \neq j} \pi_i g_{ij} \quad \text{(rate out of } j\text{ = rate into }j\text{)}.
 \]
 
 **Relationship to embedded DTMC**: If \(\psi\) is the stationary distribution of the embedded DTMC, the CTMC stationary distribution is:
+
 \[
 \pi_j = \frac{\psi_j / v_j}{\sum_k \psi_k / v_k}.
 \]
 The CTMC weights each state by the mean sojourn time \(1/v_j\) — states with slow exit rates get extra probability because the chain lingers there longer.
 
 **Example — Two-state CTMC**: Generator \(G = \begin{pmatrix}-\alpha & \alpha \\ \beta & -\beta\end{pmatrix}\). Solve \(\pi G = \mathbf{0}\):
+
 \[
 -\alpha \pi_0 + \beta \pi_1 = 0 \Rightarrow \pi_0 = \frac{\beta}{\alpha+\beta}, \quad \pi_1 = \frac{\alpha}{\alpha+\beta}.
 \]
@@ -727,6 +777,7 @@ There is no need to assume aperiodicity (unlike DTMCs) because CTMCs are automat
 **PASTA (Poisson Arrivals See Time Averages)**: If customers arrive according to a Poisson process and the system evolves independently of arrival times, then an arriving customer sees the time-stationary distribution of the system state.
 
 **Formal statement**: For a Poisson process with rate \(\lambda\) that is independent of the system \(\{X(t)\}\):
+
 \[
 \lim_{n\to\infty} P(X(S_n^-) = j) = \pi_j
 \]
@@ -747,6 +798,7 @@ where \(S_n\) is the \(n\)-th arrival epoch and \(X(S_n^-)\) is the system state
 ## Setup
 
 A **birth-death process** on \(\{0,1,2,\ldots\}\) has generator:
+
 \[
 g_{i,i+1} = \lambda_i, \quad g_{i,i-1} = \mu_i \; (\mu_0 = 0), \quad g_{ii} = -(\lambda_i + \mu_i).
 \]
@@ -754,6 +806,7 @@ g_{i,i+1} = \lambda_i, \quad g_{i,i-1} = \mu_i \; (\mu_0 = 0), \quad g_{ii} = -(
 ## Stationary Distribution via Detailed Balance
 
 Birth-death processes always satisfy detailed balance: \(\pi_i \lambda_i = \pi_{i+1} \mu_{i+1}\). Solving:
+
 \[
 \pi_n = \pi_0 \cdot \frac{\lambda_0 \lambda_1 \cdots \lambda_{n-1}}{\mu_1 \mu_2 \cdots \mu_n} \equiv \pi_0 \rho_n, \quad \pi_0 = \frac{1}{\sum_{n=0}^\infty \rho_n}.
 \]
@@ -766,6 +819,7 @@ The chain is positive recurrent (stationary distribution exists) iff \(\sum_{n=0
 **Yule process**: \(\lambda_n = n\lambda\), \(\mu_n = 0\). Each individual reproduces at rate \(\lambda\), so the birth rate is proportional to the current population. Starting from \(X(0) = 1\), \(P(X(t) = k) = e^{-\lambda t}(1-e^{-\lambda t})^{k-1}\) for \(k \geq 1\) (geometric). The mean population is \(E[X(t)] = e^{\lambda t}\) — exponential growth.
 
 **Simple death with immigration**: \(\lambda_n = \nu\) (constant immigration rate), \(\mu_n = n\mu\) (each individual dies at rate \(\mu\)). The stationary distribution is Poisson(\(\nu/\mu\)):
+
 \[
 \pi_n = \frac{(\nu/\mu)^n e^{-\nu/\mu}}{n!}.
 \]
@@ -778,6 +832,7 @@ The chain is positive recurrent (stationary distribution exists) iff \(\sum_{n=0
 The M/M/1 queue has \(\lambda_n = \lambda\) and \(\mu_n = \mu\) for \(n \geq 1\), \(\mu_0 = 0\). The traffic intensity is \(\rho = \lambda/\mu\).
 
 **Stationary distribution**: \(\rho_n = (\lambda/\mu)^n = \rho^n\). For \(\rho < 1\), \(\sum_{n=0}^\infty \rho^n = 1/(1-\rho)\), giving:
+
 \[
 \pi_n = (1-\rho)\rho^n.
 \]
@@ -803,6 +858,7 @@ E[W] = \frac{E[N]}{\lambda} = \frac{\rho}{\lambda(1-\rho)} = \frac{1}{\mu - \lam
 ## M/M/∞ Queue
 
 Every customer is served immediately. \(\lambda_n = \lambda\), \(\mu_n = n\mu\). Then \(\rho_n = (\lambda/\mu)^n/n!\), giving \(\sum \rho_n = e^{\lambda/\mu}\), so:
+
 \[
 \pi_n = \frac{(\lambda/\mu)^n e^{-\lambda/\mu}}{n!} \sim \text{Poisson}(\lambda/\mu).
 \]
@@ -815,6 +871,7 @@ This always exists regardless of the traffic intensity \(\rho = \lambda/\mu\) �
 ## Definition
 
 A **continuous phase-type (CPH) distribution** is the absorption time of a CTMC. The CTMC has \(m\) transient states \(\{1,\ldots,m\}\) and one absorbing state \(0\), with generator:
+
 \[
 G = \begin{pmatrix} T & \mathbf{t}_0 \\ \mathbf{0}' & 0 \end{pmatrix}
 \]
@@ -823,10 +880,12 @@ where \(T\) is the \(m\times m\) **sub-generator** (transitions among transient 
 ## CDF, PDF, and Moments
 
 The survival function (probability of not yet absorbed by time \(y\)):
+
 \[
 P(Y > y) = \alpha e^{yT}\mathbf{1}.
 \]
 The density: \(f_Y(y) = \alpha e^{yT} \mathbf{t}_0\) for \(y > 0\). All moments are finite:
+
 \[
 E[Y^k] = (-1)^k k! \, \alpha T^{-k}\mathbf{1}.
 \]
@@ -837,6 +896,7 @@ In particular, \(E[Y] = -\alpha T^{-1}\mathbf{1} = \alpha(−T)^{-1}\mathbf{1}\)
 **Exponential**: \(\text{Exp}(\lambda) = \mathrm{CPH}_1(1, -\lambda)\). Here \(T = (-\lambda)\), \(\mathbf{t}_0 = \lambda\), and \(P(Y > y) = e^{-\lambda y}\). ✓
 
 **Erlang(\(n,\lambda\))**: \(n\) phases in series, each Exp(\(\lambda\)). This is \(\mathrm{CPH}_n(\mathbf{e}_1, T)\) where \(\mathbf{e}_1 = (1,0,\ldots,0)\) and
+
 \[
 T = \begin{pmatrix} -\lambda & \lambda & & \\ & -\lambda & \lambda & \\ & & \ddots & \lambda \\ & & & -\lambda \end{pmatrix}, \quad \mathbf{t}_0 = (0,\ldots,0,\lambda)'.
 \]
@@ -851,6 +911,7 @@ The chain must pass through all \(n\) phases before absorption, each spending Ex
 ## Closure Properties
 
 **Sum**: If \(X \sim \mathrm{CPH}_m(\alpha,T)\) and \(Y \sim \mathrm{CPH}_n(\beta,S)\) are independent:
+
 \[
 Z = X+Y \sim \mathrm{CPH}_{m+n}(\delta, D), \quad \delta = (\alpha, \mathbf{0}), \quad D = \begin{pmatrix}T & \mathbf{t}_0\beta \\ \mathbf{0} & S\end{pmatrix}.
 \]
@@ -875,10 +936,12 @@ Queues are described by **A/S/m/c/p** notation: arrival process / service distri
 Births: \(\lambda_n = \lambda\), deaths: \(\mu_n = \mu\), stationary distribution \(\pi_n = (1-\rho)\rho^n\). Detailed balance holds.
 
 **Waiting time distribution**: The total time \(W\) spent in the system (including service) has distribution:
+
 \[
 P(W > t) = \rho e^{-(\mu-\lambda)t} \Rightarrow W \sim \text{Exp}(\mu-\lambda) \text{ with prob } \rho; \; W = 0 \text{ with prob } 1-\rho.
 \]
 Wait — more precisely: an arriving customer finds \(k\) customers (by PASTA) with probability \(\pi_k\). They must wait for \(k\) exponential services (each Exp(\(\mu\))) plus their own service. The total time is:
+
 \[
 W \mid \text{find } k = \text{Erlang}(k+1, \mu) \Rightarrow P(W > t) = e^{-\mu t}\sum_{k=0}^\infty \pi_k \sum_{j=0}^k \frac{(\mu t)^j}{j!} = e^{-(\mu-\lambda)t}.
 \]
@@ -893,6 +956,7 @@ So \(W \sim \text{Exp}(\mu-\lambda)\), consistent with \(E[W] = 1/(\mu-\lambda)\
 **Setup**: \(c\) servers, each with rate \(\mu\). \(\mu_n = \min(n,c)\mu\). Traffic intensity \(\rho = \lambda/(c\mu)\).
 
 **Stationary distribution**: (exists iff \(\rho < 1\)):
+
 \[
 \pi_0 = \left[\sum_{n=0}^{c-1}\frac{(c\rho)^n}{n!} + \frac{(c\rho)^c}{c!(1-\rho)}\right]^{-1},
 \]
@@ -901,11 +965,13 @@ So \(W \sim \text{Exp}(\mu-\lambda)\), consistent with \(E[W] = 1/(\mu-\lambda)\
 \]
 
 **Erlang-C formula**: The probability that an arriving customer must wait (all \(c\) servers busy):
+
 \[
 C(c,\lambda/\mu) = \frac{(c\rho)^c}{c!(1-\rho)} \pi_0.
 \]
 
 **Numerical example — call center**: \(c = 3\) agents, \(\lambda = 6\) calls/hr, \(\mu = 3\) calls/hr per agent. \(\rho = 6/(3\cdot3) = 2/3\).
+
 \[
 \pi_0 = \left[\frac{(2)^0}{0!} + \frac{(2)^1}{1!} + \frac{(2)^2}{2!} + \frac{(2)^3}{3!(1-2/3)}\right]^{-1} = \left[1 + 2 + 2 + 8/2\right]^{-1} = \frac{1}{9}.
 \]
@@ -918,6 +984,7 @@ Mean waiting time in queue: \(E[W_q] = \frac{C(c,\lambda/\mu)}{c\mu - \lambda} =
 ## M/M/1/c — Finite Buffer
 
 With capacity \(c\): arrivals finding \(c\) customers are lost. \(\lambda_n = \lambda \cdot \mathbf{1}_{n < c}\). Stationary distribution:
+
 \[
 \pi_n = \frac{\rho^n}{\sum_{k=0}^c \rho^k} = \begin{cases}\dfrac{(1-\rho)\rho^n}{1-\rho^{c+1}} & \rho \neq 1\\ \dfrac{1}{c+1} & \rho = 1.\end{cases}
 \]
@@ -1007,12 +1074,14 @@ For \(p = 1/2\): \(u_n \to 2/3\). Check: \(u_1 = 1/2\), \(u_2 = 1/4 + 1/2 = 3/4\
 ## The Renewal Equation
 
 The renewal function satisfies:
+
 \[
 m(t) = F(t) + \int_0^t m(t-s)\,dF(s).
 \]
 *Derivation*: Condition on \(X_1 = x\). If \(x > t\), there are no renewals: contribution 0. If \(x \leq t\), there is one renewal at time \(x\), plus \(m(t-x)\) expected renewals in the remaining time \([x,t]\).
 
 More generally, if \(Z(t) = g(t) + \int_0^t Z(t-s)\,dF(s)\), the unique solution is:
+
 \[
 Z(t) = g(t) + \int_0^t g(t-s)\,dm(s).
 \]
@@ -1025,6 +1094,7 @@ At time \(t\):
 - **Total life (spread)**: \(\beta_t = \delta_t + \gamma_t\).
 
 In steady state (\(t \to \infty\)):
+
 \[
 P(\gamma_\infty > x) = \frac{1}{\mu}\int_x^\infty \bar{F}(y)\,dy, \quad E[\gamma_\infty] = \frac{E[X^2]}{2\mu}.
 \]
@@ -1032,6 +1102,7 @@ P(\gamma_\infty > x) = \frac{1}{\mu}\int_x^\infty \bar{F}(y)\,dy, \quad E[\gamma
 **Inspection paradox**: The interval \(\beta_t\) containing a fixed time \(t\) has mean \(E[\beta_\infty] = E[X^2]/\mu \geq \mu\) (by Jensen's inequality, equality iff \(X\) is deterministic). A randomly chosen interval is longer than average because longer intervals are more likely to contain any fixed time — a bias called **length-biased sampling**.
 
 **Numerical example**: Bus inter-arrivals are uniformly distributed: \(X \sim \text{Uniform}(0, 10)\) minutes. Mean: \(\mu = 5\). If you arrive at a uniformly random time, your expected wait is:
+
 \[
 E[\gamma_\infty] = \frac{E[X^2]}{2\mu} = \frac{\int_0^{10} x^2/10\,dx}{2 \cdot 5} = \frac{100/3}{10} = \frac{10}{3} \approx 3.33 \text{ minutes}.
 \]
@@ -1052,6 +1123,7 @@ But the mean inter-arrival time is 5 minutes. The expected wait is not half the 
 </div>
 
 **Example — Machine maintenance**: A machine runs for an Exp(\(\alpha\)) time (mean \(1/\alpha\)) then needs repair, which takes Exp(\(\beta\)) time (mean \(1/\beta\)). One renewal cycle = one run + one repair. Mean cycle length: \(\mu = 1/\alpha + 1/\beta\). Reward = running time per cycle: \(E[R_1] = 1/\alpha\). Long-run fraction of time running:
+
 \[
 \frac{1/\alpha}{1/\alpha + 1/\beta} = \frac{\beta}{\alpha+\beta}.
 \]
@@ -1062,6 +1134,7 @@ This matches the CTMC result: a two-state CTMC with rates \(\alpha\) (run→fail
 A process \(\{Y(t)\}\) is **regenerative** if there exist renewal times at which the process "forgets its past." Any irreducible positive recurrent CTMC is regenerative (with renewal times = return times to any fixed state).
 
 **Long-run fraction of time in state \(j\)**:
+
 \[
 \frac{1}{t}\int_0^t \mathbf{1}_{Y(s)=j}\,ds \to \frac{E[\text{time in }j\text{ per cycle}]}{E[\text{cycle length}]} = \pi_j.
 \]
@@ -1087,10 +1160,12 @@ We want to compute \(E_\pi[f(X)] = \sum_i f(i)\pi_i\) or sample from a distribut
 ## Metropolis-Hastings Algorithm
 
 Given a proposal matrix \(H = (h_{ij})\) (a stochastic matrix, easy to sample from), define acceptance probabilities:
+
 \[
 a_{ij} = \min\!\left\{1, \frac{\pi_j h_{ji}}{\pi_i h_{ij}}\right\} = \min\!\left\{1, \frac{\tilde\pi_j h_{ji}}{\tilde\pi_i h_{ij}}\right\}.
 \]
 Note: \(Z\) cancels! The transition probabilities of the MH chain:
+
 \[
 p_{ij} = h_{ij} a_{ij} \; (i \neq j), \qquad p_{ii} = 1 - \sum_{k\neq i} h_{ik}a_{ik}.
 \]
@@ -1100,6 +1175,7 @@ p_{ij} = h_{ij} a_{ij} \; (i \neq j), \qquad p_{ii} = 1 - \sum_{k\neq i} h_{ik}a
 </div>
 
 *Proof*: For \(i \neq j\), WLOG \(\pi_j h_{ji} \leq \pi_i h_{ij}\). Then \(a_{ij} = \pi_j h_{ji}/(\pi_i h_{ij})\) and \(a_{ji} = 1\). Check detailed balance:
+
 \[
 \pi_i p_{ij} = \pi_i h_{ij} \frac{\pi_j h_{ji}}{\pi_i h_{ij}} = \pi_j h_{ji} = \pi_j p_{ji}. \quad\square
 \]
@@ -1117,6 +1193,7 @@ p_{ij} = h_{ij} a_{ij} \; (i \neq j), \qquad p_{ii} = 1 - \sum_{k\neq i} h_{ik}a
 - Moving left: \(a_{i,i-1} = \min(1, (i)/(i+1))\). For \(i=1\): \(a_{10} = 1/2\). For \(i=2\): \(a_{21} = 2/3\). For \(i=3\): \(a_{32} = 3/4\).
 
 **MH transition matrix**:
+
 \[
 P = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1/4 & 1/4 & 1/2 & 0 \\ 0 & 1/3 & 1/6 & 1/2 \\ 0 & 0 & 3/8 & 5/8 \end{pmatrix}.
 \]
@@ -1127,6 +1204,7 @@ P = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1/4 & 1/4 & 1/2 & 0 \\ 0 & 1/3 & 1/6 & 1/2 
 ## Gibbs Sampler
 
 For multivariate targets \(\pi(x_1,\ldots,x_d)\), the **Gibbs sampler** cycles through coordinates, sampling each from its full conditional:
+
 \[
 x_k^{(t+1)} \sim \pi(x_k \mid x_1^{(t+1)},\ldots,x_{k-1}^{(t+1)}, x_{k+1}^{(t)},\ldots,x_d^{(t)}).
 \]
@@ -1137,6 +1215,7 @@ This avoids the need to design a global proposal, as full conditionals are often
 ## Convergence Rate
 
 The rate of convergence of the MH chain is governed by the **spectral gap** \(1 - |\lambda_2|\) where \(\lambda_2\) is the second-largest eigenvalue of \(P\). The total variation distance satisfies:
+
 \[
 \max_i \|p_{i\cdot}^{(n)} - \pi\|_{\text{TV}} \leq C \cdot |\lambda_2|^n.
 \]
@@ -1175,6 +1254,7 @@ A process \(\{X(t)\}\) is **Gaussian** if all fdds are multivariate normal. A Ga
 **Wide-sense (weak) stationarity**: \(E[X(t)] = \mu\) is constant and \(\text{Cov}(X(s),X(t)) = K(t-s)\) depends only on the lag \(|t-s|\).
 
 **Ergodic theorem** (continuous-time): For a strictly stationary ergodic process:
+
 \[
 \frac{1}{T}\int_0^T X(t)\,dt \to E[X(0)] \quad \text{a.s. as } T \to \infty.
 \]
@@ -1201,6 +1281,7 @@ Standard **Brownian motion** \(\{B(t)\}_{t \geq 0}\) satisfies:
 4. **Continuous sample paths**.
 
 Covariance: \(\text{Cov}(B(s),B(t)) = \min(s,t)\) for \(s \leq t\):
+
 \[
 \text{Cov}(B(s),B(t)) = \text{Cov}(B(s), B(s) + [B(t)-B(s)]) = \text{Var}(B(s)) + 0 = s.
 \]
@@ -1226,6 +1307,7 @@ Although continuous, Brownian paths are pathologically irregular:
 </div>
 
 **Proof of \(M_2\)**: \(E[B(t)^2 - t \mid \mathcal{F}_s] = E[(B(s) + [B(t)-B(s)])^2 \mid \mathcal{F}_s] - t\). Since \(B(t)-B(s) \perp \mathcal{F}_s\) and \(E[B(t)-B(s)] = 0\), \(\text{Var}(B(t)-B(s)) = t-s\):
+
 \[
 = B(s)^2 + 2B(s) \cdot 0 + (t-s) - t = B(s)^2 - s = M_2(s). \quad\square
 \]
@@ -1233,6 +1315,7 @@ Although continuous, Brownian paths are pathologically irregular:
 **Using martingales via optional stopping**: If \(\tau\) is a bounded stopping time, \(E[M(\tau)] = M(0)\).
 
 **Application — First exit time from \((-a, b)\)**: Let \(\tau = \inf\{t: B(t) \notin (-a,b)\}\). From martingale \(M_1\): \(E[B(\tau)] = 0\), so \(b \cdot P(B(\tau) = b) + (-a) \cdot P(B(\tau) = -a) = 0\), giving:
+
 \[
 P(B(\tau) = b) = \frac{a}{a+b}, \quad P(B(\tau) = -a) = \frac{b}{a+b}.
 \]
@@ -1243,10 +1326,12 @@ From martingale \(M_2\): \(E[B(\tau)^2 - \tau] = 0\), so \(E[\tau] = E[B(\tau)^2
 ## Reflection Principle
 
 The **strong Markov property** allows reflecting the path after a stopping time. At the first hitting time \(T_m = \inf\{t: B(t) = m\}\), the process \(\hat B(t) = 2m - B(T_m + t)\) is also a BM. Therefore:
+
 \[
 P(M(t) \geq m) = P(B(t) \geq m) + P(B(t) \leq m, M(t) \geq m) = P(B(t) \geq m) + P(B(t) \leq m, T_m \leq t).
 \]
 By the reflection principle, \(P(B(t) \leq m, T_m \leq t) = P(B(t) \geq m)\), so:
+
 \[
 P(M(t) \geq m) = 2P(B(t) \geq m) = 2\left(1 - \Phi(m/\sqrt{t})\right), \quad m > 0.
 \]
@@ -1256,11 +1341,13 @@ P(M(t) \geq m) = 2P(B(t) \geq m) = 2\left(1 - \Phi(m/\sqrt{t})\right), \quad m >
 ## Hitting Time Distribution
 
 The density of \(T_x = \inf\{t: B(t) = x\}\) (\(x > 0\)) is the **inverse Gaussian**:
+
 \[
 f_{T_x}(t) = \frac{x}{\sqrt{2\pi t^3}}\exp\!\left\{-\frac{x^2}{2t}\right\}, \quad t > 0.
 \]
 
 **Derivation via reflection**: \(P(T_x \leq t) = P(M(t) \geq x) = 2P(B(t) \geq x) = 2(1-\Phi(x/\sqrt{t}))\). Differentiating with respect to \(t\):
+
 \[
 f_{T_x}(t) = 2 \cdot \phi(x/\sqrt{t}) \cdot \frac{x}{2t^{3/2}} = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/(2t)}.
 \]

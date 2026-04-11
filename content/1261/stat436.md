@@ -596,6 +596,7 @@ A <strong>spatial point process</strong> \( \mathbf{X} \) is a random, countable
 
 <div class="definition">
 The <strong>intensity function</strong> \( \lambda(s) \) is the expected number of events per unit area at location \( s \):
+
 \[
 \lambda(s) = \lim_{|ds| \to 0} \frac{\mathbb{E}[N(ds)]}{|ds|}
 \]
@@ -669,6 +670,7 @@ R = \frac{\bar d}{\mathbb{E}[\bar d]_{\text{CSR}}} = \frac{\bar d}{0.5/\sqrt{\ha
 The **second-order intensity** approach (Section 3.5) via the K function is more powerful than quadrat counts. Key formulas:
 
 **Estimator of K (Ripley 1976):**
+
 \[
 \hat K(r) = \frac{|\mathcal{W}|}{n(n-1)} \sum_{i \neq j} \mathbf{1}(d_{ij} \leq r) \cdot e_{ij}^{-1}
 \]

@@ -1056,6 +1056,7 @@ The most useful computational form of the resultant expresses it directly in ter
 R(f,g) = a_n^m \, b_m^n \prod_{i=1}^{n}\prod_{j=1}^{m}(x_i - y_j).
 \]
 Equivalently,
+
 \[
 R(f,g) = a_n^m \prod_{i=1}^{n} g(x_i) = (-1)^{mn}\, b_m^n \prod_{j=1}^{m} f(y_j).
 \]
@@ -1089,10 +1090,12 @@ The product formula gives us an elegant connection between the discriminant and 
 R(f, f') = \prod_{i=1}^{n} f'(\alpha_i).
 \]
 Now \(f(x) = \prod_{k=1}^n (x - \alpha_k)\), so
+
 \[
 f'(\alpha_i) = \prod_{\substack{j=1 \\ j \ne i}}^{n} (\alpha_i - \alpha_j).
 \]
 Therefore
+
 \[
 R(f, f') = \prod_{i=1}^{n} \prod_{\substack{j=1 \\ j \ne i}}^{n} (\alpha_i - \alpha_j) = (-1)^{n(n-1)/2} \prod_{1 \le i < j \le n} (\alpha_i - \alpha_j)^2 = (-1)^{n(n-1)/2}\, \operatorname{disc}(\alpha).
 \]
@@ -1151,10 +1154,12 @@ In particular, if \(\gcd(\operatorname{disc}(K), \operatorname{disc}(L)) = 1\), 
 where \(a_{ij}, r \in \mathbb{Z}\) with \(\gcd(a_{11}, \ldots, a_{mn}, r) = 1\). If \(\gamma \in \mathcal{O}_{KL}\), we must show that \(r \mid d\).
 
 By symmetry, it suffices to show \(r \mid \operatorname{disc}(K)\). Since \([KL : \mathbb{Q}] = mn\), for each embedding \(\sigma_i : K \hookrightarrow \mathbb{C}\), there exists an extension \(\sigma_i' : KL \hookrightarrow \mathbb{C}\) that fixes \(L\) pointwise (by Lemma 6.6). Set \(x_i = \sum_{j=1}^n \frac{a_{ij}}{r} \beta_j \in L\) for each \(i\), so that
+
 \[
 \sigma_i'(\gamma) = \sum_{k=1}^m \sigma_i(\alpha_k) \, x_k.
 \]
 By Cramer's rule, \(x_k = \gamma_k / \delta\), where \(\delta = \det(\sigma_i(\alpha_j))\) satisfies \(\delta^2 = \operatorname{disc}(K)\), and each \(\gamma_k\) is an algebraic integer. Then \(\operatorname{disc}(K) \cdot x_k = \delta \gamma_k \in \mathcal{O}_K\), and since \(x_k \in L\), we have \(\operatorname{disc}(K) \cdot x_k \in \mathcal{O}_L\). In particular,
+
 \[
 \frac{\operatorname{disc}(K) \cdot a_{ij}}{r} \in \mathbb{Z}
 \]
@@ -1176,10 +1181,12 @@ The theory of composita gives a clean inductive proof that cyclotomic rings of i
 For the inductive step, write \(n = p_1^{e_1} \cdots p_k^{e_k}\), and set \(m = p_1^{e_1} \cdots p_{k-1}^{e_{k-1}}\). Let \(K = \mathbb{Q}(\zeta_m)\) and \(L = \mathbb{Q}(\zeta_{p_k^{e_k}})\). By induction, \(\mathcal{O}_K = \mathbb{Z}[\zeta_m]\) and \(\mathcal{O}_L = \mathbb{Z}[\zeta_{p_k^{e_k}}]\).
 
 First, \(KL = \mathbb{Q}(\zeta_n)\): since \(\gcd(m, p_k^{e_k}) = 1\), there exist integers \(x, y\) with \(xm + yp_k^{e_k} = 1\), so \(\zeta_n = \zeta_m^y \cdot \zeta_{p_k^{e_k}}^x \in KL\). Moreover,
+
 \[
 \varphi(n) = \varphi(m)\,\varphi(p_k^{e_k}) = [K : \mathbb{Q}] \cdot [L : \mathbb{Q}] \ge [KL : \mathbb{Q}] \ge [\mathbb{Q}(\zeta_n) : \mathbb{Q}] = \varphi(n),
 \]
 so \([KL : \mathbb{Q}] = [K : \mathbb{Q}][L : \mathbb{Q}]\). Since \(\operatorname{disc}(K)\) is a power of \(p_1 \cdots p_{k-1}\) and \(\operatorname{disc}(L)\) is a power of \(p_k\), we have \(\gcd(\operatorname{disc}(K), \operatorname{disc}(L)) = 1\). By Theorem 6.7,
+
 \[
 \mathbb{Z}[\zeta_n] \subseteq \mathcal{O}_{\mathbb{Q}(\zeta_n)} \subseteq \mathcal{O}_K \mathcal{O}_L = \mathbb{Z}[\zeta_m] \cdot \mathbb{Z}[\zeta_{p_k^{e_k}}] = \mathbb{Z}[\zeta_n],
 \]
@@ -1196,10 +1203,12 @@ Not every number field has a power basis. Dedekind constructed the first example
 <div class="proof"><strong>Proof.</strong> From Example 6.4 (via the resultant), \(\operatorname{disc}(\theta) = -4 \cdot 503\). One checks that \(\omega = (\theta^2 + \theta)/2 \in \mathcal{O}_K\) (by verifying that its minimal polynomial has integer coefficients, using the relations among the conjugates). A change-of-basis calculation then gives \(\operatorname{disc}(1, \theta, \omega) = -503\). Since \(503\) is prime, \(\{1, \theta, \omega\}\) is an integral basis and \(\operatorname{disc}(K) = -503\).
 
 Now suppose \(\lambda \in \mathcal{O}_K\) with \(\{1, \lambda, \lambda^2\}\) an integral basis. Write \(\lambda = a + b\theta + c\omega\) for \(a, b, c \in \mathbb{Z}\). A computation shows that \(\lambda^2 = A_1 + A_2 \theta + A_3 \omega\) where
+
 \[
 A_1 = a^2 - 2c^2 - 8bc, \quad A_2 = -2c^2 + 2ab + 2bc - b^2, \quad A_3 = 2b^2 + 2ac + c^2.
 \]
 By the change-of-basis formula,
+
 \[
 \operatorname{disc}(\lambda) = -503 \cdot (bA_3 - cA_2)^2 = -503 \cdot (2b^3 - bc^2 + b^2c + 2c^3)^2.
 \]
@@ -1293,6 +1302,7 @@ The first step toward unique factorization of ideals is showing that every nonze
 <div class="proof"><strong>Proof.</strong> Let \(\mathcal{S}\) be the set of nonzero ideals that do <em>not</em> contain any product of prime ideals. Suppose for contradiction that \(\mathcal{S} \ne \emptyset\). Since \(R\) is Noetherian, \(\mathcal{S}\) has a maximal element \(M\).
 
 The ideal \(M\) is not prime (since any prime ideal contains itself, a product of one prime). So there exist \(r, s \in R \setminus M\) with \(rs \in M\). Set \(M_1 = M + (r)\) and \(M_2 = M + (s)\). Both \(M_1\) and \(M_2\) strictly contain \(M\), so neither is in \(\mathcal{S}\). Hence each contains a product of prime ideals: say \(P_1 \cdots P_\ell \subseteq M_1\) and \(Q_1 \cdots Q_k \subseteq M_2\). But then
+
 \[
 P_1 \cdots P_\ell \, Q_1 \cdots Q_k \subseteq M_1 M_2 \subseteq M,
 \]
@@ -1392,6 +1402,7 @@ In practice, the most important question is: given a rational prime \(p\), how d
 \overline{f}(x) \equiv \overline{g}_1(x)^{e_1} \cdots \overline{g}_r(x)^{e_r} \pmod{p},
 \]
 where \(\overline{g}_1, \ldots, \overline{g}_r\) are distinct monic irreducible polynomials in \(\mathbb{F}_p[x]\). Then
+
 \[
 (p) = \mathfrak{p}_1^{e_1} \cdots \mathfrak{p}_r^{e_r}
 \]
@@ -1433,6 +1444,7 @@ The discriminant controls which primes ramify.
 \operatorname{Tr}((\alpha\beta)^p) = p \cdot \operatorname{Tr}\!\left(\frac{(\alpha\beta)^p}{p}\right),
 \]
 so \(p \mid \operatorname{Tr}((\alpha\beta)^p)\). Moreover,
+
 \[
 (\operatorname{Tr}(\alpha\beta))^p = \sum_i \sigma_i(\alpha\beta)^p + p\gamma = \operatorname{Tr}((\alpha\beta)^p) + p\gamma
 \]
@@ -1492,6 +1504,7 @@ The ideal norm generalizes the element norm.
 \bigl(\sigma_i(\alpha\omega_j)\bigr) = \operatorname{diag}(\sigma_1(\alpha), \ldots, \sigma_n(\alpha)) \cdot \bigl(\sigma_i(\omega_j)\bigr),
 \]
 so
+
 \[
 \operatorname{disc}(\alpha\omega_1, \ldots, \alpha\omega_n) = N_{K/\mathbb{Q}}(\alpha)^2 \cdot \operatorname{disc}(\omega_1, \ldots, \omega_n).
 \]
@@ -1563,6 +1576,7 @@ The multiplicativity of the norm yields a fundamental numerical constraint on ho
 (p) = \mathfrak{p}_1^{e_1} \cdots \mathfrak{p}_r^{e_r}
 \]
 with \(N(\mathfrak{p}_i) = p^{f_i}\). Then
+
 \[
 \sum_{i=1}^{r} e_i f_i = n.
 \]
@@ -1660,6 +1674,7 @@ Therefore \(\operatorname{Cl}(\mathbb{Q}(\sqrt{-23})) \cong \mathbb{Z}/3\mathbb{
 <div class="example"><strong>Example (A cubic field).</strong> Let \(K = \mathbb{Q}(\alpha)\) where \(\alpha\) is a root of \(f(x) = x^3 - 3x + 3\), which is irreducible by Eisenstein at \(p = 3\). Since \(\operatorname{disc}(f) = -135 = -3^3 \cdot 5\) is squarefree up to the index, one can verify that \(\mathcal{O}_K = \mathbb{Z}[\alpha]\).
 
 The field has one real embedding and one pair of complex embeddings (\(r = 1, s = 1\)), giving
+
 \[
 M_K = \frac{3!}{27} \cdot \frac{4}{\pi} \sqrt{135} < 4.
 \]
@@ -1721,6 +1736,7 @@ A basis for a lattice \(\Lambda\) is not unique. If \(\{\alpha_1, \ldots, \alpha
 \mathcal{P} = \{\theta_1 \alpha_1 + \cdots + \theta_n \alpha_n \mid 0 \le \theta_i < 1 \text{ for all } i\}.
 \]
 The <em>determinant</em> (or <em>covolume</em>) of \(\Lambda\) is
+
 \[
 d(\Lambda) = |\det(\alpha_1, \ldots, \alpha_n)|,
 \]
@@ -1751,10 +1767,12 @@ Then there exist \(m+1\) distinct points \(x_1, \ldots, x_{m+1} \in S\) such tha
 be the fundamental parallelepiped. Every point \(x \in \mathbb{R}^n\) has a unique representation \(x = \lambda + \gamma\) with \(\lambda \in \Lambda\) and \(\gamma \in \mathcal{P}\), and \(\mu(\mathcal{P}) = d(\Lambda)\).
 
 For each \(\lambda \in \Lambda\), define
+
 \[
 R(\lambda) = \{\nu \in \mathcal{P} \mid \lambda + \nu \in S\}.
 \]
 The sets \(R(\lambda)\) are pairwise disjoint subsets of \(\mathcal{P}\) (after translating each piece of \(S\) back into \(\mathcal{P}\)), and
+
 \[
 \sum_{\lambda \in \Lambda} \mu(R(\lambda)) = \mu(S).
 \]
@@ -1779,16 +1797,19 @@ then \(S\) contains \(m\) pairs \(\pm \lambda_1, \ldots, \pm \lambda_m\) of nonz
 <div class="proof"><strong>Proof.</strong> Consider the set \(\frac{1}{2}S = \{\frac{1}{2}x \mid x \in S\}\). Its measure is \(\mu(\frac{1}{2}S) = 2^{-n} \mu(S)\). Under our hypotheses, either \(\mu(\frac{1}{2}S) > m \cdot d(\Lambda)\), or \(\mu(\frac{1}{2}S) = m \cdot d(\Lambda)\) and \(\frac{1}{2}S\) is compact (since \(S\) is). By Blichfeldt's Theorem (Theorem 9.3), there exist \(m+1\) distinct points \(\frac{1}{2}x_1, \ldots, \frac{1}{2}x_{m+1}\) in \(\frac{1}{2}S\) such that \(\frac{1}{2}x_i - \frac{1}{2}x_j \in \Lambda\) for all \(i, j\).
 
 Order the \(x_i\) so that \(x_1 > x_2 > \cdots > x_{m+1}\), where we say \(x_i > x_j\) if the first nonzero coordinate of \(x_i - x_j\) is positive. Define
+
 \[
 \lambda_j = \frac{1}{2}x_j - \frac{1}{2}x_{m+1} \in \Lambda \setminus \{0\}
 \]
 for \(j = 1, \ldots, m\). By the ordering, the \(m\) pairs \(\pm \lambda_1, \ldots, \pm \lambda_m\) are all distinct.
 
 Since \(S\) is symmetric, \(-\frac{1}{2}x_{m+1} = \frac{1}{2}(-x_{m+1}) \in \frac{1}{2}S\). Since \(S\) is convex, \(\frac{1}{2}S\) is convex, so
+
 \[
 \lambda_j = \frac{1}{2}x_j + \frac{1}{2}(-x_{m+1}) = \frac{1}{2} \cdot \frac{1}{2}x_j + \frac{1}{2} \cdot \frac{1}{2}(-x_{m+1})
 \]
 Wait -- we need to be slightly more careful. We have \(\frac{1}{2}x_j \in \frac{1}{2}S\) and \(-\frac{1}{2}x_{m+1} \in \frac{1}{2}S\). Since \(S\) is convex and symmetric, \(\lambda_j = \frac{1}{2}x_j + (-\frac{1}{2}x_{m+1})\). In fact, since \(\frac{1}{2}x_j \in \frac{1}{2}S\) and \(-\frac{1}{2}x_{m+1} \in \frac{1}{2}S\), convexity of \(S\) gives
+
 \[
 \lambda_j = \frac{1}{2}x_j - \frac{1}{2}x_{m+1} = \frac{1}{2} x_j + \frac{1}{2}(-x_{m+1}) \in S
 \]
@@ -1821,6 +1842,7 @@ We label the embeddings so that \(\sigma_1, \ldots, \sigma_{r_1}\) are real, and
 \sigma : K \hookrightarrow \mathbb{R}^{r_1} \times \mathbb{C}^{r_2}
 \]
 defined by
+
 \[
 \sigma(\alpha) = \bigl(\sigma_1(\alpha), \ldots, \sigma_{r_1}(\alpha), \sigma_{r_1+1}(\alpha), \ldots, \sigma_{r_1+r_2}(\alpha)\bigr).
 \]
@@ -1828,6 +1850,7 @@ By identifying \(\mathbb{C}\) with \(\mathbb{R}^2\) via \(z \mapsto (\operatorna
 </div>
 
 The target space \(\mathbb{R}^{r_1} \times \mathbb{C}^{r_2}\) is sometimes called <em>Minkowski space</em> and denoted \(V_K\). It is a real vector space of dimension \(r_1 + 2r_2 = n\). As a ring, it has coordinate-wise operations, and the norm map \(N : V_K \to \mathbb{R}\) given by
+
 \[
 N(x_1, \ldots, x_{r_1}, z_{r_1+1}, \ldots, z_{r_1+r_2}) = \prod_{i=1}^{r_1} x_i \cdot \prod_{j=r_1+1}^{r_1+r_2} |z_j|^2
 \]
@@ -1863,6 +1886,7 @@ d(\Lambda) = 2^{-r_2} \sqrt{|\operatorname{disc}(K)|} \cdot N(A).
 D_0 = \left(\frac{1}{-2i}\right)^{r_2} \det(\sigma_j(\alpha_i))
 \]
 since \(\operatorname{Re}(z) = \frac{z + \bar{z}}{2}\) and \(\operatorname{Im}(z) = \frac{z - \bar{z}}{2i}\). By the discriminant formula, \(|\det(\sigma_j(\alpha_i))| = \sqrt{|\operatorname{disc}(K)|} \cdot N(A)\). Therefore
+
 \[
 d(\Lambda) = |D_0| = \frac{1}{2^{r_2}} \sqrt{|\operatorname{disc}(K)|} \cdot N(A)
 \]
@@ -1878,6 +1902,7 @@ We are now ready to state and prove the fundamental norm bound that underlies th
 |N_{K/\mathbb{Q}}(\alpha)| \le \left(\frac{2}{\pi}\right)^{r_2} \sqrt{|\operatorname{disc}(K)|} \cdot N(A).
 \]
 In particular, every ideal class of \(\mathcal{O}_K\) contains an ideal of norm at most
+
 \[
 C_K = \left(\frac{2}{\pi}\right)^{r_2} \sqrt{|\operatorname{disc}(K)|}.
 \]
@@ -1888,18 +1913,22 @@ C_K = \left(\frac{2}{\pi}\right)^{r_2} \sqrt{|\operatorname{disc}(K)|}.
 S_t = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid |x_i| \le t \text{ for } i = 1, \ldots, r_1; \;\; x_{r_1+2j-1}^2 + x_{r_1+2j}^2 \le t^2 \text{ for } j = 1, \ldots, r_2\}.
 \]
 This set is convex and symmetric about the origin. Its measure is
+
 \[
 \mu(S_t) = 2^{r_1} \pi^{r_2} t^n.
 \]
 We choose \(t\) so that \(\mu(S_t) = 2^n \cdot d(\Lambda)\), where \(\Lambda = \sigma(A)\) has \(d(\Lambda) = 2^{-r_2} \sqrt{|\operatorname{disc}(K)|} \cdot N(A)\). This gives
+
 \[
 2^{r_1} \pi^{r_2} t^n = 2^n \cdot 2^{-r_2} \sqrt{|\operatorname{disc}(K)|} \cdot N(A),
 \]
 so
+
 \[
 t = \left(\frac{2}{\pi}\right)^{r_2/n} \bigl(\sqrt{|\operatorname{disc}(K)|} \cdot N(A)\bigr)^{1/n}.
 \]
 Since \(S_t\) is compact, Minkowski's theorem (Theorem 9.4 with \(m = 1\)) yields a nonzero lattice point \(\sigma(\alpha) \in S_t\) for some \(\alpha \in A\), \(\alpha \neq 0\). Then
+
 \[
 |N_{K/\mathbb{Q}}(\alpha)| = \prod_{i=1}^{r_1} |\sigma_i(\alpha)| \cdot \prod_{j=1}^{r_2} |\sigma_{r_1+j}(\alpha)|^2 \le t^{r_1} \cdot (t^2)^{r_2} = t^n = \left(\frac{2}{\pi}\right)^{r_2} \sqrt{|\operatorname{disc}(K)|} \cdot N(A).
 \]
@@ -1953,6 +1982,7 @@ The Minkowski-theoretic approach extends to prove that every positive integer is
 \left(\sum_{i=1}^4 a_i^2\right)\left(\sum_{i=1}^4 b_i^2\right) = \sum_{i=1}^4 c_i^2
 \]
 where
+
 \[
 c_1 = a_1b_1 - a_2b_2 - a_3b_3 - a_4b_4, \quad c_2 = a_1b_2 + a_2b_1 + a_3b_4 - a_4b_3,
 \]
@@ -1976,12 +2006,14 @@ By this identity, to show every positive integer is a sum of four squares, it su
 If \(p \equiv 1 \pmod{4}\), then \(-1\) is a square mod \(p\) and we may take \(b = 0\). If \(p \equiv 3 \pmod{4}\), the set \(\{y^2 + 1 \mid y \in \mathbb{F}_p\}\) has \(\frac{p+1}{2}\) elements (counting \(0^2 + 1 = 1\) and the \(\frac{p-1}{2}\) distinct nonzero squares, each giving a distinct value after adding 1). Since there are only \(\frac{p-1}{2}\) nonzero squares in \(\mathbb{F}_p\), some value \(y_0^2 + 1\) must be a non-square. Then \(-(y_0^2+1)\) is a square, so there exists \(x_0\) with \(x_0^2 \equiv -(y_0^2+1) \pmod{p}\). (For \(p = 2\) the result is trivial: \(2 = 1^2 + 1^2 + 0^2 + 0^2\).)
 
 Now consider the lattice \(\Lambda \subseteq \mathbb{R}^4\) with basis
+
 \[
 v_1 = (1, 0, a, b), \quad v_2 = (0, 1, b, -a), \quad v_3 = (0, 0, p, 0), \quad v_4 = (0, 0, 0, p).
 \]
 Then \(d(\Lambda) = p^2\). Let \(S\) be a closed ball of radius \(r\) with \(\mu(S) = \frac{\pi^2 r^4}{2}\). Choose \(r^2 = \frac{4p}{\pi\sqrt{2}}\) so that \(\mu(S) = 2^4 p^2\); since the ball is compact, Minkowski's theorem yields a nonzero lattice point \((x, y, z, w) \in S\).
 
 Writing \((x,y,z,w) = \alpha v_1 + \beta v_2 + \gamma v_3 + \delta v_4\), we have \(x = \alpha\), \(y = \beta\), \(z = a\alpha + b\beta + p\gamma\), \(w = b\alpha - a\beta + p\delta\). Working modulo \(p\):
+
 \[
 x^2 + y^2 + z^2 + w^2 \equiv \alpha^2 + \beta^2 + (a\alpha + b\beta)^2 + (b\alpha - a\beta)^2 \equiv (1 + a^2 + b^2)(\alpha^2 + \beta^2) \equiv 0 \pmod{p}
 \]
@@ -2040,16 +2072,19 @@ The proof of Dirichlet's Unit Theorem rests on converting the multiplicative str
 L : V_K^* \to \mathbb{R}^{r_1 + r_2}
 \]
 defined by
+
 \[
 L(x_1, \ldots, x_{r_1}, z_{r_1+1}, \ldots, z_{r_1+r_2}) = (\log|x_1|, \ldots, \log|x_{r_1}|, 2\log|z_{r_1+1}|, \ldots, 2\log|z_{r_1+r_2}|).
 \]
 </div>
 
 The factor of 2 in the complex places is natural: it accounts for the fact that each complex embedding contributes \(|z|^2\) to the norm. With this normalization, if \(\alpha \in K^*\) and \(L(\sigma(\alpha)) = (\ell_1, \ldots, \ell_{r_1+r_2})\), then
+
 \[
 \sum_{i=1}^{r_1+r_2} \ell_i = \log|N_{K/\mathbb{Q}}(\alpha)|.
 \]
 In particular, if \(\alpha \in \mathcal{O}_K^*\), then \(N(\alpha) = \pm 1\), so
+
 \[
 \ell_1 + \cdots + \ell_{r_1+r_2} = 0.
 \]
@@ -2158,6 +2193,7 @@ The set \(H_p\) of quadratic residues modulo \(p\) (i.e., the set of nonzero squ
 The algebraic number theory approach to quadratic reciprocity uses the Galois theory of cyclotomic fields. The key idea is to connect the Legendre symbol to the splitting behavior of primes, which in turn is governed by the Frobenius automorphism.
 
 Let \(p\) be an odd prime, and consider the cyclotomic field \(\mathbb{Q}(\zeta_p)\). Its Galois group is
+
 \[
 \operatorname{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \cong (\mathbb{Z}/p\mathbb{Z})^*
 \]
@@ -2171,6 +2207,7 @@ for all \(\alpha \in \mathbb{Z}[\zeta_p]\).
 </div>
 
 That \(\operatorname{Frob}_q = \sigma_q\) is easily verified: for \(\alpha = \sum a_i \zeta_p^i\) with \(a_i \in \mathbb{Z}\),
+
 \[
 \alpha^q \equiv \sum a_i \zeta_p^{qi} = \sigma_q(\alpha) \pmod{\mathfrak{Q}}
 \]
@@ -2184,6 +2221,7 @@ Now let \(H_p\) be the subgroup of squares in \((\mathbb{Z}/p\mathbb{Z})^*\). By
 This is a standard result from the theory of Gauss sums, which shows that \(\sqrt{p^*}\) lies in \(\mathbb{Q}(\zeta_p)\).
 
 The connection between the Legendre symbol and splitting is now clear:
+
 \[
 \left(\frac{q}{p}\right) = 1 \iff q \in H_p \iff \sigma_q \text{ fixes } K_p \iff q \text{ splits in } K_p.
 \]
@@ -2193,6 +2231,7 @@ The connection between the Legendre symbol and splitting is now clear:
 \left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}}.
 \]
 Equivalently,
+
 \[
 \left(\frac{q}{p}\right) = \left(\frac{p^*}{q}\right)
 \]
@@ -2204,6 +2243,7 @@ where \(p^* = (-1)^{(p-1)/2} p\).
 \left(\frac{q}{p}\right) = 1 \iff q \text{ splits in } K_p = \mathbb{Q}(\sqrt{p^*}).
 \]
 By the theory of splitting in quadratic fields, the prime \(q\) splits in \(\mathbb{Q}(\sqrt{p^<em>})\) if and only if \(p^</em>\) is a square modulo \(q\), i.e., \(\left(\frac{p^*}{q}\right) = 1\). Therefore
+
 \[
 \left(\frac{q}{p}\right) = \left(\frac{p^*}{q}\right) = \left(\frac{(-1)^{(p-1)/2} p}{q}\right) = \left(\frac{-1}{q}\right)^{(p-1)/2} \left(\frac{p}{q}\right) = (-1)^{\frac{(p-1)(q-1)}{4}} \left(\frac{p}{q}\right).
 \]
@@ -2246,6 +2286,7 @@ The importance of regularity for Fermat's Last Theorem comes from the following 
 ## Kummer's Approach: Factoring in \(\mathbb{Z}[\zeta_p]\)
 
 The idea behind Kummer's approach is elegant. Suppose \(x^p + y^p = z^p\) for integers \(x, y, z\) with \(p \nmid xyz\). In the ring \(\mathbb{Z}[\zeta_p]\), where \(\zeta = \zeta_p\) is a primitive \(p\)-th root of unity, we can factor
+
 \[
 z^p = x^p + y^p = \prod_{j=0}^{p-1} (x + \zeta^j y).
 \]
@@ -2268,10 +2309,12 @@ Before proceeding with the proof, we need several key properties of the element 
 (ii) We have \(1 + \zeta = \frac{1 - \zeta^2}{1 - \zeta}\), and by part (i), both \(1 - \zeta^2\) and \(1 - \zeta\) are associates, so their ratio is a unit.
 
 (iii) The cyclotomic polynomial gives
+
 \[
 1 + x + \cdots + x^{p-1} = \prod_{j=1}^{p-1} (x - \zeta^j).
 \]
 Setting \(x = 1\):
+
 \[
 p = \prod_{j=1}^{p-1} (1 - \zeta^j) = (1 - \zeta)^{p-1} \prod_{j=1}^{p-1} \frac{1 - \zeta^j}{1 - \zeta} = u(1-\zeta)^{p-1}
 \]
@@ -2305,6 +2348,7 @@ z^p = \prod_{j=0}^{p-1} (x + \zeta^j y).
 <strong>Step 1: The ideals \((x + \zeta^j y)\) are pairwise coprime.</strong>
 
 Suppose \(\mathfrak{p}\) is a common prime factor of \((x + \zeta^j y)\) and \((x + \zeta^{j'} y)\) for \(j \neq j'\). Then \(\mathfrak{p}\) divides
+
 \[
 (x + \zeta^j y) - (x + \zeta^{j'} y) = \zeta^{j'} y (\zeta^{j-j'} - 1).
 \]
@@ -2325,16 +2369,19 @@ Since \(p\) is regular, \(p \nmid h_p\). The class \([I_j]\) satisfies \([I_j]^p
 Taking \(j = 1\), we have \((x + \zeta y) = (t)^p\) for some \(t \in \mathbb{Z}[\zeta]\), so \(x + \zeta y = ut^p\) for some unit \(u\).
 
 Write \(t = b_0 + b_1\zeta + \cdots + b_{p-2}\zeta^{p-2}\). Working modulo the ideal \((p) = (1-\zeta)^{p-1}\), the Frobenius-type relation gives
+
 \[
 t^p \equiv (b_0 + b_1 + \cdots + b_{p-2})^p \pmod{p}
 \]
 since \(\zeta^k \equiv 1 \pmod{(1-\zeta)}\). Similarly \(\bar{t}^p \equiv (b_0 + \cdots + b_{p-2})^p \pmod{p}\), so \(t^p \equiv \bar{t}^p \pmod{p}\).
 
 By Lemma 12.3, \(u/\bar{u} = \pm \zeta^j\) for some \(j\). Consider the case \(u/\bar{u} = \zeta^j\). Then
+
 \[
 x + y\zeta = ut^p \equiv \zeta^j \bar{u} \bar{t}^p = \zeta^j \overline{ut^p} = \zeta^j(x + y\bar{\zeta}) = \zeta^j(x + y\zeta^{-1}) \pmod{p}.
 \]
 This gives
+
 \[
 x + y\zeta - y\zeta^{j-1} - x\zeta^j \equiv 0 \pmod{p}.
 \]
@@ -2376,6 +2423,7 @@ Continued fractions provide a systematic way to produce the best rational approx
 [a_0] = a_0, \qquad [a_0, a_1, \ldots, a_n] = a_0 + \cfrac{1}{[a_1, \ldots, a_n]}.
 \]
 When \(a_0 \in \mathbb{Z}\) and \(a_k \in \mathbb{Z}^+\) for \(k \ge 1\), the <em>infinite continued fraction</em> is
+
 \[
 [a_0, a_1, a_2, \ldots] = \lim_{n \to \infty} [a_0, a_1, \ldots, a_n].
 \]
@@ -2389,6 +2437,7 @@ When \(a_0 \in \mathbb{Z}\) and \(a_k \in \mathbb{Z}^+\) for \(k \ge 1\), the <e
 a = q_1 b + r_1, \quad b = q_2 r_1 + r_2, \quad r_1 = q_3 r_2 + r_3, \quad \ldots
 \]
 with \(0 = r_n < r_{n-1} < \cdots < r_1 < b\). Then
+
 \[
 x = \frac{a}{b} = q_1 + \frac{r_1}{b} = q_1 + \cfrac{1}{b/r_1} = q_1 + \cfrac{1}{q_2 + \cfrac{r_2}{r_1}} = \cdots = [q_1, q_2, \ldots, q_n].
 \]
@@ -2407,6 +2456,7 @@ The power of continued fractions lies in the elegant recursive formulas for the 
 c_n = [a_0, a_1, \ldots, a_n] = \frac{p_n}{q_n}
 \]
 where \(p_n\) and \(q_n\) are defined by the recursion:
+
 \[
 p_0 = a_0, \quad p_1 = a_1 a_0 + 1, \quad p_k = a_k p_{k-1} + p_{k-2} \quad (k \ge 2),
 \]
@@ -2421,14 +2471,17 @@ q_0 = 1, \quad q_1 = a_1, \quad q_k = a_k q_{k-1} + q_{k-2} \quad (k \ge 2).
 <div class="proof"><strong>Proof.</strong> We proceed by induction. The base cases are immediate: \(c_0 = a_0 = p_0/q_0\) and \(c_1 = a_0 + 1/a_1 = (a_1 a_0 + 1)/a_1 = p_1/q_1\).
 
 For the inductive step, suppose the formula holds for continued fractions of length \(k\). Then
+
 \[
 c_{k+1} = [a_0, a_1, \ldots, a_k, a_{k+1}] = \left[a_0, a_1, \ldots, a_{k-1}, a_k + \frac{1}{a_{k+1}}\right].
 \]
 By the inductive hypothesis (applied with \(a_k' = a_k + 1/a_{k+1}\) in the last position, noting that \(p_i' = p_i\) and \(q_i' = q_i\) for \(i < k\)):
+
 \[
 c_{k+1} = \frac{a_k' p_{k-1} + p_{k-2}}{a_k' q_{k-1} + q_{k-2}} = \frac{(a_k + 1/a_{k+1}) p_{k-1} + p_{k-2}}{(a_k + 1/a_{k+1}) q_{k-1} + q_{k-2}}.
 \]
 Multiplying numerator and denominator by \(a_{k+1}\):
+
 \[
 c_{k+1} = \frac{a_{k+1}(a_k p_{k-1} + p_{k-2}) + p_{k-1}}{a_{k+1}(a_k q_{k-1} + q_{k-2}) + q_{k-1}} = \frac{a_{k+1} p_k + p_{k-1}}{a_{k+1} q_k + q_{k-1}} = \frac{p_{k+1}}{q_{k+1}}.
 \]
@@ -2458,6 +2511,7 @@ By induction, \(p_k q_{k-1} - q_k p_{k-1} = (-1)^{k-1}\), so \(p_{k+1} q_k - q_{
 (ii) From (i), \(p_{k+1} q_k - q_{k+1} p_k = (-1)^k\), so \(\gcd(p_k, q_k) \mid (-1)^k\), giving \(\gcd(p_k, q_k) = 1\).
 
 (iii) Using (i):
+
 \[
 c_{k+1} - c_k = \frac{p_{k+1}}{q_{k+1}} - \frac{p_k}{q_k} = \frac{p_{k+1} q_k - q_{k+1} p_k}{q_{k+1} q_k} = \frac{(-1)^k}{q_{k+1} q_k}.
 \]
@@ -2502,6 +2556,7 @@ Convergents are optimal rational approximations in a strong sense.
 One finds \(u, v \in \mathbb{Z}\) with \(u \neq 0\) (since \(v = 0\) would give \(s = uq_k\) and \(|sx - r| \ge |q_k x - p_k|\)) and \(v \neq 0\) (since \(u = 0\) would give \(s = vq_{k+1} \ge q_{k+1}\)). Moreover, \(u\) and \(v\) have opposite signs (since \(s = uq_k + vq_{k+1} > 0\) and \(s < q_{k+1}\)).
 
 Since \(x\) lies between \(c_k\) and \(c_{k+1}\), the quantities \(q_k x - p_k\) and \(q_{k+1}x - p_{k+1}\) have opposite signs. Combined with \(u\) and \(v\) having opposite signs, the products \(u(q_k x - p_k)\) and \(v(q_{k+1}x - p_{k+1})\) have the same sign, so
+
 \[
 |sx - r| = |u(q_k x - p_k) + v(q_{k+1}x - p_{k+1})| = |u||q_k x - p_k| + |v||q_{k+1}x - p_{k+1}| > |q_k x - p_k|,
 \]
@@ -2510,6 +2565,7 @@ contradicting our assumption.
 (ii) If \(|x - r/s| < |x - p_k/q_k|\) and \(s \le q_k\), then \(|sx - r| = s|x - r/s| < s|x - p_k/q_k| \le q_k|x - p_k/q_k| = |q_k x - p_k|\), contradicting (i) (which gives \(s \ge q_{k+1} > q_k\)).
 
 (iii) Given \(|x - r/s| < 1/(2s^2)\), choose \(k\) with \(q_k \le s < q_{k+1}\). If \(r/s \neq p_k/q_k\), then \(|r/s - p_k/q_k| \ge 1/(sq_k)\) (since \(rq_k - sp_k\) is a nonzero integer). The triangle inequality gives
+
 \[
 \frac{1}{sq_k} \le \left|\frac{r}{s} - \frac{p_k}{q_k}\right| \le \left|\frac{r}{s} - x\right| + \left|x - \frac{p_k}{q_k}\right| < \frac{1}{2s^2} + \frac{1}{2sq_k},
 \]
@@ -2593,6 +2649,7 @@ This corollary, combined with Theorem A.11(iii) and (iv), shows that solutions t
 | 5 | \(\frac{\sqrt{14}+3}{5}\) | 1 |
 
 Since \(x_5 = x_1\), the sequence is periodic with period \(\ell = 4\):
+
 \[
 \sqrt{14} = [3, \overline{1, 2, 1, 6}].
 \]
@@ -2614,12 +2671,14 @@ The convergents are \(3, 4, 11/3, 15/4, 101/27, \ldots\). Since \(\ell = 4\), th
 | 6 | \(\frac{\sqrt{19}+4}{1}\) | 8 | | | |
 
 Since \(x_6\) yields \(a_6 = 8 = 2a_0\) and then the pattern repeats, the period is \(\ell = 6\):
+
 \[
 \sqrt{19} = [4, \overline{2, 1, 3, 1, 2, 8}].
 \]
 The norms \(N_k = p_k^2 - 19q_k^2\) confirm Theorem A.11(iii): \(N_k = (-1)^k s_{k+1}\), and \(N_5 = 1\) corresponds to \(s_6 = 1\), i.e., \(\ell \mid 6\).
 
 The fundamental unit in \(\mathbb{Z}[\sqrt{19}]\) with \(u > 1\) is
+
 \[
 u = p_5 + q_5\sqrt{19} = 170 + 39\sqrt{19}.
 \]

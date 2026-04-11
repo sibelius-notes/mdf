@@ -192,6 +192,7 @@ If the \(k\)-th partial derivatives of \(f : \mathbb{R}^n \to \mathbb{R}\) are c
 ## 4.3 The Tangent Plane
 
 The tangent plane to the surface \(z = f(x,y)\) at the point \((a, b, f(a,b))\) is provisionally defined as:
+
 \[
 z = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x - a) + \frac{\partial f}{\partial y}(a,b)(y - b).
 \]
@@ -314,6 +315,7 @@ In Leibniz notation: \(\frac{dT}{dt} = \frac{\partial T}{\partial x}\frac{dx}{dt
 ## 6.2 Extensions of the Basic Chain Rule
 
 When there is more than one independent variable, e.g., \(u = f(x,y)\) with \(x = x(s,t)\) and \(y = y(s,t)\), the chain rule becomes:
+
 \[
 \frac{\partial u}{\partial s} = \frac{\partial u}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial s}, \qquad \frac{\partial u}{\partial t} = \frac{\partial u}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial t}.
 \]
@@ -376,6 +378,7 @@ Choosing \(\hat{\mathbf{u}} = \hat{\mathbf{i}}\) or \(\hat{\mathbf{u}} = \hat{\m
 </div>
 
 This gives the equation of the tangent plane to the surface \(f(x,y,z) = k\) at \(\mathbf{a} = (a,b,c)\):
+
 \[
 \nabla f(\mathbf{a}) \cdot (\mathbf{x} - \mathbf{a}) = 0 \quad \Longleftrightarrow \quad f_x(\mathbf{a})(x - a) + f_y(\mathbf{a})(y - b) + f_z(\mathbf{a})(z - c) = 0.
 \]
@@ -406,6 +409,7 @@ This approximates \(f(x,y)\) near \((a,b)\) with better accuracy than the linear
 f(\mathbf{x}) = f(\mathbf{a}) + f_x(\mathbf{a})(x-a) + f_y(\mathbf{a})(y-b) + R_{1,\mathbf{a}}(\mathbf{x}),
 \]
 where
+
 \[
 R_{1,\mathbf{a}}(\mathbf{x}) = \frac{1}{2}\left[f_{xx}(\mathbf{c})(x-a)^2 + 2f_{xy}(\mathbf{c})(x-a)(y-b) + f_{yy}(\mathbf{c})(y-b)^2\right].
 \]
@@ -424,6 +428,7 @@ R_{1,\mathbf{a}}(\mathbf{x}) = \frac{1}{2}\left[f_{xx}(\mathbf{c})(x-a)^2 + 2f_{
 ## 8.3 Generalizations
 
 The \(k\)-th degree Taylor polynomial is defined recursively by
+
 \[
 P_{k,\mathbf{a}}(\mathbf{x}) = P_{k-1,\mathbf{a}}(\mathbf{x}) + \frac{1}{k!}[(x-a)D_1 + (y-b)D_2]^k f(\mathbf{a}),
 \]
@@ -639,6 +644,7 @@ More generally, for \(f : \mathbb{R}^n \to \mathbb{R}\) with \(r\) constraints \
 A point \(P\) in the plane is represented by polar coordinates \((r, \theta)\) where \(r \geq 0\) is the distance from the origin and \(\theta\) is the angle from the polar axis. Unlike Cartesian coordinates, polar coordinates are not unique: \((r, \theta) = (r, \theta + 2\pi k)\) for any integer \(k\).
 
 The relationship to Cartesian coordinates is:
+
 \[
 x = r\cos\theta, \quad y = r\sin\theta, \qquad r = \sqrt{x^2 + y^2}, \quad \tan\theta = \frac{y}{x}.
 \]
@@ -648,6 +654,7 @@ The area enclosed by a polar curve \(r = f(\theta)\) from \(\theta = \alpha\) to
 ## 11.2 Cylindrical Coordinates
 
 Cylindrical coordinates \((r, \theta, z)\) extend polar coordinates to three dimensions by adding the Cartesian \(z\)-coordinate:
+
 \[
 x = r\cos\theta, \quad y = r\sin\theta, \quad z = z, \qquad r \geq 0,\ 0 \leq \theta < 2\pi.
 \]
@@ -655,6 +662,7 @@ x = r\cos\theta, \quad y = r\sin\theta, \quad z = z, \qquad r \geq 0,\ 0 \leq \t
 ## 11.3 Spherical Coordinates
 
 Spherical coordinates \((\rho, \phi, \theta)\) represent a point in \(\mathbb{R}^3\) by its distance from the origin \(\rho\), the angle \(\phi\) from the positive \(z\)-axis, and the azimuthal angle \(\theta\):
+
 \[
 x = \rho\sin\phi\cos\theta, \quad y = \rho\sin\phi\sin\theta, \quad z = \rho\cos\phi, \qquad \rho \geq 0,\ 0 \leq \phi \leq \pi,\ 0 \leq \theta < 2\pi.
 \]
@@ -753,6 +761,7 @@ DF^{-1}(\mathbf{u})\,DF(\mathbf{x}) = I.
 ## 13.2 Geometrical Interpretation of the Jacobian
 
 The Jacobian describes how a mapping scales areas. If \(F\) maps a small rectangle of area \(\Delta A_{xy}\) at point \(P\) to a region of area \(\Delta A_{uv}\), then
+
 \[
 \Delta A_{uv} \approx \left|\frac{\partial(u,v)}{\partial(x,y)}\right| \Delta A_{xy}.
 \]
@@ -843,6 +852,7 @@ The order of integration can be reversed when the region is described as \(x_\el
 </div>
 
 For polar coordinates \((x,y) = (r\cos\theta, r\sin\theta)\), the Jacobian is \(\frac{\partial(x,y)}{\partial(r,\theta)} = r\), so:
+
 \[
 \iint_{D_{xy}} H(x,y)\,dx\,dy = \iint_{D_{r\theta}} H(r\cos\theta, r\sin\theta)\,r\,dr\,d\theta.
 \]
@@ -954,6 +964,7 @@ For spherical coordinates: \(\frac{\partial(x,y,z)}{\partial(\rho,\theta,\phi)} 
 ## A.1 Implicit Differentiation
 
 If the equation \(f(x,y) = 0\) has a solution \(y = g(x)\), so that \(f(x,g(x)) = 0\), then differentiating implicitly with respect to \(x\) using the chain rule yields:
+
 \[
 g'(x) = -\frac{f_x(x, g(x))}{f_y(x, g(x))}, \quad \text{provided } f_y \neq 0.
 \]

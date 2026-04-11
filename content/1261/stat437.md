@@ -98,24 +98,28 @@ Repeated measurements on the same subject are correlated. Ignoring this correlat
 The **marginal correlation matrix** for subject \( i \) is \( \text{Corr}(Y_i) = \mathbf{R}_i \), an \( n_i \times n_i \) matrix. Common parametric structures:
 
 **Exchangeable (compound symmetry)**:
+
 \[
 \text{Corr}(Y_{ij}, Y_{ij'}) = \alpha \quad \text{for all } j \neq j'
 \]
 All pairs are equally correlated; appropriate when time ordering is irrelevant (e.g., cluster-randomized trials).
 
 **AR(1)**:
+
 \[
 \text{Corr}(Y_{ij}, Y_{ij'}) = \alpha^{|t_{ij} - t_{ij'}|}
 \]
 Correlation decays geometrically with time separation; appropriate for equally spaced observations where recent measurements are more informative.
 
 **Unstructured**:
+
 \[
 \text{Corr}(Y_{ij}, Y_{ij'}) = \alpha_{jj'}
 \]
 No constraints; uses \( m(m-1)/2 \) parameters; feasible only when \( m \) is small and the design is balanced.
 
 **Toeplitz (banded)**:
+
 \[
 \text{Corr}(Y_{ij}, Y_{ij'}) = \alpha_{|j - j'|}
 \]
@@ -163,6 +167,7 @@ A **marginal model** for longitudinal data specifies the first two moments of th
 3. **Working correlation structure**: \( \text{Corr}(Y_{ij}, Y_{ij'} \mid x_i) = r_{jj'}(\alpha) \), parametrized by \( \alpha \).
 
 The **working covariance matrix** for subject \( i \) is:
+
 \[
 \mathbf{V}_i(\beta, \alpha, \phi) = \phi \cdot \mathbf{A}_i^{1/2} \mathbf{R}_i(\alpha) \mathbf{A}_i^{1/2}
 \]
@@ -193,6 +198,7 @@ Because the working correlation may be misspecified, the naive model-based varia
 \]
 
 where:
+
 \[
 \mathbf{A} = \sum_{i=1}^{n} \mathbf{D}_i^T \mathbf{V}_i^{-1} \mathbf{D}_i, \qquad
 \mathbf{B} = \sum_{i=1}^{n} \mathbf{D}_i^T \mathbf{V}_i^{-1} \hat{\mathbf{e}}_i \hat{\mathbf{e}}_i^T \mathbf{V}_i^{-1} \mathbf{D}_i
@@ -257,6 +263,7 @@ where \( \mathbf{U}_2 \) is derived from the second moments \( E[e_{ij} e_{ij'}]
 **Setting**: A two-arm clinical trial (\( n = 200 \)) measures a binary outcome (depression episode: yes/no) at 4 quarterly follow-up visits. Let \( Y_{ij} \in \{0,1\} \), \( T_i \in \{0 = \text{control}, 1 = \text{treatment}\} \), and \( t_j \in \{3, 6, 9, 12\} \) months.
 
 **Marginal logistic model**:
+
 \[
 \text{logit}\, E[Y_{ij} \mid T_i, t_j] = \beta_0 + \beta_1 T_i + \beta_2 t_j
 \]
@@ -297,6 +304,7 @@ where:
 The random intercept \( b_i \) captures stable subject-specific deviations from the population mean — a subject who is chronically higher or lower than average on the response.
 
 The **induced marginal covariance** between two observations on the same subject is:
+
 \[
 \text{Cov}(Y_{ij}, Y_{ij'}) = \text{Var}(b_i) = \sigma_b^2, \quad j \neq j'
 \]
@@ -318,6 +326,7 @@ Y_{ij} = (\beta_0 + b_{0i}) + (\beta_1 + b_{1i}) t_{ij} + \beta_2^T z_{ij} + \va
 \]
 
 where \( \mathbf{b}_i = (b_{0i}, b_{1i})^T \sim N(\mathbf{0}, \mathbf{D}) \) with:
+
 \[
 \mathbf{D} = \begin{pmatrix} d_{11} & d_{12} \\ d_{12} & d_{22} \end{pmatrix}
 \]
@@ -325,6 +334,7 @@ where \( \mathbf{b}_i = (b_{0i}, b_{1i})^T \sim N(\mathbf{0}, \mathbf{D}) \) wit
 Now \( d_{11} = \text{Var}(b_{0i}) \) is the between-subject variance in baseline levels, \( d_{22} = \text{Var}(b_{1i}) \) is the between-subject variance in slopes, and \( d_{12} = \text{Cov}(b_{0i}, b_{1i}) \) captures whether subjects who start higher tend to change faster or slower.
 
 The implied **marginal covariance** between \( Y_{ij} \) and \( Y_{ij'} \) is:
+
 \[
 \text{Cov}(Y_{ij}, Y_{ij'}) = d_{11} + d_{12}(t_{ij} + t_{ij'}) + d_{22}\, t_{ij} t_{ij'}, \quad j \neq j'
 \]
@@ -389,12 +399,14 @@ evaluated at the ML/REML estimates. It is "best" in the sense of minimizing mean
 \]
 
 **Proof sketch**: Apply the multivariate normal conditional distribution formula to the joint distribution of \( (\mathbf{b}_i^T, \mathbf{Y}_i^T)^T \). The joint mean is \( (\mathbf{0}^T, (\mathbf{X}_i\boldsymbol{\beta})^T)^T \) and the joint covariance is:
+
 \[
 \begin{pmatrix} \mathbf{D} & \mathbf{D}\mathbf{Z}_i^T \\ \mathbf{Z}_i\mathbf{D} & \boldsymbol{\Omega}_i \end{pmatrix}
 \]
 The conditional mean formula gives \( E[\mathbf{b}_i \mid \mathbf{Y}_i] = \mathbf{D}\mathbf{Z}_i^T \boldsymbol{\Omega}_i^{-1}(\mathbf{Y}_i - \mathbf{X}_i\boldsymbol{\beta}) \). \( \square \)
 
 The predicted value for subject \( i \) at time \( t \) is:
+
 \[
 \hat{Y}_i(t) = \mathbf{x}(t)^T \hat{\boldsymbol{\beta}} + \mathbf{z}(t)^T \hat{\mathbf{b}}_i
 \]
@@ -406,6 +418,7 @@ This is the **empirical Bayes** (EB) predictor when the random effects distribut
 ### 3.5.1 Maximum Likelihood (ML)
 
 ML maximizes the marginal log-likelihood simultaneously over \( (\boldsymbol{\beta}, \mathbf{D}, \boldsymbol{\Sigma}) \). The ML estimator of \( \boldsymbol{\beta} \) is:
+
 \[
 \hat{\boldsymbol{\beta}}_{\text{ML}} = \left(\sum_i \mathbf{X}_i^T \hat{\boldsymbol{\Omega}}_i^{-1} \mathbf{X}_i\right)^{-1} \sum_i \mathbf{X}_i^T \hat{\boldsymbol{\Omega}}_i^{-1} \mathbf{Y}_i
 \]
@@ -416,6 +429,7 @@ ML maximizes the marginal log-likelihood simultaneously over \( (\boldsymbol{\be
 REML (Patterson & Thompson, 1971) corrects the ML bias by maximizing a **restricted likelihood** that is constructed from \( n-p \) orthogonal contrasts of \( \mathbf{Y} \) that are free of \( \boldsymbol{\beta} \):
 
 **Theorem (REML likelihood)**: The REML log-likelihood is:
+
 \[
 \ell_R(\mathbf{D}, \boldsymbol{\Sigma}) = -\frac{1}{2}\sum_i \log|\boldsymbol{\Omega}_i| - \frac{1}{2}\log\left|\sum_i \mathbf{X}_i^T \boldsymbol{\Omega}_i^{-1}\mathbf{X}_i\right| - \frac{1}{2}\sum_i (\mathbf{Y}_i - \mathbf{X}_i\tilde{\boldsymbol{\beta}})^T \boldsymbol{\Omega}_i^{-1}(\mathbf{Y}_i - \mathbf{X}_i\tilde{\boldsymbol{\beta}})
 \]
@@ -465,6 +479,7 @@ Implemented in `pbkrtest::PBmodcomp()`.
 For scalar parameters (especially variance components), **profile likelihood CIs** are more accurate than Wald intervals, particularly when the parameter is near a boundary.
 
 The profile log-likelihood for \( \theta_k \) (the \( k \)-th element of \( \theta \)) is:
+
 \[
 \ell_P(\theta_k) = \max_{\theta_{-k}} \ell(\theta_k, \theta_{-k})
 \]
@@ -474,11 +489,13 @@ A 95% CI is \( \{\theta_k : 2[\ell(\hat{\theta}) - \ell_P(\theta_k)] \leq \chi^2
 ## 4.5 Information Criteria for LMMs
 
 **Akaike Information Criterion (AIC)**:
+
 \[
 \text{AIC} = -2\ell(\hat{\theta}) + 2k
 \]
 
 **Bayesian Information Criterion (BIC)**:
+
 \[
 \text{BIC} = -2\ell(\hat{\theta}) + k\log(n^*)
 \]
@@ -557,16 +574,19 @@ Examples:
 ## 5.2 Subject-Specific vs. Population-Averaged Interpretation
 
 In the logistic GLMM, the conditional probability for subject \( i \) is:
+
 \[
 P(Y_{ij} = 1 \mid b_i, x_{ij}) = \frac{\exp(x_{ij}^T\beta + b_i)}{1 + \exp(x_{ij}^T\beta + b_i)}
 \]
 
 The **marginal (population-averaged)** probability requires integrating over \( b_i \):
+
 \[
 P(Y_{ij} = 1 \mid x_{ij}) = \int \frac{\exp(x_{ij}^T\beta + b)}{1 + \exp(x_{ij}^T\beta + b)} \phi(b; 0, \sigma_b^2)\, db
 \]
 
 This integral does **not** have a closed form. However, an approximation (Zeger, Liang & Albert, 1988) gives:
+
 \[
 \text{logit}\, P(Y_{ij} = 1 \mid x_{ij}) \approx \frac{x_{ij}^T\beta}{\sqrt{1 + c^2 \sigma_b^2}}
 \]
@@ -577,6 +597,7 @@ where \( c = 16\sqrt{3}/(15\pi) \approx 0.588 \). The **attenuation factor** \( 
 ## 5.3 Estimation Methods for GLMMs
 
 The marginal likelihood requires integrating out the random effects:
+
 \[
 L(\beta, \mathbf{D}) = \prod_{i=1}^n \int \left[\prod_{j=1}^{n_i} f(y_{ij} \mid b_i, \beta)\right] \phi(\mathbf{b}_i; \mathbf{0}, \mathbf{D})\, d\mathbf{b}_i
 \]
@@ -614,6 +635,7 @@ PQL is implemented in `MASS::glmmPQL()`. Its results should be treated with caut
 **Study**: Longitudinal study of respiratory illness in children (\( n = 111 \), \( n_i = 4 \) visits). Binary outcome \( Y_{ij} = 1 \) if respiratory illness present. Covariates: \( \text{age}_{ij} \) (centered), \( \text{smoke}_i \) (maternal smoking at baseline), \( \text{gender}_i \).
 
 **GLMM**:
+
 \[
 \text{logit}\, P(Y_{ij} = 1 \mid b_i) = \beta_0 + \beta_1 \text{age}_{ij} + \beta_2 \text{smoke}_i + \beta_3 \text{gender}_i + b_i
 \]
@@ -713,11 +735,13 @@ Let \( \pi_{ij} = P(R_{ij} = 1 \mid \mathbf{Y}_i^{\text{obs}}, x_i) \) be the pr
 The weights \( \hat{\pi}_{ij}^{-1} \) upweight observations from subjects who were "unlikely to be observed" (and thus represent both themselves and similar subjects who dropped out).
 
 **Estimation of weights**: For monotone dropout, fit a logistic regression for the probability of dropout at each visit given the dropout history and observed outcomes:
+
 \[
 \text{logit}\, P(R_{ij} = 0 \mid R_{i,j-1} = 1, \mathbf{Y}_i^{\text{obs}}_{\lt j}, x_i) = \gamma_0 + \gamma_1 Y_{i,j-1} + \gamma^T x_i
 \]
 
 The cumulative probability of remaining observed up to time \( j \) is:
+
 \[
 \pi_{ij} = \prod_{k=1}^{j} P(R_{ik} = 1 \mid R_{i,k-1} = 1, \ldots)
 \]
@@ -737,12 +761,14 @@ This is a significant advantage of likelihood-based LMMs over CCA: **subjects wh
 Two model-based frameworks for MNAR:
 
 **Selection models** (Diggle & Kenward, 1994): Factor the joint distribution of outcomes and dropout indicator as:
+
 \[
 f(Y_i, R_i \mid x_i) = f(Y_i \mid x_i) \cdot f(R_i \mid Y_i, x_i)
 \]
 Model the outcome process first, then the dropout mechanism given the (potentially unobserved) outcomes. The challenge is that parameters in the dropout model are not identifiable from the observed data without strong assumptions.
 
 **Pattern-mixture models** (Little, 1993): Factor as:
+
 \[
 f(Y_i, R_i \mid x_i) = f(Y_i \mid R_i, x_i) \cdot f(R_i \mid x_i)
 \]
@@ -769,6 +795,7 @@ Since MNAR assumptions are untestable from the data, sensitivity analysis is ess
 ### 7.1.1 The Three Phases
 
 **Phase 1 — Imputation**: Draw \( m \) imputed datasets. For imputation \( l \):
+
 \[
 Y_{ij}^{(l),\text{mis}} \sim P(Y_{ij}^{\text{mis}} \mid \mathbf{Y}_i^{\text{obs}}, x_i)
 \]
@@ -794,6 +821,7 @@ The term <em>(1 + m<sup>-1</sup>)B</em> accounts for the simulation variability 
 </div>
 
 Inference uses \( (Q&#772; - Q)/\sqrt{T} \sim t_\nu \) where the degrees of freedom is:
+
 \[
 \nu = (m-1)\left(1 + \frac{\bar{W}}{(1+m^{-1})B}\right)^2
 \]
@@ -801,6 +829,7 @@ Inference uses \( (Q&#772; - Q)/\sqrt{T} \sim t_\nu \) where the degrees of free
 ### 7.1.2 The Fraction of Missing Information
 
 The **fraction of missing information** (FMI) measures how much the missing data inflates variance:
+
 \[
 \lambda = \frac{(1 + m^{-1})B}{T}
 \]
@@ -826,6 +855,7 @@ Complete-data estimates from each imputed dataset:
 **Within-imputation variance**: \( \bar{W} = (0.18+0.21+0.19+0.17+0.20)/5 = 0.19 \)
 
 **Between-imputation variance**:
+
 \[
 B = \frac{1}{4}\sum_{l=1}^5 (\hat{Q}_l - 2.26)^2 = \frac{(0.05)^2+(0.18)^2+(0.19)^2+(0.07)^2+(0.01)^2}{4} = \frac{0.0025+0.0324+0.0361+0.0049+0.0001}{4} = \frac{0.076}{4} = 0.019
 \]
@@ -875,11 +905,13 @@ summary(pool(fits))
 **Transition models** (also called **Markov models** for longitudinal data) specify the conditional distribution of \( Y_{ij} \) given the history of previous responses.
 
 For a **first-order Markov model**:
+
 \[
 P(Y_{ij} = y \mid Y_{i,j-1}, Y_{i,j-2}, \ldots, x_{ij}) = P(Y_{ij} = y \mid Y_{i,j-1}, x_{ij})
 \]
 
 For a **binary outcome**, the first-order transition model is:
+
 \[
 \text{logit}\, P(Y_{ij} = 1 \mid Y_{i,j-1}, x_{ij}) = \alpha_0 + \alpha_1 Y_{i,j-1} + \beta^T x_{ij}
 \]
@@ -889,6 +921,7 @@ Here \( \alpha_1 \) is the **transition parameter**: the log-odds ratio for bein
 **Estimation**: Standard logistic regression, treating \( Y_{i,j-1} \) as a covariate. The "data" for the transition model consists of adjacent pairs \( (Y_{i,j-1}, Y_{ij}) \) for \( j \geq 2 \).
 
 **Stationary distribution**: Under a first-order homogeneous Markov chain, the long-run probability of state 1 is:
+
 \[
 \pi^* = \frac{P(Y_{ij}=1 \mid Y_{i,j-1}=0)}{P(Y_{ij}=0 \mid Y_{i,j-1}=1) + P(Y_{ij}=1 \mid Y_{i,j-1}=0)}
 \]
@@ -934,12 +967,14 @@ When event times are recorded in discrete intervals (e.g., quarterly medical exa
 \]
 
 The **complementary log-log model** (grouped continuous hazard):
+
 \[
 \log(-\log(1 - \lambda_j)) = \alpha_j + \beta^T x
 \]
 This arises naturally as the discrete-time analog of the continuous proportional hazards model: if the continuous hazard is \( h(t; x) = h_0(t)\exp(\beta^T x) \), then grouping into intervals gives the complementary log-log form.
 
 The **logistic model** for discrete hazard:
+
 \[
 \text{logit}(\lambda_j) = \alpha_j + \beta^T x
 \]
@@ -958,11 +993,13 @@ The **Kaplan-Meier (KM) product-limit estimator** is the nonparametric MLE of th
 where \( t_{(1)} < t_{(2)} < \cdots \) are the ordered event times, \( d_j \) is the number of events at \( t_{(j)} \), and \( n_j \) is the number at risk just before \( t_{(j)} \) (those who have not yet experienced the event and have not been censored).
 
 **Greenwood's formula** for the variance:
+
 \[
 \widehat{\text{Var}}[\hat{S}(t)] = [\hat{S}(t)]^2 \sum_{j: t_{(j)} \leq t} \frac{d_j}{n_j(n_j - d_j)}
 \]
 
 **Log-rank test**: Compares KM curves between two or more groups. Under \( H_0 \) (identical survival functions):
+
 \[
 \chi^2_{\text{LR}} = \frac{\left(\sum_j (d_{1j} - e_{1j})\right)^2}{\sum_j v_{1j}} \xrightarrow{d} \chi^2_1
 \]
@@ -971,6 +1008,7 @@ where \( e_{1j} = n_{1j} d_j / n_j \) is the expected number of events in group 
 ### 7.6.2 Cox Proportional Hazards Model
 
 The **Cox model** (Cox, 1972) specifies the hazard for subject \( i \) as:
+
 \[
 h(t \mid x_i) = h_0(t)\exp(x_i^T\beta)
 \]
@@ -983,6 +1021,7 @@ L_P(\beta) = \prod_{i: \Delta_i = 1} \frac{\exp(x_i^T\beta)}{\sum_{l \in \mathca
 where \( \mathcal{R}(t) = \{l : \tilde{T}_l \geq t\} \) is the risk set at time \( t \). Maximizing the partial likelihood gives the **partial likelihood estimator** \( \hat{\beta} \), which is consistent and asymptotically normal without requiring estimation of \( h_0(t) \).
 
 **Breslow estimator** of the cumulative baseline hazard:
+
 \[
 \hat{H}_0(t) = \sum_{j: t_{(j)} \leq t} \frac{d_j}{\sum_{l \in \mathcal{R}(t_{(j)})} \exp(x_l^T\hat{\beta})}
 \]
@@ -1001,16 +1040,19 @@ Multistate models generalize survival analysis to settings with multiple event t
 (No reverse transition from ill to healthy in the standard illness-death model.)
 
 The **transition probability matrix** \( \mathbf{P}(s, t) \) with \( P_{kl}(s,t) = P(X(t)=l \mid X(s)=k) \) satisfies the **Kolmogorov forward equations**:
+
 \[
 \frac{d}{dt} \mathbf{P}(s,t) = \mathbf{P}(s,t)\, \mathbf{Q}(t)
 \]
 where \( \mathbf{Q}(t) \) is the generator matrix with off-diagonal entries \( q_{kl}(t) \) and diagonal entries \( -\sum_{l \neq k} q_{kl}(t) \).
 
 **Nonparametric estimation**: The **Nelson-Aalen estimator** of the cumulative transition intensity from state \( k \) to \( l \) is:
+
 \[
 \hat{A}_{kl}(t) = \sum_{s \leq t} \frac{d_{kl}(s)}{n_k(s)}
 \]
 where \( d_{kl}(s) \) is the number of \( k \to l \) transitions at time \( s \) and \( n_k(s) \) is the number in state \( k \) just before \( s \). The **Aalen-Johansen estimator** of \( \mathbf{P}(s,t) \) is:
+
 \[
 \hat{\mathbf{P}}(s,t) = \prod_{s < u \leq t} (\mathbf{I} + d\hat{\mathbf{A}}(u))
 \]
@@ -1021,11 +1063,13 @@ a product integral over the jump times of \( \hat{\mathbf{A}} \).
 When a subject can experience an event multiple times (hospitalizations, seizures, infections), recurrent event models are needed.
 
 **Notation**: Let \( N_i(t) \) count events for subject \( i \) in \( [0,t] \). The **event intensity** is:
+
 \[
 \lambda_i(t \mid \mathcal{H}_i(t^-)) = \lim_{\Delta t \to 0} \frac{P(dN_i(t) = 1 \mid \mathcal{H}_i(t^-))}{\Delta t}
 \]
 
 **Andersen-Gill (AG) model**: Assumes a multiplicative hazard on the calendar time scale with a common baseline:
+
 \[
 \lambda_i(t) = Y_i(t) \cdot \lambda_0(t) \cdot \exp(x_i(t)^T\beta)
 \]
@@ -1075,41 +1119,49 @@ where \( Y_i(t) = 1 \) if subject \( i \) is at risk at time \( t \). The AG mod
 ## Appendix: Key Formulas Reference
 
 **GEE estimating equation**:
+
 \[
 \sum_{i=1}^n \mathbf{D}_i^T \mathbf{V}_i^{-1}(\mathbf{Y}_i - \boldsymbol{\mu}_i) = \mathbf{0}
 \]
 
 **Sandwich variance**:
+
 \[
 \widehat{\text{Var}}(\hat{\beta}) = \left(\sum_i \mathbf{D}_i^T \mathbf{V}_i^{-1}\mathbf{D}_i\right)^{-1} \left(\sum_i \mathbf{D}_i^T\mathbf{V}_i^{-1}\hat{\mathbf{e}}_i\hat{\mathbf{e}}_i^T\mathbf{V}_i^{-1}\mathbf{D}_i\right) \left(\sum_i \mathbf{D}_i^T \mathbf{V}_i^{-1}\mathbf{D}_i\right)^{-1}
 \]
 
 **LMM marginal distribution**:
+
 \[
 \mathbf{Y}_i \sim N(\mathbf{X}_i\boldsymbol{\beta},\; \mathbf{Z}_i\mathbf{D}\mathbf{Z}_i^T + \boldsymbol{\Sigma}_i)
 \]
 
 **BLUP**:
+
 \[
 \hat{\mathbf{b}}_i = \mathbf{D}\mathbf{Z}_i^T(\mathbf{Z}_i\mathbf{D}\mathbf{Z}_i^T + \boldsymbol{\Sigma}_i)^{-1}(\mathbf{Y}_i - \mathbf{X}_i\hat{\boldsymbol{\beta}})
 \]
 
 **Rubin's total variance**:
+
 \[
 T = \bar{W} + \left(1 + m^{-1}\right)B
 \]
 
 **Kaplan-Meier estimator**:
+
 \[
 \hat{S}(t) = \prod_{j:\, t_{(j)}\leq t}\left(1 - \frac{d_j}{n_j}\right)
 \]
 
 **Cox partial likelihood**:
+
 \[
 L_P(\beta) = \prod_{i:\Delta_i=1}\frac{\exp(x_i^T\beta)}{\sum_{l\in\mathcal{R}(T_i)}\exp(x_l^T\beta)}
 \]
 
 **Nelson-Aalen estimator**:
+
 \[
 \hat{H}(t) = \sum_{j:\, t_{(j)}\leq t}\frac{d_j}{n_j}
 \]

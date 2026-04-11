@@ -58,6 +58,7 @@ This is minimised pointwise: for each \(\mathbf{x}\), we should predict the clas
 g^*(\mathbf{x}) = \arg\max_{k \in \mathcal{Y}} P(Y = k \mid X = \mathbf{x})
 \]
 minimises the 0-1 risk among all classifiers. Its risk
+
 \[
 R^* = 1 - \mathbb{E}_X\left[\max_k P(Y=k \mid X)\right]
 \]
@@ -179,18 +180,21 @@ The leave-one-out error is particularly easy to compute for \(k\)-NN: since \(k\
 The choice of distance profoundly affects which neighbours are found.
 
 **Euclidean distance**:
+
 \[
 d_2(\mathbf{x}, \mathbf{z}) = \|\mathbf{x} - \mathbf{z}\|_2 = \sqrt{\sum_{j=1}^p (x_j - z_j)^2}
 \]
 This is the default choice, but it treats all features as equally important and on the same scale. When features have different variances, high-variance features dominate the distance. **Standardising** features to zero mean and unit variance before applying \(k\)-NN is therefore essential.
 
 **Mahalanobis distance** accounts for the correlation structure of the features:
+
 \[
 d_M(\mathbf{x}, \mathbf{z}) = \sqrt{(\mathbf{x} - \mathbf{z})^\top \Sigma^{-1} (\mathbf{x} - \mathbf{z})}
 \]
 where \(\Sigma\) is the covariance matrix of the training data. This is equivalent to first applying a whitening transformation \(\tilde{\mathbf{x}} = \Sigma^{-1/2} \mathbf{x}\) and then using Euclidean distance.
 
 **Hamming distance** counts the number of positions at which two binary vectors differ:
+
 \[
 d_H(\mathbf{x}, \mathbf{z}) = \sum_{j=1}^p \mathbf{1}[x_j \neq z_j]
 \]
@@ -1043,11 +1047,13 @@ The **Bernoulli** naive Bayes variant instead models presence/absence of each wo
 The **Expectation-Maximisation** algorithm (Dempster, Laird & Rubin 1977) provides a general framework for maximum likelihood estimation in models with latent variables. For a model with observed data \(\mathbf{x}\), latent variables \(\mathbf{z}\), and parameters \(\boldsymbol{\theta}\), EM iterates between:
 
 **E-step**: Compute the expected complete-data log-likelihood under the current parameter estimate:
+
 \[
 Q(\boldsymbol{\theta} \mid \boldsymbol{\theta}^{\text{old}}) = \mathbb{E}_{\mathbf{z} \mid \mathbf{x}, \boldsymbol{\theta}^{\text{old}}}[\log p(\mathbf{x}, \mathbf{z} \mid \boldsymbol{\theta})]
 \]
 
 **M-step**: Maximise \(Q\) over \(\boldsymbol{\theta}\):
+
 \[
 \boldsymbol{\theta}^{\text{new}} = \arg\max_{\boldsymbol{\theta}} Q(\boldsymbol{\theta} \mid \boldsymbol{\theta}^{\text{old}})
 \]
@@ -1198,11 +1204,13 @@ Training a neural network is a non-convex optimisation problem — the loss land
 Several factors contribute to good optimisation in practice:
 
 **Momentum**: SGD with momentum maintains a running average of past gradients, which smooths the trajectory through narrow ravines in the loss landscape:
+
 \[
 \mathbf{v}_{t+1} = \mu \mathbf{v}_t + \nabla \mathcal{L}_t, \quad W \leftarrow W - \eta \mathbf{v}_{t+1}
 \]
 
 **Adam optimiser** (Kingma & Ba 2015): maintains per-parameter adaptive learning rates, using exponentially weighted moving averages of both the gradient and its squared magnitude:
+
 \[
 m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t, \quad v_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2
 \]

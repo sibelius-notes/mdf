@@ -156,6 +156,7 @@ First let's get used to some notations...
 - \(\boldsymbol X \): matrix.
 
 Covariance matrix
+
 \[
 \Sigma = \operatorname{cov}(\underbrace{x_i} _ {i\text{-th input}}, \underbrace{x_j} _ {j\text{-th input}})
 = \mathbb E \left[ (x_ i - \mu _ i) (x _ j - \mu _ j) \right]
@@ -272,6 +273,7 @@ t-Distributed stochastic neighbor embeddings.
 - t-test. t-distribution (normal distribution)
 
 t-SNE does not use any norm (=distance metric). It uses Kullback-Leibler Divergence. Given two probability distributions \(p,q \), the KL divergence  measures the distance
+
 \[
     D(p\&#124;q)= \sum _ {x\in X} p(x)\log {p(x)\over q(x)}
 \]
@@ -318,6 +320,7 @@ Example: Harris Corner Detection
 ![there should be a image...](https://miro.medium.com/max/469/0*gTbWMTKvNF-jLJrM.jpg)
 
 For SIFT, you get many feature vectors of length 128. Thus
+
 \[
     Image = \bigcup _ {i=1} ^ { n \text{ key points}} v _ i
 \]
@@ -341,12 +344,14 @@ Let \(X \) be the set of D-dimensional local descriptors extracted from an image
     g _ \lambda^X = \sum _ {t=1}^T L _ \lambda \nabla _ \lambda \log u _ \lambda (x _ t)
 \]
 This is called Fisher Vector. Fisher Vector is a sum of normalized gradients statistics computed for each descriptor (= feature vector). The operation
+
 \[
     x _ t \to f _ {FK}(x _ t) = L _ \lambda \nabla _ \lambda \log u _ \lambda ( x _ t)
 \]
 is an embedding of local descriptors \(x _ t \) in a higher dimensional space which is easier for classifier.
 
 \(L _ \lambda \): Cholesky Decomposition
+
 \[
     F _ \lambda ^{-1} = L _ \lambda ^ T L _ \lambda, \qquad K _ {FK}(X,Y) = G _ \lambda ^{X^T} F _ \lambda G _ \lambda ^{X}
 \]
@@ -402,6 +407,7 @@ Given the entire data \(X = \left\{ x _ t \right\} \)
 
 
 Given the set of all hypotheses \(H \) (set of all possible solutions), find \(h\in H \) such that
+
 \[
     \sum _ {x _ t\in X} (x _ t^* - x _ t ^ d) = \epsilon \to 0
 \]
@@ -423,11 +429,13 @@ But all this would work if we had a lot of data. What if we don't? We use Leave-
 n-fold cross validation: vert expensive, suitable for small data.
 
 Model complexity = \(&#124;P &#124; \) where \(P \) is the set of parameters of \(h\in H \). Occam's Razor: Keep it simple! = Regularization
+
 \[
     \min \left( \underbrace{\sum _ {x _ t\in X} (x _ t^* - x _ t^d)} _ {\text{lowest error}} + \underbrace{&#124;P &#124;} _ {\text{smallest solution}}\right)
 \]
 
 Augmented error function:
+
 \[
     E' = E _ {total} + \underbrace{\lambda \cdot \text{model complexity}} _ {\substack {\text{penalized complex}\\ \text{solutions with} \\
     \text{large variance}}}
@@ -438,6 +446,7 @@ If \(\lambda \) too large, then simple models, then increase bias. Hence we use 
 Another model selection approach: Bayesian approach is used if we have prior knowledge.
 
 Bayes Rule:
+
 \[
     P (model &#124; data) = {P(data &#124; model) \cdot P(model)\over P(data)}
 \]
@@ -468,6 +477,7 @@ We start with K-means algorithm: find the centroids (prototypes)(means) of K clu
 
 
 Similarity grouping happens via distance measurement. So objective (error):
+
 \[
     E = \sum _ {k=1} ^K \sum _{x\in C _ k} \&#124;x-m _ k\&#124; _ 2
 \]
@@ -511,16 +521,19 @@ SOM has 3 stages: 1. competition. 2. collaboration: concept of neighborhood. 3. 
 Competition: find the most similar unit: \(i(x) = \operatorname{argmax} _ j \&#124; x - w _ j \&#124; _ 2 \), where \(j=1,\ldots,m; \) \(m \) = # of units.
 
 Collaboration: Use the lateral distance \(d _ {ij} \) between the winner unit \(i \) and unit \(j \)
+
 \[
     h _ {ij} (d _ {ij}) = \exp \left(- {d _ {ij}^2\over 2\sigma^2}\right)
 \]
 
 
 Weight updates:
+
 \[
     W _ j (n+1)= W _ j(n) + \Delta W _ j
 \]
 where \(\Delta W _ j = \underbrace{\eta y_ j } _ {\text{Hebb's Rule}} - \underbrace{g(y _ j) w _ j}_{\text {Forgetting rule}} \). So complete formula for update:
+
 \[
     W _ j (n+1)= W _ j(n) + \eta (n) h _ {ij(x)}(n)[x-w _ j(n)]
 \]
@@ -564,10 +577,12 @@ So our problem: \(\min \&#124; w\&#124; \quad \text{subject to }\quad y _ i(w\cd
 Lagrange Multipliers: \(L = {1\over 2} \&#124;w\&#124;^2 - \sum \alpha _ i[ y _ i (w\cdot x _ i + b) - 1] \)
 
 Derivatives are zero, then we get \(w=\sum _ i \alpha _ i y _ i x _ i \), and \(\sum \alpha _ i y _ i = 0 \). Sub \(w \) in \(L \), we get after simplification:
+
 \[
     L =\sum \alpha _ i - {1\over 2}\sum \sum \underbrace{ \alpha _ j y _ i y _ j} _ {\text{scalars}} \underbrace{x _ i \cdot x _ k} _ {\text{dot product}}
 \]
 Minimize this via quadratic optimization! Then how to classify?
+
 \[
     \sum \alpha _ i y _ i x _ i\cdot \underbrace{u} _ {\text{new data}} + b \begin{cases}
      \ge 0 &\implies \oplus  \\
@@ -612,6 +627,7 @@ where \(d (c _ i,c _ j)= \min _ {x\in c _ i,x'\in c _ j}\&#124;x-x'\&#124;^2 \),
 - WB Index \(WB _ M = M\cdot {SSW\over SSB} \)
 
 We have other problems: We made a big assumption: \(x _ i\in C _ k \) and \(x _ i\notin C _ j \quad \forall j\ne k \). This is hard/dual/crisp clustering.
+
 \[
     \mu _ k (x _ i)\in \left\{ 0,1 \right\} \implies \mu _ k(x _ i)\notin [0,1]
 \]
@@ -637,6 +653,7 @@ or we write \(A = \int _ X {\mu _ A(x)\over X} \)
 Simple example: \(X=\left\{ 1,2,\ldots,7 \right\} \), and we define \(A =  \) "set of neighbors of 4"
 
 \(A _ {crisp} = \left\{ 3,4,5 \right\} \) whereas
+
 \[
     A _ {Fuzzy} = \left\{
 {0.3\over 1}, {0.7\over 2}, {1\over 3}, {1\over 4}, {1\over 5}, {0.7\over 6}, {0.3\over 7}

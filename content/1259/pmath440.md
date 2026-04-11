@@ -23,6 +23,7 @@ subjects: "PMATH"
 Number theory asks questions about integers: which numbers are prime? how many primes are there below a trillion? can every even number be written as a sum of two primes? These seem like purely combinatorial questions, and yet — remarkably — the most powerful tools for answering them come from complex analysis, Fourier theory, and the study of special functions. This collision of the discrete and the continuous is what makes analytic number theory so beautiful and so surprising.
 
 The central object of the subject is the **Riemann zeta function**
+
 \[
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_p \frac{1}{1-p^{-s}},
 \]
@@ -100,6 +101,7 @@ The proof relies on properties of the central binomial coefficient \( \binom{2n}
 ## 1.3a Full Proof of Chebyshev's Upper and Lower Bounds via Central Binomial Coefficients
 
 The key idea of Chebyshev's proof is to exploit the central binomial coefficient
+
 \[
 \binom{2n}{n} = \frac{(2n)!}{(n!)^2}.
 \]
@@ -112,12 +114,14 @@ This innocent object carries a surprising amount of information about primes. We
 **Step 1: Upper bound.**
 
 Every prime \(p\) with \(n < p \leq 2n\) divides \((2n)!\) but does not divide \((n!)^2\) (since \(p > n\) means \(p\) appears exactly once in \((2n)!\) and zero times in \(n!\)). Hence
+
 \[
 \prod_{n < p \leq 2n} p \;\Big|\; \binom{2n}{n} \leq 4^n.
 \]
 Taking logarithms: \(\theta(2n) - \theta(n) \leq n \log 4 = 2n \log 2\).
 
 Now sum over \(k = 0, 1, 2, \ldots, \lfloor \log_2 x \rfloor\): the telescoping sum
+
 \[
 \theta(x) = \sum_{k=0}^{\lfloor \log_2 x \rfloor} [\theta(x/2^k) - \theta(x/2^{k+1})] \leq \sum_{k=0}^{\lfloor \log_2 x \rfloor} 2 \cdot \frac{x}{2^{k+1}} \log 2 \leq 2x \log 2.
 \]
@@ -126,14 +130,17 @@ Since \(\psi(x) = \theta(x) + O(\sqrt{x}\log x)\), we get \(\psi(x) \leq 2x\log 
 **Step 2: Lower bound.**
 
 We use the lower bound \(\binom{2n}{n} \geq 4^n/(2n+1)\). Every prime power \(p^k\) dividing \(\binom{2n}{n}\) must satisfy \(p^k \leq 2n\) (since the \(p\)-adic valuation of \(\binom{2n}{n}\) is \(\lfloor 2n/p^k\rfloor - 2\lfloor n/p^k\rfloor \leq 1\) for each prime power \(p^k\)). The exact \(p\)-adic valuation formula (Kummer's theorem) says it equals the number of carries when adding \(n\) and \(n\) in base \(p\), which is at most \(\log_p(2n)\). So
+
 \[
 \binom{2n}{n} = \prod_{p \leq 2n} p^{v_p(\binom{2n}{n})} \leq \prod_{p \leq 2n} (2n)^{v_p(\binom{2n}{n})}.
 \]
 But for the lower bound on \(\theta\): the key is that the entire product \(\prod_{p \leq 2n} p^{v_p(\binom{2n}{n})}\) divides \(\binom{2n}{n} \leq 4^n\), so \(e^{\psi(2n)} \leq (2n)^{\pi(2n)} \cdot 4^n\), giving \(\psi(2n) \leq \pi(2n)\log(2n) + 2n\log 2\). Since \(\psi(2n) \leq 2 \cdot 2n\log 2\) from Step 1, this yields nothing new. For the lower bound one instead uses:
+
 \[
 \frac{4^n}{2n+1} \leq \binom{2n}{n} \leq (2n)^{\pi(2n)} \cdot 4^{n/2},
 \]
 the second inequality using the fact that primes \(p > \sqrt{2n}\) contribute at most one prime power each to the factorization. After some algebra this gives
+
 \[
 \pi(2n) \geq \frac{n\log 4 - (1/2)\log(2n) \cdot \pi(\sqrt{2n})}{\log(2n)} \geq c_1 \frac{n}{\log n}.
 \]
@@ -170,6 +177,7 @@ Why introduce \(\theta(x)\) and \(\psi(x)\)? The function \(\pi(x)\) has an inco
 \theta(x) = \sum_{p \leq x} \log p,
 \]
 and the <strong>second Chebyshev function</strong> (or <strong>Chebyshev psi function</strong>)
+
 \[
 \psi(x) = \sum_{p^k \leq x} \log p = \sum_{n \leq x} \Lambda(n),
 \]
@@ -184,6 +192,7 @@ where \( \Lambda \) is the von Mangoldt function defined below.
 </div>
 
 The von Mangoldt function satisfies the elegant identity
+
 \[
 \log n = \sum_{d \mid n} \Lambda(d),
 \]
@@ -197,6 +206,7 @@ This identity is crucial because it connects \(\Lambda\) (a function on prime po
 \psi(x) = \theta(x) + \theta(x^{1/2}) + \theta(x^{1/3}) + \cdots = \sum_{k=1}^{\lfloor \log_2 x \rfloor} \theta(x^{1/k}).
 \]
 Since the terms beyond \( k=1 \) contribute at most \( O(x^{1/2} \log x) \), we have
+
 \[
 \psi(x) = \theta(x) + O\!\left(x^{1/2} (\log x)^2\right).
 \]
@@ -206,10 +216,12 @@ Since the terms beyond \( k=1 \) contribute at most \( O(x^{1/2} \log x) \), we 
 <strong>Example 1.8 (Computing \(\psi\) and \(\theta\) for small \(x\)).</strong> Take \(x = 12\).
 
 The primes up to 12 are \(2, 3, 5, 7, 11\). So:
+
 \[
 \theta(12) = \log 2 + \log 3 + \log 5 + \log 7 + \log 11 = \log(2 \cdot 3 \cdot 5 \cdot 7 \cdot 11) = \log 2310 \approx 7.745.
 \]
 For \(\psi\), we also include prime powers up to 12: these are \(2, 3, 4=2^2, 5, 7, 8=2^3, 9=3^2, 11\). So:
+
 \[
 \psi(12) = \log 2 + \log 3 + \log 2 + \log 5 + \log 7 + \log 2 + \log 3 + \log 11 = 3\log 2 + 2\log 3 + \log 5 + \log 7 + \log 11 \approx 10.82.
 \]
@@ -219,6 +231,7 @@ Note \(\psi(12) - \theta(12) = 2\log 2 + \log 3 = \theta(\sqrt{12}) + \theta(12^
 ## 1.5 The Equivalence with PNT
 
 The three functions \( \pi(x) \), \( \theta(x) \), and \( \psi(x) \) are asymptotically equivalent in the sense that PNT is equivalent to each of the following statements:
+
 \[
 \pi(x) \sim \frac{x}{\log x}, \qquad \theta(x) \sim x, \qquad \psi(x) \sim x.
 \]
@@ -245,10 +258,12 @@ If \( \pi(x) \sim x/\log x \), then the right side is \( \sim x - \int_2^x \frac
 One might wonder: why not work directly with \(\pi(x)\)? The answer lies in the analytic structure of Dirichlet series.
 
 The function \(\pi(x)\) is the partial sum of the Dirichlet series \(\sum_p p^{-s}\) (weighted by the indicator of primes), which has no simple analytic form. In contrast, \(\psi(x) = \sum_{n \leq x}\Lambda(n)\) is the partial sum of \(-\zeta'(s)/\zeta(s)\), and this is a ratio of two things we understand well:
+
 \[
 -\frac{\zeta'(s)}{\zeta(s)} = \sum_{n=1}^\infty \frac{\Lambda(n)}{n^s}.
 \]
 This identity follows by differentiating \(\log\zeta(s) = -\sum_p\log(1-p^{-s})\):
+
 \[
 \frac{\zeta'(s)}{\zeta(s)} = \frac{d}{ds}\log\zeta(s) = -\sum_p\frac{-\log p \cdot p^{-s}}{1-p^{-s}} \cdot (-1) = \sum_p \frac{\log p}{p^s - 1} = -\sum_{p,k \geq 1}\frac{\log p}{p^{ks}} = -\sum_{n \geq 1}\frac{\Lambda(n)}{n^s}.
 \]
@@ -259,12 +274,14 @@ This identity follows by differentiating \(\log\zeta(s) = -\sum_p\log(1-p^{-s})\
 - Simple poles at \(s=0\) and the trivial zeros \(s = -2, -4, \ldots\).
 
 By Perron's formula, \(\psi(x)\) equals the sum of residues picked up when the contour integral of \(-\zeta'(s)/\zeta(s) \cdot x^s/s\) is moved leftward. The explicit formula
+
 \[
 \psi(x) = x - \sum_\rho \frac{x^\rho}{\rho} - \frac{\zeta'(0)}{\zeta(0)} - \frac{1}{2}\log(1-x^{-2})
 \]
 is the direct consequence. Each zero \(\rho\) of \(\zeta\) produces a term; the dominant term \(x\) comes from the pole at \(s=1\).
 
 **Contrast with \(\pi(x)\).** One can recover \(\pi(x)\) from \(\psi(x)\) by Möbius inversion: since \(\psi(x) = \sum_k \theta(x^{1/k})\) and \(\theta(x) \approx \pi(x)\log x\), we have
+
 \[
 \pi(x) = \sum_{k=1}^\infty \frac{\mu(k)}{k}\cdot\mathrm{li}(x^{1/k}) + O(\text{smaller}).
 \]
@@ -300,6 +317,7 @@ Analytic number theory often requires converting sums involving arithmetic funct
 ## 2.1 Abel's Summation Formula
 
 Let \( a_1, a_2, \ldots \) be a sequence of complex numbers and \( f : [1, \infty) \to \mathbb{C} \) a continuously differentiable function. Set
+
 \[
 A(x) = \sum_{n \leq x} a_n.
 \]
@@ -310,6 +328,7 @@ A(x) = \sum_{n \leq x} a_n.
 \sum_{y < n \leq x} a_n f(n) = A(x)f(x) - A(y)f(y) - \int_y^x A(u) f'(u)\,du.
 \]
 In particular, with \( y = 1 \) and assuming \( a_n = 0 \) for non-integer arguments,
+
 \[
 \sum_{n \leq x} a_n f(n) = A(x)f(x) - \int_1^x A(u) f'(u)\,du.
 \]
@@ -321,10 +340,12 @@ In particular, with \( y = 1 \) and assuming \( a_n = 0 \) for non-integer argum
 \sum_{j=1}^k a_{n_j} f(n_j) = \sum_{j=1}^k \bigl(A(n_j) - A(n_{j-1})\bigr) f(n_j),
 \]
 where \( A(n_0) = A(y) \). Rearranging (summation by parts, analogous to integration by parts):
+
 \[
 = A(n_k)f(n_k) - A(y)f(n_1) - \sum_{j=1}^{k-1} A(n_j)\bigl(f(n_{j+1}) - f(n_j)\bigr).
 \]
 Since \( f(n_{j+1}) - f(n_j) = \int_{n_j}^{n_{j+1}} f'(u)\,du \), and \( A(u) = A(n_j) \) for \( u \in [n_j, n_{j+1}) \), we have
+
 \[
 \sum_{j=1}^{k-1} A(n_j)(f(n_{j+1}) - f(n_j)) = \int_y^x A(u)f'(u)\,du - A(n_k)\bigl(f(x) - f(n_k)\bigr).
 \]
@@ -337,14 +358,17 @@ Combining and noting \( n_k \leq x < n_{k+1} \) gives the result. \( \square \)
 \sum_{n \leq x} \frac{1}{n} = \frac{\lfloor x \rfloor}{x} + \int_1^x \frac{\lfloor u \rfloor}{u^2}\,du.
 \]
 Write \( \lfloor u \rfloor = u - \{u\} \) where \( \{u\} \) is the fractional part. Then
+
 \[
 \int_1^x \frac{\lfloor u \rfloor}{u^2}\,du = \int_1^x \frac{1}{u}\,du - \int_1^x \frac{\{u\}}{u^2}\,du = \log x - \int_1^x \frac{\{u\}}{u^2}\,du.
 \]
 As \( x \to \infty \), the integral \( \int_1^\infty \frac{\{u\}}{u^2}\,du \) converges (bounded by \( \int_1^\infty u^{-2}\,du = 1 \)). Define
+
 \[
 \gamma = 1 - \int_1^\infty \frac{\{u\}}{u^2}\,du \approx 0.5772\ldots
 \]
 This is <strong>Euler's constant</strong>. Then
+
 \[
 \sum_{n \leq x} \frac{1}{n} = \log x + \gamma + O(1/x).
 \]
@@ -356,6 +380,7 @@ This is <strong>Euler's constant</strong>. Then
 \sum_{n \leq x} \frac{a(n)}{n^s} = \frac{A(x)}{x^s} + s\int_1^x \frac{A(u)}{u^{s+1}}\,du.
 \]
 If \(A(x) = O(x^\alpha)\), then for \(\mathrm{Re}(s) > \alpha\), letting \(x \to \infty\):
+
 \[
 F(s) = s\int_1^\infty \frac{A(u)}{u^{s+1}}\,du,
 \]
@@ -374,32 +399,38 @@ One of the most striking applications of Abel summation in prime number theory i
 where \(M\) is the Meissel–Mertens constant \(M \approx 0.2615\ldots\).
 
 **Step 1.** Start from Chebyshev's result (proved in Section 3.4):
+
 \[
 \sum_{p \leq x} \frac{\log p}{p} = \log x + R(x),
 \]
 where \(R(x) = O(1)\) (the error is bounded). Let \(A(x) = \sum_{p \leq x}(\log p)/p\), so \(A(x) = \log x + O(1)\).
 
 **Step 2.** Apply Abel summation with the sequence \(a_p = (\log p)/p\) (indexed over primes) and the function \(f(t) = 1/\log t\). The summatory function of \(a_p\) over primes up to \(x\) is \(A(x) = \log x + O(1)\). Abel's formula gives
+
 \[
 \sum_{p \leq x} \frac{1}{p} = \sum_{p \leq x} \frac{\log p}{p} \cdot \frac{1}{\log p} = A(x)\cdot\frac{1}{\log x} + \int_2^x A(t)\cdot\frac{1}{t(\log t)^2}\,dt + O(1/\log 2).
 \]
 (Here \(f(t) = 1/\log t\) has \(f'(t) = -1/(t(\log t)^2)\), so \(-\int A(t)f'(t)\,dt = \int A(t)/(t(\log t)^2)\,dt\).)
 
 **Step 3.** Substitute \(A(t) = \log t + O(1)\):
+
 \[
 A(x)/\log x = 1 + O(1/\log x),
 \]
 and
+
 \[
 \int_2^x \frac{A(t)}{t(\log t)^2}\,dt = \int_2^x \frac{\log t}{t(\log t)^2}\,dt + O\!\left(\int_2^x \frac{dt}{t(\log t)^2}\right) = \int_2^x \frac{dt}{t\log t} + O(1/\log 2 - 1/\log x).
 \]
 Now \(\int_2^x dt/(t\log t) = [\log\log t]_2^x = \log\log x - \log\log 2\).
 
 **Step 4.** Combining:
+
 \[
 \sum_{p \leq x}\frac{1}{p} = 1 + O(1/\log x) + \log\log x - \log\log 2 + O(1) = \log\log x + M + O(1/\log x),
 \]
 where the constant \(M = 1 - \log\log 2 + \text{(more precise error terms)} \approx 0.2615\) absorbs all the constants. The precise value
+
 \[
 M = \gamma + \sum_p \left[\log\!\left(1-\frac{1}{p}\right) + \frac{1}{p}\right]
 \]
@@ -430,6 +461,7 @@ for an explicit constant \( C \).
 \sum_{n \leq x} \frac{\log n}{n} = A(x)\log x - \int_1^x \frac{A(u)}{u}\,du.
 \]
 Substituting \(A(u) = \log u + \gamma + O(1/u)\):
+
 \[
 \int_1^x \frac{A(u)}{u}\,du = \int_1^x \frac{\log u}{u}\,du + \gamma\int_1^x \frac{du}{u} + O\!\left(\int_1^x u^{-2}\,du\right) = \frac{(\log x)^2}{2} + \gamma\log x + O(1).
 \]
@@ -456,6 +488,7 @@ The periodized Bernoulli functions are \( \widetilde{B}_k(x) = B_k(\{x\}) \).
 \sum_{k=m}^{n} f(k) = \int_m^n f(x)\,dx + \frac{f(m)+f(n)}{2} + \sum_{j=1}^{p} \frac{B_{2j}}{(2j)!}\bigl(f^{(2j-1)}(n) - f^{(2j-1)}(m)\bigr) + R_p,
 \]
 where the remainder is
+
 \[
 R_p = \frac{(-1)^{p+1}}{(p+1)!} \int_m^n \widetilde{B}_{p+1}(x) f^{(p+1)}(x)\,dx.
 \]
@@ -489,33 +522,40 @@ the logarithmic form of Stirling's formula \(N! \sim \sqrt{2\pi N}(N/e)^N\).
 **Step 1: Apply Euler–Maclaurin with \(f(x) = \log x\), \(p=1\).**
 
 With \(m=1\), \(n=N\):
+
 \[
 \sum_{k=1}^N \log k = \int_1^N \log x\,dx + \frac{\log 1 + \log N}{2} + \frac{B_2}{2!}[f'(N) - f'(1)] + R_1.
 \]
 Since \(f'(x) = 1/x\) and \(B_2 = 1/6\):
+
 \[
 \sum_{k=1}^N \log k = [x\log x - x]_1^N + \frac{\log N}{2} + \frac{1}{12}\!\left[\frac{1}{N} - 1\right] + R_1.
 \]
 
 **Step 2: Evaluate the integral.**
+
 \[
 \int_1^N \log x\,dx = N\log N - N - (1\cdot\log 1 - 1) = N\log N - N + 1.
 \]
 
 **Step 3: Combine.**
+
 \[
 \sum_{k=1}^N \log k = N\log N - N + 1 + \frac{\log N}{2} + O(1/N).
 \]
 The constant term \(1 - 1/12 + \cdots\) contributes; with more Bernoulli terms one identifies the constant as \(\frac{1}{2}\log(2\pi)\) (a non-trivial fact requiring the full asymptotic expansion to all orders). So the result is
+
 \[
 \log(N!) = N\log N - N + \frac{1}{2}\log(2\pi N) + \frac{1}{12N} - \frac{1}{360N^3} + \cdots
 \]
 
 **Simpler bound with Abel summation.** Using only Abel summation (as in Appendix C.2): take \(a_n = 1\), \(A(x) = \lfloor x\rfloor\), \(f(t) = \log t\). Then
+
 \[
 \sum_{n \leq x}\log n = \lfloor x\rfloor\log x - \int_1^x\frac{\lfloor t\rfloor}{t}\,dt.
 \]
 Write \(\lfloor t\rfloor = t - \{t\}\):
+
 \[
 = x\log x - \int_1^x 1\,dt + O(\log x) = x\log x - (x-1) + O(\log x) = x\log x - x + O(\log x).
 \]
@@ -550,6 +590,7 @@ The Poisson summation formula connects a sum over the integers with a sum over t
 F(x) = \sum_{k \in \mathbb{Z}} c_k e^{2\pi ikx}, \quad c_k = \int_0^1 F(x) e^{-2\pi ikx}\,dx.
 \]
 Substituting the definition of \( F \):
+
 \[
 c_k = \sum_{n \in \mathbb{Z}} \int_0^1 f(x+n) e^{-2\pi ikx}\,dx = \sum_{n \in \mathbb{Z}} \int_n^{n+1} f(y) e^{-2\pi ik(y-n)}\,dy = \int_{-\infty}^\infty f(y) e^{-2\pi iky}\,dy = \hat{f}(k).
 \]
@@ -562,12 +603,14 @@ Evaluating at \( x=0 \): \( \sum_{n} f(n) = F(0) = \sum_k \hat{f}(k) \). \( \squ
 \vartheta(t) = \sum_{n=-\infty}^\infty e^{-\pi n^2 t}, \quad t > 0.
 \]
 Applying Poisson summation with \( f(x) = e^{-\pi x^2 t} \) and computing \( \hat{f}(\xi) = t^{-1/2} e^{-\pi \xi^2 / t} \) (Gaussian Fourier transform), we get:
+
 \[
 \vartheta(t) = t^{-1/2} \vartheta(1/t).
 \]
 This is the functional equation for the theta function. It says that \(\vartheta\) at \(t\) is determined by \(\vartheta\) at \(1/t\): the function is self-dual under the transformation \(t \mapsto 1/t\). This functional equation for \( \vartheta \) is the key ingredient in deriving the functional equation for \( \zeta(s) \) — see Section 4.4.
 
 Let us verify the Gaussian Fourier transform. We have
+
 \[
 \hat{f}(\xi) = \int_{-\infty}^\infty e^{-\pi t x^2} e^{-2\pi i x\xi}\,dx = e^{-\pi\xi^2/t}\int_{-\infty}^\infty e^{-\pi t(x + i\xi/t)^2}\,dx = e^{-\pi\xi^2/t}\cdot t^{-1/2},
 \]
@@ -603,16 +646,19 @@ Before we define things formally, let us explain *why* Dirichlet series are the 
 Suppose you want to study an arithmetic function \(f : \mathbb{Z}_{>0} \to \mathbb{C}\) — say, \(f(n) = \mu(n)\) or \(f(n) = d(n)\) — by "generating function" methods. The natural first guess for a generating function is the power series \(\sum_{n \geq 1}f(n)x^n\). But this is poorly adapted to multiplicative structure: the product \((\sum f(n)x^n)(\sum g(n)x^n)\) gives Cauchy convolution \(\sum_{n}(\sum_{k}f(k)g(n-k))x^n\), which involves additive structure \(k + (n-k) = n\). Multiplicative arithmetic is about divisors, not additive decompositions.
 
 The right move is to replace \(x^n\) with \(n^{-s}\). Then
+
 \[
 \left(\sum_{n \geq 1}\frac{f(n)}{n^s}\right)\!\left(\sum_{m \geq 1}\frac{g(m)}{m^s}\right) = \sum_{n \geq 1}\frac{(f*g)(n)}{n^s},
 \]
 where \((f*g)(n) = \sum_{d \mid n}f(d)g(n/d)\) is Dirichlet convolution. This works because \(n^{-s}m^{-s} = (nm)^{-s}\), and \(nm\) runs over products — exactly what divisor sums are about. Multiplication of Dirichlet series corresponds exactly to Dirichlet convolution of arithmetic functions.
 
 Moreover, for multiplicative \(f\), the Dirichlet series factors into an Euler product:
+
 \[
 \sum_{n \geq 1}\frac{f(n)}{n^s} = \prod_p \left(\sum_{k \geq 0}\frac{f(p^k)}{p^{ks}}\right).
 \]
 Each factor only involves one prime, so the global analytic properties of \(\sum f(n)/n^s\) are encoded prime-by-prime in the local factors. This "linearization" of multiplicative structure is the engine of analytic number theory. The Euler product for \(\zeta(s)\) is the prototype:
+
 \[
 \zeta(s) = \prod_p \frac{1}{1-p^{-s}}.
 \]
@@ -642,12 +688,14 @@ Every identity between arithmetic functions via Dirichlet convolution translates
 ### Key Examples
 
 **The Möbius function** \( \mu(n) \):
+
 \[
 \mu(n) = \begin{cases} 1 & n = 1, \\ (-1)^k & n = p_1 p_2 \cdots p_k \text{ (distinct primes)}, \\ 0 & p^2 \mid n \text{ for some prime } p. \end{cases}
 \]
 This is multiplicative. Its defining property: \( \sum_{d \mid n} \mu(d) = [n=1] \) (the Iverson bracket). Intuitively, \(\mu\) is an inclusion-exclusion coefficient: summing \(\mu(d)\) over divisors of \(n\) counts all \(n\) with a "plus" and cancels everything with a "minus." The fact that this sum is zero for \(n > 1\) is equivalent to the Möbius inversion formula.
 
 **The Euler totient** \( \varphi(n) = \#\{1 \leq k \leq n : \gcd(k,n) = 1\} \). This is multiplicative with
+
 \[
 \varphi(p^k) = p^k - p^{k-1} = p^k\left(1 - \frac{1}{p}\right),
 \]
@@ -679,6 +727,7 @@ It is useful to have a systematic taxonomy before proceeding. The landscape of a
 - The product of two multiplicative functions (under Dirichlet convolution) is multiplicative. This means the class of multiplicative arithmetic functions is closed under the natural operations, making it a well-structured abelian group.
 
 **The Möbius function \(\mu(n)\) in detail.** The values:
+
 \[
 \mu(1) = 1, \quad \mu(p) = -1, \quad \mu(p^2) = 0, \quad \mu(pq) = 1, \quad \mu(p^2q) = 0, \quad \mu(pqr) = -1, \ldots
 \]
@@ -722,10 +771,12 @@ Dirichlet convolution is commutative and associative. The identity element is \(
 <strong>Example 3.4 (Computing a Dirichlet convolution).</strong> Let us compute \((\mu * \mathrm{id})(n)\) where \(\mathrm{id}(n) = n\). We claim this equals \(\varphi(n)\).
 
 By multiplicativity, it suffices to check at prime powers. At \(p^k\):
+
 \[
 (\mu * \mathrm{id})(p^k) = \sum_{j=0}^k \mu(p^j) p^{k-j} = \mu(1)p^k + \mu(p)p^{k-1} + \mu(p^2)p^{k-2} + \cdots
 \]
 Since \(\mu(p^j) = 0\) for \(j \geq 2\):
+
 \[
 = p^k - p^{k-1} = p^k(1-1/p) = \varphi(p^k).
 \]
@@ -806,6 +857,7 @@ This is the fundamental reason Dirichlet series are adapted to multiplicative pr
 \sum_{n=1}^\infty \frac{f(n)}{n^s} = \prod_p \frac{1}{1 - f(p)p^{-s}}.
 \]
 If \( f \) is multiplicative (but not necessarily completely), then
+
 \[
 \sum_{n=1}^\infty \frac{f(n)}{n^s} = \prod_p \left(\sum_{k=0}^\infty \frac{f(p^k)}{p^{ks}}\right).
 \]
@@ -913,6 +965,7 @@ In this chapter we build the theory of \(\zeta(s)\) step by step: definition and
 </div>
 
 The series converges absolutely for \( \mathrm{Re}(s) > 1 \) and defines a holomorphic function there. The Euler product gives
+
 \[
 \zeta(s) = \prod_p \frac{1}{1 - p^{-s}}, \quad \mathrm{Re}(s) > 1.
 \]
@@ -968,10 +1021,12 @@ This is proved via the functional equation (Section 4.4) or via the Euler–Macl
 ### The Laurent expansion near s = 1
 
 Near \( s = 1 \):
+
 \[
 \zeta(s) = \frac{1}{s-1} + \gamma + \gamma_1(s-1) + \gamma_2(s-1)^2 + \cdots,
 \]
 where \( \gamma \) is Euler's constant and \( \gamma_1, \gamma_2, \ldots \) are the Stieltjes constants:
+
 \[
 \gamma_k = \frac{(-1)^k}{k!}\lim_{N\to\infty}\left(\sum_{n=1}^N \frac{(\log n)^k}{n} - \frac{(\log N)^{k+1}}{k+1}\right).
 \]
@@ -1007,10 +1062,12 @@ The proof uses a classical trigonometric inequality:
 \log \zeta(s) = -\sum_p \log(1-p^{-s}) = \sum_p \sum_{k=1}^\infty \frac{p^{-ks}}{k}.
 \]
 Taking real parts:
+
 \[
 \mathrm{Re}\,\log\zeta(\sigma+it) = \sum_p \sum_{k=1}^\infty \frac{\cos(kt \log p)}{k p^{k\sigma}}.
 \]
 Apply Lemma 4.7 with \( \theta = kt\log p \):
+
 \[
 3\mathrm{Re}\,\log\zeta(\sigma) + 4\mathrm{Re}\,\log\zeta(\sigma+it) + \mathrm{Re}\,\log\zeta(\sigma+2it) \geq 0.
 \]
@@ -1031,10 +1088,12 @@ Now suppose \( \zeta(1+it_0) = 0 \) for some \( t_0 \neq 0 \). Since \( \zeta(s)
 \xi(s) = \frac{1}{2} s(s-1)\pi^{-s/2} \Gamma(s/2)\,\zeta(s).
 \]
 Then \( \xi(s) \) extends to an entire function satisfying
+
 \[
 \xi(s) = \xi(1-s).
 \]
 Equivalently, with \( \Lambda(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s) \):
+
 \[
 \Lambda(s) = \Lambda(1-s).
 \]
@@ -1046,16 +1105,19 @@ Equivalently, with \( \Lambda(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s) \):
 \pi^{-s/2}\Gamma(s/2) n^{-s} = \int_0^\infty u^{s/2-1} e^{-n^2\pi u}\,du.
 \]
 Summing over \( n \geq 1 \):
+
 \[
 \pi^{-s/2}\Gamma(s/2)\zeta(s) = \int_0^\infty u^{s/2-1} \sum_{n=1}^\infty e^{-n^2\pi u}\,du = \int_0^\infty u^{s/2-1} \omega(u)\,du,
 \]
 where \( \omega(u) = \sum_{n=1}^\infty e^{-n^2\pi u} = (\vartheta(u)-1)/2 \) with \( \vartheta(u) = \sum_{n\in\mathbb{Z}} e^{-n^2\pi u} \).
 
 Split the integral at \( u=1 \) and use the Poisson summation identity \( \vartheta(u) = u^{-1/2}\vartheta(1/u) \) (shown in Example 2.11) to transform the integral over \( (0,1) \):
+
 \[
 \int_0^1 u^{s/2-1}\omega(u)\,du = \int_1^\infty u^{(1-s)/2-1}\omega(u)\,du + \frac{1}{s(s-1)}.
 \]
 Therefore
+
 \[
 \Lambda(s) = \frac{1}{s(s-1)} + \int_1^\infty \bigl(u^{s/2-1} + u^{(1-s)/2-1}\bigr)\omega(u)\,du,
 \]
@@ -1077,6 +1139,7 @@ The poles of \(\Gamma(s/2)\) at \(s = 0, -2, -4, \ldots\) force \(\zeta\) to hav
 The Riemann Hypothesis (RH) is the statement that all nontrivial zeros \(\rho\) of \(\zeta(s)\) satisfy \(\mathrm{Re}(\rho) = 1/2\). It is one of the Millennium Prize Problems (with a $1 million prize for a proof), and it has been verified numerically for the first \(10^{13}\) zeros (all lying on the critical line, none lying off it). But no proof is known.
 
 Why does RH matter for prime counting? The explicit formula (Section 5.5) states:
+
 \[
 \psi(x) = x - \sum_\rho \frac{x^\rho}{\rho} - \frac{\zeta'(0)}{\zeta(0)} - \frac{1}{2}\log(1-x^{-2}).
 \]
@@ -1121,6 +1184,7 @@ While the Riemann Hypothesis (RH) remains unproved, one can establish explicit z
 </div>
 
 This zero-free region is used to obtain the quantitative error term in PNT:
+
 \[
 \pi(x) = \mathrm{li}(x) + O\!\left(x \exp\!\left(-c\sqrt{\log x}\right)\right).
 \]
@@ -1161,6 +1225,7 @@ F(x) = \sum_{n \leq x} \left(\psi\!\left(\frac{x}{n}\right) - \left\lfloor \frac
 F(x) = \sum_{n \leq x}\sum_{m \leq x/n} \Lambda(m) - \sum_{n \leq x}\left\lfloor \frac{x}{n}\right\rfloor + 2\gamma \lfloor x \rfloor.
 \]
 The double sum \( \sum_{nm \leq x} \Lambda(m) = \psi(x)\cdot(\text{sum over }n) \) can be evaluated. Using the identity \( \sum_{d \mid n} \Lambda(d) = \log n \), one shows
+
 \[
 F(x) = \sum_{n \leq x} \left(\log(x/n) - \left\lfloor \frac{x}{n} \right\rfloor \cdot \frac{1}{\lfloor x/n \rfloor} + \ldots \right) = O(\sqrt{x}),
 \]
@@ -1206,6 +1271,7 @@ The non-trivial step: \( \zeta(s) \neq 0 \) on \( \mathrm{Re}(s)=1 \) implies (v
 \psi(x) - \lfloor x \rfloor + 2\gamma = \sum_{n \leq x} \mu(n)F(x/n) = o(x).
 \]
 Since \( \lfloor x \rfloor = x + O(1) \) and \( 2\gamma \) is a constant:
+
 \[
 \psi(x) = x + o(x),
 \]
@@ -1247,6 +1313,7 @@ PNT then follows from the explicit formula if one can show \( \zeta(1+it) \neq 0
 Let us outline the contour integration proof of PNT more explicitly, as it illustrates the general strategy used throughout the subject.
 
 **Step 1 (Set up Perron).** For \(c > 1\) and \(x > 1\):
+
 \[
 \psi(x) = \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty} \left(-\frac{\zeta'(s)}{\zeta(s)}\right)\frac{x^s}{s}\,ds.
 \]
@@ -1301,10 +1368,12 @@ D(x) = 2\sum_{n \leq u} \left\lfloor \frac{x}{n} \right\rfloor - u^2.
 (We count pairs \( (a,b) \) with \( a \leq u \) and \( b \leq x/a \), plus pairs with \( b \leq u \) and \( a \leq x/b \), minus the square \( [1,u]^2 \).)
 
 Now \( \lfloor x/n \rfloor = x/n + O(1) \), so
+
 \[
 \sum_{n \leq u} \left\lfloor \frac{x}{n} \right\rfloor = x\sum_{n \leq u} \frac{1}{n} + O(u) = x(\log u + \gamma + O(1/u)) + O(u).
 \]
 With \( u = \sqrt{x} \), \( \log u = \frac{1}{2}\log x \):
+
 \[
 2\sum_{n \leq \sqrt{x}} \left\lfloor \frac{x}{n} \right\rfloor - \lfloor\sqrt{x}\rfloor^2 = 2x\left(\frac{\log x}{2} + \gamma + O(1/\sqrt{x})\right) + O(\sqrt{x}) - x + O(\sqrt{x})
 \]
@@ -1362,14 +1431,17 @@ The method transforms a sum over an interval into a shorter sum (the <em>B-proce
 ## 6.5 Connection to Dirichlet Series
 
 The asymptotic \( D(x) \sim x\log x \) is related to the double pole of \( \zeta(s)^2 \) at \( s=1 \). More precisely, by Perron's formula:
+
 \[
 \sum_{n \leq x} d(n) = \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty} \zeta(s)^2 \frac{x^s}{s}\,ds.
 \]
 The main term \( x\log x + (2\gamma-1)x \) arises from the residue at the double pole \( s=1 \). Near \(s=1\):
+
 \[
 \zeta(s)^2 = \frac{1}{(s-1)^2} + \frac{2\gamma}{s-1} + O(1),
 \]
 and the residue formula for the double pole of \(\zeta(s)^2 x^s/s\) gives:
+
 \[
 \mathrm{Res}_{s=1}\left(\zeta(s)^2 \frac{x^s}{s}\right) = \frac{d}{ds}\left[(s-1)^2 \zeta(s)^2 \frac{x^s}{s}\right]_{s=1} = x\log x + (2\gamma - 1)x.
 \]
@@ -1527,6 +1599,7 @@ The group \(\{1,3\}\) has two characters: the trivial one (sending everything to
 \(\chi_1 \pmod 4\): \(\chi_1(1)=1, \chi_1(2)=0, \chi_1(3)=-1, \chi_1(4)=0\), and periodic.
 
 The character \(\chi_1\) is the unique primitive character mod 4. It detects the sign of an odd number modulo 4: \(\chi_1(n) = 1\) if \(n \equiv 1 \pmod 4\) and \(\chi_1(n) = -1\) if \(n \equiv 3 \pmod 4\). The corresponding L-function is
+
 \[
 L(s, \chi_1) = 1 - \frac{1}{3^s} + \frac{1}{5^s} - \frac{1}{7^s} + \cdots,
 \]
@@ -1615,6 +1688,7 @@ L(s,\chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s} = \prod_p \frac{1}{1 - \chi(p)
 </div>
 
 For the principal character \( \chi_0 \) mod \( k \):
+
 \[
 L(s,\chi_0) = \zeta(s) \prod_{p \mid k} (1 - p^{-s}),
 \]
@@ -1628,6 +1702,7 @@ For non-principal \( \chi \), since \( \sum_{n=1}^k \chi(n) = 0 \) (orthogonalit
 -\frac{L'(s,\chi)}{L(s,\chi)} = \sum_{n=1}^\infty \frac{\chi(n)\Lambda(n)}{n^s}.
 \]
 To count primes in the class \(p \equiv \ell \pmod k\), we use the orthogonality relation to "select" those primes:
+
 \[
 \sum_{\substack{p \leq x \\ p \equiv \ell \pmod k}}\log p = \frac{1}{\varphi(k)}\sum_\chi \bar\chi(\ell) \sum_{p \leq x} \chi(p)\log p.
 \]
@@ -1646,6 +1721,7 @@ The character \(\chi = \chi_0\) contributes the main term (from the pole of \(L'
 \Lambda(s,\chi) = \left(\frac{k}{\pi}\right)^{(s+a)/2} \Gamma\!\left(\frac{s+a}{2}\right) L(s,\chi),
 \]
 where \( a = 0 \) if \( \chi(-1)=1 \) (even character) and \( a=1 \) if \( \chi(-1)=-1 \) (odd character). Then
+
 \[
 \Lambda(s,\chi) = \frac{\tau(\chi)}{i^a \sqrt{k}} \Lambda(1-s,\bar\chi).
 \]
@@ -1669,6 +1745,7 @@ This is the key analytic step for Dirichlet's theorem on primes in arithmetic pr
 Z(s) = \prod_{\chi \bmod k} L(s,\chi).
 \]
 This is a product of \( \varphi(k) \) L-functions. One can show \( Z(s) \) has non-negative coefficients and
+
 \[
 Z(s) = \sum_{n \geq 1} \frac{a(n)}{n^s}, \quad a(n) \geq 0.
 \]
@@ -1707,15 +1784,18 @@ The proof combines orthogonality of characters (to detect the condition \( p \eq
 ## 9.2 Detecting Congruences with Characters
 
 The key identity: for \( \gcd(\ell, k) = 1 \),
+
 \[
 \mathbf{1}[n \equiv \ell \pmod k] = \frac{1}{\varphi(k)} \sum_{\chi \bmod k} \chi(\ell)^{-1} \chi(n), \quad \gcd(n,k)=1.
 \]
 Therefore, for any function \( f \) supported on integers coprime to \( k \):
+
 \[
 \sum_{\substack{n \leq x \\ n \equiv \ell \pmod k}} f(n) = \frac{1}{\varphi(k)} \sum_\chi \overline{\chi(\ell)} \sum_{n \leq x} f(n)\chi(n).
 \]
 
 Applying this to \( f(n) = \Lambda(n)/n \):
+
 \[
 \sum_{\substack{n \leq x \\ n \equiv \ell \pmod k}} \frac{\Lambda(n)}{n} = \frac{1}{\varphi(k)}\sum_\chi \overline{\chi(\ell)} \sum_{n \leq x} \frac{\Lambda(n)\chi(n)}{n}.
 \]
@@ -1723,20 +1803,24 @@ Applying this to \( f(n) = \Lambda(n)/n \):
 ## 9.3 Analysis of L-Function Logarithmic Derivatives
 
 For \( \mathrm{Re}(s) > 1 \):
+
 \[
 \frac{L'(s,\chi)}{L(s,\chi)} = -\sum_n \frac{\Lambda(n)\chi(n)}{n^s}.
 \]
 The principal character contributes the main term:
+
 \[
 -\frac{L'(s,\chi_0)}{L(s,\chi_0)} \sim \frac{1}{s-1}
 \]
 near \( s=1 \). Non-principal characters have \( L(1,\chi) \neq 0 \), so \( -L'(s,\chi)/L(s,\chi) \) is holomorphic at \( s=1 \) and bounded.
 
 By partial summation (applied to the logarithmic derivative at \( s=1 \)):
+
 \[
 \sum_{n \leq x} \frac{\Lambda(n)\chi_0(n)}{n} = \log x + O(1), \quad \sum_{n \leq x} \frac{\Lambda(n)\chi(n)}{n} = O(1) \text{ for } \chi \neq \chi_0.
 \]
 Combining:
+
 \[
 \sum_{\substack{p \leq x \\ p \equiv \ell \pmod k}} \frac{\log p}{p} = \frac{1}{\varphi(k)}\log x + O(1).
 \]
@@ -1859,6 +1943,7 @@ As \(T \to \infty\), the integral converges to \(\sum_{n \leq x} a(n)\) (for non
 for \(c > 0\). This is proved by residues: for \(y > 1\), close the contour to the left, picking up the simple pole at \(s=0\) with residue 1. For \(y < 1\), close to the right, encircling no poles.
 
 Applying this to \(F(s) = \sum a(n)n^{-s}\) with \(y = x/n\):
+
 \[
 \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty} F(s)\frac{x^s}{s}\,ds = \sum_n a(n) \cdot \frac{1}{2\pi i}\int \frac{(x/n)^s}{s}\,ds = \sum_{n \leq x} a(n).
 \]
@@ -1872,6 +1957,7 @@ Perron's formula is the bridge between analytic properties of \( F(s) \) (poles,
 \lfloor x \rfloor = \frac{1}{2\pi i}\int_{c-iT}^{c+iT} \zeta(s)\frac{x^s}{s}\,ds + \text{error}.
 \]
 Moving the contour to \(\mathrm{Re}(s) = 1/2\) (past the simple pole of \(\zeta(s)\cdot x^s/s\) at \(s=1\) with residue \(x\)):
+
 \[
 \lfloor x \rfloor = x + \frac{1}{2\pi i}\int_{1/2-iT}^{1/2+iT}\zeta(s)\frac{x^s}{s}\,ds + O(\cdots).
 \]
@@ -1993,6 +2079,7 @@ The Gamma function \(\Gamma(s) = \int_0^\infty t^{s-1}e^{-t}\,dt\) (for \(\mathr
 </div>
 
 This formula shows that \(\Gamma(s)\) is entire with no zeros, and has simple poles at \(s = 0, -1, -2, \ldots\). Taking the logarithmic derivative gives the digamma function \(\psi(s) = \Gamma'(s)/\Gamma(s)\):
+
 \[
 \psi(s) = -\gamma - \frac{1}{s} + \sum_{n=1}^\infty \left(\frac{1}{n} - \frac{1}{n+s}\right).
 \]
@@ -2168,20 +2255,24 @@ This is used to show that if \(\zeta(s)\) is bounded on the boundaries of the cr
 <strong>Example C.1.</strong> We compute \( \zeta(2) = \sum_{n=1}^\infty 1/n^2 = \pi^2/6 \) using Fourier analysis.
 
 Consider the Fourier series of \( f(x) = x^2 \) on \( [-\pi, \pi] \). Its Fourier coefficients:
+
 \[
 a_0 = \frac{1}{\pi}\int_{-\pi}^\pi x^2\,dx = \frac{2\pi^2}{3}, \quad a_n = \frac{1}{\pi}\int_{-\pi}^\pi x^2 \cos(nx)\,dx = \frac{4(-1)^n}{n^2}, \quad b_n = 0.
 \]
 By Parseval's theorem, \( \frac{1}{\pi}\int_{-\pi}^\pi |f(x)|^2\,dx = \frac{a_0^2}{2} + \sum_{n=1}^\infty (a_n^2 + b_n^2) \). Alternatively, evaluating the Fourier series at \( x=\pi \):
+
 \[
 \pi^2 = \frac{\pi^2}{3} + \sum_{n=1}^\infty \frac{4(-1)^n}{n^2}(-1)^n \cdot (-1)^0 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{1}{n^2}.
 \]
 Wait — more directly: at \( x=0 \), \( 0 = \pi^2/3 - 4\sum_{n=1}^\infty (-1)^{n+1}/n^2 \). Actually the cleanest: Parseval gives
+
 \[
 \frac{2\pi^4}{5} = \frac{\pi^4}{9} + \sum_{n=1}^\infty \frac{16}{n^4} + \ldots
 \]
 Simpler: evaluate the Fourier series of \( f(x) = x \) (odd function) at \( x = \pi/2 \), getting \( \pi/4 = 1 - 1/3 + 1/5 - \cdots \) (Leibniz). Square and use rearrangements, or use the functional equation \( \zeta(2) = \pi^2/6 \) directly from the residue at \( s=1 \) of \( \Gamma(s)^2\zeta(2s) \).
 
 The cleanest proof: use the product formula \( \sin(\pi z) = \pi z\prod_{n=1}^\infty (1-z^2/n^2) \). Taking the logarithmic derivative:
+
 \[
 \pi\cot(\pi z) = \frac{1}{z} + \sum_{n=1}^\infty \left(\frac{1}{z-n} + \frac{1}{z+n}\right) = \frac{1}{z} - 2\sum_{k=1}^\infty \zeta(2k) z^{2k-1}.
 \]
@@ -2194,14 +2285,17 @@ Expanding \( \pi\cot(\pi z) \) in powers of \( z \) and comparing gives \( \zeta
 <strong>Example C.2.</strong> Use Abel summation to prove \( \sum_{n \leq x} \log n = x\log x - x + O(\log x) \).
 
 Take \( a_n = 1 \) (so \( A(x) = \lfloor x \rfloor \)) and \( f(n) = \log n \) (so \( f'(t) = 1/t \)). Then
+
 \[
 \sum_{n \leq x} \log n = \lfloor x \rfloor \log x - \int_1^x \frac{\lfloor t \rfloor}{t}\,dt.
 \]
 Now \( \lfloor t \rfloor = t + O(1) \), so
+
 \[
 \int_1^x \frac{\lfloor t\rfloor}{t}\,dt = \int_1^x 1\,dt + O\!\left(\int_1^x \frac{dt}{t}\right) = (x-1) + O(\log x).
 \]
 Thus
+
 \[
 \sum_{n \leq x} \log n = x\log x + O(\log x) - x + O(\log x) = x\log x - x + O(\log x).
 \]
@@ -2303,6 +2397,7 @@ G. H. Hardy and S. Ramanujan (1917) pioneered the circle method (Hardy–Littlew
 ## D.6 Selberg and Erdős: The Elementary Proof of PNT (1949)
 
 Atle Selberg and Paul Erdős gave the first "elementary" proof of PNT — one not using complex analysis — in 1949. The key ingredient was the Selberg symmetry formula:
+
 \[
 \sum_{p \leq x} \log^2 p + \sum_{p q \leq x} \log p \log q = 2x\log x + O(x),
 \]
@@ -2364,6 +2459,7 @@ The material in this chapter goes beyond what is strictly needed for the proof o
 The most elegant approach to the functional equation of \(\zeta(s)\) uses the Jacobi theta function and the Poisson summation formula. We present it in full detail.
 
 **Setup: the theta function.** Define
+
 \[
 \theta(t) = \sum_{n=-\infty}^{\infty} e^{-\pi n^2 t}, \qquad t > 0.
 \]
@@ -2382,10 +2478,12 @@ This is the Jacobi theta function already introduced in Section 2.3. Note \(\the
 \hat{f}(\xi) = \int_{-\infty}^{\infty} e^{-\pi tx^2}e^{-2\pi i x\xi}\,dx.
 \]
 Complete the square in the exponent: \(-\pi tx^2 - 2\pi ix\xi = -\pi t(x + i\xi/t)^2 - \pi\xi^2/t\). Thus
+
 \[
 \hat{f}(\xi) = e^{-\pi\xi^2/t}\int_{-\infty}^\infty e^{-\pi t(x+i\xi/t)^2}\,dx.
 \]
 Shifting the contour by \(i\xi/t\) (justified since the Gaussian decays rapidly) and using \(\int_{-\infty}^\infty e^{-\pi tu^2}\,du = t^{-1/2}\), we get \(\hat{f}(\xi) = t^{-1/2}e^{-\pi\xi^2/t}\). By Poisson summation:
+
 \[
 \theta(t) = \sum_{n\in\mathbb{Z}}e^{-\pi n^2 t} = \sum_{n\in\mathbb{Z}}\hat{f}(n) = \sum_{n\in\mathbb{Z}}t^{-1/2}e^{-\pi n^2/t} = t^{-1/2}\theta(1/t).
 \]
@@ -2408,44 +2506,54 @@ where \(\Lambda(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s)\).
 \int_0^\infty t^{s-1}\omega(t)\,dt = \sum_{n=1}^\infty \int_0^\infty t^{s-1}e^{-\pi n^2 t}\,dt.
 \]
 Substituting \(u = \pi n^2 t\) in each integral:
+
 \[
 \int_0^\infty t^{s-1}e^{-\pi n^2 t}\,dt = (\pi n^2)^{-s}\int_0^\infty u^{s-1}e^{-u}\,du = \pi^{-s}n^{-2s}\Gamma(s).
 \]
 Summing over \(n \geq 1\):
+
 \[
 \int_0^\infty t^{s-1}\omega(t)\,dt = \pi^{-s}\Gamma(s)\sum_{n=1}^\infty n^{-2s} = \pi^{-s}\Gamma(s)\zeta(2s). \quad \square
 \]
 </div>
 
 **Deriving the functional equation.** Now we use \(\theta(1/t) = t^{1/2}\theta(t)\) to relate \(\Lambda(s)\) to \(\Lambda(1-s)\). Write
+
 \[
 \pi^{-s/2}\Gamma(s/2)\zeta(s) = \int_0^\infty t^{s/2-1}\omega(t)\,dt.
 \]
 (This follows from Theorem 13.2 with \(s\) replaced by \(s/2\).) Split the integral at \(t=1\):
+
 \[
 \Lambda(s) = \int_1^\infty t^{s/2-1}\omega(t)\,dt + \int_0^1 t^{s/2-1}\omega(t)\,dt.
 \]
 In the second integral, substitute \(t \mapsto 1/t\) (so \(dt \to -t^{-2}dt\) and the limits reverse):
+
 \[
 \int_0^1 t^{s/2-1}\omega(t)\,dt = \int_1^\infty t^{-(s/2-1)}t^{-2}\omega(1/t)\,dt = \int_1^\infty t^{-s/2-1}\omega(1/t)\,dt.
 \]
 Now use \(\theta(1/t) = t^{1/2}\theta(t)\), i.e., \(1 + 2\omega(1/t) = t^{1/2}(1+2\omega(t))\), so
+
 \[
 \omega(1/t) = \frac{t^{1/2}(1+2\omega(t))-1}{2} = \frac{t^{1/2}-1}{2} + t^{1/2}\omega(t).
 \]
 Substituting:
+
 \[
 \int_0^1 t^{s/2-1}\omega(t)\,dt = \int_1^\infty t^{-s/2-1}\left(\frac{t^{1/2}-1}{2} + t^{1/2}\omega(t)\right)dt.
 \]
 Split into three parts:
+
 \[
 = \int_1^\infty \frac{t^{-s/2-1/2}-t^{-s/2-1}}{2}\,dt + \int_1^\infty t^{-s/2-1/2}\omega(t)\,dt.
 \]
 The first integral evaluates:
+
 \[
 \int_1^\infty \frac{t^{-s/2-1/2} - t^{-s/2-1}}{2}\,dt = \frac{1}{2}\left(\frac{1}{s/2-1/2} - \frac{1}{s/2}\right) = \frac{1}{s-1} - \frac{1}{s} = \frac{1}{s(s-1)}.
 \]
 (Here we assumed \(0 < \mathrm{Re}(s) < 1\) for both integrals to converge; the formula extends by analytic continuation.) Therefore:
+
 \[
 \Lambda(s) = \frac{1}{s(s-1)} + \int_1^\infty \left(t^{s/2-1} + t^{(1-s)/2-1}\right)\omega(t)\,dt.
 \]
@@ -2504,11 +2612,13 @@ where the product is over all nontrivial zeros \(\rho\) of \(\zeta(s)\), taken i
 \zeta(s) = \frac{e^{A+Bs}}{s(s-1)} \prod_\rho \left(1 - \frac{s}{\rho}\right)e^{s/\rho},
 \]
 where the product is over all nontrivial zeros \(\rho\) and the exponential factors \(e^{s/\rho}\) ensure convergence. The constants \(A\) and \(B\) are explicitly:
+
 \[
 A = \log 2 + \frac{1}{2}\log\pi - 1 - \frac{1}{2}\frac{\Gamma'(1)}{\Gamma(1)}, \quad B = -\sum_\rho \mathrm{Re}(1/\rho).
 \]
 
 This product formula is fundamental: it encodes all information about \(\zeta(s)\) purely through its zeros. Every pole (only at \(s=1\)), every zero (the \(\rho\)), and the global behavior are all visible in the product. Taking the logarithmic derivative:
+
 \[
 \frac{\zeta'(s)}{\zeta(s)} = B - \frac{1}{s} + \frac{1}{s-1} - \frac{1}{2}\frac{\Gamma'(s/2)}{\Gamma(s/2)} + \sum_\rho \left(\frac{1}{s-\rho} + \frac{1}{\rho}\right).
 \]
@@ -2528,6 +2638,7 @@ where the sum over nontrivial zeros \(\rho\) is taken symmetrically: \(\lim_{T\t
 </div>
 
 **Proof sketch via Perron's formula.** The starting point is:
+
 \[
 \psi(x) = \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty}\left(-\frac{\zeta'(s)}{\zeta(s)}\right)\frac{x^s}{s}\,ds, \qquad c > 1.
 \]
@@ -2540,10 +2651,12 @@ Using the Hadamard product representation of \(\zeta'/\zeta\), the integrand \(-
 Shifting the contour to the left and collecting residues gives the explicit formula. The crucial analytic issue — proving the contour shift is valid, i.e., that the contributions from the horizontal segments vanish — requires the estimate \(|\zeta'/\zeta(\sigma+iT)| = O(\log^2 T)\) uniformly in \(\sigma \in [-1, 2]\) (away from zeros), which follows from the zero-density estimates.
 
 **The oscillatory interpretation.** Each nontrivial zero \(\rho = 1/2 + i\gamma\) (assuming RH) contributes
+
 \[
 -\frac{x^\rho}{\rho} = -\frac{x^{1/2}e^{i\gamma\log x}}{1/2 + i\gamma} = -\frac{x^{1/2}}{|\rho|}e^{i(\gamma\log x - \arg\rho)}.
 \]
 Taking real parts (and noting that zeros come in conjugate pairs \(\pm i\gamma\)):
+
 \[
 -\frac{x^\rho}{\rho} - \frac{x^{\bar\rho}}{\bar\rho} = -\frac{2x^{1/2}}{|\rho|}\cos(\gamma\log x - \arg\rho).
 \]
@@ -2568,11 +2681,13 @@ We now establish the classical zero-free region due to de la Vallée Poussin (18
 **Step 1: Quantitative bounds near \(s=1\).** Near \(s=1\), \(\zeta(\sigma) \sim 1/(\sigma-1)\) as \(\sigma \to 1^+\), so \(|\zeta(\sigma)| \leq A/(\sigma-1)\) for some absolute constant \(A > 0\).
 
 **Step 2: Upper bound on \(|\zeta(\sigma+it)|\).** For \(\sigma\) close to 1 and \(|t| \geq 2\), the Euler product gives \(\log|\zeta(\sigma+it)| \leq \sum_p \sum_k \frac{1}{kp^{k\sigma}}\). For \(\sigma = 1 + 1/\log|t|\), one shows \(|\zeta(\sigma+it)| = O(\log|t|)\). By the Hadamard product and zero counting, for \(\sigma \in [1/2, 2]\) and \(|t| \geq 2\):
+
 \[
 -\mathrm{Re}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)} \leq \sum_\rho \frac{\sigma - \beta}{(\sigma-\beta)^2 + (t-\gamma)^2} + O(\log|t|).
 \]
 
 **Step 3: The key inequality.** Suppose for contradiction that \(\zeta(\beta_0 + it_0) = 0\) for some \(\beta_0 > 1 - c/\log t_0\) (with \(t_0 \geq 2\) and \(c\) to be determined). From the inequality:
+
 \[
 |\zeta(\sigma)|^3|\zeta(\sigma+it_0)|^4|\zeta(\sigma+2it_0)| \geq 1.
 \]
@@ -2584,10 +2699,12 @@ Now:
 - \(\log|\zeta(\sigma+2it_0)| \leq D\log t_0\) (from the upper bound for \(\zeta\) in the critical strip).
 
 Combining:
+
 \[
 0 \leq 3(-\log(\sigma-1)+O(1)) + 4(\log(\sigma-\beta_0)+C\log t_0) + D\log t_0.
 \]
 Set \(\sigma - 1 = \delta\) (small positive) and \(\sigma - \beta_0 = \delta + (1-\beta_0)\). If \(\beta_0 = 1 - \eta\) with \(\eta = c/\log t_0\):
+
 \[
 0 \leq -3\log\delta + 4\log(\delta + \eta) + (4C+D)\log t_0.
 \]
@@ -2595,14 +2712,17 @@ Choosing \(\delta = \eta/(e^{(4C+D)\log t_0 / 3} \cdot \text{const})\) leads to 
 </div>
 
 **Deducing the quantitative PNT.** From the zero-free region, for any zero \(\rho = \beta+i\gamma\) of \(\zeta\) in the critical strip with \(|\gamma| \leq T\), we have \(\beta \leq 1 - c/\log T\). In the explicit formula:
+
 \[
 \psi(x) - x = -\sum_\rho \frac{x^\rho}{\rho} + O(\log x).
 \]
 Each term with \(|\gamma| \leq T\) satisfies \(|x^\rho/\rho| \leq x^\beta/|\rho| \leq x^{1-c/\log T}/|\gamma|\). Summing over \(N(T) \sim (T/2\pi)\log T\) zeros and choosing \(T = \exp(\sqrt{\log x}/2)\):
+
 \[
 |\psi(x) - x| \leq x^{1-c/\log T}\cdot O(\log^2 T) + O(x/T) = O\!\left(x\exp\!\left(-\frac{c\sqrt{\log x}}{2}\right)\right).
 \]
 This gives the quantitative Prime Number Theorem:
+
 \[
 \psi(x) = x + O\!\left(x\exp\!\left(-c_1\sqrt{\log x}\right)\right) \implies \pi(x) = \mathrm{li}(x) + O\!\left(x\exp\!\left(-c_2\sqrt{\log x}\right)\right).
 \]
@@ -2616,6 +2736,7 @@ This gives the quantitative Prime Number Theorem:
 ## 14.1 L(1,χ) for the Non-Principal Character mod 4
 
 Let \(\chi_{-4}\) denote the unique non-principal Dirichlet character modulo 4. It is given by:
+
 \[
 \chi_{-4}(n) = \begin{cases} 1 & n \equiv 1 \pmod 4 \\ -1 & n \equiv 3 \pmod 4 \\ 0 & 2 \mid n \end{cases}
 \]
@@ -2650,10 +2771,12 @@ We complete the description of characters mod 5 from Section 8.2 with the explic
 Check: \(\chi_1(3) = \chi_1(2^3) = \chi_1(2)^3 = i^3 = -i\). \(\chi_1(4) = \chi_1(2^2) = i^2 = -1\). \(\chi_2(2) = -1\), \(\chi_2(4) = (-1)^2 = 1\), \(\chi_2(3) = \chi_2(2^3) = (-1)^3 = -1\). So \(\chi_2 = \left(\frac{\cdot}{5}\right)\): quadratic residues mod 5 are \(\{1, 4\}\) (since \(1^2 = 1\), \(2^2 = 4\), \(3^2 = 4\), \(4^2 = 1 \pmod 5\)), confirming \(\chi_2(1)=\chi_2(4)=1\), \(\chi_2(2)=\chi_2(3)=-1\).
 
 The four L-functions:
+
 \[
 L(s, \chi_0) = \left(1-5^{-s}\right)\zeta(s), \qquad L(s, \chi_2) = \prod_p \frac{1}{1-\chi_2(p)p^{-s}}.
 \]
 For \(\chi_2\), the primes split according to their residue mod 5: primes \(\equiv 1, 4 \pmod 5\) (i.e., \(\left(\frac{p}{5}\right) = 1\)) give a factor \((1-p^{-s})^{-1}\), while primes \(\equiv 2, 3 \pmod 5\) give \((1+p^{-s})^{-1}\). Thus:
+
 \[
 L(s,\chi_2) = \frac{1}{1+2^{-s}}\cdot\frac{1}{1+3^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\frac{1}{1-19^{-s}}\cdots
 \]
@@ -2689,6 +2812,7 @@ Dirichlet's theorem is sometimes stated informally as "there are infinitely many
 \sum_{\substack{p \leq x \\ p \equiv a \pmod q}} \frac{1}{p} = \frac{1}{\varphi(q)}\log\log x + C(a,q) + O\!\left(\frac{1}{\log x}\right),
 \]
 where \(C(a,q)\) is a constant depending on \(a\) and \(q\). In particular,
+
 \[
 \sum_{\substack{p \leq x \\ p \equiv a \pmod q}} \frac{1}{p} \to \infty,
 \]
@@ -2706,12 +2830,14 @@ Sieve methods are combinatorial tools for estimating the number of integers in a
 ## 15.1 Inclusion-Exclusion and the Legendre Sieve
 
 The simplest sieve is inclusion-exclusion (the "Legendre sieve"). Let \(\mathcal{A} \subseteq \{1, 2, \ldots, N\}\) and let \(\mathcal{P}(z) = \prod_{p \leq z} p\) be the product of all primes up to \(z\). Define
+
 \[
 S(\mathcal{A}, \mathcal{P}, z) = \#\{n \in \mathcal{A} : \gcd(n, \mathcal{P}(z)) = 1\},
 \]
 the number of elements of \(\mathcal{A}\) not divisible by any prime \(p \leq z\). If \(\mathcal{A} = [1,x]\) and \(z = \sqrt{x}\), then \(S(\mathcal{A}, \mathcal{P}, z) = \pi(x) - \pi(z) + 1\), essentially counting primes.
 
 By inclusion-exclusion (Legendre's formula):
+
 \[
 S(\mathcal{A}, \mathcal{P}, z) = \sum_{d \mid \mathcal{P}(z)} \mu(d) \cdot \#\{n \in \mathcal{A} : d \mid n\} = \sum_{d \mid \mathcal{P}(z)} \mu(d) A(d),
 \]
@@ -2758,6 +2884,7 @@ Standard sieve notation organizes these ideas cleanly. Let:
 - \(g(d)\) be a multiplicative "density" function approximating \(A_d/|\mathcal{A}|\).
 
 Then
+
 \[
 S(\mathcal{A}, \mathcal{P}, z) = \sum_{\substack{n \in \mathcal{A} \\ \gcd(a_n, P(z)) = 1}} 1.
 \]
@@ -2793,6 +2920,7 @@ Goldbach's conjecture (1742) states: every even integer \(n \geq 4\) is the sum 
 N = p_1 + p_2 + p_3.
 \]
 More precisely, the number of such representations is
+
 \[
 r_3(N) = \frac{\mathfrak{S}(N) N^2}{2(\log N)^3}\left(1 + o(1)\right),
 \]
@@ -2800,10 +2928,12 @@ where \(\mathfrak{S}(N) = \prod_p \left(1 + \frac{1}{(p-1)^3}\right) \cdot \prod
 </div>
 
 **Sketch of the circle method.** The circle method (Hardy–Littlewood method) proceeds as follows. Define the exponential sum
+
 \[
 f(\alpha) = \sum_{p \leq N} e^{2\pi i p \alpha}\log p.
 \]
 Then the number of representations of \(N\) as \(p_1 + p_2 + p_3\) (weighted by \(\log p_i\)) is
+
 \[
 \sum_{\substack{p_1+p_2+p_3=N \\ p_i \leq N}}\log p_1\log p_2\log p_3 = \int_0^1 f(\alpha)^3 e^{-2\pi i N\alpha}\,d\alpha.
 \]
@@ -2812,6 +2942,7 @@ Then the number of representations of \(N\) as \(p_1 + p_2 + p_3\) (weighted by 
 Decompose \([0,1]\) into "major arcs" \(\mathfrak{M}\) (rationals \(a/q\) with small denominator \(q \leq (\log N)^A\)) and "minor arcs" \(\mathfrak{m}\).
 
 On the **major arcs**, near \(\alpha = a/q\) with \(\gcd(a,q)=1\), the exponential sum \(f(\alpha)\) is well-approximated by character sums:
+
 \[
 f\!\left(\frac{a}{q}+\beta\right) \approx \frac{\mu(q)}{\varphi(q)}\sum_{n \leq N}e^{2\pi i n\beta} = \frac{\mu(q)}{\varphi(q)}\cdot\frac{e^{2\pi iN\beta}-1}{e^{2\pi i\beta}-1}.
 \]
@@ -2946,16 +3077,19 @@ This appendix provides six fully worked problems at the research-level textbook 
 where the remainder is \(R_0 = -\int_1^N \widetilde{B}_1(x) f'(x)\,dx = \int_1^N \{x\} \cdot x^{-2}\,dx\) (using \(\widetilde{B}_1(x) = \{x\}-1/2\) and \(f'(x) = -1/x^2\), giving \(R_0 = -\int_1^N(\{x\}-1/2)(-1/x^2)\,dx\)).
 
 More directly (as in Section 2.1, Example 2.2): use Abel summation with \(a_n = 1\), \(A(x) = \lfloor x \rfloor\), \(f(t) = 1/t\):
+
 \[
 \sum_{n \leq x}\frac{1}{n} = \frac{\lfloor x \rfloor}{x} + \int_1^x \frac{\lfloor t \rfloor}{t^2}\,dt.
 \]
 
 **Step 1.** Write \(\lfloor t \rfloor = t - \{t\}\):
+
 \[
 \sum_{n \leq x}\frac{1}{n} = 1 - \frac{\{x\}}{x} + \int_1^x \frac{1}{t}\,dt - \int_1^x \frac{\{t\}}{t^2}\,dt = 1 - \frac{\{x\}}{x} + \log x - \int_1^x \frac{\{t\}}{t^2}\,dt.
 \]
 
 **Step 2.** Split the integral at \(\infty\): write \(\int_1^x = \int_1^\infty - \int_x^\infty\):
+
 \[
 \sum_{n \leq x}\frac{1}{n} = \log x + \underbrace{\left(1 - \int_1^\infty\frac{\{t\}}{t^2}\,dt\right)}_{\gamma} + \int_x^\infty \frac{\{t\}}{t^2}\,dt - \frac{\{x\}}{x}.
 \]
@@ -2963,6 +3097,7 @@ More directly (as in Section 2.1, Example 2.2): use Abel summation with \(a_n = 
 **Step 3.** The integral \(\int_1^\infty \{t\}/t^2\,dt\) converges since \(|\{t\}/t^2| \leq 1/t^2\) and \(\int_1^\infty 1/t^2\,dt = 1\). This defines Euler's constant \(\gamma = 1 - \int_1^\infty\{t\}/t^2\,dt \approx 0.5772\).
 
 **Step 4.** Bound the error:
+
 \[
 \left|\int_x^\infty\frac{\{t\}}{t^2}\,dt\right| \leq \int_x^\infty \frac{dt}{t^2} = \frac{1}{x}, \qquad \left|\frac{\{x\}}{x}\right| \leq \frac{1}{x}.
 \]
@@ -2984,23 +3119,27 @@ D(x) := \sum_{n \leq x}d(n) = \#\{(a,b) \in \mathbb{Z}_{>0}^2 : ab \leq x\}.
 \]
 
 Set \(u = \lfloor\sqrt{x}\rfloor\). Decompose the lattice points according to whether \(a \leq u\) or \(b \leq u\) (at least one must hold if \(ab \leq x\)):
+
 \[
 D(x) = \sum_{a \leq u}\left\lfloor\frac{x}{a}\right\rfloor + \sum_{b \leq u}\left\lfloor\frac{x}{b}\right\rfloor - u^2 = 2\sum_{a \leq u}\left\lfloor\frac{x}{a}\right\rfloor - u^2.
 \]
 (The first two sums count pairs with \(a \leq u\) and pairs with \(b \leq u\); the last term subtracts the double-counted pairs with \(a \leq u\) and \(b \leq u\), i.e., both \(\leq u\), which is the \(u \times u\) square.)
 
 **Step 1: Estimate \(\sum_{a \leq u}\lfloor x/a\rfloor\).** Write \(\lfloor x/a\rfloor = x/a - \{x/a\}\):
+
 \[
 \sum_{a \leq u}\left\lfloor\frac{x}{a}\right\rfloor = x\sum_{a \leq u}\frac{1}{a} - \sum_{a \leq u}\left\{\frac{x}{a}\right\} = x(\log u + \gamma + O(1/u)) + O(u),
 \]
 using \(\sum_{n \leq N} 1/n = \log N + \gamma + O(1/N)\) and \(|\{x/a\}| \leq 1\).
 
 **Step 2: Substitute \(u = \sqrt{x}\).** Then \(\log u = \frac{1}{2}\log x\) and \(O(1/u) = O(1/\sqrt{x})\):
+
 \[
 \sum_{a \leq \sqrt{x}}\left\lfloor\frac{x}{a}\right\rfloor = x\!\left(\frac{1}{2}\log x + \gamma + O(x^{-1/2})\right) + O(\sqrt{x}) = \frac{x\log x}{2} + \gamma x + O(\sqrt{x}).
 \]
 
 **Step 3: Combine.** Using \(u^2 = \lfloor\sqrt{x}\rfloor^2 = x + O(\sqrt{x})\):
+
 \[
 D(x) = 2\!\left(\frac{x\log x}{2} + \gamma x + O(\sqrt{x})\right) - x + O(\sqrt{x}) = x\log x + (2\gamma - 1)x + O(\sqrt{x}). \quad \square
 \]
@@ -3016,6 +3155,7 @@ D(x) = 2\!\left(\frac{x\log x}{2} + \gamma x + O(\sqrt{x})\right) - x + O(\sqrt{
 <strong>Solution.</strong> The character \(\chi_{-4}\) has values \(\chi_{-4}(1)=1\), \(\chi_{-4}(3)=-1\), \(\chi_{-4}(2)=0\) (with period 4). Thus for odd primes \(p\): \(\chi_{-4}(p) = 1\) if \(p \equiv 1 \pmod 4\) and \(\chi_{-4}(p) = -1\) if \(p \equiv 3 \pmod 4\). The prime \(p=2\) satisfies \(\chi_{-4}(2) = 0\), so its Euler factor is \((1-0)^{-1} = 1\) (trivially 1).
 
 Therefore:
+
 \[
 L(s,\chi_{-4}) = \prod_{p \equiv 1(4)}\frac{1}{1-p^{-s}} \cdot \prod_{p \equiv 3(4)}\frac{1}{1+p^{-s}}.
 \]
@@ -3025,11 +3165,13 @@ Explicitly (listing the first several primes in each class):
 - Primes \(\equiv 3 \pmod 4\): \(3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, \ldots\)
 
 So:
+
 \[
 L(s,\chi_{-4}) = \frac{1}{1-5^{-s}}\cdot\frac{1}{1-13^{-s}}\cdot\frac{1}{1-17^{-s}}\cdots \cdot \frac{1}{1+3^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1+11^{-s}}\cdots
 \]
 
 At \(s=1\): \(L(1,\chi_{-4}) = \pi/4\). Let's verify numerically with a partial product over primes up to 20:
+
 \[
 \frac{1}{1+3^{-1}}\cdot\frac{1}{1-5^{-1}}\cdot\frac{1}{1+7^{-1}}\cdot\frac{1}{1+11^{-1}}\cdot\frac{1}{1-13^{-1}}\cdot\frac{1}{1+19^{-1}} = \frac{3}{4}\cdot\frac{5}{4}\cdot\frac{7}{8}\cdot\frac{11}{12}\cdot\frac{13}{12}\cdot\frac{19}{20} \approx 0.78.
 \]
@@ -3052,12 +3194,14 @@ This should converge to \(\pi/4 \approx 0.7854\). The partial product already ca
 (The pairing of \(+n\) and \(-n\) zeros into factors \((1-x/n)(1+x/n) = 1-x^2/n^2\) avoids the need for exponential convergence factors.)
 
 **Step 1: Taylor expand both sides.** The Taylor expansion of \(\sin(\pi x)/(\pi x)\) around \(x=0\):
+
 \[
 \frac{\sin(\pi x)}{\pi x} = \frac{1}{\pi x}\left(\pi x - \frac{(\pi x)^3}{6} + \frac{(\pi x)^5}{120} - \cdots\right) = 1 - \frac{\pi^2 x^2}{6} + \frac{\pi^4 x^4}{120} - \cdots
 \]
 The coefficient of \(x^2\) is \(-\pi^2/6\).
 
 **Step 2: Expand the product.** Taking the logarithm:
+
 \[
 \log\prod_{n=1}^\infty\left(1-\frac{x^2}{n^2}\right) = \sum_{n=1}^\infty\log\left(1-\frac{x^2}{n^2}\right) = -\sum_{n=1}^\infty\sum_{k=1}^\infty\frac{x^{2k}}{kn^{2k}} = -\sum_{k=1}^\infty\frac{\zeta(2k)}{k}x^{2k}.
 \]
@@ -3078,6 +3222,7 @@ Alternatively, directly expand the product: the coefficient of \(x^2\) in \(\pro
 <strong>Solution.</strong> We use the central binomial coefficient argument (Section 1.3a), enhanced with the von Mangoldt function.
 
 **Key bound.** For any prime power \(p^k\) with \(p^k \leq 2n\), the \(p\)-adic valuation of \(\binom{2n}{n}\) satisfies
+
 \[
 v_p\!\left(\binom{2n}{n}\right) = \sum_{j=1}^\infty\left(\left\lfloor\frac{2n}{p^j}\right\rfloor - 2\left\lfloor\frac{n}{p^j}\right\rfloor\right) \leq \log_p(2n).
 \]
@@ -3088,32 +3233,38 @@ So \(p^{v_p(\binom{2n}{n})} \leq p^{\log_p(2n)} = 2n\) for each prime \(p\).
 **Step 1.** We have \(4^n = (1+1)^{2n} \leq (2n+1)\binom{2n}{n}\) (since \(\binom{2n}{n}\) is the largest of the \(2n+1\) binomial coefficients), giving \(\binom{2n}{n} \geq 4^n/(2n+1)\).
 
 **Step 2.** If there is no prime in \((n, 2n]\), then every prime factor of \(\binom{2n}{n}\) satisfies \(p \leq n\) (since primes \(> n\) can't divide \(\binom{2n}{n}\) when there are none in \((n,2n]\); actually a prime \(p\) with \(n < p \leq 2n\) divides \(\binom{2n}{n}\) once since \(\lfloor 2n/p\rfloor = 1\) and \(\lfloor n/p\rfloor = 0\), giving \(v_p = 1\)). So assuming no prime in \((n,2n]\):
+
 \[
 \binom{2n}{n} = \prod_{p \leq n} p^{v_p(\binom{2n}{n})} \leq \prod_{p \leq n} 2n \leq (2n)^{\pi(n)}.
 \]
 
 **Step 3.** By Chebyshev's upper bound, \(\pi(n) \leq 2n\log 2/\log n\) (from \(\psi(n) \leq 2n\log 2\) and \(\psi(n) \geq \theta(n) = \pi(n)\log\sqrt{n}\)). More precisely, using the much cruder bound \(\pi(n) \leq n\) (trivially):
+
 \[
 \binom{2n}{n} \leq (2n)^n.
 \]
 
 **Step 4.** But we also have \(\binom{2n}{n} \geq 4^n/(2n+1)\). So we need
+
 \[
 \frac{4^n}{2n+1} \leq (2n)^n,
 \]
 i.e., \(4^n \leq (2n)^n(2n+1) = (2n+1)(2n)^n\). For \(n \geq 3\): \((2n)^n \geq 6^3 = 216 < 4^3 = 64\)... wait, \((2\cdot 3)^3 = 216 > 64\). Actually \((2n)^n > 4^n\) would require \(2n > 4\), i.e., \(n > 2\). But \((2n)^n > 4^n \iff (2n)^n/4^n = (n/2)^n > 1 \iff n > 2\). So for \(n > 2\), \((2n)^n > 4^n\), and the bound \(\binom{2n}{n} \leq (2n)^n\) is consistent with \(\binom{2n}{n} \geq 4^n/(2n+1)\) — this approach doesn't immediately give a contradiction.
 
 **Sharper argument.** We instead use the fact that if \(p > \sqrt{2n}\), then \(v_p(\binom{2n}{n}) \leq 1\) (since \(p^2 > 2n\)), so such primes contribute at most \(p \leq 2n\) to the product. Primes \(p \leq \sqrt{2n}\) contribute at most \((2n)^{\pi(\sqrt{2n})}\). So
+
 \[
 \binom{2n}{n} \leq (2n)^{\pi(\sqrt{2n})} \cdot \prod_{\sqrt{2n} < p \leq n} p \leq (2n)^{\sqrt{2n}} \cdot e^{\theta(n)}.
 \]
 Using \(\theta(n) \leq n\log 4 = 2n\log 2\) (Chebyshev):
+
 \[
 \frac{4^n}{2n+1} \leq (2n)^{\sqrt{2n}} \cdot e^{2n\log 2} = (2n)^{\sqrt{2n}} \cdot 4^n.
 \]
 This gives \((2n+1) \geq (2n)^{-\sqrt{2n}}\), which is valid but vacuous.
 
 **Direct approach.** The cleanest proof (Erdős's version): One uses the specific fact that any prime \(p\) with \(2n/3 < p \leq n\) satisfies \(v_p(\binom{2n}{n}) = 0\) (since \(\lfloor 2n/p\rfloor = 2\) and \(\lfloor n/p\rfloor = 1\), giving \(v_p = 0\); actually \(\lfloor 2n/p\rfloor - 2\lfloor n/p\rfloor = 2-2 = 0\)). So primes in \((2n/3, n]\) do NOT divide \(\binom{2n}{n}\). And primes in \((n,2n]\) each divide \(\binom{2n}{n}\) exactly once (as computed above). Therefore if no prime in \((n,2n]\):
+
 \[
 \binom{2n}{n} \leq \prod_{p \leq 2n/3} p^{v_p(\binom{2n}{n})} \leq \prod_{p \leq 2n/3}(2n).
 \]
@@ -3130,10 +3281,12 @@ A careful induction shows this leads to \(4^n/(2n+1) \leq (2n)^{\pi(2n/3)}\), an
 <strong>Solution.</strong> We use Abel summation with the "summatory function" of the von Mangoldt function. Recall \(\psi(x) = \sum_{n \leq x}\Lambda(n)\). By Chebyshev (Theorem 1.9), \(\psi(x) \leq 2x\log 2\), so \(\psi(x) = O(x)\).
 
 **Step 1.** Write
+
 \[
 \sum_{p \leq x}\frac{\log p}{p} = \sum_{p \leq x}\frac{\Lambda(p)}{p}
 \]
 (since \(\Lambda(p) = \log p\) for primes). The difference between this and \(\sum_{n \leq x}\Lambda(n)/n\) comes from prime powers \(p^k\) with \(k \geq 2\):
+
 \[
 \sum_{n \leq x}\frac{\Lambda(n)}{n} - \sum_{p \leq x}\frac{\log p}{p} = \sum_{\substack{p^k \leq x \\ k \geq 2}}\frac{\log p}{p^k} \leq \sum_p \sum_{k=2}^\infty \frac{\log p}{p^k} = \sum_p \frac{\log p}{p^2-p} = O(1).
 \]
@@ -3142,26 +3295,31 @@ A careful induction shows this leads to \(4^n/(2n+1) \leq (2n)^{\pi(2n/3)}\), an
 So it suffices to show \(\sum_{n \leq x}\Lambda(n)/n = \log x + O(1)\).
 
 **Step 2.** Apply Abel summation with \(a_n = \Lambda(n)\) (so \(A(x) = \psi(x)\)) and \(f(t) = 1/t\):
+
 \[
 \sum_{n \leq x}\frac{\Lambda(n)}{n} = \frac{\psi(x)}{x} + \int_1^x \frac{\psi(t)}{t^2}\,dt.
 \]
 
 **Step 3.** From Chebyshev, \(\psi(x) = O(x)\), so \(\psi(x)/x = O(1)\). For the integral:
+
 \[
 \int_1^x\frac{\psi(t)}{t^2}\,dt = \int_1^x\frac{\psi(t)}{t^2}\,dt.
 \]
 Write \(\psi(t) = t + E(t)\) where \(E(t) = \psi(t) - t = O(t)\) (Chebyshev's result), actually we know \(c_1 t \leq \psi(t) \leq c_2 t\) for explicit constants. So:
+
 \[
 \int_1^x\frac{\psi(t)}{t^2}\,dt = \int_1^x \frac{1}{t}\,dt + \int_1^x\frac{E(t)}{t^2}\,dt = \log x + \int_1^x\frac{E(t)}{t^2}\,dt.
 \]
 
 **Step 4.** It remains to show \(\int_1^x E(t)/t^2\,dt = O(1)\). From \(|E(t)| \leq Ct\) (Chebyshev):
+
 \[
 \left|\int_1^x\frac{E(t)}{t^2}\,dt\right| \leq C\int_1^x \frac{1}{t}\,dt = C\log x.
 \]
 This is too weak! We need a better bound. The key is that \(E(t)/t = \psi(t)/t - 1\) changes sign and the integral of \(E(t)/t^2\) is bounded. This requires the Chebyshev-level bound \(|E(t)| \leq (c_2-1)t\) on one side and \(|E(t)| \leq (1-c_1)t\) on the other, but neither of these alone gives the integral bounded — we need a more careful argument.
 
 **Sharper approach.** Use the identity \(\sum_{n \leq x}\Lambda(n)/n = -\zeta'(1^+)/\zeta(1^+)\), which we interpret as follows: from the Laurent expansion \(\zeta(s) = 1/(s-1) + \gamma + O(s-1)\) and \(-\zeta'(s)/\zeta(s) = \sum \Lambda(n)/n^s\), partial summation gives (for \(s = 1+\varepsilon\)):
+
 \[
 \sum_{n=1}^\infty \frac{\Lambda(n)}{n^{1+\varepsilon}} = \frac{1}{\varepsilon} + C + O(\varepsilon)
 \]
@@ -3229,6 +3387,7 @@ The following examples develop computational fluency with the core objects of th
 We illustrate the explicit formula \(\psi(x) = x - \sum_\rho x^\rho/\rho - \log(2\pi) + \cdots\) by computing the first few terms for \(x = 50\).
 
 **Exact value.** The prime powers up to 50 are: \(2,3,4,5,7,8,9,11,13,16,17,19,23,25,27,29,31,32,37,41,43,47,49\). Their von Mangoldt contributions are:
+
 \[
 \psi(50) = 6\log 2 + 4\log 3 + 2\log 5 + \log 7 + \log 11 + \log 13 + \log 17 + \log 19 + \log 23 + \log 29 + \log 31 + \log 37 + \log 41 + \log 43 + \log 47.
 \]
@@ -3239,6 +3398,7 @@ More directly, one can compute \(\psi(50) \approx 46.30\).
 **Main term.** The main term is \(x = 50\).
 
 **First zero correction.** The first nontrivial zero is \(\rho_1 = 1/2 + 14.1347i\). Its contribution (paired with \(\bar\rho_1\)) is:
+
 \[
 -\frac{x^{\rho_1}}{\rho_1} - \frac{x^{\bar\rho_1}}{\bar\rho_1} = -\frac{2\sqrt{50}}{|\rho_1|}\cos\!\left(14.1347\cdot\log 50 - \arctan(14.1347/(1/2))\right).
 \]
@@ -3257,6 +3417,7 @@ The classical zero-free region \(\sigma \geq 1 - c/\log(|t|+2)\) has a very thin
 This means that at height \(T\), we only know zeros are absent from a tiny sliver of width \(\sim 1/\log T\) near the line \(\sigma = 1\). The critical line \(\sigma = 1/2\) is nowhere near the known zero-free region — bridging this gap is essentially the Riemann Hypothesis.
 
 The Vinogradov–Korobov zero-free region (1958) slightly improves the classical one:
+
 \[
 \sigma \geq 1 - \frac{c}{(\log|t|)^{2/3}(\log\log|t|)^{1/3}},
 \]
@@ -3271,6 +3432,7 @@ The average gap between consecutive primes near \(x\) is \(\log x\) (this is equ
 **Golomb's observation.** For primes up to \(10^6\), the largest gap is 148 (occurring after the prime 492113), while \((\log 492113)^2 \approx (13.1)^2 \approx 171\). Cramér's conjecture seems numerically accurate.
 
 **The Hardy–Littlewood prime tuples conjecture.** For a pattern of integers \((h_1, \ldots, h_k)\), the number of \(n \leq x\) with \(n+h_1, \ldots, n+h_k\) all prime is conjectured to be
+
 \[
 \mathfrak{S}(h_1,\ldots,h_k)\cdot\frac{x}{(\log x)^k}(1+o(1)),
 \]
@@ -3301,10 +3463,12 @@ The connection is beautiful: the Riemann Hypothesis — a statement about where 
 We expand on Example F.4 to derive \(\zeta(2k)\) for general \(k\) from the product formula.
 
 Starting from \(\sin(\pi x)/(\pi x) = \prod_{n=1}^\infty(1-x^2/n^2)\), take the logarithm:
+
 \[
 \log\!\left(\frac{\sin(\pi x)}{\pi x}\right) = \sum_{n=1}^\infty \log\!\left(1-\frac{x^2}{n^2}\right) = -\sum_{n=1}^\infty\sum_{k=1}^\infty\frac{x^{2k}}{kn^{2k}} = -\sum_{k=1}^\infty\frac{\zeta(2k)}{k}x^{2k}.
 \]
 On the other hand, the Taylor expansion of the left side:
+
 \[
 \log\!\left(\frac{\sin(\pi x)}{\pi x}\right) = \log\!\left(1 - \frac{(\pi x)^2}{6} + \frac{(\pi x)^4}{120} - \cdots\right).
 \]
@@ -3322,6 +3486,7 @@ So \(-\zeta(4)/2 = -\pi^4/180\), giving \(\zeta(4) = \pi^4/90\). ✓
   - From \(\sin\) expansion: the \(x^6\) coefficient is \(-\pi^6/5040\) (from \((\pi x)^7/(7\cdot\pi x) \to \pi^6/5040\) ... actually from \(\sin(\pi x)/\pi x = \sum_{k=0}^\infty (-1)^k (\pi x)^{2k}/(2k+1)!\), the coefficient of \(x^6\) in \(\log(\sin(\pi x)/\pi x)\) requires the full logarithm expansion).
 
 The general formula is: the coefficient of \(x^{2k}\) in \(\log(\sin(\pi x)/\pi x)\) equals \(-\zeta(2k)/k\), and this equals \((-1)^k\pi^{2k}B_{2k}/(k\cdot(2k)!)\cdot(-1)\) by the generating function for Bernoulli numbers (since \(\pi x\cot(\pi x) = 1 - 2\sum_{k=1}^\infty \zeta(2k)x^{2k}\)). This gives:
+
 \[
 \zeta(2k) = \frac{(-1)^{k+1}(2\pi)^{2k}B_{2k}}{2(2k)!},
 \]
@@ -3338,18 +3503,21 @@ the general formula for \(\zeta(2k)\). The first several values:
 ## H.6 The Dedekind Zeta Function
 
 The Dedekind zeta function of a number field \(K\) is the natural generalization of \(\zeta(s)\):
+
 \[
 \zeta_K(s) = \sum_{\mathfrak{a}} N(\mathfrak{a})^{-s} = \prod_{\mathfrak{p}} (1 - N(\mathfrak{p})^{-s})^{-1},
 \]
 where the sum/product is over nonzero ideals/prime ideals of the ring of integers \(\mathcal{O}_K\), and \(N(\mathfrak{a}) = |\mathcal{O}_K/\mathfrak{a}|\) is the norm.
 
 For \(K = \mathbb{Q}\), this recovers \(\zeta(s)\). For \(K = \mathbb{Q}(\sqrt{D})\) (quadratic fields), the factorization theorem gives:
+
 \[
 \zeta_K(s) = \zeta(s) L(s, \chi_D),
 \]
 where \(\chi_D\) is the Kronecker symbol \(\chi_D(n) = \left(\frac{D}{n}\right)\), a primitive Dirichlet character whose conductor divides \(4|D|\).
 
 **The analytic class number formula.** Near \(s=1\):
+
 \[
 \zeta_K(s) = \frac{2^{r_1}(2\pi)^{r_2}h_K R_K}{w_K\sqrt{|d_K|}} \cdot \frac{1}{s-1} + O(1),
 \]
@@ -3363,6 +3531,7 @@ where:
 For \(K = \mathbb{Q}(i)\): \(r_1=0\), \(r_2=1\), \(h=1\), \(R=1\) (trivial; the only units are \(\pm 1, \pm i\), so the regulator is just 1), \(w=4\), \(d=-4\). The formula gives residue \((2\pi\cdot 1\cdot 1)/(4\cdot 2) = \pi/4 = L(1,\chi_{-4})\). ✓
 
 For imaginary quadratic fields \(\mathbb{Q}(\sqrt{-d})\) with \(d > 0\) and no exceptional units (\(w=2\) for \(d \neq 1,3\)):
+
 \[
 L(1, \chi_{-d}) = \frac{\pi h(-d)}{\sqrt{d}},
 \]
@@ -3373,12 +3542,14 @@ expressing the L-value in terms of the class number. This is the Dirichlet class
 **Characters mod 7.** The group \((\mathbb{Z}/7\mathbb{Z})^* \cong \mathbb{Z}/6\mathbb{Z}\) (cyclic of order 6, generated by \(g=3\): \(3^1=3, 3^2=2, 3^3=6, 3^4=4, 3^5=5, 3^6=1 \pmod 7\)). There are \(\varphi(7) = 6\) characters, given by \(\chi_j(3) = e^{2\pi ij/6}\) for \(j = 0,1,2,3,4,5\). The real characters among these are \(j=0\) (principal), \(j=3\) (\(\chi_3(3) = -1\), and \(\chi_3 = \left(\frac{\cdot}{7}\right)\) since \(\chi_3\) has order 2).
 
 For the real character \(\chi_3 = \left(\frac{\cdot}{7}\right)\):
+
 \[
 L(1, \chi_3) = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} + \frac{1}{6} - \frac{1}{7} - \cdots
 \]
 (with signs given by the Legendre symbol: the quadratic residues mod 7 are \(\{1,2,4\}\) and non-residues are \(\{3,5,6\}\)). The value is \(L(1,\chi_3) = \pi/(7\sqrt{7})\cdot\)... actually this requires the class number formula for \(\mathbb{Q}(\sqrt{-7})\): \(h(-7) = 1\), \(w = 2\), discriminant \(-7\), giving \(L(1,\chi_{-7}) = \pi/\sqrt{7}\). One can verify this is approximately \(\pi/2.646 \approx 1.187\) by partial sums.
 
 **L-values at negative integers.** The functional equation for \(L(s,\chi)\) relates values at negative integers to values near 1. For instance:
+
 \[
 L(0,\chi_{-4}) = \frac{1}{2}\left(1-\chi_{-4}(-1)\right)\cdot(-B_{1,\chi_{-4}}) = ?
 \]

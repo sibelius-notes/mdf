@@ -1913,23 +1913,27 @@ Ordinal multiplication, like ordinal addition, fails to commute in general. The 
 <strong>Worked example: \(\omega \cdot 2\) versus \(2 \cdot \omega\).</strong>
 
 Recall the definition: \(\alpha \cdot \beta\) is defined by transfinite recursion on \(\beta\):
+
 \[
 \alpha \cdot 0 = 0, \quad \alpha \cdot (\beta + 1) = \alpha \cdot \beta + \alpha, \quad \alpha \cdot \lambda = \sup_{\xi < \lambda} \alpha \cdot \xi \text{ for limit } \lambda.
 \]
 
 *Computing \(\omega \cdot 2\)*:
+
 \[
 \omega \cdot 2 = \omega \cdot (1 + 1) = \omega \cdot 1 + \omega = \omega + \omega.
 \]
 Concretely, \(\omega \cdot 2 = \omega + \omega = \{0, 1, 2, \ldots, \omega, \omega+1, \omega+2, \ldots\}\). This is the order type of two disjoint copies of \(\omega\) placed one after the other: the first copy \(\{0, 1, 2, \ldots\}\) followed by a second copy \(\{\omega, \omega+1, \omega+2, \ldots\}\). It has no largest element and is a limit ordinal.
 
 *Computing \(2 \cdot \omega\)*:
+
 \[
 2 \cdot \omega = \sup_{n < \omega} 2 \cdot n.
 \]
 Now \(2 \cdot n = n + n = 2n\) (a finite even number), so the sequence is \(0, 2, 4, 6, \ldots\). The supremum is \(\omega\). Thus \(2 \cdot \omega = \omega\).
 
 *Summary*:
+
 \[
 \omega \cdot 2 = \omega + \omega \neq \omega = 2 \cdot \omega.
 \]
@@ -1941,6 +1945,7 @@ Now \(2 \cdot n = n + n = 2n\) (a finite even number), so the sequence is \(0, 2
 <strong>General pattern: \(\alpha \cdot \omega = \omega\) whenever \(\alpha\) is finite and nonzero.</strong>
 
 For any \(n \geq 1\):
+
 \[
 n \cdot \omega = \sup_{k < \omega} n \cdot k = \sup_{k < \omega} nk = \omega,
 \]
@@ -1957,6 +1962,7 @@ Cantor's diagonal argument is the most elegant proof in all of mathematics. It d
 
 <div class="proof">
 Suppose for contradiction that \(2^\omega\) is countable: enumerate it as \(f_0, f_1, f_2, \ldots\) Define the **diagonal sequence** \(d: \omega \to \{0,1\}\) by
+
 \[
 d(n) = 1 - f_n(n).
 \]
@@ -1967,6 +1973,7 @@ That is, \(d\) disagrees with \(f_n\) at position \(n\) for every \(n\). Then \(
 <strong>Explicit diagonal: the first few rows.</strong>
 
 Imagine the following (hypothetical) list of binary sequences:
+
 \[
 \begin{array}{c|cccccc}
 n & 0 & 1 & 2 & 3 & 4 & \cdots \\ \hline
@@ -1991,6 +1998,7 @@ The same argument shows \(|\mathbb{R}| > \aleph_0\) directly, by working with de
 <strong>\(\omega^\omega\) as the smallest ordinal exceeding all finite towers.</strong>
 
 By definition, \(\omega^\omega = \sup_{n < \omega} \omega^n\). We compute the first few values:
+
 \[
 \omega^0 = 1, \quad \omega^1 = \omega, \quad \omega^2 = \omega \cdot \omega, \quad \omega^3 = \omega^2 \cdot \omega, \quad \ldots
 \]
@@ -2003,10 +2011,12 @@ To visualize: \(\omega^n\) is the order type of \(n\)-tuples of natural numbers 
 <strong>The fixed point \(\varepsilon_0 = \omega^{\omega^{\omega^{\cdots}}}\).</strong>
 
 Define a sequence \(\alpha_0 = \omega\) and \(\alpha_{n+1} = \omega^{\alpha_n}\):
+
 \[
 \alpha_0 = \omega, \quad \alpha_1 = \omega^\omega, \quad \alpha_2 = \omega^{\omega^\omega}, \quad \alpha_3 = \omega^{\omega^{\omega^\omega}}, \quad \ldots
 \]
 Set \(\varepsilon_0 = \sup_{n < \omega} \alpha_n\). Then:
+
 \[
 \omega^{\varepsilon_0} = \omega^{\sup_n \alpha_n} = \sup_n \omega^{\alpha_n} = \sup_n \alpha_{n+1} = \varepsilon_0.
 \]

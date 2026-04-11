@@ -35,6 +35,7 @@ The natural domain for Fourier series is the **circle group** \(\mathbb{T} = \ma
 The circle group \(\mathbb{T}\) is simultaneously a group, a compact topological space, and a smooth manifold. This triple structure — algebraic, topological, and geometric — is what makes Fourier analysis on \(\mathbb{T}\) so rich. The "correct" measure on \(\mathbb{T}\) for group-theoretic purposes is the one that is translation-invariant: the **Haar measure**, which here is simply normalized arc length \(\frac{dx}{2\pi}\). The normalization ensures \(\int_\mathbb{T} 1\, d\mu = 1\), making \(\mathbb{T}\) a probability space and the Fourier transform a unitary operation.
 
 The characters of \(\mathbb{T}\) — continuous group homomorphisms \(\mathbb{T} \to \mathbb{C}^\times\) of unit modulus — are exactly the exponential functions \(e_n(x) = e^{inx}\) for \(n \in \mathbb{Z}\). These form an orthonormal system in \(L^2(\mathbb{T})\):
+
 \[
 \langle e_n, e_m \rangle = \frac{1}{2\pi}\int_{-\pi}^{\pi} e^{inx}\overline{e^{imx}}\,dx = \frac{1}{2\pi}\int_{-\pi}^{\pi} e^{i(n-m)x}\,dx = \delta_{nm}.
 \]
@@ -49,6 +50,7 @@ This orthonormality is the computational backbone of Fourier analysis: it means 
 \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx}\,dx, \quad n \in \mathbb{Z}.
 \]
 The <strong>formal Fourier series</strong> of \(f\) is
+
 \[
 f \sim \sum_{n=-\infty}^{\infty} \hat{f}(n)e^{inx}.
 \]
@@ -58,6 +60,7 @@ The <strong>partial sums</strong> are \(S_N f(x) = \sum_{|n| \leq N} \hat{f}(n)e
 The tilde notation \(\sim\) is deliberate: the series need not converge to \(f\) pointwise. The central question of Fourier analysis is precisely when and in what sense the partial sums recover \(f\).
 
 The formula for Fourier coefficients has a clean heuristic: if we believe \(f(x) = \sum_n c_n e^{inx}\), then multiply both sides by \(e^{-imx}\) and integrate:
+
 \[
 \frac{1}{2\pi}\int_{-\pi}^\pi f(x) e^{-imx}\,dx = \sum_n c_n \underbrace{\frac{1}{2\pi}\int_{-\pi}^\pi e^{i(n-m)x}\,dx}_{= \delta_{nm}} = c_m.
 \]
@@ -74,10 +77,12 @@ Consider \(f(x) = x\) on \([-\pi, \pi)\), extended to be \(2\pi\)-periodic. This
 **Computation of \(\hat{f}(0)\):** Since \(f\) is odd, \(\hat{f}(0) = \frac{1}{2\pi}\int_{-\pi}^\pi x\,dx = 0\).
 
 **Computation of \(\hat{f}(n)\) for \(n \neq 0\):** We integrate by parts:
+
 \[
 \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} x e^{-inx}\,dx.
 \]
 Let \(u = x\), \(dv = e^{-inx}\,dx\), so \(du = dx\), \(v = \frac{e^{-inx}}{-in}\). Then:
+
 \[
 \hat{f}(n) = \frac{1}{2\pi}\left[\frac{x e^{-inx}}{-in}\right]_{-\pi}^{\pi} - \frac{1}{2\pi}\int_{-\pi}^{\pi}\frac{e^{-inx}}{-in}\,dx.
 \]
@@ -86,27 +91,32 @@ The boundary term: \(\frac{1}{2\pi}\cdot\frac{\pi e^{-in\pi} - (-\pi)e^{in\pi}}{
 The remaining integral: \(-\frac{1}{2\pi}\cdot\frac{1}{-in}\int_{-\pi}^\pi e^{-inx}\,dx = 0\) since \(\int_{-\pi}^\pi e^{-inx}\,dx = 0\) for \(n \neq 0\).
 
 Therefore:
+
 \[
 \hat{f}(n) = \frac{(-1)^n}{-in} = \frac{(-1)^{n+1}}{in} = \frac{(-1)^{n+1}\cdot (-i)}{n} = \frac{i(-1)^n \cdot (-1)}{n}
 \]
 More cleanly: \(\hat{f}(n) = \frac{(-1)^{n+1} i}{n} \cdot \frac{1}{1}.\) Wait — let us redo this carefully:
+
 \[
 \hat{f}(n) = \frac{(-1)^n}{-in} = \frac{(-1)^n}{-in}\cdot\frac{i}{i} = \frac{i(-1)^n}{n}.
 \]
 But we know \(f\) is real and odd, so \(\hat{f}(n)\) should be purely imaginary and odd in \(n\). Indeed: \(\hat{f}(n) = \frac{i(-1)^n}{n}\). Since \(\hat{f}(-n) = \frac{i(-1)^{-n}}{-n} = \frac{-i(-1)^n}{n} = -\hat{f}(n)\) (noting \((-1)^{-n} = (-1)^n\)), this is consistent.
 
 The Fourier series is:
+
 \[
 x \sim \sum_{n \neq 0} \frac{i(-1)^n}{n} e^{inx} = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\sin(nx),
 \]
 where we combined the \(n\) and \(-n\) terms: \(\frac{i(-1)^n e^{inx}}{n} + \frac{-i(-1)^n e^{-inx}}{n} = \frac{2(-1)^n \sin(nx)}{-n} = \frac{2(-1)^{n+1}\sin(nx)}{n}\).
 
 So the Fourier series of the sawtooth wave is:
+
 \[
 x = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \frac{\sin 4x}{4} + \cdots\right), \quad x \in (-\pi, \pi).
 \]
 
 Setting \(x = \pi/2\): the right side gives \(2(1 - 0 - 1/3 + 0 + 1/5 - \cdots) = 2(1 - 1/3 + 1/5 - \cdots)\). Since the left side is \(\pi/2\), we recover the **Leibniz formula**:
+
 \[
 \frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
 \]
@@ -116,6 +126,7 @@ Setting \(x = \pi/2\): the right side gives \(2(1 - 0 - 1/3 + 0 + 1/5 - \cdots) 
 Let \(f(x) = \text{sgn}(x) = \begin{cases} 1 & 0 < x < \pi \\ -1 & -\pi < x < 0 \end{cases}\), extended \(2\pi\)-periodically. This is an odd function, so again only sine terms appear.
 
 For \(n \neq 0\):
+
 \[
 \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x) e^{-inx}\,dx = \frac{1}{2\pi}\left(\int_0^\pi e^{-inx}\,dx - \int_{-\pi}^0 e^{-inx}\,dx\right).
 \]
@@ -124,6 +135,7 @@ Computing: \(\int_0^\pi e^{-inx}\,dx = \frac{1-e^{-in\pi}}{in} = \frac{1-(-1)^n}
 So \(\hat{f}(n) = \frac{1}{2\pi}\cdot\frac{2(1-(-1)^n)}{in} = \frac{1-(-1)^n}{\pi i n}\).
 
 When \(n\) is even, \(\hat{f}(n) = 0\). When \(n\) is odd, \(\hat{f}(n) = \frac{2}{\pi i n}\). Thus:
+
 \[
 \text{sgn}(x) \sim \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right).
 \]
@@ -137,10 +149,12 @@ The function \(f(x) = |x|\) on \([-\pi, \pi]\) is even (\(f(-x) = f(x)\)), so it
 **Computation of \(\hat{f}(0)\):** \(\hat{f}(0) = \frac{1}{2\pi}\int_{-\pi}^\pi |x|\,dx = \frac{1}{2\pi}\cdot 2\int_0^\pi x\,dx = \frac{1}{2\pi}\cdot\pi^2 = \frac{\pi}{2}\).
 
 **Computation of \(\hat{f}(n)\) for \(n \neq 0\):** Using evenness:
+
 \[
 \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^\pi |x|e^{-inx}\,dx = \frac{1}{\pi}\int_0^\pi x\cos(nx)\,dx,
 \]
 since \(|x|\cos(nx)\) is even (product of two even functions). Integrating by parts:
+
 \[
 \int_0^\pi x\cos(nx)\,dx = \left[\frac{x\sin(nx)}{n}\right]_0^\pi - \int_0^\pi \frac{\sin(nx)}{n}\,dx = 0 + \frac{1}{n}\left[\frac{\cos(nx)}{n}\right]_0^\pi = \frac{\cos(n\pi) - 1}{n^2} = \frac{(-1)^n - 1}{n^2}.
 \]
@@ -148,11 +162,13 @@ since \(|x|\cos(nx)\) is even (product of two even functions). Integrating by pa
 Therefore \(\hat{f}(n) = \frac{(-1)^n - 1}{\pi n^2}\). When \(n\) is even, \(\hat{f}(n) = 0\). When \(n\) is odd, \(\hat{f}(n) = \frac{-2}{\pi n^2}\).
 
 The Fourier series of \(|x|\) is:
+
 \[
 |x| = \frac{\pi}{2} - \frac{4}{\pi}\left(\cos x + \frac{\cos 3x}{9} + \frac{\cos 5x}{25} + \cdots\right) = \frac{\pi}{2} - \frac{4}{\pi}\sum_{k=0}^\infty \frac{\cos((2k+1)x)}{(2k+1)^2}.
 \]
 
 **Parseval's identity applied:** By Parseval, \(\|f\|_{L^2}^2 = \sum_n |\hat{f}(n)|^2\). The left side is \(\frac{1}{2\pi}\int_{-\pi}^\pi x^2\,dx = \frac{\pi^2}{3}\). The right side:
+
 \[
 |\hat{f}(0)|^2 + 2\sum_{n=1}^\infty |\hat{f}(n)|^2 = \frac{\pi^2}{4} + 2\sum_{k=0}^\infty \frac{4}{\pi^2(2k+1)^4}.
 \]
@@ -165,14 +181,17 @@ Consider \(f(x) = x^2\) on \([-\pi, \pi]\), extended periodically. This is an ev
 **Computation of \(\hat{f}(0)\):** \(\hat{f}(0) = \frac{1}{2\pi}\int_{-\pi}^\pi x^2\,dx = \frac{1}{2\pi}\cdot\frac{2\pi^3}{3} = \frac{\pi^2}{3}\).
 
 **Computation of \(\hat{f}(n)\) for \(n \neq 0\):** Two integrations by parts give:
+
 \[
 \hat{f}(n) = \frac{1}{\pi}\int_0^\pi x^2\cos(nx)\,dx = \frac{1}{\pi}\left[\frac{x^2\sin(nx)}{n}\right]_0^\pi - \frac{2}{\pi n}\int_0^\pi x\sin(nx)\,dx.
 \]
 The boundary term vanishes. Continuing:
+
 \[
 \frac{2}{\pi n}\int_0^\pi x\sin(nx)\,dx = \frac{2}{\pi n}\left(\left[-\frac{x\cos(nx)}{n}\right]_0^\pi + \frac{1}{n}\int_0^\pi\cos(nx)\,dx\right) = \frac{2}{\pi n}\cdot\frac{-\pi\cos(n\pi)}{n} = \frac{-2(-1)^n}{n^2}.
 \]
 Therefore \(\hat{f}(n) = \frac{2(-1)^n}{n^2}\) for \(n \neq 0\). The Fourier series is:
+
 \[
 x^2 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2}\cos(nx) = \frac{\pi^2}{3} - 4\cos x + \cos 2x - \frac{4\cos 3x}{9} + \frac{4\cos 4x}{16} - \cdots
 \]
@@ -180,10 +199,12 @@ x^2 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2}\cos(nx) = \frac{\p
 Wait — let us recheck: \(\hat{f}(n) = \frac{2(-1)^n}{n^2}\), so the series is \(\frac{\pi^2}{3} + \sum_{n\neq 0}\frac{2(-1)^n}{n^2}e^{inx} = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2}\cos(nx)\).
 
 **Evaluating at \(x = 0\):** The left side gives \(0\). The right side:
+
 \[
 0 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2} = \frac{\pi^2}{3} - \frac{4\pi^2}{12} = \frac{\pi^2}{3} - \frac{\pi^2}{3}.
 \]
 This is automatically satisfied. More interestingly, **evaluating at \(x = \pi\)**: the left side gives \(\pi^2\), and since \(\cos(n\pi) = (-1)^n\):
+
 \[
 \pi^2 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n \cdot (-1)^n}{n^2} = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{1}{n^2}.
 \]
@@ -194,18 +215,21 @@ This is the famous **Basel problem**, solved by Euler in 1734 (he used a differe
 ## Motivation: The Heat Equation on the Circle
 
 Consider the heat equation on \(\mathbb{T}\):
+
 \[
 \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}, \quad u(x,0) = f(x),
 \]
 where \(f\) is the initial temperature distribution. This was Fourier's original problem. He considered a thin metal ring (the circle \(\mathbb{T}\)) with an initial non-uniform temperature, and asked: how does the temperature evolve over time?
 
 The key insight — Fourier's great idea — is to look for solutions of the form \(u(x,t) = X(x)T(t)\), separating variables. Substituting:
+
 \[
 X(x)T'(t) = X''(x)T(t) \implies \frac{T'(t)}{T(t)} = \frac{X''(x)}{X(x)} = -\lambda,
 \]
 where \(\lambda\) is a constant (since the left side depends only on \(t\) and the right only on \(x\)). For periodic boundary conditions, \(X(x) = e^{inx}\) with \(\lambda = n^2\) solves \(X'' = -\lambda X\). Then \(T'(t) = -n^2 T(t)\), so \(T(t) = e^{-n^2 t}\). The separated solution is \(u_n(x,t) = e^{inx-n^2 t}\).
 
 Superimposing all modes: substituting \(u(x,t) = \sum_n c_n(t) e^{inx}\) and comparing coefficients gives \(c_n'(t) = -n^2 c_n(t)\), so \(c_n(t) = c_n(0)e^{-n^2 t}\). With \(c_n(0) = \hat{f}(n)\), the solution is:
+
 \[
 u(x,t) = \sum_{n=-\infty}^{\infty} \hat{f}(n)e^{-n^2 t}e^{inx}.
 \]
@@ -225,12 +249,14 @@ What does this tell us physically? High-frequency oscillations (large \(|n|\)) a
 <strong>Proof.</strong> We give the standard \(\varepsilon/3\) proof. Fix \(\varepsilon > 0\). Since step functions are dense in \(L^1(\mathbb{T})\), choose a step function \(g = \sum_{k=1}^K a_k \mathbf{1}_{[c_k, d_k]}\) with \(\|f - g\|_{L^1} < \varepsilon/2\).
 
 For the step function \(g\), we compute directly:
+
 \[
 \hat{g}(n) = \sum_{k=1}^K a_k \frac{1}{2\pi}\int_{c_k}^{d_k} e^{-inx}\,dx = \sum_{k=1}^K a_k \frac{e^{-inc_k} - e^{-ind_k}}{2\pi i n}.
 \]
 Since this is a finite sum and each term is \(O(1/n)\), we have \(|\hat{g}(n)| \leq C/|n| \to 0\) as \(|n| \to \infty\). Choose \(N\) large enough that \(|\hat{g}(n)| < \varepsilon/2\) for \(|n| > N\).
 
 For \(|n| > N\):
+
 \[
 |\hat{f}(n)| \leq |\hat{f}(n) - \hat{g}(n)| + |\hat{g}(n)| = |\widehat{(f-g)}(n)| + |\hat{g}(n)| \leq \|f-g\|_{L^1} + \varepsilon/2 < \varepsilon.
 \]
@@ -263,6 +289,7 @@ Convolution is commutative, associative, and bilinear. By Young's convolution in
 **Why does convolution arise?** In the heat equation, the solution at time \(t\) is \(u(\cdot, t) = f * K_t\) where \(K_t\) is a kernel depending only on time. This is because the heat equation is translation-invariant: shifting the initial data \(f\) just shifts the solution. Any translation-invariant linear operation on periodic functions must be a convolution (by a version of the representation theorem for such operators). Thus convolution is not an arbitrary algebraic construction — it is the fundamental structure of any linear, translation-invariant operation.
 
 **Young's inequality in detail:** For \(p = 1\): \(\|f*g\|_1 \leq \|f\|_1\|g\|_1\) — this makes \(L^1(\mathbb{T})\) into a Banach algebra under convolution. For general \(p\):
+
 \[
 \|f*g\|_p \leq \|f\|_1\|g\|_p.
 \]
@@ -271,6 +298,7 @@ Proof: by Minkowski's inequality for integrals, \(\|f*g\|_p = \|\int f(t)g(\cdot
 ## The Dirichlet Kernel
 
 The partial sum \(S_N f\) can be expressed as a convolution. Writing \(\hat{f}(n) = \frac{1}{2\pi}\int f(t)e^{-int}\,dt\) and substituting:
+
 \[
 S_N f(x) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(t) \sum_{n=-N}^{N} e^{in(x-t)}\,dt = (f * D_N)(x),
 \]
@@ -284,10 +312,12 @@ D_N(x) = \sum_{n=-N}^{N} e^{inx} = \frac{\sin\!\left((N+\tfrac{1}{2})x\right)}{\
 </div>
 
 **Derivation of the closed form:** We have a finite geometric series:
+
 \[
 D_N(x) = e^{-iNx}\sum_{k=0}^{2N} e^{ikx} = e^{-iNx}\cdot\frac{e^{i(2N+1)x}-1}{e^{ix}-1}.
 \]
 Multiplying numerator and denominator by \(e^{-ix/2}\):
+
 \[
 D_N(x) = e^{-iNx}\cdot\frac{e^{i(2N+1/2)x} - e^{-ix/2}}{e^{ix/2} - e^{-ix/2}} = \frac{e^{i(N+1/2)x} - e^{-i(N+1/2)x}}{e^{ix/2} - e^{-ix/2}} = \frac{\sin((N+\frac{1}{2})x)}{\sin(x/2)}.
 \]
@@ -299,11 +329,13 @@ The Dirichlet kernel has the properties:
 - \(D_N\) oscillates and can be positive or negative.
 
 The \(L^1\) norm of the Dirichlet kernel grows logarithmically:
+
 \[
 \|D_N\|_{L^1} = \frac{1}{2\pi}\int_{-\pi}^{\pi} |D_N(x)|\,dx \sim \frac{4}{\pi^2}\log N \to \infty.
 \]
 
 **Proof of the logarithmic growth:** For \(x \in (0,\pi]\), \(\sin(x/2) \geq x/\pi\), so \(|D_N(x)| \leq \pi/x \cdot |\sin((N+\frac{1}{2})x)|/(1) \leq \pi/x\). More carefully:
+
 \[
 \|D_N\|_1 \geq C\int_0^\pi \frac{|\sin((N+\frac12)x)|}{x}\,dx \geq C\sum_{k=1}^N \int_{(k-1)\pi/(N+1/2)}^{k\pi/(N+1/2)} \frac{|\sin((N+\frac12)x)|}{x}\,dx \geq C\sum_{k=1}^N \frac{1}{k} \sim C\log N.
 \]
@@ -317,20 +349,24 @@ The Gibbs phenomenon refers to the persistent overshoot of Fourier partial sums 
 Consider the partial sums \(S_N f\) of the sawtooth wave \(f(x) = x\) (which has a jump discontinuity of size \(2\pi\) at \(x = \pm\pi\)). The maximum of \(S_N f\) near the discontinuity exceeds the value \(\pi\) of the function itself by approximately a fixed fraction, even as \(N \to \infty$.
 
 **Locating the overshoot:** The partial sum \(S_N f(x) = 2\sum_{k=1}^N \frac{(-1)^{k+1}}{k}\sin(kx)\). Differentiating:
+
 \[
 (S_N f)'(x) = 2\sum_{k=1}^N (-1)^{k+1}\cos(kx).
 \]
 Using the formula for the sum of cosines, one finds \((S_N f)'(x) = D_N(x+\pi) - D_N(x)\) (up to factors). Setting this to zero to find critical points near \(x = 0^+\): the first zero of \((S_N f)'\) after 0 is at \(x_N = \frac{\pi}{N+1/2} \approx \frac{\pi}{N}\).
 
 **Computing the overshoot:**
+
 \[
 S_N f(x_N) = 2\sum_{k=1}^N \frac{(-1)^{k+1}}{k}\sin\!\left(\frac{k\pi}{N+1/2}\right).
 \]
 This is a Riemann sum for \(2\int_0^\pi \frac{\sin t}{t}\,dt\). Indeed, substituting \(t = k\pi/(N+1/2)\):
+
 \[
 \lim_{N\to\infty} S_N f(x_N) = 2\int_0^\pi \frac{\sin t}{t}\,dt = 2 \cdot \text{Si}(\pi) \approx 2 \times 1.8519 \approx 3.7038 \cdots
 \]
 The function's limit from the right is \(f(0^+) = 0\) (as \(x \to 0^+\)) — no wait, let us reconsider. Near \(x = \pi^-\), the function jumps from near \(\pi\) to near \(-\pi\). The overshoot is:
+
 \[
 \lim_{N\to\infty} S_N f\!\left(\pi - \frac{\pi}{N}\right) - \pi = 2\int_0^\pi \frac{\sin t}{t}\,dt - \pi \approx 3.7038 - \pi \approx 0.5619 \cdots
 \]
@@ -343,6 +379,7 @@ This 9% overshoot is universal: it does not depend on the function, only on the 
 ## The Fejér Kernel and Cesàro Means
 
 To remedy the poor behavior of \(D_N\), one considers the **Cesàro means** (arithmetic averages of partial sums):
+
 \[
 \sigma_N f(x) = \frac{1}{N}\sum_{k=0}^{N-1} S_k f(x) = (f * K_N)(x),
 \]
@@ -356,6 +393,7 @@ K_N(x) = \frac{1}{N}\sum_{k=0}^{N-1} D_k(x) = \frac{1}{N}\left(\frac{\sin(Nx/2)}
 </div>
 
 **Derivation:** We have \(K_N(x) = \frac{1}{N}\sum_{k=0}^{N-1}D_k(x) = \frac{1}{N}\sum_{k=0}^{N-1}\sum_{|n|\leq k} e^{inx}\). Each frequency \(n\) with \(|n| \leq N-1\) appears in the sum over \(k\) for \(k = |n|, |n|+1, \ldots, N-1\), contributing \(N - |n|\) times. So:
+
 \[
 K_N(x) = \sum_{|n| \leq N-1}\left(1 - \frac{|n|}{N}\right)e^{inx}.
 \]
@@ -424,6 +462,7 @@ P_r(x) = \sum_{n=-\infty}^\infty r^{|n|} e^{inx} = \frac{1-r^2}{1 - 2r\cos x + r
 </div>
 
 **Derivation:** The geometric series \(\sum_{n=0}^\infty r^n e^{inx} = \frac{1}{1-re^{ix}}\) and its complex conjugate give, summing:
+
 \[
 P_r(x) = \text{Re}\left(\frac{1+re^{ix}}{1-re^{ix}}\right) = \frac{1-r^2}{|1-re^{ix}|^2} = \frac{1-r^2}{1-2r\cos x + r^2}.
 \]
@@ -435,6 +474,7 @@ The Poisson kernel is non-negative, normalized (\(\frac{1}{2\pi}\int_{-\pi}^\pi 
 ## The Weierstrass Kernel
 
 The **Weierstrass kernel** (or heat kernel on \(\mathbb{T}\)) is:
+
 \[
 W_t(x) = \sum_{n=-\infty}^\infty e^{-n^2 t}e^{inx}, \quad t > 0.
 \]
@@ -587,6 +627,7 @@ Completeness here means that the only element orthogonal to all \(e^{inx}\) is t
 \langle f, g \rangle = \sum_{n=-\infty}^{\infty} \hat{f}(n)\overline{\hat{g}(n)}.
 \]
 In particular, taking \(g = f\):
+
 \[
 \|f\|_{L^2}^2 = \sum_{n=-\infty}^{\infty} |\hat{f}(n)|^2.
 \]
@@ -597,17 +638,20 @@ In particular, taking \(g = f\):
 </div>
 
 **Parseval gives \(\sum 1/n^2 = \pi^2/6\) directly:** Apply Parseval to \(f(x) = x\). We have \(\|f\|_{L^2}^2 = \frac{1}{2\pi}\int_{-\pi}^\pi x^2\,dx = \frac{\pi^2}{3}\). The Fourier coefficients are \(\hat{f}(0) = 0\) and \(\hat{f}(n) = \frac{i(-1)^n}{n}\) for \(n \neq 0\), so \(|\hat{f}(n)|^2 = 1/n^2\). Parseval gives:
+
 \[
 \frac{\pi^2}{3} = \sum_{n \neq 0} \frac{1}{n^2} = 2\sum_{n=1}^\infty \frac{1}{n^2},
 \]
 so \(\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\). This is the most elegant proof of the Basel problem — arguably more natural than Euler's original argument. It took Euler enormous effort (and a non-rigorous passage through infinite products) to establish this in 1734; Parseval's identity (once the theory is set up) makes it a one-line calculation.
 
 **Parseval gives \(\sum 1/n^4 = \pi^4/90\):** Apply Parseval to \(f(x) = x^2\). We computed \(\hat{f}(n) = 2(-1)^n/n^2\) for \(n \neq 0\) and \(\hat{f}(0) = \pi^2/3\). Then \(\|f\|_{L^2}^2 = \frac{1}{2\pi}\int_{-\pi}^\pi x^4\,dx = \frac{\pi^4}{5}\). Parseval:
+
 \[
 \frac{\pi^4}{5} = \frac{\pi^4}{9} + 2\sum_{n=1}^\infty \frac{4}{n^4} \implies \sum_{n=1}^\infty\frac{1}{n^4} = \frac{\pi^4}{90}.
 \]
 
 **Parseval gives \(\sum 1/(2k+1)^2 = \pi^2/8\):** Apply Parseval to the square wave \(f(x) = \text{sgn}(x)\). We have \(\|f\|_{L^2}^2 = 1\) and \(\hat{f}(n) = 0\) for even \(n\), \(\hat{f}(2k+1) = \frac{2}{\pi i(2k+1)}\). Parseval:
+
 \[
 1 = \sum_{k=-\infty}^\infty |\hat{f}(2k+1)|^2 = 2\sum_{k=0}^\infty \frac{4}{\pi^2(2k+1)^2} \implies \sum_{k=0}^\infty\frac{1}{(2k+1)^2} = \frac{\pi^2}{8}.
 \]
@@ -663,6 +707,7 @@ Many operators in Fourier analysis are bounded on two endpoint spaces but one wa
 \|Tf\|_{L^{q_0}(Y)} \leq M_0\|f\|_{L^{p_0}(X)}, \quad \|Tf\|_{L^{q_1}(Y)} \leq M_1\|f\|_{L^{p_1}(X)}.
 \]
 For \(0 < \theta < 1\), define \(\frac{1}{p} = \frac{1-\theta}{p_0} + \frac{\theta}{p_1}\) and \(\frac{1}{q} = \frac{1-\theta}{q_0} + \frac{\theta}{q_1}\). Then
+
 \[
 \|Tf\|_{L^q(Y)} \leq M_0^{1-\theta}M_1^{\theta}\|f\|_{L^p(X)}.
 \]
@@ -731,10 +776,12 @@ This is the statement that the Gaussian function is an *eigenfunction* of the Fo
 **Proof:** We compute \(\hat{f}(\xi) = \int_{-\infty}^\infty e^{-\pi x^2} e^{-2\pi ix\xi}\,dx\).
 
 **Step 1: Differentiate under the integral sign.** Let \(I(\xi) = \hat{f}(\xi)\). Then:
+
 \[
 I'(\xi) = \int_{-\infty}^\infty e^{-\pi x^2}(-2\pi ix)e^{-2\pi ix\xi}\,dx = -i\int_{-\infty}^\infty x e^{-\pi x^2}e^{-2\pi ix\xi}\,dx.
 \]
 Integrating by parts with \(u = e^{-2\pi ix\xi}\), \(dv = xe^{-\pi x^2}\,dx\), so \(v = -\frac{1}{2\pi}e^{-\pi x^2}\):
+
 \[
 I'(\xi) = -i\left[-\frac{e^{-\pi x^2}e^{-2\pi ix\xi}}{2\pi}\Bigg|_{-\infty}^\infty + \frac{1}{2\pi}\int_{-\infty}^\infty e^{-\pi x^2}(-2\pi i\xi)e^{-2\pi ix\xi}\,dx\right] = -i \cdot \frac{-2\pi i\xi}{2\pi}\cdot I(\xi) = -2\pi\xi I(\xi).
 \]
@@ -911,16 +958,19 @@ The \(L^2\) Fourier transform is defined as an \(L^2\) limit: for \(f \in L^2(\m
 ## Heat Equation on \(\mathbb{R}\)
 
 The Fourier transform reduces the heat equation \(u_t = u_{xx}\), \(u(x,0) = f(x)\) on \(\mathbb{R}\) to an ODE in the frequency variable:
+
 \[
 \hat{u}_t(\xi, t) = -(2\pi\xi)^2 \hat{u}(\xi,t), \quad \hat{u}(\xi,0) = \hat{f}(\xi).
 \]
 The solution is \(\hat{u}(\xi,t) = \hat{f}(\xi)e^{-4\pi^2\xi^2 t}\). Inverting, \(u = f * H_t\) where the **heat kernel** is:
+
 \[
 H_t(x) = \frac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)}.
 \]
 For \(t > 0\), \(H_t \in \mathcal{S}(\mathbb{R})\), and convolution with \(H_t\) smooths \(f\) instantly — even if \(f\) is only in \(L^2\) or \(L^1\), the solution is \(C^\infty\) for \(t > 0\) (hypoellipticity / infinite speed of propagation of smoothness).
 
 **Derivation of the heat kernel:** We need the inverse Fourier transform of \(e^{-4\pi^2\xi^2 t}\). Using the Gaussian computation: \(\mathcal{F}(e^{-\pi x^2})(\xi) = e^{-\pi\xi^2}\). Scaling: \(\mathcal{F}(a^{-1/2}e^{-\pi x^2/a})(\xi) = e^{-\pi a\xi^2}\). Setting \(\pi a = 4\pi^2 t\), so \(a = 4\pi t\):
+
 \[
 H_t(x) = \frac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)} = \mathcal{F}^{-1}(e^{-4\pi^2\xi^2 t})(x).
 \]
@@ -964,6 +1014,7 @@ Characteristic functions are the Fourier–Stieltjes transforms of probability m
 </div>
 
 **Application — Jacobi theta function**: Taking \(f(x) = e^{-\pi t x^2}\), so \(\hat{f}(\xi) = t^{-1/2}e^{-\pi\xi^2/t}\), the Poisson formula gives:
+
 \[
 \theta(t) := \sum_{n \in \mathbb{Z}} e^{-\pi n^2 t} = \frac{1}{\sqrt{t}}\sum_{n \in \mathbb{Z}} e^{-\pi n^2/t} = \frac{1}{\sqrt{t}}\theta(1/t).
 \]
@@ -1015,16 +1066,19 @@ Equivalently, \(\|xf\|_{L^2} \cdot \|\xi\hat{f}\|_{L^2} \geq \frac{1}{4\pi}\|f\|
 <strong>Proof (complete).</strong> We prove the equivalent form. Assume \(f \in \mathcal{S}(\mathbb{R})\) first.
 
 **Step 1: Integration by parts.** Compute:
+
 \[
 \int_\mathbb{R} x(|f(x)|^2)'\ dx = \int_\mathbb{R} x(f\bar{f})'\ dx = \int_\mathbb{R} x(f'\bar{f} + f\bar{f}')\ dx = \int_\mathbb{R} x \cdot 2\text{Re}(f'(x)\overline{f(x)})\ dx.
 \]
 Integration by parts (boundary term vanishes for \(f \in \mathcal{S}\)):
+
 \[
 \int_\mathbb{R} x(|f|^2)'\ dx = -\int_\mathbb{R}|f(x)|^2\,dx = -\|f\|_2^2.
 \]
 Thus \(\text{Re}\int_\mathbb{R} xf'(x)\overline{f(x)}\,dx = -\frac{1}{2}\|f\|_2^2\).
 
 **Step 2: Cauchy–Schwarz.** By Cauchy–Schwarz:
+
 \[
 \left|\int_\mathbb{R} xf'(x)\overline{f(x)}\,dx\right| \leq \|xf\|_2\|f'\|_2.
 \]
@@ -1033,6 +1087,7 @@ Taking real parts: \(\frac{1}{2}\|f\|_2^2 \leq \|xf\|_2\|f'\|_2\).
 **Step 3: Fourier identity.** Using \(\widehat{f'}(\xi) = 2\pi i\xi\hat{f}(\xi)\) and Plancherel: \(\|f'\|_2 = \|\widehat{f'}\|_2 = 2\pi\|\xi\hat{f}\|_2\).
 
 **Step 4: Combine.** Substituting:
+
 \[
 \frac{1}{2}\|f\|_2^2 \leq \|xf\|_2 \cdot 2\pi\|\xi\hat{f}\|_2,
 \]
@@ -1064,6 +1119,7 @@ For integer \(s = k \geq 0\), \(H^k(\mathbb{R})\) coincides with the classical S
 **Proof of embedding:** If \(f \in H^s\) with \(s > 1/2\), then \(\hat{f} \in L^1(\mathbb{R})\) (by Cauchy–Schwarz: \(\int |\hat{f}(\xi)|\,d\xi \leq (\int(1+|\xi|^2)^s|\hat{f}|^2)^{1/2}(\int(1+|\xi|^2)^{-s})^{1/2} < \infty\) when \(2s > 1\)), so \(f = \check{\hat{f}}\) is a continuous function vanishing at infinity.
 
 **Elliptic regularity sketch**: Consider the equation \(-\Delta u + u = f\) on \(\mathbb{R}^n\). Taking the Fourier transform: \((4\pi^2|\xi|^2 + 1)\hat{u}(\xi) = \hat{f}(\xi)\), so \(\hat{u}(\xi) = \frac{\hat{f}(\xi)}{4\pi^2|\xi|^2 + 1}\). If \(f \in H^s\), then \(\hat{f}(\xi)(1+|\xi|^2)^{s/2} \in L^2\), and
+
 \[
 \hat{u}(\xi)(1+|\xi|^2)^{(s+2)/2} = \hat{f}(\xi)(1+|\xi|^2)^{s/2} \cdot \frac{(1+|\xi|^2)^{1}}{4\pi^2|\xi|^2+1} \in L^2,
 \]
@@ -1101,6 +1157,7 @@ For absolutely continuous measures \(d\mu = f\,dx\) with \(f \in L^1(\mathbb{R})
 </div>
 
 Positive-definite functions satisfy: \(\varphi(0) \geq 0\), \(\overline{\varphi(x)} = \varphi(-x)\), and \(|\varphi(x)| \leq \varphi(0)\) for all \(x\). The Fourier–Stieltjes transform of a positive Borel measure is always positive definite, as:
+
 \[
 \sum_{j,k} c_j\overline{c_k}\hat{\mu}(x_j - x_k) = \int_{\mathbb{R}} \left|\sum_j c_j e^{-2\pi ix_j\xi}\right|^2 d\mu(\xi) \geq 0.
 \]
@@ -1201,6 +1258,7 @@ Pontryagin duality says that "taking characters twice" returns to the original g
 ## The Abstract Fourier Transform
 
 For an LCA group \(G\) with Haar measure \(\mu_G\), define the **abstract Fourier transform** of \(f \in L^1(G)\) as:
+
 \[
 \hat{f}(\chi) = \int_G f(g)\overline{\chi(g)}\,d\mu_G(g), \quad \chi \in \hat{G}.
 \]
@@ -1247,6 +1305,7 @@ The **Hilbert transform** is the most important singular integral operator in ha
 The Hilbert transform is a **convolution** with the kernel \(k(x) = \frac{1}{\pi x}\), which is not integrable at 0 — hence the principal value interpretation.
 
 **Fourier multiplier:** The Fourier transform simplifies the Hilbert transform dramatically:
+
 \[
 \widehat{Hf}(\xi) = -i\,\text{sgn}(\xi)\hat{f}(\xi),
 \]
@@ -1269,6 +1328,7 @@ where \(\text{sgn}(\xi) = \pm 1\) for \(\xi \gtrless 0\). The Hilbert transform 
 ## Connection to Fourier Series Convergence
 
 The Hilbert transform is the key to proving \(L^p\) convergence of Fourier series for \(1 < p < \infty\). The **conjugate Fourier series** of \(f \in L^1(\mathbb{T})\) is:
+
 \[
 \tilde{f}(x) = -i\sum_{n\neq 0} \text{sgn}(n)\hat{f}(n)e^{inx}.
 \]
@@ -1408,6 +1468,7 @@ This is the group-theoretic explanation: characters are the simplest functions o
 **Claim:** Every bounded translation-invariant operator on \(L^2(\mathbb{T})\) is a **Fourier multiplier**: \(\widehat{Tf}(n) = m(n)\hat{f}(n)\) for some bounded sequence \(m(n)\), called the **multiplier sequence**. The action of \(T\) on each Fourier mode \(e^{inx}\) is multiplication by \(m(n)\), and the functions \(e^{inx}\) are simultaneous eigenfunctions of all such operators.
 
 **Proof of claim:** Let \(T\) be translation-invariant and bounded. For each \(n \in \mathbb{Z}\), apply \(T\) to the character \(e_n(x) = e^{inx}\). We have:
+
 \[
 (T e_n)(x) = T(\tau_{-y}e_n)(x+y) = \tau_{-y}(Te_n)(x+y) \cdot e^{iny}/ e^{iny}
 \]
@@ -1416,6 +1477,7 @@ More cleanly: let \(m(n) = \widehat{Te_n}(n)/1\). Translation-invariance gives \
 This is the **spectral theorem for translation-invariant operators**: the Fourier basis simultaneously diagonalizes all such operators. In engineering terms, sinusoids are the "eigenmodes" of any linear time-invariant (LTI) system, and the transfer function \(m(n)\) captures the system's response at each frequency.
 
 **Reason 4: Convolution algebra diagonalization.** The Fourier transform is a homomorphism of algebras: it converts \((L^1(\mathbb{T}), *)\) (with convolution as multiplication) into \((\ell^\infty(\mathbb{Z}), \cdot)\) (with pointwise multiplication). This is because
+
 \[
 \widehat{f * g}(n) = \hat{f}(n)\hat{g}(n).
 \]
@@ -1452,6 +1514,7 @@ Let \(\mathcal{H}\) be a Hilbert space with inner product \(\langle \cdot, \cdot
 \langle f - S_N, e_m\rangle = \langle f, e_m\rangle - \sum_{|n|\leq N}\langle f, e_n\rangle\langle e_n, e_m\rangle = \langle f, e_m\rangle - \langle f, e_m\rangle = 0.
 \]
 Now by the Pythagorean theorem:
+
 \[
 \|f\|^2 = \|S_N + (f - S_N)\|^2 = \|S_N\|^2 + \|f - S_N\|^2 \geq \|S_N\|^2 = \sum_{|n|\leq N}|\langle f, e_n\rangle|^2.
 \]
@@ -1474,6 +1537,7 @@ The orthonormal system \(\{e^{inx}\}_{n \in \mathbb{Z}}\) is **complete** in \(L
 \sigma_N f(x) = \sum_{|n|\leq N-1}\left(1-\frac{|n|}{N}\right)\hat{f}(n)e^{inx} = 0,
 \]
 since all \(\hat{f}(n) = 0\). On the other hand, for any \(g \in C(\mathbb{T})\), Fejér's theorem gives \(\|K_N * g - g\|_\infty \to 0\). For general \(f \in L^2\) and \(\varepsilon > 0\), choose \(g \in C(\mathbb{T})\) with \(\|f - g\|_2 < \varepsilon\). Then:
+
 \[
 \|f\|_2 = \|f - \sigma_N f\|_2 \leq \|f - g\|_2 + \|g - \sigma_N g\|_2 + \|\sigma_N g - \sigma_N f\|_2.
 \]
@@ -1493,6 +1557,7 @@ The first term is \(< \varepsilon\). The last term is \(\|\sigma_N(g-f)\|_2 \leq
 \|f\|_2^2 = \langle f, f\rangle = \lim_{N\to\infty}\langle S_N f, f\rangle = \lim_{N\to\infty}\sum_{|n|\leq N}\hat{f}(n)\overline{\langle f, e_n\rangle} \cdot 2\pi
 \]
 Wait — more cleanly, since \(S_N f \to f\) in \(L^2\):
+
 \[
 \|f\|_2^2 = \lim_{N\to\infty}\|S_N f\|_2^2 = \lim_{N\to\infty}\sum_{|n|\leq N}|\hat{f}(n)|^2 = \sum_{n\in\mathbb{Z}}|\hat{f}(n)|^2. \quad\square
 \]
@@ -1509,6 +1574,7 @@ Wait — more cleanly, since \(S_N f \to f\) in \(L^2\):
 We have seen that the Dirichlet kernel has \(L^1\) norm \(\|D_N\|_1 \sim \frac{4}{\pi^2}\log N \to \infty\). Let us make precise why this implies the existence of continuous functions with divergent Fourier series.
 
 Define the **evaluation functional** \(L_{N,x_0} : C(\mathbb{T}) \to \mathbb{C}\) by \(L_{N,x_0}(f) = S_N f(x_0) = (f * D_N)(x_0)\). This is a bounded linear functional on \(C(\mathbb{T})\) (with the sup norm), with operator norm:
+
 \[
 \|L_{N,x_0}\| = \sup_{\|f\|_\infty \leq 1}|S_N f(x_0)| = \frac{1}{2\pi}\int_{-\pi}^\pi |D_N(x_0 - t)|\,dt = \|D_N\|_{L^1}.
 \]
@@ -1533,6 +1599,7 @@ The contrapositive: if \(\sup_\alpha \|T_\alpha\| = \infty\), then there exists 
 **Refinement:** By using all points \(x_0 \in \mathbb{T}\) simultaneously, one obtains: there exists \(f \in C(\mathbb{T})\) whose Fourier series diverges on a set of full measure (though du Bois-Reymond only showed divergence at a single point). Carleson's 1966 theorem shows that for \(f \in L^2(\mathbb{T})\), the Fourier series converges almost everywhere — a far deeper result.
 
 **The Lebesgue constants:** The numbers \(L_N = \|D_N\|_{L^1}\) are called **Lebesgue constants**. Their growth rate controls the worst-case behavior of Fourier partial sums. Precisely, for any \(f \in C(\mathbb{T})\):
+
 \[
 \|S_N f\|_\infty \leq L_N \|f\|_\infty, \quad \text{but this bound is tight.}
 \]
@@ -1545,43 +1612,52 @@ The logarithmic growth \(L_N \sim \frac{4}{\pi^2}\log N\) is the reason partial 
 ## Precise Statement and Computation
 
 We now give a complete, rigorous treatment of the Gibbs phenomenon. Consider the square wave:
+
 \[
 f(x) = \frac{\pi}{2}\text{sgn}(x) = \begin{cases} \pi/2 & 0 < x < \pi \\ -\pi/2 & -\pi < x < 0 \end{cases}, \quad \text{extended } 2\pi\text{-periodically}.
 \]
 This normalization (amplitude \(\pi/2\) rather than 1) will make the computation cleaner. Its Fourier series is:
+
 \[
 f(x) = \sum_{\substack{n=1 \\ n \text{ odd}}}^\infty \frac{2}{n}\sin(nx) = 2\sin x + \frac{2\sin 3x}{3} + \frac{2\sin 5x}{5} + \cdots
 \]
 The partial sums are \(S_N f(x) = \sum_{\substack{n=1 \\ n \text{ odd}, n \leq 2N-1}} \frac{2}{n}\sin(nx) = 2\sum_{k=0}^{N-1}\frac{\sin((2k+1)x)}{2k+1}\).
 
 **Locating the maximum of \(S_N f\):** Let us compute \((S_N f)'(x) = 2\sum_{k=0}^{N-1}\cos((2k+1)x)\). Using the product formula:
+
 \[
 \cos\theta + \cos 3\theta + \cdots + \cos(2N-1)\theta = \frac{\sin 2N\theta}{2\sin\theta}.
 \]
 (Proof: multiply by \(2\sin\theta\) and telescope.) So \((S_N f)'(x) = \frac{\sin 2Nx}{\sin x}\). The first critical point in \((0, \pi)\) is at \(x_N = \frac{\pi}{2N}\) (the first zero of \(\sin 2Nx\) after 0).
 
 **Value at the critical point:** We evaluate \(S_N f(x_N)\) as a Riemann sum. Setting \(x_N = \pi/(2N)\):
+
 \[
 S_N f(x_N) = 2\sum_{k=0}^{N-1}\frac{\sin((2k+1)\pi/(2N))}{2k+1}.
 \]
 Let \(t_k = (2k+1)\pi/(2N)\); then the sum is \(\frac{2N}{\pi}\sum_{k=0}^{N-1}\frac{\sin t_k}{t_k}\cdot\frac{\pi}{N} \cdot \frac{1}{1}\). More precisely, this is a Riemann sum for:
+
 \[
 \frac{1}{\pi}\cdot 2\cdot\int_0^\pi \frac{\sin t}{t}\,dt \cdot \pi = 2\int_0^\pi \frac{\sin t}{t}\,dt = 2\,\text{Si}(\pi),
 \]
 where \(\text{Si}(\pi) = \int_0^\pi \frac{\sin t}{t}\,dt \approx 1.8519\). Therefore:
+
 \[
 \lim_{N\to\infty} S_N f(x_N) = 2\,\text{Si}(\pi) \approx 2 \times 1.8519 \approx 3.7038\cdots
 \]
 
 **The overshoot:** The function \(f\) has value \(\pi/2 \approx 1.5708\) just to the right of the jump at \(x=0\). The partial sum overshoots to approximately \(3.7038/2 \approx 1.852\). Wait — let us recheck. Actually \(S_N f(x_N) \to 2\,\text{Si}(\pi)\); we compare this to \(f(0^+) = \pi/2\):
+
 \[
 \text{Overshoot} = \lim_{N\to\infty}S_N f(x_N) - f(0^+) = 2\,\text{Si}(\pi) - \frac{\pi}{2} \approx 3.7038 - 1.5708 \approx 2.133.
 \]
 Hmm — this depends on the normalization. Let us instead use the standard normalization where \(f = \text{sgn}(x)\) (values \(\pm 1\)) so the jump at 0 has magnitude 2. The Fourier series is \(f(x) \sim \frac{4}{\pi}\sum_{k=0}^\infty \frac{\sin((2k+1)x)}{2k+1}\), and the partial sums satisfy:
+
 \[
 \lim_{N\to\infty} S_N f(x_N) = \frac{4}{\pi}\int_0^\pi \frac{\sin t}{t}\,dt = \frac{4}{\pi}\text{Si}(\pi) \approx \frac{4}{\pi}\times 1.8519 \approx 2.3591.
 \]
 The value of \(f(0^+) = 1\), so the overshoot is \(2.3591 - 1 = 1.3591\) — as a fraction of the **jump** (which has size 2): \(\frac{1.3591}{2} \approx 67.95\%\). That's total overshoot as fraction of the full jump magnitude. But conventionally one reports the overshoot as a fraction of the half-jump from 0 to 1, giving \(\approx 17.9\%\). The Gibbs constant is:
+
 \[
 G = \frac{2}{\pi}\text{Si}(\pi) - 1 = \frac{2}{\pi}\int_0^\pi\frac{\sin t}{t}\,dt - 1 \approx \frac{2\times 1.8519}{\pi} - 1 \approx 1.1790 - 1 = 0.1790.
 \]
@@ -1603,10 +1679,12 @@ So the overshoot is approximately **\(17.9\%\) of the half-jump** (or equivalent
 ## Abel Summability: Definition and Basic Properties
 
 Let \(\sum_{n=0}^\infty a_n\) be a series of complex numbers. We say the series is **Abel summable** to \(L\) if:
+
 \[
 A\text{-lim}_{r\to 1^-}\sum_{n=0}^\infty a_n r^n = L.
 \]
 More generally, for the two-sided series \(\sum_{n=-\infty}^\infty a_n\) arising in Fourier analysis, Abel summability means:
+
 \[
 A\text{-lim}_{r\to 1^-}\sum_{n=-\infty}^\infty a_n r^{|n|} = L.
 \]
@@ -1647,6 +1725,7 @@ The Poisson integral \(u(r,x) = (f * P_r)(x) = \sum_n \hat{f}(n)r^{|n|}e^{inx}\)
 **Verification of harmonicity:** Convert to Cartesian coordinates: if \(z = re^{ix} = x_1 + ix_2\), then the Poisson kernel is the real part of the Cayley-type function \(\frac{1+z}{1-z}\). More directly: each term \(\hat{f}(n)r^{|n|}e^{inx}\) is the real part of a monomial \(c_n z^n\) (for \(n \geq 0\)) or its conjugate (for \(n < 0\)), hence harmonic. The sum is harmonic because it converges uniformly for \(r < 1\).
 
 **The maximum principle:** A harmonic function on a bounded domain achieves its maximum and minimum on the boundary. Therefore \(u(re^{ix}) = (f * P_r)(x)\) satisfies:
+
 \[
 \min_\mathbb{T} f \leq u(re^{ix}) \leq \max_\mathbb{T} f \quad \text{for all } r < 1.
 \]
@@ -1685,12 +1764,14 @@ This is one of the most important pairs in Fourier analysis. Note that \(\text{s
 **Proof by contour integration:** We compute \(\hat{f}(\xi) = \frac{1}{\pi}\int_{-\infty}^\infty \frac{e^{-2\pi ix\xi}}{1+x^2}\,dx\).
 
 The integrand has poles at \(x = \pm i\). For \(\xi > 0\), \(e^{-2\pi ix\xi}\) decays in the lower half-plane (\(\text{Im}(x) < 0\)), so we close the contour below, picking up the residue at \(x = -i\):
+
 \[
 \hat{f}(\xi) = \frac{1}{\pi}\cdot(-2\pi i)\cdot \text{Res}_{x=-i}\frac{e^{-2\pi ix\xi}}{1+x^2} = \frac{1}{\pi}\cdot(-2\pi i)\cdot\frac{e^{-2\pi i(-i)\xi}}{-2i} = \frac{1}{\pi}\cdot\pi e^{-2\pi\xi} = e^{-2\pi\xi}.
 \]
 For \(\xi < 0\), close above and pick up the residue at \(x = +i\): similarly \(\hat{f}(\xi) = e^{2\pi\xi}\). In both cases, \(\hat{f}(\xi) = e^{-2\pi|\xi|}\). \(\square\)
 
 **Significance:** The Cauchy distribution's Fourier transform is \(e^{-2\pi|\xi|}\), which is the Poisson kernel on the upper half-plane! Specifically, \(P_y(\xi) = e^{-2\pi y|\xi|}\) is the Fourier transform of the Poisson kernel \(\frac{1}{\pi}\frac{y}{x^2+y^2}\) for the upper half-plane (\(y > 0\)):
+
 \[
 u(x,y) = (f * P_y)(x) = \int_\mathbb{R} f(t)\frac{1}{\pi}\frac{y}{(x-t)^2+y^2}\,dt
 \]
@@ -1706,6 +1787,7 @@ solves the Dirichlet problem for the upper half-plane with boundary data \(f\) o
 \hat{f}(\xi) = \int_{-\infty}^\infty e^{-a|x|}e^{-2\pi ix\xi}\,dx = \int_0^\infty e^{-ax}e^{-2\pi ix\xi}\,dx + \int_{-\infty}^0 e^{ax}e^{-2\pi ix\xi}\,dx.
 \]
 Computing each integral: \(\int_0^\infty e^{-(a+2\pi i\xi)x}\,dx = \frac{1}{a+2\pi i\xi}\) and \(\int_{-\infty}^0 e^{(a-2\pi i\xi)x}\,dx = \frac{1}{a-2\pi i\xi}\). Therefore:
+
 \[
 \hat{f}(\xi) = \frac{1}{a+2\pi i\xi} + \frac{1}{a-2\pi i\xi} = \frac{2a}{a^2 + 4\pi^2\xi^2}.
 \]
@@ -1745,10 +1827,12 @@ The heat equation \(u_t = \kappa u_{xx}\) (where \(\kappa > 0\) is the thermal d
 ## The Fundamental Solution
 
 Setting \(\kappa = 1/4\pi\) (for convenience with the \(2\pi\)-convention Fourier transform) or simply working with \(\kappa = 1\), the Fourier transform of the heat equation \(u_t = u_{xx}\) with initial data \(u(x,0) = f(x)\) is:
+
 \[
 \frac{\partial}{\partial t}\hat{u}(\xi,t) = -(2\pi\xi)^2\hat{u}(\xi,t), \quad \hat{u}(\xi,0) = \hat{f}(\xi).
 \]
 Solving: \(\hat{u}(\xi,t) = \hat{f}(\xi)e^{-4\pi^2\xi^2 t}\). The solution is:
+
 \[
 u(x,t) = \int_\mathbb{R} \hat{f}(\xi)e^{-4\pi^2\xi^2 t}e^{2\pi ix\xi}\,d\xi = (f * H_t)(x),
 \]
@@ -1765,12 +1849,14 @@ where \(H_t(x) = \frac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)}\) is the **fundamental sol
 ## Why the Heat Equation Smooths
 
 The factor \(e^{-4\pi^2\xi^2 t}\) in the Fourier domain is a Gaussian which decays rapidly for large \(|\xi|\). No matter how rough \(f\) is (even if \(f\) is only in \(L^2\) or \(L^1\)), for any \(t > 0\):
+
 \[
 \widehat{u(\cdot,t)}(\xi) = \hat{f}(\xi)e^{-4\pi^2\xi^2 t}.
 \]
 This is the product of a bounded function (by Riemann–Lebesgue) with a Schwartz function (\(e^{-4\pi^2\xi^2 t} \in \mathcal{S}(\mathbb{R})\) for each fixed \(t > 0\)). Therefore \(\hat{u}(\cdot,t) \in \mathcal{S}(\mathbb{R})\) for any \(t > 0\), which means \(u(\cdot,t) \in \mathcal{S}(\mathbb{R})\) — the solution is instantly in the Schwartz class! In particular, \(u(\cdot,t) \in C^\infty(\mathbb{R})\) and all its derivatives exist and are square-integrable.
 
 **Rate of smoothing:** The derivative \(\frac{\partial^k u}{\partial x^k}(\cdot,t)\) has Fourier transform \((2\pi i\xi)^k\hat{u}(\xi,t) = (2\pi i\xi)^k\hat{f}(\xi)e^{-4\pi^2\xi^2 t}\). Its \(L^2\) norm is:
+
 \[
 \left\|\frac{\partial^k u}{\partial x^k}(\cdot,t)\right\|_{L^2}^2 = \int_\mathbb{R} (2\pi\xi)^{2k}|\hat{f}(\xi)|^2 e^{-8\pi^2\xi^2 t}\,d\xi \leq \sup_{\xi}(2\pi\xi)^{2k}e^{-8\pi^2\xi^2 t}\cdot\|f\|_{L^2}^2.
 \]
@@ -1797,6 +1883,7 @@ The Poisson summation formula \(\sum_{n\in\mathbb{Z}} f(n) = \sum_{k\in\mathbb{Z
 **Perspective 3: Number-theoretic applications.** Evaluating the Poisson formula at specific functions produces stunning identities:
 
 **(a) The Jacobi theta function identity** (already seen in Chapter 10):
+
 \[
 \theta(t) = \sum_{n\in\mathbb{Z}} e^{-\pi n^2 t} = \frac{1}{\sqrt{t}}\theta(1/t).
 \]
@@ -1813,6 +1900,7 @@ For the circle \(\Omega = \{(x,y) : x^2+y^2 \leq 1\}\), this becomes the **Gauss
 The Riemann zeta function \(\zeta(s) = \sum_{n=1}^\infty n^{-s}\) (converging for \(\text{Re}(s) > 1\)) is deeply connected to Fourier analysis via the Jacobi theta function.
 
 **Riemann's functional equation:** Define \(\xi(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s)\). Riemann showed in 1859 that \(\xi(s) = \xi(1-s)\) — the zeta function satisfies a functional equation relating \(s\) to \(1-s\). The proof uses the Mellin transform of the theta function:
+
 \[
 \xi(s) = \frac{1}{2}\int_0^\infty (\theta(t) - 1)t^{s/2}\frac{dt}{t},
 \]
@@ -1825,6 +1913,7 @@ This is one of the most beautiful applications of Fourier analysis (specifically
 The Dirichlet \(L\)-functions \(L(s, \chi) = \sum_{n=1}^\infty \chi(n)n^{-s}\) (where \(\chi\) is a Dirichlet character modulo \(q\) — a multiplicative function satisfying \(\chi(n+q) = \chi(n)\)) are generalizations of the Riemann zeta function. Their functional equations and analytic properties similarly follow from Fourier analysis on \(\mathbb{Z}/q\mathbb{Z}\) (the discrete Fourier transform).
 
 Specifically, the **Fourier expansion of \(\chi\)**:
+
 \[
 \chi(n) = \frac{1}{\phi(q)}\sum_{a=0}^{q-1}\hat{\chi}(a)e^{2\pi ian/q},
 \]
@@ -1859,6 +1948,7 @@ The DFT is exactly the Fourier transform on the group \(\mathbb{Z}/N\mathbb{Z}\)
 Computing the DFT naively requires \(O(N^2)\) operations (for each of the \(N\) output values, sum \(N\) terms). The **Fast Fourier Transform (FFT)**, discovered in its modern form by Cooley and Tukey in 1965 (and known earlier to Gauss in 1805!), reduces this to \(O(N\log N)\) by exploiting the recursive structure of the DFT.
 
 **Cooley–Tukey FFT (radix-2 decimation in time):** Suppose \(N = 2^m\). Split the DFT into even and odd-indexed terms:
+
 \[
 \hat{x}_k = \sum_{n=0}^{N/2-1} x_{2n} e^{-2\pi i(2n)k/N} + \sum_{n=0}^{N/2-1} x_{2n+1} e^{-2\pi i(2n+1)k/N}
 = X_k^{\text{even}} + e^{-2\pi ik/N}X_k^{\text{odd}},
@@ -1872,6 +1962,7 @@ The FFT is one of the most important algorithms in the history of computation �
 The ordinary Fourier transform is global: \(\hat{f}(\xi)\) is determined by the entire function \(f\). For non-stationary signals (speech, music, seismic data, EEG), one needs a *local* frequency analysis.
 
 **Definition:** The **Short-Time Fourier Transform (STFT)** of \(f\) with window function \(g\) is:
+
 \[
 \mathcal{V}_g f(x, \xi) = \int_\mathbb{R} f(t)\overline{g(t-x)}e^{-2\pi it\xi}\,dt.
 \]
@@ -1898,24 +1989,29 @@ Both applications illustrate the practical power of Fourier analysis: by transfo
 We have stated that for \(1 < p < \infty\), the Fourier partial sums \(S_N f \to f\) in \(L^p(\mathbb{T})\). The proof proceeds via the boundedness of the Hilbert transform. Let us outline the argument in more detail.
 
 **Step 1: Relate \(S_N f\) to the Hilbert transform.** The partial sum \(S_N f = f * D_N\) can be written as:
+
 \[
 S_N f(x) = \frac{1}{2\pi}\int_{-\pi}^\pi f(t)D_N(x-t)\,dt.
 \]
 The Dirichlet kernel \(D_N(x) = \frac{\sin((N+\frac12)x)}{\sin(x/2)}\) can be related to the conjugate Dirichlet kernel and the Hilbert transform as follows. Write:
+
 \[
 D_N(x) = \frac{\sin(Nx)\cos(x/2) + \cos(Nx)\sin(x/2)}{\sin(x/2)} = \sin(Nx)\cot(x/2) + \cos(Nx).
 \]
 The term \(\cos(Nx)\) gives a term in \(S_N f(x)\) that involves the Fourier coefficients of \(f\) directly (converging to \(f\) in \(L^p\) by compactness arguments). The term \(\sin(Nx)\cot(x/2)\) is related to the **conjugate partial sum**:
+
 \[
 \tilde{S}_N f(x) = \frac{1}{2\pi}\int_{-\pi}^\pi f(t)\cot\!\left(\frac{x-t}{2}\right)\sin(N(x-t))\,dt,
 \]
 which is the "Hilbert transform of \(f\) at frequency \(N\)." As \(N \to \infty\), this relates to the conjugate function operator (Hilbert transform on \(\mathbb{T}\)).
 
 **Step 2: Boundedness of the conjugate function operator.** The **conjugate function** of \(f\) is:
+
 \[
 \tilde{f}(x) = \lim_{\varepsilon\to 0^+}\frac{-1}{2\pi}\int_{\varepsilon < |t| \leq \pi} f(x-t)\cot\!\left(\frac{t}{2}\right)\,dt.
 \]
 This is the periodic analogue of the Hilbert transform, with kernel \(\frac{1}{2\pi}\cot(t/2)\) replacing \(\frac{1}{\pi t}\). M. Riesz proved in 1924–1927 that the conjugate function operator \(f \mapsto \tilde{f}\) is bounded on \(L^p(\mathbb{T})\) for \(1 < p < \infty\):
+
 \[
 \|\tilde{f}\|_{L^p(\mathbb{T})} \leq C_p \|f\|_{L^p(\mathbb{T})}.
 \]
@@ -1947,16 +2043,19 @@ The endpoint theory uses Hardy spaces (\(H^1\)) and BMO as replacements for \(L^
 The Fourier transform is the primary tool for understanding regularity of solutions to elliptic PDEs. We illustrate with the Laplacian.
 
 **The Laplacian in frequency space.** For \(f \in \mathcal{S}(\mathbb{R}^n)\), the Fourier transform of \(\Delta f = \sum_j \partial_j^2 f\) is:
+
 \[
 \widehat{\Delta f}(\xi) = -(2\pi|\xi|)^2\hat{f}(\xi) = -4\pi^2|\xi|^2\hat{f}(\xi).
 \]
 The Laplacian is a Fourier multiplier with symbol \(-4\pi^2|\xi|^2\). The operator \((-\Delta)^s\) (fractional Laplacian) has symbol \((4\pi^2|\xi|^2)^s = (2\pi|\xi|)^{2s}\), which makes sense for any \(s \in \mathbb{R}\) — this is the definition of the fractional Laplacian via Fourier analysis.
 
 **Elliptic regularity.** Consider the PDE \(-\Delta u + u = f\) on \(\mathbb{R}^n\). Taking the Fourier transform: \((4\pi^2|\xi|^2 + 1)\hat{u}(\xi) = \hat{f}(\xi)\), giving:
+
 \[
 \hat{u}(\xi) = \frac{\hat{f}(\xi)}{1 + 4\pi^2|\xi|^2}.
 \]
 If \(f \in H^s(\mathbb{R}^n)\), then \((1+|\xi|^2)^{s/2}\hat{f} \in L^2\), and:
+
 \[
 (1+|\xi|^2)^{(s+2)/2}\hat{u}(\xi) = (1+|\xi|^2)^{s/2}\hat{f}(\xi)\cdot\frac{(1+|\xi|^2)}{1+4\pi^2|\xi|^2}.
 \]
@@ -1981,6 +2080,7 @@ The fundamental solution \(e^{-it\Delta}f\) is given by convolution with the **S
 ## Fourier Transform on \(\mathbb{R}^n\)
 
 The Fourier transform on \(\mathbb{R}^n\) is defined by the same formula:
+
 \[
 \hat{f}(\xi) = \int_{\mathbb{R}^n} f(x)e^{-2\pi ix\cdot\xi}\,dx, \quad \xi \in \mathbb{R}^n,
 \]
@@ -1991,6 +2091,7 @@ where \(x\cdot\xi = \sum_j x_j\xi_j\) is the inner product. All properties exten
 - **Gaussian is self-dual:** \(\mathcal{F}(e^{-\pi|x|^2}) = e^{-\pi|\xi|^2}\).
 
 **Radial functions:** If \(f(x) = f_0(|x|)\) is radial, then \(\hat{f}(\xi) = \hat{f}_0(|\xi|)\) is also radial, and:
+
 \[
 \hat{f}(\xi) = \frac{2\pi}{|\xi|^{(n-2)/2}}\int_0^\infty f_0(r)r^{n/2}J_{(n-2)/2}(2\pi r|\xi|)\,dr,
 \]
@@ -1999,12 +2100,14 @@ where \(J_\nu\) is the Bessel function of order \(\nu\). For \(n = 1\), this red
 ## Fourier Series on the Torus \(\mathbb{T}^n\)
 
 On the \(n\)-dimensional torus \(\mathbb{T}^n = (\mathbb{R}/2\pi\mathbb{Z})^n\), the characters are \(e^{in\cdot x}\) for \(n \in \mathbb{Z}^n\) (multi-index \(n = (n_1, \ldots, n_n)\)). The Fourier series of \(f : \mathbb{T}^n \to \mathbb{C}\) is:
+
 \[
 f(x) \sim \sum_{n\in\mathbb{Z}^n} \hat{f}(n)e^{in\cdot x}, \quad \hat{f}(n) = \frac{1}{(2\pi)^n}\int_{\mathbb{T}^n}f(x)e^{-in\cdot x}\,dx.
 \]
 Parseval: \(\|f\|_{L^2(\mathbb{T}^n)}^2 = \sum_{n\in\mathbb{Z}^n}|\hat{f}(n)|^2\).
 
 **The heat equation on \(\mathbb{T}^n\):** The solution of \(u_t = \Delta u\) with initial data \(f\) on \(\mathbb{T}^n\) is:
+
 \[
 u(x,t) = \sum_{n\in\mathbb{Z}^n}\hat{f}(n)e^{-|n|^2 t}e^{in\cdot x},
 \]
@@ -2040,6 +2143,7 @@ Wavelets provide a multi-resolution decomposition that adapts to the local featu
 C_\psi = \int_\mathbb{R} \frac{|\hat{\psi}(\xi)|^2}{|\xi|}\,d\xi < \infty,
 \]
 which implies \(\hat{\psi}(0) = 0\) (equivalently, \(\int \psi(x)\,dx = 0\) — the wavelet has zero mean). The <strong>continuous wavelet transform</strong> of \(f \in L^2(\mathbb{R})\) with respect to \(\psi\) is:
+
 \[
 Wf(a,b) = \frac{1}{\sqrt{|a|}}\int_\mathbb{R} f(x)\overline{\psi\!\left(\frac{x-b}{a}\right)}\,dx = \langle f, \psi_{a,b}\rangle,
 \]
@@ -2049,6 +2153,7 @@ where \(\psi_{a,b}(x) = |a|^{-1/2}\psi((x-b)/a)\) is the wavelet dilated by scal
 **Interpretation:** \(Wf(a,b)\) measures the content of \(f\) near position \(b\) at scale \(a\). Large \(a\) corresponds to coarse scales (low frequencies), small \(a\) to fine scales (high frequencies). The wavelet transform is a "zoom" that simultaneously resolves both position and scale.
 
 **Energy preservation:** If \(\psi\) satisfies the admissibility condition, then:
+
 \[
 \|f\|_{L^2}^2 = \frac{1}{C_\psi}\int_0^\infty\int_{-\infty}^\infty |Wf(a,b)|^2\,\frac{db\,da}{a^2}.
 \]
@@ -2203,6 +2308,7 @@ Professor Spronk's research includes the study of Fourier and Fourier–Stieltje
 ## The Wiener Algebra \(A(\mathbb{R})\)
 
 The **Wiener algebra** \(A(\mathbb{R})\) consists of all functions \(f : \mathbb{R} \to \mathbb{C}\) whose Fourier transform is in \(L^1(\mathbb{R})\):
+
 \[
 A(\mathbb{R}) = \{f \in C_0(\mathbb{R}) : \hat{f} \in L^1(\mathbb{R})\},
 \]
@@ -2232,6 +2338,7 @@ In other words: if \(f\) is in the Wiener algebra and has no zeros, then its rec
 \lim_{t \to +\infty} (f * \mu)(t) = c \int_\mathbb{R} f\,dx,
 \]
 then for every \(g \in L^1(\mathbb{R})\):
+
 \[
 \lim_{t \to +\infty} (g * \mu)(t) = c \int_\mathbb{R} g\,dx.
 \]
@@ -2277,6 +2384,7 @@ The weak-type (1,1) estimate is proved using the **Vitali covering lemma**: if a
 **Why is the maximal function useful?** The maximal function controls the behavior of approximate identities: if \(\phi_\varepsilon(x) = \varepsilon^{-n}\phi(x/\varepsilon)\) is an approximate identity with \(|\phi(x)| \leq C(1+|x|)^{-(n+1)}\), then \(|(f * \phi_\varepsilon)(x)| \leq C \cdot Mf(x)\) for all \(\varepsilon > 0\). The maximal theorem then implies that \(f * \phi_\varepsilon \to f\) a.e. as \(\varepsilon \to 0^+\) for any \(f \in L^1_{\text{loc}}\) — this is the **Lebesgue differentiation theorem** in disguise.
 
 **Lebesgue differentiation theorem:** For \(f \in L^1_{\text{loc}}(\mathbb{R}^n)\),
+
 \[
 \lim_{r\to 0^+}\frac{1}{|B(x,r)|}\int_{B(x,r)}f(y)\,dy = f(x) \quad \text{for a.e. } x.
 \]
@@ -2307,10 +2415,12 @@ The Fourier transform \(\mathcal{F} : L^2(\mathbb{R}) \to L^2(\mathbb{R})\) is a
 **Eigenvalues of \(\mathcal{F}\):** Since \(\mathcal{F}^4 = \text{Id}\) (applying the Fourier transform four times returns to the original function: \(\mathcal{F}^2 f(x) = f(-x)\), \(\mathcal{F}^4 f(x) = f(x)\)), the eigenvalues of \(\mathcal{F}\) must satisfy \(\lambda^4 = 1\). The possible eigenvalues are \(\lambda \in \{1, -1, i, -i\}\).
 
 **Hermite functions as eigenfunctions:** The **Hermite functions** are:
+
 \[
 h_n(x) = (-1)^n e^{\pi x^2} \frac{d^n}{dx^n}(e^{-2\pi x^2}) = 2^{1/4}H_n(\sqrt{2\pi}\, x)e^{-\pi x^2},
 \]
 where \(H_n\) is the \(n\)th Hermite polynomial (with appropriate normalization). These are eigenfunctions of \(\mathcal{F}\):
+
 \[
 \mathcal{F}(h_n) = (-i)^n h_n.
 \]
@@ -2333,6 +2443,7 @@ The Hermite functions form a complete orthonormal basis of \(L^2(\mathbb{R})\) (
 ## The Fractional Fourier Transform
 
 Once we have the spectral decomposition, we can define the **fractional Fourier transform** of order \(\alpha\):
+
 \[
 \mathcal{F}^\alpha = \sum_{n=0}^\infty e^{-in\pi\alpha/2} P_{V_n},
 \]
@@ -2433,6 +2544,7 @@ The relationship between these methods is made precise by Tauberian theorems: ex
 The construction of a continuous function with divergent Fourier series (guaranteed by Banach–Steinhaus) is non-constructive. An explicit construction was given by du Bois-Reymond, but it is complicated. Here is a more modern explicit example due to Fejér (1910):
 
 **Fejér's example:** Consider the function:
+
 \[
 f(x) = \sum_{n=1}^\infty \frac{\sin(n_k x)}{n_k}
 \]
@@ -2447,10 +2559,12 @@ The formal verification requires careful estimates of \(\sum_{j=k}^\infty \frac{
 ## Characters and Representations of \(\mathbb{Z}/N\mathbb{Z}\)
 
 The group \(\mathbb{Z}/N\mathbb{Z} = \{0, 1, 2, \ldots, N-1\}\) with addition mod \(N\) is cyclic of order \(N\). Its characters (group homomorphisms \(\chi: \mathbb{Z}/N\mathbb{Z} \to \mathbb{T}\)) are:
+
 \[
 \chi_k(j) = e^{2\pi ijk/N}, \quad k = 0, 1, \ldots, N-1.
 \]
 These form a complete orthonormal system in \(L^2(\mathbb{Z}/N\mathbb{Z}) = \mathbb{C}^N$ (with the inner product \(\langle x, y\rangle = \frac{1}{N}\sum_{j=0}^{N-1}x_j\overline{y_j}\)):
+
 \[
 \frac{1}{N}\sum_{j=0}^{N-1}\chi_k(j)\overline{\chi_l(j)} = \frac{1}{N}\sum_{j=0}^{N-1}e^{2\pi ij(k-l)/N} = \delta_{kl}.
 \]
@@ -2460,6 +2574,7 @@ The DFT is the expansion in this character basis: \(\hat{x}_k = N\langle x, \chi
 ## Convolution Theorem for the DFT
 
 The cyclic convolution of sequences \(x, y \in \mathbb{C}^N\) is \((x \circledast y)_n = \sum_{j=0}^{N-1}x_j y_{n-j\pmod N}\). Its DFT satisfies:
+
 \[
 \widehat{x \circledast y}_k = \hat{x}_k \cdot \hat{y}_k.
 \]
@@ -2488,22 +2603,26 @@ The mathematical content is purely Fourier analysis on \(\mathbb{Z}/N\mathbb{Z}\
 ## The Schrödinger Equation in Detail
 
 The free Schrödinger equation \(i\partial_t\psi = -\frac{1}{2}\Delta\psi\) (in units where \(\hbar = m = 1\)) governs the time evolution of a quantum particle. Taking the Fourier transform in \(x\):
+
 \[
 i\partial_t\hat{\psi}(\xi,t) = \frac{(2\pi|\xi|)^2}{2}\hat{\psi}(\xi,t),
 \]
 so \(\hat{\psi}(\xi,t) = \hat{\psi}_0(\xi)e^{-2\pi^2|\xi|^2 it}\). The solution is \(\psi(x,t) = e^{it\Delta/2}\psi_0(x) = (\psi_0 * K_t)(x)\) where:
+
 \[
 K_t(x) = \frac{1}{(2\pi it)^{n/2}}e^{i|x|^2/(2t)}
 \]
 is the Schrödinger propagator (a complex Gaussian / chirp). Unlike the heat kernel, \(K_t\) has constant modulus \(|K_t(x)| = (2\pi|t|)^{-n/2}\) — there is no decay in \(x\), only oscillation. This reflects the **dispersive** but **non-dissipative** nature of the Schrödinger equation.
 
 **Dispersive decay:** Even though \(|K_t(x)|= C/|t|^{n/2}\) decays in \(t\), individual wave packets spread out. By Young's inequality and properties of \(K_t\):
+
 \[
 \|\psi(\cdot,t)\|_{L^\infty(\mathbb{R}^n)} \leq \|K_t\|_{L^\infty}\|\psi_0\|_{L^1} = \frac{1}{(2\pi|t|)^{n/2}}\|\psi_0\|_{L^1}.
 \]
 So the maximum amplitude of the wave function decays like \(t^{-n/2}\). Meanwhile, \(\|\psi(\cdot,t)\|_{L^2} = \|\psi_0\|_{L^2}\) is conserved (Plancherel + the fact that \(|e^{-2\pi^2|\xi|^2it}| = 1\)). This combination — \(L^2\) conservation and \(L^\infty\) decay — is characteristic of **dispersive equations**.
 
 **Strichartz estimates:** A deeper fact is the Strichartz estimate: for \(n \geq 1\),
+
 \[
 \|e^{it\Delta/2}\psi_0\|_{L^4_{t,x}(\mathbb{R}^{1+n})} \leq C\|\psi_0\|_{L^2(\mathbb{R}^n)}
 \]
@@ -2518,6 +2637,7 @@ The **phase velocity** is \(v_\phi = \omega/|\xi| = c\sqrt{1 + (mc/2\pi\hbar|\xi
 ## Pseudodifferential Operators
 
 The Fourier transform allows a far-reaching generalization of differential operators. A **pseudodifferential operator** of order \(m\) is:
+
 \[
 (Pu)(x) = \int_{\mathbb{R}^n} p(x,\xi)\hat{u}(\xi)e^{2\pi ix\cdot\xi}\,d\xi,
 \]

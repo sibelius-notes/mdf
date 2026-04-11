@@ -312,16 +312,19 @@ or in matrix form, \(J(F \circ G)(\mathbf{a}) = JF(G(\mathbf{a}))\, JG(\mathbf{a
 </div>
 
 *Proof.* Let \(\mathbf{b} = G(\mathbf{a})\), \(L = DG(\mathbf{a})\), \(M = DF(\mathbf{b})\). Write
+
 \[
 G(\mathbf{a} + \mathbf{h}) = \mathbf{b} + L\mathbf{h} + \mathbf{r}(\mathbf{h}), \quad F(\mathbf{b} + \mathbf{k}) = F(\mathbf{b}) + M\mathbf{k} + \mathbf{s}(\mathbf{k}),
 \]
 where \(\|\mathbf{r}(\mathbf{h})\|/\|\mathbf{h}\| \to 0\) and \(\|\mathbf{s}(\mathbf{k})\|/\|\mathbf{k}\| \to 0\) as \(\mathbf{h}, \mathbf{k} \to \mathbf{0}\). Setting \(\mathbf{k} = L\mathbf{h} + \mathbf{r}(\mathbf{h})\),
+
 \[
 F(G(\mathbf{a}+\mathbf{h})) = F(\mathbf{b}) + M(L\mathbf{h} + \mathbf{r}) + \mathbf{s}(\mathbf{k}) = F(\mathbf{b}) + ML\mathbf{h} + M\mathbf{r} + \mathbf{s}(\mathbf{k}).
 \]
 We need \(\|M\mathbf{r}(\mathbf{h}) + \mathbf{s}(\mathbf{k})\|/\|\mathbf{h}\| \to 0\). For the first term: \(\|M\mathbf{r}\|/\|\mathbf{h}\| \leq \|M\|\,\|\mathbf{r}\|/\|\mathbf{h}\| \to 0\). For the second: either \(\mathbf{k} = 0\) (in which case \(\mathbf{s}(\mathbf{k}) = 0\)) or \(\|\mathbf{s}(\mathbf{k})\|/\|\mathbf{h}\| = (\|\mathbf{s}(\mathbf{k})\|/\|\mathbf{k}\|) \cdot (\|\mathbf{k}\|/\|\mathbf{h}\|)\), and \(\|\mathbf{k}\|/\|\mathbf{h}\| \leq \|L\| + \|\mathbf{r}\|/\|\mathbf{h}\|\) is bounded. \(\square\)
 
 In Leibniz notation, the chain rule reads
+
 \[
 \frac{\partial (f \circ G)}{\partial x_j}(\mathbf{a}) = \sum_{k=1}^m \frac{\partial f}{\partial u_k}(G(\mathbf{a}))\,\frac{\partial G_k}{\partial x_j}(\mathbf{a}).
 \]
@@ -415,10 +418,12 @@ The Implicit Function Theorem answers the question: when does the zero set of a 
 \frac{\partial F}{\partial \mathbf{y}}(\mathbf{a}, \mathbf{b}) = \left[\frac{\partial F_i}{\partial y_j}\right]_{i,j=1}^m
 \]
 is invertible. Then there exist neighborhoods \(U \ni \mathbf{a}\) in \(\mathbb{R}^n\) and \(V \ni \mathbf{b}\) in \(\mathbb{R}^m\), and a unique \(C^1\) function \(g : U \to V\) such that
+
 \[
 F(\mathbf{x}, g(\mathbf{x})) = \mathbf{0} \quad \text{for all } \mathbf{x} \in U.
 \]
 The derivative of \(g\) is given by
+
 \[
 Dg(\mathbf{x}) = -\left[\frac{\partial F}{\partial \mathbf{y}}(\mathbf{x}, g(\mathbf{x}))\right]^{-1} \frac{\partial F}{\partial \mathbf{x}}(\mathbf{x}, g(\mathbf{x})).
 \]
@@ -426,6 +431,7 @@ Dg(\mathbf{x}) = -\left[\frac{\partial F}{\partial \mathbf{y}}(\mathbf{x}, g(\ma
 </div>
 
 *Proof.* Define \(\Phi : D \to \mathbb{R}^{n+m}\) by \(\Phi(\mathbf{x}, \mathbf{y}) = (\mathbf{x}, F(\mathbf{x}, \mathbf{y}))\). The Jacobian of \(\Phi\) at \((\mathbf{a}, \mathbf{b})\) is block upper triangular:
+
 \[
 J\Phi(\mathbf{a},\mathbf{b}) = \begin{bmatrix} I_n & 0 \\ \partial F/\partial \mathbf{x} & \partial F/\partial \mathbf{y} \end{bmatrix},
 \]
@@ -473,6 +479,7 @@ The Hessian captures the curvature of the graph of \(f\), just as the second der
 f(\mathbf{x}) = \sum_{|\alpha| \leq k} \frac{1}{\alpha!}\, \partial^\alpha f(\mathbf{a})\, (\mathbf{x} - \mathbf{a})^\alpha + R_k(\mathbf{x}),
 \]
 where the sum is over multi-indices \(\alpha\), and the remainder satisfies
+
 \[
 R_k(\mathbf{x}) = \frac{1}{(k+1)!}\sum_{|\alpha|=k+1} \partial^\alpha f(\mathbf{c})\, (\mathbf{x}-\mathbf{a})^\alpha
 \]
@@ -483,6 +490,7 @@ for some \(\mathbf{c}\) on the segment between \(\mathbf{a}\) and \(\mathbf{x}\)
 *Proof.* Apply the single-variable Taylor theorem to \(g(t) = f(\mathbf{a} + t(\mathbf{x} - \mathbf{a}))\) on \([0,1]\). Computing \(g^{(j)}(t)\) by repeated application of the chain rule yields the multinomial expansion. \(\square\)
 
 For \(k = 1\), the second-order form is the most useful:
+
 \[
 f(\mathbf{x}) = f(\mathbf{a}) + \nabla f(\mathbf{a}) \cdot (\mathbf{x} - \mathbf{a}) + \frac{1}{2}(\mathbf{x}-\mathbf{a})^T Hf(\mathbf{c})(\mathbf{x}-\mathbf{a}),
 \]
@@ -550,6 +558,7 @@ The geometric insight is this: at a constrained maximum of \(f\) on the surface 
 ## Applications
 
 The algorithm: to find the extrema of \(f\) subject to \(g_1 = \cdots = g_k = 0\), solve the system
+
 \[
 \nabla f = \sum_{i=1}^k \lambda_i \nabla g_i, \quad g_1 = 0, \ldots, g_k = 0.
 \]
@@ -666,12 +675,14 @@ Green's theorem is the two-dimensional case of Stokes' theorem. It relates a lin
 *Geometric meaning.* The integrand \(\partial Q/\partial x - \partial P/\partial y\) is the \(z\)-component of \(\operatorname{curl} \mathbf{F}\), where \(\mathbf{F} = (P, Q, 0)\). Green's theorem says: the circulation of \(\mathbf{F}\) around the boundary equals the total vorticity inside the region.
 
 *Proof (sketch, for a rectangle).* For \(D = [a,b] \times [c,d]\), the double integral of \(\partial Q/\partial x\) over \(D\) equals, by Fubini and the Fundamental Theorem of Calculus,
+
 \[
 \int_c^d [Q(b,y) - Q(a,y)]\, dy,
 \]
 which is exactly the contribution of the right and left edges to \(\oint P\, dx + Q\, dy\). The term \(\partial P/\partial y\) handles the top and bottom edges. For general regions, decompose into rectangles and use additivity. \(\square\)
 
 As corollaries, Green's theorem gives formulas for the area of a region:
+
 \[
 \operatorname{Area}(D) = \oint_{\partial D} x\, dy = -\oint_{\partial D} y\, dx = \frac{1}{2}\oint_{\partial D} x\, dy - y\, dx.
 \]

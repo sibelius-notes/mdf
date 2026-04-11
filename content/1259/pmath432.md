@@ -853,6 +853,7 @@ and closed under:
 <strong>Worked Example 5.1 (Addition is primitive recursive).</strong> We show that \( \mathrm{add}(m, n) = m + n \) is primitive recursive by exhibiting the explicit recursion schema.
 
 Define:
+
 \[
 \mathrm{add}(m, 0) = m = \pi^1_1(m),
 \]
@@ -1008,6 +1009,7 @@ This is a \( \Sigma^0_1 \) formula: \( \mathrm{Prov}(\overline{n}) \) is provabl
 \mathrm{PA} \vdash G \leftrightarrow \lnot \mathrm{Prov}(\ulcorner G \urcorner).
 \]
 The sentence \( G \) is constructed as:
+
 \[
 G = \theta(\overline{m}), \quad \text{where } \theta(x) = \lnot \mathrm{Prov}(\mathrm{Sub}(x, x)),
 \]
@@ -1471,6 +1473,7 @@ Every primitive recursive function is total — it terminates on all inputs. The
 
 <div class="definition">
 The <strong>partial recursive functions</strong> (equivalently, Turing-computable partial functions) are the smallest class containing all primitive recursive functions and closed under the <strong>unbounded \( \mu \)-operator</strong>: given \( g : \mathbb{N}^{k+1} \to \mathbb{N} \) total recursive, the function
+
 \[
 f(\vec{n}) = \mu m\, [g(\vec{n}, m) = 0]
 \]
@@ -1525,6 +1528,7 @@ A set \( A \subseteq \mathbb{N} \) is an <strong>index set</strong> if: whenever
 Suppose \( A \) is a non-trivial index set, so there exist \( a \in A \) and \( b \notin A \). Let \( \phi_a \) be a program in \( A \) and \( \phi_b \notin A \). We reduce the Halting Problem to membership in \( A \).
 
 Given any program index \( e \) and input \( n \), define the function:
+
 \[
 f_{e,n}(x) = \begin{cases} \phi_a(x) & \text{if } \phi_e(n) \downarrow, \\ \text{undefined} & \text{otherwise.} \end{cases}
 \]
@@ -1589,6 +1593,7 @@ The following twenty problems are organized into five parts, covering the full s
 For (d), explain why you need infinitely many sentences, and argue that no single first-order sentence can express "torsion-free."
 
 **A4.** Suppose \( \varphi(x, y) \) is a formula with exactly \( \mathrm{free}(\varphi) = \{x, y\} \). Define:
+
 \[
 \psi = \forall x\, \exists y\, \varphi(x,y).
 \]
@@ -1804,6 +1809,7 @@ This appendix collects enrichment material filling gaps identified after the mai
 The worked example in Section 1.2.3 parsed the relatively simple sentence \( \forall x\, \exists y\, (x < y) \). Here we work through a more challenging formula that arises naturally in the study of ordered fields and dense orders.
 
 Consider the formula
+
 \[
 \varphi = \forall x\, \exists y\, (x < y \,\land\, y < x + 1)
 \]
@@ -1863,6 +1869,7 @@ Reading the tree: the entire formula is \( \forall x \) applied to \( \exists y 
 \mathrm{free}(y < x+1) = \{y, x\} = \{x, y\}.
 \]
 (The term \( x+1 \) contains the variable \( x \); the constant \( 1 \) introduces no variables.)
+
 \[
 \mathrm{free}((x < y) \,\land\, (y < x+1)) = \{x,y\} \cup \{x,y\} = \{x,y\}.
 \]

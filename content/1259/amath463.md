@@ -32,16 +32,19 @@ The first term is the rate of change of the integral at fixed volume; the second
 ## 1.3 Conservation of Mass
 
 Mass is conserved: the total mass in a material volume does not change. The Reynolds transport theorem with \(f = \rho\) gives:
+
 \[
 \frac{\partial\rho}{\partial t} + \nabla \cdot (\rho\mathbf{u}) = 0
 \]
 
 Expanding the divergence using the product rule:
+
 \[
 \frac{D\rho}{Dt} + \rho(\nabla \cdot \mathbf{u}) = 0
 \]
 
 For an **incompressible flow**, the density of each fluid parcel is constant along its trajectory: \(D\rho/Dt = 0\). The continuity equation then reduces to the **incompressibility constraint**:
+
 \[
 \nabla \cdot \mathbf{u} = 0
 \]
@@ -59,6 +62,7 @@ where \(\mathbf{g}\) is the gravitational acceleration and \(\mu\) is the dynami
 </div>
 
 In component form with kinematic viscosity \(\nu = \mu/\rho\):
+
 \[
 \frac{\partial u_i}{\partial t} + u_j\frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho}\frac{\partial p}{\partial x_i} + \nu\frac{\partial^2 u_i}{\partial x_j \partial x_j} + g_i
 \]
@@ -94,6 +98,7 @@ This chapter develops the dynamics of vorticity from first principles. We begin 
 ### Derivation from the Navier–Stokes Equations
 
 The vorticity equation is obtained by taking the curl of the incompressible Navier–Stokes equations. Starting from
+
 \[
 \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p + \nu\nabla^2\mathbf{u} + \mathbf{g},
 \]
@@ -105,6 +110,7 @@ we use the vector identity \((\mathbf{u}\cdot\nabla)\mathbf{u} = \nabla(\tfrac{1
 \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega}\cdot\nabla)\mathbf{u} - \boldsymbol{\omega}(\nabla\cdot\mathbf{u}) + \frac{\nabla\rho \times \nabla p}{\rho^2} + \nu\nabla^2\boldsymbol{\omega}.
 \]
 For an incompressible flow (\(\nabla\cdot\mathbf{u} = 0\)) this reduces to
+
 \[
 \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega}\cdot\nabla)\mathbf{u} + \frac{\nabla\rho \times \nabla p}{\rho^2} + \nu\nabla^2\boldsymbol{\omega}.
 \]
@@ -121,6 +127,7 @@ Each term on the right-hand side represents a distinct physical mechanism:
 ### Two-Dimensional Flows
 
 In two-dimensional flow in the \((x,y)\) plane, the velocity field is \(\mathbf{u} = (u,v,0)\) with no \(z\)-dependence, so the vorticity is purely in the \(z\)-direction: \(\boldsymbol{\omega} = \omega\hat{\mathbf{z}}\) with \(\omega = \partial v/\partial x - \partial u/\partial y\). The stretching term vanishes because \((\boldsymbol{\omega}\cdot\nabla)\mathbf{u} = \omega\, \partial\mathbf{u}/\partial z = \mathbf{0}\). The vorticity equation reduces to the **2D vorticity transport equation**:
+
 \[
 \frac{D\omega}{Dt} = \nu\nabla^2\omega,
 \]
@@ -131,6 +138,7 @@ which is a scalar advection–diffusion equation. In the inviscid 2D limit, \(D\
 ### The Circulation Integral
 
 The **circulation** \(\Gamma\) around a closed loop \(\mathcal{C}\) is defined as the line integral of velocity:
+
 \[
 \Gamma = \oint_{\mathcal{C}} \mathbf{u}\cdot d\boldsymbol{\ell}.
 \]
@@ -146,10 +154,12 @@ The key question is how \(\Gamma\) evolves when the loop \(\mathcal{C}(t)\) is a
 </div>
 
 **Proof.** The material derivative of the circulation is
+
 \[
 \frac{D\Gamma}{Dt} = \oint_{\mathcal{C}(t)} \frac{D\mathbf{u}}{Dt}\cdot d\boldsymbol{\ell} + \oint_{\mathcal{C}(t)} \mathbf{u}\cdot \frac{D(d\boldsymbol{\ell})}{Dt}.
 \]
 For the second integral, the material derivative of the line element satisfies \(D(d\boldsymbol{\ell})/Dt = (d\boldsymbol{\ell}\cdot\nabla)\mathbf{u}\), so \(\mathbf{u}\cdot D(d\boldsymbol{\ell})/Dt = \mathbf{u}\cdot(d\boldsymbol{\ell}\cdot\nabla)\mathbf{u} = d(\tfrac{1}{2}|\mathbf{u}|^2)\), which integrates to zero around a closed loop. For the first integral, the Euler equation gives \(D\mathbf{u}/Dt = -\nabla p/\rho + \mathbf{g}\). The body force integrates to zero (conservative). The pressure term gives
+
 \[
 \oint_{\mathcal{C}} \frac{\nabla p}{\rho}\cdot d\boldsymbol{\ell} = \oint_{\mathcal{C}} \frac{dp}{\rho}.
 \]
@@ -203,6 +213,7 @@ The solenoidal condition \(\nabla\cdot\boldsymbol{\omega} = 0\) allows us to wri
 \mathbf{u}(\mathbf{x}) = \frac{1}{4\pi}\int \frac{\boldsymbol{\omega}(\mathbf{x}') \times (\mathbf{x} - \mathbf{x}')}{|\mathbf{x} - \mathbf{x}'|^3}\, dV'.
 \]
 For a thin vortex filament of circulation \(\Gamma\) along a curve \(\mathcal{C}\), this becomes
+
 \[
 d\mathbf{u} = \frac{\Gamma}{4\pi}\frac{d\boldsymbol{\ell} \times \hat{\mathbf{r}}}{r^2},
 \]
@@ -214,6 +225,7 @@ The analogy with the Biot–Savart law of magnetostatics (where current \(\mathb
 ### The Infinite Straight Vortex
 
 For an infinite straight vortex filament of circulation \(\Gamma\) aligned with the \(z\)-axis, integrating the Biot–Savart law gives an azimuthal velocity
+
 \[
 u_\theta = \frac{\Gamma}{2\pi r},
 \]
@@ -222,6 +234,7 @@ where \(r\) is the radial distance from the filament. This is the potential vort
 ### Self-Induced Motion of a Vortex Ring
 
 A vortex ring of radius \(R\) and core radius \(a \ll R\) (and circulation \(\Gamma\)) translates along its symmetry axis at speed
+
 \[
 U_{\text{ring}} = \frac{\Gamma}{4\pi R}\left(\ln\frac{8R}{a} - \frac{1}{4}\right),
 \]
@@ -232,6 +245,7 @@ a result first obtained by Kelvin and derived by applying the Biot–Savart law 
 Consider two parallel line vortices of circulations \(\Gamma_1\) and \(\Gamma_2\) separated by distance \(d\). Each vortex induces a velocity field at the location of the other, causing each to move.
 
 **Co-rotating vortices** (\(\Gamma_1 = \Gamma_2 = \Gamma > 0\)): Each vortex moves in the velocity field of the other. The induced speed at distance \(d\) is \(U = \Gamma/(2\pi d)\), directed perpendicular to the line joining the two vortices. Both vortices therefore orbit their common centroid at angular velocity
+
 \[
 \Omega = \frac{\Gamma}{\pi d^2},
 \]
@@ -244,12 +258,14 @@ tracing circular paths of radius \(d/2\). The combined system is a rotating doub
 ### The Coriolis Modification
 
 In a frame rotating with angular velocity \(\boldsymbol{\Omega}\) (for Earth, \(|\boldsymbol{\Omega}| = 7.27\times 10^{-5}\) rad s\(^{-1}\)), the equations of motion gain Coriolis and centrifugal terms. The **absolute vorticity** — the vorticity measured in an inertial frame — is
+
 \[
 \boldsymbol{\omega}_{\text{abs}} = \boldsymbol{\omega} + 2\boldsymbol{\Omega},
 \]
 where \(\boldsymbol{\omega} = \nabla\times\mathbf{u}\) is the **relative vorticity** computed in the rotating frame and \(2\boldsymbol{\Omega}\) is the **planetary vorticity**. The factor of 2 arises from the relation \(\nabla\times(\boldsymbol{\Omega}\times\mathbf{x}) = 2\boldsymbol{\Omega}\).
 
 The vorticity equation in a rotating frame, for an inviscid barotropic fluid, takes the form
+
 \[
 \frac{D\boldsymbol{\omega}_{\text{abs}}}{Dt} = (\boldsymbol{\omega}_{\text{abs}}\cdot\nabla)\mathbf{u},
 \]
@@ -258,6 +274,7 @@ which is identical to the non-rotating form but with absolute vorticity replacin
 ### The Coriolis Parameter and \(f\)-Plane Approximation
 
 On a sphere of radius \(a\) at latitude \(\phi\), the component of planetary vorticity in the local vertical direction is \(f = 2\Omega\sin\phi\), the **Coriolis parameter**. On the \(f\)-plane approximation (treating a small patch of Earth as flat with constant \(f\)), the relevant vorticity component is the vertical one:
+
 \[
 \zeta = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y},
 \]
@@ -273,6 +290,7 @@ For **shallow-water flow** of depth \(H(\mathbf{x},t)\) in a rotating frame, com
 q = \frac{\zeta + f}{H}
 \]
 is conserved following each fluid column:
+
 \[
 \frac{Dq}{Dt} = 0.
 \]
@@ -308,11 +326,13 @@ A powerful feature of Laplace's equation is linearity: superpositions of solutio
 **Doublet** (dipole) of strength \(\mu_d\): \(w(z) = \mu_d/(2\pi z)\). Obtained as the limit of a source-sink pair approaching each other with fixed product of strength and separation.
 
 **Flow past a circular cylinder**: superposing a uniform stream of speed \(U\) and a doublet of strength \(\mu_d = Ua^2\) gives:
+
 \[
 w(z) = U\!\left(z + \frac{a^2}{z}\right)
 \]
 
 The streamline \(\psi = 0\) passes through the circle \(|z| = a\), so this is the potential flow past a cylinder of radius \(a\). The velocity on the cylinder surface is:
+
 \[
 u_\theta = -2U\sin\theta
 \]
@@ -330,6 +350,7 @@ where the contour \(C\) encloses the body and \(\rho\) is the fluid density.
 </div>
 
 Applied to a cylinder with a superimposed irrotational vortex of circulation \(\Gamma\):
+
 \[
 X = 0, \qquad Y = \rho U \Gamma
 \]
@@ -341,12 +362,14 @@ This is the **Kutta–Joukowski theorem**: the lift per unit span is \(L' = \rho
 A conformal map \(\zeta = f(z)\) is a complex analytic function that maps one flow domain to another while preserving angles. This is extraordinary: if we can solve Laplace's equation in a simple geometry (a circle), a conformal map immediately gives us the solution in a complicated geometry (an aerofoil cross-section).
 
 The **Joukowski transformation**:
+
 \[
 \zeta = z + \frac{c^2}{z}
 \]
 maps a circle \(|z - z_0| = a\) (with \(z_0\) chosen appropriately) to a smooth curve in the \(\zeta\)-plane that resembles a wing cross-section. The trailing edge of the Joukowski aerofoil corresponds to the critical point of the map, where the derivative \(d\zeta/dz\) vanishes and the map is no longer conformal — the angle doubles, creating the characteristic cusped trailing edge.
 
 The **Kutta condition** selects the physically correct solution from the family of potential flows past an aerofoil. Mathematically, it requires the velocity to remain finite at the trailing edge; this uniquely determines the circulation \(\Gamma\), and hence the lift:
+
 \[
 L' = \rho U \Gamma = \rho U \cdot 4\pi U a \sin(\alpha + \beta)
 \]
@@ -451,6 +474,7 @@ For shallow-water waves (\(c_g = c_p\)), there is no dispersive spreading: the w
 The linear theory of water waves assumes small amplitude \(a\) compared to wavelength \(\lambda\). The relevant parameter is the **wave steepness** \(\epsilon = ak\). For finite steepness, the free-surface boundary conditions must be applied at the actual free surface \(z = \eta\) rather than at \(z = 0\), introducing nonlinear corrections.
 
 G.G. Stokes (1847) showed that the dispersion relation for finite-amplitude waves is modified:
+
 \[
 \omega^2 = gk\!\left(1 + \epsilon^2 + \cdots\right)
 \]
@@ -552,6 +576,7 @@ u(r) = \frac{1}{4\mu}\!\left(-\frac{dp}{dz}\right)(R^2 - r^2)
 \]
 
 The flow rate is:
+
 \[
 Q = \int_0^R u(r)\, 2\pi r\, dr = \frac{\pi R^4}{8\mu}\!\left(-\frac{dp}{dz}\right)
 \]
@@ -569,6 +594,7 @@ At very low Reynolds number (\(Re \ll 1\)), the nonlinear advection term \((\mat
 These are the **Stokes equations**. They are linear, elliptic, and time-reversible (reversing the boundary velocities reverses the flow exactly). The famous consequence is that a swimming microorganism (bacterium, spermatozoon) cannot propel itself by a reciprocal stroke — it must break time-reversal symmetry, which is why microorganisms use rotating helical flagella rather than the back-and-forth paddling motion that works at high Reynolds number.
 
 G.G. Stokes derived the drag on a sphere of radius \(a\) moving at speed \(U\) in Stokes flow:
+
 \[
 F_{drag} = 6\pi\mu a U
 \]
@@ -600,6 +626,7 @@ The velocity oscillation decays exponentially with a characteristic **Stokes lay
 One of the great discoveries of twentieth-century fluid mechanics is due to Ludwig Prandtl (1904): at high Reynolds number, viscosity is important only in a thin layer adjacent to solid boundaries. Away from this **boundary layer**, the flow is approximately inviscid and can be described by the Euler equations. Within the boundary layer, viscosity dominates and enforces the no-slip condition.
 
 The thickness of the boundary layer \(\delta\) can be estimated by balancing the inertial and viscous terms in the Navier–Stokes equations:
+
 \[
 U\frac{\partial u}{\partial x} \sim U\frac{U}{L}, \qquad \nu\frac{\partial^2 u}{\partial y^2} \sim \nu\frac{U}{\delta^2}
 \]
@@ -640,6 +667,7 @@ This third-order nonlinear ODE must be solved numerically (a shooting method wor
 \]
 
 The skin friction coefficient (drag per unit area normalised by dynamic pressure):
+
 \[
 c_f = \frac{\tau_w}{\frac{1}{2}\rho U^2} = \frac{0.664}{\sqrt{Re_x}}
 \]
@@ -775,11 +803,13 @@ The term \(-\rho\overline{u'_i u'_j}\) is the **Reynolds stress tensor**: the me
 ## 7.3 Turbulent Kinetic Energy and the Closure Problem
 
 The **turbulent kinetic energy** (TKE) is:
+
 \[
 k = \frac{1}{2}\overline{u'_i u'_i}
 \]
 
 Its transport equation (derived by multiplying the fluctuation equation by \(u'_i\) and averaging) takes the form:
+
 \[
 \frac{Dk}{Dt} = \mathcal{P} - \varepsilon + \nabla \cdot (\text{diffusive flux})
 \]
@@ -787,6 +817,7 @@ Its transport equation (derived by multiplying the fluctuation equation by \(u'_
 where \(\mathcal{P} = -\overline{u'_i u'_j}\,\partial\overline{u}_i/\partial x_j\) is the **production** of TKE by interaction of Reynolds stresses with the mean flow shear, and \(\varepsilon = \nu\overline{(\partial u'_i/\partial x_j)^2}\) is the **viscous dissipation rate** — the rate at which turbulent kinetic energy is converted to heat.
 
 The closure problem is acute for the dissipation rate. Kolmogorov's 1941 theory provides a statistical framework: in the **inertial subrange** (scales between the energy-containing large eddies and the dissipation-scale Kolmogorov eddies), the energy spectrum follows:
+
 \[
 E(k) = C\varepsilon^{2/3} k^{-5/3}
 \]
@@ -856,6 +887,7 @@ Three distinct regions exist:
 \]
 
 Integrating:
+
 \[
 u^+ = \frac{1}{\kappa}\ln y^+ + B
 \]
@@ -946,6 +978,7 @@ where \(\Phi = gz - \frac{1}{2}|\boldsymbol{\Omega}\times\mathbf{r}|^2\) is the 
 The Coriolis force acts perpendicular to the velocity: in the Northern Hemisphere it deflects moving air to the right; in the Southern Hemisphere, to the left. This deflection is responsible for the counter-clockwise rotation of Northern Hemisphere cyclones (low-pressure systems) and the clockwise rotation of anticyclones. It is also responsible for trade winds, ocean gyres, and the jet streams.
 
 On a local \(f\)-plane approximation at latitude \(\phi\), the local vertical component of the Coriolis parameter is:
+
 \[
 f = 2\Omega\sin\phi
 \]
@@ -955,6 +988,7 @@ At the North Pole \(f = 2\Omega \approx 1.45 \times 10^{-4}\) s\(^{-1}\); at the
 ## 8.2 Geostrophic Balance
 
 At large scales in the atmosphere and ocean (\(L \sim 10^3\) km, \(U \sim 10\) m/s), the Rossby number:
+
 \[
 Ro = \frac{U}{fL} \sim \frac{10}{10^{-4} \times 10^6} = 0.1
 \]
@@ -1000,6 +1034,7 @@ where \(k\) and \(l\) are the eastward and northward wavenumbers, and \(c = \sqr
 </div>
 
 Two features are immediately striking. First, \(\omega < 0\) always (since \(\beta > 0\) in both hemispheres and the phase speed in the \(k\)-direction is \(c_p = \omega/k < 0\)): Rossby waves always propagate westward relative to the mean flow. Second, the group velocity in the \(x\)-direction is:
+
 \[
 c_{gx} = \frac{\partial\omega}{\partial k} = \frac{\beta(k^2 - l^2)}{(k^2 + l^2 + f_0^2/c^2)^2}
 \]
@@ -1010,6 +1045,7 @@ which can be positive or negative depending on the wavenumber. Long Rossby waves
 In addition to rotation, geophysical fluids are typically **stratified**: their density varies with depth due to temperature and salinity gradients. The buoyancy force on a vertically displaced fluid parcel provides a restoring mechanism that supports **internal gravity waves**.
 
 Define the **buoyancy frequency** (Brunt–Väisälä frequency):
+
 \[
 N^2 = -\frac{g}{\rho_0}\frac{d\bar{\rho}}{dz}
 \]
@@ -1039,6 +1075,7 @@ This chapter follows Kundu Chapter 16. We begin with the thermodynamic framework
 ### The Ideal Gas Law
 
 A **perfect (ideal) gas** satisfies the equation of state
+
 \[
 p = \rho R T,
 \]
@@ -1047,12 +1084,14 @@ where \(p\) is the absolute pressure, \(\rho\) the density, \(T\) the absolute t
 ### First and Second Laws of Thermodynamics
 
 The **first law of thermodynamics** for a fluid parcel states that the change in specific internal energy \(e\) equals the heat added minus the work done by the parcel:
+
 \[
 De = \delta q - p\, D\!\left(\frac{1}{\rho}\right) = \delta q + \frac{p}{\rho^2}D\rho,
 \]
 where \(\delta q\) is the specific heat added and \(1/\rho\) is the specific volume. For an ideal gas, \(e = c_v T\) where \(c_v\) is the specific heat at constant volume. The **specific enthalpy** is \(h = e + p/\rho = c_p T\), where \(c_p = c_v + R\) is the specific heat at constant pressure.
 
 The **second law** introduces the specific entropy \(s\): for a reversible process, \(Ds = \delta q / T \geq 0\) (with equality only for reversible processes). For an ideal gas:
+
 \[
 Ds = c_v \frac{DT}{T} - R\frac{D\rho}{\rho} = c_p\frac{DT}{T} - \frac{R}{p}Dp.
 \]
@@ -1060,6 +1099,7 @@ Ds = c_v \frac{DT}{T} - R\frac{D\rho}{\rho} = c_p\frac{DT}{T} - \frac{R}{p}Dp.
 ### Isentropic Relations
 
 An **isentropic** (adiabatic and reversible) process has \(Ds = 0\). Setting the entropy expression to zero and integrating:
+
 \[
 \frac{p}{\rho^\gamma} = \text{const}, \quad \text{or equivalently} \quad p \propto \rho^\gamma,
 \]
@@ -1068,6 +1108,7 @@ where \(\gamma = c_p/c_v\) is the **ratio of specific heats** (\(\gamma = 7/5 = 
 ### The Speed of Sound
 
 Consider a small pressure perturbation propagating through a gas at rest. The propagation speed is determined by how the gas responds to compression. For an isentropic process (sound waves are rapid enough that heat conduction is negligible):
+
 \[
 c^2 = \left.\frac{\partial p}{\partial \rho}\right|_s = \frac{\gamma p}{\rho} = \gamma R T.
 \]
@@ -1113,6 +1154,7 @@ For smooth (shock-free) adiabatic flows with no heat sources, the entropy of eac
 ### Linearisation about a Uniform State
 
 We linearise the compressible Euler equations about a **uniform rest state** \((\rho_0, p_0, \mathbf{u}_0 = \mathbf{0})\) by writing \(\rho = \rho_0 + \rho'\), \(p = p_0 + p'\), \(\mathbf{u} = \mathbf{u}'\), where primed quantities are small. Substituting and retaining only first-order terms:
+
 \[
 \frac{\partial \rho'}{\partial t} + \rho_0\nabla\cdot\mathbf{u}' = 0,
 \]
@@ -1120,6 +1162,7 @@ We linearise the compressible Euler equations about a **uniform rest state** \((
 \rho_0\frac{\partial \mathbf{u}'}{\partial t} = -\nabla p'.
 \]
 For isentropic perturbations, \(p' = c_0^2\rho'\) where \(c_0^2 = \gamma p_0/\rho_0\). Substituting into the continuity equation and differentiating with respect to time:
+
 \[
 \frac{\partial^2 \rho'}{\partial t^2} = -\rho_0\frac{\partial(\nabla\cdot\mathbf{u}')}{\partial t} = \nabla\cdot(\nabla p') = c_0^2\nabla^2\rho'.
 \]
@@ -1135,12 +1178,14 @@ The same equation holds for \(\rho'\) and each component of \(\mathbf{u}'\).
 ### Plane Wave Solutions and Dispersion Relation
 
 A plane wave solution \(p' = P\exp(i\mathbf{k}\cdot\mathbf{x} - i\omega t)\) satisfies the wave equation if and only if
+
 \[
 \omega^2 = c_0^2|\mathbf{k}|^2, \quad \text{i.e.,} \quad \omega = c_0 k,
 \]
 where \(k = |\mathbf{k}|\). This is a **non-dispersive** dispersion relation: the phase velocity \(\omega/k = c_0\) and the group velocity \(\partial\omega/\partial k = c_0\) are both equal to the sound speed and independent of wavenumber. All frequencies travel at the same speed — sound pulses do not spread out as they propagate (unlike water waves). This is why the pitch of a distant instrument is unaffected by distance, and why sonar can achieve sharp time resolution.
 
 The velocity perturbation associated with the plane wave is
+
 \[
 \mathbf{u}' = \frac{p'}{\rho_0 c_0}\hat{\mathbf{k}},
 \]
@@ -1151,6 +1196,7 @@ where \(\hat{\mathbf{k}}\) is the unit vector in the propagation direction. Soun
 ### Acoustic Energy Density
 
 For a plane sound wave, the time-averaged **acoustic energy density** (energy per unit volume) is
+
 \[
 \langle E \rangle = \frac{\langle p'^2\rangle}{\rho_0 c_0^2} = \rho_0\langle|\mathbf{u}'|^2\rangle,
 \]
@@ -1159,10 +1205,12 @@ consisting of equal contributions from potential energy (compression) and kineti
 ### Acoustic Intensity and Energy Flux
 
 The **acoustic intensity** \(\mathbf{I}\) is the energy flux — the rate at which energy is transported per unit area:
+
 \[
 \mathbf{I} = p'\mathbf{u}' = \frac{\langle p'^2\rangle}{\rho_0 c_0}\hat{\mathbf{k}}.
 \]
 This is the acoustic analogue of the Poynting vector in electromagnetism. The time-averaged intensity for a sinusoidal wave of amplitude \(P\) is
+
 \[
 \langle I\rangle = \frac{P^2}{2\rho_0 c_0}.
 \]
@@ -1171,6 +1219,7 @@ The quantity \(Z = \rho_0 c_0\) is the **acoustic impedance** of the medium; it 
 ### The Inverse-Square Law
 
 For a point source of acoustic power \(\mathcal{P}\) in a free field, the wave energy spreads uniformly over spherical surfaces. At radius \(r\) from the source, the surface area is \(4\pi r^2\), so by energy conservation:
+
 \[
 \langle I \rangle = \frac{\mathcal{P}}{4\pi r^2}.
 \]
@@ -1181,6 +1230,7 @@ This **inverse-square law** is the basis of the decibel scale in acoustics: each
 ### The Mach Number
 
 The **Mach number** is the ratio of a characteristic flow speed \(U\) to the local speed of sound:
+
 \[
 Ma = \frac{U}{c}.
 \]
@@ -1199,6 +1249,7 @@ It is the fundamental parameter governing compressibility effects.
 ### The Breakdown of the Incompressible Approximation
 
 For flow speeds much smaller than the sound speed, compressibility effects are negligible and the incompressible approximation is excellent. The fractional density change in a flow of speed \(U\) over an obstacle is of order \(Ma^2\):
+
 \[
 \frac{\Delta\rho}{\rho_0} \sim Ma^2.
 \]
@@ -1207,6 +1258,7 @@ For \(Ma < 0.3\), this is less than 9% — negligible for engineering purposes. 
 ### The Prandtl–Glauert Compressibility Correction
 
 For subsonic flow past an aerofoil at Mach number \(Ma\), the lift coefficient is enhanced relative to its incompressible value by the **Prandtl–Glauert rule**:
+
 \[
 C_L = \frac{C_{L,0}}{\sqrt{1 - Ma^2}},
 \]
@@ -1238,12 +1290,14 @@ h_1 + \frac{1}{2}u_1^2 = h_2 + \frac{1}{2}u_2^2 \qquad \text{(energy, with } h =
 </div>
 
 These three equations plus the equation of state determine the four downstream variables given the upstream state and the shock speed. The key result is the **normal shock relations** expressed in terms of the upstream Mach number \(Ma_1 > 1\):
+
 \[
 \frac{\rho_2}{\rho_1} = \frac{(\gamma+1)Ma_1^2}{(\gamma-1)Ma_1^2 + 2}, \qquad
 \frac{p_2}{p_1} = \frac{2\gamma Ma_1^2 - (\gamma-1)}{\gamma+1}, \qquad
 \frac{T_2}{T_1} = \frac{p_2}{p_1}\cdot\frac{\rho_1}{\rho_2}.
 \]
 The downstream Mach number satisfies \(Ma_2 < 1\): a normal shock always converts supersonic flow to subsonic flow. For strong shocks (\(Ma_1 \to \infty\)):
+
 \[
 \frac{\rho_2}{\rho_1} \to \frac{\gamma+1}{\gamma-1} = 6 \quad (\text{for air}), \qquad \frac{p_2}{p_1} \to \frac{2\gamma}{\gamma+1}Ma_1^2.
 \]
@@ -1252,6 +1306,7 @@ The density ratio is bounded (by at most a factor of 6 for a diatomic gas), whil
 ### Entropy Production at a Shock
 
 The Rankine–Hugoniot relations are consistent with the second law of thermodynamics only for shocks moving into supersonic flow (\(Ma_1 > 1\)). The entropy jump across the shock is
+
 \[
 s_2 - s_1 = c_v\ln\frac{p_2/p_1}{(p_2/p_1)^{\gamma}} = c_v\ln\frac{T_2^\gamma}{p_2^{\gamma-1}} - c_v\ln\frac{T_1^\gamma}{p_1^{\gamma-1}} > 0,
 \]
@@ -1288,11 +1343,13 @@ The simplest nonlinear wave equation is the **inviscid Burgers equation** (or th
 This is the nonlinear advection equation: each value of \(u\) advects at its own speed \(u\). Unlike the linear advection equation \(\partial_t u + c\, \partial_x u = 0\) (where all parts of the signal move at the same speed \(c\)), faster-moving parts of the wave profile overtake slower-moving parts, causing the wave to **steepen**.
 
 The **method of characteristics** converts this PDE into a family of ODEs. Define characteristic curves \(x = x(t)\) along which:
+
 \[
 \frac{dx}{dt} = u, \qquad \frac{du}{dt} = 0
 \]
 
 Along each characteristic, \(u\) is constant. So characteristic \(C\) starting at \(x_0\) carries the initial value \(u_0 = u(x_0, 0)\) and has equation \(x = x_0 + u_0 t\). The solution is implicitly:
+
 \[
 u(x,t) = u_0(x - ut)
 \]
@@ -1376,6 +1433,7 @@ An additional condition — the **entropy condition** — selects the physically
 For wave problems, the characteristic approach gives shocks, but many physical waves do not shock: they are dispersive, meaning different wavenumbers travel at different speeds, and dispersion can balance nonlinear steepening. The regime of **weakly nonlinear waves** is where both effects are comparable.
 
 The strategy is to expand the wave amplitude in a small parameter \(\epsilon\):
+
 \[
 u = \epsilon u_1 + \epsilon^2 u_2 + \epsilon^3 u_3 + \cdots
 \]
@@ -1383,6 +1441,7 @@ u = \epsilon u_1 + \epsilon^2 u_2 + \epsilon^3 u_3 + \cdots
 At order \(\epsilon\), we recover the linear solution. At order \(\epsilon^2\), the nonlinear terms in the original equation drive a correction. Secular terms (terms that grow without bound in time) arise at successive orders unless the linear solution's amplitude and phase are allowed to evolve slowly.
 
 This is the **method of multiple scales** or **modulation theory**. We introduce a slow time \(T = \epsilon t\) and slow space \(X = \epsilon x\) alongside the fast oscillatory variables. The linear solution has the form:
+
 \[
 u_1 = A(X,T)\, e^{i(kx - \omega t)} + \text{c.c.}
 \]
@@ -1402,6 +1461,7 @@ The NLS has a remarkable consequence: a uniform wavetrain \(A = A_0 e^{i\gamma A
 The instability works as follows: a slight amplitude modulation grows exponentially because the nonlinearity shifts the local frequency, creating phase focusing that concentrates energy. The initially uniform wavetrain disintegrates into a series of wave groups — localized packets of high amplitude separated by nearly calm water. In oceanography, this is the mechanism behind **rogue waves**: apparently spontaneous extreme waves that emerge from a nearly uniform ocean swell.
 
 The growth rate of the Benjamin–Feir instability for perturbation wavenumber \(K\) is:
+
 \[
 \sigma = \frac{\omega''}{2}\sqrt{K^2\!\left(\frac{4\gamma A_0^2}{\omega''} - K^2\right)}
 \]
@@ -1425,6 +1485,7 @@ In a frame moving at \(c_0 = \sqrt{gH}\), this simplifies to the **KdV equation*
 The second term is nonlinear steepening; the third is dispersive spreading from the third-derivative term.
 
 The KdV equation admits an exact **solitary wave** (soliton) solution:
+
 \[
 \eta(x,t) = a\, \text{sech}^2\!\left(\sqrt{\frac{3a}{4H^3}}\,(x - ct)\right), \qquad c = c_0\!\left(1 + \frac{a}{2H}\right)
 \]
@@ -1450,10 +1511,12 @@ For any initial condition, the KdV equation evolves toward a superposition of so
 When the medium through which a wave propagates varies slowly in space — stratification changing with depth, water shoaling toward a beach, a slowly varying background current — the wave cannot be a pure plane wave with fixed wavenumber and frequency. Yet if the scale of variation \(L\) of the medium is much larger than the wavelength \(\lambda\), something close to a locally plane wave holds at each point.
 
 The **WKB method** (after Wentzel, Kramers, and Brillouin, though the technique was known to Liouville and Green a century earlier) provides a systematic expansion in the small parameter \(\epsilon = \lambda/L \ll 1\). We seek solutions of the form:
+
 \[
 u(\mathbf{x}, t) = A(\mathbf{x}, t)\, e^{i\theta(\mathbf{x}, t)/\epsilon} + \text{c.c.}
 \]
 where \(A\) is a slowly varying complex amplitude and \(\theta\) a rapidly varying phase. The **local wavenumber and frequency** are \(\mathbf{k} = \nabla\theta\) and \(\omega = -\partial\theta/\partial t\). These satisfy the compatibility condition \(\partial\mathbf{k}/\partial t + \nabla\omega = 0\), and together with the local dispersion relation \(\omega = \Omega(\mathbf{k}, \mathbf{x}, t)\) (now dependent on the slowly varying medium), they yield the **ray equations**:
+
 \[
 \frac{d\mathbf{x}}{dt} = \frac{\partial\Omega}{\partial\mathbf{k}} = \mathbf{c}_g, \qquad \frac{d\mathbf{k}}{dt} = -\frac{\partial\Omega}{\partial\mathbf{x}}
 \]
@@ -1461,6 +1524,7 @@ where \(A\) is a slowly varying complex amplitude and \(\theta\) a rapidly varyi
 These are Hamilton's equations in disguise: wavenumber plays the role of momentum, position the role of coordinates. Wave packets travel along **rays** — the characteristics of the kinematic equations — at the local group velocity.
 
 For **shoaling ocean waves** approaching a beach, the depth \(H(x)\) decreases shoreward, so \(c_g = \sqrt{gH}\) decreases, the wavenumber \(k\) increases (wavelengths shorten), and amplitude grows. Whitham's (1965) **wave action conservation** gives \(\mathcal{A} = E/\omega = A^2/(2\omega) = \text{const}\) along a ray:
+
 \[
 \frac{\partial\mathcal{A}}{\partial t} + \nabla\cdot(\mathbf{c}_g \mathcal{A}) = 0
 \]
@@ -1473,16 +1537,19 @@ For **internal waves in a stratified ocean**, rays refract as \(N(z)\) varies wi
 When two or more waves coexist in a dispersive medium, they interact through the nonlinear terms in the governing equations. Most interactions are **non-resonant**: they produce oscillations at combination frequencies that quickly average to zero. For special combinations satisfying **resonance conditions**, however, the interaction is sustained and leads to significant energy exchange.
 
 **Three-wave resonance** requires simultaneously:
+
 \[
 \mathbf{k}_1 + \mathbf{k}_2 = \mathbf{k}_3, \qquad \omega(\mathbf{k}_1) + \omega(\mathbf{k}_2) = \omega(\mathbf{k}_3)
 \]
 When both conditions hold, a third wave grows secularly from the quadratic interaction of the first two, or a primary wave decays into two daughter waves (parametric decay instability). The **triad amplitude equations** take the universal form:
+
 \[
 \dot{A}_1 = \gamma A_2^* A_3, \qquad \dot{A}_2 = \gamma A_1^* A_3, \qquad \dot{A}_3 = -\gamma A_1 A_2
 \]
 with conserved **Manley–Rowe relations** \(|A_1|^2 + |A_3|^2 = \text{const}\) and \(|A_2|^2 + |A_3|^2 = \text{const}\). Whether three-wave resonance is possible depends on the geometry of the dispersion surface. For deep-water gravity waves (\(\omega = \sqrt{gk}\)), the dispersion curve is convex and three-wave resonance among waves of the same type is impossible — four-wave resonance dominates instead.
 
 **Four-wave resonance** requires:
+
 \[
 \mathbf{k}_1 + \mathbf{k}_2 = \mathbf{k}_3 + \mathbf{k}_4, \qquad \omega_1 + \omega_2 = \omega_3 + \omega_4
 \]
@@ -1495,10 +1562,12 @@ For deep-water gravity waves, these resonant quartets drive the slow evolution o
 Classical solitons — the \(\text{sech}^2\) solutions of the KdV equation — are spatially **localised** and propagate without radiation. This perfection is special to completely integrable equations. For nearby but non-integrable equations — the fifth-order KdV, capillary-gravity water waves near the Bond-number resonance \(Bo = 1/3\) — true solitons do not exist. Instead, the system supports **weakly nonlocal solitary waves**: structures with a soliton-like core but small-amplitude oscillatory tails extending to infinity.
 
 The canonical example is the **fifth-order KdV equation**:
+
 \[
 u_t + uu_x + u_{xxx} + \epsilon^2 u_{xxxxx} = 0
 \]
 The classical KdV soliton has phase velocity within the linear wave spectrum — linear waves of the same speed exist — so the soliton continuously radiates into these waves. The radiating tail has amplitude:
+
 \[
 A_{\text{tail}} \sim C\, e^{-\pi/(2\epsilon)}
 \]
@@ -1542,6 +1611,7 @@ where \(c = \omega/k\) is the complex wave speed, \(Re = UL/\nu\), and primes de
 This fourth-order ODE with complex coefficients requires four boundary conditions: \(\phi = \phi' = 0\) at each wall (no-slip and no-penetration). For a given \(k\) and \(Re\), the eigenvalue \(c\) is found. The flow is unstable if \(\text{Im}(c) > 0\) for any \(k\).
 
 The Orr–Sommerfeld equation is the central object of viscous stability theory. In the inviscid limit \(Re \to \infty\), it reduces to the **Rayleigh equation**:
+
 \[
 (U-c)(\phi'' - k^2\phi) - U''\phi = 0
 \]
@@ -1567,6 +1637,7 @@ The **Kelvin–Helmholtz (KH) instability** arises at the interface between two 
 </div>
 
 The flow is unstable (\(\text{Im}(\omega) \neq 0\)) when the expression under the square root is negative:
+
 \[
 k > k_c = \frac{g(\rho_1^2 - \rho_2^2)}{\rho_1\rho_2(U_1-U_2)^2}
 \]
@@ -1580,11 +1651,13 @@ The KH instability is ubiquitous: it is responsible for the formation of ocean s
 The **Rayleigh–Taylor (RT) instability** arises when a denser fluid overlies a lighter fluid under gravity — the classic "heavy fluid over light fluid" problem. Even in the absence of mean flow, the configuration is unstable.
 
 For two semi-infinite, inviscid, irrotational layers with densities \(\rho_2 > \rho_1\) (heavy over light), with gravity \(g\) acting downward:
+
 \[
 \omega^2 = gk\frac{\rho_1 - \rho_2}{\rho_1 + \rho_2} < 0 \quad \text{(since } \rho_2 > \rho_1\text{)}
 \]
 
 So \(\omega\) is purely imaginary, with growth rate:
+
 \[
 \sigma = \text{Im}(\omega) = \sqrt{gk\frac{\rho_2 - \rho_1}{\rho_1 + \rho_2}}
 \]
@@ -1596,6 +1669,7 @@ Short waves grow faster: the RT instability is **ultraviolet** (high-\(k\)) unst
 **Rayleigh–Bénard convection** is the instability of a fluid layer heated uniformly from below. A horizontal layer of fluid of depth \(d\) is maintained at temperature \(T_0 + \Delta T\) at the bottom and \(T_0\) at the top. The density is lower at the bottom (since hot fluid expands), so this is a potentially unstable density stratification — but viscosity and thermal diffusion work against it.
 
 The competition is characterised by the **Rayleigh number**:
+
 \[
 Ra = \frac{g\alpha\Delta T d^3}{\nu\kappa}
 \]
@@ -1619,11 +1693,13 @@ Beyond \(Ra_c\), convection rolls are steady; at higher \(Ra\), they undergo fur
 Linear stability theory determines whether infinitesimal perturbations grow. But it says nothing about the stability of flows to **finite-amplitude** perturbations. A flow can be linearly stable yet jump to turbulence when perturbed sufficiently strongly — this is precisely what happens in pipe flow (Hagen–Poiseuille), which is linearly stable for all \(Re\) yet turbulent in practice above \(Re \approx 2300\).
 
 The **energy method** (Serrin 1959, Joseph 1976) provides rigorous nonlinear stability results. Define the perturbation energy:
+
 \[
 E(t) = \frac{1}{2}\int_\mathcal{V} |\mathbf{u}'|^2\, dV
 \]
 
 Taking the time derivative and using the Navier–Stokes equations for the perturbation:
+
 \[
 \frac{dE}{dt} = -\int_\mathcal{V} u'_i u'_j\frac{\partial\overline{u}_i}{\partial x_j}\, dV - \nu\int_\mathcal{V} |\nabla\mathbf{u}'|^2\, dV
 \]
@@ -1637,6 +1713,7 @@ This yields a **global stability threshold** \(Re_E\) (the energy Reynolds numbe
 **Centrifugal instability** arises in rotating flows when the centrifugal force on a radially displaced fluid ring exceeds the restoring pressure gradient, so the ring continues outward rather than returning. It is the rotational analogue of Rayleigh–Taylor instability, and it produces the most visually stunning sequence of bifurcations in fluid mechanics.
 
 The canonical example is **Taylor–Couette flow**: viscous fluid between two coaxial cylinders of radii \(R_1 < R_2\), rotating at angular velocities \(\Omega_1\) and \(\Omega_2\). The base flow is an azimuthal profile:
+
 \[
 V(r) = Ar + \frac{B}{r}, \qquad A = \frac{\Omega_2 R_2^2 - \Omega_1 R_1^2}{R_2^2 - R_1^2}, \quad B = \frac{(\Omega_1 - \Omega_2)R_1^2 R_2^2}{R_2^2 - R_1^2}
 \]
@@ -1652,6 +1729,7 @@ is non-negative everywhere. Instability occurs wherever \(\Phi < 0\), i.e., wher
 </div>
 
 With viscosity, the critical threshold is quantified by the **Taylor number**:
+
 \[
 Ta = \frac{\Omega_1^2 R_1^2 (R_2 - R_1)^3}{\nu^2 R_2}
 \]
@@ -1665,6 +1743,7 @@ Beyond the first bifurcation, Taylor–Couette flow undergoes a remarkably rich 
 **Barotropic instability** is the two-dimensional analogue of Kelvin–Helmholtz instability in a rotating geophysical fluid. It occurs in flows with no vertical structure (barotropic flows — pressure surfaces are horizontal and coincide with density surfaces) when perturbations can extract energy from the **horizontal shear** of the mean flow. It is responsible for the break-up of atmospheric jets and oceanic currents into synoptic-scale eddies.
 
 On the \(\beta\)-plane, the linearised quasi-geostrophic potential vorticity equation for stream function perturbations \(\psi'\) to a zonal mean flow \(\overline{U}(y)\) is the **Rayleigh–Kuo equation**:
+
 \[
 (\overline{U} - c)\!\left(\frac{\partial^2\psi'}{\partial y^2} - k^2\psi'\right) + \left(\beta - \frac{\partial^2\overline{U}}{\partial y^2}\right)\psi' = 0
 \]
@@ -1702,6 +1781,7 @@ where \(\mu = kNH/f\) is the non-dimensional wavenumber. Instability (\(\text{Im
 </div>
 
 The maximum growth rate — achieved at \(\mu \approx 1.61\) — is:
+
 \[
 \sigma_{max} = \text{Im}(kc)_{max} \approx 0.31\frac{f\Lambda}{N}
 \]
@@ -1737,6 +1817,7 @@ E(k) = C_K\, \varepsilon^{2/3} k^{-5/3}
 \]
 
 where \(C_K \approx 1.5\) is the **Kolmogorov constant**. This \(-5/3\) power law is one of the most celebrated results in theoretical physics: confirmed over more than five decades in wavenumber in atmospheric boundary layer data, oceanic measurements, wind tunnel experiments, and DNS. The Kolmogorov **microscale** — the scale at which viscous dissipation dominates — is:
+
 \[
 \eta = \!\left(\frac{\nu^3}{\varepsilon}\right)^{1/4}
 \]
@@ -1754,6 +1835,7 @@ The **closure problem** (§7.2 of AMATH 463) is the central unsolved problem of 
 ### Stratified Turbulence and the Miles–Howard Criterion
 
 **Stratification** fundamentally alters turbulence. The key parameter is the **Richardson number**:
+
 \[
 Ri = \frac{N^2}{(\partial U/\partial z)^2}
 \]

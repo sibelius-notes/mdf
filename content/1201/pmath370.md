@@ -317,6 +317,7 @@ f^3(a) \leq a < f(a) < f^2(a) \quad \text{or} \quad f^3(a) \geq a > f(a) > f^2(a
 \limsup_{n \to \infty} |f^n(x) - f^n(y)| > 0 \quad \text{and} \quad \liminf_{n \to \infty} |f^n(x) - f^n(y)| = 0.
 \]
 Furthermore, for every periodic point \(p\) and every \(x \in S\):
+
 \[
 \limsup_{n \to \infty} |f^n(x) - f^n(p)| > 0.
 \]
@@ -389,6 +390,7 @@ Several inequivalent definitions of chaos exist. The most widely used in the con
 The tent map \(T(x)\) is chaotic on \([0,1]\). This follows easily from its piecewise linear nature:
 
 **SDIC:** At every point \(x \in [0,1]\) (except \(x = \frac{1}{2}\)), \(|T'(x)| = 2\). By the Mean Value Theorem, if \(x\) and \(y\) lie on the same linear piece of \(T\),
+
 \[
 |T(x) - T(y)| = 2|x - y|.
 \]
@@ -430,6 +432,7 @@ Taking logarithms and averaging:
 This is the time average of \(\ln |f'|\) along the orbit of \(x\).
 
 **Tent map:** Since \(|T'(x)| = 2\) everywhere (except \(x = \frac{1}{2}\)),
+
 \[
 \lambda = \frac{1}{n} \cdot n \ln 2 = \ln 2 \approx 0.693.
 \]
@@ -522,6 +525,7 @@ The metric on \(\Sigma_2\) is \(d_{\Sigma_2}(b, b') = \sum_{k=0}^{\infty} \frac{
 **Density of periodic orbits:** For any \(x \in [0,1]\) and any neighbourhood \((x - \delta, x + \delta)\), choose \(N\) so that \(2^{-N} < \delta\). The repeating sequence \((b_0, b_1, \ldots, b_{N-1}, b_0, b_1, \ldots)\) defines a periodic point \(p\) of period \(N\) which satisfies \(|x - p| \leq 2^{-N} < \delta\).
 
 **Transitivity (dense orbit):** Construct \(x\) by concatenating all binary strings of all lengths:
+
 \[
 x = .0 \;|\; 00 \; 01 \; 10 \; 11 \;|\; 000 \; 001 \; 010 \; \cdots
 \]
@@ -589,6 +593,7 @@ normalized so that \(\int_0^1 \rho(x)\, dx = 1\). The conservation principle und
 \int_S \rho(x)\, dx = \int_{f^{-1}(S)} \rho(x)\, dx,
 \]
 where \(f^{-1}(S) = \{x : f(x) \in S\}\). Equivalently, defining the measure \(\mu(S) = \int_S \rho\, dx\),
+
 \[
 \mu(S) = \mu(f^{-1}(S)) \quad \text{for all } S.
 \]
@@ -668,6 +673,7 @@ The Cantor set exhibits a remarkable combination of properties that seem contrad
 **Property 2: \(C\) is uncountable.** Every \(x \in C\) has a ternary expansion using only digits \(\{0, 2\}\) (never \(1\)). The mapping \(t_k \in \{0,2\} \mapsto b_k = t_k/2 \in \{0,1\}\) provides a bijection between \(C\) and all binary sequences, hence between \(C\) and \([0,1]\). Since \([0,1]\) is uncountable, so is \(C\). In fact, \(|C| = |\mathbb{R}| = \aleph_1\).
 
 **Property 3: \(C\) has Lebesgue measure zero.** The total length removed is
+
 \[
 \frac{1}{3} + \frac{2}{9} + \frac{4}{27} + \cdots = \sum_{k=0}^{\infty} \frac{2^k}{3^{k+1}} = \frac{1/3}{1 - 2/3} = 1.
 \]
@@ -832,6 +838,7 @@ For \(c \neq \frac{1}{4}\), there are two distinct fixed points.
 K_c = \{z \in \mathbb{C} : g_c^n(z) \not\to \infty\} = \{z : \text{the orbit of } z \text{ is bounded}\}.
 \]
 The <em>Julia set</em> \(J_c\) is the boundary of \(K_c\):
+
 \[
 J_c = \partial K_c.
 \]
@@ -987,16 +994,19 @@ For inhomogeneous scaling with contraction ratios \(r_1, \ldots, r_n\), the dime
 ## Additional Examples
 
 **Sierpinski Carpet:** Remove the middle-ninth of each square in a \(3 \times 3\) grid, then repeat. The result has \(N = 8\) copies at scale \(r = 1/3\):
+
 \[
 D = \frac{\ln 8}{\ln 3} = \frac{3\ln 2}{\ln 3} \approx 1.893.
 \]
 
 **Menger Sponge:** The three-dimensional analogue: remove a cube from the centre and the 12 edge-cubes, leaving 20 subcubes at scale \(r = 1/3\):
+
 \[
 D = \frac{\ln 20}{\ln 3} \approx 2.727.
 \]
 
 **3D Sierpinski Gasket:** 4 copies at scale \(r = 1/2\):
+
 \[
 D = \frac{\ln 4}{\ln 2} = 2.
 \]

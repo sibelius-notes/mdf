@@ -965,6 +965,7 @@ The first invariant tells us that if \(E > cB\) in one frame, it is greater in a
 ## Handy Identities in 3D
 
 The **BAC-CAB rule** for the triple cross product:
+
 \[
 \mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = \mathbf{B}(\mathbf{A}\cdot\mathbf{C}) - \mathbf{C}(\mathbf{A}\cdot\mathbf{B}).
 \]

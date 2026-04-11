@@ -359,15 +359,18 @@ Set \( \theta^{(t+1)} = \theta^* \) with probability \( \alpha \), else \( \thet
 where \( P(\theta, d\theta') \) is the transition kernel.
 
 *Proof.* For \( \theta \neq \theta' \),
+
 \[
 \pi(\theta)\,q(\theta' \mid \theta)\,\alpha(\theta, \theta')
 = \pi(\theta)\,q(\theta' \mid \theta)\min\!\left(1, \frac{\pi(\theta')\,q(\theta \mid \theta')}{\pi(\theta)\,q(\theta' \mid \theta)}\right).
 \]
 Without loss of generality assume \( \pi(\theta)\,q(\theta' \mid \theta) \leq \pi(\theta')\,q(\theta \mid \theta') \). Then
+
 \[
 = \pi(\theta)\,q(\theta' \mid \theta) \cdot 1
 \]
 while
+
 \[
 \pi(\theta')\,q(\theta \mid \theta')\,\alpha(\theta', \theta)
 = \pi(\theta')\,q(\theta \mid \theta')\min\!\left(1, \frac{\pi(\theta)\,q(\theta' \mid \theta)}{\pi(\theta')\,q(\theta \mid \theta')}\right)
@@ -1045,6 +1048,7 @@ Now compare \( \theta^{(t+1)} \) to \( \theta^{(t)} \):
 \]
 
 The second term: by the non-negativity of KL divergence,
+
 \[
 H(\theta \mid \theta^{(t)}) - H(\theta^{(t)} \mid \theta^{(t)})
 = -\mathrm{KL}\!\left(p(z \mid y, \theta^{(t)}) \,\|\, p(z \mid y, \theta)\right) \leq 0.

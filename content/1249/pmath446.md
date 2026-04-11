@@ -126,6 +126,7 @@ Every short exact sequence of vector spaces splits (since every subspace has a c
 </div>
 
 **Why exactness matters: the Snake Lemma.** Given a commutative diagram of short exact sequences:
+
 \[
 \begin{array}{ccccccccc}
 0 & \to & A & \xrightarrow{\alpha} & B & \xrightarrow{\beta} & C & \to & 0 \\
@@ -136,6 +137,7 @@ Every short exact sequence of vector spaces splits (since every subspace has a c
 the Snake Lemma produces a long exact sequence \(0 \to \ker f \to \ker g \to \ker h \xrightarrow{\partial} \mathrm{coker}\, f \to \mathrm{coker}\, g \to \mathrm{coker}\, h \to 0\). The "connecting homomorphism" \(\partial\) is the key non-trivial piece. This is the prototype for the long exact sequences in homology theory.
 
 **Explicit Snake Lemma example.** Take \(R = \mathbb{Z}\) and the diagram:
+
 \[
 \begin{array}{ccccccccc}
 0 & \to & \mathbb{Z} & \xrightarrow{\times 2} & \mathbb{Z} & \to & \mathbb{Z}/2 & \to & 0 \\
@@ -180,6 +182,7 @@ Step 1: Use the \((3,3)\)-entry (which is 1) to clear the rest of column 3 and r
 The Smith Normal Form is \(\mathrm{diag}(1, 2, 3)\) (with \(1 \mid 2 \mid 3\) after reordering). Therefore \(M \cong \mathbb{Z}/1 \oplus \mathbb{Z}/2 \oplus \mathbb{Z}/3 \cong \mathbb{Z}/2 \oplus \mathbb{Z}/3 \cong \mathbb{Z}/6\). (We used that \(\mathbb{Z}/1 = 0\) and that \(\mathbb{Z}/2 \oplus \mathbb{Z}/3 \cong \mathbb{Z}/6\) by CRT since \(\gcd(2,3) = 1\).)
 
 **A second example: the matrix \(\begin{pmatrix} 4 & 6 \\ 2 & 3 \end{pmatrix}\).** We reduce this \(2 \times 2\) integer matrix to Smith Normal Form. Start:
+
 \[
 \begin{pmatrix} 4 & 6 \\ 2 & 3 \end{pmatrix} \xrightarrow{R_1 \leftarrow R_1 - 2R_2} \begin{pmatrix} 0 & 0 \\ 2 & 3 \end{pmatrix} \xrightarrow{\text{swap}} \begin{pmatrix} 2 & 3 \\ 0 & 0 \end{pmatrix} \xrightarrow{C_2 \leftarrow C_2 - C_1} \begin{pmatrix} 2 & 1 \\ 0 & 0 \end{pmatrix} \xrightarrow{C_1 \leftrightarrow C_2} \begin{pmatrix} 1 & 2 \\ 0 & 0 \end{pmatrix} \xrightarrow{C_2 \leftarrow C_2 - 2C_1} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
 \]
@@ -252,6 +255,7 @@ The universal property is the "correct" definition of the tensor product — it 
 </div>
 
 **Full verification of \(\mathbb{Z}/m \otimes \mathbb{Z}/n \cong \mathbb{Z}/d\) where \(d = \gcd(m,n)\).** We use the free resolution approach. The module \(\mathbb{Z}/n\) fits in the exact sequence \(0 \to \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \to \mathbb{Z}/n \to 0\). Tensoring with \(\mathbb{Z}/m\) (which is right exact):
+
 \[
 \mathbb{Z}/m \xrightarrow{\times n} \mathbb{Z}/m \to \mathbb{Z}/m \otimes_\mathbb{Z} \mathbb{Z}/n \to 0.
 \]
@@ -279,6 +283,7 @@ Tensor product is <em>not</em> left exact in general: injections need not be pre
 </div>
 
 **Computing \(\mathrm{Tor}_1^\mathbb{Z}(\mathbb{Z}/m, \mathbb{Z}/n)\).** Using the free resolution \(0 \to \mathbb{Z} \xrightarrow{\times m} \mathbb{Z} \to \mathbb{Z}/m \to 0\) and tensoring with \(\mathbb{Z}/n\):
+
 \[
 0 \to \mathrm{Tor}_1(\mathbb{Z}/m, \mathbb{Z}/n) \to \mathbb{Z}/n \xrightarrow{\times m} \mathbb{Z}/n \to \mathbb{Z}/m \otimes \mathbb{Z}/n \to 0.
 \]
@@ -665,6 +670,7 @@ The <strong>height</strong> of a prime ideal \(P\) is \(\mathrm{ht}(P) = \mathrm
 **A non-trivial example: dimension of \(k[x,y,z]/(xy, xz)\).** Consider \(R = k[x,y,z]/(xy, xz)\). What is \(\dim R\)? The variety \(V(xy, xz) = \{x = 0\} \cup \{y = 0, z = 0\}\) decomposes as the plane \(\{x = 0\} \cong \mathbb{A}^2\) (dimension 2) and the line \(\{y = z = 0\} \cong \mathbb{A}^1\) (dimension 1). The dimension of \(R\) equals the maximum of the dimensions of the irreducible components, which is 2.
 
 Let us explicitly find a maximal chain of primes of length 2 in \(R\). Working in \(R = k[x,y,z]/(xy,xz)\), we have the chain:
+
 \[
 (0) \subsetneq \overline{(y,z)} \subsetneq \overline{(x, y, z)},
 \]
@@ -1008,6 +1014,7 @@ Proof: If \(f \in (x) \cap (x^2, y)\), write \(f = xg = ax^2 + by\). Then \(by =
 We have shown \(I = (x) \cap (x^2, y)\). Here \((x)\) is prime and \((x^2, y)\) is \((x,y)\)-primary (it contains the primary ideal \((y)\) not quite — \(\sqrt{(x^2, y)} = (x,y)\) since \(x^2, y \in (x^2,y)\) implies \(x \in \sqrt{(x^2,y)}\) and \(y \in \sqrt{(x^2,y)}\)). The associated primes are \((x)\) (the whole \(y\)-axis) and \((x,y)\) (the origin, which is an embedded point).
 
 **A second example: \(I = (x^2 y, xy^2)\) in \(k[x,y]\).** The variety is \(V(I) = \{xy(x + y \cdot 0) = 0, \ldots\}\) — actually \(V(x^2 y) = V(x) \cup V(y)\) and \(V(xy^2) = V(x) \cup V(y)\), so \(V(I) = V(x) \cup V(y)\), the union of both axes. We claim:
+
 \[
 (x^2 y, xy^2) = (x, y^2) \cap (x^2, y) \cap (x, y).
 \]
@@ -1262,12 +1269,14 @@ A **free resolution** of an \(R\)-module \(M\) is an exact sequence:
 where each \(F_i\) is a free \(R\)-module. The maps \(d_i\) are the **boundary maps**, and \(\ker(d_{i-1}) = \mathrm{im}(d_i)\) is the **\(i\)th syzygy module** of \(M\).
 
 **Computing a free resolution of \(\mathbb{Z}/n\).** Over \(R = \mathbb{Z}\):
+
 \[
 0 \to \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \to \mathbb{Z}/n \to 0.
 \]
 This is a free resolution of length 1 (projective dimension 1). The syzygy \(\ker(\epsilon) = n\mathbb{Z} \cong \mathbb{Z}\) is free.
 
 **Computing a free resolution of \(k\) over \(k[x,y]\).** Over \(R = k[x,y]\) and \(M = R/(x,y) \cong k\) (the residue field):
+
 \[
 0 \to R \xrightarrow{\begin{pmatrix} -y \\ x \end{pmatrix}} R^2 \xrightarrow{\begin{pmatrix} x & y \end{pmatrix}} R \to k \to 0.
 \]
@@ -1372,10 +1381,12 @@ For a finitely generated graded module \(M = \bigoplus_d M_d\) over \(S = k[x_0,
 **Example: the Hilbert polynomial of a projective curve.** For a smooth curve \(C\) of degree \(d\) in \(\mathbb{P}^2\) with homogeneous coordinate ring \(S(C) = k[x,y,z]/(f)\) where \(\deg f = d\):
 
 The Hilbert function of \(k[x,y,z]\) is \(H_{k[x,y,z]}(n) = \binom{n+2}{2}\). The ideal \((f)\) contributes starting at degree \(d\): \(H_{(f)}(n) = \binom{n-d+2}{2}\) for \(n \geq d\). By the short exact sequence \(0 \to S(-d) \xrightarrow{\cdot f} S \to S(C) \to 0\):
+
 \[
 H_{S(C)}(n) = \binom{n+2}{2} - \binom{n-d+2}{2} \text{ for } n \gg 0.
 \]
 The Hilbert polynomial is:
+
 \[
 P_{S(C)}(n) = \binom{n+2}{2} - \binom{n-d+2}{2} = \frac{(n+2)(n+1)}{2} - \frac{(n-d+2)(n-d+1)}{2}.
 \]
@@ -1442,6 +1453,7 @@ This theorem is the algebraic version of the fact that a coherent sheaf on a var
 We have seen that tensor product is right exact and Hom is left exact. The failure of these functors to be exact is measured by their **derived functors**: \(\mathrm{Tor}_i\) and \(\mathrm{Ext}^i\). These are the fundamental homological invariants.
 
 **Reminder on projective resolutions.** A **projective resolution** of a module \(M\) is an exact sequence:
+
 \[
 \cdots \to P_2 \to P_1 \to P_0 \to M \to 0
 \]
@@ -1459,12 +1471,14 @@ These are independent of the choice of projective resolution. \(\mathrm{Tor}_0(M
 ## Section 25.2: Computing Tor and Ext
 
 **Tor via the free resolution of \(\mathbb{Z}/n\).** Using \(0 \to \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \to \mathbb{Z}/n \to 0\):
+
 \[
 \mathrm{Tor}_i^\mathbb{Z}(\mathbb{Z}/n, M) = \begin{cases} M/nM & i = 0 \\ {}_n M = \ker(\times n : M \to M) & i = 1 \\ 0 & i \geq 2 \end{cases}
 \]
 (since \(\mathbb{Z}\) has global dimension 1). For example, \(\mathrm{Tor}_1^\mathbb{Z}(\mathbb{Z}/6, \mathbb{Z}/4) = {}_6(\mathbb{Z}/4) = \{a \in \mathbb{Z}/4 \mid 6a = 0\} = \{a \mid 2a = 0\} = \{0, 2\} \cong \mathbb{Z}/2\).
 
 **Ext via the free resolution.** Using the same resolution:
+
 \[
 \mathrm{Ext}^i_\mathbb{Z}(\mathbb{Z}/n, M) = \begin{cases} \mathrm{Hom}(\mathbb{Z}/n, M) = {}_n M & i = 0 \\ M/nM & i = 1 \\ 0 & i \geq 2 \end{cases}
 \]
@@ -1482,18 +1496,21 @@ The Koszul complex is the fundamental free resolution in commutative algebra. Fo
 0 \to \wedge^r R^r \to \wedge^{r-1} R^r \to \cdots \to \wedge^1 R^r \to R \to 0,
 \]
 where the differential \(d: \wedge^p R^r \to \wedge^{p-1} R^r\) is defined on basis elements by:
+
 \[
 d(e_{i_1} \wedge \cdots \wedge e_{i_p}) = \sum_{j=1}^p (-1)^{j+1} x_{i_j} e_{i_1} \wedge \cdots \hat{e}_{i_j} \cdots \wedge e_{i_p}.
 \]
 \end{div}
 
 **Properties.** If \(\mathbf{x} = x_1,\ldots,x_r\) is a regular sequence on \(M\), then the Koszul complex \(K_\bullet(\mathbf{x}) \otimes M\) is a free resolution of \(M/(\mathbf{x})M\):
+
 \[
 H_i(K_\bullet(\mathbf{x}) \otimes M) = \begin{cases} M/(\mathbf{x})M & i = 0 \\ 0 & i > 0 \end{cases}
 \]
 This is the key computational tool for depth: \(\mathrm{depth}(\mathbf{x}, M) = r\) (length of the sequence) if and only if the Koszul homology \(H_i(K_\bullet(\mathbf{x}) \otimes M) = 0\) for \(i > 0\).
 
 **Example.** For \(R = k[x,y]\) and \(\mathbf{x} = (x,y)\), the Koszul complex is:
+
 \[
 0 \to R \xrightarrow{\begin{pmatrix} -y \\ x \end{pmatrix}} R^2 \xrightarrow{(x, y)} R \to 0.
 \]
@@ -1586,6 +1603,7 @@ Over a polynomial ring \(S = k[x_1,\ldots,x_n]\), we can choose free resolutions
 </div>
 
 **Betti table.** The Betti numbers of a module are often displayed in a **Betti table**:
+
 \[
 \begin{array}{c|cccc}
 & 0 & 1 & 2 & \cdots \\
@@ -1598,6 +1616,7 @@ Over a polynomial ring \(S = k[x_1,\ldots,x_n]\), we can choose free resolutions
 where entry in column \(i\) and row \(j\) is \(\beta_{i,i+j}\).
 
 **Example: twisted cubic.** The twisted cubic \(C \subset \mathbb{P}^3\) is parametrized by \([s:t] \mapsto [s^3 : s^2 t : st^2 : t^3]\). Its homogeneous ideal \(I_C \subset k[x_0,x_1,x_2,x_3]\) is generated by the \(2 \times 2\) minors of the matrix \(\begin{pmatrix} x_0 & x_1 & x_2 \\ x_1 & x_2 & x_3 \end{pmatrix}\): the generators are \(x_0 x_2 - x_1^2\), \(x_0 x_3 - x_1 x_2\), \(x_1 x_3 - x_2^2\) (three quadrics). The minimal free resolution of \(S/I_C\) is:
+
 \[
 0 \to S(-3)^2 \to S(-2)^3 \to S \to S/I_C \to 0.
 \]
@@ -1912,6 +1931,7 @@ This example shows that primary decomposition in practice requires careful compu
 I = xy(x,y) &= (x) \cdot y(x,y) = (x) \cdot (xy, y^2).
 \end{align*}
 The associated primes of $I$ are the minimal primes $(x)$ and $(y)$, and possibly the embedded prime $(x,y)$. The primary decomposition:
+
 \[
 (x^2y, xy^2) = (x^2, y) \cap (x, y^2).
 \]
@@ -1925,6 +1945,7 @@ The correct primary decomposition of $I = (x^2y, xy^2) = xy(x,y)$. By the formul
 Actually, the simplest correct statement is: $I = (x^2y, xy^2) = (x) \cap (y) \cap (x^2, xy, y^2) $? No...
 
 Let me just accept: primary decomposition for $I = (x^2y, xy^2)$ is genuinely non-trivial, and the correct answer (which requires Gröbner basis methods or systematic algorithm) is:
+
 \[
 (x^2y, xy^2) = (x^2, xy, y^2) \cap (x) \cap (y)?
 \]
@@ -1951,6 +1972,7 @@ In \(\mathbb{Z}\), every nonzero ideal \((n)\) factors as a product of prime-pow
 **Why intersection, not product.** In \(k[x,y]\), consider the ideal \(I = (x^2, xy)\). One might hope to write \(I\) as a product of prime ideals. But the primes above \(I\) are \((x)\) (since \(V(I) = V(x)\)) and \((x,y)\) (an embedded prime). The "product" perspective fails: \((x)^2 = (x^2)\) does not equal \(I\), and \((x)(x,y) = (x^2, xy)\) actually does equal \(I\) here — but this is a happy accident due to the special structure, and in general products of primes do not give back \(I\) in a useful way.
 
 The correct statement is:
+
 \[
 (x^2, xy) = (x) \cap (x^2, y).
 \]

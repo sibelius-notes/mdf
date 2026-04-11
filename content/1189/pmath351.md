@@ -420,6 +420,7 @@ ab \le \frac{a^p}{p} + \frac{b^q}{q},
 which follows from the concavity of the logarithm: \(\log(ab) = \log a + \log b \le \log(a^p/p + b^q/q)\) by the weighted AM-GM inequality. Alternatively, since \(e^t\) is convex, \(e^{t/p + s/q} \le e^t/p + e^s/q\).
 
 Applying Young's inequality with \(a = |x_i|/\|x\|_p\) and \(b = |y_i|/\|y\|_q\):
+
 \[
 \frac{|x_i y_i|}{\|x\|_p \|y\|_q} \le \frac{|x_i|^p}{p\|x\|_p^p} + \frac{|y_i|^q}{q\|y\|_q^q}.
 \]
@@ -432,6 +433,7 @@ Summing over \(i\): \(\sum |x_i y_i| / (\|x\|_p \|y\|_q) \le 1/p + 1/q = 1\), gi
 |x_i + y_i|^p = |x_i + y_i| \cdot |x_i + y_i|^{p-1} \le (|x_i| + |y_i|) |x_i + y_i|^{p-1}.
 \]
 Summing and applying Hölder's inequality with exponents \(p\) and \(q = p/(p-1)\):
+
 \[
 \|x + y\|_p^p \le \|x\|_p \cdot \left(\sum |x_i + y_i|^{(p-1)q}\right)^{1/q} + \|y\|_p \cdot \left(\sum |x_i + y_i|^{(p-1)q}\right)^{1/q}.
 \]
@@ -507,6 +509,7 @@ In this metric, the sequence \(p^n \to 0\) as \(n \to \infty\). Ultrametric spac
 D\big((x_1,y_1), (x_2,y_2)\big) = \max\{d(x_1,x_2),\, \rho(y_1,y_2)\}.
 \]
 Other equivalent choices include \(D_1 = d + \rho\) and \(D_2 = (d^2 + \rho^2)^{1/2}\). In any of these metrics, a sequence \((x_n, y_n) \to (x_0, y_0)\) if and only if \(x_n \to x_0\) and \(y_n \to y_0\). The equivalence follows from the inequalities
+
 \[
 D_\infty \le D_2 \le D_1 \le 2 D_\infty,
 \]
@@ -1002,6 +1005,7 @@ Topological properties --- connectedness, compactness, separability, the Hausdor
 </div>
 
 The implications are: isometry \(\Rightarrow\) biLipschitz \(\Rightarrow\) Lipschitz \(\Rightarrow\) uniformly continuous \(\Rightarrow\) continuous, and none of the converses hold in general. In summary:
+
 \[
 \text{isometry} \;\Longrightarrow\; \text{biLipschitz} \;\Longrightarrow\; \text{Lipschitz} \;\Longrightarrow\; \text{uniformly continuous} \;\Longrightarrow\; \text{continuous}.
 \]
@@ -1586,6 +1590,7 @@ The theorems in this section are among the most frequently used consequences of 
 <strong>Proof.</strong> Assume \(f_n \nearrow f\) (the decreasing case follows by considering \(-f_n \nearrow -f\)). Define \(g_n = f - f_n \ge 0\). Then \(g_n\) is continuous, \(g_n(x) \searrow 0\) for each \(x\), and we must show \(\|g_n\|_\infty \to 0\).
 
 Fix \(\varepsilon > 0\). For each \(x \in X\), choose \(N(x)\) with \(g_{N(x)}(x) < \varepsilon/2\). By continuity of \(g_{N(x)}\), there exists an open neighborhood \(U_x\) of \(x\) with \(g_{N(x)}(y) < \varepsilon\) for all \(y \in U_x\). The sets \(\{U_x : x \in X\}\) form an open cover of \(X\). By compactness, extract a finite subcover \(U_{x_1}, \ldots, U_{x_k}\). Let \(N = \max\{N(x_1), \ldots, N(x_k)\}\). For any \(y \in X\), choose \(x_i\) with \(y \in U_{x_i}\). Since \(g_n\) is decreasing and \(n \ge N \ge N(x_i)\):
+
 \[
 0 \le g_n(y) \le g_{N(x_i)}(y) < \varepsilon.
 \]
@@ -1654,10 +1659,12 @@ So \((g_k)\) is Cauchy in \(C(X)\), hence converges. Since \(S\) is closed, the 
 <strong>Remark (Compact operators and the Arzela--Ascoli theorem).</strong> The Arzela--Ascoli theorem provides the key compactness criterion for operators on function spaces. A linear operator \(T: V \to W\) between normed spaces is called <em>compact</em> if \(T\) maps bounded sets to relatively compact sets (i.e., \(\overline{T(B)}\) is compact for every bounded set \(B\)).
 
 The integral operator \(T: C[a,b] \to C[a,b]\) defined by
+
 \[
 (Tf)(x) = \int_a^b K(x,t) f(t)\, dt,
 \]
 where \(K: [a,b]^2 \to \mathbb{R}\) is continuous, is a compact operator. To prove this using Arzela--Ascoli: if \(\|f\|_\infty \le M\), then \(\|Tf\|_\infty \le M(b-a)\|K\|_\infty\) (uniform boundedness), and for any \(\varepsilon > 0\), the uniform continuity of \(K\) on the compact set \([a,b]^2\) gives \(\delta > 0\) with
+
 \[
 |Tf(x) - Tf(y)| \le M \int_a^b |K(x,t) - K(y,t)|\, dt < \varepsilon
 \]
@@ -2047,12 +2054,14 @@ Then \(f\) is continuous at \(x\) if and only if \(\omega_f(x) = 0\).
 <strong>Proof.</strong> By Theorem 8.7, the set of continuity points is a \(G_\delta\), so it suffices to show it is dense. Let \(A = \{x \in [a,b] : f \text{ is discontinuous at } x\}\). For each \(n \ge 1\), define \(A_n = \{x : \omega_f(x) \ge 1/n\}\). Since \(A = \bigcup_{n=1}^\infty A_n\), it suffices to show each \(A_n\) is nowhere dense.
 
 Each \(A_n\) is closed by Theorem 8.7. Suppose for contradiction that some \(A_n\) contains an open interval \(I\). Fix \(\varepsilon = \frac{1}{3n}\). For each \(N \ge 1\), define
+
 \[
 E_N = \{x \in I : |f_i(x) - f_j(x)| \le \varepsilon \text{ for all } i, j \ge N\}.
 \]
 Each \(E_N\) is closed (an intersection of closed sets). Since \(f_i(x) \to f(x)\) pointwise, for each \(x \in I\) the sequence \((f_i(x))\) is Cauchy, so \(x \in E_N\) for some \(N\). Thus \(I = \bigcup_{N=1}^\infty E_N\). By the Baire Category Theorem applied to the complete metric space \(I\), some \(E_{N_0}\) has nonempty interior, so there is an open sub-interval \(J \subseteq E_{N_0}\).
 
 Fix \(x \in J\). By uniform continuity of \(f_{N_0}\) on \([a,b]\), there exists \(\delta > 0\) such that \(|x - y| < \delta \implies |f_{N_0}(x) - f_{N_0}(y)| < \varepsilon\). We may assume \((x - \delta, x + \delta) \subseteq J\). Then for \(|y - x| < \delta\):
+
 \[
 |f(x) - f(y)| \le |f(x) - f_{N_0}(x)| + |f_{N_0}(x) - f_{N_0}(y)| + |f_{N_0}(y) - f(y)| < \varepsilon + \varepsilon + \varepsilon = \frac{1}{n},
 \]
@@ -2536,6 +2545,7 @@ A natural question arising from the metric completion is: how large must a "univ
 \varphi(x) = \bigl(d(x, q_1) - d(a, q_1),\; d(x, q_2) - d(a, q_2),\; \ldots\bigr).
 \]
 This is well-defined since \(|d(x, q_n) - d(a, q_n)| \le d(x, a)\) by the triangle inequality, so \(\varphi(x) \in \ell^\infty\) with \(\|\varphi(x)\|_\infty \le d(x,a)\). To show \(\varphi\) is an isometry:
+
 \[
 \|\varphi(x) - \varphi(y)\|_\infty = \sup_n |d(x, q_n) - d(y, q_n)| \le d(x,y)
 \]
@@ -2595,6 +2605,7 @@ Consequently, \(B_n((x-a)^2)(a) = \frac{a - a^2}{n} \le \frac{1}{4n}\) for \(a \
 |f(x) - f(a)| \le \varepsilon + \frac{2\|f\|_\infty}{\delta^2}(x-a)^2.
 \]
 Fixing \(a\) and applying the positive linear map \(B_n\):
+
 \[
 |B_n f(a) - f(a)| \le \varepsilon B_n(1)(a) + \frac{2\|f\|_\infty}{\delta^2} B_n((x-a)^2)(a) \le \varepsilon + \frac{2\|f\|_\infty}{\delta^2} \cdot \frac{1}{4n}.
 \]
@@ -2629,20 +2640,24 @@ The resolution is to use Chebyshev nodes \(x_k = \cos((2k+1)\pi/(2n+2))\), which
 <strong>Remark (Convolution-Kernel Proof of Weierstrass Approximation).</strong> The Bernstein proof above uses a probabilistic averaging operator. There is a second, analytically deeper proof via a polynomial approximate identity — a "convolution kernel" that concentrates at the origin. This proof is the prototype for the Fejér kernel in Fourier analysis.
 
 Define the <em>Landau kernel</em>
+
 \[
 Q_n(t) = c_n(1 - t^2)^n, \quad t \in [-1, 1],
 \]
 where the constant \(c_n\) is chosen so that \(\int_{-1}^1 Q_n(t)\, dt = 1\). Note that \(Q_n\) is a polynomial of degree \(2n\) in \(t\). To estimate \(c_n\): using the substitution \(t = \sin\theta\) or the bound \((1-t^2)^n \ge (1-1/n)^n \ge e^{-2}\) on \(|t| \le 1/\sqrt{n}\), one shows \(\int_{-1}^1 (1-t^2)^n\, dt \ge \frac{2}{\sqrt{n}(1+1/n)} \), so \(c_n = O(\sqrt{n})\). The key property of \(Q_n\) is that for any fixed \(\delta > 0\),
+
 \[
 \int_{\delta \le |t| \le 1} Q_n(t)\, dt \le c_n(1-\delta^2)^n \to 0 \quad \text{as } n \to \infty.
 \]
 In other words, the mass of \(Q_n\) concentrates on \((-\delta, \delta)\) as \(n \to \infty\).
 
 For \(f \in C[-1,1]\), extend \(f\) by zero outside \([-1,1]\) and define the polynomial approximant
+
 \[
 p_n(x) = \int_{-1}^1 f(x + t)\, Q_n(t)\, dt.
 \]
 This is a polynomial in \(x\) of degree \(2n\) (since \(Q_n(t)\) is a polynomial in \(t\) and we are integrating against a fixed function of \(t\)). To show \(p_n \to f\) uniformly on \([-1,1]\), write
+
 \[
 p_n(x) - f(x) = \int_{-1}^1 \bigl(f(x+t) - f(x)\bigr) Q_n(t)\, dt.
 \]
@@ -2842,6 +2857,7 @@ which is more amenable to fixed-point methods because the integral operator is a
 (Tf)(x) = b + \int_a^x \Phi(t, f(t))\, dt.
 \]
 One verifies: (i) \(T\) maps \(\mathcal{X}\) to \(\mathcal{X}\) (since \(|Tf(x) - b| \le K|x-a| \le K\delta\)); and (ii) \(T\) is a contraction with constant \(L\delta < 1\):
+
 \[
 \|Tf - Tg\|_\infty = \max_x \left|\int_a^x [\Phi(t,f(t)) - \Phi(t,g(t))]\, dt\right| \le L\delta \|f - g\|_\infty.
 \]
@@ -2860,12 +2876,14 @@ The <em>Picard iterates</em> \(f_{n+1} = Tf_n\) starting from \(f_0(x) = b\) con
 y(x) = 1 + \int_0^x [1 + t - y(t)]\, dt = 1 + x + \frac{x^2}{2} - \int_0^x y(t)\, dt.
 \]
 Define the Picard operator \(T\) by
+
 \[
 (Tf)(x) = 1 + x + \frac{x^2}{2} - \int_0^x f(t)\, dt.
 \]
 A fixed point of \(T\) solves the ODE. Moreover, \(T\) is a contraction: \(\|Tf - Tg\|_\infty = \|\int_0^x [f(t) - g(t)]\, dt\|_\infty \le |x| \cdot \|f - g\|_\infty \le \frac{1}{2}\|f - g\|_\infty\), with contraction constant \(1/2\).
 
 Computing the iterates starting from \(f_0(x) = 1\):
+
 \[
 f_1(x) = 1 + x + \frac{x^2}{2} - x = 1 + \frac{x^2}{2},
 \]
@@ -2921,10 +2939,12 @@ u(t) \le \alpha \exp\left(\int_a^t v(s)\, ds\right).
 U'(t) - U(t) v(t) \le \alpha v(t).
 \]
 Multiplying both sides by the integrating factor \(e^{-\int_a^t v(s)\,ds}\), we get
+
 \[
 \frac{d}{dt}\left[U(t) e^{-\int_a^t v}\right] \le \alpha v(t) e^{-\int_a^t v}.
 \]
 Integrating from \(a\) to \(t\) (with \(U(a) = 0\)):
+
 \[
 U(t) e^{-\int_a^t v} \le \alpha\left(1 - e^{-\int_a^t v}\right),
 \]
@@ -2958,6 +2978,7 @@ This shows that solutions of Lipschitz ODEs depend continuously on initial condi
 u(t) \le \int_a^t \|\Phi_{\lambda_0}(s, y(s)) - \Phi_\lambda(s, z(s))\|\, ds \le \int_a^t [L \cdot u(s) + \varepsilon(\lambda)]\, ds,
 \]
 where \(\varepsilon(\lambda) = \sup_{(x,y)} \|\Phi_{\lambda_0}(x,y) - \Phi_\lambda(x,y)\| \to 0\) as \(\lambda \to \lambda_0\). By Gronwall with \(\alpha = \varepsilon(\lambda)(b-a)\) and \(v = L\):
+
 \[
 u(t) \le \varepsilon(\lambda)(b-a) e^{L(b-a)} \to 0.
 \]
@@ -2994,6 +3015,7 @@ since the slope of \(F_n\) on each subinterval is bounded by \(M\). Thus \(\{F_n
 F_n(t) = \Gamma + \int_a^t \Phi_n(s)\, ds
 \]
 where \(\Phi_n(s) = \Phi(t_k, F_n(t_k))\) for \(s \in [t_k, t_{k+1})\). Since \(F_{n_k} \to F\) uniformly, and \(\Phi\) is uniformly continuous on the compact set \([a,a+h] \times \overline{B}_R(\Gamma)\), we have \(\Phi(s, F_{n_k}(s)) \to \Phi(s, F(s))\) uniformly. The "lagging error" \(\|F_n(t_k) - F_n(s)\| \le M/n \to 0\), so \(\Phi_n(s) - \Phi(s, F_{n_k}(s)) \to 0\) uniformly as well. Taking the limit in the integral equation:
+
 \[
 F(t) = \Gamma + \int_a^t \Phi(s, F(s))\, ds.
 \]
@@ -3040,6 +3062,7 @@ The progression from Picard to Peano mirrors a general pattern in analysis: weak
 \begin{pmatrix} y \\ z \end{pmatrix}' = \begin{pmatrix} z \\ -y \end{pmatrix}, \quad \begin{pmatrix} y(0) \\ z(0) \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix},
 \]
 where \(z = y'\). Here \(\Phi(x, y, z) = (z, -y)\) is globally Lipschitz (with constant 1), so Picard's theorem guarantees a unique global solution. The Picard iterates starting from \((y_0, z_0) = (0, 1)\) give:
+
 \[
 y_1(x) = x, \quad z_1(x) = 1, \quad y_2(x) = x, \quad z_2(x) = 1 - x^2/2, \quad y_3(x) = x - x^3/6, \ldots
 \]

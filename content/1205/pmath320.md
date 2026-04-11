@@ -422,6 +422,7 @@ This is the standard form of the ellipse with semi-major axis \(a\) along the \(
 <em>Solution.</em> The foci are at \((\pm 3, 0)\), so \(c = 3\). The major axis has length \(2a = 10\), so \(a = 5\). Then \(b^2 = a^2 - c^2 = 25 - 9 = 16\), so \(b = 4\). The eccentricity is \(e = c/a = 3/5 = 0.6\).
 
 The ellipse equation is:
+
 \[
 \frac{x^2}{25} + \frac{y^2}{16} = 1.
 \]
@@ -1383,6 +1384,7 @@ If a symmetry group contains translations in two linearly independent directions
 R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}.
 \]
 If \(\mathbf{v}\) is any lattice vector, then \(R_\theta(\mathbf{v})\) is also in the lattice (since \(R_\theta\) is a symmetry). This means \(R_\theta\) maps the lattice to itself, so with respect to a lattice basis, \(R_\theta\) has an integer matrix representation. The trace of a matrix is basis-independent: \(\text{tr}(R_\theta) = 2\cos\theta\). Since the matrix is an integer matrix, its trace is an integer:
+
 \[
 2\cos\theta \in \mathbb{Z} \implies \cos\theta \in \left\{0, \pm\frac{1}{2}, \pm 1\right\}.
 \]
@@ -1706,6 +1708,7 @@ A **lattice packing** uses the translates of a lattice \(\Lambda \subset \mathbb
 Each circle of radius \(1/2\) (so that adjacent circles just touch) has area \(\pi(1/2)^2 = \pi/4\). Each fundamental domain contains exactly one circle center (since the lattice has one point per fundamental domain).
 
 Packing density:
+
 \[
 \Delta_2 = \frac{\text{area of one circle}}{\text{area of fundamental domain}} = \frac{\pi/4}{\sqrt{3}/2} = \frac{\pi}{2\sqrt{3}} = \frac{\pi\sqrt{3}}{6} \approx 0.9069.
 \]
@@ -2318,6 +2321,7 @@ One of the most elegant theorems about equilateral triangles is **Napoleon's The
 w_3 = \frac{z_1 + z_2}{2} + \frac{z_2 - z_1}{2} \cdot \frac{i}{\sqrt{3}} \cdot \text{(correction for equilateral)},
 \]
 or more precisely, using the rotation by \(60°\) via multiplication by \(\omega = e^{i\pi/3}\):
+
 \[
 w_3 = \frac{z_1 + z_2 + (z_2 - z_1)\omega}{3} \cdot \text{(centroid formula)}.
 \]
@@ -2680,6 +2684,7 @@ The Delsarte (or linear programming) method provides upper bounds on sphere pack
 <li>the Fourier transform \(\hat{f}(\xi) \geq 0\) for all \(\xi \geq 0\),</li>
 </ol>
 where the Fourier transform here is the appropriate radial Fourier transform in \(\mathbb{R}^n\). Then the packing density satisfies
+
 \[
 \Delta \leq \frac{f(0)}{\hat{f}(0)} \cdot \omega_n r_0^n.
 \]
@@ -2925,6 +2930,7 @@ This section provides worked problems at the level of the course, illustrating t
 <em>Solution.</em> Gauss's theorem states that the regular \(n\)-gon is constructible iff \(n = 2^a p_1 \cdots p_k\) where each \(p_i\) is a distinct Fermat prime. Since \(17 = 2^{2^2} + 1\) is a Fermat prime (with \(m = 2\)), the regular 17-gon is constructible.
 
 More explicitly: \(\cos(2\pi/17)\) is a root of the **minimal polynomial** of a primitive 17th root of unity over \(\mathbb{Q}\), which is the cyclotomic polynomial \(\Phi_{17}(x) = x^{16} + x^{15} + \cdots + x + 1\). Gauss showed this splits into quadratics and can be solved by nested square roots:
+
 \[
 \cos\frac{2\pi}{17} = \frac{-1 + \sqrt{17} + \sqrt{34 - 2\sqrt{17}} + 2\sqrt{17 + 3\sqrt{17} - \sqrt{34 - 2\sqrt{17}} - 2\sqrt{34 + 2\sqrt{17}}}}{16}.
 \]
@@ -2949,6 +2955,7 @@ For the regular 15-gon: \(15 = 3 \times 5\). Since 3 and 5 are both distinct Fer
 \]
 
 Using \(z^k + z^{-k} = 2\cos(2k\pi/7)\) and double-angle formulas:
+
 \[
 8c^3 + 4c^2 - 4c - 1 = 0.
 \]
@@ -3036,6 +3043,7 @@ From Euler's formula: \(2 = V - E + F \leq (2E/3) - E + (2E/3) = E/3\), so \(E \
 \]
 
 So \(2 = V - E + F \leq \frac{2E}{3} - E + F = F - \frac{E}{3}\), giving \(E \leq 3F - 6\). Combining with \(2E = \sum k F_k\):
+
 \[
 \sum_{k \geq 3} k F_k = 2E \leq 6F - 12 = 6\sum F_k - 12.
 \]
@@ -3123,10 +3131,12 @@ The pattern of hexagonal tiles has \(p6mm\) symmetry (it has both 6-fold rotatio
 <em>Solution.</em> Suppose rotation by \(72° = 2\pi/5\) is a symmetry of a lattice \(\Lambda\). Let \(\mathbf{v}\) be the shortest nonzero vector in \(\Lambda\). Then \(R_{72°}(\mathbf{v})\) is also in \(\Lambda\) (by symmetry), and has the same length \(|\mathbf{v}|\).
 
 Consider the vector \(\mathbf{w} = R_{72°}(\mathbf{v}) - \mathbf{v}\). This is also a lattice vector. Its length is:
+
 \[
 |\mathbf{w}|^2 = |R_{72°}(\mathbf{v}) - \mathbf{v}|^2 = 2|\mathbf{v}|^2(1 - \cos 72°) = 2|\mathbf{v}|^2(1 - (\sqrt{5}-1)/4).
 \]
 Since \(\cos 72° = (\sqrt{5}-1)/4 \approx 0.309\):
+
 \[
 |\mathbf{w}|^2 = 2|\mathbf{v}|^2 \cdot (1 - 0.309) = 2|\mathbf{v}|^2 \cdot 0.691 \approx 1.382 |\mathbf{v}|^2.
 \]
@@ -3426,6 +3436,7 @@ The rhombic dodecahedron is the **Wigner-Seitz cell** (or Voronoi cell) of the F
 ### S11.3 The 24-Cell as a Self-Dual 4-Polytope
 
 The 24-cell \(\{3,4,3\}\) is the unique regular 4-polytope with no 3D analogue. It is self-dual: its dual is another 24-cell. Its 24 vertices can be taken as:
+
 \[
 \pm e_1 \pm e_2, \quad \pm e_1 \pm e_3, \quad \pm e_1 \pm e_4, \quad \pm e_2 \pm e_3, \quad \pm e_2 \pm e_4, \quad \pm e_3 \pm e_4
 \]
@@ -3513,6 +3524,7 @@ with equality if and only if \(\Omega\) is a disk.
 </div>
 
 The isoperimetric inequality has many proofs: via the calculus of variations, via Fourier series (classical approach using Green's theorem and Parseval's identity), via Brunn-Minkowski theory, and via the symmetrization (Steiner symmetrization) method. In three dimensions, the corresponding result states that among all closed surfaces of fixed area \(A\), the sphere encloses the maximum volume \(V\):
+
 \[
 36\pi V^2 \leq A^3,
 \]
@@ -3558,11 +3570,13 @@ For conic sections: the angle between two intersecting conics at a point can be 
 For convenient reference, here are the most important formulas from the course:
 
 **Constructibility (Chapter 1):**
+
 \[
 \alpha \text{ constructible} \iff [\mathbb{Q}(\alpha):\mathbb{Q}] = 2^k \text{ for some } k \geq 0.
 \]
 
 **Conic sections (Chapter 2):**
+
 \[
 r = \frac{ed}{1 + e\cos\theta} \quad\text{(polar form of conic, focus at origin)}.
 \]
@@ -3571,51 +3585,61 @@ r = \frac{ed}{1 + e\cos\theta} \quad\text{(polar form of conic, focus at origin)
 \]
 
 **Interior angle formula (Chapter 3):**
+
 \[
 \alpha_n = \frac{(n-2) \cdot 180°}{n} \quad\text{(interior angle of regular }n\text{-gon)}.
 \]
 
 **Platonic solid count (Chapter 3):**
+
 \[
 \frac{1}{p} + \frac{1}{q} > \frac{1}{2} \quad \iff \quad \{p,q\} \text{ is a Platonic solid (with } p,q \geq 3\text{)}.
 \]
 
 **Euler's formula (Chapter 4):**
+
 \[
 V - E + F = 2 \quad\text{(convex polyhedron)}, \qquad V - E + F = \chi \quad\text{(general surface)}.
 \]
 
 **Edge count of Platonic solid (Chapter 4):**
+
 \[
 E = \frac{2pq}{2p + 2q - pq} \quad\text{for Schläfli symbol }\{p,q\}.
 \]
 
 **Crystallographic restriction (Chapter 5):**
+
 \[
 2\cos\theta \in \mathbb{Z} \implies \theta \in \{0°, 60°, 90°, 120°, 180°\} \quad\text{(only allowed rotation angles in a lattice)}.
 \]
 
 **Tessellation condition (Chapter 5):**
+
 \[
 \frac{1}{p} + \frac{1}{q} = \frac{1}{2} \quad\text{(regular tessellation of the plane by }\{p\}\text{, }q\text{ per vertex)}.
 \]
 
 **Packing densities (Chapter 6):**
+
 \[
 \Delta_2 = \frac{\pi}{2\sqrt{3}} \approx 0.9069, \quad \Delta_3 = \frac{\pi}{3\sqrt{2}} \approx 0.7405, \quad \Delta_8 = \frac{\pi^4}{384} \approx 0.2537, \quad \Delta_{24} = \frac{\pi^{12}}{12!}.
 \]
 
 **Kissing numbers (Chapter 6):**
+
 \[
 \kappa_1 = 2, \quad \kappa_2 = 6, \quad \kappa_3 = 12, \quad \kappa_4 = 24, \quad \kappa_8 = 240, \quad \kappa_{24} = 196560.
 \]
 
 **Gauss-Bonnet formulas (Supplementary):**
+
 \[
 \text{Area of spherical triangle} = R^2(\alpha + \beta + \gamma - \pi), \quad\text{Area of hyperbolic triangle} = \pi - \alpha - \beta - \gamma.
 \]
 
 **Isoperimetric inequality (Supplementary):**
+
 \[
 4\pi A \leq L^2 \quad\text{(plane)}, \qquad 36\pi V^2 \leq A^3 \quad\text{(space)}.
 \]

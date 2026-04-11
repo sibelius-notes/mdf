@@ -524,6 +524,7 @@ The converse is false: \(f(x) = |x|\) is continuous everywhere but not different
 </div>
 
 Key derivatives of standard functions:
+
 \[
 \frac{d}{dx}\sin x = \cos x, \quad \frac{d}{dx}\cos x = -\sin x, \quad \frac{d}{dx} e^x = e^x, \quad \frac{d}{dx}\ln x = \frac{1}{x}.
 \]
@@ -542,10 +543,12 @@ h'(a) = g'(f(a)) \cdot f'(a).
 </div>
 
 *Proof.* Define \(\phi : \mathbb{R} \to \mathbb{R}\) by
+
 \[
 \phi(y) = \begin{cases} \dfrac{g(y) - g(f(a))}{y - f(a)} & y \ne f(a) \\ g'(f(a)) & y = f(a). \end{cases}
 \]
 By definition of \(g'(f(a))\), \(\phi\) is continuous at \(f(a)\). We have \(g(y) - g(f(a)) = \phi(y)(y - f(a))\). Setting \(y = f(x)\):
+
 \[
 h(x) - h(a) = g(f(x)) - g(f(a)) = \phi(f(x)) \cdot (f(x) - f(a)).
 \]
@@ -643,6 +646,7 @@ If \(\lim_{x\to a^+} f'(x)/g'(x) = L\) (with \(L \in \mathbb{R} \cup \{\pm\infty
 </div>
 
 *Proof (0/0 case, finite \(L\)).* Extend \(f\) and \(g\) to \([a, b)\) by setting \(f(a) = g(a) = 0\). For \(x \in (a, b)\), the Cauchy MVT applied to \([a, x]\) gives \(c_x \in (a, x)\) with
+
 \[
 \frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = \frac{f'(c_x)}{g'(c_x)}.
 \]
@@ -696,6 +700,7 @@ T_{n,a}(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k.
 Notice that \(T_{n,a}\) is the unique polynomial of degree at most \(n\) whose first \(n\) derivatives at \(a\) match those of \(f\): \(T_{n,a}^{(k)}(a) = f^{(k)}(a)\) for \(k = 0, 1, \ldots, n\). The case \(n = 1\) recovers the linear (tangent line) approximation.
 
 Key Maclaurin series (centred at \(a = 0\)):
+
 \[
 e^x = \sum_{k=0}^{n} \frac{x^k}{k!} + R_n(x), \quad \sin x = \sum_{k=0}^{m} \frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2m+1}(x),
 \]
@@ -715,6 +720,7 @@ R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.
 </div>
 
 *Proof.* Fix \(x \ne a\) and define \(M\) by the equation \(f(x) = T_{n,a}(x) + M(x-a)^{n+1}\). We want to show \(M = f^{(n+1)}(c)/(n+1)!\) for some \(c\) between \(a\) and \(x\). Define
+
 \[
 g(t) = f(x) - T_{n,t}(x) - M(x-t)^{n+1}.
 \]

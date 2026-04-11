@@ -16,21 +16,25 @@ A **probability function** (or probability measure) \(P\) assigns a number to ea
 3. For mutually exclusive events \(A_1, A_2, \ldots\), \(P\!\left(\bigcup_{i} A_i\right) = \sum_i P(A_i)\).
 
 From these axioms, the **complement rule** follows immediately:
+
 \[
 P(A^c) = 1 - P(A).
 \]
 
 **Conditional probability** is defined for events \(A\) and \(B\) with \(P(B) > 0\) as
+
 \[
 P(A \mid B) = \frac{P(A \cap B)}{P(B)}.
 \]
 
 Rearranging gives the **multiplication rule**:
+
 \[
 P(A \cap B) = P(A \mid B)\, P(B).
 \]
 
 More generally, for \(n\) events \(A_1, A_2, \ldots, A_n\), the **generalized multiplication rule** is
+
 \[
 P(A_1 \cap A_2 \cap \cdots \cap A_n)
 = P(A_1)\, P(A_2 \mid A_1)\, P(A_3 \mid A_1 \cap A_2) \cdots
@@ -39,6 +43,7 @@ P(A_1 \cap A_2 \cap \cdots \cap A_n)
 ### Law of Total Probability
 
 If the sample space \(\Omega\) can be partitioned into mutually exclusive events \(B_1, B_2, \ldots, B_n\) (so \(\Omega = B_1 \cup \cdots \cup B_n\), \(B_i \cap B_j = \varnothing\) for \(i \neq j\)), then for any event \(A\):
+
 \[
 P(A) = \sum_{i=1}^{n} P(A \mid B_i)\, P(B_i).
 \]
@@ -48,6 +53,7 @@ This expresses \(P(A)\) as a weighted average of conditional probabilities.
 ### Bayes' Theorem
 
 Combining conditional probability with the law of total probability yields **Bayes' theorem**:
+
 \[
 P(B_k \mid A) = \frac{P(A \mid B_k)\, P(B_k)}{\sum_{i=1}^{n} P(A \mid B_i)\, P(B_i)}.
 \]
@@ -62,15 +68,18 @@ A **random variable** (RV) \(X\) is a function from the sample space to the real
 ### Discrete Random Variables
 
 The **probability mass function** (PMF) of a discrete RV \(X\) is
+
 \[
 p(x) = P(X = x).
 \]
 
 The **cumulative distribution function** (CDF) is
+
 \[
 F(a) = P(X \leq a) = \sum_{x \leq a} p(x),
 \]
 and the **complementary CDF** (tail probability) is
+
 \[
 \bar{F}(a) = P(X > a) = 1 - F(a).
 \]
@@ -96,6 +105,7 @@ The table above shows the PMF, mean, and variance for each distribution. Two add
 ### The Poisson as a Limiting Binomial
 
 One of the important results in the review is that the **Poisson distribution is the limiting form of the binomial**. If \(X \sim \text{Binomial}(n, p)\) and we let \(n \to \infty\) with \(np = \lambda\) held fixed (so \(p = \lambda/n \to 0\)), then
+
 \[
 P(X = x) = \binom{n}{x}\left(\frac{\lambda}{n}\right)^x\!\left(1 - \frac{\lambda}{n}\right)^{n-x}
 \;\xrightarrow{n\to\infty}\;
@@ -106,6 +116,7 @@ which is the Poisson PMF. The key step uses the limit definition of the exponent
 ### Continuous Random Variables
 
 A **continuous** RV has a **probability density function** (PDF) \(f(x)\) satisfying \(f(x) \geq 0\) and \(\int_{-\infty}^{\infty} f(x)\,dx = 1\). The CDF is
+
 \[
 F(a) = \int_{-\infty}^{a} f(x)\,dx,
 \]
@@ -128,6 +139,7 @@ f(x) = \frac{(m+n-1)!}{(m-1)!(n-1)!}\, x^{m-1}(1-x)^{n-1}, \quad 0 < x < 1.
 f(x) = \frac{\lambda^n x^{n-1} e^{-\lambda x}}{(n-1)!}, \quad x > 0,
 \]
 CDF
+
 \[
 F(x) = 1 - e^{-\lambda x} \sum_{j=0}^{n-1} \frac{(\lambda x)^j}{j!}, \quad x \geq 0,
 \]
@@ -137,6 +149,7 @@ mean \(n/\lambda\), variance \(n/\lambda^2\), and MGF \(\phi_X(t) = \bigl(\frac{
 ## 1.3 Expectation and Moments
 
 For a function \(g\), the **expected value** of \(g(X)\) is
+
 \[
 E[g(X)] = \begin{cases}
 \sum_x g(x)\,p(x) & \text{discrete},\\[4pt]
@@ -158,6 +171,7 @@ The **covariance** satisfies \(\text{Cov}(X,Y) = E[XY] - E[X]E[Y]\) and \(\text{
 
 <div class="definition">
 The <strong>moment-generating function</strong> (MGF) of an RV \(X\) is defined as
+
 \[
 \phi_X(t) = E\!\left[e^{tX}\right],
 \]
@@ -174,6 +188,7 @@ Key properties of the MGF:
 \]
 
 **Example — Binomial MGF.** If \(X \sim \text{Binomial}(n,p)\), then
+
 \[
 \phi_X(t) = (pe^t + 1 - p)^n.
 \]
@@ -182,11 +197,13 @@ Differentiating and evaluating at \(t=0\) yields \(E[X] = np\) and \(\text{Var}(
 ## 1.4 Joint Distributions
 
 For two RVs \(X\) and \(Y\), the **joint CDF** is \(F(a,b) = P(X \leq a, Y \leq b)\). In the discrete case, the **joint PMF** is \(p(x,y) = P(X=x, Y=y)\), and **marginal PMFs** are obtained by summing:
+
 \[
 p_X(x) = \sum_y p(x,y), \qquad p_Y(y) = \sum_x p(x,y).
 \]
 
 The **multinomial distribution** generalises the binomial to \(k\) outcome categories, with joint PMF
+
 \[
 P(X_1 = x_1, \ldots, X_k = x_k) = \frac{n!}{x_1!\cdots x_k!}\, p_1^{x_1}\cdots p_k^{x_k}.
 \]
@@ -204,6 +221,7 @@ or equivalently, \(p(x,y) = p_X(x)p_Y(y)\) in the jointly discrete case, or \(f(
 **Caution.** Zero covariance (\(X\) and \(Y\) are <em>uncorrelated</em>) does not imply independence. Independence implies zero covariance, but not conversely.
 
 The **joint MGF** of \((X,Y)\) is defined as
+
 \[
 \phi(s,t) = E\!\left[e^{sX + tY}\right],
 \]
@@ -219,6 +237,7 @@ and joint moments are recovered via \(E[X^m Y^n] = \frac{\partial^{m+n}}{\partia
 </div>
 
 *Proof sketch.* By independence, the expectation of a product equals the product of expectations:
+
 \[
 \phi_T(t) = E\!\left[e^{tT}\right] = E\!\left[\prod_{i=1}^n e^{tX_i}\right] = \prod_{i=1}^n E\!\left[e^{tX_i}\right] = \prod_{i=1}^n \phi_{X_i}(t).
 \]
@@ -250,6 +269,7 @@ The purpose of this chapter is to develop deep fluency with conditioning, becaus
 
 <div class="definition">
 Given two discrete RVs \(X_1\) and \(X_2\) with joint PMF \(p(x_1, x_2)\), the <strong>conditional PMF</strong> of \(X_1\) given \(X_2 = x_2\) is
+
 \[
 p_{X_1 \mid X_2}(x_1 \mid x_2) = \frac{p(x_1, x_2)}{p_{X_2}(x_2)}, \qquad p_{X_2}(x_2) > 0.
 \]
@@ -263,12 +283,14 @@ p_{X_1 \mid X_2}(x_1 \mid x_2) = \frac{p(x_1, x_2)}{p_{X_2}(x_2)}, \qquad p_{X_2
 E\!\left[\sum_{i=1}^n a_i X_i \,\Big|\, Y = y\right] = \sum_{i=1}^n a_i\, E[X_i \mid Y = y].
 \]
 Moreover, if \(h(\cdot)\) is a deterministic function and \(g(\cdot)\) is arbitrary, then
+
 \[
 E[g(X_1)\,h(X_2) \mid X_2 = x_2] = h(x_2)\, E[g(X_1) \mid X_2 = x_2].
 \]
 </div>
 
 The definition extends naturally to three or more RVs. For example, the conditional joint PMF of \((X_1, X_2)\) given \(X_3 = x_3\) is
+
 \[
 p_{X_1, X_2 \mid X_3}(x_1, x_2 \mid x_3) = \frac{p(x_1, x_2, x_3)}{p_{X_3}(x_3)}.
 \]
@@ -276,12 +298,14 @@ p_{X_1, X_2 \mid X_3}(x_1, x_2 \mid x_3) = \frac{p(x_1, x_2, x_3)}{p_{X_3}(x_3)}
 ### Key Examples
 
 **Example 2.2 (Conditional given a sum).** Let \(X_1 \sim \text{Binomial}(n_1, p)\) and \(X_2 \sim \text{Binomial}(n_2, p)\) be independent, and let \(Y = X_1 + X_2\). We know \(Y \sim \text{Binomial}(n_1+n_2, p)\). Then
+
 \[
 P(X_1 = x_1 \mid Y = m) = \frac{\binom{n_1}{x_1}\binom{n_2}{m-x_1}}{\binom{n_1+n_2}{m}},
 \]
 for \(x_1 = \max(0, m-n_2), \ldots, \min(n_1, m)\). This is a **Hypergeometric**\((n_1+n_2, n_1, m)\) distribution, which has a natural combinatorial explanation.
 
 **Example 2.3 (Poisson conditionals).** If \(X_1, \ldots, X_m\) are independent Poisson RVs with parameters \(\lambda_1, \ldots, \lambda_m\), and \(Y = \sum X_i\), then
+
 \[
 X_j \mid (Y = n) \;\sim\; \text{Binomial}\!\left(n,\, \frac{\lambda_j}{\sum_i \lambda_i}\right).
 \]
@@ -291,6 +315,7 @@ X_j \mid (Y = n) \;\sim\; \text{Binomial}\!\left(n,\, \frac{\lambda_j}{\sum_i \l
 ### Jointly Continuous Case
 
 For continuous RVs, the conditional PMF is replaced by a **conditional PDF**. The formal definition arises from the limit:
+
 \[
 f_{X \mid Y}(x \mid y) = \frac{f(x, y)}{f_Y(y)},
 \]
@@ -301,6 +326,7 @@ where \(f(x,y)\) is the joint PDF and \(f_Y(y)\) is the marginal PDF of \(Y\).
 ### Mixed Case (One Discrete, One Continuous)
 
 When \(X\) is continuous and \(Y\) is discrete, the conditional PDF of \(X\) given \(Y = y\) is
+
 \[
 f_{X \mid Y}(x \mid y) = \frac{P(Y=y \mid X=x)\, f_X(x)}{P(Y=y)},
 \]
@@ -320,6 +346,7 @@ The conditional PDF of \(X \mid (Y = 0)\) is \(f(x \mid 0) = 2(1-x)\) on \((0,1)
 
 <div class="definition">
 The <strong>conditional mean</strong> of \(X_1\) given \(X_2 = x_2\) is
+
 \[
 E[X_1 \mid X_2 = x_2] = \sum_{x_1} x_1\, p_{X_1 \mid X_2}(x_1 \mid x_2)
 \quad (\text{discrete}),
@@ -328,6 +355,7 @@ or the corresponding integral in the continuous case.
 </div>
 
 Conditional expectation inherits all the linearity properties of regular expectation:
+
 \[
 E[aX_1 + bX_2 \mid X_3 = x_3] = a\, E[X_1 \mid X_3 = x_3] + b\, E[X_2 \mid X_3 = x_3].
 \]
@@ -336,6 +364,7 @@ E[aX_1 + bX_2 \mid X_3 = x_3] = a\, E[X_1 \mid X_3 = x_3] + b\, E[X_2 \mid X_3 =
 
 <div class="definition">
 The <strong>conditional variance</strong> of \(X_1\) given \(X_2 = x_2\) is
+
 \[
 \text{Var}(X_1 \mid X_2 = x_2) = E[X_1^2 \mid X_2 = x_2] - \bigl(E[X_1 \mid X_2 = x_2]\bigr)^2.
 \]
@@ -355,6 +384,7 @@ E[g(X)] = E\!\bigl[E[g(X) \mid Y]\bigr].
 </div>
 
 *Proof sketch (continuous case).* Starting from the right-hand side,
+
 \[
 E\!\bigl[E[g(X) \mid Y]\bigr]
 = \int_{-\infty}^{\infty} \left(\int_{-\infty}^{\infty} g(x)\, f_{X\mid Y}(x\mid y)\,dx\right) f_Y(y)\,dy.
@@ -362,25 +392,30 @@ E\!\bigl[E[g(X) \mid Y]\bigr]
 Since \(f_{X \mid Y}(x \mid y)\, f_Y(y) = f(x,y)\), swapping integration order gives \(\int\!\int g(x) f(x,y)\,dy\,dx = \int g(x) f_X(x)\,dx = E[g(X)]\). \(\square\)
 
 **Application — geometric mean and variance.** Let \(X \sim \text{Geometric}(p)\), so \(X\) counts the number of trials until the first success. Define \(Y = \mathbf{1}[\text{first trial is success}]\). The law of total expectation gives
+
 \[
 E[X] = E[X \mid Y=0](1-p) + E[X \mid Y=1]\cdot p.
 \]
 Given \(Y=1\) (first trial a success), \(X = 1\) for certain. Given \(Y=0\) (first trial a failure), by memorylessness, \(X \stackrel{d}{=} 1 + X\). Substituting:
+
 \[
 E[X] = (1 + E[X])(1-p) + p.
 \]
 Solving gives \(E[X] = 1/p\). The same technique yields \(\text{Var}(X) = (1-p)/p^2\), both well-known results derived here without computing any sums or MGFs.
 
 **Law of Total Expectation for Probabilities.** By taking \(g(X) = \mathbf{1}_A\) (indicator of event \(A\)), the law of total expectation becomes the law of total probability:
+
 \[
 P(A) = \int_{-\infty}^{\infty} P(A \mid Y=y)\, f_Y(y)\,dy.
 \]
 
 **Important example.** If \(X\) and \(Y\) are independent continuous RVs, then
+
 \[
 P(X < Y) = \int_{-\infty}^{\infty} F_X(y)\, f_Y(y)\,dy.
 \]
 When \(X \sim \text{Exponential}(\lambda_1)\) and \(Y \sim \text{Exponential}(\lambda_2)\):
+
 \[
 P(X < Y) = \frac{\lambda_1}{\lambda_1 + \lambda_2}.
 \]
@@ -400,6 +435,7 @@ This theorem decomposes the total variance into two components: the average with
 ### Random Sums
 
 A **random sum** arises when both the summands and the number of terms are random. Let \(X_1, X_2, \ldots\) be iid with mean \(\mu\) and variance \(\sigma^2\), and let \(N\) be a non-negative integer-valued RV independent of all \(X_i\). Define
+
 \[
 T = \sum_{i=1}^{N} X_i.
 \]
@@ -407,11 +443,13 @@ T = \sum_{i=1}^{N} X_i.
 Using the law of total expectation conditioned on \(N\):
 
 **Mean of \(T\):** \(E[T \mid N = n] = n\mu\), so \(E[T \mid N] = N\mu\), giving
+
 \[
 E[T] = E[N\mu] = \mu\, E[N].
 \]
 
 **Variance of \(T\):** Applying Theorem 2.3 and noting \(\text{Var}(T \mid N=n) = n\sigma^2\):
+
 \[
 \text{Var}(T) = E[N\sigma^2] + \text{Var}(N\mu) = \sigma^2 E[N] + \mu^2\text{Var}(N).
 \]
@@ -431,6 +469,7 @@ E[g(X) \mid Y = y] = \begin{cases}
 \end{cases}
 \]
 In random-variable notation, \(E[g(X) \mid Y] = E[E[g(X) \mid W, Y] \mid Y]\). Applying the law of total expectation once more gives
+
 \[
 E[g(X)] = E\!\bigl[E[E[g(X) \mid W, Y] \mid Y]\bigr].
 \]
@@ -439,10 +478,12 @@ E[g(X)] = E\!\bigl[E[E[g(X) \mid W, Y] \mid Y]\bigr].
 ### Expected Number of Trials for \(k\) Consecutive Successes
 
 Let \(N_k\) be the number of independent Bernoulli trials (success probability \(p\)) needed to achieve \(k\) consecutive successes. By conditioning on what happens after the \(k-1\) consecutive successes are achieved, a recursion is established:
+
 \[
 E[N_k] = \frac{1 + p\cdot E[N_{k-1}]}{p} + (1-p)\cdot E[N_k].
 \]
 Solving the recursion inductively, with \(E[N_1] = 1/p\):
+
 \[
 E[N_k] = \sum_{j=1}^{k} \frac{1}{p^j} = \frac{1}{p} + \frac{1}{p^2} + \cdots + \frac{1}{p^k}.
 \]
@@ -479,10 +520,12 @@ An important consequence is that the Markov property holds even when some past i
 ### Transition Probability Matrices
 
 We adopt the **stationarity** (or **homogeneity**) assumption: the one-step transition probability
+
 \[
 p_{ij} = P(X_{n+1} = j \mid X_n = i)
 \]
 does not depend on \(n\). All such probabilities are collected into the **transition probability matrix** (TPM):
+
 \[
 P = \begin{pmatrix} p_{00} & p_{01} & p_{02} & \cdots \\ p_{10} & p_{11} & p_{12} & \cdots \\ \vdots & & \ddots \end{pmatrix}.
 \]
@@ -499,6 +542,7 @@ A matrix with non-negative entries whose rows all sum to 1 is called a **stochas
 
 <div class="definition">
 The <strong>\(n\)-step transition probability</strong> is
+
 \[
 p_{ij}^{(n)} = P(X_{n+m} = j \mid X_m = i),
 \]
@@ -506,10 +550,12 @@ which by stationarity is independent of \(m\). The \(n\)-step transition probabi
 </div>
 
 The **Chapman–Kolmogorov equations** state: for any \(0 \leq m \leq n\),
+
 \[
 p_{ij}^{(n)} = \sum_k p_{ik}^{(m)}\, p_{kj}^{(n-m)},
 \]
 or in matrix form, \(P^{(n)} = P^{(m)} \cdot P^{(n-m)}\). Taking \(m = 1\) repeatedly:
+
 \[
 P^{(n)} = P^n \quad (\text{the matrix } P \text{ multiplied by itself } n \text{ times}).
 \]
@@ -517,6 +563,7 @@ P^{(n)} = P^n \quad (\text{the matrix } P \text{ multiplied by itself } n \text{
 ### Initial Distribution and Marginal Probabilities
 
 The **initial distribution** \(\boldsymbol{\alpha}_0\) is the row vector with entries \(\alpha_{0k} = P(X_0 = k)\). The **marginal distribution at time \(n\)** is
+
 \[
 \boldsymbol{\alpha}_n = \boldsymbol{\alpha}_0\, P^n,
 \]
@@ -593,6 +640,7 @@ A DTMC is completely characterised by its one-step TPM \(P\) and the initial con
 
 <div class="definition">
 The <strong>period</strong> of state \(i\) is
+
 \[
 d(i) = \gcd\!\bigl\{n \geq 1 : p_{ii}^{(n)} > 0\bigr\}.
 \]
@@ -613,21 +661,25 @@ If a state \(i\) has \(p_{ii} > 0\), then \(1 \in \{n : p_{ii}^{(n)} > 0\}\), so
 
 <div class="definition">
 The <strong>first-passage probability</strong> from \(i\) to \(j\) at time \(n\) is
+
 \[
 f_{ij}^{(n)} = P(X_n = j,\; X_k \neq j \text{ for } k=1,\ldots,n-1 \mid X_0 = i).
 \]
 The <strong>total first-passage probability</strong> (probability of ever visiting \(j\) from \(i\)) is
+
 \[
 f_{ij} = \sum_{n=1}^{\infty} f_{ij}^{(n)}.
 \]
 </div>
 
 A recursive formula connecting \(n\)-step transition probabilities and first-passage probabilities is obtained by conditioning on the time of the first visit to \(j\):
+
 \[
 p_{ij}^{(n)} = \sum_{k=1}^{n} f_{ij}^{(k)}\, p_{jj}^{(n-k)}, \quad n \geq 1.
 \]
 
 Rearranging (using \(p_{jj}^{(0)} = 1\)) gives the **recursion for computing first-visit probabilities**:
+
 \[
 f_{ij}^{(n)} = p_{ij}^{(n)} - \sum_{k=1}^{n-1} f_{ij}^{(k)}\, p_{jj}^{(n-k)}, \quad n \geq 2,
 \]
@@ -680,6 +732,7 @@ State \(i\) is <strong>transient</strong> if \(f_{ii} < 1\) (there is positive p
 </svg>
 
 An equivalent characterisation using the expected number of returns \(M_i = \sum_{n=1}^\infty \mathbf{1}[X_n = i]\) (counting visits to \(i\), not including time 0):
+
 \[
 E[M_i \mid X_0 = i] = \sum_{n=1}^{\infty} p_{ii}^{(n)}.
 \]
@@ -729,10 +782,12 @@ This follows because \(\sum_{n=1}^\infty p_{jj}^{(n)} < \infty\) for transient \
 
 <div class="definition">
 Suppose state \(i\) is recurrent. Define the <strong>first return time</strong> to state \(i\) as
+
 \[
 N_i = \min\{n \in \mathbb{Z}^+ : X_n = i\},
 \]
 whose conditional PMF is \(P(N_i = n \mid X_0 = i) = f_{ii}^{(n)}\). The <strong>mean recurrent time</strong> of state \(i\) is
+
 \[
 m_i = E[N_i \mid X_0 = i] = \sum_{n=1}^{\infty} n\, f_{ii}^{(n)}.
 \]
@@ -753,6 +808,7 @@ If the chain oscillates between two forms of the TPM (for even and odd \(n\)), t
 ### Example: Irreducible Aperiodic Finite Chain
 
 For an irreducible, aperiodic, finite-state Markov chain, the limit exists:
+
 \[
 \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j \quad \text{for all } i, j,
 \]
@@ -855,6 +911,7 @@ The **Galton–Watson branching process** models population growth over discrete
 </svg>
 
 The dynamics are:
+
 \[
 X_{n+1} = \sum_{i=1}^{X_n} Z_i^{(n)},
 \]
@@ -879,6 +936,7 @@ Let \(q = P(\text{population eventually becomes extinct})\). Then:
 - If \(\mu > 1\): \(q < 1\) (positive probability of survival).
 
 The extinction probability \(q\) satisfies \(q = \tilde{\alpha}(q)\), where
+
 \[
 \tilde{\alpha}(z) = \sum_{j=0}^{\infty} \alpha_j z^j
 \]
@@ -891,10 +949,12 @@ is the **probability generating function** (PGF) of the offspring distribution. 
 ### 3.4.2 The Gambler's Ruin Problem
 
 A gambler plays a sequence of independent rounds, winning \(\$1\) with probability \(p\) and losing \(\$1\) with probability \(q = 1-p\). The game ends when the gambler reaches 0 (ruin) or \(N\) (wins). Starting with \(\$i\), the **ruin probability** satisfies the linear recursion
+
 \[
 u_i = p\, u_{i+1} + q\, u_{i-1}, \quad i = 1, \ldots, N-1,
 \]
 with boundary conditions \(u_0 = 1\), \(u_N = 0\). The solution (probability of reaching 0 before \(N\), starting from \(i\)) is:
+
 \[
 u_i = \begin{cases}
 1 - \dfrac{i}{N} & \text{if } p = 1/2,\\[8pt]
@@ -903,6 +963,7 @@ u_i = \begin{cases}
 \]
 
 Equivalently, the probability of reaching \(N\) before 0, starting from \(i\), is \(P(i) = 1 - u_i\):
+
 \[
 P(i) = \begin{cases}
 \dfrac{i}{N} & \text{if } p = 1/2,\\[8pt]
@@ -924,6 +985,7 @@ A state is **absorbing** if \(p_{jj} = 1\) (once entered, never left). An **abso
 ### Structure of the TPM
 
 Relabeling states so that transient states come first (indexed \(0, \ldots, M-1\)) and absorbing states come after (indexed \(M, \ldots, N\)), the TPM has the **canonical form**:
+
 \[
 P = \begin{pmatrix} Q & R \\ \mathbf{0} & I \end{pmatrix},
 \]
@@ -936,10 +998,12 @@ where:
 ### Absorption Probabilities
 
 Let \(U_{i,k} = P(\text{absorbed in state } k \mid X_0 = i)\) for transient \(i \in \{0,\ldots,M-1\}\) and absorbing \(k \in \{M,\ldots,N\}\). By conditioning on the first step:
+
 \[
 U_{i,k} = R_{i,k} + \sum_{j=0}^{M-1} Q_{i,j}\, U_{j,k},
 \]
 which in matrix form reads \(\mathbf{U} = R + Q\mathbf{U}\), giving
+
 \[
 \mathbf{U} = (I - Q)^{-1} R.
 \]
@@ -949,10 +1013,12 @@ The matrix \(I - Q\) is invertible (because \(Q\) governs only transient states,
 
 <div class="definition">
 The <strong>fundamental matrix</strong> of an absorbing chain is
+
 \[
 S = (I - Q)^{-1} = \sum_{n=0}^{\infty} Q^n.
 \]
 The \((i,l)\)-entry \(S_{i,l}\) equals the expected number of times the chain visits transient state \(l\) (including time 0 if \(i = l\)) before absorption, given \(X_0 = i\):
+
 \[
 S_{i,l} = E\!\left[\sum_{n=0}^{T-1} \mathbf{1}[X_n = l] \,\Big|\, X_0 = i\right],
 \]
@@ -964,16 +1030,19 @@ The matrix identity \(\sum_{n=0}^{N-1} Q^n = (I-Q)^{-1}(I - Q^N) \to (I-Q)^{-1}\
 ### Expected Absorption Times and Visitation Probabilities
 
 The expected absorption time from transient state \(i\) is the \(i\)-th entry of
+
 \[
 \mathbf{w} = S\,\mathbf{1} = (I-Q)^{-1}\mathbf{1},
 \]
 where \(\mathbf{1}\) is a column vector of ones. This follows because \(w_i = \sum_l S_{i,l}\) (sum of expected visits across all transient states).
 
 The probability of ever visiting transient state \(l\) before absorption, given \(X_0 = i\) (\(i \neq l\)), satisfies
+
 \[
 f_{i,l} = \frac{S_{i,l}}{S_{l,l}}, \quad i \neq l,
 \]
 and for \(i = l\), the probability of returning to state \(i\) in the future is
+
 \[
 f_{i,i} = 1 - \frac{1}{S_{i,i}}.
 \]
@@ -988,6 +1057,7 @@ f_{i,i} = 1 - \frac{1}{S_{i,i}}.
 
 <div class="definition">
 A random variable \(X\) has an <strong>exponential distribution</strong> with rate parameter \(\lambda > 0\), written \(X \sim \text{Exp}(\lambda)\), if its PDF is
+
 \[
 f(x) = \lambda e^{-\lambda x}, \quad x > 0.
 \]
@@ -1009,6 +1079,7 @@ The parameter \(\lambda\) is often called the **rate** of the exponential distri
 
 <div class="definition">
 The exponential distribution is the <strong>unique continuous distribution</strong> with the <strong>memoryless property</strong>:
+
 \[
 P(X > s + t \mid X > s) = P(X > t) \quad \text{for all } s, t \geq 0.
 \]
@@ -1037,11 +1108,13 @@ As a special case, \((X - Y) \mid (X > Y) \sim \text{Exp}(\lambda)\) regardless 
 ### Minimum of Independent Exponentials
 
 **Theorem 4.1.** If \(X_1, \ldots, X_n\) are independent with \(X_i \sim \text{Exp}(\lambda_i)\), then
+
 \[
 Y = \min(X_1, \ldots, X_n) \sim \text{Exp}(\lambda_1 + \lambda_2 + \cdots + \lambda_n).
 \]
 
 *Proof.* The tail probability of \(Y\) is
+
 \[
 P(Y > y) = P(X_1 > y, \ldots, X_n > y) = \prod_{i=1}^n e^{-\lambda_i y} = e^{-(\sum \lambda_i)y}.
 \]
@@ -1050,11 +1123,13 @@ This is the tail probability of \(\text{Exp}(\sum_i \lambda_i)\).
 ### Which Exponential is Smallest?
 
 **Theorem 4.2.** With \(X_1, \ldots, X_n\) independent exponentials as above,
+
 \[
 P(X_j = \min_i X_i) = \frac{\lambda_j}{\lambda_1 + \lambda_2 + \cdots + \lambda_n}.
 \]
 
 *Proof.* Condition on \(X_j = x\) and use the product form of independence:
+
 \[
 P(X_j < X_i \text{ for all } i \neq j \mid X_j = x) = \prod_{i \neq j} e^{-\lambda_i x}.
 \]
@@ -1067,10 +1142,12 @@ A beautiful consequence: if \(X_j\) is the minimum, then the remaining minimum o
 ### Order Statistics and the Erlang Distribution
 
 The **Erlang\((n, \lambda)\)** distribution (a special case of the Gamma) is the distribution of the sum of \(n\) iid \(\text{Exp}(\lambda)\) random variables. Its PDF is
+
 \[
 f(x) = \frac{\lambda^n x^{n-1} e^{-\lambda x}}{(n-1)!}, \quad x > 0,
 \]
 with CDF
+
 \[
 F(x) = 1 - e^{-\lambda x} \sum_{j=0}^{n-1} \frac{(\lambda x)^j}{j!}, \quad x \geq 0,
 \]
@@ -1109,6 +1186,7 @@ A counting process \(\{N(t)\}_{t \geq 0}\) is a <strong>Poisson process</strong>
 The third condition says that in a very short interval of length \(h\), the probability of exactly one event is approximately \(\lambda h\), and the probability of two or more events is negligible.
 
 **Theorem 4.3.** For a Poisson process with rate \(\lambda\):
+
 \[
 N(t) \sim \text{Poisson}(\lambda t),
 \]
@@ -1135,11 +1213,13 @@ Define:
 ### Conditional Distribution of Arrivals
 
 **Theorem 4.5.** Given \(N(t) = n\), the conditional distribution of \(N(s)\) (for \(s < t\)) is
+
 \[
 N(s) \mid N(t) = n \;\sim\; \text{Binomial}\!\left(n,\, \frac{s}{t}\right).
 \]
 
 *Proof.* For \(m \leq n\):
+
 \[
 P(N(s) = m \mid N(t) = n) = \frac{P(N(s) = m)\,P(N(t) - N(s) = n-m)}{P(N(t) = n)}.
 \]
@@ -1157,12 +1237,14 @@ S_1 \mid N(t) = 1 \;\sim\; \text{Uniform}(0, t).
 </div>
 
 *Proof.* Let \(G(s) = P(S_1 \leq s \mid N(t) = 1)\) for \(0 \leq s \leq t\). Applying the definition of conditional probability and the independent increments property:
+
 \[
 G(s)
 = \frac{P(S_1 \leq s,\; N(t) = 1)}{P(N(t) = 1)}
 = \frac{P(N(s) = 1)\,P(N(t) - N(s) = 0)}{P(N(t) = 1)}.
 \]
 Substituting the Poisson PMF (with means \(\lambda s\), \(\lambda(t-s)\), and \(\lambda t\) respectively):
+
 \[
 G(s) = \frac{(\lambda s\, e^{-\lambda s})(e^{-\lambda(t-s)})}{\lambda t\, e^{-\lambda t}}
 = \frac{\lambda s\, e^{-\lambda t}}{\lambda t\, e^{-\lambda t}} = \frac{s}{t}.
@@ -1180,6 +1262,7 @@ To state the generalisation, we need a brief introduction to **order statistics*
 </div>
 
 **Joint PDF of order statistics.** The joint PDF of \((Y_{(1)}, Y_{(2)}, \ldots, Y_{(n)})\) is
+
 \[
 g(y_1, y_2, \ldots, y_n) = n!\, f(y_1)\, f(y_2) \cdots f(y_n),
 \qquad 0 < y_1 < y_2 < \cdots < y_n.
@@ -1187,10 +1270,12 @@ g(y_1, y_2, \ldots, y_n) = n!\, f(y_1)\, f(y_2) \cdots f(y_n),
 The factor \(n!\) accounts for the number of ways to assign \(n\) unordered observations to the \(n\) ordered slots.
 
 **Uniform case.** If \(Y_i \sim \text{Uniform}(0,t)\), then \(f(y) = 1/t\) and the joint PDF simplifies to
+
 \[
 g(y_1, \ldots, y_n) = \frac{n!}{t^n}, \qquad 0 < y_1 < y_2 < \cdots < y_n < t.
 \]
 The marginal PDF of the \(i\)-th order statistic \(Y_{(i)}\) is
+
 \[
 g_{(i)}(y) = \frac{n!}{(i-1)!\,(n-i)!} \cdot \frac{y^{i-1}(t-y)^{n-i}}{t^n}, \qquad 0 < y < t,
 \]
@@ -1204,15 +1289,18 @@ f(s_1, \ldots, s_n \mid N(t) = n) = \frac{n!}{t^n}, \qquad 0 < s_1 < s_2 < \cdot
 </div>
 
 *Proof.* Fix \(0 < s_1 < s_2 < \cdots < s_n < t\). By the independent increments property, the events that exactly one arrival falls in each of the intervals \((0,s_1]\), \((s_1,s_2]\), \ldots, \((s_{n-1},s_n]\), and zero arrivals fall in \((s_n,t]\), are mutually independent. Therefore:
+
 \[
 P\!\left(\bigcap_{k=1}^n \{N(s_{k-1}, s_k) = 1\} \cap \{N(s_n, t) = 0\}\right)
 = \prod_{k=1}^n \Bigl[\lambda(s_k - s_{k-1})\, e^{-\lambda(s_k - s_{k-1})}\Bigr] \cdot e^{-\lambda(t-s_n)},
 \]
 where \(s_0 = 0\). The product of exponentials collapses to \(e^{-\lambda t}\) (since the exponents sum to \(\lambda t\)), giving:
+
 \[
 = \lambda^n \prod_{k=1}^n (s_k - s_{k-1}) \cdot e^{-\lambda t}.
 \]
 Dividing by \(P(N(t) = n) = (\lambda t)^n e^{-\lambda t}/n!\) and differentiating with respect to each \(s_k\) yields the conditional joint PDF:
+
 \[
 f(s_1, \ldots, s_n \mid N(t) = n) = \frac{\lambda^n\, e^{-\lambda t}}{(\lambda t)^n e^{-\lambda t}/n!} \cdot \frac{\partial^n}{\partial s_1 \cdots \partial s_n}\!\left[\prod_{k=1}^n (s_k - s_{k-1})\right] = \frac{n!}{t^n}. \quad \square
 \]
@@ -1222,24 +1310,29 @@ f(s_1, \ldots, s_n \mid N(t) = n) = \frac{\lambda^n\, e^{-\lambda t}}{(\lambda t
 #### Applications of Theorem 4.7
 
 **Example 4.A (Discounted total revenue).** Cars arrive to a toll bridge according to a Poisson process with rate \(\lambda\). Each car pays \$1 upon arrival. Let \(\alpha > 0\) be a continuous discount rate, so the present value at time 0 of a payment made at time \(s\) is \(e^{-\alpha s}\). Define the total discounted revenue by time \(t\):
+
 \[
 T = \sum_{i=1}^{N(t)} e^{-\alpha S_i}.
 \]
 
 *Finding \(E[T]\).* Condition on \(N(t) = n\). By Theorem 4.7, the \(S_i\) given \(N(t)=n\) are distributed as \(n\) i.i.d. \(\text{Uniform}(0,t)\) variables (up to ordering). Since \(\sum e^{-\alpha s_i}\) is invariant under permutation:
+
 \[
 E[T \mid N(t) = n] = n\, E[e^{-\alpha U}], \qquad U \sim \text{Uniform}(0,t).
 \]
 Computing the expectation: \(E[e^{-\alpha U}] = \int_0^t e^{-\alpha u}/t\, du = (1 - e^{-\alpha t})/(\alpha t)\). By the law of total expectation:
+
 \[
 \boxed{E[T] = E[N(t)]\, E[e^{-\alpha U}] = \lambda t \cdot \frac{1 - e^{-\alpha t}}{\alpha t} = \frac{\lambda(1 - e^{-\alpha t})}{\alpha}.}
 \]
 
 *Finding \(\text{Var}(T)\).* Let \(B = (1-e^{-\alpha t})/(\alpha t)\) and \(D = (1-e^{-2\alpha t})/(2\alpha t)\). Since \(Y_1,\ldots,Y_n\) are i.i.d. Uniform\((0,t)\):
+
 \[
 \text{Var}(T \mid N(t) = n) = n\, \text{Var}(e^{-\alpha U}) = n(D - B^2).
 \]
 Applying the conditional variance formula (Theorem 2.3) and using \(E[N(t)] = \text{Var}(N(t)) = \lambda t\):
+
 \[
 \text{Var}(T) = E[N(t)](D - B^2) + B^2\,\text{Var}(N(t)) = \lambda t\, D = \frac{\lambda(1-e^{-2\alpha t})}{2\alpha}.
 \]
@@ -1249,6 +1342,7 @@ Applying the conditional variance formula (Theorem 2.3) and using \(E[N(t)] = \t
 In terms of years: we want \(P(S_1 \leq 5/12,\; S_2 \leq 5/6 \mid N(1) = 2)\).
 
 By Theorem 4.7, \((S_1, S_2) \mid N(1) = 2\) has joint PDF \(g(s_1, s_2) = 2!/1^2 = 2\) on \(0 < s_1 < s_2 < 1\). Integrating over the relevant region:
+
 \[
 P(S_1 \leq {\textstyle\tfrac{5}{12}},\; S_2 \leq {\textstyle\tfrac{5}{6}} \mid N(1) = 2)
 = \int_0^{5/12} \int_{s_1}^{5/6} 2\, ds_2\, ds_1
@@ -1280,12 +1374,14 @@ A <strong>non-homogeneous (non-stationary) Poisson process</strong> \(\{N(t)\}_{
 </div>
 
 **Theorem 4.8.** For a non-homogeneous Poisson process with rate function \(\lambda(t)\), the number of events in the interval \((s_1, s_1+s_2]\) is Poisson with mean
+
 \[
 \int_{s_1}^{s_1+s_2} \lambda(\tau)\,d\tau = m(s_1 + s_2) - m(s_1),
 \]
 where \(m(t) = \int_0^t \lambda(\tau)\,d\tau\) is the **mean value function**.
 
 *Proof sketch.* Define the MGF \(\phi_u(s_1, s_2) = E[e^{u(N(s_1+s_2) - N(s_1))}]\). Using independent increments, differentiating with respect to \(s_2\) and taking \(h \to 0\) yields the ODE
+
 \[
 \frac{\partial}{\partial s_2}\phi_u(s_1, s_2) = \lambda(s_1 + s_2)(e^u - 1)\,\phi_u(s_1, s_2),
 \]
@@ -1295,6 +1391,7 @@ with initial condition \(\phi_u(s_1, 0) = 1\). The solution is \(\phi_u(s_1, s_2
 
 <div class="definition">
 A <strong>compound Poisson process</strong> is a process of the form
+
 \[
 X(t) = \sum_{i=1}^{N(t)} Y_i,
 \]
@@ -1302,6 +1399,7 @@ where \(N(t)\) is a Poisson process with rate \(\lambda\), and \(Y_1, Y_2, \ldot
 </div>
 
 Each "event" of the Poisson process contributes a random "jump" of size \(Y_i\). Using the random sum formulas from Chapter 2:
+
 \[
 E[X(t)] = \lambda t\, E[Y_1],
 \qquad
@@ -1309,6 +1407,7 @@ E[X(t)] = \lambda t\, E[Y_1],
 \]
 
 The MGF of \(X(t)\) is
+
 \[
 \phi_{X(t)}(u) = \exp\!\bigl\{\lambda t\,(\phi_{Y_1}(u) - 1)\bigr\}.
 \]

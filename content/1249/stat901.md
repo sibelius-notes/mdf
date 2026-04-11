@@ -128,6 +128,7 @@ With the notion of \(\sigma\)-field in hand, we can now define the central objec
 (1) \(0 \leq P(A) \leq 1\) for all \(A \in \mathcal{F}\).<br>
 (2) \(P(\emptyset) = 0\) and \(P(\Omega) = 1\).<br>
 (3) \(P\) is countably additive: if \(A_1, A_2, \ldots \in \mathcal{F}\) are pairwise disjoint, then
+
 \[
 P\!\Bigl(\bigcup_{i=1}^{\infty} A_i\Bigr) = \sum_{i=1}^{\infty} P(A_i).
 \]
@@ -218,6 +219,7 @@ When \(\liminf_{n \to \infty} A_n = \limsup_{n \to \infty} A_n\), we write \(\li
 </div>
 
 These definitions admit vivid probabilistic interpretations. A point \(\omega\) belongs to \(\liminf_{n \to \infty} A_n\) if and only if \(\omega \in A_k\) for all but finitely many \(k\); in probabilistic shorthand, \(\omega\) is in \(A_n\) **almost always** (a.a.). Conversely, \(\omega \in \limsup_{n \to \infty} A_n\) if and only if \(\omega \in A_k\) for infinitely many \(k\); we say \(\omega\) is in \(A_n\) **infinitely often** (i.o.). We write:
+
 \[
 \liminf_{n \to \infty} A_n = \{A_n \text{ a.a.}\}, \qquad \limsup_{n \to \infty} A_n = \{A_n \text{ i.o.}\}.
 \]
@@ -230,6 +232,7 @@ Since every point that is in all but finitely many \(A_k\) is certainly in infin
 \lim_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} A_n.
 \]
 If \(A_1 \supseteq A_2 \supseteq \cdots\) is a decreasing sequence, then
+
 \[
 \lim_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} A_n.
 \]
@@ -279,6 +282,7 @@ That is, probability measures are continuous from below and from above.
 P\!\Bigl(\lim_{n \to \infty} A_n\Bigr) = P\!\Bigl(\bigcup_{i=1}^{\infty} B_i\Bigr) = \sum_{i=1}^{\infty} P(B_i) = \lim_{n \to \infty} \sum_{i=1}^{n} P(B_i) = \lim_{n \to \infty} P\!\Bigl(\bigcup_{i=1}^{n} B_i\Bigr) = \lim_{n \to \infty} P(A_n).
 \]
 For the decreasing case, note that \(A_n^c\) is increasing with \(\lim_{n \to \infty} A_n^c = \bigl(\lim_{n \to \infty} A_n\bigr)^c\). By the increasing case,
+
 \[
 P\!\Bigl(\lim_{n \to \infty} A_n\Bigr) = 1 - P\!\Bigl(\lim_{n \to \infty} A_n^c\Bigr) = 1 - \lim_{n \to \infty} P(A_n^c) = \lim_{n \to \infty}\bigl(1 - P(A_n^c)\bigr) = \lim_{n \to \infty} P(A_n). \qquad \square
 \]
@@ -551,6 +555,7 @@ Independence is the central structural concept that distinguishes probability fr
 <div class="definition">
 <strong>Definition 1.51 (Independence of Events).</strong> Let \((\Omega, \mathcal{F}, P)\) be a probability space. Two events \(A, B \in \mathcal{F}\) are <strong>independent</strong> if \(P(A \cap B) = P(A)\, P(B)\). When \(P(A) > 0\), this is equivalent to \(P(B \mid A) = P(B)\). We write \(A \perp\!\!\!\perp B\).<br><br>
 For \(n\) events \(A_1, \ldots, A_n\), they are <strong>mutually independent</strong> if
+
 \[
 P\!\Bigl(\bigcap_{i \in I} A_i\Bigr) = \prod_{i \in I} P(A_i)
 \]
@@ -657,6 +662,7 @@ Kolmogorov's zero--one law is a remarkable result stating that for independent s
 <strong>Proof.</strong> By the independence of \(A_1, A_2, \ldots\), for any fixed \(n\), the \(\sigma\)-fields \(\sigma(\{A_1\}), \ldots, \sigma(\{A_{n-1}\}), \sigma(\{A_n, A_{n+1}, \ldots\})\) are all independent (this follows from Propositions 1.54 and 1.55). Now let \(A \in \mathcal{T}\). Since \(\mathcal{T} \subseteq \sigma(A_n, A_{n+1}, \ldots)\) for every \(n\), the event \(A\) is independent of \(A_1, \ldots, A_{n-1}\) for every \(n\). Since \(n\) is arbitrary, \(\sigma(\{A\})\) and \(\sigma(A_1, A_2, \ldots)\) are independent.
 
 However, we also have \(A \in \mathcal{T} \subseteq \sigma(A_1, A_2, \ldots)\). So \(A\) belongs to both \(\sigma(\{A\})\) and \(\sigma(A_1, A_2, \ldots)\), meaning \(A\) is independent of itself:
+
 \[
 P(A) = P(A \cap A) = P(A) \cdot P(A).
 \]
@@ -787,6 +793,7 @@ If \(\omega \leq F(x)\), then for any \(y\) with \(F(y) < \omega\), we have \(F(
 Conversely, if \(\omega > F(x)\), then since \(F\) is right-continuous and the inequality is strict, there exists \(x' > x\) with \(\omega > F(x')\). Then \(x' \in \{y : F(y) < \omega\}\), so \(X(\omega) \geq x' > x\).
 
 Therefore \(\omega \leq F(x)\) if and only if \(X(\omega) \leq x\), and so
+
 \[
 P(X \leq x) = P(\omega \leq F(x)) = \lambda((0, F(x)]) = F(x). \qquad \square
 \]
@@ -816,6 +823,7 @@ If \(f\) is only defined on a countable set, it is called a <strong>probability 
 P(X \in (a,b]) = F(b) - F(a) = \int_a^b f(y)\, dy.
 \]
 As a consequence, for a random variable with a density,
+
 \[
 P(X = x) = \lim_{\varepsilon \to 0} P(X \in (x - \varepsilon, x + \varepsilon)) = \lim_{\varepsilon \to 0} \int_{x-\varepsilon}^{x+\varepsilon} f(y)\, dy = 0,
 \]
@@ -966,6 +974,7 @@ This definition is the natural one: each value \(a_i\) is weighted by the "size"
 <strong>Proof.</strong> Properties (1) and (2) are immediate from the definition.
 
 For (3), suppose \(\varphi = \sum_i a_i \mathbf{1}_{A_i}\) and \(\psi = \sum_j b_j \mathbf{1}_{B_j}\). For \(\omega \in A_i \cap B_j\), we have \((\varphi + \psi)(\omega) = a_i + b_j\). So we may write \(\varphi + \psi = \sum_{i=1}^n \sum_{j=1}^m (a_i + b_j) \mathbf{1}_{A_i \cap B_j}\). Then
+
 \[
 \int (\varphi + \psi) \, d\mu = \sum_{i=1}^n \sum_{j=1}^m (a_i + b_j) \mu(A_i \cap B_j) = \sum_{i=1}^n a_i \sum_{j=1}^m \mu(A_i \cap B_j) + \sum_{j=1}^m b_j \sum_{i=1}^n \mu(A_i \cap B_j) = \sum_{i=1}^n a_i \mu(A_i) + \sum_{j=1}^m b_j \mu(B_j) = \int \varphi \, d\mu + \int \psi \, d\mu.
 \]
@@ -993,10 +1002,12 @@ where \((*)\) is the condition that \(\varphi\) (resp. \(\psi\)) is simple and \
 <strong>Proof.</strong> For any such \(\varphi\) and \(\psi\), we have \(\varphi \leq f \leq \psi\) and they are simple, so \(\int \varphi \, d\mu \leq \int \psi \, d\mu\). Thus \(\sup_{\varphi \leq f} \int \varphi \, d\mu \leq \inf_{\psi \geq f} \int \psi \, d\mu\).
 
 For the reverse inequality, since \(f\) is bounded, there exists \(M\) such that \(|f(\omega)| \leq M\) for all \(\omega \in \Omega\). For each \(n \in \{1, 2, \ldots\}\), define \(E_k = \{x \in E : kM/n \geq f(x) \geq (k-1)M/n\}\) for \(-n \leq k \leq n\). Now define
+
 \[
 \psi_n(x) = \sum_{k=-n}^{n} \frac{kM}{n} \mathbf{1}_{x \in E_k} \quad \text{and} \quad \varphi_n(x) = \sum_{k=-n}^{n} \frac{(k-1)M}{n} \mathbf{1}_{x \in E_k}.
 \]
 Then \(\psi_n(x) - \varphi_n(x) = \frac{M}{n} \mathbf{1}_{x \in E}\), and so \(\int (\psi_n - \varphi_n) \, d\mu = \frac{M}{n} \mu(E)\). Since \(\varphi_n \leq f\) and \(\psi_n \geq f\), we have
+
 \[
 \sup_{\varphi \leq f} \int \varphi \, d\mu \geq \int \varphi_n \, d\mu = \int \psi_n \, d\mu - \frac{M}{n}\mu(E) \geq \inf_{\psi \geq f} \int \psi \, d\mu - \frac{M}{n}\mu(E).
 \]
@@ -1043,14 +1054,17 @@ This definition takes the supremum over all "nice" functions that sit below \(f\
 H := \{h : \Omega \to \mathbb{R} : 0 \leq h \leq f,\; h \text{ is bounded, and } \mu(\{x : h(x) > 0\}) < \infty\}
 \]
 so that \(\int f \, d\mu = \sup\{\int h \, d\mu : h \in H\}\). For any \(h \in H\), let \(M\) be an upper bound of \(h\). Then for any \(n \geq M\),
+
 \[
 \int h_n \, d\mu = \int_{E_n} (f \wedge n) \, d\mu \geq \int_{E_n} h \, d\mu = \int h \, d\mu - \int_{E_n^c} h \, d\mu.
 \]
 since \(h \leq f\) and \(h\) is bounded by \(M\) so that \(h \leq f \wedge M \leq f \wedge n\). Let \(E = \{x : h(x) > 0\}\) with \(\mu(E) < \infty\). Then
+
 \[
 \int_{E_n^c} h \, d\mu = \int_{E_n^c \cap E} h \, d\mu \leq M \mu(E \setminus E_n).
 \]
 Since \(E_n \to \Omega\), we have \(\mu(E \setminus E_n) \to 0\), which implies \(\int_{E_n^c} h \, d\mu \to 0\). Taking \(n \to \infty\), we get \(\lim_{n \to \infty} \int h_n \, d\mu \geq \int h \, d\mu\). Since this holds for any \(h \in H\),
+
 \[
 \lim_{n \to \infty} \int h_n \, d\mu \geq \sup\left\{\int h \, d\mu : h \in H\right\} = \int f \, d\mu.
 \]
@@ -1138,6 +1152,7 @@ The Chebyshev inequality in its variance form is perhaps the single most-used in
 ## Jensen's Inequality
 
 Another inequality of fundamental importance in probability is Jensen's inequality, which relates the expectation of a convex function to the convex function of the expectation. Recall that a function \(\varphi : \mathbb{R} \to \mathbb{R}\) is **convex** if for every pair of points \(x, y\) and every \(0 < p < 1\),
+
 \[
 \varphi(px + (1-p)y) \leq p\varphi(x) + (1-p)\varphi(y).
 \]
@@ -1175,6 +1190,7 @@ The real power of the Lebesgue integral lies in the convergence theorems that al
 <strong>Proof.</strong> Since \(f_n \leq f\) for all \(n\), monotonicity of the integral gives \(\int f_n \, d\mu \leq \int f \, d\mu\). Moreover, \(\int f_n \, d\mu\) is non-decreasing and hence converges, with \(\lim \int f_n \, d\mu \leq \int f \, d\mu\).
 
 For the reverse inequality, let \(\varepsilon > 0\) be arbitrary and let \(Y = \sum_i c_i \mathbf{1}_{A_i}\) be any simple function with \(Y \leq f\). Define \(B_n = \{\omega : f_n(\omega) \geq (1 - \varepsilon) Y(\omega)\}\). As \(n \to \infty\), the sets \(B_n\) increase to a set containing \(\{\omega : f(\omega) \geq (1 - \varepsilon/2) Y(\omega)\}\), and since \(f \geq Y\), this is all of \(\Omega\). Therefore
+
 \[
 \int f_n \, d\mu \geq \int f_n \mathbf{1}_{B_n} \, d\mu \geq (1 - \varepsilon) \int Y \mathbf{1}_{B_n} \, d\mu.
 \]
@@ -1219,6 +1235,7 @@ E[\liminf(Y + X_n)] \leq \liminf E[Y + X_n],
 which gives \(E[Y] + E[X] \leq E[Y] + \liminf E[X_n]\), hence \(E[X] \leq \liminf E[X_n]\).
 
 Similarly, applying Fatou's lemma to \(Y - X_n\) (also non-negative) gives
+
 \[
 E[Y] - E[X] \leq E[Y] - \limsup E[X_n],
 \]
@@ -1265,6 +1282,7 @@ m_X(t) = E[e^{tX}] = \int_{-\infty}^{\infty} e^{tx} \, dF(x), \quad t \in \mathb
 </div>
 
 Since \(e^{tX}\) is always non-negative, the m.g.f. is well-defined but may take the value \(+\infty\) for some or all \(t\). When \(m_X(t)\) is finite in an open neighborhood of \(t = 0\), we can recover moments by differentiation:
+
 \[
 E[X^n] = m_X^{(n)}(0).
 \]
@@ -1353,10 +1371,12 @@ But does the characteristic function uniquely determine the distribution? The fo
 I_T = \int \int_{-T}^{T} \frac{e^{it(x-a)} - e^{it(x-b)}}{it} \, dt \, \mu(dx) = \int \left[\int_{-T}^{T} \frac{\sin(t(x-a))}{t} \, dt - \int_{-T}^{T} \frac{\sin(t(x-b))}{t} \, dt\right] \mu(dx).
 \]
 The cosine terms vanish by symmetry of the integration interval. Using the classical result that for \(\theta > 0\),
+
 \[
 \lim_{T \to \infty} \int_{-T}^{T} \frac{\sin(\theta t)}{t} \, dt = \pi, \qquad \lim_{T \to \infty} \int_{-T}^{T} \frac{\sin(\theta t)}{t} \, dt = -\pi \text{ for } \theta < 0,
 \]
 we obtain
+
 \[
 g(x) := \lim_{T \to \infty} \left[\int_{-T}^{T} \frac{\sin(t(x-a))}{t} \, dt - \int_{-T}^{T} \frac{\sin(t(x-b))}{t} \, dt\right] = \begin{cases} 2\pi & \text{if } a < x < b, \\ \pi & \text{if } x = a \text{ or } x = b, \\ 0 & \text{if } x < a \text{ or } x > b. \end{cases}
 \]
@@ -1379,6 +1399,7 @@ Here we completed the square and used the fact that the integral of the standard
 <strong>Example (General Normal Distribution).</strong> A general normal \(X \sim N(\mu, \sigma^2)\) has density \(f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2/(2\sigma^2)}\). Writing \(X = \mu + \sigma Z\) for \(Z \sim N(0,1)\), property (4) of characteristic functions gives \(\varphi_X(t) = e^{i\mu t - \sigma^2 t^2/2}\).
 
 If \(X_1 \sim N(\mu_1, \sigma_1^2)\) and \(X_2 \sim N(\mu_2, \sigma_2^2)\) are independent, then
+
 \[
 \varphi_{X_1 + X_2}(t) = \exp\left(i(\mu_1 + \mu_2)t - \tfrac{1}{2}(\sigma_1^2 + \sigma_2^2)t^2\right),
 \]
@@ -1388,6 +1409,7 @@ which is the characteristic function of \(N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2
 ## Multivariate Characteristic Functions and the Multivariate Normal
 
 The theory of characteristic functions extends naturally to random vectors. For a random vector \(\vec{X} = (X_1, \ldots, X_n)\) and any \(\vec{t} = (t_1, \ldots, t_n) \in \mathbb{R}^n\), the **multivariate characteristic function** is
+
 \[
 \varphi_{\vec{X}}(\vec{t}) = E\left[e^{i\langle \vec{t}, \vec{X}\rangle}\right] = E\left[\exp\left(i \sum_{j=1}^n t_j X_j\right)\right]
 \]
@@ -1398,6 +1420,7 @@ where \(\langle \vec{a}, \vec{b}\rangle = \sum_{i=1}^n a_i b_i\) is the standard
 </div>
 
 The multivariate normal distribution is completely characterized by its mean vector and covariance matrix: \(\vec{X}\) is multivariate normal if and only if its characteristic function has the form
+
 \[
 \varphi_{\vec{X}}(\vec{t}) = \exp\left(i\langle \vec{t}, \vec{\mu}\rangle - \tfrac{1}{2} \langle \vec{t}, \Sigma \vec{t}\rangle\right)
 \]
@@ -1434,6 +1457,7 @@ which is the characteristic function of \(N(\langle \vec{a}, \vec{\mu}\rangle, \
 We have already encountered \(L^p\) spaces implicitly through the various notions of integrability. Let us now formalize this concept, as it will be essential for the convergence theory developed in the next chapter.
 
 For a probability space \((\Omega, \mathcal{F}, P)\) and \(1 \leq p < \infty\), the space \(L^p\) consists of all random variables \(X\) such that \(E[|X|^p] < \infty\). This space is equipped with the norm
+
 \[
 \|X\|_p = \left(E[|X|^p]\right)^{1/p}.
 \]
@@ -1442,12 +1466,14 @@ The space \(L^2\) is especially important because it is a Hilbert space with inn
 The Markov and Chebyshev inequalities developed earlier are special cases of a more general family of inequalities. Two further inequalities of great importance in the \(L^p\) theory are Holder's inequality and Minkowski's inequality.
 
 **Holder's inequality** states that if \(p, q > 1\) satisfy \(1/p + 1/q = 1\), and if \(X \in L^p\) and \(Y \in L^q\), then \(XY \in L^1\) and
+
 \[
 E[|XY|] \leq \|X\|_p \|Y\|_q.
 \]
 The special case \(p = q = 2\) is the Cauchy--Schwarz inequality \(E[|XY|] \leq \sqrt{E[X^2] E[Y^2]}\).
 
 **Minkowski's inequality** states that for \(p \geq 1\) and \(X, Y \in L^p\),
+
 \[
 \|X + Y\|_p \leq \|X\|_p + \|Y\|_p.
 \]
@@ -1496,6 +1522,7 @@ In probability theory, we are frequently concerned with the behavior of sequence
 The strongest and most intuitive notion of convergence requires that, for almost every outcome \(\omega\), the numerical sequence \(X_n(\omega)\) converges to \(X(\omega)\) in the ordinary sense.
 
 Recall that for a sequence of real numbers \(x_1, x_2, \ldots\), the limit exists if and only if \(\limsup_{n \to \infty} x_n = \liminf_{n \to \infty} x_n\). For random variables, the set
+
 \[
 \Omega_0 := \{\omega : \lim_{n \to \infty} X_n(\omega) \text{ exists}\} = \{\limsup_{n \to \infty} X_n - \liminf_{n \to \infty} X_n = 0\}
 \]
@@ -1555,6 +1582,7 @@ The following theorem establishes the two most basic implications among our mode
 Since \(P(\{X_n \to X\}) = 1\), by continuity of probability, \(\lim_{n \to \infty} P(A_n) = 1\). Since \(A_n \subseteq \{|X_n - X| \leq \varepsilon\}\), we get \(\lim_{n \to \infty} P(|X_n - X| \leq \varepsilon) = 1\).
 
 (2) Fix \(\varepsilon > 0\). By the Markov inequality,
+
 \[
 P(|X_n - X| > \varepsilon) = P(|X_n - X|^p > \varepsilon^p) \leq \frac{E[|X_n - X|^p]}{\varepsilon^p} \to 0
 \]
@@ -1573,6 +1601,7 @@ Higher \(L^p\) convergence implies lower \(L^p\) convergence:
 E[|X_n - X|^p] = E[|X_n - X|^p \mathbf{1}_{\{|X_n - X| \geq \varepsilon\}}] + E[|X_n - X|^p \mathbf{1}_{\{|X_n - X| < \varepsilon\}}].
 \]
 When \(|X_n - X| \geq \varepsilon\), we have \(|X_n - X|^p \leq \varepsilon^{p-q} |X_n - X|^q\) since \(p - q < 0\). When \(|X_n - X| < \varepsilon\), we have \(|X_n - X|^p < \varepsilon^p\). Therefore
+
 \[
 E[|X_n - X|^p] \leq \varepsilon^{p-q} E[|X_n - X|^q] + \varepsilon^p.
 \]
@@ -1670,6 +1699,7 @@ Convergence in probability implies convergence in distribution, as the following
 <strong>Proof.</strong> Let \(F_n\) and \(F\) be the distribution functions of \(X_n\) and \(X\). Let \(a \in \mathbb{R}\) be a continuity point of \(F\). For any \(\varepsilon > 0\), by continuity of \(F\) at \(a\), there exists \(\delta > 0\) with \(F(a) - \varepsilon < F(a - \delta) \leq F(a) \leq F(a + \delta) < F(a) + \varepsilon\). Since \(X_n \xrightarrow{P} X\), there exists \(N_\varepsilon\) such that \(P(|X_n - X| > \delta) < \varepsilon\) for \(n \geq N_\varepsilon\).
 
 For such \(n\), \(F_n(a) = P(X_n \leq a) = P(X_n \leq a, |X_n - X| \leq \delta) + P(X_n \leq a, |X_n - X| > \delta)\). The second term is at most \(\varepsilon\). The first term satisfies
+
 \[
 P(X_n \leq a, |X_n - X| \leq \delta) \in \left[F(a - \delta) - \varepsilon,\; F(a + \delta)\right].
 \]
@@ -1840,6 +1870,7 @@ The continuity theorem is the cornerstone of the characteristic function approac
 <strong>Proof.</strong> (\(\Rightarrow\)) Since \(e^{itx}\) is a bounded continuous function of \(x\), the Portmanteau theorem gives \(E[e^{itX_n}] \to E[e^{itX}]\) (applying the theorem separately to the real and imaginary parts), i.e., \(\varphi_n(t) \to \varphi(t)\).
 
 (\(\Leftarrow\)) We first show tightness. Using the identity
+
 \[
 \frac{1}{u} \int_{-u}^{u} (1 - \varphi_n(t)) \, dt = 2E\left[1 - \frac{\sin(uX_n)}{uX_n}\right] \geq P\left(|X_n| \geq \frac{2}{u}\right),
 \]
@@ -1906,6 +1937,7 @@ The characteristic function is sometimes called the Fourier--Stieltjes transform
 Property (4) is a direct calculation: \( E[e^{it(aX+b)}] = e^{ibt}\,E[e^{i(at)X}] = e^{ibt}\,\varphi_X(at) \).
 
 For (5), let \( h = s - t \). Then
+
 \[
 |\varphi(t) - \varphi(s)| = |E[e^{itX}(e^{ihX} - 1)]| \leq E[|e^{ihX} - 1|].
 \]
@@ -1914,6 +1946,7 @@ As \( h \to 0 \), the function \( e^{ihX} - 1 \to 0 \) pointwise, and it is boun
 Property (6) is the same as (2). For (7), the distribution is symmetric about zero precisely when \( X \) and \( -X \) have the same distribution, hence the same characteristic function. By (6), this means \( \varphi(t) = \overline{\varphi(t)} \), which holds if and only if \( \varphi \) is real-valued.
 
 For (8), independence gives
+
 \[
 \varphi_{X+Y}(t) = E[e^{it(X+Y)}] = E[e^{itX}\,e^{itY}] = E[e^{itX}]\,E[e^{itY}] = \varphi_X(t)\,\varphi_Y(t). \qquad \blacksquare
 \]
@@ -1939,6 +1972,7 @@ If \( Y \sim \mathrm{Poi}(\eta) \) is independent of \( X \), then \( \varphi_{X
 \varphi_Z(t) = \int_{-\infty}^{\infty} e^{itx}\,\frac{1}{\sqrt{2\pi}}\,e^{-x^2/2}\,dx = e^{-t^2/2}.
 \]
 More generally, if \( X \sim N(\mu, \sigma^2) \), then \( X = \mu + \sigma Z \) and property (4) gives
+
 \[
 \varphi_X(t) = e^{i\mu t - \sigma^2 t^2/2}.
 \]
@@ -1968,22 +2002,27 @@ The proof proceeds by interchanging the order of integration (justified by Fubin
 I_T = \int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\,\varphi(t)\,dt = \int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\int_{\mathbb{R}} e^{itx}\,\mu(dx)\,dt.
 \]
 By Fubini's theorem (noting that the integrand is bounded), we may interchange the order of integration to obtain
+
 \[
 I_T = \int_{\mathbb{R}}\int_{-T}^{T}\frac{e^{it(x-a)} - e^{it(x-b)}}{it}\,dt\,\mu(dx).
 \]
 The inner integral separates into sine integrals. Since \( \frac{e^{itc}}{i} \) has real part \( \frac{\sin(tc)}{t} \) (the cosine terms cancel by symmetry of the interval \( [-T,T] \)), we get
+
 \[
 I_T = \int_{\mathbb{R}}\left[\int_{-T}^{T}\frac{\sin(t(x-a))}{t}\,dt - \int_{-T}^{T}\frac{\sin(t(x-b))}{t}\,dt\right]\mu(dx).
 \]
 The classical result \( \int_{-\infty}^{\infty}\frac{\sin(y)}{y}\,dy = \pi \) (and the substitution \( y = \theta t \)) gives, for \( \theta > 0 \),
+
 \[
 \lim_{T\to\infty}\int_{-T}^{T}\frac{\sin(\theta t)}{t}\,dt = \pi, \qquad \lim_{T\to\infty}\int_{-T}^{T}\frac{\sin(\theta t)}{t}\,dt = -\pi \text{ for } \theta < 0.
 \]
 Therefore, define
+
 \[
 g(x) = \lim_{T\to\infty}\left[\int_{-T}^{T}\frac{\sin(t(x-a))}{t}\,dt - \int_{-T}^{T}\frac{\sin(t(x-b))}{t}\,dt\right] = \begin{cases} 2\pi & \text{if } a < x < b, \\ \pi & \text{if } x = a \text{ or } x = b, \\ 0 & \text{if } x < a \text{ or } x > b. \end{cases}
 \]
 Since the integrand is bounded by a universal constant \( 2M \) (where \( M = \sup_{c}\int_{-c}^{c}\frac{|\sin y|}{|y|}\,dy < \infty \)), the dominated convergence theorem justifies passing the limit inside the outer integral:
+
 \[
 \lim_{T\to\infty} I_T = \int_{\mathbb{R}} g(x)\,\mu(dx) = 2\pi\,\mu((a,b)) + \pi\,\mu(\{a,b\}).
 \]
@@ -2038,10 +2077,12 @@ The forward direction is a straightforward application of the portmanteau theore
 \frac{1}{u}\int_{-u}^{u}(1 - \varphi_n(t))\,dt = 2\,E\!\left[1 - \frac{\sin(uX_n)}{uX_n}\right].
 \]
 Since \( 1 - \frac{\sin(y)}{y} \geq 0 \) and \( 1 - \frac{\sin(y)}{y} \geq \frac{1}{2} \) whenever \( |y| \geq 2 \), we obtain
+
 \[
 \frac{1}{u}\int_{-u}^{u}(1 - \varphi_n(t))\,dt \geq P\!\left(|X_n| \geq \frac{2}{u}\right).
 \]
 Because \( \varphi \) is continuous and \( \varphi(0) = 1 \), we have \( u^{-1}\int_{-u}^{u}(1-\varphi(t))\,dt \to 0 \) as \( u \to 0 \). Since \( \varphi_n \to \varphi \) pointwise and \( |1-\varphi_n(t)| \leq 2 \), the dominated convergence theorem gives
+
 \[
 \frac{1}{u}\int_{-u}^{u}(1-\varphi_n(t))\,dt \to \frac{1}{u}\int_{-u}^{u}(1-\varphi(t))\,dt.
 \]
@@ -2152,6 +2193,7 @@ Define \( S_n = X_{n,1} + \cdots + X_{n,n} \) and \( a_n = \sum_{k=1}^{n}E[\tild
 P\!\left(\left|\frac{S_n - a_n}{b_n}\right| > \varepsilon\right) \leq P(S_n \neq \tilde{S}_n) + P\!\left(\left|\frac{\tilde{S}_n - a_n}{b_n}\right| > \varepsilon\right).
 \]
 For the first term, \( P(S_n \neq \tilde{S}_n) \leq \sum_{k=1}^{n}P(X_{n,k} \neq \tilde{X}_{n,k}) = \sum_{k=1}^{n}P(|X_{n,k}| > b_n) \to 0 \) by condition (1). Since \( a_n = E[\tilde{S}_n] \), the second term satisfies
+
 \[
 E\!\left[\left(\frac{\tilde{S}_n - a_n}{b_n}\right)^2\right] = \frac{\operatorname{Var}(\tilde{S}_n)}{b_n^2} = \frac{1}{b_n^2}\sum_{k=1}^{n}\operatorname{Var}(\tilde{X}_{n,k}) \leq \frac{1}{b_n^2}\sum_{k=1}^{n}E[\tilde{X}_{n,k}^2] \to 0
 \]
@@ -2196,6 +2238,7 @@ Since \( y\,P(|X_1| > y) \to 0 \), the running average \( \frac{1}{n}\int_0^{n}2
 x\,P(|X_1| > x) = E[x\,\mathbf{1}_{\{|X_1| > x\}}] \leq E[|X_1|\,\mathbf{1}_{\{|X_1| > x\}}] \to 0
 \]
 by the dominated convergence theorem (since \( |X_1|\,\mathbf{1}_{\{|X_1| > x\}} \leq |X_1| \) and \( |X_1|\,\mathbf{1}_{\{|X_1| > x\}} \to 0 \) a.s.). Moreover, \( \mu_n = E[X_1\,\mathbf{1}_{\{|X_1| \leq n\}}] \to E[X_1] = \mu \) by dominated convergence. Therefore
+
 \[
 \frac{S_n}{n} - \mu = \left(\frac{S_n}{n} - \mu_n\right) + (\mu_n - \mu) \xrightarrow{P} 0. \qquad \blacksquare
 \]
@@ -2230,6 +2273,7 @@ The strong law strengthens convergence in probability to almost sure convergence
 \sum_{k=1}^{\infty}\frac{E[Y_k^2]}{k^2} \leq \sum_{k=1}^{\infty}\frac{1}{k^2}\int_0^{k}2y\,P(|X_1| > y)\,dy = \int_0^{\infty}\sum_{\substack{k=1 \\ k > y}}^{\infty}\frac{1}{k^2}\cdot 2y\,P(|X_1|>y)\,dy
 \]
 by Fubini's theorem. By the previous lemma, \( 2y\sum_{k>y}k^{-2} \leq 4 \), so
+
 \[
 \sum_{k=1}^{\infty}\frac{E[Y_k^2]}{k^2} \leq 4\int_0^{\infty}P(|X_1|>y)\,dy = 4\,E[|X_1|] < \infty. \qquad \blacksquare
 \]
@@ -2250,10 +2294,12 @@ by Fubini's theorem. By the previous lemma, \( 2y\sum_{k>y}k^{-2} \leq 4 \), so
 \sum_{n=1}^{\infty}P(|T_{k(n)} - E[T_{k(n)}]| > \varepsilon\,k(n)) \leq \varepsilon^{-2}\sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2}.
 \]
 Interchanging the order of summation,
+
 \[
 \sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2} = \sum_{n=1}^{\infty}\frac{1}{k(n)^2}\sum_{m=1}^{k(n)}\operatorname{Var}(Y_m) = \sum_{m=1}^{\infty}\operatorname{Var}(Y_m)\sum_{n:\,k(n)\geq m}\frac{1}{k(n)^2}.
 \]
 Since \( k(n) \geq \alpha^n/2 \) for \( n \geq 1 \), the inner sum is bounded by \( 4\alpha^{-2n_0} \cdot \frac{1}{1-\alpha^{-2}} \leq \frac{4}{m^2(1-\alpha^{-2})} \). Therefore,
+
 \[
 \sum_{n=1}^{\infty}\frac{\operatorname{Var}(T_{k(n)})}{k(n)^2} \leq \frac{4}{1-\alpha^{-2}}\sum_{m=1}^{\infty}\frac{\operatorname{Var}(Y_m)}{m^2} \leq \frac{16\,E[|X_1|]}{1-\alpha^{-2}} < \infty.
 \]
@@ -2264,6 +2310,7 @@ By the first Borel--Cantelli lemma, \( P(|T_{k(n)} - E[T_{k(n)}]|/k(n) > \vareps
 \frac{T_{k(n)}}{k(n+1)} \leq \frac{T_m}{m} \leq \frac{T_{k(n+1)}}{k(n)}.
 \]
 Since \( k(n+1)/k(n) \to \alpha \), taking limits gives
+
 \[
 \frac{\mu}{\alpha} \leq \liminf_{m\to\infty}\frac{T_m}{m} \leq \limsup_{m\to\infty}\frac{T_m}{m} \leq \alpha\mu.
 \]
@@ -2307,10 +2354,12 @@ The Glivenko--Cantelli theorem is a beautiful application of the strong law that
 <strong>Proof.</strong> Pointwise convergence \( F_n(x) \to F(x) \) a.s. for each fixed \( x \) is immediate from the SLLN applied to the indicators \( \mathbf{1}_{\{X_m \leq x\}} \). Similarly, \( F_n(x-) \to F(x-) \) a.s. The challenge is to upgrade this to uniform convergence.
 
 For each \( k \geq 1 \) and \( 1 \leq j \leq k-1 \), define \( x_{j,k} = \inf\{y : F(y) \geq j/k\} \), the \( (j/k) \)th quantile. By construction, \( F(x_{j,k}-) - F(x_{j-1,k}) \leq 1/k \). By almost sure pointwise convergence, almost surely there exists \( N_k(\omega) \) such that for all \( n \geq N_k(\omega) \),
+
 \[
 |F_n(x_{j,k}) - F(x_{j,k})| < \frac{1}{k} \quad \text{and} \quad |F_n(x_{j,k}-) - F(x_{j,k}-)| < \frac{1}{k}
 \]
 for all \( 1 \leq j \leq k-1 \). For any \( x \in [x_{j-1,k}, x_{j,k}) \), since \( F_n \) and \( F \) are both non-decreasing,
+
 \[
 F_n(x) \leq F_n(x_{j,k}-) \leq F(x_{j,k}-) + \frac{1}{k} \leq F(x) + \frac{2}{k},
 \]
@@ -2342,6 +2391,7 @@ as \( n \to \infty \). Since \( e^{-t^2/2} \) is the characteristic function of 
 \frac{S_n - np}{\sqrt{np(1-p)}} \xrightarrow{d} N(0,1).
 \]
 For instance, when \( p = 1/2 \) and \( n = 10000 \),
+
 \[
 P(4900 \leq S_n \leq 5100) \approx \Phi(2) - \Phi(-2) \approx 0.95.
 \]
@@ -2384,6 +2434,7 @@ The **delta method** is a useful technique for determining the asymptotic distri
 g(X_n) - g(\theta) = g'(\theta)(X_n - \theta) + o(|X_n - \theta|).
 \]
 Since \( X_n \xrightarrow{P} \theta \) (convergence in distribution to a constant implies convergence in probability), the remainder \( o(|X_n - \theta|) \) is negligible after multiplication by \( \sqrt{n} \). Applying Slutsky's theorem,
+
 \[
 \sqrt{n}(g(X_n) - g(\theta)) = g'(\theta)\cdot\sqrt{n}(X_n - \theta) + o_P(1) \xrightarrow{d} g'(\theta)\cdot N(0, \sigma^2) = N(0, \sigma^2[g'(\theta)]^2). \qquad \blacksquare
 \]
@@ -2406,10 +2457,12 @@ The modern theory of conditional expectation, due to Kolmogorov, resolves these 
 ### The Informal Picture
 
 Recall the informal definition:
+
 \[
 E[Y \mid X = x] = \begin{cases} \displaystyle\sum_y y\,P(Y = y \mid X = x) & \text{if } X, Y \text{ are discrete}, \\[6pt] \displaystyle\int y\,f_{Y|X}(y \mid x)\,dy & \text{if } X, Y \text{ are absolutely continuous}. \end{cases}
 \]
 The key observation is that \( E[Y \mid X = x] \) is a function of \( x \). If we substitute \( X(\omega) \) for \( x \), we get a random variable \( E[Y \mid X] = g(X) \), which is determined by the value of \( X \) -- that is, it is measurable with respect to \( \sigma(X) \). This random variable has the property that for every set \( A \in \sigma(X) \),
+
 \[
 \int_A Y\,dP = \int_A E[Y \mid X]\,dP.
 \]
@@ -2539,6 +2592,7 @@ The following properties make conditional expectation a flexible and powerful to
 <strong>Proof.</strong> (1) follows directly from the linearity of integration.
 
 (2) Let \( A = \{E[X \mid \mathcal{F}] > E[Y \mid \mathcal{F}]\} \in \mathcal{F} \). Then
+
 \[
 \int_A E[X \mid \mathcal{F}]\,dP = \int_A X\,dP \leq \int_A Y\,dP = \int_A E[Y \mid \mathcal{F}]\,dP,
 \]
@@ -2569,6 +2623,7 @@ The tower property (also called the law of iterated expectations) is one of the 
 <strong>Proof.</strong> (1) Since \( E[X \mid \mathcal{F}_1] \) is \( \mathcal{F}_1 \)-measurable and \( \mathcal{F}_1 \subseteq \mathcal{F}_2 \), it is also \( \mathcal{F}_2 \)-measurable. Conditioning an \( \mathcal{F}_2 \)-measurable random variable on \( \mathcal{F}_2 \) leaves it unchanged.
 
 (2) For any \( A \in \mathcal{F}_1 \subseteq \mathcal{F}_2 \),
+
 \[
 \int_A E[X \mid \mathcal{F}_1]\,dP = \int_A X\,dP = \int_A E[X \mid \mathcal{F}_2]\,dP.
 \]
@@ -2713,6 +2768,7 @@ Conditional on \( N = k \), the inner expectation is \( E\!\left[\sum_{n=1}^{k}X
 \operatorname{Var}(X) = E[(X - E[X])^2] = E\!\left[\left((X - E[X \mid Y]) + (E[X \mid Y] - E[X])\right)^2\right].
 \]
 By orthogonality, the cross-term vanishes, giving
+
 \[
 \operatorname{Var}(X) = E[(X - E[X \mid Y])^2] + E[(E[X \mid Y] - E[X])^2].
 \]
@@ -2747,10 +2803,12 @@ g_Z(t) = E[t^Z] = \sum_{n=0}^{\infty}t^n\,P(Z = n), \qquad t \in [0,1].
 \varphi_Y(t) = E\!\left[e^{it\sum_{n=1}^{N}X_n}\right] = E\!\left[E\!\left[e^{it\sum_{n=1}^{N}X_n} \,\middle|\, N\right]\right].
 \]
 Conditional on \( N = k \), the \( X_i \) are i.i.d. and independent of \( N \), so
+
 \[
 E\!\left[e^{it\sum_{n=1}^{k}X_n} \,\middle|\, N = k\right] = \prod_{n=1}^{k}E[e^{itX_n}] = \left[\varphi_X(t)\right]^k.
 \]
 Therefore \( E[e^{it\sum_{n=1}^{N}X_n} \mid N] = [\varphi_X(t)]^N \), and taking expectations gives
+
 \[
 \varphi_Y(t) = E\!\left[[\varphi_X(t)]^N\right] = g_N\!\left(\varphi_X(t)\right). \qquad \blacksquare
 \]
@@ -2764,6 +2822,7 @@ This result reduces the problem to a composition of two known functions. We illu
 \varphi_X(t) = \frac{\lambda}{\lambda - it}, \qquad g_N(s) = E[s^N] = \frac{ps}{1 - (1-p)s}.
 \]
 Applying the theorem,
+
 \[
 \varphi_Y(t) = g_N(\varphi_X(t)) = \frac{p\cdot\frac{\lambda}{\lambda - it}}{1 - (1-p)\cdot\frac{\lambda}{\lambda - it}} = \frac{p\lambda}{\lambda - it - (1-p)\lambda} = \frac{p\lambda}{p\lambda - it}.
 \]
@@ -2797,6 +2856,7 @@ Regular conditional distributions do not always exist in full generality (pathol
 The proof, which we omit, uses the separability of the state space to reduce the problem to countably many conditional probability statements, each of which is handled by the Radon--Nikodym theorem.
 
 When a regular conditional distribution \( Q(\cdot, \omega) \) exists, conditional expectations can be computed as ordinary integrals:
+
 \[
 E[f(X) \mid \mathcal{G}](\omega) = \int f(x)\,Q(dx, \omega)
 \]
@@ -2959,6 +3019,7 @@ The terminology "stochastic integral" is apt: \( (H \cdot X)_n \) is a discrete 
 E[(H \cdot X)_{n+1} \mid \mathcal{F}_n] = E\!\left[(H \cdot X)_n + H_{n+1}(X_{n+1} - X_n) \mid \mathcal{F}_n\right].
 \]
 Since \( (H \cdot X)_n \in \mathcal{F}_n \) and \( H_{n+1} \in \mathcal{F}_n \) (by predictability), this equals
+
 \[
 (H \cdot X)_n + H_{n+1}\,E[X_{n+1} - X_n \mid \mathcal{F}_n].
 \]
@@ -3062,6 +3123,7 @@ The optional sampling theorem is at its most vivid when applied to random walks 
 ### Symmetric Simple Random Walk
 
 Let \( Z_1, Z_2, \ldots \) be i.i.d. with \( P(Z_i = 1) = P(Z_i = -1) = 1/2 \). Set \( X_0 = 0 \) and \( X_n = Z_1 + \cdots + Z_n \). Fix integers \( a < 0 < b \) and define the stopping time
+
 \[
 \tau = \inf\{n \geq 0 : X_n = a \text{ or } X_n = b\},
 \]
@@ -3109,10 +3171,12 @@ E[\tau] = -ab = |a|\cdot b.
 E[X_{\tau \wedge K}^2 - (\tau \wedge K)] = E[M_{\tau \wedge K}] = E[M_0] = 0,
 \]
 whence \( E[\tau \wedge K] = E[X_{\tau \wedge K}^2] \). We split the right-hand side:
+
 \[
 E[X_{\tau \wedge K}^2] = E[X_\tau^2\,\mathbf{1}_{\{\tau \leq K\}}] + E[X_K^2\,\mathbf{1}_{\{\tau > K\}}].
 \]
 For the first term, \( X_\tau \in \{a, b\} \), so \( E[X_\tau^2\,\mathbf{1}_{\{\tau \leq K\}}] = a^2\,P(\tau \leq K,\,X_\tau = a) + b^2\,P(\tau \leq K,\,X_\tau = b) \). For the second term, \( |X_K| \leq \max(|a|, b) \) on \( \{\tau > K\} \), so \( E[X_K^2\,\mathbf{1}_{\{\tau > K\}}] \leq (a^2 \vee b^2)\,P(\tau > K) \to 0 \) as \( K \to \infty \) (since \( \tau < \infty \) a.s.). Taking \( K \to \infty \), the monotone convergence theorem gives \( E[\tau \wedge K] \nearrow E[\tau] \) on the left, and the first term converges to \( a^2\,P(X_\tau = a) + b^2\,P(X_\tau = b) \) on the right. Therefore
+
 \[
 E[\tau] = a^2 \cdot \frac{b}{b-a} + b^2 \cdot \frac{-a}{b-a} = \frac{a^2 b - a b^2}{b - a} = \frac{ab(a-b)}{b-a} = -ab. \qquad \blacksquare
 \]
@@ -3140,6 +3204,7 @@ is a martingale with respect to the natural filtration \( \{\mathcal{F}_n\} \).
 E[Y_{n+1} \mid \mathcal{F}_n] = E\!\left[\left(\frac{q}{p}\right)^{X_n + Z_{n+1}} \,\middle|\, \mathcal{F}_n\right] = Y_n \cdot E\!\left[\left(\frac{q}{p}\right)^{Z_{n+1}}\right],
 \]
 since \( Z_{n+1} \) is independent of \( \mathcal{F}_n \). Computing the expectation:
+
 \[
 E\!\left[\left(\frac{q}{p}\right)^{Z_{n+1}}\right] = p \cdot \frac{q}{p} + q \cdot \frac{p}{q} = q + p = 1.
 \]
@@ -3159,6 +3224,7 @@ P(X_\tau = a) = \frac{1 - \rho^b}{\rho^a - \rho^b}, \qquad P(X_\tau = b) = \frac
 E[Y_\tau] = E[Y_0] = \rho^0 = 1.
 \]
 Since \( X_\tau \in \{a, b\} \),
+
 \[
 \rho^a\,P(X_\tau = a) + \rho^b\,P(X_\tau = b) = 1.
 \]
@@ -3185,6 +3251,7 @@ where \( T_a = \inf\{n : X_n = a\} \). In particular, \( P(T_a < \infty) < 1 \):
 P(T_a < \infty) = \lim_{b \to \infty}P(X_\tau = a) = \lim_{b \to \infty}\frac{1 - \rho^b}{\rho^a - \rho^b}.
 \]
 Since \( p > 1/2 \), we have \( \rho = q/p < 1 \), so \( \rho^b \to 0 \) as \( b \to \infty \). Therefore
+
 \[
 P(T_a < \infty) = \frac{1 - 0}{\rho^a - 0} = \rho^{-a} = \left(\frac{q}{p}\right)^{|a|}. \qquad \blacksquare
 \]

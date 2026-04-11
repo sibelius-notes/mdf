@@ -65,6 +65,7 @@ The abstract definition comes alive through explicit computations. The first fam
 \nu(E) = \int_E \sin(x) \, dm(x), \quad E \in \mathcal{B}([0, 2\pi]).
 \]
 Since \( f(x) = \sin(x) \) is integrable (and bounded), \( \nu \) is a well-defined signed measure. We compute:
+
 \[
 \nu([0, \pi]) = \int_0^{\pi} \sin(x) \, dx = \bigl[-\cos(x)\bigr]_0^{\pi} = -\cos(\pi) + \cos(0) = 1 + 1 = 2.
 \]
@@ -76,6 +77,7 @@ The total: \( \nu([0, 2\pi]) = 2 + (-2) = 0 \), consistent with the integral of 
 Now we identify the positive and negative sets. Set \( P = [0, \pi] \) and \( N = [\pi, 2\pi] \). For any measurable \( E \subseteq P = [0, \pi] \), the function \( \sin(x) \ge 0 \) on \( P \), so \( \nu(E) = \int_E \sin(x) \, dx \ge 0 \). Thus \( P \) is a <em>positive set</em> for \( \nu \). Similarly, \( \sin(x) \le 0 \) on \( [\pi, 2\pi] \), so every measurable subset of \( N \) has non-positive \( \nu \)-measure; \( N \) is a <em>negative set</em> for \( \nu \). The pair \( (P, N) = ([0,\pi], [\pi, 2\pi]) \) is a Hahn decomposition of \( [0, 2\pi] \) with respect to \( \nu \).
 
 The Jordan decomposition is:
+
 \[
 \nu^+(E) = \nu(E \cap [0,\pi]) = \int_{E \cap [0,\pi]} \sin(x)\,dx, \qquad \nu^-(E) = -\nu(E \cap [\pi, 2\pi]) = \int_{E \cap [\pi,2\pi]} (-\sin x)\,dx.
 \]
@@ -88,6 +90,7 @@ In particular, \( \nu^+([0,\pi]) = 2 \), \( \nu^-([\pi,2\pi]) = 2 \), and \( |\n
 \nu = \mu_1 - \mu_2 = \delta_0 - \delta_1.
 \]
 For any Borel set \( E \),
+
 \[
 \nu(E) = \mathbf{1}_E(0) - \mathbf{1}_E(1).
 \]
@@ -100,6 +103,7 @@ We compute \( \nu \) on several sets:
 </ul>
 
 The Hahn decomposition: take \( P = \{0\} \cup (\mathbb{R} \setminus \{0,1\}) = \mathbb{R} \setminus \{1\} \) and \( N = \{1\} \). Check: every measurable \( F \subseteq P \) satisfies \( \nu(F) = \mathbf{1}_F(0) \ge 0 \), so \( P \) is a positive set. Every measurable \( F \subseteq N = \{1\} \) satisfies \( \nu(F) = -\mathbf{1}_F(1) \le 0 \), so \( N \) is a negative set. The Jordan decomposition:
+
 \[
 \nu^+ = \delta_0, \qquad \nu^- = \delta_1, \qquad |\nu| = \delta_0 + \delta_1.
 \]
@@ -123,6 +127,7 @@ Note the distinction between a null set for a signed measure \( \nu \) and a set
 
 <div class="example">
 Let \( f : X \to \mathbb{R} \) be \( \mu \)-integrable (where \( \mu \) is a positive measure), and define
+
 \[
 \nu(E) = \int_E f \, d\mu, \quad E \in \mathcal{M}.
 \]
@@ -199,14 +204,17 @@ The Hahn decomposition theorem connects to later material as follows. The Jordan
 
 <div class="definition">
 Let \( \nu \) be a signed measure on \( (X, \mathcal{M}) \) with Hahn decomposition \( (P, N) \). The <strong>positive variation</strong> of \( \nu \) is the measure
+
 \[
 \nu^+(E) = \nu(E \cap P), \quad E \in \mathcal{M},
 \]
 and the <strong>negative variation</strong> of \( \nu \) is the measure
+
 \[
 \nu^-(E) = -\nu(E \cap N), \quad E \in \mathcal{M}.
 \]
 The <strong>total variation</strong> of \( \nu \) is
+
 \[
 |\nu|(E) = \nu^+(E) + \nu^-(E), \quad E \in \mathcal{M}.
 \]
@@ -237,6 +245,7 @@ The total variation measure \( |\nu| = \nu^+ + \nu^- \) satisfies \( |\nu|(X) = 
 ### 1.3.2 Integration with Respect to Signed Measures
 
 Given a signed measure \( \nu = \nu^+ - \nu^- \), we define integration by
+
 \[
 \int f \, d\nu = \int f \, d\nu^+ - \int f \, d\nu^-,
 \]
@@ -250,6 +259,7 @@ whenever \( f \) is integrable with respect to \( |\nu| \).
 
 <div class="definition">
 Let \( \mu \) be a positive measure and \( \nu \) a signed measure on \( (X, \mathcal{M}) \). We say \( \nu \) is <strong>absolutely continuous</strong> with respect to \( \mu \), written \( \nu \ll \mu \), if
+
 \[
 \mu(E) = 0 \implies \nu(E) = 0, \quad \forall E \in \mathcal{M}.
 \]
@@ -306,6 +316,7 @@ with \( \nu_{ac} \ll \mu \) and \( \nu_s \perp \mu \). This is the <strong>Lebes
 where \( m|_{[0,1]} \) denotes Lebesgue measure restricted to \( [0,1] \): \( m|_{[0,1]}(E) = m(E \cap [0,1]) \).
 
 We claim the Lebesgue decomposition of \( \nu \) with respect to \( m \) is:
+
 \[
 \nu_{ac} = m|_{[0,1]}, \qquad \nu_s = \delta_0.
 \]
@@ -334,6 +345,7 @@ If \( \nu \) is a positive measure, then \( f \ge 0 \) \( \mu \)-a.e. If \( \nu 
 
 <div class="definition">
 The function \( f \) in the Radon-Nikodym theorem is called the <strong>Radon-Nikodym derivative</strong> (or <strong>density</strong>) of \( \nu \) with respect to \( \mu \), and is written
+
 \[
 f = \frac{d\nu}{d\mu}.
 \]
@@ -364,6 +376,7 @@ We verify: \( \nu([0,1]) = \int_0^1 3x^2\,dx = [x^3]_0^1 = 1 \). Also \( \nu([0,
 \int_X g \, d\nu = \int_X g \cdot \frac{d\nu}{d\mu} \, d\mu.
 \]
 Take \( g(x) = x \). Then:
+
 \[
 \int_{[0,1]} x \, d\nu = \int_0^1 x \cdot 3x^2 \, dx = \int_0^1 3x^3 \, dx = \left[\frac{3x^4}{4}\right]_0^1 = \frac{3}{4}.
 \]
@@ -380,22 +393,27 @@ This elegant proof is due to von Neumann and uses the Riesz representation theor
 \Phi(g) = \int_X g \, d\nu, \quad g \in L^2(\lambda).
 \]
 Since \( \nu \le \lambda \), we have \( |\Phi(g)| \le \int |g| \, d\nu \le \int |g| \, d\lambda \le \|g\|_{L^2(\lambda)} \cdot \lambda(X)^{1/2} \) by Cauchy-Schwarz, so \( \Phi \) is a bounded linear functional on \( L^2(\lambda) \). By the Riesz representation theorem for Hilbert spaces, there exists a unique \( h \in L^2(\lambda) \) such that
+
 \[
 \int_X g \, d\nu = \int_X g h \, d\lambda = \int_X g h \, d(\mu + \nu), \quad \forall g \in L^2(\lambda).
 \]
 Rearranging:
+
 \[
 \int_X g(1 - h) \, d\nu = \int_X g h \, d\mu.
 \]
 Taking \( g = \mathbf{1}_E \) shows
+
 \[
 \nu(E \cap \{h < 1\}) = \int_E h \, d\mu + \nu(E \cap \{h \ge 1\})\quad(\text{after analysis}).
 \]
 One shows \( 0 \le h \le 1 \) \( \lambda \)-a.e. and \( \mu(\{h = 1\}) = 0 \) (since otherwise \( \int_{\{h=1\}} h \, d\mu = \mu(\{h=1\}) > 0 \) would force \( \nu(\{h = 1\}) < 0 \), contradiction). Define
+
 \[
 f = \frac{h}{1 - h} \cdot \mathbf{1}_{\{h < 1\}}.
 \]
 Then for any \( E \in \mathcal{M} \):
+
 \[
 \nu(E) = \int_E f \, d\mu.
 \]
@@ -458,6 +476,7 @@ Verification: \( \nu(E) = \int_E 6x^2\,dx \) and \( \int_E 3x\,d\mu = \int_E 3x 
 
 <div class="definition">
 Let \( X \) be a Banach space over \( \mathbb{R} \) (or \( \mathbb{C} \)). A <strong>bounded linear functional</strong> on \( X \) is a linear map \( \ell : X \to \mathbb{R} \) (or \( \mathbb{C} \)) such that
+
 \[
 \|\ell\|_{X^*} = \sup_{\|x\| \le 1} |\ell(x)| < \infty.
 \]
@@ -470,6 +489,7 @@ The dual space \( X^* \) is itself a Banach space under the operator norm \( \|\
 
 <div class="definition">
 Let \( 1 \le p \le \infty \). The <strong>conjugate exponent</strong> (or <strong>dual exponent</strong>) \( q \) is defined by
+
 \[
 \frac{1}{p} + \frac{1}{q} = 1,
 \]
@@ -477,6 +497,7 @@ with the conventions \( q = \infty \) when \( p = 1 \), and \( q = 1 \) when \( 
 </div>
 
 Recall Hölder's inequality: if \( f \in L^p(\mu) \) and \( g \in L^q(\mu) \), then \( fg \in L^1(\mu) \) and
+
 \[
 \int |fg| \, d\mu \le \|f\|_p \|g\|_q.
 \]
@@ -490,6 +511,7 @@ This inequality is what makes integration against \( g \in L^q \) into a bounded
 
 <div class="definition">
 Let \( 1 \le p < \infty \) and let \( q \) be the conjugate exponent. For \( g \in L^q(\mu) \), define the functional \( \Phi_g : L^p(\mu) \to \mathbb{R} \) by
+
 \[
 \Phi_g(f) = \int_X fg \, d\mu, \quad f \in L^p(\mu).
 \]
@@ -511,14 +533,17 @@ In particular, the map \( \Phi : L^q(\mu) \to (L^p(\mu))^*, \, g \mapsto \Phi_g 
 so \( \|\Phi_g\|_{(L^p)^*} \le \|g\|_q \).
 
 For the reverse inequality (showing equality is achieved), we construct the <em>extremal function</em>. If \( g = 0 \), equality is trivial. Otherwise, set
+
 \[
 f_0 = |g|^{q-1} \cdot \text{sgn}(g) \cdot \|g\|_q^{1-q}.
 \]
 Then \( |f_0|^p = |g|^{p(q-1)} \cdot \|g\|_q^{p(1-q)} = |g|^q \cdot \|g\|_q^{-q} \) (using \( p(q-1) = q \)), so
+
 \[
 \|f_0\|_p^p = \|g\|_q^{-q} \int |g|^q \, d\mu = 1,
 \]
 i.e., \( \|f_0\|_p = 1 \). And
+
 \[
 \Phi_g(f_0) = \int f_0 g \, d\mu = \|g\|_q^{1-q} \int |g|^q \, d\mu = \|g\|_q^{1-q} \cdot \|g\|_q^q = \|g\|_q.
 \]
@@ -549,6 +574,7 @@ So \( \|g\|_2 = \sqrt{4/3} = \frac{2}{\sqrt{3}} \).
 f_0(x) = \frac{g(x)}{\|g\|_2} = \frac{2x}{2/\sqrt{3}} = \sqrt{3}\, x.
 \]
 Check: \( \|f_0\|_2^2 = \int_0^1 3x^2\,dx = 1 \). \checkmark. And:
+
 \[
 \ell(f_0) = \int_0^1 \sqrt{3}\,x \cdot 2x\,dx = 2\sqrt{3}\int_0^1 x^2\,dx = \frac{2\sqrt{3}}{3} = \frac{2}{\sqrt{3}} = \|g\|_2.
 \]
@@ -569,6 +595,7 @@ So \( \|\ell\| = \|g\|_2 = \frac{2}{\sqrt{3}} = \sqrt{\frac{4}{3}} \). \checkmar
 \ell(f) = \int_X fg \, d\mu \quad \forall f \in L^p(\mu)
 \]
 for a unique \( g \in L^q(\mu) \), and \( \|\ell\|_{(L^p)^*} = \|g\|_{L^q(\mu)} \). That is,
+
 \[
 (L^p(\mu))^* \cong L^q(\mu) \quad \text{isometrically.}
 \]
@@ -615,6 +642,7 @@ for measurable sets \( E \) with \( \mu(E) < \infty \) (so that \( \mathbf{1}_E 
 
 <div class="remark">
 More precisely: if \( \ell(f) = \int f g \, dm \) for all \( f \in L^\infty \), then for every Borel set \( E \),
+
 \[
 \ell(\mathbf{1}_E) = \int_E g \, dm.
 \]
@@ -639,6 +667,7 @@ The existence of Banach limits follows from the Hahn-Banach theorem applied to t
 
 <div class="definition">
 A Banach space \( X \) is called <strong>reflexive</strong> if the canonical embedding \( \iota : X \to X^{**} \) defined by
+
 \[
 \iota(x)(\ell) = \ell(x), \quad x \in X,\, \ell \in X^*,
 \]
@@ -665,6 +694,7 @@ The spaces \( L^1 \) and \( L^\infty \) are generally <em>not</em> reflexive. We
 
 <div class="definition">
 Let \( 1 \le p < \infty \) and \( (X, \mathcal{M}, \mu) \) be a \( \sigma \)-finite measure space. A sequence \( \{f_n\} \subseteq L^p(\mu) \) converges <strong>weakly</strong> to \( f \in L^p(\mu) \), written \( f_n \rightharpoonup f \), if
+
 \[
 \lim_{n \to \infty} \int_X f_n g \, d\mu = \int_X f g \, d\mu \quad \text{for all } g \in L^q(\mu),
 \]
@@ -740,6 +770,7 @@ The Radon-Nikodym theorem is the key technical tool that enables the proof of th
 In measure theory and analysis, sequences of functions can converge in several distinct senses, and understanding the relationships between these modes is essential for applying theorems correctly. The four principal modes are: (1) uniform convergence, (2) convergence almost everywhere (a.e.), (3) convergence in measure, and (4) convergence in \( L^p \) norm. These are not equivalent, and their precise relationships form a web of implications and counterexamples that every analyst must internalize.
 
 The diagram of implications is:
+
 \[
 \text{uniform} \implies \text{a.e.} \implies \text{in measure}; \qquad L^p \implies \text{in measure}; \qquad \text{a.e.} + \text{dominated} \implies L^p.
 \]
@@ -780,6 +811,7 @@ The following example is the canonical counterexample showing that convergence i
 <strong>The Typewriter Sequence.</strong> Let \( X = [0,1] \) with Lebesgue measure \( m \). Define the sequence \( \{f_n\} \) by "sliding indicators across \( [0,1] \) repeatedly at finer and finer scales":
 
 For \( n \ge 1 \), write \( n = 2^k + j \) where \( 0 \le j < 2^k \). Define
+
 \[
 f_n = \mathbf{1}_{[j/2^k, (j+1)/2^k]}.
 \]
@@ -994,6 +1026,7 @@ Let \( X = [0,1] \), \( \mathcal{M} = \mathcal{B}([0,1]) \), \( \mu = \) countin
 ## Problem Set C: \( L^p \) Duality and Riesz Representation
 
 **Problem C.1.** Let \( \mu = m \) on \( [0,1] \) and define the functional \( \ell : L^3([0,1]) \to \mathbb{R} \) by
+
 \[
 \ell(f) = \int_0^1 f(x) \cdot x^2\,dx.
 \]
@@ -1009,6 +1042,7 @@ Let \( X = [0,1] \), \( \mathcal{M} = \mathcal{B}([0,1]) \), \( \mu = \) countin
 ---
 
 **Problem C.2.** Let \( \mu \) be counting measure on \( \{1, 2, 3, \ldots\} \), so \( L^p(\mu) = \ell^p \). Let \( \ell : \ell^2 \to \mathbb{R} \) be defined by
+
 \[
 \ell(x) = \sum_{n=1}^\infty \frac{x_n}{n}.
 \]
@@ -1147,6 +1181,7 @@ This theorem is the "topological" analogue of the Riesz representation theorem f
 ## 5.2 Radon-Nikodym and Conditional Expectation in Probability
 
 The Radon-Nikodym theorem is the measure-theoretic foundation of conditional expectation, one of the central concepts in probability theory. Given a probability space \( (\Omega, \mathcal{F}, P) \) and an integrable random variable \( X \), and given a sub-\( \sigma \)-algebra \( \mathcal{G} \subseteq \mathcal{F} \), the conditional expectation \( E[X \mid \mathcal{G}] \) is defined as the unique \( \mathcal{G} \)-measurable function satisfying
+
 \[
 \int_A E[X \mid \mathcal{G}] \, dP = \int_A X \, dP \quad \text{for all } A \in \mathcal{G}.
 \]
@@ -1156,10 +1191,12 @@ This is precisely the Radon-Nikodym derivative: consider the measure \( \nu(A) =
 <strong>Example: Conditional expectation as Radon-Nikodym derivative.</strong> Let \( \Omega = [0,1] \), \( \mathcal{F} = \mathcal{B}([0,1]) \), \( P = m \) (Lebesgue measure), and \( X(\omega) = \omega \) (the identity random variable). Let \( \mathcal{G} = \{\emptyset, [0,1/2], (1/2,1], [0,1]\} \) be the two-atom sub-\( \sigma \)-algebra.
 
 The conditional expectation \( E[X \mid \mathcal{G}] \) is constant on each atom:
+
 \[
 E[X \mid \mathcal{G}](\omega) = \frac{\int_{[0,1/2]} X\,dP}{P([0,1/2])} \cdot \mathbf{1}_{[0,1/2]}(\omega) + \frac{\int_{(1/2,1]} X\,dP}{P((1/2,1])} \cdot \mathbf{1}_{(1/2,1]}(\omega).
 \]
 Computing: \( \int_0^{1/2} \omega\,d\omega = 1/8 \), \( P([0,1/2]) = 1/2 \), so the first constant is \( \frac{1/8}{1/2} = 1/4 \). Similarly \( \int_{1/2}^1 \omega\,d\omega = 3/8 \), giving \( \frac{3/8}{1/2} = 3/4 \). So
+
 \[
 E[X \mid \mathcal{G}](\omega) = \frac{1}{4} \mathbf{1}_{[0,1/2]}(\omega) + \frac{3}{4} \mathbf{1}_{(1/2,1]}(\omega).
 \]
@@ -1169,6 +1206,7 @@ This is indeed the Radon-Nikodym derivative of \( \nu(A) = \int_A \omega\,d\omeg
 ## 5.3 \( L^p \) Duality and PDE Theory
 
 The duality of \( L^p \) spaces is foundational in the theory of partial differential equations, particularly in the study of weak solutions. A function \( u \) is a *weak solution* of the PDE \( Lu = f \) (where \( L \) is a differential operator) if
+
 \[
 \int_\Omega u \cdot L^* \phi \, dx = \int_\Omega f \phi \, dx \quad \text{for all test functions } \phi \in C_c^\infty(\Omega),
 \]

@@ -126,6 +126,7 @@ The basic rules of probability follow directly from the definitions:
 - **Rule 3:** If \(A \subseteq B\) then \(P(A) \le P(B)\).
 
 **De Morgan's Laws** relate complements and set operations:
+
 \[
 \overline{A \cup B} = \bar{A} \cap \bar{B}, \qquad \overline{A \cap B} = \bar{A} \cup \bar{B}.
 \]

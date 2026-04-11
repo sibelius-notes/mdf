@@ -760,21 +760,25 @@ The structure of the system of equations implies that, for a given composition p
 A powerful technique, advocated by Broderick and common in astrophysics, is to estimate stellar properties using dimensional scaling — "twiddle" (order-of-magnitude) relations. Setting \(r \sim R\), \(M(r) \sim M\), and replacing differentials by ratios:
 
 From hydrostatic equilibrium:
+
 \[
 \frac{P_c}{R} \sim \frac{GM\rho}{R^2} \implies P_c \sim \frac{GM\rho}{R} \sim \frac{GM^2}{R^4},
 \]
 
 using \(\rho \sim M/R^3\). From the ideal gas equation of state:
+
 \[
 T_c \sim \frac{\mu m_H P_c}{k \rho} \sim \frac{\mu m_H G M}{k R}.
 \]
 
 From radiative transport and energy conservation (\(L \sim 4\pi R^2 \cdot F\) and \(F \sim aT^4 c/(\kappa\rho R)\)):
+
 \[
 L \sim \frac{4\pi R^2 \cdot acT_c^4}{3\kappa\rho} \cdot \frac{1}{R} \sim \frac{4\pi a c T_c^4 R}{\kappa \rho}.
 \]
 
 Substituting \(T_c \propto M/R\) and \(\rho \propto M/R^3\):
+
 \[
 L \sim \frac{4\pi ac}{\kappa} \cdot \frac{(M/R)^4 R}{M/R^3} = \frac{4\pi ac}{\kappa} M^3 R^{-3} R^{-1} R^3 \propto \frac{M^3}{\kappa}.
 \]

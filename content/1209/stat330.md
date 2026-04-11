@@ -26,6 +26,7 @@ A **probability model** provides a mathematical framework for describing a rando
 (i) \( P(A) \geq 0 \) for every event \( A \subseteq S \).
 (ii) \( P(S) = 1 \).
 (iii) <strong>Countable additivity:</strong> If \( A_1, A_2, \ldots \) are pairwise mutually exclusive events (i.e., \( A_i \cap A_j = \varnothing \) for \( i \neq j \)), then
+
 \[
 P\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i).
 \]
@@ -169,6 +170,7 @@ Key properties:
 \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}} \exp\!\left\{-\frac{x^2}{2}\right\} dx = 1.
 \]
 By symmetry, the integral equals \( 2\int_0^{\infty} \frac{1}{\sqrt{2\pi}} e^{-x^2/2}\,dx \). Using the substitution \( y = x^2/2 \) (so \( dx = \frac{1}{\sqrt{2y}}\,dy \)):
+
 \[
 \frac{2}{\sqrt{2\pi}} \int_0^{\infty} e^{-y} \frac{1}{\sqrt{2y}}\,dy = \frac{1}{\sqrt{\pi}} \int_0^{\infty} y^{-1/2} e^{-y}\,dy = \frac{1}{\sqrt{\pi}}\,\Gamma\!\left(\frac{1}{2}\right) = \frac{\sqrt{\pi}}{\sqrt{\pi}} = 1.
 \]
@@ -182,11 +184,13 @@ For general \( X \sim N(\mu, \sigma^2) \), writing \( X = \sigma Z + \mu \) with
 <strong>Expected Value.</strong> The <strong>expectation</strong> (or expected value, or mean) of a random variable \( X \) is:
 
 For discrete \( X \) with PMF \( f(x) \) and support \( A \):
+
 \[
 E[X] = \sum_{x \in A} x\,f(x), \quad \text{provided } \sum_{x \in A} |x|\,f(x) < \infty.
 \]
 
 For continuous \( X \) with PDF \( f(x) \):
+
 \[
 E[X] = \int_{-\infty}^{\infty} x\,f(x)\,dx, \quad \text{provided } \int_{-\infty}^{\infty} |x|\,f(x)\,dx < \infty.
 \]
@@ -284,6 +288,7 @@ where \( M_X^{(k)}(0) \) denotes the \( k \)-th derivative of \( M_X(t) \) evalu
 
 <div class="proof">
 Since \( M_X(t) = E[e^{tX}] \), differentiating under the expectation gives
+
 \[
 M_X^{(k)}(t) = E[X^k e^{tX}].
 \]
@@ -313,6 +318,7 @@ M_Z(t) = \int_{-\infty}^{\infty} e^{tx}\,\frac{1}{\sqrt{2\pi}}\,e^{-x^2/2}\,dx =
 This is derived by completing the square in the exponent: \( tx - x^2/2 = -(x-t)^2/2 + t^2/2 \).
 
 For \( X \sim N(\mu, \sigma^2) \), writing \( X = \sigma Z + \mu \) gives:
+
 \[
 M_X(t) = e^{\mu t}\,M_Z(\sigma t) = \exp\!\left\{\mu t + \frac{\sigma^2 t^2}{2}\right\}.
 \]
@@ -374,6 +380,7 @@ f_X(x) = \sum_y f(x, y), \qquad f_Y(y) = \sum_x f(x, y).
 The marginal PMF of \( X \): \( f_X(x) = \sum_{y=0}^{\infty} (1-p)^2 p^{x+y} = (1-p)^2 p^x \cdot \frac{1}{1-p} = (1-p)p^x \), which is a Geometric distribution.
 
 To compute \( P(X \leq Y) \):
+
 \[
 P(X \leq Y) = \sum_{x=0}^{\infty} \sum_{y=x}^{\infty} (1-p)^2 p^{x+y} = (1-p) \sum_{x=0}^{\infty} p^{2x} = \frac{1-p}{1-p^2} = \frac{1}{1+p}.
 \]
@@ -387,6 +394,7 @@ P(X \leq Y) = \sum_{x=0}^{\infty} \sum_{y=x}^{\infty} (1-p)^2 p^{x+y} = (1-p) \s
 F(x, y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f(s, t)\,dt\,ds,
 \]
 then \( X \) and \( Y \) are <strong>jointly continuous</strong> with <strong>joint probability density function</strong>
+
 \[
 f(x, y) = \frac{\partial^2 F(x, y)}{\partial x\,\partial y}
 \]
@@ -394,6 +402,7 @@ wherever this mixed partial derivative exists.
 </div>
 
 Properties: \( f(x,y) \geq 0 \) and \( \iint_{\mathbb{R}^2} f(x,y)\,dx\,dy = 1 \). For any region \( R \subseteq \mathbb{R}^2 \):
+
 \[
 P((X, Y) \in R) = \iint_R f(x, y)\,dx\,dy.
 \]
@@ -532,6 +541,7 @@ f(x, y) = f_X(x \mid y)\,f_Y(y) = f_Y(y \mid x)\,f_X(x).
 E[g(Y) \mid X = x] = \begin{cases} \sum_y g(y)\,f_Y(y \mid x) & \text{if } Y \text{ is discrete}, \\[4pt] \int_{-\infty}^{\infty} g(y)\,f_Y(y \mid x)\,dy & \text{if } Y \text{ is continuous}. \end{cases}
 \]
 The <strong>conditional mean</strong> is \( E[Y \mid X = x] \) and the <strong>conditional variance</strong> is
+
 \[
 \text{Var}(Y \mid X = x) = E[Y^2 \mid X = x] - (E[Y \mid X = x])^2.
 \]
@@ -551,6 +561,7 @@ In particular, \( E[Y] = E[E[Y \mid X]] \).
 
 <div class="proof">
 For the continuous case:
+
 \[
 E[E[g(X) \mid Y]] = \int_{-\infty}^{\infty}\!\left[\int_{-\infty}^{\infty} g(x)\,f_X(x \mid y)\,dx\right] f_Y(y)\,dy = \int_{-\infty}^{\infty} g(x) \underbrace{\left[\int_{-\infty}^{\infty} f(x,y)\,dy\right]}_{f_X(x)} dx = E[g(X)].
 \]
@@ -570,6 +581,7 @@ The first term captures the average within-group variance, and the second captur
 \( E[X \mid Y] = Yp \), so \( E[X] = E[Yp] = p\theta \).
 
 \( \text{Var}(X \mid Y) = Yp(1-p) \), so:
+
 \[
 \text{Var}(X) = E[Yp(1-p)] + \text{Var}(Yp) = p(1-p)\theta + p^2\theta = p\theta.
 \]
@@ -659,10 +671,12 @@ The CDF technique is the most general method and works for both discrete and con
 <strong>Distribution of \( Y = X^2 \) where \( X \sim N(0,1) \).</strong>
 
 The support of \( Y \) is \( [0, \infty) \). For \( y > 0 \):
+
 \[
 F_Y(y) = P(X^2 \leq y) = P(-\sqrt{y} \leq X \leq \sqrt{y}) = F_X(\sqrt{y}) - F_X(-\sqrt{y}).
 \]
 Differentiating:
+
 \[
 f_Y(y) = \frac{1}{2\sqrt{y}}\left[f_X(\sqrt{y}) + f_X(-\sqrt{y})\right] = \frac{1}{2\sqrt{y}} \cdot \frac{2}{\sqrt{2\pi}}\,e^{-y/2} = \frac{1}{\sqrt{2\pi}}\,y^{-1/2}\,e^{-y/2}.
 \]
@@ -673,12 +687,14 @@ This is the PDF of a \( \chi^2(1) \) distribution, equivalently \( \text{Gamma}(
 <strong>Distribution of order statistics.</strong> Let \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} \text{Uniform}(0, \theta) \).
 
 For the <strong>maximum</strong> \( X_{(n)} = \max_i X_i \): Since the \( X_i \) are independent,
+
 \[
 F_{X_{(n)}}(y) = P(X_1 \leq y, \ldots, X_n \leq y) = \left(\frac{y}{\theta}\right)^n, \quad 0 < y < \theta.
 \]
 So \( f_{X_{(n)}}(y) = \frac{n}{\theta^n}\,y^{n-1} \) for \( 0 < y < \theta \).
 
 For the <strong>minimum</strong> \( X_{(1)} = \min_i X_i \):
+
 \[
 F_{X_{(1)}}(y) = 1 - P(X_1 > y, \ldots, X_n > y) = 1 - \left(\frac{\theta - y}{\theta}\right)^n, \quad 0 < y < \theta.
 \]
@@ -693,6 +709,7 @@ Conversely, if \( U \sim \text{Uniform}(0,1) \), then \( X = F^{-1}(U) \) has CD
 
 <div class="proof">
 For \( 0 < y < 1 \):
+
 \[
 P(Y \leq y) = P(F(X) \leq y) = P(X \leq F^{-1}(y)) = F(F^{-1}(y)) = y,
 \]
@@ -713,6 +730,7 @@ where \( x = h^{-1}(y) \) and the support of \( Y \) is \( h(A) \).
 <strong>Log transformation.</strong> Let \( f_X(x) = \frac{\theta}{x^{\theta+1}} \) for \( x \geq 1 \) (a Pareto distribution) and \( Y = \ln(X) \).
 
 Since \( y = \ln(x) \implies x = e^y \) and \( dx/dy = e^y \), for \( y > 0 \):
+
 \[
 f_Y(y) = f_X(e^y)\,|e^y| = \frac{\theta}{(e^y)^{\theta+1}}\,e^y = \theta\,e^{-y\theta}.
 \]
@@ -731,6 +749,7 @@ Thus \( Y \sim \text{Exponential}(1/\theta) \).
 g(u, v) = f(w_1(u,v),\, w_2(u,v))\,\left|\frac{\partial(x, y)}{\partial(u, v)}\right|,
 \]
 where the <strong>Jacobian</strong> is the absolute value of the determinant
+
 \[
 \frac{\partial(x,y)}{\partial(u,v)} = \begin{vmatrix} \partial x/\partial u & \partial x/\partial v \\ \partial y/\partial u & \partial y/\partial v \end{vmatrix}.
 \]
@@ -740,11 +759,13 @@ where the <strong>Jacobian</strong> is the absolute value of the determinant
 <strong>Sum and difference of independent normals.</strong> Let \( X, Y \stackrel{\text{iid}}{\sim} N(0, 1) \). Define \( U = X + Y \) and \( V = X - Y \).
 
 Inverse: \( x = (u+v)/2 \), \( y = (u-v)/2 \). The Jacobian is
+
 \[
 \frac{\partial(x,y)}{\partial(u,v)} = \begin{vmatrix} 1/2 & 1/2 \\ 1/2 & -1/2 \end{vmatrix} = -1/2.
 \]
 
 The joint PDF of \( (X, Y) \) is \( f(x,y) = \frac{1}{2\pi}\exp\{-(x^2+y^2)/2\} \). Substituting:
+
 \[
 g(u,v) = \frac{1}{2\pi}\exp\!\left\{-\frac{(u+v)^2/4 + (u-v)^2/4}{2}\right\}\cdot\frac{1}{2} = \frac{1}{4\pi}\exp\!\left\{-\frac{u^2+v^2}{4}\right\}.
 \]
@@ -755,6 +776,7 @@ This factors as \( g_U(u)\,g_V(v) \), confirming that \( U \sim N(0,2) \) and \(
 <strong>Finding marginal via auxiliary variable.</strong> Suppose \( f(x,y) = e^{-x-y} \) for \( 0 < x < y < \infty \). To find the PDF of \( U = X + Y \), set \( V = X \).
 
 Then \( x = v \), \( y = u - v \), with Jacobian \( |J| = 1 \). The support becomes \( 0 < v < u < \infty \) (from \( 0 < x < y \)).
+
 \[
 g(u,v) = e^{-u}, \quad 0 < v < u.
 \]
@@ -842,6 +864,7 @@ Convergence in distribution concerns the CDFs, not the random variables themselv
 <strong>Limiting distribution of order statistics.</strong> Let \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} \text{Uniform}(0, 1) \). Then:
 
 For \( nX_{(1)} \): The CDF is \( F_n(x) = 1 - (1 - x/n)^n \) for \( 0 < x < n \). As \( n \to \infty \):
+
 \[
 \lim_{n \to \infty} F_n(x) = 1 - e^{-x}, \quad x > 0,
 \]
@@ -864,6 +887,7 @@ When \( X = b \) is a constant, we write \( X_n \xrightarrow{P} b \).
 <strong>Convergence in probability implies convergence in distribution.</strong> If \( X_n \xrightarrow{P} X \), then \( X_n \xrightarrow{d} X \). The converse is not true in general.
 
 However, for the special case of convergence to a constant:
+
 \[
 X_n \xrightarrow{d} b \iff X_n \xrightarrow{P} b.
 \]
@@ -888,6 +912,7 @@ The most common case is \( k = 2 \) (Chebyshev's inequality): \( P(|X| \geq c) \
 
 <div class="proof">
 By Chebyshev's inequality, for any \( \varepsilon > 0 \):
+
 \[
 P(|\bar{X}_n - \mu| \geq \varepsilon) \leq \frac{E[(\bar{X}_n - \mu)^2]}{\varepsilon^2} = \frac{\text{Var}(\bar{X}_n)}{\varepsilon^2} = \frac{\sigma^2}{n\varepsilon^2} \to 0
 \]
@@ -914,6 +939,7 @@ Equivalently, \( \sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2) \).
 M_n(t) = \left[M_Y\!\left(\frac{t}{\sqrt{n}}\right)\right]^n.
 \]
 Expanding by Taylor's theorem: \( M_Y(t/\sqrt{n}) = 1 + \frac{t^2}{2n} + o(t^2/n) \). Therefore:
+
 \[
 \lim_{n \to \infty}\left[1 + \frac{t^2}{2n} + o\!\left(\frac{t^2}{n}\right)\right]^n = \exp\!\left\{\frac{t^2}{2}\right\},
 \]
@@ -947,6 +973,7 @@ which is the MGF of \( N(0,1) \). By the MGF convergence theorem, the result fol
 \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sqrt{\mu}} \xrightarrow{d} N(0, 1).
 \]
 Since \( \bar{X}_n \xrightarrow{P} \mu \) by the WLLN, the continuous mapping theorem gives \( \sqrt{\mu}/\sqrt{\bar{X}_n} \xrightarrow{P} 1 \). By Slutsky's theorem:
+
 \[
 \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sqrt{\bar{X}_n}} = \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sqrt{\mu}} \cdot \frac{\sqrt{\mu}}{\sqrt{\bar{X}_n}} \xrightarrow{d} N(0,1).
 \]
@@ -963,6 +990,7 @@ Equivalently, \( g(X_n) \) is approximately \( N(g(\theta),\, [g'(\theta)]^2\sig
 </div>
 
 The intuition comes from a first-order Taylor expansion: \( g(X_n) \approx g(\theta) + g'(\theta)(X_n - \theta) \), so
+
 \[
 \sqrt{n}[g(X_n) - g(\theta)] \approx g'(\theta)\,\sqrt{n}(X_n - \theta),
 \]
@@ -972,6 +1000,7 @@ and the right side converges to \( g'(\theta) \cdot N(0, \sigma^2) = N(0, [g'(\t
 <strong>Delta method for the Poisson.</strong> Let \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} \text{Poisson}(\mu) \). Since \( \text{Var}(X_i) = \mu \), the CLT gives \( \sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \mu) \).
 
 Taking \( g(x) = \sqrt{x} \), so \( g'(x) = \frac{1}{2}x^{-1/2} \) and \( [g'(\mu)]^2 = \frac{1}{4\mu} \):
+
 \[
 \sqrt{n}\!\left(\sqrt{\bar{X}_n} - \sqrt{\mu}\right) \xrightarrow{d} N\!\left(0,\, \frac{1}{4\mu} \cdot \mu\right) = N\!\left(0, \frac{1}{4}\right).
 \]
@@ -982,6 +1011,7 @@ This is the <strong>variance-stabilizing transformation</strong> for the Poisson
 <strong>Delta method for the Exponential.</strong> Let \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} \text{Exponential}(\theta) \). Then \( E[X_i] = \theta \), \( \text{Var}(X_i) = \theta^2 \), and \( \sqrt{n}(\bar{X}_n - \theta) \xrightarrow{d} N(0, \theta^2) \).
 
 For \( g(x) = \ln(x) \), \( g'(\theta) = 1/\theta \), so:
+
 \[
 \sqrt{n}(\ln\bar{X}_n - \ln\theta) \xrightarrow{d} N\!\left(0,\, \frac{1}{\theta^2}\cdot\theta^2\right) = N(0, 1).
 \]
@@ -996,6 +1026,7 @@ P\!\left(\bar{X}_n \leq x\right) \approx \Phi\!\left(\frac{x - \mu}{\sigma/\sqrt
 \]
 
 where \( \Phi \) is the standard normal CDF. Similarly for the sum \( T_n = \sum X_i \):
+
 \[
 P(T_n \leq t) \approx \Phi\!\left(\frac{t - n\mu}{\sigma\sqrt{n}}\right).
 \]
@@ -1042,6 +1073,7 @@ Suppose \( X_1, \ldots, X_n \) are iid random variables from a distribution with
 \( \mu_1(\mu, \sigma^2) = \mu \) and \( \mu_2(\mu, \sigma^2) = \mu^2 + \sigma^2 \).
 
 Setting \( \hat{\mu}_1 = \bar{X}_n \) and \( \hat{\mu}_2 = \frac{1}{n}\sum X_i^2 \):
+
 \[
 \hat{\mu}_{\text{MM}} = \bar{X}_n, \qquad \hat{\sigma}^2_{\text{MM}} = \frac{1}{n}\sum_{i=1}^n X_i^2 - \bar{X}_n^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X}_n)^2.
 \]
@@ -1084,6 +1116,7 @@ By invariance, the MLE of \( P(X_1 = 0) = e^{-\theta} \) is \( e^{-\bar{X}_n} \)
 \ell(\mu, \sigma^2) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n (x_i - \mu)^2.
 \]
 Setting partial derivatives to zero yields:
+
 \[
 \hat{\mu}_{\text{ML}} = \bar{X}_n, \qquad \hat{\sigma}^2_{\text{ML}} = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X}_n)^2.
 \]
@@ -1106,6 +1139,7 @@ This differs from \( \hat{\theta}_{\text{MM}} = 2\bar{X}_n \). The calculus-base
 \ell(\theta) = n\ln\theta + (\theta - 1)\sum_{i=1}^n \ln x_i.
 \]
 Setting \( \ell'(\theta) = n/\theta + \sum\ln x_i = 0 \) gives:
+
 \[
 \hat{\theta}_{\text{ML}} = -\frac{n}{\sum_{i=1}^n \ln X_i}.
 \]
@@ -1191,6 +1225,7 @@ Property (2) implies that the MLE is <strong>asymptotically unbiased</strong>, i
 (ii) MLE of \( g(\theta) = e^{-\theta} \): by invariance, \( \hat{g} = e^{-\bar{X}_n} \).
 (iii) \( \sqrt{n}(\hat{\theta} - \theta) \xrightarrow{d} N(0, \theta) \) since \( J_1(\theta) = 1/\theta \).
 (iv) By delta method with \( g(x) = e^{-x} \), \( g'(\theta) = -e^{-\theta} \):
+
 \[
 \sqrt{n}(e^{-\bar{X}_n} - e^{-\theta}) \xrightarrow{d} N(0,\, e^{-2\theta}\theta).
 \]
@@ -1217,6 +1252,7 @@ A pivotal quantity is the basis for constructing confidence intervals. The gener
 Z = \frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \sim N(0, 1)
 \]
 is a pivotal quantity. A \( 100(1-\alpha)\% \) confidence interval for \( \mu \) is
+
 \[
 \bar{X}_n \pm z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}},
 \]
@@ -1242,6 +1278,7 @@ as a \( 100(1-\alpha)\% \) confidence interval for \( \sigma^2 \).
 ### Large-Sample Confidence Intervals via the CLT
 
 When the exact distribution of a pivotal quantity is not available, the CLT and asymptotic normality of the MLE provide approximate confidence intervals. By the asymptotic distribution of the MLE:
+
 \[
 \hat{\theta} \;\dot{\sim}\; N\!\left(\theta,\, \frac{1}{nJ_1(\theta)}\right),
 \]

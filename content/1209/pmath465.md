@@ -105,18 +105,21 @@ S^n = \{x \in \mathbb{R}^{n+1} : |x|^2 = (x^1)^2 + \cdots + (x^{n+1})^2 = 1\}
 is a topological \(n\)-manifold in the subspace topology inherited from \(\mathbb{R}^{n+1}\). It is Hausdorff and second countable because \(\mathbb{R}^{n+1}\) is. To show it is locally Euclidean and to exhibit a smooth atlas, we use <strong>stereographic projection</strong>.
 
 Let \(N = (0, \ldots, 0, 1)\) and \(S = (0, \ldots, 0, -1)\) denote the north and south poles of \(S^n\). Define
+
 \[
 U_N = S^n \setminus \{N\}, \qquad U_S = S^n \setminus \{S\}.
 \]
 ![Chart domains for stereographic projection on S^n: U_N = S^n minus the north pole and U_S = S^n minus the south pole](/pics/pmath465/sphere-chart-domains.svg)
 
 The <strong>stereographic projection from the north pole</strong> is the map \(\sigma_N \colon U_N \to \mathbb{R}^n\) defined by
+
 \[
 \sigma_N(x^1, \ldots, x^{n+1}) = \frac{1}{1 - x^{n+1}}(x^1, \ldots, x^n).
 \]
 Geometrically, \(\sigma_N(x)\) is the point where the line from \(N\) through \(x\) meets the equatorial hyperplane \(\{x^{n+1} = 0\}\).
 
 ![Stereographic projection: a line from the north pole N through a point P on the sphere meets the equatorial plane at σ(P)](/pics/pmath465/stereographic-projection.svg) Similarly, the <strong>stereographic projection from the south pole</strong> is \(\sigma_S \colon U_S \to \mathbb{R}^n\) defined by
+
 \[
 \sigma_S(x^1, \ldots, x^{n+1}) = \frac{1}{1 + x^{n+1}}(x^1, \ldots, x^n).
 \]
@@ -139,10 +142,12 @@ which is the <strong>inversion in the unit sphere</strong> in \(\mathbb{R}^n\).
 u^i = \frac{x^i}{1 - x^{n+1}}, \qquad i = 1, \ldots, n.
 \]
 So \(x^i = u^i(1 - x^{n+1})\). From the constraint \(|x|^2 = 1\), we get
+
 \[
 \sum_{i=1}^n (u^i)^2 (1 - x^{n+1})^2 + (x^{n+1})^2 = 1.
 \]
 Setting \(|u|^2 = \sum (u^i)^2\) and \(t = x^{n+1}\), this gives \(|u|^2(1-t)^2 + t^2 = 1\). Expanding:
+
 \[
 |u|^2 - 2|u|^2 t + |u|^2 t^2 + t^2 = 1,
 \]
@@ -150,30 +155,37 @@ Setting \(|u|^2 = \sum (u^i)^2\) and \(t = x^{n+1}\), this gives \(|u|^2(1-t)^2 
 (|u|^2 + 1)t^2 - 2|u|^2 t + (|u|^2 - 1) = 0.
 \]
 Using the quadratic formula (or factoring):
+
 \[
 t = \frac{2|u|^2 \pm \sqrt{4|u|^4 - 4(|u|^2+1)(|u|^2-1)}}{2(|u|^2+1)} = \frac{2|u|^2 \pm 2}{2(|u|^2+1)}.
 \]
 The solution \(t = 1\) corresponds to the north pole, which we exclude. So
+
 \[
 x^{n+1} = t = \frac{|u|^2 - 1}{|u|^2 + 1}, \qquad 1 - t = \frac{2}{|u|^2 + 1},
 \]
 and therefore
+
 \[
 x^i = u^i \cdot \frac{2}{|u|^2 + 1}.
 \]
 The inverse is thus
+
 \[
 \sigma_N^{-1}(u) = \frac{1}{|u|^2 + 1}\left(2u^1, \ldots, 2u^n, |u|^2 - 1\right).
 \]
 Now we apply \(\sigma_S\):
+
 \[
 \sigma_S(\sigma_N^{-1}(u)) = \frac{1}{1 + x^{n+1}}(x^1, \ldots, x^n) = \frac{1}{1 + \frac{|u|^2 - 1}{|u|^2 + 1}} \cdot \frac{2u}{|u|^2 + 1}.
 \]
 We have
+
 \[
 1 + \frac{|u|^2 - 1}{|u|^2 + 1} = \frac{|u|^2 + 1 + |u|^2 - 1}{|u|^2 + 1} = \frac{2|u|^2}{|u|^2 + 1}.
 \]
 Therefore
+
 \[
 \sigma_S \circ \sigma_N^{-1}(u) = \frac{|u|^2 + 1}{2|u|^2} \cdot \frac{2u}{|u|^2 + 1} = \frac{u}{|u|^2}.
 \]
@@ -192,6 +204,7 @@ This is a smooth map on \(\mathbb{R}^n \setminus \{0\}\), and it is its own inve
 where \(x \sim y\) if and only if \(x = \lambda y\) for some \(\lambda \in \mathbb{R} \setminus \{0\}\). The equivalence class of a point \((x^0, x^1, \ldots, x^n)\) is denoted \([x^0 : x^1 : \cdots : x^n]\) and called <strong>homogeneous coordinates</strong>.
 
 For each \(i = 0, 1, \ldots, n\), let \(U_i = \{[x^0 : \cdots : x^n] \in \mathbb{R}P^n : x^i \neq 0\}\). Define \(\varphi_i \colon U_i \to \mathbb{R}^n\) by
+
 \[
 \varphi_i([x^0 : \cdots : x^n]) = \left(\frac{x^0}{x^i}, \ldots, \widehat{\frac{x^i}{x^i}}, \ldots, \frac{x^n}{x^i}\right),
 \]
@@ -282,6 +295,7 @@ is a smooth function on the open set \(\varphi(U) \subseteq \mathbb{R}^n\).
 </div>
 
 The function \(f \circ \varphi^{-1}\) is called the <strong>coordinate representation</strong> of \(f\) in the chart \((U, \varphi)\). We write \(\hat{f} = f \circ \varphi^{-1}\) when the chart is understood. Note that if the condition holds for one chart at \(p\), it holds for every chart at \(p\), because for any other chart \((V, \psi)\) with \(p \in V\), we have
+
 \[
 f \circ \psi^{-1} = (f \circ \varphi^{-1}) \circ (\varphi \circ \psi^{-1}),
 \]
@@ -527,16 +541,19 @@ form a basis for \(T_pM\). In particular, \(\dim T_pM = n = \dim M\).
 <strong>Spanning.</strong> Let \(v \in T_pM\) be any derivation. Set \(v^i = v(x^i)\). We claim that \(v = \sum_i v^i \frac{\partial}{\partial x^i}\big|_p\).
 
 By Taylor's theorem with remainder in \(\mathbb{R}^n\), for any \(\hat{f} \in C^\infty\) near \(0\) we can write
+
 \[
 \hat{f}(x) = \hat{f}(0) + \sum_{i=1}^n x^i \, g_i(x),
 \]
 where \(g_i\) are smooth functions satisfying \(g_i(0) = \frac{\partial \hat{f}}{\partial r^i}(0)\). (One obtains this from \(\hat{f}(x) - \hat{f}(0) = \int_0^1 \frac{d}{dt}\hat{f}(tx)\,dt = \sum_i x^i \int_0^1 \frac{\partial \hat{f}}{\partial r^i}(tx)\,dt\).)
 
 Pulling back to \(M\): \(f = f(p) + \sum_i x^i \cdot (g_i \circ \varphi)\) near \(p\). Applying \(v\):
+
 \[
 v(f) = v(f(p)) + \sum_i v(x^i \cdot (g_i \circ \varphi)) = 0 + \sum_i \left[x^i(p)\, v(g_i \circ \varphi) + (g_i \circ \varphi)(p)\, v(x^i)\right].
 \]
 Since \(\varphi(p) = 0\), we have \(x^i(p) = 0\), and \((g_i \circ \varphi)(p) = g_i(0) = \frac{\partial \hat{f}}{\partial r^i}(0) = \frac{\partial}{\partial x^i}\big|_p(f)\). Therefore
+
 \[
 v(f) = \sum_i v^i \frac{\partial}{\partial x^i}\bigg|_p(f).
 \]
@@ -557,6 +574,7 @@ One of the most important operations in differential geometry is the pushforward
 F_{*,p} \colon T_pM \to T_{F(p)}N
 \]
 (also written \(dF_p\), \(DF_p\), or \((F_*)_p\)) defined by
+
 \[
 (F_{*,p}(v))(g) = v(g \circ F)
 \]
@@ -566,10 +584,12 @@ for all \(v \in T_pM\) and \(g \in C^\infty(N)\).
 ![The pushforward F_* maps tangent vectors at p ∈ M to tangent vectors at F(p) ∈ N](/pics/pmath465/pushforward.svg)
 
 We must verify that \(F_{*,p}(v)\) is indeed a derivation at \(F(p)\). Linearity is clear: \(F_{*,p}(v)(g_1 + g_2) = v((g_1+g_2) \circ F) = v(g_1 \circ F) + v(g_2 \circ F)\). For the Leibniz rule:
+
 \[
 F_{*,p}(v)(g_1 g_2) = v((g_1 g_2) \circ F) = v((g_1 \circ F)(g_2 \circ F)),
 \]
 and since \(v\) is a derivation at \(p\),
+
 \[
 = (g_1 \circ F)(p) \, v(g_2 \circ F) + (g_2 \circ F)(p) \, v(g_1 \circ F) = g_1(F(p)) \, F_{*,p}(v)(g_2) + g_2(F(p)) \, F_{*,p}(v)(g_1).
 \]
@@ -580,6 +600,7 @@ So \(F_{*,p}(v) \in T_{F(p)}N\).
 The power of the pushforward becomes concrete when we compute it in coordinates. The result is exactly the Jacobian matrix, confirming that the pushforward is the correct generalization of the total derivative.
 
 Before stating the proposition, let us make the connection vivid with a simple example. Consider \(F \colon \mathbb{R}^2 \to \mathbb{R}^2\) defined by \(F(x,y) = (x^2 - y^2, 2xy)\) (which is complex squaring under the identification \(\mathbb{R}^2 \cong \mathbb{C}\)). In the standard coordinates, the pushforward at a point \((x,y)\) is represented by the Jacobian:
+
 \[
 [F_{*,(x,y)}] = \begin{pmatrix} 2x & -2y \\ 2y & 2x \end{pmatrix}.
 \]
@@ -591,6 +612,7 @@ The basis vector \(\frac{\partial}{\partial x}\big|_{(x,y)}\) maps to \(2x\frac{
 \hat{F} = \psi \circ F \circ \varphi^{-1} \colon \varphi(U) \to \psi(V), \qquad \hat{F}(x) = (\hat{F}^1(x), \ldots, \hat{F}^n(x)).
 \]
 Then
+
 \[
 F_{*,p}\left(\frac{\partial}{\partial x^i}\bigg|_p\right) = \sum_{j=1}^n \frac{\partial \hat{F}^j}{\partial x^i}(\varphi(p)) \, \frac{\partial}{\partial y^j}\bigg|_{F(p)}.
 \]
@@ -603,6 +625,7 @@ In other words, the matrix of \(F_{*,p}\) with respect to the coordinate bases i
 F_{*,p}\left(\frac{\partial}{\partial x^i}\bigg|_p\right)(g) = \frac{\partial}{\partial x^i}\bigg|_p(g \circ F) = \frac{\partial (g \circ F \circ \varphi^{-1})}{\partial r^i}\bigg|_{\varphi(p)}.
 \]
 Now \(g \circ F \circ \varphi^{-1} = (g \circ \psi^{-1}) \circ (\psi \circ F \circ \varphi^{-1}) = \hat{g} \circ \hat{F}\). By the chain rule in \(\mathbb{R}^n\):
+
 \[
 \frac{\partial (\hat{g} \circ \hat{F})}{\partial r^i}\bigg|_{\varphi(p)} = \sum_{j=1}^n \frac{\partial \hat{g}}{\partial r^j}\bigg|_{\hat{F}(\varphi(p))} \cdot \frac{\partial \hat{F}^j}{\partial r^i}\bigg|_{\varphi(p)} = \sum_j \frac{\partial \hat{F}^j}{\partial x^i}(\varphi(p)) \cdot \frac{\partial}{\partial y^j}\bigg|_{F(p)}(g).
 \]
@@ -641,6 +664,7 @@ The identity statement is immediate: \((\mathrm{id}_M)_{*,p}(v)(f) = v(f \circ \
 <strong>Example 3.7a (Differential of the inclusion \(\iota \colon S^n \hookrightarrow \mathbb{R}^{n+1}\)).</strong> Let \(\iota \colon S^n \hookrightarrow \mathbb{R}^{n+1}\) be the inclusion. We compute the pushforward \(\iota_{*,p} \colon T_p S^n \to T_p \mathbb{R}^{n+1}\) at a point \(p \in S^n\).
 
 Working in the stereographic chart \((U_N, \sigma_N)\) around a point \(p \neq N\), with coordinates \(u = (u^1, \ldots, u^n)\), the inclusion in these coordinates is the map \(\hat{\iota} = \iota \circ \sigma_N^{-1} \colon \mathbb{R}^n \to \mathbb{R}^{n+1}\),
+
 \[
 \hat{\iota}(u) = \sigma_N^{-1}(u) = \frac{1}{|u|^2+1}(2u^1, \ldots, 2u^n, |u|^2 - 1).
 \]
@@ -667,6 +691,7 @@ The coordinate basis vectors \(\frac{\partial}{\partial x^i}\big|_p\) depend on 
 where \(\frac{\partial y^j}{\partial x^i}(p)\) denotes the \((j,i)\)-entry of the Jacobian matrix of the transition map \(\psi \circ \varphi^{-1}\) evaluated at \(\varphi(p)\).
 
 Consequently, if \(v = \sum_i v^i \frac{\partial}{\partial x^i}\big|_p = \sum_j w^j \frac{\partial}{\partial y^j}\big|_p\), then
+
 \[
 w^j = \sum_i \frac{\partial y^j}{\partial x^i}(p) \, v^i.
 \]
@@ -686,12 +711,14 @@ We now connect the algebraic definition of tangent vectors to the geometric pict
 \gamma'(t_0) = \gamma_{*,t_0}\left(\frac{d}{dt}\bigg|_{t_0}\right) \in T_{\gamma(t_0)}M.
 \]
 Explicitly, \(\gamma'(t_0)\) acts on a smooth function \(f\) by
+
 \[
 \gamma'(t_0)(f) = \frac{d}{dt}\bigg|_{t_0}(f \circ \gamma) = (f \circ \gamma)'(t_0).
 \]
 </div>
 
 In local coordinates \((U, x^1, \ldots, x^n)\) around \(\gamma(t_0)\), if we write \(\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))\) (meaning \(x^i(\gamma(t)) = \gamma^i(t)\)), then
+
 \[
 \gamma'(t_0) = \sum_{i=1}^n \dot{\gamma}^i(t_0) \, \frac{\partial}{\partial x^i}\bigg|_{\gamma(t_0)},
 \]
@@ -741,6 +768,7 @@ is a diffeomorphism onto an open subset of \(\mathbb{R}^{2n}\).</li>
 <strong>Proof (Construction).</strong> For each chart \((U_\alpha, \varphi_\alpha)\) on \(M\), define \(\tilde{\varphi}_\alpha \colon \pi^{-1}(U_\alpha) \to \varphi_\alpha(U_\alpha) \times \mathbb{R}^n\) as in the statement. The sets \(\pi^{-1}(U_\alpha)\) cover \(TM\), and each \(\tilde{\varphi}_\alpha\) is a bijection onto an open subset of \(\mathbb{R}^{2n}\).
 
 We need to check that the transition maps are smooth. On \(\pi^{-1}(U_\alpha \cap U_\beta)\), the transition map \(\tilde{\varphi}_\beta \circ \tilde{\varphi}_\alpha^{-1}\) acts on \((x, v) \in \varphi_\alpha(U_\alpha \cap U_\beta) \times \mathbb{R}^n\) by
+
 \[
 \tilde{\varphi}_\beta \circ \tilde{\varphi}_\alpha^{-1}(x, v) = \left(\tau(x),\; J_\tau(x) \cdot v\right),
 \]
@@ -778,6 +806,7 @@ Chapter 3 established the tangent bundle \(\pi \colon TM \to M\) as a smooth \(2
 ![A vector field as a section of the tangent bundle: at each point p, the vector field assigns a tangent vector X_p in the fibre T_pM](/pics/pmath465/vector-field-section.svg)
 
 In local coordinates \((U, x^1, \ldots, x^n)\), a vector field \(X\) has the form
+
 \[
 X = \sum_{i=1}^n X^i \frac{\partial}{\partial x^i},
 \]
@@ -813,6 +842,7 @@ A map \(C^\infty(M) \to C^\infty(M)\) satisfying these two properties is called 
 </div>
 
 In coordinates, if \(X = \sum_i X^i \frac{\partial}{\partial x^i}\), then
+
 \[
 Xf = \sum_{i=1}^n X^i \frac{\partial f}{\partial x^i},
 \]
@@ -883,10 +913,12 @@ We must verify that \([X, Y]\) is indeed a derivation (and hence corresponds to 
 X(Y(fg)) = X(f \cdot Yg + g \cdot Yf) = Xf \cdot Yg + f \cdot X(Yg) + Xg \cdot Yf + g \cdot X(Yf).
 \]
 Similarly,
+
 \[
 Y(X(fg)) = Yf \cdot Xg + f \cdot Y(Xg) + Yg \cdot Xf + g \cdot Y(Xf).
 \]
 Subtracting:
+
 \[
 [X,Y](fg) = f \cdot (X(Yg) - Y(Xg)) + g \cdot (X(Yf) - Y(Xf)) = f \cdot [X,Y]g + g \cdot [X,Y]f. \quad \blacksquare
 \]
@@ -907,10 +939,12 @@ Now we compute the Lie bracket in local coordinates.
 X(Yf) = \sum_i X^i \frac{\partial}{\partial x^i}\left(\sum_j Y^j \frac{\partial f}{\partial x^j}\right) = \sum_{i,j} X^i \frac{\partial Y^j}{\partial x^i}\frac{\partial f}{\partial x^j} + \sum_{i,j} X^i Y^j \frac{\partial^2 f}{\partial x^i \partial x^j}.
 \]
 Similarly,
+
 \[
 Y(Xf) = \sum_{i,j} Y^i \frac{\partial X^j}{\partial x^i}\frac{\partial f}{\partial x^j} + \sum_{i,j} Y^i X^j \frac{\partial^2 f}{\partial x^i \partial x^j}.
 \]
 The second-order terms cancel (by equality of mixed partials), and we are left with
+
 \[
 [X,Y](f) = \sum_{i,j} \left(X^i \frac{\partial Y^j}{\partial x^i} - Y^i \frac{\partial X^j}{\partial x^i}\right) \frac{\partial f}{\partial x^j}.
 \]
@@ -927,6 +961,7 @@ Relabelling the summation index \(j\) as \(k\) gives the stated formula. \(\blac
 X = \frac{\partial}{\partial x}, \qquad Y = x\frac{\partial}{\partial y}.
 \]
 To compute \([X, Y]\) we apply the coordinate formula. Here \(X^1 = 1, X^2 = 0\) and \(Y^1 = 0, Y^2 = x\). The only nonzero partial derivative of the components of \(Y\) is \(\frac{\partial Y^2}{\partial x} = 1\). The only nonzero partial derivative of the components of \(X\) is zero everywhere. Thus
+
 \[
 [X, Y]^1 = X^1 \frac{\partial Y^1}{\partial x} + X^2 \frac{\partial Y^1}{\partial y} - Y^1 \frac{\partial X^1}{\partial x} - Y^2 \frac{\partial X^1}{\partial y} = 1 \cdot 0 + 0 - 0 - 0 = 0,
 \]
@@ -934,12 +969,14 @@ To compute \([X, Y]\) we apply the coordinate formula. Here \(X^1 = 1, X^2 = 0\)
 [X, Y]^2 = X^1 \frac{\partial Y^2}{\partial x} + X^2 \frac{\partial Y^2}{\partial y} - Y^1 \frac{\partial X^2}{\partial x} - Y^2 \frac{\partial X^2}{\partial y} = 1 \cdot 1 + 0 - 0 - 0 = 1.
 \]
 Hence \([X, Y] = \frac{\partial}{\partial y}\). We can verify this directly: for any \(f \in C^\infty(\mathbb{R}^2)\),
+
 \[
 [X, Y](f) = X(Y(f)) - Y(X(f)) = \frac{\partial}{\partial x}\!\left(x \frac{\partial f}{\partial y}\right) - x\frac{\partial}{\partial y}\!\left(\frac{\partial f}{\partial x}\right) = \frac{\partial f}{\partial y} + x\frac{\partial^2 f}{\partial x \partial y} - x\frac{\partial^2 f}{\partial y \partial x} = \frac{\partial f}{\partial y}.
 \]
 The second-order terms cancel, leaving \(\frac{\partial}{\partial y}\), as expected.
 
 Now consider the rotation vector field on \(\mathbb{R}^2\): \(R = -y\frac{\partial}{\partial x} + x\frac{\partial}{\partial y}\), and the radial dilation \(D = x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y}\). Applying the formula:
+
 \[
 [R, D]^1 = R^1 \frac{\partial D^1}{\partial x} + R^2 \frac{\partial D^1}{\partial y} - D^1 \frac{\partial R^1}{\partial x} - D^2 \frac{\partial R^1}{\partial y} = (-y)(1) + (x)(0) - (x)(0) - (y)(-1) = -y + y = 0.
 \]
@@ -966,10 +1003,12 @@ The Lie bracket satisfies three fundamental algebraic properties that make \(\Ga
 <strong>Proof.</strong> (1) and (2) are immediate from the definition \([X,Y]f = X(Yf) - Y(Xf)\).
 
 (3) We verify the Jacobi identity by direct computation. For any \(f \in C^\infty(M)\):
+
 \[
 [X,[Y,Z]](f) = X([Y,Z]f) - [Y,Z](Xf) = X(Y(Zf)) - X(Z(Yf)) - Y(Z(Xf)) + Z(Y(Xf)).
 \]
 Similarly,
+
 \[
 [Y,[Z,X]](f) = Y(Z(Xf)) - Y(X(Zf)) - Z(X(Yf)) + X(Z(Yf)),
 \]
@@ -1102,14 +1141,17 @@ is a Lie algebra homomorphism from \(\mathfrak{g}\) to \(\mathfrak{h}\) (under t
 <strong>Proof.</strong> We must show that if \(X, Y\) are left-invariant vector fields on \(G\), then the left-invariant vector fields on \(H\) corresponding to \(\Phi_{<em>,e}(X_e)\) and \(\Phi_{</em>,e}(Y_e)\) have bracket equal to the left-invariant vector field corresponding to \(\Phi_{*,e}([X,Y]_e)\).
 
 The key observation is that because \(\Phi\) is a group homomorphism, we have \(\Phi \circ L_g = L_{\Phi(g)} \circ \Phi\) for all \(g \in G\). Taking the pushforward at \(h \in G\):
+
 \[
 \Phi_{<em>,gh} \circ (L_g)_{</em>,h} = (L_{\Phi(g)})_{<em>,\Phi(h)} \circ \Phi_{</em>,h}.
 \]
 In particular, if \(X\) is left-invariant on \(G\) and we define \(\tilde{X}\) on \(H\) by \(\tilde{X}_{\Phi(g)} = \Phi_{*,g}(X_g)\), then for any \(k = \Phi(g) \in \Phi(G)\):
+
 \[
 (L_k)_{<em>,e}(\Phi_{</em>,e}(X_e)) = (L_{\Phi(g)})_{<em>,e}(\Phi_{</em>,e}(X_e)) = \Phi_{<em>,g}((L_g)_{</em>,e}(X_e)) = \Phi_{*,g}(X_g).
 \]
 This shows \(X\) is \(\Phi\)-related to the left-invariant vector field \(\tilde{X}\) on \(H\) determined by \(\tilde{X}_e = \Phi_{*,e}(X_e)\). Similarly, \(Y\) is \(\Phi\)-related to \(\tilde{Y}\). By Theorem 4.10, \([X,Y]\) is \(\Phi\)-related to \([\tilde{X}, \tilde{Y}]\). Evaluating at \(e\):
+
 \[
 \Phi_{*,e}([X,Y]_e) = [\tilde{X}, \tilde{Y}]_e.
 \]
@@ -1255,6 +1297,7 @@ The most natural and important source of covector fields is the differential of 
 (df)_p(X_p) = X_p f
 \]
 for all \( p \in M \) and \( X_p \in T_pM \). Equivalently, for any smooth vector field \( X \in \mathfrak{X}(M) \),
+
 \[
 df(X) = Xf.
 \]
@@ -1278,6 +1321,7 @@ on \( U \).
 df\!\left( \frac{\partial}{\partial x^j} \right) = \frac{\partial f}{\partial x^j}.
 \]
 On the other hand,
+
 \[
 \frac{\partial f}{\partial x^i} \, dx^i\!\left( \frac{\partial}{\partial x^j} \right) = \frac{\partial f}{\partial x^i} \, \delta^i_j = \frac{\partial f}{\partial x^j}. \qquad \square
 \]
@@ -1322,6 +1366,7 @@ One of the most important features distinguishing covectors from vectors is that
 F^<em> \colon T_{F(p)}^</em>N \to T_p^*M
 \]
 defined by
+
 \[
 (F^<em>\omega)(X_p) = \omega(F_{</em>,p} X_p)
 \]
@@ -1387,6 +1432,7 @@ F^*\omega = (\omega_j \circ F) \frac{\partial F^j}{\partial x^i} \, dx^i.
 F^<em>(dx) = d(s^2) = 2s \, ds, \qquad F^</em>(dy) = d(st) = t \, ds + s \, dt, \qquad F^*(dz) = d(t^2) = 2t \, dt.
 \]
 Therefore,
+
 \[
 F^*\omega = t^2(2s \, ds) + s^2(t \, ds + s \, dt) - st(2t \, dt) = (2st^2 + s^2 t) \, ds + (s^3 - 2st^2) \, dt.
 \]
@@ -1421,14 +1467,17 @@ The line integral is also invariant under orientation-preserving reparametrisati
 \omega = \frac{-y\,dx + x\,dy}{x^2+y^2}.
 \]
 We compute the line integral of \(\omega\) along the unit circle \(\gamma \colon [0, 2\pi] \to \mathbb{R}^2\), \(\gamma(t) = (\cos t, \sin t)\). We have \(\gamma'(t) = (-\sin t, \cos t)\), so
+
 \[
 \omega_{\gamma(t)}(\gamma'(t)) = \frac{-\sin t \cdot (-\sin t) + \cos t \cdot \cos t}{\cos^2 t + \sin^2 t} = \frac{\sin^2 t + \cos^2 t}{1} = 1.
 \]
 Therefore
+
 \[
 \int_\gamma \omega = \int_0^{2\pi} 1\,dt = 2\pi.
 \]
 Now suppose instead we take the straight-line path \(\sigma \colon [0,1] \to \mathbb{R}^2 \setminus \{0\}\), \(\sigma(t) = (1, t)\) from \((1,0)\) to \((1,1)\). Then \(\sigma'(t) = (0,1)\), and
+
 \[
 \omega_{\sigma(t)}(\sigma'(t)) = \frac{-t \cdot 0 + 1 \cdot 1}{1 + t^2} = \frac{1}{1+t^2},
 \]
@@ -1682,10 +1731,12 @@ This provides a practical way to compute tangent spaces to manifolds defined as 
 df_x = 2x^1 \, dx^1 + \cdots + 2x^{n+1} \, dx^{n+1} = 2x^i \, dx^i.
 \]
 At any point \( x \neq 0 \), the differential \( df_x \) is surjective (it is a nonzero linear map to \( \mathbb{R} \)), so every nonzero real number is a regular value. In particular, \( 1 \) is a regular value, and
+
 \[
 S^n = f^{-1}(1)
 \]
 is a smooth \( n \)-dimensional submanifold of \( \mathbb{R}^{n+1} \). The tangent space at \( p \in S^n \) is
+
 \[
 T_p S^n = \ker df_p = \{ v \in \mathbb{R}^{n+1} : \sum_{i=1}^{n+1} p^i v^i = 0 \} = p^\perp,
 \]
@@ -1700,10 +1751,12 @@ the orthogonal complement of \( p \) in \( \mathbb{R}^{n+1} \).
 O(n) = \Phi^{-1}(I_n).
 \]
 One computes \( \Phi_{<em>,A}(B) = B^T A + A^T B \). When \( A \in O(n) \), this becomes \( \Phi_{</em>,A}(B) = B^T A + A^T B \). For any symmetric matrix \( S \), the matrix \( B = \frac{1}{2}AS \) satisfies \( \Phi_{<em>,A}(B) = S \), so \( \Phi_{</em>,A} \) is surjective. Hence \( I_n \) is a regular value, and \( O(n) \) is a smooth submanifold of \( M(n, \mathbb{R}) \cong \mathbb{R}^{n^2} \) of dimension
+
 \[
 \dim O(n) = n^2 - \frac{n(n+1)}{2} = \frac{n(n-1)}{2}.
 \]
 The tangent space at the identity is
+
 \[
 T_I O(n) = \ker \Phi_{*,I} = \{ B \in M(n, \mathbb{R}) : B^T + B = 0 \} = \mathfrak{o}(n),
 \]
@@ -1931,6 +1984,7 @@ In the context of tangent spaces, we form tensor products of copies of \( V = T_
 T^{(k,\ell)}(V) = \underbrace{V^<em> \otimes \cdots \otimes V^</em>}_{k} \otimes \underbrace{V \otimes \cdots \otimes V}_{\ell}.
 \]
 Equivalently, a \( (k, \ell) \)-tensor is a multilinear map
+
 \[
 \sigma \colon \underbrace{V \times \cdots \times V}_{k} \times \underbrace{V^<em> \times \cdots \times V^</em>}_{\ell} \to \mathbb{R}.
 \]
@@ -2092,6 +2146,7 @@ where \( \delta_{ij} \) is the Kronecker delta. This is the <strong>Euclidean me
 g_{S^n} = \iota^* \bar{g}.
 \]
 In spherical coordinates \( (\theta^1, \ldots, \theta^n) \) on \( S^n \), the round metric for \( S^2 \) takes the familiar form
+
 \[
 g_{S^2} = d\theta^2 + \sin^2\theta \, d\phi^2.
 \]
@@ -2140,10 +2195,12 @@ One might worry that Riemannian metrics are difficult to construct. The followin
 g_\alpha = \delta_{ij} \, d(x_\alpha^i) \otimes d(x_\alpha^j),
 \]
 which is just the pullback of the Euclidean metric by the coordinate map \( \varphi_\alpha \). Now define
+
 \[
 g = \sum_{\alpha \in A} \rho_\alpha \, g_\alpha.
 \]
 This is a well-defined smooth symmetric covariant 2-tensor field on \( M \) (the sum is locally finite). It remains to check positive definiteness. For any \( p \in M \) and \( 0 \neq v \in T_pM \),
+
 \[
 g_p(v, v) = \sum_{\alpha} \rho_\alpha(p) \, (g_\alpha)_p(v, v).
 \]
@@ -2164,10 +2221,12 @@ A Riemannian metric establishes a canonical isomorphism between the tangent and 
 \flat \colon TM \to T^*M
 \]
 defined at each point \( p \) by
+
 \[
 v^\flat(w) = g_p(v, w) \qquad \text{for all } v, w \in T_pM.
 \]
 The <strong>sharp map</strong> (or <strong>index-raising map</strong>) is the inverse
+
 \[
 \sharp \colon T^*M \to TM, \qquad \sharp = \flat^{-1}.
 \]
@@ -2208,6 +2267,7 @@ The musical isomorphisms give us the correct definition of the gradient vector f
 \operatorname{grad} f = (df)^\sharp.
 \]
 Equivalently, \( \operatorname{grad} f \) is the unique smooth vector field satisfying
+
 \[
 g(\operatorname{grad} f, X) = df(X) = Xf \qquad \text{for all } X \in \mathfrak{X}(M).
 \]
@@ -2233,6 +2293,7 @@ because \( g^{ij} = \delta^{ij} \). On a general Riemannian manifold, however, t
 (g^{ij}) = \begin{pmatrix} 1 & 0 \\ 0 & \csc^2\theta \end{pmatrix}.
 \]
 For the height function \( h = \cos\theta \), we have \( dh = -\sin\theta \, d\theta \), so
+
 \[
 \operatorname{grad} h = g^{11}(-\sin\theta) \frac{\partial}{\partial \theta} + g^{22}(0) \frac{\partial}{\partial \phi} = -\sin\theta \frac{\partial}{\partial \theta}.
 \]
@@ -2259,6 +2320,7 @@ The Riemannian metric \( g \) on \( TM \) induces a corresponding inner product 
 g^{-1}(\omega, \eta) = g(\omega^\sharp, \eta^\sharp)
 \]
 for all \( \omega, \eta \in T_p^*M \). In local coordinates,
+
 \[
 g^{-1}(\omega, \eta) = g^{ij} \omega_i \eta_j.
 \]
@@ -2328,10 +2390,12 @@ This can be written in matrix form as \( \tilde{G} = J^T G J \), where \( J = \l
 dx = \cos\theta \, dr - r\sin\theta \, d\theta, \qquad dy = \sin\theta \, dr + r\cos\theta \, d\theta.
 \]
 Substituting:
+
 \[
 g = (\cos^2\theta + \sin^2\theta) \, dr^2 + (-r\sin\theta\cos\theta + r\sin\theta\cos\theta)(dr \, d\theta + d\theta \, dr) + r^2(\sin^2\theta + \cos^2\theta) \, d\theta^2,
 \]
 which simplifies to
+
 \[
 g = dr^2 + r^2 \, d\theta^2.
 \]
@@ -2379,12 +2443,14 @@ The vector space of alternating \( k \)-tensors on \( V \) is denoted \( \Lambda
 By convention, \( \Lambda^0(V^*) = \mathbb{R} \) and \( \Lambda^1(V^*) = V^* \). Since an alternating \( k \)-tensor must vanish whenever two of its arguments are equal (set \( v_i = v_j \) and use the sign change), it follows that \( \Lambda^k(V^*) = 0 \) for \( k > n = \dim V \). The space \( \Lambda^k(V^*) \) has dimension \( \binom{n}{k} \).
 
 Given a basis \( (e_1, \ldots, e_n) \) for \( V \) with dual basis \( (\varepsilon^1, \ldots, \varepsilon^n) \), a basis for \( \Lambda^k(V^*) \) is given by the collection
+
 \[
 \{ \varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_k} : 1 \le i_1 < i_2 < \cdots < i_k \le n \}.
 \]
 We will define the wedge product momentarily.
 
 **The alternation operator.** There is a natural projection from the space of all covariant \( k \)-tensors onto the subspace of alternating ones. Define \( \operatorname{Alt} \colon T^k(V^*) \to \Lambda^k(V^*) \) by
+
 \[
 (\operatorname{Alt}\, \alpha)(v_1, \ldots, v_k) = \frac{1}{k!} \sum_{\sigma \in S_k} (\operatorname{sgn}\, \sigma)\, \alpha(v_{\sigma(1)}, \ldots, v_{\sigma(k)}).
 \]
@@ -2402,6 +2468,7 @@ The tensor product of two alternating tensors is generally not alternating. To o
 </div>
 
 The combinatorial prefactor ensures that the wedge product of basis covectors agrees with the determinant. Explicitly, if \( \varepsilon^1, \ldots, \varepsilon^n \) is a dual basis, then
+
 \[
 (\varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_k})(v_1, \ldots, v_k) = \det \begin{pmatrix} \varepsilon^{i_1}(v_1) & \cdots & \varepsilon^{i_1}(v_k) \\ \vdots & \ddots & \vdots \\ \varepsilon^{i_k}(v_1) & \cdots & \varepsilon^{i_k}(v_k) \end{pmatrix}.
 \]
@@ -2422,6 +2489,7 @@ The wedge product satisfies several fundamental algebraic properties.
 The graded commutativity is the key feature distinguishing the exterior algebra from the tensor algebra. In particular, if \( \alpha \) is a 1-form, then \( \alpha \wedge \alpha = 0 \), since \( (-1)^{1 \cdot 1} = -1 \) forces \( \alpha \wedge \alpha = -\alpha \wedge \alpha \).
 
 The **exterior algebra** of \( V^* \) is the direct sum
+
 \[
 \Lambda^*(V^*) = \bigoplus_{k=0}^{n} \Lambda^k(V^*),
 \]
@@ -2439,6 +2507,7 @@ With the pointwise algebra of alternating tensors in hand, we now globalize to m
 </div>
 
 A 0-form is simply a smooth function \( f \in C^\infty(M) = \Omega^0(M) \). A 1-form is a smooth section of the cotangent bundle, which we have already studied extensively. In local coordinates \( (x^1, \ldots, x^n) \) on a chart \( (U, \varphi) \), every \( k \)-form \( \omega \in \Omega^k(M) \) can be written as
+
 \[
 \omega = \sum_{i_1 < \cdots < i_k} \omega_{i_1 \cdots i_k}\, dx^{i_1} \wedge \cdots \wedge dx^{i_k},
 \]
@@ -2473,10 +2542,12 @@ d(\alpha \wedge \beta) = d\alpha \wedge \beta + (-1)^k \alpha \wedge d\beta.
 </div>
 
 The proof of existence proceeds by constructing \( d \) in local coordinates and showing the result is independent of the choice of coordinates. In a coordinate chart \( (x^1, \ldots, x^n) \), if
+
 \[
 \omega = \sum_{I} \omega_I\, dx^I,
 \]
 where \( I = (i_1, \ldots, i_k) \) is an increasing multi-index and \( dx^I = dx^{i_1} \wedge \cdots \wedge dx^{i_k} \), then
+
 \[
 d\omega = \sum_{I} d\omega_I \wedge dx^I = \sum_{I} \sum_{j=1}^{n} \frac{\partial \omega_I}{\partial x^j}\, dx^j \wedge dx^I.
 \]
@@ -2487,6 +2558,7 @@ d\omega = \sum_{I} d\omega_I \wedge dx^I = \sum_{I} \sum_{j=1}^{n} \frac{\partia
 d(df) = d\Bigl(\sum_j \frac{\partial f}{\partial x^j} dx^j\Bigr) = \sum_{i,j} \frac{\partial^2 f}{\partial x^i \partial x^j} dx^i \wedge dx^j = 0,
 \]
 because mixed partial derivatives are symmetric while \( dx^i \wedge dx^j \) is antisymmetric. For a general \( k \)-form \( \omega = \omega_I\, dx^I \), we use the Leibniz rule:
+
 \[
 d^2(\omega_I\, dx^I) = d(d\omega_I \wedge dx^I) = d^2\omega_I \wedge dx^I - d\omega_I \wedge d(dx^I).
 \]
@@ -2517,6 +2589,7 @@ The identity \( d^2 = 0 \) unifies the classical vector calculus identities \( \
 \Omega^0(\mathbb{R}^3) \xrightarrow{d} \Omega^1(\mathbb{R}^3) \xrightarrow{d} \Omega^2(\mathbb{R}^3) \xrightarrow{d} \Omega^3(\mathbb{R}^3)
 \]
 corresponds (via the musical isomorphisms of a Riemannian metric on \(\mathbb{R}^3\)) to
+
 \[
 C^\infty(\mathbb{R}^3) \xrightarrow{\nabla} \mathfrak{X}(\mathbb{R}^3) \xrightarrow{\nabla \times} \mathfrak{X}(\mathbb{R}^3) \xrightarrow{\nabla \cdot} C^\infty(\mathbb{R}^3).
 \]
@@ -2538,6 +2611,7 @@ where a hat denotes omission of that argument.
 </div>
 
 For example, when \( \omega \) is a 1-form and \( X, Y \) are vector fields,
+
 \[
 d\omega(X, Y) = X(\omega(Y)) - Y(\omega(X)) - \omega([X, Y]).
 \]
@@ -2584,6 +2658,7 @@ By convention, \( \iota_X f = 0 \) for \( f \in \Omega^0(M) \).
 ![The interior product ι_X: inserting a vector field X into a k-form to produce a (k-1)-form](/pics/pmath465/interior-product.svg)
 
 The interior product is a graded derivation of degree \( -1 \): it satisfies
+
 \[
 \iota_X(\alpha \wedge \beta) = (\iota_X \alpha) \wedge \beta + (-1)^k \alpha \wedge (\iota_X \beta)
 \]
@@ -2679,6 +2754,7 @@ A nowhere-vanishing \( n \)-form on an oriented \( n \)-manifold serves as a "vo
 <strong>Theorem 10.6 (Riemannian volume form).</strong> Let \( (M, g) \) be an oriented Riemannian \( n \)-manifold. There exists a unique volume form \( dV_g \in \Omega^n(M) \), called the <strong>Riemannian volume form</strong>, characterized by \( dV_g(E_1, \ldots, E_n) = 1 \) for every positively oriented orthonormal frame \( (E_1, \ldots, E_n) \).
 
 In local coordinates \( (x^1, \ldots, x^n) \) compatible with the orientation,
+
 \[
 dV_g = \sqrt{\det(g_{ij})}\, dx^1 \wedge \cdots \wedge dx^n,
 \]
@@ -2697,6 +2773,7 @@ where \( g_{ij} = g\bigl(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial
 (where \(x, y, z\) are the standard coordinates on \(\mathbb{R}^3\) restricted to \(S^2 \subset \mathbb{R}^3\)) over the unit sphere \(S^2\) with the outward orientation.
 
 We use spherical coordinates \(x = \sin\theta\cos\phi\), \(y = \sin\theta\sin\phi\), \(z = \cos\theta\), where \(\theta \in (0,\pi)\) and \(\phi \in (0, 2\pi)\). First, we compute the pullbacks of the coordinate differentials:
+
 \[
 dx = \cos\theta\cos\phi\,d\theta - \sin\theta\sin\phi\,d\phi,
 \]
@@ -2707,15 +2784,18 @@ dy = \cos\theta\sin\phi\,d\theta + \sin\theta\cos\phi\,d\phi,
 dz = -\sin\theta\,d\theta.
 \]
 We compute \(dy \wedge dz\):
+
 \[
 dy \wedge dz = (\cos\theta\sin\phi\,d\theta + \sin\theta\cos\phi\,d\phi) \wedge (-\sin\theta\,d\theta)
 = -\sin^2\theta\cos\phi\,d\phi \wedge d\theta = \sin^2\theta\cos\phi\,d\theta \wedge d\phi.
 \]
 Similarly, \(dz \wedge dx = \sin^2\theta\sin\phi\,d\theta \wedge d\phi\) and \(dx \wedge dy = \sin\theta\cos\theta\,d\theta \wedge d\phi\) — but we can compute the sum more efficiently. Note that
+
 \[
 x\,dy \wedge dz + y\,dz \wedge dx + z\,dx \wedge dy
 \]
 restricted to \(S^2\) equals the Riemannian volume form \(\sin\theta\,d\theta \wedge d\phi\). Indeed, the form \(\omega\) is the standard area form on the sphere; one can verify:
+
 \[
 x \cdot \sin^2\theta\cos\phi + y \cdot \sin^2\theta\sin\phi + z \cdot \sin\theta\cos\theta
 \]
@@ -2724,10 +2804,12 @@ x \cdot \sin^2\theta\cos\phi + y \cdot \sin^2\theta\sin\phi + z \cdot \sin\theta
 = \sin^2\theta + \cos^2\theta\sin\theta.
 \]
 A cleaner approach: the outward unit normal to \(S^2\) at a point \((x,y,z)\) is \(\nu = (x,y,z)\) itself, and the area form equals the contraction \(\iota_\nu(dx \wedge dy \wedge dz)\), which gives precisely \(\omega\). Therefore
+
 \[
 \int_{S^2} \omega = \int_{S^2} dV_{g_{S^2}} = \text{area of } S^2 = 4\pi.
 \]
 This is consistent with the divergence theorem: \(d\omega = (1+1+1)\,dx \wedge dy \wedge dz = 3\,dV_{\mathbb{R}^3}\), so
+
 \[
 \int_{S^2} \omega = \int_{B^3} d\omega = 3 \cdot \text{vol}(B^3) = 3 \cdot \frac{4\pi}{3} = 4\pi. \qquad \checkmark
 \]
@@ -2801,6 +2883,7 @@ where \( \partial M \) carries the induced (Stokes) orientation. If \( \partial 
 \omega = \sum_{j=1}^{n} (-1)^{j-1} f_j\, dx^1 \wedge \cdots \wedge \widehat{dx^j} \wedge \cdots \wedge dx^n.
 \]
 Then
+
 \[
 d\omega = \Bigl(\sum_{j=1}^{n} \frac{\partial f_j}{\partial x^j}\Bigr) dx^1 \wedge \cdots \wedge dx^n.
 \]
@@ -2860,11 +2943,13 @@ This is Stokes's theorem with \( \omega = F^1\, dy \wedge dz + F^2\, dz \wedge d
 Consider the 1-form \(\omega = -y\,dx + x\,dy\) on \(\mathbb{R}^3\). We compute both sides of Stokes' theorem \(\int_M d\omega = \int_{\partial M} \omega\).
 
 **Right-hand side:** Parametrise \(\partial M\) by \(\gamma(t) = (\cos t, \sin t, 0)\), \(t \in [0, 2\pi]\). Then
+
 \[
 \int_{\partial M} \omega = \int_0^{2\pi} (-\sin t)(-\sin t) + (\cos t)(\cos t)\,dt = \int_0^{2\pi} 1\,dt = 2\pi.
 \]
 
 **Left-hand side:** We compute \(d\omega = d(-y\,dx + x\,dy) = -dy \wedge dx + dx \wedge dy = 2\,dx \wedge dy\). We integrate over the upper hemisphere using the parametrisation \(F(\theta, \phi) = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)\) for \(\theta \in [0, \pi/2]\), \(\phi \in [0, 2\pi]\). The pullback of \(dx \wedge dy\) under \(F\) is \(\cos\theta\sin\theta\,d\theta \wedge d\phi\) (the \(z\)-component of the area form). Hence
+
 \[
 \int_M d\omega = \int_0^{2\pi}\int_0^{\pi/2} 2\cos\theta\sin\theta\,d\theta\,d\phi = 2\pi \int_0^{\pi/2} \sin(2\theta)\,d\theta = 2\pi \cdot \left[-\frac{\cos(2\theta)}{2}\right]_0^{\pi/2} = 2\pi \cdot 1 = 2\pi. \checkmark
 \]
@@ -2884,6 +2969,7 @@ or equivalently, \( d(\iota_X\, dV_g) = (\operatorname{div} X)\, dV_g \) (by Car
 </div>
 
 In local coordinates with \( dV_g = \sqrt{\det g}\, dx^1 \wedge \cdots \wedge dx^n \) and \( X = X^i \partial_i \), one computes
+
 \[
 \operatorname{div} X = \frac{1}{\sqrt{\det g}} \frac{\partial}{\partial x^i}\bigl(\sqrt{\det g}\, X^i\bigr).
 \]
@@ -2968,6 +3054,7 @@ Smooth maps between manifolds induce maps on cohomology that go in the "reverse"
 <li>\( F^<em> \) maps exact forms to exact forms (since \( F^</em>(d\eta) = d(F^*\eta) \)).</li>
 </ol>
 Therefore \( F^* \) descends to a well-defined linear map on cohomology,
+
 \[
 F^<em> \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M), \quad [\omega] \mapsto [F^</em>\omega].
 \]
@@ -2999,6 +3086,7 @@ for all \( k \). Consequently, homotopy equivalent manifolds have isomorphic de 
 </div>
 
 The proof uses a **chain homotopy** (or **homotopy operator**) \( h \colon \Omega^k(N) \to \Omega^{k-1}(M) \) satisfying the fundamental identity
+
 \[
 G^*\omega - F^*\omega = d(h\omega) + h(d\omega)
 \]
@@ -3024,6 +3112,7 @@ H^k_{\text{dR}}(\mathbb{R}^n) \cong H^k_{\text{dR}}(\{\text{point}\}).
 Since the cohomology of a point is \( \mathbb{R} \) in degree 0 and 0 in all positive degrees, the result follows.
 
 More concretely, we construct the homotopy operator \( h \) explicitly. Let \( \omega = \sum_I f_I(x)\, dx^I \) be a closed \( k \)-form on a star-shaped domain (star-shaped about the origin). Define
+
 \[
 (h\omega)(x) = \sum_I \sum_{j \in I} \pm \Bigl(\int_0^1 t^{k-1} f_I(tx)\, dt\Bigr) x^j\, dx^{I \setminus \{j\}},
 \]
@@ -3049,6 +3138,7 @@ where \( i, j \) are the inclusions of \( U, V \) into \( M \), and \( k, \ell \
 </div>
 
 The sequence arises from the short exact sequence of cochain complexes
+
 \[
 0 \to \Omega^*(M) \xrightarrow{(i^*, j^*)} \Omega^*(U) \oplus \Omega^*(V) \xrightarrow{k^* - \ell^*} \Omega^*(U \cap V) \to 0.
 \]
@@ -3086,6 +3176,7 @@ The generator of \( H^n_{\text{dR}}(S^n) \) is the class of any volume form on \
 H^k_{\text{dR}}(T^n) \cong \mathbb{R}^{\binom{n}{k}}.
 \]
 This can be proved using the Künneth formula for de Rham cohomology: if \( M \) and \( N \) are manifolds of finite type, then
+
 \[
 H^k_{\text{dR}}(M \times N) \cong \bigoplus_{p+q=k} H^p_{\text{dR}}(M) \otimes H^q_{\text{dR}}(N).
 \]
@@ -3141,10 +3232,12 @@ where we used \( d\mu \wedge \beta = d(\mu \wedge \beta) \pm \mu \wedge d\beta =
 \langle \cdot, \cdot \rangle \colon H^k_{\text{dR}}(M) \times H^{n-k}_{\text{dR}}(M) \to \mathbb{R}
 \]
 is <strong>nondegenerate</strong>. Consequently, there is a canonical isomorphism
+
 \[
 H^k_{\text{dR}}(M) \cong \bigl(H^{n-k}_{\text{dR}}(M)\bigr)^*.
 \]
 Since the de Rham cohomology groups are finite-dimensional (which follows from the fact that compact manifolds admit finite good covers), this implies
+
 \[
 H^k_{\text{dR}}(M) \cong H^{n-k}_{\text{dR}}(M).
 \]
@@ -3155,6 +3248,7 @@ H^k_{\text{dR}}(M) \cong H^{n-k}_{\text{dR}}(M).
 </div>
 
 **Consequences for Betti numbers.** The **Betti numbers** of \( M \) are \( b_k = \dim H^k_{\text{dR}}(M) \). Poincaré duality immediately yields
+
 \[
 b_k = b_{n-k} \quad \text{for all } 0 \leq k \leq n.
 \]
@@ -3202,6 +3296,7 @@ A vector field on a smooth manifold assigns a "direction of motion" to each poin
 \gamma'(t) = V_{\gamma(t)} \quad \text{for all } t \in I.
 \]
 In local coordinates \( (x^1, \ldots, x^n) \), if \( V = V^i \frac{\partial}{\partial x^i} \) and \( \gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t)) \), this becomes the system of ordinary differential equations
+
 \[
 \frac{d\gamma^i}{dt}(t) = V^i(\gamma^1(t), \ldots, \gamma^n(t)), \quad i = 1, \ldots, n.
 \]
@@ -3397,6 +3492,7 @@ We have already encountered Cartan's magic formula in Chapter 9. Now that we hav
 ![Lie derivative of a differential form: the rate of change of ω along the flow of X](/pics/pmath465/lie-derivative-form.svg)
 
 The Lie derivative of a differential form \( \omega \) along a vector field \( X \) with flow \( \Theta \) is
+
 \[
 (\mathcal{L}_X \omega)_p = \frac{d}{dt}\bigg|_{t=0} (\Theta_t^* \omega)_p.
 \]
@@ -3410,6 +3506,7 @@ This pulls the form back from \( \Theta_t(p) \) to \( p \) using the flow and th
 </div>
 
 A useful consequence is the following formula for the time derivative of the pullback along a flow:
+
 \[
 \frac{d}{dt} \Theta_t^* \omega = \Theta_t^* (\mathcal{L}_X \omega).
 \]
@@ -3420,6 +3517,7 @@ This identity is used constantly in applications to fluid dynamics, where it des
 The Frobenius theorem is one of the fundamental results in differential geometry. It provides a necessary and sufficient condition for a family of subspaces of the tangent bundle to be "integrable" — that is, to arise as the tangent spaces to a foliation of the manifold by submanifolds.
 
 To motivate the theorem, consider the following question: given a system of first-order PDEs of the form
+
 \[
 \frac{\partial F}{\partial x^i} = f_i(x^1, \ldots, x^n), \quad i = 1, \ldots, n,
 \]
@@ -3498,6 +3596,7 @@ This formulation is equivalent to the vector-field version: the condition \( d\t
 \theta = dz - y\, dx.
 \]
 The distribution \( D = \ker \theta \) is a rank-2 distribution on \( \mathbb{R}^3 \) (at each point, \( D_p \) is the 2-dimensional subspace of \( T_p \mathbb{R}^3 \) on which \( \theta \) vanishes). We test integrability using the forms criterion. Compute:
+
 \[
 d\theta = d(dz - y\, dx) = -dy \wedge dx = dx \wedge dy.
 \]
@@ -3547,6 +3646,7 @@ In local coordinates \( (x^1, \ldots, x^n) \), a connection is completely determ
 ![Christoffel symbols Γ^k_{ij}: the n^3 functions encoding a connection in local coordinates](/pics/pmath465/christoffel-symbols.svg)
 
 Given the Christoffel symbols, the covariant derivative of an arbitrary vector field \( Y = Y^j \frac{\partial}{\partial x^j} \) in the direction \( X = X^i \frac{\partial}{\partial x^i} \) is
+
 \[
 \nabla_X Y = X^i \Bigl(\frac{\partial Y^k}{\partial x^i} + \Gamma^k_{ij} Y^j\Bigr) \frac{\partial}{\partial x^k}.
 \]
@@ -3568,6 +3668,7 @@ Two of the most important constructions associated with a connection are geodesi
 \nabla_{\gamma'(t)} \gamma'(t) = 0 \quad \text{for all } t \in I.
 \]
 In local coordinates, this becomes the <strong>geodesic equation</strong>:
+
 \[
 \frac{d^2 \gamma^k}{dt^2} + \Gamma^k_{ij}(\gamma(t)) \frac{d\gamma^i}{dt} \frac{d\gamma^j}{dt} = 0, \quad k = 1, \ldots, n.
 \]
@@ -3609,6 +3710,7 @@ The torsion measures the extent to which the connection fails to be "symmetric."
 \nabla g = 0,
 \]
 or equivalently, for all vector fields \( X, Y, Z \):
+
 \[
 X(g(Y, Z)) = g(\nabla_X Y, Z) + g(Y, \nabla_X Z).
 \]
@@ -3622,6 +3724,7 @@ This means that parallel transport preserves inner products.
 <li><strong>Metric-compatible:</strong> \( \nabla g = 0 \).</li>
 </ol>
 It is determined explicitly by the <strong>Koszul formula</strong>:
+
 \[
 2g(\nabla_X Y, Z) = X(g(Y,Z)) + Y(g(X,Z)) - Z(g(X,Y)) + g([X,Y], Z) - g([X,Z], Y) - g([Y,Z], X).
 \]
@@ -3634,6 +3737,7 @@ It is determined explicitly by the <strong>Koszul formula</strong>:
 </div>
 
 In coordinates, the Christoffel symbols of the Levi-Civita connection are given by
+
 \[
 \Gamma^k_{ij} = \frac{1}{2} g^{k\ell}\Bigl(\frac{\partial g_{j\ell}}{\partial x^i} + \frac{\partial g_{i\ell}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^\ell}\Bigr).
 \]
@@ -3658,6 +3762,7 @@ The curvature tensor measures the failure of second covariant derivatives to com
 </div>
 
 In local coordinates, the curvature tensor has components
+
 \[
 R^l{}_{ijk} = \frac{\partial \Gamma^l_{jk}}{\partial x^i} - \frac{\partial \Gamma^l_{ik}}{\partial x^j} + \Gamma^l_{im} \Gamma^m_{jk} - \Gamma^l_{jm} \Gamma^m_{ik}.
 \]
@@ -3731,6 +3836,7 @@ Einstein manifolds arise naturally in general relativity (the vacuum Einstein fi
 We conclude with two important results about geodesics on Riemannian manifolds.
 
 The **exponential map** at a point \( p \in M \) is defined by
+
 \[
 \exp_p \colon T_pM \supset U \to M, \quad \exp_p(v) = \gamma_v(1),
 \]
@@ -3739,6 +3845,7 @@ where \( \gamma_v \) is the geodesic with \( \gamma_v(0) = p \) and \( \gamma_v'
 ![The exponential map exp_p: sending a tangent vector v to the point reached by the geodesic γ_v at time 1](/pics/pmath465/exponential-map.svg) The exponential map is a local diffeomorphism near \( 0 \), and the coordinates it induces (called **normal coordinates** or **geodesic coordinates**) have the special property that \( \Gamma^k_{ij}(p) = 0 \) at the center point.
 
 The Riemannian distance function is defined by
+
 \[
 d(p, q) = \inf \Bigl\{ \int_0^1 |\gamma'(t)|_g\, dt : \gamma \text{ is a piecewise smooth curve from } p \text{ to } q \Bigr\}.
 \]

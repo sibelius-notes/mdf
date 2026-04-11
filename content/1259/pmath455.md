@@ -595,6 +595,7 @@ where the coefficients \(W_k(K)\) are called the <em>quermassintegrals</em> of \
 \textbf{Unit ball.} For \(K = \mathbb{B}^n\), we have \(K + \varepsilon \mathbb{B}^n = (1+\varepsilon)\mathbb{B}^n\), so \(\mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n) = (1+\varepsilon)^n \omega_n\) where \(\omega_n = \mathrm{Vol}_n(\mathbb{B}^n)\). Expanding by the binomial theorem: \((1+\varepsilon)^n \omega_n = \sum_{k=0}^n \binom{n}{k} \omega_n \varepsilon^k\). So \(W_k(\mathbb{B}^n) = \omega_n\) for all \(k\). The quermassintegrals of the ball are all equal to its volume (up to normalization).
 
 \textbf{Box in \(\mathbb{R}^3\).} Let \(K = [0,a] \times [0,b] \times [0,c]\) be a box. Then \(K + \varepsilon \mathbb{B}^3\) is the "rounded box" — a box with dimensions \((a + 2\varepsilon)\), \((b + 2\varepsilon)\), \((c + 2\varepsilon)\) for its flat sides, plus quarter-cylinders of radius \(\varepsilon\) on the edges and sphere caps on the corners. By direct computation:
+
 \[
 \mathrm{Vol}_3(K + \varepsilon \mathbb{B}^3) = abc + (ab + bc + ca) \cdot 2\varepsilon + (a+b+c) \cdot \pi \varepsilon^2 + \frac{4\pi}{3} \varepsilon^3.
 \]
@@ -603,6 +604,7 @@ Matching with Steiner: \(W_0 = abc\), \(3 W_1 \cdot 2 = 2(ab+bc+ca)\), etc. The 
 
 <div class="example">
 In \(\mathbb{R}^3\) for a convex body \(K\):
+
 \[
 \mathrm{Vol}_3(K + \varepsilon \mathbb{B}^3) = V + S\varepsilon + M\varepsilon^2 + \frac{4\pi}{3}\varepsilon^3,
 \]
@@ -628,6 +630,7 @@ Mixed volumes thus form a multilinear algebra for convex bodies: they assign to 
 
 <div class="remark">
 For the case \(m = 2\), \(K_1 = K\), \(K_2 = \mathbb{B}^n\):
+
 \[
 \mathrm{Vol}_n(tK + s\mathbb{B}^n) = \sum_{k=0}^n \binom{n}{k} t^{n-k} s^k V(K, \ldots, K, \mathbb{B}^n, \ldots, \mathbb{B}^n),
 \]
@@ -638,6 +641,7 @@ where the mixed volume \(V(\underbrace{K, \ldots, K}_{n-k}, \underbrace{\mathbb{
 <strong>Worked Example: Computing mixed volumes for the square and the disk in \(\mathbb{R}^2\).</strong>
 
 Let \(K_1 = [-1,1]^2\) (unit square, area 4) and \(K_2 = \mathbb{B}^2\) (unit disk, area \(\pi\)). In \(\mathbb{R}^2\), the mixed volume expansion gives:
+
 \[
 \mathrm{Vol}_2(t K_1 + s K_2) = t^2 V(K_1, K_1) + 2ts \, V(K_1, K_2) + s^2 V(K_2, K_2).
 \]
@@ -671,6 +675,7 @@ For polytopes, mixed volumes have an explicit combinatorial formula. Let \(P\) a
 \mathrm{Area}(tP + sQ) = t^2 \mathrm{Area}(P) + 2ts \cdot V(P,Q) + s^2 \mathrm{Area}(Q).
 \]
 The mixed area \(V(P,Q)\) has a beautiful formula: if \(P\) has edges with outer unit normals \(u_1, \ldots, u_m\) and edge lengths \(\ell_1, \ldots, \ell_m\), and \(Q\) has support function \(h_Q\), then:
+
 \[
 2V(P,Q) = \sum_{i=1}^m h_Q(u_i) \cdot \ell_i.
 \]
@@ -757,6 +762,7 @@ The Brunn–Minkowski inequality is the central inequality of convex geometry. I
 \mathrm{Vol}_n(A + B)^{1/n} \geq \mathrm{Vol}_n(A)^{1/n} + \mathrm{Vol}_n(B)^{1/n}.
 \]
 Equivalently, for \(t \in \left[0, 1\right]\):
+
 \[
 \mathrm{Vol}_n((1-t)A + tB)^{1/n} \geq (1-t)\mathrm{Vol}_n(A)^{1/n} + t\mathrm{Vol}_n(B)^{1/n}.
 \]
@@ -795,6 +801,7 @@ By homogeneity, we may normalize so that \(\mathrm{Vol}_n(A) = \mathrm{Vol}_n(B)
 The Hadwiger–Ohmann proof uses the following bisection idea. By translating \(A\) and \(B\), we may assume a hyperplane \(H = \{x_n = 0\}\) bisects both \(A\) and \(B\) simultaneously (a single hyperplane can bisect any two bodies by the ham sandwich theorem; for the Brunn–Minkowski proof we use a simpler version — choose \(H\) so that \(\mathrm{Vol}(A \cap \{x_n \geq 0\}) = \frac{1}{2}\mathrm{Vol}(A)\), then translate \(B\) along the \(x_n\)-axis so the same hyperplane bisects \(B\) as well).
 
 Now \(A = A^+ \cup A^-\) (positive and negative halves) and \(B = B^+ \cup B^-\). Since \(A^+ + B^+ \subseteq (A+B)^+\) and \(A^- + B^- \subseteq (A+B)^-\) (where the superscripts denote the half-spaces), and \((A+B)^+\) and \((A+B)^-\) are disjoint:
+
 \[
 \mathrm{Vol}_n(A+B) \geq \mathrm{Vol}_n(A^+ + B^+) + \mathrm{Vol}_n(A^- + B^-).
 \]
@@ -863,24 +870,29 @@ Equivalently, \(\mathrm{Vol}_{n-1}(\partial K) \geq n \omega_n^{1/n} \cdot \math
 
 <div class="proof">
 The isoperimetric inequality follows from the Brunn–Minkowski inequality by taking \(A = K\), \(B = \varepsilon \mathbb{B}^n\), and differentiating the Steiner formula at \(\varepsilon = 0\). Specifically, the Steiner formula gives:
+
 \[
 \mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n) = \mathrm{Vol}_n(K) + \varepsilon \mathrm{Vol}_{n-1}(\partial K) + O(\varepsilon^2).
 \]
 The Brunn–Minkowski inequality gives:
+
 \[
 \mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n)^{1/n} \geq \mathrm{Vol}_n(K)^{1/n} + \varepsilon \omega_n^{1/n}.
 \]
 Expanding both sides to first order in \(\varepsilon\) and comparing coefficients yields the isoperimetric inequality.
 
 Let us carry out the comparison in detail. Let \(V = \mathrm{Vol}_n(K)\) and \(S = \mathrm{Vol}_{n-1}(\partial K)\). The Steiner formula gives \(\mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n) = V + S\varepsilon + O(\varepsilon^2)\). Taking \(n\)-th roots:
+
 \[
 \mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n)^{1/n} = V^{1/n} \left(1 + \frac{S\varepsilon}{V} + O(\varepsilon^2)\right)^{1/n} = V^{1/n} + \frac{S \varepsilon}{n V^{(n-1)/n}} + O(\varepsilon^2).
 \]
 Brunn–Minkowski gives \(\mathrm{Vol}(K + \varepsilon B^n)^{1/n} \geq V^{1/n} + \varepsilon \omega_n^{1/n}\). Comparing the coefficients of \(\varepsilon\):
+
 \[
 \frac{S}{n V^{(n-1)/n}} \geq \omega_n^{1/n}.
 \]
 Rearranging: \(S \geq n \omega_n^{1/n} V^{(n-1)/n}\). This is the isoperimetric inequality. Squaring (or raising to power \(n\)) and using \(n^n \omega_n = \sigma_{n-1}^n / \omega_n^{n-1}\) (from the relation \(\sigma_{n-1} = n\omega_n\)):
+
 \[
 S^n \geq n^n \omega_n V^{n-1} = \frac{\sigma_{n-1}^n}{\omega_n^{n-1}} V^{n-1}.
 \]
@@ -932,6 +944,7 @@ This is the content of Prékopa's theorem (Section 5.2). Its significance: the G
 f((1-t)x + ty) \geq f(x)^{1-t} f(y)^t.
 \]
 Equivalently, \(\log f\) is concave (where we set \(\log 0 = -\infty\)). A Borel measure \(\mu\) on \(\mathbb{R}^n\) is <em>log-concave</em> if for all nonempty compact sets \(A, B\) and \(t \in \left[0, 1\right]\):
+
 \[
 \mu((1-t)A + tB) \geq \mu(A)^{1-t} \mu(B)^t.
 \]
@@ -976,6 +989,7 @@ The Prékopa–Leindler inequality is a functional version of the Brunn–Minkow
 h((1-t)x + ty) \geq f(x)^{1-t} g(y)^t \quad \text{for all } x, y \in \mathbb{R}^n.
 \]
 Then:
+
 \[
 \int_{\mathbb{R}^n} h \geq \left(\int_{\mathbb{R}^n} f\right)^{1-t} \left(\int_{\mathbb{R}^n} g\right)^t.
 \]
@@ -993,6 +1007,7 @@ We prove the one-dimensional case; the general case follows by induction using F
 |\{z : h(z) > s\}| \geq (1-t)|A_s| + t|B_s| \geq (1-t)F(s) + tG(s).
 \]
 Integrating over \(s \geq 0\) (using the layer-cake formula \(\int f = \int_0^\infty F(s)\,ds\)):
+
 \[
 \int h \geq (1-t)\int f + t\int g.
 \]
@@ -1015,6 +1030,7 @@ This transport perspective was developed by McCann (1997) and gives a clean proo
 <strong>Worked Example: Prékopa–Leindler for Gaussians.</strong> Let \(f(x) = e^{-\|x\|^2/2}\) and \(g(y) = e^{-\|y\|^2/2}\) (unnormalized Gaussians). For \(t = 1/2\), the Prékopa–Leindler condition requires: \(h(z) \geq f(x)^{1/2} g(y)^{1/2} = e^{-(\|x\|^2+\|y\|^2)/4}\) whenever \(z = (x+y)/2\).
 
 Take \(h(z) = e^{-\|z\|^2/2}\). Then \(h((x+y)/2) = e^{-\|x+y\|^2/8}\). We need \(e^{-\|x+y\|^2/8} \geq e^{-(\|x\|^2+\|y\|^2)/4}\), i.e., \(\|x+y\|^2/8 \leq (\|x\|^2+\|y\|^2)/4\), i.e., \(\|x+y\|^2 \leq 2(\|x\|^2+\|y\|^2)\). This is the parallelogram law! Indeed \(\|x+y\|^2 + \|x-y\|^2 = 2\|x\|^2 + 2\|y\|^2\), so \(\|x+y\|^2 = 2(\|x\|^2+\|y\|^2) - \|x-y\|^2 \leq 2(\|x\|^2+\|y\|^2)\). The Prékopa–Leindler inequality then gives:
+
 \[
 \int e^{-\|z\|^2/2}\,dz \geq \left(\int e^{-\|x\|^2/2}\,dx\right)^{1/2} \left(\int e^{-\|y\|^2/2}\,dy\right)^{1/2}.
 \]
@@ -1029,6 +1045,7 @@ Since all three integrals equal \((2\pi)^{n/2}\), we get \((2\pi)^{n/2} \geq (2\
 
 <div class="proof">
 For \(s < t < u\), write \(t = (1-\lambda)s + \lambda u\) where \(\lambda = (t-s)/(u-s)\). Any point in \(K_t\) can be written as a convex combination \((1-\lambda)x + \lambda y\) where \(x \in K_s\) and \(y \in K_u\) (by the convexity of \(K\)), so \(K_t \supseteq (1-\lambda)K_s + \lambda K_u\). Applying the Brunn–Minkowski inequality in \(\mathbb{R}^{n-1}\):
+
 \[
 \mathrm{Vol}_{n-1}(K_t)^{1/(n-1)} \geq \mathrm{Vol}_{n-1}((1-\lambda)K_s + \lambda K_u)^{1/(n-1)} \geq (1-\lambda)\mathrm{Vol}_{n-1}(K_s)^{1/(n-1)} + \lambda\mathrm{Vol}_{n-1}(K_u)^{1/(n-1)}.
 \]
@@ -1140,6 +1157,7 @@ The following lists all fundamental operations that preserve convexity of functi
 f(\mathbb{E}\left[X\right]) \leq \mathbb{E}\left[f(X)\right].
 \]
 In the discrete setting with weights \(\lambda_i \geq 0\), \(\sum \lambda_i = 1\):
+
 \[
 f\!\left(\sum_{i=1}^k \lambda_i x_i\right) \leq \sum_{i=1}^k \lambda_i f(x_i).
 \]
@@ -1147,6 +1165,7 @@ f\!\left(\sum_{i=1}^k \lambda_i x_i\right) \leq \sum_{i=1}^k \lambda_i f(x_i).
 
 <div class="proof">
 For the discrete case, proceed by induction on \(k\). The base case \(k = 1\) and \(k = 2\) are immediate from the definition of convexity. For the inductive step, write \(\sum_{i=1}^k \lambda_i x_i = (1-\lambda_k)\left(\sum_{i=1}^{k-1} \frac{\lambda_i}{1-\lambda_k} x_i\right) + \lambda_k x_k\). The inner sum has weights summing to 1. Applying the convexity definition and the inductive hypothesis:
+
 \[
 f\!\left(\sum_{i=1}^k \lambda_i x_i\right) \leq (1-\lambda_k) f\!\left(\sum_{i=1}^{k-1} \frac{\lambda_i}{1-\lambda_k} x_i\right) + \lambda_k f(x_k) \leq (1-\lambda_k) \sum_{i=1}^{k-1} \frac{\lambda_i}{1-\lambda_k} f(x_i) + \lambda_k f(x_k) = \sum_{i=1}^k \lambda_i f(x_i).
 \]
@@ -1162,6 +1181,7 @@ Jensen's inequality has profound applications in probability theory (e.g., the c
 H(p) = \sum_i p_i \cdot (-\log p_i) = \mathbb{E}[-\log p_i] \leq -\log \mathbb{E}[p_i] = -\log\!\left(\frac{1}{n} \cdot \sum_i p_i \cdot \frac{1}{p_i} \cdot p_i\right),
 \]
 hmm — more cleanly: by Jensen applied to the concave function \(\log\),
+
 \[
 H(p) = \sum_i p_i \log \frac{1}{p_i} \leq \log \sum_i p_i \cdot \frac{1}{p_i} = \log n,
 \]
@@ -1290,6 +1310,7 @@ The positive semidefiniteness of the Hessian is often the quickest way to verify
 \frac{\partial f}{\partial x_i} = p_i, \qquad \frac{\partial^2 f}{\partial x_i \partial x_j} = p_i(\delta_{ij} - p_j).
 \]
 The Hessian is \(D^2 f = \mathrm{diag}(p) - pp^T\). For any vector \(v\):
+
 \[
 v^T D^2 f \, v = \sum_i p_i v_i^2 - \left(\sum_i p_i v_i\right)^2 = \mathbb{E}[v_i^2] - (\mathbb{E}[v_i])^2 = \mathrm{Var}(v_i) \geq 0,
 \]
@@ -1317,6 +1338,7 @@ This is exactly the classical Legendre transform from mechanics and thermodynami
 f^*(y) = \sup_{x \geq 0}(xy - x^p/p).
 \]
 Differentiating in \(x\): \(y - x^{p-1} = 0\), so \(x^* = y^{1/(p-1)} = y^{q/p}\) where \(q = p/(p-1)\) is the Hölder conjugate. Then:
+
 \[
 f^*(y) = y \cdot y^{q/p} - (y^{q/p})^p/p = y^{1+q/p} - y^q/p = y^q - y^q/p = y^q(1 - 1/p) = y^q/q.
 \]
@@ -1329,6 +1351,7 @@ So \((x^p/p)^* = y^q/q\). This is the Hölder duality: the conjugate of \(x^p/p\
 f^*(\theta) = \sup_{p \in \Delta} \left(\sum_i \theta_i p_i - \sum_i p_i \log p_i\right) = \log \sum_i e^{\theta_i}.
 \]
 This is the log-partition function (or log-sum-exp)! The computation: maximizing \(\sum_i p_i(\theta_i - \log p_i - 1)\) over the simplex (with Lagrange multiplier for \(\sum p_i = 1\)) gives \(p_i^* = e^{\theta_i} / \sum_j e^{\theta_j}\) (the softmax), and substituting:
+
 \[
 f^*(\theta) = \sum_i \frac{e^{\theta_i}}{\sum_j e^{\theta_j}} \cdot \theta_i - \sum_i \frac{e^{\theta_i}}{\sum_j e^{\theta_j}} \log \frac{e^{\theta_i}}{\sum_j e^{\theta_j}} = \log \sum_j e^{\theta_j}.
 \]
@@ -1399,6 +1422,7 @@ Moreover, the inner product is minimized when one function is rearranged in the 
 
 <div class="proof">
 Using the layer-cake representation \(f = \int_0^\infty \mathbf{1}_{\{f>s\}}\,ds\) and similarly for \(g\):
+
 \[
 \int f g = \int_0^\infty \int_0^\infty \left|\{f > s\} \cap \{g > t\}\right| ds\,dt.
 \]
@@ -1504,6 +1528,7 @@ We give the proof for the finite-dimensional case \(V = \mathbb{R}^n\).
 
 <div class="remark">
 The Krein–Milman theorem provides an integral representation: every point \(p\) of a compact convex set \(C\) can be written as a barycenter
+
 \[
 p = \int_{\mathrm{ext}(C)} x \, d\mu(x)
 \]
@@ -1524,6 +1549,7 @@ The proximal operator is the key tool bridging convex analysis and algorithms. I
 \mathrm{prox}_{\lambda f}(x) = \arg\min_{z} \left(f(z) + \frac{1}{2\lambda}\|z - x\|^2\right).
 \]
 The <em>Moreau envelope</em> is the function:
+
 \[
 M_\lambda f(x) = \min_z \left(f(z) + \frac{1}{2\lambda}\|z - x\|^2\right) = f(\mathrm{prox}_{\lambda f}(x)) + \frac{1}{2\lambda}\|\mathrm{prox}_{\lambda f}(x) - x\|^2.
 \]
@@ -1533,6 +1559,7 @@ M_\lambda f(x) = \min_z \left(f(z) + \frac{1}{2\lambda}\|z - x\|^2\right) = f(\m
 <strong>The proximal operator as a "generalized projection."</strong> When \(f = \mathbf{1}_C\) (indicator of a convex set \(C\)), the proximal operator \(\mathrm{prox}_{\lambda f}(x) = \Pi_C(x)\) is the projection onto \(C\) (independent of \(\lambda\)). The proximal operator generalizes projection from sets to functions: it finds the "closest point" to \(x\) that also has small \(f\)-value.
 
 The Moreau envelope \(M_\lambda f\) is always differentiable (even if \(f\) is not), with gradient:
+
 \[
 \nabla M_\lambda f(x) = \frac{1}{\lambda}(x - \mathrm{prox}_{\lambda f}(x)).
 \]
@@ -1609,12 +1636,14 @@ K^\circ = \{y \in \mathbb{R}^n : \langle x, y \rangle \leq 1 \text{ for all } x 
 <strong>Worked Example: The cross-polytope and hypercube are polar duals.</strong>
 
 Let \(K = [-1,1]^n\) (the unit hypercube, centered at origin). Its vertices are the \(2^n\) vectors \((\pm 1, \ldots, \pm 1)\). By property 5, the polar is:
+
 \[
 K^\circ = \{y : \langle v, y\rangle \leq 1 \text{ for all vertices } v = (\pm 1, \ldots, \pm 1)\} = \left\{y : \sum_i |y_i| \leq 1\right\} = \mathcal{C}_n,
 \]
 the cross-polytope! The condition \(\langle v, y\rangle \leq 1\) for all sign vectors \(v \in \{-1,+1\}^n\) is equivalent to \(\max_{v \in \{-1,+1\}^n} \sum_i v_i y_i = \sum_i |y_i| \leq 1\).
 
 Conversely, the polar of the cross-polytope \(\mathcal{C}_n = \mathrm{conv}\{\pm e_1, \ldots, \pm e_n\}\) is:
+
 \[
 \mathcal{C}_n^\circ = \{y : \langle \pm e_i, y\rangle \leq 1 \text{ for all } i\} = \{y : |y_i| \leq 1 \text{ for all } i\} = [-1,1]^n = K.
 \]
@@ -1650,6 +1679,7 @@ This confirms the duality: the support function of \(K^\circ\) is the gauge of \
 <strong>Worked Example: Support function of the simplex.</strong> Let \(\Delta_n = \mathrm{conv}\{0, e_1, e_2, \ldots, e_n\}\) be the standard simplex in \(\mathbb{R}^n\). To compute \(h_{\Delta_n}(u) = \max_{x \in \Delta_n} \langle u, x \rangle\):
 
 The maximum of a linear function over a convex polytope is achieved at a vertex. The vertices of \(\Delta_n\) are \(0, e_1, \ldots, e_n\), giving values \(0, u_1, \ldots, u_n\) respectively. So:
+
 \[
 h_{\Delta_n}(u) = \max(0, u_1, u_2, \ldots, u_n) = \max(0, \max_i u_i).
 \]
@@ -1674,6 +1704,7 @@ h_{K+L}(u) = h_K(u) + h_L(u), \quad h_{\lambda K}(u) = \lambda h_K(u) \text{ for
 
 <div class="proof">
 By definition:
+
 \[
 h_{K+L}(u) = \max_{z \in K+L} \langle u, z \rangle = \max_{x \in K, y \in L} \langle u, x+y \rangle = \max_{x \in K} \langle u, x\rangle + \max_{y \in L} \langle u, y\rangle = h_K(u) + h_L(u).
 \]
@@ -1837,6 +1868,7 @@ For a polytope \(P = \{x : Ax \leq b\}\), the support function can be computed b
 f^*(y) = \sup_x (\langle y,x\rangle - g(x) - h(x)).
 \]
 In general, \(f^* \neq g^* + h^*\). The correct formula involves the infimal convolution:
+
 \[
 (g + h)^*(y) = (g^* \Box h^*)(y) = \inf_{u+v=y} (g^*(u) + h^*(v)),
 \]
@@ -1880,6 +1912,7 @@ This follows immediately from the Fenchel inequality applied to \(f(x) = x^p/p\)
 \int |f(x) g(x)|\, dx \leq \int \frac{|f(x)|^p}{p} + \frac{|g(x)|^q}{q}\, dx = \frac{\|f\|_p^p}{p} + \frac{\|g\|_q^q}{q}.
 \]
 But to get the tight Hölder bound \(\|fg\|_1 \leq \|f\|_p \|g\|_q\), apply Young to the rescaled functions \(f/\|f\|_p\) and \(g/\|g\|_q\):
+
 \[
 \int \left|\frac{f}{\|f\|_p}\right| \cdot \left|\frac{g}{\|g\|_q}\right| \leq \int \frac{|f/\|f\|_p|^p}{p} + \frac{|g/\|g\|_q|^q}{q} = \frac{1}{p} + \frac{1}{q} = 1,
 \]
@@ -1906,6 +1939,7 @@ This is the practical implementation of the abstract duality theory: the "coordi
 \min_x \frac{1}{2}\|x - b\|_2^2 + \lambda \|\nabla x\|_1,
 \]
 where \(\|\nabla x\|_1 = \sum_{i,j} |(\nabla x)_{ij}|\) is the total variation. This is a convex problem (sum of smooth convex + non-smooth convex). The Fenchel dual (via the formula \(\|\nabla x\|_1 = \max_{\|p\|_\infty \leq 1} \langle p, \nabla x\rangle = \max_{\|p\|_\infty \leq 1} -\langle \mathrm{div}\, p, x\rangle\)) gives:
+
 \[
 \min_x \max_{\|p\|_\infty \leq 1} \frac{1}{2}\|x-b\|_2^2 - \lambda\langle \mathrm{div}\, p, x\rangle.
 \]
@@ -2004,6 +2038,7 @@ The Hessian of \(A(\theta)\) is the covariance matrix \(\mathrm{Cov}_\theta[T(X)
 \min_{w, b, \xi} \frac{1}{2}\|w\|^2 + C\sum_i \xi_i \quad \text{s.t.} \quad y_i(\langle w, x_i\rangle + b) \geq 1 - \xi_i, \quad \xi_i \geq 0.
 \]
 This is a quadratic program (convex objective, linear constraints). The dual problem (via Fenchel duality / Lagrangian duality) is:
+
 \[
 \max_\alpha \sum_i \alpha_i - \frac{1}{2}\sum_{i,j}\alpha_i\alpha_j y_i y_j \langle x_i, x_j\rangle \quad \text{s.t.} \quad \sum_i \alpha_i y_i = 0, \quad 0 \leq \alpha_i \leq C.
 \]
@@ -2046,10 +2081,12 @@ A key aspect of high-dimensional geometry is that volumes behave very differentl
 \omega_n = \frac{\pi^{n/2}}{\Gamma(n/2 + 1)}.
 \]
 For even \(n = 2k\): \(\omega_{2k} = \pi^k/k!\). For odd \(n = 2k+1\): \(\omega_{2k+1} = 2^{k+1}\pi^k/(2k+1)!!\). Some values:
+
 \[
 \omega_1 = 2, \quad \omega_2 = \pi, \quad \omega_3 = \frac{4\pi}{3}, \quad \omega_4 = \frac{\pi^2}{2}, \quad \omega_5 = \frac{8\pi^2}{15}.
 \]
 By Stirling's formula, as \(n \to \infty\):
+
 \[
 \omega_n \sim \frac{1}{\sqrt{n\pi}}\left(\frac{2\pi e}{n}\right)^{n/2} \to 0.
 \]
@@ -2149,6 +2186,7 @@ Let \(K\) and \(L\) be compact convex sets in \(\mathbb{R}^n\). Show that \(K = 
 <em>Solution.</em> If \(K = L\), clearly \(h_K(u) = \max_{x\in K}\langle u,x\rangle = \max_{x\in L}\langle u,x\rangle = h_L(u)\) for all \(u\).
 
 Conversely, suppose \(h_K = h_L\). Any compact convex set \(K\) can be recovered from its support function as:
+
 \[
 K = \bigcap_{u \in \mathbb{S}^{n-1}} \{x : \langle u, x\rangle \leq h_K(u)\}.
 \]
@@ -2177,10 +2215,12 @@ In \(\mathbb{R}^1\), Brunn–Minkowski for intervals \(A = [0,a]\) and \(B = [0,
 (\varepsilon+\delta)^n \omega_n \geq (\varepsilon^n\omega_n)^{1/n}\cdot n + (\delta^n\omega_n)^{1/n}\cdot n = n\omega_n^{1/n}(\varepsilon + \delta),
 \]
 which is equality (since \(A\) and \(B\) are homothetic). But more interestingly: for two boxes \(A = [0, a_1] \times \cdots \times [0,a_n]\) and \(B = [0, b_1] \times \cdots \times [0,b_n]\):
+
 \[
 \mathrm{Vol}(A+B)^{1/n} \geq \mathrm{Vol}(A)^{1/n} + \mathrm{Vol}(B)^{1/n},
 \]
 i.e., \(\prod_i(a_i+b_i)^{1/n} \geq \prod_i a_i^{1/n} + \prod_i b_i^{1/n}\). This is a multivariable form of AM–GM: apply AM–GM to \(\frac{a_i}{a_i+b_i}\) and \(\frac{b_i}{a_i+b_i}\):
+
 \[
 \prod_i \frac{a_i}{a_i+b_i} \leq \left(\frac{1}{n}\sum_i \frac{a_i}{a_i+b_i}\right)^n, \quad \prod_i \frac{b_i}{a_i+b_i} \leq \left(\frac{1}{n}\sum_i \frac{b_i}{a_i+b_i}\right)^n.
 \]

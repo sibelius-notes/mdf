@@ -1116,6 +1116,7 @@ The IS-LM framework introduced in Chapter 2 deserves a more careful dynamical tr
 ## 10.1 Dynamic IS-LM
 
 Let income and the interest rate satisfy:
+
 \[
 \frac{dY}{dt} = \alpha\bigl[I(r) + G - sY\bigr], \qquad \frac{dr}{dt} = \beta\bigl[kY - \bar{M}/P - hr\bigr],
 \]
@@ -1339,6 +1340,7 @@ Setting each coefficient to zero: \((n+2)(n+1)a_{n+2} = (n+1)a_n\), so
 \[ a_{n+2} = \frac{a_n}{n+2}, \quad n = 0, 1, 2, \ldots \]
 
 This recurrence connects even and odd coefficients separately. Starting from free constants \(a_0\) and \(a_1\):
+
 \[
 a_2 = \frac{a_0}{2},\quad a_4 = \frac{a_2}{4} = \frac{a_0}{8},\quad a_6 = \frac{a_4}{6} = \frac{a_0}{48}, \ldots
 \]
@@ -1361,6 +1363,7 @@ The final topic brings together nonlinear ODEs, phase plane analysis, and PDE th
 ## 14.1 The Fisher-KPP Equation
 
 Consider a population \(u(x,t)\) — the density of infected individuals in a spatial domain, or the density of adopters of a new technology — that both diffuses and grows logistically:
+
 \[
 \frac{\partial u}{\partial t} = D\frac{\partial^2 u}{\partial x^2} + ru\!\left(1 - u\right),
 \]
@@ -1373,10 +1376,12 @@ The parameter \(c > 0\) is the <em>wave speed</em>.
 </div>
 
 Substituting \(u = \varphi(\xi)\) into the PDE: \(-c\varphi' = D\varphi'' + r\varphi(1-\varphi)\), or
+
 \[
 D\varphi'' + c\varphi' + r\varphi(1-\varphi) = 0.
 \]
 This is a second-order nonlinear ODE for \(\varphi(\xi)\). Setting \(p = \varphi'\), we convert to a first-order system in the phase plane \((\varphi, p)\):
+
 \[
 \frac{d\varphi}{d\xi} = p, \qquad \frac{dp}{d\xi} = -\frac{c}{D}p - \frac{r}{D}\varphi(1-\varphi).
 \]

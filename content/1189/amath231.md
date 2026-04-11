@@ -998,6 +998,7 @@ Stokes' theorem is most useful when computing the line integral \(\oint_C \mathb
 <strong>Example.</strong> Let \(\mathbf{F} = -y\,\mathbf{i} + x\,\mathbf{j}\) and \(C\) be the unit circle in the \(xy\)-plane, counterclockwise. Take \(S\) to be the unit disc bounded by \(C\), with \(\hat{\mathbf{n}} = \mathbf{k}\).
 
 \(\nabla \times \mathbf{F} = 2\mathbf{k}\). By Stokes:
+
 \[
 \oint_C \mathbf{F} \cdot d\mathbf{x} = \iint_S 2\mathbf{k} \cdot \mathbf{k}\, dA = 2\cdot\pi(1)^2 = 2\pi.
 \]
@@ -1087,6 +1088,7 @@ These follow from product-to-sum identities and direct integration. The key cons
 a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\, dx, \qquad a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\, dx, \qquad b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\, dx,
 \]
 for \(n \geq 1\). The <strong>Fourier series</strong> of \(f\) is
+
 \[
 f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \bigl[a_n\cos(nx) + b_n\sin(nx)\bigr].
 \]
@@ -1173,6 +1175,7 @@ Substituting into the real Fourier series and collecting terms in \(e^{inx}\):
 f(x) = \sum_{n=-\infty}^{\infty} c_n\, e^{inx},
 \]
 where the complex Fourier coefficients are
+
 \[
 c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)\, e^{-inx}\, dx, \quad n \in \mathbb{Z}.
 \]
