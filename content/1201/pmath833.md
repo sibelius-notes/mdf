@@ -4,7 +4,7 @@ subjects: "PMATH"
 prof: "Nico Spronk"
 ---
 
-*These notes synthesize material from multiple sources. Primary sources for Part I (Abstract Harmonic Analysis): Nico Spronk's PMATH 833 lecture videos ([YouTube playlist](https://www.youtube.com/playlist?list=PLaI_L93BctMRnkKznj0jGf_gH9MbtLIem)), Christa Hawthorne's course notes ([PDF](https://cdchawthorne.com/notes/w2018/pmath833.pdf)) from Spronk's Winter 2018 offering, and Alex Rutar's student notes ([PDF](https://github.com/alexrutar/UWaterloo-Course-Notes/blob/master/pmath/833_notes.pdf), [TeX source](https://github.com/alexrutar/UWaterloo-Course-Notes/blob/master/pmath/833_notes.tex)). The course outline for Winter 2020 is available from the [UWaterloo Department of Pure Mathematics](https://uwaterloo.ca/pure-mathematics/sites/default/files/uploads/documents/m833outline_0.pdf). Reference texts followed throughout Part I include G. B. Folland, *A Course in Abstract Harmonic Analysis* (CRC Press, 1995); E. Hewitt and K. A. Ross, *Abstract Harmonic Analysis* I–II (Springer, 1963–1970); and W. Rudin, *Fourier Analysis on Groups* (Wiley, 1962). Part II (Geometric Harmonic Analysis and the Kakeya Conjecture) draws on Hong Wang's PCMI lecture notes and her joint work with Joshua Zahl, as well as T. Tao's lecture notes on restriction theory and polynomial methods, J.-G. Boissonnat et al. on geometric measure theory, J. Bourgain and C. Demeter's decoupling theory, and the original papers of A. S. Besicovitch, C. Fefferman, E. M. Stein, and T. Wolff.*
+*These notes synthesize material from multiple sources. Primary sources for Part I (Abstract Harmonic Analysis): Nico Spronk's PMATH 833 lecture videos ([YouTube playlist](https://www.youtube.com/playlist?list=PLaI_L93BctMRnkKznj0jGf_gH9MbtLIem)), Christa Hawthorne's course notes ([PDF](https://cdchawthorne.com/notes/w2018/pmath833.pdf)) from Spronk's Winter 2018 offering, and Alex Rutar's student notes ([PDF](https://github.com/alexrutar/UWaterloo-Course-Notes/blob/master/pmath/833_notes.pdf), [TeX source](https://github.com/alexrutar/UWaterloo-Course-Notes/blob/master/pmath/833_notes.tex)). The course outline for Winter 2020 is available from the [UWaterloo Department of Pure Mathematics](https://uwaterloo.ca/pure-mathematics/sites/default/files/uploads/documents/m833outline_0.pdf). Reference texts followed throughout Part I include G. B. Folland, *A Course in Abstract Harmonic Analysis* (CRC Press, 1995); E. Hewitt and K. A. Ross, *Abstract Harmonic Analysis* I–II (Springer, 1963–1970); and W. Rudin, *Fourier Analysis on Groups* (Wiley, 1962). Part II (Geometric Harmonic Analysis and the Kakeya Conjecture) draws on [Hong Wang's PCMI 2022 lecture notes](https://cims.nyu.edu/~hw3032/) and her joint work with Joshua Zahl, as well as T. Tao's lecture notes on restriction theory and polynomial methods, J.-G. Boissonnat et al. on geometric measure theory, J. Bourgain and C. Demeter's decoupling theory, and the original papers of A. S. Besicovitch, C. Fefferman, E. M. Stein, and T. Wolff.*
 
 ---
 
@@ -209,7 +209,7 @@ and summing over \(i = 1, 2\) and using \(g_1 + g_2 \leq 1\):
 \[
 (f_1 : \phi) + (f_2 : \phi) \leq (f_1 + f_2 + \delta h : \phi)(1 + 2\varepsilon).
 \]
-Normalizing by \((\psi_0 : \phi)\) and taking \(\delta \to 0\), then \(\varepsilon \to 0\), gives near-additivity: for each \(\varepsilon > 0$ there is a neighborhood \(\mathcal{U}\) of \(e\) such that when \(\mathrm{supp}(\phi) \subseteq \mathcal{U}\),
+Normalizing by \((\psi_0 : \phi)\) and taking \(\delta \to 0\), then \(\varepsilon \to 0\), gives near-additivity: for each \(\varepsilon > 0\) there is a neighborhood \(\mathcal{U}\) of \(e\) such that when \(\mathrm{supp}(\phi) \subseteq \mathcal{U}\),
 \[
 I_\phi(f_1) + I_\phi(f_2) \leq I_\phi(f_1 + f_2) + \varepsilon.
 \]
@@ -217,13 +217,13 @@ The reverse inequality \(I_\phi(f_1 + f_2) \leq I_\phi(f_1) + I_\phi(f_2)\) is s
 
 Now we extract the limit. The net \((I_\phi)_\phi\), viewed as an element of the product space \(\prod_{f} [(f:\psi_0)^{-1}, (f:\psi_0)]\), has a cluster point \(I = (I(f))_f\) in the Tychonoff compact space. This \(I\) is the limit along some subnet \((\phi_\alpha)\) with supports shrinking to \(\{e\}\). Along this subnet:
 
-— **Left invariance**: \(I_{\phi_\alpha}(f \cdot x) = I_{\phi_\alpha}(f)\) for all \(\alpha\), so at the limit \(I(f \cdot x) = I(f)\).
+— <strong>Left invariance</strong>: \(I_{\phi_\alpha}(f \cdot x) = I_{\phi_\alpha}(f)\) for all \(\alpha\), so at the limit \(I(f \cdot x) = I(f)\).
 
-— **Positivity**: \(I_{\phi_\alpha}(f) \geq (f:\psi_0)^{-1} > 0\) for all \(\alpha\), so \(I(f) \geq (f:\psi_0)^{-1} > 0\).
+— <strong>Positivity</strong>: \(I_{\phi_\alpha}(f) \geq (f:\psi_0)^{-1} > 0\) for all \(\alpha\), so \(I(f) \geq (f:\psi_0)^{-1} > 0\).
 
-— **Homogeneity**: \(I_{\phi_\alpha}(cf) = c \cdot I_{\phi_\alpha}(f)\) for \(c > 0\), carried through to the limit.
+— <strong>Homogeneity</strong>: \(I_{\phi_\alpha}(cf) = c \cdot I_{\phi_\alpha}(f)\) for \(c > 0\), carried through to the limit.
 
-— **Additivity**: for fixed \(f_1, f_2\), the near-additivity estimate holds for all \(\phi_\alpha\) with sufficiently small support, so at the limit \(I(f_1 + f_2) = I(f_1) + I(f_2)\).
+— <strong>Additivity</strong>: for fixed \(f_1, f_2\), the near-additivity estimate holds for all \(\phi_\alpha\) with sufficiently small support, so at the limit \(I(f_1 + f_2) = I(f_1) + I(f_2)\).
 
 Extending \(I\) to all of \(C_c(G)\) by linearity completes the construction.
 </div>
@@ -245,7 +245,7 @@ For each \(x \in G\), define the continuous affine map \(L_x^* : K \to K\) by \(
 
 The family \(\{L_x^*\}_{x \in G}\) consists of pairwise commuting affine maps: since \(G\) is abelian in its action on itself from the left, \(L_x^* L_y^* = L_{xy}^*\). (In the non-abelian case, we note that for the purpose of finding left-invariant measures, we use the commuting family of *right* translation operators, which commute with each other but not with left translations.)
 
-The **Markov-Kakutani fixed point theorem** states: if \(\{T_\alpha\}\) is a commuting family of continuous affine self-maps of a compact convex set \(K\) in a locally convex topological vector space, then there exists a common fixed point \(\mu \in K\).
+The <strong>Markov-Kakutani fixed point theorem</strong> states: if \(\{T_\alpha\}\) is a commuting family of continuous affine self-maps of a compact convex set \(K\) in a locally convex topological vector space, then there exists a common fixed point \(\mu \in K\).
 
 Applying this: the commuting family \(\{L_x^*\}_{x \in G}\) has a common fixed point \(m \in K\). That is, \(L_x^* m = m\) for all \(x \in G\), meaning \(\int f(xy)\, dm(y) = \int f(y)\, dm(y)\) for all \(f \in C(G)\) and all \(x \in G\). This is precisely left invariance.
 
@@ -625,7 +625,7 @@ The Poisson kernel \(P_y(x) = \frac{y}{\pi(x^2 + y^2)}\) has Fourier transform \
 The general version of Wiener's tauberian theorem for non-abelian groups is more subtle: since \(L^1(G)\) is no longer commutative, "closed ideal" must be replaced by "closed two-sided ideal," and the Fourier transform no longer takes values in scalars. The correct generalization is:
 
 <div class="remark">
-<strong>Remark 3.11 (Non-abelian Wiener theory).</strong> For a locally compact group \(G\), the closed two-sided ideals of \(L^1(G)\) correspond to closed subsets \(S \subseteq \hat{G}\) (the unitary dual) via the hull-kernel correspondence: the ideal \(I(S) = \{f \in L^1(G) : \hat{f}(\pi) = 0\ \forall \pi \in S\}\) is associated to the closed set \(S\). The non-abelian version of Wiener's theorem asserts that \(I(S)\) is dense in the kernel ideal \(\ker(S)\) — a statement called **spectral synthesis**. Spectral synthesis fails for some subsets \(S\) (Malliavin, 1959), even for \(G = \mathbb{R}^n\) with \(n \geq 3\). For compact groups, spectral synthesis holds for all closed sets, essentially because \(\hat{G}\) is discrete.
+<strong>Remark 3.11 (Non-abelian Wiener theory).</strong> For a locally compact group \(G\), the closed two-sided ideals of \(L^1(G)\) correspond to closed subsets \(S \subseteq \hat{G}\) (the unitary dual) via the hull-kernel correspondence: the ideal \(I(S) = \{f \in L^1(G) : \hat{f}(\pi) = 0\ \forall \pi \in S\}\) is associated to the closed set \(S\). The non-abelian version of Wiener's theorem asserts that \(I(S)\) is dense in the kernel ideal \(\ker(S)\) — a statement called <strong>spectral synthesis</strong>. Spectral synthesis fails for some subsets \(S\) (Malliavin, 1959), even for \(G = \mathbb{R}^n\) with \(n \geq 3\). For compact groups, spectral synthesis holds for all closed sets, essentially because \(\hat{G}\) is discrete.
 </div>
 
 ### 3.7 Decomposition of Measures
@@ -720,13 +720,13 @@ For \(r > 0\), the corresponding representation \(\mathrm{Ind}_{N \rtimes \mathr
 Mackey's machine is the foundation for understanding the representation theory of many physically important groups: the Poincaré group \(\mathbb{R}^{3,1} \rtimes \mathrm{SO}(3,1)\) (particles classified by mass and spin), the Heisenberg group \(\mathbb{H}_n\) (quantum mechanics), and the \(ax+b\) group (wavelet analysis).
 
 <div class="example">
-<strong>Example 4.6b (The Heisenberg Group and the Stone-von Neumann Theorem).</strong> The **Heisenberg group** \(\mathbb{H}_n\) is the group of \((2n+1) \times (2n+1)\) upper-triangular matrices:
+<strong>Example 4.6b (The Heisenberg Group and the Stone-von Neumann Theorem).</strong> The <strong>Heisenberg group</strong> \(\mathbb{H}_n\) is the group of \((2n+1) \times (2n+1)\) upper-triangular matrices:
 \[
 \mathbb{H}_n = \left\{\begin{pmatrix} 1 & x^T & z \\ 0 & I_n & y \\ 0 & 0 & 1\end{pmatrix} : x, y \in \mathbb{R}^n,\, z \in \mathbb{R}\right\}
 \]
 with matrix multiplication giving the group law \((x, y, z)(x', y', z') = (x+x', y+y', z+z'+x\cdot y')\). The center of \(\mathbb{H}_n\) is \(Z = \{(0, 0, z) : z \in \mathbb{R}\}\), and \(\mathbb{H}_n / Z \cong \mathbb{R}^{2n}\) is abelian.
 
-The irreducible unitary representations of \(\mathbb{H}_n\) are classified by the **Stone-von Neumann theorem**:
+The irreducible unitary representations of \(\mathbb{H}_n\) are classified by the <strong>Stone-von Neumann theorem</strong>:
 <ol>
 <li><em>Infinite-dimensional representations (Schrödinger representations)</em>: For each nonzero \(\hbar \in \mathbb{R}\), there is a unique (up to equivalence) irreducible representation \(\pi_\hbar\) on \(L^2(\mathbb{R}^n)\) with the property that \(\pi_\hbar(0, 0, z) = e^{i\hbar z} I\). Explicitly:
 \[
@@ -1367,7 +1367,7 @@ where \(\mathrm{CB}(A(G))\) denotes the completely bounded multipliers of \(A(G)
 </div>
 
 <div class="proof">
-<strong>Proof sketch (\(\mathrm{(1)} \Leftrightarrow \mathrm{(2)}\)).</strong> If \(G\) is amenable, then by Følner's criterion there exist finite sets \(F_n \subset G\) with \(|xF_n \triangle F_n| / |F_n| \to 0\) for all \(x \in G$. The normalized characteristic functions \(u_n = |F_n|^{-1/2} \mathbf{1}_{F_n} \in L^2(G)\) give elements \(\phi_n(x) = (u_n * \check{u}_n)(x) = |F_n|^{-1}|F_n \cap x^{-1}F_n| \in A(G)\). One checks:
+<strong>Proof sketch (\(\mathrm{(1)} \Leftrightarrow \mathrm{(2)}\)).</strong> If \(G\) is amenable, then by Følner's criterion there exist finite sets \(F_n \subset G\) with \(|xF_n \triangle F_n| / |F_n| \to 0\) for all \(x \in G\). The normalized characteristic functions \(u_n = |F_n|^{-1/2} \mathbf{1}_{F_n} \in L^2(G)\) give elements \(\phi_n(x) = (u_n * \check{u}_n)(x) = |F_n|^{-1}|F_n \cap x^{-1}F_n| \in A(G)\). One checks:
 <ul>
 <li>\(\|\phi_n\|_{A(G)} = \|u_n\|_2^2 = 1\), so the approximate identity is norm-bounded.</li>
 <li>\(\phi_n(x) \to 1\) for all \(x\): since \(|F_n \cap x^{-1}F_n| / |F_n| = 1 - |xF_n \triangle F_n| / |F_n| \to 1\).</li>
@@ -1710,7 +1710,7 @@ where \(\hat{f}(\pi) = \int_G f(x)\pi(x^{-1})\, dm(x) \in M_{d_\pi}(\mathbb{C})\
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> The Peter-Weyl orthonormal basis consists of functions \(\sqrt{d_\pi} \pi_{ij}\). For \(f \in C(G)$ and basis elements \(\pi_{ij}\):
+<strong>Proof.</strong> The Peter-Weyl orthonormal basis consists of functions \(\sqrt{d_\pi} \pi_{ij}\). For \(f \in C(G)\) and basis elements \(\pi_{ij}\):
 \[
 (L_f \pi_{ij})(x) = (f * \pi_{ij})(x) = \int_G f(y)\pi_{ij}(y^{-1}x)\, dm(y).
 \]
@@ -1734,7 +1734,7 @@ a closed subset of \([-\|f\|_1, \|f\|_1]\). The spectral projections of \(L_f\) 
 \[
 \Delta_G|_{\mathcal{H}_\pi \otimes \mathcal{H}_\pi^*} = -\lambda_\pi\, I,
 \]
-where \(\lambda_\pi \geq 0\) is the **Casimir eigenvalue** of \(\pi\) (the value by which the Casimir element of the universal enveloping algebra acts on \(\mathcal{H}_\pi\)). For \(G = \mathrm{SU}(2)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\). For \(G = \mathrm{SO}(3)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\) for integer \(\ell\). For \(G = \mathbb{T}^n\), \(\lambda_{e_{\mathbf{k}}} = |\mathbf{k}|^2\) for \(\mathbf{k} \in \mathbb{Z}^n\).
+where \(\lambda_\pi \geq 0\) is the <strong>Casimir eigenvalue</strong> of \(\pi\) (the value by which the Casimir element of the universal enveloping algebra acts on \(\mathcal{H}_\pi\)). For \(G = \mathrm{SU}(2)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\). For \(G = \mathrm{SO}(3)\), \(\lambda_{\pi_\ell} = \ell(\ell+1)\) for integer \(\ell\). For \(G = \mathbb{T}^n\), \(\lambda_{e_{\mathbf{k}}} = |\mathbf{k}|^2\) for \(\mathbf{k} \in \mathbb{Z}^n\).
 
 The heat kernel of \(\Delta_G\) at time \(t > 0\) is:
 \[
@@ -1746,7 +1746,7 @@ The rapid decay \(e^{-\lambda_\pi t}\) as \(\lambda_\pi \to \infty\) (combined w
 </div>
 
 <div class="example">
-<strong>Example 7.14 (Hecke operators as convolution operators).</strong> In the theory of automorphic forms, **Hecke operators** are convolution operators on a space of functions on a group \(G\) that are invariant under a compact subgroup \(K \leq G\). The "spherical" Hecke algebra is \(L^1(G \mathbin{/\!/} K) = \{f \in L^1(G) : f(kxk') = f(x)\, \forall k, k' \in K\}\), equipped with convolution. This is a commutative algebra (for suitable pairs \((G, K)\) — "Gelfand pairs"), and the characters of this algebra are the **spherical functions** — the \(K\)-bi-invariant positive definite functions on \(G\).
+<strong>Example 7.14 (Hecke operators as convolution operators).</strong> In the theory of automorphic forms, <strong>Hecke operators</strong> are convolution operators on a space of functions on a group \(G\) that are invariant under a compact subgroup \(K \leq G\). The "spherical" Hecke algebra is \(L^1(G \mathbin{/\!/} K) = \{f \in L^1(G) : f(kxk') = f(x)\, \forall k, k' \in K\}\), equipped with convolution. This is a commutative algebra (for suitable pairs \((G, K)\) — "Gelfand pairs"), and the characters of this algebra are the <strong>spherical functions</strong> — the \(K\)-bi-invariant positive definite functions on \(G\).
 
 For \(G = \mathrm{SL}(2, \mathbb{Z}_p)\) and \(K = \mathrm{SL}(2, \mathbb{Z}_p)\) the maximal compact subgroup, the spherical functions are parameterized by \(\mathbb{C}/(\mathbb{Z}/2\mathbb{Z})\) (the unramified characters of \(\mathrm{SL}(2, \mathbb{Q}_p)\)). The "Hecke eigenvalue" of a modular form \(f\) at the prime \(p\) is the scalar by which the Hecke operator \(T_p\) (a specific element of the Hecke algebra) acts on \(f\) — and these eigenvalues encode the arithmetic of the modular form (via the Ramanujan-Petersson conjecture, proved by Deligne in 1974).
 
@@ -2050,24 +2050,57 @@ The parallel between Herz's algebraic restriction theorem and Stein's analytic r
 
 # Transition: From Spronk's Course to Hong Wang's Harmonic Analysis
 
-The preceding eight chapters developed the architecture of abstract harmonic analysis: locally compact groups, Haar measure, convolution algebras, Gelfand theory, Pontryagin duality, the Peter-Weyl theorem, and amenability. The landscape we surveyed is fundamentally *algebraic* in character — the central objects are groups, algebras, and their characters, and the Fourier transform is understood as a spectral decomposition.
+The preceding eight chapters developed the architecture of abstract harmonic analysis: locally compact groups, Haar measure, convolution algebras, Gelfand theory, Pontryagin duality, the Peter-Weyl theorem, and amenability. The landscape we surveyed is fundamentally *algebraic* in character — the central objects are groups, algebras, and their characters, and the Fourier transform is understood as a spectral decomposition into irreducible representations.
 
-We now turn to a different tradition in harmonic analysis, one that is fundamentally *geometric*. Instead of asking "what does the Fourier transform look like on an abstract group?", we ask: "what geometric properties of sets in \(\mathbb{R}^n\) are detected by the Fourier transform?" The questions here are harder and more recent, and they interact in surprising ways with combinatorics, algebraic geometry, and number theory.
+We now turn to a genuinely different tradition in harmonic analysis, one that is fundamentally *geometric*. Instead of asking "what does the Fourier transform look like on an abstract group?", we ask: "what geometric properties of sets in \(\mathbb{R}^n\) are controlled or detected by the Fourier transform?" The questions here are harder and more recent, and they interact in surprising ways with combinatorics, algebraic geometry, and number theory.
 
-The transition from abstract to geometric harmonic analysis is not a sharp break. Every concept from Part I has a counterpart in the geometric setting:
+### A Fundamental Conceptual Difference
 
-| Abstract (Part I) | Geometric (Part II) |
-|---|---|
-| Locally compact abelian group \(G\) | Euclidean space \(\mathbb{R}^n\) |
-| Pontryagin dual \(\hat{G}\) | Frequency space \(\hat{\mathbb{R}}^n \cong \mathbb{R}^n\) |
-| Haar measure on \(G\) | Lebesgue measure on \(\mathbb{R}^n\) |
-| Characters \(\sigma \in \hat{G}\) | Plane waves \(e^{ix \cdot \xi}\) for \(\xi \in \mathbb{R}^n\) |
-| Plancherel theorem | \(\|f\|_{L^2(\mathbb{R}^n)} = \|\hat{f}\|_{L^2(\mathbb{R}^n)}\) |
-| Fourier algebra \(A(G)\) | \(L^1(\mathbb{R}^n)\) (via Fourier inversion) |
-| Fourier-Stieltjes algebra \(B(G)\) | \(M(\mathbb{R}^n)\) (Fourier-Stieltjes transforms of measures) |
-| Homogeneous space \(G/H\) | Sphere \(S^{n-1} = \mathrm{O}(n)/\mathrm{O}(n-1)\) |
-| Haar measure on \(G/H\) | Surface measure \(d\sigma\) on \(S^{n-1}\) |
-| Spectral synthesis in \(A(G)\) | Restriction conjecture |
+Before building the bridge, it is worth dwelling on what *changes* when we pass from abstract to geometric harmonic analysis, because the difference is not merely one of generality. These are two genuinely distinct philosophies.
+
+**In abstract harmonic analysis, the organizing principle is algebraic symmetry.** You begin with a group \(G\), and the entire theory is the unfolding of that algebraic structure. The Haar measure, the convolution algebra \(L^1(G)\), the unitary dual \(\hat{G}\), the Fourier transform as a spectral decomposition — all of these are canonical constructions forced upon you by the group axioms. The key questions are classification questions: *what are the irreducible unitary representations of \(G\)?* and *how does the group structure constrain them?* On a compact group, this gives you the Peter-Weyl theorem and a discrete orthogonal decomposition. On an abelian locally compact group, it gives you Pontryagin duality: the dual group \(\hat{G}\) is the complete invariant.
+
+The defining move of abstract harmonic analysis is to *vary the group* and ask which properties of the Fourier theory are intrinsic to the algebraic structure. Amenability, for instance, is a property of the group's algebraic geometry (the existence of Følner sets) that has direct functional-analytic consequences (the Fourier algebra \(A(G)\) has a bounded approximate identity). The subject is alive because the relationship between the algebraic properties of \(G\) and the analytic properties of its function algebras is extraordinarily rich and not fully understood.
+
+**In geometric harmonic analysis, the organizing principle is metric and incidence geometry.** The ambient space \(\mathbb{R}^n\) is fixed — there is no varying the group — and the Fourier transform is fixed: it is the classical Fourier transform on \(\mathbb{R}^n\). The questions concern geometric objects within \(\mathbb{R}^n\): curved submanifolds like spheres and paraboloids, collections of line segments pointing in many directions, fractal sets with controlled Hausdorff dimension. The key question is: *how do the metric/incidence properties of a set \(E \subseteq \mathbb{R}^n\) control the \(L^p\) behavior of the Fourier transform restricted to or concentrated near \(E\)?*
+
+The defining move of geometric harmonic analysis is to *vary the geometry* and ask which geometric invariants (dimension, curvature, tube-overlap structure) govern quantitative estimates. The reason this is hard is that \(\mathbb{R}^n\) is non-compact, and function spaces on \(\mathbb{R}^n\) do not decompose into finite-dimensional pieces. Instead of discrete eigenvalues (as in Peter-Weyl), one has *oscillatory integrals* whose size depends on the curvature of the integration surface. Instead of characters, one has *wave packets* — localized approximate eigenfunctions that encode both position and frequency information simultaneously.
+
+**The difference runs deeper than a change of setting.** In abstract harmonic analysis, knowing the group essentially determines the Fourier theory: abelian groups → Pontryagin duality, compact groups → Peter-Weyl, semisimple Lie groups → Harish-Chandra's Plancherel formula. The theorems are universal, holding for every group in the relevant class.
+
+In geometric harmonic analysis, the theorems are specific to particular geometric configurations, and their proofs require entirely new tools: the polynomial method, broad-narrow analysis, induction on scales, multi-scale Cauchy-Schwarz inequalities, and the theory of Brascamp-Lieb inequalities. These are not the tools of algebra and representation theory. They belong to combinatorics, number theory, and algebraic geometry. The fact that these fields must enter harmonic analysis to resolve questions about \(L^p\) norms is itself a profound insight of the past thirty years.
+
+**A compact summary of the contrast:**
+
+| | Abstract HA (Part I) | Geometric HA (Part II) |
+|---|---|---|
+| **Organizing principle** | Algebraic: group structure, representations | Geometric: curvature, dimension, incidence |
+| **Setting** | General LCG \(G\) (compact, abelian, Lie, …) | Fixed: Euclidean \(\mathbb{R}^n\) |
+| **Fourier transform** | Defined via unitary representations of \(G\) | Classical: \(\hat{f}(\xi) = \int f(x) e^{-ix\cdot\xi}\, dx\) |
+| **Key tool** | Unitary dual \(\hat{G}\), convolution, spectral theory | Oscillatory integrals, wave packets, polynomial method |
+| **Spectrum** | Discrete (compact \(G\)) or general LCA dual | Continuous: no discrete decomposition |
+| **Core question** | What are the representations? How does algebra control analysis? | How does geometry control \(L^p\) norms? |
+| **Key theorem** | Peter-Weyl; Pontryagin duality; Plancherel | Restriction conjecture; Kakeya conjecture |
+| **Main obstruction** | Amenability / non-amenability | Kakeya sets; tube-overlap geometry |
+| **New tools needed** | Functional analysis, C\(^*\)-algebras, spectral theory | Combinatorics, algebraic geometry, polynomial method |
+
+The diagram below maps this conceptual landscape and shows the bridges between the two traditions.
+
+![Conceptual map of abstract vs. geometric harmonic analysis: left column (abstract HA — LCG G, Haar measure, representations, spectral synthesis, amenability), right column (geometric HA — ℝⁿ, Lebesgue measure, Lᵖ multipliers, restriction, Kakeya, Furstenberg), bridged by the sphere as homogeneous space and the uncertainty principle](/pics/pmath833/kakeya-tikz-abstract-geometric-bridge.svg)
+
+### The Bridge: Where the Two Traditions Meet
+
+The transition from abstract to geometric harmonic analysis is not a sharp break — there are natural mathematical passages between the two. The most important are the sphere as a homogeneous space and the uncertainty principle.
+
+| Abstract (Part I) | Bridge | Geometric (Part II) |
+|---|---|---|
+| Locally compact abelian group \(G\) | \(\mathbb{R}^n\) is the canonical LCA group | Euclidean space \(\mathbb{R}^n\) |
+| Pontryagin dual \(\hat{G}\) | \(\hat{\mathbb{R}}^n \cong \mathbb{R}^n\) (self-dual) | Frequency space \(\mathbb{R}^n\) |
+| Haar measure on \(G\) | Lebesgue measure is the Haar measure on \(\mathbb{R}^n\) | Lebesgue measure on \(\mathbb{R}^n\) |
+| Characters \(\sigma \in \hat{G}\) | \(e^{ix \cdot \xi}\) for \(\xi \in \mathbb{R}^n\) | Plane waves |
+| Homogeneous space \(G/H\) | \(S^{n-1} = \mathrm{O}(n)/\mathrm{O}(n-1)\) | Sphere \(S^{n-1}\) with surface measure \(d\sigma\) |
+| Spectral synthesis in \(A(G)\) | Restriction \(\phi \mapsto \phi|_{S^{n-1}}\) | Restriction conjecture |
+| Uncertainty principle on \(\mathbb{R}^n\) | \(\Delta x \cdot \Delta\xi \gtrsim 1\) → tubes | Wave packet \(\leftrightarrow\) cap on \(S^{n-1}\) |
 
 **The surface measure as Haar measure.** The unit sphere \(S^{n-1} \subset \mathbb{R}^n\) is a homogeneous space for the orthogonal group \(\mathrm{O}(n)\): for any two unit vectors \(e_1, e_2 \in S^{n-1}\), there exists a rotation \(R \in \mathrm{O}(n)\) with \(Re_1 = e_2\). The stabilizer of the north pole \(e_n = (0,\ldots,0,1)\) is \(\mathrm{O}(n-1)\), so \(S^{n-1} \cong \mathrm{O}(n)/\mathrm{O}(n-1)\).
 
@@ -2079,6 +2112,8 @@ where \(R_e \in \mathrm{O}(n)\) is any rotation mapping \(e_n\) to \(e\). The su
 
 The restriction problem asks: for which \(p\) does the Fourier transform map \(L^p(\mathbb{R}^n)\) to \(L^2(S^{n-1}, d\sigma)\)? Since \(d\sigma\) is the Haar measure on a homogeneous space, this is a question about the interaction between the Fourier analysis on \(\mathbb{R}^n\) (the group) and the harmonic analysis on \(S^{n-1}\) (the homogeneous space). Peter-Weyl applied to \(\mathrm{SO}(n)\) gives the decomposition of \(L^2(S^{n-1})\) into spherical harmonics — exactly the abstract theory of Chapter 7, made concrete.
 
+But here is the critical point: the abstract theory tells us that such a restriction map *exists* (as a map of Banach modules over \(A(G)\)), but says *nothing* about the \(L^p\) exponents for which it is bounded. That quantitative question — \(p \leq 2(n+1)/(n-1)\)? — belongs entirely to the geometric world. It is here that the curvature of \(S^{n-1}\), not its algebraic symmetry, becomes the decisive feature.
+
 **The uncertainty principle and the geometry of tubes.** The Heisenberg uncertainty principle for the group \(G = \mathbb{R}^n\) takes the form: a function \(f \in L^2(\mathbb{R}^n)\) cannot be simultaneously concentrated in a ball of radius \(R\) in physical space and a ball of radius \(1/R\) in frequency space. The extremal functions are Gaussians.
 
 This uncertainty principle is the source of the **wave packet structure** central to Part II. A function \(f\) with Fourier support near a cap \(\tau \subset S^{n-1}\) of angular radius \(\delta\) must, by uncertainty, be "spread out" in a tube of dimensions \(\sim 1/\delta \times \cdots \times 1/\delta \times 1/\delta^2\). The direction of the long axis of this tube is determined by the center of \(\tau\), and the width is determined by the angular radius \(\delta\).
@@ -2087,7 +2122,7 @@ When many such caps cover the sphere, the corresponding tubes point in many diff
 
 **Amenability and the Fourier algebra of \(\mathbb{R}^n\).** The Fourier algebra \(A(\mathbb{R}^n) = L^1(\hat{\mathbb{R}}^n) \cong L^1(\mathbb{R}^n)\) (via the Fourier transform, since \(\hat{\mathbb{R}}^n \cong \mathbb{R}^n\)) and the Fourier-Stieltjes algebra \(B(\mathbb{R}^n) = M(\hat{\mathbb{R}}^n) \cong M(\mathbb{R}^n)\). Since \(\mathbb{R}^n\) is abelian and amenable, Leptin's theorem (Theorem 6.19) gives: \(A(\mathbb{R}^n)\) has a bounded approximate identity. Indeed, the truncated approximate identities \(u_R(x) = (f_R * f_R^*)(x)\) for compactly supported \(L^2\)-functions \(f_R\) converge to the identity in \(A(\mathbb{R}^n)\)-norm. The restriction conjecture, in this language, is a question about the *trace* of the Fourier algebra on the sphere: the map \(A(\mathbb{R}^n) \to A(S^{n-1})\) given by restriction \(\phi \mapsto \phi|_{S^{n-1}}\).
 
-More dramatically, the restriction conjecture is *implied by* the **Kakeya conjecture** — a purely geometric statement about how thin sets can be while containing a unit line segment in every direction. This implication, discovered progressively by Fefferman, Córdoba, and Bourgain, shows that the geometric complexity of Kakeya sets is a fundamental obstruction to the Fourier analysis of curved surfaces.
+More dramatically, the restriction conjecture is *implied by* the **Kakeya conjecture** — a purely geometric statement about how thin sets can be while containing a unit line segment in every direction. This implication, discovered progressively by Fefferman, Córdoba, and Bourgain, shows that the geometric complexity of Kakeya sets is a fundamental obstruction to the Fourier analysis of curved surfaces. To resolve the Kakeya conjecture in \(\mathbb{R}^3\), Hong Wang and Joshua Zahl ultimately needed not the algebraic tools of abstract harmonic analysis but an entirely new geometric argument: the theory of multi-scale sticky Kakeya sets (Chapter 12).
 
 The chapters that follow develop this geometric harmonic analysis, building toward Hong Wang and Joshua Zahl's 2024 resolution of the Kakeya conjecture in \(\mathbb{R}^3\).
 
@@ -2127,7 +2162,11 @@ This is remarkable: a set that "points in every direction" can have measure zero
 
 **Why the construction works.** The key insight is that when sliding two triangles together, the union of their segments (indexed by direction) is the same as their union before sliding — only the spatial positions differ. Sliding allows the triangles to overlap in physical space while covering the same set of directions. The \((3/4)^k\) area decay comes from the fact that at each step, the overlap between the two sub-triangles of each pair has area proportional to the overlap of their bases, which is \(1/4\) of the previous area.
 
-![Perron tree construction: each step splits and slides sub-triangles together, shrinking area by ¾ while preserving all directions](/pics/pmath833/kakeya-perron-tree.svg)
+![Perron tree construction: each step splits and slides sub-triangles together, shrinking area by ¾ while preserving all directions](/pics/pmath833/kakeya-tikz-perron-tree.svg)
+
+The completed Besicovitch set in the plane — the *limit* of this tree construction — contains a unit segment in every direction while having Lebesgue measure zero. The picture below shows a cross-section of such a set: eight colored \(\delta\)-strips (one per 22.5° sector) all passing through a common region, with heavy overlaps that force the total area down to \(\sim \delta^{1/2}\) even as \(\delta \to 0\).
+
+![Besicovitch set in ℝ²: eight δ-strips at angles 0°, 22.5°, …, 157.5°, all clipped to a disk; heavy overlaps drive total area to zero while all directions are preserved](/pics/pmath833/kakeya-tikz-kakeya-2d.svg)
 
 The measure-zero property is the "easy" part of the Besicovitch story. The much harder question is about **dimension**:
 
@@ -2144,7 +2183,7 @@ For any set \(E\), \(\dim_H E \leq \dim_M E\). These dimensions can differ: the 
 <div class="example">
 <strong>Example 9.3 (Besicovitch's construction in \(\mathbb{R}^2\)).</strong> The key building block is the following. Take an isosceles triangle \(T_0\) with base \([0,1] \times \{0\}\) and apex at \((1/2, 1)\). Split the base into two equal halves: \([0,1/2]\) and \([1/2,1]\). Translate the two sub-triangles until they overlap in a region of area \(\approx 1/2\). The new union has area \(\approx 3/4\) of the original, but still contains unit segments pointing in all directions between the apex and the base. Repeating this splitting-and-overlapping process \(k\) times yields a set of area \(\lesssim (3/4)^k\) that contains segments in \(2^k\) directions. As \(k \to \infty\), the area tends to zero but the union contains segments in a dense set of directions.
 
-To get all directions, one stitches together finitely many such "Perron trees" rotated to cover all angles. The resulting **Besicovitch set** has Lebesgue measure zero. Its Hausdorff dimension, however, must be 2 — a fact proved first by Davies (1971) using a beautiful Fourier-analytic argument and independently by Córdoba (1977) using a more combinatorial approach. The lesson is: you cannot concentrate a Besicovitch set into a lower-dimensional set even if you can make it have zero area.
+To get all directions, one stitches together finitely many such "Perron trees" rotated to cover all angles. The resulting <strong>Besicovitch set</strong> has Lebesgue measure zero. Its Hausdorff dimension, however, must be 2 — a fact proved first by Davies (1971) using a beautiful Fourier-analytic argument and independently by Córdoba (1977) using a more combinatorial approach. The lesson is: you cannot concentrate a Besicovitch set into a lower-dimensional set even if you can make it have zero area.
 </div>
 
 ### 9.3 The Kakeya Conjecture
@@ -2226,7 +2265,7 @@ Since each tube \(T\) has volume \(\delta^2\), the total "weighted volume" is \(
 \]
 So the "density" of \(E\) relative to the tubes is bounded below: there exists a ball \(B_\delta^0\) of radius \(\delta\) such that at least \(\sim \delta^{-2}/|E|/\delta^{-3} = \delta^{-2} \cdot \delta^3 / |E|\) tubes pass through \(B_\delta^0\). Call this multiplicity \(M\).
 
-**The bush.** The \(M\) tubes through \(B_\delta^0$\) point in \(M\) different directions (since we have one tube per direction). From the vantage point of the ball \(B_\delta^0\), these tubes "spread out" in \(M\) different directions. By projecting onto a plane \(\Pi\) through \(B_\delta^0\), each of the \(M\) tubes projects to a "strip" of width \(\delta\) in \(\Pi\). The \(M\) strips point in \(M\) different directions in \(\Pi\).
+<strong>The bush.</strong> The \(M\) tubes through \(B_\delta^0\) point in \(M\) different directions (since we have one tube per direction). From the vantage point of the ball \(B_\delta^0\), these tubes "spread out" in \(M\) different directions. By projecting onto a plane \(\Pi\) through \(B_\delta^0\), each of the \(M\) tubes projects to a "strip" of width \(\delta\) in \(\Pi\). The \(M\) strips point in \(M\) different directions in \(\Pi\).
 
 The union of the \(M\) strips in \(\Pi\) has area at least \(\Omega(M \delta^{1/2})\) by the \(n = 2\) result: a collection of \(M\) unit strips of width \(\delta\) in \(\Pi\), pointing in \(M\) distinct directions (\(M\) directions in \(S^1\), separated by \(\sim 1/M^{1/2}\)), has 2D Lebesgue measure at least \(\Omega(M \delta^{1/2})\) by the \(n = 2\) Kakeya bound.
 
@@ -2234,7 +2273,7 @@ Projecting back to \(\mathbb{R}^3\): the union of the \(M\) tubes in \(\mathbb{R
 
 Combining: \(M \sim \delta^{-2} \cdot \delta^3 / |E| = \delta / |E|\), so \(|E| \geq M \delta^{3/2} \sim (\delta/|E|) \cdot \delta^{3/2} = \delta^{5/2}/|E|\), giving \(|E|^2 \gtrsim \delta^{5/2}\), i.e., \(|E| \gtrsim \delta^{5/4}\). Wait, this gives 5/4 not 5/2 — the full argument requires a more careful pigeonholing.
 
-**Full argument.** The key is not just one bush but a maximal bush: one finds the point \(x_0 \in E\) through which the *most* tubes pass. If \(M_0\) is that maximum multiplicity, then \(|\Omega| = \delta^{-2}\) tubes total pass through some point in \(E\), and \(E\) has at most \(|E|/\delta^3\) disjoint balls of radius \(\delta\), so the average multiplicity per ball is \(\delta^{-2} / (|E|/\delta^3) = \delta / |E|\). But the maximum is at least the average: \(M_0 \geq \delta/|E|\).
+<strong>Full argument.</strong> The key is not just one bush but a maximal bush: one finds the point \(x_0 \in E\) through which the *most* tubes pass. If \(M_0\) is that maximum multiplicity, then \(|\Omega| = \delta^{-2}\) tubes total pass through some point in \(E\), and \(E\) has at most \(|E|/\delta^3\) disjoint balls of radius \(\delta\), so the average multiplicity per ball is \(\delta^{-2} / (|E|/\delta^3) = \delta / |E|\). But the maximum is at least the average: \(M_0 \geq \delta/|E|\).
 
 The \(M_0\) tubes through the bush point \(x_0\) are contained in a ball \(B_1\) of radius 1 centered at \(x_0\). In the plane containing \(x_0\) and any two of the tube directions, the 2D Kakeya bound gives a volume contribution of \(\Omega(M_0^2 \cdot \delta / |E|) \cdot \delta\). More carefully: the contribution of the bush to the \((n-1)\)-dimensional cross section at each height along the tubes gives a set of area \(\geq M_0 \delta^{1 - 1/n}\) (by the inductive Kakeya bound). Integrating over height and using \(M_0 \geq \delta/|E|\):
 \[
@@ -2253,7 +2292,7 @@ The correct counting gives the \(5/2\) bound as follows: one shows the number of
 The Wolff argument requires tracking multiplicities carefully through a sophisticated combinatorial argument. The upshot is \(\dim_H E \geq 5/2\), and the proof method — the "bush" + lower-dimensional Kakeya + counting — established the template for all subsequent work.
 </div>
 
-![Wolff's bush argument: M₀ tubes radiate from a common point x₀; projecting to a plane reduces the 3D problem to a 2D Kakeya problem, forcing dim ≥ 5/2](/pics/pmath833/kakeya-bush-argument.svg)
+![Wolff's bush argument: M₀ tubes radiate from a common point x₀; projecting to a plane reduces the 3D problem to a 2D Kakeya problem, forcing dim ≥ 5/2](/pics/pmath833/kakeya-tikz-bush-argument.svg)
 
 ---
 
@@ -2352,7 +2391,7 @@ The restriction conjecture remains open in general, but dramatic progress has be
 
 ### 10.5 Wave Packet Decomposition
 
-![Wave packet decomposition: a cap τ of angular radius δ on S^{n−1} corresponds via Fourier uncertainty to a physical-space tube of dimensions 1/δ × ··· × 1/δ²; covering the sphere with caps yields tubes pointing in all directions — the Kakeya condition](/pics/pmath833/kakeya-wave-packet.svg)
+![Wave packet decomposition: a cap τ of angular radius δ on S^{n−1} corresponds via Fourier uncertainty to a physical-space tube of dimensions 1/δ × ··· × 1/δ²; covering the sphere with caps yields tubes pointing in all directions — the Kakeya condition](/pics/pmath833/kakeya-tikz-wave-packet.svg)
 
 Before connecting restriction to Kakeya, we must understand the fundamental tool that makes the connection explicit: the **wave packet decomposition**. This is a microlocal way of decomposing a function into pieces that are simultaneously localized in space and frequency — as much as the Heisenberg uncertainty principle allows.
 
@@ -2669,7 +2708,7 @@ Separate the sum into transversal pairs (where bilinear estimates apply) and nea
 A spectacular application of algebraic methods to incidence geometry was Dvir's 2009 proof of the finite-field Kakeya conjecture.
 
 <div class="definition">
-<strong>Definition 12.1 (Finite Field Kakeya Set).</strong> A **Kakeya set** in \(\mathbb{F}_q^n\) is a subset \(E \subseteq \mathbb{F}_q^n\) containing a line in every direction (i.e., for every \(d \in \mathbb{F}_q^n \setminus \{0\}\) / lines through origin, there exists \(a\) such that \(\{a + td : t \in \mathbb{F}_q\} \subseteq E\)).
+<strong>Definition 12.1 (Finite Field Kakeya Set).</strong> A <strong>Kakeya set</strong> in \(\mathbb{F}_q^n\) is a subset \(E \subseteq \mathbb{F}_q^n\) containing a line in every direction (i.e., for every \(d \in \mathbb{F}_q^n \setminus \{0\}\) / lines through origin, there exists \(a\) such that \(\{a + td : t \in \mathbb{F}_q\} \subseteq E\)).
 </div>
 
 <div class="theorem">
@@ -2831,7 +2870,7 @@ Wang and Zahl's key contribution was to find and exploit the precise connection 
 <strong>Definition 13.1 (Furstenberg Set).</strong> For \(0 \leq s \leq 1\) and \(0 \leq t \leq 2\), a compact set \(E \subseteq \mathbb{R}^2\) is an \((s, t)\)-<em>Furstenberg set</em> if there exists a \(t\)-dimensional family of lines \(\{\ell_e : e \in \Omega\} \) (with \(\dim_H \Omega \geq t\)) such that for each \(e \in \Omega\), \(\dim_H(E \cap \ell_e) \geq s\).
 </div>
 
-![Furstenberg sets: E contains an s-dimensional slice on each line in a t-dimensional family; Wang–Zahl prove dim_H(E) ≥ max(s+t, (3s+t)/2), which resolves the 3D Kakeya conjecture as the special case s=1, t=2](/pics/pmath833/kakeya-furstenberg.svg)
+![Furstenberg sets: E contains an s-dimensional slice on each line in a t-dimensional family; Wang–Zahl prove dim_H(E) ≥ max(s+t, (3s+t)/2), which resolves the 3D Kakeya conjecture as the special case s=1, t=2](/pics/pmath833/kakeya-tikz-furstenberg.svg)
 
 Furstenberg sets interpolate between several classical problems:
 - \(s = 0\): trivial (every set is a \((0, t)\)-Furstenberg set for any \(t \leq \dim_H E\)).
@@ -2870,7 +2909,7 @@ In other words, the union of the tubes has volume at least \(\delta^{3\varepsilo
 
 More precisely, Wang and Zahl introduce the following key notion:
 
-![Multi-scale stickiness: at scale δ, tubes are thin and numerous; at scale δ^{1/2}, meta-tubes each contain a coherent cluster of δ-tubes; the sticky condition forces most energy into a single meta-tube at each dyadic scale, enabling the multi-scale Cauchy–Schwarz argument](/pics/pmath833/kakeya-multiscale-sticky.svg)
+![Multi-scale stickiness: at scale δ, tubes are thin and numerous; at scale δ^{1/2}, meta-tubes each contain a coherent cluster of δ-tubes; the sticky condition forces most energy into a single meta-tube at each dyadic scale, enabling the multi-scale Cauchy–Schwarz argument](/pics/pmath833/kakeya-tikz-multiscale-sticky.svg)
 
 <div class="definition">
 <strong>Definition 13.4 (Kakeya Scheme).</strong> A <em>Kakeya scheme</em> at scales \(\delta \leq \rho_1 \leq \rho_2 \leq 1\) consists of:
