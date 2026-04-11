@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="330" viewBox="0 0 700 330">
+  <defs>
+    <style>
+      .bg   { fill: #f9fafb; }
+      .bdr  { stroke: #d1d5db; }
+      .ttl  { fill: #111827; font-family: Georgia,serif; font-size: 13.5px; font-weight: bold; }
+      .lbl  { fill: #374151; font-family: Georgia,serif; font-size: 11.5px; }
+      .sub  { fill: #6b7280; font-family: Georgia,serif; font-size: 10.5px; font-style: italic; }
+      .cap  { fill: #6b7280; font-family: Georgia,serif; font-size: 10px;   font-style: italic; }
+      .ann  { fill: #374151; font-family: Georgia,serif; font-size: 10.5px; }
+      .sml  { fill: #374151; font-family: Georgia,serif; font-size: 10px; }
+      .tpanel { fill: #f0f9ff; stroke: #bae6fd; }
+      .div  { stroke: #e5e7eb; }
+      @media (prefers-color-scheme: dark) {
+        .bg     { fill: #0f172a; }
+        .bdr    { stroke: #334155; }
+        .ttl    { fill: #f1f5f9; }
+        .lbl    { fill: #cbd5e1; }
+        .sub    { fill: #94a3b8; }
+        .cap    { fill: #64748b; }
+        .ann    { fill: #cbd5e1; }
+        .sml    { fill: #94a3b8; }
+        .tpanel { fill: #0c1a2e; stroke: #1e3a5f; }
+        .div    { stroke: #334155; }
+      }
+    </style>
+    <marker id="ga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect class="bg"  width="700" height="330" rx="8"/>
+  <rect class="bdr" width="700" height="330" rx="8" fill="none" stroke-width="1"/>
+
+  <!-- Title -->
+  <text class="ttl" x="350" y="22" text-anchor="middle">Wolff's Bush Argument — dim(E) ≥ 5/2 in ℝ³</text>
+
+  <!-- ══════ LEFT PANEL: Bush in R³ ══════ -->
+  <text class="sub" x="175" y="40" text-anchor="middle">δ-tubes radiating from bush point x₀</text>
+
+  <!-- Ground plane (ellipse suggesting 3D floor) -->
+  <ellipse cx="175" cy="218" rx="130" ry="28" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.55"/>
+  <text class="cap" x="175" y="252" text-anchor="middle">projected cross-section plane</text>
+
+  <!-- δ-tubes (parallelogram ribbons from bush point (175,148)) -->
+  <!-- tube 1: straight up, blue -->
+  <polygon points="169,148 181,148 184,50 166,50"   fill="#dbeafe" stroke="#2563eb" stroke-width="1.2" opacity="0.85"/>
+  <!-- tube 2: slight right, green -->
+  <polygon points="172,148 183,150 230,62 218,57"   fill="#dcfce7" stroke="#16a34a" stroke-width="1.2" opacity="0.85"/>
+  <!-- tube 3: right 35°, amber -->
+  <polygon points="175,148 185,152 295,88 284,80"   fill="#fef3c7" stroke="#d97706" stroke-width="1.2" opacity="0.85"/>
+  <!-- tube 4: slight left, red -->
+  <polygon points="167,148 179,148 128,58 116,53"   fill="#fee2e2" stroke="#dc2626" stroke-width="1.2" opacity="0.85"/>
+  <!-- tube 5: left 35°, purple -->
+  <polygon points="165,149 176,152 78,82  67,75"    fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2" opacity="0.85"/>
+  <!-- tube 6: far right, teal -->
+  <polygon points="178,148 188,153 325,118 316,109" fill="#cffafe" stroke="#0891b2" stroke-width="1.2" opacity="0.75"/>
+  <!-- tube 7: far left, pink -->
+  <polygon points="162,150 174,152 55,110 44,102"   fill="#fce7f3" stroke="#db2777" stroke-width="1.2" opacity="0.75"/>
+
+  <!-- Bush point x₀ -->
+  <circle cx="175" cy="148" r="6" fill="#1f2937" stroke="#f9fafb" stroke-width="1.5"/>
+  <text class="lbl" x="190" y="145" font-family="Georgia,serif" font-size="13px" font-style="italic">x₀</text>
+  <text class="sub" x="190" y="160">(bush point)</text>
+
+  <!-- Annotation: M₀ -->
+  <text class="ann" x="175" y="278" text-anchor="middle">M₀ tubes pass through x₀</text>
+  <text class="sub" x="175" y="295" text-anchor="middle">M₀ ≳ δ/|E|  (pigeonhole over δ-balls)</text>
+  <text class="sub" x="175" y="311" text-anchor="middle">|E| ≥ M₀·δ³/² ≳ δ^{5/2}/|E|  →  |E|² ≳ δ^{5/2}</text>
+
+  <!-- Divider -->
+  <line class="div" x1="348" y1="34" x2="348" y2="320" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ══════ RIGHT PANEL: 2D cross-section ══════ -->
+  <text class="sub" x="524" y="40" text-anchor="middle">2D cross-section: a Kakeya problem in ℝ²</text>
+
+  <!-- Panel background -->
+  <rect class="tpanel" x="374" y="50" width="306" height="200" rx="4" stroke-width="1"/>
+
+  <!-- Many thin strips at different angles inside the panel (Kakeya set in R²) -->
+  <!-- strip 1: nearly vertical, blue -->
+  <rect x="521" y="50" width="8" height="200" fill="#dbeafe" stroke="#2563eb" stroke-width="1" opacity="0.7" transform="rotate(-5 525 150)"/>
+  <!-- strip 2: tilted 30°, green -->
+  <rect x="490" y="50" width="8" height="200" fill="#dcfce7" stroke="#16a34a" stroke-width="1" opacity="0.7" transform="rotate(30 494 150)"/>
+  <!-- strip 3: tilted 55°, amber -->
+  <rect x="510" y="50" width="8" height="200" fill="#fef3c7" stroke="#d97706" stroke-width="1" opacity="0.7" transform="rotate(55 514 150)"/>
+  <!-- strip 4: tilted 80°, red -->
+  <rect x="527" y="50" width="8" height="200" fill="#fee2e2" stroke="#dc2626" stroke-width="1" opacity="0.7" transform="rotate(80 531 150)"/>
+  <!-- strip 5: tilted 110°, purple -->
+  <rect x="527" y="50" width="8" height="200" fill="#ede9fe" stroke="#7c3aed" stroke-width="1" opacity="0.7" transform="rotate(110 531 150)"/>
+  <!-- strip 6: tilted 135°, teal -->
+  <rect x="527" y="50" width="8" height="200" fill="#cffafe" stroke="#0891b2" stroke-width="1" opacity="0.7" transform="rotate(135 531 150)"/>
+  <!-- strip 7: tilted 160°, pink -->
+  <rect x="527" y="50" width="8" height="200" fill="#fce7f3" stroke="#db2777" stroke-width="1" opacity="0.7" transform="rotate(160 531 150)"/>
+
+  <!-- annotations beside panel -->
+  <text class="sml" x="527" y="268" text-anchor="middle">dim₂(cross-section) = 2  [Davies 1971]</text>
+  <text class="sml" x="527" y="283" text-anchor="middle">⟹  dim₃(E) ≥ 1 + 2 · ½ = 5/2</text>
+  <text class="cap" x="527" y="300" text-anchor="middle">(each 3D tube contributes a 2D strip;  bush forces</text>
+  <text class="cap" x="527" y="315" text-anchor="middle">M₀ transverse strips in the cross-section)</text>
+
+  <!-- connecting arrow: bush → cross-section -->
+  <path d="M295,148 Q322,100 374,100" fill="none" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#ga)"/>
+  <text class="cap" x="318" y="90">project</text>
+</svg>

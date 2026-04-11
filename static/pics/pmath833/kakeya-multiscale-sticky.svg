@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340">
+  <defs>
+    <style>
+      .bg  { fill: #f9fafb; }
+      .bdr { stroke: #d1d5db; }
+      .ttl { fill: #111827; font-family: Georgia,serif; font-size: 13.5px; font-weight: bold; }
+      .lbl { fill: #374151; font-family: Georgia,serif; font-size: 11.5px; }
+      .sub { fill: #6b7280; font-family: Georgia,serif; font-size: 10.5px; font-style: italic; }
+      .cap { fill: #6b7280; font-family: Georgia,serif; font-size: 10px;   font-style: italic; }
+      .ann { fill: #374151; font-family: Georgia,serif; font-size: 11px; }
+      .hdr { fill: #1d4ed8; font-family: Georgia,serif; font-size: 12px;   font-weight: bold; }
+      .hdro{ fill: #9a3412; font-family: Georgia,serif; font-size: 12px;   font-weight: bold; }
+      .math{ fill: #1d4ed8; font-family: Georgia,serif; font-size: 10.5px; font-style: italic; }
+      .key { fill: #15803d; font-family: Georgia,serif; font-size: 11px;   font-weight: bold; }
+      .arr { stroke: #6b7280; fill: none; }
+      .pnl { fill: #eff6ff; stroke: #bfdbfe; }
+      .pnlr{ fill: #fff7ed; stroke: #fed7aa; }
+      .pnlg{ fill: #f0fdf4; stroke: #bbf7d0; }
+      @media (prefers-color-scheme: dark) {
+        .bg  { fill: #0f172a; }
+        .bdr { stroke: #334155; }
+        .ttl { fill: #f1f5f9; }
+        .lbl { fill: #cbd5e1; }
+        .sub { fill: #94a3b8; }
+        .cap { fill: #64748b; }
+        .ann { fill: #cbd5e1; }
+        .hdr { fill: #93c5fd; }
+        .hdro{ fill: #fdba74; }
+        .math{ fill: #93c5fd; }
+        .key { fill: #4ade80; }
+        .pnl { fill: #0c1a2e; stroke: #1e3a5f; }
+        .pnlr{ fill: #1c0f00; stroke: #92400e; }
+        .pnlg{ fill: #052e16; stroke: #14532d; }
+      }
+    </style>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect class="bg"  width="720" height="340" rx="8"/>
+  <rect class="bdr" width="720" height="340" rx="8" fill="none" stroke-width="1"/>
+
+  <!-- Title -->
+  <text class="ttl" x="360" y="22" text-anchor="middle">Wang–Zahl Multi-Scale Structure and Stickiness</text>
+
+  <!-- ══════ PANEL A: Scale δ — many thin tubes ══════ -->
+  <rect class="pnl" x="20" y="36" width="215" height="235" rx="5" stroke-width="1"/>
+  <text class="hdr" x="127" y="55" text-anchor="middle">Scale δ</text>
+  <text class="sub" x="127" y="70" text-anchor="middle">δ-tubes, one per direction</text>
+
+  <!-- Many thin nearly-parallel tubes (slightly spread in angle) -->
+  <!-- Tube group 1: roughly pointing upper-left (~10° from vertical) -->
+  <rect x="46"  y="85" width="5" height="130" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-8 48 150)"/>
+  <rect x="55"  y="85" width="5" height="130" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-6 57 150)"/>
+  <rect x="64"  y="85" width="5" height="130" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-4 66 150)"/>
+  <rect x="73"  y="85" width="5" height="130" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-2 75 150)"/>
+  <rect x="82"  y="85" width="5" height="130" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate( 0 84 150)"/>
+
+  <!-- Tube group 2: spread further right -->
+  <rect x="110" y="85" width="5" height="130" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(10 112 150)"/>
+  <rect x="119" y="85" width="5" height="130" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(13 121 150)"/>
+  <rect x="128" y="85" width="5" height="130" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(16 130 150)"/>
+  <rect x="137" y="85" width="5" height="130" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(19 139 150)"/>
+  <rect x="146" y="85" width="5" height="130" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(22 148 150)"/>
+
+  <!-- Tube group 3: right cluster -->
+  <rect x="172" y="85" width="5" height="130" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(32 174 150)"/>
+  <rect x="181" y="85" width="5" height="130" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(35 183 150)"/>
+  <rect x="190" y="85" width="5" height="130" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(38 192 150)"/>
+  <rect x="199" y="85" width="5" height="130" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(41 201 150)"/>
+  <rect x="208" y="85" width="5" height="130" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(44 210 150)"/>
+
+  <!-- δ label -->
+  <line x1="46" y1="218" x2="51" y2="218" stroke="#374151" stroke-width="1.5"/>
+  <text class="math" x="51" y="228" font-size="10px">δ</text>
+
+  <text class="ann" x="127" y="252" text-anchor="middle">~δ⁻² tubes total</text>
+  <text class="sub" x="127" y="267" text-anchor="middle">(one per direction in S²)</text>
+
+  <!-- Arrow A→B -->
+  <text class="sub" x="250" y="155" text-anchor="middle">zoom</text>
+  <text class="sub" x="250" y="168" text-anchor="middle">out</text>
+  <line class="arr" x1="240" y1="172" x2="270" y2="172" stroke-width="1.5" marker-end="url(#ar3)"/>
+
+  <!-- ══════ PANEL B: Scale δ^{1/2} — coarser meta-tubes ══════ -->
+  <rect class="pnlr" x="278" y="36" width="215" height="235" rx="5" stroke-width="1"/>
+  <text class="hdro" x="385" y="55" text-anchor="middle">Scale δ^{1/2}</text>
+  <text class="sub"  x="385" y="70" text-anchor="middle">δ^{1/2}-tubes (meta-tubes)</text>
+
+  <!-- 3 thick meta-tubes, each containing the δ-tube groups from panel A -->
+  <!-- Meta-tube 1: blue cluster, ~0° direction -->
+  <rect x="298" y="82" width="48" height="140" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="2" opacity="0.55" transform="rotate(-4 322 152)"/>
+  <!-- δ-tubes inside meta-tube 1 -->
+  <rect x="303" y="88" width="5" height="125" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-8 305 150)"/>
+  <rect x="311" y="88" width="5" height="125" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-5 313 150)"/>
+  <rect x="319" y="88" width="5" height="125" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate(-2 321 150)"/>
+  <rect x="327" y="88" width="5" height="125" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate( 1 329 150)"/>
+  <rect x="335" y="88" width="5" height="125" rx="1" fill="#bfdbfe" stroke="#3b82f6" stroke-width="0.8" transform="rotate( 4 337 150)"/>
+
+  <!-- Meta-tube 2: amber cluster, ~20° direction -->
+  <rect x="352" y="82" width="48" height="140" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="2" opacity="0.55" transform="rotate(16 376 152)"/>
+  <rect x="356" y="88" width="5" height="125" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(11 358 150)"/>
+  <rect x="364" y="88" width="5" height="125" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(14 366 150)"/>
+  <rect x="372" y="88" width="5" height="125" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(17 374 150)"/>
+  <rect x="380" y="88" width="5" height="125" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(20 382 150)"/>
+  <rect x="388" y="88" width="5" height="125" rx="1" fill="#fde68a" stroke="#d97706" stroke-width="0.8" transform="rotate(23 390 150)"/>
+
+  <!-- Meta-tube 3: green cluster, ~37° direction -->
+  <rect x="413" y="82" width="48" height="140" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="2" opacity="0.55" transform="rotate(37 437 152)"/>
+  <rect x="415" y="88" width="5" height="125" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(31 417 150)"/>
+  <rect x="423" y="88" width="5" height="125" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(34 425 150)"/>
+  <rect x="431" y="88" width="5" height="125" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(37 433 150)"/>
+  <rect x="439" y="88" width="5" height="125" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(40 441 150)"/>
+  <rect x="447" y="88" width="5" height="125" rx="1" fill="#bbf7d0" stroke="#16a34a" stroke-width="0.8" transform="rotate(43 449 150)"/>
+
+  <!-- δ^{1/2} label -->
+  <line x1="298" y1="218" x2="346" y2="218" stroke="#d97706" stroke-width="1.5"/>
+  <text class="hdro" x="322" y="228" text-anchor="middle" font-size="10px">δ^{1/2}</text>
+
+  <text class="ann" x="385" y="252" text-anchor="middle">Each meta-tube contains</text>
+  <text class="ann" x="385" y="267" text-anchor="middle">~δ^{-1/2} of the δ-tubes</text>
+
+  <!-- Arrow B→C -->
+  <text class="key" x="508" y="155" text-anchor="middle">sticky</text>
+  <text class="sub" x="508" y="168" text-anchor="middle">condition</text>
+  <line class="arr" x1="497" y1="172" x2="527" y2="172" stroke-width="1.5" marker-end="url(#ar3)"/>
+
+  <!-- ══════ PANEL C: Sticky family ══════ -->
+  <rect class="pnlg" x="535" y="36" width="165" height="235" rx="5" stroke-width="1"/>
+  <text class="key"  x="617" y="55" text-anchor="middle">Sticky Family</text>
+  <text class="sub"  x="617" y="70" text-anchor="middle">almost all δ-tubes inside</text>
+  <text class="sub"  x="617" y="83" text-anchor="middle">a SINGLE δ^{1/2}-tube</text>
+
+  <!-- One thick meta-tube containing many thin tubes -->
+  <rect x="558" y="92" width="120" height="145" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5" opacity="0.4"/>
+  <!-- many δ-tubes inside -->
+  <rect x="563" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(-5  565 163)"/>
+  <rect x="570" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(-3  572 163)"/>
+  <rect x="577" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(-1  579 163)"/>
+  <rect x="584" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate( 1  586 163)"/>
+  <rect x="591" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate( 3  593 163)"/>
+  <rect x="598" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate( 5  600 163)"/>
+  <rect x="605" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate( 7  607 163)"/>
+  <rect x="612" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate( 9  614 163)"/>
+  <rect x="619" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(11  621 163)"/>
+  <rect x="626" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(13  628 163)"/>
+  <rect x="633" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(15  635 163)"/>
+  <rect x="640" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(17  642 163)"/>
+  <rect x="647" y="97" width="4" height="133" rx="1" fill="#86efac" stroke="#16a34a" stroke-width="0.7" transform="rotate(19  649 163)"/>
+  <!-- outer border stronger -->
+  <rect x="558" y="92" width="120" height="145" rx="4" fill="none" stroke="#15803d" stroke-width="2"/>
+
+  <text class="key" x="617" y="255" text-anchor="middle">⟹ energy</text>
+  <text class="key" x="617" y="270" text-anchor="middle">concentrates</text>
+
+  <!-- ══════ BOTTOM: Wang-Zahl key idea ══════ -->
+  <rect class="pnlg" x="20" y="281" width="680" height="48" rx="5" stroke-width="1"/>
+  <text class="key" x="360" y="300" text-anchor="middle">Wang–Zahl Key Idea (2024):</text>
+  <text class="ann" x="360" y="318" text-anchor="middle">A Besicovitch set in ℝ³ of dimension &lt; 3 forces a sticky Kakeya scheme at every dyadic scale δ = 2^{−k}. Multi-scale energy</text>
+  <text class="ann" x="360" y="333" text-anchor="middle">sums across scales contradict the Cauchy–Schwarz lower bound  ⟹  dim(E) = 3.</text>
+</svg>

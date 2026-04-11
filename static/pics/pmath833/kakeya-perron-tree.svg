@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="270" viewBox="0 0 720 270">
+  <defs>
+    <style>
+      .bg   { fill: #f9fafb; }
+      .bdr  { stroke: #d1d5db; }
+      .ttl  { fill: #111827; font-family: Georgia,serif; font-size: 13.5px; font-weight: bold; }
+      .lbl  { fill: #374151; font-family: Georgia,serif; font-size: 11.5px; }
+      .sub  { fill: #6b7280; font-family: Georgia,serif; font-size: 10.5px; font-style: italic; }
+      .cap  { fill: #6b7280; font-family: Georgia,serif; font-size: 10px;   font-style: italic; }
+      .erd  { fill: #dc2626; font-family: Georgia,serif; font-size: 10.5px; font-style: italic; }
+      .ovl  { fill: #1e40af; font-family: Georgia,serif; font-size: 9px;    font-style: italic; }
+      .arr  { stroke: #9ca3af; fill: none; }
+      @media (prefers-color-scheme: dark) {
+        .bg  { fill: #0f172a; }
+        .bdr { stroke: #334155; }
+        .ttl { fill: #f1f5f9; }
+        .lbl { fill: #cbd5e1; }
+        .sub { fill: #94a3b8; }
+        .cap { fill: #64748b; }
+        .erd { fill: #f87171; }
+        .ovl { fill: #93c5fd; }
+        .arr { stroke: #4b5563; }
+      }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#9ca3af"/>
+    </marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="720" height="270" rx="8"/>
+  <rect class="bdr" width="720" height="270" rx="8" fill="none" stroke-width="1"/>
+
+  <!-- Title -->
+  <text class="ttl" x="360" y="22" text-anchor="middle">Perron Tree — Besicovitch Sets of Zero Area</text>
+
+  <!-- ─────── Step 0 ─────── -->
+  <polygon points="90,46 35,210 145,210" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="90" y1="46" x2="35"  y2="210" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="90" y1="46" x2="62"  y2="210" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="90" y1="46" x2="90"  y2="210" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="90" y1="46" x2="118" y2="210" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="90" y1="46" x2="145" y2="210" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="90" cy="46" r="3" fill="#2563eb"/>
+  <text class="lbl" x="90"  y="225" text-anchor="middle">Step 0</text>
+  <text class="sub" x="90"  y="240" text-anchor="middle">area = |Δ|</text>
+
+  <!-- arrow 0→1 -->
+  <line class="arr" x1="162" y1="128" x2="192" y2="128" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- ─────── Step 1 ─────── -->
+  <!-- Right sub-tri: apex(280,46) base(220,210)–(280,210) -->
+  <polygon points="280,46 220,210 280,210" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Left sub-tri (slid +30px right): apex(310,46) base(250,210)–(310,210) -->
+  <polygon points="310,46 250,210 310,210" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5" opacity="0.85"/>
+  <!-- Overlap: T_R right edge (x=280 vertical) meets T_L left edge (from 310,46 to 250,210)
+       x_L(y) = 310 – 60*(y–46)/164;  set = 280: 60*(y–46)/164=30 → y=128
+       vertices: (280,128), (280,210), (250,210)  -->
+  <polygon points="280,128 280,210 250,210" fill="#93c5fd" stroke="none" opacity="0.75"/>
+  <text class="lbl" x="247" y="108" font-family="Georgia,serif" font-size="10px" font-style="italic">T_R</text>
+  <text class="lbl" x="308" y="108" font-family="Georgia,serif" font-size="10px" font-style="italic">T_L</text>
+  <text class="ovl" x="260" y="186">overlap</text>
+  <text class="lbl" x="265" y="225" text-anchor="middle">Step 1</text>
+  <text class="sub" x="265" y="240" text-anchor="middle">area ≈ ¾|Δ|</text>
+
+  <!-- arrow 1→k -->
+  <line class="arr" x1="353" y1="128" x2="383" y2="128" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- ─────── Step k (4 overlapping thin triangles) ─────── -->
+  <polygon points="435,46 395,210 445,210" fill="#dbeafe" stroke="#2563eb"  stroke-width="1.5" opacity="0.9"/>
+  <polygon points="445,46 405,210 455,210" fill="#bfdbfe" stroke="#3b82f6"  stroke-width="1.5" opacity="0.80"/>
+  <polygon points="455,46 415,210 465,210" fill="#93c5fd" stroke="#1d4ed8"  stroke-width="1.5" opacity="0.70"/>
+  <polygon points="465,46 425,210 475,210" fill="#60a5fa" stroke="#1d4ed8"  stroke-width="1.5" opacity="0.60"/>
+  <polygon points="450,102 432,210 462,210" fill="#3b82f6" stroke="none" opacity="0.28"/>
+  <text class="lbl" x="435" y="225" text-anchor="middle">Step k</text>
+  <text class="sub" x="435" y="240" text-anchor="middle">area ≈ (¾)ᵏ|Δ|</text>
+
+  <!-- arrow k→limit -->
+  <line class="arr" x1="498" y1="128" x2="528" y2="128" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- ─────── Limit (measure-zero Besicovitch set) ─────── -->
+  <line x1="580" y1="210" x2="554" y2="46" stroke="#2563eb" stroke-width="3"   opacity="0.72"/>
+  <line x1="585" y1="210" x2="559" y2="46" stroke="#3b82f6" stroke-width="2.5" opacity="0.62"/>
+  <line x1="590" y1="210" x2="564" y2="46" stroke="#60a5fa" stroke-width="2"   opacity="0.52"/>
+  <line x1="595" y1="210" x2="569" y2="46" stroke="#93c5fd" stroke-width="2"   opacity="0.46"/>
+  <line x1="600" y1="210" x2="574" y2="46" stroke="#bfdbfe" stroke-width="1.5" opacity="0.42"/>
+  <line x1="605" y1="210" x2="579" y2="46" stroke="#bfdbfe" stroke-width="1.5" opacity="0.42"/>
+  <line x1="610" y1="210" x2="584" y2="46" stroke="#93c5fd" stroke-width="2"   opacity="0.46"/>
+  <line x1="615" y1="210" x2="589" y2="46" stroke="#60a5fa" stroke-width="2"   opacity="0.52"/>
+  <line x1="620" y1="210" x2="594" y2="46" stroke="#3b82f6" stroke-width="2.5" opacity="0.62"/>
+  <line x1="625" y1="210" x2="599" y2="46" stroke="#2563eb" stroke-width="3"   opacity="0.72"/>
+  <!-- zero-width brace -->
+  <line x1="553" y1="217" x2="601" y2="217" stroke="#dc2626" stroke-width="1.5"/>
+  <text class="erd" x="577" y="215" text-anchor="middle" font-size="8.5px">→ 0</text>
+  <text class="lbl"  x="590" y="225" text-anchor="middle">Limit</text>
+  <text class="erd"  x="590" y="240" text-anchor="middle">area → 0, all dirs.</text>
+
+  <!-- footer -->
+  <text class="cap" x="360" y="258" text-anchor="middle">Split → slide sub-pieces so bases overlap. Area shrinks by ≤ ¾ per step; direction coverage is unchanged.</text>
+</svg>
