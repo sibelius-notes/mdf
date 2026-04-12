@@ -17,6 +17,12 @@
   --table-stripe: #262637;
   --toggle-icon-sun: none;
   --toggle-icon-moon: inline;
+  --lightning-accent: #f5c518;
+  --lightning-bg: rgba(245, 197, 24, 0.05);
+  --lightning-border: rgba(245, 197, 24, 0.22);
+  --lightning-glow: 0 0 0 1px rgba(245, 197, 24, 0.08), 0 2px 20px rgba(245, 197, 24, 0.12);
+  --lightning-glow-hover: 0 0 0 1px rgba(245, 197, 24, 0.18), 0 4px 28px rgba(245, 197, 24, 0.22);
+  --lightning-stripe: rgba(245, 197, 24, 0.03);
 }
 
 :root[data-theme="light"] {
@@ -37,6 +43,12 @@
   --table-stripe: #f9f9fb;
   --toggle-icon-sun: inline;
   --toggle-icon-moon: none;
+  --lightning-accent: #9a6800;
+  --lightning-bg: #fffbeb;
+  --lightning-border: rgba(154, 104, 0, 0.28);
+  --lightning-glow: 0 1px 6px rgba(154, 104, 0, 0.1);
+  --lightning-glow-hover: 0 2px 12px rgba(154, 104, 0, 0.18);
+  --lightning-stripe: rgba(154, 104, 0, 0.04);
 }
 
 /* === Reset & Base === */
@@ -432,6 +444,61 @@ body {
 .definition ul, .theorem ul, .example ul, .remark ul,
 .definition ol, .theorem ol, .example ol, .remark ol { padding-left: 1.5rem; margin: 0.5rem 0; }
 .definition li, .theorem li, .example li, .remark li { margin-bottom: 0.2rem; }
+
+/* Lightning box */
+.lightning-box {
+  position: relative;
+  background: var(--lightning-bg);
+  border: 1px solid var(--lightning-border);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem 0.9rem 1.1rem;
+  margin: 0.4rem 0 1.6rem;
+  box-shadow: var(--lightning-glow);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+}
+.lightning-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    var(--lightning-stripe) 0px,
+    var(--lightning-stripe) 1px,
+    transparent 1px,
+    transparent 18px
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+.lightning-box:hover {
+  box-shadow: var(--lightning-glow-hover);
+  border-color: var(--lightning-accent);
+}
+.lightning-box-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--lightning-accent);
+  margin-bottom: 0.55rem;
+}
+.lightning-bolt {
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 4px var(--lightning-accent));
+}
+.lightning-box-body {
+  position: relative;
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: var(--text);
+}
+.lightning-box-body p { margin: 0; }
+.lightning-box-body p + p { margin-top: 0.5rem; }
 
 /* Horizontal rules */
 .course-content hr, hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
