@@ -53,7 +53,8 @@ subjects = [
 ]
 
 [others]
-name = "Others"
+name = "Engineering and Others"
+nav_name = "Engr & Others"
 order = 6
 # Engineering + cross-faculty subjects not in breadth/depth divisions
 subjects = [

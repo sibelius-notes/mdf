@@ -4,8 +4,6 @@ prof: "Scott Hopkins"
 subjects: "CHEM"
 ---
 
-CHEM 120 is a first-year general chemistry course at the University of Waterloo, covering stoichiometry review, quantum theory, atomic structure, chemical bonding (Lewis structures, VSEPR, valence bond theory, and molecular orbital theory), the behaviour of gases, and intermolecular forces. The quantum theory and atomic structure modules are taught by Prof Scott Hopkins; the bonding and gases modules are co-taught with Prof Sen. Course administration is coordinated by Dr Jake Fisher. Assignments and tests are delivered through the Mobius online system.
-
 ---
 
 ## Module 0: Stoichiometry and Solution Chemistry Review
@@ -858,22 +856,3 @@ Similar to SO₂ in structure: bent geometry, two resonance structures, bond ord
 | Expanded octet | PCl₅, SF₆, XeF₄ | Period 3+ elements use empty d orbitals |
 
 For expanded octets, the best structure generally minimises formal charges — often the structure with double bonds (even if it gives 10 or 12 electrons on the central atom) is preferred over a structure with more single bonds and higher formal charges.
-
----
-
-## Appendix D: Course Administrative Notes
-
-### Mobius Online System
-
-Assignments, participation challenges, tests, and the final exam are delivered through the **Mobius** system, accessed via links in the Learn course page. Key points:
-
-- Always **print the assignment** before starting online work. Since some modules span two weeks, you can begin reviewing printed questions early and work on them offline.
-- Entering answers in Mobius and pressing **Quit and Save** does not use up an attempt — you can save partial work as many times as needed.
-- **Submitting** the assignment uses one attempt and is equivalent to handing in your work. If you do not press Submit, you receive no grade.
-- Many questions require specific formats (e.g., exponential notation to three significant figures). Read all instructions on each question carefully.
-- The **Mobius Gradebook** (found in the Online Assignments folder in your content tab) lets you review which questions you answered correctly or incorrectly and see instructor feedback after submission.
-- Assignment grades are pushed to the **Learn Gradebook** automatically (with up to a 5-minute delay after submission or resubmission).
-
-### Communication
-
-Post questions about the course and Mobius system to the **Piazza discussion board**. Course staff aim to respond as quickly as possible. Do not use Mobius for the first time during a test — familiarise yourself with the interface during Module 0 assignments.

@@ -3,8 +3,6 @@ title: "MATH 146: Linear Algebra 1 for Honours Mathematics"
 subjects: "MATH"
 ---
 
-These notes accompany MATH 146, the honours stream of linear algebra at the University of Waterloo. The course covers the same ground as MATH 136 but moves faster, proves more, and insists on the abstract viewpoint from the outset. We work over the field \(\mathbb{R}\) of real numbers throughout, though almost everything generalises to any field.
-
 ---
 
 # Chapter 1: Vectors and Geometry in \(\mathbb{R}^n\)

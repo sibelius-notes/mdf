@@ -3,8 +3,6 @@ title: "MATH 245: Linear Algebra 2 for Honours Mathematics"
 subjects: "MATH"
 ---
 
-These notes cover MATH 245, the honours version of MATH 235 at the University of Waterloo. The course takes the machinery of linear algebra — subspaces, maps, diagonalization — and rebuilds it properly from the ground up over arbitrary fields, with full proofs and the deeper structural results: the Spectral Theorem for normal operators, the Singular Value Decomposition, Jordan Normal Form, and an introduction to bilinear forms and tensor products. The philosophy throughout is that the right level of abstraction reveals why theorems are true, not just that they are.
-
 ---
 
 # Chapter 1: Review of Fundamental Subspaces

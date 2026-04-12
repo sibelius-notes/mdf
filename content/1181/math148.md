@@ -3,8 +3,6 @@ title: "MATH 148: Calculus 2 for Honours Mathematics"
 subjects: "MATH"
 ---
 
-These notes cover MATH 148 (Calculus 2 for Honours Mathematics) at the University of Waterloo. The course covers the same broad territory as MATH 138 — integration, differential equations, series, and curves — but with the rigour appropriate to a student who has seen epsilon-delta analysis in MATH 147. Where MATH 138 treats the integral as a limiting process to be computed, we develop it as a precise mathematical object: the Darboux integral, built from upper and lower sums, whose existence can be verified from first principles. The payoff is that every theorem we state has an honest proof, and the machinery we build here — uniform convergence, the Fundamental Theorem with full rigour, the Picard–Lindelöf existence theorem — forms the foundation of real analysis.
-
 ---
 
 # Chapter 1: The Riemann Integral
