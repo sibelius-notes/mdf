@@ -165,6 +165,107 @@ Every survey course makes choices about what to centre, and centering rock neces
 
 ---
 
+## Applied Mathematics
+
+### [AMATH 791: Inverse Problems and Data Assimilation](/1269/amath791/)
+The mathematical theory of recovering unknown parameters, initial conditions, or forcing terms from indirect, noisy observations. The notes cover regularization theory (Tikhonov, iterative methods), the Bayesian formulation of inversion (including Stuart's well-posedness theorem), MCMC methods, and data assimilation (Kalman filtering, 3D-Var, 4D-Var).
+
+{{< lightning >}}
+Inverse problems sit at the intersection of functional analysis, numerical PDEs, and computation — all core AMATH subjects — yet UW has no dedicated course. The field has become central to modern applied mathematics, from medical imaging to weather prediction to seismic exploration, and is taught at MIT, Caltech, Chicago, Cambridge, and Oxford.
+{{< /lightning >}}
+
+---
+
+### [AMATH 843: Integral Equation Methods for PDEs](/1269/amath843/)
+Boundary integral equations reformulate PDEs as equations on lower-dimensional boundaries. The notes cover potential theory, Fredholm theory, Nyström and collocation methods, singular and hypersingular quadrature, and fast algorithms (the fast multipole method), with applications to acoustic scattering, Stokes flow, and electromagnetics.
+
+{{< lightning >}}
+UW's numerical PDE curriculum covers finite differences (AMATH 741) and finite elements (AMATH 841) but not boundary integral methods — the third major numerical PDE paradigm. NYU Courant is the world center for this subject (Greengard, Rokhlin, O'Neil), and the fast multipole method was called one of the top ten algorithms of the twentieth century.
+{{< /lightning >}}
+
+---
+
+### [AMATH 844: Homogenization and Multiscale Methods](/1269/amath844/)
+Asymptotic homogenization of PDEs with rapidly oscillating coefficients: two-scale expansions, cell problems, effective coefficients, H-convergence and two-scale convergence, stochastic homogenization, Hashin-Shtrikman bounds, and computational multiscale methods (HMM, MsFEM).
+
+{{< lightning >}}
+Real-world materials — composites, porous media, biological tissues — have structure at multiple spatial scales. Homogenization theory provides the rigorous mathematical framework for deriving effective macroscopic equations, extending both asymptotic methods (AMATH 732) and numerical PDEs (AMATH 741) to problems where direct simulation is computationally infeasible.
+{{< /lightning >}}
+
+---
+
+### [AMATH 860: Kinetic Theory and Transport Equations](/1269/amath860/)
+From particle systems to distribution functions: the Boltzmann equation, H-theorem, Chapman-Enskog expansion deriving Euler and Navier-Stokes as hydrodynamic limits, the Vlasov equation and Landau damping, moment methods and closures, and numerical methods (DSMC, spectral methods, asymptotic-preserving schemes).
+
+{{< lightning >}}
+Kinetic theory is the bridge between the microscopic world of particles and the macroscopic world of continuum mechanics — it explains *why* the Navier-Stokes equations hold and *when* they break down. The subject connects naturally to UW's fluid mechanics and PDE courses but requires its own mathematical language: the Boltzmann equation, collision operators, and the Chapman-Enskog machinery.
+{{< /lightning >}}
+
+---
+
+### [AMATH 865: Geophysical Fluid Dynamics](/1269/amath865/)
+The dynamics of rotating and stratified fluids applied to the ocean and atmosphere: geostrophic balance, shallow water theory, Rossby waves, quasi-geostrophic dynamics, baroclinic and barotropic instability, Ekman layers and wind-driven ocean circulation, and equatorial wave dynamics.
+
+{{< lightning >}}
+UW has AMATH 362 (Mathematics of Climate Change) at the undergraduate level but no graduate GFD course. Geophysical fluid dynamics is a classical applied mathematics subject — it shaped the careers of people like Pedlosky, Gill, and Vallis — and is taught at MIT, Cambridge, Princeton, Oxford, and NYU Courant. The subject combines fluid mechanics, PDEs, and dynamical systems in a physically rich setting.
+{{< /lightning >}}
+
+---
+
+### [AMATH 845: Combustion Theory and Reactive Flows](/1269/amath845/)
+Reaction-diffusion equations with Arrhenius kinetics, premixed and diffusion flames, laminar flame speed via the Zeldovich-Frank-Kamenetskii analysis, activation energy asymptotics, ignition and extinction (Semenov theory, S-curve), detonation waves (Chapman-Jouguet and ZND theory), flame instabilities (Darrieus-Landau, Sivashinsky equation), and computational combustion.
+
+{{< lightning >}}
+Combustion theory is a classical applied mathematics subject — it is where matched asymptotic expansions were first deployed at industrial scale — yet UW has no course on it. The subject applies PDEs, asymptotic methods, and dynamical systems to chemistry and propulsion, and is taught at Cambridge DAMTP, Caltech, Princeton, Stanford, and MIT.
+{{< /lightning >}}
+
+---
+
+### [AMATH 848: Biological Fluid Dynamics](/1269/amath848/)
+Low-Reynolds-number hydrodynamics and the scallop theorem, swimming of microorganisms (resistive force theory, slender body theory, Taylor's swimming sheet), flagellar and ciliary propulsion, blood flow and hemodynamics (Womersley flow, pulse wave propagation), non-Newtonian blood rheology, pulmonary mechanics, biofilm dynamics, and collective locomotion in active suspensions.
+
+{{< lightning >}}
+UW has general fluid mechanics (AMATH 463/863) and mathematical biology (383/881/882) but nothing at their intersection — the fluid mechanics of living systems. Biological fluid dynamics is a thriving DAMTP subject (Cambridge Part III, taught by Goldstein and Lauga) that combines Stokes flow theory with biological function, and is also taught at Oxford, Stanford, and MIT.
+{{< /lightning >}}
+
+---
+
+### [AMATH 852: Mathematical Geophysics and Seismic Wave Propagation](/1269/amath852/)
+Elastic wave equations in heterogeneous media, P-wave and S-wave decomposition, surface waves (Rayleigh, Love), ray theory and the eikonal equation, normal mode theory for the Earth, earthquake source mechanics (moment tensors, radiation patterns), seismic tomography as an inverse problem, and computational seismology (spectral element methods, perfectly matched layers).
+
+{{< lightning >}}
+Seismic wave propagation is one of the most mathematically rich areas of geophysics — combining PDE theory, asymptotic methods, spectral theory, and inverse problems — yet UW has no course on it. The subject is taught at Caltech, Cambridge, Princeton, Stanford, MIT, and Oxford, and is central to understanding Earth's interior structure.
+{{< /lightning >}}
+
+---
+
+### [AMATH 858: Free Boundary Problems and Phase Transitions](/1269/amath858/)
+The Stefan problem for solidification and melting, Hele-Shaw flows and Saffman-Taylor instability, morphological instability (Mullins-Sekerka), mushy-zone theory for alloy solidification, variational inequalities and the obstacle problem (Caffarelli regularity theory), phase-field models (Allen-Cahn, Cahn-Hilliard) and their sharp-interface limits, and level set methods for interface tracking.
+
+{{< lightning >}}
+Free boundary problems are PDE problems where the domain itself is unknown — they arise in solidification, crystal growth, ice formation, and tumor growth. The subject has its own deep mathematical theory (Caffarelli's regularity results, Γ-convergence of phase-field models) and is taught at Cambridge DAMTP (Worster), NYU Courant, Oxford, and Chicago.
+{{< /lightning >}}
+
+---
+
+### [AMATH 866: Magnetohydrodynamics and Plasma Physics](/1269/amath866/)
+The mathematical theory of electrically conducting fluids: derivation and structure of the MHD equations, Alfvén's frozen-in flux theorem, MHD wave modes, the Grad-Shafranov equation for axisymmetric equilibria, the energy principle for MHD stability, magnetic reconnection (Sweet-Parker and Petschek models), dynamo theory, and kinetic corrections (CGL theory, gyrokinetics).
+
+{{< lightning >}}
+MHD extends the fluid mechanics of AMATH 863 to electrically conducting fluids — the state of matter in stars, fusion reactors, and the solar wind. The subject is a classical DAMTP topic taught at Cambridge, Princeton, Caltech, Oxford, and MIT, and it sits squarely at the intersection of fluid mechanics, PDEs, and mathematical physics.
+{{< /lightning >}}
+
+---
+
+### [AMATH 883: Mathematical Epidemiology and Population Dynamics](/1269/amath883/)
+Compartmental models (SIR, SEIR, SIS) and the basic reproduction number \(R_0\), stability analysis and bifurcations of disease equilibria, age-structured models and the next-generation operator, spatial spread via reaction-diffusion equations and traveling waves, stochastic epidemic models, and classical population dynamics (predator-prey, competition, functional responses).
+
+{{< lightning >}}
+UW has AMATH 383 (Intro to Mathematical Biology) and graduate courses on oncology (AMATH 881) and cell biology (AMATH 882), but no graduate course on epidemiology and population dynamics — a major branch of mathematical biology highlighted during the COVID-19 pandemic. The subject is classical (Kermack-McKendrick, 1927) yet remains at the frontier of applied mathematics.
+{{< /lightning >}}
+
+---
+
 ## Philosophy
 
 ### [PHIL 145c: Critical Thinking — Case Studies (Chinese)](/1219/phil145c/)
