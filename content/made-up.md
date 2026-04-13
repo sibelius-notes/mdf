@@ -169,7 +169,7 @@ Every survey course makes choices about what to centre, and centering rock neces
 Species counterpoint in two through four voices (Fux's five species), tonal counterpoint in the Bach style, invertible counterpoint, canon, and fugue — subject, answer, countersubject, exposition, episodes, stretto, and the complete fugue in C minor from WTC I as a model analysis.
 
 {{< lightning >}}
-UW's theory sequence (MUSIC 261–271) covers chromatic harmony and orchestration but has no dedicated counterpoint or fugue course — skills that Wilfrid Laurier (next door) requires in MU361. Every serious theory student learns to write species counterpoint; UW makes them pick it up implicitly or not at all.
+UW's theory sequence (MUSIC 270–271) covers chromatic harmony and orchestration but has no dedicated counterpoint or fugue course — skills that Wilfrid Laurier (next door) requires in MU361. Every serious theory student learns to write species counterpoint; UW makes them pick it up implicitly.
 {{< /lightning >}}
 
 ---
@@ -259,7 +259,7 @@ Yale's MUSI 697 and Indiana's M501 are required doctoral proseminars in research
 Schenker's theory of structural levels (Hintergrund, Mittelgrund, Vordergrund), the Ursatz (Urlinie and Bassbrechung), prolongational techniques (neighbor notes, linear progressions, unfolding, register transfer), interruption and the two-part structure, motivic parallelism across levels, and complete-movement analyses of Bach, Beethoven, Chopin, and Brahms.
 
 {{< lightning >}}
-MUSIC 370 (Theory 3) introduces "prolongation" in a paragraph; Schenkerian analysis is a full analytical system requiring a semester to master. Indiana (T555), Yale, Harvard, Eastman, and NYU all teach it as a standalone graduate course. Cadwallader and Gagné's textbook is the standard reference.
+MUSIC 370 (Theory 3) introduced "prolongation" in a paragraph; MUSIC 371 (Theory 4) spent a class on it without going too much in details. Schenkerian analysis is a full analytical system requiring a semester to master. Indiana (T555), Yale, Harvard, Eastman, and NYU all teach it as a standalone graduate course. Cadwallader and Gagné's textbook is the standard reference.
 {{< /lightning >}}
 
 ---
