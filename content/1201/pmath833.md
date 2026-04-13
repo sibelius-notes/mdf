@@ -3465,3 +3465,587 @@ The Kakeya problem lives at the intersection of these traditions: it is simultan
 Hong Wang's resolution in \(\mathbb{R}^3\), via the Furstenberg set approach, shows that even for the most classical group \(G = \mathbb{R}^n\), the harmonic analysis is not yet fully understood. The story of harmonic analysis — from Haar measure on abstract groups to the geometry of needles sweeping through \(\mathbb{R}^n\) — is very much still being written.
 
 The arc traced in these notes, from the Tychonoff compactness argument for Haar measure to the Cauchy-Schwarz multi-scale energy estimate of Wang-Zahl, is a single coherent story about the nature of symmetry, measurement, and the Fourier transform. Abstract and geometric harmonic analysis are not two separate fields — they are two perspectives on the same mathematical universe, and the deepest results in each illuminate the other.
+
+Yet the story does not end here. There is a third tradition, one that developed in parallel with both: discrete harmonic analysis on \(\mathbb{Z}^n\), where the Fourier transform becomes a lens for the arithmetic of polynomial sequences. It is the subject of Part III.
+
+---
+
+# Transition: From Geometric to Discrete Harmonic Analysis
+
+## The Landscape So Far
+
+The preceding thirteen chapters traced two grand traditions united by the Fourier transform. In Part I, the Fourier transform was the spectral decomposition of a function space into characters of a group: the objects were locally compact groups \(G\), Haar measure, convolution algebras, unitary representations, and Pontryagin duality, and the questions were algebraic — what are the irreducible representations of \(G\), and how does the group structure control them? In Part II, the Fourier transform became a tool for detecting the geometry of sets in Euclidean space: the fixed objects were tubes, wave packets, and curved surfaces in \(\mathbb{R}^n\), and the questions were geometric and combinatorial — how thin can a set be while pointing in every direction, and when can the Fourier transform be restricted to a curved surface?
+
+We now enter a third tradition. The group is \(\mathbb{Z}^n\), the integer lattice. The Fourier transform is classical Fourier series. And the questions are neither purely algebraic nor purely geometric — they are **arithmetic**.
+
+## From Continuous to Discrete: Where the Difficulty Lies
+
+The shift from \(\mathbb{R}^n\) to \(\mathbb{Z}^n\) looks innocuous on paper. By Pontryagin duality (Chapter 6), the dual group \(\hat{\mathbb{Z}} = \mathbb{T} = \mathbb{R}/\mathbb{Z}\), so Fourier analysis on \(\mathbb{Z}\) is exactly Fourier series on the unit circle. The basic \(\ell^p\) theory — the discrete Hardy-Littlewood maximal function, the discrete Hilbert transform, discrete convolution operators — all follow from their continuous counterparts by straightforward embedding arguments: replace a function \(f : \mathbb{Z} \to \mathbb{C}\) with the step function \(\tilde{f} = \sum_n f(n)\, \mathbf{1}_{[n-1/2,\, n+1/2)}\) on \(\mathbb{R}\) and apply the continuous theory.
+
+The difficulty begins the moment you ask about **averages along a polynomial sequence**. Consider the averaging operator
+
+\[
+A_N f(n) = \frac{1}{N} \sum_{k=1}^N f(n + k^2), \quad n \in \mathbb{Z},
+\]
+
+which averages \(f\) over the values \(f(n+1), f(n+4), f(n+9), \ldots, f(n+N^2)\). This looks similar to the ordinary average \((1/N)\sum_{k=1}^N f(n+k)\), but there is a crucial difference: the increments \(\{k^2\}\) grow quadratically. The gap between the \(k\)-th and \((k+1)\)-th sampling points is \((k+1)^2 - k^2 = 2k+1\), which grows without bound. The set \(\{k^2 : k \geq 1\} = \{1, 4, 9, 16, 25, \ldots\}\) is sparse in \(\mathbb{Z}\): among the integers from 1 to \(N^2\), only \(N\) of them are perfect squares, and they are spread increasingly far apart as \(N \to \infty\).
+
+This sparsity has a decisive consequence. The central tool for proving that the ordinary averages converge — the **Hardy-Littlewood maximal inequality**, which controls the maximum over all ordinary averages by a single absolutely bounded operator — depends critically on the fact that the ordinary averages \((1/N)\sum_{k=0}^{N-1} f(n+k)\) are averages over **intervals** in \(\mathbb{Z}\). The covering lemma that bounds their maximum works because any two overlapping intervals have a simple containment structure. For the polynomial averages, the sampling set \(\{1, 4, 9, \ldots, N^2\}\) is not an interval, and no collection of intervals can efficiently cover it: a centered interval \([n - R, n + R]\) of radius \(R\) contains approximately \(2\sqrt{R}\) squares, not \(R\), so covering arguments lose a factor of \(\sqrt{R}\) — enough to invalidate the maximal inequality entirely.
+
+The same difficulty appears in the continuous analogue: the Hilbert transform along the parabola \(\int f(x - t^2) / t\, dt\) can be bounded by the Calderón-Zygmund theory, but the **discrete** Hilbert transform along the parabola \(\sum_{k \neq 0} f(n + k^2)/k\) requires completely different tools, because the sparse arithmetic of the set \(\{k^2\}\) defeats every argument based on interval geometry.
+
+## The Organizing Question
+
+This brings us to the fundamental question of Part III. Let \((X, \mu)\) be any probability space equipped with a **measure-preserving transformation** \(T : X \to X\) — meaning that \(\mu(T^{-1} A) = \mu(A)\) for every measurable \(A\). Think of \(X\) as the phase space of some dynamical system, \(\mu\) as the invariant probability distribution, and \(T\) as the law evolving the system one step forward in time. An observable is a function \(f : X \to \mathbb{R}\). Its **time average** along the orbit \(x, Tx, T^2 x, \ldots\) is
+
+\[
+\frac{1}{N} \sum_{n=0}^{N-1} f(T^n x),
+\]
+
+the average value of \(f\) over the first \(N\) steps of the trajectory starting at \(x\). The foundational theorem of ergodic theory, proved by Birkhoff in 1931, is that this time average converges almost everywhere to the **space average** \(\int_X f\, d\mu\) — the average of \(f\) over the whole phase space at once — provided \(f \in L^1\) and the system is ergodic (meaning \(T\) cannot be decomposed into two independently evolving sub-systems).
+
+Birkhoff's theorem is a theorem about the linear sequence \(\{n\}\). Now ask: what if we average along the polynomial sequence \(\{n^2\}\) instead?
+
+\[
+\frac{1}{N} \sum_{n=1}^N f(T^{n^2} x) \xrightarrow{?} \int_X f \, d\mu \quad \mu\text{-a.e.}
+\]
+
+This question, raised by Furstenberg in the 1970s and resolved by Bourgain in 1988–1990, is the central problem of Part III. Its resolution requires building essentially the entire machinery of discrete harmonic analysis from scratch, because the ergodic-theory tools that work for \(\{n\}\) are genuinely powerless for \(\{n^2\}\).
+
+## Why Ergodic Theory Alone Is Not Enough
+
+Birkhoff's proof of the linear case can be broken into two steps. First, the mean ergodic theorem (von Neumann, 1932) proves that the averages converge in \(L^2\)-norm using only Hilbert space methods — the key fact is that the averaging operator \((1/N)\sum_{n=0}^{N-1} U^n\) converges strongly to the projection onto the fixed subspace of the unitary operator \(U = U_T\). Second, pointwise almost everywhere convergence is upgraded from \(L^2\)-norm convergence via a maximal inequality: if the maximal function \(f^*(x) = \sup_{N \geq 1} (1/N)\sum |f(T^n x)|\) satisfies \(\|f^*\|_{L^1_w} \lesssim \|f\|_{L^1}\), then a density argument transfers convergence on a dense class to convergence everywhere.
+
+Both steps depend on the specific structure of the sequence \(\{n\}\). The mean ergodic theorem for the linear case works because \(U^n\) runs uniformly through all integers, and its Cesàro averages converge. For the polynomial case \(\{n^2\}\), the spectral measures are the same (the spectrum of \(U\) has not changed), but the weights \(n \mapsto n^2\) destroy the uniform density that makes the Cesàro argument work. The maximal inequality for the linear case works because the sets \(\{0, 1, \ldots, N-1\}\) are intervals. For the polynomial case, the sets \(\{1^2, 2^2, \ldots, N^2\}\) have arbitrarily large gaps, and the interval geometry is gone.
+
+What is left is a purely **arithmetic** question: can the exponential sums \((1/N)\sum_{n=1}^N e^{2\pi i n^2 \alpha}\) — which are the Fourier coefficients of the averaging operator in the frequency domain — be controlled uniformly over all \(\alpha \in [0,1] = \hat{\mathbb{Z}}\)? The answer is yes, but only by separating \([0,1]\) into two types of regions according to the arithmetic of \(\alpha\).
+
+## A First Look at the Circle Method
+
+The key insight, due to Hardy and Littlewood in the 1920s and repurposed by Bourgain for harmonic analysis in the 1980s, is the following. The exponential sum
+
+\[
+m_N(\alpha) = \frac{1}{N} \sum_{n=1}^N e^{2\pi i n^2 \alpha}
+\]
+
+has very different behavior depending on whether \(\alpha\) is **close to a rational number with a small denominator** or **far from all such rationals**. Near a rational \(\alpha \approx p/q\) with \(q\) small, the phases \(e^{2\pi i n^2 \alpha}\) repeat approximately with period \(q\) — so the sum does not decay: \(|m_N(p/q)| \approx q^{-1/2}\), which can be close to 1 for small \(q\). Far from all rationals with small denominator, the phases \(e^{2\pi i n^2 \alpha}\) are "pseudo-random" in the sense that they point in nearly uniformly distributed directions on the unit circle, and the sum decays: \(|m_N(\alpha)| \lesssim N^{-1/4+\varepsilon} \to 0\).
+
+The **Hardy-Littlewood circle method** exploits this dichotomy by decomposing the frequency domain \([0,1] = \hat{\mathbb{Z}}\) into:
+- **Major arcs** \(\mathfrak{M}\): small intervals around each rational \(p/q\) with \(q \leq N^{1/2}\). These are controlled by classical **Gauss sums** — finite exponential sums modulo \(q\) that can be evaluated explicitly and satisfy the square-root cancellation \(|G(p,q)| \leq \sqrt{q}\).
+- **Minor arcs** \(\mathfrak{m}\): the complement — all \(\alpha\) far from rationals with small denominator. These are controlled by **Weyl's inequality**, which proves that the sum is small using a differencing argument.
+
+This dichotomy is the discrete harmonic analysis analogue of the broad/narrow decomposition in Chapter 11. In Part II, functions with Fourier support spread across many transversal caps of the sphere could be handled by the multilinear Kakeya inequality; functions concentrated near a single cap required a separate "narrow" analysis. In Part III, frequencies near rational points (major arcs) require the Gauss sum analysis; frequencies far from rationals (minor arcs) require the Weyl/van der Corput analysis. The two decompositions are cousins in spirit, and both reflect the same principle: **split the frequency domain into a structured region and a pseudo-random region, and handle each by a different method**.
+
+## The Van der Corput Connection
+
+The analogy between Part II and Part III runs deeper at the level of proof technique. The van der Corput lemma (§10.2) bounds an oscillatory integral \(\int e^{i\phi(t)} a(t)\, dt\) when the phase \(\phi\) has nonzero derivative, by integrating by parts: the faster \(\phi'\) varies, the more cancellation. Weyl's inequality, which is the key tool on the minor arcs, bounds an exponential sum \(\sum_{n=1}^N e^{2\pi i n^2 \alpha}\) when \(\alpha\) is far from rationals, by a **differencing** argument: squaring the sum gives \(\sum_h r(h) e^{2\pi i h \cdot 2n\alpha}\), reducing the degree-2 phase to a degree-1 phase in the new variable, which is then controlled by the geometric series bound for the linear case.
+
+Both are instances of the same philosophical move: reduce the degree of the oscillating phase by one step of differentiation (continuous) or differencing (discrete), converting a hard oscillatory sum into an easier one. For degree \(d\), iterating \(d-1\) times reduces to the linear case, where the bound is trivial. This is precisely how the van der Corput lemma, iterated twice, gives bounds on oscillatory integrals with oscillating second derivatives — and why both tools are needed at the same moments in the respective theories.
+
+## What Changes: A Comparison
+
+The shift from geometric to discrete harmonic analysis is a change in which mathematical structures are primary:
+
+| | Geometric HA (Part II) | Discrete HA (Part III) |
+|---|---|---|
+| **Group** | \(\mathbb{R}^n\), self-dual under Pontryagin duality | \(\mathbb{Z}^n\), with dual \(\hat{\mathbb{Z}}^n = \mathbb{T}^n\) |
+| **Key geometric object** | Tube \(T_\delta^e\): cylinder \(1 \times \delta^{n-1}\) | Polynomial image \(\{P(k) : k \in \mathbb{Z}\} \subset \mathbb{Z}\) |
+| **Key analytic tool** | Oscillatory integrals \(\int e^{i\phi} a\, dt\) | Exponential sums \(\sum e^{2\pi i P(n)\alpha}\) |
+| **Frequency decomposition** | Wave packets; broad/narrow split | Major arcs (near rationals); minor arcs |
+| **Cancellation lemma** | Van der Corput (continuous differencing) | Weyl's inequality (discrete differencing) |
+| **Structured region** | Broad part: many transversal caps | Major arcs: rational \(p/q\), small \(q\) |
+| **Random region** | Narrow part: concentrated in one cap | Minor arcs: far from all small-denom. rationals |
+| **Structure tool** | Multilinear Kakeya, Loomis-Whitney | Gauss sums, Dirichlet approximation |
+| **Randomness tool** | Broad-narrow bootstrap, induction-on-scales | Weyl differencing, circle method |
+| **Main theorem** | Wang-Zahl: Kakeya in \(\mathbb{R}^3\) (2024) | Bourgain: polynomial ergodic theorem (1988) |
+
+The diagram below maps the full three-part landscape.
+
+![Three-part conceptual map of harmonic analysis: Part II (geometric HA — tubes, restriction, Kakeya) on the left connects via van der Corput ↔ Weyl, wave packets ↔ major/minor arcs, and BSG ↔ Gauss sums to Part III (discrete HA — polynomial sequences, circle method, Bourgain) on the right; PMATH 457 (Birkhoff, Furstenberg, Szemerédi) feeds into Part III from below](/pics/pmath833/discrete-tikz-bridge.svg)
+
+---
+
+# Part III: Discrete Harmonic Analysis and the Polynomial Ergodic Theory
+
+*These notes draw on Ben Krause, [Discrete Analogues in Harmonic Analysis: Bourgain, Stein, and Beyond](https://bookstore.ams.org/gsm-224) (AMS Graduate Studies in Mathematics, Vol. 224, 2022), recommended by Terence Tao. The primary sources are the original papers of J. Bourgain (1988–1990) and E. M. Stein and S. Wainger (2001). Readers familiar with PMATH 457 (Topological Dynamics and Ergodic Theory) will recognize several themes, but Part III is written to be self-contained: all ergodic-theory background is developed here from first principles.*
+
+## Chapter 14: The Polynomial Ergodic Problem
+
+### 14.1 Measure-Preserving Systems and Time Averages
+
+We begin by introducing the objects of ergodic theory from scratch. The setting is a **probability space** \((X, \mathcal{B}, \mu)\): a set \(X\) equipped with a \(\sigma\)-algebra \(\mathcal{B}\) of measurable subsets and a probability measure \(\mu(X) = 1\). A function \(T : X \to X\) is **measure-preserving** if \(\mu(T^{-1}A) = \mu(A)\) for every \(A \in \mathcal{B}\).
+
+<div class="definition">
+<strong>Definition 14.1.1 (Measure-Preserving System).</strong> A <em>measure-preserving system</em> (or <em>pmp system</em>) is a quadruple \((X, \mathcal{B}, \mu, T)\) where \((X, \mathcal{B}, \mu)\) is a probability space and \(T : X \to X\) is a measurable, measure-preserving map. The system is <em>ergodic</em> if every \(T\)-invariant measurable set has measure 0 or 1: if \(T^{-1}A = A\) then \(\mu(A) \in \{0,1\}\).
+</div>
+
+The measure-preservation condition \(\mu(T^{-1}A) = \mu(A)\) is a constraint on how \(T\) shuffles the space: no region can gain or lose probability mass under the dynamics. Ergodicity is the condition that \(T\) has no non-trivial invariant subsets — the system cannot be decomposed into two independently evolving parts.
+
+<div class="example">
+<strong>Example 14.1.2 (Irrational rotation).</strong> Let \(X = \mathbb{T} = \mathbb{R}/\mathbb{Z}\) with Lebesgue measure \(\lambda\), and \(T(x) = x + \alpha \pmod 1\) for a fixed \(\alpha \in \mathbb{R} \setminus \mathbb{Q}\). Since \(\lambda\) is rotation-invariant, \(T\) is measure-preserving. The system is ergodic: any measurable \(A\) with \(T^{-1}A = A\) must satisfy \(\hat{\mathbf{1}}_A(k) = e^{2\pi ik\alpha} \hat{\mathbf{1}}_A(k)\) for all \(k \in \mathbb{Z}\); since \(e^{2\pi ik\alpha} \neq 1\) for \(k \neq 0\) (as \(\alpha\) is irrational), all Fourier coefficients of \(\mathbf{1}_A\) for \(k \neq 0\) vanish, so \(\mathbf{1}_A\) is constant a.e.
+</div>
+
+<div class="example">
+<strong>Example 14.1.3 (Bernoulli shift).</strong> Let \(X = \{0,1\}^{\mathbb{Z}}\) with the product measure \(\mu = (\frac12 \delta_0 + \frac12 \delta_1)^{\mathbb{Z}}\) (fair coin flips indexed by \(\mathbb{Z}\)), and \(T\) the left shift \((Tx)_n = x_{n+1}\). Then \(T\) is measure-preserving and ergodic — this is the mathematical model of a memoryless random process.
+</div>
+
+The physical motivation for time averages is Boltzmann's ergodic hypothesis: for a gas molecule in a container, the long-run average of any observable \(f\) (pressure, energy, position) along the molecule's trajectory should equal the average of \(f\) over the entire phase space. Making this precise requires understanding when
+
+\[
+\frac{1}{N} \sum_{n=0}^{N-1} f(T^n x) \longrightarrow \int_X f\, d\mu
+\]
+
+holds for almost every starting point \(x \in X\).
+
+### 14.2 The Birkhoff Ergodic Theorem
+
+The foundational theorem of ergodic theory, proved by Birkhoff in 1931, resolves this question for the linear sequence \(\{n\}\).
+
+<div class="theorem">
+<strong>Theorem 14.2.1 (Birkhoff Ergodic Theorem, 1931).</strong> Let \((X, \mathcal{B}, \mu, T)\) be a pmp system and \(f \in L^1(X, \mu)\). Then the time averages
+
+\[
+A_N f(x) = \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x)
+\]
+
+converge \(\mu\)-almost everywhere to a \(T\)-invariant function \(\tilde{f} \in L^1\) with \(\int \tilde{f}\, d\mu = \int f\, d\mu\). If \(T\) is ergodic, then \(\tilde{f} = \int_X f\, d\mu\) \(\mu\)-a.e.: the time average equals the space average.
+</div>
+
+<div class="proof">
+<strong>Proof sketch.</strong> The key estimate is the <em>maximal ergodic lemma</em>: the maximal operator \(f^*(x) = \sup_{N \geq 1} A_N|f|(x)\) satisfies the weak-type bound \(\mu(\{f^* > \lambda\}) \leq \lambda^{-1}\|f\|_{L^1}\). Given this, one proves convergence as follows: for any \(\varepsilon > 0\) and any continuous \(g\), the averages \(A_N g(x)\) converge everywhere by an explicit computation (trigonometric polynomials converge by the Weyl equidistribution theorem), and the maximal inequality controls the error in approximating a general \(f \in L^1\) by such \(g\). The maximal ergodic lemma itself is proved by the "Hopf maximal inequality": for any \(n\), the set \(\{x : \max_{1 \leq k \leq n} \sum_{j=0}^{k-1} f(T^j x) > 0\}\) is controlled by integrating only over the positive part of \(f\).
+</div>
+
+The Birkhoff theorem is best appreciated through examples. For an irrational rotation \(T(x) = x + \alpha\) and \(f = \mathbf{1}_{[a,b]}\), the theorem says: for Lebesgue-almost every \(x\), the fraction of times that the orbit \(x, x+\alpha, x+2\alpha, \ldots\) falls in the interval \([a,b]\) converges to \(b - a\) — the length of the interval. In other words, the orbit equidistributes. (For this specific system, the result holds for *every* \(x\) by Weyl's equidistribution theorem, but Birkhoff's theorem works for all ergodic systems.)
+
+### 14.3 The Polynomial Question
+
+The Birkhoff theorem averages along the linear sequence \(\{n\}\). The natural sequel: does the same conclusion hold if we average along a polynomial sequence?
+
+<div class="definition">
+<strong>Definition 14.3.1.</strong> For a polynomial \(P \in \mathbb{Z}[x]\) and a pmp system \((X, \mu, T)\), the <em>polynomial ergodic average</em> is
+\[
+A_N^P f(x) = \frac{1}{N} \sum_{n=1}^N f(T^{P(n)} x).
+\]
+The <em>polynomial ergodic theorem</em> asks whether \(A_N^P f(x) \to \int_X f\, d\mu\) \(\mu\)-a.e. for all \(f \in L^p\) and all ergodic pmp systems.
+</div>
+
+The simplest nontrivial case is \(P(n) = n^2\). Here \(T^{P(n)} = T^{n^2}\) means we evaluate \(f\) not at successive iterates \(T^n x\) but at the more widely spaced iterates \(T^1 x, T^4 x, T^9 x, T^{16} x, \ldots\).
+
+**Why the Birkhoff proof fails.** Birkhoff's argument has two parts — the mean convergence and the maximal inequality — and both fail for polynomial sequences.
+
+For mean convergence, the Birkhoff proof uses the fact that \((1/N)\sum_{n=0}^{N-1} U^n\) converges strongly in \(L^2\) by the von Neumann mean ergodic theorem, which is a statement about the Cesàro averages of the unitary operator \(U = U_T\). For the polynomial case, the operator in question is \((1/N)\sum_{n=1}^N U^{n^2}\), and the Cesàro-type convergence requires knowing how the exponential sums \((1/N)\sum_{n=1}^N e^{2\pi i n^2 \alpha}\) behave for each frequency \(\alpha\) in the spectrum of \(U\). This is a number-theoretic question, not an operator-theoretic one.
+
+For the maximal inequality, Birkhoff's proof relies on covering lemmas for intervals: the set \(\{0, 1, \ldots, N-1\}\) is an interval, and any two intervals intersect in at most one interval, which makes the Vitali covering argument work. The set \(\{1, 4, 9, \ldots, N^2\}\) is not an interval. In fact, it is dramatically sparser than any interval: among the integers up to \(M\), only \(\sqrt{M}\) are perfect squares. There is no way to cover the squares efficiently by intervals of comparable size, so the maximal inequality cannot be proved by any covering lemma.
+
+**What is left: the harmonic analysis of exponential sums.** The polynomial question turns out not to be about the ergodic structure of \(T\) at all. What matters is the arithmetic of the map \(n \mapsto n^2\) on \(\mathbb{Z}\). Specifically, via a spectral reduction developed in §14.4, the problem reduces to: can we uniformly bound the exponential sums \((1/N)\sum_{n=1}^N e^{2\pi i n^2 \alpha}\) over all \(\alpha \in [0,1]\), and control how these sums oscillate as \(N\) varies? This is a question about functions on \([0,1] = \hat{\mathbb{Z}}\), not about dynamics, and it is answered by the Hardy-Littlewood circle method.
+
+### 14.4 The Spectral Reformulation
+
+The passage from the ergodic question to the harmonic analysis question goes through the **Koopman operator**. Given a pmp system \((X, \mu, T)\), define the Koopman operator \(U_T : L^2(X, \mu) \to L^2(X, \mu)\) by
+
+\[
+U_T f = f \circ T.
+\]
+
+Since \(T\) is measure-preserving, \(U_T\) is a unitary operator on \(L^2(X, \mu)\): \(\langle U_T f, U_T g \rangle = \langle f, g \rangle\). The ergodic average becomes an operator average: \(A_N^P f = (1/N)\sum_{n=1}^N U_T^{P(n)} f\).
+
+By the spectral theorem for unitary operators on a Hilbert space, for each \(f \in L^2\) there exists a positive Borel measure \(\sigma_f\) on \(\mathbb{T}\) — the **spectral measure** of \(f\) — such that
+
+\[
+\left\langle U_T^n f, f \right\rangle = \int_\mathbb{T} z^n\, d\sigma_f(z) = \widehat{\sigma_f}(n) \quad \forall\, n \in \mathbb{Z}.
+\]
+
+The spectral measure \(\sigma_f\) encodes the frequency content of the observable \(f\) relative to the dynamics \(T\): if \(\sigma_f = \delta_1\) (a point mass at 1), then \(f\) is \(T\)-invariant; if \(\sigma_f\) is Lebesgue measure, then \(f\) is "maximally mixing." The \(L^2\)-norm of the ergodic average is then
+
+\[
+\left\|\frac{1}{N}\sum_{n=1}^N U_T^{P(n)} f\right\|_{L^2}^2 = \int_\mathbb{T} \left|\frac{1}{N}\sum_{n=1}^N z^{P(n)}\right|^2 d\sigma_f(z) = \int_0^1 |m_N(\alpha)|^2\, d\sigma_f(e^{2\pi i \alpha}),
+\]
+
+where the Fourier multiplier is
+
+\[
+m_N(\alpha) = \frac{1}{N}\sum_{n=1}^N e^{2\pi i P(n)\alpha}.
+\]
+
+The ergodic average converges in \(L^2\) if and only if the multipliers \(m_N(\alpha)\) converge \(\sigma_f\)-almost everywhere. For \(P(n) = n\), \(m_N(\alpha) = (1/N)\sum_{n=1}^N e^{2\pi in\alpha}\) is a Fejér kernel, converging to \(\mathbf{1}_{\alpha=0}\). For \(P(n) = n^2\), the multiplier is an exponential sum whose behavior at each \(\alpha\) is a number-theoretic question.
+
+<div class="theorem">
+<strong>Theorem 14.4.1 (Weyl, 1916).</strong> For any \(\alpha \notin \mathbb{Q}\) and any polynomial \(P \in \mathbb{R}[x]\) of degree \(d \geq 1\) with at least one irrational non-constant coefficient,
+\[
+m_N(\alpha) = \frac{1}{N}\sum_{n=1}^N e^{2\pi i P(n)\alpha} \to 0 \quad \text{as } N \to \infty.
+\]
+</div>
+
+Weyl's theorem gives \(L^2\) convergence for "generic" systems, those whose spectral measure \(\sigma_f\) is nonatomic (charges no individual point). The hard case is **rational spectrum**: if \(\sigma_f\) has atoms at rational points \(e^{2\pi i p/q} \in \mathbb{T}\), then we need to understand \(m_N(p/q)\). This is precisely the Gauss sum analysis of §15.3.
+
+<div class="example">
+<strong>Example 14.4.2 (Irrational rotation, continued).</strong> For \(T(x) = x + \alpha\) on \(\mathbb{T}\) (irrational \(\alpha\)) and \(f(x) = e^{2\pi ikx}\), the Koopman operator acts by \(U_T f = e^{2\pi ik\alpha} f\), so \(f\) is an eigenfunction with eigenvalue \(e^{2\pi ik\alpha}\). The spectral measure is \(\sigma_f = \delta_{e^{2\pi ik\alpha}}\). For \(k \neq 0\), the eigenvalue \(e^{2\pi ik\alpha} \neq 1\) (since \(\alpha\) is irrational), and the multiplier \(m_N(k\alpha)\) at this frequency tends to 0 by Weyl. So \(A_N^{n^2} f \to 0 = \int f\, d\mu\) in \(L^2\). Since the characters form a basis of \(L^2(\mathbb{T})\), the polynomial ergodic theorem holds for irrational rotations — via Weyl's theorem alone, with no circle method needed.
+</div>
+
+### 14.5 The Genuine Difficulty: Almost Everywhere Convergence
+
+Mean (i.e., \(L^2\)-norm) convergence follows from Weyl for all systems with continuous spectrum, and from the Gauss sum analysis for rational spectrum. Almost everywhere convergence is a fundamentally harder problem.
+
+Almost everywhere convergence for a sequence of operators \(A_N\) is controlled not by the operators themselves but by their **maximal function**: \(A^* f(x) = \sup_{N \geq 1} |A_N f(x)|\). By Banach's principle — a general functional analysis fact — if the maximal function \(f \mapsto A^* f\) is bounded on \(L^2\), and if \(A_N f \to \ell\) in \(L^2\) for functions in some dense class (say, all bounded functions), then \(A_N f(x) \to \ell(x)\) for \(\mu\)-a.e. \(x\) and all \(f \in L^2\). So the ergodic theorem reduces to two tasks: (a) \(L^2\) convergence on a dense class, and (b) the \(L^2 \to L^2\) bound on \(A^*\).
+
+For the Birkhoff theorem (linear sequence), task (b) is the maximal ergodic lemma and follows from interval covering arguments. For the polynomial case, (b) is equivalent via the **transference principle** (Chapter 17) to an \(\ell^2(\mathbb{Z})\) bound for the discrete maximal operator
+
+\[
+\mathcal{M}_P f(n) = \sup_{N \geq 1} \left|\frac{1}{N}\sum_{k=1}^N f(n + P(k))\right|.
+\]
+
+And this \(\ell^2\) bound is proved by the circle method. The key is to bound not just \(\|m_N\|_{L^\infty(\mathbb{T})} \leq 1\) (which is trivial), but the **oscillation** of \(m_N(\alpha)\) as \(N\) varies: the circle method shows that \(m_N(\alpha)\) changes slowly as \(N\) increases, with its total variation in \(N\) controlled by the Gauss sum on major arcs and by the Weyl bound on minor arcs.
+
+![Polynomial orbit equidistribution: top row shows the linear orbit \{nα mod 1\} for n=1,…,20 spreading uniformly; bottom row shows the quadratic orbit \{n²α mod 1\}, also equidistributed (Weyl 1916) but requiring the circle method for pointwise a.e. convergence — standard covering arguments fail because the squares are sparse](/pics/pmath833/discrete-tikz-polynomial-orbit.svg)
+
+### 14.6 Statement of Bourgain's Theorem
+
+<div class="theorem">
+<strong>Theorem 14.6.1 (Bourgain, 1988–1990).</strong> Let \((X, \mathcal{B}, \mu, T)\) be a pmp system, \(P \in \mathbb{Z}[x]\) a polynomial of degree \(d \geq 1\), and \(f \in L^p(X, \mu)\) for some \(p > 1\). Then the polynomial ergodic averages
+
+\[
+A_N^P f(x) = \frac{1}{N}\sum_{n=1}^N f(T^{P(n)} x) \longrightarrow \int_X f \, d\mu \quad \mu\text{-a.e.}
+\]
+
+For \(p = 1\), the averages can diverge even for the simplest pmp systems.
+</div>
+
+The theorem is sharp at \(p = 1\): there exist \(f \in L^1\) and measure-preserving \(T\) for which \((1/N)\sum f(T^{n^2} x)\) diverges on a set of positive measure. The condition \(p > 1\) is essential.
+
+The proof strategy, developed across Chapters 15–17:
+
+1. **Transference** (§17.1): Reduce the ergodic theorem to an \(\ell^2(\mathbb{Z})\) bound via the Calderón transference principle — any \(\ell^p(\mathbb{Z})\) bound for the discrete averaging operator on \(\mathbb{Z}\) transfers to the corresponding \(L^p(X,\mu)\) bound uniformly over all pmp systems.
+2. **Oscillation inequality** (§17.2): Reduce the \(\ell^2\) maximal bound to controlling the **oscillation** \(\|\sum_j |A_{N_{j+1}}^P f - A_{N_j}^P f|^2\|_{\ell^2}^{1/2} \lesssim \|f\|_{\ell^2}\) along a lacunary sequence \(N_j = 2^j\).
+3. **Circle method** (Chapter 15): Decompose \([0,1] = \mathfrak{M} \cup \mathfrak{m}\) into major and minor arcs and prove the oscillation bound on each piece.
+4. **Gauss sums** (§15.3): On major arcs centered at \(p/q\), the multiplier difference \(m_{N_{j+1}}(\alpha) - m_{N_j}(\alpha)\) is approximated by a Gauss sum times a smooth factor; the bound \(|G(p,q)| \leq \sqrt{q}\) gives the required decay.
+5. **Weyl's inequality** (§15.4): On minor arcs, \(|m_N(\alpha)| \lesssim N^{-\delta_d}(\log N)^C \to 0\) for a positive \(\delta_d\) depending on the degree; the oscillation is then at most this bound, and summing over \(j\) gives convergence.
+
+---
+
+## Chapter 15: The Hardy-Littlewood Circle Method
+
+### 15.1 Fourier Analysis on \(\mathbb{Z}\) and \(\mathbb{T}\)
+
+Discrete harmonic analysis begins with the Fourier theory of the integer lattice \(\mathbb{Z}\). We develop the necessary framework from scratch; readers who have studied Part I will recognise the abstract formalism of Pontryagin duality from Chapter 6, but that chapter is not a prerequisite.
+
+The characters of the abelian group \(\mathbb{Z}\) are the exponential maps \(e_\alpha : n \mapsto e^{2\pi i n\alpha}\), indexed by the frequency \(\alpha \in \mathbb{T} = \mathbb{R}/\mathbb{Z}\). They separate points of \(\mathbb{Z}\) and span \(\ell^2(\mathbb{Z})\). For \(f \in \ell^1(\mathbb{Z})\), the **Fourier transform** is
+
+\[
+\hat{f}(\alpha) = \sum_{n \in \mathbb{Z}} f(n)\, e^{-2\pi i n \alpha}, \quad \alpha \in \mathbb{T}.
+\]
+
+The function \(\hat{f}\) is continuous on \(\mathbb{T}\) with \(\|\hat{f}\|_{L^\infty(\mathbb{T})} \leq \|f\|_{\ell^1(\mathbb{Z})}\). The fundamental orthogonality relation \(\int_0^1 e^{2\pi i(n-m)\alpha}\,d\alpha = \mathbf{1}_{n=m}\) gives the Fourier inversion formula: every \(f\) can be recovered from its Fourier transform by
+
+\[
+f(n) = \int_0^1 \hat{f}(\alpha)\,e^{2\pi i n \alpha}\,d\alpha, \quad n \in \mathbb{Z}.
+\]
+
+<div class="theorem">
+<strong>Theorem 15.1.1 (Plancherel for \(\mathbb{Z}\)).</strong> The Fourier transform extends to a unitary isometry \(\hat{\phantom{f}} : \ell^2(\mathbb{Z}) \xrightarrow{\;\sim\;} L^2(\mathbb{T})\), satisfying \(\|f\|_{\ell^2(\mathbb{Z})}^2 = \|\hat{f}\|_{L^2(\mathbb{T})}^2\).
+</div>
+
+<div class="proof">
+<strong>Proof.</strong> For \(f, g \in \ell^1(\mathbb{Z}) \cap \ell^2(\mathbb{Z})\), Fubini and orthogonality give
+\[
+\langle \hat{f}, \hat{g} \rangle_{L^2(\mathbb{T})} = \int_0^1 \hat{f}(\alpha)\overline{\hat{g}(\alpha)}\,d\alpha = \sum_{n,m} f(n)\overline{g(m)} \int_0^1 e^{2\pi i(n-m)\alpha}\,d\alpha = \sum_n f(n)\overline{g(n)} = \langle f, g\rangle_{\ell^2(\mathbb{Z})}.
+\]
+Setting \(g = f\) gives \(\|\hat{f}\|_{L^2} = \|f\|_{\ell^2}\). Since \(\ell^1(\mathbb{Z}) \cap \ell^2(\mathbb{Z})\) is dense in \(\ell^2(\mathbb{Z})\), the isometry extends uniquely to all of \(\ell^2(\mathbb{Z})\).
+</div>
+
+For a **convolution operator** \(T_K f = K * f\) with kernel \(K \in \ell^1(\mathbb{Z})\), the Fourier transform diagonalizes: \(\widehat{T_K f}(\alpha) = \hat{K}(\alpha)\,\hat{f}(\alpha)\). Boundedness of \(T_K\) on \(\ell^2(\mathbb{Z})\) is equivalent to \(\hat{K} \in L^\infty(\mathbb{T})\), with \(\|T_K\|_{\ell^2 \to \ell^2} = \|\hat{K}\|_{L^\infty(\mathbb{T})}\).
+
+The novel feature of discrete harmonic analysis is that the Fourier multipliers arising from arithmetically defined kernels are **not smooth on \(\mathbb{T}\)**. The multiplier \(m_N(\alpha) = (1/N)\sum_{n=1}^N e^{2\pi i n^2 \alpha}\) oscillates wildly near rational points; near \(\alpha = p/q\) with small denominator \(q\), it concentrates mass controlled by the Gauss sum \(G(p, q) = \sum_{n=0}^{q-1} e^{2\pi i n^2 p/q}\). Far from rationals, the phases cancel. This wild arithmetic behavior is not a pathology to be avoided but the key structure to exploit — the circle method is the systematic tool for turning it into a proof.
+
+### 15.2 Dirichlet Approximation and the Major/Minor Arc Decomposition
+
+<div class="theorem">
+<strong>Theorem 15.2.1 (Dirichlet's Approximation Theorem).</strong> For any \(\alpha \in \mathbb{R}\) and \(Q \geq 1\), there exist integers \(p, q\) with \(1 \leq q \leq Q\) and \(|\alpha - p/q| \leq 1/(qQ)\).
+</div>
+
+<div class="proof">
+<strong>Proof (Pigeonhole).</strong> The \(Q+1\) fractional parts \(\{0, \{\alpha\}, \{2\alpha\}, \ldots, \{Q\alpha\}\}\) lie in \([0,1)\). By pigeonhole, two of them — say \(\{m\alpha\}\) and \(\{n\alpha\}\) with \(0 \leq n < m \leq Q\) — fall in the same interval \([j/Q, (j+1)/Q)\). Then \(|(m-n)\alpha - r| < 1/Q\) for some integer \(r\). Setting \(q = m-n\) and \(p = r\) gives \(|\alpha - p/q| < 1/(qQ)\).
+</div>
+
+Fix a large parameter \(N\). The **major arcs** \(\mathfrak{M}\) are the intervals
+
+\[
+\mathfrak{M}_{p/q} = \left\{\alpha \in [0,1] : \left|\alpha - \frac{p}{q}\right| \leq N^{-1/2}\right\}
+\]
+
+for each rational \(p/q\) in lowest terms with \(1 \leq q \leq N^{1/2}\). The **minor arcs** \(\mathfrak{m} = [0,1] \setminus \bigcup_{p/q} \mathfrak{M}_{p/q}\) are the complement. The total measure of all major arcs is \(O(N^{-1/2} \cdot N^{1/2} \cdot N^{1/2}) = O(N^{1/2}/N) \to 0\): they cover a vanishingly small fraction of \([0,1]\), yet capture all the arithmetic content.
+
+The intuition: \(m_N(\alpha) = (1/N)\sum_{n=1}^N e^{2\pi i n^2\alpha}\) achieves values near 1 only near rationals \(p/q\), where all phases \(e^{2\pi i n^2 p/q}\) repeat with period \(q\) and partially reinforce. Far from rationals, the phases are pseudo-random and cancel substantially.
+
+![Circle method: the unit interval [0,1] decomposed into major arcs (dark regions near rationals p/q of small denominator) and minor arcs (pale background); major arcs support the Gauss sum approximation, minor arcs are controlled by Weyl's inequality](/pics/pmath833/discrete-tikz-circle-method.svg)
+
+### 15.3 Gauss Sums and Major Arc Analysis
+
+The central object is the **complete Gauss sum** \(G(a, q) = \sum_{n=0}^{q-1} e^{2\pi i a n^2/q}\).
+
+<div class="definition">
+<strong>Definition 15.3.1.</strong> The Gauss sum \(G(a,q)\) satisfies: (i) \(|G(a,q)| \leq \sqrt{q}\) for all \(a, q\) (square-root cancellation); (ii) \(G(a,q) = \varepsilon_q \sqrt{q}\) when \(\gcd(a,q) = 1\) and \(q\) is odd, where \(\varepsilon_q\) is an explicit 8th root of unity; (iii) \(G(a,q) = 0\) when \(q\) is even and \(a\) is odd.
+</div>
+
+The square-root bound reflects the pseudo-random distribution of quadratic residues mod \(q\): the values \(\{n^2 \bmod q\}\) are equidistributed enough to produce cancellation of order \(\sqrt{q}\), far below the trivial bound of \(q\).
+
+For the major arc analysis, write \(\alpha = p/q + \beta\) with \(|\beta| \leq N^{-1/2}\) and decompose \(n = qm + r\):
+
+<div class="theorem">
+<strong>Theorem 15.3.2 (Major Arc Approximation).</strong> For \(\alpha = p/q + \beta\) with \(\gcd(p,q) = 1\), \(q \leq N^{1/2}\), and \(|\beta| \leq N^{-1/2}\):
+\[
+m_N(\alpha) = \frac{G(p,q)}{q} \cdot \frac{1}{N}\sum_{n=1}^N e^{2\pi i n^2 \beta} + O(N^{-1/2}).
+\]
+In particular, \(|m_N(\alpha)| \leq q^{-1/2} + O(N^{-1/2})\).
+</div>
+
+The bound \(|m_N| \lesssim q^{-1/2}\) on the major arc centered at \(p/q\) decays as \(q\) grows. At \(q = 1\) (near \(\alpha = 0\)), this gives the trivial bound of 1. At \(q = 2\), it gives \(1/\sqrt{2}\). The contribution from large-\(q\) major arcs is small.
+
+### 15.4 Weyl's Inequality: Minor Arc Control
+
+On the minor arcs — where the best rational approximation to \(\alpha\) has large denominator \(q > N^{1/2}\) — the sum \(m_N(\alpha)\) is controlled by **Weyl's inequality**, the discrete analogue of the van der Corput lemma (§10.2). The key operation is **Weyl differencing**: square \(|\sum_{n=1}^N e^{2\pi i n^2\alpha}|^2 = \sum_h r(h) e^{2\pi i h (2\text{---})\alpha}\), reducing the degree-2 phase to a degree-1 phase in \(h\), which is bounded by \(\min(N, \|2h\alpha\|^{-1})\).
+
+<div class="theorem">
+<strong>Theorem 15.4.1 (Weyl's Inequality for Quadratic Sums).</strong> Let \(|\alpha - p/q| \leq 1/q^2\) with \(\gcd(p,q) = 1\). Then
+\[
+\left|\frac{1}{N}\sum_{n=1}^N e^{2\pi i n^2 \alpha}\right| \lesssim \left(\frac{1}{N} + \frac{1}{q} + \frac{q}{N^2}\right)^{1/2} (\log N)^{O(1)}.
+\]
+On minor arcs, where \(q > N^{1/2}\): \(\displaystyle\left|\frac{1}{N}\sum_{n=1}^N e^{2\pi i n^2\alpha}\right| \lesssim N^{-1/4}(\log N)^C \to 0.\)
+</div>
+
+<div class="remark">
+<strong>Remark 15.4.2 (van der Corput philosophy in two settings).</strong> The van der Corput lemma (§10.2) bounds \(\int_a^b e^{i\phi(t)}\,dt\) when \(|\phi'| \geq \lambda\) by integration by parts, giving \(O(\lambda^{-1})\). Weyl differencing does the same for sums: \(|S|^2 = \sum_h r(h) e^{2\pi i h \cdot (\text{linear in } n)}\), reducing to a linear sum bounded by \(\min(N, \|2h\alpha\|^{-1})\). In both cases, the key is reducing degree by one differentiation/differencing step; iterating \(d-1\) times for a degree-\(d\) polynomial reduces to the linear case, where the bound is immediate. This is the **method of Weyl differencing**, the arithmetic counterpart of van der Corput's iterated integration by parts.
+</div>
+
+### 15.5 The \(\ell^2\) Oscillation Bound
+
+<div class="theorem">
+<strong>Theorem 15.5.1 (\(\ell^2\) Oscillation Estimate).</strong> Let \(P \in \mathbb{Z}[x]\) of degree \(d \geq 1\) and \(N_j = 2^j\). Then
+\[
+\left\|\left(\sum_{j=1}^\infty |A_{N_{j+1}} f - A_{N_j} f|^2\right)^{1/2}\right\|_{\ell^2(\mathbb{Z})} \lesssim_P \|f\|_{\ell^2(\mathbb{Z})}.
+\]
+</div>
+
+The proof bounds the Fourier multiplier differences \(m_{N_{j+1}} - m_{N_j}\) on major and minor arcs separately and sums over \(j\). On major arcs near \(p/q\): the difference has magnitude \(\lesssim q^{-1/2}\) supported on a region of size \(\sim N_j^{-1/2}/q\), giving squared \(L^2\)-mass \(\sim q^{-1} N_j^{-1/2}\); summing in \(j\) (geometric series) and over \(q \leq N_j^{1/2}\) gives convergence. On minor arcs: \(|m_{N_{j+1}} - m_{N_j}| \lesssim N_j^{-1/4}(\log N_j)^C\), and the \(L^2\)-mass over the minor arc region is \(\lesssim N_j^{-1/4}(\log N_j)^C\); summing in \(j\) converges.
+
+---
+
+## Chapter 16: Discrete Maximal Functions and Radon Transforms
+
+### 16.1 The Discrete Hardy-Littlewood Maximal Function
+
+\[
+Mf(n) = \sup_{r \geq 1} \frac{1}{2r+1}\sum_{|k| \leq r} |f(n+k)|.
+\]
+
+<div class="theorem">
+<strong>Theorem 16.1.1 (Discrete Hardy-Littlewood).</strong> \(M : \ell^p(\mathbb{Z}) \to \ell^p(\mathbb{Z})\) is bounded for \(1 < p \leq \infty\), and satisfies the weak-type \((1,1)\) bound.
+</div>
+
+This follows immediately from the continuous case by identifying \(f : \mathbb{Z} \to \mathbb{C}\) with the step function \(\tilde{f} = \sum_n f(n) \mathbf{1}_{[n-1/2, n+1/2)}\) and applying the Lebesgue differentiation theorem. The interesting phenomena arise not from this simple maximal function but from maximal functions along polynomial sequences.
+
+<div class="definition">
+<strong>Definition 16.1.2 (Polynomial Maximal Function).</strong> For \(P \in \mathbb{Z}[x]\) of degree \(d \geq 1\),
+\[
+M_P f(n) = \sup_{N \geq 1} \frac{1}{N}\sum_{k=1}^N |f(n + P(k))|.
+\]
+</div>
+
+<div class="theorem">
+<strong>Theorem 16.1.3 (Bourgain, 1986).</strong> For \(P \in \mathbb{Z}[x]\) and \(p > 1\), \(\|M_P f\|_{\ell^p} \lesssim_{p,P} \|f\|_{\ell^p}\).
+</div>
+
+The proof uses the circle method: the bound reduces to \(\ell^2\) via interpolation, and the \(\ell^2\) bound follows from the \(L^\infty(\mathbb{T})\) bound on the Fourier multiplier \(m_N(\alpha)\) established in §15.5.
+
+### 16.2 Discrete Singular Integrals
+
+The **discrete Hilbert transform** is
+
+\[
+Hf(n) = \text{p.v.}\sum_{k \neq 0} \frac{f(n+k)}{k},
+\]
+
+with Fourier multiplier \(\hat{H}(\alpha) = i\pi(1 - 2\{\alpha\})\) — the discrete analogue of \(i\,\mathrm{sgn}(\xi)\).
+
+<div class="theorem">
+<strong>Theorem 16.2.1.</strong> \(H : \ell^p(\mathbb{Z}) \to \ell^p(\mathbb{Z})\) is bounded for \(1 < p < \infty\).
+</div>
+
+The proof rests on the following criterion, which we state for reference and use repeatedly in Chapters 16–18:
+
+<div class="theorem">
+<strong>Theorem 16.2.2 (Marcinkiewicz Multiplier Criterion on \(\mathbb{T}\)).</strong> Let \(m : \mathbb{T} \to \mathbb{C}\) be a bounded measurable function whose total variation on each dyadic arc \([2^{-k}, 2^{1-k}] \subset \mathbb{T}\) is uniformly bounded in \(k\). Then the convolution operator \(f \mapsto \mathcal{F}^{-1}(m \cdot \hat{f})\) is bounded on \(\ell^p(\mathbb{Z})\) for all \(1 < p < \infty\), with norm depending only on \(p\) and the Marcinkiewicz constant \(\sup_k \mathrm{Var}_{[2^{-k},2^{1-k}]} m\).
+</div>
+
+The multiplier of \(H\) is \(\hat{H}(\alpha) = i\pi(1 - 2\{\alpha\})\) (where \(\{\alpha\} \in [0,1)\) is the fractional part of \(\alpha\)), which is piecewise linear on \(\mathbb{T}\) with a single jump at \(\alpha = 0\). It is bounded and has bounded variation on each dyadic arc away from 0. The Marcinkiewicz criterion applies, giving the \(\ell^p\) bound.
+
+### 16.3 Stein-Wainger: Discrete Hilbert Transforms Along Polynomial Curves
+
+The central objects of discrete harmonic analysis are the **discrete Radon transforms along polynomial curves**:
+
+\[
+T_P f(n) = \text{p.v.}\sum_{k \neq 0} \frac{f(n + P(k))}{k},
+\]
+
+for a polynomial \(P\) with \(P(0) = 0\). For \(P(k) = k\) this is the discrete Hilbert transform. For \(P(k) = k^2\) this is the **discrete Hilbert transform along the parabola**, whose Fourier multiplier is
+
+\[
+m_P(\alpha) = \text{p.v.}\sum_{k \neq 0} \frac{e^{2\pi i k^2 \alpha}}{k}.
+\]
+
+The multiplier \(m_P\) is not smooth on \(\mathbb{T}\). Near a rational \(\alpha = p/q\), it looks like \((G_{\mathrm{odd}}(p,q)/q) \cdot \hat{H}_\mathbb{R}(\cdot)\) — a copy of the continuous Hilbert transform multiplier, scaled by the Gauss sum prefactor — and this fractal-like arithmetic structure repeats at every rational. The circle method handles this by using the Gauss sum approximation on each major arc and Weyl's inequality on minor arcs.
+
+<div class="theorem">
+<strong>Theorem 16.3.1 (Stein-Wainger, 2001).</strong> For any polynomial \(P \in \mathbb{Z}[x]\) of degree \(d \geq 1\) with \(P(0) = 0\), the operator \(T_P\) extends to a bounded operator on \(\ell^p(\mathbb{Z})\) for all \(1 < p < \infty\).
+</div>
+
+The original Stein-Wainger theorem treated \(P(k) = k^2\). The general case was developed over the 1990s–2000s by Bourgain, Ionescu, Wainger, Stein, and collaborators.
+
+### 16.4 The Fourier Multiplier Analysis
+
+**Smooth truncations and the circle method.** Replace the sharp kernel \(k^{-1}\) by a smooth truncation \(\psi(k/R)/k\) and analyze \(m_{P,R}(\alpha)\) via major/minor arcs.
+
+**Major arc contribution.** Near \(\alpha = p/q\) with \(q \leq R^{1/2}\) and \(|\alpha - p/q| \leq R^{-1/2}/q\):
+
+\[
+m_{P,R}\!\left(\frac{p}{q} + \beta\right) \approx \frac{G_{\mathrm{trunc}}(p,q)}{q} \cdot \int_{-\infty}^\infty \frac{e^{2\pi i t^2 \beta}}{t}\,\psi\!\left(\frac{t}{R^{1/2}}\right) dt.
+\]
+
+The integral is bounded (it is the Fourier transform of the smooth Hilbert transform along the parabola on \(\mathbb{R}\)). The Gauss sum prefactor gives \(|m_{P,R}(\text{near }p/q)| \lesssim q^{-1/2} \leq 1\).
+
+**Minor arc contribution.** Abel summation plus Weyl's inequality: write \(m_{P,R}(\alpha) = \sum_{k=1}^R S_k(\alpha)(k^{-1} - (k+1)^{-1}) \cdot (\text{smooth})\) where \(S_k = \sum_{n=1}^k e^{2\pi i n^2 \alpha}\). On minor arcs, \(|S_k| \lesssim k^{1/2} q^{-1/4}\) (by Weyl), so the sum is \(O(1)\), giving \(\|m_P\|_{L^\infty(\mathbb{T})} \lesssim 1\). The \(\ell^2\) bound for \(T_P\) follows immediately from Plancherel (Theorem 15.1.1). The \(\ell^p\) extension for \(p \neq 2\) then follows from the Marcinkiewicz criterion (Theorem 16.2.2): the same circle method decomposition that bounds \(|m_P|\) also controls the variation of \(m_P\) on dyadic arcs of \(\mathbb{T}\), because near each rational \(p/q\) the multiplier is approximated by a Gauss sum times a smooth factor (which has bounded variation), and on minor arcs the Weyl decay gives bounded variation directly from the Weyl partial summation argument.
+
+---
+
+## Chapter 17: Pointwise Convergence of Polynomial Ergodic Averages
+
+### 17.1 The Transference Principle
+
+The bridge between \(\ell^p(\mathbb{Z})\) bounds for discrete averaging operators and almost everywhere convergence in ergodic systems is Calderón's **transference principle** (1968).
+
+<div class="theorem">
+<strong>Theorem 17.1.1 (Calderón Transference Principle).</strong> Let \(K : \mathbb{Z} \to \mathbb{C}\) be a finitely supported kernel and \(T_K f(n) = \sum_m K(n-m) f(m)\) the convolution operator on \(\ell^p(\mathbb{Z})\). For any measure-preserving system \((X, \mu, T)\) and \(f \in L^p(X)\), the transferred operator \(\tilde{T}_K f(x) = \sum_m K(m) f(T^{-m}x)\) satisfies
+\[
+\|\tilde{T}_K f\|_{L^p(X)} \leq \|T_K\|_{\ell^p \to \ell^p} \cdot \|f\|_{L^p(X)}.
+\]
+</div>
+
+<div class="proof">
+<strong>Proof sketch.</strong> Let \(F_n(x) = f(T^n x)\), so \(\|F_n\|_{L^p} = \|f\|_{L^p}\) (measure-preservation). Then \(\tilde{T}_K f(x) = T_K \mathbf{F}(0)(x)\) where \(\mathbf{F} : \mathbb{Z} \to L^p(X)\) is \(\mathbf{F}(n) = F_n\). Applying the \(\ell^p\) bound for \(T_K\) in the Banach space \(L^p(X)\) and taking \(L^p(X)\) norms gives the result.
+</div>
+
+The transference principle reduces Bourgain's ergodic theorem to: is \(\mathcal{M}_P f(n) = \sup_{N} |(1/N)\sum_{k=1}^N f(n+P(k))|\) bounded on \(\ell^2(\mathbb{Z})\)?
+
+![Transference principle: the commutative diagram shows that ℓ²(ℤ)-boundedness of the discrete maximal operator M_P transfers via Calderón's principle to L²(X,μ)-boundedness of the ergodic maximal operator A*, uniformly over all measure-preserving systems; combined with L² convergence from Weyl's theorem, Banach's principle gives a.e. convergence](/pics/pmath833/discrete-tikz-transference.svg)
+
+### 17.2 Oscillation Inequalities
+
+Almost everywhere convergence does not follow from the trivial \(\ell^2\) bound on \(A_N\) (which is 1) but from control of the **oscillation** of the sequence \((A_N f)_{N \geq 1}\).
+
+<div class="definition">
+<strong>Definition 17.2.1.</strong> The <em>oscillation seminorm</em> along the lacunary sequence \(N_j = 2^j\) is
+\[
+O(A_\bullet f)(x) = \left(\sum_{j=1}^\infty \sup_{N_j \leq N < N_{j+1}} |A_N f(x) - A_{N_j} f(x)|^2\right)^{1/2}.
+\]
+</div>
+
+<div class="theorem">
+<strong>Theorem 17.2.2 (Oscillation implies a.e. convergence).</strong> If \(f \mapsto O(A_\bullet f)\) is bounded on \(L^2(X,\mu)\), and \(A_N f \to \int f \, d\mu\) in \(L^2\) for all bounded \(f\), then \(A_N f(x) \to \int f \, d\mu\) for \(\mu\)-a.e.\ \(x\) and all \(f \in L^2\).
+</div>
+
+By transference, \(L^2\)-boundedness of \(f \mapsto O(A_\bullet f)\) is equivalent to the \(\ell^2(\mathbb{Z})\) oscillation bound of Theorem 15.5.1.
+
+### 17.3 Proof of Bourgain's Theorem
+
+**Step 1: \(L^2\) convergence.** For \(g = f - \int f\,d\mu\), the spectral measure \(\sigma_g\) satisfies \(\sigma_g(\{1\}) = 0\). By the spectral theorem, \(\|A_N g\|_{L^2}^2 = \int_\mathbb{T} |m_N(\alpha)|^2\,d\sigma_g(\alpha)\). Since \(m_N(\alpha) \to 0\) for each \(\alpha \neq 0\) (Weyl) and \(|m_N| \leq 1\), dominated convergence gives \(\|A_N g\|_{L^2} \to 0\).
+
+**Step 2: \(\ell^2\) oscillation bound.** By the circle method (Theorem 15.5.1), the discrete oscillation operator is \(\ell^2(\mathbb{Z})\)-bounded. By transference (Theorem 17.1.1), the ergodic oscillation operator is \(L^2(X)\)-bounded uniformly over all measure-preserving systems.
+
+**Step 3: Banach's principle.** The \(L^2\) convergence on bounded functions (Step 1) and the \(L^2\)-boundedness of the oscillation (Step 2) together imply a.e. convergence for all \(f \in L^2\), by Theorem 17.2.2. \(\square\)
+
+For general degree-\(d\) polynomial \(P\), the same argument applies with Weyl's inequality iterated \(d-1\) times. The key estimate — \(|m_N(\alpha)| \lesssim N^{-\delta_d}\) on minor arcs for some \(\delta_d > 0\) — holds for all degrees \(d\), with \(\delta_d\) shrinking as \(d\) grows.
+
+### 17.4 Polynomial Szemerédi and Further Consequences
+
+Bourgain's theorem sits within a broader program connecting ergodic theory, additive combinatorics, and harmonic analysis. Two directions connect directly to PMATH 457.
+
+**Polynomial Szemerédi.** Furstenberg's multiple recurrence theorem (PMATH 457, §8B.3) implies Szemerédi's theorem: any set \(A \subseteq \mathbb{Z}\) with positive upper density contains arithmetic progressions of every length. The polynomial generalization — proved by Bergelson and Leibman (1996) — asserts that for any polynomials \(P_1, \ldots, P_k \in \mathbb{Z}[x]\) with \(P_i(0) = 0\), any positive-density set contains a **polynomial progression** \(\{a, a+P_1(n), \ldots, a+P_k(n)\}\) for some \(a \in \mathbb{Z}\), \(n \geq 1\). The quantitative version of this result requires the harmonic analysis machinery of Part III.
+
+**Host-Kra theory and Gowers norms.** The characteristic factors for multiple ergodic averages \((1/N)\sum_{n=1}^N \prod_j f_j(T^{P_j(n)} x)\) were identified by Host-Kra (2005) as **nilsystems** — systems \(G/\Gamma\) for nilpotent Lie groups \(G\). Fourier analysis on nilsystems combines the circle method of Chapter 15 with the representation theory of Chapter 4, a concrete instance of the three-part synthesis traced in these notes. The **Gowers norms** \(\|f\|_{U^k}\) mentioned in PMATH 457 (§8B.4's legacy remark) are the quantitative version of Host-Kra characteristic factors; bounding them via exponential sum estimates is precisely where the circle method meets additive combinatorics.
+
+---
+
+## Chapter 18: Maximally Modulated Singular Integrals
+
+### 18.1 The Carleson Operator and Its Discrete Analogue
+
+Carleson's theorem (1966) asserts that the Fourier series of every \(L^2\) function on \(\mathbb{T}\) converges almost everywhere. In operator language, the **Carleson operator** \(\mathcal{C} f(x) = \sup_{N} |\sum_{|n|\leq N} \hat{f}(n)e^{2\pi inx}|\) is bounded on \(L^2(\mathbb{T})\). Via the Hilbert transform, this is equivalent to boundedness of the **maximally modulated Hilbert transform** on \(\mathbb{R}\):
+
+\[
+\mathcal{H}^* f(x) = \sup_{\lambda \in \mathbb{R}} \left|\,\text{p.v.}\int_\mathbb{R} \frac{f(x-t)}{t}\,e^{2\pi i \lambda t}\,dt\right|.
+\]
+
+The **discrete Carleson operator** is
+
+\[
+\mathcal{C}_\mathbb{Z} f(n) = \sup_{\alpha \in [0,1]} \left|\sum_{k \neq 0} \frac{f(n+k)}{k}\,e^{2\pi i k\alpha}\right|.
+\]
+
+<div class="theorem">
+<strong>Theorem 18.1.1 (Discrete Carleson Theorem, Stein-Wainger 2001).</strong> \(\mathcal{C}_\mathbb{Z} : \ell^p(\mathbb{Z}) \to \ell^p(\mathbb{Z})\) is bounded for \(1 < p < \infty\).
+</div>
+
+### 18.2 The Stein-Wainger Theorem for Maximally Modulated Operators
+
+<div class="theorem">
+<strong>Theorem 18.2.1 (Stein-Wainger, 2001).</strong> Let \(P \in \mathbb{Z}[x]\) with \(P(0) = 0\) and \(\deg P \geq 2\). The maximally modulated discrete Radon transform
+
+\[
+T_P^* f(n) = \sup_{\lambda \in \mathbb{R}} \left|\,\text{p.v.}\sum_{k \neq 0} \frac{f(n+P(k))}{k}\,e^{2\pi i \lambda k}\right|
+\]
+
+is bounded on \(\ell^p(\mathbb{Z})\) for \(1 < p < \infty\).
+</div>
+
+The uniform bound over \(\lambda\) is the essential content: it says that modulating the kernel \(1/k\) by any linear frequency \(e^{2\pi i \lambda k}\) does not destroy the cancellation. For the modulated operator \(T_P^\lambda\), the Fourier multiplier becomes \(m_P(\beta + \lambda)\) — a shift of the original multiplier by \(\lambda\). Taking the supremum over \(\lambda\) is controlled via a Whitney-type decomposition of the \((\lambda, \beta)\)-plane, where the circle method is applied simultaneously across all shifts.
+
+### 18.3 The Multilinear Structure and the Part II Connection
+
+The techniques of Part III converge with those of Part II at the level of multilinear theory. Krause's work establishes bounds for the **multi-frequency maximal function**
+
+\[
+M^{(d)} f(n) = \sup_{\lambda_1,\ldots,\lambda_d} \sup_{N \geq 1} \left|\frac{1}{N}\sum_{m=1}^N f(n+m)\,e^{2\pi i(\lambda_1 m + \cdots + \lambda_d m^d)}\right|,
+\]
+
+which combines: (1) the circle method decomposition of each polynomial modulation (Chapter 15), and (2) a multilinear Kakeya-type inequality for the frequency parameters \((\lambda_1, \ldots, \lambda_d) \in \mathbb{T}^d\). This parallels Part II: where Chapter 11 uses transversal tubes in physical \(\mathbb{R}^n\) to control geometric integrals, the discrete theory uses transversal frequencies in \(\mathbb{T}^d\) to control oscillatory sums. The Loomis-Whitney inequality (Theorem 11.2a) appears in both contexts.
+
+<div class="remark">
+<strong>Remark 18.3.1 (Bourgain as common ancestor).</strong> The two main threads of Part III — polynomial ergodic theory and maximally modulated singular integrals — both trace to Bourgain's work from the 1980s and 1990s. The same mathematician who proved the first nontrivial bound on Kakeya dimension in \(\mathbb{R}^n\) (Chapter 13, Table 13.1, Bourgain 1991) also proved the polynomial ergodic theorem (Chapter 14) and pioneered the circle method in harmonic analysis. The arithmetic combinatorics that entered the Kakeya problem through Bourgain's work — additive energy, sumset bounds, incidence geometry — is cousin to the arithmetic analysis entering discrete ergodic theory through the circle method. Bourgain's 1991 Kakeya paper and his 1988–90 ergodic papers were written in parallel as parts of the same creative vision, and the techniques flowed between the two programs.
+</div>
+
+### 18.4 Open Problems
+
+<div class="remark">
+<strong>Open Problem 18.4.1 (\(\ell^p\)-improving for polynomial averages).</strong> The averaging operator \(A_N f(n) = (1/N)\sum_{k=1}^N f(n+k^2)\) is \(\ell^p\)-bounded for \(p > 1\). Are there \(\ell^p \to \ell^q\) bounds for \(q > p\) ("improving" bounds)? Such bounds are known for averaging over finite algebraically structured sets but remain largely open for infinite polynomial averages.
+</div>
+
+<div class="remark">
+<strong>Open Problem 18.4.2 (Polynomial averages in \(L^1\)).</strong> For \(p = 1\), polynomial ergodic averages can diverge. The correct framework for \(L^1\) is the theory of "Besicovitch sequences" — characterizing which integer sequences \(\{a_n\}\) support universally a.e.-convergent averages in \(L^1\). The complete characterization is unknown.
+</div>
+
+<div class="remark">
+<strong>Open Problem 18.4.3 (Discrete analogues in higher rank).</strong> The Stein-Wainger operators map \(\mathbb{Z} \to \mathbb{Z}\) via a single polynomial. The multi-parameter generalization — averages along a polynomial map \(\mathbb{Z} \to \mathbb{Z}^m\) — requires simultaneous Diophantine control of all components, leading to substantially harder circle method arguments. Bounds for these operators are far from complete.
+</div>
+
+<div class="remark">
+<strong>Open Problem 18.4.4 (Quantitative polynomial Szemerédi).</strong> The Bergelson-Leibman polynomial Szemerédi theorem gives existence of polynomial progressions in positive-density sets but no quantitative bound on the density of such progressions. Gowers norms provide the right language for quantitative bounds, but a full Host-Kra structure theory with quantitative control currently does not exist.
+</div>
+
+### 18.5 The Full Arc
+
+Three parts, one story.
+
+The arc traced in these notes — from the Tychonoff compactness argument for Haar measure in Chapter 1 to the oscillation inequality for polynomial ergodic averages in Chapter 17 — is a single coherent narrative about the Fourier transform. In abstract harmonic analysis (Part I), the Fourier transform is the spectral decomposition into characters of a group; its essential content is algebraic, encoded in the group structure. In geometric harmonic analysis (Part II), it is a tool for understanding the geometry of tubes and curved surfaces in Euclidean space; its essential content is metric, encoded in curvature and dimension. In discrete harmonic analysis (Part III), it is a lens for the arithmetic structure of polynomial images in \(\mathbb{Z}\); its essential content is number-theoretic, encoded in Diophantine approximation.
+
+The three traditions meet in Bourgain: the arithmetic combinatorics of the Kakeya problem (Part II), the circle method of polynomial ergodic theory (Part III), and the Fourier-algebraic ideas of abstract harmonic analysis (Part I) all reflect the same underlying principle — the Fourier transform does not "know" whether the group is abstract, continuous, or discrete. It applies equally well in all three settings, and the deep results in each illuminate the others.
+
+What unifies the three parts is not a single theorem but a single question: **how does the structure of a group — algebraic, geometric, or arithmetic — constrain the behavior of functions defined on it?** That question drove harmonic analysis from Fourier forward, and the chapters above are three further chapters in its ongoing answer.

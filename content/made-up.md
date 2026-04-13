@@ -8,6 +8,15 @@ These are courses that do not exist at the University of Waterloo — at least n
 
 ## Pure Mathematics
 
+### [PMATH 833: Harmonic Analysis (Parts II & III synthesized)](/1201/pmath833/)
+Two synthetic extensions built on top of the abstract harmonic analysis that PMATH 833 actually teaches. **Part II** (geometric harmonic analysis): oscillatory integrals and the van der Corput lemma, the Hardy-Littlewood maximal function and Calderón-Zygmund theory, the Fourier restriction conjecture, Kakeya sets and Besicovitch's needle problem, wave packet decomposition, the polynomial method, and the 2024 resolution of the three-dimensional Kakeya conjecture by Hong Wang and Joshua Zahl. **Part III** (discrete harmonic analysis): the Hardy-Littlewood circle method, Gauss sums and the major/minor arc decomposition of \(\mathbb{T}\), Weyl's inequality as the discrete analogue of van der Corput differencing, discrete Radon transforms (Stein-Wainger 2001), and Bourgain's theorem (1988–1990) on almost everywhere convergence of polynomial ergodic averages \((1/N)\sum f(T^{P(n)}x) \to \int f\,d\mu\) for all \(p > 1\) and all measure-preserving systems.
+
+{{< lightning >}}
+PMATH 833 at UW (taught by Nico Sprunk) covers abstract harmonic analysis: Haar measure, Pontryagin duality, representations of compact and locally compact groups, the Peter-Weyl theorem, amenable groups. Geometric and discrete harmonic analysis — the two dominant modern traditions — are not part of the course. Both Parts II and III were written as pure synthesis: Part II drawing on Stein's Princeton lecture notes and the wave packet literature up through Wang-Zahl; Part III on Ben Krause's AMS textbook (2022), recommended by Terence Tao. The unifying figure across all three parts is Bourgain, who made foundational contributions to abstract multiplier theory (Part I), the Kakeya problem (Part II), and polynomial ergodic theory (Part III) — the only mathematician whose work spans the entire arc of the notes.
+{{< /lightning >}}
+
+---
+
 ### [PMATH 841: Class Field Theory](/1269/pmath841/)
 The crowning theorem of classical algebraic number theory: every abelian extension of a number field is determined by congruence conditions, and the Galois group is canonically isomorphic to a quotient of an idèle class group. The notes cover local and global reciprocity laws, the Artin map, class formations, and the idèlic formulation.
 
