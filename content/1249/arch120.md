@@ -1,6 +1,6 @@
 ---
 title: "ARCH 120: An Introduction to Architectural Ideas and Communications"
-prof: "Rick Haldenby"
+prof: "Maya Przybylski"
 subjects: "ARCH"
 ---
 

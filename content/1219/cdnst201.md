@@ -1,6 +1,6 @@
 ---
 title: "CDNST 201: The Indigenous Experience in Canada"
-prof: "Staff"
+prof: "Safia Gahayr"
 subjects: "CDNST"
 ---
 
