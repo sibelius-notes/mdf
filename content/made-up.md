@@ -165,6 +165,141 @@ Every survey course makes choices about what to centre, and centering rock neces
 
 ---
 
+### [MUSIC 272: Counterpoint and Fugue](/1269/music272/)
+Species counterpoint in two through four voices (Fux's five species), tonal counterpoint in the Bach style, invertible counterpoint, canon, and fugue — subject, answer, countersubject, exposition, episodes, stretto, and the complete fugue in C minor from WTC I as a model analysis.
+
+{{< lightning >}}
+UW's theory sequence (MUSIC 261–271) covers chromatic harmony and orchestration but has no dedicated counterpoint or fugue course — skills that Wilfrid Laurier (next door) requires in MU361. Every serious theory student learns to write species counterpoint; UW makes them pick it up implicitly or not at all.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 273: Jazz Theory and Harmony](/1269/music273/)
+Jazz chord symbols and voicings, ii–V–I progressions in major and minor, tritone substitution, backdoor dominants, chord extensions (9th, 11th, 13th), altered dominants, modes for improvisation (Dorian, Mixolydian, Lydian dominant, altered scale, half-whole diminished), blues harmony, rhythm changes, modal jazz, reharmonization, and the bebop vocabulary.
+
+{{< lightning >}}
+MUSIC 371 (Theory 4) mentions modes in one table; MUSIC 240 covers jazz history without harmonic analysis. Neither course teaches the practical jazz harmony that any jazz performer or composer needs — the material covered in full depth at Berklee, Manhattan School, NEC, and Eastman. Sikora's *Jazz Harmony* and Levine's *Jazz Theory Book* are the primary references.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 276: Psychoacoustics and the Science of Musical Sound](/1269/music276/)
+The auditory system, pitch perception (place vs. temporal theory, virtual pitch), timbre and auditory stream analysis, loudness, masking and critical bands, consonance and dissonance from Helmholtz to Sethares, room acoustics and concert hall design, physical instrument acoustics, and the perceptual basis of musical structure.
+
+{{< lightning >}}
+AMATH 390 covers Fourier analysis, scales, and temperaments — the mathematics of music. MUSIC 276 covers the other half: how the ear and brain process sound. Psychoacoustics is taught at Stanford (MUSIC 150), MIT (21M.380), Cornell, and UC Berkeley but has no home at UW.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 277: Popular Music Theory and Analysis](/1269/music277/)
+Harmonic schemas in pop and rock (I–V–vi–IV, Aeolian loop, Andalusian cadence), modal mixture, phrase structure and formal analysis of songs, verse-chorus and AABA form, groove and rhythmic feel, timbral analysis of recordings, and analytical methods for hip-hop, R&B, EDM, and country.
+
+{{< lightning >}}
+MUSIC 140 (Popular Music, Simon Wood) is history and cultural studies; MUSIC 277 is harmonic and formal analysis. Taught at Yale, NYU, Cambridge, Liverpool, and UNT; missing entirely from UW's theory curriculum, which treats popular music as outside the domain of serious analysis.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 278: Electronic Music: History and Aesthetics](/1269/music278/)
+Musique concrète (Schaeffer, Henry), elektronische Musik (Stockhausen, Eimert), tape music at the Columbia-Princeton Electronic Music Center, early computer music (Hiller, Xenakis), voltage-controlled synthesis (Moog, Buchla), spectral music (Murail, Grisey), laptop performance, glitch and noise aesthetics.
+
+{{< lightning >}}
+MUSIC 275 (Music Technology) covers recording tools and MIDI — the what of electronic music. MUSIC 278 covers the art form itself: the composers, the aesthetics, the defining works, and the ideas that drove each era from Pierre Schaeffer's tape experiments to the spectral composers' acoustic-analysis methods.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 279: Sound Synthesis and Music Production](/1269/music279/)
+Synthesis paradigms (subtractive, FM, additive, wavetable, granular, physical modelling, sampling), synthesizer architecture (oscillators, filters, envelopes, LFOs, modulation routing), the professional production pipeline from pre-production through mastering, beat programming, vocal production, mixing for the small studio, and critical listening.
+
+{{< lightning >}}
+MUSIC 275 introduces recording and MIDI. MUSIC 279 goes deep: the mathematics of FM synthesis, the architecture of a modular synthesizer, the signal flow of a professional mix, and the production techniques behind recorded pop. Berklee's Electronic Production degree, Stanford CCRMA, and Carnegie Mellon all teach this material; UW does not.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 373: Form and Musical Analysis](/1269/music373/)
+Phrase structure (sentences and periods), small forms (binary, ternary, rondo), theme and variations, sonata form using Caplin's formal functions and Hepokoski-Darcy's dialogic sonata theory, concerto form, 19th-century formal expansion, and 20th-century form from Bartók to Reich.
+
+{{< lightning >}}
+UW has no dedicated form and analysis course — a staple at Harvard, Yale, Princeton, Cambridge, Eastman, and Indiana. MUSIC 371 and 372 cover harmony and orchestration; they do not teach the systematic analysis of musical form that every music scholar and practitioner needs.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 375: Songwriting: Analysis and Craft](/1269/music375/)
+Song form architecture (AABA, verse-chorus, pre-chorus, bridge), melodic hook design and contour, lyric craft (rhyme, prosody, imagery, narrative arc), harmonic schemas of popular song, arrangement as compositional tool, and detailed formal analysis of songs across Tin Pan Alley, rock, country, R&B, hip-hop, and musical theatre.
+
+{{< lightning >}}
+MUSIC 376 (Composition) focuses on concert music; no UW course teaches the specific craft of the popular song — the subject of dedicated programmes at Berklee, NYU Steinhardt, Belmont, and WLU (MU344). Analysing what makes a great hook, how a verse earns its chorus, or how prosody shapes melodic identity is a genuine academic skill.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 377: Post-Tonal Music Theory](/1269/music377/)
+Pitch-class sets and Forte's classification, interval vectors, Z-relations and complementation, the twelve-tone matrix and its four forms, combinatoriality and rotational arrays (Babbitt, Schoenberg, Webern), total serialism (Boulez), stochastic composition (Xenakis), transformational theory (Lewin's GIS), and Neo-Riemannian theory (PLR operations, the tonnetz).
+
+{{< lightning >}}
+MUSIC 371 (Theory 4) devotes one chapter to post-tonal concepts; MUSIC 377 spends an entire semester on them. Straus's *Introduction to Post-Tonal Theory*, Forte's *Structure of Atonal Music*, and Lewin's *Generalized Musical Intervals* deserve more than a week's coverage — as UC Irvine, U Chicago, Indiana, Yale, and Eastman all recognise.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 670: Musicology Research Methods and Scholarly Writing](/1269/music670/)
+Archival research, manuscript sources and RISM/RILM/Grove, source criticism and philology (stemma codicum, critical editions), historiography and critical methodology, digital musicology (music21, Humdrum, corpus analysis), scholarly writing (journal articles, conference papers, grant applications), and dissertation prospectus development.
+
+{{< lightning >}}
+Yale's MUSI 697 and Indiana's M501 are required doctoral proseminars in research methods; UW has no equivalent. Graduate students in musicology and music theory need formal training in how to use archives, read critical editions, conduct a literature review, and write for publication — skills that cannot be absorbed incidentally from coursework.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 672: Schenkerian Analysis](/1269/music672/)
+Schenker's theory of structural levels (Hintergrund, Mittelgrund, Vordergrund), the Ursatz (Urlinie and Bassbrechung), prolongational techniques (neighbor notes, linear progressions, unfolding, register transfer), interruption and the two-part structure, motivic parallelism across levels, and complete-movement analyses of Bach, Beethoven, Chopin, and Brahms.
+
+{{< lightning >}}
+MUSIC 370 (Theory 3) introduces "prolongation" in a paragraph; Schenkerian analysis is a full analytical system requiring a semester to master. Indiana (T555), Yale, Harvard, Eastman, and NYU all teach it as a standalone graduate course. Cadwallader and Gagné's textbook is the standard reference.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 674: History of Music Theory](/1269/music674/)
+Pythagorean ratio theory, Aristoxenus's empiricism, Boethius and the medieval quadrivium, Guido's hexachords, Zarlino's senario and just intonation, Rameau's basse fondamentale and chord inversion, Riemann's Funktionslehre, Schenker's organicism, Forte's set theory, Lewin's transformational theory, and Neo-Riemannian analysis.
+
+{{< lightning >}}
+Understanding why music theory looks the way it does requires reading it historically — tracing how Pythagorean mathematics became Rameau's fundamental bass became Schenker's Ursatz became Lewin's GIS. Yale requires MUSI 720–721 for all doctoral students; Indiana requires T623–T624. UW has no equivalent.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 675: Critical Musicology and Cultural Theory](/1269/music675/)
+New Musicology and the cultural turn (Kerman, Kramer), feminist musicology (McClary, Citron), race and musical imagination (Radano, Eidsheim), postcolonial musicology (Agawu, Born), queer musicology (Brett, Wood), disability and music (Straus), Adorno and the culture industry, sound studies (Sterne, Schafer), and intersectional approaches.
+
+{{< lightning >}}
+Music scholarship since the 1990s has been fundamentally shaped by cultural theory — gender, race, postcolonialism, disability, sound studies. Harvard, Princeton, Penn, and Queens College CUNY all require doctoral students to engage with this literature. UW's graduate music offerings do not include a course in critical musicology.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 676: Ethnomusicological Methods and Fieldwork](/1269/music676/)
+Merriam's tripartite model, Rice's revised framework, Turino's Peircean semiotics, bi-musicality (Hood), participant observation and ethnographic fieldwork, audio and video documentation, transcription and analysis of non-Western repertoires, interview methods, ethics, positionality, repatriation, and writing ethnomusicography.
+
+{{< lightning >}}
+MUSIC 232 and 233 (World Music survey courses) describe what non-Western music sounds like; MUSIC 676 teaches how to study it rigorously. Columbia (GR8412), Yale (MUSI 699), Harvard, Indiana, and UCLA all teach ethnomusicological methods as a graduate requirement. UW has nothing comparable.
+{{< /lightning >}}
+
+---
+
+### [MUSIC 678: Music Theory Pedagogy](/1269/music678/)
+Learning theory applied to music (constructivism, threshold concepts, cognitive load), curriculum design and backward design, teaching tonal harmony and counterpoint, aural skills pedagogy (fixed-do vs. movable-do, Karpinski's audiation), assessment and rubric design, inclusive pedagogy, universal design for learning, and the theory classroom as a creative space.
+
+{{< lightning >}}
+Every music theory graduate student will teach; almost none receive formal pedagogical training. Eastman's graduate pedagogy certificate, Peabody's MM in Theory Pedagogy, and Michigan's graduate certificate all address this gap. UW's graduate students are assigned to teach MUSIC 261 with no preparation beyond their own undergraduate experience.
+{{< /lightning >}}
+
+---
+
 ## Applied Mathematics
 
 ### [AMATH 791: Inverse Problems and Data Assimilation](/1269/amath791/)
