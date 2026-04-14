@@ -9,6 +9,8 @@
 
 [ACTSC]
 name = "Actuarial Science"
+[AE]
+name = "Architectural Engineering"
 [AFM]
 name = "Accounting & Financial Management"
 [AHS]
@@ -21,12 +23,16 @@ short = "Applied Math"
 name = "Anthropology"
 [ARBUS]
 name = "Arts & Business"
+[ARCH]
+name = "Architecture"
 [ARTS]
 name = "Arts"
 [BET]
 name = "Business, Entrepreneurship & Technology"
 [BIOL]
 name = "Biology"
+[CDNST]
+name = "Canadian Studies"
 [CHEM]
 name = "Chemistry"
 [CI]
@@ -38,13 +44,21 @@ name = "Classical Studies"
 [CO]
 name = "Combinatorics & Optimization"
 short = "C&O"
+[COMM]
+name = "Commerce"
+[COMMST]
+name = "Communication Studies"
 [CS]
 name = "Computer Science"
 short = "Comp. Sci."
+[DAC]
+name = "Digital Arts Communication"
 [EARTH]
 name = "Earth Sciences"
 [EASIA]
 name = "East Asian Studies"
+[ECE]
+name = "Electrical & Computer Engineering"
 [ECON]
 name = "Economics"
 [ENBUS]
@@ -57,16 +71,28 @@ name = "Environment & Sustainability"
 name = "Environment, Resources & Sustainability"
 [FINE]
 name = "Fine Arts"
+[GBDA]
+name = "Global Business & Digital Arts"
 [GEOG]
 name = "Geography & Environmental Management"
 [GERON]
 name = "Gerontology"
 [GSJ]
 name = "Gender & Social Justice"
+[HEALTH]
+name = "Health"
+[HHUM]
+name = "Health Humanities"
 [HIST]
 name = "History"
+[HLTH]
+name = "Public Health Sciences"
 [HRM]
 name = "Human Resources Management"
+[HRTS]
+name = "Human Rights"
+[INDEV]
+name = "International Development"
 [INDG]
 name = "Indigenous Studies"
 [INTEG]
@@ -83,6 +109,8 @@ name = "Medieval Studies"
 [MGMT]
 name = "Management Sciences"
 note = "Renamed to MSE"
+[MNS]
+name = "Materials & Nano-Sciences"
 [MSE]
 name = "Management Science & Engineering"
 [MSCI]
@@ -92,6 +120,8 @@ note = "Renamed to MSE"
 name = "Music"
 [NE]
 name = "Nanotechnology Engineering"
+[OPTOM]
+name = "Optometry"
 [PACS]
 name = "Peace & Conflict Studies"
 [PHARM]
@@ -100,6 +130,8 @@ name = "Pharmacy"
 name = "Philosophy"
 [PHYS]
 name = "Physics"
+[PLAN]
+name = "Planning"
 [PMATH]
 name = "Pure Mathematics"
 short = "Pure Math"
@@ -114,15 +146,21 @@ name = "Recreation & Leisure Studies"
 [RS]
 name = "Religious Studies"
 note = "Renamed to RCS"
+[SCBUS]
+name = "Science & Business"
 [SCI]
 name = "Science"
 [SDS]
 name = "Social Development Studies"
+[SFM]
+name = "Sustainability & Financial Management"
 [SMF]
 name = "Sexuality, Marriage & Family"
 note = "Renamed to SRF"
 [SOC]
 name = "Sociology"
+[SOCWK]
+name = "Social Work"
 [SRF]
 name = "Sexualities, Relationships & Families"
 short = "Sex, Rel. & Fam"
@@ -132,5 +170,7 @@ name = "Statistics"
 name = "Society, Technology & Values"
 [SYDE]
 name = "Systems Design Engineering"
+[THPERF]
+name = "Theatre & Performance"
 [VCULT]
 name = "Visual Culture"

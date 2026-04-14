@@ -267,9 +267,11 @@ body {
 /* === Course Grid === */
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  /* min() trick prevents overflow when the container is narrower than 260px */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
 }
 .course-card {
   display: flex;
@@ -281,6 +283,8 @@ body {
   border-radius: 8px;
   text-decoration: none;
   transition: border-color 0.15s, transform 0.1s;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .course-card:hover { border-color: var(--link); transform: translateY(-1px); }
 .course-code { font-weight: 600; color: var(--heading); font-size: 0.95rem; }
@@ -615,7 +619,14 @@ sup { font-size: 0.75em; }
   .course-content h1 { font-size: 1.25rem; }
   .course-content h2 { font-size: 1.1rem; }
   .course-content h3 { font-size: 1rem; }
-  .course-grid { grid-template-columns: 1fr; }
+  .course-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+    gap: 0.6rem;
+  }
+  .course-card { padding: 0.75rem 0.9rem; }
+  .course-code { font-size: 0.85rem; }
+  .course-name { font-size: 0.75rem; }
+  .course-words { font-size: 0.7rem; }
   .search-overlay { left: 0; padding: 1rem; }
   .error-page { min-height: auto; }
   .error-page > h1 { line-height: 1; }
