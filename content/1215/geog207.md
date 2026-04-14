@@ -518,11 +518,11 @@ Professor Maria Strack is a leading researcher on wetland carbon dynamics at the
 
 ## Prof. Marie-Claire Cordonier Segger — International Climate Law Expert
 
-Professor Cordonier Segger is a Full Professor of Law at SEED (School of Environment, Enterprise and Development), University of Waterloo, and Executive Secretary of a consortium of over 100 faculties of law and international legal organisations working on climate governance. She has served as senior legal advisor to the UNFCCC for more than 20 years and has witnessed first-hand the evolution of the international climate regime from the PREPCOM that drafted the Framework Convention through to the Paris Agreement.
+Professor Cordonier Segger covered international climate law, including the evolution of the UNFCCC regime and the Paris Agreement.
 
 ## Prof. Chris Fletcher — Climate Modelling Expert
 
-Professor Chris Fletcher was featured in the Week 5 expert segment on Earth's past climate and climate models. His research addresses past and future climate using numerical models and proxy data.
+Professor Chris Fletcher was featured in the Week 5 expert segment on Earth's past climate and climate models.
 
 ## Prof. Catherine Potvin — Carbon Cycle Expert
 

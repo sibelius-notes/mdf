@@ -588,8 +588,6 @@ Works by **I Nyoman Windha** (b. 1956), one of the most important living Balines
 
 **I Wayan Beratha's** compositions from the mid-twentieth century are considered foundational to the kebyar canon. His works established many of the formal conventions that subsequent composers have built upon, and they remain in active performance throughout Bali.
 
-The course's own professor, **I Dewa Made Suparta**, represents the continuation of this creative tradition, bringing the aesthetic values and compositional techniques of Balinese music to a cross-cultural educational setting where students create their own new works within the gamelan idiom.
-
 ---
 
 # Chapter 9: Other Gamelan Genres
@@ -778,7 +776,6 @@ The vitality of the kreasi baru movement is sustained by a community of active c
 
 **I Wayan Balawan** (b. 1973): A guitarist and composer who bridges the worlds of Balinese gamelan and global popular music. Balawan is known for his virtuosic guitar technique (incorporating tapping and other extended techniques) and for compositions that fuse gamelan structures and aesthetics with rock, jazz, and other contemporary styles. His work represents one direction of Balinese musical innovation — an outward-looking fusion that brings gamelan into dialogue with global musical currents.
 
-**I Dewa Made Suparta**: The professor for this course, Suparta represents the tradition of the composer-performer-teacher who brings Balinese musical values into cross-cultural educational settings. His work in university gamelan programs demonstrates that the principles of Balinese composition — oral transmission, communal creation, the integration of composition and performance — can be meaningfully practised outside Bali, by students from diverse musical backgrounds.
 
 **I Komang Astita**, **I Wayan Rai**, and **I Wayan Dibia** are among other important figures who have contributed to the kreasi baru tradition through their compositions, their teaching at ISI Denpasar, and their scholarly work on Balinese performing arts.
 

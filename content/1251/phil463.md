@@ -38,7 +38,6 @@ subjects: "PHIL"
 
 The field emerged in a recognizable form in the 1990s, though its roots extend to second-wave feminist activism of the 1970s and 1980s, when scholars and activists challenged the generic masculine ("he," "mankind"), sexist slurs, and the asymmetries embedded in vocabulary (e.g., "master"/"mistress," "bachelor"/"spinster"). What distinguishes the philosophical turn is the systematic deployment of tools from speech act theory, pragmatics, social epistemology, and metaphysics to diagnose and remedy linguistic injustices.
 
-Jennifer Saul, the instructor of this course and one of the founders of the field, has contributed centrally to debates about pornography, speech acts, and deceptive speech. Her recent research extends to racist and conspiracist speech, illustrating how feminist philosophy of language increasingly intersects with critical race theory, trans philosophy, Indigenous philosophy, and decolonial thought.
 
 ## 1.2 Cameron on Sexist Language and the Possibility of Change
 

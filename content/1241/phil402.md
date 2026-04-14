@@ -44,9 +44,6 @@ subjects: "PHIL"
 
 **Standpoint theory** (立场理论) is a family of theses in **epistemology** (认识论) and the **philosophy of science** (科学哲学) holding that knowledge is fundamentally shaped by the knower's social location, and that certain marginalized social positions can yield distinctive epistemic resources — insights, questions, and forms of evidence — that are systematically unavailable from positions of dominance. Born at the intersection of Marxist social theory, feminist politics, and the sociology of knowledge, standpoint theory emerged in the early 1980s as one of the most ambitious and controversial programmes in **feminist epistemology** (女性主义认识论).
 
-<div class="remark">
-<strong>Cross-listing note.</strong> This course (GSJ 402 / PHIL 402 / PHIL 673) is taught by Alison Wylie, Canada Research Chair and Professor of Philosophy at the University of British Columbia, who is herself one of the leading contemporary contributors to standpoint theory. The seminar thus offers the rare opportunity to study a living philosophical tradition with one of its principal architects.
-</div>
 
 The motivating question is deceptively simple: does who you are affect what you can know? Traditional epistemology, operating under an ideal of **aperspectivalism** (无视角主义) — the conviction that genuine knowledge transcends the contingencies of the knower's identity — answers no. Standpoint theorists answer yes, and they go further: they argue that the social relations of domination and subordination systematically structure cognitive access to the world, such that those on the underside of power can, under the right conditions, achieve a more comprehensive and less distorted understanding of those very relations.
 

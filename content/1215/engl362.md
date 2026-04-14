@@ -6,7 +6,7 @@ subjects: "ENGL"
 
 # Module I: Introduction
 
-This course, developed by Professor Ted McGee of St. Jerome's College and the University of Waterloo, examines Shakespeare's plays written before 1599–1600 — the first half of his career as a playwright. The course proceeds not as a literary survey but as an inquiry into **performance**: how plays were staged in Shakespeare's own time, how they have been adapted for later stages and screens, and what analytical tools allow us to interpret both the texts and their theatrical lives.
+This course examines Shakespeare's plays written before 1599–1600 — the first half of his career as a playwright. The course proceeds not as a literary survey but as an inquiry into **performance**: how plays were staged in Shakespeare's own time, how they have been adapted for later stages and screens, and what analytical tools allow us to interpret both the texts and their theatrical lives.
 
 The epigraph borrowed from Cole Porter's *Kiss Me, Kate* — "Brush up your Shakespeare, start reading him now" — captures something essential: Shakespeare is not a monument to be revered from a distance but a living theatrical tradition requiring active engagement. To study these plays is to ask simultaneously what they meant to their original audiences and what they continue to mean to ours.
 
