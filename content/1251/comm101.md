@@ -43,7 +43,7 @@ If you invest \( PV \) dollars at rate \( r \) per period for \( n \) periods, t
 This is **compound interest**: the interest earned in period one itself earns interest in period two, and so on. By contrast, **simple interest** pays \( PV \cdot r \) each period on the original principal only, giving \( FV_n = PV \cdot (1 + r \cdot n) \). Simple interest is used in some money-market quoting conventions, but compound interest is the correct framework for any multi-period analysis.
 
 <div class="example">
-<strong>Example.</strong> Lechuan deposits <em>CAD</em> 1,000 at 5 percent compounded annually for ten years. The future value is \( 1000 \cdot (1.05)^{10} \approx 1628.89 \). At simple interest the same account would hold only <em>CAD</em> 1,500.
+<strong>Example.</strong> Joshua deposits <em>CAD</em> 1,000 at 5 percent compounded annually for ten years. The future value is \( 1000 \cdot (1.05)^{10} \approx 1628.89 \). At simple interest the same account would hold only <em>CAD</em> 1,500.
 </div>
 
 ## Present Value and Discounting
@@ -369,7 +369,7 @@ Before expiration, an option is worth more than its **intrinsic value** (payoff 
 A **covered call** is a long stock position combined with writing a call at a strike above the current price. The investor collects the premium immediately, sacrificing upside above the strike.
 
 <div class="example">
-<strong>Example.</strong> Lechuan owns 100 shares bought at <em>CAD</em> 50 and writes one one-month call struck at <em>CAD</em> 55 for a premium of <em>CAD</em> 1. If the stock ends at <em>CAD</em> 52, the option expires worthless and Lechuan keeps the <em>CAD</em> 100 premium plus the <em>CAD</em> 2 paper gain. If the stock ends at <em>CAD</em> 60, the shares are called away at 55; Lechuan realizes <em>CAD</em> 5 of stock gain plus the <em>CAD</em> 1 premium, for <em>CAD</em> 6 per share — but misses the extra <em>CAD</em> 5 of upside.
+<strong>Example.</strong> Joshua owns 100 shares bought at <em>CAD</em> 50 and writes one one-month call struck at <em>CAD</em> 55 for a premium of <em>CAD</em> 1. If the stock ends at <em>CAD</em> 52, the option expires worthless and Joshua keeps the <em>CAD</em> 100 premium plus the <em>CAD</em> 2 paper gain. If the stock ends at <em>CAD</em> 60, the shares are called away at 55; Joshua realizes <em>CAD</em> 5 of stock gain plus the <em>CAD</em> 1 premium, for <em>CAD</em> 6 per share — but misses the extra <em>CAD</em> 5 of upside.
 </div>
 
 Covered calls are popular among income-oriented investors on high-dividend stocks; a whole family of covered-call ETFs now exists on the TSX.
