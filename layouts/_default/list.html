@@ -15,10 +15,10 @@
         {{ $studyMinutes = add $studyMinutes $study.minutes }}
       {{ end }}
     {{ end }}
-    <h2>Statistics</h2>
+    <h2>By the Numbers</h2>
     <ul>
-      <li>Number of course posts: {{ $courseCount }}</li>
-      <li>Word count (includes math): {{ $wordCount | lang.FormatNumber 0 }}</li>
+      <li>{{ $courseCount }} course notes</li>
+      <li>{{ $wordCount | lang.FormatNumber 0 }} words</li>
       <li>Total study time: {{ partial "format-study-time.html" (dict "minutes" $studyMinutes "style" "total") }}</li>
     </ul>
   {{ else }}

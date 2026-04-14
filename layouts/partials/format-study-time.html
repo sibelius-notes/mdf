@@ -1,7 +1,8 @@
 {{- $minutes := .minutes -}}
 {{- $style := default "short" .style -}}
+{{- $studyDayMinutes := 480 -}}
 {{- if eq $style "total" -}}
-  {{- $days := div (add $minutes 1439) 1440 -}}
+  {{- $days := div (add $minutes (sub $studyDayMinutes 1)) $studyDayMinutes -}}
   {{- $years := div $days 365 -}}
   {{- $remainingDays := mod $days 365 -}}
   {{- $months := div $remainingDays 30 -}}
@@ -20,9 +21,9 @@
 {{- else -}}
   {{- if lt $minutes 1 -}}
     less than 1 minute
-  {{- else if ge $minutes 1440 -}}
-    {{- $days := div $minutes 1440 -}}
-    {{- $hours := div (mod $minutes 1440) 60 -}}
+  {{- else if ge $minutes $studyDayMinutes -}}
+    {{- $days := div $minutes $studyDayMinutes -}}
+    {{- $hours := div (mod $minutes $studyDayMinutes) 60 -}}
     {{- $days }} day{{ if ne $days 1 }}s{{ end }}{{ if gt $hours 0 }} {{ $hours }} hr{{ end -}}
   {{- else if ge $minutes 60 -}}
     {{- $hours := div $minutes 60 -}}
