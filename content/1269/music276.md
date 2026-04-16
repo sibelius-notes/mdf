@@ -31,6 +31,8 @@ x(t) = A\cos(\omega t + \phi),
 where \(A\) is the <strong>amplitude</strong> (the maximum displacement from equilibrium, in metres), \(\omega\) is the <strong>angular frequency</strong> (in radians per second), and \(\phi\) is the <strong>initial phase</strong>, determined by the initial conditions \(x(0)\) and \(\dot{x}(0)\).
 </div>
 
+{{< score id="music276/31-shm-tuning-fork" caption="A tuning fork sounding A4 (440 Hz): the same pitch at different time resolutions, illustrating the periodicity of simple harmonic motion." >}}
+
 The angular frequency is entirely determined by the mechanical properties of the system:
 \[
 \omega = \sqrt{\frac{k}{m}}.
@@ -58,6 +60,8 @@ x(t) = 10^{-4}\cos(2764\, t) \text{ m}.
 \]
 The maximum velocity is \(v_{\max} = A\omega = 10^{-4} \times 2764 \approx 0.276\) m/s, occurring as the tip passes through equilibrium. The maximum acceleration is \(a_{\max} = A\omega^2 \approx 763\) m/s\(^2\), about 78 times the acceleration due to gravity — yet this all happens in the tiny space of a tenth of a millimetre.
 </div>
+
+{{< score id="music276/31-shm-tuning-fork" caption="Example 1.1: Concert-pitch A4 (440 Hz) tuning fork — the paradigm of simple harmonic motion." >}}
 
 ### 1.2 Damping and Resonance
 
@@ -120,6 +124,8 @@ c(T) \approx 331 + 0.6\, T \text{ m/s},
 where \(T\) is in degrees Celsius. A wind instrument tuned at \(20^\circ\)C will be flat by roughly 0.3% (about 5 cents) if the player has not warmed the bore first, because \(c\) — and hence the resonant frequencies — scale with the speed of sound.
 </div>
 
+{{< score id="music276/03-octave-equivalence" caption="C at five octave registers (C2–C6): the same pitch class at frequencies 65, 131, 262, 523, and 1047 Hz." >}}
+
 ### 1.4 Sound Intensity and the Decibel Scale
 
 The physical strength of a sound wave is measured by its *intensity*, defined as the average power transmitted per unit area perpendicular to the direction of propagation. For a plane wave in air with pressure amplitude \(p_0\), the intensity is
@@ -140,6 +146,8 @@ L = 20\log_{10}\!\left(\frac{p_{\text{rms}}}{p_0}\right) \text{ dB},
 where \(p_0 = 20\;\mu\text{Pa} = 2 \times 10^{-5}\) Pa is the reference pressure corresponding to \(I_0\).
 </div>
 
+{{< score id="music276/19-loudness-dynamics" caption="The same pitch (A4) notated at ppp, mp, and fff: different dynamic levels correspond to different sound pressure levels on the decibel scale." >}}
+
 The logarithmic scale has several important properties. An increase of 10 dB corresponds to a tenfold increase in intensity. An increase of 3 dB (more precisely 3.01 dB) corresponds to a doubling of intensity. When two incoherent sound sources of levels \(L_1\) and \(L_2\) dB act simultaneously, the combined level is
 \[
 L_{\text{total}} = 10\log_{10}\!\left(10^{L_1/10} + 10^{L_2/10}\right).
@@ -154,9 +162,13 @@ The decibel level tells us the physical intensity of a sound, but *loudness* is 
 
 The *equal-loudness contours* (standardized as ISO 226:2023) map the combinations of frequency and SPL that are perceived as equally loud. Each contour is labeled in *phons*, where \(N\) phons at any frequency means the sound is as loud as a 1 kHz tone at \(N\) dB SPL.
 
+{{< score id="music276/19-loudness-dynamics" caption="Loudness and dynamics: ppp, mp, fff on A4 — illustrating the SPL range relevant to the equal-loudness contours." >}}
+
 <div class="remark">
 At 30 phons, the equal-loudness contour passes through approximately 50 dB SPL at 100 Hz — meaning 50 dB of acoustic energy at 100 Hz sounds only as loud as 30 dB at 1 kHz. The ear requires roughly 20 dB more physical energy to achieve the same loudness at low bass frequencies. At very high levels (around 90 phons), the contours flatten considerably: bass frequencies are perceived as nearly as loud (relative to 1 kHz) as at low levels. This is the acoustic basis for the "loudness" switch on vintage hi-fi amplifiers, which boosted bass and treble at low listening volumes to compensate for the ear's reduced sensitivity.
 </div>
+
+{{< score id="music276/03-octave-equivalence" caption="Octave equivalence across C2–C6: the equal-loudness contours show how much more SPL is needed at low frequencies to match the loudness of mid-range tones." >}}
 
 The *sone* is the unit of subjective loudness magnitude (not to be confused with loudness level in phons). By convention, 1 sone is defined as the loudness of a 1 kHz tone at 40 dB SPL. A doubling of sones corresponds to a doubling of perceived loudness, which empirically requires an increase of approximately 10 phons. The relationship is approximately
 \[
@@ -167,6 +179,8 @@ where \(L_p\) is the loudness level in phons and \(S\) is loudness in sones. Thu
 ---
 
 ## Chapter 2: The Harmonic Series and Timbre
+
+{{< score id="music276/02-pure-tone-vs-complex" caption="Pure tone vs. complex tone: upper staff shows C4 alone (262 Hz, a single sinusoid); lower staff shows C4 with harmonics 2–5 — the complex tone has timbre, the pure tone has none." >}}
 
 If Chapter 1 gives us the physics of a single sinusoidal tone, Chapter 2 confronts a central fact of musical reality: almost no musical sound is a pure sinusoid. The rich, distinctive quality of a violin versus an oboe, of a bright trumpet versus a mellow French horn, cannot be encoded in a single frequency. It lives in the *structure* of the sound's component frequencies — in the harmonic series and the distribution of energy among its members. Fourier's theorem tells us that this description is not just convenient but mathematically complete.
 
@@ -188,11 +202,15 @@ s(t) = \sum_{n=1}^{\infty} A_n \cos(2\pi n f_1 t + \phi_n),
 where \(A_n = \sqrt{a_n^2 + b_n^2}\) is the amplitude of the \(n\)th harmonic and \(\phi_n = \arctan(-b_n/a_n)\) is its phase.
 </div>
 
+{{< score id="music276/01-harmonic-series" caption="The harmonic series on C2: partials 1–8 notated with their frequencies and ratios, from bass through treble clef." >}}
+
 The integer \(n\) indexes the *harmonics* of the fundamental frequency \(f_1\): the \(n\)th harmonic has frequency
 \[
 f_n = n f_1, \quad n = 1, 2, 3, \ldots
 \]
 The set \(\{f_1, 2f_1, 3f_1, 4f_1, \ldots\}\) is the *harmonic series*. The first harmonic (\(n = 1\)) is the fundamental; the second (\(n = 2\)) is the octave; the third (\(n = 3\)) is the perfect twelfth (octave plus fifth); the fourth (\(n = 4\)) is the double octave; the fifth (\(n = 5\)) is a major third above the double octave; and so on. Musicians have recognized the special consonance of these ratios intuitively for millennia — the harmonic series is the acoustic origin of just intonation.
+
+{{< score id="music276/11-overtone-chord" caption="The first six partials of C2 voiced as a chord across grand staff: partials 1–3 in bass clef, partials 4–7 in treble clef." >}}
 
 <div class="example">
 <strong>Example 2.1.</strong> A sawtooth wave with fundamental frequency \(f_1\) and unit amplitude has the Fourier series
@@ -201,6 +219,8 @@ s(t) = \frac{2}{\pi}\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}\sin(2\pi n f_1 t),
 \]
 so \(A_n = 2/(\pi n)\). The amplitude spectrum falls as \(1/n\) (equivalently, \(-6\) dB per octave). The sawtooth approximates the spectrum of many bowed string and brass instrument tones, where energy decreases steadily with harmonic number. A square wave, by contrast, contains only odd harmonics with amplitudes \(1/n\) for \(n = 1, 3, 5, \ldots\), producing a characteristic hollow timbre.
 </div>
+
+{{< score id="music276/30-sawtooth-spectrum" caption="Example 2.1: Sawtooth spectrum — harmonic amplitudes falling as 1/n, shown as noteheads at successive octave/fifth levels." >}}
 
 ### 2.2 Timbre and the Spectral Envelope
 
@@ -215,6 +235,10 @@ and the MFCCs are the first dozen or so coefficients of the cepstrum computed on
 <div class="remark">
 The phases \(\phi_n\) play a surprisingly minor role in the perception of steady-state timbre for natural sounds. Plomp and Steeneken (1969) demonstrated that randomly shuffling the phases of harmonics — which drastically changes the waveform's shape — produced tones judged as having virtually identical timbre to the original. This <em>phase insensitivity</em> of timbre (for sustained, noise-free tones) means the amplitude spectrum is the primary perceptual description of steady-state timbre. The situation is different for transient sounds or for waveforms with sharp features, where phase relationships can influence perceived harshness or roughness.
 </div>
+
+{{< score id="music276/17-spectral-envelope" caption="Spectral envelope sketch: harmonic amplitudes as noteheads at H1–H6, notehead size representing relative amplitude (forte to ppp)." >}}
+
+{{< score id="music276/16-timbre-same-pitch" caption="Timbre comparison: A4 (440 Hz) as played by violin, clarinet, and flute — same pitch, different harmonic envelopes." >}}
 
 Different instrument families have characteristic spectral shapes. The *clarinet* in its chalumeau register suppresses even harmonics (for reasons we will explain in Chapter 4), giving a spectrum dominated by the odd harmonics \(f_1, 3f_1, 5f_1, \ldots\) — a hollow, reedy quality. The *trumpet* at fortissimo has a brilliantly rich spectrum with significant energy in harmonics 10–20, produced by nonlinear wave steepening in the bore at high amplitudes. The *flute* at soft dynamic levels has a spectrum dominated by the fundamental with comparatively little energy in the upper harmonics — a cool, pure quality. The *oboe* has a highly complex spectrum with strong harmonics 3–8 relative to the fundamental, contributing to its penetrating nasal character.
 
@@ -244,6 +268,8 @@ A_S\bigl(1 - (t - t_{\mathrm{off}})/t_R\bigr) & t_{\mathrm{off}} \le t < t_{\mat
 </div>
 
 A piano note has an extremely short attack (a few milliseconds), a rapid decay, effectively zero sustain (the hammer rebounds immediately from the string), and a long natural decay determined by string damping. A bowed string can maintain indefinite sustain and shape the release deliberately with a diminuendo. A pipe organ can maintain perfectly flat sustain (as long as the key is held and the bellows supply sufficient air pressure) with an essentially instantaneous release. These envelope differences are perceptually decisive in shaping the expressive character of each instrument.
+
+{{< score id="music276/32-adsr-piano-vs-organ" caption="ADSR envelopes contrasted: piano (rapid decay shown as diminuendo) versus organ (sustained flat level) on the same pitch C4." >}}
 
 ### 2.4 Spectrograms and Time-Frequency Analysis
 
@@ -289,6 +315,8 @@ f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}}, \quad n = 1, 2, 3, \ldots
 These are exact integer multiples of the fundamental \(f_1 = \frac{1}{2L}\sqrt{T/\mu}\), so the ideal string produces a perfectly harmonic spectrum.
 </div>
 
+{{< score id="music276/01-harmonic-series" caption="Modal frequencies of an ideal string: the harmonic series C2 through its 8th partial, mirroring the string's overtone structure." >}}
+
 The mode shapes \(\sin(n\pi x/L)\) are the normal modes of the string: the first mode has no internal nodes (maximum displacement at the center); the second mode has one node at the center; the \(n\)th mode has \(n-1\) internal nodes. The general motion is a superposition of all modes, with coefficients determined by the initial shape and velocity of the string (i.e., where and how the string was plucked, struck, or bowed).
 
 <div class="example">
@@ -298,6 +326,8 @@ f_1 = \frac{1}{2 \times 0.65}\sqrt{\frac{70}{3.5 \times 10^{-3}}} = \frac{1}{1.3
 \]
 Depressing the string at the fifth fret reduces the effective length to \(L' \approx 0.488\) m, raising the frequency by a factor of \(0.65/0.488 \approx 1.333 = 4/3\), corresponding to a perfect fourth — just as the fret positions on a guitar approximate the ratios of just intonation.
 </div>
+
+{{< score id="music276/07-just-intonation-scale" caption="Just intonation scale: C major with ratio annotations 1/1 through 2/1, illustrating the fret-ratio relationship." >}}
 
 The formula \(f_n = \frac{n}{2L}\sqrt{T/\mu}\) encodes the three classical means of controlling pitch: length (stopping), tension (tuning pegs, capo), and linear density (wound strings for bass). A string twice as long, at equal tension and density, vibrates one octave lower. A string under twice the tension vibrates \(\sqrt{2}\) times faster — roughly a tritone (six semitones) higher in equal temperament.
 
@@ -337,6 +367,8 @@ The bridge is not a passive transmission element but an active filter: its mecha
 The harpsichord, clavichord, and piano all use strings and a soundboard, but their excitation mechanisms differ fundamentally in ways that shape their spectra and expressive capabilities. The <strong>harpsichord</strong> plucks the string with a quill or plastic plectrum that snaps past the string tangentially; the string's initial displacement (triangular shape) produces a spectrum rich in high harmonics regardless of key velocity, giving the harpsichord its bright, clangorous attack and limited dynamic range. The <strong>clavichord</strong> uses a metal tangent that strikes the string from below and remains in contact as long as the key is depressed; this permits the player to subtly modulate pitch and amplitude through key pressure (the <em>Bebung</em> effect), but the volume is so small that the instrument is only audible in very quiet rooms. The <strong>piano</strong> (pianoforte, literally "soft-loud") strikes the string with a felt hammer that immediately rebounds; the softness and shape of the felt, combined with hammer velocity, control the balance of high and low harmonics and the overall amplitude, giving the piano its unrivaled dynamic range.
 </div>
 
+{{< score id="music276/32-adsr-piano-vs-organ" caption="Attack-decay contrast: piano (fast decay) vs. organ (flat sustain) — illustrating the keyboard instruments' opposite ADSR profiles." >}}
+
 ---
 
 ## Chapter 4: Acoustics of Wind and Brass Instruments
@@ -359,6 +391,8 @@ f_n = \frac{(2n-1)\,c}{4L}, \quad n = 1, 2, 3, \ldots
 The fundamental of the closed-open pipe (\(f_1 = c/4L\)) is half that of the open-open pipe of the same length, so the closed-open pipe "sounds" an octave lower than an open pipe of equal length.
 </div>
 
+{{< score id="music276/33-pipe-modes" caption="Open vs. closed pipe modes: open pipe supports f₁, 2f₁, 3f₁ (all harmonics); closed pipe supports only f₁, 3f₁, 5f₁ (odd harmonics only)." >}}
+
 In real pipes, the open end is not a perfect pressure node — the effective acoustic length of the pipe is slightly longer than the physical length, because the acoustic field extends a short distance beyond the open end before it can radiate freely. This *end correction* is approximately \(\Delta L \approx 0.6\, a\), where \(a\) is the radius of the pipe. For a clarinet with bore radius \(a \approx 7\) mm, the end correction adds approximately 4 mm to the effective length — a small but acoustically significant amount that must be accounted for in the design of fingering systems.
 
 ### 4.2 The Flute and the Clarinet
@@ -375,6 +409,8 @@ f_1 = \frac{c}{4L} = \frac{343}{4 \times 0.595} \approx 144 \text{ Hz}.
 Accounting for the instrument's transposition (B-flat instruments sound a major second lower than written), the concert pitch fundamental is near \(D_3\) (147 Hz), consistent with the actual lowest note of the standard clarinet. The lowest odd partial above the fundamental is at \(3 \times 144 \approx 432\) Hz, which corresponds (after transposition) to approximately A\(_4\) — and indeed, the lowest note of the clarion register is written B\(_4\) (concert A\(_4\)).
 </div>
 
+{{< score id="music276/33-pipe-modes" caption="Example 4.1: Clarinet as closed-open pipe — fundamental and odd overtones (f₁, 3f₁, 5f₁) correspond to chalumeau, clarion, and altissimo registers." >}}
+
 ### 4.3 Brass Instruments: Impedance and the Bell
 
 Brass instruments are neither simple open nor simple closed pipes — they are complex hybrids of cylindrical and conical tubing, widening to a dramatically flared bell. The acoustic behavior is most naturally described through the *input impedance* \(Z_{\mathrm{in}}(f)\), the ratio of acoustic pressure to volume velocity at the mouthpiece. High impedance peaks correspond to frequencies at which the mouthpiece pressure builds up most efficiently — these are the resonant frequencies that the player can "lock on to" with the lip reed.
@@ -384,6 +420,8 @@ The *bell* of a brass instrument transforms the impedance curve in two crucial w
 <div class="remark">
 A purely conical tube, open at both ends, supports all harmonics (just like an open cylindrical pipe), which is why the oboe and saxophone (both conical) overblow at the octave and support complete harmonic series. The <em>French horn</em> and <em>trombone</em> are dominantly cylindrical with a flared bell, while the <em>trumpet</em> has a more complex profile combining a cylindrical bore with a conical leadpipe and a strongly flared bell. The detailed shaping of these transitions — every millimetre of the leadpipe profile and every arc of the bell taper — is the accumulated craft knowledge of centuries of brass instrument making, now subject to computational optimization using finite element and transmission line acoustic models.
 </div>
+
+{{< score id="music276/01-harmonic-series" caption="The complete harmonic series as played by a brass instrument: partials 1–8 of C2 from fundamental through the 8th overtone." >}}
 
 ### 4.4 The Lip Reed and Embouchure
 
@@ -462,6 +500,8 @@ where:
 </ul>
 </div>
 
+{{< score id="music276/17-spectral-envelope" caption="Source-filter model illustration: the glottal source has harmonics at f₀, 2f₀, … with falling amplitude; the vocal tract formants shape the spectral envelope." >}}
+
 The vocal tract resonances — *formants* — are denoted \(F_1, F_2, F_3, \ldots\) in ascending order. For a uniform tube of length \(L_{vt} \approx 17\) cm (adult male), treating it as closed-open:
 \[
 F_n \approx \frac{(2n-1)c}{4 L_{vt}}, \quad n = 1, 2, 3, \ldots
@@ -504,6 +544,8 @@ A = \sum_i S_i \alpha_i,
 with \(S_i\) the area of the \(i\)th surface (m\(^2\)) and \(\alpha_i \in [0, 1]\) its absorption coefficient. A value \(\alpha = 1\) means perfectly absorbing (all incident energy is absorbed); \(\alpha = 0\) means perfectly reflective.
 </div>
 
+{{< score id="music276/22-dry-vs-reverberant" caption="Dry vs. reverberant acoustic: isolated staccato notes (studio) versus sustained blending notes (concert hall), illustrating the acoustic effect of different T₆₀ values." >}}
+
 The derivation of Sabine's formula assumes that the sound field is *diffuse* — that energy is uniformly distributed in all directions throughout the room, which is a good approximation when the room dimensions are large compared to the wavelength and when surfaces are reasonably irregular. For rooms with highly non-uniform absorption (e.g., a room with one very absorptive wall and highly reflective others), the Eyring-Norris formula is more accurate:
 \[
 T_{60} = \frac{0.161\, V}{-S\ln(1 - \bar{\alpha})},
@@ -518,6 +560,8 @@ A = \frac{0.161 \times 15{,}000}{2.0} \approx 1{,}208 \text{ m}^2.
 The unoccupied hall, with empty wood seats, has \(T_{60} \approx 3.2\) s, implying \(A_{\text{empty}} \approx 755\) m\(^2\). Each audience member and seat contributes approximately \((1{,}208 - 755)/1{,}680 \approx 0.27\) m\(^2\) of absorption — a value consistent with published measurements of audience absorption.
 </div>
 
+{{< score id="music276/21-room-direct-reflections" caption="Example 6.1: Room impulse structure — direct sound at time 0, early reflections at +15/+30/+50/+80 ms, and reverberant tail, each at reduced amplitude." >}}
+
 ### 6.2 The Structure of Room Impulse Responses
 
 The *room impulse response* \(h(t)\) completely characterizes the acoustic behavior of a room between a specific source position and a specific receiver position. It is the pressure waveform arriving at the receiver when the source emits an ideal instantaneous impulse (\(\delta\)-function pulse). Any sound \(s(t)\) played in the room reaches the receiver as
@@ -528,6 +572,8 @@ the convolution of the source signal with the impulse response.
 
 The impulse response has a characteristic structure in three temporal zones. The *direct sound* arrives at time \(t_0 = d/c\) (where \(d\) is the source-to-receiver distance), as a single sharp peak. The *early reflections* arrive in the interval roughly 0–80 ms after the direct sound, as a series of discrete echoes from nearby surfaces. The *reverberant tail* consists of exponentially decaying diffuse energy, extending for a time roughly equal to \(T_{60}\).
 
+{{< score id="music276/21-room-direct-reflections" caption="Room impulse response: direct sound and successive early reflections arriving at 0, 15, 30, 50, 80 ms with decaying amplitude." >}}
+
 ### 6.3 The Precedence Effect
 
 <div class="definition">
@@ -535,6 +581,8 @@ The <strong>precedence effect</strong> (also called the <em>Haas effect</em>, 19
 </div>
 
 The precedence effect has major implications for the acoustic design of concert halls. Early reflections from the side walls, ceiling, and balcony fronts, arriving within the 1–30 ms window, enhance the perceived loudness (adding 3–10 dB of loudness without disturbing localization), contribute to *envelopment* (the sensation of being surrounded by sound), and increase *intimacy* (the perceptual closeness to the source). In the great shoebox halls, the narrow width ensures that first-order side-wall reflections arrive within 20–25 ms of the direct sound, maximizing this beneficial early energy.
+
+{{< score id="music276/22-dry-vs-reverberant" caption="Precedence effect: the dry (upper) score shows separated notes perceived as distinct; the reverberant (lower) score shows notes blending under reverberation's influence." >}}
 
 ### 6.4 Acoustic Measurement Methods
 
@@ -586,6 +634,8 @@ f_{\mathrm{CF}}(x) = A\left(10^{ax} - k\right),
 where \(A \approx 165.4\) Hz, \(a \approx 0.06\) mm\(^{-1}\), and \(k \approx 0.88\) (for the human cochlea). This logarithmic mapping means that each millimetre along the basilar membrane from base to apex corresponds to approximately the same musical interval (roughly 1/3 to 1/2 of an octave per mm in the mid-frequency range), encoding the musical scale in a geometrically regular way.
 </div>
 
+{{< score id="music276/03-octave-equivalence" caption="Tonotopic mapping: C2 through C6 at exact octave spacings (65–1047 Hz) — each octave occupies the same basilar-membrane distance under the logarithmic Greenwood map." >}}
+
 The tonotopic organization of the basilar membrane is preserved throughout the auditory pathway: the auditory nerve fibers, cochlear nucleus, inferior colliculus, medial geniculate nucleus, and primary auditory cortex (A1) are all organized tonotopically, with neurons responding to different frequencies arranged in a systematic spatial order.
 
 ### 7.3 Hair Cells and Neural Transduction
@@ -598,6 +648,8 @@ The outer hair cells, far more numerous, serve primarily as *electromotile ampli
 
 ### 7.4 Auditory Scene Analysis and Stream Segregation
 
+{{< score id="music276/28-gestalt-grouping" caption="Gestalt auditory grouping: notes in the same register group together by proximity; the two register groups form two distinct Gestalt streams." >}}
+
 In real musical situations, the auditory system faces the inverse problem: given a mixture of sounds from multiple sources arriving simultaneously at the two ears, reconstruct the individual source streams. Albert Bregman (1990) termed this capacity *auditory scene analysis* (ASA) and identified a set of organizational principles by which the auditory system groups acoustic features into coherent perceptual streams.
 
 Grouping operates on two levels. *Simultaneous grouping* (within a single moment of time) uses cues such as common onset and offset (components starting and ending together are more likely to belong to the same source), harmonicity (partials fitting a common fundamental tend to fuse into a single percept), and common spatial location. *Sequential grouping* (across time) uses cues such as proximity in pitch (notes close in pitch tend to form the same melodic stream), similarity in timbre, and continuity of trajectory (a tone gliding smoothly upward groups with itself).
@@ -605,6 +657,10 @@ Grouping operates on two levels. *Simultaneous grouping* (within a single moment
 <div class="example">
 <strong>Example 7.2.</strong> The *auditory streaming* effect (van Noorden, 1975) demonstrates sequential grouping. When two pure tones at frequencies \(f_A\) and \(f_B\) alternate rapidly (e.g., ABA–ABA–ABA…), listeners hear either one integrated stream of alternating tones or two separate streams — a high-pitched stream of B tones and a low-pitched stream of A tones. The percept switches from integrated to segregated as the frequency separation \(|f_A - f_B|\) increases or as the tempo increases. The boundary between the two percepts lies at roughly 4–6 semitones for slow tempos, becoming narrower (easier to split) at faster tempos. This streaming phenomenon underlies the polyphonic illusion in J. S. Bach's solo violin and cello works: a single instrument playing rapid single notes across two registers creates the perceptual illusion of two simultaneous melodic lines.
 </div>
+
+{{< score id="music276/14-auditory-streaming" caption="Example 7.2: Auditory streaming — rapid alternating notes at two pitch levels (high E/G, low C/D) that segregate into two perceptual streams at fast tempos." >}}
+
+{{< score id="music276/15-melodic-fission" caption="Melodic fission: very fast alternating notes spanning a wide range, which split into a high and a low melodic stream (van Noorden's streaming boundary effect)." >}}
 
 ### 7.5 Place Theory and Temporal Theory of Pitch
 
@@ -615,6 +671,8 @@ The <strong>place theory</strong> of pitch (Helmholtz, 1863) proposes that pitch
 
 The <strong>temporal theory</strong> (or rate-place/volley theory) proposes that pitch is encoded in the timing of auditory nerve action potentials. Nerve fibers tend to fire preferentially at a specific phase of each cycle of the stimulus — a property called <em>phase locking</em>. The inter-spike intervals in the auditory nerve then contain information about the period of the sound, and the brain extracts pitch by measuring these intervals.
 </div>
+
+{{< score id="music276/04-beating-semitone" caption="Place vs. temporal theory: two close intervals (minor 2nd A4–Bb4 and semitone C5–C#5) that reveal frequency-place selectivity on the basilar membrane." >}}
 
 The two theories are not mutually exclusive; modern understanding holds that both mechanisms operate and cooperate across different frequency ranges. Phase locking in the auditory nerve is robust up to about 4–5 kHz in humans; above that frequency, the nerve can no longer follow the rapid oscillations, and place information dominates. Below about 1 kHz, temporal information is so precise that just noticeable differences in frequency can be as small as 0.1–0.2% (roughly 2–3 cents). Between 1 and 5 kHz, both mechanisms contribute. Above 5 kHz, pitch perception becomes increasingly vague and musical melodies lose their clear tonal quality.
 
@@ -632,9 +690,13 @@ One of the most compelling demonstrations in auditory science is the phenomenon 
 When a complex tone contains harmonics \(nf_1, (n+1)f_1, (n+2)f_1, \ldots\) but does not contain the fundamental component \(f_1\) itself, a listener perceives a pitch corresponding to \(f_1\) — the <em>virtual pitch</em> or <em>residue pitch</em>. This percept is robust, can override a physically present (but weaker) component at an adjacent frequency, and persists even when the missing fundamental lies below the transmission range of the acoustic system.
 </div>
 
+{{< score id="music276/12-missing-fundamental" caption="Virtual pitch: harmonics 3, 4, 5 of 200 Hz (600, 800, 1000 Hz) presented without the fundamental — listeners hear the missing C3 (200 Hz)." >}}
+
 <div class="example">
 <strong>Example 7.1.</strong> Harmonics 3, 4, and 5 of a 200 Hz tone have frequencies 600, 800, and 1000 Hz. If only these three components are presented (with no energy at 200 Hz, 400 Hz, or any other frequency), listeners consistently report hearing a pitch near 200 Hz. The auditory system appears to perform a form of harmonic template matching, searching for the fundamental that best accounts for the observed pattern of harmonics. This can be modeled as finding the \(f_0\) that minimizes some cost function of the deviations of observed partials from integer multiples of \(f_0\).
 </div>
+
+{{< score id="music276/12-missing-fundamental" caption="Example 7.1: Partials 3–5 of 200 Hz (notated as G4, C5, E5) with the fundamental absent — the auditory system reconstructs the missing C3." >}}
 
 The missing fundamental explains why a telephone (which transmits frequencies above roughly 300 Hz) reproduces male speech with recognizable voice pitch near 100–150 Hz: the harmonics above 300 Hz are sufficient for the auditory system to reconstruct the pitch. It explains why a small speaker with poor bass response still sounds musical. It also underlies several important musical illusions, including the bass pedal tones of pipe organs: many large organ pipes speak at frequencies below the lowest resonance of the room or the acoustic range of the listener's speaker system, and the virtual pitch supplies the perceived bass.
 
@@ -643,6 +705,8 @@ The missing fundamental explains why a telephone (which transmits frequencies ab
 The *Shepard tone* (R. N. Shepard, 1964) is an auditory illusion producing a pitch that appears to ascend (or descend) endlessly through successive semitones without ever actually becoming higher (or lower) in absolute frequency.
 
 A Shepard tone is constructed as a superposition of sinusoids at frequencies that are exact octave multiples of one another (e.g., \(f, 2f, 4f, 8f, \ldots\)), with amplitudes shaped by a fixed bell-shaped spectral envelope that emphasizes middle frequencies and fades out the very high and very low components. As the pitch class ascends by one semitone (a factor of \(2^{1/12}\)), the entire pattern shifts: the highest component fades out and a new component fades in one octave below, so the overall spectral distribution remains identical. After 12 semitone steps the pattern has returned to exactly its original frequency distribution — yet the perceived pitch has "ascended" continuously.
+
+{{< score id="music276/23-shepard-tone" caption="Shepard tone: an ascending chromatic scale C through B in which pitch class rises continuously — after 12 steps the pattern repeats, creating the endless-rise illusion." >}}
 
 The illusion exploits the ambiguity of octave equivalence in pitch perception. Because all components are octave-related, the auditory system cannot assign an absolute octave register — only a pitch class (the note name, e.g., "A" regardless of octave). The gradual brightening of the spectral envelope as the tone rises a semitone biases the pitch judgment toward "higher," even though the total acoustic pattern is cyclic.
 
@@ -664,6 +728,8 @@ which is a rapid oscillation at the average frequency \(\bar{f} = (f_1 + f_2)/2\
 
 This pattern — maximum roughness at beat frequencies of 15–30 Hz — is the psychoacoustic basis of Helmholtz's theory of dissonance.
 
+{{< score id="music276/04-beating-semitone" caption="Beats between pure tones: a minor 2nd (A4–Bb4, ~26 Hz beat) and a semitone (C5–C#5, ~31 Hz beat) — both in the maximum roughness range of 15–40 Hz." >}}
+
 ### 8.2 Helmholtz's Theory of Dissonance
 
 Hermann von Helmholtz (1863) proposed that the consonance or dissonance of a musical interval is determined by the roughness arising from beating between nearly coincident partials of the two tones. A musical interval is consonant when the low-order partials of the two tones either coincide exactly (producing no beats) or are separated by more than the roughness range (producing no roughness). It is dissonant when multiple pairs of partials fall within the roughness range and produce simultaneous fast beats.
@@ -671,6 +737,8 @@ Hermann von Helmholtz (1863) proposed that the consonance or dissonance of a mus
 <div class="example">
 <strong>Example 8.1.</strong> Two tones a pure perfect fifth apart (frequency ratio 3:2, e.g., 300 Hz and 200 Hz) have partials at 200, 400, 600, 800, 1000, \ldots Hz and 300, 600, 900, 1200, \ldots Hz respectively. The partials at 600 Hz coincide exactly; the partials at 1200 Hz coincide exactly; and so on. With pure intervals, there is no roughness between coincident partials. Two tones a major second apart (ratio approximately 9:8, e.g., 200 Hz and 225 Hz) have no low-order partial coincidences, and numerous pairs of partials are separated by 25 Hz — exactly in the peak roughness range. The result is high roughness and strong dissonance.
 </div>
+
+{{< score id="music276/06-consonance-dissonance-spectrum" caption="Example 8.1: Consonance–dissonance spectrum — interval pairs from unison through minor 2nd, major 2nd, minor 3rd, major 3rd, tritone, to octave." >}}
 
 Helmholtz's theory predicts the traditional hierarchy of consonances in Western music — octave, fifth, fourth, major third, minor third — in essentially the correct order, based on the frequency of partial coincidences and the magnitudes of beating between non-coincident partials. However, the theory is incomplete: it predicts that the octave (2:1) should be maximally consonant (all partials of the upper tone coincide with partials of the lower), which is correct, but it cannot fully explain why certain simultaneous intervals sound beautiful in a harmonic context even when some roughness is present, or why the same interval sounds different in different registers.
 
@@ -689,6 +757,8 @@ Plomp and Levelt (1965) conducted systematic psychoacoustic experiments with pai
 <div class="definition">
 The <strong>Plomp-Levelt consonance function</strong> for two pure tones at frequencies \(f_1 \le f_2\) describes consonance as a function of the normalized frequency separation \(\Delta f / \mathrm{CB}(\bar{f})\), where \(\mathrm{CB}(\bar{f})\) is the critical bandwidth at the average frequency \(\bar{f}\). Consonance is maximum (roughness zero) when \(\Delta f = 0\) (unison) and when \(\Delta f / \mathrm{CB} \ge 1\) (the tones are more than a critical bandwidth apart). Roughness is maximum at \(\Delta f / \mathrm{CB} \approx 0.25\).
 </div>
+
+{{< score id="music276/05-critical-bandwidth" caption="Plomp-Levelt critical bandwidth: unison (no beating), major 2nd (within critical band, rough), major 3rd (near CB edge), perfect 5th (outside CB, smooth)." >}}
 
 For complex tones with multiple harmonics, the total roughness of a dyad is the sum of roughnesses from all pairs of partials:
 \[
@@ -717,6 +787,10 @@ The Pythagorean major third has frequency ratio \((3/2)^4 / 4 = 81/64 \approx 1.
 \]
 The two whole tones are the *major tone* (9:8 \(\approx 203.9\) cents) and the *minor tone* (10:9 \(\approx 182.4\) cents), differing by the syntonic comma (21.5 cents). Just intonation gives maximally consonant triads in a single key but creates serious problems for modulation: the same pitch may need to be tuned differently depending on whether it functions as the major third of one chord or the fifth of another. Just intonation is most naturally suited to a cappella choral singing, where singers can continuously adjust pitch to minimize roughness.
 
+{{< score id="music276/07-just-intonation-scale" caption="Just intonation C major scale with ratio annotations 1/1 through 2/1: the pure intervals that minimize roughness between partials." >}}
+
+{{< score id="music276/09-pythagorean-scale" caption="Pythagorean tuning: stacked pure fifths (C, G, D, A, E, B, F#) — pure fifths but sharper major thirds (81/64 vs. 5/4)." >}}
+
 ### 8.5 Meantone Temperament and the Wolf Fifth
 
 *Meantone temperament*, developed in the 15th–17th centuries and used widely through the 18th century on keyboard instruments, distributes the syntonic comma evenly over the four fifths needed to build a major third. In quarter-comma meantone, each of these four fifths is tempered narrow by one-quarter of the syntonic comma (\(\approx 5.4\) cents), so four consecutive fifths sum to a pure major third plus two octaves:
@@ -724,6 +798,8 @@ The two whole tones are the *major tone* (9:8 \(\approx 203.9\) cents) and the *
 4 \times \left(\frac{3}{2} \cdot 2^{-1/(4 \times \ln(81/80)/\ln 2)}\right) \approx \frac{5}{4} \times 4 \quad \text{(over two octaves)}.
 \]
 Meantone gives beautifully pure major thirds (the characteristic warmth of Renaissance and Baroque keyboard music) in the most common keys — C, G, D, F, B-flat — but produces a severely out-of-tune fifth in one position of the cycle of fifths: the "wolf fifth" between G-sharp and E-flat (or enharmonically equivalent notes), which may be 35–40 cents flat of pure. Playing in keys that require the wolf fifth is distinctly unpleasant, restricting music to a subset of keys.
+
+{{< score id="music276/10-meantone-wolf-fifth" caption="Meantone temperament: the pure fifth (702¢), the tempered meantone fifth (696.6¢, −5.4¢), and the wolf fifth G#–Eb (737.6¢, +35.6¢)." >}}
 
 ### 8.6 Equal Temperament
 
@@ -740,6 +816,8 @@ f_n = f_0 \cdot 2^{n/12}.
 \]
 A <em>cent</em> is defined as one hundredth of a semitone: \(k\) cents corresponds to a frequency ratio of \(2^{k/1200}\). The cent scale makes it easy to compare intervals across tuning systems.
 </div>
+
+{{< score id="music276/08-equal-temperament-scale" caption="12-TET C major scale with cent deviations from just intonation: E is +13.7¢ sharp, A is +15.6¢ sharp, showing the systematic compromises of equal temperament." >}}
 
 The equal-tempered fifth is \(2^{7/12} \approx 1.49831\), which is 1.955 cents narrow of the pure fifth 3:2 \(\approx 1.50000\) — a discrepancy audible only in a direct comparison with a pure reference but essentially imperceptible in normal musical contexts. The equal-tempered major third is \(2^{4/12} = 2^{1/3} \approx 1.25992\), which is 13.7 cents sharp of the pure major third 5:4 = 1.25000. This is a much more substantial impurity, clearly audible as approximately 6–7 beats per second in a sustained piano major third in the middle register, and more rapid (more conspicuous) in the treble.
 
@@ -761,6 +839,10 @@ The following table compares the major tuning systems on the key intervals (in c
 The trade-offs are stark: Pythagorean tuning maximizes fifths (pure) at the cost of sharp thirds; meantone maximizes thirds (pure) at the cost of the wolf fifth; 12-TET compromises all intervals slightly but allows free modulation through all keys.
 </div>
 
+{{< score id="music276/09-pythagorean-scale" caption="Pythagorean tuning — stacked pure fifths produce the chromatic scale, but the major third (81/64) is 21.5¢ sharper than just." >}}
+
+{{< score id="music276/08-equal-temperament-scale" caption="12-TET cent deviations from just: the uniform compromise that enables free modulation at the cost of impure thirds." >}}
+
 The practical choice of tuning depends on the musical genre, instrument, and compositional style. A cappella choral singing and string quartets naturally gravitate toward just intonation and can dynamically adjust pitch in real time. Keyboard instruments with fixed pitch must choose a static tuning; equal temperament has dominated keyboard practice since the mid-19th century. Wind orchestras rely on the players' ability to adjust intonation continuously to minimize roughness in sustained chords. Barbershop quartet singing has developed a strong preference for just intonation: the "lock and ring" of a perfectly tuned seventh chord (with a 7:4 harmonic seventh) is the genre's most celebrated sonic ideal.
 
 ### 8.8 Well Temperament and the Affective Theory of Keys
@@ -776,6 +858,8 @@ The consonance theory developed in this chapter assumes instruments with harmoni
 <div class="remark">
 William Sethares (1993) showed that for any fixed inharmonic spectrum, one can derive a corresponding <em>inharmonic tuning system</em> in which roughness is minimized by intervals matching the partial ratios of the spectrum. For the Javanese gamelan, whose bronze instruments have partials at approximately 1, 2.76, 5.52, and 8.41 times the fundamental (decidedly non-harmonic), the pelog and slendro scales used in gamelan music correspond approximately to the intervals that minimize roughness for that specific spectrum. The same intervals would sound highly dissonant on harmonic instruments like violins or voices. This suggests that consonance is not a universal absolute but a relational property of the combination of <em>timbre</em> and <em>tuning</em> — a relationship discovered and refined over centuries by musical communities whose ears are tuned (literally) to the instruments they play.
 </div>
+
+{{< score id="music276/06-consonance-dissonance-spectrum" caption="Inharmonic consonance: the standard interval-roughness spectrum for harmonic timbres — gamelan timbres would invert or radically reshape this curve." >}}
 
 The unity of the science of musical sound lies precisely in this web of relationships. The harmonic series, born from the physics of vibrating strings and air columns, shapes the consonance hierarchy through the psychoacoustics of critical bands and roughness. The architecture of concert halls is designed to deliver this sound, shaped by centuries of aesthetic refinement, to ears whose anatomy encodes the logarithm of frequency along the basilar membrane — matching, perhaps not coincidentally, the logarithmic structure of the musical scale. The cultural and the physical, the biological and the mathematical, are woven together in every moment of musical experience.
 
@@ -795,6 +879,8 @@ The remarkable result, predicted by the reflection function model and confirmed 
 In practice, the bowed string produces a richer and more complex motion than the ideal Helmholtz wave. The string's stiffness, the finite width of the bow, and the complex mechanical admittance of the bridge and instrument body all modify the ideal waveform. The most audible consequence is the dependence of the attack on bowing technique: starting a bowed note requires careful management of the initial stick-slip transient. Too light a bow pressure and the string never enters the stick-slip regime — the result is a "surface" or "whistling" sound (the Schelleng upper threshold). Too heavy and the string remains stuck throughout the cycle, producing a scratchy, unpitched noise (the Schelleng lower threshold). The playable range lies between these two extremes, and it narrows for louder dynamics and for bowing near the bridge (shorter \(\beta\), requiring higher bow pressure). Mastering the dynamics of the Helmholtz oscillator is a large part of what violin study entails.
 </div>
 
+{{< score id="music276/30-sawtooth-spectrum" caption="Bowed-string sawtooth spectrum: Helmholtz motion produces all harmonics at amplitudes 1/n, visible as noteheads at successive partial positions." >}}
+
 ### S.1 Nonlinear Acoustics and Combination Tones
 
 The acoustic theory developed in the preceding chapters is largely *linear*: we assumed that pressure fluctuations are small enough that the wave equation can be derived from a linear approximation to the equation of state of the gas. In practice, all acoustic systems exhibit some degree of nonlinearity — and in certain musical contexts, this nonlinearity becomes perceptually important.
@@ -804,6 +890,8 @@ When two sinusoidal tones at frequencies \(f_1\) and \(f_2\) pass through a nonl
 f_{mn} = |m f_1 \pm n f_2|, \quad m, n = 0, 1, 2, \ldots
 \]
 The most perceptually prominent is the *cubic difference tone* at \(2f_1 - f_2\) (for \(f_2 > f_1\)), and the *quadratic difference tone* at \(f_2 - f_1\). Tartini (1754) described the audibility of the difference tone \(f_2 - f_1\) in quiet sustained intervals played on the violin, and he used these "Tartini tones" as a check on the purity of just intervals: a pure fifth (3:2 ratio) produces a difference tone exactly one octave below the lower note (\(3f - 2f = f\)), while a mistuned fifth produces a difference tone slightly off from that position, revealing the detuning.
+
+{{< score id="music276/13-combination-tones" caption="Combination tones: two primary tones (G4 at 392 Hz, C5 at 523 Hz) generate a difference tone at 131 Hz (C3), audible as a bass Tartini tone." >}}
 
 The cochlea itself is a nonlinear system (due to the active mechanics of the outer hair cells), and it generates combination tones internally. The *distortion product otoacoustic emission* (DPOAE) at \(2f_1 - f_2\) is measurable with a sensitive microphone in the ear canal even without any external stimulus at that frequency — it is generated within the cochlea and radiates back through the middle ear. DPOAEs are widely used clinically as a non-invasive measure of cochlear health, particularly for screening neonatal hearing.
 
@@ -822,6 +910,8 @@ L_m(f_m + \Delta f) \approx L - \alpha\, \frac{\Delta f}{f_m},
 \]
 for a simplified linear model, where \(\alpha\) is a slope parameter on the order of 25–30 dB per octave on the low-frequency side and 50–80 dB per octave on the high-frequency side.
 </div>
+
+{{< score id="music276/18-masking" caption="Simultaneous masking: a loud A4 masker obscures a softer B4 target — upward spread of masking means the higher-frequency target is more vulnerable." >}}
 
 *Temporal masking* extends the masking effect into time: *forward masking* (post-stimulatory masking) occurs when the masker raises the threshold for a target presented after the masker has ended, for up to 100–200 ms. *Backward masking* (pre-stimulatory masking) can occur when the masker follows the target by up to about 20 ms — a counterintuitive result explained by the time required for neural processing to reach its decision threshold. Temporal masking plays an important role in the perception of the complex onsets and releases of musical notes, and in the psychoacoustic model underlying perceptual audio coding algorithms such as MP3 (MPEG-1 Audio Layer III) and AAC.
 
@@ -856,7 +946,13 @@ The harmonic series of G4 includes 393, 786, 1179, 1572, 1965, \ldots Hz.
 The partials 1310 Hz (5th harmonic of C4, 4th harmonic of E4) and 1572 Hz (6th harmonic of C4, 5th of E4, 4th of G4) and 786 Hz (3rd harmonic of C4, 2nd of G4) all coincide, reinforcing a common perceived pitch at C4. In equal temperament, these coincidences are slightly broken: E4 in 12-TET is 13.7 cents sharp of just, so the 4th harmonic of E4 lands at \(4 \times 262 \times 2^{4/12} \approx 1315\) Hz rather than 1310 Hz — a discrepancy of about 5 Hz, producing slow beats in a quiet sustained context.
 </div>
 
+{{< score id="music276/35-just-major-triad" caption="Example S.1: Just major triad C–E–G (4:5:6 ratio) and its equal-tempered counterpart — the 13.7¢ sharp ET major third produces slow beats on the coincident partials." >}}
+
 The *harmonic tension* of a chord in tonal music — its sense of needing to resolve to a more stable chord — is partially explained by the roughness of its partial interactions and partially by learned syntactic expectations built up through musical enculturation. The dominant seventh chord (e.g., G–B–D–F in C major) has a higher roughness score than the tonic major triad (C–E–G) because of the tritone between B and F, whose partials interact in the peak roughness range. This increased roughness corresponds to the strong tendency of the dominant seventh to resolve to the tonic, a relationship that forms the cornerstone of tonal harmony.
+
+{{< score id="music276/26-tonal-hierarchy" caption="Tonal hierarchy: tonic triad (most stable), dominant (tension), subdominant, and scale degree 4 (least stable, tritone from tonic) — stability reflected in resolution tendency." >}}
+
+{{< score id="music276/25-tritone-paradox" caption="Tritone paradox: C–F# and F#–C are interval-class equivalent but perceived as ascending or descending differently depending on the listener's language background." >}}
 
 ### S.5 Digital Audio and the Sampling Theorem
 
@@ -956,6 +1052,8 @@ showing that amplitude modulation creates exactly two sidebands at \(f_0 \pm f_t
 The perceptual boundary between vibrato and amplitude modulation that produces roughness lies at the threshold of about 15–20 Hz modulation rate. Below this rate, amplitude modulation is heard as a slow pulsation or tremolo; above it, the modulation produces roughness and ultimately (above about 50 Hz for typical carrier frequencies) creates the sensation of two separate tones. This is the same roughness boundary that governs the perception of dissonant beats between partials — a beautiful unification of two apparently different musical phenomena under the single concept of temporal modulation resolution in the auditory system.
 </div>
 
+{{< score id="music276/34-vibrato-tremolo" caption="Vibrato vs. tremolo: upper staff shows a sustained note with pitch-modulation ties (vibrato); lower staff shows alternating forte/piano articulation (tremolo amplitude modulation)." >}}
+
 ### S.9 The Piano Action: Mechanics and Acoustics
 
 The *piano action* — the mechanical system between the key and the string — is an engineering marvel of the 19th century and represents the most mechanically complex part of any common musical instrument. A modern grand piano action contains approximately 12,500 parts, and each of the 88 notes has an independent action assembly with roughly the same number of moving components as a fine mechanical watch.
@@ -1002,9 +1100,13 @@ and the risk of damage is approximately constant for a given total energy dose, 
 Musicians are at substantially elevated risk of hearing loss compared to the general population. Orchestral musicians are regularly exposed to levels of 85–105 dB SPL during rehearsals and concerts; percussionists and brass players in positions near each other face the highest exposures. A 2011 study of European orchestral musicians found that 52% reported tinnitus (ringing in the ears) and 43% had measurable high-frequency hearing loss attributable to occupational noise. The implementation of musician's earplugs — custom-molded, flat-attenuation devices that reduce sound levels by a fixed amount (15 or 25 dB) uniformly across frequencies, unlike conventional foam plugs that preferentially attenuate high frequencies — has become increasingly standard practice in professional orchestral settings.
 </div>
 
+{{< score id="music276/19-loudness-dynamics" caption="Occupational noise levels: the same A4 at ppp (~40 dB), mp (~70 dB), and fff (~100 dB), illustrating the range from safe to hazardous orchestral exposure." >}}
+
 The perceptual consequences of hearing loss extend beyond reduced sensitivity. Cochlear damage destroys not only the passive mechanics of the basilar membrane but also the active cochlear amplifier provided by the outer hair cells. The result is a broadening of auditory filters (reduced frequency selectivity), which impairs the ability to separate concurrent sounds in a complex auditory scene — the phenomenon known as the *cocktail party problem*. For musicians, the consequences of reduced frequency selectivity include difficulty in hearing individual lines within a polyphonic texture, impaired tuning sensitivity, and reduced ability to detect small intonation errors — the very skills most central to musical excellence. Preserving musical hearing is not merely a quality-of-life issue but a professional necessity, and the acoustical science of hearing protection deserves the same careful attention as the science of concert hall design or instrument acoustics.
 
 ### S.12 Consonance in Spectral Music and Microtonal Composition
+
+{{< score id="music276/11-overtone-chord" caption="Spectral music basis: the first 6 partials of C2 voiced as a chord — Grisey's *Partiels* begins with exactly this overtone sonority orchestrated across the ensemble." >}}
 
 The 20th and 21st centuries have seen composers systematically interrogate the assumptions of the Western tonal tradition, including the harmonic series, equal temperament, and the consonance hierarchy. *Spectral music*, originating in Paris in the 1970s with composers such as Gérard Grisey and Tristan Murail, takes the harmonic series as its primary compositional material: chords are derived directly from the partial series of a chosen fundamental, and the microtonally precise frequency ratios of the partials are approximated using quarter-tones, eighth-tones, or other microtonal notation.
 
@@ -1016,9 +1118,19 @@ Grisey's *Partiels* (1975), for large ensemble, begins with the sound of a low E
 <strong>Example S.2.</strong> In 31-TET, the step size is \(1200/31 \approx 38.7\) cents. The major third is \(10 \times 38.7 \approx 387\) cents — only 0.7 cents sharp of just. The perfect fifth is \(18 \times 38.7 \approx 696.8\) cents — only 5.2 cents flat of just (almost identical to quarter-comma meantone). The harmonic seventh (7:4 \(\approx 968.8\) cents) is approximated by \(25 \times 38.7 \approx 967.7\) cents — only 1.1 cents flat. This extraordinary approximation quality of 31-TET for low-prime harmonics was recognized by Christiaan Huygens in 1691, long before the systematic study of microtonal temperaments.
 </div>
 
+{{< score id="music276/07-just-intonation-scale" caption="Example S.2: Just intonation scale ratios — 31-TET approximates these ratios to within 1¢ for the major third and harmonic seventh." >}}
+
 The development of electronic and computer music has liberated composers from the physical constraints of fixed-pitch mechanical instruments. Arbitrary frequency ratios, including irrational ones, can be specified and realized with perfect accuracy. Composers such as Harry Partch (who built custom instruments in 43-tone just intonation), La Monte Young (who explored sustained just-intonation drones), and James Tenney (who used rational frequency ratios derived from the harmonic series in a rigorous compositional framework) have demonstrated that the tonal resources of just intonation far exceed those of any equal temperament, at the cost of requiring purpose-built instruments or electronic realization. The science of tuning systems is therefore not a closed chapter from the 18th century but a living field at the intersection of acoustics, mathematics, and compositional aesthetics.
 
 ### S.13 Summary of Key Physical and Perceptual Parameters
+
+{{< score id="music276/27-absolute-pitch" caption="Absolute pitch exercise: four pitches (F#4, Eb5, B3, Ab4) for identification by pitch name alone — a test of absolute pitch ability." >}}
+
+{{< score id="music276/28-gestalt-grouping" caption="Gestalt grouping by proximity: notes in the low register form one group (A), notes in the high register form another (B) — proximity is a primary streaming cue." >}}
+
+{{< score id="music276/20-rhythmic-meter" caption="Metric accent patterns: 4/4 (strong–weak–weak–weak) vs. 3/4 (strong–weak–weak) — meter shapes rhythmic expectation and accent perception." >}}
+
+{{< score id="music276/29-rhythmic-expectation" caption="Rhythmic expectation and violation: a regular 4/4 pattern is established, then the expected downbeat is omitted — the missing beat creates a palpable perceptual surprise." >}}
 
 The following table collects the key quantitative parameters that have appeared throughout these notes, for quick reference.
 
@@ -1048,6 +1160,8 @@ The following table collects the key quantitative parameters that have appeared 
 | CD sampling rate | \(f_s\) | 44,100 | Hz |
 | CD dynamic range (16-bit) | SQNR | 98 (approx.) | dB |
 </div>
+
+{{< score id="music276/24-melodic-minor" caption="Melodic vs. harmonic minor scales in A: the raised 6th and 7th degrees of the melodic minor (ascending) contrast with the augmented 2nd of the harmonic minor." >}}
 
 These numbers are not mere cataloguing; each one is the crystallized result of a physical derivation, an experimental measurement, or both, and each connects directly to the practical decisions made by instrument makers, concert hall architects, recording engineers, and performing musicians every day. The science of musical sound is, ultimately, a science of these connections — the web of relationships linking the restoring force in a vibrating string, the nonlinear mechanics of a bowed bow hair, the logarithmic mapping of the basilar membrane, the roughness of a mistuned third, the reflections from the plasterwork of a 19th-century Viennese concert hall, and the subjective experience of beauty in organized sound.
 

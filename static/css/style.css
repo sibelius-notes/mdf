@@ -632,3 +632,22 @@ sup { font-size: 0.75em; }
   .error-page > h1 { line-height: 1; }
   .error-actions { flex-direction: column; }
 }
+
+/* === Music Scores === */
+figure.score {
+  margin: 1.5em auto;
+  text-align: center;
+}
+figure.score img {
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.4em 0.6em;
+}
+figure.score figcaption {
+  margin-top: 0.45em;
+  font-size: 0.82em;
+  color: var(--text-muted);
+  font-style: italic;
+}

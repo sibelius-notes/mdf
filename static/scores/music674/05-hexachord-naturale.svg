@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="87.73mm" height="13.11mm" viewBox="0.0000 0.0001 49.9231 7.4609">
+<style type="text/css">
+<![CDATA[
+tspan { white-space: pre; }
+]]>
+</style>
+<g transform="translate(18.0758, 3.9110)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 5.9110)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.8731" y2="0"/>
+</g>
+<g transform="translate(0.0000, 4.9110)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.8731" y2="0"/>
+</g>
+<g transform="translate(0.0000, 3.9110)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.8731" y2="0"/>
+</g>
+<g transform="translate(0.0000, 2.9110)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.8731" y2="0"/>
+</g>
+<g transform="translate(0.0000, 1.9110)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.8731" y2="0"/>
+</g>
+<g transform="translate(49.7331, 3.9110)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(39.1850, 3.9110)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(28.6239, 3.9110)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 6.9110)">
+<rect x="8.1142" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:11:7:8">
+<g transform="translate(29.7139, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>fa</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:8:4:5">
+<g transform="translate(8.6047, 6.9110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:8:7:8">
+<g transform="translate(8.6047, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>ut</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(0.8000, 4.9110)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:6:17:18">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:6:31:32">
+<g transform="translate(5.1195, 3.9110)">
+<path transform="scale(0.0040, -0.0040)" d="M170 259c-51 0 -53 -43 -53 -100v-18v-18c0 -57 2 -100 53 -100c57 0 61 51 61 118s-4 118 -61 118zM117 266c15 10 33 16 53 16c101 0 170 -46 170 -141s-69 -141 -170 -141c-112 0 -170 124 -170 250c0 128 72 250 190 250c70 0 136 -39 136 -103
+c0 -36 -29 -66 -65 -66s-66 30 -66 66c0 24 40 25 40 49c0 20 -23 31 -45 31c-66 0 -75 -65 -75 -139c0 -24 2 -48 2 -72z" fill="currentColor"/>
+</g>
+<g transform="translate(5.0000, 5.9270)">
+<path transform="scale(0.0040, -0.0040)" d="M196 117h117c0 -48 27 -94 72 -94c8 0 12 -5 12 -11s-4 -12 -12 -12c-44 0 -87 13 -131 13s-87 -13 -131 -13c-8 0 -12 6 -12 12s4 11 12 11c45 0 73 46 73 94zM-2 148c0 12 140 143 140 336c0 10 7 19 16 16c23 -7 47 -13 71 -13s48 6 71 13c14 4 23 -9 17 -16
+l-284 -330h167v131c0 34 34 27 68 72c22 30 23 56 36 56c6 0 13 -5 13 -14v-245h72c10 0 15 -7 15 -14s-5 -15 -15 -15h-72v-8h-117v8h-167c-23 0 -31 14 -31 23z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:9:4:5">
+<g transform="translate(14.6648, 6.4110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:9:7:8">
+<g transform="translate(14.6648, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>re</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:10:4:5">
+<g transform="translate(22.5639, 5.9110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:10:7:8">
+<g transform="translate(22.5639, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>mi</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:11:4:5">
+<g transform="translate(29.7139, 5.4110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:12:4:5">
+<g transform="translate(35.7739, 4.9110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:12:7:8">
+<g transform="translate(35.7739, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>sol</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:13:4:5">
+<g transform="translate(43.6730, 4.4110)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/05-hexachord-naturale.ly:13:7:8">
+<g transform="translate(43.6730, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>la</tspan>
+</text>
+</g>
+</a>
+</svg>

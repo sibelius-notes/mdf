@@ -150,6 +150,8 @@ At this level all of the composer's individual invention is present.</li>
 </ol>
 </div>
 
+{{< score id="music672/01-structural-levels" caption="Three structural levels (Schichten): Vordergrund, Mittelgrund, and Hintergrund, shown on three staves." >}}
+
 <div class="remark">
 <strong>Remark 1.1.</strong> The number of middleground levels is not fixed by the theory; longer
 and more complex works typically require more intermediate levels between background and
@@ -160,6 +162,8 @@ middleground levels for the same work. What the theory requires is only that eac
 derivable from the one above it by a specifiable prolongational operation, and that the sequence
 of levels connect smoothly from the background Ursatz down to the notated score.
 </div>
+
+{{< score id="music672/25-three-level-graph" caption="Three-level graph showing the same passage at foreground (FG), middleground (MG), and background (BG)." >}}
 
 The relationship between levels is one of elaboration: each foreground detail is an elaboration of
 a simpler middleground structure, which in turn elaborates the background. Crucially, this
@@ -207,6 +211,8 @@ degrees \(\hat{3}–\hat{2}–\hat{1}\). This is the most compact Urlinie and is
 shorter, simpler works or movements. A great many minuets, short character pieces, and song forms
 exhibit a third-line Urlinie.
 
+{{< score id="music672/02-ursatz-third-line" caption="Third-line Ursatz: Urlinie 3̂–2̂–1̂ in the soprano over I–V–I Bassbrechung in the bass." >}}
+
 The **fifth-line Urlinie** descends from \(\hat{5}\): the fundamental line traverses five scale
 degrees, \(\hat{5}–\hat{4}–\hat{3}–\hat{2}–\hat{1}\). This is the most common Urlinie in
 Schenker's analyses of the standard tonal repertoire, appearing in works of moderate length and
@@ -215,6 +221,8 @@ of the tonic triad and is supported by the dominant, so the descent from \(\hat{
 \(\hat{4}\) (harmonically active), \(\hat{3}\) (again a tonic chord tone), \(\hat{2}\) (over the
 structural dominant V), and finally \(\hat{1}\) (over the closing I) traces out the fundamental
 harmonic drama of tonality in the most complete way.
+
+{{< score id="music672/04-ursatz-octave-line" caption="Octave-line Ursatz: full 8̂–7̂–6̂–5̂–4̂–3̂–2̂–1̂ Urlinie descent over I–V–I bass — rare and associated with works of particular breadth." >}}
 
 The **octave-line Urlinie** descends from \(\hat{8}\): the fundamental line traverses the entire
 octave, \(\hat{8}–\hat{7}–\hat{6}–\hat{5}–\hat{4}–\hat{3}–\hat{2}–\hat{1}\). This is relatively
@@ -237,6 +245,8 @@ them, connected by a beam:
 \]
 with the beam drawn above the noteheads to indicate the directional linear progression.
 </div>
+
+{{< score id="music672/03-ursatz-fifth-line" caption="Fifth-line Urlinie (5̂–4̂–3̂–2̂–1̂) with I–V–I Bassbrechung: the most common Ursatz form." >}}
 
 The requirement that the Urlinie descend — and always descend, never leap upward — is
 fundamental to Schenker's theory. It reflects his conviction that tonal music has a fundamental
@@ -262,6 +272,10 @@ reached; the concluding \(\hat{1}\) of the Urlinie coincides with the return to 
 simultaneous arrival of \(\hat{2}\) over V and then \(\hat{1}\) over I in the bass creates the deep
 structural **authentic cadence** that closes the Ursatz and, through prolongational elaboration,
 governs the harmonic closure of the work.
+
+{{< score id="music672/29-cadential-gesture" caption="Cadential gesture: 2̂ over V resolves to 1̂ over I — the deep structural authentic cadence that closes the Ursatz." >}}
+
+{{< score id="music672/05-bassbrechung" caption="Bassbrechung: bass arpeggiation I–V–I, the harmonic component of the Ursatz, traversing the tonic triad from root to fifth and back." >}}
 
 <div class="remark">
 <strong>Remark 2.1.</strong> Schenker's claim that the Ursatz consists only of these two coordinated
@@ -291,6 +305,8 @@ This contrapuntal precision is not accidental. Schenker's insight — or claim �
 structural level of tonal music is governed by the same contrapuntal laws as the pedagogical
 exercises in which students learn the foundations of voice leading. Free composition is not truly
 free; it is, at the background, strict species counterpoint.
+
+{{< score id="music672/06-two-voice-counterpoint" caption="Two-voice counterpoint at the background: 5̂ over I, 2̂ over V, 1̂ over I — the Ursatz as first-species counterpoint between Urlinie and Bassbrechung." >}}
 
 ### 2.5 Graph Notation for the Ursatz
 
@@ -359,6 +375,8 @@ event. Rhythmic proportion in the score does not translate directly into structu
 graph.
 </div>
 
+{{< score id="music672/07-notehead-types" caption="Open noteheads (structural tones) versus filled noteheads (elaborating tones) in a Schenkerian graph." >}}
+
 ### 3.3 Beams, Slurs, and Linear Progressions
 
 **Beams** drawn above or below noteheads connect a sequence of tones into a **linear progression**
@@ -385,6 +403,8 @@ the direction of motion (ascending or descending). The Urlinie itself is the mos
 significant Zug in any piece, being the descending stepwise motion that constitutes the background
 melodic structure.
 </div>
+
+{{< score id="music672/08-linear-progression-zug" caption="Quintzug (fifth-progression): descending Zug from 5̂ to 1̂, with beamed noteheads indicating the directed linear motion." >}}
 
 ### 3.4 Roman Numerals and Harmonic Labels
 
@@ -413,6 +433,8 @@ learn to suspend the foreground-level habit of labeling every chord and instead 
 are structurally primary at each level of reduction.
 </div>
 
+{{< score id="music672/09-roman-numerals-middleground" caption="Roman numerals at middleground level: the entire opening prolongation receives a single I, with passing harmonies subordinate." >}}
+
 ### 3.5 Caret Notation and Scale-Degree Labels
 
 **Caret notation** (the circumflex accent above a numeral, written \(\hat{n}\)) is used in
@@ -421,6 +443,8 @@ of the Urlinie is labeled \(\hat{3}\), \(\hat{5}\), or \(\hat{8}\) depending on 
 is operative; each subsequent Urlinie tone is labeled with its scale degree number in sequence.
 The notation \(\hat{2}|\) (with a vertical stroke) indicates the interrupted \(\hat{2}\) at the end
 of the first part of an interrupted Ursatz.
+
+{{< score id="music672/10-scale-degree-caret" caption="Caret notation: scale-degree labels (5̂–4̂–3̂–2̂–1̂) above the five Urlinie tones of a fifth-line descent." >}}
 
 ### 3.6 Reading a Multi-Level Graph: A Practical Guide
 
@@ -448,6 +472,10 @@ detail of the foreground to the simplicity of the background. At each stage, ide
 have been eliminated (reduced away) and which have been retained; ask why the retained events
 are treated as more structurally primary than the eliminated ones.
 
+{{< score id="music672/23-foreground-melody" caption="Foreground graph: the actual melody with passing tones (PT) and neighbor tones (NT) labeled at the surface level." >}}
+
+{{< score id="music672/24-middleground-reduction" caption="Middleground reduction: elaborating tones eliminated, leaving only the structural 3̂–2̂–1̂ soprano over I–V–I bass." >}}
+
 ---
 
 ## Chapter 4: Prolongational Techniques
@@ -468,6 +496,8 @@ span of musical time: the structural tone is established, moves to the neighbor 
 be elaborated by many foreground events), and then returns. The entire span governed by the
 neighbor-note motion is a single prolongation of the structural tone.
 
+{{< score id="music672/12-upper-lower-neighbor" caption="Upper and lower neighbor notes: structural tone E (3̂) elaborated first by upper neighbor F, then by lower neighbor D, each with a complete departure-and-return gesture." >}}
+
 <div class="example">
 <strong>Example 4.1 (Neighbor-Note Prolongation at the Middleground).</strong> Consider a
 binary movement in C major whose first phrase prolongs the tonic (C–E–G) and whose second
@@ -479,12 +509,16 @@ the restored tonic). The neighbor-note reading reveals that the D-minor harmony,
 prominence, is not a structural harmonic goal but an elaboration of the governing tonic.
 </div>
 
+{{< score id="music672/11-neighbor-note-prolongation" caption="Example 4.1: Upper-neighbor prolongation — E (3̂ over I) moves to F (ii⁶) and returns, revealing D minor as a neighbor-note chord." >}}
+
 Neighbor notes may be **complete** (the structural tone — neighbor — structural tone sequence
 is fully presented) or **incomplete** (the approach from the structural tone is absent, so the figure
 moves to the neighbor and then to the structural tone, without first presenting the structural tone
 itself). Incomplete neighbor notes are common at phrase beginnings, where the structural tone is
 not yet established; complete neighbor notes are more common in the interior of prolongational
 spans.
+
+{{< score id="music672/43-incomplete-neighbor" caption="Incomplete versus complete neighbor notes: incomplete upper neighbor F resolves directly to structural E (3̂) without prior statement of E; complete neighbor figure E–F–E follows." >}}
 
 ### 4.2 Linear Progressions and Passing Tones
 
@@ -505,6 +539,8 @@ importance because the fifth-line Urlinie is itself a descending Quintzug: \(\ha
 third-progression, a middleground fifth-progression, and the background Urlinie as Quintzug —
 is one of the most characteristic moves in Schenkerian analysis.
 
+{{< score id="music672/35-prolongation-by-arpeggiation" caption="Linear progressions at multiple structural levels: the same Quintzug shape appears as surface motive, middleground Zug, and the Urlinie itself." >}}
+
 <div class="definition">
 <strong>Definition 4.1 (Passing Tone in the Prolongational Context).</strong> In Schenkerian
 theory, the term <em>passing tone</em> does not refer only to a metrically weak, non-chord tone
@@ -516,6 +552,8 @@ full chord — even a structurally significant chord — at the foreground level
 endpoints, not its foreground harmonic status.
 </div>
 
+{{< score id="music672/13-passing-tone-prolongation" caption="Passing tone in the prolongational context: bass Terzug I–III in G major with passing A harmonized as a passing chord." >}}
+
 <div class="example">
 <strong>Example 4.2 (Passing Harmony as Elaboration of Linear Progression).</strong> In a passage
 in G major where the bass moves from G (I) to B (III) in a Terzug, the bass passing motion
@@ -526,6 +564,8 @@ as IV; Schenkerian analysis would label it as a passing event (\(\frac{6}{4}\) o
 within the prolongation of the I–III span in the bass. The structural weight of the D-major chord
 is thus revealed to be subordinate to the tonic and mediant harmonies that the bass Terzug connects.
 </div>
+
+{{< score id="music672/14-terzug-third-progression" caption="Example 4.2: Terzug (third-progression) in G major — bass moves from I to III with passing IV chord subordinate to the structural endpoints." >}}
 
 ### 4.3 Arpeggiation
 
@@ -544,6 +584,8 @@ musically important: a linear progression suggests directed, purposeful stepwise
 arpeggiation suggests a more static, harmonically self-contained expansion. The two techniques
 work together in tonal music: arpeggiation establishes the harmonic environment within which
 linear progressions move directionally.
+
+{{< score id="music672/15-arpeggiation" caption="Arpeggiation (Brechung): soprano composes out the C-major tonic triad by traversing its members C–E–G in melodic succession, then returns." >}}
 
 ### 4.4 Register Transfer and Coupling
 
@@ -568,6 +610,8 @@ the same structural voice. This technique is particularly important in Schenker'
 keyboard music, where the instrument's large range encourages composers to exploit octave
 doubling and register exchange extensively.
 
+{{< score id="music672/17-coupling" caption="Coupling (Koppelung): 3̂ appears alternately in high and low registers, the two octave positions linked as a single structural voice." >}}
+
 <div class="remark">
 <strong>Remark 4.1.</strong> Register transfer is one of the most frequently misread techniques in
 student Schenkerian analyses. A common error is to treat every melodic octave leap as a register
@@ -577,6 +621,8 @@ analyzed — that is, when it belongs to the Urlinie or a significant middlegrou
 Octave leaps that are purely surface ornamentation, or that belong to a foreground linear
 progression, do not constitute register transfers and should not be labeled as such.
 </div>
+
+{{< score id="music672/16-register-transfer" caption="Register transfer (Übergreifen): structural tone 3̂ displaced to a lower octave, shown by slur connecting the two registers." >}}
 
 ### 4.5 Initial Ascent and Cover Tones
 
@@ -594,6 +640,8 @@ to the open notehead of the primary tone. The contrast between the filled notehe
 and the open notehead of the primary tone visually signals the distinction between the preparatory
 motion and the structural beginning.
 
+{{< score id="music672/18-initial-ascent-anstieg" caption="Initial ascent (Anstieg): filled noteheads 1̂→2̂→3̂ lead up to the open-notehead Kopfton 5̂, after which the Urlinie descent begins." >}}
+
 A **cover tone** (Deckton) is a prominent foreground note that lies above the Urlinie structural
 tone, "covering" it in the sense of carrying the melodic interest at the surface while the Urlinie
 proceeds in an inner voice beneath. The structural Urlinie tone is present — it is the tone that
@@ -602,6 +650,8 @@ note in an upper register draws the listener's attention away from the structura
 structural progression continues quietly in a lower register. The cover tone is a source of melodic
 richness in tonal music: it allows composers to write a melodically varied and interesting surface
 while the underlying structural voice maintains its precise, goal-directed trajectory.
+
+{{< score id="music672/36-cover-tone" caption="Cover tone (Deckton): prominent notes G–F–E in the upper voice 'cover' the structural Urlinie (E–D–C, 3̂–2̂–1̂) proceeding in the lower voice." >}}
 
 ### 4.6 Unfolding
 
@@ -624,6 +674,8 @@ chord tones. The graph represents an unfolding with a specific curved line conne
 voices that are being alternately presented, indicating that the single surface melodic line is actually
 traversing a two-voice harmonic space.
 </div>
+
+{{< score id="music672/19-unfolding-ausfaltung" caption="Example 4.3: Unfolding (Ausfaltung) — a single melodic line weaves between upper voice G and lower voice E, traversing the structural tenth." >}}
 
 ---
 
@@ -663,6 +715,8 @@ the second half completes the descent. The interruption divides the Ursatz into 
 parallel, but not identical, sections.
 </div>
 
+{{< score id="music672/20-interruption-form" caption="Definition 5.1: Interruption — Urlinie descent halts at 2̂ over V (marked |), then restarts and completes to 1̂ over I." >}}
+
 ### 5.2 The Two-Part Structure and Formal Archetypes
 
 The **two-part structure** (zweiteilige Gliederung) generated by interruption has a formal logic
@@ -694,6 +748,8 @@ a single, interrupted Ursatz, with the B section (the "trio" or developmental po
 reprise) functioning as an elaboration of the dominant prolongation within the second part.
 </div>
 
+{{< score id="music672/21-interrupted-minuet" caption="Example 5.1: Interrupted structure in a G-major minuet — first reprise halts at 2̂|V, second reprise restarts at 5̂ and descends to 1̂." >}}
+
 ### 5.3 Continuous Structures
 
 Not every tonal composition is governed by an interrupted Ursatz. A **continuous structure** is
@@ -718,6 +774,8 @@ of formal labels onto structural positions; it is an interpretive act that draws
 analysis and the formal observation simultaneously.
 </div>
 
+{{< score id="music672/22-continuous-structure" caption="Continuous structure for comparison: single uninterrupted descent from 3̂ to 1̂, characteristic of short phrase forms." >}}
+
 ### 5.4 Inner-Voice Motions and the Interruption Boundary
 
 A consequence of the interruption that is often overlooked in introductory presentations is its
@@ -730,6 +788,8 @@ voice leading — the leading tone that does not resolve — is a major source o
 interruption produces, and it contributes to the formal energy that drives the second part of the
 structure. Understanding the inner-voice implications of the interruption is thus essential to a full
 appreciation of what the interruption accomplishes formally and expressively.
+
+{{< score id="music672/41-inner-voice-interruption" caption="Inner-voice motions at the interruption boundary: leading tone 7̂ in the inner voice implies resolution at the interruption point, whose frustration drives structural energy into the second part." >}}
 
 ---
 
@@ -756,6 +816,8 @@ passing chord — is another common first-middleground elaboration. The subdomin
 heard at the first middleground as a passing event within the tonic prolongation is one of the most
 characteristic features of the classical style.
 
+{{< score id="music672/28-tonic-prolongation" caption="First middleground: tonic prolongation by neighbor-note V — I moves to inner V (neighbor chord) and returns before the structural dominant arrives." >}}
+
 ### 6.2 Elaborating the Dominant: The Pre-Dominant Region
 
 The dominant prolongation — the span of music governing the structural V that supports \(\hat{2}\)
@@ -772,6 +834,8 @@ that precedes the structural V. The subdominant (IV) or supertonic (II or ii\(^{
 frequently appear as pre-dominant harmonies at the middleground, providing the stepwise bass
 motion from scale degree \(\hat{4}\) or \(\hat{2}\) to \(\hat{5}\) (the bass of the dominant) that
 connects the prolonged tonic to the structural dominant in a smooth linear progression.
+
+{{< score id="music672/27-predominant" caption="Pre-dominant region: ii (supertonic) as pre-dominant leading by stepwise bass 4̂→5̂ to the structural V, connecting the prolonged tonic to the Bassbrechung dominant." >}}
 
 ### 6.3 Prolonging the Tonic Return: Structural Closure
 
@@ -792,6 +856,8 @@ argues otherwise: the coda's function is to ensure that the structural weight of
 felt fully by the listener, who needs time and emphasis to register the completion of a structural
 motion that may have been in progress for many minutes.
 
+{{< score id="music672/26-dominant-elaboration" caption="Dominant elaboration: 5-6 motion above V — soprano D moves to E (5th→6th above bass G) before returning to 2̂ over the structural dominant." >}}
+
 <div class="example">
 <strong>Example 6.1 (First Middleground of Beethoven, Op. 13, Slow Movement).</strong> The
 slow movement of Beethoven's Sonata quasi una fantasia in C minor, Op. 13 (the "Pathétique"),
@@ -806,6 +872,8 @@ A-flat (\(\hat{1}\)) up through B-flat (\(\hat{2}\)) and C (\(\hat{3}\)) to the 
 primary tone settle and begin to be prolonged. The interruption occurs at the half cadence on
 E-flat major (the dominant of A-flat) near the structural midpoint of the movement.
 </div>
+
+{{< score id="music672/33-beethoven-op13-sketch" caption="Example 6.1: Beethoven Op. 13 slow movement sketch (A♭ major) — initial ascent 1̂→5̂, then interrupted fifth-line Urlinie over I–V–I bass." >}}
 
 ### 6.4 Motivic Parallelism Across Levels
 
@@ -840,6 +908,8 @@ question of how to distinguish genuine cross-level parallelism from analytical p
 open.
 </div>
 
+{{< score id="music672/30-motivic-parallelism" caption="Motivic parallelism across levels: the same descending-third shape appears at the foreground surface, as a middleground Terzug, and echoed in the background Urlinie." >}}
+
 ---
 
 ## Chapter 7: Complete-Movement Analyses
@@ -872,6 +942,8 @@ descending bass fifth-progression is a Quintzug in the bass that composes out th
 dominant across many bars, giving the prelude its sense of sustained harmonic tension before the
 final tonic return.
 
+{{< score id="music672/34-quintzug-fifth-progression" caption="Bach WTC Prelude: descending bass Quintzug (I→V via fifth-progression) composes out the structural dominant across bars 11–19, creating sustained harmonic tension." >}}
+
 <div class="remark">
 <strong>Remark 7.1.</strong> Students sometimes note that the prelude's harmonic rhythm — one
 harmony per bar, mostly — seems to place all harmonies on an equal footing, making it arbitrary
@@ -883,6 +955,8 @@ structural" to the opening tonic — it is a prolonged composing-out of the domi
 the surface durations suggest. This is one of the most fundamental lessons that the Bach Prelude
 teaches: the surface of a piece, however visually uniform, is not structurally uniform.
 </div>
+
+{{< score id="music672/38-bach-wtc-c-prelude" caption="Remark 7.1: Bach WTC Prelude in C — background Ursatz sketch showing 3̂ prolonged over tonic, 2̂ over structural dominant, 1̂ at close." >}}
 
 ### 7.2 Chopin, Prelude in E Minor, Op. 28, No. 4
 
@@ -920,6 +994,8 @@ expressive power of the chord derives entirely from its foreground position: its
 harshness is the more affecting because the structural motion it momentarily interrupts is so
 simple and inevitable.
 </div>
+
+{{< score id="music672/39-chopin-e-minor-prelude" caption="Example 7.1: Chopin Op. 28 No. 4 — fifth-line Urlinie in E minor; chromatic passing chords are foreground events within the prolonged I–V–I bass." >}}
 
 ### 7.3 Brahms, Intermezzo in A Major, Op. 118, No. 2
 
@@ -973,6 +1049,10 @@ and trace how it is elaborated by the middleground. Only when one can move fluen
 forth among all three levels, hearing the structural relationships the graphs represent, has one
 understood the analysis.
 
+{{< score id="music672/31-bach-chorale-foreground" caption="Bach chorale phrase — foreground graph: full surface with passing tones (PT) and neighbor tones labeled, showing the melody as heard." >}}
+
+{{< score id="music672/32-bach-chorale-middleground" caption="Bach chorale phrase — middleground reduction: passing tones eliminated, structural 3̂–2̂–1̂ soprano over I–V–I bass revealed." >}}
+
 <div class="remark">
 <strong>Remark 7.2.</strong> Pankhurst's *SchenkerGUIDE* (2008) is a valuable supplementary
 reference for this course. It provides a concise, clearly illustrated overview of all the principal
@@ -981,6 +1061,8 @@ the standard repertoire. Students who find Cadwallader and Gagné's presentation
 on a particular technique should consult the corresponding section of *SchenkerGUIDE* for an
 alternative explanation and additional examples.
 </div>
+
+{{< score id="music672/40-brahms-intermezzo-motif" caption="Remark 7.2: Brahms Op. 118 No. 2 — motivic parallelism: descending-sixth surface motive mirrored as middleground Sextzug." >}}
 
 ---
 
@@ -1058,6 +1140,8 @@ Schenkerian tradition itself contains resources for this kind of critical self-r
 while acknowledging the limits of its applicability.
 </div>
 
+{{< score id="music672/42-stufe-prolonged-harmony" caption="Remark 8.1: The Stufe as prolonged harmonic region — a single I governs many surface chords, illustrating the scope of tonal Auskomponierung." >}}
+
 ### 8.3 Felix Salzer and Structural Hearing
 
 Felix Salzer (1904–1986) was one of Schenker's most distinguished students, and his *Structural
@@ -1128,6 +1212,8 @@ Straus argues that post-tonal music fails to meet these conditions, and therefor
 concept of prolongation cannot meaningfully be applied to it.
 </div>
 
+{{< score id="music672/37-straus-conditions" caption="Definition 8.1: Tonal context (clear 3̂–2̂–1̂ over I–V–I) versus chromatic ambiguity — illustrating Straus's conditions for legitimate prolongation." >}}
+
 ### 8.5 Schachter and the Richness of Schenkerian Application
 
 Carl Schachter's essays, collected in *Unfoldings: Essays in Schenkerian Theory and Analysis*
@@ -1153,6 +1239,8 @@ middleground creates a sense of ponderous, sustained motion even if the surface 
 and ornate; a fast harmonic rhythm at the middleground creates urgency even if the surface is
 static. This insight enriches Schenkerian analysis considerably, giving it a purchase on the
 rhythmic expressivity of tonal music that the theory in its original form lacks.
+
+{{< score id="music672/44-tonal-rhythm" caption="Schachter's tonal rhythm: two-note slow background structure governs a rapid sixteenth-note foreground, showing structural weight is independent of surface duration." >}}
 
 Another important contribution of Schachter's work is his treatment of **form and prolongation**
 as mutually illuminating. Rather than treating formal analysis as prior to or separate from
@@ -1435,6 +1523,8 @@ follow this sequence rigorously: students are expected to produce their own grap
 work of the course, with published analyses serving as points of comparison and reflection rather
 than as models to be reproduced.
 </div>
+
+{{< score id="music672/45-auskomponierung" caption="Remark C.1: Auskomponierung at the foreground — the C-major tonic triad composed out across time with neighbor notes and passing tones." >}}
 
 ---
 

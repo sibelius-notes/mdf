@@ -55,6 +55,8 @@ The **AABA form** — also called the **thirty-two bar form**, the **popular son
 <strong>Definition 1.1 (AABA Form).</strong> In <em>AABA form</em>, the song consists of four sections each of approximately eight measures: an A section (the main theme, containing the hook), a second A section (the main theme repeated with varied lyric), a B section (the bridge — contrasting harmony, melody, and lyric), and a final A section (the main theme returns). In performance, the complete 32-bar chorus is often repeated, sometimes with varied orchestration or key, and may be followed by an instrumental "ride" or "out-chorus." The B section characteristically moves to a contrasting harmonic region (tonicizing the relative minor, the submediant, or another nearby key area), provides melodic contrast (different register, different rhythmic character), and introduces a different lyric perspective (often more introspective or questioning than the declarative A section).
 </div>
 
+{{< score id="music375/08-aaba-form" caption="AABA form in miniature: A–A–B–A sections labeled, each 2 bars; the hook opens each A, the contrasting bridge is labeled B" >}}
+
 The formal logic of AABA is one of statement, repetition, contrast, and return. The first A section establishes the song's harmonic home, its melodic character, and its central lyric statement (typically including the song's title). The second A section repeats this material with varied lyric, reinforcing the hook and advancing the lyric narrative. The B section introduces an element of departure: a new harmonic region, a new melodic shape, a questioning or contrasting lyric perspective. The return of the A section after the B section carries additional weight because the B section's departure has created the expectation of return. The form enacts a compact dramatic arc: assertion, reassertion, departure, homecoming.
 
 Many of the defining songs of the American songbook work within the AABA framework: songs by Jerome Kern, Harold Arlen, Richard Rodgers, Cole Porter, George and Ira Gershwin, and Irving Berlin that established not only a formal template but a lyric aesthetic (the romantic subject, the witty wordplay, the careful prosody) and a harmonic vocabulary (jazz-inflected seventh chords, chromatic inner-voice movement, elegant modulations) that defined sophisticated American song for decades.
@@ -93,6 +95,8 @@ Both perspectives have merit. The hook is genuinely the center of gravity of mos
 <strong>Definition 1.2 (Verse-Chorus Form).</strong> In <em>verse-chorus form</em>, the verse and chorus serve complementary formal functions. The <em>verse</em> carries narrative, descriptive, or situation-establishing lyric content; its melody typically occupies a lower, more conversational register; its harmonic content moves through a range of scale degrees without resolving emphatically. The <em>chorus</em> carries the song's central emotional declaration, typically including the song's title in its first or last line; its melody rises to the upper portion of the song's range; its harmonic progression is more direct, often cadencing on the tonic; its texture is denser, louder, and more rhythmically energized. Successive verses vary their lyric while maintaining the same melodic and harmonic framework; the chorus lyric is typically identical on each repetition, its permanence contrasting with the verses' forward narrative motion.
 </div>
 
+{{< score id="music375/04-verse-melody" caption="Verse melody: syllabic, lower-register, conversational — establishing narrative rather than declaring emotion" >}}
+
 The verse-chorus relationship creates a formal dynamic fundamentally different from AABA's episodic contrast. The verse and chorus are not two separate themes brought into dialogue; they are interdependent, each creating the need for the other. The verse builds context, raises questions, and generates harmonic and melodic tension; the chorus resolves it with the song's central emotional declaration. Each verse deepens the context within which the chorus's declaration resonates; each chorus repetition accumulates weight because of what the verses have established.
 
 A standard verse-chorus song follows a schema approximately of the form: verse 1 → chorus → verse 2 → chorus → bridge → chorus (final, sometimes repeated or extended). This is the conventional architecture of a three-to-four-minute radio song as it crystallized in the 1970s and has remained largely stable since. Variations exist — songs may begin with the chorus, may omit the bridge, may have a double chorus at the end, or may interpose an instrumental section — but the basic verse-chorus alternation is the normative expectation against which all variations are heard.
@@ -104,6 +108,9 @@ As verse-chorus form became more sophisticated in the 1970s through the 1990s, s
 <div class="definition">
 <strong>Definition 1.3 (Pre-Chorus).</strong> A <em>pre-chorus</em> is a formal section located between the verse and the chorus whose function is transitional and energizing: it breaks out of the verse's established harmonic pattern, ascends melodically toward the chorus's upper register, and increases in textural density and dynamic level. The pre-chorus signals to the listener that something significant is approaching. It is distinguished from the verse by its departure from the verse's harmonic material and its sense of building forward momentum, and it is distinguished from the chorus by its lack of the song's central hook and by its function of arrival (leading into the chorus) rather than statement.
 </div>
+
+{{< score id="music375/05-prechorus-melody" caption="Pre-chorus: ascending melody with denser eighth-note rhythm, building energy toward the chorus peak" >}}
+{{< score id="music375/06-chorus-melody" caption="Chorus melody: arch contour reaching a melodic peak before resolving down by step to the tonic" >}}
 
 The pre-chorus solves a formal problem that becomes acute as verse-chorus songs became more elaborate: how to move convincingly from the verse's relatively calm, narrative texture to the chorus's explosive energy without the transition feeling abrupt. A pre-chorus creates a gradient of intensification that makes the chorus feel earned rather than imposed. Without a pre-chorus, a verse-chorus song risks sounding like a blunt alternation between two emotional states; with a pre-chorus, it has a three-stage trajectory (calm → building → arrival) that gives each chorus greater formal impact.
 
@@ -117,6 +124,8 @@ The **bridge** (called the "middle eight" in British terminology, reflecting the
 <strong>Remark 1.1 (Bridge vs. B Section).</strong> The terms "bridge" and "B section" overlap in common usage but describe slightly different structural entities. The B section of AABA form appears between two A sections and returns to the A section on equal formal footing — the complete form is A–A–B–A, with each section at a comparable level of formal importance. The bridge of verse-chorus form appears after the chorus, typically only once, and leads back into a final chorus — the schema is verse–chorus–verse–chorus–bridge–final chorus. The verse-chorus bridge is structurally subordinate to both verse and chorus; it is a digression that deepens the song's emotional argument before the chorus returns with renewed force. When writing analytically, it is worth specifying which formal type a given song exemplifies before applying either term.
 </remark>
 </div>
+
+{{< score id="music375/07-bridge-melody" caption="Bridge melody: contrasting pitch area in the relative minor (A minor), providing harmonic and melodic departure before the final chorus return" >}}
 
 The bridge serves multiple functions simultaneously. Harmonically, it typically moves away from the home key or the established harmonic pattern, visiting a contrasting key area (the relative minor, the subdominant, or another related tonality) before returning to the home key for the final chorus. This harmonic departure creates an expectation of return that gives the final chorus added force — the listener's sense of "home" is sharpened by the experience of being away from it. Melodically, the bridge typically introduces new material — a different melodic shape, a different register, a different rhythmic character — that provides contrast with the verse and chorus material the listener has heard repeatedly. Lyrically, the bridge characteristically shifts perspective: where the verses established a situation and the chorus delivered the emotional judgment, the bridge typically provides a moment of internal reflection, a confrontation with an alternative viewpoint, or a revelation that reframes the preceding material.
 
@@ -160,6 +169,8 @@ Beyond AABA and verse-chorus, the song repertoire includes a range of additional
 The standard lyric structure of the blues strophe consists of three lines: the first line (four measures over I) states a situation; the second line (four measures, beginning on IV) repeats or elaborates the first line; the third line (four measures, beginning on V) provides a resolution, commentary, or reversal. The twelve-bar form is simultaneously the verse (it carries narrative content), the chorus (it carries the hook), and the complete formal unit.
 </div>
 
+{{< score id="music375/34-twelve-bar-blues" caption="Twelve-bar blues harmonic schema in C: I⁷ (4 bars) | IV⁷ (2 bars) | I⁷ (2 bars) | V⁷ (1 bar) | IV⁷ (1 bar) | I⁷–V⁷ (2 bars)" >}}
+
 The twelve-bar blues form is one of the most influential formal frameworks in the history of American music. It entered rock and roll through its African American blues roots, providing the formal container for recordings by Chuck Berry, Little Richard, and Elvis Presley in the 1950s, and was absorbed into British rock in the 1960s by The Beatles, The Rolling Stones, and The Animals. Even songs that do not use the twelve-bar form often inherit aspects of the blues harmonic vocabulary and strophic formal logic through this lineage.
 
 **Through-composed songs** — in which each section presents new musical material without repeating previous material — are rare in popular music but appear in art song, some progressive rock, and theatrical ballads. The formal challenge of through-composition is sustaining coherence without the structural glue of repetition. Where most popular songs create unity through the repetition of verses, choruses, and hooks, through-composed songs must create it through the logic of melodic development, lyric narrative arc, or the inexorable forward motion of a dramatic situation.
@@ -192,6 +203,9 @@ The **hook** is the melodic, rhythmic, or lyric element of a song that catches i
 <strong>Definition 2.1 (The Hook).</strong> A <em>hook</em> is any element of a song — melodic, rhythmic, harmonic, lyric, timbral, or some combination — that is immediately memorable, tends to recur involuntarily in the listener's mind after a single hearing, and serves as the primary point of identification and recall for the song. Effective hooks are characterized by: a strong and distinctive rhythmic identity; a melodic contour that is simple enough to reproduce mentally after one exposure; a sense of harmonic resolution or arrival that makes the hook feel complete; and sufficient brevity to function as a single cognitive "chunk" that can be stored and retrieved without effort. The hook need not be melodically complex: many of the most memorable hooks in popular music history consist of two to four pitches in a distinctive rhythmic pattern.
 </div>
 
+{{< score id="music375/01-melodic-hook" caption="Melodic hook: ascending leap followed by stepwise descent — the leap creates surprise, the descent provides satisfying resolution" >}}
+{{< score id="music375/02-anti-hook" caption="Anti-hook (for contrast): stepwise ascent with no leap, no rhythmic variety — predictable and unmemorable by design" >}}
+
 Jack Perricone, in *Melody in Songwriting*, offers the most systematic account of what makes a hook memorable: the hook must have a rhythmic identity that is immediately recognizable, often involving syncopation or a distinctive metric pattern; it must have a melodic contour that the ear can track and reproduce; it must arrive on or gravitate toward the tonic, creating a sense of resolution even when heard in isolation; and it must be short enough to function as a single auditory unit. The combination of rhythmic distinctiveness, melodic clarity, and harmonic resolution explains why some hooks are instantly memorized while others, equally pleasant, fail to catch.
 
 ### 2.2 Melodic Contour and Shape
@@ -206,6 +220,9 @@ The **ascending contour** — beginning low and rising — builds energy and urg
 
 The **wave contour** — oscillating around a central pitch, ascending and descending in repeated cycles — is characteristic of melodic phrases built on motivic repetition and sequence. The melody traces the same shape at successively higher or lower pitch levels, creating a sense of deliberate forward progress through melodic logic rather than dramatic sweep.
 
+{{< score id="music375/04-verse-melody" caption="Verse melody (descending/wave contour): lower register, syllabic, conversational — the stable foil for the ascending chorus" >}}
+{{< score id="music375/06-chorus-melody" caption="Chorus melody (arch contour): ascends to peak note then resolves down, enacting the emotional arc of build and release" >}}
+
 ### 2.3 Range, Tessitura, and the Climax Tone
 
 A song's **range** — the interval from its lowest to its highest pitch — and its **tessitura** — the pitch area within which the melody most comfortably dwells during most of its duration — are both formal and expressive parameters. A melody that spends most of its time near the top of its range creates sustained tension; one that spends most of its time near the bottom conveys groundedness, restraint, or introspection. The contrast between verse tessitura (typically lower) and chorus tessitura (typically higher) is one of the most reliable formal markers in verse-chorus form.
@@ -213,6 +230,8 @@ A song's **range** — the interval from its lowest to its highest pitch — and
 The **climax tone** is the highest pitch in the song's melody, and its placement is one of the most consequential formal decisions in song construction. A melody that reaches its highest note too early in the song loses its sense of forward trajectory; one that never arrives at a satisfying peak leaves the listener unfulfilled. The climax tone should coincide with the moment of maximum emotional intensity, which in most verse-chorus songs is either the final chorus or a specific phrase within it. When the climax tone falls precisely at the lyric's central declaration — the phrase that states what the song is "about" at its deepest emotional level — the alignment of musical and lyric climax creates an effect of inevitability and rightness that is one of the hallmarks of the most durable popular songs.
 
 The principle of **climax management** — deliberately reserving the melody's upper register for the song's emotional peak — is one of the most practically teachable aspects of melody writing. Melodies that "blow their climax" early, reaching their highest note in the first verse and then struggling to match it in the chorus, lose their formal logic; the listener's expectation of intensification is frustrated. Professional songwriters often work backward from the climax tone, designing the preceding melodic material to build toward it rather than incidentally arriving at it.
+
+{{< score id="music375/16-melodic-apex" caption="Climax management: the phrase builds step-by-step to a single apex note (circled), then descends — placing the high note precisely at the emotional peak" >}}
 
 ### 2.4 Rhythmic Placement and Metric Identity
 
@@ -222,6 +241,9 @@ The rhythmic placement of a melody's key syllables within the metric grid is as 
 <strong>Example 2.1 (Metric Placement and Hook Identity).</strong> Consider how the rhythmic identity of a hook changes depending on its metric placement. A phrase with four syllables placed squarely on beats 1, 2, 3, and 4 creates a mechanical, march-like effect with no rhythmic tension. The same four syllables placed so that the first falls on the "and" of beat 4 (anticipating the downbeat), the second on beat 2, the third on the "and" of beat 2, and the fourth on beat 3 creates a syncopated pattern that propels against the beat. The pitches are identical; the metric placement alone determines whether the hook has rhythmic life. Most successful popular music hooks involve precisely this kind of syncopated metric profile, placing accented syllables in tension with the underlying pulse rather than in alignment with it.
 </example>
 </div>
+
+{{< score id="music375/03-hook-syncopated" caption="Hook with rhythmic displacement: syncopated version of the melodic hook — same pitches, anticipations now on weak-beat positions" >}}
+{{< score id="music375/35-metric-anticipation" caption="Metric anticipation: the melody arrives on the 'and of 4' before the chord change on beat 1, propelling into the new harmony" >}}
 
 **Metric anticipation** — placing a phrase slightly ahead of the beat where the harmonic change occurs — is one of the most common rhythmic devices in popular song. The melody arrives at its new pitch before the chord supporting it arrives, creating a brief moment of rhythmic-harmonic tension that resolves when the chord catches up. This device creates a sense that the melody is "leading" the harmony, giving the melodic line a sense of independence and forward drive.
 
@@ -247,6 +269,8 @@ The **sentence** — a musical phrase structure identified in classical music by
 <strong>Remark 2.1 (Motif vs. Hook).</strong> The terms "motif" and "hook" are sometimes confused but describe different levels of the melodic hierarchy. A <em>motif</em> is a small melodic-rhythmic cell — two to five notes — that serves as a building block for phrases. A <em>hook</em> is a complete phrase or phrase-unit — typically four to eight measures — that contains the song's central lyric-melodic statement. A hook is often built from the repetition and development of a motif, but the hook is a larger, formally complete entity, while the motif is a compositional building block. A hook can contain a motif, but a motif alone is not a hook.
 </remark>
 </div>
+
+{{< score id="music375/30-hook-rhythmic-identity" caption="Hook with strong rhythmic identity: syncopation and long tones create a distinctive metric profile that is immediately memorable" >}}
 
 ### 2.5b Vocal Timbre and the Performance Dimension of Melody
 
@@ -287,11 +311,17 @@ The **blue note** — the addition of the flatted fifth (or flatted third, or fl
 </example>
 </div>
 
+{{< score id="music375/31-pentatonic-hook" caption="Pentatonic hook using only C–D–E–G–A: no half steps, no F or B, giving the figure a floating, blues-compatible profile" >}}
+{{< score id="music375/15-blue-note" caption="Blue note (♭7) in melody: B♭ against a C major background creates the characteristic ambiguity between major and minor" >}}
+
 ### 2.8 Call and Response in Melodic Structure
 
 **Call and response** — a dialogic melodic structure in which a phrase (the "call") is answered by a responding phrase (the "response") — is one of the foundational structural principles of African American music and through it a pervasive feature of blues, gospel, R&B, soul, and rock melody. In its classic form, call and response involves two performers or two textural layers: a lead voice states a short melodic phrase (the call) and a choir, second voice, or instrumental group replies with a complementary or echoing phrase (the response). In popular song, the principle extends beyond its original dialogic context to describe any melodic structure in which a phrase creates an expectation that the following phrase fulfills.
 
 In verse-chorus structure, the relationship between the verse's final phrase and the chorus's opening phrase often has a call-and-response logic: the verse ends with a melodic gesture that feels incomplete (a phrase ending on \(\hat{2}\) over V, or simply a phrase that drops off in the lower register), and the chorus begins with a melodic response that provides the completion the verse-ending suggested. The verse is the call; the chorus is the response; and the listener's experience of formal satisfaction at the chorus arrival is partly an experience of melodic response-fulfillment.
+
+{{< score id="music375/24-call-and-response" caption="Call-and-response: lead voice states an ascending call (top staff); answering voice descends in response (bottom staff)" >}}
+{{< score id="music375/25-question-answer-phrase" caption="Question phrase (ends on half cadence, V) followed by answer phrase (ends on perfect authentic cadence, I)" >}}
 
 ---
 
@@ -304,6 +334,8 @@ Rhyme is the most audible organizational principle in song lyrics, and its patte
 <div class="definition">
 <strong>Definition 3.1 (Rhyme Types).</strong> <em>Perfect rhyme</em> (or <em>true rhyme</em>): the vowel sound and all following consonants are identical ("moon/June," "fire/desire," "heart/apart"). Perfect rhyme creates closure and resolution. <em>Near rhyme</em> (or <em>slant rhyme</em>, <em>off rhyme</em>): the vowel sounds are similar but not identical, or the consonants match but the vowels differ ("alone/gone," "blood/good," "mine/time"). Near rhyme creates a sense of approximation, incompletion, or ambiguity — affectively appropriate for songs about unresolved feeling. <em>Family rhyme</em>: words sharing the same final consonant cluster but with different vowels ("long/ring"). <em>Eye rhyme</em>: words that look as if they should rhyme on the page but do not sound alike when spoken ("love/move"). <em>Identity rhyme</em>: the same word repeated, which is technically not a rhyme but is sometimes used for emphasis.
 </div>
+
+{{< score id="music375/12-end-rhyme-abab" caption="End rhyme ABAB pattern: phrase-ending notes are circled to mark the A and B rhyme positions in alternating lines" >}}
 
 The most common rhyme scheme in popular song is **AABB** (couplet rhyme): each pair of lines rhymes with itself, creating a forward-driving, paired structure. Couplet rhyme is also the dominant scheme in hip-hop verse, where the density of the rhyme reinforces the rhythmic momentum of the delivery. **ABAB** (alternate rhyme) is more open — lines alternate between rhyming pairs — creating a more expansive, less immediately closed structure suitable for verses that need to breathe. **ABBA** (enclosed rhyme) wraps a pair of rhyming lines around an inner couplet, creating a more sophisticated, enclosed structure associated with Tin Pan Alley lyric craft.
 
@@ -319,6 +351,9 @@ The most common metrical framework in English-language song is the **iambic** pa
 <strong>Example 3.1 (Iambic Stress and Musical Meter).</strong> In a song in 4/4 time at a moderate tempo, the beats fall with relative stress: 1 (strong) – 2 (weak) – 3 (medium) – 4 (weak). A lyric phrase using iambic stress aligns its stressed syllables with the stronger beats and its unstressed syllables with the weaker beats. A trochaic lyric (stressed–unstressed, DUM-da) does the reverse. Neither iambic nor trochaic is inherently better — what matters is consistency within a phrase and attention to where the melody emphasizes pitch (through high notes and long durations) and where the meter emphasizes pulse (through strong downbeats). A good lyric aligns all three sources of emphasis — linguistic stress, melodic emphasis, and metric stress — at the same moments.
 </example>
 </div>
+
+{{< score id="music375/10-lyric-prosody-good" caption="Good prosody: stressed syllables ('COME', 'STAY') land on beats 1 and 3, aligning linguistic and metric accent" >}}
+{{< score id="music375/11-lyric-prosody-bad" caption="Prosody mismatch: the unstressed syllable 'to-' falls on the downbeat, creating an unnatural word-stress conflict" >}}
 
 ### 3.2b Multi-Syllabic Rhyme and Internal Rhyme in Densely Rhymed Verse
 
@@ -350,6 +385,8 @@ Every song lyric is spoken or sung from a particular **point of view** — a per
 <strong>Remark 3.1 (Lyric Persona vs. Songwriter Biography).</strong> The lyric "I" is a <em>constructed persona</em>, not a transparent autobiographical expression. Even songs that draw closely on the songwriter's personal experience involve selection, shaping, and transformation of that experience into a formal lyric structure. The distinction matters analytically: interpreting a song as biographical testimony confuses the lyric artifact with the songwriter's psychology, and it misses the formal work that songwriting involves. Songs are not confessions but compositions in which personal experience is one possible raw material among many.
 </remark>
 </div>
+
+{{< score id="music375/13-internal-rhyme" caption="Internal rhyme: 'bright light… night' — two rhyming syllables within a single melodic line" >}}
 
 ### 3.3b The Extended Metaphor as a Lyric Organizing Principle
 
@@ -414,6 +451,8 @@ The first version of a lyric is almost never the best version. Professional lyri
 </remark>
 </div>
 
+{{< score id="music375/14-melodic-sequence" caption="Melodic sequence: the same ascending figure transposed down by step across four bars, driving toward a cadential arrival" >}}
+
 The most productive revision strategies involve asking specific questions about each phrase and line: Is every word earning its place, or are there filler words (articles, prepositions, linking verbs) that could be cut or replaced with more charged language? Are the images concrete and specific, or do they tend toward abstraction and cliché? Does the prosody align musical and linguistic emphasis, or are there moments where the stress pattern fights the melody? Does the rhyme scheme create the right degree of closure for this section, or would a different scheme (tighter or more open) better serve the lyric's dramatic function? Does the title phrase appear in the optimal formal position, or would moving it to a different structural location give it more weight?
 
 ---
@@ -438,6 +477,9 @@ The harmonic language of popular song is built on a relatively small number of f
 <strong>Definition 4.1 (Harmonic Schema).</strong> A <em>harmonic schema</em> is a conventional chord progression that recurs across a large number of songs as a recognizable harmonic framework. Schemas are distinguished from random chord sequences by their stability across the repertoire — the same progression appears in enough songs, across enough genres and time periods, that listeners have internalized it as a conventional unit with a characteristic affective profile. The most common schemas in contemporary pop and rock include the <em>I–V–vi–IV</em> loop, the <em>I–IV–V–I</em> cadential progression, the <em>i–VII–VI–VII</em> Aeolian loop, and the <em>i–VII–VI–V</em> Andalusian cadence.
 </div>
 
+{{< score id="music375/17-schema-I-V-vi-IV" caption="Harmonic schema I–V–vi–IV (C–G–Am–F): the most common loop in twenty-first-century pop, shown as a chord chart" >}}
+{{< score id="music375/18-schema-vi-IV-I-V" caption="Harmonic schema vi–IV–I–V (Am–F–C–G): the rotated 'relative minor feel' version, characteristic of many chorus progressions" >}}
+
 The **I–V–vi–IV** schema is arguably the single most ubiquitous chord progression in twenty-first-century pop music. In C major, this progression runs C–G–Am–F; it appears in hundreds of songs across multiple genres and decades. Its appeal lies in several structural properties: it begins on the tonic (establishing harmonic stability), moves to the dominant (introducing harmonic motion), proceeds to the submediant (which shares two notes with the tonic but introduces the note absent from the tonic chord — the submediant creates a gentle darkening of the texture without departing from the diatonic framework), and arrives at the subdominant (a pre-dominant harmony that leads smoothly back to tonic). The progression is circular: its final chord connects smoothly back to its initial chord, making it ideal for the looping structures of verse-chorus repetition.
 
 The **I–IV–V–I** schema is the older and more cadentially oriented of the two dominant diatonic schemas. It carries an intrinsic sense of harmonic completion — the dominant's leading-tone tension resolves to the tonic, and the subdominant's approach to the dominant gives the arrival on the tonic a sense of harmonic finality. The I–IV–V–I schema is characteristic of blues, country, early rock and roll, and folk traditions where harmonic directness is aesthetically valued. Its sense of conclusiveness makes it less suited to the looping repetition of verse-chorus form than the I–V–vi–IV schema, though it appears frequently at structural cadences and in chorus-ending progressions.
@@ -451,6 +493,8 @@ The **I–IV–V–I** schema is the older and more cadentially oriented of the 
 </example>
 </div>
 
+{{< score id="music375/15-blue-note" caption="Blue note (♭7 = B♭) in a C major melodic context: the flat seventh creates modal ambiguity and blues expressiveness" >}}
+
 The **♭VI chord** — A♭ major in C major — is borrowed from the parallel natural minor (C natural minor: C–D–E♭–F–G–A♭–B♭). The ♭VI introduces a chromatic darkening into a major-key progression, and in the context of the progression ♭VI–♭VII–I, it creates one of the most dramatically weighted cadential figures in rock: an arrival on the tonic from the doubly flat side, reinforced by the parallel motion of the ♭VI and ♭VII. This progression is characteristic of climactic moments — a final chorus that suddenly shifts into ♭VI–♭VII–I for its last phrase, for example, will feel considerably more dramatic than one that arrives on the tonic through the familiar I–IV–V–I schema.
 
 ### 4.3 Minor-Mode Schemas: Aeolian and Andalusian
@@ -462,6 +506,9 @@ The **Aeolian loop** (i–VII–VI–VII) is a circular schema that avoids the d
 <div class="definition">
 <strong>Definition 4.2 (Andalusian Cadence).</strong> The <em>Andalusian cadence</em> is a descending minor-mode progression: i–VII–VI–V (in A minor: Am–G–F–E major). Its distinguishing feature is the descending stepwise bass line from the tonic down to the dominant — a bass line that, in strict voice-leading terms, moves through three diatonic scale degrees before arriving on the dominant. The terminal V chord is typically major (using the raised seventh degree of the harmonic minor), creating a leading-tone tension directed back toward the tonic. The Andalusian cadence is named for its association with flamenco music but is ubiquitous in rock, pop, and film music, associated with fatalism, urgency, and dramatic momentum.
 </div>
+
+{{< score id="music375/32-aeolian-loop" caption="Aeolian loop i–VII–VI–VII in A minor: circular, non-cadential schema characteristic of minor-mode rock" >}}
+{{< score id="music375/33-andalusian-cadence" caption="Andalusian cadence i–VII–VI–V in A minor: the descending bass line drives toward the dominant with fatalistic urgency" >}}
 
 ### 4.3b Extended and Altered Chords in Pop and Jazz-Influenced Song
 
@@ -496,6 +543,9 @@ In Roman numeral notation, major chords are written with uppercase numerals (I, 
 <div class="definition">
 <strong>Definition 4.3 (Analytical Notation Conventions).</strong> In the Roman numeral analysis of popular song, the following conventions are standard: <em>uppercase Roman numerals</em> (I, IV, V) denote major triads; <em>lowercase Roman numerals</em> (ii, iii, vi) denote minor triads; a superscript 7 denotes a seventh chord (V7 = dominant seventh); a flat sign before the numeral (♭VII) denotes a borrowed chord from the parallel minor; a slash indicates a chord over a bass note other than the root (I/5 = tonic chord in second inversion, with the fifth in the bass). Scale degree numbers are written with caret notation: \(\hat{1}\), \(\hat{2}\), \(\hat{3}\), etc., denoting scale degrees 1 through 7 of the current key.
 </div>
+
+{{< score id="music375/21-tin-pan-alley-I-VI-II-V" caption="Tin Pan Alley turnaround: I–vi–ii–V cycle (the '50s progression, also called the 'ice cream changes')" >}}
+{{< score id="music375/20-country-I-IV-I-V" caption="Country pattern I–IV–I–V: the direct, harmonically resolved schema characteristic of blues-inflected country" >}}
 
 ### 4.5 Harmonic Function vs. Harmonic Color
 
@@ -606,6 +656,8 @@ This production-first songwriting model has significant analytical implications.
 </remark>
 </div>
 
+{{< score id="music375/23-arrangement-layers" caption="Arrangement layers: melody (top), harmonic block chords (middle), and bass root notes (bottom) on three staves" >}}
+
 ---
 
 ## Chapter 6: Arrangement as Compositional Tool
@@ -626,6 +678,8 @@ The **rhythm section** — drums, bass, and rhythmic chordal instruments — est
 <strong>Remark 6.1 (Groove as Form).</strong> The concept of groove intersects with formal analysis in an undertheorized way. The groove of a verse and the groove of a chorus are often the same rhythmic pattern, distinguishable only by dynamic level and textural density. But sometimes a formal section change is signaled by a groove change: the hi-hat pattern opens from eighth notes to quarter notes, or the kick drum shifts from a driving four-on-the-floor to a more syncopated pattern, or the snare falls on a different subdivision. These rhythmic changes are formal markers as significant as any harmonic change, and a complete formal analysis of a popular song must attend to rhythmic and textural parameters alongside harmonic and melodic ones.
 </remark>
 </div>
+
+{{< score id="music375/28-groove-bass-line" caption="Groove-establishing bass line: syncopated root-note pattern that locks with the kick drum and defines the section's feel" >}}
 
 ### 6.2b Mixing and Mastering as Formal Decisions
 
@@ -767,6 +821,9 @@ A **lead sheet** is the standard notational format for popular songs in professi
 <strong>Definition 7.1 (Lead Sheet).</strong> A <em>lead sheet</em> is a single-page or multi-page notation of a song consisting of: (1) a single melodic staff with standard pitch and rhythm notation, (2) chord symbols above the staff indicating the harmonic content at each point in the song, and (3) the lyric text written below the staff, aligned with the melodic notation. A lead sheet is the minimum specification of a song — it specifies what must remain constant across all performances and arrangements (melody, harmony, lyric) while leaving open everything that can vary (instrumentation, voicing, tempo, dynamics, arrangement). Lead sheets are the standard format for the jazz "fakebook," for Broadway "piano-vocal" reductions, and for song submission in professional songwriting contexts.
 </div>
 
+{{< score id="music375/24-call-and-response" caption="Call-and-response vocal phrase: the lead voice states the call (top staff, bar 1); the answering voice responds (bottom staff, bar 2)" >}}
+{{< score id="music375/22-nashville-I-I-IV-I" caption="Nashville Number System: 1–1–4–1 (I–I–IV–I) shown in C major" >}}
+
 The **Nashville Number System** is an alternative notation used extensively in country music recording sessions in which chord symbols are replaced by numbers corresponding to scale degrees: 1 (tonic), 2 (supertonic), 4 (subdominant), 5 (dominant), 6 (submediant), with modifiers indicating major or minor quality, seventh chords, and other alterations. The Nashville Number System is transposition-agnostic — a chart written in the Nashville system is valid in any key, allowing session musicians to transpose on the fly when a vocalist's key is changed at the last minute.
 
 The **chord chart** (distinct from both the lead sheet and the Nashville Number System) is a simplified notation showing only the chord changes and their durations, typically written in a grid with one or two bars per cell. Chord charts are the most minimal specification of a song's harmonic content and are used in rehearsal contexts where musicians know the melody and lyric by ear and need only the harmonic framework to play together.
@@ -806,6 +863,9 @@ Comparative analysis also reveals how **genre conventions** shape formal schemas
 </example>
 </div>
 
+{{< score id="music375/08-aaba-form" caption="AABA form: four 2-bar sections (A A B A) — the hook appears at the top of each A, the bridge at B" >}}
+{{< score id="music375/19-chorus-lift-modulation" caption="Chorus lift: the same hook phrase in C major (bars 1–2), then up a whole step to D major (bars 3–4)" >}}
+
 ### 8.1 Academic Frameworks for Popular Song Analysis
 
 The academic analysis of popular song has a relatively recent history. For most of the twentieth century, musicology and music theory focused almost exclusively on the Western classical canon, and popular music was either ignored or dismissed (most influentially by Theodor Adorno, whose critique of the culture industry characterized popular music as standardized, pseudo-individualized, and aesthetically regressive). The development of popular music studies as a legitimate academic discipline — anchored in the journal *Popular Music* (Cambridge University Press, founded 1981), the work of scholars including Simon Frith, Philip Tagg, Richard Middleton, and Allan Moore, and the establishment of the International Association for the Study of Popular Music (IASPM) — created the institutional and methodological framework for rigorous engagement with pop song.
@@ -820,6 +880,9 @@ Alongside the academic literature, songwriting has its own craft-based pedagogic
 <strong>Remark 8.1 (Analysis and Craft).</strong> The academic and craft traditions in popular song study have different emphases but are not in conflict. Both share the conviction that song construction is a learnable skill, not solely an innate talent; both insist on close, detailed attention to the interaction of melody, lyric, harmony, and form; and both are committed to the value of the popular song as a cultural and artistic object worthy of serious engagement. Analytic study enriches craft practice by providing vocabulary and frameworks for understanding what works and why; craft practice enriches academic analysis by grounding it in the practical constraints and creative decisions of actual songwriting. This course draws on both traditions in the conviction that they are stronger in combination than in isolation.
 </remark>
 </div>
+
+{{< score id="music375/25-question-answer-phrase" caption="Question phrase ending on a half cadence (V) answered by a phrase ending on a perfect authentic cadence (I)" >}}
+{{< score id="music375/26-pickup-anacrusis" caption="Pickup/anacrusis: the upbeat figure that launches into the chorus, generating forward momentum" >}}
 
 ### 8.1b The Psychology of Song: Memory, Expectation, and the Earworm
 
@@ -900,6 +963,8 @@ The appropriate model for popular song analysis is neither the score-based forma
 </remark>
 </div>
 
+{{< score id="music375/27-rhythmic-hook-3-3-2" caption="Rhythmic hook: the 3+3+2 syncopated pattern that gives a hook its distinctive metric personality" >}}
+
 ---
 
 ## Chapter 9: Analytical Workshop
@@ -921,6 +986,8 @@ The practical application of this course's analytical tools begins with structur
 <div class="definition">
 <strong>Definition 9.1 (Analytical Listening Protocol).</strong> An <em>analytical listening protocol</em> is a systematic procedure for attending to a musical recording in multiple passes, each focused on a different parameter. Rather than attempting to attend to all musical parameters simultaneously — which would divide attention too thinly for any parameter to receive adequate focus — the protocol sequences analytical attention through the primary parameters in a logical order, building a cumulative picture of the song's construction. For popular song, a productive sequence is: (1) formal structure, (2) melodic structure, (3) harmonic structure, (4) lyric content and craft, (5) arrangement and production.
 </div>
+
+{{< score id="music375/16-melodic-apex" caption="Melodic apex: a phrase that builds steadily to a single climactic high note (circled) before resolving down" >}}
 
 After systematic listening, the analyst transcribes what is heard into notational form: a formal diagram showing the sequence of sections, a melodic sketch showing contour and hook placement, chord symbol notation of the harmonic schema, and a lyric transcription with rhyme scheme marked. This transcription is not a substitute for hearing the music but a tool for making analytical observations explicit and verifiable. The transcription process itself often reveals features of the music that repeated hearing had not brought to conscious attention: a harmonic substitution that was felt but not identified, a prosodic irregularity that created slight rhythmic unease, a formal boundary that was signaled more by arrangement than by harmonic change.
 
@@ -966,6 +1033,9 @@ Both formal types reward attention to the interactions among formal, melodic, ha
 <strong>Example 9.1 (Multi-Parameter Formal Analysis).</strong> Consider the transition from verse to chorus in a prototypical contemporary pop ballad. At the formal boundary between verse and chorus, the following changes typically occur simultaneously: (1) the harmonic progression arrives on the tonic, providing harmonic stability; (2) the melody rises from its verse tessitura to the chorus's higher register; (3) the arrangement fills out — bass, drums, and additional instruments enter or increase in volume; (4) the lyric shifts from narrative specificity to emotional declaration, introducing the song's title phrase; (5) the rhythmic feel may shift from a more syncopated or restrained verse groove to a more driving, forward-pushing chorus feel. Each of these changes alone would be audible as a formal signal; all occurring simultaneously create an unmistakable formal event that the listener recognizes as the song's principal arrival regardless of her theoretical knowledge. This simultaneous coordination of multiple parameters at formal junctures is the hallmark of sophisticated popular song production.
 </example>
 </div>
+
+{{< score id="music375/09-verse-chorus-form" caption="Verse–chorus formal contrast: lower-register verse melody (bars 1–4) answered by upper-register chorus (bars 5–8)" >}}
+{{< score id="music375/29-outro-vamp" caption="Outro/coda repeated vamp: the formal loop that implies a fade-out or hard ending" >}}
 
 ### 9.3b The Analyst's Responsibility to the Music
 

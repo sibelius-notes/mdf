@@ -19,6 +19,9 @@ An interval is the distance in pitch between two tones, measured by the number o
 <strong>Definition 1.1 (Perfect and Imperfect Consonances).</strong> A <em>perfect consonance</em> is an interval whose frequency ratio, in just intonation, is expressible as a ratio of small integers involving only the primes 2 and 3. The perfect intervals are: the unison \((1:1)\), the perfect fifth \((3:2)\), the perfect fourth \((4:3)\), and the octave \((2:1)\). An <em>imperfect consonance</em> is an interval whose ratio involves the prime 5: the major third \((5:4)\), the minor third \((6:5)\), the major sixth \((5:3)\), and the minor sixth \((8:5)\). All other diatonic intervals — seconds, sevenths, the tritone — are classified as <em>dissonances</em>.
 </div>
 
+{{< score id="music272/01-perfect-consonances" caption="The four perfect consonances: unison (1:1), perfect fourth (4:3), perfect fifth (3:2), and octave (2:1)." >}}
+{{< score id="music272/02-imperfect-consonances" caption="The four imperfect consonances: major third (5:4), minor third (6:5), major sixth (5:3), minor sixth (8:5)." >}}
+
 This classification is not arbitrary. The ancient Greeks, particularly Pythagoras, observed that the most acoustically stable simultaneous tones are those related by the simplest ratios. Two strings vibrating in the ratio \(2:1\) produce tones an octave apart, so thoroughly consonant that medieval theorists occasionally treated them as the same pitch class. The ratio \(3:2\) yields the perfect fifth, the interval that forms the basis of the circle of fifths, the overtone series, and ultimately the entire tonal system. The ratio \(4:3\) gives the perfect fourth — acoustically a near-twin to the fifth, yet treated with considerably more ambivalence in Renaissance and Baroque practice, as we shall see.
 
 The imperfect consonances — thirds and sixths — introduce the prime 5 into the ratio. A major third at \(5:4\) carries a brightness absent from the hollow resonance of a perfect fifth; a minor third at \(6:5\) has a mellower, more shadowed quality. These intervals, which medieval theory largely dismissed as dissonances (too complex, too far from the Pythagorean ideal of pure powers of 2 and 3), became the structural pillars of Renaissance polyphony. Composers like Josquin des Prez and Palestrina built entire movements on the careful interlocking of thirds and sixths, understanding — perhaps intuitively, perhaps from long practice — that these intervals create a richer, warmer sonority than the naked perfect consonances of the earlier Gothic style. Their richness arises precisely from the slight acoustic complexity introduced by the prime 5.
@@ -26,6 +29,8 @@ The imperfect consonances — thirds and sixths — introduce the prime 5 into t
 <div class="definition">
 <strong>Definition 1.2 (Dissonance).</strong> An interval is a <em>dissonance</em> if it is not a consonance in the sense of Definition 1.1. The primary dissonances in tonal counterpoint are: the major and minor second \((9:8\) and \(16:15\) respectively), the major and minor seventh \((15:8\) and \(9:5)\), the augmented fourth and diminished fifth (the tritone, irrational in equal temperament), and the diminished seventh. Dissonances require preparation or special treatment, and in all standard cases resolve by stepwise motion to a consonance.
 </div>
+
+{{< score id="music272/03-dissonances" caption="Representative dissonances: minor second, major seventh, and tritone (augmented fourth)." >}}
 
 The tritone deserves special attention. Its frequency ratio is irrational in equal temperament — the ratio is \(2^{6/12} : 1 = \sqrt{2}:1\) — and even in just intonation it admits no clean small-integer form, the closest approximations (\(45:32\) or \(64:45\)) involving large numbers. Medieval theorists called it *diabolus in musica* — the devil in music — and its use was severely restricted in early polyphony. Yet it is precisely this restless instability that makes the tritone indispensable to tonal music: it creates the harmonic tension that the dominant seventh chord must resolve, and it defines the half-step voice-leading that gives authentic cadences their sense of inevitability. Without the tritone, there is no functional harmony in the modern sense.
 
@@ -50,6 +55,8 @@ The interval classification of Definition 1.1 has a deeper physical justificatio
 The consonance of an interval is thus directly proportional to the proximity of its constituent partials in the harmonic series: the more harmonics two tones share, the more consonant they sound. Dissonances — seconds and sevenths — correspond to pairs of partials that are close in frequency but not integer multiples of a common fundamental, producing the acoustic "beating" (amplitude fluctuation at frequency \(|f_1 - f_2|\)) that the ear perceives as roughness or tension.
 </div>
 
+{{< score id="music272/04-harmonic-series" caption="The first six partials of the harmonic series on C, yielding the ratios 1:1, 2:1, 3:2, 4:3, 5:4, 6:5." >}}
+
 This theorem is the physical foundation of the contrapuntal consonance hierarchy. The perfect consonances (unison, fifth, octave) share the most harmonics; the imperfect consonances (thirds, sixths) share somewhat fewer but still enough for clear fusion; dissonances share very few, producing the acoustic roughness that the mind associates with incompleteness and motion. Species counterpoint is, in this light, a system for managing the density of shared harmonics between simultaneously sounding voices — for ensuring that the texture maintains sufficient harmonic resonance on strong beats while permitting localized acoustic tension on weak beats.
 
 ### 1.3 Consonance and Dissonance in Polyphony
@@ -61,6 +68,8 @@ The historical development of the consonance hierarchy is itself a story of aest
 <div class="theorem">
 <strong>Theorem 1.1 (The Consonance Principle).</strong> In strict counterpoint, every note that falls on a strong beat (the downbeat, or the first of two equal beats) must form a consonance with every other simultaneously sounding voice. Dissonances may appear on weak beats, but only under specific conditions that guarantee their perceptual resolution.
 </div>
+
+{{< score id="music272/05-consonance-principle" caption="Strong-beat consonances (marked) versus weak-beat passing dissonances in a two-voice texture." >}}
 
 The reasoning behind this principle is psychoacoustic as much as aesthetic. When two tones sound simultaneously, the auditory system attempts to fuse them into a single percept. Consonant intervals — those with simple frequency ratios — fuse readily because their overtone series share many components, producing a sensation of repose and stability. Dissonant intervals resist fusion because their overtone series produce many near-coincident partials that beat against each other, creating the acoustic sensation of roughness or tension. On a strong beat — the moment of metric emphasis — the ear expects stability. A dissonance on the downbeat strikes the listener as a collision, something demanding immediate correction. On a weak beat, the same dissonance registers as motion, a passing moment of tension swept away before the next strong beat arrives. The rules of species counterpoint are, in this sense, a grammar of perceptual expectation, mapping the physics of acoustics onto the psychology of metric time.
 
@@ -101,6 +110,11 @@ When two voices move simultaneously, their relative motion falls into one of fou
 </ul>
 </div>
 
+{{< score id="music272/06-contrary-motion" caption="Contrary motion: voices move in opposite directions." >}}
+{{< score id="music272/07-similar-motion" caption="Similar motion: voices move in the same direction by different intervals." >}}
+{{< score id="music272/08-oblique-motion" caption="Oblique motion: one voice sustains while the other moves." >}}
+{{< score id="music272/09-parallel-motion" caption="Parallel motion: voices move in the same direction by the same interval (here a fourth throughout)." >}}
+
 Contrary motion is the gold standard of contrapuntal writing. When the voices move in opposite directions, they assert their independence most forcefully: neither voice seems to pull or follow the other, and the result is a texture of genuine polyphonic equality. The two voices trace arcs that are, in a sense, mirror images, and the resulting sonic impression is one of balance, dialogue, and genuine two-part composition. It is no accident that cadences — the moments of greatest formal weight in a contrapuntal piece — typically employ contrary motion in their approach: the soprano rising by step from the leading tone to the tonic octave while the bass descends by a fourth or fifth from the dominant to the tonic.
 
 Similar motion is less independent than contrary but entirely permissible, provided it does not produce forbidden parallel intervals. The two voices travel in the same direction, implying a certain gravitational pull between them, but the difference in interval size prevents their complete assimilation. Oblique motion, in which one voice sustains while the other moves, provides textural contrast and is particularly useful in the creation of suspensions in fourth-species counterpoint — the stationary voice creates the suspended dissonance while the moving voice provides the harmonic change. Parallel motion — the most restricted of the four types — preserves the interval between the voices exactly, and when that interval is a perfect consonance, the result is the notorious parallel fifth or parallel octave, the most rigorously forbidden event in strict counterpoint.
@@ -110,6 +124,8 @@ In practice, the experienced contrapuntist does not consciously categorize every
 <div class="example">
 <strong>Example 1.1 (Motion Types in a Two-Bar Passage).</strong> Consider two voices in C major over two measures. Soprano: C5–D5–E5–F5 (ascending step motion). Bass: G3–F3–G3–C3 (descending step, ascending step, descending fourth). At beat 1: soprano C5, bass G3 — perfect fifth. Beat 2: soprano D5 (up a second), bass F3 (down a second) — these two voices move by the same interval size in opposite directions: contrary motion, arriving at a minor sixth (D5–F3). Beat 3: soprano E5 (up a second), bass G3 (up a third) — similar motion (both ascending), arriving at a major sixth (E5–G3). Beat 4: soprano F5 (up a second), bass C3 (down a fifth) — contrary motion, arriving at a major thirteenth (= major sixth plus an octave, F5–C3). The motion types alternate throughout, with contrary motion dominating and providing the strongest sense of voice independence. The intervals are entirely consonant (fifth, sixth, sixth, thirteenth), and the passage is a valid first-species example.
 </div>
+
+{{< score id="music272/10-motion-types-example" caption="Example 1.1 — soprano C–D–E–F against bass G–F–G–C, demonstrating alternating contrary and similar motion." >}}
 
 ### 1.6 Forbidden Parallels and Voice Independence
 
@@ -121,6 +137,9 @@ It is instructive to consider what parallel fifths actually sound like, and why 
 <strong>Theorem 1.2 (The Prohibition of Parallel Fifths and Octaves).</strong> In strict counterpoint, two voices must not move in parallel motion from one perfect fifth to another, nor from one perfect octave to another. This prohibition applies regardless of which voices are involved, regardless of whether the parallels are in the same or different octaves (so-called "hidden" or "covered" parallels at the octave are still prohibited), and whether the parallels occur on consecutive beats or across a bar line.
 </div>
 
+{{< score id="music272/11-parallel-fifths-forbidden" caption="Parallel fifths: two voices in lockstep at the fifth, collapsing voice independence. Forbidden in strict counterpoint." >}}
+{{< score id="music272/13-parallel-octaves-forbidden" caption="Parallel octaves: two voices a perfect octave apart moving in the same direction. Equally forbidden." >}}
+
 The acoustic justification is subtle but profound. A perfect fifth, with its ratio of \(3:2\), produces such strong resonance that the two voices fuse nearly into one acoustic entity. The fundamental of the lower voice and the first overtone of the upper voice are very close in frequency; the second overtone of the lower voice is identical to the fundamental of the upper voice. This overtone sharing creates the characteristic hollow yet powerful sound of the perfect fifth, a sound that is perceptually singular — we do not easily hear it as two independent tones. When two voices move in parallel fifths — say, from C–G to D–A — the listener hears not two independent melodic lines but a single melodic entity harmonized at the fifth. The contrapuntal goal of independent polyphonic voices is thus defeated: the texture collapses from two distinct melodic personalities into a single melody with a fixed harmonic shadow. The voices have ceased to be voices in the genuine sense and have become a single compound instrument.
 
 The same principle applies even more forcefully to parallel octaves. The octave ratio of \(2:1\) causes the upper voice to coincide with the second partial of the lower voice; the two tones fuse so completely in perception that listeners frequently do not hear them as two separate voices at all. Consecutive octaves produce the effect of a single voice doubling at the octave — not counterpoint, but unison writing with added thickness. The prohibition on parallel octaves is therefore not so much a stylistic rule as a definition: music that proceeds in consecutive octaves is not polyphony and has no claim to being treated as counterpoint.
@@ -128,6 +147,8 @@ The same principle applies even more forcefully to parallel octaves. The octave 
 <div class="definition">
 <strong>Definition 1.4 (Hidden and Direct Fifths and Octaves).</strong> A <em>direct (or hidden) fifth</em> occurs when two voices move in similar motion to a perfect fifth, with at least one voice moving by a leap rather than by step. A <em>direct octave</em> is the analogous event at the octave. These are treated with more leniency than true parallel fifths and octaves but are still prohibited when they occur between the outer voices (soprano and bass), both of which move by leap, in strict counterpoint. The rule is that similar motion into a perfect consonance is permissible only when the upper voice moves by step.
 </div>
+
+{{< score id="music272/12-hidden-fifth" caption="A hidden (direct) fifth: voices approach a perfect fifth via similar motion with the upper voice moving by step — permitted." >}}
 
 <div class="remark">
 <strong>Remark 1.3 (Why Perfect Fourths Are Treated Differently).</strong> The perfect fourth, with ratio \(4:3\), shares the acoustic stability of the fifth yet is treated differently in two-voice counterpoint. When the fourth appears above a bass voice without an additional third below it (i.e., without completing a chord of which the fourth is not the lowest interval), it sounds as a dissonance — the bass seems to demand resolution. This context-sensitivity of the fourth is one of the most striking features of common-practice harmony: an interval that is acoustically consonant functions as a dissonance in specific registral contexts. Parallel fourths between upper voices, however, are treated very differently — they are permitted and even idiomatic, since neither voice functions as a harmonic bass for the other. The distinction reveals a crucial principle: dissonance is not solely a property of the interval itself but of the interval in its registral context.
@@ -153,6 +174,8 @@ Counterpoint is not an abstract mathematical exercise; it is vocal music. Even w
 </ul>
 These ranges are guidelines rather than absolute constraints; exceptional notes at the extremes are permissible for expressive effect but should not be sustained or approached carelessly.
 </div>
+
+{{< score id="music272/14-voice-ranges" caption="Standard SATB voice ranges: soprano (C4–G5), alto (G3–C5), tenor (C3–G4), bass (E2–C4)." >}}
 
 Good melodic writing in counterpoint is governed by principles of singability and shape. A well-formed contrapuntal melody rises and falls with a clear arc; it reaches a single climactic high point (or occasionally a low point) and then descends (or ascends) to its conclusion. It balances stepwise motion with occasional leaps, and large leaps — sixths, sevenths, octaves — are compensated by stepwise motion in the opposite direction immediately after the leap. This principle of leap compensation reflects the physical reality of singing: after a large ascending leap, the voice naturally wants to fall back; the compensation gives the melodic line the sense of recovering its balance. A melody that leaps repeatedly in the same direction without compensation feels driven to an extreme, unstable.
 
@@ -196,6 +219,8 @@ Before the full establishment of major-minor tonality in the seventeenth century
 Each plagal mode uses the same final as its authentic counterpart but spans the range a fourth below rather than a fifth above the final.
 </div>
 
+{{< score id="music272/15-church-modes" caption="The six authentic church modes on the white keys, each starting on its final: Dorian (D), Phrygian (E), Lydian (F), Mixolydian (G), Aeolian (A), Ionian (C)." >}}
+
 The modal system profoundly influences the character of Renaissance counterpoint in ways that extend beyond the simple question of which pitches are available. Each mode has its own characteristic melodic gestures, its own range of available cadential formulas, and its own emotional character as perceived by Renaissance theorists. The Phrygian mode, for instance, with its unique semitone at the bottom (E–F rather than the whole step at the bottom of all other modes) produces a characteristic cadential gesture — the Phrygian cadence, in which the bass descends by semitone (E to D#, or in transposition any descent by semitone) — that sounds strikingly different from all other cadential approaches and persists in tonal music as a special expressive device even after the modal system was supplanted by major-minor tonality.
 
 <div class="remark">
@@ -216,11 +241,16 @@ First species counterpoint is the most rigorous and revealing of the five specie
 <strong>Definition 2.1 (Cantus Firmus and First Species Counterpoint).</strong> A <em>cantus firmus</em> (Latin: "fixed song") is a given melody, traditionally presented in whole notes, that serves as the harmonic basis for a contrapuntal exercise. A <em>first-species counterpoint</em> is a voice added above or below the cantus such that: (1) exactly one note sounds in the added voice for each note of the cantus; (2) every vertical interval formed between the two voices is a consonance; (3) no consecutive perfect fifths or octaves occur between any two adjacent pairs of notes; (4) the counterpoint begins on a perfect consonance (unison, fifth, or octave); and (5) the counterpoint ends on a unison or octave, approached by contrary stepwise motion.
 </div>
 
+{{< score id="music272/17-cantus-firmus" caption="A typical eight-note cantus firmus in C major, presented in whole notes." >}}
+{{< score id="music272/16-first-species-example" caption="A first-species counterpoint above the cantus: one note against one, all intervals consonant, closing in contrary motion to an octave." >}}
+
 The opening and closing requirements are both formal and acoustic. A polyphonic piece must establish and confirm the mode (or key), and in strict counterpoint the strongest declarations of modal centre are the perfect consonances. The approach to the final octave or unison by contrary motion — typically the soprano moving up by step (the leading tone to tonic) and the bass moving down by step or fourth (dominant to tonic) — is the prototype of all cadential motion in Western music. Every perfect authentic cadence in common-practice harmony is an elaboration of this basic gesture, ornamented by harmonic rhythm, dominant seventh chords, and rhythmic displacement, but structurally reducible to this two-voice framework.
 
 <div class="example">
 <strong>Example 2.1 (A First-Species Counterpoint in C Major).</strong> Let the cantus firmus in the tenor present the notes C4–D4–F4–E4–D4–C4 in whole notes. A soprano counterpoint might proceed: E5–F5–A4–G4–F4–E4, producing the interval sequence major tenth (= major third), minor tenth (= minor third), minor third, minor third, minor third, major third. Every interval is an imperfect consonance; contrary motion appears at the first, third, and fourth note-pairs; and the final interval is a major third — a weak but permissible close. A stronger setting aims for an octave at the close: soprano proceeding E5–D5–C5–B4–A4–C5, producing the interval sequence major tenth, minor seventh (error — dissonant!), and so on. The exercise of finding a good first-species counterpoint requires simultaneously satisfying all the conditions, which forces systematic thinking about interval sequences and motion types.
 </div>
+
+{{< score id="music272/18-cadential-sixth-to-octave" caption="The standard first-species cadence: a major sixth resolving by contrary stepwise motion to a perfect octave — the clausula vera." >}}
 
 The rule against hidden fifths and octaves (Definition 1.4) adds a further constraint. A hidden fifth occurs when two voices move in similar motion to a perfect fifth, with at least one voice leaping. Even though the preceding interval was not a fifth, the sudden parallel approach to the fifth creates an acoustic impression of parallel-fifth motion. In strict first species, hidden fifths between the outer voices are permitted only when the upper voice moves by step — which guarantees that the stepwise motion distinguishes the two voices sufficiently to prevent the impression of fusion.
 
@@ -248,6 +278,9 @@ In first species, because every note is exposed on a strong beat and every inter
 </ul>
 </div>
 
+{{< score id="music272/22-parallel-thirds-bad-independence" caption="Parallel thirds throughout: harmonically correct but melodically inert — the added voice has no independent identity." >}}
+{{< score id="music272/23-independent-melody-good" caption="Independent counterpoint: contrary and oblique motion give the added voice its own profile." >}}
+
 It is worth dwelling on the aesthetic rationale for these melodic preferences. The insistence on a single melodic climax reflects the Renaissance understanding of melody as a purposive arc — a gesture that begins, rises to a point of maximum energy, and falls to a point of repose. A melody that oscillates or wanders without direction lacks this purposiveness; it fails to communicate anything. The preference for contrary motion between the voices reflects the polyphonic ideal of independence: when both voices move in contrary directions, neither dominates, and the listener hears a genuine dialogue between equals. These are not merely technical rules but aesthetic principles that the great masters of counterpoint internalized as the deep grammar of musical discourse.
 
 ### 2.4 Approaching the Cadence
@@ -257,6 +290,8 @@ The cadence — from the Latin *cadere*, to fall — is the moment of formal arr
 <div class="remark">
 <strong>Remark 2.2 (Cadential Preparation).</strong> In first species, the cadence is prepared by the penultimate interval, which should create a strong sense of motion toward the final. The most effective preparation is the interval of a sixth below the final octave (e.g., the soprano on B4 and the bass on D3, forming a major sixth, immediately before the soprano rises to C5 and the bass falls to C3 for the final octave). The major sixth creates a strong tendency toward the octave because the soprano's leading tone (B4) urgently desires to resolve to C5 while the bass's D3 desires to resolve to C3. The two resolutions happen simultaneously, in contrary motion, producing the most decisive possible cadence. This sixth-to-octave (or sixth-to-unison) cadential motion is the species counterpart of the V–I harmonic resolution in tonal music — both encode the same fundamental impulse toward tonal closure, expressed at different levels of abstraction.
 </div>
+
+{{< score id="music272/18-cadential-sixth-to-octave" caption="Cadential sixth-to-octave approach: soprano on B descends by step to C while bass ascends — contrary motion to the final perfect octave." >}}
 
 <div class="theorem">
 <strong>Theorem 2.2 (Cadential Approach in First Species).</strong> The final interval of a first-species exercise must be a unison or octave, approached by contrary stepwise motion. Specifically, if the cantus ends \(\hat{2}–\hat{1}\) (scale degrees 2 descending to 1), the counterpoint placed above the cantus should end \(\hat{7}–\hat{8}\) (leading tone ascending to the tonic octave). The resulting contrary motion produces the characteristic clausula vera, or authentic cadence in two voices.
@@ -278,6 +313,8 @@ The passing tone is the central device of second species. It fills in the space 
 <strong>Example 2.2 (Passing Tones in Second Species).</strong> Suppose the cantus in the bass holds C4 as a whole note. The soprano counterpoint moves from E5 on the downbeat (major tenth — consonant) through D5 on the weak beat (major ninth — dissonant passing tone) to C5 at the opening of the next measure against the next cantus note. The passing tone D5 is dissonant against C4 (major ninth = major second expanded by an octave), but it is on the weak beat, approached by descending step from E5, and quitted by descending step to the next bar's consonance. Its dissonance is perceptually absorbed into the motion from E5 downward; it is a step in a trajectory, not a harmonic event in itself.
 </div>
 
+{{< score id="music272/19-second-species-passing-tone" caption="Second species: two half notes against each whole note; the weak-beat passing tone D (dissonant) connects the consonances E and C." >}}
+
 ### 2.6 The Cambiata and Consonant Skip
 
 Second species permits two additional melodic devices beyond the passing tone and neighbor tone: the *nota cambiata* (changing-note figure) and the *consonant skip*. The cambiata is a four-note figure — step down, skip down a third, step up — that was a Renaissance cliché, widely used by Palestrina and his contemporaries. Although the third note of the figure (the note arrived at by the downward skip) is dissonant and is quitted by ascending step rather than by the expected resolution, the figure was so thoroughly conventionalized by Renaissance practice that strict species pedagogy admits it as an exception. This is a notable moment in the rules of counterpoint: an irregularity tolerated because it has become a stylistic formula.
@@ -287,6 +324,9 @@ Second species permits two additional melodic devices beyond the passing tone an
 </div>
 
 The consonant skip provides melodic flexibility when the strict alternation of strong consonances and weak passing tones would produce an uncomfortably stepwise, monotonous line. A well-formed melodic contour requires occasional leaps, and the consonant skip — always to a consonance — satisfies this need while respecting the fundamental requirement that weak-beat activity resolve perceptually before the next downbeat. The consonant skip is not a dissonance treatment at all; it is a melodic option that happens to occur on a weak beat, and its consonance ensures that no special resolution is needed.
+
+{{< score id="music272/20-nota-cambiata" caption="The nota cambiata figure E–D–B–C: the dissonant B on the third beat is quitted by an upward skip rather than by conventional stepwise resolution." >}}
+{{< score id="music272/21-consonant-skip" caption="A consonant skip on the weak beat, leaping to a consonance when stepwise continuation would produce a forbidden parallel or awkward melodic line." >}}
 
 ### 2.7 Melodic Independence in Two-Voice Writing
 
@@ -306,6 +346,9 @@ The test of melodic independence is the single-voice test: remove one voice from
 <strong>Example 2.3 (Melodic Independence vs. Harmonic Correctness).</strong> Consider two soprano counterpoints above the cantus C–D–E–F–G in the bass. The first reads E–F–G–A–B — intervals of major third, minor third, minor third, major third, major third. Every interval is consonant; there are no parallel fifths or octaves. But the soprano simply moves in parallel thirds with the bass throughout. Remove the bass and sing the soprano: it is a perfectly fine D major scale (without the first note), but it has no identity independent of the bass that generated it. The second soprano reads G–G–C–C–D — intervals of fifth, fourth, minor sixth, fifth, fifth. Again, all consonant, no parallels. But now the soprano has a profile of its own: it sustains G twice (creating a moment of oblique motion against the ascending bass), leaps down to C (a fourth, followed by two stationary notes and a step to D). Remove the bass: the soprano line G–G–C–C–D has a clear melodic character — a sustained opening followed by a descent and a step up — that is recognizable in isolation. It is the second soprano that exhibits genuine melodic independence.
 </div>
 
+{{< score id="music272/22-parallel-thirds-bad-independence" caption="Soprano moving in strict parallel thirds with the bass: correct but dependent — remove one voice and the other has no identity." >}}
+{{< score id="music272/23-independent-melody-good" caption="Independent soprano: sustained G, leap to C, repeated C, step to D — passes the single-voice test as a coherent melody." >}}
+
 ---
 
 ## Chapter 3: Third, Fourth, and Fifth Species
@@ -324,6 +367,10 @@ The abundance of notes in third species does not relax the fundamental prohibiti
 <strong>Example 3.1 (Double-Neighbor Figure in Third Species).</strong> Against a sustained C4 in the cantus, the soprano counterpoint might move E4–F4–D4–E4, forming the interval sequence major third, perfect fourth (dissonant), major second (dissonant), major third. The figure begins and ends on the consonant major third, E4 above C4; the two middle notes F4 and D4 are the upper and lower neighbors of E4 respectively. Their dissonance on beats 2 and 3 is acceptable because (1) the figure is a recognized conventional pattern, (2) the structural note E4 appears at both the beginning and end of the figure, making the neighbor notes perceptually subordinate, and (3) the consonant frame (major thirds on beats 1 and 4) ensures that no dissonance falls on a strong beat.
 </div>
 
+{{< score id="music272/25-double-neighbor-figure" caption="Double-neighbor figure: E–F–D–E against a sustained C. Both F (upper neighbor) and D (lower neighbor) are dissonant weak-beat elaborations of the structural E." >}}
+
+{{< score id="music272/24-third-species-passing" caption="Third species: four quarter notes against each cantus whole note, with passing tones filling in the intervals between consonances." >}}
+
 The melodic demands of third species are substantial. The four-quarter-note stream must maintain a clear sense of direction and arc; it should not meander aimlessly from note to note. The most common defect in student third-species exercises is excessive stepwise motion without compensating leaps, producing a melody that seems to crawl rather than flow. Conversely, too many leaps produce an angular, disjunct line that loses melodic coherence. The ideal third-species counterpoint alternates between scalar runs and melodic skips with the naturalness of a well-conceived melody, always moving purposefully toward the cadence.
 
 ### 3.2 Third Species: Forbidden Parallels and the Battuta
@@ -333,6 +380,8 @@ The density of third species creates a specific problem with forbidden parallels
 <div class="definition">
 <strong>Definition 3.2 (The Battuta).</strong> In third species, a <em>battuta</em> ("beat") error is a parallel fifth or octave between the fourth quarter note of one bar and the first quarter note of the next. The term derives from the Italian for "beat" and refers to the moment of metric renewal at the bar line. The battuta error is treated as equivalent to a parallel between consecutive strong beats within the bar: it violates the prohibition on consecutive perfect consonances between any two beats, regardless of bar placement.
 </div>
+
+{{< score id="music272/26-battuta-wrong" caption="Battuta: parallel fifths crossing the bar line, arising between the fourth quarter note of one bar and the first quarter of the next. Equally forbidden as parallels within the bar." >}}
 
 A related issue is the treatment of parallel fourths in third species. While parallel fifths between any pair of beats are absolutely prohibited, and parallel octaves are prohibited between any strong-beat notes, parallel fourths between upper voices (not involving the bass) are permissible in third species, as they are in all species. The distinction between the outer-voice rules and the inner-voice rules becomes particularly important in three- and four-voice textures, where the rules governing the relationship of each voice to the bass must be distinguished from those governing the relationships between pairs of upper voices.
 
@@ -350,6 +399,11 @@ Fourth species is arguably the most musically consequential of the five species,
 The standard suspension types in two-voice counterpoint are named by the interval of suspension followed by the interval of resolution: <em>7–6</em> (seventh resolving to sixth), <em>4–3</em> (fourth resolving to third), <em>9–8</em> (ninth resolving to octave), and <em>2–3</em> (the bass suspension, where the bass voice is the suspended voice — a second resolving to a third below).
 </div>
 
+{{< score id="music272/27-suspension-7-6" caption="The 7–6 suspension: B held against a new C bass (seventh), resolving down by step to A (sixth)." >}}
+{{< score id="music272/28-suspension-4-3" caption="The 4–3 suspension: F held against C bass (fourth), resolving down by step to E (third)." >}}
+{{< score id="music272/29-suspension-9-8" caption="The 9–8 suspension: D above C bass (ninth), resolving down by step to C (octave)." >}}
+{{< score id="music272/30-suspension-2-3-bass" caption="The 2–3 bass suspension: the bass holds D against an upper E (second), resolving down by step to C while the upper voice is sustained." >}}
+
 The psychological power of the suspension is immense and is worth analyzing carefully. The preparation establishes the suspended note as a consonance — the ear hears it in a stable harmonic context and registers the note as "belonging" to the current harmony. When the other voice changes at the next downbeat, the held note suddenly becomes dissonant against the new harmonic context; the ear registers this as a collision, a moment of unresolved tension. The resolution — the downward step to a consonance — is thus heard as a release of that tension, an answering of the question the suspension posed. The entire three-phase figure is a paradigm of expectation, frustration, and fulfillment that mirrors the most basic patterns of human emotional experience.
 
 What makes the suspension particularly powerful as a musical device is the combination of its metric placement and its preparation. A dissonance that appears without preparation — a sudden accented dissonance on the downbeat with no held-over note — would be jarring, a true collision. The preparation converts the dissonance from a collision to a suspension: the note has been there, it is familiar, it simply finds itself in an unexpected harmonic context. The listener's response is not shock but sympathy — a sense that the suspended note must now find its way to resolution, and a sense of satisfaction when it does. This is the emotional logic of the suspension, and it is also the emotional logic of much of human experience: the familiar thing that finds itself displaced, suspended in a new context, and seeks its natural resolution.
@@ -357,6 +411,8 @@ What makes the suspension particularly powerful as a musical device is the combi
 <div class="theorem">
 <strong>Theorem 3.1 (Resolution Rules for Suspensions).</strong> A suspension must resolve by <em>stepwise downward motion</em> in the suspending voice. Upward resolution is prohibited in strict counterpoint. The resolution must arrive on a consonance. In a chain of suspensions — where the resolution of one suspension immediately becomes the preparation for the next — the resolving note is tied into the next downbeat, where it again becomes dissonant. This chain of suspensions can sustain a single emotional arch across many measures, each resolution simultaneously a point of momentary rest and the beginning of a new tension.
 </div>
+
+{{< score id="music272/31-chain-of-suspensions" caption="A chain of 9–8 suspensions over a descending bass in D minor: each resolution immediately becomes the preparation for the next suspension." >}}
 
 The prohibition on upward resolution is not arbitrary. The psychological effect of a suspension depends on the sense that the suspended note is "held back" by the weight of the harmonic change beneath it — suspended, in the gravitational sense, above a new floor. The downward resolution is the note "falling" to its natural resting place below. An upward resolution reverses this metaphor: the note "escapes" upward rather than resolving downward, producing a sense of avoidance rather than resolution. This is dramatically appropriate in certain expressive contexts (Bach uses upward resolutions as expressive exceptions in free composition) but stylistically incongruent with the sustained, inexorable quality of strict species counterpoint.
 
@@ -396,6 +452,8 @@ The transition from strict species to free composition is not a relaxation of st
 <strong>Example 3.2 (Fifth Species Above a Dorian Cantus Firmus).</strong> Suppose the cantus firmus is a Dorian melody on D: D–F–E–D–G–F–A–G–F–E–D. A fifth-species counterpoint above this might proceed as follows: the first bar employs first-species half notes (A–A, a fifth above D and F); the second bar shifts to third-species quarters passing through consonances; the third bar introduces a 7–6 suspension over the cantus' D; the fourth bar uses a consonant skip to move between consonances; and the fifth and sixth bars build a chain of 4–3 suspensions leading into the final cadence, where an eighth-note anticipation of the tonic precedes the full tonic arrival on the last note. The result is a melodic line of considerable variety and expressiveness, each rhythmic gesture chosen for its musical effect rather than for any mechanical alternation of species.
 </div>
 
+{{< score id="music272/32-fifth-species-florid" caption="Fifth species (florid counterpoint): mixed note values — half notes, quarter notes, suspensions — combined freely over a sustained bass." >}}
+
 ### 3.5 Fourth Species Continued: The Bass Suspension and the 9–8
 
 The most common suspensions in standard fourth species — 7–6, 4–3, and 9–8 — all involve the upper voice as the suspended voice, holding a note from the previous beat while the lower voice changes. The *bass suspension* reverses this: the lower voice holds a note from the previous beat while the upper voice changes, creating the interval of a second (or ninth) above the bass on the downbeat, resolving upward by step to a third. This 2–3 figure (the interval names referring to the bass suspension: second moving to third) is less common in strict species counterpoint but widespread in free tonal writing, where it typically arises from the stepwise descent of an inner voice (in four parts) while the bass is held.
@@ -429,6 +487,8 @@ The transition from modal counterpoint (Chapter 1) to tonal counterpoint brings 
 <div class="definition">
 <strong>Definition 4.1 (Melodic Minor Scale).</strong> The <em>melodic minor scale</em> resolves the augmented-second problem of the harmonic minor by raising both \(\hat{6}\) and \(\hat{7}\) when ascending (creating a major sixth and major seventh above the tonic) and using the natural forms of \(\hat{6}\) and \(\hat{7}\) (lowered) when descending. The ascending form provides a smooth, stepwise ascent to the leading tone; the descending form avoids the leading tone altogether, using the subtonic and submediant of the natural minor. In tonal counterpoint, this bidirectional inflection must be carefully managed: a voice ascending toward the tonic should use the raised forms, while a voice descending away from the tonic should use the natural forms.
 </div>
+
+{{< score id="music272/33-melodic-minor" caption="The melodic minor scale in A: sixth and seventh raised ascending (toward the leading tone), returned to natural form descending." >}}
 
 The practical consequence for two-voice tonal counterpoint is that the student must be aware of the directional melodic conventions of minor-mode writing. A soprano that ascends through \(\hat{6}^\natural\) and \(\hat{7}^\natural\) while approaching the tonic will produce a subtonic approach — a whole step to the tonic rather than a half step — which sounds modal and archaic in a tonal context. A soprano that uses the raised \(\hat{7}^\sharp\) in all contexts, even when descending, will produce the augmented second \(\hat{6}–\hat{7}^\sharp\) in downward motion, which is prohibited in melodic writing. These constraints — arising from the dual nature of the minor mode — add a layer of complexity to tonal counterpoint in minor that is absent in major, and they explain why minor-mode fugue subjects, chorale harmonizations, and free counterpoint require particular care in the treatment of the sixth and seventh scale degrees.
 
@@ -468,6 +528,8 @@ The descending-fifth sequence is the most common in tonal music because it follo
 <strong>Example 4.3 (Descending-Fifth Sequence in Two Voices).</strong> In G major, a descending-fifth sequence might proceed: G major (I) — C major (IV) — F# diminished (VII) — B minor (III) — E minor (VI) — A minor (II) — D major (V) — G major (I). In two-voice counterpoint, this sequence can be rendered as a chain of suspended seventh-sixth figures in the soprano against a descending bass: soprano G–F#–E–D, bass G–E–C–D–G (the bass skips to complete the chord roots while the soprano descends by step through suspensions). The result is a compact, powerful two-voice sequence that traverses the entire harmonic cycle of G major in eight beats, modulating through every diatonic harmony before arriving at the tonic with a decisive authentic cadence.
 </div>
 
+{{< score id="music272/34-descending-fifth-sequence" caption="Descending-fifth sequence in G major: a chain of 7–6 suspensions over a bass descending by fifth, traversing the full harmonic cycle." >}}
+
 ### 4.5 Figuration and Ornamentation
 
 Once the two-voice harmonic skeleton has been established — a succession of consonant intervals governed by a coherent harmonic progression — the art of figuration takes over. Figuration is the process of animating the harmonic skeleton with the devices of the species system: passing tones, suspensions, neighbor tones, and the consonant skips that give each voice its melodic character. In free composition, figuration is not optional decoration but an essential part of musical expression; the same harmonic skeleton can be figurated in an infinite variety of ways, each producing a distinctive melodic and rhythmic character.
@@ -486,12 +548,18 @@ The cadence in free tonal counterpoint is more elaborate than in strict species,
 <strong>Theorem 4.1 (Types of Tonal Cadence).</strong> The principal cadential types in tonal counterpoint are:
 <ul>
 <li><em>Perfect authentic cadence (PAC)</em>: bass moves \(\hat{5}–\hat{1}\) (root position dominant to root position tonic), soprano arrives on \(\hat{1}\). The strongest form of formal closure.</li>
+
+{{< score id="music272/35-cadence-PAC" caption="Perfect authentic cadence (PAC): root-position V to root-position I with soprano arriving on the tonic — the strongest formal closure." >}}
 <li><em>Imperfect authentic cadence (IAC)</em>: dominant moves to tonic, but one or both chords is inverted, or the soprano ends on \(\hat{3}\) or \(\hat{5}\) rather than \(\hat{1}\). Weaker closure than the PAC.</li>
 <li><em>Half cadence</em>: ends on the dominant, typically with soprano motion to \(\hat{2}\), \(\hat{4}\), or \(\hat{5}\). Creates a moment of structural suspension demanding continuation in a new phrase.</li>
 <li><em>Deceptive cadence</em>: bass proceeds \(\hat{5}–\hat{6}\) (dominant to submediant) rather than to the expected tonic, while the soprano may arrive on \(\hat{1}\). The harmonic surprise creates a moment of withheld resolution, typically followed immediately by a repetition or elaboration of the cadential gesture.</li>
 <li><em>Plagal cadence</em>: bass moves \(\hat{4}–\hat{1}\) (subdominant to tonic). More commonly heard as a post-cadential extension (the "Amen" cadence) than as a primary structural arrival.</li>
 </ul>
 </div>
+
+{{< score id="music272/37-cadence-deceptive" caption="Deceptive cadence: V resolves to vi rather than I, withholding the expected tonic arrival." >}}
+
+{{< score id="music272/36-cadence-HC" caption="Half cadence: motion to the dominant (here a dominant triad), creating an open ending that demands continuation." >}}
 
 ### 4.7 Creating Musical Tension and Release
 
@@ -514,6 +582,8 @@ Bach's fifteen Two-Part Inventions (BWV 772–786), composed in their final form
 <div class="example">
 <strong>Example 4.2 (Invention No. 4 in D Minor, BWV 775: Sequential Episode Writing).</strong> The D minor invention is dominated by its episode material — a sequential figure in parallel tenths that traverses harmonic distance rapidly and smoothly. The outer voices move in parallel tenths (soprano and bass always a tenth apart), while the inner-voice figuration provides harmonic filling. This texture — parallel tenths in the outer voices — is one of the most idiomatic devices of Baroque two-voice writing; it produces a rich, full sound from only two voices by exploiting the acoustically warm quality of the tenth (an octave plus a third) and the contrary motion that parallel tenths often imply (if the soprano rises, the bass typically falls or stays, creating the parallel tenth in the other direction). The D minor invention is a masterclass in using parallel tenths as a structural device throughout an entire piece.
 </div>
+
+{{< score id="music272/38-parallel-tenths" caption="Invention No. 4 in D minor style: outer voices in parallel tenths — a third in close position, an octave apart — producing a full-sounding two-voice texture." >}}
 
 The student of free tonal counterpoint is advised to analyze Bach's inventions at multiple levels simultaneously. At the surface level, one should identify the voice-leading: which notes are passing tones, which are suspensions, which are consonant skips? At the motivic level, one should identify the principal motive and trace its transformations — where it is stated literally, where it is inverted, where it appears in diminution or augmentation. At the harmonic level, one should map the key areas visited: where does the invention leave the tonic, what keys does it pass through, and how does it return? At the formal level, one should identify the sections — exposition, development, recapitulation or final cadence — and understand how they relate to each other. Only by analyzing at all four levels simultaneously can one begin to understand how the invention achieves its characteristic effect of spontaneous inevitability.
 
@@ -545,6 +615,8 @@ The physical distribution of chord tones across the four voices — chord spacin
 <strong>Definition 5.2 (Open and Close Position).</strong> A four-part chord is in <em>close position</em> if the upper three voices (soprano, alto, tenor) are arranged within the span of an octave. It is in <em>open position</em> if the upper three voices span more than an octave — that is, if the alto is more than an octave below the soprano and the tenor more than an octave below the alto. Both positions are idiomatic in four-part writing; the choice of position affects texture density, registral warmth, and the ease of smooth voice-leading in the particular context.
 </div>
 
+{{< score id="music272/39-close-open-position" caption="Close position (upper three voices within an octave) versus open position (upper voices spanning more than an octave) for a C major triad." >}}
+
 <div class="theorem">
 <strong>Theorem 5.1 (Doubling Rules in Four-Part Harmony).</strong> When a triad is presented in four parts, one chord tone must be doubled. The hierarchy of preferred doublings is:
 <ol>
@@ -555,6 +627,8 @@ The physical distribution of chord tones across the four voices — chord spacin
 </ol>
 </div>
 
+{{< score id="music272/40-doubling-rules" caption="Left: root doubled in the tonic triad (correct). Right: leading tone doubled in the dominant — both B's would produce parallel octaves on resolution." >}}
+
 The prohibition on doubling the leading tone is a direct consequence of the parallel-octave prohibition, applied to the specific harmonic context of the dominant chord resolving to the tonic. If the leading tone (\(\hat{7}\)) appears in two voices, both must resolve upward by semitone to the tonic (\(\hat{8}\)); the resulting parallel octaves on the cadence — the most emphatic moment of the phrase — would be a catastrophic failure of voice independence at the one moment when independence matters most. The rule against leading-tone doubling is therefore not a freestanding prohibition but a specific application of the most fundamental principle of counterpoint.
 
 ### 5.3 Voice Crossing and Overlapping
@@ -564,6 +638,8 @@ Voice crossing occurs when a lower voice temporarily rises above a higher voice,
 <div class="definition">
 <strong>Definition 5.3 (Voice Crossing and Overlapping).</strong> <em>Voice crossing</em> occurs when, at a given moment in a four-part texture, a lower voice sounds a pitch higher than the immediately higher voice. <em>Voice overlapping</em> occurs when a voice moves to a pitch that exceeds the most recent pitch of an adjacent voice in the same direction: if the soprano was most recently on D4 and the alto now moves to E4 (above the soprano's last heard note), the alto has overlapped the soprano, creating momentary ambiguity about which is the "upper" voice.
 </div>
+
+{{< score id="music272/41-voice-crossing-wrong" caption="Voice crossing: the alto rises above the soprano, disrupting the registral identity of both voices and confusing auditory stream segregation." >}}
 
 <div class="remark">
 <strong>Remark 5.1 (Perceptual Rationale for Crossing and Overlapping Rules).</strong> The prohibitions on voice crossing and overlapping are fundamentally matters of auditory stream segregation. Research by Albert Bregman and others has shown that the auditory system segregates simultaneous sounds into distinct perceptual streams primarily on the basis of frequency proximity and continuity: we expect the "soprano stream" to remain in the upper register from note to note, and the "alto stream" to remain below it. When the alto suddenly moves above the soprano's last pitch, the auditory system momentarily loses track of which stream is which. In a slow, clearly articulated four-part texture, such momentary confusion is merely confusing; in a fast, dense texture, it can render the polyphony perceptually incoherent.
@@ -583,6 +659,8 @@ The second-inversion triad — the chord in which the fifth of the chord appears
 </div>
 
 The cadential \(^6_4\) is by far the most important of these three uses and is one of the most powerful harmonic devices in tonal music. Its power derives from the same principle as the suspension: a strong-beat dissonance (the fourth and sixth above the dominant bass) is sustained momentarily before resolving downward to a consonance (the third and fifth of the dominant triad). The cadential \(^6_4\) is, in effect, a double suspension over the dominant, and its resolution produces the sense of harmonic arrival at the dominant that makes the subsequent motion to the tonic all the more decisive. Bach uses the cadential \(^6_4\) at virtually every formal cadence of significance in his chorale harmonizations, as does virtually every tonal composer from the Baroque through the late Romantic period.
+
+{{< score id="music272/42-cadential-64" caption="The cadential ⁶₄: C and E suspended over the dominant G bass, resolving down by step to B and D (the fifth and third of V), then resolving to I." >}}
 
 ### 5.5 Bach Chorales as Models
 
@@ -650,6 +728,9 @@ Invertible counterpoint is the technique of composing two or more voices such th
 <strong>Definition 6.1 (Invertible Counterpoint at the Octave).</strong> Two voices, \(v_1\) (upper) and \(v_2\) (lower), form <em>counterpoint invertible at the octave</em> if the version with \(v_1\) above \(v_2\) and the version with \(v_2\) transposed an octave above \(v_1\) (or \(v_1\) transposed an octave below \(v_2\)) are both valid two-voice counterpoints. Under inversion at the octave, diatonic interval numbers transform according to \(i \mapsto 9 - i\), so that: unison (1) becomes octave (8); second (2) becomes seventh (7); third (3) becomes sixth (6); fourth (4) becomes fifth (5); fifth (5) becomes fourth (4); sixth (6) becomes third (3); seventh (7) becomes second (2); octave (8) becomes unison (1).
 </div>
 
+{{< score id="music272/43-invertible-counterpoint-original" caption="Original two-voice counterpoint: upper voice G–A–F–G, lower voice E–F–D–E, all intervals are thirds." >}}
+{{< score id="music272/44-invertible-counterpoint-inverted" caption="Inverted counterpoint (voices exchanged at the octave): former lower voice now in soprano, former upper voice in bass — all thirds invert to sixths, still consonant." >}}
+
 The interval transformation under octave inversion has a critical consequence: the perfect fifth (interval 5) inverts to a perfect fourth (interval 4). In two-voice counterpoint, the perfect fourth above the bass is treated as a dissonance requiring resolution when it appears on a strong beat without the support of additional voices. This means that in a passage intended to be invertible at the octave, each perfect fifth must be voice-led in a way that would make the resulting fourth workable in the inversion. In practice this means avoiding strong-beat fifths that would become inadmissible strong-beat fourths, and being particularly careful with parallel fifths, which would invert to parallel fourths — not technically forbidden between upper voices, but acoustically troubling.
 
 <div class="theorem">
@@ -716,6 +797,8 @@ Composing a canon is an exercise in extreme compositional discipline. Every note
 <strong>Example 6.1 (Bach's Musical Offering, BWV 1079: Canon per Tonos).</strong> Among the ten canons in Bach's Musical Offering — composed in 1747 for Frederick the Great of Prussia — the Canon per Tonos ("canon through the keys") is perhaps the most astonishing. It is a two-voice canon at the second, meaning the comes enters a major second above the dux and a measure later. What is extraordinary is that the canon ends in a different key than it begins: each complete cycle of the canon rises by a whole step, so that after six cycles the canon has modulated through six keys and returned (at the octave) to the starting key. The canon thus has no ending — it spirals upward indefinitely. Bach appended the instruction "As the modulation rises, so may the glory of the King." The mathematical structure is elegant: the canon exploits the near-enharmonic equivalence of equal temperament to achieve a continuous modulating cycle that would be impossible in just intonation.
 </div>
 
+{{< score id="music272/45-canon-at-unison" caption="A simple two-voice canon at the unison with a one-bar time interval: the comes (follower) enters one measure after the dux (leader), replicating it exactly." >}}
+
 ### 6.7 Canon Varieties and the Double Invention
 
 The variety of canonical techniques available to a composer is a rich source of structural interest. Beyond the straightforward unison or fifth canon, the Baroque era explored augmentation, diminution, inversion, retrograde, and combinations thereof. Each variety imposes its own constraints on the dux melody and produces its own characteristic sonic effect.
@@ -746,6 +829,8 @@ Beyond their use in canon, augmentation and diminution serve as structural devic
 </ul>
 These transformations may be combined: augmentation in inversion, diminution in retrograde, and so on. Bach employs all combinations in the Art of Fugue (BWV 1080), his final and most systematic exploration of contrapuntal technique.
 </div>
+
+{{< score id="music272/52-subject-inversion" caption="Melodic inversion of the D minor fugue subject: every ascending interval becomes descending, and vice versa — a mirror-image countermelody used in double and mirror fugues." >}}
 
 The Art of Fugue — Bach's last major work, left unfinished at his death in 1750 — is an encyclopedic collection of contrapuntal studies on a single subject: a stepwise theme in D minor of great simplicity and motivic richness. Each of the work's eighteen canons and fugues demonstrates a different contrapuntal technique: simple fugue, fugue in contrary motion, double and triple fugue, augmentation fugue, stretto fugue, mirror fugue (in which the entire fugue is played simultaneously with all voices inverted), and canons at various intervals and time distances. The Art of Fugue is thus the theoretical culmination of everything the present course has covered — a systematic demonstration that a single subject, properly constructed, contains the seeds of an entire contrapuntal universe.
 
@@ -781,11 +866,16 @@ The fugue begins with its most basic unit: the *subject* (or *dux*, leader). The
 <strong>Definition 7.1 (Fugue Subject and Answer).</strong> The <em>subject</em> of a fugue is its primary melodic theme, stated initially by a single voice without harmonic accompaniment in the tonic key. The <em>answer</em> (or <em>comes</em>) is an imitation of the subject at the interval of a dominant fifth above or a subdominant fourth below — that is, in the dominant key — presented by a second voice while the first voice continues with the countersubject. The answer is called <em>real</em> if it is an exact transposition of the subject to the dominant; it is called <em>tonal</em> if certain intervals are adjusted to maintain tonal coherence and prevent premature modulation to the dominant-of-the-dominant.
 </div>
 
+{{< score id="music272/46-fugue-subject-d-minor" caption="A fugue subject in D minor: ascending by step from the tonic, reaching the dominant scale degree at the cadence." >}}
+
 The distinction between real and tonal answers is one of the most subtle points in fugue construction and reflects a deep principle of tonal harmonic grammar. A real answer transposes the subject literally to the dominant key; a tonal answer modifies certain intervals — particularly the opening interval, if the subject begins with an ascent from \(\hat{1}\) to \(\hat{5}\) or with a prominent \(\hat{5}\) in the first measure. The rationale: if the subject opens with the tonic-to-dominant fifth, the answer that replaces it with a dominant-to-dominant-dominant fifth implies a modulation to the key of the dominant's dominant — two steps away from the tonic — at the very outset. To preserve the tonic-dominant polarity of the opening exposition, the tonal answer replaces the opening ascending fifth with an ascending fourth (from \(\hat{5}\) to \(\hat{1}\) in the dominant key), effectively neutralizing the modulating tendency while still implying the dominant key.
 
 <div class="example">
 <strong>Example 7.1 (Real vs. Tonal Answer: WTC Book I, C Major Fugue, BWV 846).</strong> Bach's C major fugue from Book I opens with a subject that begins on C and rises through the interval of a fifth to G (approximately), implying the move from tonic to dominant. If answered literally (real answer), the comes would open on G and ascend a fifth to D — strongly implying G major, the key of the dominant. Bach instead answers tonally: the comes opens on G but the initial ascending fifth is compressed to an ascending fourth (G to C), after which the remainder of the subject is answered literally at the fifth. The result is a comes that stays comfortably within the orbit of C major's dominant — clearly in G major, but without asserting G major's own dominant — before the third entry of the subject returns the music decisively to C major.
 </div>
+
+{{< score id="music272/46-fugue-subject-d-minor" caption="Fugue subject ascending from D: the opening D–A fifth will be compressed to a fourth (A–D) in the tonal answer." >}}
+{{< score id="music272/47-tonal-answer-d-minor" caption="The tonal answer: the opening ascending fifth of the subject becomes an ascending fourth (A to D), neutralizing the tendency to overshoot into the dominant's dominant." >}}
 
 ### 7.2 Subject Design and Its Harmonic Implications
 
@@ -793,6 +883,8 @@ The design of a fugue subject is the most consequential compositional decision i
 
 <div class="theorem">
 <strong>Theorem 7.1 (Properties of a Well-Designed Fugue Subject).</strong> A fugue subject suitable for extended development possesses the following properties:
+
+{{< score id="music272/46-fugue-subject-d-minor" caption="A well-designed fugue subject in D minor: clear tonal center (ends on the dominant), distinctive rhythm, short extractable motive (F–G–A) for episode development." >}}
 <ul>
 <li><em>Harmonic clarity</em>: it implies a single tonal center (or a clear departure from and return to one), so that the tonal answer is unambiguous and the expositions of subject and answer are harmonically coherent.</li>
 <li><em>Rhythmic identity</em>: it has a distinctive rhythmic profile that is recognizable even when the subject is inverted, augmented, or heard in stretto against itself.</li>
@@ -811,6 +903,8 @@ As the answer enters in the second voice, the first voice does not fall silent; 
 <div class="definition">
 <strong>Definition 7.2 (Countersubject).</strong> The <em>countersubject</em> is the melodic material accompanying the answer (and subsequent entries of the subject or answer) in the voice that has just stated the subject. A <em>regular countersubject</em> appears consistently at each entry of the subject throughout the fugue and is invertibly counterpointed with the subject at the octave (or tenth or twelfth). An <em>irregular countersubject</em> (or <em>free counterpoint</em>) varies with each appearance of the subject. A fugue may have one, two, or (rarely) three regular countersubjects, each invertible with the subject and with each other.
 </div>
+
+{{< score id="music272/48-subject-with-countersubject" caption="The fugue subject (upper voice) combined with its countersubject (lower voice): the two are invertible, so they can exchange positions in subsequent entries." >}}
 
 A well-designed countersubject serves multiple compositional functions simultaneously. Melodically, it must be interesting enough to sustain attention during the answer — it cannot simply sustain a single pitch or repeat a single rhythm. Rhythmically, it should contrast with the subject: if the subject moves in long notes, the countersubject should move in shorter values, and vice versa, so that the two voices provide a rhythmic texture of complementary activity. Harmonically, it must be compatible with the subject at every point of their combination, producing no forbidden parallels in any of the invertible permutations in which it will appear. Motivically, it may derive some of its material from the subject — creating an internal unity that ties the two themes together — or it may be completely contrasting, providing variety.
 
@@ -836,6 +930,8 @@ The exposition is the opening section of the fugue, in which each voice enters i
 <strong>Definition 7.3 (Fugal Exposition).</strong> The <em>exposition</em> is the opening section of a fugue in which each voice introduces either the subject (in the tonic key) or the answer (in the dominant key) for the first time. Between the subject and answer entries, a brief connecting passage called the <em>codetta</em> may appear, allowing modulation from tonic to dominant (or vice versa) to prepare the next entry and introducing motivic material that will reappear in the episodes. After all voices have entered, the exposition closes and the fugue proceeds to its developmental middle section.
 </div>
 
+{{< score id="music272/49-fugue-exposition-sketch" caption="A two-voice fugal exposition sketch: subject enters in voice 1 (bar 1), answer enters in voice 2 (bar 3) with the countersubject continuing above in voice 1." >}}
+
 The exposition establishes three things simultaneously: the subject's melodic and rhythmic identity, the harmonic polarity of tonic and dominant that will structure the entire fugue, and the contrapuntal relationships (subject with countersubject, subject with free counterpoint) that will be developed in the middle section. An exposition that accomplishes all three of these with clarity and economy — that presents its material distinctly yet without over-exposition, that creates the expectation of development without yet fulfilling it — is one of the most satisfying structural achievements in all of music.
 
 ### 7.6 Middle Entries, Episodes, and Sequential Development
@@ -845,6 +941,8 @@ After the exposition, the fugue enters its middle section — the longest and st
 <div class="definition">
 <strong>Definition 7.4 (Episode and Middle Entry).</strong> A <em>middle entry</em> is an appearance of the subject or answer in a key other than the tonic — typically the dominant, the relative major or minor, the subdominant, or other closely related keys. Each middle entry is a moment of formal weight, comparable to the structural pillars of a building, between which the episodes provide the connecting fabric. An <em>episode</em> is a developmental passage between subject entries in which the subject does not appear, but in which motivic material derived from the subject, countersubject, or codetta is developed, typically through <em>harmonic sequence</em>: the repetition of a melodic or harmonic pattern at successively different pitch levels.
 </div>
+
+{{< score id="music272/55-fugue-episode-sequence" caption="A sequential episode derived from the subject's ascending-step motive, descending through a chain of fifths and passing through related key areas." >}}
 
 Sequential episodes are the primary vehicle of harmonic development in the middle of a fugue. A two-bar motivic pattern is stated and then repeated immediately a step or third higher or lower, and the process is repeated several times, traversing harmonic territory efficiently and with a sense of logical inevitability. The sequential episode exploits the invertible counterpoint of the episodic motives: as the sequence progresses, the motives exchange registral positions, presenting the same material in successively different configurations. A well-constructed episode sequence can modulate from the relative minor to the subdominant in the space of four or six bars without a single arbitrary harmonic move — every chord follows from the sequence by voice-leading necessity.
 
@@ -861,6 +959,9 @@ Stretto — the overlapping of subject entries in quick succession — is the mo
 <div class="definition">
 <strong>Definition 7.5 (Stretto and Augmentation).</strong> <em>Stretto</em> (Italian: "tight," "narrow") is the technique in which each successive entry of the subject begins before the previous entry has concluded. Stretto requires that the subject be consonant with itself when heard against a time-displaced version of itself — a constraint that, like the constraint on canon, is encoded in the specific melodic and harmonic structure of the subject. <em>Augmentation</em> is the presentation of the subject in note values twice as long as the original; it is often employed in the final entry of a fugue, where the expanded time scale creates a sense of arrival, spaciousness, and formal finality after the compressed activity of the stretto passages.
 </div>
+
+{{< score id="music272/50-stretto" caption="Stretto: the answer enters two beats after the subject begins, voices overlapping before the subject has completed — mounting motivic urgency." >}}
+{{< score id="music272/51-augmentation" caption="Augmentation: the subject in its original form (upper voice) sounded simultaneously with the subject in doubled note values (lower voice) — spacious, conclusive." >}}
 
 The final entry of a fugue — the tonic return of the subject in (typically) the bass voice, often in augmentation, sometimes accompanied by a tonic pedal point — is one of the great moments of musical architecture. Its arrival is felt as homecoming: the subject, which has been developed, inverted, subjected to stretto, and heard in remote key areas, returns at last to its original key and in its most emphatic registral location. Often Bach reinforces this arrival with a pedal point — a sustained bass note on the tonic — over which the upper voices continue their contrapuntal activity. The subject sounds above this pedal not as a modulating theme but as a tonic proclamation, its harmonic implications now resolved into a single, unambiguous tonal center.
 
@@ -1008,6 +1109,8 @@ Beyond its role as a compositional discipline, counterpoint provides an indispen
 </ul>
 The Ursatz is the deepest structural level of a tonal composition; all other features of the music — themes, harmonies, rhythms, textures — are elaborations of this primordial two-voice counterpoint.
 </div>
+
+{{< score id="music272/53-ursatz-sketch" caption="The Ursatz: Urlinie 3̂–2̂–1̂ in the soprano above a Bassbrechung I–V–I in the bass — the primordial two-voice skeleton from which all tonal elaboration proceeds." >}}
 
 Schenker's theory is controversial in its details but profound in its central claim: that tonal music is, at its deepest level, two-voice counterpoint. Every tonal composition from Bach to Brahms, in this view, is an elaboration of the two-voice framework that the species system teaches. To study counterpoint is to study the grammar of which tonal composition is the literature — the rules of the language in which the masterworks of Western music are written.
 

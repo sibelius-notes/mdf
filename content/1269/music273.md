@@ -25,15 +25,23 @@ One practical consequence of the distinction between chord symbols and Roman num
 <strong>Chord Symbol Anatomy.</strong> A complete chord symbol consists of: (1) a root note name (C, D♭, E, F♯, etc.); (2) a chord quality modifier (maj, m, dim, aug, or nothing for dominant); (3) a primary interval number indicating the highest structural tone (6, 7, 9, 11, 13); and (4) optional alterations in parentheses or as accidentals (♭5, ♯9, ♭13, etc.). The symbol "A♭maj7(♯11)" thus denotes a major seventh chord rooted on A♭ with an added raised eleventh.
 </div>
 
+{{< score id="music273/04-chord-symbol-anatomy" caption="A♭maj7(♯11): root A♭, major seventh, raised eleventh — illustrating chord symbol anatomy." >}}
+
 ### 1.2 Basic Chord Qualities
 
 The most fundamental chord types in jazz are built by stacking thirds on a scale degree and naming the result by the intervals from the root.
 
 The **major seventh chord** (e.g., Cmaj7) consists of a major triad plus a major seventh: C-E-G-B. The interval from root to seventh is 11 semitones. This chord has a bright, stable, slightly dreamy sound and functions most naturally on scale degrees I and IV in major.
 
+{{< score id="music273/01-cmaj7-voicing" caption="Cmaj7 voicing: C–E–G–B (root, major third, fifth, major seventh)." >}}
+
 The **dominant seventh chord** (e.g., G7) consists of a major triad plus a minor seventh: G-B-D-F. The interval from root to seventh is 10 semitones. This chord is the engine of tonal jazz; it contains the tritone B-F (or enharmonically, an augmented fourth / diminished fifth spanning 6 semitones) that generates tremendous harmonic tension demanding resolution. Nearly every jazz standard relies on dominant seventh chords at structural cadence points.
 
 The **minor seventh chord** (e.g., Dm7) consists of a minor triad plus a minor seventh: D-F-A-C. It has a softer, more introspective quality than the dominant seventh, despite sharing the same interval from root to seventh (10 semitones). In jazz, the IIm7 chord is the near-universal preparation for the dominant seventh; the IIm7-V7-Imaj7 motion is the foundational cadential formula of the style.
+
+{{< score id="music273/02-dm7-voicing" caption="Dm7 voicing: D–F–A–C (root, minor third, fifth, minor seventh)." >}}
+
+{{< score id="music273/03-g7-voicing" caption="G7 voicing: G–B–D–F (root, major third, fifth, minor seventh); the tritone B–F is the engine of harmonic tension." >}}
 
 The **half-diminished chord** (e.g., Bm7♭5, also written B∅7) consists of a diminished triad plus a minor seventh: B-D-F-A. The name "half-diminished" distinguishes it from the fully diminished seventh, which adds a diminished seventh instead. In jazz, half-diminished chords appear on scale degree VII in major and on scale degree II in minor. They are the IIm7♭5 chord that begins the minor ii-V-i progression.
 
@@ -50,6 +58,8 @@ Jazz harmony routinely adds tones beyond the seventh to create richer sonorities
 <div class="definition">
 <strong>Extensions.</strong> The <strong>ninth</strong> is the same pitch class as the major second, displaced up an octave. For Cmaj9: C-E-G-B-D. The <strong>eleventh</strong> is the same pitch class as the perfect fourth, displaced up an octave. For Cmaj11: C-E-G-B-D-F. The <strong>thirteenth</strong> is the same pitch class as the major sixth, displaced up an octave. For Cmaj13: C-E-G-B-D-F-A. In practice, complete thirteen-note chords are never voiced literally; a pianist selects the most characteristic tones.
 </div>
+
+{{< score id="music273/05-extensions-cmaj9" caption="Cmaj9 voicing: C–E–G–B–D, adding the ninth to the major seventh chord." >}}
 
 The ninth is the most commonly added extension and integrates smoothly into virtually every chord quality. "G9" (G dominant ninth) implies G7 plus the ninth: G-B-D-F-A. "Dm9" implies Dm7 plus the ninth: D-F-A-C-E. When the ninth is added to a major seventh chord, it creates a particularly luminous, open sound: Cmaj9 (C-E-G-B-D) is among the most characteristic jazz tonic sonorities, frequently used by Bill Evans, Keith Jarrett, and Brad Mehldau in ballad settings. The interval between the ninth (D) and the major seventh (B) is a major third, which integrates smoothly into the tertian stack and does not create a dissonant clash.
 
@@ -71,6 +81,8 @@ G9(13): G - B - F - A - E (ninth and thirteenth; the fifth D continues to be omi
 Each successive voicing adds color while preserving the harmonic identity of the dominant seventh through the invariant presence of the major third (B) and minor seventh (F).
 </div>
 
+{{< score id="music273/06-g7-extensions-comparison" caption="G7, G9, and G13 voicings compared: each adds an extension while preserving the tritone B–F." >}}
+
 ### 1.4 Chord Alterations
 
 Alterations modify the fifth or the tensions (9th, 11th, 13th) by a half step. They are most commonly applied to dominant seventh chords, where they intensify the harmonic tension and direct the listener's ear more forcefully toward the resolution. The logic of alteration is chromatic intensification: by raising or lowering a tension by a half step, the composer or arranger brings it closer—by the smallest possible distance—to a note in the target chord, increasing the magnitude of the eventual resolution. If an unaltered G9 resolves to Cmaj7, the ninth (A) is only a whole step from the major seventh (B); but a G7♭9 makes the ♭9 (A♭) a half step below A, which means it is a minor ninth above the root—a harsh, unstable interval that desperately wants to resolve. The ♭9, being only an augmented second (or minor third) above the root, also implies the harmonic minor scale in a minor-key resolution context, connecting the altered dominant to its natural harmonic-minor origin.
@@ -78,6 +90,10 @@ Alterations modify the fifth or the tensions (9th, 11th, 13th) by a half step. T
 <div class="definition">
 <strong>Common Alterations.</strong> On a dominant seventh chord, the following alterations are standard: <strong>♭5</strong> (lowered fifth, also called ♯11 when considered as an extension); <strong>♯5</strong> (raised fifth, also called ♭13); <strong>♭9</strong> (lowered ninth, one semitone above the root); <strong>♯9</strong> (raised ninth, three semitones above the root—the "Hendrix chord" pitch); <strong>♯11</strong> (raised eleventh, same as ♭5 enharmonically when voiced as an extension); <strong>♭13</strong> (lowered thirteenth, same as ♯5). These may appear in combination: G7(♭9,♭13) or G7alt (where "alt" denotes the fully altered dominant from the altered scale).
 </div>
+
+{{< score id="music273/07-alterations-g7b9" caption="G7♭9 voicing: G–B–F–A♭; the ♭9 (A♭) creates a harsh minor-ninth dissonance above the root." >}}
+
+{{< score id="music273/08-g7alt-voicing" caption="G7alt voicing: all four altered tensions (♭9, ♯9, ♯11, ♭13) stacked above the tritone B–F." >}}
 
 The most extreme altered dominant is G7alt, which is understood to contain all four altered tensions: ♭9, ♯9, ♯11, ♭13. This chord is realized from the altered scale (see Chapter 5) and has a maximally tense, unresolved quality that compels resolution to the tonic. In note names, G7alt contains approximately G - B - F - A♭ - B♭ - D♭ - E♭, where A♭ is ♭9, B♭ is ♯9, D♭ is ♯11 (or ♭5), and E♭ is ♭13 (or ♯5). This dense chromatic cluster—six of the twelve pitch classes within a single chord function—is the harmonic endpoint of the bebop tradition's drive to maximize tension before resolution. The fact that such extreme dissonance is accepted practice in jazz, and that the ear readily parses it as a "dominant chord" heading toward resolution, speaks to the robustness of the functional harmonic framework: even when surrounded by maximum chromatic alteration, the core tritone B-F identifies the chord as a G dominant, and the tonic C follows with the feeling of inevitability.
 
@@ -98,6 +114,10 @@ A voicing is a specific arrangement of the notes of a chord in register across o
 **Drop-3 voicing** drops the third voice from the top down one octave. Drop-3 voicings tend to be even more open and are common in orchestration.
 
 **Shell voicings** are minimal three-note voicings containing only the root, third, and seventh (omitting the fifth). Because the fifth of a chord contributes very little harmonic color—it is acoustically implied by the overtone series of the root—it can almost always be omitted without loss of harmonic identity. Shell voicings are foundational to jazz piano comping because they are efficient and leave space for the melody and soloist. For G7: G-B-F (root, major third, minor seventh). For Dm7: D-F-C (root, minor third, minor seventh).
+
+{{< score id="music273/09-shell-voicings" caption="Shell voicings: G7 (G–B–F) and Dm7 (D–F–C), omitting the acoustically redundant fifth." >}}
+
+{{< score id="music273/10-drop2-cmaj7" caption="Close voicing and drop-2 voicing of Cmaj7 compared: the second voice from the top is dropped an octave." >}}
 
 <div class="remark">
 <strong>Remark (Voicing Register).</strong> A practical guideline from Berklee harmony pedagogy: avoid voicing chord tones a minor second apart unless they are the third and fourth of a chord (e.g., the major seventh and root of a major seventh chord), and avoid placing intervals smaller than a major third in the bass register below approximately concert E3, where close intervals become acoustically muddy. These guidelines are frequently violated for expressive effect, but understanding them explains why they exist.
@@ -120,6 +140,8 @@ Cmaj9 (rootless): B - E - G - D (seventh, third, fifth, ninth; root C in bass)
 <br>
 The voice leading here is extraordinarily smooth: F is held from Dm9 through G13 (where it is the seventh); B appears in G13 and is held into Cmaj9 (where it is the seventh). The motion F → E (a half-step descent) moves from the seventh of G13 to... but in the example above, E appears in G13 as the thirteenth and then is present again in Cmaj9 as the third. This kind of inner-voice connection is precisely what makes rootless voicings so satisfying harmonically.
 </div>
+
+{{< score id="music273/11-rootless-voicings-iivi" caption="Rootless voicings through Dm9–G13–Cmaj9: F is held as a common tone, and guide tones connect by half step." >}}
 
 The pianist Bill Evans (1929-1980) is most closely associated with the systematic development of rootless voicings in jazz. His recordings with Miles Davis on *Kind of Blue* (1959) and his own trio recordings of the same period demonstrate voicings of extraordinary delicacy, in which the absence of the root creates an open, hovering quality that became definitive for jazz piano in the decades that followed. Evans's voicings are analyzed in detail in Rawlins and Bahha's *Jazzology*, which provides transcriptions and harmonic annotations of his most characteristic chord approaches.
 
@@ -145,6 +167,8 @@ In C major:
 
 This table is not merely a cataloguing exercise. It reveals the harmonic grammar of tonal jazz: the reasons why certain chord movements feel stable, why others create tension, and why still others demand resolution.
 
+{{< score id="music273/12-diatonic-seventh-chords" caption="All seven diatonic seventh chords in C major: Imaj7 through VIIm7♭5." >}}
+
 The vertical reading of this table—looking at each chord quality in isolation—tells you what notes to play on each scale degree. The horizontal reading—looking at how the chord tones relate across adjacent chords as the bass moves—tells you how the voice leading works. Consider moving from Dm7 to G7 (II to V): the D moves to G (a descending fifth in the bass); the F is held (it becomes the seventh of G7); the A moves to G or D depending on voicing; and the C moves down by a half step to B (the third of G7). This is the voice-leading pattern described in detail in Chapter 3. The table of diatonic seventh chords is the foundation from which all of these connections emerge.
 
 A crucial observation is that only one of the seven diatonic seventh chords is a dominant seventh: V7 (G7 in C major). All other seventh chords are either major seventh, minor seventh, or half-diminished—chord qualities that do not contain the tritone and therefore do not have the same directional urgency as the dominant seventh. This singularity of the dominant seventh within the diatonic system is why it has such special power: it is the one chord that pulls the ear unmistakably toward a resolution, the one chord that cannot be sustained indefinitely without creating restlessness.
@@ -163,13 +187,19 @@ Jazz theory, following the analytical tradition summarized in Sikora's *Jazz Har
 <strong>The Tonic Group</strong> comprises chords that create a sense of rest and resolution: <strong>Imaj7</strong> (the primary tonic), <strong>IIIm7</strong> (shares three notes with Imaj7: the third, fifth, and seventh), and <strong>VIm7</strong> (shares two notes with Imaj7: the root and third of Imaj7 become the third and fifth of VIm7). In C major: Cmaj7, Em7, Am7.
 </div>
 
+{{< score id="music273/13-tonic-group" caption="The tonic group in C major: Cmaj7, Em7, Am7 — note the overlapping chord tones that unify this functional group." >}}
+
 <div class="definition">
 <strong>The Subdominant Group</strong> comprises chords that create a sense of departure from or preparation toward the tonic without the urgent tension of the dominant: <strong>IIm7</strong> (the most important subdominant chord in jazz, the primary approach chord to V7) and <strong>IVmaj7</strong> (shares three notes with IIm7 and has a characteristic "plagal" brightness). In C major: Dm7, Fmaj7.
 </div>
 
+{{< score id="music273/14-subdominant-group" caption="The subdominant group in C major: Dm7 and Fmaj7, sharing three common tones." >}}
+
 <div class="definition">
 <strong>The Dominant Group</strong> comprises chords that generate maximum tension toward the tonic: <strong>V7</strong> (the primary dominant, containing the tritone that resolves to the tonic) and <strong>VIIm7♭5</strong> (the half-diminished chord that shares the tritone with V7 and functions as an incomplete dominant ninth chord—VIIm7♭5 in C major, Bm7♭5, contains B-D-F-A, which is identical to G9 without its root G). In C major: G7, Bm7♭5.
 </div>
+
+{{< score id="music273/15-dominant-group" caption="The dominant group in C major: G7 and Bm7♭5, both containing the tritone B–F." >}}
 
 The practical consequence is that chords within the same functional group can often substitute for one another without destroying the harmonic sense of a phrase. Am7 can replace Cmaj7; Fmaj7 can replace Dm7; Bm7♭5 can replace G7. These substitutions are among the simplest reharmonization tools in jazz.
 
@@ -201,6 +231,8 @@ The interval of a perfect fifth spans 7 semitones, and the frequency ratio in ju
 <strong>Example: Cycle of Fifths Progression.</strong> In C major, a complete cycle of diatonic seventh chords proceeds: Em7 - Am7 - Dm7 - G7 - Cmaj7. Each root descends by a fifth. This motion is omnipresent in jazz. The standard "rhythm changes" bridge is a condensed cycle: III7 - VI7 - II7 - V7 (in B♭: D7 - G7 - C7 - F7), using secondary dominant seventh chords (non-diatonic chords with dominant function) to accelerate the harmonic momentum.
 </div>
 
+{{< score id="music273/16-cycle-of-fifths-progression" caption="Cycle of fifths in C major: Em7–Am7–Dm7–G7–Cmaj7, each root descending a perfect fifth." >}}
+
 ---
 
 ## Chapter 3: The ii-V-I Progression
@@ -211,6 +243,8 @@ No harmonic formula is more fundamental to jazz than the ii-V-I (pronounced "two
 
 In C major, the ii-V-I progression is Dm7 - G7 - Cmaj7. The ii chord (Dm7) belongs to the subdominant functional group; it prepares and intensifies the motion toward the dominant. The V7 chord (G7) is the primary agent of tension; it contains the tritone (B-F) that must resolve. The I chord (Cmaj7) is the goal and resolution. Together, these three chords encapsulate the fundamental drama of tonal music: departure, tension, and return.
 
+{{< score id="music273/17-ii-v-i-major" caption="The ii–V–I in C major: Dm7–G7–Cmaj7, the foundational cadential formula of jazz." >}}
+
 This progression appears, in some form or another, in virtually every jazz standard ever written. Sometimes the ii is omitted and the progression is simply V7-I. Sometimes the I chord is replaced by a substitute. Sometimes the V7 is preceded by its own ii-V, creating a nested or extended ii-V-I. But the underlying skeleton of IIm7-V7-Imaj7 is always present.
 
 The duration of each chord within the ii-V-I is variable and style-dependent. In a ballad at a slow tempo, each chord might last four beats (one measure), giving the ii-V-I a total span of three measures. In a fast bebop head, a ii-V-I might compress into a single measure: two beats of Dm7, one beat of G7, one beat of Cmaj7. In "Giant Steps" (Chapter 7), the entire ii-V-I occupies only one and a half beats at a very fast tempo. This flexibility—the same harmonic formula scaling to any rhythmic density—is one of the reasons the ii-V-I has remained central to jazz for nearly a century.
@@ -220,6 +254,8 @@ Jazz musicians internalize the ii-V-I so deeply that they "hear" it in any conte
 <div class="definition">
 <strong>The Tritone in G7.</strong> The tritone interval B-F within G7 spans exactly 6 semitones: $B \to C$ (1), $C \to C\sharp$ (2), $C\sharp \to D$ (3), $D \to D\sharp$ (4), $D\sharp \to E$ (5), $E \to F$ (6). In just intonation, the tritone does not correspond to a simple frequency ratio; in equal temperament, the frequency ratio is $2^{6/12} = \sqrt{2} \approx 1.414$. This irrational ratio is acoustically unstable, which is why the tritone has been called "diabolus in musica" (the devil in music) throughout the history of Western harmony. The equal-tempered tritone's instability is the acoustic foundation of the dominant seventh chord's drive toward resolution.
 </div>
+
+{{< score id="music273/19-tritone-resolution" caption="Tritone resolution: B and F (in G7) converge inward by half step to C and E (in Cmaj7)." >}}
 
 ### 3.2 Guide Tones and Voice Leading
 
@@ -238,6 +274,8 @@ Now observe the voice leading: the C (seventh of Dm7) moves down by a half step 
 <div class="theorem">
 <strong>Guide Tone Resolution in ii-V-I.</strong> The seventh of the ii chord (C in Dm7) falls by half step to become the third of the V7 chord (B in G7). The seventh of the V7 chord (F in G7) falls by half step to become the third of the Imaj7 chord (E in Cmaj7). This stepwise descent—C → B → ... and F → E—is the acoustic spine of the ii-V-I progression. The third of the Imaj7 chord (E) and the seventh of the Imaj7 chord (B) together form the stable resolution of the tritone B-F that defined the G7.
 </div>
+
+{{< score id="music273/18-guide-tones-iivi" caption="Guide-tone voice leading through Dm7–G7–Cmaj7: the seventh of each chord descends by step to the third of the next." >}}
 
 This voice leading has profound implications for improvisation. A soloist who emphasizes the seventh of the ii chord, allows it to fall to the third of the V7, and then resolves the seventh of the V7 down to the third of the I chord is playing the melodic skeleton of jazz harmony. Charlie Parker, Dizzy Gillespie, and virtually every bebop musician internalized this motion completely; it underlies the melodic shapes that characterize the bebop vocabulary.
 
@@ -271,6 +309,8 @@ Gm6: G - B♭ - D - E (root, m3, 5, M6)
 Voice-leading threads: C (seventh of Am7♭5) → C (seventh of D7♭9, retained) → B♭ (third of Gm6, stepwise descent by whole step). E♭ (♭5 of Am7♭5, = ♭9 of D7♭9) → D (fifth of Gm6, half-step descent). F♯ (third of D7♭9, the leading tone of G minor) → G (root of Gm6, half-step ascent—the most characteristic leading-tone resolution). The minor ii-V-i's characteristic emotional weight comes precisely from this convergence of multiple half-step and whole-step resolutions onto the minor tonic.
 </div>
 
+{{< score id="music273/20-ii-v-i-minor" caption="Minor ii–V–i in G minor: Am7♭5–D7♭9–Gm6, with the ♭9 (E♭) resolving down by half step to D." >}}
+
 <div class="remark">
 <strong>Remark (Dorian vs. Harmonic Minor).</strong> In jazz improvisation over minor ii-V-i progressions, musicians often use Dorian minor (the natural minor scale with a raised sixth) for the IIm7♭5 chord, melodic minor for the Im(maj7) chord, and the altered scale or harmonic minor for the V7♭9. This mixing of minor modes within a single short progression is characteristic of jazz's fluid relationship with minor tonality.
 </div>
@@ -289,6 +329,8 @@ A series of consecutive ii-V progressions descending by step or by whole tone is
 <strong>Example: "Moment's Notice" Progression (John Coltrane, 1957).</strong> Coltrane's "Moment's Notice" is built on a sequence of rapidly changing ii-V progressions that cycle through multiple keys in a single eight-bar phrase. The opening: Fm7 - B♭7 - E♭maj7 - A♭maj7 - Am7 - D7 - Gmaj7 - C♯m7 - F♯7 - Bmaj7 - Fm7 - B♭7 - E♭maj7. Reading this as a series of ii-V-I units: Fm7-B♭7-E♭maj7 (ii-V-I in E♭), then an A♭maj7 extension, then Am7-D7-Gmaj7 (ii-V-I in G), then C♯m7-F♯7-Bmaj7 (ii-V-I in B), then back to Fm7-B♭7-E♭maj7. The three key centers (E♭, G, B) are separated by major thirds—an early precursor of the Coltrane substitution system that would culminate in "Giant Steps" two years later.
 </div>
 
+{{< score id="music273/43-ii-v-i-multiple-keys" caption="ii–V–I progressions descending by whole step through C, B♭, and A♭: the kind of rapid key-center sequence heard in Coltrane's 'Moment's Notice.'" >}}
+
 ### 3.5 Analysis: "Autumn Leaves"
 
 "Autumn Leaves" (Joseph Kosma / Jacques Prévert, 1945) is perhaps the single most-assigned jazz standard in American music education because its harmonic structure is clear, consistent, and pedagogically rich.
@@ -297,7 +339,9 @@ The tune is most commonly played in G minor, and its A section follows this harm
 
 Cm7 - F7 - B♭maj7 - E♭maj7 - Am7♭5 - D7 - Gm
 
-Reading these chords through our ii-V-I lens: Cm7-F7-B♭maj7 is a ii-V-I in B♭ major. E♭maj7 is IV in B♭ major (tonic function, ending the first phrase). Am7♭5-D7-Gm is a minor ii-V-i in G minor. The piece thus moves between the relative major (B♭) and the minor tonic (Gm) in the span of eight measures, a motion that is deeply characteristic of jazz standards. Each phrase is articulated by a complete ii-V-I or ii-V-i.
+Reading these chords through our ii-V-I lens: Cm7-F7-B♭maj7 is a ii-V-I in B♭ major. E♭maj7 is IV in B♭ major (tonic function, ending the first phrase). Am7♭5-D7-Gm is a minor ii-V-i in G minor.
+
+{{< score id="music273/33-autumn-leaves-progression" caption="'Autumn Leaves' A section in G minor: the progression moves between relative major B♭ and minor tonic Gm." >}} The piece thus moves between the relative major (B♭) and the minor tonic (Gm) in the span of eight measures, a motion that is deeply characteristic of jazz standards. Each phrase is articulated by a complete ii-V-I or ii-V-i.
 
 The relationship between G minor and B♭ major is the relative major/minor relationship: they share the same key signature (two flats: B♭ and E♭) and the same collection of diatonic pitches. The tonal ambiguity between a minor key and its relative major is one of the most powerful resources in jazz composition. "Autumn Leaves" exploits this ambiguity throughout: the piece begins in the relative major (B♭) and ends in the minor tonic (Gm), but neither key is entirely abandoned during the transition. The E♭maj7 in measure 4 could belong to either key (it is IVmaj7 in B♭ and ♭VImaj7 in Gm), serving as a pivot chord that allows the smooth shift from B♭-major thinking to G-minor thinking.
 
@@ -335,6 +379,8 @@ The tritone is symmetrical within the octave: B-F and F-B are the same interval,
 <strong>Tritone Symmetry.</strong> The tritone divides the octave exactly in half. Therefore, every tritone is shared by exactly two dominant seventh chords whose roots lie a tritone apart. The tritone B-F (equivalently C♭-F) appears in G7 (where B is the third and F is the seventh) and also in D♭7 (where F is the third and C♭ = B is the seventh). This shared tritone is the acoustic foundation of tritone substitution.
 </div>
 
+{{< score id="music273/21-tritone-symmetry" caption="G7 and D♭7 share the same tritone B–F (= C♭): the acoustic foundation of tritone substitution." >}}
+
 ### 4.2 Tritone Substitution Explained
 
 Tritone substitution is the replacement of a dominant seventh chord with another dominant seventh chord whose root lies a tritone (six semitones, a diminished fifth) away. If V7 in a ii-V-I is G7, its tritone substitute is D♭7. This substitution works because G7 and D♭7 share the same tritone—just with the roles of third and seventh swapped.
@@ -350,6 +396,8 @@ These are the same two pitch classes—B and F—just with their functional role
 <div class="example">
 <strong>Example: Tritone Substitution in ii-V-I.</strong> The progression Dm7 - G7 - Cmaj7 becomes Dm7 - D♭7 - Cmaj7 via tritone substitution of the dominant. The D♭7 has: root D♭, third F, fifth A♭, seventh C♭ (= B). Its guide tones (F and B) are identical to those of G7. Critically, the bass moves D♭ → C, a chromatic semitone descent—among the smoothest possible bass motions. The D♭7 can be extended: D♭9 adds E♭ (= D♯), D♭13 adds B♭, and D♭7(♯11) (the Lydian dominant sound) adds G. All of these are characteristic sounds over the tritone substitute dominant.
 </div>
+
+{{< score id="music273/22-tritone-sub-iivi" caption="Tritone substitution: Dm7–D♭7–Cmaj7 (D♭7 replaces G7). The bass descends chromatically D♭→C while guide tones are preserved." >}}
 
 The practical advantages of tritone substitution are two: (1) the guide tones are preserved, maintaining harmonic coherence; and (2) the bass motion is half-step contrary to the melody, creating the smoothest possible contrapuntal approach to the tonic. In the example above, the bass descends D♭ → C rather than ascending G → C (a perfect fourth up, or descending fifth). Both resolve to C; but the half-step approach is melodically suave and was one of the defining harmonic innovations of bebop.
 
@@ -369,6 +417,8 @@ The relationship between B♭7 and G7 is also worth noting: B♭7 is the tritone
 <strong>Example: Backdoor ii-V.</strong> The backdoor dominant is often preceded by its own ii chord: Fm7 - B♭7 - Cmaj7. This is a ii-V-I in which the "V" is the ♭VII7. The Fm7 is borrowed from C Dorian or Lydian, and the whole progression has a distinctly gospel quality—one reason jazz musicians describe the backdoor dominant as "churchier" than the standard V7.
 </div>
 
+{{< score id="music273/23-backdoor-dominant" caption="Backdoor ii–V: Fm7–B♭7–Cmaj7. The ♭VII7 approaches the tonic from below by a whole step, producing the characteristic gospel warmth." >}}
+
 ### 4.4 Secondary Dominants
 
 A secondary dominant is a dominant seventh chord that temporarily functions as V7 of a chord other than the tonic. In C major, V7/II (five-of-two) is A7, because A7 resolves to Dm (or Dm7), which is the II chord. Similarly, V7/V is D7 (resolving to G7), V7/IV is C7 (resolving to Fmaj7), and so on.
@@ -380,6 +430,8 @@ Each secondary dominant introduces a note or notes foreign to the original key (
 <div class="example">
 <strong>Example: Secondary Dominant Cycle.</strong> In C major, a chain of secondary dominants cycling through the cycle of fifths: A7 - Dm7 - D7 (V7/V) - G7 - C7 (V7/IV) - Fmaj7. Each dominant seventh is the V7 of the chord that follows it. The final resolution to Fmaj7 (IV) rather than Cmaj7 (I) is a plagal conclusion to the chain—a "subdominant landing" that has a hymn-like warmth. Secondary dominant chains like this are the harmonic engine of much jazz and popular music; the same pattern appears in dozens of contexts from Tin Pan Alley songs to funk.
 </div>
+
+{{< score id="music273/24-secondary-dominant-chain" caption="Secondary dominant cycle in C: A7–Dm7–D7–G7–C7–Fmaj7. Each dominant seventh temporarily tonicizes the chord that follows." >}}
 
 The relationship between secondary dominants and the tritone substitution system is straightforward: every secondary dominant has a tritone substitute. V7/II (A7 in C major) has the tritone substitute E♭7; V7/V (D7) has A♭7; V7/IV (C7) has G♭7. These tritone-substitute secondary dominants are even more chromatic than the originals and are frequently used in bebop and post-bop arrangements to add additional harmonic color to what might otherwise be a routine secondary dominant resolution.
 
@@ -413,6 +465,8 @@ The practical jazz musician, however, does not typically need the theoretical su
 
 The seven modes of C major are:
 
+{{< score id="music273/25-dorian-mode" caption="D Dorian scale (mode II of C major): D–E–F–G–A–B–C–D. The raised sixth (B) distinguishes Dorian from natural minor." >}}
+
 | Mode | Starting degree | Notes from C major | Character |
 |---|---|---|---|
 | Ionian | I (C) | C-D-E-F-G-A-B | Bright, stable |
@@ -432,6 +486,8 @@ Chord-scale theory (developed systematically at Berklee in the 1960s and codifie
 <div class="definition">
 <strong>Chord-Scale Correspondence.</strong> A chord scale is a seven-note (or more) scale whose notes include all the chord tones and whose remaining notes are idiomatic, non-clashing extensions. The chord-scale system assigns to each chord quality a primary scale (and sometimes secondary alternatives) from which an improviser may freely draw all melodic material while the chord sounds.
 </div>
+
+{{< score id="music273/26-mixolydian-mode" caption="G Mixolydian (mode V of C major): the primary chord scale for V7. The lowered seventh (F) gives it the dominant's characteristic sound." >}}
 
 The fundamental chord-scale assignments for diatonic seventh chords in major are:
 
@@ -461,13 +517,21 @@ Nettles and Graf's *The Chord Scale Theory and Jazz Harmony* presents this choic
 
 The **Lydian dominant scale** (also called Lydian ♭7, or the fourth mode of the melodic minor scale) is a major scale with a raised fourth and lowered seventh: G-A-B-C♯-D-E-F. It gives the dominant chord a bright, unresolved shimmer due to the ♯11 (C♯). This is the characteristic scale for V7 chords that do not resolve immediately, or for tritone substitute dominants.
 
+{{< score id="music273/27-lydian-dominant-scale" caption="G Lydian dominant scale: G–A–B–C♯–D–E–F. The ♯11 (C♯) distinguishes it from Mixolydian and gives it a floating, unresolved shimmer." >}}
+
 The **altered scale** (also called the super-Locrian scale, or the seventh mode of the melodic minor scale) contains all four altered tensions—♭9, ♯9, ♯11, ♭13—above the dominant root. In G altered: G-A♭-B♭-C♭(B)-D♭-E♭-F. This scale is used on V7 chords that resolve strongly to Imaj7 or Im, maximizing dissonance before resolution.
+
+{{< score id="music273/28-altered-scale" caption="G altered scale (mode 7 of A♭ melodic minor): G–A♭–B♭–B–D♭–E♭–F. All four altered tensions present above the dominant root." >}}
 
 The **half-whole diminished scale** (also called the dominant diminished) alternates half steps and whole steps from the root: G-A♭-B♭-B-C♯-D-E-F. It contains both the ♭9 and ♯9, and both the natural and raised eleventh, giving a dense, chromatic texture. It is a symmetric scale (repeating every minor third) and is idiomatic on dominant seventh chords in jazz and particularly in bebop.
 
+{{< score id="music273/29-half-whole-diminished" caption="G half-whole diminished scale: G–A♭–B♭–B–C♯–D–E–F. Symmetric structure repeating every minor third; contains ♭9, ♯9, and ♯11 simultaneously." >}}
+
 ### 5.4 The Melodic Minor Scale and Its Modes
 
-The **melodic minor scale** (ascending form, used throughout in jazz) differs from the natural minor scale only in having a major sixth and major seventh: C-D-E♭-F-G-A-B-C. It is sometimes called "jazz minor" because of its centrality to jazz harmony. The classical ascending melodic minor uses the raised sixth and seventh when ascending but reverts to natural minor when descending; jazz practice ignores this classical convention entirely and uses the raised-sixth, raised-seventh form in both directions, treating it as an independent scale in its own right rather than a melodic convenience.
+The **melodic minor scale** (ascending form, used throughout in jazz) differs from the natural minor scale only in having a major sixth and major seventh: C-D-E♭-F-G-A-B-C.
+
+{{< score id="music273/30-melodic-minor-scale" caption="C melodic minor (jazz minor): C–D–E♭–F–G–A–B–C. The raised sixth and seventh give it a hybrid minor-major quality." >}} It is sometimes called "jazz minor" because of its centrality to jazz harmony. The classical ascending melodic minor uses the raised sixth and seventh when ascending but reverts to natural minor when descending; jazz practice ignores this classical convention entirely and uses the raised-sixth, raised-seventh form in both directions, treating it as an independent scale in its own right rather than a melodic convenience.
 
 The melodic minor scale has a curious dual quality: it is minor by virtue of its minor third (E♭ above C) but major by virtue of its sixth and seventh (A and B natural). This hybrid quality—simultaneously minor and major—makes it the perfect scalar resource for chords that themselves have hybrid qualities. A minor-major seventh chord, Im(maj7), which contains the minor triad (C-E♭-G) plus the major seventh (B), is precisely the arpeggio of the first four notes of C melodic minor. The chord and the scale are thus perfectly matched: the scale is, in a sense, the chord in its linear (melodic) form.
 
@@ -497,6 +561,8 @@ The whole-tone scale divides the octave into six equal parts, each interval a wh
 <strong>Example: Diminished Scale Symmetry.</strong> The C H-W diminished scale (C-C♯-D♯-E-F♯-G-A-B♭) is identical in pitch content to the E♭ H-W diminished scale (E♭-E-F♯-G-A-B♭-C-D♭ = D♭—wait, let us restate: the E♭ H-W diminished starting on E♭: E♭-E-F♯-G-A-B♭-C-D♭, which enharmonically is the same set of pitches as C-C♯-D♯-E-F♯-G-A-B♭). Therefore, a musician who knows the C H-W diminished scale automatically knows the E♭, F♯, and A H-W diminished scales (all four transpositions separated by minor thirds). This symmetry substantially reduces the memorization burden: instead of twelve distinct diminished scales, there are only three.
 </div>
 
+{{< score id="music273/41-diminished-scale-symmetry" caption="C half-whole diminished scale: C–C♯–D♯–E–F♯–G–A–B♭. Symmetric at the minor third; one scale pattern serves four transpositions." >}}
+
 The practical consequence of diminished scale symmetry for jazz improvisation is significant. An improviser who learns a single diminished scale pattern—an arpeggio shape, a scalar run, a rhythmic motif—can immediately transpose that pattern by minor thirds and play it over three additional dominant seventh chords without any additional practice. This is why diminished scale patterns appear so frequently in bebop improvisation: their symmetry makes them extremely efficient to learn and deploy.
 
 ---
@@ -512,6 +578,8 @@ The blues as a musical form emerged from African American music in the Mississip
 Jazz musicians adopted the blues form wholesale in the earliest years of recorded jazz (the 1920s). Louis Armstrong recorded blues accompaniments with Bessie Smith; Jelly Roll Morton incorporated blues forms into his compositions; the early big bands of Duke Ellington and Count Basie regularly featured blues numbers. By the bebop era, the blues had become a standard laboratory for harmonic experimentation: its familiar form gave musicians the structural security to try radical harmonic ideas knowing that the listener had a firm reference point to return to.
 
 The basic 12-bar blues divides into three four-bar phrases, each corresponding to a structural harmonic function:
+
+{{< score id="music273/31-blues-harmony-12bar" caption="Basic 12-bar blues in C: I7–I7–I7–I7–IV7–IV7–I7–I7–V7–IV7–I7–I7. Every structural chord is a dominant seventh." >}}
 
 | Bars | Harmony | Function |
 |---|---|---|
@@ -557,6 +625,8 @@ Charlie Parker's "Billie's Bounce" (1945) demonstrates the bebop approach to a m
 
 The minor blues replaces the major tonic with a minor tonic and adjusts the subdominant and dominant accordingly:
 
+{{< score id="music273/47-minor-blues-form" caption="Minor blues skeleton in C minor: Cm7 tonic, Fm7 subdominant. The minor tonic chord replaces the dominant seventh of the major blues." >}}
+
 | Bars | Chords |
 |---|---|
 | 1–2 | Cm7 |
@@ -574,6 +644,8 @@ The minor blues is pervasive in hard bop and post-bop. "Mr. P.C." (John Coltrane
 The blues scale is a six-note scale derived from the pentatonic minor scale with the addition of a chromatic "blue note" (the tritone, or ♭5):
 
 C blues scale: C - E♭ - F - F♯ - G - B♭ - C
+
+{{< score id="music273/32-blues-scale" caption="C blues scale: C–E♭–F–F♯–G–B♭–C. The F♯ (♭5 or tritone) is the quintessential blue note, sitting ambiguously between fourth and fifth." >}}
 
 The F♯ (♭5) is the quintessential blue note—a pitch that sits between the fourth and fifth, belonging to neither but infusing the scale with expressive ambiguity. Jazz musicians do not use the blues scale as a rigid framework; they treat it as a vocabulary of characteristic bent notes and chromatic inflections overlaid on the chord-scale approach.
 
@@ -620,6 +692,10 @@ The I-VI-ii-V turnaround is itself an abbreviated cycle of fifths: starting from
 
 The standard variations on the I-VI-ii-V turnaround in jazz include:
 
+{{< score id="music273/37-turnaround-i-vi-ii-v" caption="Standard turnaround in C: Cmaj7–A7–Dm7–G7 (I–VI–ii–V), cycling back to the tonic." >}}
+
+{{< score id="music273/38-turnaround-tritone-sub" caption="Tritone-substitute turnaround: Cmaj7–E♭7–Dm7–D♭7. The chromatic bass descent creates a bebop sound." >}}
+
 1. **I - ♭VI7 - II - ♭II7** (tritone substitution of VI and V): C - E♭7 - Dm7 - D♭7 - C. Bass line: C - E♭ - D - D♭ - C, a nearly chromatic descent.
 2. **I - ♯Idim7 - IIm7 - V7** (chromatic passing diminished): C - C♯dim7 - Dm7 - G7. The C♯dim7 is a chromatic passing chord between I and II.
 3. **I - VI - IV - V** (the "50s progression"): C - Am7 - Fmaj7 - G7. Diatonic, with a subdominant (IV) rather than a secondary dominant before V.
@@ -643,6 +719,8 @@ The characteristic bebop approach to a ii-V-I combines several techniques simult
 
 The **bebop scale** is a common pedagogical tool for understanding bebop melodic construction. It adds one chromatic passing tone to a standard mode or chord scale to produce an eight-note scale that lines up the chord tones on the downbeats when played in eighth notes. The dominant bebop scale in G is G-A-B-C-D-E-F-F♯: the Mixolydian scale plus the natural seventh (F♯) as a passing tone between the minor seventh (F) and the root (G). When a musician plays this scale in descending eighth notes starting on G on a downbeat, every downbeat lands on a chord tone of G7.
 
+{{< score id="music273/39-bebop-dominant-scale" caption="G dominant bebop scale: G Mixolydian plus the chromatic F♯ passing tone. Descending in eighth notes, chord tones land on every downbeat." >}}
+
 The bebop approach to dominant chords also exploits chromatic passing tones extensively—inserting half-step approaches to chord tones from below or above, surrounding a target note with its neighbors, and using enclosures (approaching a target from above and below in succession) to create melodic interest while maintaining harmonic clarity.
 
 ### 7.2 Coltrane Changes
@@ -653,9 +731,13 @@ John Coltrane's "Giant Steps" (1960) introduced the most radical harmonic innova
 <strong>Coltrane Substitution (Major Third Cycle).</strong> In the Coltrane substitution system, a V7-I resolution is interpolated with two additional V7-I resolutions, each separated from the original by a major third. For a resolution to B major: instead of the simple F♯7 - Bmaj7, Coltrane inserts resolutions to G major and E♭ major, giving F♯7 - Bmaj7 - D7 - Gmaj7 - B♭7 - E♭maj7 - F♯7 - Bmaj7 (approximately). The three target key areas B, G, and E♭ are separated by major thirds, dividing the octave into three equal parts.
 </div>
 
+{{< score id="music273/34-coltrane-substitution" caption="Coltrane substitution: three key centers B, G, E♭ separated by major thirds, each approached by its dominant seventh." >}}
+
 <div class="example">
 <strong>Example: "Giant Steps" Opening.</strong> The iconic opening of "Giant Steps" proceeds: Bmaj7 - D7 - Gmaj7 - B♭7 - E♭maj7 - Am7 - D7 - Gmaj7 - B♭7 - E♭maj7 - F♯7 - Bmaj7 - Fm7 - B♭7 - E♭maj7. The three major-third-related key centers (B, G, E♭) are cycled rapidly, each approached by its dominant seventh. The tempo is fast (typically quarter note = 286 BPM or faster), which means the harmonic rhythm is very dense—often one chord change per beat. The challenge for improvisers is enormous: there are no "free" beats where one scale can be sustained; every beat demands harmonic awareness.
 </div>
+
+{{< score id="music273/48-rhythm-changes-bb" caption="'Giant Steps' style: rapid harmonic rhythm demands efficient voicings — contrast with the slower-moving Rhythm Changes A section shown here." >}}
 
 The Coltrane substitution system can also be understood as a maximally efficient way of traversing the tonal universe: by moving through key centers separated by major thirds, a composer visits three keys—and three dominant seventh chords—in the space where classical harmony would visit only one. Each pair of key areas separated by a major third shares no diatonic seventh chords in common (the intersection of, say, B major and G major is empty at the seventh-chord level), which means every chord change is a maximum-contrast harmonic move. This radical absence of common tones is precisely what gives "Giant Steps" its disorienting, kaleidoscopic quality.
 
@@ -682,6 +764,8 @@ Reharmonization is the art of replacing the original chords of a melody or stand
 <div class="example">
 <strong>Example: Reharmonizing "Autumn Leaves," Bar 7-8.</strong> In the original "Autumn Leaves" in G minor, bars 7-8 are simply Gm (the tonic). A jazz reharmonizer might replace this with: E♭maj7 - D7 (a tritone-substitute dominant approached from its parallel Lydian major), or with Gm(maj7) - Gm7 - Gm6 (a static inner-voice descent harmonizing the tonic), or with Dm7♭5 - G7♭9 - Cm (a deceptive resolution to the relative minor, creating surprise). Each choice changes the emotional trajectory of the phrase without disturbing the melody, which sits on D and C—both notes compatible with all of these harmonizations.
 </div>
+
+{{< score id="music273/44-reharmonization-autumn-leaves" caption="Reharmonization of 'Autumn Leaves' bars 7–8: Gm(maj7)–Gm7–Gm6, an inner-voice descent on the tonic." >}}
 
 ### 7.5 Reharmonization in Practice: Step by Step
 
@@ -733,6 +817,8 @@ The solution Davis pursued on *Kind of Blue* (1959)—the best-selling jazz albu
 <strong>Modal Jazz.</strong> Modal jazz is a style of jazz improvisation and composition that replaces the rapid chord changes of bebop with extended periods of a single mode or scale (often eight or sixteen bars). The soloist is free to explore the melodic, rhythmic, and textural possibilities of the mode without the pressure of navigating harmonic motion. Harmonic interest comes from the color of the mode itself, from the interplay between instruments, and from subtle tension-and-release within the modal context, rather than from chord-to-chord voice leading.
 </div>
 
+{{< score id="music273/42-modal-jazz-so-what" caption="Modal jazz vamp: D Dorian (A section) and E♭ Dorian (B section) from 'So What' — a half-step shift for the bridge, then return." >}}
+
 ### 8.2 Miles Davis's "Kind of Blue": "So What" and "Freddie Freeloader"
 
 "So What" opens the album *Kind of Blue* and is the definitive modal jazz composition. Its structure is deceptively simple: a 32-bar AABA form in which the A sections are in D Dorian and the B section is in E♭ Dorian—a half-step modulation for contrast, then a return.
@@ -744,6 +830,8 @@ The signature voicing of "So What" is quartal (built in fourths): D-G-C-F-A, arr
 <div class="example">
 <strong>Example: "So What" Voicing.</strong> The famous two-chord vamp of "So What" uses the following piano voicing for the D Dorian chord: (bass) D, (LH) A-D-G, (RH) C-F-A. Reading from bottom to top: D-A-D-G-C-F-A. The intervals between successive voices are: P5, P4, P4, P4, P4, M3. This is the archetypal quartal voicing of modal jazz—no thirds, no traditional dominant-or-tonic implication, just a wash of open fourths resolving to a third at the top.
 </div>
+
+{{< score id="music273/35-quartal-voicing-dorian" caption="'So What' quartal voicing: stacked fourths A–D–G in the left hand, C–F–A in the right, over bass D. The archetypal sound of modal jazz." >}}
 
 "Freddie Freeloader" on the same album takes a different approach: it is a 12-bar blues in B♭, with relatively conventional jazz blues changes. Its presence on *Kind of Blue* is a reminder that modal jazz did not displace the blues but coexisted with it; Davis and his musicians were equally fluent in both vocabularies.
 
@@ -769,6 +857,8 @@ Quartal harmony builds chords by stacking perfect fourths instead of the thirds 
 <strong>Quartal Chord.</strong> A quartal chord is a chord built primarily or entirely from stacked perfect fourths (or their inversions, perfect fifths). Quartal chords do not have a single, unambiguous tonal function—they do not point to a specific resolution the way a dominant seventh chord does. This ambiguity is their principal harmonic characteristic and the primary reason they are used in modal and post-tonal jazz.
 </div>
 
+{{< score id="music273/46-flamenco-sketches-modes" caption="Flamenco Sketches modal regions: C Ionian, A♭ Lydian, B♭ Mixolydian — each mode an independent harmonic area without traditional resolution." >}}
+
 The interval of a perfect fourth, spanning five semitones (frequency ratio $3:4$ in just intonation), is acoustically consonant and open. Stacking multiple perfect fourths produces a chord that is neither clearly major nor minor, neither stable nor unstable in the traditional sense—a chord that simply is, occupying a harmonic space without demanding to go anywhere. This is precisely the quality sought by modal jazz composers who wanted to create a sense of suspension and possibility rather than tension-and-release.
 
 McCoy Tyner, who played with John Coltrane's classic quartet from 1960 to 1965, developed the quartal voicing approach into a comprehensive improvisational style. His left hand typically plays a two- or three-note quartal structure in the lower register (establishing the modal center without implying a specific chord quality), while his right hand plays pentatonic scales, quartal arpeggios, or chromatic lines in the upper register. The result is a texture of tremendous energy and rhythmic drive within a harmonically open, modal context.
@@ -785,6 +875,8 @@ Right hand response: C - F - B - E (a four-note quartal stack a step above the l
 The two quartal clusters—D-G-C and C-F-B-E—overlap on C and together span D through E, covering seven of the eight D Dorian pitches (only A is missing). This near-complete coverage of the mode with pure fourths is the quartal voicing's characteristic sound.
 </div>
 
+{{< score id="music273/45-voice-leading-iivi-bass" caption="Bass voice leading in D Dorian: the root D grounds the quartal voicing; compare with the descending-fifth bass of a ii–V–I." >}}
+
 The pentatonic scale is quartal harmony's closest ally. The major pentatonic scale—for example, D major pentatonic: D-E-F♯-A-B—can be voiced entirely in fourths: D-A (P5), A-E (P4), E-B (P4), B-F♯ (P4). The quartal structure of the pentatonic scale means that quartal voicings and pentatonic improvisation reinforce one another naturally, producing a consistent harmonic texture that is simultaneously simple (five notes, no half steps or semitone clusters) and rich in overtone content.
 
 Herbie Hancock, who developed the quartal approach in parallel with Tyner through his work with Miles Davis in the mid-1960s, often combines quartal left-hand voicings with upper-structure triads in the right hand—a technique that adds triadic clarity to the quartal ambiguity and produces a two-layered harmonic texture characteristic of the Miles Davis Quintet's recordings on *E.S.P.* (1965), *Miles Smiles* (1967), and *Nefertiti* (1968).
@@ -797,6 +889,8 @@ A polychord is a chord produced by combining two simpler chords sounded simultan
 <strong>Upper Structure Triad.</strong> An upper structure triad is a major or minor triad voiced above the shell voicing (root, third, seventh) of a dominant seventh chord. The upper structure triad supplies the extensions and alterations of the dominant chord in a clear, bright way. Common upper structures on C7: D major triad (C7 with 9th, 13th, no 5th = C7(9,13)); E♭ major triad (C7♭9♭13); A major triad (C7 with ♯9, ♭13). The upper structure is typically voiced in the right hand while the left hand plays the shell voicing.
 </div>
 
+{{< score id="music273/36-upper-structure-triad" caption="Upper structure triad on G7: D major triad (D–F♯–A) in the right hand over G7 shell (G–B–F) in the left, adding the 9th and 13th." >}}
+
 Upper structure voicings are among the most colorful and harmonically sophisticated sounds in jazz piano. They appear frequently in the work of Herbie Hancock, Chick Corea, McCoy Tyner, and their successors, and they represent a systematic approach to realizing altered dominant chord colors in a voicing that is both physically practical and tonally vivid.
 
 ### 8.7 Wayne Shorter's Harmonic Language
@@ -808,6 +902,8 @@ Shorter's compositions resist easy harmonic analysis because they consistently a
 <div class="example">
 <strong>Example: Wayne Shorter's "Infant Eyes" (1964).</strong> "Infant Eyes," from the album <em>Speak No Evil</em>, is a ballad in B♭ major that repeatedly undermines its tonal center through chromatic mediant relationships and unexpected modal mixture. The chord progression in the A section: B♭maj7 - Cm7 - C♭maj7 - B♭maj7 - Am7 - D7(♭9) - Gm7 - G♭maj7. The C♭maj7 (enharmonically Bmaj7) is a chromatic mediant of B♭—it shares no tones with B♭ major and arrives without preparation, creating a sudden shift of harmonic color that is characteristic of Shorter's style. The G♭maj7 at the end of the phrase is similarly chromatic, substituting for the expected II or V chord.
 </div>
+
+{{< score id="music273/49-chromatic-mediant" caption="Chromatic mediant juxtaposition: Cmaj7–E♭maj7 share no common tones; the sudden shift of color is the defining gesture of Shorter's harmonic language." >}}
 
 Shorter's harmonic language cannot be explained entirely by any single theoretical system—not by chord-scale theory, not by Coltrane substitutions, not by quartal harmony alone. It represents a post-theoretical intuition shaped by decades of listening, playing, and composing, in which harmonic decisions are made by ear rather than by rule.
 
@@ -860,6 +956,8 @@ In chord-scale thinking, every chord in a progression has a corresponding scale,
 <div class="example">
 <strong>Example: Herbie Hancock's "Maiden Voyage" (1965).</strong> "Maiden Voyage" uses four quartal/suspended chords cycling through the 32-bar form: D7sus4 - F/E♭ - E♭7sus4 - D♭/C♭. None of these chords resolves in the traditional sense; each one is a suspended dominant or a polychord that could belong to multiple tonal contexts. Yet the progression is not entirely free—the four chords cycle predictably, providing rhythmic and formal structure while maintaining harmonic ambiguity. An improviser can apply chord-scale thinking (D Mixolydian over D7sus4, etc.) or can treat the entire form as a single Dorian modal field. Hancock himself draws on both approaches within a single solo.
 </div>
+
+{{< score id="music273/40-whole-tone-scale" caption="Whole-tone scale over a suspended dominant — the 'Maiden Voyage' floating quality comes from scales with no leading tone, like the whole-tone." >}}
 
 ### 8.11 Reharmonization in the Contemporary Context
 

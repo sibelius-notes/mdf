@@ -1,0 +1,5 @@
+{{ $id := .Get "id" }}{{ $caption := .Get "caption" | default "" }}
+<figure class="score">
+  <img src="/scores/{{ $id }}.svg" alt="{{ $caption }}">
+  {{ if $caption }}<figcaption>{{ $caption }}</figcaption>{{ end }}
+</figure>

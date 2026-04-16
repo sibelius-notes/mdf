@@ -21,13 +21,17 @@ The history of phrase as a theoretical concept stretches back to the eighteenth 
 <strong>Definition 1.1 (Phrase).</strong> A <em>phrase</em> is a relatively complete musical idea characterized by (1) a clearly articulated melodic profile, (2) a directed harmonic motion from tonic to a cadential goal, and (3) closure at that goal by means of a recognized cadential formula. In the Classical style, most phrases occupy four measures at the notated tempo, though extension, compression, and interpolation are all common. The cadence that ends the phrase determines its degree of closure and its relationship to subsequent material.
 </div>
 
+{{< score id="music373/08-period" caption="A normative four-bar phrase in period form: antecedent (HC) and consequent (PAC), illustrating the phrase's harmonic closure." >}}
+
 The normative four-bar phrase is not a mere convention — it has a perceptual basis in the way listeners organize musical time into groupings. The psychologist of music David Huron, in his *Sweet Anticipation: Music and the Psychology of Expectation* (2006), argues that listeners form hierarchical temporal groupings automatically, and that the four-bar phrase engages these grouping tendencies by providing rhythmic, melodic, and harmonic closure at a timescale that feels "natural" — neither so short as to feel incomplete nor so long as to strain attention. The four-bar phrase, in other words, is not arbitrary: it is calibrated to the perceptual architecture of the listener.
 
 The phrase's relationship to meter deserves particular attention. In Common Practice tonal music, phrases are metrically organized: they begin on a metrically strong beat (most commonly the downbeat of the first measure) and end with their cadential goal on a metrically strong beat (most commonly the downbeat or the third beat of the final measure). This metrical alignment of phrase boundaries with metrical strong points is not merely a convention but a formal principle: a phrase whose cadence arrives on a metrically weak beat (an "upbeat cadence") is marked as formally incomplete, requiring a subsequent metrically strong cadential arrival to achieve full closure. The relationship between the phrase's internal harmonic organization and its outer metrical organization creates a two-dimensional formal grammar: the harmony governs what kind of cadence ends the phrase, and the meter governs where in the measure that cadence arrives. Both dimensions must be attended to simultaneously for a complete phrase analysis.
 
 <div class="remark">
-<strong>Remark 1.1 (Hypermeter).</strong> The concept of <em>hypermeter</em> — a "meter above the measure," in which groups of measures organize into larger rhythmic patterns — is essential for understanding phrase structure. In a four-bar phrase, the measures are grouped hypermetrically: measures 1 and 3 are "hypermetrically strong" (analogous to downbeats), while measures 2 and 4 are "hypermetrically weak" (analogous to upbeats). The cadence typically arrives on a hypermetrically strong bar. Hypermetric analysis, developed by Edward Cone in *Musical Form and Musical Performance* (1968) and refined by William Rothstein in *Phrase Rhythm in Tonal Music* (1989), provides a powerful supplement to purely harmonic phrase analysis.
+<strong>Remark 1.1 (Hypermeter).</strong> The concept of *hypermeter* — a "meter above the measure," in which groups of measures organize into larger rhythmic patterns — is essential for understanding phrase structure. In a four-bar phrase, the measures are grouped hypermetrically: measures 1 and 3 are "hypermetrically strong" (analogous to downbeats), while measures 2 and 4 are "hypermetrically weak" (analogous to upbeats). The cadence typically arrives on a hypermetrically strong bar. Hypermetric analysis, developed by Edward Cone in *Musical Form and Musical Performance* (1968) and refined by William Rothstein in *Phrase Rhythm in Tonal Music* (1989), provides a powerful supplement to purely harmonic phrase analysis.
 </div>
+
+{{< score id="music373/06-sentence" caption="An eight-bar sentence illustrating the hypermetric four-bar grouping: presentation (mm. 1–4) and continuation→cadence (mm. 5–8)." >}}
 
 ### 1.2 Cadential Types and Their Formal Implications
 
@@ -39,17 +43,25 @@ The concept of "cadence" derives from the Latin *cadere* (to fall), reflecting t
 <strong>Definition 1.2 (Perfect Authentic Cadence, PAC).</strong> A <em>perfect authentic cadence</em> (PAC) consists of a root-position dominant chord (\(\text{V}\) or \(\text{V}^7\)) moving to a root-position tonic chord (\(\text{I}\)), with the melodic line in the soprano arriving on scale degree \(\hat{1}\) (the tonic note) on the final chord. The PAC is the strongest cadential gesture in tonal music; it is the definitive period at the end of the formal sentence. In Caplin's terminology, a passage achieves full closure only at a PAC. The simultaneous arrival of \(\text{V} \to \text{I}\) in the bass and \(\hat{7} \to \hat{1}\) (or \(\hat{2} \to \hat{1}\)) in the soprano creates the maximum degree of both harmonic and melodic closure.
 </div>
 
+{{< score id="music373/01-pac" caption="Perfect authentic cadence (PAC): root-position V7 → root-position I with scale-degree 1 in the soprano — the strongest cadential gesture." >}}
+
 <div class="definition">
 <strong>Definition 1.3 (Imperfect Authentic Cadence, IAC).</strong> An <em>imperfect authentic cadence</em> (IAC) retains the \(\text{V} \to \text{I}\) harmonic motion of the PAC but lacks one or both of the following conditions: (1) root position in both chords — an inverted IAC uses \(\text{V}^{6/5} \to \text{I}\) or \(\text{V}^{4/3} \to \text{I}\), giving a different bass motion; or (2) scale degree \(\hat{1}\) in the soprano on the final chord — a "melodic IAC" arrives on \(\hat{3}\) or \(\hat{5}\) above the tonic bass. The IAC closes a phrase with reduced finality; in Caplin's framework, it is insufficient for the most important formal closures (the EEC and ESC of sonata form require a PAC), though it may close antecedent phrases and less structurally critical moments within a form.
 </div>
+
+{{< score id="music373/02-iac" caption="Imperfect authentic cadence (IAC): V7 → I with scale-degree 3 in the soprano, providing reduced closure compared with the PAC." >}}
 
 <div class="definition">
 <strong>Definition 1.4 (Half Cadence, HC).</strong> A <em>half cadence</em> (HC) ends on a root-position dominant chord (\(\text{V}\) or in some accounts \(\text{V}^7\) with the seventh anticipated) without proceeding to tonic within the phrase. The phrase is left harmonically "open," with the dominant acting as a point of pause rather than final arrival. The HC corresponds formally to a question mark: the phrase is complete as a rhythmic unit but harmonically demands continuation. In Classical practice, a phrase ending on HC is almost invariably followed by a phrase that answers with a PAC, creating the antecedent-consequent pairing of the period. The HC at the end of a movement's transition zone (the medial caesura) is among its most structurally important deployments.
 </div>
 
+{{< score id="music373/03-hc" caption="Half cadence (HC): phrase ends on root-position V, harmonically open, demanding continuation — the question of the antecedent." >}}
+
 <div class="definition">
 <strong>Definition 1.5 (Deceptive Cadence, DC).</strong> A <em>deceptive cadence</em> (DC) involves a dominant chord (\(\text{V}\) or \(\text{V}^7\)) moving to a chord other than the tonic — most commonly the submediant (\(\text{vi}\) in major, \(\text{VI}\) in minor) — in a context where \(\text{V} \to \text{I}\) was expected. The deceptive cadence is formally ambiguous: it employs the tension-building apparatus of an authentic cadence (dominant preparation, often with the characteristic \(\hat{7} \to \hat{1}\) voice-leading in an upper voice) but withholds the expected harmonic resolution. Composers exploit this ambiguity to extend a phrase beyond its anticipated ending, to introduce an unexpected harmonic color, or to delay structural closure.
 </div>
+
+{{< score id="music373/04-deceptive" caption="Deceptive cadence (DC): dominant moves to vi instead of I, frustrating the expected PAC and extending the phrase." >}}
 
 The deceptive cadence is put to particularly striking use in the first movement of Beethoven's Piano Sonata in C minor, Op. 13 (*Pathétique*). Near the end of the exposition's second theme group, Beethoven prepares what sounds like a definitive PAC in E-flat major, only to swerve to C minor (\(\text{vi}\) relative to E-flat) — a move that simultaneously frustrates the expected cadential closure and recalls, by harmonic color, the turbulent C-minor opening of the movement. The listener feels the formal sleight-of-hand even without knowing the technical term for it: something that should have arrived has been withheld, and in its place is an unexpected reminder of the movement's shadowed opening world.
 
@@ -58,6 +70,8 @@ The broader analytical principle that cadence types illustrate is the gradation 
 <div class="definition">
 <strong>Definition 1.6 (Plagal Cadence).</strong> The <em>plagal cadence</em> (\(\text{IV} \to \text{I}\)) derives from the motion of the subdominant to the tonic, most commonly encountered as the "amen" cadence of liturgical music. It is rare as a primary phrase-ending cadence in instrumental music of the Classical period, appearing most often as a post-cadential extension after a PAC has already provided harmonic closure. In Baroque music, the plagal cadence sometimes appears as a harmonic elaboration at the end of a movement; in Romantic music, Schubert and Brahms employ it as an expressive gesture of gentle resignation or confirmation. Theorists debate whether the plagal cadence constitutes a genuine "cadence" in the strict harmonic sense, since it does not involve the leading tone and therefore lacks the directed half-step voice-leading that gives authentic cadences their sense of inevitability.
 </div>
+
+{{< score id="music373/05-plagal" caption="Plagal cadence (IV → I): the 'amen' cadence of liturgical tradition, here used as post-cadential extension after a PAC." >}}
 
 ### 1.3 The Sentence (Satz)
 
@@ -74,11 +88,15 @@ A sentence at normative length occupies eight bars and consists of two clearly d
 </ol>
 </div>
 
+{{< score id="music373/07-sentence-bi-restatement" caption="Sentence structure: basic idea (BI) stated and restated in the presentation, then fragmented and sequenced in the continuation before the cadential phrase." >}}
+
 The opening theme of Beethoven's Piano Sonata in G major, Op. 49, No. 2 provides a textbook illustration of the sentence that is worth tracing measure by measure. Measures 1–2 present the basic idea: a simple, stepwise ascending motion from G to D over a tonic chord, harmonically inert and immediately memorable. Measures 3–4 repeat this basic idea with only minimal surface variation, again over the tonic, confirming its identity and creating the statement-restatement symmetry of the presentation. Measures 5–6 fragment the basic idea, seizing on its upward stepwise motion and subjecting it to a descending sequence that simultaneously provides forward momentum and dissolves the clear motivic profile of the presentation. Crucially, the harmonic rhythm accelerates in these measures: whereas the presentation was governed by a single tonic harmony, the continuation moves through three or four harmonies per measure. Measures 7–8 deliver the standard cadential formula — \(\text{I}^{6/4}\) on the third beat of measure 7, resolving to \(\text{V}^7\) and thence to \(\text{I}\) in measure 8 — closing the sentence with an unambiguous PAC.
 
 <div class="example">
 <strong>Example 1.1 (Sentence in Beethoven, Piano Sonata in C major, Op. 53, "Waldstein," first movement).</strong> The opening P-zone theme of the first movement (measures 1–13 with extension) is a sentence whose presentation occupies measures 1–4: the basic idea is a two-measure figure consisting of a repeated C-major chord in triplet eighth notes, establishing the theme's restless rhythmic character without any melodic profile beyond a simple sustained upper voice. The restatement of measures 3–4 repeats the basic idea exactly. The continuation (measures 5–8) fragments this figure and subjects it to a dramatic sequence descending by step, before a deceptive cadence in measure 10 extends the phrase beyond the expected eight bars. The extension (measures 9–13) provides an additional continuation→cadence unit that finally delivers the PAC. Beethoven's extension illustrates how the sentence's normative eight-bar structure may be expanded by inserting additional continuation material before the final cadential gesture arrives.
 </div>
+
+{{< score id="music373/06-sentence" caption="A normative eight-bar sentence: the continuation's harmonic acceleration and motivic fragmentation contrast with the presentation's stability." >}}
 
 The sentence principle operates not only at the eight-bar level but at many formal scales. A single two-bar basic idea can itself exhibit a miniature sentence structure if it contains an internal statement-restatement pattern. Conversely, a thirty-two-bar main theme can exhibit sentence organization if its first sixteen bars function collectively as a "presentation" (introducing the theme's material without significant harmonic departure) and its second sixteen bars function collectively as a "continuation→cadence." Caplin calls these "large-scale sentences," and they are common in the slow movements of Beethoven's late sonatas and string quartets.
 
@@ -97,6 +115,8 @@ The period is the second fundamental phrase type. Where the sentence is organize
 The period's fundamental logic is that the antecedent creates an expectation (of continuation, of resolution) and the consequent fulfills it. The two phrases must begin with the same (or closely related) basic idea for the period's parallel-construction logic to be operative.
 </div>
 
+{{< score id="music373/08-period" caption="Period (Periode): antecedent phrase ending on HC creates the harmonic question; consequent phrase answers with PAC in the home key." >}}
+
 The opening of Mozart's Piano Sonata in A major, K. 331 — the theme of the set of variations that forms the first movement — is perhaps the most frequently cited example of a period in pedagogical literature, and justifiably so. The antecedent (measures 1–4) presents a graceful, singing melody in A major that arrives on the dominant (E major) with a clear HC at measure 4. The melody's closing gesture — a cadential trill over the dominant harmony — leaves the phrase open: something has been said, but not resolved. The consequent (measures 5–8) begins with the same melodic gesture as the antecedent, follows a parallel harmonic motion, but diverges at measures 7–8 to close definitively on the tonic (A major) with a PAC. The symmetry of question and answer, the parallel construction of the two phrases, and the neat division into 4+4 bars make this one of the most transparent demonstrations of period structure in the repertoire.
 
 The period's characteristic question-answer logic is not merely a formal convention but a reflection of deeply embedded patterns of musical expectation. The half cadence that ends the antecedent is perceptually incomplete: listeners trained in tonal music automatically hear it as open-ended, as requiring continuation. This incompleteness is not a deficiency but a resource — it directs attention forward and creates anticipation for the consequent's resolution. The consequent's PAC, when it arrives, does not merely provide harmonic closure; it fulfills a promise that the antecedent's HC has made. The satisfaction of this fulfillment is one of the most fundamental pleasures in tonal music, and the period is its most concentrated formal vehicle.
@@ -107,9 +127,13 @@ This antecedent-consequent logic extends far beyond the individual eight-bar per
 <strong>Remark 1.2 (Parallel vs. Contrasting Period).</strong> In a <em>parallel period</em> (the standard type), both the antecedent and consequent begin with the same basic idea — the two phrases share their opening material and diverge only in their cadential goals. In a <em>contrasting period</em>, the consequent begins with different material from the antecedent; the unifying factor is the question-answer cadential relationship alone, not the thematic parallelism. Contrasting periods are less common in the High Classical style (Haydn, Mozart, early Beethoven) but appear frequently in Schubert and Brahms, where the consequent may introduce a dramatically different character before returning to close on the PAC. Some theorists argue that the contrasting period is not a true "period" in the strict sense, since the parallel-construction logic is what defines the period as a formal type; the question-answer cadential relationship alone can be found in many formal contexts (such as the antecedent-consequent logic of the binary form's two reprises) without constituting a period.
 </div>
 
+{{< score id="music373/47-modulating-period" caption="Parallel period in G major: both antecedent and consequent begin with the same basic idea; diverge only at their cadential goals." >}}
+
 <div class="remark">
 <strong>Remark 1.3 (Modulating Period).</strong> In a <em>modulating period</em>, the consequent does not return to the home key for its PAC but instead closes in a new key — most typically the dominant. The modulating period is an important formal device in the exposition of a sonata or binary movement: the antecedent introduces the home key's tonic, and the consequent closes in the dominant key, establishing the tonal polarity that will govern the rest of the form. Mozart's Piano Sonata in G major, K. 283, opens with a modulating period whose antecedent closes on an HC in G major and whose consequent closes on a PAC in D major, initiating the move toward the secondary key area.
 </div>
+
+{{< score id="music373/47-modulating-period" caption="Modulating period: antecedent closes on HC in G major; consequent closes with PAC in D major, establishing tonal departure." >}}
 
 ### 1.5 Hybrid Theme Types
 
@@ -129,6 +153,8 @@ The **compound basic idea** (CBI) of Hybrid 3 and Hybrid 4 deserves particular a
 </ul>
 </div>
 
+{{< score id="music373/09-hybrid1" caption="Hybrid 1 (antecedent + continuation): the antecedent's HC is followed by a continuation rather than a parallel consequent." >}}
+
 ### 1.6 Phrase Extension: Prefix, Suffix, and Internal Expansion
 
 Real musical phrases rarely conform perfectly to the normative four- or eight-bar models. Composers of the Classical period — particularly Haydn, whose wit and formal originality are extensively documented by Rosen — routinely manipulate phrase lengths through three mechanisms: **prefix** (or anacrusis), **suffix** (or cadential extension), and **internal expansion**.
@@ -146,9 +172,13 @@ These three extension types interact in important ways in the Classical repertoi
 </example>
 </div>
 
+{{< score id="music373/11-phrase-extension-suffix" caption="Phrase extension by suffix: a post-cadential figure follows the PAC, confirming the tonic arrival and extending the phrase beyond its normative length." >}}
+
 <div class="remark">
 <strong>Remark 1.4 (The Compound Basic Idea).</strong> The <em>compound basic idea</em> (CBI) is a four-bar unit consisting of a two-bar basic idea followed by a two-bar contrasting idea, without a cadence at its midpoint. The CBI functions as the opening unit of Hybrid 3 and 4 theme types (see Definition 1.9). It is "compound" in the sense that it contains two distinct motivic ideas rather than the single idea (stated and restated) of the sentence's presentation. Caplin identifies the CBI in many Mozart themes — particularly in the slow movements of the piano concertos — where a singing melodic idea in the first two bars is "answered" by a more animated contrasting idea in the third and fourth bars, without either idea achieving cadential closure on its own.
 </div>
+
+{{< score id="music373/10-hybrid3-cbi" caption="Compound basic idea (CBI): BI followed by contrasting idea (CI) over four bars without cadential closure — the opening unit of Hybrid 3 and 4 themes." >}}
 
 ### 1.7 Elision and Phrase Overlap
 
@@ -164,11 +194,15 @@ In contrast, when elision occurs at a half cadence — the transitional HC that 
 <strong>Definition 1.10 (Elision).</strong> An <em>elision</em> occurs when the cadential arrival of one formal unit coincides with the beginning of the next unit — the "ending" beat and the "beginning" beat are the same beat of the measure. Elision is distinct from simple phrase succession (where ending and beginning are adjacent beats) and from overlap (where a brief suffix of the first phrase extends slightly into the beginning of the next, without the overlap being at the cadential beat itself). Elision is especially common at transitions and phrase-to-phrase junctures in fast-paced developmental passages.
 </div>
 
+{{< score id="music373/43-elision" caption="Elision: the cadential arrival of the first phrase coincides with the beginning of the next phrase, creating seamless forward propulsion." >}}
+
 <div class="example">
 <strong>Example 1.3 (Elision at the Medial Caesura: Mozart, Piano Sonata in C major, K. 545, first movement).</strong>
 The transition of the first movement's exposition concludes with what would be a half cadence in G major, but Mozart elides the moment of arrival: the chord that would serve as the HC is simultaneously the beginning of the S-zone theme in G major. The listener's ear registers the arrival only in retrospect, as the new theme makes clear that the transitional energy has given way to something new. The elision creates a seamless, unbroken formal surface that is characteristic of Mozart's lighter, more galant style.
 </example>
 </div>
+
+{{< score id="music373/43-elision" caption="Elision at the medial caesura: the transitional HC is elided with the S-zone entry, producing a continuous formal surface." >}}
 
 ### 1.8 Cadential Evasion and Deceptive Closure
 
@@ -184,6 +218,8 @@ Beyond the standard deceptive cadence (DC: \(\text{V} \to \text{vi}\)), composer
 </ul>
 </div>
 
+{{< score id="music373/12-evaded-cadence" caption="Cadential evasion: the first cadential approach arrives on I6 (tonic in first inversion) rather than root-position I, requiring the phrase to extend toward a second attempt." >}}
+
 The evaded cadence is particularly important in Caplin's analytical framework. When a cadential approach ends on \(\text{V} \to \text{I}^6\) — reaching the tonic in first inversion rather than root position — the formal argument is not complete: the phrase must continue to attempt another cadential arrival, typically at the same pitch level or in the same harmonic region. This continuation generates additional bars and creates the phrase extensions (measure extensions after an evaded cadential approach) that are common in Beethoven's more dramatic themes.
 
 The practical skill of identifying cadential evasions requires careful attention to register and bass voice. A \(\text{V} \to \text{I}\) resolution in which the tonic note is in the bass (root position) is a PAC; the same harmonic motion with the tonic in first inversion (\(\text{I}^6\), third of the chord in the bass) is not a PAC but an IAC or an evaded cadence. The bass note is often the most reliable indicator of cadential strength: root-position tonic in the bass, with \(\hat{1}\) in the soprano, is the maximum degree of closure; any other configuration is weaker. Analysts who focus exclusively on the harmonic content (\(\text{V} \to \text{I}\)) without attending to the voice-leading positions risk treating structurally weak cadences as equivalent to structurally strong ones. Developing the habit of always checking the bass and soprano voices at moments of cadential approach is one of the most important practical skills for cadential analysis.
@@ -193,6 +229,8 @@ The practical skill of identifying cadential evasions requires careful attention
 The P-zone theme (measures 1–22) contains multiple evaded cadential attempts before arriving at the final PAC. After the continuation's first attempt at a PAC in C minor reaches \(\text{V} \to \text{I}^6\) (tonic in first inversion) rather than \(\text{V} \to \text{I}\) (root position), Beethoven drives through a second and then a third cadential approach before the PAC is finally achieved. Each evaded attempt heightens the sense of harmonic urgency, so that the final PAC — when it arrives — carries a weight far beyond what a simple first-attempt PAC would provide. The phrase is twenty-two bars long not because Beethoven has added extraneous material but because each cadential evasion required the phrase to extend itself, building additional momentum toward the final arrival.
 </example>
 </div>
+
+{{< score id="music373/12-evaded-cadence" caption="Evaded cadence leading to phrase extension: multiple failed cadential approaches intensify the drive toward the eventual true PAC." >}}
 
 ---
 
@@ -210,6 +248,8 @@ Binary form is, historically, one of the oldest formal structures in Western mus
 </ol>
 </div>
 
+{{< score id="music373/13-binary-simple" caption="Binary form: first reprise moves from tonic to dominant; second reprise returns home, with the second reprise typically longer than the first." >}}
+
 The distinction between **continuous** and **sectional** binary form is crucial for understanding the form's tonal logic. In a **continuous** binary form, the first reprise ends with a PAC in a non-tonic key (most often the dominant), and the piece cannot be said to have returned home until the end of the second reprise. The listener is pulled forward across the double bar: the first reprise's ending, though locally closed, is globally open. In a **sectional** binary form, the first reprise closes with a PAC in the tonic — the piece momentarily returns home before the second reprise begins. The effect is more self-contained: the two reprises feel like equal halves of a whole rather than a departure and a return.
 
 The binary form's characteristic proportional asymmetry — the second reprise is typically longer than the first — reflects a fundamental truth about tonal music's formal logic: departing from the tonic is easier (and faster) than returning to it. The first reprise needs only to establish the tonic and move to the secondary key, a process that in a well-designed binary takes relatively few bars. The second reprise, by contrast, must take its starting point in the secondary key, venture through a region of tonal instability or exploration, and then return convincingly to the tonic — a more complex formal trajectory that naturally requires more bars. This asymmetry is not a defect but a feature: the second reprise's greater length gives the return of the tonic at the end of the piece its formal weight. If the two reprises were equal in length, the tonic return would feel merely symmetrical; its asymmetric arrival, after a longer and more harmonically complex journey, gives it the character of an achieved resolution rather than a symmetric echo.
@@ -221,10 +261,14 @@ The binary form's two-reprise repeat structure also has an important perceptual 
 </example>
 </div>
 
+{{< score id="music373/13-binary-simple" caption="Sectional binary: first reprise ends with PAC in tonic before the double bar; second reprise ventures to dominant and returns home." >}}
+
 <div class="example">
 <strong>Example 2.2 (Continuous Binary: Scarlatti, Keyboard Sonata in D major, K. 119).</strong> The first reprise closes with a PAC in A major (the dominant) rather than the home key of D major. This closing in the dominant creates a sense of suspension rather than rest: the movement has not returned home, and the listener knows that the second reprise must accomplish the return. The second reprise begins in A major and passes through a series of harmonic detours — touching on minor keys and remote harmonies — before the tonic D major is reinstated with an emphatic PAC in the movement's final bars. The continuous binary form's tonal logic is more goal-directed than the sectional variant: the entire piece aims at the D-major PAC that the first reprise deliberately withheld.
 </example>
 </div>
+
+{{< score id="music373/13-binary-simple" caption="Continuous binary: first reprise closes with PAC in the dominant; the listener is pulled forward across the double bar awaiting the tonic return." >}}
 
 ### 2.2 Simple Binary and the Baroque Dance Suite
 
@@ -249,6 +293,8 @@ The most important variant of binary form for the history of Western music is **
 </ul>
 </div>
 
+{{< score id="music373/14-binary-rounded" caption="Rounded binary (||:A:||:BA':||): the second reprise begins with developmental B material, then returns to A' in the tonic — the formal template that sonata form inherited." >}}
+
 The relationship between rounded binary and sonata form is a matter of formal genealogy. Sonata form grew out of rounded binary: the A section of rounded binary corresponds to the exposition of a sonata; the B section corresponds to the development; and the A' section corresponds (loosely) to the recapitulation. The key difference is that sonata form elaborates each of these sections enormously and introduces the crucial new element of a second theme in the dominant (the S-zone), whose recapitulation in the tonic creates the form's defining tonal argument. Simple rounded binary lacks this two-theme opposition; its A section is a single theme, and its formal argument is purely about the return of that theme in the tonic.
 
 The transitional zone between rounded binary and sonata form is occupied by what theorists call the **sonatina** or "small sonata form": a form with two themes in the exposition (tonic and dominant) but no development section between the exposition and the recapitulation. Sonatina movements — found in some early Classical keyboard works and in many slow movements of the mature Classical style — thus have the harmonic logic of sonata form (two themes, dominant and tonic) without the developmental complexity that is sonata form's most distinctive formal feature. The slow movement of Beethoven's Piano Sonata in G major, Op. 14, No. 2, is a well-known sonatina movement: the exposition presents two themes in tonic and dominant, the recapitulation returns both in the tonic, and there is no intervening development section. Identifying whether a movement is a rounded binary, a sonatina, or a full sonata form thus requires careful attention to the presence or absence of two features: the two-theme contrast (distinguishing rounded binary from sonatina/sonata) and the development section (distinguishing sonatina from full sonata form).
@@ -257,6 +303,8 @@ The transitional zone between rounded binary and sonata form is occupied by what
 <strong>Example 2.3 (Rounded Binary: Haydn, Symphony No. 94 in G major, "Surprise," Minuet).</strong> The Minuet is in rounded binary form. The A section (measures 1–16) is a period in G major: antecedent ending on HC at measure 8, consequent ending with PAC in G major at measure 16. The B section (measures 17–24) departs to the dominant and neighboring harmonies, building a sequential passage that creates tonal instability before arriving on a sustained D major (V of G) that functions as the retransition. The A' section (measures 25–40) restates the A material in G major, with the antecedent now harmonically adjusted to avoid the earlier HC and instead drive toward the conclusive PAC in G major at measure 40. The formal shape is completely clear, and the return of A' after B is felt as both a formal and expressive resolution — home after a brief excursion.
 </example>
 </div>
+
+{{< score id="music373/14-binary-rounded" caption="Rounded binary in a Classical minuet: period-structured A section, unstable B section, and return of A' in the tonic." >}}
 
 ### 2.4 Ternary Form and the Da Capo Aria
 
@@ -272,6 +320,8 @@ In rounded binary, by contrast, the B section is not self-contained — it is ha
 <li><strong>A'</strong>: a literal (da capo) or ornamented restatement of the A section, in the tonic. The return of A' closes the ternary form and restores the initial character after the contrast of B.</li>
 </ul>
 </div>
+
+{{< score id="music373/15-ternary" caption="Ternary form ABA': each section is harmonically closed and self-sufficient — A in tonic, B in contrasting key, A' restored in tonic." >}}
 
 The **da capo aria** of the Baroque period — the dominant form of operatic and oratorio arias from Handel to Bach — is the archetypal ternary form. The singer performs the A section (presenting the aria's primary affect and text in the tonic key), proceeds to a contrasting B section (shorter, in a related key, often with a contrasting text expressing a secondary emotion), and then returns to the A section from the beginning (*da capo* = "from the head"), typically adding improvised ornaments to demonstrate expressive and technical virtuosity. The da capo structure creates a satisfying formal symmetry while providing ample scope for affective contrast within the B section and ornamental elaboration at the A' return.
 
@@ -293,6 +343,8 @@ The conventional omission of repeats in the da capo minuet return is a practical
 <strong>Example 2.4 (Compound Ternary: Beethoven, Symphony No. 1 in C major, Op. 21, third movement).</strong> Labeled "Menuetto: Allegro molto e vivace" — a tempo already straining the stately minuet archetype toward the scherzo — this movement demonstrates the compound ternary structure with Beethoven's characteristic combination of formal clarity and expressive intensity. The Minuet is a rounded binary in C major (||: A :||: BA' :||). The Trio (measures 75–108) is a rounded binary in C major with a contrasting texture: winds sustained over a horn pedal create a pastoral, relatively static character against the Minuet's rhythmic drive. The da capo return of the Minuet (without repeats, as is conventional) restores the opening character. The three-level formal hierarchy — ternary at the movement level, rounded binary at each section level, and phrase structure within each rounded binary — illustrates the recursive nature of formal organization in Classical music.
 </example>
 </div>
+
+{{< score id="music373/16-compound-ternary" caption="Compound ternary (Minuet–Trio–Minuet da capo): each of the outer minuet and inner trio is itself a rounded binary, creating a three-level formal hierarchy." >}}
 
 Beethoven's replacement of the minuet by the **scherzo** in his mature works is formally conservative and expressively radical. The scherzo preserves the minuet-with-trio's compound ternary structure entirely — both the scherzo and the trio are rounded binaries, and the da capo of the scherzo closes the compound ternary — but it replaces the minuet's courtly grace with a fierce, often violent rhythmic energy and an unpredictable, sometimes genuinely bizarre character. The scherzo of Symphony No. 9, Op. 125 — in D minor, marked Molto vivace, and moving so rapidly that the 3/4 meter sounds like a brutal perpetual motion — could not be more different in character from a Baroque minuet, yet its formal structure is identical to the formal structure of the Minuet from Bach's Suite No. 1 in G major, BWV 816.
 
@@ -322,6 +374,8 @@ The scherzo — which Beethoven systematically substituted for the minuet in his
 </ul>
 </div>
 
+{{< score id="music373/16-compound-ternary" caption="Compound ternary with contrasting trio: the trio's different key and character provide the central contrast before the scherzo's da capo return." >}}
+
 Brahms's scherzos — in the Piano Sonata in F-sharp minor, Op. 2, the Piano Quintet in F minor, Op. 34, and others — carry the Beethoven scherzo tradition into a Romantic harmonic language of considerable density and weight. The Scherzo of Op. 34 is formally orthodox (compound ternary with rounded binary sections) but harmonically adventurous: its B section moves through a sequence of chromatic mediant relations that would have been unthinkable in a Classical minuet.
 
 <div class="example">
@@ -329,6 +383,8 @@ Brahms's scherzos — in the Piano Sonata in F-sharp minor, Op. 2, the Piano Qui
 The scherzo of Op. 34 is in C minor, opening with a quietly ominous repeated-note figure in the piano before the strings enter with a more animated continuation. The rounded binary structure is conventional: A (in C minor), B (developmental, moving through mediant relations), A' (return of C minor material, cadentially confirmed). The Trio is in C major — a modal contrast with the scherzo — and its character is considerably more relaxed and dance-like, providing the necessary affective contrast before the scherzo's return. The formal architecture is completely Classical; the harmonic and expressive content is thoroughly Brahmsian.
 </example>
 </div>
+
+{{< score id="music373/17-rondo-five-part" caption="Five-part rondo outline: refrain in tonic alternates with first episode (dominant) and second episode (relative minor) before the final refrain." >}}
 
 ---
 
@@ -346,6 +402,8 @@ The key-area logic of the episodes also contributes to the rondo's finale functi
 <strong>Definition 3.1 (Rondo: General).</strong> A <em>rondo</em> is a formal type in which a recurring <em>refrain</em> — a complete, tonally closed theme in the tonic key — alternates with one or more contrasting <em>episodes</em> in related keys. The refrain returns at least twice (giving at minimum a five-part rondo R–A–R–B–R). Rondo refrains are typically simpler in character than sonata-form themes: they are self-contained, memorable, and harmonically straightforward, qualities that make their returns immediately recognizable. Episodes are typically less stable harmonically and more developmental in character.
 </div>
 
+{{< score id="music373/17-rondo-five-part" caption="Rondo principle: the recurring refrain in the tonic provides formal and expressive stability against the contrasting episodes in related keys." >}}
+
 <div class="definition">
 <strong>Definition 3.2 (Five-Part Rondo).</strong> A <em>five-part rondo</em> has the formal plan R–A–R–B–R:
 <ul>
@@ -356,6 +414,8 @@ The key-area logic of the episodes also contributes to the rondo's finale functi
 <li><strong>R</strong>: Final return of the refrain in the tonic, often extended or with a coda.</li>
 </ul>
 </div>
+
+{{< score id="music373/17-rondo-five-part" caption="Five-part rondo R–A–R–B–R: refrain (I) alternates with Episode A (V) and Episode B (vi), with each refrain return accumulating formal weight." >}}
 
 ### 3.2 Classical vs. Baroque Rondeau
 
@@ -370,6 +430,8 @@ The distinction between the Baroque rondeau and the Classical rondo is not merel
 </example>
 </div>
 
+{{< score id="music373/17-rondo-five-part" caption="Five-part rondo in A minor: the refrain's accumulative returns against the relative-major and developmental episodes create the movement's expressive weight." >}}
+
 ### 3.3 Seven-Part Rondo
 
 The **seven-part rondo** (R–A–R–B–R–A–R) expands the five-part plan by adding a second return of the first episode (A) before the final return of the refrain. This creates a palindromic arch — the form is symmetrical around the B section at its center — and significantly extends the overall duration. The second appearance of the A episode may be identical to its first appearance, may be varied or ornamented, or may be in a different key from its first appearance.
@@ -381,6 +443,8 @@ The key conventions governing the A episode's second appearance are instructive.
 <div class="remark">
 <strong>Remark 3.1 (Beethoven's Rondo Finales).</strong> Beethoven's rondo finales consistently push the five- and seven-part rondo plans toward their structural limits, infusing the form with an accumulative energy that transforms the refrain's recurrences from pleasant returns into formal triumphs. The finale of the Piano Sonata in C major, Op. 53 ("Waldstein") is nominally a rondo but feels like a continuous argument: the refrain — a headlong, perpetual-motion theme in C major marked Prestissimo — gathers force with each return, so that the final appearance, extended with a dazzling coda, becomes the culmination of the entire sonata's tonal drama. Beethoven's genius was to make the rondo's most characteristic feature — the return of the refrain — feel not like comfortable repetition but like the resolution of a sustained formal argument.
 </div>
+
+{{< score id="music373/18-sonata-rondo" caption="Seven-part rondo and Beethoven's refinement: each refrain return becomes more powerful, transforming comfortable repetition into formal triumph." >}}
 
 ### 3.4 Sonata-Rondo
 
@@ -397,6 +461,8 @@ The most sophisticated rondo variant is the **sonata-rondo**, a hybrid that comb
 </ul>
 The sonata-rondo satisfies two formal expectations simultaneously: the rondo listener hears the beloved refrain returning throughout; the sonata listener perceives a coherent tonal argument from dominant tension to tonic resolution.
 </div>
+
+{{< score id="music373/18-sonata-rondo" caption="Sonata-rondo: the seven-part rondo plan is reinterpreted so that R–A functions as exposition (P+S zones), B as development, and the final R–A as recapitulation with ESC." >}}
 
 The finale of Mozart's Piano Concerto No. 21 in C major, K. 467, is a beautifully realized sonata-rondo. The refrain — a crystalline, dancing theme in C major — appears throughout the movement with the predictability and tonal stability that define the rondo spirit. Yet the first episode is in G major (the dominant), exactly as a sonata second theme should be; at the recapitulation, this episode returns in C major. The middle B episode develops material from the refrain through harmonic sequences. The form satisfies both the rondo listener and the sonata listener, which is precisely why the sonata-rondo became the preferred finale form of the Classical concerto.
 
@@ -416,11 +482,15 @@ The refrain is the formal and expressive anchor of the rondo: its returns are th
 On each return, the refrain may be abbreviated (only the consequent, or the first half), ornamented (with additional figuration in the melodic line), or harmonically elaborated. Beethoven's rondo refrains tend to become more energetic and assertive with each return, so that the final refrain is more powerful than the first — a cumulative formal argument rather than mere repetition.
 </div>
 
+{{< score id="music373/17-rondo-five-part" caption="Rondo refrain internal structure: a parallel period, rounded binary, or sentence form serves as the self-contained thematic anchor." >}}
+
 <div class="example">
 <strong>Example 3.2 (Refrain Variation on Return: Beethoven, Piano Sonata in G major, Op. 14, No. 2, finale).</strong>
 The finale's rondo refrain — a light, dance-like theme in G major — is a parallel period on its first appearance. At its second return (after the first episode), it is abbreviated to the consequent phrase alone, suggesting that the listener is now sufficiently familiar with the material that the full antecedent is unnecessary. At its third return (after the second episode), it returns complete but with added sixteenth-note ornamentation in the melodic line, giving the familiar theme a new shimmer of surface activity. The progression from full statement to abbreviation to ornamented restatement reflects a sophisticated understanding of how repeated material must be managed to maintain listener engagement across the entire movement.
 </example>
 </div>
+
+{{< score id="music373/17-rondo-five-part" caption="Refrain variation on return: the refrain may be abbreviated, ornamented, or texturally transformed at each successive appearance to maintain listener engagement." >}}
 
 ### 3.6 Haydn's Rondo Finales and Formal Wit
 
@@ -435,6 +505,8 @@ Haydn's most characteristic device for rondo wit is the **false close** — a mo
 The finale is a rondo with a C-major refrain of almost ostentatious simplicity — four-bar basic idea, repeated, leading to a PAC. The second episode begins what sounds like a development and then suddenly halts; a fermata leads to what sounds like the beginning of the final refrain. The audience applauds — and then Haydn continues, revealing that the apparent final refrain was a false close and that the movement is not yet over. The joke is formal: Haydn has exploited the rondo convention (final refrain signals movement's end) to trick the listener into premature applause. A similar trick appears in the finale of String Quartet Op. 33, No. 2 ("The Joke"), discussed above, where the silences at the end leave the listener genuinely uncertain whether the movement has concluded.
 </example>
 </div>
+
+{{< score id="music373/17-rondo-five-part" caption="Rondo formal wit: Haydn exploits the listener's expectation of the refrain's return to create a false close, with the true ending arriving only after the deception." >}}
 
 ---
 
@@ -453,6 +525,8 @@ The formal preservation requirements of variation form also create a clear analy
 <div class="definition">
 <strong>Definition 4.1 (Variation Form).</strong> A <em>variation form</em> consists of a <strong>theme</strong> — a complete, harmonically closed formal unit (period, rounded binary, or ternary) — followed by \(N\) <strong>variations</strong>, each preserving the theme's overall length, phrase structure, and harmonic outline while transforming its surface. The sequence of variations may create a cumulative drama of contrast and return; many sets include a "character finale" variation that is significantly different in tempo, texture, or style from the preceding variations, serving as a formal culmination.
 </div>
+
+{{< score id="music373/19-variation-theme" caption="Variation form theme: a harmonically closed period (or binary) provides the harmonic skeleton that all subsequent variations must preserve." >}}
 
 ### 4.2 Ornamental Variation
 
@@ -498,6 +572,10 @@ The ostinato-based variation forms present a formal challenge quite different fr
 </example>
 </div>
 
+{{< score id="music373/22-chaconne-bass" caption="Brahms's Handel Variations: twenty-five variations on a binary-form air, culminating in a fugue — the apex of nineteenth-century character variation form." >}}
+
+{{< score id="music373/20-variation-ornamental" caption="Ornamental variation: sixteenth-note figuration elaborates the theme's melody while the harmonic skeleton and phrase structure remain unchanged." >}}
+
 ### 4.6 Beethoven's Diabelli Variations
 
 Beethoven's *Diabelli* Variations, Op. 120 (1823), are the apotheosis of the character variation principle. The theme — a banal, mechanically repetitive waltz by Anton Diabelli — is, as Beethoven reportedly put it, a "cobbler's patch" (*Schusterfleck*): its bass-line ostinato pattern, its square-cut cadences, its complete absence of harmonic sophistication. Yet from this unpromising material, Beethoven extracts thirty-three variations that collectively constitute one of the most exhaustive explorations of variation technique in the literature. Variation 1 is a grandly ceremonial march; Variation 2 is a furiously contrapuntal exercise; Variation 10 is a Pralltriller study; Variation 20 is a sardonic return to the waltz with bizarre added octaves; Variation 31 is a slow, searching meditation in the minor mode; Variation 32 is a fugue; and the final Variation 33 is a stately minuet in C major — not in the B-flat of the theme but in the C major that transforms the cobbler's waltz into something approaching the sublime. The work is not merely a formal exercise but an existential statement about the transformative power of compositional imagination.
@@ -524,6 +602,8 @@ The theme is a parallel period in A major of such melodic perfection that its va
 </example>
 </div>
 
+{{< score id="music373/21-variation-modal" caption="Modal variation: the theme is transposed to the parallel minor mode, producing a change of affect — shadow for light — while preserving the harmonic rhythm." >}}
+
 ### 4.8 Schubert's Trout Quintet Variations
 
 Franz Schubert's Piano Quintet in A major, D. 667 ("Trout"), takes its nickname from the fourth movement — a set of variations on Schubert's own song *Die Forelle* ("The Trout"), D. 550. The song's melody is borrowed wholesale into the quintet: the piano states the theme while the strings provide a simplified accompaniment, and the subsequent five variations subject the theme to the full range of Schubert's variation techniques.
@@ -533,6 +613,8 @@ The five variations of the "Trout" Quintet movement are a compressed survey of v
 <div class="remark">
 <strong>Remark 4.1 (Self-Borrowing in Variation Form).</strong> The practice of basing an instrumental variation set on one's own previously composed vocal melody — Schubert's procedure in the "Trout" Quintet, and also in the String Quartet in D minor ("Death and the Maiden"), D. 810 — creates a particular kind of variation movement in which the theme carries extramusical associations from its vocal original. Listeners who know the song *Die Forelle* hear the piano quintet's variations against the backdrop of the song's text (about a trout in a clear stream, admired by the narrator until a fisherman catches it by muddying the water) and may find that the variations' characters echo the song's narrative trajectory. Whether such extramusical resonances are analytically relevant or merely biographical associations is a question of hermeneutical approach; but their presence is undeniable and contributes to the affective richness of the variation sequence.
 </div>
+
+{{< score id="music373/21-variation-modal" caption="Schubert's self-borrowing variation movement: the vocal original's modal inflections and character inform the variation sequence's expressive trajectory." >}}
 
 ---
 
@@ -556,6 +638,8 @@ Charles Rosen's *Sonata Forms* (1980) and *The Classical Style* (1971) remain am
 Most Classical sonata-form expositions are repeated (||: exposition :||: development + recapitulation :||), though this convention was increasingly abandoned in the Romantic period.
 </div>
 
+{{< score id="music373/23-sonata-exposition" caption="Sonata form schema: P-zone in tonic → TR → MC → S-zone in dominant (EEC) → C-zone confirming dominant; recapitulation brings all zones to tonic." >}}
+
 ### 5.2 The P-Zone: Primary Theme Area
 
 The exposition begins with the **P-zone** (primary theme zone, in Hepokoski-Darcy's terminology; Caplin's "main theme"). The P-zone is in the tonic key and introduces the movement's principal thematic material. It is characterized by beginning function at the level of the exposition: it initiates the formal argument, establishes the tonal home base, and typically presents its material in a tight-knit organization (sentence, period, or hybrid). The P-zone may consist of a single theme or a small group of related ideas that together constitute the first thematic area.
@@ -565,10 +649,14 @@ The exposition begins with the **P-zone** (primary theme zone, in Hepokoski-Darc
 </example>
 </div>
 
+{{< score id="music373/06-sentence" caption="P-zone as sentence: the basic idea is stated, restated (presentation), then fragmented and driven toward the cadential function that closes the main theme." >}}
+
 <div class="example">
 <strong>Example 5.2 (P-Zone as Period: Haydn, Piano Sonata in E-flat major, Hob. XVI:52, first movement).</strong> The P-zone of this late Haydn sonata is a parallel period in E-flat major. The antecedent (measures 1–4) presents a singing, cantabile melody over a simple tonic-dominant bass, closing with a clear HC at measure 4. The consequent (measures 5–8) begins identically and closes with a PAC in E-flat major. The tight-knit, symmetrical period provides a stable formal foundation before the transition begins its destabilizing work. The contrast between the lyrical period of this P-zone and the more forceful sentence-type P-zones of Beethoven reveals the range of expressive characters available within the same formal type.
 </example>
 </div>
+
+{{< score id="music373/08-period" caption="P-zone as parallel period: antecedent and consequent in the tonic provide a stable, symmetrical foundation before the transition begins its destabilizing work." >}}
 
 The P-zone's thematic character has significant implications for the movement's formal trajectory. A tight-knit, forte P-zone creates a starting point of maximal formal stability, so that the transition's dissolution and the development's instability represent a genuine formal journey away from that stability. A more ambiguous or searching P-zone — such as the opening of Schubert's Piano Sonata in B-flat major, D. 960, which begins with a soft, ruminative melody immediately undermined by a mysterious trill in the bass — establishes an expressive world in which formal stability is already elusive from the outset. The recapitulation of such a P-zone does not provide the reassurance that a tight-knit opening theme's return would: the searching material returns having found no definitive answer to the questions it posed at the beginning. The P-zone is thus not merely a formal "first theme" but an expressive premise that determines the entire movement's formal and emotional argument.
 
@@ -579,6 +667,8 @@ Following the P-zone, the **transition** (TR) begins the process of moving from 
 <div class="definition">
 <strong>Definition 5.2 (Medial Caesura).</strong> The <em>medial caesura</em> (MC) is a moment of brief, clearly articulated pause or break in the musical texture — typically following a half cadence in the secondary key (a "V:HC" in Hepokoski-Darcy's notation) or occasionally in the primary key (a "I:HC MC") — that signals the end of the transition and the beginning of the S-zone. The MC is often marked by a dramatic textural gesture: a fermata, a rest, a sudden piano dynamic after forte, or a breaking off of the transitional energy. In analytical practice, the MC is identified by: (1) a HC-level cadential arrival (not a PAC); (2) a clearly felt break or pause in the texture; (3) the beginning of new, contrasting thematic material immediately after the pause.
 </div>
+
+{{< score id="music373/24-medial-caesura" caption="Medial caesura (MC): the transition's V:HC arrival followed by a textural gap signals the end of TR and the beginning of the S-zone." >}}
 
 Identifying the MC is one of the most analytically demanding tasks in the application of Hepokoski-Darcy's framework, because many expositions elide the MC — the transition ends and the S-zone begins without a clear break, the two zones merging in a continuous flow. The elision of the MC is not a fault but a formal choice: it creates a more continuous, seamless exposition in which the listener cannot easily locate the internal boundaries. Mozart frequently elides the MC in his piano concerto expositions, creating the impression of a single, continuous formal arc from the opening P-zone to the S-zone's entry.
 
@@ -598,12 +688,16 @@ The S-zone is also internally more varied than the simple "second theme" label i
 <strong>Definition 5.3 (Essential Expositional Closure, EEC).</strong> In Hepokoski and Darcy's framework, the <em>essential expositional closure</em> (EEC) is the first PAC in the secondary key that is followed by new (non-thematic, closing) material. The EEC is the tonal goal of the entire exposition: the moment at which the secondary key is definitively closed by a full authentic cadence, after which the exposition's harmonic argument is essentially complete. The C-zone (closing zone) follows the EEC and confirms the secondary key with closing material. Not every PAC in the secondary key constitutes the EEC: a PAC that is followed by a return to S-zone thematic material (a "failed EEC") does not fulfill the ESC's structural function.
 </div>
 
+{{< score id="music373/25-eec" caption="Essential expositional closure (EEC): the first PAC in the secondary key followed by closing material — the tonal goal of the entire exposition." >}}
+
 The EEC concept is analytically powerful because it reveals how composers manipulate the moment of formal closure in the exposition. A composer may "attempt" the EEC multiple times — offering a PAC in the secondary key that is then followed by more S-zone material rather than closing material — before the "true" EEC finally arrives. Each failed attempt raises the listener's expectation for the eventual true EEC, so that when it arrives, its force is amplified by the accumulated expectation. Beethoven's Op. 57 (*Appassionata*) first movement is a particularly dramatic example: the S-zone material makes several approaches to a PAC in A-flat major before the true EEC is finally achieved.
 
 <div class="example">
 <strong>Example 5.3 (S-Zone in Mozart, Piano Sonata in G major, K. 283, first movement).</strong> The S-zone (measures 23–53) in D major presents a lyrical, flowing theme quite different in character from the G-major P-zone theme. The S-zone opens after a clear medial caesura (a HC in D major at measure 22, followed by a two-beat rest) with a gentle, singing melody over a rocking accompaniment. The EEC arrives at measure 53 with the first PAC in D major that is followed by closing material rather than a return to the S theme. The C-zone (measures 53–67) confirms D major with a series of cadential iterations before the codetta closes the exposition.
 </example>
 </div>
+
+{{< score id="music373/25-eec" caption="S-zone in G major with EEC: the first PAC in the secondary key followed by new closing material constitutes the essential expositional closure." >}}
 
 ### 5.5 The C-Zone and Codetta
 
@@ -638,11 +732,15 @@ The question of which specific PAC in the relative major constitutes the EEC is 
 </ul>
 </div>
 
+{{< score id="music373/30-minor-mode-exposition" caption="Minor-mode exposition conventions: S-zone in relative major (III) is standard; the parallel major and minor dominant are alternatives with different expressive implications." >}}
+
 <div class="example">
 <strong>Example 5.4 (Minor-Mode Exposition: Mozart, Piano Sonata in C minor, K. 457, first movement).</strong>
 The exposition moves from C minor (P-zone, measures 1–22) through a transition (measures 22–34) to the relative major E-flat for the S-zone (measures 35–74). The S-zone in E-flat major reverses the P-zone's dark, stormy character: the S theme is lyrical, flowing, and operatically expressive. The EEC arrives at measure 74 with a clear PAC in E-flat major. The exposition's tonal journey — from C minor's turbulence to E-flat major's relative calm — creates one of Mozart's most dramatic expositional contrasts.
 </example>
 </div>
+
+{{< score id="music373/30-minor-mode-exposition" caption="Minor-mode exposition: P in C minor moves through transition to S in E-flat major (the relative major), reversing the tonic's darkness with the relative major's brightness." >}}
 
 ### 5.7 The Double Exposition in the Concerto
 
@@ -656,6 +754,8 @@ The Classical concerto first movement employs what Hepokoski and Darcy call a **
 <li>The <strong>cadenza</strong> appears near the end of the recapitulation's C-zone, marked by a \(\text{I}^{6/4}\) "cadenza chord" before the final \(\text{V}^7 \to \text{I}\).</li>
 </ul>
 </div>
+
+{{< score id="music373/31-concerto-double-exposition" caption="Double exposition (Type 5 sonata): orchestral ritornello presents P and S both in tonic; solo exposition carries out the standard modulation to the secondary key." >}}
 
 Mozart's piano concertos are the supreme achievements of this form. Piano Concerto No. 20 in D minor, K. 466, is particularly remarkable: the orchestral exposition opens with a quietly sinister repeated-note figure that Rosen calls "the first truly Romantic orchestral opening," and the solo exposition's S-zone in F major (the relative major) provides an expressive contrast of almost operatic power.
 
@@ -679,6 +779,8 @@ The development section is the locus of harmonic adventure, thematic transformat
 </ol>
 </div>
 
+{{< score id="music373/26-development-fragmentation" caption="Development section: motivic fragmentation and sequential treatment dissolve the tight-knit themes of the exposition into harmonically unstable developmental units." >}}
+
 The development section's emotional character tends toward intensity, instability, and conflict — a quality that is not incidental but is the formal purpose of the section. The exposition established a tonal argument (the move to the secondary key); the development explores the consequences and complications of that argument; and the recapitulation resolves it. The development is the period of maximum harmonic tension, and its instability is the precondition for the recapitulation's relief.
 
 The development's formal instability operates not only harmonically but also at the phrase level. The tight-knit eight-bar themes of the exposition, with their clear internal organization and their well-articulated cadential goals, give way in the development to passages of indeterminate length, irregular phrase rhythm, and evaded or abandoned cadences. A development passage may consist of a two-bar motivic cell that is sequenced seven or eight times — each iteration moving the bass down a fifth or a step — without any clear phrase articulation between iterations. The sequence is felt not as a series of phrases but as a continuous harmonic motion, a single directed gesture that spans many bars without internal punctuation. This contrast between the exposition's phrase-articulated tight-knit themes and the development's phrase-obliterating sequential passages is one of the most viscerally audible formal features of Classical sonata form, and it is what gives the development its characteristic character of purposive but boundary-dissolving forward motion.
@@ -689,6 +791,8 @@ The analyst approaching a development section for the first time should begin by
 <strong>Example 6.1 (Development: Beethoven, Symphony No. 5 in C minor, Op. 67, first movement).</strong> The development section (measures 125–248) is one of the most concentrated developmental arguments in the symphonic repertoire. Beethoven begins by taking the P-zone's four-note motto (\(\hat{5}–\hat{5}–\hat{5}–\hat{3}\), short-short-short-long) and subjecting it to exhaustive fragmentation: passing through E-flat major, F minor, D-flat major, and other tonal areas while reducing the motto to a single repeated pitch (the two-note fragment of the motto's short-short) and then to a single note. The retransition (measures 240–248) reduces the entire texture to a pianissimo sustained G (the home dominant) in the strings, punctuated by the ghostly four-note motto in the oboe — a spectral, timeless suspension of harmonic motion that makes the recapitulation's explosion in C minor at measure 248 one of the most viscerally powerful formal events in all of music.
 </example>
 </div>
+
+{{< score id="music373/27-development-sequence" caption="Sequential modulation in development: a falling-fifth sequence traverses multiple tonal areas, providing harmonic momentum while maintaining motivic coherence." >}}
 
 ### 6.2 The Entry of the Development and Tonal Strategies
 
@@ -705,6 +809,8 @@ The analytical task of understanding a development's harmonic strategy is closel
 <div class="remark">
 <strong>Remark 6.1 (The "False Recapitulation").</strong> A <em>false recapitulation</em> occurs when the development section appears to reach its conclusion — presenting the P-zone theme in the tonic, apparently beginning the recapitulation — but the tonic arrival proves premature: the harmony soon departs from the tonic again, revealing that the apparent recapitulation was in fact a developmental strategy, not the true beginning of the recapitulation. Haydn is the master of the false recapitulation: it appears in several of his symphonies (notably No. 46 in B major) and string quartets, where it serves both a formal function (extending the development beyond the expected duration) and a comic or dramatic function (the listener's relief at the apparent return of the tonic is immediately undercut). The false recapitulation is a "deformation" in Hepokoski-Darcy's sense — a deviation from the normative script that acquires its meaning from the listener's awareness of the norm being violated.
 </div>
+
+{{< score id="music373/46-false-recapitulation" caption="False recapitulation: the P-zone theme appears in the tonic during the development but departs again, revealing the premature arrival and heightening expectation." >}}
 
 ### 6.3 The Retransition
 
@@ -728,6 +834,8 @@ The recapitulation is not — as nineteenth-century formalistic accounts sometim
 <strong>Definition 6.2 (Essential Structural Closure, ESC).</strong> The <em>essential structural closure</em> (ESC) is the tonal and formal goal of the entire sonata movement: the first PAC in the tonic key, following the S-zone material in the recapitulation, that is analogous to the EEC of the exposition. The ESC "corrects" the tonal imbalance created by the exposition's EEC in the secondary key, restating the S-zone's thematic closure now in the home tonic. The achievement of the ESC is the moment at which the sonata's large-scale harmonic argument is resolved. A movement in which the ESC is withheld, undercut, or displaced creates a structural tension that may be resolved by a subsequent coda.
 </div>
 
+{{< score id="music373/29-recapitulation-esc" caption="Essential structural closure (ESC): the first tonic-key PAC in the recapitulation following S-zone material resolves the exposition's tonal argument." >}}
+
 The recapitulation's most technically demanding task is the rewriting of the transition. In the exposition, the transition moved from the tonic to the secondary key. In the recapitulation, this modulation is not needed — the S-zone must remain in the tonic — and so the transition must be substantially revised. Beethoven's approaches to this problem are instructive in their variety: in Op. 13, he truncates the transition dramatically, arriving at the S-zone's material in C minor (instead of E-flat major) with unusual abruptness. In Op. 57, he rewrites the transition with an entirely new harmonic detour through D-flat major, creating a recapitulation transition that is even longer and more harmonically intense than the exposition's transition. In Op. 67 (Symphony No. 5), he adds a completely new oboe solo during the recapitulation's transition, commenting on the exposition's material with a melancholy new voice.
 
 ### 6.5 The Coda
@@ -743,6 +851,8 @@ Haydn's codas in his mature symphonies often make a final formal joke: an unexpe
 </example>
 </div>
 
+{{< score id="music373/28-retransition" caption="Retransition dominant pedal: the sustained home dominant creates accumulated harmonic tension that makes the recapitulation's tonic arrival explosively effective." >}}
+
 ### 6.6 The "Eroica" Recapitulation as Case Study
 
 The first movement of Beethoven's Symphony No. 3 in E-flat major, Op. 55 ("Eroica"), is perhaps the most analyzed sonata-form movement in the literature, and for good reason: its exposition, development, and recapitulation each contain formal features that push against the boundaries of Classical convention while remaining firmly grounded in the sonata-form logic they are subverting.
@@ -752,6 +862,8 @@ The first movement of Beethoven's Symphony No. 3 in E-flat major, Op. 55 ("Eroic
 The recapitulation's beginning at measure 398 is approached through one of the most famous passages in symphonic literature: the retransition's long dominant pedal is sustained for twelve bars while the horn enters (at measure 394) playing what sounds like the beginning of the P-zone theme — but in the "wrong" key context (over the dominant rather than the tonic). This premature horn entry, which sounds like a wrong note in the wrong place, is in fact a sophisticated formal strategy: Beethoven creates a "false" or "early" recapitulation entrance that is simultaneously structurally incorrect (the tonic hasn't been established yet) and expressively appropriate (the horn's E-flat major arpeggiation anticipates the tonic that is about to arrive). The "true" recapitulation — with the full orchestra confirming E-flat major — arrives at measure 398. The double articulation of the recapitulation's beginning (horn alone at m. 394, then full orchestra at m. 398) is one of the most dramatic formal gestures in the Classical symphonic tradition.
 </example>
 </div>
+
+{{< score id="music373/29-recapitulation-esc" caption="Recapitulation schema: P in tonic → non-modulating TR → S in tonic (ESC) → C confirming tonic; the S-zone's tonal 'correction' resolves the exposition's tonal argument." >}}
 
 The *Eroica*'s coda (measures 551–691) is even more formally audacious. Following the ESC, the coda introduces a completely new theme — a flowing, E-flat major melody in the woodwinds and brass that has never appeared before in the movement — as if the movement's argument, having been resolved, now has the freedom to explore entirely new territory. This "new theme in the coda" is a formal strategy that Beethoven uses in several mature works (including the first movement of the Fifth Symphony) and that represents a significant expansion of the coda's traditional confirming function into something closer to a "second development."
 
@@ -776,6 +888,8 @@ The dialogic framework also explains why Hepokoski and Darcy's analytical vocabu
 </ul>
 </div>
 
+{{< score id="music373/35-hepokoski-darcy-types" caption="Hepokoski-Darcy's five sonata types: from Type 1 (no development) through Type 5 (concerto double exposition), each representing a distinct formal paradigm." >}}
+
 ---
 
 ## Chapter 7: Caplin's Theory of Formal Functions
@@ -795,6 +909,8 @@ This functional approach to form has precedents in the German theoretical tradit
 </ul>
 </div>
 
+{{< score id="music373/33-caplin-formal-functions" caption="Caplin's formal functions: beginning (stable, tight-knit), middle (loose, developmental), and ending (cadential) — shown at phrase level within an eight-bar theme." >}}
+
 Caplin's crucial observation is that formal functions operate simultaneously at **multiple hierarchical levels**. A single eight-bar theme may have beginning function at the level of the exposition (it initiates the exposition's argument) while having internally differentiated beginning, middle, and ending functions at the phrase level (the presentation begins, the continuation continues, the cadence ends). This nested hierarchy of functions is what gives Classical music its extraordinary density of formal meaning: every passage is simultaneously doing work at several levels of organization, and the analyst must specify which level they are addressing.
 
 One of Caplin's most important methodological contributions is the insistence that formal functions are not merely labels but explanations. To say that a passage has "middle function" is not just to place it in a taxonomic category; it is to explain why the passage sounds unstable, why its phrase boundaries are irregular, why its harmonic content is more complex than passages with beginning or ending function. The formal function is the explanatory principle that accounts for the music's local character. A passage with middle function sounds the way it sounds because middle function requires harmonic instability, motivic development, and loose organization — properties that are as audible as they are analytically describable. Caplin's framework thus bridges the divide between technical analysis and perceptual description: what the analyst labels as "middle function" is what the listener hears as "transitional," "developmental," or "searching." The framework gives the listener's intuition a precise technical correlate.
@@ -811,6 +927,8 @@ The relationship between Caplin's formal functions and Schenker's structural lev
 </ul>
 </div>
 
+{{< score id="music373/34-tight-knit-vs-loose" caption="Tight-knit vs. loose organisation: the stable I–V alternation of a presentation contrasts with the chromatic, irregular surface of a loose developmental passage." >}}
+
 The contrast between tight-knit and loose organization is one of the most immediately audible dimensions of Classical phrase structure. A listener who does not know any of Caplin's terminology will nonetheless hear the difference between the stable, regular P-zone theme (tight-knit) and the destabilizing transition (loose): the former sounds settled and self-contained; the latter sounds like it is going somewhere, building toward something, not yet arrived. Caplin's analytical framework gives this intuitive perception a precise technical vocabulary.
 
 The tight-knit/loose distinction also has important implications for the analyst's understanding of expressive form. A movement that begins with a highly tight-knit, secure P-zone and then subjects that material to extensive loosening in the development creates an expressive trajectory from security to instability to (recapitulatory) resolution. A movement that begins with an unusually loose, uncertain P-zone — as in many of Schubert's sonata first movements, where the opening theme may be relatively extended and harmonically ambiguous — establishes a different expressive premise: the movement begins already in a searching, unsettled state, and the recapitulation's return to that same loose, searching material does not carry the same sense of reassurance and resolution that a tight-knit P-zone recapitulation would provide. The expressive implications of tight-knit versus loose organization at the movement's formal poles shape the entire movement's expressive trajectory, and attending to these implications is an important dimension of formal analysis that purely structural accounts of sonata form often overlook.
@@ -823,6 +941,8 @@ Caplin's analysis of the **transition** is among his most influential contributi
 <strong>Example 7.1 (Transition: Beethoven, Piano Sonata in F minor, Op. 57, "Appassionata," first movement).</strong> The transition (measures 17–35) is a masterwork of formal loosening. Beginning with material derived from the P-zone theme (the characteristic four-note descent of the opening), Beethoven subjects it to fragmentation and harmonic acceleration, driving through a series of diminished seventh chords toward the relative major (A-flat major). The tonal destination is prepared by a prolonged dominant seventh of A-flat (E-flat major seventh), and the medial caesura arrives at measure 35 as a fermata over a C major chord — the dominant of the dominant of A-flat, creating a heightened sense of anticipation before the lyrical S-zone theme enters in A-flat major at measure 35. The formal function of loosening is perfectly aligned with the expressive function of generating tension: the opening theme's sinister solidity dissolves into harmonic restlessness, and only the S-zone's lyrical entry in the relative major provides temporary relief.
 </example>
 </div>
+
+{{< score id="music373/24-medial-caesura" caption="Transition formal function: the dissolution of P-zone material through fragmentation and harmonic acceleration drives toward the medial caesura." >}}
 
 Caplin distinguishes two types of transition based on their thematic source: the **continuous transition** derives its material from the P-zone itself (as in the Appassionata example above, where the opening four-note descent is the transition's primary material), while the **independent transition** introduces new thematic material not heard in the P-zone. The continuous transition creates a stronger sense of P-zone dissolution — the familiar material is being broken apart before the listener's ears — while the independent transition creates a cleaner formal boundary between P and TR. Composers mix both strategies: a transition may open with P-zone material (establishing continuity with the opening theme) and then introduce new material as it approaches the MC (signaling that the P-zone world has been left behind). The distinction matters analytically because it affects how the listener tracks thematic identity and formal function simultaneously — a continuous transition asks the listener to hear the "same" material functioning differently, while an independent transition announces by its novelty that a new formal phase has begun.
 
@@ -947,6 +1067,8 @@ Béla Bartók employed a distinctive large-scale formal principle in several of 
 The correspondence between outer sections may be literal (same themes, same keys), varied (same themes, different keys or textures), or only gestural (same character or emotional quality). The arch form creates large-scale symmetry as a formal principle independent of the more familiar linear forms (binary, ternary, rondo, sonata).
 </div>
 
+{{< score id="music373/39-arch-form" caption="Arch form ABCBA: the five sections are palindromically symmetrical — outer sections correspond, inner sections correspond, and the central C section is the unique keystone." >}}
+
 Bartók's String Quartet No. 4 (1928) is the locus classicus of arch form in the twentieth century. The five movements are arranged ABCBA: Movements I and V are analogous (both vigorous and rhythmically aggressive, Movement V recalling thematic material from Movement I); Movements II and IV are analogous (both scherzos with similar character and material); and Movement III is the central slow movement of almost unbearable intensity. Bartók explicitly recalls specific themes and textures at each corresponding point, making the formal symmetry clearly audible on repeated hearings.
 
 The arch form's relationship to tonal symmetry is a recurring feature of Bartók's use of the principle. In the String Quartet No. 4, the movements' tonal centers are also arranged symmetrically: C–A–E–A–C (or variants of this). The tonal palindrome reinforces the formal palindrome, so that the arch is simultaneously a formal and a harmonic structure. This double symmetry is characteristic of Bartók's formal thinking more broadly: he tends to construct his large-scale formal architectures with multiple interlocking symmetrical principles rather than a single organizing axis. The result is a formal coherence of unusual density — the arch form is not merely an external template imposed on the music but an expression of the music's own internal organizational logic.
@@ -957,6 +1079,8 @@ The analytical challenge that arch form presents is the question of corresponden
 <strong>Example 8.2 (Arch Form in a Single Movement: Bartók, Music for Strings, Percussion, and Celesta, third movement).</strong> The slow movement of this work (1936) exhibits arch form within a single movement: the opening A section presents a slow, atmospheric texture in A; the B section introduces a faster, more agitated character; the central C section is the most intense and dissonant passage; the B' section returns to the agitated character; and the A' section restores the opening atmospheric texture, now in a transformed, more resolved state. The arch's symmetry is both formal (corresponding sections use corresponding materials) and expressive (the return of the opening texture at the end creates a sense of circular formal completion rather than the linear resolution of sonata form).
 </example>
 </div>
+
+{{< score id="music373/39-arch-form" caption="Arch form in a single movement: A–B–C–B'–A' palindrome creating circular formal completion, independent of the linear resolution logic of sonata form." >}}
 
 ### 8.6 Additive Form in Minimalism
 
@@ -972,6 +1096,8 @@ The Minimalist composers of the 1960s and 1970s — Steve Reich, Philip Glass, T
 The form is generated entirely by the process; the "development" is the process itself unfolding in time, and the "climax" or "resolution" is whatever state the process produces at its conclusion or turning point.
 </div>
 
+{{< score id="music373/41-process-form" caption="Process form / phase music: two identical patterns begin in unison; one gradually shifts, creating emergent rhythmic composites from their interference." >}}
+
 Steve Reich's *Piano Phase* (1967) is the canonical example of phase form: two pianos begin playing an identical twelve-note melodic pattern in unison; one gradually accelerates, causing the two parts to drift out of phase. As the phasing proceeds, new composite rhythmic patterns emerge from the interference between the two lines — patterns that are not "composed" by Reich but generated by the process. The form has a beginning (unison), a middle (the phasing sequence, traversing multiple phase relationships), and an end (another phase relationship, though not necessarily a return to unison). The aesthetic of gradual transformation — of form as process rather than architecture — represents a fundamental departure from the architectonic formal thinking of the Classical tradition.
 
 Philip Glass's *Music in Fifths* (1969) and *Music with Changing Parts* (1970) explore additive form through different processes: beginning with a short melodic-rhythmic cell and gradually extending it by adding notes at the beginning and end, or by varying the number of repetitions of each section. The form is literally visible in Glass's notation: each section is a longer or different version of the previous one. The aesthetic of gradual transformation, of immersive stasis punctuated by incremental change, defines the Minimalist formal aesthetic.
@@ -983,6 +1109,8 @@ The post-war avant-garde developed the concept of **open form**: a formal struct
 <div class="definition">
 <strong>Definition 8.3 (Open Form / Aleatory).</strong> An <em>open form</em> is a formal structure in which significant parameters of a work's realization — order of sections, duration, pitch content, dynamics, or the work's very existence as sound — are left undetermined by the composer, to be determined by chance operations, performer choice, or environmental factors at the moment of performance. <em>Aleatory</em> (from Latin <em>alea</em>, dice) describes music in which chance operations govern compositional or performative decisions. Open and aleatory forms challenge the traditional identification of the "work" with a fixed, determinate object: in open form, the "work" is a set of possibilities, any realization of which constitutes a valid instance of the work.
 </div>
+
+{{< score id="music373/40-through-composed" caption="Open/aleatory form: significant compositional parameters are left undetermined, challenging the identification of the 'work' with any single fixed performance." >}}
 
 John Cage's *Music of Changes* (1951) is among the first fully realized aleatory works: composed using the I Ching (a Chinese divination text using coin-tossing to generate hexagrams), the work's every parameter — pitch, duration, dynamics, silence — was determined by Cage's interpretation of randomly generated I Ching hexagrams. The result has no "form" in the traditional sense: its succession of events follows no internal logic, no motivic development, no tonal argument. Yet the very absence of these traditional formal principles is itself a formal statement — a deliberate refusal of the European tradition of purposive, teleological formal organization, grounded in Cage's Zen-influenced philosophy that music should present sounds "as themselves," without the imposition of human will or expression.
 
@@ -996,6 +1124,8 @@ The French **spectral** composers of the 1970s and 1980s — Gérard Grisey, Tri
 <strong>Example 8.3 (Grisey, Partiels, from Les espaces acoustiques, 1975).</strong> <em>Partiels</em>, the third work in Grisey's cycle, opens with a single low E on the trombone and double bass. The piece then systematically builds up the overtone series of that low E, adding new partial tones one by one — first the octave (E an octave higher), then the perfect fifth (B), then the second octave (E again), then the major third (G-sharp), and so on — until the full orchestra is playing the spectrum of the fundamental E. The form of the piece is literally the temporal unfolding of the overtone series: each formal "section" is the arrival of a new partial, and the work's "development" is the gradual enrichment of the spectral texture. The form is unprecedented: it is neither sonata form, nor rondo, nor variation form, but a form derived directly from the physics of acoustic resonance.
 </example>
 </div>
+
+{{< score id="music373/49-spectral-partials" caption="Spectral form (Grisey's Partiels): the overtone series of a low E is built up partial by partial, the work's form being the temporal unfolding of acoustic resonance." >}}
 
 Grisey's complete cycle *Les espaces acoustiques* (1974–1985) unfolds over six works of increasing ensemble size, from solo viola to large orchestra. The cycle's overall formal logic is spectral: beginning from a single note and its natural overtones, the works progressively complexify, distort, and eventually resolve the spectral argument. The form of the entire cycle — spanning over seventy-five minutes of music — is a macro-level spectral trajectory, a form that has no precedent in Western music before the spectral school.
 
@@ -1015,6 +1145,8 @@ In computer-assisted interactive works — such as George Lewis's *Voyager* (198
 <strong>Example 8.4 (John Adams, Short Ride in a Fast Machine, 1986).</strong> This orchestral fanfare — commissioned as an "opening work" for the Great Woods Music Festival — uses the additive and rhythmic techniques of Reich within a formally clear arch structure, grounded in a D-major tonal center. The work opens with a woodblock establishing a steady pulse; brass and woodwind layers are added; the harmonic content alternates between D major and chromatically inflected chords; a climax is reached approximately two-thirds through; and the work ends with the return of the initial D-major fanfare material, now augmented and amplified. The ABA' arch is perfectly audible. The combination of minimalist surface (continuous pulse, gradual accumulation of orchestral layers) with traditional formal archetypes (arch form, goal-directed climax, tonal closure) is characteristic of post-minimalism's project of synthesizing avant-garde technique with communicative directness.
 </example>
 </div>
+
+{{< score id="music373/39-arch-form" caption="Post-minimalist arch form: additive rhythmic layering over a tonal center, reaching a climax and returning to the opening material — minimalist surface with traditional architecture." >}}
 
 ### 8.11 Conclusion: Form as Argument
 

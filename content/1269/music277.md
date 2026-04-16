@@ -62,6 +62,8 @@ The analyst is neither a cheerleader nor a critic: the analyst is a careful list
 <em>how</em> before asking <em>whether</em>.
 </div>
 
+{{< score id="music277/30-call-and-response" caption="Call-and-response melodic pattern: the analyst's task is to trace exactly this kind of musical dialogue." >}}
+
 ### 1.2 Limitations of Classical Theory Applied to Pop
 
 Classical tonal theory — the system of Roman numerals, voice-leading rules, and formal archetypes
@@ -114,6 +116,12 @@ The interval of a perfect fifth has frequency ratio \(3:2\), producing a stable,
 particularly effective through distorted amplification.
 </div>
 
+{{< score id="music277/15-pentatonic-major" caption="C major pentatonic scale: C–D–E–G–A, omitting the fourth and seventh." >}}
+
+{{< score id="music277/16-pentatonic-minor" caption="A minor pentatonic scale: A–C–D–E–G, the foundational scale of rock lead guitar." >}}
+
+{{< score id="music277/14-power-chords" caption="Power chords (root + fifth, no third): C5–G5–A5–F5. Mode left deliberately ambiguous." >}}
+
 The guitar's physical affordances — the minor pentatonic pattern fits naturally under the left hand
 in a single position — have entrenched pentatonicism in rock in a way that has no equivalent in
 classical music.
@@ -155,6 +163,8 @@ unremarkable (it is the default) and analytically significant (why does this par
 satisfying in so many different contexts?).
 </div>
 
+{{< score id="music277/01-i-v-vi-iv" caption="I–V–vi–IV in C major (C–G–Am–F): the most common four-chord loop in contemporary pop." >}}
+
 ### 1.4 The Analyst's Toolkit
 
 **The lead sheet** reduces a song to its melody and chord symbols, abstracting away from the
@@ -194,6 +204,8 @@ The NNS representation in C major reads:
 - Verse: 1 – 5 – 6m – 4
 - Bridge: 6m – 5 – 4 – 1 – 3 (the "3" is major, acting as secondary dominant)
 </div>
+
+{{< score id="music277/34-secondary-dominant" caption="Secondary dominant V/vi (E7 → Am) within I–V–vi–IV, as in the bridge of 'Let It Be'." >}}
 
 ---
 
@@ -236,6 +248,8 @@ Songs built entirely or primarily on the I–V–vi–IV schema include:
 The durability of the schema across genres, tempos, and emotional registers suggests that its
 appeal is structural rather than merely stylistic.
 </div>
+
+{{< score id="music277/02-vi-iv-i-v" caption="vi–IV–I–V rotation (Am–F–C–G): same four chords beginning on vi, as in Toto's 'Africa'." >}}
 
 One crucial analytic observation: the loop can begin on any of its four chords without losing its
 identity.
@@ -281,6 +295,12 @@ This "bluesy" seventh is one of the clearest markers of African American musical
 harmony.
 </div>
 
+{{< score id="music277/06-12-bar-blues" caption="12-bar blues chord progression: I7–I7–I7–I7 / IV7–IV7–I7–I7 / V7–IV7–I7–V7 (turnaround)." >}}
+
+{{< score id="music277/36-blues-seventh-chords" caption="I7, IV7, V7 in C: all three chords carry the dominant seventh, a blues-specific harmonic color." >}}
+
+{{< score id="music277/17-blues-scale" caption="A blues scale: pentatonic minor plus the 'blue fifth' (E♭), the source of blues melody's characteristic tension." >}}
+
 A crucial feature of blues harmony is the **blue note**: slight lowering of the third, fifth, or
 seventh scale degrees that creates a characteristic expressive quality impossible to capture in
 standard notation.
@@ -311,6 +331,8 @@ The same schema underlies The Penguins' "Earth Angel," Dion and the Belmonts' "A
 Love," and The Righteous Brothers' "Unchained Melody."
 </div>
 
+{{< score id="music277/07-doo-wop" caption="I–vi–IV–V doo-wop progression in C major (C–Am–F–G): directed harmonic motion toward the cadential V." >}}
+
 ### 2.4 Aeolian and Mixolydian Modal Frameworks
 
 Two modal frameworks deserve special attention because they are so pervasive in rock that they
@@ -333,6 +355,10 @@ The absence of a leading tone means there is no classical dominant-function V ch
 Aeolian; instead, the ♭VII chord typically moves to i in a form of Aeolian pseudo-cadence.
 </div>
 
+{{< score id="music277/33-aeolian-mode" caption="A Aeolian (natural minor) scale: A–B–C–D–E–F–G. The absence of G♯ removes the leading tone." >}}
+
+{{< score id="music277/04-aeolian-loop" caption="Aeolian loop i–♭VII–♭VI–♭VII (Am–G–F–G): the brooding circular progression of 'Stairway to Heaven' and 'Alone'." >}}
+
 The **Aeolian framework** is the sound of:
 - Led Zeppelin's "Stairway to Heaven" (the arpeggiated intro: Am – G – F – G – Am)
 - The Animals' "House of the Rising Sun" (Am – C – D – F – Am – C – E)
@@ -342,6 +368,10 @@ The **Aeolian framework** is the sound of:
 The descending bass motion from the minor tonic through the flat-seventh down to the flat-sixth
 creates a sense of brooding circularity, a harmonic descent that implies without quite completing
 a fall.
+
+{{< score id="music277/05-andalusian-cadence" caption="Andalusian cadence i–♭VII–♭VI–V (Am–G–F–E): the chromatic bass descent of flamenco and rock." >}}
+
+{{< score id="music277/08-passus-duriusculus" caption="Passus duriusculus: chromatic bass descent A–G♯–G–F♯–F–E, a Renaissance device reborn in pop and R&B." >}}
 
 <div class="definition">
 <strong>Definition 2.2 (The Mixolydian Mode).</strong>
@@ -356,6 +386,8 @@ Its characteristic harmony is the I–♭VII–IV–I "Mixolydian shuttle":
 The ♭VII chord is major (not diminished as on the seventh degree of a pure major scale), giving
 the progression a spacious, open quality distinct from both standard major and minor tonality.
 </div>
+
+{{< score id="music277/31-mixolydian-shuttle" caption="Mixolydian I–♭VII–IV–I shuttle in G major (G–F–C–G): the sound of 'Sympathy for the Devil' and 'Sweet Child O' Mine'." >}}
 
 The **Mixolydian framework** is the sound of:
 - The Rolling Stones' "Sympathy for the Devil" (B Mixolydian: B–A–B–A–B)
@@ -373,6 +405,8 @@ The ♭VII chord's presence — A major in the key of B — makes the song sound
 This harmonic ambiguity supports the song's perspective: the narrator is Lucifer, and the music
 should sound like it comes from somewhere outside the normal tonal order.
 </div>
+
+{{< score id="music277/12-modal-mixture-bvii" caption="I–♭VII–IV–I: modal mixture with the borrowed ♭VII in C major context (C–B♭–F–C)." >}}
 
 ### 2.5 Modal Mixture and Chromatic Mediants
 
@@ -399,6 +433,10 @@ and the effect is one of sudden, disorienting timbral shift.
 These moves appear in film scores, in progressive rock (Yes, Genesis), and in ambitious pop
 productions seeking moments of magical transformation.
 
+{{< score id="music277/13-parallel-major-minor" caption="Parallel major/minor borrowing: C major tonic followed by ♭VI (A♭ major) borrowed from C minor." >}}
+
+{{< score id="music277/24-chromatic-mediants" caption="Chromatic mediants: C major → E major (ascending major-third, no shared diatonic scale), then E major → A♭ major." >}}
+
 ### 2.6 The Truck-Driver's Modulation
 
 The **truck-driver's modulation** — raising the key by a half step or whole step for the final
@@ -415,6 +453,8 @@ The final section, in E major, places the melody at the top of the singer's ches
 into the lower reaches of her head voice — the harmonic gesture enacts the physical experience
 of being pushed past one's limits.
 </div>
+
+{{< score id="music277/23-truck-driver-modulation" caption="Truck-driver modulation: I–IV–V chorus in C major, then abrupt key shift up a whole step to D major." >}}
 
 ---
 
@@ -456,6 +496,8 @@ The return of the snare is experienced as a physical event, not just a musical o
 Phil Collins' "In the Air Tonight" (1981) exploits this principle to devastating effect: more than
 three minutes of minimal texture before the gated-reverb snare erupts in the chorus.
 </div>
+
+{{< score id="music277/35-backbeat-pattern" caption="Classic rock backbeat: hi-hat runs in eighth notes, kick on beats 1 and 3, snare crack on beats 2 and 4." >}}
 
 ### 3.2 Syncopation: Anticipations and Off-Beat Patterns
 
@@ -513,6 +555,8 @@ Scholars including Charles Keil and Steven Feld have argued that "participatory 
 source of groove's capacity to engage the body and invite movement.
 </div>
 
+{{< score id="music277/20-groove-pattern" caption="Groove pattern: interlocking drum and bass in 4/4. The bass fills syncopated off-beats while the kit locks kick and snare." >}}
+
 ### 3.4 Polyrhythm, Hemiola, and Cross-Rhythm
 
 **Polyrhythm** occurs when two or more different rhythmic cycles sound simultaneously.
@@ -559,6 +603,8 @@ The drum break — sixteen bars where James Brown strips the track to just drums
 found object in hip-hop: a rhythmic readymade that producers from the Beastie Boys to Public Enemy
 to De La Soul looped into the foundation of new compositions.
 </div>
+
+{{< score id="music277/19-rhythmic-hook" caption="Syncopated rhythmic hook: melodic figure displaced against the beat, creating the characteristic forward lurch of funk and pop." >}}
 
 ### 3.6 Rhythm in Hip-Hop: Boom-Bap, Trap, and Flow
 
@@ -643,6 +689,10 @@ Effective hooks combine:
 - Lyrical resonance: a word or phrase that crystallizes an emotion or experience.
 </div>
 
+{{< score id="music277/18-melodic-hook" caption="Melodic hook prototype: ascending leap of a sixth (C→A) followed by stepwise descent — one of the most common hook shapes in pop." >}}
+
+{{< score id="music277/09-verse-chorus-form" caption="Verse–chorus form: verse phrase in lower register (mm. 1–4) contrasted with chorus in higher register (mm. 5–8)." >}}
+
 ### 4.2 The Pre-Chorus and Bridge
 
 Between the verse and the chorus, many songs interpolate a **pre-chorus**: a brief transitional
@@ -665,6 +715,8 @@ Bridges typically feature:
 The bridge of The Beatles' "Yesterday" (the "Why she had to go / I don't know" section) moves to
 the relative major and introduces a new melodic contour before returning to the final verse.
 
+{{< score id="music277/11-verse-prechorus-chorus" caption="Verse–pre-chorus–chorus: three-section form. The pre-chorus ascends to the dominant, releasing into the high-register chorus." >}}
+
 ### 4.3 AABA Form and the Tin Pan Alley Standard
 
 Before the verse-chorus form became dominant in the 1960s, the principal form of American popular
@@ -683,6 +735,8 @@ The form is compact, symmetrical, and singable — ideal for the 78-rpm recordin
 AABA remained the standard for jazz standards and show tunes well into the 1960s:
 George Gershwin's "The Man I Love," Cole Porter's "Night and Day," Richard Rodgers and Lorenz
 Hart's "My Funny Valentine" — the entire Great American Songbook repertoire — is in AABA.
+
+{{< score id="music277/10-aaba-form" caption="AABA 32-bar form: three A phrases (main material) framing one contrasting B phrase (bridge/release)." >}}
 
 ### 4.4 Strophic Form
 
@@ -731,6 +785,10 @@ narrative — a remarkable compositional choice that foregrounds these elements.
 The form runs: Intro – Verse 1 – Chorus – Verse 2 – Chorus – Bridge – Chorus – Outro, a standard
 verse-chorus scaffold inhabited by highly nonstandard harmonic and rhythmic materials.
 </div>
+
+{{< score id="music277/21-hypermetric-phrase" caption="Hypermetric 4+4 grouping: two four-bar phrases perceived as a single eight-bar hypermeasure." >}}
+
+{{< score id="music277/22-phrase-extension" caption="Phrase extension: a four-bar phrase followed by a five-bar version with an added cadential bar, disrupting the expected hypermetric grid." >}}
 
 ---
 
@@ -785,6 +843,8 @@ noise, is the sound of heavy metal and shoegaze — Black Sabbath, Metallica, My
 These timbral associations are culturally constructed but deeply ingrained, functioning almost as
 a semiotics of distortion: a shared code in which signal processing conveys emotional meaning.
 </div>
+
+{{< score id="music277/29-timbral-layers" caption="Timbral register stratification: lead vocal (mp, high), guitar pad (pp, middle), and bass (mf, low) as a 'mix in score form'." >}}
 
 ### 5.2 The Drum Kit Sound and Production Aesthetics
 
@@ -873,6 +933,8 @@ the studio as an instrument to generate a specific timbral effect that could not
 performance.
 </div>
 
+{{< score id="music277/03-i-iv-v-i" caption="I–IV–V–I in C major: the foundational harmonic schema of rock and roll, inherited from blues and country." >}}
+
 ---
 
 ## Chapter 6: Analyzing Hip-Hop and R&B
@@ -913,6 +975,8 @@ and relationship failure, creating a layered intertextual meaning that rewards a
 the original and the sample's new deployment.
 </div>
 
+{{< score id="music277/25-hiphop-harmonic-loop" caption="Hip-hop harmonic loop: ii7–V7 vamp (Dm7–G7) cycling without resolution — the jazz-derived harmonic substrate of neo-soul." >}}
+
 ### 6.2 Harmonic Language of R&B and Neo-Soul
 
 Classic soul music of the 1960s drew heavily on the harmonic language of gospel and jazz,
@@ -946,6 +1010,8 @@ D'Angelo's "Brown Sugar" (1995) and the recordings on *Voodoo* (2000) feature ch
 \(\text{maj}^9\), the minor 11th, and the dominant 13th with a sharpened 11th — chords borrowed
 from post-bop jazz but deployed in a groove-oriented, rhythmically anchored context.
 </div>
+
+{{< score id="music277/26-rnb-extended-chord" caption="R&B extended chords: Cmaj9 (C–E–G–B–D) and G9sus4 (G–C–D–F), the hallmark voicings of neo-soul." >}}
 
 ### 6.3 MC Flow and Rhythmic Delivery
 
@@ -991,6 +1057,8 @@ conversational; by the third and fourth verses it has become more compressed, mo
 complex, with multisyllabic rhymes and syllable rates far exceeding the surface pulse of the beat,
 creating a sense of barely contained urgency that mirrors the song's emotional stakes.
 </div>
+
+{{< score id="music277/37-dorian-iv-major" caption="Dorian i–IV–i–v in D minor (Dm–G–Dm–Am): the major IV chord (G major) is the Dorian signature, heard in 'Alright' and countless Dorian-mode tracks." >}}
 
 ### 6.4 The Hook and Its Structural Function in Hip-Hop
 
@@ -1042,6 +1110,8 @@ Doors," the pedal steel's voice leading in virtually any classic country recordi
 the harmonic and emotional interest that other genres distribute across the chord progression
 itself.
 </div>
+
+{{< score id="music277/27-country-i-iv-v" caption="Country I–IV–V–I in G major (G–C–D–G): three-chord simplicity as rhetorical directness." >}}
 
 ### 7.2 The Nashville Number System in Professional Practice
 
@@ -1110,6 +1180,8 @@ admiring and threatened.
 The melody is built almost entirely from the minor pentatonic scale on A — \(\{A, C, D, E, G\}\)
 — giving it a folk-like immediacy that belies its emotional sophistication.
 </div>
+
+{{< score id="music277/32-dorian-mode" caption="D Dorian scale: natural minor with raised sixth (B♮), the mode of 'Norwegian Wood', 'Shady Grove', and Dorian-inflected pop melodies." >}}
 
 ### 7.4 The Pedal Steel Guitar and Voice Leading
 
@@ -1217,6 +1289,8 @@ which rolls off at \(-12\) dB per octave above \(f_c\) — meaning each doubling
 the cutoff attenuates the signal by approximately 12 dB.
 </div>
 
+{{< score id="music277/28-edm-harmonic-build" caption="EDM harmonic build: static tonic vamp (Am) with rising melodic tension, modeling the filter-sweep intensification before the drop." >}}
+
 The **drop** itself is characterized by the sudden return of the full bass and drum texture after
 a brief period of near-silence — the "breakdown" or "tension hold" — immediately preceding it.
 The perceptual effect depends critically on this moment of silence: it is the contrast between
@@ -1290,6 +1364,8 @@ In a spectrogram of an EDM track:
 - A percussive attack appears as a vertical stripe of broadband energy across all frequencies.
 </div>
 
+{{< score id="music277/29-timbral-layers" caption="Spectral register stratification in notation: each layer (bass, pad, lead) maps to a distinct frequency band in the spectrogram." >}}
+
 <div class="example">
 <strong>Example 8.1 (Spectral Analysis of an 808 Kick).</strong>
 An FFT analysis of an 808 kick drum reveals a characteristic spectrum:
@@ -1308,6 +1384,8 @@ This pitch-decay characteristic is what makes the 808 kick such a powerful compo
 in trap: it occupies the bass voice of the harmonic texture while simultaneously providing the
 rhythmic downbeat impulse.
 </div>
+
+{{< score id="music277/35-backbeat-pattern" caption="Drum notation: the rhythmic skeleton underlying trap, boom-bap, and all groove-based popular music." >}}
 
 ### 8.5 Sidechain Compression and the "Pumping" Effect
 
@@ -1378,6 +1456,8 @@ Lucky" its distinctive character: it is simultaneously a 1970s funk record and a
 production, inhabiting both worlds at once.
 </div>
 
+{{< score id="music277/37-dorian-iv-major" caption="Dorian harmonic loop (i–IV): the Bm–D–F♯m–E cycle of 'Get Lucky' is a Dorian progression whose major IV (E major) signals the mode." >}}
+
 ### 8.7 The DJ Set as Large-Scale Formal Structure
 
 In live EDM contexts, the individual track is not the primary formal unit; the **DJ set** is.
@@ -1416,6 +1496,8 @@ large-scale coherence is achieved from moment-to-moment choices.
 The DJ's set is a composition whose medium is other compositions — a meta-level formal structure
 that treats individual tracks as its harmonic and formal raw material.
 </div>
+
+{{< score id="music277/24-chromatic-mediants" caption="Chromatic mediant key relations: the harmonic moves that govern smooth DJ transitions and moment-of-surprise in film-influenced pop." >}}
 
 The study of popular music theory is, ultimately, the study of how human creativity operates
 under constraints — the constraints of genre convention, harmonic vocabulary, formal schema,
